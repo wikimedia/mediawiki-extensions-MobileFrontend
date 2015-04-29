@@ -78,7 +78,7 @@
 	"mobile-frontend-editor-disabled": "此頁面已被保護以防止惡意破壞。",
 	"mobile-frontend-editor-edit": "編輯",
 	"mobile-frontend-editor-editing": "正在編輯",
-	"mobile-frontend-editor-editing-page": "<strong>正在編輯</strong><span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>正在編輯</strong> $1</span>",
 	"mobile-frontend-editor-error": "錯誤，編輯尚未儲存。",
 	"mobile-frontend-editor-error-conflict": "錯誤，其他使用者已編輯此頁面。",
 	"mobile-frontend-editor-error-loading": "錯誤，無法讀取章節。",

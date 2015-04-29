@@ -1,21 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Csisc"
+			"Csisc",
+			"GeekEmad"
 		]
 	},
 	"mobile-frontend-editor-edit": "Baddil",
 	"mobile-frontend-generic-login-action": "Udxul bêc tsêhim",
 	"mobile-frontend-home-button": "Il-pâj il-ewelêniye",
 	"mobile-frontend-language-article-heading": "Aqrê fi lûğa uxrâ",
+	"mobile-frontend-last-modified-date": "Tbeddlit ixxir marra fî $1, $2",
 	"mobile-frontend-main-menu-login": "Udxul",
 	"mobile-frontend-main-menu-nearby": "Taqrîben",
 	"mobile-frontend-main-menu-settings": "Il-paramêtir",
+	"mobile-frontend-main-menu-watchlist": "Il-lîste mteģ il-ģesse",
 	"mobile-frontend-news-items": "Fil-Axbâr",
+	"mobile-frontend-placeholder": "Lewwij fî- {{SITENAME}}",
 	"mobile-frontend-random-button": "Biz-zhar",
 	"mobile-frontend-username-placeholder": "Ism il-ütîlîzatër",
 	"mobile-frontend-view": "Cûf bil-portâbil",
+	"mobile-frontend-view-desktop": "Il-bîru",
 	"mobile-frontend-view-mobile": "Portâbil",
 	"tag-mobile_edit": "Baddil bil-portâbil",
-	"tag-mobile_web_edit": "Baddil bil-intirnêt mtêģ il-portabîl"
+	"tag-mobile_web_edit": "Baddil bil-intirnêt mtêģ il-portabîl",
+	"mobile-frontend-pageaction-edit-tooltip": "Beddil fiţ-ţarf mteģ il-muqeddme mteģ il-pâj hêđi."
 }

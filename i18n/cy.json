@@ -5,7 +5,8 @@
 			"Lloffiwr",
 			"MaxSem",
 			"Robin Owain",
-			"Xxglennxx"
+			"Xxglennxx",
+			"Ham II"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
@@ -31,7 +32,6 @@
 	"mobile-frontend-dismiss-notification": "cau'r hysbysiad hwn",
 	"mobile-frontend-donate-image-anon": "Mae angen mewngofnodi er mwyn gweld y dudalen uwchlwytho.",
 	"mobile-frontend-donate-image-heading": "Eich cyfraniadau diweddar",
-	"mobile-frontend-donate-image-login": "Chi a'ch tebyg sy'n rhoi ffeiliau cyfrwng i {{SITENAME}}.",
 	"mobile-frontend-donate-image-nouploads": "Dim uwchlwythiadau.",
 	"mobile-frontend-donate-image-title": "Uwchlwythiadau",
 	"mobile-frontend-donate-photo-first-upload-success": "Llwyddodd eich cyfraniad cyntaf!",
@@ -119,7 +119,6 @@
 	"mobile-frontend-last-modified-years": "Newidwyd ddiwethaf {{PLURAL:$1|$1 blwyddyn|blwyddyn|dwy flynedd|$1 blynedd}} yn ôl",
 	"mobile-frontend-lead-image-tutorial-confirm": "Dechreuer uwchlwytho",
 	"mobile-frontend-lead-image-tutorial-summary": "Sicrhewch y gall eich delwedd ddarlunio'r dudalen. dylai fod yn ddelwedd y gwnaethoch chi ei chynhyrchu, nag ydyw'n torri hawlfraint.",
-	"mobile-frontend-listed-image-no-description": "Dim disgrifiad",
 	"mobile-frontend-logged-in-homepage-notification": "Croeso, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Mewngofnodwyd fel $1.",
 	"mobile-frontend-logged-out": "Nid ydych wedi mewngofnodi",
@@ -189,7 +188,6 @@
 	"mobile-frontend-profile-activity-heading": "Gweithgarwch diweddar",
 	"mobile-frontend-profile-error": "Wps!",
 	"mobile-frontend-profile-last-thank": "Cafodd {{GENDER:$2|ei ddiolch|ei diolch|ei ddiolch}} {{GENDER:$1|gan}} [[Special:UserProfile/$1|$1]].",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Uwchlwythwyd}} {{PLURAL:$1|heddiw|ddoe|deuddydd yn ôl|tridiau yn ôl|$2 diwrnod yn ôl}}.",
 	"mobile-frontend-profile-noargs": "Ni roddwyd enw defnyddiwr. Rhowch enw defnyddiwr i weld y data personol.",
 	"mobile-frontend-profile-nouser": "Does dim defnyddiwr o'r enw hwn i gael. Mae'r peiriant yn gwahaniaethu rhwng llythrennau mawr a bach, felly gwiriwch union sillafiad yr enw.",
 	"mobile-frontend-profile-title": "Data personol",
@@ -260,5 +258,7 @@
 	"mobile-frontend-watchlist-view": "Gweld eich rhestr wylio",
 	"nearby": "Tudalennau yn perthyn i'r cyffiniau",
 	"tag-mobile_edit": "Golygiad drwy declyn symudol",
-	"tag-mobile_edit-description": "Newidiwyd gyda theclyn symudol (gwe neu ap)"
+	"tag-mobile_edit-description": "Newidiwyd gyda theclyn symudol (gwe neu ap)",
+	"tag-mobile_web_edit": "Golygiad ar declun symudol",
+	"mobile-frontend-pageaction-edit-tooltip": "Golygu adran agoriadol y dudalen hon."
 }

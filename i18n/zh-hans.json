@@ -100,7 +100,7 @@
 	"mobile-frontend-editor-disabled": "本页面受到保护以防止被破坏。",
 	"mobile-frontend-editor-edit": "编辑",
 	"mobile-frontend-editor-editing": "编辑中",
-	"mobile-frontend-editor-editing-page": "<strong>编辑</strong><span>$1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>编辑</strong>$1</span>",
 	"mobile-frontend-editor-error": "出错，编辑未保存。",
 	"mobile-frontend-editor-error-conflict": "出错，其他用户已编辑该页面。",
 	"mobile-frontend-editor-error-loading": "出错，无法载入段落。",

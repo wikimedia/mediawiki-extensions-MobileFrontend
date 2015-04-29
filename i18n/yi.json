@@ -37,7 +37,7 @@
 	"mobile-frontend-donate-image-title": "אַרויפֿלאָדונגען",
 	"mobile-frontend-donate-photo-first-upload-success": "דערפאלג! א דאנק פאר אייער ערשטע ביישטייערונג!",
 	"mobile-frontend-drawer-cancel": "אַנולירן",
-	"mobile-frontend-edit-login-action": "<strong>העלפט פארבעסערן  {{SITENAME}}.</strong><br/> לאגירט אריין כדי צו רעדאקטירן.",
+	"mobile-frontend-edit-login-action": "<strong>העלפט פארבעסערן  {{SITENAME}}.</strong>\n<br /> לאגירט אריין כדי צו רעדאקטירן.",
 	"mobile-frontend-editor-abusefilter-read-more": "לייענט ווײטער",
 	"mobile-frontend-editor-anon": "רעדאקטירן אן ארײַנלאגירן",
 	"mobile-frontend-editor-cancel": "אַנולירן",

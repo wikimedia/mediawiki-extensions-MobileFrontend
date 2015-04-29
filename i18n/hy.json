@@ -9,7 +9,8 @@
 			"Xelgen",
 			"Arman musikyan",
 			"GrigorGB",
-			"Դավիթ Սարոյան"
+			"Դավիթ Սարոյան",
+			"Aram1985"
 		]
 	},
 	"beta-feature-minerva": "Միացնել բջջային տեսքը (Մինեվրա) համակարգչի համար",
@@ -26,6 +27,7 @@
 	"mobile-frontend-diffview-404-title": "Սխալ տարբերակի համար։",
 	"mobile-frontend-diffview-anonymous": "Անանուն մասնակից",
 	"mobile-frontend-diffview-bytesadded": "Ավելացվել է $1 բայտ",
+	"mobile-frontend-edit-login-action": "Օգնեք բարելավել {{SITENAME}} կայքը:</strong><br />Մուտք գործեք խմբագրելու համար:",
 	"mobile-frontend-editor-abusefilter-read-more": "Իմանալ ավելին",
 	"mobile-frontend-editor-edit": "Խմբագրել",
 	"mobile-frontend-editor-editing-page": "<strong>Խմբագրում</strong> <span>$1</span>",
@@ -64,5 +66,6 @@
 	"nearby": "Էջեր մոտակա օբյեկտների մասին։",
 	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
 	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից",
-	"mobile-frontend-pageaction-edit-tooltip": "Խմբագրել էջի ներածական մասը։"
+	"mobile-frontend-pageaction-edit-tooltip": "Խմբագրել էջի ներածական մասը։",
+	"mobile-frontend-browse-tags-header": "Նշումներ"
 }

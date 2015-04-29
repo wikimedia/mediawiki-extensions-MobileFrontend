@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-disabled": "Diese Seite ist geschützt, um Vandalismus vorzubeugen.",
 	"mobile-frontend-editor-edit": "Bearbeiten",
 	"mobile-frontend-editor-editing": "Bearbeiten",
-	"mobile-frontend-editor-editing-page": "<strong>Bearbeiten</strong><span> von $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Bearbeiten</strong> von $1</span>",
 	"mobile-frontend-editor-error": "Fehler. Die Bearbeitung wurde nicht gespeichert.",
 	"mobile-frontend-editor-error-conflict": "Fehler. Ein anderer Benutzer hat inzwischen diese Seite bearbeitet.",
 	"mobile-frontend-editor-error-loading": "Fehler. Der Abschnitt konnte nicht geladen werden.",

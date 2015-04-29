@@ -61,8 +61,8 @@
 	"mobile-frontend-donate-image-signup-action": "Zaregistrujte se, abyste mohli svá média sdílet se světem.",
 	"mobile-frontend-donate-image-title": "Načtené soubory",
 	"mobile-frontend-drawer-cancel": "Storno",
-	"mobile-frontend-edit-login-action": "<strong>Pomozte vylepšit {{SITENAME}}.</strong><br />Pro editování se přihlaste.",
-	"mobile-frontend-edit-signup-action": "Pro editování se zaregistrujte.",
+	"mobile-frontend-edit-login-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se přihlaste.",
+	"mobile-frontend-edit-signup-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se zaregistrujte.",
 	"mobile-frontend-editor-abusefilter-disallow": "Tuto editaci nelze uložit, protože jsme zjistili problém.",
 	"mobile-frontend-editor-abusefilter-read-more": "Více informací",
 	"mobile-frontend-editor-abusefilter-warning": "Upozornění: Určitě chcete uložit tuto editaci? Možná obsahuje nějaký problém.",
@@ -342,7 +342,7 @@
 	"mobile-frontend-watchlist-more": "další",
 	"mobile-frontend-watchlist-please-wait": "Čekejte prosím, sledování trvá déle, než jsme čekali.",
 	"mobile-frontend-watchlist-error": "Při sledování této stránky došlo k chybě. Zkuste to znovu později.",
-	"mobile-frontend-watchlist-purpose": "<strong>Seznam sledovaných stránek Vám umožňuje mít přehled o změnách stránek, jež Vás zajímají.</strong><br />Přihlašte se a uvidíte.",
+	"mobile-frontend-watchlist-purpose": "<strong>Seznam sledovaných stránek vám umožňuje mít přehled o změnách stránek, jež vás zajímají.</strong><br />Přihlaste se a uvidíte.",
 	"mobile-frontend-watchlist-removed": "Stránka $1 odebrána ze sledovaných",
 	"mobile-frontend-watchlist-signup-action": "<strong>Seznam sledovaných stránek vám umožňuje mít přehled o změnách stránek, jež vás zajímají.</strong> Zaregistrujte se, ať si ho můžete založit.",
 	"mobile-frontend-watchlist-view": "Zobrazit seznam sledovaných stránek",
@@ -363,5 +363,6 @@
 	"mobile-frontend-days-ago": "Před $1 {{PLURAL:$1|dnem|dny}}",
 	"mobile-frontend-months-ago": "Před {{PLURAL:$1|měsícem|měsíci}}",
 	"mobile-frontend-years-ago": "před $1 {{PLURAL:$1|rokem|roky|lety}}",
-	"mobile-frontend-console-recruit": "\\o/ Ahój! Tohle je open source software a potřebujeme dobrovolníky, aby nám pomohli s jeho tvorbou, vylepšováním a opravováním všech chyb, které v téhle JavaScriptové konzoli můžete zahlédnout!\n\nNaše resty najdete na https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "\\o/ Ahój! Tohle je open source software a potřebujeme dobrovolníky, aby nám pomohli s jeho tvorbou, vylepšováním a opravováním všech chyb, které v téhle JavaScriptové konzoli můžete zahlédnout!\n\nNaše resty najdete na https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "Štítky"
 }

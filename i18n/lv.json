@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-disabled": "Šī lapa ir aizsargāta, lai novērstu vandalismu.",
 	"mobile-frontend-editor-edit": "Labot",
 	"mobile-frontend-editor-editing": "Labošana",
-	"mobile-frontend-editor-editing-page": "<strong>Labo</strong><span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Labo</strong> $1</span>",
 	"mobile-frontend-editor-error": "Kļūda, labojumi nav saglabāti.",
 	"mobile-frontend-editor-error-conflict": "Kļūda, cits lietotājs ir labojis šo lapu.",
 	"mobile-frontend-editor-error-loading": "Kļūda, nevar ielādēt sadaļu.",

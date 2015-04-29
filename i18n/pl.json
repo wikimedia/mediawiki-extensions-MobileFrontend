@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-disabled": "Ta strona została zabezpieczona.",
 	"mobile-frontend-editor-edit": "Edytuj",
 	"mobile-frontend-editor-editing": "Edycja",
-	"mobile-frontend-editor-editing-page": "<strong>Edycja</strong><span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Edycja</strong> $1</span>",
 	"mobile-frontend-editor-error": "Błąd, zmiany nie zostały zapisane.",
 	"mobile-frontend-editor-error-conflict": "Błąd, inny użytkownik w międzyczasie edytował tę stronę.",
 	"mobile-frontend-editor-error-loading": "Błąd, nie udało się załadować sekcji.",
