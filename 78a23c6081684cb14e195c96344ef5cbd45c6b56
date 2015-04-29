@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_8c516ddf",
+        "filename": "resources/mobile.betaoptin/BetaOptinPanel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-29T05:42:40Z",
+      "side": 1,
+      "message": "lol :P",
+      "revId": "78a23c6081684cb14e195c96344ef5cbd45c6b56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
