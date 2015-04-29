@@ -204,7 +204,10 @@ class ApiMobileView extends ApiBase {
 				$editable = intval( $editable );
 			}
 			$resultObj->addValue( null, $moduleName,
-				array( 'editable' => $editable )
+				array(
+					'editable' => $editable,
+					ApiResult::META_BC_BOOLS => array(' editable' ),
+				)
 			);
 		}
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
