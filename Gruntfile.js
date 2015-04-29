@@ -24,7 +24,10 @@ module.exports = function ( grunt ) {
 		QUNIT_FILTER: ( process.env.QUNIT_FILTER && '&filter=' + process.env.QUNIT_FILTER ) || '',
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
 		files: {
-			js: 'javascripts/**/*.js',
+			js: [
+				'javascripts/**/*.js',
+				'resources/**/*.js'
+			],
 			jsTests: 'tests/qunit/**/*.js',
 			jsExternals: 'javascripts/externals/**/*.js'
 		},
