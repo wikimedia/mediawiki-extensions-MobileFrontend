@@ -61,7 +61,8 @@
 			'click .overlay-content': 'onClickOverlayContent',
 			'click .overlay-content > div': 'onClickOverlayContentDiv',
 			'touchstart .results': 'hideKeyboardOnScroll',
-			'mousedown .results': 'hideKeyboardOnScroll'
+			'mousedown .results': 'hideKeyboardOnScroll',
+			'click .results li': 'onClickResult'
 		} ),
 
 		/**
@@ -156,6 +157,30 @@
 			this.$input.blur();
 		},
 
+		/**
+		 * Handle the user clicking a result.
+		 *
+		 * @param {jQuery.Event} ev
+		 */
+		onClickResult: function ( ev ) {
+			var $result = $( ev.target ).closest( 'li' );
+
+			/**
+			 * @event search-result-click Fired when the user clicks a search result
+			 * @type {Object}
+			 * @property {jQuery} result The jQuery-wrapped DOM element that
+			 *  the user clicked
+			 * @property {Number} resultIndex The zero-based index of the
+			 *  result in the set of results
+			 * @property {jQuery.Event} originalEvent The original event
+			 */
+			M.emit( 'search-result-click', {
+				result: $result,
+				resultIndex: this.$results.index( $result ),
+				originalEvent: ev
+			} );
+		},
+
 		/** @inheritdoc */
 		postRender: function ( options ) {
 			var self = this;
@@ -188,6 +213,11 @@
 			if ( this.$input[0].setSelectionRange ) {
 				this.$input[0].setSelectionRange( len, len );
 			}
+
+			/**
+			 * @event search-show Fired after the search overlay is shown
+			 */
+			M.emit( 'search-show' );
 		},
 
 		/**
@@ -217,7 +247,7 @@
 				self = this,
 				pageList,
 				query = this.$input.val(),
-				$results = this.$( '.results' );
+				$resultContainer = this.$( '.results' );
 
 			// it seems the input event can be fired when virtual keyboard is closed
 			// (Chrome for Android)
@@ -225,12 +255,20 @@
 				this.api.abort();
 				clearTimeout( this.timer );
 				self.$searchContent.hide();
-				$results.empty();
+				$resultContainer.empty();
 
 				if ( query.length ) {
 					this.$( '.spinner' ).show();
 
 					this.timer = setTimeout( function () {
+
+						// FIXME: The query might be useful here, bit it ain't necessary right now.
+						/**
+						 * @event search-start Fired immediately before the search API request is
+						 *  sent
+						 */
+						M.emit( 'search-start' );
+
 						self.api.search( query ).done( function ( data ) {
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
@@ -245,13 +283,20 @@
 								pageList = new WatchstarPageList( {
 									funnel: 'search',
 									pages: data.results,
-									el: $results
+									el: $resultContainer
 								} );
+
+								self.$results = $resultContainer.find( 'li' );
+
 								/**
-								 * @event search-results
-								 * Fired when search API returns results
+								 * @event search-results Fired when search API returns results
+								 * @type {Object}
+								 * @property {Object[]} results The results returned by the search
+								 *  API
 								 */
-								M.emit( 'search-results', self, data.results );
+								M.emit( 'search-results', {
+									results: data.results
+								} );
 							}
 						} );
 					}, this.api.isCached( query ) ? 0 : SEARCH_DELAY );

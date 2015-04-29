@@ -45,15 +45,14 @@
 	// to search results (we can't rely on History API yet)
 	// alpha does it differently in lazyload.js
 	if ( !context.isAlphaGroupMember() ) {
-		M.on( 'search-results', function ( overlay ) {
-			overlay.$( '.results a' ).on( 'click', function () {
-				var href = $( this ).attr( 'href' );
-				router.back().done( function () {
-					window.location.href = href;
-				} );
-				// Prevent the link from working and prevent the closing of the overlay
-				// by an event upstream which would trigger browser back on the clicked link
-				return false;
+		M.on( 'search-result-click', function ( ev ) {
+			var href = $( ev.result ).find( 'a' )
+				.attr( 'href' );
+
+			ev.originalEvent.preventDefault();
+
+			router.back().done( function () {
+				window.location.href = href;
 			} );
 		} );
 	}
