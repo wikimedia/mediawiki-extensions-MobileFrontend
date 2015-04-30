@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_2fd62555",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T17:37:50Z",
+      "side": 1,
+      "message": "This is returning 0 results while the api is returning 3.",
+      "parentUuid": "0ed113e2_69ef4dae",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_c9faf93f",
         "filename": "includes/specials/SpecialTopicTag.php",
         "patchSetId": 1
