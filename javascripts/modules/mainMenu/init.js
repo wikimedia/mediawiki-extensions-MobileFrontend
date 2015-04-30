@@ -1,13 +1,15 @@
 ( function ( M, $ ) {
 	var MainMenu = M.require( 'MainMenu' ),
-		mainMenu = new MainMenu(),
-		isAlpha = M.require( 'context' ).isAlphaGroupMember();
+		isAlpha = M.require( 'context' ).isAlphaGroupMember(),
+		options = isAlpha ? {
+				el: '#mw-mf-page-left'
+			} : {},
+		mainMenu = new MainMenu( options );
 
 	M.on( 'header-loaded', function () {
 		// Render MainMenu when needed
 		$( '#mw-mf-main-menu-button' ).on( 'click', function ( ev ) {
 			ev.preventDefault();
-			mainMenu = new MainMenu();
 			mainMenu.openNavigationDrawer();
 		} );
 
@@ -19,6 +21,11 @@
 
 				window.history.back();
 			} );
+		}
+	} );
+	$( function () {
+		if ( !$( '#mw-mf-page-left' ).length ) {
+			mainMenu.prependTo( '#mw-mf-viewport' );
 		}
 	} );
 

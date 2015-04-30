@@ -24,7 +24,7 @@
 	z-index: @z-indexMain;
 }
 
-#mw-mf-page-left {
+nav {
 	float: left;
 }
 
@@ -46,8 +46,6 @@
 	box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
-// FIXME: Remove this once the nav element is delivered to everyone and cached.
-#mw-mf-page-left,
 nav {
 	font-size: 90%;
 	min-height: 100%;
@@ -152,7 +150,7 @@ body.navigation-enabled {
 		height: 100%;
 		// Overriden in mainmenuAnimation
 		left: @menuWidth;
-		// set border here (#mw-mf-page-left doesn't expand height)
+		// set border here (nav doesn't expand height)
 		border-left: solid 1px #000;
 		box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.1);
 	}
@@ -169,7 +167,7 @@ body.navigation-enabled {
 }
 
 .primary-navigation-enabled {
-	// set background and border here (#mw-mf-page-left doesn't expand height
+	// set background and border here (nav doesn't expand height
 	// and #mw-mf-viewport has overflow: hidden and clips blue hover borders)
 	border-left: solid @menuBorder @menuBorderColor;
 	background: @mainMenuBackgroundColor;
@@ -178,7 +176,7 @@ body.navigation-enabled {
 		margin-left: -@menuBorder;
 	}
 
-	#mw-mf-page-left {
+	nav {
 		width: @menuWidth;
 	}
 
@@ -224,7 +222,7 @@ body.navigation-enabled {
 		.transition-transform(@transition);
 	}
 
-	#mw-mf-page-left {
+	nav {
 		width: @menuWidth;
 
 		.transition(visibility 0s @duration);
@@ -260,7 +258,7 @@ body.navigation-enabled {
 		.transform(translate3d(@menuWidth, 0, 0));
 	}
 
-	#mw-mf-page-left {
+	nav {
 		// make menu scrollable when open (on small screens)
 		position: static;
 
