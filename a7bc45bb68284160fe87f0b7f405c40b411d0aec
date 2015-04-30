@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_2f6945f6",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T18:29:04Z",
+      "side": 1,
+      "message": "on SpecialMobileMenu page the nav is in the center of the page, thus the id above should not be added.",
+      "revId": "a7bc45bb68284160fe87f0b7f405c40b411d0aec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8f58715a",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T18:29:04Z",
+      "side": 1,
+      "message": "I think we should use templates here too.",
+      "revId": "a7bc45bb68284160fe87f0b7f405c40b411d0aec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
