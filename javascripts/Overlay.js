@@ -154,13 +154,14 @@
 		onTouchMove: function ( ev ) {
 			var
 				y = ev.originalEvent.touches[0].pageY,
-				contentLenght = $( ev.target ).prop( 'scrollHeight' ) - $( ev.target ).outerHeight();
+				contentOuterHeight = this.$overlayContent.outerHeight(),
+				contentLength = this.$overlayContent.prop( 'scrollHeight' ) - contentOuterHeight;
 
 			ev.stopPropagation();
 			// prevent scrolling and bouncing outside of .overlay-content
 			if (
-				( $( ev.target ).scrollTop() === 0 && this.startY < y ) ||
-				( $( ev.target ).scrollTop() === contentLenght && this.startY > y )
+				( this.$overlayContent.scrollTop() === 0 && this.startY < y ) ||
+				( this.$overlayContent.scrollTop() === contentLength && this.startY > y )
 			) {
 				ev.preventDefault();
 			}
