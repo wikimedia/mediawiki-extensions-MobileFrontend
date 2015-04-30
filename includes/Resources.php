@@ -659,6 +659,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/search/SearchApi.js',
 			'javascripts/modules/search/SearchOverlay.js',
+			'javascripts/modules/search/MobileWebSearchLogger.js',
 			'javascripts/modules/search/init.js',
 		),
 		'templates' => array(

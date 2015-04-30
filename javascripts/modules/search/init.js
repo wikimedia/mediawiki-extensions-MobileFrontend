@@ -57,4 +57,6 @@
 		} );
 	}
 
+	M.require( 'modules/search/MobileWebSearchLogger' ).register();
+
 }( mw.mobileFrontend, jQuery ) );
