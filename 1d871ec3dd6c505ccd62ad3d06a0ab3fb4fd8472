@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_89eab19a",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:55:36Z",
+      "side": 1,
+      "message": "Prevent rightwards drift and early return here.",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_69ef4dae",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:55:36Z",
+      "side": 1,
+      "message": "This API request can be replaced with the following:\n\n    $category \u003d Category::newFromName( $categoryName );\n    $titles \u003d $category-\u003egetMembers( 50 ); // MAGIC NUMBER KLAXON!",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c9faf93f",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:55:36Z",
+      "side": 1,
+      "message": "If you go the `#getMembers` route, then this test isn\u0027t really necessary. Iterating over an empty collection looks exactly like iterating over a collection with N elements.",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_89f4f151",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:55:36Z",
+      "side": 1,
+      "message": "I\u0027d say that this is unnecessary, but actually I think that this is probably the cleanest way of invoking the PageExtracts and PageImages APIs (as they don\u0027t have clean internal APIs themselves).",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
