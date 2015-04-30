@@ -1,7 +1,44 @@
 ( function ( M, $ ) {
 	var Schema,
 		Class = M.require( 'Class' ),
-		user = M.require( 'user' );
+		user = M.require( 'user' ),
+		settings = M.require( 'settings' );
+
+	/**
+	 * Loads the beacons from local storage.
+	 *
+	 * @returns {Array}
+	 */
+	function loadBeacon() {
+		return JSON.parse( settings.get( 'mobileFrontend/beacons' ) );
+	}
+
+	/**
+	 * Saves the beacons to local storage.
+	 *
+	 * @param {Object} beacon
+	 */
+	function saveBeacon( beacon ) {
+		settings.save( 'mobileFrontend/beacons', JSON.stringify( beacon ) );
+	}
+
+	// FIXME: [EL] This could be made more general if we decide to move the
+	// schema class to their respective modules.
+	/**
+	 * Creates an instance of a schema in the `loggingSchemas` group, e.g.
+	 * `factorySchema( 'MobileWebSearch' )` would return an instance of the
+	 * `SchemaMobileWebSearch` class.
+	 *
+	 * @param {String} name
+	 * @returns {Schema}
+	 * @throws Error If the schema isn't defined
+	 */
+	function factorySchema( name ) {
+		var Klass = M.require( 'loggingSchemas/Schema' + name ),
+			result = new Klass;
+
+		return result;
+	}
 
 	/**
 	 * @class Schema
@@ -59,8 +96,40 @@
 			} else {
 				return $.Deferred().reject( 'EventLogging not installed.' );
 			}
+		},
+
+		/**
+		 * Try to log an event after the next page load.
+		 *
+		 * @method
+		 *
+		 * @param {Object} data to log
+		 */
+		logBeacon: function ( data ) {
+			saveBeacon( {
+				schema: this.name,
+				data: data
+			} );
 		}
+
 	} );
+
+	/**
+	 * If a beacon was saved previously, then it is logged.
+	 *
+	 * If the beacon fails, then it isn't retried.
+	 *
+	 * @method
+	 */
+	Schema.flushBeacon = function () {
+		var beacon = loadBeacon();
+
+		if ( beacon ) {
+			factorySchema( beacon.schema ).log( beacon.data );
+		}
+
+		saveBeacon( null );
+	};
 
 	M.define( 'Schema', Schema );
 

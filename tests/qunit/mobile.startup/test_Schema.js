@@ -1,10 +1,22 @@
 ( function ( $, M ) {
-	var Schema = M.require( 'Schema' );
+	var Schema = M.require( 'Schema' ),
+		TestSchema = Schema.extend( {
+			name: 'test'
+		} );
 
-	QUnit.module( 'Schema' );
+	// Because these can't be undefined, we have to do this in the module
+	// preamble (not setup and teardown).
+	M.define( 'loggingSchemas/Schematest', TestSchema );
+
+	QUnit.module( 'MobileFrontend: Schema', {
+		setup: function () {
+			this.stub( TestSchema.prototype, 'log' );
+			this.logStub = TestSchema.prototype.log;
+		}
+	} );
 
 	QUnit.test( '#initialize', 3, function ( assert ) {
-		var s1, s2, s3, SubSchema;
+		var s1, s2, s3;
 		// Creating a schema without name throws
 		try {
 			s1 = new Schema();
@@ -15,11 +27,20 @@
 		s2 = new Schema( {}, 'aname' );
 		assert.strictEqual( s2.name, 'aname', 'explicit name gets set' );
 
-		SubSchema = Schema.extend( {
-			name: 'subname'
-		} );
-		s3 = new SubSchema( {} );
-		assert.strictEqual( s3.name, 'subname', 'subclassed name works' );
+		s3 = new TestSchema( {} );
+		assert.strictEqual( s3.name, 'test', 'subclassed name works' );
+	} );
+
+	QUnit.test( '#flush should log the beacon', 1, function ( assert ) {
+		var data = {
+				foo: 'bar'
+			},
+			testSchema = new TestSchema();
+
+		testSchema.logBeacon( data );
+		Schema.flushBeacon();
+
+		assert.deepEqual( [ data ], this.logStub.firstCall.args );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );
