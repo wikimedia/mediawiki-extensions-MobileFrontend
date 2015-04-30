@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_89ddd1e3",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebSearch.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:51:16Z",
+      "side": 1,
+      "message": "The original schema actually provisions for this already. For now though, \u0027mobileweb\u0027 will suffice.",
+      "parentUuid": "0ed113e2_897711fd",
+      "revId": "b2d994e2176682c269490793ec3b287a8fd279c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_09d241d5",
         "filename": "javascripts/modules/search/MobileWebSearchLogger.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-30T15:47:19Z",
       "side": 1,
       "message": "Not 100% sure from documentation alone the difference between this and a Schema.\nIs it like a mixin?\n\n\nGuess I\u0027ll need to dig some more into this code.\nShouldn\u0027t/couldn\u0027t this be in the SearchOverlay itself?",
+      "revId": "b2d994e2176682c269490793ec3b287a8fd279c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e9e57da0",
+        "filename": "javascripts/modules/search/MobileWebSearchLogger.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T15:51:16Z",
+      "side": 1,
+      "message": "OK. You\u0027re right. I need to explain this better.\n\nThis is a thing that translates sequences of user actions, represented by events, to MobileWebSchema events. By doing this we decouple SearchOverlay from the MobileWebSearch schema, meaning that we can turn off logging easily, other clients interested in search-related events can hook in without having to fiddle with logging etc.",
+      "parentUuid": "0ed113e2_09d241d5",
       "revId": "b2d994e2176682c269490793ec3b287a8fd279c7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
