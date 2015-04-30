@@ -16,6 +16,24 @@
       "revId": "e22ba64c101b9ed21e29649e07a54a66c5ef4430",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ace2232c",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T16:32:43Z",
+      "side": 1,
+      "message": "Derp.",
+      "parentUuid": "0ed113e2_098c81fe",
+      "revId": "e22ba64c101b9ed21e29649e07a54a66c5ef4430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
