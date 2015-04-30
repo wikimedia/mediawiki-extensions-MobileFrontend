@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_55277ab1",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:36:13Z",
+      "side": 1,
+      "message": "You should use $isSpecialMobileMenuPage instead.",
+      "revId": "e07bdb6a0f49f5a64f7694d99227762b32acd018",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d5328aee",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:36:13Z",
+      "side": 1,
+      "message": "This should be moved to the page-center below once $isSpecialMobileMenuPage is used above.",
+      "revId": "e07bdb6a0f49f5a64f7694d99227762b32acd018",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_354bd664",
+        "filename": "javascripts/modules/mainMenu/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:36:13Z",
+      "side": 1,
+      "message": "This line needs to be removed since the main menu is already being instantiated above.",
+      "revId": "e07bdb6a0f49f5a64f7694d99227762b32acd018",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
