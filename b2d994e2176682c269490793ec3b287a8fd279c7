@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_897711fd",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebSearch.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-30T15:47:19Z",
+      "side": 1,
+      "message": "Is the idea to use schemas across the site? desktop too?\nIt would be great to start generalising our schemas asap as Gather is going to hit this soon - tracking bug?",
+      "revId": "b2d994e2176682c269490793ec3b287a8fd279c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_09d241d5",
+        "filename": "javascripts/modules/search/MobileWebSearchLogger.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-30T15:47:19Z",
+      "side": 1,
+      "message": "Not 100% sure from documentation alone the difference between this and a Schema.\nIs it like a mixin?\n\n\nGuess I\u0027ll need to dig some more into this code.\nShouldn\u0027t/couldn\u0027t this be in the SearchOverlay itself?",
+      "revId": "b2d994e2176682c269490793ec3b287a8fd279c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
