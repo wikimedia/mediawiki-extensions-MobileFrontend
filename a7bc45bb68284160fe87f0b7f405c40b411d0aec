@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_ede58207",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-30T23:41:21Z",
+      "side": 1,
+      "message": "ok i\u0027ll move this to a template.",
+      "parentUuid": "0ed113e2_2f6945f6",
+      "revId": "a7bc45bb68284160fe87f0b7f405c40b411d0aec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_8f58715a",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-30T18:29:04Z",
       "side": 1,
       "message": "I think we should use templates here too.",
+      "revId": "a7bc45bb68284160fe87f0b7f405c40b411d0aec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_cde2feff",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-30T23:41:21Z",
+      "side": 1,
+      "message": "Feel free to do this in a latter patch. This is not within the scope and exactly why I\u0027ve been getting frustrated on the mailing list-  we are spending too much time on something we want to kill.",
+      "parentUuid": "0ed113e2_8f58715a",
       "revId": "a7bc45bb68284160fe87f0b7f405c40b411d0aec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
