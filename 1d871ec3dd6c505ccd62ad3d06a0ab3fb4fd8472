@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_ef3edd86",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T17:44:19Z",
+      "side": 1,
+      "message": "Derp. Yerright.",
+      "parentUuid": "0ed113e2_ec402b5d",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_89eab19a",
         "filename": "includes/specials/SpecialTopicTag.php",
         "patchSetId": 1
