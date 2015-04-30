@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_4d25ae02",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-30T23:58:43Z",
+      "side": 1,
+      "message": "Please capitalize Gather and also mention that this is an experimental feature.",
+      "revId": "8758125b2c89d73428ad09535c803a25e42a47d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_7bf94f49",
         "filename": "includes/specials/browse/SpecialTopicTag.php",
         "patchSetId": 6
