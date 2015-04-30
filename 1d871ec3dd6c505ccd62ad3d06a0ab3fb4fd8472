@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_0cb1efdb",
+        "filename": "includes/specials/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-30T16:51:16Z",
+      "side": 1,
+      "message": "With the current configuration [0] this will always fail.\n\nThis needs to be something like:\n\n    $categoryName \u003d \"Category:{$subpage}\";\n\n    if ( isset( $wgMFBrowseTags[$categoryName] ) ) {\n        // ...\n\n[0] https://gerrit.wikimedia.org/r/#/c/206375/",
+      "revId": "1d871ec3dd6c505ccd62ad3d06a0ab3fb4fd8472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_89eab19a",
         "filename": "includes/specials/SpecialTopicTag.php",
         "patchSetId": 1
