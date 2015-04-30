@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e0c4aa96",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T20:45:17Z",
+      "side": 1,
+      "message": "Please update the documentation.",
+      "revId": "7695eed4d7d1d7373489c229ff94db1f8229b1b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_80c35e8b",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T20:45:17Z",
+      "side": 1,
+      "message": "editLink -\u003e editButton so that it\u0027s clear?",
+      "revId": "7695eed4d7d1d7373489c229ff94db1f8229b1b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_403576a2",
+        "filename": "resources/mobile.startup/Button.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T20:45:17Z",
+      "side": 1,
+      "message": "Please add documentation above.",
+      "revId": "7695eed4d7d1d7373489c229ff94db1f8229b1b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c0488634",
+        "filename": "resources/mobile.talk.overlays/TalkSectionOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T20:45:17Z",
+      "side": 1,
+      "message": "It maybe a good idea to make mw-ui-block an option on Button and not be tied to a specific implementation.",
+      "revId": "7695eed4d7d1d7373489c229ff94db1f8229b1b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
