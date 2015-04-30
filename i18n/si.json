@@ -10,7 +10,8 @@
 			"Indunil Chamara",
 			"Susith Chandira Gts",
 			"Thirsty",
-			"Roonyh"
+			"Roonyh",
+			"හරිත"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
@@ -20,7 +21,7 @@
 	"mobile-frontend-changeslist-ip": "නිර්නාමික පරිශීලක",
 	"mobile-frontend-changeslist-nocomment": "සංස්කරණ සාරාංශයක් නොමැත",
 	"mobile-frontend-clear-search": "හිස් කරන්න",
-	"mobile-frontend-copyright": "<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>යටතේ පෙළ ලබා ගත හැක;අමතර කොන්දේසි සහිතයි.විස්තර සඳහා <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> බලන්න.විකිපීඩියා යනු,ලාභ නොඋපදවන සංවිධානයක් වූ <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> හි ලියාපදිංචි වෙළඳ ලකුණකි.",
+	"mobile-frontend-copyright": " අන්ලෙසකින් සඳහන්කර නැති සෑම විටෙකම අන්තර්ගතය $1 යටතේ ඇත.",
 	"mobile-frontend-desc": "ජංගම ඉදිරිපස",
 	"mobile-frontend-diffview-anonymous": "නිර්නාමික පරිශීලක",
 	"mobile-frontend-diffview-editcount": "{{PLURAL:සංස්කරණ|සංස්කරණ}} <div>$1</div> ක්",

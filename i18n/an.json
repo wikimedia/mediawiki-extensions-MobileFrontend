@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Juanpabl"
+			"Juanpabl",
+			"Carlos Cristia"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Ir una sección entazaga",
@@ -9,6 +10,7 @@
 	"mobile-frontend-desc": "Interficie mobil",
 	"mobile-frontend-disable-images": "Desactivar imachens en a versión ta mobils",
 	"mobile-frontend-dismiss-notification": "refusar ista notificación",
+	"mobile-frontend-editor-edit": "Editar",
 	"mobile-frontend-enable-images": "Activar imachens en a versión ta mobils",
 	"mobile-frontend-featured-article": "Articlo destacau de hue",
 	"mobile-frontend-home-button": "Portalada",

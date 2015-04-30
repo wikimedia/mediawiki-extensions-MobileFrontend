@@ -4,7 +4,8 @@
 			"Dbc334",
 			"Eleassar",
 			"Irena Plahuta",
-			"Yerpo"
+			"Yerpo",
+			"Skalcaa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ali uporabnik ureja prek mobilnega vmesnika ali ne",
@@ -29,7 +30,6 @@
 	"mobile-frontend-dismiss-notification": "skrij obvestilo",
 	"mobile-frontend-donate-image-anon": "Za ogled strani z nalaganji je potrebna prijava.",
 	"mobile-frontend-donate-image-heading": "Vaši nedavni prispevki",
-	"mobile-frontend-donate-image-login": "Predstavnost na {{GRAMMAR:mestnik|{{SITENAME}}}} darujejo ljudje, kot ste vi.",
 	"mobile-frontend-donate-image-nouploads": "Brez nalaganj.",
 	"mobile-frontend-donate-image-title": "Nalaganja",
 	"mobile-frontend-donate-photo-first-upload-success": "Uspešno! Hvala za vaš prvi prispevek!",
@@ -57,7 +57,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Čestitamo, zdaj ste urejevalec projekta {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Primer: Popravljena tipkarska napaka, dodana vsebina",
 	"mobile-frontend-editor-tutorial-confirm": "Začetek urejanja",
-	"mobile-frontend-editor-tutorial-summary": "Poskusite izboljšati stran $1.<br />Ne bojte se označevanja.",
+	"mobile-frontend-editor-tutorial-summary": "Poskusite izboljšati stran $1.<br />Ne bojte se označevalnega jezika.",
 	"mobile-frontend-editor-unavailable": "Na vašem brskalniku mobilno urejanje trenutno ni mogoče. Poskusite z drugim brskalnikom.",
 	"mobile-frontend-editor-undo-unsupported": "Razveljavljanje trenutno ni podprto na mobilnih napravah.",
 	"mobile-frontend-editor-wait": "Shranjujem urejanje, prosimo, počakajte.",

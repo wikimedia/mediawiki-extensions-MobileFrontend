@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bennylin",
-			"NoiX180"
+			"NoiX180",
+			"Pras"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Lebokna kode konfirmasi",
@@ -26,14 +27,13 @@
 	"mobile-frontend-dismiss-notification": "tutup warta iki",
 	"mobile-frontend-donate-image-anon": "$1 dibutuhkan untuk melihat halaman pengunggahan.",
 	"mobile-frontend-donate-image-heading": "Kontribusi terakhir Anda",
-	"mobile-frontend-donate-image-login": "Media di {{SITENAME}} disumbangne kaliyan wong-wong kaya sampeyan.",
 	"mobile-frontend-donate-image-nouploads": "Tidak ada unggahan.",
 	"mobile-frontend-donate-image-title": "Unggahan",
 	"mobile-frontend-donate-photo-first-upload-success": "Berhasil! Terima kasih atas kontribusi pertama Anda!",
 	"mobile-frontend-donate-photo-upload-success": "Sukses! Gambar Anda sekarang dapat digunakan pada {{SITENAME}}!",
-	"mobile-frontend-edit-login": "Èwangi mbenahi kaca $1",
 	"mobile-frontend-edit-login-action": "Mlebu log kanggo ngowahi.",
 	"mobile-frontend-edit-signup-action": "Daftara dhisik yen arep ngowahi.",
+	"mobile-frontend-editor-edit": "Sunting",
 	"mobile-frontend-enable-images": "Urubaké gambar nèng situs ponsèl",
 	"mobile-frontend-featured-article": "Artikel Pinilih Dina Iki",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Gambar pada {{SITENAME}} berasal dari Wikimedia Commons",
@@ -62,7 +62,7 @@
 	"mobile-frontend-languages-header": "Basa-basa",
 	"mobile-frontend-languages-nonexistent-title": "Kaca \"$1\" ora ana.",
 	"mobile-frontend-languages-variant-header": "variasi {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-last-modified-date": "Dianyari pungkasan ing tanggal $1, $jam 2",
+	"mobile-frontend-last-modified-date": "Dipunewahi pungkasan ing tanggal $1, $jam 2",
 	"mobile-frontend-last-modified-days": "Dianyari pungkasan {{PLURAL:$1|$1 dina|$1 dinat}} kapungkur",
 	"mobile-frontend-last-modified-hours": "Dianyari pungkasan {{PLURAL:$1|$1 jam|$1 jam}} kapungkur",
 	"mobile-frontend-last-modified-just-now": "Lagi wae dianyari",
@@ -79,7 +79,6 @@
 	"mobile-frontend-last-modified-years": "Dianyari pungkasan {{PLURAL:$1|$1 taun|$1 taun}} kapungkur",
 	"mobile-frontend-lead-image-tutorial-confirm": "Miwiti pangunggahan",
 	"mobile-frontend-lead-image-tutorial-summary": "Pastikan bahwa gambar Anda dapat membantu mengilustrasikan halaman. Gambar tersebut harus gambar yang Anda buat sendiri, yang tidak melanggar hak cipta.",
-	"mobile-frontend-listed-image-no-description": "Ora ana katrangan",
 	"mobile-frontend-logged-in-homepage-notification": "Sugeng Rawuh, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Mlebet log dadi $1",
 	"mobile-frontend-logged-out": "Durung mlebu log",
@@ -153,7 +152,6 @@
 	"mobile-frontend-settings-alpha": "Mode eksperimental",
 	"mobile-frontend-settings-alpha-description": "Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kemungkinan kesalahan.",
 	"mobile-frontend-settings-beta": "Béta",
-	"mobile-frontend-settings-description": "Menyesuaikan pengalaman Anda di piranti mobil dengan pengaturan spesifik untuk situs mobil.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}. Kabéh vèrsi sumadhiya kadaptar nèng ngisor",
 	"mobile-frontend-settings-site-header": "Basa {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Wélah!",
@@ -189,5 +187,8 @@
 	"mobile-frontend-watchlist-more": "Luwih akèh",
 	"mobile-frontend-watchlist-removed": "Busak kaca iki saka daftar pangawasan panjenengan",
 	"mobile-frontend-watchlist-view": "Dheleng daftar pangawasan sampeyan",
-	"nearby": "Artikel tentang tempat di dekat Anda"
+	"nearby": "Artikel tentang tempat di dekat Anda",
+	"tag-mobile_edit": "Suntingan HP",
+	"tag-mobile_web_edit": "Suntingan web HP",
+	"mobile-frontend-pageaction-edit-tooltip": "Sunting perangan wiwitan kaca punika."
 }

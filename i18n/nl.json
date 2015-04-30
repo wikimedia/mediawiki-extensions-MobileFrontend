@@ -57,7 +57,6 @@
 	"mobile-frontend-dismiss-notification": "deze melding verwijderen",
 	"mobile-frontend-donate-image-anon": "Log in om de uploadpagina te bekijken.",
 	"mobile-frontend-donate-image-heading": "Uw recente bijdragen",
-	"mobile-frontend-donate-image-login": "Media op {{SITENAME}} wordt gedoneerd door mensen zoals u.",
 	"mobile-frontend-donate-image-login-action": "Meld u aan om uw media te delen.",
 	"mobile-frontend-donate-image-nouploads": "Geen uploads",
 	"mobile-frontend-donate-image-signup-action": "Registreer u om uw media met de wereld te delen.",
@@ -65,7 +64,6 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Bedankt voor uw eerste bijdrage!",
 	"mobile-frontend-donate-photo-upload-success": "Uw afbeelding kan nu gebruikt worden op {{SITENAME}}.",
 	"mobile-frontend-drawer-cancel": "Annuleren",
-	"mobile-frontend-edit-login": "Help de pagina $1 te verbeteren.",
 	"mobile-frontend-edit-login-action": "Meld u aan om te bewerken",
 	"mobile-frontend-edit-signup-action": "Registreer u om te bewerken",
 	"mobile-frontend-editor-abusefilter-disallow": "Deze bewerking kan niet worden opgeslagen omdat er een probleem is ontdekt.",
@@ -348,5 +346,6 @@
 	"mobile-frontend-time-precision-BCE-0annum": "$1 v.g.j.",
 	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|dag|dagen}} geleden",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|maand|maanden}} geleden",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|jaar|jaar}} geleden"
+	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|jaar|jaar}} geleden",
+	"mobile-frontend-browse-tags-header": "Labels"
 }

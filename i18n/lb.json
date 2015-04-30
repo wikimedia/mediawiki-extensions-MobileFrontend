@@ -63,7 +63,7 @@
 	"mobile-frontend-editor-disabled": "Dës Säit ass geschützt fir Vandalismus ze verhënneren.",
 	"mobile-frontend-editor-edit": "Änneren",
 	"mobile-frontend-editor-editing": "Änneren",
-	"mobile-frontend-editor-editing-page": "<strong>Ännere</strong> vu(n)<span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Ännere</strong> vu(n) $1</span>",
 	"mobile-frontend-editor-error": "Feeler, Ännerung net gespäichert.",
 	"mobile-frontend-editor-error-conflict": "Feeler, en anere Benotzer huet dës Säit geännert.",
 	"mobile-frontend-editor-error-loading": "Feeler, den Abschnitt kann net geluede ginn.",

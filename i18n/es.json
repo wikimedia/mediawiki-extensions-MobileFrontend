@@ -93,7 +93,7 @@
 	"mobile-frontend-editor-disabled": "Esta página está protegida para evitar el vandalismo.",
 	"mobile-frontend-editor-edit": "Editar",
 	"mobile-frontend-editor-editing": "Editando",
-	"mobile-frontend-editor-editing-page": "<strong>Edición</strong><span>de «$1»</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong>de «$1»</span>",
 	"mobile-frontend-editor-error": "Error, edición no guardada.",
 	"mobile-frontend-editor-error-conflict": "Error, otro usuario ha editado esta página.",
 	"mobile-frontend-editor-error-loading": "Error, no se puede cargar la sección.",
