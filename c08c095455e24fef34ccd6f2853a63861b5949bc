@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_8f9f1162",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-04-30T17:59:48Z",
+      "side": 1,
+      "message": "Don\u0027t use un-namespaced global constants...make them part of the class, or at least prefix them.",
+      "revId": "c08c095455e24fef34ccd6f2853a63861b5949bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_efb01df3",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-04-30T17:59:48Z",
+      "side": 1,
+      "message": "spacing",
+      "revId": "c08c095455e24fef34ccd6f2853a63861b5949bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ef87bd12",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-04-30T17:59:48Z",
+      "side": 1,
+      "message": "actually output something indicating why the page is blank.",
+      "revId": "c08c095455e24fef34ccd6f2853a63861b5949bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
