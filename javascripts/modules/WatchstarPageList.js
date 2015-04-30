@@ -47,13 +47,13 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
+		postRender: function () {
 			var $li,
 				self = this,
 				pages = [],
 				api = this.api;
 
-			PageList.prototype.postRender.apply( this, arguments );
+			PageList.prototype.postRender.apply( this );
 
 			// Get the items that haven't been initialized
 			$li = this.$( 'li:not(.with-watchstar)' );
@@ -77,7 +77,7 @@
 							} );
 
 						watchstar = new Watchstar( {
-							funnel: options.funnel,
+							funnel: self.options.funnel,
 							isAnon: false,
 							isWatched: api.isWatchedPage( page ),
 							page: page,

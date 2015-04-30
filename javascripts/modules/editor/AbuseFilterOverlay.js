@@ -25,7 +25,7 @@
 
 		/** @inheritdoc */
 		postRender: function () {
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 			// make links open in separate tabs
 			this.$( 'a' ).attr( 'target', '_blank' );
 		}

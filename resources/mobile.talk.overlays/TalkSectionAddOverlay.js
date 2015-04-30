@@ -57,8 +57,8 @@
 			this._saveHit = false;
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
-			Overlay.prototype.postRender.call( this, options );
+		postRender: function () {
+			Overlay.prototype.postRender.call( this );
 			this.showHidden( '.initial-header' );
 			this.$confirm = this.$( 'button.confirm-save' );
 			this.$subject = this.$( '.summary' );

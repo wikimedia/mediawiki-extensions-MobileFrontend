@@ -50,7 +50,7 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			WatchstarPageList.prototype.postRender.apply( this, arguments );
+			WatchstarPageList.prototype.postRender.apply( this );
 			this.infiniteScroll.enable();
 		},
 		/**

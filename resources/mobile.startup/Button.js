@@ -30,7 +30,6 @@
 		},
 		/** @inheritdoc */
 		postRender: function () {
-			View.prototype.postRender.apply( this, arguments );
 			this.$el = this.$el.children( 0 );
 		},
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )

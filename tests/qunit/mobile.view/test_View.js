@@ -172,8 +172,8 @@
 		var ChildView, view;
 		ChildView = View.extend( {
 			template: mw.template.compile( '<p>{{text}}</p>', 'xyz' ),
-			preRender: function ( options ) {
-				options.text = 'hello';
+			preRender: function () {
+				this.options.text = 'hello';
 			}
 		} );
 

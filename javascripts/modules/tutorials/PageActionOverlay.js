@@ -27,13 +27,13 @@
 			'click .cancel': 'hide'
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var $target,
 				self = this;
 
-			ContentOverlay.prototype.postRender.apply( this, arguments );
-			if ( options.target ) {
-				$target = $( options.target );
+			ContentOverlay.prototype.postRender.apply( this );
+			if ( self.options.target ) {
+				$target = $( self.options.target );
 				// Ensure we position the overlay correctly but do not show the arrow
 				self._position( $target );
 				this.addPointerArrow( $target );

@@ -45,11 +45,11 @@
 		 * if options.section is not defined.
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
-			Overlay.prototype.postRender.apply( this, arguments );
+		postRender: function () {
+			Overlay.prototype.postRender.apply( this );
 			this.$saveButton = $( '.save-button' );
-			if ( !options.section ) {
-				this.renderFromApi( options );
+			if ( !this.options.section ) {
+				this.renderFromApi( this.options );
 			} else {
 				this.clearSpinner();
 				this._enableComments();

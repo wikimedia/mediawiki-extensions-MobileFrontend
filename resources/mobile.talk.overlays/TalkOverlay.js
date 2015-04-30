@@ -51,15 +51,15 @@
 			},
 
 			/** @inheritdoc */
-			postRender: function ( options ) {
-				Overlay.prototype.postRender.apply( this, arguments );
+			postRender: function () {
+				Overlay.prototype.postRender.apply( this );
 				this.$board = this.$( '.board' );
-				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( options.title ) )
+				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( this.options.title ) )
 					.removeClass( 'hidden' );
-				if ( !options.headings ) {
-					this._loadContent( options );
+				if ( !this.options.headings ) {
+					this._loadContent( this.options );
 				}
-				this._setupAddDiscussionButton( options );
+				this._setupAddDiscussionButton( this.options );
 				this.showHidden( '.initial-header' );
 			},
 

@@ -55,7 +55,7 @@
 		postRender: function () {
 			var self = this;
 
-			Drawer.prototype.postRender.apply( this, arguments );
+			Drawer.prototype.postRender.apply( this );
 
 			// set handler for clicks on the size buttons
 			this.$( '.sizes' ).find( 'div' ).each( function () {

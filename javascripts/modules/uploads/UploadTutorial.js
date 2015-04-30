@@ -62,22 +62,22 @@
 		},
 
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var $button = this.$( '.button' ),
 				photoUploaderButton;
 
-			if ( options.funnel ) {
+			if ( this.options.funnel ) {
 				photoUploaderButton = new LeadPhotoUploaderButton( {
 					el: $button,
 					buttonCaption: buttonMsg,
-					funnel: options.funnel
+					funnel: this.options.funnel
 				} );
 			}
 
 			this.page = 0;
-			this.totalPages = options.pages.length;
+			this.totalPages = this.options.pages.length;
 			this._showCurrentPage();
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 		},
 
 		/**

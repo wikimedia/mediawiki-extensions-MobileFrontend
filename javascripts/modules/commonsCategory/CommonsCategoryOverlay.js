@@ -10,11 +10,11 @@
 	 */
 	CommonsCategoryOverlay = Overlay.extend( {
 		/** @inheritdoc */
-		postRender: function ( options ) {
-			Overlay.prototype.postRender.apply( this, arguments );
+		postRender: function () {
+			Overlay.prototype.postRender.apply( this );
 			this.clearSpinner();
 			new PhotoList( {
-				category: options.title
+				category: this.options.title
 			} ).appendTo( this.$( '.overlay-content' ) );
 		}
 	} );

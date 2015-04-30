@@ -182,7 +182,7 @@
 		},
 
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this;
 
 			// Make sure search overlay lines up with search header when the overlay is
@@ -192,7 +192,7 @@
 			// No search happening by default
 			this.$( '.spinner' ).hide();
 
-			Overlay.prototype.postRender.call( this, options );
+			Overlay.prototype.postRender.call( this );
 
 			this.$input = this.$( 'input' );
 			this.$clear = this.$( '.clear' );

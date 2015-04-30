@@ -28,7 +28,7 @@
 		},
 		/** @inheritdoc */
 		postRender: function () {
-			View.prototype.postRender.apply( this, arguments );
+			View.prototype.postRender.apply( this );
 			this.$el = this.$el.children( 0 );
 		},
 		template: mw.template.get( 'mobile.startup', 'anchor.hogan' )

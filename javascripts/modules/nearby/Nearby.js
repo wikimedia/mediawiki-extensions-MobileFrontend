@@ -193,7 +193,7 @@
 			if ( !this._isLoading ) {
 				this.$( '.spinner' ).hide();
 			}
-			WatchstarPageList.prototype.postRender.apply( this, arguments );
+			WatchstarPageList.prototype.postRender.apply( this );
 			this._postRenderLinks();
 		},
 		/**
