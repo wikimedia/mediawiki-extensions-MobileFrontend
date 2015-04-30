@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_098c81fe",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-30T15:43:45Z",
+      "side": 1,
+      "message": "mmm?",
+      "revId": "e22ba64c101b9ed21e29649e07a54a66c5ef4430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
