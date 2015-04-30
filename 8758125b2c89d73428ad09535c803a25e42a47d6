@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7bf94f49",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-04-30T22:52:10Z",
+      "side": 1,
+      "message": "umm, no.\n\nclass FooBar {\n    const API_LIMIT \u003d 50;\n\n    public function __construct(...) {...}\n\nAnd then you access with FooBar::API_LIMIT or self::API_LIMIT.",
+      "revId": "8758125b2c89d73428ad09535c803a25e42a47d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fbe53fa0",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-04-30T22:52:10Z",
+      "side": 1,
+      "message": "...you realize your Gather is not installed code depends upon Gather???",
+      "revId": "8758125b2c89d73428ad09535c803a25e42a47d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
