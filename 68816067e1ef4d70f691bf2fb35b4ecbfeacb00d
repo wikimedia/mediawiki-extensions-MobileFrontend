@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_95b9622b",
+        "filename": "resources/mobile.drawers/CtaDrawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:47:30Z",
+      "side": 1,
+      "message": "Please update the documentation too.",
+      "revId": "68816067e1ef4d70f691bf2fb35b4ecbfeacb00d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1585725a",
+        "filename": "resources/mobile.drawers/CtaDrawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:47:30Z",
+      "side": 1,
+      "message": "I think this should be renamed to collapseIcon for the sake of clarity.",
+      "revId": "68816067e1ef4d70f691bf2fb35b4ecbfeacb00d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
