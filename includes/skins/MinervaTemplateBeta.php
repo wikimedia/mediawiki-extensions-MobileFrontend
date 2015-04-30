@@ -82,7 +82,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	/**
 	 * Renders the tags assigned to the page as part of the Browse experiment.
 	 *
-	 * @param $data The data used to build the page
+	 * @param array $data The data used to build the page
 	 * @return string The HTML representing the tags section
 	 */
 	protected function renderBrowseTags( $data ) {
@@ -90,10 +90,15 @@ class MinervaTemplateBeta extends MinervaTemplate {
 			return '';
 		}
 
+		$browseTags = $this->getSkin()->getMFConfig()->get( 'MFBrowseTags' );
+		$baseLink = SpecialPage::getTitleFor( 'TopicTag' )->getLinkURL();
+
 		// TODO: Create tag entity and view.
-		$tags = array_map( function ( $rawTag ) {
+		$tags = array_map( function ( $rawTag ) use ( $browseTags, $baseLink ) {
 			return array(
 				'msg' => $rawTag,
+				// replace spaces with underscores in the tag name
+				'link' => $baseLink . '/' . str_replace( ' ', '_', $rawTag )
 			);
 
 		}, $data['browse_tags'] );
