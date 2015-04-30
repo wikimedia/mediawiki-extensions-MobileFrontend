@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_55753a91",
+        "filename": "javascripts/modules/editor/AbuseFilterOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T19:44:45Z",
+      "side": 1,
+      "message": "the doc needs an update",
+      "revId": "2933689cfdf9b9fce10149da55a3af2340643cc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
