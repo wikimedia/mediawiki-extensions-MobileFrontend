@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_0088ce22",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-30T20:59:00Z",
+      "side": 1,
+      "message": "I think it\u0027s a convention not to pass mw.",
+      "revId": "b9aad8ecbc279225bb6dc844174bc7a61b13b0e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
