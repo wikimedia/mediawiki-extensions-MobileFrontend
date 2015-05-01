@@ -86,4 +86,9 @@
 		$cachedIcons.addClass( 'mw-ui-icon mw-ui-icon-element' ).removeClass( 'icon' );
 		$cachedIcons.filter( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-element' );
 	}
+
+	mw.loader.using( 'mobile.loggingSchemas' ).done( function () {
+		M.require( 'Schema' ).flushBeacon();
+	} );
+
 }( mw.mobileFrontend, jQuery ) );

@@ -32,7 +32,7 @@
 			 * @method
 			 * @param {String} name The key to refer to this value
 			 * @param {String} value The value to store alongside the key
-			 * @param {Boolean} useCookieFallback Optional: When set this will use
+			 * @param {Boolean} [useCookieFallback] When set this will use
 			 * cookies when local storage not available.
 			 * @returns {Boolean} Whether the save was successful or not
 			 */
@@ -49,7 +49,7 @@
 			 * Retrieves a user setting from a previous browser setting
 			 * @method
 			 * @param {String} name The key to refer to this value
-			 * @param {Boolean} useCookieFallback Optional: When set this will use cookies
+			 * @param {Boolean} [useCookieFallback] When set this will use cookies
 			 * when local storage not available.
 			 * @returns {String|Boolean} Returns the associated value or False if nothing
 			 * is found
