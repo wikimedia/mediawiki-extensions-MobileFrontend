@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_f2feb965",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T21:47:45Z",
+      "side": 1,
+      "message": "That\u0027s a valid point. Please don\u0027t see this as a blocker, but we should think about every constant if it could be replaced by another solution easily :) (Which seems to be not the case here).",
+      "parentUuid": "0ed113e2_37bd1364",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_41a49504",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 12
