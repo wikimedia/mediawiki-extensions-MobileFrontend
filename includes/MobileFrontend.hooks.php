@@ -927,6 +927,7 @@ class MobileFrontendHooks {
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebUIClickTracking' => 10742159,
+			'MobileWebSearch' => 12054448,
 		);
 
 		$schemas += $mobileEventLoggingSchemas;
@@ -967,6 +968,7 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/SchemaMobileWebClickTracking.js',
 			'javascripts/loggingSchemas/SchemaMobileWebEditing.js',
 			'javascripts/loggingSchemas/SchemaMobileWebWatching.js',
+			'javascripts/loggingSchemas/SchemaMobileWebSearch.js',
 		);
 
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
