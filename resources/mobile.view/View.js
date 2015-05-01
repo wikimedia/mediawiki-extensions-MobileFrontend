@@ -127,6 +127,10 @@
 		 *
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {jQuery.Object|String} [defaults.el] jQuery selector to use for rendering.
+		 * @cfg {Boolean} [defaults.enhance] Whether to enhance views already in DOM.
+		 * When enabled, the template is disabled so that it is not rendered in the DOM.
+		 * Use in conjunction with View::defaults.$el to associate the View with an existing
+		 * already rendered element in the DOM.
 		 */
 		defaults: {},
 
@@ -208,7 +212,8 @@
 			}
 			// FIXME: don't pass optionsClone in the next version (see mobile.startup.init.js)
 			this.preRender( optionsClone );
-			if ( this.template ) {
+
+			if ( this.template && !this.options.enhance ) {
 				this.$el.html( this.template.render( this.options, this.templatePartials ) );
 			}
 			// FIXME: don't pass optionsClone in the next version (see mobile.startup.init.js)

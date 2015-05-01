@@ -28,14 +28,9 @@
 		 *     }
 		 *   }
 		 * ]
-		 * @cfg {Boolean} defaults.enhance Whether to enhance views already in DOM.
-		 * When enabled, the template is disabled so that it is not rendered in the DOM.
-		 * Use in conjunction with View::defaults.$el to associate the PageList with an existing
-		 * already rendered element in the DOM.
 		 */
 		defaults: {
-			pages: [],
-			enhance: false
+			pages: []
 		},
 		/**
 		 * Render page images for the existing page list. Assumes no page images have been loaded.
@@ -76,17 +71,6 @@
 					} );
 				}, delay );
 			}
-		},
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			// FIXME: Find more elegant standard way to allow enhancement of views already in DOM
-			if ( options.enhance ) {
-				this.template = false;
-			}
-
-			View.prototype.initialize.apply( this, arguments );
 		},
 		/**
 		 * @inheritdoc
