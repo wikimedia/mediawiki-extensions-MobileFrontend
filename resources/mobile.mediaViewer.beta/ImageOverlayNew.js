@@ -36,10 +36,10 @@
 		},
 		defaults: $.extend( {}, ImageOverlay.prototype.defaults, {
 			slideLeftButton: new Icon( {
-				name: 'previous'
+				name: 'previous-invert'
 			} ).toHtmlString(),
 			slideRightButton: new Icon( {
-				name: 'next'
+				name: 'next-invert'
 			} ).toHtmlString()
 		} ),
 		/** @inheritdoc */

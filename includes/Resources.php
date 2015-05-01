@@ -129,13 +129,32 @@ $wgMinervaStyleModules = array(
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
-		'selector' => '.mw-ui-icon-{name}:before',
+		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
+		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'variants' => array(
+			'invert' => array(
+				'color' => '#FFFFFF',
+				'global' => true,
+			)
+		),
 		'images' => array(
 			// page actions
 			'watch' => 'images/icons/beta/watch.svg',
 			'watched' => 'images/icons/beta/watched.svg',
 			'edit' => 'images/icons/beta/editLocked.svg',
 			'edit-enabled' => 'images/icons/beta/edit.svg',
+			'previous' => array(
+				'file' => array(
+					'ltr' => 'images/icons/move-rtl.svg',
+					'rtl' => 'images/icons/move-ltr.svg',
+				),
+			),
+			'next' => array(
+				'file' => array(
+					'ltr' => 'images/icons/move-ltr.svg',
+					'rtl' => 'images/icons/move-rtl.svg',
+				),
+			),
 		),
 	),
 	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
