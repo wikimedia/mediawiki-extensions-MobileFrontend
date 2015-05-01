@@ -29,7 +29,6 @@
 	"mobile-frontend-dismiss-notification": "Hanc notionem dimittere",
 	"mobile-frontend-donate-image-anon": "$1 ad istam paginam spectandam quaeritur.",
 	"mobile-frontend-donate-image-heading": "Conlationes tuae novissimae",
-	"mobile-frontend-donate-image-login": "Ad fasciculos spectandos conventum tuum aperi.",
 	"mobile-frontend-donate-image-nouploads": "Nulli fasciculi impositi.",
 	"mobile-frontend-donate-image-title": "Fasciculi impositi",
 	"mobile-frontend-donate-photo-first-upload-success": "Prospere additum! Gratias agimus pro prima conlatione tua!",
@@ -221,5 +220,6 @@
 	"mobile-frontend-watchlist-view": "Inspicere indicem tuum paginarum observatarum",
 	"nearby": "Paginae propinquae",
 	"tag-mobile_edit": "Recensio mobilis",
-	"tag-mobile_edit-description": "Recensio pagina mobili utens facta"
+	"tag-mobile_edit-description": "Recensio pagina mobili utens facta",
+	"mobile-frontend-pageaction-edit-tooltip": "Exordium recensere."
 }

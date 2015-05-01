@@ -73,7 +73,7 @@
 	"mobile-frontend-editor-disabled": "Această pagină este protejată pentru a preveni vandalismul.",
 	"mobile-frontend-editor-edit": "Modificare",
 	"mobile-frontend-editor-editing": "În curs de modificare",
-	"mobile-frontend-editor-editing-page": "<strong>Se modifică</strong><span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Se modifică</strong> $1</span>",
 	"mobile-frontend-editor-error": "Eroare; modificarea nu a fost salvată.",
 	"mobile-frontend-editor-error-conflict": "Eroare; un alt utilizator a modificat această pagină.",
 	"mobile-frontend-editor-error-loading": "Eroare; nu se poate încărca secțiunea.",

@@ -70,7 +70,7 @@
 	"mobile-frontend-editor-disabled": "Страницава е заштитена за да се спречи вандализам.",
 	"mobile-frontend-editor-edit": "Уреди",
 	"mobile-frontend-editor-editing": "Уредување",
-	"mobile-frontend-editor-editing-page": "<strong>Уредување</strong><span> на $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Уредување</strong> на $1</span>",
 	"mobile-frontend-editor-error": "Грешка — уредувањето не е зачувано.",
 	"mobile-frontend-editor-error-conflict": "Грешка: Страницата ја има уредено друг корисник.",
 	"mobile-frontend-editor-error-loading": "Грешка: Не можам да го вчитам поднасловот.",
