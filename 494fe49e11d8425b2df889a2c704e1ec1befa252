@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_234e3973",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-01T09:56:18Z",
+      "side": 1,
+      "message": "Consider using a template here.",
+      "revId": "494fe49e11d8425b2df889a2c704e1ec1befa252",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c3540d04",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-01T09:56:18Z",
+      "side": 1,
+      "message": "Each of these API requests could be moved into a private helper function to make it /very/ clear what they\u0027re doing.",
+      "revId": "494fe49e11d8425b2df889a2c704e1ec1befa252",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
