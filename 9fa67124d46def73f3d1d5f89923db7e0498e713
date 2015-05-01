@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_41a49504",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T17:55:27Z",
+      "side": 1,
+      "message": "getConfig() doesn\u0027t return mfConfig ;) it works now, because the Config object just uses globals, but if we really move to a better system for configuration, we always schould use \"our\" config object. So use getMFConfig().",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e1aa69d0",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T17:55:27Z",
+      "side": 1,
+      "message": "use $this-\u003egetSkin()-\u003egetConfig()-\u003eget( \u0027MFBrowseTags\u0027 ) directly and don\u0027t use useless vars :)",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_01ae8de4",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T17:55:27Z",
+      "side": 1,
+      "message": "use SpecialPage::getTitleFor()",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a1b46134",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T17:55:27Z",
+      "side": 1,
+      "message": "Title::newFromText() can return null which would result in a fatal error.",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_01d3ed61",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T17:55:27Z",
+      "side": 1,
+      "message": "i\u0027m not happy, that this page is listed in Special:SpecialPages when Gather isn\u0027t installed and a third party user can\u0027t hide them (or make them usable) without installing Gather :/",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
