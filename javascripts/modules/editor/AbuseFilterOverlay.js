@@ -1,5 +1,6 @@
 ( function ( M ) {
 	var AbuseFilterOverlay,
+		Button = M.require( 'Button' ),
 		Overlay = M.require( 'Overlay' );
 
 	/**
@@ -12,13 +13,17 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.confirmMessage Friendly confirmation message expressing
-		 * understanding.
+		 * @cfg {Object} defaults.confirmButton options for a confirm Button
 		 */
 		defaults: {
-			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
+			confirmButton: new Button( {
+				additionalClassNames: 'cancel',
+				progressive: true,
+				label: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
+			} ).options
 		},
 		templatePartials: {
+			button: Button.prototype.template,
 			content: mw.template.get( 'mobile.abusefilter', 'Overlay.hogan' )
 		},
 		className: 'overlay abusefilter-overlay',
