@@ -123,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_c1188525",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T18:04:31Z",
+      "side": 1,
+      "message": "yep, sorry, that\u0027s the false line and yeah, the title exists, forget this comment! :)",
+      "parentUuid": "0ed113e2_814d9d41",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_01d3ed61",
         "filename": "includes/specials/browse/SpecialTopicTag.php",
         "patchSetId": 12
@@ -152,6 +170,24 @@
       "side": 1,
       "message": "What do yo suggest we should do? It outputs an instructional message to install gather to view this page. And it\u0027s an experimental feature.",
       "parentUuid": "0ed113e2_01d3ed61",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_81c83d78",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-01T18:04:31Z",
+      "side": 1,
+      "message": "Put it behind a feature flag, like we did it for SpecialNearby. And other (third)-party projects maybe want to use other experiemtal functions, too :) In my opinion, any feature that requires another extension (which isn\u0027t built for outside use of wmf yet) shouldn\u0027t be enabled without a feature flag (and wgMFEnableBeta isn\u0027t a real \"feature\" flag for me, sorry, it\u0027s a feature group flag :))",
+      "parentUuid": "0ed113e2_8164bdaf",
       "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
