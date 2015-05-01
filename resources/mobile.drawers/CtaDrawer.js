@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
+		Button = M.require( 'Button' ),
 		Anchor = M.require( 'Anchor' ),
 		CtaDrawer;
 
@@ -10,26 +11,34 @@
 	 * with options to log in or sign up for a new account.
 	 * @class CtaDrawer
 	 * @extends Drawer
+	 * @uses Button
+	 * @uses Icon
+	 * @uses Anchor
 	 */
 	CtaDrawer = Drawer.extend( {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.collapse HTML of the button that dismisses the CtaDrawer.
-		 * @cfg {String} defaults.login Caption for the login button.
-		 * @cfg {String} defaults.signup Caption for the signup button.
+		 * @cfg {Object} defaults.collapseIcon options for Icon for collapsing the drawer
+		 * @cfg {Object} defaults.loginButton options for Button element for signing in
+		 * @cfg {Object} defaults.signupAnchor options for Anchor element for signing up
 		 */
 		defaults: {
+			loginButton: new Button( {
+				progressive: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+			} ).options,
 			signupAnchor: new Anchor( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 			} ).options,
-			collapseButton: new Icon( {
+			collapseIcon: new Icon( {
 				name: 'arrow-down',
 				additionalClassNames: 'cancel'
-			} ).toHtmlString(),
-			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+			} ).options
 		},
 		templatePartials: {
+			icon: Icon.prototype.template,
+			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
 		},
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
@@ -44,7 +53,7 @@
 					type: 'signup'
 				}, this.options.signupQueryParams );
 
-			this.options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
+			this.options.loginButton.href = mw.util.getUrl( 'Special:UserLogin', params );
 			this.options.signupAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
 		}
 	} );
