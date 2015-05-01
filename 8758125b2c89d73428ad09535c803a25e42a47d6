@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_8d72b60e",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-01T00:02:00Z",
+      "side": 1,
+      "message": "Please add...\n\nprotected $hasDesktopVersion \u003d false;\n\n... at least for now.",
+      "revId": "8758125b2c89d73428ad09535c803a25e42a47d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_7bf94f49",
         "filename": "includes/specials/browse/SpecialTopicTag.php",
         "patchSetId": 6
