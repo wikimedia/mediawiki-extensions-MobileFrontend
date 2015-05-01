@@ -806,10 +806,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.ajax',
 		),
 		'scripts' => array(
-			'javascripts/Overlay.js',
-			'javascripts/ContentOverlay.js',
-			'javascripts/LoadingOverlay.js',
-			'javascripts/moduleLoader.js',
+			'resources/mobile.overlays/Overlay.js',
+			'resources/mobile.overlays/ContentOverlay.js',
+			'resources/mobile.overlays/LoadingOverlay.js',
+			'resources/mobile.overlays/moduleLoader.js',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-save',
@@ -817,12 +817,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
-			'header.hogan' => 'templates/OverlayHeader.hogan',
-			'Overlay.hogan' => 'templates/Overlay.hogan',
-			'LoadingOverlay.hogan' => 'templates/LoadingOverlay.hogan',
+			'header.hogan' => 'resources/mobile.overlays/OverlayHeader.hogan',
+			'Overlay.hogan' => 'resources/mobile.overlays/Overlay.hogan',
+			'LoadingOverlay.hogan' => 'resources/mobile.overlays/LoadingOverlay.hogan',
 		),
 		'styles' => array(
-			'less/Overlay.less',
+			'resources/mobile.overlays/Overlay.less',
 		)
 	),
 
