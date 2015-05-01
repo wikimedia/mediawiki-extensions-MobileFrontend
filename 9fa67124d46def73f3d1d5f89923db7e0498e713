@@ -191,6 +191,24 @@
       "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e11109b2",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-01T18:22:01Z",
+      "side": 1,
+      "message": "Isn\u0027t it strange to just put this page under a flag, and not other parts of the patch? We are already rendering tags without a flag and this page is part of that greater effort. Without this page, all related patches are useless. Can others chime in?",
+      "parentUuid": "0ed113e2_81c83d78",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
