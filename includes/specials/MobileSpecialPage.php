@@ -7,7 +7,7 @@
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
  */
 class MobileSpecialPage extends SpecialPage {
-	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
+	/** @var boolean $hasDesktopVersion If true, the page will also be available on desktop */
 	protected $hasDesktopVersion = false;
 	/** @var string $mode Saves the actual mode used by user (stable|beta|alpha) */
 	protected $mode = 'stable';
