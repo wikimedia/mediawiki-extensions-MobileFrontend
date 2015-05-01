@@ -95,6 +95,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	public function executeWhenAvailable( $par = '' ) {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
+		$out->addModuleStyles( 'mobile.pagelist.styles' );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view

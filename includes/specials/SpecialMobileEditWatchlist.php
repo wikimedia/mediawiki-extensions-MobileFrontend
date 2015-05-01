@@ -209,6 +209,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out->addModuleStyles(
 			array(
 				'skins.minerva.special.styles',
+				// Note: This could result in this module loading twice due to T87871
 				'mobile.pagelist.styles',
 				'mobile.special.pagefeed.styles',
 				'mobile.special.watchlist.styles'
