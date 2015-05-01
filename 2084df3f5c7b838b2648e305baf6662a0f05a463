@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_4d0b6e2d",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-01T00:32:11Z",
+      "side": 1,
+      "message": "Forgot to ask to add documentation for these too.",
+      "revId": "2084df3f5c7b838b2648e305baf6662a0f05a463",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
