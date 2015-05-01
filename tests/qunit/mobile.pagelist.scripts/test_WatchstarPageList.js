@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var PageList = M.require( 'modules/PageList' ),
+	var PageList = M.require( 'modules/WatchstarPageList' ),
 		user = M.require( 'user' ),
 		Icon = M.require( 'Icon' ),
 		watchIcon = new Icon( {

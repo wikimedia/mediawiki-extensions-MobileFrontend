@@ -170,7 +170,7 @@ $wgMinervaStyleModules = array(
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.modules' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
-			'javascripts/modules.js',
+			'resources/mobile.modules/modules.js',
 		),
 	),
 	'mobile.oo' => $wgMFResourceFileModuleBoilerplate + array(
@@ -196,7 +196,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.modules',
 		),
 		'scripts' => array(
-			'javascripts/context.js',
+			'resources/mobile.context/context.js',
 		),
 	),
 	'mobile.browser' => $wgMFResourceFileModuleBoilerplate + array(
@@ -204,7 +204,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.view',
 		),
 		'scripts' => array(
-			'javascripts/browser.js',
+			'resources/mobile.browser/browser.js',
 		),
 	),
 	'mobile.mainMenu' => $wgMFResourceFileModuleBoilerplate + array(
@@ -247,8 +247,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.template',
 		),
 		'scripts' => array(
-			'javascripts/externals/hogan.js',
-			'javascripts/hogan.js',
+			'resources/mediawiki.template.hogan/externals/hogan.js',
+			'resources/mediawiki.template.hogan/hogan.js',
 		),
 	),
 
@@ -257,11 +257,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.view',
 		),
 		'scripts' => array(
-			'javascripts/PageList.js',
+			'resources/mobile.pagelist/PageList.js',
 		),
 		'templates' => array(
-			'PageListItem.hogan' => 'templates/PageListItem.hogan',
-			'PageList.hogan' => 'templates/PageList.hogan',
+			'PageListItem.hogan' => 'resources/mobile.pagelist/PageListItem.hogan',
+			'PageList.hogan' => 'resources/mobile.pagelist/PageList.hogan',
 		),
 	),
 
@@ -278,7 +278,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist',
 		),
 		'scripts' => array(
-			'javascripts/modules/WatchstarPageList.js',
+			'resources/mobile.pagelist.scripts/WatchstarPageList.js',
 		),
 		'messages' => array(
 			'mobile-frontend-watchlist-modified'
@@ -339,7 +339,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'jquery.cookie',
 		),
 		'scripts' => array(
-			'javascripts/settings.js',
+			'resources/mobile.settings/settings.js',
 		),
 	),
 
@@ -414,7 +414,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.head',
 		),
 		'scripts' => array(
-			'javascripts/user.js',
+			'resources/mobile.user/user.js',
 		),
 	),
 
@@ -872,10 +872,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.drawers',
 		),
 		'scripts' => array(
-			'javascripts/toast.js',
+			'resources/mobile.toast/toast.js',
 		),
 		'styles' => array(
-			'less/toast.less',
+			'resources/mobile.toast/toast.less',
 		),
 	),
 
@@ -1055,10 +1055,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 				'oojs-ui',
 			),
 			'styles' => array(
-				'less/buttonWithSpinner.less',
+				'resources/mobile.buttonWithSpinner/buttonWithSpinner.less',
 			),
 			'scripts' => array(
-				'javascripts/ButtonWithSpinner.js',
+				'resources/mobile.buttonWithSpinner/ButtonWithSpinner.js',
 			),
 		),
 
@@ -1370,7 +1370,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.oo',
 		),
 		'scripts' => array(
-			'javascripts/InfiniteScroll.js',
+			'resources/mobile.infiniteScroll/InfiniteScroll.js',
 		),
 	),
 
@@ -1379,7 +1379,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.oo',
 		),
 		'scripts' => array(
-			'javascripts/Swipe.js',
+			'resources/mobile.swipe/Swipe.js',
 		),
 	),
 
@@ -1772,7 +1772,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.user',
 		),
 		'scripts' => array(
-			'javascripts/experiments.js',
+			'resources/mobile.experiments/experiments.js',
 		),
 	),
 );
