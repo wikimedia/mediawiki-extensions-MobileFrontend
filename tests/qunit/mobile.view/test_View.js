@@ -228,4 +228,52 @@
 		view.$el.trigger( 'click' );
 	} );
 
+	QUnit.test( 'View#render (with isTemplateMode)', 2, function ( assert ) {
+		var view, view2,
+			TemplateModeView = View.extend( {
+				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
+				isTemplateMode: true
+			} ),
+			ContainerView = View.extend( {
+				className: 'bar',
+				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' )
+			} );
+
+		view = new TemplateModeView();
+		view2 = new ContainerView();
+		view.render();
+		view2.render();
+		assert.ok( view.$el.hasClass( 'foo' ) );
+		assert.ok( view2.$el.hasClass( 'bar' ) );
+	} );
+
+	QUnit.test( 'View#render events (with isTemplateMode)', 4, function ( assert ) {
+		var view,
+			TemplateModeView = View.extend( {
+				events: {
+					'click span': 'onClick'
+				},
+				onClick: function () {
+					this.$el.empty().text( 'hello world' );
+				},
+				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
+				isTemplateMode: true
+			} );
+
+		view = new TemplateModeView();
+		// trigger event
+		view.$( 'span' ).trigger( 'click' );
+		assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
+		assert.strictEqual( view.$( 'span' ).length, 0, 'span disappeared' );
+
+		// do same again but call render twice
+		view = new TemplateModeView();
+		// force a re-render
+		view.render();
+		// trigger event to show events didn't get lost
+		view.$( 'span' ).trigger( 'click' );
+		assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
+		assert.strictEqual( view.$( 'span' ).length, 0, 'span disappeared' );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );

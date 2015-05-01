@@ -9,6 +9,8 @@
 	 * @extends View
 	 */
 	Anchor = View.extend( {
+		/** @inheritdoc */
+		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.progressive is progressive action
@@ -25,11 +27,6 @@
 			additionalClassNames: '',
 			href: undefined,
 			label: undefined
-		},
-		/** @inheritdoc */
-		postRender: function () {
-			View.prototype.postRender.apply( this );
-			this.$el = this.$el.children( 0 );
 		},
 		template: mw.template.get( 'mobile.startup', 'anchor.hogan' )
 	} );

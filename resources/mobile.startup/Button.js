@@ -9,6 +9,8 @@
 	 * @extends View
 	 */
 	Button = View.extend( {
+		/** @inheritdoc */
+		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.tagName The name of the tag in which the button is wrapped.
@@ -38,10 +40,6 @@
 				options.tagName = 'a';
 			}
 			View.prototype.initialize.call( this, options );
-		},
-		/** @inheritdoc */
-		postRender: function () {
-			this.$el = this.$el.children( 0 );
 		},
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )
 	} );

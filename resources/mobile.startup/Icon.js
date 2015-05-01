@@ -9,6 +9,8 @@
 	 * @extends View
 	 */
 	Icon = View.extend( {
+		/** @inheritdoc */
+		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.hasText Whether the icon has text.
@@ -55,10 +57,6 @@
 				options.tagName = 'a';
 			}
 			View.prototype.initialize.call( this, options );
-		},
-		/** @inheritdoc */
-		postRender: function () {
-			this.$el = this.$el.children( 0 );
 		},
 		/**
 		 * Return the HTML representation of this view
