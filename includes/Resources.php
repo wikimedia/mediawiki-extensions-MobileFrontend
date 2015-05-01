@@ -1283,9 +1283,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'oojs-ui',
 		),
 		'templates' => array(
-			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
-			'EditorOverlayHeader.hogan' => 'templates/modules/infobox/EditorOverlayHeader.hogan',
-			'EditorOverlayContent.hogan' => 'templates/modules/infobox/EditorOverlayContent.hogan',
+			'Infobox.hogan' => 'resources/mobile.infobox/Infobox.hogan',
+			'EditorOverlayHeader.hogan' => 'resources/mobile.infobox/EditorOverlayHeader.hogan',
+			'EditorOverlayContent.hogan' => 'resources/mobile.infobox/EditorOverlayContent.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-wikidata-editor-description-label' => array( 'parse' ),
@@ -1317,12 +1317,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'december-date'
 		),
 		'scripts' => array(
-			'javascripts/modules/infobox/Infobox.js',
-			'javascripts/modules/infobox/WikiDataItemLookupInputWidget.js',
-			'javascripts/modules/infobox/InfoboxEditorOverlay.js',
+			'resources/mobile.infobox/Infobox.js',
+			'resources/mobile.infobox/WikiDataItemLookupInputWidget.js',
+			'resources/mobile.infobox/InfoboxEditorOverlay.js',
 		),
 		'styles' => array(
-			'less/modules/infobox.less',
+			'resources/mobile.infobox/infobox.less',
 		),
 		'position' => 'top',
 	),
@@ -1744,9 +1744,9 @@ $wgMinervaBootstrapModules = array(
 			'mobile.quickLookup',
 		),
 		'scripts' => array(
-			'javascripts/modules/commonsCategory/init.js',
-			'javascripts/modules/infobox/init.js',
-			'javascripts/modules/projects/init.js',
+			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
+			'resources/skins.minerva.alpha.scripts/infobox.js',
+			'resources/skins.minerva.alpha.scripts/projects.js',
 		)
 	),
 	// FIXME: Alias. Remove when cache cleared.
