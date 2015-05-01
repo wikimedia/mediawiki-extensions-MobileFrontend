@@ -209,6 +209,24 @@
       "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a1630109",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-01T18:50:06Z",
+      "side": 1,
+      "message": "Isn\u0027t there a $wgMFIsBrowseEnabled flag? Also, you can hide special pages from Special:SpecialPages. Just set $this-\u003emListed to false in the constructor (which I would recommend).",
+      "parentUuid": "0ed113e2_e11109b2",
+      "revId": "9fa67124d46def73f3d1d5f89923db7e0498e713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
