@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7d6ff98f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1792,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-02T16:31:25Z",
+      "side": 1,
+      "message": "needs to be updated, too",
+      "revId": "f3bfdfc81f20d61260022824f1f840724a0a3db2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_9d6add7c",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-02T16:31:25Z",
+      "side": 1,
+      "message": "really T8787? Seems unrelated to me, or the comment doesn\u0027t explain it in an understandable way :)\n\n-\u003e should be T87871 (that\u0027s the task i have from SpecialMobileWatchlist.php :))",
+      "revId": "f3bfdfc81f20d61260022824f1f840724a0a3db2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
