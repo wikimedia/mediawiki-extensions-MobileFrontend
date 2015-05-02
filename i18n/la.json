@@ -221,5 +221,6 @@
 	"nearby": "Paginae propinquae",
 	"tag-mobile_edit": "Recensio mobilis",
 	"tag-mobile_edit-description": "Recensio pagina mobili utens facta",
+	"tag-mobile_web_edit": "Recensio in situ mobili",
 	"mobile-frontend-pageaction-edit-tooltip": "Exordium recensere."
 }

@@ -56,7 +56,7 @@
 	"mobile-frontend-dismiss-notification": "zavřít toto oznámení",
 	"mobile-frontend-donate-image-anon": "Pro prohlížení načtených souborů se prosím přihlaste.",
 	"mobile-frontend-donate-image-heading": "Vaše nedávné příspěvky",
-	"mobile-frontend-donate-image-login-action": "<strong>Všechny mediální soubory na {{SITENAME}} dodali lidé, jako jste Vy.</strong><br />Pro sdílení médiálních souborů se přihlaste.",
+	"mobile-frontend-donate-image-login-action": "<strong>Všechny mediální soubory na {{grammar:6sg|{{SITENAME}}}} dodali lidé jako vy.</strong><br />Pro sdílení mediálních souborů se přihlaste.",
 	"mobile-frontend-donate-image-nouploads": "Žádné načtené soubory.",
 	"mobile-frontend-donate-image-signup-action": "Zaregistrujte se, abyste mohli svá média sdílet se světem.",
 	"mobile-frontend-donate-image-title": "Načtené soubory",

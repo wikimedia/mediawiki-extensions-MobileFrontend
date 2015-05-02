@@ -114,6 +114,8 @@
 	"mobile-frontend-watchlist-view": "ඔබේ මුරලැයිස්තුව නරඹන්න",
 	"tag-mobile_edit": "ජංගම සංස්කරණය",
 	"tag-mobile_edit-description": "ජංගම අඩවියෙන් සංස්කරණය සිදු කරන ලදී",
+	"tag-mobile_web_edit": "ජංගම වෙබ් සංස්කරණය",
+	"mobile-frontend-pageaction-edit-tooltip": "මෙම පිටුවේ මුල් ඡේදය සංස්කරණය කරන්න.",
 	"mobile-frontend-meta-data-issues-categories": "මෙම ප්‍රවර්ගය ගැන",
 	"mobile-frontend-loading-message": "ප්‍රවේශනය වෙමින්..."
 }

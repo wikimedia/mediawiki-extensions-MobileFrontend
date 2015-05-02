@@ -394,6 +394,7 @@
 	"mobile-frontend-time-precision-annum": "$1 години н.е.",
 	"mobile-frontend-time-precision-millennium": "$1 илјади години н.е.",
 	"mobile-frontend-time-precision-century": "$1 стотини години н.е.",
+	"mobile-frontend-time-precision-10annum": "$1-ти",
 	"mobile-frontend-time-precision-BCE-Gannum": "$1 милијарди години п.н.е.",
 	"mobile-frontend-time-precision-BCE-Mannum": "$1 милиони години п.н.е.",
 	"mobile-frontend-time-precision-BCE-annum": "$1 години п.н.е.",
