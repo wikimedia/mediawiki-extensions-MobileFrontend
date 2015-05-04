@@ -16,6 +16,24 @@
       "revId": "d589aa8ea1ae1e1144c58a8e78b08c2b6163b5bb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_4f44b0bd",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-04T17:37:02Z",
+      "side": 1,
+      "message": "That\u0027s great! We should standardize how we load templates in a follow up patch.",
+      "parentUuid": "0ed113e2_144ebfdd",
+      "revId": "d589aa8ea1ae1e1144c58a8e78b08c2b6163b5bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
