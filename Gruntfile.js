@@ -29,7 +29,8 @@ module.exports = function ( grunt ) {
 				'resources/**/*.js'
 			],
 			jsTests: 'tests/qunit/**/*.js',
-			jsExternals: 'javascripts/externals/**/*.js'
+			jsExternals: 'javascripts/externals/**/*.js',
+			resourceJsExternals: 'resources/*/externals/**/*.js'
 		},
 		jshint: {
 			options: {
@@ -38,12 +39,14 @@ module.exports = function ( grunt ) {
 			tests: '<%= files.jsTests %>',
 			sources: [
 				'<%= files.js %>',
-				'!<%= files.jsExternals %>'
+				'!<%= files.jsExternals %>',
+				'!<%= files.resourceJsExternals %>'
 			]
 		},
 		jscs: {
 			main: [
-				'<%= files.js %>'
+				'<%= files.js %>',
+				'!<%= files.resourceJsExternals %>'
 			],
 			test: {
 				options: {
@@ -74,7 +77,11 @@ module.exports = function ( grunt ) {
 					coverage: {
 						prefixUrl: 'w/', // Prefix url on the server
 						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
-						src: [ '<%= files.js %>', '!<%= files.jsExternals %>' ],
+						src: [
+							'<%= files.js %>',
+							'!<%= files.jsExternals %>',
+							'!<%= files.resourceJsExternals %>'
+						],
 						instrumentedFiles: 'tests/report/tmp',
 						htmlReport: 'tests/report'
 					}
@@ -109,7 +116,11 @@ module.exports = function ( grunt ) {
 		},
 		jsduck: {
 			main: {
-				src: [ '<%= files.js %>', '!<%= files.jsExternals %>' ],
+				src: [
+					'<%= files.js %>',
+					'!<%= files.jsExternals %>',
+					'!<%= files.resourceJsExternals %>'
+				],
 				dest: 'docs/js',
 				options: {
 					'builtin-classes': true,
