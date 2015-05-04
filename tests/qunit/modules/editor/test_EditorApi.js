@@ -68,9 +68,10 @@
 
 	QUnit.test( '#getContent, missing section', 2, function ( assert ) {
 		var editorApi = new EditorApi( {
-			title: 'test',
-			sectionId: 1
-		} ), doneSpy = this.sandbox.spy();
+				title: 'test',
+				sectionId: 1
+			} ),
+			doneSpy = this.sandbox.spy();
 
 		EditorApi.prototype.get.restore();
 		this.sandbox.stub( EditorApi.prototype, 'get' ).returns( $.Deferred().resolve( {
@@ -489,9 +490,11 @@
 
 	QUnit.test( '#getPreview', 2, function ( assert ) {
 		var editorApi = new EditorApi( {
-			title: 'Test',
-			sectionId: 1
-		} ), doneSpy = this.sandbox.spy();
+				title: 'Test',
+				sectionId: 1
+			} ),
+			doneSpy = this.sandbox.spy();
+
 		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
 			parse: {
 				title: 'test',
