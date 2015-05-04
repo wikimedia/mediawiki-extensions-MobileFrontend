@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_60f0a18e",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-04T20:17:33Z",
+      "side": 0,
+      "message": "This is what I mean by \u0027#mw-mf-page-left\u0027 to \u0027nav\u0027 changes. Generalizing the selector may have side effects.",
+      "revId": "e80eb48e2752ecfa7db12fd085ddb70cf0efea9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
