@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_14cd5f88",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-04T16:04:09Z",
+      "side": 1,
+      "message": "You\u0027d think we could at least be consistent about our keys!!1",
+      "revId": "e50e913067f2754811d2aae8ae259d8326f86d50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
