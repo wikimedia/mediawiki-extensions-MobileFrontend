@@ -119,4 +119,4 @@
 		);
 	} );
 
-} ( mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );

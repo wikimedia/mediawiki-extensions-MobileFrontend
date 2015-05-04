@@ -45,4 +45,4 @@
 
 	M.define( 'modules/bannerImage/Image', Image );
 
-} ( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

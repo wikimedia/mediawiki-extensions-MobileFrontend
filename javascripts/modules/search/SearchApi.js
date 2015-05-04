@@ -133,7 +133,7 @@
 									if ( $.inArray( id, pageIds ) === -1 ) {
 										if ( info ) {
 											// return all possible page data
-											pageIds.push ( id );
+											pageIds.push( id );
 											results.push( {
 												id: info.pageid,
 												heading: highlightSearchTerm( info.title, query ),

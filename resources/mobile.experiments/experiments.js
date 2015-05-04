@@ -114,4 +114,4 @@
 		}
 	} );
 
-} ( mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );

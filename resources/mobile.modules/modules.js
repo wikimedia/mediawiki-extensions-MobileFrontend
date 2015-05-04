@@ -110,4 +110,4 @@
 	// inception to support testing (!!)
 	mw.mobileFrontend.define( 'ModuleLoader', ModuleLoader );
 
-} () );
+}() );

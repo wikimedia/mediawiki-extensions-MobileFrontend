@@ -84,4 +84,4 @@
 
 	M.define( 'modules/bannerImage/MobileViewBannerImageRepository', MobileViewBannerImageRepository );
 
-} ( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

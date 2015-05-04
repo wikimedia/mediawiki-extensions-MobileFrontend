@@ -55,4 +55,4 @@
 		assert.strictEqual( 'control', this.experiments.getBucket( 'foo' ) );
 	} );
 
-} ( mw, mw.mobileFrontend ) );
+}( mw, mw.mobileFrontend ) );

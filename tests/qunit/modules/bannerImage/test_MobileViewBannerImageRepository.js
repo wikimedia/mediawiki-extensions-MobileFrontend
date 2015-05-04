@@ -97,4 +97,4 @@
 		assert.strictEqual( this.getSpy.callCount, 1 );
 	} );
 
-} ( mw.mobileFrontend, mw, jQuery ) );
+}( mw.mobileFrontend, mw, jQuery ) );
