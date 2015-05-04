@@ -2,24 +2,32 @@
 	var Schema,
 		Class = M.require( 'Class' ),
 		user = M.require( 'user' ),
-		settings = M.require( 'settings' );
+		settings = M.require( 'settings' ),
+		BEACON_SETTING_KEY = 'mobileFrontend/beacon';
 
 	/**
-	 * Loads the beacons from local storage.
+	 * Loads the beacon from local storage.
 	 *
 	 * @returns {Array}
 	 */
 	function loadBeacon() {
-		return JSON.parse( settings.get( 'mobileFrontend/beacons' ) );
+		return JSON.parse( settings.get( BEACON_SETTING_KEY ) );
 	}
 
 	/**
-	 * Saves the beacons to local storage.
+	 * Saves the beacon to local storage.
 	 *
 	 * @param {Object} beacon
 	 */
 	function saveBeacon( beacon ) {
-		settings.save( 'mobileFrontend/beacons', JSON.stringify( beacon ) );
+		settings.save( BEACON_SETTING_KEY, JSON.stringify( beacon ) );
+	}
+
+	/**
+	 * Deletes the beacon, if there is one, from local storage.
+	 */
+	function deleteBeacon() {
+		settings.remove( BEACON_SETTING_KEY );
 	}
 
 	// FIXME: [EL] This could be made more general if we decide to move the
@@ -124,11 +132,11 @@
 	Schema.flushBeacon = function () {
 		var beacon = loadBeacon();
 
-		if ( beacon ) {
+		if ( beacon && typeof beacon === 'object' ) {
 			factorySchema( beacon.schema ).log( beacon.data );
 		}
 
-		saveBeacon( null );
+		deleteBeacon();
 	};
 
 	M.define( 'Schema', Schema );
