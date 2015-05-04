@@ -16,6 +16,24 @@
       "revId": "e50e913067f2754811d2aae8ae259d8326f86d50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6adde272",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-04T18:06:49Z",
+      "side": 1,
+      "message": "+1 to what phuedx said.",
+      "parentUuid": "0ed113e2_14cd5f88",
+      "revId": "e50e913067f2754811d2aae8ae259d8326f86d50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
