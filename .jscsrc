@@ -2,7 +2,6 @@
   "preset": "wikimedia",
 
   "disallowSpacesInCallExpression": null,
-  "disallowNewlineBeforeBlockStatements": null,
 
   "requireMultipleVarDecl": "onevar",
   "requireLineBreakAfterVariableAssignment": true,

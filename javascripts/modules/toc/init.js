@@ -18,8 +18,7 @@
 
 		if ( enableToc ||
 			// Fallback for old cached HTML, added 26 June, 2014
-			( enableToc === null && sections.length > 0 && !page.isMainPage() ) )
-		{
+			( enableToc === null && sections.length > 0 && !page.isMainPage() ) ) {
 			toc = new TableOfContents( {
 				sections: sections
 			} );
