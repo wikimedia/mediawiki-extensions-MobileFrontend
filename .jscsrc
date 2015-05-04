@@ -1,7 +1,12 @@
 {
   "preset": "wikimedia",
+
+  "disallowSpacesInCallExpression": null,
+  "disallowNewlineBeforeBlockStatements": null,
+  "requireSpaceAfterLineComment": null,
+
   "requireMultipleVarDecl": "onevar",
-  "requireLineBreakAfterVariableAssignment": true,
+  "requireLineBreakAfterVariableAssignment": null,
   "disallowOperatorBeforeLineBreak": ["."],
   "requireBlocksOnNewline": true,
   "requireLineFeedAtFileEnd": true,
@@ -14,7 +19,7 @@
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
-  "validateIndentation": "\t",
+  "validateIndentation": null,
   "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"],
   "additionalRules": [
     "node_modules/jscs-jsdoc/lib/rules/*.js"
