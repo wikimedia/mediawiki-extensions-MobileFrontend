@@ -19,7 +19,7 @@
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
-  "validateIndentation": null,
+  "validateIndentation": "\t",
   "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"],
   "additionalRules": [
     "node_modules/jscs-jsdoc/lib/rules/*.js"

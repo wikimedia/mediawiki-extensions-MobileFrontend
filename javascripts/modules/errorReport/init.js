@@ -28,7 +28,6 @@
 					result.resolve( new ErrorReportOverlay() );
 					errorButton.hideSpinner();
 				} );
-				// FIXME: Use event logging on fail event
 			return result;
 		} );
 

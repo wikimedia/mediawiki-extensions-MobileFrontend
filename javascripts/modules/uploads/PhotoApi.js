@@ -258,7 +258,7 @@
 					if ( self.editorApi && !isNewFile ) {
 						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
 						self.editorApi.save( {
-								summary: mw.msg( 'mobile-frontend-photo-upload-comment' )
+							summary: mw.msg( 'mobile-frontend-photo-upload-comment' )
 						} )
 							.done( function () {
 								result.resolve( options.fileName, descriptionUrl );
