@@ -3,7 +3,6 @@
 
   "disallowSpacesInCallExpression": null,
   "disallowNewlineBeforeBlockStatements": null,
-  "requireSpaceAfterLineComment": null,
 
   "requireMultipleVarDecl": "onevar",
   "requireLineBreakAfterVariableAssignment": true,
