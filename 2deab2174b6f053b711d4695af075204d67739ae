@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_dea618be",
+        "filename": "resources/mobile.betaoptin/BetaOptinPanel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-05-04T10:58:53Z",
+      "side": 1,
+      "message": "Yep. Didn\u0027t work for me either",
+      "parentUuid": "0ed113e2_1c7276ac",
+      "revId": "2deab2174b6f053b711d4695af075204d67739ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_dcaaaed0",
         "filename": "resources/mobile.betaoptin/init.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-05-01T19:10:48Z",
       "side": 1,
       "message": "shouldn\u0027t it be \u0026\u0026? So it will add the optin panel when you\u0027re in mobile beta and has debug\u003dtrue :)",
+      "revId": "2deab2174b6f053b711d4695af075204d67739ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fe743c98",
+        "filename": "resources/mobile.betaoptin/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-05-04T10:58:53Z",
+      "side": 1,
+      "message": "No florian, || is good so that it relies on the token, or on the debug token to debug locally (bc maybe your local token is not on that percent, but you want to see it)",
+      "parentUuid": "0ed113e2_dcaaaed0",
       "revId": "2deab2174b6f053b711d4695af075204d67739ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
