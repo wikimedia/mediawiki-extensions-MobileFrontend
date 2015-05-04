@@ -69,6 +69,24 @@
       "revId": "2deab2174b6f053b711d4695af075204d67739ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b41493a1",
+        "filename": "resources/mobile.betaoptin/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-04T16:26:10Z",
+      "side": 1,
+      "message": "Wait, you\u0027re right, \u0026\u0026 isn\u0027t correct, too, but the actual one isn\u0027t it, too :D The code in this if statement will be run, if _one_ of the both statements are true, so, if you are in beta already (showPanel \u003d false) and you append debug\u003dtrue to your URI (mw.util.getParamValue( \u0027debug\u0027 ) \u003d true), you will see the optin panel, which sounds false :)\n\nI think better is:\n\nshowPanel \u003d $.inArray( token.charAt( 0 ), [ \u00273\u0027, \u00272\u0027 ] ) !\u003d\u003d 1;\nif ( !context.isBetaGroupMember() \u0026\u0026 ( showPanel || mw.util.getParamValue( \u0027debug\u0027 ) ) {",
+      "parentUuid": "0ed113e2_fe743c98",
+      "revId": "2deab2174b6f053b711d4695af075204d67739ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
