@@ -351,7 +351,7 @@
 	"mobile-frontend-watchlist-error": "Ocorreu um erro ao adicionar esta página à lista de vigiadas. Por favor, tente novamente.",
 	"mobile-frontend-watchlist-purpose": "<strong>A lista de vigiados ajuda-o a marcar e acompanhar as páginas e as suas alterações.</strong><br />Autentique-se para editar.",
 	"mobile-frontend-watchlist-removed": "$1 foi removida da sua lista de vigiados",
-	"mobile-frontend-watchlist-signup-action": "Criar conta para começar uma agora.",
+	"mobile-frontend-watchlist-signup-action": "<strong>A lista de vigiados ajuda-o a marcar e acompanhar as páginas e as suas alterações.</strong><br />Registe-se para começar uma agora.",
 	"mobile-frontend-watchlist-view": "Ver a sua lista de vigiados",
 	"mobile-frontend-quick-lookup-looking": "A procurar por \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Não foi encontrada nenhuma correspondência com \"$1\".",
