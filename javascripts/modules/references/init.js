@@ -36,7 +36,7 @@
 			text: getReference( href ).html()
 		} );
 		ev.preventDefault();
-		//don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)
+		// don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)
 		if ( drawer.isVisible() ) {
 			ev.stopPropagation();
 		} else {
