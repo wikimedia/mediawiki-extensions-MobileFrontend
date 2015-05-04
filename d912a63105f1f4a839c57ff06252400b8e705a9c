@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_8a55a6c7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 897,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-04T18:14:51Z",
+      "side": 1,
+      "message": "The key should be clearer. How about \u0027wgMFMenuData\u0027?",
+      "revId": "d912a63105f1f4a839c57ff06252400b8e705a9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
