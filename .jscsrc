@@ -6,7 +6,7 @@
   "requireSpaceAfterLineComment": null,
 
   "requireMultipleVarDecl": "onevar",
-  "requireLineBreakAfterVariableAssignment": null,
+  "requireLineBreakAfterVariableAssignment": true,
   "disallowOperatorBeforeLineBreak": ["."],
   "requireBlocksOnNewline": true,
   "requireLineFeedAtFileEnd": true,
