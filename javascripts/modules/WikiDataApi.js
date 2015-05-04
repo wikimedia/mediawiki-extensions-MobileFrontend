@@ -139,12 +139,12 @@
 
 			this.getInfo().done( function ( info ) {
 				self.postWithToken( 'csrf', {
-						action: 'wbsetdescription',
-						id: self.subjectId,
-						value: value,
-						language: self.language,
-						baserevid: info.lastrevid,
-						bot: 1
+					action: 'wbsetdescription',
+					id: self.subjectId,
+					value: value,
+					language: self.language,
+					baserevid: info.lastrevid,
+					bot: 1
 				} ).done( function ( resp ) {
 					d.resolve( resp );
 				} ).fail( $.proxy( d, 'reject' ) );
@@ -163,16 +163,16 @@
 				d = $.Deferred();
 
 			self.postWithToken( 'csrf', {
-					action: 'wbcreateclaim',
-					entity: self.subjectId,
-					snaktype: 'value',
-					property: property,
-					value: JSON.stringify( {
-						'entity-type': 'item',
-						// FIXME: yuk.
-						'numeric-id': value.replace( 'Q', '' )
-					} ),
-					summary: 'MobileFrontend Infobox alpha edit'
+				action: 'wbcreateclaim',
+				entity: self.subjectId,
+				snaktype: 'value',
+				property: property,
+				value: JSON.stringify( {
+					'entity-type': 'item',
+					// FIXME: yuk.
+					'numeric-id': value.replace( 'Q', '' )
+				} ),
+				summary: 'MobileFrontend Infobox alpha edit'
 			} ).done( function ( resp ) {
 				d.resolve( resp );
 			} ).fail( $.proxy( d, 'reject' ) );

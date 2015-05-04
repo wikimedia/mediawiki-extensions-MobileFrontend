@@ -60,8 +60,8 @@
 	if ( isSupported ) {
 		$( initialize );
 	} else {
-			// FIXME: We want to enable it to these users however we must first deal with what to show
-			// to users who haven't uploaded anything to make the page useful.
+		// FIXME: We want to enable it to these users however we must first deal with what to show
+		// to users who haven't uploaded anything to make the page useful.
 		$( function () {
 			// FIXME: Move to MainMenu.js
 			$( '#mw-mf-page-left li.menu-item-upload' ).remove();
