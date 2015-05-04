@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_144ebfdd",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-04T16:21:20Z",
+      "side": 1,
+      "message": "By the way: ExtensionRegistration supports defines (i checked this in code), so sorry for confusion and making you more work as needed :]",
+      "revId": "d589aa8ea1ae1e1144c58a8e78b08c2b6163b5bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
