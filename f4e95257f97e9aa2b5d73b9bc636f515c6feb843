@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7b77fecf",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-04T09:44:26Z",
+      "side": 0,
+      "message": "should probably remove variable @menuItemFontSize too?",
+      "revId": "f4e95257f97e9aa2b5d73b9bc636f515c6feb843",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
