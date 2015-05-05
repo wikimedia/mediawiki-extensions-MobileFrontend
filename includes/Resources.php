@@ -211,6 +211,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.view',
 		),
+		'templates' => array(
+			'menu.hogan' => 'resources/mobile.mainMenu/menu.mustache',
+		),
 		'scripts' => array(
 			'resources/mobile.mainMenu/MainMenu.js',
 		),

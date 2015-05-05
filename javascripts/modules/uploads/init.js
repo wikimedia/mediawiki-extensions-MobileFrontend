@@ -64,7 +64,7 @@
 		// to users who haven't uploaded anything to make the page useful.
 		$( function () {
 			// FIXME: Move to MainMenu.js
-			$( '#mw-mf-page-left li.menu-item-upload' ).remove();
+			$( 'nav li.menu-item-upload' ).remove();
 		} );
 	}
 

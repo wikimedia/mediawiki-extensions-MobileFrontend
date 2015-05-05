@@ -10,15 +10,15 @@
 	 * @extends View
 	 */
 	MainMenu = View.extend( {
+		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash
 		 * @cfg {String} defaults.mainMenuButton Selector for the main menu button
 		 */
-		defaults: {
-			el: '#mw-mf-page-left',
+		defaults: $.extend( {}, mw.config.get( 'wgMFMenuData' ) || {}, {
 			mainMenuButton: '#mw-mf-main-menu-button'
-		},
+		} ),
 		/**
 		 * Turn on event logging on the existing main menu by reading `event-name` data
 		 * attributes on elements.
@@ -65,6 +65,10 @@
 						return c.replace( /^icon-(.*)$/, 'mw-ui-icon-$1' );
 					} ).join( ' ' ) );
 				} );
+			// Use template for entire view
+			// FIXME: Icon and MainMenu now do this. Revisit className and tagName properties
+			// See https://phabricator.wikimedia.org/T97663
+			this.$el = this.$el.children( 0 );
 		},
 
 		/**

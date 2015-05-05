@@ -32,6 +32,19 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * temporary function that flattens old style menu definitions to template compatible definition.
+	 * This can be safely removed once we have fully transitioned to menus that use templates.
+	 */
+	private function flattenLinkArray( $array ) {
+		$menu = array();
+		foreach ( $array as $name => $info ) {
+			$base = isset( $info['links'][0] ) ? $info['links'][0] : $info;
+			$menu[] = array_merge( $base, array( 'name' => $name ) );
+		}
+		return $menu;
+	}
+
+	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */
@@ -74,9 +87,14 @@ class SkinMinerva extends SkinTemplate {
 		// example, on a special page)
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
+		// Deprecate use of this in favour of menu_data.
 		$tpl->set( 'site_urls', $this->getSiteLinks() );
+		// Deprecate use of this in favour of menu_data.
 		$tpl->set( 'personal_urls', $this->getPersonalTools() );
+		// Deprecate use of this in favour of menu_data.
 		$tpl->set( 'discovery_urls', $this->getDiscoveryTools() );
+
+		$tpl->set( 'menu_data', $this->getMenuData() );
 		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
 		// Construct various Minerva-specific interface elements
@@ -853,6 +871,18 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns a data representation of the main menus
+	 * @return array
+	 */
+	protected function getMenuData() {
+		return array(
+			'id' => 'mw-mf-page-left',
+			'discovery' => $this->flattenLinkArray( $this->getDiscoveryTools() ),
+			'personal' => $this->flattenLinkArray($this->getPersonalTools() ),
+			'sitelinks' => $this->flattenLinkArray( $this->getSiteLinks() ),
+		);
+	}
+	/**
 	 * Returns array of config variables that should be added only to this skin
 	 * for use in JavaScript.
 	 * @return array
@@ -864,6 +894,7 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 
 		$vars = array(
+			'wgMFMenuData' => $this->getMenuData(),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			'wgMFWikiDataEndpoint' => $config->get( 'MFWikiDataEndpoint' ),
 			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),
