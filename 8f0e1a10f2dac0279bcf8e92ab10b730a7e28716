@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_0cdc681b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1556,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-05T18:47:05Z",
+      "side": 1,
+      "message": "This should be renamed to mobile.special.nearby.styles/nearby.less\n(the purpose of this new naming structure is to make it clear which RL modules the files live in - the folder name should map to the RL module name.",
+      "revId": "8f0e1a10f2dac0279bcf8e92ab10b730a7e28716",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_2ce12ccc",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1559,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-05T18:47:05Z",
+      "side": 1,
+      "message": "special.nearby.styles/vector.less",
+      "revId": "8f0e1a10f2dac0279bcf8e92ab10b730a7e28716",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_cce180cc",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1560,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-05T18:47:05Z",
+      "side": 1,
+      "message": "special.nearby.styles/monobook.less",
+      "revId": "8f0e1a10f2dac0279bcf8e92ab10b730a7e28716",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
