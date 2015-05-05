@@ -357,7 +357,8 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders the main menu.
+	 * Renders the main menu only on Special:MobileMenu.
+	 * On other pages the menu is rendered via JS.
 	 * @param array [$data] Data used to build the page
 	 */
 	protected function renderMainMenu( $data ) {
@@ -385,12 +386,13 @@ class MinervaTemplate extends BaseTemplate {
 	 * @todo replace with template engines
 	 */
 	protected function render( $data ) {
-
 		// begin rendering
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<?php $this->renderMainMenu( $data ); ?>
+			<nav id="mw-mf-page-left" class="navigation-drawer">
+				<?php $this->renderMainMenu( $data ); ?>
+			</nav>
 			<div id="mw-mf-page-center">
 				<?php
 					foreach ( $this->data['banners'] as $banner ){

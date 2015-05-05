@@ -39,7 +39,7 @@
 		 * @private
 		 */
 		_onPageCenterClick: function ( ev ) {
-			if ( ev.target.id !== 'mw-mf-main-menu-button' && this.mainMenu.isOpen() ) {
+			if ( this.mainMenu.isOpen() ) {
 				this.mainMenu.closeNavigationDrawers();
 				ev.preventDefault();
 			}

@@ -876,7 +876,6 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getMenuData() {
 		return array(
-			'id' => 'mw-mf-page-left',
 			'discovery' => $this->flattenLinkArray( $this->getDiscoveryTools() ),
 			'personal' => $this->flattenLinkArray($this->getPersonalTools() ),
 			'sitelinks' => $this->flattenLinkArray( $this->getSiteLinks() ),

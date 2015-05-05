@@ -13,15 +13,17 @@
 	 * @ignore
 	 */
 	function openSearchOverlay( ev ) {
-		// in alpha we are dealing with an 'a', not an 'input'
-		var searchTerm = ( context.isAlphaGroupMember() ) ? mw.util.getParamValue( 'search' ) : $( this ).val();
+		var $this = $( this ),
+			searchTerm = $this.val(),
+			placeholder = $this.attr( 'placeholder' );
 
 		ev.preventDefault();
 		uiSchema.log( {
 			name: 'search'
 		} );
 		new SearchOverlay( {
-			searchTerm: searchTerm
+			searchTerm: searchTerm,
+			placeholderMsg: placeholder
 		} ).show();
 		router.navigate( '/search' );
 	}
@@ -35,7 +37,8 @@
 		// focus() (see SearchOverlay#show) opens virtual keyboard only if triggered
 		// from user context event, so using it in route callback won't work
 		// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
-		$( '#searchInput' ).on( 'click', openSearchOverlay )
+		// in alpha the search input is inside the main menu
+		$( '#searchInput, #mw-mf-page-left input.search' ).on( 'click', openSearchOverlay )
 			// FIXME: Review the need for this, especially given latest alpha developments
 			// Apparently needed for main menu to work correctly.
 			.prop( 'readonly', true );

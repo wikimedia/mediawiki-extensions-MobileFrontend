@@ -1,0 +1,32 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+@import "mediawiki.mixins";
+
+.client-js {
+	.search-box {
+		.search {
+			border: none;
+			box-shadow: none;
+			padding: 0 0 0 25px;
+			.background-image-svg( 'images/magnifying-glass-gray.svg', '' );
+			background-repeat: no-repeat;
+			height: 22px;
+
+			// Overwrite mw-ui-input style
+			// Placeholder text styling must be set individually for each browser @winter
+			&::-webkit-input-placeholder { // webkit
+				font-style: normal;
+			}
+			&::-moz-placeholder { // FF 4-18
+				font-style: normal;
+			}
+			&:-moz-placeholder { // FF >= 19
+				font-style: normal;
+			}
+			&:-ms-input-placeholder { // IE >= 10
+				font-style: normal;
+			}
+		}
+	}
+}
+

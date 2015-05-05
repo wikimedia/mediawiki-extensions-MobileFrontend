@@ -119,6 +119,13 @@ $wgMinervaStyleModules = array(
 			'cancel-light' => 'images/icons/cancel-light.svg',
 		),
 	),
+
+	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/ui.alpha.less',
+		),
+	),
+
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/pageactions.beta.less',
