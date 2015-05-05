@@ -313,15 +313,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toggling',
 		),
 		'scripts' => array(
-			'javascripts/modules/toc/TableOfContents.js',
-			'javascripts/modules/toc/init.js',
+			'resources/mobile.toc/TableOfContents.js',
+			'resources/mobile.toc/init.js',
 		),
 		'styles' => array(
-			'less/modules/toc/toc.less',
+			'resources/mobile.toc/toc.less',
 		),
 		'templates' => array(
-			'toc.hogan' => 'templates/modules/toc/toc.hogan',
-			'heading.hogan' => 'templates/modules/toc/tocHeading.hogan'
+			'toc.hogan' => 'resources/mobile.toc/toc.hogan',
+			'heading.hogan' => 'resources/mobile.toc/tocHeading.hogan'
 		),
 		'messages' => array(
 			'toc'
