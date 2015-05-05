@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_51e68e40",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-05T09:58:04Z",
+      "side": 1,
+      "message": "Trailing `);` should be on a new line. Also, the first rule should target .collection-header and .collection-moderation.",
+      "revId": "cf0e87cdaa1d5431a2d28ed534038e1e784c6584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d1835e55",
+        "filename": "templates/browse/gather_error.mustache",
+        "patchSetId": 18
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-05T09:58:04Z",
+      "side": 1,
+      "message": "Tab.",
+      "revId": "cf0e87cdaa1d5431a2d28ed534038e1e784c6584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_719cf2b8",
+        "filename": "templates/browse/gather_error.mustache",
+        "patchSetId": 18
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-05T09:58:04Z",
+      "side": 1,
+      "message": "Tab.",
+      "revId": "cf0e87cdaa1d5431a2d28ed534038e1e784c6584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
