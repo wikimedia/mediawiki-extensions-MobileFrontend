@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d6b59479",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 800,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-05T08:50:40Z",
+      "side": 1,
+      "message": "I\u0027m not sure, if this is right :) The categories code will be loaded only, if a page has categories, so we don\u0027t need an init script loaded on every page load :]",
+      "revId": "335b72abbc1f75cadd524312fa87cba69d657631",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
