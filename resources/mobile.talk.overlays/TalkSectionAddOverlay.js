@@ -41,7 +41,7 @@
 		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
 		templatePartials: {
 			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
-			saveHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/saveHeader.hogan' )
+			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		},
 		events: $.extend( {}, Overlay.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',

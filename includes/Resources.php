@@ -511,17 +511,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.drawers',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorOverlayBase.js',
+			'resources/mobile.editor.common/EditorOverlayBase.js',
 		),
 		'styles' => array(
-			'less/modules/editor/editor.less',
+			'resources/mobile.editor.common/editor.less',
 		),
 		'templates' => array(
-			'editHeader.hogan' => 'templates/modules/editor/editHeader.hogan',
-			'previewHeader.hogan' => 'templates/modules/editor/previewHeader.hogan',
-			'saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
-			'EditorOverlayBase.hogan' => 'templates/modules/editor/EditorOverlayBase.hogan',
-			'EditorOverlayAnonWarning.hogan' => 'templates/modules/editor/EditorOverlayAnonWarning.hogan',
+			'editHeader.hogan' => 'resources/mobile.editor.common/editHeader.hogan',
+			'previewHeader.hogan' => 'resources/mobile.editor.common/previewHeader.hogan',
+			'saveHeader.hogan' => 'resources/mobile.editor.common/saveHeader.hogan',
+			'EditorOverlayBase.hogan' => 'resources/mobile.editor.common/EditorOverlayBase.hogan',
+			'EditorOverlayAnonWarning.hogan' =>
+				'resources/mobile.editor.common/EditorOverlayAnonWarning.hogan',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -701,6 +702,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.talk',
 			'mediawiki.ui.anchor',
+			'mobile.editor.common',
 		),
 		'scripts' => array(
 			'resources/mobile.talk.overlays/TalkSectionOverlay.js',
@@ -712,7 +714,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'content.hogan' => 'resources/mobile.talk.overlays/content.hogan',
 			'SectionAddOverlay/contentHeader.hogan' =>
 				'resources/mobile.talk.overlays/talkSectionAddContentHeader.hogan',
-			'SectionAddOverlay/saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
 			'SectionAddOverlay.hogan' => 'resources/mobile.talk.overlays/talkSectionAdd.hogan',
 			'Section/header.hogan' => 'resources/mobile.talk.overlays/talkSectionHeader.hogan',
 			'Section/content.hogan' => 'resources/mobile.talk.overlays/talkSection.hogan',
