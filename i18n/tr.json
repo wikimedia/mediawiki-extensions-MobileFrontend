@@ -18,7 +18,8 @@
 			"Violetanka",
 			"Mavrikant",
 			"Gokalpselamet",
-			"Watermelon juice"
+			"Watermelon juice",
+			"Stultiwikia"
 		]
 	},
 	"action-mf-uploadbutton": "mobil sayfalarda yükle düğmesini kullan.",
@@ -333,7 +334,7 @@
 	"mobile-frontend-userlogin-loggedin-register": "Zaten {{GENDER:$1|$1}} olarak oturum açtınız.\nBaşka bir kullanıcı oluşturmak için aşağıdaki formu kullanın.",
 	"mobile-frontend-username": "Kullanıcı adı:",
 	"mobile-frontend-username-placeholder": "Kullanıcı adı",
-	"mobile-frontend-view": "Mobil Görünüm",
+	"mobile-frontend-view": "Mobil görünüm",
 	"mobile-frontend-view-desktop": "Masaüstü",
 	"mobile-frontend-view-mobile": "Mobil",
 	"mobile-frontend-view-source": "Kaynağı görüntüle",
@@ -370,7 +371,7 @@
 	"tag-mobile_edit-description": "Mobilden (web veya uygulama) yapılan düzenleme",
 	"tag-mobile_web_edit": "Mobil web değişikliği",
 	"tag-mobile_web_edit-description": "Mobil web sitesinden yapılan düzenleme",
-	"mobile-frontend-pageaction-edit-tooltip": "Bu sayfada istenen bölümü düzenleyin.",
+	"mobile-frontend-pageaction-edit-tooltip": "Sayfanın giriş bölümünü düzenleyin.",
 	"mobile-frontend-pageaction-upload-tooltip": "Bu sayfada istenen fotoğrafı yükleyin.",
 	"apihelp-mobileview-description": "Mobil görünümler için gerekli verileri döndürür.",
 	"apihelp-mobileview-param-page": "Sayfa başlığı işlemi.",

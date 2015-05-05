@@ -406,5 +406,8 @@
 	"mobile-frontend-months-ago": "пред $1 {{PLURAL:$1|месец|месеци}}",
 	"mobile-frontend-years-ago": "пред $1 {{PLURAL:$1|година|години}}",
 	"mobile-frontend-console-recruit": "\\o/ Еј! Ова е програм со отворен код и ни требаат доброволци за да ни помогнат да го разработиме, да го подобриме и да ги поправиме грешките на кои можете да наидете во оваа конзола со JavaScript!\n\nСпсиокот на потребни доработки и исправки ќе го најдете на https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Ознаки"
+	"mobile-frontend-browse-tags-header": "Ознаки",
+	"mobile-frontend-panel-ok": "Во ред",
+	"mobile-frontend-panel-cancel": "Не, благодарам",
+	"mobile-frontend-panel-betaoptin-msg": "Дали би сакале да ги пробате новите можности? На бета-верзијата добивате пристап до пробни функции, но со ризик да наидете на грешки и проблеми."
 }

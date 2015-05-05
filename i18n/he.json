@@ -418,5 +418,8 @@
 	"mobile-frontend-months-ago": "לפני {{PLURAL:$1|חודש|חודשיים|$1 חודשים}}",
 	"mobile-frontend-years-ago": "לפני {{PLURAL:$1|שנה|שנתיים|$1 שנים}}",
 	"mobile-frontend-console-recruit": "אהלן! /ס\\ זוהי תכנה בקוד פתוח ואנחנו מחפשים מתנדבים שיעזרו לבנות אותה, לשפר אותה ולמצוא באגים שאולי מוצגים במסוף ג'אווה־סקריפט! אפשר למצוא את הבאגים שלנו בדף\n\nhttps://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "תגיות"
+	"mobile-frontend-browse-tags-header": "תגיות",
+	"mobile-frontend-panel-ok": "בסדר",
+	"mobile-frontend-panel-cancel": "לא תודה",
+	"mobile-frontend-panel-betaoptin-msg": "האם מעניין אותך לנסות כמה אפשרויות חדשות? הצטרפות לבטא תיתן לך גישה לאפשרויות ניסיוניות, אבל גם סיכון לראות באגים ובעיות."
 }
