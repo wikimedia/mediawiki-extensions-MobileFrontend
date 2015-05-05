@@ -1137,10 +1137,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'scripts' => array(
-			'javascripts/modules/languages/LanguageOverlay.js',
+			'resources/mobile.languages/LanguageOverlay.js',
 		),
 		'templates' => array(
-			'LanguageOverlay.hogan' => 'templates/modules/languages/LanguageOverlay.hogan',
+			'LanguageOverlay.hogan' => 'resources/mobile.languages/LanguageOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-language-heading',
@@ -1743,7 +1743,7 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'resources/mobile.mediaViewer/init.js',
-			'javascripts/modules/languages/init.js',
+			'resources/mobile.languages/init.js',
 			'resources/mobile.betaoptin/init.js',
 		),
 	),
