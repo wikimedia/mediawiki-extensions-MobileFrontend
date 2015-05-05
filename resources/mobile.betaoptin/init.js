@@ -14,7 +14,7 @@
 		// a single character has 36 possibilities so this is 2/36 5.6% chance (a-z and 0-9)
 		// 3% chance of this happening
 		inStable = !context.isBetaGroupMember();
-		inSample = $.inArray( token.charAt( 0 ), [ '3', '2' ] ) !== 1;
+		inSample = $.inArray( token.charAt( 0 ), [ '3', '2' ] ) !== -1;
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
 			new BetaOptinPanel()
 				.on( 'hide', function () {
