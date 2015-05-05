@@ -84,6 +84,7 @@ $autoloadClasses = array (
 	'SpecialMobileLanguages' => 'specials/SpecialMobileLanguages',
 	'SpecialMobilePreferences' => 'specials/SpecialMobilePreferences',
 	'SpecialMobileNotifications' => 'specials/SpecialMobileNotifications',
+	'SpecialTopicTag' => 'specials/browse/SpecialTopicTag',
 	'MobileSpecialPage' => 'specials/MobileSpecialPage',
 	'MobileSpecialPageFeed' => 'specials/MobileSpecialPageFeed',
 
@@ -163,6 +164,7 @@ $wgSpecialPages += array(
 	'MobileLanguages' => 'SpecialMobileLanguages',
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
+	'TopicTag' => 'SpecialTopicTag',
 );
 $wgSpecialPageGroups['Nearby'] = 'pages';
 
