@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_c9997223",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-05T17:55:25Z",
+      "side": 1,
+      "message": "lol",
+      "parentUuid": "0ed113e2_691f26bb",
+      "revId": "8ff700d0c895e10b3af411c54f9ce8ba76166333",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_eadb1252",
         "filename": "resources/mobile.view/View.js",
         "patchSetId": 2
