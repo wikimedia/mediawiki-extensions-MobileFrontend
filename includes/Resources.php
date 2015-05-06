@@ -295,8 +295,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist.scripts',
 		),
 		'scripts' => array(
-			'javascripts/modules/watchlist/WatchListApi.js',
-			'javascripts/modules/watchlist/WatchList.js',
+			'resources/mobile.watchlist/WatchListApi.js',
+			'resources/mobile.watchlist/WatchList.js',
 		),
 		'messages' => array(
 			'mobile-frontend-watchlist-modified',
@@ -1021,11 +1021,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/watchstar/WatchstarApi.js',
-			'javascripts/modules/watchstar/Watchstar.js',
+			'resources/mobile.watchstar/WatchstarApi.js',
+			'resources/mobile.watchstar/Watchstar.js',
 		),
 		'styles' => array(
-			'less/modules/watchstar.less',
+			'resources/mobile.watchstar/watchstar.less',
 		),
 		'messages' => array(
 			'watchthispage',
@@ -1043,7 +1043,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.watchstar',
 		),
 		'scripts' => array(
-			'javascripts/modules/watchstar/init.js',
+			'resources/mobile.watchstar.init/init.js',
 		),
 		'messages' => array(
 			'watchthispage',
