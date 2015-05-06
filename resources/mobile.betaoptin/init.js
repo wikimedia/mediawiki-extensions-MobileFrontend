@@ -11,9 +11,20 @@
 			token = mw.user.generateRandomSessionId();
 			settings.save( 'mobile-betaoptin-token', token );
 		}
+
+		inStable = !context.isBetaGroupMember();
+		// Correct all those poor souls who already opted in to beta via panel
+		// and lost their images next time they view a page.
+		// FIXME: Remove this in 30 days.
+		if ( !inStable && mw.config.get( 'wgImagesDisabled' ) ) {
+			$.post( mw.util.getUrl( 'Special:MobileOptions' ), {
+				token: mw.user.tokens.get( 'editToken' ),
+				enableImages: true
+			} );
+		}
+
 		// a single character has 36 possibilities so this is 2/36 5.6% chance (a-z and 0-9)
 		// 3% chance of this happening
-		inStable = !context.isBetaGroupMember();
 		inSample = $.inArray( token.charAt( 0 ), [ '3', '2' ] ) !== -1;
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
 			new BetaOptinPanel()
