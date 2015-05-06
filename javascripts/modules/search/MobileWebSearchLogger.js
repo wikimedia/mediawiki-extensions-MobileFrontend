@@ -138,4 +138,4 @@
 
 	M.define( 'modules/search/MobileWebSearchLogger', MobileWebSearchLogger );
 
-} ( mw.mobileFrontend, mw, jQuery ) );
+}( mw.mobileFrontend, mw, jQuery ) );

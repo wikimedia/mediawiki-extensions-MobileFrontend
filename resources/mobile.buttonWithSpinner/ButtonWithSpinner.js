@@ -37,4 +37,4 @@
 	};
 
 	M.define( 'ButtonWithSpinner', ButtonWithSpinner );
-} ( mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );
