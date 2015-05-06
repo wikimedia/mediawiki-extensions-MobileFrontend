@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b3ed74f0",
+        "filename": "resources/mobile.betaoptin/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-05-06T17:10:07Z",
+      "side": 0,
+      "message": "Surely something else other than the comment should change?",
+      "revId": "6aec0fdcf92aaa6a733927bc9303343309384a1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
