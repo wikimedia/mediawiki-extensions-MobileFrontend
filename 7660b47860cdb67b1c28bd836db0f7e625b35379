@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_df935950",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-06T23:49:33Z",
+      "side": 1,
+      "message": "Maybe this function should be removed since it\u0027s not used anymore.",
+      "revId": "7660b47860cdb67b1c28bd836db0f7e625b35379",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
