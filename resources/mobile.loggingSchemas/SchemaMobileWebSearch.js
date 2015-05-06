@@ -10,6 +10,7 @@
 	SchemaMobileWebSearch = Schema.extend( {
 		/** @inheritdoc **/
 		name: 'MobileWebSearch',
+		isSampled: true,
 		/**
 		 * @inheritdoc
 		 *
