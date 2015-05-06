@@ -963,12 +963,12 @@ class MobileFrontendHooks {
 		}
 
 		$scripts = array(
-			'javascripts/loggingSchemas/SchemaMobileWeb.js',
-			'javascripts/loggingSchemas/SchemaMobileWebUploads.js',
-			'javascripts/loggingSchemas/SchemaMobileWebClickTracking.js',
-			'javascripts/loggingSchemas/SchemaMobileWebEditing.js',
-			'javascripts/loggingSchemas/SchemaMobileWebWatching.js',
-			'javascripts/loggingSchemas/SchemaMobileWebSearch.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebUploads.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebEditing.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 		);
 
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
@@ -979,7 +979,8 @@ class MobileFrontendHooks {
 			'scripts' => $scripts,
 		);
 
-		$wgResourceModules['skins.minerva.scripts']['scripts'][] = 'javascripts/loggingSchemas/init.js';
+		$wgResourceModules['skins.minerva.scripts']
+			['scripts'][] = 'resources/mobile.loggingSchemas/init.js';
 	}
 
 	/**
