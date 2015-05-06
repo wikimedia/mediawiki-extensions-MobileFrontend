@@ -31,6 +31,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 **/
 $wgMinervaStyleModules = array(
 	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/reset.less',
 			'less/ui.less',
@@ -44,6 +45,7 @@ $wgMinervaStyleModules = array(
 		),
 	),
 	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/content/main.less',
 			'less/content/thumbnails.less',
@@ -59,11 +61,13 @@ $wgMinervaStyleModules = array(
 		),
 	),
 	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'resources/mobile.pagelist.styles/pagelist.less',
 		),
 	),
 	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/tablet/common.less',
 			'less/tablet/hacks.less',
@@ -75,6 +79,7 @@ $wgMinervaStyleModules = array(
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
 		// Not used yet, see FIXME below
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'position' => 'bottom',
 		'images' => array(
 			// chrome
 			'notifications' => 'images/icons/bell.svg',
@@ -1636,6 +1641,7 @@ $wgMobileSpecialPageModules = array(
 	),
 
 	'mobile.special.pagefeed.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/specials/pagefeed.less',
 		),
@@ -1665,6 +1671,7 @@ $wgMobileSpecialPageModules = array(
 	*/
 $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/specials/common.less',
 			'less/specials/forms.less',
@@ -1672,6 +1679,7 @@ $wgMinervaSpecialPageModules = array(
 	),
 
 	'skins.minerva.special.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/specials/search.less',
 		),
@@ -1689,6 +1697,7 @@ $wgMinervaSpecialPageModules = array(
 	),
 
 	'skins.minerva.special.userlogin.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/specials/userlogin.less',
 		),
