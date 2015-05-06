@@ -1,21 +1,13 @@
 {
   "preset": "wikimedia",
 
-  "requireMultipleVarDecl": "onevar",
-  "requireLineBreakAfterVariableAssignment": true,
-  "disallowOperatorBeforeLineBreak": ["."],
-  "requireBlocksOnNewline": true,
-  "requireLineFeedAtFileEnd": true,
-  "requirePaddingNewLinesInObjects": true,
   "disallowDanglingUnderscores": null,
-  "requireSpacesInsideParentheses": "all",
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
   "validateJSDoc": {
     "checkParamNames": true,
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
-  "validateIndentation": "\t",
   "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"],
   "additionalRules": [
     "node_modules/jscs-jsdoc/lib/rules/*.js"
