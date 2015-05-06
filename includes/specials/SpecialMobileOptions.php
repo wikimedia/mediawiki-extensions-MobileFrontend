@@ -269,11 +269,13 @@ HTML;
 		}
 		$context->setMobileMode( $group );
 		$imagesDisabled = !$request->getBool( 'enableImages' );
-		if ( $context->imagesDisabled() !== $imagesDisabled ) {
-			// Only record when the state has changed
-			$schemaData['images'] = $imagesDisabled ? "off" : "on";
+		if ( $request->getVal( 'enableImages' ) !== null ) {
+			if ( $context->imagesDisabled() !== $imagesDisabled ) {
+				// Only record when the state has changed
+				$schemaData['images'] = $imagesDisabled ? "off" : "on";
+			}
+			$context->setDisableImagesCookie( $imagesDisabled );
 		}
-		$context->setDisableImagesCookie( $imagesDisabled );
 
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
 		if ( $returnToTitle ) {
