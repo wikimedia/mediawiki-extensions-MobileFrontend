@@ -357,5 +357,8 @@
 	"mobile-frontend-loading-message": "Cargando…",
 	"mobile-frontend-months-ago": "hace $1 {{PLURAL:$1|mes|meses}}",
 	"mobile-frontend-years-ago": "hace $1 {{PLURAL:$1|año|años}}",
-	"mobile-frontend-browse-tags-header": "Etiquetas"
+	"mobile-frontend-browse-tags-header": "Etiquetas",
+	"mobile-frontend-panel-ok": "Aceptar",
+	"mobile-frontend-panel-cancel": "No, gracias",
+	"mobile-frontend-panel-betaoptin-msg": "¿Quieres probar algunas funcionalidades nuevas? Al unirte a la beta, accederás a funcionalidades experimentales, con el riesgo de encontrarte con algunos errores y problemas."
 }

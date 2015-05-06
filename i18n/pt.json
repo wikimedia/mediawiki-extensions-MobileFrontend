@@ -372,5 +372,7 @@
 	"mobile-frontend-loading-message": "A carregar...",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|mês|meses}} atrás",
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|ano|anos}} atrás",
-	"mobile-frontend-browse-tags-header": "Etiquetas"
+	"mobile-frontend-browse-tags-header": "Etiquetas",
+	"mobile-frontend-panel-ok": "Aceitar",
+	"mobile-frontend-panel-cancel": "Não, obrigado"
 }

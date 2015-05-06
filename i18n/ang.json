@@ -5,6 +5,7 @@
 			"Gott wisst"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "nis nǣngu scortness þǣre adihtunge",
 	"mobile-frontend-diffview-anonymous": "Uncūþ brūcend",
 	"mobile-frontend-editor-edit": "Adihtan",
 	"mobile-frontend-editor-save": "Hordian",
@@ -35,6 +36,7 @@
 	"mobile-frontend-terms-text": "Nytte rǣd",
 	"mobile-frontend-username": "Brūcendnama:",
 	"mobile-frontend-username-placeholder": "Brūcendnama",
+	"mobile-frontend-view": "Handspearctellenda sihþ",
 	"mobile-frontend-view-desktop": "Bordspearctellenda fadung",
 	"mobile-frontend-view-mobile": "Handsprecenda fadung",
 	"mobile-frontend-watchlist-cta-button-login": "Inmeldian",

@@ -118,6 +118,7 @@
 	"mobile-frontend-errorreport-error": "Erro, o seu comentario non pode ser rexistrado",
 	"mobile-frontend-errorreport-feedback": "Grazas polo seu comentario!",
 	"mobile-frontend-errorreport-heading": "Comunicar un erro",
+	"mobile-frontend-errorreport-instructions": "<p>Este formulario só é para comunicar erros en artigos da Wikipedia. Por favor, non o utilice para avisar de información que falta.</p><p>Se atopou un erro, por favor, tente corrixilo por si mesmo editando a páxina. Se non consegue corrixir o erro, comuníqueo utilizando o seguinte formulario.</p><p> Non engada o seu número de teléfono ou enderezo de correo electrónico.</p>",
 	"mobile-frontend-errorreport-placeholder": "Introduza o comentario de erro aquí.",
 	"mobile-frontend-errorreport-section-title": "Corrección suxerida",
 	"mobile-frontend-errorreport-submit": "Enviar",

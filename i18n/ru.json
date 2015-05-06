@@ -85,7 +85,7 @@
 	"mobile-frontend-editor-disabled": "Эта страница защищена ради предотвращения вандализма.",
 	"mobile-frontend-editor-edit": "Править",
 	"mobile-frontend-editor-editing": "Редактирование",
-	"mobile-frontend-editor-editing-page": "<strong>Редактирование</strong> <span>$1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Редактирование</strong> $1</span>",
 	"mobile-frontend-editor-error": "Ошибка, правка не была сохранена.",
 	"mobile-frontend-editor-error-conflict": "Ошибка, другой пользователь отредактировал эту страницу.",
 	"mobile-frontend-editor-error-loading": "Ошибка, не удаётся загрузить раздел.",

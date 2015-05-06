@@ -19,7 +19,8 @@
 			"Mavrikant",
 			"Gokalpselamet",
 			"Watermelon juice",
-			"Stultiwikia"
+			"Stultiwikia",
+			"Captantrips"
 		]
 	},
 	"action-mf-uploadbutton": "mobil sayfalarda yükle düğmesini kullan.",
@@ -388,5 +389,7 @@
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ay|ay}} önce",
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|yıl|yıl}} önce",
 	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Etiketler"
+	"mobile-frontend-browse-tags-header": "Etiketler",
+	"mobile-frontend-panel-ok": "Tamam",
+	"mobile-frontend-panel-cancel": "Hayır, teşekkürler"
 }
