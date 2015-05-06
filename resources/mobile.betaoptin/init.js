@@ -23,9 +23,9 @@
 			} );
 		}
 
-		// a single character has 36 possibilities so this is 2/36 5.6% chance (a-z and 0-9)
+		// a single character has 16 possibilities so this is 1/16 6.25% chance (a-f and 0-9)
 		// 3% chance of this happening
-		inSample = $.inArray( token.charAt( 0 ), [ '3', '2' ] ) !== -1;
+		inSample = $.inArray( token.charAt( 0 ), [ '3' ] ) !== -1;
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
 			new BetaOptinPanel()
 				.on( 'hide', function () {
