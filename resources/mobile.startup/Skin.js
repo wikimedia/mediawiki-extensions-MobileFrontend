@@ -29,9 +29,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: {
-			'click #mw-mf-page-center': '_onPageCenterClick'
-		},
+		events: {},
 
 		/**
 		 * Close navigation if content tapped
@@ -136,6 +134,9 @@
 			 * Fired when appearance of skin changes.
 			 */
 			this.emit( 'changed' );
+			// FIXME: Move back into events when T98200 resolved
+			this.$( '#mw-mf-page-center' ).on( 'click',
+				$.proxy( this, '_onPageCenterClick' ) );
 		},
 
 		/**
