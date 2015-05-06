@@ -37,7 +37,7 @@
 				// just before show(); this is important for animations to work
 				// (0ms doesn't work on Firefox, 10ms is enough)
 				setTimeout( function () {
-					self.$el.addClass( 'visible' );
+					self.$el.addClass( 'visible animated' );
 					self.emit( 'show' );
 				}, self.minHideDelay );
 			}
