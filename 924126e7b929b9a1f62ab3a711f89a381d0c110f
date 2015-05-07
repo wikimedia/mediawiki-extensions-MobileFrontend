@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e1f477cc",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1569,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-07T22:04:30Z",
+      "side": 1,
+      "message": "desktop.less should suffice?\nSeems unnecessary to repeat specialNearby when it\u0027s in the folder name.\nFeel free to do in a follow up.",
+      "revId": "924126e7b929b9a1f62ab3a711f89a381d0c110f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
