@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_05e74ee0",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-07T12:38:59Z",
+      "side": 1,
+      "message": "This should be changed to\n\n    if ( $this-\u003egetBrowseTags() ) {",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8576deff",
+        "filename": "resources/mobile.browse/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-07T12:38:59Z",
+      "side": 1,
+      "message": "This seems familiar. Is it from WikiGrok?",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_65797af1",
+        "filename": "resources/mobile.browse/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-07T12:38:59Z",
+      "side": 1,
+      "message": "This needs to be debounced.",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_65d5fae8",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-07T12:38:59Z",
+      "side": 1,
+      "message": "I don\u0027t think that this needs to be sampled given that this is on beta/alpha.",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
