@@ -67,6 +67,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	protected function getSkinStyles() {
 		$skinStyles = parent::getSkinStyles();
 
+		$skinStyles[] = 'skins.minerva.alpha.styles';
 		$skinStyles[] = 'skins.minerva.alpha.images';
 
 		return $skinStyles;

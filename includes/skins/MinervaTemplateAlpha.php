@@ -85,25 +85,10 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		$templateParser = new TemplateParser( __DIR__ .'/../../templates' );
 		$args = array(
 			'siteName' => SkinMinerva::getSitename(),
-			'showSearchForm' => $this->isSpecialMobileMenuPage,
-			'showTitle' => !$this->isSpecialMobileMenuPage,
+			'mobileMenuClass' => MobileUI::iconClass( 'search', 'element', 'header-icon' ),
+			'mobileMenuLink' => SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl(),
+			'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse()
 		);
-
-		if ( $this->isSpecialMobileMenuPage ) {
-			$args += array(
-				'mobileMenuClass' => 'js-only back ' . MobileUI::iconClass( 'back-mobilemenu' ),
-				'mobileMenuLink' => '#back',
-				'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu-back' )->parse(),
-				'searchForm' => $this->makeSearchForm( $data ),
-			);
-		} else {
-			$args += array(
-				'mobileMenuClass' => MobileUI::iconClass( 'search' ),
-				'mobileMenuLink' => SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl(),
-				'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse(),
-				'searchInputClass' => 'hidden',
-			);
-		}
 
 		echo $templateParser->processTemplate( 'header', $args );
 	}
@@ -147,83 +132,16 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	}
 
 	/**
-	 * Renders the main menu.
-	 *
-	 * @param array $data Data used to build the page
+	 * In addition to the main menu, this function renders the search form on top of the menu
+	 * @inheritdoc
 	 */
 	protected function renderMainMenu( $data ) {
-		$className = $this->isSpecialMobileMenuPage ? '' : ' hidden';
-		?>
-		<nav class="<?php echo $className; ?>">
-		<?php
-		$this->renderMainMenuItems();
-		?>
-		</nav>
-		<?php
+		$templateParser = new TemplateParser( __DIR__ .'/../../resources' );
+		$args = array(
+			'searchForm' => $this->makeSearchForm( $data )
+		);
+		echo $templateParser->processTemplate( 'mobile.mainMenu/searchForm', $args );
+		parent::renderMainMenu( $data );
 	}
 
-	/**
-	 * Renders the contents of the main menu.
-	 */
-	protected function renderMainMenuItems() {
-		?>
-		<ul>
-			<?php
-				foreach ( $this->getDiscoveryTools() as $key => $val ) {
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-			<ul>
-			<?php
-				foreach ( $this->getPersonalTools() as $key => $val ){
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-			<ul class="hlist">
-			<?php
-				foreach ( $this->getSiteLinks() as $key => $val ) {
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-		<?php
-	}
-
-	/**
-	 * Renders the page.
-	 *
-	 * The menu is included and hidden by default.
-	 *
-	 * @param array $data Data used to build the page
-	 */
-	protected function render( $data ) {
-		echo $data[ 'headelement' ];
-		?>
-		<div id="mw-mf-viewport">
-			<div class="header">
-				<?php $this->renderHeader( $data ); ?>
-			</div>
-			<?php $this->renderMainMenu( $data ); ?>
-			<div id="mw-mf-page-center">
-				<?php
-		foreach ( $this->data['banners'] as $banner ) {
-			echo $banner;
-		}
-		?>
-				<div id="content_wrapper">
-					<?php $this->renderContentWrapper( $data ); ?>
-				</div>
-				<?php $this->renderFooter( $data ); ?>
-			</div>
-		</div>
-		<?php
-		echo $data['reporttime'];
-		echo $data['bottomscripts'];
-		?>
-		</body>
-		</html>
-		<?php
-	}
 }

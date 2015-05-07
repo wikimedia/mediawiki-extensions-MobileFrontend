@@ -14,11 +14,9 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash
-		 * @cfg {String} defaults.mainMenuButton Selector for the main menu button
 		 */
-		defaults: $.extend( {}, mw.config.get( 'wgMFMenuData' ) || {}, {
-			mainMenuButton: '#mw-mf-main-menu-button'
-		} ),
+		defaults: $.extend( {}, mw.config.get( 'wgMFMenuData' ) || {} ),
+
 		/**
 		 * Turn on event logging on the existing main menu by reading `event-name` data
 		 * attributes on elements.
@@ -45,14 +43,20 @@
 			}
 
 			// Listen to the main menu button clicks
-			$( this.options.mainMenuButton ).off( 'click' ).on( 'click', function ( ev ) {
-				if ( self.isOpen() ) {
-					self.closeNavigationDrawers();
-				} else {
-					self.openNavigationDrawer();
-				}
-				ev.preventDefault();
-			} );
+			// In alpha there is no #mw-mf-main-menu-button, the user can click on the header
+			// search icon or the site name in the header to open the main menu
+			$( '#mw-mf-main-menu-button, .alpha .header .header-icon, .alpha .header .header-title' )
+				.off( 'click' )
+				.on( 'click', function ( ev ) {
+					if ( self.isOpen() ) {
+						self.closeNavigationDrawers();
+					} else {
+						self.openNavigationDrawer();
+					}
+					ev.preventDefault();
+					// Stop propagation, otherwise the Skin will close the open menus on page center click
+					ev.stopPropagation();
+				} );
 
 			// FIXME: Remove all of the below when cache cleared and mw-ui-icon used everywhere.
 			this.$( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-before' );
