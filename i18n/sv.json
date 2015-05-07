@@ -12,7 +12,8 @@
 			"Skalman",
 			"WikiPhoenix",
 			"Hangsna",
-			"Jenniesarina"
+			"Jenniesarina",
+			"Josve05a"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -413,5 +414,7 @@
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|månad|månader}} sedan",
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|år}} sedan",
 	"mobile-frontend-console-recruit": "\\o/ Hej! Det här är en öppen programvara för källkod och vi behöver frivilliga som hjälper oss att bygga, förbättra och vara med och fixa fel som du hittar i JavaScript-konsollen!\n\nHär hittar du vår backlog @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Märken"
+	"mobile-frontend-browse-tags-header": "Märken",
+	"mobile-frontend-panel-ok": "Okej",
+	"mobile-frontend-panel-cancel": "Nej tack"
 }

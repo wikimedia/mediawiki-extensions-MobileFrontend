@@ -31,11 +31,13 @@
 	"mobile-frontend-regular-site": "Vê rûpelê di Wîkîpediya asayî de bibîne",
 	"mobile-frontend-search-submit": "Biçe",
 	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-terms-text": "Mercên Bikaranînê",
 	"mobile-frontend-username": "Navê bikarhêner:",
 	"mobile-frontend-username-placeholder": "Navê bikarhêner",
 	"mobile-frontend-view": "Xuyakirina mobîl",
 	"mobile-frontend-view-mobile": "Mobîl",
 	"mobile-frontend-watchlist-cta-button-login": "Têkeve",
 	"mobile-frontend-quick-lookup-looking": "Binere \"$1\"",
-	"mobile-frontend-quick-lookup-not-internal": "Bibore, ev lînka $1ê nîne."
+	"mobile-frontend-quick-lookup-not-internal": "Bibore, ev lînka $1ê nîne.",
+	"tag-mobile_edit": "Guherandina mobîl"
 }

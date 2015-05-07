@@ -408,5 +408,7 @@
 	"mobile-frontend-months-ago": "fai $1 {{PLURAL:$1|mes|meses}}",
 	"mobile-frontend-years-ago": "fai $1 {{PLURAL:$1|ano|anos}}",
 	"mobile-frontend-console-recruit": "\\o/ Ola! Isto é software de código aberto e necesitamos voluntarios que nos boten unha man para construílo, melloralo e reparar os fallos que se cadra atopas nesta consola de JavaScript.",
-	"mobile-frontend-browse-tags-header": "Etiquetas"
+	"mobile-frontend-browse-tags-header": "Etiquetas",
+	"mobile-frontend-panel-ok": "Aceptar",
+	"mobile-frontend-panel-cancel": "Non, grazas"
 }
