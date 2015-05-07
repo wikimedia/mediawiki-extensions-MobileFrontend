@@ -800,6 +800,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.categories' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'resources/mobile.categories/init.js',
+		),
+	),
+
+	'mobile.categories.overlays' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
 			'mediawiki.Title',
 			'mobile.overlays',
 			'mobile.loggingSchemas',
@@ -810,21 +819,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'oojs-ui',
 		),
 		'scripts' => array(
-			'resources/mobile.categories/CategoryApi.js',
-			'resources/mobile.categories/CategoryLookupInputWidget.js',
-			'resources/mobile.categories/CategoryOverlay.js',
-			'resources/mobile.categories/CategoryAddOverlay.js',
-			// FIXME: This should not live inside this module since it has side effects
-			'resources/mobile.categories/init.js',
+			'resources/mobile.categories.overlays/CategoryApi.js',
+			'resources/mobile.categories.overlays/CategoryLookupInputWidget.js',
+			'resources/mobile.categories.overlays/CategoryOverlay.js',
+			'resources/mobile.categories.overlays/CategoryAddOverlay.js',
 		),
 		'styles' => array(
-			'resources/mobile.categories/categories.less',
+			'resources/mobile.categories.overlays/categories.less',
 		),
 		'templates' => array(
-			'CategoryOverlay.hogan' => 'resources/mobile.categories/CategoryOverlay.hogan',
-			'CategoryAddOverlay.hogan' => 'resources/mobile.categories/CategoryAddOverlay.hogan',
+			'CategoryOverlay.hogan' => 'resources/mobile.categories.overlays/CategoryOverlay.hogan',
+			'CategoryAddOverlay.hogan' => 'resources/mobile.categories.overlays/CategoryAddOverlay.hogan',
 			'CategoryAddOverlayHeader.hogan' =>
-				'resources/mobile.categories/CategoryAddOverlayHeader.hogan',
+				'resources/mobile.categories.overlays/CategoryAddOverlayHeader.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-categories-heading',
