@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b742393d",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 10
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-07T13:38:41Z",
+      "side": 1,
+      "message": "Your editor appears to have converted tabs to spaces.",
+      "revId": "c14be3640dcaa0fd3a904c0784cb28db79e29902",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
