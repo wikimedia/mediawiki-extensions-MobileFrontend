@@ -16,6 +16,7 @@
 	 * @class Overlay
 	 * @extends View
 	 * @uses Icon
+	 * @uses Button
 	 */
 	Overlay = View.extend( {
 		/**

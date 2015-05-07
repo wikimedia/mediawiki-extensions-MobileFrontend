@@ -5,6 +5,7 @@
 		View = M.require( 'View' ),
 		user = M.require( 'user' ),
 		Anchor = M.require( 'Anchor' ),
+		Button = M.require( 'Button' ),
 		icons = M.require( 'icons' ),
 		months = [
 			'january-date',
@@ -26,16 +27,22 @@
 	 * Emits photo-loaded event when images in the infobox have loaded.
 	 * @class Infobox
 	 * @extends View
+	 * @uses Button
+	 * @uses Anchor
 	 */
 	Infobox = View.extend( {
 		templatePartials: {
-			anchor: Anchor.prototype.template
+			anchor: Anchor.prototype.template,
+			button: Button.prototype.template
 		},
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
 
 		className: 'wikidata-infobox',
 		/**
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Object} defaults.viewLink Anchor options for a link to wikidata page.
+		 * @cfg {Object} defaults.editButton Button options for a link to editor
+		 * @cfg {Object} defaults.moreButton Button options to expand infobox
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.
 		 * @cfg {String} defaults.description WikiData description.
 		 * Defaults to 'A Wikipedia page in need of a description.'
@@ -65,6 +72,19 @@
 				progressive: true,
 				// FIXME: i18n
 				label: 'View on Wikidata'
+			} ).options,
+			editButton: new Button( {
+				href: '#/infobox/editor',
+				progressive: true,
+				additionalClassName: 'hidden edit',
+				label: 'Edit this information'
+			} ).options,
+			moreButton: new Button( {
+				// FIXME: i18n
+				label: 'More information…',
+				quiet: true,
+				progressive: true,
+				additionalClassNames: 'more'
 			} ).options,
 			spinner: icons.spinner().toHtmlString(),
 			description: mw.config.get( 'wgMFDescription' ) ||
@@ -317,6 +337,12 @@
 			this.api = new WikiDataApi( {
 				itemId: options.itemId
 			} );
+			options.wikidataLink = new Anchor( {
+				href: 'https://m.wikidata.org/wiki/' + options.itemId,
+				progressive: true,
+				additionalClassNames: 'hidden',
+				label: 'View on Wikidata'
+			} ).options;
 
 			View.prototype.initialize.call( this, options );
 			this.options.viewLink.href = 'https://m.wikidata.org/wiki/' + this.options.itemId;

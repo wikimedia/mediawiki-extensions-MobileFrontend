@@ -65,11 +65,11 @@
 			licenseMsg: skin.getLicenseMsg()
 		} ),
 		/** @inheritdoc **/
-		templatePartials: {
+		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
 			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
-		},
+		} ),
 		/** @inheritdoc **/
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		/** @inheritdoc **/

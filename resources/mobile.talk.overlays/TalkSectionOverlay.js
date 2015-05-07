@@ -5,6 +5,7 @@
 		api = M.require( 'api' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
+		Button = M.require( 'Button' ),
 		pageApi = M.require( 'pageApi' ),
 		TalkSectionOverlay;
 
@@ -14,13 +15,14 @@
 	 * @extends Overlay
 	 * @uses Api
 	 * @uses Page
+	 * @uses Button
 	 * @uses Toast
 	 */
 	TalkSectionOverlay = Overlay.extend( {
-		templatePartials: {
+		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -31,6 +33,12 @@
 		 * automatically signed.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			saveButton: new Button( {
+				block: true,
+				additionalClassNames: 'save-button',
+				constructive: true,
+				label: mw.msg( 'mobile-frontend-editor-save' )
+			} ).options,
 			title: undefined,
 			section: undefined,
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),

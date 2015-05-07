@@ -4,6 +4,7 @@
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		settings = M.require( 'settings' ),
+		Button = M.require( 'Button' ),
 		browser = M.require( 'browser' ),
 		overlayManager = M.require( 'overlayManager' ),
 		toast = M.require( 'toast' ),
@@ -26,19 +27,28 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.loginCaption A link with label to login page.
-		 * @cfg {String} defaults.signupCaption A link with label to sign up page.
-		 * @cfg {String} defaults.anonLabel Title for link to edit a page without logging in.
+		 * @cfg {Object} defaults.loginButton options to render an sign in button
+		 * @cfg {Object} defaults.signupButton options to render a sign up button
+		 * @cfg {Object} defaults.anonButton options to render an edit anonymously button
 		 * @cfg {String} defaults.anonSelector CSS class name of the defaults.anonLabel wrapper.
 		 * @cfg {String} defaults.anonMsg Warning message, when user want to edit without
 		 * logging in.
 		 */
 		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
-			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
-			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
-			anonLabel: mw.msg( 'mobile-frontend-editor-anon' ),
-			// the "edit without logging in" link needs a second class to distinguish it with the "Next" button
-			anonSelector: 'continue anonymous',
+			loginButton: new Button( {
+				block: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+			} ).options,
+			signupButton: new Button( {
+				block: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+			} ).options,
+			anonButton: new Button( {
+				label: mw.msg( 'mobile-frontend-editor-anon' ),
+				block: true,
+				additionalClassNames: 'continue anonymous',
+				progressive: true
+			} ).options,
 			anonMsg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 		} ),
 		editor: 'SourceEditor',
