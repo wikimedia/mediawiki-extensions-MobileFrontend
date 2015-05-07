@@ -517,6 +517,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.api',
 			'mobile.settings',
 			'mobile.drawers',
+			'mobile.toast',
 		),
 		'scripts' => array(
 			'resources/mobile.editor.common/EditorOverlayBase.js',
