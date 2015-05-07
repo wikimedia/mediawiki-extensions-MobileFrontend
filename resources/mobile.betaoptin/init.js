@@ -13,16 +13,6 @@
 		}
 
 		inStable = !context.isBetaGroupMember();
-		// Correct all those poor souls who already opted in to beta via panel
-		// and lost their images next time they view a page.
-		// FIXME: Remove this in 30 days.
-		if ( !inStable && mw.config.get( 'wgImagesDisabled' ) ) {
-			$.post( mw.util.getUrl( 'Special:MobileOptions' ), {
-				token: mw.user.tokens.get( 'editToken' ),
-				enableImages: true
-			} );
-		}
-
 		// a single character has 16 possibilities so this is 1/16 6.25% chance (a-f and 0-9)
 		// 3% chance of this happening
 		inSample = $.inArray( token.charAt( 0 ), [ '3' ] ) !== -1;
