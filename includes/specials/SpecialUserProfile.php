@@ -39,58 +39,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	/**
-	 * Returns HTML to show the last thanking or an empty string if the user has never been thanked
-	 *
-	 * @return String HTML string representing the last thank by the user
-	 */
-	protected function getLastThanksHtml() {
-		$html = '';
-		$thank = $this->userInfo->getLastThanking();
-		if ( $thank ) {
-			$user = $thank['user'];
-			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
-				. Html::openElement( 'div', array( 'class' => 'container' ) )
-				. Html::openElement( 'div', array( 'class' => 'caption' ) )
-				. $this->msg( 'mobile-frontend-profile-last-thank',
-					$user,
-					$this->targetUser
-				)->parse()
-				. '</div>'
-				. '</div>'
-				. '</div>';
-		}
-
-		return $html;
-	}
-
-	/**
-	 * Returns HTML to show the last edit or an empty string when the user has not edited
-	 *
-	 * @return String HTML string representing the last edit by the user
-	 */
-	protected function getLastEditHtml() {
-		$rev = $this->userInfo->getLastEdit();
-		if ( $rev ) {
-			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
-			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
-				. Html::openElement( 'div', array( 'class' => 'container image' ) )
-				. Html::openElement( 'div', array( 'class' => 'caption' ) )
-				. $this->msg( 'mobile-frontend-profile-last-edit',
-					$rev->getTitle(),
-					$daysAgo,
-					$this->targetUser->getName()
-				)->parse()
-				. '</div>'
-				. '</div>'
-				. '</div>';
-		} else {
-			$html = '';
-		}
-
-		return $html;
-	}
-
-	/**
 	 * Get the link to users talk page
 	 * @return string
 	 */
@@ -133,7 +81,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * many edits/uploads, visit user page and talk page)
 	 * @return string
 	 */
-	protected function getUserFooterHtml() {
+	protected function getUserFooterData() {
 		$fromDate = $this->targetUser->getRegistration();
 		$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
 		$diff = $ts->diff( new MWTimestamp() );
@@ -162,18 +110,51 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 		$username = $this->targetUser->getName();
 
-		return Html::openElement( 'div', array( 'class' => 'footer' ) )
-			. Html::openElement( 'div' )
-			. $this->msg( $msg, $username )->
-				numParams( $units, $editCount, $uploadCount )->parse()
-			. Html::closeElement( 'div' )
-			. Html::openElement( 'div' )
-			. Linker::link( $this->targetUser->getUserPage(),
-				$this->msg( 'mobile-frontend-profile-userpage-link', $username )->escaped()
-			)
-			. Html::closeElement( 'div' )
-			. $this->getTalkLink()
-			. Html::closeElement( 'div' );
+		return array(
+			'editsSummary' => $this->msg( $msg, $username )->
+				numParams( $units, $editCount, $uploadCount )->parse(),
+			'linkUserPage' => Linker::link( $this->targetUser->getUserPage(),
+						$this->msg( 'mobile-frontend-profile-userpage-link', $username )->escaped()
+					),
+			'linkTalk' => $this->getTalkLink(),
+		);
+	}
+
+	public function getTemplateData( $templateParser ) {
+		$data = $this->getUserFooterData();
+		$rev = $this->userInfo->getLastEdit();
+		$cards = array();
+		if ( $rev ) {
+			$daysAgo = $this->getDaysAgo(
+				new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) )
+			);
+			$cards[] = $templateParser->processTemplate( 'userprofileCard', array(
+				'caption' => $this->msg( 'mobile-frontend-profile-last-edit',
+						$rev->getTitle(),
+						$daysAgo,
+						$this->targetUser->getName()
+					)->parse(),
+				)
+			);
+		}
+		$thank = $this->userInfo->getLastThanking();
+		if ( $thank ) {
+			$user = $thank['user'];
+			$cards[] = $templateParser->processTemplate( 'userprofileCard', array(
+				'caption' => $this->msg( 'mobile-frontend-profile-last-thank',
+						$user,
+						$this->targetUser
+					)->parse(),
+				)
+			);
+		}
+
+		if ( count( $cards ) > 0 ) {
+			$data['hasActivity'] = true;
+			$data['heading'] = $this->msg( 'mobile-frontend-profile-activity-heading' )->text();
+			$data['cards'] = $cards;
+		}
+		return $data;
 	}
 
 	/**
@@ -192,22 +173,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser && $this->targetUser->getId() ) {
 
 				// Prepare content
+				$templateParser = new TemplateParser( __DIR__ . '/../../templates/specials' );
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$activityHtml = $this->getLastEditHtml() . $this->getLastThanksHtml();
-
-				$html = Html::openElement( 'div', array( 'class' => 'profile content' ) );
-
-				if ( $activityHtml ) {
-					$html .= Html::openElement( 'div', array( 'class' => 'card-container' ) )
-						. Html::openElement( 'h2' )
-						. $this->msg( 'mobile-frontend-profile-activity-heading' )
-						. Html::closeElement( 'h2' )
-						. $activityHtml
-						. Html::closeElement( 'div' );
-				}
-				$html .= $this->getUserFooterHtml()
-					. Html::closeElement( 'div' );
-
+				$html = $templateParser->processTemplate( 'userprofile',
+					$this->getTemplateData( $templateParser ) );
 				$out->addHtml( $html );
 			} else {
 				$this->displayNoUserError( 'mobile-frontend-profile-nouser' );
