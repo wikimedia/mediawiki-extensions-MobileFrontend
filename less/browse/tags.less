@@ -1,27 +1,33 @@
 @import "minerva.variables";
 
-.browse-tags {
-	list-style: none;
+// .content h4 is added to the output after .browse-tags h4
+aside.browse-tags {
+	clear: both;
+	margin-bottom: .5em;
 
-	.browse-tag {
-		display: inline-block;
-		margin-right: 1em;
-		background-color: @grayLightest;
-		color: @grayMediumDark;
-		padding: 0 .75em;
-		border-radius: .2em;
-
-		a,
-		a:visited {
-			color: @grayMediumDark;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
+	h4 {
+		font-family: @fontFamily;
 	}
 }
 
-aside {
-	clear: both;
+.browse-tags-list {
+	list-style: none;
+}
+
+.browse-tag {
+	display: inline-block;
+	margin-right: 1.5em;
+	background-color: @grayLightest;
+	color: @grayMediumDark;
+	padding: 0 .75em;
+	border-radius: .2em;
+
+	a,
+	a:visited {
+		color: @grayMediumDark;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
