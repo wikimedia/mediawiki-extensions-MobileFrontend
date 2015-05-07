@@ -42,12 +42,12 @@
 		/**
 		 * @inheritdoc
 		 */
-		template: mw.template.get( 'mobile.categories', 'CategoryAddOverlay.hogan' ),
+		template: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlay.hogan' ),
 		/**
 		 * @inheritdoc
 		 */
 		templatePartials: {
-			header: mw.template.get( 'mobile.categories', 'CategoryAddOverlayHeader.hogan' ),
+			header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		},
 

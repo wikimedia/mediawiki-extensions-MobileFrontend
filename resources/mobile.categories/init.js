@@ -10,7 +10,7 @@
 	overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
 
-		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
+		loader.loadModule( 'mobile.categories.overlays', true ).done( function ( loadingOverlay ) {
 			var CategoryOverlay = M.require( 'categories/CategoryOverlay' );
 
 			loadingOverlay.hide();
@@ -26,7 +26,7 @@
 	overlayManager.add( /^\/categories\/add$/, function () {
 		var result = $.Deferred();
 
-		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
+		loader.loadModule( 'mobile.categories.overlays' ).done( function ( loadingOverlay ) {
 			var CategoryAddOverlay = M.require( 'categories/CategoryAddOverlay' );
 
 			loadingOverlay.hide();

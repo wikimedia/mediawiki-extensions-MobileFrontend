@@ -41,7 +41,7 @@
 		 * @inheritdoc
 		 */
 		templatePartials: {
-			content: mw.template.get( 'mobile.categories', 'CategoryOverlay.hogan' )
+			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' )
 		},
 		events: $.extend( {}, Overlay.prototype.events, {
 			'click .catlink': 'onCatlinkClick'
