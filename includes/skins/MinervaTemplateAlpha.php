@@ -126,6 +126,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 				)
 			) .
 			Html::openElement( 'div', array(
+				// FIXME: If this ever makes it to stable replace with search-inverted
 				'class' => MobileUI::iconClass( 'search-white', 'element',
 					'fulltext-search no-js-only' ),
 			) ) .

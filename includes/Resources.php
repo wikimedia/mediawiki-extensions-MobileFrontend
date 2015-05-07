@@ -76,15 +76,28 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
 		'prefix' => 'mw-ui',
+		'selector' => '.mw-ui-icon-{name}:before',
+		// Note: currently doesn't do anything due to T97410
+		'position' => 'bottom',
+		'images' => array(
+			// IMPORTANT: Do not add anything here unless it's necessary to be loaded without
+			// JavaScript (e.g. menu chrome).
+			// CAUTION: Anything added here will greatly increase the first paint time until
+			// T97410 is resolved.
+			'notifications' => 'images/icons/bell.svg',
+			'mainmenu' => 'images/icons/hamburger.svg',
+		)
+	),
+
+	'skins.minerva.icons.images.js' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderImageModule',
+		'prefix' => 'mw-ui',
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
 		// Not used yet, see FIXME below
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'position' => 'bottom',
 		'images' => array(
 			// chrome
-			'notifications' => 'images/icons/bell.svg',
-			'mainmenu' => 'images/icons/hamburger.svg',
-			'search' => 'images/icons/magnifying-glass.svg',
 			'search-white' => 'images/icons/search-white.svg',
 
 			// toggling
@@ -168,6 +181,7 @@ $wgMinervaStyleModules = array(
 			'images' => array(
 				// Special:MobileMenu-specific back icon
 				'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
+				'search' => 'images/icons/magnifying-glass.svg',
 			),
 		),
 );
@@ -1745,6 +1759,7 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.loggingSchemas',
+			'skins.minerva.icons.images.js',
 			// Feature modules that should be loaded in stable.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
