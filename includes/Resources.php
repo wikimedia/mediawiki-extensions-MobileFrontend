@@ -802,20 +802,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'oojs-ui',
 		),
 		'scripts' => array(
-			'javascripts/modules/categories/CategoryApi.js',
-			'javascripts/modules/categories/CategoryLookupInputWidget.js',
-			'javascripts/modules/categories/CategoryOverlay.js',
-			'javascripts/modules/categories/CategoryAddOverlay.js',
-			'javascripts/modules/categories/init.js',
+			'resources/mobile.categories/CategoryApi.js',
+			'resources/mobile.categories/CategoryLookupInputWidget.js',
+			'resources/mobile.categories/CategoryOverlay.js',
+			'resources/mobile.categories/CategoryAddOverlay.js',
+			// FIXME: This should not live inside this module since it has side effects
+			'resources/mobile.categories/init.js',
 		),
 		'styles' => array(
-			'less/modules/categories/categories.less',
+			'resources/mobile.categories/categories.less',
 		),
 		'templates' => array(
-			'CategoryOverlay.hogan' => 'templates/modules/categories/CategoryOverlay.hogan',
-			'CategoryAddOverlay.hogan' => 'templates/modules/categories/CategoryAddOverlay.hogan',
+			'CategoryOverlay.hogan' => 'resources/mobile.categories/CategoryOverlay.hogan',
+			'CategoryAddOverlay.hogan' => 'resources/mobile.categories/CategoryAddOverlay.hogan',
 			'CategoryAddOverlayHeader.hogan' =>
-				'templates/modules/categories/CategoryAddOverlayHeader.hogan',
+				'resources/mobile.categories/CategoryAddOverlayHeader.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-categories-heading',
