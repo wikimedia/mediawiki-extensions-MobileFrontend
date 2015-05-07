@@ -331,5 +331,7 @@
 	"tag-mobile_web_edit": "모바일 웹 편집",
 	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 편집",
 	"mobile-frontend-pageaction-edit-tooltip": "이 문서의 선두 문단을 편집합니다.",
-	"mobile-frontend-wikidata-editor-description-label": "\"$1\"의 간단한 설명을 제공합니다."
+	"mobile-frontend-wikidata-editor-description-label": "\"$1\"의 간단한 설명을 제공합니다.",
+	"mobile-frontend-panel-ok": "네",
+	"mobile-frontend-panel-cancel": "괜찮습니다."
 }

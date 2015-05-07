@@ -319,5 +319,7 @@
 	"mobile-frontend-months-ago": "vör {{PLURAL:$1|einem Mohnd|$1 Mohnde|keinem Mohnd}}",
 	"mobile-frontend-years-ago": "vör {{PLURAL:$1|einem Johr|$1 Johre|keinem Johr}}",
 	"mobile-frontend-console-recruit": "Heh dat sen Projramme med offe Quältäx, un mer bruche Lück, di hällfe, dat bäßer ze mahche un de Fähler ze reparehre, di mer heh em JahvaSkrepp süht.\n\nDo kanns onser onjedonn Saache fenge @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Makeeronge"
+	"mobile-frontend-browse-tags-header": "Makeeronge",
+	"mobile-frontend-panel-ok": "Johd",
+	"mobile-frontend-panel-cancel": "Nää, danke."
 }
