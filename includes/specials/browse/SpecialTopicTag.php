@@ -2,6 +2,7 @@
 
 use Gather\models;
 use Gather\views;
+use MobileFrontend\Browse\TagService;
 
 /**
  * Class SpecialTopicTag
@@ -37,8 +38,10 @@ class SpecialTopicTag extends MobileSpecialPage {
 		}
 
 		$tagName = str_replace( '_', ' ', $subPage );
-		$categoryName = array_search( $tagName, $mfConfig->get( 'MFBrowseTags' ) );
-		if ( $categoryName == false ) {
+		$titles = $this->getTagService()
+			->getTitlesForTag( $tagName );
+
+		if ( !$titles ) {
 			$this->renderError( array( 'unknownTag' => true ) );
 			return;
 		}
@@ -61,40 +64,34 @@ class SpecialTopicTag extends MobileSpecialPage {
 			' .collection-cards { padding-top: 1em; }'
 		);
 
-		// get pages that belong to the category
-		$categoryPages = $this->getCategoryPages( $categoryName );
-		if ( $categoryPages ) {
-			$collectionItems = array();
-			$pageIds = array();
-			foreach ( $categoryPages as $page ) {
-				array_push( $pageIds, $page['pageid'] );
-			}
-			// get page images and extracts
-			$pages = $this->getPages( $pageIds );
-			if ( $pages ) {
-				foreach ( $pages as $page ) {
-					if ( !$page['title'] ) {
-						continue;
-					}
-					$title = Title::newFromText( $page['title'] );
-					$image = false;
-					if ( isset( $page['pageimage'] ) ) {
-						$image = wfFindFile( $page['pageimage'] );
-					}
-					$extract = '';
-					if ( isset( $page['extract']['*'] ) ) {
-						$extract = $page['extract']['*'];
-					}
-					$item = new models\CollectionItem( $title, $image, $extract );
-					array_push( $collectionItems, $item );
+		$collectionItems = array();
+		$pageIds = array_map( function ( Title $title ) {
+			return $title->getArticleID();
+		}, $titles );
+		// get page images and extracts
+		$pages = $this->getPages( $pageIds );
+		if ( $pages ) {
+			foreach ( $pages as $page ) {
+				if ( !$page['title'] ) {
+					continue;
 				}
+				$title = Title::newFromText( $page['title'] );
+				$image = false;
+				if ( isset( $page['pageimage'] ) ) {
+					$image = wfFindFile( $page['pageimage'] );
+				}
+				$extract = '';
+				if ( isset( $page['extract']['*'] ) ) {
+					$extract = $page['extract']['*'];
+				}
+				$item = new models\CollectionItem( $title, $image, $extract );
+				array_push( $collectionItems, $item );
 			}
-
-			$collection = new models\Collection( null, $this->getUser() );
-			$collection->batch(  $collectionItems );
-			$this->render( new views\Collection( $this->getUser(), $collection ) );
 		}
 
+		$collection = new models\Collection( null, $this->getUser() );
+		$collection->batch( $collectionItems );
+		$this->render( new views\Collection( $this->getUser(), $collection ) );
 	}
 
 	/**
@@ -114,36 +111,6 @@ class SpecialTopicTag extends MobileSpecialPage {
 		$templateParser = new TemplateParser( __DIR__ . '/../../../templates' );
 		$message = $templateParser->processTemplate( 'browse/gather_error', $args );
 		$this->renderUnavailableBanner( $message );
-	}
-
-	/**
-	 * Return pages that belong to a category
-	 * @param string $categoryName
-	 * @return array
-	 */
-	private function getCategoryPages( $categoryName ) {
-		$result = array();
-
-		$api = new ApiMain(
-			new DerivativeRequest(
-				$this->getRequest(),
-				array(
-					'action' => 'query',
-					'list' => 'categorymembers',
-					'cmtitle' => $categoryName,
-					'cmtype' => 'page',
-					'cmlimit' => self::API_LIMIT,
-					'continue' => '',
-				)
-			)
-		);
-		$api->execute();
-		$data = $api->getResult()->getResultData( null, array( 'Strip' => 'all' ) );
-		if ( isset( $data['query']['categorymembers'] ) ) {
-			$result = $data['query']['categorymembers'];
-		}
-
-		return $result;
 	}
 
 	/**
@@ -176,5 +143,17 @@ class SpecialTopicTag extends MobileSpecialPage {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Gets the service that gets tags assigned to the page.
+	 *
+	 * @return MobileFrontend\Browse\TagService
+	 */
+	private function getTagService() {
+		$mfConfig = $this->getMFConfig();
+		$tags = $mfConfig->get( 'MFBrowseTags' );
+
+		return new TagService( $tags );
 	}
 }

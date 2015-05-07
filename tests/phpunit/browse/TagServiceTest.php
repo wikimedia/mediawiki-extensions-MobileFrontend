@@ -7,19 +7,6 @@ use MobileFrontend\Browse\TagService;
 use TitleValue;
 use Title;
 
-class StubTitle extends Title {
-	private $mParentCategories;
-
-	public function __construct( $namespace, $parentCategories = array() ) {
-		$this->mNamespace = $namespace;
-		$this->mParentCategories = $parentCategories;
-	}
-
-	public function getParentCategories() {
-		return $this->mParentCategories;
-	}
-}
-
 class TagServiceTest extends PHPUnit_Framework_TestCase {
 	private $tagService;
 
@@ -27,34 +14,46 @@ class TagServiceTest extends PHPUnit_Framework_TestCase {
 		parent::setUp();
 
 		$this->tags = array(
-			'Category:Castles in Bavaria' => 'Castles in Bavaria',
-			'Category:Landmarks in Germany' => 'Landmarks in Germany',
+			'landmarks in Germany' => array(
+				'Aachen Cathedral',
+			),
+			'castles in Bavaria' => array(
+				'Affing House',
+			),
 		);
 		$this->tagService = new TagService( $this->tags );
 
 	}
 
 	public function test_a_title_outside_of_the_main_namespace_shouldnt_have_tags() {
-		$title = new StubTitle( NS_TALK );
+		$title = Title::newFromText( 'Maybeshewill', NS_TALK );
 
 		$this->assertEmpty( $this->tagService->getTags( $title ) );
 	}
 
-	public function test_a_title_with_no_categories_shouldnt_have_tags() {
-		$title = new StubTitle( NS_MAIN );
+	public function test_a_title_with_matching_categories_should_have_tags() {
+		$title = Title::newFromText( 'Affing House' );
+
+		$this->assertEquals(
+			array( 'castles in Bavaria' ),
+			$this->tagService->getTags( $title )
+		);
+	}
+
+	public function test_a_title_that_doesnt_match_shouldnt_have_tags() {
+		$title = Title::newFromText( 'Maybeshewill' );
 
 		$this->assertEquals( array(), $this->tagService->getTags( $title ) );
 	}
 
-	public function test_a_title_with_matching_categories_should_have_tags() {
-		$title = new StubTitle( NS_MAIN, array(
-			'Category:English post-rock groups' => 'English post-rock groups',
-			'Category:Castles in Bavaria' => 'Castles in Bavaria',
-		) );
+	public function test_a_tag_that_doesnt_exist_shouldnt_have_titles() {
+		$this->assertEquals( false, $this->tagService->getTitlesForTag( '' ) );
+	}
 
-		$this->assertEquals(
-			array( 'Castles in Bavaria' ),
-			$this->tagService->getTags( $title )
-		);
+	public function test_a_tag_that_exists_has_titles() {
+		$titles = $this->tagService->getTitlesForTag( 'castles in Bavaria' );
+
+		$this->assertEquals( 1, count( $titles ) );
+		$this->assertEquals( 'Affing House', $titles[0]->getText() );
 	}
 }
