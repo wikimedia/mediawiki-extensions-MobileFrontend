@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_2b6ee0c4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-07T19:10:19Z",
+      "side": 1,
+      "message": "Shouldn\u0027t mobile.editor.common depend on mobile.editor (which has mobile.toast as a dependency)? :)",
+      "revId": "4186a8c924d5b86ab43682d1f3bede31609fd96e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
