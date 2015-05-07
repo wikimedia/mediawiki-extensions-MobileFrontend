@@ -2,7 +2,7 @@
 @import "minerva.mixins";
 
 
-@cardMargin: @contentMargin / 2;
+@cardMargin: 16px;
 @captionPadding: 8px;
 
 // FIXME: Refactor our CSS for errors - 1 class for the text, 1 for the block
@@ -14,7 +14,8 @@
 	margin: 1em 0 0 0;
 	color: @grayMedium;
 
-	a {
+	.footer a,
+	.caption a {
 		color: @grayMediumDark;
 		font-weight: bold;
 	}
@@ -31,11 +32,11 @@
 	}
 
 	.card-container {
-		text-align: center;
 		padding: 1px;
 	}
 
 	.card {
+		text-align: center;
 		max-width: @wgMFDeviceWidthTablet;
 		background: #fff;
 		color: @grayMediumDark;
