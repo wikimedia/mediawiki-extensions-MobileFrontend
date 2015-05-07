@@ -1227,11 +1227,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-permission-guidance',
 		),
 		'scripts' => array(
-			'javascripts/modules/nearby/NearbyApi.js',
-			'javascripts/modules/nearby/Nearby.js',
+			'resources/mobile.nearby/NearbyApi.js',
+			'resources/mobile.nearby/Nearby.js',
 		),
 		'templates' => array(
-			'Nearby.hogan' => 'templates/modules/nearby/nearby.hogan',
+			'Nearby.hogan' => 'resources/mobile.nearby/nearby.hogan',
 		),
 	),
 
@@ -1577,11 +1577,11 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.nearby.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
-			'less/specials/nearby.less',
+			'resources/mobile.special.nearby.styles/specialNearby.less',
 		),
 		'skinStyles' => array(
-			'vector' => 'less/desktop/special/nearby.less',
-			'monobook' => 'less/desktop/special/nearby.less',
+			'vector' => 'resources/mobile.special.nearby.styles/specialNearbyDesktop.less',
+			'monobook' => 'resources/mobile.special.nearby.styles/specialNearbyDesktop.less',
 		),
 	),
 
