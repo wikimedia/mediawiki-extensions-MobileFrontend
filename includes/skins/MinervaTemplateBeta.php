@@ -104,9 +104,9 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		}, $data['browse_tags'] );
 
 		// FIXME: This should be in MinervaTemplate#getTemplateParser.
-		$templateParser = new TemplateParser( __DIR__ . '/../../templates' );
+		$templateParser = new TemplateParser( __DIR__ . '/../../resources' );
 
-		return $templateParser->processTemplate( 'browse/tags', array(
+		return $templateParser->processTemplate( 'mobile.browse/tags', array(
 			'headerMsg' => wfMessage( 'mobile-frontend-browse-tags-header' )->text(),
 			'tags' => $tags,
 		) );

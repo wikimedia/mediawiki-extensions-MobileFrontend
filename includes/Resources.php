@@ -136,7 +136,6 @@ $wgMinervaStyleModules = array(
 			'less/pageactions.beta.less',
 			'less/footer.beta.less',
 			'less/content/main.beta.less',
-			'less/browse/tags.less',
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
@@ -210,6 +209,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.context/context.js',
 		),
+	),
+	'mobile.browse' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.loggingSchemas'
+		),
+		'scripts' => array(
+			'resources/mobile.browse/init.js',
+		),
+		'styles' => array(
+			'resources/mobile.browse/tags.less',
+		)
 	),
 	'mobile.browser' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -1677,6 +1687,21 @@ $wgMobileSpecialPageModules = array(
 		),
 		'scripts' => array(
 			'javascripts/specials/mobilediff.js',
+		),
+	),
+
+	'mobile.special.browse.topicTag.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'resources/mobile.browse/special/topicTag.less',
+		),
+	),
+
+	'mobile.special.browse.topicTag.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.loggingSchemas'
+		),
+		'scripts' => array(
+			'resources/mobile.browse/special/topicTag.js',
 		),
 	),
 );

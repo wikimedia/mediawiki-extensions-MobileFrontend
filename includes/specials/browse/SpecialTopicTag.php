@@ -51,6 +51,8 @@ class SpecialTopicTag extends MobileSpecialPage {
 		$out = $this->getOutput();
 		$out->addModules( array(
 			'ext.gather.special',
+			'mobile.special.browse.topicTag.styles',
+			'mobile.special.browse.topicTag.scripts',
 		) );
 		$out->addModuleStyles( array(
 			'mediawiki.ui.anchor',
@@ -58,11 +60,6 @@ class SpecialTopicTag extends MobileSpecialPage {
 			'ext.gather.icons',
 			'ext.gather.styles',
 		) );
-		$out->addInlineStyle(
-			// hide the user info, meta, and moderation controls
-			'.collection-header, .collection-moderation { display: none !important; }' .
-			' .collection-cards { padding-top: 1em; }'
-		);
 
 		$collectionItems = array();
 		$pageIds = array_map( function ( Title $title ) {
@@ -108,8 +105,8 @@ class SpecialTopicTag extends MobileSpecialPage {
 
 
 	public function renderError( $args ) {
-		$templateParser = new TemplateParser( __DIR__ . '/../../../templates' );
-		$message = $templateParser->processTemplate( 'browse/gather_error', $args );
+		$templateParser = new TemplateParser( __DIR__ . '/../../../resources' );
+		$message = $templateParser->processTemplate( 'mobile.browse/special/gather_error', $args );
 		$this->renderUnavailableBanner( $message );
 	}
 

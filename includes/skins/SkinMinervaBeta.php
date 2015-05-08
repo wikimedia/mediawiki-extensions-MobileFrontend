@@ -100,6 +100,11 @@ class SkinMinervaBeta extends SkinMinerva {
 			unset( $modules['centralnotice'] );
 		}
 
+		// add the browse module if the page has a tag assigned to it
+		if ( $this->getBrowseTags( $this->getTitle() ) ) {
+			$modules['browse'] = array( 'mobile.browse' );
+		}
+
 		return $modules;
 	}
 
