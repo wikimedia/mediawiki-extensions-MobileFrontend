@@ -69,7 +69,7 @@ class SpecialTopicTag extends MobileSpecialPage {
 		$pages = $this->getPages( $pageIds );
 		if ( $pages ) {
 			foreach ( $pages as $page ) {
-				if ( !$page['title'] ) {
+				if ( !isset( $page['title'] ) || !$page['title'] ) {
 					continue;
 				}
 				$title = Title::newFromText( $page['title'] );
