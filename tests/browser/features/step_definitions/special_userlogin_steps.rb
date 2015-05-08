@@ -11,5 +11,5 @@ Then(/^I should see a password reset link$/) do
 end
 
 Then /^I should see the log in prompt message "(.+)"$/ do |text|
-  expect(on(SpecialUserLoginPage).login_head_message_element.when_present.text).to match text
+  expect(on(SpecialUserLoginPage).message_box_element.when_present.text).to match text
 end
