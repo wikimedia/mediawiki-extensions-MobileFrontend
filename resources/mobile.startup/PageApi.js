@@ -308,12 +308,14 @@
 				var level = $( this )[0].tagName.substr( 1 ),
 					$span = $( this ).find( 'span' );
 
-				sections.push( {
-					level: level,
-					line: $span.html(),
-					anchor: $span.attr( 'id' ) || '',
-					text: ''
-				} );
+				if ( $span.length ) {
+					sections.push( {
+						level: level,
+						line: $span.html(),
+						anchor: $span.attr( 'id' ) || '',
+						text: ''
+					} );
+				}
 			} );
 			return sections;
 		},
