@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_5e6d21c6",
+        "filename": "resources/mobile.browse/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-08T05:41:41Z",
+      "side": 1,
+      "message": "\u0027course it is. Not sure why I wrote that. You could use $.debounce to make it a little easier on the eye.",
+      "parentUuid": "0ed113e2_2d26f863",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_65d5fae8",
         "filename": "resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js",
         "patchSetId": 1
