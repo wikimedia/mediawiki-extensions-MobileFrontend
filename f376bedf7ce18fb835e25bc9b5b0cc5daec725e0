@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_64bbb2de",
+        "filename": "resources/mobile.browse/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-08T15:35:41Z",
+      "side": 1,
+      "message": "I didn\u0027t know I could use $.debounce. Great to know. Thanks.",
+      "parentUuid": "0ed113e2_5e6d21c6",
+      "revId": "f376bedf7ce18fb835e25bc9b5b0cc5daec725e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_65d5fae8",
         "filename": "resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js",
         "patchSetId": 1
