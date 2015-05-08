@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_47cb1021",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-08T18:00:56Z",
+      "side": 1,
+      "message": "It doesn\u0027t look like this is loaded in the head. You may want to amend the commit summary.",
+      "revId": "f671f2ecd0dff00c806bab89fe61a6fea1b7a3e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a7f19c67",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-08T18:00:56Z",
+      "side": 1,
+      "message": "Can you change this to a more explanatory message? Like, \u0027Images should only be added here if they are part of the default Minerva chrome shown on page load.\u0027",
+      "revId": "f671f2ecd0dff00c806bab89fe61a6fea1b7a3e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
