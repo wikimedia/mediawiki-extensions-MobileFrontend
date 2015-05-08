@@ -5,7 +5,6 @@
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
-		settings = M.require( 'settings' ),
 		pageApi = M.require( 'pageApi' ),
 		skin = M.require( 'skin' ),
 		EditorOverlayBase;
@@ -133,8 +132,7 @@
 				msg = 'mobile-frontend-editor-success';
 			}
 			msg = mw.msg( msg );
-
-			settings.save( 'mobile-pending-toast', msg );
+			toast.showOnPageReload( msg, 'success' );
 
 			// Ensure we don't lose this event when logging
 			this.log( 'success' ).always( function () {
