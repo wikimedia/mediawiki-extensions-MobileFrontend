@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_f8a3c594",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-08T23:10:43Z",
+      "side": 1,
+      "message": "Is this right to run only, if there are already some cards? Wouldn\u0027t it be useful to add cards to the profile, even, if this will be the first one? :)",
+      "revId": "f5b23b4fee2754e5f7a704a03c116b53b8daa72f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
