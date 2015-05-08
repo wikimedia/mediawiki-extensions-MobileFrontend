@@ -87,6 +87,24 @@
       "revId": "f671f2ecd0dff00c806bab89fe61a6fea1b7a3e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8da7d9b9",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-08T20:22:12Z",
+      "side": 1,
+      "message": "But surely at some point in the future, someone will actually need to add something here. This message won\u0027t really help them make an informed decision, it will just make them scared to add it and wonder what the bad effects are. My suggestion was just an idea. Maybe you could write something better worded.",
+      "parentUuid": "0ed113e2_8defd91a",
+      "revId": "f671f2ecd0dff00c806bab89fe61a6fea1b7a3e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
