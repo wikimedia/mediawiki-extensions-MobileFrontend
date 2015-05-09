@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_28cb3822",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2194,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-09T22:08:51Z",
+      "side": 1,
+      "message": "How can I use it like this using resourcemodules in a config.",
+      "revId": "4acbbaab615ce63cb4581de792a88abdf8e28489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
