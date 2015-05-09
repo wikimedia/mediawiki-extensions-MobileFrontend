@@ -46,7 +46,8 @@
 					titles: this.title,
 					// get block information for this user
 					meta: 'userinfo',
-					uiprop: 'blockinfo'
+					uiprop: 'blockinfo',
+					formatversion: 2
 				};
 				// Load text of old revision if desired
 				if ( this.oldId ) {
@@ -64,18 +65,13 @@
 						return;
 					}
 
-					// FIXME: MediaWiki API, seriously?
-					pageObj = $.map( resp.query.pages, function ( page ) {
-						return page;
-					} )[0];
-
+					pageObj = resp.query.pages[0];
 					// page might not exist and caller might not have known.
-					// FIXME: API - missing is set to empty string (face palm)
-					if ( pageObj.missing !== undefined ) {
+					if ( pageObj.hasOwnProperty( 'missing' ) ) {
 						self.content = '';
 					} else {
 						revision = pageObj.revisions[0];
-						self.content = revision['*'];
+						self.content = revision.content;
 						self.timestamp = revision.timestamp;
 					}
 					// save content a second time to be able to check for changes

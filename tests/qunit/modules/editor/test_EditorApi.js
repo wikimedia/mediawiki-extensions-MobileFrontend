@@ -6,16 +6,16 @@
 		setup: function () {
 			this.spy = this.sandbox.stub( EditorApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 				query: {
-					pages: {
-						1: {
+					pages: [
+						{
 							revisions: [
 								{
 									timestamp: '2013-05-15T00:30:26Z',
-									'*': 'section'
+									content: 'section'
 								}
 							]
 						}
-					},
+					],
 					userinfo: {
 						id: 0
 					}
@@ -37,7 +37,8 @@
 			rvprop: [ 'content', 'timestamp' ],
 			titles: 'MediaWiki:Test.css',
 			meta: 'userinfo',
-			uiprop: 'blockinfo'
+			uiprop: 'blockinfo',
+			formatversion: 2
 		} ), 'rvsection not passed to api request' );
 	} );
 

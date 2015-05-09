@@ -205,19 +205,16 @@
 			// allAvailableLanguages is a mapping of all codes to language names
 			var pages, langlinks, allAvailableLanguages = {};
 			$.each( data.query.languages, function ( index, item ) {
-				allAvailableLanguages[ item.code ] = item[ '*' ];
+				allAvailableLanguages[item.code] = item.name;
 			} );
 
-			// FIXME: API returns an object when a list makes much more sense
-			pages = $.map( data.query.pages, function ( v ) {
-				return v;
-			} );
+			pages = data.query.pages;
 			// FIXME: "|| []" wouldn't be needed if API was more consistent
 			langlinks = pages[0] ? pages[0].langlinks || [] : [];
 
 			$.each( langlinks, function ( index, item ) {
 				item.langname = allAvailableLanguages[ item.lang ];
-				item.title = item['*'] || false;
+				item.title = item.title || false;
 			} );
 
 			return langlinks;
@@ -281,7 +278,8 @@
 					prop: 'langlinks',
 					llurl: true,
 					lllimit: 'max',
-					titles: title
+					titles: title,
+					formatversion: 2
 				} ).done( function ( resp ) {
 					result.resolve( {
 						languages: self._getLanguagesFromApiResponse( resp ),
