@@ -385,5 +385,8 @@
 	"mobile-frontend-months-ago": "Acum {{PLURAL:$1|o lună|$1 luni|$1 de luni}}",
 	"mobile-frontend-years-ago": "Acum {{PLURAL:$1|un an|$1 ani|$1 de ani}}",
 	"mobile-frontend-console-recruit": "\\o/ Salutare! Acesta este un software cu sursă deschisă și avem nevoie de voluntari pentru a-l construi, a-l face mai bun și pentru a repara orice eroare pe care ați putea-o descoperi în această consolă JavaScript!\n\nPuteți găsi lista cu semnalări @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Etichete"
+	"mobile-frontend-browse-tags-header": "Etichete",
+	"mobile-frontend-panel-ok": "OK",
+	"mobile-frontend-panel-cancel": "Nu, mulțumesc",
+	"mobile-frontend-panel-betaoptin-msg": "Doriți să testați câteva caracteristici noi? Alăturându-vă examinării stadiului beta, veți avea acces la caracteristici experimentale, cu riscul de a întâmpina erori și probleme."
 }

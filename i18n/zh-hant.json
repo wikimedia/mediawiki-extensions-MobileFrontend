@@ -376,5 +376,6 @@
 	"apihelp-parse-param-mainpage": "套用手機首頁轉換。",
 	"mobile-frontend-donate-button-label": "捐助",
 	"mobile-frontend-meta-data-issues-categories": "關於此分類",
-	"mobile-frontend-loading-message": "讀取中…"
+	"mobile-frontend-loading-message": "讀取中…",
+	"mobile-frontend-panel-cancel": "不，謝謝"
 }
