@@ -48,6 +48,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_2837b84b",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-09T20:50:41Z",
+      "side": 1,
+      "message": "Woops sorry I was working on a prevous copy of extension.json for mobilefrontend the patch that was abandoned in march.",
+      "parentUuid": "0ed113e2_688dc02d",
+      "revId": "573bd2dfbcc0d1ada5e41b4f87cbfa0d5a540d95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_8893445a",
         "filename": "extension.json",
         "patchSetId": 4
@@ -59,6 +77,24 @@
       "writtenOn": "2015-05-09T20:20:06Z",
       "side": 1,
       "message": "have you tested this?",
+      "revId": "573bd2dfbcc0d1ada5e41b4f87cbfa0d5a540d95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e84450bf",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 2643,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-09T20:50:41Z",
+      "side": 1,
+      "message": "Nope.",
+      "parentUuid": "0ed113e2_8893445a",
       "revId": "573bd2dfbcc0d1ada5e41b4f87cbfa0d5a540d95",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
