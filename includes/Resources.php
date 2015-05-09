@@ -376,6 +376,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.user',
 			'mediawiki.api',
 			'mobile.redlinks',
+			'mobile.settings',
 			'jquery.throttle-debounce',
 		),
 		'templates' => array(
