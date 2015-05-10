@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_3b74e4cb",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2194,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-10T16:14:20Z",
+      "side": 1,
+      "message": "Oh because I thought they are used in a config and so it would all be loaded.",
+      "parentUuid": "0ed113e2_1bb00088",
+      "revId": "4acbbaab615ce63cb4581de792a88abdf8e28489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_3bb5c478",
         "filename": "extension.json",
         "patchSetId": 5
