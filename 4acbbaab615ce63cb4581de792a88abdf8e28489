@@ -16,6 +16,41 @@
       "revId": "4acbbaab615ce63cb4581de792a88abdf8e28489",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1bb00088",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2194,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-10T15:52:15Z",
+      "side": 1,
+      "message": "why not add them directly into ResourceModules?",
+      "parentUuid": "0ed113e2_28cb3822",
+      "revId": "4acbbaab615ce63cb4581de792a88abdf8e28489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_3bb5c478",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2363,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-10T15:52:15Z",
+      "side": 1,
+      "message": "Delete that, it won\u0027t work and it isn\u0027t the use-case for this variable. This array contains an array of modules, that will be added, if echo is installed, so just add the modules as an array of MobileEchoModules. The same for MobileVEModules and MobileCodeMirrorModules.",
+      "revId": "4acbbaab615ce63cb4581de792a88abdf8e28489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
