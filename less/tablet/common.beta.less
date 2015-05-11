@@ -1,0 +1,32 @@
+@import "minerva.variables";
+@import "mediawiki.ui/variables";
+
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha,
+	.beta {
+		// #mw-mf-page-center is needed because there is a .header inside the main menu in alpha
+		#mw-mf-page-center .header {
+			max-width: @contentMaxWidthTablet;
+			margin: 0 auto;
+			padding: 0 @contentPaddingTablet;
+		}
+		// stable and beta hamburger icon
+		#mw-mf-main-menu-button {
+			// so that the icon image is aligned with the content
+			left: -@iconGutterWidth;
+		}
+		#secondary-button {
+			// so that the icon image is aligned with the content
+			right: -@iconGutterWidth;
+		}
+	}
+
+	.beta {
+		// Search input in the header
+		#searchInput {
+			// because we're pulling #mw-mf-main-menu-button to the left too (see above)
+			margin-left: -@iconGutterWidth;
+		}
+	}
+}
