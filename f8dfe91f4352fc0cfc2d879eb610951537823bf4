@@ -59,6 +59,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_4c4569b8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-11T17:48:42Z",
+      "side": 1,
+      "message": "How can I do that because when doing the convert script it didn\u0027t add it. how would it go please.",
+      "parentUuid": "0ed113e2_eca69d0c",
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_cc887978",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
@@ -76,6 +94,24 @@
         "endLine": 21,
         "endChar": 43
       },
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_2c4825ce",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-11T17:48:42Z",
+      "side": 1,
+      "message": "Ok how would Resourceloader less import go in extension.json.",
+      "parentUuid": "0ed113e2_cc887978",
       "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
