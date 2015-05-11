@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_4c9c89b8",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-11T17:14:54Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure you can work out a solution to not need this. We worked hard to remove our extension function and i would be happy, if we don\u0027t need to reintroduce this ;)",
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ac6df5c8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-11T17:14:54Z",
+      "side": 1,
+      "message": "trailing whitespace",
+      "range": {
+        "startLine": 18,
+        "startChar": 78,
+        "endLine": 18,
+        "endChar": 79
+      },
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_eca69d0c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-11T17:14:54Z",
+      "side": 1,
+      "message": "This isn\u0027t needed! Iirc, you can define defines in extension.json, too.",
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_cc887978",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-11T17:14:54Z",
+      "side": 1,
+      "message": "Please, the goal is to deprecate this",
+      "range": {
+        "startLine": 21,
+        "startChar": 34,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "f8dfe91f4352fc0cfc2d879eb610951537823bf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
