@@ -135,7 +135,8 @@
 				generator: 'geosearch',
 				ggsradius: range,
 				ggsnamespace: ns,
-				ggslimit: limit
+				ggslimit: limit,
+				formatversion: 2
 			};
 			$.extend( requestParams, params );
 
@@ -149,11 +150,6 @@
 				} else {
 					pages = {};
 				}
-
-				// FIXME: API returns object when array would make much sense
-				pages = $.map( pages, function ( i ) {
-					return i;
-				} );
 
 				// If we have coordinates then set them so that the results are sorted by
 				// distance

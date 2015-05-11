@@ -1,3 +1,4 @@
+/* jshint -W100 */
 ( function ( M, $ ) {
 	var PageApi = M.require( 'PageApi' ),
 		pageApi;
@@ -236,8 +237,8 @@
 	QUnit.test( '#getPageLanguages', 2, function ( assert ) {
 		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			query: {
-				pages: {
-					94: {
+				pages: [
+					{
 						pageid: 94,
 						ns: 0,
 						title: 'San Francisco',
@@ -245,21 +246,21 @@
 							{
 								lang: 'es',
 								url: 'http://es.wikipedia.org/wiki/San_Francisco_(California)',
-								'*': 'San Francisco (California)'
+								title: 'San Francisco (California)'
 							},
 							{
 								lang: 'pl',
 								url: 'http://pl.wikipedia.org/wiki/San_Francisco',
-								'*': 'San Francisco'
+								title: 'San Francisco'
 							},
 							{
 								lang: 'sr',
 								url: 'http://sr.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%81%D0%BA%D0%BE',
-								'*': '\u0421\u0430\u043d \u0424\u0440\u0430\u043d\u0446\u0438\u0441\u043a\u043e'
+								title: '\u0421\u0430\u043d \u0424\u0440\u0430\u043d\u0446\u0438\u0441\u043a\u043e'
 							}
 						]
 					}
-				},
+				],
 				general: {
 					variants: [
 						{
@@ -280,23 +281,23 @@
 				languages: [
 					{
 						code: 'sr',
-						'*': '\u0441\u0440\u043f\u0441\u043a\u0438 / srpski'
+						name: 'српски / srpski'
 					},
 					{
 						code: 'sr-ec',
-						'*': '\u0441\u0440\u043f\u0441\u043a\u0438 (\u045b\u0438\u0440\u0438\u043b\u0438\u0446\u0430)\u200e'
+						name: 'српски (ћирилица)'
 					},
 					{
 						code: 'sr-el',
-						'*': 'srpski (latinica)\u200e'
+						name: 'srpski (latinica)‎'
 					},
 					{
 						code: 'es',
-						'*': 'espa\u00f1ol'
+						name: 'español'
 					},
 					{
 						code: 'pl',
-						'*': 'polski'
+						name: 'polski'
 					}
 				]
 			},
@@ -310,21 +311,18 @@
 				{
 					lang: 'es',
 					url: 'http://es.wikipedia.org/wiki/San_Francisco_(California)',
-					'*': 'San Francisco (California)',
 					title: 'San Francisco (California)',
 					langname: 'espa\u00f1ol'
 				},
 				{
 					lang: 'pl',
 					url: 'http://pl.wikipedia.org/wiki/San_Francisco',
-					'*': 'San Francisco',
 					title: 'San Francisco',
 					langname: 'polski'
 				},
 				{
 					lang: 'sr',
 					url: 'http://sr.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%81%D0%BA%D0%BE',
-					'*': '\u0421\u0430\u043d \u0424\u0440\u0430\u043d\u0446\u0438\u0441\u043a\u043e',
 					title: '\u0421\u0430\u043d \u0424\u0440\u0430\u043d\u0446\u0438\u0441\u043a\u043e',
 					langname: '\u0441\u0440\u043f\u0441\u043a\u0438 / srpski'
 				}
