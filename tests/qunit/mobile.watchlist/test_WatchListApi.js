@@ -84,7 +84,7 @@
 
 	// this.sandbox.stub( WatchListApi.prototype, 'get' ).returns( $.Deferred().resolve() );
 
-	QUnit.asyncTest( 'load results from the first page', 2, function ( assert ) {
+	QUnit.test( 'load results from the first page', 2, function ( assert ) {
 		this.sandbox.stub( WatchListApi.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
@@ -93,11 +93,10 @@
 		api.load().done( function ( pages ) {
 			assert.equal( pages.length, 6, 'Got all the results' );
 			assert.equal( pages[0].title, 'Albert Einstein', 'Sorted alphabetically' );
-			QUnit.start();
 		} );
 	} );
 
-	QUnit.asyncTest( 'load results from the second page from last item of first', 4, function ( assert ) {
+	QUnit.test( 'load results from the second page from last item of first', 4, function ( assert ) {
 		var lastTitle = 'Albert Einstein',
 			api = new WatchListApi( lastTitle ),
 			response1 = $.extend( {}, response, {
@@ -126,7 +125,6 @@
 				// Albert Einstein should be the first result of the next page (not removed)
 				assert.equal( pages.length, 6, 'Albert should be in the results' );
 				assert.equal( pages[0].title, 'Albert Einstein', 'First item should be Albert' );
-				QUnit.start();
 			} );
 		} );
 	} );
