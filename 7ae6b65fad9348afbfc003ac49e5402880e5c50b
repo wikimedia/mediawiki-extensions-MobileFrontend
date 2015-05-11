@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_f9a0a48e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-11T08:47:35Z",
+      "side": 1,
+      "message": "Update needed in Gather before merging this to avoid \"Gather extension requires MobileFrontend.\" message",
+      "revId": "7ae6b65fad9348afbfc003ac49e5402880e5c50b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
