@@ -1,6 +1,19 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Aguve"
+		]
+	},
+	"mobile-frontend-editor-edit": "Trɔe",
+	"mobile-frontend-featured-article": "Egbe ƒe nya siwo woda ɖi",
+	"mobile-frontend-generic-login": "Ame siwo le abe wò ene koe trɔ asi le {{SITENAME}} la ŋu.",
+	"mobile-frontend-login": "Ge ɖe eme",
+	"mobile-frontend-main-menu-account-create": "Ŋlɔ ŋkɔ ɖi",
+	"mobile-frontend-news-items": "Le nyadzɔdzɔwo me",
+	"mobile-frontend-password-placeholder": "Mɔʋunya",
 	"mobile-frontend-random-button": "Ɖesiaɖe ko",
 	"mobile-frontend-regular-site": "Kpɔ axa sia le {{SITENAME}} ŋutɔ dzi",
-	"mobile-frontend-search-submit": "Yi"
+	"mobile-frontend-search-submit": "Yi",
+	"mobile-frontend-username-placeholder": "Ezazãŋkɔ",
+	"mobile-frontend-view": "Asitelefontɔ"
 }

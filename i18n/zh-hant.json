@@ -34,6 +34,7 @@
 	"mobile-frontend-categories-add": "新增分類",
 	"mobile-frontend-categories-search": "搜尋分類",
 	"mobile-frontend-categories-summary": "已新增分類",
+	"mobile-frontend-categories-add-wait": "正在儲存分類，請稍候。�",
 	"mobile-frontend-changeslist-ip": "匿名使用者",
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-clear-search": "清除",
@@ -115,7 +116,7 @@
 	"mobile-frontend-editor-wait": "正在儲存編輯，請稍候。",
 	"mobile-frontend-enable-images": "開啟手機版網頁上的圖片",
 	"mobile-frontend-errorreport-button-label": "報告一個錯誤",
-	"mobile-frontend-errorreport-error": "錯誤，不能發佈回饋",
+	"mobile-frontend-errorreport-error": "錯誤，不能發佈回饋。",
 	"mobile-frontend-errorreport-feedback": "感謝您的回饋！",
 	"mobile-frontend-errorreport-heading": "報告一個錯誤",
 	"mobile-frontend-errorreport-instructions": "<p>此表單僅用作報告維基百科條目的錯誤。請勿報告缺少的資訊。</p><p>如果您發現了一個錯誤，請您嘗試透過編輯此頁面自行參與修復。如果您不能修復此錯誤，您再使用下面的表單。</p><p>請勿留下您的電話號碼或E-mail地址。</p>",
@@ -377,5 +378,7 @@
 	"mobile-frontend-donate-button-label": "捐助",
 	"mobile-frontend-meta-data-issues-categories": "關於此分類",
 	"mobile-frontend-loading-message": "讀取中…",
-	"mobile-frontend-panel-cancel": "不，謝謝"
+	"mobile-frontend-panel-ok": "好的",
+	"mobile-frontend-panel-cancel": "不，謝謝",
+	"mobile-frontend-panel-betaoptin-msg": "您是否希望嘗試一些新功能？透過參與 beta 測試，您將有機會得到實驗性功能，並承擔遇到 bug 與問題的風險。"
 }
