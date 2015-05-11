@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_b4ba211d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2015-05-11T11:21:27Z",
+      "side": 1,
+      "message": "The fix for that bug is currently in review: Ie4287e17d6f298cc63f42f257b1f67ee36961b77",
+      "parentUuid": "0ed113e2_677414cd",
+      "revId": "f671f2ecd0dff00c806bab89fe61a6fea1b7a3e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_a7f19c67",
         "filename": "includes/Resources.php",
         "patchSetId": 1
