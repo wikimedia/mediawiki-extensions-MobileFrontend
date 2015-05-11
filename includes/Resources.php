@@ -1394,12 +1394,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.ajax',
 		),
 		'scripts' => array(
-			'javascripts/modules/bannerImage/Image.js',
-			'javascripts/modules/bannerImage/MobileViewBannerImageRepository.js',
-			'javascripts/modules/bannerImage/BannerImage.js',
+			'resources/mobile.bannerImage/Image.js',
+			'resources/mobile.bannerImage/MobileViewBannerImageRepository.js',
+			'resources/mobile.bannerImage/BannerImage.js',
 		),
 		'styles' => array(
-			'less/modules/bannerImage.less',
+			'resources/mobile.bannerImage/bannerImage.less',
 		),
 		'position' => 'top',
 	),
@@ -1813,7 +1813,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.bannerImage',
 		),
 		'scripts' => array(
-			'javascripts/modules/bannerImage/init.js',
+			'resources/skins.minerva.beta.scripts/bannerImage.js',
 		),
 	),
 	// By mode. This should only ever be loaded in Minerva skin.
