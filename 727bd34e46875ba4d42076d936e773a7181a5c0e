@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e0dbfc79",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-11T22:29:05Z",
+      "side": 1,
+      "message": "Should probably say \"... we are not clicking on the menu button\"",
+      "revId": "727bd34e46875ba4d42076d936e773a7181a5c0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
