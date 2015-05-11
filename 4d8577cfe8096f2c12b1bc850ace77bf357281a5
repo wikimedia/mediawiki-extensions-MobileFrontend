@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_e03c5ce1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-11T23:03:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_1499adc6",
+      "revId": "4d8577cfe8096f2c12b1bc850ace77bf357281a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_5483b556",
         "filename": "includes/Resources.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-05-11T11:33:46Z",
       "side": 1,
       "message": "I actually don\u0027t see the magnifying class in no-JS mode. There\u0027s just a blue text-only \"Search\" button.\n\nI don\u0027t see it in JS mode either, for matter, search is just a text input with no icon.\n\nMaybe I\u0027m missing where it\u0027s supposed to show up? But so far it feels like dead code (or broken layout, if it\u0027s meant to show up) to me.",
+      "revId": "4d8577cfe8096f2c12b1bc850ace77bf357281a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c037d8fa",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-11T23:03:05Z",
+      "side": 1,
+      "message": "Nope you\u0027re right. This is only used in the experimental mode of the site.",
+      "parentUuid": "0ed113e2_5483b556",
       "revId": "4d8577cfe8096f2c12b1bc850ace77bf357281a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
