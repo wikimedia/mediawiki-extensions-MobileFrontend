@@ -149,6 +149,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			);
 		}
 
+		Hooks::run( 'SpecialUserProfileCards', array( &$cards, $this->targetUser ) );
 		if ( count( $cards ) > 0 ) {
 			$data['hasActivity'] = true;
 			$data['heading'] = $this->msg( 'mobile-frontend-profile-activity-heading' )->text();
