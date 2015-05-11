@@ -9,7 +9,6 @@
 // hide menu items when not possible to use
 .client-nojs #ca-watch,
 .client-nojs #ca-edit,
-.client-nojs #ca-upload,
 #ca-talk.selected {
 	display: none;
 }
@@ -70,19 +69,3 @@
 	}
 }
 
-#ca-upload {
-	input {
-		display: none;
-	}
-	&.enabled {
-		input {
-			display: block;
-			// this rule has to be here (and not combined with the webkit rule below) for it to work on firefox
-			cursor: pointer;
-		}
-		// webkit-file-upload-button for pointer cursor in chrome.
-		::-webkit-file-upload-button {
-			cursor: pointer;
-		}
-	}
-}

@@ -1,7 +1,0 @@
-<div class="content">
-	{{{spinner}}}
-	<div class="preview"></div>
-	<p>{{ownerStatement}} <a href="#/upload-tutorial" class="help inline">{{help}}</a></p>
-	<textarea class="mw-ui-input" name="description" placeholder="{{descriptionPlaceholder}}"></textarea>
-	<p class="license">{{{license}}}</p>
-</div>

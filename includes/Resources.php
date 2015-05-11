@@ -473,19 +473,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.leadPhotoUploader' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.user',
-			'mobile.upload.ui',
-		),
-		'scripts' => array(
-			'javascripts/modules/uploads/init.js',
-		),
-		// This is a logged in user feature only.
-		'group' => 'user',
-	),
-
 	'mobile.editor' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -624,71 +611,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			'mobile-frontend-editor-viewing-source-page',
-		),
-	),
-
-	'mobile.uploads' => $wgMFResourceParsedMessageModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.editor.api',
-			'mobile.contentOverlays',
-			'mobile.foreignApi',
-			'mobile.microAutoSize',
-			'mobile.loggingSchemas',
-		),
-		'scripts' => array(
-			'javascripts/modules/uploads/PhotoApi.js',
-			'javascripts/modules/uploads/LeadPhoto.js',
-			'javascripts/modules/uploads/UploadTutorial.js',
-			'javascripts/modules/uploads/PhotoUploadProgress.js',
-			'javascripts/modules/uploads/PhotoUploadOverlay.js',
-			'javascripts/externals/exif-js/binaryajax.js',
-			'javascripts/externals/exif-js/exif.js',
-		),
-		'styles' => array(
-			'less/modules/uploads/UploadTutorial.less',
-			'less/modules/uploads/PhotoUploadOverlay.less',
-			'less/modules/uploads/PhotoUploadProgress.less',
-		),
-		'templates' => array(
-			'LeadPhoto.hogan' => 'templates/modules/uploads/LeadPhoto.hogan',
-			'UploadTutorial.hogan' => 'templates/modules/uploads/UploadTutorial.hogan',
-			'PhotoUploadOverlay.hogan' => 'templates/modules/uploads/PhotoUploadOverlay.hogan',
-			'PhotoUploadProgress.hogan' => 'templates/modules/uploads/PhotoUploadProgress.hogan',
-		),
-		'messages' => array(
-			'mobile-frontend-photo-upload-success-article',
-			'mobile-frontend-photo-upload-error',
-
-			// PhotoApi.js
-			'mobile-frontend-photo-article-edit-comment',
-			'mobile-frontend-photo-article-donate-comment',
-			'mobile-frontend-photo-upload-error-filename',
-			'mobile-frontend-photo-upload-comment',
-
-			// UploadTutorial.js
-			'mobile-frontend-first-upload-wizard-new-page-1-header',
-			'mobile-frontend-first-upload-wizard-new-page-1',
-			'mobile-frontend-first-upload-wizard-new-page-2-header',
-			'mobile-frontend-first-upload-wizard-new-page-2',
-			'mobile-frontend-first-upload-wizard-new-page-3-header',
-			'mobile-frontend-first-upload-wizard-new-page-3',
-			'mobile-frontend-first-upload-wizard-new-page-3-ok',
-
-			// PhotoUploadOverlay.js
-			'mobile-frontend-image-heading-describe' => array( 'parse' ),
-			'mobile-frontend-photo-ownership',
-			'mobile-frontend-photo-ownership-help',
-			'mobile-frontend-photo-caption-placeholder',
-			'mobile-frontend-photo-submit',
-			'mobile-frontend-photo-upload-error-file-type',
-			'mobile-frontend-photo-licensing',
-			'mobile-frontend-photo-licensing-with-terms',
-			'mobile-frontend-photo-upload-copyvio',
-
-			// PhotoUploadProgress.js
-			'mobile-frontend-image-uploading' => array( 'parse' ),
-			'mobile-frontend-image-cancel-confirm' => array( 'parse' ),
 		),
 	),
 
@@ -940,33 +862,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'resources/mobile.toast/toast.less',
-		),
-	),
-
-	'mobile.upload.ui' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.ajax',
-			'mobile.overlays',
-		),
-		'templates' => array(
-			// FIXME: This should not be a hogan template. Use a txt template.
-			'template.hogan' => 'templates/modules/uploads/commons-upload.hogan',
-			// PhotoUploaderButton.js
-			'LeadButton.hogan' => 'templates/modules/uploads/LeadPhotoUploaderButton.hogan',
-			// @todo FIXME: this should be in special.uploads (need to split
-			// code in PhotoUploaderButton.js into separate files too)
-			'Button.hogan' => 'templates/modules/uploads/PhotoUploaderButton.hogan',
-		),
-		'scripts' => array(
-			'javascripts/modules/uploads/ProgressBar.js',
-			'javascripts/modules/uploads/PhotoUploaderButton.js',
-			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
-			'javascripts/modules/uploads/routes.js',
-		),
-		'messages' => array(
-			// LeadPhotoUploaderButton.js
-			'mobile-frontend-photo-upload',
 		),
 	),
 
@@ -1671,7 +1566,6 @@ $wgMobileSpecialPageModules = array(
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.gallery',
-			'mobile.upload.ui',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-generic',
@@ -1910,9 +1804,6 @@ $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
 	'mediawiki.skinning.content.parsoid' => array(),
 	'mobile.special.userprofile.styles' => array(
 		'less/specials/userprofile.less',
-	),
-	'mobile.special.uploads.styles' => array(
-		'less/modules/uploads/PhotoUploaderButton.less',
 	),
 	'mobile.special.history.styles' => array(),
 );

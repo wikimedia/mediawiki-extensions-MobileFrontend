@@ -828,17 +828,6 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 
-		if (
-			$this->isAllowedPageAction( 'upload' )
-			&& !$title->isMainPage()
-			&& $this->mobileContext->userCanUpload()
-		) {
-			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
-				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-upload-tooltip' ),
-				'class' => MobileUI::iconClass( 'addimage', 'element', 'hidden' ),
-			);
-		}
-
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$watchTemplate = array(
 				'id' => 'ca-watch',
@@ -939,7 +928,6 @@ class SkinMinerva extends SkinTemplate {
 		// Get variables that are only needed in mobile mode
 		if ( $this->isMobileMode ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
-			$vars['wgUserCanUpload'] = $this->mobileContext->userCanUpload();
 		}
 
 		return $vars;
@@ -956,14 +944,6 @@ class SkinMinerva extends SkinTemplate {
 		$action = $req->getVal( 'article_action' );
 		$campaign = $req->getVal( 'campaign' );
 		$title = $this->getTitle();
-
-		if (
-			$this->isAllowedPageAction( 'upload' )
-			&& !$title->isMainPage()
-			&& $this->mobileContext->userCanUpload()
-		) {
-			$modules[] = 'mobile.leadPhotoUploader';
-		}
 
 		if ( $user->isLoggedIn() ) {
 			// enable the user module
@@ -986,9 +966,6 @@ class SkinMinerva extends SkinTemplate {
 			}
 		}
 
-		if ( $this->mobileContext->userCanUpload() ) {
-			$modules[] = 'mobile.upload.ui';
-		}
 		return $modules;
 	}
 

@@ -26,7 +26,6 @@
 		 * e.g. [{ edit: ['*'] }]
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
 		 * @cfg {Boolean} defaults.isMainPage Whether the page is the Main Page.
-		 * @cfg {Boolean} defaults.userCanUpload Whether the current user can upload.
 		 * @cfg {String} defaults.hash Window location hash.
 		 */
 		defaults: {
@@ -39,7 +38,6 @@
 			},
 			sections: [],
 			isMainPage: false,
-			userCanUpload: mw.config.get( 'wgUserCanUpload' ),
 			hash: window.location.hash
 		},
 
