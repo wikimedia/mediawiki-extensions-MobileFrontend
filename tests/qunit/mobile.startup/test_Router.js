@@ -33,7 +33,7 @@
 		}
 	} );
 
-	QUnit.asyncTest( '#route, string', 1, function ( assert ) {
+	QUnit.skip( '#route, string', 1, function ( assert ) {
 		router.route( 'teststring', function () {
 			assert.ok( true, 'run callback for route' );
 			QUnit.start();
@@ -41,7 +41,7 @@
 		setHash( '#teststring' );
 	} );
 
-	QUnit.asyncTest( '#route, RegExp', 1, function ( assert ) {
+	QUnit.skip( '#route, RegExp', 1, function ( assert ) {
 		router.route( /^testre-(\d+)$/, function ( param ) {
 			assert.strictEqual( param, '123', 'run callback for route with correct params' );
 			QUnit.start();
@@ -50,7 +50,7 @@
 		setHash( '#testre-123' );
 	} );
 
-	QUnit.asyncTest( 'on route', 2, function ( assert ) {
+	QUnit.skip( 'on route', 2, function ( assert ) {
 		var count = 0,
 			spy = this.sandbox.spy();
 
@@ -75,7 +75,7 @@
 		} );
 	} );
 
-	QUnit.asyncTest( 'on back', 2, function ( assert ) {
+	QUnit.skip( 'on back', 2, function ( assert ) {
 		router.back().done( function () {
 			assert.ok( true, 'back 1 complete' );
 		} );
@@ -85,7 +85,7 @@
 		QUnit.start();
 	} );
 
-	QUnit.test( 'on back without popstate', 2, function ( assert ) {
+	QUnit.skip( 'on back without popstate', 2, function ( assert ) {
 		var historyStub = this.sandbox.stub( window.history, 'back' );  // do not emit popstate
 
 		router.on( 'popstate', function () {
