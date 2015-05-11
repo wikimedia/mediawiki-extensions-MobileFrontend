@@ -1878,6 +1878,7 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 );
 
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
+	'mediawiki.notification' => '',
 	'mediawiki.sectionAnchor' => array(
 		'less/content/sectionAnchor.less',
 	),
