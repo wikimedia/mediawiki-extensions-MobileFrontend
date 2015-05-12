@@ -89,6 +89,13 @@ $wgMinervaStyleModules = array(
 		)
 	),
 
+	'skins.minerva.icons.images.legacy' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			'resources/skins.minerva.icons.images.legacy/icons.less',
+		),
+	),
+
 	'skins.minerva.icons.images.js' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
 		'prefix' => 'mw-ui',
@@ -397,6 +404,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.redlinks',
 			'mobile.settings',
 			'jquery.throttle-debounce',
+			'skins.minerva.icons.images.legacy',
 		),
 		'templates' => array(
 			'anchor.hogan' => 'resources/mobile.startup/anchor.hogan',
