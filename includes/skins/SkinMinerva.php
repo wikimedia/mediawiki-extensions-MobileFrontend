@@ -38,8 +38,16 @@ class SkinMinerva extends SkinTemplate {
 	private function flattenLinkArray( $array ) {
 		$menu = array();
 		foreach ( $array as $name => $info ) {
-			$base = isset( $info['links'][0] ) ? $info['links'][0] : $info;
-			$menu[] = array_merge( $base, array( 'name' => $name ) );
+			// FIXME: #getSiteLinks doesn't return the same form of array as
+			// #getDiscovery- and #getPersonalTools.
+			$components = isset( $info['links'] )
+				? $info['links']
+				: array( $info );
+
+			$menu[] = array(
+				'name' => $name,
+				'components' => $components,
+			);
 		}
 		return $menu;
 	}
@@ -877,7 +885,7 @@ class SkinMinerva extends SkinTemplate {
 	protected function getMenuData() {
 		return array(
 			'discovery' => $this->flattenLinkArray( $this->getDiscoveryTools() ),
-			'personal' => $this->flattenLinkArray($this->getPersonalTools() ),
+			'personal' => $this->flattenLinkArray( $this->getPersonalTools() ),
 			'sitelinks' => $this->flattenLinkArray( $this->getSiteLinks() ),
 		);
 	}

@@ -2,21 +2,27 @@
 	<ul>
 		{{#discovery}}
 			<li>
-				<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
+				{{#components}}
+					<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
+				{{/components}}
 			</li>
 		{{/discovery}}
 	</ul>
 	<ul>
 		{{#personal}}
 			<li>
-				<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
+				{{#components}}
+					<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
+				{{/components}}
 			</li>
 		{{/personal}}
 	</ul>
 	<ul class="hlist">
 		{{#sitelinks}}
 			<li>
+				{{#components}}
 				<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
+				{{/components}}
 			</li>
 		{{/sitelinks}}
 	</ul>
