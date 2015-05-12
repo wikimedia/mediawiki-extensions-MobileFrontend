@@ -247,6 +247,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.view',
 		),
+		'position' => 'bottom',
+		'styles' => array(
+			'resources/mobile.mainMenu/icons.less',
+		),
 		'templates' => array(
 			'menu.hogan' => 'resources/mobile.mainMenu/menu.mustache',
 		),
