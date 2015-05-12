@@ -1,0 +1,16 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha,
+	.beta {
+		// banners inserted by other extensions, i.e. Zero
+		#mw-mf-page-center .mw-mf-banner {
+			max-width: @contentMaxWidthTablet;
+			margin: 0 auto;
+			padding: 0 @contentPaddingTablet;
+			// !important because Zero has an inline style
+			background-clip: content-box !important;
+		}
+	}
+}
