@@ -271,7 +271,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.jqueryMsg',
 		),
 		'scripts' => array(
-			'javascripts/modules/lastEdited/time.js',
+			'resources/mobile.modifiedBar/time.js',
 		),
 		'messages' => array(
 			// lastEdited.js
@@ -1790,8 +1790,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.context',
 		),
 		'scripts' => array(
-			'javascripts/modules/mainMenu/init.js',
-			'javascripts/modules/lastEdited/init.js',
+			'resources/mobile.head/init.js',
 		),
 		'messages' => array(
 			// lastEdited.js

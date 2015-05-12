@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
-
-	var time = M.require( 'modules/lastEdited/time' );
+	var time = M.require( 'modules/lastEdited/time' ),
+		MainMenu = M.require( 'MainMenu' ),
+		mainMenu = new MainMenu();
 
 	/**
 	 * Initialisation function for last modified module.
@@ -10,7 +11,7 @@
 	 * months or years
 	 * @ignore
 	 */
-	function init() {
+	function initHistoryLink() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
 			historyUrl = $lastModified.attr( 'href' ),
 			ts = $lastModified.data( 'timestamp' ),
@@ -53,6 +54,26 @@
 			$lastModified.remove();
 		}
 	}
-	M.on( 'history-link-loaded', init );
+
+	// bind events
+	M.on( 'history-link-loaded', initHistoryLink );
+	M.on( 'header-loaded', function () {
+		// Render MainMenu when needed
+		// In alpha there is no #mw-mf-main-menu-button, the user can click on the header
+		// search icon or the site name in the header to open the main menu
+		$( '#mw-mf-main-menu-button, .alpha .header a.header-icon, .alpha .header .header-title a' )
+			.on( 'click', function ( ev ) {
+				mainMenu.openNavigationDrawer();
+				ev.preventDefault();
+				// Stop propagation, otherwise the Skin will close the open menus on page center click
+				ev.stopPropagation();
+			} );
+	} );
+
+	$( function () {
+		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {
+			mainMenu.appendTo( '#mw-mf-page-left' );
+		}
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
