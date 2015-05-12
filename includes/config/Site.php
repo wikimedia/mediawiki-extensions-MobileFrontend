@@ -86,10 +86,36 @@ $wgMFNoindexPages = true;
 $wgMFStopRedirectCookieHost = null;
 
 /**
- * Whether to append ™ to the sitename in page footer, or
- * ® to the sitename for alt text in footer if using a custom copyright logo.
+ * Make the logos configurable.
  *
- * Defaults off to avoid being confusing.
+ * Currently, 'copyright', 'copyright-width', and 'copyright-height' elements are supported.
+ * 'copyright' is the URL of the logo displayed in the footer
+ * 'copyright-width' (optional) is the width in pixels of the copyright image you want to display
+ * 'copyright-height' (optional) is the height in pixels of the copyright image you want to display
+ * If the actual 'copyright' dimensions are 200x30, then you may want to set the width and height
+ * to 100 and 15 respectively (in order to support retina screens).
+ *
+ * Example: array(
+ *	'copyright' => '/images/mysite_copyright_logo.png',
+ *	'copyright-width' => 100,
+ *	'copyright-height' => 15,
+ *	);
+ */
+$wgMFCustomLogos = array();
+
+/**
+ * Path to the logo used in the login/signup form
+ * The standard height is 72px
+ * FIXME: Merge with $wgMFCustomLogos
+ */
+$wgMobileFrontendLogo = false;
+
+/**
+ * Whether to append a trademark notice to the sitename in the page footer.
+ *
+ * If set to true or 'unregistered', adds a ™ to the sitename.
+ * If set to 'registered' adds a ® to the sitename.
+ * If set to false, adds nothing (the default).
  *
  * You can also edit the 'mobile-frontend-footer-sitename' message directly.
  */
