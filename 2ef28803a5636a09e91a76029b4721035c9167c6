@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_533501d5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-12T11:12:22Z",
+      "side": 1,
+      "message": "Notice: Undefined index: links in /Users/jrobson/git/vagrant/mediawiki/extensions/MobileFrontend/includes/skins/SkinMinerva.php on line 43",
+      "revId": "2ef28803a5636a09e91a76029b4721035c9167c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
