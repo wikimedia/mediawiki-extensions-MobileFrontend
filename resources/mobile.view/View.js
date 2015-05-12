@@ -145,20 +145,15 @@
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function ( options ) {
+			var self = this;
+
 			EventEmitter.prototype.initialize.apply( this, arguments );
 			this.defaults = $.extend( {}, this._parent.defaults, this.defaults );
 			this.templatePartials = $.extend( {}, this._parent.templatePartials, this.templatePartials );
 			options = $.extend( {}, this.defaults, options );
-			if ( options.el ) {
-				this.$el = $( options.el );
-			} else {
-				this.$el = $( '<' + this.tagName + '>' );
-			}
-			this.$el.addClass( this.className );
-			if ( this.isBorderBox ) {
-				// FIXME: Merge with className property (?)
-				this.$el.addClass( 'view-border-box' );
-			}
+			this.options = options;
+			// Assign a unique id for dom events binding/unbinding
+			this.cid = uniqueId( 'view' );
 
 			// TODO: if template compilation is too slow, don't compile them on a
 			// per object basis, but don't worry about it now (maybe add cache to
@@ -167,11 +162,34 @@
 				this.template = mw.template.compile( this.template );
 			}
 
-			this.options = options;
-			this.render( options );
+			if ( options.el ) {
+				this.$el = $( options.el );
+			} else {
+				this.$el = $( '<' + this.tagName + '>' );
+			}
 
-			// Assign a unique id for dom events binding/unbinding
-			this.cid = uniqueId( 'view' );
+			// Make sure the element is ready to be manipulated
+			if ( this.$el.length ) {
+				this._postInitialize();
+			} else {
+				$( function () {
+					self.$el = $( options.el );
+					self._postInitialize();
+				} );
+			}
+		},
+
+		/**
+		 * Called when this.$el is ready. Render and delegate events among other things.
+		 * @private
+		 */
+		_postInitialize: function () {
+			this.$el.addClass( this.className );
+			if ( this.isBorderBox ) {
+				// FIXME: Merge with className property (?)
+				this.$el.addClass( 'view-border-box' );
+			}
+			this.render( this.options );
 			this.delegateEvents();
 		},
 
