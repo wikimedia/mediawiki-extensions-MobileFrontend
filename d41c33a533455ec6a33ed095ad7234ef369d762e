@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b6ec5b8f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2015-05-12T14:48:41Z",
+      "side": 0,
+      "message": "To avoid tripping up the warning in Ie4287e17d6f298cc63f42f257b1f67ee36961b77 you need to define the position property for any module added with addModuleStyles.\n\nIf the JS and the CSS don\u0027t share the same position property, then you\u0027ll need to define the CSS as its own module, pulled here by a dependency.",
+      "revId": "d41c33a533455ec6a33ed095ad7234ef369d762e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
