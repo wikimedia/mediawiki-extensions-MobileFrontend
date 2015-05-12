@@ -23,6 +23,10 @@
 			this.username = options.username;
 			this.category = options.category;
 			this.limit = 10;
+			this.continueParams = {
+				continue: ''
+			};
+			this.canContinue = true;
 		},
 		/**
 		 * Returns a description based on the file name using
@@ -70,14 +74,14 @@
 		 * @return {Object}
 		 */
 		getQuery: function () {
-			var query = {
+			var query = $.extend( {
 				action: 'query',
 				prop: 'imageinfo',
 				// FIXME: [API] have to request timestamp since api returns an object
 				// rather than an array thus we need a way to sort
 				iiprop: 'url|timestamp',
 				iiurlwidth: IMAGE_WIDTH
-			};
+			}, this.continueParams );
 
 			if ( this.username ) {
 				$.extend( query, {
@@ -85,8 +89,7 @@
 					gaiuser: this.username,
 					gaisort: 'timestamp',
 					gaidir: 'descending',
-					gailimit: this.limit,
-					gaicontinue: this.endTimestamp
+					gailimit: this.limit
 				} );
 			} else if ( this.category ) {
 				$.extend( query, {
@@ -95,10 +98,10 @@
 					gcmtype: 'file',
 					// FIXME [API] a lot of duplication follows due to the silly way generators work
 					gcmdir: 'descending',
-					gcmlimit: this.limit,
-					gcmcontinue: this.endTimestamp
+					gcmlimit: this.limit
 				} );
 			}
+
 			return query;
 		},
 		/**
@@ -109,8 +112,7 @@
 			var self = this,
 				result = $.Deferred();
 
-			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
-			if ( this.endTimestamp !== false ) {
+			if ( this.canContinue === true ) {
 				this.ajax( this.getQuery() ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
@@ -120,16 +122,12 @@
 								return a.timestamp < b.timestamp ? 1 : -1;
 							} );
 
-						if ( resp['query-continue'] ) {
-							// FIXME: API I hate you.
-							if ( self.category ) {
-								self.endTimestamp = resp['query-continue'].categorymembers.gcmcontinue;
-							} else {
-								self.endTimestamp = resp['query-continue'].allimages.gaicontinue;
-							}
+						if ( resp.hasOwnProperty( 'continue' ) ) {
+							self.continueParams = resp['continue'];
 						} else {
-							self.endTimestamp = false;
+							self.canContinue = false;
 						}
+
 						// FIXME: Should reply with a list of PhotoItem or Photo classes.
 						result.resolve( photos );
 					} else {
