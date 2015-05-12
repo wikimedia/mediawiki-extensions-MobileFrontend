@@ -1695,7 +1695,8 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.mobilediff.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/mobilediff.less',
+			'resources/mobile.special.mobilediff.styles/icons.less',
+			'resources/mobile.special.mobilediff.styles/mobilediff.less',
 		),
 	),
 
