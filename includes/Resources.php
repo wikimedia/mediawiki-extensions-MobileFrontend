@@ -717,7 +717,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 		),
 		'scripts' => array(
-			'javascripts/modules/preferredLanguages/init.js',
+			'resources/mobile.preferredLanguages/init.js',
 		),
 	),
 
@@ -1277,19 +1277,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.infiniteScroll',
 		),
 		'templates' => array(
-			'PhotoItem.hogan' => 'templates/modules/gallery/PhotoItem.hogan',
-			'PhotoList.hogan' => 'templates/modules/gallery/PhotoList.hogan',
+			'PhotoItem.hogan' => 'resources/mobile.gallery/PhotoItem.hogan',
+			'PhotoList.hogan' => 'resources/mobile.gallery/PhotoList.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-donate-image-nouploads',
 		),
 		'styles' => array(
-			'less/modules/gallery.less',
+			'resources/mobile.gallery/gallery.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/gallery/PhotoListApi.js',
-			'javascripts/modules/gallery/PhotoItem.js',
-			'javascripts/modules/gallery/PhotoList.js',
+			'resources/mobile.gallery/PhotoListApi.js',
+			'resources/mobile.gallery/PhotoItem.js',
+			'resources/mobile.gallery/PhotoList.js',
 		),
 	),
 
