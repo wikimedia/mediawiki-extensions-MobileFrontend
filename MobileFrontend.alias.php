@@ -43,7 +43,7 @@ $specialPageAliases['ar'] = array(
 	'UserProfile' => array( 'ملف_المستخدم' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'History' => array( 'تاريخ' ),
 	'MobileOptions' => array( 'خيارات_الموبايل' ),
@@ -273,7 +273,7 @@ $specialPageAliases['lb'] = array(
 	'UserProfile' => array( 'Benotzerprofil' ),
 );
 
-/** لوری (لوری) */
+/** لوری مینجایی (لوری مینجایی) */
 $specialPageAliases['lrc'] = array(
 	'History' => array( 'ویرگار' ),
 	'MobileOptions' => array( 'خصوصیات_موبایلی' ),
