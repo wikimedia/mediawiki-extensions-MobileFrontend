@@ -38,9 +38,7 @@ $wgMinervaStyleModules = array(
 			'less/pageactions.less',
 			'less/footer.less',
 			'less/common.less',
-			// FIXME: Remove and rename iconsNew when the cache has cleared
 			'less/icons.less',
-			'less/iconsNew.less',
 			'less/mainpage.less',
 		),
 	),
@@ -696,7 +694,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.talk' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.beta',
+			'mobile.overlays',
 		),
 		'styles' => array(
 			'resources/mobile.talk/talk.less',

@@ -54,15 +54,6 @@
 			// needed for ContentOverlay pointer arrow
 			margin: 0 0 @verticalMargin;
 		}
-
-		// FIXME: Remove when mw-ui-icon moved to stable
-		&.icon {
-			vertical-align: top;
-			height: 30px;
-			width: 40px;
-			background-position: 50% 0;
-			margin: 0 16px 0 0;
-		}
 	}
 }
 
@@ -80,19 +71,10 @@
 }
 
 #ca-upload {
-	// FIXME: Remove when cache clears
-	&.icon {
-		.background-image('images/pagemenu/upload-locked.png');
-	}
-
 	input {
 		display: none;
 	}
 	&.enabled {
-		// FIXME: Remove when cache clears
-		&.icon {
-			.background-image('images/pagemenu/upload.png');
-		}
 		input {
 			display: block;
 			// this rule has to be here (and not combined with the webkit rule below) for it to work on firefox
