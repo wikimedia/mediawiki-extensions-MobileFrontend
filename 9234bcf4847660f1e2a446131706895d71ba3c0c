@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_d6231fb3",
+        "filename": "less/tablet/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-12T15:08:02Z",
+      "side": 1,
+      "message": "Please do not load alpha styles in stable. Please sandbox all this code better or use a more generic selector.",
+      "revId": "9234bcf4847660f1e2a446131706895d71ba3c0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_d6db1f7a",
         "filename": "less/tablet/common.less",
         "patchSetId": 1
@@ -13,6 +30,24 @@
       "writtenOn": "2015-05-12T13:58:31Z",
       "side": 1,
       "message": "IIRC icons.less (resources/src/mediawiki.ui/components/icons.less) exports the width of the gutter as a variable (gutterWidth). How would you feel about using that here? Maybe assign it to a better named variable first though, eh? – I named the original.",
+      "revId": "9234bcf4847660f1e2a446131706895d71ba3c0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b61e9b73",
+        "filename": "less/tablet/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-12T15:08:02Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "0ed113e2_d6db1f7a",
       "revId": "9234bcf4847660f1e2a446131706895d71ba3c0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
