@@ -27,6 +27,11 @@ class SpecialNearby extends MobileSpecialPage {
 
 		$output = $this->getOutput();
 
+		// add beta styles
+		if ( MobileContext::singleton()->isBetaGroupMember() ) {
+			$output->addModuleStyles( 'mobile.special.nearby.beta.styles' );
+		}
+
 		// set config
 		$output->addJsConfigVars( 'wgMFNearbyRange', $this->getMFConfig()->get( 'MFNearbyRange' ) );
 		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );

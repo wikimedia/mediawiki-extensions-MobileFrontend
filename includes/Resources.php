@@ -1528,6 +1528,12 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
+	'mobile.special.nearby.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'resources/mobile.special.nearby.beta.styles/specialNearby.less',
+		),
+	),
+
 	'mobile.special.userlogin.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
@@ -1656,6 +1662,13 @@ $wgMinervaSpecialPageModules = array(
 		'position' => 'top',
 		'styles' => array(
 			'less/specials/search.less',
+		),
+	),
+
+	'skins.minerva.special.watchlist.beta.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			'resources/mobile.special.watchlist.beta.styles/specialWatchlist.less',
 		),
 	),
 

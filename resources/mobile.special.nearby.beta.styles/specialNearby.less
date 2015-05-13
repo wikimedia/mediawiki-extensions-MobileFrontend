@@ -1,0 +1,14 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha,
+	.beta {
+		#content_wrapper .pre-content,
+		#mw-mf-nearby {
+			max-width: @contentMaxWidthTablet;
+			margin: 0 auto;
+			padding: 0 @contentPaddingTablet;
+		}
+	}
+}
