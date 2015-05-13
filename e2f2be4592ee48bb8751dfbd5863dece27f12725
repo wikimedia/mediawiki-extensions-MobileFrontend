@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7a47b1bf",
+        "filename": "extension.json",
+        "patchSetId": 16
+      },
+      "lineNbr": 2227,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-13T05:35:43Z",
+      "side": 1,
+      "message": "That looks like a false indent",
+      "revId": "e2f2be4592ee48bb8751dfbd5863dece27f12725",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
