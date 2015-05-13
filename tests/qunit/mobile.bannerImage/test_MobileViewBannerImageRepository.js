@@ -18,7 +18,7 @@
 
 		assert.deepEqual( this.getSpy.lastCall.args[0], {
 			action: 'mobileview',
-			prop: 'thumb',
+			prop: 'thumb|image',
 			page: this.title,
 			thumbwidth: 1234
 		} );
@@ -53,6 +53,11 @@
 	QUnit.test( 'it should return the image if there is one', 1, function ( assert ) {
 		this.getDeferred.resolve( {
 			mobileview: {
+				image: {
+					file: 'Glory Day celebration of the Poumai Naga.jpg',
+					height: 206,
+					width: 296
+				},
 				thumb: {
 					url: 'http://foo/bar/baz',
 					width: 1,
@@ -63,7 +68,7 @@
 		} );
 
 		this.repository.getImage( 1234 ).then( function ( image ) {
-			assert.deepEqual( image, new Image( 'http://foo/bar/baz', 1, 1 ) );
+			assert.deepEqual( image, new Image( 'http://foo/bar/baz', 1, 1, 'Glory Day celebration of the Poumai Naga.jpg' ) );
 		} );
 	} );
 
@@ -82,6 +87,11 @@
 	QUnit.test( 'it shouldn\'t try to get the image at the target width more than once', 1, function ( assert ) {
 		this.getDeferred.resolve( {
 			mobileview: {
+				image: {
+					file: 'Glory Day celebration of the Poumai Naga.jpg',
+					height: 206,
+					width: 296
+				},
 				thumb: {
 					url: 'http://foo/bar/baz',
 					width: 1,

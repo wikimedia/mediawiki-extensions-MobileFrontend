@@ -42,7 +42,7 @@
 
 			self.api.get( {
 				action: 'mobileview',
-				prop: 'thumb',
+				prop: 'thumb|image',
 				page: self.title,
 				thumbwidth: targetWidth
 			} )
@@ -57,8 +57,11 @@
 					return;
 				}
 
-				// Page exists but doesn't have thumbnail.
-				if ( !data.mobileview.hasOwnProperty( 'thumb' ) ) {
+				// Page exists but doesn't have thumbnail or the main image.
+				if (
+					!data.mobileview.hasOwnProperty( 'thumb' ) ||
+					!data.mobileview.hasOwnProperty( 'image' )
+				) {
 					// TODO: Should this reject with an error?
 					deferred.reject();
 
@@ -69,7 +72,8 @@
 				image = new Image(
 					thumb.url,
 					thumb.width,
-					thumb.height
+					thumb.height,
+					data.mobileview.image.file
 				);
 
 				self.cache[targetWidth] = image;

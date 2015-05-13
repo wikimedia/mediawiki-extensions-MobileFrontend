@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var BannerImage,
+		router = M.require( 'router' ),
 		View = M.require( 'View' ),
 		browser = M.require( 'browser' );
 
@@ -87,7 +88,14 @@
 				.css( {
 					'background-image': 'url("' + image.src + '")'
 				} )
-				.show();
+				.show()
+				/**
+				 * Show the image in mediaViewer
+				 */
+				.on( 'click', function () {
+					var title = new mw.Title( 'File:' + image.fileName );
+					router.navigate( '#/media/' + title.toString() );
+				} );
 
 			self.resizeContainer();
 

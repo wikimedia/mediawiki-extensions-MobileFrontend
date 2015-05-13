@@ -6,11 +6,16 @@
 	 * An image that can be loaded.
 	 *
 	 * @class Image
+	 * @param {String} src
+	 * @param {Number} width
+	 * @param {String} height
+	 * @param {String} fileName The name of the file from which the thumbnail was created
 	 */
-	function Image( src, width, height ) {
+	function Image( src, width, height, fileName ) {
 		this.src = src;
 		this.width = width;
 		this.height = height;
+		this.fileName = fileName;
 	}
 
 	/**
