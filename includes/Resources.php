@@ -513,7 +513,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-edit',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/init.js',
+			'resources/mobile.editor/init.js',
 		),
 	),
 
@@ -523,12 +523,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'templates' => array(
-			'Overlay.hogan' => 'templates/modules/editor/AbuseFilterOverlay.hogan',
-			'Panel.hogan' => 'templates/modules/editor/AbuseFilterPanel.hogan',
+			'Overlay.hogan' => 'resources/mobile.abusefilter/AbuseFilterOverlay.hogan',
+			'Panel.hogan' => 'resources/mobile.abusefilter/AbuseFilterPanel.hogan',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/AbuseFilterOverlay.js',
-			'javascripts/modules/editor/AbuseFilterPanel.js',
+			'resources/mobile.abusefilter/AbuseFilterOverlay.js',
+			'resources/mobile.abusefilter/AbuseFilterPanel.js',
 		),
 		'messages' => array(
 			// AbuseFilterOverlay
@@ -547,7 +547,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.abusefilter',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorApi.js',
+			'resources/mobile.editor.api/EditorApi.js',
 		),
 	),
 
@@ -617,10 +617,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.microAutoSize',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorOverlay.js',
+			'resources/mobile.editor.overlay/EditorOverlay.js',
 		),
 		'templates' => array(
-			'content.hogan' => 'templates/modules/editor/content.hogan',
+			'content.hogan' => 'resources/mobile.editor.overlay/content.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-viewing-source-page',
@@ -1530,13 +1530,13 @@ $wgMobileVEModules = array(
 			'mobile.overlays',
 		),
 		'styles' => array(
-			'less/modules/editor/VisualEditorOverlay.less',
+			'resources/mobile.editor.ve/VisualEditorOverlay.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/VisualEditorOverlay.js',
+			'resources/mobile.editor.ve/VisualEditorOverlay.js',
 		),
 		'templates' => array(
-			'contentVE.hogan' => 'templates/modules/editor/contentVE.hogan',
+			'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-page-edit-summary',
@@ -1558,7 +1558,7 @@ $wgMobileCodeMirrorModules = array(
 			'ext.CodeMirror.lib',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorOverlayCodeMirror.js',
+			'resources/mobile.editor.overlay.codemirror/EditorOverlayCodeMirror.js',
 		),
 	),
 );
