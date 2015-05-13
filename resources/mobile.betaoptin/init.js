@@ -2,11 +2,12 @@
 	var inSample, inStable,
 		context = M.require( 'context' ),
 		settings = M.require( 'settings' ),
+		page = M.getCurrentPage(),
 		token = settings.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' );
 
 	// local storage is supported in this case, when ~ means it was dismissed
-	if ( token !== false && token !== '~' ) {
+	if ( token !== false && token !== '~' && !page.inNamespace( 'special' ) ) {
 		if ( !token ) {
 			token = mw.user.generateRandomSessionId();
 			settings.save( 'mobile-betaoptin-token', token );
