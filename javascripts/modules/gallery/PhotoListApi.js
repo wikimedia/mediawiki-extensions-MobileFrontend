@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var PhotoListApi, Api,
-		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
+		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small,
 		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' );
 
 	if ( corsUrl ) {
