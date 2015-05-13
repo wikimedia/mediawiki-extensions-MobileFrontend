@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3d92834f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 931,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-13T10:57:08Z",
+      "side": 1,
+      "message": "not needed anymore\n\nNote: Remove userCanUpload from Page.js, too (which has this one as a value).",
+      "revId": "6b22a644bf6976ba421efa94fe0b96eaba125c5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1d8f7f28",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 954,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-13T10:57:08Z",
+      "side": 1,
+      "message": "remove this one, too.",
+      "revId": "6b22a644bf6976ba421efa94fe0b96eaba125c5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_dd94973b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 978,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-13T10:57:08Z",
+      "side": 1,
+      "message": "remove this, too",
+      "revId": "6b22a644bf6976ba421efa94fe0b96eaba125c5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
