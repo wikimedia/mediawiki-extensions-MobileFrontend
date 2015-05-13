@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_54071c85",
+        "filename": "extension.json",
+        "patchSetId": 23
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-13T21:09:12Z",
+      "side": 1,
+      "message": "Not sure how to do it.",
+      "revId": "5f3021b4b500c9ed7d5bee0abe5ffc8556d4aadd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
