@@ -2,7 +2,7 @@
 
 	var WatchListApi = M.require( 'modules/watchlist/WatchListApi' ),
 		response = {
-			'query-continue': {
+			continue: {
 				pageimages: {
 					picontinue: 9
 				}
@@ -82,25 +82,27 @@
 
 	QUnit.module( 'MobileFrontend: WatchListApi', {} );
 
-	// this.sandbox.stub( WatchListApi.prototype, 'get' ).returns( $.Deferred().resolve() );
-
-	QUnit.test( 'load results from the first page', 2, function ( assert ) {
+	QUnit.test( 'load results from the first page', 3, function ( assert ) {
 		this.sandbox.stub( WatchListApi.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
 		var api = new WatchListApi();
 
 		api.load().done( function ( pages ) {
+			var params = WatchListApi.prototype.get.firstCall.args[0];
+
+			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
+
 			assert.equal( pages.length, 6, 'Got all the results' );
 			assert.equal( pages[0].title, 'Albert Einstein', 'Sorted alphabetically' );
 		} );
 	} );
 
-	QUnit.test( 'load results from the second page from last item of first', 4, function ( assert ) {
+	QUnit.test( 'load results from the second page from last item of first', 6, function ( assert ) {
 		var lastTitle = 'Albert Einstein',
 			api = new WatchListApi( lastTitle ),
 			response1 = $.extend( {}, response, {
-				'query-continue': {
+				'continue': {
 					watchlistraw: {
 						gwrcontinue: '0|Albert Einstein'
 					}
@@ -113,6 +115,11 @@
 			.returns( $.Deferred().resolve( response1 ) );
 
 		api.load().done( function ( pages ) {
+			var params = WatchListApi.prototype.get.firstCall.args[0];
+
+			assert.strictEqual( params.continue, '-||', 'It should set the continue parameter' );
+			assert.strictEqual( params.gwrcontinue, '0|Albert_Einstein', 'It should set the watchlistraw-specific continue parameter' );
+
 			// Albert Einstein should not be in the results since it was the last
 			// item in the first page.
 			assert.equal( pages.length, 5, 'Should have Albert removed from the results' );
@@ -126,6 +133,20 @@
 				assert.equal( pages.length, 6, 'Albert should be in the results' );
 				assert.equal( pages[0].title, 'Albert Einstein', 'First item should be Albert' );
 			} );
+		} );
+	} );
+
+	QUnit.test( 'it doesn\'t throw an error when no pages are returned', 1, function ( assert ) {
+		var api;
+
+		this.sandbox.stub( WatchListApi.prototype, 'get' )
+			.returns( $.Deferred().resolve( {
+				batchcomplete: ''
+			} ) );
+
+		api = new WatchListApi();
+		api.load().done( function ( pages ) {
+			assert.deepEqual( pages, [] );
 		} );
 	} );
 

@@ -20,28 +20,31 @@
 			// Try to keep it in sync with SpecialMobileWatchlist::LIMIT (php)
 			this.limit = 50;
 
-			// If we initialize from HTML, we will get in lastTitle the last title
-			// from the list to start requesting from that. Construct the `next`
-			// value from such title.
 			if ( lastTitle ) {
-				this.next = '0|' + lastTitle.replace( / /g, '_' );
-				this.nextByLastItem = true;
+				this.continueParams = {
+					continue: '-||',
+					gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
+				};
+				this.shouldSkipFirstTitle = true;
 			} else {
-				this.next = '';
-				this.nextByLastItem = false;
+				this.continueParams = {
+					continue: ''
+				};
+				this.shouldSkipFirstTitle = false;
 			}
+
+			this.canContinue = true;
 		},
 		/**
 		 * Load the list of items on the watchlist
 		 * @returns {jQuery.Deferred}
 		 */
 		load: function () {
-			if ( this.next === false ) {
-				// console.log( 'End of list' );
+			if ( this.canContinue === false ) {
 				return $.Deferred();
 			}
 			var self = this,
-				params = {
+				params = $.extend( {
 					action: 'query',
 					prop: 'pageimages|info',
 					piprop: 'thumbnail',
@@ -50,41 +53,43 @@
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
-				};
-			if ( this.next ) {
-				params.gwrcontinue = this.next;
+				}, this.continueParams );
+
+			if ( this.shouldSkipFirstTitle ) {
 				// If we are calling the api from the last item of the previous page
 				// (like the first time when grabbing the last title from the HTML),
 				// then request one extra element (make room for that last title) which
 				// will be removed later when parsing data.
-				if ( this.nextByLastItem ) {
-					params.gwrlimit += 1;
-				}
+				params.gwrlimit += 1;
 			}
 			return this.get( params, {
 				url: this.apiUrl
 			} ).then( function ( data ) {
-				if (
-					data[ 'query-continue' ] &&
-					data[ 'query-continue' ].watchlistraw
-				) {
-					self.next = data[ 'query-continue' ].watchlistraw.gwrcontinue;
+				if ( data.hasOwnProperty( 'continue' ) ) {
+					self.continueParams = data['continue'];
 				} else {
-					self.next = false;
+					self.canContinue = false;
 				}
+
 				return self.parseData( data );
 			} );
 		},
 
 		/**
 		 * Parse api response data into pagelist item format
-		 * @param {Object} data
+		 * @param {Object[]} data
 		 */
 		parseData: function ( data ) {
+			var pages;
+
+			if ( !data.hasOwnProperty( 'query' ) || !data.query.hasOwnProperty( 'pages' ) ) {
+				return [];
+			}
+
 			// Convert the map to an Array.
-			var pages = $.map( data.query.pages, function ( page ) {
-					return page;
-				} );
+			pages = $.map( data.query.pages, function ( page ) {
+				return page;
+			} );
 
 			// Sort results alphabetically (the api map doesn't have any order). The
 			// watchlist is ordered alphabetically right now.
@@ -94,9 +99,9 @@
 
 			// If we requested from the last item of the previous page, we shall
 			// remove the first result (to avoid it being repeated)
-			if ( this.nextByLastItem ) {
+			if ( this.shouldSkipFirstTitle ) {
 				pages = pages.slice( 1 );
-				this.nextByLastItem = false;
+				this.shouldSkipFirstTitle = false;
 			}
 
 			// Transform the items to a sensible format
