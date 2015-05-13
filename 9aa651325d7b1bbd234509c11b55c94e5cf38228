@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_6318687a",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-05-13T16:43:11Z",
+      "side": 1,
+      "message": "This might cause you problems in the future. The continuation values are considered opaque data by the API and may change in non-backwards-compatible ways without warning.\n\nNot going to -1 here since this is existing code, but we should probably look at what exactly this is trying to do and finding a better way to do it.",
+      "revId": "9aa651325d7b1bbd234509c11b55c94e5cf38228",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
