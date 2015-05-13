@@ -117,7 +117,7 @@
 	"mobile-frontend-editor-newpage-prompt": "This page doesn't exist. Why not be bold and create it?",
 	"mobile-frontend-editor-placeholder": "This section is empty. Be the first to expand it!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|You are creating}} a new page on {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<strong>Previewing</strong><span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Previewing</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Redirecting to editor...",
 	"mobile-frontend-editor-save": "Save",
 	"mobile-frontend-editor-source-editor": "Edit source",
