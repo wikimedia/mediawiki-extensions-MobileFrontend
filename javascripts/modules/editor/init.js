@@ -310,13 +310,7 @@
 				initCta();
 			}
 		} else {
-			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {
-				$caEdit.removeClass( 'hidden' );
-				// User is blocked. Both anonymous and logged in users can be blocked.
-				showSorryToast( 'mobile-frontend-editor-blocked' );
-			} else {
-				init();
-			}
+			init();
 		}
 	}
 

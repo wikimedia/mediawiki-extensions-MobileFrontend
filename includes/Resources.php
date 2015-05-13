@@ -498,7 +498,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-uploadenable',
-			'mobile-frontend-editor-blocked',
 			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
 			'mobile-frontend-editor-blocked-info',
 			'mobile-frontend-editor-cta',
