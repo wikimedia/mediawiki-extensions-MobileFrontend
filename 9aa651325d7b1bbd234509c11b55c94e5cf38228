@@ -34,6 +34,24 @@
       "revId": "9aa651325d7b1bbd234509c11b55c94e5cf38228",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_f43c1090",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-13T20:51:51Z",
+      "side": 1,
+      "message": "I think the problem here is the title comes in prettified e.g. initialize ( \u0027Foo bar\u0027 )\n\nI\u0027m not sure what problem this was trying to fix... is there likely to be any issues with passing something in like \u00270|Foo bar\u0027 ?\n\nI would suggest +2ing this patch and then doing a follow up to see what happens when we remove it - at least then we have any easy revert if needed.\n\nIf you\u0027re happy with this approach feel free to self +2. I would have merged it myself only I wanted thoughts on this.",
+      "parentUuid": "0ed113e2_43a6840e",
+      "revId": "9aa651325d7b1bbd234509c11b55c94e5cf38228",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
