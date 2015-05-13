@@ -16,6 +16,23 @@
       "revId": "22370513aefcb1d2867b0f3d5dfd7cc7cff56633",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_238100c9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 994,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-05-13T17:46:02Z",
+      "side": 1,
+      "message": "This most likely should not have \"/../\" in the remote path as that would result in a broken front-end path to mediawiki/extensions/../MobileFrontend which expands to mediawiki/MobileFrontend which does not (and should not) exist.",
+      "revId": "22370513aefcb1d2867b0f3d5dfd7cc7cff56633",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
