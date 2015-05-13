@@ -43,6 +43,7 @@ class MobileFrontendHooks {
 	 * for mobile users.
 	 */
 	private static function enableMediaWikiUI() {
+		// FIXME: Temporary variables, will be deprecated in core in the future
 		global $wgHTMLFormAllowTableFormat, $wgUseMediaWikiUIEverywhere;
 
 		$mobileContext = MobileContext::singleton();
@@ -65,7 +66,9 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFDefaultSkinClass, $wgULSPosition;
+		// FIXME: This shouldn't be a global, it should be possible for other extensions
+		// to set this via a static variable or set function in ULS
+		global $wgULSPosition;
 
 		$mobileContext = MobileContext::singleton();
 
@@ -99,7 +102,7 @@ class MobileFrontendHooks {
 		// log whether user is using alpha/beta/stable
 		$mobileContext->logMobileMode();
 
-		$skinName = $wgMFDefaultSkinClass;
+		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
 		$betaSkinName = $skinName . 'Beta';
 		$alphaSkinName = $skinName . 'Alpha';
 		// Force alpha for test mode to sure all modules can run
@@ -254,6 +257,7 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderTestModules( array &$testModules,
 		ResourceLoader &$resourceLoader
 	) {
+		// FIXME: Global core variable
 		global $wgResourceModules;
 
 		$testModuleBoilerplate = array(
@@ -313,15 +317,15 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
-		global $wgMobileUrlTemplate;
+		$context = MobileContext::singleton();
+		$mobileUrlTemplate = $context->getMobileUrlTemplate();
 
 		// Enables mobile cookies on wikis w/o mobile domain
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
 		$cookies[] = 'stopMobileRedirect';
 
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() || !$wgMobileUrlTemplate ) {
+		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
 			$cookies[] = 'optin'; // Alpha/beta cookie
 			$cookies[] = 'disableImages';
 		}
@@ -489,10 +493,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		global $wgSecureLogin;
 		$mobileContext = MobileContext::singleton();
 		$isMobileView = $mobileContext->shouldDisplayMobileView();
-		$out = $special->getContext()->getOutput();
+		$context = $special->getContext();
+		$out = $context->getOutput();
+		$secureLogin = $context->getConfig()->get( 'SecureLogin' );
 		$skin = $out->getSkin()->getSkinName();
 
 		$name = $special->getName();
@@ -513,7 +518,7 @@ class MobileFrontendHooks {
 				// most of this is lifted from https redirect code in SpecialUserlogin::execute()
 				// also, checking for 'https' in $wgServer is a little funky, but this is what
 				// is done on the WMF cluster (see config in CommonSettings.php)
-				if ( $wgSecureLogin && WebRequest::detectProtocol() != 'https' ) {
+				if ( $secureLogin && WebRequest::detectProtocol() != 'https' ) {
 					// get the https url and redirect
 					$query = $special->getContext()->getRequest()->getQueryValues();
 					if ( isset( $query['title'] ) )  {
@@ -601,14 +606,19 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme;
-
 		$context = MobileContext::singleton();
+		$config = $context->getMFConfig();
+		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
+		$mfAppPackageId = $config->get( 'MFAppPackageId' );
+		$mfAppSchmee = $config->get( 'MFAppScheme' );
+		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
+		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
+		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();
 		# Add deep link to a mobile app specified by $wgMFAppScheme
-		if ( ( $wgMFAppPackageId !== false ) && ( $title->isContentPage() )
+		if ( ( $mfAppPackageId !== false ) && ( $title->isContentPage() )
 			&& ( $request->getRawQueryString() === '' )
 		) {
 			$fullUrl = $title->getFullURL();
@@ -616,8 +626,8 @@ class MobileFrontendHooks {
 			$path = preg_replace( "/^([a-z]+:)?(\/)*/", '', $mobileUrl, 1 );
 
 			$scheme = 'http';
-			if ( $wgMFAppScheme !== false ) {
-				$scheme = $wgMFAppScheme;
+			if ( $mfAppScheme !== false ) {
+				$scheme = $mfAppScheme;
 			} else {
 				$protocol = $request->getProtocol();
 				if ( $protocol != '' ) {
@@ -625,14 +635,9 @@ class MobileFrontendHooks {
 				}
 			}
 
-			$hreflink = 'android-app://' . $wgMFAppPackageId . '/' . $scheme . '/' . $path;
+			$hreflink = 'android-app://' . $mfAppPackageId . '/' . $scheme . '/' . $path;
 			$out->addLink( array( 'rel' => 'alternate', 'href' => $hreflink ) );
 		}
-
-		$config = $context->getMFConfig();
-		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
-		$mfMobileUrlTemplate = $config->get( 'MobileUrlTemplate' );
-		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
 
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
@@ -657,7 +662,7 @@ class MobileFrontendHooks {
 
 		// Set X-Analytics HTTP response header if necessary
 		if ( $context->shouldDisplayMobileView() ) {
-			$analyticsHeader = ( $wgMFEnableXAnalyticsLogging ? $context->getXAnalyticsHeader() : false );
+			$analyticsHeader = ( $mfEnableXAnalyticsLogging ? $context->getXAnalyticsHeader() : false );
 			if ( $analyticsHeader ) {
 				$resp = $out->getRequest()->response();
 				$resp->header( $analyticsHeader );
@@ -708,7 +713,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
-		global $wgMFEnableMinervaBetaFeature;
+		$mfEnableMinervaBetaFeature = MobileContext::singleton()->getMFConfig()
+			->get( 'MFEnableMinervaBetaFeature' );
 		$definition = array(
 			'type' => 'api',
 			'default' => '',
@@ -720,7 +726,7 @@ class MobileFrontendHooks {
 		// BetaFeatures.
 		if ( !class_exists( 'BetaFeatures' )
 			|| !BetaFeatures::isFeatureEnabled( $user, 'betafeatures-minerva' )
-			|| !$wgMFEnableMinervaBetaFeature
+			|| !$mfEnableMinervaBetaFeature
 		) {
 			// Preference key/values are backwards. The value is the name of the skin. The
 			// key is the text+links to display.
@@ -743,9 +749,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFEnableMinervaBetaFeature;
+		$context = MobileContext::singleton();
+		$extensionAssetsPath = $context->getConfig()->get( 'ExtensionAssetsPath' );
+		$mfEnableMinervaBetaFeature = $context->getMFConfig()->get( 'MFEnableMinervaBetaFeature' );
 
-		if ( $wgMFEnableMinervaBetaFeature ) {
+		if ( $mfEnableMinervaBetaFeature ) {
 			// Enable the mobile skin on desktop
 			$preferences['betafeatures-minerva'] = array(
 				'label-message' => 'beta-feature-minerva',
@@ -753,8 +761,8 @@ class MobileFrontendHooks {
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
 				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
 				'screenshot' => array(
-					'ltr' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-ltr.svg",
-					'rtl' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-rtl.svg",
+					'ltr' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-ltr.svg",
+					'rtl' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-rtl.svg",
 				),
 			);
 		}
@@ -795,10 +803,10 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
-		global $wgServer;
 		$context = MobileContext::singleton();
+		$server = $context->getConfig()->get( 'Server' );
 		if ( $context->shouldDisplayMobileView() ) {
-			$data['mobileServer'] = $context->getMobileUrl( $wgServer );
+			$data['mobileServer'] = $context->getMobileUrl( $server );
 		}
 		return true;
 	}
@@ -929,6 +937,7 @@ class MobileFrontendHooks {
 		$additionalDependencies = array(),
 		$overwrite = false
 	) {
+		// FIXME: Use Config object when setting of configuration values is possible.
 		global $wgResourceModules, $wgMFResourceFileModuleBoilerplate;
 
 		if ( isset( $wgResourceModules['mobile.loggingSchemas'] ) && !$overwrite ) {
@@ -966,14 +975,14 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
-		global $wgMFUseWikibaseDescription;
-
 		$context = MobileContext::singleton();
+		$mfUseWikibaseDescription = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
+
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
 
-			if ( $wgMFUseWikibaseDescription && $context->isBetaGroupMember() ) {
+			if ( $mfUseWikibaseDescription && $context->isBetaGroupMember() ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );

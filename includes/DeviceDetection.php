@@ -239,11 +239,12 @@ class DeviceDetection implements IDeviceDetector {
 	 * @return IDeviceDetector
 	 */
 	public static function factory() {
-		global $wgDeviceDetectionClass;
+		$deviceDetectionClass = MobileContext::singleton()->getMFConfig()
+			->get( 'DeviceDetectionClass' );
 
 		static $instance = null;
 		if ( !$instance ) {
-			$instance = new $wgDeviceDetectionClass();
+			$instance = new $deviceDetectionClass();
 		}
 		return $instance;
 	}

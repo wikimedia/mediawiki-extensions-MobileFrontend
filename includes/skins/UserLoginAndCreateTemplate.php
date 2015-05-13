@@ -103,9 +103,9 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	 * @return bool
 	 */
 	protected function doStickHTTPS() {
-		global $wgSecureLogin;
+		$secureLogin = $this->config->get( 'SecureLogin' );
 		$request = $this->getRequestContext()->getRequest();
-		if ( $wgSecureLogin && $request->detectProtocol() === 'https' ) {
+		if ( $secureLogin && $request->detectProtocol() === 'https' ) {
 			return true;
 		}
 		return false;
@@ -115,15 +115,16 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	 * Display Mobile Frontend specific logo over login form.
 	 */
 	protected function getLogoHtml() {
-		global $wgMobileFrontendLogo;
+		$mfLogo = MobileContext::singleton()->getMFConfig()
+			->get( 'MobileFrontendLogo' );
 
-		if ( !$wgMobileFrontendLogo ) {
+		if ( !$mfLogo ) {
 			return '';
 		}
 		return '<div class="watermark">'
 			. Html::element( 'img',
 				array(
-					'src' => $wgMobileFrontendLogo,
+					'src' => $mfLogo,
 					'alt' => '',
 				)
 			)
