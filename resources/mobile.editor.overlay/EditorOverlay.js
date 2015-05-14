@@ -92,7 +92,7 @@
 			// be explicit here. This may have been initialized from VE.
 			options.isVisualEditor = false;
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-			EditorOverlayBase.prototype.initialize.apply( this, arguments );
+			EditorOverlayBase.prototype.initialize.call( this, options );
 		},
 		events: $.extend( {}, EditorOverlayBase.prototype.events, {
 			'input .wikitext-editor': 'onInputWikitextEditor'
@@ -192,8 +192,12 @@
 				warning: 'mobile-frontend-edit-signup-action'
 			}, options.signupQueryParams );
 
-			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
-			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+			options.loginButton = $.extend( {
+				href: mw.util.getUrl( 'Special:UserLogin', params )
+			}, this.defaults.loginButton );
+			options.signupButton = $.extend( {
+				href: mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
+			}, this.defaults.signupButton );
 
 			return options;
 		},
