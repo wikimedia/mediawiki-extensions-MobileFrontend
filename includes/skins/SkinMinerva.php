@@ -634,7 +634,6 @@ class SkinMinerva extends SkinTemplate {
 		$unixTimestamp = wfTimestamp( TS_UNIX, $timestamp );
 		$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
 		$link = array(
-			'id' => 'mw-mf-last-modified',
 			'data-timestamp' => $isMainPage ? '' : $unixTimestamp,
 			'href' => $historyUrl,
 			'text' => $lastModified,
@@ -652,9 +651,6 @@ class SkinMinerva extends SkinTemplate {
 			} else {
 				$link['data-user-gender'] = 'unknown';
 			}
-		}
-		if ( !$title->isMainPage() ) {
-			$link['class'] = 'last-modified-bar truncated-text';
 		}
 		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;

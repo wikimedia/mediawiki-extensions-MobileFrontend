@@ -13,10 +13,11 @@
 	 */
 	function initHistoryLink() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
-			historyUrl = $lastModified.attr( 'href' ),
-			ts = $lastModified.data( 'timestamp' ),
-			username = $lastModified.data( 'user-name' ) || false,
-			gender = $lastModified.data( 'user-gender' ),
+			$lastModifiedLink = $lastModified.find( 'a' ),
+			historyUrl = $lastModifiedLink.attr( 'href' ),
+			ts = $lastModifiedLink.data( 'timestamp' ),
+			username = $lastModifiedLink.data( 'user-name' ) || false,
+			gender = $lastModifiedLink.data( 'user-gender' ),
 			keys = {
 				seconds: 'mobile-frontend-last-modified-with-user-seconds',
 				minutes: 'mobile-frontend-last-modified-with-user-minutes',
@@ -37,7 +38,7 @@
 				] );
 			}
 			if ( time.isRecent( delta ) ) {
-				$lastModified.addClass( 'active' );
+				$lastModified.parent( '.last-modified-bar' ).addClass( 'active' );
 			}
 
 			args = args.concat( [ historyUrl,
@@ -47,11 +48,23 @@
 				username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : ''
 			] );
 
-			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' )
-				.attr( 'class', $lastModified.attr( 'class' ) )
-				.html( mw.message.apply( this, args ).parse() )
-				.insertBefore( $lastModified );
-			$lastModified.remove();
+			$lastModifiedLink.html( mw.message.apply( this, args ).parse() );
+
+			// FIXME: remove this when the cache clears. Today is 05/21/2015.
+			// Make the cached DOM look similar to the new DOM
+			if ( $lastModified.hasClass( 'last-modified-bar' ) ) {
+				$lastModified
+					.removeClass( 'last-modified-bar' )
+					.wrap( '<div class="last-modified-bar"></div>' );
+			}
+		} else {
+			// FIXME: remove this when the cache clears. Today is 05/21/2015.
+			// Make the cached DOM look similar to the new DOM on the Main_Page
+			// It's important that this runs when the DOM is ready, otherwise it won't work
+			// in stable where the 'history-link-loaded' event is fired before the DOM is ready.
+			$( function () {
+				$( '#mw-mf-last-modified' ).removeClass( 'last-modified-bar' );
+			} );
 		}
 	}
 
