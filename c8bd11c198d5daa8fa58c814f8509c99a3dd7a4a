@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_0116315a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-14T09:12:38Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_69236900",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-14T09:12:38Z",
+      "side": 1,
+      "message": "should this be getConfig?",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_89e80da4",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-14T09:12:38Z",
+      "side": 1,
+      "message": "\u003d and \u003d",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
