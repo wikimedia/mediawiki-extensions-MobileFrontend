@@ -82,12 +82,19 @@ class SpecialTopicTag extends MobileSpecialPage {
 					$extract = $page['extract']['*'];
 				}
 				$item = new models\CollectionItem( $title, $image, $extract );
-				array_push( $collectionItems, $item );
+				$collectionItems[$page['pageid']] = $item;
+			}
+		}
+
+		$orderedCollectionItems = array();
+		foreach ( $pageIds as $id ) {
+			if ( isset( $collectionItems[$id] ) ) {
+				array_push( $orderedCollectionItems, $collectionItems[$id] );
 			}
 		}
 
 		$collection = new models\Collection( null, $this->getUser() );
-		$collection->batch( $collectionItems );
+		$collection->batch( $orderedCollectionItems );
 		$this->render( new views\Collection( $this->getUser(), $collection ) );
 	}
 
