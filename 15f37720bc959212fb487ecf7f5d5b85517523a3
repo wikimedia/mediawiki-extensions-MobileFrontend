@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_fa94f63a",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-14T16:50:57Z",
+      "side": 1,
+      "message": "redundant whitespace",
+      "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_faab966a",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-14T16:50:57Z",
+      "side": 1,
+      "message": "I think this will break delegateEvents() that is run earlier in _postInitialize.",
+      "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
