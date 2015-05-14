@@ -217,25 +217,13 @@
 		 * options
 		 */
 		render: function ( data ) {
-			var optionsClone, key;
 			$.extend( this.options, data );
-			optionsClone = $.extend( {}, this.options );
-			// if someone accesses the optionsClone tell them they are doing it wrong.
-			for ( key in optionsClone ) {
-				if ( optionsClone.hasOwnProperty( key ) ) {
-					mw.log.deprecate( optionsClone, key,
-						this.options,
-						'Please access this.options inside your View rather than relying on the parameter in preRender/postRender.' );
-				}
-			}
-			// FIXME: don't pass optionsClone in the next version (see mobile.startup.init.js)
-			this.preRender( optionsClone );
+			this.preRender();
 
-			if ( this.template && !this.options.enhance ) {
+			if ( this.template  && !this.options.enhance ) {
 				this.$el.html( this.template.render( this.options, this.templatePartials ) );
 			}
-			// FIXME: don't pass optionsClone in the next version (see mobile.startup.init.js)
-			this.postRender( optionsClone );
+			this.postRender();
 
 			return this;
 		},
