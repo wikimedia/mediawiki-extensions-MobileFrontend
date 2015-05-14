@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_9ae84aa4",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-14T16:57:03Z",
+      "side": 1,
+      "message": "Why not deprecate it now since you\u0027re changing the name now? Anything I\u0027m missing?",
+      "revId": "f122bd74a0369e8370fca872fc57980ca0e43646",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
