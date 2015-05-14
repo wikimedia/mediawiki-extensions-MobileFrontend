@@ -52,6 +52,24 @@
       "revId": "9aa651325d7b1bbd234509c11b55c94e5cf38228",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a162c5a0",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-05-14T03:28:47Z",
+      "side": 1,
+      "message": "We discussed it on IRC, which resulted in T98985 requesting a change to core to enable something more correct here. +2ing this change is fine with me, as long as using I8370f47f here (it should be an easy replacement) makes it onto someone\u0027s todo list.\n\n\u003e is there likely to be any issues with passing something in like \u00270|Foo bar\u0027 ?\n\nIn the short term, \"0|Foo_bar\" would be incorrect if the HTML-rendered watchlist that lastTitle is being pulled from has few enough mainspace entries that it gets into some other namespace (e.g. it would be passing \"0|Foo_bar\" or \"0|Wikipedia:Foo_bar\" instead of \"4|Foo_bar\"). In the long term, it\u0027s not impossible that the necessary values for \u0027continue\u0027 or \u0027gwrcontinue\u0027 could somehow change without warning.\n\n\u003e then doing a follow up to see what happens when we remove it\n\nFrom what I\u0027ve been told, just removing it completely would cause the first page of watchlist entries to be repeated in Mobile when scrolling down on whichever page uses this.",
+      "parentUuid": "0ed113e2_f43c1090",
+      "revId": "9aa651325d7b1bbd234509c11b55c94e5cf38228",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
