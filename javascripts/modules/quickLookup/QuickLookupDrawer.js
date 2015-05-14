@@ -65,7 +65,7 @@
 			// add watchstar
 			if ( !user.isAnon() ) {
 				mw.loader.using( 'mobile.watchstar', function () {
-					var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
+					var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 						WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 						watchstarApi,
 						page;

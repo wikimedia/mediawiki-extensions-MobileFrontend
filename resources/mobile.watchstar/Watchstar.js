@@ -184,6 +184,8 @@
 
 	} );
 
-	M.define( 'modules/watchstar/Watchstar', Watchstar );
+	M.define( 'mobile.watchstar/Watchstar', Watchstar )
+		// FIXME: Deprecate this module name which is used by Gather
+		.deprecate( 'modules/watchstar/Watchstar' );
 
 }( mw.mobileFrontend ) );

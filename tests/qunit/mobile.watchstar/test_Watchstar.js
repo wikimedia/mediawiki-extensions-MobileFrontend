@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
+	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		toast = M.require( 'toast' ),

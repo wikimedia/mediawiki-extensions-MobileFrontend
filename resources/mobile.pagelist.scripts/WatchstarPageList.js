@@ -2,7 +2,7 @@
 
 	var WatchstarPageList,
 		PageList = M.require( 'PageList' ),
-		Watchstar = M.require( 'modules/watchstar/Watchstar' ),
+		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' );
