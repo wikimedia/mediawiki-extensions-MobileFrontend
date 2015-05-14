@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-edit": "Bıvurne",
 	"mobile-frontend-editor-editing-page": "<strong>Sero gureyayış</strong><span>$1</span>",
 	"mobile-frontend-editor-keep-editing": "Vurnayışi bışevekne",
-	"mobile-frontend-editor-previewing-page": "<strong>Asayışê veri</strong><span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Asayışê veri</strong> $1</span>",
 	"mobile-frontend-editor-save": "Qeyd ke",
 	"mobile-frontend-editor-source-editor": "Vıraştoğê çımey",
 	"mobile-frontend-editor-tutorial-cancel": "Nê, sıpas",

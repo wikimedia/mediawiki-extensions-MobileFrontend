@@ -50,7 +50,7 @@
 	"mobile-frontend-editor-keep-editing": "Widjer bewerke",
 	"mobile-frontend-editor-newpage-prompt": "Detdiar sidj jaft at ei. Gung man bi an skriiw det!",
 	"mobile-frontend-editor-placeholder": "Didiar kirew as leesag. Wees di iarst, di ham ütjwidjet!",
-	"mobile-frontend-editor-previewing-page": "<strong>Föörskau</strong><span> faan $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Föörskau</strong><span> faan $1</span>",
 	"mobile-frontend-editor-save": "Seekre",
 	"mobile-frontend-editor-success": "Det hää loket! Din werk as seekert.",
 	"mobile-frontend-editor-success-landmark-1": "Gratliare! Dü beest nü en {{SITENAME}}-skriiwer!",

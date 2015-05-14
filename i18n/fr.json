@@ -95,7 +95,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
 	"mobile-frontend-editor-anonwarning": "<strong>Attention</strong> : vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
-	"mobile-frontend-editor-blocked": "Votre compte est bloqué en modification.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Votre compte est bloqué de toute modification. Le bloc a été mis en place par {{GENDER:$2|$2}} pour la raison suivante: $1",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
@@ -118,7 +117,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Cette page n’existe pas. Pourquoi ne pas vous lancer et la créer ?",
 	"mobile-frontend-editor-placeholder": "Cette section est vide. Soyez le premier  à la compléter !",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Vous}} {{GENDER:$1|êtes en train de créer}} une nouvelle page sur {{SITENAME}} !",
-	"mobile-frontend-editor-previewing-page": "<strong>Aperçu</strong> de<span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Aperçu</strong> de<span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Redirection vers l'éditeur...",
 	"mobile-frontend-editor-save": "Sauvegarder",
 	"mobile-frontend-editor-source-editor": "Éditeur de source",
@@ -439,5 +438,7 @@
 	"mobile-frontend-months-ago": "Il y a $1 {{PLURAL:$1|mois}}",
 	"mobile-frontend-years-ago": "Il y a $1 {{PLURAL:$1|an|ans}}",
 	"mobile-frontend-console-recruit": "\\o/ Hey! C'est un logiciel open source et nous avons besoin de volontaires pour nous aider à construire cette chose, le rendre meilleur et résoudre les éventuels bugs que vous pourriez voir dans cette console JavaScript!\n\nVous pouvez trouver notre carnet de commandes @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Balises"
+	"mobile-frontend-browse-tags-header": "Balises",
+	"mobile-frontend-panel-ok": "D’accord",
+	"mobile-frontend-panel-cancel": "Non merci"
 }

@@ -57,7 +57,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Opjepaß: Wells De heh di Änderong verhaftesch afschpeijschere? Mer ha doh jät jefonge.",
 	"mobile-frontend-editor-anon": "Donn ändere, der ohne ennzelogge",
 	"mobile-frontend-editor-anonwarning": "'''Opjepaß:''' Weil De nit enjelogg bes, weed Ding <i lang=\"en\" xml:lang=\"en\">IP</i>-Adräß faßjehallde wääde, wann De Änderonge mähß. Wann De\n[$1 '''enlogge''' deihs] udder [$2 '''desch aanmällds'''], dann wääde Ding Änderonge met Dingem Nahme als Metmaacher opjevöhrt, nävve ander johde Saache.",
-	"mobile-frontend-editor-blocked": "Dinge Zohjang es vum Ändere ußjeschloße.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Dinge Zohjang zom Wikki es vum Ändere ußjeschloße. Di Schpär wood {{GENDER:$2|vum|vum|vumm Metmaacher|vun dä|vum}} $2 ennjereesch weil: $1.",
 	"mobile-frontend-editor-cancel": "Ophüre",
 	"mobile-frontend-editor-cancel-confirm": "Wells De Ding Änderonge verhaftesch fottschmiiße?",

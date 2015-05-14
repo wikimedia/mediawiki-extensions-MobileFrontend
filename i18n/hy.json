@@ -31,7 +31,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Իմանալ ավելին",
 	"mobile-frontend-editor-edit": "Խմբագրել",
 	"mobile-frontend-editor-editing-page": "<strong>Խմբագրում</strong> <span>$1</span>",
-	"mobile-frontend-editor-previewing-page": "<strong>Նախադիտում</strong> <span>$1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Նախադիտում</strong> $1</span>",
 	"mobile-frontend-featured-article": "Օրվա ընտրված նյութը",
 	"mobile-frontend-generic-login": "{{SITENAME}}՝ ստեղծված է ձեզ պես մարդկանց կողմից։",
 	"mobile-frontend-generic-login-action": "Ներդրում կատարելու համար մուտք գործեք։",

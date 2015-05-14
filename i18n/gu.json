@@ -37,7 +37,6 @@
 	"mobile-frontend-editor-abusefilter-read-more": "વધુ વાંચો",
 	"mobile-frontend-editor-abusefilter-warning": "ચેતવણી: જો તમે આ ફેરફાર સેવ માંગો છો? તે સાથે એક મુદ્દો હોઈ શકે છે.",
 	"mobile-frontend-editor-anon": "અજ્ઞાત રૂપે ફેરફાર કરો",
-	"mobile-frontend-editor-blocked": "તમારી એકાઉન્ટ સંપાદન કરવાથી અવરોધિત કરવામાં આવે છે.",
 	"mobile-frontend-editor-blocked-info-loggedin": "તમારા ખાતા પર {{GENDER:$2|$2}} એ $1 ને કારણે પ્રતિબંધ મુક્યો છે.",
 	"mobile-frontend-editor-cancel": "રદ કરો",
 	"mobile-frontend-editor-cancel-confirm": "તમે ખરેખર તમારા ફેરફાર છોડવા માંગો છો?",

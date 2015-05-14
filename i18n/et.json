@@ -49,7 +49,6 @@
 	"mobile-frontend-edit-signup-action": "<strong>Aita {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.</strong><br />Registreeru, et redigeerida.",
 	"mobile-frontend-editor-anon": "Redigeeri sisse logimata",
 	"mobile-frontend-editor-anonwarning": "<strong>Hoiatus</strong>: Sa pole sisse logitud. Kui teed muudatusi, on sinu IP-aadress kõigile avalikult nähtav. Kui <strong>logid sisse</strong> või <strong>lood konto</strong>, omistatakse muudatused sulle kasutajanime järgi, seda lisaks muudele eelistele.",
-	"mobile-frontend-editor-blocked": "Sinu kontol on redigeerimine blokeeritud.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Sinu kontol on redigeerimine blokeeritud. Blokeerinud $2 järgmise põhjendusega: $1",
 	"mobile-frontend-editor-blocked-info": "Redigeerimine sinu IP-aadressiga on blokeeritud. Blokeerinud $1 järgmise põhjendusega: $2.",
 	"mobile-frontend-editor-cancel": "Loobu",

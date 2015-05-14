@@ -67,7 +67,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Atención: Está seguro de querer gardar esta edición? Pode haber problemas con ela.",
 	"mobile-frontend-editor-anon": "Editar sen iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: non accedeu ao sistema. O seu enderezo IP será visible públicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
-	"mobile-frontend-editor-blocked": "A sua conta está bloqueada e non pode editar con ela.",
 	"mobile-frontend-editor-blocked-info-loggedin": "A súa conta está bloqueada e non pode realizar edicións. O bloqueo foi feito por {{GENDER:$2|$2}} polo seguinte motivo: $1",
 	"mobile-frontend-editor-blocked-info": "O seu enderezo IP está bloqueado para editar. O bloqueo realizouno {{GENDER:$1|$1}} pola seguinte razón: $2.",
 	"mobile-frontend-editor-cancel": "Cancelar",
@@ -91,7 +90,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Esta páxina non existe. Sexa valente e empece a escribila!",
 	"mobile-frontend-editor-placeholder": "Esta sección está baleira. Sexa o primeiro en expandila!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Está creando}} unha páxina nova en {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<strong>Vista previa </strong><span>de $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Vista previa </strong><span>de $1</span>",
 	"mobile-frontend-editor-redirect-title": "Redirixindo ó editor…",
 	"mobile-frontend-editor-save": "Gardar",
 	"mobile-frontend-editor-source-editor": "Editar a fonte",
@@ -370,6 +369,7 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Suba unha foto para esta páxina.",
 	"apihelp-mobileview-description": "Devolve datos necesarios para as vistas nos móbiles.",
 	"apihelp-mobileview-param-page": "Título da páxina a procesar.",
+	"apihelp-mobileview-param-redirect": "Se as redireccións deben ser seguidas.",
 	"apihelp-mobileview-param-sectionprop": "Que información obter sobre as seccións.",
 	"apihelp-mobileview-param-pageprops": "Que propiedades de páxina devolver, unha lista separada por unha barra vertical (\"|\") ou \"*\" para todas as propiedades.",
 	"apihelp-mobileview-param-variant": "Converter o contido nesta variante do idioma.",
@@ -410,5 +410,6 @@
 	"mobile-frontend-console-recruit": "\\o/ Ola! Isto é software de código aberto e necesitamos voluntarios que nos boten unha man para construílo, melloralo e reparar os fallos que se cadra atopas nesta consola de JavaScript.",
 	"mobile-frontend-browse-tags-header": "Etiquetas",
 	"mobile-frontend-panel-ok": "Aceptar",
-	"mobile-frontend-panel-cancel": "Non, grazas"
+	"mobile-frontend-panel-cancel": "Non, grazas",
+	"mobile-frontend-panel-betaoptin-msg": "Quere probar algúns trebellos novos? Ó unirse á beta, accederá a trebellos experimentais, co risco de encontrarse con algúns erros e problemas."
 }

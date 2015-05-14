@@ -215,5 +215,7 @@
 	"tag-mobile_web_edit": "Сайтан мобилан версица дина нисдарш",
 	"tag-mobile_web_edit-description": "Сайтан мобилан версица дина нисдарш",
 	"mobile-frontend-donate-button-label": "Проектна гӀо дар",
-	"mobile-frontend-browse-tags-header": "Тегаш"
+	"mobile-frontend-browse-tags-header": "Тегаш",
+	"mobile-frontend-panel-ok": "Дика ду",
+	"mobile-frontend-panel-cancel": "ХӀахӀа, баркалла"
 }

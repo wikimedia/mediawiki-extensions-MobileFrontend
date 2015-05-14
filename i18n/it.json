@@ -62,7 +62,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.",
 	"mobile-frontend-editor-anon": "Modifica senza effettuare l'accesso",
 	"mobile-frontend-editor-anonwarning": "<strong>Attenzione</strong>: Accesso non effettuato. Se effettuerai delle modifiche il tuo indirizzo IP sarà visibile pubblicamente. Se <strong>accedi</strong> o <strong>crei un'utenza</strong>, le tue modifiche saranno attribuite al tuo nome utente, insieme ad altri benefici.",
-	"mobile-frontend-editor-blocked": "La tua utenza è bloccata alle modifiche.",
 	"mobile-frontend-editor-cancel": "Annulla",
 	"mobile-frontend-editor-cancel-confirm": "Vuoi davvero abbandonare la tua modifica?",
 	"mobile-frontend-editor-captcha-try-again": "Codice errato, riprova.",
@@ -83,7 +82,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Questa pagina non esiste. Perché non essere audaci e crearla?",
 	"mobile-frontend-editor-placeholder": "Questa sezione è vuota. Scrivila tu per primo!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Stai creando}} una nuova pagina su {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<strong>Anteprima</strong><span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Anteprima</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Reindirizzamento all'editor...",
 	"mobile-frontend-editor-save": "Salva",
 	"mobile-frontend-editor-source-editor": "Modifica wikitesto",
@@ -345,5 +344,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Modifica la sezione iniziale di questa pagina.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carica una foto iniziale per questa pagina.",
 	"mobile-frontend-donate-button-label": "Dona",
-	"mobile-frontend-wikidata-editor-description-label": "Fornisci una breve descrizione di \"$1\":"
+	"mobile-frontend-wikidata-editor-description-label": "Fornisci una breve descrizione di \"$1\":",
+	"mobile-frontend-panel-cancel": "No, grazie"
 }

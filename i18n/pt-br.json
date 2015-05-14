@@ -65,7 +65,7 @@
 	"mobile-frontend-editor-keep-editing": "Continuar editando",
 	"mobile-frontend-editor-newpage-prompt": "Essa não existe. Por que não ser audaz e criar?",
 	"mobile-frontend-editor-placeholder": "Essa seção está vazia. Seja o primeiro a expandi-la!",
-	"mobile-frontend-editor-previewing-page": "<strong>Pré-visualização de</strong><span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Pré-visualização de</strong> $1</span>",
 	"mobile-frontend-editor-save": "Salvar",
 	"mobile-frontend-editor-success": "Sucesso! Sua edição foi salva.",
 	"mobile-frontend-editor-success-landmark-1": "Parabéns, agora você é um editor da {{SITENAME}}!",

@@ -47,7 +47,7 @@
 	"mobile-frontend-editor-keep-editing": "संपादन चालू ठेवा",
 	"mobile-frontend-editor-newpage-prompt": "हे पान अस्तित्वात नाही. बनवण्यासाठी प्रयत्न करता का ?",
 	"mobile-frontend-editor-placeholder": "हा विभाग रिकामा आहे.त्याचा विस्तार करणारी आपण 'सर्वप्रथम' व्यक्ति व्हा!",
-	"mobile-frontend-editor-previewing-page": "<strong>झलक</strong><span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>झलक</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "संपादन खिडकीकडे पाठवत आहे...",
 	"mobile-frontend-editor-save": "जतन करा",
 	"mobile-frontend-editor-success": "यशस्वी! तुमचे संपादन जतन करण्यात आले आहे.",

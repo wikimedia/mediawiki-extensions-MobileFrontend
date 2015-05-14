@@ -14,7 +14,7 @@
 	"mobile-frontend-edit-login-action": "د سمولو لپاره غونډال ته ورننوځۍ.",
 	"mobile-frontend-editor-cancel": "ناگارل",
 	"mobile-frontend-editor-edit": "سمول",
-	"mobile-frontend-editor-previewing-page": "<span>د $1</span><strong>مخليدنه</strong>",
+	"mobile-frontend-editor-previewing-page": "<span>د $1</span><span><strong>مخليدنه</strong>",
 	"mobile-frontend-editor-success": "بريال! سمون مو خوندي شو.",
 	"mobile-frontend-enable-images": "په موبايل وېبځي انځورونه چارنول",
 	"mobile-frontend-featured-article": "د نن غوره شوی مطلب",
