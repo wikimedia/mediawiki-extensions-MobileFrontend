@@ -1751,18 +1751,6 @@ $wgMinervaBootstrapModules = array(
 			'resources/skins.minerva.alpha.scripts/projects.js',
 		)
 	),
-	// FIXME: Alias. Remove when cache cleared.
-	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array( 'skins.minerva.scripts' ),
-	),
-	// FIXME: Alias.Remove when cache cleared.
-	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array( 'skins.minerva.beta.scripts' ),
-	),
-	// FIXME: Alias. Remove when cache cleared.
-	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array( 'skins.minerva.alpha.scripts' ),
-	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			// Feature modules that should be loaded on tablets should be listed below here.
