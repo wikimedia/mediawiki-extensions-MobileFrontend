@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3a8fde28",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-14T16:45:39Z",
+      "side": 1,
+      "message": "The options were already deprecated. Should read \"Remove deprecated ...\"",
+      "revId": "e3457921dcfec7776628e43e53627cbd46546226",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
