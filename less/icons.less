@@ -1,39 +1,10 @@
-/**
- * FIXME: Remove this entire file when cache has cleared (this is needed for non-js users)
- * Note that with JS disabled only hamburger and search icon are visible in stable on an article page.
- * JS fixes the other issues with the icon class being used in page html.
- * Remember HTML for special pages is not cached.
- */
+// FIXME: This file should be shared across repositories
 @import "minerva.variables";
 @import "minerva.mixins";
 @import "mediawiki.mixins";
 
-.default-icon-size( @size ) {
-	min-height: @size;
-	min-width: @size;
-}
-
-.icon {
-	background-repeat: no-repeat;
-	.background-size( 24px, auto );
-	cursor: pointer;
-	background-position: center center;
-	text-indent: -9999px;
-	overflow: hidden;
-	.default-icon-size( 24px );
-
-	&[disabled] {
-		opacity: .5;
-	}
-}
-
-.icon-search {
-	width: 24px;
-	height: 24px;
-	background-color: #FFF;
-	.background-image-svg-quick('images/magnifying-glass');
-}
-
-.icon-mainmenu {
-	.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
+// FIXME: Find better workaround for this
+span.mw-ui-icon {
+	// a block inside an inline element is never a good idea - effects line height of mobile diff bytesadded class
+	display: inline-block;
 }
