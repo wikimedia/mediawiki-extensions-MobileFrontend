@@ -136,6 +136,8 @@
 	"mobile-frontend-editor-redlink-leave": "Used as a message for a link, that the user doesn't want to edit a page, that does not exist yet.\n{{Identical|No thanks}}",
 	"mobile-frontend-editor-redlink-explain": "Question for the user, if he want to edit a page, which link he clicked and that does not exist yet, or not.",
 	"mobile-frontend-editor-redlink-create": "Label for a create page button.\n{{Identical|Create page}}",
+	"mobile-frontend-editor-showhistory": "Label for a link redirect the user to the page history.",
+	"mobile-frontend-editor-protected": "Message that appears when a user is unable to edit a page and clicks edit icon.",
 	"mobile-frontend-enable-images": "Unused at this time.\n\nSee also:\n* {{msg-mw|Mobile-frontend-disable-images}}",
 	"mobile-frontend-errorreport-button-label": "Label for button for submitting an error report. Keep this short.",
 	"mobile-frontend-errorreport-error": "Error displayed when feedback could not be posted.",

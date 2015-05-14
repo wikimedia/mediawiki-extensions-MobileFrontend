@@ -262,8 +262,7 @@
 				} );
 				$( '.edit-page' ).detach();
 			} else {
-				$caEdit.removeClass( 'hidden' );
-				showSorryToast( 'mobile-frontend-editor-disabled' );
+				disableEditor();
 			}
 		}
 	}
@@ -292,9 +291,40 @@
 				makeCta( $a, section );
 			} );
 		} else {
-			$caEdit.removeClass( 'hidden' );
-			showSorryToast( 'mobile-frontend-editor-disabled' );
+			disableEditor();
 		}
+	}
+
+	/**
+	 * Unhide the editor button, but still shows a locked editor icon, which, when clicked,
+	 * shows a ContentOverlay with the message, that this page is protected.
+	 * @method
+	 * @ignore
+	 */
+	function disableEditor() {
+		var title = mw.Title.newFromText( mw.config.get( 'wgPageName' ) ),
+			drawerOptions = {
+				progressiveButton: new Button( {
+					progressive: true,
+					label: mw.msg( 'mobile-frontend-editor-showhistory' ),
+					href: title.getUrl( { action: 'history' } )
+				} ).options,
+				closeAnchor: new Anchor( {
+					progressive: true,
+					label: mw.msg( 'cancel' ),
+					additionalClassNames: 'hide'
+				} ).options,
+				content: mw.msg( 'mobile-frontend-editor-protected' ),
+				actionAnchor: false
+			},
+			drawer;
+
+		$caEdit.removeClass( 'hidden' ).on( 'click', function () {
+			if ( drawer === undefined ) {
+				drawer = new CtaDrawer( drawerOptions );
+			}
+			drawer.show();
+		} );
 	}
 	/**
 	 * Show a toast message with sincere condolences.
