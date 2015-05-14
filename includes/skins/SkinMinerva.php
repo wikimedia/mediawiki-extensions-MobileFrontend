@@ -918,7 +918,6 @@ class SkinMinerva extends SkinTemplate {
 				);
 			}
 			$vars['wgMFUserBlockInfo'] = $blockInfo;
-			$vars['wgMFExperiments'] = $config->get( 'MFExperiments' );
 		}
 
 		$vars['wgMFShowRedLinks'] = $user->isLoggedIn()

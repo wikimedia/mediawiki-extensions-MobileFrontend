@@ -350,7 +350,7 @@ class MobileFrontendHooks {
 	/**
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which vary with the html
-	 * and for variables this should work cross skin
+	 * and for variables this should work cross skin including anonymous users
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
 	 * @param array $vars
@@ -363,6 +363,7 @@ class MobileFrontendHooks {
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$wgMFUploadLicense = SkinMinerva::getLicense( 'upload' );
 		$vars += array(
+			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
