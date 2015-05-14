@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_30e4dd09",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-14T19:54:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_0116315a",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_69236900",
         "filename": "includes/MobileUserInfo.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_70dee545",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-14T19:54:11Z",
+      "side": 1,
+      "message": "damn, why i haven\u0027t see this?! :/",
+      "parentUuid": "0ed113e2_69236900",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_89e80da4",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-05-14T09:12:38Z",
       "side": 1,
       "message": "\u003d and \u003d",
+      "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_10e199fa",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-14T19:54:11Z",
+      "side": 1,
+      "message": "seems to be a copy paste error :]",
+      "parentUuid": "0ed113e2_89e80da4",
       "revId": "c8bd11c198d5daa8fa58c814f8509c99a3dd7a4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
