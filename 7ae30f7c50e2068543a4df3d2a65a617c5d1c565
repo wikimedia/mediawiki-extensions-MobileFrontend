@@ -16,6 +16,24 @@
       "revId": "7ae30f7c50e2068543a4df3d2a65a617c5d1c565",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_71eee4ec",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-15T16:26:12Z",
+      "side": 1,
+      "message": "Sure, but could you also tell me what\u0027s wrong with my approach? You mention that it\u0027s related to performance, but other than isset() check I don\u0027t see any improvements in performance. I\u0027d appreciate your feedback.",
+      "parentUuid": "0ed113e2_abab7b6b",
+      "revId": "7ae30f7c50e2068543a4df3d2a65a617c5d1c565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
