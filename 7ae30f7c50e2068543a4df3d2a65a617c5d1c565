@@ -34,6 +34,24 @@
       "revId": "7ae30f7c50e2068543a4df3d2a65a617c5d1c565",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_f16ad4e9",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-15T18:31:28Z",
+      "side": 1,
+      "message": "It\u0027s minor. Your approach isn\u0027t wrong, it could just be made tighter is all. Using the map gets rid of the need for the third loop (array_map, foreach, and a foreach makes three).",
+      "parentUuid": "0ed113e2_71eee4ec",
+      "revId": "7ae30f7c50e2068543a4df3d2a65a617c5d1c565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
