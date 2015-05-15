@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_486215a4",
+        "filename": "resources/mobile.editor.overlay/content.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-15T00:34:25Z",
+      "side": 1,
+      "message": "this isn\u0027t really related to this change, but makes sense :)",
+      "revId": "fc7dfd73a56ac910446842cece4dde8c0b8d6e43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
