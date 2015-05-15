@@ -16,6 +16,24 @@
       "revId": "920295308435d92189a9b344a5855fe17937b6d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_711fc40d",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-15T16:18:46Z",
+      "side": 1,
+      "message": "This is dynamically generated in the skin and is not the same always. Please see https://gerrit.wikimedia.org/r/#/c/210841/1/includes/skins/SkinMinerva.php Even if I remove it here, I\u0027ll need to change the template logic. I think this is a cleaner approach.",
+      "parentUuid": "0ed113e2_8bd557bc",
+      "revId": "920295308435d92189a9b344a5855fe17937b6d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
