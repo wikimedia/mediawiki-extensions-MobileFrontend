@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_c83fe580",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-15T00:28:59Z",
+      "side": 1,
+      "message": "Why is this needed? options.isAnon has to be true already when this code is runnign :) See L#88",
+      "revId": "ff0fadacd38087741972050be272aeb78cfe967f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
