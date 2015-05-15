@@ -16,6 +16,24 @@
       "revId": "ff0fadacd38087741972050be272aeb78cfe967f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_484bf52b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-15T00:30:44Z",
+      "side": 1,
+      "message": "Good catch, Florian.",
+      "parentUuid": "0ed113e2_c83fe580",
+      "revId": "ff0fadacd38087741972050be272aeb78cfe967f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
