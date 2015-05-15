@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_cecfed2a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-15T13:19:19Z",
+      "side": 1,
+      "message": "Also update the name of the tablet content width variable to be less generic.",
+      "revId": "0c1b8960bfb11277ca8d6969dcf4371b17ca39d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
