@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_abab7b6b",
+        "filename": "includes/specials/browse/SpecialTopicTag.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-15T09:27:43Z",
+      "side": 1,
+      "message": "If this were to be replaced with a loop that generated a map of page ID to original index in the array, e.g.:\n\n    foreach ( $titles as $i \u003d\u003e $title ) {\n      $idToOriginalIndexMap[ $title-\u003egetArticleID() ] \u003d $i;\n    }\n\nthen you could preserve the order of the pages without the need for the third loop, i.e.\n\n    // ...\n    $id \u003d $page[\u0027pageid\u0027];\n    $originalIndex \u003d $idToOriginalIndexMap[$id];\n    $collectionItems[$originalIndex] \u003d new models\\CollectionItem( $title, $image, $extract );",
+      "revId": "7ae30f7c50e2068543a4df3d2a65a617c5d1c565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
