@@ -18,7 +18,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
-	"action-mf-uploadbutton": "להשתמש בכפתור העלאה בדפים ניידים.",
+	"action-mf-uploadbutton": "להשתמש במערכת העלאה המיוחדת של MobileFrontend.",
 	"beta-feature-minerva": "הפעלת העיצוב למכשירים ניידים ({{int:skinname-minerva}}) במחשב",
 	"beta-feature-minerva-description": "הוספת האפשרות לבחור בעיצוב שמשמש למכשירים ניידים בתור אחד העיצובים בלשונית \"{{int:prefs-rendering}}\" בהעדפות.",
 	"mobile-frontend-account-create-captcha-placeholder": "נא להזין קוד ביטחון",

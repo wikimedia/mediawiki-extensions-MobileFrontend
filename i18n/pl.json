@@ -341,5 +341,6 @@
 	"mobile-frontend-months-ago": "{{PLURAL:$1|miesiąc|$1 miesiące|$1 miesięcy}} temu",
 	"mobile-frontend-years-ago": "{{PLURAL:$1|rok|$1 lata|$1 lat}} temu",
 	"mobile-frontend-browse-tags-header": "Znaczniki",
+	"mobile-frontend-panel-ok": "OK",
 	"mobile-frontend-panel-cancel": "Nie, dziękuję"
 }

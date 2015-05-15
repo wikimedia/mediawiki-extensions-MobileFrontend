@@ -68,6 +68,8 @@
 	"mobile-frontend-editor-abusefilter-warning": "Upozornění: Určitě chcete uložit tuto editaci? Možná obsahuje nějaký problém.",
 	"mobile-frontend-editor-anon": "Editovat bez přihlášení",
 	"mobile-frontend-editor-anonwarning": "<strong>Varování:</strong> Nejste přihlášen(a). Pokud uložíte jakoukoli editaci, bude vaše IP adresa veřejně viditelná. Pokud se <strong>přihlásíte</strong> nebo si <strong>vytvoříte účet</strong>, budou vaše editace připsány vašemu uživatelskému jménu a získáte i další výhody.",
+	"mobile-frontend-editor-blocked-info-loggedin": "Vašemu uživatelskému účtu byla zablokována možnost editace. Zablokování {{GENDER:$2|provedl|provedla}} $2 s následujícím zdůvodněním: $1",
+	"mobile-frontend-editor-blocked-info": "Vaší IP adrese byla zablokována možnost editace. Zablokování {{GENDER:$1|provedl|provedla}} $1 s následujícím zdůvodněním: $2",
 	"mobile-frontend-editor-cancel": "Storno",
 	"mobile-frontend-editor-cancel-confirm": "Určitě chcete zahodit své úpravy?",
 	"mobile-frontend-editor-captcha-try-again": "Nesprávný kód, zkuste to znovu.",
@@ -76,7 +78,7 @@
 	"mobile-frontend-editor-disabled": "Tato stránka je zamčena, aby se předešlo vandalismu.",
 	"mobile-frontend-editor-edit": "Editovat",
 	"mobile-frontend-editor-editing": "Editace",
-	"mobile-frontend-editor-editing-page": "<strong>Editace stránky</strong><span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Editace stránky</strong> $1</span>",
 	"mobile-frontend-editor-error": "Chyba, editace nebyla uložena.",
 	"mobile-frontend-editor-error-conflict": "Chyba, jiný uživatel mezitím tuto stránku upravil.",
 	"mobile-frontend-editor-error-loading": "Chyba, nelze načíst sekci.",
@@ -363,5 +365,8 @@
 	"mobile-frontend-months-ago": "Před {{PLURAL:$1|měsícem|měsíci}}",
 	"mobile-frontend-years-ago": "před $1 {{PLURAL:$1|rokem|roky|lety}}",
 	"mobile-frontend-console-recruit": "\\o/ Ahój! Tohle je open source software a potřebujeme dobrovolníky, aby nám pomohli s jeho tvorbou, vylepšováním a opravováním všech chyb, které v téhle JavaScriptové konzoli můžete zahlédnout!\n\nNaše resty najdete na https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Štítky"
+	"mobile-frontend-browse-tags-header": "Štítky",
+	"mobile-frontend-panel-ok": "OK",
+	"mobile-frontend-panel-cancel": "Ne, děkuji",
+	"mobile-frontend-panel-betaoptin-msg": "Chcete vyzkoušet některé nové funkce? Připojením k betaverzi získáte přístup k experimentálním funkcím, ale s rizikem, že narazíte na chyby či problémy."
 }

@@ -23,7 +23,7 @@
 			"Captantrips"
 		]
 	},
-	"action-mf-uploadbutton": "mobil sayfalarda yükle düğmesini kullan.",
+	"action-mf-uploadbutton": "MobileFrontend özel yükleme sistemini kullan.",
 	"beta-feature-minerva": "Masaüstü görünümde ({{int:skinname-minerva}}) temasını etkinleştirin",
 	"beta-feature-minerva-description": "Tercihlerimdeki \"{{int:prefs-rendering}}\" bölümünde mobil cihazlar için kullanılın temayı, masaüstü içinde seçilebilir tema yapın.",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",

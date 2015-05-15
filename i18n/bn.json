@@ -9,7 +9,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
-	"action-mf-uploadbutton": "মোবাইল পাতায় আপলোড বোতাম ব্যবহার করুন।",
+	"action-mf-uploadbutton": "মোবাইলসম্মুখঅংশ- নির্দিষ্ট আপলোড ব্যবস্থা ব্যবহার করুন।",
 	"beta-feature-minerva": "ডেস্কটপে মোবাইল স্কিন ({{int:skinname-minerva}}) সক্রিয় করো",
 	"beta-feature-minerva-description": "\"{{int:prefs-rendering}}\" পছন্দসমূহ ট্যাবের অধীনে মোবাইল ডিভাইসে ব্যবহৃত স্কিনটি একটি নির্বাচনযোগ্য ডেস্কটপ স্কিন তৈরি করে।",
 	"mobile-frontend-account-create-captcha-placeholder": "নিশ্চিতকরণ কোড লিখুন",

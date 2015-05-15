@@ -39,5 +39,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "Têkeve",
 	"mobile-frontend-quick-lookup-looking": "Binere \"$1\"",
 	"mobile-frontend-quick-lookup-not-internal": "Bibore, ev lînka $1ê nîne.",
-	"tag-mobile_edit": "Guherandina mobîl"
+	"tag-mobile_edit": "Guherandina mobîl",
+	"mobile-frontend-panel-ok": "Baş e",
+	"mobile-frontend-panel-cancel": "Na spas"
 }

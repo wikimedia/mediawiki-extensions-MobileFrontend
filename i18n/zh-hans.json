@@ -35,7 +35,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
-	"action-mf-uploadbutton": "在移动页面使用上传按钮。",
+	"action-mf-uploadbutton": "使用MobileFrontend专用上传系统。",
 	"beta-feature-minerva": "在桌面版上启用移动版皮肤（{{int:skinname-minerva}}）",
 	"beta-feature-minerva-description": "使适用移动设备的皮肤可作为桌面版的一项皮肤在“{{int:prefs-rendering}}”选项卡中出现。",
 	"mobile-frontend-account-create-captcha-placeholder": "请输入验证码",
