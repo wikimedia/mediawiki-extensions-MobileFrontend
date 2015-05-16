@@ -166,7 +166,6 @@ $wgSpecialPages += array(
 	'UserProfile' => 'SpecialUserProfile',
 	'TopicTag' => 'SpecialTopicTag',
 );
-$wgSpecialPageGroups['Nearby'] = 'pages';
 
 // Register Minerva as a valid skin
 $wgValidSkinNames['minerva'] = "Minerva";

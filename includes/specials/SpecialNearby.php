@@ -57,4 +57,8 @@ class SpecialNearby extends MobileSpecialPage {
 
 		$output->addHTML( $html );
 	}
+
+	protected function getGroupName() {
+		return 'pages';
+	}
 }
