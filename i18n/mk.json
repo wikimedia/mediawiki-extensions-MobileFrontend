@@ -5,7 +5,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Дали корисникот уредува од мобилниот посредник",
-	"action-mf-uploadbutton": "употреба на копчето за подигање на мобилни страници.",
+	"action-mf-uploadbutton": "употреба на копчето за подигање наметено за мобилниот посредник.",
 	"beta-feature-minerva": "Активирај го мобилното руво ({{int:skinname-minerva}})  како немобилно",
 	"beta-feature-minerva-description": "Можност рувото за мобилни уреди да се користи обично (немобилно), избирајќи го во јазичето „{{int:prefs-rendering}}“ во нагодувањата.",
 	"mobile-frontend-account-create-captcha-placeholder": "Внесете го потврдниот код",

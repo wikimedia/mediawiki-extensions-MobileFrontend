@@ -4,7 +4,8 @@
 			"Bishnu Saikia",
 			"Gitartha.bordoloi",
 			"Nilamdyuti",
-			"IKHazarika"
+			"IKHazarika",
+			"Dibya Dutta"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ওপৰত লিখা পাঠ্য লিখক",
@@ -35,7 +36,7 @@
 	"mobile-frontend-language-article-heading": "অন্য ভাষাত পঢ়ক",
 	"mobile-frontend-language-header": "এই পৃষ্ঠাটো $1 {{PLURAL:$1|ভাষাত|টা ভাষাত}} উপলব্ধ",
 	"mobile-frontend-language-site-choose": "ভাষা অনুসন্ধান:",
-	"mobile-frontend-last-modified-date": "শেহতীয়া পৰিবৰ্তন কৰা হৈছিল $2 ত, $1 তাৰিখা",
+	"mobile-frontend-last-modified-date": "শেহতীয়া পৰিবৰ্তন কৰা হৈছিল $2 ত, $1 তাৰিখে",
 	"mobile-frontend-logged-in-homepage-notification": "আদৰিছোঁ, $1!",
 	"mobile-frontend-logged-in-toast-notification": "$1 নামেৰে প্ৰৱেশ কৰিলে",
 	"mobile-frontend-logged-out": "প্ৰৱেশ কৰা নাই",
