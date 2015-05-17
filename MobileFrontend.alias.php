@@ -40,6 +40,7 @@ $specialPageAliases['ar'] = array(
 	'MobileMenu' => array( 'قائمة_المحمول' ),
 	'MobileLanguages' => array( 'لغات_المحمول' ),
 	'Nearby' => array( 'قريب' ),
+	'TopicTag' => array( 'وسم_الموضوع' ),
 	'UserProfile' => array( 'ملف_المستخدم' ),
 );
 

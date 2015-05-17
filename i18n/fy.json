@@ -30,12 +30,15 @@
 	"mobile-frontend-main-menu-settings-heading": "Ynstellingen",
 	"mobile-frontend-main-menu-watchlist": "Folchlist",
 	"mobile-frontend-missing-image": "Ôfbylding",
+	"mobile-frontend-news-items": "Yn it nijs",
+	"mobile-frontend-overlay-close": "Slute",
 	"mobile-frontend-page-menu-history": "Skiednis",
 	"mobile-frontend-password": "Wachtwurd:",
 	"mobile-frontend-password-placeholder": "Wachtwurd",
 	"mobile-frontend-placeholder": "{{SITENAME}} trochsykje",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-references-citation": "Sitaat",
+	"mobile-frontend-save-settings": "Bewarje",
 	"mobile-frontend-terms-text": "Brûkersbetingsten",
 	"mobile-frontend-username": "Brûkersnamme:",
 	"mobile-frontend-username-placeholder": "Brûkersnamme",
@@ -43,5 +46,6 @@
 	"mobile-frontend-view-desktop": "Desktopwerjefte",
 	"mobile-frontend-view-mobile": "Mobyle werjefte",
 	"mobile-frontend-watchlist-more": "mear",
-	"tag-mobile_edit": "bewurking fia mobyl"
+	"tag-mobile_edit": "bewurking fia mobyl",
+	"tag-mobile_web_edit": "bewurking fia mobile webstee"
 }

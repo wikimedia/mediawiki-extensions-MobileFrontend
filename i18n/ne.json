@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"RajeshPandey",
-			"बिप्लब आनन्द"
+			"बिप्लब आनन्द",
+			"Nirjal stha"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
@@ -35,5 +36,6 @@
 	"mobile-frontend-view-desktop": "डेस्कटप",
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाइल सम्पादन",
-	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन"
+	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
+	"mobile-frontend-panel-ok": "ठीक"
 }

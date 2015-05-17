@@ -1,10 +1,39 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Võrok"
+		]
+	},
 	"mobile-frontend-back-to-top-of-section": "Mineq tagasi\t jakko A",
-	"mobile-frontend-copyright": "Tekst om ilmutõt <a href=\"http://fi.wikipedia.org/wiki/{{SITENAME}}:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot\">Creative Commons Attribution/Share-Alike</a> litsendsi perrä; kost või löüdäq lisateedüst. Kaeq <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> ligembält siist. Vikipeediä om <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.:n</a>, mittetullosaamisütisüse kirjäpant kaubamärk.",
-	"mobile-frontend-featured-article": "Täämbädse päävä artikli",
+	"mobile-frontend-changeslist-nocomment": "olõ-õi muutmiisi kokkovõtõt",
+	"mobile-frontend-copyright": "Teksti või pruukiq litsendsi $1 perrä, ku olõ-õi tõisildõ üteld.",
+	"mobile-frontend-editor-edit": "Toimõndaq",
+	"mobile-frontend-featured-article": "Täämbädse päävä valit sisu",
+	"mobile-frontend-generic-login": "{{SITENAME}} um luud sääntsilsamol inemiisil, nigu saq.",
+	"mobile-frontend-generic-login-action": "Mineq nimega sisse ja võtaq viki edendämisest ossa!",
 	"mobile-frontend-home-button": "Pääleht",
+	"mobile-frontend-language-article-heading": "Loeq tõõsõn keelen",
+	"mobile-frontend-last-modified-date": "Viimäte muudõt $1, $2",
+	"mobile-frontend-login": "Mineq nimega sisse",
+	"mobile-frontend-main-menu-account-create": "Tiiq hindäle pruukjanimi",
+	"mobile-frontend-main-menu-button-tooltip": "Tiiq vallalõ päävalik",
+	"mobile-frontend-main-menu-login": "Nimega sisseminek",
+	"mobile-frontend-main-menu-nearby": "Lähkün",
+	"mobile-frontend-main-menu-settings": "Säädmine",
+	"mobile-frontend-main-menu-watchlist": "Perräkaemisnimekiri",
+	"mobile-frontend-news-items": "Uudisõq",
+	"mobile-frontend-password-placeholder": "Salasõna",
+	"mobile-frontend-placeholder": "Otsiq vikist {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privaatsus",
 	"mobile-frontend-random-button": "Johuslinõ leht",
 	"mobile-frontend-regular-site": "Näütäq seod lehte hariligun Vikipeediän",
-	"mobile-frontend-search-submit": "Mineq"
+	"mobile-frontend-search-submit": "Mineq",
+	"mobile-frontend-terms-text": "Puukmistingimüseq",
+	"mobile-frontend-username-placeholder": "Pruukjanimi",
+	"mobile-frontend-view": "Mobiilikaehus",
+	"mobile-frontend-view-desktop": "Lavvapuutri",
+	"mobile-frontend-view-mobile": "Mobiil",
+	"tag-mobile_edit": "Mobiilin tett muuminõ",
+	"tag-mobile_web_edit": "Mobiivõrgo kaudu",
+	"mobile-frontend-pageaction-edit-tooltip": "Toimõndaq seo lehe sissejuhatavat ossa."
 }

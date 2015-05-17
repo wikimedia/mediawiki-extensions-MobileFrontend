@@ -27,7 +27,8 @@
 			"Awesomecat5",
 			"Kroji",
 			"Tusca",
-			"Larjona"
+			"Larjona",
+			"Ryo567"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -69,7 +70,7 @@
 	"mobile-frontend-dismiss-notification": "Rechazar esta notificación",
 	"mobile-frontend-donate-image-anon": "Inicia sesión para ver la página de subidas.",
 	"mobile-frontend-donate-image-heading": "Tus contribuciones recientes",
-	"mobile-frontend-donate-image-login-action": "Inicia sesión para compartir tus archivos multimedia.",
+	"mobile-frontend-donate-image-login-action": "<strong>Los archivos multimedia en {{SITENAME}} son donados por personas como tú.</strong><br />Inicia sesión para compartir los tuyos.",
 	"mobile-frontend-donate-image-nouploads": "No hay subidas.",
 	"mobile-frontend-donate-image-signup-action": "Regístrate para compartir tu multimedia con el mundo.",
 	"mobile-frontend-donate-image-title": "Subidas",
