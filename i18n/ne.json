@@ -7,8 +7,11 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
+	"mobile-frontend-changeslist-nocomment": "कुनै सम्पादन सारांश छैन",
 	"mobile-frontend-copyright": "सामाग्री $1 अनुसार उपलब्ध छ, खुलाइएको अवस्था बाहेकको हकमा ।",
 	"mobile-frontend-editor-edit": "सम्पादन",
+	"mobile-frontend-editor-editing-page": "<span><strong>सम्पादन</strong> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
 	"mobile-frontend-featured-article": "आजको विशेष सामग्री",
 	"mobile-frontend-generic-login": "{{SITENAME}} तपाईँ जस्तै मानिसहरूद्वारा सिर्जना गरिएको हो ।",
 	"mobile-frontend-generic-login-action": "योगदान गर्न लगईन गर्नुस।",
@@ -37,5 +40,6 @@
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाइल सम्पादन",
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
-	"mobile-frontend-panel-ok": "ठीक"
+	"mobile-frontend-panel-ok": "ठीक",
+	"mobile-frontend-panel-cancel": "हैन पर्दैन"
 }

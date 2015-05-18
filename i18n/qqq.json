@@ -218,7 +218,7 @@
 	"mobile-frontend-media-details": "Caption for a button leading to the details of a media file (e.g. an image) in a preview.\n{{Identical|Detail}}",
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",
 	"mobile-frontend-meta-data-issues": "Header of a collapsed section which, when tapped, displays some hidden content. The message is expected to generically state that the page could be better in some or several ways of unspecified nature, as reported by some or several cleanup/warning templates which this header hides. \n\nThe button, when clicked, opens an overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}",
-	"mobile-frontend-meta-data-issues-beta": "A quiet button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}",
+	"mobile-frontend-meta-data-issues-beta": "A quiet button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}\n{{Identical|Page issue}}",
 	"mobile-frontend-meta-data-issues-talk": "Label for a clickable button that when clicked reveals the content of metadata described in elements which carry the mbox class.",
 	"mobile-frontend-meta-data-issues-header": "Heading for overlay listing all cleanup templates",
 	"mobile-frontend-meta-data-issues-header-talk": "Heading for overlay listing all information boxes on talk pages.",

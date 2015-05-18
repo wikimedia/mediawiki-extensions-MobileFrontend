@@ -13,7 +13,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
-	"action-mf-uploadbutton": "usar o botón de carga en páxinas móbiles.",
+	"action-mf-uploadbutton": "usar o sistema de carga específico da interface móbil.",
 	"beta-feature-minerva": "Activar a interface para móbiles ({{int:skinname-minerva}}) no escritorio",
 	"beta-feature-minerva-description": "Facer o tema usado en dispositivos móbiles un tema de escritorio seleccionable na lapela de preferencias \"{{int:prefs-rendering}}\"",
 	"mobile-frontend-account-create-captcha-placeholder": "Insira o código de confirmación",
@@ -90,7 +90,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Esta páxina non existe. Sexa valente e empece a escribila!",
 	"mobile-frontend-editor-placeholder": "Esta sección está baleira. Sexa o primeiro en expandila!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Está creando}} unha páxina nova en {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>Vista previa </strong><span>de $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Vista previa</strong> de $1</span>",
 	"mobile-frontend-editor-redirect-title": "Redirixindo ó editor…",
 	"mobile-frontend-editor-save": "Gardar",
 	"mobile-frontend-editor-source-editor": "Editar a fonte",

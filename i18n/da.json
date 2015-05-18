@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-continue": "Næste",
 	"mobile-frontend-editor-cta": "Hjælp med at forbedre denne side!",
 	"mobile-frontend-editor-disabled": "Denne side er beskyttet for at forhindre hærværk.",
-	"mobile-frontend-editor-edit": "Rediger",
+	"mobile-frontend-editor-edit": "Redigér",
 	"mobile-frontend-editor-editing": "Redigerer",
 	"mobile-frontend-editor-editing-page": "<strong>Redigerer</strong><span> $1</span>",
 	"mobile-frontend-editor-error": "Fejl, redigering er ikke gemt.",
@@ -326,5 +326,5 @@
 	"tag-mobile_edit-description": "Redigering udført fra mobil (web eller app)",
 	"tag-mobile_web_edit": "Mobilwebredigering",
 	"tag-mobile_web_edit-description": "Redigering fra det mobile website",
-	"mobile-frontend-pageaction-edit-tooltip": "Rediger indledningen for denne side."
+	"mobile-frontend-pageaction-edit-tooltip": "Redigér indledningen for denne side."
 }

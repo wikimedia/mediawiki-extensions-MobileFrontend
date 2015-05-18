@@ -53,7 +53,7 @@
 	"mobile-frontend-editor-licensing": "Αποθηκεύοντας τις αλλαγές, συμφωνείτε να δημοσιεύσετε τη συνεισφορά σας κάτω από την άδεια $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Αποθηκεύοντας τις αλλαγές, συμφωνείτε σε $1  και συμφωνείτε να δημοσιεύσετε τη συνεισφορά σας κάτω από την άδεια $2.",
 	"mobile-frontend-editor-placeholder": "Αυτή η ενότητα είναι κενή. Γίνετε ο πρώτος που θα την αναπτύξει!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>Προεπισκόπηση</strong> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Γίνεται προεπισκόπηση</strong> $1</span>",
 	"mobile-frontend-editor-save": "Αποθήκευση",
 	"mobile-frontend-editor-success": "Επιτυχία! Η επεξεργασία σας αποθηκεύτηκε.",
 	"mobile-frontend-editor-success-landmark-1": "Συγχαρητήρια, είστε τώρα ένας συντάκτης στη {{SITENAME}}!",

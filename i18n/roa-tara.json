@@ -12,6 +12,7 @@
 	"mobile-frontend-categories-add-wait": "Stoche a reggistre le categorije, aspitte 'nu picche.",
 	"mobile-frontend-changeslist-ip": "Utende anonime",
 	"mobile-frontend-clear-search": "Pulizze",
+	"mobile-frontend-copyright": "'U condenute jè disponibile sotte a $1 senze otre note.",
 	"mobile-frontend-desc": "Grafeche d'u Mobile",
 	"mobile-frontend-diffview-404-title": "Revisione brutte",
 	"mobile-frontend-diffview-anonymous": "Utende anonime",
@@ -115,5 +116,8 @@
 	"mobile-frontend-watchlist-more": "de cchiù",
 	"mobile-frontend-watchlist-removed": "Luate $1 da l'elenghe de le pàggene condrollate",
 	"mobile-frontend-watchlist-view": "'Ndruche le pàggene condrollate tune",
+	"tag-mobile_edit": "Cangiamende mobbile",
+	"tag-mobile_web_edit": "Cangiamende de l'app Mobbile",
+	"mobile-frontend-pageaction-edit-tooltip": "Cange 'a sezione prengepàle de sta pàgene.",
 	"mobile-frontend-loading-message": "Stoche a careche..."
 }
