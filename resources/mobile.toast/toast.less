@@ -52,8 +52,8 @@
 		/* we can't determine the actual size of the drawer in CSS, so this is
 		 * an estimate; it doesn't have to be exact because it's used only for
 		 * the sliding animation, not for hiding the drawer */
-		.transform( translate3d(0, 100px, 0) );
-		// counter translate3d with bottom to avoid empty blank space at the bottom
+		.transform( translate(0, 100px) );
+		// counter translate with bottom to avoid empty blank space at the bottom
 		// especially on browsers that don't support position: fixed
 		bottom: 100px;
 		opacity: 0;
@@ -76,7 +76,7 @@
 			.transition-transform( @transition );
 			visibility: visible;
 			opacity: 1;
-			.transform( translate3d(0, 0, 0) );
+			.transform( translate(0, 0) );
 		}
 	}
 }
