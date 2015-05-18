@@ -11,11 +11,49 @@
 	 */
 	MainMenu = View.extend( {
 		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
+
+		/** @inheritdoc **/
+		initialize: function ( options ) {
+			this.defaults = this._handleCachedMenuData(
+				mw.config.get( 'wgMFMenuData' )
+			);
+
+			View.prototype.initialize.apply( this, options );
+		},
+
+		// FIXME: [CACHE] Remove when cache clears.
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash
+		 * Translates the old, but cached, format of `wgMFMenuData` to the new
+		 * new format.
+		 *
+		 * @param {Object[]} menu The value of the `wgMFMenuData` config variable
+		 * @private
 		 */
-		defaults: $.extend( {}, mw.config.get( 'wgMFMenuData' ) || {} ),
+		_handleCachedMenuData: function ( menu ) {
+			var result = {};
+
+			$.each( menu, function ( key, entries ) {
+
+				// New format?
+				if ( entries[0].components ) {
+					result = menu;
+
+					return false;
+				}
+
+				result[key] = $.map( entries, function ( entry ) {
+					// We don't have to address T98759 here as this bug only
+					// affects logged out users who are seeing a cached version
+					// of the page.
+					return {
+						name: entry.name,
+						components: [ entry ]
+					};
+				} );
+			} );
+
+			return result;
+		},
 
 		/**
 		 * Turn on event logging on the existing main menu by reading `event-name` data
