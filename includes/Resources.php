@@ -1386,7 +1386,7 @@ $wgMobileEchoModules = array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/notifications/notifications.js',
+			'resources/mobile.notifications/init.js',
 		),
 		'group' => 'user',
 	),
@@ -1397,13 +1397,13 @@ $wgMobileEchoModules = array(
 			'ext.echo.base',
 		),
 		'scripts' => array(
-			'javascripts/modules/notifications/NotificationsOverlay.js',
+			'resources/mobile.notifications.overlay/NotificationsOverlay.js',
 		),
 		'styles' => array(
 			'less/modules/NotificationsOverlay.less',
 		),
 		'templates' => array(
-			'content.hogan' => 'templates/modules/notifications/NotificationsOverlayContent.hogan',
+			'content.hogan' => 'resources/mobile.notifications.overlay/NotificationsOverlayContent.hogan',
 		),
 		'messages' => array(
 			// defined in Echo
@@ -1541,7 +1541,7 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.notifications.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/notifications.less',
+			'resources/mobile.special.notifications.styles/notifications.less',
 		),
 		'position' => 'top',
 	),
@@ -1551,7 +1551,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile.startup',
 		),
 		'scripts' => array(
-			'javascripts/specials/notifications.js',
+			'resources/mobile.special.notifications.scripts/notifications.js',
 		),
 		'messages' => array(
 			// defined in Echo
