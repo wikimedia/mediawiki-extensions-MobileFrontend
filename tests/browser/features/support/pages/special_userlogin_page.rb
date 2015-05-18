@@ -6,7 +6,6 @@ class SpecialUserLoginPage < ArticlePage
 
   h1(:first_heading, id: 'section_0')
 
-  div(:feedback, class: 'alert error')
   button(:login, id: 'wpLoginAttempt')
   text_field(:username, name: 'wpName')
   text_field(:password, name: 'wpPassword')
@@ -15,6 +14,7 @@ class SpecialUserLoginPage < ArticlePage
   button(:signup_submit, id: 'wpCreateaccount')
   a(:create_account_link, text: 'Create account')
   div(:message_box, class: 'warningbox')
+  div(:error_box, class: 'errorbox')
   a(:password_reset, css: '.mw-userlogin-help')
 
   # signup specific
