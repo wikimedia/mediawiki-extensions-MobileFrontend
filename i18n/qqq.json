@@ -378,7 +378,7 @@
 	"mobile-frontend-watchlist-view": "Link to your watchlist.\n{{Identical|View your watchlist}}",
 	"mobile-frontend-quick-lookup-looking": "Information telling the user that the search has begun. $1 is the page title.",
 	"mobile-frontend-quick-lookup-no-results": "Shown when no information about the page is found. $1 is the page title.",
-	"mobile-frontend-quick-lookup-not-internal": "An error message shown when a link not belonging to the current wiki is being looked up. $1 is the current site name.",
+	"mobile-frontend-quick-lookup-not-internal": "An error message shown when a link not belonging to the current wiki is being looked up.",
 	"mobile.css": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.js}} (Optional message)",
 	"mobile.js": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.css}} (Optional message)",
 	"nearby": "{{doc-special|Nearby}}",

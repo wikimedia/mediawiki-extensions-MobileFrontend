@@ -92,6 +92,7 @@
 				);
 			} );
 		} else {
+			// @todo Remove the sitename parameter late 2015 as it only exists for B/C.
 			toast.show(
 				mw.msg( 'mobile-frontend-quick-lookup-not-internal', mw.config.get( 'wgSiteName' ) ),
 				'toast quick-lookup'
