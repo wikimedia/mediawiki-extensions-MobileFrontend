@@ -33,6 +33,24 @@
       "revId": "0c1b8960bfb11277ca8d6969dcf4371b17ca39d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b38c3b8a",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-19T11:21:48Z",
+      "side": 1,
+      "message": "Checked and it\u0027s fine (SpecialMobileEditWatchlist is not a MobileSpecialPage) that said this is only loading styles with JS. Not sure if that\u0027s intended (will not load on non-JS)",
+      "parentUuid": "0ed113e2_d3bbff20",
+      "revId": "0c1b8960bfb11277ca8d6969dcf4371b17ca39d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
