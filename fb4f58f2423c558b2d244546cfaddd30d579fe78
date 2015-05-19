@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_605d977d",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-05-19T08:02:50Z",
+      "side": 1,
+      "message": "I think the comma is a grammatical error and should be removed.",
+      "revId": "fb4f58f2423c558b2d244546cfaddd30d579fe78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
