@@ -26,7 +26,8 @@
 			"Nirovulf",
 			"Striking Blue",
 			"Batumski brodyaga",
-			"Mariya"
+			"Mariya",
+			"Дмитрий"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -369,8 +370,12 @@
 	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
 	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры",
 	"mobile-frontend-donate-button-label": "Пожертвовать",
+	"mobile-frontend-meta-data-issues-categories": "Об этой категории",
 	"mobile-frontend-loading-message": "Загрузка…",
 	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|день|дня|дней}}",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|месяц|месяца|месяцев}} назад",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|год|года|лет}} назад"
+	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|год|года|лет}} назад",
+	"mobile-frontend-browse-tags-header": "Метки",
+	"mobile-frontend-panel-ok": "Ок",
+	"mobile-frontend-panel-cancel": "Нет, спасибо"
 }

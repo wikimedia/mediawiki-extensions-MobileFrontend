@@ -29,5 +29,6 @@
 	"mobile-frontend-view-desktop": "დესკტოპი",
 	"mobile-frontend-view-mobile": "მობილური",
 	"tag-mobile_edit": "რედაქტირაფა მობილურით",
-	"tag-mobile_web_edit": "რედაქტირაფა საიტიშ მობილური ვერსიათ"
+	"tag-mobile_web_edit": "რედაქტირაფა საიტიშ მობილური ვერსიათ",
+	"mobile-frontend-pageaction-edit-tooltip": "თე ხასჷლაშ მაჸვენჯი გნნართიშ რედაქტირაფა."
 }

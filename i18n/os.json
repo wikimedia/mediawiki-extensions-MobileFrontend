@@ -27,6 +27,7 @@
 	"mobile-frontend-missing-image": "Ныв",
 	"mobile-frontend-news-items": "Нæуæг хабæртты",
 	"mobile-frontend-opt-in-explain": "Мобилон бетамæ иу гæнгæйæ, ды эксперименталон функцитæм бавналæн исыс, фæлæтас у исты баг кæнæ рæдыдыл фембæлын.",
+	"mobile-frontend-page-edit-summary": "<strong>Ивды афыст</strong><span> $1</span>",
 	"mobile-frontend-password": "Пароль:",
 	"mobile-frontend-password-placeholder": "Пароль",
 	"mobile-frontend-placeholder": "{{grammar:genitive|{{SITENAME}}}} агурын",

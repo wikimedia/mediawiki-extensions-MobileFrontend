@@ -4,5 +4,25 @@
 			"Tisave"
 		]
 	},
-	"mobile-frontend-editor-edit": "Chanje"
+	"mobile-frontend-copyright": "Kontni disponib selon lisans $1 sof si gen lòt endikasyon.",
+	"mobile-frontend-editor-edit": "Chanje",
+	"mobile-frontend-generic-login-action": "Konekte pou kontribiye.",
+	"mobile-frontend-home-button": "Paj prensipal",
+	"mobile-frontend-language-article-heading": "Li nan yon lòt lang",
+	"mobile-frontend-login": "Konekte",
+	"mobile-frontend-main-menu-account-create": "Ouvri yon kont",
+	"mobile-frontend-main-menu-button-tooltip": "Ouvri meni prensipal la",
+	"mobile-frontend-main-menu-login": "Konekte",
+	"mobile-frontend-main-menu-nearby": "Tou pre",
+	"mobile-frontend-main-menu-settings": "Konfigirasyon",
+	"mobile-frontend-main-menu-watchlist": "Lis swivi",
+	"mobile-frontend-news-items": "Nouvèl",
+	"mobile-frontend-password-placeholder": "Modpas",
+	"mobile-frontend-placeholder": "Chèche sou {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Konfidansyalite",
+	"mobile-frontend-random-button": "Aleyatwa",
+	"mobile-frontend-terms-text": "Kondisyon itilizasyon",
+	"mobile-frontend-username-placeholder": "Non itilizatè",
+	"mobile-frontend-view": "Vèsyon mobil",
+	"mobile-frontend-view-mobile": "Mobil"
 }
