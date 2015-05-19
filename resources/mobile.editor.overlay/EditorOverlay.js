@@ -315,7 +315,7 @@
 								parsedBlockReason
 							).parse()
 						);
-						history.back();
+						self.hide();
 					}
 					self.clearSpinner();
 				} )
