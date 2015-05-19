@@ -34,6 +34,24 @@
       "revId": "920295308435d92189a9b344a5855fe17937b6d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d34f7f37",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-19T12:56:27Z",
+      "side": 1,
+      "message": "\u003e Even if I remove it here, I\u0027ll need to change the template logic.\n\nI\u0027m not sure I follow this. The template is the only client of the function that generates data. Why not change the function that generates the data to match what the template requires and cut out the middle man?",
+      "parentUuid": "0ed113e2_711fc40d",
+      "revId": "920295308435d92189a9b344a5855fe17937b6d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
