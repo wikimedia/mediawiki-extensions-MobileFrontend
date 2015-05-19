@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b691894b",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-05-19T15:48:46Z",
+      "side": 1,
+      "message": "mw.user.tokens.get(\u0027editToken\u0027) is API I think.\n\nGenerally, this is making the assumption that both sites are using the same MediaWiki version (we could change \u0027+\\\u0027 at any time). Also, what if the user is logged out locally but still logged in remotely?\n\nI think it might be better to make a remote API call to get the token rather than depending upon the local wiki.",
+      "revId": "ccd04047e9cfda0dd734dc0f17df80511eb6a2b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
