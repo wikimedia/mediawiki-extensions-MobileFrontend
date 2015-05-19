@@ -547,6 +547,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 			'mobile.drawers',
 			'mobile.toast',
+			'mediawiki.confirmCloseWindow',
 		),
 		'scripts' => array(
 			'resources/mobile.editor.common/EditorOverlayBase.js',
