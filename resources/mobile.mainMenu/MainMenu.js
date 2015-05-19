@@ -15,7 +15,7 @@
 		/** @inheritdoc **/
 		initialize: function ( options ) {
 			this.defaults = this._handleCachedMenuData(
-				mw.config.get( 'wgMFMenuData' )
+				mw.config.get( 'wgMFMenuData' ) || {}
 			);
 
 			View.prototype.initialize.apply( this, options );
