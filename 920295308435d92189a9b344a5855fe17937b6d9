@@ -52,6 +52,24 @@
       "revId": "920295308435d92189a9b344a5855fe17937b6d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b189937b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-19T17:16:50Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand what you mean. Could you please give me an example of what I should change? The template needs this class depending on where the history bar is shown. If it\u0027s shown on the home page then the class is some text, otherwise it\u0027s not. Do you mean I should just pass a flag and then in the template depending on the flag display the class name?",
+      "parentUuid": "0ed113e2_d34f7f37",
+      "revId": "920295308435d92189a9b344a5855fe17937b6d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
