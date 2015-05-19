@@ -16,6 +16,23 @@
       "revId": "0c1b8960bfb11277ca8d6969dcf4371b17ca39d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d3bbff20",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-19T11:18:21Z",
+      "side": 1,
+      "message": "This adds the styles twice no..?\n(they should be automagically added in MobileSpecialPage using addModuleStyles",
+      "revId": "0c1b8960bfb11277ca8d6969dcf4371b17ca39d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
