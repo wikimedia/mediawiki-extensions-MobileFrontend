@@ -17,7 +17,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
-	"action-mf-uploadbutton": "använd uppladdningsknappen på mobila sidor",
+	"action-mf-uploadbutton": "använd MobileFrontend-specifika uppladdningssystemet.",
 	"beta-feature-minerva": "Aktivera mobilt utseende ({{int:skinname-minerva}}) på stationära datorer",
 	"beta-feature-minerva-description": "Gör utseendet som används på mobila enheter till ett valbart utseende för stationära enheter under \"{{int:prefs-rendering}}\"-fliken i inställningarna.",
 	"mobile-frontend-account-create-captcha-placeholder": "Ange bekräftelsekod",
@@ -94,7 +94,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Denna sida finns inte. Varför inte vara djärv och skapa den?",
 	"mobile-frontend-editor-placeholder": "Detta avsnitt är tomt. Bli den första att bygga ut det!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Du}} {{GENDER:$1|skapar}} en ny sida på {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>Förhandgranskar</strong> <span> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Förhandsgranskar</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Omdirigerar till redigeraren...",
 	"mobile-frontend-editor-save": "Spara",
 	"mobile-frontend-editor-source-editor": "Redigera wikitext",
@@ -415,5 +415,6 @@
 	"mobile-frontend-console-recruit": "\\o/ Hej! Det här är en öppen programvara för källkod och vi behöver frivilliga som hjälper oss att bygga, förbättra och vara med och fixa fel som du hittar i JavaScript-konsollen!\n\nHär hittar du vår backlog @ https://phabricator.wikimedia.org/project/view/67/",
 	"mobile-frontend-browse-tags-header": "Taggar",
 	"mobile-frontend-panel-ok": "Okej",
-	"mobile-frontend-panel-cancel": "Nej tack"
+	"mobile-frontend-panel-cancel": "Nej tack",
+	"mobile-frontend-panel-betaoptin-msg": "Vill du prova på några nya funktioner? Genom att gå med i beta kommer du att få tillgång till experimentella funktioner, med risk för att stöta på buggar och problem."
 }

@@ -28,11 +28,12 @@
 			"Kroji",
 			"Tusca",
 			"Larjona",
-			"Ryo567"
+			"Ryo567",
+			"Csbotero"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
-	"action-mf-uploadbutton": "usar el botón de carga en páginas móviles.",
+	"action-mf-uploadbutton": "utilizar el sistema de carga MobileFrontend-especific.",
 	"beta-feature-minerva": "Activar la interfaz para móviles ({{int:skinname-minerva}}) en el escritorio",
 	"beta-feature-minerva-description": "Hacer el tema usado en dispositivos móviles un tema seleccionable para la versión de escritorio en la pestaña de preferencias \"{{int:prefs-rendering}}\"",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
@@ -366,7 +367,7 @@
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
 	"mobile-frontend-quick-lookup-looking": "Búsqueda de «$1».",
 	"mobile-frontend-quick-lookup-no-results": "No se encontró nada que coincida con «$1».",
-	"mobile-frontend-quick-lookup-not-internal": "Este no es un enlace de $1.",
+	"mobile-frontend-quick-lookup-not-internal": "Este no es un enlace en este wiki.",
 	"nearby": "Páginas cercanas",
 	"right-mf-uploadbutton": "Usar el botón de carga en páginas móviles.",
 	"tag-mobile_edit": "Edición desde móvil",

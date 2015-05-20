@@ -360,7 +360,7 @@
 	"mobile-frontend-watchlist-view": "Deine Beobachtungsliste ansehen",
 	"mobile-frontend-quick-lookup-looking": "Suchen nach „$1“.",
 	"mobile-frontend-quick-lookup-no-results": "Es konnte nichts mit „$1“ gefunden werden.",
-	"mobile-frontend-quick-lookup-not-internal": "Leider ist dies kein $1-Link.",
+	"mobile-frontend-quick-lookup-not-internal": "Leider ist dies kein Link in dieses Wiki.",
 	"mobile.css": "/* Das folgende CSS wird für alle Nutzer der mobilen Version geladen. */",
 	"mobile.js": "/* Das folgende JavaScript wird für alle Nutzer der Mobilen Version geladen. */",
 	"nearby": "Seiten in deiner Nähe",

@@ -25,5 +25,6 @@
 	"mobile-frontend-profile-footer-ancient": "Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eedit|$3 eedits}}]] n [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].",
 	"mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at airtin at the bottom o the page.",
 	"mobile-frontend-requires-title": "Page naw available",
-	"mobile-frontend-terms-text": "Terms o Uiss"
+	"mobile-frontend-terms-text": "Terms o Uiss",
+	"mobile-frontend-view": "Mobile view"
 }

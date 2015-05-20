@@ -296,5 +296,7 @@
 	"tag-mobile_web_edit": "via web per a mòbils",
 	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifica la capçalera d'aquesta pàgina.",
-	"mobile-frontend-meta-data-issues-categories": "Sobre aquesta categoria"
+	"mobile-frontend-meta-data-issues-categories": "Sobre aquesta categoria",
+	"mobile-frontend-panel-ok": "D'acord",
+	"mobile-frontend-panel-cancel": "No, gràcies"
 }
