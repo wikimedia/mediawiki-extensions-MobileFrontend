@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b3e99011",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-20T17:46:14Z",
+      "side": 1,
+      "message": "Navigate to the route that the media viewer is expecting [0], which is more stable in the long term than triggering clicks on other elements.\n\n[0] https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.mediaViewer/init.js#L59",
+      "revId": "78a9bce96c359cba21107187699070ebf165d8b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
