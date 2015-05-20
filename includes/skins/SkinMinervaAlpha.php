@@ -69,6 +69,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 
 		$skinStyles[] = 'skins.minerva.alpha.styles';
 		$skinStyles[] = 'skins.minerva.alpha.images';
+		$skinStyles[] = 'skins.minerva.tablet.alpha.styles';
 
 		return $skinStyles;
 	}

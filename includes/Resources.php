@@ -71,6 +71,18 @@ $wgMinervaStyleModules = array(
 			'less/tablet/hacks.less',
 		),
 	),
+	'skins.minerva.tablet.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			'less/tablet/common.beta.less'
+		),
+	),
+	'skins.minerva.tablet.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			'less/tablet/common.alpha.less'
+		),
+	),
 	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
 		'prefix' => 'mw-ui',

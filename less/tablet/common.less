@@ -6,8 +6,6 @@ A file for css that optimises the Minerva skin on larger devices.
 @import "minerva.mixins";
 
 
-@contentMaxWidth: 1000px;
-
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	#content_wrapper {
 		.content_block {
@@ -40,7 +38,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	.pre-content,
 	.content,
 	.content-overlay {
-		max-width: @contentMaxWidth;
+		max-width: @contentMaxWidthTablet;
 	}
 
 	// FIXME: Have a class that identifies all 4 of these
