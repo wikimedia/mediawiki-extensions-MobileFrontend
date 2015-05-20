@@ -16,6 +16,24 @@
       "revId": "bd0edcc2accc4de184b7148ff142c52b9f9c2d46",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_4be668ac",
+        "filename": "less/tablet/common.beta.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-20T21:24:21Z",
+      "side": 1,
+      "message": "nevermind, I need to update core.",
+      "parentUuid": "0ed113e2_0bd5c0b9",
+      "revId": "bd0edcc2accc4de184b7148ff142c52b9f9c2d46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
