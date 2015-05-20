@@ -214,6 +214,10 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				'mobile.special.pagefeed.styles'
 			)
 		);
+		// add beta styles
+		if ( MobileContext::singleton()->isBetaGroupMember() ) {
+			$out->addModuleStyles( 'skins.minerva.special.watchlist.beta.styles' );
+		}
 	}
 
 	/**

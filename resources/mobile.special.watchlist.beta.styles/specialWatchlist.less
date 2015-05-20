@@ -1,0 +1,23 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha,
+	.beta {
+		#content_wrapper {
+			.content-header,
+			.watchlist.page-list {
+				max-width: @contentMaxWidthTablet;
+				margin: 0 auto;
+				padding: 0 @contentPaddingTablet;
+			}
+			.content-header {
+				border-bottom: none;
+				.button-bar {
+					border-bottom: 1px solid @headerBorderBottom;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
