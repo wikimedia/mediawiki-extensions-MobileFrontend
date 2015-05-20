@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_2ac6859d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-20T07:13:07Z",
+      "side": 1,
+      "message": "Could you give this module some kind of definition (in a comment), so that it is clear what sort of things should be added to it, i.e. generic classes used by other modules (or something like that). At least to explain why it\u0027s different than mobile.startup.",
+      "revId": "d080ef3202332b4f8764391fa6963d62dfc7944e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
