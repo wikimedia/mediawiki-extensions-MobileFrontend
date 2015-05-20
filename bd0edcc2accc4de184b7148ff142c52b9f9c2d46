@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_0bd5c0b9",
+        "filename": "less/tablet/common.beta.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-20T21:23:04Z",
+      "side": 1,
+      "message": "@iconGutterWidth is not defined",
+      "revId": "bd0edcc2accc4de184b7148ff142c52b9f9c2d46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
