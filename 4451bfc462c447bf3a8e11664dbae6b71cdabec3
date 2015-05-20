@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_0d9ddbb3",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-20T10:53:20Z",
+      "side": 1,
+      "message": "MobileContext#isBetaGroupMember checks for membership of the alpha group too.",
+      "revId": "4451bfc462c447bf3a8e11664dbae6b71cdabec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_2d98dfc1",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-20T10:53:20Z",
+      "side": 1,
+      "message": "See the previous comment.",
+      "revId": "4451bfc462c447bf3a8e11664dbae6b71cdabec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
