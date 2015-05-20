@@ -29,16 +29,8 @@
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = browser.isWideScreen() && veConfig,
 		CtaDrawer = M.require( 'CtaDrawer' ),
-		toast = M.require( 'toast' ),
-		pendingToast = settings.get( 'mobile-pending-toast' ),
 		drawer,
 		$caEdit = $( '#ca-edit' );
-
-	if ( pendingToast ) {
-		// delete the pending toast
-		settings.save( 'mobile-pending-toast', '' );
-		toast.show( pendingToast );
-	}
 
 	/**
 	 * Prepend an edit page button to the container
