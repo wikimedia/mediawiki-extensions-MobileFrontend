@@ -16,6 +16,24 @@
       "revId": "78a9bce96c359cba21107187699070ebf165d8b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_53d06453",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-20T17:47:57Z",
+      "side": 1,
+      "message": "I thought clicking was more stable because the route may change any time.",
+      "parentUuid": "0ed113e2_b3e99011",
+      "revId": "78a9bce96c359cba21107187699070ebf165d8b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
