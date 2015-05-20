@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_ae45a248",
+        "filename": "resources/mobile.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-20T21:51:04Z",
+      "side": 1,
+      "message": "Use @headerBorderBottom",
+      "revId": "a2302d14d9025c18ecef5528836b66549cd6d72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
