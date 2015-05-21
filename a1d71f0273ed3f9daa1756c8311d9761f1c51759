@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_354c9a9f",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T22:57:55Z",
+      "side": 0,
+      "message": "This whitespace shouldn\u0027t be deleted",
+      "revId": "a1d71f0273ed3f9daa1756c8311d9761f1c51759",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
