@@ -949,13 +949,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'cancel',
 		),
 		'styles' => array(
-			'less/modules/tutorials.less',
+			'resources/mobile.contentOverlays/tutorials.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/tutorials/PageActionOverlay.js',
+			'resources/mobile.contentOverlays/PageActionOverlay.js',
 		),
 		'templates' => array(
-			'PageActionOverlay.hogan' => 'templates/modules/tutorials/PageActionOverlay.hogan',
+			'PageActionOverlay.hogan' => 'resources/mobile.contentOverlays/PageActionOverlay.hogan',
 		),
 	),
 
@@ -966,7 +966,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/tutorials/init.js',
+			'resources/mobile.newusers/init.js',
 		),
 		'messages' => array(
 			// newbieEditor.js
