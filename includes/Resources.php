@@ -1084,14 +1084,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.swipe',
 		),
 		'scripts' => array(
-			'javascripts/modules/quickLookup/QuickLookupDrawer.js',
-			'javascripts/modules/quickLookup/init.js',
+			'resources/mobile.quickLookup/QuickLookupDrawer.js',
+			'resources/mobile.quickLookup/init.js',
 		),
 		'templates' => array(
-			'Drawer.hogan' => 'templates/modules/quickLookup/Drawer.hogan',
+			'Drawer.hogan' => 'resources/mobile.quickLookup/Drawer.hogan',
 		),
 		'styles' => array(
-			'less/modules/quickLookup.less',
+			'resources/mobile.quickLookup/quickLookup.less',
 		),
 		'messages' => array(
 			"mobile-frontend-quick-lookup-looking",
