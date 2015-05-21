@@ -52,6 +52,24 @@
       "revId": "f122bd74a0369e8370fca872fc57980ca0e43646",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_95bea9a9",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T17:15:34Z",
+      "side": 1,
+      "message": "When you deprecate a module, you\u0027re not making a breaking change. You\u0027re just telling others that this module will get removed in the future. Am I wrong?",
+      "parentUuid": "0ed113e2_b5a2cd90",
+      "revId": "f122bd74a0369e8370fca872fc57980ca0e43646",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
