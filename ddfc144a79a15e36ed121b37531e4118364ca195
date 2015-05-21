@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_ff9cb660",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T14:12:11Z",
+      "side": 1,
+      "message": "Is this necessary? I\u0027m not sure if it is...",
+      "revId": "ddfc144a79a15e36ed121b37531e4118364ca195",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
