@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_38ad71e8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 670,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T23:22:05Z",
+      "side": 1,
+      "message": "The top part seems to work fine, but I\u0027m not sure about this one. Shouldn\u0027t this be inside the else clause as the comment states?",
+      "revId": "c4e11c84386e37824f1d18e85812b73497d44e87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
