@@ -665,16 +665,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.Title',
 		),
 		'styles' => array(
-			'less/modules/search/SearchOverlay.less',
+			'resources/mobile.search/SearchOverlay.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/search/SearchApi.js',
-			'javascripts/modules/search/SearchOverlay.js',
-			'javascripts/modules/search/MobileWebSearchLogger.js',
-			'javascripts/modules/search/init.js',
+			'resources/mobile.search/SearchApi.js',
+			'resources/mobile.search/SearchOverlay.js',
+			'resources/mobile.search/MobileWebSearchLogger.js',
+			'resources/mobile.search/init.js',
 		),
 		'templates' => array(
-			'SearchOverlay.hogan' => 'templates/modules/search/SearchOverlay.hogan',
+			'SearchOverlay.hogan' => 'resources/mobile.search/SearchOverlay.hogan',
 		),
 		'messages' => array(
 			// for search.js
