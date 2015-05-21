@@ -933,10 +933,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 		),
 		'styles' => array(
-			'less/modules/toggle.less',
+			'resources/mobile.toggling/toggle.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/toggling/init.js',
+			'resources/mobile.toggling/init.js',
 		),
 	),
 
