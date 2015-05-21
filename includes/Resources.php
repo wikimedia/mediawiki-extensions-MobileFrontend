@@ -1324,6 +1324,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mediawiki.Title',
+			'mobile.startup',
 			'mobile.ajax',
 		),
 		'scripts' => array(
