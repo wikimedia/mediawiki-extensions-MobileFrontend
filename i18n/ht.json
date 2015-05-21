@@ -26,5 +26,7 @@
 	"mobile-frontend-username-placeholder": "Non itilizatè",
 	"mobile-frontend-view": "Vèsyon mobil",
 	"mobile-frontend-view-mobile": "Mobil",
-	"mobile-frontend-quick-lookup-not-internal": "Eskize, sa se pa yon lyen ki bay sou wiki an."
+	"mobile-frontend-quick-lookup-not-internal": "Eskize, sa se pa yon lyen ki bay sou wiki an.",
+	"mobile-frontend-panel-ok": "Oke",
+	"mobile-frontend-panel-cancel": "Non mèsi"
 }

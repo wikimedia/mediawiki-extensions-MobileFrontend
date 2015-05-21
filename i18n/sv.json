@@ -17,7 +17,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
-	"action-mf-uploadbutton": "använd MobileFrontend-specifika uppladdningssystemet.",
+	"action-mf-uploadbutton": "använd det MobileFrontend-specifika uppladdningssystemet.",
 	"beta-feature-minerva": "Aktivera mobilt utseende ({{int:skinname-minerva}}) på stationära datorer",
 	"beta-feature-minerva-description": "Gör utseendet som används på mobila enheter till ett valbart utseende för stationära enheter under \"{{int:prefs-rendering}}\"-fliken i inställningarna.",
 	"mobile-frontend-account-create-captcha-placeholder": "Ange bekräftelsekod",
@@ -360,7 +360,7 @@
 	"mobile-frontend-watchlist-view": "Visa din bevakningslista",
 	"mobile-frontend-quick-lookup-looking": "Letar efter \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Något som överensstämde med \"$1\" kunde inte hittas.",
-	"mobile-frontend-quick-lookup-not-internal": "Tyvärr, detta är inte en länk till $1.",
+	"mobile-frontend-quick-lookup-not-internal": "Tyvärr, detta är inte en länk till denna wiki.",
 	"nearby": "Sidor nära dig",
 	"right-mf-uploadbutton": "Använd ladda upp-knappen på mobila sidor",
 	"tag-mobile_edit": "Mobilredigering",
