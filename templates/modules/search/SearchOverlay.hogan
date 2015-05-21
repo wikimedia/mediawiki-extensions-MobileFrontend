@@ -9,17 +9,17 @@
 		</form>
 	</div>
 	<ul>
-		<li>{{{clearIcon}}}</li>
+		<li>{{#clearIcon}}{{>icon}}{{/clearIcon}}</li>
 	</ul>
 	</div>
 </div>
 <div class="overlay-content">
 	<div class="search-content overlay-header">
 		<ul>
-			<li><button class="icon">{{searchContentMsg}}</button></li>
+			<li>{{#searchContentIcon}}{{>icon}}{{/searchContentIcon}}</li>
 		</ul>
 		<div class="caption">
-			<p class="with-results">{{searchContentMsg}}</p>
+			<p class="with-results">{{#searchContentIcon}}{{label}}{{/searchContentIcon}}</p>
 			<p class="without-results">{{noResultsMsg}}</p>
 			<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
 		</div>

@@ -19,12 +19,16 @@
 	 * @uses Icon
 	 */
 	SearchOverlay = Overlay.extend( {
+		templatePartials: {
+			icon: Icon.prototype.template
+		},
 		className: 'overlay search-overlay',
 		template: mw.template.get( 'mobile.search', 'SearchOverlay.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.clearIcon HTML of the button that clears the search text.
+		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
+		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
 		 * @cfg {String} defaults.searchTerm Search text.
 		 * @cfg {String} defaults.placeholderMsg Search input placeholder text.
 		 * @cfg {String} defaults.clearMsg Tooltip for clear button that appears when you type
@@ -43,10 +47,14 @@
 				name: 'clear',
 				label: mw.msg( 'mobile-frontend-clear-search' ),
 				additionalClassNames: 'clear'
-			} ).toHtmlString(),
+			} ).options,
+			searchContentIcon: new Icon( {
+				tagName: 'button',
+				name: 'search-content',
+				label: mw.msg( 'mobile-frontend-search-content' )
+			} ).options,
 			searchTerm: '',
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
-			searchContentMsg: mw.msg( 'mobile-frontend-search-content' ),
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
 			action: mw.config.get( 'wgScript' )
