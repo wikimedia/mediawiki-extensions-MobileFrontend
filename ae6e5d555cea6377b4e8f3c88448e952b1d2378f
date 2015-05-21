@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_9aa49848",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1088,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-05-21T16:00:53Z",
+      "side": 1,
+      "message": "should this be resources/mobile.quickLookup/init.js ?",
+      "revId": "ae6e5d555cea6377b4e8f3c88448e952b1d2378f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
