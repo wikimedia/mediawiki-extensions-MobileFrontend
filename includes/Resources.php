@@ -300,7 +300,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.microAutoSize' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
-			'javascripts/externals/micro.autosize.js',
+			'resources/mobile.microAutosize/externals/micro.autosize.js',
 		),
 	),
 
@@ -1264,7 +1264,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			// FIXME: This library shouldn't be needed. Wikidata api
 			// should return these thumbnail urls for us.
-			'javascripts/externals/md5.js',
+			'resources/mobile.hexmd5/externals/md5.js',
 		),
 		'position' => 'top',
 	),
