@@ -1123,14 +1123,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'OverlayContent.hogan' => 'templates/modules/issues/cleanup.hogan',
+			'OverlayContent.hogan' => 'resources/mobile.issues/cleanup.hogan',
 		),
 		'styles' => array(
-			'less/modules/issues.less',
+			'resources/mobile.issues/issues.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/issues/CleanupOverlay.js',
-			'javascripts/modules/issues/init.js',
+			'resources/mobile.issues/CleanupOverlay.js',
+			'resources/mobile.issues/init.js',
 		),
 		'messages' => array(
 			// issues.js
