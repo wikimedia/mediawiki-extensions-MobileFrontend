@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_50d7ef4f",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:23:07Z",
+      "side": 1,
+      "message": "This needs to be applied to last-modified-bar not mw-mf-last-modified or the anchor.",
+      "revId": "7f5167135a64207731b2b6449546a577c88312a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_30d02b53",
+        "filename": "templates/history.mustache",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:23:07Z",
+      "side": 1,
+      "message": "No sense having an empty class value. Probably better to do:\n\u003cdiv {{^isMainPage}}class\u003d\"last-modified-bar\"{{/isMainPage}}\u003e\nor even\n{{^isMainPage}}\u003cdiv class\u003d\"last-modified-bar\"\u003e{{/isMainPage}}",
+      "revId": "7f5167135a64207731b2b6449546a577c88312a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
