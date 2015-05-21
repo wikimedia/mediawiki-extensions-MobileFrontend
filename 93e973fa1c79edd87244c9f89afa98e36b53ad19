@@ -34,6 +34,24 @@
       "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_98fd7db1",
+        "filename": "includes/config/Skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T23:39:45Z",
+      "side": 1,
+      "message": "I agree. This should not be convoluted.",
+      "parentUuid": "0ed113e2_55b7de84",
+      "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
