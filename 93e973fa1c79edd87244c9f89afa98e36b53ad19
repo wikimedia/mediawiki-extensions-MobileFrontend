@@ -16,6 +16,24 @@
       "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_55b7de84",
+        "filename": "includes/config/Skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T22:36:59Z",
+      "side": 1,
+      "message": "Could we do something like:\n\u0027discovery\u0027 \u003d\u003e array( \u0027collector\u0027 \u003d\u003e \u0027getDiscoveryTools\u0027 )",
+      "parentUuid": "0ed113e2_9537d449",
+      "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
