@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_5abb9070",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1075,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-05-21T15:58:42Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this template be on resources/mobile.errorReport.overlay ?",
+      "revId": "31aa1dd21dbd691cdf72a61eb5d0e82bb18bdafe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
