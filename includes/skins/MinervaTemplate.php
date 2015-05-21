@@ -190,11 +190,20 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderHistoryLink( $data ) {
-		if ( isset( $data['historyLink'] ) ) {
+		$action = Action::getActionName( RequestContext::getMain() );
+		if ( isset( $data['historyLink'] ) && $action === 'view' ) {
 			$historyLink = $data['historyLink'];
-			$historyLabel = $historyLink['text'];
-			unset( $historyLink['text'] );
-			echo Html::element( 'a', $historyLink, $historyLabel );
+			$args = array(
+				'isMainPage' => $this->getSkin()->getTitle()->isMainPage(),
+				'link' => $historyLink['href'],
+				'text' => $historyLink['text'],
+				'username' => $historyLink['data-user-name'],
+				'userGender' => $historyLink['data-user-gender'],
+				'timestamp' => $historyLink['data-timestamp']
+			);
+			$templateParser = new TemplateParser(
+				__DIR__ . '/../../templates/' );
+			echo $templateParser->processTemplate( 'history', $args );
 		}
 	}
 
