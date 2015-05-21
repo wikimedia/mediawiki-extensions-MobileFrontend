@@ -3,27 +3,35 @@
 		"authors": [
 			"Amire80",
 			"Nepaboy",
-			"Ganesh"
+			"Ganesh",
+			"SatyamMishra"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "सम्पादन सारांश रहित",
+	"mobile-frontend-copyright": "अगर अलग से बतावल नइखे त सामग्री $1 की तहत उपलब्ध बा।",
 	"mobile-frontend-editor-edit": "सम्पादन",
 	"mobile-frontend-featured-article": "आज के चुनल गइल लेख",
 	"mobile-frontend-home-button": "घर",
-	"mobile-frontend-language-article-heading": "दूसर भाषा में पढ़ीं",
-	"mobile-frontend-last-modified-date": "अंतिम बार $1 में $2 बजे बदलाव करल गइल",
+	"mobile-frontend-language-article-heading": "दुसरी भाषा में पढ़ीं",
+	"mobile-frontend-last-modified-date": "अंतिम बेर $1 के $2 बजे बदलाव भइल",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलीं",
+	"mobile-frontend-main-menu-login": "लॉग इन",
+	"mobile-frontend-main-menu-nearby": "आसपास",
 	"mobile-frontend-main-menu-settings": "सेटिंग कुल",
+	"mobile-frontend-main-menu-watchlist": "धियानसूची",
 	"mobile-frontend-news-items": "समाचार में",
+	"mobile-frontend-password-placeholder": "गुप्तशब्द (पासवर्ड)",
+	"mobile-frontend-placeholder": "{{SITENAME}} खोजीं",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
-	"mobile-frontend-random-button": "एने-ओने से",
+	"mobile-frontend-random-button": "बेतरतीब",
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
 	"mobile-frontend-sign-up-heading": "खाता खोलीं",
 	"mobile-frontend-terms-text": "उपयोग के शर्त कुल",
+	"mobile-frontend-username-placeholder": "सदस्यनाम",
 	"mobile-frontend-view": "मोबाइल अवलोकन",
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाइल संपादन",
-	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
-	"mobile-frontend-pageaction-edit-tooltip": "इ पन्ना के मुख्य अनुभाग के सम्पादन करीं"
+	"tag-mobile_web_edit": "मोबाइल वेब संपादन",
+	"mobile-frontend-pageaction-edit-tooltip": "ए पन्ना के मुख्य खंड के संपादन करीं"
 }

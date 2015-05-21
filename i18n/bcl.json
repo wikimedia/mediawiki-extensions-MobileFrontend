@@ -25,7 +25,6 @@
 	"mobile-frontend-dismiss-notification": "punduha ining notipikasyon",
 	"mobile-frontend-donate-image-anon": "An $1 pinaghahagad tanganing matanaw an pahina nin mga ikinarga.",
 	"mobile-frontend-donate-image-heading": "An saimong dae pa sana nahaloy na mga kaarambagan",
-	"mobile-frontend-donate-image-login": "Ika dapat nakalaog na tanganing mahiling mo an saimong mga ikinarga.",
 	"mobile-frontend-donate-image-title": "Mga ikinarga",
 	"mobile-frontend-donate-photo-first-upload-success": "Matrayumpo! Mabalos para sa saimong enot na kaambagan!",
 	"mobile-frontend-donate-photo-upload-success": "Matrayumpo! An saimong imahe ngunyan magagamit na sa {{SITENAME}}!",
@@ -73,7 +72,6 @@
 	"mobile-frontend-last-modified-seconds": "Huring pinaghira {{PLURAL:$1|$1 segundo|$1 segundos}} an nakaagi",
 	"mobile-frontend-last-modified-years": "Huring pinaghira {{PLURAL:$1|$1 taon|$1 mga taon}} an nakaagi",
 	"mobile-frontend-lead-image-tutorial-summary": "Paseguruhon na an saimong imahe makakatabang sa paglaladawan kan artikulo. Ini dapat na sarong imahe na ika an nagmukna na dae nakakabalga sa katanosan nin pagsasadire.",
-	"mobile-frontend-listed-image-no-description": "Mayong deskripsyon",
 	"mobile-frontend-logged-in-homepage-notification": "Marhayong pag-abot, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Nakalaog ka bilang $1.",
 	"mobile-frontend-logged-out": "Dai nakalaog",
@@ -143,7 +141,6 @@
 	"mobile-frontend-settings-alpha": "Eksperimental na kamugtakan",
 	"mobile-frontend-settings-alpha-description": "Kaagon an delikado asin dae pa eksploradong magíwas na teritoryo. Magkua ka pa nin mas eksperimental na mga estima, alagad igwa pa nin kadagdagang kadelikaduhan nin mga kuto.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Kustumbrehon an saimong eksperiyensiya sa saimong magíwas na aparato igwa kaining magíwas na espisipikong mga panuytoy kan sityo.",
 	"mobile-frontend-settings-site-description": "An {{SITENAME}} manunumpungan sa $1 {{PLURAL:$1|lengguwahe|mga lengguwahe}}. An gabos na yaon na mga bersyon pinaglista sa ibaba",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} na mga lengwahe",
 	"mobile-frontend-sign-in-error-heading": "Ay tara",
@@ -190,6 +187,7 @@
 	"mobile-frontend-watchlist-more": "dakol pa",
 	"mobile-frontend-watchlist-removed": "Pinagtangkas an $1 gikan sa saimong bantay-listahan",
 	"mobile-frontend-watchlist-view": "Tanawon an saimong bantay-listahan",
+	"mobile-frontend-quick-lookup-not-internal": "Sori, bako tabi ini sarong saguysoy palaog kaining wiki.",
 	"tag-mobile_edit": "Magiwasong pagliwat",
 	"tag-mobile_edit-description": "Pagliwat na hinimo gikan sa magíwasong sityo"
 }
