@@ -5,7 +5,7 @@
 	QUnit.module( 'MobileFrontend issues', {
 		setup: function () {
 			$( '<div id="mfe-test-issues">' +
-			mw.template.get( 'mobile.issues.tests', 'issues.hogan' ).text +
+			mw.template.get( 'tests.mobile.templates', 'issues.hogan' ).text +
 			'</div>' ).appendTo( '#qunit-fixture' );
 		},
 		teardown: function () {

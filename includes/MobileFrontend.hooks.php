@@ -256,11 +256,18 @@ class MobileFrontendHooks {
 	) {
 		global $wgResourceModules;
 
-		$baseTemplateDir = 'tests/qunit/templates/';
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
 			'targets' => array( 'mobile' ),
+		);
+
+		// Expose templates module
+		$testModules['qunit']["tests.mobile.templates"] = $testModuleBoilerplate + array(
+			'templates' => array(
+				'section.hogan' => 'tests/qunit/tests.mobile.templates/section.hogan',
+				'issues.hogan' => 'tests/qunit/tests.mobile.templates/issues.hogan',
+			),
 		);
 
 		// find test files for every RL module
@@ -272,46 +279,23 @@ class MobileFrontendHooks {
 					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
 					// for javascripts folder (being deprecated)
 					$testFile = str_replace( 'tests/javascripts/', 'tests/qunit/', $testFile );
+
 					// For resources folder
 					$testFile = str_replace( 'tests/resources/', 'tests/qunit/', $testFile );
 					// if a test file exists for a given JS file, add it
 					if ( file_exists( $testModuleBoilerplate['localBasePath'] . '/' . $testFile ) ) {
 						$testFiles[] = $testFile;
 					}
-
-					// FIXME: Rewrite/cleanup the template logic
-					// save the relative name of the template directory
-					$templateDir = str_replace( 'javascripts/', '', dirname( $script ) );
-					// absolute filepath to the template dir (for several checks)
-					$templateAbsoluteDir = dirname( __DIR__ ) . '/' . $baseTemplateDir . $templateDir;
-
-					// check, if there is a template directory to load templates from
-					if ( file_exists( $templateAbsoluteDir ) && is_dir( $templateAbsoluteDir ) ) {
-						// open the template directory
-						$templateHandle = opendir( $templateAbsoluteDir );
-						// read and process all files in this directory
-						while ( $template = readdir( $templateHandle ) ) {
-							// only files can be loaded and every template should only be loaded once
-							if (
-								!is_file( $templateAbsoluteDir . '/' . $template ) ||
-								in_array( $template, $templates )
-							) {
-								continue;
-							}
-							// add this template to the templates array
-							$templates[$template] = $baseTemplateDir . $templateDir . '/' . $template;
-						}
-						// close the directory handle
-						closedir( $templateHandle );
-					}
 				}
 
 				// if test files exist for given module, create a corresponding test module
 				if ( !empty( $testFiles ) ) {
 					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
-						'dependencies' => array( $key ),
+						'dependencies' => array(
+							$key,
+							'tests.mobile.templates',
+						),
 						'scripts' => $testFiles,
-						'templates' => $templates,
 					);
 				}
 			}
