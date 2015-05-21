@@ -1042,7 +1042,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.buttonWithSpinner',
 		),
 		'scripts' => array(
-			'javascripts/modules/errorReport/init.js',
+			'resources/mobile.errorReport/init.js',
 		),
 		'messages' => array(
 			'mobile-frontend-errorreport-button-label',
@@ -1055,10 +1055,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toast',
 		),
 		'scripts' => array(
-			'javascripts/modules/errorReport/ErrorReportOverlay.js',
+			'resources/mobile.errorReport.overlay/ErrorReportOverlay.js',
 		),
 		'styles' => array(
-			'less/modules/errorReport/errorReportOverlay.less',
+			'resources/mobile.errorReport.overlay/errorReportOverlay.less',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-licensing',
@@ -1072,7 +1072,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-errorreport-summary',
 		),
 		'templates' => array(
-			'ErrorReportOverlay.hogan' => 'templates/modules/errorReport/ErrorReportOverlay.hogan',
+			'ErrorReportOverlay.hogan' => 'resources/mobile.errorReport.overlay/ErrorReportOverlay.hogan',
 		),
 	),
 
