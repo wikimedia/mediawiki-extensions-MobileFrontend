@@ -903,10 +903,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-references-citation',
 		),
 		'templates' => array(
-			'DrawerBeta.hogan' => 'templates/modules/references/ReferencesDrawerBeta.hogan',
+			'DrawerBeta.hogan' => 'resources/mobile.references.beta/ReferencesDrawerBeta.hogan',
 		),
 		'scripts' => array(
-			'javascripts/modules/references/ReferencesDrawerBeta.js',
+			'resources/mobile.references.beta/ReferencesDrawerBeta.js',
 		),
 	),
 
@@ -916,14 +916,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'styles' => array(
-			'less/modules/references.less',
+			'resources/mobile.references/references.less',
 		),
 		'templates' => array(
-			'Drawer.hogan' => 'templates/modules/references/ReferencesDrawer.hogan',
+			'Drawer.hogan' => 'resources/mobile.references/ReferencesDrawer.hogan',
 		),
 		'scripts' => array(
-			'javascripts/modules/references/ReferencesDrawer.js',
-			'javascripts/modules/references/init.js',
+			'resources/mobile.references/ReferencesDrawer.js',
+			'resources/mobile.references/init.js',
 		),
 	),
 
