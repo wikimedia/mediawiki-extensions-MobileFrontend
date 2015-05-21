@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7039d39d",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:24:24Z",
+      "side": 1,
+      "message": "This needs to be applied to last-modified-bar not mw-mf-last-modified or the anchor.",
+      "revId": "52e548c663a57bd60422a028620e69f8c07b2fef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
