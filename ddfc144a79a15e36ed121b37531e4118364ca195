@@ -16,6 +16,24 @@
       "revId": "ddfc144a79a15e36ed121b37531e4118364ca195",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_558e012c",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T17:11:31Z",
+      "side": 1,
+      "message": "You\u0027re right, it\u0027s redundant.",
+      "parentUuid": "0ed113e2_ff9cb660",
+      "revId": "ddfc144a79a15e36ed121b37531e4118364ca195",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
