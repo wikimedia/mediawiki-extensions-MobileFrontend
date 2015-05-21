@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7f6d2600",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T14:44:01Z",
+      "side": 1,
+      "message": "This is fixing an ios bug and only applies when the editor is opened. Maybe we should keep this the same or conditionally apply it only for ios...",
+      "revId": "c96c51d1c74e568d57a203e48f55bff26fd81586",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_9fa48a48",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T14:44:01Z",
+      "side": 1,
+      "message": "So I think the idea here was to make use of hardware acceleration for faster animations. Could this be left as 3d since these only apply after you click an element?\n\nhttp://davidwalsh.name/translate3d",
+      "revId": "c96c51d1c74e568d57a203e48f55bff26fd81586",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_bf9f0ef9",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T14:44:01Z",
+      "side": 1,
+      "message": "So I think the idea here was to make use of hardware acceleration for faster animations. Could this be left as 3d since these only apply after you click an element?\n\nhttp://davidwalsh.name/translate3d",
+      "revId": "c96c51d1c74e568d57a203e48f55bff26fd81586",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_3f731ee6",
+        "filename": "resources/mobile.toast/toast.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T14:44:01Z",
+      "side": 1,
+      "message": "These only apply when you get a notification message which happens after first paint",
+      "revId": "c96c51d1c74e568d57a203e48f55bff26fd81586",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
