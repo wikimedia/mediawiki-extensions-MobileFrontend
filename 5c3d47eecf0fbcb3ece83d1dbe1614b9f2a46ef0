@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_30ab4bd5",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:18:05Z",
+      "side": 1,
+      "message": "This part will no longer work since the \u0027active\u0027 rule only applies to the bar (which used to be the same element, but now isn\u0027t).",
+      "revId": "5c3d47eecf0fbcb3ece83d1dbe1614b9f2a46ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_5f04e2c8",
         "filename": "resources/mobile.head/init.js",
         "patchSetId": 3
@@ -13,6 +30,41 @@
       "writtenOn": "2015-05-21T12:52:25Z",
       "side": 1,
       "message": "What about when the page is served from cache (the user is logged out) and the DOM isn\u0027t what you expect? Looks like we\u0027ll need a backwards compatibility layer here.",
+      "revId": "5c3d47eecf0fbcb3ece83d1dbe1614b9f2a46ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b0b65b37",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:18:05Z",
+      "side": 1,
+      "message": "I think this will still work actually.",
+      "parentUuid": "0ed113e2_5f04e2c8",
+      "revId": "5c3d47eecf0fbcb3ece83d1dbe1614b9f2a46ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_106967bb",
+        "filename": "templates/history.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-21T18:18:05Z",
+      "side": 1,
+      "message": "No sense having an empty class value. Probably better to do:\n\u003cdiv {{^isMainPage}}class\u003d\"last-modified-bar\"{{/isMainPage}}\u003e\nor even\n{{^isMainPage}}\u003cdiv class\u003d\"last-modified-bar\"\u003e{{/isMainPage}}",
       "revId": "5c3d47eecf0fbcb3ece83d1dbe1614b9f2a46ef0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
