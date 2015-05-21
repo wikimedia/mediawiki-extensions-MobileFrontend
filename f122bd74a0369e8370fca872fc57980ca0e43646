@@ -34,6 +34,24 @@
       "revId": "f122bd74a0369e8370fca872fc57980ca0e43646",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b5a2cd90",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-21T17:13:15Z",
+      "side": 1,
+      "message": "Gather uses this module name. (I don\u0027t want to make a breaking change)",
+      "parentUuid": "0ed113e2_b5475fbe",
+      "revId": "f122bd74a0369e8370fca872fc57980ca0e43646",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
