@@ -1744,9 +1744,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.betaoptin',
 		),
 		'scripts' => array(
-			'resources/mobile.mediaViewer/init.js',
-			'resources/mobile.languages/init.js',
-			'resources/mobile.betaoptin/init.js',
+			'resources/skins.minerva.scripts/init.js',
 		),
 	),
 	// By mode. This should only ever be loaded in Minerva skin.
