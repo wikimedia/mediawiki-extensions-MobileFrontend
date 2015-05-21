@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_6104abc9",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T00:55:45Z",
+      "side": 1,
+      "message": "Is vandalism the only reason why a page can be protected? Maybe we should make this message more general?",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c161d79e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T00:55:45Z",
+      "side": 1,
+      "message": "Nothing serious, but Overlay.js should be renamed to DisabledOverlay.js to make it consistent with the less and hogan files, don\u0027t you think?",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a16613b6",
+        "filename": "resources/mobile.editor.disabledOverlay/DisabledOverlay.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-21T00:55:45Z",
+      "side": 1,
+      "message": "It\u0027d be nice if you can use the button abstraction here.",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
