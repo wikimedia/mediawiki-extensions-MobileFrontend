@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var InfiniteScroll = M.require( 'InfiniteScroll' ),
 		response = {
-			'query-continue': {
+			'continue': {
 				pageimages: {
 					picontinue: 9
 				}
