@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_5f04e2c8",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-21T12:52:25Z",
+      "side": 1,
+      "message": "What about when the page is served from cache (the user is logged out) and the DOM isn\u0027t what you expect? Looks like we\u0027ll need a backwards compatibility layer here.",
+      "revId": "5c3d47eecf0fbcb3ece83d1dbe1614b9f2a46ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
