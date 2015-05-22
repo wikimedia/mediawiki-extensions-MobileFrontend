@@ -52,6 +52,24 @@
       "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1bf667f7",
+        "filename": "includes/config/Skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-22T09:35:13Z",
+      "side": 1,
+      "message": "Ok, i\u0027m confused :) Is the problem the name? We can simply use another one, e.g. like kaldari mentioned \"collector\" or something else, or is there another objection, too?",
+      "parentUuid": "0ed113e2_98fd7db1",
+      "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
