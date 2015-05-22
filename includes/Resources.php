@@ -1515,7 +1515,7 @@ $wgMobileSpecialPageModules = array(
 	),
 	'mobile.special.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/mobileoptions.less',
+			'resources/mobile.special.mobileoptions.styles/mobileoptions.less',
 		),
 	),
 	'mobile.special.mobileoptions.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
@@ -1623,14 +1623,17 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/uploads.less',
+			'resources/mobile.special.uploads.styles/uploads.less',
+		),
+		'skinStyles' => array(
+			'default' => 'resources/mobile.special.uploads.styles/default.less',
 		),
 	),
 
 	'mobile.special.pagefeed.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/specials/pagefeed.less',
+			'resources/mobile.special.pagefeed.styles/pagefeed.less',
 		),
 	),
 
@@ -1681,10 +1684,11 @@ $wgMinervaSpecialPageModules = array(
 		),
 	),
 
+	// FIXME: Use skin Styles
 	'skins.minerva.special.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/specials/search.less',
+			'resources/skins.minerva.special.search.styles/search.less',
 		),
 	),
 
@@ -1709,7 +1713,7 @@ $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.userlogin.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/specials/userlogin.less',
+			'resources/skins.minerva.special.userlogin.styles/userlogin.less',
 		),
 	),
 );
@@ -1824,11 +1828,8 @@ $wgResourceModules = array_merge( $wgResourceModules,
 
 // Module customizations
 $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
-	'mobile.special.uploads.styles' => array(
-		'less/specials/uploadsDefault.less',
-	),
 	'mobile.special.history.styles' => array(
-		'less/specials/historyDefault.less',
+		'resources/mobile.special.history.styles/default.less',
 	),
 );
 
@@ -1839,7 +1840,7 @@ $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
 	),
 	'mediawiki.skinning.content.parsoid' => array(),
 	'mobile.special.userprofile.styles' => array(
-		'less/specials/userprofile.less',
+		'resources/mobile.special.userprofile.styles/minerva.less',
 	),
 	'mobile.special.history.styles' => array(),
 );
