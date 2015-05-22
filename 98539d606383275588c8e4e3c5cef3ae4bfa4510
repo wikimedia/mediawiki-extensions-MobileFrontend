@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_e183b0ac",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-22T22:20:25Z",
+      "side": 1,
+      "message": "Hmm, i don\u0027t know another reason ad hoc, but it is possible, that the page is protected because of any other reason, so you\u0027re right, that should be more generic, what about:\n\"This page is protected. You can consult the history page to see wherther a reason was given or not.\"?",
+      "parentUuid": "0ed113e2_6104abc9",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_c161d79e",
         "filename": "includes/Resources.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_a18da8da",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-22T22:20:25Z",
+      "side": 1,
+      "message": "Yeah!",
+      "parentUuid": "0ed113e2_c161d79e",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_a16613b6",
         "filename": "resources/mobile.editor.disabledOverlay/DisabledOverlay.hogan",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-05-21T00:55:45Z",
       "side": 1,
       "message": "It\u0027d be nice if you can use the button abstraction here.",
+      "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c18a2cc0",
+        "filename": "resources/mobile.editor.disabledOverlay/DisabledOverlay.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-22T22:20:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_a16613b6",
       "revId": "98539d606383275588c8e4e3c5cef3ae4bfa4510",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
