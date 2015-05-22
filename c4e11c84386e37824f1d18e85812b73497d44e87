@@ -16,6 +16,24 @@
       "revId": "c4e11c84386e37824f1d18e85812b73497d44e87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_219a1818",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 670,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-22T22:16:22Z",
+      "side": 1,
+      "message": "In which else clause? If you mean in the else of \"!$context-\u003eshouldDisplayMobileView()\", we could do that, but it would be doubled, the code above will end this function with it\u0027s return statement in L#665 :)",
+      "parentUuid": "0ed113e2_38ad71e8",
+      "revId": "c4e11c84386e37824f1d18e85812b73497d44e87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
