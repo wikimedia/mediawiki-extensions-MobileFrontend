@@ -114,6 +114,20 @@
 			return window.innerWidth >= val || window.innerHeight >= val;
 		},
 		/**
+		 * Checks browser support for a given CSS property
+		 * @param {String} [property] the name of the property being tested
+		 * @return {Boolean}
+		 */
+		supportsCSSProperty: memoize( function ( property ) {
+			var elem = document.createElement( 'foo' );
+
+			// We only test webkit because that's the only prefix needed at the moment by
+			// supportsAnimations. If usage of supportsCSSProperty is expanded, the list of prefixes
+			// will need to be as well
+			return elem.style[ property ] !== undefined ||
+				elem.style[ 'webkit' + property.charAt( 0 ).toUpperCase() + property.slice( 1 ) ] !== undefined;
+		} ),
+		/**
 		 * Checks browser support for CSS transforms, transitions
 		 * and CSS animation.
 		 * Currently assumes support for the latter 2 in the case of the
@@ -123,14 +137,6 @@
 		 * @returns {Boolean}
 		 */
 		supportsAnimations: memoize( function () {
-			var  has3d, t,
-				el = $( '<p>' )[0],
-				$iframe = $( '<iframe>' ),
-				transforms = {
-					webkitTransform: '-webkit-transform',
-					transform: 'transform'
-				};
-
 			// don't trust Android 2.x, really
 			// animations cause textareas to misbehave on it
 			// (http://stackoverflow.com/a/5734984/365238)
@@ -138,22 +144,9 @@
 				return false;
 			}
 
-			// Add it to the body to get the computed style
-			// Sandbox it inside an iframe to avoid Android Browser quirks
-			$iframe.appendTo( 'body' ).contents().find( 'body' ).append( el );
-
-			for ( t in transforms ) {
-				if ( transforms.hasOwnProperty( t ) ) {
-					if ( el.style[t] !== undefined ) {
-						el.style[t] = 'translate3d(1px,1px,1px)';
-						has3d = window.getComputedStyle( el ).getPropertyValue( transforms[t] );
-					}
-				}
-			}
-
-			$iframe.remove();
-
-			return has3d !== undefined && has3d.length > 0 && has3d !== 'none';
+			return this.supportsCSSProperty( 'animationName' ) &&
+				this.supportsCSSProperty( 'transform' ) &&
+				this.supportsCSSProperty( 'transition' );
 		} ),
 		/**
 		 * Detect if fixed position is supported in browser

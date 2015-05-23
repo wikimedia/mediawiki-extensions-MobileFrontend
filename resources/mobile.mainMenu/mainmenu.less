@@ -229,11 +229,11 @@ body.navigation-enabled {
 		display: block;
 
 		// +2% to accommodate for the border/box-shadow
-		.transform(translate3d(102%, 0, 0));
+		.transform(translate(102%, 0));
 		.transition-transform(@duration @easing, visibility 0s @duration;);
 
 		&.visible {
-			.transform(translate3d(0, 0, 0));
+			.transform(translate(0, 0));
 		}
 	}
 }
@@ -251,7 +251,7 @@ body.navigation-enabled {
 	#mw-mf-page-center {
 		// override non-animated version
 		left: 0 !important;
-		.transform(translate3d(@menuWidth, 0, 0));
+		.transform(translate(@menuWidth, 0));
 	}
 
 	nav {
@@ -266,7 +266,7 @@ body.navigation-enabled {
 	#mw-mf-page-center {
 		// override non-animated version
 		left: 0 !important;
-		.transform(translate3d(-@rightDrawerWidth, 0, 0));
+		.transform(translate(-@rightDrawerWidth, 0));
 		width: 100%;
 	}
 }
@@ -275,23 +275,23 @@ body.navigation-enabled {
 	// FIXME: Make animations a conditional class on the drawer itself
 	.animations .notifications-overlay.navigation-drawer {
 		// +2% to accommodate for the border/box-shadow
-		.transform(translate3d(-102%, 0, 0));
+		.transform(translate(-102%, 0));
 
 		&.visible {
-			.transform(translate3d(0, 0, 0));
+			.transform(translate(0, 0));
 		}
 	}
 
 	&.primary-navigation-enabled.animations {
 		.position-fixed,
 		#mw-mf-page-center {
-			.transform(translate3d(-@menuWidth, 0, 0));
+			.transform(translate(-@menuWidth, 0));
 		}
 	}
 
 	&.secondary-navigation-enabled.animations {
 		#mw-mf-page-center {
-			.transform(translate3d(@rightDrawerWidth, 0, 0));
+			.transform(translate(@rightDrawerWidth, 0));
 		}
 	}
 }
