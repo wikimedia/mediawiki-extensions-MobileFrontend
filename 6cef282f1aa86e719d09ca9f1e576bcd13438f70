@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_8fb68ad6",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-23T16:01:52Z",
+      "side": 1,
+      "message": "schould be $secondray \u003d $( \u0027#page-secondary-actions\u0027 );\n...",
+      "revId": "6cef282f1aa86e719d09ca9f1e576bcd13438f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_2fabde6e",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-23T16:01:52Z",
+      "side": 1,
+      "message": "and $secondary.before(...);\n\nTo solve the problem, that the page secondary actions (like discussion button, category...) isn\u0027t after the lead sections and before the other sections.",
+      "revId": "6cef282f1aa86e719d09ca9f1e576bcd13438f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
