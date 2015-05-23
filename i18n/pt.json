@@ -354,7 +354,7 @@
 	"mobile-frontend-watchlist-view": "Ver a sua lista de vigiados",
 	"mobile-frontend-quick-lookup-looking": "A procurar por \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Não foi encontrada nenhuma correspondência com \"$1\".",
-	"mobile-frontend-quick-lookup-not-internal": "Desculpa, esta não é uma ligação de $1.",
+	"mobile-frontend-quick-lookup-not-internal": "Desculpe, esta não é uma ligação interna para esta wiki.",
 	"nearby": "Páginas próximas de si",
 	"tag-mobile_edit": "Edição via telefone móvel",
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (sítio ou aplicação)",

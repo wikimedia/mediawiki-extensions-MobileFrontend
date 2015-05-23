@@ -352,7 +352,7 @@
 	"mobile-frontend-watchlist-view": "Vezi lista de pagini urmărite",
 	"mobile-frontend-quick-lookup-looking": "Se caută „$1”.",
 	"mobile-frontend-quick-lookup-no-results": "Nu s-a găsit nimic referitor la „$1”.",
-	"mobile-frontend-quick-lookup-not-internal": "Ne pare rău, dar aceasta nu este o legătură de la $1.",
+	"mobile-frontend-quick-lookup-not-internal": "Ne pare rău, dar aceasta nu este o legătură internă a acestui wiki.",
 	"nearby": "Pagini în apropierea dumneavoastră",
 	"right-mf-uploadbutton": "Utilizează butonul de încărcare pe paginile mobile.",
 	"tag-mobile_edit": "Modificare mobilă",

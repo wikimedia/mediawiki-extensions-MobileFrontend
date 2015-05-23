@@ -341,7 +341,7 @@
 	"mobile-frontend-watchlist-view": "Vaata oma jälgimisloendit",
 	"mobile-frontend-quick-lookup-looking": "Lehekülje \"$1\" otsimine.",
 	"mobile-frontend-quick-lookup-no-results": "Ei leitud midagi, mis vastab otsitavale \"$1\".",
-	"mobile-frontend-quick-lookup-not-internal": "Kahjuks see pole saidi $1 link.",
+	"mobile-frontend-quick-lookup-not-internal": "Kahjuks ei viita see link sellesse vikisse.",
 	"mobile.css": "/* Siin asuv kaskaadilaadistik puudutab kõiki mobiilisaidi kasutajaid. */",
 	"mobile.js": "/* Siin asuv JavaScript laaditakse kõigi mobiilisaidi kasutajate jaoks. */",
 	"nearby": "Leheküljed sinu lähedal",

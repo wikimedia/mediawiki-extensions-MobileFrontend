@@ -4,7 +4,8 @@
 			"Darshan kandolkar",
 			"Santhosh.thottingal",
 			"Konknni mogi 24",
-			"Supriya kankumbikar"
+			"Supriya kankumbikar",
+			"Vaishali Parab"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "संपादन आपरोस ना",
@@ -34,5 +35,6 @@
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाईल संस्करण",
-	"tag-mobile_web_edit": "मोबाईल जाळें संस्करण"
+	"tag-mobile_web_edit": "मोबाईल जाळें संस्करण",
+	"mobile-frontend-pageaction-edit-tooltip": "ह्या पानाच्या मुखेल भागाचें संपादन करात."
 }
