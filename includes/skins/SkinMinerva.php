@@ -1136,7 +1136,9 @@ class SkinMinerva extends SkinTemplate {
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop', true )
 			);
 		}
-		$url = htmlspecialchars( $this->mobileContext->getDesktopUrl( wfExpandUrl( $url ) ) );
+		$url = htmlspecialchars(
+			$this->mobileContext->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) )
+		);
 
 		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
 		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
