@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_6785905d",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-23T09:36:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_187f4d65",
+      "revId": "83cfb40545fbcee76521a3accf0956190ce89852",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_58ecf526",
         "filename": "resources/skins.minerva.icons.images.legacy/icons.less",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-05-21T23:27:15Z",
       "side": 1,
       "message": "Let\u0027s be consistent with the above and use a dash instead of camelCasing.",
+      "revId": "83cfb40545fbcee76521a3accf0956190ce89852",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_277f8865",
+        "filename": "resources/skins.minerva.icons.images.legacy/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-23T09:36:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_58ecf526",
       "revId": "83cfb40545fbcee76521a3accf0956190ce89852",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
