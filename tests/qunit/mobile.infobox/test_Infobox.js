@@ -10,7 +10,7 @@
 
 	QUnit.test( 'Check time format', 2, function ( assert ) {
 		assert.strictEqual( Infobox.prototype._getFormattedTime( {
-				time: '-00000000550-01-01T00:00:00Z',
+				time: '-0550-01-01T00:00:00Z',
 				timezone: 0,
 				before: 0,
 				after: 0,
@@ -19,7 +19,7 @@
 			} ), '550 BCE', 'Darius I of Persia\'s DOB is correctly formatted.' );
 
 		assert.strictEqual( Infobox.prototype._getFormattedTime( {
-				time: '+00000001879-03-14T00:00:00Z',
+				time: '+1879-03-14T00:00:00Z',
 				timezone: 0,
 				before: 0,
 				after: 0,

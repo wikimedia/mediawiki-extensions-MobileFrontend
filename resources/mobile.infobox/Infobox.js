@@ -192,7 +192,7 @@
 		 */
 		_getFormattedTime: function ( time ) {
 			var formattedTime,
-				date = new Date( time.time.substr( 8 ) ),
+				date = new Date( time.time.substr( 1, 10 ) ),
 				year = date.getUTCFullYear().toString(),
 				isBCE = time.time.charAt( 0 ) === '-',
 				eraMessage = 'mobile-frontend-time-precision-' +
