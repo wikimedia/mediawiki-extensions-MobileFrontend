@@ -30,9 +30,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * these with respect to caching.
 **/
 $wgMinervaStyleModules = array(
-	'skins.minerva.reset' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.base.reset' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
-			'resources/skins.minerva.reset/reset.less',
+			'resources/skins.minerva.base.reset/reset.less',
 		),
 	),
 
@@ -40,7 +40,7 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.reset/reset.less',
+			'resources/skins.minerva.base.reset/reset.less',
 			'less/ui.less',
 			'less/pageactions.less',
 			'less/footer.less',
