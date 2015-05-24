@@ -252,6 +252,13 @@
 		 */
 		getSections: function () {
 			return this.sections;
+		},
+
+		/**
+		 * Returns a jQuery object representing all redlinks on the page.
+		 */
+		getRedLinks: function () {
+			return this.$( '.new' );
 		}
 	} );
 

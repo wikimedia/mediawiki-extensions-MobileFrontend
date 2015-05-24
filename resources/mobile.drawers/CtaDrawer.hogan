@@ -1,6 +1,7 @@
 {{#collapseIcon}}{{>icon}}{{/collapseIcon}}
 <p>{{content}}</p>
-{{#loginButton}}{{>button}}{{/loginButton}}
+{{#progressiveButton}}{{>button}}{{/progressiveButton}}
 <div>
-	{{#signupAnchor}}{{>anchor}}{{/signupAnchor}}
+	{{#actionAnchor}}{{>anchor}}{{/actionAnchor}}
+	{{#closeAnchor}}{{>anchor}}{{/closeAnchor}}
 </div>

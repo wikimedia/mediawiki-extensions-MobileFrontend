@@ -922,10 +922,6 @@ class SkinMinerva extends SkinTemplate {
 			$vars['wgMFUserBlockInfo'] = $blockInfo;
 		}
 
-		$vars['wgMFShowRedLinks'] = $user->isLoggedIn()
-			? $config->get( 'MFShowRedLinks' )
-			: $config->get( 'MFShowRedLinksAnon' );
-
 		// Get variables that are only needed in mobile mode
 		if ( $this->isMobileMode ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
