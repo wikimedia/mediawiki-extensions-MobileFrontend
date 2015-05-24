@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_839f3e06",
+        "filename": "less/icons.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-24T12:24:30Z",
+      "side": 1,
+      "message": "that looks really bad for icons in header :/",
+      "revId": "f52c300b603bc9b7be00945b62275870fbebd87c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a3b7e283",
+        "filename": "resources/mobile.startup/Section.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-24T12:24:30Z",
+      "side": 1,
+      "message": "this shoudl really be localised, in alpha too :)",
+      "revId": "f52c300b603bc9b7be00945b62275870fbebd87c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
