@@ -135,4 +135,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		return wfMemcKey( 'diff', 'inline', MW_DIFF_VERSION,
 			'oldid', $this->mOldid, 'newid', $this->mNewid );
 	}
+
+	/**
+	 * Create a getter function for the patrol link in Mobile Diff.
+	 * FIXME: This shouldn't be needed, but markPatrolledLink is protected in DifferenceEngine
+	 * @return String
+	 */
+	public function getPatrolledLink() {
+		return $this->markPatrolledLink();
+	}
 }

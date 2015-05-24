@@ -17,6 +17,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	private $prevRev;
 	/** @var Title Saves the title of the actual revision */
 	private $targetTitle;
+	/**
+	 * @var InlineDifferenceEngine|DifferenceEngine $mDiffEngine
+	 * DifferenceEngine for this Diff-page
+	 */
+	protected $mDiffEngine;
+	/** @var String $diffClass The name of the Difference class */
+	protected $diffClass = 'InlineDifferenceEngine';
 
 	/**
 	 * Construct function
@@ -199,7 +206,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
 		// HACK:
 		if ( get_class( $de ) == 'DifferenceEngine' ) {
-			$de = new InlineDifferenceEngine(
+			$de = new $this->diffClass(
 				$this->getContext(),
 				$prevId,
 				$this->revId,
@@ -211,6 +218,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$de->showDiffPage();
 			return;
 		}
+		$this->mDiffEngine = $de;
 		$diff = $de->getDiffBody();
 		if ( !$prevId ) {
 			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
@@ -301,6 +309,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					Linker::link( $userPage, htmlspecialchars( $ipAddr ) ) .
 				'</div>'
 			);
+		}
+
+		if ( $this->mDiffEngine instanceof InlineDifferenceEngine ) {
+			$output->addHtml( $this->mDiffEngine->getPatrolledLink() );
 		}
 
 		$output->addHtml(
