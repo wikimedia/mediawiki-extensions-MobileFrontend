@@ -1348,14 +1348,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/fontchanger/FontChanger.js',
-			'javascripts/modules/fontchanger/init.js',
+			'resources/mobile.fontchanger/FontChanger.js',
+			'resources/mobile.fontchanger/init.js',
 		),
 		'styles' => array(
-			'less/modules/fontchanger/FontChanger.less'
+			'resources/mobile.fontchanger/FontChanger.less'
 		),
 		'templates' => array(
-			'FontChanger.hogan' => 'templates/modules/fontchanger/FontChanger.hogan',
+			'FontChanger.hogan' => 'resources/mobile.fontchanger/FontChanger.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-fontchanger-desc'
