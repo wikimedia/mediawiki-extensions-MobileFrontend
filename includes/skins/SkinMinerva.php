@@ -649,7 +649,10 @@ class SkinMinerva extends SkinTemplate {
 					'data-user-gender' => $revUser->getOption( 'gender' ),
 				);
 			} else {
-				$link['data-user-gender'] = 'unknown';
+				$link += array(
+					'data-user-name' => '',
+					'data-user-gender' => 'unknown',
+				);
 			}
 		}
 		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
