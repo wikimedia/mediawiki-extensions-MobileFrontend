@@ -1027,7 +1027,8 @@ class SkinMinerva extends SkinTemplate {
 	protected function getSkinStyles() {
 		$title = $this->getTitle();
 		$styles = array(
-			'skins.minerva.chrome.styles',
+			'skins.minerva.reset',
+			'skins.minerva.base.styles',
 			'skins.minerva.content.styles',
 			'skins.minerva.tablet.styles',
 			'mediawiki.ui.icon',

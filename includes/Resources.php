@@ -30,10 +30,17 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * these with respect to caching.
 **/
 $wgMinervaStyleModules = array(
+	'skins.minerva.reset' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'resources/skins.minerva.reset/reset.less',
+		),
+	),
+
+	// FIXME: Remove when cache has cleared
 	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/reset.less',
+			'resources/skins.minerva.reset/reset.less',
 			'less/ui.less',
 			'less/pageactions.less',
 			'less/footer.less',
@@ -42,6 +49,19 @@ $wgMinervaStyleModules = array(
 			'less/mainpage.less',
 		),
 	),
+	'skins.minerva.base.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			// FIXME: Move to resources/skins.minerva.base.styles when T99921 resolved.
+			'less/ui.less',
+			'less/pageactions.less',
+			'less/footer.less',
+			'less/common.less',
+			'less/icons.less',
+			'less/mainpage.less',
+		),
+	),
+
 	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
