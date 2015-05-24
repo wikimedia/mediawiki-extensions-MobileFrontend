@@ -1791,6 +1791,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.errorReport',
 			'mobile.otherProjects',
 			'mobile.quickLookup',
+			'mobile.fontchanger',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
