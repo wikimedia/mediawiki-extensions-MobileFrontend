@@ -461,7 +461,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'scripts' => array(
-			'javascripts/modules/ForeignApi.js',
+			'resources/mobile.foreignApi/ForeignApi.js',
 		),
 	),
 
@@ -471,7 +471,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.user',
 		),
 		'scripts' => array(
-			'javascripts/modules/redlinks/init.js',
+			'resources/mobile.redlinks/init.js',
 		),
 	),
 
@@ -887,7 +887,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 		),
 		'scripts' => array(
-			'javascripts/modules/mf-stop-mobile-redirect.js',
+			'resources/mobile.redirect/init.js',
 		),
 		'messages' => array(
 			// mf-stop-mobile-redirect.js
@@ -1207,7 +1207,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.gallery',
 		),
 		'scripts' => array(
-			'javascripts/modules/commonsCategory/CommonsCategoryOverlay.js',
+			'resources/mobile.commonsCategory/CommonsCategoryOverlay.js',
 		),
 	),
 
@@ -1217,7 +1217,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.foreignApi',
 		),
 		'scripts' => array(
-			'javascripts/modules/WikiDataApi.js'
+			'resources/mobile.wikidata.api/WikiDataApi.js'
 		),
 	),
 
@@ -1231,10 +1231,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-other-project-label',
 		),
 		'scripts' => array(
-			'javascripts/modules/projects/OtherProjectsOverlay.js',
+			'resources/mobile.otherProjects/OtherProjectsOverlay.js',
 		),
 		'templates' => array(
-			'content.hogan' => 'templates/modules/projects/content.hogan',
+			'content.hogan' => 'resources/mobile.otherProjects/content.hogan',
 		),
 	),
 
