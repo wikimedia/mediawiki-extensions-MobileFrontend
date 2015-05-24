@@ -1416,7 +1416,7 @@ $wgMobileEchoModules = array(
 			'resources/mobile.notifications.overlay/NotificationsOverlay.js',
 		),
 		'styles' => array(
-			'less/modules/NotificationsOverlay.less',
+			'resources/mobile.notifications.overlay/NotificationsOverlay.less',
 		),
 		'templates' => array(
 			'content.hogan' => 'resources/mobile.notifications.overlay/NotificationsOverlayContent.hogan',
