@@ -24,14 +24,6 @@ mygerrit: remotes			## List patchsets that you need to amend
 gerrit: remotes				## List all patchsets
 	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1 --ignore 'WIP'
 
-kss: kssnodecheck			## Build the styleguide
-	mkdir -p docs
-	# FIXME: Use more up to date Ruby version
-	$(eval KSS_MF_RL_TMP := $(shell mktemp /tmp/tmp.XXXXXXXXXX))
-	curl -sG "${MEDIAWIKI_LOAD_URL}?modules=skins.minerva.chrome.styles|skins.minerva.content.styles|skins.minerva.drawers.styles|mobile.toast.styles|mobile.stable.styles|mobile.overlays|mobile.overlays.beta|mobile.pagelist.styles&only=styles" > $(KSS_MF_RL_TMP)
-	@node_modules/.bin/kss-node less/ docs/styleguide/ --css $(KSS_MF_RL_TMP) -t styleguide-template
-	@rm $(KSS_MF_RL_TMP)
-
 jsduck: nodecheck gems			## Build the JavaScript documentation
 	@grunt docs --MW_INSTALL_PATH=${MW_INSTALL_PATH}
 
@@ -41,10 +33,7 @@ phpdoc: nodecheck			## Build the PHP documentation
 	mkdir -p docs/php/log
 	@php node_modules/grunt-phpdocumentor/bin/phpDocumentor.phar -c phpdoc.xml
 
-docs: kss jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
-
-kssnodecheck:
-	@dev-scripts/kss-node-check.sh
+docs: jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
 
 gems:
 	bundle install
