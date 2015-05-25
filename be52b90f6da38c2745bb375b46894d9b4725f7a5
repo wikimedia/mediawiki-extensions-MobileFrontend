@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_a76e07c3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:35:26Z",
+      "side": 1,
+      "message": "You\u0027ll need to make a note to why skins.minerva.reset exists and why this is here... (MobileApp extension)\n\nI think my alternative patch is probably better since it avoids this documentation problem\nhttps://gerrit.wikimedia.org/r/213329",
+      "revId": "be52b90f6da38c2745bb375b46894d9b4725f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
