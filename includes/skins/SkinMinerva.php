@@ -164,7 +164,10 @@ class SkinMinerva extends SkinTemplate {
 	 * @return boolean
 	 */
 	protected function isAllowedPageAction( $action ) {
-		if ( in_array( $action, $this->getMFConfig()->get( 'MFPageActions' ) ) ) {
+		$title = $this->getTitle();
+		// All actions disabled on main apge.
+		if ( !$title->isMainPage() &&
+			in_array( $action, $this->getMFConfig()->get( 'MFPageActions' ) ) ) {
 			return true;
 		} else {
 			return false;
