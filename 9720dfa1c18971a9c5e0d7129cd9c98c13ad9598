@@ -22,6 +22,92 @@
       "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_877f4363",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:49:38Z",
+      "side": 1,
+      "message": "I would suggest the following - this changes to \"The page you tried to visit does not exist.\"\n\nChange label for edit button to \u0027Create page\u0027\n\n\n(In future we may want to have \u0027Edit this page\u0027 as an option so people can correct the link)",
+      "parentUuid": "0ed113e2_d5ec18bb",
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c7ec6b29",
+        "filename": "resources/mobile.editor.redlink/RedlinkDrawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:49:38Z",
+      "side": 1,
+      "message": "rename to createButton",
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e7f16fff",
+        "filename": "resources/mobile.editor.redlink/RedlinkDrawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:49:38Z",
+      "side": 1,
+      "message": "Instead of doing this do Drawer.prototype.template in case the template changes. This module should not reference anything in the module directly.",
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_07bcb319",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:49:38Z",
+      "side": 1,
+      "message": "Instead of using $( \u0027.new\u0027 ).on  use M.getCurrentPage().getRedLinks()\n(you\u0027ll need to move the selector to that function and scope it to the  current element)",
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6796df99",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-25T07:49:38Z",
+      "side": 1,
+      "message": "This causes a notable delay.. I think we need to load this unconditionally as part of this module.",
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
