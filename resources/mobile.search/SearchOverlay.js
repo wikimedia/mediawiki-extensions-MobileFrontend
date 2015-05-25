@@ -176,7 +176,7 @@
 			/**
 			 * @event search-result-click Fired when the user clicks a search result
 			 * @type {Object}
-			 * @property {jQuery} result The jQuery-wrapped DOM element that
+			 * @property {jQuery.Object} result The jQuery-wrapped DOM element that
 			 *  the user clicked
 			 * @property {Number} resultIndex The zero-based index of the
 			 *  result in the set of results

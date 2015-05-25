@@ -6,8 +6,7 @@
 
 	/**
 	 * Coordinates the logging of MobileWebSchema events.
-	 *
-	 * @see https://meta.wikimedia.org/wiki/Schema:MobileWebSearch
+	 * Implements schema defined at https://meta.wikimedia.org/wiki/Schema:MobileWebSearch
 	 *
 	 * @class
 	 */
@@ -70,8 +69,7 @@
 		/**
 		 * Handles the 'search-results' event.
 		 *
-		 * @param {Object} event
-		 * @property {Object[]} event.results
+		 * @param {Object} event with property {Object[]} event.results
 		 */
 		onSearchResults: function ( event ) {
 			var timeOffsetSinceStart =
@@ -95,8 +93,7 @@
 		/**
 		 * Handles the 'search-result-click' event.
 		 *
-		 * @param {Object} event
-		 * @property {Number} event.index The zero-based index of the result in the
+		 * @param {Object} event with property {Number} event.index The zero-based index of the result in the
 		 *  set of results
 		 */
 		onSearchResultClick: function ( event ) {

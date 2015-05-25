@@ -12,6 +12,7 @@
 
 	/**
 	 * Search API for a brief intro about a page.
+	 * @ignore
 	 * @param {String} title title of the page
 	 */
 	function lookup( title ) {
@@ -67,6 +68,7 @@
 	 * Show a QuickLookupDrawer with information about {link}
 	 * Link must have the same hostname as the site, i.e. it must be an internal link.
 	 * Show a toast before searching and a drawer with page info after the search is successful.
+	 * @ignore
 	 * @param {jQuery.Event} ev Event object of the swipe gesture
 	 */
 	function showDrawer( ev ) {

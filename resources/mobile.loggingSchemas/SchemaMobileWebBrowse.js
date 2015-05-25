@@ -4,9 +4,9 @@
 		SchemaMobileWebBrowse;
 
 	/**
+	 * Implement schema defined at https://meta.wikimedia.org/wiki/Schema:MobileWebBrowse
 	 * @class SchemaMobileWebBrowse
 	 * @extends Schema
-	 * @see https://meta.wikimedia.org/wiki/Schema:MobileWebBrowse
 	 */
 	SchemaMobileWebBrowse = Schema.extend( {
 		/** @inheritdoc **/

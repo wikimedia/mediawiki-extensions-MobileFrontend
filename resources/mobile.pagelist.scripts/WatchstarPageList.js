@@ -9,7 +9,7 @@
 
 	/**
 	 * List of items page view
-	 * @class PageList
+	 * @class WatchstarPageList
 	 * @uses Page
 	 * @uses WatchstarApi
 	 * @uses Watchstar
@@ -24,13 +24,6 @@
 			PageList.prototype.initialize.apply( this, arguments );
 		},
 		/**
-		 * @inheritdoc
-		 */
-		/*(template: mw.template.get( 'mobile.pagelist.scripts', 'PageList.hogan' ),
-		templatePartials: {
-			item: mw.template.get( 'mobile.pagelist.scripts', 'PageListItem.hogan' )
-		},*/
-		/**
 		 * Retrieve pages
 		 *
 		 * @method
@@ -40,10 +33,6 @@
 		getPages: function ( ids ) {
 			return this.api.load( ids );
 		},
-		/**
-		 * @inheritdoc
-		 * Loads watch stars for each page.
-		 */
 		/**
 		 * @inheritdoc
 		 */

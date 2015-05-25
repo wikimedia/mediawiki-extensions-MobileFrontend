@@ -58,7 +58,7 @@
 		 * names of the wrapper of the header buttons.
 		 * @cfg {Boolean} defaults.fixedHeader Whether the header is fixed.
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.
-		 * @cfg [{Object}] defaults.footerAnchor options for an optional Anchor that can appear in the footer
+		 * @cfg {Object} [defaults.footerAnchor] options for an optional Anchor that can appear in the footer
 		 */
 		defaults: {
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),

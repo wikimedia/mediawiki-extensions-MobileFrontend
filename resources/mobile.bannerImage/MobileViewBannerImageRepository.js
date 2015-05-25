@@ -26,7 +26,7 @@
 		 * Gets an image that can be used as a banner image.
 		 *
 		 * @param {Number} targetWidth The target width of the image
-		 * @return {$.Promise} A promise that resolves with an Image object if the MediaWiki API
+		 * @return {jQuery.Promise} A promise that resolves with an Image object if the MediaWiki API
 		 *  request was successful or rejects otherwise.
 		 */
 		getImage: function ( targetWidth ) {

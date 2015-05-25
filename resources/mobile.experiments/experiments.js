@@ -10,6 +10,7 @@
 	 *
 	 * @param {String} key String to hash.
 	 * @return {Number} 32-bit integer.
+	 * @ignore
 	 *
 	 * @author Ori Livneh <ori@wikimedia.org>
 	 * @see http://jsbin.com/kejewi/4/watch?js,console
@@ -47,6 +48,7 @@
 	 *      "B": 0.25
 	 *  }
 	 *  </code>
+	 * @ignore
 	 * @param {String} token
 	 * @return {String}
 	 */
@@ -73,6 +75,10 @@
 		}
 	}
 
+	/**
+	 * @class mw.mobileFrontend.experiments
+	 * @singleton
+	 */
 	M.define( 'experiments', {
 
 		/**

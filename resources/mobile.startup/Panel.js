@@ -9,6 +9,7 @@
 	 * @extends View
 	 */
 	Panel = View.extend( {
+		/** @inheritdoc */
 		className: 'panel',
 		// in milliseconds
 		minHideDelay: 10,

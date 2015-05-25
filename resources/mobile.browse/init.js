@@ -7,6 +7,7 @@
 
 	/**
 	 * Whether an element is visible to the user
+	 * @ignore
 	 * @param {jQuery.Object} $el
 	 * @returns {Boolean}
 	 */
@@ -28,6 +29,7 @@
 
 	/**
 	 * Log tag_impression
+	 * @ignore
 	 */
 	function logTagImpression() {
 		if ( isElementInViewport( $browseTags ) ) {
