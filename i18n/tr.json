@@ -145,7 +145,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "Aradığınız sayfa bulunamadı.",
 	"mobile-frontend-generic-404-title": "Hata - Sayfa bulunamadı.",
-	"mobile-frontend-generic-login": "{{SITENAME}} sizin gibi insanlar tarafından oluşturulur.",
+	"mobile-frontend-generic-login": "{{SITENAME}} sizin gibi insanlar tarafından geliştirilir.",
 	"mobile-frontend-generic-login-action": "Katkıda bulunmak için giriş yapın.",
 	"mobile-frontend-generic-signup-action": "Katkıda bulunmak için kaydolun.",
 	"mobile-frontend-history": "Bu sayfanın düzenleme geçmişini göster.",
