@@ -82,7 +82,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	 * Renders a search link and branding.
 	 */
 	protected function makeChromeHeaderContent( $data ) {
-		$templateParser = new TemplateParser( __DIR__ .'/../../templates' );
+		$templateParser = new TemplateParser( __DIR__ );
 		$args = array(
 			'siteName' => SkinMinerva::getSitename(),
 			'mobileMenuClass' => MobileUI::iconClass( 'search', 'element', 'header-icon' ),
