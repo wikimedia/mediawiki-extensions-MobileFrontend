@@ -24,13 +24,9 @@ module.exports = function ( grunt ) {
 		QUNIT_FILTER: ( process.env.QUNIT_FILTER && '&filter=' + process.env.QUNIT_FILTER ) || '',
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
 		files: {
-			js: [
-				'javascripts/**/*.js',
-				'resources/**/*.js'
-			],
+			js: 'resources/**/*.js',
 			jsTests: 'tests/qunit/**/*.js',
-			jsExternals: 'javascripts/externals/**/*.js',
-			resourceJsExternals: 'resources/*/externals/**/*.js'
+			jsExternals: 'resources/*/externals/**/*.js'
 		},
 		jshint: {
 			options: {
@@ -40,13 +36,12 @@ module.exports = function ( grunt ) {
 			sources: [
 				'<%= files.js %>',
 				'!<%= files.jsExternals %>',
-				'!<%= files.resourceJsExternals %>'
 			]
 		},
 		jscs: {
 			main: [
 				'<%= files.js %>',
-				'!<%= files.resourceJsExternals %>'
+				'!<%= files.jsExternals %>'
 			],
 			test: {
 				options: {
@@ -79,8 +74,7 @@ module.exports = function ( grunt ) {
 						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
 						src: [
 							'<%= files.js %>',
-							'!<%= files.jsExternals %>',
-							'!<%= files.resourceJsExternals %>'
+							'!<%= files.jsExternals %>'
 						],
 						instrumentedFiles: 'tests/report/tmp',
 						htmlReport: 'tests/report'
@@ -118,8 +112,7 @@ module.exports = function ( grunt ) {
 			main: {
 				src: [
 					'<%= files.js %>',
-					'!<%= files.jsExternals %>',
-					'!<%= files.resourceJsExternals %>'
+					'!<%= files.jsExternals %>'
 				],
 				dest: 'docs/js',
 				options: {
