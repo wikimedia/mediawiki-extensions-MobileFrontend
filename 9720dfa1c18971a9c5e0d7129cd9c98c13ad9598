@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d5ec18bb",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2015-05-25T02:17:19Z",
+      "side": 1,
+      "message": "This has some slight grammar issues. How about:\n\n\"You clicked a link to a page that does not exist yet. Are you interested in creating that page now?\"",
+      "range": {
+        "startLine": 142,
+        "startChar": 18,
+        "endLine": 142,
+        "endChar": 24
+      },
+      "revId": "9720dfa1c18971a9c5e0d7129cd9c98c13ad9598",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
