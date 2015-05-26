@@ -201,8 +201,7 @@ class MinervaTemplate extends BaseTemplate {
 				'userGender' => $historyLink['data-user-gender'],
 				'timestamp' => $historyLink['data-timestamp']
 			);
-			$templateParser = new TemplateParser(
-				__DIR__ . '/../../templates/' );
+			$templateParser = new TemplateParser( __DIR__ );
 			echo $templateParser->processTemplate( 'history', $args );
 		}
 	}

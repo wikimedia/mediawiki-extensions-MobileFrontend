@@ -174,7 +174,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser && $this->targetUser->getId() ) {
 
 				// Prepare content
-				$templateParser = new TemplateParser( __DIR__ . '/../../templates/specials' );
+				$templateParser = new TemplateParser( __DIR__ );
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$html = $templateParser->processTemplate( 'userprofile',
 					$this->getTemplateData( $templateParser ) );
