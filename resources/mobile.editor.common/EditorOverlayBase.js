@@ -10,6 +10,55 @@
 		EditorOverlayBase;
 
 	/**
+	 * 'Edit' button
+	 * @param {OO.ui.ToolGroup} toolGroup
+	 * @param {Object} config
+	 * @ignore
+	 */
+	function EditVeTool( toolGroup, config ) {
+		config = config || {};
+		config.classes = [ 'visual-editor' ];
+		EditVeTool.super.call( this, toolGroup, config );
+	}
+	OO.inheritClass( EditVeTool, OO.ui.Tool );
+
+	EditVeTool.static.name = 'editVe';
+	EditVeTool.static.icon = 'edit-ve';
+	EditVeTool.static.group = 'editorSwitcher';
+	EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-visual-editor' );
+	/**
+	 * click handler
+	 */
+	EditVeTool.prototype.onSelect = function () {
+		// will be overridden later
+	};
+
+	/**
+	 * 'Edit source' button
+	 * @param {OO.ui.ToolGroup} toolGroup
+	 * @param {Object} config
+	 * @ignore
+	 */
+	function EditSourceTool( toolGroup, config ) {
+		config = config || {};
+		config.classes = [ 'source-editor' ];
+		EditSourceTool.super.call( this, toolGroup, config );
+	}
+
+	OO.inheritClass( EditSourceTool, OO.ui.Tool );
+
+	EditSourceTool.static.name = 'editSource';
+	EditSourceTool.static.icon = 'edit-source';
+	EditSourceTool.static.group = 'editorSwitcher';
+	EditSourceTool.static.title = mw.msg( 'mobile-frontend-editor-source-editor' );
+	/**
+	 * click handler
+	 */
+	EditSourceTool.prototype.onSelect = function () {
+		// will be overridden later
+	};
+
+	/**
 	 * Base class for EditorOverlay
 	 * @class EditorOverlayBase
 	 * @extends Overlay
@@ -270,55 +319,6 @@
 			var toolFactory = new OO.ui.ToolFactory(),
 				toolGroupFactory = new OO.ui.ToolGroupFactory(),
 				toolbar;
-
-			/**
-			 * 'Edit' button
-			 * @param {OO.ui.ToolGroup} toolGroup
-			 * @param {Object} config
-			 * @constructor
-			 */
-			function EditVeTool( toolGroup, config ) {
-				config = config || {};
-				config.classes = [ 'visual-editor' ];
-				EditVeTool.super.call( this, toolGroup, config );
-			}
-			OO.inheritClass( EditVeTool, OO.ui.Tool );
-
-			EditVeTool.static.name = 'editVe';
-			EditVeTool.static.icon = 'edit-ve';
-			EditVeTool.static.group = 'editorSwitcher';
-			EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-visual-editor' );
-			/**
-			 * click handler
-			 */
-			EditVeTool.prototype.onSelect = function () {
-				// will be overridden later
-			};
-
-			/**
-			 * 'Edit source' button
-			 * @param {OO.ui.ToolGroup} toolGroup
-			 * @param {Object} config
-			 * @constructor
-			 */
-			function EditSourceTool( toolGroup, config ) {
-				config = config || {};
-				config.classes = [ 'source-editor' ];
-				EditSourceTool.super.call( this, toolGroup, config );
-			}
-
-			OO.inheritClass( EditSourceTool, OO.ui.Tool );
-
-			EditSourceTool.static.name = 'editSource';
-			EditSourceTool.static.icon = 'edit-source';
-			EditSourceTool.static.group = 'editorSwitcher';
-			EditSourceTool.static.title = mw.msg( 'mobile-frontend-editor-source-editor' );
-			/**
-			 * click handler
-			 */
-			EditSourceTool.prototype.onSelect = function () {
-				// will be overridden later
-			};
 
 			toolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory, {
 				classes: [ 'editor-switcher' ]
