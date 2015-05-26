@@ -178,6 +178,7 @@ $wgMinervaStyleModules = array(
 	),
 
 	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/ui.alpha.less',
 		),
@@ -223,6 +224,7 @@ $wgMinervaStyleModules = array(
 		),
 	),
 	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
+			'position' => 'bottom',
 			'class' => 'ResourceLoaderImageModule',
 			'selector' => '.mw-ui-icon-{name}:before',
 			'images' => array(
@@ -1605,7 +1607,9 @@ $wgMobileSpecialPageModules = array(
 	),
 
 	// These are NOT empty see $wgResourceModuleSkinStyles.
-	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(),
+	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
+	),
 	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
