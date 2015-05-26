@@ -1528,10 +1528,10 @@ $wgMobileSpecialPageModules = array(
 			'mobile.settings',
 		),
 		'scripts' => array(
-			'javascripts/specials/mobileoptions.js',
+			'resources/mobile.special.mobileoptions.scripts/mobileoptions.js',
 		),
 		'templates' => array(
-			'Checkbox.hogan' => 'templates/specials/checkbox.mustache',
+			'Checkbox.hogan' => 'resources/mobile.special.mobileoptions.scripts/checkbox.mustache',
 		),
 		'messages' => array(
 			'mobile-frontend-expand-sections-description',
