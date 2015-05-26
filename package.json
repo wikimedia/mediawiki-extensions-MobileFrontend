@@ -19,6 +19,7 @@
 		"svgo": ">=0.4.4"
 	},
 	"devDependencies": {
+		"grunt-mkdir": "^0.1.2",
 		"grunt-contrib-clean": "^0.6.0",
 		"grunt-mkdir": "^0.1.2",
 		"grunt-svg2png": "0.2.5",

@@ -8,6 +8,7 @@
 module.exports = function ( grunt ) {
 	var MW_INSTALL_PATH = grunt.option( 'MW_INSTALL_PATH' ) || process.env.MW_INSTALL_PATH;
 
+	grunt.loadNpmTasks( 'grunt-mkdir' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	grunt.loadNpmTasks( 'grunt-qunit-istanbul' );
@@ -16,7 +17,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-svg2png' );
 	grunt.loadNpmTasks( 'grunt-jsduck' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
-	grunt.loadNpmTasks( 'grunt-mkdir' );
 
 	grunt.initConfig( {
 		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -27,6 +27,18 @@ module.exports = function ( grunt ) {
 			js: 'resources/**/*.js',
 			jsTests: 'tests/qunit/**/*.js',
 			jsExternals: 'resources/*/externals/**/*.js'
+		},
+		mkdir: {
+			all: {
+				options: {
+					create: [ 'docs' ]
+				},
+			},
+			jsdocs: {
+				options: {
+					create: [ 'docs/js' ]
+				}
+			}
 		},
 		jshint: {
 			options: {
@@ -98,13 +110,6 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		mkdir: {
-			jsdocs: {
-				options: {
-					create: [ 'docs/js' ]
-				}
-			}
-		},
 		clean: {
 			jsdocs: [ 'docs/js' ]
 		},
@@ -135,6 +140,9 @@ module.exports = function ( grunt ) {
 					],
 					'ignore-global': true,
 					'tags': './.docs/jsduckCustomTags.rb',
+					// https://github.com/senchalabs/jsduck/issues/525
+					'processes': 0,
+					'warnings-exit-nonzero': true,
 					'warnings': [ '-nodoc(class,public)', '-dup_member', '-link_ambiguous' ]
 				}
 			}
@@ -151,7 +159,7 @@ module.exports = function ( grunt ) {
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
 	// running.
-	grunt.registerTask( 'test', [ 'lint' ] );
+	grunt.registerTask( 'test', [ 'lint', 'mkdir', 'jsduck' ] );
 
 	grunt.registerTask( 'default', [ 'test' ] );
 };
