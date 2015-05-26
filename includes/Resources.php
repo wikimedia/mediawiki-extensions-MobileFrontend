@@ -1540,7 +1540,7 @@ $wgMobileSpecialPageModules = array(
 	),
 	'mobile.special.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'scripts' => array(
-				'javascripts/specials/redirectmobileeditor.js',
+				'resources/mobile.special.mobileeditor.scripts/redirectmobileeditor.js',
 		),
 	),
 
@@ -1565,7 +1565,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile.head',
 		),
 		'scripts' => array(
-			'javascripts/specials/userlogin.js',
+			'resources/mobile.special.userlogin.scripts/userlogin.js',
 		),
 		'position' => 'top',
 	),
@@ -1578,7 +1578,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile-frontend-nearby-refresh',
 		),
 		'scripts' => array(
-			'javascripts/specials/nearby.js',
+			'resources/mobile.special.nearby.scripts/nearby.js',
 		),
 		// stop flash of unstyled content when loading from cache
 		'position' => 'top',
@@ -1619,7 +1619,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile-frontend-photo-upload-user-count',
 		),
 		'scripts' => array(
-			'javascripts/specials/uploads.js',
+			'resources/mobile.special.uploads.scripts/uploads.js',
 		),
 		'position' => 'top',
 	),
@@ -1651,7 +1651,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/specials/mobilediff.js',
+			'resources/mobile.special.mobilediff.scripts/mobilediff.js',
 		),
 	),
 
@@ -1705,7 +1705,7 @@ $wgMinervaSpecialPageModules = array(
 			'mobile.watchlist',
 		),
 		'scripts' => array(
-			'javascripts/specials/watchlist.js',
+			'resources/skins.minerva.special.watchlist.scripts/watchlist.js',
 		),
 	),
 
