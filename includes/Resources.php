@@ -31,6 +31,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 **/
 $wgMinervaStyleModules = array(
 	'skins.minerva.base.reset' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'resources/skins.minerva.base.reset/reset.less',
 		),
@@ -183,6 +184,7 @@ $wgMinervaStyleModules = array(
 	),
 
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
 		'styles' => array(
 			'less/pageactions.beta.less',
 			'less/footer.beta.less',
@@ -190,6 +192,7 @@ $wgMinervaStyleModules = array(
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'bottom',
 		'class' => 'ResourceLoaderImageModule',
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
