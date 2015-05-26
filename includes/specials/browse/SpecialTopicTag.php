@@ -131,10 +131,12 @@ class SpecialTopicTag extends MobileSpecialPage {
 				array(
 					'action' => 'query',
 					'list' => 'allpages',
-					'prop' => 'extracts|pageimages',
 					'pageids' => implode( '|', $pageIds ),
-					'exsentences' => self::EXTRACT_SENTENCES,
+					'prop' => 'extracts|pageimages',
 					'explaintext' => true,
+					'exsentences' => self::EXTRACT_SENTENCES,
+					'exlimit' => count( $pageIds ),
+					'exintro' => true,
 					'piprop' => 'name',
 					'continue' => '',
 				)
