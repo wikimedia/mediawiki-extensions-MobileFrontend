@@ -136,7 +136,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			}
 		}
 
-		$templateParser = new TemplateParser( __DIR__ . '/../../templates/specials' );
+		$templateParser = new TemplateParser(
+			__DIR__ . '/../../resources/mobile.special.mobileoptions.scripts' );
 		// @codingStandardsIgnoreStart Long line
 		foreach( $options as $key => $data ) {
 			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
