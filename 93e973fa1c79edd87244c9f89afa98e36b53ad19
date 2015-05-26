@@ -70,6 +70,24 @@
       "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_148298cd",
+        "filename": "includes/config/Skin.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-26T17:26:43Z",
+      "side": 1,
+      "message": "Ideally I\u0027d like it to be so that the user who\u0027s configuring it doesn\u0027t have to worry about finding the class names or callbacks. The standard menu items such as \u0027discovery\u0027, \u0027personal\u0027, etc. should be taken care of in the code and here the user just can set them to true or false, meaning they can show or hide those menu items easily. Non-standard menu items should be easy to configure too. For example, MobileUI::iconClass( \u0027cool-class\u0027, \u0027before\u0027 ), should be changed to \u0027cool-class\u0027 only. I\u0027m not sure what other reviewers have in mind though.",
+      "parentUuid": "0ed113e2_1bf667f7",
+      "revId": "93e973fa1c79edd87244c9f89afa98e36b53ad19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
