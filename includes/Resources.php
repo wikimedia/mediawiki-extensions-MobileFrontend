@@ -92,8 +92,8 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.tablet.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.tablet.styles/common.beta.less',
-			'resources/skins.minerva.tablet.styles/hacks.beta.less',
+			'resources/skins.minerva.tablet.beta.styles/common.less',
+			'resources/skins.minerva.tablet.beta.styles/hacks.less',
 		),
 	),
 	'skins.minerva.tablet.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
@@ -192,9 +192,11 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.beta.styles/pageactions.beta.less',
-			'resources/skins.minerva.beta.styles/footer.beta.less',
-			'resources/skins.minerva.beta.styles/main.beta.less',
+			'resources/skins.minerva.beta.styles/common.less',
+			'resources/skins.minerva.beta.styles/pageactions.less',
+			'resources/skins.minerva.beta.styles/footer.less',
+			'resources/skins.minerva.beta.styles/main.less',
+			'resources/skins.minerva.beta.styles/hacks.less',
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(

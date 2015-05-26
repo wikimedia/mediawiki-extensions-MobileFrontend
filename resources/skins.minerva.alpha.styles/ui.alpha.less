@@ -1,3 +1,4 @@
+
 @import "minerva.variables";
 @import "minerva.mixins";
 @import "mediawiki.mixins";
@@ -30,3 +31,25 @@
 	}
 }
 
+.alpha {
+
+	.header {
+		background-color: #fff;
+		position: relative;
+
+		> .header-title {
+			// align the text in the middle regardless of whether the notification icon exists or not
+			bottom: 0;
+			left: @headerHeight;
+			position: absolute;
+			right: @headerHeight;
+			text-align: center;
+			top: 0;
+			a {
+				display: block;
+				line-height: @headerHeight;
+				text-decoration: none;
+			}
+		}
+	}
+}
