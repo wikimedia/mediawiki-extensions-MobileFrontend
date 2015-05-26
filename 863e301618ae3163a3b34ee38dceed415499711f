@@ -16,6 +16,24 @@
       "revId": "863e301618ae3163a3b34ee38dceed415499711f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_82fde63a",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-26T20:59:03Z",
+      "side": 0,
+      "message": "Hmm, right, wouldn\u0027t it make more sense to hide it for tiny screens and show it for a tablet? Btw. we should think about a way to disable this \"feature\", because third party wikis doesn\u0027t have wikidata (normally), so they maybe want to show the \"normal\" wikitext infoboxes they copied (the template) from a wikipedia :)",
+      "parentUuid": "0ed113e2_b73cee8f",
+      "revId": "863e301618ae3163a3b34ee38dceed415499711f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
