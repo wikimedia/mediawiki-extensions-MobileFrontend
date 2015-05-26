@@ -11,8 +11,8 @@
 
 	/**
 	 * Base class for EditorOverlay
-	 * @extends Overlay
 	 * @class EditorOverlayBase
+	 * @extends Overlay
 	 * @uses Icon
 	 * @uses user
 	 */

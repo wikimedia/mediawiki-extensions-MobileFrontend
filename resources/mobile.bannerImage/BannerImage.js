@@ -91,6 +91,7 @@
 				.show()
 				/**
 				 * Show the image in mediaViewer
+				 * @ignore
 				 */
 				.on( 'click', function () {
 					var title = new mw.Title( 'File:' + image.fileName );

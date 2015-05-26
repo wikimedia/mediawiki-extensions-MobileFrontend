@@ -12,7 +12,7 @@
 	 */
 	Thumbnail = View.extend( {
 		/**
-		 * @inheritdoc
+		 * @cfg {Object} defaults options
 		 * @cfg {String} defaults.filename uri decoded filename including File: prefix associated with thumbnail
 		 */
 		defaults: {

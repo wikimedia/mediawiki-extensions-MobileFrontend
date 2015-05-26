@@ -7,6 +7,7 @@
 
 	/**
 	 * Loads the beacon from local storage.
+	 * @ignore
 	 *
 	 * @returns {Array}
 	 */
@@ -16,6 +17,7 @@
 
 	/**
 	 * Saves the beacon to local storage.
+	 * @ignore
 	 *
 	 * @param {Object} beacon
 	 */
@@ -25,6 +27,7 @@
 
 	/**
 	 * Deletes the beacon, if there is one, from local storage.
+	 * @ignore
 	 */
 	function deleteBeacon() {
 		settings.remove( BEACON_SETTING_KEY );
@@ -37,6 +40,7 @@
 	 * `factorySchema( 'MobileWebSearch' )` would return an instance of the
 	 * `SchemaMobileWebSearch` class.
 	 *
+	 * @ignore
 	 * @param {String} name
 	 * @returns {Schema}
 	 * @throws Error If the schema isn't defined

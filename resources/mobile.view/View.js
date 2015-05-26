@@ -88,6 +88,11 @@
 	 */
 	View = EventEmitter.extend( {
 		/**
+		 * A css class to apply to the containing element of the View.
+		 * @property {String} className
+		 */
+		className: undefined,
+		/**
 		 * Name of tag that contains the rendered template
 		 * @property String
 		 */
@@ -95,7 +100,7 @@
 
 		/**
 		 * Whether border box box sizing model should be used
-		 * @property Boolean
+		 * @property {Boolean} isBorderBox
 		 */
 		isBorderBox: true,
 		/**

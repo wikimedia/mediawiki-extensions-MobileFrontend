@@ -15,6 +15,10 @@
 		 * @property {String}
 		 */
 		appendToElement: 'body',
+		/**
+		 * Whether the drawer should disappear on a scroll event
+		 * @property {Boolean}
+		 */
 		closeOnScroll: true,
 		events: $.extend( {}, Panel.prototype.events, {
 			click: 'stopPropagation'
