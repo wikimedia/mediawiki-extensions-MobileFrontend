@@ -42,41 +42,40 @@ $wgMinervaStyleModules = array(
 		'position' => 'top',
 		'styles' => array(
 			'resources/skins.minerva.base.reset/reset.less',
-			'less/ui.less',
-			'less/pageactions.less',
-			'less/footer.less',
-			'less/common.less',
-			'less/icons.less',
-			'less/mainpage.less',
+			'resources/skins.minerva.base.styles/ui.less',
+			'resources/skins.minerva.base.styles/pageactions.less',
+			'resources/skins.minerva.base.styles/footer.less',
+			'resources/skins.minerva.base.styles/common.less',
+			'resources/skins.minerva.base.styles/icons.less',
+			'resources/skins.minerva.base.styles/mainpage.less',
 		),
 	),
 	'skins.minerva.base.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			// FIXME: Move to resources/skins.minerva.base.styles when T99921 resolved.
-			'less/ui.less',
-			'less/pageactions.less',
-			'less/footer.less',
-			'less/common.less',
-			'less/icons.less',
-			'less/mainpage.less',
+			'resources/skins.minerva.base.styles/ui.less',
+			'resources/skins.minerva.base.styles/pageactions.less',
+			'resources/skins.minerva.base.styles/footer.less',
+			'resources/skins.minerva.base.styles/common.less',
+			'resources/skins.minerva.base.styles/icons.less',
+			'resources/skins.minerva.base.styles/mainpage.less',
 		),
 	),
 
 	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/content/main.less',
-			'less/content/thumbnails.less',
-			'less/content/images.less',
-			'less/content/galleries.less',
-			'less/content/headings.less',
-			'less/content/blockquotes.less',
-			'less/content/lists.less',
-			'less/content/links.less',
-			'less/content/text.less',
-			'less/content/tables.less',
-			'less/content/hacks.less',
+			'resources/skins.minerva.content.styles/main.less',
+			'resources/skins.minerva.content.styles/thumbnails.less',
+			'resources/skins.minerva.content.styles/images.less',
+			'resources/skins.minerva.content.styles/galleries.less',
+			'resources/skins.minerva.content.styles/headings.less',
+			'resources/skins.minerva.content.styles/blockquotes.less',
+			'resources/skins.minerva.content.styles/lists.less',
+			'resources/skins.minerva.content.styles/links.less',
+			'resources/skins.minerva.content.styles/text.less',
+			'resources/skins.minerva.content.styles/tables.less',
+			'resources/skins.minerva.content.styles/hacks.less',
 		),
 	),
 	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
@@ -88,21 +87,21 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/tablet/common.less',
-			'less/tablet/hacks.less',
+			'resources/skins.minerva.tablet.styles/common.less',
+			'resources/skins.minerva.tablet.styles/hacks.less',
 		),
 	),
 	'skins.minerva.tablet.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/tablet/common.beta.less',
-			'less/tablet/hacks.beta.less',
+			'resources/skins.minerva.tablet.styles/common.beta.less',
+			'resources/skins.minerva.tablet.styles/hacks.beta.less',
 		),
 	),
 	'skins.minerva.tablet.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/tablet/common.alpha.less'
+			'resources/skins.minerva.tablet.alpha.styles/common.alpha.less'
 		),
 	),
 	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
@@ -179,16 +178,16 @@ $wgMinervaStyleModules = array(
 
 	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
-			'less/ui.alpha.less',
+			'resources/skins.minerva.alpha.styles/ui.alpha.less',
 		),
 	),
 
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/pageactions.beta.less',
-			'less/footer.beta.less',
-			'less/content/main.beta.less',
+			'resources/skins.minerva.beta.styles/pageactions.beta.less',
+			'resources/skins.minerva.beta.styles/footer.beta.less',
+			'resources/skins.minerva.beta.styles/main.beta.less',
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
@@ -414,8 +413,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.icons.images.legacy',
+		),
 		'styles' => array(
-			'less/spinner.less',
+			'resources/mobile.ajax/spinner.less',
 		),
 	),
 
@@ -1510,10 +1512,10 @@ $wgMobileCodeMirrorModules = array(
 $wgMobileSpecialPageModules = array(
 	'mobile.special.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/mobilemenu.less',
+			'resources/mobile.special.mobilemenu.styles/mobilemenu.less',
 		),
 		'skinStyles' => array(
-			'vector' => 'less/desktop/special/mobilemenu.less',
+			'vector' => 'resources/mobile.special.mobilemenu.styles/mobilemenu.less',
 		)
 	),
 	'mobile.special.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
@@ -1682,8 +1684,8 @@ $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'less/specials/common.less',
-			'less/specials/forms.less',
+			'resources/skins.minerva.special.styles/common.less',
+			'resources/skins.minerva.special.styles/forms.less',
 		),
 	),
 
@@ -1839,7 +1841,7 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
 	'mediawiki.notification' => '',
 	'mediawiki.sectionAnchor' => array(
-		'less/content/sectionAnchor.less',
+		'resources/skins.minerva.content.styles/sectionAnchor.less',
 	),
 	'mediawiki.skinning.content.parsoid' => array(),
 	'mobile.special.userprofile.styles' => array(
