@@ -180,7 +180,7 @@ $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
 $wgConfigRegistry['mobilefrontend'] = 'GlobalVarConfig::newInstance';
 
 // Set LESS importpath
-$wgResourceLoaderLESSImportPaths[] = __DIR__ . "/less/minerva.less/";
+$wgResourceLoaderLESSImportPaths[] = __DIR__ . "/minerva.less/";
 
 // ResourceLoader modules
 
