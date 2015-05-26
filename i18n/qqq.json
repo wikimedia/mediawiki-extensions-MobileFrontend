@@ -27,7 +27,8 @@
 			"Robby",
 			"Liuxinyu970226",
 			"Baffo",
-			"Metalhead64"
+			"Metalhead64",
+			"Ата"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -433,7 +434,7 @@
 	"mobile-frontend-time-precision-BCE-10annum": "Used to present a point in time BCE (before current era) with the precision of 10 years.\n\n$1 is the number of the decade (for example, [[:w:en:550s BC|550s BC]]).",
 	"mobile-frontend-time-precision-BCE-0annum": "Used to present a point in time BCE (before current era) with the precision of a year.\n\n$1 is the year.",
 	"mobile-frontend-days-ago": "Expression of duration of time passed in days.\nParameter:\n* $1 - number of days that have passed.",
-	"mobile-frontend-months-ago": "Expression of duration of time passed in months.\nParameter:\n * $1 - number of months that have passed.",
+	"mobile-frontend-months-ago": "Expression of duration of time passed in months.<br /> \nParameter:\n* $1 - number of months that have passed.",
 	"mobile-frontend-years-ago": "Expression of duration of time passed in years.\nParameter:\n * $1 - number of years that have passed.",
 	"mobile-frontend-console-recruit": "Message that is displayed in the JavaScript console aimed at developers in an attempt to recruit volunteers. The \\o/ emoticon is a man with his arms in the air with the purpose of drawing attention to the message. If this doesn't translate into the destination language feel free to omit it or use something more applicable.",
 	"mobile-frontend-browse-tags-header": "The header of the \"tags\" section of the page, which is part of the Browse experiment.",
