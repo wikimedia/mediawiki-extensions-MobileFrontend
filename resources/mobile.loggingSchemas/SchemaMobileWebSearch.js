@@ -10,7 +10,13 @@
 	SchemaMobileWebSearch = Schema.extend( {
 		/** @inheritdoc **/
 		name: 'MobileWebSearch',
+		/** @inheritdoc */
 		isSampled: true,
+		/**
+		 * Sampled at 0.1% (consistent with the Desktop search rate)
+		 * @inheritdoc
+		 */
+		samplingRate: 1 / 1000,
 		/**
 		 * @inheritdoc
 		 *
