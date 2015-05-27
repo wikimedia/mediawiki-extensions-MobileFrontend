@@ -207,7 +207,7 @@
 	"mobile-frontend-profile-last-thank": "Zoläz ene Dangk krääje {{GENDER:$2|vum|vum|vumm Metmaacher|vun dä|vum}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-noargs": "Keine Nahme för ene Metmaacher aanjejovve.\nBes esu johd un jivv ene Nahme aan, öm e Profihl ze belohre.",
 	"mobile-frontend-profile-nouser": "Et jitt keine Metmaacher met dämm Nahme.\nEn dä Nahme schpellt Juhß- un Keinlschrevv_en Roll.\nBes esu johd un lohr, dat dä reschtesch jeschrevve es.",
-	"mobile-frontend-profile-title": "De Enstellunge vum Metmaacher",
+	"mobile-frontend-profile-title": "De Ennschtällonge vum Metmaacher",
 	"mobile-frontend-profile-userpage-link": "Besöhk {{GENDER:$1|däm|däm|däm Metmaacher|dä|däm}} {{GENDER:$2|sing|sing|sing|ier|sing}} Metmaachersigg.",
 	"mobile-frontend-profile-usertalk": "Klaaf {{GENDER:$1|mem|mem|met däm Metmaacher|met dä|mem}} $1",
 	"mobile-frontend-random-button": "Zohfallsigg",
