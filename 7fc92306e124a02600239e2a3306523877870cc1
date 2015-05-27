@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_8b941e3b",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-27T19:40:18Z",
+      "side": 1,
+      "message": "The today is not really useful - depends when we merge it and when it gets deployed. git blame can help us here.",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_0ba82e73",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-27T19:40:18Z",
+      "side": 1,
+      "message": "I don\u0027t really understand why css is needed - can\u0027t you just correct the markup and make it compatible with the css?\n\nThis would be better in the stylesheet anyhow and probably simpler (separation of concerns).",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_cbb1c6e0",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-27T19:40:18Z",
+      "side": 1,
+      "message": "At this point you\u0027ll have 2 elements with the same id... really we should fix the existing element.",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
