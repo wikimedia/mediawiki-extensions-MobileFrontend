@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_0bbfcea8",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-27T19:43:19Z",
+      "side": 1,
+      "message": "I\u0027ve seen our code history get lost when we moved javascript files to the resources folder. git blame is pretty useless after that change. This at least gives you an approximate estimate.",
+      "parentUuid": "0ed113e2_8b941e3b",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_0ba82e73",
         "filename": "resources/mobile.head/init.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_2bbc12b1",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-27T19:43:19Z",
+      "side": 1,
+      "message": "I suppose I can.",
+      "parentUuid": "0ed113e2_0ba82e73",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_cbb1c6e0",
         "filename": "resources/mobile.head/init.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-05-27T19:40:18Z",
       "side": 1,
       "message": "At this point you\u0027ll have 2 elements with the same id... really we should fix the existing element.",
+      "revId": "7fc92306e124a02600239e2a3306523877870cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_cbd8e62a",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-27T19:43:19Z",
+      "side": 1,
+      "message": "Good catch",
+      "parentUuid": "0ed113e2_cbb1c6e0",
       "revId": "7fc92306e124a02600239e2a3306523877870cc1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
