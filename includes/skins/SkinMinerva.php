@@ -1035,6 +1035,7 @@ class SkinMinerva extends SkinTemplate {
 			'skins.minerva.content.styles',
 			'skins.minerva.tablet.styles',
 			'mediawiki.ui.icon',
+			'mediawiki.ui.button',
 			'skins.minerva.icons.images',
 		);
 		if ( $title->isSpecialPage() ) {
@@ -1048,8 +1049,6 @@ class SkinMinerva extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	public function setupSkinUserCss( OutputPage $out ) {
-		// Add common CSS ResourceLoader modules to the page output
-		parent::setupSkinUserCss( $out );
 		// Add Minerva-specific ResourceLoader modules to the page output
 		$out->addModuleStyles( $this->getSkinStyles() );
 	}
