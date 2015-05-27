@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d89e7ebd",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSearch.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-27T16:21:22Z",
+      "side": 1,
+      "message": "I assume this is fine but I\u0027ll let someone else check.",
+      "revId": "04d9179db9307776aace724f8ae1f44ae1d86f08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
