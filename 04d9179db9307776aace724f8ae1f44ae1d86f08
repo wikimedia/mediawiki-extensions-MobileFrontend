@@ -69,6 +69,24 @@
       "revId": "04d9179db9307776aace724f8ae1f44ae1d86f08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_38f1cac8",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-27T17:14:28Z",
+      "side": 1,
+      "message": "Ok :)",
+      "parentUuid": "0ed113e2_b8585afe",
+      "revId": "04d9179db9307776aace724f8ae1f44ae1d86f08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
