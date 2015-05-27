@@ -51,6 +51,24 @@
       "revId": "04d9179db9307776aace724f8ae1f44ae1d86f08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b8585afe",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-27T16:55:03Z",
+      "side": 1,
+      "message": "Maybe in this case, but in the long run when there are more numbers, it\u0027s easier to write this number as a fraction imo. But it\u0027s a personal preference.",
+      "parentUuid": "0ed113e2_d8851e5f",
+      "revId": "04d9179db9307776aace724f8ae1f44ae1d86f08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
