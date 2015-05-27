@@ -1784,6 +1784,7 @@ $wgMinervaBootstrapModules = array(
 	'skins.minerva.beta.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.scripts',
+			'skins.minerva.beta.images',
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
