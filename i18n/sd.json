@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aneeskaka"
+			"Aneeskaka",
+			"Sindhu"
 		]
 	},
 	"mobile-frontend-categories-add": "ٿاڱو شامل ڪريو",
@@ -10,5 +11,7 @@
 	"mobile-frontend-categories-nodata": "هتي خامي آهي ڇا توهان ڪجهه ٿاڱا محفوظ ڪيا هئا؟",
 	"mobile-frontend-categories-summary": "شامل ٿاڱا",
 	"mobile-frontend-categories-add-heading": "نون ٿاڱن کي محفوظ ڪرڻ",
-	"mobile-frontend-categories-add-wait": "ٿاڱو شامل ڀي رهيو آهي، مهرباني ڪري انتظار ڪريو"
+	"mobile-frontend-categories-add-wait": "ٿاڱو شامل ڀي رهيو آهي، مهرباني ڪري انتظار ڪريو",
+	"mobile-frontend-editor-edit": "ترميميو",
+	"mobile-frontend-view": "موبائيل ڏيک"
 }
