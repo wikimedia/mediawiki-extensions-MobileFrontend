@@ -1158,7 +1158,7 @@ HTML;
 		// Generate the licensing text displayed in the footer of each page.
 		// See Skin::getCopyright for desktop equivalent.
 		$license = self::getLicense( 'footer' );
-		if ( $license ) {
+		if ( isset( $license['link'] ) && $license['link'] ) {
 			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
 		} else {
 			$licenseText = '';
