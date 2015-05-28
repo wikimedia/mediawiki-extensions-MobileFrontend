@@ -46,6 +46,7 @@
 		},
 		/**
 		 * Post to API with support for central auth tokens
+		 * If the user is anonymous, then post using the csrftoken received from the remote wiki.
 		 * @param {String} tokenType Ignored. `'csrf'` is always used
 		 * @param {Object} data Data to be preprocessed and added to options
 		 * @param {Object} options Parameters passed to $.ajax()
@@ -56,27 +57,51 @@
 				d = $.Deferred();
 
 			options = options || {};
+			options.xhrFields = {
+				withCredentials: true
+			};
+			// In case it is a file upload we need to append origin to query string.
+			options.url = self.apiUrl + '?origin=' + self.getOrigin();
+
+			data.origin = self.getOrigin();
+
 			// first let's sort out the token
 			self.getCentralAuthToken().done( function ( centralAuthTokenOne ) {
 				self.getToken( tokenType, centralAuthTokenOne ).done( function ( token ) {
 					self.getCentralAuthToken().done( function ( centralAuthTokenTwo ) {
-						data.format = 'json';
 						data.centralauthtoken = centralAuthTokenTwo;
 						data.token = token;
-						data.origin = self.getOrigin();
-
-						options.xhrFields = {
-							withCredentials: true
-						};
-						// In case it is a file upload we need to append origin to query string.
-						options.url = self.apiUrl + '?origin=' + self.getOrigin();
-
 						Api.prototype.post.call( self, data, options ).done( function ( resp ) {
 							d.resolve( resp );
 						} ).fail( $.proxy( d, 'reject' ) );
 					} ).fail( $.proxy( d, 'reject' ) );
 				} ).fail( $.proxy( d, 'reject' ) );
-			} ).fail( $.proxy( d, 'reject' ) );
+			} ).fail( function ( code ) {
+				if ( code !== 'notloggedin' ) {
+					d.reject();
+					return;
+				}
+				// So the user is not logged in locally.
+				// Get the remote CSRF token
+				Api.prototype.ajax.call(
+					self, {
+						action: 'query',
+						meta: 'tokens',
+						type: 'csrf'
+					}, {
+						url: options.url
+					}
+				).done( function ( resp ) {
+					if ( resp.query && resp.query.tokens && resp.query.tokens.csrftoken ) {
+						data.token = resp.query.tokens.csrftoken;
+						Api.prototype.post.call( self, data, options ).done( function ( resp ) {
+							d.resolve( resp );
+						} ).fail( $.proxy( d, 'reject' ) );
+					} else {
+						d.reject();
+					}
+				} ).fail( $.proxy( d, 'reject' ) );
+			} );
 			return d;
 		},
 		/** @inheritdoc */
