@@ -47,7 +47,6 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.base.styles/footer.less',
 			'resources/skins.minerva.base.styles/common.less',
 			'resources/skins.minerva.base.styles/icons.less',
-			'resources/skins.minerva.base.styles/mainpage.less',
 		),
 	),
 	'skins.minerva.base.styles' => $wgMFResourceFileModuleBoilerplate + array(
@@ -58,7 +57,6 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.base.styles/footer.less',
 			'resources/skins.minerva.base.styles/common.less',
 			'resources/skins.minerva.base.styles/icons.less',
-			'resources/skins.minerva.base.styles/mainpage.less',
 		),
 	),
 
@@ -173,6 +171,14 @@ $wgMinervaStyleModules = array(
 
 			// Drawers
 			'cancel-light' => 'images/icons/cancel-light.svg',
+		),
+	),
+
+	'skins.minerva.mainPage.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'group' => 'other',
+		'styles' => array(
+			'resources/skins.minerva.mainPage.styles/common.less',
 		),
 	),
 
