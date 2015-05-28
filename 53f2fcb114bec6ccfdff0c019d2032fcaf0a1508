@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_eb5d9f7f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1525,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2015-05-28T21:25:48Z",
+      "side": 1,
+      "message": "Thanks, I hadn\u0027t noticed. I added it to a different spot, so the rebase missed the duplication.",
+      "parentUuid": "0ed113e2_eb86ffdf",
+      "revId": "53f2fcb114bec6ccfdff0c019d2032fcaf0a1508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_0b8ca3fe",
         "filename": "includes/Resources.php",
         "patchSetId": 2
