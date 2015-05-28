@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_a22fbc9b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-28T18:08:23Z",
+      "side": 1,
+      "message": "If you made this the outside if branch, then you could put all of the related code (adding alternate/canonical links) inside of one block. Since only the link varies, you might have an opportunity to collapse this to one call to `$out-\u003eaddLink`. What do you think?",
+      "revId": "10fcf17800e938d58357914818f309a49fe0e309",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
