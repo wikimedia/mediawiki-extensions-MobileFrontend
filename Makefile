@@ -59,7 +59,7 @@ phpcheck:
 	@dev-scripts/phpcheck.sh
 
 phplint: phpcheck			## Lint the PHP files
-	@dev-scripts/phplint.sh
+	@php composer.phar test
 
 phpunit:				## Run the PHPUnit test suite
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --group MobileFrontend ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
