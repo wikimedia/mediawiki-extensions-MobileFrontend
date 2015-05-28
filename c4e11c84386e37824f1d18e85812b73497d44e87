@@ -52,6 +52,24 @@
       "revId": "c4e11c84386e37824f1d18e85812b73497d44e87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_5477c0fd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 670,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-28T21:25:46Z",
+      "side": 1,
+      "message": "Look at the if: If the statement is true (the mobile site is displayed), then the code in it will be run and the function ends with the return value \"true\" (see L#665) and no further code will run. If the statement is false, the code inside the if will not run, but the other code. Which is exactly the functionality of if/else :)",
+      "parentUuid": "0ed113e2_d41410a3",
+      "revId": "c4e11c84386e37824f1d18e85812b73497d44e87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
