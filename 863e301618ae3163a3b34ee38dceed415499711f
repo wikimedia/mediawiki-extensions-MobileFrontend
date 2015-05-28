@@ -52,6 +52,24 @@
       "revId": "863e301618ae3163a3b34ee38dceed415499711f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_628b1473",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-28T17:15:57Z",
+      "side": 0,
+      "message": "The reason it is hidden is because of the infobox in alpha feature which replaces it.",
+      "parentUuid": "0ed113e2_62a47405",
+      "revId": "863e301618ae3163a3b34ee38dceed415499711f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
