@@ -312,6 +312,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.view',
 		),
 		'position' => 'top',
+		'styles' => array(
+			'resources/mobile.messageBox/messageBox.less',
+		),
 		'templates' => array(
 			'MessageBox.hogan' => 'resources/mobile.messageBox/MessageBox.mustache',
 		),

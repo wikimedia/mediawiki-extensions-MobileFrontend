@@ -1042,7 +1042,11 @@ class SkinMinerva extends SkinTemplate {
 			$styles[] = 'skins.minerva.mainPage.styles';
 		}
 		if ( $title->isSpecialPage() ) {
+			$styles[] = 'mobile.messageBox';
 			$styles['special'] = 'skins.minerva.special.styles';
+		}
+		if ( $this->getOutput()->getRequest()->getText( 'oldid' ) ) {
+			$styles[] = 'mobile.messageBox';
 		}
 		return $styles;
 	}
