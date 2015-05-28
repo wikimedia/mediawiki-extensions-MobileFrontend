@@ -1518,12 +1518,14 @@ $wgMobileSpecialPageModules = array(
 		),
 		'skinStyles' => array(
 			'vector' => 'resources/mobile.special.mobilemenu.styles/mobilemenu.less',
-		)
+		),
+		'position' => 'top',
 	),
 	'mobile.special.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'resources/mobile.special.mobileoptions.styles/mobileoptions.less',
 		),
+		'position' => 'top',
 	),
 	'mobile.special.mobileoptions.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
@@ -1556,12 +1558,14 @@ $wgMobileSpecialPageModules = array(
 			'vector' => 'resources/mobile.special.nearby.styles/specialNearbyDesktop.less',
 			'monobook' => 'resources/mobile.special.nearby.styles/specialNearbyDesktop.less',
 		),
+		'position' => 'top',
 	),
 
 	'mobile.special.nearby.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'resources/mobile.special.nearby.beta.styles/specialNearby.less',
 		),
+		'position' => 'top',
 	),
 
 	'mobile.special.userlogin.scripts' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1612,7 +1616,9 @@ $wgMobileSpecialPageModules = array(
 	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 	),
-	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(),
+	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'position' => 'top',
+	),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -1637,6 +1643,7 @@ $wgMobileSpecialPageModules = array(
 		'skinStyles' => array(
 			'default' => 'resources/mobile.special.uploads.styles/default.less',
 		),
+		'position' => 'top',
 	),
 
 	'mobile.special.pagefeed.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
@@ -1651,6 +1658,7 @@ $wgMobileSpecialPageModules = array(
 			'resources/mobile.special.mobilediff.styles/icons.less',
 			'resources/mobile.special.mobilediff.styles/mobilediff.less',
 		),
+		'position' => 'top',
 	),
 
 	// Note that this module is declared as a dependency in the Thanks extension (for the
@@ -1668,6 +1676,7 @@ $wgMobileSpecialPageModules = array(
 		'styles' => array(
 			'resources/mobile.browse/special/topicTag.less',
 		),
+		'position' => 'top',
 	),
 
 	'mobile.special.browse.topicTag.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
