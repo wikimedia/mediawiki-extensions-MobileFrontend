@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e295c443",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-28T17:34:12Z",
+      "side": 0,
+      "message": "parsedBlockReason still exists above..",
+      "revId": "770e8480834040d0cf7f284f6a7d260bf825688c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

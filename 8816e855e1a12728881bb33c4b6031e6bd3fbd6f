@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_82a2b8a2",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-28T17:34:12Z",
+      "side": 1,
+      "message": "what is this used for now?",
+      "revId": "8816e855e1a12728881bb33c4b6031e6bd3fbd6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
