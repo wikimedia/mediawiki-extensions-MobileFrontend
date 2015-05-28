@@ -3,13 +3,14 @@
 	<title>Extension:MobileFrontend</title>
 	<parser>
 		<target>docs/php</target>
-		<markers>
-			<item>TODO</item>
-			<item>FIXME</item>
-		</markers>
+		<extensions>
+			<extension>php</extension>
+			<extension>php5</extension>
+			<extension>inc</extension>
+		</extensions>
 	</parser>
 	<transformer>
-		<target>docs/php</target>
+		<target>docs/php/</target>
 	</transformer>
 	<logging>
 		<level>debug</level>
@@ -19,9 +20,8 @@
 		</paths>
 	</logging>
 	<files>
-		<directory>./</directory>
+		<directory>.</directory>
 		<ignore>vendor/*</ignore>
 		<ignore>tests/*</ignore>
-		<ignore>node_modules/*</ignore>
 	</files>
 </phpdoc>
