@@ -242,8 +242,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$out->addHtml( $this->getMoreButton( $rev1->getTimestamp() ) );
 			}
 		} else {
-			$out->addHtml( Html::element( 'div', array( 'class' => 'error alert' ),
-				$this->msg( 'mobile-frontend-history-no-results' ) ) );
+			// Edge case.
+			// I suspect this is here because revisions may exist but may have been hidden.
+			$out->addHtml(
+				MobileUI::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}
 

@@ -62,10 +62,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		$this->checkReadOnly();
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
-			$out->wrapWikiMsg(
-				"<div class=\"alert successbox\">$1</div>",
-				'savedprefs'
-			);
+			$out->addHtml( MobileUI::successBox( wfMessage( 'savedprefs' ) ) );
 		}
 
 		if ( $par && in_array( $par, $this->validTabs ) ) {

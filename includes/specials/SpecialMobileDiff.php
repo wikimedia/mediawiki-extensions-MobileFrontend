@@ -221,12 +221,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$warnings = $de->getWarningMessageText();
 		if ( $warnings ) {
-			$warnings = Html::openElement( 'div',
-				array(
-					'class' => 'warning alert',
-				) ) .
-				$warnings .
-				Html::closeElement( 'div' );
+			$warnings = MobileUI::warningBox( $warnings );
 		}
 		$this->getOutput()->addHtml(
 			$warnings .

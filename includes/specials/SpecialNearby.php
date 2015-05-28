@@ -42,22 +42,15 @@ class SpecialNearby extends MobileSpecialPage {
 					'id' => 'mw-mf-nearby',
 				)
 			) .
-			Html::openElement( 'div',
-				array(
-					'class' => 'noscript errorbox',
-				)
+			MobileUI::contentElement(
+				MobileUI::errorBox(
+					Html::element( 'h2', array(),
+						wfMessage( 'mobile-frontend-nearby-requirements' ) ) .
+					Html::element( 'p', array(),
+						wfMessage( 'mobile-frontend-nearby-requirements-guidance' ) )
+				),
+				'noscript'
 			) .
-			Html::openElement( 'div',
-				array(
-					'class' => 'content',
-				)
-			) .
-			Html::element( 'h2', array(),
-				wfMessage( 'mobile-frontend-nearby-requirements' ) ) .
-			Html::element( 'p', array(),
-				wfMessage( 'mobile-frontend-nearby-requirements-guidance' ) ) .
-			Html::closeElement( 'div' ) . // .content
-			Html::closeElement( 'div' ) . // .noscript
 			Html::closeElement( 'div' ); // #mw-mf-nearby
 
 		$output->addHTML( $html );

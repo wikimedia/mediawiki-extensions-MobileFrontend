@@ -1,5 +1,5 @@
-<div class="alert">
-	<p class="anonMsg alert warning">{{{anonMsg}}}</p>
+<div>
+	<p class="anonMsg warningbox">{{{anonMsg}}}</p>
 	<div class="actions">
 		{{#anonButton}}{{>button}}{{/anonButton}}
 		{{#loginButton}}{{>button}}{{/loginButton}}

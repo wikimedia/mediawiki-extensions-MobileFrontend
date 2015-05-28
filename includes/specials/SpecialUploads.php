@@ -35,11 +35,11 @@ class SpecialUploads extends MobileSpecialPage {
 		if ( $par !== '' && $par !== null ) {
 			$user = User::newFromName( $par );
 			if ( !$user || $user->isAnon() ) {
-				// User provided, but is invalid or not registered
-				// FIXME: Use Html class?
-				$html = '<div class="alert error">'
-					. $this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse()
-					. '</div>';
+				$output->setStatusCode( 404 );
+				$html = MobileUI::contentElement(
+					MobileUI::errorBox(
+						$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse() )
+				);
 			} else {
 				$html = $this->getUserUploadsPageHtml( $user );
 			}

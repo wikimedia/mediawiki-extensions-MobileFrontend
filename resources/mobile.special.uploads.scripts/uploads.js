@@ -11,12 +11,17 @@
 	 * @ignore
 	 */
 	function init() {
-		new PhotoList( {
-			username: userName
-		} ).appendTo( '.content' );
+		// check there are no errors on the page before attempting
+		// we might have an invalid username
+		if ( $( '.errorbox' ).length === 0 ) {
+			new PhotoList( {
+				username: userName
+			} ).appendTo( '.content' );
+		}
 	}
 
-	if ( userName && mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Uploads' ) {
+	// Assume we are on the special page.
+	if ( userName ) {
 		$( init );
 	}
 

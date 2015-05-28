@@ -103,8 +103,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				$out->addHtml( $this->getMoreButton( $rev->getTimestamp() ) );
 			}
 		} else {
-			$out->addHtml( Html::element( 'div', array( 'class' => 'error alert' ),
-				$this->msg( 'mobile-frontend-history-no-results' ) ) );
+			// For users who exist but have not made any edits
+			$out->addHtml(
+				MobileUI::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}
 

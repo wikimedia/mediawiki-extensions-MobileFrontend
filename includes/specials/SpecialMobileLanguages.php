@@ -140,8 +140,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 		$output = $this->getOutput();
 
-		$html = Html::openElement( 'div', array( 'class' => 'content' ) );
-
+		$html = '';
 		if ( $this->title && $this->title->exists() ) {
 			$titlename = $this->title->getPrefixedText();
 			$pageTitle = $this->msg( 'mobile-frontend-languages-header-page',
@@ -199,8 +198,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				$this->msg( 'mobile-frontend-languages-nonexistent-title' )->params( $pagename )->text() );
 		}
 
-		$html .= Html::closeElement( 'div' );
-
+		$html = MobileUI::contentElement( $html );
 		$output->setPageTitle( $pageTitle );
 		$output->addHTML( $html );
 	}
