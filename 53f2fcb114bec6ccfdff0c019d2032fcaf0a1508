@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_eb86ffdf",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1525,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-28T21:24:47Z",
+      "side": 1,
+      "message": "this seems to be doubled now (see L1529)",
+      "revId": "53f2fcb114bec6ccfdff0c019d2032fcaf0a1508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_0b8ca3fe",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1555,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-28T21:24:47Z",
+      "side": 1,
+      "message": "doubled",
+      "revId": "53f2fcb114bec6ccfdff0c019d2032fcaf0a1508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ab70f707",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1659,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-28T21:24:47Z",
+      "side": 1,
+      "message": "doubled",
+      "revId": "53f2fcb114bec6ccfdff0c019d2032fcaf0a1508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
