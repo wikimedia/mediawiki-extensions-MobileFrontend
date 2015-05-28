@@ -34,6 +34,24 @@
       "revId": "863e301618ae3163a3b34ee38dceed415499711f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_62a47405",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-28T17:10:00Z",
+      "side": 0,
+      "message": "This is a good idea, we should not force features on our users.",
+      "parentUuid": "0ed113e2_82fde63a",
+      "revId": "863e301618ae3163a3b34ee38dceed415499711f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
