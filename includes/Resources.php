@@ -301,6 +301,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.mainMenu/MainMenu.js',
 		),
 	),
+	'mobile.messageBox' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.view',
+		),
+		'position' => 'top',
+		'templates' => array(
+			'MessageBox.hogan' => 'resources/mobile.messageBox/MessageBox.mustache',
+		),
+		'scripts' => array(
+			'resources/mobile.messageBox/MessageBox.js',
+		),
+	),
 	'mobile.modifiedBar' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.modules',
@@ -587,6 +599,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 			'mobile.drawers',
 			'mobile.toast',
+			'mobile.messageBox',
 			'mediawiki.confirmCloseWindow',
 		),
 		'scripts' => array(
@@ -1179,6 +1192,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 			'mobile.pagelist.scripts',
 			'mobile.foreignApi',
+			'mobile.messageBox',
 		),
 		'messages' => array(
 			// NearbyApi.js
