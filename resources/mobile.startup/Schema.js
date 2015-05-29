@@ -69,7 +69,7 @@
 		isSampled: false,
 		/**
 		 * The rate at which sampling is performed
-		 * @property {Number} [1 / 2]
+		 * @property {Number}
 		 */
 		samplingRate: 1 / 2,
 		/**
