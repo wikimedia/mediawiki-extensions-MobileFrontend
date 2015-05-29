@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_c3951f44",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "we should refactor this in future - ideally we should not be doing any DOM manipulations and simply be updating the containing message.\n\nAfter all this code runs in the head so should be as minimal as possible! :)",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_03b487e3",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "as stated before the date only confuses things so just remove it and rely on git blame",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_43aa8f83",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "Just use \u003cdiv class\u003d\"last-modified-bar\"\u003e",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_23a50bb2",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "class is a keyword\nSince you are using static values just do:\n$( \u0027\u003cdiv class\u003d\"mw-mf-last-modified\" class\u003d\"truncated-text\"\u003e\u0027 )",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_63a233a6",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "omit date.",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_238c2b3a",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-05-29T07:04:08Z",
+      "side": 1,
+      "message": "This will never be true for a non-cached page from what I can see and I\u0027m not sure why it is needed. Am I missing something?\n\n#mw-mf-last-modified only has this class if it is a link and thus when isCachedPage is true (Thus I think this is a dead code block?)",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
