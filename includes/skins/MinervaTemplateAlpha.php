@@ -137,11 +137,11 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	 * @inheritdoc
 	 */
 	protected function renderMainMenu( $data ) {
-		$templateParser = new TemplateParser( __DIR__ .'/../../resources' );
+		$templateParser = new TemplateParser( __DIR__ );
 		$args = array(
 			'searchForm' => $this->makeSearchForm( $data )
 		);
-		echo $templateParser->processTemplate( 'mobile.mainMenu/searchForm', $args );
+		echo $templateParser->processTemplate( 'searchForm', $args );
 		parent::renderMainMenu( $data );
 	}
 
