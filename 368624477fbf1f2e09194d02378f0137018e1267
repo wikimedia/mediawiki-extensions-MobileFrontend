@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_9c28d897",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-29T16:38:55Z",
+      "side": 1,
+      "message": "Please create a phab task, your comment is not relevant to the patch and I\u0027m afraid no-one will remember it after the patch has been merged.",
+      "parentUuid": "0ed113e2_c3951f44",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_03b487e3",
         "filename": "resources/mobile.head/init.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-05-29T07:04:08Z",
       "side": 1,
       "message": "as stated before the date only confuses things so just remove it and rely on git blame",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_5c327007",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-29T16:38:55Z",
+      "side": 1,
+      "message": "Don\u0027t feel confused, it\u0027s a rough estimate. Also as I stated before, I don\u0027t trust git blame because we lost a lot of code history after moving files to resources. I don\u0027t see how this comment can be harmful. Same reasoning applies to your comment below.",
+      "parentUuid": "0ed113e2_03b487e3",
       "revId": "368624477fbf1f2e09194d02378f0137018e1267",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +134,24 @@
       "writtenOn": "2015-05-29T07:04:08Z",
       "side": 1,
       "message": "This will never be true for a non-cached page from what I can see and I\u0027m not sure why it is needed. Am I missing something?\n\n#mw-mf-last-modified only has this class if it is a link and thus when isCachedPage is true (Thus I think this is a dead code block?)",
+      "revId": "368624477fbf1f2e09194d02378f0137018e1267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1c1ce87b",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-29T16:38:55Z",
+      "side": 1,
+      "message": "You\u0027re right, now that cached pages are handled separetely, this piece is not needed.",
+      "parentUuid": "0ed113e2_238c2b3a",
       "revId": "368624477fbf1f2e09194d02378f0137018e1267",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
