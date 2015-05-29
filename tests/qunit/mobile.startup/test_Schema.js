@@ -43,4 +43,31 @@
 		assert.deepEqual( [ data ], this.logStub.firstCall.args );
 	} );
 
+	QUnit.test( '#sampling and bucketing', 3, function ( assert ) {
+		var TestSchema = Schema.extend( {
+				name: 'test',
+				isSampled: true
+			} ),
+			testSchema = new TestSchema();
+
+		// Default sampling rate is 0.5, isSampled is true, and Math.random returns 0.4
+		this.sandbox.stub( Math, 'random' ).returns( 0.4 );
+		assert.strictEqual( testSchema._isUserInBucket(), true, 'user is in bucket' );
+
+		// Default sampling rate is 0.5, isSampled is true, and Math.random returns 0.6
+		testSchema = new TestSchema();
+		Math.random.restore();
+		this.sandbox.stub( Math, 'random' ).returns( 0.6 );
+		assert.strictEqual( testSchema._isUserInBucket(), false, 'user is not in bucket' );
+
+		// Default sampling rate is 0.5, isSampled is false (default), and Math.random returns 0.4
+		TestSchema = Schema.extend( {
+			name: 'test'
+		} );
+		testSchema = new TestSchema();
+		Math.random.restore();
+		this.sandbox.stub( Math, 'random' ).returns( 0.4 );
+		assert.strictEqual( testSchema._isUserInBucket(), false, 'user is not in bucket' );
+	} );
+
 }( jQuery, mw.mobileFrontend ) );

@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var Schema,
 		Class = M.require( 'Class' ),
-		user = M.require( 'user' ),
 		settings = M.require( 'settings' ),
 		BEACON_SETTING_KEY = 'mobileFrontend/beacon';
 
@@ -69,6 +68,29 @@
 		 */
 		isSampled: false,
 		/**
+		 * The rate at which sampling is performed
+		 * @property {Number} [1 / 2]
+		 */
+		samplingRate: 1 / 2,
+		/**
+		 * Whether the user is in the sampling bucket. Used as a cache variable.
+		 * @property {Boolean|undefined}
+		 * @private
+		 */
+		_isInBucket: undefined,
+
+		/**
+		 * Whether the user is bucketed.
+		 * @returns {Boolean}
+		 * @private
+		 */
+		_isUserInBucket: function () {
+			if ( this._isInBucket === undefined ) {
+				this._isInBucket = this.isSampled && Math.random() <= this.samplingRate;
+			}
+			return this._isInBucket;
+		},
+		/**
 		 * Name of Schema to log to
 		 * @property {String}
 		 */
@@ -96,11 +118,8 @@
 		 */
 		log: function ( data ) {
 			if ( mw.eventLog ) {
-				// Log event if logging schema is not sampled or if user falls into
-				// sampling bucket (currently 50% of all users).
-				// FIXME: Figure out if we need a more flexible sampling system, and if
-				// so, how to implement it with the session ID.
-				if ( !this.isSampled || user.getSessionId().charAt( 0 ) < 'V' ) {
+				// Log event if logging schema is not sampled or if user is in the bucket
+				if ( !this.isSampled || this._isUserInBucket() ) {
 					return mw.eventLog.logEvent( this.name, $.extend( this.defaults, data ) );
 				} else {
 					return $.Deferred().reject( 'User not in event sampling bucket.' );
