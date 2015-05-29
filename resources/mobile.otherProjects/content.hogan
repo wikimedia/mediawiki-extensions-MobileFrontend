@@ -1,7 +1,0 @@
-<ul class="site-link-list">
-	{{#links}}
-		<li>
-			<a href="{{url}}">{{title}} on {{site}}</a>
-		</li>
-	{{/links}}
-</ul>
