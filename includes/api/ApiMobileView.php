@@ -138,7 +138,7 @@ class ApiMobileView extends ApiBase {
 				$requestedSections = array( 0 );
 			}
 			$resultObj->addValue( null, $moduleName,
-				array( 'mainpage' => '' )
+				array( 'mainpage' => true )
 			);
 		} elseif ( isset( $params['sections'] ) ) {
 			$requestedSections = self::parseSections( $params['sections'], $data, $missingSections );
@@ -165,7 +165,7 @@ class ApiMobileView extends ApiBase {
 						unset( $requestedSections[$i] );
 					}
 					if ( isset( $data['refsections'][$i] ) ) {
-						$section['references'] = '';
+						$section['references'] = true;
 					}
 					$result[] = $section;
 				}
@@ -215,7 +215,7 @@ class ApiMobileView extends ApiBase {
 		// only thing we support about it.
 		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
 			$resultObj->addValue( null, $moduleName,
-				array( 'liquidthreads' => '' )
+				array( 'liquidthreads' => true )
 			);
 		}
 		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
