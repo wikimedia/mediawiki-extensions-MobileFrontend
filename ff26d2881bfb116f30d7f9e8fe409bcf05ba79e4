@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b7e7f50c",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-29T17:49:13Z",
+      "side": 1,
+      "message": "This variable name should be more descriptive. How about \u0027diffEngine\u0027? (This first DE that comes to my mind is Desktop Environment) ;)",
+      "revId": "ff26d2881bfb116f30d7f9e8fe409bcf05ba79e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_37c30563",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-05-29T17:49:13Z",
+      "side": 1,
+      "message": "We need to add a space after :",
+      "revId": "ff26d2881bfb116f30d7f9e8fe409bcf05ba79e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
