@@ -6,6 +6,8 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "د يوې برخې نه پرشا ټوپ وهل",
+	"mobile-frontend-categories-add": "وېشنيزه کې ورگډول",
+	"mobile-frontend-categories-summary": "وېشنيزو کې ورگډ شو",
 	"mobile-frontend-changeslist-nocomment": "د سمون لنډيز پرته",
 	"mobile-frontend-clear-search": "سپينول",
 	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوی وي.",
@@ -16,6 +18,8 @@
 	"mobile-frontend-editor-edit": "سمول",
 	"mobile-frontend-editor-previewing-page": "<span>د $1</span><span><strong>مخليدنه</strong>",
 	"mobile-frontend-editor-success": "بريال! سمون مو خوندي شو.",
+	"mobile-frontend-editor-redlink-leave": "نه، مننه.",
+	"mobile-frontend-editor-redlink-create": "مخ جوړول",
 	"mobile-frontend-enable-images": "په موبايل وېبځي انځورونه چارنول",
 	"mobile-frontend-featured-article": "د نن غوره شوی مطلب",
 	"mobile-frontend-footer-contact": "اړيکه",
