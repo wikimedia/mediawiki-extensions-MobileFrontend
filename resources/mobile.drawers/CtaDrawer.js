@@ -19,15 +19,15 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Object} defaults.collapseIcon options for Icon for collapsing the drawer
-		 * @cfg {Object} defaults.loginButton options for Button element for signing in
-		 * @cfg {Object} defaults.signupAnchor options for Anchor element for signing up
+		 * @cfg {Object} defaults.progressiveButton options for Button element for signing in
+		 * @cfg {Object} defaults.actionAnchor options for Anchor element for signing up
 		 */
 		defaults: {
-			loginButton: new Button( {
+			progressiveButton: new Button( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
 			} ).options,
-			signupAnchor: new Anchor( {
+			actionAnchor: new Anchor( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 			} ).options,
@@ -42,6 +42,12 @@
 			anchor: Anchor.prototype.template
 		},
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
+		/**
+		 * @inheritdoc
+		 */
+		events: $.extend( {}, Drawer.prototype.events, {
+			'click .hide': 'hide'
+		} ),
 
 		/** @inheritdoc */
 		preRender: function () {
@@ -53,8 +59,13 @@
 					type: 'signup'
 				}, this.options.signupQueryParams );
 
-			this.options.loginButton.href = mw.util.getUrl( 'Special:UserLogin', params );
-			this.options.signupAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+			// Give the button and the anchor a default target, if it isn't set already
+			if ( !this.options.progressiveButton.hasOwnProperty( 'href' ) ) {
+				this.options.progressiveButton.href = mw.util.getUrl( 'Special:UserLogin', params );
+			}
+			if ( !this.options.actionAnchor.hasOwnProperty( 'href' ) ) {
+				this.options.actionAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+			}
 		}
 	} );
 

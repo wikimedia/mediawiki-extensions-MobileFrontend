@@ -35,22 +35,8 @@ class SkinMinervaAlphaTest extends SkinTest {
 		$modules = $skin->getContextSpecificModules();
 
 		foreach ( $modules as $module ) {
-			$this->assertFalse( is_array( $module ), 'Context specific modules can\'t be a arrays.' );
+			$this->assertFalse( is_array( $module ), 'Context specific modules can\'t be arrays.' );
 		}
-	}
-
-	public function providerShowRedLinks() {
-		return array(
-			// $wgShowRedLinks, $wgShowRedLinksAnon, $username, $expected
-			array( false, false, 'UTSysop', true ),
-			array( true, false, 'UTSysop', true ),
-			array( false, true, 'UTSysop', true ),
-			array( true, true, 'UTSysop', true ),
-			array( false, false, 'NotLoggedIn', true ),
-			array( true, false, 'NotLoggedIn', true ),
-			array( false, true, 'NotLoggedIn', true ),
-			array( true, true, 'NotLoggedIn', true ),
-		);
 	}
 
 	protected function getSkin() {

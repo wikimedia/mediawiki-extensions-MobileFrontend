@@ -445,7 +445,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.head',
 			'mobile.user',
 			'mediawiki.api',
-			'mobile.redlinks',
 			'mobile.settings',
 			'jquery.throttle-debounce',
 			'skins.minerva.icons.images.legacy',
@@ -498,16 +497,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.redlinks' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.head',
-			'mediawiki.user',
-		),
-		'scripts' => array(
-			'resources/mobile.redlinks/init.js',
-		),
-	),
-
 	'mobile.user' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.user',
@@ -544,6 +533,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-undo-unsupported',
 			// edit link
 			'mobile-frontend-editor-edit',
+			'mobile-frontend-editor-redlink-create',
+			'mobile-frontend-editor-redlink-leave',
+			'mobile-frontend-editor-redlink-explain' => array( 'parse' ),
 		),
 		'scripts' => array(
 			'resources/mobile.editor/init.js',
