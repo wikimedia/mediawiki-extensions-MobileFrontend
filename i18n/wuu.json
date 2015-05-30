@@ -2,9 +2,30 @@
 	"@metadata": {
 		"authors": [
 			"Benojan",
-			"十弌"
+			"十弌",
+			"Poiuyt"
 		]
 	},
+	"mobile-frontend-copyright": "除非另外声明，内容用$1授权。",
+	"mobile-frontend-editor-edit": "编辑",
 	"mobile-frontend-editor-newpage-prompt": "箇頁朆見。怎兒弗膽大點去建起？",
-	"mobile-frontend-media-details": "零零碎碎"
+	"mobile-frontend-home-button": "封面",
+	"mobile-frontend-language-article-heading": "其他言话",
+	"mobile-frontend-last-modified-date": "最后修改于$1 $2",
+	"mobile-frontend-main-menu-button-tooltip": "打开主菜单",
+	"mobile-frontend-main-menu-login": "登录",
+	"mobile-frontend-main-menu-nearby": "附近",
+	"mobile-frontend-main-menu-settings": "设置",
+	"mobile-frontend-main-menu-watchlist": "关注表",
+	"mobile-frontend-media-details": "零零碎碎",
+	"mobile-frontend-placeholder": "搜寻{{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "隐私",
+	"mobile-frontend-random-button": "随机",
+	"mobile-frontend-terms-text": "使用条款",
+	"mobile-frontend-view": "手机版视图",
+	"mobile-frontend-view-desktop": "桌面版",
+	"mobile-frontend-view-mobile": "移动版",
+	"tag-mobile_edit": "移动版编辑",
+	"tag-mobile_web_edit": "移动网页编辑",
+	"mobile-frontend-pageaction-edit-tooltip": "编辑该页面个头章。"
 }
