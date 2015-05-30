@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_305f8816",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-30T20:51:29Z",
+      "side": 1,
+      "message": "hmm, that still looks false, the x-analytics header should be added when the mobile view is used, not only when the mobile view is used AND wgMFMobileUrlTemplate is set AND wgMFNoIndexPages is set :)",
+      "revId": "dc8a540d0e79331b9b486e1cec5d4be346149267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
