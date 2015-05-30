@@ -145,7 +145,7 @@ class MFMockRevision extends Revision {
 	}
 
 	public function getTitle() {
-		return new Title( "page_$this->id" );
+		return Title::newFromText( "Page_$this->id" );
 	}
 
 	public function getPrevious() {
