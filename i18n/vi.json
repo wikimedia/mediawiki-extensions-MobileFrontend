@@ -9,7 +9,8 @@
 			"පසිඳු කාවින්ද",
 			"Trần Nguyễn Minh Huy",
 			"Max20091",
-			"KhangND"
+			"KhangND",
+			"Darcy Le"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -110,6 +111,9 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Xem mã nguồn</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Sửa đổi",
 	"mobile-frontend-editor-wait": "Đang lưu sửa đổi, vui lòng chờ.",
+	"mobile-frontend-editor-redlink-leave": "Không, cảm ơn.",
+	"mobile-frontend-editor-redlink-explain": "Trang này chưa được tạo trên {{SITENAME}}.",
+	"mobile-frontend-editor-redlink-create": "Tạo trang",
 	"mobile-frontend-enable-images": "Hiện hình ảnh trên trang di động",
 	"mobile-frontend-errorreport-button-label": "Báo cáo lỗi",
 	"mobile-frontend-errorreport-error": "Đã xuất hiện lỗi khi đăng phản hồi.",
