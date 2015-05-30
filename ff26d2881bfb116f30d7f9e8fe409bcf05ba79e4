@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_f058202b",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-05-30T20:51:56Z",
+      "side": 1,
+      "message": "Sure, i just took the local one used in showDiff() :D",
+      "parentUuid": "0ed113e2_b7e7f50c",
+      "revId": "ff26d2881bfb116f30d7f9e8fe409bcf05ba79e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_37c30563",
         "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
         "patchSetId": 3
