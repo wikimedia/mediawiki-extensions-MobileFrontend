@@ -16,6 +16,24 @@
       "revId": "35ebe1c7e3f70a9f17a85c73f1cd8dfb60a365fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b64e059a",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-01T22:02:58Z",
+      "side": 1,
+      "message": "How about doing what you said for 2nd cached pages too? I prefer not to create elements on the fly when there is no need for them.",
+      "parentUuid": "0ed113e2_367bf5be",
+      "revId": "35ebe1c7e3f70a9f17a85c73f1cd8dfb60a365fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
