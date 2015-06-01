@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7f42bb64",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 653,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-01T08:26:52Z",
+      "side": 0,
+      "message": "I think that placing it after the new (larger) if statement should suffice. The early return also stopped adding the canonical link, but you\u0027ve dealt with that in the new version.",
+      "revId": "1dd5b903d56d1e616c9ceb502aeb187d1c2a8c7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
