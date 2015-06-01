@@ -1246,23 +1246,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.otherProjects' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.wikidata.api',
-			'mobile.overlays',
-		),
-		'messages' => array(
-			'mobile-frontend-other-projects-overlay-heading',
-			'mobile-frontend-other-project-label',
-		),
-		'scripts' => array(
-			'resources/mobile.otherProjects/OtherProjectsOverlay.js',
-		),
-		'templates' => array(
-			'content.hogan' => 'resources/mobile.otherProjects/content.hogan',
-		),
-	),
-
 	'mobile.betaoptin' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1810,14 +1793,12 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
 			'mobile.errorReport',
-			'mobile.otherProjects',
 			'mobile.quickLookup',
 			'mobile.fontchanger',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
 			'resources/skins.minerva.alpha.scripts/infobox.js',
-			'resources/skins.minerva.alpha.scripts/projects.js',
 		)
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(

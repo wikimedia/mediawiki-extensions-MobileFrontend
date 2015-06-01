@@ -20,33 +20,6 @@
 			ForeignApi.prototype.initialize.apply( this, arguments );
 		},
 		/**
-		 * Get sitelinks for the item from api filtered to the current language.
-		 * @method
-		 * @return {jQuery.Deferred}
-		 */
-		getSiteLinks: function () {
-			var id = this.subjectId,
-				lang = this.language;
-
-			return this.ajax( {
-				ids: id,
-				action: 'wbgetentities',
-				props: 'sitelinks/urls',
-				languages: lang
-			} ).then( function ( data ) {
-				var myLanguageProjects = [];
-				// filter sitelinks to only show ones from my project
-				$.each( data.entities[id].sitelinks, function () {
-					var site = this;
-					// FIXME: hacky. Assumes all projects begin with 'w' or followed by _
-					if ( site.site.indexOf( lang + 'w' ) === 0 || site.site.indexOf( lang + '_' ) === 0 ) {
-						myLanguageProjects.push( site );
-					}
-				} );
-				return myLanguageProjects;
-			} );
-		},
-		/**
 		 * Get claims via the API
 		 * @method
 		 * @return {jQuery.Deferred}
