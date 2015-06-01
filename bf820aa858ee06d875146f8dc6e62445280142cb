@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3813e3ba",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-01T23:30:58Z",
+      "side": 0,
+      "message": "This is from the DismissableSiteNotice extension. Not sure if it should live here or in that extension. Regardless, should at least have a comment mentioning the extension, if we leave it here.",
+      "revId": "bf820aa858ee06d875146f8dc6e62445280142cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
