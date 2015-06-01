@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_582fc7f3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-01T23:27:17Z",
+      "side": 1,
+      "message": "Previously if\n* $mfMobileUrlTemplate \u0026\u0026 $mfNoIndexPages was false\n* context-\u003eshouldDisplayMobileView() was false\n\nthis would get added.\nHowever in this version it doesn\u0027t.\n\nI\u0027d suggest writing some tests for current behaviour before doing this would help with this refactor.",
+      "revId": "aa304422bae7c0b1d9185b714169cd3d74335e87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
