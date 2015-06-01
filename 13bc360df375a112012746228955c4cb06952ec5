@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_9823efff",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-01T23:31:48Z",
+      "side": 1,
+      "message": "Maybe this should say \"Return a message box.\"",
+      "revId": "13bc360df375a112012746228955c4cb06952ec5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
