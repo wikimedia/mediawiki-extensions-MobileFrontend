@@ -112,6 +112,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Wyświetlanie tekstu źródłowego</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Edytuj",
 	"mobile-frontend-editor-wait": "Zapisywanie, proszę czekaj.",
+	"mobile-frontend-editor-redlink-leave": "Nie, dziękuję.",
+	"mobile-frontend-editor-redlink-create": "Utwórz stronę",
 	"mobile-frontend-enable-images": "Włącz wyświetlanie grafik w wersji mobilnej",
 	"mobile-frontend-errorreport-button-label": "Zgłoś błąd",
 	"mobile-frontend-errorreport-section-title": "Sugerowana korekta",

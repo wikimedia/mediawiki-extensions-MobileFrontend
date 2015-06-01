@@ -3,7 +3,8 @@
 		"authors": [
 			"Bjarki S",
 			"Maxí",
-			"Snævar"
+			"Snævar",
+			"Gaddi00"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
@@ -101,6 +102,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Skoði frumkóða</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Breyta",
 	"mobile-frontend-editor-wait": "Vistar breytingu, augnablik.",
+	"mobile-frontend-editor-redlink-leave": "Nei takk.",
 	"mobile-frontend-enable-images": "Sýna myndir á farsímasíðunni",
 	"mobile-frontend-errorreport-button-label": "Tilkynna um villu",
 	"mobile-frontend-errorreport-error": "Villa, ábendingin gat ekki verið send.",
