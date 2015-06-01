@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_367bf5be",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-01T21:56:36Z",
+      "side": 1,
+      "message": "Won\u0027t this cause pages that have the 2nd cached version to lose the truncated-text class entirely? This seems like a mess. Can\u0027t we just get the data-timestamp, delete anything with id mw-mf-last-modified or class last-modified-bar, and reconstruct the bar from scratch in JS, regardless of any cached or not cached state?",
+      "revId": "35ebe1c7e3f70a9f17a85c73f1cd8dfb60a365fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
