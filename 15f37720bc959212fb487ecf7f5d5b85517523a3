@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_3b83dd58",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-02T00:09:53Z",
+      "side": 1,
+      "message": "mm why isn\u0027t jscs complaining... i\u0027ll investigate",
+      "parentUuid": "0ed113e2_fa94f63a",
+      "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_faab966a",
         "filename": "resources/mobile.view/View.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-05-14T16:50:57Z",
       "side": 1,
       "message": "I think this will break delegateEvents() that is run earlier in _postInitialize.",
+      "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fb947590",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-02T00:09:53Z",
+      "side": 1,
+      "message": "How so? Can you give me an example?",
+      "parentUuid": "0ed113e2_faab966a",
       "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
