@@ -34,7 +34,7 @@ When(/^I click the watch star$/) do
 end
 
 Then(/^I should see a toast notification$/) do
-  expect(on(ArticlePage).toast_element.when_present).to be_visible
+  expect(on(ArticlePage).toast_element.when_present(10)).to be_visible
 end
 
 Then(/^I should see a toast error$/) do
