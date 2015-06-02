@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3b899d27",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-02T00:32:39Z",
+      "side": 1,
+      "message": "Won\u0027t this create a double-embedded \u003cdiv class\u003d\"last-modified-bar\"\u003e in the 2nd cached version?",
+      "revId": "be218b786df7e7887c03c1908d009341df6f4e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
