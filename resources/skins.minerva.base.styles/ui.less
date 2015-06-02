@@ -181,34 +181,13 @@ input.search {
 
 	.edit-page {
 		display: none;
-		top: 0;
-		bottom: 0;
-		right: 0;
-	}
-
-	// edit pencils for section headings (collapsible)
-	.collapsible-heading {
-		.edit-page {
-			position: absolute;
-		}
-	}
-
-	// show edit section pencils on section headings inside collapsible blocks
-	.in-block {
-		position: relative;
-
-		> .edit-page {
-			display: none;
-			// edit pencils for inline/sub-section headings - bug T90245
-			position: relative;
-			float: right;
-		}
+		float: right;
 	}
 
 	.open-block {
 		// Restrict to child so that child section edit links do not get revealed.
 		> .edit-page {
-			display: block;
+			display: inline-block;
 		}
 	}
 }
