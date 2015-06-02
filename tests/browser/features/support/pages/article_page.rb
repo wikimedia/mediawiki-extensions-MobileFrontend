@@ -9,7 +9,7 @@ class ArticlePage
 
   # pre-content
   h1(:first_heading, id: 'section_0')
-  a(:edit_history_link, id: 'mw-mf-last-modified')
+  a(:edit_history_link, css: '#mw-mf-last-modified a')
 
   # left nav
   nav(:navigation, css: 'nav')
