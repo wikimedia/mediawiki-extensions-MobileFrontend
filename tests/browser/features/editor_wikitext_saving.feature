@@ -4,7 +4,7 @@ Feature: Wikitext Editor (Makes actual saves)
   Background:
     Given I am logged into the mobile website
 
-  @smoke
+  @smoke @editing
   Scenario: Successful edit on page without languages shows no language button [bug 63675]
     Given the page "Selenium no languages test page" exists
     When I click the edit button
@@ -16,6 +16,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And the text of the first heading should be "Selenium no languages test page"
       And I should not see the read in another language button
 
+  @editing
   Scenario: Successful edit reloads language button
     Given I go to a page that has languages
     When I click the edit button
@@ -26,6 +27,7 @@ Feature: Wikitext Editor (Makes actual saves)
     Then I should see a toast notification
       And I should see the read in another language button
 
+  @editing
   Scenario: Redirects
     Given the page "Selenium wikitext editor test" exists
       And I am on a page that does not exist
@@ -38,6 +40,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And I do not see the wikitext editor overlay
     Then the text of the first heading should be "Selenium wikitext editor test"
 
+  @editing
   Scenario: Broken redirects
     Given I am on a page that does not exist
     When I click the edit button
