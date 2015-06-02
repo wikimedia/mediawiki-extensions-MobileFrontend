@@ -234,8 +234,6 @@
 	"mobile-frontend-opt-in-explain": "베타에 참여하면서, 버그나 문제가 생길 위험을 감수하고 실험 중인 기능을 사용해볼 수 있습니다.",
 	"mobile-frontend-overlay-close": "닫기",
 	"mobile-frontend-overlay-continue": "계속",
-	"mobile-frontend-other-projects-overlay-heading": "다른 프로젝트",
-	"mobile-frontend-other-project-label": "다른 프로젝트로 읽기",
 	"mobile-frontend-page-menu-contents": "목차",
 	"mobile-frontend-page-menu-history": "역사",
 	"mobile-frontend-page-edit-summary": "<strong>편집 요약</strong><span> $1</span>",

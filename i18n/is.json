@@ -211,8 +211,6 @@
 	"mobile-frontend-opt-in-explain": "Með því að taka þátt í beta prófun, munt þú fá aðgang að tilrauna möguleikum sem hafa mögulegar villur eða vandamál.",
 	"mobile-frontend-overlay-close": "Loka",
 	"mobile-frontend-overlay-continue": "Halda áfram",
-	"mobile-frontend-other-projects-overlay-heading": "Önnur verkefni",
-	"mobile-frontend-other-project-label": "Lesa í öðru verkefni",
 	"mobile-frontend-page-menu-contents": "efnisyfirlit",
 	"mobile-frontend-page-menu-history": "Breytingaskrá",
 	"mobile-frontend-page-edit-summary": "<strong>Breytingarágrip</strong><span> $1</span>",

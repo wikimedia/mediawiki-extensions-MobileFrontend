@@ -236,8 +236,6 @@
 	"mobile-frontend-opt-in-explain": "Приєднавшись до бета-тестування, Ви отримаєте доступ до деяких експериментальних функцій, але також збільшиться ризик зустріти помилку чи проблему",
 	"mobile-frontend-overlay-close": "Закрити",
 	"mobile-frontend-overlay-continue": "Продовжити",
-	"mobile-frontend-other-projects-overlay-heading": "Інші проекти",
-	"mobile-frontend-other-project-label": "Почитати в іншому проекті",
 	"mobile-frontend-page-menu-contents": "зміст",
 	"mobile-frontend-page-menu-history": "Історія",
 	"mobile-frontend-page-edit-summary": "<strong>Опис редагування</strong><span> $1</span>",

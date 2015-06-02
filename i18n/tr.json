@@ -235,8 +235,6 @@
 	"mobile-frontend-opt-in-explain": "Deneme sürümüne katılarak, deneysel özellikleri kullanacaksınız. Bundan dolayı hata ve sorunlar ile karşılaşma riskini de aldığınızı unutmayın.",
 	"mobile-frontend-overlay-close": "Kapat",
 	"mobile-frontend-overlay-continue": "Devam et",
-	"mobile-frontend-other-projects-overlay-heading": "Diğer projeler",
-	"mobile-frontend-other-project-label": "Başka bir projede oku",
 	"mobile-frontend-page-menu-contents": "içerikler",
 	"mobile-frontend-page-menu-history": "Geçmiş",
 	"mobile-frontend-page-edit-summary": "<span>$1 </span><strong>değişiklik özeti</strong>",
