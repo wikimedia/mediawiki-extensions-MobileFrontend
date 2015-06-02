@@ -13,7 +13,12 @@
 	 */
 	function initHistoryLink() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
-			$lastModifiedLink = $lastModified.find( 'a' ),
+			// FIXME remove when the cache clears.
+			isPageCached = $lastModified.length && $lastModified.prop( 'tagName' ).toLowerCase() === 'a',
+			// FIXME remove the cache related part.
+			$lastModifiedLink = isPageCached ? $lastModified : $lastModified.find( 'a' ),
+			// FIXME remove when the cache clears.
+			$lastModifiedBar = $( '.last-modified-bar' ),
 			historyUrl = $lastModifiedLink.attr( 'href' ),
 			ts = $lastModifiedLink.data( 'timestamp' ),
 			username = $lastModifiedLink.data( 'user-name' ) || false,
@@ -48,17 +53,20 @@
 				username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : ''
 			] );
 
-			$lastModifiedLink.html( mw.message.apply( this, args ).parse() );
-
-			// FIXME: remove this when the cache clears. Today is 05/21/2015.
-			// Make the cached DOM look similar to the new DOM
-			if ( $lastModified.hasClass( 'last-modified-bar' ) ) {
-				$lastModified
-					.removeClass( 'last-modified-bar' )
-					.wrap( '<div class="last-modified-bar"></div>' );
+			// FIXME: remove the if part when the cache clears.
+			if ( isPageCached || $lastModifiedLink.hasClass( 'truncated-text' ) ) {
+				$lastModifiedBar.replaceWith(
+					$( '<div class="last-modified-bar">' )
+						.html(
+							$( '<div id="mw-mf-last-modified" class="truncated-text">' )
+								.html( mw.message.apply( this, args ).parse() )
+						)
+				);
+			} else {
+				$lastModifiedLink.replaceWith( mw.message.apply( this, args ).parse() );
 			}
 		} else {
-			// FIXME: remove this when the cache clears. Today is 05/21/2015.
+			// FIXME: remove this when the cache clears.
 			// Make the cached DOM look similar to the new DOM on the Main_Page
 			// It's important that this runs when the DOM is ready, otherwise it won't work
 			// in stable where the 'history-link-loaded' event is fired before the DOM is ready.
