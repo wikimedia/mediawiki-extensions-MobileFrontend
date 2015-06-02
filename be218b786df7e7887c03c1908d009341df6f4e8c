@@ -16,6 +16,24 @@
       "revId": "be218b786df7e7887c03c1908d009341df6f4e8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_bb74ad31",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-02T00:33:47Z",
+      "side": 1,
+      "message": "Yes you\u0027re right, this is getting out of control.",
+      "parentUuid": "0ed113e2_3b899d27",
+      "revId": "be218b786df7e7887c03c1908d009341df6f4e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
