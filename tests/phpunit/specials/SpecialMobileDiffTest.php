@@ -15,10 +15,7 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 		parent::tearDown();
 	}
 	/**
-	 * Broken per T100716
-	 *
 	 * @dataProvider providerTestNames
-	 * @group Broken
 	 */
 	public function testNames( $par, $expected ) {
 		$page = new MockSpecialMobileDiff();
@@ -124,6 +121,8 @@ class MockSpecialMobileDiff extends SpecialMobileDiff {
 	}
 	public function executeBadQuery() {
 		return false;
+	}
+	public function showDiff() {
 	}
 }
 
