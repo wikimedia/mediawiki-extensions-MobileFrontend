@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_3b743dcc",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-02T01:04:33Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be...\n$deviceDetectionClass \u003d MobileContext::singleton()-\u003egetMFConfig()-\u003eget( \u0027DeviceDetectionClass\u0027 );\nMaybe Jon\u0027s idea is better.",
+      "revId": "bd1f1a03c2757324cebb5a9332df440c5ee01e3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
