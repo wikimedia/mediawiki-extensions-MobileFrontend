@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7f670a23",
+        "filename": "resources/mobile.editor.disabledOverlay/DisabledOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-02T19:32:41Z",
+      "side": 1,
+      "message": "I don\u0027t understand this comment.",
+      "revId": "764366e6fe56afa7fd65a3b11fd281420d4c7751",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8249316c",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-02T19:32:41Z",
+      "side": 1,
+      "message": "It only seems to work once. After you click \u0027Cancel\u0027, you can\u0027t bring it up again (unlike the toast).",
+      "revId": "764366e6fe56afa7fd65a3b11fd281420d4c7751",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
