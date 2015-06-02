@@ -6,7 +6,7 @@ Feature: Page actions menu when anonymous
       And I am at a random page
 
   Scenario: Receive notification message - Edit Icon
-    When I click the edit icon holder
+    When I click the edit button
     Then I see the anonymous editor warning
 
   Scenario: Do not see - Upload Icon
