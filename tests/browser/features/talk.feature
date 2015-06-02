@@ -1,8 +1,7 @@
 @chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Talk
   Background:
-    Given I am using the mobile site
-      And I am in beta mode
+    Given I am in beta mode
 
   Scenario: Talk doesn't show on talk pages
     Given the page "Talk:Selenium talk test" exists

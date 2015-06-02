@@ -1,7 +1,10 @@
 Given /^I am in beta mode$/ do
-  visit(MobileOptions) do |page|
-    page.beta_element.when_present.click
-    page.save_settings_element.when_present.click
+  on(MainPage) do |page|
+    page.goto
+    page.browser.cookies.add 'mf_useformat', 'true', domain: URI.parse(page.page_url_value).host
+    # A domain is explicitly given to avoid a bug in earlier versions of Chrome
+    page.browser.cookies.add 'optin', 'beta', domain: URI.parse(page.page_url_value).host
+    page.refresh
   end
 end
 
