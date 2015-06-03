@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_ba0fb532",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T20:02:29Z",
+      "side": 1,
+      "message": "We have a similar class name on the watchlist page that seems to do exactly the same thing. We should have a generic class for all these...",
+      "revId": "ef354a2fd88fc394cdf539d9070264020fb18959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6f5c2d4f",
+        "filename": "resources/mobile.special.history.beta.styles/default.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T20:02:29Z",
+      "side": 1,
+      "message": "We really really really need to find a nice generic class for all of these things...",
+      "revId": "ef354a2fd88fc394cdf539d9070264020fb18959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
