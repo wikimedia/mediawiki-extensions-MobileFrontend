@@ -16,6 +16,24 @@
       "revId": "bd1f1a03c2757324cebb5a9332df440c5ee01e3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_492609b7",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-03T16:20:39Z",
+      "side": 1,
+      "message": "sometimes i hate my own work :) You\u0027re right!",
+      "parentUuid": "0ed113e2_3b743dcc",
+      "revId": "bd1f1a03c2757324cebb5a9332df440c5ee01e3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
