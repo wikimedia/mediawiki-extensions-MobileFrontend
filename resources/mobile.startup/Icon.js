@@ -12,7 +12,8 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.hasText Whether the icon has text.
-		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped.
+		 * @cfg {String} [defaults.href] value of href attribute, when set tagName will default to anchor tag
+		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
 		 * @cfg {String} defaults.base String used as a base for generating class names.
 		 * Defaults to 'mw-ui-icon' (alpha) or 'icon' (stable and beta).
 		 * @cfg {String} defaults.name Name of the icon.
@@ -22,6 +23,7 @@
 		 */
 		defaults: {
 			hasText: false,
+			href: undefined,
 			tagName: 'div',
 			base: 'mw-ui-icon',
 			name: '',
@@ -48,6 +50,9 @@
 		initialize: function ( options ) {
 			if ( options.hasText ) {
 				options.modifier = 'mw-ui-icon-before';
+			}
+			if ( options.href ) {
+				options.tagName = 'a';
 			}
 			View.prototype.initialize.call( this, options );
 		},

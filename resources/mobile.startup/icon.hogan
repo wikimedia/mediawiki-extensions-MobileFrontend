@@ -1,3 +1,4 @@
 <{{tagName}} class="{{base}} {{base}}-{{name}} {{modifier}} {{additionalClassNames}}"
 	{{#id}}id="{{id}}"{{/id}}
+	{{#href}}href="{{href}}"{{/href}}
 	{{#title}}title="{{title}}"{{/title}}>{{label}}</{{tagName}}>
