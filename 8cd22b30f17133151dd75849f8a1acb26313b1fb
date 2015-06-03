@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aedf27f1_4ffbcd11",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:40:47Z",
+      "side": 1,
+      "message": "ergg ios and case sensitivity...",
+      "parentUuid": "ceda9b01_33ffd264",
+      "revId": "8cd22b30f17133151dd75849f8a1acb26313b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceda9b01_1395ee35",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-03T22:31:42Z",
       "side": 1,
       "message": "This assumes banners don\u0027t have a border-bottom. Is it the case?",
+      "revId": "8cd22b30f17133151dd75849f8a1acb26313b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aedf27f1_6f001105",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:40:47Z",
+      "side": 1,
+      "message": "Well technically a banner can do whatever it wants. The important thing is to provide a visual separation from the banner and the chrome so this is intentional.",
+      "parentUuid": "ceda9b01_1395ee35",
       "revId": "8cd22b30f17133151dd75849f8a1acb26313b1fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
