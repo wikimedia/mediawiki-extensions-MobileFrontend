@@ -67,8 +67,12 @@ class MobileUI {
 	 * @return string of html representing a box.
 	 */
 	public static function messageBox( $html, $className ) {
-		return Html::openElement( 'div', array( 'class' => $className ) ) .
-			$html . Html::closeElement( 'div' );
+		$templateParser = new TemplateParser( __DIR__ . '/../resources/mobile.messageBox/' );
+
+		return $templateParser->processTemplate( 'MessageBox', array(
+			'className' => $className,
+			'msg' => $html
+		) );
 	}
 
 	/**

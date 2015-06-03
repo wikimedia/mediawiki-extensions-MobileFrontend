@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
-	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
+	var Nearby,
+		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
+		NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
-		Nearby,
 		browser = M.require( 'browser' ),
 		icons = M.require( 'icons' );
 
@@ -16,36 +17,39 @@
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
+				msg: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
 			},
-			location: {
+			locating: {
 				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
+				msg: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
 			},
 			permission: {
 				heading: mw.msg( 'mobile-frontend-nearby-permission' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
+				msg: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
 			},
 			server: {
 				heading: mw.msg( 'mobile-frontend-nearby-error' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-error-guidance' )
+				msg: mw.msg( 'mobile-frontend-nearby-error-guidance' )
 			},
 			incompatible: {
 				heading: mw.msg( 'mobile-frontend-nearby-requirements' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
+				msg: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
 		templatePartials: {
-			pageList: WatchstarPageList.prototype.template
+			pageList: WatchstarPageList.prototype.template,
+			messageBox: MessageBox.prototype.template
 		},
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Object} defaults.errorOptions options to pass to a messagebox template
 		 * @cfg {String} defaults.spinner HTML of the spinner icon with a tooltip that
 		 * tells the user that their location is being looked up
 		 */
 		defaults: {
+			errorOptions: undefined,
 			spinner: icons.spinner( {
 				title: mw.msg( 'mobile-frontend-nearby-loading' )
 			} ).toHtmlString()
@@ -72,7 +76,7 @@
 						if ( err.code === 1 ) {
 							err = 'permission';
 						} else {
-							err = 'location';
+							err = 'locating';
 						}
 						result.reject( err );
 					},
@@ -98,7 +102,7 @@
 			this.nearbyApi = new NearbyApi();
 
 			if ( options.errorType ) {
-				options.error = this.errorMessages[ options.errorType ];
+				options.errorOptions = self._errorOptions( options.errorType );
 			}
 
 			// Re-run after api/geolocation request
@@ -151,7 +155,7 @@
 			function pagesSuccess( pages ) {
 				options.pages = pages;
 				if ( pages && pages.length === 0 ) {
-					options.error = self.errorMessages.empty;
+					options.errorOptions = self._errorOptions( 'empty' );
 				}
 				self._isLoading = false;
 				result.resolve( options );
@@ -163,7 +167,7 @@
 			 */
 			function pagesError() {
 				self._isLoading = false;
-				options.error = self.errorMessages.server;
+				options.errorOptions = self._errorOptions( 'server' );
 				result.resolve( options );
 			}
 
@@ -182,11 +186,22 @@
 					.fail( pagesError );
 			} else {
 				if ( options.errorType ) {
-					options.error = this.errorMessages[ options.errorType ];
+					options.errorOptions = this._errorOptions( options.errorType );
 				}
 				result.resolve( options );
 			}
 			return result;
+		},
+		/**
+		 * Generate a list of options that can be passed to a messagebox template.
+		 * @private
+		 * @param {String} key to a defined error message
+		 * @returns {Object}
+		 */
+		_errorOptions: function ( key ) {
+			return $.extend( {
+				className: 'errorbox'
+			}, this.errorMessages[ key ] || {} );
 		},
 		/** @inheritdoc */
 		postRender: function () {

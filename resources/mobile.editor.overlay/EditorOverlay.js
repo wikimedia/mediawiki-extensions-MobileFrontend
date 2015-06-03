@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
+	var EditorOverlay,
+		EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
@@ -8,7 +9,7 @@
 		browser = M.require( 'browser' ),
 		overlayManager = M.require( 'overlayManager' ),
 		toast = M.require( 'toast' ),
-		EditorOverlay;
+		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
 
 	/**
 	 * Overlay that shows an editor
@@ -22,6 +23,7 @@
 	EditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
+			messageBox: MessageBox.prototype.template,
 			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
 		} ),
 		/**
@@ -30,9 +32,7 @@
 		 * @cfg {Object} defaults.loginButton options to render an sign in button
 		 * @cfg {Object} defaults.signupButton options to render a sign up button
 		 * @cfg {Object} defaults.anonButton options to render an edit anonymously button
-		 * @cfg {String} defaults.anonSelector CSS class name of the defaults.anonLabel wrapper.
-		 * @cfg {String} defaults.anonMsg Warning message, when user want to edit without
-		 * logging in.
+		 * @cfg {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
 		 */
 		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
 			loginButton: new Button( {
@@ -49,7 +49,10 @@
 				additionalClassNames: 'continue anonymous',
 				progressive: true
 			} ).options,
-			anonMsg: mw.msg( 'mobile-frontend-editor-anonwarning' )
+			warningOptions: {
+				className: 'warningbox anon-msg',
+				msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
+			}
 		} ),
 		editor: 'SourceEditor',
 		sectionLine: '',

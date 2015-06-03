@@ -24,7 +24,7 @@
 			longitude: -122
 		}, 1000 ), 'Check API got called' );
 		assert.strictEqual( $el.find( 'li' ).length, 0, '0 pages render.' );
-		assert.strictEqual( $el.find( '.error' ).length, 1, 'Error message shown.' );
+		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Error message shown.' );
 		assert.strictEqual( $el.find( '.loading' ).is( ':visible' ), false, 'No loader shown.' );
 	} );
 
@@ -87,13 +87,13 @@
 			n = new Nearby( {
 				range: 1000,
 				el: $el,
-				errorType: 'location'
+				errorType: 'locating'
 			} );
 		assert.ok( this.spy.notCalled, 'Check API didn\'t get called on this case.' );
-		assert.strictEqual( $el.find( '.error' ).length, 1, 'Check error got rendered' );
-		assert.strictEqual( $el.find( '.error h2' ).length, 1, 'Check error has heading' );
-		assert.strictEqual( $el.find( '.error h2' ).text(),
-			n.errorMessages.location.heading, 'Check it is the correct heading' );
+		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
+		assert.strictEqual( $el.find( '.errorbox h2' ).length, 1, 'Check error has heading' );
+		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
+			n.errorMessages.locating.heading, 'Check it is the correct heading' );
 	} );
 
 	QUnit.test( '#render with current location', 2, function ( assert ) {
@@ -126,8 +126,8 @@
 			latitude: 37.7,
 			longitude: -122
 		}, 1000 ), 'Check API got called' );
-		assert.strictEqual( $el.find( '.error' ).length, 1, 'Check error got rendered' );
-		assert.strictEqual( $el.find( '.error h2' ).text(),
+		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
+		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
 			n.errorMessages.server.heading, 'Check it is the correct heading' );
 	} );
 
