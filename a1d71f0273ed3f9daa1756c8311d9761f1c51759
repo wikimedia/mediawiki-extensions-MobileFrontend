@@ -16,6 +16,24 @@
       "revId": "a1d71f0273ed3f9daa1756c8311d9761f1c51759",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_f3186a25",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:13:49Z",
+      "side": 0,
+      "message": "Agreed but I thought we agreed to avoid -1ing on code standards and deferring to jscs to pick these things up (and if jscs isn\u0027t picking it up that\u0027s something worth looking into)",
+      "parentUuid": "0ed113e2_354c9a9f",
+      "revId": "a1d71f0273ed3f9daa1756c8311d9761f1c51759",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
