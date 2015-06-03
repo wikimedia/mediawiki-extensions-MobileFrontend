@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceda9b01_3327d261",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T22:10:37Z",
+      "side": 1,
+      "message": "I\u0027d explain more. If href is present an icon tagName is changed to an \u0027a\u0027, etc.",
+      "revId": "7adb28662bd8357b25730afe3beee3d3f6f0e97a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
