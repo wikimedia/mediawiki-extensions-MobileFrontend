@@ -41,6 +41,9 @@ body {
 	width: 100%;
 	height: @headerHeight;
 	white-space: nowrap;
+	// When banners are present we want to easily distinguish between them and the header so add border
+	border-top: 1px solid @colorGrayLight;
+	margin-top: -1px;
 
 	> a {
 		width: @headerHeight;
@@ -80,11 +83,6 @@ body {
 	}
 }
 
-// Add border between notices and header
-.mw-dismissable-notice {
-	border-bottom: 1px solid @grayLight;
-}
-
 // Used for messages on page lists and uploads and when showing old revisions
 .alert.warning {
 	color: @colorWarningText;
@@ -103,7 +101,9 @@ body {
 	background: @colorSuccessBackground;
 }
 
-.alert {
+.successbox,
+.errorbox,
+.warningbox {
 	padding: 1em @contentMargin;
 	margin: 0 0 1em;
 

@@ -173,25 +173,17 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Prepare warnings for mobile devices
-	 * @param BaseTemplate $tpl
+	 * @return html for a message to display at top of old revisions
 	 */
-	protected function prepareWarnings( BaseTemplate $tpl ) {
-		parent::prepareWarnings( $tpl );
-		$out = $this->getOutput();
-		if ( $out->getRequest()->getText( 'oldid' ) ) {
-			$subtitle = $out->getSubtitle();
-			$tpl->set( '_old_revision_warning',
-				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-				Html::openElement( 'p', array() ).
-					Html::element( 'a', array( 'href' => '#editor/0' ),
+	protected function getOldRevisionHtml() {
+		$viewSourceLink = Html::openElement( 'p' ) .
+				Html::element( 'a', array( 'href' => '#editor/0' ),
 					$this->msg( 'mobile-frontend-view-source' )->text() ) .
-				Html::closeElement( 'p' ) .
-				$subtitle .
-				Html::closeElement( 'div' ) );
-		}
+				Html::closeElement( 'p' );
+		return $viewSourceLink . parent::getOldRevisionHtml();
 	}
 
+	/** @inheritdoc */
 	protected function preparePageContent( QuickTemplate $tpl ) {
 		parent::preparePageContent( $tpl );
 

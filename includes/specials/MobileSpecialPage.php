@@ -79,10 +79,7 @@ class MobileSpecialPage extends SpecialPage {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-requires-title' ) );
 		$out->setProperty( 'unstyledContent', true );
-		$out->addHTML( Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			$msg .
-			Html::closeElement( 'div' )
-		);
+		$out->addHTML( MobileUI::warningBox( $msg ) );
 	}
 
 	/**

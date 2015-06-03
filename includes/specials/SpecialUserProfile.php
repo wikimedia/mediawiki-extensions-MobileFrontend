@@ -66,10 +66,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$out = $this->getOutput();
 
 		// generate a user friendly error with a meaningful message
-		$html = Html::openElement( 'div', array( 'class' => 'alert error' ) );
-		$html .= Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-error' ) );
-		$html .= Html::element( 'p', array(), $this->msg( $msgKey ) );
-		$html .= Html::closeElement( 'div' );
+		$html = MobileUI::contentElement(
+			MobileUI::errorBox(
+				Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-error' ) ) .
+				Html::element( 'p', array(), $this->msg( $msgKey ) )
+			)
+		);
 
 		// return page with status code 404, instead of 200 and output the error page
 		$out->setStatusCode( 404 );
