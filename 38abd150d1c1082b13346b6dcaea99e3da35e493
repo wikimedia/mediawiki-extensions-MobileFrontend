@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceda9b01_10864419",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T21:33:25Z",
+      "side": 1,
+      "message": "className -\u003e $className",
+      "revId": "38abd150d1c1082b13346b6dcaea99e3da35e493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_f07ce01d",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T21:33:25Z",
+      "side": 1,
+      "message": "I think we should use a template here and use this function to generate contentElement below.",
+      "revId": "38abd150d1c1082b13346b6dcaea99e3da35e493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_10ac0484",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T21:33:25Z",
+      "side": 1,
+      "message": "array() is not needed, is it?",
+      "revId": "38abd150d1c1082b13346b6dcaea99e3da35e493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
