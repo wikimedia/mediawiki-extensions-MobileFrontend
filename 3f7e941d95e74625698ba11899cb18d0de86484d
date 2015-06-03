@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ceda9b01_735f9ae9",
+        "filename": "resources/skins.minerva.alpha.styles/ui.alpha.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:03:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceda9b01_3076e8d6",
+      "revId": "3f7e941d95e74625698ba11899cb18d0de86484d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceda9b01_504e0c9d",
         "filename": "resources/skins.minerva.alpha.styles/ui.alpha.less",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ceda9b01_b34d0242",
+        "filename": "resources/skins.minerva.alpha.styles/ui.alpha.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:03:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceda9b01_504e0c9d",
+      "revId": "3f7e941d95e74625698ba11899cb18d0de86484d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceda9b01_501ccc7c",
         "filename": "resources/skins.minerva.beta.styles/hacks.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-03T21:49:26Z",
       "side": 1,
       "message": "This alpha code should not be loaded in beta.",
+      "revId": "3f7e941d95e74625698ba11899cb18d0de86484d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_d3c76699",
+        "filename": "resources/skins.minerva.beta.styles/hacks.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T22:03:31Z",
+      "side": 1,
+      "message": "Doesn\u0027t matter. Beta and alpha are getting merged soon (this file will actually get deleted when that happens)",
+      "parentUuid": "ceda9b01_501ccc7c",
       "revId": "3f7e941d95e74625698ba11899cb18d0de86484d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
