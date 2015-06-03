@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_c9043c1d",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-06-03T10:38:00Z",
+      "side": 1,
+      "message": "I think Baha is right, the problem would surface if you call `.render` on a view manually. That would blow up the dom element of the view with the events associated with it.\n\nImagine you create a view, new Button() that initializes, renders, and after that in _postInitialize will call this.delegateEvents.\n\nIf later you call button.render() the view will blow up the dom and it\u0027s events and delegateEvents will not be called so no events will be associated with this new dom node.\n\nA more robust solution would be calling `this.undelegateEvents` after line 238, then do the rendering stuff, and then in line 247 call `this.delegateEvents` to associate them again. We would have to remove L198\u0027s `this.delegateEvents` since that would be done inside of render now.\n\nThat would make sure that however we call render the events are removed/added properly.",
+      "parentUuid": "0ed113e2_fb947590",
+      "revId": "15f37720bc959212fb487ecf7f5d5b85517523a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_dacb324c",
         "filename": "tests/qunit/mobile.view/test_View.js",
         "patchSetId": 3
