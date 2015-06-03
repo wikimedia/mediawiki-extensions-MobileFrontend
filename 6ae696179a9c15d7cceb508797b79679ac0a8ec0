@@ -16,6 +16,24 @@
       "revId": "6ae696179a9c15d7cceb508797b79679ac0a8ec0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_905b1457",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T21:50:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceda9b01_10cde434",
+      "revId": "6ae696179a9c15d7cceb508797b79679ac0a8ec0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

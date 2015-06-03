@@ -16,6 +16,24 @@
       "revId": "13bc360df375a112012746228955c4cb06952ec5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_f05e2048",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T21:50:43Z",
+      "side": 0,
+      "message": "These only show up on special pages and old revisions where caching doesn\u0027t apply.",
+      "parentUuid": "ceda9b01_70ef9083",
+      "revId": "13bc360df375a112012746228955c4cb06952ec5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
