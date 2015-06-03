@@ -1,0 +1,17 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	// We need to be this specific in order to override other rules.
+	.alpha.mw-mf-special,
+	.beta.mw-mf-special {
+		#content_wrapper {
+			> .pre-content,
+			> .history {
+				max-width: @contentMaxWidthTablet;
+				margin: 0 auto;
+				padding: 0 @contentPaddingTablet;
+			}
+		}
+	}
+}
