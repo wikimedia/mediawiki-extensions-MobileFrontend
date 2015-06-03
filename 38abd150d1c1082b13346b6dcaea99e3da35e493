@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ceda9b01_d0575c5b",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T21:38:16Z",
+      "side": 1,
+      "message": "Never mind. I see you did so in the follow up patch.",
+      "parentUuid": "ceda9b01_f07ce01d",
+      "revId": "38abd150d1c1082b13346b6dcaea99e3da35e493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceda9b01_10ac0484",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 3
