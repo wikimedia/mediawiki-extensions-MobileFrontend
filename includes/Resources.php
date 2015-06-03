@@ -1593,6 +1593,12 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
+	'mobile.special.history.beta.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'resources/mobile.special.history.beta.styles/default.less',
+		),
+		'position' => 'top',
+	),
 	// These are NOT empty see $wgResourceModuleSkinStyles.
 	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',

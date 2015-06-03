@@ -96,15 +96,25 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
 		$out->addModuleStyles( 'mobile.pagelist.styles' );
+		// add beta styles
+		if ( MobileContext::singleton()->isBetaGroupMember() ) {
+			$out->addModuleStyles( 'mobile.special.history.beta.styles' );
+		}
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
 				$this->addModules();
+				$this->getOutput()->addHtml(
+					Html::openElement( 'div', array( 'class' => 'history' ) )
+				);
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
+				$this->getOutput()->addHtml(
+					Html::closeElement( 'div' )
+				);
 				return;
 			}
 		}
