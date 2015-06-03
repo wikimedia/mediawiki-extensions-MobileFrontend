@@ -26,6 +26,32 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	}
 
 	/**
+	 * Get category button if categories are present
+	 * @return array A map of the button's friendly name, "categories" to its
+	 *   spec if the button can be displayed.
+	 */
+	protected function getCategoryButton() {
+		$skin = $this->getSkin();
+		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
+
+		if ( !$categories ) {
+			return array();
+		}
+
+		return array(
+			'categories' => array(
+				'attributes' => array(
+					'href' => '#/categories',
+					// add hidden class (the overlay works only, when JS is enabled (class will
+					// be removed in categories/init.js)
+					'class' => 'category-button hidden',
+				),
+				'label' => wfMessage( 'categories' )->text()
+			),
+		);
+	}
+
+	/**
 	 * Get page secondary actions
 	 */
 	protected function getSecondaryActions() {
@@ -41,6 +67,9 @@ class MinervaTemplateBeta extends MinervaTemplate {
 				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
 			);
 		}
+
+		$result += $this->getCategoryButton();
+
 		return $result;
 	}
 

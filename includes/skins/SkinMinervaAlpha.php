@@ -20,9 +20,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$modules = parent::getDefaultModules();
 		$modules['alpha'] = array( 'skins.minerva.alpha.scripts' );
 
-		if ( $this->getCategoryLinks( false ) ) {
-			$modules['categories'] = array( 'mobile.categories' );
-		}
 		return $modules;
 	}
 
