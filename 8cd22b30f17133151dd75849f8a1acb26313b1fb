@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceda9b01_33ffd264",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T22:31:42Z",
+      "side": 1,
+      "message": "messageBox needs to be lower case to match the file name.",
+      "revId": "8cd22b30f17133151dd75849f8a1acb26313b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_1395ee35",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T22:31:42Z",
+      "side": 1,
+      "message": "This assumes banners don\u0027t have a border-bottom. Is it the case?",
+      "revId": "8cd22b30f17133151dd75849f8a1acb26313b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
