@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceda9b01_507dace3",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-03T21:36:46Z",
+      "side": 1,
+      "message": "Needs doc update",
+      "revId": "35b48cf6e860a1579d12ee43c33a7283d85d6ad3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
