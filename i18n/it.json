@@ -16,7 +16,8 @@
 			"LACLARETTA",
 			"Giuseppe Forte",
 			"Fringio",
-			"Martinligabue"
+			"Martinligabue",
+			"Alexmar983"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -28,6 +29,7 @@
 	"mobile-frontend-account-create-submit": "Registrati",
 	"mobile-frontend-app-title": "Applicazione mobile",
 	"mobile-frontend-back-to-top-of-section": "Vai a inizio sezione",
+	"mobile-frontend-categories-summary": "Aggiunto alle categorie",
 	"mobile-frontend-changeslist-ip": "Utente anonimo",
 	"mobile-frontend-changeslist-nocomment": "nessun oggetto della modifica",
 	"mobile-frontend-clear-search": "Pulisci",
