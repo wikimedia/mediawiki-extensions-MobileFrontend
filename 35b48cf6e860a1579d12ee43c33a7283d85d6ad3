@@ -16,6 +16,24 @@
       "revId": "35b48cf6e860a1579d12ee43c33a7283d85d6ad3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_33aef2e5",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-03T21:58:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceda9b01_507dace3",
+      "revId": "35b48cf6e860a1579d12ee43c33a7283d85d6ad3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
