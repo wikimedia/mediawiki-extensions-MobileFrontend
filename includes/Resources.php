@@ -330,7 +330,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.microAutoSize' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
-			'resources/mobile.microAutosize/externals/micro.autosize.js',
+			'resources/mobile.microAutoSize/externals/micro.autosize.js',
 		),
 	),
 
@@ -1694,7 +1694,7 @@ $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.watchlist.beta.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/mobile.special.watchlist.beta.styles/specialWatchlist.less',
+			'resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less',
 		),
 	),
 
