@@ -131,6 +131,12 @@ $wgMinervaStyleModules = array(
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
 		// Not used yet, see FIXME below
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'variants' => array(
+			'invert' => array(
+				'color' => '#FFFFFF',
+				'global' => true,
+			)
+		),
 		'position' => 'bottom',
 		'images' => array(
 			// chrome
@@ -168,9 +174,6 @@ $wgMinervaStyleModules = array(
 
 			// cite
 			'citation' => 'images/icons/cite.svg',
-
-			// Drawers
-			'close-light' => 'images/icons/close-light.svg',
 
 			// overlay
 			'close' => 'images/icons/close.svg',
