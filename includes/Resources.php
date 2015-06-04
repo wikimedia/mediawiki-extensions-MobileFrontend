@@ -170,7 +170,10 @@ $wgMinervaStyleModules = array(
 			'citation' => 'images/icons/cite.svg',
 
 			// Drawers
-			'cancel-light' => 'images/icons/cancel-light.svg',
+			'close-light' => 'images/icons/close-light.svg',
+
+			// overlay
+			'close' => 'images/icons/close.svg',
 		),
 	),
 

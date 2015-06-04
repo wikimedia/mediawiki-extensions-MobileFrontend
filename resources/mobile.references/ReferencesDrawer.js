@@ -18,7 +18,7 @@
 		 */
 		defaults: {
 			cancelButton: new Icon( {
-				name: 'cancel',
+				name: 'close',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString()

@@ -19,7 +19,7 @@
 		defaults: {
 			cancelButton: new Icon( {
 				tagName: 'a',
-				name: 'cancel-light',
+				name: 'close-light',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
