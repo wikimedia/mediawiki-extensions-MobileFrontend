@@ -43,7 +43,7 @@ Then(/^I should not see the wikitext editor overlay$/) do
 end
 
 Then(/^I see the anonymous editor warning$/) do
-  expect(on(ArticlePage).anon_editor_warning_element).to be_visible
+  expect(on(ArticlePage).anon_editor_warning_element.when_present).to be_visible
 end
 
 Then /^I should see the read in another language button$/ do
