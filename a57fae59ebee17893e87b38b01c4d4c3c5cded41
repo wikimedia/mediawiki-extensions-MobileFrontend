@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aedf27f1_29e1a1fb",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-04T18:04:50Z",
+      "side": 1,
+      "message": "$de -\u003e $mDiffEngine",
+      "revId": "a57fae59ebee17893e87b38b01c4d4c3c5cded41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
