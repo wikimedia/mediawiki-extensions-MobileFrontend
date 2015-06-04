@@ -10,6 +10,9 @@
 	 * @extends View
 	 */
 	MainMenu = View.extend( {
+		/** @inheritdoc */
+		isTemplateMode: true,
+		/** @inheritdoc */
 		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
 
 		/** @inheritdoc **/
@@ -95,11 +98,6 @@
 					// Stop propagation, otherwise the Skin will close the open menus on page center click
 					ev.stopPropagation();
 				} );
-
-			// Use template for entire view
-			// FIXME: Icon and MainMenu now do this. Revisit className and tagName properties
-			// See https://phabricator.wikimedia.org/T97663
-			this.$el = this.$el.children( 0 );
 		},
 
 		/**

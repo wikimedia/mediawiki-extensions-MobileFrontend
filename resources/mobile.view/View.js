@@ -97,6 +97,12 @@
 		 * @property String
 		 */
 		tagName: 'div',
+		/**
+		 * Tells the View to ignore tagName and className when constructing the element
+		 * and to rely solely on the template
+		 * @property {Boolean} isTemplateMode
+		 */
+		isTemplateMode: false,
 
 		/**
 		 * Whether border box box sizing model should be used
@@ -185,7 +191,7 @@
 		},
 
 		/**
-		 * Called when this.$el is ready. Render and delegate events among other things.
+		 * Called when this.$el is ready.
 		 * @private
 		 */
 		_postInitialize: function () {
@@ -195,7 +201,6 @@
 				this.$el.addClass( 'view-border-box' );
 			}
 			this.render( this.options );
-			this.delegateEvents();
 		},
 
 		/**
@@ -222,14 +227,20 @@
 		 * options
 		 */
 		render: function ( data ) {
+			var html;
 			$.extend( this.options, data );
 			this.preRender();
-
-			if ( this.template  && !this.options.enhance ) {
-				this.$el.html( this.template.render( this.options, this.templatePartials ) );
+			this.undelegateEvents();
+			if ( this.template && !this.options.enhance ) {
+				html = this.template.render( this.options, this.templatePartials );
+				if ( this.isTemplateMode ) {
+					this.$el = $( html );
+				} else {
+					this.$el.html( html );
+				}
 			}
 			this.postRender();
-
+			this.delegateEvents();
 			return this;
 		},
 

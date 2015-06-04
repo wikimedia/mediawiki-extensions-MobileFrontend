@@ -7,6 +7,8 @@
 	 * @extends View
 	 */
 	MessageBox = View.extend( {
+		/** @inheritdoc */
+		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} [defaults.heading] heading to show along with message (text)
@@ -14,11 +16,7 @@
 		 * @cfg {String} defaults.className either errorbox, warningbox or successbox
 		 */
 		defaults: {},
-		template: mw.template.get( 'mobile.messageBox', 'MessageBox.hogan' ),
-		/** @inheritdoc */
-		postRender: function () {
-			this.$el = this.$el.children( 0 );
-		}
+		template: mw.template.get( 'mobile.messageBox', 'MessageBox.hogan' )
 	} );
 
 	M.define( 'mobile.messageBox/MessageBox', MessageBox );
