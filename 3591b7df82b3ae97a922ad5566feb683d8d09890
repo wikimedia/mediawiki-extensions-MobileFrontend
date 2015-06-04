@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aedf27f1_583e2c28",
+        "filename": "resources/mobile.quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-04T21:27:21Z",
+      "side": 1,
+      "message": "You should also use the dark icon here too. The background is grey and the white icon is not that visible.",
+      "revId": "3591b7df82b3ae97a922ad5566feb683d8d09890",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
