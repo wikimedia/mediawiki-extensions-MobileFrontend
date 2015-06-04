@@ -103,26 +103,4 @@ A file for css that optimises the Minerva skin on larger devices.
 	#mw-mf-last-modified {
 		padding: 5px @contentPaddingTablet;
 	}
-
-	.alpha,
-	.beta {
-		.pre-content {
-			padding-left: @contentPaddingTablet;
-			padding-right: @contentPaddingTablet;
-
-			#section_0 {
-				border-bottom: none;
-				// FIXME: After this and the new page-action CSS below are promoted to stable,
-				// move page-actions before the h1 in the DOM, remove the 220px padding on the
-				// header, and change the absolute positioning of page-actions to float.
-				padding: 0 220px 7px 0;
-				font-size: 2.6525em; // 42px
-			}
-		}
-		#page-actions {
-			right: @contentPaddingTablet;
-			top: 36px;
-			padding: 0;
-		}
-	}
 }
