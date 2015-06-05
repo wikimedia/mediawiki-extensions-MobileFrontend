@@ -67,22 +67,6 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Returns the available languages for this page
-	 * @return array
-	 */
-	public function getLanguageVariants() {
-		return $this->data['content_navigation']['variants'];
-	}
-
-	/**
-	 * Get the language links for this page
-	 * @return array
-	 */
-	public function getLanguages() {
-		return $this->data['language_urls'];
-	}
-
-	/**
 	 * Returns available page actions
 	 * @return array
 	 */
@@ -213,9 +197,11 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getSecondaryActions() {
 		$result = $this->data['secondary_actions'];
+		$hasLanguages = $this->data['content_navigation']['variants'] ||
+			$this->data['language_urls'];
 
 		// If languages are available, add a languages link
-		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
+		if ( $hasLanguages ) {
 			$languageUrl = SpecialPage::getTitleFor(
 				'MobileLanguages',
 				$this->getSkin()->getTitle()
