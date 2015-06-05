@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Panel = M.require( 'Panel' ),
+		Icon = M.require( 'Icon' ),
 		Drawer;
 
 	/**
@@ -9,6 +10,19 @@
 	 * @extends Panel
 	 */
 	Drawer = Panel.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
+		 */
+		defaults: {
+			cancelButton: new Icon( {
+				tagName: 'a',
+				name: 'close-invert',
+				additionalClassNames: 'cancel',
+				label: mw.msg( 'mobile-frontend-overlay-close' )
+			} ).toHtmlString()
+		},
 		className: 'drawer position-fixed',
 		/**
 		 * Defines an element that the Drawer should automatically be appended to.

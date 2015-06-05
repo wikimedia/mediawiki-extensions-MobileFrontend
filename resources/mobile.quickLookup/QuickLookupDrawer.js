@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var Icon = M.require( 'Icon' ),
-		Drawer = M.require( 'Drawer' ),
+	var Drawer = M.require( 'Drawer' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		QuickLookupDrawer;
@@ -17,22 +16,15 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
 		 * @cfg {String} defaults.title title of the page
 		 * @cfg {String} defaults.text text of the page
 		 * @cfg {String} defaults.id ID of the page
 		 */
-		defaults: {
-			cancelButton: new Icon( {
-				tagName: 'a',
-				name: 'close-light',
-				additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString(),
+		defaults: $.extend( {}, Drawer.prototype.defaults, {
 			title: '',
 			text: '',
 			id: ''
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */

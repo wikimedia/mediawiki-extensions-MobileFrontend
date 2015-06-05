@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var ReferencesDrawer,
 		Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
@@ -16,13 +16,14 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
 		 */
-		defaults: {
+		defaults: $.extend( {}, Drawer.prototype.defaults, {
+			// FIXME: Use a dark icon until T101434 resolved.
 			cancelButton: new Icon( {
 				name: 'close',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString()
-		},
+		} ),
 		/** @inheritdoc */
 		show: function () {
 			uiSchema.log( {
@@ -35,4 +36,4 @@
 	} );
 
 	M.define( 'modules/references/ReferencesDrawer', ReferencesDrawer );
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

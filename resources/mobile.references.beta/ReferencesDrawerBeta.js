@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' ),
 		Icon = M.require( 'Icon' ),
+		Drawer = M.require( 'Drawer' ),
 		ReferencesDrawerBeta;
 
 	/**
@@ -11,25 +12,20 @@
 	 */
 	ReferencesDrawerBeta = ReferencesDrawer.extend( {
 		/**
+		 * Inherits from Drawer rather than ReferencesDrawer until T101434
+		 * is resolved.
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
 		 * @cfg {String} defaults.citation HTML of the citation icon.
 		 */
-		defaults: {
-			cancelButton: new Icon( {
-				tagName: 'a',
-				name: 'close-light',
-				additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString(),
+		defaults: $.extend( {}, Drawer.prototype.defaults, {
 			citation: new Icon( {
 				name: 'citation',
 				additionalClassNames: 'text',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-references-citation' )
 			} ).toHtmlString()
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */
