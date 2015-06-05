@@ -16,6 +16,24 @@
       "revId": "b3c708572024e5a385a62acda19ef6dce87ed149",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_02191a27",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-05T23:08:55Z",
+      "side": 1,
+      "message": "I\u0027m being overly cautious since I don\u0027t trust these to always exist :-)",
+      "parentUuid": "8ec42329_d76d1698",
+      "revId": "b3c708572024e5a385a62acda19ef6dce87ed149",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
