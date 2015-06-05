@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b7588a5a",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-05T22:16:39Z",
+      "side": 1,
+      "message": "Documentation update needed",
+      "revId": "9a05f9f91ca5da981c42cdff03ca4976cceb76d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5735a6f2",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-05T22:16:39Z",
+      "side": 1,
+      "message": "Here too",
+      "revId": "9a05f9f91ca5da981c42cdff03ca4976cceb76d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
