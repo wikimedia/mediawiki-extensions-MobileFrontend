@@ -52,9 +52,8 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 	/**
 	 * @inheritdoc
-	 * Renders a search link and branding.
 	 */
-	protected function makeChromeHeaderContent( $data ) {
+	protected function getChromeHeaderContentHtml( $data ) {
 		$templateParser = new TemplateParser( __DIR__ );
 		$args = array(
 			'siteName' => SkinMinerva::getSitename(),
@@ -63,7 +62,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 			'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse()
 		);
 
-		echo $templateParser->processTemplate( 'header', $args );
+		return $templateParser->processTemplate( 'header', $args );
 	}
 
 	protected function getSearchAttributes() {
@@ -101,7 +100,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	 * @param array $data Data used to build the header
 	 */
 	protected function renderHeader( $data ) {
-		$this->makeChromeHeaderContent( $data );
+		echo $this->getChromeHeaderContentHtml( $data );
 		echo $data['secondaryButton'];
 	}
 
