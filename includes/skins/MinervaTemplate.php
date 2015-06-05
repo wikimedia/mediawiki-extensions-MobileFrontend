@@ -54,15 +54,6 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Get elements for personal toolbar
-	 * @deprecated
-	 * @return array
-	 */
-	public function getPersonalTools() {
-		return $this->data['personal_urls'];
-	}
-
-	/**
 	 * Start render the page in template
 	 */
 	public function execute() {
@@ -89,24 +80,6 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	public function getLanguages() {
 		return $this->data['language_urls'];
-	}
-
-	/**
-	 * Returns main sidebar menu elements
-	 * @deprecated
-	 * @return array
-	 */
-	public function getDiscoveryTools() {
-		return $this->data['discovery_urls'];
-	}
-
-	/**
-	 * Returns sidebar footer links
-	 * @deprecated
-	 * @return array
-	 */
-	public function getSiteLinks() {
-		return $this->data['site_urls'];
 	}
 
 	/**
