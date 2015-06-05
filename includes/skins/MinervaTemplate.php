@@ -245,30 +245,12 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContent( $data ) {
-		if ( !$data[ 'unstyledContent' ] ) {
-			// Add a mw-content-ltr/rtl class to be able to style based on text direction
-			$langClass = 'mw-content-' . $data['pageDir'];
-			echo Html::openElement( 'div', array(
-				'id' => 'content',
-				'class' => 'content ' . $langClass,
-				'lang' => $data['pageLang'],
-				'dir' => $data['pageDir'],
-			) );
-			?>
-			<?php
-				echo $data[ 'bodytext' ];
-				if ( isset( $data['subject-page'] ) ) {
-					echo $data['subject-page'];
-				}
-				echo $this->getPostContentHtml( $data );
-				echo $this->getSecondaryActionsHtml();
-				echo $this->getHistoryLinkBottomHtml( $data );
-			?>
-			</div>
-			<?php
-		} else {
-			echo $data[ 'bodytext' ];
-		}
+		$templateParser = new TemplateParser( __DIR__ );
+		// FIXME: HTML generation of these should be done in the template itself.
+		$data['_secondaryActions'] = $this->getSecondaryActionsHtml();
+		$data['_postContent'] = $this->getPostContentHtml( $data );
+		$data['_historyLinkBottom'] = $this->getHistoryLinkBottomHtml( $data );
+		echo $templateParser->processTemplate( 'content', $data );
 	}
 
 	/**
