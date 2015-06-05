@@ -159,10 +159,11 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Outputs the 'Last edited' message, e.g. 'Last edited on...'
+	 * Returns the 'Last edited' message, e.g. 'Last edited on...'
 	 * @param array $data Data used to build the page
+	 * @return string
 	 */
-	protected function renderHistoryLink( $data ) {
+	protected function getHistoryLinkHtml( $data ) {
 		$action = Action::getActionName( RequestContext::getMain() );
 		if ( isset( $data['historyLink'] ) && $action === 'view' ) {
 			$historyLink = $data['historyLink'];
@@ -175,27 +176,35 @@ class MinervaTemplate extends BaseTemplate {
 				'timestamp' => $historyLink['data-timestamp']
 			);
 			$templateParser = new TemplateParser( __DIR__ );
-			echo $templateParser->processTemplate( 'history', $args );
+			return $templateParser->processTemplate( 'history', $args );
+		} else {
+			return '';
 		}
 	}
 
 	/**
-	 * Renders history link at top of page if it isn't the main page
+	 * Gets history link at top of page if it isn't the main page
 	 * @param array $data Data used to build the page
+	 * @return string
 	 */
-	protected function renderHistoryLinkTop( $data ) {
+	protected function getHistoryLinkTopHtml( $data ) {
 		if ( !$this->isMainPage ) {
-			$this->renderHistoryLink( $data );
+			return $this->getHistoryLinkHtml( $data );
+		} else {
+			return '';
 		}
 	}
 
 	/**
-	 * Renders history link at bottom of page if it is the main page
+	 * Gets history link at bottom of page if it is the main page
 	 * @param array $data Data used to build the page
+	 * @return string
 	 */
-	protected function renderHistoryLinkBottom( $data ) {
+	protected function getHistoryLinkBottomHtml( $data ) {
 		if ( $this->isMainPage ) {
-			$this->renderHistoryLink( $data );
+			return $this->getHistoryLinkHtml( $data );
+		} else {
+			return '';
 		}
 	}
 
@@ -225,11 +234,12 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Render secondary page actions like language selector
+	 * Get HTML representing secondary page actions like language selector
+	 * @return string
 	 */
-	protected function renderSecondaryActions() {
+	protected function getSecondaryActionsHtml() {
 		$baseClass = MobileUI::buttonClass( '', 'button' );
-		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
+		$html = Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
 			if ( isset( $el['attributes']['class'] ) ) {
@@ -237,10 +247,10 @@ class MinervaTemplate extends BaseTemplate {
 			} else {
 				$el['attributes']['class'] = $baseClass;
 			}
-			echo Html::element( 'a', $el['attributes'], $el['label'] );
+			$html .= Html::element( 'a', $el['attributes'], $el['label'] );
 		}
 
-		echo Html::closeElement( 'div' );
+		return $html . Html::closeElement( 'div' );
 	}
 
 	/**
@@ -261,9 +271,9 @@ class MinervaTemplate extends BaseTemplate {
 				if ( isset( $data['subject-page'] ) ) {
 					echo $data['subject-page'];
 				}
-				$this->renderPostContent( $data );
-				$this->renderSecondaryActions();
-				$this->renderHistoryLinkBottom( $data );
+				echo $this->getPostContentHtml( $data );
+				echo $this->getSecondaryActionsHtml();
+				echo $this->getHistoryLinkBottomHtml( $data );
 			?>
 			</div>
 			<?php
@@ -300,11 +310,13 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders any content after the main content and before the secondary actions.
+	 * Gets HTML that needs to come after the main content and before the secondary actions.
 	 *
 	 * @param array $data The data used to build the page
+	 * @return string
 	 */
-	protected function renderPostContent( $data ) {
+	protected function getPostContentHtml( $data ) {
+		return '';
 	}
 
 	/**
@@ -313,7 +325,7 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function renderContentWrapper( $data ) {
 		if ( $this->renderHistoryLinkBeforeContent ) {
-			$this->renderHistoryLinkTop( $data );
+			echo $this->getHistoryLinkTopHtml( $data );
 		?>
 			<script>
 				if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
@@ -328,7 +340,7 @@ class MinervaTemplate extends BaseTemplate {
 			$this->renderPreContent( $data );
 			$this->renderContent( $data );
 			if ( !$this->renderHistoryLinkBeforeContent ) {
-				$this->renderHistoryLinkTop( $data );
+				echo $this->getHistoryLinkTopHtml( $data );
 		?>
 				<script>
 					if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }

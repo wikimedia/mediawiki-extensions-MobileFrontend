@@ -103,9 +103,11 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		}
 	}
 
-	/** @inheritdoc */
-	protected function renderPostContent( $data ) {
-		echo $this->renderBrowseTags( $data );
+	/**
+	 * @inheritdoc
+	 */
+	protected function getPostContentHtml( $data ) {
+		return $this->renderBrowseTags( $data );
 	}
 
 	/**
