@@ -180,6 +180,14 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
+	'skins.minerva.mainPage.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'group' => 'other',
+		'styles' => array(
+			'resources/skins.minerva.mainPage.beta.styles/common.less',
+		),
+	),
+
 	'skins.minerva.mainPage.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'group' => 'other',
