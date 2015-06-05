@@ -34,6 +34,24 @@
       "revId": "3591b7df82b3ae97a922ad5566feb683d8d09890",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aedf27f1_4e85065a",
+        "filename": "resources/mobile.quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-05T00:07:24Z",
+      "side": 1,
+      "message": "I see, so the new light icon is not the same as the old light icon. The old one was darker. Anyway, I think I\u0027ll +2 and do a follow up.",
+      "parentUuid": "aedf27f1_6e9faaba",
+      "revId": "3591b7df82b3ae97a922ad5566feb683d8d09890",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
