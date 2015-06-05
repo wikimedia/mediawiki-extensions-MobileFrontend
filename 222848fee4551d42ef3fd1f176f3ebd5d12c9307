@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aedf27f1_31f7c3f4",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-05T06:32:48Z",
+      "side": 1,
+      "message": "Now, inline editing in gerrit would be an brilliant feature! :D",
+      "revId": "222848fee4551d42ef3fd1f176f3ebd5d12c9307",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
