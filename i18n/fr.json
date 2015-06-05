@@ -134,7 +134,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Commencer à modifier",
 	"mobile-frontend-editor-tutorial-summary": "Essayez d’améliorer la page $1.<br />N’ayez pas peur du balisage.",
 	"mobile-frontend-editor-unavailable": "La modification via mobile n’est actuellement pas disponible sur votre navigateur. Veuillez essayer un autre navigateur.",
-	"mobile-frontend-editor-unavailable-header": "Éditeur indisponible",
 	"mobile-frontend-editor-undo-unsupported": "L’annulation n’est pour le moment pas supportée sur les terminaux mobiles.",
 	"mobile-frontend-editor-uploadenable": "Veuillez d’abord télécharger une photo pour autoriser la modification.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Affichage de la source</strong> de<span> $1</span>",

@@ -121,7 +121,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Begin met bewerken",
 	"mobile-frontend-editor-tutorial-summary": "Probeer de pagina $1 te verbeteren.<br />Wees niet bang voor de opmaak.",
 	"mobile-frontend-editor-unavailable": "Mobiel bewerken is op dit moment niet beschikbaar met uw browser. Probeer een andere browser.",
-	"mobile-frontend-editor-unavailable-header": "Tekstverwerker niet beschikbaar",
 	"mobile-frontend-editor-undo-unsupported": "Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.",
 	"mobile-frontend-editor-uploadenable": "Gelieve bij het uploaden van een foto eerst te bewerken inschakelen.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Broktekst bekijken van</strong><span> $1</span>",

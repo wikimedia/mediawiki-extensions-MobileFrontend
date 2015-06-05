@@ -276,15 +276,15 @@ $specialPageAliases['lb'] = array(
 
 /** Northern Luri (لوری مینجایی) */
 $specialPageAliases['lrc'] = array(
-	'History' => array( 'ویرگار' ),
-	'MobileOptions' => array( 'خصوصیات_موبایلی' ),
-	'Uploads' => array( 'سوارکردیا' ),
-	'MobileDiff' => array( 'فرخ_موبایلی' ),
-	'MobileEditor' => array( 'ویرایشتکار_موبایلی' ),
-	'MobileMenu' => array( 'منو_موبایلی' ),
-	'MobileLanguages' => array( 'زونا_موبایل' ),
-	'Nearby' => array( 'نزیک_وه' ),
-	'UserProfile' => array( 'جانیاگه_کاریار' ),
+	'History' => array( 'ڤیرگار' ),
+	'MobileOptions' => array( 'خوصوٙصیات_موبایلی' ),
+	'Uploads' => array( 'سوڤارکئردیا' ),
+	'MobileDiff' => array( 'فأرخ_موبایلی' ),
+	'MobileEditor' => array( 'ڤیرایئشتکار_موبایلی' ),
+	'MobileMenu' => array( 'نومیار_موبایلی' ),
+	'MobileLanguages' => array( 'زوٙنا_موبایل' ),
+	'Nearby' => array( 'نئزیک_ڤئ' ),
+	'UserProfile' => array( 'جانیاگە_کاریار' ),
 );
 
 /** Literary Chinese (文言) */

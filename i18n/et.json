@@ -97,7 +97,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Alusta redigeerimist",
 	"mobile-frontend-editor-tutorial-summary": "Proovi lehekülge \"$1\" parandada.<br />Ära karda kasutada märgistuskeelt.",
 	"mobile-frontend-editor-unavailable": "Mobiiliga redigeerimine pole praegu sinu veebilehitsejas saadaval. Palun proovi teist veebilehitsejat.",
-	"mobile-frontend-editor-unavailable-header": "Toimeti pole saadaval",
 	"mobile-frontend-editor-undo-unsupported": "Tagasivõtmine pole praegu mobiiliseadmetes toetatud.",
 	"mobile-frontend-editor-uploadenable": "Et redigeerida, laadi esmalt pilt üles.",
 	"mobile-frontend-editor-viewing-source-page": "<span>Lehekülje $1<strong>lähteteksti vaatamine</strong></span>",

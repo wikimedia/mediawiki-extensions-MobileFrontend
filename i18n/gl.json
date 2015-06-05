@@ -106,7 +106,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Comece a editar",
 	"mobile-frontend-editor-tutorial-summary": "Intente mellorar a páxina $1.<br /> Non lle teña medo á sintaxe do wiki.",
 	"mobile-frontend-editor-unavailable": "A edición a través do móbil non está dispoñible no seu navegador. Probe cun navegador diferente.",
-	"mobile-frontend-editor-unavailable-header": "Editor non dispoñible",
 	"mobile-frontend-editor-undo-unsupported": "A función de desfacer non está soportada actualmente nos dispositivos móbiles.",
 	"mobile-frontend-editor-uploadenable": "Por favor, suba unha foto primeiro para habilitar a edición.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vendo o código fonte de</strong><span> $1</span>",

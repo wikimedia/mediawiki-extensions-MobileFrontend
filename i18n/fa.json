@@ -115,7 +115,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "ویرایش را آغاز کنید",
 	"mobile-frontend-editor-tutorial-summary": "از نشانه‌گذاری‌ها نترسید. تلاش کنید صفحهٔ $1 را بهبود بخشید.",
 	"mobile-frontend-editor-unavailable": "ویرایش تلفن همراه هم‌اکنون در مرورگر شما دردسترس نیست. خواهشمندیم مرورگر دیگری را بیازمایید.",
-	"mobile-frontend-editor-unavailable-header": "در دسترس نبودن ویرایشگر",
 	"mobile-frontend-editor-undo-unsupported": "خنثی‌سازی در حال حاضر در دستگاه‌های همراه پشتیبانی نشده‌است.",
 	"mobile-frontend-editor-uploadenable": "لطفاً یک نگاره بارگذاری کنید برای فعال کردن ویرایش بارگذاری کنید.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>مشاهدهٔ منبع</strong><span> $1</span>",

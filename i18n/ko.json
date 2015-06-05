@@ -114,7 +114,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "편집 시작",
 	"mobile-frontend-editor-tutorial-summary": "$1 문서를 개선해보세요.<br /> 문법에 무서워하지 마세요.",
 	"mobile-frontend-editor-unavailable": "모바일 편집은 현재 사용 중인 브라우저에서 사용할 수 없습니다. 다른 브라우저로 다시 시도하세요.",
-	"mobile-frontend-editor-unavailable-header": "편집기를 사용할 수 없음",
 	"mobile-frontend-editor-undo-unsupported": "되돌리기는 현재 모바일 장치에서 지원하지 않습니다.",
 	"mobile-frontend-editor-uploadenable": "편집을 활성화하기 위해 먼저 사진을 올려주시기 바랍니다.",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>문서의 원본을 보는 중</strong>",

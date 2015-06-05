@@ -111,7 +111,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "להתחיל לערוך",
 	"mobile-frontend-editor-tutorial-summary": "בואו לנסות לשפר את הדף $1.<br />אל תפחדו משפת העיצוב.",
 	"mobile-frontend-editor-unavailable": "עריכה ממכשירים ניידים אינה מופעלת בדפדפן שלך. נא לנסות דפדפן אחר.",
-	"mobile-frontend-editor-unavailable-header": "העורך אינו זמין",
 	"mobile-frontend-editor-undo-unsupported": "פעולת הביטול אינה נתמכת במכשירים ניידים בשלב זה.",
 	"mobile-frontend-editor-uploadenable": "נא להעלות תמונה כדי להפעיל עריכה.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>הצגת המקור</strong> של <span>$1</span>",

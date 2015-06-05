@@ -10,12 +10,21 @@
 	"mobile-frontend-featured-article": "Artikel Petingan Poé Ieu",
 	"mobile-frontend-home-button": "Tepas",
 	"mobile-frontend-language-article-heading": "Baca dina séjén basa",
+	"mobile-frontend-last-modified-date": "Panungtungan dirobah ping $1, tabuh $2",
+	"mobile-frontend-main-menu-button-tooltip": "Buka ménu utama",
 	"mobile-frontend-main-menu-login": "Asup log",
+	"mobile-frontend-main-menu-nearby": "Pangdeukeutna",
 	"mobile-frontend-main-menu-settings": "Séting",
+	"mobile-frontend-main-menu-watchlist": "Awaskeuneun",
 	"mobile-frontend-placeholder": "Sungsi di {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privasi",
 	"mobile-frontend-random-button": "Acak",
 	"mobile-frontend-regular-site": "Pidangkeun ieu kaca dina Wikipédia biasa",
 	"mobile-frontend-search-submit": "Jung",
-	"mobile-frontend-terms-text": "Katangtuan Pamakéan"
+	"mobile-frontend-terms-text": "Katangtuan Pamakéan",
+	"mobile-frontend-view": "Pidangan sélular",
+	"mobile-frontend-view-desktop": "Déstop",
+	"mobile-frontend-view-mobile": "Sélular",
+	"tag-mobile_edit": "Éditan sélular",
+	"mobile-frontend-pageaction-edit-tooltip": "Édit bagian mimiti ieu kaca."
 }

@@ -116,7 +116,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Почати редагування",
 	"mobile-frontend-editor-tutorial-summary": "Спробуйте поліпшити сторінку $1.<br />Не лякайтеся розмітки.",
 	"mobile-frontend-editor-unavailable": "Мобільне редагування наразі недоступне у вашому веб-переглядачі. Будь ласка, спробуйте інший веб-переглядач.",
-	"mobile-frontend-editor-unavailable-header": "Редактор недоступний",
 	"mobile-frontend-editor-undo-unsupported": "Відміна дії наразі не підтримується на мобільних пристроях.",
 	"mobile-frontend-editor-uploadenable": "Будь ласка, завантажте спершу фото, щоб могти редагувати.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Перегляд джерела</strong><span> $1</span>",

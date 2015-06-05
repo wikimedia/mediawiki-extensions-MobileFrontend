@@ -109,7 +109,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Mit dem Bearbeiten anfangen",
 	"mobile-frontend-editor-tutorial-summary": "Versuche, die Seite „$1“ zu verbessern.<br />Habe keine Angst vor Markup.",
 	"mobile-frontend-editor-unavailable": "Das mobile Bearbeiten ist derzeit für deinen Browser nicht verfügbar. Bitte versuche einen anderen Browser.",
-	"mobile-frontend-editor-unavailable-header": "Editor nicht verfügbar",
 	"mobile-frontend-editor-undo-unsupported": "Das Rückgängigmachen wird derzeit von mobilen Geräten nicht unterstützt.",
 	"mobile-frontend-editor-uploadenable": "Bitte lade zuerst ein Foto hoch, damit du die Seite bearbeiten kannst.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Quelltext betrachten von</strong><span> $1</span>",

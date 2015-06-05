@@ -105,7 +105,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Aloita muokkaaminen",
 	"mobile-frontend-editor-tutorial-summary": "Älä arastele tehdä muokkauksia. Kokeile parantaa sivua $1.",
 	"mobile-frontend-editor-unavailable": "Mobiilimuokkaus ei ole mahdollista käyttämälläsi selaimella. Kokeile jotain muuta selainta.",
-	"mobile-frontend-editor-unavailable-header": "Muokkain ei ole saatavilla",
 	"mobile-frontend-editor-undo-unsupported": "Kumoaminen ei ole mahdollista mobiilisovelluksissa.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Näytetään wikiteksti sivusta</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Muokkaa",

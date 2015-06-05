@@ -112,7 +112,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Começar a editar",
 	"mobile-frontend-editor-tutorial-summary": "Tente melhorar a página $1.<br /> Não tenha medo de editar.",
 	"mobile-frontend-editor-unavailable": "A edição móvel não está disponível para o seu navegador. Tente outro diferente.",
-	"mobile-frontend-editor-unavailable-header": "Editor indisponível",
 	"mobile-frontend-editor-undo-unsupported": "A reversão não é atualmente suportada nos dispositivos móveis.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visualização do código-fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Editar",

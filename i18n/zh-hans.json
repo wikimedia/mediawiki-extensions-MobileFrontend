@@ -128,7 +128,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "开始编辑",
 	"mobile-frontend-editor-tutorial-summary": "尝试改进$1页面。<br />不要害怕标记。",
 	"mobile-frontend-editor-unavailable": "移动版编辑目前不能在你的浏览器上使用。请尝试使用其他浏览器。",
-	"mobile-frontend-editor-unavailable-header": "编辑器不可用",
 	"mobile-frontend-editor-undo-unsupported": "撤销编辑操作尚不支持移动设备。",
 	"mobile-frontend-editor-uploadenable": "请先上传一张照片然后编辑。",
 	"mobile-frontend-editor-viewing-source-page": "<strong>查看</strong><span>$1</span><strong>的源代码</strong>",

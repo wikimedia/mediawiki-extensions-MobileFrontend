@@ -107,7 +107,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Začněte editovat",
 	"mobile-frontend-editor-tutorial-summary": "Zkuste vylepšit stránku $1.<br />Nebojte se formátovacích značek.",
 	"mobile-frontend-editor-unavailable": "Mobilní editování není na vašem prohlížeči momentálně dostupné. Zkuste jiný prohlížeč.",
-	"mobile-frontend-editor-unavailable-header": "Editor není dostupný",
 	"mobile-frontend-editor-undo-unsupported": "Vracení zpět není na mobilních zařízeních momentálně podporováno.",
 	"mobile-frontend-editor-uploadenable": "Abyste mohli stránku editovat, musíte nejprve načíst soubor.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Prohlížení zdrojového kódu stránky</strong><span> $1</span>",
