@@ -367,6 +367,8 @@ class MinervaTemplate extends BaseTemplate {
 	 * @todo replace with template engines
 	 */
 	protected function render( $data ) {
+		$templateParser = new TemplateParser( __DIR__ );
+
 		// begin rendering
 		echo $data[ 'headelement' ];
 		?>
@@ -376,9 +378,7 @@ class MinervaTemplate extends BaseTemplate {
 			</nav>
 			<div id="mw-mf-page-center">
 				<?php
-					foreach ( $this->data['banners'] as $banner ){
-						echo $banner;
-					}
+					echo $templateParser->processTemplate( 'banners', $data );
 				?>
 				<div class="header">
 					<?php
