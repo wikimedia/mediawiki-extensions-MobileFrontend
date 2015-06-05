@@ -16,6 +16,24 @@
       "revId": "3591b7df82b3ae97a922ad5566feb683d8d09890",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aedf27f1_6e9faaba",
+        "filename": "resources/mobile.quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-05T00:02:44Z",
+      "side": 1,
+      "message": "I don\u0027t know what to say... it\u0027s a hygiene patch. It\u0027s already using this icon...?",
+      "parentUuid": "aedf27f1_583e2c28",
+      "revId": "3591b7df82b3ae97a922ad5566feb683d8d09890",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
