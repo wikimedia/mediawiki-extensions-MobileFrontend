@@ -13,8 +13,7 @@ Feature: Basic site for legacy devices
       # FIXME: Check that the edit button is invisible
       # FIXME: Check that the upload button is invisible
 
-  # TODO: https://phabricator.wikimedia.org/T101190
-  @smoke @skip
+  @smoke
   Scenario: Able to access left navigation in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
@@ -25,8 +24,7 @@ Feature: Basic site for legacy devices
       And I should not see a link to "Log in" in the main navigation menu
       And I should not see a link to "Uploads" in the main navigation menu
 
-  # TODO: https://phabricator.wikimedia.org/T101190
-  @extension-geodata @skip
+  @extension-geodata
   Scenario: Nearby link not present in main navigation menu
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button

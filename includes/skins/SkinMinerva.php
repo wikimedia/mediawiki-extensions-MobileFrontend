@@ -40,13 +40,12 @@ class SkinMinerva extends SkinTemplate {
 		foreach ( $array as $name => $info ) {
 			// FIXME: #getSiteLinks doesn't return the same form of array as
 			// #getDiscovery- and #getPersonalTools.
-			$components = isset( $info['links'] )
-				? $info['links']
-				: array( $info );
-
+			$components = isset( $info['links'] ) ? $info['links'] : array( $info );
+			$class = isset( $info['class'] ) ? $info['class'] : '';
 			$menu[] = array(
 				'name' => $name,
 				'components' => $components,
+				'class' => $class,
 			);
 		}
 		return $menu;
@@ -95,14 +94,10 @@ class SkinMinerva extends SkinTemplate {
 		// example, on a special page)
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
-		// Deprecate use of this in favour of menu_data.
-		$tpl->set( 'site_urls', $this->getSiteLinks() );
-		// Deprecate use of this in favour of menu_data.
-		$tpl->set( 'personal_urls', $this->getPersonalTools() );
-		// Deprecate use of this in favour of menu_data.
-		$tpl->set( 'discovery_urls', $this->getDiscoveryTools() );
-
+		// Set the links for the main menu
 		$tpl->set( 'menu_data', $this->getMenuData() );
+
+		// Set the links for page secondary actions
 		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
 		// Construct various Minerva-specific interface elements
