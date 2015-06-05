@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b7816a94",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-05T22:08:31Z",
+      "side": 1,
+      "message": "Outputs -\u003e Returns\nAlso, the @returns tag is missing.\n\nThe comment applies to the functions below too.",
+      "revId": "d89e1ad1fa43b786819b7c17492a02565cee7f52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
