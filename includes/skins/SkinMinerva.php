@@ -358,8 +358,9 @@ class SkinMinerva extends SkinTemplate {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
 		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
+		$items = array();
 
-		// watchlist link
+		// Watchlist link
 		$watchlistQuery = array();
 		$user = $this->getUser();
 		if ( $user ) {
@@ -372,28 +373,31 @@ class SkinMinerva extends SkinTemplate {
 				$watchlistQuery['filter'] = $filter;
 			}
 		}
-
-		$items = array(
-			'watchlist' => array(
-				'links' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-						'href' => $this->getPersonalUrl(
-							$watchTitle,
-							'mobile-frontend-watchlist-purpose',
-							$watchlistQuery
-						),
-						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
-						'data-event-name' => 'watchlist',
+		$items[] = array(
+			'name' => 'watchlist',
+			'components' => array(
+				array(
+					'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+					'href' => $this->getPersonalUrl(
+						$watchTitle,
+						'mobile-frontend-watchlist-purpose',
+						$watchlistQuery
 					),
+					'class' => MobileUI::iconClass( 'watchlist', 'before' ),
+					'data-event-name' => 'watchlist',
 				),
-				'class' => 'jsonly'
-			)
+			),
+			'class' => 'jsonly'
 		);
+
+		// Links specifically for mobile mode
 		if ( $this->isMobileMode ) {
+
+			// Uploads link
 			if ( $this->mobileContext->userCanUpload() ) {
-				$items['uploads'] = array(
-					'links' => array(
+				$items[] = array(
+					'name' => 'uploads',
+					'components' => array(
 						array(
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 							'href' => $this->getPersonalUrl(
@@ -407,8 +411,11 @@ class SkinMinerva extends SkinTemplate {
 					'class' => 'jsonly',
 				);
 			}
-			$items['settings'] = array(
-				'links' => array(
+
+			// Settings link
+			$items[] = array(
+				'name' => 'settings',
+				'components' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
@@ -418,9 +425,14 @@ class SkinMinerva extends SkinTemplate {
 					),
 				),
 			);
+
+		// Links specifically for desktop mode
 		} else {
-			$items['preferences'] = array(
-				'links' => array(
+
+			// Preferences link
+			$items[] = array(
+				'name' => 'preferences',
+				'components' => array(
 					array(
 						'text' => wfMessage( 'preferences' )->escaped(),
 						'href' => $this->getPersonalUrl(
@@ -432,13 +444,30 @@ class SkinMinerva extends SkinTemplate {
 					),
 				),
 			);
+
 		}
-		$items['auth'] = $this->getLogInOutLink();
+
+		// Login/Logout links
+		$items[] = $this->getLogInOutLink();
 
 		// Allow other extensions to add or override tools
 		Hooks::run( 'MobilePersonalTools', array( &$items ) );
 
-		return $items;
+		// Migrate data from hook handlers that use the old array format
+		$cleanedItems = array();
+		foreach ( $items as $key => $value ) {
+			if ( !is_int( $key ) ) {
+				$cleanedItems[] = array(
+					'name' => $key,
+					'components' => isset( $value['links'] ) ? $value['links'] : array(),
+					'class' => isset( $value['class'] ) ? $value['class'] : ''
+				);
+			} else {
+				$cleanedItems[] = $value;
+			}
+		}
+
+		return $cleanedItems;
 	}
 
 	/**
@@ -467,33 +496,45 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getDiscoveryTools() {
 		$config = $this->getMFConfig();
+		$items = array();
 
-		$items = array(
-			'home' => array(
-				'links' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
-						'href' => Title::newMainPage()->getLocalUrl(),
-						'class' => MobileUI::iconClass( 'home', 'before' ),
-						'data-event-name' => 'home',
-					),
+		// Home link
+		$items[] = array(
+			'name' => 'home',
+			'components' => array(
+				array(
+					'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
+					'href' => Title::newMainPage()->getLocalUrl(),
+					'class' => MobileUI::iconClass( 'home', 'before' ),
+					'data-event-name' => 'home',
 				),
 			),
-			'random' => array(
-				'links' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-						'href' => SpecialPage::getTitleFor( 'Randompage',
-							MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
-								'#/random',
-						'class' => MobileUI::iconClass( 'random', 'before' ),
-						'id' => 'randomButton',
-						'data-event-name' => 'random',
-					),
+		);
+
+		// Random link
+		$items[] = array(
+			'name' => 'random',
+			'components' => array(
+				array(
+					'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
+					'href' => SpecialPage::getTitleFor( 'Randompage',
+						MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
+							'#/random',
+					'class' => MobileUI::iconClass( 'random', 'before' ),
+					'id' => 'randomButton',
+					'data-event-name' => 'random',
 				),
 			),
-			'nearby' => array(
-				'links' => array(
+		);
+
+		// Nearby link (if supported)
+		if (
+			$config->get( 'MFNearby' ) &&
+			( $config->get( 'MFNearbyEndpoint' ) || class_exists( 'GeoData' ) )
+		) {
+			$items[] = array(
+				'name' => 'nearby',
+				'components' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
@@ -502,19 +543,27 @@ class SkinMinerva extends SkinTemplate {
 					),
 				),
 				'class' => 'jsonly',
-			),
-		);
-		if (
-			!$config->get( 'MFNearby' ) ||
-			( !$config->get( 'MFNearbyEndpoint' ) && !class_exists( 'GeoData' ) )
-		) {
-			unset( $items['nearby'] );
+			);
 		}
 
 		// Allow other extensions to add or override discovery tools
 		Hooks::run( 'MinervaDiscoveryTools', array( &$items ) );
 
-		return $items;
+		// Migrate data from hook handlers that use the old array format
+		$cleanedItems = array();
+		foreach ( $items as $key => $value ) {
+			if ( !is_int( $key ) ) {
+				$cleanedItems[] = array(
+					'name' => $key,
+					'components' => isset( $value['links'] ) ? $value['links'] : array(),
+					'class' => isset( $value['class'] ) ? $value['class'] : ''
+				);
+			} else {
+				$cleanedItems[] = $value;
+			}
+		}
+
+		return $cleanedItems;
 	}
 
 	/**
@@ -566,7 +615,8 @@ class SkinMinerva extends SkinTemplate {
 			$username = $user->getName();
 
 			$loginLogoutLink = array(
-				'links' => array(
+				'name' => 'auth',
+				'components' => array(
 					array(
 						'text' => $username,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
@@ -591,7 +641,8 @@ class SkinMinerva extends SkinTemplate {
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
 			$loginLogoutLink = array(
-				'links' => array(
+				'name' => 'auth',
+				'components' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 						'href' => $url,
@@ -757,31 +808,39 @@ class SkinMinerva extends SkinTemplate {
 	 * @return Array array of site links
 	 */
 	protected function getSiteLinks() {
-		$siteLinks = array(
-			array(
-				'title' => 'aboutpage',
-				'msg' => 'aboutsite',
-			),
-			array(
-				'title' => 'disclaimerpage',
-				'msg' => 'disclaimers',
-			),
-		);
-		$urls = array();
-		foreach ( $siteLinks as $param ) {
-			$title = Title::newFromText(
-				$this->msg( $param['title'] )->inContentLanguage()->text()
+		$items = array();
+
+		// About link
+		$title = Title::newFromText( $this->msg( 'aboutpage' )->inContentLanguage()->text() );
+		$msg = $this->msg( 'aboutsite' );
+		if ( $title && !$msg->isDisabled() ) {
+			$items[] = array(
+				'name' => 'about',
+				'components' => array(
+					array(
+						'text'=> $msg->text(),
+						'href' => $title->getLocalUrl(),
+					),
+				),
 			);
-			$msg = $this->msg( $param['msg'] );
-			if ( $title && !$msg->isDisabled() ) {
-				$urls[] = array(
-					'href' => $title->getLocalUrl(),
-					'text'=> $msg->text(),
-				);
-			}
 		}
 
-		return $urls;
+		// Disclaimers link
+		$title = Title::newFromText( $this->msg( 'disclaimerpage' )->inContentLanguage()->text() );
+		$msg = $this->msg( 'disclaimers' );
+		if ( $title && !$msg->isDisabled() ) {
+			$items[] = array(
+				'name' => 'disclaimers',
+				'components' => array(
+					array(
+						'text'=> $msg->text(),
+						'href' => $title->getLocalUrl(),
+					),
+				),
+			);
+		}
+
+		return $items;
 	}
 
 	/**
@@ -874,9 +933,9 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getMenuData() {
 		return array(
-			'discovery' => $this->flattenLinkArray( $this->getDiscoveryTools() ),
-			'personal' => $this->flattenLinkArray( $this->getPersonalTools() ),
-			'sitelinks' => $this->flattenLinkArray( $this->getSiteLinks() ),
+			'discovery' => $this->getDiscoveryTools(),
+			'personal' => $this->getPersonalTools(),
+			'sitelinks' => $this->getSiteLinks(),
 		);
 	}
 	/**
