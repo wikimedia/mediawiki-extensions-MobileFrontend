@@ -24,7 +24,8 @@
 			"Mirolith",
 			"JensRiskin",
 			"MedShot",
-			"Esketti"
+			"Esketti",
+			"HanV"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -270,7 +271,7 @@
 	"mobile-frontend-profile-footer-months": "Meer dan {{PLURAL:$2|één maand|$2 maanden}} geleden lid geworden met [[Special:Contributions/$1|{{PLURAL:$3|1 bewerking|$3 bewerkingen}}]] en [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].",
 	"mobile-frontend-profile-footer-years": "Meer dan {{PLURAL:$2|één jaar|$2 jaar}} geleden lid geworden met [[Special:Contributions/$1|{{PLURAL:$3|1 bewerking|$3 bewerkingen}}]] en [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].",
 	"mobile-frontend-profile-last-edit": "Heeft {{PLURAL:$2|gisteren|$2 dagen geleden|0=eerder vandaag|2=eergisteren}} de pagina [[:$1]] {{GENDER:$3|bewerkt}}.",
-	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Bedankt}} {{GENDER:$1|door}} [[Special:UserProfile/$1|$1]].",
+	"mobile-frontend-profile-last-thank": "Laatste \n{{GENDER:$2|bedankt}} {{GENDER:$1|door}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-noargs": "Er is geen gebruikersnaam opgegeven. Geef een gebruikernaam op om een profiel te bekijken.",
 	"mobile-frontend-profile-nouser": "Er bestaat geen gebruiker met deze naam. Gebruikersnamen zijn hoofdlettergevoelig. Controleer uw invoer.",
 	"mobile-frontend-profile-title": "Gebruikersprofiel",
@@ -342,9 +343,9 @@
 	"mobile-frontend-watchlist-login-action": "Meld u aan om het te zien.",
 	"mobile-frontend-watchlist-modified": "$1 gewijzigd",
 	"mobile-frontend-watchlist-more": "meer",
-	"mobile-frontend-watchlist-purpose": "Een volglijst helpt u pagina's als bladwijzers toe te voegen en wijzigingen aan die pagina's bij te houden.",
+	"mobile-frontend-watchlist-purpose": "<strong>Met een volglijst kunt u pagina's als bladwijzers toevoegen en wijzigingen aan die pagina's bijhouden.</strong><br />Log in om het te bekijken.",
 	"mobile-frontend-watchlist-removed": "$1 is verwijderd van uw volglijst",
-	"mobile-frontend-watchlist-signup-action": "Registreer u om er nu een aan te leggen.",
+	"mobile-frontend-watchlist-signup-action": "<strong>Met een volglijst kunt u pagina's als bladwijzers toevoegen en wijzigingen aan die pagina's bijhouden.</strong><br />Registreer u om er nu een aan te leggen.",
 	"mobile-frontend-watchlist-view": "Volglijst bekijken",
 	"nearby": "Pagina's in de buurt",
 	"tag-mobile_edit": "bewerking via mobiel",

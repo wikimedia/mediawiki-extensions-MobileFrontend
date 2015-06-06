@@ -406,6 +406,7 @@
 	"mobile-frontend-time-precision-annum": "$1 שנים לספירה",
 	"mobile-frontend-time-precision-millennium": "{{PLURAL:$1|אלף|אלפיים|$1 אלפי}} שנים לספירה",
 	"mobile-frontend-time-precision-century": "{{PLURAL:$1|מאה שנים|מאתיים שנה|$1 מאות שנים}} לספירה",
+	"mobile-frontend-time-precision-10annum": "שנות ה־$1",
 	"mobile-frontend-time-precision-BCE-Gannum": "{{PLURAL:$1|מיליארד|$1 מיליארד}} שנים לפני ספירה",
 	"mobile-frontend-time-precision-BCE-Mannum": "{{PLURAL:$1|מיליון|$1 מיליון}} שנים לפני הספירה",
 	"mobile-frontend-time-precision-BCE-annum": "$1 שנים לפני הספירה",
