@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_225e967c",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-06T00:10:36Z",
+      "side": 1,
+      "message": "If this is only for the main page I would say put it in mainPage.styles to avoid confusion.",
+      "revId": "012f09132423f7ad861db9e661f299797ebe209d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
