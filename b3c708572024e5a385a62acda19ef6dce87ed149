@@ -34,6 +34,24 @@
       "revId": "b3c708572024e5a385a62acda19ef6dce87ed149",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b5a5df45",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-06T20:39:04Z",
+      "side": 1,
+      "message": "But you should then check, if they have a value that is interpreted as true (like the \"old\" implementation). Think about an empty array, it is set (isset -\u003e true), but has no languages (an empty is a boolean false) :)",
+      "parentUuid": "8ec42329_02191a27",
+      "revId": "b3c708572024e5a385a62acda19ef6dce87ed149",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
