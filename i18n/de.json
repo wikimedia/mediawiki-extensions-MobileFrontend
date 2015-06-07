@@ -386,6 +386,7 @@
 	"mobile-frontend-time-precision-annum": "$1 Jahre n. Chr.",
 	"mobile-frontend-time-precision-millennium": "$1 Tausend Jahre n. Chr.",
 	"mobile-frontend-time-precision-century": "$1 Hundert Jahre n. Chr.",
+	"mobile-frontend-time-precision-10annum": "$1er",
 	"mobile-frontend-time-precision-BCE-Gannum": "$1 Milliarden Jahre v. Chr.",
 	"mobile-frontend-time-precision-BCE-Mannum": "$1 Millionen Jahre v. Chr.",
 	"mobile-frontend-time-precision-BCE-annum": "$1 Jahre v. Chr.",
