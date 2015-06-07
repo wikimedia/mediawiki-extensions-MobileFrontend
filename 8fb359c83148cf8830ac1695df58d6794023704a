@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_69aebee6",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-07T21:21:53Z",
+      "side": 1,
+      "message": "The documentation in this test looks a bit overpraise, but from my point of view, the code itself is a bit complicated and the test is a lot more complicated, and i think the comments will help us understand what the test is doing, if we revisit it later :)",
+      "revId": "8fb359c83148cf8830ac1695df58d6794023704a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
