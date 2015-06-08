@@ -1,3 +1,8 @@
+Given(/^the page "(.+)" has the following edits:$/) do |page, table|
+  page = page.gsub(' ', '_')
+  table.rows.each { |(text)| api.edit(title: page, text: text) }
+end
+
 When(/^I clear the editor$/) do
   on(ArticlePage).editor_textarea_element.when_present.clear
 end
