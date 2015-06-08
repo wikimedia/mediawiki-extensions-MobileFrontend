@@ -18,7 +18,8 @@
 			"أحمد المحمودي",
 			"Omda4wady",
 			"Fatz",
-			"Sonic N800"
+			"Sonic N800",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -103,7 +104,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "ابدأ التعديل",
 	"mobile-frontend-editor-tutorial-summary": "لا تخشَ علامات الترميز.  حاول تحسين صفحة $1.",
 	"mobile-frontend-editor-unavailable": "حاليا لا يتوفر التعديل عبر الجوال لمتصفحك. الرجاء المحاولة بمتصفح آخر.",
-	"mobile-frontend-editor-unavailable-header": "المحرر غير متوفر",
 	"mobile-frontend-editor-undo-unsupported": "خاصية التراجع (Undo) غير مدعمة حالياً على الأجهزة المدعومة.",
 	"mobile-frontend-editor-uploadenable": "من فضلك ارفع الصورة ليمكن تحرير هذه الصفحة.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>عرض مصدر</strong><span> $1</span>",
@@ -364,5 +364,7 @@
 	"apihelp-parse-param-noimages": "تعطيل الصور في خرج الجوال.",
 	"mobile-frontend-donate-button-label": "تبرّع",
 	"mobile-frontend-wikidata-editor-description-label": "صف «$1» بجملة واحدة:",
-	"mobile-frontend-meta-data-issues-categories": "عن هذا التصنيف"
+	"mobile-frontend-meta-data-issues-categories": "عن هذا التصنيف",
+	"mobile-frontend-browse-tags-header": "الوسوم",
+	"mobile-frontend-panel-ok": "موافق"
 }

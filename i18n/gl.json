@@ -400,6 +400,7 @@
 	"mobile-frontend-time-precision-annum": "$1 anos EC",
 	"mobile-frontend-time-precision-millennium": "$1 miles de anos EC",
 	"mobile-frontend-time-precision-century": "$1 centos de anos EC",
+	"mobile-frontend-time-precision-10annum": "anos $1",
 	"mobile-frontend-time-precision-BCE-Gannum": "$1 mil millóns de anos AEC",
 	"mobile-frontend-time-precision-BCE-Mannum": "$1 millóns de anos AEC",
 	"mobile-frontend-time-precision-BCE-annum": "$1 anos AEC",
