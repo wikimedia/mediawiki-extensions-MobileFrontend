@@ -1,7 +1,8 @@
 class SpecialUserProfilePage < ArticlePage
-  include URL
   include PageObject
-  page_url URL.url("Special:UserProfile/#{ENV['MEDIAWIKI_USER']}")
+
+  page_url 'Special:UserProfile/<%= params[:user] %>'
+
   h2(:activity_heading, text: 'Recent activity')
   a(:contributions_link, href: /Special:Contributions\//)
   a(:uploads_link, href: /Special:Uploads\//)

@@ -24,6 +24,5 @@ Then(/^I should see a link to the disclaimer$/) do
 end
 
 Then(/^I should see a link to my user profile page in the main navigation menu$/) do
-  user_link_text = ENV['MEDIAWIKI_USER'].gsub('_', ' ')
-  expect(on(ArticlePage).navigation_element.link_element(href: /UserProfile\/#{ENV['MEDIAWIKI_USER']}/, text: user_link_text)).to be_visible
+  expect(on(ArticlePage).navigation_element.link_element(href: /UserProfile\/#{user}/, text: user_label)).to be_visible
 end

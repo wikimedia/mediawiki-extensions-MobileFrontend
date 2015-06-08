@@ -1,5 +1,5 @@
 Given(/^I visit my user profile page$/) do
-  visit(SpecialUserProfilePage)
+  visit(SpecialUserProfilePage, using_params: { user: user })
 end
 
 Then(/^I should be on my user profile page$/) do

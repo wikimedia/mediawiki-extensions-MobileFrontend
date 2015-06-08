@@ -1,7 +1,8 @@
 class SpecialHistoryPage < ArticlePage
-  include URL
-  page_url URL.url('Special:History')
   include PageObject
+
+  page_url 'Special:History'
+
   div(:content_header_bar, css: '.content-header')
   a(:content_header_bar_link) do |page|
     page.content_header_bar_element.link_element(index: 0)
@@ -30,6 +31,5 @@ class SpecialHistoryPage < ArticlePage
 end
 
 class SpecialContributionsPage < SpecialHistoryPage
-  include URL
-  page_url URL.url("Special:Contributions/#{ENV['MEDIAWIKI_USER']}")
+  page_url 'Special:Contributions/<%= params[:user] %>'
 end

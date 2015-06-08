@@ -5,5 +5,5 @@ source 'https://rubygems.org'
 
 gem 'chunky_png'
 gem 'jsduck'
-gem 'mediawiki_selenium', '~> 0.4.3'
+gem 'mediawiki_selenium', '~> 1.3.0'
 gem 'rubocop', require: false
