@@ -1,6 +1,9 @@
 ( function ( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
+		settings = M.require( 'settings' ),
+		browser = M.require( 'browser' ),
+		preferredSupported = browser.supportsLocalStorage(),
 		LanguageOverlay;
 
 	/**
@@ -14,6 +17,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.heading The title for the list of languages for a page.
 		 * @cfg {String} defaults.placeholder Placeholder text for the search input.
+		 * @cfg {Object} defaults.languages a list of languages with keys {langname, lang, title, url}
 		 */
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
@@ -39,14 +43,62 @@
 
 		/** @inheritdoc */
 		initialize: function ( options ) {
+			var langMap;
+
 			if ( options.languages && options.languages.length ) {
 				options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
 			}
 			if ( options.variants && options.variants.length ) {
 				options.variantHeader = mw.msg( 'mobile-frontend-language-variant-header' );
 			}
-			M.emit( 'language-overlay-initialize', options );
+			if ( preferredSupported ) {
+				langMap = settings.get( 'langMap' );
+			}
+			this.languageMap = langMap ? $.parseJSON( langMap ) : {};
+			if ( options.currentLanguage ) {
+				this.trackLanguage( options.currentLanguage );
+			}
+			options = this._sortLanguages( options );
 			Overlay.prototype.initialize.apply( this, arguments );
+		},
+		/**
+		 * Sorts the provided languages based on previous usage and tags them
+		 * with a property preferred for template usage
+		 * @private
+		 * @param {Object} options
+		 */
+		_sortLanguages: function ( options ) {
+			var langMap = this.languageMap;
+			options.languages = options.languages.sort( function ( a, b ) {
+				var x = langMap[ a.lang ] || 0,
+					y = langMap[ b.lang ] || 0;
+				if ( x === y ) {
+					return a.langname < b.langname ? -1 : 1;
+				} else {
+					return x > y ? -1 : 1;
+				}
+			} );
+			return options;
+		},
+		/**
+		 * Track locally the language of the user for future renders.
+		 * @param {String} languageCode to track
+		 */
+		trackLanguage: function ( languageCode ) {
+			var count,
+				langMap = this.languageMap || {};
+
+			if ( langMap ) {
+				count = langMap[ languageCode ] || 0;
+				count += 1;
+				// cap at 100 as this is enough data to work on
+				langMap[ languageCode ] = count > 100 ? 100 : count;
+			}
+
+			this.languageMap = langMap;
+			if ( preferredSupported ) {
+				settings.save( 'langMap', JSON.stringify( langMap ) );
+			}
 		},
 
 		/**
@@ -78,7 +130,7 @@
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		onLinkClick: function ( ev ) {
-			M.emit( 'language-select', $( ev.currentTarget ).attr( 'lang' ) );
+			this.trackLanguage( $( ev.currentTarget ).attr( 'lang' ) );
 		},
 
 		/**

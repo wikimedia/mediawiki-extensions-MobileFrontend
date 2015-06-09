@@ -696,16 +696,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'other'
 	),
 
-	'mobile.preferredLanguages' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.settings',
-		),
-		'scripts' => array(
-			'resources/mobile.preferredLanguages/init.js',
-		),
-	),
-
 	'mobile.search' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.pagelist.scripts',
@@ -1152,6 +1142,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+			'mobile.settings',
+			'mobile.browser',
 		),
 		'scripts' => array(
 			'resources/mobile.languages/LanguageOverlay.js',
@@ -1809,7 +1801,6 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.preferredLanguages',
 			'mobile.references.beta',
 			'mobile.bannerImage',
 		),
