@@ -317,7 +317,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getPostContentHtml( $data ) {
-		return '';
+		return $this->renderBrowseTags( $data );
 	}
 
 	/**
@@ -415,5 +415,38 @@ class MinervaTemplate extends BaseTemplate {
 		</body>
 		</html>
 		<?php
+	}
+
+	/**
+	 * Renders the tags assigned to the page as part of the Browse experiment.
+	 *
+	 * @param array $data The data used to build the page
+	 * @return string The HTML representing the tags section
+	 */
+	protected function renderBrowseTags( $data ) {
+		if ( !isset( $data['browse_tags'] ) || !$data['browse_tags'] ) {
+			return '';
+		}
+
+		$browseTags = $this->getSkin()->getMFConfig()->get( 'MFBrowseTags' );
+		$baseLink = SpecialPage::getTitleFor( 'TopicTag' )->getLinkURL();
+
+		// TODO: Create tag entity and view.
+		$tags = array_map( function ( $rawTag ) use ( $browseTags, $baseLink ) {
+			return array(
+				'msg' => $rawTag,
+				// replace spaces with underscores in the tag name
+				'link' => $baseLink . '/' . str_replace( ' ', '_', $rawTag )
+			);
+
+		}, $data['browse_tags'] );
+
+		// FIXME: This should be in MinervaTemplate#getTemplateParser.
+		$templateParser = new TemplateParser( __DIR__ . '/../../resources' );
+
+		return $templateParser->processTemplate( 'mobile.browse/tags', array(
+			'headerMsg' => wfMessage( 'mobile-frontend-browse-tags-header' )->text(),
+			'tags' => $tags,
+		) );
 	}
 }
