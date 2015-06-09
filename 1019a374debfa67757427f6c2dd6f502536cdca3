@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9c76bcd4",
+        "filename": "resources/skins.minerva.mainPage.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-09T16:53:38Z",
+      "side": 1,
+      "message": "the beta/stable rules should also be updated rather than resorting to this specificity hack especially given the beta and alpha rules are likely to become the new default in future when they get pushed to stable.",
+      "revId": "1019a374debfa67757427f6c2dd6f502536cdca3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
