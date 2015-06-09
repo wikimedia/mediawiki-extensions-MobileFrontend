@@ -633,52 +633,39 @@ class MobileFrontendHooks {
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $config->get( 'MobileUrlTemplate' );
 		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
-		// an alternate link is only useful, if the mobile and desktop URL are different
+
+		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
-		// add alternate link to desktop sites - bug T91183
 		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
-			$desktopUrl = $title->getFullUrl();
-			$out->addHeadItem(
-				'mobilelink',
-				Html::element(
-					'link',
-					array(
-						'rel' => 'alternate',
-						'media' => 'only screen and (max-width: ' . $tabletSize . 'px)',
-						'href' => $context->getMobileUrl( $desktopUrl ),
-					)
-				)
-			);
-		}
-		if ( !$context->shouldDisplayMobileView() ) {
-			return true;
-		}
-		// an canonical link is only useful, if the mobile and desktop URL are different
-		// and $wgMFNoindexPages needs to be true
-		// add canonical link to mobile pages, instead of noindex - bug T91183
-		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
-			$out->addHeadItem(
-				'desktoplink',
-				Html::element(
-					'link',
-					array(
-						'rel' => 'canonical',
-						'href' => $title->getFullUrl(),
-					)
-				)
-			);
+			if ( !$context->shouldDisplayMobileView() ) {
+				// add alternate link to desktop sites - bug T91183
+				$desktopUrl = $title->getFullUrl();
+				$link = array(
+					'rel' => 'alternate',
+					'media' => 'only screen and (max-width: ' . $tabletSize . 'px)',
+					'href' => $context->getMobileUrl( $desktopUrl ),
+				);
+			} else {
+				// add canonical link to mobile pages, instead of noindex - bug T91183
+				$link = array(
+					'rel' => 'canonical',
+					'href' => $title->getFullUrl(),
+				);
+			}
+			$out->addLink( $link );
 		}
 
 		// Set X-Analytics HTTP response header if necessary
-		if ( $wgMFEnableXAnalyticsLogging ) {
-			$analyticsHeader = $context->getXAnalyticsHeader();
+		if ( $context->shouldDisplayMobileView() ) {
+			$analyticsHeader = ( $wgMFEnableXAnalyticsLogging ? $context->getXAnalyticsHeader() : false );
 			if ( $analyticsHeader ) {
 				$resp = $out->getRequest()->response();
 				$resp->header( $analyticsHeader );
 			}
-		}
 
-		$out->addVaryHeader( 'Cookie' );
+			// in mobile view: always add vary header
+			$out->addVaryHeader( 'Cookie' );
+		}
 
 		return true;
 	}
