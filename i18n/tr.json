@@ -21,7 +21,8 @@
 			"Watermelon juice",
 			"Stultiwikia",
 			"Captantrips",
-			"Arystanbek"
+			"Arystanbek",
+			"Uğurkent"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -118,12 +119,13 @@
 	"mobile-frontend-editor-tutorial-confirm": "Düzenlemeye başla",
 	"mobile-frontend-editor-tutorial-summary": "$1 sayfasını geliştirmeyi deneyin.<br />Biçimlendirmekten korkmayın.",
 	"mobile-frontend-editor-unavailable": "Mobil düzenleme şu anda tarayıcınızda kullanılabilir değil. Lütfen farklı bir tarayıcıda deneyiniz.",
-	"mobile-frontend-editor-unavailable-header": "Düzenleyici kullanılamıyor",
 	"mobile-frontend-editor-undo-unsupported": "Geri alma şu anda mobil cihazlarda desteklenmiyor.",
 	"mobile-frontend-editor-uploadenable": "Düzenlemeyi etkinleştirmek için lütfen önce bir fotoğraf yükleyin.",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>kaynağını görüntüle</strong>",
 	"mobile-frontend-editor-visual-editor": "Düzenle",
 	"mobile-frontend-editor-wait": "Düzenleme kaydediliyor, lütfen bekleyin.",
+	"mobile-frontend-editor-redlink-leave": "Hayır, teşekkürler.",
+	"mobile-frontend-editor-redlink-create": "Sayfa oluştur",
 	"mobile-frontend-enable-images": "Mobil sitede resimleri etkinleştir",
 	"mobile-frontend-errorreport-button-label": "Hata bildir",
 	"mobile-frontend-errorreport-error": "Hata, geri bildirim yayınlanamadı.",

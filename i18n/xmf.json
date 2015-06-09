@@ -4,9 +4,13 @@
 			"Silovan"
 		]
 	},
+	"mobile-frontend-categories-add": "კატეგორიაშა გეძინა",
 	"mobile-frontend-changeslist-nocomment": "ვარე რედაქტირაფაშ რეზიუმე",
 	"mobile-frontend-copyright": "დინორე წჷმორინაფილი რე $1 პირობეფით (შხვა ვარე მეწურაფილჷ-და).",
 	"mobile-frontend-editor-edit": "რედაქტირაფა",
+	"mobile-frontend-editor-redlink-leave": "ვარი, უზომე მარდი",
+	"mobile-frontend-editor-redlink-explain": "თე ხასჷლა დიო ვარე დორსხუაფილი {{SITENAME}}-ს.",
+	"mobile-frontend-editor-redlink-create": "ხასჷლაშ დორსხუაფა",
 	"mobile-frontend-generic-login": "{{SITENAME}} გოჭყაფილი რე თქვანნერი ადამიერეფიშით.",
 	"mobile-frontend-home-button": "დუდხასჷლაშა",
 	"mobile-frontend-language-article-heading": "შხვა ნინაშა კითხირი",

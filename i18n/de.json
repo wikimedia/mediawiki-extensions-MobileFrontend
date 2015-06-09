@@ -12,7 +12,8 @@
 			"Wnme",
 			"ChrisiPK",
 			"Robby",
-			"Florian"
+			"Florian",
+			"Jdlrobson"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -255,7 +256,7 @@
 	"mobile-frontend-photo-upload-invalid-user": "Der Benutzer „$1“ ist nicht registriert.",
 	"mobile-frontend-photo-upload-success-article": "Erfolgreich! Dein Bild ist jetzt auf dieser Seite.",
 	"mobile-frontend-photo-upload-unavailable": "Das Hochladen von Bildern wird von deinem Browser nicht unterstützt.",
-	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Eine</span> hochgeladene Datei|<span>$1</span> hochgeladene Dateien}}",
+	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> hochgeladene Datei|<span>$1</span> hochgeladene Dateien}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ hochgeladene Dateien",
 	"mobile-frontend-placeholder": "{{SITENAME}} durchsuchen",
 	"mobile-frontend-placeholder-alpha": "{{SITENAME}} durchsuchen (Experimentell)",
