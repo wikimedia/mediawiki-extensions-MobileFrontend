@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9cb79c81",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-09T16:50:59Z",
+      "side": 1,
+      "message": "if $wgMFEnableXAnalyticsLogging is false what happens here?\n(Also it seems unnecessary to do this in this case)",
+      "revId": "3b7db9019c6aace632a90cef559de08e1be5fef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
