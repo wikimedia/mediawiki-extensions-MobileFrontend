@@ -14,61 +14,6 @@
 //
 // Styleguide 5.
 
-// Page summary
-//
-// Use the page-summary class whenever describing a page but not showing
-// the full content of the page. This might be used in a page list or a diff.
-//
-// Markup:
-// <div class="page-summary">
-//  <h3>San Francisco</h3>
-//  <p>San Francisco is a city in California in the USA</p>
-// </div>
-//
-// Styleguide 5.1.
-.page-summary {
-	h2,
-	h3 {
-		font: inherit;
-		font-weight: bold;
-		// FIXME: Use one of the grays defined in variables.less
-		color: @colorGray5;
-		a {
-			color: inherit;
-		}
-
-		strong {
-			text-decoration: underline;
-		}
-	}
-}
-
-.list-header {
-	font-weight: bold;
-	font-size: .85em;
-	padding: .5em @contentMargin .4em;
-	background-color: @grayLightest;
-	color: @grayMedium;
-}
-
-.list-thumb {
-	background-repeat: no-repeat;
-	background-position: center center;
-
-	&.list-thumb-none {
-		background-color: @grayLightest;
-		.background-image-svg-quick('noimage');
-	}
-
-	&.list-thumb-x {
-		.background-size( 100%, auto );
-	}
-
-	&.list-thumb-y {
-		.background-size( auto, 100% );
-	}
-}
-
 // Lists of pages
 //
 // Use the page-list class when rendering a list of pages.

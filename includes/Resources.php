@@ -82,6 +82,12 @@ $wgMinervaStyleModules = array(
 			'resources/mobile.pagelist.styles/pagelist.less',
 		),
 	),
+	'mobile.pagesummary.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'styles' => array(
+			'resources/mobile.pagesummary.styles/pagesummary.less',
+		),
+	),
 	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
@@ -371,6 +377,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.view',
 			'mobile.pagelist.styles',
+			'mobile.pagesummary.styles',
 		),
 		'scripts' => array(
 			'resources/mobile.pagelist/PageList.js',
