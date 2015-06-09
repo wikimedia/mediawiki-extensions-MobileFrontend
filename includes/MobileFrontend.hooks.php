@@ -973,7 +973,7 @@ class MobileFrontendHooks {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
 
-			if ( $wgMFUseWikibaseDescription && $context->isAlphaGroupMember() ) {
+			if ( $wgMFUseWikibaseDescription && $context->isBetaGroupMember() ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
