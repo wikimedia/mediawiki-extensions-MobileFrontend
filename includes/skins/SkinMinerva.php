@@ -285,12 +285,12 @@ class SkinMinerva extends SkinTemplate {
 				array( 'class' => 'label' ),
 				$title
 			) .
+			Html::closeElement( 'a' ) .
 			Html::element(
 				'span',
 				array( 'class' => $spanClass ),
 				$spanLabel
-			) .
-			Html::closeElement( 'a' );
+			);
 	}
 
 	/**

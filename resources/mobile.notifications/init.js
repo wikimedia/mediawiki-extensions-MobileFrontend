@@ -6,7 +6,7 @@
 	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		mainMenu = M.require( 'skin' ).getMainMenu(),
-		$btn = $( '#secondary-button.user-button' ),
+		$btn = $( '#secondary-button.user-button' ).parent(),
 		router = M.require( 'router' ),
 		overlayManager = M.require( 'overlayManager' ),
 		icons = M.require( 'icons' );

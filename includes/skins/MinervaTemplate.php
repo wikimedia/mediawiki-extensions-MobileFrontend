@@ -373,9 +373,11 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getHeaderHtml( $data ) {
-		return $data['menuButton']
+		// Note these should be wrapped in divs
+		// see https://phabricator.wikimedia.org/T98498 for details
+		return '<div>' . $data['menuButton'] . '</div>'
 			. $this->getChromeHeaderContentHtml( $data )
-			. $data['secondaryButton'];
+			. '<div>' . $data['secondaryButton'] . '</div>';
 	}
 
 	/**
