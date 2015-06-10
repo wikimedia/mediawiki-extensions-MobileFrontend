@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_af156a9e",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-10T23:58:11Z",
+      "side": 1,
+      "message": "You should add a comment explaining why we\u0027re using divs here and reference T98498. Otherwise, someone might remove them.",
+      "revId": "f2855956eeba0edde8d1d7a8324942290eb775d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
