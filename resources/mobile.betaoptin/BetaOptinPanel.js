@@ -15,9 +15,7 @@
 		},
 		template: mw.template.get( 'mobile.betaoptin', 'Panel.hogan' ),
 		defaults: {
-			postUrl: mw.util.getUrl( 'Special:MobileOptions', {
-				returnto: M.getCurrentPage().title
-			} ),
+			postUrl: undefined,
 			editToken: mw.user.tokens.get( 'editToken' ),
 			text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
 			buttons: [

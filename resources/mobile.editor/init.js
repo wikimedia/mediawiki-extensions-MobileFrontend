@@ -8,6 +8,7 @@
 		Icon = M.require( 'Icon' ),
 		Button = M.require( 'Button' ),
 		Anchor = M.require( 'Anchor' ),
+		skin = M.require( 'skin' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
 		} ),
@@ -124,6 +125,7 @@
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
+					licenseMsg: skin.getLicenseMsg(),
 					title: page.title,
 					isAnon: user.isAnon(),
 					isNewPage: isNewPage,

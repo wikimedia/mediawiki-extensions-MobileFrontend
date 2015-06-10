@@ -116,7 +116,11 @@
 		// 3% chance of this happening
 		inSample = $.inArray( token.charAt( 0 ), [ '3' ] ) !== -1;
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
-			new BetaOptinPanel()
+			new BetaOptinPanel( {
+				postUrl: mw.util.getUrl( 'Special:MobileOptions', {
+					returnto: page.title
+				} )
+			} )
 				.on( 'hide', function () {
 					settings.save( 'mobile-betaoptin-token', '~' );
 				} )

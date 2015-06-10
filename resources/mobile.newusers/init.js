@@ -56,6 +56,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 
 		editOverlay = new PageActionOverlay( {
 			target: target,
+			skin: M.require( 'skin' ),
 			className: 'slide active editing',
 			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' ),

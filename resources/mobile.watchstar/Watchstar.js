@@ -42,7 +42,7 @@
 		 * @cfg {String} defaults.funnel to log events with
 		 */
 		defaults: {
-			page: M.getCurrentPage(),
+			page: undefined,
 			funnel: 'unknown'
 		},
 		/**
