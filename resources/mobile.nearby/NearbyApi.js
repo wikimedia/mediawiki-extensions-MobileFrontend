@@ -3,6 +3,7 @@
 	var Api, NearbyApi,
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		limit = 50,
+		Page = M.require( 'Page' ),
 		ns = mw.config.get( 'wgMFContentNamespace' );
 
 	if ( endpoint ) {
@@ -142,13 +143,10 @@
 
 			this.ajax( requestParams ).then( function ( resp ) {
 				var pages;
-				// FIXME: API bug 48512
-				if ( !resp || resp.error ) {
-					return d.reject( resp );
-				} else if ( resp.query ) {
-					pages = resp.query.pages || {};
+				if ( resp.query ) {
+					pages = resp.query.pages || [];
 				} else {
-					pages = {};
+					pages = [];
 				}
 
 				// If we have coordinates then set them so that the results are sorted by
@@ -172,36 +170,28 @@
 					} );
 				}
 
-				// Process the pages
 				pages = $.map( pages, function ( page, i ) {
-					var coords, lngLat, thumb;
-
-					if ( page.thumbnail ) {
-						thumb = page.thumbnail;
-						page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-						page.pageimageClass = thumb.width > thumb.height ? 'list-thumb-y' : 'list-thumb-x';
-					} else {
-						page.pageimageClass = 'list-thumb-none list-thumb-x';
-					}
-					page.anchor = 'item_' + i;
-					page.url = mw.util.getUrl( page.title );
+					var coords, lngLat, p;
+					// FIXME: API returns pageid rather than id, should we rename Page option ?
+					page.id = page.pageid;
+					p = new Page( page );
+					p.anchor = 'item_' + i;
 					if ( page.coordinates && loc ) { // FIXME: protect against bug 47133 (remove when resolved)
 						coords = page.coordinates[0];
 						lngLat = {
 							latitude: coords.lat,
 							longitude: coords.lon
 						};
-						page.dist = calculateDistance( loc, lngLat );
-						page.latitude = coords.lat;
-						page.longitude = coords.lon;
-						page.proximity = self._distanceMessage( page.dist );
+						// FIXME: Make part of the Page object
+						p.dist = calculateDistance( loc, lngLat );
+						p.latitude = coords.lat;
+						p.longitude = coords.lon;
+						p.proximity = self._distanceMessage( p.dist );
 					} else {
-						page.dist = 0;
+						p.dist = 0;
 					}
-					page.id = page.pageid;
-					page.heading = page.title;
 					if ( exclude !== page.title ) {
-						return page;
+						return p;
 					}
 				} );
 

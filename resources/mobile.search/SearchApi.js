@@ -6,6 +6,7 @@
 ( function ( M, $ ) {
 
 	var SearchApi,
+		Page = M.require( 'Page' ),
 		Api = M.require( 'api' ).Api;
 
 	/**
@@ -134,23 +135,23 @@
 										if ( info ) {
 											// return all possible page data
 											pageIds.push( id );
-											results.push( {
+											results.push( new Page( {
 												id: info.pageid,
-												heading: highlightSearchTerm( info.title, query ),
+												displayTitle: highlightSearchTerm( info.title, query ),
 												title: info.title,
 												url: mw.util.getUrl( info.title ),
 												thumbnail: info.thumbnail
-											} );
+											} ) );
 										} else {
 											mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
 
-											results.push( {
+											results.push( new Page( {
 												id: page.pageid,
 												heading: highlightSearchTerm( page.title, query ),
 												title: page.title,
-												displayname: mwTitle.getNameText(),
+												displayTitle: mwTitle.getNameText(),
 												url: mwTitle.getUrl()
-											} );
+											} ) );
 										}
 									}
 								} );

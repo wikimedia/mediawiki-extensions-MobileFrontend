@@ -94,40 +94,13 @@
 	} );
 
 	QUnit.test( 'show redirect targets', 6, function ( assert ) {
-		var results = [
-			{
-				heading: 'Claude Monet',
-				title: 'Claude Monet',
-				url: '/wiki/Claude_Monet',
-				thumbnail: {
-					source: 'http://127.0.0.1:8080/images/thumb/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg/80px-Claude_Monet%2C_Impression%2C_soleil_levant.jpg',
-					width: 80,
-					height: 62
-				},
-				listThumbStyleAttribute: 'background-image: url(http://127.0.0.1:8080/images/thumb/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg/80px-Claude_Monet%2C_Impression%2C_soleil_levant.jpg)',
-				pageimageClass: 'list-thumb-y'
-			},
-			{
-				heading: '<strong>Barack</strong> Obama',
-				title: 'Barack Obama',
-				url: '/wiki/Barack_Obama',
-				thumbnail: {
-					source: 'http://127.0.0.1:8080/images/thumb/8/8d/President_Barack_Obama.jpg/64px-President_Barack_Obama.jpg',
-					width: 64,
-					height: 80
-				},
-				listThumbStyleAttribute: 'background-image: url(http://127.0.0.1:8080/images/thumb/8/8d/President_Barack_Obama.jpg/64px-President_Barack_Obama.jpg)',
-				pageimageClass: 'list-thumb-x'
-			}
-		];
-
 		api.search( 'barack' ).done( function ( response ) {
 			assert.strictEqual( response.query, 'barack' );
 			assert.strictEqual( response.results.length, 2 );
-			assert.strictEqual( response.results[ 0 ].heading, results[ 0 ].heading );
-			assert.strictEqual( response.results[ 0 ].thumbnail.width, results[ 0 ].thumbnail.width );
-			assert.strictEqual( response.results[ 1 ].heading, results[ 1 ].heading );
-			assert.strictEqual( response.results[ 1 ].title, results[ 1 ].title );
+			assert.strictEqual( response.results[ 0 ].displayTitle, 'Claude Monet' );
+			assert.strictEqual( response.results[ 0 ].thumbnail.width, 80 );
+			assert.strictEqual( response.results[ 1 ].displayTitle, '<strong>Barack</strong> Obama' );
+			assert.strictEqual( response.results[ 1 ].title, 'Barack Obama' );
 		} );
 	} );
 

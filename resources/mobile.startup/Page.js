@@ -27,6 +27,11 @@
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
 		 * @cfg {Boolean} defaults.isMainPage Whether the page is the Main Page.
 		 * @cfg {String} defaults.hash Window location hash.
+		 * @cfg {Object} defaults.thumbnail thumbnail definition corresponding to page image
+		 * @cfg {Boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
+		 * @cfg {Number} defaults.thumbnail.width of image in pixels.
+		 * @cfg {Number} defaults.thumbnail.height of image in pixels.
+		 * @cfg {String} defaults.thumbnail.source url for image
 		 */
 		defaults: {
 			id: 0,
@@ -38,17 +43,37 @@
 			},
 			sections: [],
 			isMainPage: false,
-			hash: window.location.hash
+			hash: window.location.hash,
+			url: undefined,
+			thumbnail: {
+				isLandscape: undefined,
+				source: undefined,
+				width: undefined,
+				height: undefined
+			}
 		},
 
 		/**
 		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
+			var thumb;
+
 			// Fallback if no displayTitle provided
 			options.displayTitle = options.displayTitle || options.title;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
+			// allow usage in templates.
+			// FIXME: Should View map all options to properties?
+			this.title = options.title;
+			this.displayTitle = options.displayTitle || options.title;
+			this.thumbnail = options.thumbnail;
+			this.url = options.url || mw.util.getUrl( options.title );
+			this.id = options.id;
+			thumb = this.thumbnail;
+			if ( thumb && thumb.width ) {
+				this.thumbnail.isLandscape = thumb.width > thumb.height;
+			}
 		},
 
 		/**
@@ -87,7 +112,6 @@
 		isMainPage: function () {
 			return this.options.isMainPage;
 		},
-
 		/**
 		 * Checks whether the current page is watched
 		 * @method
