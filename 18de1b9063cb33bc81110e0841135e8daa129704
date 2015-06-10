@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_017ed8e1",
+        "filename": "resources/mobile.browse/tags.mustache",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-10T15:21:16Z",
+      "side": 1,
+      "message": "the #tags loop\nplease also add a comment with the url to the bug tracking this so we can revisit later.",
+      "revId": "18de1b9063cb33bc81110e0841135e8daa129704",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
