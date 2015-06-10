@@ -23,12 +23,12 @@ class MinervaTemplate extends BaseTemplate {
 	protected $isMainPage;
 
 	/**
-	 * Renders the header content for the top chrome.
+	 * Gets the header content for the top chrome.
 	 * @param array $data Data used to build the page
 	 * @return string
 	 */
 	protected function getChromeHeaderContentHtml( $data ) {
-		return $this->makeSearchForm( $data );
+		return $this->getSearchForm( $data );
 	}
 
 	/**
@@ -37,7 +37,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data The data used to render the page
 	 * @return string
 	 */
-	protected function makeSearchForm( $data ) {
+	protected function getSearchForm( $data ) {
 		return Html::openElement( 'form',
 				array(
 					'action' => $data['wgScript'],
@@ -351,27 +351,31 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders the main menu only on Special:MobileMenu.
+	 * Gets the main menu only on Special:MobileMenu.
 	 * On other pages the menu is rendered via JS.
 	 * @param array [$data] Data used to build the page
+	 * @return string
 	 */
-	protected function renderMainMenu( $data ) {
+	protected function getMainMenuHtml( $data ) {
 		if ( $this->isSpecialMobileMenuPage ) {
 			$templateParser = new TemplateParser(
 				__DIR__ . '/../../resources/mobile.mainMenu/' );
 
-			echo $templateParser->processTemplate( 'menu', $data['menu_data'] );
+			return $templateParser->processTemplate( 'menu', $data['menu_data'] );
+		} else {
+			return '';
 		}
 	}
 
 	/**
-	 * Render Header elements
+	 * Get HTML for header elements
 	 * @param array $data Data used to build the header
+	 * @return string
 	 */
-	protected function renderHeader( $data ) {
-		$this->html( 'menuButton' );
-		echo $this->getChromeHeaderContentHtml( $data );
-		echo $data['secondaryButton'];
+	protected function getHeaderHtml( $data ) {
+		return $data['menuButton']
+			. $this->getChromeHeaderContentHtml( $data )
+			. $data['secondaryButton'];
 	}
 
 	/**
@@ -387,7 +391,7 @@ class MinervaTemplate extends BaseTemplate {
 		?>
 		<div id="mw-mf-viewport">
 			<nav id="mw-mf-page-left" class="navigation-drawer">
-				<?php $this->renderMainMenu( $data ); ?>
+				<?php echo $this->getMainMenuHtml( $data ); ?>
 			</nav>
 			<div id="mw-mf-page-center">
 				<?php
@@ -395,7 +399,7 @@ class MinervaTemplate extends BaseTemplate {
 				?>
 				<div class="header">
 					<?php
-						$this->renderHeader( $data );
+						echo $this->getHeaderHtml( $data );
 					?>
 				</div>
 				<div id="content_wrapper">
