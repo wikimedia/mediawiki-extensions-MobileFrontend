@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_1c4ddee0",
+        "filename": "extension.json",
+        "patchSetId": 42
+      },
+      "lineNbr": 1780,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-10T21:57:22Z",
+      "side": 1,
+      "message": "What happens when there are multiple @doc keys...?\nSurely this is not valid json",
+      "revId": "65ac6aebc961be4ebf57480c3fc875d878f7b906",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_bc15aa9e",
+        "filename": "extension.json",
+        "patchSetId": 42
+      },
+      "lineNbr": 1826,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-10T21:57:22Z",
+      "side": 1,
+      "message": "See above.",
+      "revId": "65ac6aebc961be4ebf57480c3fc875d878f7b906",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
