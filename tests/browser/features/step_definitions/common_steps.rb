@@ -17,11 +17,12 @@ Given /^I am logged in as a new user$/ do
   on(SpecialUserLoginPage).login_with('Selenium_newuser', password)
 end
 
-Given(/^I am logged in as a user with a > (\d+) edit count$/) do
-  step 'I am on the "Main Page" page'
-  step 'I click on "Log in" in the main navigation menu'
-  # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
-  on(SpecialUserLoginPage).login_with(user, password)
+Given(/^I am logged in as a user with a > (\d+) edit count$/) do |count|
+  api.meta(:userinfo, uiprop: 'editcount').data['editcount'].upto(count.to_i) do |n|
+    api.create_page("Ensure #{user} edit count - #{n + 1}", 'foo')
+  end
+
+  visit(SpecialUserLoginPage).login_with(user, password)
 end
 
 Given(/^I am logged into the mobile website$/) do
