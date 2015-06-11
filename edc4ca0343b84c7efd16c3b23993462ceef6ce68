@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_a9debfdc",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-11T22:43:20Z",
+      "side": 1,
+      "message": "This could be a little more descriptive, like:\n(e.g. page heading and page action buttons)",
+      "revId": "edc4ca0343b84c7efd16c3b23993462ceef6ce68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e9d4c7c0",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-11T22:43:20Z",
+      "side": 1,
+      "message": "Should probably be @inheritdoc",
+      "revId": "edc4ca0343b84c7efd16c3b23993462ceef6ce68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_69c9b728",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 743,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-06-11T22:43:20Z",
+      "side": 1,
+      "message": "Need to update these comments. Something like:\n\"Load site notices. (See https://www.mediawiki.org/wiki/Manual:Interface/Sitenotice)\"",
+      "revId": "edc4ca0343b84c7efd16c3b23993462ceef6ce68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
