@@ -16,8 +16,7 @@ end
 
 Then(/^there should be an add discussion button$/) do
   # give overlay time to fully load
-  sleep(5)
-  expect(on(ArticlePage).talkadd_element.when_present.text).to match 'Add Discussion'
+  expect(on(ArticlePage).talkadd_element.when_present(10)).to be_visible
 end
 
 Then(/^there should be no add discussion button$/) do
