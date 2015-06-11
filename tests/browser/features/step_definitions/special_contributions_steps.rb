@@ -1,5 +1,5 @@
 Given(/^I am on my contributions page$/) do
-  visit(SpecialContributionsPage)
+  visit(SpecialContributionsPage, using_params: { user: user })
 end
 
 When(/^I click the link in the header bar$/) do

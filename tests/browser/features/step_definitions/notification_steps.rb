@@ -5,7 +5,7 @@ When /^I click on the notification icon$/ do
       # TODO: If this approach works well, we should implement general
       # `wait_for_resource` and `resource_ready?` helper methods in
       # mw-selenium, and document this pattern on mw.org
-      @browser.execute_script("return mw.loader.getState('mobile.notifications') === 'ready'")
+      browser.execute_script("return mw.loader.getState('mobile.notifications') === 'ready'")
     end
 
     page.notifications_button_element.when_present.click

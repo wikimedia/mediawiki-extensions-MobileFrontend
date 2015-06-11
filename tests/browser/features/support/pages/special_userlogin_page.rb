@@ -1,8 +1,7 @@
 class SpecialUserLoginPage < ArticlePage
   include PageObject
-  include URL
 
-  page_url URL.url('Special:UserLogin')
+  page_url 'Special:UserLogin'
 
   h1(:first_heading, id: 'section_0')
 
