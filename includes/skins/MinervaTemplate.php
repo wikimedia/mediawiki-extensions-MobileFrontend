@@ -260,9 +260,11 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function renderContent( $data ) {
 		if ( !$data[ 'unstyledContent' ] ) {
+			// Add a mw-content-ltr/rtl class to be able to style based on text direction
+			$langClass = 'mw-content-' . $data['pageDir'];
 			echo Html::openElement( 'div', array(
 				'id' => 'content',
-				'class' => 'content',
+				'class' => 'content ' . $langClass,
 				'lang' => $data['pageLang'],
 				'dir' => $data['pageDir'],
 			) );
