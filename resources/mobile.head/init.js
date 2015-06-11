@@ -89,6 +89,11 @@
 				// Stop propagation, otherwise the Skin will close the open menus on page center click
 				ev.stopPropagation();
 			} );
+
+		// FIXME: Remove when cache cleared (https://phabricator.wikimedia.org/T98498)
+		$( '.header > a' ).each( function () {
+			$( this ).wrap( '<div>' );
+		} );
 	} );
 
 	$( function () {

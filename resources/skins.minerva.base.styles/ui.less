@@ -45,18 +45,23 @@ body {
 	border-top: 1px solid @colorGrayLight;
 	margin-top: -1px;
 
-	> a {
+	// button
+	> div {
 		width: @headerHeight;
+		position: relative;
 	}
 
-	// Left and right menu links
-	> a,
 	// Search field
 	> form,
 	// Spinner
 	> div {
 		vertical-align: middle;
 		display: table-cell;
+	}
+
+	// Menu and notifications button
+	> div a {
+		display: block;
 	}
 
 	// Search
