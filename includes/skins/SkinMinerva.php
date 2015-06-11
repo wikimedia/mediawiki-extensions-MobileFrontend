@@ -35,26 +35,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * temporary function that flattens old style menu definitions to template compatible definition.
-	 * This can be safely removed once we have fully transitioned to menus that use templates.
-	 */
-	private function flattenLinkArray( $array ) {
-		$menu = array();
-		foreach ( $array as $name => $info ) {
-			// FIXME: #getSiteLinks doesn't return the same form of array as
-			// #getDiscovery- and #getPersonalTools.
-			$components = isset( $info['links'] ) ? $info['links'] : array( $info );
-			$class = isset( $info['class'] ) ? $info['class'] : '';
-			$menu[] = array(
-				'name' => $name,
-				'components' => $components,
-				'class' => $class,
-			);
-		}
-		return $menu;
-	}
-
-	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */
@@ -459,21 +439,7 @@ class SkinMinerva extends SkinTemplate {
 		// Allow other extensions to add or override tools
 		Hooks::run( 'MobilePersonalTools', array( &$items ) );
 
-		// Migrate data from hook handlers that use the old array format
-		$cleanedItems = array();
-		foreach ( $items as $key => $value ) {
-			if ( !is_int( $key ) ) {
-				$cleanedItems[] = array(
-					'name' => $key,
-					'components' => isset( $value['links'] ) ? $value['links'] : array(),
-					'class' => isset( $value['class'] ) ? $value['class'] : ''
-				);
-			} else {
-				$cleanedItems[] = $value;
-			}
-		}
-
-		return $cleanedItems;
+		return $items;
 	}
 
 	/**
@@ -555,21 +521,7 @@ class SkinMinerva extends SkinTemplate {
 		// Allow other extensions to add or override discovery tools
 		Hooks::run( 'MinervaDiscoveryTools', array( &$items ) );
 
-		// Migrate data from hook handlers that use the old array format
-		$cleanedItems = array();
-		foreach ( $items as $key => $value ) {
-			if ( !is_int( $key ) ) {
-				$cleanedItems[] = array(
-					'name' => $key,
-					'components' => isset( $value['links'] ) ? $value['links'] : array(),
-					'class' => isset( $value['class'] ) ? $value['class'] : ''
-				);
-			} else {
-				$cleanedItems[] = $value;
-			}
-		}
-
-		return $cleanedItems;
+		return $items;
 	}
 
 	/**
