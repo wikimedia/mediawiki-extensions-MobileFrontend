@@ -4,5 +4,7 @@
 			"Vikoula5"
 		]
 	},
-	"mobile-frontend-editor-edit": "Glef"
+	"mobile-frontend-editor-edit": "Glef",
+	"mobile-frontend-placeholder": "Iruzzi {{SITENAME}}",
+	"mobile-frontend-placeholder-beta": "Iruzzi {{SITENAME}} (Beta)"
 }

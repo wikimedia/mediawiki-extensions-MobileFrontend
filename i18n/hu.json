@@ -109,6 +109,7 @@
 	"mobile-frontend-watchlist-removed": "$1 eltávolítva a figyelőlistádról",
 	"nearby": "A közeledben található lapok",
 	"tag-mobile_edit": "Mobil szerkesztés",
+	"tag-mobile_edit-description": "A szerkesztés mobilról készült (web vagy app)",
 	"tag-mobile_web_edit": "Mobil web szerkesztés",
 	"tag-mobile_web_edit-description": "Mobil weboldalról szerkesztve",
 	"mobile-frontend-pageaction-edit-tooltip": "A lap első szakaszának szerkesztése.",
