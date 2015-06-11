@@ -4,8 +4,6 @@ Feature: Toggling sections
   Background:
     Given I am using the mobile site
       And I am viewing the site in mobile mode
-      And I go to a page that has sections
-      #And in Firefox see bug T88288
 
   Scenario: Respect the hash on sections
     When I visit the page "Selenium section test page" with hash "#Section_2A"
@@ -13,10 +11,12 @@ Feature: Toggling sections
 
   @smoke
   Scenario: Opening a section on mobile
+    Given I go to a page that has sections
     When I click on the first collapsible section heading
     Then I should see the content of the first section
 
   Scenario: Closing a section on mobile
-    When I click on the first collapsible section heading
+    Given I go to a page that has sections
       And I click on the first collapsible section heading
+    When I click on the first collapsible section heading
     Then I should not see the content of the first section
