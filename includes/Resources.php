@@ -513,9 +513,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.startup/util.js',
 			'resources/mobile.startup/init.js',
 		),
-		'tests' => array(
-			'tests/qunit/test_api.js',
-		),
 		'position' => 'bottom',
 	),
 
