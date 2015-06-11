@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_29d40f48",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-11T21:35:17Z",
+      "side": 1,
+      "message": "is it really needed to save it in an own class? You could add the comment in the array, too :) Like:\n\n// ...\n\u0027id\u0027 \u003d\u003e \u0027contentd\u0027,\n// your comment here\n\u0027class\u0027 \u003d\u003e \u0027content mw-content-\u0027 . $data[\u0027pageDir\u0027],\n// ...",
+      "revId": "e9b47af0e68764ac9c0fdd5194da3d8123992b9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
