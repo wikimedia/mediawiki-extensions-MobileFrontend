@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_0906f320",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2015-06-11T21:06:49Z",
+      "side": 1,
+      "message": "Can you please mention \"mw-content-ltr\" and \"mw-content-rtl\" in a comment for better greppability?",
+      "revId": "73cb987100de03930d71a353f8851cdfc4d40137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
