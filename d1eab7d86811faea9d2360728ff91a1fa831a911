@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6fa69752",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-12T07:22:06Z",
+      "side": 1,
+      "message": "this function will be overwritten by MinervaTemplateBeta.php, therefore this will only work in stable mode.",
+      "revId": "d1eab7d86811faea9d2360728ff91a1fa831a911",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
