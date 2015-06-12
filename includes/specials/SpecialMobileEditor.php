@@ -22,7 +22,7 @@ class SpecialMobileEditor extends MobileSpecialPage {
 	public function executeWhenAvailable( $subpage ) {
 		$title = Title::newFromText( $subpage );
 
-		if ( is_null( $title )) {
+		if ( is_null( $title ) ) {
 			$this->showPageNotFound();
 			return;
 		}

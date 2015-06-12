@@ -85,7 +85,7 @@ class ExtMobileFrontend {
 				return null;
 			}
 			return $entity->getFingerprint()->getDescription( $wgContLang->getCode() )->getText();
-		} catch ( Exception $ex) {
+		} catch ( Exception $ex ) {
 			// Do nothing, exception mostly due to description being unavailable in needed language
 		}
 		return null;

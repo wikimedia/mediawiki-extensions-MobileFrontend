@@ -238,7 +238,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$options = array( 'ORDER BY' => 'rc_timestamp DESC' );
 		$options['LIMIT'] = self::LIMIT;
 
-		$rollbacker = $user->isAllowed('rollback');
+		$rollbacker = $user->isAllowed( 'rollback' );
 		if ( $rollbacker ) {
 			$tables[] = 'page';
 			$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
