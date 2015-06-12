@@ -21,7 +21,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|বাইট}} যোগ দিয়া হ’ল",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|বাইট}} বিলোপ কৰা হ’ল",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|সম্পাদনা|টা সম্পাদনা}}",
-	"mobile-frontend-diffview-title": "$1লৈ সলনি কৰক",
+	"mobile-frontend-diffview-title": "$1ৰ বিভিন্ন সংশোধনসমূহৰ মাজৰ পাৰ্থক্য",
 	"mobile-frontend-disable-images": "মোবাইল চাইটত ছবি নিষ্ক্ৰিয় কৰক",
 	"mobile-frontend-dismiss-notification": "এই জাননী বাতিল কৰক",
 	"mobile-frontend-editor-edit": "সম্পাদনা কৰক",
