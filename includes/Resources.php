@@ -558,6 +558,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			// editor.js
+			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-uploadenable',
 			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
@@ -570,9 +571,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-redlink-create',
 			'mobile-frontend-editor-redlink-leave',
 			'mobile-frontend-editor-redlink-explain' => array( 'parse' ),
-			'mobile-frontend-editor-protected',
-			'mobile-frontend-editor-showhistory',
-			'cancel',
 		),
 		'scripts' => array(
 			'resources/mobile.editor/init.js',
