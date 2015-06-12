@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var ContentOverlay = M.require( 'ContentOverlay' ),
 		context = M.require( 'context' ),
-		skin = M.require( 'skin' ),
 		PageActionOverlay;
 
 	/**
@@ -15,9 +14,11 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Skin} defaults.skin class
 		 * @cfg {String} defaults.cancelMsg Cancel message.
 		 */
 		defaults: {
+			skin: undefined,
 			cancelMsg: mw.msg( 'cancel' )
 		},
 		/**
@@ -87,7 +88,7 @@
 				// remove the left offset of the overlay as margin auto may be applied to it
 				left: paOffset.left + center - 10 - overlayOffset.left
 			} ).appendTo( this.$el );
-			skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
+			this.options.skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
 			M.on( 'resize', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
 		}
 	} );

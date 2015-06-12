@@ -5,6 +5,7 @@
 	var user = M.require( 'user' ),
 		router = M.require( 'router' ),
 		page = M.getCurrentPage(),
+		skin = M.require( 'skin' ),
 		loader = M.require( 'loader' ),
 		overlayManager = M.require( 'overlayManager' ),
 		editorConfig = mw.config.get( 'wgMFEditorOptions' ),
@@ -25,7 +26,9 @@
 			loader.loadModule( 'mobile.errorReport.overlay', true, false )
 				.done( function () {
 					var ErrorReportOverlay = M.require( 'errorReport/ErrorReportOverlay' );
-					result.resolve( new ErrorReportOverlay() );
+					result.resolve( new ErrorReportOverlay( {
+						licenseMsg: skin.getLicenseMsg()
+					} ) );
 					errorButton.hideSpinner();
 				} );
 			return result;

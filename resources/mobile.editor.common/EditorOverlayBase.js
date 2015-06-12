@@ -6,7 +6,6 @@
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		pageApi = M.require( 'pageApi' ),
-		skin = M.require( 'skin' ),
 		EditorOverlayBase;
 
 	/**
@@ -110,7 +109,7 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-			licenseMsg: skin.getLicenseMsg()
+			licenseMsg: undefined
 		} ),
 		/** @inheritdoc **/
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
