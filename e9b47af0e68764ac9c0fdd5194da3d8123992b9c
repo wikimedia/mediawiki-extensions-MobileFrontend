@@ -16,6 +16,24 @@
       "revId": "e9b47af0e68764ac9c0fdd5194da3d8123992b9c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_67a9db77",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-06-12T15:20:54Z",
+      "side": 1,
+      "message": "Also better not call it language as that is misleading.",
+      "parentUuid": "8ec42329_29d40f48",
+      "revId": "e9b47af0e68764ac9c0fdd5194da3d8123992b9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
