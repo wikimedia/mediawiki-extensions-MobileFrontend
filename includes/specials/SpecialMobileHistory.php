@@ -95,7 +95,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	public function executeWhenAvailable( $par = '' ) {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
-		$out->addModuleStyles( 'mobile.pagelist.styles' );
+		$out->addModuleStyles( array(
+			'mobile.pagelist.styles',
+			'mobile.pagesummary.styles',
+		) );
 		// add beta styles
 		if ( MobileContext::singleton()->isBetaGroupMember() ) {
 			$out->addModuleStyles( 'mobile.special.history.beta.styles' );

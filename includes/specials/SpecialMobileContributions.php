@@ -53,6 +53,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				// set page title as on desktop site - bug 66656
 				$username = $this->user->getName();
 				$out = $this->getOutput();
+				$out->addModuleStyles( array(
+					'mobile.pagelist.styles',
+					'mobile.pagesummary.styles',
+				) );
 				$out->setHTMLTitle( $this->msg(
 					'pagetitle',
 					$this->msg( 'contributions-title', $username )->plain()

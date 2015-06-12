@@ -63,7 +63,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
 		// FIXME: Loads twice with JS enabled (T87871)
-		$output->addModuleStyles( 'mobile.pagelist.styles' );
+		$output->addModuleStyles( array(
+			'mobile.pagelist.styles',
+			'mobile.pagesummary.styles',
+		) );
 		$req = $this->getRequest();
 		$this->view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->filter = $req->getVal( 'filter', 'all' );

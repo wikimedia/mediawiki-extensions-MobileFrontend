@@ -119,9 +119,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$this->targetTitle->getPrefixedText()
 		) );
 
-		// @todo FIXME: Don't add these styles. This is only needed for the user
-		// icon to the left of the username
-		$output->addModuleStyles( 'mobile.special.pagefeed.styles' );
+		$output->addModuleStyles( array(
+			'mobile.pagesummary.styles',
+			// @todo FIXME: Don't add these styles. This is only needed for the user
+			// icon to the left of the username
+			'mobile.special.pagefeed.styles'
+		) );
 
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );
