@@ -105,7 +105,7 @@
 	initMediaViewer();
 
 	// local storage is supported in this case, when ~ means it was dismissed
-	if ( token !== false && token !== '~'  && !page.inNamespace( 'special' ) ) {
+	if ( token !== false && token !== '~' && !page.isMainPage() && !page.inNamespace( 'special' ) ) {
 		if ( !token ) {
 			token = mw.user.generateRandomSessionId();
 			settings.save( 'mobile-betaoptin-token', token );
