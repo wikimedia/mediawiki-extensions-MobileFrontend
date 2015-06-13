@@ -87,6 +87,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Yanlış kod, tekrar deneyiniz.",
 	"mobile-frontend-editor-continue": "İleri",
 	"mobile-frontend-editor-cta": "Bu sayfayı geliştirmeye yardımcı olun!",
+	"mobile-frontend-editor-disabled": "Bu sayfa vandalizmi önlemek için korunmaktadır.",
 	"mobile-frontend-editor-edit": "Düzenle",
 	"mobile-frontend-editor-editing": "Değiştiriliyor",
 	"mobile-frontend-editor-editing-page": "<span>$1 </span><strong>katkıları</strong>",

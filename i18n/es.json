@@ -94,6 +94,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
 	"mobile-frontend-editor-continue": "Siguiente",
 	"mobile-frontend-editor-cta": "¡Ayúdanos a mejorar esta página!",
+	"mobile-frontend-editor-disabled": "Esta página está protegida para evitar el vandalismo.",
 	"mobile-frontend-editor-edit": "Editar",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong>de «$1»</span>",

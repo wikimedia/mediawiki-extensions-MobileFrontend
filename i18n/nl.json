@@ -90,6 +90,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Verkeerde code, probeer het opnieuw.",
 	"mobile-frontend-editor-continue": "Volgende",
 	"mobile-frontend-editor-cta": "Help deze pagina te verbeteren!",
+	"mobile-frontend-editor-disabled": "Deze pagina is beveiligd om vandalisme te voorkomen.",
 	"mobile-frontend-editor-edit": "Bewerken",
 	"mobile-frontend-editor-editing": "Bewerken",
 	"mobile-frontend-editor-editing-page": "<span>$1 </span><strong>bewerken</strong>",

@@ -75,6 +75,7 @@
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",
 	"mobile-frontend-editor-continue": "استمر",
 	"mobile-frontend-editor-cta": "ساعد في تحسين هذه الصفحة!",
+	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب.",
 	"mobile-frontend-editor-edit": "عدل",
 	"mobile-frontend-editor-editing": "قيد التحرير",
 	"mobile-frontend-editor-editing-page": "<strong>تعديل</strong><span> $1</span>",

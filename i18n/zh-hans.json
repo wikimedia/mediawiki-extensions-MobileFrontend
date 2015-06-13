@@ -96,6 +96,7 @@
 	"mobile-frontend-editor-captcha-try-again": "错误代码，请重试。",
 	"mobile-frontend-editor-continue": "下一个",
 	"mobile-frontend-editor-cta": "帮助改善此页面！",
+	"mobile-frontend-editor-disabled": "本页面受到保护以防止被破坏。",
 	"mobile-frontend-editor-edit": "编辑",
 	"mobile-frontend-editor-editing": "编辑中",
 	"mobile-frontend-editor-editing-page": "<span><strong>编辑</strong>$1</span>",
