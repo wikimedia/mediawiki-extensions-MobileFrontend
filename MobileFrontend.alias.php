@@ -274,7 +274,7 @@ $specialPageAliases['lb'] = array(
 	'UserProfile' => array( 'Benotzerprofil' ),
 );
 
-/** Northern Luri (لوری مینجایی) */
+/** Northern Luri (لۊری شومالی) */
 $specialPageAliases['lrc'] = array(
 	'History' => array( 'ڤیرگار' ),
 	'MobileOptions' => array( 'خوصوٙصیات_موبایلی' ),
