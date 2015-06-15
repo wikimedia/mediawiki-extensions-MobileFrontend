@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b74fdf96",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-15T21:09:08Z",
+      "side": 1,
+      "message": "I know this was introduced in a prior patch but we should drop the  #content_wrapper here\n\nIf this is pulled in mistakenly into another page it has side effects.\n\nWhy are css rules for content-header specific to watchlist? They are also used on Special:History and categories/talk.\n\nAt a glance these rules should be in skins.minerva.special.styles for Special:History and Special:Watchlist but you might want to see how categories/talk are using them and whether the rules that apply to watchlist also apply there.",
+      "revId": "4e80c8c7bc7261070518af838a5a9ac912a09480",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_977503cb",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-15T21:09:08Z",
+      "side": 1,
+      "message": "page-list.watchlist is probably a better selector for the above reason.",
+      "revId": "4e80c8c7bc7261070518af838a5a9ac912a09480",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
