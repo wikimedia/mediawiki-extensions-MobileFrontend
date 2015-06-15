@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_3a575307",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-15T23:50:37Z",
+      "side": 1,
+      "message": "Why would this style be pulled into another page? I don\u0027t think I should fix a hypothetical problem that may be caused by developer negligence.\n\nI agree with sharing CSS rules, but it\u0027s not part of this patch. I\u0027ll deal with it separately.",
+      "parentUuid": "8ec42329_b74fdf96",
+      "revId": "4e80c8c7bc7261070518af838a5a9ac912a09480",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_977503cb",
         "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-15T21:09:08Z",
       "side": 1,
       "message": "page-list.watchlist is probably a better selector for the above reason.",
+      "revId": "4e80c8c7bc7261070518af838a5a9ac912a09480",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ba42633d",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-15T23:50:37Z",
+      "side": 1,
+      "message": "Using .page-list messes up the tabs on Special:Watchlist",
+      "parentUuid": "8ec42329_977503cb",
       "revId": "4e80c8c7bc7261070518af838a5a9ac912a09480",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
