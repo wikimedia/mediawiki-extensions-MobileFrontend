@@ -10,7 +10,7 @@
 				el: $( '#mw-mf-nearby' ),
 				funnel: 'nearby'
 			},
-			$btn = $( '#secondary-button' ),
+			$btn = $( '#secondary-button' ).parent(),
 			icon,
 			$iconContainer,
 			$icon;
