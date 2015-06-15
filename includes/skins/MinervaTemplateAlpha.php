@@ -59,11 +59,11 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 			'siteName' => SkinMinerva::getSitename(),
 			'mobileMenuClass' => MobileUI::iconClass( 'search', 'element', 'header-icon' ),
 			'mobileMenuLink' => SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl(),
-			'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse()
+			'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse(),
+			'secondaryButton' => $data['secondaryButton'],
 		);
 
-		return $templateParser->processTemplate( 'header', $args )
-			. $data['secondaryButton'];
+		return $templateParser->processTemplate( 'header', $args );
 	}
 
 	protected function getSearchAttributes() {
