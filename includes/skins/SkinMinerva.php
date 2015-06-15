@@ -128,7 +128,7 @@ class SkinMinerva extends SkinTemplate {
 				default: // generic (all other NS)
 					$msg = 'mobile-frontend-talk-back-to-page';
 			}
-			$tpl->set( 'subject-page', Linker::link(
+			$tpl->set( 'returnLink', Linker::link(
 				$title->getSubjectPage(),
 				wfMessage( $msg, $title->getText() ),
 				array( 'class' => 'return-link' )
