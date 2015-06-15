@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"علی ساکی لرستانی"
+		]
+	},
+	"mobile-frontend-copyright": "مطلب دومن $ 1 هس نکه خلاف هونو ذکر وابی.",
+	"mobile-frontend-editor-edit": "اصلاح",
+	"mobile-frontend-home-button": "مال",
+	"mobile-frontend-language-article-heading": "خوندن د زوونیا دیه",
+	"mobile-frontend-main-menu-button-tooltip": "باز کردن منو اصلی",
+	"mobile-frontend-main-menu-login": "اویدن وه سیستم",
+	"mobile-frontend-main-menu-nearby": "نزیک",
+	"mobile-frontend-main-menu-settings": "تنظیمات",
+	"mobile-frontend-main-menu-watchlist": "فهرست پیگیری یل",
+	"mobile-frontend-placeholder": "جستن {{نوم جا}}",
+	"mobile-frontend-privacy-link-text": "خلوت",
+	"mobile-frontend-random-button": "تصادفی",
+	"mobile-frontend-terms-text": "شرایط استفاده",
+	"mobile-frontend-view": "اطلاعات موبایل",
+	"mobile-frontend-view-desktop": "دسکتاپ",
+	"mobile-frontend-view-mobile": "موبایل",
+	"tag-mobile_edit": "اصلاح با موبایل",
+	"mobile-frontend-pageaction-edit-tooltip": "اصلاح بخش سرب د ای بلگه"
+}
