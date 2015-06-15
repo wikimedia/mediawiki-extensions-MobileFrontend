@@ -11,7 +11,9 @@
 				funnel: 'nearby'
 			},
 			$btn = $( '#secondary-button' ),
-			icon, $icon;
+			icon,
+			$iconContainer,
+			$icon;
 
 		// Remove user button
 		if ( $btn.length ) {
@@ -27,7 +29,12 @@
 			title: mw.msg( 'mobile-frontend-nearby-refresh' ),
 			label: mw.msg( 'mobile-frontend-nearby-refresh' )
 		} );
-		$icon = $( icon.toHtmlString() ).on( 'click', refreshCurrentLocation ).appendTo( '.header' );
+		$iconContainer = $( '<div>' );
+
+		$icon = icon.$el.on( 'click', refreshCurrentLocation )
+			.appendTo( $iconContainer );
+
+		$iconContainer.appendTo( '.header' );
 
 		/**
 		 * Initialize or instantiate Nearby with options
