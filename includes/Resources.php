@@ -1037,7 +1037,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-confirm',
 			'mobile-frontend-editor-tutorial-cancel',
 		),
-		'group' => 'user',
 	),
 
 	'mobile.watchstar' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1451,7 +1450,6 @@ $wgMobileEchoModules = array(
 		'scripts' => array(
 			'resources/mobile.notifications/init.js',
 		),
-		'group' => 'user',
 	),
 
 	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
