@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b494af8e",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-16T20:46:41Z",
+      "side": 1,
+      "message": "Both inherit from MobileSpecialPageFeed which inherits from MobileSpecialPage so this can be added there once.",
+      "revId": "ee26c6626aac6d0b6172ad2a2f601c09004a9bf1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b4eb4f08",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-16T20:46:41Z",
+      "side": 1,
+      "message": "Both inherit from MobileSpecialPageFeed which inherits from MobileSpecialPage so this can be added there once.",
+      "revId": "ee26c6626aac6d0b6172ad2a2f601c09004a9bf1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7402c7bf",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-16T20:46:41Z",
+      "side": 1,
+      "message": "This should be moved to  MobileSpecialPage so this can be added there once.",
+      "revId": "ee26c6626aac6d0b6172ad2a2f601c09004a9bf1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
