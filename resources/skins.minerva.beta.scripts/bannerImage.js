@@ -18,6 +18,6 @@
 			repository: repository
 		} );
 		bannerImage.on( 'loaded', $.proxy( skin, 'emit', 'changed' ) );
-		bannerImage.insertBefore( '.pre-content' );
+		bannerImage.insertBefore( '.pre-content:first' );
 	}
 }( mw.mobileFrontend, jQuery ) );

@@ -99,10 +99,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
 		) );
-		// add beta styles
-		if ( MobileContext::singleton()->isBetaGroupMember() ) {
-			$out->addModuleStyles( 'mobile.special.history.beta.styles' );
-		}
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
@@ -110,7 +106,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			if ( $this->title && $this->title->exists() ) {
 				$this->addModules();
 				$this->getOutput()->addHtml(
-					Html::openElement( 'div', array( 'class' => 'history' ) )
+					Html::openElement( 'div', array( 'class' => 'history content-unstyled' ) )
 				);
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();

@@ -1571,13 +1571,6 @@ $wgMobileSpecialPageModules = array(
 		'position' => 'top',
 	),
 
-	'mobile.special.nearby.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'resources/mobile.special.nearby.beta.styles/specialNearby.less',
-		),
-		'position' => 'top',
-	),
-
 	'mobile.special.userlogin.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
@@ -1622,12 +1615,6 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
-	'mobile.special.history.beta.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'resources/mobile.special.history.beta.styles/default.less',
-		),
-		'position' => 'top',
-	),
 	// These are NOT empty see $wgResourceModuleSkinStyles.
 	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',

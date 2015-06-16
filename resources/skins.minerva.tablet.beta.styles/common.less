@@ -3,14 +3,50 @@
 
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
+
+	// When pushing to stable remember to think about cache implications
+	.alpha,
+	.beta {
+		// FIXME: Zero should use banner-container class or better - append to banner-container
+		#mw-mf-page-center .mw-mf-banner,
+		.banner-container,
+		// FIXME: Generic header class needed me-thinks!
+		.header,
+		.list-header,
+		.page-header-bar,
+		.content-header,
+		.overlay-header,
+		// FIXME: Generic content class needed?
+		.content,
+		.overlay-content,
+		.content-unstyled,
+		.pre-content,
+		.content-overlay {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: @contentMaxWidthTablet;
+		}
+
+		// FIXME: Zero should use banner-container class or better - append to banner-container
+		#mw-mf-page-center .mw-mf-banner,
+		.banner-container,
+		.header,
+		.pre-content,
+		.post-content,
+		.content-unstyled,
+		.content-header {
+			padding-left: @contentPaddingTablet;
+			padding-right: @contentPaddingTablet;
+		}
+	}
+
 	.alpha,
 	.beta {
 		// #mw-mf-page-center is needed because there is a .header inside the main menu in alpha
 		#mw-mf-page-center .header {
-			max-width: @contentMaxWidthTablet;
-			margin: -1px auto 0 auto;
-			padding: 0 @contentPaddingTablet;
+			margin-top: -1px;
 		}
+
 		// stable and beta hamburger icon
 		#mw-mf-main-menu-button {
 			// so that the icon image is aligned with the content
@@ -22,16 +58,7 @@
 			right: -@iconGutterWidth;
 		}
 
-		#mw-mf-last-modified {
-			max-width: @contentMaxWidthTablet;
-			margin-left: auto;
-			margin-right: auto;
-			padding: 5px @contentPaddingTablet;
-		}
-
 		.pre-content {
-			padding-left: @contentPaddingTablet;
-			padding-right: @contentPaddingTablet;
 
 			#section_0 {
 				border-bottom: none;

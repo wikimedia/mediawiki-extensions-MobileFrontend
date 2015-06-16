@@ -57,7 +57,10 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			}
 			$output->addHtml(
 				Html::element( 'h2', array( 'class' => 'list-header' ), $date ) .
-				Html::openElement( 'ul', array( 'class' => 'page-list side-list' ) )
+				Html::openElement( 'ul', array(
+						'class' => 'page-list diff-summary-list content-unstyled side-list'
+					)
+				)
 			);
 		}
 		$this->lastDate = $date;

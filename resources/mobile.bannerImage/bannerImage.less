@@ -3,8 +3,6 @@
 
 .banner-image-container {
 	width: 100%;
-	max-width: @contentMaxWidthTablet;
-	margin: 0 auto;
 	height: 360px;
 	max-height: 360px;
 }
@@ -15,10 +13,4 @@
 	background-repeat: no-repeat;
 	.background-size( e(''), cover);
 	cursor: pointer;
-}
-
-@media all and (min-width: @wgMFDeviceWidthTablet) {
-	.banner-image {
-		margin: 0 @contentPaddingTablet;
-	}
 }
