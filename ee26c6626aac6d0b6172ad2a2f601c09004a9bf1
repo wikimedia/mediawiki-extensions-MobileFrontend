@@ -50,6 +50,24 @@
       "revId": "ee26c6626aac6d0b6172ad2a2f601c09004a9bf1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_74d88758",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-16T20:48:55Z",
+      "side": 1,
+      "message": "In an earlier patch you mentioned that centering content on all special pages may break other extensions, i.e. Gather. If I add this module to MobileSpecialPage, will it still be a problem, or is that fine?",
+      "parentUuid": "8ec42329_7402c7bf",
+      "revId": "ee26c6626aac6d0b6172ad2a2f601c09004a9bf1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
