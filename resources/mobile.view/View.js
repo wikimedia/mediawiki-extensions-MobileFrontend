@@ -196,7 +196,7 @@
 		 */
 		_postInitialize: function () {
 			this.$el.addClass( this.className );
-			if ( this.isBorderBox ) {
+			if ( this.isBorderBox && !this.$el.is( 'body' ) ) {
 				// FIXME: Merge with className property (?)
 				this.$el.addClass( 'view-border-box' );
 			}
