@@ -29,6 +29,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
+		$vars['wgWikiBasePropertyConfig'] = $this->getMFConfig()->get( 'WikiBasePropertyConfig' );
 
 		return $vars;
 	}

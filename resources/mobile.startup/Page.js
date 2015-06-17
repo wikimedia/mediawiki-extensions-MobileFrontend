@@ -74,6 +74,7 @@
 			if ( thumb && thumb.width ) {
 				this.thumbnail.isLandscape = thumb.width > thumb.height;
 			}
+			this.wikidataDescription = options.wikidataDescription;
 		},
 
 		/**

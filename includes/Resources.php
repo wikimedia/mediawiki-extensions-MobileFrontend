@@ -758,6 +758,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.search.beta' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.search',
+		),
+		'styles' => array(
+			'resources/mobile.search.beta/SearchOverlay.less',
+		),
+		'scripts' => array(
+			'resources/mobile.search.beta/SearchApi.js',
+		),
+	),
+
 	'mobile.talk.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.talk',
@@ -1823,6 +1835,7 @@ $wgMinervaBootstrapModules = array(
 			// load code under certain conditions.
 			'mobile.references.beta',
 			'mobile.bannerImage',
+			'mobile.search.beta',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.beta.scripts/bannerImage.js',

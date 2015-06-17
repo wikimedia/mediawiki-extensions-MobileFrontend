@@ -1,11 +1,22 @@
 ( function ( M, $ ) {
 
-	var SearchOverlay = M.require( 'modules/search/SearchOverlay' ),
-		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		context = M.require( 'context' ),
 		router = M.require( 'router' ),
-		browser = M.require( 'browser' );
+		browser = M.require( 'browser' ),
+		searchModule,
+		searchApi,
+		SearchOverlay,
+		SearchApi;
+
+	if ( context.isBetaGroupMember() ) {
+		searchModule = 'mobile.search.beta';
+		searchApi = 'modules/search.beta/SearchApi';
+	} else {
+		searchModule = 'mobile.search';
+		searchApi = 'modules/search/SearchApi';
+	}
 
 	/**
 	 * Reveal the search overlay
@@ -21,11 +32,18 @@
 		uiSchema.log( {
 			name: 'search'
 		} );
-		new SearchOverlay( {
-			searchTerm: searchTerm,
-			placeholderMsg: placeholder
-		} ).show();
-		router.navigate( '/search' );
+
+		mw.loader.using( searchModule ).done( function () {
+			SearchApi = M.require( searchApi );
+			SearchOverlay = M.require( 'modules/search/SearchOverlay' );
+
+			new SearchOverlay( {
+				api: new SearchApi(),
+				searchTerm: searchTerm,
+				placeholderMsg: placeholder
+			} ).show();
+			router.navigate( '/search' );
+		} );
 	}
 
 	// See https://phabricator.wikimedia.org/T76882 for why we disable search on Android 2

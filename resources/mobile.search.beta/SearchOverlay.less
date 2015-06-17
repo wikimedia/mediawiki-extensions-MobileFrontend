@@ -1,0 +1,38 @@
+@import "minerva.mixins";
+@import "minerva.variables";
+
+@thumbGap: 15px;
+@thumbWidth: 70px;
+
+.search-overlay {
+	li.page-summary {
+		display: table;
+		height: @thumbWidth;
+		padding-left: @thumbWidth + @thumbGap;
+		width: 100%;
+		.list-thumb {
+			width: @thumbWidth;
+		}
+		.title {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		h3 {
+			margin: 0;
+		}
+		.wikidata-description {
+			font-size: .8em;
+			margin-top: 0.5em;
+		}
+	}
+}
+
+.alpha {
+	.search-overlay {
+		background: white;
+		.overlay-header-container.position-fixed {
+			// Search Overlay will show when the main menu is open
+			transform: none;
+		}
+	}
+}

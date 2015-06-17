@@ -79,6 +79,23 @@
 		},
 
 		/**
+		 * Return data used for creating {Page} objects
+		 * @param {String} query to search for
+		 * @param {Object} info page info from the API
+		 * @returns {Object} data needed to create a {Page}
+		 * @private
+		 */
+		_getPageData: function ( query, info ) {
+			return {
+				id: info.pageid,
+				displayTitle: highlightSearchTerm( info.title, query ),
+				title: info.title,
+				url: mw.util.getUrl( info.title ),
+				thumbnail: info.thumbnail
+			};
+		},
+
+		/**
 		 * Perform a search for the given query.
 		 * FIXME: remove filtering of redirects once the upstream bug has been fixed:
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=73673
@@ -135,23 +152,17 @@
 										if ( info ) {
 											// return all possible page data
 											pageIds.push( id );
-											results.push( new Page( {
-												id: info.pageid,
-												displayTitle: highlightSearchTerm( info.title, query ),
-												title: info.title,
-												url: mw.util.getUrl( info.title ),
-												thumbnail: info.thumbnail
-											} ) );
+											results.push( self._getPageData( query, info ) );
 										} else {
 											mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
 
-											results.push( new Page( {
+											results.push( {
 												id: page.pageid,
 												heading: highlightSearchTerm( page.title, query ),
 												title: page.title,
 												displayTitle: mwTitle.getNameText(),
 												url: mwTitle.getUrl()
-											} ) );
+											} );
 										}
 									}
 								} );
@@ -161,7 +172,9 @@
 						// resolve the Deferred object
 						result.resolve( {
 							query: query,
-							results: results
+							results: $.map( results, function ( data ) {
+								return new Page( data );
+							} )
 						} );
 					} )
 					.fail( function () {

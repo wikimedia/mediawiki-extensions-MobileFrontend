@@ -93,7 +93,7 @@
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
-			this.api = new SearchApi();
+			this.api = options.api || new SearchApi();
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
