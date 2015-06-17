@@ -644,6 +644,8 @@ class SkinMinerva extends SkinTemplate {
 			'data-timestamp' => $isMainPage ? '' : $unixTimestamp,
 			'href' => $historyUrl,
 			'text' => $lastModified,
+			'data-user-name' => '',
+			'data-user-gender' => 'unknown',
 		);
 		$rev = Revision::newFromId( $this->getRevisionId() );
 		if ( $rev ) {
@@ -651,15 +653,10 @@ class SkinMinerva extends SkinTemplate {
 			if ( $userId ) {
 				$revUser = User::newFromId( $userId );
 				$revUser->load( User::READ_NORMAL );
-				$link += array(
+				$link = array_merge( $link, array(
 					'data-user-name' => $revUser->getName(),
 					'data-user-gender' => $revUser->getOption( 'gender' ),
-				);
-			} else {
-				$link += array(
-					'data-user-name' => '',
-					'data-user-gender' => 'unknown',
-				);
+				) );
 			}
 		}
 		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
