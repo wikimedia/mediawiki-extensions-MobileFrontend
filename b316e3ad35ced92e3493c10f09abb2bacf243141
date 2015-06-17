@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_314e8373",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1632,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-17T21:23:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_1ed35962",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_fecf6db3",
         "filename": "includes/Resources.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-17T17:45:20Z",
       "side": 1,
       "message": "No longer needed. Delete files too.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_d154df03",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1736,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-17T21:23:12Z",
+      "side": 1,
+      "message": "Seems there are some rules still here. Not sure what they are for. So it is needed?",
+      "parentUuid": "8ec42329_fecf6db3",
       "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_913e57b4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 758,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-17T21:23:12Z",
+      "side": 1,
+      "message": "I tried soooo hard not to commit that.. lol",
+      "parentUuid": "8ec42329_9e2c2991",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_9e5ae920",
         "filename": "includes/specials/SpecialMobileHistory.php",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2015-06-17T17:45:20Z",
       "side": 1,
       "message": "Not needed anymore. Also delete the related module.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5148ef5f",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-17T21:23:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_9e5ae920",
       "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
