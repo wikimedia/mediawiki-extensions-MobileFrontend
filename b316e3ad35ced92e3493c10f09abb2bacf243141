@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_1ed35962",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1632,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "No longer needed. Delete files too.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_fecf6db3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1736,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "No longer needed. Delete files too.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_9e2c2991",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 758,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "Did you add this to test?",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_9e5ae920",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "Not needed anymore. Also delete the related module.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_deaf11dd",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "Why are paddings commented out?",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_be9b25c0",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-17T17:45:20Z",
+      "side": 1,
+      "message": "This -1 needs an explanation.",
+      "revId": "b316e3ad35ced92e3493c10f09abb2bacf243141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
