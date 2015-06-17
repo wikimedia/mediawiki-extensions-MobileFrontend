@@ -17,7 +17,7 @@
 {{/variantHeader}}
 <ul class="site-link-list">
 	{{#languages}}
-		<li {{#preferred}}class="preferred"{{/preferred}}>
+		<li>
 			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langname}}</span>{{#title}} | {{title}}{{/title}}</a>
 		</li>
 	{{/languages}}

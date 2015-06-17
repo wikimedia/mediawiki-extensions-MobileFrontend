@@ -89,6 +89,7 @@
 			pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
 				result.resolve( new LanguageOverlay( {
+					currentLanguage: mw.config.get( 'wgContentLanguage' ),
 					languages: data.languages,
 					variants: data.variants
 				} ) );
