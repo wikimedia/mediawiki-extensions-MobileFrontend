@@ -171,6 +171,17 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$bytesChanged = abs( $bytesChanged );
 		}
 
+		if ( $this->rev->isMinor() ) {
+			$minor = ChangesList::flag( 'minor' );
+		} else {
+			$minor = '';
+		}
+		if ( $this->rev->getComment() !== '' ) {
+			$comment = Linker::formatComment( $this->rev->getComment(), $title );
+		} else {
+			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
+		}
+
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$this->getOutput()->addHtml(
 			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ) )
@@ -192,7 +203,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					)
 				)->text()
 			. Html::closeElement( 'div' )
-			. Html::element( 'div', array( 'id' => 'mw-mf-diff-comment' ), $this->rev->getComment() )
+			. $minor
+			. Html::rawElement(
+				'div',
+				array( 'id' => 'mw-mf-diff-comment' ),
+				$comment
+			)
 		);
 	}
 
