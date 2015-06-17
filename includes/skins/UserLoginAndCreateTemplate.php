@@ -9,8 +9,12 @@
  * Facilitates hijacking existing account creation/login template objects
  * by copying their properties to this new template, and exposing some
  * special mobile-specific magic.
+ *
+ * This class implements UsercreateTemplate instead of BaseTemplate due to T102775.
+ * It's save to extend this class only until UserloginTemplate doesn't get functions,
+ * which are needed by our own Userlogin template.
  */
-abstract class UserLoginAndCreateTemplate extends BaseTemplate {
+abstract class UserLoginAndCreateTemplate extends UsercreateTemplate {
 
 	/**
 	 * Overload the parent constructor
@@ -18,7 +22,7 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	 * Does not call the parent's constructor to prevent overwriting
 	 * $this->data and $this->translatorobject since we're essentially
 	 * just hijacking the existing template and its data here.
-	 * @param BaseTemplate $template The original template object to overwrite
+	 * @param UsercreateTemplate $template The original template object to overwrite
 	 */
 	public function __construct( $template ) {
 		$this->copyObjectProperties( $template );
@@ -63,7 +67,7 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 
 	/**
 	 * Copy public properties of one object to this one
-	 * @param BaseTemplate $tpl The object whose properties should be copied
+	 * @param UsercreateTemplate $tpl The object whose properties should be copied
 	 */
 	protected function copyObjectProperties( $tpl ) {
 		foreach ( get_object_vars( $tpl ) as $prop => $value ) {
