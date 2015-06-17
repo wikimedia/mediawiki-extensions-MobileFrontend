@@ -6,7 +6,7 @@
 		loader = M.require( 'loader' ),
 		router = M.require( 'router' ),
 		context = M.require( 'context' ),
-		useNewMediaViewer = context.isAlphaGroupMember(),
+		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'overlayManager' ),
 		page = M.getCurrentPage(),
 		pageApi = M.require( 'pageApi' ),
