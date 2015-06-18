@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_0a4b0c64",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T01:32:20Z",
+      "side": 1,
+      "message": "Yeh I need to talk to you about this. What is it for? I couldn\u0027t tell why it was needed and what it\u0027s supposed to do, but it doesn\u0027t seem like we want to apply globally - hopefully only a subset on all the above things (is it content only?).",
+      "parentUuid": "8ec42329_1437b5fd",
+      "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_d4404d5d",
         "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-17T23:35:46Z",
       "side": 1,
       "message": "Can you please add a comment why -1px should be here. Related to the border top i guess?",
+      "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_8a37fcdf",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T01:32:20Z",
+      "side": 1,
+      "message": "I have no idea.. it was here already (see L11 in the original patchset)\nI assume it\u0027s to do with the top border on the header..\nWe should git blame...",
+      "parentUuid": "8ec42329_d4404d5d",
       "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
