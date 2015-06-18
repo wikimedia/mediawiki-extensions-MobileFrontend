@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_acfbed75",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T21:54:40Z",
+      "side": 1,
+      "message": "Every time you change stable code in a change for beta/alpha a kitten dies.. can we make this a little less brittle? I seem to remember asking way back\n\nThese rules are also going to apply in stable if we ever use header-icon class there...\n\nWhy don\u0027t you just add a generic class to #mw-mf-main-menu-button now and simplify this selector into one class along with #mw-mf-main-menu-button for caching purposes?\n\n\nI mean we already have main-header-button class in stable.... can\u0027t we just reuse that?",
+      "revId": "e97ca6f5e2cc0b08ed891ca6de54804617a51eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ccfe7966",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T21:54:40Z",
+      "side": 1,
+      "message": "See comment in init.js",
+      "revId": "e97ca6f5e2cc0b08ed891ca6de54804617a51eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_6cf5057f",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T21:54:40Z",
+      "side": 1,
+      "message": "See other comments",
+      "revId": "e97ca6f5e2cc0b08ed891ca6de54804617a51eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_2ceffdae",
+        "filename": "resources/skins.minerva.beta.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T21:54:40Z",
+      "side": 1,
+      "message": "please keep beta, alpha classes.\nThis module could be loaded accidentally in stable.",
+      "revId": "e97ca6f5e2cc0b08ed891ca6de54804617a51eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
