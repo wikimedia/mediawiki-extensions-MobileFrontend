@@ -83,6 +83,8 @@
 				this.$el.find( '.nearby' ).parent().remove();
 			}
 
+			// FIXME: Remove when cache clears https://phabricator.wikimedia.org/T102868
+			this.$el.addClass( 'view-border-box' );
 			// Listen to the main menu button clicks
 			// In alpha there is no #mw-mf-main-menu-button, the user can click on the header
 			// search icon or the site name in the header to open the main menu
