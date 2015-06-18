@@ -1046,7 +1046,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function addAnalyticsLogItemFromXAnalytics( $xanalytics_item ) {
 		list( $key, $val ) = explode( '=', $xanalytics_item, 2 );
-		$this->addAnalyticsLogItem( urldecode( $key ), urldecode( $val ));
+		$this->addAnalyticsLogItem( urldecode( $key ), urldecode( $val ) );
 	}
 
 	/**

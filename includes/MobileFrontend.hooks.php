@@ -194,7 +194,7 @@ class MobileFrontendHooks {
 
 		// Bug 43123: force mobile URLs only for local redirects
 		if ( $context->isLocalUrl( $redirect ) ) {
-			$out->addVaryHeader( 'X-Subdomain');
+			$out->addVaryHeader( 'X-Subdomain' );
 			$out->addVaryHeader( 'X-CS' );
 			$redirect = $context->getMobileUrl( $redirect );
 		}
