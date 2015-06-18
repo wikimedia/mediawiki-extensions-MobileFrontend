@@ -408,9 +408,6 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	private function shouldDisplayMobileViewInternal() {
-		$config = $this->getMFConfig();
-		$mobileHeader = $config->get( 'MFMobileHeader' );
-
 		// May be overridden programmatically
 		if ( $this->forceMobileView ) {
 			return true;
@@ -425,18 +422,12 @@ class MobileContext extends ContextSource {
 		}
 
 		/**
-		 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
-		 * there's a mobile header, then we assume the user is accessing
-		 * the site from the mobile-specific domain (because why would the
-		 * desktop site set the header?). If a user is accessing the
-		 * site from a mobile domain, then we should always display the mobile
-		 * version of the site (otherwise, the cache may get polluted). See
+		 * If a user is accessing the site from a mobile domain, then we should
+		 * always display the mobile version of the site (otherwise, the cache
+		 * may get polluted). See
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
 		 */
-		if ( $this->getMobileUrlTemplate()
-			&& $mobileHeader
-			&& $this->getRequest()->getHeader( $mobileHeader ) !== false )
-		{
+		if ( $this->usingMobileDomain() ) {
 			return true;
 		}
 
@@ -773,6 +764,22 @@ class MobileContext extends ContextSource {
 
 		$assembleUrl = wfAssembleUrl( $parsedUrl );
 		return $assembleUrl;
+	}
+
+	/**
+	 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
+	 * there's a mobile header, then we assume the user is accessing
+	 * the site from the mobile-specific domain (because why would the
+	 * desktop site set the header?).
+	 * @return bool
+	 */
+	public function usingMobileDomain() {
+		$config = $this->getMFConfig();
+		$mobileHeader = $config->get( 'MFMobileHeader' );
+		return ( $config->get( 'MobileUrlTemplate' )
+			&& $mobileHeader
+			&& $this->getRequest()->getHeader( $mobileHeader ) !== false
+		);
 	}
 
 	/**
