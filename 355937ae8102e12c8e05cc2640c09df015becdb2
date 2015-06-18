@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_a572290e",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-18T10:10:28Z",
+      "side": 1,
+      "message": "I can\u0027t remember the reason we added it. We should ping Katiy. My concern is that the page contents are now wider without the padding.",
+      "parentUuid": "8ec42329_0a4b0c64",
+      "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_d4404d5d",
         "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
         "patchSetId": 7
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "I have no idea.. it was here already (see L11 in the original patchset)\nI assume it\u0027s to do with the top border on the header..\nWe should git blame...",
       "parentUuid": "8ec42329_d4404d5d",
+      "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_657c41e3",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-18T10:10:28Z",
+      "side": 1,
+      "message": "Yeah, you\u0027re right.",
+      "parentUuid": "8ec42329_8a37fcdf",
       "revId": "355937ae8102e12c8e05cc2640c09df015becdb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
