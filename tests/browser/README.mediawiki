@@ -17,10 +17,10 @@ INSERT INTO interwiki (iw_prefix, iw_url, iw_local, iw_trans) VALUES ("es", "htt
 </pre>
 * In LocalSettings.php place the following code:
 <pre>
-  $wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php'; // required for nearby.feature
-  $wgSiteName = 'Wikipedia'; // required for purpose of login_required_uploads.feature
+	# required for browser tests ui_links.feature
+	$wgRightsText = 'Creative Commons Attribution 3.0';
+	$wgRightsUrl = "http://creativecommons.org/licenses/by-sa/3.0/";
 </pre>
-* Make sure that $wgRightsPage is not set in LocalSettings.php
 
 Note a few caveats with browser tests:
 * Random page tests may fail on a timeout
