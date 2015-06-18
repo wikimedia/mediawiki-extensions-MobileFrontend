@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c1e2c2ff",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-18T20:41:51Z",
+      "side": 1,
+      "message": "Looking at this method in Overlay.js it seems like it might be better to have an explicit property  around maintaining history\n\nIf you want to do this though, it should at least make it clear it @inheritdoc and how it differs.",
+      "revId": "affaeb7bd1ddfe3aa2b616bcce18884006f6df3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
