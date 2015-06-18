@@ -131,6 +131,7 @@ class SkinMinervaBeta extends SkinMinerva {
 		$styles = parent::getSkinStyles();
 		$styles[] = 'skins.minerva.beta.styles';
 		$styles[] = 'skins.minerva.tablet.beta.styles';
+		$styles[] = 'skins.minerva.beta.images';
 		if ( $this->getTitle()->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
 		}

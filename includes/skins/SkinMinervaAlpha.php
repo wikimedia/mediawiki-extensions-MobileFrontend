@@ -56,17 +56,4 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 
 		return $vars;
 	}
-
-	/**
-	 * @inheritdoc
-	 */
-	protected function getSkinStyles() {
-		$skinStyles = parent::getSkinStyles();
-
-		$skinStyles[] = 'skins.minerva.alpha.styles';
-		$skinStyles[] = 'skins.minerva.alpha.images';
-		$skinStyles[] = 'skins.minerva.tablet.alpha.styles';
-
-		return $skinStyles;
-	}
 }

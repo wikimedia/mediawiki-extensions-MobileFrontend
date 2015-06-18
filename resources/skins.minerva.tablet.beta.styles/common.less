@@ -32,7 +32,8 @@
 		// FIXME: Zero should use banner-container class or better - append to banner-container
 		#mw-mf-page-center .mw-mf-banner,
 		.banner-container,
-		.header,
+		// Alpha and beta have a .header in navigation drawer
+		#mw-mf-page-center .header,
 		.pre-content,
 		.post-content,
 		.content-unstyled,
@@ -51,8 +52,7 @@
 			margin-top: -1px;
 		}
 
-		// stable and beta hamburger icon
-		#mw-mf-main-menu-button {
+		.header-icon {
 			// so that the icon image is aligned with the content
 			left: -@iconGutterWidth;
 		}
@@ -61,11 +61,10 @@
 			// so that the icon image is aligned with the content
 			right: -@iconGutterWidth;
 		}
-	}
 
-	.beta {
-		// Search input in the header
-		#searchInput {
+		// FIXME: remove when cache clears. Beta doesn't have searchInput in the header anymore
+		// Search input in the header inside page-center (rather than the left nav)
+		#mw-mf-page-center #searchInput {
 			// because we're pulling #mw-mf-main-menu-button to the left too (see above)
 			margin-left: -@iconGutterWidth;
 		}
