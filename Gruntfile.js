@@ -26,11 +26,6 @@ module.exports = function ( grunt ) {
 			jsExternals: 'resources/*/externals/**/*.js'
 		},
 		mkdir: {
-			all: {
-				options: {
-					create: [ 'docs' ]
-				},
-			},
 			jsdocs: {
 				options: {
 					create: [ 'docs/js' ]
