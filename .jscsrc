@@ -8,6 +8,10 @@
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
+  "excludeFiles": [
+    "libs/**",
+    "node_modules/**"
+  ],
   "additionalRules": [
     "node_modules/jscs-jsdoc/lib/rules/*.js"
   ],
