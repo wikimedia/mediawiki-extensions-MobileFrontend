@@ -41,9 +41,6 @@ gems:
 nodecheck:
 	@dev-scripts/nodecheck.sh
 
-jsbeautify: nodecheck			## Check the JavaScript coding style
-	@find javascripts -type f -name "*.js" -not -path "**externals**" -exec node_modules/.bin/js-beautify -r {} \;
-
 jscs: nodecheck			## Check the JavaScript coding style
 	@grunt jscs
 
