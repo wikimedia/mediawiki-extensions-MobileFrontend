@@ -305,7 +305,7 @@ class ApiMobileView extends ApiBase {
 	 * @return string
 	 */
 	private function stringSplitter( $text ) {
-		if ( $this->offset < 0  ) {
+		if ( $this->offset < 0 ) {
 			return $text; // NOOP - string splitting mode is off
 		} elseif ( $this->maxlen < 0 ) {
 			return ''; // Limit exceeded

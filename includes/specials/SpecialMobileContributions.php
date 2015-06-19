@@ -95,7 +95,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$this->prevLengths = Revision::getParentLengths( wfGetDB( DB_SLAVE ), $prevRevs );
 		if ( $numRows > 0 ) {
 			$count = 0;
-			foreach (  $revs as $rev ) {
+			foreach ( $revs as $rev ) {
 				if ( $count++ < self::LIMIT ) {
 					$this->showContributionsRow( $rev );
 				}
