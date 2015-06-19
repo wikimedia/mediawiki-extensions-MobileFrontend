@@ -46,7 +46,7 @@ module.exports = function ( grunt ) {
 			],
 			test: {
 				options: {
-					config: '.jscsrctest.js'
+					config: 'tests/.jscsrc.js'
 				},
 				files: {
 					src: '<%= files.jsTests %>'
