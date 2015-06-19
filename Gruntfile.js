@@ -14,7 +14,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-svg2png' );
 	grunt.loadNpmTasks( 'grunt-jsduck' );
-	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 
 	grunt.initConfig( {
 		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -108,9 +107,6 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		clean: {
-			jsdocs: [ 'docs/js' ]
-		},
 		jsduck: {
 			main: {
 				src: [
@@ -148,7 +144,7 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
-	grunt.registerTask( 'docs', [ 'clean:jsdocs', 'mkdir:jsdocs', 'jsduck:main' ] );
+	grunt.registerTask( 'docs', [ 'mkdir:jsdocs', 'jsduck:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
