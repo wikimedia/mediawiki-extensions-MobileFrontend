@@ -7,7 +7,7 @@
 /vendor/
 node_modules/
 tmp/
-docs/
+/docs
 dev-scripts/remotes
 vendor/
 composer.phar

@@ -1,0 +1,28 @@
+{
+	"--title": "MobileFrontend - Documentation",
+	"--output": "docs",
+	"--processes": "0",
+	"--tags": ".docs/jsduckCustomTags.rb",
+	"--warnings-exit-nonzero": true,
+	"--builtin-classes": true,
+	"--external": [
+		"Hogan.Template",
+		"HandleBars.Template",
+		"jQuery.Deferred",
+		"jQuery.Promise",
+		"jQuery.Event",
+		"jQuery.Object",
+		"jqXHR",
+		"File",
+		"mw.user",
+		"mw.Api",
+		"CodeMirror",
+		"OO.ui.ToolGroup",
+		"OO.ui.LookupElement",
+		"OO.EventEmitter"
+	],
+	"--warnings": ["-nodoc(class,public)", "-dup_member", "-link_ambiguous"],
+	"--": [
+		"resources"
+	]
+}

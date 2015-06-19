@@ -3,8 +3,9 @@
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
 	"scripts": {
-		"test": "grunt test",
-		"doc": "grunt docs"
+		"test": "grunt test && npm run doc",
+		"predoc": "grunt mkdir:docs",
+		"doc": "jsduck"
 	},
 	"repository": {
 		"type": "git",
@@ -26,7 +27,6 @@
 		"grunt-contrib-jshint": "0.10.0",
 		"grunt-jscs": "1.8.0",
 		"jscs-jsdoc": "git+https://github.com/jdlrobson/jscs-jsdoc.git#checkParamExistence",
-		"grunt-jsduck": "^1.0.1",
 		"js-beautify": "^1.5.4",
 		"grunt-notify": "^0.3.1",
 		"grunt-contrib-watch": "0.6.1",

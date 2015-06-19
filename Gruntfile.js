@@ -13,7 +13,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-svg2png' );
-	grunt.loadNpmTasks( 'grunt-jsduck' );
 
 	grunt.initConfig( {
 		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -25,9 +24,9 @@ module.exports = function ( grunt ) {
 			jsTests: 'tests/qunit/**/*.js'
 		},
 		mkdir: {
-			jsdocs: {
+			docs: {
 				options: {
-					create: [ 'docs/js' ]
+					create: [ 'docs' ]
 				}
 			}
 		},
@@ -97,49 +96,15 @@ module.exports = function ( grunt ) {
 					reload: true
 				}
 			}
-		},
-		jsduck: {
-			main: {
-				src: [
-					'<%= files.js %>'
-				],
-				dest: 'docs/js',
-				options: {
-					'builtin-classes': true,
-					'external': [
-						'Hogan.Template',
-						'HandleBars.Template',
-						'jQuery.Deferred',
-						'jQuery.Promise',
-						'jQuery.Event',
-						'jQuery.Object',
-						'jqXHR',
-						'File',
-						'mw.user',
-						'mw.Api',
-						'CodeMirror',
-						'OO.ui.ToolGroup',
-						'OO.ui.LookupElement',
-						'OO.EventEmitter'
-					],
-					'ignore-global': true,
-					'tags': './.docs/jsduckCustomTags.rb',
-					// https://github.com/senchalabs/jsduck/issues/525
-					'processes': 0,
-					'warnings-exit-nonzero': true,
-					'warnings': [ '-nodoc(class,public)', '-dup_member', '-link_ambiguous' ]
-				}
-			}
 		}
 	} );
 
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
-	grunt.registerTask( 'docs', [ 'mkdir:jsdocs', 'jsduck:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
 	// running.
-	grunt.registerTask( 'test', [ 'lint', 'docs' ] );
+	grunt.registerTask( 'test', [ 'lint' ] );
 
 	grunt.registerTask( 'default', [ 'test' ] );
 };
