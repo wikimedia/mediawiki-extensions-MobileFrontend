@@ -22,8 +22,7 @@ module.exports = function ( grunt ) {
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
 		files: {
 			js: 'resources/**/*.js',
-			jsTests: 'tests/qunit/**/*.js',
-			jsExternals: 'resources/*/externals/**/*.js'
+			jsTests: 'tests/qunit/**/*.js'
 		},
 		mkdir: {
 			jsdocs: {
@@ -36,20 +35,18 @@ module.exports = function ( grunt ) {
 			options: {
 				jshintrc: true
 			},
-			tests: '<%= files.jsTests %>',
-			sources: [
+			all: [
 				'<%= files.js %>',
-				'!<%= files.jsExternals %>',
+				'<%= files.jsTests %>'
 			]
 		},
 		jscs: {
 			main: [
-				'<%= files.js %>',
-				'!<%= files.jsExternals %>'
+				'<%= files.js %>'
 			],
 			test: {
 				options: {
-					config: '.jscsrctest.js',
+					config: '.jscsrctest.js'
 				},
 				files: {
 					src: '<%= files.jsTests %>'
@@ -77,8 +74,7 @@ module.exports = function ( grunt ) {
 						prefixUrl: 'w/', // Prefix url on the server
 						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
 						src: [
-							'<%= files.js %>',
-							'!<%= files.jsExternals %>'
+							'<%= files.js %>'
 						],
 						instrumentedFiles: 'tests/report/tmp',
 						htmlReport: 'tests/report'
@@ -105,8 +101,7 @@ module.exports = function ( grunt ) {
 		jsduck: {
 			main: {
 				src: [
-					'<%= files.js %>',
-					'!<%= files.jsExternals %>'
+					'<%= files.js %>'
 				],
 				dest: 'docs/js',
 				options: {

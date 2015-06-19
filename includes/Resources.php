@@ -367,7 +367,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.microAutoSize' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
-			'resources/mobile.microAutoSize/externals/micro.autosize.js',
+			'libs/micro.js/micro.autosize.js',
 		),
 	),
 
@@ -376,7 +376,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.template',
 		),
 		'scripts' => array(
-			'resources/mediawiki.template.hogan/externals/hogan.js',
+			'libs/hogan.js/hogan.js',
 			'resources/mediawiki.template.hogan/hogan.js',
 		),
 	),
@@ -1302,7 +1302,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			// FIXME: This library shouldn't be needed. Wikidata api
 			// should return these thumbnail urls for us.
-			'resources/mobile.hexmd5/externals/md5.js',
+			'libs/md5/md5.js',
 		),
 		'position' => 'top',
 	),
