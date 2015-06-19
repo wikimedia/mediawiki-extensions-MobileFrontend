@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_185fd814",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-19T16:43:49Z",
+      "side": 1,
+      "message": "Sounds good.",
+      "parentUuid": "8ec42329_02ef6583",
+      "revId": "907d026e4b695c1dadc38e5e0fb60ae5cb35ff34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_c2e87d79",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-19T14:14:39Z",
       "side": 1,
       "message": "Does the Page really care about what mode it\u0027s in? If the option exists, then it can be used.",
+      "revId": "907d026e4b695c1dadc38e5e0fb60ae5cb35ff34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_78605ccc",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-19T16:43:49Z",
+      "side": 1,
+      "message": "I wanted to be extra cautious and not leak this to stable. Do you think I should remove the above check?",
+      "parentUuid": "8ec42329_c2e87d79",
       "revId": "907d026e4b695c1dadc38e5e0fb60ae5cb35ff34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
