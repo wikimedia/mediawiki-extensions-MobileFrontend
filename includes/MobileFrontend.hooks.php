@@ -277,9 +277,6 @@ class MobileFrontendHooks {
 				$templates = array();
 				foreach ( $module['scripts'] as $script ) {
 					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
-					// for javascripts folder (being deprecated)
-					$testFile = str_replace( 'tests/javascripts/', 'tests/qunit/', $testFile );
-
 					// For resources folder
 					$testFile = str_replace( 'tests/resources/', 'tests/qunit/', $testFile );
 					// if a test file exists for a given JS file, add it

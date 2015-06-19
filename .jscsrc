@@ -8,7 +8,6 @@
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
-  "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"],
   "additionalRules": [
     "node_modules/jscs-jsdoc/lib/rules/*.js"
   ],
