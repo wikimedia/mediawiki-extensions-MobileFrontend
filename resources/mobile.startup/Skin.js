@@ -42,11 +42,9 @@
 			// Make sure the menu is open and we are not clicking on the menu button
 			if (
 				this.mainMenu.isOpen() &&
-				// stable and beta
+				// FIXME: remove the ID comparison when cache clears
 				ev.target.id !== 'mw-mf-main-menu-button' &&
-				// alpha header icon and header title links, which open the menu
-				$target.get( 0 ) !== $( '.alpha .header a.header-icon' ).get( 0 ) &&
-				$target.get( 0 ) !== $( '.alpha .header .header-title a' ).get( 0 )
+				!$target.hasClass( 'main-menu-button' )
 			) {
 				this.mainMenu.closeNavigationDrawers();
 				ev.preventDefault();
