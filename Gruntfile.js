@@ -139,7 +139,7 @@ module.exports = function ( grunt ) {
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
 	// running.
-	grunt.registerTask( 'test', [ 'lint', 'mkdir', 'jsduck' ] );
+	grunt.registerTask( 'test', [ 'lint', 'docs' ] );
 
 	grunt.registerTask( 'default', [ 'test' ] );
 };

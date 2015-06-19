@@ -3,7 +3,8 @@
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
 	"scripts": {
-		"test": "grunt test"
+		"test": "grunt test",
+		"doc": "grunt docs"
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +20,7 @@
 		"svgo": ">=0.4.4"
 	},
 	"devDependencies": {
+		"grunt-cli": "0.1.13",
 		"grunt-mkdir": "^0.1.2",
 		"grunt-svg2png": "0.2.5",
 		"grunt-contrib-jshint": "0.10.0",

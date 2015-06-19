@@ -25,7 +25,7 @@ gerrit: remotes				## List all patchsets
 	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1 --ignore 'WIP'
 
 jsduck: nodecheck gems			## Build the JavaScript documentation
-	@grunt docs
+	@npm run -s doc
 
 phpdoc: nodecheck			## Build the PHP documentation
 	mkdir -p docs
