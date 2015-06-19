@@ -384,9 +384,11 @@ class MinervaTemplate extends BaseTemplate {
 				<?php echo $this->getMainMenuHtml( $data ); ?>
 			</nav>
 			<div id="mw-mf-page-center">
+				<div class="banner-container">
 				<?php
 					echo $templateParser->processTemplate( 'banners', $data );
 				?>
+				</div>
 				<div class="header">
 					<?php
 						echo $this->getHeaderHtml( $data );

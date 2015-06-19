@@ -226,7 +226,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string html representation of collection in watchlist view
 	 */
 	protected function getViewHtml( MobileCollection $collection ) {
-		$html = '<ul class="watchlist page-list thumbs">';
+		$html = '<ul class="watchlist content-unstyled page-list thumbs page-summary-list">';
 		foreach ( $collection as $mobilePage ) {
 			$thumb = $mobilePage->getSmallThumbnailHtml();
 			if ( !$thumb ) {

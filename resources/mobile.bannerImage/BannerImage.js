@@ -32,7 +32,7 @@
 	 * @extends View
 	 */
 	BannerImage = View.extend( {
-		className: 'banner-image-container',
+		className: 'banner-image-container banner-container',
 
 		/**
 		 * @inheritdoc
