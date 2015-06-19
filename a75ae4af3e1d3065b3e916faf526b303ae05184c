@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_52122202",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-19T00:53:37Z",
+      "side": 1,
+      "message": "Well.. this is doing something completely different.. what if the last hash wasn\u0027t an empty string?\n\nAlso this.hide triggers a hide event.. which is monitored by the OverlayManager",
+      "revId": "a75ae4af3e1d3065b3e916faf526b303ae05184c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
