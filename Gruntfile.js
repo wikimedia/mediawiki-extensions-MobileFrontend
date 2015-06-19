@@ -6,8 +6,6 @@
 
 /*jshint node:true, strict:false*/
 module.exports = function ( grunt ) {
-	var MW_INSTALL_PATH = grunt.option( 'MW_INSTALL_PATH' ) || process.env.MW_INSTALL_PATH;
-
 	grunt.loadNpmTasks( 'grunt-mkdir' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
@@ -149,12 +147,8 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'checkInstallPath', 'Check if the install path is set', function () {
-		checkInstallPathNotFound( MW_INSTALL_PATH, grunt );
-	} );
-
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
-	grunt.registerTask( 'docs', [ 'checkInstallPath', 'clean:jsdocs', 'mkdir:jsdocs', 'jsduck:main' ] );
+	grunt.registerTask( 'docs', [ 'clean:jsdocs', 'mkdir:jsdocs', 'jsduck:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
@@ -163,19 +157,3 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'default', [ 'test' ] );
 };
-
-/**
- * Checks if the path is set, and if not it prints an error message and bails
- * out
- */
-function checkInstallPathNotFound( MW_INSTALL_PATH, grunt ) {
-	if ( !MW_INSTALL_PATH ) {
-		grunt.log.error(
-			'MW_INSTALL_PATH is not set. Please set it to your root mediawiki installation or pass the --MW_INSTALL_PATH to grunt.\n\n' +
-			'\n    export MW_INSTALL_PATH=/Users/johndoe/dev/mediawiki' +
-			'\n    MW_INSTALL_PATH=../../ grunt' +
-			'\n    grunt --MW_INSTALL_PATH=../../'
-		);
-		process.exit( 1 );
-	}
-}
