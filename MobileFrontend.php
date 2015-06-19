@@ -42,7 +42,7 @@ $wgMessagesDirs['MobileFrontend'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['MobileFrontendAlias'] = __DIR__ . "/MobileFrontend.alias.php";
 
 // autoload extension classes
-$autoloadClasses = array (
+$autoloadClasses = array(
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
