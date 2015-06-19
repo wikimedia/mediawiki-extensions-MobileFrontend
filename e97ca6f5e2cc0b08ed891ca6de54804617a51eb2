@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_33f195c8",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-19T21:12:30Z",
+      "side": 1,
+      "message": "From my perspective, beta code should be as close to shippable as possible. I agree it should be done in a separate patch but should probably be done before doing this to make it easier to revert if needed.\n\n\"working\" is one thing but code quality is another.\nThere is no rush to get this feature out, so why not take some time to better the code?\n\nThey all seem to have one thing in common here in that they open the main menu, so there should be an easy way to locate these buttons [role\u003dmainmenu] or .main-menu-button\n\nWe\u0027re using an id selector here already which seems ill-thought out since it assumes we will always access a main menu.\n\nThat\u0027s my 2 cents anyway.\nNot knowing this code well though it would be better to get feedback from someone who understands its idiosyncrasies",
+      "parentUuid": "8ec42329_df293a37",
+      "revId": "e97ca6f5e2cc0b08ed891ca6de54804617a51eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_ccfe7966",
         "filename": "resources/mobile.mainMenu/MainMenu.js",
         "patchSetId": 2
