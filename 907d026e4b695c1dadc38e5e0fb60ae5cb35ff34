@@ -69,6 +69,24 @@
       "revId": "907d026e4b695c1dadc38e5e0fb60ae5cb35ff34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_787cdc1b",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-19T17:09:11Z",
+      "side": 1,
+      "message": "Understood. This is quite a dumb class in that it takes some data and does some things. If it\u0027s not given the wikidataDescription, then that\u0027s okay.",
+      "parentUuid": "8ec42329_78605ccc",
+      "revId": "907d026e4b695c1dadc38e5e0fb60ae5cb35ff34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
