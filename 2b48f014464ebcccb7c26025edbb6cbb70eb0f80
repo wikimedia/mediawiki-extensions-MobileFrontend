@@ -16,6 +16,24 @@
       "revId": "2b48f014464ebcccb7c26025edbb6cbb70eb0f80",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_64a18e90",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 975,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2015-06-20T19:10:02Z",
+      "side": 1,
+      "message": "Please see the ticket https://phabricator.wikimedia.org/T93213, I think the discussion there provides enough information. If you disagree, please comment there to that effect.",
+      "parentUuid": "8ec42329_c40e42e8",
+      "revId": "2b48f014464ebcccb7c26025edbb6cbb70eb0f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
