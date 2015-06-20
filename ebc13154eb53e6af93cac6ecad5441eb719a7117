@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_846d9a97",
+        "filename": "resources/mobile.pagelist/PageListItem.hogan",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-20T14:37:33Z",
+      "side": 1,
+      "message": "the truncated text doesn\u0027t work like expected. It uses the parent max-width, which is 1000px, but it starts with an offset at the left side. So, if the description is too long, it will go ouside of the visible area.\n\nAnd this will not work for smartohone widths for some reason :/",
+      "revId": "ebc13154eb53e6af93cac6ecad5441eb719a7117",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
