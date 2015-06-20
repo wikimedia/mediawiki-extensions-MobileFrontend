@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_244f063b",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 770,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-20T14:20:32Z",
+      "side": 1,
+      "message": "It\u0027s only used in combination with CentralAuth, which is, in fact, mostly used in WMF wikis as far as I know. But, this function indicates, that it works for both, an installation with a different mobile url and an installation without a different mobile url, which is a false positive. If there isn\u0027t a mobile url template (both, desktop and mobile has the same url, e.g. mostly used in third party wikis), this will return always true.\n\nThat\u0027s not a problem, as long as this function is only used in CentralAuth, but i suspect, that, if a function exists in MobileFrontend, it is possible, that it is used in other places, too. So I suggest to at least add a comment, that this function only works, if $wgMobileUrlTemplate is set, or implement a check for it in some way :)",
+      "revId": "dc860baff99acaa2d417167cbbc8f33a24fb85cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
