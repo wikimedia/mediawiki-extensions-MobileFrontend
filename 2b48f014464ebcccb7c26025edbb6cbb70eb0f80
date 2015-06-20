@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c40e42e8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 975,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-20T14:45:23Z",
+      "side": 1,
+      "message": "hmm, why deactivating it for mobile? You should add a comment, why the hreflang links shouldn\u0027t be added to the mobile page :)",
+      "revId": "2b48f014464ebcccb7c26025edbb6cbb70eb0f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
