@@ -24,6 +24,13 @@
 		font-weight: bold;
 	}
 
+	// Generic pointer definition
+	.tutorial-pointer {
+		position: absolute;
+		border-right: solid 10px transparent;
+		border-left: solid 10px transparent;
+	}
+
 	&.tutorial-overlay {
 		background: @colorTutorial;
 		box-shadow: none;
@@ -31,6 +38,11 @@
 
 		p {
 			text-align: left;
+		}
+
+		// Pointer color nested so it may be changed in other tutorials
+		.tutorial-pointer {
+			border-bottom: solid 10px @colorTutorial;
 		}
 
 		.button {
