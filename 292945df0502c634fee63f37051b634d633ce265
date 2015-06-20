@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_64caeea4",
+        "filename": "resources/mobile.contentOverlays/tutorials.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-20T14:07:16Z",
+      "side": 1,
+      "message": "instead of #2E76FF use @colorTutorial :)",
+      "revId": "292945df0502c634fee63f37051b634d633ce265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
