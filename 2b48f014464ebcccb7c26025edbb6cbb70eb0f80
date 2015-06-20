@@ -52,6 +52,24 @@
       "revId": "2b48f014464ebcccb7c26025edbb6cbb70eb0f80",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e4b49ed1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 975,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2015-06-20T19:16:26Z",
+      "side": 1,
+      "message": "ok, I\u0027ll add the comment",
+      "parentUuid": "8ec42329_24a706a6",
+      "revId": "2b48f014464ebcccb7c26025edbb6cbb70eb0f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
