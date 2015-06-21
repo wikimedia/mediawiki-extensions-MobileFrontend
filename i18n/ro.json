@@ -374,6 +374,7 @@
 	"mobile-frontend-time-precision-annum": "$1 de ani d.Hr.",
 	"mobile-frontend-time-precision-millennium": "$1 mii de ani d.Hr.",
 	"mobile-frontend-time-precision-century": "$1 sute de ani d.Hr.",
+	"mobile-frontend-time-precision-10annum": "$1s",
 	"mobile-frontend-time-precision-BCE-Gannum": "$1 miliarde de ani î.Hr.",
 	"mobile-frontend-time-precision-BCE-Mannum": "$1 milioane de ani î.Hr.",
 	"mobile-frontend-time-precision-BCE-annum": "$1 de ani î.Hr.",

@@ -4,7 +4,8 @@
 			"Fohanno",
 			"Fulup",
 			"Y-M D",
-			"Gwenn-Ael"
+			"Gwenn-Ael",
+			"Pymouss"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Skrivit ar c'hod kadarnaat",
@@ -168,5 +169,6 @@
 	"nearby": "Pajennoù tost deoc'h",
 	"tag-mobile_edit": "Kemmañ gant an hezoug",
 	"tag-mobile_web_edit": "Kemmañ dre ar web hezoug",
+	"mobile-frontend-pageaction-edit-tooltip": "Kemmañ rann dibenn ar bajenn-man.",
 	"mobile-frontend-donate-button-label": "Ober un donezon"
 }

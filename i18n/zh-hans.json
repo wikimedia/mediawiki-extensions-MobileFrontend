@@ -423,6 +423,7 @@
 	"mobile-frontend-time-precision-annum": "公元$1年",
 	"mobile-frontend-time-precision-millennium": "公元$1千年",
 	"mobile-frontend-time-precision-century": "公元$1百年",
+	"mobile-frontend-time-precision-10annum": "$1",
 	"mobile-frontend-time-precision-BCE-Gannum": "公元前$1十亿年",
 	"mobile-frontend-time-precision-BCE-Mannum": "公元前$1百万年",
 	"mobile-frontend-time-precision-BCE-annum": "公元前$1年",

@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"The Discoverer"
+		]
+	},
+	"mobile-frontend-changeslist-nocomment": "Bodlopachem apros na",
+	"mobile-frontend-copyright": "Hantuntlem mozkur $1-chea ontorgot uplobdh asa jem miren her nondi korunk nant.",
+	"mobile-frontend-editor-edit": "Bodol",
+	"mobile-frontend-featured-article": "Aizchem ashyachem akarshan",
+	"mobile-frontend-generic-login": "{{SITENAME}} tujea bhaxen lokani kel'la",
+	"mobile-frontend-generic-login-action": "Yogdan diupak sotrorombh kor.",
+	"mobile-frontend-home-button": "Ghor",
+	"mobile-frontend-language-article-heading": "Her bhashen vach",
+	"mobile-frontend-last-modified-date": "$1, $2 vaztam kel'lo akherchem bodol",
+	"mobile-frontend-login": "Sotrorombh kor",
+	"mobile-frontend-main-menu-account-create": "Khatem roch",
+	"mobile-frontend-main-menu-button-tooltip": "Mukhel suchi ugod",
+	"mobile-frontend-main-menu-login": "Sotrorombh kor",
+	"mobile-frontend-main-menu-nearby": "Lagshilim",
+	"mobile-frontend-main-menu-settings": "Mandavoll",
+	"mobile-frontend-main-menu-watchlist": "Sadurachi volleri",
+	"mobile-frontend-news-items": "Khobrani",
+	"mobile-frontend-password-placeholder": "Gupitutor",
+	"mobile-frontend-placeholder": "{{SITENAME}}-ant sod",
+	"mobile-frontend-privacy-link-text": "Guptai",
+	"mobile-frontend-random-button": "Avishisht",
+	"mobile-frontend-terms-text": "Vaporpacheo Ati",
+	"mobile-frontend-username-placeholder": "Vapurpeachem nanv",
+	"mobile-frontend-view": "Mobile-avruti",
+	"mobile-frontend-view-desktop": "Komputer",
+	"mobile-frontend-view-mobile": "Mobail",
+	"tag-mobile_edit": "Mobail bodol",
+	"tag-mobile_web_edit": "Mobile app-a vorvim kel'le bodlop",
+	"mobile-frontend-pageaction-edit-tooltip": "Hea panachea mukhel bhag bodol"
+}
