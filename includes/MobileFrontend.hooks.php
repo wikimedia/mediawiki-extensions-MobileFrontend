@@ -571,7 +571,11 @@ class MobileFrontendHooks {
 	 */
 	public static function onUserLoginForm( &$template ) {
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
+		if (
+			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
+			!$context->isAlphaGroupMember() &&
+			$context->shouldDisplayMobileView()
+		) {
 			$template = new UserLoginMobileTemplate( $template );
 		}
 
@@ -587,7 +591,11 @@ class MobileFrontendHooks {
 	 */
 	public static function onUserCreateForm( &$template ) {
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
+		if (
+			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
+			!$context->isAlphaGroupMember() &&
+			$context->shouldDisplayMobileView()
+		) {
 			$template = new UserAccountCreateMobileTemplate( $template );
 		}
 

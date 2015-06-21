@@ -34,3 +34,9 @@ $wgMFIsBrowseEnabled = false;
 $wgMFBrowseTags = array(
 	// 'Category:English_post-rock_groups' => 'Objectively awesome music',
 );
+
+/**
+ * Disable login page override in all modes.
+ * FIXME: This config is highly experimental and temporary only. Use it on your own risk!
+ */
+$wgMFNoLoginOverride = false;
