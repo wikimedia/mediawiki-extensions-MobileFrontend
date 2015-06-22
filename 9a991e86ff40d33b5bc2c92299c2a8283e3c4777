@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ca1ac06e",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-22T21:43:05Z",
+      "side": 1,
+      "message": "ids are an anti-pattern. They shouldn\u0027t be needed for styling... can you please clarify which content-header you are trying to avoid applying this style to?",
+      "revId": "9a991e86ff40d33b5bc2c92299c2a8283e3c4777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ea1f7c5c",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-22T21:43:05Z",
+      "side": 1,
+      "message": "I\u0027m confused.. why are these needed? Do panels appear in history / watchlist? Is this a separate bug to the one you are fixing?",
+      "revId": "9a991e86ff40d33b5bc2c92299c2a8283e3c4777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
