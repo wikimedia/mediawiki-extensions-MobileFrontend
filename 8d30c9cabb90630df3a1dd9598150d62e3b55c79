@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_0ad76851",
+        "filename": "resources/mobile.search.beta/SearchApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-06-22T21:48:38Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure they are saying to put this directly in the SearchApi module (in stable) and only use it in beta.",
+      "parentUuid": "8ec42329_7b004839",
+      "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_7b3848d0",
         "filename": "resources/mobile.search/init.js",
         "patchSetId": 6
