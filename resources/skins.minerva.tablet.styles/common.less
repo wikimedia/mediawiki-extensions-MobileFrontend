@@ -34,6 +34,15 @@ A file for css that optimises the Minerva skin on larger devices.
 		top: 0;
 	}
 
+	.stable {
+		// FIXME: Have a class that identifies all 3 of these
+		.pre-content,
+		.content,
+		.content-overlay {
+			max-width: @contentMaxWidthTablet;
+		}
+	}
+
 	// FIXME: Have a class that identifies all 4 of these
 	.drawer,
 	.pre-content,
