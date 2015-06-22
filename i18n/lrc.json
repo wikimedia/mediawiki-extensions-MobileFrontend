@@ -231,7 +231,7 @@
 	"mobile-frontend-userlogin-loggedin-register": "شما ایسه د عنوان {{GENDER:$1|$1}} اومایته وا مین.\nد فرم هاری سی وا مین اومائن وه عنوان کاریار هنی استفاده بکیتو.",
 	"mobile-frontend-username": "نوم كاروری:",
 	"mobile-frontend-username-placeholder": "نوم کاریاری",
-	"mobile-frontend-view": "ديئن موبايل",
+	"mobile-frontend-view": "ديئن موبایلی",
 	"mobile-frontend-view-desktop": "ميزكار",
 	"mobile-frontend-view-mobile": "موبايل",
 	"mobile-frontend-view-source": "سرچشمه نه بوينيت",

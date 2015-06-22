@@ -205,8 +205,8 @@
 	"mobile-frontend-watchlist-removed": "Inikkat ti $1 manipud idiay listaan ti banbantayam",
 	"mobile-frontend-watchlist-view": "Kitaem ti listaan ti banbantayam",
 	"nearby": "Pampanid nga asideg kenka",
-	"tag-mobile_edit": "Mobile a panag-urnos",
+	"tag-mobile_edit": "Urnos ti mobile",
 	"tag-mobile_edit-description": "Urnos nga inaramid manipud ti sitio ti mobile",
-	"tag-mobile_web_edit": "Unrnos ti web ti mobile",
+	"tag-mobile_web_edit": "Urnos ti web ti mobile",
 	"mobile-frontend-pageaction-edit-tooltip": "Urnosen ti pangyuna a paset iti daytoy a panid"
 }
