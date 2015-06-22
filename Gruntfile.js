@@ -70,6 +70,10 @@ module.exports = function ( grunt ) {
 						'<%= QUNIT_FILTER %><%= QUNIT_MODULE %>'
 					],
 					coverage: {
+						linesThresholdPct: 65,
+						statementsThresholdPct: 65,
+						functionsThresholdPct: 61,
+						branchesThresholdPct: 52,
 						prefixUrl: 'w/', // Prefix url on the server
 						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
 						src: [
