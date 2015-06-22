@@ -74,6 +74,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
+		// add beta styles
+		if ( MobileContext::singleton()->isBetaGroupMember() ) {
+			$output->addModuleStyles( 'skins.minerva.special.watchlist.beta.styles' );
+		}
+
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();
 		if ( $this->optionsChanged ) {
@@ -82,6 +87,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		if ( $this->view === 'feed' ) {
 			$output->addHtml( $this->getWatchlistHeader( $user ) );
+			$output->addHtml(
+				Html::openElement( 'div', array( 'class' => 'content-unstyled' ) )
+			);
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
 
@@ -90,6 +98,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			} else {
 				$this->showEmptyList( true );
 			}
+			$output->addHtml(
+				Html::closeElement( 'div' )
+			);
 		} else {
 			$output->redirect( SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL() );
 		}
