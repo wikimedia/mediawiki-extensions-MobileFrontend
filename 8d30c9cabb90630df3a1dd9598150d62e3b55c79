@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_7b004839",
+        "filename": "resources/mobile.search.beta/SearchApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-22T16:45:41Z",
+      "side": 1,
+      "message": "Sorry, not following. Are you saying I should put this code with the stable code? I think sam was talking about something else, which I already took care of.",
+      "parentUuid": "8ec42329_7b3fe8b1",
+      "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_7b3848d0",
         "filename": "resources/mobile.search/init.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-22T15:28:27Z",
       "side": 1,
       "message": "This will cause an additional HTTP request for all js users on page load which is not acceptable.\n\nYou\u0027ll need to do this using addModules to pack them into one single HTTP request or load it using mw.loader.using once the URL is requested.",
+      "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_fbec3890",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-22T16:45:41Z",
+      "side": 1,
+      "message": "Wasn\u0027t this already the case? SearchOverlay was already being loaded at the top of the page, no?",
+      "parentUuid": "8ec42329_7b3848d0",
       "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
