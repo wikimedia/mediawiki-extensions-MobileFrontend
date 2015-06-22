@@ -16,6 +16,24 @@
       "revId": "292945df0502c634fee63f37051b634d633ce265",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_be1a1e6d",
+        "filename": "resources/mobile.contentOverlays/tutorials.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-06-22T17:05:48Z",
+      "side": 1,
+      "message": "oh yeah. Thanks :)",
+      "parentUuid": "8ec42329_64caeea4",
+      "revId": "292945df0502c634fee63f37051b634d633ce265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
