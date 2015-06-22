@@ -103,6 +103,20 @@
 		},
 
 		/**
+		 * SearchOverlay is not managed by OverlayManager and using window.history.back() causes
+		 * problems described in T102946, i.e. the users should not be taken to the previous page
+		 * when landing on /wiki/Foo#/search directly. The overlay should just close.
+		 * @inheritdoc
+		 * @param {Object} ev Event Object
+		 */
+		onExit: function ( ev ) {
+			ev.preventDefault();
+			ev.stopPropagation();
+			this.hide();
+			window.location.hash = '';
+		},
+
+		/**
 		 * Make sure search header is docked to the top of the screen when the
 		 * user begins typing so that there is adequate space for search results
 		 * above the keyboard. (This is only a potential issue when sitenotices
