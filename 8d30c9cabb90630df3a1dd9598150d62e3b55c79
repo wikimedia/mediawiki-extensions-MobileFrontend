@@ -69,6 +69,24 @@
       "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1b6fc4fb",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-22T16:51:36Z",
+      "side": 1,
+      "message": "I see what you mean. I think I\u0027ll just remove that line. I\u0027m already using mw.loader.using below.",
+      "parentUuid": "8ec42329_fbec3890",
+      "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
