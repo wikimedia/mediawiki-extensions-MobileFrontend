@@ -168,6 +168,7 @@
 	"mobile-frontend-generic-404-title": "Error - Page not found",
 	"mobile-frontend-generic-login": "{{SITENAME}} is made by people like you.",
 	"mobile-frontend-generic-login-action": "Log in to contribute.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} is made by people like you.</strong><br />Log in to contribute.",
 	"mobile-frontend-generic-signup-action": "Sign up to contribute.",
 	"mobile-frontend-history": "View edit history of this page.",
 	"mobile-frontend-history-404-desc": "Cannot look at history for a page that doesn't exist. It may have been deleted or you may have followed a bad link.",
