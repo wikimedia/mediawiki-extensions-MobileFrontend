@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_d62ca3f4",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-23T18:34:09Z",
+      "side": 1,
+      "message": "Instead of this use a spy and run calledOnce http://sinonjs.org/docs/",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_561993da",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-23T18:34:09Z",
+      "side": 1,
+      "message": "Not sure this should be restored outside teardown. I\u0027d suggest you put non- anonymous tests in a separate module - will also improve visiblity :)",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_16ab0b6e",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-23T18:34:09Z",
+      "side": 1,
+      "message": "Probably best to trigger the function programatically as the selector may change.\n\nOr we should use trigger( \u0027click\u0027 )",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b6bb17b9",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-23T18:34:09Z",
+      "side": 1,
+      "message": "Same as above",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
