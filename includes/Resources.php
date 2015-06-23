@@ -248,8 +248,14 @@ $wgMinervaStyleModules = array(
 					'rtl' => 'images/icons/move-rtl.svg',
 				),
 			),
+			// NOTE: these icons are available but not used anywhere yet. This note will be
+			// removed in a later patch.
+			// Special:MobileMenu-specific back icon
+			'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
+			'search' => 'images/icons/magnifying-glass.svg',
 		),
 	),
+	// FIXME: remove this module when Gather stops using it
 	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
 			'position' => 'bottom',
 			'class' => 'ResourceLoaderImageModule',
