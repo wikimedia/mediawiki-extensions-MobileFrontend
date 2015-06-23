@@ -6,6 +6,7 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Hiverina any amina fizarana nialoha",
+	"mobile-frontend-changeslist-nocomment": "tsy misy ambangovangom-panovana",
 	"mobile-frontend-copyright": "Mitondra ny lisansa $1 ny votoatiny raha tsy misy zava-kafa ambara.",
 	"mobile-frontend-editor-edit": "Hanova",
 	"mobile-frontend-fontchanger-link": "Haben-tarehin-tsoratra",
@@ -25,6 +26,7 @@
 	"mobile-frontend-main-menu-nearby": "Eto akaiky",
 	"mobile-frontend-main-menu-settings": "Fanafahana",
 	"mobile-frontend-main-menu-watchlist": "Pejy arahana",
+	"mobile-frontend-news-items": "Vaovao",
 	"mobile-frontend-password-placeholder": "Tenimiafina",
 	"mobile-frontend-placeholder": "Karohina amin'i {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Fiainana manokana",
