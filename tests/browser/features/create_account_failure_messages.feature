@@ -4,7 +4,6 @@ Feature: Create failure messages
     Given I am using the mobile site
         And I am on the sign-up page
 
-  @skip @T103107
   Scenario: Create account password mismatch message
     When I sign up with two different passwords
     Then I should see an error indicating they do not match
