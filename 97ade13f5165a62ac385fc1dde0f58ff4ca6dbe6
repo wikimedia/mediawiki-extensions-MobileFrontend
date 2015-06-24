@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_c565c0ac",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-24T12:40:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_d62ca3f4",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_561993da",
         "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-23T18:34:09Z",
       "side": 1,
       "message": "Not sure this should be restored outside teardown. I\u0027d suggest you put non- anonymous tests in a separate module - will also improve visiblity :)",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_256da495",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-24T12:40:35Z",
+      "side": 1,
+      "message": "Ok!",
+      "parentUuid": "8ec42329_561993da",
       "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_0570a86d",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-24T12:40:35Z",
+      "side": 1,
+      "message": "click() is an alias of trigger( \u0027click\u0027 ), isn\u0027t it? I thought about it, but it\u0027s also possible, that the function name is changed, i\u0027m not sure, what would be better. In fact we test what happens when the user clicks the button, so wouldn\u0027t it be better to simulate a click on the button to test the stack?\n\nThis looks more like a browser test, but browser tests don\u0027t run on each change (not now), so i\u0027m no sure, if we should extend unit tests in this way. What do you think? :/",
+      "parentUuid": "8ec42329_16ab0b6e",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_b6bb17b9",
         "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2015-06-23T18:34:09Z",
       "side": 1,
       "message": "Same as above",
+      "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_4509d0de",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-24T12:40:35Z",
+      "side": 1,
+      "message": "see above :)",
+      "parentUuid": "8ec42329_b6bb17b9",
       "revId": "97ade13f5165a62ac385fc1dde0f58ff4ca6dbe6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
