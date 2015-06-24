@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_e204721c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-24T11:33:34Z",
+      "side": 1,
+      "message": "I have never seen a white close icon. This default should be gray.",
+      "revId": "9a1c7ec22b65aac9a3d3ddc5236e31ed391a133a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
