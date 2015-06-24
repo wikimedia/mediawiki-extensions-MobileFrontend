@@ -86,9 +86,8 @@
 			// FIXME: Remove when cache clears https://phabricator.wikimedia.org/T102868
 			this.$el.addClass( 'view-border-box' );
 			// Listen to the main menu button clicks
-			// In alpha there is no #mw-mf-main-menu-button, the user can click on the header
-			// search icon or the site name in the header to open the main menu
-			$( '#mw-mf-main-menu-button, .alpha .header a.header-icon, .alpha .header .header-title a' )
+			// FIXME: remove #mw-mf-main-menu-button when cache clears
+			$( '#mw-mf-main-menu-button, .header .main-menu-button' )
 				.off( 'click' )
 				.on( 'click', function ( ev ) {
 					if ( self.isOpen() ) {

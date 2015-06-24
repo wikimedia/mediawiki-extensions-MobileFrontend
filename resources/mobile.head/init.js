@@ -80,9 +80,8 @@
 	M.on( 'history-link-loaded', initHistoryLink );
 	M.on( 'header-loaded', function () {
 		// Render MainMenu when needed
-		// In alpha there is no #mw-mf-main-menu-button, the user can click on the header
-		// search icon or the site name in the header to open the main menu
-		$( '#mw-mf-main-menu-button, .alpha .header a.header-icon, .alpha .header .header-title a' )
+		// FIXME: remove #mw-mf-main-menu-button when cache clears
+		$( '#mw-mf-main-menu-button, .header .main-menu-button' )
 			.on( 'click', function ( ev ) {
 				mainMenu.openNavigationDrawer();
 				ev.preventDefault();

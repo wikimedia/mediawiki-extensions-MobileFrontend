@@ -731,7 +731,7 @@ class SkinMinerva extends SkinTemplate {
 			Html::element( 'a', array(
 				'title' => $this->msg( 'mobile-frontend-main-menu-button-tooltip' ),
 				'href' => $url,
-				'class' => MobileUI::iconClass( 'mainmenu' ),
+				'class' => MobileUI::iconClass( 'mainmenu', 'element', 'main-menu-button' ),
 				'id'=> 'mw-mf-main-menu-button',
 			), $this->msg( 'mobile-frontend-main-menu-button-tooltip' ) )
 		);
