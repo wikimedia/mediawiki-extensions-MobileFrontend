@@ -109,6 +109,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_453b1097",
+        "filename": "resources/mobile.search.beta/SearchApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-06-24T12:38:51Z",
+      "side": 1,
+      "message": "I feel like there\u0027s a case for having it separate while in beta, and merging them afterwards, but adding new methods with new names to the existing api could also work just fine.\n\nIf the new api overrides old api methods, then it is changing it\u0027s behavior implicitly, so the code that calls that needs to be aware of which implementation it\u0027s using because the results are not the same.\n\nIf we have new methods, we have to change where the methods are called explicitly and handle that it is a different method with different results on each case, which may be better because it makes you explicitly think about what to use, but it may be a bit more work depending on how many places the api is used.\n\nIMO, if we test, both options can be good. Great convo, even though i\u0027m a bit too late :D",
+      "parentUuid": "8ec42329_e2cc7567",
+      "revId": "8d30c9cabb90630df3a1dd9598150d62e3b55c79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_7b3848d0",
         "filename": "resources/mobile.search/init.js",
         "patchSetId": 6
