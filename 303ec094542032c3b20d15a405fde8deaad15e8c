@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c9ef16e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T22:19:28Z",
+      "side": 1,
+      "message": "Please elaborate on this? Which regression? Which bug? Should these be fixed separately and SWATed - you\u0027re talking about stable?\n\nThese make me less unsettled :)",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_a9f2cacb",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T22:19:28Z",
+      "side": 1,
+      "message": "It\u0027s not 100% clear why these changes are happening when the commit message/task only talks about the widths. Can you clarify this.. are you fixing another bug?",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_49e4860a",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T22:19:28Z",
+      "side": 1,
+      "message": "use nesting and put this above.",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_09eafed5",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T22:19:28Z",
+      "side": 1,
+      "message": "This is why I hate styling with ids... why can\u0027t we use a class for this and the rule above?",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e9ec52f4",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T22:19:28Z",
+      "side": 1,
+      "message": "have we got a variable for this?",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
