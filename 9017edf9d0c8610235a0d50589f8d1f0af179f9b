@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_45031010",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-24T11:40:46Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be added to minerva only?",
+      "revId": "9017edf9d0c8610235a0d50589f8d1f0af179f9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
