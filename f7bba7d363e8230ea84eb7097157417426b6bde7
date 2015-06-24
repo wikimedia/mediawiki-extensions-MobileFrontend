@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_763cc42d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T18:11:36Z",
+      "side": 1,
+      "message": "Just a word of warning, you are introducing 4 icons here - back-mobilemenu-invert and search-invert due to the variants.\n\nWe might want to add a note saying these are available but not used anywhere.",
+      "revId": "f7bba7d363e8230ea84eb7097157417426b6bde7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_f6e8b4a4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T18:11:36Z",
+      "side": 1,
+      "message": "Should probably have a FIXME saying which this still exists so we don\u0027t forget to remove it when Gather does.",
+      "revId": "f7bba7d363e8230ea84eb7097157417426b6bde7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
