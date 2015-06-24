@@ -52,6 +52,24 @@
       "revId": "9a1c7ec22b65aac9a3d3ddc5236e31ed391a133a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5c7e8968",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-24T19:12:28Z",
+      "side": 1,
+      "message": "OK makes sense. I\u0027ve created a related bug T103732.",
+      "parentUuid": "8ec42329_165a2085",
+      "revId": "9a1c7ec22b65aac9a3d3ddc5236e31ed391a133a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
