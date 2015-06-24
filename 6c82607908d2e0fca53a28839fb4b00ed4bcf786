@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9c66314d",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T20:20:38Z",
+      "side": 1,
+      "message": "Note since this is a global jquery I can add a main menu button in the content - would be good to scope this to a known \u0027views\u0027 or at least outside content area.",
+      "revId": "6c82607908d2e0fca53a28839fb4b00ed4bcf786",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
