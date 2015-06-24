@@ -34,6 +34,24 @@
       "revId": "9a1c7ec22b65aac9a3d3ddc5236e31ed391a133a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_165a2085",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-24T18:16:40Z",
+      "side": 1,
+      "message": "(and it\u0027s being used by the image overlay so i\u0027m not planning on messing with it)\nThe default is gray and it\u0027s defined in close.svg\nI\u0027d suggest reading through the code to get an idea of how these variants work: https://doc.wikimedia.org/mediawiki-core/master/php/classResourceLoaderImageModule.html",
+      "parentUuid": "8ec42329_d67818f0",
+      "revId": "9a1c7ec22b65aac9a3d3ddc5236e31ed391a133a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
