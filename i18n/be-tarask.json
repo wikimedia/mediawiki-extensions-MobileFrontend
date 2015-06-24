@@ -43,7 +43,7 @@
 	"mobile-frontend-generic-login": "{{SITENAME}} ствараецца такімі ж людзьмі, як вы.",
 	"mobile-frontend-generic-login-action": "Увайдзіце, каб зрабіць унёсак.",
 	"mobile-frontend-history": "Праглядзець гісторыю зьменаў гэтай старонкі.",
-	"mobile-frontend-home-button": "Хатняя",
+	"mobile-frontend-home-button": "Дадому",
 	"mobile-frontend-images-status": "Выявы",
 	"mobile-frontend-language-article-heading": "Чытаць на іншай мове",
 	"mobile-frontend-language-header": "Гэтая старонка даступная на $1 {{PLURAL:$1|мове|мовах}}",
