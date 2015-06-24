@@ -63,18 +63,19 @@ class MobileUserInfo {
 	 * @return int the amount of edits
 	 */
 	public function countRecentUploads( $fromDate ) {
-		global $wgMFPhotoUploadWiki, $wgConf;
+		$mfPhotoUploadWiki = MobileContext::singleton()->getMFConfig()->get( 'MFPhotoUploadWiki' );
+		global $wgConf;
 
-		if ( !$wgMFPhotoUploadWiki ) {
+		if ( !$mfPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
-			$wgMFPhotoUploadWiki &&
-			!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
+			$mfPhotoUploadWiki &&
+			!in_array( $mfPhotoUploadWiki, $wgConf->getLocalDatabases() )
 		) {
 			// early return if the database is invalid
 			return false;
 		} else {
-			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
+			$dbr = wfGetDB( DB_SLAVE, array(), $mfPhotoUploadWiki );
 		}
 
 		$where = array( 'img_user_text' => $this->user->getName() );

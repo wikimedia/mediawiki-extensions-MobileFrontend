@@ -442,8 +442,13 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	private function getData( Title $title, $noImages ) {
-		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize,
-			$wgMFSpecialCaseMainPage;
+		$mfConfig = MobileContext::singleton()->getMFConfig();
+		$useTidy = $this->getConfig()->get( 'UseTidy' );
+		$mfTidyMobileViewSections = $mfConfig->get( 'MFTidyMobileViewSections' );
+		$mfMinCachedPageSize = $mfConfig->get( 'MFMinCachedPageSize' );
+		$mfSpecialCaseMainPage = $mfConfig->get( 'MFSpecialCaseMainPage' );
+
+		global $wgMemc;
 
 		$result = $this->getResult();
 		$wp = $this->makeWikiPage( $title );
@@ -504,7 +509,7 @@ class ApiMobileView extends ApiBase {
 			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
 			$mf->setRemoveMedia( $noImages );
 			$mf->filterContent();
-			$mf->setIsMainPage( $this->mainPage && $wgMFSpecialCaseMainPage );
+			$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
 			$html = $mf->getText();
 		}
 
@@ -536,7 +541,7 @@ class ApiMobileView extends ApiBase {
 				if ( count( $data['text'] ) ) {
 					$chunk = "<h$chunk";
 				}
-				if ( $wgUseTidy && $wgMFTidyMobileViewSections && count( $chunks ) > 1 ) {
+				if ( $useTidy && $mfTidyMobileViewSections && count( $chunks ) > 1 ) {
 					$chunk = MWTidy::tidy( $chunk );
 				}
 				if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
@@ -586,7 +591,7 @@ class ApiMobileView extends ApiBase {
 		}
 
 		// Don't store small pages to decrease cache size requirements
-		if ( strlen( $html ) >= $wgMFMinCachedPageSize ) {
+		if ( strlen( $html ) >= $mfMinCachedPageSize ) {
 			// store for the same time as original parser output
 			$wgMemc->set( $key, $data, $cacheExpiry );
 		}

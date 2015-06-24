@@ -82,6 +82,14 @@ class MobileContext extends ContextSource {
 	 * @var Config MobileFrontend's config object
 	 */
 	private $configObj;
+	/**
+	 * @var String Domain to use for the stopMobileRedirect cookie
+	 */
+	public static $mfStopRedirectCookieHost = null;
+	/**
+	 * @var String Stores the actual mobile url template.
+	 */
+	private $mobileUrlTemplate = false;
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
@@ -425,7 +433,7 @@ class MobileContext extends ContextSource {
 		 * version of the site (otherwise, the cache may get polluted). See
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
 		 */
-		if ( $config->get( 'MobileUrlTemplate' )
+		if ( $this->getMobileUrlTemplate()
 			&& $mobileHeader
 			&& $this->getRequest()->getHeader( $mobileHeader ) !== false )
 		{
@@ -621,13 +629,15 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getStopMobileRedirectCookieDomain() {
-		global $wgMFStopRedirectCookieHost;
+		$mfStopRedirectCookieHost = $this->getMFConfig()->get( 'MFStopRedirectCookieHost' );
 
-		if ( !$wgMFStopRedirectCookieHost ) {
-			$wgMFStopRedirectCookieHost = $this->getBaseDomain();
+		if ( !$mfStopRedirectCookieHost ) {
+			self::$mfStopRedirectCookieHost = $this->getBaseDomain();
+		} else {
+			self::$mfStopRedirectCookieHost = $mfStopRedirectCookieHost;
 		}
 
-		return $wgMFStopRedirectCookieHost;
+		return self::$mfStopRedirectCookieHost;
 	}
 
 	/**
@@ -721,6 +731,17 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Get the template for mobile URLs.
+	 * @see $wgMobileUrlTemplate
+	 */
+	public function getMobileUrlTemplate() {
+		if ( !$this->mobileUrlTemplate ) {
+			$this->mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
+		}
+		return $this->mobileUrlTemplate;
+	}
+
+	/**
 	 * Take a URL and return a copy that conforms to the mobile URL template
 	 * @param string $url
 	 * @param bool $forceHttps
@@ -732,13 +753,12 @@ class MobileContext extends ContextSource {
 			$subdomainTokenReplacement = null;
 			if ( Hooks::run( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
 				if ( !empty( $subdomainTokenReplacement ) ) {
-					global $wgMobileUrlTemplate;
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
-					$wgMobileUrlTemplate = str_replace(
+					$this->mobileUrlTemplate = str_replace(
 						$mobileToken,
 						$subdomainTokenReplacement,
-						$wgMobileUrlTemplate
+						$this->getMobileUrlTemplate()
 					);
 				}
 			}
@@ -877,7 +897,7 @@ class MobileContext extends ContextSource {
 	 * @return mixed
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
-		$mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
+		$mobileUrlTemplate = $this->getMobileUrlTemplate();
 
 		$pathStartPos = strpos( $mobileUrlTemplate, '/' );
 
@@ -915,7 +935,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function toggleView( $view ) {
 		$this->viewChange = $view;
-		if ( !strlen( trim( $this->getMFConfig()->get( 'MobileUrlTemplate' ) ) ) ) {
+		if ( !strlen( trim( $this->getMobileUrlTemplate() ) ) ) {
 			$this->setUseFormat( $view );
 		}
 	}
@@ -924,7 +944,7 @@ class MobileContext extends ContextSource {
 	 * Performs view change as requested vy toggleView()
 	 */
 	public function doToggling() {
-		$mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
+		$mobileUrlTemplate = $this->getMobileUrlTemplate();
 
 		if ( !$this->viewChange ) {
 			return;

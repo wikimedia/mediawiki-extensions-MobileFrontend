@@ -57,11 +57,11 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @return MobileFormatter
 	 */
-	public static function newFromContext( $context, $html ) {
-		global $wgMFSpecialCaseMainPage;
+	public static function newFromContext( MobileContext $context, $html ) {
+		$mfSpecialCaseMainPage = $context->getMFConfig()->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
-		$isMainPage = $title->isMainPage() && $wgMFSpecialCaseMainPage;
+		$isMainPage = $title->isMainPage() && $mfSpecialCaseMainPage;
 		$isFilePage = $title->inNamespace( NS_FILE );
 		$isSpecialPage = $title->isSpecialPage();
 
@@ -100,11 +100,12 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return array
 	 */
 	public function filterContent( $removeDefaults = true ) {
-		global $wgMFRemovableClasses;
+		$mfRemovableClasses = MobileContext::singleton()->getMFConfig()
+			->get( 'MFRemovableClasses' );
 
 		if ( $removeDefaults ) {
-			$this->remove( $wgMFRemovableClasses['base'] );
-			$this->remove( $wgMFRemovableClasses['HTML'] ); // @todo: Migrate this variable
+			$this->remove( $mfRemovableClasses['base'] );
+			$this->remove( $mfRemovableClasses['HTML'] ); // @todo: Migrate this variable
 		}
 
 		if ( $this->removeMedia ) {
