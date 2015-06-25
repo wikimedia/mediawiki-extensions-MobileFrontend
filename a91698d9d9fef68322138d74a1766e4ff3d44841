@@ -34,6 +34,24 @@
       "revId": "a91698d9d9fef68322138d74a1766e4ff3d44841",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0a450147",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T20:28:23Z",
+      "side": 1,
+      "message": "mobile.references is a bit other case, it has to load a module no matter if there is a beta module or not :)\n\nI\u0027m not sure, if that\u0027s a good alternative or not: You could use SkinMinervaBeta.php to add your new module to the modules that should be loaded (or maybe directly in Resources, just add your module to the beta module equivalent of the one where mobile.search is added now). Here in SearchOverlay.js you could use mw.loader.using, if i\u0027m right it will not load a module twice, so if it is loaded via php already, ok, and if not, it will load it :)\n\nI hope you understand what i mean, it sounds like a bit confused :D",
+      "parentUuid": "8ec42329_5f28ad94",
+      "revId": "a91698d9d9fef68322138d74a1766e4ff3d44841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
