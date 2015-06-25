@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c41e1075",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T19:26:21Z",
+      "side": 1,
+      "message": "loader.loadModule adds an Loadingoverlay to hide the content until the module is loaded. This module is loaded on page startup (not bind to any interaction of the user) which would result in a LoadingOverlay when you open the page, and no visible action taken after it (except removing the overlay). In my point of view that\u0027s not acceptable :) Could you use mw.loader.load or a similar method?\n\nI\u0027m not sure, if loading the module via JS is the best solution at all, maybe we can work on a good separation of the modules to add the required modules via php to load it in combination with other modules, instead of alone :)",
+      "revId": "a91698d9d9fef68322138d74a1766e4ff3d44841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
