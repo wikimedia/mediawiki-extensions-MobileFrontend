@@ -73,6 +73,7 @@
 				} )
 				.fail( function () {
 					self.remove();
+					self.emit( 'loaded' );
 				} );
 		},
 
