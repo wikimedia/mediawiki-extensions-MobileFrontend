@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_bf475cbe",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T01:36:15Z",
+      "side": 1,
+      "message": "use WatchstarPageList.prototype.postRender.call\nI don\u0027t trust the use of _parent :)",
+      "revId": "ab12e6ed3746a710e746489cd439db870f012210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5f18b8d7",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T01:36:15Z",
+      "side": 1,
+      "message": "This should be done inside the template for this view. We avoid adding/removing elements in the DOM so that the template can be used as a point of reference.",
+      "revId": "ab12e6ed3746a710e746489cd439db870f012210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
