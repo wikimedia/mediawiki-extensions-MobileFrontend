@@ -33,6 +33,23 @@
       "revId": "03e7810fc1897a8d2ec70b4cb4525a04b59dd949",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b74bf561",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 613,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-25T23:35:22Z",
+      "side": 1,
+      "message": "Typo, fixed in If67729afea188bc4d3dc4caad40d975edd092497",
+      "revId": "03e7810fc1897a8d2ec70b4cb4525a04b59dd949",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
