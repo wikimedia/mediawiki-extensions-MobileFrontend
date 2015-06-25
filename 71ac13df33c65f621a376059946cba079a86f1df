@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_3fcfe15c",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T20:13:55Z",
+      "side": 1,
+      "message": "Okay this is what was confusing me. I\u0027ll add a padding reset to the main menu styles (the rule should be the other way around) - the header inside a main menu is a specific case.",
+      "parentUuid": "8ec42329_986b9615",
+      "revId": "71ac13df33c65f621a376059946cba079a86f1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_5861ae30",
         "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_5fcc2d65",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T20:13:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_5861ae30",
+      "revId": "71ac13df33c65f621a376059946cba079a86f1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_1857a65c",
         "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-25T10:57:55Z",
       "side": 1,
       "message": "You shouldn\u0027t do this. The close icon in talk overlay is not aligned with the content for example.",
+      "revId": "71ac13df33c65f621a376059946cba079a86f1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1f8a25c0",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T20:13:55Z",
+      "side": 1,
+      "message": "Not sure what you are talking about here. Looks fine to me..",
+      "parentUuid": "8ec42329_1857a65c",
       "revId": "71ac13df33c65f621a376059946cba079a86f1df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
