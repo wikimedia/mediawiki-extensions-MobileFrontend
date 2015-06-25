@@ -607,7 +607,7 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
 		$mfAppPackageId = $config->get( 'MFAppPackageId' );
-		$mfAppSchmee = $config->get( 'MFAppScheme' );
+		$mfAppScheme = $config->get( 'MFAppScheme' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
