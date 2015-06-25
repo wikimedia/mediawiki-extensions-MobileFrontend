@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_179e8966",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T23:56:04Z",
+      "side": 1,
+      "message": "How can I get this added to the page is there some sample hook code I can add to my LocalSettings.php ?",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_17c76968",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T23:56:04Z",
+      "side": 1,
+      "message": "This class is my only reservation with this patchset now as naming you know.. it\u0027s hard :)",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
