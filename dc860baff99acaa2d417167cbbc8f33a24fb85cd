@@ -52,6 +52,24 @@
       "revId": "dc860baff99acaa2d417167cbbc8f33a24fb85cd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_a5573ecc",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 770,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2015-06-25T22:25:15Z",
+      "side": 1,
+      "message": "\u003e But, this function indicates, that it works for both, an installation with a different mobile url and an installation without a different mobile url, which is a false positive. If there isn\u0027t a mobile url template (both, desktop and mobile has the same url, e.g. mostly used in third party wikis), this will return always true.\n\nI don\u0027t believe it is a false-positive. If no $wgMobileUrlTemplate is set, and the same domain is used for both mobile and desktop traffic, then this function correctly returns true for all requests-- because the domain that is used for mobile requests was called for this request. But we can certainly short-circuit and return either true of false for the case where $wgMobileUrlTemplate isn\u0027t set. I think true is the correct value, but you can make a case for false too (the domain isn\u0027t mobile-only).\n\nI\u0027ll add some unit tests too.",
+      "parentUuid": "8ec42329_e1379a48",
+      "revId": "dc860baff99acaa2d417167cbbc8f33a24fb85cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
