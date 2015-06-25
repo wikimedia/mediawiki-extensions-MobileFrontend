@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_16f6925a",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T18:29:24Z",
+      "side": 1,
+      "message": "You always load this script, template and the messages, but you don\u0027t need it at any time, that should be avoided, e.g. by putting it into an own module, maybe mobile.search.beta.",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_96b0428a",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T18:29:24Z",
+      "side": 1,
+      "message": "always null, if you don\u0027t export it from php to JavaScript (which i couldn\u0027t find in CirrusSearch and you haven\u0027t added it here, is there a change for it?)",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7684b6b4",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T18:29:24Z",
+      "side": 1,
+      "message": "an empty object isn\u0027t false in templates, which results in an empty line in the search overlay.",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
