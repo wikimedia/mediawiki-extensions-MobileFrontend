@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_44822003",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T19:11:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_16f6925a",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_96b0428a",
         "filename": "resources/mobile.search/SearchPageList.js",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_e4922c4e",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T19:11:52Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/220907/",
+      "parentUuid": "8ec42329_96b0428a",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_7684b6b4",
         "filename": "resources/mobile.search/SearchPageList.js",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-25T18:29:24Z",
       "side": 1,
       "message": "an empty object isn\u0027t false in templates, which results in an empty line in the search overlay.",
+      "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_2475942c",
+        "filename": "resources/mobile.search/SearchPageList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T19:11:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_7684b6b4",
       "revId": "ba9b352ea2495d7205788c733e029e22ea952ad0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
