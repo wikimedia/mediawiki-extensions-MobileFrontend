@@ -16,6 +16,24 @@
       "revId": "a91698d9d9fef68322138d74a1766e4ff3d44841",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5f28ad94",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T20:22:41Z",
+      "side": 1,
+      "message": "i can certainly switch over to mw.loader.load, thats trivial.\n\nI also agree its not preferable to grab this javascript independantly, but I don\u0027t know how we can make resource loader do \"the right thing\" in other cases.  The resources are not generated per user, so it has no clue that resources necessary for a beta experience are required.\n\nGrepping through mobile frontend it looks like loading beta modules as required is basically the current \u0027standard\u0027 experience.  Its done in mobile.references and mobile.mediaViewer.  I could push this out of the init and into a function so we only make this web request if the user really does a search?",
+      "parentUuid": "8ec42329_c41e1075",
+      "revId": "a91698d9d9fef68322138d74a1766e4ff3d44841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
