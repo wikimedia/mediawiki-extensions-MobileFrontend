@@ -34,6 +34,24 @@
       "revId": "ca3fb5959db7b75a3b9f1d28d2344e7f4e04aa81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ea23d5b2",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T21:49:54Z",
+      "side": 1,
+      "message": "As stated that task needs to be clearer - I don\u0027t know how to replicate easily. I\u0027d suggest tackling that regression separately since it is not in the sprint and this is. Someone needs to understand that task and determine whether it is a problem or not.\n\nRegardless of whether we need to work on that we need to start generalising these class names, and post-content should apply to any classes of elements after the content.",
+      "parentUuid": "8ec42329_ca885978",
+      "revId": "ca3fb5959db7b75a3b9f1d28d2344e7f4e04aa81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
