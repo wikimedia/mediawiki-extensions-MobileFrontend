@@ -131,18 +131,35 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
-	'skins.minerva.icons.images.js' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.icons.variants.js' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
 		'prefix' => 'mw-ui',
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
-		// Not used yet, see FIXME below
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'variants' => array(
+			'gray' => array(
+				'color' => '#999',
+				'global' => true,
+			),
 			'invert' => array(
 				'color' => '#FFFFFF',
 				'global' => true,
 			)
 		),
+		'position' => 'bottom',
+		'images' => array(
+			// overlay
+			'close' => 'images/icons/close.svg',
+		),
+	),
+
+	'skins.minerva.icons.images.js' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.icons.variants.js',
+		),
+		'class' => 'ResourceLoaderImageModule',
+		'prefix' => 'mw-ui',
+		'selector' => '.mw-ui-icon-{name}:before',
 		'position' => 'bottom',
 		'images' => array(
 			// chrome
@@ -180,9 +197,6 @@ $wgMinervaStyleModules = array(
 
 			// cite
 			'citation' => 'images/icons/cite.svg',
-
-			// overlay
-			'close' => 'images/icons/close.svg',
 		),
 	),
 
@@ -882,6 +896,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'skins.minerva.icons.variants.js',
 			'mobile.ajax',
 		),
 		'scripts' => array(
