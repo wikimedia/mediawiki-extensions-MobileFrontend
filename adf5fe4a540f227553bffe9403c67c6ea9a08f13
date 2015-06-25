@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_3380808d",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T17:27:15Z",
+      "side": 1,
+      "message": "removed this in favor of only loading the feedback in beta mode.",
+      "parentUuid": "8ec42329_d87fdea4",
+      "revId": "adf5fe4a540f227553bffe9403c67c6ea9a08f13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_d8a03e34",
         "filename": "resources/mobile.search/SearchOverlay.less",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-25T11:18:06Z",
       "side": 1,
       "message": "I\u0027m no designer, but there should probably be padding top and padding bottom to make tapping easier.",
+      "revId": "adf5fe4a540f227553bffe9403c67c6ea9a08f13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_737a88b9",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-25T17:27:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_d8a03e34",
       "revId": "adf5fe4a540f227553bffe9403c67c6ea9a08f13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
