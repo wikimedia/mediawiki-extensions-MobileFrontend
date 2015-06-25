@@ -755,6 +755,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-search-content',
 			'mobile-frontend-search-no-results',
 			'mobile-frontend-search-content-no-results' => array( 'parse' ),
+			'mobile-frontend-search-feedback-prompt',
+			'mobile-frontend-search-feedback-link-text',
 		),
 	),
 

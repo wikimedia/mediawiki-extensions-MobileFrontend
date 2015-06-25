@@ -5,7 +5,8 @@
 	background: @semiTransparent;
 
 	.overlay-header,
-	.results {
+	.results,
+	.search-feedback {
 		// don't use background to preserve .loading properties
 		background-color: #fff;
 	}
@@ -55,6 +56,18 @@
 			font: inherit;
 		}
 	}
+
+	.search-feedback {
+		box-shadow: 0 3px 3px 0 rgba(117, 117, 117, .3);
+		border-top: 1px solid @colorGray12;
+		font-size: .8em;
+		padding: .5em 1em;
+	}
+
+	&.no-results .search-feedback {
+		border-top: none;
+	}
+
 }
 
 @-webkit-keyframes fadeIn {

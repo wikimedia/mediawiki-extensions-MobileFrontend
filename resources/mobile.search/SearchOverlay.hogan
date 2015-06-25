@@ -26,4 +26,12 @@
 	</div>
 	{{{spinner}}}
 	<div class="results"></div>
+	{{#feedback}}
+		<div class="search-feedback">
+			{{prompt}}
+			{{#feedback}}
+				{{>anchor}}
+			{{/feedback}}
+		</div>
+	{{/feedback}}
 </div>

@@ -3,23 +3,25 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
+		Anchor = M.require( 'Anchor' ),
 		Icon = M.require( 'Icon' ),
 		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
 		router = M.require( 'router' ),
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
 		SearchOverlay;
 
 	/**
 	 * Overlay displaying search results
 	 * @class SearchOverlay
 	 * @extends Overlay
-	 * @uses WatchstarPageList
 	 * @uses SearchApi
 	 * @uses Icon
 	 */
 	SearchOverlay = Overlay.extend( {
 		templatePartials: {
+			anchor: Anchor.prototype.template,
 			icon: Icon.prototype.template
 		},
 		className: 'overlay search-overlay',
@@ -40,6 +42,7 @@
 		 * @cfg {String} defaults.searchContentNoResultsMsg Used when no pages with matching
 		 * titles were found.
 		 * @cfg {String} defaults.action The value of wgScript
+		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
 		 */
 		defaults: {
 			clearIcon: new Icon( {
@@ -57,7 +60,14 @@
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
-			action: mw.config.get( 'wgScript' )
+			action: mw.config.get( 'wgScript' ),
+			feedback: !feedbackLink ? false : {
+				feedback: new Anchor( {
+					label: mw.msg( 'mobile-frontend-search-feedback-link-text' ),
+					href: feedbackLink
+				} ).options,
+				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
+			}
 		},
 		/**
 		 * @inheritdoc
@@ -219,6 +229,7 @@
 			this.$input = this.$( 'input' );
 			this.$clear = this.$( '.clear' );
 			this.$searchContent = this.$( '.search-content' ).hide();
+			this.$searchFeedback = this.$( '.search-feedback' ).hide();
 
 			// Hide the clear button if the search input is empty
 			if ( self.$input.val() === '' ) {
@@ -277,6 +288,7 @@
 				this.api.abort();
 				clearTimeout( this.timer );
 				self.$searchContent.hide();
+				self.$searchFeedback.hide();
 				$resultContainer.empty();
 
 				if ( query.length ) {
@@ -295,6 +307,8 @@
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {
+								self.$el.toggleClass( 'no-results', data.results.length === 0 );
+								self.$searchFeedback.show();
 								self.$searchContent
 									.show()
 									.find( 'p' )
