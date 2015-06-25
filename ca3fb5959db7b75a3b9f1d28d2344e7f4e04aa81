@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_dfac9d9f",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-25T19:57:50Z",
+      "side": 1,
+      "message": "Why not just use post-content and pre-content classes like before? I don\u0027t understand...\nWe need to be getting less classes of these not more...",
+      "revId": "ca3fb5959db7b75a3b9f1d28d2344e7f4e04aa81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
