@@ -16,6 +16,24 @@
       "revId": "ca3fb5959db7b75a3b9f1d28d2344e7f4e04aa81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ca885978",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-25T20:31:08Z",
+      "side": 1,
+      "message": "Try adding those classes back to template and see the regression described in T103826. Those classes have a max-width rule which creates the extra wide padding.",
+      "parentUuid": "8ec42329_dfac9d9f",
+      "revId": "ca3fb5959db7b75a3b9f1d28d2344e7f4e04aa81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
