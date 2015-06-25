@@ -70,6 +70,24 @@
       "revId": "dc860baff99acaa2d417167cbbc8f33a24fb85cd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_05ec12b7",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 770,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-25T22:59:19Z",
+      "side": 1,
+      "message": "CSteipp, ok, that\u0027s an argument. In this case, would you mind to add a comment, that this function will return always true, if no MobileUrltemplate was set? :]",
+      "parentUuid": "8ec42329_a5573ecc",
+      "revId": "dc860baff99acaa2d417167cbbc8f33a24fb85cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
