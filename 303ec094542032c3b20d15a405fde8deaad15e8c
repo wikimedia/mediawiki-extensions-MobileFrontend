@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_781eea76",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-25T11:41:09Z",
+      "side": 1,
+      "message": "T103826 but I don\u0027t think it should be swatted because it\u0027s just a little cosmetic change.",
+      "parentUuid": "8ec42329_c9ef16e3",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_a9f2cacb",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-24T22:19:28Z",
       "side": 1,
       "message": "It\u0027s not 100% clear why these changes are happening when the commit message/task only talks about the widths. Can you clarify this.. are you fixing another bug?",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_3814e250",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-25T11:41:09Z",
+      "side": 1,
+      "message": "good idea, i\u0027ll clarify it in the commit message",
+      "parentUuid": "8ec42329_a9f2cacb",
       "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_180fa63b",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-25T11:41:09Z",
+      "side": 1,
+      "message": "What\u0027s wrong with styling with IDs? It\u0027s not like we have more than one last modified bar.",
+      "parentUuid": "8ec42329_09eafed5",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_e9ec52f4",
         "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
         "patchSetId": 2
@@ -81,6 +135,24 @@
       "writtenOn": "2015-06-24T22:19:28Z",
       "side": 1,
       "message": "have we got a variable for this?",
+      "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b807721f",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-25T11:41:09Z",
+      "side": 1,
+      "message": "I\u0027ll introduce one.",
+      "parentUuid": "8ec42329_e9ec52f4",
       "revId": "303ec094542032c3b20d15a405fde8deaad15e8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
