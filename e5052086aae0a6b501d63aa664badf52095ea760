@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_f3ff5b2f",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-25T14:04:50Z",
+      "side": 1,
+      "message": "Again, this class is fairly simple. No need to alter its behaviour based on global state. If options.wikidataDescription is given, then use it, otherwise don\u0027t.\n\nI can\u0027t remember when/where it was said, but I\u0027m fairly sure that someone mentioned moving towards only using context in the init scripts. We should endeavour to make everything else agnostic – this isn\u0027t a rule, it\u0027s a guideline.\n\nIf you really want to modify its behaviour, then why not subclass it like you\u0027ve done with SearchApi?",
+      "revId": "e5052086aae0a6b501d63aa664badf52095ea760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
