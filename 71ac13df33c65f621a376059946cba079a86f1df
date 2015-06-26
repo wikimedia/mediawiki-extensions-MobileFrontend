@@ -104,6 +104,24 @@
       "revId": "71ac13df33c65f621a376059946cba079a86f1df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_d0932759",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-26T10:35:41Z",
+      "side": 1,
+      "message": "As discussed on IRC, http://imgur.com/dnVcnlI",
+      "parentUuid": "8ec42329_1f8a25c0",
+      "revId": "71ac13df33c65f621a376059946cba079a86f1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
