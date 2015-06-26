@@ -26,6 +26,7 @@
 		 * @cfg {String} defaults.cancelMsg Cancel message.
 		 * @cfg {String} defaults.appendToElement Where pointer overlay should be appended to.
 		 * @cfg {String} defaults.target jQuery selector to point tutorial at
+		 * @cfg {String} [defaults.alignment] Determines where the pointer should point to. Valid values 'left' or 'center'
 		 * @cfg {String} [defaults.confirmMsg] Label for a confirm message.
 		 */
 		defaults: {
@@ -34,6 +35,7 @@
 			cancelMsg: mw.msg( 'mobile-frontend-pointer-dismiss' ),
 			appendToElement: undefined,
 			target: undefined,
+			alignment: 'center',
 			confirmMsg: undefined
 		},
 		/**
@@ -91,16 +93,22 @@
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
 		addPointerArrow: function ( $pa ) {
-			var paOffset = $pa.offset(),
+			var left,
+				paOffset = $pa.offset(),
 				overlayOffset = this.$el.offset(),
 				center = $pa.width() / 2;
 
 			this._position( $pa );
+			// Add half of the element width and subtract 10px for half of the arrow
+			// remove the left offset of the overlay as margin auto may be applied to it
+			left = paOffset.left + 10 - overlayOffset.left;
+			if ( this.alignment === 'center' ) {
+				left -= center;
+			}
+
 			this.$pointer = $( '<div class="tutorial-pointer">' ).css( {
 				top: -10,
-				// Add half of the element width and subtract 10px for half of the arrow
-				// remove the left offset of the overlay as margin auto may be applied to it
-				left: paOffset.left + center - 10 - overlayOffset.left
+				left: left
 			} ).appendTo( this.$el );
 			this.options.skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
 			M.on( 'resize', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
