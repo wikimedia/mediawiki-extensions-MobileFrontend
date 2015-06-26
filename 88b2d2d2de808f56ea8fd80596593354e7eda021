@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9601143f",
+        "filename": "README",
+        "patchSetId": 59
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-26T20:28:25Z",
+      "side": 1,
+      "message": "I worry about keeping this documentation separate from the config file - it will go out of date as config variables get removed.\n\n@legoktm @florian and @kaldari have you got any ideas how we could deal with documentation in extension.json",
+      "revId": "88b2d2d2de808f56ea8fd80596593354e7eda021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
