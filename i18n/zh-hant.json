@@ -34,6 +34,7 @@
 	"mobile-frontend-categories-add": "新增分類",
 	"mobile-frontend-categories-search": "搜尋分類",
 	"mobile-frontend-categories-summary": "已新增分類",
+	"mobile-frontend-categories-add-heading": "<strong>新增 <span>$1</span> 至新分類</strong>",
 	"mobile-frontend-categories-add-wait": "正在儲存分類，請稍候。�",
 	"mobile-frontend-categories-normal": "內容基於",
 	"mobile-frontend-categories-hidden": "組織",
