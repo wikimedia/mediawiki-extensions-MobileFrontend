@@ -16,6 +16,24 @@
       "revId": "88b2d2d2de808f56ea8fd80596593354e7eda021",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_f9f96be5",
+        "filename": "README",
+        "patchSetId": 59
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-06-26T20:53:38Z",
+      "side": 1,
+      "message": "We could either keep this and keep a documentation in the extension page mediawiki. Or keep this or keep it on the extension page. or have it is extension.json using @doc but make it look messy I propose we put a @doc at top of extension.json to remind people to update configs in readme if changed here.",
+      "parentUuid": "8ec42329_9601143f",
+      "revId": "88b2d2d2de808f56ea8fd80596593354e7eda021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
