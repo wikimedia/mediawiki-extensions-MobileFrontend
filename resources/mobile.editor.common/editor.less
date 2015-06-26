@@ -7,7 +7,11 @@
 	}
 
 	.wikitext-editor {
-		padding: 10px @contentMargin;
+		padding: 10px 0;
+	}
+	.stable & .wikitext-editor {
+		padding-left: @contentMargin;
+		padding-right: @contentMargin;
 	}
 
 	.summary-request {
