@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_19d8f77e",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-26T20:55:28Z",
+      "side": 1,
+      "message": "i\u0027ll check with moiz",
+      "parentUuid": "8ec42329_01f07fc2",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_81bb0fdd",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 9
@@ -66,6 +84,24 @@
       "writtenOn": "2015-06-26T18:18:11Z",
       "side": 1,
       "message": "You should hide searchFeedback before performing the search.\nDo this after rendering the pageList - otherwise you\u0027ll see an ajax loader with the feedback link below which looks strange.\n\nNo need to add the bordered-class\nInstead of doing that:\n\nif ( !data.results.length ) { this.$el.addClass( \u0027no-results\u0027 ); } else { this.$el.removeClass( \u0027no-results\u0027 ); }",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_39db737d",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-26T20:55:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_81bb0fdd",
       "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "So really what this should be is .no-results .search-feedback { border-top: none; }",
       "parentUuid": "8ec42329_17c76968",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_79e57b31",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-26T20:55:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_c1c59765",
       "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
