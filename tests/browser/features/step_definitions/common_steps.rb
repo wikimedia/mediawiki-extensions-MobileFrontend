@@ -3,8 +3,9 @@ Given /^I am in beta mode$/ do
     page_uri = URI.parse(page.page_url_value)
 
     # A domain is explicitly given to avoid a bug in earlier versions of Chrome
-    browser.cookies.add 'mf_useformat', 'true', domain: page_uri.host
-    browser.cookies.add 'optin', 'beta', domain: page_uri.host
+    domain = page_uri.host == 'localhost' ? nil : page_uri.host
+    browser.cookies.add 'mf_useformat', 'true', domain: domain
+    browser.cookies.add 'optin', 'beta', domain: domain
 
     page.refresh
   end
@@ -51,7 +52,10 @@ end
 
 Given(/^I am using the mobile site$/) do
   visit(MainPage) do |page|
-    browser.cookies.add 'mf_useformat', 'true', domain: URI.parse(page.page_url_value).host
+    page_uri = URI.parse(page.page_url_value)
+
+    domain = page_uri.host == 'localhost' ? nil : page_uri.host
+    browser.cookies.add 'mf_useformat', 'true', domain: domain
 
     page.refresh
   end

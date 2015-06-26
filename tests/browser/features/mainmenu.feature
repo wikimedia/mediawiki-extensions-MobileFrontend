@@ -5,7 +5,7 @@ Feature: Menus open correct page for anonymous users
     Given I am using the mobile site
       And I am on the "Main Page" page
 
-  @smoke
+  @smoke @integration
   Scenario: Check links in menu
     When I click on the main navigation button
     Then I should see a link to the disclaimer
