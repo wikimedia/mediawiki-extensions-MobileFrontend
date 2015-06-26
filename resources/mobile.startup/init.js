@@ -11,14 +11,14 @@
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
-		MainMenu = M.require( 'MainMenu' ),
+		mainMenu = M.require( 'mainMenu' ),
 		Skin = M.require( 'Skin' );
 
 	skin = new Skin( {
 		el: 'body',
 		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
 		page: getCurrentPage(),
-		mainMenu: new MainMenu()
+		mainMenu: mainMenu
 	} );
 	M.define( 'skin', skin );
 

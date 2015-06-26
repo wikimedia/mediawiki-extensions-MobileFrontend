@@ -15,13 +15,22 @@
 		/** @inheritdoc */
 		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
 
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.activator selector for element that when clicked can open or close the menu
+		 */
+		defaults: {
+			activator: undefined
+		},
+
 		/** @inheritdoc **/
 		initialize: function ( options ) {
 			this.defaults = this._handleCachedMenuData(
 				mw.config.get( 'wgMFMenuData' ) || {}
 			);
 
-			View.prototype.initialize.apply( this, options );
+			this.activator = options.activator;
+			View.prototype.initialize.call( this, options );
 		},
 
 		// FIXME: [CACHE] Remove when cache clears.
@@ -77,17 +86,23 @@
 		 * Remove the nearby menu entry if the browser doesn't support geo location
 		 */
 		postRender: function () {
-			var self = this;
-
 			if ( !browser.supportsGeoLocation() ) {
 				this.$el.find( '.nearby' ).parent().remove();
 			}
 
 			// FIXME: Remove when cache clears https://phabricator.wikimedia.org/T102868
 			this.$el.addClass( 'view-border-box' );
+			this.registerClickEvents();
+		},
+
+		/**
+		 * Registers events for opening and closing the main menu
+		 */
+		registerClickEvents: function () {
+			var self = this;
+
 			// Listen to the main menu button clicks
-			// FIXME: remove #mw-mf-main-menu-button when cache clears
-			$( '#mw-mf-main-menu-button, .header .main-menu-button' )
+			$( this.activator )
 				.off( 'click' )
 				.on( 'click', function ( ev ) {
 					if ( self.isOpen() ) {

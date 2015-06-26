@@ -1,7 +1,10 @@
 ( function ( M, $ ) {
 	var time = M.require( 'modules/lastEdited/time' ),
 		MainMenu = M.require( 'MainMenu' ),
-		mainMenu = new MainMenu();
+		mainMenu = new MainMenu( {
+			// FIXME: remove #mw-mf-main-menu-button when cache clears
+			activator: '#mw-mf-main-menu-button, .header .main-menu-button'
+		} );
 
 	/**
 	 * Initialisation function for last modified module.
@@ -77,17 +80,11 @@
 	}
 
 	// bind events
+	M.define( 'mainMenu', mainMenu );
 	M.on( 'history-link-loaded', initHistoryLink );
 	M.on( 'header-loaded', function () {
-		// Render MainMenu when needed
-		// FIXME: remove #mw-mf-main-menu-button when cache clears
-		$( '#mw-mf-main-menu-button, .header .main-menu-button' )
-			.on( 'click', function ( ev ) {
-				mainMenu.openNavigationDrawer();
-				ev.preventDefault();
-				// Stop propagation, otherwise the Skin will close the open menus on page center click
-				ev.stopPropagation();
-			} );
+		// Now we have a main menu button register it.
+		mainMenu.registerClickEvents();
 
 		// FIXME: Remove when cache cleared (https://phabricator.wikimedia.org/T98498)
 		$( '.header > a' ).each( function () {
