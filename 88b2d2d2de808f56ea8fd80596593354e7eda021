@@ -34,6 +34,24 @@
       "revId": "88b2d2d2de808f56ea8fd80596593354e7eda021",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_59f43fb9",
+        "filename": "README",
+        "patchSetId": 59
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-06-26T21:18:04Z",
+      "side": 1,
+      "message": "the extension page on mediawiki.org is highly official, that\u0027s why there aren\u0027t all (especially Wikimedia specific or highly experiemental configs) configuration options documented. That\u0027s why we need a code based documentation, so i think putting it into the extension.json file directly is a better idea as a separate file :)",
+      "parentUuid": "8ec42329_f9f96be5",
+      "revId": "88b2d2d2de808f56ea8fd80596593354e7eda021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
