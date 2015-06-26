@@ -232,9 +232,9 @@ HTML;
 		$user = $this->getUser();
 
 		if ( $user->isLoggedIn() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
+			$errorText = __METHOD__ . '(): token mismatch';
 			wfIncrStats( 'mobile.options.errors' );
-			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch, expected {$user->getEditToken()}, "
-				. "got {$request->getVal( 'token' )}" );
+			wfDebugLog( 'mobile', $errorText );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
