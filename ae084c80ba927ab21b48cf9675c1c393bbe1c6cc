@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_d7ca411d",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-06-26T00:27:11Z",
+      "side": 1,
+      "message": "the simplest hook code would be:\n\n    $wgHooks[\u0027ResourceLoaderGetConfigVars\u0027][] \u003d function( \u0026$vars ) {\n        $vars[\u0027wgCirrusSearchFeedbackLink\u0027] \u003d \u0027https://wikimedia.qualtrics.com/SE/?SID\u003dSV_eLmmEQA9600f8zP\u0027;\n    };\n\nOtherwise, if you install CirrusSearch latest master you can just set\n\n    $wgCirrusSearchFeedbackLink \u003d \u0027https://wikimedia.qualtrics.com/SE/?SID\u003dSV_eLmmEQA9600f8zP\u0027;",
+      "parentUuid": "8ec42329_179e8966",
+      "revId": "ae084c80ba927ab21b48cf9675c1c393bbe1c6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_17c76968",
         "filename": "resources/mobile.search/SearchOverlay.less",
         "patchSetId": 9
