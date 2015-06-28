@@ -227,7 +227,7 @@
 	"mobile-frontend-regular-site": "Vista d'escriptori",
 	"mobile-frontend-save-error": "Error en desar la configuració. Assegureu-vos que teniu les galetes activades.",
 	"mobile-frontend-save-settings": "Desa",
-	"mobile-frontend-saving-exit-page": "Encara s'està desant la vostra contribució. Si sortiu ara, es perdran les vostres contribucions. Esteu segurs que voleu sortir?",
+	"mobile-frontend-saving-exit-page": "Encara s’està desant la vostra contribució. Si sortiu ara, es perdran les vostres contribucions. Segur que voleu sortir?",
 	"mobile-frontend-search-content": "Buscar dins les pàgines",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' per veure si aquesta frase apareix a algun lloc.",
 	"mobile-frontend-search-no-results": "No hi ha cap pàgina amb aquest títol.",

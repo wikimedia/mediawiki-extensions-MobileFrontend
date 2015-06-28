@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ianbu"
+			"Ianbu",
+			"唐吉訶德的侍從"
 		]
 	},
 	"mobile-frontend-copyright": "若無另外講，照$1就通用。",
@@ -18,8 +19,10 @@
 	"mobile-frontend-privacy-link-text": "隱私",
 	"mobile-frontend-random-button": "隨在",
 	"mobile-frontend-terms-text": "欲用的條款",
-	"mobile-frontend-view": "手機仔看",
+	"mobile-frontend-view": "chhiú-ki-á khoàⁿ",
 	"mobile-frontend-view-desktop": "電腦版",
 	"mobile-frontend-view-mobile": "手機版",
+	"tag-mobile_edit": "用手機改",
+	"tag-mobile_web_edit": "tī chhiú-ki-á bāng-ia̍h kái--ê",
 	"mobile-frontend-pageaction-edit-tooltip": "改這頁的起頭段落"
 }

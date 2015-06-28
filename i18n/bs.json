@@ -7,7 +7,8 @@
 			"KWiki",
 			"Palapa",
 			"Semso98",
-			"Emir Mujadzic"
+			"Emir Mujadzic",
+			"Srdjan m"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Adresa e-pošte (opcionalno)",
@@ -132,6 +133,7 @@
 	"mobile-frontend-watchlist-more": "više",
 	"mobile-frontend-watchlist-view": "Pogledaj svoj spisak praćenih stranica",
 	"mobile-frontend-quick-lookup-not-internal": "Žao nam je, ovo nije link za ovu wiki.",
+	"nearby": "Stranice u blizini",
 	"tag-mobile_edit": "Mobilno uređivanje",
 	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem",
 	"mobile-frontend-pageaction-edit-tooltip": "Uredi uvodni odlomak ove stranice",
