@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_d1e47b3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-29T10:53:54Z",
+      "side": 1,
+      "message": "It would be good to know the reasoning behind this. Is it not needed anymore?",
+      "revId": "89279c714f1ae482969a40b74e9e6d35365fe993",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
