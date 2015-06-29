@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_477526f3",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-06-29T20:53:44Z",
+      "side": 1,
+      "message": "typo...",
+      "revId": "dcb9c00f372067c715a51135bdb2b47acb0846fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
