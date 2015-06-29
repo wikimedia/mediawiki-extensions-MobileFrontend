@@ -101,8 +101,16 @@ A file for css that optimises the Minerva skin on larger devices.
 		padding: 2em @contentPaddingTablet 1.5em @contentPaddingTablet;
 	}
 
-	// On most pages the last modified bar is outside the content div
 	#mw-mf-last-modified {
-		padding: 5px @contentPaddingTablet;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.stable {
+		#mw-mf-last-modified {
+			max-width: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
