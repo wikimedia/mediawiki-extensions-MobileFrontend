@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var ReferencesDrawer, drawer,
-		context = M.require( 'context' );
+	var ReferencesDrawer, drawer;
 
 	/**
 	 * Return the matched reference among the children of ol.references
@@ -52,19 +51,10 @@
 	 * @param {Page} [page] Defaults to $( '#content' )
 	 */
 	function setup( page ) {
-		var $container = page ? page.$el : $( '#content' ),
-			module, view;
+		var $container = page ? page.$el : $( '#content' );
 
-		if ( context.isBetaGroupMember() ) {
-			module = 'mobile.references.beta';
-			view = 'modules/references/ReferencesDrawerBeta';
-		} else {
-			module = 'mobile.references';
-			view = 'modules/references/ReferencesDrawer';
-		}
-
-		mw.loader.using( module ).done( function () {
-			ReferencesDrawer = M.require( view );
+		mw.loader.using( 'mobile.references' ).done( function () {
+			ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' );
 			$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
 			$container.find( '.mw-cite-backlink a' ).off( 'click' );
 		} );
