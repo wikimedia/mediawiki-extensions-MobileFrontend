@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Midnight Gambler"
+		]
+	},
+	"mobile-frontend-editor-edit": "Beoorbeite",
+	"mobile-frontend-home-button": "Startseit",
+	"mobile-frontend-main-menu-account-create": "Benutzerkonto erstelle",
+	"mobile-frontend-main-menu-login": "Oonmelde",
+	"mobile-frontend-main-menu-nearby": "In der Näh",
+	"mobile-frontend-main-menu-settings": "Instellunge",
+	"mobile-frontend-main-menu-watchlist": "Beobachtungslist",
+	"mobile-frontend-password-placeholder": "Passwort",
+	"mobile-frontend-placeholder": "{{SITENAME}} doorrichsuche",
+	"mobile-frontend-random-button": "Zufällich",
+	"mobile-frontend-terms-text": "Nutzungsbedingunge",
+	"mobile-frontend-username-placeholder": "Benutzernoome"
+}
