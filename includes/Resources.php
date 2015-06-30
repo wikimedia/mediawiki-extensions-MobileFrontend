@@ -202,7 +202,6 @@ $wgMinervaStyleModules = array(
 
 	'skins.minerva.mainPage.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
-		'group' => 'other',
 		'styles' => array(
 			'resources/skins.minerva.mainPage.beta.styles/common.less',
 		),
@@ -210,7 +209,6 @@ $wgMinervaStyleModules = array(
 
 	'skins.minerva.mainPage.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
-		'group' => 'other',
 		'styles' => array(
 			'resources/skins.minerva.mainPage.styles/common.less',
 		),
@@ -727,7 +725,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// FIXME: Remove after cache is cleared
 			'talk',
 		),
-		'group' => 'other'
 	),
 
 	'mobile.search' => $wgMFResourceParsedMessageModuleBoilerplate + array(
