@@ -34,6 +34,24 @@
       "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_de2b1f2d",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-30T11:28:02Z",
+      "side": 1,
+      "message": "Then is this still a FIXME?",
+      "parentUuid": "8ec42329_1efe87ab",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
