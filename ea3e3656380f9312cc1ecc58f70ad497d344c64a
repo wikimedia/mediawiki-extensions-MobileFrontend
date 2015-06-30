@@ -52,6 +52,24 @@
       "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_be24135b",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-30T11:29:47Z",
+      "side": 1,
+      "message": "It needs attention when the FIXME below is resolved. But I agree, the wording can be better. What do you suggest?",
+      "parentUuid": "8ec42329_de2b1f2d",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
