@@ -31,7 +31,7 @@
 		defaults: {
 			skin: undefined,
 			summary: undefined,
-			cancelMsg: mw.msg( 'cancel' ),
+			cancelMsg: mw.msg( 'mobile-frontend-pointer-dismiss' ),
 			appendToElement: undefined,
 			target: undefined,
 			confirmMsg: undefined

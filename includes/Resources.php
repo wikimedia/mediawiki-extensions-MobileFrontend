@@ -1020,7 +1020,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			// PageActionOverlay.js
-			'cancel',
+			'mobile-frontend-pointer-dismiss',
 		),
 		'styles' => array(
 			'resources/mobile.contentOverlays/tutorials.less',
