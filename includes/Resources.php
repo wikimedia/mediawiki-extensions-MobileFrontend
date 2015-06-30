@@ -859,6 +859,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.categories' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'resources/mobile.categories/init.js',
