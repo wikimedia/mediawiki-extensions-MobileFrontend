@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_3e41033a",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-30T11:24:05Z",
+      "side": 1,
+      "message": "Should this be \"shouldn\u0027t\"?",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
