@@ -19,9 +19,9 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.activator selector for element that when clicked can open or close the menu
 		 */
-		defaults: {
+		defaults: $.extend( mw.config.get( 'wgMFMenuData' ), {
 			activator: undefined
-		},
+		} ),
 
 		/**
 		 * Advertise a new feature in the main menu.
@@ -61,48 +61,9 @@
 
 		/** @inheritdoc **/
 		initialize: function ( options ) {
-			var // FIXME: move to MainMenu.prototype.defaults when we no longer care about cached data.
-				defaults = this._handleCachedMenuData(
-					mw.config.get( 'wgMFMenuData' ) || {}
-				);
-			$.extend( this.defaults, defaults );
 
 			this.activator = options.activator;
 			View.prototype.initialize.call( this, options );
-		},
-
-		// FIXME: [CACHE] Remove when cache clears.
-		/**
-		 * Translates the old, but cached, format of `wgMFMenuData` to the new
-		 * new format.
-		 *
-		 * @param {Object[]} menu The value of the `wgMFMenuData` config variable
-		 * @private
-		 */
-		_handleCachedMenuData: function ( menu ) {
-			var result = {};
-
-			$.each( menu, function ( key, entries ) {
-
-				// New format?
-				if ( entries[0].components ) {
-					result = menu;
-
-					return false;
-				}
-
-				result[key] = $.map( entries, function ( entry ) {
-					// We don't have to address T98759 here as this bug only
-					// affects logged out users who are seeing a cached version
-					// of the page.
-					return {
-						name: entry.name,
-						components: [ entry ]
-					};
-				} );
-			} );
-
-			return result;
 		},
 
 		/**
