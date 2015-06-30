@@ -19,6 +19,10 @@ When(/^I click the search in pages button$/) do
   on(ArticlePage).search_within_pages_element.when_present.click
 end
 
+When(/^I click a search watch star$/) do
+  on(ArticlePage).search_watchstars_element.when_present.click
+end
+
 When(/^I press the enter key$/) do
   on(ArticlePage).search_box2_element.when_present.send_keys :enter
 end
@@ -60,4 +64,12 @@ end
 
 Then(/^search results should contain "(.+)"$/) do |text|
   expect(on(ArticlePage).search_result_element.when_present.text).to eq text
+end
+
+Then(/^I should not see '#\/search' in URL$/) do
+  expect(on(ArticlePage).current_url.end_with? '#/search').to be false
+end
+
+Then(/^I should see a toast$/) do
+  expect(on(ArticlePage).toast_element.when_present).to be_visible
 end
