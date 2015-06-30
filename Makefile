@@ -27,11 +27,11 @@ gerrit: remotes				## List all patchsets
 jsduck: nodecheck gems			## Build the JavaScript documentation
 	@npm run -s doc
 
-phpdoc: nodecheck			## Build the PHP documentation
+phpdoc: 				## Build the PHP documentation
 	mkdir -p docs
 	rm -rf docs/php
 	mkdir -p docs/php/log
-	@php node_modules/grunt-phpdocumentor/bin/phpDocumentor.phar -c phpdoc.xml
+	@composer doc
 
 docs: jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
 
