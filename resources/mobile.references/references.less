@@ -3,94 +3,67 @@
 
 @betaDrawerPadding: 20px;
 
+// prevent body from scrolling
+// won't work on firefox for android because of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=886969
+.drawer-enabled {
+	overflow: hidden;
+}
+
 .drawer.references {
-	max-height: 10em;
+	background-color: @colorGray1;
+	color: @colorGray12;
+	max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
 	overflow-y: auto;
-}
-
-.stable {
-	.references {
-		h3 {
-			margin: 0;
-			padding-right: 4px;
-			display: inline;
-		}
-
-		.mw-cite-backlink {
-			display: none;
-		}
-
-		// FIXME: Don't use mw-ui-icon class here.
-		.mw-ui-icon {
-			float: right;
-			line-height: normal;
-		}
-	}
-}
-
-.alpha,
-.beta {
-	// prevent body from scrolling
-	// won't work on firefox for android because of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=886969
-	&.drawer-enabled {
-		overflow: hidden;
+	padding: @betaDrawerPadding;
+	&.text {
+		font-size: 1em;
 	}
 
-	.drawer.references {
-		background-color: @colorGray1;
-		color: @colorGray12;
-		max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
-		padding: @betaDrawerPadding;
-		&.text {
-			font-size: 1em;
+	a {
+		background-image: none;
+		color: #5880C0;
+	}
+
+	.cite {
+		padding-bottom: 20px;
+
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
 		}
 
-		a {
-			background-image: none;
-			color: #5880C0;
+		.text {
+			color: @colorGray8;
+			cursor: default;
+			letter-spacing: .2em;
+			float: left;
+			font-size: 0.75em;
+			padding-top: .25em;
+			text-transform: uppercase;
 		}
-
-		.cite {
-			padding-bottom: 20px;
-
-			&:after {
-				content: "";
-				display: table;
-				clear: both;
-			}
-
-			.text {
-				color: @colorGray8;
-				cursor: default;
-				letter-spacing: .2em;
-				float: left;
-				font-size: 0.75em;
-				padding-top: .25em;
-				text-transform: uppercase;
-			}
-			.cancel {
-				@extraPadding: 1em;
-				cursor: pointer;
-				font-size: 0.8em;  // we want a smaller icon
-				// Compensate for the padding.
-				// Top and bottom margins are for the padding we're adding below.
-				// The right margin is for the 1em margin of icon:before
-				margin: -@extraPadding -@extraPadding -@extraPadding 0;
-				// Make the tappable area bigger. No need to add left and right paddings because
-				// the icon:before already has 1em margin on both sides
-				padding: @extraPadding 0;
-				position: absolute;
-				right: @betaDrawerPadding;
-				top: @betaDrawerPadding;
-			}
+		.cancel {
+			@extraPadding: 1em;
+			cursor: pointer;
+			font-size: 0.8em;  // we want a smaller icon
+			// Compensate for the padding.
+			// Top and bottom margins are for the padding we're adding below.
+			// The right margin is for the 1em margin of icon:before
+			margin: -@extraPadding -@extraPadding -@extraPadding 0;
+			// Make the tappable area bigger. No need to add left and right paddings because
+			// the icon:before already has 1em margin on both sides
+			padding: @extraPadding 0;
+			position: absolute;
+			right: @betaDrawerPadding;
+			top: @betaDrawerPadding;
 		}
+	}
 
-		.mw-cite-backlink {
-			display: none;
-		}
+	.mw-cite-backlink {
+		display: none;
+	}
 
-		.reference-text {
-			line-height: 1.4;
-		}
+	.reference-text {
+		line-height: 1.4;
 	}
 }

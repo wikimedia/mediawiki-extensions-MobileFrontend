@@ -983,25 +983,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.references.beta' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.references',
-		),
-		'messages' => array(
-			'mobile-frontend-references-citation',
-		),
-		'templates' => array(
-			'DrawerBeta.hogan' => 'resources/mobile.references.beta/ReferencesDrawerBeta.hogan',
-		),
-		'scripts' => array(
-			'resources/mobile.references.beta/ReferencesDrawerBeta.js',
-		),
-	),
-
 	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
 			'mobile.loggingSchemas',
+		),
+		'messages' => array(
+			'mobile-frontend-references-citation',
 		),
 		'styles' => array(
 			'resources/mobile.references/references.less',
@@ -1835,7 +1823,6 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.references.beta',
 			'mobile.bannerImage',
 			'mobile.search.beta',
 		),

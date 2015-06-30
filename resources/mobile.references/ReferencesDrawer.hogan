@@ -1,3 +1,6 @@
-{{{cancelButton}}}
-<h3>{{title}}</h3>
+<div class="cite">
+	{{{citation}}}
+	{{{cancelButton}}}
+</div>
+<sup>{{title}}</sup>
 {{{text}}}
