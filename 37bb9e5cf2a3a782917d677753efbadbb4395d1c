@@ -16,6 +16,24 @@
       "revId": "37bb9e5cf2a3a782917d677753efbadbb4395d1c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0e05f2c4",
+        "filename": "composer.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-30T18:47:18Z",
+      "side": 1,
+      "message": "Ah. I was copying the language from our Makefile. One sec!",
+      "parentUuid": "8ec42329_ae6cde99",
+      "revId": "37bb9e5cf2a3a782917d677753efbadbb4395d1c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
