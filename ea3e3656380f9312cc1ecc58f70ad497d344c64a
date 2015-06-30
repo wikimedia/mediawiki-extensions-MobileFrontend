@@ -70,6 +70,24 @@
       "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_de19dfdc",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-30T13:09:51Z",
+      "side": 1,
+      "message": "Oh I see. I think you can simply combine the two FIXMEs.",
+      "parentUuid": "8ec42329_be24135b",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
