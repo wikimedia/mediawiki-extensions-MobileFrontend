@@ -2,7 +2,7 @@
 
 	var WikiDataApi,
 		ForeignApi = M.require( 'modules/ForeignApi' ),
-		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
+		config = mw.config.get( 'wgWikiBasePropertyConfig' ) || {},
 		endpoint = mw.config.get( 'wgMFWikiDataEndpoint' );
 
 	/**

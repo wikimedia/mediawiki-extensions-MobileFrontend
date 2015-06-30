@@ -1334,6 +1334,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.hexmd5' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.modules',
+		),
 		'scripts' => array(
 			// FIXME: This library shouldn't be needed. Wikidata api
 			// should return these thumbnail urls for us.
@@ -1348,6 +1351,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.ajax',
 			'mobile.hexmd5',
 			'mobile.overlays',
+			'mobile.user',
 			'oojs-ui',
 		),
 		'templates' => array(
