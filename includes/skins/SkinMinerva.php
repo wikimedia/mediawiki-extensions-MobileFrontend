@@ -746,7 +746,7 @@ class SkinMinerva extends SkinTemplate {
 	protected function prepareBanners( BaseTemplate $tpl ) {
 		// Make sure Zero banner are always on top
 		$banners = array( '<div id="siteNotice"></div>' );
-		if ( $this->getMFConfig( 'MFEnableSiteNotice' ) ) {
+		if ( $this->getMFConfig()->get( 'MFEnableSiteNotice' ) ) {
 			$siteNotice = $this->getSiteNotice();
 			if ( $siteNotice ) {
 				$banners[] = $siteNotice;
