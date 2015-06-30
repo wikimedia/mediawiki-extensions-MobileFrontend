@@ -16,6 +16,24 @@
       "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1efe87ab",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-30T11:25:52Z",
+      "side": 1,
+      "message": "I think it\u0027s correct because the last modified bar is displayed both at the top of the page  (stable) and bottom (alpha, beta).",
+      "parentUuid": "8ec42329_3e41033a",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
