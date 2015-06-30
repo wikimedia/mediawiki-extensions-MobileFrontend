@@ -58,6 +58,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 			target: target,
 			skin: M.require( 'skin' ),
 			className: 'slide active editing',
+			appendToElement: '#mw-mf-page-center',
 			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-tutorial-cancel' )
