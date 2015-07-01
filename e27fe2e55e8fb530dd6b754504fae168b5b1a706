@@ -16,6 +16,24 @@
       "revId": "e27fe2e55e8fb530dd6b754504fae168b5b1a706",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_2013125e",
+        "filename": "resources/mobile.contentOverlays/PointerOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-01T17:24:46Z",
+      "side": 1,
+      "message": "So... I want to make this non-optional.\nOnly reason it currently isn\u0027t is backwards compatibility.\nI\u0027ll add a FIXME",
+      "parentUuid": "8ec42329_b038b73a",
+      "revId": "e27fe2e55e8fb530dd6b754504fae168b5b1a706",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
