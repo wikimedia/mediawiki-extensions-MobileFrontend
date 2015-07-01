@@ -1,12 +1,7 @@
 ( function ( M ) {
 	var Infobox = M.require( 'modules/Infobox' );
 
-	QUnit.module( 'Infobox', {
-		setup: function () {
-		},
-		teardown: function () {
-		}
-	} );
+	QUnit.module( 'Infobox' );
 
 	QUnit.test( 'Check time format', 2, function ( assert ) {
 		assert.strictEqual( Infobox.prototype._getFormattedTime( {
