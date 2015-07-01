@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b038b73a",
+        "filename": "resources/mobile.contentOverlays/PointerOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T11:21:17Z",
+      "side": 1,
+      "message": "Looks like this option is optional and has a default value which should be documented here.",
+      "revId": "e27fe2e55e8fb530dd6b754504fae168b5b1a706",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
