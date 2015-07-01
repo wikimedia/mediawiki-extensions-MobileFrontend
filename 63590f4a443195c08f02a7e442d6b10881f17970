@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_4012de5c",
+        "filename": "resources/skins.minerva.beta.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T17:43:51Z",
+      "side": 1,
+      "message": "Yes, and there are cached pages, which don\u0027t have .post-content. So I\u0027ll change this comment to a FIXME with your suggestion.",
+      "parentUuid": "8ec42329_fac05d80",
+      "revId": "63590f4a443195c08f02a7e442d6b10881f17970",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_5ac6519e",
         "filename": "resources/skins.minerva.tablet.beta.styles/ui.less",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_80cd26be",
+        "filename": "resources/skins.minerva.tablet.beta.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T17:43:51Z",
+      "side": 1,
+      "message": "Yes!",
+      "parentUuid": "8ec42329_5ac6519e",
+      "revId": "63590f4a443195c08f02a7e442d6b10881f17970",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_9ad03955",
         "filename": "resources/skins.minerva.tablet.styles/ui.less",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2015-07-01T13:37:09Z",
       "side": 1,
       "message": "Doesn\u0027t this supersede the top-most rule making it redundant?\n\nIn beta I see #1 applied, #3 applied, and then the rule from beta.styles/ui.less apply. All three set the top and bottom padding to 5px.\n\nIn stable I see #1 applied, #2 applied, and then #3 applied.\n\nSince all four rules set the same top and bottom padding, could that be made into a single rule in the base styles? If this were to be done then all other rules need only set left and right padding.\n\nIs the first rule in this file #1 necessary?",
+      "revId": "63590f4a443195c08f02a7e442d6b10881f17970",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e0daea76",
+        "filename": "resources/skins.minerva.tablet.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T17:43:51Z",
+      "side": 1,
+      "message": "Excellent point. I\u0027ll simplify this further.",
+      "parentUuid": "8ec42329_9ad03955",
       "revId": "63590f4a443195c08f02a7e442d6b10881f17970",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
