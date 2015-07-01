@@ -88,6 +88,24 @@
       "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_10550b26",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T12:36:42Z",
+      "side": 1,
+      "message": "I didn\u0027t combine those two because the line gets long. I made the first FIXME clearer in the following patch though.",
+      "parentUuid": "8ec42329_de19dfdc",
+      "revId": "ea3e3656380f9312cc1ecc58f70ad497d344c64a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
