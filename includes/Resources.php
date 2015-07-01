@@ -1026,10 +1026,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.contentOverlays/tutorials.less',
 		),
 		'scripts' => array(
-			'resources/mobile.contentOverlays/PageActionOverlay.js',
+			'resources/mobile.contentOverlays/PointerOverlay.js',
 		),
 		'templates' => array(
-			'PageActionOverlay.hogan' => 'resources/mobile.contentOverlays/PageActionOverlay.hogan',
+			'PointerOverlay.hogan' => 'resources/mobile.contentOverlays/PointerOverlay.hogan',
 		),
 	),
 
