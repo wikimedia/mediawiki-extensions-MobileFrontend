@@ -80,7 +80,7 @@
 			'click .overlay-content > div': 'onClickOverlayContentDiv',
 			'touchstart .results': 'hideKeyboardOnScroll',
 			'mousedown .results': 'hideKeyboardOnScroll',
-			'click .results li': 'onClickResult'
+			'click .results a': 'onClickResult'
 		} ),
 
 		/**
@@ -195,7 +195,8 @@
 		 * @param {jQuery.Event} ev
 		 */
 		onClickResult: function ( ev ) {
-			var $result = $( ev.target ).closest( 'li' );
+			var $link = $( ev.currentTarget ),
+				$result = $link.closest( 'li' );
 
 			/**
 			 * @event search-result-click Fired when the user clicks a search result
@@ -210,6 +211,12 @@
 				result: $result,
 				resultIndex: this.$results.index( $result ),
 				originalEvent: ev
+			} );
+
+			// FIXME: ugly hack that removes search from browser history when navigating to search results
+			ev.preventDefault();
+			router.back().done( function () {
+				window.location.href = $link.attr( 'href' );
 			} );
 		},
 

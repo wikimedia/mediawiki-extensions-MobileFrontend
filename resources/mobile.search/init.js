@@ -62,22 +62,6 @@
 			.prop( 'readonly', true );
 	}
 
-	// FIXME: ugly hack that removes search from browser history when navigating
-	// to search results (we can't rely on History API yet)
-	// alpha does it differently in lazyload.js
-	if ( !context.isAlphaGroupMember() ) {
-		M.on( 'search-result-click', function ( ev ) {
-			var href = $( ev.result ).find( 'a' )
-				.attr( 'href' );
-
-			ev.originalEvent.preventDefault();
-
-			router.back().done( function () {
-				window.location.href = href;
-			} );
-		} );
-	}
-
 	M.require( 'modules/search/MobileWebSearchLogger' ).register();
 
 }( mw.mobileFrontend, jQuery ) );
