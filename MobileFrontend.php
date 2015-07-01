@@ -206,7 +206,6 @@ $wgMFResourceFileModuleBoilerplate = $wgMFResourceBoilerplate + array(
  */
 $wgMFMobileSpecialPageResourceBoilerplate = $wgMFResourceBoilerplate + array(
 	'targets' => 'mobile',
-	'group' => 'other',
 );
 
 /**
