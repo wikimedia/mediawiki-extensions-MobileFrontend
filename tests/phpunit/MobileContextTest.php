@@ -142,6 +142,20 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @covers MobileContext::usingMobileDomain
+	 */
+	public function testUsingMobileDomain() {
+		$this->setMwGlobals( array(
+			'wgMFMobileHeader' => 'X-WAP',
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		) );
+		$context = $this->makeContext();
+		$this->assertFalse( $context->usingMobileDomain() );
+		$context->getRequest()->setHeader( 'X-WAP', '1' );
+		$this->assertTrue( $context->usingMobileDomain() );
+	}
+
+	/**
 	 * @dataProvider updateDesktopUrlQueryProvider
 	 */
 	public function testUpdateDesktopUrlQuery( $mobile, $desktop ) {
