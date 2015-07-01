@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_a07382e3",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-01T18:56:14Z",
+      "side": 1,
+      "message": "The indicator circle doesn\u0027t disappear even after clicking dismiss. Should we add a dismiss event handler below to po?",
+      "revId": "c17d7e5cb19b243514e7f2faddecbc21eeacde4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
