@@ -1,47 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-@titleSectionSpacingTop: 20px;
-@titleSectionSpacingBottom: 25px;
-
-.alpha,
-.beta {
-	.heading-holder {
-		.tagline {
-			color: @colorGray5;
-			font-size: 0.8em;
-			margin: 10px 0;
-
-			&:first-letter {
-				text-transform: capitalize;
-			}
-		}
-	}
-
-	#section_0 {
-		padding-top: 0;
-		padding-bottom: 0;
-		border-bottom: none;
-	}
-
-	#page-actions {
-		// FIXME: Make default when mw-ui-icon in stable
-		font-size: 1.1em; // Icons are 24px square.
-		float: right;
-		width: 3.4em;
-		border-bottom: none;
-		overflow: hidden;
-
-		li {
-			margin-bottom: 20px;
-
-			&:first-child {
-				margin-top: 3px;
-			}
-		}
-	}
-}
-
 .alpha,
 .beta {
 	#page-secondary-actions {
@@ -49,29 +8,6 @@
 			content: "";
 			display: block;
 			clear: both;
-		}
-	}
-}
-
-@media all and (max-width: @wgMFDeviceWidthTablet) {
-	.alpha,
-	.beta {
-		#page-actions {
-			padding-top: 0;
-		}
-	}
-}
-
-@media all and (min-width: @wgMFDeviceWidthTablet) {
-	.alpha,
-	.beta {
-		#page-actions {
-			width: auto;
-			padding-right: 0;
-
-			li:first-child {
-				margin-top: 0;
-			}
 		}
 	}
 }

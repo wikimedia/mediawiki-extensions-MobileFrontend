@@ -1,10 +1,7 @@
 ( function ( M, $ ) {
 
 	var module = ( function () {
-		var context = M.require( 'context' ),
-			Icon = M.require( 'Icon' ),
-			overlayManager = M.require( 'overlayManager' ),
-			inBeta = context.isBetaGroupMember(),
+		var overlayManager = M.require( 'overlayManager' ),
 			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
 
 		/**
@@ -41,18 +38,8 @@
 		 * @return {jQuery}
 		 */
 		function createLinkElement( labelText ) {
-			if ( inBeta ) {
-				return $( '<a class="cleanup mw-mf-cleanup"></a>' )
-					.text( labelText );
-			}
-
-			return new Icon( {
-					tagName: 'a',
-					name: 'cleanup',
-					hasText: true,
-					label: labelText,
-					additionalClassNames: 'mw-mf-cleanup'
-				} ).$el;
+			return $( '<a class="cleanup mw-mf-cleanup"></a>' )
+				.text( labelText );
 		}
 
 		/**
@@ -72,20 +59,15 @@
 			$metadata.find( '.NavFrame' ).remove();
 
 			$metadata.each( function () {
-				var issue, content,
+				var content,
 					$this = $( this );
 
 				if ( $this.find( selector ).length === 0 ) {
-					// FIXME: [templates] might be inconsistent
-					content = inBeta ? extractMessage( $this ) :
-						$this.find( '.mbox-text, .ambox-text' ).html();
-
-					issue = {
-						// .ambox- is used e.g. on eswiki
-						text: content
-					};
+					content = extractMessage( $this );
 					if ( content ) {
-						issues.push( issue );
+						issues.push( {
+							text: content
+						} );
 					}
 				}
 			} );
@@ -100,13 +82,11 @@
 				} );
 			} );
 
-			if ( inBeta && $metadata.length ) {
-				$( '.pre-content' ).append( $link );
-			} else {
-				$link.insertBefore( $metadata.eq( 0 ) );
-			}
+			if ( $metadata.length ) {
+				$link.insertAfter( $( 'h1#section_0' ) );
 
-			$metadata.remove();
+				$metadata.remove();
+			}
 		}
 
 		/**
@@ -119,10 +99,6 @@
 				$container = ns === 14 ? $( '#content' ) : M.getCurrentPage().getLeadSectionElement(),
 				labelMsgKey = 'mobile-frontend-meta-data-issues';
 
-			if ( inBeta ) {
-				labelMsgKey += '-beta';
-			}
-
 			if ( ns === 0 ) {
 				createBanner( $container, mw.msg( labelMsgKey ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
@@ -130,7 +106,7 @@
 			} else if ( ns === 1 ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-talk' ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
-			} else if ( ns === 14 && inBeta ) {
+			} else if ( ns === 14 ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-categories' ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
 			}

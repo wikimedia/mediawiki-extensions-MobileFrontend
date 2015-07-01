@@ -17,19 +17,30 @@
 .stable .pre-content,
 .heading-holder {
 	padding: @titleSectionSpacingTop @contentMargin @titleSectionSpacingBottom;
+
+	.tagline {
+		color: @colorGray5;
+		font-size: 0.8em;
+		margin: 10px 0;
+
+		&:first-letter {
+			text-transform: capitalize;
+		}
+	}
 }
 
 #section_0 {
-	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
-	border-bottom: dotted 1px @colorGray12;
+	padding-top: 0;
+	padding-bottom: 0;
+	border-bottom: none;
 }
 
 #page-actions {
-	@verticalMargin: 8px;
-	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
-	border-bottom: solid 1px @colorGray12;
-
-	padding: @verticalMargin @contentMargin @verticalMargin @contentMargin - 8;
+	font-size: 1.1em; // Icons are 24px square.
+	float: right;
+	width: 3.4em;
+	border: none;
+	overflow: hidden;
 
 	li {
 		// Needed for non-JavaScript users
@@ -37,6 +48,7 @@
 		cursor: pointer;
 		// Override .hlist rule.
 		margin-right: 0;
+		margin-bottom: 20px;
 
 		// FIXME: use .cloaked class
 		// file inputs are notoriously difficult to style
@@ -53,7 +65,11 @@
 			width: 100%;
 			height: 100%;
 			// needed for ContentOverlay pointer arrow
-			margin: 0 0 @verticalMargin;
+			margin: 0 0 8px;
+		}
+
+		&:first-child {
+			margin-top: 3px;
 		}
 	}
 }
@@ -70,4 +86,3 @@
 		}
 	}
 }
-

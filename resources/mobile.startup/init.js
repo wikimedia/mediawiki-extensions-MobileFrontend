@@ -12,7 +12,8 @@
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
 		mainMenu = M.require( 'mainMenu' ),
-		Skin = M.require( 'Skin' );
+		Skin = M.require( 'Skin' ),
+		$pageTitle = $( 'h1#section_0' );
 
 	skin = new Skin( {
 		el: 'body',
@@ -85,6 +86,27 @@
 		mw.loader.load( [ 'mediawiki.ui.icon', 'skins.minerva.icons.images' ] );
 		$cachedIcons.addClass( 'mw-ui-icon mw-ui-icon-element' ).removeClass( 'icon' );
 		$cachedIcons.filter( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-element' );
+	}
+
+	// On a cached stable article, the immediate pre-content div looks like:
+	//
+	//   <div class="pre-content">
+	//     <h1 id="section_0"></h1>
+	//     <ul id="page-actions" class="hlist"></ul>
+	//   </div>
+	//
+	// whereas in beta it looks like:
+	//
+	//   <div class="pre-content">
+	//     <ul id="page-actions" class="hlist"></ul>
+	//     <h1 id="section_0"></h1>
+	//   </div>
+	//
+	// FIXME: Remove this once the cache has cleared. This is tracked by T101721.
+	if ( $pageTitle.next( '#page-actions' ).length ) {
+		$( '#page-actions' ).remove()
+			.clone()
+			.insertBefore( $pageTitle );
 	}
 
 	mw.loader.using( 'mobile.loggingSchemas' ).done( function () {
