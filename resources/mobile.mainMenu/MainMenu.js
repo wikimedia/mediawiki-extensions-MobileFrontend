@@ -23,11 +23,49 @@
 			activator: undefined
 		},
 
+		/**
+		 * Advertise a new feature in the main menu.
+		 * @param {String} selector to an element inside the main menu
+		 * @param {String} msg a message to show in the pointer
+		 * @param {Skin} skin that the feature lives in, will allow pointer to update when skin gets redrawn.
+		 * @throws exception when you try to advertise more than one feature.
+		 */
+		advertiseNewFeature: function ( selector, msg, skin ) {
+			var self = this;
+			if ( this._hasNewFeature ) {
+				throw 'A new feature is already being advertised.';
+			} else {
+				this._hasNewFeature = true;
+			}
+			$( function () {
+				var $activator = $( self.activator );
+				$activator.addClass( 'indicator-circle' );
+				mw.loader.using( 'mobile.contentOverlays' ).done( function () {
+					$activator.one( 'click', function () {
+						var po,
+							PointerOverlay = M.require( 'mobile.contentOverlays/PointerOverlay' );
+
+						po = new PointerOverlay( {
+							appendToElement: self.$el.parent(),
+							alignment: 'left',
+							skin: skin,
+							summary: msg,
+							target: self.$( selector )
+						} );
+						po.show();
+						$activator.removeClass( 'indicator-circle' );
+					} );
+				} );
+			} );
+		},
+
 		/** @inheritdoc **/
 		initialize: function ( options ) {
-			this.defaults = this._handleCachedMenuData(
-				mw.config.get( 'wgMFMenuData' ) || {}
-			);
+			var // FIXME: move to MainMenu.prototype.defaults when we no longer care about cached data.
+				defaults = this._handleCachedMenuData(
+					mw.config.get( 'wgMFMenuData' ) || {}
+				);
+			$.extend( this.defaults, defaults );
 
 			this.activator = options.activator;
 			View.prototype.initialize.call( this, options );
@@ -147,6 +185,10 @@
 			// FIXME: We should be moving away from applying classes to the body
 			$( 'body' ).toggleClass( 'navigation-enabled' )
 				.toggleClass( drawerType + '-navigation-enabled' );
+			/**
+			 * @event open emitted when navigation drawer is opened
+			 */
+			this.emit( 'open' );
 		}
 	} );
 

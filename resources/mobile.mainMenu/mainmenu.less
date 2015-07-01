@@ -24,6 +24,23 @@
 	z-index: @z-indexMain;
 }
 
+.main-menu-button {
+	&.indicator-circle {
+		overflow: initial;
+		&::after {
+			content: '';
+			background-color: @colorProgressive;
+		  width: .9em;
+		  height: .9em;
+		  position: absolute;
+		  top: -0.4em;
+		  right: .6em;
+		  border-radius: .5em;
+		  border: solid .1em white;
+		}
+	}
+}
+
 nav {
 	float: left;
 }
