@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ba52d813",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-01T00:07:35Z",
+      "side": 1,
+      "message": "I think this line is outdated about the history API. It\u0027s not clear what it means.",
+      "revId": "e08a22c5f084a453aa9d6920e41799f1b0fd9ed2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_da5564fd",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-01T00:07:35Z",
+      "side": 0,
+      "message": "I think this is an outdated comment related to the time we were lazy loading content..",
+      "revId": "b5b0aea2163dc9c1d27cd58916d1b4ec426d8c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
