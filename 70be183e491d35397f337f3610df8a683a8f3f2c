@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_a404efc9",
+        "filename": "resources/mobile.issues/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-02T12:26:48Z",
+      "side": 1,
+      "message": "Does this comment still make sense?",
+      "revId": "70be183e491d35397f337f3610df8a683a8f3f2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e46677b7",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-02T12:26:48Z",
+      "side": 1,
+      "message": "no need for #s ^",
+      "revId": "70be183e491d35397f337f3610df8a683a8f3f2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0462a3a2",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-02T12:26:48Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this run only on cached pages?",
+      "revId": "70be183e491d35397f337f3610df8a683a8f3f2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_446c2b99",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-02T12:26:48Z",
+      "side": 1,
+      "message": "spaces rather than a tab?",
+      "revId": "70be183e491d35397f337f3610df8a683a8f3f2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
