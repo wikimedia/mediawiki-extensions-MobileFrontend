@@ -338,5 +338,7 @@
 	"mobile-frontend-months-ago": "{{PLURAL:$1|virun engem Mount| viru(n) $1 Méint}}",
 	"mobile-frontend-years-ago": "{{PLURAL:$1|virun|viru(n)}} $1 Joer",
 	"mobile-frontend-panel-ok": "OK",
-	"mobile-frontend-panel-cancel": "Nee, merci"
+	"mobile-frontend-panel-cancel": "Nee, merci",
+	"mobile-frontend-search-feedback-link-text": "Gitt eis Äre Feedback.",
+	"mobile-frontend-search-feedback-prompt": "Hutt Dir dat net fonnt wat Dir gesicht hutt?"
 }

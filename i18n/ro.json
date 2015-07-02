@@ -56,6 +56,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Succes! Vă mulțumim pentru prima dumneavoastră contribuție!",
 	"mobile-frontend-donate-photo-upload-success": "Succes! Imaginea dumneavoastră poate fi acum folosită pe {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Revocare",
+	"mobile-frontend-pointer-dismiss": "Renunță",
 	"mobile-frontend-edit-login-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Autentificați-vă pentru a putea modifica.",
 	"mobile-frontend-edit-signup-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Înregistrați-vă pentru a putea modifica.",
 	"mobile-frontend-editor-abusefilter-disallow": "Modificarea nu poate fi salvată întrucât am detectat o problemă.",
@@ -389,5 +390,7 @@
 	"mobile-frontend-browse-tags-header": "Etichete",
 	"mobile-frontend-panel-ok": "OK",
 	"mobile-frontend-panel-cancel": "Nu, mulțumesc",
-	"mobile-frontend-panel-betaoptin-msg": "Doriți să testați câteva caracteristici noi? Alăturându-vă examinării stadiului beta, veți avea acces la caracteristici experimentale, cu riscul de a întâmpina erori și probleme."
+	"mobile-frontend-panel-betaoptin-msg": "Doriți să testați câteva caracteristici noi? Alăturându-vă examinării stadiului beta, veți avea acces la caracteristici experimentale, cu riscul de a întâmpina erori și probleme.",
+	"mobile-frontend-search-feedback-link-text": "Oferiți-ne părerea dumneavoastră.",
+	"mobile-frontend-search-feedback-prompt": "Nu ați găsit ceea ce ați căutat?"
 }

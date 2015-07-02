@@ -66,6 +66,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Sucesso! Obrigado pela sua primeira contribuição!",
 	"mobile-frontend-donate-photo-upload-success": "Sucesso! A sua imagem pode ser utilizada em {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Cancelar",
+	"mobile-frontend-pointer-dismiss": "Ignorar",
 	"mobile-frontend-edit-login-action": "<strong>Ajude a melhorar a {{SITENAME}}.</strong><br />Autentique-se para editar.",
 	"mobile-frontend-edit-signup-action": "<strong>Ajude a melhorar a {{SITENAME}}.</strong><br />Registe-se para editar.",
 	"mobile-frontend-editor-abusefilter-disallow": "Esta edição não foi guardada devido a problemas detectados.",
@@ -373,5 +374,6 @@
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|ano|anos}} atrás",
 	"mobile-frontend-browse-tags-header": "Etiquetas",
 	"mobile-frontend-panel-ok": "Aceitar",
-	"mobile-frontend-panel-cancel": "Não, obrigado"
+	"mobile-frontend-panel-cancel": "Não, obrigado",
+	"mobile-frontend-search-feedback-link-text": "Dê-nos a sua opinião."
 }

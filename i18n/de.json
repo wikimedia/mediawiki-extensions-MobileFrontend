@@ -64,6 +64,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Erfolgreich! Vielen Dank für deinen ersten Beitrag!",
 	"mobile-frontend-donate-photo-upload-success": "Erfolgreich! Dein Bild kann jetzt auf {{SITENAME}} verwendet werden!",
 	"mobile-frontend-drawer-cancel": "Abbrechen",
+	"mobile-frontend-pointer-dismiss": "Ausblenden",
 	"mobile-frontend-edit-login-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten anmelden.",
 	"mobile-frontend-edit-signup-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten registrieren.",
 	"mobile-frontend-editor-abusefilter-disallow": "Diese Bearbeitung konnte nicht gespeichert werden, da ein Problem festgestellt wurde.",
@@ -405,5 +406,7 @@
 	"mobile-frontend-browse-tags-header": "Markierungen",
 	"mobile-frontend-panel-ok": "Okay",
 	"mobile-frontend-panel-cancel": "Nein danke",
-	"mobile-frontend-panel-betaoptin-msg": "Möchtest du einige neue Funktionen austesten? Durch die Teilnahme an Beta erhältst du Zugriff auf experimentelle Funktionen unter dem Risiko, dass Fehler und Probleme auftreten."
+	"mobile-frontend-panel-betaoptin-msg": "Möchtest du einige neue Funktionen austesten? Durch die Teilnahme an Beta erhältst du Zugriff auf experimentelle Funktionen unter dem Risiko, dass Fehler und Probleme auftreten.",
+	"mobile-frontend-search-feedback-link-text": "Gib uns deine Rückmeldung.",
+	"mobile-frontend-search-feedback-prompt": "Konntest du nicht das finden, wonach du suchtest?"
 }

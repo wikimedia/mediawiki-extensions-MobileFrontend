@@ -344,5 +344,6 @@
 	"mobile-frontend-years-ago": "{{PLURAL:$1|rok|$1 lata|$1 lat}} temu",
 	"mobile-frontend-browse-tags-header": "Znaczniki",
 	"mobile-frontend-panel-ok": "OK",
-	"mobile-frontend-panel-cancel": "Nie, dziękuję"
+	"mobile-frontend-panel-cancel": "Nie, dziękuję",
+	"mobile-frontend-search-feedback-link-text": "Prześlij nam swoją opinię."
 }

@@ -52,6 +52,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Успешно! Благодариме за вашиот прв придонес!",
 	"mobile-frontend-donate-photo-upload-success": "Успешно! Вашата слика сега може да се користи на {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Откажи",
+	"mobile-frontend-pointer-dismiss": "Тргни",
 	"mobile-frontend-edit-login-action": "<strong>Помогнете ни да ја подобриме страницата {{SITENAME}}.</strong><br />Најавете се за да уредувате.",
 	"mobile-frontend-edit-signup-action": "<strong>Помогнете ни да ја подобриме страницата {{SITENAME}}.</strong><br />Регистрирајте се за да уредувате.",
 	"mobile-frontend-editor-abusefilter-disallow": "Не можам да го зачувам уредувањето бидејќи востановив проблем.",
@@ -408,5 +409,7 @@
 	"mobile-frontend-browse-tags-header": "Ознаки",
 	"mobile-frontend-panel-ok": "Во ред",
 	"mobile-frontend-panel-cancel": "Не, благодарам",
-	"mobile-frontend-panel-betaoptin-msg": "Дали би сакале да ги пробате новите можности? На бета-верзијата добивате пристап до пробни функции, но со ризик да наидете на грешки и проблеми."
+	"mobile-frontend-panel-betaoptin-msg": "Дали би сакале да ги пробате новите можности? На бета-верзијата добивате пристап до пробни функции, но со ризик да наидете на грешки и проблеми.",
+	"mobile-frontend-search-feedback-link-text": "Дајте ни ваше мислење.",
+	"mobile-frontend-search-feedback-prompt": "Не го најдовте она што го баравте?"
 }

@@ -65,6 +65,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "יש! תודה על תרומתך הראשונה!",
 	"mobile-frontend-donate-photo-upload-success": "יש! עכשיו אפשר להשתמש בתמונה שלך ב{{GRAMMAR:תחילית|{{SITENAME}}}}",
 	"mobile-frontend-drawer-cancel": "ביטול",
+	"mobile-frontend-pointer-dismiss": "סגירה",
 	"mobile-frontend-edit-login-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להיכנס כדי לערוך.",
 	"mobile-frontend-edit-signup-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להירשם כדי לערוך.",
 	"mobile-frontend-editor-abusefilter-disallow": "לא ניתן לשמור את העריכה הזאת מכיוון שמצאנו בה בעיה.",
@@ -421,5 +422,7 @@
 	"mobile-frontend-browse-tags-header": "תגיות",
 	"mobile-frontend-panel-ok": "בסדר",
 	"mobile-frontend-panel-cancel": "לא תודה",
-	"mobile-frontend-panel-betaoptin-msg": "האם מעניין אותך לנסות כמה אפשרויות חדשות? הצטרפות לבטא תיתן לך גישה לאפשרויות ניסיוניות, אבל גם סיכון לראות באגים ובעיות."
+	"mobile-frontend-panel-betaoptin-msg": "האם מעניין אותך לנסות כמה אפשרויות חדשות? הצטרפות לבטא תיתן לך גישה לאפשרויות ניסיוניות, אבל גם סיכון לראות באגים ובעיות.",
+	"mobile-frontend-search-feedback-link-text": "נשמח לקבל את המשוב שלך.",
+	"mobile-frontend-search-feedback-prompt": "לא מצאת את מה שחיפשת?"
 }

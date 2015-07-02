@@ -60,6 +60,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Correcto! Grazas pola súa primeira contribución!",
 	"mobile-frontend-donate-photo-upload-success": "Correcto! Pode usar a súa imaxe en {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Cancelar",
+	"mobile-frontend-pointer-dismiss": "Rexeitar",
 	"mobile-frontend-edit-login-action": "<strong>Axude a mellorar {{SITENAME}}.</strong><br />Acceda ao sistema para editar.",
 	"mobile-frontend-edit-signup-action": "Rexístrese para editar.",
 	"mobile-frontend-editor-abusefilter-disallow": "Esta edición non se pode gardar porque detectamos un problema.",
@@ -415,5 +416,7 @@
 	"mobile-frontend-browse-tags-header": "Etiquetas",
 	"mobile-frontend-panel-ok": "Aceptar",
 	"mobile-frontend-panel-cancel": "Non, grazas",
-	"mobile-frontend-panel-betaoptin-msg": "Quere probar algúns trebellos novos? Ó unirse á beta, accederá a trebellos experimentais, co risco de encontrarse con algúns erros e problemas."
+	"mobile-frontend-panel-betaoptin-msg": "Quere probar algúns trebellos novos? Ó unirse á beta, accederá a trebellos experimentais, co risco de encontrarse con algúns erros e problemas.",
+	"mobile-frontend-search-feedback-link-text": "Envíenos os seus comentarios.",
+	"mobile-frontend-search-feedback-prompt": "Non atopou o que procuraba?"
 }
