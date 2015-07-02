@@ -12,26 +12,29 @@ body {
 
 #content_wrapper {
 	border-top: 1px solid @grayLight;
+}
 
-	.last-modified-bar {
-		background-color: @colorGray14;
-		padding: 0 @contentMargin;
-		display: block;
+.last-modified-bar {
+	background-color: @colorGray14;
+	padding: 0 @contentMargin;
+	display: block;
+	color: @colorGray6;
+	// Make sure last modified link has correct font size (it is outside of the content div)
+	font-size: .9em;
+	a,
+	a:visited {
 		color: @colorGray6;
-		a {
-			color: @colorGray6;
-			// If browser supports
-			&:nth-child(2) {
-				font-weight: bold;
-			}
+		// If browser supports
+		&:nth-child(2) {
+			font-weight: bold;
 		}
+	}
 
-		&.active {
-			background-color: #00AF8B;
+	&.active {
+		background-color: @lastModifiedBarActiveBackgroundColor;
+		color: #fff;
+		a {
 			color: #fff;
-			a {
-				color: #fff;
-			}
 		}
 	}
 }
