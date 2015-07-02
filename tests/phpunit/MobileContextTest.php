@@ -36,8 +36,24 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @return MobileContext
 	 */
 	private function makeContext( $url = '/', $cookies = array() ) {
+		$query = array();
+		if ( $url ) {
+			$params = wfParseUrl( wfExpandUrl( $url ) );
+			if ( isset( $params['query'] ) ) {
+				$query = wfCgiToArray( $params['query'] );
+			}
+		}
+
+		if ( method_exists( 'FauxRequest', 'setCookies' ) ) {
+			$request = new FauxRequest( $query );
+		} else {
+			$request = new MFFauxRequest( $query );
+		}
+		$request->setRequestURL( $url );
+		$request->setCookies( $cookies, '' );
+
 		$context = new DerivativeContext( RequestContext::getMain() );
-		$context->setRequest( new MFFauxRequest( $url,  $cookies ) );
+		$context->setRequest( $request );
 		$context->setOutput( new OutputPage( $context ) );
 		$instance = unserialize( 'O:13:"MobileContext":0:{}' );
 		$instance->setContext( $context );
@@ -598,36 +614,29 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 }
 
+// For backwards compatibility until https://gerrit.wikimedia.org/r/#/c/222339/
+// is merged.
 class MFFauxRequest extends FauxRequest {
-	private $cookies, $url, $response;
-
-	public function __construct( $url, array $cookies = array() ) {
-		$this->url = $url;
-		$query = array();
-		if ( $url ) {
-			$params = wfParseUrl( wfExpandUrl( $url ) );
-			if ( isset( $params['query'] ) ) {
-				$query = wfCgiToArray( $params['query'] );
-			}
-		}
-		parent::__construct( $query );
-		$this->cookies = $cookies;
-		$this->response = new FauxResponse();
-	}
+	protected $cookies = array();
 
 	public function getCookie( $key, $prefix = null, $default = null ) {
-		return isset( $this->cookies[$key] ) ? $this->cookies[$key] : $default;
+		if ( $prefix === null ) {
+			global $wgCookiePrefix;
+			$prefix = $wgCookiePrefix;
+		}
+		$name = $prefix . $key;
+		return isset( $this->cookies[$name] ) ? $this->cookies[$name] : $default;
 	}
 
-	public function getRequestURL() {
-		return $this->url;
-	}
-
-	/**
-	 * @return FauxResponse
-	 */
-	public function response() {
-		return $this->response;
+	public function setCookies( $cookies, $prefix = null ) {
+		if ( $prefix === null ) {
+			global $wgCookiePrefix;
+			$prefix = $wgCookiePrefix;
+		}
+		foreach ( $cookies as $key => $value ) {
+			$name = $prefix . $key;
+			$this->cookies[$name] = $value;
+		}
 	}
 }
 
