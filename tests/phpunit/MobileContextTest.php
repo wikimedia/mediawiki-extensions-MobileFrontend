@@ -44,11 +44,7 @@ class MobileContextTest extends MediaWikiTestCase {
 			}
 		}
 
-		if ( method_exists( 'FauxRequest', 'setCookies' ) ) {
-			$request = new FauxRequest( $query );
-		} else {
-			$request = new MFFauxRequest( $query );
-		}
+		$request = new FauxRequest( $query );
 		$request->setRequestURL( $url );
 		$request->setCookies( $cookies, '' );
 
@@ -611,32 +607,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->setMwGlobals( 'wgTitle', null );
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
-	}
-}
-
-// For backwards compatibility until https://gerrit.wikimedia.org/r/#/c/222339/
-// is merged.
-class MFFauxRequest extends FauxRequest {
-	protected $cookies = array();
-
-	public function getCookie( $key, $prefix = null, $default = null ) {
-		if ( $prefix === null ) {
-			global $wgCookiePrefix;
-			$prefix = $wgCookiePrefix;
-		}
-		$name = $prefix . $key;
-		return isset( $this->cookies[$name] ) ? $this->cookies[$name] : $default;
-	}
-
-	public function setCookies( $cookies, $prefix = null ) {
-		if ( $prefix === null ) {
-			global $wgCookiePrefix;
-			$prefix = $wgCookiePrefix;
-		}
-		foreach ( $cookies as $key => $value ) {
-			$name = $prefix . $key;
-			$this->cookies[$name] = $value;
-		}
 	}
 }
 
