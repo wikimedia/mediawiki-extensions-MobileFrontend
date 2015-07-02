@@ -1,0 +1,23 @@
+@import "minerva.variables";
+@import "mediawiki.ui/variables";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.last-modified-bar.post-content {
+		background-color: transparent;
+		font-size: 1em;
+		&.active {
+			background-color: transparent;
+			#mw-mf-last-modified {
+				background-color: @lastModifiedBarActiveBackgroundColor;
+			}
+		}
+
+		// This rule must be scoped to .last-modified-bar to prevent side effects on the MainPage bar
+		#mw-mf-last-modified {
+			background-color: @colorGray14;
+			font-size: 0.9em;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+}

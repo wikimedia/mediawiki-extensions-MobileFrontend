@@ -1,6 +1,6 @@
-<div{{^isMainPage}} class="last-modified-bar"{{/isMainPage}}>
-	{{! FIXME: Should have both post-content and pre-content classes}}
-	<div id="mw-mf-last-modified" class="truncated-text pre-content post-content">
+{{! FIXME: Remove .pre-content when the last modified bar in beta is promoted to stable }}
+{{^isMainPage}}<div class="last-modified-bar pre-content post-content">{{/isMainPage}}
+	<div id="mw-mf-last-modified" class="truncated-text">
 		<a href="{{link}}"
 			data-user-name="{{username}}"
 			data-user-gender="{{userGender}}"
@@ -8,4 +8,4 @@
 			{{text}}
 		</a>
 	</div>
-</div>
+{{^isMainPage}}</div>{{/isMainPage}}

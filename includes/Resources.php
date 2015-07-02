@@ -98,6 +98,7 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.tablet.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
+			'resources/skins.minerva.tablet.beta.styles/ui.less',
 			'resources/skins.minerva.tablet.beta.styles/common.less',
 			'resources/skins.minerva.tablet.beta.styles/hacks.less',
 		),
