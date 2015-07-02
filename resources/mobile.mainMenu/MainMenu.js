@@ -28,10 +28,12 @@
 		 * @param {String} selector to an element inside the main menu
 		 * @param {String} msg a message to show in the pointer
 		 * @param {Skin} skin that the feature lives in, will allow pointer to update when skin gets redrawn.
+		 * @returns {jQuery.Deferred} with the PointerOverlay as the only argument.
 		 * @throws exception when you try to advertise more than one feature.
 		 */
 		advertiseNewFeature: function ( selector, msg, skin ) {
-			var self = this;
+			var d = $.Deferred(),
+				self = this;
 			if ( this._hasNewFeature ) {
 				throw 'A new feature is already being advertised.';
 			} else {
@@ -53,10 +55,12 @@
 							target: self.$( selector )
 						} );
 						po.show();
+						d.resolve( po );
 						$activator.removeClass( 'indicator-circle' );
 					} );
 				} );
 			} );
+			return d;
 		},
 
 		/** @inheritdoc **/
