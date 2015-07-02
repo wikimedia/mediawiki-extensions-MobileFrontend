@@ -282,7 +282,7 @@ class MinervaTemplate extends BaseTemplate {
 
 		if ( $internalBanner || $preBodyText ) {
 		?>
-		<div class="pre-content">
+		<div class="pre-content heading-holder">
 			<?php
 				echo $preBodyText;
 				// FIXME: Temporary solution until we have design

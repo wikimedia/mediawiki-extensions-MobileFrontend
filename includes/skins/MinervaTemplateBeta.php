@@ -86,7 +86,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		if ( $internalBanner || $preBodyText ) {
 
 			?>
-			<div class="pre-content">
+			<div class="pre-content heading-holder">
 				<?php
 				if ( !$this->isSpecialPage ) {
 					$this->renderPageActions( $data );

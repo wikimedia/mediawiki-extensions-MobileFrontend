@@ -13,8 +13,10 @@
 	display: none;
 }
 
-.pre-content {
-	padding: 12px @contentMargin 7px;
+// FIXME: remove the .stable .pre-content selector when cache clears
+.stable .pre-content,
+.heading-holder {
+	padding: @titleSectionSpacingTop @contentMargin @titleSectionSpacingBottom;
 }
 
 #section_0 {

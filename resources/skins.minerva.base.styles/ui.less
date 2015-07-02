@@ -14,9 +14,11 @@ body {
 	border-top: 1px solid @grayLight;
 }
 
+// FIXME: REMOVE .stable .pre-content.last-modified-bar selector when cache clears
+.stable .pre-content.last-modified-bar,
 .last-modified-bar {
 	background-color: @colorGray14;
-	padding: 0 @contentMargin;
+	padding: 5px @contentMargin;
 	display: block;
 	color: @colorGray6;
 	// Make sure last modified link has correct font size (it is outside of the content div)
