@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_064b832c",
+        "filename": "resources/skins.minerva.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-02T20:53:49Z",
+      "side": 1,
+      "message": "FIXME somewhat confuses me...\n.post-content.last-modified-bar looks far worse ... and it\u0027s not clear why I\u0027d switch to that.",
+      "revId": "fb3f8d87d70ca39f90489192622d9ad5a8ffa9bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
