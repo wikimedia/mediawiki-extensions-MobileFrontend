@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_fc736711",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-03T15:31:07Z",
+      "side": 1,
+      "message": "I wrestled with this but it\u0027s misleading. We support android 2 and this BlackBerry device. Just not for search...\nAnd these rules are not used anywhere else so currently are not useful as utilities.",
+      "parentUuid": "8ec42329_51cdc4ba",
+      "revId": "dbffb749399900b8e1216ee8dff4191b2f94d933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_d1e9b410",
         "filename": "resources/skins.minerva.tablet.beta.styles/mainmenu.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-03T10:58:13Z",
       "side": 1,
       "message": "Why are we doing these changes? The bug only mentions that the search input is not tall enough. Are we trying to fix that here? Could you explain it in the commit message?",
+      "revId": "dbffb749399900b8e1216ee8dff4191b2f94d933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_dc1d4bc2",
+        "filename": "resources/skins.minerva.tablet.beta.styles/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-03T15:31:07Z",
+      "side": 1,
+      "message": "Doh this is clearly from my other patch :)",
+      "parentUuid": "8ec42329_d1e9b410",
       "revId": "dbffb749399900b8e1216ee8dff4191b2f94d933",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
