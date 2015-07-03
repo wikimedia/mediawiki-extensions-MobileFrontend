@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_9c6a6310",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-07-03T15:34:18Z",
+      "side": 1,
+      "message": "There\u0027s no harm in making it more readable though. What about something like:\n\n    if ( browser.mustUseBasicSearch() ) {\n      // ...\n    }\n\nYou can even write a unit test for that function!",
+      "parentUuid": "8ec42329_fc736711",
+      "revId": "dbffb749399900b8e1216ee8dff4191b2f94d933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_d1e9b410",
         "filename": "resources/skins.minerva.tablet.beta.styles/mainmenu.less",
         "patchSetId": 1
