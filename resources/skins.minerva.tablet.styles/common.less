@@ -14,7 +14,9 @@ A file for css that optimises the Minerva skin on larger devices.
 		}
 	}
 
-	.pre-content {
+	// FIXME: remove the .stable .pre-content selector when cache clears
+	.stable .pre-content,
+	.heading-holder {
 		position: relative;
 		padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
 
