@@ -7,7 +7,8 @@
 			"Robotukas11",
 			"Vogone",
 			"Hugo.arg",
-			"Pofka"
+			"Pofka",
+			"Albertas"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Peršokti atgal sekcija",
@@ -66,5 +67,8 @@
 	"tag-mobile_edit": "Keitimas mob. telefonu",
 	"tag-mobile_web_edit": "Keitimas įskiepiu mobiliesiems",
 	"mobile-frontend-pageaction-edit-tooltip": "Taisyti pagrindinę puslapio dalį.",
-	"mobile-frontend-loading-message": "Kraunasi..."
+	"mobile-frontend-loading-message": "Kraunasi...",
+	"mobile-frontend-browse-tags-header": "Žymos",
+	"mobile-frontend-panel-ok": "Gerai",
+	"mobile-frontend-panel-cancel": "Ne, ačiū"
 }
