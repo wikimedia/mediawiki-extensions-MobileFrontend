@@ -516,6 +516,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// icons.js
 			'mobile-frontend-loading-message',
 			'mobile-frontend-console-recruit',
+			// Skin.js
+			'mobile-frontend-editor-terms-link',
 		),
 		'styles' => array(
 			'resources/mobile.startup/panel.less',
@@ -663,7 +665,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-keep-editing',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
-			'mobile-frontend-editor-terms-link',
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
 			'mobile-frontend-editor-summary',
@@ -814,7 +815,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
-			'mobile-frontend-editor-terms-link',
 		),
 	),
 
