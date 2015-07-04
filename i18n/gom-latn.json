@@ -4,7 +4,7 @@
 			"The Discoverer"
 		]
 	},
-	"mobile-frontend-changeslist-nocomment": "Bodlopachem apros na",
+	"mobile-frontend-changeslist-nocomment": "Bodolachem apros na",
 	"mobile-frontend-copyright": "Hantuntlem mozkur $1-chea ontorgot uplobdh asa jem miren her nondi korunk nant.",
 	"mobile-frontend-editor-edit": "Bodol",
 	"mobile-frontend-featured-article": "Aizchem ashyachem akarshan",
@@ -31,6 +31,6 @@
 	"mobile-frontend-view-desktop": "Komputer",
 	"mobile-frontend-view-mobile": "Mobail",
 	"tag-mobile_edit": "Mobail bodol",
-	"tag-mobile_web_edit": "Mobail saiti vorvim kel'le bodlop",
+	"tag-mobile_web_edit": "Mobail saiti vorvim kel'le bodlopam",
 	"mobile-frontend-pageaction-edit-tooltip": "Hea panachea mukhel bhag bodol"
 }

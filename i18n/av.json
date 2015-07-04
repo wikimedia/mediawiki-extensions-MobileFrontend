@@ -4,5 +4,19 @@
 			"Gazimagomedov"
 		]
 	},
-	"mobile-frontend-editor-edit": "Хисизабизе"
+	"mobile-frontend-editor-edit": "Хисизабизе",
+	"mobile-frontend-generic-login": "{{SITENAME}} гӀуцӀун буго нужго гӀадинал гӀадамаца.",
+	"mobile-frontend-generic-login-action": "ГӀахьаллъи гьабизе бокьани, авторизация гьабе.",
+	"mobile-frontend-home-button": "Рукъ",
+	"mobile-frontend-login": "Жаниве лъугьине",
+	"mobile-frontend-main-menu-account-create": "Аккаунт рагьизе",
+	"mobile-frontend-main-menu-login": "Жаниве лъугьине",
+	"mobile-frontend-main-menu-nearby": "АскӀосе гӀебеде",
+	"mobile-frontend-main-menu-settings": "Рекъезабиял",
+	"mobile-frontend-main-menu-watchlist": "Халгьабиялъул сияхӀ",
+	"mobile-frontend-password-placeholder": "Парол",
+	"mobile-frontend-random-button": "Цебе ккараб",
+	"mobile-frontend-username-placeholder": "ХӀалтӀизабулчиясул цӀар",
+	"mobile-frontend-view": "Телепоналъул версия",
+	"mobile-frontend-view-desktop": "Компьютералъул"
 }

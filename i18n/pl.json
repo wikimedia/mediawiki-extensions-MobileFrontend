@@ -28,7 +28,8 @@
 			"Darellur",
 			"Py64",
 			"Devwebtel",
-			"VerMa"
+			"VerMa",
+			"PiotrAntosz"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego",
@@ -71,6 +72,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Powiodło się! Dziękujemy za twój pierwszy wkład!",
 	"mobile-frontend-donate-photo-upload-success": "Powiodło się! Teraz twoja grafika może zostac użyta w {{GRAMMAR:MS.lp|{{SITENAME}}}}!",
 	"mobile-frontend-drawer-cancel": "Anuluj",
+	"mobile-frontend-pointer-dismiss": "Odrzuć",
 	"mobile-frontend-edit-login-action": "Zaloguj się w celu edycji.",
 	"mobile-frontend-edit-signup-action": "Zarejestruj się, aby edytować.",
 	"mobile-frontend-editor-abusefilter-disallow": "Zmiana nie może zostać zapisana, ponieważ wykryto problem.",

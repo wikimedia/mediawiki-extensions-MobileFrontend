@@ -19,7 +19,8 @@
 			"Ата",
 			"Тест",
 			"Olion",
-			"Ypryima"
+			"Ypryima",
+			"Ahonc"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -150,8 +151,8 @@
 	"mobile-frontend-generic-404-desc": "Сторінку, яку ви шукали, не знайдено.",
 	"mobile-frontend-generic-404-title": "Помилка - сторінку не знайдено",
 	"mobile-frontend-generic-login": "{{SITENAME}} створюється такими ж людьми, як і ви.",
-	"mobile-frontend-generic-login-action": "Увійдіть, аби внести свій вклад.",
-	"mobile-frontend-generic-signup-action": "Зареєструйтесь, щоб внести свій внесок.",
+	"mobile-frontend-generic-login-action": "Увійдіть, щоб зробити свій внесок.",
+	"mobile-frontend-generic-signup-action": "Зареєструйтесь, щоб зробити свій внесок.",
 	"mobile-frontend-history": "Переглянути історію редагувань цієї сторінки.",
 	"mobile-frontend-history-404-desc": "Не можна переглянути історію для сторінки, яка не існує. Це було видалено або ви може маєте підписку з поганим посиланням.",
 	"mobile-frontend-history-404-title": "Немає такої сторінки",
@@ -210,7 +211,6 @@
 	"mobile-frontend-media-details": "Деталі",
 	"mobile-frontend-media-license-link": "Відомості про ліцензію",
 	"mobile-frontend-meta-data-issues": "Ця сторінка має деякі запитання",
-	"mobile-frontend-meta-data-issues-beta": "Питання по сторінці",
 	"mobile-frontend-meta-data-issues-talk": "Про цю сторінку обговорення",
 	"mobile-frontend-meta-data-issues-header": "Запитання",
 	"mobile-frontend-meta-data-issues-header-talk": "Про цю сторінку",
