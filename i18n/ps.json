@@ -39,6 +39,7 @@
 	"mobile-frontend-main-menu-nearby": "نژدې",
 	"mobile-frontend-main-menu-settings": "امستنې",
 	"mobile-frontend-main-menu-watchlist": "کتنلړ",
+	"mobile-frontend-meta-data-issues": "د مخ ستونزې",
 	"mobile-frontend-news-items": "په خبرونو کې",
 	"mobile-frontend-overlay-close": "تړل",
 	"mobile-frontend-page-menu-contents": "منځپانگه",
@@ -67,5 +68,6 @@
 	"tag-mobile_web_edit-description": "سمون د موبايل گورت له لارې",
 	"mobile-frontend-pageaction-edit-tooltip": "د دې مخ د پيل برخه سمول.",
 	"mobile-frontend-loading-message": "برسېرېدنې کې دی...",
-	"mobile-frontend-panel-cancel": "نه مننه"
+	"mobile-frontend-panel-cancel": "نه مننه",
+	"mobile-frontend-search-feedback-link-text": "تاسې خپل نظر موږ ته راکړئ"
 }
