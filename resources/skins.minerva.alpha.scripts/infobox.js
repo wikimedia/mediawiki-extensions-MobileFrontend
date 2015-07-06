@@ -13,7 +13,7 @@
 		infobox = new Infobox( {
 			itemId: wikidataID
 		} );
-		infobox.insertAfter( '.pre-content' );
+		infobox.insertAfter( '.pre-content:first' );
 
 		overlayManager.add( /\/infobox\/editor/, function () {
 			return new InfoboxEditorOverlay( {
