@@ -279,7 +279,7 @@ class MinervaTemplate extends BaseTemplate {
 		$internalBanner = $data[ 'internalBanner' ];
 		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
 
-		if ( $internalBanner || $preBodyText ) {
+		if ( $internalBanner || $preBodyText || isset( $data['page_actions'] ) ) {
 		?>
 		<div class="pre-content heading-holder">
 			<?php
