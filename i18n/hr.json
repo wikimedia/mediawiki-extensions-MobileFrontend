@@ -4,7 +4,8 @@
 			"MaGa",
 			"Roberta F.",
 			"SpeedyGonsales",
-			"Fraxinus"
+			"Fraxinus",
+			"Teoo3"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite \"captcha\" tekst",
@@ -83,7 +84,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Počni s uređivanjem",
 	"mobile-frontend-editor-tutorial-summary": "Probajte poboljšati stranicu $1. Ne bojte se oznaka.",
 	"mobile-frontend-editor-unavailable": "Uređivanje nije dostupno u Vašem pregledniku. Probajte drugi preglednik.",
-	"mobile-frontend-editor-unavailable-header": "Uređivač nije dostupan",
 	"mobile-frontend-editor-undo-unsupported": "Poništavanje trenutačno nije podržano na mobilnim uređajima.",
 	"mobile-frontend-editor-uploadenable": "Da biste omogućili uređivanje, najprije postavite sliku.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Pregled izvornika</strong><span> $1</span>",
@@ -167,7 +167,6 @@
 	"mobile-frontend-media-details": "Pojedinosti",
 	"mobile-frontend-media-license-link": "Informacije o licenciji",
 	"mobile-frontend-meta-data-issues": "Ova stranica ima sljedeće nedostatke",
-	"mobile-frontend-meta-data-issues-beta": "Nedostatci stranice",
 	"mobile-frontend-meta-data-issues-talk": "O ovoj stranici za razgovor",
 	"mobile-frontend-meta-data-issues-header": "Nedostatci",
 	"mobile-frontend-meta-data-issues-header-talk": "O ovoj stranici",
@@ -272,7 +271,7 @@
 	"mobile-frontend-watchlist-feed": "Promijenjene stranice",
 	"mobile-frontend-watchlist-feed-empty": "Nema stranica s nedavnim promjenama.",
 	"mobile-frontend-watchlist-filter-all": "Sve",
-	"mobile-frontend-watchlist-filter-articles": "Članci",
+	"mobile-frontend-watchlist-filter-articles": "Stranice",
 	"mobile-frontend-watchlist-filter-other": "Ostalo",
 	"mobile-frontend-watchlist-filter-talk": "Razgovor",
 	"mobile-frontend-watchlist-login-action": "Prijavite se da biste ga vidjeli.",
