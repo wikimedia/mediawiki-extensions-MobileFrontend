@@ -12,6 +12,10 @@
 		/**
 		 * @inheritdoc
 		 */
+		isBorderBox: false,
+		/**
+		 * @inheritdoc
+		 */
 		fullScreen: false,
 		/**
 		 * @inheritdoc
@@ -99,9 +103,8 @@
 				center = $pa.width() / 2;
 
 			this._position( $pa );
-			// Add half of the element width and subtract 10px for half of the arrow
-			// remove the left offset of the overlay as margin auto may be applied to it
-			left = paOffset.left + 10 - overlayOffset.left;
+			// add the entire width of the pointer
+			left = paOffset.left + 20 - overlayOffset.left;
 			if ( this.alignment === 'center' ) {
 				left -= center;
 			}

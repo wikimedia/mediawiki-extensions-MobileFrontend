@@ -15,6 +15,11 @@
 	Skin = View.extend( {
 		/**
 		 * @inheritdoc
+		 * Skin contains components that we do not control
+		 */
+		isBorderBox: false,
+		/**
+		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page page the skin is currently rendering
 		 * @cfg {Array} defaults.tabletModules modules to load when in tablet

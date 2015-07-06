@@ -17,13 +17,27 @@ A file for css that optimises the Minerva skin on larger devices.
 	// FIXME: remove the .stable .pre-content selector when cache clears
 	.stable .pre-content,
 	.heading-holder {
-		position: relative;
 		padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
+	}
+
+	// FIXME: remove the .stable .pre-content selector when cache clears
+	.stable .pre-content,
+	.heading-holder {
+		position: relative;
 
 		#section_0 {
 			border-bottom: none;
 			padding: 0 0 7px 0;
 			font-size: 2.6525em; // 42px
+		}
+	}
+
+	.stable {
+		// FIXME: Have a class that identifies all 3 of these
+		.pre-content,
+		.content,
+		.content-overlay {
+			max-width: @contentMaxWidthTablet + ( 2 * @contentPaddingTablet );
 		}
 	}
 
@@ -36,15 +50,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		}
 	}
 
-	.stable {
-		// FIXME: Have a class that identifies all 3 of these
-		.pre-content,
-		.content,
-		.content-overlay {
-			max-width: @contentMaxWidthTablet;
-		}
-	}
-
 	// FIXME: Have a class that identifies all 4 of these
 	.drawer,
 	.pre-content,
@@ -54,7 +59,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	}
 
 	.content {
-		padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
+		padding: @contentTopPadding @contentPaddingTablet 0;
 		// Classes added by thumbnails
 		// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
 		// We use @noflip because we still want .tleft to be on the left and

@@ -80,7 +80,13 @@
 
 // custom tablet styling
 @contentPaddingTablet: 3.35em;
-@contentMaxWidthTablet: 1000px;
+
+// FIXME: To be moved to includes/Config in a follow up patch.
+@wgMFDeviceWidthDesktop: 62.5em; // 1000px / 16 px;
+
+// note since content does not use view border box we have to include padding.
+@contentMaxWidthTablet: @wgMFDeviceWidthDesktop - ( 2 * @contentPaddingTablet );
+@contentTopPadding: 1.6em;
 
 // calculated values
 @secondaryNavWidth: @headerElementHeight;

@@ -52,7 +52,10 @@
 				height: undefined
 			}
 		},
-
+		/**
+		 * @inheritdoc
+		 */
+		isBorderBox: false,
 		/**
 		 * @inheritdoc
 		 */

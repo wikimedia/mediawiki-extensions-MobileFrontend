@@ -1,9 +1,15 @@
 @import "minerva.variables";
 @import "mediawiki.ui/variables";
 
-
 @media all and (min-width: @wgMFDeviceWidthTablet) {
+	.beta {
+		.content {
+			padding: @contentTopPadding @contentPaddingTablet 0;
+		}
+	}
+}
 
+@media all and (min-width: @wgMFDeviceWidthDesktop) {
 	// When pushing to stable remember to think about cache implications
 	.alpha,
 	.beta {
@@ -12,7 +18,6 @@
 		.banner-container,
 		// FIXME: Generic header class needed me-thinks!
 		.header,
-		.list-header,
 		.page-header-bar,
 		.content-header,
 		.overlay-header,
@@ -29,24 +34,9 @@
 			max-width: @contentMaxWidthTablet;
 		}
 
-		// FIXME: Zero should use banner-container class or better - append to banner-container
-		#mw-mf-page-center .mw-mf-banner,
-		.banner-container,
-		// Alpha and beta have a .header in navigation drawer
-		#mw-mf-page-center .header,
-		.pre-content,
-		.post-content,
-		.content-unstyled,
-		.content-header,
-		.overlay-header,
-		.overlay-content {
-			padding-left: @contentPaddingTablet;
-			padding-right: @contentPaddingTablet;
+		.content {
+			padding: @contentTopPadding 0;
 		}
-	}
-
-	.alpha,
-	.beta {
 		// #mw-mf-page-center is needed because there is a .header inside the main menu in alpha
 		#mw-mf-page-center .header {
 			margin-top: -1px;

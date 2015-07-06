@@ -37,7 +37,7 @@
 .list-header {
 	font-weight: bold;
 	font-size: .85em;
-	padding: .5em @contentMargin .4em;
+	padding: .5em @contentMargin .4em @contentMargin;
 	background-color: @grayLightest;
 	color: @grayMedium;
 }
@@ -57,5 +57,11 @@
 
 	&.list-thumb-y {
 		.background-size( auto, 100% );
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.list-header {
+		padding: .5em @contentPaddingTablet .4em @contentMargin;
 	}
 }
