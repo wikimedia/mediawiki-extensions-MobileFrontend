@@ -1481,6 +1481,7 @@ $wgMobileVEModules = array(
 		),
 		'templates' => array(
 			'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
+			'toolbarVE.hogan' => 'resources/mobile.editor.ve/toolbarVE.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-page-edit-summary',

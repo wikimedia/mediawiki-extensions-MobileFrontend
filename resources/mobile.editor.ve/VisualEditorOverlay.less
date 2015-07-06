@@ -77,12 +77,15 @@
 		-webkit-transform: translate(0,0);
 	}
 
+	.overlay-content .surface {
+		overflow: hidden;
+	}
+
 	// Toolbar
 	@baseIconSize: 24px;
 	@targetIconSize: 32px;
 	.overlay-header-container {
 		.toolbar {
-			border-left: 1px solid @grayLight;
 			// Expand the toolbar as wide as possible to limit the size of the
 			// overlay-action. (Both are displayed as table-cells.)
 			width: 100%;
@@ -99,6 +102,11 @@
 				box-shadow: none;
 			}
 		}
+		.oo-ui-toolbar-tools {
+			.oo-ui-toolGroup:last-child {
+				border-right: 0;
+			}
+		}
 		.editor-switcher .oo-ui-toolGroup {
 			border-right: 0;
 		}
@@ -106,5 +114,9 @@
 
 	.overlay-header {
 		border-collapse: separate;
+	}
+
+	.oo-ui-popupToolGroup .oo-ui-tool-link .oo-ui-tool-accel {
+		display: none;
 	}
 }

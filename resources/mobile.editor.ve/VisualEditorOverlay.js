@@ -14,6 +14,7 @@
 		isBorderBox: false,
 		/** @inheritdoc **/
 		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
+			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),
 		/** @inheritdoc **/
@@ -82,6 +83,8 @@
 					overlay.target.activating = true;
 					overlay.target.load();
 					overlay.target.connect( overlay, {
+						back: 'onBack',
+						saveBegin: 'onStageChanges',
 						save: 'onSaveComplete',
 						saveAsyncBegin: 'showSpinner',
 						saveAsyncComplete: 'clearSpinner',
@@ -137,12 +140,20 @@
 			EditorOverlayBase.prototype.postRender.apply( this );
 		},
 		/**
+		 * Handle back event
+		 */
+		onBack: function () {
+			window.history.back();
+		},
+
+		/**
 		 * @inheritdoc
 		 */
 		onClickBack: function () {
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 			this.switchToEditor();
 		},
+
 		/**
 		 * Reveal the editing interface.
 		 * @method
