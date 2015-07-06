@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_421402a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-06T19:24:09Z",
+      "side": 1,
+      "message": "oops, i made this change on my mobile phone, yeah! :D",
+      "parentUuid": "8ec42329_d46f5426",
+      "revId": "e2e8b15643b4d424e9b318f6630c4a2ae1c27283",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_f46cd033",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-06T15:31:22Z",
       "side": 1,
       "message": "\"fox\" -\u003e \"Fix\"",
+      "revId": "e2e8b15643b4d424e9b318f6630c4a2ae1c27283",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e2288ee0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-06T19:24:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_f46cd033",
       "revId": "e2e8b15643b4d424e9b318f6630c4a2ae1c27283",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
