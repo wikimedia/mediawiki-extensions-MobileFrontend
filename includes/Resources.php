@@ -213,10 +213,6 @@ $wgMinervaStyleModules = array(
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'variants' => array(
-			'invert' => array(
-				'color' => '#FFFFFF',
-				'global' => true,
-			),
 			'gray' => array(
 				'color' => '#555555',
 			),
@@ -227,18 +223,6 @@ $wgMinervaStyleModules = array(
 			'watched' => 'images/icons/beta/watched.svg',
 			'edit' => 'images/icons/beta/editLocked.svg',
 			'edit-enabled' => 'images/icons/beta/edit.svg',
-			'previous' => array(
-				'file' => array(
-					'ltr' => 'images/icons/move-rtl.svg',
-					'rtl' => 'images/icons/move-ltr.svg',
-				),
-			),
-			'next' => array(
-				'file' => array(
-					'ltr' => 'images/icons/move-ltr.svg',
-					'rtl' => 'images/icons/move-rtl.svg',
-				),
-			),
 			// Special:MobileMenu-specific back icon
 			'back-mobilemenu' => 'images/icons/beta/back-ltr.svg',
 			'search' => array(
@@ -793,6 +777,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			// for Api.js
 			'mobile.startup',
+			'mobile.swipe.images',
 		),
 		'styles' => array(
 			'resources/mobile.mediaViewer/mediaViewer.less',
@@ -816,11 +801,36 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.mediaViewer',
 			'mobile.swipe',
 		),
-		'templates' => array(
-			'Overlay.hogan' => 'resources/mobile.mediaViewer.beta/ImageOverlayNew.hogan',
-		),
 		'scripts' => array(
-			'resources/mobile.mediaViewer.beta/ImageOverlayNew.js',
+			'resources/mobile.mediaViewer.beta/ImageOverlayBeta.js',
+		),
+	),
+
+	/** provides next and previous images, e.g. for a swipe left and right module */
+	'mobile.swipe.images' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderImageModule',
+		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
+		'prefix' => 'mw-ui',
+		'variants' => array(
+			'invert' => array(
+				'color' => '#FFFFFF',
+				'global' => true,
+			)
+		),
+		'images' => array(
+			'previous' => array(
+				'file' => array(
+					'ltr' => 'images/icons/move-rtl.svg',
+					'rtl' => 'images/icons/move-ltr.svg',
+				),
+			),
+			'next' => array(
+				'file' => array(
+					'ltr' => 'images/icons/move-ltr.svg',
+					'rtl' => 'images/icons/move-rtl.svg',
+				),
+			),
 		),
 	),
 

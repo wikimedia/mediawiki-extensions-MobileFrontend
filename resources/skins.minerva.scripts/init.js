@@ -63,7 +63,7 @@
 	function loadImageOverlay( title ) {
 		var result = $.Deferred(),
 			rlModuleName = useNewMediaViewer ? 'mobile.mediaViewer.beta' : 'mobile.mediaViewer',
-			moduleName = useNewMediaViewer ? 'ImageOverlayNew' : 'ImageOverlay';
+			moduleName = useNewMediaViewer ? 'ImageOverlayBeta' : 'ImageOverlay';
 
 		loader.loadModule( rlModuleName ).done( function () {
 			var ImageOverlay = M.require( 'modules/mediaViewer/' + moduleName );

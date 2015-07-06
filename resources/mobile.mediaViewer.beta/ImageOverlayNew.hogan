@@ -1,7 +1,0 @@
-<div class="prev slider-button">
-	{{{slideLeftButton}}}
-</div>
-{{>content}}
-<div class="next slider-button">
-	{{{slideRightButton}}}
-</div>

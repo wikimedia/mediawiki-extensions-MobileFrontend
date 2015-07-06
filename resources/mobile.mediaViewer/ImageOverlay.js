@@ -3,7 +3,8 @@
 		Icon = M.require( 'Icon' ),
 		Button = M.require( 'Button' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
-		ImageOverlay, api;
+		ImageOverlay,
+		api;
 
 	api = new ImageApi();
 
@@ -42,14 +43,37 @@
 				progressive: true
 			} ).options,
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
-			thumbnails: []
+			thumbnails: [],
+			slideLeftButton: new Icon( {
+				name: 'previous-invert'
+			} ).toHtmlString(),
+			slideRightButton: new Icon( {
+				name: 'next-invert'
+			} ).toHtmlString()
 		} ),
 
 		/** @inheritdoc */
 		events: $.extend( {}, Overlay.prototype.events, {
-			'click .image-wrapper': 'onToggleDetails'
+			'click .image-wrapper': 'onToggleDetails',
+			// Click tracking for table of contents so we can see if people interact with it
+			'click .slider-button': 'onSlide'
 		} ),
-
+		/**
+		 * Event handler for slide event
+		 * @param {jQuery.Event} ev
+		 */
+		onSlide: function ( ev ) {
+			this.setNewImage(
+				$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' )
+			);
+		},
+		/**
+		 * Replace the current image with a new one
+		 * @param {Thumbnail} thumbnail
+		 */
+		setNewImage: function ( thumbnail ) {
+			window.location.hash = '#/media/' + thumbnail.getFileName();
+		},
 		/** @inheritdoc */
 		preRender: function () {
 			var self = this;
@@ -61,10 +85,42 @@
 			} );
 		},
 
+		/**
+		 * Setup the next and previous images to enable the user to arrow through
+		 * all images in the set of images given in thumbs.
+		 * @param {Array} thumbs A set of images, which are available
+		 * @private
+		 */
+		_enableArrowImages: function ( thumbs ) {
+			var offset = this.galleryOffset,
+				lastThumb, nextThumb;
+
+			// identify last thumbnail
+			lastThumb = offset === 0 ? thumbs[thumbs.length - 1] : thumbs[offset - 1];
+			nextThumb = offset === thumbs.length - 1 ? thumbs[0] : thumbs[offset + 1];
+			this.$( '.prev' ).data( 'thumbnail', lastThumb );
+			this.$( '.next' ).data( 'thumbnail', nextThumb );
+		},
+
+		/**
+		 * Disables the possibility to arrow through all images of the page.
+		 * @private
+		 */
+		_disableArrowImages: function () {
+			this.$( '.prev, .next' ).remove();
+		},
+
 		/** @inheritdoc */
 		postRender: function () {
 			var $img,
+				thumbs = this.options.thumbnails || [],
 				self = this;
+
+			if ( thumbs.length < 2 ) {
+				this._disableArrowImages();
+			} else {
+				this._enableArrowImages( thumbs );
+			}
 
 			this.$details = this.$( '.details' );
 
