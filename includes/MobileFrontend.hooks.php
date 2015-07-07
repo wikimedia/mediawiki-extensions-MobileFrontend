@@ -495,14 +495,27 @@ class MobileFrontendHooks {
 		$context = $special->getContext();
 		$out = $context->getOutput();
 		$secureLogin = $context->getConfig()->get( 'SecureLogin' );
+		$request = $special->getContext()->getRequest();
 		$skin = $out->getSkin()->getSkinName();
 
 		$name = $special->getName();
 
 		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
 		// FIXME: Upstream to core (?)
-		if ( $name === 'Preferences' && $skin === 'minerva' ) {
-			$out->addModules( 'skins.minerva.special.preferences.scripts' );
+		if ( $skin === 'minerva' ) {
+			if ( $name === 'Preferences' ) {
+				$out->addModules( 'skins.minerva.special.preferences.scripts' );
+			}
+
+			// Add default warning message to Special:UserLogin and Special:UserCreate
+			// if no warning message set.
+			if (
+				$name === 'Userlogin' &&
+				!$request->getVal( 'warning', null ) &&
+				!$context->getUser()->isLoggedIn()
+			) {
+				$request->setVal( 'warning', 'mobile-frontend-generic-login-new' );
+			}
 		}
 
 		if ( $isMobileView ) {
@@ -1025,6 +1038,7 @@ class MobileFrontendHooks {
 				'mobile-frontend-edit-login-action', // Edit button sign in CTA
 				'mobile-frontend-edit-signup-action', // Edit button sign-up CTA
 				'mobile-frontend-donate-image-login-action',
+				'mobile-frontend-generic-login-new', // default message
 			)
 		);
 	}
