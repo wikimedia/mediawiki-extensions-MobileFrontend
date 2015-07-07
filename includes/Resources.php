@@ -163,9 +163,6 @@ $wgMinervaStyleModules = array(
 		'selector' => '.mw-ui-icon-{name}:before',
 		'position' => 'bottom',
 		'images' => array(
-			// chrome
-			'search-white' => 'images/icons/search-white.svg',
-
 			// toggling
 			'arrow-down' => 'images/icons/arrow-down.svg',
 			'arrow-up' => 'images/icons/arrow-up.svg',
@@ -268,17 +265,30 @@ $wgMinervaStyleModules = array(
 			'search' => 'images/icons/magnifying-glass.svg',
 		),
 	),
-	// FIXME: remove this module when Gather stops using it
 	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
-			'position' => 'bottom',
-			'class' => 'ResourceLoaderImageModule',
-			'selector' => '.mw-ui-icon-{name}:before',
-			'images' => array(
-				// Special:MobileMenu-specific back icon
-				'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
-				'search' => 'images/icons/magnifying-glass.svg',
+		'position' => 'bottom',
+		'class' => 'ResourceLoaderImageModule',
+		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
+		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'variants' => array(
+			'gray' => array(
+				'color' => '#555555',
 			),
+			'invert' => array(
+				'color' => '#FFFFFF',
+			)
 		),
+		'images' => array(
+			// Special:MobileMenu-specific back icon
+			'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
+			'search' => array(
+				'file' => array(
+					'default' => 'images/icons/magnifying-glass.svg',
+				),
+				'variants' => array( 'gray', 'invert' ),
+			)
+		),
+	),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(

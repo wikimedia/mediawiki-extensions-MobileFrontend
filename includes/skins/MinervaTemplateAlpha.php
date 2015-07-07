@@ -57,7 +57,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		$templateParser = new TemplateParser( __DIR__ );
 		$args = array(
 			'siteName' => SkinMinerva::getSitename(),
-			'mobileMenuClass' => MobileUI::iconClass( 'search', 'element', 'header-icon' ),
+			'mobileMenuClass' => MobileUI::iconClass( 'search-gray', 'element', 'header-icon' ),
 			'mobileMenuLink' => SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl(),
 			'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu' )->parse(),
 			'secondaryButton' => $data['secondaryButton'],
@@ -84,8 +84,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 				)
 			) .
 			Html::openElement( 'div', array(
-				// FIXME: If this ever makes it to stable replace with search-inverted
-				'class' => MobileUI::iconClass( 'search-white', 'element',
+				'class' => MobileUI::iconClass( 'search-invert', 'element',
 					'fulltext-search no-js-only' ),
 			) ) .
 			$this->makeSearchButton( 'fulltext' ) .
