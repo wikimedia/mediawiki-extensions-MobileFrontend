@@ -288,7 +288,7 @@ class MinervaTemplate extends BaseTemplate {
 				}
 
 				echo $preBodyText;
-
+				echo $this->html( 'subtitle' );
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {
 					echo $data['_old_revision_warning'];
