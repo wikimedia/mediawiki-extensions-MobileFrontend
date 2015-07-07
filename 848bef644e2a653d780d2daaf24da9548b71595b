@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_4ee748e0",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-07-07T13:46:09Z",
+      "side": 1,
+      "message": "This is now the same as MinervaTemplate#renderPreContent. No need to override it.",
+      "revId": "848bef644e2a653d780d2daaf24da9548b71595b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ced25801",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-07-07T13:46:09Z",
+      "side": 1,
+      "message": "Repeat of the rule above.",
+      "revId": "848bef644e2a653d780d2daaf24da9548b71595b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
