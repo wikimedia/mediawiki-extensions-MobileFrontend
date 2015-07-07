@@ -576,6 +576,47 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Decide if the login/usercreate page should be overwritten by a mobile only
+	 * special specialpage. If not, do some changes to the template.
+	 * @param QuickTemplate $tpl Login or Usercreate template
+	 * @param String $mode Is this function called in context of UserCreate or UserLogin?
+	 */
+	public static function changeUserLoginCreateForm( &$tpl, $mode = 'userlogin' ) {
+		$context = MobileContext::singleton();
+		if (
+			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
+			!$context->isAlphaGroupMember() &&
+			$context->shouldDisplayMobileView()
+		) {
+			if ( $mode === 'userlogin' ) {
+				$tpl = new UserLoginMobileTemplate( $tpl );
+			} else {
+				$tpl = new UserAccountCreateMobileTemplate( $tpl );
+			}
+		} else {
+			$mfLogo = $context->getMFConfig()
+				->get( 'MobileFrontendLogo' );
+
+			if ( $mfLogo ) {
+				$tpl->extend(
+					'formheader',
+					Html::openElement(
+						'div',
+						array( 'class' => 'watermark' )
+					) .
+					Html::element( 'img',
+						array(
+							'src' => $mfLogo,
+							'alt' => '',
+						)
+					) .
+					Html::closeElement( 'div' )
+				);
+			}
+		}
+	}
+
+	/**
 	 * UserLoginForm hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginForm
 	 *
@@ -583,14 +624,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUserLoginForm( &$template ) {
-		$context = MobileContext::singleton();
-		if (
-			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
-			!$context->isAlphaGroupMember() &&
-			$context->shouldDisplayMobileView()
-		) {
-			$template = new UserLoginMobileTemplate( $template );
-		}
+		self::changeUserLoginCreateForm( $template );
 
 		return true;
 	}
@@ -603,14 +637,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUserCreateForm( &$template ) {
-		$context = MobileContext::singleton();
-		if (
-			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
-			!$context->isAlphaGroupMember() &&
-			$context->shouldDisplayMobileView()
-		) {
-			$template = new UserAccountCreateMobileTemplate( $template );
-		}
+		self::changeUserLoginCreateForm( $template, 'usercreate' );
 
 		return true;
 	}

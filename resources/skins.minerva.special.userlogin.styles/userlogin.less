@@ -44,17 +44,6 @@
 .stable, .beta {
 	#mw-mf-login,
 	#mw-mf-accountcreate {
-		.watermark {
-			text-align: center;
-			// FIXME: Should we set the height here?
-			height: 72px;
-			margin-bottom: @headingMargin;
-			img {
-				// Important to override default max-width and height auto combo
-				height: 72px !important;
-			}
-		}
-
 		// FIXME: Remove when mw-ui in MobileFrontend
 		.mw-ui-block {
 			display: block;
@@ -91,6 +80,21 @@
 	}
 }
 
+#mw-mf-login,
+#mw-mf-accountcreate,
+#userloginForm {
+	.watermark {
+		text-align: center;
+		// FIXME: Should we set the height here?
+		height: 72px;
+		margin-bottom: @headingMargin;
+		img {
+			// Important to override default max-width and height auto combo
+			height: 72px !important;
+		}
+	}
+}
+
 .alpha {
 	.mw-ui-vform {
 		margin: auto;
@@ -102,9 +106,7 @@
 			display: block;
 		}
 	}
-}
 
-.alpha {
 	// reason for account creation is not so important on mobile - it should be obvious through the workflows
 	.mw-createacct-benefits-container {
 		display: none;
