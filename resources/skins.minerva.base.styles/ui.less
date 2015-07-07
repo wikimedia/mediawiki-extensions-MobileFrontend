@@ -280,3 +280,14 @@ input.search {
 		}
 	}
 }
+
+// This is here rather than in mainmenu.less because we want to load these rules for non-js users too
+// Transparent shield hidden by default
+.transparent-shield,
+.navigation-drawer {
+	// don't use display: none because it's not animatable
+	position: absolute;
+	z-index: @z-indexBase;
+	visibility: hidden;
+}
+
