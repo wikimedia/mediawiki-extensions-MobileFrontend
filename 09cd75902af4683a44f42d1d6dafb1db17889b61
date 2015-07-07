@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6ed80429",
+        "filename": "tests/browser/environments.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-07-07T13:40:34Z",
+      "side": 1,
+      "message": "We should no more use PhantomJS. Krinkle migrates/migrated the qunit jobs to use Chromium with an XVFB server. He explains the rational on the task detail of T74063\n\nNamely:\n* chromium is faster\n* PhantomJS is based on a totally outdated engine (some old Safari engine). As a result code ends up falling mysteriously.\n\n\nOur Trusty slaves have a permanent XVFB on display port 94. That is used by Qunit jobs.  We might want to reuse that one or have mediawiki_selenium spawn a dedicated XVFB.",
+      "revId": "09cd75902af4683a44f42d1d6dafb1db17889b61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
