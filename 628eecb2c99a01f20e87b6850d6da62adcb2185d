@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_8243bc66",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-07-08T03:29:07Z",
+      "side": 1,
+      "message": "\"is not view border box\" -\u003e \"doesn\u0027t use border-box box-sizing\"",
+      "revId": "628eecb2c99a01f20e87b6850d6da62adcb2185d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_c239c4f0",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-07-08T03:29:07Z",
+      "side": 1,
+      "message": "This should probably have a comment. Something like \"We don\u0027t want to apply border-box box-sizing to the entire body since the body may contain elements that assume standard box-sizing.\"",
+      "revId": "628eecb2c99a01f20e87b6850d6da62adcb2185d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
