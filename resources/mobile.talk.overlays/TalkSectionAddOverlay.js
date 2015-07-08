@@ -83,7 +83,7 @@
 
 			clearTimeout( this.timer );
 			this.timer = setTimeout( function () {
-				if ( !self.$ta.val() || !self.$subject.val() ) {
+				if ( !self.$ta.val().trim() || !self.$subject.val().trim() ) {
 					self.$confirm.prop( 'disabled', true );
 				} else {
 					self.$confirm.prop( 'disabled', false );
