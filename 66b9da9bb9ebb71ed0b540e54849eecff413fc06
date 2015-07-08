@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_71577c06",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-07-08T17:21:32Z",
+      "side": 1,
+      "message": "Sorry to be picky, but comments should being on the line after /**\n\nI swear I do look at code besides comments ;)",
+      "revId": "66b9da9bb9ebb71ed0b540e54849eecff413fc06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
