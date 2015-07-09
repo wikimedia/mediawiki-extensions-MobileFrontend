@@ -45,15 +45,6 @@ nav {
 	float: left;
 }
 
-// Transparent shield hidden by default
-.transparent-shield,
-.navigation-drawer {
-	// don't use display: none because it's not animatable
-	position: absolute;
-	z-index: @z-indexBase;
-	visibility: hidden;
-}
-
 // needs to be more specific than .overlay rules
 .notifications-overlay.navigation-drawer {
 	right: 0;
