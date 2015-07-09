@@ -139,7 +139,7 @@ $wgMinervaStyleModules = array(
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'variants' => array(
 			'gray' => array(
-				'color' => '#999',
+				'color' => '#BBB',
 				'global' => true,
 			),
 			'invert' => array(
