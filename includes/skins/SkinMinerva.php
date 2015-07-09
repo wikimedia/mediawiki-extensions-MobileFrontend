@@ -159,15 +159,16 @@ class SkinMinerva extends SkinTemplate {
 	 * Overrides Skin::doEditSectionLink
 	 * @param Title $nt
 	 * @param string $section
-	 * @param string $tooltip
-	 * @param string $lang
+	 * @param string|null $tooltip
+	 * @param string|bool $lang
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$lang = wfGetLangObj( $lang );
 			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
-			return Html::element( 'a', array(
+			$html = Html::openElement( 'span' );
+			$html .= Html::element( 'a', array(
 				'href' => '#/editor/' . $section,
 				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang )->text(),
 				'data-section' => $section,
@@ -175,6 +176,8 @@ class SkinMinerva extends SkinTemplate {
 				// we default to enabled even though this may not be true.
 				'class' => MobileUI::iconClass( 'edit-enabled', 'element', 'edit-page icon-32px' ),
 			), $message );
+			$html .= Html::closeElement( 'span' );
+			return $html;
 		}
 	}
 

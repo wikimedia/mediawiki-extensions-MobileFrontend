@@ -143,8 +143,6 @@ input.search {
 		clear: both;
 
 		.edit-page {
-			// vertically align the floated element in the middle
-			margin-top: .2em;
 			font-size: 1 / @fontSizeH2;
 		}
 	}
@@ -157,13 +155,23 @@ input.search {
 
 	.edit-page {
 		display: none;
-		float: right;
 	}
 
 	.open-block {
 		// Restrict to child so that child section edit links do not get revealed.
-		> .edit-page {
+		.edit-page {
 			display: inline-block;
+		}
+	}
+
+	.section-heading,
+	.in-block {
+		.mw-headline {
+			width: 100%;
+		}
+		span {
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
 }
