@@ -134,6 +134,7 @@
 	"mobile-frontend-generic-404-title": "Грешка — Не ја пронајдов страницата",
 	"mobile-frontend-generic-login": "{{SITENAME}} е дело на луѓе како Вас.",
 	"mobile-frontend-generic-login-action": "Најавете се за да учествувате.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} е дело на луѓе како Вас.</strong><br />Најавете се и учествувајте.",
 	"mobile-frontend-generic-signup-action": "Регистрирајте се за да учествувате.",
 	"mobile-frontend-history": "Преглед и уредување на историјата на страницава.",
 	"mobile-frontend-history-404-desc": "Не можам да прикажам страница со историја што не постои. Може да е избришана или да сте проследиле неисправна врска.",

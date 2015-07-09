@@ -162,6 +162,7 @@
 	"mobile-frontend-generic-404-title": "Error: no se encontró la página",
 	"mobile-frontend-generic-login": "Personas como tú son las que construyen {{SITENAME}}.",
 	"mobile-frontend-generic-login-action": "Inicia sesión para contribuir.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} está hecho por gente como tú.</strong><br />Regístrate para contribuir.",
 	"mobile-frontend-generic-signup-action": "Regístrate para colaborar.",
 	"mobile-frontend-history": "Ver el historial de ediciones de esta página.",
 	"mobile-frontend-history-404-desc": "No se puede acceder al historial de una página que no existe. Esta podría haberse borrado o puedes haber seguido un enlace incorrecto.",

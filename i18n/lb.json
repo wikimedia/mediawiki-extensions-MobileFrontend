@@ -149,7 +149,7 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 Fir d'lescht {{GENDER:$1|geännert}}  {{PLURAL:$3|virun engem Dag|viru(n) $3 Deeg}}] {{PLURAL:$5|vum [$6 $2]|0=vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Fir d'lescht {{GENDER:$1|geännert}}] elo grad  {{PLURAL:$4|vum [$5 $2]|0= vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Fir d'lescht {{GENDER:$1|geännert}}  {{PLURAL:$3|virun enger Minutt|viru(n) $3 Minutten}}] {{PLURAL:$5|vum [$6 $2]|0=vun engem anonyme Benotzer}}",
-	"mobile-frontend-last-modified-with-user-years": "[$4 Fir d'lescht {{GENDER:$1|geännert}} {{PLURAL:$3|virun engem Joer|viru(n) $3 Joren}}]  {{PLURAL:$5|[vum $6 $2]|0=vun engem anonyme Benotzer}}",
+	"mobile-frontend-last-modified-with-user-years": "[$4 Fir d'lescht {{GENDER:$1|geännert}} {{PLURAL:$3|virun engem Joer|viru(n) $3 Joer}}]  {{PLURAL:$5|[vum $6 $2]|0=vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-years": "Fir d'lescht geännert {{PLURAL:$1|virun 1 Joer|viru(n) $1 Joer}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Mam eroplueden ufänken",
 	"mobile-frontend-lead-image-tutorial-summary": "Vergewëssert iech datt Ärt Bild d'Säit illustréiert. Et soll e Bild sinn dat Dir selwer gemaach hutt an dat kee Copyright verletzt.",

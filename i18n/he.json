@@ -147,6 +147,7 @@
 	"mobile-frontend-generic-404-title": "שגיאה – הדף לא נמצא",
 	"mobile-frontend-generic-login": "אנשים כמוך יוצרים את {{SITENAME}}.",
 	"mobile-frontend-generic-login-action": "נא להיכנס לחשבון כדי לתרום.",
+	"mobile-frontend-generic-login-new": "<strong>אנשים כמוך בונים את {{SITENAME}}</strong><br />נא להיכנס כדי לתרום.",
 	"mobile-frontend-generic-signup-action": "נא להירשם כדי לתרום.",
 	"mobile-frontend-history": "הצגת היסטוריית העריכה של הדף הזה.",
 	"mobile-frontend-history-404-desc": "לא ניתן לצפות בהיסטוריה של דף שאינו קיים. ייתכן שהוא נמחק או שלחצת על קישור גרוע.",

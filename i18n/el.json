@@ -71,6 +71,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "Η {{SITENAME}} δημιουργείται από ανθρώπους όπως εσύ.",
 	"mobile-frontend-generic-login-action": "Συνδεθείτε για να συνεισφέρετε.",
+	"mobile-frontend-generic-login-new": "Η <strong>{{SITENAME}} δημιουργείται από ανθρώπους σαν κι εσάς.</strong><br />Συνδεθείτε για να συνεισφέρετε.",
 	"mobile-frontend-history": "Προβολή ιστορικού επεξεργασιών αυτή της σελίδας",
 	"mobile-frontend-history-404-title": "Δεν υπάρχει τέτοια σελίδα",
 	"mobile-frontend-home-button": "Κύρια σελίδα",
