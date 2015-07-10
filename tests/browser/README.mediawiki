@@ -7,6 +7,7 @@ These include:
 * GeoData extension must be installed for the purpose of the nearby tests
 * Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
 ** and setup with FancyCaptcha
+* The VisualEditor, Cite, and Echo extensions should be installed to run the full suite of smoke tests
 * Create an account Selenium_newuser which has an edit count of 0
 * Create an account and store the username in MEDIAWIKI_USER which has
 ** an edit count of greater than 0
