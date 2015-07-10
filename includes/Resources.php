@@ -103,12 +103,6 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.tablet.beta.styles/hacks.less',
 		),
 	),
-	'skins.minerva.tablet.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'top',
-		'styles' => array(
-			'resources/skins.minerva.tablet.alpha.styles/common.alpha.less'
-		),
-	),
 	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderImageModule',
 		'prefix' => 'mw-ui',
@@ -212,13 +206,6 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
-	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'top',
-		'styles' => array(
-			'resources/skins.minerva.alpha.styles/ui.alpha.less',
-		),
-	),
-
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
@@ -227,6 +214,7 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.beta.styles/footer.less',
 			'resources/skins.minerva.beta.styles/main.less',
 			'resources/skins.minerva.beta.styles/hacks.less',
+			'resources/skins.minerva.beta.styles/ui.less',
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
@@ -238,7 +226,10 @@ $wgMinervaStyleModules = array(
 			'invert' => array(
 				'color' => '#FFFFFF',
 				'global' => true,
-			)
+			),
+			'gray' => array(
+				'color' => '#555555',
+			),
 		),
 		'images' => array(
 			// page actions
@@ -258,29 +249,8 @@ $wgMinervaStyleModules = array(
 					'rtl' => 'images/icons/move-rtl.svg',
 				),
 			),
-			// NOTE: these icons are available but not used anywhere yet. This note will be
-			// removed in a later patch.
 			// Special:MobileMenu-specific back icon
-			'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
-			'search' => 'images/icons/magnifying-glass.svg',
-		),
-	),
-	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'bottom',
-		'class' => 'ResourceLoaderImageModule',
-		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
-		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
-		'variants' => array(
-			'gray' => array(
-				'color' => '#555555',
-			),
-			'invert' => array(
-				'color' => '#FFFFFF',
-			)
-		),
-		'images' => array(
-			// Special:MobileMenu-specific back icon
-			'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
+			'back-mobilemenu' => 'images/icons/beta/back-ltr.svg',
 			'search' => array(
 				'file' => array(
 					'default' => 'images/icons/magnifying-glass.svg',
@@ -1832,7 +1802,6 @@ $wgMinervaBootstrapModules = array(
 	'skins.minerva.beta.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.scripts',
-			'skins.minerva.beta.images',
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
