@@ -171,6 +171,7 @@
 	"mobile-frontend-generic-404-title": "Erreur — Page non trouvée",
 	"mobile-frontend-generic-login": "{{SITENAME}} est fait par des gens comme vous.",
 	"mobile-frontend-generic-login-action": "Connectez-vous pour contribuer.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} est fait par des gens comme vous.</strong><br />Connectez-vous pour contribuer.",
 	"mobile-frontend-generic-signup-action": "Inscrivez-vous pour contribuer.",
 	"mobile-frontend-history": "Afficher l’historique des modifications de cette page.",
 	"mobile-frontend-history-404-desc": "Impossible de regarder l’historique d’une page qui n’existe pas. Elle peut avoir été supprimée ou vous pouvez avoir suivi un mauvais lien.",

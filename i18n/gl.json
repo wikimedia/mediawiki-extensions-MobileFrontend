@@ -142,6 +142,7 @@
 	"mobile-frontend-generic-404-title": "Erro: Non se atopou a páxina",
 	"mobile-frontend-generic-login": "Xente coma vostede elabora {{SITENAME}}.",
 	"mobile-frontend-generic-login-action": "Acceda ao sistema para contribuír.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} está feito por xente coma ti.</strong><br />Rexístrate para contribuír.",
 	"mobile-frontend-generic-signup-action": "Rexístrese para contribuír.",
 	"mobile-frontend-history": "Mostrar o historial de edicións desta páxina.",
 	"mobile-frontend-history-404-desc": "Non se pode buscar o historial dunha páxina que non existe. Se cadra, foi borrada ou seguiu unha ligazón incorrecta.",
