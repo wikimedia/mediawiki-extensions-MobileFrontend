@@ -312,6 +312,13 @@
 		// distinguish headings in content from other headings
 		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
 		enable( $container, prefix );
+
+		// FIXME: remove when cache clears
+		$( function () {
+			$container.find( '.open-block > a.edit-page, .in-block > a.edit-page' ).each( function ( i, el ) {
+				$( el ).wrap( '<span></span>' );
+			} );
+		} );
 	}
 
 	// avoid this running on Watchlist
