@@ -290,8 +290,7 @@
 		 */
 		onSaveErrorCaptcha: function ( editApi ) {
 			this.captchaId = editApi.captcha.id;
-			// FIXME: Don't call a private method that is outside the class.
-			this._showCaptcha( editApi.captcha.url );
+			this.handleCaptcha( editApi.captcha );
 		},
 		/** @inheritdoc **/
 		hasChanged: function () {

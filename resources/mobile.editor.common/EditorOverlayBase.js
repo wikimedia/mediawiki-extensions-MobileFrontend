@@ -369,12 +369,11 @@
 		 */
 		hasChanged: $.noop(),
 		/**
-		 * Reveal the captcha in the View
+		 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 		 * @method
-		 * @private
-		 * @param {String} url a url to an image representing the current captcha.
+		 * @param {Object} details Details returned from the api.
 		 */
-		_showCaptcha: function ( url ) {
+		handleCaptcha: function ( details ) {
 			var self = this,
 				$input = this.$( '.captcha-word' );
 
@@ -386,9 +385,20 @@
 				}, 2000 );
 			}
 
-			this.$( '.captcha-panel img' ).attr( 'src', url );
-			this.showHidden( '.save-header, .captcha-panel' );
+			// handle different mime types different
+			if ( details.mime.indexOf( 'image/' ) === 0 ) {
+				// image based CAPTCHA's like provided by FancyCaptcha, ReCaptcha or similar
+				this.$( '.captcha-panel#question' ).detach();
+				this.$( '.captcha-panel img' ).attr( 'src', details.url );
+			} else {
+				// handle mime types (other than image based ones) as plain text by default.
+				// e.g. QuestyCaptcha (question - answer), MathCaptcha (solve a math formula) or
+				// SimpleCaptcha (simple math formula)
+				this.$( '.captcha-panel #image' ).detach();
+				this.$( '.captcha-panel #question' ).text( details.question );
+			}
 
+			this.showHidden( '.save-header, .captcha-panel' );
 			this.captchaShown = true;
 		}
 	} );

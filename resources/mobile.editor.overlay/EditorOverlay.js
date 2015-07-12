@@ -423,8 +423,7 @@
 
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
-						// FIXME: Don't call a private method that is outside the class.
-						self._showCaptcha( data.details.url );
+						self.handleCaptcha( data.details );
 					} else if ( data.type === 'abusefilter' ) {
 						self._showAbuseFilter( data.details.type, data.details.message );
 					} else {
