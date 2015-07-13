@@ -276,7 +276,7 @@
 	"mobile-frontend-photo-upload-success-article": "成功！您的图像已添加至本页面。",
 	"mobile-frontend-photo-upload-unavailable": "你的浏览器不支持图像上传。",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span>个上传",
-	"mobile-frontend-photo-upload-user-count-over-limit": "超过500个上传",
+	"mobile-frontend-photo-upload-user-count-over-limit": "超过500次上传",
 	"mobile-frontend-placeholder": "搜索{{SITENAME}}",
 	"mobile-frontend-placeholder-alpha": "搜索{{SITENAME}}（实验版）",
 	"mobile-frontend-placeholder-app": "搜索{{SITENAME}}（网页应用程序）",
