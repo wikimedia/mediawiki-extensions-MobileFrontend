@@ -1,12 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chorobek"
+			"Chorobek",
+			"Janatkg"
 		]
 	},
+	"mobile-frontend-editor-edit": "Оңдоо",
+	"mobile-frontend-home-button": "Башкы",
+	"mobile-frontend-language-article-heading": "Башка тилде окуу",
 	"mobile-frontend-login": "Кирүү",
+	"mobile-frontend-main-menu-login": "Кирүү",
+	"mobile-frontend-main-menu-nearby": "Жакынкы",
+	"mobile-frontend-main-menu-settings": "Ырастоолор",
+	"mobile-frontend-main-menu-watchlist": "Көзөмөл тизмеси",
 	"mobile-frontend-password": "Сырсөз:",
 	"mobile-frontend-placeholder": "Издегениңизди бул жакка жазыңыз",
 	"mobile-frontend-privacy-link-text": "Купуялыкты сактоо",
-	"mobile-frontend-username": "Колдонуучунун аты:"
+	"mobile-frontend-random-button": "Тушкелди",
+	"mobile-frontend-username": "Колдонуучунун аты:",
+	"mobile-frontend-view-desktop": "Толук түрү"
 }

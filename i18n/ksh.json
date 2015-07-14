@@ -116,6 +116,7 @@
 	"mobile-frontend-generic-404-title": "Fähler - Sigg nit jefonge",
 	"mobile-frontend-generic-login": "{{ucfirst:{{GRAMMAR:Nominative|{{ucfirst:{{SITENAME}}}}}}}} weed vun Minsche wi Dir jemaat.",
 	"mobile-frontend-generic-login-action": "Donn enlogge, öm jät beizedrahre.",
+	"mobile-frontend-generic-login-new": "<strong>{{ucfirst:{{GRAMMAR:Nom|{{ucfirst:{{SITENAME}}}}}}}} weed vun Minsche wi Do un esch jeamaat.</strong><br />Donn ennlogg, öm jät beijzedrahre.",
 	"mobile-frontend-generic-signup-action": "Donn Desch aanmälde, öm jät beizedrahre.",
 	"mobile-frontend-history": "Belohr de fröhjere Änderonge aan heh dä Sigg.",
 	"mobile-frontend-history-404-title": "Kein esu en Sigg",

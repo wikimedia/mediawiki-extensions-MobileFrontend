@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tisave"
+			"Tisave",
+			"Bfpage"
 		]
 	},
 	"mobile-frontend-copyright": "Kontni disponib selon lisans $1 sof si gen lòt endikasyon.",
+	"mobile-frontend-pointer-dismiss": "Rejte",
 	"mobile-frontend-editor-edit": "Chanje",
 	"mobile-frontend-generic-login": "Se moun tankou w ki fè {{SITENAME}}.",
 	"mobile-frontend-generic-login-action": "Konekte pou kontribiye.",
@@ -28,5 +30,7 @@
 	"mobile-frontend-view-mobile": "Mobil",
 	"mobile-frontend-quick-lookup-not-internal": "Eskize, sa se pa yon lyen ki bay sou wiki an.",
 	"mobile-frontend-panel-ok": "Oke",
-	"mobile-frontend-panel-cancel": "Non mèsi"
+	"mobile-frontend-panel-cancel": "Non mèsi",
+	"mobile-frontend-search-feedback-link-text": "Ban nou fidbak ou.",
+	"mobile-frontend-search-feedback-prompt": "Pa t 'kapab jwenn sa ou te kap chèche?"
 }

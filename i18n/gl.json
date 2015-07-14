@@ -357,7 +357,7 @@
 	"mobile-frontend-watchlist-view": "Ver a súa lista de vixilancia",
 	"mobile-frontend-quick-lookup-looking": "Á procura de \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Non se atopou nada que coincida con \"$1\".",
-	"mobile-frontend-quick-lookup-not-internal": "Sentímolo, esta non é unha ligazón nesta wiki.",
+	"mobile-frontend-quick-lookup-not-internal": "Sentímolo, esta non é unha ligazón neste wiki.",
 	"mobile.css": "/* O CSS que se coloque aquí afectará a quen use o sitio móbil */",
 	"mobile.js": "/* O JavaScript que se coloque aquí afectará a quen use o sitio móbil */",
 	"nearby": "Páxinas preto de vostede",
