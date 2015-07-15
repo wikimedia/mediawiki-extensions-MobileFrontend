@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_2fdc0177",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-15T11:19:59Z",
+      "side": 1,
+      "message": "Tested and this works! yay! but...\nthis should be documented with a link to the phabricator bug and should be more generic...\n\nI would suggest using\n.overlay-header-container .mw-ui-icon.mw-ui-icon-element  as the selector here.",
+      "revId": "db17b73ce3ee51f1674d8ff545d0df2ba7a226fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
