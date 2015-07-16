@@ -7,11 +7,7 @@
 	}
 
 	.wikitext-editor {
-		padding: 10px 0;
-	}
-	.stable & .wikitext-editor {
-		padding-left: @contentMargin;
-		padding-right: @contentMargin;
+		padding: 10px @contentMargin;
 	}
 
 	.summary-request {
@@ -65,3 +61,12 @@
 	line-height: 1.2;
 }
 
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha,
+	.beta {
+		.editor-overlay .wikitext-editor {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
