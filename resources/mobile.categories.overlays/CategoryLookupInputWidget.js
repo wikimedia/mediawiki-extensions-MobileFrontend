@@ -1,7 +1,4 @@
 ( function ( M, $, OO ) {
-	var Button = M.require( 'Button' ),
-		Icon = M.require( 'Icon' );
-
 	/**
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.LookupElement
@@ -28,16 +25,15 @@
 	 * @param {Object} data Data of the clicked element
 	 */
 	CategoryLookupInputWidget.prototype.onLookupMenuItemChoose = function ( data ) {
-		var button = new Button( {
-			progressive: true,
-			additionalClassNames: new Icon( {
-				name: 'ok',
-				hasText: true,
-				additionalClassNames: 'suggestion suggested'
-			} ).getClassName(),
-			label: data.label
-		} ).appendTo( this.$suggestions );
-		button.$el.data( 'title', data.data );
+		var button = new OO.ui.ButtonWidget( {
+			icon: 'check',
+			label: data.label,
+			classes: [ 'suggestion', 'suggested' ],
+			flags: [ 'progressive', 'primary' ]
+		} );
+
+		button.$element.attr( 'data-title', data.data );
+		this.$suggestions.append( button.$element );
 		this.$saveButton.prop( 'disabled', false );
 	};
 
@@ -77,7 +73,7 @@
 
 		$.each( data.results, function ( i, value ) {
 			if (
-				!$( 'button[data-title="' + value.title + '"]' ).length &&
+				!$( 'div[data-title="' + value.title + '"]' ).length &&
 				$.inArray( value.displayTitle, self.categories ) === -1
 			) {
 				result.push(
