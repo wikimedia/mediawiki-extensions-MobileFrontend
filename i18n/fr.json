@@ -38,7 +38,8 @@
 			"Element303",
 			"Thibaut120094",
 			"MPlauche",
-			"Mattho69"
+			"Mattho69",
+			"Wladek92"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -230,7 +231,7 @@
 	"mobile-frontend-main-menu-watchlist": "Liste de suivi",
 	"mobile-frontend-media-details": "Détails",
 	"mobile-frontend-media-license-link": "Informations sur la licence",
-	"mobile-frontend-meta-data-issues": "Problèmes de la page",
+	"mobile-frontend-meta-data-issues": "Problèmes de page",
 	"mobile-frontend-meta-data-issues-talk": "À propos de cette page de discussion",
 	"mobile-frontend-meta-data-issues-header": "Problèmes",
 	"mobile-frontend-meta-data-issues-header-talk": "À propos de cette page",

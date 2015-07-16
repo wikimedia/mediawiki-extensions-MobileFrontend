@@ -351,5 +351,6 @@
 	"mobile-frontend-browse-tags-header": "Znaczniki",
 	"mobile-frontend-panel-ok": "OK",
 	"mobile-frontend-panel-cancel": "Nie, dziękuję",
-	"mobile-frontend-search-feedback-link-text": "Prześlij nam swoją opinię."
+	"mobile-frontend-search-feedback-link-text": "Prześlij nam swoją opinię.",
+	"mobile-frontend-search-feedback-prompt": "Nie udało się znaleźć tego, czego szukasz?"
 }
