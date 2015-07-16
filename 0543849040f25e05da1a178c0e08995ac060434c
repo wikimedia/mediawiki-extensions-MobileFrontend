@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_9742e361",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-16T15:15:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_2643c3b7",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_e64cdbe6",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_3729af9a",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-16T15:15:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_e64cdbe6",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_064807ce",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-07-16T03:53:39Z",
       "side": 1,
       "message": "Couldn\u0027t this just be default ?\nWhat if the captcha\u0027s suddenly render in svg?",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b2228da0",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-16T15:15:32Z",
+      "side": 1,
+      "message": "Hmm, i wouldn\u0027t be very happy, if we assume, that the default is an image :/ That could result in some unexpected behavior, what do you think about handling it as text by default and use\n\nif (details.mime.indexOf( \u0027image/\u0027 ) \u003d\u003d\u003d 0\n(from your example above)\n\nfor this case?",
+      "parentUuid": "8ec42329_064807ce",
       "revId": "0543849040f25e05da1a178c0e08995ac060434c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
