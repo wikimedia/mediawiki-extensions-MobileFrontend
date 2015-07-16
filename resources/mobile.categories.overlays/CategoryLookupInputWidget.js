@@ -56,7 +56,7 @@
 		// add user input as a possible (actually not existing) category
 		response.results.unshift( {
 			title: title.toString(),
-			displayname: title.getNameText()
+			displayTitle: title.getNameText()
 		} );
 
 		return response;
@@ -74,12 +74,12 @@
 		$.each( data.results, function ( i, value ) {
 			if (
 				!$( 'button[data-title="' + value.title + '"]' ).length &&
-				$.inArray( value.displayname, self.categories ) === -1
+				$.inArray( value.displayTitle, self.categories ) === -1
 			) {
 				result.push(
 					new OO.ui.MenuOptionWidget( {
 						data: value.title,
-						label: value.displayname
+						label: value.displayTitle
 					} )
 				);
 			}
