@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_2643c3b7",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-16T03:53:39Z",
+      "side": 1,
+      "message": "Even though this is never shown a toast is visible to the user so should be subject to i18n and not have a typo. The error should also be more meaningful to an end user. They shouldn\u0027t know what a captcha is.\n\nIf it should never happen simply remove this or throw an exception in the console.",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e64cdbe6",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-16T03:53:39Z",
+      "side": 1,
+      "message": "Can you add some information about what these are for, for devs who are unfamiliar with the captcha extension..? Are they for a certain variant in the FancyCaptcha ?\n\nAlso why not if (details.mime.indexOf( \u0027text/\u0027 ) \u003d\u003d\u003d 0 to be more generic?",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_064807ce",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-16T03:53:39Z",
+      "side": 1,
+      "message": "Couldn\u0027t this just be default ?\nWhat if the captcha\u0027s suddenly render in svg?",
+      "revId": "0543849040f25e05da1a178c0e08995ac060434c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
