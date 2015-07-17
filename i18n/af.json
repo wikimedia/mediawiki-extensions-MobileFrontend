@@ -4,7 +4,8 @@
 			"Naudefj",
 			"Winstonza",
 			"පසිඳු කාවින්ද",
-			"Fwolff"
+			"Fwolff",
+			"Oesjaar"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Tik bevestigingkode",
@@ -171,5 +172,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Wysig die inleidende afdeling van hierdie bladsy.",
 	"mobile-frontend-donate-button-label": "Skenk",
 	"mobile-frontend-wikidata-editor-description-label": "'n Kort beskrywing van \"$1\":",
-	"mobile-frontend-loading-message": "Laai tans…"
+	"mobile-frontend-loading-message": "Laai tans…",
+	"mobile-frontend-search-feedback-link-text": "Gee asb. terugvoering aan ons"
 }
