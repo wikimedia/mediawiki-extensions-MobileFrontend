@@ -94,5 +94,7 @@
 	"nearby": "Paginas prèp de vos",
 	"tag-mobile_edit": "Modificacion per mobil",
 	"tag-mobile_web_edit": "Modificacion pel web mobil",
-	"mobile-frontend-pageaction-edit-tooltip": "Modificar la seccion fial director d'aquesta pagina."
+	"mobile-frontend-pageaction-edit-tooltip": "Modificar la seccion fial director d'aquesta pagina.",
+	"mobile-frontend-meta-data-issues-categories": "A prepaus d'aquesta categoria",
+	"mobile-frontend-panel-ok": "D'acòrdi"
 }
