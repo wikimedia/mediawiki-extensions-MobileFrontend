@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6ab89e74",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-18T14:35:24Z",
+      "side": 1,
+      "message": "I\u0027m not sure why we\u0027re doing this. Why change @wgMFDeviceWidthTablet to use em\u0027s and here use pixels? Could you please explain?",
+      "revId": "cc8504021dec976b36668474ea8bbc1ba178eff6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
