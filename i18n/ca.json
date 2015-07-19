@@ -13,7 +13,8 @@
 			"Adriabages",
 			"Macofe",
 			"Joan manel",
-			"Ssola"
+			"Ssola",
+			"F3RaN"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
@@ -107,6 +108,7 @@
 	"mobile-frontend-generic-404-title": "Error - Pàgina no trobada",
 	"mobile-frontend-generic-login": "{{SITENAME}} està fet per gent com tu.",
 	"mobile-frontend-generic-login-action": "Inicieu una sessió per contribuir.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} està fet per gent com tu.</strong><br />Registreu-vos per a contribuir-hi.",
 	"mobile-frontend-generic-signup-action": "Creeu un compte per contribuir.",
 	"mobile-frontend-history": "Vegeu l'historial d'edició d'aquesta pàgina.",
 	"mobile-frontend-history-404-desc": "No es pot visualitzar l'historial d'una pàgina que no existeix. Potser s'ha esborrat, o pots haver seguit un enllaç trencat.",

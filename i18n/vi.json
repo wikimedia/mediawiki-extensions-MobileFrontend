@@ -10,7 +10,8 @@
 			"Trần Nguyễn Minh Huy",
 			"Max20091",
 			"KhangND",
-			"Darcy Le"
+			"Darcy Le",
+			"Vinhtantran"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -197,7 +198,6 @@
 	"mobile-frontend-media-details": "Chi tiết",
 	"mobile-frontend-media-license-link": "Thông tin giấy phép",
 	"mobile-frontend-meta-data-issues": "Trang này có một số vấn đề",
-	"mobile-frontend-meta-data-issues-beta": "Vấn đề trang",
 	"mobile-frontend-meta-data-issues-talk": "Giới thiệu về trang thảo luận này",
 	"mobile-frontend-meta-data-issues-header": "Các vấn đề",
 	"mobile-frontend-meta-data-issues-header-talk": "Giới thiệu về trang này",
@@ -259,8 +259,8 @@
 	"mobile-frontend-profile-error": "Ôi!",
 	"mobile-frontend-profile-footer-ancient": "Đã đóng góp [[Special:Contributions/$1|{{PLURAL:$3|1 sửa đổi|$3 sửa đổi}}]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
 	"mobile-frontend-profile-footer-days": "Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
-	"mobile-frontend-profile-footer-months": "Đã mở tài khoản cách đây hơn $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
-	"mobile-frontend-profile-footer-years": "Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
+	"mobile-frontend-profile-footer-months": "Đã mở tài khoản cách đây hơn $2 tháng và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
+	"mobile-frontend-profile-footer-years": "Đã mở tài khoản cách đây $2 năm và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3}}Đã sửa đổi trang [[:$1]] {{PLURAL:$2|hôm qua|cách đây $2 ngày|0=hôm nay}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2}}Nhận lời cảm ơn lần cuối cùng từ [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-noargs": "Tên người dùng không được cung cấp. Xin vui lòng nhập tên người dùng để xem trang thành viên.",
