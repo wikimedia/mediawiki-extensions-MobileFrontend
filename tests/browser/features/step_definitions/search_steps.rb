@@ -16,6 +16,8 @@ When(/^I click the search button$/) do
 end
 
 When(/^I click the search in pages button$/) do
+  # Search results may take time to appear
+  sleep 5
   on(ArticlePage).search_within_pages_element.when_present.click
 end
 
@@ -51,6 +53,8 @@ Then(/^I should not see the search overlay$/) do
 end
 
 Then(/^I should see a list of search results$/) do
+  # The search results page might need additional time to load.
+  sleep 5
   expect(on(SearchPage).list_of_results_element.when_present).to be_visible
 end
 
