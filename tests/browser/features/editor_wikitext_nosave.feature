@@ -7,7 +7,7 @@ Feature: Wikitext Editor
       And I click the edit button
       And I see the wikitext editor overlay
 
-  @smoke
+  @smoke @integration
   Scenario: Closing editor (overlay button)
     When I click the wikitext editor overlay close button
     Then I should not see the wikitext editor overlay
