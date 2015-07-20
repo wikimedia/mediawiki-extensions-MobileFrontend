@@ -60,8 +60,8 @@ abstract class UserLoginAndCreateTemplate extends UsercreateTemplate {
 			$msgBox .= Html::element( 'br' );
 			$msgBox .= wfMessage( "mobile-frontend-generic-{$action}-action" )->plain();
 			$msgBox .= Html::closeElement( 'div' );
-			$msgBox .= $this->getLogoHtml();
 		}
+		$msgBox .= $this->getLogoHtml();
 		echo $msgBox;
 	}
 
