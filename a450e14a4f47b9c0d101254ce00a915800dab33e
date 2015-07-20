@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_65ff61a8",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-20T22:49:00Z",
+      "side": 1,
+      "message": "... provided by the ConfirmEdit extension\n(not everyone reading MobileFrontend will be familiar)",
+      "revId": "a450e14a4f47b9c0d101254ce00a915800dab33e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_a5f549c9",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-20T22:49:00Z",
+      "side": 1,
+      "message": "s/other then the named ones/other than image based ones\n\nCan you add some information about what these are for, for devs who are unfamiliar with the captcha extension..? Are they for a certain variant in the FancyCaptcha ?",
+      "revId": "a450e14a4f47b9c0d101254ce00a915800dab33e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
