@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_947ba5bc",
+        "filename": "resources/mobile.serviceWorker/worker.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-20T17:51:53Z",
+      "side": 1,
+      "message": "I can just use raw\u003dtrue on the RL module definition",
+      "revId": "d329820445ddf1c4e75ee63c852141b66af75890",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
