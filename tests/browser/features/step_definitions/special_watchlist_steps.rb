@@ -1,3 +1,12 @@
+Given(/^I have recently edited pages on my watchlist$/) do
+  api.create_page 'Selenium Watchlist', 'Edit by #{user}'
+  api.action('watch', token_type: 'watch', titles: 'Selenium Watchlist')
+end
+
+When(/^the Pages tab is selected$/) do
+  expect(on(WatchlistPage).selected_pages_tab_element.when_present).to be_visible
+end
+
 When(/^I click the Pages tab$/) do
   on(WatchlistPage).pages_tab_link_element.when_present.click
 end
