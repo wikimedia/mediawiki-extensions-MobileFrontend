@@ -40,7 +40,7 @@
 				this._hasNewFeature = true;
 			}
 			$( function () {
-				var $activator = $( self.activator );
+				var $activator = $( self.activator ).eq( 0 );
 				$activator.addClass( 'indicator-circle' );
 				mw.loader.using( 'mobile.contentOverlays' ).done( function () {
 					$activator.one( 'click', function () {
