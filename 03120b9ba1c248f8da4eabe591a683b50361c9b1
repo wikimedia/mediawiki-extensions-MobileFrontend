@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_e53d918b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-20T22:45:03Z",
+      "side": 1,
+      "message": "(Note we can also allowed to remove mobile.head from the coverage report...)",
+      "revId": "03120b9ba1c248f8da4eabe591a683b50361c9b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
