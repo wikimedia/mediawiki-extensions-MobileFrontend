@@ -4,7 +4,8 @@
 			"M G Harish",
 			"Nayvik",
 			"VASANTH S.N.",
-			"Omshivaprakash"
+			"Omshivaprakash",
+			"Ananth subray"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "ಮಿಂಚಂಚೆ ವಿಳಾಸ (ಐಚ್ಛಿಕ)",
@@ -20,6 +21,7 @@
 	"mobile-frontend-dismiss-notification": "ಈ ಅಧಿಸೂಚನೆಯನ್ನು ತೊಡೆದುಹಾಕಿ",
 	"mobile-frontend-donate-image-heading": "ನಿಮ್ಮ ಇತ್ತೀಚೆಗಿನ ಕೊಡುಗೆಗಳು",
 	"mobile-frontend-donate-image-title": "ನಕೆಲೇರಿಕೆಗಳು",
+	"mobile-frontend-pointer-dismiss": "ವಜಾಮಾಡಿ",
 	"mobile-frontend-editor-abusefilter-read-more": "ಇನ್ನೂ ಓದಿ",
 	"mobile-frontend-editor-edit": "ಸಂಪಾದಿಸಿ",
 	"mobile-frontend-editor-save": "ಉಳಿಸಿ",
@@ -51,6 +53,7 @@
 	"mobile-frontend-main-menu-watchlist": "ವೀಕ್ಷಣಾಪಟ್ಟಿ",
 	"mobile-frontend-media-details": "ವಿವರಗಳು",
 	"mobile-frontend-media-license-link": "ಪರವಾನಗಿ ಮಾಹಿತಿ",
+	"mobile-frontend-meta-data-issues": "ಪುಟ ಸಮಸ್ಯೆಗಳು",
 	"mobile-frontend-missing-image": "ಚಿತ್ರ",
 	"mobile-frontend-nearby-title": "ಹತ್ತಿರದ",
 	"mobile-frontend-news-items": "ಸುದ್ದಿಯಲ್ಲಿ",
@@ -96,5 +99,6 @@
 	"mobile-frontend-watchlist-view": "ನಿಮ್ಮ ನಿಗಾಪುಟವನ್ನು ನೋಡಿ",
 	"tag-mobile_edit": "ಮೊಬೈಲ್ ಸಂಪಾದನೆ",
 	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪಾದನೆ",
-	"mobile-frontend-pageaction-edit-tooltip": "ಈ ಪುಟದ ಮುಖ್ಯ ವಿಭಾಗವನ್ನು ಸಂಪಾದಿಸಿ."
+	"mobile-frontend-pageaction-edit-tooltip": "ಈ ಪುಟದ ಮುಖ್ಯ ವಿಭಾಗವನ್ನು ಸಂಪಾದಿಸಿ.",
+	"mobile-frontend-search-feedback-link-text": "ನಮಗೆ ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ಕೊಡಿ."
 }
