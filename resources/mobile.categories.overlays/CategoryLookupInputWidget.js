@@ -5,6 +5,10 @@
 	/**
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.LookupElement
+	 * @param {Object} options
+	 * @param {CategoryApi} options.api to use to retrieve search results
+	 * @param {jQuery.Object} options.suggestions container element for search suggestions
+	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.
 	 */
 	function CategoryLookupInputWidget( options ) {
 		this.$element = $( '<div>' );
