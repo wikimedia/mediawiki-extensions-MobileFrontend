@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_e50b51d7",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-20T22:46:28Z",
+      "side": 1,
+      "message": "How is this different from ButtonWithSpinner in mobile.buttonWithSpinner ?",
+      "revId": "fd0f0d307f28d572dc0f499da1c71fb05a6d8cec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
