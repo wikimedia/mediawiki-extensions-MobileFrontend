@@ -34,6 +34,24 @@
       "revId": "58ad65387a56d5430ac1bfb3f6d60952c1d24c4c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1bd83d7e",
+        "filename": "tests/browser/features/step_definitions/special_watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-21T19:11:59Z",
+      "side": 1,
+      "message": "Could we wait until the pages tab has the \"selected\" class? Hopefully that will be faster than 5 secs.",
+      "parentUuid": "8ec42329_1b26fdb5",
+      "revId": "58ad65387a56d5430ac1bfb3f6d60952c1d24c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
