@@ -18,6 +18,11 @@ mw-vagrant-host: &default
   mediawiki_url: http://127.0.0.1:8080/wiki/
   user_factory: true
 
+barry:
+  browser: phantomjs
+  user_factory: false
+  # mediawiki_url: Will be set manually
+
 mw-vagrant-guest:
   mediawiki_url: http://127.0.0.1/wiki/
   user_factory: true
