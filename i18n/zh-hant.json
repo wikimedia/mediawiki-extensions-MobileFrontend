@@ -67,6 +67,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "成功！感謝您做的第一次貢獻！",
 	"mobile-frontend-donate-photo-upload-success": "成功！您的圖片現在可以在 {{SITENAME}} 上使用！",
 	"mobile-frontend-drawer-cancel": "取消",
+	"mobile-frontend-pointer-dismiss": "關閉",
 	"mobile-frontend-edit-login-action": "登入以編輯。",
 	"mobile-frontend-edit-signup-action": "註冊以編輯。",
 	"mobile-frontend-editor-abusefilter-disallow": "因我們已偵測到問題，此次編輯不能儲存。",
