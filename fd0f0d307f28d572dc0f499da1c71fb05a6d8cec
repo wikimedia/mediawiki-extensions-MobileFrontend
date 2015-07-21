@@ -16,6 +16,24 @@
       "revId": "fd0f0d307f28d572dc0f499da1c71fb05a6d8cec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_3ba3bcfe",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-21T10:35:40Z",
+      "side": 1,
+      "message": "? buttonWithSpinner cretaes an ooui button, where the label is replaced by a spinner circle (while keeping the button style itself). waitIcon is used as the icon in the top right if you click save, so that would look strange, i think :)\n\nMaybe I oversee something? :)",
+      "parentUuid": "8ec42329_e50b51d7",
+      "revId": "fd0f0d307f28d572dc0f499da1c71fb05a6d8cec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
