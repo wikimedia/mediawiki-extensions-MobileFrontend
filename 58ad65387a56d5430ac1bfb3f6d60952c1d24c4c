@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9b0aed20",
+        "filename": "tests/browser/features/step_definitions/special_watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-21T18:45:48Z",
+      "side": 1,
+      "message": "Does this mean each test will run 5 secs more? Maybe there is an alternative solution?",
+      "revId": "58ad65387a56d5430ac1bfb3f6d60952c1d24c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
