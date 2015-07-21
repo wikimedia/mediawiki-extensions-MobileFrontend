@@ -16,6 +16,24 @@
       "revId": "58ad65387a56d5430ac1bfb3f6d60952c1d24c4c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1b26fdb5",
+        "filename": "tests/browser/features/step_definitions/special_watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-21T18:47:55Z",
+      "side": 1,
+      "message": "Correct.\n\nAlternatively we could increase the timeout to find the tabs element in the following step but that also seems hacky... ideally we\u0027d have a step saying \"the http request has finished\" but I don\u0027t think such a step is possible.",
+      "parentUuid": "8ec42329_9b0aed20",
+      "revId": "58ad65387a56d5430ac1bfb3f6d60952c1d24c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
