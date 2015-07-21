@@ -13,7 +13,8 @@
 		</div>
 		<div class="captcha-panel panel hideable hidden">
 			<div class="captcha-box">
-				<img src="">
+				<img id="image" src="">
+				<div id="question"></div>
 				<input class="captcha-word mw-ui-input" placeholder="{{captchaMsg}}" />
 			</div>
 		</div>
