@@ -583,17 +583,24 @@ class MobileFrontendHooks {
 	 */
 	public static function changeUserLoginCreateForm( &$tpl, $mode = 'userlogin' ) {
 		$context = MobileContext::singleton();
+		// do nothing in desktop mode
+		if ( !$context->shouldDisplayMobileView() ) {
+			return;
+		}
+
 		if (
+			// check, if the core login page should be used, or not
 			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
-			!$context->isAlphaGroupMember() &&
-			$context->shouldDisplayMobileView()
+			!$context->isAlphaGroupMember()
 		) {
+			// if not, overwrite the default login/create templates from core with MF's own ones
 			if ( $mode === 'userlogin' ) {
 				$tpl = new UserLoginMobileTemplate( $tpl );
 			} else {
 				$tpl = new UserAccountCreateMobileTemplate( $tpl );
 			}
 		} else {
+			// otherwise just(tm) add a logoheader, if there is any
 			$mfLogo = $context->getMFConfig()
 				->get( 'MobileFrontendLogo' );
 
