@@ -103,7 +103,7 @@
 
 		/**
 		 * Filter the language list to only show languages that match the current search term.
-		 * @param {String} val of search term.
+		 * @param {String} val of search term (lowercase).
 		 */
 		filterLists: function ( val ) {
 			var $items = this.$( '.site-link-list li' ),
