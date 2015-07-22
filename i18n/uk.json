@@ -237,7 +237,7 @@
 	"mobile-frontend-overlay-continue": "Продовжити",
 	"mobile-frontend-page-menu-contents": "зміст",
 	"mobile-frontend-page-menu-history": "Історія",
-	"mobile-frontend-page-edit-summary": "<strong>Опис редагування</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Опис редагування</strong> $1</span>",
 	"mobile-frontend-password": "Пароль:",
 	"mobile-frontend-password-confirm-placeholder": "Підтвердження пароля:",
 	"mobile-frontend-password-placeholder": "Пароль",

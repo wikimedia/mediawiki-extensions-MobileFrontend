@@ -227,7 +227,7 @@
 	"mobile-frontend-overlay-continue": "Tęsti",
 	"mobile-frontend-page-menu-contents": "turinys",
 	"mobile-frontend-page-menu-history": "Istorija",
-	"mobile-frontend-page-edit-summary": "<strong>Redagavimo santrauka</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Redagavimo santrauka</strong> $1</span>",
 	"mobile-frontend-password": "Slaptažodis:",
 	"mobile-frontend-password-confirm-placeholder": "Patvirtinti slaptažodį",
 	"mobile-frontend-password-placeholder": "Slaptažodis",

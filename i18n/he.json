@@ -233,7 +233,7 @@
 	"mobile-frontend-overlay-continue": "המשך",
 	"mobile-frontend-page-menu-contents": "תוכן עניינים",
 	"mobile-frontend-page-menu-history": "היסטוריה",
-	"mobile-frontend-page-edit-summary": "<strong>תקציר עריכה</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>תקציר עריכה</strong> $1</span>",
 	"mobile-frontend-password": "סיסמה:",
 	"mobile-frontend-password-confirm-placeholder": "אימות סיסמה",
 	"mobile-frontend-password-placeholder": "סיסמה",

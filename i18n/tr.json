@@ -238,7 +238,7 @@
 	"mobile-frontend-overlay-continue": "Devam et",
 	"mobile-frontend-page-menu-contents": "içerikler",
 	"mobile-frontend-page-menu-history": "Geçmiş",
-	"mobile-frontend-page-edit-summary": "<span>$1 </span><strong>değişiklik özeti</strong>",
+	"mobile-frontend-page-edit-summary": "<span>$1 <strong>değişiklik özeti</strong></span>",
 	"mobile-frontend-password": "Parola:",
 	"mobile-frontend-password-confirm-placeholder": "Parolayı onayla",
 	"mobile-frontend-password-placeholder": "Parola",

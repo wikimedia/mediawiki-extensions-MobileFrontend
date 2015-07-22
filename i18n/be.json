@@ -56,7 +56,7 @@
 	"mobile-frontend-overlay-close": "Закрыць",
 	"mobile-frontend-overlay-continue": "Працягнуць",
 	"mobile-frontend-page-menu-history": "Гісторыя",
-	"mobile-frontend-page-edit-summary": "<strong>Тлумачэнне праўкі</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Тлумачэнне праўкі</strong> $1</span>",
 	"mobile-frontend-password": "Пароль:",
 	"mobile-frontend-password-confirm-placeholder": "Пацвердзіце пароль",
 	"mobile-frontend-password-placeholder": "Пароль",

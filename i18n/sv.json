@@ -232,7 +232,7 @@
 	"mobile-frontend-overlay-continue": "Fortsätt",
 	"mobile-frontend-page-menu-contents": "innehåll",
 	"mobile-frontend-page-menu-history": "Historik",
-	"mobile-frontend-page-edit-summary": "<strong>Redigeringssammanfattning</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Redigeringssammanfattning</strong> $1</span>",
 	"mobile-frontend-password": "Lösenord:",
 	"mobile-frontend-password-confirm-placeholder": "Bekräfta lösenord",
 	"mobile-frontend-password-placeholder": "Lösenord",

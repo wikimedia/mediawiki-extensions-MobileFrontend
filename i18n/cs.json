@@ -222,7 +222,7 @@
 	"mobile-frontend-overlay-continue": "Pokračovat",
 	"mobile-frontend-page-menu-contents": "obsah",
 	"mobile-frontend-page-menu-history": "Historie",
-	"mobile-frontend-page-edit-summary": "<strong>Shrnutí editace</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Shrnutí editace</strong> $1</span>",
 	"mobile-frontend-password": "Heslo:",
 	"mobile-frontend-password-confirm-placeholder": "Potvrďte heslo",
 	"mobile-frontend-password-placeholder": "Heslo",

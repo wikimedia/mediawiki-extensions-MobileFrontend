@@ -251,7 +251,7 @@
 	"mobile-frontend-page-menu-contents": "目录",
 	"mobile-frontend-page-menu-history": "历史",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-edit-summary": "<strong>编辑摘要</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>编辑摘要</strong> $1</span>",
 	"mobile-frontend-password": "密码：",
 	"mobile-frontend-password-confirm-placeholder": "确认密码",
 	"mobile-frontend-password-placeholder": "密码",

@@ -214,7 +214,7 @@
 	"mobile-frontend-overlay-continue": "Jätka",
 	"mobile-frontend-page-menu-contents": "sisu",
 	"mobile-frontend-page-menu-history": "Ajalugu",
-	"mobile-frontend-page-edit-summary": "<strong>Resümee</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Resümee</strong> $1</span>",
 	"mobile-frontend-password": "Parool:",
 	"mobile-frontend-password-confirm-placeholder": "Parooli kinnitus",
 	"mobile-frontend-password-placeholder": "Parool",

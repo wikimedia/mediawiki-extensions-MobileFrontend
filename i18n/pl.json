@@ -222,7 +222,7 @@
 	"mobile-frontend-overlay-continue": "Kontynuuj",
 	"mobile-frontend-page-menu-contents": "spis treści",
 	"mobile-frontend-page-menu-history": "Historia",
-	"mobile-frontend-page-edit-summary": "<strong>Opis zmian</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Opis zmian</strong> $1</span>",
 	"mobile-frontend-password": "Hasło:",
 	"mobile-frontend-password-confirm-placeholder": "Potwierdź hasło",
 	"mobile-frontend-password-placeholder": "Hasło",

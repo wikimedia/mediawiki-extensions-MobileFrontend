@@ -131,7 +131,7 @@
 	"mobile-frontend-overlay-continue": "चालू ठेवा",
 	"mobile-frontend-page-menu-contents": "आशय",
 	"mobile-frontend-page-menu-history": "इतिहास",
-	"mobile-frontend-page-edit-summary": "<strong>बदलाचा सारांश</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>बदलाचा सारांश</strong> $1</span>",
 	"mobile-frontend-password": "परवलीचा शब्द:",
 	"mobile-frontend-password-confirm-placeholder": "परवलीच्या शब्दाची निश्चिती करा",
 	"mobile-frontend-password-placeholder": "परवलीचा शब्द",

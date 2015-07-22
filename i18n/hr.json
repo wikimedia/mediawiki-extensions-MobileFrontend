@@ -181,7 +181,7 @@
 	"mobile-frontend-overlay-continue": "Nastavi",
 	"mobile-frontend-page-menu-contents": "sadržaj",
 	"mobile-frontend-page-menu-history": "Povijest stranice",
-	"mobile-frontend-page-edit-summary": "<strong>Sažetak uređivanja</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Sažetak uređivanja</strong> $1</span>",
 	"mobile-frontend-password": "Zaporka:",
 	"mobile-frontend-password-confirm-placeholder": "Potvrdi zaporku",
 	"mobile-frontend-password-placeholder": "Zaporka",

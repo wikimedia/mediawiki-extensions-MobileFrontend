@@ -233,7 +233,7 @@
 	"mobile-frontend-page-menu-contents": "Inhalte",
 	"mobile-frontend-page-menu-history": "Versionsgeschichte",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-edit-summary": "<strong>Bearbeitungszusammenfassung</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Bearbeitungszusammenfassung</strong> $1</span>",
 	"mobile-frontend-password": "Passwort:",
 	"mobile-frontend-password-confirm-placeholder": "Passwort bestätigen",
 	"mobile-frontend-password-placeholder": "Passwort",

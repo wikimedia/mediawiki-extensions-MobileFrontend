@@ -213,7 +213,7 @@
 	"mobile-frontend-overlay-continue": "Continua",
 	"mobile-frontend-page-menu-contents": "contenuti",
 	"mobile-frontend-page-menu-history": "Cronologia",
-	"mobile-frontend-page-edit-summary": "<strong>Oggetto della modifica</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Oggetto della modifica</strong> $1</span>",
 	"mobile-frontend-password": "Password:",
 	"mobile-frontend-password-confirm-placeholder": "Conferma password",
 	"mobile-frontend-password-placeholder": "Password",

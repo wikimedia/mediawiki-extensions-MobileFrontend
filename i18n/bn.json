@@ -221,7 +221,7 @@
 	"mobile-frontend-overlay-continue": "অব্যাহত",
 	"mobile-frontend-page-menu-contents": "বিষয়বস্তু",
 	"mobile-frontend-page-menu-history": "ইতিহাস",
-	"mobile-frontend-page-edit-summary": "<strong>সম্পাদনা সারংশ</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>সম্পাদনা সারংশ</strong> $1</span>",
 	"mobile-frontend-password": "পাসওয়ার্ড:",
 	"mobile-frontend-password-confirm-placeholder": "পাসওয়ার্ড নিশ্চিত করুন",
 	"mobile-frontend-password-placeholder": "পাসওয়ার্ড",

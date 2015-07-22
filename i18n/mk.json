@@ -220,7 +220,7 @@
 	"mobile-frontend-overlay-continue": "Продолжи",
 	"mobile-frontend-page-menu-contents": "содржина",
 	"mobile-frontend-page-menu-history": "Историја",
-	"mobile-frontend-page-edit-summary": "<strong>Опис на промените</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Опис на промените</strong> $1</span>",
 	"mobile-frontend-password": "Лозинка:",
 	"mobile-frontend-password-confirm-placeholder": "Потврдете ја лозинката",
 	"mobile-frontend-password-placeholder": "Лозинка",

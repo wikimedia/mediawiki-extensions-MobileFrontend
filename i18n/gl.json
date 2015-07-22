@@ -228,7 +228,7 @@
 	"mobile-frontend-overlay-continue": "Continuar",
 	"mobile-frontend-page-menu-contents": "contidos",
 	"mobile-frontend-page-menu-history": "Historial",
-	"mobile-frontend-page-edit-summary": "<strong>Resumo de edición</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Resumo de edición</strong> $1</span>",
 	"mobile-frontend-password": "Contrasinal:",
 	"mobile-frontend-password-confirm-placeholder": "Confirme o contrasinal",
 	"mobile-frontend-password-placeholder": "Contrasinal",

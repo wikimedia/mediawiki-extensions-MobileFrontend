@@ -233,7 +233,7 @@
 	"mobile-frontend-page-menu-contents": "目錄",
 	"mobile-frontend-page-menu-history": "歷史",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-edit-summary": "<strong>編輯摘要</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>編輯摘要</strong> $1</span>",
 	"mobile-frontend-password": "密碼：",
 	"mobile-frontend-password-confirm-placeholder": "確認密碼",
 	"mobile-frontend-password-placeholder": "密碼",

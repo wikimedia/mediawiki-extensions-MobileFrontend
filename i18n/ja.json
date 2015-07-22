@@ -204,7 +204,7 @@
 	"mobile-frontend-page-menu-contents": "目次",
 	"mobile-frontend-page-menu-history": "履歴",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-edit-summary": "<strong>編集内容の要約</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>編集内容の要約</strong> $1</span>",
 	"mobile-frontend-password": "パスワード:",
 	"mobile-frontend-password-confirm-placeholder": "パスワード再入力",
 	"mobile-frontend-password-placeholder": "パスワード",

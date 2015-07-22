@@ -220,7 +220,7 @@
 	"mobile-frontend-overlay-continue": "Siguir",
 	"mobile-frontend-page-menu-contents": "conteníu",
 	"mobile-frontend-page-menu-history": "Historial",
-	"mobile-frontend-page-edit-summary": "<strong>Resume d'edición</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Resume d'edición</strong> $1</span>",
 	"mobile-frontend-password": "Contraseña:",
 	"mobile-frontend-password-confirm-placeholder": "Confirmar la contraseña",
 	"mobile-frontend-password-placeholder": "Contraseña",

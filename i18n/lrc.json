@@ -162,7 +162,7 @@
 	"mobile-frontend-overlay-continue": "ادامه دئین",
 	"mobile-frontend-page-menu-contents": "مینونه یا",
 	"mobile-frontend-page-menu-history": "ويرگار",
-	"mobile-frontend-page-edit-summary": "<strong>چکسته ویرایشت</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>چکسته ویرایشت</strong> $1</span>",
 	"mobile-frontend-password": "رمز:",
 	"mobile-frontend-password-confirm-placeholder": "رمز محكم كو",
 	"mobile-frontend-password-placeholder": "رازینه گواردن",

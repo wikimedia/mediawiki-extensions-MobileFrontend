@@ -239,7 +239,7 @@
 	"mobile-frontend-overlay-continue": "Продолжить",
 	"mobile-frontend-page-menu-contents": "содержание",
 	"mobile-frontend-page-menu-history": "История",
-	"mobile-frontend-page-edit-summary": "<strong>Описание изменений</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Описание изменений</strong> $1</span>",
 	"mobile-frontend-password": "Пароль:",
 	"mobile-frontend-password-confirm-placeholder": "Подтвердите пароль",
 	"mobile-frontend-password-placeholder": "Пароль",
