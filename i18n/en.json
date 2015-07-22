@@ -256,7 +256,7 @@
 	"mobile-frontend-page-menu-contents": "contents",
 	"mobile-frontend-page-menu-history": "History",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-edit-summary": "<strong>Edit summary</strong><span> $1</span>",
+	"mobile-frontend-page-edit-summary": "<span><strong>Edit summary</strong> $1</span>",
 	"mobile-frontend-password": "Password:",
 	"mobile-frontend-password-confirm-placeholder": "Confirm password",
 	"mobile-frontend-password-placeholder": "Password",
