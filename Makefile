@@ -31,7 +31,7 @@ phpdoc: 				## Build the PHP documentation
 	mkdir -p docs
 	rm -rf docs/php
 	mkdir -p docs/php/log
-	@composer doc
+	@doxygen
 
 docs: jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
 
