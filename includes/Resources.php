@@ -563,7 +563,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-uploadenable',
 			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
-			'mobile-frontend-editor-blocked-info',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-anon',
 			'mobile-frontend-editor-undo-unsupported',
@@ -685,6 +684,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'content.hogan' => 'resources/mobile.editor.overlay/content.hogan',
 		),
 		'messages' => array(
+			'mobile-frontend-editor-blocked-info',
 			'mobile-frontend-editor-viewing-source-page',
 		),
 	),
