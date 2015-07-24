@@ -184,7 +184,8 @@ body.navigation-enabled {
 		width: @menuWidth;
 	}
 
-	.position-fixed {
+	// FIXME: Menu shouldn't need to know about drawers but a cta drawer might be open
+	.drawer .position-fixed {
 		left: @menuWidth !important;
 	}
 }
@@ -248,14 +249,16 @@ body.navigation-enabled {
 
 
 .navigation-enabled.animations {
-	.position-fixed,
+	// FIXME: Menu shouldn't need to know about drawers but a cta drawer might be open
+	.drawer .position-fixed,
 	#mw-mf-page-center {
 		.transition-transform(@duration @easing);
 	}
 }
 
 .primary-navigation-enabled.animations {
-	.position-fixed,
+	// FIXME: Menu shouldn't need to know about drawers
+	.drawer .position-fixed,
 	#mw-mf-page-center {
 		// override non-animated version
 		left: 0 !important;
@@ -291,7 +294,8 @@ body.navigation-enabled {
 	}
 
 	&.primary-navigation-enabled.animations {
-		.position-fixed,
+		// FIXME: Menu shouldn't need to know about drawers
+		.drawer .position-fixed,
 		#mw-mf-page-center {
 			.transform(translate(-@menuWidth, 0));
 		}
