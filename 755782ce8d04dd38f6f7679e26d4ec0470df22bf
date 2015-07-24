@@ -16,6 +16,24 @@
       "revId": "755782ce8d04dd38f6f7679e26d4ec0470df22bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_aa1ad419",
+        "filename": "resources/mobile.betaoptin/BetaOptinPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-24T20:24:16Z",
+      "side": 1,
+      "message": "\u003e An absent value in the form post should just be ignored.\nAn unchecked checkbox doesn\u0027t send any data in the Request payload, so this would be misinterpreted anytime you change the value to false :) Do you know any nice way to resolve this? I\u0027m not sure we shouldn\u0027t, the specification (html4[1] as well as html5[2]) mention this, that non-checked checkboxes doesn\u0027t send data :)\n\n[1] http://www.w3.org/TR/html401/interact/forms.html#successful-controls\n[2] http://www.w3.org/TR/html5/forms.html#constructing-form-data-set",
+      "parentUuid": "8ec42329_f40d25ec",
+      "revId": "755782ce8d04dd38f6f7679e26d4ec0470df22bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
