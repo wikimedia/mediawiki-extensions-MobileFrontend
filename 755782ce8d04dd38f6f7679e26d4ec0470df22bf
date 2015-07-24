@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_f40d25ec",
+        "filename": "resources/mobile.betaoptin/BetaOptinPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-24T19:07:03Z",
+      "side": 1,
+      "message": "The BetaOptinPanel shouldn\u0027t care about this. An absent value in the form post should just be ignored.",
+      "revId": "755782ce8d04dd38f6f7679e26d4ec0470df22bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
