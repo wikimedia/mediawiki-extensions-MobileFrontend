@@ -5,7 +5,8 @@
 			"Nikola Smolenski",
 			"Rancher",
 			"Милан Јелисавчић",
-			"Михајло Анђелковић"
+			"Михајло Анђелковић",
+			"Srdjan m"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Унесите текст који видите изнад",
@@ -207,7 +208,9 @@
 	"mobile-frontend-watchlist-more": "више",
 	"mobile-frontend-watchlist-removed": "Страница $1 је уклоњена са вашег списка надгледања",
 	"mobile-frontend-watchlist-view": "Види списак надгледања",
+	"tag-mobile_edit": "Мобилно уређивање",
 	"tag-mobile_edit-description": "Измена начињена са мобилног уређаја",
+	"tag-mobile_web_edit": "Мобилно веб уређивање",
 	"tag-mobile_web_edit-description": "Измена начињена са мобилне верзије сајта",
 	"mobile-frontend-pageaction-edit-tooltip": "Уреди први одељак ове странице."
 }

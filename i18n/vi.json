@@ -405,7 +405,7 @@
 	"mobile-frontend-time-precision-millennium": "$1 ngàn năm SCN",
 	"mobile-frontend-time-precision-century": "$1 trăm năm SCN",
 	"mobile-frontend-time-precision-10annum": "thập niên $1",
-	"mobile-frontend-time-precision-BCE-Gannum": "$1 tỷ năng TCN",
+	"mobile-frontend-time-precision-BCE-Gannum": "$1 tỷ năm TCN",
 	"mobile-frontend-time-precision-BCE-Mannum": "$1 triệu năm TCN",
 	"mobile-frontend-time-precision-BCE-annum": "$1 năm TCN",
 	"mobile-frontend-time-precision-BCE-millennium": "$1 ngàn năm TCN",

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Milicevic01"
+			"Milicevic01",
+			"Srdjan m"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite tekst koji vidite iznad",
@@ -130,7 +131,9 @@
 	"mobile-frontend-view": "Mobilni prikaz",
 	"mobile-frontend-view-desktop": "Običan",
 	"mobile-frontend-view-mobile": "Mobilni",
+	"tag-mobile_edit": "Mobilno uređivanje",
 	"tag-mobile_edit-description": "Izmena načinjena sa mobilnog uređaja",
+	"tag-mobile_web_edit": "Mobilno veb uređivanje",
 	"tag-mobile_web_edit-description": "Izmena načinjena sa mobilne verzije sajta",
 	"mobile-frontend-pageaction-edit-tooltip": "Uredi prvi odeljak ove stranice."
 }
