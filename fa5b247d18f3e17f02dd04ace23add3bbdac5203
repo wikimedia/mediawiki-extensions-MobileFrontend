@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_de07ea19",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-24T16:41:58Z",
+      "side": 1,
+      "message": "oops",
+      "revId": "fa5b247d18f3e17f02dd04ace23add3bbdac5203",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
