@@ -1,37 +1,7 @@
 ( function ( M, $ ) {
-	var InfiniteScroll = M.require( 'InfiniteScroll' ),
-		response = {
-			'continue': {
-				pageimages: {
-					picontinue: 9
-				}
-			},
-			query: {
-				pages: {
-					2: {
-						pageid: 2,
-						ns: 0,
-						title: 'Burrito',
-						contentmodel: 'wikitext',
-						pagelanguage: 'en',
-						touched: '2014-12-17T10:06:49Z',
-						lastrevid: 552,
-						length: 33534
-					}
-				}
-			}
-		},
-		WatchListApi;
+	var InfiniteScroll = M.require( 'InfiniteScroll' );
 
 	QUnit.module( 'MobileFrontend InfiniteScroll', {
-		setup: function () {
-			var self = this;
-			mw.loader.using( 'mobile.watchlist' ).done( function () {
-				WatchListApi = M.require( 'modules/watchlist/WatchListApi' );
-				self.sandbox.stub( WatchListApi.prototype, 'get' )
-					.returns( $.Deferred().resolve( response ) );
-			} );
-		},
 		teardown: function () {
 			// Remove all scroll events after each test
 			$( window ).off( 'scroll' );
