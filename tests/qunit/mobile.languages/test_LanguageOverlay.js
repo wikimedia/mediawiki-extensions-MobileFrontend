@@ -8,7 +8,7 @@
 		}
 	} );
 
-	QUnit.test( 'filterLanguages', 1, function ( assert ) {
+	QUnit.test( 'filterLanguages', 2, function ( assert ) {
 		var overlay = new LanguageOverlay( {
 			languages: [
 				{
@@ -33,8 +33,9 @@
 		} );
 		// Needed so we can make use of :visible
 		overlay.show();
-		overlay.filterLists( 'Port' );
-		assert.strictEqual( overlay.$( 'ul li:visible' ).length, 1, 'Only one of the results should be visible.' );
+		overlay.filterLists( 'port' );
+		assert.ok( overlay.$( '.site-link-list li' ).eq( 1 ).css( 'display' ) === 'none', 'French should be hidden.' );
+		assert.ok( overlay.$( '.site-link-list li' ).eq( 2 ).css( 'display' ) !== 'none', 'Portuguese should be visible.' );
 		overlay.hide();
 	} );
 
