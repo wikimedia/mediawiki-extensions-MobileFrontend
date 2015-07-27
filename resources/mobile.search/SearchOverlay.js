@@ -163,7 +163,11 @@
 					value: 'search'
 				} )
 				.appendTo( $form );
-			$form.submit();
+			// history.back queues a task so might run after this call. Thus we use setTimeout
+			// http://www.w3.org/TR/2011/WD-html5-20110113/webappapis.html#queue-a-task
+			window.setTimeout( function () {
+				$form.submit();
+			}, 0 );
 		},
 
 		/**
