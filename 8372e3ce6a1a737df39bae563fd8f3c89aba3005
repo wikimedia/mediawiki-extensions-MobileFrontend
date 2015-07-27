@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_42ec698e",
+        "filename": "README",
+        "patchSetId": 65
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-07-27T22:07:49Z",
+      "side": 1,
+      "message": "This is a README file. There\u0027s no reason to use code comments here. Just write out the documentation in plain text:\n\nThe following are configuration variables that can be set for this extension. For further information, refer to https://www.mediawiki.org/wiki/Extension:MobileFrontend.\n\n$wgMFStopRedirectCookieHost\n\n\tSet the domain of the stopMobileRedirect cookie\n\n\tDefault: null\n\n\tIf this value is not set, it will default to the top domain of the host name (e.g.\n\ten.wikipedia.org \u003d .wikipedia.org). If you want to set this to a top domain (to cover\n\tall subdomains), be sure to include the preceding \u0027.\u0027 (eg .wikipedia.org NOT\n\twikipedia.org).\n\n$wgMFCustomLogos\n\n\tMake the logos configurable\n\n\tDefault: array()\n\netc.",
+      "revId": "8372e3ce6a1a737df39bae563fd8f3c89aba3005",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
