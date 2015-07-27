@@ -296,7 +296,8 @@
 	top: 0;
 
 	// Workaround for chrome. See https://phabricator.wikimedia.org/T98846
-	.mw-ui-icon.mw-ui-icon-element {
+	// without .back the labels show. See https://phabricator.wikimedia.org/T107090
+	.mw-ui-icon.mw-ui-icon-element.back {
 		overflow: visible;
 	}
 }
