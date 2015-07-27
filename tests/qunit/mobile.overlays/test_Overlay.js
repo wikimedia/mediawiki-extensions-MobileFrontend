@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'Overlay' );
 
 	QUnit.module( 'MobileFrontend: Overlay.js', {
@@ -13,7 +13,7 @@
 			content: 'Text'
 		} );
 		overlay.show();
-		assert.strictEqual( overlay.$el[ 0 ].parentNode, $( '#mw-mf-viewport' )[ 0 ], 'In DOM' );
+		assert.ok( overlay.$el[ 0 ].parentNode !== undefined, 'In DOM' );
 		overlay.hide();
 	} );
 
@@ -42,4 +42,4 @@
 		this.clock.tick( 1000 );
 		assert.strictEqual( overlay.$el[ 0 ].parentNode, null, 'No longer in DOM' );
 	} );
-} )( mw.mobileFrontend, jQuery );
+} )( mw.mobileFrontend );
