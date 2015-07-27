@@ -12,6 +12,7 @@
 	 **/
 	QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 		setup: function () {
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.$section0 = this.$container.find( 'h2' ).eq( 0 );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
@@ -119,6 +120,7 @@
 
 	QUnit.module( 'MobileFrontend toggle.js: user setting', {
 		setup: function () {
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
 			settings.save( 'expandSections', 'true', true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			toggle.enable( this.$container );
@@ -130,7 +132,7 @@
 		}
 	} );
 
-	QUnit.test( 'Open by default', 1, function ( assert ) {
+	QUnit.test( 'Open by default 2', 1, function ( assert ) {
 		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ), true, 'check section is visible at start' );
 	} );
 
@@ -142,6 +144,7 @@
 
 	QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 		setup: function () {
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			toggle.enable( this.$container );
