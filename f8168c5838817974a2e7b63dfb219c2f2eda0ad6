@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_16722010",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-28T17:51:59Z",
+      "side": 1,
+      "message": "Yes, in this file. If you expand the skipped lines and look at line 280, you\u0027ll see !self.isIos8.",
+      "parentUuid": "8ec42329_b61c6ccc",
+      "revId": "f8168c5838817974a2e7b63dfb219c2f2eda0ad6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_e20f92d6",
         "filename": "resources/mobile.overlays/Overlay.js",
         "patchSetId": 1
