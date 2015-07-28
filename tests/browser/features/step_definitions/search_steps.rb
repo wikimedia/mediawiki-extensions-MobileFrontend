@@ -15,9 +15,11 @@ When(/^I click the search button$/) do
   on(ArticlePage).search_button_element.when_present.click
 end
 
+When(/^I see the search in pages button$/) do
+  expect(on(ArticlePage).search_within_pages_element.when_visible).to be_visible
+end
+
 When(/^I click the search in pages button$/) do
-  # Search results may take time to appear
-  sleep 5
   on(ArticlePage).search_within_pages_element.when_present.click
 end
 
