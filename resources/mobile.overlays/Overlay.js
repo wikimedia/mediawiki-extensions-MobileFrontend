@@ -109,6 +109,11 @@
 		initialize: function ( options ) {
 			this.isIos = browser.isIos();
 			this.isIos8 = browser.isIos( 8 );
+			// https://phabricator.wikimedia.org/T106934
+			// tldr: closing keyboard doesn't trigger a blur event
+			if ( this.isIos8 ) {
+				this.hasFixedHeader = false;
+			}
 			View.prototype.initialize.apply( this, arguments );
 		},
 		/** @inheritdoc */
