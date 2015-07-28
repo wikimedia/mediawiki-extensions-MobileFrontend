@@ -57,7 +57,11 @@
 			] );
 
 			// FIXME: remove the if part when the cache clears.
-			if ( isPageCached || $lastModifiedLink.hasClass( 'truncated-text' ) ) {
+			if (
+				isPageCached ||
+				$lastModifiedLink.hasClass( 'truncated-text' ) ||
+				$lastModified.hasClass( 'pre-content' )
+			) {
 				$lastModifiedBar.replaceWith(
 					$( '<div class="last-modified-bar">' )
 						.html(
