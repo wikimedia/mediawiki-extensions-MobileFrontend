@@ -105,6 +105,24 @@
       "revId": "f8168c5838817974a2e7b63dfb219c2f2eda0ad6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_36287cdc",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-28T17:50:31Z",
+      "side": 1,
+      "message": "\u003cjdlrobson\u003e EditorOverlayBase runs postRender of Overlay so invokes the hasFixedHeader code\n10:49 AM \u003cjdlrobson\u003e note hasFixedHeader is whether the overlay and browser support fixed headers, the defaults.fixedHeader option is a request to use a fixed header where possible\n\nThus this fixes all overlays (talk included which might exhibit the same problem - have not checked)",
+      "parentUuid": "8ec42329_164460bc",
+      "revId": "f8168c5838817974a2e7b63dfb219c2f2eda0ad6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
