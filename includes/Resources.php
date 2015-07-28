@@ -63,17 +63,7 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.content.styles/main.less',
-			'resources/skins.minerva.content.styles/thumbnails.less',
-			'resources/skins.minerva.content.styles/images.less',
-			'resources/skins.minerva.content.styles/galleries.less',
-			'resources/skins.minerva.content.styles/headings.less',
-			'resources/skins.minerva.content.styles/blockquotes.less',
-			'resources/skins.minerva.content.styles/lists.less',
-			'resources/skins.minerva.content.styles/links.less',
-			'resources/skins.minerva.content.styles/text.less',
-			'resources/skins.minerva.content.styles/tables.less',
-			'resources/skins.minerva.content.styles/hacks.less',
+			'resources/skins.minerva.content.styles/styles.less',
 		),
 	),
 	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
