@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b191d64b",
+        "filename": "resources/skins.minerva.tablet.beta.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-28T18:54:41Z",
+      "side": 1,
+      "message": "Why not merge with the above rule? Also this doesn\u0027t seem to fix the problem. It pushes the pointer-overlay to the right of the page while the page contents are center aligned.",
+      "revId": "d9c4606c3b2a640dd1fefaf7d66de4f6f68386ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
