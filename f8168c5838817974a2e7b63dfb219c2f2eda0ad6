@@ -141,6 +141,24 @@
       "revId": "f8168c5838817974a2e7b63dfb219c2f2eda0ad6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7660442e",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-28T17:52:54Z",
+      "side": 1,
+      "message": "Only, if the class, that extends Overlay uses the default template, which EditorOverlayBase doesn\u0027t do (https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.editor.common/EditorOverlayBase.js#L121) and the template used in it hardcodes the position-fixed (https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.editor.common/EditorOverlayBase.hogan#L1).",
+      "parentUuid": "8ec42329_36287cdc",
+      "revId": "f8168c5838817974a2e7b63dfb219c2f2eda0ad6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
