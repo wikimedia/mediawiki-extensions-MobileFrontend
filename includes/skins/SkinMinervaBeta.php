@@ -42,9 +42,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( !$out ) {
 			$out = $this->getOutput();
 		}
-		# Replace page content before DOMParse to make sure images are scrubbed
-		# and Zero transformations are applied.
-		$this->handleNewPages( $out );
 		parent::outputPage( $out );
 	}
 
@@ -137,27 +134,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		}
 
 		return $styles;
-	}
-
-	/**
-	 * Handles new pages to show error message and print message, that page does not exist.
-	 * @param OutputPage $out
-	 */
-	protected function handleNewPages( OutputPage $out ) {
-		# Show error message
-		$title = $this->getTitle();
-		if ( !$title->exists()
-			&& !$title->isSpecialPage()
-			&& $title->userCan( 'create', $this->getUser() )
-			&& $title->getNamespace() !== NS_FILE
-		) {
-			$out->clearHTML();
-			$out->addHTML(
-				Html::openElement( 'div', array( 'id' => 'mw-mf-newpage' ) )
-				. wfMessage( 'mobile-frontend-editor-newpage-prompt' )->parse()
-				. Html::closeElement( 'div' )
-			);
-		}
 	}
 
 	/**
