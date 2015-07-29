@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6e6860f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T19:46:43Z",
+      "side": 1,
+      "message": "swipe?",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_4e7324e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T19:46:43Z",
+      "side": 1,
+      "message": "localStorage, not cookie, right?",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_8e834cd0",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T19:46:43Z",
+      "side": 1,
+      "message": "swipe",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0e6f5c27",
+        "filename": "resources/mobile.hovercards/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T19:46:43Z",
+      "side": 1,
+      "message": "doesn\u0027t this mean not internal too?",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
