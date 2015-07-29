@@ -52,6 +52,24 @@
       "revId": "ce9e20e7c462cc61ced776ad2e5ce8655b667acf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_13f5444d",
+        "filename": "resources/mobile.drawers/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-29T22:03:11Z",
+      "side": 1,
+      "message": "mm.\nThis change feels wrong. Ideally we\u0027d be able to do something this this.icon.invert() but we\u0027re not there yet.. we still need to work out how to best include views inside other views.\n\nclose and close-invert are exactly the same icons, just with different colours.\n\nI think for the time being it would be better to follow Baha\u0027s advice and just override the default in the Panel that extends this.\n\nYou\u0027ll see ReferencesDrawer does something similar.\n\nI can imagine in future an InvertedPanel class to capture this if it becomes too messy.",
+      "parentUuid": "8ec42329_539d0f0c",
+      "revId": "ce9e20e7c462cc61ced776ad2e5ce8655b667acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
