@@ -16,6 +16,24 @@
       "revId": "ce9e20e7c462cc61ced776ad2e5ce8655b667acf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_f358bb8d",
+        "filename": "resources/mobile.drawers/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T17:57:30Z",
+      "side": 1,
+      "message": "That would be possible, and I thought about that, too, but that is a big code cuplication :/ I don\u0027t know, what would be better, to duplicate the entire code, except the image name, or to have the abstraction like in this change. What do you mean?",
+      "parentUuid": "8ec42329_330de394",
+      "revId": "ce9e20e7c462cc61ced776ad2e5ce8655b667acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
