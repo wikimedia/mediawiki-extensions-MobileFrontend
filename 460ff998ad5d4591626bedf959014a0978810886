@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_53e2ec2e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T20:25:11Z",
+      "side": 1,
+      "message": "Do you think we should not fallback to using cookies for performance reasons?",
+      "revId": "460ff998ad5d4591626bedf959014a0978810886",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
