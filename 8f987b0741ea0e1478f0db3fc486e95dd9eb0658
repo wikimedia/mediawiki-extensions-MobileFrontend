@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_f376789e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T20:18:45Z",
+      "side": 1,
+      "message": "arghh, yeah :)",
+      "parentUuid": "8ec42329_6e6860f2",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_4e7324e5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-29T19:46:43Z",
       "side": 1,
       "message": "localStorage, not cookie, right?",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_53650cdc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T20:18:45Z",
+      "side": 1,
+      "message": "localStorage, if supported, otherwise cookie, I think it doesn\u0027t realy matter what is mentioned here, but I will change it into localStorage :)",
+      "parentUuid": "8ec42329_4e7324e5",
       "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_736288d6",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T20:18:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_8e834cd0",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_0e6f5c27",
         "filename": "resources/mobile.hovercards/init.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2015-07-29T19:46:43Z",
       "side": 1,
       "message": "doesn\u0027t this mean not internal too?",
+      "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_93a6140b",
+        "filename": "resources/mobile.hovercards/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T20:18:45Z",
+      "side": 1,
+      "message": "I\u0027m not sure, where .internal is used, but one place is the magnify icon under thumbnails (right after the thumb description), so I want to be sure (these icons aren\u0027t visible in mobile), that we don\u0027t show the overlay there. Internal links to articles (we definitely can parse) doesn\u0027t have any class by default so I want to exclude links I\u0027m not sure, if they are internal article links. That\u0027s why .image and .internal are excluded here. But i see, that .external is missing :)",
+      "parentUuid": "8ec42329_0e6f5c27",
       "revId": "8f987b0741ea0e1478f0db3fc486e95dd9eb0658",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
