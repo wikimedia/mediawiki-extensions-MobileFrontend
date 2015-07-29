@@ -1479,7 +1479,7 @@ $wgMobileEchoModules = array(
 $wgMobileVEModules = array(
 	'mobile.editor.ve' => $wgMFResourceBoilerplate + array(
 		'dependencies' => array(
-			'ext.visualEditor.mobileViewTarget',
+			'ext.visualEditor.mobileArticleTarget',
 			'mobile.editor.common',
 			'mobile.overlays',
 		),
