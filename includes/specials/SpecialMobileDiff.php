@@ -129,7 +129,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );
 
-		$output->addHtml( '<div id="mw-mf-diffview"><div id="mw-mf-diffarea">' );
+		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
 		$this->showHeader();
 		$this->showDiff();
@@ -285,7 +285,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addHtml(
 			Html::openElement( 'div', array( 'id' => 'mw-mf-userinfo',
-				'class' => 'position-fixed view-border-box' ) )
+				'class' => 'position-fixed' ) ) .
+			Html::openElement( 'div', array( 'class' => 'post-content' ) )
 		);
 
 		$userId = $this->rev->getUser();
@@ -335,6 +336,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 
 		$output->addHtml(
+			Html::closeElement( 'div' ) .
 			Html::closeElement( 'div' )
 		);
 	}
