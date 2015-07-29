@@ -16,6 +16,24 @@
       "revId": "460ff998ad5d4591626bedf959014a0978810886",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_d3da5c20",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-29T21:12:51Z",
+      "side": 1,
+      "message": "I think we don\u0027t need to worry about a minimum of performance impact (as far as I know, both localStorage and Cookies have realtively the same speed). Especially because localStorage isn\u0027t supported by _all_ browsers (sure, most of them support it) and not in private browsing on mobile browsers [1] we should avoid to show the banner on every page load on every first link, which would be really annoying :) I think we should pay this little amount of performance for a well functioning website :)\n\n[1] http://caniuse.com/#search\u003dlocalstorage (see \"Known issues\")",
+      "parentUuid": "8ec42329_53e2ec2e",
+      "revId": "460ff998ad5d4591626bedf959014a0978810886",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
