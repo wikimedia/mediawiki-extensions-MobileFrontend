@@ -3,7 +3,7 @@
 		toast = M.require( 'toast' ),
 		Swipe = M.require( 'Swipe' ),
 		swipe,
-		QuickLookupDrawer = M.require( 'modules/quickLookup/QuickLookupDrawer' ),
+		HovercardsDrawer = M.require( 'modules/hovercards/HovercardsDrawer' ),
 		hostname = window.location.hostname,
 		cache = {},
 		drawer;
@@ -64,7 +64,7 @@
 	}
 
 	/**
-	 * Show a QuickLookupDrawer with information about {link}
+	 * Show a HovercardsDrawer with information about {link}
 	 * Link must have the same hostname as the site, i.e. it must be an internal link.
 	 * Show a toast before searching and a drawer with page info after the search is successful.
 	 * @ignore
@@ -84,7 +84,7 @@
 			toast.show( mw.msg( 'mobile-frontend-quick-lookup-looking', linkTitle ), 'toast quick-lookup' );
 			lookup( linkTitle ).done( function ( page ) {
 				toast.hide();
-				drawer = new QuickLookupDrawer( page );
+				drawer = new HovercardsDrawer( page );
 				drawer.show();
 			} ).fail( function () {
 				toast.show(

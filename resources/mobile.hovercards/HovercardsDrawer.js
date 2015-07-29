@@ -2,17 +2,18 @@
 	var Drawer = M.require( 'Drawer' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
-		QuickLookupDrawer;
+		Icon = M.require( 'Icon' ),
+		HovercardsDrawer;
 
 	/**
 	 * Drawer for showing a brief information about a page.
 	 * If the user is logged in, the user will see a watchstar too so that they
 	 * can (un)watch the page.
 	 * @inheritdoc
-	 * @class QuickLookupDrawer
+	 * @class HovercardsDrawer
 	 * @extends Drawer
 	 */
-	QuickLookupDrawer = Drawer.extend( {
+	HovercardsDrawer = Drawer.extend( {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -21,6 +22,12 @@
 		 * @cfg {String} defaults.id ID of the page
 		 */
 		defaults: $.extend( {}, Drawer.prototype.defaults, {
+			cancelButton: new Icon( {
+				tagName: 'a',
+				name: 'close',
+				additionalClassNames: 'cancel',
+				label: mw.msg( 'mobile-frontend-overlay-close' )
+			} ).toHtmlString(),
 			title: '',
 			text: '',
 			id: ''
@@ -32,7 +39,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		template: mw.template.get( 'mobile.quickLookup', 'Drawer.hogan' ),
+		template: mw.template.get( 'mobile.hovercards', 'Drawer.hogan' ),
 		/**
 		 * @inheritdoc
 		 */
@@ -95,5 +102,7 @@
 		}
 	} );
 
-	M.define( 'modules/quickLookup/QuickLookupDrawer', QuickLookupDrawer );
+	M.define( 'modules/hovercards/HovercardsDrawer', HovercardsDrawer )
+		// FIXME: deprecated module name
+		.deprecate( 'modules/quickLookup/QuickLookupDrawer' );
 }( mw.mobileFrontend, jQuery ) );
