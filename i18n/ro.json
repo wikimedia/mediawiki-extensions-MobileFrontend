@@ -138,6 +138,7 @@
 	"mobile-frontend-generic-404-title": "Eroare — Pagina nu a fost găsită",
 	"mobile-frontend-generic-login": "{{SITENAME}} este un proiect clădit de oameni ca dumneavoastră.",
 	"mobile-frontend-generic-login-action": "Autentificați-vă pentru a contribui.",
+	"mobile-frontend-generic-login-new": "<strong>Proiectul {{SITENAME}} este creat de oameni ca dumnevoastră.</strong><br />Autentificați-vă pentru a contribui.",
 	"mobile-frontend-generic-signup-action": "Înregistrați-vă pentru a contribui.",
 	"mobile-frontend-history": "Vizualizează istoricul modificărilor pentru această pagină.",
 	"mobile-frontend-history-404-desc": "Nu se poate accesa istoricul unei pagini care nu există. Este posibil ca aceasta să fi fost ștearsă sau ca dumneavoastră să fi accesat o legătură greșită.",
