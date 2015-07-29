@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_330de394",
+        "filename": "resources/mobile.drawers/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-29T17:49:27Z",
+      "side": 1,
+      "message": "Rather than introducing a new property, wouldn\u0027t it be better to override the default cancelButton in the child class? The above changes make it harder (compared to the defaults map) to understand the logic imo.",
+      "revId": "ce9e20e7c462cc61ced776ad2e5ce8655b667acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
