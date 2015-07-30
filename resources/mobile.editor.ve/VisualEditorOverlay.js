@@ -37,7 +37,6 @@
 		},
 		/** @inheritdoc **/
 		initialize: function ( options ) {
-			var self = this;
 			this.applyHeaderOptions( options, true );
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
@@ -46,7 +45,8 @@
 			this.config = $.extend( this.config, {
 				skipPreview: false
 			} );
-			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
+			this.$continueBtn = this.$( '.continue' ).prop( 'disabled', true );
+			this.isNewPage = options.isNewPage;
 		},
 		/**
 		 * Destroy the existing VisualEditor target.
@@ -233,6 +233,10 @@
 			var surface = this.target.getSurface();
 
 			this.clearSpinner();
+
+			if ( this.isNewPage ) {
+				surface.setPlaceholder( mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user ) );
+			}
 
 			this.$( '.surface' )
 				.append( surface.$element.addClass( 'content' ) )
