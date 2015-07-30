@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_d76001a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-07-30T16:58:11Z",
+      "side": 1,
+      "message": "Could you be more specific here? I understand that Bug: T102887 is meant to provide context but not to a casual reader.\n\nHow about \"This seems to be a dead experiment and is breaking global user pages in alpha/beta.\"?",
+      "revId": "7d5f754faf3cb1a8049b1db852b9c5b119eaa1cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
