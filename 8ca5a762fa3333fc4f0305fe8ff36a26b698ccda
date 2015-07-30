@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_97ab59d3",
+        "filename": "resources/mobile.hovercards/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-07-30T16:39:26Z",
+      "side": 1,
+      "message": "We don\u0027t need to fallback to using cookies anymore, right?",
+      "revId": "8ca5a762fa3333fc4f0305fe8ff36a26b698ccda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
