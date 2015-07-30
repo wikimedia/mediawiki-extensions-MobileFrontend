@@ -487,6 +487,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-loading-message',
 			'mobile-frontend-console-recruit',
 			// Skin.js
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-terms-link',
 		),
 		'styles' => array(
@@ -632,8 +634,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-continue',
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-keep-editing',
-			'mobile-frontend-editor-licensing',
-			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
 			'mobile-frontend-editor-summary',
