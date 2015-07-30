@@ -42,7 +42,6 @@
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			this._hasChanged = false;
 			// force editor preview step for VE
 			this.config = $.extend( this.config, {
 				skipPreview: false
@@ -74,16 +73,17 @@
 				.then( mw.libs.ve.targetLoader.loadModules )
 				.then( function () {
 					overlay.target = new ve.init.mw.MobileArticleTarget( {
+						$element: overlay.$el,
 						// || undefined so that scrolling is not triggered for the lead (0) section
 						// (which has no header to scroll to)
 						section: overlay.options.sectionId || undefined,
 						isIos: overlay.isIos
 					} );
-					overlay.$( '.surface' ).append( overlay.target.$element );
 					overlay.target.activating = true;
 					overlay.target.load();
 					overlay.target.connect( overlay, {
 						back: 'onBack',
+						editSource: 'onEditSource',
 						saveBegin: 'onStageChanges',
 						save: 'onSaveComplete',
 						saveAsyncBegin: 'showSpinner',
@@ -106,6 +106,7 @@
 					mw.log.warn( 'VisualEditor failed to load: ' + e );
 				} );
 		},
+
 		/** @inheritdoc **/
 		hide: function () {
 			var retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
@@ -114,31 +115,25 @@
 			}
 			return retval;
 		},
+
 		/** @inheritdoc **/
 		postRender: function () {
-			var self = this;
-
-			this.initializeSwitcher();
-			this.switcherToolbar.tools.editVe.setActive( true );
-			/**
-			 * 'Edit source' button handler
-			 */
-			this.switcherToolbar.tools.editSource.onSelect = function () {
-				// If changes have been made tell the user they have to save first
-				if ( !self.hasChanged() ) {
-					self.switchToSourceEditor( self.options );
-				} else {
-					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-						self.onStageChanges();
-					} else {
-						self.switcherToolbar.tools.editSource.setActive( false );
-					}
-				}
-			};
-
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this );
 		},
+
+		/**
+		 * Handle editSource event
+		 */
+		onEditSource: function () {
+			// If changes have been made tell the user they have to save first
+			if ( !this.hasChanged() ) {
+				this.switchToSourceEditor( this.options );
+			} else if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+				this.onStageChanges();
+			}
+		},
+
 		/**
 		 * Handle back event
 		 */
@@ -188,8 +183,6 @@
 				return;
 			}
 			this.showHidden( '.saving-header' );
-			// Stop the confirmation message from being thrown when you hit save.
-			this._hasChanged = false;
 			this.$( '.surface, .summary-area' ).hide();
 			if ( this.captchaId ) {
 				// Intentional Lcase ve save api properties
@@ -237,25 +230,18 @@
 		 * @method
 		 */
 		onSurfaceReady: function () {
+			var surface = this.target.getSurface();
+
 			this.clearSpinner();
-			this.$( '.surface' ).show();
-			this.target.getSurface().getModel().getDocument().connect( this, {
-				transact: 'onTransact'
-			} );
-			this.target.getSurface().$element.addClass( 'content' );
+
+			this.$( '.surface' )
+				.append( surface.$element.addClass( 'content' ) )
+				.show();
 
 			// we have to do it here because contenteditable elements still do not
 			// exist when postRender is executed
 			// FIXME: Don't call a private method that is outside the class.
 			this._fixIosHeader( '[contenteditable]' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onTransact: function () {
-			this._hasChanged = true;
-			this.$continueBtn.prop( 'disabled', false );
 		},
 		/**
 		 * Event handler.
@@ -305,7 +291,7 @@
 		},
 		/** @inheritdoc **/
 		hasChanged: function () {
-			return this._hasChanged;
+			return this.target && this.target.getSurface().getModel().hasBeenModified();
 		}
 	} );
 
