@@ -309,6 +309,7 @@
 	"mobile-frontend-talk-topic-error-permission": "Nun pue amestase l'asuntu. Nun tienes permisu pa editar páxines.",
 	"mobile-frontend-talk-topic-error-spam": "Refugóse l'asuntu porque contenía un fragmentu de puxarra.",
 	"mobile-frontend-talk-topic-error-badtoken": "Hebo un error nel sirvidor. La edición nun pue guardase. Intenta recargar esta páxina.",
+	"mobile-frontend-talk-topic-wait": "Guardando'l to tema nuevu, espera.",
 	"mobile-frontend-terms-text": "Condiciones d'usu",
 	"mobile-frontend-thanked-notice": "$1 recibió l'avisu de que-y gustó {{GENDER:$2|la so}} edición.",
 	"mobile-frontend-user-account": "cuenta d'usuariu",
@@ -359,6 +360,8 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Xubir una foto d'entamu d'esta páxina.",
 	"apihelp-mobileview-description": "Devuelve los datos que necesiten les vistes con móviles.",
 	"apihelp-mobileview-param-page": "Títulu de la páxina a procesar.",
+	"apihelp-mobileview-param-redirect": "Si tienen de siguise les redireiciones.",
+	"apihelp-mobileview-param-sections": "Llista separada por barres verticales (|) de númberos de seición de los que devolver testu. Puede usase \"all\" pa devolvelos toos. Los rangos en formatu \"1-4\" signifiquen devolver les secciones 1, 2, 3, 4. Los rangos sin el segundu númberu, p. ex. \"1-\" indiquen devolver d'esi puntu al final. \"references\" (referencies) puede usase pa indicar que se devuelvan toles secciones que contengan referencies.",
 	"mobile-frontend-browse-tags-header": "Etiquetes",
 	"mobile-frontend-panel-ok": "Aceutar",
 	"mobile-frontend-panel-cancel": "Non, gracies"

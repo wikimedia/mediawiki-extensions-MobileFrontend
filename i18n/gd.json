@@ -80,7 +80,6 @@
 	"mobile-frontend-editor-tutorial-confirm": "Tòisich air deasachadh",
 	"mobile-frontend-editor-tutorial-summary": "Na bi an t-eagal ort ro markup. Feuch 's thoir piseach air an duilleag \"$1\".",
 	"mobile-frontend-editor-unavailable": "Chan eil deasachadh inneil-làimhe ri fhaighinn airson a' bhrabhsair agad. Feuch brabhsair eile.",
-	"mobile-frontend-editor-unavailable-header": "Chan eil an deasaiche ri làimh",
 	"mobile-frontend-editor-undo-unsupported": "Chan eil taic ri neo-dhèanamh ri fhaighinn air innealan-làimhe fhathast.",
 	"mobile-frontend-editor-uploadenable": "Luchdaich suas dealbh an toiseach gus deasachadh a chur an comas.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>A' sealltainn am bun-tùs aig</strong><span> $1</span>",
@@ -302,5 +301,6 @@
 	"tag-mobile_edit": "Deasachadh inneil-làimhe",
 	"tag-mobile_edit-description": "Deasachadh a rinneadh o inneal-làimhe (lìon no aplacaid)",
 	"tag-mobile_web_edit": "Deasachadh-lìn inneil-làimhe",
-	"tag-mobile_web_edit-description": "Deasachadh a rinneadh on làrach inneil-làimhe"
+	"tag-mobile_web_edit-description": "Deasachadh a rinneadh on làrach inneil-làimhe",
+	"mobile-frontend-pageaction-edit-tooltip": "Deasaich prìomh-earrann na duilleige seo."
 }
