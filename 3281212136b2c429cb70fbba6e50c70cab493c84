@@ -16,6 +16,24 @@
       "revId": "3281212136b2c429cb70fbba6e50c70cab493c84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_244cb4ca",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-07-30T08:38:33Z",
+      "side": 1,
+      "message": "The naming is poor. onSaveBegin isn\u0027t an event handler, but that is a bug in EditorOverlayBase and out of scope for this commit.",
+      "parentUuid": "8ec42329_f63bc6e5",
+      "revId": "3281212136b2c429cb70fbba6e50c70cab493c84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
