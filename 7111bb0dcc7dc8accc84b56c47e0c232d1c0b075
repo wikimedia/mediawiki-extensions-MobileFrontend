@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_2ac1cf58",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/AddReferenceOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "woops",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_eab667f5",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/AddReferenceOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "You can just return false rather than the above 2 lines. It\u0027s a nice shorthand. Thoughts?",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_6aca7772",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "* @ignore\notherwise this will come up in documentation.",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_eaad0799",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "I\u0027m no sure about this /* HACK */ notation.\nUse FIXME instead and document why it\u0027s a necessary hack.",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0ab173f3",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "Why not use a ResourceLoaderImageModule ?",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ca960b4f",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "I think this can be removed now?",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_0a889321",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "Sure this will not break anything.. ? :) Looks fine though.",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_4a921b58",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-07-31T18:46:59Z",
+      "side": 1,
+      "message": "These rules should be in the skins.minerva.tablet.beta.styles module as they already exist there.",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
