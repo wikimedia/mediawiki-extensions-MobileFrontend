@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_9f45a7bb",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-31T16:43:27Z",
+      "side": 0,
+      "message": "by the way: This should be quickUserCan(), instead of userCan(), which would make more expensive checks, which isn\u0027t really needed for a GUI action :)",
+      "revId": "f42708f25eed2e448dfcb7cbe32aefbb4c5279e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
