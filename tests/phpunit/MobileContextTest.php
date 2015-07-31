@@ -78,7 +78,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testGetMobileUrl() {
 		$this->setMwGlobals( array(
 			'wgMFMobileHeader' => 'X-WAP',
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2'
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+			'wgServer' => '//en.wikipedia.org',
 		) );
 		$invokes = 0;
 		$context = $this->makeContext();
@@ -102,7 +103,12 @@ class MobileContextTest extends MediaWikiTestCase {
 			'//en.m.wikipedia.org/wiki/Article',
 			$context->getMobileUrl( '//en.wikipedia.org/wiki/Article' )
 		);
-		$this->assertEquals( 2, $invokes, 'Ensure that hook got the right context' );
+		// test local Urls - task T107505
+		$this->assertEquals(
+			'http://en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( '/wiki/Article' )
+		);
+		$this->assertEquals( 3, $invokes, 'Ensure that hook got the right context' );
 	}
 
 	public function testParseMobileUrlTemplate() {
