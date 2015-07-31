@@ -952,15 +952,14 @@ class MobileFrontendHooks {
 	 */
 	public static function onEventLoggingRegisterSchemas( &$schemas ) {
 		$mobileEventLoggingSchemas = array(
-			'MobileWebUploads'       => 8209043,
-			'MobileWebEditing'       => 8599025,
-			'MobileWebWatching'       => 11761466,
-			'MobileWebWatchlistClickTracking' => 10720361,
-			'MobileWebDiffClickTracking' => 10720373,
-			'MobileWebMainMenuClickTracking' => 11568715,
-			'MobileWebUIClickTracking' => 10742159,
-			'MobileWebSearch' => 12054448,
 			'MobileWebBrowse' => 12119641,
+			'MobileWebDiffClickTracking' => 10720373,
+			'MobileWebEditing' => 8599025,
+			'MobileWebMainMenuClickTracking' => 11568715,
+			'MobileWebSearch' => 12054448,
+			'MobileWebUIClickTracking' => 10742159,
+			'MobileWebWatching' => 11761466,
+			'MobileWebWatchlistClickTracking' => 10720361,
 		);
 
 		$schemas += $mobileEventLoggingSchemas;
