@@ -16,6 +16,24 @@
       "revId": "8ca5a762fa3333fc4f0305fe8ff36a26b698ccda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_9c2cd5f3",
+        "filename": "resources/mobile.hovercards/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-07-31T15:01:05Z",
+      "side": 1,
+      "message": "this code should never run, if localStorage isn\u0027t supported, so the default can be used, i can add the parameter to do not fallback to cookies :)",
+      "parentUuid": "8ec42329_97ab59d3",
+      "revId": "8ca5a762fa3333fc4f0305fe8ff36a26b698ccda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
