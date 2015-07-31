@@ -34,6 +34,14 @@
 			max-width: @contentMaxWidthTablet;
 		}
 
+		// Take into account padding in width of pointer overlay so that it
+		// can point to anything in the containing content area and avoid
+		// padding issues such as https://phabricator.wikimedia.org/F287611
+		// When pushing to stable move to mobile.contentOverlays
+		#mw-mf-page-center .pointer-overlay {
+			max-width: @wgMFDeviceWidthDesktop;
+		}
+
 		.content {
 			padding: @contentTopPadding 0;
 		}
