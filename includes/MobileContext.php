@@ -756,6 +756,15 @@ class MobileContext extends ContextSource {
 		}
 
 		$parsedUrl = wfParseUrl( $url );
+		// if parsing failed, maybe it's a local Url, try to expand and reparse it - task T107505
+		if ( !$parsedUrl ) {
+			$expandedUrl = wfExpandUrl( $url );
+			// if Url could not be expanded or parsed, return false, instead of an empty string
+			if ( !$expandedUrl || !$parsedUrl = wfParseUrl( $expandedUrl ) ) {
+				return false;
+			}
+		}
+
 		$this->updateMobileUrlHost( $parsedUrl );
 		if ( $forceHttps ) {
 			$parsedUrl['scheme'] = 'https';
