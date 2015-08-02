@@ -4,5 +4,15 @@
 			"JinJian"
 		]
 	},
-	"mobile-frontend-main-menu-account-create": "Paghimo hin account"
+	"mobile-frontend-editor-edit": "Pagliwat",
+	"mobile-frontend-language-article-heading": "Basaha ha iba nga pinulongan",
+	"mobile-frontend-main-menu-account-create": "Paghimo hin account",
+	"mobile-frontend-main-menu-button-tooltip": "Abrehi an panguna nga menu",
+	"mobile-frontend-main-menu-login": "Maglog-in",
+	"mobile-frontend-random-button": "Bisan ano nga pakli",
+	"mobile-frontend-terms-text": "Mga termino hit Paggamit",
+	"mobile-frontend-view": "Mobile view",
+	"tag-mobile_edit": "Pagliwat tikang ha mobile",
+	"tag-mobile_web_edit": "Pagliwat tikang ha mobile web",
+	"mobile-frontend-pageaction-edit-tooltip": "Igliwat an ulo nga seksyon hini nga pakli"
 }

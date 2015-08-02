@@ -111,6 +111,7 @@
 	"mobile-frontend-generic-404-title": "Greška, stranica nije pronađena",
 	"mobile-frontend-generic-login": "Projekt {{SITENAME}} su stvorili ljudi poput Vas.",
 	"mobile-frontend-generic-login-action": "Prijavite se da biste doprinosili.",
+	"mobile-frontend-generic-login-new": "Projekt <strong>{{SITENAME}} su napravili ljudi poput Vas.</strong><br />Prijavite se da biste doprinosili.",
 	"mobile-frontend-generic-signup-action": "Otvorite suradnički račun da biste doprinosili.",
 	"mobile-frontend-history": "Vidi povijest uređivanja ove stranice.",
 	"mobile-frontend-history-404-desc": "Ne mogu prikazati povijest stranice koja ne postoji. Moguće je da je izbrisana ili ste kliknuli na krivu poveznicu.",

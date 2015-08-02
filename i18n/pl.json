@@ -92,7 +92,7 @@
 	"mobile-frontend-editor-error-conflict": "Błąd, inny użytkownik w międzyczasie edytował tę stronę.",
 	"mobile-frontend-editor-error-loading": "Błąd, nie udało się załadować sekcji.",
 	"mobile-frontend-editor-keep-editing": "Wróć do edytowania",
-	"mobile-frontend-editor-licensing-with-terms": "Zapisując zmiany, zgadzasz się na $1 and oraz wyrażasz zgodę na udostępnianie Twojego wkładu na {{PLURAL:$3|licencji|licencjach}} $2.",
+	"mobile-frontend-editor-licensing-with-terms": "Zapisując zmiany, zgadzasz się na $1 oraz wyrażasz zgodę na udostępnianie Twojego wkładu na {{PLURAL:$3|licencji|licencjach}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 Warunki użytkowania]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Czy na pewno chcesz stworzyć}} nową stronę w {{SITENAME}}?",
 	"mobile-frontend-editor-newpage-prompt": "Ta strona nie istnieje. Czemu by jej nie utworzyć?",

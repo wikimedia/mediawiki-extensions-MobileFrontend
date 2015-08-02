@@ -6,7 +6,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ov ene Metmaacher övver de mobihle Schnettschtäll Änderonge aam Maache es udder nit.",
-	"action-mf-uploadbutton": "der Knopp zom huhlahde on mobile pages ze bruche\n<!-- \nhttps://translatewiki.net/wiki/Thread:Support/About_MediaWiki:Action-mf-uploadbutton/ksh\n-->",
+	"action-mf-uploadbutton": "et Huhlahde för Mobihljerähte ze bruche",
 	"beta-feature-minerva": "Donn de mobihle Bedehnbovverfläsch ({{int:skinname-minerva}}) och om jewöhnlejje Rääschner zohlohße",
 	"beta-feature-minerva-description": "Donn de Bedehnbovverfläsch för mobihle Apparahte en di Leß met de Bedehnbovverfläsche för jewöhnlejje Rääschner zom Ußsöhke onger dä Ußwahl „{{int:prefs-rendering}}“ en de Enschtällonge.",
 	"mobile-frontend-account-create-email-placeholder": "De <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">e-mail</i>, kann fott bliive",
@@ -179,7 +179,7 @@
 	"mobile-frontend-overlay-close": "Zohmaache",
 	"mobile-frontend-overlay-continue": "Wiggermaache",
 	"mobile-frontend-page-menu-contents": "Enhalt",
-	"mobile-frontend-page-menu-history": "Versione",
+	"mobile-frontend-page-menu-history": "Väsjohne",
 	"mobile-frontend-page-edit-summary": "<span><strong>Zesammefaßong</strong> „$1“ </span>",
 	"mobile-frontend-password": "Paßwoot:",
 	"mobile-frontend-password-confirm-placeholder": "Paßwoot beschtääteje",
