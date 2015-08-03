@@ -6,7 +6,7 @@ Feature: Manage Watchlist
       And I have recently edited pages on my watchlist
       And I am on the "Special:Watchlist" page
 
-  @smoke
+  @smoke @integration
   Scenario: Switching to Feed view
     When I switch to the modified view of the watchlist
       And I click the Pages tab
