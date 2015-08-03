@@ -195,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_4ea45a47",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-03T21:14:40Z",
+      "side": 1,
+      "message": "it does! \n \u0027file\u0027 \u003d\u003e [file path string or array whose values are file path strings\n\t *                                    and whose keys are \u0027default\u0027, \u0027ltr\u0027, \u0027rtl\u0027, a single\n\t *                                    language code like \u0027en\u0027, or a list of language codes like\n\t *                                    \u0027en,de,ar\u0027],\n\n:-)",
+      "parentUuid": "8ec42329_d3a1d8f5",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_ca960b4f",
         "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
         "patchSetId": 13
