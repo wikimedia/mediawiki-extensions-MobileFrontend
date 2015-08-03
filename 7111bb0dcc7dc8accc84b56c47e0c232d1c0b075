@@ -177,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_d3a1d8f5",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-03T15:56:08Z",
+      "side": 1,
+      "message": "Hmm, RLImageModule doesn\u0027t support to use two different images for two different directions, right?",
+      "parentUuid": "8ec42329_9303500f",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_ca960b4f",
         "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
         "patchSetId": 13
@@ -206,6 +224,24 @@
       "side": 1,
       "message": "possible...",
       "parentUuid": "8ec42329_ca960b4f",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_d388f877",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-03T15:56:08Z",
+      "side": 1,
+      "message": "No, still needed :/",
+      "parentUuid": "8ec42329_53116855",
       "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
