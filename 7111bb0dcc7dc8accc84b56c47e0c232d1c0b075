@@ -213,6 +213,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_8111b358",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-03T21:22:20Z",
+      "side": 1,
+      "message": "looking through all things that could be related and overlooking the one information I need :D I\u0027ll try it :P",
+      "parentUuid": "8ec42329_4ea45a47",
+      "revId": "7111bb0dcc7dc8accc84b56c47e0c232d1c0b075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_ca960b4f",
         "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less",
         "patchSetId": 13
