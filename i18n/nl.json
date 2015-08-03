@@ -25,7 +25,8 @@
 			"JensRiskin",
 			"MedShot",
 			"Esketti",
-			"HanV"
+			"HanV",
+			"Mbch331"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -82,7 +83,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Meer lezen",
 	"mobile-frontend-editor-abusefilter-warning": "Waarschuwing: weet u zeker dat u deze bewerking wilt opslaan? Er is wellicht iets mee mis.",
 	"mobile-frontend-editor-anon": "Bewerken zonder in te loggen",
-	"mobile-frontend-editor-anonwarning": "<strong>Let op</strong>: U bent niet ingelogd. Maakt u wijzigingen, dan wordt uw IP-adres voor iedereen zichtbaar. Maar als u <strong>inlogt</strong> of <strong>een account aanmaakt</strong>, dan worden uw bewerkingen aan uw gebruikersnaam toegeschreven, onder andere voordelen.",
+	"mobile-frontend-editor-anonwarning": "<strong>Let op</strong>: U bent niet ingelogd. Maakt u wijzigingen, dan wordt uw IP-adres voor iedereen zichtbaar. Maar als u <strong>inlogt</strong> of <strong>een account aanmaakt</strong>, dan worden uw bewerkingen aan uw gebruikersnaam toegeschreven, naast andere voordelen.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Uw account is geblokkeerd voor bewerken. De blokkade is ingesteld door {{GENDER:$2|$2}} om de volgende reden: $1",
 	"mobile-frontend-editor-blocked-info": "Uw IP-adres is geblokkeerd voor bewerken. De blokkade is ingesteld door {{GENDER:$1|$1}} om de volgende reden: $2.",
 	"mobile-frontend-editor-cancel": "Annuleren",
