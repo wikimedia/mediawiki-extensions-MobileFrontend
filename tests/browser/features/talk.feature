@@ -4,7 +4,7 @@ Feature: Talk
   Background:
     Given I am using the mobile site
 
-  @smoke
+  @smoke @integration
   Scenario: Talk doesn't show on talk pages
     Given the page "Talk:Selenium talk test" exists
      And I am logged in as a user with a > 5 edit count
@@ -24,7 +24,7 @@ Feature: Talk
     When I click the talk button
     Then I should see the talk overlay
 
-  @smoke
+  @smoke @integration
   Scenario: Add discussion on talk page possible as logged in user
     Given the page "Talk:Selenium talk test" exists
       And I am logged in as a user with a > 5 edit count

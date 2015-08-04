@@ -13,7 +13,7 @@ Feature: Basic site for legacy devices
       # FIXME: Check that the edit button is invisible
       # FIXME: Check that the upload button is invisible
 
-  @smoke
+  @smoke @integration
   Scenario: Able to access left navigation in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
@@ -30,7 +30,7 @@ Feature: Basic site for legacy devices
       And I click on the main navigation button
     Then I should not see a link to "Nearby" in the main navigation menu
 
-  @smoke
+  @smoke @integration
   Scenario: Search with JavaScript disabled
     Given the page "Selenium search test" exists
     When I type into search box "Test is used by Selenium web driver"

@@ -5,7 +5,7 @@ Feature: Table of contents
     Given I am using the mobile site
       #And in Firefox see bug T88288
 
-  @smoke
+  @smoke @integration
   Scenario: Don't show table of contents on mobile
     Given I am viewing the site in mobile mode
     When I go to a page that has sections

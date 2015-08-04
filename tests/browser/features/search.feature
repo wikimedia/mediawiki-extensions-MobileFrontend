@@ -15,7 +15,7 @@ Feature: Search
     When I click the browser back button
     Then I should not see the search overlay
 
-  @smoke
+  @smoke @integration
   Scenario: Search for partial text
     When I type into search box "Selenium search tes"
     Then search results should contain "Selenium search test"
