@@ -12,7 +12,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-qunit-istanbul' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
-	grunt.loadNpmTasks( 'grunt-svg2png' );
 
 	grunt.initConfig( {
 		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
