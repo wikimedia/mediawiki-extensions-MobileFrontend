@@ -257,18 +257,8 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderTestModules( array &$testModules,
 		ResourceLoader &$resourceLoader
 	) {
-		// FIXME: Global core variables
-		global $wgResourceModules, $wgRequest;
-
-		$context = MobileContext::singleton();
-		if (
-			$wgRequest->getVal( 'target' ) !== 'mobile'
-			&& $wgRequest->getVal( 'useformat' ) !== 'mobile'
-			&& $wgRequest->getVal( 'skin' ) !== 'minerva'
-			&& !$context->shouldDisplayMobileView()
-		) {
-			return true;
-		}
+		// FIXME: Global core variable
+		global $wgResourceModules;
 
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),
