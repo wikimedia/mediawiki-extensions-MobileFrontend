@@ -19,7 +19,8 @@
 		"CodeMirror",
 		"OO.ui.ToolGroup",
 		"OO.ui.LookupElement",
-		"OO.EventEmitter"
+		"OO.EventEmitter",
+		"ve.init.mw.MobileArticleTarget"
 	],
 	"--warnings": ["-nodoc(class,public)", "-dup_member", "-link_ambiguous"],
 	"--": [

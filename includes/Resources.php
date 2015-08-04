@@ -1487,6 +1487,7 @@ $wgMobileVEModules = array(
 			'resources/mobile.editor.ve/VisualEditorOverlay.less',
 		),
 		'scripts' => array(
+			'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
 			'resources/mobile.editor.ve/VisualEditorOverlay.js',
 		),
 		'templates' => array(

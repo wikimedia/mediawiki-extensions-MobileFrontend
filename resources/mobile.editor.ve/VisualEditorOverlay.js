@@ -56,7 +56,6 @@
 			if ( this.target ) {
 				this.target.destroy();
 				this.target = null;
-				this.docToSave = null;
 			}
 		},
 		/** @inheritdoc **/
@@ -66,13 +65,13 @@
 			if ( this.target !== undefined ) {
 				return;
 			}
-			// FIXME: we have to initialize MobileArticleTarget after this.$el
+			// FIXME: we have to initialize MobileFrontendArticleTarget after this.$el
 			// is attached to DOM, maybe we should attach it earlier and hide
 			// overlays in a different way?
 			mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( mw.libs.ve.targetLoader.loadModules )
 				.then( function () {
-					overlay.target = new ve.init.mw.MobileArticleTarget( {
+					overlay.target = new ve.init.mw.MobileFrontendArticleTarget( overlay, {
 						$element: overlay.$el,
 						// || undefined so that scrolling is not triggered for the lead (0) section
 						// (which has no header to scroll to)
@@ -81,27 +80,6 @@
 					} );
 					overlay.target.activating = true;
 					overlay.target.load();
-					overlay.target.connect( overlay, {
-						back: 'onBack',
-						editSource: 'onEditSource',
-						saveBegin: 'onStageChanges',
-						save: 'onSaveComplete',
-						saveAsyncBegin: 'showSpinner',
-						saveAsyncComplete: 'clearSpinner',
-						saveErrorEmpty: 'onSaveError',
-						// FIXME: Expand on save errors by having a method for each
-						saveErrorSpamBlacklist: 'onSaveError',
-						saveErrorAbuseFilter: 'onSaveError',
-						saveErrorBlocked: 'onSaveError',
-						saveErrorNewUser: 'onSaveError',
-						saveErrorCaptcha: 'onSaveErrorCaptcha',
-						saveErrorUnknown: 'onSaveError',
-						surfaceReady: 'onSurfaceReady',
-						loadError: 'onLoadError',
-						conflictError: 'onConflictError',
-						showChangesError: 'onShowChangesError',
-						serializeError: 'onSerializeError'
-					} );
 				}, function ( e ) {
 					mw.log.warn( 'VisualEditor failed to load: ' + e );
 				} );
@@ -123,25 +101,6 @@
 		},
 
 		/**
-		 * Handle editSource event
-		 */
-		onEditSource: function () {
-			// If changes have been made tell the user they have to save first
-			if ( !this.hasChanged() ) {
-				this.switchToSourceEditor( this.options );
-			} else if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-				this.onStageChanges();
-			}
-		},
-
-		/**
-		 * Handle back event
-		 */
-		onBack: function () {
-			window.history.back();
-		},
-
-		/**
 		 * @inheritdoc
 		 */
 		onClickBack: function () {
@@ -156,54 +115,24 @@
 		switchToEditor: function () {
 			this.showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
-			this.docToSave = false;
-		},
-		/**
-		 * Disables the VE editor interface in preparation for saving.
-		 * @inheritdoc
-		 */
-		onStageChanges: function () {
-			// need to blur contenteditable to be sure that keyboard is properly closed
-			this.$( '[contenteditable]' ).blur();
-			this.$( '.surface' ).hide();
-			EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
 		},
 		/** @inheritdoc **/
 		onSaveBegin: function () {
-			var
-				self = this,
-				doc = this.target.surface.getModel().getDocument(),
-				summary = this.$( '.save-panel .summary' ).val(),
-				options = {
-					summary: summary
-				};
-
 			EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
 			if ( this.confirmAborted ) {
 				return;
 			}
+
 			this.showHidden( '.saving-header' );
 			this.$( '.surface, .summary-area' ).hide();
-			if ( this.captchaId ) {
-				// Intentional Lcase ve save api properties
-				options.captchaid = this.captchaId;
-				options.captchaword = this.$( '.captcha-word' ).val();
-			}
 
-			// Preload the serialization
-			if ( !this.docToSave ) {
-				this.docToSave = ve.dm.converter.getDomFromModel( doc );
-			}
-			this.target.prepareCacheKey( this.docToSave ).done( function () {
-				self.target.save( self.docToSave, options );
-			} );
+			this.target.startSave();
 		},
 		/**
 		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
 		 * @method
-		 * @param {Object} options to pass to new EditorOverlay
 		 */
-		switchToSourceEditor: function ( options ) {
+		switchToSourceEditor: function () {
 			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the SourceEditor
@@ -215,8 +144,8 @@
 				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 
 				self.clearSpinner();
-				self.applyHeaderOptions( options, false );
-				overlayManager.replaceCurrent( new EditorOverlay( options ) );
+				self.applyHeaderOptions( self.options, false );
+				overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 			} );
 		},
 		/** @inheritdoc **/
@@ -225,77 +154,11 @@
 			this.clearSpinner();
 			this.destroyTarget();
 		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onSurfaceReady: function () {
-			var surface = this.target.getSurface();
-
-			this.clearSpinner();
-
-			if ( this.isNewPage ) {
-				surface.setPlaceholder( mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user ) );
-			}
-
-			this.$( '.surface' )
-				.append( surface.$element.addClass( 'content' ) )
-				.show();
-
-			// we have to do it here because contenteditable elements still do not
-			// exist when postRender is executed
-			// FIXME: Don't call a private method that is outside the class.
-			this._fixIosHeader( '[contenteditable]' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onLoadError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), 've-load-error' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 * @param {jqXHR} jqXHR
-		 * @param {String} status
-		 */
-		onSerializeError: function ( jqXHR, status ) {
-			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onConflictError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ), 've-conflict-error' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onShowChangesError: function () {
-			this.reportError( mw.msg( 'visualeditor-differror' ), 've-show-changes-error' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 */
-		onSaveError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error' ), 've-save-error' );
-		},
-		/**
-		 * Event handler.
-		 * @method
-		 * @param {Object} editApi response from api
-		 */
-		onSaveErrorCaptcha: function ( editApi ) {
-			this.captchaId = editApi.captcha.id;
-			this.handleCaptcha( editApi.captcha );
-		},
 		/** @inheritdoc **/
 		hasChanged: function () {
-			return this.target && this.target.getSurface().getModel().hasBeenModified();
+			return this.target &&
+				this.target.getSurface() &&
+				this.target.getSurface().getModel().hasBeenModified();
 		}
 	} );
 

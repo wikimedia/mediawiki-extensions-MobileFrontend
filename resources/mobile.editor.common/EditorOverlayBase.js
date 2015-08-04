@@ -367,7 +367,7 @@
 		 * implemented by child class.
 		 * @method
 		 */
-		hasChanged: $.noop(),
+		hasChanged: $.noop,
 		/**
 		 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 		 * @method
