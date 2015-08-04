@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_70648f11",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-04T14:02:21Z",
+      "side": 1,
+      "message": "I\u0027m not too familar with the coding conventions of VE, so I want to ask :) Do you add a comment for a section, if this section is empty (no static properties)?",
+      "revId": "cfa1d478ed119dda74320aa7a38c6a329a8d3a5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
