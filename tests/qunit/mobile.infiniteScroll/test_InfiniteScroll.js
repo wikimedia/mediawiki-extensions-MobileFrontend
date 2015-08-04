@@ -24,7 +24,7 @@
 			'Scrolling has been bound and is handler is called on scroll' );
 	} );
 
-	QUnit.asyncTest( 'emits load event', 1, function ( assert ) {
+	QUnit.skip( 'emits load event', 1, function ( assert ) {
 		var is = new InfiniteScroll();
 		is.setElement( $( 'body' ) );
 
