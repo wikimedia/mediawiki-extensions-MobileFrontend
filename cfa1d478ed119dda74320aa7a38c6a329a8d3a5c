@@ -16,6 +16,24 @@
       "revId": "cfa1d478ed119dda74320aa7a38c6a329a8d3a5c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_83845010",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-08-04T20:36:30Z",
+      "side": 1,
+      "message": "I think it\u0027ll get one in the next commit, but yeah, normally we wouldn\u0027t have an empty one like this.",
+      "parentUuid": "8ec42329_70648f11",
+      "revId": "cfa1d478ed119dda74320aa7a38c6a329a8d3a5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
