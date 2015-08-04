@@ -1,28 +1,24 @@
 {
   "preset": "wikimedia",
 
+  "requireDotNotation": null,
+  "requireVarDeclFirst": null,
+  "requireSpacesInsideBrackets": null,
   "disallowDanglingUnderscores": null,
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
-  "validateJSDoc": {
-    "checkParamNames": true,
-    "requireParamTypes": true,
-    "checkRedundantParams": true
-  },
   "excludeFiles": [
     "libs/**",
     "node_modules/**"
   ],
-  "additionalRules": [
-    "node_modules/jscs-jsdoc/lib/rules/*.js"
-  ],
   "jsDoc": {
     "checkParamNames": true,
-		"checkRedundantParams": true,
+    "checkRedundantParams": true,
     "enforceExistence": true,
     "checkReturnTypes": true,
     "checkRedundantReturns": true,
     "requireReturnTypes": true,
     "checkTypes": "capitalizedNativeCase",
+    "@fixme": "https://github.com/jscs-dev/jscs-jsdoc/pull/138",
     "checkParamExistence": true
   }
 }
