@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_445af953",
+        "filename": "tests/qunit/mobile.settings/test_settings.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-04T00:14:25Z",
+      "side": 1,
+      "message": "What happens if cookies are disabled on the browser being tested on..?",
+      "revId": "8cd4455e11c2caedf51c71b54c5c3b5185d91ec6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_243b2de9",
+        "filename": "tests/qunit/mobile.settings/test_settings.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-04T00:14:25Z",
+      "side": 1,
+      "message": "What if localStorage is not supported on the browser the tests run on..? (rare and edge case I know but I\u0027m curious.. Opera Mini 8 for instance)\n\nI\u0027m not sure what the best practices are for tests that rely on feature detection and my gut says we should be stubbing localStorage.",
+      "revId": "8cd4455e11c2caedf51c71b54c5c3b5185d91ec6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
