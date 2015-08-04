@@ -11,7 +11,8 @@
 			"Surya Prakash.S.A.",
 			"கௌசிக் பிரபு",
 			"மதனாஹரன்",
-			"ElangoRamanujam"
+			"ElangoRamanujam",
+			"Shrikarsan"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "பாதுகாப்புக் குறியீட்டை உள்ளிடவும்",
@@ -44,6 +45,7 @@
 	"mobile-frontend-featured-article": "இன்றைய சிறப்பு உள்ளடக்கம்",
 	"mobile-frontend-footer-contact": "தொடர்புக்கு",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login-action": "பங்களிப்பதற்குப் புகுபதிகை செய்யவும்",
 	"mobile-frontend-home-button": "முகப்பு",
 	"mobile-frontend-images-status": "படங்கள்",
 	"mobile-frontend-language-article-heading": "வேறொரு மொழியில் படிக்கவும்",

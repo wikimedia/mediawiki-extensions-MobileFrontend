@@ -398,6 +398,7 @@
 	"apihelp-mobileview-example-1": "Отримати інформацію про розділ 0 статті [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Отримати інформацію про розділ 0 і розділи з примітками статті [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Отримати інформацію про розділ 1 і наступні та розділи з примітками статті [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Видати проаналізований результат у форматі, що підходить для мобільних пристроїв.",
 	"apihelp-parse-param-noimages": "Вимкнути зображення у мобільному результаті.",
 	"apihelp-parse-param-mainpage": "Застосувати перетворення головної сторінки у мобільному вигляді.",
 	"mobile-frontend-donate-button-label": "Пожертвування",
