@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_2e9f83fb",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-08-04T22:54:23Z",
+      "side": 1,
+      "message": "Note that \"checkParamExistence\" isn\u0027t being acted on as that\u0027s not upstreamed yet; also, some of these could probably do with a review as several are in preset: wikimedia or should be.",
+      "revId": "19a7867b08e7213827304d3f5407872ad2255218",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
