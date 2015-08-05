@@ -31,6 +31,7 @@
 	"mobile-frontend-footer-contact": "Kontaktatu",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} zu bezalako pertsonek egiten dute.",
+	"mobile-frontend-generic-login-action": "Saioa hasi ekarpenak egiteko.",
 	"mobile-frontend-home-button": "Azala",
 	"mobile-frontend-images-status": "Irudiak",
 	"mobile-frontend-language-article-heading": "Irakurri beste hizkuntzetan",
