@@ -16,7 +16,6 @@
 		"File",
 		"mw.user",
 		"mw.Api",
-		"CodeMirror",
 		"OO.ui.ToolGroup",
 		"OO.ui.LookupElement",
 		"OO.EventEmitter",

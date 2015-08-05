@@ -1505,21 +1505,6 @@ $wgMobileVEModules = array(
 );
 
 /**
- * Mobile CodeMirror related modules
- */
-$wgMobileCodeMirrorModules = array(
-	'mobile.editor.overlay.codemirror' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.editor.overlay',
-			'ext.CodeMirror.lib',
-		),
-		'scripts' => array(
-			'resources/mobile.editor.overlay.codemirror/EditorOverlayCodeMirror.js',
-		),
-	),
-);
-
-/**
  * Special page modules
  * @todo FIXME: Remove the need for these by making more reusable CSS
  *
