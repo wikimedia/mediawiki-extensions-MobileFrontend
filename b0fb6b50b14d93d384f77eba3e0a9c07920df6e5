@@ -16,6 +16,24 @@
       "revId": "b0fb6b50b14d93d384f77eba3e0a9c07920df6e5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_8be53ea0",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-05T20:59:12Z",
+      "side": 1,
+      "message": "Can you clarify what you mean by \u0027we should not be interacting with the DOM\u0027? How would you suggest we detect if the main menu is in the DOM or not? Thanks.",
+      "parentUuid": "8ec42329_6b5c9282",
+      "revId": "b0fb6b50b14d93d384f77eba3e0a9c07920df6e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
