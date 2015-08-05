@@ -114,14 +114,8 @@
 			}
 		}
 
-		// Setup the issues banner on the page
-		initPageIssues();
-		// Show it in edit preview.
-		M.on( 'edit-preview', function ( overlay ) {
-			initPageIssues( overlay.$el );
-		} );
-
 		return {
+			init: initPageIssues,
 			createBanner: createBanner,
 			_extractMessage: extractMessage
 		};

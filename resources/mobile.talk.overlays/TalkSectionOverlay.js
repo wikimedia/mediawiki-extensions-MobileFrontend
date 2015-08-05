@@ -6,7 +6,6 @@
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		Button = M.require( 'Button' ),
-		pageApi = M.require( 'pageApi' ),
 		TalkSectionOverlay;
 
 	/**
@@ -26,6 +25,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 		 * @cfg {String} defaults.title Title.
 		 * @cfg {Section} defaults.section that is currently being viewed in overlay.
 		 * @cfg {String} defaults.reply Reply heading.
@@ -33,6 +33,7 @@
 		 * automatically signed.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			pageApi: undefined,
 			saveButton: new Button( {
 				block: true,
 				additionalClassNames: 'save-button',
@@ -83,7 +84,7 @@
 		renderFromApi: function ( options ) {
 			var self = this;
 
-			pageApi.getPage( options.title ).done( function ( pageData ) {
+			this.options.pageApi.getPage( options.title ).done( function ( pageData ) {
 				var page = new Page( pageData );
 				options.section = page.getSection( options.id );
 				self.render( options );
@@ -117,7 +118,7 @@
 				} ).done( function () {
 					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 					// invalidate the cache
-					pageApi.invalidatePage( self.options.title );
+					self.options.pageApi.invalidatePage( self.options.title );
 
 					self.renderFromApi( self.options );
 				} ).fail( function ( data, response ) {

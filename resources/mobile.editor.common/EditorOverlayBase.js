@@ -5,7 +5,6 @@
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
-		pageApi = M.require( 'pageApi' ),
 		EditorOverlayBase;
 
 	/**
@@ -43,6 +42,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
 		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes
@@ -67,6 +67,7 @@
 		 * released to inform the user.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			pageApi: undefined,
 			hasToolbar: false,
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -145,7 +146,7 @@
 				self = this;
 
 			// FIXME: use generic method for following 3 lines
-			pageApi.invalidatePage( title );
+			this.options.pageApi.invalidatePage( title );
 
 			if ( this.isNewPage ) {
 				msg = 'mobile-frontend-editor-success-new-page';

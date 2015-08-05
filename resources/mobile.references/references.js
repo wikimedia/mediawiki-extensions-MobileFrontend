@@ -62,10 +62,6 @@
 
 	}
 
-	$( function () {
-		setup();
-	} );
-
 	M.define( 'references', {
 		setup: setup
 	} );

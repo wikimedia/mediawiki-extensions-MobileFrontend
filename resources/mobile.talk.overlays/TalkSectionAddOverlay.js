@@ -2,7 +2,6 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
-		pageApi = M.require( 'pageApi' ),
 		toast = M.require( 'toast' ),
 		Icon = M.require( 'Icon' ),
 		TalkSectionAddOverlay;
@@ -18,6 +17,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 		 * @cfg {String} defaults.cancelMsg Caption for cancel button on edit form.
 		 * @cfg {String} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
 		 * a talk page topic subject.
@@ -101,7 +101,7 @@
 				if ( status === 'ok' ) {
 					// Check if the user was previously on the talk overlay
 					if ( self.title !== mw.config.get( 'wgPageName' ) ) {
-						pageApi.invalidatePage( self.title );
+						self.options.pageApi.invalidatePage( self.title );
 						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
 						M.emit( 'talk-discussion-added' );
 						window.history.back();

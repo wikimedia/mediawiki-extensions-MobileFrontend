@@ -6,6 +6,8 @@
 		loader = M.require( 'loader' ),
 		router = M.require( 'router' ),
 		context = M.require( 'context' ),
+		references = M.require( 'references' ),
+		cleanuptemplates = M.require( 'cleanuptemplates' ),
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'overlayManager' ),
 		page = M.getCurrentPage(),
@@ -103,8 +105,11 @@
 	M.on( 'photo-loaded', initMediaViewer );
 
 	// Setup
-	$( initButton );
-	initMediaViewer();
+	$( function () {
+		initButton();
+		initMediaViewer();
+		references.setup();
+	} );
 
 	// local storage is supported in this case, when ~ means it was dismissed
 	if ( token !== false && token !== '~' && !page.isMainPage() && !page.inNamespace( 'special' ) ) {
@@ -129,6 +134,13 @@
 				.appendTo( M.getCurrentPage().getLeadSectionElement() );
 		}
 	}
+
+	// Setup the issues banner on the page
+	cleanuptemplates.init();
+	// Show it in edit preview.
+	M.on( 'edit-preview', function ( overlay ) {
+		cleanuptemplates.init( overlay.$el );
+	} );
 
 	// let the interested parties know whether the panel is shown
 	mw.track( 'minerva.betaoptin', {

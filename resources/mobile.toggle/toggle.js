@@ -1,9 +1,5 @@
 ( function ( M, $ ) {
-	var page = M.getCurrentPage(),
-		currentPageTitle =  page.title,
-		// FIXME: Clean up when cache clears.
-		$contentContainer = $( '#content #bodyContent, #content_wrapper #content' ),
-		context = M.require( 'context' ),
+	var context = M.require( 'context' ),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
 		escapeHash = M.require( 'util' ).escapeHash,
@@ -22,14 +18,15 @@
 	 * existing page.
 	 *
 	 * @method
+	 * @param {Page} page
 	 * @returns {Object} representing open sections
 	 * @ignore
 	 */
-	function getExpandedSections() {
+	function getExpandedSections( page ) {
 		var expandedSections = $.parseJSON(
 			settings.get( 'expandedSections', false ) || '{}'
 		);
-		expandedSections[currentPageTitle] = expandedSections[currentPageTitle] || {};
+		expandedSections[page.title] = expandedSections[page.title] || {};
 		return expandedSections;
 	}
 
@@ -49,18 +46,19 @@
 	 * If the heading is collapsed, remove it from localStorage.
 	 *
 	 * @param {jQuery.Object} $heading - A heading belonging to a section
+	 * @param {Page} page
 	 * @ignore
 	 */
-	function storeSectionToggleState( $heading ) {
+	function storeSectionToggleState( $heading, page ) {
 		var headline = $heading.find( 'span' ).attr( 'id' ),
 			isSectionOpen = $heading.hasClass( 'open-block' ),
-			expandedSections = getExpandedSections();
+			expandedSections = getExpandedSections( page );
 
 		if ( headline ) {
 			if ( isSectionOpen ) {
-				expandedSections[currentPageTitle][headline] = ( new Date() ).getTime();
+				expandedSections[page.title][headline] = ( new Date() ).getTime();
 			} else {
-				delete expandedSections[currentPageTitle][headline];
+				delete expandedSections[page.title][headline];
 			}
 
 			saveExpandedSections( expandedSections );
@@ -70,11 +68,12 @@
 	/**
 	 * Expand sections that were previously expanded before leaving this page.
 	 * @param {jQuery.Object} $container
+	 * @param {Page} page
 	 * @ignore
 	 */
-	function expandStoredSections( $container ) {
+	function expandStoredSections( $container, page ) {
 		var $sectionHeading, $headline,
-			expandedSections = getExpandedSections(),
+			expandedSections = getExpandedSections( page ),
 			$headlines = $container.find( '.section-heading span' );
 
 		$headlines.each( function () {
@@ -82,10 +81,10 @@
 			$sectionHeading = $headline.parents( '.section-heading' );
 			// toggle only if the section is not already expanded
 			if (
-				expandedSections[currentPageTitle][$headline.attr( 'id' )] &&
+				expandedSections[page.title][$headline.attr( 'id' )] &&
 				!$sectionHeading.hasClass( 'open-block' )
 			) {
-				toggle( $sectionHeading );
+				toggle( $sectionHeading, page );
 			}
 		} );
 	}
@@ -93,11 +92,12 @@
 	/**
 	 * Clean obsolete (saved more than a day ago) expanded sections from
 	 * localStorage.
+	 * @param {Page} page
 	 * @ignore
 	 */
-	function cleanObsoleteStoredSections() {
+	function cleanObsoleteStoredSections( page ) {
 		var now = ( new Date() ).getTime(),
-			expandedSections = getExpandedSections(),
+			expandedSections = getExpandedSections( page ),
 			// the number of days between now and the time a setting was saved
 			daysDifference;
 		$.each( expandedSections, function ( page, sections ) {
@@ -120,6 +120,7 @@
 	 */
 	function toggle( $heading ) {
 		var isCollapsed = $heading.is( '.open-block' ),
+			page = $heading.data( 'page' ),
 			options, indicator;
 
 		$heading.toggleClass( 'open-block' );
@@ -137,7 +138,7 @@
 			} );
 
 		if ( !browser.isWideScreen() ) {
-			storeSectionToggleState( $heading );
+			storeSectionToggleState( $heading, page );
 		}
 	}
 
@@ -195,11 +196,10 @@
 	 * @param {String} prefix a prefix to use for the id.
 	 * @ignore
 	 */
-	function enable( $container, prefix ) {
+	function enable( $container, prefix, page ) {
 		var tagName, expandSections, indicator,
 			$firstHeading,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
-		$container = $container || $contentContainer;
 
 		// Also allow .section-heading if some extensions like Wikibase
 		// want to toggle other headlines than direct descendants of $container.
@@ -221,6 +221,7 @@
 			if ( $heading.next().is( 'div' ) ) {
 				$heading
 					.addClass( 'collapsible-heading ' )
+					.data( 'page', page )
 					.attr( {
 						tabindex: 0,
 						'aria-haspopup': 'true',
@@ -287,7 +288,7 @@
 		checkInternalRedirectAndHash();
 		checkHash();
 		// Restricted to links created by editors and thus outside our control
-		$contentContainer.find( 'a' ).on( 'click', function () {
+		$container.find( 'a' ).on( 'click', function () {
 			// the link might be an internal link with a hash.
 			// if it is check if we need to reveal any sections.
 			if ( $( this ).attr( 'href' ) !== undefined &&
@@ -298,47 +299,15 @@
 		} );
 
 		if ( !browser.isWideScreen() ) {
-			expandStoredSections( $container );
-			cleanObsoleteStoredSections();
+			expandStoredSections( $container, page );
+			cleanObsoleteStoredSections( page );
 		}
-	}
-
-	/**
-	 * Initialises toggling code.
-	 *
-	 * @method
-	 * @param {jQuery.Object} $container to enable toggling on
-	 * @param {String} prefix a prefix to use for the id.
-	 * @ignore
-	 */
-	function init( $container, prefix ) {
-		// distinguish headings in content from other headings
-		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
-		enable( $container, prefix );
-
-		// FIXME: remove when cache clears
-		$( function () {
-			$container.find( '.open-block > a.edit-page, .in-block > a.edit-page' ).each( function ( i, el ) {
-				$( el ).wrap( '<span></span>' );
-			} );
-		} );
-	}
-
-	// avoid this running on Watchlist
-	if (
-		!page.inNamespace( 'special' ) &&
-		!mw.config.get( 'wgIsMainPage' ) &&
-		mw.config.get( 'wgAction' ) === 'view'
-	) {
-		init( $contentContainer, 'content-' );
 	}
 
 	M.define( 'toggle', {
 		reveal: reveal,
 		toggle: toggle,
 		enable: enable,
-		// for tests
-		_currentPageTitle: currentPageTitle,
 		_getExpandedSections: getExpandedSections,
 		_expandStoredSections: expandStoredSections,
 		_cleanObsoleteStoredSections: cleanObsoleteStoredSections

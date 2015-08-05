@@ -2,6 +2,8 @@
 
 	var TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		api = M.require( 'api' ),
+		PageApi = M.require( 'PageApi' ),
+		pageApi = new PageApi(),
 		user = M.require( 'user' ),
 		renderFromApiSpy;
 
@@ -48,6 +50,7 @@
 	QUnit.test( 'Check api request on save', 1, function ( assert ) {
 		var spy = this.sandbox.stub( api, 'postWithToken' ).returns( $.Deferred().resolve() ),
 		overlay = new TalkSectionOverlay( {
+			pageApi: pageApi,
 			title: 'Talk:Test',
 			id: 1,
 			section: 'Test'

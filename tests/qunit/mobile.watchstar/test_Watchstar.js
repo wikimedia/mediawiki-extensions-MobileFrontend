@@ -30,7 +30,8 @@
 		} );
 		$el.trigger( 'click' );
 
-		// Note due to the fact isVisible uses a timeout we cannot easily test this
+		// position-fixed class may not have loaded and without it the toast is not visible so use
+		// a spy rather than directly testing toast element visibility
 		assert.ok( this.spy.called, 'We checked if the drawer was visible before displaying it' );
 	} );
 
@@ -42,6 +43,7 @@
 
 			// FIXME: Should Schema.log be stubbed by default?
 			this.stub( SchemaMobileWebWatching.prototype, 'log' ).returns( null );
+			this.toastSpy = this.sandbox.spy( toast, 'show' );
 		},
 		teardown: function () {
 			// Hide any existing toasts
@@ -66,7 +68,7 @@
 		} ), 'The watch happened' );
 		assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
 			true, 'After successful watch has watched class' );
-		assert.strictEqual( $( '.toast' ).is( ':visible' ), true, 'A toast is shown' );
+		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
 	} );
 
 	QUnit.test( 'Logged in user unwatches article', 2, function ( assert ) {
@@ -85,7 +87,7 @@
 			unwatch: true,
 			pageids: 42
 		} ), 'The watch happened' );
-		assert.strictEqual( $( '.toast' ).is( ':visible' ), true, 'A toast is shown' );
+		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

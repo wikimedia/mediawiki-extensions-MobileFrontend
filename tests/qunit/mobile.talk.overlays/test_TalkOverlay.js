@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var pageApi = M.require( 'pageApi' ),
+	var PageApi = M.require( 'PageApi' ),
+		pageApi = new PageApi(),
 		TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
@@ -30,6 +31,7 @@
 
 	QUnit.test( '#TalkOverlay (new page; anonymous)', 4, function ( assert ) {
 		var options = {
+				pageApi: pageApi,
 				title: 'Talk:No exist'
 			},
 			overlay = new TalkOverlay( options ),
@@ -52,6 +54,7 @@
 
 		mw.config.set( 'wgUserName', 'FlorianSW' );
 		overlay = new TalkOverlay( {
+			pageApi: pageApi,
 			title: 'Talk:No exist'
 		} );
 
@@ -63,6 +66,7 @@
 
 	QUnit.test( '#TalkOverlay (existing page lists section headings)', 4, function ( assert ) {
 		var overlay = new TalkOverlay( {
+			pageApi: pageApi,
 			title: 'Talk:Topic'
 		} );
 

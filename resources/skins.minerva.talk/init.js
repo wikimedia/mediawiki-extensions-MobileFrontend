@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var loader = M.require( 'loader' ),
+		pageApi = M.require( 'pageApi' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		user = M.require( 'user' ),
 		Button = M.require( 'Button' ),
@@ -12,6 +13,7 @@
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
+				pageApi: pageApi,
 				title: title,
 				licenseMsg: skin.getLicenseMsg()
 			};

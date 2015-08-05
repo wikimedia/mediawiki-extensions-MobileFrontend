@@ -17,7 +17,7 @@
 
 	skin = new Skin( {
 		el: 'body',
-		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
+		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'skins.minerva.tablet.scripts' ] : [],
 		page: getCurrentPage(),
 		mainMenu: mainMenu
 	} );

@@ -1015,12 +1015,12 @@ class SkinMinerva extends SkinTemplate {
 
 		if ( $user->isLoggedIn() ) {
 			if ( $this->useEcho() ) {
-				$modules[] = 'mobile.notifications';
+				$modules[] = 'skins.minerva.notifications';
 			}
 
 			if ( $this->isCurrentPageEditable() ) {
 				if ( $action === 'signup-edit' || $campaign === 'leftNavSignup' ) {
-					$modules[] = 'mobile.newusers';
+					$modules[] = 'skins.minerva.newusers';
 				}
 			}
 		}
@@ -1030,7 +1030,7 @@ class SkinMinerva extends SkinTemplate {
 			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
 			$this->isWikiTextTalkPage()
 		) {
-			$modules[] = 'mobile.talk';
+			$modules[] = 'skins.minerva.talk';
 		}
 
 		return $modules;
@@ -1048,7 +1048,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['legacy'] = array();
 
 		// Add minerva specific modules
-		$modules['head'] = 'mobile.head';
+		$modules['head'] = 'skins.minerva.scripts.top';
 		// Define all the modules that should load on the mobile site and their dependencies.
 		// Do not add mobules here.
 		$modules['stable'] = 'skins.minerva.scripts';
@@ -1057,23 +1057,22 @@ class SkinMinerva extends SkinTemplate {
 		$modules['watch'] = array();
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			// Explicitly add the mobile watchstar code.
-			$modules['watch'] = array( 'mobile.watchstar.init' );
+			$modules['watch'] = array( 'skins.minerva.watchstar' );
 		}
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
-			$modules['editor'] = array( 'mobile.editor' );
+			$modules['editor'] = array( 'skins.minerva.editor' );
 		}
 
 		// add the browse module if the page has a tag assigned to it
 		if ( $this->getBrowseTags( $this->getTitle() ) ) {
-			$modules['browse'] = array( 'mobile.browse' );
+			$modules['browse'] = array( 'skins.minerva.browse' );
 		}
 
 		$modules['context'] = $this->getContextSpecificModules();
 
 		if ( $this->isMobileMode ) {
-			$modules['toggling'] = array( 'mobile.toggling' );
-			$modules['eventlogging'] = array( 'mobile.loggingSchemas' );
+			$modules['toggling'] = array( 'skins.minerva.toggling' );
 		}
 		$modules['site'] = 'mobile.site';
 

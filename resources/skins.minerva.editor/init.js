@@ -17,6 +17,7 @@
 			name: 'edit-enabled'
 		} ),
 		currentPage = M.getCurrentPage(),
+		pageApi = M.require( 'pageApi' ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		context = M.require( 'context' ),
@@ -130,6 +131,7 @@
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
+					pageApi: pageApi,
 					licenseMsg: skin.getLicenseMsg(),
 					title: page.title,
 					isAnon: user.isAnon(),

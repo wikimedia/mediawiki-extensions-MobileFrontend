@@ -102,9 +102,10 @@
 
 			this.page = options.page;
 			this.name = options.name;
-			this.tabletModules = options.tabletModules;
 			this.mainMenu = options.mainMenu;
 			View.prototype.initialize.apply( this, arguments );
+			// Must be run after merging with defaults as must be defined.
+			this.tabletModules = options.tabletModules;
 
 			/**
 			 * Tests current window size and if suitable loads styles and scripts specific for larger devices

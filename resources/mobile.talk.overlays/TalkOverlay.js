@@ -3,7 +3,6 @@
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
 		Anchor = M.require( 'Anchor' ),
-		pageApi = M.require( 'pageApi' ),
 		user = M.require( 'user' ),
 		/**
 		 * Overlay for talk page
@@ -20,6 +19,7 @@
 			/**
 			 * @inheritdoc
 			 * @cfg {Object} defaults Default options hash.
+			 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 			 * @cfg {Array} defaults.headings A list of {Section} objects to render heading links
 			 * for. If not set ajax request will be performed.
 			 * @cfg {String} defaults.heading Heading for talk overlay.
@@ -95,7 +95,7 @@
 				this.$( '.topic-title-list' ).empty();
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
-				pageApi.getPage( options.title ).fail( function ( resp ) {
+				this.options.pageApi.getPage( options.title ).fail( function ( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {

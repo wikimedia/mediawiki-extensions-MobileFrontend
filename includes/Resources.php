@@ -217,6 +217,12 @@ $wgMinervaStyleModules = array(
 	),
 );
 
+/*
+Any modules defined here should come without side effects.
+A module prefixed with 'mobile.' should be reusable in any context e.g.
+any skin. If you are writing an initialisation script please define it with
+the skin.minerva. prefix along with all the others below.
+*/
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.modules' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
@@ -249,17 +255,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.context/context.js',
 		),
 	),
-	'mobile.browse' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.loggingSchemas'
-		),
-		'scripts' => array(
-			'resources/mobile.browse/init.js',
-		),
-		'styles' => array(
-			'resources/mobile.browse/tags.less',
-		)
-	),
 	'mobile.browser' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.view',
@@ -271,6 +266,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.mainMenu' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.view',
+			'mobile.browser',
 		),
 		'position' => 'bottom',
 		'styles' => array(
@@ -373,6 +369,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.infiniteScroll',
 			'mobile.pagelist.scripts',
+			'mobile.modifiedBar',
 		),
 		'scripts' => array(
 			'resources/mobile.watchlist/WatchListApi.js',
@@ -388,7 +385,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'resources/mobile.toc/TableOfContents.js',
-			'resources/mobile.toc/init.js',
 		),
 		'styles' => array(
 			'resources/mobile.toc/toc.less',
@@ -413,7 +409,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.settings' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.head',
 			'jquery.cookie',
 			'mediawiki.storage',
 		),
@@ -425,7 +420,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	// FIXME: Split this module into different features.
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.head',
+			'mobile.context',
+			'mobile.browser',
+			'mobile.oo',
 			'mobile.user',
 			'mediawiki.api',
 			'mobile.settings',
@@ -467,7 +464,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.startup/Skin.js',
 			'resources/mobile.startup/Schema.js',
 			'resources/mobile.startup/util.js',
-			'resources/mobile.startup/init.js',
 		),
 		'position' => 'bottom',
 	),
@@ -486,43 +482,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.user',
 			'mediawiki.storage',
 			// Ensure M.define exists
-			'mobile.head',
+			'mobile.modules',
 		),
 		'scripts' => array(
 			'resources/mobile.user/user.js',
 		),
 	),
 
-	'mobile.editor' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+	// FIXME: Remove when cache clears
+	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.startup',
-			'mobile.drawers',
-			'mediawiki.ui.input',
-			'mobile.settings',
-			'mobile.toast',
-			// Let's ensure toggle styles have loaded before adding edit section links
-			'mobile.toggling',
-			// Route needs moduleLoader
-			'mobile.overlays',
-			'mediawiki.jqueryMsg',
+			'skins.minerva.editor',
 		),
-		'messages' => array(
-			// editor.js
-			'mobile-frontend-editor-disabled',
-			'mobile-frontend-editor-unavailable',
-			'mobile-frontend-editor-uploadenable',
-			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
-			'mobile-frontend-editor-cta',
-			'mobile-frontend-editor-anon',
-			'mobile-frontend-editor-undo-unsupported',
-			// edit link
-			'mobile-frontend-editor-edit',
-			'mobile-frontend-editor-redlink-create',
-			'mobile-frontend-editor-redlink-leave',
-			'mobile-frontend-editor-redlink-explain' => array( 'parse' ),
+	),
+	// FIXME: Remove when cache clears
+	'mobile.browse' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.browse',
 		),
-		'scripts' => array(
-			'resources/mobile.editor/init.js',
+	),
+	// FIXME: Remove when cache clears
+	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.toggling',
 		),
 	),
 
@@ -688,26 +670,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		)
 	),
 
-	'mobile.talk' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-		),
-		'styles' => array(
-			'resources/mobile.talk/talk.less',
-		),
-		'scripts' => array(
-			'resources/mobile.talk/init.js',
-		),
-		'messages' => array(
-			'mobile-frontend-talk-overlay-header',
-			'mobile-frontend-talk-add-overlay-submit',
-			'mobile-frontend-editor-licensing',
-			'mobile-frontend-editor-licensing-with-terms',
-			// FIXME: Remove after cache is cleared
-			'talk',
-		),
-	),
-
 	'mobile.search' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.pagelist.scripts',
@@ -720,7 +682,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.search/SearchOverlay.js',
 			'resources/mobile.search/MobileWebSearchLogger.js',
-			'resources/mobile.search/init.js',
 		),
 		'templates' => array(
 			'SearchOverlay.hogan' => 'resources/mobile.search/SearchOverlay.hogan',
@@ -769,7 +730,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.talk.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.talk',
 			'mediawiki.ui.anchor',
 			'mobile.editor.common',
 		),
@@ -876,16 +836,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.categories' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'mobile.loggingSchemas',
-		),
-		'scripts' => array(
-			'resources/mobile.categories/init.js',
-		),
-	),
-
 	'mobile.categories.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.Title',
@@ -988,22 +938,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// This module remembers that desktop site is your preference for viewing on a mobile phone
-	'mobile.redirect' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.toast',
-			'mobile.settings',
-		),
-		'scripts' => array(
-			'resources/mobile.redirect/init.js',
-		),
-		'messages' => array(
-			// mf-stop-mobile-redirect.js
-			'mobile-frontend-cookies-required',
-		),
-	),
-
 	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
@@ -1020,20 +954,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'resources/mobile.references/ReferencesDrawer.js',
-			'resources/mobile.references/init.js',
+			'resources/mobile.references/references.js',
 		),
 	),
 
-	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
+	'mobile.toggle' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.startup',
 			'mobile.settings',
+			// uses util.js
+			'mobile.startup',
 		),
 		'styles' => array(
-			'resources/mobile.toggling/toggle.less',
+			'resources/mobile.toggle/toggle.less',
 		),
 		'scripts' => array(
-			'resources/mobile.toggling/init.js',
+			'resources/mobile.toggle/toggle.js',
 		),
 	),
 
@@ -1053,23 +988,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'PointerOverlay.hogan' => 'resources/mobile.contentOverlays/PointerOverlay.hogan',
-		),
-	),
-
-	'mobile.newusers' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.editor',
-			'mobile.contentOverlays',
-			'mobile.loggingSchemas',
-		),
-		'scripts' => array(
-			'resources/mobile.newusers/init.js',
-		),
-		'messages' => array(
-			// newbieEditor.js
-			'mobile-frontend-editor-tutorial-summary',
-			'mobile-frontend-editor-tutorial-confirm',
-			'mobile-frontend-editor-tutorial-cancel',
 		),
 	),
 
@@ -1099,21 +1017,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.watchstar.init' => $wgMFResourceFileModuleBoilerplate + array(
+	// FIXME: Remove when cache clears.
+	'mobile.watchstar.init' => array(
 		'dependencies' => array(
-			'mobile.watchstar',
-		),
-		'scripts' => array(
-			'resources/mobile.watchstar.init/init.js',
-		),
-		'messages' => array(
-			'watchthispage',
-			'unwatchthispage',
-			// mf-watchstar.js
-			'mobile-frontend-watchlist-add',
-			'mobile-frontend-watchlist-removed',
-			'mobile-frontend-watchlist-cta',
-			'mobile-frontend-watchlist-please-wait',
+			'skins.minerva.watchstar',
 		),
 	),
 
@@ -1163,7 +1070,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'resources/mobile.issues/CleanupOverlay.js',
-			'resources/mobile.issues/init.js',
+			'resources/mobile.issues/cleanuptemplates.js',
 		),
 		'messages' => array(
 			// issues.js
@@ -1284,17 +1191,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.fontchanger.init' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.settings',
-		),
-		'scripts' => array(
-			'resources/mobile.fontchanger.init/init.js',
-		),
-		'position' => 'top',
-	),
-
 	'mobile.fontchanger' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1354,14 +1250,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
  * Extension:Echo related modules
  */
 $wgMobileEchoModules = array(
-	'mobile.notifications' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.notifications' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+			'skins.minerva.scripts',
 			'mediawiki.ui.anchor',
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'resources/mobile.notifications/init.js',
+			'resources/skins.minerva.notifications/init.js',
 		),
 	),
 
@@ -1648,9 +1545,14 @@ $wgMinervaSpecialPageModules = array(
 // These modules are the gateways to all other modules and will ensure the other modules get loaded
 // on the page.
 $wgMinervaBootstrapModules = array(
-	// Important: This module is loaded on both mobile and desktop skin
-	// This JavaScript is loaded at the top of the page so be cautious what you put in it.
+	//FIXME: Remove when cache has cleared. Use skins.minerva.head instead
 	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.scripts.top',
+		),
+	),
+
+	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.modifiedBar',
 			'mobile.mainMenu',
@@ -1664,7 +1566,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.context',
 		),
 		'scripts' => array(
-			'resources/mobile.head/init.js',
+			'resources/skins.minerva.scripts.top/init.js',
 		),
 		'messages' => array(
 			// lastEdited.js
@@ -1682,37 +1584,169 @@ $wgMinervaBootstrapModules = array(
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'skins.minerva.scripts.top',
 			'mobile.startup',
+			'mobile.mainMenu',
 			'mobile.loggingSchemas',
 			'skins.minerva.icons.images.js',
-			// Feature modules that should be loaded in stable.
-			// These modules should only setup routes/events or
-			// load code under certain conditions.
 			'mobile.issues',
 			'mobile.search',
 			'mobile.references',
-			'mobile.redirect',
 			'mobile.betaoptin',
+			'mobile.toast',
+			'mobile.settings',
 		),
 		'scripts' => array(
+			// FIXME: Merge preInit and init files.
+			'resources/skins.minerva.scripts/preInit.js',
 			'resources/skins.minerva.scripts/init.js',
 			'resources/skins.minerva.scripts/initLogging.js',
+			'resources/skins.minerva.scripts/mobileRedirect.js',
+			'resources/skins.minerva.scripts/search.js',
+		),
+		'messages' => array(
+			// mf-stop-mobile-redirect.js
+			'mobile-frontend-cookies-required',
 		),
 	),
+
+	'skins.minerva.browse' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.loggingSchemas'
+		),
+		'scripts' => array(
+			'resources/mobile.browse/init.js',
+		),
+		'styles' => array(
+			'resources/mobile.browse/tags.less',
+		)
+	),
+
+	'skins.minerva.newusers' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.editor',
+			'mobile.contentOverlays',
+			'mobile.loggingSchemas',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.newusers/init.js',
+		),
+		'messages' => array(
+			// newbieEditor.js
+			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-confirm',
+			'mobile-frontend-editor-tutorial-cancel',
+		),
+	),
+
+	'skins.minerva.editor' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.scripts',
+			'mobile.drawers',
+			'mediawiki.ui.input',
+			'mobile.settings',
+			'mobile.toast',
+			// Let's ensure toggle styles have loaded before adding edit section links
+			'skins.minerva.toggling',
+			// Route needs moduleLoader
+			'mobile.overlays',
+			'mediawiki.jqueryMsg',
+		),
+		'messages' => array(
+			// editor.js
+			'mobile-frontend-editor-disabled',
+			'mobile-frontend-editor-unavailable',
+			'mobile-frontend-editor-uploadenable',
+			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
+			'mobile-frontend-editor-cta',
+			'mobile-frontend-editor-anon',
+			'mobile-frontend-editor-undo-unsupported',
+			// edit link
+			'mobile-frontend-editor-edit',
+			'mobile-frontend-editor-redlink-create',
+			'mobile-frontend-editor-redlink-leave',
+			'mobile-frontend-editor-redlink-explain' => array( 'parse' ),
+		),
+		'scripts' => array(
+			'resources/skins.minerva.editor/init.js',
+		),
+	),
+
+	'skins.minerva.categories' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+			'mobile.loggingSchemas',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.categories/init.js',
+		),
+	),
+
+	'skins.minerva.talk' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.scripts',
+			'mobile.overlays',
+		),
+		'styles' => array(
+			'resources/skins.minerva.talk/talk.less',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.talk/init.js',
+		),
+		'messages' => array(
+			'mobile-frontend-talk-overlay-header',
+			'mobile-frontend-talk-add-overlay-submit',
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-editor-licensing-with-terms',
+			// FIXME: Remove after cache is cleared
+			'talk',
+		),
+	),
+
+	'skins.minerva.toggling' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.toggle',
+			'skins.minerva.scripts',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.toggling/init.js',
+		),
+	),
+
+	'skins.minerva.watchstar' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.watchstar',
+			'skins.minerva.scripts',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.watchstar/init.js',
+		),
+		'messages' => array(
+			'watchthispage',
+			'unwatchthispage',
+			// mf-watchstar.js
+			'mobile-frontend-watchlist-add',
+			'mobile-frontend-watchlist-removed',
+			'mobile-frontend-watchlist-cta',
+			'mobile-frontend-watchlist-please-wait',
+		),
+	),
+
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.beta.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.scripts',
+			'mobile.settings',
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
 			'mobile.bannerImage',
 			'mobile.search.beta',
-			'mobile.fontchanger.init',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.beta.scripts/bannerImage.js',
 			'resources/skins.minerva.beta.scripts/commonsCategory.js',
+			'resources/skins.minerva.beta.scripts/fontchanger.js',
 		),
 		'messages' => array(
 			'mobile-frontend-commons-category-view',
@@ -1725,10 +1759,19 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(),
 	),
-	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			// Feature modules that should be loaded on tablets should be listed below here.
 			'mobile.toc',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.tablet.scripts/toc.js',
+		),
+	),
+	// Remove when cache clears
+	'tablet.scripts' => array(
+		'dependencies' => array(
+			'skins.minerva.tablet.scripts',
 		),
 	),
 );

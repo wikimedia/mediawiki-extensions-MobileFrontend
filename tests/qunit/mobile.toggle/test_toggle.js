@@ -3,6 +3,7 @@
 	var sectionHtml = mw.template.get( 'tests.mobile.templates', 'section.hogan' ).render(),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
+		page = { title: 'Toggle test' },
 		toggle = M.require( 'toggle' );
 
 	/**
@@ -16,7 +17,7 @@
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.$section0 = this.$container.find( 'h2' ).eq( 0 );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
-			toggle.enable( this.$container );
+			toggle.enable( this.$container, '', page );
 			toggle.toggle( this.$section0 );
 		},
 		teardown: function () {
@@ -99,7 +100,7 @@
 		setup: function () {
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( true );
-			toggle.enable( this.$container );
+			toggle.enable( this.$container, '', page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
@@ -123,7 +124,7 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
 			settings.save( 'expandSections', 'true', true );
 			this.$container = $( '<div>' ).html( sectionHtml );
-			toggle.enable( this.$container );
+			toggle.enable( this.$container, '', page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
@@ -147,7 +148,7 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
-			toggle.enable( this.$container );
+			toggle.enable( this.$container, '', page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
@@ -189,11 +190,11 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			this.$container = $( '<div>' ).html( sectionHtml );
-			toggle.enable( this.$container );
+			toggle.enable( this.$container, '', page );
 			this.$section = this.$container.find( 'h2' );
 			this.headline = this.$section.find( 'span' ).attr( 'id' );
-			this.pageTitle = toggle._currentPageTitle;
-			this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+			this.pageTitle = page.title;
+			this.expandedSections = toggle._getExpandedSections( page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
@@ -209,14 +210,14 @@
 		);
 
 		toggle.toggle( this.$section );
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',
 			'the just toggled section state has been saved'
 		);
 
 		toggle.toggle( this.$section );
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( this.expandedSections[ this.pageTitle ][ this.headline ],
 			undefined,
 			'the just toggled section state has been removed'
@@ -228,14 +229,14 @@
 		settings.save( 'expandedSections',
 			JSON.stringify( this.expandedSections )
 		);
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',
 			'manually created section state has been saved correctly'
 		);
 
-		toggle._cleanObsoleteStoredSections();
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		toggle._cleanObsoleteStoredSections( page );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( this.expandedSections[ this.pageTitle ][ this.headline ],
 			undefined,
 			'section, whose store time is manually changed to an older date,' +
@@ -244,7 +245,7 @@
 	} );
 
 	QUnit.test( 'Expanding already expanded section does not toggle it.', 5, function ( assert ) {
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( $.isEmptyObject( this.expandedSections[ this.pageTitle ] ),
 			true,
 			'no expanded sections are stored in localStorage yet'
@@ -265,13 +266,13 @@
 			'revealed section has open-block class'
 		);
 
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',
 			'manually revealed section state has been correctly saved in localStorage'
 		);
 
-		toggle._expandStoredSections( this.$container );
+		toggle._expandStoredSections( this.$container, page );
 
 		assert.strictEqual(
 			this.$section.hasClass( 'open-block' ),
@@ -289,8 +290,8 @@
 			this.$container.find( 'h2' ).addClass( 'section-heading' );
 			this.$section = this.$container.find( 'h2' ).eq( 0 );
 			this.headline = 'First_Section';
-			this.pageTitle = toggle._currentPageTitle;
-			this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+			this.pageTitle = page.title;
+			this.expandedSections = toggle._getExpandedSections( page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
@@ -310,15 +311,15 @@
 		// save a toggle state manually
 		this.expandedSections[ this.pageTitle ][ this.headline ] = ( new Date() ).getTime();
 		settings.save( 'expandedSections', JSON.stringify( this.expandedSections ), false );
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',
 			'manually created section state has been saved correctly'
 		);
 
-		toggle.enable( this.$container );
+		toggle.enable( this.$container, '', page );
 
-		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+		this.expandedSections = toggle._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',
 			'manually created section state is still active after toggle.init()'

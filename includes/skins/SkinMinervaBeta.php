@@ -66,7 +66,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	public function getContextSpecificModules() {
 		$modules = parent::getContextSpecificModules();
 		if ( $this->getCategoryLinks( false ) ) {
-			$modules[] = 'mobile.categories';
+			$modules[] = 'skins.minerva.categories';
 		}
 
 		return $modules;
