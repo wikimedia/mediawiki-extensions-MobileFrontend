@@ -1,12 +1,17 @@
 ( function ( M, $ ) {
-	var Skin = M.require( 'Skin' );
+	var Page = M.require( 'Page' ),
+		Skin = M.require( 'Skin' );
 
 	QUnit.module( 'MobileFrontend Skin.js', {
 		setup: function () {
+			// Skin will request tablet modules - avoid this
+			this.sandbox.stub( mw.loader, 'using' ).returns( $.Deferred().resolve() );
 			this.$el = $( '<div>' );
 			this.skin = new Skin( {
 				el: this.$el,
-				page: M.getCurrentPage()
+				page: new Page( {
+					title: 'Foo'
+				} )
 			} );
 		}
 	} );
