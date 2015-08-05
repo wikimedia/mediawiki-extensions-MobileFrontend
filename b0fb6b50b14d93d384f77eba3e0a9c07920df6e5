@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6b5c9282",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-05T20:55:43Z",
+      "side": 1,
+      "message": "We should not be interacting with the DOM.\nProvided code is loaded after mobile.head M.define( \u0027mainMenu\u0027, mainMenu ); has run and the element can be accessed via M.define( \u0027mainMenu\u0027, mainMenu ).$el\n\nLet\u0027s not add global events unless there is no alternative.",
+      "revId": "b0fb6b50b14d93d384f77eba3e0a9c07920df6e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
