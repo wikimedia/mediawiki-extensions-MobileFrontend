@@ -1,3 +1,5 @@
+// FIXME: Various tests are skipped as they incorrectly stub inside the test.
+// These stubs should be moved into setup so they do not have side effects on other tests.
 ( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api;
 
@@ -17,7 +19,7 @@
 		assert.ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 	} );
 
-	QUnit.test( 'progress event', 1, function ( assert ) {
+	QUnit.skip( 'progress event', 1, function ( assert ) {
 		var spy = this.sandbox.spy(),
 			api = new Api(),
 			request;
