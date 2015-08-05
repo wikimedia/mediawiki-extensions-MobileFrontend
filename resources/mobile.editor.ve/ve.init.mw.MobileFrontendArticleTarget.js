@@ -25,7 +25,6 @@ ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleT
 
 	this.overlay = overlay;
 	this.$overlaySurface = overlay.$el.find( '.surface' );
-	this.captchaId = null;
 
 	// Initialization
 	this.$element.addClass( 've-init-mw-mobileFrontendArticleTarget' );
@@ -77,57 +76,12 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceReady = function () {
 /*
  * FIXME: @inheritdoc once this file is in the right repo
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.getSaveOptions = function () {
-	var options = {
-			summary: this.overlay.$( '.save-panel .summary' ).val()
-		};
-
-	if ( this.captchaId ) {
-		// Intentional Lcase ve save api properties
-		options.captchaid = this.captchaId;
-		options.captchaword = this.$( '.captcha-word' ).val();
-	}
-
-	return options;
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- */
-ve.init.mw.MobileFrontendArticleTarget.prototype.saveFail = function () {
-	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveFail.apply( this, arguments );
-
-	this.overlay.clearSpinner();
-	this.overlay.switchToEditor();
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- */
-ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveError = function ( msg ) {
-	this.overlay.reportError( msg, 'visualeditor-save-error' );
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- */
 ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( errorText ) {
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.loadFail.apply( this, arguments );
 
 	this.overlay.reportError( errorText, 'visualeditor-load-error' );
 	this.overlay.hide();
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- */
-ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
-	// Need to blur contenteditable to be sure that keyboard is properly closed
-	this.$element.find( '[contenteditable]' ).blur();
-	this.$overlaySurface.hide();
-	this.overlay.onStageChanges();
 };
 
 /*
@@ -140,17 +94,6 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
 	} else if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
 		this.showSaveDialog();
 	}
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- */
-ve.init.mw.MobileFrontendArticleTarget.prototype.saveErrorCaptcha = function ( editApi ) {
-	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveErrorCaptcha.apply( this, arguments );
-
-	this.captchaId = editApi.captcha.id;
-	this.overlay.handleCaptcha( editApi.captcha );
 };
 
 /*
