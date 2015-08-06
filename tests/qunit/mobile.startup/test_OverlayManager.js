@@ -1,5 +1,3 @@
-// FIXME: Various tests are skipped as they incorrectly stub inside the test.
-// These stubs should be moved into setup so they do not have side effects on other tests.
 ( function ( M, $ ) {
 	var
 		OverlayManager = M.require( 'OverlayManager' ),
@@ -40,16 +38,16 @@
 		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
 	} );
 
-	QUnit.skip( '#add, with $.Deferred factory', 2, function ( assert ) {
+	QUnit.test( '#add, with $.Deferred factory', 2, function ( assert ) {
 		var deferred = $.Deferred(),
 			fakeOverlay = this.createFakeOverlay();
 		deferred.show = this.sandbox.spy();
 
-		overlayManager.add( /^test$/, function () {
+		overlayManager.add( /^foo$/, function () {
 			return deferred;
 		} );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'foo'
 		} ) );
 		deferred.resolve( fakeOverlay );
 
@@ -57,11 +55,11 @@
 		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
 	} );
 
-	QUnit.skip( '#add, with current path', 1, function ( assert ) {
+	QUnit.test( '#add, with current path', 1, function ( assert ) {
 		var fakeOverlay = this.createFakeOverlay();
-		fakeRouter.getPath = this.sandbox.stub().returns( 'test' );
+		fakeRouter.getPath = this.sandbox.stub().returns( 'baha' );
 
-		overlayManager.add( /^test$/, function () {
+		overlayManager.add( /^baha$/, function () {
 			return fakeOverlay;
 		} );
 
@@ -88,33 +86,33 @@
 		assert.ok( anotherFakeOverlay.hide.calledOnce, 'hide another overlay' );
 	} );
 
-	QUnit.skip( 'route with params', 1, function ( assert ) {
+	QUnit.test( 'route with params', 1, function ( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay(),
 			factoryStub = this.sandbox.stub().returns( fakeOverlay );
 
-		overlayManager.add( /^test\/(\d+)$/, factoryStub );
+		overlayManager.add( /^sam\/(\d+)$/, factoryStub );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test/123'
+			path: 'sam/123'
 		} ) );
 
 		assert.ok( factoryStub.calledWith( '123' ), 'pass params from the route' );
 	} );
 
-	QUnit.skip( 'hide when route changes', 3, function ( assert ) {
+	QUnit.test( 'hide when route changes', 3, function ( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay(),
 			factoryStub = this.sandbox.stub().returns( fakeOverlay );
 
-		overlayManager.add( /^test$/, factoryStub );
+		overlayManager.add( /^jon$/, factoryStub );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'jon'
 		} ) );
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: ''
 		} ) );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'jon'
 		} ) );
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: 'other'
@@ -125,21 +123,21 @@
 		assert.ok( fakeOverlay.hide.getCall( 1 ).notCalledWith( true ), 'don\'t force hide (second)' );
 	} );
 
-	QUnit.skip( 'go back (change route) if overlay hidden but not by route change', 1, function ( assert ) {
+	QUnit.test( 'go back (change route) if overlay hidden but not by route change', 1, function ( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay(),
 			factoryStub = this.sandbox.stub().returns( fakeOverlay );
 
-		overlayManager.add( /^test$/, factoryStub );
+		overlayManager.add( /^joakino$/, factoryStub );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'joakino'
 		} ) );
 		fakeOverlay.hide();
 
 		assert.ok( fakeRouter.back.calledOnce, 'route back' );
 	} );
 
-	QUnit.skip( 'stacked overlays', 7, function ( assert ) {
+	QUnit.test( 'stacked overlays', 7, function ( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay(),
 			factoryStub = this.sandbox.stub().returns( fakeOverlay ),
@@ -147,14 +145,14 @@
 			parentFactoryStub = this.sandbox.stub().returns( parentFakeOverlay );
 
 		overlayManager.add( /^parent$/, parentFactoryStub );
-		overlayManager.add( /^test$/, factoryStub );
+		overlayManager.add( /^child$/, factoryStub );
 
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: 'parent'
 		} ) );
 		assert.ok( parentFakeOverlay.show.calledOnce, 'show parent' );
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'child'
 		} ) );
 		assert.ok( parentFakeOverlay.hide.calledOnce, 'hide parent' );
 		assert.ok( parentFakeOverlay.hide.calledWith( true ), 'hide parent forcefully (no confirmation)' );
@@ -168,7 +166,7 @@
 		assert.ok( parentFactoryStub.calledOnce, 'create parent only once' );
 	} );
 
-	QUnit.skip( 'prevent route change', 1, function ( assert ) {
+	QUnit.test( 'prevent route change', 1, function ( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay( {
 				hide: this.sandbox.stub().returns( false )
@@ -178,10 +176,10 @@
 				path: ''
 			} );
 
-		overlayManager.add( /^test$/, factoryStub );
+		overlayManager.add( /^rob$/, factoryStub );
 
 		fakeRouter.emit( 'route', $.Event( 'route', {
-			path: 'test'
+			path: 'rob'
 		} ) );
 		fakeRouter.emit( 'route', ev );
 		assert.ok( ev.isDefaultPrevented(), 'prevent route change' );
