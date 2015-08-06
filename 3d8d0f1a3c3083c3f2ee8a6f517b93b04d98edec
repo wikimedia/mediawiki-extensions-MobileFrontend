@@ -34,6 +34,42 @@
       "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_9e6570ad",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-08-06T22:46:03Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "8ec42329_48498e8d",
+      "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_def698d3",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-08-06T22:46:03Z",
+      "side": 1,
+      "message": "Changed to use .client-js \nI didn\u0027t investigate header-loaded, i figured if it were an issue it could be done in another task / commit.",
+      "parentUuid": "8ec42329_88c8d625",
+      "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
