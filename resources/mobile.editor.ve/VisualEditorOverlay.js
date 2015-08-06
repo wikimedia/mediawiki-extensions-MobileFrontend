@@ -116,18 +116,6 @@
 			this.showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
 		},
-		/** @inheritdoc **/
-		onSaveBegin: function () {
-			EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
-			if ( this.confirmAborted ) {
-				return;
-			}
-
-			this.showHidden( '.saving-header' );
-			this.$( '.surface, .summary-area' ).hide();
-
-			this.target.startSave();
-		},
 		/**
 		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
 		 * @method
@@ -151,7 +139,6 @@
 		/** @inheritdoc **/
 		onSaveComplete: function () {
 			EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
-			this.clearSpinner();
 			this.destroyTarget();
 		},
 		/** @inheritdoc **/
