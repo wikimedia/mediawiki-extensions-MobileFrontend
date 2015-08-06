@@ -904,10 +904,6 @@ class MobileFrontendHooks {
 			$resourceLoader->register( $config->get( 'MobileVEModules' ) );
 		}
 
-		if ( class_exists( 'CodeMirrorHooks' ) ) {
-			$resourceLoader->register( $config->get( 'MobileCodeMirrorModules' ) );
-		}
-
 		// add Echo, if it's installed
 		if ( class_exists( 'MWEchoNotifUser' ) ) {
 			$resourceLoader->register( $config->get( 'MobileEchoModules' ) );
