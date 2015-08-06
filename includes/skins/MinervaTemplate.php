@@ -407,10 +407,7 @@ class MinervaTemplate extends BaseTemplate {
 				?>
 			</div>
 		</div>
-		<?php
-			echo $data['reporttime'];
-			echo $data['bottomscripts'];
-		?>
+		<?php $this->printTrail(); ?>
 		</body>
 		</html>
 		<?php
