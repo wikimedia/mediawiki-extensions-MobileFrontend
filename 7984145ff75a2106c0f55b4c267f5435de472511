@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_c207a01e",
+        "filename": "resources/mobile.errorReport/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-08-06T17:47:04Z",
+      "side": 1,
+      "message": "So the line written to execute before the var doesn\u0027t actually change any of them?",
+      "parentUuid": "8ec42329_8250b837",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_0264c80f",
         "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
         "patchSetId": 2
