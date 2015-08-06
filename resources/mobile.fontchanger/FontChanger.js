@@ -1,52 +1,22 @@
 ( function ( M, $ ) {
 	var FontChanger,
-		Drawer = M.require( 'Drawer' ),
-		Icon = M.require( 'Icon' ),
-		settings = M.require( 'settings' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
+		View = M.require( 'View' ),
+		settings = M.require( 'settings' );
 
 	/**
 	 * FontChanger wrapper
 	 * @class FontChanger
-	 * @extends Drawer
+	 * @extends View
 	 */
-	FontChanger = Drawer.extend( {
-		defaults: {
-			cancelButton: new Icon( {
-				name: 'close',
-				additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString(),
-			descriptionMsg: mw.msg( 'mobile-frontend-fontchanger-desc' )
-		},
-		className: 'drawer position-fixed fontchanger',
+	FontChanger = View.extend( {
+		/** @inheritdoc */
 		template: mw.template.get( 'mobile.fontchanger', 'FontChanger.hogan' ),
-		// if the user wants to look at more then one text position, close the drawer only
-		// with a click on the close button
-		closeOnScroll: false,
-
 		/**
-		 * @inheritdoc
+		 * Save the actual font size setting.
+		 * @method
 		 */
-		initialize: function ( options ) {
-			var enabled = 'mw-ui-progressive',
-				userFontSize = settings.get( 'userFontSize', true );
-
-			switch ( userFontSize ) {
-				case '70':
-					options.size1 = enabled;
-					break;
-				case '130':
-					options.size3 = enabled;
-					break;
-				default:
-					// default = 100
-					options.size2 = enabled;
-					break;
-			}
-
-			Drawer.prototype.initialize.apply( this, arguments );
+		save: function () {
+			settings.save( this.options.name, this.fontchanger.val(), true );
 		},
 
 		/**
@@ -55,39 +25,39 @@
 		postRender: function () {
 			var self = this;
 
-			Drawer.prototype.postRender.apply( this );
+			this.fontchanger = this.$( '.fontchanger-value' );
+			this.changePlus = this.$( '.fontchanger.plus' );
+			this.changeMinus = this.$( '.fontchanger.minus' );
+			this.setPercentage( settings.get( this.options.name, true ) || 100 );
 
-			// set handler for clicks on the size buttons
-			this.$( '.sizes' ).find( 'div' ).each( function () {
-				var $el = $( this );
-
-				$el.on( 'click', function () {
-					self.setNewSize( $el );
-
-					uiSchema.log( {
-						name: 'fontchanger-font-change'
-					} );
+			this.fontchanger.on( 'click', function () {
+					self.setPercentage( 100 );
+					return false;
 				} );
+
+			this.changeMinus.on( 'click', function () {
+				self.setPercentage( self.fontchanger.val() - 10 );
+				return false;
 			} );
+
+			this.changePlus.on( 'click', function () {
+				self.setPercentage( parseInt( self.fontchanger.val() ) + 10 );
+				return false;
+			} );
+			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( this, 'save' ) );
 		},
 
 		/**
-		 * Set a new font size and change the drawer content
-		 * @param {jQuery.Object} $el Clicked font size element
+		 * Set a new percentage (doesn't change the value higher then 200% and lower then 10%)
+		 * @param {Number} percentage New percentage value
 		 */
-		setNewSize: function ( $el ) {
-			var fontSize = $el.data( 'size' );
-
-			// save and change the new font size
-			settings.save( 'userFontSize', fontSize, true );
-			$( '.content' ).css( 'font-size', fontSize + '%' );
-
-			// update drawer
-			this.$( '.sizes' ).find( 'div' ).each( function () {
-				$( this ).removeClass( 'mw-ui-progressive' );
-			} );
-			// add class to actual used size
-			$el.addClass( 'mw-ui-progressive' );
+		setPercentage: function ( percentage ) {
+			// disallow changes under 10% and over 200%
+			if ( percentage > 9 && percentage < 201 ) {
+				this.fontchanger
+					.text( percentage + '%' )
+					.val( percentage );
+			}
 		}
 	} );
 
