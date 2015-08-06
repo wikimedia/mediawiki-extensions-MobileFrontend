@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6324abad",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-06T21:47:29Z",
+      "side": 1,
+      "message": "I think we need to make this comment clearer. Remove the 2nd part.",
+      "revId": "72e2b784203aef7033c6299ae47c19e7026782b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_033a87bf",
+        "filename": "resources/mobile.talk/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-06T21:47:29Z",
+      "side": 1,
+      "message": "this doesn\u0027t look right",
+      "revId": "72e2b784203aef7033c6299ae47c19e7026782b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
