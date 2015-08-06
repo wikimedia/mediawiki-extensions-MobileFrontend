@@ -357,6 +357,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.pagelist' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.view',
+			'mobile.browser',
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
 		),
