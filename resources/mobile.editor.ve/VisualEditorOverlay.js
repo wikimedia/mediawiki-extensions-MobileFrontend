@@ -32,20 +32,12 @@
 		applyHeaderOptions: function ( options, isVE ) {
 			// Set things that are known to be true.
 			options.hasToolbar = isVE;
-			options.editSwitcher = isVE;
 			options.isVisualEditor = isVE;
 		},
 		/** @inheritdoc **/
 		initialize: function ( options ) {
 			this.applyHeaderOptions( options, true );
-			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			// force editor preview step for VE
-			this.config = $.extend( this.config, {
-				skipPreview: false
-			} );
-			this.$continueBtn = this.$( '.continue' ).prop( 'disabled', true );
 			this.isNewPage = options.isNewPage;
 		},
 		/**
