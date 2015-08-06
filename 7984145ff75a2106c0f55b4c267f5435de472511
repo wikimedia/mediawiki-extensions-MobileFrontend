@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_086e262a",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-06T21:18:53Z",
+      "side": 1,
+      "message": "I prefer this notation, too, because of the following reason (especially in php, but that can be adapted to JS, too): Think about a function with a lot of lines of code and anyone is initializing vars, where they want (e.g. WebRequest, OutputPage or some other commonly used objects). That leaves place for times, where two vars with the same object exists (e.g. $out and $output, both with the same instance of OutputPage). It\u0027s not an error per se, but it\u0027s a bit cleaner to initialize the common vars you need at one place so everyone knows, what is already available as a local var, and what not :) Usually a good place to do that is at the top of the function.\n\nThat\u0027s my point of view :)",
+      "parentUuid": "8ec42329_e27dfcad",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_8250b837",
         "filename": "resources/mobile.errorReport/init.js",
         "patchSetId": 2
@@ -99,6 +117,24 @@
       "side": 1,
       "message": "So the line written to execute before the var doesn\u0027t actually change any of them?",
       "parentUuid": "8ec42329_8250b837",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e8595a90",
+        "filename": "resources/mobile.errorReport/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-06T21:18:53Z",
+      "side": 1,
+      "message": "not really, assertMode \"only\" aborts with the exception, if the module is loaded outside the defined modes. It could be a very tiny performance point to abort the execution as soon as possible, but assertMode shouldn\u0027t throw an exception in production, and if so, the tiny performance impact of initializing the vars before that, shouldn\u0027t matter :)",
+      "parentUuid": "8ec42329_c207a01e",
       "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
