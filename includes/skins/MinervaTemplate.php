@@ -249,7 +249,7 @@ class MinervaTemplate extends BaseTemplate {
 			// Add a mw-content-ltr/rtl class to be able to style based on text direction
 			$langClass = 'mw-content-' . $data['pageDir'];
 			echo Html::openElement( 'div', array(
-				'id' => 'content',
+				'id' => 'bodyContent',
 				'class' => 'content ' . $langClass,
 				'lang' => $data['pageLang'],
 				'dir' => $data['pageDir'],
@@ -397,7 +397,7 @@ class MinervaTemplate extends BaseTemplate {
 						echo $this->getHeaderHtml( $data );
 					?>
 				</div>
-				<div id="content_wrapper">
+				<div id="content">
 				<?php
 					$this->renderContentWrapper( $data );
 				?>

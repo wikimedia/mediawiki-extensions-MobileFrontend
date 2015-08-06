@@ -128,8 +128,8 @@ class ArticlePage
   div(:toast, class: 'toast')
 
   # loader
-  div(:content_wrapper, id: 'content_wrapper')
-  div(:content, id: 'content')
+  div(:content_wrapper, id: 'content')
+  div(:content, id: 'bodyContent')
 
   # secondary menu
   ## languages

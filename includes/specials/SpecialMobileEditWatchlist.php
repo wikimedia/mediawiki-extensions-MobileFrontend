@@ -78,7 +78,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
 
 		$out = $this->getOutput();
-		// turn off #content element
+		// turn off #bodyContent element
 		$out->setProperty( 'unstyledContent', true );
 		parent::execute( $mode );
 		$out->setPageTitle( $this->msg( 'watchlist' ) );

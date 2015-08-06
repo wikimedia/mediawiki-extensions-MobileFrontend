@@ -48,10 +48,11 @@
 	 * Make references clickable and show a drawer when clicked on.
 	 * @method
 	 * @ignore
-	 * @param {Page} [page] Defaults to $( '#content' )
+	 * @param {Page} [page] Defaults to $( '#bodyContent' )
 	 */
 	function setup( page ) {
-		var $container = page ? page.$el : $( '#content' );
+		// FIXME: Cleanup selector when cache clears
+		var $container = page ? page.$el : $( '#content #bodyContent, #content_wrapper #content' );
 
 		mw.loader.using( 'mobile.references' ).done( function () {
 			ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' );

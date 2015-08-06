@@ -1,6 +1,8 @@
 ( function ( M, $ ) {
 	var page = M.getCurrentPage(),
 		currentPageTitle =  page.title,
+		// FIXME: Clean up when cache clears.
+		$contentContainer = $( '#content #bodyContent, #content_wrapper #content' ),
 		context = M.require( 'context' ),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
@@ -197,7 +199,7 @@
 		var tagName, expandSections, indicator,
 			$firstHeading,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
-		$container = $container || $( '#content' );
+		$container = $container || $contentContainer;
 
 		// Also allow .section-heading if some extensions like Wikibase
 		// want to toggle other headlines than direct descendants of $container.
@@ -284,7 +286,8 @@
 
 		checkInternalRedirectAndHash();
 		checkHash();
-		$( '#content_wrapper a' ).on( 'click', function () {
+		// Restricted to links created by editors and thus outside our control
+		$contentContainer.find( 'a' ).on( 'click', function () {
 			// the link might be an internal link with a hash.
 			// if it is check if we need to reveal any sections.
 			if ( $( this ).attr( 'href' ) !== undefined &&
@@ -327,7 +330,7 @@
 		!mw.config.get( 'wgIsMainPage' ) &&
 		mw.config.get( 'wgAction' ) === 'view'
 	) {
-		init( $( '#content' ), 'content-' );
+		init( $contentContainer, 'content-' );
 	}
 
 	M.define( 'toggle', {

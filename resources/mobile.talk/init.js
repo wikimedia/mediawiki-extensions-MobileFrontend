@@ -70,7 +70,8 @@
 			label: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 			href: '#/talk/new',
 			progressive: true
-		} ).prependTo( '#content' );
+			// FIXME: Cleanup selector when cache has cleared
+		} ).prependTo( '#content #bodyContent, #content_wrapper #content' );
 
 		// reload the page after the new discussion was added
 		M.on( 'talk-added-wo-overlay', function () {

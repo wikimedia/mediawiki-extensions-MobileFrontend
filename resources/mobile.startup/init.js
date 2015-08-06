@@ -49,19 +49,21 @@
 	 * @ignore
 	 */
 	function loadCurrentPage() {
-		var permissions = mw.config.get( 'wgRestrictionEdit', [] );
+		var permissions = mw.config.get( 'wgRestrictionEdit', [] ),
+			// FIXME: Clean up when cache clears.
+			$content = $( '#content #bodyContent, #content_wrapper #content' );
 		if ( permissions.length === 0 ) {
 			permissions.push( '*' );
 		}
 		currentPage = new Page( {
-			el: '#content',
+			el: $content,
 			title: mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
 			protection: {
 				edit: permissions
 			},
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
-			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
+			sections: pageApi.getSectionsFromHTML( $content ),
 			id: mw.config.get( 'wgArticleId' ),
 			namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 		} );
