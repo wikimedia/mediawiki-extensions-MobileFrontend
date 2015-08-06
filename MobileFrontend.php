@@ -94,6 +94,9 @@ $autoloadClasses = array(
 
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
+
+	'MobileFrontend\MenuBuilder' => 'MenuBuilder',
+	'MobileFrontend\MenuEntry' => 'MenuBuilder',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
