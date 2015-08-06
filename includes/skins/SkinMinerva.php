@@ -2,6 +2,7 @@
 /**
  * SkinMinerva.php
  */
+use MobileFrontend\MenuBuilder;
 
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
@@ -328,7 +329,7 @@ class SkinMinerva extends SkinTemplate {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
 		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
-		$items = array();
+		$menu = new MenuBuilder();
 
 		// Watchlist link
 		$watchlistQuery = array();
@@ -343,87 +344,66 @@ class SkinMinerva extends SkinTemplate {
 				$watchlistQuery['filter'] = $filter;
 			}
 		}
-		$items[] = array(
-			'name' => 'watchlist',
-			'components' => array(
-				array(
-					'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-					'href' => $this->getPersonalUrl(
-						$watchTitle,
-						'mobile-frontend-watchlist-purpose',
-						$watchlistQuery
-					),
-					'class' => MobileUI::iconClass( 'watchlist', 'before' ),
-					'data-event-name' => 'watchlist',
+
+		$menu->insert( 'watchlist', $isJSOnly = true )
+			->addComponent(
+				wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+				$this->getPersonalUrl(
+					$watchTitle,
+					'mobile-frontend-watchlist-purpose',
+					$watchlistQuery
 				),
-			),
-			'class' => 'jsonly'
-		);
+				MobileUI::iconClass( 'watchlist', 'before' ),
+				array( 'data-event-name' => 'watchlist' )
+			);
 
 		// Links specifically for mobile mode
 		if ( $this->isMobileMode ) {
 
 			// Uploads link
 			if ( $this->mobileContext->userCanUpload() ) {
-				$items[] = array(
-					'name' => 'uploads',
-					'components' => array(
-						array(
-							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-							'href' => $this->getPersonalUrl(
-								$donateTitle,
-								'mobile-frontend-donate-image-anon'
-							),
-							'class' => MobileUI::iconClass( 'uploads', 'before', 'menu-item-upload' ),
-							'data-event-name' => 'uploads',
+				$menu->insert( 'uploads', $isJSOnly = true )
+					->addComponent(
+						wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+						$this->getPersonalUrl(
+							$donateTitle,
+							'mobile-frontend-donate-image-anon'
 						),
-					),
-					'class' => 'jsonly',
-				);
+						MobileUI::iconClass( 'uploads', 'before', 'menu-item-upload' ),
+						array( 'data-event-name' => 'uploads' )
+					);
 			}
 
 			// Settings link
-			$items[] = array(
-				'name' => 'settings',
-				'components' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
-						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
-							getLocalUrl( array( 'returnto' => $returnToTitle ) ),
-						'class' => MobileUI::iconClass( 'mobileoptions', 'before' ),
-						'data-event-name' => 'settings',
-					),
-				),
-			);
+			$menu->insert( 'settings' )
+				->addComponent(
+					wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+					SpecialPage::getTitleFor( 'MobileOptions' )->
+						getLocalUrl( array( 'returnto' => $returnToTitle ) ),
+					MobileUI::iconClass( 'mobileoptions', 'before' ),
+					array( 'data-event-name' => 'settings' )
+				);
 
 		// Links specifically for desktop mode
 		} else {
 
 			// Preferences link
-			$items[] = array(
-				'name' => 'preferences',
-				'components' => array(
-					array(
-						'text' => wfMessage( 'preferences' )->escaped(),
-						'href' => $this->getPersonalUrl(
-							SpecialPage::getTitleFor( 'Preferences' ),
-							'prefsnologintext2'
-						),
-						'class' => MobileUI::iconClass( 'settings', 'before' ),
-						'data-event-name' => 'preferences',
+			$menu->insert( 'preferences' )
+				->addComponent(
+					wfMessage( 'preferences' )->escaped(),
+					$this->getPersonalUrl(
+						SpecialPage::getTitleFor( 'Preferences' ),
+						'prefsnologintext2'
 					),
-				),
-			);
-
+					MobileUI::iconClass( 'settings', 'before' ),
+					array( 'data-event-name' => 'preferences' )
+				);
 		}
 
 		// Login/Logout links
-		$items[] = $this->getLogInOutLink();
+		$this->insertLogInOutLink( $menu );
 
-		// Allow other extensions to add or override tools
-		Hooks::run( 'MobilePersonalTools', array( &$items ) );
-
-		return $items;
+		return $menu->getEntries();
 	}
 
 	/**
@@ -452,60 +432,46 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getDiscoveryTools() {
 		$config = $this->getMFConfig();
-		$items = array();
+		$menu = new MenuBuilder();
 
 		// Home link
-		$items[] = array(
-			'name' => 'home',
-			'components' => array(
-				array(
-					'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
-					'href' => Title::newMainPage()->getLocalUrl(),
-					'class' => MobileUI::iconClass( 'home', 'before' ),
-					'data-event-name' => 'home',
-				),
-			),
-		);
+		$menu->insert( 'home' )
+			->addComponent(
+				wfMessage( 'mobile-frontend-home-button' )->escaped(),
+				Title::newMainPage()->getLocalUrl(),
+				MobileUI::iconClass( 'home', 'before' ),
+				array( 'data-event-name' => 'home' )
+			);
 
 		// Random link
-		$items[] = array(
-			'name' => 'random',
-			'components' => array(
+		$menu->insert( 'random' )
+			->addComponent(
+				wfMessage( 'mobile-frontend-random-button' )->escaped(),
+				SpecialPage::getTitleFor( 'Randompage',
+					MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
+						'#/random',
+				MobileUI::iconClass( 'random', 'before' ),
 				array(
-					'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-					'href' => SpecialPage::getTitleFor( 'Randompage',
-						MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
-							'#/random',
-					'class' => MobileUI::iconClass( 'random', 'before' ),
 					'id' => 'randomButton',
 					'data-event-name' => 'random',
-				),
-			),
-		);
+				)
+			);
 
 		// Nearby link (if supported)
 		if (
 			$config->get( 'MFNearby' ) &&
 			( $config->get( 'MFNearbyEndpoint' ) || class_exists( 'GeoData' ) )
 		) {
-			$items[] = array(
-				'name' => 'nearby',
-				'components' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
-						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-						'class' => MobileUI::iconClass( 'nearby', 'before', 'nearby' ),
-						'data-event-name' => 'nearby',
-					),
-				),
-				'class' => 'jsonly',
-			);
+			$menu->insert( 'nearby', $isJSOnly = true )
+				->addComponent(
+					wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+					SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
+					MobileUI::iconClass( 'nearby', 'before', 'nearby' ),
+					array( 'data-event-name' => 'nearby' )
+				);
 		}
 
-		// Allow other extensions to add or override discovery tools
-		Hooks::run( 'MinervaDiscoveryTools', array( &$items ) );
-
-		return $items;
+		return $menu->getEntries();
 	}
 
 	/**
@@ -531,9 +497,10 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Creates a login or logout button
-	 * @return array Representation of button with text and href keys
+	 *
+	 * @param MenuBuilder $menu
 	 */
-	protected function getLogInOutLink() {
+	protected function insertLogInOutLink( MenuBuilder $menu ) {
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
@@ -556,24 +523,20 @@ class SkinMinerva extends SkinTemplate {
 			$url = $this->mobileContext->getMobileUrl( $url, $this->getConfig()->get( 'SecureLogin' ) );
 			$username = $user->getName();
 
-			$loginLogoutLink = array(
-				'name' => 'auth',
-				'components' => array(
-					array(
-						'text' => $username,
-						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
-						'class' => MobileUI::iconClass( 'profile', 'before', 'truncated-text primary-action' ),
-						'data-event-name' => 'profile',
-					),
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
-						'href' => $url,
-						'class' => MobileUI::iconClass(
-							'secondary-logout', 'element', 'secondary-action truncated-text' ),
-						'data-event-name' => 'logout',
-					),
-				),
-			);
+			$menu->insert( 'auth' )
+				->addComponent(
+					$username,
+					SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
+					MobileUI::iconClass( 'profile', 'before', 'truncated-text primary-action' ),
+					array( 'data-event-name' => 'profile' )
+				)
+				->addComponent(
+					wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
+					$url,
+					MobileUI::iconClass(
+						'secondary-logout', 'element', 'secondary-action truncated-text' ),
+					array( 'data-event-name' => 'logout' )
+				);
 		} else {
 			// note returnto is not set for mobile (per product spec)
 			// note welcome=yes in returnto  allows us to detect accounts created from the left nav
@@ -582,21 +545,14 @@ class SkinMinerva extends SkinTemplate {
 			unset( $returntoquery['campaign'] );
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
-			$loginLogoutLink = array(
-				'name' => 'auth',
-				'components' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
-						'href' => $url,
-						'class' => MobileUI::iconClass( 'anonymous-white', 'before' ),
-						'data-event-name' => 'login',
-					),
-				),
-				'class' => 'jsonly'
-			);
+			$menu->insert( 'auth' )
+				->addComponent(
+					wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
+					$url,
+					MobileUI::iconClass( 'anonymous-white', 'before' ),
+					array( 'data-event-name' => 'login' )
+				);
 		}
-
-		return $loginLogoutLink;
 	}
 
 	/**
@@ -720,39 +676,25 @@ class SkinMinerva extends SkinTemplate {
 	 * @return Array array of site links
 	 */
 	protected function getSiteLinks() {
-		$items = array();
+		$menu = new MenuBuilder();
 
 		// About link
 		$title = Title::newFromText( $this->msg( 'aboutpage' )->inContentLanguage()->text() );
 		$msg = $this->msg( 'aboutsite' );
 		if ( $title && !$msg->isDisabled() ) {
-			$items[] = array(
-				'name' => 'about',
-				'components' => array(
-					array(
-						'text'=> $msg->text(),
-						'href' => $title->getLocalUrl(),
-					),
-				),
-			);
+			$menu->insert( 'about' )
+				->addComponent( $msg->text(), $title->getLocalUrl() );
 		}
 
 		// Disclaimers link
 		$title = Title::newFromText( $this->msg( 'disclaimerpage' )->inContentLanguage()->text() );
 		$msg = $this->msg( 'disclaimers' );
 		if ( $title && !$msg->isDisabled() ) {
-			$items[] = array(
-				'name' => 'disclaimers',
-				'components' => array(
-					array(
-						'text'=> $msg->text(),
-						'href' => $title->getLocalUrl(),
-					),
-				),
-			);
+			$menu->insert( 'disclaimers' )
+				->addComponent( $msg->text(), $title->getLocalUrl() );
 		}
 
-		return $items;
+		return $menu->getEntries();
 	}
 
 	/**
@@ -880,11 +822,14 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array
 	 */
 	protected function getMenuData() {
-		return array(
+		$data = array(
 			'discovery' => $this->getDiscoveryTools(),
 			'personal' => $this->getPersonalTools(),
 			'sitelinks' => $this->getSiteLinks(),
 		);
+		// Allow other extensions to add or override tools
+		Hooks::run( 'MobileMenuData', array( &$data ) );
+		return $data;
 	}
 	/**
 	 * Returns array of config variables that should be added only to this skin
