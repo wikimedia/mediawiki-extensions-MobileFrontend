@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c2824097",
+        "filename": "resources/mobile.browser/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T17:43:54Z",
+      "side": 0,
+      "message": "Why is this a rule suddenly?\n[0] was never an issue before - did we add something to the wikimedia preset?",
+      "revId": "cc954d91be0a12a57e758152f1c44780f3b7232b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_027da8af",
+        "filename": ".jscsrc",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T17:43:54Z",
+      "side": 1,
+      "message": "still an indent problem",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e27dfcad",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T17:43:54Z",
+      "side": 1,
+      "message": "Why is this a rule?\nIs this in the wikimedia preset.\nNothing wrong with previous code from my point of view.\nvar overlay \u003d this; would be neater anyhow",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_8250b837",
+        "filename": "resources/mobile.errorReport/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T17:43:54Z",
+      "side": 1,
+      "message": "Nope we should move all variable declarations up here and on a single line (e.g. as it was but just move to the top)",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
