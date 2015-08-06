@@ -16,6 +16,23 @@
       "revId": "cc954d91be0a12a57e758152f1c44780f3b7232b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_c259e05e",
+        "filename": "tests/qunit/mobile.browser/test_browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T17:45:35Z",
+      "side": 0,
+      "message": "I\u0027d rather we just moved this block to the top as is.",
+      "revId": "cc954d91be0a12a57e758152f1c44780f3b7232b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
