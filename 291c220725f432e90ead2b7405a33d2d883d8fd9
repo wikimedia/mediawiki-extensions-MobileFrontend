@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_376828b7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-08-06T14:59:52Z",
+      "side": 1,
+      "message": "Note that the Gather extension will need to be updated to use the MenuBuilder API too.",
+      "revId": "291c220725f432e90ead2b7405a33d2d883d8fd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
