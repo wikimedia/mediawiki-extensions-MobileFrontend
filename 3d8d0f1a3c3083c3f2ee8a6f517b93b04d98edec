@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_88c8d625",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T21:26:48Z",
+      "side": 1,
+      "message": "I don\u0027t feel comfortable using the `not` selector. Something feels wrong.\n\nIt is not widely supported on the older devices like Android 2 [1] (not sure whether we still care about it) and I suspect is not so performant. What other choices do we have?\n\nAlso it\u0027s not clear to me why header-loaded still works but the history-link-loaded event fires. Can you clarify that in the commit message?\n\n[1] http://caniuse.com/#feat\u003dcss-sel3",
+      "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
