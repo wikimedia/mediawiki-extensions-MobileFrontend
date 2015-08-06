@@ -19,6 +19,40 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_8890d646",
+        "filename": ".jscsrc",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T20:51:12Z",
+      "side": 1,
+      "message": "This won\u0027t work until I get this upstreamed (see https://github.com/jscs-dev/jscs-jsdoc/pull/138)",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_a8a6f2a5",
+        "filename": "resources/mobile.bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-06T20:51:12Z",
+      "side": 1,
+      "message": "This is a property accessor and shouldn\u0027t be subject to this rule.\n\nIn core requireSpacesInsideArrayBrackets is null ...\nhttp://jscs.info/rule/requireSpacesInsideArrayBrackets.html",
+      "revId": "7984145ff75a2106c0f55b4c267f5435de472511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_e27dfcad",
         "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
         "patchSetId": 2
