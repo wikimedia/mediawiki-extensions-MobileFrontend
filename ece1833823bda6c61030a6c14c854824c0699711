@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_f79b80be",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-06T15:18:42Z",
+      "side": 1,
+      "message": "this can be written in one line without the need of a local variable :)",
+      "revId": "ece1833823bda6c61030a6c14c854824c0699711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_b7bf38f6",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-06T15:18:42Z",
+      "side": 1,
+      "message": "what if a user (for whatever reason) adds a new entry with an integer as name, and want\u0027s to add a new entry after it, but provides the integer as string this time? Sure, that\u0027s a problem of the user of this class, but maybe you can get in a little type cast :)",
+      "revId": "ece1833823bda6c61030a6c14c854824c0699711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
