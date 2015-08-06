@@ -16,6 +16,24 @@
       "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_48498e8d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-06T21:34:55Z",
+      "side": 1,
+      "message": "we could use .client-js",
+      "parentUuid": "8ec42329_88c8d625",
+      "revId": "3d8d0f1a3c3083c3f2ee8a6f517b93b04d98edec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
