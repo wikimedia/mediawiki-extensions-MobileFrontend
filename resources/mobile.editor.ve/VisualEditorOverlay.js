@@ -67,8 +67,7 @@
 						$element: overlay.$el,
 						// || undefined so that scrolling is not triggered for the lead (0) section
 						// (which has no header to scroll to)
-						section: overlay.options.sectionId || undefined,
-						isIos: overlay.isIos
+						section: overlay.options.sectionId || undefined
 					} );
 					overlay.target.activating = true;
 					overlay.target.load();
