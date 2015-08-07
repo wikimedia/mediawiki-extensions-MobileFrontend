@@ -35,11 +35,10 @@
 		} );
 	} );
 
-	QUnit.test( 'it should always return "control" if the experiment has been defined as disabled', 2, function ( assert ) {
+	QUnit.test( 'it should always return "control" if the experiment has been defined as disabled', 1, function ( assert ) {
 		var bucket = this.experiments.getBucket( 'bar' );
 
 		assert.strictEqual( 'control', bucket );
-		assert.strictEqual( false, user.getSessionId.called );
 	} );
 
 	QUnit.test( 'it should always assign the user to the same bucket given the same token', 1, function ( assert ) {
