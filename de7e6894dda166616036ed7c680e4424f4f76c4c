@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_6d3a55e6",
+        "filename": "resources/mobile.startup/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-07T17:59:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure if it\u0027s OK to pass a jQuery object here. I think it will work, but we should stick to using a string here.",
+      "revId": "de7e6894dda166616036ed7c680e4424f4f76c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ad2fdd9b",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-07T17:59:06Z",
+      "side": 1,
+      "message": "Should not you keep the rule for #content_wrapper until the cache has cleared?",
+      "revId": "de7e6894dda166616036ed7c680e4424f4f76c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4d1c397d",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-07T17:59:06Z",
+      "side": 1,
+      "message": "Maybe it\u0027s safe to remove #content here?",
+      "revId": "de7e6894dda166616036ed7c680e4424f4f76c4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
