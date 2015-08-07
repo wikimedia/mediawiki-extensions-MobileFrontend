@@ -129,7 +129,7 @@
 	"mobile-frontend-editor-visual-editor": "Bewerken",
 	"mobile-frontend-editor-wait": "Een moment geduld. De bewerking wordt opgeslagen.",
 	"mobile-frontend-editor-redlink-leave": "Nee, bedankt",
-	"mobile-frontend-editor-redlink-explain": "Deze pagina is nog niet gemaakt op {{SITENAME}}.",
+	"mobile-frontend-editor-redlink-explain": "Deze pagina is nog niet aangemaakt op {{SITENAME}}.",
 	"mobile-frontend-editor-redlink-create": "Pagina aanmaken",
 	"mobile-frontend-enable-images": "Afbeeldingen op de mobiele site inschakelen",
 	"mobile-frontend-errorreport-button-label": "Een fout melden",

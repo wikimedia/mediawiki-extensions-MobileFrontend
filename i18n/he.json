@@ -170,7 +170,7 @@
 	"mobile-frontend-languages-nonexistent-title": "הדף \"$1\" אינו קיים.",
 	"mobile-frontend-languages-text": "הדף $1 זמין {{PLURAL:$2|בשפה אחת|ב־$2 שפות}}",
 	"mobile-frontend-languages-variant-header": "הגוונים של {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-last-modified-date": "השינוי האחרון נעשה בֹ־$1 ב־$2",
+	"mobile-frontend-last-modified-date": "השינוי האחרון נעשה ב־$1 ב־$2",
 	"mobile-frontend-last-modified-days": "נערך לאחרונה לפני {{PLURAL:$1|יום אחד|יומיים|$1 ימים}}",
 	"mobile-frontend-last-modified-hours": "נערך לאחרונה לפני {{PLURAL:$1|שעה אחת|שעתיים|$1 שעות}}",
 	"mobile-frontend-last-modified-just-now": "שוּנה לפני זמן קצר",

@@ -6,7 +6,8 @@
 			"Bedynokue.nart",
 			"SamGamgee",
 			"GR44 Luc",
-			"Amire80"
+			"Amire80",
+			"TheRossatron"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "хэ1эзэныгъэм и къэбар щы1эп",
@@ -16,6 +17,8 @@
 	"mobile-frontend-home-button": "Унэм",
 	"mobile-frontend-language-article-heading": "Пэмык1 бзэк1э едж",
 	"mobile-frontend-last-modified-date": "Мыщпэм зызэблахъугъэр $1, $2-м",
+	"mobile-frontend-login": "Хахь",
+	"mobile-frontend-main-menu-account-create": "Паролыр ублэ",
 	"mobile-frontend-main-menu-button-tooltip": "Меню шъхьа1ыр зэ1ух",
 	"mobile-frontend-main-menu-login": "Системэм хахь",
 	"mobile-frontend-main-menu-nearby": "Благъэхэр",
