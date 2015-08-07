@@ -2,7 +2,9 @@
 @import "minerva.variables";
 
 // FIXME: Wikigrok uses the same styling for the .wikigrok class. Let's consolidate.
-#content {
+// FIXME: clean up selectors when cache clears
+#content #bodyContent,
+#content_wrapper #content {
 	.panel {
 		background-color: @grayLightest;
 		clear: both;

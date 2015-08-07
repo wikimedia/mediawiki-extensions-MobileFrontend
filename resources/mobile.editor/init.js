@@ -121,6 +121,8 @@
 
 		overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
 			var
+				// FIXME: Clean up selector when cache has cleared.
+				$content = $( '#content #bodyContent, #content_wrapper #content' ),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
@@ -131,9 +133,8 @@
 					isNewEditor: user.getEditCount() === 0,
 					oldId: mw.util.getParamValue( 'oldid' ),
 					funnel: funnel || 'article',
-					// FIXME: cache this selector, it's used more than once
-					contentLang: $( '#content' ).attr( 'lang' ),
-					contentDir: $( '#content' ).attr( 'dir' )
+					contentLang: $content.attr( 'lang' ),
+					contentDir: $content.attr( 'dir' )
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 

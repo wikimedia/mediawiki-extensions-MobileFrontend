@@ -96,7 +96,9 @@
 		 */
 		function initPageIssues() {
 			var ns = mw.config.get( 'wgNamespaceNumber' ),
-				$container = ns === 14 ? $( '#content' ) : M.getCurrentPage().getLeadSectionElement(),
+				// FIXME: Cleanup selector when cache has cleared
+				$container = ns === 14 ? $( '#content #bodyContent, #content_wrapper #content' )
+					: M.getCurrentPage().getLeadSectionElement(),
 				labelMsgKey = 'mobile-frontend-meta-data-issues';
 
 			if ( ns === 0 ) {

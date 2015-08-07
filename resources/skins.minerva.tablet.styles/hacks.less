@@ -14,22 +14,14 @@ FIXME: Review all of these hacks to see if they still apply.
 
 /* Tablet specific styling */
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	// FIXME: review why we need content_wrapper
-	#content_wrapper {
-		// Float infoboxes to the right of the page
-		table.infobox {
-			margin: .5em 0 1em 35px !important;
-			// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
-			max-width: @infoboxWidth;
-			// FIXME [Templates]: Inline styles force us to use !important
-			width: auto !important;
-			float: right !important;
-			clear: right !important;
-		}
-
-		// Match caption styling from MediaWiki:Common.css
-		caption {
-			font-weight: bold;
-		}
+	// Float infoboxes to the right of the page
+	table.infobox {
+		margin: .5em 0 1em 35px !important;
+		// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
+		max-width: @infoboxWidth;
+		// FIXME [Templates]: Inline styles force us to use !important
+		width: auto !important;
+		float: right !important;
+		clear: right !important;
 	}
 }
