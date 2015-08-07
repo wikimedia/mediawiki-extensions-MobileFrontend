@@ -6,7 +6,6 @@
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		settings = M.require( 'settings' ),
 		Button = M.require( 'Button' ),
-		browser = M.require( 'browser' ),
 		overlayManager = M.require( 'overlayManager' ),
 		toast = M.require( 'toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
@@ -63,8 +62,7 @@
 		 * @return {Boolean}
 		 */
 		isVisualEditorEnabled: function () {
-			return browser.isWideScreen() &&
-				mw.config.get( 'wgVisualEditorConfig' ) &&
+			return mw.config.get( 'wgVisualEditorConfig' ) &&
 				$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';

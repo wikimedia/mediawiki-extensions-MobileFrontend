@@ -18,7 +18,6 @@
 		currentPage = M.getCurrentPage(),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
-		browser = M.require( 'browser' ),
 		context = M.require( 'context' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
@@ -30,7 +29,7 @@
 		isNewFile = currentPage.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
-		isVisualEditorEnabled = browser.isWideScreen() && veConfig,
+		isVisualEditorEnabled = veConfig,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer,
 		$caEdit = $( '#ca-edit' );
