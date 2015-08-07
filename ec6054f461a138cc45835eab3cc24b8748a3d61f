@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_b1b73a35",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-07T11:51:07Z",
+      "side": 0,
+      "message": "Remember, that you need to remove this part in the editor init script[1], too. Otherwise it could be a bit confusing, that you always have to switch to VE again :)\n\n[1] https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.editor/init.js#L33",
+      "revId": "ec6054f461a138cc45835eab3cc24b8748a3d61f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
