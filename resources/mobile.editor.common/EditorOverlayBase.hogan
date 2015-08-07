@@ -22,3 +22,6 @@
 	{{{spinner}}}
 	{{>content}}
 </div>
+<div class="overlay-footer-container position-fixed">
+	{{>footer}}
+</div>

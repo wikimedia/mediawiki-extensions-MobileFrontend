@@ -664,6 +664,58 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.editor.overlay.withtoolbar' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.editor.overlay',
+			'mobile.loggingSchemas',
+			'oojs-ui.styles.icons-editing-styling',
+			'jquery.textSelection',
+			'mobile.editor.overlay.withtoolbar.images',
+		),
+		'scripts' => array(
+			'resources/mobile.editor.overlay.withtoolbar/AddReferenceOverlay.js',
+			'resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js',
+		),
+		'styles' => array(
+			'resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less'
+		),
+		'templates' => array(
+			'editorFooter.hogan' => 'resources/mobile.editor.overlay.withtoolbar/editorFooter.hogan',
+			'contentAddReference.hogan' =>
+				'resources/mobile.editor.overlay.withtoolbar/contentAddReference.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-editor-bold',
+			'mobile-frontend-editor-italic',
+			'mobile-frontend-editor-reference',
+			'mobile-frontend-editor-insert-reference',
+			'mobile-frontend-editor-reference-placeholder',
+			'mobile-frontend-editor-italic-text',
+			'mobile-frontend-editor-bold-text',
+			'mobile-frontend-editor-add-reference',
+		),
+	),
+
+	'mobile.editor.overlay.withtoolbar.images' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderImageModule',
+		'prefix' => 'oo-ui-icon',
+		'selector' => '.oo-ui-icon-{name}',
+		'position' => 'bottom',
+		'images' => array(
+			'reference' => array(
+				'file' => array(
+					/**
+					 * Reference-icons taken from VisualEditor team:
+					 * https://github.com/wikimedia/mediawiki-extensions-VisualEditor/blob/
+					 * 3e2f7f07285cf361adf8563667ff602ca938a859/modules/ve-mw/ui/styles/ve.ui.Icons.css
+					 */
+					'rtl' => 'images/icons/reference-rtl.svg',
+					'ltr' => 'images/icons/reference-ltr.svg',
+				),
+			),
+		)
+	),
+
 	'mobile.talk' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',

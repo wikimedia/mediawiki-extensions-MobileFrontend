@@ -1,0 +1,51 @@
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+/* add a border to each tool, instead of using a toolgroup for every tool */
+.oo-ui-widget {
+	border-left: 1px solid @grayLight;
+}
+
+/* remove the doubled border for the toolgroup element */
+.oo-ui-toolGroup {
+	border-left: 0;
+}
+
+// Adjustments for OOJs UI Toolbars in mobile
+.overlay-footer {
+	// center-align buttons
+	text-align: center;
+
+	.toolbar {
+		// Expand the toolbar as wide as possible to limit the size of the
+		// overlay-action. (Both are displayed as table-cells.)
+		width: 100%;
+		.oo-ui-toolbar {
+			// Everything is measured in ems so the easiest way to scale
+			// is to change the base font size.
+			font-size: unit( @targetIconSize / @baseIconSize, em );
+			.oo-ui-iconElement-icon {
+				/* We should be able to use 'contain' here, but some OOUI icon containers are oversized (T85139) */
+				.background-size( @targetIconSize, @targetIconSize );
+			}
+		}
+		.oo-ui-tool-title,
+		.oo-ui-popupToolGroup-header {
+			// Undo font size increase for labels
+			font-size: unit( 0.9 / ( @targetIconSize / @baseIconSize ), em );
+		}
+		.oo-ui-toolbar-bar {
+			// Overlay toolbar has its own borders
+			border: 0;
+		}
+		// Convert 0.3em margin to padding to make clickable area larger
+		.oo-ui-toolGroup {
+			margin: 0;
+		}
+		.oo-ui-barToolGroup .oo-ui-tool-link {
+			padding: 0.25em + 0.3em;
+			// Remove once MF box-sizing is fixed
+			.box-sizing( content-box );
+		}
+	}
+}
