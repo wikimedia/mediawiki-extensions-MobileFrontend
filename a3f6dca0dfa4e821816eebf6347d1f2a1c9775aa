@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4deaf974",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-07T17:42:54Z",
+      "side": 1,
+      "message": "Debounce this. We\u0027ve had a lot of performance issues in mobile browsers with scrolling events that haven\u0027t been debounced.\n.on( \u0027scroll\u0027, $.debounce( 100, $.proxy( this, \u0027onWindowScrollHandler\u0027 ) ) )",
+      "revId": "a3f6dca0dfa4e821816eebf6347d1f2a1c9775aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
