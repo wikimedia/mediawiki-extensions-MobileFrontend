@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_ad127dff",
+        "filename": "tests/qunit/mobile.settings/test_settings.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-07T16:57:46Z",
+      "side": 1,
+      "message": "In the new patch cookie is stubbed so it\u0027ll keep working. Same thing with localStorage.",
+      "parentUuid": "8ec42329_445af953",
+      "revId": "8cd4455e11c2caedf51c71b54c5c3b5185d91ec6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_243b2de9",
         "filename": "tests/qunit/mobile.settings/test_settings.js",
         "patchSetId": 1
