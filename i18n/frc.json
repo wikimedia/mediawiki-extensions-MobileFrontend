@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hangmanwa7id"
+		]
+	},
+	"mobile-frontend-editor-edit": "Changer",
+	"mobile-frontend-home-button": "Accueil",
+	"mobile-frontend-last-modified-date": "Dernière modification le $1, à $2",
+	"mobile-frontend-password-placeholder": "Mot de passe",
+	"mobile-frontend-username-placeholder": "Nom d'useur",
+	"mobile-frontend-view-desktop": "Bureau",
+	"mobile-frontend-view-mobile": "Mobile"
+}
