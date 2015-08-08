@@ -24,6 +24,7 @@ ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleT
 	ve.init.mw.MobileFrontendArticleTarget.super.call( this, config );
 
 	this.overlay = overlay;
+	this.$overlay = overlay.$el;
 	this.$overlayContent = overlay.$el.find( '.overlay-content' );
 	this.$overlaySurface = overlay.$el.find( '.surface' );
 
@@ -51,6 +52,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.destroy.call( this );
 
 	$( this.getElementWindow() ).off( 'scroll', this.onWindowScrollDebounced );
+	this.$overlay.css( 'padding-top', '' );
 };
 
 /**
@@ -110,10 +112,23 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceReady = function () {
 		.append( surface.$element.addClass( 'content' ) )
 		.show();
 
+	surface.getContext().connect( this, { resize: 'adjustContentPadding' } );
+	this.adjustContentPadding();
+
 	// we have to do it here because contenteditable elements still do not
 	// exist when postRender is executed
 	// FIXME: Don't call a private method that is outside the class.
 	this.overlay._fixIosHeader( '[contenteditable]' );
+};
+
+/**
+ * Match the content padding to the toolbar height
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function () {
+	this.$overlay.css(
+		'padding-top',
+		this.getToolbar().$element.outerHeight()
+	);
 };
 
 /*
