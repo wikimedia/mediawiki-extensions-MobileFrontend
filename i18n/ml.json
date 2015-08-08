@@ -6,7 +6,8 @@
 			"Raghith",
 			"Santhosh.thottingal",
 			"Suresh.balasubra",
-			"Vssun"
+			"Vssun",
+			"Nesi"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ഉപയോക്താവ് മൊബൈൽ സമ്പർക്കമുഖം ഉപയോഗിച്ചാണോ അല്ലയോ തിരുത്തുന്നത്",
@@ -106,6 +107,10 @@
 	"mobile-frontend-editor-viewing-source-page": "<span> $1</span> എന്ന താളിന്റെ <strong>മൂലരൂപം കാണുന്നു</strong>",
 	"mobile-frontend-editor-visual-editor": "തിരുത്തുക",
 	"mobile-frontend-editor-wait": "തിരുത്ത് സേവ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക.",
+	"mobile-frontend-editor-reference": "അവലംബം",
+	"mobile-frontend-editor-insert-reference": "അവലംബം ചേർക്കുക",
+	"mobile-frontend-editor-reference-placeholder": "ഏത് സ്രോതസ് ആണ് താങ്കൾ ഉദ്ദേശിക്കുന്നത്?",
+	"mobile-frontend-editor-add-reference": "ചേർക്കുക",
 	"mobile-frontend-enable-images": "മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക",
 	"mobile-frontend-errorreport-button-label": "പിഴവ് അറിയിക്കുക",
 	"mobile-frontend-errorreport-error": "പിഴവ്, പ്രതികരണം പ്രസിദ്ധീകരിക്കാൻ കഴിഞ്ഞില്ല.",
