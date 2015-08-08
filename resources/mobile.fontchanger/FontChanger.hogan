@@ -1,8 +1,8 @@
 <span class="fontchanger enableMessage">{{enableMsg}}</span>
 <div class="mobileoption fontchanger">
-	<button class="mw-ui-button mw-ui-progressive fontchanger minus">-</button>
-	<button class="mw-ui-button fontchanger-value">100%</button>
-	<button class="mw-ui-button mw-ui-progressive fontchanger plus">+</button>
+	{{#minusButton}}{{>button}}{{/minusButton}}
+	{{#valueButton}}{{>button}}{{/valueButton}}
+	{{#plusButton}}{{>button}}{{/plusButton}}
 	<div class="option-description">
 		{{descriptionMsg}}
 	</div>
