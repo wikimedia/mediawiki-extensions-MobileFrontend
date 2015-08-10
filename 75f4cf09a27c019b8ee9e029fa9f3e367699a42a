@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_643fbed4",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-10T23:52:02Z",
+      "side": 1,
+      "message": "This makes history-link-loaded and header-loaded the same.. and both events now fire after the content rather than before the content which was the intention of these events.\n\nWhat this effectively does is make this JavaScript a bottom script - which is an acceptable solution but needs discussion due to the flash of unstyled content. If this is the goal, then we should abandon this HTML altogether and simply change position \u003d\u003e top to position \u003d\u003e bottom\n\nHowever if we want to load these modules quicker as we decided previously what you actually want to do is have two calls to makeInlineScript in the positions they were before..\n\nYou\u0027ve got the right idea with the use of mw.loader.using(\u0027mobile.head\u0027 which ensures mw.mobileFrontend exists.\n\n(note we have a separate history-link-loaded event purely because the last modified bar exists in 2 places in stable/beta - Joaquin we should really make a decision on that as having 2 code paths is obviously confusing and if we do load history at the bottom we can make this a bottom module.)",
+      "revId": "75f4cf09a27c019b8ee9e029fa9f3e367699a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
