@@ -22,7 +22,7 @@
 
 			if ( lastTitle ) {
 				this.continueParams = {
-					continue: '-||',
+					continue: 'gwrcontinue||',
 					gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
 				};
 				this.shouldSkipFirstTitle = true;
@@ -49,6 +49,7 @@
 					prop: 'pageimages|info',
 					piprop: 'thumbnail',
 					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
+					pilimit: this.limit,
 					format: 'json',
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
@@ -61,6 +62,7 @@
 				// then request one extra element (make room for that last title) which
 				// will be removed later when parsing data.
 				params.gwrlimit += 1;
+				params.pilimit += 1;
 			}
 			return this.get( params, {
 				url: this.apiUrl
@@ -106,14 +108,12 @@
 
 			// Transform the items to a sensible format
 			return $.map( pages, function ( item ) {
-				var delta, msgId, thumb, data,
-					pageimageClass = 'list-thumb-none list-thumb-x',
-					listThumbStyleAttribute = '';
+				var delta, msgId, thumb, data;
 
-				if ( item.thumbnail ) {
-					thumb = item.thumbnail;
-					listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-					pageimageClass = thumb.width > thumb.height ? 'list-thumb-y' : 'list-thumb-x';
+				thumb = item.thumbnail;
+
+				if ( thumb ) {
+					thumb.isLandscape = thumb.width > thumb.height;
 				}
 
 				// page may or may not exist.
@@ -128,19 +128,18 @@
 				}
 
 				data = {
-					heading: item.title,
+					displayTitle: item.title,
 					id: item.pageid,
-					listThumbStyleAttribute: listThumbStyleAttribute,
-					pageimageClass: pageimageClass,
-					title: item.title,
 					url: mw.util.getUrl( item.title ),
-					thumbnail: item.thumbnail
+					thumbnail: thumb
 				};
+
 				if ( msgId ) {
 					data.lastModified = mw.msg( 'mobile-frontend-watchlist-modified',
 						mw.msg( msgId, delta.value ) );
 					data.additionalClasses = 'new';
 				}
+
 				return data;
 			} );
 		}

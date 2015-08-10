@@ -94,7 +94,7 @@
 			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
 
 			assert.equal( pages.length, 6, 'Got all the results' );
-			assert.equal( pages[0].title, 'Albert Einstein', 'Sorted alphabetically' );
+			assert.equal( pages[0].displayTitle, 'Albert Einstein', 'Sorted alphabetically' );
 		} );
 	} );
 
@@ -117,13 +117,13 @@
 		api.load().done( function ( pages ) {
 			var params = WatchListApi.prototype.get.firstCall.args[0];
 
-			assert.strictEqual( params.continue, '-||', 'It should set the continue parameter' );
+			assert.strictEqual( params.continue, 'gwrcontinue||', 'It should set the continue parameter' );
 			assert.strictEqual( params.gwrcontinue, '0|Albert_Einstein', 'It should set the watchlistraw-specific continue parameter' );
 
 			// Albert Einstein should not be in the results since it was the last
 			// item in the first page.
 			assert.equal( pages.length, 5, 'Should have Albert removed from the results' );
-			assert.equal( pages[0].title, 'Anne Dallas Dudley', 'First item should be Anne' );
+			assert.equal( pages[0].displayTitle, 'Anne Dallas Dudley', 'First item should be Anne' );
 
 			// Let's call for the next page
 			stub.returns( $.Deferred().resolve( response ) );
@@ -131,7 +131,7 @@
 			api.load().done( function ( pages ) {
 				// Albert Einstein should be the first result of the next page (not removed)
 				assert.equal( pages.length, 6, 'Albert should be in the results' );
-				assert.equal( pages[0].title, 'Albert Einstein', 'First item should be Albert' );
+				assert.equal( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
 			} );
 		} );
 	} );
