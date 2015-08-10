@@ -16,7 +16,11 @@
 // FIXME: remove the .stable .pre-content selector when cache clears
 .stable .pre-content,
 .heading-holder {
-	padding: @titleSectionSpacingTop @contentMargin @titleSectionSpacingBottom;
+	padding: @titleSectionSpacingTop 0 @titleSectionSpacingBottom @contentMargin;
+
+	h1 {
+		padding-right: @contentMargin;
+	}
 
 	.tagline {
 		color: @colorGray5;
@@ -38,11 +42,11 @@
 #page-actions {
 	font-size: 1.1em; // Icons are 24px square.
 	float: right;
-	width: 2.4em;
 	border: none;
 	overflow: hidden;
 
 	li {
+		display: block;
 		// Needed for non-JavaScript users
 		position: relative;
 		cursor: pointer;
