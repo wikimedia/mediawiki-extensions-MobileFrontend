@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Crazymadlover"
+			"Crazymadlover",
+			"JoostBotman"
 		]
 	},
+	"mobile-frontend-editor-edit": "Ἐκδὀς",
 	"mobile-frontend-home-button": "Κυρία",
 	"mobile-frontend-password": "Σῆμα:",
 	"mobile-frontend-search-submit": "Ἰέναι",

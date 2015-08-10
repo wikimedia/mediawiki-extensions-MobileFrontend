@@ -14,7 +14,8 @@
 			"Macofe",
 			"Joan manel",
 			"Ssola",
-			"F3RaN"
+			"F3RaN",
+			"Eduardo Martinez"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
@@ -87,6 +88,14 @@
 	"mobile-frontend-editor-visual-editor": "Modifica",
 	"mobile-frontend-editor-wait": "Desant l'edició, espereu si us plau.",
 	"mobile-frontend-editor-redlink-leave": "No, gràcies.",
+	"mobile-frontend-editor-bold": "Negreta",
+	"mobile-frontend-editor-italic": "Cursiva",
+	"mobile-frontend-editor-bold-text": "Text en negreta",
+	"mobile-frontend-editor-italic-text": "Text en cursiva",
+	"mobile-frontend-editor-reference": "Referència",
+	"mobile-frontend-editor-insert-reference": "Insereix una referència",
+	"mobile-frontend-editor-reference-placeholder": "A quina font et refereixes?",
+	"mobile-frontend-editor-add-reference": "Afegeix",
 	"mobile-frontend-enable-images": "Habilita les imatges al lloc web mòbil",
 	"mobile-frontend-errorreport-button-label": "Informa d'un error",
 	"mobile-frontend-errorreport-feedback": "Gràcies pels comentaris!",
