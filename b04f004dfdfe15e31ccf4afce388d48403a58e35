@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_ded683f6",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-08-10T21:05:01Z",
+      "side": 1,
+      "message": "Presumably needs \u0027echo\u0027.\n\nI don\u0027t know MF\u0027s code base, but if it\u0027s commons that \u0027mw.mobileFrontend\u0027 doesn\u0027t exist for some reason, it will still need if(mw.mobileFrontend) inside this string.",
+      "revId": "b04f004dfdfe15e31ccf4afce388d48403a58e35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
