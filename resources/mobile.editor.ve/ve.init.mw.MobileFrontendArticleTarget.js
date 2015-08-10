@@ -20,13 +20,13 @@
  * @param {Object} [config] Configuration options
  */
 ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleTarget( overlay, config ) {
-	// Parent constructor
-	ve.init.mw.MobileFrontendArticleTarget.super.call( this, config );
-
 	this.overlay = overlay;
 	this.$overlay = overlay.$el;
-	this.$overlayContent = overlay.$el.find( '.overlay-content' );
 	this.$overlaySurface = overlay.$el.find( '.surface' );
+	this.useScrollContainer = ve.init.platform.constructor.static.isIos();
+
+	// Parent constructor
+	ve.init.mw.MobileFrontendArticleTarget.super.call( this, config );
 
 	// Events
 	this.onWindowScrollDebounced = ve.debounce( this.onWindowScroll.bind( this ), 100 );
@@ -55,26 +55,66 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
 	this.$overlay.css( 'padding-top', '' );
 };
 
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.getScrollContainer = function () {
+	if ( this.useScrollContainer ) {
+		return this.overlay.$el.find( '.overlay-content' );
+	}
+	// Parent method
+	return ve.init.mw.MobileFrontendArticleTarget.super.prototype.getScrollContainer.call( this );
+};
+
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.isToolbarOverSurface = function () {
+	return true;
+};
+
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
+	// MF provides the toolbar so there is no need to float the toolbar
+};
+
 /**
  * Handle window scroll events
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	var target = this;
 	// The window can only scroll in iOS if the keyboard has been opened
-	if ( ve.init.platform.constructor.static.isIos() ) {
+	if ( this.useScrollContainer ) {
 		// iOS applies a scroll offset to the window to move the cursor
 		// into view. Apply this offset to the surface instead.
-		var range,
-			nativeSelection = target.getSurface().getView().nativeSelection,
-			windowTop = $( window ).scrollTop(),
-			contentTop = target.$overlayContent.scrollTop();
+		var $window = $( target.getElementWindow() ),
+			windowTop = $window.scrollTop(),
+			contentTop = target.$scrollContainer.scrollTop();
 
-		$( window ).scrollTop( 0 );
-		target.$overlayContent.scrollTop( contentTop + windowTop );
+		$window.scrollTop( 0 );
+		target.scrollTo( contentTop + windowTop );
+		// Make sure we didn't overshoot the cursor
+		target.scrollCursorIntoView( target.getSurface() );
+	}
+};
 
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.scrollTo = function () {
+	// Parent method
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.scrollTo.apply( this, arguments );
+
+	var range, nativeSelection,
+		surface = this.getSurface();
+
+	if ( ve.init.platform.constructor.static.isIos() && surface ) {
 		// iOS has another bug (!) where if you change the scroll offset of a
 		// contentEditable with a cursor visible it disappears, so remove and
 		// reapply the selection in that case.
+		nativeSelection = surface.getView().nativeSelection;
 		if ( nativeSelection.rangeCount && document.activeElement.contentEditable === 'true' ) {
 			range = nativeSelection.getRangeAt(0);
 			nativeSelection.removeAllRanges();
@@ -125,10 +165,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceReady = function () {
  * Match the content padding to the toolbar height
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function () {
-	this.$overlay.css(
-		'padding-top',
-		this.getToolbar().$element.outerHeight()
-	);
+	var toolbarHeight = this.getToolbar().$element.outerHeight(),
+		surface = this.getSurface();
+	surface.setToolbarHeight( toolbarHeight );
+	this.$overlay.css( 'padding-top', toolbarHeight );
+	this.scrollCursorIntoView( surface );
 };
 
 /*
