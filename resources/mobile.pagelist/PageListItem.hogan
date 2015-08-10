@@ -1,5 +1,5 @@
 <li title="{{title}}" data-id="{{id}}" class="page-summary">
-  <a href="{{url}}" class="title {{additionalClasses}}"
+  <a href="{{url}}" class="title {{#isMissing}}new{{/isMissing}}"
     {{#anchor}}name="{{anchor}}"{{/anchor}}
     {{#latitude}}data-latlng="{{latitude}},{{longitude}}"{{/latitude}}
     data-title="{{title}}">

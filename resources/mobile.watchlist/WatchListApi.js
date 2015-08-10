@@ -51,6 +51,7 @@
 					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
 					pilimit: this.limit,
 					format: 'json',
+					formatversion: 2,
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
@@ -128,6 +129,7 @@
 				}
 
 				data = {
+					isMissing: item.missing ? true : false,
 					displayTitle: item.title,
 					id: item.pageid,
 					url: mw.util.getUrl( item.title ),
@@ -137,9 +139,7 @@
 				if ( msgId ) {
 					data.lastModified = mw.msg( 'mobile-frontend-watchlist-modified',
 						mw.msg( msgId, delta.value ) );
-					data.additionalClasses = 'new';
 				}
-
 				return data;
 			} );
 		}

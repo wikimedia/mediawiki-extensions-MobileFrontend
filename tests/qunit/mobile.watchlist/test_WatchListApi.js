@@ -75,6 +75,13 @@
 						lastrevid: 1319,
 						length: 54839,
 						new: ''
+					},
+					'-1': {
+						ns: 0,
+						title: 'zzzz',
+						missing: true,
+						contentmodel: 'wikitext',
+						pagelanguage: 'en'
 					}
 				}
 			}
@@ -93,7 +100,7 @@
 
 			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
 
-			assert.equal( pages.length, 6, 'Got all the results' );
+			assert.equal( pages.length, 7, 'Got all the results' );
 			assert.equal( pages[0].displayTitle, 'Albert Einstein', 'Sorted alphabetically' );
 		} );
 	} );
@@ -122,7 +129,7 @@
 
 			// Albert Einstein should not be in the results since it was the last
 			// item in the first page.
-			assert.equal( pages.length, 5, 'Should have Albert removed from the results' );
+			assert.equal( pages.length, 6, 'Should have Albert removed from the results' );
 			assert.equal( pages[0].displayTitle, 'Anne Dallas Dudley', 'First item should be Anne' );
 
 			// Let's call for the next page
@@ -130,7 +137,7 @@
 
 			api.load().done( function ( pages ) {
 				// Albert Einstein should be the first result of the next page (not removed)
-				assert.equal( pages.length, 6, 'Albert should be in the results' );
+				assert.equal( pages.length, 7, 'Albert should be in the results' );
 				assert.equal( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
 			} );
 		} );
@@ -147,6 +154,18 @@
 		api = new WatchListApi();
 		api.load().done( function ( pages ) {
 			assert.deepEqual( pages, [] );
+		} );
+	} );
+
+	QUnit.test( 'it should mark pages as new if necessary', 2, function ( assert ) {
+		this.sandbox.stub( WatchListApi.prototype, 'get' )
+			.returns( $.Deferred().resolve( response ) );
+
+		var api = new WatchListApi();
+
+		api.load().done( function ( pages ) {
+			assert.equal( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );
+			assert.equal( pages[6].isMissing, true, 'zzzz page is marked as new' );
 		} );
 	} );
 
