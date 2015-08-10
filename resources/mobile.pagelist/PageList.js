@@ -18,14 +18,13 @@
 		 *   {
 		 *     heading: "<strong>C</strong>laude Monet",
 		 *     id: undefined,
-		 *     listThumbStyleAttribute: "background-image: url(http://127.0.0.1:8080/images/thumb/thumb.jpg)",
-		 *     pageimageClass: "list-thumb-y",
-		 *     title: "Claude Monet",
+		 *     displayTitle: "Claude Monet",
 		 *     url: "/wiki/Claude_Monet",
 		 *     thumbnail: {
 		 *       height: 62,
 		 *       source: "http://127.0.0.1:8080/images/thumb/thumb.jpg",
-		 *       width: 80
+		 *       width: 80,
+		 *       isLandscape: true
 		 *     }
 		 *   }
 		 * ]
@@ -43,13 +42,13 @@
 		 */
 		renderPageImages: function () {
 			if ( !this.options.imagesDisabled ) {
-				var $ul = this.$( '.page-list' ),
-					// Delay an unnecessary load of images on mobile (slower?) connections
-					// In particular on search results which can be regenerated quickly.
+				// Delay an unnecessary load of images on mobile (slower?) connections
+				// In particular on search results which can be regenerated quickly.
+				var self = this,
 					delay = browser.isWideScreen() ? 0 : 1000;
 
 				window.setTimeout( function () {
-					$ul.find( '.list-thumb' ).each( function () {
+					self.$( '.list-thumb' ).each( function () {
 						var style = $( this ).data( 'style' );
 						$( this ).attr( 'style', style );
 					} );
