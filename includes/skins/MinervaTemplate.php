@@ -316,20 +316,29 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContentWrapper( $data ) {
-		$script = "mw.loader.using('mobile.head', function () {";
 		if ( $this->renderHistoryLinkBeforeContent ) {
 			echo $this->getHistoryLinkTopHtml( $data );
-			$script .= "mw.mobileFrontend.emit( 'history-link-loaded' );";
+		?>
+			<script>
+				if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
+			</script>
+		<?php
 		}
-		$script .= "mw.mobileFrontend.emit( 'header-loaded' );";
-		$this->renderPreContent( $data );
-		$this->renderContent( $data );
-		if ( !$this->renderHistoryLinkBeforeContent ) {
-			echo $this->getHistoryLinkTopHtml( $data );
-			$script .= "mw.mobileFrontend.emit( 'history-link-loaded' );";
-		}
-		$script .= "});";
-		echo ResourceLoader::makeInlineScript( $script );
+		?>
+		<script>
+			if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'header-loaded' ); }
+		</script>
+		<?php
+			$this->renderPreContent( $data );
+			$this->renderContent( $data );
+			if ( !$this->renderHistoryLinkBeforeContent ) {
+				echo $this->getHistoryLinkTopHtml( $data );
+		?>
+				<script>
+					if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
+				</script>
+		<?php
+			}
 	}
 
 	/**
