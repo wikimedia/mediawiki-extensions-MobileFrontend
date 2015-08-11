@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var FontChanger,
 		View = M.require( 'View' ),
+		Button = M.require( 'Button' ),
 		settings = M.require( 'settings' );
 
 	/**
@@ -9,8 +10,32 @@
 	 * @extends View
 	 */
 	FontChanger = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Object} defaults.viewLink Anchor options for a link to wikidata page.
+		*/
+		defaults: {
+			plusButton: new Button( {
+				progressive: true,
+				additionalClassNames: 'fontchanger plus',
+				label: '+'
+			} ).options,
+			minusButton: new Button( {
+				progressive: true,
+				additionalClassNames: 'fontchanger minus',
+				label: '-'
+			} ).options,
+			valueButton: new Button( {
+				additionalClassNames: 'fontchanger-value',
+				label: '100%'
+			} ).options
+		},
 		/** @inheritdoc */
 		template: mw.template.get( 'mobile.fontchanger', 'FontChanger.hogan' ),
+		/** @inheritdoc */
+		templatePartials: {
+			button: Button.prototype.template
+		},
 		/**
 		 * Save the actual font size setting.
 		 * @method
