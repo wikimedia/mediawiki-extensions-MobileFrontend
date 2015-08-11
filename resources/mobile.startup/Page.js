@@ -26,6 +26,7 @@
 		 * e.g. [{ edit: ['*'] }]
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
 		 * @cfg {Boolean} defaults.isMainPage Whether the page is the Main Page.
+		 * @cfg {Boolean} defaults.isMissing Whether the page exists in the wiki.
 		 * @cfg {String} defaults.hash Window location hash.
 		 * @cfg {Object} defaults.thumbnail thumbnail definition corresponding to page image
 		 * @cfg {Boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
@@ -42,6 +43,7 @@
 				edit: [ '*' ]
 			},
 			sections: [],
+			isMissing: false,
 			isMainPage: false,
 			hash: window.location.hash,
 			url: undefined,
@@ -73,6 +75,7 @@
 			this.thumbnail = options.thumbnail;
 			this.url = options.url || mw.util.getUrl( options.title );
 			this.id = options.id;
+			this.isMissing = options.isMissing;
 			thumb = this.thumbnail;
 			if ( thumb && thumb.width ) {
 				this.thumbnail.isLandscape = thumb.width > thumb.height;
