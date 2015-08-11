@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_389f9257",
+        "filename": "tests/qunit/mobile.settings/test_settings.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T23:19:15Z",
+      "side": 1,
+      "message": "I\u0027d separate this into a separate module - this would allow us to easily write a test for when localStorage.setItem throws an exception too and would be a more accurate test for this which currently relies heavily on the fact that our implementation will never change (we might decide to no longer use browser e.g. my mw.settings patch).",
+      "revId": "651af5e11fb894f2145b46c1cee6d529992a32a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
