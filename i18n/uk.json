@@ -132,6 +132,7 @@
 	"mobile-frontend-editor-italic-text": "Курсивний текст",
 	"mobile-frontend-editor-reference": "Примітка",
 	"mobile-frontend-editor-insert-reference": "Вставити примітку",
+	"mobile-frontend-editor-reference-placeholder": "На яке джерело Ви посилаєтесь?",
 	"mobile-frontend-editor-add-reference": "Додати",
 	"mobile-frontend-enable-images": "Увімкнути зображення на мобільному сайті",
 	"mobile-frontend-errorreport-button-label": "Повідомити про помилку",

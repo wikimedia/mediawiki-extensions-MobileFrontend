@@ -4,5 +4,16 @@
 			"Hugo.arg"
 		]
 	},
-	"mobile-frontend-view": "Parveiza so mobėlio telepuono"
+	"mobile-frontend-changeslist-nocomment": "nie keitėma pāiškėnėma",
+	"mobile-frontend-editor-edit": "Taisītė",
+	"mobile-frontend-generic-login": "{{SITENAME}} īr sokorta prietėliu, tuokiu, kāp ė Tamsta.",
+	"mobile-frontend-login": "Prėsėjongtė",
+	"mobile-frontend-main-menu-account-create": "Pasėdėrbtė paskīra",
+	"mobile-frontend-main-menu-button-tooltip": "At'darītė pagrėndėni meniū",
+	"mobile-frontend-password-placeholder": "Slaptažuodis",
+	"mobile-frontend-privacy-link-text": "Asabnoms",
+	"mobile-frontend-terms-text": "Nauduojėma ėšlīgas",
+	"mobile-frontend-username-placeholder": "Nauduotuojė vards",
+	"mobile-frontend-view": "Parveiza so mobėlio telepuono",
+	"mobile-frontend-view-mobile": "Muobėlos"
 }

@@ -18,7 +18,8 @@
 			"Fringio",
 			"Martinligabue",
 			"Alexmar983",
-			"The Polish"
+			"The Polish",
+			"Statix64"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -117,6 +118,7 @@
 	"mobile-frontend-editor-italic-text": "Testo in corsivo",
 	"mobile-frontend-editor-reference": "Riferimento",
 	"mobile-frontend-editor-insert-reference": "Inserisci riferimento",
+	"mobile-frontend-editor-reference-placeholder": "A che fonte ti riferisci?",
 	"mobile-frontend-editor-add-reference": "Aggiungi",
 	"mobile-frontend-enable-images": "Abilita le immagini sul sito per dispositivi mobili",
 	"mobile-frontend-errorreport-heading": "Segnala un errore",
