@@ -32,32 +32,58 @@
 	}
 
 	/**
-	 * Assigns a user to a bucket.
+	 * Gets the bucket for the experiment given the token.
 	 *
 	 * The name of the experiment and the user's token are hashed. The hash is converted to a number
 	 * which is then used to assign the user to a bucket.
 	 *
-	 * Based on the `mw.user.bucket` function.
+	 * Consider the following experiment configuration:
 	 *
-	 * @param {String} experiment
-	 * @param {Object} buckets A map of bucket name to weight, e.g.
-	 *  <code>
-	 *  {
-	 *      "control": 0.5,
-	 *      "A": 0.25,
-	 *      "B": 0.25
-	 *  }
-	 *  </code>
+	 * ```
+	 * {
+	 *   enabled: true,
+	 *   buckets: {
+	 *     control: 0.5
+	 *     A: 0.25,
+	 *     B: 0.25
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * The experiment has three buckets: control, A, and B. The user has a 50% chance of being
+	 * assigned to the control bucket, and a 25% chance of being assigned to either the A or B
+	 * buckets. If the experiment were disabled, then the user would always be assigned to the
+	 * control bucket.
+	 *
+	 * This function is based on the deprecated `mw.user.bucket` function.
+	 *
 	 * @ignore
+	 * @param {Object} experiments A map of experiment name to experiment definition
+	 * @param {String} experiment
 	 * @param {String} token
-	 * @return {String}
+	 * @throws Error If the experiment hasn't been defined
+	 * @returns {String}
 	 */
-	function bucket( experiment, buckets, token ) {
-		var key,
+	function getBucketInternal( experiments, experiment, token ) {
+		var options,
+			buckets,
+			key,
 			range = 0,
 			hash,
 			max,
 			acc = 0;
+
+		if ( !experiments.hasOwnProperty( experiment ) ) {
+			throw new Error( 'The experiment "' + experiment + '" hasn\'t been defined.' );
+		}
+
+		options = experiments[experiment];
+
+		if ( !options.enabled ) {
+			return CONTROL_BUCKET;
+		}
+
+		buckets = options.buckets;
 
 		for ( key in buckets ) {
 			range += buckets[key];
@@ -96,27 +122,14 @@
 		 */
 		getBucket: function ( experiment ) {
 			var experiments = mw.config.get( 'wgMFExperiments' ) || {},
-				options,
-				token;
-
-			if ( !experiments.hasOwnProperty( experiment ) ) {
-				throw new Error( 'The experiment "' + experiment + '" hasn\'t been defined.' );
-			}
-
-			options = experiments[experiment];
-
-			if ( !options.enabled ) {
-				return CONTROL_BUCKET;
-			}
-
-			token = user.getSessionId();
+				token = user.getSessionId();
 
 			// The browser doesn't support local storage? See `browser.supportsLocalStorage`.
 			if ( token === '' ) {
 				return CONTROL_BUCKET;
 			}
 
-			return bucket( experiment, options.buckets, token );
+			return getBucketInternal( experiments, experiment, token );
 		}
 	} );
 
