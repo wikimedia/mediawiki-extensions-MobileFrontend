@@ -444,6 +444,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.head',
 			'jquery.cookie',
+			'mediawiki.storage',
 		),
 		'scripts' => array(
 			'resources/mobile.settings/settings.js',
@@ -512,6 +513,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.user' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.user',
+			'mediawiki.storage',
 			// Ensure M.define exists
 			'mobile.head',
 		),

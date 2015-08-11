@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var settings = M.require( 'settings' ),
-		browser = M.require( 'browser' );
+	var settings = M.require( 'settings' );
 
 	QUnit.module( 'MobileFrontend settings', {
 		setup: function () {
@@ -103,7 +102,7 @@
 		setup: function () {
 			var localStorageCache = {};
 
-			this.sandbox.stub( browser, 'supportsLocalStorage' ).returns( true );
+			this.sandbox.stub( mw.storage, 'isLocalStorageSupported', true );
 			this.sandbox.stub( localStorage, 'setItem' ).throws();
 			this.sandbox.stub( localStorage, 'getItem', function ( key ) {
 				// localStorage returns null for missing items
@@ -119,9 +118,10 @@
 		}
 	} );
 	QUnit.test( 'without cookies or localStorage', 3, function ( assert ) {
-		assert.throws( function () {
-			settings.set( 'test_key', 'yep' );
-		}, 'Throw an exception when localStorage is not available.' );
+		assert.strictEqual(
+			settings.save( 'test_key', 'yep' ),
+			false,
+			'Returns false when unable to save.' );
 
 		assert.strictEqual(
 			settings.get( 'test_key' ),

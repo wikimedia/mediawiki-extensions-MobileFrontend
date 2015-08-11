@@ -2,8 +2,6 @@
 
 	var Overlay = M.require( 'Overlay' ),
 		settings = M.require( 'settings' ),
-		browser = M.require( 'browser' ),
-		preferredSupported = browser.supportsLocalStorage(),
 		LanguageOverlay;
 
 	/**
@@ -51,9 +49,7 @@
 			if ( options.variants && options.variants.length ) {
 				options.variantHeader = mw.msg( 'mobile-frontend-language-variant-header' );
 			}
-			if ( preferredSupported ) {
-				langMap = settings.get( 'langMap' );
-			}
+			langMap = settings.get( 'langMap' );
 			this.languageMap = langMap ? $.parseJSON( langMap ) : {};
 			if ( options.currentLanguage ) {
 				this.trackLanguage( options.currentLanguage );
@@ -96,9 +92,8 @@
 			}
 
 			this.languageMap = langMap;
-			if ( preferredSupported ) {
-				settings.save( 'langMap', JSON.stringify( langMap ) );
-			}
+			// Attempt to store the map. mw.storage might fail but it's not essential so we don't care.
+			settings.save( 'langMap', JSON.stringify( langMap ) );
 		},
 
 		/**
