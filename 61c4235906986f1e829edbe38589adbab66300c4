@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_1085d4b1",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchListApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T15:45:11Z",
+      "side": 1,
+      "message": "This test would be cool though...",
+      "revId": "61c4235906986f1e829edbe38589adbab66300c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
