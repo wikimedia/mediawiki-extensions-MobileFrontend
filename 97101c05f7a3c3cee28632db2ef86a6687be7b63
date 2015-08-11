@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_a71b6381",
+        "filename": "resources/mobile.pagelist/PageListItem.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-11T19:48:55Z",
+      "side": 0,
+      "message": "\"missing\" and \"new\" are two different things to me. \"new\" may mean some article that\u0027s been recently created. If you want to style missing pages with red font-color that\u0027s fine, but shouldn\u0027t we also keep new articles and be able to style them with additionalClasses?",
+      "parentUuid": "6ec1af18_67a9fb20",
+      "revId": "97101c05f7a3c3cee28632db2ef86a6687be7b63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_24f45683",
         "filename": "resources/mobile.watchlist/WatchListApi.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 0,
       "message": "I\u0027m confused. I\u0027m not removing this. I\u0027m adding it in the template.\nThe `new` class is supposed to mean missing  page judging by th css. It seems to have been misinterpreted here as \u0027recently-edited\u0027 which is not what it means.",
       "parentUuid": "6ec1af18_24f45683",
+      "revId": "97101c05f7a3c3cee28632db2ef86a6687be7b63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_070a7729",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-11T19:48:55Z",
+      "side": 0,
+      "message": "OK, if it doesn\u0027t mean recently-edited, then it\u0027s fine. Also ignore my previous comment.",
+      "parentUuid": "6ec1af18_27a3f340",
       "revId": "97101c05f7a3c3cee28632db2ef86a6687be7b63",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
