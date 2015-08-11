@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_5dde1072",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-11T20:39:16Z",
+      "side": 0,
+      "message": "This data is directly fed into a template. It is not used to construct a Page object. That\u0027s why we need to calculate isLandscape here.",
+      "revId": "0314ab37a7851cc03048a92cbb0e1bfdb66b149d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
