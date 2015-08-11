@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_18ebb6a1",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T23:30:25Z",
+      "side": 1,
+      "message": "Use M.on( \u0027resize\u0027 which is debounced.",
+      "revId": "0e913d258fd9c71e5fdd3a184566c743979d9001",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d8052e7e",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T23:30:25Z",
+      "side": 1,
+      "message": "Don\u0027t use a global. Use this.$el",
+      "revId": "0e913d258fd9c71e5fdd3a184566c743979d9001",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_78fafa74",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T23:30:25Z",
+      "side": 1,
+      "message": "You could use toggleClass here using the result of .innerHeight - e.g. this could be a single liner :)",
+      "revId": "0e913d258fd9c71e5fdd3a184566c743979d9001",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
