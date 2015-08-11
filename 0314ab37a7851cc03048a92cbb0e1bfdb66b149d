@@ -16,6 +16,24 @@
       "revId": "0314ab37a7851cc03048a92cbb0e1bfdb66b149d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_18a3b640",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-11T23:49:10Z",
+      "side": 0,
+      "message": "Yeh.. looks like WatchstarPageList is a mess.\nBasically a PageList has an option `pages` which is supposed to be an array of Page which is causing my confusion.\n\nIt feels icky doing this line twice - ideally this should do new Page( data ) here but we\u0027ll need to rethink the other code... o_O.",
+      "parentUuid": "6ec1af18_5dde1072",
+      "revId": "0314ab37a7851cc03048a92cbb0e1bfdb66b149d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
