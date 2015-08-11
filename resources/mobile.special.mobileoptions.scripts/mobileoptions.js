@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Checkbox,
 		context = M.require( 'context' ),
+		FontChanger = M.require( 'modules/fontchanger/FontChanger' ),
 		View = M.require( 'View' ),
 		settings = M.require( 'settings' );
 
@@ -28,12 +29,13 @@
 	} );
 
 	/**
-	 * Add a new 'expand sections' checkbox in alpha.
+	 * Add features, that depends on localStorage, such as "exapnd all sections" or "fontchanger".
 	 * The checkbox is used for turning on/off expansion of all sections on page load.
 	 * @method
 	 */
-	function initLocalStorageCheckboxes() {
+	function initLocalStorageElements() {
 		var cb,
+			fc,
 			saveLI = $( '#mw-mf-settings-save' );
 
 		if ( context.isAlphaGroupMember() ) {
@@ -44,7 +46,16 @@
 			} );
 			cb.insertBefore( saveLI );
 		}
+
+		if ( context.isBetaGroupMember() ) {
+			fc = new FontChanger( {
+				name: 'userFontSize',
+				enableMsg: mw.msg( 'mobile-frontend-fontchanger-link' ),
+				descriptionMsg: mw.msg( 'mobile-frontend-fontchanger-desc' )
+			} );
+			fc.insertBefore( saveLI );
+		}
 	}
 
-	$( initLocalStorageCheckboxes );
+	$( initLocalStorageElements );
 }( mw.mobileFrontend, jQuery ) );

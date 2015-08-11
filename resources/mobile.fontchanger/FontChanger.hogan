@@ -1,8 +1,9 @@
-{{{cancelButton}}}
-<p>{{descriptionMsg}}</p>
-<div class="mw-ui-button-group sizes">
-  <div class="mw-ui-button fontchanger-size1 {{size1}}" data-size="70">A</div>
-  <div class="mw-ui-button fontchanger-size2 {{size2}}" data-size="100">A</div>
-  <div class="mw-ui-button fontchanger-size3 {{size3}}" data-size="130">A</div>
+<span class="fontchanger enableMessage">{{enableMsg}}</span>
+<div class="mobileoption fontchanger">
+	<button class="mw-ui-button mw-ui-progressive fontchanger minus">-</button>
+	<button class="mw-ui-button fontchanger-value">100%</button>
+	<button class="mw-ui-button mw-ui-progressive fontchanger plus">+</button>
+	<div class="option-description">
+		{{descriptionMsg}}
+	</div>
 </div>
-<div style="clear:both"></div>

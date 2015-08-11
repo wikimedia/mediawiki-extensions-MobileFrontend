@@ -1436,7 +1436,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	// FIXME: disable font changer, until there is a better place - see task T95198
+	'mobile.fontchanger.init' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.settings',
+		),
+		'scripts' => array(
+			'resources/mobile.fontchanger.init/init.js',
+		),
+		'position' => 'top',
+	),
+
 	'mobile.fontchanger' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1446,7 +1456,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'resources/mobile.fontchanger/FontChanger.js',
-			'resources/mobile.fontchanger/init.js',
 		),
 		'styles' => array(
 			'resources/mobile.fontchanger/FontChanger.less'
@@ -1455,10 +1464,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'FontChanger.hogan' => 'resources/mobile.fontchanger/FontChanger.hogan',
 		),
 		'messages' => array(
-			'mobile-frontend-fontchanger-desc'
+			'mobile-frontend-fontchanger-desc',
+			'mobile-frontend-fontchanger-link',
 		),
-		'position' => 'top',
 	),
+
 	'mobile.infiniteScroll' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.oo',
@@ -1588,6 +1598,7 @@ $wgMobileSpecialPageModules = array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.settings',
+			'mobile.fontchanger',
 		),
 		'scripts' => array(
 			'resources/mobile.special.mobileoptions.scripts/mobileoptions.js',
@@ -1847,6 +1858,7 @@ $wgMinervaBootstrapModules = array(
 			// load code under certain conditions.
 			'mobile.bannerImage',
 			'mobile.search.beta',
+			'mobile.fontchanger.init',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.beta.scripts/bannerImage.js',
@@ -1860,7 +1872,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.infobox',
 			'mobile.errorReport',
 			'mobile.quickLookup',
-			'mobile.fontchanger',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
