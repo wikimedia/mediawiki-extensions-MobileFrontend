@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a00d8043",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T21:25:38Z",
+      "side": 1,
+      "message": "I\u0027m seeing\n`To protect the wiki against automated account creation, we kindly ask you to enter the words that appear below in the box (more info):\n\nCAPTCHA Security check`\n\nI would expect this to be hidden.",
+      "revId": "4a67ba4d9347a55f8d9a23d72fd66b3086dee6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_203bd0e9",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T21:25:38Z",
+      "side": 1,
+      "message": ".alpha only for the time being :)",
+      "revId": "4a67ba4d9347a55f8d9a23d72fd66b3086dee6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_001d7478",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T21:25:38Z",
+      "side": 1,
+      "message": "This is more specific then the padding rule below.",
+      "revId": "4a67ba4d9347a55f8d9a23d72fd66b3086dee6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2022f0b1",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T21:25:38Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be necessary to make alpha/stable look the same.\n\nhowever add a `position: relative;` on .fancycaptcha-image-container",
+      "revId": "4a67ba4d9347a55f8d9a23d72fd66b3086dee6cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
