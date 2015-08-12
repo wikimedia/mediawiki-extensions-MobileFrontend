@@ -16,7 +16,10 @@
 	margin: 1em 0;
 }
 
-.inputs-box {
+// FIXME: This should be merged with the .captcha rule in the alpha section
+// once the alpha login page is moved to stable
+.inputs-box,
+.captcha {
 	border: solid 1px @colorGray12;
 	border-radius: 5px;
 	overflow: hidden;
@@ -24,7 +27,7 @@
 	margin: 0 0 .8em;
 	text-align: center;
 
-	input:not([type=submit]), img {
+	input:not([type=submit]), img, #wpCaptchaWord {
 		border: none;
 		border-top: solid 1px @colorGray12;
 
@@ -61,22 +64,27 @@
 			display: block;
 		}
 	}
+}
 
-	/* fancycaptcha reload button */
-	#mf-captcha-reload-container {
-		border-top: 1px dashed #e1e1e1;
-		display: inline-block;
-		padding: 14px 25%;
+// FIXME: Should be moved into the .captcha class, once the alpha
+// login page is moved to stable
+/* fancycaptcha reload button */
+#mf-captcha-reload-container,
+.alpha .confirmedit-captcha-reload {
+	border-top: 1px dashed #e1e1e1;
+	display: inline-block;
+	padding: 14px 25%;
 
-		// FIXME: Make use of icon classes
-		.fancycaptcha-reload {
-			color: @colorGray7;
-			font-weight: bold;
-			.background-image('images/login/refresh.png');
-			background-repeat: no-repeat;
-			background-size: 24px;
-			padding: 4px 0px 4px 26px;
-		}
+	// FIXME: Make use of icon classes
+	.fancycaptcha-reload,
+	&.fancycaptcha-reload {
+		color: @colorGray7;
+		font-weight: bold;
+		.background-image-svg('icons/refresh.svg', 'icons/refresh.png');
+		background-position: center left;
+		background-repeat: no-repeat;
+		background-size: 16px;
+		padding: 4px 0px 4px 26px;
 	}
 }
 
@@ -110,6 +118,33 @@
 	// reason for account creation is not so important on mobile - it should be obvious through the workflows
 	.mw-createacct-benefits-container {
 		display: none;
+	}
+
+	// CAPTCHA style improvements
+	.captcha {
+		border-radius: 2px;
+		margin: .8em 0 0;
+
+		// CAPTCHA's are well known by internet users, save the space of the explanation
+		> p,
+		label {
+			display: none;
+		}
+
+		// FancyCaptcha things
+		.fancycaptcha-image-container img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.mw-createacct-captcha-assisted {
+			font-size: .8em;
+		}
+
+		.confirmedit-captcha-reload {
+			position: relative;
+		}
 	}
 }
 
