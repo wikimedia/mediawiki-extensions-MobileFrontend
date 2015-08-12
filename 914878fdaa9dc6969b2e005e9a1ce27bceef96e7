@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_86cdfc64",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-12T23:34:25Z",
+      "side": 1,
+      "message": "This seems cache related to me? Removing the override in HTML and removing the css rules in one change will be problematic (old, cached HTML with non present css rules). I suggest to remove the override in one change and remove the css in another change (which will be merged after 30 days).",
+      "revId": "914878fdaa9dc6969b2e005e9a1ce27bceef96e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_46c0742f",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-12T23:34:25Z",
+      "side": 1,
+      "message": ".inputs-box was a thing of MobileFrontend, so can be removed. The entire .captcha rule can be merged with the one in L112.",
+      "revId": "914878fdaa9dc6969b2e005e9a1ce27bceef96e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
