@@ -1321,16 +1321,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikidata.api' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.foreignApi',
-		),
-		'scripts' => array(
-			'resources/mobile.wikidata.api/WikiDataApi.js'
-		),
-	),
-
 	'mobile.betaoptin' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1351,72 +1341,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.betaoptin/BetaOptinPanel.js',
 		),
-	),
-
-	'mobile.hexmd5' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.modules',
-		),
-		'scripts' => array(
-			// FIXME: This library shouldn't be needed. Wikidata api
-			// should return these thumbnail urls for us.
-			'libs/md5/md5.js',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.infobox' => $wgMFResourceParsedMessageModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.wikidata.api',
-			'mobile.ajax',
-			'mobile.hexmd5',
-			'mobile.overlays',
-			'mobile.user',
-			'oojs-ui',
-		),
-		'templates' => array(
-			'Infobox.hogan' => 'resources/mobile.infobox/Infobox.hogan',
-			'EditorOverlayHeader.hogan' => 'resources/mobile.infobox/EditorOverlayHeader.hogan',
-			'EditorOverlayContent.hogan' => 'resources/mobile.infobox/EditorOverlayContent.hogan',
-		),
-		'messages' => array(
-			'mobile-frontend-wikidata-editor-description-label' => array( 'parse' ),
-			'mobile-frontend-time-precision-Gannum',
-			'mobile-frontend-time-precision-Mannum',
-			'mobile-frontend-time-precision-annum',
-			'mobile-frontend-time-precision-millennium',
-			'mobile-frontend-time-precision-century',
-			'mobile-frontend-time-precision-10annum',
-			'mobile-frontend-time-precision-0annum',
-			'mobile-frontend-time-precision-BCE-Gannum',
-			'mobile-frontend-time-precision-BCE-Mannum',
-			'mobile-frontend-time-precision-BCE-annum',
-			'mobile-frontend-time-precision-BCE-millennium',
-			'mobile-frontend-time-precision-BCE-century',
-			'mobile-frontend-time-precision-BCE-10annum',
-			'mobile-frontend-time-precision-BCE-0annum',
-			'january-date',
-			'february-date',
-			'march-date',
-			'april-date',
-			'may-date',
-			'june-date',
-			'july-date',
-			'august-date',
-			'september-date',
-			'october-date',
-			'november-date',
-			'december-date'
-		),
-		'scripts' => array(
-			'resources/mobile.infobox/Infobox.js',
-			'resources/mobile.infobox/WikiDataItemLookupInputWidget.js',
-			'resources/mobile.infobox/InfoboxEditorOverlay.js',
-		),
-		'styles' => array(
-			'resources/mobile.infobox/infobox.less',
-		),
-		'position' => 'top',
 	),
 
 	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1869,7 +1793,6 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'skins.minerva.beta.scripts',
 			// Feature modules that should be loaded in alpha should be listed below here.
-			'mobile.infobox',
 			'mobile.errorReport',
 			'mobile.quickLookup',
 		),
