@@ -151,6 +151,7 @@
 	"mobile-frontend-editor-italic-text": "Texte italique",
 	"mobile-frontend-editor-reference": "Référence",
 	"mobile-frontend-editor-insert-reference": "Insérer une référence",
+	"mobile-frontend-editor-reference-placeholder": "À quelle source vous référez-vous ?",
 	"mobile-frontend-editor-add-reference": "Ajouter",
 	"mobile-frontend-enable-images": "Activer les images sur le site mobile",
 	"mobile-frontend-errorreport-button-label": "Signaler une erreur",

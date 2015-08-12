@@ -9,7 +9,8 @@
 			"Mitulverma13",
 			"Vyom",
 			"Arbhatt",
-			"NehalDaveND"
+			"NehalDaveND",
+			"Nisargjhaveri"
 		]
 	},
 	"action-mf-uploadbutton": "મોબાઈલ સંબંધિત અપલોડ સિસ્ટમ વાપરો.",
@@ -64,6 +65,13 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>સ્રોત જુવો</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "ફેરફાર કરો",
 	"mobile-frontend-editor-wait": "ફેરફાર સેવ થાય છે, કૃપા કરીને રાહ જુઓ.",
+	"mobile-frontend-editor-bold": "ઘાટું",
+	"mobile-frontend-editor-italic": "ત્રાંસું",
+	"mobile-frontend-editor-bold-text": "ઘાટું લખાણ",
+	"mobile-frontend-editor-italic-text": "ત્રાંસું લખાણ",
+	"mobile-frontend-editor-reference": "સંદર્ભ",
+	"mobile-frontend-editor-insert-reference": "સંદર્ભ ઉમેરો",
+	"mobile-frontend-editor-add-reference": "ઉમેરો",
 	"mobile-frontend-enable-images": "મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો",
 	"mobile-frontend-errorreport-submit": "જમા કરો",
 	"mobile-frontend-expand-sections-description": "નવા પાનાની શોધખોળ કરતા શમય હંમેશા તમામ વિભાગો વિસ્તૃત કરો.",
@@ -101,7 +109,6 @@
 	"mobile-frontend-main-menu-watchlist": "ધ્યાનસૂચિ",
 	"mobile-frontend-media-details": "વિવરણ",
 	"mobile-frontend-media-license-link": "અભિજ્ઞાપત્રની સૂચના",
-	"mobile-frontend-meta-data-issues-beta": "પૃષ્ઠમાં ખરાબી",
 	"mobile-frontend-meta-data-issues-header": "ખરાબી",
 	"mobile-frontend-meta-data-issues-header-talk": "આ પાનાં વિષે",
 	"mobile-frontend-missing-image": "ચિત્ર",
