@@ -68,6 +68,7 @@
 
 // FIXME: Should be moved into the .captcha class, once the alpha
 // login page is moved to stable
+// FIXME: Move to ConfirmEdit extension
 /* fancycaptcha reload button */
 #mf-captcha-reload-container,
 .alpha .confirmedit-captcha-reload {
@@ -80,11 +81,19 @@
 	&.fancycaptcha-reload {
 		color: @colorGray7;
 		font-weight: bold;
-		.background-image-svg('icons/refresh.svg', 'icons/refresh.png');
-		background-position: center left;
-		background-repeat: no-repeat;
-		background-size: 16px;
-		padding: 4px 0px 4px 26px;
+		background: none;
+		&:before {
+			content: '';
+			.background-image-svg('icons/refresh.svg', 'icons/refresh.png');
+			background-position: center left;
+			background-repeat: no-repeat;
+			background-size: 16px;
+			width: 1em;
+			height: 1em;
+			display: inline-block;
+			padding-right: 8px;
+			line-height: 1;
+		}
 	}
 }
 
@@ -106,6 +115,8 @@
 .alpha {
 	.mw-ui-vform {
 		margin: auto;
+		width: auto;
+		max-width: @contentMaxWidthTablet;
 	}
 
 	.mw-form-related-link-container {
@@ -113,6 +124,10 @@
 			padding-bottom: 12px;
 			display: block;
 		}
+	}
+
+	.fancycaptcha-image-container {
+		display: inherit;
 	}
 
 	// reason for account creation is not so important on mobile - it should be obvious through the workflows
