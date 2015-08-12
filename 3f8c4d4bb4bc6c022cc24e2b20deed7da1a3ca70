@@ -16,6 +16,24 @@
       "revId": "3f8c4d4bb4bc6c022cc24e2b20deed7da1a3ca70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ebe9297c",
+        "filename": ".jscsrc",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T22:20:20Z",
+      "side": 1,
+      "message": "Each rule is a decision of the code maintainers. I already disagree with the fact we are using requireSpacesInsideBrackets and I intend to discuss it when I get some time.\n\nAny other code repository I\u0027ve worked on encourages smaller commits as they may things easier to review. It might seem like wasting work, but if everyone in our community did small patches and this was the norm reviews would happen quicker and we would be able to follow code changes easier.",
+      "parentUuid": "6ec1af18_93d229d4",
+      "revId": "3f8c4d4bb4bc6c022cc24e2b20deed7da1a3ca70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
