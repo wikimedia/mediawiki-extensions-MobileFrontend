@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c06a0cb1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-12T20:15:46Z",
+      "side": 1,
+      "message": "this could be moved into one if branch with the check for mobile view.",
+      "revId": "7fab202107849adc115124f031ed93c00c31ede2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
