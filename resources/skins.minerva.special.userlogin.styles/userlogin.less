@@ -16,63 +16,10 @@
 	margin: 1em 0;
 }
 
-// FIXME: This should be merged with the .captcha rule in the alpha section
-// once the alpha login page is moved to stable
-.inputs-box,
-.captcha {
-	border: solid 1px @colorGray12;
-	border-radius: 5px;
-	overflow: hidden;
-	background: #fff;
-	margin: 0 0 .8em;
-	text-align: center;
-
-	input:not([type=submit]), img, #wpCaptchaWord {
-		border: none;
-		border-top: solid 1px @colorGray12;
-
-		&:first-child {
-			border-top: none;
-		}
-	}
-
-	input:not([type=submit]) {
-		-webkit-appearance: none;
-		border-radius: 0;
-		padding: .8em .5em;
-		margin: 0;
-	}
-}
-
-.stable {
-	#mw-mf-login,
-	#mw-mf-accountcreate {
-		// FIXME: Remove when mw-ui in MobileFrontend
-		.mw-ui-block {
-			display: block;
-			text-align: center;
-			padding-bottom: 12px;
-		}
-	}
-
-	/* sign up form */
-	form.user-login {
-		padding-bottom: 12px;
-
-		input {
-			width: 100%;
-			display: block;
-		}
-	}
-}
-
-// FIXME: Should be moved into the .captcha class, once the alpha
-// login page is moved to stable
 // FIXME: Move to ConfirmEdit extension
 /* fancycaptcha reload button */
 #mf-captcha-reload-container,
-.beta .confirmedit-captcha-reload,
-.alpha .confirmedit-captcha-reload {
+.confirmedit-captcha-reload {
 	border-top: 1px dashed #e1e1e1;
 	display: inline-block;
 	padding: 14px 25%;
@@ -113,8 +60,7 @@
 	}
 }
 
-.beta,
-.alpha {
+.mw-ui-container {
 	.mw-ui-vform {
 		margin: auto;
 		width: auto;
@@ -141,6 +87,27 @@
 	.captcha {
 		border-radius: 2px;
 		margin: .8em 0 0;
+		border: solid 1px @colorGray12;
+		border-radius: 5px;
+		overflow: hidden;
+		background: #fff;
+		text-align: center;
+
+		input:not([type=submit]), img, #wpCaptchaWord {
+			border: none;
+			border-top: solid 1px @colorGray12;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+
+		input:not([type=submit]) {
+			-webkit-appearance: none;
+			border-radius: 0;
+			padding: .8em .5em;
+			margin: 0;
+		}
 
 		// CAPTCHA's are well known by internet users, save the space of the explanation
 		> p,
@@ -170,83 +137,79 @@
 @media all and (max-width: @wgMFDeviceWidthTablet) {
 	@margin: 12px;
 
-	.beta,
-	.alpha {
-		#userloginForm {
-			// tips are not useful
-			.prefsectiontip,
-			// hide help link
-			#mw-userlogin-help,
-			// benefits are obvious through the workflows
-			#wpReason,
-			// real name in account creation is not so important on mobile
-			#wpRealName,
-			// Hide keep me logged in checkbox on mobile.
-			// FIXME: this should be checked by default on mobile. Use JavaScript to check this?
-			.mw-ui-checkbox {
-				display: none;
-			}
+	#userloginForm {
+		// tips are not useful
+		.prefsectiontip,
+		// hide help link
+		#mw-userlogin-help,
+		// benefits are obvious through the workflows
+		#wpReason,
+		// real name in account creation is not so important on mobile
+		#wpRealName,
+		// Hide keep me logged in checkbox on mobile.
+		.mw-ui-checkbox {
+			display: none !important;
+		}
+	}
+
+	// do not show langage link list
+	// FIXME: After the language list is mobile friendly, it can be re-enabled - Bug T110403
+	#languagelinks {
+		display: none;
+	}
+
+	// account creation
+	#userlogin2 {
+		.loginPassword {
+			border-bottom: 0;
 		}
 
-		// do not show langage link list
-		// FIXME: After the language list is mobile friendly, it can be re-enabled - Bug T110403
-		#languagelinks {
-			display: none;
+		.mw-ui-checkbox {
+			margin: @margin 0;
+		}
+	}
+
+	.mw-ui-vform-field {
+		text-align: center;
+	}
+
+	.mw-ui-vform {
+		margin: auto;
+
+		.mw-ui-input {
+			padding: .8em .5em;
+			border: none;
 		}
 
-		// account creation
-		#userlogin2 {
-			.loginPassword {
-				border-bottom: 0;
-			}
+		// hide on mobile only media queries (placeholder support)
+		.mw-ui-vform-field {
+			margin-bottom: 0;
 
-			.mw-ui-checkbox {
+			.mw-ui-button {
 				margin: @margin 0;
 			}
-		}
 
-		.mw-ui-vform-field {
-			text-align: center;
-		}
+			// user can rely on placeholder attributes in fields media query support should mean placeholder support
+			// but don't hide any checkbox labels
+			> label {
+				display: none;
+			}
 
-		.mw-ui-vform {
-			margin: auto;
-
+			// Make the inputs look connected in mobile mode
 			.mw-ui-input {
-				padding: .8em .5em;
-				border: none;
-			}
+				border: solid 1px @colorGrayLight;
 
-			// hide on mobile only media queries (placeholder support)
-			.mw-ui-vform-field {
-				margin-bottom: 0;
-
-				.mw-ui-button {
-					margin: @margin 0;
-				}
-
-				// user can rely on placeholder attributes in fields media query support should mean placeholder support
-				// but don't hide any checkbox labels
-				> label {
-					display: none;
-				}
-
-				// Make the inputs look connected in mobile mode
-				.mw-ui-input {
-					border: solid 1px @colorGrayLight;
-
-					#wpEmail,
-					&.loginPassword {
-						border-top-left-radius: 0;
-						border-top-right-radius: 0;
-						margin-top: -1px;
-					}
+				#wpEmail,
+				&.loginPassword {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+					margin-top: -1px;
 				}
 			}
 		}
+	}
 
-		#mw-createaccount-another {
-			margin-top: @margin;
-		}
+	#mw-createaccount-another {
+		margin-top: @margin;
 	}
 }
