@@ -146,7 +146,7 @@
 			 */
 			function loadSourceEditor() {
 				var rlModuleName, moduleName;
-				if ( !user.inUserBucketA() && context.isBetaGroupMember() ) {
+				if ( user.inUserBucketA() && context.isBetaGroupMember() ) {
 					moduleName = 'modules/editor/EditorOverlayWithToolbar';
 					rlModuleName = 'mobile.editor.overlay.withtoolbar';
 				} else {

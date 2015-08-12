@@ -15,8 +15,16 @@
 		editor: 'SourceEditorWithFormatting',
 		/** @inheritdoc **/
 		postRender: function () {
+			var self = this;
+
 			this._initializeEditorButtons();
 			EditorOverlay.prototype.postRender.apply( this, arguments );
+			// check, if the toolbar should be still visible on resize
+			setTimeout( function () {
+				self.onResize();
+			}, 0 );
+			// repeat the check whenever the screen size changes
+			M.on( 'resize', $.proxy( this, 'onResize' ) );
 		},
 
 		/**
@@ -149,6 +157,15 @@
 		onStageChanges: function () {
 			this.$( '.overlay-footer-container' ).hide();
 			EditorOverlay.prototype.onStageChanges.apply( this, arguments );
+		},
+
+		/**
+		 * resize-event handler. Check if the overlay height is big enough to hold
+		 * the textarea and the toolbar and both is still visible. If not, hide the
+		 * toolbar.
+		 */
+		onResize: function () {
+			this.$( '.toolbar' ).toggleClass( 'hidden', this.$el.innerHeight() <= 200 );
 		},
 
 		/**
