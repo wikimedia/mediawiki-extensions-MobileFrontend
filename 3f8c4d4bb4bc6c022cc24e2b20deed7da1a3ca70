@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_93d229d4",
+        "filename": ".jscsrc",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-08-12T02:01:54Z",
+      "side": 1,
+      "message": "Throwing away this work just to do it again is rather a waste.",
+      "revId": "3f8c4d4bb4bc6c022cc24e2b20deed7da1a3ca70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
