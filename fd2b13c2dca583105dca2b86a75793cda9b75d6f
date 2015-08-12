@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a03340f2",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-12T20:13:42Z",
+      "side": 1,
+      "message": "Rather than do this\napply the .stable #mf-captcha-reload-container and .stable #mf-captcha-reload-container rules\nto \n.confirmedit-captcha-reload",
+      "revId": "fd2b13c2dca583105dca2b86a75793cda9b75d6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
