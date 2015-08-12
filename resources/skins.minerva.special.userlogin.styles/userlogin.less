@@ -44,7 +44,7 @@
 	}
 }
 
-.stable, .beta {
+.stable {
 	#mw-mf-login,
 	#mw-mf-accountcreate {
 		// FIXME: Remove when mw-ui in MobileFrontend
@@ -71,6 +71,7 @@
 // FIXME: Move to ConfirmEdit extension
 /* fancycaptcha reload button */
 #mf-captcha-reload-container,
+.beta .confirmedit-captcha-reload,
 .alpha .confirmedit-captcha-reload {
 	border-top: 1px dashed #e1e1e1;
 	display: inline-block;
@@ -112,6 +113,7 @@
 	}
 }
 
+.beta,
 .alpha {
 	.mw-ui-vform {
 		margin: auto;
@@ -168,6 +170,7 @@
 @media all and (max-width: @wgMFDeviceWidthTablet) {
 	@margin: 12px;
 
+	.beta,
 	.alpha {
 		#userloginForm {
 			// tips are not useful

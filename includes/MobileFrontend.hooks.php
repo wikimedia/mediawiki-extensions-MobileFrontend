@@ -591,7 +591,7 @@ class MobileFrontendHooks {
 		if (
 			// check, if the core login page should be used, or not
 			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
-			!$context->isAlphaGroupMember()
+			!$context->isBetaGroupMember()
 		) {
 			// if not, overwrite the default login/create templates from core with MF's own ones
 			if ( $mode === 'userlogin' ) {
