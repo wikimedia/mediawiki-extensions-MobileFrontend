@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_66133006",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-12T23:11:22Z",
+      "side": 1,
+      "message": ".beta?",
+      "revId": "70502585ed2ff49efead9c22b8c37ca122e2811a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
