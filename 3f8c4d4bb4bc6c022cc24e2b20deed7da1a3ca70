@@ -34,6 +34,24 @@
       "revId": "3f8c4d4bb4bc6c022cc24e2b20deed7da1a3ca70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_abfb2143",
+        "filename": ".jscsrc",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-08-12T22:22:59Z",
+      "side": 1,
+      "message": "Doing a smaller commit is totally fine. You can make said commit, put it under this one, and we can merge that without issue.",
+      "parentUuid": "6ec1af18_ebe9297c",
+      "revId": "3f8c4d4bb4bc6c022cc24e2b20deed7da1a3ca70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
