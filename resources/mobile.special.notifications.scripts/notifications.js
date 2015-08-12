@@ -79,7 +79,7 @@
 				} );
 			} );
 
-			notContinue = notifications['continue'];
+			notContinue = notifications.continue;
 			if ( unread.length > 0 ) {
 				markAsRead( unread );
 			} else {

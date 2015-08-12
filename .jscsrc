@@ -1,7 +1,6 @@
 {
   "preset": "wikimedia",
 
-  "requireDotNotation": null,
   "requireVarDeclFirst": null,
   "requireSpacesInsideBrackets": null,
   "disallowDanglingUnderscores": null,

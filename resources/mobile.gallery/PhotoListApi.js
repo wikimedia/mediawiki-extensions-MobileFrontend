@@ -123,7 +123,7 @@
 							} );
 
 						if ( resp.hasOwnProperty( 'continue' ) ) {
-							self.continueParams = resp['continue'];
+							self.continueParams = resp.continue;
 						} else {
 							self.canContinue = false;
 						}
