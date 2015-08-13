@@ -40,9 +40,6 @@
 		 * @returns {jQuery.Deferred}
 		 */
 		load: function () {
-			if ( this.canContinue === false ) {
-				return $.Deferred();
-			}
 			var self = this,
 				params = $.extend( {
 					action: 'query',
@@ -57,6 +54,9 @@
 					gwrlimit: this.limit
 				}, this.continueParams );
 
+			if ( this.canContinue === false ) {
+				return $.Deferred();
+			}
 			if ( this.shouldSkipFirstTitle ) {
 				// If we are calling the api from the last item of the previous page
 				// (like the first time when grabbing the last title from the HTML),

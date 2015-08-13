@@ -90,10 +90,10 @@
 	QUnit.module( 'MobileFrontend: WatchListApi', {} );
 
 	QUnit.test( 'load results from the first page', 3, function ( assert ) {
+		var api = new WatchListApi();
+
 		this.sandbox.stub( WatchListApi.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
-
-		var api = new WatchListApi();
 
 		api.load().done( function ( pages ) {
 			var params = WatchListApi.prototype.get.firstCall.args[0];
@@ -144,24 +144,25 @@
 	} );
 
 	QUnit.test( 'it doesn\'t throw an error when no pages are returned', 1, function ( assert ) {
-		var api;
+		var api = new WatchListApi();
 
 		this.sandbox.stub( WatchListApi.prototype, 'get' )
 			.returns( $.Deferred().resolve( {
 				batchcomplete: ''
 			} ) );
 
-		api = new WatchListApi();
 		api.load().done( function ( pages ) {
 			assert.deepEqual( pages, [] );
 		} );
 	} );
 
 	QUnit.test( 'it should mark pages as new if necessary', 2, function ( assert ) {
+		var api;
+
 		this.sandbox.stub( WatchListApi.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
-		var api = new WatchListApi();
+		api = new WatchListApi();
 
 		api.load().done( function ( pages ) {
 			assert.equal( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );

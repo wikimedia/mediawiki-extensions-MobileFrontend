@@ -41,11 +41,13 @@
 		 * @method
 		 */
 		renderPageImages: function () {
+			var delay,
+				self = this;
+
 			if ( !this.options.imagesDisabled ) {
 				// Delay an unnecessary load of images on mobile (slower?) connections
 				// In particular on search results which can be regenerated quickly.
-				var self = this,
-					delay = browser.isWideScreen() ? 0 : 1000;
+				delay = browser.isWideScreen() ? 0 : 1000;
 
 				window.setTimeout( function () {
 					self.$( '.list-thumb' ).each( function () {

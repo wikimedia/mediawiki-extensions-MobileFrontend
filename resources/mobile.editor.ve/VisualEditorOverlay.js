@@ -52,8 +52,8 @@
 		},
 		/** @inheritdoc **/
 		show: function () {
-			EditorOverlayBase.prototype.show.apply( this, arguments );
 			var overlay = this;
+			EditorOverlayBase.prototype.show.apply( this, arguments );
 			if ( this.target !== undefined ) {
 				return;
 			}

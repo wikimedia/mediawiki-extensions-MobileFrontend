@@ -29,13 +29,13 @@
 	} );
 
 	QUnit.test( '#TalkOverlay (new page; anonymous)', 4, function ( assert ) {
-		mw.config.set( 'wgUserName', null );
 		var options = {
 				title: 'Talk:No exist'
 			},
 			overlay = new TalkOverlay( options ),
 			page = overlay.page;
 
+		mw.config.set( 'wgUserName', null );
 		assert.strictEqual( page.title, 'Talk:No exist', 'Title set' );
 		assert.strictEqual( page.getSections().length, 0, 'A page was setup with no sections' );
 
@@ -48,8 +48,10 @@
 	} );
 
 	QUnit.test( '#TalkOverlay (logged in)', 2, function ( assert ) {
+		var overlay;
+
 		mw.config.set( 'wgUserName', 'FlorianSW' );
-		var overlay = new TalkOverlay( {
+		overlay = new TalkOverlay( {
 			title: 'Talk:No exist'
 		} );
 

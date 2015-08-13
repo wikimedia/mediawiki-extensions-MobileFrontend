@@ -28,8 +28,8 @@
 	 * @uses EventEmitter
 	 */
 	function Router() {
-		EventEmitter.prototype.initialize.apply( this, arguments );
 		var self = this;
+		EventEmitter.prototype.initialize.apply( this, arguments );
 		// use an object instead of an array for routes so that we don't
 		// duplicate entries that already exist
 		this.routes = {};

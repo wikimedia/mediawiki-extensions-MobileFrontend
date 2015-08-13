@@ -89,8 +89,10 @@
 		 * FIXME: Code duplication with PhotoList::appendPhoto
 		 */
 		prependPhoto: function ( photoData ) {
+			var photoItem;
+
 			photoData.width = this.api.getWidth();
-			var photoItem = new PhotoItem( photoData ).prependTo( this.$list );
+			photoItem = new PhotoItem( photoData ).prependTo( this.$list );
 			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},

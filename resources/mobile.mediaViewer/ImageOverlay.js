@@ -207,13 +207,14 @@
 		 * @private
 		 */
 		_positionImage: function () {
+			var detailsHeight, windowWidth, windowHeight, windowRatio, $img;
 			this.adjustDetails();
 			// with a hidden details box we have a little bit more space, we just need to use it
-			var detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight(),
-				windowWidth = $( window ).width(),
-				windowHeight = $( window ).height() - detailsHeight,
-				windowRatio = windowWidth / windowHeight,
-				$img = this.$( 'img' );
+			detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight();
+			windowWidth = $( window ).width();
+			windowHeight = $( window ).height() - detailsHeight;
+			windowRatio = windowWidth / windowHeight;
+			$img = this.$( 'img' );
 
 			if ( this.imgRatio > windowRatio ) {
 				if ( windowWidth < this.thumbWidth ) {

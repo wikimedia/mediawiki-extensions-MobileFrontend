@@ -1,6 +1,4 @@
 ( function ( M, $ ) {
-	M.require( 'context' ).assertMode( [ 'alpha' ] );
-
 	var api = M.require( 'api' ),
 		toast = M.require( 'toast' ),
 		Swipe = M.require( 'Swipe' ),
@@ -10,6 +8,7 @@
 		cache = {},
 		drawer;
 
+	M.require( 'context' ).assertMode( [ 'alpha' ] );
 	/**
 	 * Search API for a brief intro about a page.
 	 * @ignore

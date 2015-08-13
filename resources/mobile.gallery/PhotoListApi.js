@@ -114,9 +114,10 @@
 
 			if ( this.canContinue === true ) {
 				this.ajax( this.getQuery() ).done( function ( resp ) {
+					var photos;
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
-						var photos = $.map( resp.query.pages, function ( page ) {
+						photos = $.map( resp.query.pages, function ( page ) {
 								return self._getImageDataFromPage.call( self, page );
 							} ).sort( function ( a, b ) {
 								return a.timestamp < b.timestamp ? 1 : -1;
