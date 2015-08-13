@@ -318,27 +318,30 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderContentWrapper( $data ) {
 		if ( $this->renderHistoryLinkBeforeContent ) {
 			echo $this->getHistoryLinkTopHtml( $data );
-		?>
-			<script>
-				if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
-			</script>
-		<?php
+			echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
 		}
-		?>
-		<script>
-			if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'header-loaded' ); }
-		</script>
-		<?php
-			$this->renderPreContent( $data );
-			$this->renderContent( $data );
-			if ( !$this->renderHistoryLinkBeforeContent ) {
-				echo $this->getHistoryLinkTopHtml( $data );
-		?>
-				<script>
-					if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
-				</script>
-		<?php
-			}
+		echo $this->makeInlineMobileHeadEmitScript( 'header-loaded' );
+		$this->renderPreContent( $data );
+		$this->renderContent( $data );
+		if ( !$this->renderHistoryLinkBeforeContent ) {
+			echo $this->getHistoryLinkTopHtml( $data );
+			echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
+		}
+	}
+
+	/**
+	 * Construct an inline script tag which emits the given event
+	 *
+	 * The emit code will be wrapped in a closure using the mobile.head module
+	 *
+	 * @param string $event Event to emit
+	 * @return WrappedString HTML
+	 */
+	protected function makeInlineMobileHeadEmitScript( $event ) {
+		$script = "mw.loader.using( 'mobile.head', function () {";
+		$script .= "mw.mobileFrontend.emit( '" . $event . "' );";
+		$script .= "} );";
+		return ResourceLoader::makeInlineScript( $script );
 	}
 
 	/**
