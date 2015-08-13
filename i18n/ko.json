@@ -393,7 +393,6 @@
 	"apihelp-parse-param-noimages": "모바일 출력에 그림을 보여주지 않습니다.",
 	"apihelp-parse-param-mainpage": "모바일 대문 변환을 적용합니다.",
 	"mobile-frontend-donate-button-label": "기부",
-	"mobile-frontend-wikidata-editor-description-label": "\"$1\"의 짧은 설명을 제공하세요:",
 	"mobile-frontend-meta-data-issues-categories": "이 분류에 대해",
 	"mobile-frontend-loading-message": "불러오는 중…",
 	"mobile-frontend-days-ago": "$1{{PLURAL:$1|일}} 전",
