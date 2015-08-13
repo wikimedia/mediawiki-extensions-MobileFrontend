@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c4a0d740",
+        "filename": "resources/mobile.mediaViewer.beta/ImageOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-13T19:26:28Z",
+      "side": 1,
+      "message": "Why is _disableArrowImages (a private method) getting called if swipe is not available?",
+      "revId": "2a0209179a15d0ee7cf0be8c129b0fc1f4ddbfe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
