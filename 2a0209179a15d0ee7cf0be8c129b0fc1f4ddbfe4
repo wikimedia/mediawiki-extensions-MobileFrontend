@@ -34,6 +34,24 @@
       "revId": "2a0209179a15d0ee7cf0be8c129b0fc1f4ddbfe4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_dffbc20f",
+        "filename": "resources/mobile.mediaViewer.beta/ImageOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-13T19:40:05Z",
+      "side": 1,
+      "message": "correct.",
+      "parentUuid": "6ec1af18_44a3873f",
+      "revId": "2a0209179a15d0ee7cf0be8c129b0fc1f4ddbfe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
