@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f36cbf07",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-13T15:47:18Z",
+      "side": 0,
+      "message": "Uhh, false hacks.less :D Use skins.minerva.beta.styles instead :)",
+      "revId": "199fca7569577b0fd46fdd57154a4d9aa875e45f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
