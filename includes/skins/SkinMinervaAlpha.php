@@ -51,7 +51,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$config = $this->getMFConfig();
 
 		$vars = parent::getSkinConfigVariables();
-		$vars['wgMFInfoboxConfig'] = $config->get( 'MFInfoboxConfig' );
 		$vars['wgMFShowRedLinks'] = true;
 
 		return $vars;
