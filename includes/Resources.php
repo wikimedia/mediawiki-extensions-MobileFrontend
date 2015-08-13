@@ -1130,16 +1130,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	// Note: Take care with loading this module as it will pull down OOJS UI in addition
 	// to our own code.
 	'mobile.buttonWithSpinner' => $wgMFResourceFileModuleBoilerplate + array(
-			'dependencies' => array(
-				'oojs-ui',
-			),
-			'styles' => array(
-				'resources/mobile.buttonWithSpinner/buttonWithSpinner.less',
-			),
-			'scripts' => array(
-				'resources/mobile.buttonWithSpinner/ButtonWithSpinner.js',
-			),
+		'dependencies' => array(
+			'oojs-ui',
 		),
+		'styles' => array(
+			'resources/mobile.buttonWithSpinner/buttonWithSpinner.less',
+		),
+		'scripts' => array(
+			'resources/mobile.buttonWithSpinner/ButtonWithSpinner.js',
+		),
+	),
 
 	'mobile.errorReport' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
