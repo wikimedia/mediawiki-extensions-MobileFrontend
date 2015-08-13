@@ -203,7 +203,6 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.beta.styles/pageactions.less',
 			'resources/skins.minerva.beta.styles/footer.less',
 			'resources/skins.minerva.beta.styles/main.less',
-			'resources/skins.minerva.beta.styles/hacks.less',
 			'resources/skins.minerva.beta.styles/ui.less',
 		),
 	),
@@ -1798,7 +1797,6 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
-			'resources/skins.minerva.alpha.scripts/infobox.js',
 		)
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
