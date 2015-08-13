@@ -29,7 +29,9 @@
 		/** @inheritdoc */
 		_disableArrowImages: function () {
 			ImageOverlay.prototype._disableArrowImages.apply( this );
-			this.swipe.disable();
+			if ( this.swipe ) {
+				this.swipe.disable();
+			}
 		}
 	} );
 
