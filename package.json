@@ -20,9 +20,8 @@
 	"devDependencies": {
 		"grunt-cli": "0.1.13",
 		"grunt-mkdir": "^0.1.2",
-		"grunt-jscs": "1.8.0",
-		"jscs-jsdoc": "git+https://github.com/jdlrobson/jscs-jsdoc.git#checkParamExistence",
 		"grunt-contrib-jshint": "0.11.2",
+		"grunt-jscs": "2.0.0",
 		"js-beautify": "1.5.10",
 		"grunt-notify": "0.4.1",
 		"grunt-contrib-watch": "0.6.1",
