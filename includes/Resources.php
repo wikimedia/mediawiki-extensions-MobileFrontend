@@ -1141,47 +1141,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.errorReport' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.overlays',
-			'mobile.buttonWithSpinner',
-		),
-		'scripts' => array(
-			'resources/mobile.errorReport/init.js',
-		),
-		'messages' => array(
-			'mobile-frontend-errorreport-button-label',
-		),
-	),
-
-	'mobile.errorReport.overlay' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'mobile.toast',
-		),
-		'scripts' => array(
-			'resources/mobile.errorReport.overlay/ErrorReportOverlay.js',
-		),
-		'styles' => array(
-			'resources/mobile.errorReport.overlay/errorReportOverlay.less',
-		),
-		'messages' => array(
-			'mobile-frontend-editor-licensing',
-			'mobile-frontend-errorreport-error',
-			'mobile-frontend-errorreport-feedback',
-			'mobile-frontend-errorreport-heading',
-			'mobile-frontend-errorreport-instructions',
-			'mobile-frontend-errorreport-placeholder',
-			'mobile-frontend-errorreport-section-title',
-			'mobile-frontend-errorreport-submit',
-			'mobile-frontend-errorreport-summary',
-		),
-		'templates' => array(
-			'ErrorReportOverlay.hogan' => 'resources/mobile.errorReport.overlay/ErrorReportOverlay.hogan',
-		),
-	),
-
 	'mobile.quickLookup' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1792,7 +1751,6 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'skins.minerva.beta.scripts',
 			// Feature modules that should be loaded in alpha should be listed below here.
-			'mobile.errorReport',
 			'mobile.quickLookup',
 		),
 		'scripts' => array(
