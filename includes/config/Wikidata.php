@@ -11,3 +11,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  */
 $wgMFUseWikibaseDescription = false;
 
+/**
+ * Define the property that holds a string representing a category on $wgMFPhotoUploadEndpoint
+ */
+$wgMFWikibaseImageCategory = '';

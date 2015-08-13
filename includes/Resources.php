@@ -1766,6 +1766,9 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.hovercards',
 		),
+		'messages' => array(
+			'mobile-frontend-commons-category-view',
+		),
 		'scripts' => array(
 			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
 			'resources/skins.minerva.alpha.scripts/hovercards.js',
