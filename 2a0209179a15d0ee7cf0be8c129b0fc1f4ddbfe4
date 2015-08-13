@@ -16,6 +16,24 @@
       "revId": "2a0209179a15d0ee7cf0be8c129b0fc1f4ddbfe4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_44a3873f",
+        "filename": "resources/mobile.mediaViewer.beta/ImageOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-13T19:31:24Z",
+      "side": 1,
+      "message": "Because there are not enough images.",
+      "parentUuid": "6ec1af18_c4a0d740",
+      "revId": "2a0209179a15d0ee7cf0be8c129b0fc1f4ddbfe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
