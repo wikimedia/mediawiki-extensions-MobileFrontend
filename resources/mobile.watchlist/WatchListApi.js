@@ -69,7 +69,7 @@
 				url: this.apiUrl
 			} ).then( function ( data ) {
 				if ( data.hasOwnProperty( 'continue' ) ) {
-					self.continueParams = data['continue'];
+					self.continueParams = data.continue;
 				} else {
 					self.canContinue = false;
 				}
