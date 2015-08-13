@@ -945,7 +945,6 @@ class SkinMinerva extends SkinTemplate {
 		$vars = array(
 			'wgMFMenuData' => $this->getMenuData(),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
-			'wgMFWikiDataEndpoint' => $config->get( 'MFWikiDataEndpoint' ),
 			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),
 			'wgMFPhotoUploadAppendToDesc' => $config->get( 'MFPhotoUploadAppendToDesc' ),
 			'wgMFLeadPhotoUploadCssSelector' => $config->get( 'MFLeadPhotoUploadCssSelector' ),
