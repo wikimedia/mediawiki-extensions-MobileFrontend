@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_46f87446",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-13T00:03:58Z",
+      "side": 1,
+      "message": "missing @return",
+      "revId": "5f3363ce127612ec6e50c406a2728e09ef6f05d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
