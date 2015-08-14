@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_22450a6b",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-14T00:49:37Z",
+      "side": 1,
+      "message": "I could swear, that en.json is enough, but I checked https://www.mediawiki.org/wiki/Localisation#Removing_existing_messages and it says to remove message keys from both, en.json and qqq.json?!",
+      "revId": "5868f071d58860d44251a67ada17f743f0a0aaee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
