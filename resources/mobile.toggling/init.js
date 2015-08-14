@@ -211,7 +211,7 @@
 			collapseSectionsByDefault = true;
 		}
 		expandSections = !collapseSectionsByDefault ||
-			( context.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
+			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
 		$container.find( tagName ).each( function ( i ) {
 			var $heading = $( this ),

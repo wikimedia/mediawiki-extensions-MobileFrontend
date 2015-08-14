@@ -38,16 +38,14 @@
 			fc,
 			saveLI = $( '#mw-mf-settings-save' );
 
-		if ( context.isAlphaGroupMember() ) {
+		if ( context.isBetaGroupMember() ) {
 			cb = new Checkbox( {
 				name: 'expandSections',
 				label: mw.msg( 'mobile-frontend-expand-sections-status' ),
 				description: mw.msg( 'mobile-frontend-expand-sections-description' )
 			} );
 			cb.insertBefore( saveLI );
-		}
 
-		if ( context.isBetaGroupMember() ) {
 			fc = new FontChanger( {
 				name: 'userFontSize',
 				enableMsg: mw.msg( 'mobile-frontend-fontchanger-link' ),
