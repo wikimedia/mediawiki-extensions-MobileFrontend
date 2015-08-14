@@ -1142,29 +1142,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.hovercards' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.drawers',
-			'mobile.toast',
-			'mobile.swipe',
-		),
-		'scripts' => array(
-			'resources/mobile.hovercards/HovercardsDrawer.js',
-		),
-		'templates' => array(
-			'Drawer.hogan' => 'resources/mobile.hovercards/Drawer.hogan',
-		),
-		'styles' => array(
-			'resources/mobile.hovercards/hovercards.less',
-		),
-		'messages' => array(
-			"mobile-frontend-quick-lookup-looking",
-			"mobile-frontend-quick-lookup-no-results",
-			"mobile-frontend-quick-lookup-not-internal",
-		),
-	),
-
 	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
@@ -1756,12 +1733,8 @@ $wgMinervaBootstrapModules = array(
 	'skins.minerva.alpha.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.beta.scripts',
-			// Feature modules that should be loaded in alpha should be listed below here.
-			'mobile.hovercards',
 		),
-		'scripts' => array(
-			'resources/skins.minerva.alpha.scripts/hovercards.js',
-		),
+		'scripts' => array(),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
