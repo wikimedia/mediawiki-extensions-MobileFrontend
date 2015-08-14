@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_5e526a6b",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-14T21:38:53Z",
+      "side": 1,
+      "message": "this one for example",
+      "revId": "e4edb887b32422e07675045c4774bf9c6ee7b53d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
