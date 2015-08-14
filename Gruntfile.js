@@ -12,6 +12,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-qunit-istanbul' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
+	grunt.loadNpmTasks( 'grunt-banana-checker' );
 
 	grunt.initConfig( {
 		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -99,10 +100,13 @@ module.exports = function ( grunt ) {
 					reload: true
 				}
 			}
+		},
+		banana: {
+			all: 'i18n/'
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs', 'banana' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
