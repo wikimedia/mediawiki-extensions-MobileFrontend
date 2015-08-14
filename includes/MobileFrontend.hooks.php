@@ -257,50 +257,48 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderTestModules( array &$testModules,
 		ResourceLoader &$resourceLoader
 	) {
-		// FIXME: Global core variable
+		// FIXME: Global core variable don't use it.
 		global $wgResourceModules;
-
-		$testModuleBoilerplate = array(
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'MobileFrontend',
-			'targets' => array( 'mobile' ),
-		);
-
-		// Expose templates module
-		$testModules['qunit']["tests.mobile.templates"] = $testModuleBoilerplate + array(
-			'templates' => array(
-				'section.hogan' => 'tests/qunit/tests.mobile.templates/section.hogan',
-				'issues.hogan' => 'tests/qunit/tests.mobile.templates/issues.hogan',
-			),
-		);
+		$testFiles = array();
+		$dependencies = array();
+		$localBasePath = dirname( __DIR__ );
 
 		// find test files for every RL module
 		foreach ( $wgResourceModules as $key => $module ) {
+			$hasTests = false;
 			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
-				$testFiles = array();
-				$templates = array();
 				foreach ( $module['scripts'] as $script ) {
 					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
 					// For resources folder
 					$testFile = str_replace( 'tests/resources/', 'tests/qunit/', $testFile );
 					// if a test file exists for a given JS file, add it
-					if ( file_exists( $testModuleBoilerplate['localBasePath'] . '/' . $testFile ) ) {
+					if ( file_exists( $localBasePath . '/' . $testFile ) ) {
 						$testFiles[] = $testFile;
+						$hasTests = true;
 					}
 				}
 
 				// if test files exist for given module, create a corresponding test module
-				if ( !empty( $testFiles ) ) {
-					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
-						'dependencies' => array(
-							$key,
-							'tests.mobile.templates',
-						),
-						'scripts' => $testFiles,
-					);
+				if ( $hasTests ) {
+					$dependencies[] = $key;
 				}
 			}
 		}
+
+		$testModule = array(
+			'dependencies' => $dependencies,
+			'templates' => array(
+				'section.hogan' => 'tests/qunit/tests.mobilefrontend/section.hogan',
+				'issues.hogan' => 'tests/qunit/tests.mobilefrontend/issues.hogan',
+			),
+			'localBasePath' => $localBasePath,
+			'remoteExtPath' => 'MobileFrontend',
+			'targets' => array( 'mobile', 'desktop' ),
+			'scripts' => $testFiles,
+		);
+
+		// Expose templates module
+		$testModules['qunit']["tests.mobilefrontend"] = $testModule;
 
 		return true;
 	}
