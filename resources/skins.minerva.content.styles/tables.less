@@ -22,7 +22,7 @@
 		// For skinning normal data tables
 		// Compare with mediawiki.legacy/shared.css
 		&.wikitable {
-			border: 1px solid @grayLightest;
+			border: 1px solid @grayLight;
 
 			// We only style cells that are direct children of the wikitable table since
 			// table tags may be used for non-table purposes within the cells.
@@ -30,8 +30,14 @@
 			> tr > td,
 			> * > tr > th,
 			> * > tr > td {
-				border: 1px solid @grayLightest;
+				border: 1px solid @grayLight;
 				padding: .2em;
+			}
+
+			// Make headings distinguishable
+			> tr > th,
+			> * > tr > th {
+				background-color: @grayLightest;
 			}
 		}
 	}
