@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_81139304",
+        "filename": "resources/mobile.hovercards/hovercards.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-14T22:50:26Z",
+      "side": 1,
+      "message": "we may want to change this too",
+      "revId": "7c07e42194d51cbc6493e9c3cede66a01eb6adc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_21d89f57",
+        "filename": "resources/mobile.hovercards/hovercards.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-14T22:50:26Z",
+      "side": 1,
+      "message": "why are we adding beta here if this module is only loaded in alpha?",
+      "revId": "7c07e42194d51cbc6493e9c3cede66a01eb6adc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
