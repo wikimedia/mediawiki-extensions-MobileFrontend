@@ -17,7 +17,6 @@
     "checkRedundantReturns": true,
     "requireReturnTypes": true,
     "checkTypes": "capitalizedNativeCase",
-    "@fixme": "https://github.com/jscs-dev/jscs-jsdoc/pull/138",
-    "checkParamExistence": true
+    "@fixme": "https://github.com/jscs-dev/jscs-jsdoc/pull/138"
   }
 }
