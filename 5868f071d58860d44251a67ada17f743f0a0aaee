@@ -16,6 +16,24 @@
       "revId": "5868f071d58860d44251a67ada17f743f0a0aaee",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_421db677",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-14T00:50:25Z",
+      "side": 1,
+      "message": "It used to be enough...",
+      "parentUuid": "6ec1af18_22450a6b",
+      "revId": "5868f071d58860d44251a67ada17f743f0a0aaee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
