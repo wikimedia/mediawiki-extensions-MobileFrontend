@@ -17,7 +17,8 @@
 			"Revi",
 			"SeoJeongHo",
 			"Bluemersen",
-			"LiteHell"
+			"LiteHell",
+			"Hwangjy9"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -206,7 +207,7 @@
 	"mobile-frontend-main-menu-watchlist": "주시문서 목록",
 	"mobile-frontend-media-details": "자세한 사항",
 	"mobile-frontend-media-license-link": "라이선스 정보",
-	"mobile-frontend-meta-data-issues": "이 문서에 문제가 있습니다",
+	"mobile-frontend-meta-data-issues": "문서 문제",
 	"mobile-frontend-meta-data-issues-talk": "이 토론 문서에 대해",
 	"mobile-frontend-meta-data-issues-header": "문제",
 	"mobile-frontend-meta-data-issues-header-talk": "이 문서에 대해",
@@ -362,7 +363,7 @@
 	"mobile-frontend-watchlist-view": "내 주시문서 목록 보기",
 	"mobile-frontend-quick-lookup-looking": "이것을 찾고 계십니까? \"$1\"",
 	"mobile-frontend-quick-lookup-no-results": "\"$1\"과(와) 일치하는 어떠한 것도 찾을 수 없었습니다.",
-	"mobile-frontend-quick-lookup-not-internal": "죄송하지만, 이것은 $1 링크가 아닙니다.",
+	"mobile-frontend-quick-lookup-not-internal": "죄송하지만, 이것은 이 위키 안의 링크가 아닙니다.",
 	"mobile.css": "/* 이 CSS 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */",
 	"mobile.js": "/* 이 자바스크립트 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */",
 	"nearby": "근처 문서",
