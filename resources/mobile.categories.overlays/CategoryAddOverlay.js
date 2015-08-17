@@ -22,11 +22,11 @@
 		 * @cfg {String} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
 		 */
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			headerButtonsListClassName: 'overlay-action',
 			waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
 			waitIcon: icons.spinner().toHtmlString()
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */
@@ -45,10 +45,10 @@
 		/**
 		 * @inheritdoc
 		 */
-		templatePartials: {
+		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
-		},
+		} ),
 
 		/**
 		 * @inheritdoc

@@ -34,10 +34,10 @@
 			} ).toHtmlString()
 		} ),
 		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
-		templatePartials: {
+		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
-		},
+		} ),
 		events: $.extend( {}, TalkOverlayBase.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',
 			'change .wikitext-editor, .summary': 'onTextInput',

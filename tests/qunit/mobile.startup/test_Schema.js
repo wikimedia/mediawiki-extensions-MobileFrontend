@@ -1,9 +1,12 @@
 ( function ( $, M ) {
 	var Schema = M.require( 'mobile.startup/Schema' ),
-		TestSchema = Schema.extend( {
-			name: 'test'
-		} );
+		TestSchema = function () {
+			Schema.apply( this, arguments );
+		};
 
+	OO.mfExtend( TestSchema, Schema, {
+		name: 'test'
+	} );
 	// Because these can't be undefined, we have to do this in the module
 	// preamble (not setup and teardown).
 	M.define( 'mobile.loggingSchemas/Schematest', TestSchema );
@@ -45,11 +48,16 @@
 	} );
 
 	QUnit.test( '#sampling and bucketing', 3, function ( assert ) {
-		var TestSchema = Schema.extend( {
-				name: 'test',
-				isSampled: true
-			} ),
-			testSchema = new TestSchema();
+		var testSchema;
+
+		function SampledTestSchema() {
+			Schema.apply( this, arguments );
+		}
+		OO.mfExtend( SampledTestSchema, Schema, {
+			name: 'test',
+			isSampled: true
+		} );
+		testSchema = new SampledTestSchema();
 
 		// Default sampling rate is 0.5, isSampled is true, and Math.random returns 0.4
 		this.sandbox.stub( Math, 'random' ).returns( 0.4 );
@@ -62,9 +70,6 @@
 		assert.strictEqual( testSchema.isUserInBucket(), false, 'user is not in bucket' );
 
 		// Default sampling rate is 0.5, isSampled is false (default), and Math.random returns 0.4
-		TestSchema = Schema.extend( {
-			name: 'test'
-		} );
 		testSchema = new TestSchema();
 		Math.random.restore();
 		this.sandbox.stub( Math, 'random' ).returns( 0.4 );

@@ -22,7 +22,7 @@
 		 * @cfg {Object} defaults.progressiveButton options for Button element for signing in
 		 * @cfg {Object} defaults.actionAnchor options for Anchor element for signing up
 		 */
-		defaults: {
+		defaults: $.extend( {}, Drawer.prototype.defaults, {
 			progressiveButton: new Button( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
@@ -35,12 +35,12 @@
 				name: 'arrow',
 				additionalClassNames: 'cancel'
 			} ).options
-		},
-		templatePartials: {
+		} ),
+		templatePartials: $.extend( {}, Drawer.prototype.templatePartials, {
 			icon: Icon.prototype.template,
 			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
-		},
+		} ),
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
 		/**
 		 * @inheritdoc

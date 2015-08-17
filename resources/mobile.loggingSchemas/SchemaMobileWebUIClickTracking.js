@@ -1,13 +1,16 @@
 ( function ( M ) {
-	var SchemaMobileWebUIClickTracking,
-		SchemaMobileWebClickTracking = M.require(
-			'mobile.loggingSchemas/SchemaMobileWebClickTracking' );
+	var SchemaMobileWebClickTracking = M.require(
+		'mobile.loggingSchemas/SchemaMobileWebClickTracking' );
 
 	/**
 	 * @class SchemaMobileWebUIClickTracking
 	 * @extends SchemaMobileWebClickTracking
 	 */
-	SchemaMobileWebUIClickTracking = SchemaMobileWebClickTracking.extend( {
+	function SchemaMobileWebUIClickTracking() {
+		SchemaMobileWebClickTracking.apply( this, arguments );
+	}
+
+	OO.mfExtend( SchemaMobileWebUIClickTracking, SchemaMobileWebClickTracking, {
 		/** @inheritdoc **/
 		name: 'MobileWebUIClickTracking',
 		/** @inheritdoc */

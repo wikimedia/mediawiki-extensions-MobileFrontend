@@ -127,10 +127,10 @@
 		} );
 
 		ChildView = ParentView.extend( {
-			templatePartials: {
+			templatePartials: $.extend( ParentView.prototype.templatePartials, {
 				b: 3,
 				c: 4
-			}
+			} )
 		} );
 
 		view = new ChildView();
@@ -152,10 +152,10 @@
 		} );
 
 		ChildView = ParentView.extend( {
-			defaults: {
+			defaults: $.extend( ParentView.prototype.defaults, {
 				b: 3,
 				c: 4
-			}
+			} )
 		} );
 
 		view = new ChildView( {

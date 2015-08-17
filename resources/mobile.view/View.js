@@ -1,7 +1,5 @@
 ( function ( M, $ ) {
-
-	var EventEmitter = M.require( 'mobile.oo/eventemitter' ),
-		View,
+	var
 		// Cached regex to split keys for `delegate`.
 		delegateEventSplitter = /^(\S+)\s*(.*)$/,
 		idCounter = 0;
@@ -71,9 +69,7 @@
 	 *     </code>
 	 *
 	 * @class View
-	 * @extends EventEmitter
-	 * @param {Object} options Options for the view, containing the el or
-	 * template data or any other information you want to use in the view.
+	 * @mixins OO.EventEmitter
 	 * Example:
 	 *     @example
 	 *     <pre>
@@ -86,7 +82,11 @@
 	 *     section.appendTo( 'body' );
 	 *     </pre>
 	 */
-	View = EventEmitter.extend( {
+	function View() {
+		this.initialize.apply( this, arguments );
+	}
+	OO.mixinClass( View, OO.EventEmitter );
+	OO.mfExtend( View, {
 		/**
 		 * A css class to apply to the containing element of the View.
 		 * @property {String} className
@@ -158,9 +158,7 @@
 		initialize: function ( options ) {
 			var self = this;
 
-			EventEmitter.prototype.initialize.apply( this, arguments );
-			this.defaults = $.extend( {}, this._parent.defaults, this.defaults );
-			this.templatePartials = $.extend( {}, this._parent.templatePartials, this.templatePartials );
+			OO.EventEmitter.call( this );
 			options = $.extend( {}, this.defaults, options );
 			this.options = options;
 			// Assign a unique id for dom events binding/unbinding
@@ -332,8 +330,29 @@
 			this.$el.off( eventName + '.delegateEvents' + this.cid, selector,
 				listener );
 		}
-
 	} );
+
+	/**
+	 * Helper function for generating a View.
+	 *
+	 * @param {Object} prototype
+	 * @return {View}
+	 */
+	function extend( prototype ) {
+		var Child,
+			Parent = this;
+
+		/**
+		 * @ignore
+		 */
+		Child = function () {
+			Parent.apply( this, arguments );
+		};
+		Child.extend = extend;
+		OO.mfExtend( Child, this, prototype );
+		return Child;
+	}
+	View.extend = extend;
 
 	$.each( [
 		'append',

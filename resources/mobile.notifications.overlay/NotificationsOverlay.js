@@ -12,15 +12,15 @@
 	 */
 	NotificationsOverlay = Overlay.extend( {
 		className: 'overlay notifications-overlay navigation-drawer',
-		templatePartials: {
+		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' )
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.heading Heading text.
 		 */
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'notifications' ),
 			footerAnchor: new Anchor( {
 				href: mw.util.getUrl( 'Special:Notifications' ),
@@ -28,7 +28,7 @@
 				additionalClassNames: 'footer-link notifications-archive-link',
 				label: mw.msg( 'echo-overlay-link' )
 			} ).options
-		},
+		} ),
 		/**
 		 * Fall back to notifications archive page.
 		 * @method

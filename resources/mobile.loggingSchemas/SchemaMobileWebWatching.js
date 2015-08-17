@@ -1,13 +1,15 @@
 ( function ( M, $ ) {
-	var SchemaMobileWebWatching,
-		user = M.require( 'mobile.user/user' ),
+	var user = M.require( 'mobile.user/user' ),
 		SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' );
 
 	/**
 	 * @class SchemaMobileWebWatching
 	 * @extends Schema
 	 */
-	SchemaMobileWebWatching = SchemaMobileWeb.extend( {
+	function SchemaMobileWebWatching() {
+		SchemaMobileWeb.apply( this, arguments );
+	}
+	OO.mfExtend( SchemaMobileWebWatching, SchemaMobileWeb, {
 		/** @inheritdoc **/
 		name: 'MobileWebWatching',
 		/**

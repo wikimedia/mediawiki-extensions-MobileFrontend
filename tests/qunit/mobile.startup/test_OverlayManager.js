@@ -1,13 +1,11 @@
 ( function ( M, $ ) {
-	var
-		OverlayManager = M.require( 'mobile.startup/OverlayManager' ),
-		EventEmitter = M.require( 'mobile.oo/eventemitter' ),
+	var OverlayManager = M.require( 'mobile.startup/OverlayManager' ),
 		fakeRouter, overlayManager;
 
 	QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		setup: function () {
 			this.createFakeOverlay = function ( options ) {
-				var fakeOverlay = new EventEmitter();
+				var fakeOverlay = new OO.EventEmitter();
 				fakeOverlay.show = this.sandbox.spy();
 				fakeOverlay.hide = function () {
 					this.emit( 'hide' );
@@ -18,7 +16,7 @@
 				return fakeOverlay;
 			};
 
-			fakeRouter = new EventEmitter();
+			fakeRouter = new OO.EventEmitter();
 			fakeRouter.getPath = this.sandbox.stub().returns( '' );
 			fakeRouter.back = this.sandbox.spy();
 			overlayManager = new OverlayManager( fakeRouter );

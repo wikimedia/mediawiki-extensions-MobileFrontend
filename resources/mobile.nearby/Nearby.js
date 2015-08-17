@@ -36,10 +36,10 @@
 				msg: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
-		templatePartials: {
+		templatePartials: $.extend( {}, WatchstarPageList.prototype.templatePartials, {
 			pageList: WatchstarPageList.prototype.template,
 			messageBox: MessageBox.prototype.template
-		},
+		} ),
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
 		/**
 		 * @inheritdoc
@@ -49,12 +49,12 @@
 		 * @cfg {String} defaults.spinner HTML of the spinner icon with a tooltip that
 		 * tells the user that their location is being looked up
 		 */
-		defaults: {
+		defaults: $.extend( {}, WatchstarPageList.prototype.defaults, {
 			errorOptions: undefined,
 			spinner: icons.spinner( {
 				title: mw.msg( 'mobile-frontend-nearby-loading' )
 			} ).toHtmlString()
-		},
+		} ),
 
 		/**
 		 * Obtain users current location and return a deferred object with the

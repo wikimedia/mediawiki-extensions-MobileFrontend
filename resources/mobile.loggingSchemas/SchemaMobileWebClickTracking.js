@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var SchemaMobileWebClickTracking,
-		SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' ),
+	var SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' ),
 		user = M.require( 'mobile.user/user' ),
 		s = M.require( 'mobile.settings/settings' );
 
@@ -49,7 +48,10 @@
 	 * @class SchemaMobileWebClickTracking
 	 * @extends Schema
 	 */
-	SchemaMobileWebClickTracking = SchemaMobileWeb.extend( {
+	function SchemaMobileWebClickTracking() {
+		SchemaMobileWeb.apply( this, arguments );
+	}
+	OO.mfExtend( SchemaMobileWebClickTracking, SchemaMobileWeb, {
 		/**
 		 * @inheritdoc
 		 *

@@ -33,7 +33,7 @@
 		 * @cfg {String} [defaults.alignment] Determines where the pointer should point to. Valid values 'left' or 'center'
 		 * @cfg {String} [defaults.confirmMsg] Label for a confirm message.
 		 */
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			skin: undefined,
 			summary: undefined,
 			cancelMsg: mw.msg( 'mobile-frontend-pointer-dismiss' ),
@@ -41,7 +41,7 @@
 			target: undefined,
 			alignment: 'center',
 			confirmMsg: undefined
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */

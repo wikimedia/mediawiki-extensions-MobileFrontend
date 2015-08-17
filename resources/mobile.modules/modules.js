@@ -1,6 +1,4 @@
 ( function () {
-	var loader;
-
 	/**
 	 * Class for managing modules
 	 *
@@ -8,6 +6,7 @@
 	 * ResourceLoader modules).
 	 *
 	 * @class ModuleLoader
+	 * @extends OO.EventEmitter
 	 */
 	function ModuleLoader() {
 		/**
@@ -15,6 +14,7 @@
 		 * @private
 		 */
 		this._register = {};
+		OO.EventEmitter.call( this );
 	}
 
 	ModuleLoader.prototype = {
@@ -75,8 +75,7 @@
 			mw.log.deprecate( this._register, id, obj, depreacteMsg );
 		}
 	};
-
-	loader = new ModuleLoader();
+	OO.mixinClass( ModuleLoader, OO.EventEmitter );
 
 	/**
 	 *
@@ -85,27 +84,7 @@
 	 * @class mw.mobileFrontend
 	 * @singleton
 	 */
-	mw.mobileFrontend = {
-		/**
-		 * @see ModuleLoader#define
-		 * @return {Object}
-		 */
-		define: function () {
-			return loader.define.apply( loader, arguments );
-		},
-		/**
-		 * @see ModuleLoader#require
-		 */
-		require: function () {
-			return loader.require.apply( loader, arguments );
-		},
-		/**
-		 * @see ModuleLoader#deprecate
-		 */
-		deprecate: function () {
-			return loader.deprecate.apply( loader, arguments );
-		}
-	};
+	mw.mobileFrontend = new ModuleLoader();
 
 	// inception to support testing (!!)
 	mw.mobileFrontend.define( 'ModuleLoader', ModuleLoader );

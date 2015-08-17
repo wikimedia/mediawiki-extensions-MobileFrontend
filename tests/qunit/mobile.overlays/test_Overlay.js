@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	QUnit.module( 'MobileFrontend: Overlay.js', {
@@ -21,9 +21,9 @@
 		var TestOverlay, overlay;
 
 		TestOverlay = Overlay.extend( {
-			templatePartials: {
+			templatePartials: $.extend( Overlay.prototype.templatePartials, {
 				content: mw.template.compile( '<div class="content">YO</div>', 'hogan' )
-			}
+			} )
 		} );
 		overlay = new TestOverlay( {
 			heading: 'Awesome'
@@ -42,4 +42,4 @@
 		this.clock.tick( 1000 );
 		assert.strictEqual( overlay.$el[ 0 ].parentNode, null, 'No longer in DOM' );
 	} );
-} )( mw.mobileFrontend );
+} )( mw.mobileFrontend, jQuery );

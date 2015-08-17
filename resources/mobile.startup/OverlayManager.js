@@ -1,9 +1,7 @@
 ( function ( M, $ ) {
 
-	var
-		Class = M.require( 'mobile.oo/Class' ),
-		router = M.require( 'mobile.startup/router' ),
-		OverlayManager, overlayManager;
+	var overlayManager,
+		router = M.require( 'mobile.startup/router' );
 
 	/**
 	 * Manages opening and closing overlays when the URL hash changes to one
@@ -15,7 +13,11 @@
 	 * @class OverlayManager
 	 * @extends Class
 	 */
-	OverlayManager = Class.extend( {
+	function OverlayManager() {
+		this.initialize.apply( this, arguments );
+	}
+
+	OO.mfExtend( OverlayManager, {
 		/** @inheritdoc */
 		initialize: function ( router ) {
 			router.on( 'route', $.proxy( this, '_checkRoute' ) );

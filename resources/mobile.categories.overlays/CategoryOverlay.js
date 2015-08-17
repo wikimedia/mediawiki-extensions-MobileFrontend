@@ -22,7 +22,7 @@
 		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons.
 		 */
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-categories-heading' ),
 			subheading: mw.msg( 'mobile-frontend-categories-subheading' ),
 			headerButtonsListClassName: 'overlay-action',
@@ -33,7 +33,7 @@
 			} ],
 			normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
 			hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' )
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */
@@ -41,9 +41,9 @@
 		/**
 		 * @inheritdoc
 		 */
-		templatePartials: {
+		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' )
-		},
+		} ),
 		events: $.extend( {}, Overlay.prototype.events, {
 			'click .catlink': 'onCatlinkClick'
 		} ),

@@ -10,11 +10,11 @@
 	 */
 	BetaOptinPanel = Panel.extend( {
 		className: 'panel panel-inline visible',
-		templatePartials: {
+		templatePartials: $.extend( {}, Panel.prototype.templatePartials, {
 			button: Button.prototype.template
-		},
+		} ),
 		template: mw.template.get( 'mobile.betaoptin', 'Panel.hogan' ),
-		defaults: {
+		defaults: $.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
 			editToken: mw.user.tokens.get( 'editToken' ),
 			enableImages: mw.config.get( 'wgImagesDisabled' ) ? 0 : 1,
@@ -30,7 +30,7 @@
 					label: mw.msg( 'mobile-frontend-panel-cancel' )
 				} ).options
 			]
-		},
+		} ),
 		events: $.extend( {}, Panel.prototype.events, {
 			'click .optin': 'onOptin'
 		} ),

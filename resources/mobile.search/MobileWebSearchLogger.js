@@ -1,8 +1,5 @@
 ( function ( M, mw, $ ) {
-
-	var Class = M.require( 'mobile.oo/Class' ),
-		SchemaMobileWebSearch = M.require( 'mobile.loggingSchemas/SchemaMobileWebSearch' ),
-		MobileWebSearchLogger;
+	var SchemaMobileWebSearch = M.require( 'mobile.loggingSchemas/SchemaMobileWebSearch' );
 
 	/**
 	 * Coordinates the logging of MobileWebSchema events.
@@ -10,20 +7,13 @@
 	 *
 	 * @class
 	 */
-	MobileWebSearchLogger = Class.extend( {
+	function MobileWebSearchLogger( schema ) {
+		this.schema = schema;
+		this.userSessionToken = null;
+		this.searchSessionToken = null;
+	}
 
-		/**
-		 * @constructor
-		 *
-		 * @param {SchemaMobileWebSearch} schema An instance of the
-		 *  SchemaMobileWebSearch class
-		 */
-		initialize: function ( schema ) {
-			this.schema = schema;
-			this.userSessionToken = null;
-			this.searchSessionToken = null;
-		},
-
+	MobileWebSearchLogger.prototype = {
 		/**
 		 * Sets the internal state required to deal with logging user session
 		 * data.
@@ -111,7 +101,7 @@
 				timeOffsetSinceStart: timeOffsetSinceStart
 			} );
 		}
-	} );
+	};
 
 	/**
 	 * Convenience function that wires up an instance of the

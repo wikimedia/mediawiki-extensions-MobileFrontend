@@ -1,8 +1,7 @@
 // FIXME: Merge this code with OverlayManager
 ( function ( M, $ ) {
 
-	var key, router,
-		EventEmitter = M.require( 'mobile.oo/eventemitter' );
+	var router;
 
 	/**
 	 * Does hash match entry.path?
@@ -25,11 +24,11 @@
 	/**
 	 * Provides navigation routing and location information
 	 * @class Router
-	 * @uses EventEmitter
+	 * @mixins OO.EventEmitter
 	 */
 	function Router() {
 		var self = this;
-		EventEmitter.prototype.initialize.apply( this, arguments );
+		OO.EventEmitter.call( this );
 		// use an object instead of an array for routes so that we don't
 		// duplicate entries that already exist
 		this.routes = {};
@@ -69,12 +68,7 @@
 			self._oldHash = self.getPath();
 		} );
 	}
-
-	for ( key in EventEmitter.prototype ) {
-		if ( EventEmitter.prototype.hasOwnProperty( key ) ) {
-			Router.prototype[ key ] = EventEmitter.prototype[ key ];
-		}
-	}
+	OO.mixinClass( Router, OO.EventEmitter );
 
 	/**
 	 * Check the current route and run appropriate callback if it matches.

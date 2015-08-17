@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var Schema,
-		Class = M.require( 'mobile.oo/Class' ),
+	var Class = M.require( 'mobile.oo/Class' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		BEACON_SETTING_KEY = 'mobileFrontend/beacon';
 
@@ -53,9 +52,12 @@
 
 	/**
 	 * @class Schema
-	 * @extends Class
 	 */
-	Schema = Class.extend( {
+	function Schema() {
+		this.initialize.apply( this, arguments );
+	}
+
+	OO.mfExtend( Schema, {
 		/**
 		 * A set of defaults to log to the schema
 		 *
@@ -109,7 +111,6 @@
 				throw new Error( 'Schema needs to define a schema name.' );
 			}
 			this.defaults = defaults;
-			Class.prototype.initialize.apply( this, arguments );
 		},
 
 		/**
@@ -167,6 +168,10 @@
 
 		deleteBeacon();
 	};
+	// FIXME: Needed to give time for Gather to update
+	Schema.extend = Class.extend;
+	mw.log.deprecate( Schema, 'extend', Schema.extend,
+		'Schema.extend is deprecated. Do not use this. Use OO.mfExtend' );
 
 	M.define( 'mobile.startup/Schema', Schema );
 

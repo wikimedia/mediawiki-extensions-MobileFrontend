@@ -1,13 +1,16 @@
 ( function ( M, $ ) {
 	var Schema = M.require( 'mobile.startup/Schema' ),
-		SchemaMobileWebSearch,
 		context = M.require( 'mobile.context/context' );
 
 	/**
 	 * @class SchemaMobileWebSearch
 	 * @extends Schema
 	 */
-	SchemaMobileWebSearch = Schema.extend( {
+	function SchemaMobileWebSearch() {
+		Schema.apply( this, arguments );
+	}
+
+	OO.mfExtend( SchemaMobileWebSearch, Schema, {
 		/** @inheritdoc **/
 		name: 'MobileWebSearch',
 		/** @inheritdoc */
