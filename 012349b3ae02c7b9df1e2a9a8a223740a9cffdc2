@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4e814aa3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1334,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-17T20:53:34Z",
+      "side": 1,
+      "message": "That\u0027s correct so, let me add a simple test for it, maybe that will make it a bit clearer :)",
+      "revId": "012349b3ae02c7b9df1e2a9a8a223740a9cffdc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
