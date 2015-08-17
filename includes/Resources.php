@@ -1511,9 +1511,6 @@ $wgMobileSpecialPageModules = array(
 	),
 
 	'mobile.special.userlogin.scripts' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.head',
-		),
 		'scripts' => array(
 			'resources/mobile.special.userlogin.scripts/userlogin.js',
 		),
