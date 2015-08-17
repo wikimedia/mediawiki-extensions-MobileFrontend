@@ -3,7 +3,8 @@
 		"authors": [
 			"GreenZeb",
 			"Papuass",
-			"Edgars2007"
+			"Edgars2007",
+			"Silraks"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ievadiet apstiprinājuma kodu",
@@ -54,11 +55,13 @@
 	"mobile-frontend-editor-tutorial-confirm": "Sākt labošanu",
 	"mobile-frontend-editor-visual-editor": "Labot",
 	"mobile-frontend-editor-wait": "Saglabā labojumu, lūdzu uzgaidiet.",
-	"mobile-frontend-errorreport-button-label": "Ziņot par kļūdu",
-	"mobile-frontend-errorreport-error": "Kļūda, atsauksmi neizdevās publicēt.",
-	"mobile-frontend-errorreport-feedback": "Paldies par atsauksmi!",
-	"mobile-frontend-errorreport-heading": "Ziņot par kļūdu",
-	"mobile-frontend-errorreport-submit": "Iesniegt",
+	"mobile-frontend-editor-bold": "Pustrekns",
+	"mobile-frontend-editor-italic": "Kursīvā",
+	"mobile-frontend-editor-bold-text": "Teksts treknrakstā",
+	"mobile-frontend-editor-italic-text": "Teksts kursīvā",
+	"mobile-frontend-editor-reference": "Atsauce",
+	"mobile-frontend-editor-insert-reference": "Ievietot atsauci",
+	"mobile-frontend-editor-add-reference": "Pievienot",
 	"mobile-frontend-fontchanger-link": "Fonta lielums",
 	"mobile-frontend-featured-article": "Šodienas izceltais saturs",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Sapratāt?",
