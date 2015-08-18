@@ -1719,6 +1719,7 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'resources/skins.minerva.scripts/init.js',
+			'resources/skins.minerva.scripts/initLogging.js',
 		),
 	),
 	// By mode. This should only ever be loaded in Minerva skin.

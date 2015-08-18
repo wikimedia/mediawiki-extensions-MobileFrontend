@@ -886,9 +886,9 @@ class MobileFrontendHooks {
 	/**
 	 * ResourceLoaderRegisterModules hook handler
 	 *
-	 * Registers the mobile.loggingSchemas module without a dependency on the
-	 * ext.EventLogging module so that calls to the various log functions are
-	 * effectively NOPs.
+	 * Registers the mobile.loggingSchemas module
+	 * without a dependency on the EventLogging schema modules so that calls to the various log
+	 * functions are effectively NOPs.  And registers VisualEditor and Echo related modules.
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
@@ -896,7 +896,7 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		self::registerMobileLoggingSchemasModule();
+		self::registerMobileLoggingSchemasModule( $resourceLoader );
 		$config = MobileContext::singleton()->getMFConfig();
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
@@ -933,6 +933,25 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Returns an array of schema names mapped to a schema revision ID
+	 *
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetLessVars
+	 * @param array Array of schema names associated to revision IDs
+	 */
+	private static function getEventLoggingSchemas() {
+		return array(
+			'MobileWebBrowse' => 12119641,
+			'MobileWebDiffClickTracking' => 10720373,
+			'MobileWebEditing' => 8599025,
+			'MobileWebMainMenuClickTracking' => 11568715,
+			'MobileWebSearch' => 12054448,
+			'MobileWebUIClickTracking' => 10742159,
+			'MobileWebWatching' => 11761466,
+			'MobileWebWatchlistClickTracking' => 10720361,
+		);
+	}
+
+	/**
 	 * EventLoggingRegisterSchemas hook handler.
 	 *
 	 * Registers our EventLogging schemas so that they can be converted to
@@ -947,49 +966,19 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onEventLoggingRegisterSchemas( &$schemas ) {
-		$mobileEventLoggingSchemas = array(
-			'MobileWebBrowse' => 12119641,
-			'MobileWebDiffClickTracking' => 10720373,
-			'MobileWebEditing' => 8599025,
-			'MobileWebMainMenuClickTracking' => 11568715,
-			'MobileWebSearch' => 12054448,
-			'MobileWebUIClickTracking' => 10742159,
-			'MobileWebWatching' => 11761466,
-			'MobileWebWatchlistClickTracking' => 10720361,
-		);
-
-		$schemas += $mobileEventLoggingSchemas;
-
-		$additionalDependencies = array_map(
-			function ( $schema ) {
-				return "schema.{$schema}";
-			},
-			array_keys( $mobileEventLoggingSchemas )
-		);
-		self::registerMobileLoggingSchemasModule( $additionalDependencies, true );
-
+		$schemas += self::getEventLoggingSchemas();
 		return true;
 	}
 
 	/**
-	 * Registers the mobile.loggingSchemas module with any additional
-	 * dependencies.
+	 * Registers the mobile.loggingSchemas module with optional dependency on the
+	 * EventLogging schema modules registered in onEventLoggingRegisterSchemas
 	 *
-	 * @param array $additionalDependencies Additional dependencies that the module
-	 *  depends on. Defaults to empty array
-	 * @param boolean $overwrite Whether or not to re-register the module if it has
-	 *  already been registered. Defaults to false
+	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 */
-	private static function registerMobileLoggingSchemasModule(
-		$additionalDependencies = array(),
-		$overwrite = false
-	) {
-		// FIXME: Use Config object when setting of configuration values is possible.
-		global $wgResourceModules, $wgMFResourceFileModuleBoilerplate;
-
-		if ( isset( $wgResourceModules['mobile.loggingSchemas'] ) && !$overwrite ) {
-			return;
-		}
+	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
+		$mfResourceFileModuleBoilerplate = MobileContext::singleton()
+			->getMFConfig()->get( 'MFResourceFileModuleBoilerplate' );
 
 		$scripts = array(
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
@@ -1000,16 +989,25 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js',
 		);
 
-		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
-			'dependencies' => array_merge( $additionalDependencies, array(
+		$schemaModules = array();
+		if ( class_exists( 'EventLogging' ) ) {
+			$schemaModules = array_map(
+				function ( $schema ) {
+					return "schema.{$schema}";
+				},
+				array_keys( self::getEventLoggingSchemas() )
+			);
+		}
+
+		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
+			'dependencies' => array(
 				'mobile.startup',
 				'mobile.settings',
-			) ),
+			) + $schemaModules,
 			'scripts' => $scripts,
 		);
 
-		$wgResourceModules['skins.minerva.scripts']
-			['scripts'][] = 'resources/mobile.loggingSchemas/init.js';
+		$resourceLoader->register( array( 'mobile.loggingSchemas' => $loggingSchemasModule ) );
 	}
 
 	/**
