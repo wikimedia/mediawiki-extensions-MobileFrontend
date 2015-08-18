@@ -16,6 +16,24 @@
       "revId": "6bf04541522feeef473685aec4f4533284572235",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f6948848",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1000,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-08-18T21:52:52Z",
+      "side": 1,
+      "message": "I just tested registering this outside the hook and it results in Error: Module not found: loggingSchemas/SchemaMobileWebClickTracking\n\nSo it seems the problem is that we are loading the schema modules via hook after the RL initial dependency check thus throwing the error?",
+      "parentUuid": "6ec1af18_961664f5",
+      "revId": "6bf04541522feeef473685aec4f4533284572235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
