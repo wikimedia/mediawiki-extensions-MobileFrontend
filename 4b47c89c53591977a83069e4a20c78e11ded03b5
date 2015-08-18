@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_44260b13",
+        "filename": "resources/skins.minerva.beta.scripts/bannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-18T00:40:37Z",
+      "side": 1,
+      "message": "eww, MobileFrontend shouldn\u0027t need to know that :/ What about to move the module out of the beta module and add it via SkinMinervaBeta::getDefaultModules()[1]. You can use the SkinMinervaDefaultModules hook[2] in WikiDataPageBanner to remove the module (it should be relatively static, that this extension is installed, so this isn\u0027t really cache related?)\n\n[1] https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/199fca7569577b0fd46fdd57154a4d9aa875e45f/includes/skins/SkinMinervaBeta.php#L79\n[2] https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/199fca7569577b0fd46fdd57154a4d9aa875e45f/includes/skins/SkinMinerva.php#L1101",
+      "revId": "4b47c89c53591977a83069e4a20c78e11ded03b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
