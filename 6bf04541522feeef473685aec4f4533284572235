@@ -34,6 +34,24 @@
       "revId": "6bf04541522feeef473685aec4f4533284572235",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d6806cfb",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1000,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-08-18T22:04:27Z",
+      "side": 1,
+      "message": "Nevermind above, I misspoke. its throwing a dependency error when registering in Resources.php because we are  unconditionally loading the schema modules inside mobile.loggingSchemas/init.js.",
+      "parentUuid": "6ec1af18_f6948848",
+      "revId": "6bf04541522feeef473685aec4f4533284572235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
