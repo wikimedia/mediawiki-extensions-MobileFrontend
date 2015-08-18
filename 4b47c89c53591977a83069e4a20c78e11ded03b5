@@ -16,6 +16,24 @@
       "revId": "4b47c89c53591977a83069e4a20c78e11ded03b5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_042003f1",
+        "filename": "resources/skins.minerva.beta.scripts/bannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-18T00:42:28Z",
+      "side": 1,
+      "message": "Yeh it was a temporary evil.\n\nIdeally the experiment would be configured on or off via global but I haven\u0027t got the time to refactor all the code to do that, so I was trying to do the smallest possible thing...\n\n.. the goal to minimise the damage this is going to cause to mobile beta on Wikivoyage Wednesday (which i guess is a small amount of users so maybe not a big deal)",
+      "parentUuid": "6ec1af18_44260b13",
+      "revId": "4b47c89c53591977a83069e4a20c78e11ded03b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
