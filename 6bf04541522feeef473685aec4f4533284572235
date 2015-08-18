@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_961664f5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1000,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-18T21:27:10Z",
+      "side": 1,
+      "message": "Now I look at this again...\nIt seems we could just add mobile.loggingSchemas to skins.minerva.script as a dependency no?\n\nThere doesn\u0027t actually seem a need to do this in the hook anymore.",
+      "revId": "6bf04541522feeef473685aec4f4533284572235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
