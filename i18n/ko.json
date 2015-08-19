@@ -18,7 +18,8 @@
 			"SeoJeongHo",
 			"Bluemersen",
 			"LiteHell",
-			"Hwangjy9"
+			"Hwangjy9",
+			"Kurousagi"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -124,9 +125,9 @@
 	"mobile-frontend-editor-redlink-explain": "이 페이지는 {{SITENAME}}에 없습니다.",
 	"mobile-frontend-editor-redlink-create": "문서 만들기",
 	"mobile-frontend-editor-bold": "굵게",
-	"mobile-frontend-editor-italic": "이태릭체",
+	"mobile-frontend-editor-italic": "기울임꼴",
 	"mobile-frontend-editor-bold-text": "굵은 문자",
-	"mobile-frontend-editor-italic-text": "이태릭 문자",
+	"mobile-frontend-editor-italic-text": "기울인 글씨",
 	"mobile-frontend-editor-reference": "참고",
 	"mobile-frontend-editor-insert-reference": "참고 추가",
 	"mobile-frontend-editor-reference-placeholder": "어떤 소스를 참고 하시겠습니까?",
