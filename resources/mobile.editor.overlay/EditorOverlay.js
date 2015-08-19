@@ -20,6 +20,9 @@
 	 * @extends EditorOverlayBase
 	 */
 	EditorOverlay = EditorOverlayBase.extend( {
+		/** @inheritdoc **/
+		isBorderBox: false,
+		/** @inheritdoc **/
 		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			messageBox: MessageBox.prototype.template,
