@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_02722ae2",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-19T14:49:52Z",
+      "side": 1,
+      "message": "That\u0027s a big change from a i18n perspective, do you really want to use the same message key for it? Think about, that some languages maybe updates it a bit later and it would be possible, that a user see the new \"layout\" for the button, but the word \"Edit\" only, which could be confusing, because he is already editing the text. Maybe use a new message key, just to be sure?",
+      "revId": "41c56fb9c5d82d4b2964eedc6e78b36c7446f008",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
