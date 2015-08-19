@@ -160,11 +160,6 @@ $wgMinervaStyleModules = array(
 			'addimage' => 'images/icons/uploadLocked.svg',
 			'addimage-enabled' => 'images/icons/upload.svg',
 
-			// Editor
-			'edit-source' => 'images/icons/editSourceNormal.svg',
-			'edit-ve' => 'images/icons/editVeNormal.svg',
-			'edit-switch' => 'images/icons/editToggle.svg',
-
 			// TOC
 			'toc' => 'images/icons/contents-ltr.svg',
 
@@ -639,9 +634,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-editing-page',
 			'mobile-frontend-editor-previewing-page',
 			'mobile-frontend-editor-switch-confirm',
-			'mobile-frontend-editor-visual-editor',
-			'mobile-frontend-editor-source-editor',
 			'mobile-frontend-editor-switch-editor',
+			'mobile-frontend-editor-switch-visual-editor',
 			'mobile-frontend-editor-anonwarning',
 		),
 	),
@@ -650,6 +644,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.editor.common',
 			'mobile.microAutoSize',
+			'oojs-ui.styles.icons-editing-core',
 		),
 		'scripts' => array(
 			'resources/mobile.editor.overlay/EditorOverlay.js',

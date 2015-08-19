@@ -22,38 +22,13 @@
 	OO.inheritClass( EditVeTool, OO.ui.Tool );
 
 	EditVeTool.static.name = 'editVe';
-	EditVeTool.static.icon = 'edit-ve';
+	EditVeTool.static.icon = 'edit';
 	EditVeTool.static.group = 'editorSwitcher';
-	EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-visual-editor' );
+	EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-switch-visual-editor' );
 	/**
 	 * click handler
 	 */
 	EditVeTool.prototype.onSelect = function () {
-		// will be overridden later
-	};
-
-	/**
-	 * 'Edit source' button
-	 * @param {OO.ui.ToolGroup} toolGroup
-	 * @param {Object} config
-	 * @ignore
-	 */
-	function EditSourceTool( toolGroup, config ) {
-		config = config || {};
-		config.classes = [ 'source-editor' ];
-		EditSourceTool.super.call( this, toolGroup, config );
-	}
-
-	OO.inheritClass( EditSourceTool, OO.ui.Tool );
-
-	EditSourceTool.static.name = 'editSource';
-	EditSourceTool.static.icon = 'edit-source';
-	EditSourceTool.static.group = 'editorSwitcher';
-	EditSourceTool.static.title = mw.msg( 'mobile-frontend-editor-source-editor' );
-	/**
-	 * click handler
-	 */
-	EditSourceTool.prototype.onSelect = function () {
 		// will be overridden later
 	};
 
@@ -323,15 +298,13 @@
 				classes: [ 'editor-switcher' ]
 			} );
 			toolFactory.register( EditVeTool );
-			toolFactory.register( EditSourceTool );
 
 			toolbar.setup( [
 				{
-					icon: 'editor-switcher',
+					icon: 'advanced',
+					indicator: 'down',
 					type: 'list',
-					include: [ {
-						group: 'editorSwitcher'
-					} ]
+					include: [ { group: 'editorSwitcher' } ]
 				}
 			] );
 

@@ -129,7 +129,6 @@
 
 			if ( this.isVisualEditorEnabled() ) {
 				this.initializeSwitcher();
-				this.switcherToolbar.tools.editSource.setActive( true );
 				/**
 				 * 'Edit' button handler
 				 */
