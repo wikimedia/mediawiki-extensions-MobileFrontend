@@ -181,7 +181,6 @@
 	width: 100%;
 	border-spacing: 0;
 	border-collapse: collapse;
-	border-bottom: 1px solid @grayLight;
 
 	.overlay-title {
 		// Expand the title as wide as possible to limit the size of the
@@ -294,6 +293,7 @@
 
 .overlay-header-container {
 	top: 0;
+	border-bottom: 1px solid @grayLight;
 
 	// Workaround for chrome. See https://phabricator.wikimedia.org/T98846
 	// without .back the labels show. See https://phabricator.wikimedia.org/T107090
@@ -374,16 +374,19 @@
 		}
 	}
 
-	// The mobile.overlays module is a mess, cannot be refactored into beta, alpha easily.
-	// FIXME: Move these rules into a separate file and load in beta only
 	.alpha,
 	.beta {
 		.overlay-header {
-			border-collapse: separate;
-			border-bottom: none;
-		}
-		.overlay-header-container {
-			border-bottom: 1px solid @grayLight;
+			.cancel {
+				// so that the icon image is aligned with the content
+				left: -@iconGutterWidth;
+			}
+			// Search input in the header
+			input.search {
+				// because we're pulling .main-menu-button to the left too (see above)
+				margin-left: -@iconGutterWidth;
+			}
 		}
 	}
 }
+
