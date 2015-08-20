@@ -28,9 +28,9 @@ class MobileSiteModule extends ResourceLoaderSiteModule {
 
 	/**
 	 * Get the position where on the HTML page this module's JS be loaded to.
-	 * @return string Always top, to load in JS in head.
+	 * @return string Always bottom which differs from other skins.
 	 */
 	public function getPosition() {
-		return 'top';
+		return 'bottom';
 	}
 }
