@@ -16,6 +16,24 @@
       "revId": "79139f7fab41a403f394835836faab7a64f7d1f8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f8878112",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-20T23:46:08Z",
+      "side": 1,
+      "message": "I see you are not changing the value (sorry for confusion) but my advice still applies as this rule applies twice for .overlays with the view-border-box class. It will be cleaner to just have it in resources/mobile.editor.common/editor.less",
+      "parentUuid": "6ec1af18_58aa5583",
+      "revId": "79139f7fab41a403f394835836faab7a64f7d1f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
