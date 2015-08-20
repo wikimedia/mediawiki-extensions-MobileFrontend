@@ -29,6 +29,8 @@ end
 Given(/^I am logged into the mobile website$/) do
   step 'I am using the mobile site'
   visit(LoginPage).login_with(user, password, false)
+  # avoids login failing (see https://phabricator.wikimedia.org/T109593)
+  expect(on(ArticlePage).is_authenticated_element.when_present(20)).to exist
 end
 
 Given(/^I am on a page that does not exist$/) do

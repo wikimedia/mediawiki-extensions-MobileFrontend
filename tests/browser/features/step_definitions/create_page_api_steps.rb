@@ -25,8 +25,8 @@ Section 2A.
 Section 3.
 "
 
-  api.create_page 'Selenium section test page', wikitext
-  step 'I am on the "Selenium section test page" page'
+  api.create_page 'Selenium section test page2', wikitext
+  step 'I am on the "Selenium section test page2" page'
 end
 
 Given(/^I am on a page which has cleanup templates$/) do

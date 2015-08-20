@@ -19,6 +19,7 @@ end
 
 When(/^I click on the history link in the last modified bar$/) do
   on(ArticlePage).last_modified_bar_history_link_element.when_present.click
+  expect(on(SpecialHistoryPage).side_list_element.when_present(10)).to be_visible
 end
 
 When(/^I click on the page$/) do

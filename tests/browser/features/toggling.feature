@@ -9,7 +9,7 @@ Feature: Toggling sections
     When I visit the page "Selenium section test page" with hash "#Section_2A"
     Then the heading element with id "Section_2A" should be visible
 
-  @smoke @integration
+  @smoke @FIXME:T109593
   Scenario: Opening a section on mobile
     Given I go to a page that has sections
     When I click on the first collapsible section heading

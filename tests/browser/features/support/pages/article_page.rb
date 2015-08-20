@@ -5,6 +5,7 @@ class ArticlePage
 
   # UI elements
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
+  body(:is_authenticated, css: '.is-authenticated')
 
   # pre-content
   h1(:first_heading, id: 'section_0')

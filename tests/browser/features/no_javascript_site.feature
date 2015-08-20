@@ -13,7 +13,7 @@ Feature: Basic site for legacy devices
       # FIXME: Check that the edit button is invisible
       # FIXME: Check that the upload button is invisible
 
-  @smoke @integration
+  @smoke
   Scenario: Able to access left navigation in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
