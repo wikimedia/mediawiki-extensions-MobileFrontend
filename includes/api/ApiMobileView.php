@@ -456,8 +456,12 @@ class ApiMobileView extends ApiBase {
 			$newTitle = $wp->getRedirectTarget();
 			if ( $newTitle ) {
 				$title = $newTitle;
+				$textTitle = $title->getPrefixedText();
+				if ( $title->hasFragment() ) {
+					$textTitle .= $title->getFragmentForUrl();
+				}
 				$result->addValue( null, $this->getModuleName(),
-					array( 'redirected' => $title->getPrefixedText() )
+					array( 'redirected' => $textTitle )
 				);
 				if ( $title->getNamespace() < 0 ) {
 					$result->addValue( null, $this->getModuleName(),
