@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_58aa5583",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-20T23:41:26Z",
+      "side": 1,
+      "message": "Please apply this to just the editor overlay in resources/mobile.editor.common/editor.less - I\u0027m worried about side effects and I\u0027d rather be more cautious given the fallout we had last time. One bit at a time :)",
+      "revId": "79139f7fab41a403f394835836faab7a64f7d1f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
