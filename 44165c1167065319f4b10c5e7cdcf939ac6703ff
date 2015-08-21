@@ -16,6 +16,24 @@
       "revId": "44165c1167065319f4b10c5e7cdcf939ac6703ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_75815791",
+        "filename": "resources/mobile.search.beta/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-21T15:38:52Z",
+      "side": 1,
+      "message": "I thought the module was only loaded in beta. Am I wrong?",
+      "parentUuid": "6ec1af18_356c2f05",
+      "revId": "44165c1167065319f4b10c5e7cdcf939ac6703ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
