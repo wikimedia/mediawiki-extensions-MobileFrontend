@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_b84499be",
+        "filename": "resources/mobile.context/context.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-21T00:10:25Z",
+      "side": 1,
+      "message": "redundant \u0027alpha\u0027",
+      "revId": "d311cc1aa4a51deab9fa49a19a3581474b6009c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_58349546",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-21T00:10:25Z",
+      "side": 1,
+      "message": "is there a redundant \u0027false\u0027?",
+      "revId": "d311cc1aa4a51deab9fa49a19a3581474b6009c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
