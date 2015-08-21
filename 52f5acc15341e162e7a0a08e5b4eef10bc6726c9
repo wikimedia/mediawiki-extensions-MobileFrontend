@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_55345bf1",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2015-08-21T15:46:58Z",
+      "side": 1,
+      "message": "I would wait on some specific element here, an indicator that the user has logged in successfully, and specify a clear failure message. Something like:\n\n  visit(LoginPage) do |page|\n    page.login_with(...)\n    expect(page.some_indicator_of_success_element).to be_present, \"login to the mobile site failed\"\n  end\n\nAlso, you might want to create your own `MobileLoginPage` that encapsulates this mobile specific behavior by extending `LoginPage` and overriding the `login_with` method.",
+      "revId": "52f5acc15341e162e7a0a08e5b4eef10bc6726c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_b50c9f46",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2015-08-21T15:46:58Z",
+      "side": 1,
+      "message": "This is a known upstream issue.\n\nhttps://phabricator.wikimedia.org/T88288\nhttps://code.google.com/p/chromedriver/issues/detail?id\u003d1036",
+      "revId": "52f5acc15341e162e7a0a08e5b4eef10bc6726c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_08fd5604",
+        "filename": "tests/browser/features/step_definitions/diff_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2015-08-21T15:46:58Z",
+      "side": 1,
+      "message": "This could be an indicator that the step before this needs some additional timing and/or assertion.",
+      "revId": "52f5acc15341e162e7a0a08e5b4eef10bc6726c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
