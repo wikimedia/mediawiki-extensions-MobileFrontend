@@ -34,6 +34,24 @@
       "revId": "44165c1167065319f4b10c5e7cdcf939ac6703ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_28005203",
+        "filename": "resources/mobile.search.beta/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-21T15:45:49Z",
+      "side": 1,
+      "message": "Doh, sorry, my fault, I haven\u0027t seen, that this is in the beta module :)",
+      "parentUuid": "6ec1af18_75815791",
+      "revId": "44165c1167065319f4b10c5e7cdcf939ac6703ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
