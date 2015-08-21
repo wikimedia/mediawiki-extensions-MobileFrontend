@@ -28,8 +28,7 @@ body {
 	padding: 5px @contentMargin;
 	display: block;
 	color: @colorGray6;
-	// Make sure last modified link has correct font size (it is outside of the content div)
-	font-size: .9em;
+
 	a,
 	a:visited {
 		color: @colorGray6;
@@ -281,19 +280,6 @@ input.search {
 	// For talk and CTA drawer
 	.mw-ui-block {
 		width: auto;
-	}
-}
-
-.client-nojs {
-	// alpha and beta use a magnifying glass as the search button so it doesn't need this styling
-	.stable {
-		.header {
-			.search {
-				// FIXME: padding values should be variables
-				// vertically align the search input
-				padding: 0.5em 1em; // same as the search button (mw-ui-button) padding
-			}
-		}
 	}
 }
 
