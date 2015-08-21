@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f8b30194",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 994,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-21T00:39:52Z",
+      "side": 1,
+      "message": "DRY\n\n$mobileEventLoggingSchemas in onEventLoggingRegisterSchemas has all this information",
+      "revId": "2fb6baa2221de2a8f7892b9e0c06ec020917772b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d88165a5",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 1729,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-21T00:39:52Z",
+      "side": 1,
+      "message": "this should be moved to skins.minerva.scripts folder now.",
+      "revId": "2fb6baa2221de2a8f7892b9e0c06ec020917772b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
