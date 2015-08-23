@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4ba26f3c",
+        "filename": "resources/mobile.special.pagefeed.styles/pagefeed.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-23T21:16:54Z",
+      "side": 1,
+      "message": "could you remove the whitespace before the colon?",
+      "revId": "1e476fc73bb67e453d3dd2334969b36290480ab4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
