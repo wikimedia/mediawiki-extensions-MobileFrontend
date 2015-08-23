@@ -20,7 +20,8 @@
 			"Тест",
 			"Olion",
 			"Ypryima",
-			"Ahonc"
+			"Ahonc",
+			"Dars"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -105,7 +106,6 @@
 	"mobile-frontend-editor-previewing-page": "<span><strong>Попередній перегляд</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Перенапрямлення до редактора...",
 	"mobile-frontend-editor-save": "Зберегти",
-	"mobile-frontend-editor-source-editor": "Ред. код",
 	"mobile-frontend-editor-success": "Успіх! Внесені зміни збережено.",
 	"mobile-frontend-editor-success-landmark-1": "Вітаємо, тепер ви - редактор {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Вітаємо із створенням нової сторінки!",
@@ -114,6 +114,7 @@
 	"mobile-frontend-editor-summary": "Підсумок:",
 	"mobile-frontend-editor-switch-confirm": "Ви повинні зберегти зміни перед перемиканням на інший режим редагування.",
 	"mobile-frontend-editor-switch-editor": "Перемикнути редактор",
+	"mobile-frontend-editor-switch-visual-editor": "Перемкнутися на візуальне редагування",
 	"mobile-frontend-editor-tutorial-cancel": "Ні, дякую.",
 	"mobile-frontend-editor-tutorial-confirm": "Почати редагування",
 	"mobile-frontend-editor-tutorial-summary": "Спробуйте поліпшити сторінку $1.<br />Не лякайтеся розмітки.",
@@ -121,7 +122,6 @@
 	"mobile-frontend-editor-undo-unsupported": "Відміна дії наразі не підтримується на мобільних пристроях.",
 	"mobile-frontend-editor-uploadenable": "Будь ласка, завантажте спершу фото, щоб могти редагувати.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Перегляд джерела</strong><span> $1</span>",
-	"mobile-frontend-editor-visual-editor": "Редагувати",
 	"mobile-frontend-editor-wait": "Збереження редагування, зачекайте.",
 	"mobile-frontend-editor-redlink-leave": "Ні, дякую.",
 	"mobile-frontend-editor-redlink-explain": "Цю сторінку ще не було створено на сайті {{SITENAME}}.",

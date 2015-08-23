@@ -22,7 +22,7 @@
 	"mobile-frontend-changeslist-ip": "अनामिक सदस्य",
 	"mobile-frontend-changeslist-nocomment": "बदलांचा आढावा नाही",
 	"mobile-frontend-clear-search": "हटवा",
-	"mobile-frontend-copyright": "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध आहेत, अधिक अटी असू शकतात. विशेष माहितीसाठी <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> पाहा. विकीपिडीया हे <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> या ना-नफा तत्त्वावर चालणार्‍या संस्थेचे नोंदणीकृत व्यवसायचिन्ह आहे.",
+	"mobile-frontend-copyright": "इतर काही नोंद केली नसल्यास,येथील मजकूर $1च्या अंतर्गत उपलब्ध आहे.",
 	"mobile-frontend-desc": "मोबाइल फ्रंटएंड",
 	"mobile-frontend-diffview-404-title": "खराब आवृत्ती",
 	"mobile-frontend-diffview-anonymous": "अनामिक सदस्य",
@@ -209,5 +209,6 @@
 	"tag-mobile_edit": "[[विकिपीडिया:मोबाईल संपादन|मोबाईल संपादन]]",
 	"tag-mobile_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
 	"tag-mobile_web_edit": "[[विकिपीडिया:मोबाईल संपादन|मोबाईल वेब संपादन]]",
-	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले"
+	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
+	"mobile-frontend-pageaction-edit-tooltip": "या पानाचा प्रथम च्छेद संपादित करा"
 }

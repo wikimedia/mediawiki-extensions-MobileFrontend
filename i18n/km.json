@@ -23,8 +23,11 @@
 	"mobile-frontend-disable-images": "បិទមិនអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត",
 	"mobile-frontend-dismiss-notification": "បិទការផ្ដល់ដំណឹងនេះ",
 	"mobile-frontend-donate-image-title": "ផ្ទុកឡើង",
+	"mobile-frontend-donate-photo-first-upload-success": "សម្រេចហើយ! សូមអរគុណសម្រាប់ការរូមចំណែកលើកដំបូងរបស់អ្នក!",
 	"mobile-frontend-drawer-cancel": "បោះបង់",
 	"mobile-frontend-editor-edit": "កែប្រែ",
+	"mobile-frontend-editor-tutorial-cancel": "ទេ, អរគុណហើយ",
+	"mobile-frontend-editor-redlink-leave": "ទេ, អរគុណហើយ",
 	"mobile-frontend-enable-images": "បើកអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត",
 	"mobile-frontend-featured-article": "ខ្លឹមសារពិសេសសម្រាប់ថ្ងៃនេះ",
 	"mobile-frontend-footer-contact": "ទំនាក់ទំនង",
@@ -108,7 +111,8 @@
 	"mobile-frontend-watchlist-removed": "បាន​យក $1 ចេញ​ពី​បញ្ជី​មើល​របស់​អ្នក",
 	"mobile-frontend-watchlist-view": "មើល​បញ្ជី​មើល​របស់​អ្នក",
 	"tag-mobile_edit": "កែ​សម្រួល​តាម​ទូរស័ព្ទ",
-	"tag-mobile_edit-description": "ការ​កែ​សម្រួល​បាន​ធ្វើ​ពី​តំបន់​បណ្ដាញ​សម្រាប់​ទូរស័ព្ទ",
+	"tag-mobile_edit-description": "ការ​កែ​សម្រួល​បាន​ធ្វើ​ពី​ឧបករណ៍ចល័ត(វិបសាយឬកម្មវិធី)​",
 	"tag-mobile_web_edit": "កំណែប្រែពីអ៊ីនធើណិតចល័ត",
-	"mobile-frontend-pageaction-edit-tooltip": "កែប្រែសេចក្ដីផ្ដើមរបស់ទំព័រនេះ។"
+	"mobile-frontend-pageaction-edit-tooltip": "កែប្រែសេចក្ដីផ្ដើមរបស់ទំព័រនេះ។",
+	"mobile-frontend-panel-cancel": "ទេ, អរគុណហើយ"
 }

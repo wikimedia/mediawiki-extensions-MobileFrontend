@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Denö"
+			"Denö",
+			"Ilja.mos"
 		]
 	},
-	"mobile-frontend-editor-edit": "Korjata"
+	"mobile-frontend-editor-edit": "Korjata",
+	"mobile-frontend-view": "Mobilnoi versii"
 }
