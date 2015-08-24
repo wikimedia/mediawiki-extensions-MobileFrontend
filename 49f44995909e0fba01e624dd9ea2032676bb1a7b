@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_31a7564e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-24T11:18:15Z",
+      "side": 1,
+      "message": "I\u0027m still not sure, if this change is cache related and may produce problems :/",
+      "revId": "49f44995909e0fba01e624dd9ea2032676bb1a7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
