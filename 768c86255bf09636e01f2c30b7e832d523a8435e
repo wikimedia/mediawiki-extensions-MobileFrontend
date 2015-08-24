@@ -34,6 +34,24 @@
       "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_16900bf0",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-24T19:00:14Z",
+      "side": 1,
+      "message": "Damn, sorry :)",
+      "parentUuid": "6ec1af18_b68a571a",
+      "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
