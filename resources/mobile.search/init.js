@@ -5,22 +5,25 @@
 		context = M.require( 'context' ),
 		router = M.require( 'router' ),
 		browser = M.require( 'browser' ),
-		searchModule,
-		searchApi,
+		moduleConfig = {
+			modules: [ 'mobile.search.api', 'mobile.search' ],
+			api: 'modules/search/SearchApi',
+			overlay: 'modules/search/SearchOverlay'
+		},
 		SearchOverlay,
 		SearchApi;
 
 	if ( context.isBetaGroupMember() ) {
-		searchModule = 'mobile.search.beta';
-		searchApi = 'modules/search.beta/SearchApi';
-	} else {
-		searchModule = 'mobile.search';
-		searchApi = 'modules/search/SearchApi';
+		moduleConfig = $.extend( moduleConfig, {
+			modules: [ 'mobile.search.beta.api', 'mobile.search.beta' ],
+			api: 'modules/search.beta/SearchApi'
+		} );
 	}
 
 	/**
 	 * Reveal the search overlay
 	 * @param {jQuery.Event} ev
+	 * @event mobilefrontend.searchModule
 	 * @ignore
 	 */
 	function openSearchOverlay( ev ) {
@@ -33,9 +36,9 @@
 			name: 'search'
 		} );
 
-		mw.loader.using( searchModule ).done( function () {
-			SearchApi = M.require( searchApi );
-			SearchOverlay = M.require( 'modules/search/SearchOverlay' );
+		mw.loader.using( moduleConfig.modules ).done( function () {
+			SearchApi = M.require( moduleConfig.api );
+			SearchOverlay = M.require( moduleConfig.overlay );
 
 			new SearchOverlay( {
 				api: new SearchApi(),

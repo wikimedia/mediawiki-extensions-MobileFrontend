@@ -736,13 +736,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist.scripts',
 			'mobile.overlays',
 			'mobile.loggingSchemas',
-			'mediawiki.Title',
+			// FIXME: will be removed later
+			'mobile.search.api',
 		),
 		'styles' => array(
 			'resources/mobile.search/SearchOverlay.less',
 		),
 		'scripts' => array(
-			'resources/mobile.search/SearchApi.js',
 			'resources/mobile.search/SearchOverlay.js',
 			'resources/mobile.search/MobileWebSearchLogger.js',
 			'resources/mobile.search/init.js',
@@ -761,6 +761,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.search.api' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mediawiki.Title',
+		),
+		'scripts' => array(
+			'resources/mobile.search.api/SearchApi.js',
+		),
+	),
+
 	'mobile.search.beta' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.search',
@@ -768,8 +778,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'resources/mobile.search.beta/SearchOverlay.less',
 		),
+	),
+
+	'mobile.search.beta.api' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.search.api',
+		),
 		'scripts' => array(
-			'resources/mobile.search.beta/SearchApi.js',
+			'resources/mobile.search.beta.api/SearchApi.js',
 		),
 	),
 
