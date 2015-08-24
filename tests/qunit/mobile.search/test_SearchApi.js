@@ -89,7 +89,7 @@
 		];
 
 		$.each( data, function ( i, item ) {
-			assert.strictEqual( SearchApi._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
+			assert.strictEqual( api._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
 		} );
 	} );
 
