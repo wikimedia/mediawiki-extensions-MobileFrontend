@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_56d3f32f",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-24T18:29:51Z",
+      "side": 1,
+      "message": "It seems, that query isn\u0027t needed in processData?",
+      "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
