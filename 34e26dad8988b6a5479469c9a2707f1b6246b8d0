@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_80e7d10c",
+        "filename": "resources/mobile.settings/settings.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-24T14:53:31Z",
+      "side": 1,
+      "message": "This and the \u0027success\u0027 line above should be merged since the latter is overwriting the former.",
+      "revId": "34e26dad8988b6a5479469c9a2707f1b6246b8d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
