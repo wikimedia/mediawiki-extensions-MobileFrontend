@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_254947d3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1371,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-08-25T05:22:43Z",
+      "side": 1,
+      "message": "This may need  \u0027position\u0027 \u003d\u003e \u0027bottom\u0027, to avoid a notice about non-strict position. At least I got it locally and adding it made it go away.",
+      "revId": "842fa7560c06576ba7f634d544bd61764d3c60b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
