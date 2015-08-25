@@ -16,6 +16,24 @@
       "revId": "842fa7560c06576ba7f634d544bd61764d3c60b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f7a1b0f5",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1371,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-08-25T20:33:12Z",
+      "side": 1,
+      "message": "Done. I created a separate mobile.usermodule.styles with position \u003d\u003e top, and added position \u003d\u003e bottom to the current definition.",
+      "parentUuid": "6ec1af18_254947d3",
+      "revId": "842fa7560c06576ba7f634d544bd61764d3c60b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
