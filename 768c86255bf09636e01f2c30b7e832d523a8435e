@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_3d9e3f67",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 549
+      },
+      "writtenOn": "2015-08-25T11:35:43Z",
+      "side": 1,
+      "message": "I intended to reuse `_highlightSearchTerm` in a subclass of this so that I don\u0027t have to duplicate that kind of code. I should call that method `@protected` then perhaps.\n\nThis patch mainly refactors some code into smaller methods and improves the general quality of this module. Furthermore, it makes it easier to extend this class.\n\nYou can see an example of how the extension of this module would look like here: https://phabricator.wikimedia.org/P1923\n\nGenerally spoken, it would indeed be nicer if we only had to change the parameters returned by `getApiData` but unfortunately, our api output is different to the one provided by MediaWiki search. Changing the output format of `wbsearchentities` is perhaps a no-go because it would break a bunch of tools and third party applications which rely on that module.",
+      "parentUuid": "6ec1af18_ef055ec5",
+      "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_56d3f32f",
         "filename": "resources/mobile.search/SearchApi.js",
         "patchSetId": 2
