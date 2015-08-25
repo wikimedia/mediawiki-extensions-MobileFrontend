@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Espreon",
-			"Gott wisst"
+			"Gott wisst",
+			"JJohnson1701"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "nis nǣngu scortness þǣre adihtunge",
 	"mobile-frontend-diffview-anonymous": "Uncūþ brūcend",
-	"mobile-frontend-editor-edit": "Adihtan",
+	"mobile-frontend-editor-edit": "Ādihtan",
 	"mobile-frontend-editor-save": "Hordian",
 	"mobile-frontend-featured-article": "Þisses dæges innung",
 	"mobile-frontend-generic-login": "{{SITENAME}} is geworht fram hādum swilce þū.",
@@ -29,18 +30,18 @@
 	"mobile-frontend-password": "Þafungword:",
 	"mobile-frontend-password-placeholder": "Þafungword",
 	"mobile-frontend-placeholder": "Sēcan on {{SITENAME}}",
-	"mobile-frontend-privacy-link-text": "Ānlīpigness",
+	"mobile-frontend-privacy-link-text": "Ānlīepignes",
 	"mobile-frontend-random-button": "Wēasgelimplic",
 	"mobile-frontend-save-settings": "Hordian",
 	"mobile-frontend-talk-overlay-header": "Mōtung",
 	"mobile-frontend-terms-text": "Nytte rǣd",
 	"mobile-frontend-username": "Brūcendnama:",
 	"mobile-frontend-username-placeholder": "Brūcendnama",
-	"mobile-frontend-view": "Handspearctellenda sihþ",
-	"mobile-frontend-view-desktop": "Bordspearctellenda fadung",
-	"mobile-frontend-view-mobile": "Handsprecenda fadung",
+	"mobile-frontend-view": "Handrīmeres sihþ",
+	"mobile-frontend-view-desktop": "Bordrīmeres fadung",
+	"mobile-frontend-view-mobile": "Rīmeres fadung",
 	"mobile-frontend-watchlist-cta-button-login": "Inmeldian",
-	"tag-mobile_edit": "Handsprecendes adihtung",
+	"tag-mobile_edit": "Handrīmeres ādihtung",
 	"tag-mobile_web_edit": "Handsprecenda webbes adihtung",
 	"mobile-frontend-pageaction-edit-tooltip": "Adihtan þone forman dǣl þisses trametes."
 }

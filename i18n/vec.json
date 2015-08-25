@@ -31,6 +31,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Bon! Grassie par el to primo contributo!",
 	"mobile-frontend-donate-photo-upload-success": "Bon! Desso la to imagine la se pole doparar su {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Anuła",
+	"mobile-frontend-editor-edit": "Modìfega",
 	"mobile-frontend-enable-images": "Abiłita łe imaxene so'l sito par dispoxitivi mobiłi",
 	"mobile-frontend-featured-article": "Vetrina",
 	"mobile-frontend-footer-contact": "Contati",
@@ -123,6 +124,7 @@
 	"mobile-frontend-talk-explained-empty": "No ghe xe conversazion su de sta pagina.",
 	"mobile-frontend-talk-overlay-header": "Discusion",
 	"mobile-frontend-talk-overlay-lead-header": "Discussion sensa nome",
+	"mobile-frontend-terms-text": "Condission de utilixo",
 	"mobile-frontend-username": "Nome utente:",
 	"mobile-frontend-username-placeholder": "Nome utente",
 	"mobile-frontend-view": "Version mobiłe",
@@ -148,5 +150,6 @@
 	"mobile-frontend-watchlist-removed": "Cava $1 da łe to tegnùe d'ocio",
 	"mobile-frontend-watchlist-view": "Varda łe to tegnùe d'ocio",
 	"tag-mobile_edit": "Canbiamento da tełefonin",
-	"tag-mobile_edit-description": "Modifega fata dal sito pa' dispoxitivi mobiłi"
+	"tag-mobile_edit-description": "Modifega fata dal sito pa' dispoxitivi mobiłi",
+	"tag-mobile_web_edit": "Modìfega da web mobile"
 }
