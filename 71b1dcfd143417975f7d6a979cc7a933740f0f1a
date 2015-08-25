@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_853efb85",
+        "filename": "includes/Resources.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1660,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-08-25T02:00:51Z",
+      "side": 1,
+      "message": "Typo in the alternative module name. Shouldn\u0027t it be skins.minerva.scripts.top?",
+      "revId": "71b1dcfd143417975f7d6a979cc7a933740f0f1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
