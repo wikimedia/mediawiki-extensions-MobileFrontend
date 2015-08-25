@@ -236,6 +236,8 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
+		$out->addModuleStyles( 'mobile.usermodule.styles' );
+		$out->addModuleScripts( 'mobile.usermodule' );
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
@@ -1025,9 +1027,6 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 
 		if ( $user->isLoggedIn() ) {
-			// enable the user module
-			$modules[] = 'mobile.usermodule';
-
 			if ( $this->useEcho() ) {
 				$modules[] = 'mobile.notifications';
 			}

@@ -1367,9 +1367,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array( 'mobile.startup' ),
 		'class' => 'MobileSiteModule',
 	),
-	'mobile.usermodule' => array(
-		'dependencies' => array( 'mobile.startup' ),
+	'mobile.usermodule.styles' => array(
 		'class' => 'MobileUserModule',
+		'position' => 'top',
+	),
+	'mobile.usermodule' => array(
+		'class' => 'MobileUserModule',
+		'position' => 'bottom',
 	),
 ) );
 
