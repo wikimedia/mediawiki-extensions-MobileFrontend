@@ -5,6 +5,20 @@
 			"Ilja.mos"
 		]
 	},
+	"mobile-frontend-copyright": "Sizäldö on käytös luval $1, ei olle toizin mainittu.",
 	"mobile-frontend-editor-edit": "Korjata",
-	"mobile-frontend-view": "Mobilnoi versii"
+	"mobile-frontend-home-button": "Kodisivule",
+	"mobile-frontend-last-modified-date": "Jälgimäzet muutokset kohtas $2 $1",
+	"mobile-frontend-main-menu-button-tooltip": "Avua piämenu",
+	"mobile-frontend-main-menu-login": "Kirjuttai",
+	"mobile-frontend-main-menu-nearby": "Vieres",
+	"mobile-frontend-main-menu-settings": "Azetukset",
+	"mobile-frontend-main-menu-watchlist": "Valvonduluvettelo",
+	"mobile-frontend-placeholder": "Eči{{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Luottamusperiuattehet",
+	"mobile-frontend-random-button": "Satunnaine",
+	"mobile-frontend-terms-text": "Käyttöehtot",
+	"mobile-frontend-view": "Mobilnoi versii",
+	"mobile-frontend-view-mobile": "Mobilnoi",
+	"mobile-frontend-pageaction-edit-tooltip": "Korjua sivun piäalalugu"
 }

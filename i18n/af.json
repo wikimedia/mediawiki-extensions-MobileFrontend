@@ -5,7 +5,8 @@
 			"Winstonza",
 			"පසිඳු කාවින්ද",
 			"Fwolff",
-			"Oesjaar"
+			"Oesjaar",
+			"Arnobarnard"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Tik bevestigingkode",
@@ -55,16 +56,11 @@
 	"mobile-frontend-editor-summary": "Opsomming:",
 	"mobile-frontend-editor-switch-confirm": "Stoor eers die wysiging voordat u na 'n ander wysigingsmodus oorskakel.",
 	"mobile-frontend-editor-tutorial-cancel": "Nee dankie",
-	"mobile-frontend-editor-visual-editor": "Wysig",
 	"mobile-frontend-editor-wait": "Stoor tans wysiging...",
 	"mobile-frontend-editor-redlink-leave": "Nee dankie",
 	"mobile-frontend-editor-redlink-explain": "Dié bladsy is nog nie geskep op {{SITENAME}} nie.",
 	"mobile-frontend-editor-redlink-create": "Skep bladsy",
 	"mobile-frontend-enable-images": "Skakel beelde aan",
-	"mobile-frontend-errorreport-button-label": "Rapporteer 'n fout",
-	"mobile-frontend-errorreport-feedback": "Dankie vir die terugvoer!",
-	"mobile-frontend-errorreport-heading": "Rapporteer 'n fout",
-	"mobile-frontend-errorreport-submit": "Dien in",
 	"mobile-frontend-fontchanger-link": "Lettergrootte",
 	"mobile-frontend-featured-article": "Uitgelig vandag",
 	"mobile-frontend-footer-contact": "Kontak",
@@ -169,9 +165,9 @@
 	"mobile-frontend-watchlist-signup-action": "<strong>'n Dophoulys help om bladsye te boekmerk en tred te hou met veranderinge aan hulle.</strong><br />Registreer om met een te begin.",
 	"mobile-frontend-quick-lookup-looking": "Soek tans vir \"$1\".",
 	"tag-mobile_edit": "Selfoonbydrae",
+	"tag-mobile_web_edit": "Mobiele web wysiging",
 	"mobile-frontend-pageaction-edit-tooltip": "Wysig die inleidende afdeling van hierdie bladsy.",
 	"mobile-frontend-donate-button-label": "Skenk",
-	"mobile-frontend-wikidata-editor-description-label": "'n Kort beskrywing van \"$1\":",
 	"mobile-frontend-loading-message": "Laai tans…",
 	"mobile-frontend-search-feedback-link-text": "Gee asb. terugvoering aan ons"
 }
