@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_14feac66",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-08-26T23:32:31Z",
+      "side": 1,
+      "message": "Avoid non-standard prefixes for meta data. Instead use regular sentences in the body for anything like this.",
+      "revId": "a2de174ac646ee48583da23349d441bfb2270dca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_74d5b0e8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-08-26T23:32:31Z",
+      "side": 1,
+      "message": "For consistency, \"Bug\" before \"Change-Id\".",
+      "revId": "a2de174ac646ee48583da23349d441bfb2270dca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
