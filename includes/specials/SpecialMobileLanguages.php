@@ -128,7 +128,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * @param string $pagename The name of the page
 	 */
 	public function executeWhenAvailable( $pagename ) {
-		if ( $pagename === '' ) {
+		if ( !is_string( $pagename ) || $pagename === '' ) {
 			wfHttpError( 404, $this->msg( 'mobile-frontend-languages-404-title' )->text(),
 				$this->msg( 'mobile-frontend-languages-404-desc' )->text()
 			);
