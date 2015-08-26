@@ -20,9 +20,7 @@ class SpecialMobileEditor extends MobileSpecialPage {
 	 * @param string $subpage The name of the page to edit
 	 */
 	public function executeWhenAvailable( $subpage ) {
-		$title = Title::newFromText( $subpage );
-
-		if ( is_null( $title ) ) {
+		if ( !is_string( $subpage ) || is_null( $title = Title::newFromText( $subpage ) ) ) {
 			$this->showPageNotFound();
 			return;
 		}
