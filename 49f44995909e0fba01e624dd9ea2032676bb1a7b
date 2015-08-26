@@ -16,6 +16,24 @@
       "revId": "49f44995909e0fba01e624dd9ea2032676bb1a7b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_116ebec4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-26T21:05:09Z",
+      "side": 1,
+      "message": "Nope it won\u0027t. Special pages are not subject to caching!",
+      "parentUuid": "6ec1af18_31a7564e",
+      "revId": "49f44995909e0fba01e624dd9ea2032676bb1a7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
