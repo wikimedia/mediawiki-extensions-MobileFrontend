@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_d56827ba",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-26T15:51:58Z",
+      "side": 1,
+      "message": "On a hygiene basis I\u0027d have no issues with this patch. As you say it makes it more readable.\n\nThe problem I have is for \"@private\" methods we don\u0027t expect them to be extended and easily in a refactor Wikibase could be overlooked and broken so this is very fragile. We don\u0027t really use a concept of @protected anywhere in MobileFrontend and these shouldn\u0027t be public method. Ideally MobileFrontend would just be using the search module that Vector/Monobook uses. Ideally you\u0027ll not want any sort of MobileFrontend extensions in Wikibase... you want to keep the control.\n\nSo given the above, on the long term your best bet would be to have a separate API module that does give a consistent response to search otherwise you\u0027ll just be fixing it again at some point in future. I think you can do this in the short term but it really really really really has to be a short term thing :)",
+      "parentUuid": "6ec1af18_3d9e3f67",
+      "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_56d3f32f",
         "filename": "resources/mobile.search/SearchApi.js",
         "patchSetId": 2
