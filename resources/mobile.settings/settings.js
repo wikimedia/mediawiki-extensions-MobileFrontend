@@ -6,9 +6,7 @@
  */
 ( function ( M, $ ) {
 
-	var browser = M.require( 'browser' ),
-		supportsLocalStorage = browser.supportsLocalStorage(),
-		settings = ( function () {
+	var settings = ( function () {
 			/**
 			 * Checks whether cookies are enabled
 			 * @method
@@ -37,12 +35,12 @@
 			 * @returns {Boolean} Whether the save was successful or not
 			 */
 			function save( name, value, useCookieFallback ) {
-				var cookieOptions = {
-					expires: 1
-				};
-				return supportsLocalStorage ?
-					localStorage.setItem( name, value ) :
-						( useCookieFallback ? $.cookie( name, value, cookieOptions ) : false );
+				var success = mw.storage.set( name, value ),
+					cookieOptions = {
+						expires: 1
+					};
+
+				return !success && useCookieFallback ? Boolean( $.cookie( name, value, cookieOptions ) ) : success;
 			}
 
 			/**
@@ -55,21 +53,28 @@
 			 * is found
 			 */
 			function get( name, useCookieFallback ) {
-				return supportsLocalStorage ? localStorage.getItem( name ) :
-					( useCookieFallback ? $.cookie( name ) : false );
+				var val = mw.storage.get( name );
+				if ( val === false && useCookieFallback ) {
+					return $.cookie( name );
+				}
+				return val;
 			}
 
 			/**
 			 * Deletes a user setting from a previous browser setting
 			 * @method
 			 * @param {String} name The key to refer to this value
-			 * @param {Boolean} useCookieFallback Optional: When set this will use cookies
+			 * @param {Boolean} [useCookieFallback] When set this will use cookies
 			 * when local storage not available.
 			 * @returns {Boolean} Whether the delete was successful or not
 			 */
 			function remove( name, useCookieFallback ) {
-				return supportsLocalStorage ? localStorage.removeItem( name ) :
-					( useCookieFallback ? $.removeCookie( name ) : false );
+				var success = mw.storage.remove( name );
+				if ( !success && useCookieFallback ) {
+					return $.removeCookie( name );
+				} else {
+					return success;
+				}
 			}
 
 			return {

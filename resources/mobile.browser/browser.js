@@ -194,21 +194,6 @@
 			return 'geolocation' in navigator;
 		} ),
 		/**
-		 * Detect if local storage
-		 * @method
-		 * @return {Boolean}
-		 */
-		supportsLocalStorage: memoize( function () {
-			// See if local storage is supported
-			try {
-				localStorage.setItem( 'localStorageTest', 'localStorageTest' );
-				localStorage.removeItem( 'localStorageTest' );
-				return true;
-			} catch ( e ) {
-				return false;
-			}
-		} ),
-		/**
 		 * Detect if we support file input uploads
 		 * @return {Boolean}
 		 */

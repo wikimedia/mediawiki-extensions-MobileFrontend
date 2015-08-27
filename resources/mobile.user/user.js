@@ -1,13 +1,10 @@
 ( function ( M, $ ) {
-	var user,
-		browser = M.require( 'browser' );
-
 	/**
 	 * Utility library for looking up details on the current user
 	 * @class user
 	 * @singleton
 	 */
-	user = {
+	var user = {
 		/* @see mediaWiki.user */
 		tokens: mw.user.tokens,
 		/* @see mediaWiki.user */
@@ -34,21 +31,18 @@
 		/**
 		* Retrieve and, if not present, generate a random session ID
 		* (32 alphanumeric characters).
-		* FIXME: use settings module
 		*
 		* @method
 		* @return {String}
 		*/
 		getSessionId: function () {
-			var sessionId;
-			if ( !browser.supportsLocalStorage() ) {
+			var sessionId = mw.storage.get( 'sessionId' );
+			// No support (see documentation)
+			if ( sessionId === false ) {
 				return '';
-			}
-			sessionId = localStorage.getItem( 'sessionId' );
-
-			if ( !sessionId ) {
+			} else if ( !sessionId ) {
 				sessionId = mw.user.generateRandomSessionId();
-				localStorage.setItem( 'sessionId', sessionId );
+				mw.storage.set( 'sessionId', sessionId );
 			}
 			return sessionId;
 		},
