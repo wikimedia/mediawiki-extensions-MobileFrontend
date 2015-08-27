@@ -736,8 +736,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist.scripts',
 			'mobile.overlays',
 			'mobile.loggingSchemas',
-			// FIXME: will be removed later
-			'mobile.search.api',
 		),
 		'styles' => array(
 			'resources/mobile.search/SearchOverlay.less',
