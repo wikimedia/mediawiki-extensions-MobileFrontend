@@ -1,28 +1,17 @@
-( function ( M, $ ) {
-	var Schema = M.require( 'Schema' ),
-		context = M.require( 'context' ),
+( function ( M ) {
+	var SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' ),
 		SchemaMobileWebBrowse;
 
 	/**
 	 * Implement schema defined at https://meta.wikimedia.org/wiki/Schema:MobileWebBrowse
 	 * @class SchemaMobileWebBrowse
-	 * @extends Schema
+	 * @extends SchemaMobileWeb
 	 */
-	SchemaMobileWebBrowse = Schema.extend( {
+	SchemaMobileWebBrowse = SchemaMobileWeb.extend( {
 		/** @inheritdoc **/
-		name: 'MobileWebBrowse',
-		/**
-		 * @inheritdoc
-		 *
-		 * @cfg {Object} defaults The options hash.
-		 * @cfg {String} defaults.mobileMode The version of MobileFrontend
-		 *  that the user is using. One of "stable", "beta", or "alpha"
-		 */
-		defaults: $.extend( {}, Schema.prototype.defaults, {
-			mobileMode: context.getMode()
-		} )
+		name: 'MobileWebBrowse'
 	} );
 
 	M.define( 'loggingSchemas/SchemaMobileWebBrowse', SchemaMobileWebBrowse );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
