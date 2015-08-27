@@ -10,34 +10,6 @@
 		Api = M.require( 'api' ).Api;
 
 	/**
-	 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
-	 * @method
-	 * @ignore
-	 * @param {String} str a string
-	 * @return {Object} a regular expression that can be used to search for that str
-	 */
-	function createSearchRegEx( str ) {
-		str = str.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&' );
-		return new RegExp( '^(' + str + ')', 'ig' );
-	}
-
-	/**
-	 * Takes a label potentially beginning with term
-	 * and highlights term if it is present with strong
-	 * @method
-	 * @private
-	 * @param {String} label a piece of text
-	 * @param {String} term a string to search for from the start
-	 * @return {String} safe html string with matched terms encapsulated in strong tags
-	 */
-	function highlightSearchTerm( label, term ) {
-		label = $( '<span>' ).text( label ).html();
-		term = $( '<span>' ).text( term ).html();
-
-		return label.replace( createSearchRegEx( term ), '<strong>$1</strong>' );
-	}
-
-	/**
 	 * @class SearchApi
 	 * @extends Api
 	 */
@@ -79,16 +51,42 @@
 		},
 
 		/**
+		 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
+		 * @param {String} str a string
+		 * @return {Object} a regular expression that can be used to search for that str
+		 * @private
+		 */
+		_createSearchRegEx: function ( str ) {
+			str = str.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&' );
+			return new RegExp( '^(' + str + ')', 'ig' );
+		},
+
+		/**
+		 * Takes a label potentially beginning with term
+		 * and highlights term if it is present with strong
+		 * @param {String} label a piece of text
+		 * @param {String} term a string to search for from the start
+		 * @return {String} safe html string with matched terms encapsulated in strong tags
+		 * @private
+		 */
+		_highlightSearchTerm: function ( label, term ) {
+			label = $( '<span>' ).text( label ).html();
+			term = $( '<span>' ).text( term ).html();
+
+			return label.replace( this._createSearchRegEx( term ), '<strong>$1</strong>' );
+		},
+
+		/**
 		 * Return data used for creating {Page} objects
 		 * @param {String} query to search for
 		 * @param {Object} info page info from the API
-		 * @returns {Object} data needed to create a {Page}
+		 * @return {Object} data needed to create a {Page}
 		 * @private
 		 */
 		_getPageData: function ( query, info ) {
 			return {
 				id: info.pageid,
-				displayTitle: highlightSearchTerm( info.title, query ),
+				displayTitle: this._highlightSearchTerm( info.title, query ),
 				title: info.title,
 				url: mw.util.getUrl( info.title ),
 				thumbnail: info.thumbnail
@@ -96,9 +94,79 @@
 		},
 
 		/**
-		 * Perform a search for the given query.
+		 * Process the data returned by the api call.
 		 * FIXME: remove filtering of redirects once the upstream bug has been fixed:
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=73673
+		 * @param {String} query to search for
+		 * @param {Object} data from api
+		 * @return {Array}
+		 * @private
+		 */
+		_processData: function ( query, data ) {
+			var self = this,
+				results = [],
+				pages = {},
+				redirects = {},
+				pageIds = [];
+
+			if ( data.query ) {
+				// get redirects into an easily searchable shape
+				if ( data.query.redirects ) {
+					$.each( data.query.redirects, function ( i, redirect ) {
+						redirects[redirect.from] = redirect.to;
+					} );
+				}
+				if ( data.query.prefixsearch ) {
+					// some queryies (like CategoryApi) only have prefixsearch
+					if ( data.query.pages ) {
+						// get results into an easily searchable shape
+						$.each( data.query.pages, function ( i, result ) {
+							pages[result.title] = result;
+						} );
+					}
+
+					// We loop through the prefixsearch results (rather than the pages
+					// results) here in order to maintain the correct order.
+					$.each( data.query.prefixsearch, function ( i, page ) {
+						var info, title = page.title,
+							id = page.pageid,
+							mwTitle;
+
+						// Is this a redirect? If yes, get the target.
+						if ( redirects[title] ) {
+							id = pages[redirects[title]].pageid;
+						}
+
+						if ( id && data.query.pages && data.query.pages[id] ) {
+							info = data.query.pages[id];
+						}
+
+						if ( $.inArray( id, pageIds ) === -1 ) {
+							if ( info ) {
+								// return all possible page data
+								pageIds.push( id );
+								results.push( self._getPageData( query, info ) );
+							} else {
+								mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
+
+								results.push( {
+									id: page.pageid,
+									heading: this._highlightSearchTerm( page.title, query ),
+									title: page.title,
+									displayTitle: mwTitle.getNameText(),
+									url: mwTitle.getUrl()
+								} );
+							}
+						}
+					} );
+				}
+			}
+
+			return results;
+		},
+
+		/**
+		 * Perform a search for the given query.
 		 * @method
 		 * @param {String} query to search for
 		 * @return {jQuery.Deferred}
@@ -111,69 +179,11 @@
 			if ( !this.isCached( query ) ) {
 				request = this.get( this.getApiData( query ) )
 					.done( function ( data ) {
-						var results = [],
-							pages = {},
-							redirects = {},
-							pageIds = [];
-
-						if ( data.query ) {
-							// get redirects into an easily searchable shape
-							if ( data.query.redirects ) {
-								$.each( data.query.redirects, function ( i, redirect ) {
-									redirects[redirect.from] = redirect.to;
-								} );
-							}
-							if ( data.query.prefixsearch ) {
-								// some queryies (like CategoryApi) only have prefixsearch
-								if ( data.query.pages ) {
-									// get results into an easily searchable shape
-									$.each( data.query.pages, function ( i, result ) {
-										pages[result.title] = result;
-									} );
-								}
-
-								// We loop through the prefixsearch results (rather than the pages
-								// results) here in order to maintain the correct order.
-								$.each( data.query.prefixsearch, function ( i, page ) {
-									var info, title = page.title,
-										id = page.pageid,
-										mwTitle;
-
-									// Is this a redirect? If yes, get the target.
-									if ( redirects[title] ) {
-										id = pages[redirects[title]].pageid;
-									}
-
-									if ( id && data.query.pages && data.query.pages[id] ) {
-										info = data.query.pages[id];
-									}
-
-									if ( $.inArray( id, pageIds ) === -1 ) {
-										if ( info ) {
-											// return all possible page data
-											pageIds.push( id );
-											results.push( self._getPageData( query, info ) );
-										} else {
-											mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
-
-											results.push( {
-												id: page.pageid,
-												heading: highlightSearchTerm( page.title, query ),
-												title: page.title,
-												displayTitle: mwTitle.getNameText(),
-												url: mwTitle.getUrl()
-											} );
-										}
-									}
-								} );
-							}
-						}
-
 						// resolve the Deferred object
 						result.resolve( {
 							query: query,
-							results: $.map( results, function ( data ) {
-								return new Page( data );
+							results: $.map( self._processData( query, data ), function ( item ) {
+								return new Page( item );
 							} )
 						} );
 					} )
@@ -203,9 +213,6 @@
 			return Boolean( this.searchCache[ query ] );
 		}
 	} );
-
-	// for tests
-	SearchApi._highlightSearchTerm = highlightSearchTerm;
 
 	M.define( 'modules/search/SearchApi', SearchApi );
 
