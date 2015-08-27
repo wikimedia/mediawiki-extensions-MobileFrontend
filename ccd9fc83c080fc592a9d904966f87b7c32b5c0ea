@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_08cd24bc",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-08-27T19:37:15Z",
+      "side": 1,
+      "message": "mention T109224",
+      "revId": "ccd9fc83c080fc592a9d904966f87b7c32b5c0ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
