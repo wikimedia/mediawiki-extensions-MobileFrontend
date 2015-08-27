@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f7619d00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-27T16:53:04Z",
+      "side": 1,
+      "message": "This doesn\u0027t necessarily have to be a hot fix. It seems useful.",
+      "revId": "446ad721d0213236d50f93a1c0b9c78e1e077982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_7724cdbc",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-27T16:53:04Z",
+      "side": 1,
+      "message": "Maybe wgMFMobileFormatterHeadings ?",
+      "revId": "446ad721d0213236d50f93a1c0b9c78e1e077982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
