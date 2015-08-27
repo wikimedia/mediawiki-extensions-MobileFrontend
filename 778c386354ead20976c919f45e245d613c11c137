@@ -16,6 +16,24 @@
       "revId": "778c386354ead20976c919f45e245d613c11c137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ea6d3096",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-27T17:10:07Z",
+      "side": 1,
+      "message": "I mean, if html contains the complete HTML or only the content of the page (which wouldn\u0027t include the page heading). I\u0027ll look into the code to find that out, would make the regex easier to read :)",
+      "parentUuid": "6ec1af18_6adce073",
+      "revId": "778c386354ead20976c919f45e245d613c11c137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
