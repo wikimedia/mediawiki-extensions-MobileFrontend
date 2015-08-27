@@ -19,6 +19,9 @@ class MobileFormatter extends HtmlFormatter {
 	/** @var string $headingTransformEnd String prefixes to be
 		applied before and after section content. */
 	protected $headingTransformEnd = '<div>';
+	/** @var array $topHeadingTags Array of strings with possible tags,
+		can be recognized as top headings. */
+	public $topHeadingTags = array();
 
 	/**
 	 * Saves a Title Object
@@ -47,6 +50,8 @@ class MobileFormatter extends HtmlFormatter {
 		parent::__construct( $html );
 
 		$this->title = $title;
+		$this->topHeadingTags = MobileContext::singleton()
+			->getMFConfig()->get( 'MFMobileFormatterHeadings' );
 	}
 
 	/**
@@ -287,7 +292,11 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string the tag name for the top level headings
 	 */
 	protected function findTopHeading( $html ) {
-		$tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		$tags = $this->topHeadingTags;
+		if ( !is_array( $tags ) ) {
+			throw new UnexpectedValueException( 'Possible top headings needs to be an array of strings, ' .
+				gettype( $tags ) . ' given.' );
+		}
 		foreach ( $tags as $tag ) {
 			if ( strpos( $html, '<' . $tag ) !== false ) {
 				return $tag;
