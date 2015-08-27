@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_9aae432a",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 2677
+      },
+      "writtenOn": "2015-08-27T08:46:56Z",
+      "side": 1,
+      "message": "This stuff should be extracted to one ore more methods",
+      "revId": "db0da9c974d8100daf50f8fc101be1bc1e78b8ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
