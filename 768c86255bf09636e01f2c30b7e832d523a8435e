@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_9aede3f0",
+        "filename": "resources/mobile.search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 549
+      },
+      "writtenOn": "2015-08-27T07:14:49Z",
+      "side": 1,
+      "message": "We might think about a param for wbsearchentities which changes the result format to the one expected by MobileFrontend though that seems to be a bit hacky :S\n\nThe issue is that all this code is based on the assumption that it deals with MediaWiki pages. Ideally, we also want to show the description of the item and the aliases that matched the search term like on the desktop search. However, that isn\u0027t currently supported by MobileFrontend so the only thing we could to is putting all that stuff into displayTitle. That however is also a hack and may break some assumptions.\n\nI will discuss with the team if a different format or a new api module is desirable and try to find a solution based on those opinions. However, that shouldn\u0027t block this patch as it is only a cosmetic one improving code quality. We should rather block https://gerrit.wikimedia.org/r/#/c/233481/ because it is related to replacing the whole module.",
+      "parentUuid": "6ec1af18_d56827ba",
+      "revId": "768c86255bf09636e01f2c30b7e832d523a8435e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_56d3f32f",
         "filename": "resources/mobile.search/SearchApi.js",
         "patchSetId": 2
