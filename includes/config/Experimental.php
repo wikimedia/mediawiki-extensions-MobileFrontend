@@ -40,3 +40,11 @@ $wgMFBrowseTags = array(
  * FIXME: This config is highly experimental and temporary only. Use it on your own risk!
  */
 $wgMFNoLoginOverride = false;
+
+/**
+ * This is a list of html tags, that could be recognized as the first heading of a page.
+ * This is an interim solution to fix Bug T110436 and shouldn't be used, if you don't know,
+ * what you do. Moreover, this configuration variable will be removed in the near future
+ * (hopefully).
+ */
+$wgMFMobileFormatterHeadings = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
