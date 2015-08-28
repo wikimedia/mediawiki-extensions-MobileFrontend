@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f64bd229",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-28T20:11:26Z",
+      "side": 1,
+      "message": "Please add this as a separate patchset.\nI\u0027m fine with all the other changes and want to merge them but right now I want to think more about this.",
+      "revId": "d25cb357653a2d8311e9b4745f564452a0dc29d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
