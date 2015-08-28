@@ -202,7 +202,7 @@
 	"mobile-frontend-nearby-permission": "{{GRAMMAR:genitive|{{SITENAME}}}} lähikonna funktsioonil pole luba juurdepääsuks sinu asukohale.",
 	"mobile-frontend-nearby-permission-guidance": "Palun veendu, et annad loa näidata oma asukohta. Võimalik, et sul on vaja veebilehitseja asukohasätted üle kontrollida.",
 	"mobile-frontend-nearby-refresh": "Värskenda asukohta",
-	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu võrgulehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
+	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu veebilehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
 	"mobile-frontend-nearby-requirements-guidance": "Proovi teist veebilehitsejat või luba JavaScript, juhul kui oled selle keelanud.",
 	"mobile-frontend-nearby-title": "Lähikond",
 	"mobile-frontend-nearby-sectiontext": "Selle nähtuse lähedal",

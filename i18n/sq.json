@@ -19,7 +19,7 @@
 	"mobile-frontend-footer-contact": "Kontakti",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} është bërë nga njerëz si ju.",
-	"mobile-frontend-generic-login-action": "Kyqu për të kontribuar.",
+	"mobile-frontend-generic-login-action": "Kyçu për të kontribuar.",
 	"mobile-frontend-home-button": "Kryefaqja",
 	"mobile-frontend-images-status": "Fotografitë",
 	"mobile-frontend-language-article-heading": "Lexo në një gjuhë tjetër",
@@ -35,7 +35,7 @@
 	"mobile-frontend-main-menu-nearby": "Pranë",
 	"mobile-frontend-main-menu-settings": "Parametrat",
 	"mobile-frontend-main-menu-settings-heading": "Parametrat e faqes për celular",
-	"mobile-frontend-main-menu-watchlist": "Lista mbikqyrëse",
+	"mobile-frontend-main-menu-watchlist": "Lista mbikëqyrëse",
 	"mobile-frontend-news-items": "Në lajme",
 	"mobile-frontend-opt-in-explain": "Duke iu bashkuar versionit beta, ju do të keni qasje në tipare eksperimentale, me riskun e ndeshjes me probleme.",
 	"mobile-frontend-page-menu-contents": "Përmbajtja",
@@ -56,6 +56,7 @@
 	"mobile-frontend-view": "Për celular",
 	"mobile-frontend-view-desktop": "Desktopi",
 	"mobile-frontend-view-mobile": "Pamja për celular",
-	"tag-mobile_edit": "Redaktime nga celulari",
+	"tag-mobile_edit": "Redaktim nga celulari",
+	"tag-mobile_web_edit": "Redaktim në versionin web nga celulari",
 	"mobile-frontend-pageaction-edit-tooltip": "Redakto seksionin kryesues në këtë faqe."
 }
