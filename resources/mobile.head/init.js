@@ -14,23 +14,38 @@
 	 * months or years
 	 * @ignore
 	 */
-	function initHistoryLink() {
-		var delta,
-			$lastModified = $( '#mw-mf-last-modified' ),
-			$lastModifiedLink = $lastModified.find( 'a' ),
-			historyUrl = $lastModifiedLink.attr( 'href' ),
-			ts = $lastModifiedLink.data( 'timestamp' ),
-			username = $lastModifiedLink.data( 'user-name' ) || false,
-			gender = $lastModifiedLink.data( 'user-gender' );
+	function initHistoryLink( $lastModifiedLink ) {
+		var delta, historyUrl, msg,
+			ts, username, gender;
+
+		$lastModifiedLink = $lastModifiedLink || $( '#mw-mf-last-modified a' );
+		historyUrl = $lastModifiedLink.attr( 'href' );
+		ts = $lastModifiedLink.data( 'timestamp' );
+		username = $lastModifiedLink.data( 'user-name' ) || false;
+		gender = $lastModifiedLink.data( 'user-gender' );
 
 		if ( ts ) {
 			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
 			if ( time.isRecent( delta ) ) {
-				$lastModified.parent( '.last-modified-bar' ).addClass( 'active' );
+				$lastModifiedLink.closest( '.last-modified-bar' ).addClass( 'active' );
 			}
-
-			$lastModifiedLink.replaceWith( time.getLastModifiedMessage( ts, historyUrl, username, gender ) );
+			msg = time.getLastModifiedMessage( ts, username, gender, historyUrl );
+			$lastModifiedLink.replaceWith( msg );
 		}
+	}
+
+	/**
+	 * Initialisation function for last modified module.
+	 *
+	 * Enhances #mw-mf-last-modified element
+	 * to show a human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 * @ignore
+	 */
+	function initModifiedInfo() {
+		$( '.modified-enhancement' ).each( function () {
+			initHistoryLink( $( this ) );
+		} );
 	}
 
 	// bind events
@@ -42,6 +57,8 @@
 	} );
 
 	$( function () {
+		// Update anything else that needs enhancing (e.g. watchlist)
+		initModifiedInfo();
 		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {
 			mainMenu.appendTo( '#mw-mf-page-left' );
 		}

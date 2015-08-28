@@ -378,9 +378,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.pagelist.scripts/WatchstarPageList.js',
 		),
-		'messages' => array(
-			'mobile-frontend-watchlist-modified'
-		)
 	),
 
 	'mobile.watchlist' => $wgMFResourceFileModuleBoilerplate + array(
@@ -391,15 +388,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.watchlist/WatchListApi.js',
 			'resources/mobile.watchlist/WatchList.js',
-		),
-		'messages' => array(
-			'mobile-frontend-watchlist-modified',
-			'minutes-ago',
-			'seconds-ago',
-			'hours-ago',
-			'mobile-frontend-months-ago',
-			'mobile-frontend-days-ago',
-			'mobile-frontend-years-ago',
 		),
 	),
 

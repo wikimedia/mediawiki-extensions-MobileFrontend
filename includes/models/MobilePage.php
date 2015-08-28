@@ -44,6 +44,39 @@ class MobilePage {
 	}
 
 	/**
+	 * Retrieve the last time the page content was modified. Do not reflect null edits.
+	 * @return string timestamp representing last edited time.
+	 */
+	public function getLatestTimestamp() {
+		$title = $this->getTitle();
+		return Revision::getTimestampFromId( $title, $title->getLatestRevID() );
+	}
+
+	/**
+	 * Retrieve the last edit to this page.
+	 * @return array defining edit with keys name, timestamp and gender
+	 */
+	public function getLatestEdit() {
+		$rev = Revision::newFromId( $this->getTitle()->getLatestRevID() );
+		$unixTimestamp = wfTimestamp( TS_UNIX, $this->getLatestTimestamp() );
+		$edit = array(
+			'timestamp' => $unixTimestamp,
+			'name' => '',
+			'gender' => '',
+		);
+		if ( $rev ) {
+			$userId = $rev->getUser();
+			if ( $userId ) {
+				$revUser = User::newFromId( $userId );
+				$revUser->load( User::READ_NORMAL );
+				$edit['name'] = $revUser->getName();
+				$edit['gender'] = $revUser->getOption( 'gender' );
+			}
+		}
+		return $edit;
+	}
+
+	/**
 	 * Get the title of the page
 	 *
 	 * @return Title

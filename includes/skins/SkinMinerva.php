@@ -630,9 +630,8 @@ class SkinMinerva extends SkinTemplate {
 	protected function getHistoryLink( Title $title ) {
 		$user = $this->getUser();
 		$isMainPage = $title->isMainPage();
-		// add last modified timestamp
-		$revId = $this->getRevisionId();
-		$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
+		$mp = new MobilePage( $this->getTitle(), false );
+		$timestamp = $mp->getLatestTimestamp();
 		// Main pages tend to include transclusions (see bug 51924)
 		if ( $isMainPage ) {
 			$lastModified = $this->msg( 'mobile-frontend-history' )->plain();
@@ -643,27 +642,15 @@ class SkinMinerva extends SkinTemplate {
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 		}
-		$unixTimestamp = wfTimestamp( TS_UNIX, $timestamp );
 		$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
+		$edit = $mp->getLatestEdit();
 		$link = array(
-			'data-timestamp' => $isMainPage ? '' : $unixTimestamp,
+			'data-timestamp' => $isMainPage ? '' : $edit['timestamp'],
 			'href' => $historyUrl,
 			'text' => $lastModified,
-			'data-user-name' => '',
-			'data-user-gender' => 'unknown',
+			'data-user-name' => $edit['name'],
+			'data-user-gender' => $edit['gender'],
 		);
-		$rev = Revision::newFromId( $this->getRevisionId() );
-		if ( $rev ) {
-			$userId = $rev->getUser();
-			if ( $userId ) {
-				$revUser = User::newFromId( $userId );
-				$revUser->load( User::READ_NORMAL );
-				$link = array_merge( $link, array(
-					'data-user-name' => $revUser->getName(),
-					'data-user-gender' => $revUser->getOption( 'gender' ),
-				) );
-			}
-		}
 		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;
 	}
