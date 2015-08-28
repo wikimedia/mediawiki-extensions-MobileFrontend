@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_70136ab9",
+        "filename": "resources/mobile.special.notifications.scripts/notifications.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2015-08-28T18:30:04Z",
+      "side": 1,
+      "message": "This is doing a click event at init-time.",
+      "revId": "d5a5d4fb0030215af95d23827fa60446fa5f3142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
