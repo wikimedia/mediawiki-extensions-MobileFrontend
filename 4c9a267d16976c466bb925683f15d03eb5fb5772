@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_e04463bf",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-08-29T19:22:26Z",
+      "side": 1,
+      "message": "Hmm… I\u0027m not sure if this will actually work correctly with CentralAuth\u0027s ForeignApi code. I\u0027m afraid CentralAuthForeignApi will still attempt to get and use a centralauthtoken, and it seems that mixing JSONP and centralauthtokens always results in a badtoken error, for some reason.\n\nYou should also do:\n\n    data \u003d $.extend( {}, data, { centralauthtoken: false } );\n\nThis guarantees that the action\u003dcentralauthtoken request will be suppressed (because you explicitly gave a \u0027centralauthtoken\u0027), and that no \u0027centralauthtoken\u0027 parameter will be sent with the main request (because `false` is stripped out since https://gerrit.wikimedia.org/r/#/c/232295/).",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_40af7778",
         "filename": "resources/mobile.foreignApi/ForeignApi.js",
         "patchSetId": 7
