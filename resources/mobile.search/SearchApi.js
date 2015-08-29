@@ -86,7 +86,7 @@
 		_getPageData: function ( query, info ) {
 			return {
 				id: info.pageid,
-				displayTitle: this._highlightSearchTerm( info.title, query ),
+				displayTitle: this._highlightSearchTerm( info.displayTitle || info.title, query ),
 				title: info.title,
 				url: mw.util.getUrl( info.title ),
 				thumbnail: info.thumbnail
