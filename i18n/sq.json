@@ -3,7 +3,8 @@
 		"authors": [
 			"FatosMorina",
 			"Olsi",
-			"Liridon"
+			"Liridon",
+			"Ammartivari"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Kalo në seksionin A",
@@ -31,7 +32,7 @@
 	"mobile-frontend-main-menu-account-create": "Krijo llogari",
 	"mobile-frontend-main-menu-button-tooltip": "Hape menynë kryesore",
 	"mobile-frontend-main-menu-featured": "I veçuar",
-	"mobile-frontend-main-menu-login": "Kyqu",
+	"mobile-frontend-main-menu-login": "Kyçu",
 	"mobile-frontend-main-menu-nearby": "Pranë",
 	"mobile-frontend-main-menu-settings": "Parametrat",
 	"mobile-frontend-main-menu-settings-heading": "Parametrat e faqes për celular",
