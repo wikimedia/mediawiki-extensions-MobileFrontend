@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c0b7e733",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-29T13:52:40Z",
+      "side": 1,
+      "message": "this seems unneded, because mobile.watchstar already requires mobilestartup, which requires mobile.head.",
+      "revId": "bd2827bd5a6017b480100954d589e9a328023b68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_60887376",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-29T13:52:40Z",
+      "side": 1,
+      "message": "why mb and not mp? *confused*",
+      "revId": "bd2827bd5a6017b480100954d589e9a328023b68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_a0917b9e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-29T13:52:40Z",
+      "side": 1,
+      "message": "I think you mean $editor?",
+      "revId": "bd2827bd5a6017b480100954d589e9a328023b68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_808d5f87",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-29T13:52:40Z",
+      "side": 1,
+      "message": "You should update the docblock, too",
+      "revId": "bd2827bd5a6017b480100954d589e9a328023b68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_207eeb67",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-29T13:52:40Z",
+      "side": 1,
+      "message": "this seems to be false now? Maybe use closest() instead of parent?",
+      "revId": "bd2827bd5a6017b480100954d589e9a328023b68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
