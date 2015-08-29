@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ec1af18_80b9dfc8",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-08-29T18:48:00Z",
+      "side": 1,
+      "message": "Pretty sure it isn\u0027t necessary.",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_20aa6b69",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-08-29T18:48:00Z",
+      "side": 1,
+      "message": "Well, it is necessary if you want to change \u0027options\u0027.",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_40af7778",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-08-29T18:48:00Z",
+      "side": 1,
+      "message": "Hmm… \u0027type\u0027 should probably always be set. You might be calling #ajax directly when you mean to call #get or #post?\n\nAnyway, I\u0027ll change the check in core to do `type \u003d\u003d\u003d \u0027POST\u0027` rather than of `type !\u003d\u003d \u0027GET\u0027` to handle this case netter without workarounds. Will be also better for consistency with other API code, where the former seems to be preferred. Please +2: https://gerrit.wikimedia.org/r/234738",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_a0e89b0c",
         "filename": "resources/mobile.foreignApi/ForeignApi.js",
         "patchSetId": 7
