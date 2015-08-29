@@ -67,6 +67,23 @@
       "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_c0ba87b5",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-08-29T18:52:23Z",
+      "side": 1,
+      "message": "So this method seemed pretty useless to me when I looked at it earlier, but now I looked at places where you use it and it actually is kind of neat. Feel like upstreaming it?\n\n(If we upstream it, I think that requests that finished should remove themselves from this.requests to prevent it from growing potentially indefinitely, which should be easy to add.)",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
