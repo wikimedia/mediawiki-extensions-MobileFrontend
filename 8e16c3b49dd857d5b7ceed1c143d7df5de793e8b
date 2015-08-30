@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f9c73e48",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-30T18:24:59Z",
+      "side": 1,
+      "message": "Now, the search input has mw-ui-input in JS enabled browsers, too :/",
+      "revId": "8e16c3b49dd857d5b7ceed1c143d7df5de793e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

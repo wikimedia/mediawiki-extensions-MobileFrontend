@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f9f5fe7f",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-30T18:24:59Z",
+      "side": 0,
+      "message": "If this variable isn\u0027t used anymore, you should remove it from MinervaTemplateBeta and MinervaTemplateAlpha, too :)",
+      "revId": "b5d893d450dc9fca4e7650d19636946ec70ebe50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_19cc8a64",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-08-30T18:24:59Z",
+      "side": 0,
+      "message": "The default placeholder seems to be \"Search\", so you should add \u0027placeholder\u0027 \u003d\u003e \u0027\u0027, here.\n\nRemember that this will rmeove the placeholder message for JS enabled brwosers, too. You should implement a JavaScript fallback, which will add this message as a placeholder and removes the mw-ui-input from the class list, so the JavaScript version looks like it looks now :)",
+      "revId": "b5d893d450dc9fca4e7650d19636946ec70ebe50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
