@@ -10,8 +10,6 @@ class MinervaTemplate extends BaseTemplate {
 	/** @var boolean Temporary variable that decides whether
 	 * history link should be rendered before the content. */
 	protected $renderHistoryLinkBeforeContent = true;
-	/** @var string $searchPlaceHolderMsg Message used as placeholder in search input */
-	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder';
 
 	/** @var boolean Specify whether the page is a special page */
 	protected $isSpecialPage;
@@ -94,8 +92,8 @@ class MinervaTemplate extends BaseTemplate {
 			'class' => 'search',
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
-			// attribute values, so no need to escape the string here.
-			'placeholder' =>  wfMessage( $this->searchPlaceHolderMsg )->text(),
+			// attribute values, so need to escape the string here.
+			'placeholder' => '',
 		);
 		return $searchBox;
 	}

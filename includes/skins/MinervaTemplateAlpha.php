@@ -9,11 +9,6 @@
  */
 class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	/**
-	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
-	 */
-	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-alpha';
-
-	/**
 	 * Get button information to link to Special:Nearby to find articles
 	 * (geographically) related to this
 	 * @return array A map of the button's friendly name, "nearby", to its spec

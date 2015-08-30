@@ -10,10 +10,6 @@
 class MinervaTemplateBeta extends MinervaTemplate {
 	/** {@inheritdoc} */
 	protected $renderHistoryLinkBeforeContent = false;
-	/**
-	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
-	 */
-	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-beta';
 
 	/**
 	 * Render available page actions

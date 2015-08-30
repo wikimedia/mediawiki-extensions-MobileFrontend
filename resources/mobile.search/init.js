@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-
-	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var searchPlaceholderMsg = 'mobile-frontend-placeholder',
+		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		context = M.require( 'context' ),
 		router = M.require( 'router' ),
@@ -48,6 +48,15 @@
 			router.navigate( '/search' );
 		} );
 	}
+
+	// change the placeholder text for javascript enabled browsers
+	if ( context.isAlphaGroupMember() ) {
+		searchPlaceholderMsg = 'mobile-frontend-placeholder-alpha';
+	} else if ( context.isBetaGroupMember() ) {
+		searchPlaceholderMsg = 'mobile-frontend-placeholder-beta';
+	}
+
+	$( '#searchInput' ).attr( 'placeholder', mw.message( searchPlaceholderMsg ) );
 
 	// See https://phabricator.wikimedia.org/T76882 for why we disable search on Android 2
 	if ( browser.isAndroid2() ) {
