@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Denö",
-			"Ilja.mos"
+			"Ilja.mos",
+			"Mashoi7"
 		]
 	},
 	"mobile-frontend-copyright": "Sizäldö on käytös luval $1, ei olle toizin mainittu.",
@@ -10,15 +11,18 @@
 	"mobile-frontend-home-button": "Kodisivule",
 	"mobile-frontend-language-article-heading": "Lugie toizel kielel",
 	"mobile-frontend-last-modified-date": "Jälgimäzet muutokset kohtas $2 $1",
+	"mobile-frontend-login": "Kirjuttai",
 	"mobile-frontend-main-menu-button-tooltip": "Avua piämenu",
 	"mobile-frontend-main-menu-login": "Kirjuttai",
 	"mobile-frontend-main-menu-nearby": "Vieres",
 	"mobile-frontend-main-menu-settings": "Azetukset",
 	"mobile-frontend-main-menu-watchlist": "Valvonduluvettelo",
+	"mobile-frontend-password-placeholder": "Peittosana",
 	"mobile-frontend-placeholder": "Eči {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Luottamusperiuattehet",
 	"mobile-frontend-random-button": "Satunnaine",
 	"mobile-frontend-terms-text": "Käyttöehtot",
+	"mobile-frontend-username-placeholder": "Käyttäitunnus",
 	"mobile-frontend-view": "Mobilnoi versii",
 	"mobile-frontend-view-desktop": "Käyttö tiedokonehel",
 	"mobile-frontend-view-mobile": "Mobilnoi",
