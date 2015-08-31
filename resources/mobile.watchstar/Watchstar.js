@@ -61,7 +61,7 @@
 		},
 		tagName: 'div',
 		className: watchIcon.getClassName(),
-		template: mw.template.compile( '<span>{{tooltip}}</span>', 'hogan' ),
+		template: mw.template.compile( '<button>{{tooltip}}</button>', 'hogan' ),
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this,

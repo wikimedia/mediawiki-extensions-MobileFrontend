@@ -62,7 +62,8 @@
 
 		input,
 		a,
-		span {
+		span,
+		button {
 			// Needed for non-JavaScript users
 			position: absolute;
 			display: block;
@@ -70,6 +71,11 @@
 			height: 100%;
 			// needed for ContentOverlay pointer arrow
 			margin: 0 0 8px;
+		}
+
+		button {
+			text-indent: inherit;
+			outline: none;
 		}
 
 		&:first-child {

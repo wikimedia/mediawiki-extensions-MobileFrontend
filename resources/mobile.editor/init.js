@@ -45,7 +45,10 @@
 	 */
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' )
-			.attr( 'href', '#/editor/' + section )
+			.attr( {
+				href: '#/editor/' + section,
+				title: $( container ).attr( 'title' )
+			} )
 			.text( mw.msg( 'mobile-frontend-editor-edit' ) )
 			.prependTo( container );
 	}
