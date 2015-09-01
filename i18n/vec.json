@@ -37,6 +37,7 @@
 	"mobile-frontend-footer-contact": "Contati",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} xe fato da gente come ti.",
+	"mobile-frontend-generic-login-action": "Và drento par contribuir.",
 	"mobile-frontend-home-button": "Inissio",
 	"mobile-frontend-images-status": "Imaxene",
 	"mobile-frontend-language-article-heading": "Lexe inte n'altra léngua",
@@ -151,5 +152,6 @@
 	"mobile-frontend-watchlist-view": "Varda łe to tegnùe d'ocio",
 	"tag-mobile_edit": "Canbiamento da tełefonin",
 	"tag-mobile_edit-description": "Modifega fata dal sito pa' dispoxitivi mobiłi",
-	"tag-mobile_web_edit": "Modìfega da web mobile"
+	"tag-mobile_web_edit": "Modìfega da web mobile",
+	"mobile-frontend-pageaction-edit-tooltip": "Modifica la prima sezion de sta pagina."
 }

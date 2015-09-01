@@ -192,5 +192,6 @@
 	"mobile-frontend-watchlist-view": "Tanawon an saimong bantay-listahan",
 	"mobile-frontend-quick-lookup-not-internal": "Sori, bako tabi ini sarong saguysoy palaog kaining wiki.",
 	"tag-mobile_edit": "Magiwasong pagliwat",
-	"tag-mobile_edit-description": "Pagliwat na hinimo gikan sa magíwasong sityo"
+	"tag-mobile_edit-description": "Pagliwat na hinimo gikan sa magíwasong sityo",
+	"mobile-frontend-pageaction-edit-tooltip": "Liwata an pangenot na seksyon kaining pahina."
 }
