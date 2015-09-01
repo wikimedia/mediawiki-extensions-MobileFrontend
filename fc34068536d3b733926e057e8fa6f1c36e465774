@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_6caa9c6a",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-01T16:43:51Z",
+      "side": 1,
+      "message": "please remove the trailing whitespace and tab :)",
+      "revId": "fc34068536d3b733926e057e8fa6f1c36e465774",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2cc81459",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-01T16:43:51Z",
+      "side": 1,
+      "message": "we usually put whitespaces wherever we can :P No, for real, our coding conventions suggest to add whitespaces to make the code more readable. Put whitespaces after/before brackets and after a , e.g.. Read https://www.mediawiki.org/wiki/Mobile_web/Coding_conventions for more information :)",
+      "revId": "fc34068536d3b733926e057e8fa6f1c36e465774",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
