@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_6e513410",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-01T10:41:56Z",
+      "side": 1,
+      "message": "You could use:\n\n$( \u0027#searchInput\u0027 ).removeClass( \u0027mw-ui-input\u0027 ).attr( \u0027placeholder\u0027, searchPlaceholderMsg );\n\nTo add the placeholder message. And the local variable searchPlaceholderMsg you could fill with contents like:\n\nsearchPlaceholderMsg \u003d \u0027mobile-frontend-placeholder\u0027;\nif ( context.isAlphaGroupMember() ) {\n    searchPlaceholderMsg \u003d \u0027mobile-frontend-placeholder-alpha\u0027;\n} elseif ( context.isBetaGroupMember() ) {\n    searchPlaceholderMsg \u003d \u0027mobile-frontend-placeholder-beta\u0027;\n}\n\nTo make this work, you need to add all message keys to the \"messages\" array in the mobile.search module in our Resources.php (includes/Resources.php). See https://www.mediawiki.org/wiki/Manual:Messages_API#Using_messages_in_JavaScript for more information :)",
+      "revId": "ff81a4e151866f6e582c96f56d4077dad35ca2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
