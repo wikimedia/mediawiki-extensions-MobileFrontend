@@ -1413,7 +1413,7 @@ $wgMobileEchoModules = array(
 	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
-			'ext.echo.base',
+			'ext.echo.logger',
 		),
 		'scripts' => array(
 			'resources/mobile.notifications.overlay/NotificationsOverlay.js',

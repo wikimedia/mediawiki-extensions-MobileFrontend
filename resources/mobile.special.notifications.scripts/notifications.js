@@ -23,9 +23,17 @@
 			} );
 		notContinue = mw.config.get( 'wgEchoNextContinue' );
 		header = mw.config.get( 'wgEchoDateHeader' );
-		mw.loader.using( 'ext.echo.base', function () {
+		mw.loader.using( 'ext.echo.logger', function () {
 			$( '.mw-echo-notification' ).each( function () {
-				mw.echo.setupNotificationLogging( $( this ), 'mobile-archive', true );
+				var eventId = $( this ).attr( 'data-notification-event' ),
+					eventType = $( this ).attr( 'data-notification-type' );
+				mw.echo.logger.logInteraction(
+					mw.echo.Logger.static.actions.notificationImpression,
+					'mobile-archive',
+					eventId,
+					eventType,
+					true
+				);
 			} );
 		} );
 	}
@@ -74,8 +82,17 @@
 					$li.addClass( 'mw-echo-unread' );
 					unread.push( id );
 				}
-				mw.loader.using( 'ext.echo.base', function () {
-					mw.echo.setupNotificationLogging( $li, 'mobile-archive', true );
+				mw.loader.using( 'ext.echo.logger', function () {
+					var eventId = $li.attr( 'data-notification-event' ),
+						eventType = $li.attr( 'data-notification-type' );
+
+					mw.echo.logger.logInteraction(
+						mw.echo.Logger.static.actions.notificationImpression,
+						'mobile-archive',
+						eventId,
+						eventType,
+						true
+					);
 				} );
 			} );
 

@@ -80,16 +80,32 @@
 						self.render( options );
 						self.$( '.mw-echo-notification' ).each( function () {
 							var $notification = $( this ),
-								$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
+								$primaryLink = $notification.find( '.mw-echo-notification-primary-link' ),
+								eventId = $notification.attr( 'data-notification-event' ),
+								eventType = $notification.attr( 'data-notification-type' );
+
 							// If there is a primary link, make the entire notification clickable.
 							if ( $primaryLink.length ) {
 								$notification.addClass( 'mw-echo-linked-notification' );
 								$notification.on( 'click', function () {
+									mw.echo.logger.logInteraction(
+										mw.echo.Logger.static.actions.notificationClick,
+										'mobile-overlay',
+										eventId,
+										eventType,
+										true
+									);
 									window.location.href = $primaryLink.attr( 'href' );
 								} );
 							}
-							// Set up event logging for each notification
-							mw.echo.setupNotificationLogging( $notification, 'mobile-overlay', true );
+							// Log notification impression
+							mw.echo.logger.logInteraction(
+								mw.echo.Logger.static.actions.notificationImpression,
+								'mobile-overlay',
+								eventId,
+								eventType,
+								true
+							);
 						} );
 						// Only fire 'mark as read' API call when unread notification
 						// count is not zero.  Question: why does this fire an API call
