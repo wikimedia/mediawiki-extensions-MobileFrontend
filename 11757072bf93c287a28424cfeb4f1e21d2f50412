@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_de38113c",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-02T12:39:16Z",
+      "side": 1,
+      "message": "var declarations should be made at the top of the scope.",
+      "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_9e4609c5",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-02T12:39:16Z",
+      "side": 1,
+      "message": "Could you please write a small comment about the magic number 320?",
+      "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
