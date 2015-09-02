@@ -9,6 +9,7 @@
 		Button = M.require( 'Button' ),
 		Anchor = M.require( 'Anchor' ),
 		skin = M.require( 'skin' ),
+		browser = M.require( 'browser' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
 		} ),
@@ -146,7 +147,10 @@
 			 */
 			function loadSourceEditor() {
 				var rlModuleName, moduleName;
-				if ( user.inUserBucketA() && context.isBetaGroupMember() ) {
+				// use the new wikitexteditor with a basic toolbar as a test for beta users and users
+				// without an iphone (bottom toolbars doesn't work) - Bug T109224
+				// FIXME: Make this working with iOS8
+				if ( !user.inUserBucketA() && context.isBetaGroupMember() && !browser.isIos( 8 ) ) {
 					moduleName = 'modules/editor/EditorOverlayWithToolbar';
 					rlModuleName = 'mobile.editor.overlay.withtoolbar';
 				} else {
