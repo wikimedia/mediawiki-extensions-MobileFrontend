@@ -2,7 +2,6 @@
 
 	var
 		Overlay = M.require( 'Overlay' ),
-		SearchApi = M.require( 'modules/search/SearchApi' ),
 		Anchor = M.require( 'Anchor' ),
 		Icon = M.require( 'Icon' ),
 		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
@@ -103,7 +102,8 @@
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
-			this.api = options.api || new SearchApi();
+			// use the given api module or use the default SearchApi
+			this.api = options.api || new M.require( 'modules/search/SearchApi' );
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
