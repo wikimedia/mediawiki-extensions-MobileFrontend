@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ec1af18_9774a731",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T22:17:12Z",
+      "side": 1,
+      "message": "Why are we adding this. Did Florian suggest it? If so could you both please explain to me why?",
+      "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_de38113c",
         "filename": "resources/mobile.search/init.js",
         "patchSetId": 11
@@ -30,6 +47,23 @@
       "writtenOn": "2015-09-02T12:39:16Z",
       "side": 1,
       "message": "Could you please write a small comment about the magic number 320?",
+      "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d77eaf13",
+        "filename": "resources/mobile.search/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T22:17:12Z",
+      "side": 1,
+      "message": "I don\u0027t feel comfortable with removing this class or adding it in the first place.\n\nI\u0027m fine with only showing the placeholder with JS though.",
       "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
