@@ -13,7 +13,7 @@
 	"mobile-frontend-changeslist-ip": "Utente anonemo",
 	"mobile-frontend-changeslist-nocomment": "nisun ogeto de ła modifega",
 	"mobile-frontend-clear-search": "Sneta",
-	"mobile-frontend-copyright": "El testo el xe disponibile soto la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>licensa Creative Commons Attribution/Share-Alike</a>; podarìà aplicarse condission ulteriori. Varda le <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>condission d'uso</a> par i detagli. {{SITENAME}} la xe un marchio registrà de la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, na organixassion non a scopo de lucro.",
+	"mobile-frontend-copyright": "El contegnùo el xe disponibile soto $1, a manco che no ghe sia scrito difarente.",
 	"mobile-frontend-desc": "Interfacia mobiłe",
 	"mobile-frontend-diffview-404-desc": "El id par ła version dimandà nó 'l existe",
 	"mobile-frontend-diffview-404-title": "Eror version",
