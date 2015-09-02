@@ -70,8 +70,10 @@ Given(/^I go to a page that has languages$/) do
 end
 
 Given(/^the wiki has a terms of use$/) do
-  api.create_page 'MediaWiki:mobile-frontend-terms-url', 'Terms_of_use'
+  api.create_page 'MediaWiki:mobile-frontend-terms-url', 'http://m.wikimediafoundation.org/wiki/Terms_of_Use'
   api.create_page 'MediaWiki:mobile-frontend-terms-text', 'Terms of use'
+  # force a visit to check its existence
+  visit(ArticlePage, using_params: { article_name: 'MediaWiki:Mobile-frontend-terms-url?action=info' })
 end
 
 Given(/^the page "(.*?)" exists and has at least "(\d+)" edits$/) do |title, min_edit_count|
