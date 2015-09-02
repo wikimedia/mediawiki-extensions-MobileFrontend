@@ -1,4 +1,3 @@
-# FIXME: this assumes that the main page has more than one language
 @chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
 Feature: Language selection
 
@@ -8,7 +7,7 @@ Feature: Language selection
     When I click the language button
       And I see the language overlay
 
-  @smoke
+  @smoke @integration
   Scenario: Closing language overlay (overlay button)
     When I click the language overlay close button
     Then I should not see the languages overlay
