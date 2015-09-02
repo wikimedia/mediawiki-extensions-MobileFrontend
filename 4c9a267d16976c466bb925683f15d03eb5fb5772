@@ -191,6 +191,24 @@
       "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_b42d21f0",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-09-02T20:58:06Z",
+      "side": 1,
+      "message": "Krinkle objected such a project when it was proposed for some reason I can\u0027t quite recall. I usually go with #Mediawiki-General-or-Unknown or #MediaWiki-Interface if it can be said to affect anything visible, plus #JavaScript.",
+      "parentUuid": "6ec1af18_74bc991a",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
