@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_b46761e5",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T20:10:16Z",
+      "side": 1,
+      "message": "It is currently given one of our classes doesn\u0027t inherit properly and pass this. I\u0027m scared to fix this as part of this change but I\u0027ll fix it in a follow up.",
+      "parentUuid": "6ec1af18_80b9dfc8",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_20aa6b69",
         "filename": "resources/mobile.foreignApi/ForeignApi.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-08-29T18:48:00Z",
       "side": 1,
       "message": "Well, it is necessary if you want to change \u0027options\u0027.",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_14ac35ea",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T20:10:16Z",
+      "side": 1,
+      "message": "I guess the point is this whole function is not really necessary :)",
+      "parentUuid": "6ec1af18_20aa6b69",
       "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_b4b6813a",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T20:10:16Z",
+      "side": 1,
+      "message": "thanks for your patch! looks like Lego merged this so I will revisit.",
+      "parentUuid": "6ec1af18_40af7778",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_a0e89b0c",
         "filename": "resources/mobile.foreignApi/ForeignApi.js",
         "patchSetId": 7
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_d4b1cd42",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T20:10:16Z",
+      "side": 1,
+      "message": "I could do yeh...",
+      "parentUuid": "6ec1af18_a0e89b0c",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_c0ba87b5",
         "filename": "resources/mobile.startup/api.js",
         "patchSetId": 7
@@ -98,6 +170,24 @@
       "writtenOn": "2015-08-29T18:52:23Z",
       "side": 1,
       "message": "So this method seemed pretty useless to me when I looked at it earlier, but now I looked at places where you use it and it actually is kind of neat. Feel like upstreaming it?\n\n(If we upstream it, I think that requests that finished should remove themselves from this.requests to prevent it from growing potentially indefinitely, which should be easy to add.)",
+      "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_74bc991a",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-02T20:10:16Z",
+      "side": 1,
+      "message": "Yep we should definitely upstream. I\u0027ll do that in a follow up patch (I like to be as careful as possible :))\n\nhttps://phabricator.wikimedia.org/T111245\n\nps. should we have a mediawiki-frontend phabricator project for these sort of tasks - I never know where to place them.",
+      "parentUuid": "6ec1af18_c0ba87b5",
       "revId": "4c9a267d16976c466bb925683f15d03eb5fb5772",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
