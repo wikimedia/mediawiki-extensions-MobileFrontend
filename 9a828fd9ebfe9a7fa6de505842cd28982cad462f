@@ -16,6 +16,24 @@
       "revId": "9a828fd9ebfe9a7fa6de505842cd28982cad462f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_dd9485ed",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-03T23:09:00Z",
+      "side": 1,
+      "message": "yes this should be an empty string. Apart from that we\u0027re good to go.\nI\u0027ve fixed since I think my bad communication was to blame here :)\nAlso fixed documentation.",
+      "parentUuid": "6ec1af18_f2c4106a",
+      "revId": "9a828fd9ebfe9a7fa6de505842cd28982cad462f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
