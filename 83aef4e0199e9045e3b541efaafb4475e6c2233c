@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a352c013",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-03T13:45:53Z",
+      "side": 1,
+      "message": "How?",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_63405839",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-03T13:45:53Z",
+      "side": 1,
+      "message": "Why wasn\u0027t this possible before?",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_0350740c",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-03T13:45:53Z",
+      "side": 1,
+      "message": "Should this be \"minerva.betaoptin\"? I notice in the QuickSurveys patch that depends on this one, you\u0027ve mentioned/tested for Minerva, which I agree with.",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
