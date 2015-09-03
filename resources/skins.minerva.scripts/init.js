@@ -12,7 +12,8 @@
 		pageApi = M.require( 'pageApi' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		thumbs = page.getThumbnails();
+		thumbs = page.getThumbnails(),
+		betaOptinPanel;
 
 	/**
 	 * Event handler for clicking on an image thumbnail
@@ -117,7 +118,7 @@
 		// 3% chance of this happening
 		inSample = $.inArray( token.charAt( 0 ), [ '3' ] ) !== -1;
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
-			new BetaOptinPanel( {
+			betaOptinPanel = new BetaOptinPanel( {
 				postUrl: mw.util.getUrl( 'Special:MobileOptions', {
 					returnto: page.title
 				} )
@@ -128,4 +129,9 @@
 				.appendTo( M.getCurrentPage().getLeadSectionElement() );
 		}
 	}
+
+	// let the interested parties know whether the panel is shown
+	mw.track( 'minerva.betaoptin', {
+		isPanelShown: betaOptinPanel !== undefined
+	} );
 }( mw.mobileFrontend, jQuery ) );
