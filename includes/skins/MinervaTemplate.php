@@ -7,10 +7,6 @@
  * Extended Template class of BaseTemplate for mobile devices
  */
 class MinervaTemplate extends BaseTemplate {
-	/** @var boolean Temporary variable that decides whether
-	 * history link should be rendered before the content. */
-	protected $renderHistoryLinkBeforeContent = true;
-
 	/** @var boolean Specify whether the page is a special page */
 	protected $isSpecialPage;
 
@@ -166,32 +162,6 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Gets history link at top of page if it isn't the main page
-	 * @param array $data Data used to build the page
-	 * @return string
-	 */
-	protected function getHistoryLinkTopHtml( $data ) {
-		if ( !$this->isMainPage ) {
-			return $this->getHistoryLinkHtml( $data );
-		} else {
-			return '';
-		}
-	}
-
-	/**
-	 * Gets history link at bottom of page if it is the main page
-	 * @param array $data Data used to build the page
-	 * @return string
-	 */
-	protected function getHistoryLinkBottomHtml( $data ) {
-		if ( $this->isMainPage ) {
-			return $this->getHistoryLinkHtml( $data );
-		} else {
-			return '';
-		}
-	}
-
-	/**
 	 * Get page secondary actions
 	 */
 	protected function getSecondaryActions() {
@@ -252,15 +222,13 @@ class MinervaTemplate extends BaseTemplate {
 				'lang' => $data['pageLang'],
 				'dir' => $data['pageDir'],
 			) );
-			?>
-			<?php
-				echo $data[ 'bodytext' ];
-				if ( isset( $data['subject-page'] ) ) {
-					echo $data['subject-page'];
-				}
-				echo $this->getPostContentHtml( $data );
-				echo $this->getSecondaryActionsHtml();
-				echo $this->getHistoryLinkBottomHtml( $data );
+			echo $data[ 'bodytext' ];
+			if ( isset( $data['subject-page'] ) ) {
+				echo $data['subject-page'];
+			}
+			echo $this->getPostContentHtml( $data );
+			echo $this->getSecondaryActionsHtml();
+			echo $this->getHistoryLinkHtml( $data );
 			?>
 			</div>
 			<?php
@@ -314,17 +282,10 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContentWrapper( $data ) {
-		if ( $this->renderHistoryLinkBeforeContent ) {
-			echo $this->getHistoryLinkTopHtml( $data );
-			echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
-		}
 		echo $this->makeInlineMobileHeadEmitScript( 'header-loaded' );
 		$this->renderPreContent( $data );
 		$this->renderContent( $data );
-		if ( !$this->renderHistoryLinkBeforeContent ) {
-			echo $this->getHistoryLinkTopHtml( $data );
-			echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
-		}
+		echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
 	}
 
 	/**

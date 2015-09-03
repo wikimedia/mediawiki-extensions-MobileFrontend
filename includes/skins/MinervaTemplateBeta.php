@@ -8,9 +8,6 @@
  * beta mode via Special:MobileOptions
  */
 class MinervaTemplateBeta extends MinervaTemplate {
-	/** {@inheritdoc} */
-	protected $renderHistoryLinkBeforeContent = false;
-
 	/**
 	 * Render available page actions
 	 * @param array $data Data used to build page actions

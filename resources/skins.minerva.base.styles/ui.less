@@ -21,11 +21,16 @@ body {
 	border-top: none;
 }
 
+// FIXME: remove when cache clears
+.stable .last-modified-bar.pre-content {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
 // FIXME: REMOVE .stable .pre-content.last-modified-bar selector when cache clears
 .stable .pre-content.last-modified-bar,
 .last-modified-bar {
-	background-color: @colorGray14;
-	padding: 5px @contentMargin;
+	background-color: transparent;
 	display: block;
 	color: @colorGray6;
 	transition: background-color 0.2s ease, color 0.2s ease;
@@ -39,8 +44,17 @@ body {
 		}
 	}
 
+	#mw-mf-last-modified {
+		padding: 5px @contentMargin;
+		background-color: @colorGray14;
+	}
+
 	&.active {
-		background-color: @lastModifiedBarActiveBackgroundColor;
+
+		#mw-mf-last-modified {
+			background-color: @lastModifiedBarActiveBackgroundColor;
+		}
+
 		color: #fff;
 		a {
 			color: #fff;

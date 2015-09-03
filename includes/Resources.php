@@ -194,9 +194,7 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.beta.styles/common.less',
 			'resources/skins.minerva.beta.styles/pageactions.less',
-			'resources/skins.minerva.beta.styles/footer.less',
 			'resources/skins.minerva.beta.styles/main.less',
 		),
 	),
