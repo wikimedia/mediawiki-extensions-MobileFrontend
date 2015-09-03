@@ -581,45 +581,28 @@ class MobileFrontendHooks {
 	 * @param QuickTemplate $tpl Login or Usercreate template
 	 * @param String $mode Is this function called in context of UserCreate or UserLogin?
 	 */
-	public static function changeUserLoginCreateForm( &$tpl, $mode = 'userlogin' ) {
+	public static function changeUserLoginCreateForm( &$tpl ) {
 		$context = MobileContext::singleton();
+		// otherwise just(tm) add a logoheader, if there is any
+		$mfLogo = $context->getMFConfig()
+			->get( 'MobileFrontendLogo' );
+
 		// do nothing in desktop mode
-		if ( !$context->shouldDisplayMobileView() ) {
-			return;
-		}
-
-		if (
-			// check, if the core login page should be used, or not
-			!$context->getMFConfig()->get( 'MFNoLoginOverride' ) &&
-			!$context->isBetaGroupMember()
-		) {
-			// if not, overwrite the default login/create templates from core with MF's own ones
-			if ( $mode === 'userlogin' ) {
-				$tpl = new UserLoginMobileTemplate( $tpl );
-			} else {
-				$tpl = new UserAccountCreateMobileTemplate( $tpl );
-			}
-		} else {
-			// otherwise just(tm) add a logoheader, if there is any
-			$mfLogo = $context->getMFConfig()
-				->get( 'MobileFrontendLogo' );
-
-			if ( $mfLogo ) {
-				$tpl->extend(
-					'formheader',
-					Html::openElement(
-						'div',
-						array( 'class' => 'watermark' )
-					) .
-					Html::element( 'img',
-						array(
-							'src' => $mfLogo,
-							'alt' => '',
-						)
-					) .
-					Html::closeElement( 'div' )
-				);
-			}
+		if ( $context->shouldDisplayMobileView() && $mfLogo ) {
+			$tpl->extend(
+				'formheader',
+				Html::openElement(
+					'div',
+					array( 'class' => 'watermark' )
+				) .
+				Html::element( 'img',
+					array(
+						'src' => $mfLogo,
+						'alt' => '',
+					)
+				) .
+				Html::closeElement( 'div' )
+			);
 		}
 	}
 
@@ -632,7 +615,6 @@ class MobileFrontendHooks {
 	 */
 	public static function onUserLoginForm( &$template ) {
 		self::changeUserLoginCreateForm( $template );
-
 		return true;
 	}
 
@@ -644,8 +626,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUserCreateForm( &$template ) {
-		self::changeUserLoginCreateForm( $template, 'usercreate' );
-
+		self::changeUserLoginCreateForm( $template );
 		return true;
 	}
 

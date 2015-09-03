@@ -98,10 +98,6 @@ $autoloadClasses = array(
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
 	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
 
-	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
-	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
-	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
-
 	'MobileFrontend\Browse\TagService' => 'browse/TagService',
 	'MobileFrontend\Browse\NullTagService' => 'browse/NullTagService',
 );
