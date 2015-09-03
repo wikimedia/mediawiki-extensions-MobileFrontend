@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_c36caccd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-03T13:49:34Z",
+      "side": 1,
+      "message": "Do you mean I should clarify this sentence below?",
+      "parentUuid": "6ec1af18_a352c013",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_63405839",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_6367f8e6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-03T13:49:34Z",
+      "side": 1,
+      "message": "Do you mean I should write more about how mw.track helps solve this problem?",
+      "parentUuid": "6ec1af18_63405839",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_0350740c",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-09-03T13:45:53Z",
       "side": 1,
       "message": "Should this be \"minerva.betaoptin\"? I notice in the QuickSurveys patch that depends on this one, you\u0027ve mentioned/tested for Minerva, which I agree with.",
+      "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_a36960bd",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-03T13:49:34Z",
+      "side": 1,
+      "message": "The module name is mobile.betaoptin, but I\u0027m fine with \u0027minerva.betaoptin\u0027 or anything else too.",
+      "parentUuid": "6ec1af18_0350740c",
       "revId": "83aef4e0199e9045e3b541efaafb4475e6c2233c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
