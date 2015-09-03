@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c96ccbcd",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-03T17:24:53Z",
+      "side": 1,
+      "message": "that doesn\u0027t make any sense anymore :) You can remove this margin completely, the correct one for the core login form is in L#89 (which is there to add a space between the CAPTCHA and the other login form fields)",
+      "revId": "aca3f0d6dac6f6afa1143444ad3124dbc39e4058",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
