@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f2c4106a",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-03T21:30:19Z",
+      "side": 1,
+      "message": "is the whitespace intentional? If yes, why? It should work with an empty string, too? :)",
+      "revId": "9a828fd9ebfe9a7fa6de505842cd28982cad462f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
