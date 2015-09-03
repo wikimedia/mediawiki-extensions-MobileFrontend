@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_b224485b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-03T21:25:27Z",
+      "side": 1,
+      "message": "Jon, the default input fields are completly unstyled without mediawiki.ui, which means, that you see an empty, white place and a search button, that doesn\u0027t seem very intuitive for non-JS users for me :/ And the easiest solution was, to add mediawiki ui input class to indicate, that there is an input field :)",
+      "parentUuid": "6ec1af18_9774a731",
+      "revId": "11757072bf93c287a28424cfeb4f1e21d2f50412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_de38113c",
         "filename": "resources/mobile.search/init.js",
         "patchSetId": 11
