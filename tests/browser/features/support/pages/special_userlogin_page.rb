@@ -11,10 +11,10 @@ class SpecialUserLoginPage < ArticlePage
   text_field(:confirm_password, id: 'wpRetype')
   a(:login_wl, class: 'button')
   button(:signup_submit, id: 'wpCreateaccount')
-  a(:create_account_link, text: 'Create account')
+  a(:create_account_link, id: 'mw-createaccount-join')
   div(:message_box, class: 'warningbox')
   div(:error_box, class: 'errorbox')
-  a(:password_reset, css: '.mw-userlogin-help')
+  a(:password_reset, title: 'Special:PasswordReset')
 
   # signup specific
   text_field(:confirmation_field, id: 'wpCaptchaWord')
