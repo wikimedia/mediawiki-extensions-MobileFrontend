@@ -16,6 +16,24 @@
       "revId": "8986f330557b974a7535bed02b2f4f4b44896a6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_608921ca",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-09-04T17:49:05Z",
+      "side": 1,
+      "message": "Agreed",
+      "parentUuid": "6ec1af18_8071ad74",
+      "revId": "8986f330557b974a7535bed02b2f4f4b44896a6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
