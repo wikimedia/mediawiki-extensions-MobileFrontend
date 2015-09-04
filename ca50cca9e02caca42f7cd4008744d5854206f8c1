@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_3b46ec54",
+        "filename": "resources/mobile.special.nearby.styles/specialNearbyDesktop.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-04T18:19:35Z",
+      "side": 0,
+      "message": "Thid probably imports the loading spinner, I haven\u0027t tested it now, because i\u0027ve only my smartphone here, so I\u0027m a bit limited :/",
+      "revId": "ca50cca9e02caca42f7cd4008744d5854206f8c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
