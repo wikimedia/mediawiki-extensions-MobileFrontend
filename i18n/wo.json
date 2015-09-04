@@ -1,7 +1,24 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Ibou"
+		]
+	},
+	"mobile-frontend-copyright": "Ëmbit laa ngi jàppandi ci anamu $1, lu moy yeneeni tektal",
+	"mobile-frontend-editor-edit": "Soppi",
 	"mobile-frontend-featured-article": "Jukkib bés bi",
 	"mobile-frontend-home-button": " xët wu njëkk",
+	"mobile-frontend-main-menu-button-tooltip": "Ubbi njël lu njëkk li",
+	"mobile-frontend-main-menu-login": "Dugg",
+	"mobile-frontend-main-menu-nearby": "Ci wetu",
+	"mobile-frontend-main-menu-settings": "Jekkal",
+	"mobile-frontend-main-menu-watchlist": "Limu toppte",
+	"mobile-frontend-placeholder": "Seet ci biir {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Sutura",
+	"mobile-frontend-random-button": "Ci mbetteel",
 	"mobile-frontend-regular-site": "Wone xët wi ci {{SITENAME}} wees baaxoo",
-	"mobile-frontend-search-submit": "Ayca"
+	"mobile-frontend-search-submit": "Ayca",
+	"mobile-frontend-terms-text": "Anami Jëfandiku gi",
+	"mobile-frontend-view": "Woneyiin bu mobil",
+	"mobile-frontend-view-desktop": "Bindwaay"
 }

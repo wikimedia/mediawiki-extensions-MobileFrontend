@@ -150,7 +150,7 @@
 	"mobile-frontend-photo-upload-invalid-user": "Korisnik „$1“ nije registrovan.",
 	"mobile-frontend-photo-upload-unavailable": "Vaš veb-pregledač ne podržava slanje slika.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ otpremanja",
-	"mobile-frontend-placeholder": "Pretražite {{SITENAME}}",
+	"mobile-frontend-placeholder": "Pretraga",
 	"mobile-frontend-privacy-link-text": "Privatnost",
 	"mobile-frontend-profile-activity-heading": "Skorašnje aktivnosti",
 	"mobile-frontend-profile-error": "O ne!",
