@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_8071ad74",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-04T16:27:01Z",
+      "side": 1,
+      "message": "This can be completely revisited now given this is at the bottom.  I would suggest removing the history-link-loaded event and the code from the top of the page. Please prepare this in a follow up to keep things tidy we can squash them before deploying.",
+      "revId": "8986f330557b974a7535bed02b2f4f4b44896a6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
