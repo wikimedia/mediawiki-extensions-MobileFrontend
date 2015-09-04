@@ -35,7 +35,7 @@ A file for css that optimises the Minerva skin on larger devices.
 		.pre-content,
 		.content,
 		.content-overlay {
-			max-width: @contentMaxWidthTablet + ( 2 * @contentPaddingTablet );
+			max-width: @contentMaxWidthTablet;
 		}
 	}
 
@@ -115,11 +115,6 @@ A file for css that optimises the Minerva skin on larger devices.
 			padding-top: 0;
 			padding-bottom: 0;
 		}
-		// FIXME: remove when cache clears
-		.last-modified-bar.pre-content {
-			max-width: none;
-			padding: 0 16px;
-		}
 		// FIXME: remove  when cache clears
 		#mw-mf-last-modified.pre-content {
 			max-width: none;
@@ -149,5 +144,53 @@ A file for css that optimises the Minerva skin on larger devices.
 			padding-left: 16px;
 			padding-right: 16px;
 		}
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthDesktop) {
+	// FIXME: Zero should use banner-container class or better - append to banner-container
+	#mw-mf-page-center .mw-mf-banner,
+	.banner-container,
+	// FIXME: Generic header class needed me-thinks!
+	.header,
+	.page-header-bar,
+	.content-header,
+	.overlay-header,
+	// FIXME: Generic content class needed?
+	.content,
+	.overlay-content,
+	.content-unstyled,
+	.pre-content,
+	.post-content,
+	.content-overlay,
+	.last-modified-bar,
+	// FIXME: remove need for id selector
+	#mw-mf-page-center .pointer-overlay {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: @contentMaxWidthTablet;
+	}
+
+	.content {
+		padding: @contentTopPadding 0;
+	}
+	.header {
+		margin-top: -1px;
+	}
+
+	.main-menu-button, {
+		// so that the icon image is aligned with the content
+		left: -@iconGutterWidth;
+	}
+
+	#secondary-button {
+		// so that the icon image is aligned with the content
+		right: -@iconGutterWidth;
+	}
+
+	// Search input in the header
+	#searchInput {
+		// because we're pulling .main-menu-button to the left too (see above)
+		margin-left: -@iconGutterWidth;
 	}
 }

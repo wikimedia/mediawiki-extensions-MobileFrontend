@@ -24,4 +24,9 @@ FIXME: Review all of these hacks to see if they still apply.
 		float: right !important;
 		clear: right !important;
 	}
+	// banners inserted by other extensions, i.e. Zero
+	#mw-mf-page-center .mw-mf-banner {
+		// !important because Zero has an inline style
+		background-clip: content-box !important;
+	}
 }
