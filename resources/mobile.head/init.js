@@ -51,6 +51,7 @@
 
 	// bind events
 	M.define( 'mainMenu', mainMenu );
+	// FIXME: Remove when cache expires. https://phabricator.wikimedia.org/T112315
 	M.on( 'history-link-loaded', initHistoryLink );
 	M.on( 'header-loaded', function () {
 		// Now we have a main menu button register it.
@@ -63,6 +64,7 @@
 		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {
 			mainMenu.appendTo( '#mw-mf-page-left' );
 		}
+		initHistoryLink();
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

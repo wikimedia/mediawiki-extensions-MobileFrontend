@@ -282,25 +282,14 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContentWrapper( $data ) {
-		echo $this->makeInlineMobileHeadEmitScript( 'header-loaded' );
+		// Construct an inline script which emits header-loaded
+		$headerLoaded = "mw.loader.using( 'mobile.head', function () {";
+		$headerLoaded .= "mw.mobileFrontend.emit( 'header-loaded' );";
+		$headerLoaded .= "} );";
+		echo ResourceLoader::makeInlineScript( $headerLoaded );
+
 		$this->renderPreContent( $data );
 		$this->renderContent( $data );
-		echo $this->makeInlineMobileHeadEmitScript( 'history-link-loaded' );
-	}
-
-	/**
-	 * Construct an inline script tag which emits the given event
-	 *
-	 * The emit code will be wrapped in a closure using the mobile.head module
-	 *
-	 * @param string $event Event to emit
-	 * @return WrappedString HTML
-	 */
-	protected function makeInlineMobileHeadEmitScript( $event ) {
-		$script = "mw.loader.using( 'mobile.head', function () {";
-		$script .= "mw.mobileFrontend.emit( '" . $event . "' );";
-		$script .= "} );";
-		return ResourceLoader::makeInlineScript( $script );
 	}
 
 	/**
