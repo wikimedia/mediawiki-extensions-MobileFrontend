@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_0fdbae55",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-04T07:42:36Z",
+      "side": 1,
+      "message": "mw.hook is something like Hooks::run() in php, so any function, which subscribed to the hook, will be called in the order they subscribed with the (maybe already changed) data :)",
+      "parentUuid": "6ec1af18_7d0eb13f",
+      "revId": "97d55e98038c566c20459b49f146c1c6dbf1afbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_bd189985",
         "filename": "resources/mobile.search.api/SearchApi.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-03T23:12:30Z",
       "side": 1,
       "message": "?!",
+      "revId": "97d55e98038c566c20459b49f146c1c6dbf1afbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2fdeaa44",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-04T07:42:36Z",
+      "side": 1,
+      "message": "Ok, that mwas my test :P",
+      "parentUuid": "6ec1af18_bd189985",
       "revId": "97d55e98038c566c20459b49f146c1c6dbf1afbd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
