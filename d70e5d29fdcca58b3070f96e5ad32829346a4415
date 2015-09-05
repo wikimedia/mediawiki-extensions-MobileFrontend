@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_5caacd16",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 1006,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-05T02:29:29Z",
+      "side": 1,
+      "message": "Fixed in I623f6182",
+      "revId": "d70e5d29fdcca58b3070f96e5ad32829346a4415",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
