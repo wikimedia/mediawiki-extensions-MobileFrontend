@@ -291,7 +291,7 @@
 	"mobile-frontend-talk-reply-success": "Vastauksesi on nyt tallennettu keskustelusivulle.",
 	"mobile-frontend-talk-topic-feedback": "Uusi aihe lisätty keskustelusivulle!",
 	"mobile-frontend-terms-text": "Käyttöehdot",
-	"mobile-frontend-thanked-notice": "Käyttäjälle $1 kerrottiin että pidit {{GENDER:$2|hänen|hänen|heidän}} muokkauksestaan.",
+	"mobile-frontend-thanked-notice": "Käyttäjälle $1 kerrottiin että pidit {{GENDER:$2|hänen}} muokkauksestaan.",
 	"mobile-frontend-user-account": "käyttäjätunnus",
 	"mobile-frontend-user-button-tooltip": "Näytä ilmoitukseni",
 	"mobile-frontend-user-cta": "Kirjaudu sisään tai luo tunnus nähdäksesi omat ilmoitukset.",
