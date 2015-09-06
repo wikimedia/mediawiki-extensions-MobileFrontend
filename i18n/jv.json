@@ -3,7 +3,8 @@
 		"authors": [
 			"Bennylin",
 			"NoiX180",
-			"Pras"
+			"Pras",
+			"Kenrick95"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Lebokna kode konfirmasi",
@@ -52,7 +53,7 @@
 	"mobile-frontend-home-button": "Latar",
 	"mobile-frontend-image-cancel-confirm": "Batalna ngunggahé",
 	"mobile-frontend-images-status": "Gambar",
-	"mobile-frontend-language-article-heading": "Maca ing basa liyane",
+	"mobile-frontend-language-article-heading": "Waca ing basa liyane",
 	"mobile-frontend-language-header": "Kaca iki sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}",
 	"mobile-frontend-language-heading": "<strong>Basa-basa</strong>",
 	"mobile-frontend-language-site-choose": "Golèk basa",
