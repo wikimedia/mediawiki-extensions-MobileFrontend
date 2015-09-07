@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_9b8032c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T14:29:00Z",
+      "side": 1,
+      "message": "It might do to be a little more technical here: DOM ready vs (immediately?) after the script has loaded.",
+      "revId": "93cb5dd79829a4b0875f3bbe06a01e2959050736",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_3b6fbe27",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T14:29:00Z",
+      "side": 1,
+      "message": "Yarrrp. We\u0027ve made the initialisation of the bar simpler at the cost of additional delay in rendering.",
+      "revId": "93cb5dd79829a4b0875f3bbe06a01e2959050736",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_db79daf2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T14:29:00Z",
+      "side": 1,
+      "message": "Typo in \"bottome\".",
+      "revId": "93cb5dd79829a4b0875f3bbe06a01e2959050736",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
