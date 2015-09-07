@@ -35,6 +35,7 @@
 	"mobile-frontend-categories-add": "加入至分類",
 	"mobile-frontend-categories-search": "搜尋分類",
 	"mobile-frontend-categories-nomatch": "您的查詢條件沒有找到任何分類，您應嘗試使用其他條件。",
+	"mobile-frontend-categories-nodata": "發生錯誤，您是否已加入要儲存分類？",
 	"mobile-frontend-categories-summary": "已加入至分類",
 	"mobile-frontend-categories-add-heading": "<strong>新增 <span>$1</span> 至新分類</strong>",
 	"mobile-frontend-categories-add-wait": "儲存分類中，請稍候。",
@@ -76,6 +77,8 @@
 	"mobile-frontend-editor-abusefilter-warning": "警告：您確定要儲存此次編輯？這可能會出現問題。",
 	"mobile-frontend-editor-anon": "不登入編輯",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您尚未登入。若您進行任何編輯，您的 IP 位址將會被公開。若您<strong>登入</strong>或<strong>建立帳號</strong>，您的編輯將會以您的使用者名稱標示及擁有其他好處。",
+	"mobile-frontend-editor-blocked-info-loggedin": "您的帳號已被封鎖禁止編輯，封鎖您的人為 {{GENDER:$1|$1}}，由於下列原因：$2",
+	"mobile-frontend-editor-blocked-info": "您的 IP 位址已被封鎖禁止編輯，封鎖您的人為 {{GENDER:$1|$1}}，由於下列原因：$2",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你確定要放棄你的編輯？",
 	"mobile-frontend-editor-captcha-try-again": "驗証碼錯誤，請重試。",
@@ -118,7 +121,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>檢視</strong> <span>$1</span> <strong>的原始碼</strong>",
 	"mobile-frontend-editor-wait": "儲存編輯中，請稍候。",
 	"mobile-frontend-editor-redlink-leave": "不用了，謝謝。",
-	"mobile-frontend-editor-redlink-explain": "此頁面在 {{SITENAME}} 尚未建立。",
+	"mobile-frontend-editor-redlink-explain": "此頁面尚未被建立。",
 	"mobile-frontend-editor-redlink-create": "建立頁面",
 	"mobile-frontend-editor-bold": "粗體",
 	"mobile-frontend-editor-italic": "斜體",
@@ -337,7 +340,7 @@
 	"mobile-frontend-watch-login": "加入 $1 至您的監視清單。",
 	"mobile-frontend-watchlist-a-z": "清單",
 	"mobile-frontend-watchlist-a-z-empty-howto": "您目前沒有監視任何頁面。 您的監視清單可以協助您追蹤您有興趣的頁面。 請點選星號圖示以監視頁面。",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "點選頁面頂端的星號",
+	"mobile-frontend-watchlist-a-z-empty-howto-alt": "點選星號圖示",
 	"mobile-frontend-watchlist-add": "已新增 $1 至您的監視清單",
 	"mobile-frontend-watchlist-back-home": "返回首頁",
 	"mobile-frontend-watchlist-cta": "追蹤此頁面及所有對其的修改。",
@@ -391,5 +394,6 @@
 	"mobile-frontend-browse-tags-header": "標籤",
 	"mobile-frontend-panel-ok": "好的",
 	"mobile-frontend-panel-cancel": "不用了，謝謝",
-	"mobile-frontend-panel-betaoptin-msg": "您是否希望嘗試一些新功能？透過參與 beta 測試，您將有機會得到實驗性功能，並承擔遇到 bug 與問題的風險。"
+	"mobile-frontend-panel-betaoptin-msg": "您是否希望嘗試一些新功能？透過參與 beta 測試，您將有機會得到實驗性功能，並承擔遇到 bug 與問題的風險。",
+	"mobile-frontend-search-feedback-link-text": "提供我們您的意見回饋。"
 }
