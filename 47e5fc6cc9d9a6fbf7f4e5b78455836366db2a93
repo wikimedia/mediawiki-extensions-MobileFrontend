@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_3856e45f",
+        "filename": "tests/browser/features/step_definitions/create_page_api_steps.rb",
+        "patchSetId": 9
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T11:18:50Z",
+      "side": 1,
+      "message": "This /could/ be made into its own page object.",
+      "revId": "47e5fc6cc9d9a6fbf7f4e5b78455836366db2a93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
