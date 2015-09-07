@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_b6bbc56f",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T17:16:40Z",
+      "side": 1,
+      "message": "Since we\u0027ve gotten rid of the calls to the emit method, this is no longer necessary, right?",
+      "revId": "c36f89c4a067a5fae30698e1ba507f61520ca143",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d6be915f",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-07T17:16:40Z",
+      "side": 1,
+      "message": "This should be marked as deprecated.",
+      "revId": "c36f89c4a067a5fae30698e1ba507f61520ca143",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
