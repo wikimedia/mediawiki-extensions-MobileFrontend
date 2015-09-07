@@ -981,10 +981,10 @@ class MobileFrontendHooks {
 		}
 
 		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
-			'dependencies' => array(
+			'dependencies' => array_merge( array(
 				'mobile.startup',
 				'mobile.settings',
-			) + $schemaModules,
+			), $schemaModules ),
 			'scripts' => $scripts,
 		);
 
