@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a1dff40e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T17:06:42Z",
+      "side": 1,
+      "message": "false is the default for the second parameter, what do you think about omit it here? It would make it a bit more readable when you don\u0027t need to think about, why \"false\" is used here :P",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_81dc381d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T17:06:42Z",
+      "side": 1,
+      "message": "This will throw NOTICE errors, if gender and name isn\u0027t set (which is possible for MobilePage::getLatestEdit(). You should wrap this into an isset(). Same for the line under it :)",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_61e58cd5",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T17:06:42Z",
+      "side": 1,
+      "message": "Same as in SkinMinerva.php",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
