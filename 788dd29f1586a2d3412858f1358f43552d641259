@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_907328af",
+        "filename": "resources/skins.minerva.tablet.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-08T11:44:40Z",
+      "side": 1,
+      "message": "should we remove the commented out line?",
+      "revId": "788dd29f1586a2d3412858f1358f43552d641259",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
