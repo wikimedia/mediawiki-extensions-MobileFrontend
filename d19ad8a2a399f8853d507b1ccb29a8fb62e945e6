@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_812bd82d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T16:46:38Z",
+      "side": 1,
+      "message": "hmm, I still have a lot of space? :/",
+      "revId": "d19ad8a2a399f8853d507b1ccb29a8fb62e945e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
