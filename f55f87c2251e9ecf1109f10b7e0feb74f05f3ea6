@@ -141,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_07d060f9",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-09-08T01:21:32Z",
+      "side": 1,
+      "message": "No. What we want is user device class. Enum values are desktop, tablet, phone and other. \u0027phone\u0027 is a reasonable if imperfect approximation for clients of MF for a first pass, but if there\u0027s a utility method to distinguish that\u0027d be good. :-)",
+      "parentUuid": "6ec1af18_67b124f3",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_e7c5145f",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 4
