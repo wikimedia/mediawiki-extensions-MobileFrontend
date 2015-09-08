@@ -86,6 +86,24 @@
       "revId": "e5d4da16b18df77e280beca0f7f051c194c08320",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_014608c6",
+        "filename": "resources/mobile.serviceWorker/imageLoader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:08:01Z",
+      "side": 1,
+      "message": "This is true. CSS is not such an issue as images are embedded but the JS is a concern. I\u0027m not sure if it blocks running a throwaway experiment to collect some data.\n\nI could use postMessage to communicate that future downloads are okay after the initial load.\n\nWhat do you mean by inverting - what is \"this\" in this context?",
+      "parentUuid": "6ec1af18_bbbe45a9",
+      "revId": "e5d4da16b18df77e280beca0f7f051c194c08320",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
