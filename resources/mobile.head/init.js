@@ -12,6 +12,7 @@
 	 * Enhances #mw-mf-last-modified element
 	 * to show a human friendly date in seconds, minutes, hours, days
 	 * months or years
+	 * @param {jQuery.Object} $lastModifiedLink element to enhance
 	 * @ignore
 	 */
 	function initHistoryLink( $lastModifiedLink ) {
