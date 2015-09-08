@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_017e08ad",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:39:17Z",
+      "side": 1,
+      "message": "I\u0027m intentionally being overly cautious here - what if we change the default for MobilePage? We don\u0027t want to load an image on every single page! :)",
+      "parentUuid": "6ec1af18_a1dff40e",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_81dc381d",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-08T17:06:42Z",
       "side": 1,
       "message": "This will throw NOTICE errors, if gender and name isn\u0027t set (which is possible for MobilePage::getLatestEdit(). You should wrap this into an isset(). Same for the line under it :)",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_61734ce5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:39:17Z",
+      "side": 1,
+      "message": "I\u0027ve updated getLatestEdit so these keys are always present.",
+      "parentUuid": "6ec1af18_81dc381d",
       "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
