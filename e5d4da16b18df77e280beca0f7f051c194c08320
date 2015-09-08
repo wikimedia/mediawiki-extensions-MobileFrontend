@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_01c9285d",
+        "filename": "resources/mobile.lazyImages/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:04:29Z",
+      "side": 1,
+      "message": "Yeh I was pondering this. Do we have any instances where this might be a problem? Given this is an experiment I didn\u0027t want to invest too much time in edge cases unless they are important ones.",
+      "parentUuid": "6ec1af18_fb828d00",
+      "revId": "e5d4da16b18df77e280beca0f7f051c194c08320",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_1b97594c",
         "filename": "resources/mobile.lazyImages/init.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-08T14:35:25Z",
       "side": 1,
       "message": "DOMContentLoaded is not a window event, it\u0027s fired on the document.",
+      "revId": "e5d4da16b18df77e280beca0f7f051c194c08320",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_41e2d0d0",
+        "filename": "resources/mobile.lazyImages/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:04:29Z",
+      "side": 1,
+      "message": "Actually resize and scroll should be enough here.",
+      "parentUuid": "6ec1af18_1b97594c",
       "revId": "e5d4da16b18df77e280beca0f7f051c194c08320",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
