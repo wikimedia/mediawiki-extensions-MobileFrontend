@@ -159,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_41e3b09b",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T17:21:07Z",
+      "side": 1,
+      "message": "What is the purpose of this field? To distinguish visual editor edits on mobile and desktop? If so, I would suggest you record skin.\n\u0027phone\u0027 is misleading and could lead to bad interpretations of your data.\n\nIn current form the schema does not differentiate between tablets, mobile and desktops and since you are standardising on a schema now seems to be a good time.\n\nRight now if you want to know edits on tablets you\u0027ll have to rely on user agent which is pretty sucky.\n\nYou may want to select a value for the existing enum based on $( window ).width() to get more accurate bucketing... but when does a phone become a tablet? Is a Samsung note a phone or tablet?",
+      "parentUuid": "6ec1af18_07d060f9",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_e7c5145f",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 4
