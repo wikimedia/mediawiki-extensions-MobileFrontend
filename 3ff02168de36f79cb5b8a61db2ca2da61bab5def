@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_8a1f7570",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T08:19:21Z",
+      "side": 0,
+      "message": "hmm, the goal was to see, what editor was used for this edit. If both, the \"plain\" wikitext editor and this one uses \"wikitext\", it\u0027s impossible to see, which editor was used?",
+      "revId": "3ff02168de36f79cb5b8a61db2ca2da61bab5def",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
