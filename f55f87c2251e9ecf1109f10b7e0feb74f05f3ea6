@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_a7b86cc3",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-08T01:06:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_27979c4c",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_a792ac54",
         "filename": "resources/mobile.editor/init.js",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_e7d0b4f9",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-08T01:06:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_a792ac54",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_4785080a",
         "filename": "resources/mobile.editor/init.js",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2015-09-08T00:45:42Z",
       "side": 1,
       "message": "seems like you are repeating yourself here. Might be able to refactor.",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_8703f078",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-08T01:06:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_4785080a",
       "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +152,24 @@
       "writtenOn": "2015-09-08T00:45:42Z",
       "side": 1,
       "message": "This seems a bit funky to me.. why are you passing these just to delete them?",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_07a2a095",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-08T01:06:08Z",
+      "side": 1,
+      "message": "The same thing happens in VE - the caller doesn\u0027t have to specify all of the full property names, the schema code handles it for them.\nThe timing doesn\u0027t make any sense though (especially since we decided not to log that here), will remove that bit",
+      "parentUuid": "6ec1af18_e7c5145f",
       "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
