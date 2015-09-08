@@ -16,6 +16,24 @@
       "revId": "3f37d936a2161272542f570ad21f65f7372b5c22",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_fcc8435b",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T18:43:11Z",
+      "side": 1,
+      "message": "I\u0027ve never been a fan of this notation personally. I think it can cause confusion where its misread as a \u003d\u003d\n\nI\u0027d rather be explicit and keep the two if statements.",
+      "parentUuid": "6ec1af18_fcf7e3cd",
+      "revId": "3f37d936a2161272542f570ad21f65f7372b5c22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
