@@ -31,23 +31,35 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/**
 	 * Gets the HTML fragment for a watched page.
 	 *
-	 * @param Title $title The title of the watched page
-	 * @param int $ts When the page was last touched
-	 * @param string $thumb An HTML fragment for the page's thumbnaiL
+	 * @param MobilePage $mp a definition of the page to be rendered.
 	 * @return string
 	 */
-	public static function getLineHtml( Title $title, $ts, $thumb ) {
+	protected function getLineHtml( MobilePage $mp ) {
+		$thumb = $mp->getSmallThumbnailHtml();
+		$title = $mp->getTitle();
+		if ( !$thumb ) {
+			$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
+		}
+		$timestamp = $mp->getLatestTimestamp();
+		$user = $this->getUser();
 		$titleText = $title->getPrefixedText();
-		if ( $ts ) {
-			$ts = new MWTimestamp( $ts );
-			$lastModified = wfMessage(
-				'mobile-frontend-watchlist-modified',
-				$ts->getHumanTimestamp()
-			)->text();
+		if ( $timestamp ) {
+			$lastModified = $this->msg(
+				'mobile-frontend-last-modified-date',
+				$this->getLanguage()->userDate( $timestamp, $user ),
+				$this->getLanguage()->userTime( $timestamp, $user )
+			)->parse();
+			$edit = $mp->getLatestEdit();
+			$dataAttrs = array(
+				'data-timestamp' => $edit['timestamp'],
+				'data-user-name' => $edit['name'],
+				'data-user-gender' => $edit['gender'],
+			);
 			$className = 'title';
 		} else {
 			$className = 'title new';
 			$lastModified = '';
+			$dataAttrs = array();
 		}
 
 		$html =
@@ -59,9 +71,15 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) );
 		$html .= $thumb;
 		$html .=
-			Html::element( 'h3', array(), $titleText ).
-			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
-			Html::closeElement( 'a' ) .
+			Html::element( 'h3', array(), $titleText );
+
+		if ( $lastModified ) {
+			$html .= Html::openElement( 'div', array( 'class' => 'info' ) ) .
+				Html::element( 'span', array_merge( $dataAttrs, array( 'class' => 'modified-enhancement' ) ),
+					$lastModified ) .
+				Html::closeElement( 'div' );
+		}
+		$html .= Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' );
 
 		return $html;
@@ -228,12 +246,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	protected function getViewHtml( MobileCollection $collection ) {
 		$html = '<ul class="watchlist content-unstyled page-list thumbs page-summary-list">';
 		foreach ( $collection as $mobilePage ) {
-			$thumb = $mobilePage->getSmallThumbnailHtml();
-			if ( !$thumb ) {
-				$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
-			}
-			$title = $mobilePage->getTitle();
-			$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );
+			$html .= $this->getLineHtml( $mobilePage );
 		}
 		$html .= '</ul>';
 		return $html;

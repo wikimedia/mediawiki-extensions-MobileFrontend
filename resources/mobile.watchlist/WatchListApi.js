@@ -43,12 +43,13 @@
 			var self = this,
 				params = $.extend( {
 					action: 'query',
-					prop: 'pageimages|info',
+					prop: 'pageimages|info|revisions',
 					piprop: 'thumbnail',
 					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
 					pilimit: this.limit,
 					format: 'json',
 					formatversion: 2,
+					rvprop: 'timestamp|user',
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
@@ -109,23 +110,12 @@
 
 			// Transform the items to a sensible format
 			return $.map( pages, function ( item ) {
-				var delta, msgId, thumb, data;
+				var revision, thumb, data;
 
 				thumb = item.thumbnail;
 
 				if ( thumb ) {
 					thumb.isLandscape = thumb.width > thumb.height;
-				}
-
-				// page may or may not exist.
-				if ( item.touched ) {
-					// work out delta in seconds
-					delta = time.timeAgo( ( new Date() - new Date( item.touched ) ) / 1000 );
-					if ( $.inArray( delta.unit, [ 'days', 'months', 'years' ] ) > -1 ) {
-						msgId = 'mobile-frontend-' + delta.unit + '-ago';
-					} else {
-						msgId = delta.unit + '-ago';
-					}
 				}
 
 				data = {
@@ -136,10 +126,14 @@
 					thumbnail: thumb
 				};
 
-				if ( msgId ) {
-					data.lastModified = mw.msg( 'mobile-frontend-watchlist-modified',
-						mw.msg( msgId, delta.value ) );
+				// page may or may not exist.
+				if ( item.revisions && item.revisions[0] ) {
+					revision = item.revisions[0];
+					console.log( revision );
+					data.lastModified = time.getLastModifiedMessage( new Date( revision.timestamp ).getTime() / 1000,
+						revision.user );
 				}
+
 				return data;
 			} );
 		}

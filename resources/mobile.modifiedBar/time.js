@@ -55,13 +55,14 @@
 	/**
 	 * Return a message relating to the last modified relative time.
 	 * @param {String} ts timestamp
-	 * @param {String} historyUrl url to the history page for the message
-	 * @returns {String} username of the last user to modify the page
-	 * @returns {String} gender of the last user to modify the page
+	 * @param {String} username of the last user to modify the page
+	 * @param {String} [gender] of the last user to modify the page
+	 * @param {String} [historyUrl] url to the history page for the message, if omitted
+	 *  returns plain text string rather than html
 	 * @ignore
 	 */
-	function getLastModifiedMessage( ts, historyUrl, username, gender ) {
-		var delta,
+	function getLastModifiedMessage( ts, username, gender, historyUrl ) {
+		var delta, html,
 			keys = {
 				seconds: 'mobile-frontend-last-modified-with-user-seconds',
 				minutes: 'mobile-frontend-last-modified-with-user-minutes',
@@ -83,13 +84,18 @@
 			] );
 		}
 
-		args = args.concat( [ historyUrl,
+		args = args.concat( [ historyUrl  || '#',
 			// Abuse PLURAL support to determine if the user is anonymous or not
 			mw.language.convertNumber( username ? 1 : 0 ),
 			// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
 			username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : ''
 		] );
-		return mw.message.apply( this, args ).parse();
+		html = mw.message.apply( this, args ).parse();
+		if ( historyUrl ) {
+			return html;
+		} else {
+			return $( '<div>' ).html( html ).text();
+		}
 	}
 
 	M.define( 'modules/lastEdited/time', {
