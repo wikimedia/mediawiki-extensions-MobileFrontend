@@ -1,6 +1,7 @@
 {
   "preset": "wikimedia",
 
+  "requireObjectKeysOnNewLine": true,
   "requireSpacesInsideBrackets": null,
   "disallowDanglingUnderscores": null,
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
