@@ -195,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_c9f10261",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T23:42:22Z",
+      "side": 1,
+      "message": "I see the schema has no skin in it but I\u0027m saying maybe it should do. Anyway I guess this is James call, I just think you are making a big mistake with this property/value.",
+      "parentUuid": "6ec1af18_c1f6c059",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_e7c5145f",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 4
