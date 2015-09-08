@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_fcf7e3cd",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T18:23:56Z",
+      "side": 1,
+      "message": "you could use:\n\nif ( $rev \u0026\u0026 $userId \u003d $rev-\u003egetUser() ) {\n\ninstead of one if twice :)",
+      "revId": "3f37d936a2161272542f570ad21f65f7372b5c22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
