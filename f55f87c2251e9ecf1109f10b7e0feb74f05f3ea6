@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c7a1f89f",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "mm. we were enforcing requireObjectKeysOnNewLine in jscs so I was surprised to not see this fail but we don\u0027t seem to anymore. Can be fixed in a follow up.",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_27979c4c",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "Change should be documented in commit message.",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_a792ac54",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "You may want to consider creating the Schema here and passing it to the EditorOverlay since that will unnecessarily create a new one.",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4785080a",
+        "filename": "resources/mobile.editor/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "seems like you are repeating yourself here. Might be able to refactor.",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_67b124f3",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "This is not true. The mobile site can be used from desktop and tablet. I would suggest a better name as this is extremely misleading. Note you have user agent so maybe what you want here is skin?",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_e7c5145f",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 1,
+      "message": "This seems a bit funky to me.. why are you passing these just to delete them?",
+      "revId": "f55f87c2251e9ecf1109f10b7e0feb74f05f3ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

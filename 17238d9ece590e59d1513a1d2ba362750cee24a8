@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_e79c346f",
+        "filename": "resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:45:42Z",
+      "side": 0,
+      "message": "Note the two editors are not exactly the same so please document  in the commit message this change so I know this is not a mistake :)",
+      "revId": "17238d9ece590e59d1513a1d2ba362750cee24a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
