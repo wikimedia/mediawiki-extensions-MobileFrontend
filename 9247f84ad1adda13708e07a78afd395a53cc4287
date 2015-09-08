@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_5c5637d2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T18:19:31Z",
+      "side": 1,
+      "message": "Ok, but having this in mind a default value wouldn\u0027t ever make sense :P But this is minor and not blocking. In my opinion, if we have a default value, we should \"use\" it. If a constructor signature changes, I hope (and expect), that the developer take care of backwards compatibility :D",
+      "parentUuid": "6ec1af18_017e08ad",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_81dc381d",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "I\u0027ve updated getLatestEdit so these keys are always present.",
       "parentUuid": "6ec1af18_81dc381d",
+      "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_bc663bb6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T18:19:31Z",
+      "side": 1,
+      "message": "great! :)",
+      "parentUuid": "6ec1af18_61734ce5",
       "revId": "9247f84ad1adda13708e07a78afd395a53cc4287",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
