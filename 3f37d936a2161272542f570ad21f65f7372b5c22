@@ -34,6 +34,24 @@
       "revId": "3f37d936a2161272542f570ad21f65f7372b5c22",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_1c566f5f",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-08T19:01:23Z",
+      "side": 1,
+      "message": "Ok, I\u0027m fine with this explanation :P",
+      "parentUuid": "6ec1af18_fcc8435b",
+      "revId": "3f37d936a2161272542f570ad21f65f7372b5c22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
