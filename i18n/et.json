@@ -328,7 +328,6 @@
 	"mobile-frontend-watchlist-filter-other": "Muu",
 	"mobile-frontend-watchlist-filter-talk": "Arutelu",
 	"mobile-frontend-watchlist-login-action": "Logi sisse, et seda näha.",
-	"mobile-frontend-watchlist-modified": "Muudetud $1",
 	"mobile-frontend-watchlist-more": "veel",
 	"mobile-frontend-watchlist-please-wait": "Palun oota, jälgimistoiming võtab oodatust kauem aega.",
 	"mobile-frontend-watchlist-error": "Selle lehekülje jälgimisega oli probleem. Palun proovi uuesti.",
@@ -376,9 +375,6 @@
 	"mobile-frontend-donate-button-label": "Anneta",
 	"mobile-frontend-meta-data-issues-categories": "Selle kategooria kohta",
 	"mobile-frontend-loading-message": "Laadimine…",
-	"mobile-frontend-days-ago": "{{PLURAL:$1|ühe|$1}} päeva eest",
-	"mobile-frontend-months-ago": "{{PLURAL:$1|ühe|$1}} kuu eest",
-	"mobile-frontend-years-ago": "{{PLURAL:$1|ühe|$1}} aasta eest",
 	"mobile-frontend-browse-tags-header": "Märgised",
 	"mobile-frontend-panel-ok": "Sobib",
 	"mobile-frontend-panel-cancel": "Ei, aitäh"

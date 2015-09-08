@@ -109,9 +109,6 @@
 	"mobile-frontend-donate-button-label": "بسپنه ورکول",
 	"mobile-frontend-meta-data-issues-categories": "د دې وېشنيزې په اړه",
 	"mobile-frontend-loading-message": "برسېرېدنې کې دی...",
-	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|ورځ|ورځې}} دمخه",
-	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|مياشت|مياشتې}} دمخه",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|کال|کاله}} پخوا",
 	"mobile-frontend-panel-cancel": "نه مننه",
 	"mobile-frontend-search-feedback-link-text": "تاسې خپل نظر موږ ته راکړئ"
 }

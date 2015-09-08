@@ -326,7 +326,6 @@
 	"mobile-frontend-watchlist-filter-other": "Muut",
 	"mobile-frontend-watchlist-filter-talk": "Keskustelu",
 	"mobile-frontend-watchlist-login-action": "Kirjaudu sisään nähdäksesi listan.",
-	"mobile-frontend-watchlist-modified": "Muokattu $1",
 	"mobile-frontend-watchlist-more": "lisää",
 	"mobile-frontend-watchlist-purpose": "Tarkkailulista toimii kuin kirjanmerkit ja auttaa seuraamaan sivuille tehtyjä muokkauksia.",
 	"mobile-frontend-watchlist-removed": "$1 on poistettu tarkkailulistaltasi",

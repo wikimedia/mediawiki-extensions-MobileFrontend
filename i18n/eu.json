@@ -87,7 +87,5 @@
 	"tag-mobile_web_edit": "Mugikor web edizioa",
 	"mobile-frontend-meta-data-issues-categories": "Kategoria honi buruz",
 	"mobile-frontend-loading-message": "Kargatzen...",
-	"mobile-frontend-days-ago": "Duela {{PLURAL:$1|egun bat|$1 egun}}",
-	"mobile-frontend-years-ago": "Duela {{PLURAL:$1|urte bat|$1 urte}}",
 	"mobile-frontend-search-feedback-link-text": "Egiguzu iruzkina."
 }
