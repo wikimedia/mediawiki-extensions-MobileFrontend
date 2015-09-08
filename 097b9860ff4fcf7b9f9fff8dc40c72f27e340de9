@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a7070ccc",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-08T00:25:47Z",
+      "side": 1,
+      "message": "Why are we using 7em? Why not 8em or 6em? Why not stretch the text input to occupy any remaining empty space? As you can see in http://i.imgur.com/i1EAbNS.png there is some space to the right of the button that we could use.",
+      "revId": "097b9860ff4fcf7b9f9fff8dc40c72f27e340de9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_470ae8d5",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-08T00:25:47Z",
+      "side": 1,
+      "message": "The same question as above.",
+      "revId": "097b9860ff4fcf7b9f9fff8dc40c72f27e340de9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
