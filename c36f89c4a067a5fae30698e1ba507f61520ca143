@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_87d7704f",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:22:57Z",
+      "side": 1,
+      "message": "Mmm. I had thought things extending Api were making use of events but maybe they are not. This would simplify things a lot...",
+      "parentUuid": "6ec1af18_b6bbc56f",
+      "revId": "c36f89c4a067a5fae30698e1ba507f61520ca143",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_d6be915f",
         "filename": "resources/mobile.startup/api.js",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-07T17:16:40Z",
       "side": 1,
       "message": "This should be marked as deprecated.",
+      "revId": "c36f89c4a067a5fae30698e1ba507f61520ca143",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_87f0d0fb",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-08T00:22:57Z",
+      "side": 1,
+      "message": "It\u0027s not though... :)\nag \"\u0027api\u0027\" shows various uses and I have no plan to remove it at this point...",
+      "parentUuid": "6ec1af18_d6be915f",
       "revId": "c36f89c4a067a5fae30698e1ba507f61520ca143",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
