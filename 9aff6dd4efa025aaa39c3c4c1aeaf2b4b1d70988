@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_04f371e3",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-09T02:13:42Z",
+      "side": 1,
+      "message": "This is called whenever you *attempt* to go back. However, what that means is that a confirmation dialog is being displayed asking you whether you want to abandon or not.",
+      "revId": "9aff6dd4efa025aaa39c3c4c1aeaf2b4b1d70988",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
