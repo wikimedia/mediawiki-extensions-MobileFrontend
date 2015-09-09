@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_e1df2e6c",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-09T20:25:55Z",
+      "side": 1,
+      "message": "Note editSchema is not documented in options for EditorOverlayBase defaults so will not come up in documentation.",
+      "revId": "68c9409939611aea876e210ba92179ceb737bfad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
