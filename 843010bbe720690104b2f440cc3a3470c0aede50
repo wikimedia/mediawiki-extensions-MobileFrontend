@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_6dd81580",
+        "filename": "i18n/en.json",
+        "patchSetId": 15
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-09-09T14:49:43Z",
+      "side": 0,
+      "message": "Should this also be removed?",
+      "revId": "843010bbe720690104b2f440cc3a3470c0aede50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
