@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4941925c",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-09T00:24:06Z",
+      "side": 0,
+      "message": "You should not remove the post-content class.",
+      "revId": "a315c4ab95762c6a4c27fddbdba68c20f1144a79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
