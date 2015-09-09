@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Icon = M.require( 'mobile.startup/Icon' ),
+		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		router = M.require( 'mobile.startup/router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' );
 
@@ -46,7 +47,16 @@
 			if ( nearby ) {
 				nearby.initialize( options );
 			} else {
-				nearby = new Nearby( options );
+				if ( endpoint ) {
+					mw.loader.using( 'mobile.foreignApi' ).done( function () {
+						var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
+						options.api = new JSONPForeignApi( endpoint );
+						nearby = new Nearby( options );
+					} );
+				} else {
+					options.api = new mw.Api();
+					nearby = new Nearby( options );
+				}
 			}
 		}
 

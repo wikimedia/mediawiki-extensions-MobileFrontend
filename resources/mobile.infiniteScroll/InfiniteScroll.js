@@ -29,7 +29,7 @@
 	 *       PhotoList = View.extend( {
 	 *         //...
 	 *         initialize: function ( options ) {
-	 *           this.api = new PhotoListApi( {
+	 *           this.gateway = new PhotoListGateway( {
 	 *             username: options.username
 	 *           } );
 	 *           // 1. Set up infinite scroll helper and listen to events
@@ -44,7 +44,7 @@
 	 *         },
 	 *         _loadPhotos: function () {
 	 *           var self = this;
-	 *           this.api.getPhotos().done( function ( photos ) {
+	 *           this.gateway.getPhotos().done( function ( photos ) {
 	 *             // load photos into the DOM ...
 	 *             // 3. and (re-)enable infinite scrolling
 	 *             self.infiniteScroll.enable();

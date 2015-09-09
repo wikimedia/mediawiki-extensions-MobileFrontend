@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Nearby,
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
-		NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
+		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		icons = M.require( 'mobile.startup/icons' );
@@ -10,7 +10,7 @@
 	 * List of nearby pages
 
 	 * @class Nearby
-	 * @uses NearbyApi
+	 * @uses NearbyGateway
 	 * @extends WatchstarPageList
 	 */
 	Nearby = WatchstarPageList.extend( {
@@ -44,6 +44,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {mw.Api} defaults.api
 		 * @cfg {Object} defaults.errorOptions options to pass to a messagebox template
 		 * @cfg {String} defaults.spinner HTML of the spinner icon with a tooltip that
 		 * tells the user that their location is being looked up
@@ -99,7 +100,9 @@
 
 			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
 			this.source = options.source || 'nearby';
-			this.nearbyApi = new NearbyApi();
+			this.nearbyApi = new NearbyGateway( {
+				api: options.api
+			} );
 
 			if ( options.errorType ) {
 				options.errorOptions = self._errorOptions( options.errorType );

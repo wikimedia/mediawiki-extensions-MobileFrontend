@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var PhotoList,
 		icons = M.require( 'mobile.startup/icons' ),
-		PhotoListApi = M.require( 'mobile.gallery/PhotoListApi' ),
+		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		View = M.require( 'mobile.view/View' );
@@ -18,27 +18,24 @@
 		template: mw.template.get( 'mobile.gallery', 'PhotoList.hogan' ),
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} HTML of the spinner icon.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 * @cfg {mw.Api} defaults.api instance of an api
 		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
 		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
-			var apiOptions;
+			var gatewayOptions = {
+				api: options.api
+			};
 
 			if ( options.username ) {
-				apiOptions = {
-					username: options.username
-				};
+				gatewayOptions.username = options.username;
 			} else if ( options.category ) {
-				apiOptions = {
-					category: options.category
-				};
-			} else {
-				apiOptions = {};
+				gatewayOptions.category = options.category;
 			}
-			this.api = new PhotoListApi( apiOptions );
+			this.gateway = new PhotoListGateway( gatewayOptions );
 			// Set up infinite scroll
 			this.infiniteScroll = new InfiniteScroll( 1000 );
 			this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
@@ -91,7 +88,7 @@
 		prependPhoto: function ( photoData ) {
 			var photoItem;
 
-			photoData.width = this.api.getWidth();
+			photoData.width = this.gateway.getWidth();
 			photoItem = new PhotoItem( photoData ).prependTo( this.$list );
 			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
@@ -120,7 +117,7 @@
 		_loadPhotos: function () {
 			var self = this;
 
-			this.api.getPhotos().done( function ( photos ) {
+			this.gateway.getPhotos().done( function ( photos ) {
 				if ( photos.length ) {
 					$.each( photos, function ( i, photo ) {
 						self.appendPhoto( photo );

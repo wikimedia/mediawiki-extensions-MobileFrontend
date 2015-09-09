@@ -467,9 +467,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.foreignApi' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mediawiki.ForeignApi.core',
 		),
 		'scripts' => array(
-			'resources/mobile.foreignApi/ForeignApi.js',
+			'resources/mobile.foreignApi/JSONPForeignApi.js',
 		),
 	),
 
@@ -1090,7 +1091,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.messageBox',
 		),
 		'messages' => array(
-			// NearbyApi.js
+			// NearbyGateway.js
 			'mobile-frontend-nearby-distance',
 			'mobile-frontend-nearby-distance-meters',
 			// Nearby.js
@@ -1107,7 +1108,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-permission-guidance',
 		),
 		'scripts' => array(
-			'resources/mobile.nearby/NearbyApi.js',
+			'resources/mobile.nearby/NearbyGateway.js',
 			'resources/mobile.nearby/Nearby.js',
 		),
 		'templates' => array(
@@ -1118,7 +1119,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.gallery' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.toast',
-			'mobile.foreignApi',
 			'mobile.infiniteScroll',
 		),
 		'templates' => array(
@@ -1132,7 +1132,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.gallery/gallery.less',
 		),
 		'scripts' => array(
-			'resources/mobile.gallery/PhotoListApi.js',
+			'resources/mobile.gallery/PhotoListGateway.js',
 			'resources/mobile.gallery/PhotoItem.js',
 			'resources/mobile.gallery/PhotoList.js',
 		),
@@ -1404,6 +1404,7 @@ $wgMobileSpecialPageModules = array(
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.gallery',
+			'mobile.startup',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-generic',

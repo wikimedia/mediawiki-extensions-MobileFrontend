@@ -1,12 +1,14 @@
 ( function ( M, $ ) {
+	var m,
+		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' );
 
-	var NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
-		m;
-
-	QUnit.module( 'MobileFrontend NearbyApi', {
+	QUnit.module( 'MobileFrontend NearbyGateway', {
 		setup: function () {
-			m = new NearbyApi();
-			this.sandbox.stub( m, 'ajax', function () {
+			var api = {
+				ajax: $.noop()
+			};
+			m = new NearbyGateway( { api: api } );
+			this.sandbox.stub( api, 'ajax', function () {
 				return $.Deferred().resolve( {
 					query: {
 						pages: {
