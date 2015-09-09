@@ -16,6 +16,24 @@
       "revId": "788dd29f1586a2d3412858f1358f43552d641259",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_1f473c7d",
+        "filename": "resources/skins.minerva.tablet.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-09T09:13:20Z",
+      "side": 1,
+      "message": "Yes.",
+      "parentUuid": "6ec1af18_907328af",
+      "revId": "788dd29f1586a2d3412858f1358f43552d641259",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
