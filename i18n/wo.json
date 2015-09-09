@@ -8,6 +8,8 @@
 	"mobile-frontend-editor-edit": "Soppi",
 	"mobile-frontend-featured-article": "Jukkib bés bi",
 	"mobile-frontend-home-button": " xët wu njëkk",
+	"mobile-frontend-language-article-heading": "Jàng ci weneen làkk",
+	"mobile-frontend-last-modified-date": "$1, ci $2 lañu ko mujjee soppi",
 	"mobile-frontend-main-menu-button-tooltip": "Ubbi njël lu njëkk li",
 	"mobile-frontend-main-menu-login": "Dugg",
 	"mobile-frontend-main-menu-nearby": "Ci wetu",
@@ -20,5 +22,6 @@
 	"mobile-frontend-search-submit": "Ayca",
 	"mobile-frontend-terms-text": "Anami Jëfandiku gi",
 	"mobile-frontend-view": "Woneyiin bu mobil",
-	"mobile-frontend-view-desktop": "Bindwaay"
+	"mobile-frontend-view-desktop": "Bindwaay",
+	"mobile-frontend-pageaction-edit-tooltip": "Soppi pàcc bi jiitu bu xët wi"
 }

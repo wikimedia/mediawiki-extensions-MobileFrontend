@@ -47,7 +47,7 @@
 	"mobile-frontend-privacy-link-text": "Privatësia",
 	"mobile-frontend-random-button": "I rastit",
 	"mobile-frontend-regular-site": "Shiko këtë faqe në versionin e rregullt të {{SITENAME}}",
-	"mobile-frontend-save-settings": "Ruani rregullimet",
+	"mobile-frontend-save-settings": "Ruaje",
 	"mobile-frontend-search-submit": "Shko",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}. Të gjitha versionet janë të listuara më poshtë",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Gjuhë",
