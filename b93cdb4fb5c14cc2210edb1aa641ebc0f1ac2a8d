@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_24530de3",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-09T01:41:50Z",
+      "side": 1,
+      "message": "This is not going to work.",
+      "revId": "b93cdb4fb5c14cc2210edb1aa641ebc0f1ac2a8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
