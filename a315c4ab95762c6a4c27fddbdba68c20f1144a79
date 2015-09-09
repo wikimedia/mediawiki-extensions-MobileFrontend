@@ -16,6 +16,24 @@
       "revId": "a315c4ab95762c6a4c27fddbdba68c20f1144a79",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_441e5963",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-09-09T00:51:18Z",
+      "side": 0,
+      "message": "I\u0027ve eliminated the need for post content class on last-modified-bar.    see common.less and ui.less",
+      "parentUuid": "6ec1af18_4941925c",
+      "revId": "a315c4ab95762c6a4c27fddbdba68c20f1144a79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
