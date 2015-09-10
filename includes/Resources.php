@@ -1742,14 +1742,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.toc',
 		),
 	),
-	'mobile.experiments' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.user',
-		),
-		'scripts' => array(
-			'resources/mobile.experiments/experiments.js',
-		),
-	),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules,

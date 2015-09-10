@@ -1023,12 +1023,6 @@ class SkinMinerva extends SkinTemplate {
 					$modules[] = 'mobile.newusers';
 				}
 			}
-
-			$mfExperiments = $this->getMFConfig()->get( 'MFExperiments' );
-
-			if ( count( $mfExperiments ) > 0 ) {
-				$modules[] = 'mobile.experiments';
-			}
 		}
 
 		// TalkOverlay feature

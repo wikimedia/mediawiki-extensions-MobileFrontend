@@ -348,7 +348,6 @@ class MobileFrontendHooks {
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$wgMFUploadLicense = SkinMinerva::getLicense( 'upload' );
 		$vars += array(
-			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
