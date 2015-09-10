@@ -11,6 +11,31 @@
 		position: static !important;
 	}
 
+	&-overlay {
+		position: absolute;
+		bottom: 3.35em;
+		right: 0;
+		left: 0;
+		z-index: 1;
+
+		.mw-echo-ui-actionMenuPopupWidget-menu {
+			padding: 0.5em;
+			font-size: 1.5em;
+			border: 0;
+			box-shadow: none;
+			border: 1px solid #666666;
+			// Override the positioning of the menu
+			// so it is "stuck" on the bottom of the
+			// notification overlay panel
+			position: static !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: auto !important;
+			top: auto !important;
+		}
+	}
+
 	.overlay-content {
 		// this is needed not only on iOS, that's why we repeat it here even though
 		// it's in Overlay.less too
@@ -20,61 +45,12 @@
 		bottom: @headerHeight;
 		width: 100%;
 		margin-top: 1px;
-	}
+		padding-bottom: 0;
 
-	.mw-echo-icon {
-		width: 30px;
-		height: 30px;
-		float: left;
-		margin: 0 10px 0 0;
-	}
-
-	.mw-echo-content {
-		margin-left: 40px;
-		font-size: .9em;
-		line-height: 1.4;
-	}
-
-	.mw-echo-notification-footer {
-		margin-top: .6em;
-		font-size: .9em;
-	}
-
-	.mw-echo-notification-primary-link {
-		display: none;
-	}
-
-	.mw-echo-notification {
-		padding: 1.2em 1em 1em;
-		border-bottom: 1px solid @colorGray13;
-		// FIXME: ARgghghghg more grays - think of the children!
-		background: #F1F1F1;
-
-		&:hover {
-			// FIXME: Yet another gray..
-			background-color: @colorGray15;
+		.mw-echo-ui-notificationsWidget {
+			top: @headerHeight;
+			height: 100%;
 		}
-	}
-
-	.mw-echo-notification-unread {
-		background: white;
-
-		&:hover {
-			background-color: white;
-		}
-	}
-
-	.mw-echo-linked-notification {
-		cursor: pointer;
-	}
-
-	.mw-echo-title {
-		font-size: 1em;
-		line-height: 1.4;
-	}
-
-	.mw-echo-payload {
-		margin-top: .4em
 	}
 
 	.user-button {

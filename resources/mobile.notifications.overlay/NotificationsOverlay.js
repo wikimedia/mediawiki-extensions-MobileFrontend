@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
-		api = new mw.Api(),
-		Anchor = M.require( 'mobile.startup/Anchor' );
+		Anchor = M.require( 'mobile.startup/Anchor' ),
+		NotificationsOverlay;
 
 	/**
 	 * Overlay for notifications
@@ -9,91 +9,50 @@
 	 * @extend Overlay
 	 * @uses mw.Api
 	 */
-	function NotificationsOverlay( options ) {
-		var self = this;
+	NotificationsOverlay = function ( options ) {
+		var model, wrapperWidget,
+			echoApi = new mw.echo.api.EchoApi();
+
 		Overlay.apply( this, options );
+
 		// Anchor tag that corresponds to a notifications badge
 		this.$badge = options.$badge;
+		this.$overlay = $( '<div>' )
+			.addClass( 'notifications-overlay-overlay position-fixed' );
+
 		// On error use the url as a fallback
 		if ( options.error ) {
 			this.onError();
-		} else {
-			// FIXME: Move to NotificationApi class
-			api.get( {
-				action: 'query',
-				meta: 'notifications',
-				notformat: 'flyout',
-				notprop: 'index|list|count',
-				uselang: 'user'
-			} ).done( function ( result ) {
-				var notifications;
-				if ( result.query && result.query.notifications ) {
-					notifications = $.map( result.query.notifications.list, function ( a ) {
-						return {
-							message: a['*'],
-							timestamp: a.timestamp.mw,
-							unread: ( a.hasOwnProperty( 'read' ) ? 'mw-echo-notification-read' : 'mw-echo-notification-unread' )
-						};
-					} ).sort( function ( a, b ) {
-						return a.timestamp < b.timestamp ? 1 : -1;
-					} );
-					if ( notifications.length ) {
-						options.notifications = notifications;
-					} else {
-						options.errorMessage = mw.msg( 'echo-none' );
-					}
-
-					self.render( options );
-					self.$( '.mw-echo-notification' ).each( function () {
-						var $notification = $( this ),
-							$primaryLink = $notification.find( '.mw-echo-notification-primary-link' ),
-							eventId = $notification.attr( 'data-notification-event' ),
-							eventType = $notification.attr( 'data-notification-type' );
-
-						// If there is a primary link, make the entire notification clickable.
-						if ( $primaryLink.length ) {
-							$notification.addClass( 'mw-echo-linked-notification' );
-							$notification.on( 'click', function () {
-								mw.echo.logger.logInteraction(
-									mw.echo.Logger.static.actions.notificationClick,
-									'mobile-overlay',
-									eventId,
-									eventType,
-									true
-								);
-								window.location.href = $primaryLink.attr( 'href' );
-							} );
-						}
-						// Log notification impression
-						mw.echo.logger.logInteraction(
-							mw.echo.Logger.static.actions.notificationImpression,
-							'mobile-overlay',
-							eventId,
-							eventType,
-							true
-						);
-					} );
-					// Only fire 'mark as read' API call when unread notification
-					// count is not zero.  Question: why does this fire an API call
-					// for 'mark all as read', the overlay may not load all unread
-					// notifications
-					if ( result.query.notifications.rawcount !== 0 ) {
-						self.markAllAsRead();
-					}
-				} else {
-					self.onError();
-				}
-			} ).fail( function () {
-				self.onError();
-			} );
+			return;
 		}
-	}
+
+		model = new mw.echo.dm.NotificationsModel(
+			echoApi,
+			{ type: 'all' }
+		);
+
+		wrapperWidget = new mw.echo.ui.MobileNotificationsWrapper( model, {
+			$overlay: this.$overlay
+		} );
+
+		// Events
+		wrapperWidget.connect( this, {
+			unreadChange: 'onUnreadChange'
+		} );
+
+		// Initialize
+		this.$( '.overlay-content' ).append(
+			wrapperWidget.$element,
+			this.$overlay
+		);
+
+		// Populate notifications
+		wrapperWidget.populate()
+			.then( model.updateSeenTime.bind( model, 'all' ) );
+	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
 		className: 'overlay notifications-overlay navigation-drawer',
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
-			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' )
-		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -116,22 +75,17 @@
 			window.location.href = this.$badge.attr( 'href' );
 		},
 		/**
-		 * Mark as read. Change the UI only, no API request.
+		 * Update the unread number on the notifications badge
+		 *
+		 * @param {mw.echo.dm.NotificationItem} items An array of the unread items
 		 * @method
 		 */
-		markAsRead: function () {
-			this.$badge.find( '.notification-count' ).remove();
-		},
-		/**
-		 * Mark notifications as read in the server. Make an API request.
-		 * @method
-		 */
-		markAllAsRead: function () {
-			// FIXME: Move to NotificationApi class
-			api.postWithToken( 'edit', {
-				action: 'echomarkread',
-				all: true
-			} );
+		onUnreadChange: function ( items ) {
+			if ( items.length > 0 ) {
+				this.$badge.find( '.notification-count' ).text( items.length );
+			} else {
+				this.$badge.find( '.notification-count' ).remove();
+			}
 		},
 		/** @inheritdoc */
 		preRender: function () {

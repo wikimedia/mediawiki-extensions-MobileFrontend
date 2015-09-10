@@ -21,7 +21,8 @@
 		"OO.ui.Tool",
 		"OO.ui.mixin.LookupElement",
 		"OO.EventEmitter",
-		"ve.init.mw.MobileArticleTarget"
+		"ve.init.mw.MobileArticleTarget",
+		"mw.echo.dm.NotificationItem"
 	],
 	"--warnings": ["-nodoc(class,public)", "-dup_member", "-link_ambiguous"],
 	"--": [

@@ -1106,16 +1106,13 @@ class MobileFrontendHooks {
 				'mobile.notifications.overlay' => $resourceBoilerplate + array(
 					'dependencies' => array(
 						'mobile.overlays',
-						'ext.echo.logger',
+						'ext.echo.ui.mobile',
 					),
 					'scripts' => array(
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
 					),
 					'styles' => array(
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
-					),
-					'templates' => array(
-						'content.hogan' => 'resources/mobile.notifications.overlay/NotificationsOverlayContent.hogan',
 					),
 					'messages' => array(
 						// defined in Echo
