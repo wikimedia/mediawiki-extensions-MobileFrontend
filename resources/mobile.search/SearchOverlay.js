@@ -15,7 +15,7 @@
 	 * Overlay displaying search results
 	 * @class SearchOverlay
 	 * @extends Overlay
-	 * @uses SearchApi
+	 * @uses SearchGateway
 	 * @uses Icon
 	 */
 	SearchOverlay = Overlay.extend( {
@@ -28,6 +28,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {SearchGateway} defaults.gateway An API gateway to use to retrieve search results
 		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
 		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
 		 * @cfg {String} defaults.searchTerm Search text.
@@ -102,8 +103,7 @@
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
-			// use the given api module or use the default SearchApi
-			this.api = options.api || new M.require( 'mobile.search.api/SearchApi' );
+			this.gateway = options.gateway;
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
@@ -286,6 +286,8 @@
 
 		/**
 		 * Perform search and render results inside current view.
+		 * FIXME: Much of the logic for caching and pending queries inside this function should
+		 * actually live in SearchGateway, please move out.
 		 * @method
 		 */
 		performSearch: function () {
@@ -298,7 +300,9 @@
 			// it seems the input event can be fired when virtual keyboard is closed
 			// (Chrome for Android)
 			if ( query !== this.lastQuery ) {
-				this.api.abort();
+				if ( self._pendingQuery ) {
+					self._pendingQuery.abort();
+				}
 				clearTimeout( this.timer );
 				self.$searchContent.hide();
 				self.$searchFeedback.hide();
@@ -316,7 +320,7 @@
 						 */
 						M.emit( 'search-start' );
 
-						self.api.search( query ).done( function ( data ) {
+						self._pendingQuery = self.gateway.search( query ).done( function ( data ) {
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {
@@ -348,7 +352,7 @@
 								} );
 							}
 						} );
-					}, this.api.isCached( query ) ? 0 : SEARCH_DELAY );
+					}, this.gateway.isCached( query ) ? 0 : SEARCH_DELAY );
 				} else {
 					self.$( '.spinner' ).hide();
 				}

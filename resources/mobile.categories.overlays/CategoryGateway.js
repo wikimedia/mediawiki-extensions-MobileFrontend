@@ -1,14 +1,16 @@
-( function ( M ) {
-
-	var CategoryApi,
-		SearchApi = M.require( 'mobile.search.api/SearchApi' );
+( function ( M, $ ) {
+	var prototype,
+		SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
 	/**
 	 * Api for CategoryOverlay
-	 * @class CategoryApi
-	 * @extends SearchApi
+	 * @class CategoryGateway
+	 * @extends SearchGateway
 	 */
-	CategoryApi = SearchApi.extend( {
+	function CategoryGateway() {
+		CategoryGateway.parent.apply( this, arguments );
+	}
+	prototype = {
 		/**
 		 * @inheritdoc
 		 */
@@ -33,7 +35,7 @@
 		 * @returns {jQuery.Deferred}
 		 */
 		save: function ( title, categories ) {
-			return this.postWithToken( 'edit', {
+			return this.api.postWithToken( 'edit', {
 				action: 'edit',
 				title: title,
 				appendtext: categories,
@@ -47,7 +49,7 @@
 		 * @returns {jQuery.Deferred}
 		 */
 		getCategories: function ( title ) {
-			return this.get( {
+			return this.api.get( {
 				action: 'query',
 				prop: 'categories',
 				titles: title,
@@ -55,8 +57,10 @@
 				cllimit: 50 // FIXME: Replace with InfiniteScroll
 			} );
 		}
-	} );
+	};
+	OO.inheritClass( CategoryGateway, SearchGateway );
+	$.extend( CategoryGateway.prototype, prototype );
 
-	M.define( 'mobile.categories.overlays/CategoryApi', CategoryApi );
+	M.define( 'mobile.categories.overlays/CategoryGateway', CategoryGateway );
 
 }( mw.mobileFrontend, jQuery ) );

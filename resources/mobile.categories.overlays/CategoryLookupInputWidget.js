@@ -3,13 +3,13 @@
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.LookupElement
 	 * @param {Object} options
-	 * @param {CategoryApi} options.api to use to retrieve search results
+	 * @param {CategoryGateway} options.gateway to use to retrieve search results
 	 * @param {jQuery.Object} options.suggestions container element for search suggestions
 	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.
 	 */
 	function CategoryLookupInputWidget( options ) {
 		this.$element = $( '<div>' );
-		this.api = options.api;
+		this.gateway = options.gateway;
 		this.$suggestions = options.suggestions;
 		this.categories = options.categories;
 		this.$saveButton = options.saveButton;
@@ -42,7 +42,7 @@
 	 * @return {jQuery.Deferred}
 	 */
 	CategoryLookupInputWidget.prototype.getLookupRequest = function () {
-		return this.api.search( this.value );
+		return this.gateway.search( this.value );
 	};
 
 	/**

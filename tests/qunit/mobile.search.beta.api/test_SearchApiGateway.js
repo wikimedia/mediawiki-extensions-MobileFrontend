@@ -1,8 +1,7 @@
 ( function ( $, M ) {
+	var SearchGateway = M.require( 'mobile.search.beta.api/SearchGateway' );
 
-	var SearchApi = M.require( 'mobile.search.beta.api/SearchApi' );
-
-	QUnit.module( 'MobileFrontend SearchApi', {
+	QUnit.module( 'MobileFrontend SearchGateway', {
 		setup: function () {
 			var data = {
 				query: {
@@ -51,12 +50,12 @@
 					]
 				}
 			};
-			this.stub( SearchApi.prototype, 'get' ).returns( $.Deferred().resolve( data ) );
+			this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( data ) );
 		}
 	} );
 
 	QUnit.asyncTest( 'Wikidata Description in search results', 3, function ( assert ) {
-		var searchApi = new SearchApi();
+		var searchApi = new SearchGateway( new mw.Api() );
 		searchApi.search( 'brad' ).done( function ( resp ) {
 			var results = resp.results;
 			QUnit.start();

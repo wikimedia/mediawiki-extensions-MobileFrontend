@@ -2,7 +2,7 @@
 
 	var CategoryAddOverlay,
 		Overlay = M.require( 'mobile.overlays/Overlay' ),
-		CategoryApi = M.require( 'mobile.categories.overlays/CategoryApi' ),
+		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
 		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
 		icons = M.require( 'mobile.startup/icons' ),
 		toast = M.require( 'mobile.toast/toast' );
@@ -11,12 +11,13 @@
 	 * Displays the list of categories for a page
 	 * @class CategoryAddOverlay
 	 * @extends Overlay
-	 * @uses CategoryApi
+	 * @uses CategoryGateway
 	 */
 	CategoryAddOverlay = Overlay.extend( {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {mw.Api} defaults.api to use to construct gateway
 		 * @cfg {String} defaults.waitMsg Text that displays while a page edit is being saved.
 		 * @cfg {String} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
@@ -70,9 +71,9 @@
 			this.wgCategories = this.options.categories;
 			this.title = this.options.title;
 
-			this.api = new CategoryApi();
+			this.gateway = new CategoryGateway( this.options.api );
 			input = new CategoryLookupInputWidget( {
-				api: this.api,
+				gateway: this.gateway,
 				suggestions: this.$suggestions,
 				categories: this.wgCategories,
 				saveButton: this.$saveButton
@@ -122,7 +123,7 @@
 				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'toast error' );
 			} else {
 				// save the new categories
-				this.api.save( this.title, newCategories ).done( function () {
+				this.gateway.save( this.title, newCategories ).done( function () {
 					M.emit( 'category-added' );
 					window.location.hash = '#/categories';
 				} ).fail( function () {

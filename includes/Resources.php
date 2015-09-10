@@ -689,7 +689,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.Title',
 		),
 		'scripts' => array(
-			'resources/mobile.search.api/SearchApi.js',
+			'resources/mobile.search.api/SearchGateway.js',
 		),
 	),
 
@@ -707,7 +707,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.search.api',
 		),
 		'scripts' => array(
-			'resources/mobile.search.beta.api/SearchApi.js',
+			'resources/mobile.search.beta.api/SearchGateway.js',
 		),
 	),
 
@@ -832,7 +832,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'oojs-ui',
 		),
 		'scripts' => array(
-			'resources/mobile.categories.overlays/CategoryApi.js',
+			'resources/mobile.categories.overlays/CategoryGateway.js',
 			'resources/mobile.categories.overlays/CategoryLookupInputWidget.js',
 			'resources/mobile.categories.overlays/CategoryOverlay.js',
 			'resources/mobile.categories.overlays/CategoryAddOverlay.js',

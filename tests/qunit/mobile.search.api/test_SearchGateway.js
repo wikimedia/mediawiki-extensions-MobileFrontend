@@ -1,12 +1,11 @@
 ( function ( $, M ) {
 
-	var SearchApi = M.require( 'mobile.search.api/SearchApi' ),
-		api;
+	var SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
 	QUnit.module( 'MobileFrontend: SearchApi', {
 		setup: function () {
-			api = new SearchApi();
-			this.sandbox.stub( SearchApi.prototype, 'get', function () {
+			this.gateway = new SearchGateway( new mw.Api() );
+			this.sandbox.stub( this.gateway.api, 'get', function () {
 				return $.Deferred().resolve( {
 					warnings: {
 						query: {
@@ -70,7 +69,10 @@
 	} );
 
 	QUnit.test( '._highlightSearchTerm', 14, function ( assert ) {
-		var data = [
+		var data,
+			gateway = this.gateway;
+
+		data = [
 			[ 'Hello World', 'Hel', '<strong>Hel</strong>lo World' ],
 			[ 'Hello kitty', 'el', 'Hello kitty' ], // not at start
 			[ 'Hello worl', 'hel', '<strong>Hel</strong>lo worl' ],
@@ -87,14 +89,13 @@
 			[ '<script>alert("FAIL")</script> should be safe',
 				'<script>alert("FAIL"', '<strong>&lt;script&gt;alert("FAIL"</strong>)&lt;/script&gt; should be safe' ]
 		];
-
 		$.each( data, function ( i, item ) {
-			assert.strictEqual( api._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
+			assert.strictEqual( gateway._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
 		} );
 	} );
 
 	QUnit.test( 'show redirect targets', 6, function ( assert ) {
-		api.search( 'barack' ).done( function ( response ) {
+		this.gateway.search( 'barack' ).done( function ( response ) {
 			assert.strictEqual( response.query, 'barack' );
 			assert.strictEqual( response.results.length, 2 );
 			assert.strictEqual( response.results[ 0 ].displayTitle, 'Claude Monet' );

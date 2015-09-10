@@ -2,18 +2,19 @@
 
 	var CategoryOverlay,
 		Overlay = M.require( 'mobile.overlays/Overlay' ),
-		CategoryApi = M.require( 'mobile.categories.overlays/CategoryApi' );
+		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**
 	 * Displays the list of categories for a page
 	 * @class CategoryOverlay
 	 * @extends Overlay
-	 * @uses CategoryApi
+	 * @uses CategoryGateway
 	 */
 	CategoryOverlay = Overlay.extend( {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {mw.Api} defaults.api to use to construct gateway
 		 * @cfg {String} defaults.heading Title of the list of categories this page is
 		 * categorized in.
 		 * @cfg {String} defaults.subheading Introduction text for the list of categories,
@@ -69,12 +70,12 @@
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		_loadCategories: function ( options ) {
-			var api = new CategoryApi(),
+			var gateway = new CategoryGateway( options.api ),
 				self = this;
 
 			this.$( '.topic-title-list' ).empty();
 			this.showSpinner();
-			api.getCategories( options.title ).done( function ( data ) {
+			gateway.getCategories( options.title ).done( function ( data ) {
 				if ( data.query && data.query.pages ) {
 					options.items = [];
 					options.hiddenitems = [];

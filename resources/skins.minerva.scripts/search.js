@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var searchPlaceholderMsg = 'mobile-frontend-placeholder',
+	var SearchOverlay, SearchGateway,
+		searchPlaceholderMsg = 'mobile-frontend-placeholder',
 		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		context = M.require( 'mobile.context/context' ),
@@ -7,16 +8,14 @@
 		browser = M.require( 'mobile.browser/browser' ),
 		moduleConfig = {
 			modules: [ 'mobile.search.api', 'mobile.search' ],
-			api: 'mobile.search.api/SearchApi',
+			api: 'mobile.search.api/SearchGateway',
 			overlay: 'mobile.search/SearchOverlay'
-		},
-		SearchOverlay,
-		SearchApi;
+		};
 
 	if ( context.isBetaGroupMember() ) {
 		moduleConfig = $.extend( moduleConfig, {
 			modules: [ 'mobile.search.beta.api', 'mobile.search.beta' ],
-			api: 'mobile.search.beta.api/SearchApi'
+			api: 'mobile.search.beta.api/SearchGateway'
 		} );
 	}
 
@@ -37,11 +36,11 @@
 		} );
 
 		mw.loader.using( moduleConfig.modules ).done( function () {
-			SearchApi = M.require( moduleConfig.api );
+			SearchGateway = M.require( moduleConfig.api );
 			SearchOverlay = M.require( moduleConfig.overlay );
 
 			new SearchOverlay( {
-				api: new SearchApi(),
+				gateway: new SearchGateway( new mw.Api() ),
 				searchTerm: searchTerm,
 				placeholderMsg: placeholder
 			} ).show();
