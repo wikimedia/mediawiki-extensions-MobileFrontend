@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4fad04e7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-10T16:26:13Z",
+      "side": 1,
+      "message": "What are we improving here and how are we measuring those improvements?",
+      "revId": "d12728c954b10f091b5eaf70b6e5b75a7ccdae29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ef9870c6",
+        "filename": "resources/mobile.lazyImages/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-10T16:26:13Z",
+      "side": 1,
+      "message": "I\u0027m concerned about adding yet another resize/scroll handler even if it\u0027s debounced. How many of these do we have now?",
+      "revId": "d12728c954b10f091b5eaf70b6e5b75a7ccdae29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2fcd18bd",
+        "filename": "resources/mobile.serviceWorker/imageLoader.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-10T16:26:13Z",
+      "side": 1,
+      "message": "Can you make this whole file an IIFE so that blankImg can be made a constant?",
+      "revId": "d12728c954b10f091b5eaf70b6e5b75a7ccdae29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
