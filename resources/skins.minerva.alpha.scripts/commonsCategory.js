@@ -1,5 +1,8 @@
 ( function ( M, $ ) {
-	var loader = M.require( 'loader' ),
+	var category,
+		loader = M.require( 'loader' ),
+		Anchor = M.require( 'Anchor' ),
+		page = M.getCurrentPage(),
 		overlayManager = M.require( 'overlayManager' );
 
 	overlayManager.add( /^\/commons-category\/(.+)$/, function ( title ) {
@@ -15,5 +18,14 @@
 		} );
 		return d;
 	} );
+
+	category = mw.config.get( 'wgMFImagesCategory' );
+	if ( category ) {
+		new Anchor( {
+			progressive: true,
+			href: '#/commons-category/' + category,
+			label: mw.msg( 'mobile-frontend-commons-category-view', page.title )
+		} ).appendTo( '.pre-content' );
+	}
 
 }( mw.mobileFrontend, jQuery ) );

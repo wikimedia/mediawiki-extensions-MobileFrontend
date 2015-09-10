@@ -57,6 +57,7 @@
 	"mobile-frontend-changeslist-ip": "Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.\n{{Identical|Anonymous user}}",
 	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-clear-search": "Tooltip for clear button that appears when you type into search box.\n{{Identical|Clear}}",
+	"mobile-frontend-commons-category-view": "Link label, opens images associated with the subject matter.\nParameters:\n$1 - Title of page.",
 	"mobile-frontend-contribution-summary": "Summary text that appears at the top of the [[Special:Contributions]] page for a given username.\n\nParameters:\n* $1 - username",
 	"mobile-frontend-cookies-required": "Error message shown when user attempts to switch site modes and cookies are not enabled.",
 	"mobile-frontend-copyright": "A short sentence explaining that the content of the page is available under a particular license. Parameters:\n* $1 - license name\n'''See also'''\n* {{msg-mw|Copyright}}",

@@ -1001,6 +1001,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
+		global $wgMFWikibaseImageCategory;
+
 		$context = MobileContext::singleton();
 		$mfUseWikibaseDescription = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
 
@@ -1012,8 +1014,12 @@ class MobileFrontendHooks {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
+					$category =  ExtMobileFrontend::getWikibasePropertyValue( $item, $wgMFWikibaseImageCategory );
 					if ( $desc ) {
 						$outputPage->setProperty( 'wgMFDescription', $desc );
+					}
+					if ( $category ) {
+						$outputPage->setProperty( 'wgMFImagesCategory', $category );
 					}
 				}
 			}

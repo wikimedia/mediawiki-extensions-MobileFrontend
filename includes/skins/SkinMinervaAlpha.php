@@ -52,6 +52,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFShowRedLinks'] = true;
+		$vars['wgMFImagesCategory'] = $this->getOutput()->getProperty( 'wgMFImagesCategory' );
 
 		return $vars;
 	}
