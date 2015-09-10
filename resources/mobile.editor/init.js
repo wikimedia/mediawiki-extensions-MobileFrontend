@@ -33,7 +33,8 @@
 		isVisualEditorEnabled = veConfig,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer,
-		$caEdit = $( '#ca-edit' );
+		$caEdit = $( '#ca-edit' ),
+		SchemaEdit = M.require( 'loggingSchemas/SchemaEdit' );
 
 	/**
 	 * Prepend an edit page button to the container
@@ -123,7 +124,7 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
+		overlayManager.add( /^\/editor\/(\d+)$/, function ( sectionId ) {
 			var
 				// FIXME: Clean up selector when cache has cleared.
 				$content = $( '#content #bodyContent, #content_wrapper #content' ),
@@ -136,12 +137,31 @@
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
 					oldId: mw.util.getParamValue( 'oldid' ),
-					funnel: funnel || 'article',
 					contentLang: $content.attr( 'lang' ),
-					contentDir: $content.attr( 'dir' )
+					contentDir: $content.attr( 'dir' ),
+					sessionId: mw.user.generateRandomSessionId(),
+					editSchema: new SchemaEdit
 				},
-				visualEditorNamespaces = veConfig && veConfig.namespaces;
+				visualEditorNamespaces = veConfig && veConfig.namespaces,
+				initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
+			/**
+			 * Log init event to edit schema.
+			 * Need to log this from outside the Overlay object because that module
+			 * won't have loaded yet.
+			 * @private
+			 * @ignore
+			 * @method
+			 */
+			function logInit( editor ) {
+				editorOptions.editSchema.log( {
+					action: 'init',
+					type: 'section',
+					mechanism: initMechanism,
+					editor: editor,
+					editingSessionId: editorOptions.sessionId
+				} );
+			}
 			/**
 			 * Load source editor
 			 * @private
@@ -150,6 +170,9 @@
 			 */
 			function loadSourceEditor() {
 				var rlModuleName, moduleName;
+
+				logInit( 'wikitext' );
+
 				// use the new wikitexteditor with a basic toolbar as a test for beta users and users
 				// without an iphone (bottom toolbars doesn't work) - Bug T109224
 				// FIXME: Make this working with iOS8
@@ -184,6 +207,7 @@
 				// the VisualEditor is the default editor for this wiki
 				preferredEditor === 'VisualEditor'
 			) {
+				logInit( 'visualeditor' );
 				loader.loadModule( 'mobile.editor.ve' ).done( function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					result.resolve( new VisualEditorOverlay( editorOptions ) );
