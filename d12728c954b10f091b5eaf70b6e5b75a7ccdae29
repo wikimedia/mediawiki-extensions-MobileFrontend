@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_ef2710c5",
+        "filename": "resources/mobile.lazyImages/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-09-10T17:41:04Z",
+      "side": 1,
+      "message": "jQuery uses method internally but makes sure to access it conditionally because it isn\u0027t defined by older browsers (at least iOS 3, and Blackberry 5).\n\nThis would throw otherwise (unless there is a feature test somewhere to exclude those browsers).\n\nAlso, there are dozens if not hundreds of popular lazy-loading image libraries, is there not a simple one that satisfies our need?\n\nThe logic of which events to listen to (resize, scroll), how long to debounce (100ms), and how to calculate (getBoundingClientRect), and which aspects  to use (top, bottom, with our without margin), all seem rather arbitrary and untested. I\u0027m sure we can leverage at least some existing research on this.\n\nAs a starting point, it seems counter-intuitive to only start loading an image after it\u0027s top has already entered the viewport.",
+      "revId": "d12728c954b10f091b5eaf70b6e5b75a7ccdae29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_ef9870c6",
         "filename": "resources/mobile.lazyImages/init.js",
         "patchSetId": 6
