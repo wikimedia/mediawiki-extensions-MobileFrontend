@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_828ae86c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-10T00:57:08Z",
+      "side": 1,
+      "message": "The above change seems unrelated to the patch. Is it the result of a merge?",
+      "revId": "67378d69e308ef81d7ed8f9c5999f0d3d468e4d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_82f18800",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-10T00:57:08Z",
+      "side": 1,
+      "message": "This line also.",
+      "revId": "67378d69e308ef81d7ed8f9c5999f0d3d468e4d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
