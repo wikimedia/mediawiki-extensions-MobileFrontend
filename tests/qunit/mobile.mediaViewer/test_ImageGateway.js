@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var findSizeBucket = M.require( 'mobile.mediaViewer/mediaViewer' )._findSizeBucket;
+	var findSizeBucket = M.require( 'mobile.mediaViewer/ImageGateway' )._findSizeBucket;
 
 	QUnit.module( 'MobileFrontend mobile.mediaViewer/mediaViewer' );
 

@@ -1,7 +1,5 @@
 ( function ( M, $ ) {
-	var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
-		ImageApi,
-		Api = M.require( 'mobile.startup/api' ).Api;
+	var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ];
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
@@ -18,16 +16,15 @@
 
 	/**
 	 * API for retrieving image thumbnails for a given page
-	 * @class ImageApi
-	 * @extends Api
+	 * @class ImageGateway
+	 * @cfg {Object} options
+	 * @cfg {mw.Api} options.api
 	 */
-	ImageApi = Api.extend( {
-		/** @inheritdoc */
-		initialize: function () {
-			Api.prototype.initialize.apply( this, arguments );
-			this._cache = {};
-		},
-
+	function ImageGateway( options ) {
+		this._cache = {};
+		this.api = options.api;
+	}
+	ImageGateway.prototype = {
 		/**
 		 * Get thumbnail via the API and cache it. Return the result from the cache if exists.
 		 * @param {String} title Url of image
@@ -40,7 +37,7 @@
 			if ( !result ) {
 				this._cache[title] = result = $.Deferred();
 
-				this.get( {
+				this.api.get( {
 					action: 'query',
 					prop: 'imageinfo',
 					titles: title,
@@ -59,12 +56,9 @@
 
 			return result;
 		}
-	} );
+	};
 
-	M.define( 'mobile.mediaViewer/mediaViewer', {
-		_findSizeBucket: findSizeBucket
-	} ).deprecate( 'modules/mediaViewer' );
-	M.define( 'mobile.mediaViewer/ImageApi', ImageApi )
-		.deprecate( 'modules/mediaViewer/ImageApi' );
+	ImageGateway._findSizeBucket = findSizeBucket;
+	M.define( 'mobile.mediaViewer/ImageGateway', ImageGateway );
 
 }( mw.mobileFrontend, jQuery ) );
