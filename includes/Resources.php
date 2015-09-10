@@ -1746,6 +1746,10 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'resources/skins.minerva.beta.scripts/bannerImage.js',
+			'resources/skins.minerva.beta.scripts/commonsCategory.js',
+		),
+		'messages' => array(
+			'mobile-frontend-commons-category-view',
 		),
 	),
 	// By mode. This should only ever be loaded in Minerva skin.
@@ -1755,13 +1759,9 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.hovercards',
 		),
-		'messages' => array(
-			'mobile-frontend-commons-category-view',
-		),
 		'scripts' => array(
-			'resources/skins.minerva.alpha.scripts/commonsCategory.js',
 			'resources/skins.minerva.alpha.scripts/hovercards.js',
-		)
+		),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
