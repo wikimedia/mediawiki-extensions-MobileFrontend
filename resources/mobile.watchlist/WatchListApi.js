@@ -129,7 +129,6 @@
 				// page may or may not exist.
 				if ( item.revisions && item.revisions[0] ) {
 					revision = item.revisions[0];
-					console.log( revision );
 					data.lastModified = time.getLastModifiedMessage( new Date( revision.timestamp ).getTime() / 1000,
 						revision.user );
 				}
