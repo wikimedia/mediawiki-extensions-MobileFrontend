@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_01a26c3b",
+        "filename": "resources/mobile.foreignApi/ForeignApi.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-11T11:31:53Z",
+      "side": 1,
+      "message": "What are the reasons for using Api.extend here?",
+      "revId": "90449272d7e6dda03244d93db8c0d34900c9491c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_641b3e74",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-11T11:31:53Z",
+      "side": 1,
+      "message": "There\u0027s one instance of \"api.on\" that I could find and that\u0027s in a single test case, which, incidentally, is currently being skipped. Is there really any need for this?",
+      "revId": "90449272d7e6dda03244d93db8c0d34900c9491c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4443a215",
+        "filename": "resources/mobile.startup/api.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-11T11:31:53Z",
+      "side": 1,
+      "message": "This behaviour should be documented in the class/constructor documentation for anyone choosing to extend this class.",
+      "revId": "90449272d7e6dda03244d93db8c0d34900c9491c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_246d3697",
+        "filename": "resources/mobile.watchlist/WatchListApi.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-11T11:31:53Z",
+      "side": 1,
+      "message": "Yarrrp. This is a violation of the Liskov Substitution Principle.",
+      "revId": "90449272d7e6dda03244d93db8c0d34900c9491c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
