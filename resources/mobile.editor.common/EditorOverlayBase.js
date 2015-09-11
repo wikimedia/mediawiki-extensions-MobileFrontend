@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		browser = M.require( 'browser' ),
-		SchemaMobileWebEditing = M.require( 'loggingSchemas/SchemaMobileWebEditing' ),
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
@@ -65,6 +64,7 @@
 		 * two different editing interfaces.
 		 * @cfg {String} defaults.licenseMsg Text and link of the license, under which this contribution will be
 		 * released to inform the user.
+		 * @cfg {SchemaEdit} defaults.editSchema Schema to log events to.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			pageApi: undefined,
@@ -103,25 +103,17 @@
 			'click .continue': 'onClickContinue',
 			'click .submit': 'onClickSubmit'
 		} ),
-
 		/**
-		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:MobileWebEditing
-		 * @param {String} action name in workflow.
-		 * @param {String} errorText error to report if applicable
+		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:Edit
+		 * @param {Object} data
 		 */
-		log: function ( action, errorText ) {
-			var
-				data = {
-					action: action,
-					section: this.sectionId,
-					editor: this.editor,
-					funnel: this.funnel
-				};
-			if ( errorText ) {
-				data.errorText = errorText;
-			}
-			return this.schema.log( data );
+		log: function ( data ) {
+			return this.schema.log( $.extend( data, {
+				editor: this.editor,
+				editingSessionId: this.sessionId
+			} ) );
 		},
+
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 * @method
@@ -159,7 +151,9 @@
 			toast.showOnPageReload( msg, 'success' );
 
 			// Ensure we don't lose this event when logging
-			this.log( 'success' ).always( function () {
+			this.log( {
+				action: 'saveSuccess'
+			} ).always( function () {
 				if ( self.sectionLine ) {
 					title = title + '#' + self.sectionLine;
 				}
@@ -189,9 +183,9 @@
 			this.isNewPage = options.isNewPage;
 			this.isNewEditor = options.isNewEditor;
 			this.sectionId = options.sectionId;
-			this.funnel = options.funnel;
-			this.schema = new SchemaMobileWebEditing();
+			this.schema = options.editSchema;
 			this.config = mw.config.get( 'wgMFEditorOptions' );
+			this.sessionId = options.sessionId;
 			this.allowCloseWindow = mw.confirmCloseWindow( {
 				/** Returns true, if content has changed, otherwise false */
 				test: function () {
@@ -208,14 +202,12 @@
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 		/**
-		 * Report errors back to the user. Silently record the error using EventLogging.
+		 * Report load errors back to the user. Silently record the error using EventLogging.
 		 * @method
-		 * @param {String} msg key of message to display to user
-		 * @param {String} errorText to log to EventLogging
+		 * @param {String} text Text of message to display to user
 		 */
-		reportError: function ( msg, errorText ) {
-			this.log( 'error', errorText );
-			toast.show( msg, 'toast error' );
+		reportError: function ( text ) {
+			toast.show( text, 'toast error' );
 		},
 		/**
 		 * Prepares the penultimate screen before saving.
@@ -224,7 +216,9 @@
 		 */
 		onStageChanges: function () {
 			this.showHidden( '.save-header, .save-panel' );
-			this.log( 'save' );
+			this.log( {
+				action: 'saveIntent'
+			} );
 			// Scroll to the top of the page, so that the summary input is visible
 			// (even if overlay was scrolled down when editing) and weird iOS header
 			// problems are avoided (header position not updating to the top of the
@@ -243,7 +237,9 @@
 				this.confirmAborted = true;
 				return;
 			}
-			this.log( 'submit' );
+			this.log( {
+				action: 'saveAttempt'
+			} );
 		},
 		/** @inheritdoc **/
 		postRender: function () {
@@ -252,7 +248,9 @@
 				this.$el.addClass( 'android-2' );
 			}
 			// log edit attempt
-			this.log( 'attempt' );
+			this.log( {
+				action: 'ready'
+			} );
 
 			// decide what happens, when the user clicks the continue button
 			if ( this.config.skipPreview ) {
@@ -268,10 +266,20 @@
 		},
 		/**
 		 * Back button click handler
+		 * @method
 		 */
-		onClickBack: function () {
+		onClickBack: $.noop,
+		/**
+		 * Exit handler
+		 */
+		onExit: function () {
+			Overlay.prototype.onExit.apply( this, arguments );
 			// log cancel attempt
-			this.log( 'cancel' );
+			this.log( {
+				action: 'abort',
+				mechanism: 'cancel',
+				type: this.hasChanged() ? 'abandon' : 'nochange'
+			} );
 		},
 		/**
 		 * Submit button click handler

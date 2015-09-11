@@ -19,7 +19,7 @@
 		} ),
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay editor-overlay-ve',
-		editor: 'VisualEditor',
+		editor: 'visualeditor',
 		/**
 		 * Set options that apply specifically to VisualEditorOverlay but not
 		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
@@ -113,7 +113,11 @@
 		 */
 		switchToSourceEditor: function () {
 			var self = this;
-			this.log( 'switch' );
+			this.log( {
+				action: 'abort',
+				type: 'switchnochange',
+				mechanism: 'navigate'
+			} );
 			// Save a user setting indicating that this user prefers using the SourceEditor
 			settings.save( 'preferredEditor', 'SourceEditor', true );
 			this.showSpinner();
