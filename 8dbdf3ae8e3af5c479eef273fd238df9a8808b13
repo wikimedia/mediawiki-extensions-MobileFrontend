@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_e1d5e0ea",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this module is needed.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_41f0748e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "Do we still need this module when mediawiki.storage is already being loaded?",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_6138103b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "I\u0027m not sure why we need this module here. We should only include the modules that we need. For example, mobile.betaoptin which is a dependency of skins.minerva.scripts is not needed for the mobile.editor module to function.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_e14ba0cb",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 709,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "Here also, we don\u0027t need to load this module here. Only the used modules will suffice.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_a11598a1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 1029,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "Here also, let\u0027s load the used modules only.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_c11a24d0",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 1371,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "Here also, we don\u0027t have to load everything here.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_e1508063",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 24
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 1,
+      "message": "Can you elaborate more on this? I don\u0027t understand what must be defined? Will it be undefined if it\u0027s run before applying the parent function?",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

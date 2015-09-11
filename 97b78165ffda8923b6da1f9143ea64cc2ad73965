@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_e122c0fb",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 1003,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:38:56Z",
+      "side": 0,
+      "message": "I\u0027m not sure why we\u0027re merging this to skins.miverva.scripts. How this module is different from mobile.toggling? They certainly look similar to me.",
+      "revId": "97b78165ffda8923b6da1f9143ea64cc2ad73965",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
