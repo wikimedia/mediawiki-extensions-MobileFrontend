@@ -110,23 +110,28 @@
 			this.defaults = defaults;
 			Class.prototype.initialize.apply( this, arguments );
 		},
+
 		/**
-		 * Actually log event via EventLogging
+		 * Actually log event via the EventLogging subscriber.
+		 *
+		 * Since we have a soft dependency on the EventLogging extension, we use the
+		 * `mw#track` method to log events to reduce coupling between the two extensions.
+		 *
 		 * @method
 		 * @param {Object} data to log
 		 * @return {jQuery.Deferred}
 		 */
 		log: function ( data ) {
-			if ( mw.eventLog ) {
-				// Log event if logging schema is not sampled or if user is in the bucket
-				if ( !this.isSampled || this._isUserInBucket() ) {
-					return mw.eventLog.logEvent( this.name, $.extend( {}, this.defaults, data ) );
-				} else {
-					return $.Deferred().reject( 'User not in event sampling bucket.' );
-				}
-			} else {
-				return $.Deferred().reject( 'EventLogging not installed.' );
+			var deferred = $.Deferred();
+
+			// Log event if logging schema is not sampled or if user is in the bucket
+			if ( !this.isSampled || this._isUserInBucket() ) {
+				mw.track( 'event.' + this.name, $.extend( {}, this.defaults, data ) );
+
+				return deferred.resolve();
 			}
+
+			return deferred.reject();
 		},
 
 		/**

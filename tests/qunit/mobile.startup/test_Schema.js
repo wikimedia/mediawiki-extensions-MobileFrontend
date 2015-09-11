@@ -70,4 +70,34 @@
 		assert.strictEqual( testSchema._isUserInBucket(), false, 'user is not in bucket' );
 	} );
 
+	QUnit.test( '#log', 2, function ( assert ) {
+		var schema = new TestSchema(),
+			event = {
+				foo: 'bar'
+			};
+
+		// Restore Schema#log as we intend to stub the mw#track method.
+		TestSchema.prototype.log.restore();
+		this.sandbox.stub( mw, 'track' ).returns( undefined );
+
+		schema.log( event ).then( function () {
+			assert.deepEqual(
+				[ 'event.test', event ],
+				mw.track.firstCall.args,
+				'#log invokes mw#track and immediately resolves'
+			);
+		} );
+
+		schema.isSampled = true;
+		this.sandbox.stub( schema, '_isUserInBucket' ).returns( false );
+
+		schema.log( event ).fail( function () {
+			assert.strictEqual(
+				1,
+				mw.track.callCount,
+				'#log doesn\'t invoke mw#track and rejects if the user isn\'t in the bucket.'
+			);
+		} );
+	} );
+
 }( jQuery, mw.mobileFrontend ) );
