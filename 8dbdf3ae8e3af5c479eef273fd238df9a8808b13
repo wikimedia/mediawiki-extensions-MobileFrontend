@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ec1af18_a1e91880",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 24
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-11T09:39:46Z",
+      "side": 1,
+      "message": "Btw, this line is too long. Please consider breaking it at about 70 chars.",
+      "revId": "8dbdf3ae8e3af5c479eef273fd238df9a8808b13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_e1d5e0ea",
         "filename": "includes/Resources.php",
         "patchSetId": 24
