@@ -36,6 +36,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Унапредите {{SITENAME}}.</strong><br />Пријавите се да би уређивали.",
 	"mobile-frontend-edit-signup-action": "<strong>Унапредите {{SITENAME}}.</strong><br />Отворите налог да би уређивали.",
 	"mobile-frontend-editor-abusefilter-read-more": "Прочитајте више",
+	"mobile-frontend-editor-abusefilter-warning": "Упозорење: постоји проблем са Вашом изменом, јесте ли сигурни да желите да је сачувате?",
 	"mobile-frontend-editor-anon": "Уреди без пријављивања",
 	"mobile-frontend-editor-anonwarning": "<strong>Упозорење:</strong> нисте пријављени. Ваша ИП адреса ће бити јавно видљива у историји ове странице ако начините било какву измену. Ако се <strong>пријавите</strong> или <strong>отворите налог</strong> ваше измене ће бити приписане вашем корисничком имену.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Вашем налог је онемогућено уређивање. {{GENDER:$2|Блокирао|Блокирала}} вас је $2 из следећег разлога: $1",

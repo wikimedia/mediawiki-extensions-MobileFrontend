@@ -27,6 +27,7 @@
 	"mobile-frontend-changeslist-ip": "Anonüümne kasutaja",
 	"mobile-frontend-changeslist-nocomment": "resümee puudub",
 	"mobile-frontend-clear-search": "Tühjenda",
+	"mobile-frontend-commons-category-view": "Pildid teemal: $1",
 	"mobile-frontend-contribution-summary": "Kõik kasutaja {{GENDER:$1|[[Special:UserProfile/$1|$1]]}} tehtud muudatused",
 	"mobile-frontend-cookies-required": "Et vaaterežiimi vahetada, on vaja küpsiseid. Palun luba need ja proovi uuesti.",
 	"mobile-frontend-copyright": "Sisu on kasutatav litsentsi $1 tingimustel, kui pole öeldud teisiti.",

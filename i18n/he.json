@@ -41,6 +41,7 @@
 	"mobile-frontend-changeslist-ip": "משתמש אלמוני",
 	"mobile-frontend-changeslist-nocomment": "אין תקציר עריכה",
 	"mobile-frontend-clear-search": "ניקוי",
+	"mobile-frontend-commons-category-view": "תמונות עבור $1",
 	"mobile-frontend-contribution-summary": "כל העריכות של [[Special:UserProfile/$1|$1]]",
 	"mobile-frontend-cookies-required": "נדרשות עוגיות כדי לעבור בין מצבים. נא להפעיל אותן ולנסות שוב.",
 	"mobile-frontend-copyright": "התוכן זמין לפי תנאי $1 אלא אם כן נאמר אחרת.",

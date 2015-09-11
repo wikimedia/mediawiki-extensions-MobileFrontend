@@ -4,12 +4,14 @@
 			"FatosMorina",
 			"Olsi",
 			"Liridon",
-			"Ammartivari"
+			"Ammartivari",
+			"Kosovastar"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Kalo në seksionin A",
 	"mobile-frontend-changeslist-nocomment": "ska përmbledhje të redaktimeve",
 	"mobile-frontend-clear-search": "Fshije",
+	"mobile-frontend-commons-category-view": "Imazhet për $1",
 	"mobile-frontend-copyright": "Përmbajtja është në disponim nëpërmjet licencës $1 nëse nuk shënohet ndryshe.",
 	"mobile-frontend-desc": "Për celular",
 	"mobile-frontend-disable-images": "Çaktivizo figurat në versionin për celular",
@@ -47,7 +49,7 @@
 	"mobile-frontend-privacy-link-text": "Privatësia",
 	"mobile-frontend-random-button": "I rastit",
 	"mobile-frontend-regular-site": "Shiko këtë faqe në versionin e rregullt të {{SITENAME}}",
-	"mobile-frontend-save-settings": "Ruaje",
+	"mobile-frontend-save-settings": "Ruaj",
 	"mobile-frontend-search-submit": "Shko",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}. Të gjitha versionet janë të listuara më poshtë",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Gjuhë",

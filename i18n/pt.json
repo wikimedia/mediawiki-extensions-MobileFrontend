@@ -117,7 +117,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visualização do código-fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "A gravar edição, aguarde por favor.",
 	"mobile-frontend-editor-redlink-leave": "Não, obrigado",
-	"mobile-frontend-editor-redlink-explain": "Esta página ainda não foi criada na {{SITENAME}}.",
+	"mobile-frontend-editor-redlink-explain": "Esta página ainda não foi criada.",
 	"mobile-frontend-editor-redlink-create": "Criar página",
 	"mobile-frontend-editor-bold": "Negrito",
 	"mobile-frontend-editor-italic": "Itálico",

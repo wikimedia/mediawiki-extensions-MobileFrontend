@@ -29,6 +29,7 @@
 	"mobile-frontend-changeslist-ip": "Usuari anònim",
 	"mobile-frontend-changeslist-nocomment": "cap resum d'edició",
 	"mobile-frontend-clear-search": "Anuŀla",
+	"mobile-frontend-commons-category-view": "Imatges per $1",
 	"mobile-frontend-contribution-summary": "Totes les edicions fetes per {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Les galetes són necessàries per canviar de mode de visualització. Si us plau, activa-les i intenta-ho un altre cop.",
 	"mobile-frontend-copyright": "El contingut està disponible sota la llicència $1 si no s'indica el contrari.",

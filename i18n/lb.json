@@ -26,6 +26,7 @@
 	"mobile-frontend-changeslist-ip": "Anonyme Benotzer",
 	"mobile-frontend-changeslist-nocomment": "kee Resumé vun der Ännerung",
 	"mobile-frontend-clear-search": "Eidel maachen",
+	"mobile-frontend-commons-category-view": "Biller fir $1",
 	"mobile-frontend-contribution-summary": "All Ännerungen déi vum {{GENDER:$1|[[Special:UserProfile/$1|$1]]}} gemaach goufen",
 	"mobile-frontend-copyright": "Den Text ass ënner der $1 disponibel wann et net anescht uginn ass.",
 	"mobile-frontend-desc": "Frontend Applicatioun fir mobil Apparater",

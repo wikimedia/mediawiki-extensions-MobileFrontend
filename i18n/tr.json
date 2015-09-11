@@ -23,7 +23,8 @@
 			"Captantrips",
 			"Arystanbek",
 			"Uğurkent",
-			"McAang"
+			"McAang",
+			"KorkmazO"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -50,6 +51,7 @@
 	"mobile-frontend-changeslist-ip": "Anonim kullanıcı",
 	"mobile-frontend-changeslist-nocomment": "değişiklik özeti yok",
 	"mobile-frontend-clear-search": "Temizle",
+	"mobile-frontend-commons-category-view": "$1 için görseller",
 	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}} tarafından yapılan tüm değişiklikler",
 	"mobile-frontend-cookies-required": "Görünüm modları arasında geçiş yapabilmeniz için çerezlerin açık olması gereklidir. Bunları etkinleştirdikten sonra tekrar deneyin.",
 	"mobile-frontend-copyright": "Aksi belirtilmedikçe içerik $1 lisansı altındadır.",
@@ -353,7 +355,6 @@
 	"mobile-frontend-watchlist-filter-other": "Diğer",
 	"mobile-frontend-watchlist-filter-talk": "Tartışma",
 	"mobile-frontend-watchlist-login-action": "Bunu görmek için oturum açın.",
-	"mobile-frontend-watchlist-modified": "$1 değiştirildi",
 	"mobile-frontend-watchlist-more": "daha fazla",
 	"mobile-frontend-watchlist-please-wait": "İzleme işlemi beklenenden daha uzun sürüyor, lütfen bekleyin.",
 	"mobile-frontend-watchlist-error": "Bu sayfa izlemeye alınırken bir hata oluştu. Lütfen yeniden deneyin.",
@@ -398,9 +399,6 @@
 	"mobile-frontend-donate-button-label": "Bağış",
 	"mobile-frontend-meta-data-issues-categories": "Bu kategori hakkında",
 	"mobile-frontend-loading-message": "Yükleniyor...",
-	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|gün|gün}} önce",
-	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ay|ay}} önce",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|yıl|yıl}} önce",
 	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/view/67/",
 	"mobile-frontend-browse-tags-header": "Etiketler",
 	"mobile-frontend-panel-ok": "Tamam",
