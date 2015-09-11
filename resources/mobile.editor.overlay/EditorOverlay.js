@@ -56,7 +56,7 @@
 				msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 			}
 		} ),
-		editor: 'wikitext',
+		editor: 'SourceEditor',
 		sectionLine: '',
 
 		/**
@@ -322,8 +322,8 @@
 					}
 					self.clearSpinner();
 				} )
-				.fail( function () {
-					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
+				.fail( function ( error ) {
+					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), error );
 				} );
 		},
 
@@ -336,11 +336,7 @@
 		 */
 		_switchToVisualEditor: function ( options ) {
 			var self = this;
-			this.log( {
-				action: 'abort',
-				type: 'switchnochange',
-				mechanism: 'navigate'
-			} );
+			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the VisualEditor
 			settings.save( 'preferredEditor', 'VisualEditor', true );
 			// Load the VisualEditor and replace the SourceEditor overlay with it
@@ -423,21 +419,11 @@
 							'readonly',
 							'blocked',
 							'autoblocked'
-						],
-						key = response.error.code,
-						typeMap = {
-							'editconflict': 'editConflict',
-							'wasdeleted': 'editPageDeleted',
-							'abusefilter-disallowed': 'extensionAbuseFilter',
-							'captcha': 'extensionConfirmEdit',
-							'spamprotectiontext': 'extensionSpamBlacklist',
-							'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
-						};
+						];
 
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
 						self.handleCaptcha( data.details );
-						key = 'captcha';
 					} else if ( data.type === 'abusefilter' ) {
 						self._showAbuseFilter( data.details.type, data.details.message );
 					} else {
@@ -452,15 +438,9 @@
 							msg = mw.msg( 'mobile-frontend-editor-error' );
 						}
 
-						self.reportError( msg );
+						self.reportError( msg, data.details );
 						self.showHidden( '.save-header, .save-panel' );
 					}
-
-					self.log( {
-						action: 'saveFailure',
-						message: msg,
-						type: typeMap[key] || 'responseUnknown'
-					} );
 				} );
 		},
 

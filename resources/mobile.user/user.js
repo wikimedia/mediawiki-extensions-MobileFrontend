@@ -11,8 +11,6 @@
 		isAnon: mw.user.isAnon,
 		/* @see mediaWiki.user */
 		getName: mw.user.getName,
-		/* @see mediaWiki.user */
-		getId: mw.user.getId,
 		/**
 		 * Find current users edit count
 		 * @method

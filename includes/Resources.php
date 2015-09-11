@@ -528,7 +528,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// Route needs moduleLoader
 			'mobile.overlays',
 			'mediawiki.jqueryMsg',
-			'mobile.loggingSchemas',
 		),
 		'messages' => array(
 			// editor.js
@@ -586,6 +585,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor.common' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.loggingSchemas',
 			'oojs-ui',
 			'mobile.overlays',
 			'mobile.editor.api',
