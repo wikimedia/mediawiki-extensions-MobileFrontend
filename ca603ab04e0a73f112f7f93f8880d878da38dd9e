@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_35180223",
+        "filename": "resources/mobile.head/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-11T16:56:12Z",
+      "side": 0,
+      "message": "You might as well just leave this with a note to remove in 30 days given you are still loading the code in the head. We can have it all!\n\nAll your patch does is remove the history-link-loaded event from new HTML.\nIt\u0027s still in the old HTML and the code is still invoked in the head so there will be no delay if you keep this line.\n\nI thought we were debating doing this: [1] - we should either merge that patch into this one or we should leave this line:\n\n[1] https://gerrit.wikimedia.org/r/237705",
+      "revId": "ca603ab04e0a73f112f7f93f8880d878da38dd9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
