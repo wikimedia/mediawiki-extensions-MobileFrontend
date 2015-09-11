@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var inSample, inStable,
 		settings = M.require( 'mobile.settings/settings' ),
+		time = M.require( 'mobile.modifiedBar/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
 		loader = M.require( 'mobile.overlays/moduleLoader' ),
@@ -146,5 +147,53 @@
 	// let the interested parties know whether the panel is shown
 	mw.track( 'minerva.betaoptin', {
 		isPanelShown: betaOptinPanel !== undefined
+	} );
+
+	/**
+	 * Initialisation function for last modified module.
+	 *
+	 * Enhances an element representing a time
+	 * to show a human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 * @ignore
+	 * @param {JQuery.Object} [$lastModifiedLink]
+	 */
+	function initHistoryLink( $lastModifiedLink ) {
+		var delta, historyUrl, msg,
+			ts, username, gender;
+
+		historyUrl = $lastModifiedLink.attr( 'href' );
+		ts = $lastModifiedLink.data( 'timestamp' );
+		username = $lastModifiedLink.data( 'user-name' ) || false;
+		gender = $lastModifiedLink.data( 'user-gender' );
+
+		if ( ts ) {
+			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
+			if ( time.isRecent( delta ) ) {
+				$lastModifiedLink.closest( '.last-modified-bar' ).addClass( 'active' );
+			}
+			msg = time.getLastModifiedMessage( ts, username, gender, historyUrl );
+			$lastModifiedLink.replaceWith( msg );
+		}
+	}
+
+	/**
+	 * Initialisation function for last modified times
+	 *
+	 * Enhances .modified-enhancement element
+	 * to show a human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 * @ignore
+	 */
+	function initModifiedInfo() {
+		$( '.modified-enhancement' ).each( function () {
+			initHistoryLink( $( this ) );
+		} );
+	}
+
+	$( function () {
+		// Update anything else that needs enhancing (e.g. watchlist)
+		initModifiedInfo();
+		initHistoryLink( $( '#mw-mf-last-modified a' ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );

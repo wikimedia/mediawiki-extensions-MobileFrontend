@@ -343,6 +343,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.watchlist' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.infiniteScroll',
+			'mobile.modifiedBar',
 			'mobile.pagelist.scripts',
 			'mobile.modifiedBar',
 		),
@@ -1511,29 +1512,17 @@ $wgMinervaBootstrapModules = array(
 
 	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.modifiedBar',
 			'mobile.mainMenu',
 			'mobile.browser',
-			// 'mobile.oo' rather than 'mobile.modules' is need because lastEdited/init.js listens
-			// to an event, thus needs eventemitter.js to be loaded before it. Feel free to swap
+			// 'mobile.oo' rather than 'mobile.modules' is need because the main menu binds
+			// to an event, thus needs event code to be loaded before it. Feel free to swap
 			// 'mobile.oo' below with 'mobile.modules' once none of the script files below need
-			// to use eventemitter.js, for example when the last edited bar is moved to the bottom
-			// of the page.
+			// to use it for example the main menu code
 			'mobile.oo',
 			'mobile.context',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.scripts.top/init.js',
-		),
-		'messages' => array(
-			// lastEdited.js
-			'mobile-frontend-last-modified-with-user-seconds',
-			'mobile-frontend-last-modified-with-user-minutes',
-			'mobile-frontend-last-modified-with-user-hours',
-			'mobile-frontend-last-modified-with-user-days',
-			'mobile-frontend-last-modified-with-user-months',
-			'mobile-frontend-last-modified-with-user-years',
-			'mobile-frontend-last-modified-with-user-just-now',
 		),
 		'position' => 'top',
 	),
@@ -1552,6 +1541,17 @@ $wgMinervaBootstrapModules = array(
 			'mobile.betaoptin',
 			'mobile.toast',
 			'mobile.settings',
+			'mobile.modifiedBar',
+		),
+		'messages' => array(
+			// lastEdited.js
+			'mobile-frontend-last-modified-with-user-seconds',
+			'mobile-frontend-last-modified-with-user-minutes',
+			'mobile-frontend-last-modified-with-user-hours',
+			'mobile-frontend-last-modified-with-user-days',
+			'mobile-frontend-last-modified-with-user-months',
+			'mobile-frontend-last-modified-with-user-years',
+			'mobile-frontend-last-modified-with-user-just-now',
 		),
 		'scripts' => array(
 			// FIXME: Merge preInit and init files.
