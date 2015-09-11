@@ -41,7 +41,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
+		 * @cfg {PageApi} defaults.pageApi an api module to invalidate pages (fixme should not be necessary with mw.Api)
 		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
 		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes

@@ -1,23 +1,26 @@
 ( function ( M, $ ) {
-	var EditorApi,
-		Api = M.require( 'mobile.startup/api' ).Api;
-
 	/**
 	 * API that helps save and retrieve page content
-	 * @class EditorApi
-	 * @extends Api
+	 * @class EditorGateway
+	 * @param {Object} options
+	 * @param {mw.Api} options.api an Api to use.
+	 * @param {String} options.title the title to edit
+	 * @param {Number} options.sectionId the id of the section to operate edits on.
+	 * @param {Number} [options.oldId] revision to operate on. If absent defaults to latest.
+	 * @param {Boolean} [options.isNewPage] whether the page being created is new
 	 */
-	EditorApi = Api.extend( {
+	function EditorGateway( options ) {
+		this.initialize( options );
+	}
+
+	EditorGateway.prototype = {
 		/**
-		 * @inheritdoc
-		 * @param {Object} options
-		 * @param {String} options.title the title to edit
-		 * @param {Number} options.sectionId the id of the section to operate edits on.
-		 * @param {Number} [options.oldId] revision to operate on. If absent defaults to latest.
-		 * @param {Boolean} [options.isNewPage] whether the page being created is new
+		 * Method called by constructor for EditorGateway.
+		 * FIXME: Refactor tests and move this into the constructor
+		 * @param options {Options}
 		 */
 		initialize: function ( options ) {
-			Api.prototype.initialize.apply( this, arguments );
+			this.api = options.api;
 			this.title = options.title;
 			this.sectionId = options.sectionId;
 			this.oldId = options.oldId;
@@ -25,7 +28,6 @@
 			this.content = options.isNewPage ? '' : undefined;
 			this.hasChanged = false;
 		},
-
 		/**
 		 * Get the content of a page.
 		 * @method
@@ -57,7 +59,7 @@
 				if ( $.isNumeric( this.sectionId ) ) {
 					options.rvsection = this.sectionId;
 				}
-				this.get( options ).done( function ( resp ) {
+				this.api.get( options ).done( function ( resp ) {
 					var revision, pageObj;
 
 					if ( resp.error ) {
@@ -154,7 +156,7 @@
 					apiOptions.section = self.sectionId;
 				}
 
-				self.postWithToken( 'edit', apiOptions ).done( function ( data ) {
+				self.api.postWithToken( 'edit', apiOptions ).done( function ( data ) {
 					var code, warning;
 
 					if ( data && data.edit && data.edit.result === 'Success' ) {
@@ -228,7 +230,17 @@
 		},
 
 		/**
-		 * Get page preview from the API
+		 * Abort any pending previews.
+		 * @method
+		 */
+		abortPreview: function () {
+			if ( this._pending ) {
+				this._pending.abort();
+			}
+		},
+
+		/**
+		 * Get page preview from the API and abort any existing previews.
 		 * @method
 		 * @param {Object} options API query parameters
 		 * @returns {jQuery.Deferred}
@@ -250,7 +262,8 @@
 				prop: [ 'text', 'sections' ]
 			} );
 
-			this.post( options ).done( function ( resp ) {
+			this.abortPreview();
+			this._pending = this.api.post( options ).done( function ( resp ) {
 				if ( resp && resp.parse && resp.parse.text ) {
 					// section 0 haven't a section name so skip
 					if ( self.sectionId !== 0 &&
@@ -268,8 +281,8 @@
 
 			return result;
 		}
-	} );
+	};
 
-	M.define( 'mobile.editor.api/EditorApi', EditorApi ).deprecate( 'modules/editor/EditorApi' );
+	M.define( 'mobile.editor.api/EditorGateway', EditorGateway );
 
 }( mw.mobileFrontend, jQuery ) );
