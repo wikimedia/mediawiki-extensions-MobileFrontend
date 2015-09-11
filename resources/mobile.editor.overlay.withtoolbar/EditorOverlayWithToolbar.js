@@ -12,6 +12,7 @@
 		templatePartials: $.extend( {}, EditorOverlay.prototype.templatePartials, {
 			footer: mw.template.get( 'mobile.editor.overlay.withtoolbar', 'editorFooter.hogan' )
 		} ),
+		editor: 'SourceEditorWithFormatting',
 		/** @inheritdoc **/
 		postRender: function () {
 			var self = this;

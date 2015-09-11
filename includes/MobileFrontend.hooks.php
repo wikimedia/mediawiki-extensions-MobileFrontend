@@ -921,9 +921,9 @@ class MobileFrontendHooks {
 	 */
 	private static function getEventLoggingSchemas() {
 		return array(
-			'Edit' => 13457736,
 			'MobileWebBrowse' => 12119641,
 			'MobileWebDiffClickTracking' => 10720373,
+			'MobileWebEditing' => 8599025,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
 			'MobileWebUIClickTracking' => 10742159,
@@ -962,9 +962,9 @@ class MobileFrontendHooks {
 			->getMFConfig()->get( 'MFResourceFileModuleBoilerplate' );
 
 		$scripts = array(
-			'resources/mobile.loggingSchemas/SchemaEdit.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebEditing.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js',
