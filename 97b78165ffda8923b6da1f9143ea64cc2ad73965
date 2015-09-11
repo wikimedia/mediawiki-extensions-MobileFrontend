@@ -16,6 +16,24 @@
       "revId": "97b78165ffda8923b6da1f9143ea64cc2ad73965",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_5547ce7c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 1003,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-11T18:08:59Z",
+      "side": 0,
+      "message": "It\u0027s not a true module in that it\u0027s not reusable in any way.",
+      "parentUuid": "6ec1af18_e122c0fb",
+      "revId": "97b78165ffda8923b6da1f9143ea64cc2ad73965",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
