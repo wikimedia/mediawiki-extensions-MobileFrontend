@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_67cedb88",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 15
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-09-11T22:56:50Z",
+      "side": 1,
+      "message": "the problem with using .post-content is that it is actually on the last-modified-bar along with .pre-content at the top of cached pages.",
+      "parentUuid": "6ec1af18_a7fb63dd",
+      "revId": "b9a35b7987ddaeb76cdf270608f3928ac4091521",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_a784c35f",
         "filename": "resources/skins.minerva.content.styles/links.less",
         "patchSetId": 15
