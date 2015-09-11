@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_a7fb63dd",
+        "filename": "includes/skins/history.mustache",
+        "patchSetId": 15
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-11T22:50:24Z",
+      "side": 1,
+      "message": "See other comment. I\u0027d like us to put post-content on the parent element",
+      "revId": "b9a35b7987ddaeb76cdf270608f3928ac4091521",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_a784c35f",
+        "filename": "resources/skins.minerva.content.styles/links.less",
+        "patchSetId": 15
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-11T22:50:24Z",
+      "side": 1,
+      "message": "prefix with FIXME: so we remember this! :)",
+      "revId": "b9a35b7987ddaeb76cdf270608f3928ac4091521",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_e7f16bff",
+        "filename": "resources/skins.minerva.content.styles/links.less",
+        "patchSetId": 15
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-11T22:50:24Z",
+      "side": 1,
+      "message": "Is this a necessary class? \n\nWe already have pre-content and ag \u0027post-content\u0027 shows we have a post-content too.\nWould be great to use this class in some way (it should appear on the topmost element that appears post the user generated content)",
+      "revId": "b9a35b7987ddaeb76cdf270608f3928ac4091521",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
