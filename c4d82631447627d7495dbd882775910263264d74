@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_0e584c58",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T11:32:52Z",
+      "side": 1,
+      "message": "Ah, yes, I see, sorry for this confusion. I\u0027m pretty sure, that this task was created before we moved the SearchApi to mobile.search.api. Let me check and adjust the task, if needed :)",
+      "parentUuid": "6ec1af18_2e618801",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_eedf00da",
         "filename": "resources/mobile.search.beta.api/SearchApi.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Yes, I did not do the renaming of the beta (and other resources) - because I wanted to know I understood what needs to be done before changing all of them.\n\nThanks for noting this :) I\u0027ll get on it !",
       "parentUuid": "6ec1af18_eedf00da",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_8e43dc66",
+        "filename": "resources/mobile.search.beta.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T11:32:52Z",
+      "side": 1,
+      "message": "Great! Yeah, I\u0027m sure you already understood what to do :)",
+      "parentUuid": "6ec1af18_2eabc81c",
       "revId": "c4d82631447627d7495dbd882775910263264d74",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
