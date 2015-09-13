@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_2e618801",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-13T11:29:31Z",
+      "side": 1,
+      "message": "In the description of the bug T100467 @bmansurov suggested the naming convention of `mobile.search/SearchApi`\n\nQuote:\n```\n... For example, modules/search/SearchApi should be renamed to mobile.search/SearchApi, etc. (the text before the / is the name of the ResourceLoader module and the text after it the name of the class).\n```\n\nHence I used the suggested one.",
+      "parentUuid": "6ec1af18_4ed3b4d7",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_eedf00da",
         "filename": "resources/mobile.search.beta.api/SearchApi.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-13T10:27:20Z",
       "side": 1,
       "message": "Shouldn\u0027t this be mobile.search.beta.api/SearchApi?",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2eabc81c",
+        "filename": "resources/mobile.search.beta.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-13T11:29:31Z",
+      "side": 1,
+      "message": "Yes, I did not do the renaming of the beta (and other resources) - because I wanted to know I understood what needs to be done before changing all of them.\n\nThanks for noting this :) I\u0027ll get on it !",
+      "parentUuid": "6ec1af18_eedf00da",
       "revId": "c4d82631447627d7495dbd882775910263264d74",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
