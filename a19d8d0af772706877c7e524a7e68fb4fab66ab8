@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_2998a27b",
+        "filename": "resources/mobile.abusefilter/AbuseFilterOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T17:37:39Z",
+      "side": 1,
+      "message": "Please use the deprecate method returned from M.define(), like:\n\nM.define( \u0027mobile.abusefilter/AbuseFilterOverlay\u0027, AbuseFilterOverlay ).deprecate( \u0027modules/editor/AbuseFilterOverlay\u0027 );\n\nThis ensures, that the M.deprecate method get\u0027s all required parameters :)",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4995ee41",
+        "filename": "resources/mobile.abusefilter/AbuseFilterPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T17:37:39Z",
+      "side": 1,
+      "message": "the same here and in all other files (I suspect :)).",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_e9a13aa0",
+        "filename": "resources/mobile.browser/browser.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T17:37:39Z",
+      "side": 1,
+      "message": "There should still be two modules, brwoser and Browser :)",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
