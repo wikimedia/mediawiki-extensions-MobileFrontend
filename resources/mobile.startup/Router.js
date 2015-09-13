@@ -2,7 +2,7 @@
 ( function ( M, $ ) {
 
 	var key, router,
-		EventEmitter = M.require( 'eventemitter' );
+		EventEmitter = M.require( 'mobile.oo/eventemitter' );
 
 	/**
 	 * Does hash match entry.path?
@@ -168,7 +168,7 @@
 
 	router = new Router();
 
-	M.define( 'router', router );
-	M.define( 'Router', Router );
+	M.define( 'mobile.startup/Router', Router ).deprecate( 'Router' );
+	M.define( 'mobile.startup/router', router ).deprecate( 'router' );
 
 }( mw.mobileFrontend, jQuery ) );

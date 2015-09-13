@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 	var ReferencesDrawer,
-		Drawer = M.require( 'Drawer' ),
-		Icon = M.require( 'Icon' ),
-		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		Drawer = M.require( 'mobile.drawers/Drawer' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	/**
@@ -72,5 +72,6 @@
 		}
 	} );
 
-	M.define( 'modules/references/ReferencesDrawer', ReferencesDrawer );
+	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer )
+		.deprecate( 'modules/references/ReferencesDrawer' );
 }( mw.mobileFrontend, jQuery ) );

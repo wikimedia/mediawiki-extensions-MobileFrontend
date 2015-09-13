@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 	var SchemaMobileWebClickTracking,
-		SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' ),
-		user = M.require( 'user' ),
-		s = M.require( 'settings' );
+		SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' ),
+		user = M.require( 'mobile.user/user' ),
+		s = M.require( 'mobile.settings/settings' );
 
 	/**
 	 * Using localStorage track an event but delay recording it on the
@@ -93,5 +93,6 @@
 	// Then this should be moved to init.js - including a class should not have side effects.
 	logPastEvent();
 
-	M.define( 'loggingSchemas/SchemaMobileWebClickTracking', SchemaMobileWebClickTracking );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebClickTracking', SchemaMobileWebClickTracking )
+		.deprecate( 'loggingSchemas/SchemaMobileWebClickTracking' );
 } )( mw.mobileFrontend, jQuery );

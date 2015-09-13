@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 	var PhotoList,
-		icons = M.require( 'icons' ),
-		PhotoListApi = M.require( 'modules/gallery/PhotoListApi' ),
-		PhotoItem = M.require( 'modules/gallery/PhotoItem' ),
-		InfiniteScroll = M.require( 'InfiniteScroll' ),
-		View = M.require( 'View' );
+		icons = M.require( 'mobile.startup/icons' ),
+		PhotoListApi = M.require( 'mobile.gallery/PhotoListApi' ),
+		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
+		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Creates a list of photo items
@@ -141,5 +141,5 @@
 		}
 	} );
 
-	M.define( 'modules/gallery/PhotoList', PhotoList );
+	M.define( 'mobile.gallery/PhotoList', PhotoList ).deprecate( 'modules/gallery/PhotoList' );
 }( mw.mobileFrontend, jQuery ) );

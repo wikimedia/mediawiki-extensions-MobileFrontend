@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var	AddReferenceOverlay,
-		Overlay = M.require( 'Overlay' );
+		Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * Overlay that shows an editor
@@ -59,5 +59,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/AddReferenceOverlay', AddReferenceOverlay );
+	M.define( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay', AddReferenceOverlay )
+		.deprecate( 'modules/editor/AddReferenceOverlay' );
 }( mw.mobileFrontend, jQuery ) );

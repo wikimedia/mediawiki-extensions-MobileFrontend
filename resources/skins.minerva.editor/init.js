@@ -1,15 +1,15 @@
 ( function ( M, $ ) {
 
 	var
-		settings = M.require( 'settings' ),
-		router = M.require( 'router' ),
-		overlayManager = M.require( 'overlayManager' ),
-		loader = M.require( 'loader' ),
-		Icon = M.require( 'Icon' ),
-		Button = M.require( 'Button' ),
-		Anchor = M.require( 'Anchor' ),
-		skin = M.require( 'skin' ),
-		browser = M.require( 'browser' ),
+		settings = M.require( 'mobile.settings/settings' ),
+		router = M.require( 'mobile.startup/router' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		loader = M.require( 'mobile.overlays/moduleLoader' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
+		skin = M.require( 'mobile.startup/skin' ),
+		browser = M.require( 'mobile.browser/browser' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
 		} ),
@@ -20,9 +20,9 @@
 		pageApi = M.require( 'pageApi' ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
-		context = M.require( 'context' ),
-		user = M.require( 'user' ),
-		popup = M.require( 'toast' ),
+		context = M.require( 'mobile.context/context' ),
+		user = M.require( 'mobile.user/user' ),
+		popup = M.require( 'mobile.toast/toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = router.isSupported() && !blacklisted,
@@ -32,7 +32,7 @@
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = veConfig,
-		CtaDrawer = M.require( 'CtaDrawer' ),
+		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
 		drawer,
 		$caEdit = $( '#ca-edit' ),
 		SchemaEdit = M.require( 'loggingSchemas/SchemaEdit' );
@@ -180,10 +180,10 @@
 				// without an iphone (bottom toolbars doesn't work) - Bug T109224
 				// FIXME: Make this working with iOS8
 				if ( !user.inUserBucketA() && context.isBetaGroupMember() && !browser.isIos( 8 ) ) {
-					moduleName = 'modules/editor/EditorOverlayWithToolbar';
+					moduleName = 'mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar';
 					rlModuleName = 'mobile.editor.overlay.withtoolbar';
 				} else {
-					moduleName = 'modules/editor/EditorOverlay';
+					moduleName = 'mobile.editor.overlay/EditorOverlay';
 					rlModuleName = 'mobile.editor.overlay';
 				}
 				loader.loadModule( rlModuleName ).done( function () {
@@ -212,7 +212,7 @@
 			) {
 				logInit( 'visualeditor' );
 				loader.loadModule( 'mobile.editor.ve' ).done( function () {
-					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
 					result.resolve( new VisualEditorOverlay( editorOptions ) );
 				} ).fail( loadSourceEditor );
 			} else {

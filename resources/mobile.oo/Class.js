@@ -45,6 +45,6 @@
 	Class.prototype.initialize = function () {};
 	Class.extend = extend;
 
-	M.define( 'Class', Class );
+	M.define( 'mobile.oo/Class', Class );
 
 }( mw.mobileFrontend ) );

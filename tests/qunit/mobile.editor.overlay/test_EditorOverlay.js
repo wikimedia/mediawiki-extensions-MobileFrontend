@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 
-	var EditorApi = M.require( 'modules/editor/EditorApi' ),
-		EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+	var EditorApi = M.require( 'mobile.editor.api/EditorApi' ),
+		EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
 		apiSpy;
 
-	QUnit.module( 'MobileFrontend modules/editor/EditorOverlay', {
+	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		setup: function () {
 			var getContentStub;
 

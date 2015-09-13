@@ -3,13 +3,13 @@
  * with the Toast notifications defined by common/toast.js.
  */
 ( function ( M, $, mw ) {
-	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		mainMenu = M.require( 'skin' ).getMainMenu(),
+		mainMenu = M.require( 'mobile.startup/skin' ).getMainMenu(),
 		$btn = $( '#secondary-button.user-button' ).parent(),
-		router = M.require( 'router' ),
-		overlayManager = M.require( 'overlayManager' ),
-		icons = M.require( 'icons' );
+		router = M.require( 'mobile.startup/router' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		icons = M.require( 'mobile.startup/icons' );
 
 	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
@@ -58,7 +58,7 @@
 		function loadNotificationOverlay() {
 			var result = $.Deferred();
 			loadModuleScript( 'mobile.notifications.overlay' ).done( function () {
-				var NotificationsOverlay = M.require( 'modules/notifications/NotificationsOverlay' );
+				var NotificationsOverlay = M.require( 'mobile.notifications.overlay/NotificationsOverlay' );
 				result.resolve(
 					new NotificationsOverlay( {
 						$badge: $btn,

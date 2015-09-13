@@ -3,13 +3,13 @@
 	var Api, NearbyApi,
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		limit = 50,
-		Page = M.require( 'Page' ),
+		Page = M.require( 'mobile.startup/Page' ),
 		ns = mw.config.get( 'wgMFContentNamespace' );
 
 	if ( endpoint ) {
-		Api = M.require( 'modules/ForeignApi' );
+		Api = M.require( 'mobile.foreignApi/ForeignApi' );
 	} else {
-		Api = M.require( 'api' ).Api;
+		Api = M.require( 'mobile.startup/api' ).Api;
 	}
 
 	/**
@@ -206,5 +206,5 @@
 
 	} );
 
-	M.define( 'modules/nearby/NearbyApi', NearbyApi );
+	M.define( 'mobile.nearby/NearbyApi', NearbyApi ).deprecate( 'modules/nearby/NearbyApi' );
 }( mw.mobileFrontend, jQuery ) );

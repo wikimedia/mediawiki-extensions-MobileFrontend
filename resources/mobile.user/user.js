@@ -80,6 +80,6 @@
 		}
 
 	};
-	M.define( 'user', user );
+	M.define( 'mobile.user/user', user ).deprecate( 'user' );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var time = M.require( 'modules/lastEdited/time' ),
-		MainMenu = M.require( 'MainMenu' ),
+	var time = M.require( 'mobile.modifiedBar/time' ),
+		MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
 		mainMenu = new MainMenu( {
 			// FIXME: remove #mw-mf-main-menu-button when cache clears
 			activator: '#mw-mf-main-menu-button, .header .main-menu-button'
@@ -50,7 +50,7 @@
 	}
 
 	// bind events
-	M.define( 'mainMenu', mainMenu );
+	M.define( 'mobile.head/mainMenu', mainMenu ).deprecate( 'mainMenu' );
 	// FIXME: Remove when cache expires. https://phabricator.wikimedia.org/T112315
 	M.on( 'history-link-loaded', initHistoryLink );
 	M.on( 'header-loaded', function () {

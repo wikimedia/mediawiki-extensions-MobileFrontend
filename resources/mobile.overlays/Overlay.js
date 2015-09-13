@@ -2,12 +2,12 @@
 ( function ( M, $ ) {
 
 	var
-		View = M.require( 'View' ),
-		Icon = M.require( 'Icon' ),
-		Button = M.require( 'Button' ),
-		Anchor = M.require( 'Anchor' ),
-		icons = M.require( 'icons' ),
-		browser = M.require( 'browser' ),
+		View = M.require( 'mobile.view/View' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
+		icons = M.require( 'mobile.startup/icons' ),
+		browser = M.require( 'mobile.browser/browser' ),
 		$window = $( window ),
 		Overlay;
 
@@ -315,6 +315,6 @@
 		}
 	} );
 
-	M.define( 'Overlay', Overlay );
+	M.define( 'mobile.overlays/Overlay', Overlay ).deprecate( 'Overlay' );
 
 }( mw.mobileFrontend, jQuery ) );

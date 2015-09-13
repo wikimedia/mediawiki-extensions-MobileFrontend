@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var cleanuptemplates = M.require( 'cleanuptemplates' );
+	var cleanuptemplates = M.require( 'mobile.issues/cleanuptemplates' );
 
 	QUnit.module( 'MobileFrontend issues', {
 		setup: function () {

@@ -1,14 +1,14 @@
 ( function ( M, $ ) {
 	var searchPlaceholderMsg = 'mobile-frontend-placeholder',
-		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		context = M.require( 'context' ),
-		router = M.require( 'router' ),
-		browser = M.require( 'browser' ),
+		context = M.require( 'mobile.context/context' ),
+		router = M.require( 'mobile.startup/router' ),
+		browser = M.require( 'mobile.browser/browser' ),
 		moduleConfig = {
 			modules: [ 'mobile.search.api', 'mobile.search' ],
-			api: 'modules/search/SearchApi',
-			overlay: 'modules/search/SearchOverlay'
+			api: 'mobile.search.api/SearchApi',
+			overlay: 'mobile.search/SearchOverlay'
 		},
 		SearchOverlay,
 		SearchApi;
@@ -16,7 +16,7 @@
 	if ( context.isBetaGroupMember() ) {
 		moduleConfig = $.extend( moduleConfig, {
 			modules: [ 'mobile.search.beta.api', 'mobile.search.beta' ],
-			api: 'modules/search.beta/SearchApi'
+			api: 'mobile.search.beta.api/SearchApi'
 		} );
 	}
 
@@ -74,6 +74,6 @@
 			.prop( 'readonly', true );
 	}
 
-	M.require( 'modules/search/MobileWebSearchLogger' ).register();
+	M.require( 'mobile.search/MobileWebSearchLogger' ).register();
 
 }( mw.mobileFrontend, jQuery ) );

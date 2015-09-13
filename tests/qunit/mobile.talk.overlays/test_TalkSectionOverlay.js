@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 
-	var TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
-		api = M.require( 'api' ),
-		PageApi = M.require( 'PageApi' ),
+	var TalkSectionOverlay = M.require( 'mobile.talk.overlays/TalkSectionOverlay' ),
+		api = M.require( 'mobile.startup/api' ),
+		PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi = new PageApi(),
-		user = M.require( 'user' ),
+		user = M.require( 'mobile.user/user' ),
 		renderFromApiSpy;
 
 	QUnit.module( 'MobileFrontend TalkSectionOverlay - logged in', {

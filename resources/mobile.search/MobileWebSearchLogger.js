@@ -1,7 +1,7 @@
 ( function ( M, mw, $ ) {
 
-	var Class = M.require( 'Class' ),
-		SchemaMobileWebSearch = M.require( 'loggingSchemas/SchemaMobileWebSearch' ),
+	var Class = M.require( 'mobile.oo/Class' ),
+		SchemaMobileWebSearch = M.require( 'mobile.loggingSchemas/SchemaMobileWebSearch' ),
 		MobileWebSearchLogger;
 
 	/**
@@ -133,6 +133,7 @@
 		} );
 	};
 
-	M.define( 'modules/search/MobileWebSearchLogger', MobileWebSearchLogger );
+	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger )
+		.deprecate( 'modules/search/MobileWebSearchLogger' );
 
 }( mw.mobileFrontend, mw, jQuery ) );

@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 
 	var sectionHtml = mw.template.get( 'tests.mobilefrontend', 'section.hogan' ).render(),
-		settings = M.require( 'settings' ),
-		browser = M.require( 'browser' ),
+		settings = M.require( 'mobile.settings/settings' ),
+		browser = M.require( 'mobile.browser/browser' ),
 		page = { title: 'Toggle test' },
-		toggle = M.require( 'toggle' );
+		toggle = M.require( 'mobile.toggle/toggle' );
 
 	/**
 	 * Mobile toggling

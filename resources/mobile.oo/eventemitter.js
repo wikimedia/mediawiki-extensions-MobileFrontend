@@ -1,7 +1,7 @@
 ( function ( M, $, OO ) {
 
 	var EventEmitter,
-		Class = M.require( 'Class' );
+		Class = M.require( 'mobile.oo/Class' );
 
 	// HACK: wrap around oojs's EventEmitter
 	// This needs some hackery to make oojs's
@@ -17,7 +17,7 @@
 		initialize: OO.EventEmitter
 	}, OO.EventEmitter.prototype ) );
 
-	M.define( 'eventemitter', EventEmitter );
+	M.define( 'mobile.oo/eventemitter', EventEmitter ).deprecate( 'eventemitter' );
 	// FIXME: if we want more of M's functionality in loaded in <head>,
 	// move this to a separate file
 	$.extend( mw.mobileFrontend, new EventEmitter() );

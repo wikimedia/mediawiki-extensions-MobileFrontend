@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'Overlay' ),
-		api = M.require( 'api' ),
-		Anchor = M.require( 'Anchor' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		api = M.require( 'mobile.startup/api' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
 		NotificationsOverlay;
 
 	/**
@@ -149,6 +149,7 @@
 		}
 	} );
 
-	M.define( 'modules/notifications/NotificationsOverlay', NotificationsOverlay );
+	M.define( 'mobile.notifications.overlay/NotificationsOverlay', NotificationsOverlay )
+		.deprecate( 'modules/notifications/NotificationsOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

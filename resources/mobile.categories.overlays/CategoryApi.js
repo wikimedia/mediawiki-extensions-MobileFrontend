@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var CategoryApi,
-		SearchApi = M.require( 'modules/search/SearchApi' );
+		SearchApi = M.require( 'mobile.search.api/SearchApi' );
 
 	/**
 	 * Api for CategoryOverlay
@@ -57,6 +57,7 @@
 		}
 	} );
 
-	M.define( 'modules/categories/CategoryApi', CategoryApi );
+	M.define( 'mobile.categories.overlays/CategoryApi', CategoryApi )
+		.deprecate( 'modules/categories/CategoryApi' );
 
 }( mw.mobileFrontend, jQuery ) );

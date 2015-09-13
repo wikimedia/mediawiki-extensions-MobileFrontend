@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var MainMenu,
-		browser = M.require( 'browser' ),
-		View = M.require( 'View' );
+		browser = M.require( 'mobile.browser/browser' ),
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Representation of the main menu
@@ -157,6 +157,6 @@
 		}
 	} );
 
-	M.define( 'MainMenu', MainMenu );
+	M.define( 'mobile.mainMenu/MainMenu', MainMenu ).deprecate( 'MainMenu' );
 
 }( mw.mobileFrontend, jQuery ) );

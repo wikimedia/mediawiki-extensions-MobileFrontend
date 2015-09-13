@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var BetaOptinPanel,
-		Button = M.require( 'Button' ),
-		Panel = M.require( 'Panel' );
+		Button = M.require( 'mobile.startup/Button' ),
+		Panel = M.require( 'mobile.startup/Panel' );
 
 	/**
 	 * @class BetaOptinPanel

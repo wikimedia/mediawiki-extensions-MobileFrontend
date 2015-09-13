@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var PageApi,
-		Api = M.require( 'api' ).Api,
+		Api = M.require( 'mobile.startup/api' ).Api,
 		sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
 
 	/**
@@ -329,5 +329,5 @@
 		}
 	} );
 
-	M.define( 'PageApi', PageApi );
+	M.define( 'mobile.startup/PageApi', PageApi ).deprecate( 'PageApi' );
 }( mw.mobileFrontend, jQuery ) );

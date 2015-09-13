@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var Button,
-		View = M.require( 'View' );
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * A wrapper for creating a button.
@@ -43,6 +43,6 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )
 	} );
-	M.define( 'Button', Button );
+	M.define( 'mobile.startup/Button', Button ).deprecate( 'Button' );
 
 }( mw.mobileFrontend ) );

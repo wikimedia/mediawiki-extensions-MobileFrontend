@@ -1,14 +1,14 @@
 ( function ( $, M ) {
 
-	var PageList = M.require( 'modules/WatchstarPageList' ),
-		user = M.require( 'user' ),
-		Icon = M.require( 'Icon' ),
+	var PageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+		user = M.require( 'mobile.user/user' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'
 		} ),
-		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' );
+		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' );
 
-	QUnit.module( 'MobileFrontend modules/PageList', {
+	QUnit.module( 'MobileFrontend mobile.pagelist.scripts/WatchstarPageList', {
 		setup: function () {
 			var resp = {
 				query: {

@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'Overlay' ),
-		browser = M.require( 'browser' ),
-		Icon = M.require( 'Icon' ),
-		toast = M.require( 'toast' ),
-		user = M.require( 'user' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		browser = M.require( 'mobile.browser/browser' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		toast = M.require( 'mobile.toast/toast' ),
+		user = M.require( 'mobile.user/user' ),
 		EditorOverlayBase;
 
 	/**
@@ -385,5 +385,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
+	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase )
+		.deprecate( 'modules/editor/EditorOverlayBase' );
 }( mw.mobileFrontend, jQuery ) );

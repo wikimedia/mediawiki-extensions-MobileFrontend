@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' ),
-		Swipe = M.require( 'Swipe' ),
+	var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
+		Swipe = M.require( 'mobile.swipe/Swipe' ),
 		ImageOverlayBeta;
 
 	/**
@@ -35,6 +35,7 @@
 		}
 	} );
 
-	M.define( 'modules/mediaViewer/ImageOverlayBeta', ImageOverlayBeta );
+	M.define( 'mobile.mediaViewer.beta/ImageOverlayBeta', ImageOverlayBeta )
+		.deprecate( 'modules/mediaViewer/ImageOverlayBeta' );
 
 }( mw.mobileFrontend, jQuery ) );

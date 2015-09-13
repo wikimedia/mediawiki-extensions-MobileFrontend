@@ -11,8 +11,8 @@ editing. You can replicate this by appending campaign=leftNavSignup to the URL o
 editable page whilst logged in, although you must be in test group A to see the CTA.
 */
 ( function ( M, $ ) {
-	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
-		util = M.require( 'util' ),
+	var PageActionOverlay = M.require( 'mobile.contentOverlays/PointerOverlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		escapeHash = util.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
 		hash = window.location.hash,
@@ -56,7 +56,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 
 		editOverlay = new PageActionOverlay( {
 			target: target,
-			skin: M.require( 'skin' ),
+			skin: M.require( 'mobile.startup/skin' ),
 			className: 'slide active editing',
 			appendToElement: '#mw-mf-page-center',
 			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),

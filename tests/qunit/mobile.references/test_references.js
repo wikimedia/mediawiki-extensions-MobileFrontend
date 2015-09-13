@@ -1,7 +1,7 @@
 ( function ( $, M ) {
 
-	var R = mw.mobileFrontend.require( 'references' ),
-		ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' );
+	var R = mw.mobileFrontend.require( 'mobile.references/references' ),
+		ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );
 
 	QUnit.module( 'MobileFrontend references.js', {
 		setup: function () {

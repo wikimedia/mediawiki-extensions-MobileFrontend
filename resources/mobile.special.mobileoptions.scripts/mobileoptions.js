@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
 	var Checkbox,
-		context = M.require( 'context' ),
-		FontChanger = M.require( 'modules/fontchanger/FontChanger' ),
-		View = M.require( 'View' ),
-		settings = M.require( 'settings' );
+		context = M.require( 'mobile.context/context' ),
+		FontChanger = M.require( 'mobile.fontchanger/FontChanger' ),
+		View = M.require( 'mobile.view/View' ),
+		settings = M.require( 'mobile.settings/settings' );
 
 	/**
 	 * Wrapper for checkboxes styled as in MediaWiki UI style guide

@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Schema,
-		Class = M.require( 'Class' ),
-		settings = M.require( 'settings' ),
+		Class = M.require( 'mobile.oo/Class' ),
+		settings = M.require( 'mobile.settings/settings' ),
 		BEACON_SETTING_KEY = 'mobileFrontend/beacon';
 
 	/**
@@ -167,6 +167,6 @@
 		deleteBeacon();
 	};
 
-	M.define( 'Schema', Schema );
+	M.define( 'mobile.startup/Schema', Schema ).deprecate( 'Schema' );
 
 }( mw.mobileFrontend, jQuery ) );

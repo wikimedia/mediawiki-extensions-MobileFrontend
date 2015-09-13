@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var
-		Class = M.require( 'Class' ),
-		router = M.require( 'router' ),
+		Class = M.require( 'mobile.oo/Class' ),
+		router = M.require( 'mobile.startup/router' ),
 		OverlayManager, overlayManager;
 
 	/**
@@ -251,7 +251,9 @@
 
 	overlayManager = new OverlayManager( router );
 
-	M.define( 'overlayManager', overlayManager );
-	M.define( 'OverlayManager', OverlayManager );
+	M.define( 'mobile.startup/OverlayManager', OverlayManager )
+		.deprecate( 'OverlayManager' );
+	M.define( 'mobile.startup/overlayManager', overlayManager )
+		.deprecate( 'overlayManager' );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
 		ImageApi,
-		Api = M.require( 'api' ).Api;
+		Api = M.require( 'mobile.startup/api' ).Api;
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
@@ -61,9 +61,10 @@
 		}
 	} );
 
-	M.define( 'modules/mediaViewer', {
+	M.define( 'mobile.mediaViewer/mediaViewer', {
 		_findSizeBucket: findSizeBucket
-	} );
-	M.define( 'modules/mediaViewer/ImageApi', ImageApi );
+	} ).deprecate( 'modules/mediaViewer' );
+	M.define( 'mobile.mediaViewer/ImageApi', ImageApi )
+		.deprecate( 'modules/mediaViewer/ImageApi' );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var PointerOverlay,
-		Overlay = M.require( 'Overlay' );
+		Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * Page overlay prompting a user for given action

@@ -6,8 +6,8 @@
 ( function ( M, $ ) {
 
 	var SearchApi,
-		Page = M.require( 'Page' ),
-		Api = M.require( 'api' ).Api;
+		Page = M.require( 'mobile.startup/Page' ),
+		Api = M.require( 'mobile.startup/api' ).Api;
 
 	/**
 	 * @class SearchApi
@@ -214,6 +214,6 @@
 		}
 	} );
 
-	M.define( 'modules/search/SearchApi', SearchApi );
+	M.define( 'mobile.search.api/SearchApi', SearchApi ).deprecate( 'modules/search/SearchApi' );
 
 }( mw.mobileFrontend, jQuery ) );

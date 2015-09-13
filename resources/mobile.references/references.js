@@ -55,15 +55,15 @@
 		var $container = page ? page.$el : $( '#content #bodyContent, #content_wrapper #content' );
 
 		mw.loader.using( 'mobile.references' ).done( function () {
-			ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' );
+			ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );
 			$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
 			$container.find( '.mw-cite-backlink a' ).off( 'click' );
 		} );
 
 	}
 
-	M.define( 'references', {
+	M.define( 'mobile.references/references', {
 		setup: setup
-	} );
+	} ).deprecate( 'references' );
 
 }( mw.mobileFrontend, jQuery ) );

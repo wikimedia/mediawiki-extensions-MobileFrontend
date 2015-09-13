@@ -1,5 +1,6 @@
+
 ( function ( M ) {
-	var SearchApi = M.require( 'modules/search/SearchApi' ),
+	var SearchApi = M.require( 'mobile.search.api/SearchApi' ),
 		SearchApiBeta;
 
 	/**
@@ -37,6 +38,7 @@
 		}
 	} );
 
-	M.define( 'modules/search.beta/SearchApi', SearchApiBeta );
+	M.define( 'mobile.search.beta.api/SearchApi', SearchApiBeta )
+		.deprecate( 'modules/search.beta/SearchApi' );
 
 }( mw.mobileFrontend ) );

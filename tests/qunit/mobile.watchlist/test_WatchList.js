@@ -1,12 +1,12 @@
 ( function ( $, M ) {
 
-	var WatchList = M.require( 'modules/watchlist/WatchList' ),
-		user = M.require( 'user' ),
-		Icon = M.require( 'Icon' ),
+	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
+		user = M.require( 'mobile.user/user' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'
 		} ),
-		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' );
+		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' );
 
 	QUnit.module( 'MobileFrontend modules/WatchList', {
 		setup: function () {

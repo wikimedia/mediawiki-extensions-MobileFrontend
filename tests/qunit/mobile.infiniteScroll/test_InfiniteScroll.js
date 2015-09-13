@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var InfiniteScroll = M.require( 'InfiniteScroll' );
+	var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' );
 
 	QUnit.module( 'MobileFrontend InfiniteScroll', {
 		teardown: function () {

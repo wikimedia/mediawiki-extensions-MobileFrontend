@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var watchlist,
-		WatchList = M.require( 'modules/watchlist/WatchList' ),
-		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		WatchList = M.require( 'mobile.watchlist/WatchList' ),
+		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		wlSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebWatchlistClickTracking' ),
 		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
 		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',

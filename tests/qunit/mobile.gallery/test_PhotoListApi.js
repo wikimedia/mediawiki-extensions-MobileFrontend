@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var m = M.require( 'modules/gallery/PhotoListApi' );
+	var m = M.require( 'mobile.gallery/PhotoListApi' );
 
-	QUnit.module( 'MobileFrontend PhotoListApi' );
+	QUnit.module( 'MobileFrontend mobile.gallery/PhotoListApi' );
 
 	QUnit.test( '#getDescription', function ( assert ) {
 		var tests = [

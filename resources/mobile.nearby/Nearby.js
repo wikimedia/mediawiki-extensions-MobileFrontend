@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 	var Nearby,
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
-		NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
-		browser = M.require( 'browser' ),
-		icons = M.require( 'icons' );
+		NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
+		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+		browser = M.require( 'mobile.browser/browser' ),
+		icons = M.require( 'mobile.startup/icons' );
 
 	/**
 	 * List of nearby pages
@@ -244,6 +244,6 @@
 		}
 	} );
 
-	M.define( 'modules/nearby/Nearby', Nearby );
+	M.define( 'mobile.nearby/Nearby', Nearby ).deprecate( 'modules/nearby/Nearby' );
 
 }( mw.mobileFrontend, jQuery ) );

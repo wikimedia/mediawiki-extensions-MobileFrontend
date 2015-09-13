@@ -1,5 +1,5 @@
 ( function ( $, M ) {
-	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		diffSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebDiffClickTracking' );
 
 	// EventLogging events

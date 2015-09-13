@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var Page = M.require( 'Page' ),
-		Skin = M.require( 'Skin' );
+	var Page = M.require( 'mobile.startup/Page' ),
+		Skin = M.require( 'mobile.startup/Skin' );
 
 	QUnit.module( 'MobileFrontend Skin.js', {
 		setup: function () {

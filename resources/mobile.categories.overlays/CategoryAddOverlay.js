@@ -1,11 +1,11 @@
 ( function ( M, $ ) {
 
 	var CategoryAddOverlay,
-		Overlay = M.require( 'Overlay' ),
-		CategoryApi = M.require( 'modules/categories/CategoryApi' ),
-		CategoryLookupInputWidget = M.require( 'modules/categories/CategoryLookupInputWidget' ),
-		icons = M.require( 'icons' ),
-		toast = M.require( 'toast' );
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		CategoryApi = M.require( 'mobile.categories.overlays/CategoryApi' ),
+		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
+		icons = M.require( 'mobile.startup/icons' ),
+		toast = M.require( 'mobile.toast/toast' );
 
 	/**
 	 * Displays the list of categories for a page
@@ -135,6 +135,7 @@
 		}
 	} );
 
-	M.define( 'categories/CategoryAddOverlay', CategoryAddOverlay );
+	M.define( 'mobile.categories.overlays/CategoryAddOverlay', CategoryAddOverlay )
+		.deprecate( 'categories/CategoryAddOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

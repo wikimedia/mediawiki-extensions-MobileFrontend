@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var browser = M.require( 'browser' );
+	var browser = M.require( 'mobile.browser/browser' );
 
 	/**
 	 * An image that can be loaded.
@@ -48,6 +48,7 @@
 		return loaded;
 	};
 
-	M.define( 'modules/bannerImage/Image', Image );
+	M.define( 'mobile.bannerImage/Image', Image )
+		.deprecate( 'modules/bannerImage/Image' );
 
 }( mw.mobileFrontend, jQuery ) );

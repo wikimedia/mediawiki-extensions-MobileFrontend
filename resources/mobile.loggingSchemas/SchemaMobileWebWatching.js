@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var SchemaMobileWebWatching,
-		user = M.require( 'user' ),
-		SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' );
+		user = M.require( 'mobile.user/user' ),
+		SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' );
 
 	/**
 	 * @class SchemaMobileWebWatching
@@ -26,6 +26,7 @@
 		} )
 	} );
 
-	M.define( 'loggingSchemas/SchemaMobileWebWatching', SchemaMobileWebWatching );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebWatching', SchemaMobileWebWatching )
+		.deprecate( 'loggingSchemas/SchemaMobileWebWatching' );
 
 } )( mw.mobileFrontend, jQuery );

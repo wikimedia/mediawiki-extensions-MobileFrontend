@@ -4,9 +4,9 @@
 
 ( function ( M, $ ) {
 
-	var settings = M.require( 'settings' ),
+	var settings = M.require( 'mobile.settings/settings' ),
 		cookiesEnabled = settings.cookiesEnabled,
-		popup = M.require( 'toast' );
+		popup = M.require( 'mobile.toast/toast' );
 
 	/**
 	 * An event handler for the toggle to desktop link.

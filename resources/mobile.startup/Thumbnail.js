@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var
-		View = M.require( 'View' ),
+		View = M.require( 'mobile.view/View' ),
 		Thumbnail;
 
 	/**
@@ -38,6 +38,6 @@
 		}
 	} );
 
-	M.define( 'Thumbnail', Thumbnail );
+	M.define( 'mobile.startup/Thumbnail', Thumbnail ).deprecate( 'Thumbnail' );
 
 }( mw.mobileFrontend ) );

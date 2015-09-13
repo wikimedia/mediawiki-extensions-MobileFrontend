@@ -1,6 +1,6 @@
 ( function ( M ) {
 
-	var EventEmitter = M.require( 'eventemitter' );
+	var EventEmitter = M.require( 'mobile.oo/eventemitter' );
 
 	QUnit.module( 'MobileFrontend EventEmitter' );
 

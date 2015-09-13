@@ -98,12 +98,12 @@
 		}
 	}
 
-	M.define( 'modules/lastEdited/time', {
+	M.define( 'mobile.modifiedBar/time', {
 		getLastModifiedMessage: getLastModifiedMessage,
 		timeAgo: timeAgo,
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
 		isRecent: isRecent
-	} );
+	} ).deprecate( 'modules/lastEdited/time' );
 
 }( mw.mobileFrontend, jQuery ) );

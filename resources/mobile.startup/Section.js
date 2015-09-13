@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'View' ),
+	var View = M.require( 'mobile.view/View' ),
 		Section,
-		icons = M.require( 'icons' );
+		icons = M.require( 'mobile.startup/icons' );
 
 	/**
 	 * Builds a section of a page
@@ -37,6 +37,6 @@
 			View.prototype.initialize.apply( self, arguments );
 		}
 	} );
-	M.define( 'Section', Section );
+	M.define( 'mobile.startup/Section', Section ).deprecate( 'Section' );
 
 }( mw.mobileFrontend, jQuery ) );

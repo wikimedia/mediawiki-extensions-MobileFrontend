@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var Icon = M.require( 'Icon' );
+	var Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * A set of shared icons.
@@ -13,7 +13,7 @@
 	 * @singleton
 	 * @uses Icon
 	 */
-	M.define( 'icons', {
+	M.define( 'mobile.startup/icons', {
 
 		/**
 		 * Gets a spinner icon.
@@ -33,6 +33,6 @@
 				additionalClassNames: 'spinner loading'
 			} ) );
 		}
-	} );
+	} ).deprecate( 'icons' );
 
 }( mw.mobileFrontend, jQuery ) );

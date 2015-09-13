@@ -5,9 +5,9 @@
 		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' );
 
 	if ( corsUrl ) {
-		Api = M.require( 'modules/ForeignApi' );
+		Api = M.require( 'mobile.foreignApi/ForeignApi' );
 	} else {
-		Api = M.require( 'api' ).Api;
+		Api = M.require( 'mobile.startup/api' ).Api;
 	}
 
 	/**
@@ -143,5 +143,6 @@
 		}
 	} );
 
-	M.define( 'modules/gallery/PhotoListApi', PhotoListApi );
+	M.define( 'mobile.gallery/PhotoListApi', PhotoListApi )
+		.deprecate( 'modules/gallery/PhotoListApi' );
 }( mw.mobileFrontend, jQuery ) );

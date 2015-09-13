@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var Skin,
-		browser = M.require( 'browser' ),
-		View = M.require( 'View' );
+		browser = M.require( 'mobile.browser/browser' ),
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Representation of the current skin being rendered.
@@ -193,6 +193,6 @@
 		}
 	} );
 
-	M.define( 'Skin', Skin );
+	M.define( 'mobile.startup/Skin', Skin ).deprecate( 'Skin' );
 
 }( mw.mobileFrontend, jQuery ) );

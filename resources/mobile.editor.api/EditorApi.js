@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var EditorApi,
-		Api = M.require( 'api' ).Api;
+		Api = M.require( 'mobile.startup/api' ).Api;
 
 	/**
 	 * API that helps save and retrieve page content
@@ -270,6 +270,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorApi', EditorApi );
+	M.define( 'mobile.editor.api/EditorApi', EditorApi ).deprecate( 'modules/editor/EditorApi' );
 
 }( mw.mobileFrontend, jQuery ) );
