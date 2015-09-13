@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_4ed3b4d7",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T10:27:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be mobile.search.api?",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_eedf00da",
+        "filename": "resources/mobile.search.beta.api/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-13T10:27:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be mobile.search.beta.api/SearchApi?",
+      "revId": "c4d82631447627d7495dbd882775910263264d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
