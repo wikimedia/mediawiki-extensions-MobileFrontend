@@ -194,6 +194,7 @@
 	 * @method
 	 * @param {jQuery.object} $container to apply toggling to
 	 * @param {String} prefix a prefix to use for the id.
+	 * @param {Page} page to allow storage of session for future visits
 	 * @ignore
 	 */
 	function enable( $container, prefix, page ) {
