@@ -50,6 +50,91 @@
       "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_718454b6",
+        "filename": "resources/mobile.startup/Panel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-14T00:02:38Z",
+      "side": 1,
+      "message": "You should deprecate Panel.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_9181c0a6",
+        "filename": "resources/mobile.startup/Router.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-14T00:02:38Z",
+      "side": 1,
+      "message": "Now the \u0027router\u0027 module is not defined anywhere.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_318eccd6",
+        "filename": "resources/mobile.swipe/Swipe.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-14T00:02:38Z",
+      "side": 1,
+      "message": "Deprecate \u0027Swipe\u0027 here",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_518b58c4",
+        "filename": "resources/mobile.talk.overlays/TalkSectionOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-14T00:02:38Z",
+      "side": 1,
+      "message": "Deprecate \u0027modules/talk/TalkSectionOverlay\u0027.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f1b7e482",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-14T00:02:38Z",
+      "side": 1,
+      "message": "Define \u0027mobile.toast/toast\u0027 and deprecate \u0027toast\u0027.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
