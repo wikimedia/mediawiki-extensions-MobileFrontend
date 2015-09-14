@@ -1398,26 +1398,6 @@ $wgMobileSpecialPageModules = array(
 		'position' => 'top',
 	),
 
-	'mobile.special.notifications.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'resources/mobile.special.notifications.styles/notifications.less',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.special.notifications.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-		),
-		'scripts' => array(
-			'resources/mobile.special.notifications.scripts/notifications.js',
-		),
-		'messages' => array(
-			// defined in Echo
-			'echo-load-more-error',
-		),
-	),
-
 	// These are NOT empty see $wgResourceModuleSkinStyles.
 	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
