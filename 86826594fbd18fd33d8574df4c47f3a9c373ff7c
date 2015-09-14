@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_2bbdf163",
+        "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "It\u0027s a ForeignApi that uses JSONP so I think this makes more sense to me. Open to better names but I don\u0027t think MFForeignApi is any better I like to describe functionality not code location.",
+      "parentUuid": "6ec1af18_7a8429b6",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_77abe41b",
         "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-14T13:55:03Z",
       "side": 1,
       "message": "This comment should be in the constructor documentation and this method could simply inherit its parent\u0027s documentation.\n\nAlso, capitalise JSONP you monster!",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_0bb83573",
+        "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_77abe41b",
       "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_ebb60985",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_dae8bd79",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_bae3719b",
         "filename": "resources/mobile.gallery/PhotoList.js",
         "patchSetId": 7
@@ -64,6 +118,24 @@
       "writtenOn": "2015-09-14T13:55:03Z",
       "side": 1,
       "message": "To avoid repeating yourself you could move this into line 29:\n\n    var apiOptions \u003d {\n        api: options: api;\n    };\n\nNo need for the else block now!",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_0b67d523",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_bae3719b",
       "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_eb75a9c9",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_5af4cd50",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_3af78158",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 7
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_ab77a1ce",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "I mostly picked this for consistency given that all ooui classes take a config object and all of MobileFrontend classes do the same.\n\nAlso in future we may want to move things like limit/radius/thumbnail size here.\n\nThoughts?",
+      "parentUuid": "6ec1af18_3af78158",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_ba9a9115",
         "filename": "resources/mobile.special.nearby.scripts/nearby.js",
         "patchSetId": 7
@@ -115,6 +223,24 @@
       "writtenOn": "2015-09-14T13:55:03Z",
       "side": 1,
       "message": "We should revisit how expensive loading this module really is. It feels like we use it a lot, but I don\u0027t have any evidence to back that up right now.",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4b84fda3",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-14T18:58:57Z",
+      "side": 1,
+      "message": "Noted. Right not we only use it for development purposes which may also be a bad.",
+      "parentUuid": "6ec1af18_ba9a9115",
       "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
