@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_853c16be",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T14:37:58Z",
+      "side": 1,
+      "message": "Any reason for the * here?",
+      "revId": "da539c474da04e0d385e3ada4717916a9f517489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
