@@ -20,7 +20,7 @@ class SkinMinerva extends SkinTemplate {
 	public $template = 'MinervaTemplate';
 	/** @var boolean $useHeadElement Specify whether show head elements */
 	public $useHeadElement = true;
-	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
+	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'stable';
 	/** @var MobileContext $mobileContext Safes an instance of MobileContext */
 	protected $mobileContext;
@@ -206,7 +206,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Get the current mode of the skin [stable|beta|alpha|app] that is running
+	 * Get the current mode of the skin [stable|beta] that is running
 	 * @return string
 	 */
 	protected function getMode() {
@@ -970,8 +970,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Checks, if you're an experienced user (beta/alpha group member, or
-	 * an edit count > 5.
+	 * Checks, if an edit count > 5.
 	 */
 	protected function isExperiencedUser() {
 		return $this->getUser()->getEditCount() > 5;

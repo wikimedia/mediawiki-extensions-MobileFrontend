@@ -89,13 +89,11 @@ $autoloadClasses = array(
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'MinervaTemplateBeta' => 'skins/MinervaTemplateBeta',
-	'MinervaTemplateAlpha' => 'skins/MinervaTemplateAlpha',
 
 	'MFResourceLoaderParsedMessageModule' => 'modules/MFResourceLoaderParsedMessageModule',
 
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
-	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
 
 	'MobileFrontend\Browse\TagService' => 'browse/TagService',
 	'MobileFrontend\Browse\NullTagService' => 'browse/NullTagService',

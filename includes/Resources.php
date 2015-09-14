@@ -690,7 +690,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-search-feedback-prompt',
 			'mobile-frontend-search-feedback-link-text',
 			'mobile-frontend-placeholder',
-			'mobile-frontend-placeholder-alpha',
 			'mobile-frontend-placeholder-beta',
 		),
 	),
@@ -1736,12 +1735,6 @@ $wgMinervaBootstrapModules = array(
 	),
 
 	// By mode. This should only ever be loaded in Minerva skin.
-	'skins.minerva.alpha.scripts' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.beta.scripts',
-		),
-		'scripts' => array(),
-	),
 	'skins.minerva.tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			// Feature modules that should be loaded on tablets should be listed below here.

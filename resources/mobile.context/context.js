@@ -18,21 +18,12 @@
 		},
 
 		/**
-		 * Determines if mobile mode is alpha
-		 * @method
-		 * @return {Boolean}
-		 */
-		isAlphaGroupMember: function () {
-			return this.getMode() === 'alpha';
-		},
-
-		/**
-		 * Determines if mobile mode is beta or alpha
+		 * Determines if mobile mode is beta
 		 * @method
 		 * @return {Boolean}
 		 */
 		isBetaGroupMember: function () {
-			return this.getMode() === 'beta' || this.isAlphaGroupMember();
+			return this.getMode() === 'beta';
 		},
 
 		/**

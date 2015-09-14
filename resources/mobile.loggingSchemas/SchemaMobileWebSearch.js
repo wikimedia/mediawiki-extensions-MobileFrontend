@@ -23,7 +23,7 @@
 		 * @cfg {Object} defaults The options hash.
 		 * @cfg {String} defaults.platform Always "mobileweb"
 		 * @cfg {String} defaults.platformVersion The version of MobileFrontend
-		 *  that the user is using. One of "stable", "beta", or "alpha"
+		 *  that the user is using. One of "stable" or "beta"
 		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			platform: 'mobileweb',

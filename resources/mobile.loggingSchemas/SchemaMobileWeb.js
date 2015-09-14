@@ -12,7 +12,7 @@
 		 * @inheritdoc
 		 *
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.mobileMode whether user is in stable beta or alpha
+		 * @cfg {String} defaults.mobileMode whether user is in stable or beta
 		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			mobileMode: context.getMode()

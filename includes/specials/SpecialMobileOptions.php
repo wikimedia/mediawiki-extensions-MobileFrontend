@@ -78,7 +78,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		$betaEnabled = $context->isBetaGroupMember();
-		$alphaEnabled = $context->isAlphaGroupMember();
 
 		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
 		$imagesBeta = $betaEnabled ? 'checked' : '';
@@ -94,10 +93,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		);
 		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
-
-		$alphaEnableMsg = $this->msg( 'mobile-frontend-settings-alpha' )->parse();
-		$alphaChecked = $alphaEnabled ? 'checked' : '';
-		$alphaDescriptionMsg = $this->msg( 'mobile-frontend-settings-alpha-description' )->text();
 
 		// array to save the data of options, which should be displayed here
 		$options = array();
@@ -120,20 +115,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				'name' => 'enableBeta',
 				'id' => 'enable-beta-toggle',
 			);
-			// alpha settings
-			if ( $betaEnabled ) {
-				if ( $alphaEnabled ) {
-					$options['beta']['value'] = '1';
-					$options['beta']['type'] = 'hidden';
-				}
-				$options['alpha'] = array(
-					'checked' => $alphaChecked,
-					'label' => $alphaEnableMsg,
-					'description' => $alphaDescriptionMsg,
-					'name' => 'enableAlpha',
-					'id' => 'enable-alpha-toggle'
-				);
-			}
 		}
 
 		$templateParser = new TemplateParser(
@@ -225,7 +206,6 @@ HTML;
 			'action' => 'success',
 			'images' => "nochange",
 			'beta' => "nochange",
-			'alpha' => "nochange",
 		);
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
@@ -246,18 +226,9 @@ HTML;
 			return;
 		}
 		wfIncrStats( 'mobile.options.saves' );
-		if ( $request->getBool( 'enableAlpha' ) ) {
-			$group = 'alpha';
-			// This request is to turn on alpha
-			if ( !$context->isAlphaGroupMember() ) {
-				$schemaData['alpha'] = "on";
-			}
-		} elseif ( $request->getBool( 'enableBeta' ) ) {
+		if ( $request->getBool( 'enableBeta' ) ) {
 			$group = 'beta';
-			if ( $context->isAlphaGroupMember() ) {
-				// This request was to turn off alpha
-				$schemaData['alpha'] = "off";
-			} elseif ( !$context->isBetaGroupMember() ) {
+			if ( !$context->isBetaGroupMember() ) {
 				// The request was to turn on beta
 				$schemaData['beta'] = "on";
 			}
