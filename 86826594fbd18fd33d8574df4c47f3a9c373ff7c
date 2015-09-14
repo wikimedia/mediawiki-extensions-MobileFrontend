@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ec1af18_7a8429b6",
+        "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:57:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this name.\n\nIt\u0027s JSONP only some of the time. There\u0027s nothing wrong with calling this MFForeignApi or something similar – it reflects that we\u0027ve specialised the ForeignApi class but is less ambiguous… maybe.",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_77abe41b",
         "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
         "patchSetId": 7
