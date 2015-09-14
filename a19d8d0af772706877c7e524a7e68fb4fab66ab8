@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_34cb1a77",
+        "filename": "resources/mobile.abusefilter/AbuseFilterOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_2998a27b",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_4995ee41",
         "filename": "resources/mobile.abusefilter/AbuseFilterPanel.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-13T17:37:39Z",
       "side": 1,
       "message": "the same here and in all other files (I suspect :)).",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_74d1a226",
+        "filename": "resources/mobile.abusefilter/AbuseFilterPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "will do",
+      "parentUuid": "6ec1af18_4995ee41",
       "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_54f106c7",
+        "filename": "resources/mobile.browser/browser.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Didn\u0027t notice the case again.\n\nDone",
+      "parentUuid": "6ec1af18_e9a13aa0",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_718454b6",
         "filename": "resources/mobile.startup/Panel.js",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2015-09-14T00:02:38Z",
       "side": 1,
       "message": "You should deprecate Panel.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_94e76e0d",
+        "filename": "resources/mobile.startup/Panel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_718454b6",
       "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_74ea02d9",
+        "filename": "resources/mobile.startup/Router.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Ah - I didn\u0027t notice this.\nDone",
+      "parentUuid": "6ec1af18_9181c0a6",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_318eccd6",
         "filename": "resources/mobile.swipe/Swipe.js",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2015-09-14T00:02:38Z",
       "side": 1,
       "message": "Deprecate \u0027Swipe\u0027 here",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d4e5f607",
+        "filename": "resources/mobile.swipe/Swipe.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_318eccd6",
       "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_34f47ab9",
+        "filename": "resources/mobile.talk.overlays/TalkSectionOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_518b58c4",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_f1b7e482",
         "filename": "resources/mobile.toast/toast.js",
         "patchSetId": 3
@@ -132,6 +258,24 @@
       "writtenOn": "2015-09-14T00:02:38Z",
       "side": 1,
       "message": "Define \u0027mobile.toast/toast\u0027 and deprecate \u0027toast\u0027.",
+      "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_b4e06af8",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 2840
+      },
+      "writtenOn": "2015-09-14T14:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_f1b7e482",
       "revId": "a19d8d0af772706877c7e524a7e68fb4fab66ab8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
