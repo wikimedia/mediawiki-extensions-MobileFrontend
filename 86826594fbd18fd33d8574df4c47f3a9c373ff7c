@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_77abe41b",
+        "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "This comment should be in the constructor documentation and this method could simply inherit its parent\u0027s documentation.\n\nAlso, capitalise JSONP you monster!",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_dae8bd79",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "This should be called gatewayOptions.",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_bae3719b",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "To avoid repeating yourself you could move this into line 29:\n\n    var apiOptions \u003d {\n        api: options: api;\n    };\n\nNo need for the else block now!",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_5af4cd50",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "It feels like this is unnecessary. Clients of the old PhotoListApi class won\u0027t be able to construct it in the old way without – eventually – seeing an error.\n\nLet\u0027s message this as a API breaking change and be done with it.",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_3af78158",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "The NearbyGateway has one collaborator, which is great because the fewer collaborators you have the easier you are to isolate, but it\u0027s injected as a property on an object. Why?\n\nWhy not\n\n    function NearbyGateway( api ) {\n      this.api \u003d api;\n    }\n\n?",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ba9a9115",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-14T13:55:03Z",
+      "side": 1,
+      "message": "We should revisit how expensive loading this module really is. It feels like we use it a lot, but I don\u0027t have any evidence to back that up right now.",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
