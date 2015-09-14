@@ -194,7 +194,10 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getSecondaryActionsHtml() {
 		$baseClass = MobileUI::buttonClass( '', 'button' );
-		$html = Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
+		$html = Html::openElement( 'div', array(
+			'class' => 'post-content',
+			'id' => 'page-secondary-actions'
+		) );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
 			if ( isset( $el['attributes']['class'] ) ) {
@@ -226,9 +229,6 @@ class MinervaTemplate extends BaseTemplate {
 			if ( isset( $data['subject-page'] ) ) {
 				echo $data['subject-page'];
 			}
-			echo $this->getPostContentHtml( $data );
-			echo $this->getSecondaryActionsHtml();
-			echo $this->getHistoryLinkHtml( $data );
 			?>
 			</div>
 			<?php
@@ -274,7 +274,9 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getPostContentHtml( $data ) {
-		return $this->renderBrowseTags( $data );
+		return $this->renderBrowseTags( $data ) .
+			$this->getSecondaryActionsHtml() .
+			$this->getHistoryLinkHtml( $data );
 	}
 
 	/**
@@ -290,6 +292,7 @@ class MinervaTemplate extends BaseTemplate {
 
 		$this->renderPreContent( $data );
 		$this->renderContent( $data );
+		echo $this->getPostContentHtml( $data );
 	}
 
 	/**
