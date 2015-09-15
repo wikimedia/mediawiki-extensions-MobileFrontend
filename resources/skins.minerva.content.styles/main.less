@@ -22,9 +22,14 @@ body {
 	background: #fff;
 }
 
+.pre-content,
+.content,
+.post-content {
+	margin: 0 @contentMargin;
+}
+
 .content {
 	line-height: @contentLineHeight;
-	margin: 0 @contentMargin 0;
 	// Deal with long links (bug 60387)
 	word-wrap: break-word;
 }

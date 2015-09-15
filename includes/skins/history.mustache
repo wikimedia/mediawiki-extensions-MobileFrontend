@@ -1,4 +1,4 @@
-{{^isMainPage}}<div class="last-modified-bar view-border-box">{{/isMainPage}}
+<div class="{{^isMainPage}}last-modified-bar{{/isMainPage}} view-border-box post-content">
 	<div id="mw-mf-last-modified" class="truncated-text last-modified-bottom">
 		<a href="{{link}}"
 			data-user-name="{{username}}"
@@ -7,4 +7,4 @@
 			{{text}}
 		</a>
 	</div>
-{{^isMainPage}}</div>{{/isMainPage}}
+</div>

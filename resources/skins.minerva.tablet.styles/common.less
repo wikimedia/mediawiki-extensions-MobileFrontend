@@ -15,7 +15,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	// FIXME: remove the .stable .pre-content selector when cache clears
 	.stable .pre-content,
 	.heading-holder {
-		padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
+		padding: 20px 0;
 	}
 
 	// FIXME: remove the .stable .pre-content selector when cache clears
@@ -53,14 +53,17 @@ A file for css that optimises the Minerva skin on larger devices.
 
 	// FIXME: Have a class that identifies all 4 of these
 	.drawer,
-	.pre-content,
-	.content,
 	.content-overlay {
 		margin: 0 auto;
 	}
 
+	.pre-content,
+	.content,
+	.post-content {
+		margin: 0 @contentPaddingTablet;
+	}
+
 	.content {
-		padding: @contentTopPadding @contentPaddingTablet 0;
 		// Classes added by thumbnails
 		// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
 		// We use @noflip because we still want .tleft to be on the left and
@@ -163,6 +166,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	.pre-content,
 	.post-content,
 	.content-overlay,
+	// FIXME: remove .last-modified-bar when cache clears. The template has the .post-content class now.
 	.last-modified-bar,
 	// FIXME: remove need for id selector
 	#mw-mf-page-center .pointer-overlay {
@@ -171,9 +175,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		max-width: @contentMaxWidthTablet;
 	}
 
-	.content {
-		padding: @contentTopPadding 0;
-	}
 	.header {
 		margin-top: -1px;
 	}
