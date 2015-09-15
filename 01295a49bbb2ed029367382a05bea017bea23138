@@ -16,6 +16,24 @@
       "revId": "01295a49bbb2ed029367382a05bea017bea23138",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_53c82a25",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 924,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-15T21:18:31Z",
+      "side": 1,
+      "message": "We\u0027re deliberately removing it because that was causing this extension to conflict with WikimediaEvents and break everything.",
+      "parentUuid": "6ec1af18_0887cddd",
+      "revId": "01295a49bbb2ed029367382a05bea017bea23138",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
