@@ -976,7 +976,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'resources/mobile.watchstar/WatchstarApi.js',
+			'resources/mobile.watchstar/WatchstarGateway.js',
 			'resources/mobile.watchstar/Watchstar.js',
 		),
 		'styles' => array(

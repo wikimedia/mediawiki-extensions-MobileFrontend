@@ -14,6 +14,7 @@
 		var $container = $( '#ca-watch' );
 		if ( !page.inNamespace( 'special' ) ) {
 			new Watchstar( {
+				api: new mw.Api(),
 				el: $container,
 				isWatched: page.isWatched(),
 				page: page,

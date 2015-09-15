@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
-		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		api = new mw.Api(),
 		Nearby = M.require( 'mobile.nearby/Nearby' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
@@ -14,6 +14,7 @@
 	QUnit.test( '#render empty list', 4, function ( assert ) {
 		var $el = $( '<div>' );
 		new Nearby( {
+			api: api,
 			latitude: 37.7,
 			longitude: -122,
 			range: 1000,
@@ -42,7 +43,7 @@
 				}
 			};
 			// prevent hits to api due to watch status lookup
-			this.sandbox.stub( WatchstarApi.prototype, 'get' ).returns( $.Deferred().resolve( resp ) );
+			this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( resp ) );
 
 			this.getLocation = this.sandbox.stub( Nearby.prototype, 'getCurrentPosition' )
 				.returns( $.Deferred().resolve( {
@@ -70,6 +71,7 @@
 	QUnit.test( '#render with a location', 2, function ( assert ) {
 		var $el = $( '<div>' );
 		new Nearby( {
+			api: api,
 			latitude: 37.7,
 			longitude: -122,
 			range: 1000,
@@ -99,6 +101,7 @@
 	QUnit.test( '#render with current location', 2, function ( assert ) {
 		var $el = $( '<div>' );
 		new Nearby( {
+			api: api,
 			useCurrentLocation: true,
 			range: 1000,
 			el: $el
@@ -117,6 +120,7 @@
 	QUnit.test( '#render with a server error', 3, function ( assert ) {
 		var $el = $( '<div>' ),
 			n = new Nearby( {
+				api: api,
 				latitude: 37.7,
 				longitude: -122,
 				range: 1000,
@@ -142,6 +146,7 @@
 		var $el = $( '<div>' ),
 			pageTitle = 'Hello Friends!';
 		new Nearby( {
+			api: api,
 			pageTitle: pageTitle,
 			range: 1000,
 			el: $el

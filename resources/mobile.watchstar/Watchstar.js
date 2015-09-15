@@ -3,7 +3,7 @@
 	var Watchstar,
 		View = M.require( 'mobile.view/View' ),
 		SchemaMobileWebWatching = M.require( 'mobile.loggingSchemas/SchemaMobileWebWatching' ),
-		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watch',
@@ -15,7 +15,6 @@
 		} ),
 		toast = M.require( 'mobile.toast/toast' ),
 		user = M.require( 'mobile.user/user' ),
-		api = new WatchstarApi(),
 		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' );
 
 	/**
@@ -24,7 +23,7 @@
 	 * @extends View
 	 * @uses CtaDrawer
 	 * @uses Icon
-	 * @uses WatchstarApi
+	 * @uses WatchstarGateway
 	 * @uses Toast
 	 */
 	Watchstar = View.extend( {
@@ -38,6 +37,7 @@
 		},
 		/**
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {mw.Api} defaults.api
 		 * @cfg {Page} defaults.page Current page.
 		 * @cfg {String} defaults.funnel to log events with
 		 */
@@ -68,15 +68,19 @@
 				_super = View.prototype.initialize,
 				page = options.page;
 
+			// FIXME: Remove default when Gather has been updated to use new gateway. (T113753)
+			options.api = options.api || new mw.Api();
+			this.gateway = new WatchstarGateway( options.api );
+
 			if ( user.isAnon() ) {
 				_super.call( self, options );
 			} else if ( options.isWatched === undefined ) {
-				api.load( page.getId() ).done( function () {
-					options.isWatched = api.isWatchedPage( page );
+				this.gateway.loadWatchStatus( page.getId() ).done( function () {
+					options.isWatched = self.gateway.isWatchedPage( page );
 					_super.call( self, options );
 				} );
 			} else {
-				api.setWatchedPage( options.page, options.isWatched );
+				this.gateway.setWatchedPage( options.page, options.isWatched );
 				_super.call( self, options );
 			}
 			this.schema = new SchemaMobileWebWatching( {
@@ -90,6 +94,7 @@
 		/** @inheritdoc */
 		postRender: function () {
 			var self = this,
+				gateway = this.gateway,
 				unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName() + ' watched',
 				page = self.options.page,
@@ -99,7 +104,7 @@
 			this.$el.attr( 'title', self.options.tooltip );
 
 			// Add watched class if necessary
-			if ( !user.isAnon() && api.isWatchedPage( page ) ) {
+			if ( !user.isAnon() && gateway.isWatchedPage( page ) ) {
 				$el.addClass( watchedClass ).removeClass( unwatchedClass );
 			} else {
 				$el.addClass( unwatchedClass ).removeClass( watchedClass );
@@ -133,6 +138,7 @@
 		 */
 		onStatusToggleUser: function () {
 			var self = this,
+				gateway = this.gateway,
 				page = this.options.page,
 				checker;
 
@@ -142,10 +148,10 @@
 			this.schema.log( {
 				isWatched: self.options.isWatched
 			} );
-			api.toggleStatus( page ).always( function () {
+			gateway.toggleStatus( page ).always( function () {
 				clearInterval( checker );
 			} ).done( function () {
-				if ( api.isWatchedPage( page ) ) {
+				if ( gateway.isWatchedPage( page ) ) {
 					self.options.isWatched = true;
 					self.render();
 					/**
