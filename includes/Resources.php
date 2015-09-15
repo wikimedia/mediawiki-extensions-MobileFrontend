@@ -410,6 +410,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.settings' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'jquery.cookie',
+			// Allow use of define
+			'mobile.modules',
 			'mediawiki.storage',
 		),
 		'scripts' => array(
