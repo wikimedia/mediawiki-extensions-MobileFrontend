@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_19ce6e87",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 549
+      },
+      "writtenOn": "2015-09-15T08:38:30Z",
+      "side": 1,
+      "message": "This should be called before _getApiDataRaw is called and _getApiDataRaw should only be called if the hook didn\u0027t add any keys to apiQuery. Otherwise we have the risk that there are unused parameters left from _getApiDataRaw as we cannot override the complete array.\n\nFurthermore, the query should be passed to the hook as well because relying on the query being stored in the `pssearch` key doesn\u0027t seem to be a good idea.",
+      "revId": "b83b4a5400d837802da1c9b9aa84a1a2bb6d56ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
