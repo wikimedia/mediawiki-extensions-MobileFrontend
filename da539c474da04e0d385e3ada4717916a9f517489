@@ -34,6 +34,24 @@
       "revId": "da539c474da04e0d385e3ada4717916a9f517489",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_3f6446ae",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-15T14:12:49Z",
+      "side": 1,
+      "message": "I understand that *.klass and .klass are treated as equivalent but this style isn\u0027t used anywhere else in the file/codebase.\n\nI searched the MobileFrontend codebase using the following command:\n\n    ag --less -a \u0027\\*\\.\u0027 resources/ | wc -l",
+      "parentUuid": "6ec1af18_137aabe7",
+      "revId": "da539c474da04e0d385e3ada4717916a9f517489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
