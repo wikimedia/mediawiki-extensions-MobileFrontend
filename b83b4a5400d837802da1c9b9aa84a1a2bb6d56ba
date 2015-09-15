@@ -16,6 +16,24 @@
       "revId": "b83b4a5400d837802da1c9b9aa84a1a2bb6d56ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_dffae13f",
+        "filename": "resources/mobile.search.api/SearchApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-15T16:19:03Z",
+      "side": 1,
+      "message": "I\u0027m fine with adding the query as a second parameter, but removing the query, which is used at the moment when the hook runs feels wrong. What, if another extension want to extend the query only?\n\nIf the query is passed as the second parameter, you can replace the whole array?!",
+      "parentUuid": "6ec1af18_19ce6e87",
+      "revId": "b83b4a5400d837802da1c9b9aa84a1a2bb6d56ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
