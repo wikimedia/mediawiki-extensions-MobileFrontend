@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var WatchListApi = M.require( 'mobile.watchlist/WatchListApi' ),
+	var WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' ),
 		response = {
 			continue: {
 				pageimages: {
@@ -87,16 +87,16 @@
 			}
 		};
 
-	QUnit.module( 'MobileFrontend: WatchListApi', {} );
+	QUnit.module( 'MobileFrontend: WatchListGateway', {} );
 
 	QUnit.test( 'load results from the first page', 3, function ( assert ) {
-		var api = new WatchListApi();
+		var api = new WatchListGateway( new mw.Api() );
 
-		this.sandbox.stub( WatchListApi.prototype, 'get' )
+		this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
 		api.load().done( function ( pages ) {
-			var params = WatchListApi.prototype.get.firstCall.args[0];
+			var params = mw.Api.prototype.get.firstCall.args[0];
 
 			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
 
@@ -107,7 +107,7 @@
 
 	QUnit.test( 'load results from the second page from last item of first', 6, function ( assert ) {
 		var lastTitle = 'Albert Einstein',
-			api = new WatchListApi( lastTitle ),
+			api = new WatchListGateway( new mw.Api(), lastTitle ),
 			response1 = $.extend( {}, response, {
 				'continue': {
 					watchlistraw: {
@@ -118,11 +118,11 @@
 			stub;
 
 		// First time we call the API for the second page
-		stub = this.sandbox.stub( WatchListApi.prototype, 'get' )
+		stub = this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response1 ) );
 
 		api.load().done( function ( pages ) {
-			var params = WatchListApi.prototype.get.firstCall.args[0];
+			var params = mw.Api.prototype.get.firstCall.args[0];
 
 			assert.strictEqual( params.continue, 'gwrcontinue||', 'It should set the continue parameter' );
 			assert.strictEqual( params.gwrcontinue, '0|Albert_Einstein', 'It should set the watchlistraw-specific continue parameter' );
@@ -144,9 +144,9 @@
 	} );
 
 	QUnit.test( 'it doesn\'t throw an error when no pages are returned', 1, function ( assert ) {
-		var api = new WatchListApi();
+		var api = new WatchListGateway( new mw.Api() );
 
-		this.sandbox.stub( WatchListApi.prototype, 'get' )
+		this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( {
 				batchcomplete: ''
 			} ) );
@@ -159,10 +159,10 @@
 	QUnit.test( 'it should mark pages as new if necessary', 2, function ( assert ) {
 		var api;
 
-		this.sandbox.stub( WatchListApi.prototype, 'get' )
+		this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
-		api = new WatchListApi();
+		api = new WatchListGateway( new mw.Api() );
 
 		api.load().done( function ( pages ) {
 			assert.equal( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );

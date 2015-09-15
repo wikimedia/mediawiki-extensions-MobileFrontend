@@ -19,6 +19,7 @@
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
 			watchlist = new WatchList( {
+				api: new mw.Api(),
 				el: $watchlist,
 				funnel: 'watchlist',
 				enhance: true

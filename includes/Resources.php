@@ -366,7 +366,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.modifiedBar',
 		),
 		'scripts' => array(
-			'resources/mobile.watchlist/WatchListApi.js',
+			'resources/mobile.watchlist/WatchListGateway.js',
 			'resources/mobile.watchlist/WatchList.js',
 		),
 	),

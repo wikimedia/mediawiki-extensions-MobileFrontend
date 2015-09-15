@@ -2,7 +2,7 @@
 	var WatchList,
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
-		WatchListApi = M.require( 'mobile.watchlist/WatchListApi' );
+		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
 	/**
 	 * An extension of the PageList which preloads pages as all being watched.
@@ -25,8 +25,7 @@
 			if ( options.el ) {
 				lastTitle = this.getLastTitle( options.el );
 			}
-			// `api` is used in the parent...
-			this.watchlistApi = new WatchListApi( lastTitle );
+			this.gateway = new WatchListGateway( options.api, lastTitle );
 
 			WatchstarPageList.prototype.initialize.apply( this, arguments );
 		},
@@ -68,7 +67,7 @@
 		 */
 		_loadPages: function () {
 			var self = this;
-			this.watchlistApi.load().done( function ( pages ) {
+			this.gateway.load().done( function ( pages ) {
 				$.each( pages, function ( i, page ) {
 					self.appendPage( page );
 				} );

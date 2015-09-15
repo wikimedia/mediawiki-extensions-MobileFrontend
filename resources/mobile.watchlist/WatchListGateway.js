@@ -1,40 +1,33 @@
-/**
- * API for WatchList
- * @extends Api
- * @class WatchListApi
- */
 ( function ( M, $ ) {
-
-	var WatchListApi,
-		time = M.require( 'mobile.modifiedBar/time' ),
-		Api = M.require( 'mobile.startup/api' ).Api;
+	var time = M.require( 'modules/lastEdited/time' );
 
 	/**
-	 * @class WatchListApi
-	 * @extends Api
+	 * @class WatchListGateway
+	 * @param {mw.Api} api
+	 * @param {String} lastTitle of page listed in Watchlist to be used as a continuation parameter
 	 */
-	WatchListApi = Api.extend( {
-		/** @inheritdoc */
-		initialize: function ( lastTitle ) {
-			Api.prototype.initialize.apply( this, arguments );
-			// Try to keep it in sync with SpecialMobileWatchlist::LIMIT (php)
-			this.limit = 50;
+	function WatchListGateway( api, lastTitle ) {
+		this.api = api;
+		// Try to keep it in sync with SpecialMobileWatchlist::LIMIT (php)
+		this.limit = 50;
 
-			if ( lastTitle ) {
-				this.continueParams = {
-					continue: 'gwrcontinue||',
-					gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
-				};
-				this.shouldSkipFirstTitle = true;
-			} else {
-				this.continueParams = {
-					continue: ''
-				};
-				this.shouldSkipFirstTitle = false;
-			}
+		if ( lastTitle ) {
+			this.continueParams = {
+				continue: 'gwrcontinue||',
+				gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
+			};
+			this.shouldSkipFirstTitle = true;
+		} else {
+			this.continueParams = {
+				continue: ''
+			};
+			this.shouldSkipFirstTitle = false;
+		}
 
-			this.canContinue = true;
-		},
+		this.canContinue = true;
+	}
+
+	WatchListGateway.prototype = {
 		/**
 		 * Load the list of items on the watchlist
 		 * @returns {jQuery.Deferred}
@@ -66,7 +59,7 @@
 				params.gwrlimit += 1;
 				params.pilimit += 1;
 			}
-			return this.get( params, {
+			return this.api.get( params, {
 				url: this.apiUrl
 			} ).then( function ( data ) {
 				if ( data.hasOwnProperty( 'continue' ) ) {
@@ -137,9 +130,8 @@
 			} );
 		}
 
-	} );
+	};
 
-	M.define( 'mobile.watchlist/WatchListApi', WatchListApi )
-		.deprecate( 'modules/watchlist/WatchListApi' );
+	M.define( 'mobile.watchlist/WatchListGateway', WatchListGateway );
 
 }( mw.mobileFrontend, jQuery ) );
