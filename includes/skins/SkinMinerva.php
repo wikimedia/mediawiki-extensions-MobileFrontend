@@ -690,7 +690,7 @@ class SkinMinerva extends SkinTemplate {
 				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );
 			}
 		}
-		$tpl->set( 'prebodytext', $this->getHeaderHtml() );
+		$tpl->set( 'headinghtml', $this->getHeaderHtml() );
 
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {

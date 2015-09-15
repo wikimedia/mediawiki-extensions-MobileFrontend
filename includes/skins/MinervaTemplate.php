@@ -243,17 +243,18 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function renderPreContent( $data ) {
 		$internalBanner = $data[ 'internalBanner' ];
-		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
+		$preBodyText = isset( $data['prebodyhtml'] ) ? $data['prebodyhtml'] : '';
+		$headingHtml = isset( $data['headinghtml'] ) ? $data['headinghtml'] : '';
 
 		if ( $internalBanner || $preBodyText || isset( $data['page_actions'] ) ) {
+			echo $preBodyText;
 		?>
 		<div class="pre-content heading-holder">
 			<?php
 				if ( !$this->isSpecialPage ){
 					$this->renderPageActions( $data );
 				}
-
-				echo $preBodyText;
+				echo $headingHtml;
 				echo $this->html( 'subtitle' );
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {

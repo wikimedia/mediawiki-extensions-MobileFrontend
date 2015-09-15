@@ -24,6 +24,14 @@ $wgMFEnableJSConsoleRecruitment = false;
 $wgMFIsBrowseEnabled = false;
 
 /**
+ * Whether or not the banner experiment is enabled.
+ * https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image
+ *
+ * @var boolean
+ */
+$wgMFIsBannerEnabled = true;
+
+/**
  * A static map of category name to tag name.
  *
  * Read this map as follows: if an article is categorised as X, then it is

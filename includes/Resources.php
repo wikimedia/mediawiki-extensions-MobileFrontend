@@ -1715,11 +1715,9 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.bannerImage',
 			'mobile.search.beta',
 		),
 		'scripts' => array(
-			'resources/skins.minerva.beta.scripts/bannerImage.js',
 			'resources/skins.minerva.beta.scripts/commonsCategory.js',
 			'resources/skins.minerva.beta.scripts/fontchanger.js',
 		),
@@ -1727,6 +1725,16 @@ $wgMinervaBootstrapModules = array(
 			'mobile-frontend-commons-category-view',
 		),
 	),
+	'skins.minerva.beta.banner.scripts' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'skins.minerva.scripts',
+			'mobile.bannerImage',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.beta.banner.scripts/bannerImage.js',
+		),
+	),
+
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.alpha.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
