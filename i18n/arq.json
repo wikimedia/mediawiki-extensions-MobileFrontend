@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Bachounda",
-			"Oldstoneage"
+			"Oldstoneage",
+			"Hussam"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ما كانش تلخيص على هاد التبدال",
+	"mobile-frontend-commons-category-view": "تصاوير ب $1",
 	"mobile-frontend-copyright": "المحتاوا راه تحت النسخة $1 تاع الليسانس، غير يلا كان حاجه اخرة.",
 	"mobile-frontend-editor-edit": "تبديل",
 	"mobile-frontend-featured-article": "شي محتاوا مختار ل هاد النهار",

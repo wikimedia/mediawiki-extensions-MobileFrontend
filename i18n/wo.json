@@ -4,6 +4,7 @@
 			"Ibou"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "Coppite gi amul tënk",
 	"mobile-frontend-copyright": "Ëmbit laa ngi jàppandi ci anamu $1, lu moy yeneeni tektal",
 	"mobile-frontend-editor-edit": "Soppi",
 	"mobile-frontend-featured-article": "Jukkib bés bi",
@@ -15,6 +16,7 @@
 	"mobile-frontend-main-menu-nearby": "Ci wetu",
 	"mobile-frontend-main-menu-settings": "Jekkal",
 	"mobile-frontend-main-menu-watchlist": "Limu toppte",
+	"mobile-frontend-news-items": "Xibaar",
 	"mobile-frontend-placeholder": "Seet ci biir {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Sutura",
 	"mobile-frontend-random-button": "Ci mbetteel",

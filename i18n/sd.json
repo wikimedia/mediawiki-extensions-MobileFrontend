@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aneeskaka",
-			"Sindhu"
+			"Sindhu",
+			"Mehtab ahmed"
 		]
 	},
 	"mobile-frontend-categories-add": "زمري ۾ شامل ڪريو",
@@ -12,6 +13,7 @@
 	"mobile-frontend-categories-summary": "زمرن ۾ ڳنڍيل",
 	"mobile-frontend-categories-add-heading": "<span> $1</span> کي نون زمرن ۾ جوڙيو",
 	"mobile-frontend-categories-add-wait": "ٿاڱو شامل ڀي رهيو آهي، مهرباني ڪري انتظار ڪريو",
+	"mobile-frontend-commons-category-view": "$1 لاءعڪس",
 	"mobile-frontend-copyright": "مواد موجود آهي $1 جي تحت، نه ته ٻي صورت ۾ نوٽ ڪيل آهي.",
 	"mobile-frontend-editor-edit": "ترميميو",
 	"mobile-frontend-home-button": "گھر",

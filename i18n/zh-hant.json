@@ -148,6 +148,7 @@
 	"mobile-frontend-generic-404-title": "錯誤 - 查無頁面",
 	"mobile-frontend-generic-login": "{{SITENAME}} 是由像您一樣貢獻的人所建立的。",
 	"mobile-frontend-generic-login-action": "登入以貢獻。",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} 是由像您一樣的人構築的。</strong><br />登入以貢獻。",
 	"mobile-frontend-generic-signup-action": "註冊以貢獻。",
 	"mobile-frontend-history": "檢視此頁面的編輯歷史。",
 	"mobile-frontend-history-404-desc": "頁面歷史不存在，無法查看，\n該頁面可能已被刪除或您可能進入了一個錯誤的連結。",
