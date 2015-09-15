@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_825b9e56",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-15T17:43:01Z",
+      "side": 1,
+      "message": "The mobileview API gets the sections of a page using the parser, so I\u0027d recommend doing the same here:\n\n    $wikiPage \u003d WikiPage::newFromTitle( $context-\u003egetTitle() );\n    $parserOutput \u003d $wikiPage-\u003egetParserOutput( $parserOptions );\n    $sections \u003d $parserOutput-\u003egetSections();\n    $html \u003d $sections[0];\n\nYou\u0027ll also need to translate it IIRC.\n\nIt\u0027s worth noting that the expression that you\u0027ve used here is also used in the mobileview API but to validate (ish) the output of the parser.",
+      "revId": "414c8b92f5e3241b6f4e362ac1546c55301588eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
