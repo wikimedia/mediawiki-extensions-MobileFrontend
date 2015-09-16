@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_94f198ca",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-16T06:13:04Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be mobile.startup/router?",
+      "revId": "0771529038a998944a3785691f4bcb7ac5e5883f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_74f42cba",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-16T06:13:04Z",
+      "side": 1,
+      "message": "OverlayManager should be the object OverlayManager, not overlayManager (it\u0027s a bit confusing, but overlayManager is an already initialized object, OverlayManager not :)).",
+      "revId": "0771529038a998944a3785691f4bcb7ac5e5883f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
