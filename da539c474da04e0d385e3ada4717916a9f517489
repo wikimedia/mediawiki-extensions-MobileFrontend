@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_d99bd966",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-16T00:25:07Z",
+      "side": 1,
+      "message": "If a browser is unable to run media queries, won\u0027t @media print also not work? Why apply display block? Maybe it should be inline or something else? Why not let the template (or whereever .printonly  is coming from) style it however they want to.",
+      "parentUuid": "6ec1af18_c81b0520",
+      "revId": "da539c474da04e0d385e3ada4717916a9f517489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_853c16be",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "I understand that *.klass and .klass are treated as equivalent but this style isn\u0027t used anywhere else in the file/codebase.\n\nI searched the MobileFrontend codebase using the following command:\n\n    ag --less -a \u0027\\*\\.\u0027 resources/ | wc -l",
       "parentUuid": "6ec1af18_137aabe7",
+      "revId": "da539c474da04e0d385e3ada4717916a9f517489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_99a5519d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-16T00:25:07Z",
+      "side": 1,
+      "message": "Agree, consistency is important. I\u0027ll remove the *.",
+      "parentUuid": "6ec1af18_3f6446ae",
       "revId": "da539c474da04e0d385e3ada4717916a9f517489",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
