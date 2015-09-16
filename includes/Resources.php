@@ -445,8 +445,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.startup/Router.js',
 			'resources/mobile.startup/OverlayManager.js',
-			// FIXME: Remove api code to mobile.ajax
-			'resources/mobile.startup/api.js',
 			// FIXME: Move out of mobile.startup
 			'resources/mobile.startup/PageGateway.js',
 			'resources/mobile.startup/Anchor.js',

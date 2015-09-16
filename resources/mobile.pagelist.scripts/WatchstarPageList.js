@@ -20,7 +20,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Api} defaults.api
+		 * @cfg {mw.Api} defaults.api
 		 */
 		/**
 		 * @inheritdoc

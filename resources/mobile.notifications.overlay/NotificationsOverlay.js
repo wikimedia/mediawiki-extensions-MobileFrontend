@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
-		api = M.require( 'mobile.startup/api' ),
+		api = new mw.Api(),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		NotificationsOverlay;
 
@@ -8,7 +8,7 @@
 	 * Overlay for notifications
 	 * @class NotificationsOverlay
 	 * @extend Overlay
-	 * @uses Api
+	 * @uses mw.Api
 	 */
 	NotificationsOverlay = Overlay.extend( {
 		className: 'overlay notifications-overlay navigation-drawer',
