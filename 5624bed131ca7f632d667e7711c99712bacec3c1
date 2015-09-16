@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_b4c5b443",
+        "filename": "resources/mobile.pagelist/PageList.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-16T07:13:44Z",
+      "side": 1,
+      "message": "M.define( \u0027mobile.pagelist/PageList\u0027, PageList ).deprecate( \u0027PageList\u0027 );\n\n:)",
+      "revId": "5624bed131ca7f632d667e7711c99712bacec3c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
