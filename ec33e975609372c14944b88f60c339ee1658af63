@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_77a2e93c",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "Should these have been pushed as part of max-width work? If so can we do that in a patchset before killing alpha?",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d7b15d8e",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "Why are these still differing? Is this because of the banner image?\nWould be great to document this or even better remove it if no longer needed.",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f7e81979",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "Not sure this comment is useful anymore. I think you can just delete it. These are all classes from core.",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_97fd153b",
+        "filename": "resources/skins.minerva.special.userlogin.styles/userlogin.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be true. They apply unconditionally for mobile users.\n(I recognise the comment was out of date before your patch but let\u0027s fix it as part of your patch)",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_578ecdd6",
+        "filename": "resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "This looks suspect. Did we forget to push this to stable as part of the max width work? Can we do that in a separate patch preceding this one?\n\nThere are no differences between beta/stable for watchlist that I am aware of...",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_17b84573",
+        "filename": "resources/skins.minerva.talk/talk.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 1,
+      "message": "Again. This sounds like something that should have been pushed to stable.",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f7b6d984",
+        "filename": "resources/skins.minerva.alpha.scripts/quickLookup.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T19:44:24Z",
+      "side": 0,
+      "message": "Did we forget to remove this before?",
+      "revId": "8547d4e0af8c70aef9e5fab7f99cc635a7df5a07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
