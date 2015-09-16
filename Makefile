@@ -24,7 +24,7 @@ mygerrit: remotes			## List patchsets that you need to amend
 gerrit: remotes				## List all patchsets
 	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1 --ignore 'WIP'
 
-jsduck: nodecheck gems			## Build the JavaScript documentation
+jsduck: nodecheck			## Build the JavaScript documentation
 	@npm run -s doc
 
 phpdoc: 				## Build the PHP documentation
@@ -34,9 +34,6 @@ phpdoc: 				## Build the PHP documentation
 	@doxygen
 
 docs: jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
-
-gems:
-	bundle install
 
 nodecheck:
 	@dev-scripts/nodecheck.sh
