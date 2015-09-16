@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ec1af18_01e803ae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 18
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-16T20:11:01Z",
+      "side": 1,
+      "message": "One of the reasons for getting rid of alpha was to reduce the complexity and addressing technical debt of the MobileFrontend project. It mightn\u0027t be prudent to call out any other project than the one we actively maintain in a commit message that\u0027s getting rid of cruft that we\u0027ve likely introduced.",
+      "revId": "ec33e975609372c14944b88f60c339ee1658af63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_77a2e93c",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.less",
         "patchSetId": 18
