@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_bc183624",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1005,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T17:42:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_74150ce9",
+      "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_74cbcc75",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-16T06:16:44Z",
       "side": 1,
       "message": "hmm, this seems to be a misleading configuration name, isn\u0027t it? What does it hold? Is it really used as \"BannerOptions\" in MobileFrontend?",
+      "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_9c1bfa20",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T17:42:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_74cbcc75",
       "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_3c2d2642",
+        "filename": "resources/skins.minerva.beta.scripts/bannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T17:42:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_9412f8ff",
+      "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_94c8b878",
         "filename": "resources/skins.minerva.beta.scripts/bannerImage.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2015-09-16T06:16:44Z",
       "side": 1,
       "message": "Wouldn\u0027t it make more sense to move bannerImage.js to it\u0027s own module and load it conditionally, depending on if WPB is used or not? The configuration is already cache related, so there shouldn\u0027t be a problem and it would save us some bits, instead of loading a script, that isn\u0027t used on this page, as long as WPB is used :)",
+      "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_1c286a31",
+        "filename": "resources/skins.minerva.beta.scripts/bannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T17:42:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_94c8b878",
       "revId": "263794837b242c52b3cfc8147ec235a4b7048fab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
