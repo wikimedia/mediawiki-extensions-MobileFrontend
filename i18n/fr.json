@@ -39,7 +39,8 @@
 			"Thibaut120094",
 			"MPlauche",
 			"Mattho69",
-			"Wladek92"
+			"Wladek92",
+			"Weft"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -142,7 +143,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Affichage de la source</strong> de<span> $1</span>",
 	"mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
 	"mobile-frontend-editor-redlink-leave": "Non merci.",
-	"mobile-frontend-editor-redlink-explain": "Cette page n’a pas encore été créée sur {{SITENAME}}.",
+	"mobile-frontend-editor-redlink-explain": "Cette page n’a pas encore été créée.",
 	"mobile-frontend-editor-redlink-create": "Créer une page",
 	"mobile-frontend-editor-bold": "Gras",
 	"mobile-frontend-editor-italic": "Italique",
