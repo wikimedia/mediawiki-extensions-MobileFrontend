@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_ed1a867d",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-16T21:31:55Z",
+      "side": 1,
+      "message": "Instead of class_exists, use:\n\nExtensionRegistry::getInstance()-\u003eisLoaded( \u0027WikidataPageBanner\u0027 )\n\nRemember that $this-\u003egetConfig() is IContextSource::getConfig() which always returns the config object for mediawiki core. Even, if it works now, without any problems, it will (maybe) not in the future, e.g. if the access of the Config object is restricted to the owner (core or extension). So you should use MediaWiki\u0027s own Config object:\n\nMobileContext::singleton()-\u003egetMFConfig()-\u003eget( \u0027...\u0027 )",
+      "revId": "18b34446891fc2914e6f0af70528f7474f9f76d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
