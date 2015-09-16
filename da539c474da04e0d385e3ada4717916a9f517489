@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_7c764e3b",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-16T18:01:15Z",
+      "side": 1,
+      "message": "Correct. Yet on an old device I am now seeing content that is printonly which is wrong... the user has intended it should be only shown to printers.\n\nSo I ask again - why wouldn\u0027t you hide this by default and then only reveal it to printers?",
+      "parentUuid": "6ec1af18_d99bd966",
+      "revId": "da539c474da04e0d385e3ada4717916a9f517489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_853c16be",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
