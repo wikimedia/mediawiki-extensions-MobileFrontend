@@ -153,6 +153,7 @@
 			 * won't have loaded yet.
 			 * @private
 			 * @ignore
+			 * @param {String} editor name e.g. wikitext or visualeditor
 			 * @method
 			 */
 			function logInit( editor ) {
