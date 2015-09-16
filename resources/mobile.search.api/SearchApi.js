@@ -151,7 +151,7 @@
 
 								results.push( {
 									id: page.pageid,
-									heading: this._highlightSearchTerm( page.title, query ),
+									heading: self._highlightSearchTerm( page.title, query ),
 									title: page.title,
 									displayTitle: mwTitle.getNameText(),
 									url: mwTitle.getUrl()
