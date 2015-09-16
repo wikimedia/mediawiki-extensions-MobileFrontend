@@ -175,11 +175,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function
 /*
  * FIXME: @inheritdoc once this file is in the right repo
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( errorText ) {
+ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text ) {
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.loadFail.apply( this, arguments );
 
-	this.overlay.reportError( errorText, 'visualeditor-load-error' );
+	this.overlay.reportError( text );
 	this.overlay.hide();
 };
 

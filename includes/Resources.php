@@ -546,7 +546,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor.common' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.loggingSchemas',
 			'oojs-ui',
 			'mobile.overlays',
 			'mobile.editor.api',
