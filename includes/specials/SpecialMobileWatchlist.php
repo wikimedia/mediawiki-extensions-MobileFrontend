@@ -64,6 +64,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
 		// FIXME: Loads twice with JS enabled (T87871)
 		$output->addModuleStyles( array(
+			'skins.minerva.special.watchlist.styles',
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
 		) );
@@ -73,11 +74,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
-
-		// add beta styles
-		if ( MobileContext::singleton()->isBetaGroupMember() ) {
-			$output->addModuleStyles( 'skins.minerva.special.watchlist.beta.styles' );
-		}
 
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();
