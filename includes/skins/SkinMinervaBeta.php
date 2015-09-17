@@ -70,12 +70,7 @@ class SkinMinervaBeta extends SkinMinerva {
 		$modules['beta'] = array(
 			'skins.minerva.beta.scripts',
 		);
-		// Only load the banner experiment if WikidataPageBanner is not installed
-		// & experiment is enabled
-		if ( $this->getMFConfig()->get( 'MFIsBannerEnabled' )
-			&& !ExtensionRegistry::getInstance()->isLoaded( 'WikidataPageBanner' ) ) {
-			$modules['beta'][] = 'skins.minerva.beta.banner.scripts';
-		}
+
 		Hooks::run( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 
 		// Disable CentralNotice modules in beta

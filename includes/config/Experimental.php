@@ -41,14 +41,6 @@ $wgMFEnableMinervaBetaFeature = false;
 $wgMFEnableJSConsoleRecruitment = false;
 
 /**
- * Whether or not the banner experiment is enabled.
- * https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image
- *
- * @var boolean
- */
-$wgMFIsBannerEnabled = true;
-
-/**
  * This is a list of html tags, that could be recognized as the first heading of a page.
  * This is an interim solution to fix Bug T110436 and shouldn't be used, if you don't know,
  * what you do. Moreover, this configuration variable will be removed in the near future

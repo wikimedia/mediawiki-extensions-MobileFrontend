@@ -688,6 +688,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
+		global $wgWPBSkinBlacklist, $wgWPBEnableDefaultBanner;
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -696,6 +697,16 @@ class MobileFrontendHooks {
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
+
+		if ( $context->isBetaGroupMember() ) {
+			// turn default banners on
+			$wgWPBEnableDefaultBanner = true;
+			// Turn on the banner experiment
+			$needle = array_search( 'minerva', $wgWPBSkinBlacklist );
+			if ( $needle !== false ) {
+				unset( $wgWPBSkinBlacklist[$needle] );
+			}
+		}
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();

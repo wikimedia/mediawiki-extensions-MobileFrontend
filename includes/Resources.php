@@ -1129,23 +1129,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mediawiki.Title',
-			'mobile.startup',
-			'mobile.ajax',
-		),
-		'scripts' => array(
-			'resources/mobile.bannerImage/Image.js',
-			'resources/mobile.bannerImage/MobileViewBannerImageRepository.js',
-			'resources/mobile.bannerImage/BannerImage.js',
-		),
-		'styles' => array(
-			'resources/mobile.bannerImage/bannerImage.less',
-		),
-		'position' => 'top',
-	),
-
 	'mobile.fontchanger' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1640,15 +1623,6 @@ $wgMinervaBootstrapModules = array(
 		),
 		'messages' => array(
 			'mobile-frontend-commons-category-view',
-		),
-	),
-	'skins.minerva.beta.banner.scripts' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.scripts',
-			'mobile.bannerImage',
-		),
-		'scripts' => array(
-			'resources/skins.minerva.beta.banner.scripts/bannerImage.js',
 		),
 	),
 
