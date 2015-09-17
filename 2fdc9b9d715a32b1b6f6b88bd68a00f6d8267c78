@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_39c3ef8e",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-17T12:37:19Z",
+      "side": 1,
+      "message": "no need to save the result in an extra variable. I would do it like isAlphaGroupMemeber():\n\nreturn $this-\u003egetMobileMode() \u003d\u003d\u003d \u0027beta\u0027;",
+      "revId": "2fdc9b9d715a32b1b6f6b88bd68a00f6d8267c78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
