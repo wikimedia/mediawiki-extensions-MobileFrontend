@@ -212,6 +212,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_f4a32e95",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-17T14:51:45Z",
+      "side": 1,
+      "message": "The consistency argument is a good one.",
+      "parentUuid": "6ec1af18_ab77a1ce",
+      "revId": "86826594fbd18fd33d8574df4c47f3a9c373ff7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_ba9a9115",
         "filename": "resources/mobile.special.nearby.scripts/nearby.js",
         "patchSetId": 7
