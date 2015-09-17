@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_27474124",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-09-17T21:40:34Z",
+      "side": 0,
+      "message": "There is one mention of this at https://github.com/wikimedia/mediawiki-extensions-WikiGrok/blob/d69070b3c31806430335c81c92085e9a8466121b/Makefile#L31",
+      "revId": "b5356d60d8ced4461d896bc52003f4e5b4cb96ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
