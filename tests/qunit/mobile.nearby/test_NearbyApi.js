@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
+	var NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
 		m;
 
 	QUnit.module( 'MobileFrontend NearbyApi', {

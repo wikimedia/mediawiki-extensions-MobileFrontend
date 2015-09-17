@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var EditorApi = M.require( 'modules/editor/EditorApi' );
+	var EditorApi = M.require( 'mobile.editor.api/EditorApi' );
 
 	QUnit.module( 'MobileFrontend modules/editor/EditorApi', {
 		setup: function () {

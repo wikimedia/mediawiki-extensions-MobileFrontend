@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
-		Nearby = M.require( 'modules/nearby/Nearby' );
+	var NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
+		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		Nearby = M.require( 'mobile.nearby/Nearby' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
 		setup: function () {

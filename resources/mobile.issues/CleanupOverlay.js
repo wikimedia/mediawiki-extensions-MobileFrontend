@@ -1,6 +1,6 @@
 ( function ( M ) {
-	var Overlay = M.require( 'Overlay' ),
-		Icon = M.require( 'Icon' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		icon = new Icon( {
 			name: 'cleanup-gray',
 			additionalClassNames: 'issue-notice',
@@ -31,5 +31,6 @@
 			Overlay.prototype.initialize.call( this, options );
 		}
 	} );
-	M.define( 'modules/issues/CleanupOverlay', CleanupOverlay );
+	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay )
+		.deprecate( 'modules/issues/CleanupOverlay' );
 }( mw.mobileFrontend ) );

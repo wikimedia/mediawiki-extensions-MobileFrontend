@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
-	var Drawer = M.require( 'Drawer' ),
-		Icon = M.require( 'Icon' ),
-		Button = M.require( 'Button' ),
-		Anchor = M.require( 'Anchor' ),
+	var Drawer = M.require( 'mobile.drawers/Drawer' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
 		CtaDrawer;
 
 	/**
@@ -69,6 +69,6 @@
 		}
 	} );
 
-	M.define( 'CtaDrawer', CtaDrawer );
+	M.define( 'mobile.drawers/CtaDrawer', CtaDrawer ).deprecate( 'CtaDrawer' );
 
 }( mw.mobileFrontend, jQuery ) );

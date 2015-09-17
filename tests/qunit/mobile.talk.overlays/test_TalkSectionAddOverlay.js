@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
-	var TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),
-		api = M.require( 'api' );
+	var TalkSectionAddOverlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' ),
+		api = M.require( 'mobile.startup/api' );
 
 	QUnit.module( 'MobileFrontend TalkSectionAddOverlay', {
 		setup: function () {

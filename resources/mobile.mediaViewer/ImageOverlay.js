@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'Overlay' ),
-		Icon = M.require( 'Icon' ),
-		Button = M.require( 'Button' ),
-		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		ImageApi = M.require( 'mobile.mediaViewer/ImageApi' ),
 		ImageOverlay,
 		api;
 
@@ -245,6 +245,7 @@
 			}
 		}
 	} );
-	M.define( 'modules/mediaViewer/ImageOverlay', ImageOverlay );
+	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay )
+		.deprecate( 'modules/mediaViewer/ImageOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

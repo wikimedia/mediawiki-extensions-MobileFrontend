@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var Class = M.require( 'Class' );
+	var Class = M.require( 'mobile.oo/Class' );
 
 	QUnit.module( 'MobileFrontend Class' );
 

@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var SchemaMobileWebBrowse = M.require( 'loggingSchemas/SchemaMobileWebBrowse' ),
+	var SchemaMobileWebBrowse = M.require( 'mobile.loggingSchemas/SchemaMobileWebBrowse' ),
 		schema = new SchemaMobileWebBrowse(),
 		$collectionCard = $( '.collection-card' );
 

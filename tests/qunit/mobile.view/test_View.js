@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'View' );
+	var View = M.require( 'mobile.view/View' );
 
-	QUnit.module( 'MobileFrontend view', {
+	QUnit.module( 'MobileFrontend mobile.view/View', {
 		setup: function () {
 			var compiler = {
 				compile: function () {

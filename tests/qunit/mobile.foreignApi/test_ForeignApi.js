@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var ForeignApi = M.require( 'modules/ForeignApi' ),
-		api = M.require( 'api' );
+	var ForeignApi = M.require( 'mobile.foreignApi/ForeignApi' ),
+		api = M.require( 'mobile.startup/api' );
 
 	QUnit.module( 'MobileFrontend ForeignApi' );
 

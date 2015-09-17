@@ -1,13 +1,13 @@
 ( function ( M, $ ) {
 
 	var
-		Overlay = M.require( 'Overlay' ),
-		Anchor = M.require( 'Anchor' ),
-		Icon = M.require( 'Icon' ),
-		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
+		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
-		router = M.require( 'router' ),
+		router = M.require( 'mobile.startup/router' ),
 		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
 		SearchOverlay;
 
@@ -103,7 +103,7 @@
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
 			// use the given api module or use the default SearchApi
-			this.api = options.api || new M.require( 'modules/search/SearchApi' );
+			this.api = options.api || new M.require( 'mobile.search.api/SearchApi' );
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
@@ -358,6 +358,7 @@
 		}
 	} );
 
-	M.define( 'modules/search/SearchOverlay', SearchOverlay );
+	M.define( 'mobile.search/SearchOverlay', SearchOverlay )
+		.deprecate( 'modules/search/SearchOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

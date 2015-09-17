@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 	var BannerImage,
-		router = M.require( 'router' ),
-		View = M.require( 'View' ),
-		browser = M.require( 'browser' );
+		router = M.require( 'mobile.startup/router' ),
+		View = M.require( 'mobile.view/View' ),
+		browser = M.require( 'mobile.browser/browser' );
 
 	/**
 	 * Gets the aspect ratio of the banner image.
@@ -131,6 +131,7 @@
 		}
 	} );
 
-	M.define( 'modules/bannerImage/BannerImage', BannerImage );
+	M.define( 'mobile.bannerImage/BannerImage', BannerImage )
+		.deprecate( 'modules/bannerImage/BannerImage' );
 
 }( mw.mobileFrontend, jQuery ) );

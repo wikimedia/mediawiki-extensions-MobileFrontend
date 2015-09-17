@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
-	var Overlay = M.require( 'Overlay' ),
-		settings = M.require( 'settings' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		settings = M.require( 'mobile.settings/settings' ),
 		LanguageOverlay;
 
 	/**
@@ -137,6 +137,7 @@
 		}
 	} );
 
-	M.define( 'modules/languages/LanguageOverlay', LanguageOverlay );
+	M.define( 'mobile.overlays/LanguageOverlay', LanguageOverlay )
+		.deprecate( 'modules/languages/LanguageOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

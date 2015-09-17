@@ -1,14 +1,14 @@
 ( function ( M, $ ) {
-	var loader = M.require( 'loader' ),
-		pageApi = M.require( 'pageApi' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
-		user = M.require( 'user' ),
-		Button = M.require( 'Button' ),
+	var loader = M.require( 'mobile.overlays/moduleLoader' ),
+		pageApi = M.require( 'mobile.startup/pageApi' ),
+		LoadingOverlay = M.require( 'mobile.overlays/LoadingOverlay' ),
+		user = M.require( 'mobile.user/user' ),
+		Button = M.require( 'mobile.startup/Button' ),
 		$talk = $( '.talk' ),
 		title = $talk.data( 'title' ) || mw.config.get( 'wgPageName' ),
 		page = M.getCurrentPage(),
-		overlayManager = M.require( 'overlayManager' ),
-		skin = M.require( 'skin' );
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		skin = M.require( 'mobile.startup/skin' );
 
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
@@ -21,12 +21,12 @@
 		loader.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
 			if ( id === 'new' ) {
-				Overlay = M.require( 'modules/talk/TalkSectionAddOverlay' );
+				Overlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' );
 			} else if ( id ) {
 				talkOptions.id = id;
-				Overlay = M.require( 'modules/talk/TalkSectionOverlay' );
+				Overlay = M.require( 'mobile.talk.overlays/TalkSectionOverlay' );
 			} else {
-				Overlay = M.require( 'modules/talk/TalkOverlay' );
+				Overlay = M.require( 'mobile.talk.overlays/TalkOverlay' );
 			}
 			result.resolve( new Overlay( talkOptions ) );
 		} );

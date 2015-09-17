@@ -1,7 +1,7 @@
 ( function ( M, mw, $ ) {
 
-	var MobileViewBannerImageRepository = M.require( 'modules/bannerImage/MobileViewBannerImageRepository' ),
-		Image = M.require( 'modules/bannerImage/Image' );
+	var MobileViewBannerImageRepository = M.require( 'mobile.bannerImage/MobileViewBannerImageRepository' ),
+		Image = M.require( 'mobile.bannerImage/Image' );
 
 	QUnit.module( 'MobileFrontend modules/bannerImage/MobileViewBannerImageRepository', {
 		setup: function () {

@@ -1,9 +1,9 @@
 ( function ( M ) {
 	var TableOfContents,
-		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		View = M.require( 'View' ),
-		Icon = M.require( 'Icon' );
+		View = M.require( 'mobile.view/View' ),
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * View for table of contents
@@ -54,5 +54,6 @@
 		}
 	} );
 
-	M.define( 'modules/toc/TableOfContents', TableOfContents );
+	M.define( 'mobile.toc/TableOfContents', TableOfContents )
+		.deprecate( 'modules/toc/TableOfContents' );
 }( mw.mobileFrontend ) );

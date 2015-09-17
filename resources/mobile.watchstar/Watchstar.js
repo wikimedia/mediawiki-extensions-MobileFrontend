@@ -1,10 +1,10 @@
 ( function ( M ) {
 
 	var Watchstar,
-		View = M.require( 'View' ),
-		SchemaMobileWebWatching = M.require( 'loggingSchemas/SchemaMobileWebWatching' ),
-		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
-		Icon = M.require( 'Icon' ),
+		View = M.require( 'mobile.view/View' ),
+		SchemaMobileWebWatching = M.require( 'mobile.loggingSchemas/SchemaMobileWebWatching' ),
+		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watch',
 			additionalClassNames: 'watch-this-article'
@@ -13,10 +13,10 @@
 			name: 'watched',
 			additionalClassNames: 'watch-this-article watched'
 		} ),
-		toast = M.require( 'toast' ),
-		user = M.require( 'user' ),
+		toast = M.require( 'mobile.toast/toast' ),
+		user = M.require( 'mobile.user/user' ),
 		api = new WatchstarApi(),
-		CtaDrawer = M.require( 'CtaDrawer' );
+		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' );
 
 	/**
 	 * A clickable watchstar

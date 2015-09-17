@@ -1,12 +1,12 @@
 ( function ( M, $ ) {
-	var MobileViewBannerImageRepository = M.require( 'modules/bannerImage/MobileViewBannerImageRepository' ),
-		BannerImage = M.require( 'modules/bannerImage/BannerImage' ),
+	var MobileViewBannerImageRepository = M.require( 'mobile.bannerImage/MobileViewBannerImageRepository' ),
+		BannerImage = M.require( 'mobile.bannerImage/BannerImage' ),
 		page = M.getCurrentPage(),
-		skin = M.require( 'skin' ),
+		skin = M.require( 'mobile.startup/skin' ),
 		repository,
 		bannerImage;
 
-	M.require( 'context' ).assertMode( [ 'alpha', 'beta' ] );
+	M.require( 'mobile.context/context' ).assertMode( [ 'alpha', 'beta' ] );
 
 	// Load banner images on mobile devices for pages that are in mainspace but aren't Main_Page.
 	if (

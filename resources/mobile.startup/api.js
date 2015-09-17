@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var Api, api,
-		EventEmitter = M.require( 'eventemitter' );
+		EventEmitter = M.require( 'mobile.oo/eventemitter' );
 
 	/**
 	 * JavaScript wrapper for a horrible API. Use to retrieve things.
@@ -123,6 +123,6 @@
 	api = new Api();
 	api.Api = Api;
 
-	M.define( 'api', api );
+	M.define( 'mobile.startup/api', api ).deprecate( 'api' );
 
 }( mw.mobileFrontend, jQuery ) );

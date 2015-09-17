@@ -1,8 +1,8 @@
 ( function ( M ) {
 	var
-		View = M.require( 'View' ),
-		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
-		overlayManager = M.require( 'overlayManager' ),
+		View = M.require( 'mobile.view/View' ),
+		AbuseFilterOverlay = M.require( 'mobile.abusefilter/AbuseFilterOverlay' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		AbuseFilterPanel;
 
 	/**
@@ -66,6 +66,7 @@
 		}
 	} );
 
-	M.define( 'modules/editor/AbuseFilterPanel', AbuseFilterPanel );
+	M.define( 'mobile.abusefilter/AbuseFilterPanel', AbuseFilterPanel )
+		.deprecate( 'modules/editor/AbuseFilterPanel' );
 
 }( mw.mobileFrontend ) );

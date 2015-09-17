@@ -1,15 +1,15 @@
 ( function ( M, $ ) {
 	var category,
-		loader = M.require( 'loader' ),
-		Anchor = M.require( 'Anchor' ),
+		loader = M.require( 'mobile.overlays/moduleLoader' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
 		page = M.getCurrentPage(),
-		overlayManager = M.require( 'overlayManager' );
+		overlayManager = M.require( 'mobile.startup/overlayManager' );
 
 	overlayManager.add( /^\/commons-category\/(.+)$/, function ( title ) {
 		var d = $.Deferred();
 
 		loader.loadModule( 'mobile.commonsCategory' ).done( function () {
-			var CommonsCategoryOverlay = M.require( 'modules/commonsCategory/CommonsCategoryOverlay' );
+			var CommonsCategoryOverlay = M.require( 'mobile.commonsCategory/CommonsCategoryOverlay' );
 			d.resolve(
 				new CommonsCategoryOverlay( {
 					title: title

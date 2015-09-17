@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var WatchListApi = M.require( 'modules/watchlist/WatchListApi' ),
+	var WatchListApi = M.require( 'mobile.watchlist/WatchListApi' ),
 		response = {
 			continue: {
 				pageimages: {

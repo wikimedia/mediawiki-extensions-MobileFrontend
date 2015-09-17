@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
-		ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' ),
+	var ImageApi = M.require( 'mobile.mediaViewer/ImageApi' ),
+		ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
 		image = {
 			descriptionurl: 'https://commons.wikimedia.org/wiki/File:The_Montgomery,_San_Francisco.jpg',
 			thumbheight: 1024,
@@ -9,7 +9,7 @@
 			url: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Montgomery%2C_San_Francisco.jpg'
 		};
 
-	QUnit.module( 'MobileFrontend modules/mediaViewer/ImageOverlay', {
+	QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageOverlay', {
 		setup: function () {
 			this.sandbox.stub( ImageApi.prototype, 'getThumb' ).returns(
 				$.Deferred().resolve( image ) );

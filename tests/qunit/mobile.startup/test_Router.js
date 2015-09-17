@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Router = M.require( 'Router' ),
+	var Router = M.require( 'mobile.startup/Router' ),
 		hashQueue = [],
 		interval, router;
 

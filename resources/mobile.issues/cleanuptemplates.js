@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var module = ( function () {
-		var overlayManager = M.require( 'overlayManager' ),
-			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
+		var overlayManager = M.require( 'mobile.startup/overlayManager' ),
+			CleanupOverlay = M.require( 'mobile.issues/CleanupOverlay' );
 
 		/**
 		 * Extract a summary message from a cleanup template generated element that is
@@ -121,6 +121,6 @@
 		};
 	}() );
 
-	M.define( 'cleanuptemplates', module );
+	M.define( 'mobile.issues/cleanuptemplates', module ).deprecate( 'cleanuptemplates' );
 
 }( mw.mobileFrontend, jQuery ) );

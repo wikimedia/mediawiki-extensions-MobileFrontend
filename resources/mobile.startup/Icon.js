@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'View' ),
+	var View = M.require( 'mobile.view/View' ),
 		Icon;
 
 	/**
@@ -69,6 +69,6 @@
 		template: mw.template.get( 'mobile.startup', 'icon.hogan' )
 	} );
 
-	M.define( 'Icon', Icon );
+	M.define( 'mobile.startup/Icon', Icon ).deprecate( 'Icon' );
 
 }( mw.mobileFrontend, jQuery ) );

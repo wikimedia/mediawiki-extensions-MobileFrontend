@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' ),
+	var EventEmitter = M.require( 'mobile.oo/eventemitter' ),
 		View,
 		// Cached regex to split keys for `delegate`.
 		delegateEventSplitter = /^(\S+)\s*(.*)$/,
@@ -78,7 +78,7 @@
 	 *     @example
 	 *     <pre>
 	 *     var View, Section, section;
-	 *     View = M.require( 'View' );
+	 *     View = M.require( 'mobile.view/View' );
 	 *     Section = View.extend( {
 	 *       template: mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
 	 *     } );
@@ -354,6 +354,6 @@
 		};
 	} );
 
-	M.define( 'View', View );
+	M.define( 'mobile.view/View', View ).deprecate( 'View' );
 
 }( mw.mobileFrontend, jQuery ) );

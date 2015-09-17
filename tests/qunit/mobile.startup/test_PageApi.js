@@ -1,6 +1,6 @@
 /* jshint -W100 */
 ( function ( M, $ ) {
-	var PageApi = M.require( 'PageApi' ),
+	var PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi;
 
 	QUnit.module( 'MobileFrontend PageApi', {

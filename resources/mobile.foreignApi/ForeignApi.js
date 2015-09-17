@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var api = M.require( 'api' ),
+	var api = M.require( 'mobile.startup/api' ),
 		Api = api.Api,
 		ForeignApi;
 
@@ -122,6 +122,6 @@
 		}
 	} );
 
-	M.define( 'modules/ForeignApi', ForeignApi );
+	M.define( 'mobile.foreignApi/ForeignApi', ForeignApi ).deprecate( 'modules/ForeignApi' );
 
 }( mw.mobileFrontend, jQuery ) );

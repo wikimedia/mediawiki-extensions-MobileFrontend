@@ -1,7 +1,7 @@
 ( function ( M ) {
 
-	var SchemaMobileWebSearch = M.require( 'loggingSchemas/SchemaMobileWebSearch' ),
-		MobileWebSearchLogger = M.require( 'modules/search/MobileWebSearchLogger' );
+	var SchemaMobileWebSearch = M.require( 'mobile.loggingSchemas/SchemaMobileWebSearch' ),
+		MobileWebSearchLogger = M.require( 'mobile.search/MobileWebSearchLogger' );
 
 	QUnit.module( 'MobileFrontend: MobileWebSearchLogger', {
 		setup: function () {

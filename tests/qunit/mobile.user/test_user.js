@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var user = M.require( 'user' );
+	var user = M.require( 'mobile.user/user' );
 
 	QUnit.module( 'MobileFrontend user.js' );
 

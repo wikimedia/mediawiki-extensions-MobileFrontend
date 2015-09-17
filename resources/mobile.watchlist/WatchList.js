@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 	var WatchList,
-		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
-		InfiniteScroll = M.require( 'InfiniteScroll' ),
-		WatchListApi = M.require( 'modules/watchlist/WatchListApi' );
+		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		WatchListApi = M.require( 'mobile.watchlist/WatchListApi' );
 
 	/**
 	 * An extension of the PageList which preloads pages as all being watched.
@@ -95,6 +95,7 @@
 
 	} );
 
-	M.define( 'modules/watchlist/WatchList', WatchList );
+	M.define( 'mobile.watchlist/WatchList', WatchList )
+		.deprecate( 'modules/watchlist/WatchList' );
 
 }( mw.mobileFrontend, jQuery ) );

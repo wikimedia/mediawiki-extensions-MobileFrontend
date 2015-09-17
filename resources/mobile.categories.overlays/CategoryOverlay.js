@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var CategoryOverlay,
-		Overlay = M.require( 'Overlay' ),
-		CategoryApi = M.require( 'modules/categories/CategoryApi' );
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		CategoryApi = M.require( 'mobile.categories.overlays/CategoryApi' );
 
 	/**
 	 * Displays the list of categories for a page
@@ -134,6 +134,7 @@
 		}
 	} );
 
-	M.define( 'categories/CategoryOverlay', CategoryOverlay );
+	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay )
+		.deprecate( 'categories/CategoryOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

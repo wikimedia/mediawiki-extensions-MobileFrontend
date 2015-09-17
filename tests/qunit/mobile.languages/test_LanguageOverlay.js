@@ -1,5 +1,5 @@
 ( function ( M, LanguageOverlay ) {
-	var settings = M.require( 'settings' );
+	var settings = M.require( 'mobile.settings/settings' );
 
 	QUnit.module( 'MobileFrontend: LanguageOverlay', {
 		setup: function () {
@@ -123,4 +123,4 @@
 		assert.strictEqual( languages[6].lang, 'ko', 'Alphabetical order #6' );
 	} );
 
-} )( mw.mobileFrontend, mw.mobileFrontend.require( 'modules/languages/LanguageOverlay' ) );
+} )( mw.mobileFrontend, mw.mobileFrontend.require( 'mobile.overlays/LanguageOverlay' ) );

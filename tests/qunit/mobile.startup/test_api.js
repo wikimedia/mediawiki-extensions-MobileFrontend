@@ -1,7 +1,7 @@
 // FIXME: Various tests are skipped as they incorrectly stub inside the test.
 // These stubs should be moved into setup so they do not have side effects on other tests.
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api;
+	var Api = M.require( 'mobile.startup/api' ).Api;
 
 	QUnit.module( 'MobileFrontend api', {
 		setup: function () {
@@ -16,7 +16,7 @@
 	} );
 
 	QUnit.test( 'default instance', 1, function ( assert ) {
-		assert.ok( M.require( 'api' ) instanceof Api, 'return default instance' );
+		assert.ok( M.require( 'mobile.startup/api' ) instanceof Api, 'return default instance' );
 	} );
 
 	QUnit.skip( 'progress event', 1, function ( assert ) {

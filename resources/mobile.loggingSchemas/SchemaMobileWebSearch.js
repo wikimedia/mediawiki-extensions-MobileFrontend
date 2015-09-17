@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var Schema = M.require( 'Schema' ),
+	var Schema = M.require( 'mobile.startup/Schema' ),
 		SchemaMobileWebSearch,
-		context = M.require( 'context' );
+		context = M.require( 'mobile.context/context' );
 
 	/**
 	 * @class SchemaMobileWebSearch
@@ -31,6 +31,7 @@
 		} )
 	} );
 
-	M.define( 'loggingSchemas/SchemaMobileWebSearch', SchemaMobileWebSearch );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebSearch', SchemaMobileWebSearch )
+		.deprecate( 'loggingSchemas/SchemaMobileWebSearch' );
 
 }( mw.mobileFrontend, jQuery ) );

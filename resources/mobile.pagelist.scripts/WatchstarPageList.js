@@ -1,11 +1,12 @@
 ( function ( M, $ ) {
 
 	var WatchstarPageList,
-		PageList = M.require( 'PageList' ),
+		mWatchstar,
+		PageList = M.require( 'mobile.pagelist/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
-		user = M.require( 'user' ),
-		Page = M.require( 'Page' );
+		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		user = M.require( 'mobile.user/user' ),
+		Page = M.require( 'mobile.startup/Page' );
 
 	/**
 	 * List of items page view
@@ -91,8 +92,8 @@
 		}
 	} );
 
-	M.define( 'modules/WatchstarPageList', WatchstarPageList );
-	// FIXME: Backwards compatability. Deprecated module, remove when unused.
-	M.define( 'modules/PageList', WatchstarPageList );
+	mWatchstar = M.define( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList );
+	mWatchstar.deprecate( 'modules/WatchstarPageList' );
+	mWatchstar.deprecate( 'modules/PageList' );
 
 }( mw.mobileFrontend, jQuery ) );

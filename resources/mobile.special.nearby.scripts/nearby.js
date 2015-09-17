@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var Icon = M.require( 'Icon' ),
-		router = M.require( 'router' ),
-		Nearby = M.require( 'modules/nearby/Nearby' );
+	var Icon = M.require( 'mobile.startup/Icon' ),
+		router = M.require( 'mobile.startup/router' ),
+		Nearby = M.require( 'mobile.nearby/Nearby' );
 
 	$( function () {
 		var

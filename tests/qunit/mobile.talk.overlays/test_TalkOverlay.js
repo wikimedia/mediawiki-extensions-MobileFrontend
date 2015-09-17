@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var PageApi = M.require( 'PageApi' ),
+	var PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi = new PageApi(),
-		TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
+		TalkOverlay = M.require( 'mobile.talk.overlays/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
 		setup: function () {

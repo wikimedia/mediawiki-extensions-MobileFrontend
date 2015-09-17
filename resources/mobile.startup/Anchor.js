@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var Anchor,
-		View = M.require( 'View' );
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * A wrapper for creating an anchor.
@@ -30,6 +30,6 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'anchor.hogan' )
 	} );
-	M.define( 'Anchor', Anchor );
+	M.define( 'mobile.startup/Anchor', Anchor ).deprecate( 'Anchor' );
 
 }( mw.mobileFrontend ) );

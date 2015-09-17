@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var SearchApi = M.require( 'modules/search.beta/SearchApi' );
+	var SearchApi = M.require( 'mobile.search.beta.api/SearchApi' );
 
 	QUnit.module( 'MobileFrontend SearchApi', {
 		setup: function () {

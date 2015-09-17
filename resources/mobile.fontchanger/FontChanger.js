@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 	var FontChanger,
-		View = M.require( 'View' ),
-		Button = M.require( 'Button' ),
-		settings = M.require( 'settings' );
+		View = M.require( 'mobile.view/View' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		settings = M.require( 'mobile.settings/settings' );
 
 	/**
 	 * FontChanger wrapper
@@ -86,6 +86,7 @@
 		}
 	} );
 
-	M.define( 'modules/fontchanger/FontChanger', FontChanger );
+	M.define( 'mobile.fontchanger/FontChanger', FontChanger )
+		.deprecate( 'modules/fontchanger/FontChanger' );
 
 }( mw.mobileFrontend, jQuery ) );

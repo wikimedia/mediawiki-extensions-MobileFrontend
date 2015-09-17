@@ -39,6 +39,6 @@
 		}
 	};
 
-	M.define( 'util', util );
+	M.define( 'mobile.startup/util', util ).deprecate( 'util' );
 
 }( mw.mobileFrontend ) );

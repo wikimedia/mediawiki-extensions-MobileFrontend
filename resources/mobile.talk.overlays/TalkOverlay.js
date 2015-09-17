@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
 	var
-		Overlay = M.require( 'Overlay' ),
-		Page = M.require( 'Page' ),
-		Anchor = M.require( 'Anchor' ),
-		user = M.require( 'user' ),
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		Page = M.require( 'mobile.startup/Page' ),
+		Anchor = M.require( 'mobile.startup/Anchor' ),
+		user = M.require( 'mobile.user/user' ),
 		/**
 		 * Overlay for talk page
 		 * @extends Overlay
@@ -152,6 +152,7 @@
 			}
 		} );
 
-	M.define( 'modules/talk/TalkOverlay', TalkOverlay );
+	M.define( 'mobile.talk.overlays/TalkOverlay', TalkOverlay )
+		.deprecate( 'modules/talk/TalkOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
 
 	var Page,
-		View = M.require( 'View' ),
-		Section = M.require( 'Section' ),
-		Thumbnail = M.require( 'Thumbnail' );
+		View = M.require( 'mobile.view/View' ),
+		Section = M.require( 'mobile.startup/Section' ),
+		Thumbnail = M.require( 'mobile.startup/Thumbnail' );
 
 	/**
 	 * Mobile page view object
@@ -293,6 +293,6 @@
 		}
 	} );
 
-	M.define( 'Page', Page );
+	M.define( 'mobile.startup/Page', Page ).deprecate( 'Page' );
 
 }( mw.mobileFrontend, jQuery ) );

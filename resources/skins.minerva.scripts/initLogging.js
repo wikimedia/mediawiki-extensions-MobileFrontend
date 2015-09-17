@@ -1,8 +1,8 @@
 // This initialises EventLogging for main menu and some prominent links in the UI.
 // This code should only be loaded on the Minerva skin, it does not apply to other skins.
 ( function ( M, $ ) {
-	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
-		skin = M.require( 'skin' ),
+	var SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
+		skin = M.require( 'mobile.startup/skin' ),
 		mainMenuSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebMainMenuClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 

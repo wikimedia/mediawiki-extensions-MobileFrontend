@@ -1,13 +1,13 @@
 ( function ( M, $ ) {
 	var EditorOverlay,
-		EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		Section = M.require( 'Section' ),
-		EditorApi = M.require( 'modules/editor/EditorApi' ),
-		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
-		settings = M.require( 'settings' ),
-		Button = M.require( 'Button' ),
-		overlayManager = M.require( 'overlayManager' ),
-		toast = M.require( 'toast' ),
+		EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+		Section = M.require( 'mobile.startup/Section' ),
+		EditorApi = M.require( 'mobile.editor.api/EditorApi' ),
+		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
+		settings = M.require( 'mobile.settings/settings' ),
+		Button = M.require( 'mobile.startup/Button' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		toast = M.require( 'mobile.toast/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
 
 	/**
@@ -349,7 +349,7 @@
 			mw.loader.using(
 				'mobile.editor.ve',
 				function () {
-					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
 
 					self.clearSpinner();
 					overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
@@ -474,5 +474,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorOverlay', EditorOverlay );
+	M.define( 'mobile.editor.overlay/EditorOverlay', EditorOverlay )
+		.deprecate( 'modules/editor/EditorOverlay' );
 }( mw.mobileFrontend, jQuery ) );

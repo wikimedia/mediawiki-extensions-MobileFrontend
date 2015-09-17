@@ -222,6 +222,6 @@
 	};
 
 	browser = new Browser( window.navigator.userAgent, $( 'html' ) );
-	M.define( 'Browser', Browser );
-	M.define( 'browser', browser );
+	M.define( 'mobile.browser/Browser', Browser ).deprecate( 'Browser' );
+	M.define( 'mobile.browser/browser', browser ).deprecate( 'browser' );
 }( mw.mobileFrontend, jQuery ) );

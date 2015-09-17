@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' ),
+	var SchemaMobileWeb = M.require( 'mobile.loggingSchemas/SchemaMobileWeb' ),
 		SchemaMobileWebBrowse;
 
 	/**
@@ -12,6 +12,7 @@
 		name: 'MobileWebBrowse'
 	} );
 
-	M.define( 'loggingSchemas/SchemaMobileWebBrowse', SchemaMobileWebBrowse );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebBrowse', SchemaMobileWebBrowse )
+		.deprecate( 'loggingSchemas/SchemaMobileWebBrowse' );
 
 }( mw.mobileFrontend ) );

@@ -1,7 +1,7 @@
  ( function ( M, $ ) {
 
-	var Class = M.require( 'Class' ),
-		Image = M.require( 'modules/bannerImage/Image' ),
+	var Class = M.require( 'mobile.oo/Class' ),
+		Image = M.require( 'mobile.bannerImage/Image' ),
 		MobileViewBannerImageRepository;
 
 	/**
@@ -86,6 +86,7 @@
 		}
 	} );
 
-	M.define( 'modules/bannerImage/MobileViewBannerImageRepository', MobileViewBannerImageRepository );
+	M.define( 'mobile.bannerImage/MobileViewBannerImageRepository', MobileViewBannerImageRepository )
+		.deprecate( 'modules/bannerImage/MobileViewBannerImageRepository' );
 
 }( mw.mobileFrontend, jQuery ) );

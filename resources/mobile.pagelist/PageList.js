@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var PageList,
-		View = M.require( 'View' ),
-		browser = M.require( 'browser' );
+		View = M.require( 'mobile.view/View' ),
+		browser = M.require( 'mobile.browser/browser' );
 
 	/**
 	 * List of items page view
@@ -69,6 +69,6 @@
 		}
 	} );
 
-	M.define( 'PageList', PageList );
+	M.define( 'mobile.pagelist/PageList', PageList ).deprecate( 'PageList' );
 
 }( mw.mobileFrontend, jQuery ) );

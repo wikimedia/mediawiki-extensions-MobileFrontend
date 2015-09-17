@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 	var
-		OverlayManager = M.require( 'OverlayManager' ),
-		EventEmitter = M.require( 'eventemitter' ),
+		OverlayManager = M.require( 'mobile.startup/OverlayManager' ),
+		EventEmitter = M.require( 'mobile.oo/eventemitter' ),
 		fakeRouter, overlayManager;
 
-	QUnit.module( 'MobileFrontend OverlayManager', {
+	QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		setup: function () {
 			this.createFakeOverlay = function ( options ) {
 				var fakeOverlay = new EventEmitter();

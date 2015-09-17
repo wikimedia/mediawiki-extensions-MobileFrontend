@@ -1,7 +1,7 @@
 ( function ( M ) {
 	var AbuseFilterOverlay,
-		Button = M.require( 'Button' ),
-		Overlay = M.require( 'Overlay' );
+		Button = M.require( 'mobile.startup/Button' ),
+		Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * Overlay that shows a message about abuse. This overlay is rendered when the error code from the API
@@ -36,5 +36,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/AbuseFilterOverlay', AbuseFilterOverlay );
+	M.define( 'mobile.abusefilter/AbuseFilterOverlay', AbuseFilterOverlay )
+		.deprecate( 'modules/editor/AbuseFilterOverlay' );
 }( mw.mobileFrontend ) );

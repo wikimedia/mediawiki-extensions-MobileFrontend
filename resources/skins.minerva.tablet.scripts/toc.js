@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var TableOfContents = M.require( 'modules/toc/TableOfContents' ),
-		toggle = M.require( 'toggle' );
+	var TableOfContents = M.require( 'mobile.toc/TableOfContents' ),
+		toggle = M.require( 'mobile.toggle/toggle' );
 
 	/**
 	 * Create TableOfContents if the given Page has sections and is not the main page

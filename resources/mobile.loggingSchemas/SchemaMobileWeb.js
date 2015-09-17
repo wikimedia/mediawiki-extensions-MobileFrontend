@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var SchemaMobileWeb,
-		Schema = M.require( 'Schema' ),
-		context = M.require( 'context' );
+		Schema = M.require( 'mobile.startup/Schema' ),
+		context = M.require( 'mobile.context/context' );
 
 	/**
 	 * @class SchemaMobileWeb
@@ -19,5 +19,6 @@
 		} )
 	} );
 
-	M.define( 'loggingSchemas/SchemaMobileWeb', SchemaMobileWeb );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWeb', SchemaMobileWeb )
+		.deprecate( 'loggingSchemas/SchemaMobileWeb' );
 } )( mw.mobileFrontend, jQuery );

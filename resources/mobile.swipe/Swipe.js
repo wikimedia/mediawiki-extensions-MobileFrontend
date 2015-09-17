@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' ),
+	var EventEmitter = M.require( 'mobile.oo/eventemitter' ),
 		Swipe;
 
 	/**
@@ -19,8 +19,8 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *       var Swipe = M.require( 'Swipe' ),
-	 *         ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' ),
+	 *       var Swipe = M.require( 'mobile.swipe/Swipe' ),
+	 *         ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
 	 *         ImageOverlayNew;
 	 *       ImageOverlayNew = ImageOverlay.extend( {
 	 *         //...
@@ -141,5 +141,5 @@
 		}
 	} );
 
-	M.define( 'Swipe', Swipe );
+	M.define( 'mobile.swipe/Swipe', Swipe ).deprecate( 'Swipe' );
 }( mw.mobileFrontend, jQuery ) );

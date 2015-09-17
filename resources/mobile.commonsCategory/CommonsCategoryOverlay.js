@@ -1,6 +1,6 @@
 ( function ( M ) {
-	var Overlay = M.require( 'Overlay' ),
-		PhotoList = M.require( 'modules/gallery/PhotoList' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
 		CommonsCategoryOverlay;
 
 	/**
@@ -18,5 +18,6 @@
 			} ).appendTo( this.$( '.overlay-content' ) );
 		}
 	} );
-	M.define( 'modules/commonsCategory/CommonsCategoryOverlay', CommonsCategoryOverlay );
+	M.define( 'mobile.commonsCategory/CommonsCategoryOverlay', CommonsCategoryOverlay )
+		.deprecate( 'modules/commonsCategory/CommonsCategoryOverlay' );
 }( mw.mobileFrontend ) );

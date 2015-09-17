@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		skin = M.require( 'skin' ),
-		user = M.require( 'user' );
+		skin = M.require( 'mobile.startup/skin' ),
+		user = M.require( 'mobile.user/user' );
 
 	/**
 	 * Toggle the watch status of a known page

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
-	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
-		AddReferenceOverlay = M.require( 'modules/editor/AddReferenceOverlay' ),
+	var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
+		AddReferenceOverlay = M.require( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay' ),
 		EditorOverlayWithToolbar;
 
 	/**
@@ -176,5 +176,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorOverlayWithToolbar', EditorOverlayWithToolbar );
+	M.define( 'mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar', EditorOverlayWithToolbar )
+		.deprecate( 'modules/editor/EditorOverlayWithToolbar' );
 }( mw.mobileFrontend, jQuery ) );

@@ -1,5 +1,5 @@
 ( function ( $, M ) {
-	var Schema = M.require( 'Schema' ),
+	var Schema = M.require( 'mobile.startup/Schema' ),
 		TestSchema = Schema.extend( {
 			name: 'test'
 		} );

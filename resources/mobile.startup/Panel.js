@@ -1,6 +1,6 @@
 ( function ( M ) {
 
-	var View = M.require( 'View' ),
+	var View = M.require( 'mobile.view/View' ),
 		Panel;
 
 	/**
@@ -79,6 +79,6 @@
 		}
 	} );
 
-	M.define( 'Panel', Panel );
+	M.define( 'mobile.startup/Panel', Panel ).deprecate( 'Panel' );
 
 }( mw.mobileFrontend ) );

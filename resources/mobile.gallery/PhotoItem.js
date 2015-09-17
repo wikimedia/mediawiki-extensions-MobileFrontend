@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var PhotoItem,
-		View = M.require( 'View' );
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Single photo item in gallery
@@ -11,5 +11,5 @@
 		template: mw.template.get( 'mobile.gallery', 'PhotoItem.hogan' ),
 		tagName: 'li'
 	} );
-	M.define( 'modules/gallery/PhotoItem', PhotoItem );
+	M.define( 'mobile.gallery/PhotoItem', PhotoItem ).deprecate( 'modules/gallery/PhotoItem' );
 }( mw.mobileFrontend ) );

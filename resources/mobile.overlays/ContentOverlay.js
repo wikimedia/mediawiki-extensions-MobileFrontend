@@ -1,7 +1,8 @@
 ( function ( M ) {
 
 	var ContentOverlay,
-		Overlay = M.require( 'Overlay' );
+		mContentOverlay,
+		Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * An {@link Overlay} that is loaded as a modal within the content and that does
@@ -26,8 +27,8 @@
 		 */
 		appendToElement: '#mw-mf-page-center'
 	} );
-	// FIXME: Here for backwards compatibility. Remove when fully deprecated
-	M.define( 'modules/tutorials/ContentOverlay', ContentOverlay );
-	M.define( 'ContentOverlay', ContentOverlay );
+	mContentOverlay = M.define( 'mobile.overlays/ContentOverlay', ContentOverlay );
+	mContentOverlay.deprecate( 'ContentOverlay' );
+	mContentOverlay.deprecate( 'modules/tutorials/ContentOverlay' );
 
 }( mw.mobileFrontend ) );

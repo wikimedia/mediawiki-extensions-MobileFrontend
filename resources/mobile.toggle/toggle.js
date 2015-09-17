@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
-	var context = M.require( 'context' ),
-		settings = M.require( 'settings' ),
-		browser = M.require( 'browser' ),
-		escapeHash = M.require( 'util' ).escapeHash,
+	var context = M.require( 'mobile.context/context' ),
+		settings = M.require( 'mobile.settings/settings' ),
+		browser = M.require( 'mobile.browser/browser' ),
+		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowUpOptions = {
 			name: 'arrow-up',
 			additionalClassNames: 'indicator'
@@ -11,7 +11,7 @@
 			name: 'arrow-down',
 			additionalClassNames: 'indicator'
 		},
-		Icon = M.require( 'Icon' );
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * Using the settings module looks at what sections were previously expanded on
@@ -305,13 +305,13 @@
 		}
 	}
 
-	M.define( 'toggle', {
+	M.define( 'mobile.toggle/toggle', {
 		reveal: reveal,
 		toggle: toggle,
 		enable: enable,
 		_getExpandedSections: getExpandedSections,
 		_expandStoredSections: expandStoredSections,
 		_cleanObsoleteStoredSections: cleanObsoleteStoredSections
-	} );
+	} ).deprecate( 'toggle' );
 
 }( mw.mobileFrontend, jQuery ) );

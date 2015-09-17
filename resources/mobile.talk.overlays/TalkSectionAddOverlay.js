@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
 	var
-		Overlay = M.require( 'Overlay' ),
-		api = M.require( 'api' ),
-		toast = M.require( 'toast' ),
-		Icon = M.require( 'Icon' ),
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		api = M.require( 'mobile.startup/api' ),
+		toast = M.require( 'mobile.toast/toast' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		TalkSectionAddOverlay;
 
 	/**
@@ -175,6 +175,7 @@
 		}
 	} );
 
-	M.define( 'modules/talk/TalkSectionAddOverlay', TalkSectionAddOverlay );
+	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay )
+		.deprecate( 'modules/talk/TalkSectionAddOverlay' );
 
 }( mw.mobileFrontend, jQuery ) );

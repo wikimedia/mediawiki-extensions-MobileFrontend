@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var MessageBox,
-		View = M.require( 'View' );
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * @class MessageBox

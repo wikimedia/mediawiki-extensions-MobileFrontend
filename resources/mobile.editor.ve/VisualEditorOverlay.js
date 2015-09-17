@@ -1,7 +1,7 @@
 ( function ( M, $, ve ) {
-	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		settings = M.require( 'settings' ),
-		overlayManager = M.require( 'overlayManager' ),
+	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+		settings = M.require( 'mobile.settings/settings' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		VisualEditorOverlay;
 
 	/**
@@ -124,7 +124,7 @@
 			this.$( '.surface' ).hide();
 			// Load the SourceEditor and replace the VisualEditor overlay with it
 			mw.loader.using( 'mobile.editor.overlay', function () {
-				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 
 				self.clearSpinner();
 				self.applyHeaderOptions( self.options, false );
@@ -144,6 +144,7 @@
 		}
 	} );
 
-	M.define( 'modules/editor/VisualEditorOverlay', VisualEditorOverlay );
+	M.define( 'mobile.editor.ve/VisualEditorOverlay', VisualEditorOverlay )
+		.deprecate( 'modules/editor/VisualEditorOverlay' );
 
 }( mw.mobileFrontend, jQuery, window.ve ) );

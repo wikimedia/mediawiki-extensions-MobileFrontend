@@ -6,8 +6,8 @@
 ( function ( M, $ ) {
 
 	var WatchListApi,
-		time = M.require( 'modules/lastEdited/time' ),
-		Api = M.require( 'api' ).Api;
+		time = M.require( 'mobile.modifiedBar/time' ),
+		Api = M.require( 'mobile.startup/api' ).Api;
 
 	/**
 	 * @class WatchListApi
@@ -139,6 +139,7 @@
 
 	} );
 
-	M.define( 'modules/watchlist/WatchListApi', WatchListApi );
+	M.define( 'mobile.watchlist/WatchListApi', WatchListApi )
+		.deprecate( 'modules/watchlist/WatchListApi' );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -8,11 +8,11 @@
 ( function ( M, $ ) {
 	var currentPage, skin,
 		$cachedIcons = $( '#page-actions' ).find( '.icon' ),
-		PageApi = M.require( 'PageApi' ),
+		PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi = new PageApi(),
-		Page = M.require( 'Page' ),
-		mainMenu = M.require( 'mainMenu' ),
-		Skin = M.require( 'Skin' ),
+		Page = M.require( 'mobile.startup/Page' ),
+		mainMenu = M.require( 'mobile.head/mainMenu' ),
+		Skin = M.require( 'mobile.startup/Skin' ),
 		$pageTitle = $( 'h1#section_0' );
 
 	skin = new Skin( {
@@ -21,7 +21,7 @@
 		page: getCurrentPage(),
 		mainMenu: mainMenu
 	} );
-	M.define( 'skin', skin );
+	M.define( 'mobile.startup/skin', skin ).deprecate( 'skin' );
 
 	$( window )
 		.on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) )
@@ -74,7 +74,7 @@
 		getCurrentPage: getCurrentPage
 	} );
 
-	M.define( 'pageApi', pageApi );
+	M.define( 'mobile.startup/pageApi', pageApi ).deprecate( 'pageApi' );
 
 	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
 	if ( window.console && window.console.log && window.console.log.apply &&
@@ -112,7 +112,7 @@
 	}
 
 	mw.loader.using( 'mobile.loggingSchemas' ).done( function () {
-		M.require( 'Schema' ).flushBeacon();
+		M.require( 'mobile.startup/Schema' ).flushBeacon();
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

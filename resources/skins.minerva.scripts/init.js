@@ -1,18 +1,18 @@
 ( function ( M, $ ) {
 	var inSample, inStable,
-		settings = M.require( 'settings' ),
+		settings = M.require( 'mobile.settings/settings' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
-		loader = M.require( 'loader' ),
-		router = M.require( 'router' ),
-		context = M.require( 'context' ),
-		references = M.require( 'references' ),
-		cleanuptemplates = M.require( 'cleanuptemplates' ),
+		loader = M.require( 'mobile.overlays/moduleLoader' ),
+		router = M.require( 'mobile.startup/router' ),
+		context = M.require( 'mobile.context/context' ),
+		references = M.require( 'mobile.references/references' ),
+		cleanuptemplates = M.require( 'mobile.issues/cleanuptemplates' ),
 		useNewMediaViewer = context.isBetaGroupMember(),
-		overlayManager = M.require( 'overlayManager' ),
+		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
-		pageApi = M.require( 'pageApi' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		pageApi = M.require( 'mobile.startup/pageApi' ),
+		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		thumbs = page.getThumbnails(),
 		betaOptinPanel;
@@ -69,7 +69,7 @@
 			moduleName = useNewMediaViewer ? 'ImageOverlayBeta' : 'ImageOverlay';
 
 		loader.loadModule( rlModuleName ).done( function () {
-			var ImageOverlay = M.require( 'modules/mediaViewer/' + moduleName );
+			var ImageOverlay = M.require( 'mobile.mediaViewer/' + moduleName );
 
 			result.resolve(
 				new ImageOverlay( {
@@ -87,7 +87,7 @@
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
-			var LanguageOverlay = M.require( 'modules/languages/LanguageOverlay' );
+			var LanguageOverlay = M.require( 'mobile.overlays/LanguageOverlay' );
 
 			pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();

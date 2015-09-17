@@ -36,5 +36,6 @@
 			.setDisabled( false );
 	};
 
-	M.define( 'ButtonWithSpinner', ButtonWithSpinner );
+	M.define( 'mobile.buttonWithSpinner/ButtonWithSpinner', ButtonWithSpinner )
+		.deprecate( 'ButtonWithSpinner' );
 }( mw.mobileFrontend ) );

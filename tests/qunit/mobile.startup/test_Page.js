@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Page = M.require( 'Page' );
+	var Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend Page' );
 

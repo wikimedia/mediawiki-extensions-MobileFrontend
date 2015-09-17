@@ -1,7 +1,7 @@
 ( function ( M ) {
-	var findSizeBucket = M.require( 'modules/mediaViewer' )._findSizeBucket;
+	var findSizeBucket = M.require( 'mobile.mediaViewer/mediaViewer' )._findSizeBucket;
 
-	QUnit.module( 'MobileFrontend modules/mediaViewer' );
+	QUnit.module( 'MobileFrontend mobile.mediaViewer/mediaViewer' );
 
 	QUnit.test( '#findSizeBucket', 3, function ( assert ) {
 		assert.strictEqual( findSizeBucket( 300 ), 320, 'value lower than bucket' );

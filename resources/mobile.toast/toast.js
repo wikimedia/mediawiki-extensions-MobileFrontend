@@ -1,8 +1,8 @@
 ( function ( M ) {
 	var Toast,
 		settingsKey = 'mobileFrontend/toast',
-		settings = M.require( 'settings' ),
-		Drawer = M.require( 'Drawer' );
+		settings = M.require( 'mobile.settings/settings' ),
+		Drawer = M.require( 'mobile.drawers/Drawer' );
 
 	/**
 	 * Auto-expiring notification.
@@ -70,6 +70,6 @@
 		}
 	} );
 
-	M.define( 'toast', new Toast() );
+	M.define( 'mobile.toast/toast', new Toast() ).deprecate( 'toast' );
 
 }( mw.mobileFrontend ) );

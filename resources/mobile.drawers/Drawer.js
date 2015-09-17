@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
-	var Panel = M.require( 'Panel' ),
-		Icon = M.require( 'Icon' ),
+	var Panel = M.require( 'mobile.startup/Panel' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		Drawer;
 
 	/**
@@ -83,6 +83,6 @@
 		}
 	} );
 
-	M.define( 'Drawer', Drawer );
+	M.define( 'mobile.drawers/Drawer', Drawer ).deprecate( 'Drawer' );
 
 }( mw.mobileFrontend, jQuery ) );

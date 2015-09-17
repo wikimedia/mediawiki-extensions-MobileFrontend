@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' ),
+	var EventEmitter = M.require( 'mobile.oo/eventemitter' ),
 		InfiniteScroll;
 
 	/**
@@ -24,7 +24,7 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *       var InfiniteScroll = M.require( 'InfiniteScroll' ),
+	 *       var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 	 *         PhotoList;
 	 *       PhotoList = View.extend( {
 	 *         //...
@@ -129,5 +129,6 @@
 		}
 	} );
 
-	M.define( 'InfiniteScroll', InfiniteScroll );
+	M.define( 'mobile.infiniteScroll/InfiniteScroll', InfiniteScroll )
+		.deprecate( 'InfiniteScroll' );
 }( mw.mobileFrontend, jQuery ) );

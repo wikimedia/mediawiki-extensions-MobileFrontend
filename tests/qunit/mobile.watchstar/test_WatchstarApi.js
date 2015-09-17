@@ -1,7 +1,7 @@
 ( function ( $, M ) {
 
-	var WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
-		Page = M.require( 'Page' );
+	var WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
+		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: WatchstarApi.js' );
 

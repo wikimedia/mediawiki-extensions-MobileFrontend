@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var Api = M.require( 'api' ).Api,
+	var Api = M.require( 'mobile.startup/api' ).Api,
 		WatchstarApi;
 
 	/**
@@ -114,6 +114,7 @@
 		}
 	} );
 
-	M.define( 'modules/watchstar/WatchstarApi', WatchstarApi );
+	M.define( 'mobile.watchstar/WatchstarApi', WatchstarApi )
+		.deprecate( 'modules/watchstar/WatchstarApi' );
 
 }( mw.mobileFrontend, jQuery ) );

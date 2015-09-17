@@ -1,11 +1,11 @@
 ( function ( M, $ ) {
 	var
-		Overlay = M.require( 'Overlay' ),
-		popup = M.require( 'toast' ),
-		api = M.require( 'api' ),
-		user = M.require( 'user' ),
-		Page = M.require( 'Page' ),
-		Button = M.require( 'Button' ),
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		popup = M.require( 'mobile.toast/toast' ),
+		api = M.require( 'mobile.startup/api' ),
+		user = M.require( 'mobile.user/user' ),
+		Page = M.require( 'mobile.startup/Page' ),
+		Button = M.require( 'mobile.startup/Button' ),
 		TalkSectionOverlay;
 
 	/**
@@ -153,5 +153,6 @@
 		}
 	} );
 
-	M.define( 'modules/talk/TalkSectionOverlay', TalkSectionOverlay );
+	M.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay )
+		.deprecate( 'modules/talk/TalkSectionOverlay' );
 }( mw.mobileFrontend, jQuery ) );
