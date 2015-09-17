@@ -7,13 +7,11 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
-		$cachedIcons = $( '#page-actions' ).find( '.icon' ),
 		PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'mobile.startup/Page' ),
 		mainMenu = M.require( 'mobile.head/mainMenu' ),
-		Skin = M.require( 'mobile.startup/Skin' ),
-		$pageTitle = $( 'h1#section_0' );
+		Skin = M.require( 'mobile.startup/Skin' );
 
 	skin = new Skin( {
 		el: 'body',
@@ -50,8 +48,7 @@
 	 */
 	function loadCurrentPage() {
 		var permissions = mw.config.get( 'wgRestrictionEdit', [] ),
-			// FIXME: Clean up when cache clears.
-			$content = $( '#content #bodyContent, #content_wrapper #content' );
+			$content = $( '#content #bodyContent' );
 		if ( permissions.length === 0 ) {
 			permissions.push( '*' );
 		}
@@ -80,35 +77,6 @@
 	if ( window.console && window.console.log && window.console.log.apply &&
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
 		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
-	}
-
-	// FIXME: Remove when old icon classes are no longer in page html.
-	if ( $cachedIcons.length ) {
-		// load the missing modules...
-		mw.loader.load( [ 'mediawiki.ui.icon', 'skins.minerva.icons.images' ] );
-		$cachedIcons.addClass( 'mw-ui-icon mw-ui-icon-element' ).removeClass( 'icon' );
-		$cachedIcons.filter( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-element' );
-	}
-
-	// On a cached stable article, the immediate pre-content div looks like:
-	//
-	//   <div class="pre-content">
-	//     <h1 id="section_0"></h1>
-	//     <ul id="page-actions" class="hlist"></ul>
-	//   </div>
-	//
-	// whereas in beta it looks like:
-	//
-	//   <div class="pre-content">
-	//     <ul id="page-actions" class="hlist"></ul>
-	//     <h1 id="section_0"></h1>
-	//   </div>
-	//
-	// FIXME: Remove this once the cache has cleared. This is tracked by T101721.
-	if ( $pageTitle.next( '#page-actions' ).length ) {
-		$( '#page-actions' ).remove()
-			.clone()
-			.insertBefore( $pageTitle );
 	}
 
 	mw.loader.using( 'mobile.loggingSchemas' ).done( function () {

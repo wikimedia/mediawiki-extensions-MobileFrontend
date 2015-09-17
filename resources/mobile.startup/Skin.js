@@ -47,8 +47,6 @@
 			// Make sure the menu is open and we are not clicking on the menu button
 			if (
 				this.mainMenu.isOpen() &&
-				// FIXME: remove the ID comparison when cache clears
-				ev.target.id !== 'mw-mf-main-menu-button' &&
 				!$target.hasClass( 'main-menu-button' )
 			) {
 				this.mainMenu.closeNavigationDrawers();

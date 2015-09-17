@@ -93,8 +93,6 @@
 				this.$el.find( '.nearby' ).parent().remove();
 			}
 
-			// FIXME: Remove when cache clears https://phabricator.wikimedia.org/T102868
-			this.$el.addClass( 'view-border-box' );
 			this.registerClickEvents();
 		},
 

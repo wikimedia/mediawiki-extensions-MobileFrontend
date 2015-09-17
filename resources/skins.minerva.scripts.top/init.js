@@ -2,8 +2,7 @@
 	var time = M.require( 'mobile.modifiedBar/time' ),
 		MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
 		mainMenu = new MainMenu( {
-			// FIXME: remove #mw-mf-main-menu-button when cache clears
-			activator: '#mw-mf-main-menu-button, .header .main-menu-button'
+			activator: '.header .main-menu-button'
 		} );
 
 	/**

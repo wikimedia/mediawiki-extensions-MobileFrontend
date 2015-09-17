@@ -51,8 +51,7 @@
 	 * @param {Page} [page] Defaults to $( '#bodyContent' )
 	 */
 	function setup( page ) {
-		// FIXME: Cleanup selector when cache clears
-		var $container = page ? page.$el : $( '#content #bodyContent, #content_wrapper #content' );
+		var $container = page ? page.$el : $( '#bodyContent' );
 
 		mw.loader.using( 'mobile.references' ).done( function () {
 			ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );

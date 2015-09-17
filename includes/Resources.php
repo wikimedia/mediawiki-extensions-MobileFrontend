@@ -37,18 +37,6 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
-	// FIXME: Remove when cache has cleared
-	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'top',
-		'styles' => array(
-			'resources/skins.minerva.base.reset/reset.less',
-			'resources/skins.minerva.base.styles/ui.less',
-			'resources/skins.minerva.base.styles/pageactions.less',
-			'resources/skins.minerva.base.styles/footer.less',
-			'resources/skins.minerva.base.styles/common.less',
-			'resources/skins.minerva.base.styles/icons.less',
-		),
-	),
 	'skins.minerva.base.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
@@ -485,19 +473,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: Remove when cache clears
+	// FIXME: Remove when cache clears (1.26wmf23)
 	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.editor',
 		),
 	),
-	// FIXME: Remove when cache clears
+	// FIXME: Remove when cache clears (1.26wmf23)
 	'mobile.browse' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.browse',
 		),
 	),
-	// FIXME: Remove when cache clears
+	// FIXME: Remove when cache clears (1.26wmf23)
 	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.toggling',
@@ -1012,7 +1000,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: Remove when cache clears.
+	// FIXME: Remove when cache clears. (1.26wmf23)
 	'mobile.watchstar.init' => array(
 		'dependencies' => array(
 			'skins.minerva.watchstar',
@@ -1520,7 +1508,7 @@ $wgMinervaSpecialPageModules = array(
 // These modules are the gateways to all other modules and will ensure the other modules get loaded
 // on the page.
 $wgMinervaBootstrapModules = array(
-	//FIXME: Remove when cache has cleared. Use skins.minerva.head instead
+	//FIXME: Remove when cache has cleared. Use skins.minerva.head instead (1.26wmf23)
 	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.scripts.top',
@@ -1673,7 +1661,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile-frontend-talk-add-overlay-submit',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
-			// FIXME: Remove after cache is cleared
+			// FIXME: Remove after cache is cleared (1.26wmf23)
 			'talk',
 		),
 	),

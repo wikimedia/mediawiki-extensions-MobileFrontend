@@ -12,14 +12,10 @@ A file for css that optimises the Minerva skin on larger devices.
 		clear: none;
 	}
 
-	// FIXME: remove the .stable .pre-content selector when cache clears
-	.stable .pre-content,
 	.heading-holder {
 		padding: 20px 0;
 	}
 
-	// FIXME: remove the .stable .pre-content selector when cache clears
-	.stable .pre-content,
 	.heading-holder {
 		position: relative;
 
@@ -112,18 +108,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		padding: 2em @contentPaddingTablet 1.5em @contentPaddingTablet;
 	}
 
-	.stable {
-		// FIXME: remove when cache clears
-		.last-modified-bar {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-		// FIXME: remove  when cache clears
-		#mw-mf-last-modified.pre-content {
-			max-width: none;
-		}
-
-	}
 	#mw-mf-last-modified {
 		padding: 5px 0;
 	}
@@ -166,7 +150,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	.pre-content,
 	.post-content,
 	.content-overlay,
-	// FIXME: remove .last-modified-bar when cache clears. The template has the .post-content class now.
+	// FIXME: remove .last-modified-bar when cache clears. The template has the .post-content class now. (1.26wmf23)
 	.last-modified-bar,
 	// FIXME: remove need for id selector
 	#mw-mf-page-center .pointer-overlay {

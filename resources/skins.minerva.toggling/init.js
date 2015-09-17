@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var page = M.getCurrentPage(),
-		// FIXME: Clean up when cache clears.
-		$contentContainer = $( '#content #bodyContent, #content_wrapper #content' ),
+		$contentContainer = $( '#content #bodyContent' ),
 		toggle = M.require( 'mobile.toggle/toggle' );
 
 	/**
