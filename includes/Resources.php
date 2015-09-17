@@ -1497,10 +1497,10 @@ $wgMinervaSpecialPageModules = array(
 		),
 	),
 
-	'skins.minerva.special.watchlist.beta.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'skins.minerva.special.watchlist.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'styles' => array(
-			'resources/skins.minerva.special.watchlist.beta.styles/specialWatchlist.less',
+			'resources/skins.minerva.special.watchlist.styles/specialWatchlist.less',
 		),
 	),
 
