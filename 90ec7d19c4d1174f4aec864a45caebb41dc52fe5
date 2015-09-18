@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_3871a00b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:49:06Z",
+      "side": 1,
+      "message": "Could you summarise the objections to the use of the abort method or provide a permalink to them?",
+      "revId": "90ec7d19c4d1174f4aec864a45caebb41dc52fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_d8517c3b",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:49:06Z",
+      "side": 1,
+      "message": "As I\u0027ve mentioned elsewhere, I guess this is visually similar to how we\u0027re writing classes everywhere else but /we don\u0027t need to do this/.",
+      "revId": "90ec7d19c4d1174f4aec864a45caebb41dc52fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_5876ecd4",
+        "filename": "resources/mobile.search.beta.api/SearchGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:49:06Z",
+      "side": 1,
+      "message": "This should be in stable IMO.",
+      "revId": "90ec7d19c4d1174f4aec864a45caebb41dc52fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_787168dc",
+        "filename": "resources/mobile.search.beta.api/SearchGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:49:06Z",
+      "side": 1,
+      "message": "This variable seems redundant here. I guess it\u0027s visually consistent with how we define classes elsewhere but still… we could simply write\n\n    SearchGatewayBeta.prototype.getApiData \u003d function ( query ) {\n      // Magic.\n    };\n\netc.",
+      "revId": "90ec7d19c4d1174f4aec864a45caebb41dc52fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_98421462",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:49:06Z",
+      "side": 1,
+      "message": "There\u0027s something missing here. The client should care whether or not the query is cached, only that there\u0027s a result.",
+      "revId": "90ec7d19c4d1174f4aec864a45caebb41dc52fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
