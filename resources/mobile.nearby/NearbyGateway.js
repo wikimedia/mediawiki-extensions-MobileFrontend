@@ -1,16 +1,7 @@
 ( function ( M, $ ) {
-
-	var Api, NearbyApi,
-		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
-		limit = 50,
+	var limit = 50,
 		Page = M.require( 'mobile.startup/Page' ),
 		ns = mw.config.get( 'wgMFContentNamespace' );
-
-	if ( endpoint ) {
-		Api = M.require( 'mobile.foreignApi/ForeignApi' );
-	} else {
-		Api = M.require( 'mobile.startup/api' ).Api;
-	}
 
 	/**
 	 * FIXME: Api should surely know this and return it in response to save us the hassle
@@ -50,11 +41,15 @@
 
 	/**
 	 * API for retrieving nearby pages
-	 * @class NearbyApi
-	 * @extends Api
+	 * @class NearbyGateway
+	 * @param {Object} options
+	 * @param {mw.Api} options.api
 	 */
-	NearbyApi = Api.extend( {
-		apiUrl: endpoint || Api.prototype.apiUrl,
+	function NearbyGateway( options ) {
+		this.api = options.api;
+	}
+
+	NearbyGateway.prototype = {
 		/**
 		 * Returns a human readable string stating the distance in meters or kilometers
 		 * depending on size.
@@ -141,7 +136,7 @@
 			};
 			$.extend( requestParams, params );
 
-			this.ajax( requestParams ).then( function ( resp ) {
+			this.api.ajax( requestParams ).then( function ( resp ) {
 				var pages;
 				if ( resp.query ) {
 					pages = resp.query.pages || [];
@@ -203,8 +198,7 @@
 
 			return d;
 		}
+	};
 
-	} );
-
-	M.define( 'mobile.nearby/NearbyApi', NearbyApi ).deprecate( 'modules/nearby/NearbyApi' );
+	M.define( 'mobile.nearby/NearbyGateway', NearbyGateway );
 }( mw.mobileFrontend, jQuery ) );

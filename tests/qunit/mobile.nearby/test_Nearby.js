@@ -1,12 +1,12 @@
 ( function ( M, $ ) {
 
-	var NearbyApi = M.require( 'mobile.nearby/NearbyApi' ),
+	var NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
 		setup: function () {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
 				.returns( $.Deferred().resolve( [] ) );
 		}
 	} );
@@ -49,7 +49,7 @@
 					latitude: 37.7,
 					longitude: -122
 				} ) );
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
 				.returns( $.Deferred().resolve( [
 					{
 						title: 'Sutro Tower',
@@ -109,7 +109,7 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
 		setup: function () {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
 				.returns( $.Deferred().reject() );
 		}
 	} );
@@ -133,7 +133,7 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
 		setup: function () {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPagesAroundPage' )
+			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPagesAroundPage' )
 				.returns( $.Deferred().reject() );
 		}
 	} );

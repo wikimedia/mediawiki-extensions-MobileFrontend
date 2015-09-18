@@ -16,6 +16,7 @@
 		"File",
 		"mw.user",
 		"mw.Api",
+		"mw.ForeignApi",
 		"OO.ui.ToolGroup",
 		"OO.ui.Tool",
 		"OO.ui.LookupElement",

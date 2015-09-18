@@ -1,33 +1,24 @@
 ( function ( M, $ ) {
-
-	var PhotoListApi, Api,
-		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small,
-		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' );
-
-	if ( corsUrl ) {
-		Api = M.require( 'mobile.foreignApi/ForeignApi' );
-	} else {
-		Api = M.require( 'mobile.startup/api' ).Api;
-	}
+	var IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small;
 
 	/**
 	 * API for retrieving gallery photos
 	 * @class PhotoListApi
-	 * @extends Api
+	 * @param {Object} options
+	 * @param {mw.Api} options.api
 	 */
-	PhotoListApi = Api.extend( {
-		apiUrl: corsUrl || Api.prototype.apiUrl,
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			Api.prototype.initialize.apply( this, arguments );
-			this.username = options.username;
-			this.category = options.category;
-			this.limit = 10;
-			this.continueParams = {
-				continue: ''
-			};
-			this.canContinue = true;
-		},
+	function PhotoListGateway( options ) {
+		this.api = options.api;
+		this.username = options.username;
+		this.category = options.category;
+		this.limit = 10;
+		this.continueParams = {
+			continue: ''
+		};
+		this.canContinue = true;
+	}
+
+	PhotoListGateway.prototype = {
 		/**
 		 * Returns a description based on the file name using
 		 * a regular expression that strips the file type suffix,
@@ -113,7 +104,7 @@
 				result = $.Deferred();
 
 			if ( this.canContinue === true ) {
-				this.ajax( this.getQuery() ).done( function ( resp ) {
+				this.api.ajax( this.getQuery() ).done( function ( resp ) {
 					var photos;
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
@@ -141,8 +132,7 @@
 
 			return result;
 		}
-	} );
+	};
 
-	M.define( 'mobile.gallery/PhotoListApi', PhotoListApi )
-		.deprecate( 'modules/gallery/PhotoListApi' );
+	M.define( 'mobile.gallery/PhotoListGateway', PhotoListGateway );
 }( mw.mobileFrontend, jQuery ) );
