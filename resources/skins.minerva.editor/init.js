@@ -17,7 +17,7 @@
 			name: 'edit-enabled'
 		} ),
 		currentPage = M.getCurrentPage(),
-		pageApi = M.require( 'pageApi' ),
+		pageApi = M.require( 'mobile.startup/pageApi' ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		context = M.require( 'mobile.context/context' ),

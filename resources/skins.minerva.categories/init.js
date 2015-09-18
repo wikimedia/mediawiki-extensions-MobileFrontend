@@ -4,7 +4,7 @@
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		user = M.require( 'user' );
+		user = M.require( 'mobile.user/user' );
 
 	// categories overlay
 	overlayManager.add( /^\/categories$/, function () {
