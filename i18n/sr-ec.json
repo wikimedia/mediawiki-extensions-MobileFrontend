@@ -192,8 +192,6 @@
 	"mobile-frontend-search-no-results": "Нема странице са овим насловом.",
 	"mobile-frontend-search-submit": "Иди",
 	"mobile-frontend-settings-images-explain": "Приказује све слике које се налазе на страници.",
-	"mobile-frontend-settings-alpha": "Експериментално",
-	"mobile-frontend-settings-alpha-description": "Још више експерименталних могућности, још већа опасност од нерешених проблема.",
 	"mobile-frontend-settings-beta": "Бета",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} језици",
 	"mobile-frontend-sign-in-error-heading": "Грешка",
