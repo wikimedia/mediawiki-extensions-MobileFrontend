@@ -99,20 +99,21 @@ class MobileFrontendHooks {
 			}
 		}
 
-		// log whether user is using alpha/beta/stable
+		// log whether user is using beta/stable
 		$mobileContext->logMobileMode();
 
 		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
 		$betaSkinName = $skinName . 'Beta';
-		$alphaSkinName = $skinName . 'Alpha';
-		// Force alpha for test mode to sure all modules can run
+		// Force beta for test mode to sure all modules can run
 		$name = $context->getTitle()->getDBkey();
 		$inTestMode =
 			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-		if ( $mobileContext->isAlphaGroupMember() &&
-			class_exists( $alphaSkinName ) ) {
-			$skinName = $alphaSkinName;
-		} elseif ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
+		// FIXME: remove the migration code below at some point.
+		// alpha no more, fallback to beta
+		if ( $mobileContext->getMobileMode() === 'alpha' ) {
+			$mobileContext->setMobileMode( 'beta' );
+		}
+		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
 		}
 		$skin = new $skinName( $context );
@@ -321,7 +322,7 @@ class MobileFrontendHooks {
 		$cookies[] = 'stopMobileRedirect';
 
 		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
-			$cookies[] = 'optin'; // Alpha/beta cookie
+			$cookies[] = 'optin'; // beta cookie
 			$cookies[] = 'disableImages';
 		}
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be

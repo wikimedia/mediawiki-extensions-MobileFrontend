@@ -249,7 +249,7 @@
 
 				enableKeyboardActions( $heading );
 				if ( browser.isWideScreen() || expandSections ) {
-					// Expand sections by default on wide screen devices or if the expand sections setting is set (alpha only)
+					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					toggle( $heading );
 				}
 

@@ -17,10 +17,10 @@
 		 * @cfg {String} [defaults.href] value of href attribute, when set tagName will default to anchor tag
 		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
 		 * @cfg {String} defaults.base String used as a base for generating class names.
-		 * Defaults to 'mw-ui-icon' (alpha) or 'icon' (stable and beta).
+		 * Defaults to 'mw-ui-icon'.
 		 * @cfg {String} defaults.name Name of the icon.
 		 * @cfg {String} defaults.modifier Additional class name.
-		 * Defaults to 'mw-ui-icon-element' (alpha) or '' (stable and beta).
+		 * Defaults to 'mw-ui-icon-element'.
 		 * @cfg {String} defaults.title Tooltip text.
 		 */
 		defaults: {

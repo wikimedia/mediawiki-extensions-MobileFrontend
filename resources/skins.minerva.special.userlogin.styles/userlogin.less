@@ -9,9 +9,6 @@
 	display: none;
 }
 
-// In theory, these 2 rules should be consolidated into a single semantic class like
-// 'alert', but we want to keep the CSS sharable between stable, beta, and alpha modes,
-// and alpha mode uses the core login page which doesn't have such a shared class.
 .errorbox,
 .successbox,
 .warningbox {
@@ -135,7 +132,6 @@
 	}
 }
 
-// The following css rules apply to beta/alpha mobile only
 // FIXME: Some of these rules should actually be mobile first, only hiding inputs needs to be wrapped in a media query
 @media all and (max-width: @wgMFDeviceWidthTablet) {
 	@margin: 12px;

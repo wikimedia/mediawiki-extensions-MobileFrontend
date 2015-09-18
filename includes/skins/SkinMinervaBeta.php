@@ -9,7 +9,7 @@
 class SkinMinervaBeta extends SkinMinerva {
 	/** @var string $template Name of this template */
 	public $template = 'MinervaTemplateBeta';
-	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
+	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
 
 	/** @inheritdoc **/
@@ -165,8 +165,8 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * If the user is in beta/alpha mode, we assume, he is an experienced
-	 * user (he/she found the "beta/alpha" switch ;))
+	 * If the user is in beta mode, we assume, he is an experienced
+	 * user (he/she found the "beta" switch ;))
 	 */
 	protected function isExperiencedUser() {
 		return true;

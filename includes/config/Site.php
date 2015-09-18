@@ -128,7 +128,7 @@ $wgMFTrademarkSitename = false;
 $wgDeviceDetectionClass = 'DeviceDetection';
 
 /**
- * Whether beta and alpha modes are enabled
+ * Whether beta mode is enabled
  */
 $wgMFEnableBeta = false;
 

@@ -6,7 +6,7 @@
 		repository,
 		bannerImage;
 
-	M.require( 'mobile.context/context' ).assertMode( [ 'alpha', 'beta' ] );
+	M.require( 'mobile.context/context' ).assertMode( [ 'beta' ] );
 
 	// Load banner images on mobile devices for pages that are in mainspace but aren't Main_Page.
 	if (

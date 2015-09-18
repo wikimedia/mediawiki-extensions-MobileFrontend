@@ -50,9 +50,7 @@
 	}
 
 	// change the placeholder text for javascript enabled browsers
-	if ( context.isAlphaGroupMember() ) {
-		searchPlaceholderMsg = 'mobile-frontend-placeholder-alpha';
-	} else if ( context.isBetaGroupMember() ) {
+	if ( context.isBetaGroupMember() ) {
 		searchPlaceholderMsg = 'mobile-frontend-placeholder-beta';
 	}
 
@@ -67,9 +65,7 @@
 		// focus() (see SearchOverlay#show) opens virtual keyboard only if triggered
 		// from user context event, so using it in route callback won't work
 		// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
-		// in alpha the search input is inside the main menu
-		$( '#searchInput, #mw-mf-page-left input.search' ).on( 'click', openSearchOverlay )
-			// FIXME: Review the need for this, especially given latest alpha developments
+		$( '#searchInput' ).on( 'click', openSearchOverlay )
 			// Apparently needed for main menu to work correctly.
 			.prop( 'readonly', true );
 	}

@@ -6,7 +6,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 /**
- * If set to true and running alpha, will add Wikidata description to page JS as
+ * If set to true and running beta, will add Wikidata description to page JS as
  * wgMFDescription variable
  */
 $wgMFUseWikibaseDescription = false;

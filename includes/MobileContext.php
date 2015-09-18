@@ -9,7 +9,7 @@
 class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	/**
-	 * Saves the testing mode user has opted in: 'alpha', 'beta' or 'stable'
+	 * Saves the testing mode user has opted in: 'beta' or 'stable'
 	 * @var string $mobileMode
 	 */
 	protected $mobileMode;
@@ -281,10 +281,10 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Returns the testing mode user has opted in: 'alpha', 'beta' or any other value for stable
+	 * Returns the testing mode user has opted in: 'beta' or any other value for stable
 	 * @return string
 	 */
-	protected function getMobileMode() {
+	public function getMobileMode() {
 		$enableBeta = $this->getMFConfig()->get( 'MFEnableBeta' );
 
 		if ( !$enableBeta ) {
@@ -292,7 +292,7 @@ class MobileContext extends ContextSource {
 		}
 		if ( is_null( $this->mobileMode ) ) {
 			$mobileAction = $this->getMobileAction();
-			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' || $mobileAction === 'stable' ) {
+			if ( $mobileAction === 'beta' || $mobileAction === 'stable' ) {
 				$this->mobileMode = $mobileAction;
 			} else {
 				$req = $this->getRequest();
@@ -307,19 +307,12 @@ class MobileContext extends ContextSource {
 	 * @param string $mode Mode to set
 	 */
 	public function setMobileMode( $mode ) {
-		if ( $mode !== 'alpha' && $mode !== 'beta' ) {
+		if ( $mode !== 'beta' ) {
 			$mode = '';
 		}
 		// Update statistics
-		if ( $mode === 'alpha' && !is_null( $this->mobileMode ) ) {
-			wfIncrStats( 'mobile.alpha.opt_in_cookie_set' );
-		}
 		if ( $mode === 'beta' ) {
-			if ( $this->mobileMode === 'alpha' ) {
-				wfIncrStats( 'mobile.alpha.opt_in_cookie_unset' );
-			} else {
-				wfIncrStats( 'mobile.opt_in_cookie_set' );
-			}
+			wfIncrStats( 'mobile.opt_in_cookie_set' );
 		}
 		if ( !$mode ) {
 			wfIncrStats( 'mobile.opt_in_cookie_unset' );
@@ -337,20 +330,11 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Wether user is Alpha group member
-	 * @return boolean
-	 */
-	public function isAlphaGroupMember() {
-		return $this->getMobileMode() === 'alpha';
-	}
-
-	/**
 	 * Wether user is Beta group member
 	 * @return boolean
 	 */
 	public function isBetaGroupMember() {
-		$mode = $this->getMobileMode();
-		return $mode === 'beta' || $mode === 'alpha';
+		return $this->getMobileMode() === 'beta';
 	}
 
 	/**
@@ -1086,14 +1070,12 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Adds analytics log items if the user is in alpha or beta mode
+	 * Adds analytics log items if the user is in beta mode
 	 *
 	 * Invoked from MobileFrontendHooks::onRequestContextCreateSkin()
 	 */
 	public function logMobileMode() {
-		if ( $this->isAlphaGroupMember() ) {
-			$this->addAnalyticsLogItem( 'mf-m', 'a' );
-		} elseif ( $this->isBetaGroupMember() ) {
+		if ( $this->isBetaGroupMember() ) {
 			$this->addAnalyticsLogItem( 'mf-m', 'b' );
 		}
 	}

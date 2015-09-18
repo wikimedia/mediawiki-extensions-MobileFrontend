@@ -511,23 +511,20 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider optInProvider
 	 */
-	public function testOptIn( array $cookies, $isAlpha, $isBeta, $enabledInSettings ) {
+	public function testOptIn( array $cookies, $isBeta, $enabledInSettings ) {
 		$this->setMwGlobals( 'wgMFEnableBeta', $enabledInSettings );
 		$mobileContext = $this->makeContext( '/', $cookies );
-		$this->assertEquals( $isAlpha, $mobileContext->isAlphaGroupMember() );
 		$this->assertEquals( $isBeta, $mobileContext->isBetaGroupMember() );
 	}
 
 	public function optInProvider() {
 		return array(
-			array( array(), false, false, true ),
-			array( array( 'optin' => 'beta' ), false, true, true ),
-			array( array( 'optin' => 'alpha' ), true, true, true ),
-			array( array( 'optin' => 'foobar' ), false, false, true ),
-			array( array(), false, false, false ),
-			array( array( 'optin' => 'beta' ), false, false, false ),
-			array( array( 'optin' => 'alpha' ), false, false, false ),
-			array( array( 'optin' => 'foobar' ), false, false, false ),
+			array( array(), false, true ),
+			array( array( 'optin' => 'beta' ), true, true ),
+			array( array( 'optin' => 'foobar' ), false, true ),
+			array( array(), false, false ),
+			array( array( 'optin' => 'beta' ), false, false ),
+			array( array( 'optin' => 'foobar' ), false, false ),
 		);
 	}
 

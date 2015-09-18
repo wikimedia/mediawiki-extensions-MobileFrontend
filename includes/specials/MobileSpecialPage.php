@@ -9,7 +9,7 @@
 class MobileSpecialPage extends SpecialPage {
 	/** @var boolean $hasDesktopVersion If true, the page will also be available on desktop */
 	protected $hasDesktopVersion = false;
-	/** @var string $mode Saves the actual mode used by user (stable|beta|alpha) */
+	/** @var string $mode Saves the actual mode used by user (stable|beta) */
 	protected $mode = 'stable';
 	/** @var boolean $listed Whether this special page should appear on Special:SpecialPages */
 	protected $listed = false;
@@ -45,10 +45,6 @@ class MobileSpecialPage extends SpecialPage {
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
 		} elseif ( $this->mode !== 'stable' ) {
 			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
-				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
-			} elseif ( $this->mode === 'alpha' && !$ctx->isAlphaGroupMember() ) {
-				// @todo FIXME: Do we need a more specific one for alpha special
-				// pages (we currently have none)
 				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
 			} else {
 				$this->executeWhenAvailable( $subPage );
