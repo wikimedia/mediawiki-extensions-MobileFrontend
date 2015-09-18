@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_f3181b7c",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T14:02:57Z",
+      "side": 1,
+      "message": "Is this comment still relevant?",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_3310e35a",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T14:02:57Z",
+      "side": 1,
+      "message": "This is /called from the constructor function/.",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_9319978b",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T14:02:57Z",
+      "side": 1,
+      "message": "What\u0027s the difference between this and the constructor function on line 7?",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_73fe6a02",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T14:02:57Z",
+      "side": 1,
+      "message": "Since WatchList isn\u0027t constructing new instances of mw.Api any more, you could create a stub here, i.e.\n\n    this.api \u003d {\n      get: function () {\n        return $.Deferred.resolve( resp ).promise();\n      }\n    };\n\nwhich, to me, is cleaner than fiddling with mw.Api\u0027s prototype.",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_3308e22a",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T14:02:57Z",
+      "side": 1,
+      "message": "Again, pass in a super simple stub rather than messing with mw.Api\u0027s prototype.",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
