@@ -837,6 +837,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			'mobile.loggingSchemas',
 			'mobile.toast',
+			'mobile.search.api',
 			'mobile.search',
 			// needed for saveHeader.hogan
 			'mobile.editor.common',
