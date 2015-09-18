@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_781088ad",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T09:52:18Z",
+      "side": 1,
+      "message": "There\u0027s a factory in here somewhere. I need to think about how we can extract this into a function / pattern to ease future development.",
+      "revId": "3226531d1a5dd70037f89d6c6cc18d4640850177",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
