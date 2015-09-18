@@ -96,8 +96,8 @@
 		 */
 		function initPageIssues() {
 			var ns = mw.config.get( 'wgNamespaceNumber' ),
-				// FIXME: Cleanup selector when cache has cleared
-				$container = ns === 14 ? $( '#content #bodyContent, #content_wrapper #content' )
+				// Categories have no lead section
+				$container = ns === 14 ? $( '#bodyContent' )
 					: M.getCurrentPage().getLeadSectionElement(),
 				labelMsgKey = 'mobile-frontend-meta-data-issues';
 

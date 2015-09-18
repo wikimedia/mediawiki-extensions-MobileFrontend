@@ -10,15 +10,8 @@ body {
 	height: 100%;
 }
 
-// FIXME: Remove content_wrapper when cache clears.
-#content_wrapper,
 #content {
 	border-top: 1px solid @grayLight;
-}
-
-// FIXME: Rule resets #content rule and can be removed when cache cleared
-#content_wrapper #content {
-	border-top: none;
 }
 
 // FIXME: remove when cache clears
@@ -27,8 +20,6 @@ body {
 	margin: 0 auto;
 }
 
-// FIXME: REMOVE .stable .pre-content.last-modified-bar selector when cache clears
-.stable .pre-content.last-modified-bar,
 .last-modified-bar {
 	background-color: transparent;
 	display: block;

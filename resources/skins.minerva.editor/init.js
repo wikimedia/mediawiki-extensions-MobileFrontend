@@ -127,8 +127,7 @@
 
 		overlayManager.add( /^\/editor\/(\d+)$/, function ( sectionId ) {
 			var
-				// FIXME: Clean up selector when cache has cleared.
-				$content = $( '#content #bodyContent, #content_wrapper #content' ),
+				$content = $( '#content #bodyContent' ),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {

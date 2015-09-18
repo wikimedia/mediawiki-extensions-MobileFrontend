@@ -38,23 +38,6 @@
 	 * @ignore
 	 */
 	function init() {
-		var talkTitle;
-
-		// FIXME: Remove this after cache is cleared
-		if ( !$talk.length && page.inNamespace( '' ) ) {
-			// talk page title
-			talkTitle = new mw.Title( mw.config.get( 'wgTitle' ), 1 );
-			$( '#page-secondary-actions' ).prepend(
-				'<a href="' +
-				talkTitle.getUrl() +
-				'" data-title="' +
-				talkTitle.getPrefixedText() +
-				'" class="mw-ui-icon mw-ui-icon-before mw-ui-icon-talk talk icon-32px mw-ui-button button">' +
-				mw.msg( 'talk' ) +
-				'</a>'
-			);
-			title = talkTitle.getPrefixedText();
-		}
 		$talk.on( 'click', function () {
 			window.location.hash = '#/talk';
 			return false;
@@ -72,8 +55,7 @@
 			label: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 			href: '#/talk/new',
 			progressive: true
-			// FIXME: Cleanup selector when cache has cleared
-		} ).prependTo( '#content #bodyContent, #content_wrapper #content' );
+		} ).prependTo( '#content #bodyContent' );
 
 		// reload the page after the new discussion was added
 		M.on( 'talk-added-wo-overlay', function () {
