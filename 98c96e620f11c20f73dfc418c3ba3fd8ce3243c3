@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_b81cb07d",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:58:21Z",
+      "side": 1,
+      "message": "What\u0027s the difference between #initialize and the constructor function?",
+      "revId": "98c96e620f11c20f73dfc418c3ba3fd8ce3243c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_9819b48b",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:58:21Z",
+      "side": 1,
+      "message": "This documentation needs updating to include the fact that the last preview request will be aborted.",
+      "revId": "98c96e620f11c20f73dfc418c3ba3fd8ce3243c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_f809d834",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:58:21Z",
+      "side": 1,
+      "message": "This should be\n\n    this.gateway.abortPreview();",
+      "revId": "98c96e620f11c20f73dfc418c3ba3fd8ce3243c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_330f8335",
+        "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-18T10:58:21Z",
+      "side": 1,
+      "message": "This should be\n\n    var gateway \u003d new EditorGateway( /* ... */ );",
+      "revId": "98c96e620f11c20f73dfc418c3ba3fd8ce3243c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
