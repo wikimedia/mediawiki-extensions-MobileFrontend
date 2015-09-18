@@ -87,10 +87,17 @@
 			// 0 because we want to have some tappable area to the left of the icon
 			left: 0;
 		}
-		.overlay-header,
-		.overlay-content {
+		.overlay-header {
 			padding-left: 0;
 			padding-right: 0;
+		}
+
+		.overlay-header,
+		.overlay-content {
+			max-width: none;
+			.content {
+				margin: 0 @contentMargin;
+			}
 		}
 	}
 }
