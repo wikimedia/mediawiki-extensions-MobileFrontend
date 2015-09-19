@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_8d5bab56",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-09-19T01:37:16Z",
+      "side": 1,
+      "message": "Inception. Please rephrase into something comprehensible (or at least remove the outer two \"Revert\", e.g. \"revert migrate ..\"). May wanna reference the original commit underneath and very briefly describe what it actually does.",
+      "revId": "ef39a725cdf1a1a83481645099a79d1befef0ae6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
