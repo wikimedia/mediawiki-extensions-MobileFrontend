@@ -40,7 +40,8 @@
 			"MPlauche",
 			"Mattho69",
 			"Wladek92",
-			"Weft"
+			"Weft",
+			"Orlodrim"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -242,7 +243,7 @@
 	"mobile-frontend-nearby-loading": "Chargement des sujets proches de votre emplacement actuel",
 	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} à proximité ne peut pas savoir où vous êtes... Essayer à nouveau ?",
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Essayez un espace ouvert avec un meilleur signal.",
-	"mobile-frontend-nearby-noresults": "C’est calme ici… Il n'y a aucune page dans les environs.",
+	"mobile-frontend-nearby-noresults": "C’est calme ici... Il n’y a aucune page sur un sujet situé dans les environs.",
 	"mobile-frontend-nearby-noresults-guidance": "Essayez de créer une nouvelle page ou d’ajouter un emplacement à une déjà existante",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} Le voisinage n’a pas le droit d’accéder à votre emplacement.",
 	"mobile-frontend-nearby-permission-guidance": "Veuillez vous assurer d’avoir donné le droit d’afficher où vous êtes. Vous devriez peut-être vérifier les paramètres de localisation de votre navigateur.",
