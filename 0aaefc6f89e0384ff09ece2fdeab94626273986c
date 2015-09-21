@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eceab4c_0cfab773",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-21T23:56:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_f3181b7c",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_3310e35a",
         "filename": "resources/mobile.watchlist/WatchListGateway.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-18T14:02:57Z",
       "side": 1,
       "message": "This is /called from the constructor function/.",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eceab4c_2c3e9327",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-21T23:56:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_3310e35a",
       "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4eceab4c_cc426fb2",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-21T23:56:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ec1af18_9319978b",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_73fe6a02",
         "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
         "patchSetId": 5
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "4eceab4c_0c1077ac",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-21T23:56:44Z",
+      "side": 1,
+      "message": "I\u0027m not convinced... stubbing mw.Api is a single line and we can grep for things using mw.Api pretty easy. What are the advantages of doing this they are not clear to me. If we use more of api methods we\u0027ll have to add stubs for each of them here. Is that useful?",
+      "parentUuid": "6ec1af18_73fe6a02",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_3308e22a",
         "filename": "tests/qunit/mobile.watchlist/test_WatchListGateway.js",
         "patchSetId": 5
@@ -81,6 +153,24 @@
       "writtenOn": "2015-09-18T14:02:57Z",
       "side": 1,
       "message": "Again, pass in a super simple stub rather than messing with mw.Api\u0027s prototype.",
+      "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eceab4c_2c15339d",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchListGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-21T23:56:44Z",
+      "side": 1,
+      "message": "see last comment.",
+      "parentUuid": "6ec1af18_3308e22a",
       "revId": "0aaefc6f89e0384ff09ece2fdeab94626273986c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
