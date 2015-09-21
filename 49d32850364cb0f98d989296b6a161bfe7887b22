@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_c9175df2",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-09-21T12:42:50Z",
+      "side": 1,
+      "message": "We should also change the paddings to non 0 values. http://imgur.com/ddyxMyn",
+      "revId": "49d32850364cb0f98d989296b6a161bfe7887b22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
