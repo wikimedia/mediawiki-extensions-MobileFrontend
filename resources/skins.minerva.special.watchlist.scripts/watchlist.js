@@ -24,6 +24,7 @@
 				funnel: 'watchlist',
 				enhance: true
 			} );
+			$watchlist.find( '.page-summary .info' ).css( 'visibility', 'visible' );
 			watchlist.on( 'unwatch', function () {
 				wlSchema.log( {
 					name: actionNamePrefix + 'unwatch'
