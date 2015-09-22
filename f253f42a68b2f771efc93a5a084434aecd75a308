@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_6e900f47",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-22T16:44:10Z",
+      "side": 1,
+      "message": "Having the above 2 completely confused me for a while. I then noticed the last modified bar on pages also changes from \"Last modified\" to \"Last edited\"\n\nWe should use the same messaging across the site, which in my opinion means we should use \"mobile-frontend-last-modified-date\", either as is or with a little edit.\n\nDesktop uses \u0027modified\u0027 terminology so possibly we should use that everywhere but I\u0027ll leave that to Kaity. let me chat with her today and work out the messaging.",
+      "revId": "f253f42a68b2f771efc93a5a084434aecd75a308",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_0e95cb35",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-22T16:44:10Z",
+      "side": 1,
+      "message": "We have a hidden class. Should we use that class or should we just use the info class?\nHaving both hidden and invisible is confusing...",
+      "revId": "f253f42a68b2f771efc93a5a084434aecd75a308",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
