@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var time = M.require( 'modules/lastEdited/time' );
+	var time = M.require( 'mobile.modifiedBar/time' );
 
 	/**
 	 * @class WatchListGateway
