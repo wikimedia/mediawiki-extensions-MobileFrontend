@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ecb373e_a5c13285",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-22T23:03:18Z",
+      "side": 1,
+      "message": "I checked with Kaity and she says to use `edited` so simply update the existing i18n messages.",
+      "parentUuid": "2ecb373e_6e900f47",
+      "revId": "f253f42a68b2f771efc93a5a084434aecd75a308",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecb373e_0e95cb35",
         "filename": "includes/specials/SpecialMobileEditWatchlist.php",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "hidden class changes the display property of an element, the above invisible class changes the visibility of the element. I think we want to change visibility in this instance because we\u0027d like to avoid content shift when the text is ready to be displayed.",
       "parentUuid": "2ecb373e_0e95cb35",
+      "revId": "f253f42a68b2f771efc93a5a084434aecd75a308",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_05c5a690",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-22T23:03:18Z",
+      "side": 1,
+      "message": "If it\u0027s not a generic rule don\u0027t make it seem like one. Just use .info",
+      "parentUuid": "2ecb373e_aebcb7b2",
       "revId": "f253f42a68b2f771efc93a5a084434aecd75a308",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
