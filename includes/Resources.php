@@ -448,7 +448,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.startup/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
 			'resources/mobile.startup/api.js',
-			'resources/mobile.startup/PageApi.js',
+			// FIXME: Move out of mobile.startup
+			'resources/mobile.startup/PageGateway.js',
 			'resources/mobile.startup/Anchor.js',
 			'resources/mobile.startup/Button.js',
 			'resources/mobile.startup/Icon.js',
@@ -701,6 +702,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.common',
 		),
 		'scripts' => array(
+			'resources/mobile.talk.overlays/TalkOverlayBase.js',
 			'resources/mobile.talk.overlays/TalkSectionOverlay.js',
 			'resources/mobile.talk.overlays/TalkSectionAddOverlay.js',
 			'resources/mobile.talk.overlays/TalkOverlay.js',

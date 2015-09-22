@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var
-		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		user = M.require( 'mobile.user/user' ),
@@ -12,14 +12,13 @@
 		 * @uses TalkSectionOverlay
 		 * @uses TalkSectionAddOverlay
 		 */
-		TalkOverlay = Overlay.extend( {
-			templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		TalkOverlay = TalkOverlayBase.extend( {
+			templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 				content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' )
 			} ),
 			/**
 			 * @inheritdoc
 			 * @cfg {Object} defaults Default options hash.
-			 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 			 * @cfg {Array} defaults.headings A list of {Section} objects to render heading links
 			 * for. If not set ajax request will be performed.
 			 * @cfg {String} defaults.heading Heading for talk overlay.
@@ -50,7 +49,7 @@
 
 			/** @inheritdoc */
 			postRender: function () {
-				Overlay.prototype.postRender.apply( this );
+				TalkOverlayBase.prototype.postRender.apply( this );
 				this.$board = this.$( '.board' );
 				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( this.options.title ) )
 					.removeClass( 'hidden' );
@@ -67,7 +66,7 @@
 			 */
 			showSpinner: function () {
 				this.$board.hide();
-				Overlay.prototype.showSpinner.apply( this, arguments );
+				TalkOverlayBase.prototype.showSpinner.apply( this, arguments );
 			},
 
 			/**
@@ -75,12 +74,12 @@
 			 * @method
 			 */
 			clearSpinner: function () {
-				Overlay.prototype.clearSpinner.apply( this, arguments );
+				TalkOverlayBase.prototype.clearSpinner.apply( this, arguments );
 				this.$board.show();
 			},
 
 			/**
-			 * Load content of the talk page via PageApi
+			 * Load content of the talk page into the overlay
 			 * @method
 			 * @param {Object} options for the overlay
 			 * @private
@@ -94,8 +93,7 @@
 				// clear actual content, if any
 				this.$( '.topic-title-list' ).empty();
 
-				// FIXME: use Page's mechanisms for retrieving page data instead
-				this.options.pageApi.getPage( options.title ).fail( function ( resp ) {
+				this.pageGateway.getPage( options.title ).fail( function ( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {

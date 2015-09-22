@@ -1,39 +1,34 @@
 ( function ( M, $ ) {
-	var
-		Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var TalkSectionOverlay,
+		TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		popup = M.require( 'mobile.toast/toast' ),
-		api = M.require( 'mobile.startup/api' ),
 		user = M.require( 'mobile.user/user' ),
 		Page = M.require( 'mobile.startup/Page' ),
-		Button = M.require( 'mobile.startup/Button' ),
-		TalkSectionOverlay;
+		Button = M.require( 'mobile.startup/Button' );
 
 	/**
 	 * Overlay for showing talk page section
 	 * @class TalkSectionOverlay
-	 * @extends Overlay
-	 * @uses Api
+	 * @extends TalkOverlayBase
 	 * @uses Page
 	 * @uses Button
 	 * @uses Toast
 	 */
-	TalkSectionOverlay = Overlay.extend( {
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+	TalkSectionOverlay = TalkOverlayBase.extend( {
+		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {PageApi} defaults.pageApi an api module to retrieve pages.
 		 * @cfg {String} defaults.title Title.
 		 * @cfg {Section} defaults.section that is currently being viewed in overlay.
 		 * @cfg {String} defaults.reply Reply heading.
 		 * @cfg {String} defaults.info Message that informs the user their talk reply will be
 		 * automatically signed.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
-			pageApi: undefined,
+		defaults: $.extend( {}, TalkOverlayBase.prototype.defaults, {
 			saveButton: new Button( {
 				block: true,
 				additionalClassNames: 'save-button',
@@ -45,7 +40,7 @@
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		} ),
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: $.extend( {}, TalkOverlayBase.prototype.events, {
 			'focus textarea': 'onFocusTextarea',
 			'click .save-button': 'onSaveClick'
 		} ),
@@ -55,7 +50,7 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			Overlay.prototype.postRender.apply( this );
+			TalkOverlayBase.prototype.postRender.apply( this );
 			this.$saveButton = $( '.save-button' );
 			if ( !this.options.section ) {
 				this.renderFromApi( this.options );
@@ -84,7 +79,7 @@
 		renderFromApi: function ( options ) {
 			var self = this;
 
-			this.options.pageApi.getPage( options.title ).done( function ( pageData ) {
+			this.pageGateway.getPage( options.title ).done( function ( pageData ) {
 				var page = new Page( pageData );
 				options.section = page.getSection( options.id );
 				self.render( options );
@@ -110,7 +105,8 @@
 				this.$saveButton.prop( 'disabled', true );
 				// sign and add newline to front
 				val = '\n\n' + val + ' ~~~~';
-				api.postWithToken( 'edit', {
+				// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
+				this.editorApi.postWithToken( 'edit', {
 					action: 'edit',
 					title: this.options.title,
 					section: this.options.id,
@@ -118,7 +114,7 @@
 				} ).done( function () {
 					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 					// invalidate the cache
-					self.options.pageApi.invalidatePage( self.options.title );
+					self.pageGateway.invalidatePage( self.options.title );
 
 					self.renderFromApi( self.options );
 				} ).fail( function ( data, response ) {

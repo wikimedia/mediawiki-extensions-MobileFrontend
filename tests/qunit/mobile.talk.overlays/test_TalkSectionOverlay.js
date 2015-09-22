@@ -1,14 +1,12 @@
 ( function ( M, $ ) {
 
 	var TalkSectionOverlay = M.require( 'mobile.talk.overlays/TalkSectionOverlay' ),
-		api = M.require( 'mobile.startup/api' ),
-		PageApi = M.require( 'mobile.startup/PageApi' ),
-		pageApi = new PageApi(),
 		user = M.require( 'mobile.user/user' ),
 		renderFromApiSpy;
 
 	QUnit.module( 'MobileFrontend TalkSectionOverlay - logged in', {
 		setup: function () {
+			this.api = new mw.Api();
 			renderFromApiSpy = this.sandbox.stub( TalkSectionOverlay.prototype, 'renderFromApi' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 		}
@@ -16,17 +14,21 @@
 
 	QUnit.test( 'Load section from api only, if needed', 2, function ( assert ) {
 		var overlay = new TalkSectionOverlay( {
+			api: this.api,
 			section: 'Testtext'
 		} );
 
 		assert.strictEqual( renderFromApiSpy.callCount, 0, 'Section requested from api, if no section given.' );
 
-		overlay = new TalkSectionOverlay();
+		overlay = new TalkSectionOverlay( {
+			api: this.api
+		} );
 		assert.ok( renderFromApiSpy.calledOnce, 'No Api request, if section given' );
 	} );
 
 	QUnit.test( 'Check comment box for logged in users', 1, function ( assert ) {
 		var overlay = new TalkSectionOverlay( {
+			api: this.api,
 			section: 'Test'
 		} );
 
@@ -37,6 +39,7 @@
 		var overlay;
 
 		overlay = new TalkSectionOverlay( {
+			api: this.api,
 			section: 'Test'
 		} );
 
@@ -48,13 +51,13 @@
 	} );
 
 	QUnit.test( 'Check api request on save', 1, function ( assert ) {
-		var spy = this.sandbox.stub( api, 'postWithToken' ).returns( $.Deferred().resolve() ),
-		overlay = new TalkSectionOverlay( {
-			pageApi: pageApi,
-			title: 'Talk:Test',
-			id: 1,
-			section: 'Test'
-		} );
+		var spy = this.sandbox.stub( mw.Api.prototype, 'postWithToken' ).returns( $.Deferred().resolve() ),
+			overlay = new TalkSectionOverlay( {
+				api: this.api,
+				title: 'Talk:Test',
+				id: 1,
+				section: 'Test'
+			} );
 
 		overlay.$textarea.val( 'Testcomment' );
 		overlay.onSaveClick();
@@ -75,6 +78,7 @@
 
 	QUnit.test( 'Check comment box for logged out users', 1, function ( assert ) {
 		var overlay = new TalkSectionOverlay( {
+			api: new mw.Api(),
 			section: 'Test'
 		} );
 
