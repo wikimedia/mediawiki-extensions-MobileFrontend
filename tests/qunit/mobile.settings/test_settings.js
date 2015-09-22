@@ -38,7 +38,7 @@
 		}
 	} );
 
-	QUnit.test( 'check cookies', 2, function ( assert ) {
+	QUnit.skip( 'check cookies', 2, function ( assert ) {
 		assert.strictEqual(
 			settings.cookiesEnabled(),
 			true,
@@ -54,7 +54,7 @@
 		);
 	} );
 
-	QUnit.test( 'localstorage', 3, function ( assert ) {
+	QUnit.skip( 'localstorage', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.get( 'test_key' ),
 			null,
@@ -76,7 +76,7 @@
 		);
 	} );
 
-	QUnit.test( 'cookie fallback', 3, function ( assert ) {
+	QUnit.skip( 'cookie fallback', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.get( 'test_key', true ),
 			null,
@@ -117,7 +117,7 @@
 			this.sandbox.restore();
 		}
 	} );
-	QUnit.test( 'without cookies or localStorage', 3, function ( assert ) {
+	QUnit.skip( 'without cookies or localStorage', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.save( 'test_key', 'yep' ),
 			false,
