@@ -8,6 +8,7 @@
 	"mobile-frontend-generic-login-action": "ŋaanythïn bë miöc",
 	"mobile-frontend-home-button": "Baai",
 	"mobile-frontend-language-article-heading": "Kuën në thok kɔ̈kic",
+	"mobile-frontend-login": "Thanyic",
 	"mobile-frontend-main-menu-account-create": "Cak cinakuën",
 	"mobile-frontend-main-menu-login": "ŋaanythïn",
 	"mobile-frontend-main-menu-nearby": "Thiääkkeye",
@@ -20,5 +21,6 @@
 	"mobile-frontend-view": "ɣoi cäth",
 	"mobile-frontend-view-mobile": "Cäth",
 	"tag-mobile_edit": "Cokic cäth",
-	"tag-mobile_web_edit": "Cokic cäth anuëët"
+	"tag-mobile_web_edit": "Cokic cäth anuëët",
+	"mobile-frontend-pageaction-edit-tooltip": "Cok abakë akut tueŋic."
 }
