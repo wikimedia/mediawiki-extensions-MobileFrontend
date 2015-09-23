@@ -354,6 +354,6 @@
 		};
 	} );
 
-	M.define( 'mobile.view/View', View ).deprecate( 'View' );
+	M.define( 'mobile.view/View', View );
 
 }( mw.mobileFrontend, jQuery ) );

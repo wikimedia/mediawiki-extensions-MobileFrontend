@@ -175,7 +175,6 @@
 		}
 	} );
 
-	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay )
-		.deprecate( 'modules/talk/TalkSectionAddOverlay' );
+	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

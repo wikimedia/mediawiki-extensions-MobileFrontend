@@ -114,7 +114,6 @@
 		}
 	} );
 
-	M.define( 'mobile.watchstar/WatchstarApi', WatchstarApi )
-		.deprecate( 'modules/watchstar/WatchstarApi' );
+	M.define( 'mobile.watchstar/WatchstarApi', WatchstarApi );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -54,6 +54,5 @@
 		}
 	} );
 
-	M.define( 'mobile.toc/TableOfContents', TableOfContents )
-		.deprecate( 'modules/toc/TableOfContents' );
+	M.define( 'mobile.toc/TableOfContents', TableOfContents );
 }( mw.mobileFrontend ) );

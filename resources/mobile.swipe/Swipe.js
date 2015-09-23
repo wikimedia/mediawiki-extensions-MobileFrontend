@@ -141,5 +141,5 @@
 		}
 	} );
 
-	M.define( 'mobile.swipe/Swipe', Swipe ).deprecate( 'Swipe' );
+	M.define( 'mobile.swipe/Swipe', Swipe );
 }( mw.mobileFrontend, jQuery ) );

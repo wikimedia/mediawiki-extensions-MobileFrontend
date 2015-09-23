@@ -94,7 +94,6 @@
 
 	} );
 
-	M.define( 'mobile.watchlist/WatchList', WatchList )
-		.deprecate( 'modules/watchlist/WatchList' );
+	M.define( 'mobile.watchlist/WatchList', WatchList );
 
 }( mw.mobileFrontend, jQuery ) );
