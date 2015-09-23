@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var ImageApi = M.require( 'mobile.mediaViewer/ImageApi' ),
-		ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
+	var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
 		image = {
 			descriptionurl: 'https://commons.wikimedia.org/wiki/File:The_Montgomery,_San_Francisco.jpg',
 			thumbheight: 1024,
@@ -11,13 +10,23 @@
 
 	QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageOverlay', {
 		setup: function () {
-			this.sandbox.stub( ImageApi.prototype, 'getThumb' ).returns(
-				$.Deferred().resolve( image ) );
+			this.sandbox.stub( mw.Api.prototype, 'get' ).returns(
+				$.Deferred().resolve( {
+					query: {
+						pages: [
+							{
+								imageinfo: [ image ]
+							}
+						]
+					}
+				} )
+			);
 		}
 	} );
 
 	QUnit.test( 'ImageOverlay', 1, function ( assert ) {
 		var imageOverlay = new ImageOverlay( {
+			api: new mw.Api(),
 			title: decodeURIComponent( image.url ),
 			caption: 'The Montgomery in 2012.'
 		} );

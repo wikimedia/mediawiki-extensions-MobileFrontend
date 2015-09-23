@@ -768,7 +768,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.mediaViewer/mediaViewer.less',
 		),
 		'scripts' => array(
-			'resources/mobile.mediaViewer/ImageApi.js',
+			'resources/mobile.mediaViewer/ImageGateway.js',
 			'resources/mobile.mediaViewer/ImageOverlay.js',
 		),
 		'templates' => array(

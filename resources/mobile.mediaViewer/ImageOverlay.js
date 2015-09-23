@@ -1,19 +1,16 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var ImageOverlay,
+		Overlay = M.require( 'mobile.overlays/Overlay' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		ImageApi = M.require( 'mobile.mediaViewer/ImageApi' ),
-		ImageOverlay,
-		api;
-
-	api = new ImageApi();
+		ImageGateway = M.require( 'mobile.mediaViewer/ImageGateway' );
 
 	/**
 	 * Displays images in full screen overlay
 	 * @class ImageOverlay
 	 * @extends Overlay
 	 * @uses Icon
-	 * @uses ImageApi
+	 * @uses ImageGateway
 	 */
 	ImageOverlay = Overlay.extend( {
 		// allow pinch zooming
@@ -24,6 +21,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {mw.Api} defaults.api instance of API to use
 		 * @cfg {String} defaults.cancelButton HTML of the cancel button.
 		 * @cfg {Object} defaults.detailsButton options for details button
 		 * @cfg {String} defaults.licenseLinkMsg Link to license information in media viewer.
@@ -58,6 +56,14 @@
 			// Click tracking for table of contents so we can see if people interact with it
 			'click .slider-button': 'onSlide'
 		} ),
+
+		/** @inheritdoc */
+		initialize: function ( options ) {
+			this.gateway = new ImageGateway( {
+				api: options.api
+			} );
+			Overlay.prototype.initialize.apply( this, arguments );
+		},
 		/**
 		 * Event handler for slide event
 		 * @param {jQuery.Event} ev
@@ -126,7 +132,7 @@
 
 			Overlay.prototype.postRender.apply( this );
 
-			api.getThumb( self.options.title ).done( function ( data ) {
+			this.gateway.getThumb( self.options.title ).done( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
 				/**

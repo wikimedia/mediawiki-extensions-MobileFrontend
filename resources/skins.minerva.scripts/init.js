@@ -73,6 +73,7 @@
 
 			result.resolve(
 				new ImageOverlay( {
+					api: new mw.Api(),
 					thumbnails: thumbs,
 					title: decodeURIComponent( title )
 				} )
