@@ -132,6 +132,7 @@
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
 					pageApi: pageApi,
+					api: new mw.Api(),
 					licenseMsg: skin.getLicenseMsg(),
 					title: page.title,
 					isAnon: user.isAnon(),

@@ -523,7 +523,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.abusefilter',
 		),
 		'scripts' => array(
-			'resources/mobile.editor.api/EditorApi.js',
+			'resources/mobile.editor.api/EditorGateway.js',
 		),
 	),
 

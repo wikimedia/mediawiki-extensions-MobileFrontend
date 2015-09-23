@@ -2,7 +2,7 @@
 	var EditorOverlay,
 		EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		Section = M.require( 'mobile.startup/Section' ),
-		EditorApi = M.require( 'mobile.editor.api/EditorApi' ),
+		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		Button = M.require( 'mobile.startup/Button' ),
@@ -15,7 +15,7 @@
 	 * @class EditorOverlay
 	 * @uses Section
 	 * @uses AbuseFilterPanel
-	 * @uses EditorApi
+	 * @uses EditorGateway
 	 * @uses VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 */
@@ -35,6 +35,7 @@
 		 * @cfg {Object} defaults.signupButton options to render a sign up button
 		 * @cfg {Object} defaults.anonButton options to render an edit anonymously button
 		 * @cfg {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
+		 * @cfg {mw.Api} defaults.api an api module to retrieve pages
 		 */
 		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
 			loginButton: new Button( {
@@ -73,7 +74,8 @@
 
 		/** @inheritdoc **/
 		initialize: function ( options ) {
-			this.api = new EditorApi( {
+			this.gateway = new EditorGateway( {
+				api: options.api,
 				title: options.title,
 				sectionId: options.sectionId,
 				oldId: options.oldId,
@@ -105,7 +107,7 @@
 		 * Wikitext Editor input handler
 		 */
 		onInputWikitextEditor: function () {
-			this.api.setContent( this.$( '.wikitext-editor' ).val() );
+			this.gateway.setContent( this.$( '.wikitext-editor' ).val() );
 			this.$( '.continue, .submit' ).prop( 'disabled', false );
 		},
 		/**
@@ -138,7 +140,7 @@
 				this.switcherToolbar.tools.editVe.onSelect = function () {
 					// If the user tries to switch to the VisualEditor, check if any changes have
 					// been made, and if so, tell the user they have to save first.
-					if ( !self.api.hasChanged ) {
+					if ( !self.gateway.hasChanged ) {
 						self._switchToVisualEditor( self.options );
 					} else {
 						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
@@ -236,7 +238,7 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			this.api.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
+			this.gateway.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
 				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
 				self.sectionLine = $( '<div/>' ).html( parsedSectionLine ).text();
 				new Section( {
@@ -261,7 +263,7 @@
 		 * @private
 		 */
 		_hidePreview: function () {
-			this.api.abort();
+			this.gateway.abortPreview();
 			this.clearSpinner();
 			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
@@ -300,7 +302,7 @@
 			this.$content.hide();
 			this.showSpinner();
 
-			this.api.getContent()
+			this.gateway.getContent()
 				.done( function ( content, userinfo ) {
 					var parser, ast, parsedBlockReason;
 
@@ -403,7 +405,7 @@
 
 			this.showHidden( '.saving-header' );
 
-			this.api.save( options )
+			this.gateway.save( options )
 				.done( function () {
 					var title = self.options.title;
 					// Special case behaviour of main page
@@ -470,7 +472,7 @@
 		 * @return {Boolean}
 		 */
 		hasChanged: function () {
-			return this.api.hasChanged;
+			return this.gateway.hasChanged;
 		}
 	} );
 
