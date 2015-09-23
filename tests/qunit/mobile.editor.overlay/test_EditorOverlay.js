@@ -1,13 +1,10 @@
 ( function ( M, $ ) {
-	var apiSpy,
-		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
+	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 
 	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		setup: function () {
 			var getContentStub;
-
-			apiSpy = this.sandbox.spy( EditorGateway.prototype, 'initialize' );
 
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
@@ -38,20 +35,31 @@
 		);
 	} );
 
-	QUnit.test( '#initialize, with given page and section', 3, function ( assert ) {
+	QUnit.test( '#initialize, with given page and section', 5, function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'test',
 			sectionId: 0
 		} );
 
-		assert.ok( apiSpy.calledOnce, 'initialize EditorGateway once' );
-		assert.ok( apiSpy.calledWithMatch( {
-			title: 'test',
-			isNewPage: undefined,
-			oldId: undefined,
-			sectionId: 0
-		} ), 'initialize EditorGateway with correct pageTitle' );
+		// The gateway is initialized with the correct properties,
+		// particularly the correct section ID.
+		assert.strictEqual( editorOverlay.gateway.title, 'test' );
+		assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
+		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
+		assert.strictEqual( editorOverlay.gateway.sectionId, 0 );
+
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
+	} );
+
+	QUnit.test( '#initialize, without a section', 4, function ( assert ) {
+		var editorOverlay = new EditorOverlay( {
+			title: 'test.css'
+		} );
+
+		assert.strictEqual( editorOverlay.gateway.title, 'test.css' );
+		assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
+		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
+		assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
 	} );
 
 	QUnit.test( '#preview', 1, function ( assert ) {
@@ -77,20 +85,6 @@
 			sectionId: 0
 		} );
 		assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
-	} );
-
-	QUnit.test( '#initialize, without a section', 2, function ( assert ) {
-		new EditorOverlay( {
-			title: 'test.css'
-		} );
-
-		assert.ok( apiSpy.calledOnce, 'initialize EditorGateway once' );
-		assert.ok( apiSpy.calledWithMatch( {
-			title: 'test.css',
-			isNewPage: undefined,
-			oldId: undefined,
-			sectionId: undefined
-		} ), 'initialize EditorGateway without a section' );
 	} );
 
 	QUnit.test( '#initialize, as anonymous', 2, function ( assert ) {
