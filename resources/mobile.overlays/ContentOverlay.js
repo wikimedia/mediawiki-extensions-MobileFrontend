@@ -28,7 +28,5 @@
 		appendToElement: '#mw-mf-page-center'
 	} );
 	mContentOverlay = M.define( 'mobile.overlays/ContentOverlay', ContentOverlay );
-	mContentOverlay.deprecate( 'ContentOverlay' );
-	mContentOverlay.deprecate( 'modules/tutorials/ContentOverlay' );
 
 }( mw.mobileFrontend ) );

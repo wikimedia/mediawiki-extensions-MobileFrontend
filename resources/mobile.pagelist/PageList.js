@@ -69,6 +69,6 @@
 		}
 	} );
 
-	M.define( 'mobile.pagelist/PageList', PageList ).deprecate( 'PageList' );
+	M.define( 'mobile.pagelist/PageList', PageList );
 
 }( mw.mobileFrontend, jQuery ) );

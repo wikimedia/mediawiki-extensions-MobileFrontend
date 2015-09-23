@@ -12,6 +12,5 @@
 		template: mw.template.get( 'mobile.overlays', 'LoadingOverlay.hogan' )
 	} );
 
-	M.define( 'mobile.overlays/LoadingOverlay', LoadingOverlay )
-		.deprecate( 'LoadingOverlay' );
+	M.define( 'mobile.overlays/LoadingOverlay', LoadingOverlay );
 }( mw.mobileFrontend ) );
