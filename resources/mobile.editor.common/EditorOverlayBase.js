@@ -385,6 +385,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase )
-		.deprecate( 'modules/editor/EditorOverlayBase' );
+	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase );
 }( mw.mobileFrontend, jQuery ) );

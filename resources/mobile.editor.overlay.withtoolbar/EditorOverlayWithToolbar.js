@@ -176,6 +176,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar', EditorOverlayWithToolbar )
-		.deprecate( 'modules/editor/EditorOverlayWithToolbar' );
+	M.define( 'mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar', EditorOverlayWithToolbar );
 }( mw.mobileFrontend, jQuery ) );
