@@ -131,7 +131,6 @@
 		}
 	} );
 
-	M.define( 'mobile.bannerImage/BannerImage', BannerImage )
-		.deprecate( 'modules/bannerImage/BannerImage' );
+	M.define( 'mobile.bannerImage/BannerImage', BannerImage );
 
 }( mw.mobileFrontend, jQuery ) );

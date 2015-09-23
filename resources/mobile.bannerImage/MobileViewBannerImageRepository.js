@@ -86,7 +86,6 @@
 		}
 	} );
 
-	M.define( 'mobile.bannerImage/MobileViewBannerImageRepository', MobileViewBannerImageRepository )
-		.deprecate( 'modules/bannerImage/MobileViewBannerImageRepository' );
+	M.define( 'mobile.bannerImage/MobileViewBannerImageRepository', MobileViewBannerImageRepository );
 
 }( mw.mobileFrontend, jQuery ) );

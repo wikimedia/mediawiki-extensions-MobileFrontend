@@ -36,6 +36,5 @@
 		}
 	} );
 
-	M.define( 'mobile.abusefilter/AbuseFilterOverlay', AbuseFilterOverlay )
-		.deprecate( 'modules/editor/AbuseFilterOverlay' );
+	M.define( 'mobile.abusefilter/AbuseFilterOverlay', AbuseFilterOverlay );
 }( mw.mobileFrontend ) );

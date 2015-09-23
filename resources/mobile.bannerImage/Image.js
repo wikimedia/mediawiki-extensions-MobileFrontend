@@ -48,7 +48,6 @@
 		return loaded;
 	};
 
-	M.define( 'mobile.bannerImage/Image', Image )
-		.deprecate( 'modules/bannerImage/Image' );
+	M.define( 'mobile.bannerImage/Image', Image );
 
 }( mw.mobileFrontend, jQuery ) );
