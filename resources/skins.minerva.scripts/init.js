@@ -69,7 +69,7 @@
 			moduleName = useNewMediaViewer ? 'ImageOverlayBeta' : 'ImageOverlay';
 
 		loader.loadModule( rlModuleName ).done( function () {
-			var ImageOverlay = M.require( 'mobile.mediaViewer/' + moduleName );
+			var ImageOverlay = M.require( rlModuleName + '/' + moduleName );
 
 			result.resolve(
 				new ImageOverlay( {
