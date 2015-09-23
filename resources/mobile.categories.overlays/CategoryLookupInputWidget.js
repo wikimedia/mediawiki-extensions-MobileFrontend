@@ -87,7 +87,6 @@
 		return result;
 	};
 
-	M.define( 'mobile.categories.overlays/CategoryLookupInputWidget', CategoryLookupInputWidget )
-		.deprecate( 'modules/categories/CategoryLookupInputWidget' );
+	M.define( 'mobile.categories.overlays/CategoryLookupInputWidget', CategoryLookupInputWidget );
 
 }( mw.mobileFrontend, jQuery, OO ) );

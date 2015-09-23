@@ -118,6 +118,6 @@
 		}
 	} );
 
-	M.define( 'mobile.contentOverlays/PointerOverlay', PointerOverlay ).deprecate( 'modules/tutorials/PageActionOverlay' );
+	M.define( 'mobile.contentOverlays/PointerOverlay', PointerOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

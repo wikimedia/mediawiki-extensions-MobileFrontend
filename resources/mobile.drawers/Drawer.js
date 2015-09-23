@@ -83,6 +83,6 @@
 		}
 	} );
 
-	M.define( 'mobile.drawers/Drawer', Drawer ).deprecate( 'Drawer' );
+	M.define( 'mobile.drawers/Drawer', Drawer );
 
 }( mw.mobileFrontend, jQuery ) );
