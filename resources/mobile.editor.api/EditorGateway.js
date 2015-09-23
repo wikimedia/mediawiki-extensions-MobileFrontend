@@ -10,24 +10,16 @@
 	 * @param {Boolean} [options.isNewPage] whether the page being created is new
 	 */
 	function EditorGateway( options ) {
-		this.initialize( options );
+		this.api = options.api;
+		this.title = options.title;
+		this.sectionId = options.sectionId;
+		this.oldId = options.oldId;
+		// return an empty section for new pages
+		this.content = options.isNewPage ? '' : undefined;
+		this.hasChanged = false;
 	}
 
 	EditorGateway.prototype = {
-		/**
-		 * Method called by constructor for EditorGateway.
-		 * FIXME: Refactor tests and move this into the constructor
-		 * @param options {Options}
-		 */
-		initialize: function ( options ) {
-			this.api = options.api;
-			this.title = options.title;
-			this.sectionId = options.sectionId;
-			this.oldId = options.oldId;
-			// return an empty section for new pages
-			this.content = options.isNewPage ? '' : undefined;
-			this.hasChanged = false;
-		},
 		/**
 		 * Get the content of a page.
 		 * @method
