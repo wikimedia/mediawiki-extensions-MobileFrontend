@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_b7d643f5",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-23T10:32:08Z",
+      "side": 1,
+      "message": "This is fixed in I6dd8a26.",
+      "revId": "8c28fb1a246e377ba11f17e0d20f4d7d3ed95eb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
