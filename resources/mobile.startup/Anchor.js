@@ -30,6 +30,6 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'anchor.hogan' )
 	} );
-	M.define( 'mobile.startup/Anchor', Anchor ).deprecate( 'Anchor' );
+	M.define( 'mobile.startup/Anchor', Anchor );
 
 }( mw.mobileFrontend ) );

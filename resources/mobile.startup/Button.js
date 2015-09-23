@@ -43,6 +43,6 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )
 	} );
-	M.define( 'mobile.startup/Button', Button ).deprecate( 'Button' );
+	M.define( 'mobile.startup/Button', Button );
 
 }( mw.mobileFrontend ) );

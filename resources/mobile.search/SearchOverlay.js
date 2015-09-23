@@ -358,7 +358,6 @@
 		}
 	} );
 
-	M.define( 'mobile.search/SearchOverlay', SearchOverlay )
-		.deprecate( 'modules/search/SearchOverlay' );
+	M.define( 'mobile.search/SearchOverlay', SearchOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

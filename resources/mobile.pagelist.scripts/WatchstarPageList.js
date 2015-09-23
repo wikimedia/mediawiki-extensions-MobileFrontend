@@ -93,7 +93,5 @@
 	} );
 
 	mWatchstar = M.define( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList );
-	mWatchstar.deprecate( 'modules/WatchstarPageList' );
-	mWatchstar.deprecate( 'modules/PageList' );
 
 }( mw.mobileFrontend, jQuery ) );

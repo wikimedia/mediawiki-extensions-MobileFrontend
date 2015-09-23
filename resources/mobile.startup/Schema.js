@@ -167,6 +167,6 @@
 		deleteBeacon();
 	};
 
-	M.define( 'mobile.startup/Schema', Schema ).deprecate( 'Schema' );
+	M.define( 'mobile.startup/Schema', Schema );
 
 }( mw.mobileFrontend, jQuery ) );

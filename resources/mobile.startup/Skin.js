@@ -191,6 +191,6 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/Skin', Skin ).deprecate( 'Skin' );
+	M.define( 'mobile.startup/Skin', Skin );
 
 }( mw.mobileFrontend, jQuery ) );

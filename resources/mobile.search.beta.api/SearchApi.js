@@ -38,7 +38,6 @@
 		}
 	} );
 
-	M.define( 'mobile.search.beta.api/SearchApi', SearchApiBeta )
-		.deprecate( 'modules/search.beta/SearchApi' );
+	M.define( 'mobile.search.beta.api/SearchApi', SearchApiBeta );
 
 }( mw.mobileFrontend ) );

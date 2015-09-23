@@ -69,6 +69,6 @@
 		template: mw.template.get( 'mobile.startup', 'icon.hogan' )
 	} );
 
-	M.define( 'mobile.startup/Icon', Icon ).deprecate( 'Icon' );
+	M.define( 'mobile.startup/Icon', Icon );
 
 }( mw.mobileFrontend, jQuery ) );

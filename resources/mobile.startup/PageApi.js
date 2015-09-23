@@ -329,5 +329,5 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/PageApi', PageApi ).deprecate( 'PageApi' );
+	M.define( 'mobile.startup/PageApi', PageApi );
 }( mw.mobileFrontend, jQuery ) );

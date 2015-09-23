@@ -63,6 +63,6 @@
 
 	M.define( 'mobile.references/references', {
 		setup: setup
-	} ).deprecate( 'references' );
+	} );
 
 }( mw.mobileFrontend, jQuery ) );

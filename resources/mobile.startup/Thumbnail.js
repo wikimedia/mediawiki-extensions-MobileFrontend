@@ -38,6 +38,6 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/Thumbnail', Thumbnail ).deprecate( 'Thumbnail' );
+	M.define( 'mobile.startup/Thumbnail', Thumbnail );
 
 }( mw.mobileFrontend ) );

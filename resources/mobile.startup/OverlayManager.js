@@ -251,9 +251,7 @@
 
 	overlayManager = new OverlayManager( router );
 
-	M.define( 'mobile.startup/OverlayManager', OverlayManager )
-		.deprecate( 'OverlayManager' );
-	M.define( 'mobile.startup/overlayManager', overlayManager )
-		.deprecate( 'overlayManager' );
+	M.define( 'mobile.startup/OverlayManager', OverlayManager );
+	M.define( 'mobile.startup/overlayManager', overlayManager );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -85,6 +85,6 @@
 			};
 		}() );
 
-	M.define( 'mobile.settings/settings', settings ).deprecate( 'settings' );
+	M.define( 'mobile.settings/settings', settings );
 
 }( mw.mobileFrontend, jQuery ) );
