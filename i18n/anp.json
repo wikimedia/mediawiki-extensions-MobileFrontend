@@ -1,10 +1,28 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Angpradesh"
+		]
+	},
 	"mobile-frontend-back-to-top-of-section": "एक अनुभाग पीछू जा",
-	"mobile-frontend-copyright": "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध छै, अधिक अटॆ नै सकॆ छै. विशेष जानकारी लेली <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> देखॊ. विकीपिडीया <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> केरॊ एगॊ रजिस्टर्ड ट्रेडमार्क आरू स्वंयसेवी संस्था छेकै.",
+	"mobile-frontend-copyright": "सामग्री $1 केरऽ अधीन छै जब तलक अलग सं॑ उल्लेख नै करलऽ गेलऽ हुअ॑",
+	"mobile-frontend-editor-edit": "संपादन करऽ",
 	"mobile-frontend-featured-article": "आजकॊ विशेष लेख",
 	"mobile-frontend-home-button": "मुखपृष्ठ",
+	"mobile-frontend-main-menu-account-create": "नवीन खाता बनाबऽ",
+	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलऽ",
+	"mobile-frontend-main-menu-login": "लॉग-इन करऽ",
+	"mobile-frontend-main-menu-nearby": "आसपास मं॑",
+	"mobile-frontend-main-menu-settings": "सेटिंग्स",
+	"mobile-frontend-main-menu-watchlist": "ध्यानसूची",
+	"mobile-frontend-placeholder": "{{SITENAME}} मं॑ खोजऽ",
+	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "बेतरतीब",
 	"mobile-frontend-regular-site": "इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ",
-	"mobile-frontend-search-submit": "चलॊ"
+	"mobile-frontend-search-submit": "चलॊ",
+	"mobile-frontend-terms-text": "उपयोग केरऽ शर्तें",
+	"mobile-frontend-view": "मोबाइल दृश्य",
+	"mobile-frontend-view-desktop": "डेस्कटॉप",
+	"mobile-frontend-view-mobile": "मोबाइल",
+	"mobile-frontend-pageaction-edit-tooltip": "इ पन्ना केरऽ भूमिका क॑ सम्पादित करऽ"
 }
