@@ -27,7 +27,8 @@
 
 @headingLineHeight: 1.3;
 
-h1, h2, h3, h4, h5, h6 {
+.pre-content h1,
+.content h2, h3, h4, h5, h6 {
 	font-family: @fontFamilyHeading;
 	line-height: @headingLineHeight;
 
@@ -40,9 +41,12 @@ h1, h2, h3, h4, h5, h6 {
 	word-break: break-word;
 }
 
-// Deliberately not applied to h1
-h2, h3, h4, h5, h6 {
-	padding: @headingMargin 0;
+.content {
+
+	// Deliberately not applied to h1
+	h2, h3, h4, h5, h6 {
+		padding: @headingMargin 0;
+	}
 }
 
 h1 {
