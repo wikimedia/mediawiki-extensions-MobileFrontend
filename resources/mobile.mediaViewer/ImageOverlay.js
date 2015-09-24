@@ -78,7 +78,7 @@
 		 * @param {Thumbnail} thumbnail
 		 */
 		setNewImage: function ( thumbnail ) {
-			window.location.hash = '#/media/' + thumbnail.getFileName();
+			window.location.hash = '#/media/' + encodeURIComponent( thumbnail.getFileName() );
 		},
 		/** @inheritdoc */
 		preRender: function () {

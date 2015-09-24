@@ -24,7 +24,7 @@
 	 */
 	function onClickImage( ev ) {
 		ev.preventDefault();
-		router.navigate( '#/media/' + $( this ).data( 'thumb' ).getFileName() );
+		router.navigate( '#/media/' + encodeURIComponent( $( this ).data( 'thumb' ).getFileName() ) );
 	}
 
 	/**
