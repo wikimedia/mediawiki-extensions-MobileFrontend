@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_c3221a50",
+        "filename": "README.md",
+        "patchSetId": 80
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_a3190e29",
+        "filename": "README.md",
+        "patchSetId": 80
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "why is this repeated?",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_c3b8dae4",
+        "filename": "extension.json",
+        "patchSetId": 80
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "Not used anywhere. Can be deleted.",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_e3bdd6d2",
+        "filename": "extension.json",
+        "patchSetId": 80
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "Not used anywhere. Can be deleted.",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_43ccea8c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 80
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "Would be great to add this hook in a separate patchset to minimise the changes in this patchset. I\u0027d like to test this separately - right now the patch is way too big for me to have confidence this is a carbon copy of the original.",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_c3af7a90",
+        "filename": "includes/Resources.php",
+        "patchSetId": 80
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "Please do these changes in a separate patchset to aid review\nAll these changes at glance seem unnecessary.",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_03a6e2be",
+        "filename": "includes/Resources.php",
+        "patchSetId": 80
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-24T23:52:18Z",
+      "side": 1,
+      "message": "Please don\u0027t rename the module or append it directly. It\u0027s unnecessary.",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
