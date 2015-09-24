@@ -83,7 +83,6 @@ $autoloadClasses = array(
 	'SpecialNearby' => 'specials/SpecialNearby',
 	'SpecialMobileLanguages' => 'specials/SpecialMobileLanguages',
 	'SpecialMobilePreferences' => 'specials/SpecialMobilePreferences',
-	'SpecialTopicTag' => 'specials/browse/SpecialTopicTag',
 	'MobileSpecialPage' => 'specials/MobileSpecialPage',
 	'MobileSpecialPageFeed' => 'specials/MobileSpecialPageFeed',
 
@@ -94,9 +93,6 @@ $autoloadClasses = array(
 
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
-
-	'MobileFrontend\Browse\TagService' => 'browse/TagService',
-	'MobileFrontend\Browse\NullTagService' => 'browse/NullTagService',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
@@ -157,7 +153,6 @@ $wgSpecialPages += array(
 	'MobileLanguages' => 'SpecialMobileLanguages',
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
-	'TopicTag' => 'SpecialTopicTag',
 );
 
 // Register Minerva as a valid skin

@@ -474,7 +474,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 	// FIXME: Remove when cache clears (1.26wmf23)
-	'mobile.browse' => $wgMFResourceFileModuleBoilerplate + array(
+	'mobile.browse' => array(
 		'dependencies' => array(
 			'skins.minerva.browse',
 		),
@@ -1434,22 +1434,6 @@ $wgMobileSpecialPageModules = array(
 			'resources/mobile.special.mobilediff.scripts/mobilediff.js',
 		),
 	),
-
-	'mobile.special.browse.topicTag.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'resources/mobile.browse/special/topicTag.less',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.special.browse.topicTag.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.loggingSchemas'
-		),
-		'scripts' => array(
-			'resources/mobile.browse/special/topicTag.js',
-		),
-	),
 );
 
 /**
@@ -1566,19 +1550,8 @@ $wgMinervaBootstrapModules = array(
 			'mobile-frontend-cookies-required',
 		),
 	),
-
-	'skins.minerva.browse' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.loggingSchemas'
-		),
-		'scripts' => array(
-			'resources/mobile.browse/init.js',
-		),
-		'styles' => array(
-			'resources/mobile.browse/tags.less',
-		)
-	),
-
+	// Remove when cache clears (https://phabricator.wikimedia.org/T113686)
+	'skins.minerva.browse' => array(),
 	'skins.minerva.newusers' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor',
