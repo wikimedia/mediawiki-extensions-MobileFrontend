@@ -79,6 +79,6 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/Panel', Panel ).deprecate( 'Panel' );
+	M.define( 'mobile.startup/Panel', Panel );
 
 }( mw.mobileFrontend ) );

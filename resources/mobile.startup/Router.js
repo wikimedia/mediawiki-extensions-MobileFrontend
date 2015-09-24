@@ -168,7 +168,7 @@
 
 	router = new Router();
 
-	M.define( 'mobile.startup/Router', Router ).deprecate( 'Router' );
-	M.define( 'mobile.startup/router', router ).deprecate( 'router' );
+	M.define( 'mobile.startup/Router', Router );
+	M.define( 'mobile.startup/router', router );
 
 }( mw.mobileFrontend, jQuery ) );

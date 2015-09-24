@@ -72,6 +72,5 @@
 		}
 	} );
 
-	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer )
-		.deprecate( 'modules/references/ReferencesDrawer' );
+	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer );
 }( mw.mobileFrontend, jQuery ) );

@@ -293,6 +293,6 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/Page', Page ).deprecate( 'Page' );
+	M.define( 'mobile.startup/Page', Page );
 
 }( mw.mobileFrontend, jQuery ) );

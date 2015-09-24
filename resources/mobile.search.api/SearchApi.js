@@ -214,6 +214,6 @@
 		}
 	} );
 
-	M.define( 'mobile.search.api/SearchApi', SearchApi ).deprecate( 'modules/search/SearchApi' );
+	M.define( 'mobile.search.api/SearchApi', SearchApi );
 
 }( mw.mobileFrontend, jQuery ) );

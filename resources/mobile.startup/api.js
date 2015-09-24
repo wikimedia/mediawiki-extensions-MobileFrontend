@@ -123,6 +123,6 @@
 	api = new Api();
 	api.Api = Api;
 
-	M.define( 'mobile.startup/api', api ).deprecate( 'api' );
+	M.define( 'mobile.startup/api', api );
 
 }( mw.mobileFrontend, jQuery ) );

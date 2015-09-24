@@ -133,7 +133,6 @@
 		} );
 	};
 
-	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger )
-		.deprecate( 'modules/search/MobileWebSearchLogger' );
+	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger );
 
 }( mw.mobileFrontend, mw, jQuery ) );

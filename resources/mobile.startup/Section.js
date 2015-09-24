@@ -37,6 +37,6 @@
 			View.prototype.initialize.apply( self, arguments );
 		}
 	} );
-	M.define( 'mobile.startup/Section', Section ).deprecate( 'Section' );
+	M.define( 'mobile.startup/Section', Section );
 
 }( mw.mobileFrontend, jQuery ) );

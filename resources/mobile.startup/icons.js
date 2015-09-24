@@ -33,6 +33,6 @@
 				additionalClassNames: 'spinner loading'
 			} ) );
 		}
-	} ).deprecate( 'icons' );
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
