@@ -247,6 +247,6 @@
 		}
 	} );
 
-	M.define( 'mobile.nearby/Nearby', Nearby ).deprecate( 'modules/nearby/Nearby' );
+	M.define( 'mobile.nearby/Nearby', Nearby );
 
 }( mw.mobileFrontend, jQuery ) );

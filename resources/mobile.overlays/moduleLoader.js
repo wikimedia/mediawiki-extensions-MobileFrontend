@@ -33,6 +33,6 @@
 			} );
 		}
 	};
-	M.define( 'mobile.overlays/moduleLoader', loader ).deprecate( 'loader' );
+	M.define( 'mobile.overlays/moduleLoader', loader );
 
 }( mw.mobileFrontend ) );

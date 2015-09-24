@@ -17,7 +17,7 @@
 		initialize: OO.EventEmitter
 	}, OO.EventEmitter.prototype ) );
 
-	M.define( 'mobile.oo/eventemitter', EventEmitter ).deprecate( 'eventemitter' );
+	M.define( 'mobile.oo/eventemitter', EventEmitter );
 	// FIXME: if we want more of M's functionality in loaded in <head>,
 	// move this to a separate file
 	$.extend( mw.mobileFrontend, new EventEmitter() );

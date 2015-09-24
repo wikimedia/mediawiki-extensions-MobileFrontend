@@ -149,7 +149,6 @@
 		}
 	} );
 
-	M.define( 'mobile.notifications.overlay/NotificationsOverlay', NotificationsOverlay )
-		.deprecate( 'modules/notifications/NotificationsOverlay' );
+	M.define( 'mobile.notifications.overlay/NotificationsOverlay', NotificationsOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -315,6 +315,6 @@
 		}
 	} );
 
-	M.define( 'mobile.overlays/Overlay', Overlay ).deprecate( 'Overlay' );
+	M.define( 'mobile.overlays/Overlay', Overlay );
 
 }( mw.mobileFrontend, jQuery ) );
