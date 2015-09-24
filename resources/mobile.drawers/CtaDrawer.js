@@ -69,6 +69,6 @@
 		}
 	} );
 
-	M.define( 'mobile.drawers/CtaDrawer', CtaDrawer ).deprecate( 'CtaDrawer' );
+	M.define( 'mobile.drawers/CtaDrawer', CtaDrawer );
 
 }( mw.mobileFrontend, jQuery ) );

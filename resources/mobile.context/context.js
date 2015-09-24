@@ -40,6 +40,6 @@
 		}
 	};
 
-	M.define( 'mobile.context/context', context ).deprecate( 'context' );
+	M.define( 'mobile.context/context', context );
 
 }( mw.mobileFrontend, jQuery ) );

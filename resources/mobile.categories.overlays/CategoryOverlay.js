@@ -134,7 +134,6 @@
 		}
 	} );
 
-	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay )
-		.deprecate( 'categories/CategoryOverlay' );
+	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

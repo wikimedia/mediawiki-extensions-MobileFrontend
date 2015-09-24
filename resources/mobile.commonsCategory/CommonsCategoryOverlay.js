@@ -18,6 +18,5 @@
 			} ).appendTo( this.$( '.overlay-content' ) );
 		}
 	} );
-	M.define( 'mobile.commonsCategory/CommonsCategoryOverlay', CommonsCategoryOverlay )
-		.deprecate( 'modules/commonsCategory/CommonsCategoryOverlay' );
+	M.define( 'mobile.commonsCategory/CommonsCategoryOverlay', CommonsCategoryOverlay );
 }( mw.mobileFrontend ) );

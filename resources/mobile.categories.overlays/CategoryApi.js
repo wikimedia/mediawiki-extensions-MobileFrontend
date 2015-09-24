@@ -57,7 +57,6 @@
 		}
 	} );
 
-	M.define( 'mobile.categories.overlays/CategoryApi', CategoryApi )
-		.deprecate( 'modules/categories/CategoryApi' );
+	M.define( 'mobile.categories.overlays/CategoryApi', CategoryApi );
 
 }( mw.mobileFrontend, jQuery ) );
