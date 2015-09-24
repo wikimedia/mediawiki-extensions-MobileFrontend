@@ -476,6 +476,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.overlay/EditorOverlay', EditorOverlay )
-		.deprecate( 'modules/editor/EditorOverlay' );
+	M.define( 'mobile.editor.overlay/EditorOverlay', EditorOverlay );
 }( mw.mobileFrontend, jQuery ) );

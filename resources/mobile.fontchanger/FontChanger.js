@@ -86,7 +86,6 @@
 		}
 	} );
 
-	M.define( 'mobile.fontchanger/FontChanger', FontChanger )
-		.deprecate( 'modules/fontchanger/FontChanger' );
+	M.define( 'mobile.fontchanger/FontChanger', FontChanger );
 
 }( mw.mobileFrontend, jQuery ) );

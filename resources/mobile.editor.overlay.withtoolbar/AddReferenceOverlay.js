@@ -59,6 +59,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay', AddReferenceOverlay )
-		.deprecate( 'modules/editor/AddReferenceOverlay' );
+	M.define( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay', AddReferenceOverlay );
 }( mw.mobileFrontend, jQuery ) );

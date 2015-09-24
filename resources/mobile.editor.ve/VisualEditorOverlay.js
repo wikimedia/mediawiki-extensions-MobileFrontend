@@ -144,7 +144,6 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.ve/VisualEditorOverlay', VisualEditorOverlay )
-		.deprecate( 'modules/editor/VisualEditorOverlay' );
+	M.define( 'mobile.editor.ve/VisualEditorOverlay', VisualEditorOverlay );
 
 }( mw.mobileFrontend, jQuery, window.ve ) );
