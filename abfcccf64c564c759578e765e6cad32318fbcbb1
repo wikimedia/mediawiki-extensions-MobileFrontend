@@ -16,6 +16,24 @@
       "revId": "abfcccf64c564c759578e765e6cad32318fbcbb1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_8b8c2e01",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 79
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-09-24T17:35:25Z",
+      "side": 1,
+      "message": "It is called from extension.json using a callback.",
+      "parentUuid": "2ecb373e_4bcac64b",
+      "revId": "abfcccf64c564c759578e765e6cad32318fbcbb1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
