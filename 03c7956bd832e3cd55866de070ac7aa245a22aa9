@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_c9b80677",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "This should be\n\n    this.gateway \u003d new CategoryGateway( this.options.api );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_e9bdc264",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "1. This should be\n\n    SearchGateway.apply( this, arguments );\n\n2. OO.inheritClass adds a property to the constructor function called \"parent\", which is the parent class\u0027s constructor, so this should be\n\n    CategoryGateway.parent.apply( this, arguments );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_893f5ed3",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "This should be\n\n    return this.api.postWithToken( \u0027edit\u0027, {\n      /* ... */\n    } );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_29598a5d",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "This should be\n\n    return this.api.get( {\n      /* ... */\n    } );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_89b2fe90",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "You\u0027ve missed the second argument here so requiring this module resolves to undefined. This should be\n\n    M.define( \u0027mobile.categories.overlays/CategoryGateway\u0027, CategoryGateway );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_49ac1633",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "This should be\n\n    var gateway \u003d new CategoryGateway( options.api );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_8948be8d",
+        "filename": "resources/mobile.search.beta.api/SearchGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "This should be\n\n    SearchGatewayBeta.parent.apply( this, arguments );",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_095cce4d",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "The \u0027api\u0027 module is deprecated in favour of \u0027mobile.startup/api\u0027.",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_695f9245",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-09-24T10:07:27Z",
+      "side": 1,
+      "message": "The SearchGateway.js file specifies the module name as \"mobile.search.beta.api\" so this should be\n\n    api: \u0027mobile.search.beta.api/SearchGateway\u0027",
+      "revId": "03c7956bd832e3cd55866de070ac7aa245a22aa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
