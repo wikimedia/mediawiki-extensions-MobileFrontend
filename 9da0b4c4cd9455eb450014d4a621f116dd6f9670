@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_5136ebe5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-25T16:58:36Z",
+      "side": 1,
+      "message": "Maybe it\u0027s because I\u0027m not a native english speaking person, but I can\u0027t really handle your \"carnt\" :P Have a look at the definition, to which I always have to think when I read it: http://de.urbandictionary.com/define.php?term\u003dcarnt\n\nMaybe you can use \"can\u0027t\", \"can not\" or something similar grammer to verbalize what you mean. That would make me happier to merge a change with this commit message :)",
+      "revId": "9da0b4c4cd9455eb450014d4a621f116dd6f9670",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_312d5f8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-25T16:58:36Z",
+      "side": 1,
+      "message": "The change is in the same repository, why not use gerrit\u0027s \"internal\" dependency management? (Just base a change on top of another one).",
+      "revId": "9da0b4c4cd9455eb450014d4a621f116dd6f9670",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f14ef771",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-25T16:58:36Z",
+      "side": 1,
+      "message": "Wouldn\u0027t one of the available merge strategies[1] work for this?\n\n[1] https://github.com/wikimedia/mediawiki/blob/master/includes/registration/ExtensionRegistry.php#L247-L262",
+      "revId": "9da0b4c4cd9455eb450014d4a621f116dd6f9670",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
