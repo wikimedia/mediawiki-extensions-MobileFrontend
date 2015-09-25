@@ -50,6 +50,24 @@
       "revId": "9da0b4c4cd9455eb450014d4a621f116dd6f9670",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f1759793",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-09-25T17:01:46Z",
+      "side": 1,
+      "message": "Hi I doint think ResourceLoaderLESSImportPaths is supported yet in extension.json but not sure about that haven\u0027t seen any extension that uses ResourceLoaderLESSImportPaths in extension.json.",
+      "parentUuid": "2ecb373e_f14ef771",
+      "revId": "9da0b4c4cd9455eb450014d4a621f116dd6f9670",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
