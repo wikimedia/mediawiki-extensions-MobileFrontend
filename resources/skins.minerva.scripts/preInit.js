@@ -19,7 +19,7 @@
 		page: getCurrentPage(),
 		mainMenu: mainMenu
 	} );
-	M.define( 'mobile.startup/skin', skin ).deprecate( 'skin' );
+	M.define( 'mobile.startup/skin', skin );
 
 	$( window )
 		.on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) )
@@ -71,7 +71,7 @@
 		getCurrentPage: getCurrentPage
 	} );
 
-	M.define( 'mobile.startup/pageApi', pageApi ).deprecate( 'pageApi' );
+	M.define( 'mobile.startup/pageApi', pageApi );
 
 	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
 	if ( window.console && window.console.log && window.console.log.apply &&
