@@ -330,13 +330,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// Backwards compability for Zero and other extensions that may still use this
-	// FIXME: Remove when https://phabricator.wikimedia.org/T94462 resolved.
-	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mediawiki.template.hogan',
-		),
-	),
 	'mobile.pagelist.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.watchstar',
