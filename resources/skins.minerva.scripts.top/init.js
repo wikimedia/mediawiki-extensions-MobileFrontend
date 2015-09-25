@@ -49,7 +49,7 @@
 	}
 
 	// bind events
-	M.define( 'mobile.head/mainMenu', mainMenu ).deprecate( 'mainMenu' );
+	M.define( 'mobile.head/mainMenu', mainMenu );
 	// FIXME: Remove when cache expires. https://phabricator.wikimedia.org/T112315
 	M.on( 'history-link-loaded', initHistoryLink );
 	M.on( 'header-loaded', function () {

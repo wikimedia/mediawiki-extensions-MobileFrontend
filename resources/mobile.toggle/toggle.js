@@ -312,6 +312,6 @@
 		_getExpandedSections: getExpandedSections,
 		_expandStoredSections: expandStoredSections,
 		_cleanObsoleteStoredSections: cleanObsoleteStoredSections
-	} ).deprecate( 'toggle' );
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
