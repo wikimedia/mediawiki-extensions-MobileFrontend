@@ -714,7 +714,7 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		// redirect to mobile editor instead of showing desktop editor
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $context->shouldDisplayMobileView() && !$context->getRequest()->wasPosted() ) {
 			$output = $context->getOutput();
 			$data = $output->getRequest()->getValues();
 			// Unset these to avoid a redirect loop but make sure we pass other
