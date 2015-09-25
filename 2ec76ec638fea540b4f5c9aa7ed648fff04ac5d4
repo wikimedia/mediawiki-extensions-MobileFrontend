@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_b1e94f7d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-25T18:04:25Z",
+      "side": 1,
+      "message": "This needs elaboration. What exactly didn\u0027t work?\nAlso various typos.",
+      "revId": "2ec76ec638fea540b4f5c9aa7ed648fff04ac5d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
