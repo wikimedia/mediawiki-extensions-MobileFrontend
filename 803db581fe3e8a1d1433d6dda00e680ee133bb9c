@@ -118,6 +118,24 @@
       "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_c3e3fad2",
+        "filename": "includes/Resources.php",
+        "patchSetId": 80
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-09-25T00:11:12Z",
+      "side": 1,
+      "message": "Hi this is the only way I got it to work in extension.json. And it is better.",
+      "parentUuid": "2ecb373e_03a6e2be",
+      "revId": "803db581fe3e8a1d1433d6dda00e680ee133bb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
