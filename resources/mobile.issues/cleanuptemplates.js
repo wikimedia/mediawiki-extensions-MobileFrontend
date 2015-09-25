@@ -121,6 +121,6 @@
 		};
 	}() );
 
-	M.define( 'mobile.issues/cleanuptemplates', module ).deprecate( 'cleanuptemplates' );
+	M.define( 'mobile.issues/cleanuptemplates', module );
 
 }( mw.mobileFrontend, jQuery ) );

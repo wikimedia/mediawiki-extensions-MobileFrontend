@@ -70,6 +70,6 @@
 		}
 	} );
 
-	M.define( 'mobile.toast/toast', new Toast() ).deprecate( 'toast' );
+	M.define( 'mobile.toast/toast', new Toast() );
 
 }( mw.mobileFrontend ) );

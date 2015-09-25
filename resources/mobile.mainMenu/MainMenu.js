@@ -155,6 +155,6 @@
 		}
 	} );
 
-	M.define( 'mobile.mainMenu/MainMenu', MainMenu ).deprecate( 'MainMenu' );
+	M.define( 'mobile.mainMenu/MainMenu', MainMenu );
 
 }( mw.mobileFrontend, jQuery ) );

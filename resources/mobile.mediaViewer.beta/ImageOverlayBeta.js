@@ -35,7 +35,6 @@
 		}
 	} );
 
-	M.define( 'mobile.mediaViewer.beta/ImageOverlayBeta', ImageOverlayBeta )
-		.deprecate( 'modules/mediaViewer/ImageOverlayBeta' );
+	M.define( 'mobile.mediaViewer.beta/ImageOverlayBeta', ImageOverlayBeta );
 
 }( mw.mobileFrontend, jQuery ) );

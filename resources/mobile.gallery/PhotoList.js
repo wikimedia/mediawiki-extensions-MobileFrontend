@@ -138,5 +138,5 @@
 		}
 	} );
 
-	M.define( 'mobile.gallery/PhotoList', PhotoList ).deprecate( 'modules/gallery/PhotoList' );
+	M.define( 'mobile.gallery/PhotoList', PhotoList );
 }( mw.mobileFrontend, jQuery ) );

@@ -11,5 +11,5 @@
 		template: mw.template.get( 'mobile.gallery', 'PhotoItem.hogan' ),
 		tagName: 'li'
 	} );
-	M.define( 'mobile.gallery/PhotoItem', PhotoItem ).deprecate( 'modules/gallery/PhotoItem' );
+	M.define( 'mobile.gallery/PhotoItem', PhotoItem );
 }( mw.mobileFrontend ) );

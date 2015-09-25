@@ -137,7 +137,6 @@
 		}
 	} );
 
-	M.define( 'mobile.overlays/LanguageOverlay', LanguageOverlay )
-		.deprecate( 'modules/languages/LanguageOverlay' );
+	M.define( 'mobile.overlays/LanguageOverlay', LanguageOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

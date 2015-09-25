@@ -93,6 +93,5 @@
 	// Then this should be moved to init.js - including a class should not have side effects.
 	logPastEvent();
 
-	M.define( 'mobile.loggingSchemas/SchemaMobileWebClickTracking', SchemaMobileWebClickTracking )
-		.deprecate( 'loggingSchemas/SchemaMobileWebClickTracking' );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebClickTracking', SchemaMobileWebClickTracking );
 } )( mw.mobileFrontend, jQuery );

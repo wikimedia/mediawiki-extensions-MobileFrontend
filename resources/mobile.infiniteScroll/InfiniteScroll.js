@@ -129,6 +129,5 @@
 		}
 	} );
 
-	M.define( 'mobile.infiniteScroll/InfiniteScroll', InfiniteScroll )
-		.deprecate( 'InfiniteScroll' );
+	M.define( 'mobile.infiniteScroll/InfiniteScroll', InfiniteScroll );
 }( mw.mobileFrontend, jQuery ) );

@@ -12,7 +12,6 @@
 		name: 'MobileWebBrowse'
 	} );
 
-	M.define( 'mobile.loggingSchemas/SchemaMobileWebBrowse', SchemaMobileWebBrowse )
-		.deprecate( 'loggingSchemas/SchemaMobileWebBrowse' );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebBrowse', SchemaMobileWebBrowse );
 
 }( mw.mobileFrontend ) );

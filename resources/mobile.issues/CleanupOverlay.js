@@ -31,6 +31,5 @@
 			Overlay.prototype.initialize.call( this, options );
 		}
 	} );
-	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay )
-		.deprecate( 'modules/issues/CleanupOverlay' );
+	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay );
 }( mw.mobileFrontend ) );

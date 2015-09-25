@@ -26,7 +26,6 @@
 		} )
 	} );
 
-	M.define( 'mobile.loggingSchemas/SchemaMobileWebWatching', SchemaMobileWebWatching )
-		.deprecate( 'loggingSchemas/SchemaMobileWebWatching' );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebWatching', SchemaMobileWebWatching );
 
 } )( mw.mobileFrontend, jQuery );

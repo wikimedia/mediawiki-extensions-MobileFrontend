@@ -251,7 +251,6 @@
 			}
 		}
 	} );
-	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay )
-		.deprecate( 'modules/mediaViewer/ImageOverlay' );
+	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

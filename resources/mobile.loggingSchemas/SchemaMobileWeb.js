@@ -19,6 +19,5 @@
 		} )
 	} );
 
-	M.define( 'mobile.loggingSchemas/SchemaMobileWeb', SchemaMobileWeb )
-		.deprecate( 'loggingSchemas/SchemaMobileWeb' );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWeb', SchemaMobileWeb );
 } )( mw.mobileFrontend, jQuery );

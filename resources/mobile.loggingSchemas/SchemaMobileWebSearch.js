@@ -31,7 +31,6 @@
 		} )
 	} );
 
-	M.define( 'mobile.loggingSchemas/SchemaMobileWebSearch', SchemaMobileWebSearch )
-		.deprecate( 'loggingSchemas/SchemaMobileWebSearch' );
+	M.define( 'mobile.loggingSchemas/SchemaMobileWebSearch', SchemaMobileWebSearch );
 
 }( mw.mobileFrontend, jQuery ) );
