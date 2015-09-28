@@ -1502,7 +1502,7 @@ $wgMinervaSpecialPageModules = array(
 // These modules are the gateways to all other modules and will ensure the other modules get loaded
 // on the page.
 $wgMinervaBootstrapModules = array(
-	//FIXME: Remove when cache has cleared. Use skins.minerva.head instead (1.26wmf23)
+	// @todo FIXME: Remove when cache has cleared. Use skins.minerva.head instead (1.26wmf23)
 	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'skins.minerva.scripts.top',

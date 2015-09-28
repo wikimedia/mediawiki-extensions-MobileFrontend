@@ -609,7 +609,7 @@ class ApiMobileView extends ApiBase {
 	 * @return string
 	 */
 	private function getFilePage( Title $title ) {
-		//HACK: HACK: HACK:
+		// HACK: HACK: HACK:
 		$context = new DerivativeContext( $this->getContext() );
 		$context->setTitle( $title );
 		$context->setOutput( new OutputPage( $context ) );

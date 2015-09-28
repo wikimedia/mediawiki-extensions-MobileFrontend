@@ -26,7 +26,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	protected function tearDown() {
-		MobileContext::setInstance( null ); //refresh it
+		MobileContext::setInstance( null ); // refresh it
 		parent::tearDown();
 	}
 
@@ -539,7 +539,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->setMwGlobals( array(
 			'wgMobileUrlTemplate' => $urlTemplate,
 			'wgServer' => '//en.wikipedia.org',
-			//'wgArticlePath' => '/wiki/$1',
+			// 'wgArticlePath' => '/wiki/$1',
 			'wgScriptPath' => '/wiki',
 		) );
 		$context = $this->makeContext( $url );

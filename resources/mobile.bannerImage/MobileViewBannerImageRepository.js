@@ -1,5 +1,4 @@
- ( function ( M, $ ) {
-
+( function ( M, $ ) {
 	var Class = M.require( 'mobile.oo/Class' ),
 		Image = M.require( 'mobile.bannerImage/Image' ),
 		MobileViewBannerImageRepository;

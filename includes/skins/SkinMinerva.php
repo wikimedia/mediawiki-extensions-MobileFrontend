@@ -1148,11 +1148,8 @@ class SkinMinerva extends SkinTemplate {
 		parent::outputPage();
 	}
 
-	//
-	//
 	// Mobile specific functions
-	// FIXME: Try to kill any of the functions that follow
-	//
+	// @todo FIXME: Try to kill any of the functions that follow
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag

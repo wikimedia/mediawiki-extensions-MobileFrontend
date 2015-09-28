@@ -20,4 +20,3 @@
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
-
