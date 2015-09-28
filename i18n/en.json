@@ -208,7 +208,7 @@
 	"mobile-frontend-last-modified-years": "Last edited {{PLURAL:$1|$1 year|$1 years}} ago",
 	"mobile-frontend-lead-image-tutorial-confirm": "Start uploading",
 	"mobile-frontend-lead-image-tutorial-summary": "Ensure that your image can help illustrate the page. It should be an image that you created which does not violate copyright.",
-	"mobile-frontend-logged-in-homepage-notification": "Welcome, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Welcome}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Logged in as $1.",
 	"mobile-frontend-logged-out": "Not logged in",
 	"mobile-frontend-login": "Sign in",
