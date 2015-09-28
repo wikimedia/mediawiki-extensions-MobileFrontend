@@ -203,7 +203,7 @@
 	"mobile-frontend-last-modified-years": "最后编辑于{{PLURAL:$1|$1年}}前",
 	"mobile-frontend-lead-image-tutorial-confirm": "开始上传",
 	"mobile-frontend-lead-image-tutorial-summary": "请确保你的图像可以帮助说明页面。它应该是你创作的图像并且没有侵犯著作权。",
-	"mobile-frontend-logged-in-homepage-notification": "欢迎，$1！",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|欢迎}}，$1！",
 	"mobile-frontend-logged-in-toast-notification": "以$1登录。",
 	"mobile-frontend-logged-out": "未登录",
 	"mobile-frontend-login": "登录",

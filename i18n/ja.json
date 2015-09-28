@@ -169,7 +169,7 @@
 	"mobile-frontend-last-modified-years": "最終更新: {{PLURAL:$1|$1年}}前",
 	"mobile-frontend-lead-image-tutorial-confirm": "アップロードを開始",
 	"mobile-frontend-lead-image-tutorial-summary": "ページに説明に有用な画像であることを確認してください。あなたが作成した画像であって、著作権を侵害しない画像でなければなりません。",
-	"mobile-frontend-logged-in-homepage-notification": "ようこそ、$1さん!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|ようこそ}}、$1さん!",
 	"mobile-frontend-logged-in-toast-notification": "$1 としてログインしています。",
 	"mobile-frontend-logged-out": "ログインしていません",
 	"mobile-frontend-login": "ログイン",

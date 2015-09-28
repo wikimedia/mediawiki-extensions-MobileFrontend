@@ -336,7 +336,7 @@
 	"mobile-frontend-watch-login": "$1 문서를 주시문서 목록에 추가합니다.",
 	"mobile-frontend-watchlist-a-z": "목록",
 	"mobile-frontend-watchlist-a-z-empty-howto": "현재 어떠한 문서도 주시하고 있지 않습니다. 내 주시문서 목록은 관심 있는 문서를 추적하는 데 도움이 됩니다. 별 아이콘을 눌러서 문서를 주시하세요.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "문서의 위에 별을 클릭하세요",
+	"mobile-frontend-watchlist-a-z-empty-howto-alt": "별 아이콘을 클릭하세요",
 	"mobile-frontend-watchlist-add": "내 주시문서 목록에 $1 문서를 추가했습니다",
 	"mobile-frontend-watchlist-back-home": "대문으로 돌아가기",
 	"mobile-frontend-watchlist-cta": "이 문서의 모든 바뀜을 추적합니다.",

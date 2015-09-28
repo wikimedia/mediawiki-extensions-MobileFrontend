@@ -8,7 +8,8 @@
 			"Vogone",
 			"Hugo.arg",
 			"Pofka",
-			"Albertas"
+			"Albertas",
+			"Zygimantus"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobiliojo interfeisą",
@@ -352,7 +353,7 @@
 	"mobile-frontend-quick-lookup-looking": "Ieškoma \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Nepavyko rasti nieko, kas atitiktų \"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "Atsiprašome, tai ne šio vikio nuoroda.",
-	"nearby": "Teminiai puslapiai netoli Jūsų",
+	"nearby": "Teminiai puslapiai netoli jūsų",
 	"right-mf-uploadbutton": "Naudoti įkėlimo mygtuką mobiliuosiuose puslapiuose",
 	"tag-mobile_edit": "Keitimas mob. telefonu",
 	"tag-mobile_edit-description": "Pakeitimas atliktas iš mobiliojo (saityno ar programėlės)",

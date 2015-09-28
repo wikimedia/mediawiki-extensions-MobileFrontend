@@ -185,7 +185,7 @@
 	"mobile-frontend-last-modified-years": "Zuletzt bearbeitet vor {{PLURAL:$1|einem Jahr|$1 Jahren}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Hochladen starten",
 	"mobile-frontend-lead-image-tutorial-summary": "Stelle sicher, dass dein Bild bei der Illustration der Seite helfen kann. Es sollte ein Bild sein, das du erstellt hast und das keine Urheberrechte verletzt.",
-	"mobile-frontend-logged-in-homepage-notification": "Willkommen, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Willkommen}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Angemeldet als $1.",
 	"mobile-frontend-logged-out": "Nicht angemeldet",
 	"mobile-frontend-login": "Anmelden",

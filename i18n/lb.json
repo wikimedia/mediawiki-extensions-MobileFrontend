@@ -154,7 +154,7 @@
 	"mobile-frontend-last-modified-years": "Fir d'lescht geännert {{PLURAL:$1|virun 1 Joer|viru(n) $1 Joer}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Mam eroplueden ufänken",
 	"mobile-frontend-lead-image-tutorial-summary": "Vergewëssert iech datt Ärt Bild d'Säit illustréiert. Et soll e Bild sinn dat Dir selwer gemaach hutt an dat kee Copyright verletzt.",
-	"mobile-frontend-logged-in-homepage-notification": "Wëllkomm $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Wëllkomm}} $1!",
 	"mobile-frontend-logged-in-toast-notification": "Als $1 ageloggt.",
 	"mobile-frontend-logged-out": "Net ageloggt",
 	"mobile-frontend-login": "Aloggen",

@@ -186,7 +186,7 @@
 	"mobile-frontend-last-modified-years": "נערך לאחרונה לפני {{PLURAL:$1|שנה אחת|שנתיים|$1 שנים}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "תחילת העלאה",
 	"mobile-frontend-lead-image-tutorial-summary": "יש לוודא כי התמונה שלך עוזרת לאייר את הדף. זו צריכה להיות תמונה שיצרת בעצמך ושלא מפרה זכויות יוצרים.",
-	"mobile-frontend-logged-in-homepage-notification": "ברוך בואך, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|ברוך הבא|ברוכה הבאה}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "נכנסת לחשבון $1.",
 	"mobile-frontend-logged-out": "לא בחשבון",
 	"mobile-frontend-login": "כניסה",
