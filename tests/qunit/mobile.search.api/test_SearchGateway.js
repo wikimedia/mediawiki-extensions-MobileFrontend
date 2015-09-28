@@ -2,7 +2,7 @@
 
 	var SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
-	QUnit.module( 'MobileFrontend: SearchApi', {
+	QUnit.module( 'MobileFrontend: SearchGateway', {
 		setup: function () {
 			this.gateway = new SearchGateway( new mw.Api() );
 			this.sandbox.stub( this.gateway.api, 'get', function () {
