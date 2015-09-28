@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_2ca08a8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:58:38Z",
+      "side": 1,
+      "message": "Still lots of typos (`resource`) and I still don\u0027t understand :(",
+      "revId": "725853bae54505abd687f92628cc74918d7335ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_4c9b9668",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:58:38Z",
+      "side": 1,
+      "message": "Were there any errors? Please elaborate",
+      "revId": "725853bae54505abd687f92628cc74918d7335ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_0ca58e9a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:58:38Z",
+      "side": 1,
+      "message": "It\u0027s never good merging code that you don\u0027t understand why works. Aim to understand why it fixes the problem for all our sakes :)",
+      "revId": "725853bae54505abd687f92628cc74918d7335ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
