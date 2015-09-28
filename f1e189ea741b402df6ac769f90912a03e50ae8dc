@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_d1641b48",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 0,
+      "message": "Please rename this to $wgMobileLibraryModules",
+      "revId": "f1e189ea741b402df6ac769f90912a03e50ae8dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_71552752",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 0,
+      "message": "Why is this being moved to bottom of file?",
+      "revId": "f1e189ea741b402df6ac769f90912a03e50ae8dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f1c83727",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1312,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 0,
+      "message": "Please keep this variable  and add\n $wgResourceModules +\u003d $wgMobileSpecialPageModules at the bottom of the file.",
+      "revId": "f1e189ea741b402df6ac769f90912a03e50ae8dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_31debfdf",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1466,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 0,
+      "message": "Please keep this variable and add\n$$wgResourceModules +\u003d\t$wgMinervaSpecialPageModules\nat bottom of file",
+      "revId": "f1e189ea741b402df6ac769f90912a03e50ae8dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f1efd780",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1511,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 0,
+      "message": "Please keep this module and add\n$wgResourceModules +\u003d\t$wgMinervaSpecialPageModules\nat bottom of file",
+      "revId": "f1e189ea741b402df6ac769f90912a03e50ae8dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

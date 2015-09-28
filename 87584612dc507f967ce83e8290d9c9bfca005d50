@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_716e872c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-28T22:57:02Z",
+      "side": 1,
+      "message": "Please don\u0027t merge these modules. Keep \t$wgMinervaStyleModules and do a $wgResourceModules +\u003d$wgMinervaStyleModules at the bottom of the file.",
+      "revId": "87584612dc507f967ce83e8290d9c9bfca005d50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
