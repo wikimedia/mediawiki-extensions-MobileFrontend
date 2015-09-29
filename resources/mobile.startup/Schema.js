@@ -45,7 +45,7 @@
 	 * @throws Error If the schema isn't defined
 	 */
 	function factorySchema( name ) {
-		var Klass = M.require( 'loggingSchemas/Schema' + name ),
+		var Klass = M.require( 'mobile.loggingSchemas/Schema' + name ),
 			result = new Klass;
 
 		return result;

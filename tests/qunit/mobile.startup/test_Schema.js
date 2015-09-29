@@ -6,7 +6,7 @@
 
 	// Because these can't be undefined, we have to do this in the module
 	// preamble (not setup and teardown).
-	M.define( 'loggingSchemas/Schematest', TestSchema );
+	M.define( 'mobile.loggingSchemas/Schematest', TestSchema );
 
 	QUnit.module( 'MobileFrontend: Schema', {
 		setup: function () {

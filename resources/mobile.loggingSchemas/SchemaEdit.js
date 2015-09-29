@@ -51,6 +51,6 @@
 		}
 	} );
 
-	M.define( 'loggingSchemas/SchemaEdit', SchemaEdit );
+	M.define( 'mobile.loggingSchemas/SchemaEdit', SchemaEdit );
 
 } )( mw.mobileFrontend, jQuery );

@@ -35,7 +35,7 @@
 		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
 		drawer,
 		$caEdit = $( '#ca-edit' ),
-		SchemaEdit = M.require( 'loggingSchemas/SchemaEdit' );
+		SchemaEdit = M.require( 'mobile.loggingSchemas/SchemaEdit' );
 
 	/**
 	 * Prepend an edit page button to the container
