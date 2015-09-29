@@ -181,7 +181,7 @@
 	"mobile-frontend-last-modified-years": "Paskutinį kartą redaguota prieš {{PLURAL:$1|$1 metus}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Pradėti įkėlimą",
 	"mobile-frontend-lead-image-tutorial-summary": "Įsitikinkite, kad Jūsų paveikslėlis gali padėti iliustruoti puslapį. Tai turėtų būti Jūsų sukurtas ir autorių teisių nepažeidžiantis paveikslėlis.",
-	"mobile-frontend-logged-in-homepage-notification": "Sveiki, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Sveiki}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Prisijungėte kaip $1.",
 	"mobile-frontend-logged-out": "Neprisijungta",
 	"mobile-frontend-login": "Prisijungti",

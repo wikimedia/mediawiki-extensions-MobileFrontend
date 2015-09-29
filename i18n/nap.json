@@ -173,7 +173,7 @@
 	"mobile-frontend-last-modified-years": "Urtema vota cagnata {{PLURAL:$1|$1 anno|$1 anne}} fà",
 	"mobile-frontend-lead-image-tutorial-confirm": "Accummencia 'a carreca",
 	"mobile-frontend-lead-image-tutorial-summary": "Assicurateve ca l'immaggene vosta pozza aiutà â paggena a ll'illustrà. Adda essere n'immaggene ca vuje avisseve fatto e ca nun viulasse 'o copyright.",
-	"mobile-frontend-logged-in-homepage-notification": "Bemmenuto, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Bemmenuto|Bemmenuta}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Site trasute comme $1",
 	"mobile-frontend-logged-out": "Acciesso nun affettuato",
 	"mobile-frontend-login": "Tràse",

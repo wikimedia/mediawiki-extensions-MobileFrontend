@@ -185,7 +185,7 @@
 	"mobile-frontend-last-modified-years": "Senast redigerad {{PLURAL:$1|$1 år}} sedan",
 	"mobile-frontend-lead-image-tutorial-confirm": "Börja ladda upp",
 	"mobile-frontend-lead-image-tutorial-summary": "Se till att din bild kan hjälpa till att illustrera sidan. Det bör vara en bild som du har skapat som inte bryter mot upphovsrätten.",
-	"mobile-frontend-logged-in-homepage-notification": "Välkommen, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Välkommen}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Inloggad som $1.",
 	"mobile-frontend-logged-out": "Inte inloggad",
 	"mobile-frontend-login": "Logga in",
