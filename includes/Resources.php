@@ -395,6 +395,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.backtotop' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.toggling',
+		),
+		'scripts' => array(
+			'resources/mobile.backtotop/BackToTopOverlay.js',
+			'resources/mobile.backtotop/backtotop.js',
+		),
+		'styles' => array(
+			'resources/mobile.backtotop/backtotop.less',
+		),
+		'templates' => array(
+			'BackToTopOverlay.hogan' => 'resources/mobile.backtotop/BackToTopOverlay.hogan',
+		),
+	),
+
 	// FIXME: Split this module into different features.
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -1653,6 +1670,7 @@ $wgMinervaBootstrapModules = array(
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
 			'mobile.search.beta',
+			'mobile.backtotop',
 		),
 		'scripts' => array(
 			'resources/skins.minerva.beta.scripts/commonsCategory.js',
