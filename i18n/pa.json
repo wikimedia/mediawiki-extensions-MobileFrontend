@@ -19,6 +19,7 @@
 	"mobile-frontend-home-button": "ਘਰ",
 	"mobile-frontend-language-article-heading": "ਕਿਸੇ ਹੋਰ ਬੋਲੀ ਵਿੱਚ ਪੜ੍ਹੋ",
 	"mobile-frontend-last-modified-date": "ਆਖ਼ਰੀ ਤਬਦੀਲੀ $1 ਨੂੰ $2 ਵਜੇ ਹੋਈ।",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|ਜੀ ਅਾੲਿਅਾਂ ਨੂੰ}}, $1!",
 	"mobile-frontend-login": "ਦਾਖ਼ਲ ਹੋਵੋ",
 	"mobile-frontend-main-menu-account-create": "ਖਾਤਾ ਬਣਾਉ",
 	"mobile-frontend-main-menu-button-tooltip": "ਮੁੱਖ ਮੀਨੂ ਖੋਲ੍ਹੋ",

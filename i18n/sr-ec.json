@@ -119,7 +119,7 @@
 	"mobile-frontend-last-modified-seconds": "Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 секунда|$1 секунди}}",
 	"mobile-frontend-last-modified-years": "Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 године|$1 година}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Започните отпремање",
-	"mobile-frontend-logged-in-homepage-notification": "Добро дошли, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Добро дошли}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Пријављен сте као $1.",
 	"mobile-frontend-logged-out": "Нисте пријављени",
 	"mobile-frontend-login": "Пријави ме",

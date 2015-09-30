@@ -145,7 +145,7 @@
 	"mobile-frontend-last-modified-months": "Zeläz verändert vör {{PLURAL:$1|einem Mohnd|$1 Mohnde|keinem Mohnd}}",
 	"mobile-frontend-last-modified-seconds": "Zeläz verändert vör {{PLURAL:$1|eine Sekond|$1 Sekonde|keine Sekond}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Mem Huhlaade loßlääje",
-	"mobile-frontend-logged-in-homepage-notification": "Wellkumme $1!",
+	"mobile-frontend-logged-in-homepage-notification": "Wellkumme $1!{{GENDER:$1|}}",
 	"mobile-frontend-logged-in-toast-notification": "Enjelogg als $1.",
 	"mobile-frontend-logged-out": "Nit enjelogg",
 	"mobile-frontend-login": "Enlogge",
