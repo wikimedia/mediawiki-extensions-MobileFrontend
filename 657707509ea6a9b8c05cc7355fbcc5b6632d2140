@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_ed7b4abb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1231,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-30T13:10:19Z",
+      "side": 1,
+      "message": "Could you at least add a FIXME that we maybe (later, if we have time ;)) add a FIXME? Like:\n\n// @todo FIXME: It minerva specific hook shouldn\u0027t be needed\n\n??? :)",
+      "revId": "657707509ea6a9b8c05cc7355fbcc5b6632d2140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
