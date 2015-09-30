@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ecb373e_d054de58",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-30T20:51:04Z",
+      "side": 1,
+      "message": "Were the ResourceLoader modules registered? (you can check via mw.loader.getState)",
+      "parentUuid": "2ecb373e_6c88d2ec",
+      "revId": "725853bae54505abd687f92628cc74918d7335ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecb373e_0ca58e9a",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
