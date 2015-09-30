@@ -1227,13 +1227,16 @@ class SkinMinerva extends SkinTemplate {
 </ul>
 HTML;
 
-		// Generate the licensing text displayed in the footer of each page.
-		// See Skin::getCopyright for desktop equivalent.
-		$license = self::getLicense( 'footer' );
-		if ( isset( $license['link'] ) && $license['link'] ) {
-			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
-		} else {
-			$licenseText = '';
+		// @TODO: Consolidate all of this with the core handling for license
+		// footers (implement license handling using the "SkinCopyrightFooter" hook).
+		$licenseText = '';
+		if ( Hooks::run( 'SkinMinervaLicenseFooter', array( &$licenseText ) ) ) {
+			// Generate the licensing text displayed in the footer of each page.
+			// See Skin::getCopyright for desktop equivalent.
+			$license = self::getLicense( 'footer' );
+			if ( isset( $license['link'] ) && $license['link'] ) {
+				$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
+			}
 		}
 
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
