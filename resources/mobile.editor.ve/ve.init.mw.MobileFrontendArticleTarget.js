@@ -198,6 +198,30 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
 /*
  * FIXME: @inheritdoc once this file is in the right repo
  */
+ve.init.mw.MobileFrontendArticleTarget.prototype.save = function () {
+	// Parent method
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.save.apply( this, arguments );
+
+	this.overlay.log( {
+		action: 'saveAttempt'
+	} );
+};
+
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
+	// Parent method
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.showSaveDialog.apply( this, arguments );
+
+	this.overlay.log( {
+		action: 'saveIntent'
+	} );
+};
+
+/*
+ * FIXME: @inheritdoc once this file is in the right repo
+ */
 ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
