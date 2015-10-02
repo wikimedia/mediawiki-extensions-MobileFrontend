@@ -38,6 +38,7 @@
 	"mobile-frontend-changeslist-ip": "Người dùng vô danh",
 	"mobile-frontend-changeslist-nocomment": "không có tóm lược sửa đổi",
 	"mobile-frontend-clear-search": "Tẩy trống",
+	"mobile-frontend-commons-category-view": "Hình ảnh cho $1",
 	"mobile-frontend-contribution-summary": "Tất cả các sửa đổi của {{GENDER:$1}}[[Special:UserProfile/$1|$1]]",
 	"mobile-frontend-cookies-required": "Bạn cần cho phép các cookie để đổi chế độ xem. Xin vui lòng kích hoạt cookie và thử lần nữa.",
 	"mobile-frontend-copyright": "Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.",
