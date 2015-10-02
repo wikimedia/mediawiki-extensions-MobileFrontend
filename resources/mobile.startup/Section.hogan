@@ -1,2 +1,2 @@
-{{#line}}<h{{level}} id="{{anchor}}">{{{line}}}</h{{level}}>{{/line}}
+<h{{level}} id="{{anchor}}">{{{line}}}</h{{level}}>
 {{{text}}}

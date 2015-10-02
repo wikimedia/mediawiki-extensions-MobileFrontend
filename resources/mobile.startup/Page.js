@@ -108,7 +108,18 @@
 		 * @return {jQuery.Object}
 		 */
 		getLeadSectionElement: function () {
-			return this.$( '> div' ).eq( 0 );
+			/*
+			 * The page is formatted as follows:
+			 * <div id="bodyContent">
+			 *   <!-- content of the page.. -->
+			 *   <div id="mw-content-text">
+			 *     <div>lead section</div>
+			 *     <h2></h2>
+			 *     <div>second section</div>
+			 *   </div>
+			 * </div>
+			 */
+			return this.$( '> div > div' ).eq( 0 );
 		},
 
 		/**

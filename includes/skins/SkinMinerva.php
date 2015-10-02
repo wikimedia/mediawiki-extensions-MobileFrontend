@@ -48,18 +48,6 @@ class SkinMinerva extends SkinTemplate {
 				'maximum-scale=5.0, width=device-width'
 		);
 
-		if ( $this->isMobileMode ) {
-			// Customize page content for mobile view, e.g. add togglable sections, filter
-			// out various elements.
-			// We do this before executing parent::prepareQuickTemplate() since the parent
-			// overwrites $out->mBodytext, adding an mw-content-text div which is
-			// redundant to our own content div. By defining the bodytext HTML before
-			// $out->mBodytext is overwritten, we avoid including the mw-content-text div.
-			// FIXME: Git rid of our content div and consolidate this line with the other
-			// isMobileMode lines below. This will bring us more in line with core DOM.
-			$html = ExtMobileFrontend::DOMParse( $out, $this->mode );
-		}
-
 		// Generate skin template
 		$tpl = parent::prepareQuickTemplate();
 
@@ -82,12 +70,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
 		$this->prepareLanguages( $tpl );
-
-		// Perform a few extra changes if we are in mobile mode
-		if ( $this->isMobileMode ) {
-			// Set our own bodytext that has been filtered by MobileFormatter
-			$tpl->set( 'bodytext', $html );
-		}
 
 		return $tpl;
 	}

@@ -262,7 +262,7 @@
 			}
 		}
 
-		$container.find( tagName ).each( function ( i ) {
+		$container.children( tagName ).each( function ( i ) {
 			var $heading = $( this ),
 				id = prefix + 'collapsible-block-' + i;
 			// Be sure there is a div wrapping the section content.

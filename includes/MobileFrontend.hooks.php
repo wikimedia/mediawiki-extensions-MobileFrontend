@@ -1089,13 +1089,14 @@ class MobileFrontendHooks {
 		global $wgMFWikibaseImageCategory;
 
 		$context = MobileContext::singleton();
+		$isBeta = $context->isBetaGroupMember();
 		$mfUseWikibaseDescription = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
 
-			if ( $mfUseWikibaseDescription && $context->isBetaGroupMember() ) {
+			if ( $mfUseWikibaseDescription && $isBeta ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
@@ -1108,6 +1109,8 @@ class MobileFrontendHooks {
 					}
 				}
 			}
+			// Enable wrapped sections
+			$po->setText( ExtMobileFrontend::DOMParse( $outputPage, $po->getText(), $isBeta ) );
 		}
 		return true;
 	}

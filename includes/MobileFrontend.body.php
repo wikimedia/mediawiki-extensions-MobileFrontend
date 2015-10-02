@@ -31,8 +31,8 @@ class ExtMobileFrontend {
 	 *
 	 * @return string
 	 */
-	public static function DOMParse( OutputPage $out, $mode ) {
-		$html = $out->getHTML();
+	public static function DOMParse( OutputPage $out, $text = null, $isBeta = false ) {
+		$html = $text ? $text : $out->getHTML();
 
 		$context = MobileContext::singleton();
 
@@ -64,7 +64,7 @@ class ExtMobileFrontend {
 		// If the page is a user page which has not been created, then let the
 		// user know about it with pretty graphics and different texts depending
 		// on whether the user is the owner of the page or not.
-		if ( $mode === 'beta' && $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
+		if ( $isBeta && $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
 			$pageUserId = User::idFromName( $title->getText() );
 			if ( $pageUserId && !$title->exists() ) {
 				$pageUser = User::newFromId( $pageUserId );

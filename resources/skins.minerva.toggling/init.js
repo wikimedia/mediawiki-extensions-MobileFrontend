@@ -2,7 +2,7 @@
 	var schema,
 		page = M.getCurrentPage(),
 		SchemaMobileWebSectionUsage = M.require( 'mobile.loggingSchemas/SchemaMobileWebSectionUsage' ),
-		$contentContainer = $( '#content #bodyContent' ),
+		$contentContainer = $( '#mw-content-text' ),
 		Toggler = M.require( 'mobile.toggle/Toggler' );
 
 	/**
@@ -25,6 +25,10 @@
 		new Toggler( $container, prefix, page, schema );
 	}
 
+	// FIXME: remove when cache clears
+	if ( !$contentContainer.length ) {
+		$contentContainer = $( '#content #bodyContent' );
+	}
 	// avoid this running on Watchlist
 	if (
 		!page.inNamespace( 'special' ) &&
