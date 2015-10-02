@@ -1231,7 +1231,7 @@ HTML;
 		// See Skin::getCopyright for desktop equivalent.
 		$license = self::getLicense( 'footer' );
 		if ( isset( $license['link'] ) && $license['link'] ) {
-			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
+			$licenseText = $this->msg( $license['msg'] )->rawParams( $license['link'] )->text();
 		} else {
 			$licenseText = '';
 		}
@@ -1294,7 +1294,8 @@ HTML;
 		}
 
 		// Allow other extensions (for example, WikimediaMessages) to override
-		Hooks::run( 'MobileLicenseLink', array( &$link, $context, $attribs ) );
+		$msg = 'mobile-frontend-copyright';
+		Hooks::run( 'MobileLicenseLink', array( &$link, $context, $attribs, &$msg ) );
 
 		// for plural support we need the info, if there is one or more licenses used in the license text
 		// this check if very simple and works on the base, that more than one license will
@@ -1308,6 +1309,7 @@ HTML;
 		);
 
 		return array(
+			'msg' => $msg,
 			'link' => $link,
 			'plural' => $isPlural
 		);
