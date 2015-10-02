@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_024bee63",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1233,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-10-02T09:40:51Z",
+      "side": 1,
+      "message": "We need to be able to set a message without any params. As a hack, we can probably pass a dummy param which Message will just ignore.",
+      "revId": "e3c4c2309592a9079911ce7225f2455fd114cf81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_a2321aed",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1298,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-10-02T09:40:51Z",
+      "side": 1,
+      "message": "This change is going to break b/c",
+      "revId": "e3c4c2309592a9079911ce7225f2455fd114cf81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
