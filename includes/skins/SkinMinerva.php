@@ -94,8 +94,6 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isMobileMode ) {
 			// Set our own bodytext that has been filtered by MobileFormatter
 			$tpl->set( 'bodytext', $html );
-			// Construct mobile-friendly footer
-			$this->prepareMobileFooterLinks( $tpl );
 		}
 
 		return $tpl;
@@ -188,11 +186,6 @@ class SkinMinerva extends SkinTemplate {
 			$className .= ' mw-mf-special ';
 		}
 
-		if ( $this->isMobileMode ) {
-			$className .= ' mw-mobile-mode';
-		} else {
-			$className .= ' mw-desktop-mode';
-		}
 		if ( $this->isAuthenticatedUser() ) {
 			$className .= ' is-authenticated';
 		}
@@ -690,20 +683,6 @@ class SkinMinerva extends SkinTemplate {
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
 			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin
 		}
-
-		// Prepare the mobile version of the footer
-		if ( $this->isMobileMode ) {
-			$tpl->set( 'footerlinks', array(
-				'info' => array(
-					'mobile-switcher',
-					'mobile-license',
-				),
-				'places' => array(
-					'terms-use',
-					'privacy',
-				),
-			) );
-		}
 	}
 
 	/**
@@ -953,11 +932,6 @@ class SkinMinerva extends SkinTemplate {
 			$vars['wgMFUserBlockInfo'] = $blockInfo;
 		}
 
-		// Get variables that are only needed in mobile mode
-		if ( $this->isMobileMode ) {
-			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
-		}
-
 		return $vars;
 	}
 
@@ -1114,236 +1088,5 @@ class SkinMinerva extends SkinTemplate {
 	public function setupSkinUserCss( OutputPage $out ) {
 		// Add Minerva-specific ResourceLoader modules to the page output
 		$out->addModuleStyles( $this->getSkinStyles() );
-	}
-
-	/**
-	 * initialize various variables and generate the template
-	 * @param OutputPage $out optional parameter: The OutputPage Obj.
-	 */
-	public function outputPage( OutputPage $out = null ) {
-		// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
-		// FIXME: Explore disabling this via a user preference and see what explodes
-		// Important: This must run before outputPage which generates script and style tags
-		// If run later incompatible desktop code will leak into Minerva.
-		$out = $this->getOutput();
-		$out->setTarget( 'mobile' );
-		if ( $this->isMobileMode ) {
-			// FIXME: Merge these hooks?
-			// EnableMobileModules is deprecated; Use ResourceLoader instead,
-			// see https://www.mediawiki.org/wiki/ResourceLoader#Mobile
-			Hooks::run( 'EnableMobileModules', array( $out, $this->getMode() ) );
-			Hooks::run( 'BeforePageDisplayMobile', array( &$out ) );
-		}
-		parent::outputPage();
-	}
-
-	// Mobile specific functions
-	// @todo FIXME: Try to kill any of the functions that follow
-
-	/**
-	 * Returns the site name for the footer, either as a text or <img> tag
-	 * @param boolean $withPossibleTrademark If true and a trademark symbol is specified
-	 *     by $wgMFTrademarkSitename, append that trademark symbol to the sitename/logo.
-	 *     This param exists so that the trademark symbol can be appended in some
-	 *     contexts, for example, the footer, but not in others. See bug T95007.
-	 * @return string
-	 */
-	public static function getSitename( $withPossibleTrademark = false ) {
-		$config = MobileContext::singleton()->getMFConfig();
-		$customLogos = $config->get( 'MFCustomLogos' );
-		$trademarkSymbol = $config->get( 'MFTrademarkSitename' );
-		$suffix = '';
-
-		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->text();
-
-		// Add a trademark symbol if needed
-		if ( $withPossibleTrademark ) {
-			// Registered trademark
-			if ( $trademarkSymbol === 'registered' ) {
-				$suffix = Html::element( 'sup', array(), '®' );
-			// Unregistered (or unspecified) trademark
-			} elseif ( $trademarkSymbol ) {
-				$suffix = Html::element( 'sup', array(), '™' );
-			}
-		}
-
-		// If there's a custom site logo, use that instead of text
-		if ( isset( $customLogos['copyright'] ) ) {
-			$attributes =  array(
-				'src' => $customLogos['copyright'],
-				'alt' => $footerSitename . $suffix,
-			);
-			if ( isset( $customLogos['copyright-height'] ) ) {
-				$attributes['height'] = $customLogos['copyright-height'];
-			}
-			if ( isset( $customLogos['copyright-width'] ) ) {
-				$attributes['width'] = $customLogos['copyright-width'];
-			}
-			$sitename = Html::element( 'img', $attributes );
-		} else {
-			$sitename = $footerSitename;
-		}
-
-		return $sitename . $suffix;
-	}
-
-	/**
-	 * Prepares links used in the mobile footer
-	 * @param QuickTemplate $tpl
-	 */
-	protected function prepareMobileFooterLinks( $tpl ) {
-		$req = $this->getRequest();
-
-		$url = $this->getOutput()->getProperty( 'desktopUrl' );
-		if ( $url ) {
-			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
-		} else {
-			$url = $this->getTitle()->getLocalUrl(
-				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop', true )
-			);
-		}
-		$url = htmlspecialchars(
-			$this->mobileContext->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) )
-		);
-
-		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
-		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
-
-		$switcherHtml = <<<HTML
-<h2>{$this->getSitename( true )}</h2>
-<ul>
-	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
-</ul>
-HTML;
-
-		// Generate the licensing text displayed in the footer of each page.
-		// See Skin::getCopyright for desktop equivalent.
-		$license = self::getLicense( 'footer' );
-		if ( isset( $license['link'] ) && $license['link'] ) {
-			$licenseText = $this->msg( $license['msg'] )->rawParams( $license['link'] )->text();
-		} else {
-			$licenseText = '';
-		}
-
-		// Enable extensions to add links to footer in Mobile view, too - bug 66350
-		Hooks::run( 'SkinMinervaOutputPageBeforeExec', array( &$this, &$tpl ) );
-
-		$tpl->set( 'mobile-switcher', $switcherHtml );
-		$tpl->set( 'mobile-license', $licenseText );
-		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'terms-use', $this->getTermsLink() );
-	}
-
-	/**
-	 * Returns HTML of license link or empty string
-	 * For example:
-	 *   "<a title="Wikipedia:Copyright" href="/index.php/Wikipedia:Copyright">CC BY</a>"
-	 *
-	 * @param string $context The context in which the license link appears, e.g. footer,
-	 *   editor, talk, or upload.
-	 * @param array $attribs An associative array of extra HTML attributes to add to the link
-	 * @return string
-	 */
-	public static function getLicense( $context, $attribs = array() ) {
-		$config = MobileContext::singleton()->getConfig();
-		$rightsPage = $config->get( 'RightsPage' );
-		$rightsUrl = $config->get( 'RightsUrl' );
-		$rightsText = $config->get( 'RightsText' );
-
-		// Construct the link to the licensing terms
-		if ( $rightsText ) {
-			// Use shorter text for some common licensing strings. See Installer.i18n.php
-			// for the currently offered strings. Unfortunately, there is no good way to
-			// comprehensively support localized licensing strings since the license (as
-			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
-			$commonLicenses = array(
-				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
-				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
-				'Creative Commons Attribution 3.0' => 'CC BY 3.0',
-				'Creative Commons Attribution 2.5' => 'CC BY 2.5', // Wikinews
-				'Creative Commons Attribution' => 'CC BY',
-				'Creative Commons Attribution Non-Commercial Share Alike' => 'CC BY-NC-SA',
-				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
-				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
-			);
-
-			if ( isset( $commonLicenses[$rightsText] ) ) {
-				$rightsText = $commonLicenses[$rightsText];
-			}
-			if ( $rightsPage ) {
-				$title = Title::newFromText( $rightsPage );
-				$link = Linker::linkKnown( $title, $rightsText, $attribs );
-			} elseif ( $rightsUrl ) {
-				$link = Linker::makeExternalLink( $rightsUrl, $rightsText, true, '', $attribs );
-			} else {
-				$link = $rightsText;
-			}
-		} else {
-			$link = '';
-		}
-
-		// Allow other extensions (for example, WikimediaMessages) to override
-		$msg = 'mobile-frontend-copyright';
-		Hooks::run( 'MobileLicenseLink', array( &$link, $context, $attribs, &$msg ) );
-
-		// for plural support we need the info, if there is one or more licenses used in the license text
-		// this check if very simple and works on the base, that more than one license will
-		// use "and" as a connective
-		// 1 - no plural
-		// 2 - plural
-		$delimiterMsg = wfMessage( 'and' );
-		// check, if "and" isn't disabled and exists in site language
-		$isPlural = (
-			!$delimiterMsg->isDisabled() && strpos( $rightsText, $delimiterMsg->text() ) === false ? 1 : 2
-		);
-
-		return array(
-			'msg' => $msg,
-			'link' => $link,
-			'plural' => $isPlural
-		);
-	}
-
-	/**
-	 * Returns HTML of terms of use link or null if it shouldn't be displayed
-	 * Note: This is called by a hook in the WikimediaMessages extension.
-	 *
-	 * @param $urlMsgKey Key of i18n message containing terms of use URL (optional)
-	 *
-	 * @return null|string
-	 */
-	public function getTermsLink( $urlMsgKey = 'mobile-frontend-terms-url' ) {
-		$urlMsg = $this->msg( $urlMsgKey )->inContentLanguage();
-		if ( $urlMsg->isDisabled() ) {
-			return null;
-		}
-		$url = $urlMsg->plain();
-		// Support both page titles and URLs
-		if ( preg_match( '#^(https?:)?//#', $url ) === 0 ) {
-			$title = Title::newFromText( $url );
-			if ( !$title ) {
-				return null;
-			}
-			$url = $title->getLocalURL();
-		}
-		return Html::element(
-			'a',
-			array( 'href' => $url ),
-			$this->msg( 'mobile-frontend-terms-text' )->text()
-		);
-	}
-
-	/**
-	 * Takes an array of link elements and applies mobile urls to any urls contained in them
-	 * @param array $urls
-	 * @return array
-	 */
-	public function mobilizeUrls( $urls ) {
-		$ctx = $this->mobileContext; // $this in closures is allowed only in PHP 5.4
-		return array_map( function( $url ) use ( $ctx ) {
-			$url['href'] = $ctx->getMobileUrl( $url['href'] );
-			return $url;
-		},
-		$urls );
 	}
 }

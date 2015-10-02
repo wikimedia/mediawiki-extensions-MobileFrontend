@@ -153,29 +153,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
-		$title = $skin->getTitle();
-		$context = MobileContext::singleton();
-
-		if ( !$context->isBlacklistedPage() ) {
-			$footerlinks = $tpl->data['footerlinks'];
-			$args = $skin->getRequest()->getQueryValues();
-			// avoid title being set twice
-			unset( $args['title'] );
-			unset( $args['useformat'] );
-			$args['mobileaction'] = 'toggle_view_mobile';
-
-			$mobileViewUrl = $title->getFullURL( $args );
-			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl );
-
-			$link = Html::element( 'a',
-				array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
-				wfMessage( 'mobile-frontend-view' )->text()
-			);
-			$tpl->set( 'mobileview', $link );
-			$footerlinks['places'][] = 'mobileview';
-			$tpl->set( 'footerlinks', $footerlinks );
-		}
-
+		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
 		return true;
 	}
 
@@ -332,6 +310,23 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * SkinPreloadExistence hook handler
+	 * Disables TOC in output before it grabs HTML
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinPreloadExistence
+	 *
+	 * @param Title[] $titles
+	 * @param Skin $skin
+	 * @return bool
+	 */
+	public static function onSkinPreloadExistence( $titles, $skin ) {
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			$skin->getOutput()->setTarget( 'mobile' );
+		}
+		return true;
+	}
+
+	/**
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which vary with the html
 	 * and for variables this should work cross skin including anonymous users
@@ -345,7 +340,7 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 
 		// Get the licensing agreement that is displayed in the uploading interface.
-		$wgMFUploadLicense = SkinMinerva::getLicense( 'upload' );
+		$wgMFUploadLicense = MobileFrontendSkinHooks::getLicense( 'upload' );
 		$vars += array(
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
@@ -354,10 +349,13 @@ class MobileFrontendHooks {
 			),
 			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
-			'wgMFLicense' => SkinMinerva::getLicense( 'editor' ),
+			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
 		);
 
+		if ( $context->shouldDisplayMobileView() ) {
+			$vars['wgImagesDisabled'] = $context->imagesDisabled();
+		}
 		// add CodeMirror specific things, if it is installed (for CodeMirror editor)
 		if ( class_exists( 'CodeMirrorHooks' ) ) {
 			$vars += CodeMirrorHooks::getGlobalVariables( MobileContext::singleton() );
@@ -697,6 +695,9 @@ class MobileFrontendHooks {
 
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
+
+			// Allow modifications in mobile only mode
+			Hooks::run( 'BeforePageDisplayMobile', array( &$out, &$sk ) );
 		}
 
 		return true;
