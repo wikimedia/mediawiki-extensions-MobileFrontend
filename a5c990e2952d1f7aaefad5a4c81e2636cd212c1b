@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_6e2ad990",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-02T19:30:47Z",
+      "side": 1,
+      "message": "minor whitespace issue",
+      "revId": "a5c990e2952d1f7aaefad5a4c81e2636cd212c1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_ae176155",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-02T19:30:47Z",
+      "side": 1,
+      "message": "I\u0027d like to see the icon class actually be a property of the menu item itself derived from the menu item name.\nMaybe a further iteration?",
+      "revId": "a5c990e2952d1f7aaefad5a4c81e2636cd212c1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_0e21d5ab",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-02T19:30:47Z",
+      "side": 1,
+      "message": "Personally I\u0027d see this as an opportunity to kill this hook especially given the impact it has on Gather exploding\n\nWe should just have one hook that allows you to retrieve a menu with a certain name and run methods on it.",
+      "revId": "a5c990e2952d1f7aaefad5a4c81e2636cd212c1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_2e34d1f0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 497,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-02T19:30:47Z",
+      "side": 1,
+      "message": "Personally I\u0027d see this as an opportunity to kill this hook especially given the impact it has on Gather exploding",
+      "revId": "a5c990e2952d1f7aaefad5a4c81e2636cd212c1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
