@@ -185,7 +185,7 @@
 	"mobile-frontend-last-modified-years": "{{PLURAL:$1|Eén|$1}} jaar geleden gewijzigd",
 	"mobile-frontend-lead-image-tutorial-confirm": "Beginnen met uploaden",
 	"mobile-frontend-lead-image-tutorial-summary": "Zorg dat uw afbeelding de pagina helpt te illustreren. Het moet een afbeelding zijn die geen auteursrechten schendt.",
-	"mobile-frontend-logged-in-homepage-notification": "Welkom, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Welkom}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Aangemeld als $1.",
 	"mobile-frontend-logged-out": "Niet aangemeld",
 	"mobile-frontend-login": "Aanmelden",

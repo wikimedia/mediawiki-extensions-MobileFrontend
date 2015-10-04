@@ -21,7 +21,8 @@
 			"Olion",
 			"Ypryima",
 			"Ahonc",
-			"Dars"
+			"Dars",
+			"NickK"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -176,7 +177,7 @@
 	"mobile-frontend-languages-nonexistent-title": "Сторінка \"$1\" не існує.",
 	"mobile-frontend-languages-text": "$1 доступна на $2 {{PLURAL:$2|1=мові|мовах}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} варіантів",
-	"mobile-frontend-last-modified-date": "Останні зміни: $1, $2",
+	"mobile-frontend-last-modified-date": "Останнє редагування: $1, $2",
 	"mobile-frontend-last-modified-days": "Остання зміна була $1 {{PLURAL:$1|день|дні|днів}} тому",
 	"mobile-frontend-last-modified-hours": "Остання зміна була $1 {{PLURAL:$1|годину|години|годин}} тому",
 	"mobile-frontend-last-modified-just-now": "Останні зміни прямо зараз",
