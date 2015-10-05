@@ -298,7 +298,7 @@
 	"mobile-frontend-sign-up-heading": "Registrieren",
 	"mobile-frontend-talk-fullpage": "Als Wikiseite lesen",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wo drückt der Schuh?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Thema",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Betreff",
 	"mobile-frontend-talk-add-overlay-submit": "Diskussion hinzufügen",
 	"mobile-frontend-talk-back-to-page": "Zurück zur Seite „$1“.",
 	"mobile-frontend-talk-back-to-userpage": "Zurück zur Benutzerseite von „{{GENDER:$1|$1}}“.",

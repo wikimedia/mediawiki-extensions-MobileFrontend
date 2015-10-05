@@ -298,7 +298,7 @@
 	"mobile-frontend-sign-up-heading": "רישום",
 	"mobile-frontend-talk-fullpage": "לקרוא בתור דף ויקי",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "מה עובר לך בראש?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "נושא ראשי",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "נושא",
 	"mobile-frontend-talk-add-overlay-submit": "להוסיף דיון",
 	"mobile-frontend-talk-back-to-page": "חזרה לדף \"$1\".",
 	"mobile-frontend-talk-back-to-userpage": "חזרה לדף המשתמש של \"{{GENDER:$1|$1}}\".",

@@ -376,7 +376,7 @@
 	"mobile-frontend-quick-lookup-looking": "正在寻找“$1”。",
 	"mobile-frontend-quick-lookup-no-results": "无法找到匹配“$1”的内容。",
 	"mobile-frontend-quick-lookup-not-internal": "对不起，这不是一个至此wiki的链接。",
-	"mobile.css": "/* 放置于这里的CSS将影响使用移动版网站的用户 */",
+	"mobile.css": "/* 这里放置的CSS将影响使用移动版网站的用户 */",
 	"mobile.js": "/* 这里的任何JavaScript将为使用移动版网站的用户加载 */",
 	"nearby": "您附近的切题页面",
 	"right-mf-uploadbutton": "在移动页面使用上传按钮",

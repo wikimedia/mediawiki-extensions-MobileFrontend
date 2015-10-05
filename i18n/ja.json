@@ -281,7 +281,7 @@
 	"mobile-frontend-sign-up-heading": "利用者登録",
 	"mobile-frontend-talk-fullpage": "ウィキページとして閲覧",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "本文を入力",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "話題の題名",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "題名",
 	"mobile-frontend-talk-add-overlay-submit": "議論を追加",
 	"mobile-frontend-talk-back-to-page": "ページ「$1」に戻る",
 	"mobile-frontend-talk-back-to-userpage": "「{{GENDER:$1|$1}}」の利用者ページに戻る。",

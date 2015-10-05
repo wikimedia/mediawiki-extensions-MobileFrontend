@@ -176,7 +176,7 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 Ostatnio  {{GENDER:$1|zmodyfikowano}} {{PLURAL:$3|rok|$3 lata|$3 lat}} temu] przez {{PLURAL:$5|[$6 {{GENDER:$1|użytkownika|użytkowniczkę}} $2]|0=anonimowego użytkownika}}",
 	"mobile-frontend-last-modified-years": "Ostatnio edytowano {{PLURAL:$1|rok|$1 lata|$1 lat}} temu",
 	"mobile-frontend-lead-image-tutorial-confirm": "Rozpocznij przesyłanie",
-	"mobile-frontend-logged-in-homepage-notification": "Witaj, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Witaj}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Zalogowano jako $1.",
 	"mobile-frontend-logged-out": "Nie jesteś zalogowany(a)",
 	"mobile-frontend-login": "Zaloguj się",
