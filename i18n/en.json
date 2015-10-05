@@ -321,7 +321,7 @@
 	"mobile-frontend-sign-up-heading": "Sign up",
 	"mobile-frontend-talk-fullpage": "Read as wiki page",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "What is on your mind?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Topic subject",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subject",
 	"mobile-frontend-talk-add-overlay-submit": "Add discussion",
 	"mobile-frontend-talk-back-to-page": "Return to \"$1\" page.",
 	"mobile-frontend-talk-back-to-userpage": "Return to the user page of \"{{GENDER:$1|$1}}\".",
