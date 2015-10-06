@@ -109,7 +109,7 @@
 				left -= center;
 			}
 
-			this.$pointer = $( '<div class="tutorial-pointer">' ).css( {
+			this.$pointer = $( '<div class="tutorial-pointer"></div>' ).css( {
 				top: -10,
 				left: left
 			} ).appendTo( this.$el );
