@@ -14,15 +14,6 @@ $wgMFEnableMinervaBetaFeature = false;
  */
 $wgMFEnableJSConsoleRecruitment = false;
 
-// FIXME: Where's the link describing the Browse experiment that I can reference
-// when I'm talking about the Browse experiment?
-/**
- * Whether or not the Browse experiment is enabled.
- *
- * @var boolean
- */
-$wgMFIsBrowseEnabled = false;
-
 /**
  * Whether or not the banner experiment is enabled.
  * https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image
@@ -30,18 +21,6 @@ $wgMFIsBrowseEnabled = false;
  * @var boolean
  */
 $wgMFIsBannerEnabled = true;
-
-/**
- * A static map of category name to tag name.
- *
- * Read this map as follows: if an article is categorised as X, then it is
- * tagged as Y.
- *
- * @var string[]
- */
-$wgMFBrowseTags = array(
-	// 'Category:English_post-rock_groups' => 'Objectively awesome music',
-);
 
 /**
  * This is a list of html tags, that could be recognized as the first heading of a page.

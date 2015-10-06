@@ -915,7 +915,6 @@ class MobileFrontendHooks {
 	 */
 	private static function getEventLoggingSchemas() {
 		return array(
-			'MobileWebBrowse' => 12119641,
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
@@ -960,7 +959,6 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
-			'resources/mobile.loggingSchemas/SchemaMobileWebBrowse.js',
 		);
 
 		$schemaModules = array();

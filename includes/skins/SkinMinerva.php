@@ -3,9 +3,6 @@
  * SkinMinerva.php
  */
 
-use MobileFrontend\Browse\TagService;
-use MobileFrontend\Browse\NullTagService;
-
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
  * A skin that works on both desktop and mobile
@@ -134,9 +131,6 @@ class SkinMinerva extends SkinTemplate {
 				array( 'class' => 'return-link' )
 			) );
 		}
-
-		$browseTags = $this->getBrowseTags( $title );
-		$tpl->set( 'browse_tags', $browseTags );
 	}
 
 	/**
@@ -1061,11 +1055,6 @@ class SkinMinerva extends SkinTemplate {
 			$modules['editor'] = array( 'skins.minerva.editor' );
 		}
 
-		// add the browse module if the page has a tag assigned to it
-		if ( $this->getBrowseTags( $this->getTitle() ) ) {
-			$modules['browse'] = array( 'skins.minerva.browse' );
-		}
-
 		$modules['context'] = $this->getContextSpecificModules();
 
 		if ( $this->isMobileMode ) {
@@ -1356,33 +1345,5 @@ HTML;
 			return $url;
 		},
 		$urls );
-	}
-
-	/**
-	 * Gets the tags assigned to the page.
-	 *
-	 * @param Title $title
-	 * @return array
-	 */
-	private function getBrowseTags( Title $title ) {
-		return $this->getBrowseTagService()
-			->getTags( $title );
-	}
-
-	// FIXME: This could be moved to the MobileFrontend\Browse\TagServiceFactory class.
-	/**
-	 * Gets the service that gets tags assigned to the page.
-	 *
-	 * @return MobileFrontend\Browse\TagService
-	 */
-	private function getBrowseTagService() {
-		$mfConfig = $this->getMFConfig();
-		$tags = $mfConfig->get( 'MFBrowseTags' );
-
-		if ( !$mfConfig->get( 'MFIsBrowseEnabled' ) ) {
-			return new NullTagService( $tags );
-		}
-
-		return new TagService( $tags );
 	}
 }
