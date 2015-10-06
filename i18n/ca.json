@@ -246,7 +246,7 @@
 	"mobile-frontend-sign-in-why": "Si teniu un compte a {{SITENAME}}, podeu identificar-vos.",
 	"mobile-frontend-sign-up-heading": "Registra't",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Què tens en ment?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Assumpte",
 	"mobile-frontend-talk-add-overlay-submit": "Crea una discussió",
 	"mobile-frontend-talk-back-to-page": "Torna a l'article \"$1\".",
 	"mobile-frontend-talk-back-to-userpage": "Torna a la pàgina d’usuari «{{GENDER:$1|$1}}».",

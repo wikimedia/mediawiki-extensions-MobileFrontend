@@ -402,7 +402,6 @@
 	"mobile-frontend-meta-data-issues-categories": "Про цю категорію",
 	"mobile-frontend-loading-message": "Завантаження…",
 	"mobile-frontend-console-recruit": "\\o/ Привіт! Це програмне забезпечення з відкритим кодом і нам потрібні волонтери, які б допомогли будувати цю річ, робити її кращою і виправляти будь-які баґи, які можна побачити у цій консолі JavaScript!\n\nВи можете глянути, в чому затримка, @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "Теґи",
 	"mobile-frontend-panel-ok": "Гаразд",
 	"mobile-frontend-panel-cancel": "Ні, дякую",
 	"mobile-frontend-panel-betaoptin-msg": "Ви хочете спробувати деякі нові функції? Приєднавшись до бета-версії, Ви отримаєте доступ до експериментальних функцій, з ризиком виникнення баґів і проблем.",

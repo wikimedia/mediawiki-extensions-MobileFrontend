@@ -385,7 +385,6 @@
 	"mobile-frontend-meta-data-issues-categories": "이 분류에 대해",
 	"mobile-frontend-loading-message": "불러오는 중…",
 	"mobile-frontend-console-recruit": "\\o/ 이보세요! 이것은 오픈 소스 소프트웨어이며 우리는 더 잘 만들고 이 자바스크립트 콘손에서 볼 수 있는 어떠한 버그를 고칠 수 있는, 이러한 일을 구축하는 것을 도울 자원자가 필요합니다!\n\n당신은 우리의 백로그를 찾을 수 있습니다 @ https://phabricator.wikimedia.org/project/view/67/",
-	"mobile-frontend-browse-tags-header": "태그",
 	"mobile-frontend-panel-ok": "네",
 	"mobile-frontend-panel-cancel": "괜찮습니다",
 	"mobile-frontend-panel-betaoptin-msg": "어떤 새 기능을 써보겠습니까? 베타에 참여하면, 버그와 문제가 생길 수 있는 위험을 감수하여 실험적인 기능에 접근하게 됩니다."
