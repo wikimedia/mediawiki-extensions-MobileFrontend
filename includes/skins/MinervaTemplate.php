@@ -100,7 +100,7 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function renderFooter( $data ) {
 		?>
-		<div id="footer">
+		<div id="footer" class="post-content">
 			<?php
 				foreach ( $this->getFooterLinks() as $category => $links ) {
 			?>
