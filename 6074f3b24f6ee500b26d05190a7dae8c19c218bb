@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_182584a9",
+        "filename": "resources/mobile.backtotop/backtotop.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-06T00:35:05Z",
+      "side": 1,
+      "message": "Why not add this in the skin itself?\nAlso I\u0027d suggest operating on the Page object.",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_7814c844",
+        "filename": "resources/mobile.backtotop/backtotop.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-06T00:35:05Z",
+      "side": 1,
+      "message": "please debounce scroll handlers are expensive. Does it even need to use a scroll handler?",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_58178c4a",
+        "filename": "resources/mobile.backtotop/backtotop.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-06T00:35:05Z",
+      "side": 1,
+      "message": "indent issues",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
