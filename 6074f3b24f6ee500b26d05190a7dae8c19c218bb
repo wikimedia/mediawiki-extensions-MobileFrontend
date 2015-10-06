@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ecb373e_738f0b79",
+        "filename": "resources/mobile.backtotop/backtotop.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-06T05:54:03Z",
+      "side": 1,
+      "message": "It doesn\u0027t really matter where it\u0027s added, it has a fixed position. But I thought, that it seems to be more content related :)",
+      "parentUuid": "2ecb373e_182584a9",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecb373e_7814c844",
         "filename": "resources/mobile.backtotop/backtotop.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ecb373e_13f007fa",
+        "filename": "resources/mobile.backtotop/backtotop.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-06T05:54:03Z",
+      "side": 1,
+      "message": "What would be a better approach to show the back to top only, if the page is scrolled down? :) Debouncing makes sense.",
+      "parentUuid": "2ecb373e_7814c844",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecb373e_58178c4a",
         "filename": "resources/mobile.backtotop/backtotop.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-10-06T00:35:05Z",
       "side": 1,
       "message": "indent issues",
+      "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_d3f59fea",
+        "filename": "resources/mobile.backtotop/backtotop.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-06T05:54:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ecb373e_58178c4a",
       "revId": "6074f3b24f6ee500b26d05190a7dae8c19c218bb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
