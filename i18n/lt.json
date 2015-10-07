@@ -293,7 +293,7 @@
 	"mobile-frontend-sign-up-heading": "Sukurti paskyrą",
 	"mobile-frontend-talk-fullpage": "Skaityti kaip viki puslapį",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Apie ką galvojate?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Temos objektas",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
 	"mobile-frontend-talk-add-overlay-submit": "Pridėti diskusiją",
 	"mobile-frontend-talk-back-to-page": "Grįžti į \"$1\" puslapį.",
 	"mobile-frontend-talk-back-to-userpage": "Grįžti į naudotojo \"{{GENDER:$1|$1}}\" puslapį.",

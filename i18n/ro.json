@@ -289,7 +289,7 @@
 	"mobile-frontend-sign-up-heading": "Înregistrare",
 	"mobile-frontend-talk-fullpage": "Lecturează ca pagină wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Ce aveți de spus?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subiectul rubricii",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subiect",
 	"mobile-frontend-talk-add-overlay-submit": "Adăugare discuție",
 	"mobile-frontend-talk-back-to-page": "Înapoi la pagina „$1”.",
 	"mobile-frontend-talk-back-to-userpage": "Înapoi la pagina {{GENDER:$1|utilizatorului|utilizatoarei}} „{{GENDER:$1|$1}}”.",
