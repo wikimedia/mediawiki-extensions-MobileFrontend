@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var time = M.require( 'mobile.modifiedBar/time' );
-
 	/**
 	 * @class WatchListGateway
 	 * @param {mw.Api} api

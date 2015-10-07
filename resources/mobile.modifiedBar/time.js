@@ -104,6 +104,6 @@
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
 		isRecent: isRecent
-	} );
+	} ).deprecate( 'modules/lastEdited/time' );
 
 }( mw.mobileFrontend, jQuery ) );
