@@ -201,7 +201,7 @@ HTML;
 	 */
 	private function submitSettingsForm() {
 		$schema = 'MobileOptionsTracking';
-		$schemaRevision = 8101982;
+		$schemaRevision = 14003392;
 		$schemaData = array(
 			'action' => 'success',
 			'images' => "nochange",
