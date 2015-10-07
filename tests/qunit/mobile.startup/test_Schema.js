@@ -11,6 +11,7 @@
 	QUnit.module( 'MobileFrontend: Schema', {
 		setup: function () {
 			this.stub( TestSchema.prototype, 'log' );
+			this.stub( mw.config, 'get' ).withArgs( 'wgMFIgnoreEventLoggingBucketing' ).returns( false );
 			this.logStub = TestSchema.prototype.log;
 		}
 	} );
