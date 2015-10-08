@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_d342feb1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 700,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-08T15:32:51Z",
+      "side": 1,
+      "message": "wouldn\u0027t it make sense to pass the skin object, too? That would make the hook signature equivalent with the BeforePageDisplay hook :)",
+      "revId": "9c68d0f5fdb77f6a45459b004d522ea0af916aae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_731b12d5",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-08T15:32:51Z",
+      "side": 1,
+      "message": "coule we use a more specific function name? E.g. prepareFooter() or something similar? The current name seems to be a bit too generic :)",
+      "revId": "9c68d0f5fdb77f6a45459b004d522ea0af916aae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
