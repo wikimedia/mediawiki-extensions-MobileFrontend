@@ -267,7 +267,7 @@
 	"mobile-frontend-photo-upload-comment": "Se añadió una imagen a la página",
 	"mobile-frontend-photo-upload-copyvio": "¡Advertenciaǃ Esta foto parece sospechosa. Si no has sido tu quien la ha tomado, no la subas. ¿Aun quieres continuar?",
 	"mobile-frontend-photo-upload-error": "Error, intenta de nuevo.",
-	"mobile-frontend-photo-upload-error-file-type": "Por favor, sube solo imágenes.",
+	"mobile-frontend-photo-upload-error-file-type": "Sube solo imágenes.",
 	"mobile-frontend-photo-upload-error-filename": "Error, proporciona un resumen más descriptivo.",
 	"mobile-frontend-photo-upload-generic": "Contribuir con una imagen",
 	"mobile-frontend-photo-upload-invalid-user": "El usuario «$1» no está registrado.",
