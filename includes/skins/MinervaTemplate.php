@@ -284,12 +284,6 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContentWrapper( $data ) {
-		// Construct an inline script which emits header-loaded
-		$headerLoaded = "mw.loader.using( 'mobile.head', function () {";
-		$headerLoaded .= "mw.mobileFrontend.emit( 'header-loaded' );";
-		$headerLoaded .= "} );";
-		echo ResourceLoader::makeInlineScript( $headerLoaded );
-
 		$this->renderPreContent( $data );
 		$this->renderContent( $data );
 		echo $this->getPostContentHtml( $data );

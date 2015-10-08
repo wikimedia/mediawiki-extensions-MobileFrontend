@@ -1487,34 +1487,15 @@ $wgMinervaSpecialPageModules = array(
 // These modules are the gateways to all other modules and will ensure the other modules get loaded
 // on the page.
 $wgMinervaBootstrapModules = array(
-	// @todo FIXME: Remove when cache has cleared. Use skins.minerva.head instead (1.26wmf23)
-	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.scripts.top',
-		),
-	),
+	// @todo FIXME: Remove when cache has cleared (T112315)
+	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(),
 
-	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.mainMenu',
-			'mobile.browser',
-			// 'mobile.oo' rather than 'mobile.modules' is need because the main menu binds
-			// to an event, thus needs event code to be loaded before it. Feel free to swap
-			// 'mobile.oo' below with 'mobile.modules' once none of the script files below need
-			// to use it for example the main menu code
-			'mobile.oo',
-			'mobile.context',
-		),
-		'scripts' => array(
-			'resources/skins.minerva.scripts.top/init.js',
-		),
-		'position' => 'top',
-	),
+	// @todo FIXME: Remove when cache has cleared (T112315)
+	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(),
 
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'skins.minerva.scripts.top',
 			'mobile.startup',
 			'mobile.mainMenu',
 			'mobile.loggingSchemas',
@@ -1526,6 +1507,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.toast',
 			'mobile.settings',
 			'mobile.modifiedBar',
+			'mobile.context',
 		),
 		'messages' => array(
 			// lastEdited.js

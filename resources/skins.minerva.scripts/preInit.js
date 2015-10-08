@@ -10,8 +10,22 @@
 		PageApi = M.require( 'mobile.startup/PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'mobile.startup/Page' ),
-		mainMenu = M.require( 'mobile.head/mainMenu' ),
+		MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
+		mainMenu = new MainMenu( {
+			activator: '.header .main-menu-button'
+		} ),
 		Skin = M.require( 'mobile.startup/Skin' );
+
+	// Used by Gather
+	M.define( 'skins.minerva.scripts/mainMenu', mainMenu ).deprecate( 'mobile.head/mainMenu' );
+
+	$( function () {
+		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {
+			// Now we have a main menu button register it.
+			mainMenu.registerClickEvents();
+			mainMenu.appendTo( '#mw-mf-page-left' );
+		}
+	} );
 
 	skin = new Skin( {
 		el: 'body',
