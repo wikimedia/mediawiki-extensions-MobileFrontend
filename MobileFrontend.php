@@ -45,6 +45,7 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = __DIR__ . "/MobileFrontend.al
 $autoloadClasses = array(
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
+	'MobileFrontendSkinHooks' => 'MobileFrontend.skin.hooks',
 
 	'IDeviceProperties' => 'DeviceDetection',
 	'IDeviceDetector' => 'DeviceDetection',
@@ -143,6 +144,7 @@ $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserO
 $wgHooks['HTMLFileCache::useFileCache'][] = 'MobileFrontendHooks::onHTMLFileCache_useFileCache';
 $wgHooks['LoginFormValidErrorMessages'][] = 'MobileFrontendHooks::onLoginFormValidErrorMessages';
 $wgHooks['ResourceLoaderGetLessVars'][] = 'MobileFrontendHooks::onResourceLoaderGetLessVars';
+$wgHooks['SkinPreloadExistence'][] = 'MobileFrontendHooks::onSkinPreloadExistence';
 
 $wgSpecialPages += array(
 	'History' => 'SpecialMobileHistory',
