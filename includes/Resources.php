@@ -73,85 +73,16 @@ $wgMinervaStyleModules = array(
 			'resources/skins.minerva.tablet.styles/hacks.less',
 		),
 	),
-	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderImageModule',
-		'prefix' => 'mw-ui',
+	'skins.minerva.icons.images' => $wgMFResourceImageModuleBoilerplate + array(
 		'selector' => '.mw-ui-icon-{name}:before',
-		// Note: currently doesn't do anything due to T97410
-		'position' => 'bottom',
 		'images' => array(
 			// IMPORTANT: Do not add anything here unless it's necessary to be loaded without
 			// JavaScript (e.g. menu chrome).
 			// CAUTION: Anything added here will greatly increase the first paint time until
 			// T97410 is resolved.
-			'notifications' => 'images/icons/bell.svg',
-			'mainmenu' => 'images/icons/hamburger.svg',
+			'notifications' => 'resources/skins.minerva.icons.images/bell.svg',
+			'mainmenu' => 'resources/skins.minerva.icons.images/hamburger.svg',
 		)
-	),
-
-	'skins.minerva.icons.images.legacy' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'top',
-		'styles' => array(
-			'resources/skins.minerva.icons.images.legacy/icons.less',
-		),
-	),
-
-	'skins.minerva.icons.variants.js' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderImageModule',
-		'prefix' => 'mw-ui',
-		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
-		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
-		'variants' => array(
-			'gray' => array(
-				'color' => '#BBB',
-				'global' => true,
-			),
-			'invert' => array(
-				'color' => '#FFFFFF',
-				'global' => true,
-			)
-		),
-		'position' => 'bottom',
-		'images' => array(
-			// overlay
-			'close' => 'images/icons/close.svg',
-		),
-	),
-
-	'skins.minerva.icons.images.js' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.icons.variants.js',
-		),
-		'class' => 'ResourceLoaderImageModule',
-		'prefix' => 'mw-ui',
-		'selector' => '.mw-ui-icon-{name}:before',
-		'position' => 'bottom',
-		'images' => array(
-			// toggling
-			'arrow' => 'images/icons/arrow.svg',
-
-			// page actions
-			'talk' => 'images/icons/talk.svg',
-			'watch' => 'images/icons/watch.svg',
-			'watched' => 'images/icons/watched.svg',
-			'edit' => 'images/icons/editLocked.svg',
-			'edit-enabled' => 'images/icons/edit.svg',
-
-			// TOC
-			'toc' => 'images/icons/contents-ltr.svg',
-
-			// Issues
-			'cleanup' => 'images/icons/blue-triangle.svg',
-			// FIXME: make this a variant of cleanup
-			'cleanup-gray' => 'images/icons/gray-triangle.svg',
-
-			// User
-			'user' => 'images/icons/userNormal.svg',
-			'anonymous' => 'images/icons/userAnonymous.svg',
-
-			// cite
-			'citation' => 'images/icons/cite.svg',
-		),
 	),
 
 	'skins.minerva.mainPage.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
@@ -172,6 +103,64 @@ $wgMinervaStyleModules = array(
 		'styles' => array(
 			'resources/skins.minerva.beta.userpage.styles/userpage.less',
 		)
+	),
+);
+
+/**
+ * An array of modules that provide icons.
+**/
+$wgMobileIconModuleStyles = array(
+	'mobile.overlay.images' => $wgMFResourceImageModuleBoilerplate + array(
+		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
+		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
+		'variants' => array(
+			'gray' => array(
+				'color' => '#BBB',
+				'global' => true,
+			),
+			'invert' => array(
+				'color' => '#FFFFFF',
+				'global' => true,
+			)
+		),
+		'images' => array(
+			// overlay
+			'close' => 'resources/mobile.overlay.images/close.svg',
+		),
+	),
+
+	'mobile.issues.images' => $wgMFResourceImageModuleBoilerplate + array(
+		'selector' => '.mw-ui-icon-{name}:before',
+		'images' => array(
+			// Issues
+			'cleanup' => 'resources/mobile.issues.images/blue-triangle.svg',
+			// FIXME: make this a variant of cleanup
+			'cleanup-gray' => 'resources/mobile.issues.images/gray-triangle.svg',
+		),
+	),
+
+	'mobile.toc.images' => $wgMFResourceImageModuleBoilerplate + array(
+		'selector' => '.mw-ui-icon-{name}:before',
+		'images' => array(
+			// TOC
+			'toc' => 'resources/mobile.toc.images/contents-ltr.svg',
+		),
+	),
+
+	'mobile.references.images' => $wgMFResourceImageModuleBoilerplate + array(
+		'selector' => '.mw-ui-icon-{name}:before',
+		'images' => array(
+			// cite
+			'citation' => 'resources/mobile.references.images/cite.svg',
+		),
+	),
+
+	'mobile.toggle.images' => $wgMFResourceImageModuleBoilerplate + array(
+		'selector' => '.mw-ui-icon-{name}:before',
+		'images' => array(
+			// toggling
+			'arrow' => 'resources/mobile.toggle.images/arrow.svg',
+		),
 	),
 );
 
@@ -334,6 +323,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 			'mobile.loggingSchemas',
 			'mobile.toggle',
+			'mobile.toc.images',
 		),
 		'scripts' => array(
 			'resources/mobile.toc/TableOfContents.js',
@@ -351,9 +341,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.icons.images.legacy',
-		),
 		'styles' => array(
 			'resources/mobile.ajax/spinner.less',
 		),
@@ -399,7 +386,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.api',
 			'mobile.settings',
 			'jquery.throttle-debounce',
-			'skins.minerva.icons.images.legacy',
 		),
 		'templates' => array(
 			'anchor.hogan' => 'resources/mobile.startup/anchor.hogan',
@@ -616,8 +602,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 					 * https://github.com/wikimedia/mediawiki-extensions-VisualEditor/blob/
 					 * 3e2f7f07285cf361adf8563667ff602ca938a859/modules/ve-mw/ui/styles/ve.ui.Icons.css
 					 */
-					'rtl' => 'images/icons/reference-rtl.svg',
-					'ltr' => 'images/icons/reference-ltr.svg',
+					'rtl' => 'resources/mobile.editor.overlay.withtoolbar.images/reference-rtl.svg',
+					'ltr' => 'resources/mobile.editor.overlay.withtoolbar.images/reference-ltr.svg',
 				),
 			),
 		)
@@ -744,11 +730,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	/** provides next and previous images, e.g. for a swipe left and right module */
-	'mobile.swipe.images' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderImageModule',
+	'mobile.swipe.images' => $wgMFResourceImageModuleBoilerplate + array(
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
-		'prefix' => 'mw-ui',
 		'variants' => array(
 			'invert' => array(
 				'color' => '#FFFFFF',
@@ -758,14 +742,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'images' => array(
 			'previous' => array(
 				'file' => array(
-					'ltr' => 'images/icons/move-rtl.svg',
-					'rtl' => 'images/icons/move-ltr.svg',
+					'ltr' => 'resources/mobile.swipe.images/move-rtl.svg',
+					'rtl' => 'resources/mobile.swipe.images/move-ltr.svg',
 				),
 			),
 			'next' => array(
 				'file' => array(
-					'ltr' => 'images/icons/move-ltr.svg',
-					'rtl' => 'images/icons/move-rtl.svg',
+					'ltr' => 'resources/mobile.swipe.images/move-ltr.svg',
+					'rtl' => 'resources/mobile.swipe.images/move-rtl.svg',
 				),
 			),
 		),
@@ -817,7 +801,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'skins.minerva.icons.variants.js',
+			'mobile.overlay.images',
 			'mobile.ajax',
 		),
 		'scripts' => array(
@@ -878,6 +862,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
+			'mobile.references.images',
 			'mobile.loggingSchemas',
 		),
 		'messages' => array(
@@ -898,6 +883,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toggle' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.settings',
+			'mobile.toggle.images',
 			// uses util.js and jquery.throttle-debounce
 			'mobile.startup',
 		),
@@ -991,6 +977,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.issues' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+			'mobile.issues.images',
 		),
 		'templates' => array(
 			'OverlayContent.hogan' => 'resources/mobile.issues/cleanup.hogan',
@@ -1425,6 +1412,29 @@ $wgMinervaSpecialPageModules = array(
 // These modules are the gateways to all other modules and will ensure the other modules get loaded
 // on the page.
 $wgMinervaBootstrapModules = array(
+	// FIXME: Used by Gather. Remove when Gather updated.
+	'skins.minerva.icons.variants.js' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlay.images',
+		),
+	),
+
+	'skins.minerva.icons.images.scripts' => $wgMFResourceImageModuleBoilerplate + array(
+		'selector' => '.mw-ui-icon-{name}:before',
+		'images' => array(
+			// page actions
+			'talk' => 'resources/skins.minerva.icons.images.scripts/talk.svg',
+			'watch' => 'resources/skins.minerva.icons.images.scripts/watch.svg',
+			'watched' => 'resources/skins.minerva.icons.images.scripts/watched.svg',
+			'edit' => 'resources/skins.minerva.icons.images.scripts/editLocked.svg',
+			'edit-enabled' => 'resources/skins.minerva.icons.images.scripts/edit.svg',
+
+			// User
+			'user' => 'resources/skins.minerva.icons.images.scripts/userNormal.svg',
+			'anonymous' => 'resources/skins.minerva.icons.images.scripts/userAnonymous.svg',
+		),
+	),
+
 	// @todo FIXME: Remove when cache has cleared (T112315)
 	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(),
 
@@ -1437,7 +1447,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.startup',
 			'mobile.mainMenu',
 			'mobile.loggingSchemas',
-			'skins.minerva.icons.images.js',
 			'mobile.issues',
 			'mobile.search',
 			'mobile.references',
@@ -1491,6 +1500,7 @@ $wgMinervaBootstrapModules = array(
 
 	'skins.minerva.editor' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
+			'skins.minerva.icons.images.scripts',
 			'skins.minerva.scripts',
 			'mobile.drawers',
 			'mediawiki.ui.input',
@@ -1522,6 +1532,9 @@ $wgMinervaBootstrapModules = array(
 		),
 	),
 
+	// FIXME: Gather should not be using this. it's naughty.
+	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(),
+
 	'skins.minerva.categories' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
@@ -1534,6 +1547,7 @@ $wgMinervaBootstrapModules = array(
 
 	'skins.minerva.talk' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'skins.minerva.icons.images.scripts',
 			'skins.minerva.scripts',
 			'mobile.overlays',
 		),
@@ -1563,6 +1577,7 @@ $wgMinervaBootstrapModules = array(
 
 	'skins.minerva.watchstar' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'skins.minerva.icons.images.scripts',
 			'mobile.watchstar',
 			'skins.minerva.scripts',
 		),
@@ -1616,6 +1631,7 @@ $wgResourceModules = array_merge( $wgResourceModules,
 	$wgMobileSpecialPageModules,
 	$wgMinervaSpecialPageModules,
 	$wgMinervaStyleModules,
+	$wgMobileIconModuleStyles,
 	$wgMinervaBootstrapModules
 );
 
