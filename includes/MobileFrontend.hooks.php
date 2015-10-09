@@ -318,7 +318,7 @@ class MobileFrontendHooks {
 	 * @param Skin $skin
 	 * @return bool
 	 */
-	public static function onSkinPreloadExistence( $titles, $skin ) {
+	public static function onSkinPreloadExistence( array &$titles, Skin $skin ) {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			$skin->getOutput()->setTarget( 'mobile' );
