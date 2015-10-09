@@ -133,8 +133,7 @@ class MobileFrontendSkinHooks {
 		$footerlinks = $tpl->data['footerlinks'];
 		$args = $req->getQueryValues();
 		// avoid title being set twice
-		unset( $args['title'] );
-		unset( $args['useformat'] );
+		unset( $args['title'], $args['useformat'] );
 		$args['mobileaction'] = 'toggle_view_mobile';
 
 		$mobileViewUrl = $title->getFullURL( $args );
