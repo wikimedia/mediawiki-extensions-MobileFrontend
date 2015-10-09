@@ -230,10 +230,6 @@
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
 			} ).on( 'click', function () {
 				window.location.hash = $( this ).attr( 'id' );
-				// name funnel for watchlists to catch subsequent uploads
-				$.cookie( 'mwUploadsFunnel', 'nearby', {
-					expires: new Date( new Date().getTime() + 60000 )
-				} );
 			} );
 
 			// Restore the offset

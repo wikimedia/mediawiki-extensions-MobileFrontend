@@ -11,9 +11,6 @@
 	 * @uses InfiniteScroll
 	 */
 	WatchList = WatchstarPageList.extend( {
-		events: {
-			'mousedown a.title': 'onTitleClick'
-		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			var lastTitle;
@@ -51,15 +48,6 @@
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
 			this.infiniteScroll.enable();
-		},
-		/**
-		 * Save title clicks
-		 */
-		onTitleClick: function () {
-			// name funnel for watchlists to catch subsequent uploads
-			$.cookie( 'mwUploadsFunnel', 'watchlist', {
-				expires: new Date( new Date().getTime() + 60000 )
-			} );
 		},
 		/**
 		 * Loads pages from the api and triggers render.
