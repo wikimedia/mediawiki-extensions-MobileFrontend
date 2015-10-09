@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_f4f3659a",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-09T00:15:33Z",
+      "side": 1,
+      "message": "We shouldn\u0027t define modules so that other extensions can use them. Why can\u0027t gather instantiate its own mainMenu?",
+      "revId": "7e7e9c7d67402afd3bd3bc8ee096be7a32675ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
