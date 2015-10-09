@@ -301,7 +301,7 @@
 	"mobile-frontend-sign-up-heading": "가입하기",
 	"mobile-frontend-talk-fullpage": "위키 문서로 읽기",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "당신이 생각하는 것은 무엇입니까?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "주제 제목",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "제목",
 	"mobile-frontend-talk-add-overlay-submit": "토론 추가",
 	"mobile-frontend-talk-back-to-page": "\"$1\" 문서로 돌아갑니다.",
 	"mobile-frontend-talk-back-to-userpage": "\"{{GENDER:$1|$1}}\"의 사용자 문서로 돌아갑니다.",
