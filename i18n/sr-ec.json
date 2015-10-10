@@ -197,7 +197,7 @@
 	"mobile-frontend-sign-in-error-heading": "Грешка",
 	"mobile-frontend-sign-in-heading": "Пријављивање",
 	"mobile-frontend-sign-up-heading": "Отварање налога",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Предмет теме",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",
 	"mobile-frontend-talk-add-overlay-submit": "Додај тему",
 	"mobile-frontend-talk-back-to-page": "Назад на страницу $1.",
 	"mobile-frontend-talk-back-to-userpage": "Назад на страницу {{GENDER:$1|корисника|кориснице}} „$1“.",

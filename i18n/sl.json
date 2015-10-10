@@ -187,7 +187,7 @@
 	"mobile-frontend-sign-in-why": "Če imate račun na {{GRAMMAR:mestnik|{{SITENAME}}}}, se lahko prijavite spodaj.",
 	"mobile-frontend-sign-up-heading": "Registracija",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "O čem trenutno razmišljate?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema razdelka",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Zadeva",
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj razpravo",
 	"mobile-frontend-talk-back-to-page": "Vrnitev na stran »$1«.",
 	"mobile-frontend-talk-edit-summary": "Nov pogovorni razdelek: $1",

@@ -175,7 +175,7 @@
 	"mobile-frontend-sign-in-error-heading": "Грешка",
 	"mobile-frontend-sign-in-heading": "Prijavljivanje",
 	"mobile-frontend-sign-up-heading": "Otvaranje naloga",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Predmet teme",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj temu",
 	"mobile-frontend-talk-back-to-page": "Nazad na stranicu $1.",
 	"mobile-frontend-talk-back-to-userpage": "Nazad na stranicu {{GENDER:$1|korisnika|korisnice}} „$1“.",

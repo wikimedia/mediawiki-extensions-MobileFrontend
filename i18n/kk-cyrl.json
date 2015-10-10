@@ -303,7 +303,7 @@
 	"mobile-frontend-quick-lookup-no-results": " «$1» дегенге келетін табылмады.",
 	"mobile-frontend-quick-lookup-not-internal": "Кешіріңіз, бұл мына уикидегі сілтеме емес.",
 	"nearby": "Сізге жақын бет",
-	"tag-mobile_edit": "<span style=\"background-color:#FF4500\"><span style=\"color:white\">Мобилдік өңдеме</span></span>",
+	"tag-mobile_edit": "Мобилдік өңдеме",
 	"tag-mobile_edit-description": "Мобайлдан жасалған өңдеме (уеб не қосымша)",
 	"tag-mobile_web_edit": "Мобайл уеб өңдеме",
 	"tag-mobile_web_edit-description": "Мобайл уеб сайттан жасалған өңдеме",
@@ -314,7 +314,6 @@
 	"mobile-frontend-donate-button-label": "Демеушілік",
 	"mobile-frontend-meta-data-issues-categories": "Бұл санат туралы",
 	"mobile-frontend-loading-message": "Жүктелуде...",
-	"mobile-frontend-browse-tags-header": "Тегтер",
 	"mobile-frontend-panel-ok": "Ok",
 	"mobile-frontend-panel-cancel": "Жоқ, рахмет"
 }
