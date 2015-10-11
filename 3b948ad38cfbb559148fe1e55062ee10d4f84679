@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_b57dd9e6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T18:18:29Z",
+      "side": 1,
+      "message": "I don\u0027t understand what you do, sorry. You still need to add resources as a LESS import path.",
+      "revId": "3b948ad38cfbb559148fe1e55062ee10d4f84679",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
