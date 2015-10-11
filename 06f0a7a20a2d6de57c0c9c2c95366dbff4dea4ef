@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_67633a3c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T10:33:29Z",
+      "side": 1,
+      "message": "If it doesn\u0027t work, open a task in phabricator.",
+      "parentUuid": "0ebaf39b_e7772afc",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_07711e0b",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
