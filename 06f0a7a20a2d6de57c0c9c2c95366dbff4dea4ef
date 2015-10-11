@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_678c9a00",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T10:20:40Z",
+      "side": 1,
+      "message": "You don\u0027t need all these globals ;)",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_478716dd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T10:20:40Z",
+      "side": 1,
+      "message": "I still don\u0027t know, why you don\u0027t put this into extension.json, it\u0027s supported:\nhttps://github.com/wikimedia/mediawiki/blob/35f61c7c4b38388dc498f898193f1dda0461e0b3/docs/extension.schema.json#L442-L445",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_07711e0b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T10:20:40Z",
+      "side": 1,
+      "message": "Btw.: You would add the less paths twice, once in the setup php file, and once here. You should remove one.",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
