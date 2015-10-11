@@ -34,6 +34,24 @@
       "revId": "3b948ad38cfbb559148fe1e55062ee10d4f84679",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_d5c88d27",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-11T19:02:37Z",
+      "side": 1,
+      "message": "your -\u003e you are / your\u0027re\n\nThe example I linked you already (the schema documentation file). And I never said, that there can only one import paths ;) No, I don\u0027t know, any extension, that uses this and extension registration.",
+      "parentUuid": "0ebaf39b_758761dd",
+      "revId": "3b948ad38cfbb559148fe1e55062ee10d4f84679",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
