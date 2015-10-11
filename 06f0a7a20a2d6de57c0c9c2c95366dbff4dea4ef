@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_87642e47",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-11T10:31:34Z",
+      "side": 1,
+      "message": "Hi I do since it is in a class and function it needs these globals since I didn\u0027t add them to the files.",
+      "parentUuid": "0ebaf39b_678c9a00",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_478716dd",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-11T10:20:40Z",
       "side": 1,
       "message": "I still don\u0027t know, why you don\u0027t put this into extension.json, it\u0027s supported:\nhttps://github.com/wikimedia/mediawiki/blob/35f61c7c4b38388dc498f898193f1dda0461e0b3/docs/extension.schema.json#L442-L445",
+      "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e7772afc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-11T10:31:34Z",
+      "side": 1,
+      "message": "I am not sure if it works since moving this to here worked.",
+      "parentUuid": "0ebaf39b_478716dd",
       "revId": "06f0a7a20a2d6de57c0c9c2c95366dbff4dea4ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
