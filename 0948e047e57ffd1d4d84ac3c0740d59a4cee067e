@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_72d3fa61",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-10-11T14:50:38Z",
+      "side": 1,
+      "message": "Is this just re-inventing Skin::makeInternalOrExternalUrl()?",
+      "revId": "0948e047e57ffd1d4d84ac3c0740d59a4cee067e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_12c87ea9",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-10-11T14:50:38Z",
+      "side": 1,
+      "message": "Aren\u0027t these core settings, not from MF?",
+      "revId": "0948e047e57ffd1d4d84ac3c0740d59a4cee067e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
