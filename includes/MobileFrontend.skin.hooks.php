@@ -16,17 +16,10 @@ class MobileFrontendSkinHooks {
 			return null;
 		}
 		$url = $urlMsg->plain();
-		// Support both page titles and URLs
-		if ( preg_match( '#^(https?:)?//#', $url ) === 0 ) {
-			$title = Title::newFromText( $url );
-			if ( !$title ) {
-				return null;
-			}
-			$url = $title->getLocalURL();
-		}
+
 		return Html::element(
 			'a',
-			array( 'href' => $url ),
+			array( 'href' => Skin::makeInternalOrExternalUrl( $url ) ),
 			$sk->msg( 'mobile-frontend-terms-text' )->text()
 		);
 	}
