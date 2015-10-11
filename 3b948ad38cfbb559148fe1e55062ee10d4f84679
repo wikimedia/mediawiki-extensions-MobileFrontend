@@ -16,6 +16,24 @@
       "revId": "3b948ad38cfbb559148fe1e55062ee10d4f84679",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_758761dd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-11T18:23:06Z",
+      "side": 1,
+      "message": "But I thought you said we carnt have two of them here. and it carnt have an array in it I think not sure though.\n\nPlease could you do an example so I understand what your trying to say because I thought you said that there carnt be two here only one.",
+      "parentUuid": "0ebaf39b_b57dd9e6",
+      "revId": "3b948ad38cfbb559148fe1e55062ee10d4f84679",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
