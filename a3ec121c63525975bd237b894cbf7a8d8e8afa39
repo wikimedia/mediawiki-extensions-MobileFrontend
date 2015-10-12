@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_0dc04e2e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-12T20:32:17Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "a3ec121c63525975bd237b894cbf7a8d8e8afa39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6dc30a3e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 1659,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-12T20:32:17Z",
+      "side": 1,
+      "message": "It looks like you\u0027ve changed this but you haven\u0027t(?). Please shift this back above $wgMobileSpecialPageModules \u003d array( to where it was before rather than unnecessarily shifting it down here. It will make diff more readable and give me more confidence to merge.",
+      "revId": "a3ec121c63525975bd237b894cbf7a8d8e8afa39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_adb102de",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 1698,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-12T20:32:17Z",
+      "side": 1,
+      "message": "It looks like you\u0027ve changed this but you haven\u0027t. Please shift this back above $wgMobileSpecialPageModules \u003d array( to where it was before rather than unnecessarily shifting it down here. It will make diff more readable and give me more confidence to merge.",
+      "revId": "a3ec121c63525975bd237b894cbf7a8d8e8afa39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_ade822b0",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 1726,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-12T20:32:17Z",
+      "side": 1,
+      "message": "So now this diff is getting cleaner... It\u0027s becoming much more obvious what this change is about.\n\nWhy can\u0027t array_merge be used here? It seems this is all you are changing?",
+      "revId": "a3ec121c63525975bd237b894cbf7a8d8e8afa39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
