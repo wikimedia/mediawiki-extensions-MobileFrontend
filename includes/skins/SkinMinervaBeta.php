@@ -35,17 +35,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * initialize various variables and generate the template
-	 * @param OutputPage $out optional parameter: The OutputPage Obj.
-	 */
-	public function outputPage( OutputPage $out = null ) {
-		if ( !$out ) {
-			$out = $this->getOutput();
-		}
-		parent::outputPage( $out );
-	}
-
-	/**
 	 * Returns an array with details for a talk button.
 	 * @param Title $talkTitle Title object of the talk page
 	 * @param array $talkButton Array with data of desktop talk button
@@ -98,37 +87,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Returns an array of links for page secondary actions
-	 * @param BaseTemplate $tpl
-	 * @return Array
-	 */
-	protected function getSecondaryActions( BaseTemplate $tpl ) {
-		$buttons = parent::getSecondaryActions( $tpl );
-
-		$title = $this->getTitle();
-		$namespaces = $tpl->data['content_navigation']['namespaces'];
-		if ( $this->isTalkAllowed() ) {
-			// FIXME [core]: This seems unnecessary..
-			$subjectId = $title->getNamespaceKey( '' );
-			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-			$talkButton = isset( $namespaces[$talkId] ) && !$title->isTalkPage() ?
-				$namespaces[$talkId]['text'] : '';
-
-			$talkTitle = $title->getTalkPage();
-			$buttons['talk'] = array(
-				'attributes' => array(
-					'href' => $talkTitle->getLinkURL(),
-					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk' ),
-					'data-title' => $talkTitle->getFullText(),
-				),
-				'label' => $talkButton,
-			);
-		}
-
-		return $buttons;
-	}
-
-	/**
 	 * Get the needed styles for this skin
 	 * @return array
 	 */
@@ -151,17 +109,6 @@ class SkinMinervaBeta extends SkinMinerva {
 					$this->msg( 'mobile-frontend-view-source' )->text() ) .
 				Html::closeElement( 'p' );
 		return $viewSourceLink . parent::getOldRevisionHtml();
-	}
-
-	/** @inheritdoc */
-	protected function preparePageContent( QuickTemplate $tpl ) {
-		parent::preparePageContent( $tpl );
-
-		$title = $this->getTitle();
-
-		if ( !$title ) {
-			return;
-		}
 	}
 
 	/**
