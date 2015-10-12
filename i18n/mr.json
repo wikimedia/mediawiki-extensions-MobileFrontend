@@ -86,7 +86,7 @@
 	"mobile-frontend-last-modified-date": "शेवटचे संपादन $1 रोजी, $2 वाजता",
 	"mobile-frontend-last-modified-days": "शेवटचा बदल {{PLURAL:$1|$1 दिवसा|$1 दिवसां}}पूर्वी",
 	"mobile-frontend-last-modified-hours": "शेवटचा बदल {{PLURAL:$1|$1 तासा|$1 तासां}}पूर्वी",
-	"mobile-frontend-last-modified-just-now": "शेवटचा बदल इतक्यातच",
+	"mobile-frontend-last-modified-just-now": "शेवटचा बदल इतक्यातच झाला",
 	"mobile-frontend-last-modified-minutes": "शेवटचा बदल {{PLURAL:$1|$1 मिनिटा|$1 मिनिटां}}पूर्वी",
 	"mobile-frontend-last-modified-months": "शेवटचा बदल {{PLURAL:$1|$1 महिना|$1 महिन्यां}} पूर्वी",
 	"mobile-frontend-last-modified-seconds": "शेवटचा बदल {{PLURAL:$1|$1 सेकंदा|$1 सेकंदां}}पूर्वी",

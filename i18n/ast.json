@@ -285,7 +285,7 @@
 	"mobile-frontend-sign-up-heading": "Date d'alta",
 	"mobile-frontend-talk-fullpage": "Lleer como páxina wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "¿Qué ta camentando?",
-	"mobile-frontend-talk-add-overlay-subject-placeholder": "Asuntu del tema",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Asuntu",
 	"mobile-frontend-talk-add-overlay-submit": "Amestar alderique",
 	"mobile-frontend-talk-back-to-page": "Volver a la páxina \"$1\".",
 	"mobile-frontend-talk-back-to-userpage": "Volver a la páxina {{GENDER:$1|del usuariu «$1»|de la usuaria «$1»}}.",

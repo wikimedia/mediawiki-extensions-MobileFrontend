@@ -11,7 +11,8 @@
 			"What here area team",
 			"Whym",
 			"Sujiniku",
-			"Otokoume"
+			"Otokoume",
+			"2nd-player"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -114,7 +115,7 @@
 	"mobile-frontend-editor-insert-reference": "出典を挿入",
 	"mobile-frontend-editor-add-reference": "追加",
 	"mobile-frontend-enable-images": "携帯機器ウェブサイトで画像を有効にする",
-	"mobile-frontend-expand-sections-description": "新しいページに来たとき常に全セクションを展開する。",
+	"mobile-frontend-expand-sections-description": "新しいページに来たとき常に全ての節を展開する。",
 	"mobile-frontend-expand-sections-status": "すべての節を展開",
 	"mobile-frontend-fontchanger-link": "フォント サイズ",
 	"mobile-frontend-featured-article": "今日の秀逸なコンテンツ",
