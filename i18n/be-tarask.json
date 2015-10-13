@@ -52,7 +52,7 @@
 	"mobile-frontend-last-modified-days": "Апошнія зьмены {{PLURAL:$1|$1 дзень|$1 дні|$1 дзён}} таму",
 	"mobile-frontend-last-modified-hours": "Апошнія зьмены {{PLURAL:$1|$1 гадзіну|$1 гадзіны|$1 гадзінаў}} таму",
 	"mobile-frontend-last-modified-minutes": "Апошнія зьмены {{PLURAL:$1|$1 хвіліну|$1 хвіліны|$1 хвілінаў}} таму",
-	"mobile-frontend-last-modified-months": "Апошнія зьмены {{PLURAL:$1|$1 месяц|$1 месяц|$1 месяцаў}} таму",
+	"mobile-frontend-last-modified-months": "Апошнія зьмены {{PLURAL:$1|$1 месяц|$1 месяцы|$1 месяцаў}} таму",
 	"mobile-frontend-last-modified-seconds": "Апошнія зьмены {{PLURAL:$1|$1 сэкунду|$1 сэкунды|$1 сэкундаў}} таму",
 	"mobile-frontend-last-modified-years": "Апошнія зьмены {{PLURAL:$1|$1 год|$1 гады|$1 гадоў}} таму",
 	"mobile-frontend-logged-in-homepage-notification": "Вітаем, $1!",
