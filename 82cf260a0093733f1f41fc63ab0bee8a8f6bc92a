@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_1464d241",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-13T11:49:53Z",
+      "side": 0,
+      "message": "There is a slight difference in class names. Don\u0027t we have to change the class in stable to this?",
+      "revId": "82cf260a0093733f1f41fc63ab0bee8a8f6bc92a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
