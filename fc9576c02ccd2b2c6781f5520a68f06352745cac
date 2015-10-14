@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_58e26d01",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T19:14:44Z",
+      "side": 0,
+      "message": "This seems to have been added for Wikidata. I\u0027m not sure it serves any purpose in MobileFrontend but I may be wrong. Can you find an example?\n\nIf it is, it probably makes sense to move this to wgMFSearchAPIParams and apply to everything?",
+      "parentUuid": "0ebaf39b_f8bd61fe",
+      "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_78d2d15e",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 2

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_b8db6953",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T19:14:44Z",
+      "side": 1,
+      "message": "Nope api.ajax takes care of this.",
+      "parentUuid": "0ebaf39b_98d5454a",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_f8e6c13e",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2015-10-14T19:06:44Z",
       "side": 1,
       "message": "In this patch set, the default is empty. I\u0027m not sure what will happen when querying for \"prop\u003d\" with no value.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f811e1fc",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T19:14:44Z",
+      "side": 1,
+      "message": "It\u0027s empty if PageImages isn\u0027t installed yup.\nEmpty arrays are ignored.\nhttps://en.wikipedia.org/w/api.php?action\u003dquery\u0026format\u003djson\u0026generator\u003dprefixsearch\u0026gpssearch\u003dSa\u0026prop\u003d",
+      "parentUuid": "0ebaf39b_b8f12900",
       "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_f8fa41b5",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T19:14:44Z",
+      "side": 1,
+      "message": "Really getDisplayTitle shouldn\u0027t take any parameters. I\u0027m curious why it\u0027s set above actually and I wonder if it can be removed. Let me investigate further to clear this up.",
+      "parentUuid": "0ebaf39b_18e2b52e",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_38dd3974",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
@@ -115,6 +169,24 @@
       "writtenOn": "2015-10-14T19:06:44Z",
       "side": 1,
       "message": "As before, all \"pi...\" parameters are part of the \"pageimages\" query and should be part of the configuration.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_580cadf0",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T19:14:44Z",
+      "side": 1,
+      "message": "This is true yeh. Looks like more generalisation is possible here :)",
+      "parentUuid": "0ebaf39b_d8ebbd07",
       "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
