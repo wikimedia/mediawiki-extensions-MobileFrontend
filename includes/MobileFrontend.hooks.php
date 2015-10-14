@@ -919,6 +919,7 @@ class MobileFrontendHooks {
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
+			'MobileWebSectionUsage' => 14321266,
 			'MobileWebUIClickTracking' => 10742159,
 			'MobileWebWatching' => 11761466,
 			'MobileWebWatchlistClickTracking' => 10720361,
@@ -960,6 +961,7 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js',
 		);
 
 		$schemaModules = array();

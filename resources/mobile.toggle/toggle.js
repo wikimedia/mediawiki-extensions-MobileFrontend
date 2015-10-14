@@ -20,10 +20,20 @@
 	 * @param {jQuery.Object} $container to apply toggling to
 	 * @param {String} prefix a prefix to use for the id.
 	 * @param {Page} [page] to allow storage of session for future visits
+	 * @param {Schema} [schema] to log events on
+	 * @extends OO.EventEmitter
 	 */
-	function Toggler( $container, prefix, page ) {
+	function Toggler( $container, prefix, page, schema ) {
+		OO.EventEmitter.call( this );
 		this._enable( $container, prefix, page );
+		if ( schema ) {
+			this.schema = schema;
+			this.connect( this, {
+				toggled: 'onToggle'
+			} );
+		}
 	}
+	OO.mixinClass( Toggler, OO.EventEmitter );
 
 	/**
 	 * Using the settings module looks at what sections were previously expanded on
@@ -126,6 +136,19 @@
 	}
 
 	/**
+	 * Event handler fired when a section is toggled open/closed
+	 *
+	 * @param {Boolean} isCollapsed whether the section is now collapsed (at end of toggle)
+	 * @param {Number} sectionId that was open/closed
+	 */
+	Toggler.prototype.onToggle = function ( isCollapsed, sectionId ) {
+		this.schema.log( {
+			eventName: isCollapsed ? 'close-section' : 'open-section',
+			section: sectionId
+		} );
+	};
+
+	/**
 	 * Given a heading, toggle it and any of its children
 	 *
 	 * @param {jQuery.Object} $heading A heading belonging to a section
@@ -134,12 +157,17 @@
 	Toggler.prototype.toggle = function ( $heading ) {
 		var isCollapsed = $heading.is( '.open-block' ),
 			page = $heading.data( 'page' ),
+			sectionId = $heading.data( 'section-number' ),
 			options, indicator;
 
 		$heading.toggleClass( 'open-block' );
 		$heading.data( 'indicator' ).remove();
 
 		options = isCollapsed ? arrowUpOptions : arrowDownOptions;
+		/**
+		 * @event toggled
+		 */
+		this.emit( 'toggled', isCollapsed, sectionId );
 		indicator = new Icon( options ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
@@ -236,6 +264,7 @@
 			if ( $heading.next().is( 'div' ) ) {
 				$heading
 					.addClass( 'collapsible-heading ' )
+					.data( 'section-number', i )
 					.data( 'page', page )
 					.attr( {
 						tabindex: 0,
