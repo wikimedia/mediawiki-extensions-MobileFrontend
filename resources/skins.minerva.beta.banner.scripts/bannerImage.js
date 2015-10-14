@@ -2,7 +2,7 @@
 	var MobileViewBannerImageRepository = M.require( 'mobile.bannerImage/MobileViewBannerImageRepository' ),
 		BannerImage = M.require( 'mobile.bannerImage/BannerImage' ),
 		page = M.getCurrentPage(),
-		skin = M.require( 'mobile.startup/skin' ),
+		skin = M.require( 'skins.minerva.scripts/skin' ),
 		repository,
 		bannerImage;
 

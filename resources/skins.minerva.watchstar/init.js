@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		skin = M.require( 'mobile.startup/skin' ),
+		skin = M.require( 'skins.minerva.scripts/skin' ),
 		user = M.require( 'mobile.user/user' );
 
 	/**

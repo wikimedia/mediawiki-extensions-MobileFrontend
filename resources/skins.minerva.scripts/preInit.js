@@ -33,7 +33,7 @@
 		page: getCurrentPage(),
 		mainMenu: mainMenu
 	} );
-	M.define( 'mobile.startup/skin', skin );
+	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
 
 	$( window )
 		.on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) )

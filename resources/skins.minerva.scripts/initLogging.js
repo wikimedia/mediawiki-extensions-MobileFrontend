@@ -2,7 +2,7 @@
 // This code should only be loaded on the Minerva skin, it does not apply to other skins.
 ( function ( M, $ ) {
 	var SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		skin = M.require( 'mobile.startup/skin' ),
+		skin = M.require( 'skins.minerva.scripts/skin' ),
 		mainMenuSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebMainMenuClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 

@@ -8,7 +8,7 @@
 		title = $talk.data( 'title' ) || mw.config.get( 'wgPageName' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		skin = M.require( 'mobile.startup/skin' );
+		skin = M.require( 'skins.minerva.scripts/skin' );
 
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),

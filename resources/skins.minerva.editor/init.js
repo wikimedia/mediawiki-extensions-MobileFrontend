@@ -8,7 +8,7 @@
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
-		skin = M.require( 'mobile.startup/skin' ),
+		skin = M.require( 'skins.minerva.scripts/skin' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
