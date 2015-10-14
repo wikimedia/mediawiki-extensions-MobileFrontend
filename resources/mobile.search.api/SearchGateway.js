@@ -25,21 +25,24 @@
 		 * @return {Object}
 		 */
 		getApiData: function ( query ) {
-			return {
-				action: 'query',
+			var data = $.extend( {
 				generator: 'prefixsearch',
 				gpssearch: query,
 				gpsnamespace: this.searchNamespace,
 				gpslimit: 15,
-				prop: 'pageimages',
-				piprop: 'thumbnail',
-				pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
-				pilimit: 15,
+				prop: mw.config.get( 'wgMFQueryPropModules' ),
 				redirects: '',
 				list: 'prefixsearch',
 				pssearch: query,
 				pslimit: 15
-			};
+			}, mw.config.get( 'wgMFSearchAPIParams' ) );
+
+			// If PageImages is being used configure further.
+			if ( data.pilimit ) {
+				data.pilimit = 15;
+				data.pithumbsize = mw.config.get( 'wgMFThumbnailSizes' ).tiny;
+			}
+			return data;
 		},
 
 		/**
@@ -75,14 +78,12 @@
 		 * @return {Object} data needed to create a {Page}
 		 * @private
 		 */
-		_getPageData: function ( query, info ) {
-			return {
-				id: info.pageid,
-				displayTitle: this._highlightSearchTerm( info.displayTitle || info.title, query ),
-				title: info.title,
-				url: mw.util.getUrl( info.title ),
-				thumbnail: info.thumbnail
-			};
+		_getPage: function ( query, info ) {
+			var page = Page.newFromJSON( info );
+			// Highlight the search term
+			// FIXME: Given that displayTitle could have html in it be safe and just highlight text.
+			page.displayTitle = this._highlightSearchTerm( page.title, query );
+			return page;
 		},
 
 		/**
@@ -137,17 +138,17 @@
 							if ( info ) {
 								// return all possible page data
 								pageIds.push( id );
-								results.push( self._getPageData( query, info ) );
+								results.push( self._getPage( query, info ) );
 							} else {
 								mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
 
-								results.push( {
+								results.push( new Page( {
 									id: page.pageid,
 									heading: self._highlightSearchTerm( page.title, query ),
 									title: page.title,
 									displayTitle: mwTitle.getNameText(),
 									url: mwTitle.getUrl()
-								} );
+								} ) );
 							}
 						}
 					} );
@@ -174,9 +175,7 @@
 						// resolve the Deferred object
 						result.resolve( {
 							query: query,
-							results: $.map( self._processData( query, data ), function ( item ) {
-								return new Page( item );
-							} )
+							results: self._processData( query, data )
 						} );
 					} )
 					.fail( function () {

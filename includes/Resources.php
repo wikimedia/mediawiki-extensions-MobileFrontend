@@ -416,6 +416,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.context',
+			'mobile.modifiedBar',
 			'mobile.browser',
 			'mobile.oo',
 			'mobile.user',
@@ -691,15 +692,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'resources/mobile.search.beta/SearchOverlay.less',
-		),
-	),
-
-	'mobile.search.beta.api' => $wgMFResourceParsedMessageModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.search.api',
-		),
-		'scripts' => array(
-			'resources/mobile.search.beta.api/SearchGateway.js',
 		),
 	),
 

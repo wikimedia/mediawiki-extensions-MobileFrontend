@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var time = M.require( 'mobile.modifiedBar/time' );
+	var Page = M.require( 'mobile.startup/Page' );
+
 	/**
 	 * @class WatchListGateway
 	 * @param {mw.Api} api
@@ -34,18 +35,14 @@
 		load: function () {
 			var self = this,
 				params = $.extend( {
-					action: 'query',
-					prop: 'pageimages|info|revisions',
-					piprop: 'thumbnail',
-					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
-					pilimit: this.limit,
+					prop: [ 'info', 'revisions' ].concat( mw.config.get( 'wgMFQueryPropModules' ) ),
 					format: 'json',
 					formatversion: 2,
 					rvprop: 'timestamp|user',
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
-				}, this.continueParams );
+				}, mw.config.get( 'wgMFSearchAPIParams' ), this.continueParams );
 
 			if ( this.canContinue === false ) {
 				return $.Deferred();
@@ -74,6 +71,7 @@
 		/**
 		 * Parse api response data into pagelist item format
 		 * @param {Object[]} data
+		 * @return {Page[]}
 		 */
 		parseData: function ( data ) {
 			var pages;
@@ -102,30 +100,7 @@
 
 			// Transform the items to a sensible format
 			return $.map( pages, function ( item ) {
-				var revision, thumb, data;
-
-				thumb = item.thumbnail;
-
-				if ( thumb ) {
-					thumb.isLandscape = thumb.width > thumb.height;
-				}
-
-				data = {
-					isMissing: item.missing ? true : false,
-					displayTitle: item.title,
-					id: item.pageid,
-					url: mw.util.getUrl( item.title ),
-					thumbnail: thumb
-				};
-
-				// page may or may not exist.
-				if ( item.revisions && item.revisions[0] ) {
-					revision = item.revisions[0];
-					data.lastModified = time.getLastModifiedMessage( new Date( revision.timestamp ).getTime() / 1000,
-						revision.user );
-				}
-
-				return data;
+				return Page.newFromJSON( item );
 			} );
 		}
 

@@ -12,13 +12,6 @@
 			overlay: 'mobile.search/SearchOverlay'
 		};
 
-	if ( context.isBetaGroupMember() ) {
-		moduleConfig = $.extend( moduleConfig, {
-			modules: [ 'mobile.search.beta.api', 'mobile.search.beta' ],
-			api: 'mobile.search.beta.api/SearchGateway'
-		} );
-	}
-
 	/**
 	 * Reveal the search overlay
 	 * @param {jQuery.Event} ev
