@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ebaf39b_92d8c459",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-14T16:12:21Z",
+      "side": 1,
+      "message": "I agree with Jon in this part.",
+      "revId": "27736352509379e1f879f83678c81977c2679d25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_a58263a7",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 5
