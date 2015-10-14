@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_aa7d5219",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-14T11:33:36Z",
+      "side": 1,
+      "message": "This checks the content model of the current page. The current page is *always* Special:Nearby, which doesn\u0027t really have a content model at all, definitely not \u0027wikibase-item\u0027.\n\nThe only way I found for detecting whether Special:Nearby is being called on a wikibase repo is this:\n\n  mw.loader.getState( \u0027wikibase.ui.entitysearch\u0027 ) !\u003d null\n\nPretty ugly hack...",
+      "revId": "4497d5f9f03385c6fa18ea93459f9c3c67bc4804",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
