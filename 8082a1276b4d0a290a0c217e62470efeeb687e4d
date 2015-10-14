@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_61177857",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T23:56:28Z",
+      "side": 1,
+      "message": "Bartosz any idea why this doesn\u0027t seem to emit an event?",
+      "revId": "8082a1276b4d0a290a0c217e62470efeeb687e4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c120a4aa",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-14T23:56:28Z",
+      "side": 1,
+      "message": "Why does this callback never seem to run?",
+      "revId": "8082a1276b4d0a290a0c217e62470efeeb687e4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
