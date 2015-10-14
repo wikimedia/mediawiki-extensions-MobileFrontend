@@ -357,7 +357,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.loggingSchemas',
-			'mobile.toggling',
+			'mobile.toggle',
 		),
 		'scripts' => array(
 			'resources/mobile.toc/TableOfContents.js',
@@ -398,7 +398,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.backtotop' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.toggling',
+			'mobile.toggle',
 		),
 		'scripts' => array(
 			'resources/mobile.backtotop/BackToTopOverlay.js',
@@ -482,25 +482,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'resources/mobile.user/user.js',
-		),
-	),
-
-	// FIXME: Remove when cache clears (1.26wmf23)
-	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.editor',
-		),
-	),
-	// FIXME: Remove when cache clears (1.26wmf23)
-	'mobile.browse' => array(
-		'dependencies' => array(
-			'skins.minerva.browse',
-		),
-	),
-	// FIXME: Remove when cache clears (1.26wmf23)
-	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'skins.minerva.toggling',
 		),
 	),
 
@@ -1009,13 +990,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
 			'mobile-frontend-watchlist-please-wait',
-		),
-	),
-
-	// FIXME: Remove when cache clears. (1.26wmf23)
-	'mobile.watchstar.init' => array(
-		'dependencies' => array(
-			'skins.minerva.watchstar',
 		),
 	),
 
@@ -1553,7 +1527,7 @@ $wgMinervaBootstrapModules = array(
 	'skins.minerva.browse' => array(),
 	'skins.minerva.newusers' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.editor',
+			'skins.minerva.editor',
 			'mobile.contentOverlays',
 			'mobile.loggingSchemas',
 		),
@@ -1627,8 +1601,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile-frontend-talk-add-overlay-submit',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
-			// FIXME: Remove after cache is cleared (1.26wmf23)
-			'talk',
 		),
 	),
 
@@ -1700,12 +1672,6 @@ $wgMinervaBootstrapModules = array(
 			'resources/skins.minerva.tablet.scripts/toc.js',
 		),
 	),
-	// Remove when cache clears
-	'tablet.scripts' => array(
-		'dependencies' => array(
-			'skins.minerva.tablet.scripts',
-		),
-	),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules,
@@ -1722,17 +1688,4 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 	),
 );
 
-$wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
-	'mediawiki.notification' => '',
-	'mediawiki.page.gallery.styles' => array(
-		'resources/skins.minerva.content.styles/galleries.less',
-	),
-	'mediawiki.sectionAnchor' => array(
-		'resources/skins.minerva.content.styles/sectionAnchor.less',
-	),
-	'mediawiki.skinning.content.parsoid' => array(),
-	'mobile.special.userprofile.styles' => array(
-		'resources/mobile.special.userprofile.styles/minerva.less',
-	),
-	'mobile.special.history.styles' => array(),
-);
+
