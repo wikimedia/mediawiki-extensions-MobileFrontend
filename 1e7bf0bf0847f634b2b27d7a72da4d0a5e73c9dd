@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_98d5454a",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "Does this concatenation miss the \u0027|\u0027?",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f8e6c13e",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "The \"pi...\" properties are part of the \"pageimages\" query, but \"pageimages\" is now a configuration and empty by default.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b8f12900",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "In this patch set, the default is empty. I\u0027m not sure what will happen when querying for \"prop\u003d\" with no value.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_58f82de2",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "These \"pi...\" parameters are part of the \"pageimages\" query you removed above. They should be removed too.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_18e2b52e",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "Why don\u0027t you pass the \"options\" object here, but in the similar call above you do?",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_38dd3974",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "To what does \"this\" refer to in this context?",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_d8ebbd07",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 1,
+      "message": "As before, all \"pi...\" parameters are part of the \"pageimages\" query and should be part of the configuration.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

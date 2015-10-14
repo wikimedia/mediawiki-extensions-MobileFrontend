@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_f8bd61fe",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 0,
+      "message": "This is a filter for the \"pageprops\" query above. With this filter, only display titles are returned. Without this filter, all page properties are returned. I do not think this is intended.",
+      "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_78d2d15e",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-14T19:06:44Z",
+      "side": 0,
+      "message": "I do not understand why you removed this.",
+      "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
