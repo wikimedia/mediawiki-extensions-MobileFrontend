@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_686d142d",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 1,
+      "message": "I stand corrected.\nInconsistencies aurgg",
+      "parentUuid": "0ebaf39b_b8db6953",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_f8e6c13e",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 2
@@ -48,6 +66,24 @@
       "writtenOn": "2015-10-14T19:06:44Z",
       "side": 1,
       "message": "The \"pi...\" properties are part of the \"pageimages\" query, but \"pageimages\" is now a configuration and empty by default.",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_83814951",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_f8e6c13e",
       "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -106,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_a3848d5f",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_58f82de2",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_18e2b52e",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
@@ -152,6 +206,24 @@
       "writtenOn": "2015-10-14T19:06:44Z",
       "side": 1,
       "message": "To what does \"this\" refer to in this context?",
+      "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_439b51c1",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 1,
+      "message": "The class (it\u0027s part of a prototype)",
+      "parentUuid": "0ebaf39b_38dd3974",
       "revId": "1e7bf0bf0847f634b2b27d7a72da4d0a5e73c9dd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

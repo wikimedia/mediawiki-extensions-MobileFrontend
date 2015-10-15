@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c823e0a4",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 0,
+      "message": "Yep I just noticed this is a bug. https://phabricator.wikimedia.org/T115646?workflow\u003dcreate (and fixed)",
+      "parentUuid": "0ebaf39b_ed2cb647",
+      "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_78d2d15e",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "writtenOn": "2015-10-14T19:06:44Z",
       "side": 0,
       "message": "I do not understand why you removed this.",
+      "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e82024aa",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T21:04:41Z",
+      "side": 0,
+      "message": "I was confused. Now I see what it\u0027s doing. The problem is it\u0027s only doing it for nearby which is bad. I\u0027m gonna generalise this for everything. This logic should be in Page",
+      "parentUuid": "0ebaf39b_78d2d15e",
       "revId": "fc9576c02ccd2b2c6781f5520a68f06352745cac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
