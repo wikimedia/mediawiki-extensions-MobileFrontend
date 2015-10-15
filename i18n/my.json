@@ -28,7 +28,6 @@
 	"mobile-frontend-donate-photo-first-upload-success": "အောင်မြင်ပါပြီ။ ပထမဆုံးပါဝင်ရေးသားမှုအတွက် ကျေးဇူးတင်ပါတယ်။",
 	"mobile-frontend-donate-photo-upload-success": "အောင်မြင်ပါပြီ။ ပုံများကို {{SITENAME}} တွင် စတင်အသုံးပြုနိုင်ပါပြီ။",
 	"mobile-frontend-drawer-cancel": "မလုပ်တော့ပါ",
-	"mobile-frontend-edit-login": "ပိုမိုကောင်းမွန်သော $1 စာမျက်နှာ အတွက် ကူညီပါ။",
 	"mobile-frontend-edit-login-action": "ပြင်ဆင်ရန် ဝင်ရောက်ပါ။",
 	"mobile-frontend-edit-signup-action": "ပြင်ဆန်ရန်အတွက် မှတ်ပုံတင်ရန်",
 	"mobile-frontend-editor-abusefilter-read-more": "ဆက်ဖတ်ပါ",
@@ -39,7 +38,6 @@
 	"mobile-frontend-editor-save": "သိမ်းရန်",
 	"mobile-frontend-editor-summary": "အ​ကျဉ်း​ချုပ်​:",
 	"mobile-frontend-editor-tutorial-cancel": "မလိုပါ၊ ကျေးဇူးတင်ပါသည်။",
-	"mobile-frontend-editor-visual-editor": "ပြင်​ဆင်​ရန်​",
 	"mobile-frontend-featured-article": "ယနေ့ အထူးဆောင်းပါး",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "ရပြီဟေ့",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "လုပ်မည်",
@@ -73,7 +71,6 @@
 	"mobile-frontend-regular-site": "ကွန်ပျူတာပုံစံဖြင့် ကြည့်ရန်",
 	"mobile-frontend-save-settings": "သိမ်းရန်",
 	"mobile-frontend-search-submit": "သွား",
-	"mobile-frontend-settings-alpha": "စမ်သပ်သုံးစွဲမှု အဆင့်",
 	"mobile-frontend-settings-beta": "အစမ်းမူကွဲ",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} ဘာသာစကားများ",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "စိတ်ထဲမှာ ဘာတွေရှိလည်း",
@@ -88,6 +85,5 @@
 	"mobile-frontend-watchlist-filter-other": "အခြား",
 	"mobile-frontend-watchlist-filter-talk": "ဆွေးနွေးချက်",
 	"mobile-frontend-watchlist-login-action": "ပြင်ဆင်ရန် ဝင်ရောက်ပါ။",
-	"mobile-frontend-watchlist-modified": "ပြုပြင်ထားသော $1",
 	"nearby": "အနီးဆုံး စာမျက်နှာများ"
 }

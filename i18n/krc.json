@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Iltever"
+			"Iltever",
+			"Ernác"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Бир бёлюмге артха атла",
@@ -14,7 +15,6 @@
 	"mobile-frontend-disable-images": "Мобил сайтда суратла кёрюнмезча эт",
 	"mobile-frontend-dismiss-notification": "бу билдириуню джашыр",
 	"mobile-frontend-editor-edit": "Тюрлендир",
-	"mobile-frontend-editor-visual-editor": "Визуал редактор",
 	"mobile-frontend-enable-images": "Мобил сайтда суратла кёрюнюрча эт",
 	"mobile-frontend-featured-article": "Бюгюннгю сайланнган материал",
 	"mobile-frontend-footer-contact": "Контакт информация",
@@ -50,7 +50,6 @@
 	"mobile-frontend-missing-image": "Сурат",
 	"mobile-frontend-news-items": "Джангылыкълада",
 	"mobile-frontend-opt-in-explain": "Бета-тест этиўге къошулсагъыз, талай экспериментал функцияны хайырландырыргъа эркинлик берилликди, алай а халатха неда проблемагъа тюберге къоркъуў ёсерикди.",
-	"mobile-frontend-other-projects-overlay-heading": "Башха проектле",
 	"mobile-frontend-page-menu-contents": "ичиндегиси",
 	"mobile-frontend-page-menu-history": "Тарих",
 	"mobile-frontend-password": "Паролюгъуз:",
@@ -79,6 +78,5 @@
 	"mobile-frontend-watchlist-view": "Кёзде тургъан тизменге кёч",
 	"tag-mobile_edit": "Мобил адыр бла тюрлендириу",
 	"tag-mobile_web_edit": "Сайтны мобил версиясындан тюрлендириу",
-	"mobile-frontend-pageaction-edit-tooltip": "Бетни алчы бёлюмюн тюрлендир.",
-	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ай}} алгъа"
+	"mobile-frontend-pageaction-edit-tooltip": "Бетни алчы бёлюмюн тюрлендир."
 }

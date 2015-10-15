@@ -138,6 +138,5 @@
 	"tag-mobile_edit-description": "Izmjena napravljena s mobilnog telefona (putem weba ili mobilne aplikacije)",
 	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem",
 	"tag-mobile_web_edit-description": "Izmjena napravljena s mobilne verzije web-sajta",
-	"mobile-frontend-pageaction-edit-tooltip": "Uredi uvodni odlomak ove stranice",
-	"mobile-frontend-browse-tags-header": "Oznake"
+	"mobile-frontend-pageaction-edit-tooltip": "Uredi uvodni odlomak ove stranice"
 }

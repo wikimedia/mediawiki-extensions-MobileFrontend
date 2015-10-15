@@ -68,7 +68,6 @@
 	"mobile-frontend-photo-upload-comment": "পৃষ্ঠাত চিত্ৰ যোগ কৰা হ’ল",
 	"mobile-frontend-photo-upload-error": "চিত্ৰ আপল’ড কৰাত কিছু সমস্যা হৈছে। অনুগ্ৰহ কৰি অন্য চিত্ৰ আপ’লড কৰাৰ প্ৰয়াস কৰক।",
 	"mobile-frontend-placeholder": "সন্ধান কৰক {{SITENAME}}",
-	"mobile-frontend-placeholder-alpha": "অনুসন্ধান {{SITENAME}} (ড্ৰেগন মোড)",
 	"mobile-frontend-placeholder-app": "সন্ধান কৰক {{SITENAME}} (Web App)",
 	"mobile-frontend-placeholder-beta": "সন্ধান কৰক {{SITENAME}} (বেটা)",
 	"mobile-frontend-privacy-link-text": "গোপনীয়তা",

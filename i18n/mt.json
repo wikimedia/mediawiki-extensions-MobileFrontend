@@ -84,7 +84,6 @@
 	"mobile-frontend-save-settings": "Salva",
 	"mobile-frontend-saving-exit-page": "Il-kontribuzzjoni tiegħek għadha qed tiġi salvata. Jekk se titlaq, il-kontribuzzjonijiet tiegħek jintilfu. Inti ċert li tixtieq titlaq?",
 	"mobile-frontend-search-submit": "Mur",
-	"mobile-frontend-settings-alpha": "Modalità sperimentali",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} hija disponibbli f'$1 {{PLURAL:$1|lingwa|lingwi}}. Il-verżjonijiet disponibbli kollha huma mniżżla hawn taħt",
 	"mobile-frontend-settings-site-header": "Lingwi {{SITENAME}}",

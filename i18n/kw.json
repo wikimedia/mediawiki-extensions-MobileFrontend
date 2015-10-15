@@ -68,7 +68,6 @@
 	"mobile-frontend-regular-site": "Gwel desktop",
 	"mobile-frontend-save-settings": "Gwitha",
 	"mobile-frontend-search-submit": "Mos",
-	"mobile-frontend-settings-alpha": "Modh arbrevel",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-settings-site-description": "Kavadow yw {{SITENAME}} yn $1 {{PLURAL:$1|yeth}}. Yma keniver versyon kavadow y'n rol a-woles.",
 	"mobile-frontend-settings-site-header": "Yethow {{SITENAME}}",

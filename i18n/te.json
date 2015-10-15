@@ -28,7 +28,6 @@
 	"mobile-frontend-editor-cta": "ఈ పేజీని మెరుగుపరచడానికి తోడ్పడండి!",
 	"mobile-frontend-editor-edit": "సవరించు",
 	"mobile-frontend-editor-save": "భద్రపరచు",
-	"mobile-frontend-editor-source-editor": "మూలపాఠ్యాన్ని సవరించు",
 	"mobile-frontend-editor-success": "విజయవంతం! మీ మార్పు భద్రమయ్యింది.",
 	"mobile-frontend-editor-success-landmark-1": "అభినందనలు, మీరు ఇప్పుడు {{SITENAME}} ఎడిటరు!",
 	"mobile-frontend-editor-success-new-page": "కొత్త పేజీ సృష్టించినందుకు అభినందనలు!",
@@ -73,7 +72,6 @@
 	"mobile-frontend-news-items": "వార్తల్లో",
 	"mobile-frontend-overlay-close": "మూసివేయి",
 	"mobile-frontend-overlay-continue": "కొనసాగించు",
-	"mobile-frontend-other-projects-overlay-heading": "ఇతర ప్రాజెక్టులు",
 	"mobile-frontend-page-menu-contents": "విషయ సూచిక",
 	"mobile-frontend-page-menu-history": "చరిత్ర",
 	"mobile-frontend-password": "సంకేతపదం:",
@@ -112,9 +110,5 @@
 	"mobile-frontend-pageaction-edit-tooltip": "ఈ పేజీ యొక్క శీర్షిక భాగాన్ని సవరించు",
 	"mobile-frontend-meta-data-issues-categories": "ఈ వర్గం గురించి",
 	"mobile-frontend-loading-message": "వస్తోంది…",
-	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|రోజు|రోజుల}} క్రితం",
-	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|నెల|నెలల}} క్రితం",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|సంవత్సరం|సంవత్సరాల}} క్రితం",
-	"mobile-frontend-browse-tags-header": "ట్యాగులు",
 	"mobile-frontend-panel-ok": "సరే"
 }

@@ -107,7 +107,6 @@
 	"mobile-frontend-photo-upload-error": "មាន​កំហុស​កើត​ឡើង។ សូម​សាកល្បងម្ដង​ទៀត។",
 	"mobile-frontend-photo-upload-generic": "ចែករំលែក​រូបភាពមួយសន្លឹក",
 	"mobile-frontend-placeholder": "ស្វែងរកក្នុង{{SITENAME}}",
-	"mobile-frontend-placeholder-alpha": "ស្វែងរកក្នុង{{SITENAME}} (ក្រោមការពិសោធន៍)",
 	"mobile-frontend-placeholder-beta": "ស្វែងរកក្នុង{{SITENAME}} (បេតា)",
 	"mobile-frontend-privacy-link-text": "ភាព​ឯកជន",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|និយាយទៅកាន់ $1}}",
