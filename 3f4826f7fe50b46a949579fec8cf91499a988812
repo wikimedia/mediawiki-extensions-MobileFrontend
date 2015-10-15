@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_ad4c7ea0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-15T19:52:49Z",
+      "side": 1,
+      "message": "While this is related to browser tests, the QA prefix is misleading as this patch introduces a new behaviour to the EventLogging machinery that we have.",
+      "revId": "3f4826f7fe50b46a949579fec8cf91499a988812",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c8bf60cc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-15T19:52:49Z",
+      "side": 1,
+      "message": "It\u0027s recommended that you wrap your commit messages should wrap at 72 characters, which you\u0027ve done elsewhere. Why not here?",
+      "revId": "3f4826f7fe50b46a949579fec8cf91499a988812",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_68951442",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-15T19:52:49Z",
+      "side": 1,
+      "message": "You could and should be more precise here: all events are logged regardless of whether or not they are sampled.",
+      "revId": "3f4826f7fe50b46a949579fec8cf91499a988812",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_88fba876",
+        "filename": "tests/qunit/mobile.startup/test_Schema.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-15T19:52:49Z",
+      "side": 1,
+      "message": "I\u0027m never sure whether or not to stub the mw.config.get method or rely on our test runner preserving mw.config.values, which it does. The latter is more extensible and less verbose, but the former seems… right (!?).",
+      "revId": "3f4826f7fe50b46a949579fec8cf91499a988812",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
