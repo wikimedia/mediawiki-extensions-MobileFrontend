@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_9e844260",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-15T23:00:57Z",
+      "side": 1,
+      "message": "For special:nearby on wikidata, we need the labels, too, because the actual page title would be Q12345678, and the display title is in a random language (an unfortunate artefact of the way displaytitle is handled in ParserOutput) .\n\nOn Wikipedias, we\u0027d typically want the description, but not lables from wikidata, since on wikipedia it makes sense to the the actual page tille, not the wikidata label.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_def15aff",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-15T23:00:57Z",
+      "side": 1,
+      "message": "If a label is available from pageterms, it should be preferred over displaytitle here.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
