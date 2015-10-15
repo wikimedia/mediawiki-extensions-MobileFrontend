@@ -16,6 +16,24 @@
       "revId": "eba3842859f5db9b47150348305d941c41447282",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_488610c0",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-15T20:12:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_0cbcb3b0",
+      "revId": "eba3842859f5db9b47150348305d941c41447282",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
