@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ebaf39b_fec21e87",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-15T23:15:34Z",
+      "side": 1,
+      "message": "Perhaps the config could be called MFUseWikibase and contain a list of wikibase terms (description and/or label) to use. This way, client wikis could use the description, and wikidata.org itself could also use the labels.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_9e844260",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
