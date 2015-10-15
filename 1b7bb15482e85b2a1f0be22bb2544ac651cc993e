@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_de371aaa",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-15T23:18:05Z",
+      "side": 1,
+      "message": "What? plain text that needs escaping, or safe HTML?",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_def15aff",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 4
@@ -47,6 +64,23 @@
       "writtenOn": "2015-10-15T23:00:57Z",
       "side": 1,
       "message": "If a label is available from pageterms, it should be preferred over displaytitle here.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_be34a6a8",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-15T23:18:05Z",
+      "side": 1,
+      "message": "Careful with the (lay of) escaping here:\ndisplaytitle contains html, the page title used below is probably plain text, which needs escaping.",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
