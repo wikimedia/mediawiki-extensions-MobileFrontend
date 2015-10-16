@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_66eb0078",
+        "filename": "resources/mobile.pagelist.scripts/WatchstarPageList.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "I don\u0027t understand the advantage here... please explain. They refer to the same thing. Personally I prefer using `this` where-ever possible. Using self serves as a reminder that I am outside the standard function context. Using this reminds me I am not.\n\nI don\u0027t know of any advantages to what you are suggesting so please do enlighten me.",
+      "parentUuid": "0ebaf39b_c04df4c8",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_c32bbe76",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 16
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_86ee3485",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "If jscs doesn\u0027t complain then this is perfectly valid.\nYou can run `grunt jscs` and it will check your code styling.\n\nIf you think this should be a code style we should adopt we should talk about it next week and add it as a rule to jscs. Style rules shouldn\u0027t slow down code review.",
+      "parentUuid": "0ebaf39b_43fb4ede",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_834dc677",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 16
@@ -64,6 +100,24 @@
       "writtenOn": "2015-10-16T13:20:23Z",
       "side": 1,
       "message": "And again.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_26e508a0",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "see above.",
+      "parentUuid": "0ebaf39b_834dc677",
       "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_46e83c77",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "and again I don\u0027t understand :)",
+      "parentUuid": "0ebaf39b_03dd5673",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_83d86680",
         "filename": "resources/mobile.watchstar/Watchstar.js",
         "patchSetId": 16
@@ -98,6 +170,24 @@
       "writtenOn": "2015-10-16T13:20:23Z",
       "side": 1,
       "message": "Hate to sound like a broken record...",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e6fe1035",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "me too.. :)",
+      "parentUuid": "0ebaf39b_83d86680",
       "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_a6f81847",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "True. I would like to get rid of this exception. Let me see if it can be handled in the initialisation script.",
+      "parentUuid": "0ebaf39b_a351eade",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_4326ee64",
         "filename": "tests/qunit/mobile.nearby/test_Nearby.js",
         "patchSetId": 16
@@ -132,6 +240,24 @@
       "writtenOn": "2015-10-16T13:20:23Z",
       "side": 1,
       "message": "Would this be better served as a reusable variable defined at the top? I\u0027m still not 100% sure how mw.Api() works--plus, we are talking about unit tests--so I could be off-base here.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c6f3cc67",
+        "filename": "tests/qunit/mobile.nearby/test_Nearby.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:36:06Z",
+      "side": 1,
+      "message": "yes and done. No real value in this.",
+      "parentUuid": "0ebaf39b_4326ee64",
       "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
