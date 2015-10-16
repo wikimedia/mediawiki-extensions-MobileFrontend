@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_4041040d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "You mean \"TalkOverlayBase\", right?",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_80db7c53",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "Tab between var and sectionTemplate.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_00ceac86",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "Where\u0027s this used? It shouldn\u0027t be being used directly.\n\nEdit: I see it now. Perhaps you might want to call this editorApi to emphasise that this is only for interacting with the editor-part of the API… well… you know what I mean.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_20873016",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "Maybe even the TalkPageGateway, which defers to the EditorGateway to make edits (!)",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_40990470",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "I\u0027ve said it before and I\u0027ll say it again: you shouldn\u0027t need to stub the behaviour of #get on all instances of mw.Api. This might actually be hiding programming errors – the test runner throws an Error if there are pending requests at the end of a test module.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_80b61cd6",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "This could be moved to the module setup, i.e.:\n\n    this.api \u003d new mw.Api(); // Once and only once…\n\n    // ...\n\n    var options \u003d {\n      api: this.api,\n      // ...\n    };",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_20adf080",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionAddOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "You know what I\u0027m going to say…",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_40b024d8",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-16T10:32:05Z",
+      "side": 1,
+      "message": "As before, move this into the module setup.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
