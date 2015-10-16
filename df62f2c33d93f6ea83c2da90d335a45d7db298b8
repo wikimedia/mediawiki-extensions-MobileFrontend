@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c04df4c8",
+        "filename": "resources/mobile.pagelist.scripts/WatchstarPageList.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Should probably be \"self.wsGateway\" (take advantage of minification).",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c32bbe76",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Again, should probably use \"self\" instead of \"this\" here.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_43fb4ede",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Inconsistent spacing (self \u003d this should be on first line with var).",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_834dc677",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "And again.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_03dd5673",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Throughout this funciton, self again.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_83d86680",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Hate to sound like a broken record...",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a351eade",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "At this point, I\u0027m not sure I understand the purpose of this patch. Right now, it simply seems to be renaming instances of \"api\" to \"gateway.\"\n\nAren\u0027t gateways supposed to hide the complicated parts of an API away and just provide some simple \"doThis, doThat\" type of methods in order for other libraries (or in our case, extensions/features) to use features without getting bogged down in specifics? In that case, shouldn\u0027t things like needing to \"call load first\" be handled automatically by the gateway?",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_4326ee64",
+        "filename": "tests/qunit/mobile.nearby/test_Nearby.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:20:23Z",
+      "side": 1,
+      "message": "Would this be better served as a reusable variable defined at the top? I\u0027m still not 100% sure how mw.Api() works--plus, we are talking about unit tests--so I could be off-base here.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
