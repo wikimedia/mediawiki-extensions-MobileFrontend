@@ -55,7 +55,7 @@
 	"mobile-frontend-last-modified-months": "Апошнія зьмены {{PLURAL:$1|$1 месяц|$1 месяцы|$1 месяцаў}} таму",
 	"mobile-frontend-last-modified-seconds": "Апошнія зьмены {{PLURAL:$1|$1 сэкунду|$1 сэкунды|$1 сэкундаў}} таму",
 	"mobile-frontend-last-modified-years": "Апошнія зьмены {{PLURAL:$1|$1 год|$1 гады|$1 гадоў}} таму",
-	"mobile-frontend-logged-in-homepage-notification": "Вітаем, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Вітаем}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Увайшлі як $1",
 	"mobile-frontend-logged-out": "Вы не ўвайшлі ў сыстэму",
 	"mobile-frontend-login": "Увайсьці",
