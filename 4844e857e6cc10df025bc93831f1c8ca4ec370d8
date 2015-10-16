@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c9051f18",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-16T18:41:57Z",
+      "side": 1,
+      "message": "So if this method *may* return HTML in some cases, it should make sure it *always* returns HTML. This method \"knows\" in which cases it needs to escape, so it should do that. Expecting the caller to always escape means double-escaping if we already have HTML.",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_d40ff631",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-16T18:41:57Z",
+      "side": 1,
+      "message": "This should be terms.label, not pageprops.label, I think. \n\nAlso, label  is plain text and needs to be escaped to be compatible with displaytitle, which is always HTML, see Id4ce93986 and I043b26b82.",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
