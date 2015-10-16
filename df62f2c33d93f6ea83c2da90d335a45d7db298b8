@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_00322cef",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 0,
+      "message": "This should not be removed, otherwise the pageimages\u0027 limit from the settings is used. This is most probably different from \"this.limit\" used for the generator. If bigger, this will waste bandwidth and CPU. If smaller, images will be missing.",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -90,6 +90,142 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_fe0a1e28",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "The string \"pageprops\" is now the default setting and should not be hardcoded here any more, accidentally querying *all* pageprops.\n\nAlso, calling the setting \"wgMFSearchPageProps\" is misleading. Something like \"...QueryPropModules\" would be much closer to what actually happens, see ApiQuery::$QueryPropModules.\n\nAlso note that the \"prop: ...\" parameter is specific to the \"query\" action. Now that \"action: query\" is a setting, it\u0027s \"prop: ...\" parameter is disjoint from that, still hardcoded here. Either \"action: query\" should stay here and be hardcoded too (I\u0027m afraid I do not understand why you moved *that* to a setting) or the \"prop: ...\" parameter should moved to the settings along with the \"query\" action it belongs to.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_4009042e",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "Same issues as described in NearbyGateway.js.\n\nNo need for the manual join, just use the array as it is.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a019e07f",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "Why do you set \"pilimit\" based on the fact that \"pilimit\" is already set? This looks like a mistake. Better check for the \"pageimages\" query prop module or \"data.piprop \u003d\u003d\u003d \u0027thumbnail\u0027\".\n\nThe later raises the question what happens if the PageImage\u0027s \"prop\" setting is something else (can be \"thumbnail\", \"name\" or \"original\").",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c0141447",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "The \"thumbsize\" does have an effect only if \"data.piprop \u003d \u0027thumbnail\u0027\". You should probably set that too, because it\u0027s not guaranteed to be correctly set in the settings.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6023e8a6",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "As far as I can tell the two lines \"title: info.title\" and \"thumbnail: info.thumbnail\" do nothing and can be removed. The new code extends the original array instead of constructing a new one, which means all parameters are passed through anyway, including the \"title\" and \"thumbnail\" parameters.\n\nThe only difference is, with these two lines the new array will always contain the two keys with undefined values when the original array missed them. But both do have defaults in Page.js, so this difference is not relevant.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_201df066",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "As Daniel already described we also need support for terms.label[0] somewhere in this code.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_80261cb4",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "Before, this had a fallback to \"title\". Now this is missing. As far as I can tell this means that all pages *not* providing a display title will *not* show the search terms highlighted. This looks like a regression to me.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_40202496",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "Not critical in JavaScript, but better declare an \"options\" class property above, probably below the \"defaults\" property.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_de371aaa",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 4
@@ -189,6 +325,40 @@
       "writtenOn": "2015-10-15T23:18:05Z",
       "side": 1,
       "message": "Careful with the (lay of) escaping here:\ndisplaytitle contains html, the page title used below is probably plain text, which needs escaping.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e036f8e3",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "So now this code supports two ways to provide a display title, via \"options.pageprops.displaytitle\" and \"options.displayTitle\"? I find this confusing. The later looks unused to me. Is this here for backwards compatibility? Should be documented as such.\n\nAlso, the new possibilities to pass in option to a Page object should be documented somewhere. Possibly above in \"defaults\" and it\u0027s documentation.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c02bb476",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-10-16T07:31:12Z",
+      "side": 1,
+      "message": "Why is \"query\" still hardcoded here but a setting in all other cases? As noted before, I think it should stay hardcoded in all cases.",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
