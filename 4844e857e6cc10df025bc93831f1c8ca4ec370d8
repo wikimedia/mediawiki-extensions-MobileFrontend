@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_9abd2719",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T20:58:08Z",
+      "side": 1,
+      "message": "Yes, but as I said on another patchset - let\u0027s do that separately. we actually want a kill switch for this as part of pushing to stable so this works great.\nSee https://phabricator.wikimedia.org/T101719",
+      "parentUuid": "0ebaf39b_14aa6ed1",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_c9051f18",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_9a5e8716",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T20:58:08Z",
+      "side": 1,
+      "message": "Am confused at what you are trying to prevent. Mustache handles this stuff.\n\nI\u0027m going to assert it should be HTML as this is how Mustache expects it to be.",
+      "parentUuid": "0ebaf39b_c9051f18",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_d40ff631",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2015-10-16T18:41:57Z",
       "side": 1,
       "message": "This should be terms.label, not pageprops.label, I think. \n\nAlso, label  is plain text and needs to be escaped to be compatible with displaytitle, which is always HTML, see Id4ce93986 and I043b26b82.",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7a74f396",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T20:58:08Z",
+      "side": 1,
+      "message": "I\u0027m confused. Display title can be HTML or plain text no?\nCan you give me an example of where this goes wrong?\nAll this value is used for is Mustache which does escaping for you.\n\nAlso is there any reason Wikidata can\u0027t make this a pageprop to make this less hacky?",
+      "parentUuid": "0ebaf39b_d40ff631",
       "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
