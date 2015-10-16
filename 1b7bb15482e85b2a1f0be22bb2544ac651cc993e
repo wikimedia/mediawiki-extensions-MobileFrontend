@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_6902f3bf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Yes although more explicit we could merge these globals later which would be great as it would be less Wikidata specific.",
+      "parentUuid": "0ebaf39b_1e813292",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_9e844260",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -125,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_893727ab",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Done. makes sense. thanks!",
+      "parentUuid": "0ebaf39b_fe0a1e28",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_4009042e",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 4
@@ -136,6 +172,24 @@
       "writtenOn": "2015-10-16T07:31:12Z",
       "side": 1,
       "message": "Same issues as described in NearbyGateway.js.\n\nNo need for the manual join, just use the array as it is.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_09433716",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_4009042e",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -159,6 +213,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c94c3f46",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Because if it\u0027s already set it is wrong. If it\u0027s not we don\u0027t have PageImages support.",
+      "parentUuid": "0ebaf39b_a019e07f",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_c0141447",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 4
@@ -176,6 +248,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_695bd3fd",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Right now this is hardcoded in PHP and not configurable so it will always be set if pilimit is set.",
+      "parentUuid": "0ebaf39b_c0141447",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_6023e8a6",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 4
@@ -187,6 +277,24 @@
       "writtenOn": "2015-10-16T07:31:12Z",
       "side": 1,
       "message": "As far as I can tell the two lines \"title: info.title\" and \"thumbnail: info.thumbnail\" do nothing and can be removed. The new code extends the original array instead of constructing a new one, which means all parameters are passed through anyway, including the \"title\" and \"thumbnail\" parameters.\n\nThe only difference is, with these two lines the new array will always contain the two keys with undefined values when the original array missed them. But both do have defaults in Page.js, so this difference is not relevant.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_49584ffd",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "You are correct.",
+      "parentUuid": "0ebaf39b_6023e8a6",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -227,6 +335,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c963dfa5",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "A page will always have a displayTitle and this will be the title if no displayTitle was specified (see Page.js) so no regression.",
+      "parentUuid": "0ebaf39b_80261cb4",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_40202496",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 4
@@ -238,6 +364,24 @@
       "writtenOn": "2015-10-16T07:31:12Z",
       "side": 1,
       "message": "Not critical in JavaScript, but better declare an \"options\" class property above, probably below the \"defaults\" property.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e9c823ac",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "It shouldn\u0027t be on the prototype since prototypes are inherited and is only local to this instance.\n\nIt\u0027s tricky to explain this without going into the details of:\nView.prototype.initialize.apply( this, arguments );",
+      "parentUuid": "0ebaf39b_40202496",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -315,6 +459,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c9bd1fff",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_6368d2f2",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_def15aff",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 4
@@ -384,6 +546,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_693433a8",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "Yeh you\u0027re right... the pageprops shouldn\u0027t come in here. Let me see where it makes sense for them to go.",
+      "parentUuid": "0ebaf39b_e036f8e3",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_c02bb476",
         "filename": "resources/mobile.watchlist/WatchListGateway.js",
         "patchSetId": 4
@@ -395,6 +575,24 @@
       "writtenOn": "2015-10-16T07:31:12Z",
       "side": 1,
       "message": "Why is \"query\" still hardcoded here but a setting in all other cases? As noted before, I think it should stay hardcoded in all cases.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_89d88780",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 1,
+      "message": "actually seems mw.Api defaults to query anyway so i can use this.\nhttp://git.wikimedia.org/blob/mediawiki%2Fcore.git/0ac9a1442c0b0efa71520b95753d6eb299807622/resources%2Fsrc%2Fmediawiki%2Fapi.js#L14",
+      "parentUuid": "0ebaf39b_c02bb476",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

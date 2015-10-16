@@ -16,6 +16,24 @@
       "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_29cf1bb7",
+        "filename": "resources/mobile.watchlist/WatchListGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T17:47:03Z",
+      "side": 0,
+      "message": "It\u0027s not removed. It\u0027s taken care of in the hook now instead now only when PageImages is installed.\nL350 includes/MobileFrontend.hooks.php",
+      "parentUuid": "0ebaf39b_00322cef",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
