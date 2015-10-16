@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_3e8196fd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T00:44:48Z",
+      "side": 1,
+      "message": "Yeh that makes sense.\nAlso Wikidata.org itself in LocalSettings.php could populate MFSearchPageProps when MobileFrontend is installed.",
+      "parentUuid": "0ebaf39b_fec21e87",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_9e844260",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-15T23:00:57Z",
       "side": 1,
       "message": "For special:nearby on wikidata, we need the labels, too, because the actual page title would be Q12345678, and the display title is in a random language (an unfortunate artefact of the way displaytitle is handled in ParserOutput) .\n\nOn Wikipedias, we\u0027d typically want the description, but not lables from wikidata, since on wikipedia it makes sense to the the actual page tille, not the wikidata label.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_1e76123a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T00:44:48Z",
+      "side": 1,
+      "message": "Could Wikidata.org set wgMFSearchAPIParams\u0027 \u003d array( \u0027labels\u0027 ); in LocalSettings.php?",
+      "parentUuid": "0ebaf39b_9e844260",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_de8f1a25",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T00:44:48Z",
+      "side": 1,
+      "message": "So Hogan template language where this ultimately ends currently treats this as plain text. Is displaytitle html?\n\nWe could change Hogan to treat it as html.",
+      "parentUuid": "0ebaf39b_de371aaa",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_def15aff",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2015-10-15T23:00:57Z",
       "side": 1,
       "message": "If a label is available from pageterms, it should be preferred over displaytitle here.",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7e962e44",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T00:44:48Z",
+      "side": 1,
+      "message": "If the other changes I\u0027ve suggested in the other comment make sense - I\u0027m totally fine with adding a check here.",
+      "parentUuid": "0ebaf39b_def15aff",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
