@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_03a8f61b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-16T14:17:45Z",
+      "side": 1,
+      "message": "Yes, something like that. Wikidata would need  something like wgMFSearchPageProps \u003d array( \u0027pageterms\u0027 ) and wgMFSearchAPIParams \u003d array( \u0027ptterms\u0027 \u003d \u0027label\u0027 );\n\nWikipedia would then use wgMFSearchPageProps \u003d array( \u0027pageterms\u0027 ) and wgMFSearchAPIParams \u003d array( \u0027ptterms\u0027 \u003d \u0027description\u0027 );",
+      "parentUuid": "0ebaf39b_1e76123a",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_fe0a1e28",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 4
@@ -273,6 +291,24 @@
       "side": 1,
       "message": "displaytitle _can_ contain html, it depends on, if the user used wikitext like italic, bold or something else.",
       "parentUuid": "0ebaf39b_de8f1a25",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6368d2f2",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-10-16T14:17:45Z",
+      "side": 1,
+      "message": "Plain titles have to be escaped; if displaytitle can contain html markup, it cannot be escaped. Which means we have to rely on it being safe. Wikibase produces safe html for displaytitles (but we don\u0027t want to use them, because they are not properly localized).",
+      "parentUuid": "0ebaf39b_de52ba3e",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
