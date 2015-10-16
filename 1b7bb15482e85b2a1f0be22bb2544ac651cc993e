@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_1e813292",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-16T05:51:32Z",
+      "side": 1,
+      "message": "I\u0027m wondering, if this configuration is really needed. I would recommend to make two configuration variables:\nMFSearchPageProps and MFSearchAPIParams\n\nThat\u0027s all, what wikidata needs to achieve this, it would be a configuration to add pageterms to pageProps and wbtterms \u003d\u003e description to searchParams.",
+      "parentUuid": "0ebaf39b_3e8196fd",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_9e844260",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "So Hogan template language where this ultimately ends currently treats this as plain text. Is displaytitle html?\n\nWe could change Hogan to treat it as html.",
       "parentUuid": "0ebaf39b_de371aaa",
+      "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_de52ba3e",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-16T05:51:32Z",
+      "side": 1,
+      "message": "displaytitle _can_ contain html, it depends on, if the user used wikitext like italic, bold or something else.",
+      "parentUuid": "0ebaf39b_de8f1a25",
       "revId": "1b7bb15482e85b2a1f0be22bb2544ac651cc993e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
