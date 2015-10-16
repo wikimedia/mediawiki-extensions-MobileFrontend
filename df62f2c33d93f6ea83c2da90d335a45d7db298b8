@@ -229,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c6a18c37",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-16T16:40:02Z",
+      "side": 1,
+      "message": "Actually we can just return undefined when this is not known. I\u0027d like to see if I can make  loadWatchStatus part of initialization in a separate patchset since this seems like a good opportunity.",
+      "parentUuid": "0ebaf39b_a6f81847",
+      "revId": "df62f2c33d93f6ea83c2da90d335a45d7db298b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_4326ee64",
         "filename": "tests/qunit/mobile.nearby/test_Nearby.js",
         "patchSetId": 16
