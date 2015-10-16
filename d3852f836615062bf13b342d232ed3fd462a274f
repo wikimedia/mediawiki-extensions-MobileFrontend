@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_838146ca",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "Can\u0027t think of a reason not to use \"self\" here. Minor point for sure, but with minification that\u0027s up to 3 characters saved per line here, which, across all our files, could add up pretty quickly. I won\u0027t point it out again in this patch, but I\u0027d take a pass over the other functions \u0026 files.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_80db7c53",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 13
@@ -70,6 +87,23 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c3d2de00",
+        "filename": "resources/mobile.talk.overlays/TalkSectionOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "Shouldn\u0027t there also be a FIXME here about using the EditorGateway (or TalkPageGateway)?",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_40990470",
         "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
         "patchSetId": 13
@@ -81,6 +115,75 @@
       "writtenOn": "2015-10-16T10:32:05Z",
       "side": 1,
       "message": "I\u0027ve said it before and I\u0027ll say it again: you shouldn\u0027t need to stub the behaviour of #get on all instances of mw.Api. This might actually be hiding programming errors – the test runner throws an Error if there are pending requests at the end of a test module.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6330d253",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "And if you do need to keep this line, it could probably use some formatting love. It looks like this over at WatchListGateway:\n\n    this.sandbox.stub( mw.Api.prototype, \u0027get\u0027 )\n        .returns( $.Deferred().resolve( response ) );",
+      "parentUuid": "0ebaf39b_40990470",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_8333865e",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "This one too.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_033f9621",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "Three hops this time.",
+      "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a34d6ae2",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-16T13:50:24Z",
+      "side": 1,
+      "message": "Four hops this time. (Repeating the joke makes it funnier, right?)",
       "revId": "d3852f836615062bf13b342d232ed3fd462a274f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
