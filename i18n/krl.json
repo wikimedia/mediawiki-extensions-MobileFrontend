@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ilja.mos"
+			"Ilja.mos",
+			"Likopiän tyttö"
 		]
 	},
 	"mobile-frontend-editor-edit": "Korjua",
+	"mobile-frontend-language-article-heading": "Luve toisella kielellä",
+	"mobile-frontend-main-menu-login": "Kirjauvu šiämeh",
+	"mobile-frontend-main-menu-settings": "Ašetukšet",
+	"mobile-frontend-news-items": "Uutisissa",
 	"mobile-frontend-view": "Mopikkaversijo"
 }
