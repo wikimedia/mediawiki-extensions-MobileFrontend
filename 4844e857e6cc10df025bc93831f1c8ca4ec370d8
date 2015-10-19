@@ -104,6 +104,24 @@
       "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_0ca81a1c",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-10-19T12:16:58Z",
+      "side": 1,
+      "message": "displaytitle does not handle multilingual content properly, so it gets stored in pageprops in a random language.",
+      "parentUuid": "0ebaf39b_7a74f396",
+      "revId": "4844e857e6cc10df025bc93831f1c8ca4ec370d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
