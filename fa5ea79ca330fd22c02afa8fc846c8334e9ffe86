@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_4c9ff206",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-10-19T12:00:16Z",
+      "side": 1,
+      "message": "if I already set pageterms in wgMFQueryPropModules, then \u0027pageterms\u0027 is requested twice in the api call.\n\nsuppose no harm since they probably get deduplicated but we could check if it is set already.",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_ecfee634",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
