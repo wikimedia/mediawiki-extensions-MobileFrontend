@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_6cd51647",
+        "filename": "includes/config/Search.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-10-19T10:08:15Z",
+      "side": 1,
+      "message": "setting the config properly depends on the order of initialiazation of extensions in LocalSettings.php (e.g. Wikibase has to be loaded after MobileFrontend)\n\nthis seems brittle and would be nice to have a better way",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
