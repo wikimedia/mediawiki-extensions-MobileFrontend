@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ebaf39b_ec58268e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-10-19T11:32:50Z",
+      "side": 1,
+      "message": "also appears that descriptions are added to Special:Nearby (even in wikipedias) whereas before they are not.\n\nimho, it seems nice :) but let\u0027s make sure we want to change this and should be noted in the commit message.",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_6cd51647",
         "filename": "includes/config/Search.php",
         "patchSetId": 8
