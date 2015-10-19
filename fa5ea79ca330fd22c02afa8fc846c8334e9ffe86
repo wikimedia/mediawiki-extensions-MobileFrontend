@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_ecfee634",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-10-19T11:54:21Z",
+      "side": 1,
+      "message": "with $wgMFUseWikibaseDescription \u003d true set then we only get descriptions (e.g. no labels) since this overrides any search params for wbptterms\n\nwith $wgMFUseWikibaseDescription \u003d false, but $wgQueryPropModules[] \u003d \u0027pageterms\u0027 then I get descriptions though suppose I could set $wgMFSearchAPIParams to return only labels.\n\n$wgMFQueryPropModules[] \u003d \u0027pageterms\u0027;                                                              \n$wgMFSearchAPIParams[\u0027wbptterms\u0027] \u003d array( \u0027label\u0027 );",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_6cd51647",
         "filename": "includes/config/Search.php",
         "patchSetId": 8
