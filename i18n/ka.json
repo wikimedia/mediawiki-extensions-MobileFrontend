@@ -104,7 +104,7 @@
 	"mobile-frontend-languages-header": "ენები",
 	"mobile-frontend-languages-nonexistent-title": "გვერდი „$1“ არ არსებობს.",
 	"mobile-frontend-languages-text": "$1 ხელმისაწვდომია $2 {{PLURAL:$2|ენაზე|ენაზე}}",
-	"mobile-frontend-last-modified-date": "ბოლოს შეიცვალა $1-ში, $2-ზე",
+	"mobile-frontend-last-modified-date": "ბოლოს დარედაქტირდა $1-ში, $2-ზე",
 	"mobile-frontend-last-modified-days": "ბოლოს შეიცვალა {{PLURAL:$1|$1 დღის|$1 დღის}} წინ",
 	"mobile-frontend-last-modified-hours": "ბოლოს შეიცვალა {{PLURAL:$1|$1 საათის|$1 საათის}} წინ",
 	"mobile-frontend-last-modified-just-now": "უკანასკნელად ახლახანს რედაქტირებული",

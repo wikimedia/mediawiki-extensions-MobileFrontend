@@ -237,6 +237,7 @@
 	"mobile-frontend-watchlist-removed": "Страница $1 је уклоњена са вашег списка надгледања",
 	"mobile-frontend-watchlist-signup-action": "<strong>Списак надгледања вам олакшава праћење страница.</strong><br />Отворите налог да бисте га користили.",
 	"mobile-frontend-watchlist-view": "Види списак надгледања",
+	"nearby": "Странице о темама близу Вас",
 	"tag-mobile_edit": "Мобилно уређивање",
 	"tag-mobile_edit-description": "Измена начињена са мобилног уређаја",
 	"tag-mobile_web_edit": "Мобилно веб-уређивање",
@@ -245,5 +246,6 @@
 	"mobile-frontend-donate-button-label": "Донирај",
 	"mobile-frontend-loading-message": "Учитавам…",
 	"mobile-frontend-panel-ok": "У реду",
-	"mobile-frontend-panel-cancel": "Не, хвала"
+	"mobile-frontend-panel-cancel": "Не, хвала",
+	"mobile-frontend-search-feedback-link-text": "Дајте нам Ваше мишљење."
 }
