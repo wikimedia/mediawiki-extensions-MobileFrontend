@@ -108,11 +108,6 @@ class MobileFrontendHooks {
 		$name = $context->getTitle()->getDBkey();
 		$inTestMode =
 			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-		// FIXME: remove the migration code below at some point.
-		// alpha no more, fallback to beta
-		if ( $mobileContext->getMobileMode() === 'alpha' ) {
-			$mobileContext->setMobileMode( 'beta' );
-		}
 		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
 		}

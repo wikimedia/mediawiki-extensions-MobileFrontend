@@ -8,6 +8,7 @@
  */
 class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
+	const USER_MODE_PREFERENCE_NAME = 'mfMode';
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
 	 * @var string $mobileMode
@@ -281,10 +282,18 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Sets the value of $this->mobileMode property to the value of the 'optin' cookie.
+	 * If the cookie is not set the value will be an empty string.
+	 */
+	private function loadMobileModeCookie() {
+		$this->mobileMode = $this->getRequest()->getCookie( 'optin', '' );
+	}
+
+	/**
 	 * Returns the testing mode user has opted in: 'beta' or any other value for stable
 	 * @return string
 	 */
-	public function getMobileMode() {
+	private function getMobileMode() {
 		$enableBeta = $this->getMFConfig()->get( 'MFEnableBeta' );
 
 		if ( !$enableBeta ) {
@@ -295,8 +304,19 @@ class MobileContext extends ContextSource {
 			if ( $mobileAction === 'beta' || $mobileAction === 'stable' ) {
 				$this->mobileMode = $mobileAction;
 			} else {
-				$req = $this->getRequest();
-				$this->mobileMode = $req->getCookie( 'optin', '' );
+				$user = $this->getUser();
+				if ( $user->isAnon() ) {
+					$this->loadMobileModeCookie();
+				} else {
+					$mode = $user->getOption( self::USER_MODE_PREFERENCE_NAME );
+					$this->mobileMode = $mode;
+					// Edge case where preferences are corrupt or the user opted
+					// in before change.
+					if ( $mode === null ) {
+						// Should we set the user option here?
+						$this->loadMobileModeCookie();
+					}
+				}
 			}
 		}
 		return $this->mobileMode;
@@ -318,6 +338,9 @@ class MobileContext extends ContextSource {
 			wfIncrStats( 'mobile.opt_in_cookie_unset' );
 		}
 		$this->mobileMode = $mode;
+		$user = $this->getUser();
+		$user->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
+		$user->saveSettings();
 
 		$host = $this->getBaseDomain();
 		// Deal with people running off localhost. see http://curl.haxx.se/rfc/cookie_spec.html
