@@ -171,7 +171,6 @@ $wgConfigRegistry['mobilefrontend'] = 'GlobalVarConfig::newInstance';
 
 // Set LESS importpath
 $wgResourceLoaderLESSImportPaths[] = __DIR__ . "/minerva.less/";
-$wgResourceLoaderLESSImportPaths[] = __DIR__ . "/resources/";
 
 // ResourceLoader modules
 
