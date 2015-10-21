@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_853e0ab4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T08:20:46Z",
+      "side": 1,
+      "message": "Yeh that is cool... but as much as I want to push that I should probably clear that with product. In mean time I\u0027ll add some switches to toggle it on/off and default to off.",
+      "parentUuid": "0ebaf39b_ec58268e",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_4c9ff206",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-19T12:00:16Z",
       "side": 1,
       "message": "if I already set pageterms in wgMFQueryPropModules, then \u0027pageterms\u0027 is requested twice in the api call.\n\nsuppose no harm since they probably get deduplicated but we could check if it is set already.",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_45481260",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T08:20:46Z",
+      "side": 1,
+      "message": "Some deep array merge should suffice here I suspect?",
+      "parentUuid": "0ebaf39b_4c9ff206",
       "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_a539cecc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T08:20:46Z",
+      "side": 1,
+      "message": "Some deep array merge should suffice here I suspect?",
+      "parentUuid": "0ebaf39b_ecfee634",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_6cd51647",
         "filename": "includes/config/Search.php",
         "patchSetId": 8
@@ -64,6 +118,24 @@
       "writtenOn": "2015-10-19T10:08:15Z",
       "side": 1,
       "message": "setting the config properly depends on the order of initialiazation of extensions in LocalSettings.php (e.g. Wikibase has to be loaded after MobileFrontend)\n\nthis seems brittle and would be nice to have a better way",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_622f4c9d",
+        "filename": "includes/config/Search.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T08:20:46Z",
+      "side": 1,
+      "message": "Any good ideas here?",
+      "parentUuid": "0ebaf39b_6cd51647",
       "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
