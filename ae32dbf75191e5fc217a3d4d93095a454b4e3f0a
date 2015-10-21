@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_e2757cc9",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-21T07:37:16Z",
+      "side": 1,
+      "message": "just a hint: I would love a better function name. What about isDoNotTrackEnabled?\n\nBtw.: Coding conventions: function dnt( window ) {",
+      "revId": "ae32dbf75191e5fc217a3d4d93095a454b4e3f0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
