@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_82ce005e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-10-21T05:33:45Z",
+      "side": 1,
+      "message": "Vim does it by default. That\u0027s the only way I remember!",
+      "parentUuid": "0ebaf39b_48fff031",
+      "revId": "3f4826f7fe50b46a949579fec8cf91499a988812",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_68951442",
         "filename": "includes/config/Experimental.php",
         "patchSetId": 5
