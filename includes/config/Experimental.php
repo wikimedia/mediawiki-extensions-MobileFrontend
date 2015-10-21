@@ -5,6 +5,15 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 /**
+ * Disable EventLogging bucketing for purposes of development.
+ * When enabled all events are logged regardless of any existing sampling rate specified in
+ * the schema.
+ *
+ * @var boolean
+ */
+$wgMFIgnoreEventLoggingBucketing = false;
+
+/**
  * Controls whether the "Minerva as a desktop skin" beta feature is enabled
  */
 $wgMFEnableMinervaBetaFeature = false;

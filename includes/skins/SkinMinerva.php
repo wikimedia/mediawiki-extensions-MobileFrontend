@@ -905,6 +905,7 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 
 		$vars = array(
+			'wgMFIgnoreEventLoggingBucketing' => $config->get( 'MFIgnoreEventLoggingBucketing' ),
 			'wgMFMenuData' => $this->getMenuData(),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),

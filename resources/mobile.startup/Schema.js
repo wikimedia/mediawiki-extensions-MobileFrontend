@@ -85,7 +85,9 @@
 		 * @private
 		 */
 		_isUserInBucket: function () {
-			if ( this._isInBucket === undefined ) {
+			if ( mw.config.get( 'wgMFIgnoreEventLoggingBucketing' ) ) {
+				return true;
+			} else if ( this._isInBucket === undefined ) {
 				this._isInBucket = this.isSampled && Math.random() <= this.samplingRate;
 			}
 			return this._isInBucket;

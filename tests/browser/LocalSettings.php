@@ -5,6 +5,7 @@ $wgRightsUrl = "http://creativecommons.org/licenses/by-sa/3.0/";
 $wgGroupPermissions['user']['editinterface'] = true;
 
 
+$wgMFIgnoreEventLoggingBucketing = true;
 // Make languages.feature test work.
 try {
 	$dbw = wfGetDB( DB_MASTER );
