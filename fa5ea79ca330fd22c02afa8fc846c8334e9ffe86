@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_265f2115",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T20:18:12Z",
+      "side": 1,
+      "message": "Decided to add it. This is beta so can make a decision later.",
+      "parentUuid": "0ebaf39b_853e0ab4",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_4c9ff206",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Some deep array merge should suffice here I suspect?",
       "parentUuid": "0ebaf39b_4c9ff206",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a6aa31cf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T20:18:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_45481260",
       "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -107,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c6ade5e8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T20:18:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_a539cecc",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_6cd51647",
         "filename": "includes/config/Search.php",
         "patchSetId": 8
@@ -136,6 +190,24 @@
       "side": 1,
       "message": "Any good ideas here?",
       "parentUuid": "0ebaf39b_6cd51647",
+      "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_068bfd72",
+        "filename": "includes/config/Search.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-21T20:18:12Z",
+      "side": 1,
+      "message": "On 2nd thoughts this is a problem with a lot of extensions and can be solved by load order. I\u0027m wondering if using extension.json helps this?",
+      "parentUuid": "0ebaf39b_622f4c9d",
       "revId": "fa5ea79ca330fd22c02afa8fc846c8334e9ffe86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
