@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_aea75f07",
+        "filename": "includes/config/Search.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-22T22:13:38Z",
+      "side": 1,
+      "message": "consistency!",
+      "parentUuid": "0ebaf39b_5a9c65b8",
+      "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_dad61554",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-22T17:40:34Z",
       "side": 1,
       "message": "why not put this directly into the object descriptor when extending View?",
+      "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_eea1d7f5",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-22T22:13:38Z",
+      "side": 1,
+      "message": "Not sure what you mean... it\u0027s a static method so shouldn\u0027t be part of the inherited prototype IMO\n\nSomething inheriting from Page shouldn\u0027t get it.",
+      "parentUuid": "0ebaf39b_dad61554",
       "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
