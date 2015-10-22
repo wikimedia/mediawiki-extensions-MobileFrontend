@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_5a9c65b8",
+        "filename": "includes/config/Search.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-22T17:40:34Z",
+      "side": 1,
+      "message": "I\u0027m still not sure, if this is really needed :P But ok, we have it in our other config files, already.",
+      "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_dad61554",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-22T17:40:34Z",
+      "side": 1,
+      "message": "why not put this directly into the object descriptor when extending View?",
+      "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
