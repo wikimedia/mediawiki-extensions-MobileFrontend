@@ -206,26 +206,6 @@
 		}
 	};
 
-	/**
-	 * A deprecated wrapper which is only here whilst Gather uses it.
-	 * FIXME: Please remove this class as soon as Gather has been updated.
-	 * @class SearchApi
-	 */
-	function SearchApi() {
-		this.gateway = new SearchGateway( new mw.Api() );
-	}
-	/** @ignore */
-	SearchApi.prototype.isCached = function () {
-		return this.gateway.isCached.apply( this.gateway, arguments );
-	};
-	/** @ignore */
-	SearchApi.prototype.abort = $.noop;
-	/** @ignore */
-	SearchApi.prototype.search = function () {
-		return this.gateway.search.apply( this.gateway, arguments );
-	};
-
-	M.deprecate( 'mobile.search.api/SearchApi', SearchApi, 'SearchGateway' );
 	M.define( 'mobile.search.api/SearchGateway', SearchGateway );
 
 }( mw.mobileFrontend, jQuery ) );
