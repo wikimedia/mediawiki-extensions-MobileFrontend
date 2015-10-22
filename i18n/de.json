@@ -13,7 +13,8 @@
 			"ChrisiPK",
 			"Robby",
 			"Florian",
-			"Jdlrobson"
+			"Jdlrobson",
+			"J. 'mach' wust"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -320,7 +321,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "Es gab einen Fehler auf dem Server. Deine Bearbeitung konnte nicht gespeichert werden. Versuche, die Seite neu zu laden.",
 	"mobile-frontend-talk-topic-wait": "Dein neues Thema wird gespeichert, bitte warten.",
 	"mobile-frontend-terms-text": "Nutzungsbedingungen",
-	"mobile-frontend-thanked-notice": "$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre|die}} Bearbeitung magst.",
+	"mobile-frontend-thanked-notice": "$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre}} Bearbeitung magst.",
 	"mobile-frontend-user-account": "Benutzerkonto",
 	"mobile-frontend-user-button-tooltip": "Meine Benachrichtigungen anzeigen",
 	"mobile-frontend-user-newmessages": "Du hast neue Nachrichten auf deiner Diskussionsseite",
