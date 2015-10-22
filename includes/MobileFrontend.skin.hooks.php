@@ -6,11 +6,11 @@ class MobileFrontendSkinHooks {
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
 	 * Note: This is called by a hook in the WikimediaMessages extension.
 	 *
-	 * @param $urlMsgKey Key of i18n message containing terms of use URL (optional)
-	 *
+	 * @param Skin $sk
+	 * @param string $urlMsgKey Key of i18n message containing terms of use URL (optional)
 	 * @return null|string
 	 */
-	protected static function getTermsLink( $sk, $urlMsgKey = 'mobile-frontend-terms-url' ) {
+	public static function getTermsLink( $sk, $urlMsgKey = 'mobile-frontend-terms-url' ) {
 		$urlMsg = $sk->msg( $urlMsgKey )->inContentLanguage();
 		if ( $urlMsg->isDisabled() ) {
 			return null;
@@ -45,7 +45,7 @@ class MobileFrontendSkinHooks {
 			// Use shorter text for some common licensing strings. See Installer.i18n.php
 			// for the currently offered strings. Unfortunately, there is no good way to
 			// comprehensively support localized licensing strings since the license (as
-			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
+			// stored in LocalSettings.php) is just freeform text, not an i18n key.
 			$commonLicenses = array(
 				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
 				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
@@ -120,7 +120,7 @@ class MobileFrontendSkinHooks {
 	 * @param QuickTemplate $tpl
 	 * @param MobileContext $ctx
 	 * @param Title $title
-	 * @param Request $req
+	 * @param WebRequest $req
 	 */
 	public static function desktopFooter( $sk, $tpl, $ctx, $title, $req ) {
 		$footerlinks = $tpl->data['footerlinks'];
@@ -147,7 +147,8 @@ class MobileFrontendSkinHooks {
 	 * @param QuickTemplate $tpl
 	 * @param MobileContext $ctx
 	 * @param Title $title
-	 * @param Request $req
+	 * @param WebRequest $req
+	 * @return QuickTemplate
 	 */
 	protected static function mobileFooter( $sk, $tpl, $ctx, $title, $req ) {
 		$url = $sk->getOutput()->getProperty( 'desktopUrl' );
@@ -252,4 +253,3 @@ HTML;
 		return $sitename . $suffix;
 	}
 }
-
