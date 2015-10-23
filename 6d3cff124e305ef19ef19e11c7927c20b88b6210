@@ -69,6 +69,24 @@
       "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_89ccd566",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-23T05:58:44Z",
+      "side": 1,
+      "message": "Ah, sorry, haven\u0027t read that :) Makes sense.",
+      "parentUuid": "0ebaf39b_eea1d7f5",
+      "revId": "6d3cff124e305ef19ef19e11c7927c20b88b6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
