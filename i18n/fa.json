@@ -176,7 +176,7 @@
 	"mobile-frontend-languages-nonexistent-title": "صفحهٔ \"$1\" وجود ندارد.",
 	"mobile-frontend-languages-text": "$1 در دسترس است در $2 {{PLURAL:$2|زبان|زبان‌ها}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} انواع",
-	"mobile-frontend-last-modified-date": "آخرین تغییر $1، در $2",
+	"mobile-frontend-last-modified-date": "آخرین ویرایش $1، در $2",
 	"mobile-frontend-last-modified-days": "آخرین بار {{PLURAL:$1|$1 روز|$1 روز}} پیش تغییر یافته‌است",
 	"mobile-frontend-last-modified-hours": "آخرین بار {{PLURAL:$1|$1 ساعت|$1 ساعت}} پیش تغییر یافته‌است",
 	"mobile-frontend-last-modified-just-now": "آخرین بار همین الآن ویرایش‌شده",
