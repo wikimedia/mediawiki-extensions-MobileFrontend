@@ -153,6 +153,8 @@
 				'aria-expanded': !wasExpanded
 			} );
 
+		M.emit( 'section-toggled', wasExpanded, sectionId );
+
 		if ( !browser.isWideScreen() ) {
 			storeSectionToggleState( $heading, page );
 		}

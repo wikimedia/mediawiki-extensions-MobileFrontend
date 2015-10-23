@@ -433,7 +433,8 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
-			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' )
+			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
+			'wgMFLazyLoadImages' => $config->get( 'MFLazyLoadImages' ),
 		);
 
 		if ( $context->shouldDisplayMobileView() ) {

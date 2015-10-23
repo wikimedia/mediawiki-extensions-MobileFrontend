@@ -1,7 +1,9 @@
 ( function ( M, $ ) {
 
 	var browser = M.require( 'mobile.browser/browser' ),
-		View = M.require( 'mobile.view/View' );
+		View = M.require( 'mobile.view/View' ),
+		util = M.require( 'mobile.startup/util' ),
+		context = M.require( 'mobile.context/context' );
 
 	/**
 	 * Representation of the current skin being rendered.
@@ -12,7 +14,9 @@
 	 * @uses Page
 	 */
 	function Skin( options ) {
-		var self = this;
+		var self = this,
+			isBeta = context.isBetaGroupMember(),
+			wgMFLazyLoadImages = mw.config.get( 'wgMFLazyLoadImages' );
 
 		this.page = options.page;
 		this.name = options.name;
@@ -41,6 +45,17 @@
 		M.on( 'resize', $.proxy( this, 'emit', '_resize' ) );
 		this.on( '_resize', loadWideScreenModules );
 		this.emit( '_resize' );
+
+		if (
+			!mw.config.get( 'wgImagesDisabled' ) && (
+				wgMFLazyLoadImages.base ||
+				( isBeta && wgMFLazyLoadImages.beta )
+			)
+		) {
+			$( function () {
+				self.loadImages();
+			} );
+		}
 	}
 
 	OO.mfExtend( Skin, View, {
@@ -154,6 +169,78 @@
 		 */
 		getMainMenu: function () {
 			return this.mainMenu;
+		},
+
+		/**
+		 * Load images on demand
+		 */
+		loadImages: function () {
+			var self = this,
+				$imageLinks = this.$( '#content' ).find( '.image' );
+
+			/**
+			 * Load remaining images in viewport
+			 */
+			function _loadImages() {
+
+				$imageLinks = $imageLinks.filter( function ( index, link ) {
+					var $imageLink = $( link );
+
+					if (
+						util.isElementInViewport( $imageLink ) &&
+						$imageLink.find( '.spinner' ).is( ':visible' )
+					) {
+						self.loadImage( $imageLink );
+						return false;
+					}
+
+					return true;
+				} );
+
+				if ( !$imageLinks.length ) {
+					M.off( 'scroll', _loadImages );
+					M.off( 'resize', _loadImages );
+					M.off( 'section-toggled', _loadImages );
+				}
+
+			}
+
+			M.on( 'scroll', _loadImages );
+			M.on( 'resize', _loadImages );
+			M.on( 'section-toggled', _loadImages );
+
+			_loadImages();
+		},
+
+		/**
+		 * Load an image on demand
+		 * @param {jQuery.Object} $imageLink
+		 */
+		loadImage: function ( $imageLink ) {
+			var $noscript = $imageLink.find( 'noscript' ),
+				$placeholder = $imageLink.find( '.lazy-image-placeholder' ),
+				// Grab the image markup from the HTML only fallback
+				// Image will start downloading
+				$image = $( $.parseHTML( $noscript.text() ) ),
+				$downloadingImage = $( '<img/>' );
+
+			// When the image has loaded
+			$downloadingImage.on( 'load', function () {
+				// Swap the HTML inside the placeholder (to keep the layout and
+				// dimensions the same and not trigger layouts
+				$placeholder.empty().append( $image );
+				// Set the loaded class after insertion of the HTML to trigger the
+				// animations.
+				setTimeout( function () {
+					$placeholder.addClass( 'loaded' );
+				}, 100 );
+			} );
+
+			// Trigger image download after binding the load handler
+			$downloadingImage.attr( {
+				src: $image.attr( 'src' ),
+				srcset: $image.attr( 'srcset' )
+			} );
 		},
 
 		/**

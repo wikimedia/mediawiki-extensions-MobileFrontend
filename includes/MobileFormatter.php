@@ -118,8 +118,56 @@ class MobileFormatter extends HtmlFormatter {
 
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
+		} else {
+			$mfLazyLoadImages = $ctx->getMFConfig()
+				->get( 'MFLazyLoadImages' );
+
+			if (
+					$mfLazyLoadImages['base'] ||
+					( $ctx->isBetaGroupMember() && $mfLazyLoadImages['beta'] )
+			) {
+				$this->doRewriteImagesForLazyLoading();
+			}
 		}
+
 		return parent::filterContent();
+	}
+
+	/**
+	 * Enables images to be loaded asynchronously
+	 */
+	private function doRewriteImagesForLazyLoading() {
+		$doc = $this->getDoc();
+
+		foreach ( $doc->getElementsByTagName( 'img' ) as $img ) {
+			$parent = $img->parentNode;
+			$width = $img->getAttribute( 'width' );
+			$height = $img->getAttribute( 'height' );
+			$dimensionsStyle = ( $width ? "width: {$width}px;" : '' ) .
+				( $height ? "height: {$height}px;" : '' );
+
+			// HTML only clients
+			$noscript = $doc->createElement( 'noscript' );
+
+			// Loading status of image placeholder
+			$spinner = $doc->createElement( 'span' );
+			$spinner->setAttribute( 'class', MobileUI::iconClass(
+				'spinner', 'element', 'loading spinner'
+			) );
+
+			// To be loaded image placeholder
+			$imgPlaceholder = $doc->createElement( 'span' );
+			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
+			$imgPlaceholder->setAttribute( 'style', $dimensionsStyle );
+			$imgPlaceholder->appendChild( $spinner );
+
+			// Set the placeholder where the original image was
+			$parent->replaceChild( $imgPlaceholder, $img );
+			// Add the original image to the HTML only markup
+			$noscript->appendChild( $img );
+			// Insert the HTML only markup before the placeholder
+			$parent->insertBefore( $noscript, $imgPlaceholder );
+		}
 	}
 
 	/**
