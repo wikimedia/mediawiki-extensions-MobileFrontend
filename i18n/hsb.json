@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Michawiki"
+			"Michawiki",
+			"J budissin"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Wobkrućenski kod zapodać",
@@ -90,7 +91,7 @@
 	"mobile-frontend-languages-nonexistent-title": "Strona \"$1\" njeeksistuje.",
 	"mobile-frontend-languages-text": "$1 steji w $2 {{PLURAL:$2|rěči|rěčomaj|rěčach}} k dispoziciji",
 	"mobile-frontend-languages-variant-header": "Warianty rěče {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-last-modified-date": "Posledni raz $1 $2 změnjeny",
+	"mobile-frontend-last-modified-date": "Posledni raz změnjene $1 $2",
 	"mobile-frontend-last-modified-days": "Před {{PLURAL:$1|$1 dnjom|$1 dnjomaj|$1 dnjemi}} posledni raz změnjeny",
 	"mobile-frontend-last-modified-hours": "Před {{PLURAL:$1|$1 hodźinu|$1 hodźinomaj|$1 hodźinami}} posledni raz změnjeny",
 	"mobile-frontend-last-modified-just-now": "Runje změnjeny",
@@ -224,6 +225,6 @@
 	"nearby": "Strony w twojej bliskosći",
 	"tag-mobile_edit": "Mobilna změna",
 	"tag-mobile_edit-description": "Z mobilneho grata wobdźěłać (web abo nałoženje)",
-	"tag-mobile_web_edit": "Mobilne webdźěłowanje",
+	"tag-mobile_web_edit": "Mobilne wobdźěłowanje",
 	"mobile-frontend-pageaction-edit-tooltip": "Wobdźěłaj zawodny wotrězk tuteje strony."
 }

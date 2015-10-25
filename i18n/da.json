@@ -13,7 +13,8 @@
 			"Simeondahl",
 			"Steenth",
 			"Tjernobyl",
-			"Thomsen"
+			"Thomsen",
+			"Mads Haupt"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruger redigerer via mobil-grænsefladen",
@@ -95,6 +96,7 @@
 	"mobile-frontend-editor-undo-unsupported": "Fortryd er i øjeblikket ikke understøttet på mobile enheder.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viser kilden til</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Gemmer redigering, vent.",
+	"mobile-frontend-editor-redlink-explain": "Denne side er endnu ikke blevet oprettet.",
 	"mobile-frontend-enable-images": "Slå billeder til på den mobile hjemmeside",
 	"mobile-frontend-expand-sections-description": "Udvid altid alle afsnit, når du navigerer til en ny side.",
 	"mobile-frontend-expand-sections-status": "Udvid alle afsnit",
