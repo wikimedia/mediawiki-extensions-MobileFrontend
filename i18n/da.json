@@ -96,7 +96,9 @@
 	"mobile-frontend-editor-undo-unsupported": "Fortryd er i øjeblikket ikke understøttet på mobile enheder.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viser kilden til</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Gemmer redigering, vent.",
+	"mobile-frontend-editor-redlink-leave": "Nej, tak.",
 	"mobile-frontend-editor-redlink-explain": "Denne side er endnu ikke blevet oprettet.",
+	"mobile-frontend-editor-redlink-create": "Opret side",
 	"mobile-frontend-enable-images": "Slå billeder til på den mobile hjemmeside",
 	"mobile-frontend-expand-sections-description": "Udvid altid alle afsnit, når du navigerer til en ny side.",
 	"mobile-frontend-expand-sections-status": "Udvid alle afsnit",
@@ -321,5 +323,6 @@
 	"tag-mobile_edit-description": "Redigering udført fra mobil (web eller app)",
 	"tag-mobile_web_edit": "Mobilwebredigering",
 	"tag-mobile_web_edit-description": "Redigering fra det mobile website",
-	"mobile-frontend-pageaction-edit-tooltip": "Redigér indledningen for denne side."
+	"mobile-frontend-pageaction-edit-tooltip": "Redigér indledningen for denne side.",
+	"mobile-frontend-panel-cancel": "Nej tak"
 }
