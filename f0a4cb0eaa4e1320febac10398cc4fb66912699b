@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_1d67b14b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_22a85089",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_e220f848",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 16
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-26T14:29:14Z",
       "side": 1,
       "message": "To clarify and wrap up my point about using \"self\": If we use \"self\" over \"this\", all of the \"self\"s can be minified to one character. However, after closer investigation, it seems our minifier doesn\u0027t reduce variable names anyways (seems to just remove whitespace). Additionally, joakino brought up the great point to me that our code should be readable and the minifier should handle that kind of thing automatically.\n\nTL/DR: Ignore the complaints about \"self\", but I think we should open a discussion around improving our minification utility.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_bd70e506",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "https://www.mediawiki.org/wiki/Requests_for_comment/Minifier",
+      "parentUuid": "0ebaf39b_e220f848",
       "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_7d482dcf",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "I\u0027m not going over the maximum line length and jscs isn\u0027t complaining so all is good. I\u0027d prefer to keep the diff cleaner so it\u0027s clearer I haven\u0027t changed anything.",
+      "parentUuid": "0ebaf39b_a2a1a092",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_82a49c9f",
         "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
         "patchSetId": 16
@@ -64,6 +118,24 @@
       "writtenOn": "2015-10-26T14:29:14Z",
       "side": 1,
       "message": "Should probably match 62.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_1d19f1db",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "see above",
+      "parentUuid": "0ebaf39b_82a49c9f",
       "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_3d1e35c5",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "Yeh this is fair. Best thing to do here would to be to stick in a template. Done.",
+      "parentUuid": "0ebaf39b_a2c8c05a",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_42ba24bd",
         "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
         "patchSetId": 16
@@ -98,6 +188,24 @@
       "writtenOn": "2015-10-26T14:29:14Z",
       "side": 1,
       "message": "Should probably match 62.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3d85d5d4",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "See above",
+      "parentUuid": "0ebaf39b_42ba24bd",
       "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_dd37d948",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionAddOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "Not sure what you are referring to here... looks fine to me.",
+      "parentUuid": "0ebaf39b_22dcd01b",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_c2ccd467",
         "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
         "patchSetId": 16
@@ -132,6 +258,24 @@
       "writtenOn": "2015-10-26T14:29:14Z",
       "side": 1,
       "message": "This (and the constructor config) should be tabbed right once for consistency.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3d37154d",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:10:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_c2ccd467",
       "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
