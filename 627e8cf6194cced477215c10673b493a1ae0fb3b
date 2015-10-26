@@ -16,6 +16,24 @@
       "revId": "627e8cf6194cced477215c10673b493a1ae0fb3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_fd573dcb",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T15:38:45Z",
+      "side": 1,
+      "message": "The idea is to eventually use the node.js module instead of the copy-pasted method. So while we don\u0027t actually need to pass it here, I think it\u0027s ok to leave as is since we\u0027d have to pass it to the module.",
+      "parentUuid": "0ebaf39b_dd3b5995",
+      "revId": "627e8cf6194cced477215c10673b493a1ae0fb3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
