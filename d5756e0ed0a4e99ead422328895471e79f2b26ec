@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_7ddcade5",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:14:55Z",
+      "side": 1,
+      "message": "I\u0027d actually like to clean this up a little. It should probably be run on all $headings (note the plural) rather than just one.\n\nI\u0027d rather keep it truly private in mean time.",
+      "parentUuid": "0ebaf39b_3c2abb7a",
+      "revId": "d5756e0ed0a4e99ead422328895471e79f2b26ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_9c3887d1",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-26T08:07:05Z",
       "side": 1,
       "message": "is \u0027page\u0027 optional? It\u0027s not being passed in the toc.js file.",
+      "revId": "d5756e0ed0a4e99ead422328895471e79f2b26ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3df2b56b",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T16:14:55Z",
+      "side": 1,
+      "message": "Yup. Same for constructor. Fixed.",
+      "parentUuid": "0ebaf39b_9c3887d1",
       "revId": "d5756e0ed0a4e99ead422328895471e79f2b26ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
