@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_a8bdfefe",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-26T21:16:09Z",
+      "side": 1,
+      "message": "Good argument.",
+      "parentUuid": "0ebaf39b_e561df00",
+      "revId": "872cf3a4e2f3fae4d1e3f593238cd3645d4da767",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_85bee3a9",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 11
