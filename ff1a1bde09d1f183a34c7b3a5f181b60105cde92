@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_dd991923",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T17:16:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_512438bc",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_f1144c53",
         "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_fd9e5d09",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T17:16:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_f1144c53",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_b1125462",
         "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2015-10-26T07:55:34Z",
       "side": 1,
       "message": "Would adding pageId here not make sense? I didn\u0027t see it being added anywhere else in the code.",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_bd8465b5",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-10-26T17:16:55Z",
+      "side": 1,
+      "message": "It\u0027s not actually needed to test what we currently want to test (whether people collapse sections).\n\nCan you think of anything that would allow us to test? Otherwise I\u0027d rather keep this as lean as possible and track as little as needed.",
+      "parentUuid": "0ebaf39b_b1125462",
       "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
