@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_512438bc",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T07:55:34Z",
+      "side": 1,
+      "message": "Isn\u0027t this the same as Schema above?",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f1144c53",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T07:55:34Z",
+      "side": 1,
+      "message": "The documentation above seems unrelated to the code below.",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b1125462",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T07:55:34Z",
+      "side": 1,
+      "message": "Would adding pageId here not make sense? I didn\u0027t see it being added anywhere else in the code.",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
