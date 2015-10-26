@@ -101,17 +101,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * @return html for a message to display at top of old revisions
-	 */
-	protected function getOldRevisionHtml() {
-		$viewSourceLink = Html::openElement( 'p' ) .
-				Html::element( 'a', array( 'href' => '#editor/0' ),
-					$this->msg( 'mobile-frontend-view-source' )->text() ) .
-				Html::closeElement( 'p' );
-		return $viewSourceLink . parent::getOldRevisionHtml();
-	}
-
-	/**
 	 * If the user is in beta mode, we assume, he is an experienced
 	 * user (he/she found the "beta" switch ;))
 	 */
