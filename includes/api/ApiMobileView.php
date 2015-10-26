@@ -584,7 +584,7 @@ class ApiMobileView extends ApiBase {
 			$data['pageprops'] = $parserOutput->getProperties();
 		} else {
 			$data['languagecount'] = 0;
-			$data['displaytitle'] = $title->getPrefixedText();
+			$data['displaytitle'] = htmlspecialchars( $title->getPrefixedText() );
 			$data['pageprops'] = array();
 		}
 
@@ -827,7 +827,7 @@ class ApiMobileView extends ApiBase {
 					. 'all factors for logged-in users but not blocked status for anons.',
 				' languagecount   - number of languages that the page is available in',
 				' hasvariants     - whether or not the page is available in other language variants',
-				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied',
+				' displaytitle    - HTML of the page title for display, with {{DISPLAYTITLE}} and such applied',
 				' pageprops       - page properties',
 				' description     - page description from Wikidata',
 				'contentmodel     - page contentmodel'
