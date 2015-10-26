@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_e2f8f87b",
+        "filename": "resources/mobile.pagelist.scripts/WatchstarPageList.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T15:11:50Z",
+      "side": 1,
+      "message": "Clarified the \"self\" stuff in https://gerrit.wikimedia.org/r/#/c/240143/. Consider it irrelevant.",
+      "revId": "fc9f94377cec50eb82d340b5e302b3be90ce93b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_828a5cbe",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T15:11:50Z",
+      "side": 1,
+      "message": "The only reason for my earlier point about spacing here is that it\u0027s inconsistent with the rest of the patch. I actually prefer the style used here, personally. Either way, it\u0027s not something I would -1 for.",
+      "revId": "fc9f94377cec50eb82d340b5e302b3be90ce93b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
