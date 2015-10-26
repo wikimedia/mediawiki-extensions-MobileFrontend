@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Page,
+		time = M.require( 'mobile.modifiedBar/time' ),
 		View = M.require( 'mobile.view/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		Thumbnail = M.require( 'mobile.startup/Thumbnail' );
@@ -64,14 +65,15 @@
 		initialize: function ( options ) {
 			var thumb;
 
+			this.options = options;
 			// Fallback if no displayTitle provided
-			options.displayTitle = options.displayTitle || options.title;
+			options.displayTitle = this.getDisplayTitle();
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
 			// allow usage in templates.
 			// FIXME: Should View map all options to properties?
 			this.title = options.title;
-			this.displayTitle = options.displayTitle || options.title;
+			this.displayTitle = options.displayTitle;
 			this.thumbnail = options.thumbnail;
 			this.url = options.url || mw.util.getUrl( options.title );
 			this.id = options.id;
@@ -82,7 +84,14 @@
 			}
 			this.wikidataDescription = options.wikidataDescription;
 		},
-
+		/**
+		 * Retrieve the title that should be displayed to the user
+		 * @method
+		 * @return {String} HTML
+		 */
+		getDisplayTitle: function () {
+			return this.options.displayTitle || this.options.title;
+		},
 		/**
 		 * Determine if current page is in a specified namespace
 		 * @method
@@ -293,6 +302,51 @@
 		}
 	} );
 
+	/**
+	 * Create a Page object from an API response.
+	 *
+	 * @static
+	 * @param {Object} resp as representing a page in the API
+	 * @returns {Page}
+	 */
+	Page.newFromJSON = function ( resp ) {
+		var revision, displayTitle,
+			thumb = resp.thumbnail,
+			pageprops = resp.pageprops || {
+				displaytitle: resp.title
+			},
+			terms = resp.terms;
+
+		if ( pageprops || terms ) {
+			// The label is either the display title or the label pageprop (the latter used by Wikidata)
+			// Long term we want to consolidate these.
+			displayTitle = terms && terms.label ? terms.label[0] : pageprops.displaytitle;
+		}
+		// Add Wikidata descriptions if available (T101719)
+		if ( terms && terms.description && terms.description.length ) {
+			resp.wikidataDescription = terms.description[0];
+		}
+
+		if ( thumb ) {
+			resp.thumbnail.isLandscape = thumb.width > thumb.height;
+		}
+
+		// page may or may not exist.
+		if ( resp.revisions && resp.revisions[0] ) {
+			revision = resp.revisions[0];
+			resp.lastModified = time.getLastModifiedMessage( new Date( revision.timestamp ).getTime() / 1000,
+				revision.user );
+		}
+
+		return new Page(
+			$.extend( resp, {
+				id: resp.pageid,
+				isMissing: resp.missing ? true : false,
+				url: mw.util.getUrl( resp.title ),
+				displayTitle: displayTitle
+			} )
+		);
+	};
 	M.define( 'mobile.startup/Page', Page );
 
 }( mw.mobileFrontend, jQuery ) );

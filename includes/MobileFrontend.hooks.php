@@ -334,9 +334,34 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 
+		$pageProps = $config->get( 'MFQueryPropModules' );
+		$searchParams = $config->get( 'MFSearchAPIParams' );
+		// Avoid API warnings and allow integration with optional extensions.
+		if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+			$pageProps[] = 'pageimages';
+			$searchParams = array_merge_recursive( $searchParams, array(
+				'piprop' => 'thumbnail',
+				'pithumbsize' => MobilePage::SMALL_IMAGE_WIDTH,
+				'pilimit' => 50,
+			) );
+		}
+
+		// When set turn on Wikidata descriptions
+		// https://phabricator.wikimedia.org/T101719
+		if ( $config->get( 'MFUseWikibaseDescription' ) ) {
+			if ( !in_array( 'pageterms', $pageProps ) ) {
+				$pageProps[] = 'pageterms';
+			}
+			$searchParams = array_merge_recursive( $searchParams, array(
+				'wbptterms' => 'description',
+			) );
+		}
+
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$wgMFUploadLicense = MobileFrontendSkinHooks::getLicense( 'upload' );
 		$vars += array(
+			'wgMFSearchAPIParams' => $searchParams,
+			'wgMFQueryPropModules' => $pageProps,
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
