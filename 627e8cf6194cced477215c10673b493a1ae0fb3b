@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_dd3b5995",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T15:36:36Z",
+      "side": 1,
+      "message": "Why do you have to pass \u0027window\u0027?",
+      "revId": "627e8cf6194cced477215c10673b493a1ae0fb3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
