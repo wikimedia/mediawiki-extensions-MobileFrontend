@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_3c2abb7a",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T08:07:05Z",
+      "side": 1,
+      "message": "I wonder if it this function should also be a method of Toggler? We could run this once inside _enable.",
+      "revId": "d5756e0ed0a4e99ead422328895471e79f2b26ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_9c3887d1",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T08:07:05Z",
+      "side": 1,
+      "message": "is \u0027page\u0027 optional? It\u0027s not being passed in the toc.js file.",
+      "revId": "d5756e0ed0a4e99ead422328895471e79f2b26ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
