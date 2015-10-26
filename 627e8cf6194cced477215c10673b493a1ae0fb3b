@@ -34,6 +34,24 @@
       "revId": "627e8cf6194cced477215c10673b493a1ae0fb3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3d0955e1",
+        "filename": "resources/mobile.startup/Schema.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-26T15:39:44Z",
+      "side": 1,
+      "message": "It would be nice to mention this in the function documentation.",
+      "parentUuid": "0ebaf39b_fd573dcb",
+      "revId": "627e8cf6194cced477215c10673b493a1ae0fb3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
