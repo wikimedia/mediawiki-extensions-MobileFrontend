@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_22a85089",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Still a typo here.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e220f848",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "To clarify and wrap up my point about using \"self\": If we use \"self\" over \"this\", all of the \"self\"s can be minified to one character. However, after closer investigation, it seems our minifier doesn\u0027t reduce variable names anyways (seems to just remove whitespace). Additionally, joakino brought up the great point to me that our code should be readable and the minifier should handle that kind of thing automatically.\n\nTL/DR: Ignore the complaints about \"self\", but I think we should open a discussion around improving our minification utility.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a2a1a092",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Should probably format this like the one on line 62.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_82a49c9f",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Should probably match 62.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a2c8c05a",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Might want to reformat this since it\u0027s really long, but not a blocker.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_42ba24bd",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Should probably match 62.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_22dcd01b",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionAddOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "Consistent formatting on the stub lines would be good.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c2ccd467",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkSectionOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-10-26T14:29:14Z",
+      "side": 1,
+      "message": "This (and the constructor config) should be tabbed right once for consistency.",
+      "revId": "f0a4cb0eaa4e1320febac10398cc4fb66912699b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
