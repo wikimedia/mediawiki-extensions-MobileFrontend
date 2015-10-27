@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_df1ee3bd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 922,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-27T17:46:00Z",
+      "side": 1,
+      "message": "The word \u0027Schema\u0027 is not needed.",
+      "revId": "09970370bca3dd601d2002af6be5d45dbc1d2794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_dc2d91a4",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-27T17:46:00Z",
+      "side": 1,
+      "message": "wrong class name",
+      "revId": "09970370bca3dd601d2002af6be5d45dbc1d2794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3f093fe0",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-27T17:46:00Z",
+      "side": 1,
+      "message": "Is \u0027toggler\u0027 used in anywhere else?",
+      "revId": "09970370bca3dd601d2002af6be5d45dbc1d2794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
