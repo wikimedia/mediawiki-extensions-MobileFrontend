@@ -28,7 +28,7 @@
 	"mobile-frontend-editor-cancel": "Hylgiä",
 	"mobile-frontend-editor-captcha-try-again": "Viäry koudu, opi vie kerdu.",
 	"mobile-frontend-editor-continue": "Tulii",
-	"mobile-frontend-editor-edit": "Korjua",
+	"mobile-frontend-editor-edit": "Kohendele",
 	"mobile-frontend-editor-error": "Haireh. Kohendustu ei tallendettu.",
 	"mobile-frontend-editor-error-conflict": "Haireh. Toine käyttäi on edituinnuh tädä sivuu.",
 	"mobile-frontend-editor-error-loading": "Haireh. Ei voi lad'd'ata sektsiedy.",
@@ -143,7 +143,7 @@
 	"mobile-frontend-watchlist-view": "Ozuta sinun valvonduluvettelo",
 	"tag-mobile_edit": "Korjuandu mobilnois laittehes",
 	"tag-mobile_web_edit": "Korjuandu saitan mobilnoin versien kauti",
-	"mobile-frontend-pageaction-edit-tooltip": "Korjua sivun piäalalugu",
+	"mobile-frontend-pageaction-edit-tooltip": "Kohendele sivun piäalalugu",
 	"mobile-frontend-panel-cancel": "Passibo ei",
 	"mobile-frontend-search-feedback-link-text": "Anna meile työndyö."
 }
