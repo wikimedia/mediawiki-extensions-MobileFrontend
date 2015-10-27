@@ -104,6 +104,24 @@
       "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_1e26c463",
+        "filename": "resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-10-27T01:09:24Z",
+      "side": 1,
+      "message": "Isn\u0027t pageId a required field according to the schema?",
+      "parentUuid": "0ebaf39b_bd8465b5",
+      "revId": "ff1a1bde09d1f183a34c7b3a5f181b60105cde92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
