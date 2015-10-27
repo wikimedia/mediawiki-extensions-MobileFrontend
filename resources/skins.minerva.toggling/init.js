@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var page = M.getCurrentPage(),
 		$contentContainer = $( '#content #bodyContent' ),
-		toggle = M.require( 'mobile.toggle/toggle' );
+		Toggler = M.require( 'mobile.toggle/Toggler' );
 
 	/**
 	 * Initialises toggling code.
@@ -15,7 +15,7 @@
 	function init( $container, prefix, page ) {
 		// distinguish headings in content from other headings
 		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
-		toggle.enable( $container, prefix, page );
+		new Toggler( $container, prefix, page );
 	}
 
 	// avoid this running on Watchlist

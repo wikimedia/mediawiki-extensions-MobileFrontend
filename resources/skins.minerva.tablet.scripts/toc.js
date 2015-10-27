@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var TableOfContents = M.require( 'mobile.toc/TableOfContents' ),
-		toggle = M.require( 'mobile.toggle/toggle' );
+		Toggler = M.require( 'mobile.toggle/Toggler' );
 
 	/**
 	 * Create TableOfContents if the given Page has sections and is not the main page
@@ -10,7 +10,7 @@
 	 * @ignore
 	 */
 	function init( page ) {
-		var toc,
+		var toc, toggle,
 			sections = page.getSections(),
 			$toc = $( '#toc' ),
 			// TODO: remove wgTOC when caches with old HTML expire
@@ -31,7 +31,7 @@
 				// otherwise append it to the lead section
 				toc.appendTo( page.getLeadSectionElement() );
 			}
-			toggle.enable( toc.$el, 'toc-' );
+			toggle = new Toggler( toc.$el, 'toc-' );
 		}
 	}
 
