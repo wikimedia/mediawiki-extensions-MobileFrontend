@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
-	var page = M.getCurrentPage(),
+	var schema,
+		page = M.getCurrentPage(),
+		SchemaMobileWebSectionUsage = M.require( 'mobile.loggingSchemas/SchemaMobileWebSectionUsage' ),
 		$contentContainer = $( '#content #bodyContent' ),
 		Toggler = M.require( 'mobile.toggle/Toggler' );
 
@@ -15,7 +17,12 @@
 	function init( $container, prefix, page ) {
 		// distinguish headings in content from other headings
 		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
-		new Toggler( $container, prefix, page );
+		schema = new SchemaMobileWebSectionUsage();
+		schema.enable( page );
+		schema.log( {
+			eventName: 'entered'
+		} );
+		new Toggler( $container, prefix, page, schema );
 	}
 
 	// avoid this running on Watchlist
