@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"VASANTH S.N.",
-			"Vishwanatha Badikana"
+			"Vishwanatha Badikana",
+			"రహ్మానుద్దీన్"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ಸಂಪಾದನೆದ ಸಾರಾಂಶ ಇಜ್ಜಿ",
@@ -13,7 +14,7 @@
 	"mobile-frontend-generic-login-action": "ಸಹಾಯ ಮಲ್ಪೆರ ಲಾಗಿನ್ ಆಲೆ.",
 	"mobile-frontend-home-button": "ನಿಲೆ",
 	"mobile-frontend-language-article-heading": "ನನೊಂಜಿ ಭಾಷೆಡ್ ಓದುಲೆ",
-	"mobile-frontend-last-modified-date": "ಕಡೆತ ಬದಲಾವಣೆ ಮಾಲ್ತ್‌ನೆ \n$1ಆನಿ, $2ಗ್ ಅಕೇರಿದ ಬದಲಾವಣೆ ಮಲ್ತ್‌ದಾತ್ಂಡ್ ಬದಲಾಯಿಸಲಾಗಿತ್ತು",
+	"mobile-frontend-last-modified-date": "$1ಆನಿ, $2ಗ್ ಅಕೇರಿದ ಬದಲಾವಣೆ",
 	"mobile-frontend-login": "ಸೈನ್ ಇನ್ ಆಲೆ",
 	"mobile-frontend-main-menu-account-create": "ಪೊಸ ಖಾತೆ ಸುರು ಮಲ್ಪುಲೆ",
 	"mobile-frontend-main-menu-button-tooltip": "ಮುಖ್ಯ ಮೆನು ತೋಜಾಲೆ",
