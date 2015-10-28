@@ -69,6 +69,9 @@ class ArticlePage
   a(:search_result) do |page|
     page.search_overlay_page_list_element.element.a
   end
+  h3(:search_result_heading) do |page|
+    page.search_overlay_page_list_element.element.h3
+  end
 
   a(:notifications_button, id: 'secondary-button', class: 'user-button')
   div(:notifications_overlay, class: 'notifications-overlay')

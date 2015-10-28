@@ -346,9 +346,19 @@ class MobileFrontendHooks {
 			) );
 		}
 
+		// We need to check that first descriptions are enabled (the server admin has installed
+		// Wikidata) and then secondly that it is okay to display them prominently in the UI
+		// For instance a server admin may want to make them available in the page via JS for gadgets
+		// but not build them into their experience.
+		$displayDescriptions = $config->get( 'MFDisplayWikibaseDescription' );
+		$useDescriptions = $config->get( 'MFUseWikibaseDescription' );
+
+		if ( $context->isBetaGroupMember() ) {
+			$displayDescriptions = true;
+		}
 		// When set turn on Wikidata descriptions
 		// https://phabricator.wikimedia.org/T101719
-		if ( $config->get( 'MFUseWikibaseDescription' ) ) {
+		if ( $useDescriptions && $displayDescriptions ) {
 			if ( !in_array( 'pageterms', $pageProps ) ) {
 				$pageProps[] = 'pageterms';
 			}

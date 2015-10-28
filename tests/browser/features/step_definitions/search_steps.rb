@@ -67,7 +67,7 @@ When(/^I should see the search overlay$/) do
 end
 
 Then(/^search results should contain "(.+)"$/) do |text|
-  expect(on(ArticlePage).search_result_element.when_present.text).to eq text
+  expect(on(ArticlePage).search_result_heading_element.when_present.text).to eq text
 end
 
 Then(/^I should not see '#\/search' in URL$/) do
