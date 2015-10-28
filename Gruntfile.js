@@ -8,6 +8,7 @@
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-mkdir' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	grunt.loadNpmTasks( 'grunt-qunit-istanbul' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
@@ -103,10 +104,17 @@ module.exports = function ( grunt ) {
 		},
 		banana: {
 			all: 'i18n/'
+		},
+		jsonlint: {
+			all: [
+				'*.json',
+				'**/*.json',
+				'!node_modules/**'
+			]
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs', 'banana' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs', 'jsonlint', 'banana' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki

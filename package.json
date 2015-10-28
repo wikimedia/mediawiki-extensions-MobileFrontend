@@ -27,6 +27,7 @@
 		"grunt-notify": "0.4.1",
 		"grunt-contrib-watch": "0.6.1",
 		"grunt-lib-phantomjs-istanbul": "0.6.0",
-		"grunt-qunit-istanbul": "git+https://github.com/joakin/grunt-qunit-istanbul.git#prefix-url"
+		"grunt-qunit-istanbul": "git+https://github.com/joakin/grunt-qunit-istanbul.git#prefix-url",
+		"grunt-jsonlint": "1.0.5"
 	}
 }
