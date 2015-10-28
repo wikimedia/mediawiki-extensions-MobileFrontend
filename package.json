@@ -22,7 +22,7 @@
 		"grunt-mkdir": "^0.1.2",
 		"grunt-contrib-jshint": "0.11.3",
 		"grunt-banana-checker": "0.2.2",
-		"grunt-jscs": "2.1.0",
+		"grunt-jscs": "2.2.0",
 		"js-beautify": "1.5.10",
 		"grunt-notify": "0.4.1",
 		"grunt-contrib-watch": "0.6.1",
