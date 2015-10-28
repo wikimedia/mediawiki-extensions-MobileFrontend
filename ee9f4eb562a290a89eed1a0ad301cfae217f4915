@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_47d9baf6",
+        "filename": "includes/config/Wikidata.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-28T22:55:50Z",
+      "side": 1,
+      "message": "That heavily sounds like a config change to me, which should be made in operations/mediawiki-config.git. there is totally no extra value having this enabled by default for this extension, alone. And wikibase isn\u0027t a hard requirement (especially for third party wikis).",
+      "revId": "ee9f4eb562a290a89eed1a0ad301cfae217f4915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
