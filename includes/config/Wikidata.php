@@ -12,6 +12,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgMFUseWikibaseDescription = false;
 
 /**
+ * If set to true wikidata descriptions will be displayed in UI elements such as search,
+ * nearby and watchlist.
+ */
+$wgMFDisplayWikibaseDescription = false;
+
+/**
  * Define the property that holds a string representing a category on $wgMFPhotoUploadEndpoint
  */
 $wgMFWikibaseImageCategory = '';
