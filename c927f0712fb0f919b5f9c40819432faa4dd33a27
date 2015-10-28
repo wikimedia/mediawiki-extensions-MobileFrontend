@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_67b2be48",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-28T22:06:02Z",
+      "side": 1,
+      "message": "this variable isn\u0027t used anymore, so I suggest putting both cases into the if:\n\nif ( $context-\u003eisBetaGroupMember() || $config-\u003eget( \u0027MFDisplayWikibaseDescription\u0027 ) ) {",
+      "revId": "c927f0712fb0f919b5f9c40819432faa4dd33a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
