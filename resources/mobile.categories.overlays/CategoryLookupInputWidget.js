@@ -1,7 +1,7 @@
 ( function ( M, $, OO ) {
 	/**
 	 * @class CategoryLookupInputWidget
-	 * @extends OO.ui.LookupElement
+	 * @extends OO.ui.mixin.LookupElement
 	 * @param {Object} options
 	 * @param {CategoryGateway} options.gateway to use to retrieve search results
 	 * @param {jQuery.Object} options.suggestions container element for search suggestions
@@ -15,10 +15,10 @@
 		this.$saveButton = options.saveButton;
 		options.placeholder = mw.msg( 'mobile-frontend-categories-search' );
 		OO.ui.TextInputWidget.call( this, options );
-		OO.ui.LookupElement.call( this, options );
+		OO.ui.mixin.LookupElement.call( this, options );
 	}
 	OO.inheritClass( CategoryLookupInputWidget, OO.ui.TextInputWidget );
-	OO.mixinClass( CategoryLookupInputWidget, OO.ui.LookupElement );
+	OO.mixinClass( CategoryLookupInputWidget, OO.ui.mixin.LookupElement );
 
 	/**
 	 * Handle a click on a suggested item. Add it to the list of added categories and show save button.
