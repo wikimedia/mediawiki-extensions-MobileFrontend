@@ -793,7 +793,7 @@ class SkinMinerva extends SkinTemplate {
 			'attributes' => array(
 				'href' => $talkTitle->getLinkURL(),
 				'data-title' => $talkTitle->getFullText(),
-				'class' => 'talk',
+				'class' => MobileUI::iconClass( 'talk', 'before', 'talk' ),
 			),
 			'label' => $talkButton['text'],
 		);
