@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_73dfe03f",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-29T10:39:17Z",
+      "side": 1,
+      "message": "It doesn\u0027t seem jshintignore works since if you do **/*.js it ignores the jshintignore file and instead test all files even if they are ignored in the jshintignore file. And I doint think . Will recurse since looking at wiki base if I was to do it this way it lints more is file then if you were to just do . But I could remove *.js and **/*.js and replace it with **/*. Or **/.",
+      "parentUuid": "0ebaf39b_0d83e39c",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_8d46f37e",
         "filename": "Gruntfile.js",
         "patchSetId": 11
@@ -64,6 +82,24 @@
       "writtenOn": "2015-10-29T02:09:57Z",
       "side": 1,
       "message": "Why not test Gruntfile.js?",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f3f2f0cc",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-29T10:39:17Z",
+      "side": 1,
+      "message": "It was causing jsdoc errors.",
+      "parentUuid": "0ebaf39b_ed552f27",
       "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
