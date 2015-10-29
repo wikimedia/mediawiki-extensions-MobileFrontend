@@ -315,7 +315,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinPreloadExistence( array &$titles, Skin $skin ) {
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $context->shouldDisplayMobileView() && !$context->isBlacklistedPage() ) {
 			$skin->getOutput()->setTarget( 'mobile' );
 		}
 		return true;
