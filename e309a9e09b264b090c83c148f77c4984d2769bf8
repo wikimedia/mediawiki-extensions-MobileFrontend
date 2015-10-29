@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_4d647b11",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-29T02:09:57Z",
+      "side": 1,
+      "message": "Remove this once the below is addressed so it is no longer used.",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_0d83e39c",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-29T02:09:57Z",
+      "side": 1,
+      "message": "These should be listed in the jshintignore instead. Then simplify this to a single dot, like:\n\n all: \u0027.\u0027\n\nThen jshint will do the discovery and recursion, instead of duplicating it in Grunt.",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_8d46f37e",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-29T02:09:57Z",
+      "side": 1,
+      "message": "List the exclusions for libs and node_modules in .jscsrc instead (using \"excludeFiles\").",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_ed552f27",
+        "filename": "Gruntfile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-29T02:09:57Z",
+      "side": 1,
+      "message": "Why not test Gruntfile.js?",
+      "revId": "e309a9e09b264b090c83c148f77c4984d2769bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
