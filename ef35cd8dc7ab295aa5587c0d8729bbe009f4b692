@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_8e0ee6e6",
+        "filename": "Gruntfile.js",
+        "patchSetId": 24
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-29T19:49:01Z",
+      "side": 1,
+      "message": "This doesn\u0027t make sense as this is not about code quality but about test coverage. This will now add unrelated code from outside resources/ to the coverage report (including code that can\u0027t possibly be tested by qunit) and thus make the coverage percentage go down in a confusing way.",
+      "revId": "ef35cd8dc7ab295aa5587c0d8729bbe009f4b692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
