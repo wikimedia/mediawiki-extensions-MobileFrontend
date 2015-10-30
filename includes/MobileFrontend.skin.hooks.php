@@ -178,7 +178,7 @@ HTML;
 		// See Skin::getCopyright for desktop equivalent.
 		$license = self::getLicense( 'footer' );
 		if ( isset( $license['link'] ) && $license['link'] ) {
-			$licenseText = $sk->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
+			$licenseText = $sk->msg( $license['msg'] )->rawParams( $license['link'] )->text();
 		} else {
 			$licenseText = '';
 		}
