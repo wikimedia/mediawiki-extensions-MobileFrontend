@@ -33,7 +33,8 @@
 			SearchOverlay = M.require( moduleConfig.overlay );
 
 			new SearchOverlay( {
-				gateway: new SearchGateway( new mw.Api() ),
+				gatewayClass: SearchGateway,
+				api: new mw.Api(),
 				searchTerm: searchTerm,
 				placeholderMsg: placeholder
 			} ).show();

@@ -39,7 +39,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		getPages: function ( ids ) {
-			return this.api.load( ids, true );
+			return this.wsGateway.loadWatchStatus( ids, true );
 		},
 		/**
 		 * Also sets a watch uploads funnel.
@@ -55,7 +55,7 @@
 		 */
 		_loadPages: function () {
 			var self = this;
-			this.gateway.load().done( function ( pages ) {
+			this.gateway.loadWatchlist().done( function ( pages ) {
 				$.each( pages, function ( i, page ) {
 					self.appendPage( page );
 				} );

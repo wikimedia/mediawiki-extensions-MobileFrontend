@@ -4,24 +4,29 @@
 		mWatchstar,
 		PageList = M.require( 'mobile.pagelist/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
 		user = M.require( 'mobile.user/user' ),
-		Page = M.require( 'mobile.startup/Page' );
+		Page = M.require( 'mobile.startup/Page' ),
+		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' );
 
 	/**
 	 * List of items page view
 	 * @class WatchstarPageList
 	 * @uses Page
-	 * @uses WatchstarApi
+	 * @uses WatchstarGateway
 	 * @uses Watchstar
 	 * @extends View
 	 */
 	WatchstarPageList = PageList.extend( {
 		/**
 		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Api} defaults.api
+		 */
+		/**
+		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
-			this.api = new WatchstarApi( options );
+			this.wsGateway = new WatchstarGateway( options.api );
 			PageList.prototype.initialize.apply( this, arguments );
 		},
 		/**
@@ -32,7 +37,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		getPages: function ( ids ) {
-			return this.api.load( ids );
+			return this.wsGateway.loadWatchStatus( ids );
 		},
 		/**
 		 * @inheritdoc
@@ -41,7 +46,7 @@
 			var $li,
 				self = this,
 				pages = [],
-				api = this.api;
+				gateway = this.wsGateway;
 
 			PageList.prototype.postRender.apply( this );
 
@@ -67,9 +72,10 @@
 							} );
 
 						watchstar = new Watchstar( {
+							api: self.options.api,
 							funnel: self.options.funnel,
 							isAnon: false,
-							isWatched: api.isWatchedPage( page ),
+							isWatched: gateway.isWatchedPage( page ),
 							page: page,
 							el: $( '<div>' ).appendTo( this )
 						} );

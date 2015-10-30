@@ -28,7 +28,8 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {SearchGateway} defaults.gateway An API gateway to use to retrieve search results
+		 * @cfg {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
+		 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
 		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
 		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
 		 * @cfg {String} defaults.searchTerm Search text.
@@ -103,7 +104,8 @@
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
-			this.gateway = options.gateway;
+			this.api = options.api;
+			this.gateway = new options.gatewayClass( this.api );
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
@@ -293,6 +295,7 @@
 		performSearch: function () {
 			var
 				self = this,
+				api = this.api,
 				pageList,
 				query = this.$input.val(),
 				$resultContainer = this.$( '.results' );
@@ -334,6 +337,7 @@
 									.show();
 								self.$( '.spinner' ).hide();
 								pageList = new WatchstarPageList( {
+									api: api,
 									funnel: 'search',
 									pages: data.results,
 									el: $resultContainer

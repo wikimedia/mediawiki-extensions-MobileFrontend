@@ -1,7 +1,6 @@
 ( function ( $, M ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' ),
 		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
 		toast = M.require( 'mobile.toast/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
@@ -23,6 +22,7 @@
 		var $el = $( '<div>' );
 
 		new Watchstar( {
+			api: new mw.Api(),
 			el: $el,
 			page: new Page( {
 				id: 10
@@ -38,7 +38,7 @@
 	QUnit.module( 'MobileFrontend: Watchstar.js', {
 		setup: function () {
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
-			this.spy = this.sandbox.stub( WatchstarApi.prototype, 'postWithToken' )
+			this.spy = this.sandbox.stub( mw.Api.prototype, 'postWithToken' )
 				.returns( $.Deferred().resolve() );
 
 			// FIXME: Should Schema.log be stubbed by default?
@@ -54,6 +54,7 @@
 	QUnit.test( 'Logged in user watches article', 3, function ( assert ) {
 		var
 			w = new Watchstar( {
+				api: new mw.Api(),
 				isWatched: false,
 				page: new Page( {
 					id: 42
@@ -74,6 +75,7 @@
 	QUnit.test( 'Logged in user unwatches article', 2, function ( assert ) {
 		var
 			w = new Watchstar( {
+				api: new mw.Api(),
 				isWatched: true,
 				page: new Page( {
 					id: 42

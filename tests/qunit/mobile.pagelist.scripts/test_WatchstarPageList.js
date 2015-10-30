@@ -5,8 +5,7 @@
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'
-		} ),
-		WatchstarApi = M.require( 'mobile.watchstar/WatchstarApi' );
+		} );
 
 	QUnit.module( 'MobileFrontend mobile.pagelist.scripts/WatchstarPageList', {
 		setup: function () {
@@ -21,7 +20,8 @@
 				}
 			};
 
-			this.spy = this.sandbox.stub( WatchstarApi.prototype, 'get' )
+			// stub out the watchstar call
+			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' )
 				.returns( $.Deferred().resolve( resp ) );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 		}
@@ -29,6 +29,7 @@
 
 	QUnit.test( 'Checks watchlist status once', 4, function ( assert ) {
 		var pl = new PageList( {
+			api: new mw.Api(),
 			pages: [ {
 				id: 30
 			}, {

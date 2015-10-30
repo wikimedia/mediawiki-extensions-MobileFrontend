@@ -32,7 +32,7 @@
 		 * Load the list of items on the watchlist
 		 * @returns {jQuery.Deferred}
 		 */
-		load: function () {
+		loadWatchlist: function () {
 			var self = this,
 				params = $.extend( {
 					prop: [ 'info', 'revisions' ].concat( mw.config.get( 'wgMFQueryPropModules' ) ),
