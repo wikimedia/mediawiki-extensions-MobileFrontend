@@ -41,18 +41,10 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 		// add head items
 		if ( $appleTouchIcon !== false ) {
-			$out->addHeadItem( 'touchicon',
-				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $appleTouchIcon ) )
-			);
+			$out->addLink( array( 'rel' => 'apple-touch-icon', 'href' => $appleTouchIcon ) );
 		}
-		$out->addHeadItem( 'viewport',
-			Html::element(
-				'meta', array(
-					'name' => 'viewport',
-					'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, ' .
-						'maximum-scale=5.0, width=device-width',
-				)
-			)
+		$out->addMeta( 'viewport', 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, ' .
+				'maximum-scale=5.0, width=device-width'
 		);
 
 		if ( $this->isMobileMode ) {
