@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_e96f4e24",
+        "filename": "Gruntfile.js",
+        "patchSetId": 24
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-01T00:16:07Z",
+      "side": 0,
+      "message": "This doesn\u0027t work. Watch requires individual file paths, the directory (\".\") from jshint means nothing here. JSHint does directory traversal, grunt-watch does not.",
+      "revId": "47341fd4140f19258f9f0bc3acfe27fb96c913f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
