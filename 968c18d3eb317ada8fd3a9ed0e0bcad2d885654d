@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_39f7ed57",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-02T23:53:46Z",
+      "side": 0,
+      "message": "Is rtl and lang support just inherited automatically now?",
+      "revId": "968c18d3eb317ada8fd3a9ed0e0bcad2d885654d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
