@@ -138,7 +138,7 @@
 	"mobile-frontend-languages-nonexistent-title": "A(z) „$1” lap nem létezik.",
 	"mobile-frontend-languages-text": "A(z) $1 lap $2 nyelven érhető el.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} változatok",
-	"mobile-frontend-last-modified-date": "Utoljára módosítva $1, $2-kor",
+	"mobile-frontend-last-modified-date": "Utoljára szerkesztve $1, $2-kor",
 	"mobile-frontend-last-modified-days": "Utoljára módosítva $1 napja",
 	"mobile-frontend-last-modified-hours": "Utoljára módosítva $1 órája",
 	"mobile-frontend-last-modified-just-now": "Utoljára módosítva épp most",
