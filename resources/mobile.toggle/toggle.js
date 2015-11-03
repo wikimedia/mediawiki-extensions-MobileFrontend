@@ -155,7 +155,7 @@
 	 * @ignore
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
-		var isCollapsed = $heading.is( '.open-block' ),
+		var wasExpanded = $heading.is( '.open-block' ),
 			page = $heading.data( 'page' ),
 			sectionId = $heading.data( 'section-number' ),
 			options, indicator;
@@ -163,19 +163,19 @@
 		$heading.toggleClass( 'open-block' );
 		$heading.data( 'indicator' ).remove();
 
-		options = isCollapsed ? arrowUpOptions : arrowDownOptions;
+		options = wasExpanded ? arrowDownOptions : arrowUpOptions;
 		/**
 		 * @event toggled
 		 */
-		this.emit( 'toggled', isCollapsed, sectionId );
+		this.emit( 'toggled', wasExpanded, sectionId );
 		indicator = new Icon( options ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
 		$heading.next()
 			.toggleClass( 'open-block' )
 			.attr( {
-				'aria-pressed': !isCollapsed,
-				'aria-expanded': !isCollapsed
+				'aria-pressed': !wasExpanded,
+				'aria-expanded': !wasExpanded
 			} );
 
 		if ( !browser.isWideScreen() ) {
