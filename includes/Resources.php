@@ -1630,6 +1630,7 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'skins.minerva.scripts',
 			'mobile.settings',
+			'mobile.foreignApi',
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.

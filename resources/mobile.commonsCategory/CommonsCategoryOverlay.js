@@ -14,6 +14,7 @@
 			Overlay.prototype.postRender.apply( this );
 			this.clearSpinner();
 			new PhotoList( {
+				api: this.options.api,
 				category: this.options.title
 			} ).appendTo( this.$( '.overlay-content' ) );
 		}
