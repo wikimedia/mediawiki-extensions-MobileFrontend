@@ -1,9 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
-			"Agilight"
+			"Agilight",
+			"Монгуш Салим"
 		]
 	},
+	"mobile-frontend-editor-edit": "Эдер",
+	"mobile-frontend-featured-article": "Хүннүң шилиндек материалы",
+	"mobile-frontend-home-button": "Кол арынче",
+	"mobile-frontend-language-article-heading": "Өске дылга номчуур",
+	"mobile-frontend-last-modified-date": "Сөөлгү эткен үези $1 -  $2",
 	"mobile-frontend-logged-in-homepage-notification": "Кирип моорлаңар, %s!",
-	"mobile-frontend-main-menu-logout": "Үнер"
+	"mobile-frontend-main-menu-button-tooltip": "Кол менюну ажыдар",
+	"mobile-frontend-main-menu-login": "Кирер",
+	"mobile-frontend-main-menu-logout": "Үнер",
+	"mobile-frontend-main-menu-nearby": "Чанында",
+	"mobile-frontend-main-menu-settings": "Аайлалга",
+	"mobile-frontend-main-menu-watchlist": "Хайгаарал даңзызы",
+	"mobile-frontend-news-items": "Медээлерде",
+	"mobile-frontend-placeholder": "Дилээр",
+	"mobile-frontend-random-button": "Дужа-келби таварышканы",
+	"mobile-frontend-terms-text": "Ажыглаарының байдалдары",
+	"mobile-frontend-view": "Мобильдиг янзызы",
+	"mobile-frontend-view-desktop": "Стационарлыг",
+	"mobile-frontend-view-mobile": "Мобилдиг",
+	"tag-mobile_edit": "Мобилдиг эдилге",
+	"tag-mobile_web_edit": "Сайттың мобилдиг янзызын дамчыштыр эдер",
+	"mobile-frontend-pageaction-edit-tooltip": "Арынның кол адырын эдер"
 }
