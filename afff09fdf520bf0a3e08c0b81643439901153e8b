@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_618eff7d",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-03T23:11:07Z",
+      "side": 1,
+      "message": "Doing a git bisect\nI38c17eacc452942aea8942328c7b26cff0e50d99 is what broke it. So I\u0027d look closely at the diff to see what went wrong.",
+      "revId": "afff09fdf520bf0a3e08c0b81643439901153e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
