@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_5c62c4a3",
+        "filename": "resources/mobile.notifications.overlay/MobileNotificationsWrapper.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-04T00:55:20Z",
+      "side": 1,
+      "message": "Should this maybe live in Echo? That way you can keep a better eye on it... \nI see no mobile specific code here.",
+      "revId": "4c591711065b520a1b7ba55cbcad3f2494fba2cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
