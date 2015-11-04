@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_edf3bd04",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-11-04T18:19:04Z",
+      "side": 1,
+      "message": "This will now parse if wfExpandUrl returned falsey.",
+      "revId": "eb6b552de3c3cc27cb85b46b19c914ba1c4e2188",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_0dead104",
+        "filename": "includes/specials/SpecialMobileEditor.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-11-04T18:19:04Z",
+      "side": 1,
+      "message": "This will now pass a non-string to Title::newFromText()",
+      "revId": "eb6b552de3c3cc27cb85b46b19c914ba1c4e2188",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
