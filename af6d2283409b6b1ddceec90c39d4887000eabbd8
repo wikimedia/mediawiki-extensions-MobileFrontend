@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_7c1f880d",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-04T01:03:59Z",
+      "side": 1,
+      "message": "Okay I see what the issue is here. isCollapsed is a little confusing.\nIf a heading is an open-block that means it\u0027s expanded.\n\nLet\u0027s rename this wasExpanded to make this easier to understand as what you are actually saying is (if it was expanded it is now collapsed so use the down icon)",
+      "revId": "af6d2283409b6b1ddceec90c39d4887000eabbd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
