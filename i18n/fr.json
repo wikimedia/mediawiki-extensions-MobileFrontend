@@ -358,7 +358,6 @@
 	"mobile-frontend-view": "Affichage mobile",
 	"mobile-frontend-view-desktop": "Bureau",
 	"mobile-frontend-view-mobile": "Mobile",
-	"mobile-frontend-view-source": "Afficher la source",
 	"mobile-frontend-watch-login": "Ajouter $1 à votre liste de suivi.",
 	"mobile-frontend-watchlist-a-z": "Liste",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Vous ne surveillez pour le moment aucune page. Votre liste de suivi vous aide à garder trace des pages qui vous intéressent. Surveillez les pages en cliquant sur l’icône étoile.",
@@ -422,10 +421,10 @@
 	"mobile-frontend-donate-button-label": "Faire un don",
 	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie",
 	"mobile-frontend-loading-message": "Chargement…",
-	"mobile-frontend-console-recruit": "\\o/ Hey! C'est un logiciel open source et nous avons besoin de volontaires pour nous aider à construire cette chose, le rendre meilleur et résoudre les éventuels bugs que vous pourriez voir dans cette console JavaScript!\n\nVous pouvez trouver notre carnet de commandes @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-console-recruit": "\\o/ Hey! C’est un logiciel en source libre et nous avons besoin de volontaires pour nous aider à construire cette chose, la rendre meilleure et résoudre les éventuels bogues que vous pourriez voir dans cette console JavaScript !\n\nVous pouvez trouver notre carnet de commandes @ https://phabricator.wikimedia.org/project/view/67/",
 	"mobile-frontend-panel-ok": "D’accord",
 	"mobile-frontend-panel-cancel": "Non merci",
-	"mobile-frontend-panel-betaoptin-msg": "Voulez-vous essayer quelques nouvelles fonctionnalités ? En adhérant à la bêta, vous aurez accès à des fonctionnalités expérimentales, au risque de rencontrer des bugs et problèmes.",
+	"mobile-frontend-panel-betaoptin-msg": "Voulez-vous essayer quelques nouvelles fonctionnalités ? En adhérant à la bêta, vous aurez accès à des fonctionnalités expérimentales, au risque de rencontrer des bogues et problèmes.",
 	"mobile-frontend-search-feedback-link-text": "Donnez-nous votre avis.",
 	"mobile-frontend-search-feedback-prompt": "Vous n’avez pas trouvé ce que vous cherchiez ?"
 }
