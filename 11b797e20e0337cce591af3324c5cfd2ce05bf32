@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_95a8fc8a",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-05T22:46:19Z",
+      "side": 1,
+      "message": "No need for a fallback. wgMFSearchGenerator should default to this in includes/config/Search.php and be surfaced the same way wgMFQueryPropModules is.",
+      "revId": "11b797e20e0337cce591af3324c5cfd2ce05bf32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_35d03021",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-05T22:46:19Z",
+      "side": 1,
+      "message": "Cache these in variables above for readability and less bytes.\n\nvar prefix \u003d this.generator.name",
+      "revId": "11b797e20e0337cce591af3324c5cfd2ce05bf32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_15d5ec12",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-05T22:46:19Z",
+      "side": 1,
+      "message": "Cache these in variables above for readability and less bytes.\n\nvar prefix \u003d this.generator.prefix",
+      "revId": "11b797e20e0337cce591af3324c5cfd2ce05bf32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
