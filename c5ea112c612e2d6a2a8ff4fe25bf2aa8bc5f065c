@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_f5737846",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-11-05T22:51:02Z",
+      "side": 1,
+      "message": "This is already confusing enough (Page has a displayTitle prefix so using displayText is inconsistent). This function is supposed to return data for a Page class which will ignore this.\n\nCan you ensure displayText is plain text? If it contains HTML this function will not work.\n\nThis will also break the mobile experience for everyone without WikiBase!\n\nNot sure what the way to fix this is but this doesn\u0027t seem right.",
+      "revId": "c5ea112c612e2d6a2a8ff4fe25bf2aa8bc5f065c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
