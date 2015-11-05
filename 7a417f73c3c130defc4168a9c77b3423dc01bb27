@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_5eab8e6c",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-05T09:19:47Z",
+      "side": 0,
+      "message": "why you remove that?",
+      "revId": "7a417f73c3c130defc4168a9c77b3423dc01bb27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
