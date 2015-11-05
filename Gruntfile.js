@@ -20,10 +20,6 @@ module.exports = function ( grunt ) {
 		QUNIT_DEBUG: ( process.env.QUNIT_DEBUG && '&debug=true' || '' ),
 		QUNIT_FILTER: ( process.env.QUNIT_FILTER && '&filter=' + process.env.QUNIT_FILTER ) || '',
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
-		files: {
-			js: 'resources/**/*.js',
-			jsTests: 'tests/qunit/**/*.js'
-		},
 		mkdir: {
 			docs: {
 				options: {
@@ -36,20 +32,26 @@ module.exports = function ( grunt ) {
 				jshintrc: true
 			},
 			all: [
-				'<%= files.js %>',
-				'<%= files.jsTests %>'
-			]
+				'.'
+			],
+			test: {
+				files: {
+					src: 'tests/qunit/**/*.js'
+				}
+			}
 		},
 		jscs: {
 			main: [
-				'<%= files.js %>'
+				'**/*.js',
+				'!Gruntfile.js',
+				'!tests/qunit/**'
 			],
 			test: {
 				options: {
 					config: 'tests/.jscsrc.js'
 				},
 				files: {
-					src: '<%= files.jsTests %>'
+					src: 'tests/qunit/**/*.js'
 				}
 			}
 		},
@@ -78,7 +80,7 @@ module.exports = function ( grunt ) {
 						prefixUrl: 'w/', // Prefix url on the server
 						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
 						src: [
-							'<%= files.js %>'
+							'resources/**/*.js'
 						],
 						instrumentedFiles: 'tests/report/tmp',
 						htmlReport: 'tests/report'
@@ -88,11 +90,11 @@ module.exports = function ( grunt ) {
 		},
 		watch: {
 			lint: {
-				files: [ '<%= files.js %>', '<%= files.jsTests %>' ],
+				files: [ 'resources/**/*.js', 'tests/qunit/**/*.js' ],
 				tasks: [ 'lint' ]
 			},
 			scripts: {
-				files: [ '<%= files.js %>', '<%= files.jsTests %>' ],
+				files: [ 'resources/**/*.js', 'tests/qunit/**/*.js' ],
 				tasks: [ 'test' ]
 			},
 			configFiles: {
