@@ -16,6 +16,24 @@
       "revId": "7a417f73c3c130defc4168a9c77b3423dc01bb27",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_fe4602c2",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 549
+      },
+      "writtenOn": "2015-11-05T09:51:41Z",
+      "side": 0,
+      "message": "I will move this into a follow up, it\u0027s because I moved that line downwards.",
+      "parentUuid": "0ebaf39b_5eab8e6c",
+      "revId": "7a417f73c3c130defc4168a9c77b3423dc01bb27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
