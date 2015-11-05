@@ -9,6 +9,7 @@
 	function SearchGateway( api ) {
 		this.api = api;
 		this.searchCache = {};
+		this.generator = mw.config.get( 'wgMFSearchGenerator' );
 	}
 
 	SearchGateway.prototype = {
@@ -25,17 +26,19 @@
 		 * @return {Object}
 		 */
 		getApiData: function ( query ) {
-			var data = $.extend( {
-				generator: 'prefixsearch',
-				gpssearch: query,
-				gpsnamespace: this.searchNamespace,
-				gpslimit: 15,
-				prop: mw.config.get( 'wgMFQueryPropModules' ),
-				redirects: '',
-				list: 'prefixsearch',
-				pssearch: query,
-				pslimit: 15
-			}, mw.config.get( 'wgMFSearchAPIParams' ) );
+			var prefix = this.generator.prefix,
+				data = $.extend( {
+					generator: this.generator.name,
+					prop: mw.config.get( 'wgMFQueryPropModules' ),
+					redirects: '',
+					list: this.generator.name
+				}, mw.config.get( 'wgMFSearchAPIParams' ) );
+
+			data['g' + prefix + 'search'] = query;
+			data['g' + prefix + 'namespace'] = this.searchNamespace;
+			data['g' + prefix + 'limit'] = 15;
+			data[prefix + 'search'] = query;
+			data[prefix + 'limit'] = 15;
 
 			// If PageImages is being used configure further.
 			if ( data.pilimit ) {
@@ -109,8 +112,8 @@
 						redirects[redirect.from] = redirect.to;
 					} );
 				}
-				if ( data.query.prefixsearch ) {
-					// some queryies (like CategoryGateway) only have prefixsearch
+				if ( data.query[this.generator.name] ) {
+					// some queries (like CategoryGateway) only have search
 					if ( data.query.pages ) {
 						// get results into an easily searchable shape
 						$.each( data.query.pages, function ( i, result ) {
@@ -118,9 +121,9 @@
 						} );
 					}
 
-					// We loop through the prefixsearch results (rather than the pages
+					// We loop through the search results (rather than the pages
 					// results) here in order to maintain the correct order.
-					$.each( data.query.prefixsearch, function ( i, page ) {
+					$.each( data.query[this.generator.name], function ( i, page ) {
 						var info, title = page.title,
 							id = page.pageid,
 							mwTitle;

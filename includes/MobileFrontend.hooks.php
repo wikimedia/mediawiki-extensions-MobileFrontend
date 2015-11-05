@@ -372,6 +372,7 @@ class MobileFrontendHooks {
 		$vars += array(
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,
+			'wgMFSearchGenerator' => $config->get( 'MFSearchGenerator' ),
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
