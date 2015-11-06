@@ -18,3 +18,11 @@ $wgMFSearchAPIParams = array(
 $wgMFQueryPropModules = array(
 	'pageprops',
 );
+
+/**
+ * Define the generator that should be used for mobile search.
+ */
+$wgMFSearchGenerator = array(
+	'name' => 'prefixsearch',
+	'prefix' => 'ps',
+);
