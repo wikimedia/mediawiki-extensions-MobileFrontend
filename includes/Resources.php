@@ -687,15 +687,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.search.beta' => $wgMFResourceParsedMessageModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.search',
-		),
-		'styles' => array(
-			'resources/mobile.search.beta/SearchOverlay.less',
-		),
-	),
-
 	'mobile.talk.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.ui.anchor',
@@ -1639,7 +1630,6 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.search.beta',
 			'mobile.backtotop',
 		),
 		'scripts' => array(

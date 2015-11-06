@@ -1,8 +1,11 @@
 @import "minerva.mixins";
 @import "minerva.variables";
 
+@thumbGap: 15px;
+@thumbWidth: 70px;
+
 .search-overlay {
-	background: @semiTransparent;
+	background: white;
 
 	.overlay-header,
 	.results,
@@ -60,6 +63,27 @@
 
 		h2 {
 			font: inherit;
+		}
+	}
+
+	li.page-summary {
+		display: table;
+		height: @thumbWidth;
+		padding-left: @thumbWidth + @thumbGap;
+		width: 100%;
+		.list-thumb {
+			width: @thumbWidth;
+		}
+		.title {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		h3 {
+			margin: 0;
+		}
+		.wikidata-description {
+			font-size: .8em;
+			margin-top: 0.5em;
 		}
 	}
 
