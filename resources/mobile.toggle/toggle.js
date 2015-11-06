@@ -272,9 +272,12 @@
 						'aria-controls': id
 					} )
 					.on( 'click', function ( ev ) {
-						// prevent taps/clicks on edit button after toggling (bug 56209)
-						ev.preventDefault();
-						self.toggle.call( self, $( this ) );
+						// don't toggle, if the click target was a link (a link in a section heading) - T117880
+						if ( !ev.target.href ) {
+							// prevent taps/clicks on edit button after toggling (bug 56209)
+							ev.preventDefault();
+							self.toggle.call( self, $( this ) );
+						}
 					} );
 				indicator = new Icon( arrowDownOptions ).prependTo( $heading );
 				$heading.data( 'indicator', indicator );
