@@ -1366,6 +1366,9 @@ $wgMobileSpecialPageModules = array(
 	),
 	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
+		'skinStyles' => array(
+			'minerva' => 'resources/mobile.special.userprofile.styles/minerva.less',
+		),
 	),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
