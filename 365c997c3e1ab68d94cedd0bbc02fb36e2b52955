@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_674cb37a",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-06T22:22:39Z",
+      "side": 1,
+      "message": "+1 :)",
+      "revId": "365c997c3e1ab68d94cedd0bbc02fb36e2b52955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
