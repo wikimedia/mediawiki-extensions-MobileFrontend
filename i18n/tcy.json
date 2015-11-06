@@ -3,7 +3,8 @@
 		"authors": [
 			"VASANTH S.N.",
 			"Vishwanatha Badikana",
-			"రహ్మానుద్దీన్"
+			"రహ్మానుద్దీన్",
+			"Bharathesha Alasandemajalu"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ಸಂಪಾದನೆದ ಸಾರಾಂಸೊ ಇದ್ದಿ",
@@ -18,7 +19,7 @@
 	"mobile-frontend-main-menu-login": "ಲಾಗಿನ್ ಆಲೆ",
 	"mobile-frontend-main-menu-nearby": "ಕೈತಲ್‍ದ",
 	"mobile-frontend-main-menu-settings": "ಸಂಯೋಜನೆಲು",
-	"mobile-frontend-main-menu-watchlist": "ವೀಕ್ಷಿಪುನ ಪಟ್ಟಿ",
+	"mobile-frontend-main-menu-watchlist": "ತೂಪುನ ಪಟ್ಟಿ",
 	"mobile-frontend-news-items": "ಸುದ್ದಿಡ್",
 	"mobile-frontend-password-placeholder": "ಪ್ರವೇಸೊ ಪದೊ",
 	"mobile-frontend-placeholder": "{{SITENAME}}ನ್ ನಾಡ್‍ಲೆ",
