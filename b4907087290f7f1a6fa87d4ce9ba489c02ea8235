@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a27939f3",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-11-07T02:02:58Z",
+      "side": 1,
+      "message": "NotificationItem[] then",
+      "revId": "b4907087290f7f1a6fa87d4ce9ba489c02ea8235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6267c14a",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-11-07T02:02:58Z",
+      "side": 1,
+      "message": "Why is the count removed entirely? What if you get an unread event for 3, then 0, then 1?",
+      "revId": "b4907087290f7f1a6fa87d4ce9ba489c02ea8235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a2505961",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-11-07T02:02:58Z",
+      "side": 1,
+      "message": "This is incorrect, because onUnreadChange expects an array, not a number. It probably causes a bug too, because if items\u003d0 then items.length\u003dundefined and undefined\u003e0 is false.",
+      "revId": "b4907087290f7f1a6fa87d4ce9ba489c02ea8235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
