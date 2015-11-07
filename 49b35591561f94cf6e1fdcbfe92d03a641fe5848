@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_6a3797ac",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:21:08Z",
+      "side": 1,
+      "message": "should be one line up and have an empty line under it :)",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_0a3cdb8d",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:21:08Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it make sense to give an error message (or false or something else), if an already added name is used? Or maybe throw an exception?",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_4a273363",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:21:08Z",
+      "side": 1,
+      "message": "documentation would be great :P",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_ca1a431d",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:21:08Z",
+      "side": 1,
+      "message": "You name $isJSOnly as optional in the function doc block, but you require a value here?",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6a2c7746",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:21:08Z",
+      "side": 1,
+      "message": "couldn\u0027t you add the empty array() as the default value of $components in it\u0027s definition?",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
