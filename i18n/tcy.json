@@ -7,11 +7,11 @@
 			"Bharathesha Alasandemajalu"
 		]
 	},
-	"mobile-frontend-changeslist-nocomment": "ಸಂಪಾದನೆದ ಸಾರಾಂಸೊ ಇದ್ದಿ",
+	"mobile-frontend-changeslist-nocomment": "ಸಂಪೊಲಿತ್‍ನೆದ ಸಾರಾಂಸೊ ಇದ್ದಿ",
 	"mobile-frontend-copyright": "ಗಮನೊ ಇದ್ಯಾಂಡ $1 ಅಡಿಟ್ ವಿಸಯೊ ಲಬ್ಯೊ ಉಂಡು.",
-	"mobile-frontend-editor-edit": "ಸಂಪದನೆ ಮಲ್ಪುಲೆ",
-	"mobile-frontend-featured-article": "ಇನಿತ್ತ ವಿಸೇಸೊ ಲೇಕನ",
-	"mobile-frontend-home-button": "ಮುಕ್ಯೊಪುಟೊ",
+	"mobile-frontend-editor-edit": "ಸಂಪೊಲಿಪುಲೆ",
+	"mobile-frontend-featured-article": "ಇನಿತ್ತ ವಿಸೇಸೊ ಲೇಕನೊ",
+	"mobile-frontend-home-button": "ಮುಖ್ಯಪುಟ",
 	"mobile-frontend-language-article-heading": "ನನೊಂಜಿ ಬಾಸೆಡ್ ಓದ್‌ಲೆ",
 	"mobile-frontend-last-modified-date": "$1ಆನಿ, $2ಗ್ ಅಕೇರಿದ ಬದಲಾವಣೆ",
 	"mobile-frontend-main-menu-account-create": "ಪೊಸ ಕಾತೆ ಸುರು ಮಲ್ಪುಲೆ",
@@ -23,13 +23,13 @@
 	"mobile-frontend-news-items": "ಸುದ್ದಿಡ್",
 	"mobile-frontend-password-placeholder": "ಪ್ರವೇಸೊ ಪದೊ",
 	"mobile-frontend-placeholder": "{{SITENAME}}ನ್ ನಾಡ್‍ಲೆ",
-	"mobile-frontend-privacy-link-text": "ಸ್ವಂತೊ",
+	"mobile-frontend-privacy-link-text": "ಕಾಸಗಿ",
 	"mobile-frontend-random-button": "ಗೊತ್ತು ಗುರಿದಾಂತಿನ ಪುಟೊ",
-	"mobile-frontend-terms-text": "ಗಳಸುನ ನಿಬಂದೊಲು",
-	"mobile-frontend-view": "ಮೊಬೈಲ್ ವೀಕ್ಷಣೆ",
+	"mobile-frontend-terms-text": "ಬಳಕೆದ ನಿಬಂದೊಲು",
+	"mobile-frontend-view": "ಮೊಬೈಲ್ ವ್ಯೂವ್",
 	"mobile-frontend-view-desktop": "ಡೆಸ್ಕ್‌ಟಾಪ್",
 	"mobile-frontend-view-mobile": "ಮೊಬೈಲ್",
-	"tag-mobile_edit": "ಮೊಬೈಲ್ ಸಂಪಾದನೆ",
+	"tag-mobile_edit": "ಮೊಬೈಲ್‍ ಸಂಪದನೆ",
 	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪದನೆ",
 	"mobile-frontend-pageaction-edit-tooltip": "ಈ ಪುಟೊದ ಪ್ರಮುಕೊ ವಿಬಾಗೊನು ಸಂಪೊಲಿಪುಲೆ."
 }
