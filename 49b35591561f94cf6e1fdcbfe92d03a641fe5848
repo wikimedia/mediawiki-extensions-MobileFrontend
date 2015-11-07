@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_aaf02fc5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 424,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-07T19:26:13Z",
+      "side": 0,
+      "message": "this is only used by Gather, so I think it\u0027s fine to simply remove this hook without deprecation. But the commit message should, at least, be prefixed with \"BREAKING:\" and a notification on mobile-l/wikitech-l should be sent, so that users, that maybe doesn\u0027t host the code in wikimedia\u0027s gerrit, get notified :)",
+      "revId": "49b35591561f94cf6e1fdcbfe92d03a641fe5848",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
