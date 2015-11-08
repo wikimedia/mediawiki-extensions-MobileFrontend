@@ -22,12 +22,13 @@
 		"grunt-mkdir": "^0.1.2",
 		"grunt-contrib-jshint": "0.11.3",
 		"grunt-banana-checker": "0.4.0",
-		"grunt-jscs": "2.2.0",
+		"grunt-jscs": "2.3.0",
+		"jscs-preset-wikimedia": "1.0.0",
 		"js-beautify": "1.5.10",
 		"grunt-notify": "0.4.1",
 		"grunt-contrib-watch": "0.6.1",
 		"grunt-lib-phantomjs-istanbul": "0.6.0",
 		"grunt-qunit-istanbul": "git+https://github.com/joakin/grunt-qunit-istanbul.git#prefix-url",
-		"grunt-jsonlint": "1.0.5"
+		"grunt-jsonlint": "1.0.6"
 	}
 }
