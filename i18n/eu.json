@@ -4,7 +4,8 @@
 			"An13sa",
 			"පසිඳු කාවින්ද",
 			"Subi",
-			"Sator"
+			"Sator",
+			"Theklan"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Helbide elektronikoa (aukerakoa)",
@@ -15,6 +16,7 @@
 	"mobile-frontend-categories-search": "Kategoriak bilatu",
 	"mobile-frontend-categories-summary": "Kategoriak gehitu dira",
 	"mobile-frontend-categories-add-wait": "Kategoriak gordetzen. Itxaron, mesedez.",
+	"mobile-frontend-changeslist-nocomment": "ez dago edizio laburpenik",
 	"mobile-frontend-clear-search": "Garbitu",
 	"mobile-frontend-copyright": "Eduki guztia $1(r)en babespean dago, ez bada kontrakoa esaten.",
 	"mobile-frontend-diffview-title": "Aldaketak",
@@ -36,8 +38,6 @@
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Bai!",
 	"mobile-frontend-footer-contact": "Kontaktatu",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
-	"mobile-frontend-generic-login": "{{SITENAME}} zu bezalako pertsonek egiten dute.",
-	"mobile-frontend-generic-login-action": "Saioa hasi ekarpenak egiteko.",
 	"mobile-frontend-home-button": "Azala",
 	"mobile-frontend-images-status": "Irudiak",
 	"mobile-frontend-language-article-heading": "Irakurri beste hizkuntzetan",
@@ -46,8 +46,6 @@
 	"mobile-frontend-languages-header": "Hizkuntzak",
 	"mobile-frontend-languages-header-page": "$1 - Hizkuntzak",
 	"mobile-frontend-last-modified-date": "Azken aldaketa $1(e)an, $2(e)tan",
-	"mobile-frontend-logged-out": "Saioa hasi gabe",
-	"mobile-frontend-login": "Saioa hasi",
 	"mobile-frontend-main-menu-account-create": "Kontua sortu",
 	"mobile-frontend-main-menu-button-tooltip": "Ireki menu nagusia",
 	"mobile-frontend-main-menu-featured": "Nabarmendua",
@@ -76,8 +74,6 @@
 	"mobile-frontend-talk-reply": "Erantzun",
 	"mobile-frontend-terms-text": "Erabilera-baldintzak",
 	"mobile-frontend-user-button-tooltip": "Erakutsi nire jakinarazpenak",
-	"mobile-frontend-username": "Lankide izena:",
-	"mobile-frontend-username-placeholder": "Lankide izena:",
 	"mobile-frontend-view": "Mugikorreko bista",
 	"mobile-frontend-view-desktop": "Idazmahaia",
 	"mobile-frontend-view-mobile": "Mugikorra",
@@ -85,6 +81,7 @@
 	"nearby": "Zure inguruko orriak edo gaiak",
 	"tag-mobile_edit": "Mugikor edizioa",
 	"tag-mobile_web_edit": "Mugikor web edizioa",
+	"mobile-frontend-pageaction-edit-tooltip": "Orrialde honetako sarrera atala editatu",
 	"mobile-frontend-meta-data-issues-categories": "Kategoria honi buruz",
 	"mobile-frontend-loading-message": "Kargatzen...",
 	"mobile-frontend-search-feedback-link-text": "Egiguzu iruzkina."

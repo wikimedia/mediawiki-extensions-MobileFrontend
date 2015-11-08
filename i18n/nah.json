@@ -4,14 +4,13 @@
 			"Taresi"
 		]
 	},
-	"mobile-frontend-editor-edit": "Ticpatlaz",
+	"mobile-frontend-editor-edit": "Xicpatla",
 	"mobile-frontend-home-button": "Chāntli",
 	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Ximopanōltih}}, $1!",
 	"mobile-frontend-main-menu-account-create": "Ticchīhuaz motlapōhual",
 	"mobile-frontend-main-menu-settings": "Tlatlālīliztli",
 	"mobile-frontend-talk-overlay-header": "Zānīlli",
 	"mobile-frontend-terms-text": "Tequihuihcānahuatīlli",
-	"mobile-frontend-username-placeholder": "Tequihuihcātōcāitl",
 	"mobile-frontend-watchlist-filter-talk": "Zānīlli",
-	"mobile-frontend-pageaction-edit-tooltip": "Ticpatlaz in tlaīxtli ītlahtōlpēhualiz."
+	"mobile-frontend-pageaction-edit-tooltip": "Xicpatla inīn tlaīxtli ītlahtōlpēhualiz."
 }
