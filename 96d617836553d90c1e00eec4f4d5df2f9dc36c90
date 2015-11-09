@@ -16,6 +16,24 @@
       "revId": "96d617836553d90c1e00eec4f4d5df2f9dc36c90",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_04436a16",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-11-09T13:04:00Z",
+      "side": 1,
+      "message": "Hi it is an exact version number it is ~1.0.0.",
+      "parentUuid": "0ebaf39b_a4bb7e22",
+      "revId": "96d617836553d90c1e00eec4f4d5df2f9dc36c90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
