@@ -34,6 +34,24 @@
       "revId": "96d617836553d90c1e00eec4f4d5df2f9dc36c90",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a48dbeda",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-11-09T14:42:59Z",
+      "side": 1,
+      "message": "No, the tilde is an approximate version constraint:\n\nhttps://docs.npmjs.com/files/package.json#dependencies :\n\n ~version \"Approximately equivalent to version\" \n\nFrom their semantic version implementation at https://docs.npmjs.com/misc/semver#tilde-ranges-1-2-3-1-2-1\n\nIe \"~1.0.0\" is the equivalent of \u003e\u003d1.0.0 \u003c1.1.0 . That would match 1.0.1.",
+      "parentUuid": "0ebaf39b_04436a16",
+      "revId": "96d617836553d90c1e00eec4f4d5df2f9dc36c90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
