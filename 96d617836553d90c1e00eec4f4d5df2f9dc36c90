@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a4bb7e22",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-11-09T12:52:11Z",
+      "side": 1,
+      "message": "To be confirmed with Timo (Krinkle), but I think we would want to pin \"jscs-preset-wikimedia\" to an exact version: \"1.0.0\"",
+      "revId": "96d617836553d90c1e00eec4f4d5df2f9dc36c90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
