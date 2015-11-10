@@ -1,12 +1,12 @@
 ( function ( M, $ ) {
 
-	var PageApi = M.require( 'mobile.startup/PageApi' ),
-		pageApi = new PageApi(),
+	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		TalkOverlay = M.require( 'mobile.talk.overlays/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
 		setup: function () {
-			this.sandbox.stub( pageApi, 'getPage' ).withArgs( 'Talk:No exist' ).returns(
+			this.api = new mw.Api();
+			this.sandbox.stub( PageGateway.prototype, 'getPage' ).withArgs( 'Talk:No exist' ).returns(
 				$.Deferred().reject( 'missingtitle' )
 			).withArgs( 'Talk:Topic' ).returns(
 				$.Deferred().resolve( {
@@ -31,7 +31,7 @@
 
 	QUnit.test( '#TalkOverlay (new page; anonymous)', 4, function ( assert ) {
 		var options = {
-				pageApi: pageApi,
+				api: this.api,
 				title: 'Talk:No exist'
 			},
 			overlay = new TalkOverlay( options ),
@@ -54,7 +54,7 @@
 
 		mw.config.set( 'wgUserName', 'FlorianSW' );
 		overlay = new TalkOverlay( {
-			pageApi: pageApi,
+			api: this.api,
 			title: 'Talk:No exist'
 		} );
 
@@ -66,7 +66,7 @@
 
 	QUnit.test( '#TalkOverlay (existing page lists section headings)', 4, function ( assert ) {
 		var overlay = new TalkOverlay( {
-			pageApi: pageApi,
+			api: this.api,
 			title: 'Talk:Topic'
 		} );
 

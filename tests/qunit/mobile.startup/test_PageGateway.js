@@ -1,16 +1,17 @@
 /* jshint -W100 */
 ( function ( M, $ ) {
-	var PageApi = M.require( 'mobile.startup/PageApi' ),
-		pageApi;
+	var pageGateway,
+		PageGateway = M.require( 'mobile.startup/PageGateway' );
 
-	QUnit.module( 'MobileFrontend PageApi', {
+	QUnit.module( 'MobileFrontend PageGateway', {
 		setup: function () {
-			pageApi = new PageApi();
+			this.api = new mw.Api();
+			pageGateway = new PageGateway( this.api );
 		}
 	} );
 
 	QUnit.test( '#getPage (h1s)', 1, function ( assert ) {
-		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		var response = {
 			mobileview: {
 				id: -1,
 				displaytitle: 'Test',
@@ -56,9 +57,12 @@
 						text: '<p>Text of 2.1\n</p>'
 					} ]
 			}
-		} ) );
+		};
 
-		pageApi.getPage( 'Test' ).done( function ( resp ) {
+		this.sandbox.stub( this.api, 'get' )
+			.returns( $.Deferred().resolve( response ) );
+
+		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
 					action: 'history'
@@ -115,11 +119,10 @@
 				]
 			}, 'return lead and sections test 1' );
 		} );
-		PageApi.prototype.get.restore();
 	} );
 
 	QUnit.test( '#getPage', 2, function ( assert ) {
-		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			mobileview: {
 				id: -1,
 				protection: {
@@ -171,7 +174,7 @@
 			}
 		} ) );
 
-		pageApi.getPage( 'Test' ).done( function ( resp ) {
+		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
 					action: 'history'
@@ -228,14 +231,12 @@
 				]
 			}, 'return lead and sections test 2' );
 		} );
-		pageApi.getPage( 'Test' );
-		assert.ok( pageApi.get.calledOnce, 'cache page' );
-
-		PageApi.prototype.get.restore();
+		pageGateway.getPage( 'Test' );
+		assert.ok( this.api.get.calledOnce, 'cache page' );
 	} );
 
 	QUnit.test( '#getPageLanguages', 2, function ( assert ) {
-		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			query: {
 				pages: [
 					{
@@ -306,7 +307,7 @@
 			}
 		} ) );
 
-		pageApi.getPageLanguages( 'Test' ).done( function ( resp ) {
+		pageGateway.getPageLanguages( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp.languages, [
 				{
 					lang: 'es',
@@ -346,12 +347,12 @@
 				}
 			], 'return augmented language variant links' );
 		} );
-
-		PageApi.prototype.get.restore();
 	} );
 
 	QUnit.test( '#_getAPIResponseFromHTML', 1, function ( assert ) {
-		var resp = pageApi._getAPIResponseFromHTML( $( '<div><h1><span id="1.0">A1</span></h1><h2><span>A2.1</span></h2><h2><span>A2.2</span></h2><h1><span>A2</span></h1><h2><span>A2.1</span></h2></div>' ) );
+		var resp = pageGateway._getAPIResponseFromHTML(
+			mw.template.get( 'tests.mobilefrontend', 'page.html' ).render()
+		);
 		assert.deepEqual( resp, [
 			{
 				line: 'A1',
@@ -387,8 +388,9 @@
 	} );
 
 	QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', 1, function ( assert ) {
-		var resp = pageApi.getSectionsFromHTML(
-			$( '<div><h2><span id="1.0">A1</span></h2><h3><span>A2.1</span></h3><h2><span>A2.2</span></h2><h1><span>A2</span></h1><h2><span>A2.1</span></h2></div>' ) );
+		var resp = pageGateway.getSectionsFromHTML(
+			mw.template.get( 'tests.mobilefrontend', 'page2.html' ).render()
+		);
 		assert.deepEqual( resp, [
 			{
 				line: 'A1',
@@ -431,7 +433,7 @@
 			edit: [ '*' ],
 			move: [ 'sysop' ]
 		};
-		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			mobileview: {
 				id: -1,
 				displaytitle: 'Test',
@@ -454,7 +456,7 @@
 			}
 		} ) );
 
-		pageApi.getPage( 'Test' ).done( function ( resp ) {
+		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp.protection, expected );
 		} );
 	} );

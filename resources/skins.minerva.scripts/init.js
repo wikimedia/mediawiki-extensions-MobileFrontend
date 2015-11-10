@@ -12,7 +12,6 @@
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
-		pageApi = M.require( 'mobile.startup/pageApi' ),
 		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		thumbs = page.getThumbnails(),
@@ -89,9 +88,11 @@
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
-			var LanguageOverlay = M.require( 'mobile.overlays/LanguageOverlay' );
+			var PageGateway = M.require( 'mobile.startup/PageGateway' ),
+				gateway = new PageGateway( new mw.Api() ),
+				LanguageOverlay = M.require( 'mobile.overlays/LanguageOverlay' );
 
-			pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
+			gateway.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
 				result.resolve( new LanguageOverlay( {
 					currentLanguage: mw.config.get( 'wgContentLanguage' ),

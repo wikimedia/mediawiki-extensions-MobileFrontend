@@ -1,16 +1,17 @@
 ( function ( M, $ ) {
 
-	var TalkSectionAddOverlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' ),
-		api = M.require( 'mobile.startup/api' );
+	var TalkSectionAddOverlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkSectionAddOverlay', {
 		setup: function () {
-			this.sandbox.stub( api, 'postWithToken' ).returns( $.Deferred().resolve() );
+			this.api = new mw.Api();
+			this.sandbox.stub( this.api, 'postWithToken' ).returns( $.Deferred().resolve() );
 		}
 	} );
 
 	QUnit.test( 'Test "add new discussion" Overlay and save process', 4, function ( assert ) {
 		var overlay = new TalkSectionAddOverlay( {
+			api: this.api,
 			title: 'Talk:No exist'
 		} );
 		// set the content of the new discussion

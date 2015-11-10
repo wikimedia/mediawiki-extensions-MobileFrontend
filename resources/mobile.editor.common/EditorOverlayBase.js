@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.toast/toast' ),
@@ -41,7 +42,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {PageApi} defaults.pageApi an api module to invalidate pages (fixme should not be necessary with mw.Api)
+		 * @cfg {mw.Api} defaults.api to interact with
 		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
 		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes
@@ -67,7 +68,6 @@
 		 * @cfg {SchemaEdit} defaults.editSchema Schema to log events to.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
-			pageApi: undefined,
 			hasToolbar: false,
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -138,7 +138,7 @@
 				self = this;
 
 			// FIXME: use generic method for following 3 lines
-			this.options.pageApi.invalidatePage( title );
+			this.pageGateway.invalidatePage( title );
 
 			if ( this.isNewPage ) {
 				msg = 'mobile-frontend-editor-success-new-page';
@@ -179,6 +179,7 @@
 			if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 				options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
 			}
+			this.pageGateway = new PageGateway( options.api );
 			this.editCount = user.getEditCount();
 			this.isNewPage = options.isNewPage;
 			this.isNewEditor = options.isNewEditor;
@@ -385,5 +386,6 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase );
+	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase )
+		.deprecate( 'modules/editor/EditorOverlayBase' );
 }( mw.mobileFrontend, jQuery ) );

@@ -7,8 +7,8 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
-		PageApi = M.require( 'mobile.startup/PageApi' ),
-		pageApi = new PageApi(),
+		PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
 		MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
 		mainMenu = new MainMenu( {
@@ -74,7 +74,7 @@
 			},
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
-			sections: pageApi.getSectionsFromHTML( $content ),
+			sections: gateway.getSectionsFromHTML( $content ),
 			id: mw.config.get( 'wgArticleId' ),
 			namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 		} );
@@ -84,8 +84,6 @@
 	$.extend( M, {
 		getCurrentPage: getCurrentPage
 	} );
-
-	M.define( 'mobile.startup/pageApi', pageApi );
 
 	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
 	if ( window.console && window.console.log && window.console.log.apply &&

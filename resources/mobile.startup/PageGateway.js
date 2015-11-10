@@ -1,7 +1,5 @@
 ( function ( M, $ ) {
-	var PageApi,
-		Api = M.require( 'mobile.startup/api' ).Api,
-		sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
+	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
 
 	/**
 	 * Add child to listOfSections if the level of child is the same as the last
@@ -84,16 +82,15 @@
 
 	/**
 	 * API for providing Page data
-	 * @class PageApi
-	 * @extends Api
+	 * @class PageGateway
+	 * @param {mw.Api} api
 	 */
-	PageApi = Api.extend( {
-		/** @inheritdoc */
-		initialize: function () {
-			Api.prototype.initialize.apply( this, arguments );
-			this.cache = {};
-		},
+	function PageGateway( api ) {
+		this.api = api;
+		this.cache = {};
+	}
 
+	PageGateway.prototype = {
 		/**
 		 * Retrieve a page from the api
 		 *
@@ -115,7 +112,7 @@
 
 			if ( !this.cache[title] ) {
 				page = this.cache[title] = $.Deferred();
-				this.get( {
+				this.api.get( {
 					action: 'mobileview',
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
@@ -175,6 +172,7 @@
 								lastModifiedUserGender: lastModified.gender
 							} );
 						}
+						// FIXME: Return a Page class here
 						page.resolve( resolveObj );
 					}
 				} ).fail( $.proxy( page, 'reject' ) );
@@ -271,7 +269,7 @@
 			var self = this,
 				result = $.Deferred();
 
-			self.get( {
+			this.api.get( {
 					action: 'query',
 					meta: 'siteinfo',
 					siprop: 'general|languages',
@@ -327,7 +325,7 @@
 		getSectionsFromHTML: function ( $el ) {
 			return transformSections( this._getAPIResponseFromHTML( $el ) );
 		}
-	} );
+	};
 
-	M.define( 'mobile.startup/PageApi', PageApi );
+	M.define( 'mobile.startup/PageGateway', PageGateway );
 }( mw.mobileFrontend, jQuery ) );

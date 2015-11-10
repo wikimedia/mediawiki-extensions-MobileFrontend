@@ -17,7 +17,6 @@
 			name: 'edit-enabled'
 		} ),
 		currentPage = M.getCurrentPage(),
-		pageApi = M.require( 'mobile.startup/pageApi' ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		context = M.require( 'mobile.context/context' ),
@@ -131,7 +130,6 @@
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
-					pageApi: pageApi,
 					api: new mw.Api(),
 					licenseMsg: skin.getLicenseMsg(),
 					title: page.title,
