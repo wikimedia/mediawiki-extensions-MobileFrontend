@@ -28,6 +28,6 @@
 	api = new Api();
 	api.Api = Api;
 
-	M.define( 'mobile.startup/api', api );
+	M.deprecate( 'mobile.startup/api', api, 'mw.Api' );
 
 }( mw.mobileFrontend ) );
