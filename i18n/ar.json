@@ -20,7 +20,8 @@
 			"Fatz",
 			"Sonic N800",
 			"محمد أحمد عبد الفتاح",
-			"Hiba Alshawi"
+			"Hiba Alshawi",
+			"PhiberOptik"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -111,7 +112,7 @@
 	"mobile-frontend-editor-uploadenable": "من فضلك ارفع الصورة ليمكن تحرير هذه الصفحة.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>عرض مصدر</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "يحفظ التعديل، انتظر رجاءً.",
-	"mobile-frontend-editor-redlink-leave": "رجوع",
+	"mobile-frontend-editor-redlink-leave": "لا، شكرا",
 	"mobile-frontend-editor-redlink-explain": "هذه الصفحة لم يتم إنشاؤها بعد.",
 	"mobile-frontend-editor-redlink-create": "أنشأ الصفحة",
 	"mobile-frontend-editor-bold": "غليظ",
@@ -354,5 +355,5 @@
 	"mobile-frontend-donate-button-label": "تبرّع",
 	"mobile-frontend-meta-data-issues-categories": "عن هذا التصنيف",
 	"mobile-frontend-panel-ok": "موافق",
-	"mobile-frontend-panel-cancel": "رجوع"
+	"mobile-frontend-panel-cancel": "لا شكر"
 }
