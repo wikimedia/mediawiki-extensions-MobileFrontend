@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_1e6def96",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-10T17:56:20Z",
+      "side": 1,
+      "message": "Maybe call this \u0027drawer\u0027 instead of \u0027toast\u0027 to avoid confusion about this property when used.",
+      "revId": "1311645c2fc4b61110004d549f99cda4e6d0aacf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_fec7bb65",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-10T17:56:20Z",
+      "side": 1,
+      "message": "This is still a singleton with side-effects. While that probably makes sense, we\u0027ll want to avoid hitting \u0027new ToastDrawer\u0027 synchronously during the setup process.\n\nSo maybe defer (inside the constructor) the calling of showPending to $() or something like that. And use mw.requestIdleCallback in the near future (T111456).",
+      "revId": "1311645c2fc4b61110004d549f99cda4e6d0aacf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
