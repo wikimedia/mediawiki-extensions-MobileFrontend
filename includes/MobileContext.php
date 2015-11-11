@@ -691,7 +691,9 @@ class MobileContext extends ContextSource {
 		}
 
 		// use $startTime if it's valid
-		if ( intval( $startTime ) === 0 ) $startTime = time();
+		if ( intval( $startTime ) === 0 ) {
+			$startTime = time();
+		}
 
 		$expiry = $startTime + $cookieDuration;
 		return $expiry;
@@ -766,8 +768,10 @@ class MobileContext extends ContextSource {
 		// if parsing failed, maybe it's a local Url, try to expand and reparse it - task T107505
 		if ( !$parsedUrl ) {
 			$expandedUrl = wfExpandUrl( $url );
-			// if Url could not be expanded or parsed, return false, instead of an empty string
-			if ( !$expandedUrl || !$parsedUrl = wfParseUrl( $expandedUrl ) ) {
+			if ( $expandedUrl ) {
+				$parsedUrl = wfParseUrl( $expandedUrl );
+			}
+			if ( !$expandedUrl || !$parsedUrl ) {
 				return false;
 			}
 		}

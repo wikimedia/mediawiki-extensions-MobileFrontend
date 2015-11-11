@@ -88,7 +88,8 @@ class MobileFrontendHooks {
 		// Handle any X-Analytics header values in the request by adding them
 		// as log items. X-Analytics header values are serialized key=value
 		// pairs, separated by ';', used for analytics purposes.
-		if ( $xanalytics = $mobileContext->getRequest()->getHeader( 'X-Analytics' ) ) {
+		$xanalytics = $mobileContext->getRequest()->getHeader( 'X-Analytics' );
+		if ( $xanalytics ) {
 			$xanalytics_arr = explode( ';', $xanalytics );
 			if ( count( $xanalytics_arr ) > 1 ) {
 				foreach ( $xanalytics_arr as $xanalytics_item ) {
