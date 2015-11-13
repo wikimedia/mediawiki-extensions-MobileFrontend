@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_c6e9b37f",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-13T23:21:01Z",
+      "side": 1,
+      "message": "I don\u0027t know an explicitly policy, so the overall \"document as much as you can\" would be the best one. Let me document this variable :)",
+      "parentUuid": "0ebaf39b_26fbefbb",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_e6db9752",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_e6ee3786",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1101,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-13T23:21:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_e6db9752",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_66e7a70e",
         "filename": "includes/Resources.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-11-13T21:59:35Z",
       "side": 1,
       "message": "Loading this at the bottom might cause a visually jolting resizing of the page. We should keep an eye on this.",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_86e3bb9b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-13T23:21:01Z",
+      "side": 1,
+      "message": "I thought about that, and I\u0027m really not sure :/ It\u0027s a short resize of the page, yes, but I\u0027m not sure, if preventing this is a reason to put it in the top queue. But it\u0027s a relatively small css code and only loaded on pages, that have a timeline, so maybe :)",
+      "parentUuid": "0ebaf39b_66e7a70e",
       "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
