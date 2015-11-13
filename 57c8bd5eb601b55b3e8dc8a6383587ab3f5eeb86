@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_26fbefbb",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-13T21:59:35Z",
+      "side": 1,
+      "message": "Do we have a policy around documenting static variables? (Because if not, we probably should.)",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e6db9752",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1101,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-13T21:59:35Z",
+      "side": 1,
+      "message": "typo in comment",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_66e7a70e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-13T21:59:35Z",
+      "side": 1,
+      "message": "Loading this at the bottom might cause a visually jolting resizing of the page. We should keep an eye on this.",
+      "revId": "57c8bd5eb601b55b3e8dc8a6383587ab3f5eeb86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
