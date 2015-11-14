@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a121094d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1098,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-11-14T00:54:48Z",
+      "side": 1,
+      "message": "This is not a safe assumption, ever.",
+      "revId": "b50dece4c7e026ebbc102a1d1a9454f321e7190f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
