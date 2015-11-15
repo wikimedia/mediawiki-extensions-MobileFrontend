@@ -157,5 +157,6 @@
 	"nearby": "Pelê ke nêzdiyê şıma de",
 	"tag-mobile_edit": "Mobil vırnayış",
 	"tag-mobile_edit-description": "Pela cêbi (mobile) ra vırnao",
-	"tag-mobile_web_edit": "Vurnayışê torra seyare"
+	"tag-mobile_web_edit": "Vurnayışê torra seyare",
+	"mobile-frontend-pageaction-edit-tooltip": "Cay dekewtena pela bıvurnê"
 }

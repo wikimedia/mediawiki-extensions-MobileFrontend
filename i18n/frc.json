@@ -7,8 +7,12 @@
 	"mobile-frontend-editor-edit": "Changer",
 	"mobile-frontend-home-button": "Accueil",
 	"mobile-frontend-last-modified-date": "Dernière modification le $1, à $2",
+	"mobile-frontend-main-menu-login": "Connecter",
+	"mobile-frontend-main-menu-settings": "Configuration",
+	"mobile-frontend-main-menu-watchlist": "Mes pages guettées",
 	"mobile-frontend-password-placeholder": "Mot de passe",
-	"mobile-frontend-username-placeholder": "Nom d'useur",
+	"mobile-frontend-random-button": "Au hasard",
+	"mobile-frontend-view": "Affichage mobile",
 	"mobile-frontend-view-desktop": "Bureau",
 	"mobile-frontend-view-mobile": "Mobile"
 }
