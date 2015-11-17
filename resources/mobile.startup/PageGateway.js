@@ -302,7 +302,7 @@
 
 			$headings.each( function () {
 				var level = $( this )[0].tagName.substr( 1 ),
-					$span = $( this ).find( 'span' );
+					$span = $( this ).find( '.mw-headline' );
 
 				if ( $span.length ) {
 					sections.push( {
