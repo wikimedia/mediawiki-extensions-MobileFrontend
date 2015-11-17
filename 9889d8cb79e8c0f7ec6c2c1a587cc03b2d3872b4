@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c0ae6595",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-17T19:52:37Z",
+      "side": 1,
+      "message": "typo (\"brwoser\")",
+      "revId": "9889d8cb79e8c0f7ec6c2c1a587cc03b2d3872b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
