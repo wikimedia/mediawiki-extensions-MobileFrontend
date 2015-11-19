@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Protostar"
+		]
+	},
+	"mobile-frontend-editor-edit": "Èdit",
+	"mobile-frontend-home-button": "Men pej",
+	"mobile-frontend-language-article-heading": "Rid na òdhar tòk",
+	"mobile-frontend-last-modified-date": "Last èdito $1, $2",
+	"mobile-frontend-main-menu-account-create": "Kreat yu yon akkaunt",
+	"mobile-frontend-main-menu-button-tooltip": "Opin men mènu",
+	"mobile-frontend-main-menu-login": "Lògin",
+	"mobile-frontend-main-menu-nearby": "Niar",
+	"mobile-frontend-main-menu-settings": "Sètindèm",
+	"mobile-frontend-main-menu-watchlist": "Wachlist",
+	"mobile-frontend-news-items": "Na dhi nyuz",
+	"mobile-frontend-password-placeholder": "Passwòrd",
+	"mobile-frontend-privacy-link-text": "Privasy",
+	"mobile-frontend-random-button": "Randòm",
+	"mobile-frontend-terms-text": "Yuzaj Kòndishòndèm",
+	"mobile-frontend-view": "Hanfon viu",
+	"mobile-frontend-view-desktop": "Dèsktap",
+	"mobile-frontend-view-mobile": "Hanfon",
+	"tag-mobile_edit": "Hanfon èdit",
+	"tag-mobile_web_edit": "Hanfon wèb èdit",
+	"mobile-frontend-pageaction-edit-tooltip": "Èdit dhis pejim tòp sèkshòn."
+}
