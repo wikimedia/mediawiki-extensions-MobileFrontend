@@ -30,6 +30,12 @@
 	EditVeTool.prototype.onSelect = function () {
 		// will be overridden later
 	};
+	/**
+	 * Toolbar update state handler.
+	 */
+	EditVeTool.prototype.onUpdateState = function () {
+		// do nothing
+	};
 
 	/**
 	 * Base class for EditorOverlay

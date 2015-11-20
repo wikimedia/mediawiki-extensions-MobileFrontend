@@ -67,6 +67,12 @@
 					// we don't want to leave the button selected
 					this.setActive( false );
 				};
+				/**
+				 * Toolbar update state handler.
+				 */
+				toolButton.prototype.onUpdateState = function () {
+					// do nothing
+				};
 
 				// set properties
 				toolButton.static.name = name;
