@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_681adbd1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1686,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-23T16:57:28Z",
+      "side": 1,
+      "message": "If we use \"max-width\" instead of \"width\" then this can be applied to all skins instead of just minerva (could be helpful for a user on desktop with a narrow window).",
+      "revId": "db0a9621e3bbc887438389820675d2f1f473e656",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_884dcfe2",
+        "filename": "resources/ext.timeline.styles/timeline.css",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-23T16:57:28Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be max-width? In case of some tiny timeline.",
+      "revId": "db0a9621e3bbc887438389820675d2f1f473e656",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
