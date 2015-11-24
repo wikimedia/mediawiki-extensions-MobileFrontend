@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"mobile-frontend-changeslist-nocomment": "nisciun oggetto da modiffica",
+	"mobile-frontend-copyright": "O contegno o l'è disponibile in base a-a liçensa $1, se no diversamente speçificou.",
+	"mobile-frontend-editor-edit": "cangia",
+	"mobile-frontend-featured-article": "Vedrin-a",
+	"mobile-frontend-home-button": "Paggina prinçipâ",
+	"mobile-frontend-language-article-heading": "Lezi inte n'atra lengua",
+	"mobile-frontend-last-modified-date": "Urtima modiffica o $1 a $2",
+	"mobile-frontend-main-menu-account-create": "Registrite",
+	"mobile-frontend-main-menu-button-tooltip": "Arvi o menù prinçipâ",
+	"mobile-frontend-main-menu-login": "Intra",
+	"mobile-frontend-main-menu-nearby": "Vexin",
+	"mobile-frontend-main-menu-settings": "Impostassioin",
+	"mobile-frontend-main-menu-watchlist": "Sotta oservaçion",
+	"mobile-frontend-news-items": "Novitæ",
+	"mobile-frontend-password-placeholder": "Pòula segretta:",
+	"mobile-frontend-placeholder": "Çerca {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privacy",
+	"mobile-frontend-random-button": "Una paggina a brettio",
+	"mobile-frontend-terms-text": "Condissioin d'utilizzo",
+	"mobile-frontend-view": "Verscion mobile",
+	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-mobile": "Mobbile",
+	"tag-mobile_edit": "Modiffica da mobile",
+	"tag-mobile_web_edit": "Modiffica da web pe mobile",
+	"mobile-frontend-pageaction-edit-tooltip": "Modiffica a primma seçion de sta paggina."
+}
