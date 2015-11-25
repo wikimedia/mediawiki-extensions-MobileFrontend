@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_1cccb08b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1280,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-25T20:29:28Z",
+      "side": 1,
+      "message": "makes sense! :)",
+      "parentUuid": "0ebaf39b_dc3378be",
+      "revId": "5c7b0f9841862ddd26ab36a3228fea5b3b1465a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_372053a8",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-02T23:37:31Z",
       "side": 1,
       "message": "So if I\u0027m understanding this correctly we look for the word \u0027and\u0027 in the message and if it\u0027s there it\u0027s plural?\n\nThis appears very hacky...\nWe currently store wgMFLicense\nCould this not become an array of licenses that we could pass to the message?",
+      "revId": "5c7b0f9841862ddd26ab36a3228fea5b3b1465a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7ccdac88",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1287,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-25T20:29:28Z",
+      "side": 1,
+      "message": "wgMFLicense is a JS variable only, and is created by a function, which relies on this one, so I would argue: no, we can\u0027t. Furthermore: MobileFrontend doesn\u0027t \"create\" or \"save\" it\u0027s own license format, it re-uses the one of MediaWiki core (basically wgRightsText). I would try to avoid to create a MF-only license array.",
+      "parentUuid": "6ec1af18_372053a8",
       "revId": "5c7b0f9841862ddd26ab36a3228fea5b3b1465a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
