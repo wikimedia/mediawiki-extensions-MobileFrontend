@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_da34d5a9",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-11-26T19:39:56Z",
+      "side": 1,
+      "message": "Is this strictly necessary? The assert below is the actual test, right?",
+      "revId": "8465360b1d00a097037ac2ff9e14a5647cd6ff97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
