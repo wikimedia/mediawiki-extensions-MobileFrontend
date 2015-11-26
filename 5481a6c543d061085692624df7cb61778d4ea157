@@ -34,6 +34,24 @@
       "revId": "5481a6c543d061085692624df7cb61778d4ea157",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a898ba6d",
+        "filename": "resources/mobile.categories.overlays/CategoryLookupInputWidget.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-26T15:20:25Z",
+      "side": 1,
+      "message": "\u003e So, there are two \"displayTitle\" fields used in the templates, and one is already HTML, and the other needs escaping?\n\nI don\u0027t know, which template you\u0027re referring to, sorry :(\n\nThe getLookupCacheDataFromResponse method is a helper for OO.ui.RequestManager, which is used from LookupElement to request data and process them later in getLookupMenuOptionsFromData, where the displayTitle is put into an OO.ui.MenuOptionWidget, which already escapes the label value (~displayTitle). It isn\u0027t used anywhere else from here, afaict. So yes, I\u0027m pretty sure, that you double escape it here :)",
+      "parentUuid": "0ebaf39b_c88bae19",
+      "revId": "5481a6c543d061085692624df7cb61778d4ea157",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
