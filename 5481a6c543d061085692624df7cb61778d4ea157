@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c88c0e3d",
+        "filename": "resources/mobile.categories.overlays/CategoryLookupInputWidget.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-26T14:45:29Z",
+      "side": 1,
+      "message": "As far as I know, this is automatically escaped by OO.ui.MenuOptionWidget, see L80.",
+      "revId": "5481a6c543d061085692624df7cb61778d4ea157",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
