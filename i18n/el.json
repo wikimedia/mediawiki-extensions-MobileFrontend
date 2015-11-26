@@ -134,7 +134,7 @@
 	"mobile-frontend-password-placeholder": "Κωδικός πρόσβασης",
 	"mobile-frontend-photo-licensing": "Με την ανάρτηση αυτής της εικόνας, συμφωνείτε να δημοσιεύσετε την εικόνα σας κάτω από την άδεια $1.",
 	"mobile-frontend-photo-licensing-with-terms": "Ανεβάζοντας αυτή την εικόνα, συμφωνείτε σε $1 και συμφωνείτε να δημοσιεύσετε την εικόνα σας κάτω από την άδεια $2.",
-	"mobile-frontend-photo-submit": "Επιφόρτωση",
+	"mobile-frontend-photo-submit": "Ανέβασμα",
 	"mobile-frontend-photo-upload-generic": "Συνεισφορά μιας εικόνας",
 	"mobile-frontend-placeholder": "Αναζήτηση {{SITENAME}}",
 	"mobile-frontend-placeholder-beta": "Αναζήτηση {{SITENAME}} (Δοκιμαστική λειτουργία)",
