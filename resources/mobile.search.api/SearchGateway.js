@@ -149,7 +149,7 @@
 									id: page.pageid,
 									heading: self._highlightSearchTerm( page.title, query ),
 									title: page.title,
-									displayTitle: mwTitle.getNameText(),
+									displayTitle: $( '<span>' ).text( mwTitle.getNameText() ).html(),
 									url: mwTitle.getUrl()
 								} ) );
 							}
