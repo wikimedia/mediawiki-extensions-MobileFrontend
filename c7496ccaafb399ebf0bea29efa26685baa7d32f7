@@ -16,6 +16,24 @@
       "revId": "c7496ccaafb399ebf0bea29efa26685baa7d32f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7a0da938",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-26T18:16:46Z",
+      "side": 1,
+      "message": "Forget the last thing with \"use class member\", options is an opbject, so it doesn\u0027t matter, if you use options directly or the member options.",
+      "parentUuid": "0ebaf39b_fa019908",
+      "revId": "c7496ccaafb399ebf0bea29efa26685baa7d32f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
