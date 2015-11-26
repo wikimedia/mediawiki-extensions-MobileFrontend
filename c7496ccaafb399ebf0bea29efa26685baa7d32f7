@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_fa019908",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-26T18:13:44Z",
+      "side": 1,
+      "message": "that does not work. options.title can be undefined (even if it should not) and the default is loaded with the call to the parent class, which happens two lines under this.\n\nYou should move this line after the call to the parent class and use the class member options (this.options). Don\u0027t forget the usage of options.displayTitle in L76, too.",
+      "revId": "c7496ccaafb399ebf0bea29efa26685baa7d32f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
