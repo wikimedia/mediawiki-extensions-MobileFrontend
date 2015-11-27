@@ -53,4 +53,47 @@
 		} );
 	} );
 
+	QUnit.test( '#allowsXSS', 3, function ( assert ) {
+		var p = new Page( {
+				title: '<script>alert("oops, XSS possible!");</script>'
+			} ),
+			titleJSON = [
+				{
+					thumbnail: false,
+					title: '<script>alert("oops, XSS possible!");</script>',
+					terms: false,
+					testDesc: 'Check against XSS in Page.newFromJSON displaytitle (when title set)'
+				},
+				{
+					thumbnail: false,
+					pageprops: {},
+					terms: {
+						label: [
+							'<script>alert("oops, XSS possible!");</script>'
+						]
+					},
+					testDesc: 'Check against XSS in Page.newFromJSON displaytitle (when Wikibase label set)'
+				}
+			],
+			div = $( '<div>' );
+
+		div.html( p.getDisplayTitle() ).appendTo( 'body' );
+		assert.strictEqual(
+			p.getDisplayTitle(),
+			'&lt;script&gt;alert(&quot;oops, XSS possible!&quot;);&lt;/script&gt;',
+			'Check against XSS in Page.js constructor displaytitle (when title set)'
+		);
+
+		$.each( titleJSON, function ( i, json ) {
+			p = Page.newFromJSON( json );
+
+			div.html( p.getDisplayTitle() ).appendTo( 'body' );
+			assert.strictEqual(
+				p.getDisplayTitle(),
+				'&lt;script&gt;alert(&quot;oops, XSS possible!&quot;);&lt;/script&gt;',
+				json.testDesc
+			);
+		} );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );

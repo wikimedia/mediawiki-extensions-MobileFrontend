@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( HTML, M, $ ) {
 
 	var Page,
 		time = M.require( 'mobile.modifiedBar/time' ),
@@ -20,8 +20,8 @@
 		 * Be sure to override it to avoid side effects.
 		 * @cfg {String} defaults.title Title of the page. It includes prefix where needed and
 		 * is human readable, e.g. Talk:The man who lived.
-		 * @cfg {String} defaults.displayTitle Title of the page that's displayed. Falls back
-		 * to defaults.title if no value is provided.
+		 * @cfg {String} defaults.displayTitle HTML title of the page for display. Falls back
+		 * to defaults.title (escaped) if no value is provided. Must be safe HTML!
 		 * @cfg {Number} defaults.namespaceNumber the number of the namespace the page belongs to
 		 * @cfg {Object} defaults.protection List of permissions as returned by API,
 		 * e.g. [{ edit: ['*'] }]
@@ -66,10 +66,10 @@
 			var thumb;
 
 			this.options = options;
-			// Fallback if no displayTitle provided
-			options.displayTitle = this.getDisplayTitle();
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
+			// Fallback if no displayTitle provided
+			options.displayTitle = this.getDisplayTitle();
 			// allow usage in templates.
 			// FIXME: Should View map all options to properties?
 			this.title = options.title;
@@ -90,7 +90,7 @@
 		 * @return {String} HTML
 		 */
 		getDisplayTitle: function () {
-			return this.options.displayTitle || this.options.title;
+			return this.options.displayTitle || HTML.escape( this.options.title );
 		},
 		/**
 		 * Determine if current page is in a specified namespace
@@ -313,14 +313,15 @@
 		var revision, displayTitle,
 			thumb = resp.thumbnail,
 			pageprops = resp.pageprops || {
-				displaytitle: resp.title
+				displaytitle: HTML.escape( resp.title )
 			},
 			terms = resp.terms;
 
 		if ( pageprops || terms ) {
 			// The label is either the display title or the label pageprop (the latter used by Wikidata)
-			// Long term we want to consolidate these.
-			displayTitle = terms && terms.label ? terms.label[0] : pageprops.displaytitle;
+			// Long term we want to consolidate these. Note that pageprops.displaytitle is HTML, while
+			// terms.label[0] is plain text.
+			displayTitle = terms && terms.label ? HTML.escape( terms.label[0] ) : pageprops.displaytitle;
 		}
 		// Add Wikidata descriptions if available (T101719)
 		if ( terms && terms.description && terms.description.length ) {
@@ -343,10 +344,10 @@
 				id: resp.pageid,
 				isMissing: resp.missing ? true : false,
 				url: mw.util.getUrl( resp.title ),
-				displayTitle: displayTitle
+				displayTitle: displayTitle // this is HTML!
 			} )
 		);
 	};
 	M.define( 'mobile.startup/Page', Page );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.html, mw.mobileFrontend, jQuery ) );
