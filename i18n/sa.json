@@ -69,6 +69,7 @@
 	"mobile-frontend-missing-image": "चित्रम्",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 कि.मी.}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 मी.}}",
+	"mobile-frontend-nearby-refresh": "स्थानस्य नवीकरणम्",
 	"mobile-frontend-nearby-title": "निकटे",
 	"mobile-frontend-news-items": "वार्तायाम्",
 	"mobile-frontend-opt-in-explain": "उपान्त्य(बीटा)प्रवेशेन भवता प्रयोगात्मकविशेषताः द्रष्टुं शक्याः भवन्ति । किन्तु दोषाणां समस्यानां सम्भवाः अपि विद्यन्ते एव ।",
