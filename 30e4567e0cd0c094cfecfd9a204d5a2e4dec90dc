@@ -16,6 +16,24 @@
       "revId": "30e4567e0cd0c094cfecfd9a204d5a2e4dec90dc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_832834de",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-27T15:22:21Z",
+      "side": 1,
+      "message": "See my comment in PS8:\nhttps://gerrit.wikimedia.org/r/#/c/255540/8/tests/qunit/mobile.startup/test_Page.js",
+      "parentUuid": "0ebaf39b_43a31c97",
+      "revId": "30e4567e0cd0c094cfecfd9a204d5a2e4dec90dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
