@@ -74,10 +74,8 @@
 					},
 					testDesc: 'Check against XSS in Page.newFromJSON displaytitle (when Wikibase label set)'
 				}
-			],
-			div = $( '<div>' );
+			];
 
-		div.html( p.getDisplayTitle() ).appendTo( 'body' );
 		assert.strictEqual(
 			p.getDisplayTitle(),
 			'&lt;script&gt;alert(&quot;oops, XSS possible!&quot;);&lt;/script&gt;',
@@ -87,7 +85,6 @@
 		$.each( titleJSON, function ( i, json ) {
 			p = Page.newFromJSON( json );
 
-			div.html( p.getDisplayTitle() ).appendTo( 'body' );
 			assert.strictEqual(
 				p.getDisplayTitle(),
 				'&lt;script&gt;alert(&quot;oops, XSS possible!&quot;);&lt;/script&gt;',
