@@ -31,22 +31,13 @@
 			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
 		},
 		/**
-		* Retrieve and, if not present, generate a random session ID
-		* (32 alphanumeric characters).
+		* Wrapper for mw.user.sessionId().
 		*
 		* @method
 		* @return {String}
 		*/
 		getSessionId: function () {
-			var sessionId = mw.storage.get( 'sessionId' );
-			// No support (see documentation)
-			if ( sessionId === false ) {
-				return '';
-			} else if ( !sessionId ) {
-				sessionId = mw.user.generateRandomSessionId();
-				mw.storage.set( 'sessionId', sessionId );
-			}
-			return sessionId;
+			return mw.user.sessionId();
 		},
 
 		/**
