@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_30e0a5c7",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-30T20:19:41Z",
+      "side": 1,
+      "message": "This isn\u0027t the real PHP session cookie. That would be named something like \"enwikiSession\". Having \"session\" in the cookie name might be a bad idea however if that would vary Varnish caching. This cookie is only meant to be used at the javascript layer as a replacement for the prior sessionStorage.\n\nThe current vcl looks for cookies with names ending in \"session\" for cache busting (\u003chttps://phabricator.wikimedia.org/diffusion/OPUP/browse/production/templates/varnish/text-common.inc.vcl.erb;1768425e9e19b7971ef6ad198c93942f1d5fad24$25\u003e) but staying away from names like that is probably a good idea.",
+      "parentUuid": "0ebaf39b_d0dee942",
+      "revId": "7a68659a6892eac3a2ad56e68517a96698ea1c67",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_f0e3ed00",
         "filename": "resources/mobile.user/user.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-11-30T20:07:26Z",
       "side": 1,
       "message": "Would use of sessionStorage be preferable in order to facilitate analysis crossing the login/logout boundary?\n\nAdditionally, would setting a cookie introduce further cache fragmentation? I was wondering if there\u0027s some way to set the value transiently so that bucketing still works nicely but there\u0027s less globally distributed disk load on end user devices (granted, the storage is basically modest).\n\nFinally, should the old LocalStorage key-value pair be deleted by JavaScript, or would that be a separate patch?",
+      "revId": "7a68659a6892eac3a2ad56e68517a96698ea1c67",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3093c55c",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-30T20:19:41Z",
+      "side": 1,
+      "message": "SessionStorage is actually less sticky:\n\n\"Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work.\" -- https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage",
+      "parentUuid": "0ebaf39b_f0e3ed00",
       "revId": "7a68659a6892eac3a2ad56e68517a96698ea1c67",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
