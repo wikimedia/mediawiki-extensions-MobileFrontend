@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_552d0b8b",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-30T17:20:31Z",
+      "side": 1,
+      "message": "secure is right for Wikimedia servers but not necessarily for all MF deploys. I\u0027ll pull this out.",
+      "revId": "df4ad0c27abc3c4ffca166d8c2076b2af39a1eb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
