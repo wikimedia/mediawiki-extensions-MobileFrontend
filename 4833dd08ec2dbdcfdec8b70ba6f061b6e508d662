@@ -16,6 +16,24 @@
       "revId": "4833dd08ec2dbdcfdec8b70ba6f061b6e508d662",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_953703e0",
+        "filename": "tests/qunit/mobile.user/test_user.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-30T17:20:19Z",
+      "side": 1,
+      "message": "Thanks! I flipped the order to check for get first rather than set which looked slightly prettier to me.",
+      "parentUuid": "0ebaf39b_57b75335",
+      "revId": "4833dd08ec2dbdcfdec8b70ba6f061b6e508d662",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
