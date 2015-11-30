@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_57b75335",
+        "filename": "tests/qunit/mobile.user/test_user.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-11-30T11:03:56Z",
+      "side": 1,
+      "message": "$.cookie accepts three arguments: key, value, and options. mw.cookie.set will always invoke $.cookie with three arguments [0] despite being able to accept fewer arguments itself.\n\nSimply s/2/3/ here and you\u0027ll see the tests pass.\n\n[0] https://github.com/wikimedia/mediawiki/blob/master/resources/src/mediawiki/mediawiki.cookie.js#L100",
+      "revId": "4833dd08ec2dbdcfdec8b70ba6f061b6e508d662",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
