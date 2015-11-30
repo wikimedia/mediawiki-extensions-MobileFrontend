@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_d0dee942",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2015-11-30T20:07:26Z",
+      "side": 1,
+      "message": "Would it make sense to apply some sort of hashing so as to obfuscate the value and raise the rainbow table stakes?\n\nSee also question below re: sessionStorage.",
+      "revId": "7a68659a6892eac3a2ad56e68517a96698ea1c67",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f0e3ed00",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2015-11-30T20:07:26Z",
+      "side": 1,
+      "message": "Would use of sessionStorage be preferable in order to facilitate analysis crossing the login/logout boundary?\n\nAdditionally, would setting a cookie introduce further cache fragmentation? I was wondering if there\u0027s some way to set the value transiently so that bucketing still works nicely but there\u0027s less globally distributed disk load on end user devices (granted, the storage is basically modest).\n\nFinally, should the old LocalStorage key-value pair be deleted by JavaScript, or would that be a separate patch?",
+      "revId": "7a68659a6892eac3a2ad56e68517a96698ea1c67",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
