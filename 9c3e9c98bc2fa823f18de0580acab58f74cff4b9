@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_d73b4334",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-11-30T13:43:39Z",
+      "side": 1,
+      "message": "Should say whether this is expected to be plain text or HTML",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b736cf4c",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-11-30T13:43:39Z",
+      "side": 1,
+      "message": "displayTitle is HTML, page.title is not. Don\u0027t mix them without escaping.",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f71767a6",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2015-11-30T13:43:39Z",
+      "side": 1,
+      "message": "Please make it very clear what the difference between displayTitle and displaytext is. They are not the same, and must be treated very carefully, since on is plain text, and the other is HTML.\n\n Please also make it clear what \"page\" is here, and how it related to what _getPage returns. Both are kind of page objects? But not really the same?...",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
