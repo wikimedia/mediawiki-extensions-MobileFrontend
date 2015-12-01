@@ -79,6 +79,7 @@
 	"mobile-frontend-media-details": "ځانگړنې",
 	"mobile-frontend-media-license-link": "د منښتليک مالومات",
 	"mobile-frontend-meta-data-issues": "د مخ ستونزې",
+	"mobile-frontend-meta-data-issues-header-talk": "د دې مخ په اړه",
 	"mobile-frontend-missing-image": "انځور",
 	"mobile-frontend-nearby-title": "نژدې",
 	"mobile-frontend-news-items": "په خبرونو کې",
@@ -122,6 +123,7 @@
 	"mobile-frontend-donate-button-label": "بسپنه ورکول",
 	"mobile-frontend-meta-data-issues-categories": "د دې وېشنيزې په اړه",
 	"mobile-frontend-loading-message": "برسېرېدنې کې دی...",
+	"mobile-frontend-panel-ok": "هوکې",
 	"mobile-frontend-panel-cancel": "نه مننه",
 	"mobile-frontend-search-feedback-link-text": "تاسې خپل نظر موږ ته راکړئ"
 }
