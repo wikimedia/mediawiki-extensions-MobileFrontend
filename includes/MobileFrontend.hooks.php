@@ -1075,6 +1075,49 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * If the NetSpeed designation is not MobileContext::NETSPEED_FAST, omit
+	 * srcset attributes from image tags.
+	 *
+	 * @param ThumbnailImage $thumbnail
+	 * @param array &$attribs
+	 * @param array &$linkAttribs
+	 */
+	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
+		$context = MobileContext::singleton();
+
+		if (
+			$context->shouldDisplayMobileView() &&
+			$context->getNetSpeed() !== MobileContext::NETSPEED_FAST
+		) {
+			unset( $attribs['srcset'] );
+		}
+	}
+
+	/**
+	 * If the NetSpeed designation is not MobileContext::NETSPEED_FAST, set
+	 * image quality to 'low'. Currently this only influences JPEG encoding.
+	 *
+	 * @param Skin &$skin
+	 * @param Title &$title
+	 * @param File &$file
+	 * @param array &$frameParams
+	 * @param array &$handlerParams
+	 * @param string &$time
+	 * @param string &$res
+	 */
+	public static function onImageBeforeProduceHTML( &$skin, &$title, &$file,
+		&$frameParams, &$handlerParams, &$time, &$res ) {
+		$context = MobileContext::singleton();
+
+		if (
+			$context->shouldDisplayMobileView() &&
+			$context->getNetSpeed() !== MobileContext::NETSPEED_FAST
+		) {
+			$handlerParams['quality'] = 'low';
+		}
+	}
+
+	/**
 	 * LoginFormValidErrorMessages hook handler to promote MF specific error message be valid.
 	 *
 	 * @param array $messages Array of already added messages

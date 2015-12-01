@@ -145,6 +145,8 @@ $wgHooks['HTMLFileCache::useFileCache'][] = 'MobileFrontendHooks::onHTMLFileCach
 $wgHooks['LoginFormValidErrorMessages'][] = 'MobileFrontendHooks::onLoginFormValidErrorMessages';
 $wgHooks['ResourceLoaderGetLessVars'][] = 'MobileFrontendHooks::onResourceLoaderGetLessVars';
 $wgHooks['SkinPreloadExistence'][] = 'MobileFrontendHooks::onSkinPreloadExistence';
+$wgHooks['ThumbnailBeforeProduceHTML'][] = 'MobileFrontendHooks::onThumbnailBeforeProduceHTML';
+$wgHooks['ImageBeforeProduceHTML'][] = 'MobileFrontendHooks::onImageBeforeProduceHTML';
 
 $wgSpecialPages += array(
 	'History' => 'SpecialMobileHistory',
