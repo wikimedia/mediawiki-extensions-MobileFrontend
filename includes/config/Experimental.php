@@ -14,6 +14,23 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgMFIgnoreEventLoggingBucketing = false;
 
 /**
+ * A list of experiments active on the skin.
+ *
+ * @var array
+ */
+$wgMFExperiments = array(
+	// Experiment to prompts users to opt into the beta experience of the skin.
+	'betaoptin' => array(
+		'name' => 'betaoptin',
+		'enabled' => false,
+		'buckets' => array(
+			'control' => 0.97,
+			'A' => 0.03,
+		),
+	),
+);
+
+/**
  * Controls whether the "Minerva as a desktop skin" beta feature is enabled
  */
 $wgMFEnableMinervaBetaFeature = false;

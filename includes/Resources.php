@@ -1118,6 +1118,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.context',
+			'mediawiki.experiments',
 			'jquery.cookie',
 		),
 		'messages' => array(
