@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_28d6f954",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-12-01T01:44:50Z",
+      "side": 1,
+      "message": "This method is duplicating the purpose of mw.user.sessionId().",
+      "revId": "c1e841fbae4e57d50488c68e1fd038b8483da0e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
