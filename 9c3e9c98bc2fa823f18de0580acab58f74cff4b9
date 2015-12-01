@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_e2f79888",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-01T21:34:20Z",
+      "side": 1,
+      "message": "... and currently it appears to be optional (but I think this is wrong)",
+      "parentUuid": "0ebaf39b_d73b4334",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_b736cf4c",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_22029076",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-01T21:34:20Z",
+      "side": 1,
+      "message": "I think this line would actually make more sense below e.g. this shoudn\u0027t be optional.",
+      "parentUuid": "0ebaf39b_b736cf4c",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_f71767a6",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2015-11-30T13:43:39Z",
       "side": 1,
       "message": "Please make it very clear what the difference between displayTitle and displaytext is. They are not the same, and must be treated very carefully, since on is plain text, and the other is HTML.\n\n Please also make it clear what \"page\" is here, and how it related to what _getPage returns. Both are kind of page objects? But not really the same?...",
+      "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_82d1fcfd",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-01T21:34:20Z",
+      "side": 1,
+      "message": "Yes this is really confusing. Please be consistent with naming. How does this impact non-wikidata instances where displaytext is not available?",
+      "parentUuid": "0ebaf39b_f71767a6",
       "revId": "9c3e9c98bc2fa823f18de0580acab58f74cff4b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
