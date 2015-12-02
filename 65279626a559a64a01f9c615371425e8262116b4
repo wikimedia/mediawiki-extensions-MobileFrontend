@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_4f724cad",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-02T01:30:40Z",
+      "side": 1,
+      "message": "Should we use a more generic name here? e.g. OptimisedView\nsince in future we may not want to do this based on net speed but for all users....",
+      "revId": "65279626a559a64a01f9c615371425e8262116b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_ef3b00c2",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1085,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-02T01:30:40Z",
+      "side": 1,
+      "message": "I would be really keen on the long term to set \u0027src\u0027 here to a much lower res image for ALL views and then use JS to enhance it (BBC does something similar in https://github.com/BBC-News/Imager.js/).\n\nWould you want to do this separately or can we do this as part of this patchset?",
+      "revId": "65279626a559a64a01f9c615371425e8262116b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
