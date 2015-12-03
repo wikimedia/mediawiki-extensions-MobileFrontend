@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb37bc7_dd468726",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-03T22:13:02Z",
+      "side": 1,
+      "message": "I assume there is a task somewhere about crappy plural support in core - can we link to the overall problem whereever it is or create a new one and link to it? Thanks!",
+      "revId": "42e3e83945be0736ddfc9b63b59fa746a3b4f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
