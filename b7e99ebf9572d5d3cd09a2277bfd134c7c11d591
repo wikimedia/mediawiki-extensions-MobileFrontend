@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ceb37bc7_88fe97aa",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-03T00:03:14Z",
+      "side": 1,
+      "message": "Fair point but I was anticipating a move to extension.json :)",
+      "parentUuid": "0ebaf39b_d26583de",
+      "revId": "b7e99ebf9572d5d3cd09a2277bfd134c7c11d591",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_326dffc7",
         "filename": "includes/config/Experimental.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-12-02T10:19:01Z",
       "side": 1,
       "message": "I\u0027d leave it as 0.03 (3% from https://gerrit.wikimedia.org/r/#/c/256348/1/resources/skins.minerva.scripts/init.js) and set enabled to false. I\u0027d also change the value of \u0027control\u0027 to 0.97.",
+      "revId": "b7e99ebf9572d5d3cd09a2277bfd134c7c11d591",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb37bc7_48289f32",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-03T00:03:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_326dffc7",
       "revId": "b7e99ebf9572d5d3cd09a2277bfd134c7c11d591",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
