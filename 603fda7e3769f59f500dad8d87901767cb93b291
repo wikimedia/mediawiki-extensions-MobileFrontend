@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb37bc7_91d6bef5",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-03T15:31:14Z",
+      "side": 1,
+      "message": "From an earlier IRC conversation:\n\n12:41:08 \u003cbmansurov\u003e phuedx: can control be 0?\n12:42:38 \u003cphuedx\u003e control can be set to 0 then you\u0027re defining an experiment with 1 bucket\n12:42:51 \u003cphuedx\u003e perhaps mw.experiments should defend against that\n12:43:01 \u003cphuedx\u003e because an experiment with one bucket isn\u0027t an experiment\n12:43:15 \u003cphuedx\u003e (it should always evaluate to A)\n\nYou can, of course, weight the control bucket to 0 but you\u0027re disabling the condition – indeed, you can add as many 0-weighted buckets as you like as they\u0027ll have no effect on the outcome.\n\nConsequently, if we mistakenly re-enable this experiment, which, by the way, is a nice touch (!), then it\u0027ll always put the user in the A condition. By adding just \".97\" before the comma here you can reduce the risk of us sabotaging our future selves.",
+      "revId": "603fda7e3769f59f500dad8d87901767cb93b291",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
