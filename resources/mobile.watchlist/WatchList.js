@@ -11,6 +11,7 @@
 	 * @uses InfiniteScroll
 	 */
 	WatchList = WatchstarPageList.extend( {
+		isBorderBox: false,
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			var lastTitle;
