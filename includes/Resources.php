@@ -894,8 +894,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/mobile.toast/toast.js',
 		),
-		'styles' => array(
-			'resources/mobile.toast/toast.less',
+		'skinStyles' => array(
+			'minerva' => 'resources/mobile.toast/toast.less',
 		),
 	),
 
@@ -1675,5 +1675,3 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 		'resources/mobile.special.history.styles/default.less',
 	),
 );
-
-
