@@ -37,6 +37,10 @@
 		* @return {String}
 		*/
 		getSessionId: function () {
+			// FIXME: Remove this when we're confident that enough stored session IDs
+			// have been removed.
+			mw.storage.remove( 'sessionId' );
+
 			return mw.user.sessionId();
 		},
 
