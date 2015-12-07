@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_93531f43",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 24
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "Your message implies, that you _move_ existing hooks, but in fact you _add_ one hook, and I don\u0027t have an idea, why, so please elaborate :)",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_13788fbe",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "doubled",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_d3dd17e3",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "ehh??? Why?",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_53e9277a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "I would wait, until the blocked by task (T108271) is fixed. In general, I\u0027m not very happy with having this intermediate step.",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_7391cbfa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "Where is the different to including it in the main php file, except the fact, that you\u0027re not in the global namespace anymore?",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_f3fdbb39",
+        "filename": "includes/Resources.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T20:40:18Z",
+      "side": 1,
+      "message": "This file seems to be already in the global state, if it would be included corretcly. You shouldn\u0027t need to include Resources.php out of the global namespace.",
+      "revId": "5ba48e03646e04628624a7d7e810559a19c89782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
