@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_d08432b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Typo: MinervaDiscoveryTools",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_f0a8561f",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "A new line after this line is missing. Not that it\u0027s required. Just to be consistent with the other docstrings.",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_b08bbec3",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Needs \"* @throws InvalidArgumentException\"",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_f08136a5",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "This declaration is overwritten below in the for loop and can be removed from here.",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_908ebad4",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Won\u0027t the loop be skipping the index 0 below with the pre-increment above?",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_70bd4663",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Could you please add documentation for the above variables? Or is it not needed because they are documented where used?",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_d0abd219",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Can we change \u0027classes\u0027 to \u0027space separated classes\u0027 for the sake of clarity?",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_30b7ce83",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-07T03:23:43Z",
+      "side": 1,
+      "message": "Typo: $data -\u003e $attrs",
+      "revId": "e5fe6a042a900ba6a82f5e6500b03a3bf5efc4a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
