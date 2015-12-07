@@ -965,17 +965,82 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		$resourceBoilerplate = array(
+			'localBasePath' => dirname( __DIR__ ),
+			'remoteExtPath' => 'MobileFrontend',
+		);
 		self::registerMobileLoggingSchemasModule( $resourceLoader );
-		$config = MobileContext::singleton()->getMFConfig();
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
 		if ( class_exists( 'VisualEditorHooks' ) ) {
-			$resourceLoader->register( $config->get( 'MobileVEModules' ) );
+			$resourceLoader->register( array(
+				'mobile.editor.ve' => $resourceBoilerplate + array(
+					'dependencies' => array(
+						'ext.visualEditor.mobileArticleTarget',
+						'mobile.editor.common',
+						'mobile.overlays',
+					),
+					'styles' => array(
+						'resources/mobile.editor.ve/VisualEditorOverlay.less',
+					),
+					'scripts' => array(
+						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
+						'resources/mobile.editor.ve/VisualEditorOverlay.js',
+					),
+					'templates' => array(
+						'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
+						'toolbarVE.hogan' => 'resources/mobile.editor.ve/toolbarVE.hogan',
+					),
+					'messages' => array(
+						'mobile-frontend-page-edit-summary',
+						'mobile-frontend-editor-editing',
+					),
+					'targets' => array(
+						'mobile',
+					),
+				),
+			) );
 		}
 
 		// add Echo, if it's installed
 		if ( class_exists( 'MWEchoNotifUser' ) ) {
-			$resourceLoader->register( $config->get( 'MobileEchoModules' ) );
+			$resourceLoader->register( array(
+				'skins.minerva.notifications' => $resourceBoilerplate + array(
+					'dependencies' => array(
+						'mobile.overlays',
+						'skins.minerva.scripts',
+						'mediawiki.ui.anchor',
+						'mobile.loggingSchemas',
+					),
+					'scripts' => array(
+						'resources/skins.minerva.notifications/init.js',
+					),
+					'targets' => array( 'mobile', 'desktop' ),
+				),
+				'mobile.notifications.overlay' => $resourceBoilerplate + array(
+					'dependencies' => array(
+						'mobile.overlays',
+						'ext.echo.logger',
+					),
+					'scripts' => array(
+						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
+					),
+					'styles' => array(
+						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
+					),
+					'templates' => array(
+						'content.hogan' => 'resources/mobile.notifications.overlay/NotificationsOverlayContent.hogan',
+					),
+					'messages' => array(
+						// defined in Echo
+						'echo-none',
+						'notifications',
+						'echo-overlay-link',
+						'echo-notification-count',
+					),
+					'targets' => array( 'mobile', 'desktop' ),
+				),
+			) );
 		};
 
 		return true;
@@ -1046,8 +1111,11 @@ class MobileFrontendHooks {
 	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 */
 	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
-		$mfResourceFileModuleBoilerplate = MobileContext::singleton()
-			->getMFConfig()->get( 'MFResourceFileModuleBoilerplate' );
+		$mfResourceFileModuleBoilerplate = array(
+			'localBasePath' => dirname( __DIR__ ),
+			'remoteExtPath' => 'MobileFrontend',
+			'targets' => array( 'mobile', 'desktop' ),
+		);
 
 		$scripts = array(
 			'resources/mobile.loggingSchemas/SchemaEdit.js',
@@ -1194,6 +1262,7 @@ class MobileFrontendHooks {
 			)
 		);
 	}
+
 	/**
 	 * Handler for MakeGlobalVariablesScript hook.
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
@@ -1243,5 +1312,15 @@ class MobileFrontendHooks {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Handler for Extension registration callback
+	 */
+	public static function onRegistration() {
+		global $wgResourceLoaderLESSImportPaths;
+
+		// Set LESS importpath
+		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
 	}
 }
