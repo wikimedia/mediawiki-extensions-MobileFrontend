@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_130c0f3d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-07T19:29:34Z",
+      "side": 1,
+      "message": "Would you like to add the following line to the commit message, right before the \"Change-Id:\" line?\n\nBug: T107367\n\nThis is our common way to link tasks with changes and vice versa. For more information, feel free to read https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines :)",
+      "revId": "6ca7c1f891010eccbc2b71eb58c79d46d1501d92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
