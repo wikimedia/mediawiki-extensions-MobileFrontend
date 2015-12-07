@@ -299,7 +299,6 @@ class MobileFrontendHooks {
 
 		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
 			$cookies[] = 'optin'; // beta cookie
-			$cookies[] = 'disableImages';
 		}
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
 		// only for HTTP but we don't vary on protocol.
@@ -676,6 +675,15 @@ class MobileFrontendHooks {
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();
+
+		// Migrate prefixed disableImages cookie to unprefixed cookie.
+		if ( isset( $_COOKIE[$config->get( 'CookiePrefix' ) . 'disableImages'] ) ) {
+			if ( (bool)$request->getCookie( 'disableImages' ) ) {
+				$context->setDisableImagesCookie( true );
+			}
+			$request->response()->clearCookie( 'disableImages' );
+		}
+
 		# Add deep link to a mobile app specified by $wgMFAppScheme
 		if ( ( $mfAppPackageId !== false ) && ( $title->isContentPage() )
 			&& ( $request->getRawQueryString() === '' )
