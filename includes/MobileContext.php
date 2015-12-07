@@ -162,7 +162,10 @@ class MobileContext extends ContextSource {
 	 */
 	public function imagesDisabled() {
 		if ( is_null( $this->disableImages ) ) {
-			$this->disableImages = (bool)$this->getRequest()->getCookie( 'disableImages' );
+			$this->disableImages = (
+				( isset( $_COOKIE['disableImages'] ) && $_COOKIE['disableImages'] === '1' ) ||
+				(bool) $this->getRequest()->getCookie( 'disableImages' )
+			);
 		}
 
 		return $this->disableImages;
@@ -591,11 +594,16 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set cookie to disable images on pages
-	 * @param bool $disable
+	 * Set or unset cookie to disable images on pages
+	 * @param bool $shouldDisableImages
 	 */
-	public function setDisableImagesCookie( $disable ) {
-		$this->getRequest()->response()->setcookie( 'disableImages', $disable ? '1' : '' );
+	public function setDisableImagesCookie( $shouldDisableImages ) {
+		$resp = $this->getRequest()->response();
+		if ( $shouldDisableImages ) {
+			$resp->setCookie( 'disableImages', 1, 0, array( 'prefix' => '' ) );
+		} else {
+			$resp->clearCookie( 'disableImages', array( 'prefix' => '' ) );
+		}
 	}
 
 	/**
