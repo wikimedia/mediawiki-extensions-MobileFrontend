@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var inSample, inStable,
+	var inSample, inStable, experiment,
 		settings = M.require( 'mobile.settings/settings' ),
 		time = M.require( 'mobile.modifiedBar/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
@@ -15,6 +15,7 @@
 		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		thumbs = page.getThumbnails(),
+		experiments = mw.config.get( 'wgMFExperiments' ) || {},
 		betaOptinPanel;
 
 	/**
@@ -114,17 +115,17 @@
 		references.setup();
 	} );
 
+	// Access the beta optin experiment if available.
+	experiment = experiments.betaoptin || false;
 	// local storage is supported in this case, when ~ means it was dismissed
-	if ( token !== false && token !== '~' && !page.isMainPage() && !page.inNamespace( 'special' ) ) {
+	if ( experiment && token !== false && token !== '~' && !page.isMainPage() && !page.inNamespace( 'special' ) ) {
 		if ( !token ) {
 			token = mw.user.generateRandomSessionId();
 			settings.save( 'mobile-betaoptin-token', token );
 		}
 
 		inStable = !context.isBetaGroupMember();
-		// a single character has 16 possibilities so this is 1/16 6.25% chance (a-f and 0-9)
-		// 3% chance of this happening
-		inSample = $.inArray( token.charAt( 0 ), [ '3' ] ) !== -1;
+		inSample = mw.experiments.getBucket( experiment, token ) === 'A';
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
 			betaOptinPanel = new BetaOptinPanel( {
 				postUrl: mw.util.getUrl( 'Special:MobileOptions', {
