@@ -16,6 +16,24 @@
       "revId": "d111ff5104789af48bddb9f23a19cd2b5755a539",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_b65ad620",
+        "filename": "resources/mobile.user/user.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-07T11:25:17Z",
+      "side": 1,
+      "message": "Good point. Done in Id1bd2d2.",
+      "parentUuid": "aeb807a7_5b1623ae",
+      "revId": "d111ff5104789af48bddb9f23a19cd2b5755a539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
