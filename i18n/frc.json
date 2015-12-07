@@ -11,6 +11,7 @@
 	"mobile-frontend-main-menu-settings": "Configuration",
 	"mobile-frontend-main-menu-watchlist": "Mes pages guettées",
 	"mobile-frontend-password-placeholder": "Mot de passe",
+	"mobile-frontend-placeholder": "Charcher sur {{SITENAME}}",
 	"mobile-frontend-random-button": "Au hasard",
 	"mobile-frontend-view": "Affichage mobile",
 	"mobile-frontend-view-desktop": "Bureau",
