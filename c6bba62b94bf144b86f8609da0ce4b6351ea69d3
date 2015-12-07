@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_135f2f46",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1683,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-07T20:41:04Z",
+      "side": 1,
+      "message": "shouldn\u0027t know about extensions/MobileFrontend ... use $wgMFResourceBoilerplate",
+      "revId": "c6bba62b94bf144b86f8609da0ce4b6351ea69d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
