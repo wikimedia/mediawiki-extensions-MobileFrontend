@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_c60fa23a",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T20:04:27Z",
+      "side": 1,
+      "message": "This will load the image twice in a stylesheet so it would be preferable to rename the image to \u0027arrow\u0027 and add it once and instead handle the css flipping with another class.\n\nAlso be careful with the trailing whitespace!\n\nAlso be sure to rename the image asset and remove images/icons/arrow-up.svg from the repository now it is no longer used!",
+      "revId": "f4de4f83833beb631ca087f203d1ba3ca7c564dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_49fbc511",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T20:04:27Z",
+      "side": 1,
+      "message": "Instead of doing this I would suggest something such as\n\n.open-section {\n\t.mw-ui-icon-arrow-up:before {\n\t\ttransform: scaleY(-1);\n\t}\n}",
+      "revId": "f4de4f83833beb631ca087f203d1ba3ca7c564dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
