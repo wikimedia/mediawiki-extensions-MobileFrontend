@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ead036b_6f756192",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-08T22:25:49Z",
+      "side": 1,
+      "message": "Jdlrobson: Do you mean frontend caching, like varnish? If so, I don\u0027t think so, but I\u0027m pretty sure, that doesn\u0027t really matter here.\n\n@Legoktm: It\u0027s called at least twice, if this is no Flow board (or any other history action handler). But in fact, that are \"only\" some function calls, no db queries as far as I know, I\u0027ve no strong preference here. What do you think?",
+      "parentUuid": "8ead036b_a612a6ff",
+      "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ead036b_86152aec",
         "filename": "includes/specials/SpecialMobileHistory.php",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2015-12-08T19:13:15Z",
       "side": 1,
       "message": "whitespace",
+      "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_0f6aadb1",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-08T22:25:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ead036b_86152aec",
       "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
