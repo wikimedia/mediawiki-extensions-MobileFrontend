@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_cfc57543",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": ".mw-ui-icon-arrow-down shouldn\u0027t exist.\nThe toggle.js code should be changed to use .mw-ui-icon-arrow exclusively.",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_ef9b9166",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": "This is invalid css and am not sure why it is needed.",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_2fb1a9dc",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": ".mw-ui-icon-arrow-up shouldn\u0027t exist any more.\nThe toggle.js code should be changed to use .mw-ui-icon-arrow exclusively.",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_afa5999c",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": "This is invalid css and not sure what is needed.",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_efc2b138",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": "watch your whitespace! :)",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_8fa8dd75",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T23:18:55Z",
+      "side": 1,
+      "message": "Inconsistent indenting.",
+      "revId": "b0a61a27bd2a7ce3c6715cc4ce6d20dc3033131a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
