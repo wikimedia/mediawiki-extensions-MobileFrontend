@@ -16,6 +16,41 @@
       "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_a612a6ff",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T19:13:15Z",
+      "side": 1,
+      "message": "Are special pages subject to any kind of caching?",
+      "parentUuid": "aeb807a7_9f9f99b9",
+      "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_86152aec",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-08T19:13:15Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "c1de50a8543e192d3936897eabc2e86f01478d7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
