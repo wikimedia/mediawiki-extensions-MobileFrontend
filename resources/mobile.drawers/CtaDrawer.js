@@ -32,7 +32,7 @@
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 			} ).options,
 			collapseIcon: new Icon( {
-				name: 'arrow-down',
+				name: 'arrow',
 				additionalClassNames: 'cancel'
 			} ).options
 		},

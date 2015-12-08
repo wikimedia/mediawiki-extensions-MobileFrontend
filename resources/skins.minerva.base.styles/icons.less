@@ -8,3 +8,10 @@ span.mw-ui-icon {
 	// a block inside an inline element is never a good idea - effects line height of mobile diff bytesadded class
 	display: inline-block;
 }
+
+.open-block {
+	.mw-ui-icon-arrow:before {
+		-webkit-transform: scaleY(-1);
+		transform: scaleY(-1);
+	}
+}

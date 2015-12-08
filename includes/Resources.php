@@ -128,8 +128,7 @@ $wgMinervaStyleModules = array(
 		'position' => 'bottom',
 		'images' => array(
 			// toggling
-			'arrow-down' => 'images/icons/arrow-down.svg',
-			'arrow-up' => 'images/icons/arrow-up.svg',
+			'arrow' => 'images/icons/arrow.svg',
 
 			// page actions
 			'talk' => 'images/icons/talk.svg',

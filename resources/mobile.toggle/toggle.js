@@ -4,11 +4,11 @@
 		browser = M.require( 'mobile.browser/browser' ),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowUpOptions = {
-			name: 'arrow-up',
+			name: 'arrow',
 			additionalClassNames: 'indicator'
 		},
 		arrowDownOptions = {
-			name: 'arrow-down',
+			name: 'arrow',
 			additionalClassNames: 'indicator'
 		},
 		Icon = M.require( 'mobile.startup/Icon' );
