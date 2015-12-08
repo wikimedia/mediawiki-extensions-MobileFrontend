@@ -21,34 +21,37 @@ class SpecialUploads extends MobileSpecialPage {
 	 * @param string|null $par Username to get uploads from
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		// Anons don't get to see this page
-		$this->requireLogin( 'mobile-frontend-donate-image-anon' );
+		if ( ( $par === '' || $par === null ) && $this->getUser()->isAnon() ) {
+			// Anons don't get to see Special:Uploads
+			$this->requireLogin( 'mobile-frontend-donate-image-anon' );
+		} else {
+			// uploads by a particular user, i.e Special:Uploads/username, are shown even to anons
+			$this->setHeaders();
+			$output = $this->getOutput();
+			$output->addJsConfigVars(
+				'wgMFPhotoUploadEndpoint',
+				$this->getMFConfig()->get( 'MFPhotoUploadEndpoint' )
+			);
+			$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
-		$this->setHeaders();
-		$output = $this->getOutput();
-		$output->addJsConfigVars(
-			'wgMFPhotoUploadEndpoint',
-			$this->getMFConfig()->get( 'MFPhotoUploadEndpoint' )
-		);
-		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
-
-		if ( $par !== '' && $par !== null ) {
-			$user = User::newFromName( $par );
-			if ( !$user || $user->isAnon() ) {
-				$output->setStatusCode( 404 );
-				$html = MobileUI::contentElement(
-					MobileUI::errorBox(
-						$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse() )
-				);
+			if ( $par !== '' && $par !== null ) {
+				$user = User::newFromName( $par );
+				if ( !$user || $user->isAnon() ) {
+					$output->setStatusCode( 404 );
+					$html = MobileUI::contentElement(
+						MobileUI::errorBox(
+							$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse() )
+					);
+				} else {
+					$html = $this->getUserUploadsPageHtml( $user );
+				}
 			} else {
+				$user = $this->getUser();
+				// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 				$html = $this->getUserUploadsPageHtml( $user );
 			}
-		} else {
-			$user = $this->getUser();
-			// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
-			$html = $this->getUserUploadsPageHtml( $user );
+			$output->addHTML( $html );
 		}
-		$output->addHTML( $html );
 	}
 	/**
 	 * Generates HTML for the uploads page for the passed user.
