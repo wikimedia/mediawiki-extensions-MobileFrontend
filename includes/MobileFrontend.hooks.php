@@ -307,6 +307,30 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * PageRenderingHash hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PageRenderingHash
+	 *
+	 * @param string &$confstr Reference to a hash key string which can be modified
+	 * @param User $user User object that is requesting the page
+	 * @param array &$forOptions Array of options used to generate the $confstr hash key
+	 */
+	public static function onPageRenderingHash( &$confstr, User $user, &$forOptions ) {
+		$context = MobileContext::singleton();
+
+		if ( !$context->shouldDisplayMobileView() ) {
+			return;
+		}
+
+		if ( $context->getNetSpeed() !== MobileContext::NETSPEED_FAST ) {
+			$confstr .= '!light';
+		}
+
+		if ( $context->imagesDisabled() ) {
+			$confstr .= '!noimg';
+		}
+	}
+
+	/**
 	 * SkinPreloadExistence hook handler
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinPreloadExistence
