@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_d95bf155",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-08T15:32:58Z",
+      "side": 1,
+      "message": "I\u0027d change Task to Bug and put this line above the Change-id line so that the patch is associated with the phabricator task.",
+      "revId": "557131cff29cd93b7a9d376ab4707624db260b31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_993579f6",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-08T15:32:58Z",
+      "side": 1,
+      "message": "I\u0027d remove the link to phab and just explain in a few words above why we\u0027re using the same icon.",
+      "revId": "557131cff29cd93b7a9d376ab4707624db260b31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_593f01d4",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-08T15:32:58Z",
+      "side": 1,
+      "message": "Here also, I\u0027d remove the link to the phab task because the commit message already has it.",
+      "revId": "557131cff29cd93b7a9d376ab4707624db260b31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
