@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_95069fd0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-08T10:59:27Z",
+      "side": 1,
+      "message": "typo: over -\u003e other",
+      "revId": "61a889c5ff213232af8eafc9d2c2e4074ef582ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
