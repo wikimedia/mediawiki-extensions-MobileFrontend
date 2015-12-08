@@ -1676,3 +1676,8 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 		'resources/mobile.special.history.styles/default.less',
 	),
 );
+
+// Don't load the mw.notification style in minerva, they use mobile.toast
+$wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
+	'mediawiki.notification' => 'resources/mobile.toast/toast.less',
+);
