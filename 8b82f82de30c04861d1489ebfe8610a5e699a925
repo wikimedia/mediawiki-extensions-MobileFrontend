@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_23ac5d84",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-09T16:59:48Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to not comment out the warning? ^ Gadgets?",
+      "revId": "8b82f82de30c04861d1489ebfe8610a5e699a925",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_8390b147",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-09T16:59:48Z",
+      "side": 1,
+      "message": "Gadgets?",
+      "revId": "8b82f82de30c04861d1489ebfe8610a5e699a925",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
