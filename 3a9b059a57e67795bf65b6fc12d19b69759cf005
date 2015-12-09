@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_e1d39d03",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T18:49:43Z",
+      "side": 1,
+      "message": "This is actually not needed since open-block already exists",
+      "revId": "3a9b059a57e67795bf65b6fc12d19b69759cf005",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_a105a57e",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T18:49:43Z",
+      "side": 1,
+      "message": "The class is actually open-block looking at the code.",
+      "revId": "3a9b059a57e67795bf65b6fc12d19b69759cf005",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_8100a96e",
+        "filename": "resources/skins.minerva.base.styles/icons.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T18:49:43Z",
+      "side": 1,
+      "message": "The class .ui-icon-vertical-mirror is not needed here as the open-block class already distinguishes it.",
+      "revId": "3a9b059a57e67795bf65b6fc12d19b69759cf005",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
