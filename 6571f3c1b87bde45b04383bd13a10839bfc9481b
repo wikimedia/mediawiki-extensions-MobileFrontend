@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_e635f3d8",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T17:23:46Z",
+      "side": 1,
+      "message": "This will never expire and thus user can be tracked.\nJust use M.require( \u0027user\u0027 ).getSessionId which should be valid for whole session\n\n(see https://gerrit.wikimedia.org/r/#/c/255796/10/resources/mobile.user/user.js)",
+      "revId": "6571f3c1b87bde45b04383bd13a10839bfc9481b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_e38405b8",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T17:23:46Z",
+      "side": 1,
+      "message": "Ideally this should be in a config so we can easily turn off if there is any problems with the schema.",
+      "revId": "6571f3c1b87bde45b04383bd13a10839bfc9481b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_a62ffb84",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T17:23:46Z",
+      "side": 1,
+      "message": "This event needs to be sent for both A/B to be more confident that this is working.",
+      "revId": "6571f3c1b87bde45b04383bd13a10839bfc9481b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_6649036a",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-09T17:23:46Z",
+      "side": 1,
+      "message": "will need updating as this need to run for B too",
+      "revId": "6571f3c1b87bde45b04383bd13a10839bfc9481b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
