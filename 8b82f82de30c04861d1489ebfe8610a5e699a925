@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ead036b_233f7dd5",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-09T17:16:10Z",
+      "side": 1,
+      "message": "ah, copy paste :P\n\nYes, but not now :) For wmf deployed extension, we comment out this block to don#t fill up our logs with warning messages. Once all extensions are converted and wmf config uses wfLoadExtensions, instead of requiring this php entry point, we can uncomment this warning in a separate change :)",
+      "parentUuid": "8ead036b_23ac5d84",
+      "revId": "8b82f82de30c04861d1489ebfe8610a5e699a925",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ead036b_8390b147",
         "filename": "MobileFrontend.php",
         "patchSetId": 1
