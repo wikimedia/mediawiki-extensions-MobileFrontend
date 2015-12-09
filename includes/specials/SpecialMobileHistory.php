@@ -89,6 +89,24 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	}
 
 	/**
+	 * Checks, if the given title supports the use of SpecialMobileHistory.
+	 *
+	 * @param Title $title The title to check
+	 * @return boolean True, if SpecialMobileHistory can be used, false otherwise
+	 */
+	public static function shouldUseSpecialHistory( Title $title ) {
+		$contentHandler = ContentHandler::getForTitle( $title );
+		$actionOverrides = $contentHandler->getActionOverrides();
+
+		// if history is overwritten, assume, that SpecialMobileHistory can't handle them
+		if ( isset( $actionOverrides['history'] ) ) {
+			// and return false
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * Render the special page
 	 * @param string $par parameter as subpage of specialpage
 	 */
@@ -104,6 +122,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
+				// make sure, the content of the page supports the default history page
+				if ( !self::shouldUseSpecialHistory( $this->title ) ) {
+					// and if not, redirect to the default history action
+					$out->redirect( $this->title->getLocalUrl( array( 'action' => 'history' ) ) );
+					return;
+				}
+
 				$this->addModules();
 				$this->getOutput()->addHtml(
 					Html::openElement( 'div', array( 'class' => 'history content-unstyled' ) )

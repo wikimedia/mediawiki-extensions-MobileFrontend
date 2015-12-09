@@ -419,12 +419,18 @@ class MobileContext extends ContextSource {
 	 * If a page has an equivalent but different mobile page redirect to it
 	 */
 	private function redirectMobileEnabledPages() {
+		$request = $this->getRequest();
+		$title = $this->getTitle();
+
 		$redirectUrl = null;
-		if ( $this->getRequest()->getCheck( 'diff' ) ) {
+		if ( $request->getCheck( 'diff' ) ) {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop();
 		}
 
-		if ( $this->getRequest()->getVal( 'action' ) === 'history' ) {
+		if ( $request->getVal( 'action' ) === 'history' &&
+			// check, if SpecialMobileHistory supports the history action set for this title
+			// content model
+			SpecialMobileHistory::shouldUseSpecialHistory( $title ) ) {
 			$values = $this->getRequest()->getValues();
 			// avoid infinite redirect loops
 			unset( $values['action'] );
