@@ -82,9 +82,8 @@
 		/**
 		 * Whether the user is bucketed.
 		 * @returns {Boolean}
-		 * @private
 		 */
-		_isUserInBucket: function () {
+		isUserInBucket: function () {
 			if ( mw.config.get( 'wgMFIgnoreEventLoggingBucketing' ) ) {
 				return true;
 			} else if ( this._isInBucket === undefined ) {
@@ -127,7 +126,7 @@
 			var deferred = $.Deferred();
 
 			// Log event if logging schema is not sampled or if user is in the bucket
-			if ( !this.isSampled || this._isUserInBucket() ) {
+			if ( !this.isSampled || this.isUserInBucket() ) {
 				mw.track( 'event.' + this.name, $.extend( {}, this.defaults, data ) );
 
 				return deferred.resolve();

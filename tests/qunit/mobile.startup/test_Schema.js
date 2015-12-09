@@ -53,13 +53,13 @@
 
 		// Default sampling rate is 0.5, isSampled is true, and Math.random returns 0.4
 		this.sandbox.stub( Math, 'random' ).returns( 0.4 );
-		assert.strictEqual( testSchema._isUserInBucket(), true, 'user is in bucket' );
+		assert.strictEqual( testSchema.isUserInBucket(), true, 'user is in bucket' );
 
 		// Default sampling rate is 0.5, isSampled is true, and Math.random returns 0.6
 		testSchema = new TestSchema();
 		Math.random.restore();
 		this.sandbox.stub( Math, 'random' ).returns( 0.6 );
-		assert.strictEqual( testSchema._isUserInBucket(), false, 'user is not in bucket' );
+		assert.strictEqual( testSchema.isUserInBucket(), false, 'user is not in bucket' );
 
 		// Default sampling rate is 0.5, isSampled is false (default), and Math.random returns 0.4
 		TestSchema = Schema.extend( {
@@ -68,7 +68,7 @@
 		testSchema = new TestSchema();
 		Math.random.restore();
 		this.sandbox.stub( Math, 'random' ).returns( 0.4 );
-		assert.strictEqual( testSchema._isUserInBucket(), false, 'user is not in bucket' );
+		assert.strictEqual( testSchema.isUserInBucket(), false, 'user is not in bucket' );
 	} );
 
 	QUnit.test( '#log', 2, function ( assert ) {
@@ -90,7 +90,7 @@
 		} );
 
 		schema.isSampled = true;
-		this.sandbox.stub( schema, '_isUserInBucket' ).returns( false );
+		this.sandbox.stub( schema, 'isUserInBucket' ).returns( false );
 
 		schema.log( event ).fail( function () {
 			assert.strictEqual(

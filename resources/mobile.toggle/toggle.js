@@ -11,7 +11,8 @@
 			name: 'arrow',
 			additionalClassNames: 'indicator'
 		},
-		Icon = M.require( 'mobile.startup/Icon' );
+		Icon = M.require( 'mobile.startup/Icon' ),
+		$window = $( window );
 
 	/**
 	 * A class for enabling toggling
@@ -24,10 +25,10 @@
 	 * @extends OO.EventEmitter
 	 */
 	function Toggler( $container, prefix, page, schema ) {
+		this.schema = schema;
 		OO.EventEmitter.call( this );
 		this._enable( $container, prefix, page );
 		if ( schema ) {
-			this.schema = schema;
 			this.connect( this, {
 				toggled: 'onToggle'
 			} );
@@ -239,10 +240,13 @@
 	 * @private
 	 */
 	Toggler.prototype._enable = function ( $container, prefix, page ) {
-		var tagName, expandSections, indicator,
+		var tagName, expandSections, indicator, inSample,
 			$firstHeading,
 			self = this,
-			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
+			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' ),
+			shouldLogScrolledIntoView = false,
+			experiments = mw.config.get( 'wgMFExperiments' ),
+			isTestA = false;
 
 		// Also allow .section-heading if some extensions like Wikibase
 		// want to toggle other headlines than direct descendants of $container.
@@ -255,6 +259,20 @@
 		}
 		expandSections = !collapseSectionsByDefault ||
 			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
+
+		// A/B test to measure the impact of section collapsing
+		if ( self.schema && self.schema.isUserInBucket() && experiments.sectionCollapsing ) {
+			inSample = mw.experiments.getBucket( experiments.sectionCollapsing, mw.user.sessionId() ) === 'A';
+
+			// Bucketed users who are in stable and using a small screen device
+			// will see expanded sections by default
+			// @see T120292
+			if ( inSample && context.getMode() === 'stable' && !browser.isWideScreen() ) {
+				expandSections = true;
+				shouldLogScrolledIntoView = true;
+				isTestA = true;
+			}
+		}
 
 		$container.find( tagName ).each( function ( i ) {
 			var $heading = $( this ),
@@ -298,7 +316,7 @@
 					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					self.toggle.call( self, $heading );
 				}
-
+				logWhenHeadingIsScrolledIntoView( $heading, i, isTestA );
 			}
 		} );
 
@@ -329,6 +347,58 @@
 			if ( internalRedirectHash ) {
 				window.location.hash = internalRedirectHash;
 				self.reveal( internalRedirectHash, $container );
+			}
+		}
+
+		/**
+		 * Check if at least half of the element's height and half of its width are in viewport
+		 *
+		 * @method
+		 * @param {jQuery.Object} $el - element that's being tested
+		 * @return {Boolean}
+		 */
+		function isElementInViewport( $el ) {
+			var windowHeight = $window.height(),
+				windowWidth = $window.width(),
+				windowScrollLeft = $window.scrollLeft(),
+				windowScrollTop = $window.scrollTop(),
+				elHeight = $el.height(),
+				elWidth = $el.width(),
+				elOffset = $el.offset();
+
+			return (
+				( windowScrollTop + windowHeight >= elOffset.top + elHeight / 2 ) &&
+				( windowScrollLeft + windowWidth >= elOffset.left + elWidth / 2 ) &&
+				( windowScrollTop <= elOffset.top + elHeight / 2 )
+			);
+		}
+
+		/**
+		 * Log when the heading is scrolled into the viewport
+		 *
+		 * @param {jQuery.Object} $heading
+		 * @param {Number} sectionId that was scrolled into the viewport
+		 * @param {Boolean} isTestA whether the user is in the A bucket
+		 */
+		function logWhenHeadingIsScrolledIntoView( $heading, sectionId, isTestA ) {
+			/**
+			 * Log when a heading is seen by the user
+			 * @ignore
+			 */
+			function log() {
+				if ( isElementInViewport( $heading ) ) {
+					$window.off( 'scroll.' + $heading.attr( 'id' ), log );
+					self.schema.log( {
+						eventName: 'scrolled-into-view',
+						isTestA: isTestA,
+						section: sectionId
+					} );
+				}
+			}
+
+			if ( self.schema ) {
+				$window.on( 'scroll.' + $heading.attr( 'id' ), $.debounce( 250, log ) );
+				log();
 			}
 		}
 

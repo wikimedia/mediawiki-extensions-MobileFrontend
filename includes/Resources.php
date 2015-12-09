@@ -922,7 +922,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toggle' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.settings',
-			// uses util.js
+			// uses util.js and jquery.throttle-debounce
 			'mobile.startup',
 		),
 		'styles' => array(

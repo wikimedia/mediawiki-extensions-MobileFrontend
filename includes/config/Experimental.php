@@ -28,6 +28,15 @@ $wgMFExperiments = array(
 			'A' => 0.03,
 		),
 	),
+	// A/B test that measures the impact of section collapsing by default
+	'sectionCollapsing' => array(
+		'name' => 'sectionCollapsing',
+		'enabled' => false,
+		'buckets' => array(
+			'control' => 0.5,
+			'A' => 0.5,
+		),
+	),
 );
 
 /**
