@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_66b263e6",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1823,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-12-09T17:51:42Z",
+      "side": 1,
+      "message": "Please remove the , from here leaving just }",
+      "revId": "8c7bbf81c7e9eecaf987f1314ea63428a0f874bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
