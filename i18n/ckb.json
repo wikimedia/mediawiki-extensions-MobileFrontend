@@ -55,5 +55,6 @@
 	"nearby": "ئەو پەڕانەی نزیکی تۆن",
 	"right-mf-uploadbutton": "بەکارھێنانی دوگمەی بارکردن لە پەڕەکانی مۆبایلدا",
 	"tag-mobile_edit": "بە مۆبایل دەستکاری کراوە",
-	"tag-mobile_web_edit": "بە وێبی مۆبایل دەستکاری کراوە"
+	"tag-mobile_web_edit": "بە وێبی مۆبایل دەستکاری کراوە",
+	"mobile-frontend-pageaction-edit-tooltip": "بەشی پێشەکیی ئەم پەڕەیە دەستکاری بکە."
 }

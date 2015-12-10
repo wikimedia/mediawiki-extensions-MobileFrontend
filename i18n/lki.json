@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hosseinblue"
+			"Hosseinblue",
+			"Arash71",
+			"Lakzon"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "بدون خلاصه ویرایش",
@@ -27,7 +29,9 @@
 	"mobile-frontend-view": "سئرکردن موبایلی",
 	"mobile-frontend-view-desktop": "دستکتاپ",
 	"mobile-frontend-view-mobile": "موبایل",
-	"tag-mobile_edit": "دۀسکاری مویایلی",
+	"mobile-frontend-watchlist-filter-articles": "وةڵگةل",
+	"tag-mobile_edit": "دةسکاری مویایلی",
 	"tag-mobile_web_edit": "دۀسکاری وۀ مرورگر تلفن همراه",
-	"mobile-frontend-pageaction-edit-tooltip": "دۀسکاری بۀخش آغازین ئئ وۀلگۀ"
+	"mobile-frontend-pageaction-edit-tooltip": "دۀسکاری بۀخش آغازین ئئ وۀلگۀ",
+	"mobile-frontend-meta-data-issues-categories": "دةربارة ئئ رده/ڕِزگ"
 }

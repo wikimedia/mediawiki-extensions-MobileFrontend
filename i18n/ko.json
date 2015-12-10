@@ -312,7 +312,7 @@
 	"mobile-frontend-talk-reply-success": "답글이 성공적으로 토론 문서에 저장되었습니다.",
 	"mobile-frontend-talk-topic-feedback": "새 주제가 토론 문서에 추가되었습니다!",
 	"mobile-frontend-talk-topic-error": "알 수 없는 이유로 인해 주제를 추가할 수 없습니다.",
-	"mobile-frontend-talk-topic-error-protected": "이 토론 문서를 잠겨 있으며, 당신은 여기에 주제를 추가할 원한이 없습니다.",
+	"mobile-frontend-talk-topic-error-protected": "이 토론 문서를 잠겨 있으며, 당신은 여기에 주제를 추가할 권한이 없습니다.",
 	"mobile-frontend-talk-topic-error-permission": "주제를 추가할 수 없습니다. 당신은 문서를 편집할 권한이 없습니다.",
 	"mobile-frontend-talk-topic-error-spam": "주제에 스팸 부분이 포함되어 있기 때문에 거부되었습니다.",
 	"mobile-frontend-talk-topic-error-badtoken": "서버에 오류가 있습니다. 편집을 저장할 수 없습니다. 이 페이지를 다시 불러와보세요.",
