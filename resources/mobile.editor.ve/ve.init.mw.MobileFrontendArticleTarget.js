@@ -140,9 +140,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 /*
  * FIXME: @inheritdoc once this file is in the right repo
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceReady = function () {
+ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.onSurfaceReady.apply( this, arguments );
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
 
 	var surface = this.getSurface();
 
