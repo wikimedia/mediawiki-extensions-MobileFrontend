@@ -229,7 +229,11 @@
 				// FIXME: not unique if multiple Nearby objects on same page
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
 			} ).on( 'click', function () {
-				window.location.hash = $( this ).attr( 'id' );
+				// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
+				// then set hash to clicked element
+				if ( !hash.match( /^(#\/page|#\/coord)/i ) ) {
+					window.location.hash = $( this ).attr( 'id' );
+				}
 			} );
 
 			// Restore the offset
