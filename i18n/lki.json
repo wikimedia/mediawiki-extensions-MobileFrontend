@@ -6,6 +6,7 @@
 			"Lakzon"
 		]
 	},
+	"beta-feature-minerva-description": "ساختن پوستهٔ مورد استفاده در دستگاه‌های تلفن همراه پوستهٔ دسکتاپ قابل انتخاب تحت تب ظاهری \"{{int:prefs-rendering}}\" ترجیحات.",
 	"mobile-frontend-changeslist-nocomment": "بدون خلاصه ویرایش",
 	"mobile-frontend-copyright": " محتوایۀل هانإ ژئرنظر اجازه‌نامهٔ $1 مۀگۀر یۀگإ خلاف یۀ بوشرئ/ذکر بو",
 	"mobile-frontend-editor-edit": "دۀسکاری",
@@ -13,9 +14,10 @@
 	"mobile-frontend-home-button": "ماڵ",
 	"mobile-frontend-language-article-heading": "وۀ زوونئ تر بخوۀن",
 	"mobile-frontend-last-modified-date": "آخرین دۀسکاری $1، وۀ $2",
-	"mobile-frontend-main-menu-account-create": "اکانتئ دورس کۀ",
+	"mobile-frontend-main-menu-account-create": "حساووئ أرا ووژتان بِسازِن",
 	"mobile-frontend-main-menu-button-tooltip": "وازکردن منو اصلی",
 	"mobile-frontend-main-menu-login": "نؤم هۀتن",
+	"mobile-frontend-main-menu-logout": "دةرچئن/خروج",
 	"mobile-frontend-main-menu-nearby": "نۀزیکی",
 	"mobile-frontend-main-menu-settings": "تنظیمۀل",
 	"mobile-frontend-main-menu-watchlist": "لیست پی‌گیریۀل",

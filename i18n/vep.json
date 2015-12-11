@@ -4,9 +4,27 @@
 			"Игорь Бродский"
 		]
 	},
+	"mobile-frontend-copyright": "südäiolend kävutadas $1-licenzijan mödhe, ku ei ole ozutadud toižin.",
+	"mobile-frontend-editor-edit": "Redaktiruida",
 	"mobile-frontend-home-button": "Pälehtpolele",
+	"mobile-frontend-language-article-heading": "Lugekat toižel kelel",
+	"mobile-frontend-last-modified-date": "Jäl'gmäine redakcii om olnu kunpäiväl $1, aigal $2",
+	"mobile-frontend-main-menu-button-tooltip": "Avaita pämenü",
+	"mobile-frontend-main-menu-login": "Kirjutadas sistemha",
+	"mobile-frontend-main-menu-nearby": "Läheli",
+	"mobile-frontend-main-menu-settings": "Järgendused",
+	"mobile-frontend-main-menu-watchlist": "Kaclendnimikirjutez",
 	"mobile-frontend-news-items": "Uzištusiš",
 	"mobile-frontend-password": "Peitsana:",
+	"mobile-frontend-placeholder": "Ectä {{SITENAME}}-saitaspäi",
+	"mobile-frontend-privacy-link-text": "Konfidencialižuz",
+	"mobile-frontend-random-button": "Statjaline",
 	"mobile-frontend-search-submit": "Tehta",
-	"mobile-frontend-view": "Mobiline versii"
+	"mobile-frontend-terms-text": "Kävutamižen arvoimižed",
+	"mobile-frontend-view": "Mobiline versii",
+	"mobile-frontend-view-desktop": "Radlaud",
+	"mobile-frontend-view-mobile": "Mobiline",
+	"tag-mobile_edit": "Redakcii mobiližes ladimespäi",
+	"tag-mobile_web_edit": "Redaktiruind saitan mobiližen versijan kal't",
+	"mobile-frontend-pageaction-edit-tooltip": "Redaktiruida necen lehtpolen päpalad"
 }
