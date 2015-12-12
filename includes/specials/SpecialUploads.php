@@ -32,21 +32,27 @@ class SpecialUploads extends MobileSpecialPage {
 				'wgMFPhotoUploadEndpoint',
 				$this->getMFConfig()->get( 'MFPhotoUploadEndpoint' )
 			);
-			$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
 			if ( $par !== '' && $par !== null ) {
 				$user = User::newFromName( $par );
 				if ( !$user || $user->isAnon() ) {
+					$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title-username', $par ) );
 					$output->setStatusCode( 404 );
 					$html = MobileUI::contentElement(
 						MobileUI::errorBox(
-							$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse() )
+							$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par ) )
 					);
 				} else {
+					if ( $user->equals( $this->getUser() ) ) {
+						$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title-you' ) );
+					} else {
+						$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title-username', $par ) );
+					}
 					$html = $this->getUserUploadsPageHtml( $user );
 				}
 			} else {
 				$user = $this->getUser();
+				$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title-you' ) );
 				// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 				$html = $this->getUserUploadsPageHtml( $user );
 			}
