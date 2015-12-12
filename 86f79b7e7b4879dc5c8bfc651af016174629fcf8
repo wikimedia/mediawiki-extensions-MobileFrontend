@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_b4b96e2b",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2015-12-12T05:06:45Z",
+      "side": 1,
+      "message": "A \u0027-\u0027 or \u0027by\u0027 after \u0027Uploads\u0027 would be better to separate uploads from username.",
+      "revId": "86f79b7e7b4879dc5c8bfc651af016174629fcf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
