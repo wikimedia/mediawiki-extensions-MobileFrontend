@@ -889,9 +889,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toast' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
+			'mediawiki.notification'
 		),
 		'scripts' => array(
-			'resources/mobile.toast/ToastDrawer.js',
 			'resources/mobile.toast/toast.js',
 		),
 		'skinStyles' => array(

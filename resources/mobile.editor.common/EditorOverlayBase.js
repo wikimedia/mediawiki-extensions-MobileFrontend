@@ -214,7 +214,7 @@
 		 * @param {String} text Text of message to display to user
 		 */
 		reportError: function ( text ) {
-			toast.show( text, 'toast error' );
+			toast.show( text, 'error' );
 		},
 		/**
 		 * Prepares the penultimate screen before saving.

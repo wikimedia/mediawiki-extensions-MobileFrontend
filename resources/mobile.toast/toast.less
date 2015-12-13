@@ -24,9 +24,10 @@
 // </div>
 //
 // Styleguide 3.1.
-.mw-notification-area,
+.mw-notification,
 .toast,
 .drawer {
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -38,14 +39,14 @@
 	// don't use visibility: hidden in old browsers that don't support animations
 	display: none;
 
-	&.visible {
+	&.visible, &.mw-notification-visible {
 		display: block;
 	}
 }
 
-.mw-notification-area,
+
 .animations {
-	.toast,
+	.mw-notification,
 	.drawer {
 		@duration: .25s;
 		display: block;
@@ -60,7 +61,7 @@
 		opacity: 0;
 
 		// Only apply the transition when an animation is needed (when drawer/toast hidden/shown)
-		&.animated {
+		&.animated, &.mw-notification-tag-toast {
 			// delay visibility transition to make other transitions visible
 			// http://fvsch.com/code/transition-fade/test5.html
 			// need to assign to a temporary variable to preserve commas
@@ -69,7 +70,7 @@
 			.transition-transform( @transition );
 		}
 
-		&.visible {
+		&.visible, &.mw-notification-visible {
 			bottom: 0;
 			// need to assign to a temporary variable to preserve commas
 			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
@@ -82,7 +83,7 @@
 	}
 }
 
-.mw-notification-area,
+.mw-notification,
 .toast {
 	font-size: .9em;
 	padding: .9em 1em;
@@ -103,7 +104,7 @@
 	// </div>
 	//
 	// Styleguide 3.2.
-	&.error {
+	&.mw-notification-type-error {
 		.background-image('images/error.png');
 		background-position: 16px 50%;
 		background-repeat: no-repeat;
@@ -121,8 +122,9 @@
 	}
 }
 
-.mediawiki {
-	.mw-notification-area {
-		position: fixed;
-	}
+.mw-notification-area {
+	z-index: @z-indexOverOverlay;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }

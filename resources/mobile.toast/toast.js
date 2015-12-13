@@ -1,30 +1,15 @@
 ( function ( M, $ ) {
 	var Toast,
 		settingsKey = 'mobileFrontend/toast',
-		settings = M.require( 'mobile.settings/settings' ),
-		ToastDrawer = M.require( 'mobile.toast/ToastDrawer' );
+		settings = M.require( 'mobile.settings/settings' );
 
 	/**
-	 * Wrapper for one global ToastDrawer
+	 * Wrapper for one global Toast
 	 * @class
 	 */
 	Toast = function Toast() {
 		// FIXME: Use mw.requestIdleCallback, once it's available (T111456)
 		$( this._showPending() );
-	};
-
-	/**
-	 * Get a unique, global ToastDrawer object
-	 * @return {ToastDrawer}
-	 * @private
-	 * @method
-	 */
-	Toast.prototype._getToastDrawer = function () {
-		// check, if there is a ToastDrawer object already
-		if ( this.drawer === undefined ) {
-			this.drawer = new ToastDrawer();
-		}
-		return this.drawer;
 	};
 
 	/**
@@ -34,15 +19,20 @@
 	 * @param {String} cssClass CSS class to add to the element
 	 */
 	Toast.prototype.show = function ( msg, cssClass ) {
-		this._getToastDrawer().show( msg, cssClass );
+		this.notification = mw.notification.notify( msg, {
+			type: cssClass,
+			tag: 'toast'
+		} );
 	};
 
 	/**
-	 * Hide the ToastDrawer if it's visible.
+	 * Hide the Toast if it's visible.
 	 * @method
 	 */
 	Toast.prototype.hide = function () {
-		this._getToastDrawer().hide();
+		if ( this.notification !== undefined ) {
+			this.notification.close();
+		}
 	};
 
 	/**
@@ -77,7 +67,7 @@
 		var data = settings.get( settingsKey );
 		if ( data ) {
 			data = JSON.parse( data );
-			this._getToastDrawer().show( data.content, data.className );
+			this.show( data.content, data.className );
 			settings.remove( settingsKey );
 		}
 	};

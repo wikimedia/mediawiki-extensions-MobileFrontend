@@ -289,8 +289,7 @@
 							'mobile-frontend-editor-blocked-info-loggedin',
 							blockInfo.blockReason,
 							blockInfo.blockedBy
-						),
-						'toast'
+						)
 					);
 					ev.preventDefault();
 				} );
@@ -339,7 +338,7 @@
 	 */
 	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {
-			popup.show( mw.msg( msg ), 'toast' );
+			popup.show( mw.msg( msg ) );
 			ev.preventDefault();
 		} );
 	}
