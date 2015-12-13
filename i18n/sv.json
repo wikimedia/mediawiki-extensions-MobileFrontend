@@ -318,7 +318,7 @@
 	"mobile-frontend-thanked-notice": "$1 meddelades att du gillade {{GENDER:$2|hans|hennes|dennes}} redigering.",
 	"mobile-frontend-user-button-tooltip": "Visa mina meddelanden",
 	"mobile-frontend-user-newmessages": "Du har nya meddelanden på din diskussionssida",
-	"mobile-frontend-view": "Telefonformat",
+	"mobile-frontend-view": "Mobil vy",
 	"mobile-frontend-view-desktop": "Stationär dator",
 	"mobile-frontend-view-mobile": "Mobil",
 	"mobile-frontend-watchlist-a-z": "Lista",
