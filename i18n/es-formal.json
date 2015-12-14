@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Baffo"
+			"Baffo",
+			"Ajp529"
 		]
 	},
-	"mobile-frontend-talk-fullpage": "Leer como página wiki",
-	"mobile-frontend-userlogin-loggedin-register": "Usted se ha conectado como {{GENDER:$1|$1}}. \nUtilice el siguiente formulario para crear otro usuario."
+	"mobile-frontend-donate-image-title-username": "Subidos por $1",
+	"mobile-frontend-talk-fullpage": "Leer como página wiki"
 }

@@ -90,6 +90,8 @@
 	"mobile-frontend-donate-image-nouploads": "Aucun téléchargement.",
 	"mobile-frontend-donate-image-signup-action": "Connectez-vous pour partager vos fichiers média avec le monde entier.",
 	"mobile-frontend-donate-image-title": "Téléversements",
+	"mobile-frontend-donate-image-title-username": "Fichiers importés par $1",
+	"mobile-frontend-donate-image-title-you": "Fichiers importés par vous",
 	"mobile-frontend-donate-photo-first-upload-success": "Bravo! Merci pour votre première contribution!",
 	"mobile-frontend-donate-photo-upload-success": "Bravo! Votre image peut maintenant être utilisée sur {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Annuler",

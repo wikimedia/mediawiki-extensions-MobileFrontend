@@ -24,6 +24,8 @@
 	"mobile-frontend-diffview-title": "بدلونونه",
 	"mobile-frontend-disable-images": "په موبايل وېبځي انځورونه ناچارنول",
 	"mobile-frontend-donate-image-title": "پورته کېدنې",
+	"mobile-frontend-donate-image-title-username": "پورته کېدنې د $1 لخوا",
+	"mobile-frontend-donate-image-title-you": "ستاسې لخوا پورته کېدنې",
 	"mobile-frontend-drawer-cancel": "ناگارل",
 	"mobile-frontend-edit-login-action": "د سمولو لپاره غونډال ته ورننوځۍ.",
 	"mobile-frontend-editor-abusefilter-read-more": "نور لوستل",

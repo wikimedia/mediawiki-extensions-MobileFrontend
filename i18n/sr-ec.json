@@ -32,6 +32,8 @@
 	"mobile-frontend-donate-image-anon": "Пријавите се да бисте видели ову страницу.",
 	"mobile-frontend-donate-image-heading": "Ваши скорашњи доприноси",
 	"mobile-frontend-donate-image-title": "Отпремања",
+	"mobile-frontend-donate-image-title-username": "Отпремања $1",
+	"mobile-frontend-donate-image-title-you": "Ваша отпремања",
 	"mobile-frontend-drawer-cancel": "Откажи",
 	"mobile-frontend-pointer-dismiss": "Одбаци",
 	"mobile-frontend-edit-login-action": "<strong>Унапредите {{SITENAME}}.</strong><br />Пријавите се да би уређивали.",

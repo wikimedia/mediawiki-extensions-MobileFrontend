@@ -19,6 +19,8 @@
 	"mobile-frontend-dismiss-notification": "ఈ చాటింపును తొలగించు",
 	"mobile-frontend-donate-image-heading": "మీ ఇటీవలి రచనలు",
 	"mobile-frontend-donate-image-title": "ఎక్కింపులు",
+	"mobile-frontend-donate-image-title-username": "$1 ఎక్కింపులు",
+	"mobile-frontend-donate-image-title-you": "మీ ఎక్కింపులు",
 	"mobile-frontend-donate-photo-first-upload-success": "అయిపోయింది! మీ మొదటి సమర్పణకు నెనరులు!",
 	"mobile-frontend-donate-photo-upload-success": "అయిపోయింది! ఇక మీ బొమ్మను {{SITENAME}} లో వాడవచ్చు!",
 	"mobile-frontend-drawer-cancel": "రద్దుచేయి",
