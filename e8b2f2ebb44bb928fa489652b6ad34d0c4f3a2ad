@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_b3bf3ba7",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 889,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-14T12:49:09Z",
+      "side": 1,
+      "message": "If this uses mw.notification, you should add mediawiki.notification as a dependency of this module :)",
+      "revId": "e8b2f2ebb44bb928fa489652b6ad34d0c4f3a2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_73d9c32b",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-14T12:49:09Z",
+      "side": 1,
+      "message": "ehhh, don\u0027t do this, see my comment in Resources.php",
+      "revId": "e8b2f2ebb44bb928fa489652b6ad34d0c4f3a2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d3d3d703",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-14T12:49:09Z",
+      "side": 1,
+      "message": "same as before, this shouldn\u0027t be needed",
+      "revId": "e8b2f2ebb44bb928fa489652b6ad34d0c4f3a2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f3f3739a",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-14T12:49:09Z",
+      "side": 1,
+      "message": "what if the toast is already closed? Does .close() work on already closed notifications?",
+      "revId": "e8b2f2ebb44bb928fa489652b6ad34d0c4f3a2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
