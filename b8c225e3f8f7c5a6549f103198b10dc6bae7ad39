@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_c2cbfa73",
+        "filename": "tests/qunit/mobile.editor.overlay/test_EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-14T21:28:24Z",
+      "side": 0,
+      "message": "This line doesn\u0027t need removing",
+      "revId": "b8c225e3f8f7c5a6549f103198b10dc6bae7ad39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

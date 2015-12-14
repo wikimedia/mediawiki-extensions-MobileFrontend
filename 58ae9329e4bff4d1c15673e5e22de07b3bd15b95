@@ -16,6 +16,40 @@
       "revId": "58ae9329e4bff4d1c15673e5e22de07b3bd15b95",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_02d2722c",
+        "filename": "resources/mobile.toast/toast.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-14T21:28:24Z",
+      "side": 1,
+      "message": "Please avoid skin specific classes that do not have semantic names.",
+      "revId": "58ae9329e4bff4d1c15673e5e22de07b3bd15b95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_e2c87679",
+        "filename": "resources/mobile.toast/toast.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-14T21:28:24Z",
+      "side": 1,
+      "message": "Unrelated to this patch but do we know why this class is needed? Please consider removing it rather than adding more styles nesting inside it.",
+      "revId": "58ae9329e4bff4d1c15673e5e22de07b3bd15b95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
