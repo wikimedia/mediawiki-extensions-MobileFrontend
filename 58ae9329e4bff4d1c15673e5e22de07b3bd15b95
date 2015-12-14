@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_b682c8cb",
+        "filename": "resources/mobile.toast/toast.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2015-12-14T16:49:21Z",
+      "side": 1,
+      "message": "mediawiki.notification has a check for already closed notifications - \n\"if ( !this.isOpen ) {return}\"\nso the above call for close is safe.",
+      "revId": "58ae9329e4bff4d1c15673e5e22de07b3bd15b95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
