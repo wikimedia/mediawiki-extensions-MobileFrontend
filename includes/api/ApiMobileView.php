@@ -473,9 +473,11 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		$latest = $wp->getLatest();
+		// Use page_touched so template updates invalidate cache
+		$touched = $wp->getTouched();
 		if ( $this->file ) {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
-				$latest, $this->noTransform, $this->file->getSha1(), $this->variant );
+				$touched, $this->noTransform, $this->file->getSha1(), $this->variant );
 			$cacheExpiry = 3600;
 		} else {
 			if ( !$latest ) {
@@ -490,7 +492,7 @@ class ApiMobileView extends ApiBase {
 				'mobileview',
 				self::CACHE_VERSION,
 				$noImages,
-				$latest,
+				$touched,
 				$this->noTransform,
 				$parserCacheKey
 			);
