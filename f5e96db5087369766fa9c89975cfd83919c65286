@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_8d677322",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-14T23:45:42Z",
+      "side": 1,
+      "message": "Is there any reason we still have his?",
+      "revId": "f5e96db5087369766fa9c89975cfd83919c65286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_ad6caf06",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-14T23:45:42Z",
+      "side": 1,
+      "message": "Should this not check touched?",
+      "revId": "f5e96db5087369766fa9c89975cfd83919c65286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
