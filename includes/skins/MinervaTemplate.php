@@ -245,6 +245,7 @@ class MinervaTemplate extends BaseTemplate {
 		$internalBanner = $data[ 'internalBanner' ];
 		$preBodyText = isset( $data['prebodyhtml'] ) ? $data['prebodyhtml'] : '';
 		$headingHtml = isset( $data['headinghtml'] ) ? $data['headinghtml'] : '';
+		$postHeadingHtml = isset( $data['postheadinghtml'] ) ? $data['postheadinghtml'] : '';
 
 		if ( $internalBanner || $preBodyText || isset( $data['page_actions'] ) ) {
 			echo $preBodyText;
@@ -255,6 +256,7 @@ class MinervaTemplate extends BaseTemplate {
 					$this->renderPageActions( $data );
 				}
 				echo $headingHtml;
+				echo $postHeadingHtml;
 				echo $this->html( 'subtitle' );
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {

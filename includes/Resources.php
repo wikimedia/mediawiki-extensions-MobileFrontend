@@ -170,6 +170,12 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
+	'skins.minerva.beta.userpage.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'resources/skins.minerva.beta.userpage.styles/userpage.less',
+		)
+	),
+
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
 		'position' => 'bottom',
 		'class' => 'ResourceLoaderImageModule',

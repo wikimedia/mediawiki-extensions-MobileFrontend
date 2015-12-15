@@ -27,10 +27,11 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
+	 * @param string $mode mobile mode, i.e. stable or beta
 	 *
 	 * @return string
 	 */
-	public static function DOMParse( OutputPage $out ) {
+	public static function DOMParse( OutputPage $out, $mode ) {
 		$html = $out->getHTML();
 
 		$context = MobileContext::singleton();
@@ -60,7 +61,50 @@ class ExtMobileFrontend {
 
 		$contentHtml = $formatter->getText();
 
+		// If the page is a user page which has not been created, then let the
+		// user know about it with pretty graphics and different texts depending
+		// on whether the user is the owner of the page or not.
+		if ( $mode === 'beta' && $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
+			$pageUserId = User::idFromName( $title->getText() );
+			if ( $pageUserId && !$title->exists() ) {
+				$pageUser = User::newFromId( $pageUserId );
+				$contentHtml = ExtMobileFrontend::getUserPageContent(
+					$out, $pageUser );
+			}
+		}
+
 		return $contentHtml;
+	}
+
+	/**
+	 * Generate user page content for non-existent user pages
+	 *
+	 * @param OutputPage $output
+	 * @param User $pageUser owner of the user page
+	 * @return string
+	 */
+	public static function getUserPageContent( $output, $pageUser ) {
+		$context = MobileContext::singleton();
+		$pageUsername = $pageUser->getName();
+		// Is the current user viewing their own page?
+		$isCurrentUser = $output->getUser()->getName() === $pageUsername;
+
+		$data['ctaHeading'] = $isCurrentUser ?
+			$context->msg( 'mobile-frontend-user-page-no-owner-page-yet' )->text() :
+			$context->msg( 'mobile-frontend-user-page-no-page-yet', $pageUsername )->parse();
+		$data['ctaDescription'] = $isCurrentUser ?
+			$context->msg( 'mobile-frontend-user-page-describe-yourself' )->text() :
+			$context->msg( 'mobile-frontend-user-page-desired-action', $pageUsername )->parse();
+		$data['createPageLinkLabel'] = $isCurrentUser ?
+			$context->msg( 'mobile-frontend-user-page-create-owner-page-link-label' )->text() :
+			$context->msg(
+				'mobile-frontend-user-page-create-user-page-link-label',
+				$pageUser->getUserPage()->getBaseTitle()
+			)->parse();
+		$data['createPageLinkAdditionalClasses'] = $isCurrentUser ? 'mw-ui-button' : '';
+
+		$templateParser = new TemplateParser( __DIR__ );
+		return $templateParser->processTemplate( 'user_page_cta', $data );
 	}
 
 	/**

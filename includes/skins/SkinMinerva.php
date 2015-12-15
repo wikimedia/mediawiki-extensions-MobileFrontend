@@ -56,7 +56,7 @@ class SkinMinerva extends SkinTemplate {
 			// $out->mBodytext is overwritten, we avoid including the mw-content-text div.
 			// FIXME: Git rid of our content div and consolidate this line with the other
 			// isMobileMode lines below. This will bring us more in line with core DOM.
-			$html = ExtMobileFrontend::DOMParse( $out );
+			$html = ExtMobileFrontend::DOMParse( $out, $this->mode );
 		}
 
 		// Generate skin template
