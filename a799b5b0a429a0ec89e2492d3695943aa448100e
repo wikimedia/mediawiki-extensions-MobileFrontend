@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_c1a44f07",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be a skin.* module?",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_81ae57e3",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "why does this need to be public?",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c1aa0f82",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "for me, that looks like too much logic for a class, that\u0027s called \"Template\". Couldn\u0027t we move the generation of the content to SkinMinervaBeta and add the result as a template variable, which is only processed by this function?",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c191af53",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "use triple equals (\u003d\u003d\u003d) instead of double equals, or add a comment why double equals are needed here. See our coding conventions:\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Equality_operators\n\nBtw.: Title has a method called \"inNamespace\" which is exactly what you want here:\nhttps://doc.wikimedia.org/mediawiki-core/master/php/classTitle.html#a17bd50bacfacf339375970d15860861a",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_219f6357",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "If the doc doesn\u0027t lie, User::getRegistration can return a boolean or null value, too[1], does this work with wfTimestamp without any problems? And how does it look in the output?\n\n[1] https://doc.wikimedia.org/mediawiki-core/master/php/classUser.html#a3d09fd06dcfeb4f6ec4160ab4ebad7bd",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_a1b273e2",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "use $skin-\u003emsg() instead of wfMessage to get localized messages.",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_21c6834f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-15T21:15:53Z",
+      "side": 1,
+      "message": "same as in MinervaTemplateBeta",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
