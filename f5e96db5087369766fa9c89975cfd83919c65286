@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_6d4d579b",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-12-15T00:01:10Z",
+      "side": 1,
+      "message": "Its still used later on where you commented.",
+      "parentUuid": "6eaa8f54_8d677322",
+      "revId": "f5e96db5087369766fa9c89975cfd83919c65286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_ad6caf06",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-12-14T23:45:42Z",
       "side": 1,
       "message": "Should this not check touched?",
+      "revId": "f5e96db5087369766fa9c89975cfd83919c65286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_6d44776f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-12-15T00:01:10Z",
+      "side": 1,
+      "message": "That\u0027s checking whether the page still exists, so technically it seems correct to check for page_latest rather than page_touched, but the bug makes it seem like a race condition that I didn\u0027t want to mess with in this patch. And it doesn\u0027t affect the caching logic, so I left it alone.",
+      "parentUuid": "6eaa8f54_ad6caf06",
       "revId": "f5e96db5087369766fa9c89975cfd83919c65286",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
