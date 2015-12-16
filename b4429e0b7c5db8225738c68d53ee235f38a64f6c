@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_95e1abfd",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-16T22:57:37Z",
+      "side": 1,
+      "message": "This is skin specific so should be prefixed with skin.minerva and should be suffixed with styles since it only ships styles.\n\nThis will help us break out Minerva in future.",
+      "revId": "b4429e0b7c5db8225738c68d53ee235f38a64f6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_35131707",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-16T22:57:37Z",
+      "side": 1,
+      "message": "Accessing the skin from the template always feels icky.\nWouldn\u0027t it be better to just not set \u0027page_actions\u0027, $menu in SkinMinervaBeta ?",
+      "revId": "b4429e0b7c5db8225738c68d53ee235f38a64f6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d5d72327",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-16T22:57:37Z",
+      "side": 1,
+      "message": "Accessing the skin from the template always feels icky.\nWouldn\u0027t it be better to just not set secondary_actions in SkinMinervaBeta ?",
+      "revId": "b4429e0b7c5db8225738c68d53ee235f38a64f6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b527075f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-16T22:57:37Z",
+      "side": 1,
+      "message": "At first glance I thought this was a method on the skin inheriting from core. Maybe this could be clarified in the name as right now all it does is generate a user page.\n\nShould this go in a hook outside the skin or inside MobileFormatter? Is this a Minerva thing or a mobile skin thing?\nI\u0027m unclear with the answer for that right now but it has me wondering.\nWe are transforming the content we output so I wonder if it\u0027s better to do  that where we transform main page and normal pages for section toggling.",
+      "revId": "b4429e0b7c5db8225738c68d53ee235f38a64f6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d50163ba",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-16T22:57:37Z",
+      "side": 1,
+      "message": "Where is $data defined? Would it not be more readable to have a single\n$data \u003d array(\n\u0027ctaHeading\u0027 \u003d\u003e $this-\u003emsg( $isUser ? \u0027key\u0027 : \u0027key2\u0027 )",
+      "revId": "b4429e0b7c5db8225738c68d53ee235f38a64f6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
