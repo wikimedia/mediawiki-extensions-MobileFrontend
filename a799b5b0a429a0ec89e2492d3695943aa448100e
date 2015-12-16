@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_2fc2e988",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-16T01:16:33Z",
+      "side": 1,
+      "message": "I\u0027m not sure. Where should I draw the line?",
+      "parentUuid": "6eaa8f54_c1a44f07",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_81ae57e3",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_af3d798c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-16T01:16:33Z",
+      "side": 1,
+      "message": "it\u0027s a WIP, I may have done so while trying something out. It\u0027s not final.",
+      "parentUuid": "6eaa8f54_81ae57e3",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_c1aa0f82",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-12-15T21:15:53Z",
       "side": 1,
       "message": "for me, that looks like too much logic for a class, that\u0027s called \"Template\". Couldn\u0027t we move the generation of the content to SkinMinervaBeta and add the result as a template variable, which is only processed by this function?",
+      "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_cf423513",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-16T01:16:33Z",
+      "side": 1,
+      "message": "Yes, that\u0027s the plan. This is just a proof of concept.",
+      "parentUuid": "6eaa8f54_c1aa0f82",
       "revId": "a799b5b0a429a0ec89e2492d3695943aa448100e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
