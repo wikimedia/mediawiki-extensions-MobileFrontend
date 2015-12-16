@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_be87e9db",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-16T20:09:51Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure, this should be moved into the if condition above, otherwise this will impact desktop users as well as mobile users :)",
+      "revId": "6ad198c5d9c16a35901048b4ff518086f581e0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
