@@ -68,7 +68,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
 				$res = $this->doQuery();
+				$out->addHtml( Html::openElement( 'div', array( 'class' => 'content-unstyled' ) ) );
 				$this->showContributions( $res );
+				$out->addHtml( Html::closeElement( 'div' ) );
 				return;
 			}
 		}
