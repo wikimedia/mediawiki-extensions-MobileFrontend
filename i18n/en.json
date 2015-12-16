@@ -409,7 +409,7 @@
 	"mobile-frontend-donate-button-label": "Donate",
 	"mobile-frontend-meta-data-issues-categories": "About this category",
 	"mobile-frontend-loading-message": "Loading…",
-	"mobile-frontend-console-recruit": "\\o/ Hey! This is open source software and we need volunteers to help us build this thing, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-console-recruit": "\\o/ Hey! This is open source software and we need volunteers to help us build this thing, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "Okay",
 	"mobile-frontend-panel-cancel": "No thanks",
 	"mobile-frontend-panel-betaoptin-msg": "Do you want to try some new features? By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.",
