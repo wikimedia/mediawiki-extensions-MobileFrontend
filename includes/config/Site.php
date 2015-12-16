@@ -143,3 +143,9 @@ $wgMFDonationUrl = false;
  * @var int|string
  */
 $wgMFContentNamespace = NS_MAIN;
+
+/**
+ * Sets RSS feed <link> being outputted or not.
+ * @var bool
+ */
+$wgMFRSSFeedLink = false;
