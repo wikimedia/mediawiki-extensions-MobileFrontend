@@ -240,13 +240,10 @@
 	 * @private
 	 */
 	Toggler.prototype._enable = function ( $container, prefix, page ) {
-		var tagName, expandSections, indicator, inSample,
+		var tagName, expandSections, indicator,
 			$firstHeading,
 			self = this,
-			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' ),
-			shouldLogScrolledIntoView = false,
-			experiments = mw.config.get( 'wgMFExperiments' ),
-			isTestA = false;
+			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 
 		// Also allow .section-heading if some extensions like Wikibase
 		// want to toggle other headlines than direct descendants of $container.
@@ -261,16 +258,12 @@
 			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
 		// A/B test to measure the impact of section collapsing
-		if ( self.schema && self.schema.isUserInBucket() && experiments.sectionCollapsing ) {
-			inSample = mw.experiments.getBucket( experiments.sectionCollapsing, mw.user.sessionId() ) === 'A';
-
+		if ( self.schema && self.schema.isUserInBucket() && self.schema.defaults.isTestA ) {
 			// Bucketed users who are in stable and using a small screen device
 			// will see expanded sections by default
 			// @see T120292
-			if ( inSample && context.getMode() === 'stable' && !browser.isWideScreen() ) {
+			if ( context.getMode() === 'stable' && !browser.isWideScreen() ) {
 				expandSections = true;
-				shouldLogScrolledIntoView = true;
-				isTestA = true;
 			}
 		}
 
@@ -316,7 +309,7 @@
 					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					self.toggle.call( self, $heading );
 				}
-				logWhenHeadingIsScrolledIntoView( $heading, i, isTestA );
+				logWhenHeadingIsScrolledIntoView( $heading, i );
 			}
 		} );
 
@@ -378,9 +371,8 @@
 		 *
 		 * @param {jQuery.Object} $heading
 		 * @param {Number} sectionId that was scrolled into the viewport
-		 * @param {Boolean} isTestA whether the user is in the A bucket
 		 */
-		function logWhenHeadingIsScrolledIntoView( $heading, sectionId, isTestA ) {
+		function logWhenHeadingIsScrolledIntoView( $heading, sectionId ) {
 			/**
 			 * Log when a heading is seen by the user
 			 * @ignore
@@ -390,7 +382,6 @@
 					$window.off( 'scroll.' + $heading.attr( 'id' ), log );
 					self.schema.log( {
 						eventName: 'scrolled-into-view',
-						isTestA: isTestA,
 						section: sectionId
 					} );
 				}

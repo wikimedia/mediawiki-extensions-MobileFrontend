@@ -1053,6 +1053,8 @@ class MobileFrontendHooks {
 
 		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
 			'dependencies' => array_merge( array(
+				'mediawiki.experiments',
+				'mediawiki.user',
 				'mobile.startup',
 				'mobile.settings',
 			), $schemaModules ),
