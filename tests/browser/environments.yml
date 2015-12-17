@@ -40,6 +40,6 @@ test2:
 integration:
   browser: firefox
   user_factory: true
-  # mediawiki_url: JENKINS WILL SET THIS
+  # mediawiki_url: THIS WILL BE SET BY JENKINS
 
 default: *default

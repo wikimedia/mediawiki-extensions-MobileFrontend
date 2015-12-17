@@ -1,9 +1,7 @@
-# ruby=ruby-2.1.1
-# ruby-gemset=MobileFrontend
-
 source 'https://rubygems.org'
 
-gem 'chunky_png'
-gem 'jsduck'
-gem 'mediawiki_selenium', '~> 1.5.0'
-gem 'rubocop', require: false
+gem 'chunky_png', '~> 1.3.4'
+gem 'jsduck', '~> 5.3.4'
+gem 'mediawiki_selenium', '~> 1.6.3'
+gem 'rake', '~> 10.4', '>= 10.4.2'
+gem 'rubocop', '~> 0.29.1', require: false
