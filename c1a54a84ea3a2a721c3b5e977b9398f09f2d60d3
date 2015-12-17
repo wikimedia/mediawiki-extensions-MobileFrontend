@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_dc5ae8f8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 776,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-17T16:48:57Z",
+      "side": 1,
+      "message": "Hmm, I would like to see a \"FIXME:\" comment here. Overwriting a config variable doesn\u0027t seem to be the solution that we want to keep forever :)\n\nSo, please add something like:\n\"FIXME: Overwriting the config variable doesn\u0027t seem to be the best solution, it should be able to omit the feed links by a hook or something else - bug TXXX\"\n\nTXXX should be a task, which you create with the problem, that there is no way to omit the feed links easily, so we can work on a better solution when we have time :)",
+      "revId": "c1a54a84ea3a2a721c3b5e977b9398f09f2d60d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
