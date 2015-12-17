@@ -112,7 +112,7 @@
 					section: this.options.id,
 					appendtext: val
 				} ).done( function () {
-					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
+					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ) );
 					// invalidate the cache
 					self.pageGateway.invalidatePage( self.options.title );
 

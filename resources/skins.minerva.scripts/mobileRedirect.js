@@ -21,7 +21,7 @@
 		if ( !cookiesEnabled() ) {
 			popup.show(
 				mw.msg( 'mobile-frontend-cookies-required' ),
-				'toast error'
+				'error'
 			);
 			// Prevent default action
 			return false;

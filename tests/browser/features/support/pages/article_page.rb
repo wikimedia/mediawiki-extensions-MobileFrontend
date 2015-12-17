@@ -129,7 +129,7 @@ class ArticlePage
   div(:spinner_loading, class: 'spinner loading')
 
   # toast
-  div(:toast, class: 'toast')
+  div(:toast, class: 'mw-notification')
 
   # loader
   div(:content_wrapper, id: 'content')

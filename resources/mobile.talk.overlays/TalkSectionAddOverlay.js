@@ -98,7 +98,7 @@
 					// Check if the user was previously on the talk overlay
 					if ( self.title !== mw.config.get( 'wgPageName' ) ) {
 						self.pageGateway.invalidatePage( self.title );
-						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
+						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
 						M.emit( 'talk-discussion-added' );
 						window.history.back();
 					} else {
@@ -128,7 +128,7 @@
 						break;
 				}
 
-				toast.show( mw.msg( editMsg ), 'toast error' );
+				toast.show( mw.msg( editMsg ), 'error' );
 				self.showHidden( '.save-header, .save-panel' );
 			} );
 		},

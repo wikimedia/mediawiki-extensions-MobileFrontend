@@ -29,7 +29,7 @@
 		} );
 
 		assert.strictEqual(
-			$( '.toast' ).text(),
+			$( '.mw-notification-content' ).text(),
 			'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.',
 			'There is a toast notice, that i am blocked from editing'
 		);
