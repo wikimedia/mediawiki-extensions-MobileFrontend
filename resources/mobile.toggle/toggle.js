@@ -3,11 +3,7 @@
 		settings = M.require( 'mobile.settings/settings' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
-		arrowUpOptions = {
-			name: 'arrow',
-			additionalClassNames: 'indicator'
-		},
-		arrowDownOptions = {
+		arrowOptions = {
 			name: 'arrow',
 			additionalClassNames: 'indicator'
 		},
@@ -156,20 +152,19 @@
 	 * @ignore
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
-		var wasExpanded = $heading.is( '.open-block' ),
+		var indicator,
+			wasExpanded = $heading.is( '.open-block' ),
 			page = $heading.data( 'page' ),
-			sectionId = $heading.data( 'section-number' ),
-			options, indicator;
+			sectionId = $heading.data( 'section-number' );
 
 		$heading.toggleClass( 'open-block' );
 		$heading.data( 'indicator' ).remove();
 
-		options = wasExpanded ? arrowDownOptions : arrowUpOptions;
 		/**
 		 * @event toggled
 		 */
 		this.emit( 'toggled', wasExpanded, sectionId );
-		indicator = new Icon( options ).prependTo( $heading );
+		indicator = new Icon( arrowOptions ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
 		$heading.next()
@@ -290,7 +285,7 @@
 							self.toggle.call( self, $( this ) );
 						}
 					} );
-				indicator = new Icon( arrowDownOptions ).prependTo( $heading );
+				indicator = new Icon( arrowOptions ).prependTo( $heading );
 				$heading.data( 'indicator', indicator );
 				$heading.next( 'div' )
 					.addClass( 'collapsible-block' )
