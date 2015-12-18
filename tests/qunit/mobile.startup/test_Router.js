@@ -1,93 +1,86 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Router = M.require( 'mobile.startup/Router' ),
-		hashQueue = [],
-		interval, router;
-
-	// we can't change hash too quickly because hashchange callbacks are async
-	// (don't fire immediately after the hash is changed) and all the callbacks
-	// would get the same (latest) hash; see setup and teardown too
-	function setHash( hash ) {
-		hashQueue.push( hash );
-	}
+		router;
 
 	QUnit.module( 'MobileFrontend Router', {
 		setup: function () {
 			router = new Router();
-			interval = setInterval( function () {
-				var hash = hashQueue.pop();
-				if ( hash !== undefined ) {
-					window.location.hash = hash;
-				}
-			}, 10 );
+			this.stub( router, 'getPath', function () {
+				return router.testHash.slice( 1 );
+			} );
+			this.stub( router, 'navigate', function ( path ) {
+				router.testHash = path;
+			} );
 		},
 
 		teardown: function () {
-			// hashchange is async, we need to wait
-			$( window ).one( 'hashchange.test', function () {
-				$( window ).off( 'hashchange.test' );
-				clearInterval( interval );
-				QUnit.start();
-			} );
-			setHash( '' );
-			QUnit.stop();
+			router.testHash = '';
 		}
 	} );
 
-	QUnit.skip( '#route, string', 1, function ( assert ) {
+	QUnit.test( '#route, string', 1, function ( assert ) {
+		router.testHash = '';
 		router.route( 'teststring', function () {
 			assert.ok( true, 'run callback for route' );
-			QUnit.start();
 		} );
-		setHash( '#teststring' );
+		router.testHash = '#teststring';
+		router.emit( 'hashchange' );
 	} );
 
-	QUnit.skip( '#route, RegExp', 1, function ( assert ) {
+	QUnit.test( '#route, RegExp', 1, function ( assert ) {
+		router.testHash = '';
 		router.route( /^testre-(\d+)$/, function ( param ) {
 			assert.strictEqual( param, '123', 'run callback for route with correct params' );
-			QUnit.start();
 		} );
-		setHash( '#testre-abc' );
-		setHash( '#testre-123' );
+		router.testHash = '#testre-abc';
+		router.emit( 'hashchange' );
+		router.testHash = '#testre-123';
+		router.emit( 'hashchange' );
 	} );
 
-	QUnit.skip( 'on route', 2, function ( assert ) {
+	QUnit.test( 'on route', 2, function ( assert ) {
 		var count = 0,
 			spy = this.sandbox.spy();
 
+		router.testHash = '';
 		router.route( 'testprevent', spy );
 
 		// try preventing second route (#testprevent)
 		router.once( 'route', function () {
-			setHash( '#testprevent' );
+			router.testHash = '#testprevent';
 			router.once( 'route', function ( ev ) {
 				ev.preventDefault();
 			} );
 		} );
-		setHash( '#initial' );
+		router.testHash = '#initial';
 
-		$( window ).on( 'hashchange.test', function () {
+		router.on( 'hashchange.test', function () {
 			++count;
 			if ( count === 3 ) {
-				assert.strictEqual( window.location.hash, '#initial', 'reset hash' );
+				assert.strictEqual( router.testHash, '#initial', 'reset hash' );
 				assert.ok( !spy.called, 'don\'t run callback for prevented route' );
-				QUnit.start();
 			}
 		} );
+		// emit a hashchange thrice to check if the hash has changed or not
+		router.emit( 'hashchange.test' );
+		router.emit( 'hashchange.test' );
+		router.emit( 'hashchange.test' );
 	} );
 
-	QUnit.skip( 'on back', 2, function ( assert ) {
+	QUnit.test( 'on back', 2, function ( assert ) {
+		this.sandbox.stub( router, 'goBack' );
 		router.back().done( function () {
 			assert.ok( true, 'back 1 complete' );
 		} );
 		router.back().done( function () {
 			assert.ok( true, 'back 2 complete' );
 		} );
-		QUnit.start();
+		router.emit( 'popstate' );
 	} );
 
-	QUnit.skip( 'on back without popstate', 2, function ( assert ) {
-		var historyStub = this.sandbox.stub( window.history, 'back' );  // do not emit popstate
-
+	QUnit.test( 'on back without popstate', 2, function ( assert ) {
+		var historyStub = this.sandbox.stub( router, 'goBack' ), // do not emit popstate
+			done = assert.async();
 		router.on( 'popstate', function () {
 			assert.ok( false, 'this assertion is not supposed to get called' );
 		} );
@@ -95,8 +88,8 @@
 		router.back().done( function () {
 			assert.ok( historyStub.called, 'history back has been called' );
 			assert.ok( true, 'back without popstate complete' );
-			QUnit.start();
+			done();
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
