@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_008c8936",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-18T17:30:11Z",
+      "side": 1,
+      "message": "\"to parse.\" Isn\u0027t a complete sentence. Rember that $html is \"just\" a variable name, I think what you want is \"HTML to parse.\" :)",
+      "revId": "71df1839ffd7c584dd6b3041d18688598621ec27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_80771935",
+        "filename": "resources/mobile.startup/Section.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-18T17:30:11Z",
+      "side": 1,
+      "message": "debugging line :)",
+      "revId": "71df1839ffd7c584dd6b3041d18688598621ec27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
