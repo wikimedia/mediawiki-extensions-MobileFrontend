@@ -688,7 +688,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgFeed, $wgWPBSkinBlacklist, $wgWPBEnableDefaultBanner;
+		global $wgWPBSkinBlacklist, $wgWPBEnableDefaultBanner;
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -773,16 +773,23 @@ class MobileFrontendHooks {
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
 
-			// T100377: By default hide RSS <link>s
-			// FIXME: Overwriting the config variable doesn't seem to be the best solution,
-			// it should be able to omit the feed links by a hook or something else - bug T121774
-			$wgFeed = $config->get( 'MFRSSFeedLink' );
-
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', array( &$out, &$sk ) );
 		}
 
 		return true;
+	}
+
+	/**
+	 * AfterBuildFeedLinks hook handler. Remove all feed links in mobile view.
+	 *
+	 * @param array &$tags Added feed links
+	 */
+	public static function onAfterBuildFeedLinks( array &$tags ) {
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() && !$context->getMFConfig()->get( 'MFRSSFeedLink' ) ) {
+			$tags = array();
+		}
 	}
 
 	/**
