@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_a66ef291",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-18T03:01:43Z",
+      "side": 1,
+      "message": "hmm, this isn\u0027t used anymore or do I miss something? :)",
+      "revId": "88b95b691bbc21ab32bac56cce83ebbb106ef231",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
