@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_0bd34fda",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-12-18T01:24:30Z",
+      "side": 1,
+      "message": "The jsduck annotation is @mixins (yes I know that\u0027s not English)",
+      "revId": "3bafeee5b16af5124697753db29c21349c6475a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
