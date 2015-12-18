@@ -1,0 +1,62 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+.heading-holder {
+	padding-bottom: 20px;
+}
+
+.tagline {
+	color: @colorGray5;
+	font-size: 0.8em;
+	margin: 10px 0;
+}
+
+.user-links {
+	li {
+		display: inline-block;
+		& + li {
+			margin-left: 4px;
+			&:before {
+				content: "·";
+				right: 2px;
+				position: relative;
+			}
+		}
+	}
+	.mw-ui-icon-talk {
+		&:before {
+			margin-right: 0.5em;
+			.background-image-svg-quick( 'talk' );
+		}
+	}
+}
+
+.cta-holder {
+	background: #f1f1f1;
+	padding: 30px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 3px;
+
+	.icon {
+		.background-image-svg-quick( 'userpage' );
+		background-repeat: no-repeat;
+		background-size: 50px 60px;
+		background-position: center top;
+		height: 60px;
+		margin-bottom: 20px;
+		opacity: 0.2;
+	}
+
+	// be specific in order to override default padding
+	.content & h3 {
+		font-size: 1em;
+		font-family: sans-serif;
+		padding: 0 0 10px;
+	}
+
+	.desc {
+		color: @colorGray9;
+		margin-bottom: 20px;
+	}
+}
