@@ -16,6 +16,24 @@
       "revId": "968c18d3eb317ada8fd3a9ed0e0bcad2d885654d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_cb3a17c0",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-18T01:07:46Z",
+      "side": 0,
+      "message": "Yup. It\u0027s handled in SkinTemplate",
+      "parentUuid": "0ebaf39b_39f7ed57",
+      "revId": "968c18d3eb317ada8fd3a9ed0e0bcad2d885654d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_0b590f39",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-18T01:07:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_19dea944",
+      "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_19c54964",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-11-02T23:53:46Z",
       "side": 1,
       "message": "$html should probably default to null and the if statement check for null explicitly in case there were ever a future scenario for a blank string. But that scenario also seems pretty unlikely, so not anything I\u0027d block over.",
+      "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_ab3d5bba",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-18T01:07:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_19c54964",
       "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_ab647be2",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-18T01:07:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_f994f5ec",
+      "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_398e0dd6",
         "filename": "resources/mobile.startup/heading.hogan",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2015-11-02T23:53:46Z",
       "side": 1,
       "message": "Is {{#line}} necessary if the entire template requires it? IOW, is there ever a scenario where you render this template and line is not defined? If not, this check should probably be handled wherever the template is rendered.",
+      "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_2bd5eb47",
+        "filename": "resources/mobile.startup/heading.hogan",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-18T01:07:46Z",
+      "side": 1,
+      "message": "Done. Not sure what this was for.",
+      "parentUuid": "0ebaf39b_398e0dd6",
       "revId": "3cf39ff69101d2c0a6572b6ff8c7aae4d91b2ce6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
