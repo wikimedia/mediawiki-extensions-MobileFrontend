@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6eaa8f54_60c0dd2f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 22
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-18T17:35:06Z",
+      "side": 1,
+      "message": "Do you know, how big this additional library is? (Haven\u0027t tested yet)",
+      "revId": "3bafeee5b16af5124697753db29c21349c6475a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_0bd34fda",
         "filename": "resources/mobile.view/View.js",
         "patchSetId": 22
