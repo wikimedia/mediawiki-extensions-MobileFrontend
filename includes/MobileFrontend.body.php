@@ -93,7 +93,10 @@ class ExtMobileFrontend {
 			$context->msg( 'mobile-frontend-user-page-no-owner-page-yet' )->text() :
 			$context->msg( 'mobile-frontend-user-page-no-page-yet', $pageUsername )->parse();
 		$data['ctaDescription'] = $isCurrentUser ?
-			$context->msg( 'mobile-frontend-user-page-describe-yourself' )->text() :
+			$context->msg(
+				'mobile-frontend-user-page-describe-yourself',
+				$context->msg( 'mobile-frontend-user-page-describe-yourself-editors' )->text()
+			)->text() :
 			$context->msg( 'mobile-frontend-user-page-desired-action', $pageUsername )->parse();
 		$data['createPageLinkLabel'] = $isCurrentUser ?
 			$context->msg( 'mobile-frontend-user-page-create-owner-page-link-label' )->text() :
