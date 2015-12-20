@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"Enolp"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuariu ta editando o non pela interfaz pa móvil",
@@ -331,6 +332,10 @@
 	"mobile-frontend-watchlist-removed": "Se desanició $1 de la to llista de siguimientu",
 	"mobile-frontend-watchlist-signup-action": "<strong>Una llista de vixilancia ayúdate a tener marcadores de páxines y siguir los cambios n'elles.</strong><br />Date d'alta p'aniciar una agora.",
 	"mobile-frontend-watchlist-view": "Ver la to llista de siguimientu",
+	"mobile-frontend-user-page-uploads": "Xubes",
+	"mobile-frontend-user-page-no-owner-page-yet": "Entá nun tienes una páxina d'usuariu",
+	"mobile-frontend-user-page-no-page-yet": "Nun hai páxina d'usuariu pa $1",
+	"mobile-frontend-user-page-desired-action": "Esta páxina debería crease y editase por $1",
 	"mobile-frontend-quick-lookup-looking": "Buscando «$1».",
 	"mobile-frontend-quick-lookup-no-results": "Nun s'alcontró nada que concuaye con «$1».",
 	"mobile-frontend-quick-lookup-not-internal": "Esti nun ye un enllaz a esta wiki.",

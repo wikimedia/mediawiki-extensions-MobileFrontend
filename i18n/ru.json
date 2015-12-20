@@ -30,7 +30,8 @@
 			"Дмитрий",
 			"MaxBioHazard",
 			"Vcohen",
-			"Translatobecomer"
+			"Translatobecomer",
+			"Metastasis"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -355,6 +356,8 @@
 	"mobile-frontend-watchlist-removed": "$1 удалена из вашего списка наблюдения",
 	"mobile-frontend-watchlist-signup-action": "<strong>Список наблюдения помогает вам делать закладки на страницы и отслеживать изменения в них.</strong><br />Зарегистрируйтесь, чтобы начать сейчас.",
 	"mobile-frontend-watchlist-view": "Просмотреть свой список наблюдения",
+	"mobile-frontend-user-page-create-owner-page-link-label": "Создайте свой собственный",
+	"mobile-frontend-user-page-create-user-page-link-label": "Создание страницы $1",
 	"mobile-frontend-quick-lookup-looking": "Поиск \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "По запросу \"$1\" ничего не найдено.",
 	"nearby": "Страницы на темы об объектах поблизости",

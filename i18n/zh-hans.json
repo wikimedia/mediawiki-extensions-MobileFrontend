@@ -31,7 +31,8 @@
 			"Gaoxuewei",
 			"御坂美琴",
 			"JLeow00",
-			"Hudafu"
+			"Hudafu",
+			"Cosine02"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -362,6 +363,15 @@
 	"mobile-frontend-watchlist-removed": "已从你的监视列表中删除$1",
 	"mobile-frontend-watchlist-signup-action": "<strong>监视列表帮助您标记页面，并保持追踪它们的更改。</strong>注册以开始创建。",
 	"mobile-frontend-watchlist-view": "查看你的监视列表",
+	"mobile-frontend-user-page-talk": "讨论",
+	"mobile-frontend-user-page-contributions": "贡献",
+	"mobile-frontend-user-page-uploads": "上传",
+	"mobile-frontend-user-page-no-owner-page-yet": "您尚未拥有一个用户页",
+	"mobile-frontend-user-page-no-page-yet": "没有$1的用户页",
+	"mobile-frontend-user-page-describe-yourself-editors": "编者",
+	"mobile-frontend-user-page-desired-action": "此页面应由$1创建和编辑",
+	"mobile-frontend-user-page-create-owner-page-link-label": "创建您自己的",
+	"mobile-frontend-user-page-create-user-page-link-label": "已创建名为$1的页面",
 	"mobile-frontend-quick-lookup-looking": "正在寻找“$1”。",
 	"mobile-frontend-quick-lookup-no-results": "无法找到匹配“$1”的内容。",
 	"mobile-frontend-quick-lookup-not-internal": "对不起，这不是一个至此wiki的链接。",

@@ -328,6 +328,8 @@
 	"mobile-frontend-watchlist-removed": "$1 をウォッチリストから除去しました",
 	"mobile-frontend-watchlist-signup-action": "<strong>ウォッチリストは、あなたがページをブックマークするのを助け、それらへの変更の追跡を保存します。</strong>今すぐ始めるには利用者登録をしてください。",
 	"mobile-frontend-watchlist-view": "ウォッチリストを表示",
+	"mobile-frontend-user-page-talk": "トーク",
+	"mobile-frontend-user-page-uploads": "アップロード",
 	"mobile-frontend-quick-lookup-no-results": "「$1」に一致するものが見つかりませんでした。",
 	"mobile-frontend-quick-lookup-not-internal": "申し訳ありませんが、これはこのウィキへのリンクではありません。",
 	"mobile.css": "/* ここに記述したCSSは携帯機器版サイトの利用者に影響します */",

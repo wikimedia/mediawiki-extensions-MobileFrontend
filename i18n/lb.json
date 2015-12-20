@@ -295,6 +295,8 @@
 	"mobile-frontend-user-page-member-since": "Member zanter $1",
 	"mobile-frontend-user-page-talk": "Diskussioun",
 	"mobile-frontend-user-page-contributions": "Kontributiounen",
+	"mobile-frontend-user-page-no-page-yet": "Keng Benotzersäit fir $1",
+	"mobile-frontend-user-page-describe-yourself-editors": "Editeuren",
 	"mobile-frontend-quick-lookup-looking": "No \"$1\" sichen.",
 	"mobile-frontend-quick-lookup-not-internal": "Pardon, dëst ass kee Link op dës Wiki.",
 	"nearby": "Säiten iwwer Themen no bei Iech",

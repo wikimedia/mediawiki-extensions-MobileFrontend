@@ -4,7 +4,8 @@
 			"Amir a57",
 			"Mousa",
 			"Koroğlu",
-			"Ebrahimi-amir"
+			"Ebrahimi-amir",
+			"Alp Er Tunqa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "بوکی ایشلدن موبایل اوزصفحه سی یله دَییشدیریر یا یوخ",
@@ -26,7 +27,9 @@
 	"mobile-frontend-home-button": "ائو",
 	"mobile-frontend-images-status": "شکیل‌لر",
 	"mobile-frontend-language-article-heading": "آیری دیل‌لرده اوخویون.",
+	"mobile-frontend-language-heading": "<strong>دیل‌لر</strong>",
 	"mobile-frontend-language-site-choose": "دیل آختاریشی",
+	"mobile-frontend-languages-header": "دیل‌لر",
 	"mobile-frontend-last-modified-date": "سون کز $1 $2 ده دَییشدیریلیب",
 	"mobile-frontend-main-menu-account-create": "حساب یارات",
 	"mobile-frontend-main-menu-button-tooltip": "آنامِنونو آچ",

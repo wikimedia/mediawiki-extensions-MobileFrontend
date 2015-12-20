@@ -21,7 +21,8 @@
 			"Sonic N800",
 			"محمد أحمد عبد الفتاح",
 			"Hiba Alshawi",
-			"PhiberOptik"
+			"PhiberOptik",
+			"Shbib Al-Subaie"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -333,6 +334,7 @@
 	"mobile-frontend-watchlist-removed": "تمت إزالة $1 من قائمة مراقبتك",
 	"mobile-frontend-watchlist-signup-action": "سجل لبدء واحدة الآن.",
 	"mobile-frontend-watchlist-view": "اعرض قائمة مراقبتك",
+	"mobile-frontend-user-page-talk": "نقاش",
 	"nearby": "صفحات قريبة منك",
 	"right-mf-uploadbutton": "استخدم زر الرفع على صفحات الجوال.",
 	"tag-mobile_edit": "تحرير من الجوال",

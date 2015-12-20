@@ -320,6 +320,8 @@
 	"mobile-frontend-watchlist-more": "więcej",
 	"mobile-frontend-watchlist-removed": "Usunięto „$1” z twojej listy obserwowanych",
 	"mobile-frontend-watchlist-view": "Zobacz swoją listę obserwowanych",
+	"mobile-frontend-user-page-talk": "Dyskusja",
+	"mobile-frontend-user-page-create-user-page-link-label": "Tworzenie strony o nazwie $1",
 	"mobile-frontend-quick-lookup-looking": "Wyszukiwanie „$1”.",
 	"mobile.js": "/* Umieszczony tutaj kod JavaScript zostanie załadowany przez użytkowników korzystających z wersji mobilnej */",
 	"nearby": "W pobliżu ciebie",
