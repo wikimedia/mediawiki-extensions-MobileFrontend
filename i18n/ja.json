@@ -65,7 +65,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "続きを読む",
 	"mobile-frontend-editor-abusefilter-warning": "警告: この編集内容を本当に保存しますか? 問題点を含んでいるおそれがあります。",
 	"mobile-frontend-editor-anon": "ログインせずに編集",
-	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>: あなたはログインしていません。このまま編集すると、あなたの IP アドレスが公開されます。もし<strong>ログイン</strong>または<strong>アカウントを作成</strong>すると、あなたの編集は利用者名とともに表示されるようになり、その他の利点もあります。",
+	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>: あなたはログインしていません。このまま編集するとあなたの IP アドレスが公開されます。<strong>ログイン</strong>または<strong>アカウントを作成</strong>すると、編集の帰属表示が利用者名になるなどの利点があります。",
 	"mobile-frontend-editor-cancel": "キャンセル",
 	"mobile-frontend-editor-cancel-confirm": "編集内容を本当に破棄しますか?",
 	"mobile-frontend-editor-captcha-try-again": "コードが正しくありません。もう一度やり直してください。",
