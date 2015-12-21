@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_7c439d67",
+        "filename": "resources/mobile.startup/Router.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-21T19:24:23Z",
+      "side": 1,
+      "message": "It seems you could just do this in the test itself, stubbing Router.prototype.navigate and using a local variable. No need for this to leak into the actual code.",
+      "revId": "4360034de7b6e79395d3390cd68d8847820ca167",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_fc2ead9f",
+        "filename": "tests/qunit/mobile.startup/test_Router.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-21T19:24:23Z",
+      "side": 1,
+      "message": "This could just be a local variable.\neg hash \u003d path;",
+      "revId": "4360034de7b6e79395d3390cd68d8847820ca167",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
