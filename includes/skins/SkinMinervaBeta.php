@@ -120,6 +120,11 @@ class SkinMinervaBeta extends SkinMinerva {
 			$modules[] = 'skins.minerva.categories';
 		}
 
+		// TalkOverlay feature
+		if ( $this->isUserPage ) {
+			$modules[] = 'skins.minerva.talk';
+		}
+
 		return $modules;
 	}
 
@@ -177,9 +182,11 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
 		parent::prepareHeaderAndFooter( $tpl );
 		if ( $this->isUserPage ) {
+			$talkPage = $this->pageUser->getTalkPage();
 			$data = array(
-				'talkPageLink' => $this->pageUser->getTalkPage()->getLocalUrl(),
-				'talkPageTitle' => $this->msg(
+				'talkPageTitle' => $talkPage->getPrefixedURL(),
+				'talkPageLink' => $talkPage->getLocalUrl(),
+				'talkPageLinkTitle' => $this->msg(
 					'mobile-frontend-user-page-talk' )->escaped(),
 				'contributionsPageLink' => SpecialPage::getTitleFor(
 					'Contributions', $this->pageUser )->getLocalURL(),

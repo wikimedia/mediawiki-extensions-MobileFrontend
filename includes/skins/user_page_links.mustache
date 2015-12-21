@@ -1,7 +1,9 @@
 <ul class="user-links">
 	<li>
 		<a href="{{talkPageLink}}"
-		   class="mw-ui-icon mw-ui-icon-before mw-ui-icon-talk">{{talkPageTitle}}</a>
+		   {{! data-title is used in talk overlay. Do not remove it }}
+		   data-title="{{talkPageTitle}}"
+		   class="mw-ui-icon mw-ui-icon-before mw-ui-icon-talk talk">{{talkPageLinkTitle}}</a>
 	</li>
 	<li>
 		<a href="{{contributionsPageLink}}">{{contributionsPageTitle}}</a>
