@@ -148,6 +148,7 @@ $wgHooks['SkinPreloadExistence'][] = 'MobileFrontendHooks::onSkinPreloadExistenc
 $wgHooks['ThumbnailBeforeProduceHTML'][] = 'MobileFrontendHooks::onThumbnailBeforeProduceHTML';
 $wgHooks['ImageBeforeProduceHTML'][] = 'MobileFrontendHooks::onImageBeforeProduceHTML';
 $wgHooks['PageRenderingHash'][] = 'MobileFrontendHooks::onPageRenderingHash';
+$wgHooks['AfterBuildFeedLinks'][] = 'MobileFrontendHooks::onAfterBuildFeedLinks';
 
 $wgSpecialPages += array(
 	'History' => 'SpecialMobileHistory',
