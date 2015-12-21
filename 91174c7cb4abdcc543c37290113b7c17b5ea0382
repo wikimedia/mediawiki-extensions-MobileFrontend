@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_165a8522",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-12-21T23:06:07Z",
+      "side": 1,
+      "message": "User::getUserPage()??",
+      "revId": "91174c7cb4abdcc543c37290113b7c17b5ea0382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
