@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_33fa3841",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-21T03:05:55Z",
+      "side": 1,
+      "message": "This will potentially allow adding multiple menu items with the same name. We should check for the uniqueness of $name.",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_53e5749e",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-21T03:05:55Z",
+      "side": 1,
+      "message": "missing: \"@throws InvalidArgumentException\"",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_13fffc32",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-21T03:05:55Z",
+      "side": 1,
+      "message": "\u0027array\u0027 enclosing $entry is not needed",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_93ebec76",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-21T03:05:55Z",
+      "side": 1,
+      "message": "[] is not needed",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f3f34067",
+        "filename": "tests/phpunit/MenuBuilderTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-21T03:05:55Z",
+      "side": 1,
+      "message": "Another test for adding menu items with the same name would be great too.",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
