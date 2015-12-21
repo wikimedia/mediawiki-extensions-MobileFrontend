@@ -174,13 +174,19 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$out->setPageTitle( $pageTitle );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {
-
-				// Prepare content
-				$templateParser = new TemplateParser( __DIR__ );
-				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$html = $templateParser->processTemplate( 'userprofile',
-					$this->getTemplateData( $templateParser ) );
-				$out->addHtml( $html );
+				$context = MobileContext::singleton();
+				// if in beta redirect to the user page, i.e. User:Username
+				if ( $context->isBetaGroupMember() ) {
+					$redirectTitle = Title::makeTitle( NS_USER, $this->targetUser->getName() );
+					$out->redirect( $redirectTitle->getLocalURL() );
+				} else {
+					// Prepare content
+					$templateParser = new TemplateParser( __DIR__ );
+					$this->userInfo = new MobileUserInfo( $this->targetUser );
+					$html = $templateParser->processTemplate( 'userprofile',
+						$this->getTemplateData( $templateParser ) );
+					$out->addHtml( $html );
+				}
 			} else {
 				$this->displayNoUserError( 'mobile-frontend-profile-nouser' );
 			}
