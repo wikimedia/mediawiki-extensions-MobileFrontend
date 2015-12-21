@@ -2002,7 +2002,6 @@
 		"MFAutodetectMobileView": false,
 		"MFShowMobileViewToTablets": true,
 		"MFDeviceWidthMobileSmall": 280,
-		"MFDeviceWidthTablet": 720,
 		"MobileUrlTemplate": "",
 		"MobileFrontendFormatCookieExpiry": null,
 		"MFNoindexPages": true,

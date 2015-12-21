@@ -888,6 +888,7 @@ class SkinMinerva extends SkinTemplate {
 		$user = $this->getUser();
 		$config = $this->getMFConfig();
 		$out = $this->getOutput();
+		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
 		$vars = array(
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
@@ -900,7 +901,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFPhotoUploadEndpoint' =>
 				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			'wgMFDeviceWidthTablet' => $config->get( 'MFDeviceWidthTablet' ),
+			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
 			'wgMFMode' => $this->getMode(),
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			'wgMFTocEnabled' => $this->getOutput()->getProperty( 'MinervaTOC' )

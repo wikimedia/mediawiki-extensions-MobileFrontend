@@ -697,7 +697,7 @@ class MobileFrontendHooks {
 		$mfAppScheme = $config->get( 'MFAppScheme' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
-		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
+		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 		$noJsEditing = $config->get( 'MFAllowNonJavaScriptEditing' );
 
 		// show banners using WikidataPageBanner, if installed and all pre-conditions fulfilled
@@ -755,7 +755,7 @@ class MobileFrontendHooks {
 				$desktopUrl = $title->getFullUrl();
 				$link = array(
 					'rel' => 'alternate',
-					'media' => 'only screen and (max-width: ' . $tabletSize . 'px)',
+					'media' => 'only screen and (max-width: ' . $lessVars['deviceWidthTablet'] . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				);
 			} else {
@@ -1069,7 +1069,6 @@ class MobileFrontendHooks {
 		$config = MobileContext::singleton()->getMFConfig();
 		$lessVars = array_merge( $lessVars,
 			array(
-				'wgMFDeviceWidthTablet' => "{$config->get( 'MFDeviceWidthTablet' )}px",
 				'wgMFDeviceWidthMobileSmall' => "{$config->get( 'MFDeviceWidthMobileSmall' )}px",
 				'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
 				'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px'
