@@ -41,7 +41,7 @@ nodecheck:
 jscs: nodecheck			## Check the JavaScript coding style
 	@grunt jscs
 
-jshinttests: nodecheck			## Lint the QUnit tests
+jshinttests: nodecheck			## Lint the JS tests
 	@grunt jshint:tests
 
 jshint: nodecheck 	## Lint the JavaScript files
@@ -58,13 +58,10 @@ phplint: phpcheck			## Lint the PHP files
 phpunit:				## Run the PHPUnit test suite
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --group MobileFrontend ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
 
-qunit:					## Run the QUnit test suite
-	@grunt qunit:all
+qunit:                 ## Run the QUnit test suite
+	cd ${MW_INSTALL_PATH} && grunt qunit
 
-qunitdebug:				## Run the QUnit test suite in debug mode
-	@QUNIT_DEBUG=true grunt qunit
-
-tests: jshint phplint phpunit qunit	## Run the PHPUnit test suite and QUnit tests after linting them
+tests: jshint phplint phpunit qunit	## Run the PHPUnit test suite after linting
 
 cucumber: checkcucumber			## Run the browser test suite
 	@dev-scripts/cucumber.sh
