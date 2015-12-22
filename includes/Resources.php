@@ -565,7 +565,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-success',
 			'mobile-frontend-editor-success-landmark-1' => array( 'parse' ),
 			'mobile-frontend-editor-success-new-page',
-			'mobile-frontend-editor-refresh',
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-error-loading',
@@ -1033,7 +1032,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// issues.js
 			'mobile-frontend-meta-data-issues',
-			'mobile-frontend-meta-data-issues-beta',
 			'mobile-frontend-meta-data-issues-talk',
 			'mobile-frontend-meta-data-issues-header',
 			'mobile-frontend-meta-data-issues-header-talk',
