@@ -37,6 +37,8 @@
 				id: 60
 			} ]
 		} );
+		// Avoid API requests due to scroll events (https://phabricator.wikimedia.org/T116258)
+		pl.infiniteScroll.disable();
 		assert.ok( this.spy.notCalled, 'Callback avoided' );
 		assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, '3 articles have watch stars...' );
 		assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 3, '...and all are marked as watched.' );
