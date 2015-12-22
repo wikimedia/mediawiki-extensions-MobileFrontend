@@ -66,6 +66,7 @@
 	"mobile-frontend-donate-image-nouploads": "無上傳。",
 	"mobile-frontend-donate-image-signup-action": "註冊向全世界共享您的媒體。",
 	"mobile-frontend-donate-image-title": "上傳",
+	"mobile-frontend-donate-image-title-username": "由 $1 上傳",
 	"mobile-frontend-donate-photo-first-upload-success": "成功！感謝您做的第一次貢獻！",
 	"mobile-frontend-donate-photo-upload-success": "成功！您的圖片現在可以在 {{SITENAME}} 上使用！",
 	"mobile-frontend-drawer-cancel": "取消",

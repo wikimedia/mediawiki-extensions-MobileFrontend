@@ -81,7 +81,7 @@
 	"mobile-frontend-donate-image-nouploads": "无上传。",
 	"mobile-frontend-donate-image-signup-action": "注册以共享您的媒体至全世界。",
 	"mobile-frontend-donate-image-title": "上传",
-	"mobile-frontend-donate-image-title-username": "通过$1上传",
+	"mobile-frontend-donate-image-title-username": "由$1上传",
 	"mobile-frontend-donate-image-title-you": "由您上传",
 	"mobile-frontend-donate-photo-first-upload-success": "成功！感谢你的首次贡献！",
 	"mobile-frontend-donate-photo-upload-success": "成功！你的图像现在可以在{{SITENAME}}使用！",
