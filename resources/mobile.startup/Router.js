@@ -41,6 +41,10 @@
 		} );
 
 		$( window ).on( 'hashchange', function () {
+			self.emit( 'hashchange' );
+		} );
+
+		this.on( 'hashchange', function () {
 			// ev.originalEvent.newURL is undefined on Android 2.x
 			var routeEv;
 
@@ -56,7 +60,7 @@
 					// if route was prevented, ignore the next hash change and revert the
 					// hash to its old value
 					self._enabled = false;
-					window.location.hash = self._oldHash;
+					self.navigate( self._oldHash );
 				}
 			} else {
 				self._enabled = true;
@@ -117,6 +121,13 @@
 	};
 
 	/**
+	 * Triggers back on the window
+	 */
+	Router.prototype.goBack = function () {
+		window.history.back();
+	};
+
+	/**
 	 * Navigate to the previous route. This is a wrapper for window.history.back
 	 * @method
 	 * @return {jQuery.Deferred}
@@ -131,7 +142,7 @@
 			deferredRequest.resolve();
 		} );
 
-		window.history.back();
+		this.goBack();
 
 		// If for some reason (old browser, bug in IE/windows 8.1, etc) popstate doesn't fire,
 		// resolve manually. Since we don't know for sure which browsers besides IE10/11 have
