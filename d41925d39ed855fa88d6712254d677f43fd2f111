@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_24b97ee6",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-23T20:09:55Z",
+      "side": 1,
+      "message": "The search button does not align with the main menu button anymore, which results in a inconsistency for just a second. This code should fix this and does it for tablets. It would be better to correct the media query :)",
+      "revId": "d41925d39ed855fa88d6712254d677f43fd2f111",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
