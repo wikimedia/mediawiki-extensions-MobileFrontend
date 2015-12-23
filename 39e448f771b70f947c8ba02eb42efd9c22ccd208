@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_01c47493",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-23T16:22:09Z",
+      "side": 1,
+      "message": "The php documentation says that InvalidArgumentException is thrown if an argument is not of the expected type.\n\nWhy not use Exception?",
+      "revId": "39e448f771b70f947c8ba02eb42efd9c22ccd208",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
