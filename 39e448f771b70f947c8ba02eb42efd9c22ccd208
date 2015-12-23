@@ -16,6 +16,24 @@
       "revId": "39e448f771b70f947c8ba02eb42efd9c22ccd208",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c14c1c46",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T16:44:15Z",
+      "side": 1,
+      "message": "Because Exception is the base class of all exceptions and is consequently general and hard to deal with in the client, e.g.\n\n    try {\n      foo();\n    } catch (Exception $e) {\n      // This will catch EVERYTHING\n    }\n\nThe reason I went for InvalidArgumentException was because I forgot about the DomainException class.",
+      "parentUuid": "6eaa8f54_01c47493",
+      "revId": "39e448f771b70f947c8ba02eb42efd9c22ccd208",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
