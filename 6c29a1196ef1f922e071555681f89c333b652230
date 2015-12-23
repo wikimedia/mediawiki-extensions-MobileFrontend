@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6eaa8f54_de995b81",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "This isn\u0027t true.",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_33fa3841",
         "filename": "includes/MenuBuilder.php",
         "patchSetId": 11
@@ -13,6 +30,24 @@
       "writtenOn": "2015-12-21T03:05:55Z",
       "side": 1,
       "message": "This will potentially allow adding multiple menu items with the same name. We should check for the uniqueness of $name.",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_5e8d6b35",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "It does. My initial reaction was \"Why should we care?\" but then the #insertAfter method indirectly relies on the uniqueness of entry names to make sense.\n\nDone.",
+      "parentUuid": "6eaa8f54_33fa3841",
       "revId": "6c29a1196ef1f922e071555681f89c333b652230",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -36,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_be9edf64",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "I\u0027ve moved the one from above down here and thus have saved electrons.",
+      "parentUuid": "6eaa8f54_53e5749e",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_13fffc32",
         "filename": "includes/MenuBuilder.php",
         "patchSetId": 11
@@ -47,6 +100,24 @@
       "writtenOn": "2015-12-21T03:05:55Z",
       "side": 1,
       "message": "\u0027array\u0027 enclosing $entry is not needed",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_fe945748",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "From the documentation [0]:\n\n\u003e If replacement is just one element it is not necessary to put array() around it, unless the element is an array itself, an object or NULL.\n\n$entry is an object and so the \u0027array\u0027 enclosing $entry is needed.",
+      "parentUuid": "6eaa8f54_13fffc32",
       "revId": "6c29a1196ef1f922e071555681f89c333b652230",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_9ea3e3a7",
+        "filename": "includes/MenuBuilder.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6eaa8f54_93ebec76",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_f3f34067",
         "filename": "tests/phpunit/MenuBuilderTest.php",
         "patchSetId": 11
@@ -81,6 +170,24 @@
       "writtenOn": "2015-12-21T03:05:55Z",
       "side": 1,
       "message": "Another test for adding menu items with the same name would be great too.",
+      "revId": "6c29a1196ef1f922e071555681f89c333b652230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_614a0861",
+        "filename": "tests/phpunit/MenuBuilderTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-23T15:46:54Z",
+      "side": 1,
+      "message": "Done as I\u0027ve changed the behaviour of MenuBuilder#insert and #insertAfter.",
+      "parentUuid": "6eaa8f54_f3f34067",
       "revId": "6c29a1196ef1f922e071555681f89c333b652230",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
