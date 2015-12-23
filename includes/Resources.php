@@ -136,8 +136,6 @@ $wgMinervaStyleModules = array(
 			'watched' => 'images/icons/watched.svg',
 			'edit' => 'images/icons/editLocked.svg',
 			'edit-enabled' => 'images/icons/edit.svg',
-			'addimage' => 'images/icons/uploadLocked.svg',
-			'addimage-enabled' => 'images/icons/upload.svg',
 
 			// TOC
 			'toc' => 'images/icons/contents-ltr.svg',
@@ -174,33 +172,6 @@ $wgMinervaStyleModules = array(
 		'styles' => array(
 			'resources/skins.minerva.beta.userpage.styles/userpage.less',
 		)
-	),
-
-	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
-		'position' => 'bottom',
-		'class' => 'ResourceLoaderImageModule',
-		'selectorWithoutVariant' => '.mw-ui-icon-{name}:before',
-		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
-		'variants' => array(
-			'gray' => array(
-				'color' => '#555555',
-			),
-		),
-		'images' => array(
-			// page actions
-			'watch' => 'images/icons/beta/watch.svg',
-			'watched' => 'images/icons/beta/watched.svg',
-			'edit' => 'images/icons/beta/editLocked.svg',
-			'edit-enabled' => 'images/icons/beta/edit.svg',
-			// Special:MobileMenu-specific back icon
-			'back-mobilemenu' => 'images/icons/beta/back-ltr.svg',
-			'search' => array(
-				'file' => array(
-					'default' => 'images/icons/magnifying-glass.svg',
-				),
-				'variants' => array( 'gray', 'invert' ),
-			)
-		),
 	),
 );
 
