@@ -17,7 +17,8 @@
 			"LNDDYL",
 			"Citizen01",
 			"Wehwei",
-			"Zhxy 519"
+			"Zhxy 519",
+			"Bowleerin"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -346,6 +347,13 @@
 	"mobile-frontend-watchlist-removed": "已從您的監視清單移除 $1",
 	"mobile-frontend-watchlist-signup-action": "<strong>監視清單可以幫助您記錄頁面並追蹤頁面的修改。</strong><br />註冊以開始建立清單。",
 	"mobile-frontend-watchlist-view": "檢視您的監視清單",
+	"mobile-frontend-user-page-talk": "討論",
+	"mobile-frontend-user-page-contributions": "貢獻",
+	"mobile-frontend-user-page-uploads": "上傳",
+	"mobile-frontend-user-page-no-owner-page-yet": "您目前沒有使用者頁面",
+	"mobile-frontend-user-page-no-page-yet": "沒有$1的使用者頁面",
+	"mobile-frontend-user-page-describe-yourself-editors": "編輯器",
+	"mobile-frontend-user-page-create-owner-page-link-label": "建立您自己的",
 	"mobile-frontend-quick-lookup-looking": "正在查詢 \"$1\"。",
 	"mobile.css": "/* 此處的 CSS 將影響使用手機版的使用者 */",
 	"mobile.js": "/* 此處的JavaScript將載入於使用手機版的使用者 */",
