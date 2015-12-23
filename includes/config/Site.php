@@ -31,8 +31,9 @@ $wgMFDeviceWidthMobileSmall = 280;
 
 /**
  * Minimum available screen width at which a device can be considered a tablet/desktop
+ * The number is currently based on the device width of a Samsung Galaxy S5 mini.
  */
-$wgMFDeviceWidthTablet = 768;
+$wgMFDeviceWidthTablet = 720;
 
 /**
  * Template for mobile URLs.

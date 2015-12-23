@@ -68,7 +68,7 @@ Given(/^I am viewing the site in mobile mode$/) do
 end
 
 Given(/^I am viewing the site in tablet mode$/) do
-  # Use numbers significantly larger than 768px to account for browser chrome
+  # Use numbers significantly larger than tablet threshold to account for browser chrome
   browser.window.resize_to(1280, 1024)
 end
 
