@@ -426,12 +426,12 @@
 							'blocked',
 							'autoblocked'
 						],
-						key = response.error.code,
+						key = response && response.error && response.error.code,
 						typeMap = {
 							editconflict: 'editConflict',
 							wasdeleted: 'editPageDeleted',
 							'abusefilter-disallowed': 'extensionAbuseFilter',
-							captcha: 'extensionConfirmEdit',
+							captcha: 'extensionCaptcha',
 							spamprotectiontext: 'extensionSpamBlacklist',
 							'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
 						};
@@ -443,12 +443,9 @@
 					} else if ( data.type === 'abusefilter' ) {
 						self._showAbuseFilter( data.details.type, data.details.message );
 					} else {
-						if ( data.details === 'editconflict' ) {
+						if ( key === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
-						} else if (
-							response.error &&
-							$.inArray( response.error.code, whitelistedErrorInfo ) > -1
-						) {
+						} else if ( $.inArray( key, whitelistedErrorInfo ) > -1 ) {
 							msg = response.error.info;
 						} else {
 							msg = mw.msg( 'mobile-frontend-editor-error' );
