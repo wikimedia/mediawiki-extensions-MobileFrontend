@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_4f361302",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-23T22:08:07Z",
+      "side": 1,
+      "message": "This seems wrong.. it returns an array of buttons",
+      "revId": "429062978d0f64280843a9f6e88993070e1e6880",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_6f398fee",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-12-23T22:08:07Z",
+      "side": 1,
+      "message": "This is wrong.",
+      "revId": "429062978d0f64280843a9f6e88993070e1e6880",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
