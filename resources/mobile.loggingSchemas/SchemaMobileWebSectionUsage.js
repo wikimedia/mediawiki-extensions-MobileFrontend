@@ -24,7 +24,7 @@
 		 * @inheritdoc
 		 *
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Boolean} defaults.isTablet whether the screen resolution is over 768px
+		 * @cfg {Boolean} defaults.isTablet whether the screen width is over tablet width threshold
 		 * @cfg {String} defaults.sessionId unique session id for user
 		 * @cfg {Boolean} defaults.hasServiceWorkerSupport whether the user is able to use service workers.
 		 * @cfg {Boolean} defaults.isTestA whether the user is in the bucket A of the A/B test.
