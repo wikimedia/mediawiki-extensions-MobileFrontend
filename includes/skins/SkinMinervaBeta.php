@@ -79,12 +79,14 @@ class SkinMinervaBeta extends SkinMinerva {
 	/**
 	 * Do not return secondary actions on the user page
 	 *
-	 * @inheritdoc
 	 * @param BaseTemplate $tpl
+	 * @return string[]
 	 */
 	protected function getSecondaryActions( BaseTemplate $tpl ) {
-		if ( !$this->isUserPage ) {
-			parent::getSecondaryActions( $tpl );
+		if ( $this->isUserPage ) {
+			return array();
+		} else {
+			return parent::getSecondaryActions( $tpl );
 		}
 	}
 
