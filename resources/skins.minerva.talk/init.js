@@ -45,7 +45,7 @@
 
 	init();
 
-	// add an "add discussion" button to talk pages (only for beta and logged in users)
+	// add an "add discussion" button to talk pages (only for logged in users)
 	if (
 		!user.isAnon() &&
 		( page.inNamespace( 'talk' ) || page.inNamespace( 'user_talk' ) )

@@ -72,7 +72,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	protected function getSecondaryActionsHtml() {
 		// no secondary actions on the user page
 		if ( !$this->getSkin()->isUserPage ) {
-			parent::getSecondaryActions();
+			return parent::getSecondaryActionsHtml();
 		}
 	}
 }

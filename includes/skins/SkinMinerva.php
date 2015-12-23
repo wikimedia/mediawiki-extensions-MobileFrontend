@@ -794,6 +794,7 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Returns an array of links for page secondary actions
 	 * @param BaseTemplate $tpl
+	 * @return string[]
 	 */
 	protected function getSecondaryActions( BaseTemplate $tpl ) {
 		$buttons = array();
