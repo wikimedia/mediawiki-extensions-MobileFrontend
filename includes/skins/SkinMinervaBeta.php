@@ -168,14 +168,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * If the user is in beta mode, we assume, he is an experienced
-	 * user (he/she found the "beta" switch ;))
-	 */
-	protected function isExperiencedUser() {
-		return true;
-	}
-
-	/**
 	 * Add talk, contributions, and uploads links at the top of the user page.
 	 *
 	 * @inheritdoc
