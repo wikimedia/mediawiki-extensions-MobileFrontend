@@ -876,14 +876,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Checks, if an edit count > 5.
-	 */
-	protected function isExperiencedUser() {
-		return $this->getUser()->getEditCount() > 5;
-	}
-
-	/**
-	 * Returns true, if the page can have a talk page.
+	 * Returns true, if the page can have a talk page and user is logged in.
 	 * @return boolean
 	 */
 	protected function isTalkAllowed() {
@@ -891,7 +884,7 @@ class SkinMinerva extends SkinTemplate {
 		return $this->isAllowedPageAction( 'talk' ) &&
 			!$title->isTalkPage() &&
 			$title->canTalk() &&
-			$this->isExperiencedUser();
+			$this->getUser()->isLoggedIn();
 	}
 
 	/*
