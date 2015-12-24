@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_d06e2493",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 941,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-24T14:04:03Z",
+      "side": 1,
+      "message": "The task says \"for logged in users\", this condition is missing here :)",
+      "revId": "9ef132baeefac711aa7252e5d81e0906d4fbf071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
