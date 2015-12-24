@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_d03dc4b9",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-24T12:51:04Z",
+      "side": 1,
+      "message": "I haven\u0027t checked (I\u0027m online with my mobile phone), but wouldn\u0027t \"body.skin-minerva \u003e #searchInput\" work, too?",
+      "revId": "e7ebb32ef0f994a85cc05c683e58c8ba91d94440",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
