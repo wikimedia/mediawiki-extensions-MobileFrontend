@@ -24,13 +24,22 @@
 			'Scrolling has been bound and is handler is called on scroll' );
 	} );
 
-	QUnit.skip( 'emits load event', 1, function ( assert ) {
-		var is = new InfiniteScroll();
-		is.setElement( $( 'body' ) );
+	QUnit.test( 'emits load event', 1, function ( assert ) {
+		var asyncDone = assert.async(),
+			is = new InfiniteScroll();
 
+		// Make sure we always have somewhere to scroll
+		$( 'body' ).height( '9999px' );
+
+		is.setElement( $( 'body' ) );
 		is.on( 'load', function () {
 			assert.ok( true, 'Load event emitted' );
-			QUnit.start();
+
+			// Reset height
+			$( 'body' ).css( 'height', '' );
+
+			// Finish
+			asyncDone();
 		} );
 
 		// Scroll to the bottom of the body

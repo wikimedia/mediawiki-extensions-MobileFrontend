@@ -38,7 +38,7 @@
 		}
 	} );
 
-	QUnit.skip( 'check cookies', 2, function ( assert ) {
+	QUnit.test( 'check cookies', 2, function ( assert ) {
 		assert.strictEqual(
 			settings.cookiesEnabled(),
 			true,
@@ -54,7 +54,7 @@
 		);
 	} );
 
-	QUnit.skip( 'localstorage', 3, function ( assert ) {
+	QUnit.test( 'localstorage', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.get( 'test_key' ),
 			null,
@@ -76,7 +76,7 @@
 		);
 	} );
 
-	QUnit.skip( 'cookie fallback', 3, function ( assert ) {
+	QUnit.test( 'cookie fallback', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.get( 'test_key', true ),
 			null,
@@ -102,13 +102,12 @@
 		setup: function () {
 			var localStorageCache = {};
 
-			this.sandbox.stub( mw.storage, 'isLocalStorageSupported', true );
-			this.sandbox.stub( localStorage, 'setItem' ).throws();
-			this.sandbox.stub( localStorage, 'getItem', function ( key ) {
+			this.sandbox.stub( mw.storage, 'set' ).returns( false );
+			this.sandbox.stub( mw.storage, 'get', function ( key ) {
 				// localStorage returns null for missing items
 				return localStorageCache[key] || null;
 			} );
-			this.sandbox.stub( localStorage, 'removeItem', function ( key ) {
+			this.sandbox.stub( mw.storage, 'remove', function ( key ) {
 				delete localStorageCache[key];
 			} );
 
@@ -117,7 +116,7 @@
 			this.sandbox.restore();
 		}
 	} );
-	QUnit.skip( 'without cookies or localStorage', 3, function ( assert ) {
+	QUnit.test( 'without cookies or mw.storage', 3, function ( assert ) {
 		assert.strictEqual(
 			settings.save( 'test_key', 'yep' ),
 			false,
@@ -133,7 +132,7 @@
 		assert.strictEqual(
 			settings.get( 'test_key' ),
 			null,
-			'test_key has been correctly removed (even if it didn\'t exist in the first place'
+			'test_key has been correctly removed (even if it didn\'t exist in the first place)'
 		);
 	} );
 
