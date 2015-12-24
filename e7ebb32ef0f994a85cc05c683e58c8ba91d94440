@@ -16,6 +16,24 @@
       "revId": "e7ebb32ef0f994a85cc05c683e58c8ba91d94440",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_50a0f4f0",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-24T12:58:08Z",
+      "side": 1,
+      "message": "No, the input is inside a form.",
+      "parentUuid": "6eaa8f54_d03dc4b9",
+      "revId": "e7ebb32ef0f994a85cc05c683e58c8ba91d94440",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
