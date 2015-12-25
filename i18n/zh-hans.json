@@ -32,7 +32,8 @@
 			"御坂美琴",
 			"JLeow00",
 			"Hudafu",
-			"Cosine02"
+			"Cosine02",
+			"Apflu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -367,7 +368,7 @@
 	"mobile-frontend-user-page-contributions": "贡献",
 	"mobile-frontend-user-page-uploads": "上传",
 	"mobile-frontend-user-page-no-owner-page-yet": "您尚未拥有一个用户页",
-	"mobile-frontend-user-page-no-page-yet": "没有$1的用户页",
+	"mobile-frontend-user-page-no-page-yet": "$1没有可提供的用户页",
 	"mobile-frontend-user-page-describe-yourself-editors": "编者",
 	"mobile-frontend-user-page-desired-action": "此页面应由$1创建和编辑",
 	"mobile-frontend-user-page-create-owner-page-link-label": "创建您自己的",

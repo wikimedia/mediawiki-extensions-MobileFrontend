@@ -147,7 +147,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "찾고 있는 문서를 찾을 수 없습니다.",
 	"mobile-frontend-generic-404-title": "오류 - 페이지를 찾을 수 없습니다",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}은(는) 당신과 같은 사람들이 만듭니다.</strong><br />기여하려면 로그인하세요.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} 프로젝트는 여러분과 같은 사람들이 만듭니다.</strong><br />기여하려면 로그인하세요.",
 	"mobile-frontend-history": "이 문서의 편집 역사를 봅니다.",
 	"mobile-frontend-history-404-desc": "존재하지 않은 문서의 역사를 볼 수 없습니다. 문서가 삭제되었거나 잘못된 링크를 따라왔을 수 있습니다.",
 	"mobile-frontend-history-404-title": "이러한 문서 없음",
