@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_448835ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-25T10:16:51Z",
+      "side": 1,
+      "message": "If you add \u0027Bug: T119597\u0027 here (above the Change-Id line) the patch will automatically be linked to the phabricator task.",
+      "revId": "65f4fb7e02022b5c3aadd7fe24f7b6c17ebc4443",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_648bf1e8",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-25T10:16:51Z",
+      "side": 1,
+      "message": "missing space after ( and before ).",
+      "revId": "65f4fb7e02022b5c3aadd7fe24f7b6c17ebc4443",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
