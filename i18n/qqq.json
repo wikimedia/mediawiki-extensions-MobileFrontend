@@ -368,7 +368,7 @@
 	"mobile-frontend-user-page-member-since": "Message below the heading. $1 is the user registration date.",
 	"mobile-frontend-user-page-talk": "Text of the link to the user's talk page\n{{Identical|Talk}}",
 	"mobile-frontend-user-page-contributions": "Text of the link to the user's contributions page\n{{Identical|Contribution}}",
-	"mobile-frontend-user-page-uploads": "Text of the link to the user's uploads page",
+	"mobile-frontend-user-page-uploads": "Text of the link to the user's uploads page\n{{Identical|Upload}}",
 	"mobile-frontend-user-page-no-owner-page-yet": "Heading of the call to create the user page",
 	"mobile-frontend-user-page-no-page-yet": "Heading informing that no page for the user exists. $1 is the username of the user about whom the page is.",
 	"mobile-frontend-user-page-describe-yourself": "Body of the call to create the user page. $1 is {{msg-mw|mobile-frontend-user-page-describe-yourself-editors}}.",
