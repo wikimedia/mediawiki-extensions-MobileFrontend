@@ -132,7 +132,7 @@
 		}, 1000 ), 'Check API got called' );
 		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
 		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
-			n.errorMessages.server.heading, 'Check it is the correct heading' );
+			n.errorMessages.http.heading, 'Check it is the correct heading' );
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
