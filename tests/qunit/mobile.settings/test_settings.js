@@ -22,14 +22,14 @@
 				delete cookieCache[key];
 			} );
 
-			this.sandbox.stub( localStorage, 'setItem', function ( key, value ) {
+			this.sandbox.stub( mw.storage, 'set', function ( key, value ) {
 				localStorageCache[key] = value;
 			} );
-			this.sandbox.stub( localStorage, 'getItem', function ( key ) {
-				// localStorage returns null for missing items
+			this.sandbox.stub( mw.storage, 'get', function ( key ) {
+				// mw.storage returns null for missing items
 				return localStorageCache[key] || null;
 			} );
-			this.sandbox.stub( localStorage, 'removeItem', function ( key ) {
+			this.sandbox.stub( mw.storage, 'remove', function ( key ) {
 				delete localStorageCache[key];
 			} );
 		},
