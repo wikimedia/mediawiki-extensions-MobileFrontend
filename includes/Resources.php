@@ -1437,12 +1437,6 @@ $wgMinervaBootstrapModules = array(
 		),
 	),
 
-	// @todo FIXME: Remove when cache has cleared (T112315)
-	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(),
-
-	// @todo FIXME: Remove when cache has cleared (T112315)
-	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(),
-
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
