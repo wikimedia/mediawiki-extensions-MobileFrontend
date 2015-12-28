@@ -402,7 +402,8 @@ class SkinMinerva extends SkinTemplate {
 
 		// Login/Logout links
 		$this->insertLogInOutLink( $menu );
-
+		// Allow other extensions to add or override tools
+		Hooks::run( 'MobileMenu', array( 'personal', &$menu ) );
 		return $menu->getEntries();
 	}
 
@@ -471,6 +472,8 @@ class SkinMinerva extends SkinTemplate {
 				);
 		}
 
+		// Allow other extensions to add or override tools
+		Hooks::run( 'MobileMenu', array( 'discovery', &$menu ) );
 		return $menu->getEntries();
 	}
 
@@ -694,6 +697,8 @@ class SkinMinerva extends SkinTemplate {
 				->addComponent( $msg->text(), $title->getLocalUrl() );
 		}
 
+		// Allow other extensions to add or override tools
+		Hooks::run( 'MobileMenu', array( 'sitelinks', &$menu ) );
 		return $menu->getEntries();
 	}
 
@@ -827,8 +832,6 @@ class SkinMinerva extends SkinTemplate {
 			'personal' => $this->getPersonalTools(),
 			'sitelinks' => $this->getSiteLinks(),
 		);
-		// Allow other extensions to add or override tools
-		Hooks::run( 'MobileMenuData', array( &$data ) );
 		return $data;
 	}
 	/**
