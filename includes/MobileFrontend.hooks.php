@@ -58,11 +58,34 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Obtain the default mobile skin
+	 *
+	 * @param IContextSource $context
+	 * @param MobileContext $mobileContext
+	 * @return Skin
+	 */
+	protected static function getDefaultMobileSkin( RequestContext $context,
+		MobileContext $mobileContext
+	) {
+		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
+		$betaSkinName = $skinName . 'Beta';
+		// Force beta for test mode to sure all modules can run
+		$name = $context->getTitle()->getDBkey();
+		$inTestMode =
+			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
+		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
+			$skinName = $betaSkinName;
+		}
+		$skin = new $skinName( $context );
+		return $skin;
+	}
+
+	/**
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *
 	 * @param IContextSource $context
-	 * @param Skin $skin
+	 * @param Skin|null|string $skin
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
@@ -103,16 +126,18 @@ class MobileFrontendHooks {
 		// log whether user is using beta/stable
 		$mobileContext->logMobileMode();
 
-		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
-		$betaSkinName = $skinName . 'Beta';
-		// Force beta for test mode to sure all modules can run
-		$name = $context->getTitle()->getDBkey();
-		$inTestMode =
-			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
-			$skinName = $betaSkinName;
+		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile
+		$userSkin = $context->getRequest()->getVal( 'useskin' );
+		if ( $userSkin ) {
+			// Normalize the key in case the user is passing gibberish or has old preferences
+			$normalizedSkin = Skin::normalizeKey( $userSkin );
+			// If the skin has been normalized and is different from user input use it
+			if ( $normalizedSkin === $userSkin ) {
+				$skin = $normalizedSkin;
+				return false;
+			}
 		}
-		$skin = new $skinName( $context );
+		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
 
 		return false;
 	}
