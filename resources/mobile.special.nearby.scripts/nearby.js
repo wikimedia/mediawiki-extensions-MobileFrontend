@@ -90,7 +90,7 @@
 		router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 			$icon.hide();
 			refresh( $.extend( {}, options, {
-				pageTitle: pageTitle
+				pageTitle: mw.Uri.decode( pageTitle )
 			} ) );
 		} );
 
