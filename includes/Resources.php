@@ -585,6 +585,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.common',
 			'mobile.microAutoSize',
 			'oojs-ui.styles.icons-editing-core',
+			// needed for qunit test
+			'mediawiki.notification',
 		),
 		'scripts' => array(
 			'resources/mobile.editor.overlay/EditorOverlay.js',
@@ -892,7 +894,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toast' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
-			'mediawiki.notification'
+			'mediawiki.notify'
 		),
 		'scripts' => array(
 			'resources/mobile.toast/toast.js',

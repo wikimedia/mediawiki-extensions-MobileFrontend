@@ -19,7 +19,7 @@
 	 * @param {String} cssClass CSS class to add to the element
 	 */
 	Toast.prototype.show = function ( msg, cssClass ) {
-		this.notification = mw.notification.notify( msg, {
+		this.notification = mw.notify( msg, {
 			type: cssClass,
 			tag: 'toast'
 		} );
@@ -31,7 +31,9 @@
 	 */
 	Toast.prototype.hide = function () {
 		if ( this.notification !== undefined ) {
-			this.notification.close();
+			this.notification.done( function ( notif ) {
+				notif.close();
+			} );
 		}
 	};
 
