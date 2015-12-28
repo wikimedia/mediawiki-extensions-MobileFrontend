@@ -27,7 +27,7 @@
 				heading: mw.msg( 'mobile-frontend-nearby-permission' ),
 				msg: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
 			},
-			server: {
+			http: {
 				heading: mw.msg( 'mobile-frontend-nearby-error' ),
 				msg: mw.msg( 'mobile-frontend-nearby-error-guidance' )
 			},
@@ -130,6 +130,9 @@
 				// Get some new pages
 				this._find( options ).done( function ( options ) {
 					_super.call( self, options );
+				} ).fail( function ( errorType ) {
+					options.errorType = errorType;
+					_super.call( self, options );
 				} );
 			}
 
@@ -166,11 +169,14 @@
 
 			/**
 			 * Handler for failed query
+			 *
+			 * @param {String} code Error Code
+			 * @param {String} details A html-safe string with ad detailed error description
 			 * @ignore
 			 */
-			function pagesError() {
+			function pagesError( code, details ) {
 				self._isLoading = false;
-				options.errorOptions = self._errorOptions( 'server' );
+				options.errorOptions = self._errorOptions( code, details );
 				result.resolve( options );
 			}
 
@@ -199,12 +205,20 @@
 		 * Generate a list of options that can be passed to a messagebox template.
 		 * @private
 		 * @param {String} key to a defined error message
+		 * @param {String} msg Message to use, instead of a mapped error message from this.errorMessages
 		 * @returns {Object}
 		 */
-		_errorOptions: function ( key ) {
+		_errorOptions: function ( key, msg ) {
+			var message;
+
+			if ( msg ) {
+				message = { msg: msg };
+			} else {
+				message = this.errorMessages[ key ] || this.errorMessages.http;
+			}
 			return $.extend( {
 				className: 'errorbox'
-			}, this.errorMessages[ key ] || {} );
+			}, message );
 		},
 		/** @inheritdoc */
 		postRender: function () {
