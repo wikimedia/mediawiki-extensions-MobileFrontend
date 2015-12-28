@@ -1,10 +1,6 @@
 <?php
 /**
- * SpecialNearby.php
- */
-
-/**
- * Provide the Special page "Nearby" with location based articles
+ * Overrides Special:Preferences in mobile mode.
  */
 class SpecialMobilePreferences extends SpecialPreferences {
 
@@ -79,5 +75,9 @@ class SpecialMobilePreferences extends SpecialPreferences {
 				$out->addHtml( $button );
 			}
 		}
+	}
+
+	public function getSubpagesForPrefixSearch() {
+		return $this->validTabs;
 	}
 }

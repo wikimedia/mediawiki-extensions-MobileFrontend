@@ -277,4 +277,8 @@ HTML;
 			return $t->getLocalURL( $params );
 		}
 	}
+
+	public function getSubpagesForPrefixSearch() {
+		return array_keys( $this->options );
+	}
 }
