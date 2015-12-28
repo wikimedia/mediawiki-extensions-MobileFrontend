@@ -1188,4 +1188,18 @@ class MobileFrontendHooks {
 			)
 		);
 	}
+	/**
+	 * Handler for MakeGlobalVariablesScript hook.
+	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
+	 * @param &$vars array Variables to be added into the output
+	 * @param $outputPage OutputPage instance calling the hook
+	 * @return bool true in all cases
+	 */
+	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+		// If the device is a mobile, Remove the category entry.
+		if ( MobileContext::singleton()->shouldDisplayMobileView() ){
+			unset( $vars['wgCategories'] );
+		}
+		return true;
+	}
 }
