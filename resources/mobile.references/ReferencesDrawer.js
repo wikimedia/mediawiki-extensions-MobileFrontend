@@ -2,8 +2,9 @@
 	var ReferencesDrawer,
 		Drawer = M.require( 'mobile.drawers/Drawer' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
-		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
+		SchemaMobileWebUIClickTracking = M.require(
+			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
+		uiSchema = new SchemaMobileWebUIClickTracking();
 
 	/**
 	 * Drawer for references

@@ -1,8 +1,6 @@
 ( function ( M, $ ) {
 	var SearchOverlay, SearchGateway,
 		searchPlaceholderMsg = 'mobile-frontend-placeholder',
-		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		context = M.require( 'mobile.context/context' ),
 		router = M.require( 'mobile.startup/router' ),
 		browser = M.require( 'mobile.browser/browser' ),
@@ -24,9 +22,6 @@
 			placeholder = $this.attr( 'placeholder' );
 
 		ev.preventDefault();
-		uiSchema.log( {
-			name: 'search'
-		} );
 
 		mw.loader.using( moduleConfig.modules ).done( function () {
 			SearchGateway = M.require( moduleConfig.api );

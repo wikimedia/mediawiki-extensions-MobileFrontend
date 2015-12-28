@@ -1,7 +1,8 @@
 ( function ( M ) {
 	var TableOfContents,
-		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+		SchemaMobileWebUIClickTracking = M.require(
+			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
+		uiSchema = new SchemaMobileWebUIClickTracking(),
 		View = M.require( 'mobile.view/View' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
