@@ -415,7 +415,7 @@
 	"mobile-frontend-donate-button-label": "捐赠",
 	"mobile-frontend-meta-data-issues-categories": "关于此分类",
 	"mobile-frontend-loading-message": "正在加载...",
-	"mobile-frontend-console-recruit": "\\o/ 嘿！这是一个开源软件，并且我们需要志愿者来帮助我们打造它、使其更好和修复 Bug，比如您这样查阅 JavaScript 控制台的人。\n\n您可以找到我们的积压问题 @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-console-recruit": "\\o/ 嘿！这是一个开源软件，并且我们需要志愿者来帮助我们打造它、使其更好和修复 Bug，比如您这样查阅 JavaScript 控制台的人。\n\n您可以找到我们的积压问题 @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "好的",
 	"mobile-frontend-panel-cancel": "不，谢谢",
 	"mobile-frontend-panel-betaoptin-msg": "您是否希望尝试一些新功能？通过加入测试，您将有机会体验实验性功能，并承担遇到错误和问题的风险。",

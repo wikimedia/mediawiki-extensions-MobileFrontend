@@ -391,7 +391,7 @@
 	"mobile-frontend-donate-button-label": "Doner",
 	"mobile-frontend-meta-data-issues-categories": "Om denne kategorien",
 	"mobile-frontend-loading-message": "Laster…",
-	"mobile-frontend-console-recruit": "\\o/ Hei du! Dette er åpen kildekode-programvare som du kan være med å bygge – og du kan bli med å fikse feil du kommer over i JavaScript-konsollen!\n\nDu finner backloggen vår @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-console-recruit": "\\o/ Hei du! Dette er åpen kildekode-programvare som du kan være med å bygge – og du kan bli med å fikse feil du kommer over i JavaScript-konsollen!\n\nDu finner backloggen vår @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "Ok",
 	"mobile-frontend-panel-cancel": "Nei takk",
 	"mobile-frontend-panel-betaoptin-msg": "Vil du teste noen nye funksjoner? Ved å bli med i beta-testingen får du tilgang på nye, eksperimentelle funksjoner, men med en viss risiko for å støte på feil.",
