@@ -12,8 +12,9 @@
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
-		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+		SchemaMobileWebUIClickTracking = M.require(
+			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
+		uiSchema = new SchemaMobileWebUIClickTracking(),
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
 		betaOptinPanel;

@@ -1048,6 +1048,7 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaEdit.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
+			'resources/mobile.loggingSchemas/SchemaMobileWebUIClickTracking.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSectionUsage.js',

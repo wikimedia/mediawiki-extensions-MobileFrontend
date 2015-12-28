@@ -2,8 +2,9 @@
 
 	var loader = M.require( 'mobile.overlays/moduleLoader' ),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+		SchemaMobileWebUIClickTracking = M.require(
+			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
+		uiSchema = new SchemaMobileWebUIClickTracking(),
 		user = M.require( 'mobile.user/user' );
 
 	// categories overlay

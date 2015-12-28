@@ -3,8 +3,9 @@
  * with the Toast notifications defined by common/toast.js.
  */
 ( function ( M, $, mw ) {
-	var MobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+	var SchemaMobileWebUIClickTracking = M.require(
+			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
+		uiSchema = new SchemaMobileWebUIClickTracking(),
 		mainMenu = M.require( 'skins.minerva.scripts/skin' ).getMainMenu(),
 		$btn = $( '#secondary-button.user-button' ).parent(),
 		router = M.require( 'mobile.startup/router' ),
