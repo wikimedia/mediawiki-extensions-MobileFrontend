@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_09c24e39",
+        "filename": "resources/mobile.startup/heading.hogan",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-28T13:54:19Z",
+      "side": 1,
+      "message": "Why have you added this file? It seems unrelated, or do I miss something? :(",
+      "revId": "35ecf1d26ec08825dc9635b0bf0a048d66030e09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
