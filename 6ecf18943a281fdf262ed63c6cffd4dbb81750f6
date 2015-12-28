@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_fa969141",
+        "filename": "includes/Resources.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-28T23:45:19Z",
+      "side": 1,
+      "message": "only one * needed :P\n\n/**\n * your comment ...\n */",
+      "revId": "6ecf18943a281fdf262ed63c6cffd4dbb81750f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_bac7b949",
+        "filename": "includes/Resources.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-28T23:45:19Z",
+      "side": 1,
+      "message": "I\u0027m not sure, if more and more global variables for modules makes sense. In fact, I would love to see only wgResourceModules, because the other ones remain in the global scope, but aren\u0027t used anymore. So there is, in fact, no reason to create these extra arrays. You can order an array, too, and add comments to name a particular section :)",
+      "revId": "6ecf18943a281fdf262ed63c6cffd4dbb81750f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_3ab429cf",
+        "filename": "includes/Resources.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-28T23:45:19Z",
+      "side": 1,
+      "message": "I would love to see this module above the skins.minerva.beta... module to not mix skins.minerva.* modules with mobile.* modules. Would that ok for you? :P",
+      "revId": "6ecf18943a281fdf262ed63c6cffd4dbb81750f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
