@@ -2,7 +2,7 @@
 {{#errorMessage}}<div class="content">{{errorMessage}}</div>{{/errorMessage}}
 <ul class="mw-mf-notifications">
 	{{#notifications}}
-		<li class="mw-echo-notification">
+		<li class="mw-echo-notification {{unread}}">
 			{{{message}}}
 		</li>
 	{{/notifications}}

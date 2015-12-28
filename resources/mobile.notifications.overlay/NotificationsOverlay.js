@@ -66,7 +66,8 @@
 						notifications = $.map( result.query.notifications.list, function ( a ) {
 							return {
 								message: a['*'],
-								timestamp: a.timestamp.mw
+								timestamp: a.timestamp.mw,
+								unread: ( a.hasOwnProperty( 'read' ) ? 'mw-echo-notification-read' : 'mw-echo-notification-unread' )
 							};
 						} ).sort( function ( a, b ) {
 							return a.timestamp < b.timestamp ? 1 : -1;
