@@ -212,6 +212,11 @@ $wgMFResourceParsedMessageModuleBoilerplate = $wgMFResourceBoilerplate + array(
 	'class' => 'MFResourceLoaderParsedMessageModule',
 );
 
+$wgMFResourceImageModuleBoilerplate = $wgMFResourceFileModuleBoilerplate + array(
+	'class' => 'ResourceLoaderImageModule',
+	'prefix' => 'mw-ui',
+);
+
 require_once __DIR__ . "/includes/Resources.php";
 
 /**
