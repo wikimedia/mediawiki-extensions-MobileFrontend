@@ -242,7 +242,12 @@
 			this.$( 'a' ).each( function ( i ) {
 				// FIXME: not unique if multiple Nearby objects on same page
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
-			} ).on( 'click', function () {
+			} ).on( 'click', function ( ev ) {
+				// Do not react to 'open in new tab' clicks as changing the hash
+				// re-renders the view.
+				if ( ev.altKey || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.which === 2 ) {
+					return;
+				}
 				// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
 				// then set hash to clicked element
 				if ( !hash.match( /^(#\/page|#\/coord)/i ) ) {
