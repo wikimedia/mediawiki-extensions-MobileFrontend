@@ -29,7 +29,9 @@
 
 // Overlays (read only)
 //
-// TODO: Document when this should be used.
+// Read-only overlays should be used when no user interaction is required.
+// They should only be used to convey information to the user, such as
+// warning him or her when an event occurs.
 //
 // Markup:
 // <div class="overlay-enabled">
@@ -50,7 +52,10 @@
 
 // Overlays (primary)
 //
-// TODO: Document when this should be used.
+// Primary overlays should be used when user interaction is required in a chain
+// of actions. For example, when editing a page in MobileFrontend, the user will
+// edit the page, and then enter an edit message on the next overlay, displayed
+// after pressing the "Next" button.
 //
 // Markup:
 // <div class="overlay-enabled">
@@ -74,7 +79,10 @@
 
 // Overlays (constructive)
 //
-// TODO: Document when this should be used.
+// Constructive overlays should be used when user interaction is required in the
+// form of, well, a form. These overlays should NOT be set up as a chain (see
+// above for those), but rather as a single action that is completed once the user
+// presses the "Submit" button.
 //
 // Markup:
 // <div class="overlay-enabled">
