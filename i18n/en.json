@@ -38,7 +38,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface",
-	"action-mf-uploadbutton": "use the MobileFrontend-specific upload system.",
+	"action-mf-uploadbutton": "use the simplified mobile upload system",
 	"beta-feature-minerva": "Enable mobile skin ({{int:skinname-minerva}}) on desktop",
 	"beta-feature-minerva-description": "Make the skin used on mobile devices a selectable desktop skin under the \"{{int:prefs-rendering}}\" preferences tab.",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
