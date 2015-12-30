@@ -530,7 +530,7 @@ class SkinMinerva extends SkinTemplate {
 			unset( $returntoquery['campaign'] );
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
-			$menu->insert( 'auth' )
+			$menu->insert( 'auth', $isJSOnly = true )
 				->addComponent(
 					wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 					$url,
