@@ -18,7 +18,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
-	"action-mf-uploadbutton": "das MobileFrontend-spezifische Hochladesystem zu verwenden.",
+	"action-mf-uploadbutton": "das vereinfachte mobile Hochladesystem zu verwenden",
 	"beta-feature-minerva": "Die mobile Benutzeroberfläche „{{int:skinname-minerva}}“ auf dem Desktop aktivieren",
 	"beta-feature-minerva-description": "Macht aus der auf mobilen Geräten verwendeten Benutzeroberfläche unter der Einstellungs-Registerkarte „{{int:prefs-rendering}}“ eine auswählbare Desktop-Benutzeroberfläche.",
 	"mobile-frontend-account-create-captcha-placeholder": "Bestätigungscode eingeben",

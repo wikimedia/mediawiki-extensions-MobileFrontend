@@ -33,7 +33,8 @@
 			"JLeow00",
 			"Hudafu",
 			"Cosine02",
-			"Apflu"
+			"Apflu",
+			"EagerLin"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -91,7 +92,7 @@
 	"mobile-frontend-edit-login-action": "<strong>帮助改进{{SITENAME}}。</strong><br />登录以编辑。",
 	"mobile-frontend-edit-signup-action": "<strong>帮助改进{{SITENAME}}。</strong><br />注册以编辑。",
 	"mobile-frontend-editor-abusefilter-disallow": "因为我们检测到的问题此次编辑无法保存。",
-	"mobile-frontend-editor-abusefilter-read-more": "阅读更多",
+	"mobile-frontend-editor-abusefilter-read-more": "更多阅读",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您确信要保存此次编辑么？这可能将产生一些问题。",
 	"mobile-frontend-editor-anon": "不登录编辑",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您没有登录。如果您进行任何编辑，您的IP地址会公开可见。如果您<strong>登录</strong>或<strong>创建账户</strong>，您的编辑会归于您的用户名之下，此外还有其他益处。",

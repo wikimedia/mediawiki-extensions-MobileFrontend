@@ -23,7 +23,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
-	"action-mf-uploadbutton": "usare il sistema di caricamento specifico per i dispositivi mobili.",
+	"action-mf-uploadbutton": "usare il sistema di caricamento semplificato per i dispositivi mobili",
 	"beta-feature-minerva": "Abilita il tema mobile ({{int:skinname-minerva}}) sul desktop",
 	"beta-feature-minerva-description": "Rende selezionabile il tema utilizzato sui dispositivi mobili anche per i desktop nella scheda \"{{int:prefs-rendering}}\" delle preferenze.",
 	"mobile-frontend-account-create-captcha-placeholder": "Inserisci il codice di conferma",

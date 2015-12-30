@@ -7,6 +7,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
+	"action-mf-uploadbutton": "benotzt déi vereinfacht mobil Versioun fir Fichieren eropzelueden",
 	"beta-feature-minerva": "Mobilt Ausgesinn ({{int:skinname-minerva}}) um Desktop aktivéieren",
 	"mobile-frontend-account-create-captcha-placeholder": "Confirmatiounscode aginn",
 	"mobile-frontend-account-create-email-placeholder": "E-Mailadress (fakultativ)",
