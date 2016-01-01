@@ -78,7 +78,7 @@
 	"mobile-frontend-edit-login-action": "<strong>協助改進 {{SITENAME}}。</strong><br />登入以編輯。",
 	"mobile-frontend-edit-signup-action": "<strong>協助改進 {{SITENAME}}。</strong><br />註冊以編輯。",
 	"mobile-frontend-editor-abusefilter-disallow": "因我們已偵測到問題，此次編輯不能儲存。",
-	"mobile-frontend-editor-abusefilter-read-more": "更多閱讀",
+	"mobile-frontend-editor-abusefilter-read-more": "閱讀更多",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您確定要儲存此次編輯？這可能會出現問題。",
 	"mobile-frontend-editor-anon": "不登入編輯",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您尚未登入。若您進行任何編輯，您的 IP 位址將會被公開。若您<strong>登入</strong>或<strong>建立帳號</strong>，您的編輯將會以您的使用者名稱標示及擁有其他好處。",

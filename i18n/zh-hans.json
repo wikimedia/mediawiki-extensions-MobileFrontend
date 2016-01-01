@@ -34,11 +34,12 @@
 			"Hudafu",
 			"Cosine02",
 			"Apflu",
-			"EagerLin"
+			"EagerLin",
+			"Fengchao"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
-	"action-mf-uploadbutton": "使用移动前端专用上传系统。",
+	"action-mf-uploadbutton": "使用简化的移动上传系统",
 	"beta-feature-minerva": "在桌面版上启用移动版皮肤（{{int:skinname-minerva}}）",
 	"beta-feature-minerva-description": "使适用移动设备的皮肤可作为桌面版的一项皮肤在“{{int:prefs-rendering}}”选项卡中出现。",
 	"mobile-frontend-account-create-captcha-placeholder": "请输入验证码",
@@ -66,7 +67,7 @@
 	"mobile-frontend-cookies-required": "需要Cookie以切换视图模式。请启用它们后重试。",
 	"mobile-frontend-copyright": "除非另有声明，本网站内容采用$1授权。",
 	"mobile-frontend-desc": "移动版前端",
-	"mobile-frontend-diffview-404-desc": "你请求的版本ID不存在。",
+	"mobile-frontend-diffview-404-desc": "请求的版本ID不存在。",
 	"mobile-frontend-diffview-404-title": "错误版本",
 	"mobile-frontend-diffview-anonymous": "匿名用户",
 	"mobile-frontend-diffview-bytesadded": "添加$1字节",
@@ -92,7 +93,7 @@
 	"mobile-frontend-edit-login-action": "<strong>帮助改进{{SITENAME}}。</strong><br />登录以编辑。",
 	"mobile-frontend-edit-signup-action": "<strong>帮助改进{{SITENAME}}。</strong><br />注册以编辑。",
 	"mobile-frontend-editor-abusefilter-disallow": "因为我们检测到的问题此次编辑无法保存。",
-	"mobile-frontend-editor-abusefilter-read-more": "更多阅读",
+	"mobile-frontend-editor-abusefilter-read-more": "阅读更多",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您确信要保存此次编辑么？这可能将产生一些问题。",
 	"mobile-frontend-editor-anon": "不登录编辑",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您没有登录。如果您进行任何编辑，您的IP地址会公开可见。如果您<strong>登录</strong>或<strong>创建账户</strong>，您的编辑会归于您的用户名之下，此外还有其他益处。",

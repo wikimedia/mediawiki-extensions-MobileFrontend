@@ -22,7 +22,8 @@
 			"Ypryima",
 			"Ahonc",
 			"Dars",
-			"NickK"
+			"NickK",
+			"Максим Підліснюк"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -350,6 +351,11 @@
 	"mobile-frontend-watchlist-removed": "Вилучено $1 з Вашого списку спостереження",
 	"mobile-frontend-watchlist-signup-action": "<strong>Список спостереження допомагає Вам додавати сторінки в закладки і відстежувати зміни в них.</strong><br />Зареєструйтеся, щоб мати такий.",
 	"mobile-frontend-watchlist-view": "Переглянути список спостереження",
+	"mobile-frontend-user-page-talk": "Обговорення",
+	"mobile-frontend-user-page-contributions": "Внесок",
+	"mobile-frontend-user-page-uploads": "Завантаження",
+	"mobile-frontend-user-page-no-owner-page-yet": "У вас поки немає сторінки користувача",
+	"mobile-frontend-user-page-describe-yourself-editors": "Редактори",
 	"mobile-frontend-quick-lookup-looking": "Пошук «$1».",
 	"mobile-frontend-quick-lookup-no-results": "За запитом «$1» нічого не знайдено.",
 	"mobile-frontend-quick-lookup-not-internal": "Вибачте, це посилання не на цю вікі.",
