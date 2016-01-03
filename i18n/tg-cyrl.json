@@ -5,12 +5,26 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Бозгашт Ба Қисмати A",
-	"mobile-frontend-copyright": "Ҳамаи навиштаҳо таҳти иҷозаномаи <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> қобили дастрасӣ мебошанд; шартҳои изофӣ мумкин аст баъдан изофа шавад. Барои ҷузъиёти бештар нигаред <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Қавонин ва муқарароти истифода</a>. Википедиа як аломати тиҷории <a href='http://www.wikimediafoundation.org/'>Бунёди Викимедиа</a>, як созмони ғайри интифоӣ аст.",
+	"mobile-frontend-copyright": "Мӯҳтаво таҳти иҷозатномаи $1 ва ё дигар дастрас аст.",
+	"mobile-frontend-editor-edit": "Вироиш",
 	"mobile-frontend-featured-article": "Мақолаи барҷастаи рӯз",
 	"mobile-frontend-home-button": "Хона",
+	"mobile-frontend-last-modified-date": "Охирин вироиш рӯзи $1, ба вақти $2",
+	"mobile-frontend-main-menu-account-create": "Эҷоди ҳисоб",
+	"mobile-frontend-main-menu-login": "Вуруд",
+	"mobile-frontend-main-menu-nearby": "Наздикӣ",
+	"mobile-frontend-main-menu-settings": "Танзимот",
+	"mobile-frontend-news-items": "Дар ахбор",
+	"mobile-frontend-password-placeholder": "Гузарвожа",
+	"mobile-frontend-placeholder": "Ҷустуҷӯ дар {{SITENAME}}",
 	"mobile-frontend-random-button": "Тасодуфӣ",
 	"mobile-frontend-regular-site": "Намоиши саримизӣ",
 	"mobile-frontend-search-submit": "Бирав",
+	"mobile-frontend-terms-text": "Шартҳои Истифода",
+	"mobile-frontend-view": "Намоди мобилӣ",
 	"mobile-frontend-view-desktop": "Компютер",
-	"mobile-frontend-view-mobile": "Мобил"
+	"mobile-frontend-view-mobile": "Мобил",
+	"tag-mobile_edit": "Вироши мобилӣ",
+	"tag-mobile_web_edit": "Вироиши мобилии вебасос",
+	"mobile-frontend-pageaction-edit-tooltip": "Қисмати асосии ин саҳифаро вироиш кунед."
 }
