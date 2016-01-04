@@ -10,7 +10,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
-	"action-mf-uploadbutton": "utilizați sistemul de încărcare specific paginilor mobile.",
+	"action-mf-uploadbutton": "utilizați sistemul de încărcare mobil simplificat",
 	"beta-feature-minerva": "Activează interfața mobilă ({{int:skinname-minerva}}) pe desktop",
 	"beta-feature-minerva-description": "Permite ca interfața utilizată pe dispozitivele mobile să poată fi selectată și pe desktop din cadrul filei „{{int:prefs-rendering}}” din preferințe.",
 	"mobile-frontend-account-create-captcha-placeholder": "Introduceți codul de confirmare",

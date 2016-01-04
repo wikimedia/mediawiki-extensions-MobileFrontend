@@ -31,11 +31,12 @@
 			"MaxBioHazard",
 			"Vcohen",
 			"Translatobecomer",
-			"Metastasis"
+			"Metastasis",
+			"Iniquity"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
-	"action-mf-uploadbutton": "использование мобильной системы загрузки.",
+	"action-mf-uploadbutton": "использование упрощенной мобильной системы загрузки",
 	"beta-feature-minerva": "Включает мобильную тему оформления ({{int:skinname-minerva}}) в обычной версии",
 	"beta-feature-minerva-description": "Делает выбор темы оформления, используемой на мобильных устройствах, доступным в обычной версии (в разделе настроек «{{int:prefs-rendering}}»).",
 	"mobile-frontend-account-create-captcha-placeholder": "Введите код подтверждения",
