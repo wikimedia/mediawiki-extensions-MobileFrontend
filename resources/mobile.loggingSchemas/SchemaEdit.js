@@ -1,13 +1,16 @@
 ( function ( M, $ ) {
-	var SchemaEdit,
-		Schema = M.require( 'mobile.startup/Schema' ),
+	var Schema = M.require( 'mobile.startup/Schema' ),
 		user = M.require( 'mobile.user/user' );
 
 	/**
 	 * @class SchemaEdit
 	 * @extends Schema
 	 */
-	SchemaEdit = Schema.extend( {
+	function SchemaEdit() {
+		Schema.apply( this, arguments );
+	}
+
+	OO.mfExtend( SchemaEdit, Schema, {
 		/** @inheritdoc **/
 		name: 'Edit',
 		/**
