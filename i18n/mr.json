@@ -35,6 +35,8 @@
 	"mobile-frontend-dismiss-notification": "या सूचनेस काढा",
 	"mobile-frontend-donate-image-heading": "तुमचे अलीकडील योगदान",
 	"mobile-frontend-donate-image-title": "अपभारणे",
+	"mobile-frontend-donate-image-title-username": "$1 ची अपभारणे",
+	"mobile-frontend-donate-image-title-you": "आपण केलेली अपभारणे",
 	"mobile-frontend-donate-photo-first-upload-success": "यशस्वी! तुमच्या पहिल्या संपादनासाठी धन्यवाद!",
 	"mobile-frontend-drawer-cancel": "रद्द",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} सुधरविण्यास मदत करा.</strong><br />संपादन करण्यास प्रवेश करा.",
