@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_a2f0b9c4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1199,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-07T20:31:41Z",
+      "side": 1,
+      "message": "You don\u0027t need to cache the object, you can use MobileContext::singleton()-\u003eshouldDisplayMobileView() directly :)",
+      "revId": "5c415d863f21a073257e0e957d62e6f49a6e6f3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_82f33dd1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1201,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-07T20:31:41Z",
+      "side": 1,
+      "message": "shouldDisplayMobileView() match better, right?\n\nPlease follow the coding conventions (spaces inside ( and )).",
+      "revId": "5c415d863f21a073257e0e957d62e6f49a6e6f3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
