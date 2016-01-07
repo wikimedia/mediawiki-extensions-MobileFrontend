@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_020aedd4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-07T20:16:51Z",
+      "side": 1,
+      "message": "no need to add \"Wikimedia\" :)",
+      "revId": "8f45f4d9ee4d60396a3ca5f7cc87843288d21fd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_220fe9e5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1191,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-07T20:16:51Z",
+      "side": 1,
+      "message": "please add hook documentation (see the other hooks)",
+      "revId": "8f45f4d9ee4d60396a3ca5f7cc87843288d21fd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_e2f471cc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1192,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-07T20:16:51Z",
+      "side": 1,
+      "message": "This would remove the variable from mobile and desktop skins, please add a check, if the request was made from a mobile device :) (MobileContext provides a method for this).",
+      "revId": "8f45f4d9ee4d60396a3ca5f7cc87843288d21fd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
