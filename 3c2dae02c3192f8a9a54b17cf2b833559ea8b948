@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f972e30e",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-08T22:37:23Z",
+      "side": 1,
+      "message": "does it need to be so specific? Are there any other input\u0027s in this .newtalk-overlay element?",
+      "revId": "3c2dae02c3192f8a9a54b17cf2b833559ea8b948",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
