@@ -661,6 +661,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'resources/mobile.talk.overlays/TalkSectionAddOverlay.js',
 			'resources/mobile.talk.overlays/TalkOverlay.js',
 		),
+		'styles' => array(
+			'resources/mobile.talk.overlays/TalkOverlay.less',
+		),
 		'templates' => array(
 			// talk.js
 			'content.hogan' => 'resources/mobile.talk.overlays/content.hogan',
