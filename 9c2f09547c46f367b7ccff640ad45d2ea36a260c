@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_99072f85",
+        "filename": "resources/mobile.talk.overlays/newTalkOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-08T22:20:02Z",
+      "side": 1,
+      "message": "Just call this file TalkOverlay.less\nthe `new` prefix seems redundant.",
+      "revId": "9c2f09547c46f367b7ccff640ad45d2ea36a260c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
