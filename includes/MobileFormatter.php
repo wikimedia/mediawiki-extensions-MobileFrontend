@@ -9,7 +9,7 @@
 class MobileFormatter extends HtmlFormatter {
 	/** @var string $pageTransformStart String prefixes to be
 		applied at start and end of output from Parser */
-	protected $pageTransformStart = '<div>';
+	protected $pageTransformStart = '<div class="mw-mobilefrontend-leadsection">';
 	/** @var string $pageTransformEnd String prefixes to be
 		applied at start and end of output from Parser */
 	protected $pageTransformEnd = '</div>';
@@ -22,6 +22,8 @@ class MobileFormatter extends HtmlFormatter {
 	/** @var array $topHeadingTags Array of strings with possible tags,
 		can be recognized as top headings. */
 	public $topHeadingTags = array();
+	/** @var boolean $isMainPage If the html of the page added to the formatter
+		is the main page **/
 
 	/**
 	 * Saves a Title Object
@@ -308,7 +310,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected function headingTransform( $s, $tagName = 'h2' ) {
 		// add in-block class to all headings included in this section (except the first one)
 		// don't do this for the main page, it breaks things - Bug 190662
-		if ( !$this->mainPage ) {
+		if ( !$this->mainPage && $this->expandableSections ) {
 			$s = preg_replace_callback(
 				'/<(h[1-6])>/si',
 				function ( $match ) use ( $tagName ) {
@@ -323,14 +325,42 @@ class MobileFormatter extends HtmlFormatter {
 			);
 		}
 
-		// Makes sections expandable
-		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
-		$s = $this->pageTransformStart .
-			preg_replace(
-				'%(' . $tagRegEx . ')%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd,
-				$s
-			) .
-			$this->pageTransformEnd;
+		// do not mark lead section on main page, and do not enable expandable sections
+		if ( !$this->mainPage ) {
+			// $tagRegEx is a regex filter for any heading with the passed tagName.
+			$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
+			// set the limit for the preg_replace call. In general, this is controlled by the  value,
+			// if expandable sections are enabled or not. If not, we have to make sure, that the lead
+			// section is marked correctly, so we loop through the matches, but limit it to 1 (which
+			// is the lead section marking). - bug T122471
+			$limit = $this->expandableSections ? -1 : 1;
+			// start the html with the lead section marker (div element)
+			$s = $this->pageTransformStart .
+				preg_replace_callback(
+					'%(' . $tagRegEx . ')%sU', function ( $matches ) {
+						// if the sections should be expandable, enable them
+						if ( $this->expandableSections ) {
+							return $this->headingTransformStart .
+								$matches[0] . $this->headingTransformEnd;
+						} else {
+							// otherwise, simply close the lead section div (this should be the
+							// first and last run for this function) and add the heading (the matched
+							// text), so we don't loose one
+							return $this->headingTransformStart . $matches[0];
+						}
+					},
+					$s,
+					// the limit we set earlier
+					$limit
+				);
+
+			// we need to close the div elements properly (inside the page html, the function inside
+			// preg_replace_callback takes care of closing the div elements by starting the replacement
+			// with closing the div of the round before, so the last one is still unclosed).
+			if ( $this->expandableSections ) {
+				$s .= $this->pageTransformEnd;
+			}
+		}
 
 		return $s;
 	}
@@ -363,10 +393,8 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string
 	 */
 	protected function onHtmlReady( $html ) {
-		if ( $this->expandableSections ) {
-			$tagName = $this->findTopHeading( $html );
-			$html = $this->headingTransform( $html, $tagName );
-		}
+		$tagName = $this->findTopHeading( $html );
+		$html = $this->headingTransform( $html, $tagName );
 
 		return $html;
 	}

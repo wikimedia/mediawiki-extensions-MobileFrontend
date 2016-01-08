@@ -109,12 +109,16 @@
 			 * <div id="bodyContent">
 			 *   <!-- content of the page.. -->
 			 *   <div id="mw-content-text">
-			 *     <div>lead section</div>
+			 *     <div class="mw-mobilefrontend-leadsection">lead section</div>
 			 *     <h2></h2>
 			 *     <div>second section</div>
 			 *   </div>
 			 * </div>
 			 */
+			if ( $( '.mw-mobilefrontend-leadsection' ).length ) {
+				return $( '.mw-mobilefrontend-leadsection' );
+			}
+			// FIXME: Remove this, when the cache has cleared - bug T122471
 			return this.$( '> div > div' ).eq( 0 );
 		},
 
