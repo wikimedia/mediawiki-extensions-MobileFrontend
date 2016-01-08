@@ -31,7 +31,8 @@
 			"Ryo567",
 			"Csbotero",
 			"Ncontinanza",
-			"Peter Bowman"
+			"Peter Bowman",
+			"Syum90"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -363,8 +364,10 @@
 	"mobile-frontend-user-page-talk": "Discusión",
 	"mobile-frontend-user-page-contributions": "Contribuciones",
 	"mobile-frontend-user-page-uploads": "Subidas",
+	"mobile-frontend-user-page-no-owner-page-yet": "No tienes página de usuario todavía",
 	"mobile-frontend-user-page-describe-yourself-editors": "editores",
 	"mobile-frontend-user-page-desired-action": "Esta página debe crearse y editarse por $1",
+	"mobile-frontend-user-page-create-user-page-link-label": "Crear página llamada $1",
 	"mobile-frontend-quick-lookup-looking": "Búsqueda de «$1».",
 	"mobile-frontend-quick-lookup-no-results": "No se encontró nada que coincida con «$1».",
 	"mobile-frontend-quick-lookup-not-internal": "Este enlace no apunta a otro lugar en este wiki.",
