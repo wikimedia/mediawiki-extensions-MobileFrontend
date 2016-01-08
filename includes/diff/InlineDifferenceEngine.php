@@ -77,15 +77,30 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			$allowed = $this->isUserAllowedToSee();
 			$suppressed = $this->isSuppressedDiff();
 
+			// This IContextSource object will be used to get a message object for the
+			// messages used in this function. We need to to this to allow the message to
+			// get the correct value for the FULLPAGENAME inclusion (which is used in
+			// rev-suppressed-no-diff, e.g.). Otherwise it would use Special:MobileDiff as
+			// the target for Special:Log/delete?page=Special:MobileDiff/..., which isn't
+			// correct and very helpful. To fix this bug, we create a new context from the
+			// current one and set the title object (which we can get from the new revision).
+			// Bug: T122984
+			$context = new DerivativeContext( $this->getContext() );
+			$revision = $this->mNewRev;
+			$context->setTitle( $revision->getTitle() );
+
 			if ( !$allowed ) {
-				$msg = $suppressed ? 'rev-suppressed-no-diff' : 'rev-deleted-no-diff';
-				$msg = wfMessage( $msg )->parse();
+				$msg = $context->msg(
+					$suppressed ? 'rev-suppressed-no-diff' : 'rev-deleted-no-diff'
+				)->parse();
 			} else {
 				# Give explanation and add a link to view the diff...
 				$query = $this->getRequest()->appendQueryValue( 'unhide', '1', true );
 				$link = $this->getTitle()->getFullURL( $query );
-				$msg = $suppressed ? 'rev-suppressed-unhide-diff' : 'rev-deleted-unhide-diff';
-				$msg = wfMessage( $msg, $link )->parse();
+				$msg = $context->msg(
+					$suppressed ? 'rev-suppressed-unhide-diff' : 'rev-deleted-unhide-diff',
+					$link
+				)->parse();
 			}
 		}
 		return $msg;
