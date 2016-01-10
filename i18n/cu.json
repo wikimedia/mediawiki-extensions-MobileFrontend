@@ -16,13 +16,11 @@
 	"mobile-frontend-editor-save": "съхранѥниѥ",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "да !",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
-	"mobile-frontend-generic-login": "{{SITENAME}} съꙁьдаѥтъ сѧ чьловѣкꙑ · ижє ꙗко тꙑ сѫтъ",
 	"mobile-frontend-home-button": "главьна страница",
 	"mobile-frontend-images-status": "видꙑ",
 	"mobile-frontend-language-article-heading": "дроугꙑ ѩꙁꙑкꙑ",
 	"mobile-frontend-language-header": "сꙗ страница $1 {{PLURAL:$1|ѩꙁꙑкомь|ѩꙁꙑкома|ѩꙁꙑкꙑ}} пьсана ѥстъ",
 	"mobile-frontend-logged-in-homepage-notification": "добрѣ прити · $1!",
-	"mobile-frontend-login": "въниди",
 	"mobile-frontend-main-menu-account-create": "съꙁижди си мѣсто",
 	"mobile-frontend-main-menu-featured": "иꙁбрано",
 	"mobile-frontend-main-menu-login": "въниди",
@@ -54,9 +52,6 @@
 	"mobile-frontend-sign-up-heading": "съꙁижди си мѣсто",
 	"mobile-frontend-talk-overlay-header": "бєсѣда",
 	"mobile-frontend-talk-reply": "отъвѣтъ",
-	"mobile-frontend-user-account": "польꙃєватєльско мѣсто",
-	"mobile-frontend-username": "польꙃєватєлꙗ имѧ :",
-	"mobile-frontend-username-placeholder": "польꙃєватєлꙗ имѧ",
 	"mobile-frontend-watchlist-a-z": "каталогъ",
 	"mobile-frontend-watchlist-cta-button-login": "въниди",
 	"mobile-frontend-watchlist-cta-button-signup": "съꙁижди си мѣсто",
@@ -65,5 +60,5 @@
 	"mobile-frontend-watchlist-filter-other": "инꙑ",
 	"mobile-frontend-watchlist-filter-talk": "бєсѣда",
 	"mobile-frontend-watchlist-more": "вѧщє",
-	"nearby": "мѣста ижє блиꙁъ тєбꙗ сѫтъ"
+	"nearby": "страницѧ ѳємоѭ ижє блиꙁъ тєбѣ сѫтъ"
 }

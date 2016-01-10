@@ -16,7 +16,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
-	"action-mf-uploadbutton": "bruk det MobileFrontend-spesifikke opplastingsystemet.",
+	"action-mf-uploadbutton": "bruk det forenklede opplastingsystemet for mobil",
 	"beta-feature-minerva": "Bruk mobilt utseende ({{int:skinname-minerva}}) på stasjonære maskiner",
 	"beta-feature-minerva-description": "Gjør utseendet som brukes på mobilenheter tilgjengelig som et valgbart utseende under fanen «{{int:prefs-rendering}}» i innstillingene.",
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",

@@ -4,7 +4,8 @@
 			"Parabaik",
 			"Thanhtikesoe24",
 			"Sanlinnaing",
-			"Ninjastrikers"
+			"Ninjastrikers",
+			"9.sinistra"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "စိစစ်မှု ကုဒ်ထည့်သွင်းရန်",
@@ -16,7 +17,7 @@
 	"mobile-frontend-categories-subheading": "ဒီစာမျက်နှာက အောက်ပါ ခေါင်းစီးတွေနဲ့ သက်ဆိုင်ပါတယ်။",
 	"mobile-frontend-categories-nocat": "ဒီစာမျက်နှာက ဘယ်ခေါင်းစီးနဲ့မှ အခုချိန်မှာ သက်ဆိုင်ခြင်းမရှိသေးပါ။",
 	"mobile-frontend-changeslist-ip": "အမည်မသိ အသုံးပြုသူ",
-	"mobile-frontend-changeslist-nocomment": "တည်းဖြတ်အကျဉ်းချုပ် မရှိ",
+	"mobile-frontend-changeslist-nocomment": "တည်းဖြတ်မှုအတွက် စကားချပ် မရှိပါ",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
 	"mobile-frontend-copyright": "အကြောင်းအရာများကို အခြားမှတ်ချက်မရှိပါက $1 အောက်တွင် ရရှိနိုင်ပါသည်။",
 	"mobile-frontend-diffview-anonymous": "မှတ်ပံုမတင်ဘဲ ဝင်သံုးသူ",
@@ -99,6 +100,7 @@
 	"mobile-frontend-user-page-contributions": "ဆောင်ရွက်ချက်များ",
 	"nearby": "ခေါင်းစဉ်အရ အနီးဆုံး စာမျက်နှာများ",
 	"tag-mobile_edit": "မိုလ်ဘိုင်း တည်းဖြတ်",
+	"tag-mobile_edit-description": "မိုလ်ဘိုင်းဆိုဒ်မှ ပြုလုပ်သော တည်းဖြတ်မှု (ဝက်ဘ် သို့ app)",
 	"tag-mobile_web_edit": "မိုလ်ဘိုင်း ဝက်ဘ် တည်းဖြတ်",
 	"mobile-frontend-pageaction-edit-tooltip": "ဤစာမျက်နှာ၏ နိဒါန်းအပိုဒ်ကို တည်းဖြတ်ရန်"
 }
