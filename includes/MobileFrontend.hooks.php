@@ -698,7 +698,11 @@ class MobileFrontendHooks {
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
 
-		if ( $context->isBetaGroupMember() ) {
+		// show banners using WikidataPageBanner, if installed and all pre-conditions fulfilled
+		if (
+			ExtensionRegistry::getInstance()->isLoaded( 'WikidataPageBanner' ) &&
+			$context->isBetaGroupMember()
+		) {
 			// turn default banners on
 			$wgWPBEnableDefaultBanner = true;
 			// Turn on the banner experiment
