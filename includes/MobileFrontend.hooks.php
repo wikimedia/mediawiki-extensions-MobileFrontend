@@ -807,6 +807,17 @@ class MobileFrontendHooks {
 			$out->addLink( $link );
 		}
 
+		// set the vary header to User-Agent, if mobile frontend auto detects, if the mobile
+		// view should be delivered and the same url is used for desktop and mobile devices
+		// Bug: T123189
+		if (
+			$config->get( 'MFVaryOnUA' ) &&
+			$config->get( 'MFAutodetectMobileView' ) &&
+			!$config->get( 'MobileUrlTemplate' )
+		) {
+			$out->addVaryHeader( 'User-Agent' );
+		}
+
 		// Set X-Analytics HTTP response header if necessary
 		if ( $context->shouldDisplayMobileView() ) {
 			$analyticsHeader = ( $mfEnableXAnalyticsLogging ? $context->getXAnalyticsHeader() : false );
