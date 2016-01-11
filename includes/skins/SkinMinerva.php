@@ -443,7 +443,7 @@ class SkinMinerva extends SkinTemplate {
 		// Nearby link (if supported)
 		if (
 			$config->get( 'MFNearby' ) &&
-			( $config->get( 'MFNearbyEndpoint' ) || class_exists( 'GeoData' ) )
+			( $config->get( 'MFNearbyEndpoint' ) || class_exists( 'GeoData\GeoData' ) )
 		) {
 			$menu->insert( 'nearby', $isJSOnly = true )
 				->addComponent(
