@@ -11,3 +11,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @var bool
  */
 $wgMFEnableXAnalyticsLogging = false;
+
+/**
+ * Sample rate to log events for section usage in mobile web
+ *
+ * This header is used for analytics purposes.
+ * @var number
+ */
+$wgMFSchemaMobileWebSectionUsageSampleRate = 0;

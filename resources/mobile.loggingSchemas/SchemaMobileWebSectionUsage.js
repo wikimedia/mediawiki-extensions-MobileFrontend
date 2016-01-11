@@ -17,7 +17,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		samplingRate: 0.01,
+		samplingRate: mw.config.get( 'wgMFSchemaMobileWebSectionUsageSampleRate' ),
 		/** @inheritdoc **/
 		name: 'MobileWebSectionUsage',
 		/**
