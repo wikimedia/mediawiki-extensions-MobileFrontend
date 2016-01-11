@@ -1440,6 +1440,16 @@ $wgMinervaBootstrapModules = array(
 		),
 	),
 
+	'skins.minerva.scripts.top' => $wgMFResourceFileModuleBoilerplate + array(
+		'position' => 'top',
+		'dependencies' => array(
+			'mobile.mainMenu',
+		),
+		'scripts' => array(
+			'resources/skins.minerva.scripts.top/init.js',
+		)
+	),
+
 	// By mode. This should only ever be loaded in Minerva skin.
 	'skins.minerva.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(

@@ -932,6 +932,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['content'] = array();
 		$modules['legacy'] = array();
 
+		$modules['top'] = 'skins.minerva.scripts.top';
 		// Define all the modules that should load on the mobile site and their dependencies.
 		// Do not add mobules here.
 		$modules['stable'] = 'skins.minerva.scripts';
