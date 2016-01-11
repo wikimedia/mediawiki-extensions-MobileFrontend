@@ -8,8 +8,7 @@
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
 		router = M.require( 'mobile.startup/router' ),
-		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
-		SearchOverlay;
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 
 	/**
 	 * Overlay displaying search results
@@ -18,7 +17,20 @@
 	 * @uses SearchGateway
 	 * @uses Icon
 	 */
-	SearchOverlay = Overlay.extend( {
+	function SearchOverlay( options ) {
+		var self = this;
+		Overlay.call( this, options );
+		this.api = options.api;
+		this.gateway = new options.gatewayClass( this.api );
+
+		// FIXME: Remove when search registers route with overlay manager
+		// we need this because of the focus/delay hack in search.js
+		router.once( 'route', function () {
+			self._hideOnRoute();
+		} );
+	}
+
+	OO.mfExtend( SearchOverlay, Overlay, {
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			anchor: Anchor.prototype.template,
 			icon: Icon.prototype.template
@@ -97,20 +109,6 @@
 					ev.preventDefault();
 					self._hideOnRoute();
 				}
-			} );
-		},
-
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			var self = this;
-			Overlay.prototype.initialize.call( this, options );
-			this.api = options.api;
-			this.gateway = new options.gatewayClass( this.api );
-
-			// FIXME: Remove when search registers route with overlay manager
-			// we need this because of the focus/delay hack in search.js
-			router.once( 'route', function () {
-				self._hideOnRoute();
 			} );
 		},
 

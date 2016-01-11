@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var Nearby,
-		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
+	var MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		browser = M.require( 'mobile.browser/browser' ),
@@ -8,12 +7,58 @@
 
 	/**
 	 * List of nearby pages
-
 	 * @class Nearby
 	 * @uses NearbyGateway
 	 * @extends WatchstarPageList
 	 */
-	Nearby = WatchstarPageList.extend( {
+	function Nearby( options ) {
+		var self = this,
+			_super = WatchstarPageList;
+
+		this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
+		this.source = options.source || 'nearby';
+		this.nearbyApi = new NearbyGateway( {
+			api: options.api
+		} );
+
+		if ( options.errorType ) {
+			options.errorOptions = self._errorOptions( options.errorType );
+		}
+
+		// Re-run after api/geolocation request
+		if ( options.useCurrentLocation ) {
+			// Flush any existing list of pages
+			options.pages = [];
+
+			// Get some new pages
+			this.getCurrentPosition().done( function ( coordOptions ) {
+				$.extend( options, coordOptions );
+				self._find( options ).done( function ( options ) {
+					_super.call( self, options );
+				} );
+			} ).fail( function ( errorType ) {
+				options.errorType = errorType;
+				_super.call( self, options );
+			} );
+		} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
+			// Flush any existing list of pages
+			options.pages = [];
+
+			// Get some new pages
+			this._find( options ).done( function ( options ) {
+				_super.call( self, options );
+			} ).fail( function ( errorType ) {
+				options.errorType = errorType;
+				_super.call( self, options );
+			} );
+		}
+
+		// Run it once for loader etc
+		this._isLoading = true;
+		_super.apply( this, arguments );
+	}
+
+	OO.mfExtend( Nearby, WatchstarPageList, {
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
@@ -89,56 +134,6 @@
 				result.reject( 'incompatible' );
 			}
 			return result;
-		},
-		/**
-		 * Get pages within a nearby range of current location
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			var self = this,
-				_super = WatchstarPageList.prototype.initialize;
-
-			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
-			this.source = options.source || 'nearby';
-			this.nearbyApi = new NearbyGateway( {
-				api: options.api
-			} );
-
-			if ( options.errorType ) {
-				options.errorOptions = self._errorOptions( options.errorType );
-			}
-
-			// Re-run after api/geolocation request
-			if ( options.useCurrentLocation ) {
-				// Flush any existing list of pages
-				options.pages = [];
-
-				// Get some new pages
-				this.getCurrentPosition().done( function ( coordOptions ) {
-					$.extend( options, coordOptions );
-					self._find( options ).done( function ( options ) {
-						_super.call( self, options );
-					} );
-				} ).fail( function ( errorType ) {
-					options.errorType = errorType;
-					_super.call( self, options );
-				} );
-			} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
-				// Flush any existing list of pages
-				options.pages = [];
-
-				// Get some new pages
-				this._find( options ).done( function ( options ) {
-					_super.call( self, options );
-				} ).fail( function ( errorType ) {
-					options.errorType = errorType;
-					_super.call( self, options );
-				} );
-			}
-
-			// Run it once for loader etc
-			this._isLoading = true;
-			_super.apply( this, arguments );
 		},
 		/**
 		 * Request pages from api based on provided options.

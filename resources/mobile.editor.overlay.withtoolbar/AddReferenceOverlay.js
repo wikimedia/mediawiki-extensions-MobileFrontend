@@ -1,13 +1,16 @@
 ( function ( M, $ ) {
-	var	AddReferenceOverlay,
-		Overlay = M.require( 'mobile.overlays/Overlay' );
+	var Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * Overlay that shows an editor
 	 * @class AddReferenceOverlay
 	 * @extends Overlay
 	 */
-	AddReferenceOverlay = Overlay.extend( {
+	function AddReferenceOverlay() {
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( AddReferenceOverlay, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.

@@ -1,7 +1,6 @@
 ( function ( HTML, M, $ ) {
 
-	var Page,
-		time = M.require( 'mobile.modifiedBar/time' ),
+	var time = M.require( 'mobile.modifiedBar/time' ),
 		View = M.require( 'mobile.view/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		Thumbnail = M.require( 'mobile.startup/Thumbnail' );
@@ -13,7 +12,29 @@
 	 * @uses Section
 	 * @extends View
 	 */
-	Page = View.extend( {
+	function Page( options ) {
+		var thumb;
+		this.options = options;
+		options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
+		View.call( this, options );
+		// Fallback if no displayTitle provided
+		options.displayTitle = this.getDisplayTitle();
+		// allow usage in templates.
+		// FIXME: Should View map all options to properties?
+		this.title = options.title;
+		this.displayTitle = options.displayTitle;
+		this.thumbnail = options.thumbnail;
+		this.url = options.url || mw.util.getUrl( options.title );
+		this.id = options.id;
+		this.isMissing = options.isMissing;
+		thumb = this.thumbnail;
+		if ( thumb && thumb.width ) {
+			this.thumbnail.isLandscape = thumb.width > thumb.height;
+		}
+		this.wikidataDescription = options.wikidataDescription;
+	}
+
+	OO.mfExtend( Page, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Number} defaults.id Page ID. The default value of 0 represents a new page.
@@ -59,31 +80,6 @@
 		 * @inheritdoc
 		 */
 		isBorderBox: false,
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			var thumb;
-
-			this.options = options;
-			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
-			View.prototype.initialize.apply( this, arguments );
-			// Fallback if no displayTitle provided
-			options.displayTitle = this.getDisplayTitle();
-			// allow usage in templates.
-			// FIXME: Should View map all options to properties?
-			this.title = options.title;
-			this.displayTitle = options.displayTitle;
-			this.thumbnail = options.thumbnail;
-			this.url = options.url || mw.util.getUrl( options.title );
-			this.id = options.id;
-			this.isMissing = options.isMissing;
-			thumb = this.thumbnail;
-			if ( thumb && thumb.width ) {
-				this.thumbnail.isLandscape = thumb.width > thumb.height;
-			}
-			this.wikidataDescription = options.wikidataDescription;
-		},
 		/**
 		 * Retrieve the title that should be displayed to the user
 		 * @method

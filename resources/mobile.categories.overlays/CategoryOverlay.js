@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var CategoryOverlay,
-		Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**
@@ -10,7 +9,11 @@
 	 * @extends Overlay
 	 * @uses CategoryGateway
 	 */
-	CategoryOverlay = Overlay.extend( {
+	function CategoryOverlay() {
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( CategoryOverlay, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.

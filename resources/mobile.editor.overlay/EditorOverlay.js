@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var EditorOverlay,
-		EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
@@ -19,7 +18,35 @@
 	 * @uses VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 */
-	EditorOverlay = EditorOverlayBase.extend( {
+	function EditorOverlay( options ) {
+		this.gateway = new EditorGateway( {
+			api: options.api,
+			title: options.title,
+			sectionId: options.sectionId,
+			oldId: options.oldId,
+			isNewPage: options.isNewPage
+		} );
+		this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
+		if ( this.isVisualEditorEnabled() ) {
+			options.editSwitcher = true;
+		}
+		if ( this.readOnly ) {
+			options.readOnly = true;
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
+		} else {
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+		}
+		if ( options.isAnon ) {
+			// add required data for anonymous editing warning
+			options = this._prepareAnonWarning( options );
+		}
+		// be explicit here. This may have been initialized from VE.
+		options.isVisualEditor = false;
+		options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+		EditorOverlayBase.call( this, options );
+	}
+
+	OO.mfExtend( EditorOverlay, EditorOverlayBase, {
 		/** @inheritdoc **/
 		isBorderBox: false,
 		/** @inheritdoc **/
@@ -70,35 +97,6 @@
 				$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
-		},
-
-		/** @inheritdoc **/
-		initialize: function ( options ) {
-			this.gateway = new EditorGateway( {
-				api: options.api,
-				title: options.title,
-				sectionId: options.sectionId,
-				oldId: options.oldId,
-				isNewPage: options.isNewPage
-			} );
-			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
-			if ( this.isVisualEditorEnabled() ) {
-				options.editSwitcher = true;
-			}
-			if ( this.readOnly ) {
-				options.readOnly = true;
-				options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
-			} else {
-				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
-			}
-			if ( options.isAnon ) {
-				// add required data for anonymous editing warning
-				options = this._prepareAnonWarning( options );
-			}
-			// be explicit here. This may have been initialized from VE.
-			options.isVisualEditor = false;
-			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-			EditorOverlayBase.prototype.initialize.call( this, options );
 		},
 		events: $.extend( {}, EditorOverlayBase.prototype.events, {
 			'input .wikitext-editor': 'onInputWikitextEditor'

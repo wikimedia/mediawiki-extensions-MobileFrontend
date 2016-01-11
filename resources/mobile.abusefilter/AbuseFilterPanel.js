@@ -2,8 +2,7 @@
 	var
 		View = M.require( 'mobile.view/View' ),
 		AbuseFilterOverlay = M.require( 'mobile.abusefilter/AbuseFilterOverlay' ),
-		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		AbuseFilterPanel;
+		overlayManager = M.require( 'mobile.startup/overlayManager' );
 
 	/**
 	 * Panel that shows an error message related to the abusefilter extension.
@@ -12,7 +11,12 @@
 	 * @uses AbuseFilterOverlay
 	 * FIXME: should extend Panel not View. Or the name should be changed to something meaningful.
 	 */
-	AbuseFilterPanel = View.extend( {
+	function AbuseFilterPanel() {
+		this.isDisallowed = false;
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( AbuseFilterPanel, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.readMoreMsg A caption for the button allowing the user to read
@@ -23,12 +27,6 @@
 		},
 		template: mw.template.get( 'mobile.abusefilter', 'Panel.hogan' ),
 		className: 'panel hidden',
-
-		/** @inheritdoc */
-		initialize: function () {
-			View.prototype.initialize.apply( this, arguments );
-			this.isDisallowed = false;
-		},
 
 		/**
 		 * Show the panel. Create a route to show AbuseFilterOverlay with message.

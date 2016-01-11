@@ -1,14 +1,17 @@
 ( function ( M, $ ) {
 	var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
-		AddReferenceOverlay = M.require( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay' ),
-		EditorOverlayWithToolbar;
+		AddReferenceOverlay = M.require( 'mobile.editor.overlay.withtoolbar/AddReferenceOverlay' );
 
 	/**
 	 * Overlay that shows an editor
 	 * @class EditorOverlayWithToolbar
 	 * @extends EditorOverlay
 	 */
-	EditorOverlayWithToolbar = EditorOverlay.extend( {
+	function EditorOverlayWithToolbar() {
+		EditorOverlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( EditorOverlayWithToolbar, EditorOverlay, {
 		templatePartials: $.extend( {}, EditorOverlay.prototype.templatePartials, {
 			footer: mw.template.get( 'mobile.editor.overlay.withtoolbar', 'editorFooter.hogan' )
 		} ),

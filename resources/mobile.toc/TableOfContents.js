@@ -1,6 +1,5 @@
 ( function ( M ) {
-	var TableOfContents,
-		SchemaMobileWebUIClickTracking = M.require(
+	var SchemaMobileWebUIClickTracking = M.require(
 			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
 		uiSchema = new SchemaMobileWebUIClickTracking(),
 		View = M.require( 'mobile.view/View' ),
@@ -13,7 +12,11 @@
 	 * @uses Icon
 	 * @uses SchemaMobileWebClickTracking
 	 */
-	TableOfContents = View.extend( {
+	function TableOfContents() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( TableOfContents, View, {
 		templatePartials: {
 			tocHeading: mw.template.get( 'mobile.toc', 'heading.hogan' )
 		},

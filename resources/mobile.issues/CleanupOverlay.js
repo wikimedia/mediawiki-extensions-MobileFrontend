@@ -5,15 +5,19 @@
 			name: 'cleanup-gray',
 			additionalClassNames: 'issue-notice',
 			hasText: true
-		} ),
-		CleanupOverlay;
+		} );
 
 	/**
 	 * Overlay for displaying page issues
 	 * @class CleanupOverlay
 	 * @extends Overlay
 	 */
-	CleanupOverlay = Overlay.extend( {
+	function CleanupOverlay( options ) {
+		options.heading = '<strong>' + options.headingText + '</strong>';
+		Overlay.call( this, options );
+	}
+
+	OO.mfExtend( CleanupOverlay, Overlay, {
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.issues', 'OverlayContent.hogan' )
 		} ),
@@ -24,12 +28,7 @@
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			className: icon.getClassName()
-		} ),
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			options.heading = '<strong>' + options.headingText + '</strong>';
-			Overlay.prototype.initialize.call( this, options );
-		}
+		} )
 	} );
 	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay );
 }( mw.mobileFrontend, jQuery ) );

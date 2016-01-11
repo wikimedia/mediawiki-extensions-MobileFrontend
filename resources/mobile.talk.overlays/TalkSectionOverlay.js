@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var TalkSectionOverlay,
-		TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		popup = M.require( 'mobile.toast/toast' ),
 		user = M.require( 'mobile.user/user' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -14,7 +13,11 @@
 	 * @uses Button
 	 * @uses Toast
 	 */
-	TalkSectionOverlay = TalkOverlayBase.extend( {
+	function TalkSectionOverlay() {
+		TalkOverlayBase.apply( this, arguments );
+	}
+
+	OO.mfExtend( TalkSectionOverlay, TalkOverlayBase, {
 		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )

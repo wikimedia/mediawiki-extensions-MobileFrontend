@@ -57,8 +57,12 @@
 	} );
 
 	QUnit.test( 'View.extend, with el property', 1, function ( assert ) {
-		var ChildView, $testEl, view;
-		ChildView = View.extend( {
+		var $testEl, view;
+		function ChildView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, View, {
 			firstHeading: function () {
 				return this.$( 'h1' ).text();
 			}
@@ -73,8 +77,12 @@
 	} );
 
 	QUnit.test( 'View.extend, with defined template', 4, function ( assert ) {
-		var ChildView, view;
-		ChildView = View.extend( {
+		var view;
+		function ChildView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, View, {
 			className: 'my-class',
 			template: mw.template.compile( '<h1>{{title}}</h1><p>{{content}}</p>', 'xyz' ),
 			title: function () {
@@ -96,13 +104,21 @@
 	} );
 
 	QUnit.test( 'View.extend, with partials', 2, function ( assert ) {
-		var ParentView, ChildView, view;
+		var view;
 
-		ParentView = View.extend( {
+		function ParentView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ParentView, View, {
 			template: mw.template.compile( '<h1>{{title}}</h1>{{>content}}', 'xyz' )
 		} );
 
-		ChildView = ParentView.extend( {
+		function ChildView() {
+			ParentView.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, ParentView, {
 			templatePartials: {
 				content: mw.template.compile( '<p>{{text}}</p>', 'xyz' )
 			}
@@ -117,16 +133,24 @@
 	} );
 
 	QUnit.test( 'View.extend, extending partials', 1, function ( assert ) {
-		var ParentView, ChildView, view;
+		var view;
 
-		ParentView = View.extend( {
+		function ParentView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ParentView, View, {
 			templatePartials: {
 				a: 1,
 				b: 2
 			}
 		} );
 
-		ChildView = ParentView.extend( {
+		function ChildView() {
+			ParentView.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, ParentView, {
 			templatePartials: $.extend( ParentView.prototype.templatePartials, {
 				b: 3,
 				c: 4
@@ -142,16 +166,24 @@
 	} );
 
 	QUnit.test( 'View.extend, extending defaults', 1, function ( assert ) {
-		var ParentView, ChildView, view;
+		var view;
 
-		ParentView = View.extend( {
+		function ParentView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ParentView, View, {
 			defaults: {
 				a: 1,
 				b: 2
 			}
 		} );
 
-		ChildView = ParentView.extend( {
+		function ChildView() {
+			ParentView.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, ParentView, {
 			defaults: $.extend( ParentView.prototype.defaults, {
 				b: 3,
 				c: 4
@@ -169,8 +201,12 @@
 	} );
 
 	QUnit.test( 'View#preRender', 1, function ( assert ) {
-		var ChildView, view;
-		ChildView = View.extend( {
+		var view;
+		function ChildView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, View, {
 			template: mw.template.compile( '<p>{{text}}</p>', 'xyz' ),
 			preRender: function () {
 				this.options.text = 'hello';
@@ -182,8 +218,12 @@
 	} );
 
 	QUnit.test( 'View#postRender', 1, function ( assert ) {
-		var ChildView, view, spy = this.sandbox.spy();
-		ChildView = View.extend( {
+		var view, spy = this.sandbox.spy();
+		function ChildView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ChildView, View, {
 			postRender: function () {
 				spy();
 			}
@@ -195,7 +235,12 @@
 
 	QUnit.test( 'View#delegateEvents', 3, function ( assert ) {
 
-		var view, EventsView = View.extend( {
+		var view;
+		function EventsView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( EventsView, View, {
 			template: mw.template.compile( '<p><span>test</span></p>', 'xyz' ),
 			events: {
 				'click p span': function ( ev ) {
@@ -229,15 +274,24 @@
 	} );
 
 	QUnit.test( 'View#render (with isTemplateMode)', 2, function ( assert ) {
-		var view, view2,
-			TemplateModeView = View.extend( {
-				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
-				isTemplateMode: true
-			} ),
-			ContainerView = View.extend( {
-				className: 'bar',
-				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' )
-			} );
+		var view, view2;
+		function TemplateModeView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( TemplateModeView, View, {
+			template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
+			isTemplateMode: true
+		} );
+
+		function ContainerView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( ContainerView, View, {
+			className: 'bar',
+			template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' )
+		} );
 
 		view = new TemplateModeView();
 		view2 = new ContainerView();
@@ -248,17 +302,21 @@
 	} );
 
 	QUnit.test( 'View#render events (with isTemplateMode)', 4, function ( assert ) {
-		var view,
-			TemplateModeView = View.extend( {
-				events: {
-					'click span': 'onClick'
-				},
-				onClick: function () {
-					this.$el.empty().text( 'hello world' );
-				},
-				template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
-				isTemplateMode: true
-			} );
+		var view;
+		function TemplateModeView() {
+			View.apply( this, arguments );
+		}
+
+		OO.mfExtend( TemplateModeView, View, {
+			events: {
+				'click span': 'onClick'
+			},
+			onClick: function () {
+				this.$el.empty().text( 'hello world' );
+			},
+			template: mw.template.compile( '<p class="foo"><span>test</span></p>', 'html' ),
+			isTemplateMode: true
+		} );
 
 		view = new TemplateModeView();
 		// trigger event

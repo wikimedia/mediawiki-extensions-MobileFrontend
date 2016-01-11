@@ -1,8 +1,7 @@
 ( function ( M, $ ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		toast = M.require( 'mobile.toast/toast' ),
-		Icon = M.require( 'mobile.startup/Icon' ),
-		TalkSectionAddOverlay;
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * Overlay for adding a talk section
@@ -10,7 +9,15 @@
 	 * @extends TalkOverlayBase
 	 * @uses Toast
 	 */
-	TalkSectionAddOverlay = TalkOverlayBase.extend( {
+	function TalkSectionAddOverlay( options ) {
+		TalkOverlayBase.apply( this, arguments );
+		this.title = options.title;
+		// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
+		// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
+		this._saveHit = false;
+	}
+
+	OO.mfExtend( TalkSectionAddOverlay, TalkOverlayBase, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -43,14 +50,6 @@
 			'change .wikitext-editor, .summary': 'onTextInput',
 			'click .confirm-save': 'onSaveClick'
 		} ),
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			TalkOverlayBase.prototype.initialize.apply( this, arguments );
-			this.title = options.title;
-			// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
-			// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
-			this._saveHit = false;
-		},
 		/** @inheritdoc */
 		postRender: function () {
 			TalkOverlayBase.prototype.postRender.call( this );

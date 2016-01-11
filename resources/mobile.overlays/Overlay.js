@@ -1,15 +1,13 @@
 /*jshint unused:vars */
 ( function ( M, $ ) {
 
-	var
-		View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.view/View' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		icons = M.require( 'mobile.startup/icons' ),
 		browser = M.require( 'mobile.browser/browser' ),
-		$window = $( window ),
-		Overlay;
+		$window = $( window );
 
 	/**
 	 * Mobile modal window
@@ -18,7 +16,18 @@
 	 * @uses Icon
 	 * @uses Button
 	 */
-	Overlay = View.extend( {
+	function Overlay() {
+		this.isIos = browser.isIos();
+		this.isIos8 = browser.isIos( 8 );
+		// https://phabricator.wikimedia.org/T106934
+		// tldr: closing keyboard doesn't trigger a blur event
+		if ( this.isIos8 ) {
+			this.hasFixedHeader = false;
+		}
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( Overlay, View, {
 		/**
 		 * Identify whether the element contains position fixed elements
 		 * @property {Boolean}
@@ -105,17 +114,6 @@
 			this.$spinner.addClass( 'hidden' );
 		},
 
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			this.isIos = browser.isIos();
-			this.isIos8 = browser.isIos( 8 );
-			// https://phabricator.wikimedia.org/T106934
-			// tldr: closing keyboard doesn't trigger a blur event
-			if ( this.isIos8 ) {
-				this.hasFixedHeader = false;
-			}
-			View.prototype.initialize.apply( this, arguments );
-		},
 		/** @inheritdoc */
 		postRender: function () {
 			var self = this;

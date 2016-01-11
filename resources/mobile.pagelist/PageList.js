@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var PageList,
-		View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.view/View' ),
 		browser = M.require( 'mobile.browser/browser' );
 
 	/**
@@ -9,7 +8,11 @@
 	 * @class PageList
 	 * @extends View
 	 */
-	PageList = View.extend( {
+	function PageList() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( PageList, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.imagesDisabled whether to show images or not.

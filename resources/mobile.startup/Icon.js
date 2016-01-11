@@ -1,14 +1,23 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'mobile.view/View' ),
-		Icon;
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * A wrapper for creating an icon.
 	 * @class Icon
 	 * @extends View
 	 */
-	Icon = View.extend( {
+	function Icon( options ) {
+		if ( options.hasText ) {
+			options.modifier = 'mw-ui-icon-before';
+		}
+		if ( options.href ) {
+			options.tagName = 'a';
+		}
+		View.call( this, options );
+	}
+
+	OO.mfExtend( Icon, View, {
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/**
@@ -47,16 +56,6 @@
 		 */
 		getGlyphClassName: function () {
 			return this.options.base + '-' + this.options.name;
-		},
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			if ( options.hasText ) {
-				options.modifier = 'mw-ui-icon-before';
-			}
-			if ( options.href ) {
-				options.tagName = 'a';
-			}
-			View.prototype.initialize.call( this, options );
 		},
 		/**
 		 * Return the HTML representation of this view

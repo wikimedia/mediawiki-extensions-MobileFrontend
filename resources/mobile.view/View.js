@@ -332,28 +332,6 @@
 		}
 	} );
 
-	/**
-	 * Helper function for generating a View.
-	 *
-	 * @param {Object} prototype
-	 * @return {View}
-	 */
-	function extend( prototype ) {
-		var Child,
-			Parent = this;
-
-		/**
-		 * @ignore
-		 */
-		Child = function () {
-			Parent.apply( this, arguments );
-		};
-		Child.extend = extend;
-		OO.mfExtend( Child, this, prototype );
-		return Child;
-	}
-	View.extend = extend;
-
 	$.each( [
 		'append',
 		'prepend',

@@ -1,14 +1,17 @@
 ( function ( M, $ ) {
 
-	var BackToTopOverlay,
-		View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Displays a little arrow at the bottom right of the viewport.
 	 * @class BackToTopOverlay
 	 * @extends View
 	 */
-	BackToTopOverlay = View.extend( {
+	function BackToTopOverlay() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( BackToTopOverlay, View, {
 		/**
 		 * @inheritdoc
 		 */

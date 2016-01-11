@@ -1,8 +1,6 @@
 ( function ( M ) {
 
-	var
-		View = M.require( 'mobile.view/View' ),
-		Thumbnail;
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Representation of a thumbnail
@@ -10,7 +8,10 @@
 	 * @class Thumbnail
 	 * @extends View
 	 */
-	Thumbnail = View.extend( {
+	function Thumbnail() {
+		View.apply( this, arguments );
+	}
+	OO.mfExtend( Thumbnail, View, {
 		/**
 		 * @cfg {Object} defaults options
 		 * @cfg {String} defaults.filename uri decoded filename including File: prefix associated with thumbnail

@@ -1,14 +1,17 @@
 ( function ( M, $ ) {
 	var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
-		Swipe = M.require( 'mobile.swipe/Swipe' ),
-		ImageOverlayBeta;
+		Swipe = M.require( 'mobile.swipe/Swipe' );
 
 	/**
 	 * Extends ImageOverlay to add a swipe functionality
 	 * @class ImageOverlayBeta
 	 * @extends ImageOverlay
 	 */
-	ImageOverlayBeta = ImageOverlay.extend( {
+	function ImageOverlayBeta() {
+		ImageOverlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( ImageOverlayBeta, ImageOverlay, {
 		/** @inheritdoc */
 		_enableArrowImages: function ( thumbs ) {
 			var self = this;

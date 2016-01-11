@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var CategoryAddOverlay,
-		Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.overlays/Overlay' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
 		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
 		icons = M.require( 'mobile.startup/icons' ),
@@ -13,7 +12,12 @@
 	 * @extends Overlay
 	 * @uses CategoryGateway
 	 */
-	CategoryAddOverlay = Overlay.extend( {
+	function CategoryAddOverlay( options ) {
+		options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( CategoryAddOverlay, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -49,14 +53,6 @@
 			header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),
-
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
-			Overlay.prototype.initialize.apply( this, arguments );
-		},
 
 		/**
 		 * @inheritdoc

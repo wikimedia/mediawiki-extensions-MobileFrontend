@@ -1,14 +1,20 @@
 ( function ( M ) {
 
-	var Button,
-		View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * A wrapper for creating a button.
 	 * @class Button
 	 * @extends View
 	 */
-	Button = View.extend( {
+	function Button( options ) {
+		if ( options.href ) {
+			options.tagName = 'a';
+		}
+		View.call( this, options );
+	}
+
+	OO.mfExtend( Button, View, {
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/**
@@ -33,13 +39,6 @@
 			additionalClassNames: '',
 			href: undefined,
 			label: undefined
-		},
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			if ( options.href ) {
-				options.tagName = 'a';
-			}
-			View.prototype.initialize.call( this, options );
 		},
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )
 	} );

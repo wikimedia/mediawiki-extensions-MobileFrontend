@@ -1,14 +1,17 @@
 ( function ( M ) {
 
-	var Anchor,
-		View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * A wrapper for creating an anchor.
 	 * @class Anchor
 	 * @extends View
 	 */
-	Anchor = View.extend( {
+	function Anchor() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( Anchor, View, {
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/**

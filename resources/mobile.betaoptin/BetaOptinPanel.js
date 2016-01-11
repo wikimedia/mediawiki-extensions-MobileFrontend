@@ -1,14 +1,17 @@
 ( function ( M, $ ) {
 
-	var BetaOptinPanel,
-		Button = M.require( 'mobile.startup/Button' ),
+	var Button = M.require( 'mobile.startup/Button' ),
 		Panel = M.require( 'mobile.startup/Panel' );
 
 	/**
 	 * @class BetaOptinPanel
 	 * @extends Panel
 	 */
-	BetaOptinPanel = Panel.extend( {
+	function BetaOptinPanel() {
+		Panel.apply( this, arguments );
+	}
+
+	OO.mfExtend( BetaOptinPanel, Panel, {
 		className: 'panel panel-inline visible',
 		templatePartials: $.extend( {}, Panel.prototype.templatePartials, {
 			button: Button.prototype.template

@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var MainMenu,
-		browser = M.require( 'mobile.browser/browser' ),
+	var browser = M.require( 'mobile.browser/browser' ),
 		View = M.require( 'mobile.view/View' );
 
 	/**
@@ -9,7 +8,12 @@
 	 * @class MainMenu
 	 * @extends View
 	 */
-	MainMenu = View.extend( {
+	function MainMenu( options ) {
+		this.activator = options.activator;
+		View.call( this, options );
+	}
+
+	OO.mfExtend( MainMenu, View, {
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/** @inheritdoc */
@@ -61,13 +65,6 @@
 				} );
 			} );
 			return d;
-		},
-
-		/** @inheritdoc **/
-		initialize: function ( options ) {
-
-			this.activator = options.activator;
-			View.prototype.initialize.call( this, options );
 		},
 
 		/**

@@ -1,15 +1,32 @@
 ( function ( M, $ ) {
 
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
-		settings = M.require( 'mobile.settings/settings' ),
-		LanguageOverlay;
+		settings = M.require( 'mobile.settings/settings' );
 
 	/**
 	 * Overlay displaying list of languages for a page
 	 * @class LanguageOverlay
 	 * @extends Overlay
 	 */
-	LanguageOverlay = Overlay.extend( {
+	function LanguageOverlay( options ) {
+		var langMap;
+
+		if ( options.languages && options.languages.length ) {
+			options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
+		}
+		if ( options.variants && options.variants.length ) {
+			options.variantHeader = mw.msg( 'mobile-frontend-language-variant-header' );
+		}
+		langMap = settings.get( 'langMap' );
+		this.languageMap = langMap ? $.parseJSON( langMap ) : {};
+		if ( options.currentLanguage ) {
+			this.trackLanguage( options.currentLanguage );
+		}
+		options = this._sortLanguages( options );
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( LanguageOverlay, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -38,25 +55,6 @@
 			'click ul a': 'onLinkClick',
 			'input .search': 'onSearchInput'
 		} ),
-
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			var langMap;
-
-			if ( options.languages && options.languages.length ) {
-				options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
-			}
-			if ( options.variants && options.variants.length ) {
-				options.variantHeader = mw.msg( 'mobile-frontend-language-variant-header' );
-			}
-			langMap = settings.get( 'langMap' );
-			this.languageMap = langMap ? $.parseJSON( langMap ) : {};
-			if ( options.currentLanguage ) {
-				this.trackLanguage( options.currentLanguage );
-			}
-			options = this._sortLanguages( options );
-			Overlay.prototype.initialize.apply( this, arguments );
-		},
 		/**
 		 * Sorts the provided languages based on previous usage and tags them
 		 * with a property preferred for template usage

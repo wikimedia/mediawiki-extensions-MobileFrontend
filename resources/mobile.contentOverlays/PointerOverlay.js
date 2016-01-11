@@ -1,13 +1,19 @@
 ( function ( M, $ ) {
-	var PointerOverlay,
-		Overlay = M.require( 'mobile.overlays/Overlay' );
+	var Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
 	 * Page overlay prompting a user for given action
 	 * @class PointerOverlay
 	 * @extends Overlay
 	 */
-	PointerOverlay = Overlay.extend( {
+	function PointerOverlay( options ) {
+		// FIXME: This should not have a default fallback. This is a non-optional parameter.
+		// Remove when all existing uses in Gather have been updated.
+		this.appendToElement = options.appendToElement || '#mw-mf-page-center';
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( PointerOverlay, Overlay, {
 		className: 'overlay pointer-overlay tutorial-overlay',
 		/**
 		 * @inheritdoc
@@ -42,15 +48,6 @@
 			alignment: 'center',
 			confirmMsg: undefined
 		} ),
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			// FIXME: This should not have a default fallback. This is a non-optional parameter.
-			// Remove when all existing uses in Gather have been updated.
-			this.appendToElement = options.appendToElement || '#mw-mf-page-center';
-			Overlay.prototype.initialize.apply( this, arguments );
-		},
 		/**
 		 * @inheritdoc
 		 */
