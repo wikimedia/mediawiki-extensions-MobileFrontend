@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_a7faf4d7",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-01-12T02:36:57Z",
+      "side": 1,
+      "message": "It\u0027s better to put `\u0026.save-panel` selector within `.panel` after `padding: 0` rule",
+      "revId": "c1c130e1b419557f452946f7b78018c36bb679f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_67e07c24",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-01-12T02:36:57Z",
+      "side": 1,
+      "message": "There\u0027s a proposal for property order. https://www.mediawiki.org/wiki/Manual_talk:Coding_conventions/CSS#CSS.2FLess_property_order_proposal Currently we don\u0027t have a guideline, but being random like here is probably not best for collaboration. ;)\nIf you like the proposal, feel free to follow it, if not, please add your thoughts .",
+      "revId": "c1c130e1b419557f452946f7b78018c36bb679f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
