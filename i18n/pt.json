@@ -24,6 +24,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
+	"action-mf-uploadbutton": "usar o sistema simplificado de carregamentos para dispositivos móveis",
 	"beta-feature-minerva": "Ativar tema móvel ({{int:skinname-minerva}}) no ambiente de trabalho.",
 	"mobile-frontend-account-create-captcha-placeholder": "Introduza o código de confirmação",
 	"mobile-frontend-account-create-email-placeholder": "Endereço de correio electrónico (opcional)",

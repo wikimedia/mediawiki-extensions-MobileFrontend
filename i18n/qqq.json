@@ -31,7 +31,8 @@
 			"Ата",
 			"Jdlrobson",
 			"JoostBotman",
-			"Orlodrim"
+			"Orlodrim",
+			"UV"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -362,7 +363,7 @@
 	"mobile-frontend-watchlist-please-wait": "Shows if watch action is taking longer than 500ms.",
 	"mobile-frontend-watchlist-error": "Shows if an error occurred whilst trying to watch the page.",
 	"mobile-frontend-watchlist-purpose": "Shows on [[Special:UserLogin]] explains why someone would want to login to see a watchlist.",
-	"mobile-frontend-watchlist-removed": "Notification message when you remove a age from your watchlist\n*$1 - the title of the article",
+	"mobile-frontend-watchlist-removed": "Notification message when you remove a page from your watchlist\n*$1 - the title of the article",
 	"mobile-frontend-watchlist-signup-action": "Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to signup.",
 	"mobile-frontend-watchlist-view": "Link to your watchlist.\n{{Identical|View your watchlist}}",
 	"mobile-frontend-user-page-member-since": "Message below the heading. $1 is the user registration date.",
