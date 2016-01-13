@@ -14,7 +14,8 @@
 			"Robby",
 			"Florian",
 			"Jdlrobson",
-			"J. 'mach' wust"
+			"J. 'mach' wust",
+			"Predatorix"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -377,11 +378,18 @@
 	"apihelp-mobileview-param-noimages": "HTML ohne Bilder zurückgeben.",
 	"apihelp-mobileview-param-noheadings": "Schließt keine Überschriften in der Ausgabe ein.",
 	"apihelp-mobileview-param-notransform": "Wandelt HTML nicht in eine mobilspezifische Version um.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Gebe nur angeforderte Abschnitte zurück, die mit $1prop=Abschnitte übereinstimmen.",
+	"apihelp-mobileview-param-offset": "Betrachte alle Textergebnisse zusammen als eine einzelne Zeichenkette und gebe die Teilkette ab diesem Punkt zurück.",
+	"apihelp-mobileview-param-maxlen": "Betrachte alle Textergebnisse zusammen als eine einzelne Zeichenkette und begrenzte das Ergebnis auf diese Länge.",
 	"apihelp-mobileview-param-thumbsize": "Maximale Abmessungen des Vorschaubildes.",
 	"apihelp-mobileview-param-thumbwidth": "Maximale Vorschaubild-Breite.",
 	"apihelp-mobileview-param-thumbheight": "Maximale Vorschaubild-Höhe.",
 	"apihelp-mobileview-example-1": "Ruft Informationen zum Abschnitt 0 von [[Doom metal]] ab",
+	"apihelp-mobileview-example-2": "Hole Informationen über Abschnitt 0 und zu Abschnitten, die Verweise auf [[Candlemass]] beinhalten",
+	"apihelp-mobileview-example-3": "Hole Informationen über Abschnitt 1 und folgende, sowie Abschnitte die Verweise auf [[Candlemass]] beinhalten",
+	"apihelp-parse-param-mobileformat": "Gebe die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
+	"apihelp-parse-param-mainpage": "Wende Umwandlungen der mobilen Hauptseite an.",
 	"mobile-frontend-donate-button-label": "Spenden",
 	"mobile-frontend-meta-data-issues-categories": "Über diese Kategorie",
 	"mobile-frontend-loading-message": "Lade …",
