@@ -28,7 +28,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				array(
 					'action' => 'query',
 					'prop' => 'langlinks',
-					'llurl' => true,
+					'llprop' => 'url',
 					'lllimit' => 'max',
 					'titles' => $this->title->getPrefixedText()
 				)

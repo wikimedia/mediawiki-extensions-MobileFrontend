@@ -274,7 +274,7 @@
 					meta: 'siteinfo',
 					siprop: 'general|languages',
 					prop: 'langlinks',
-					llurl: true,
+					llprop: 'url',
 					lllimit: 'max',
 					titles: title,
 					formatversion: 2
