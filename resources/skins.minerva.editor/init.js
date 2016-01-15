@@ -126,7 +126,7 @@
 
 		overlayManager.add( /^\/editor\/(\d+)$/, function ( sectionId ) {
 			var
-				$content = $( '#content #bodyContent' ),
+				$content = $( '#mw-content-text' ),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
