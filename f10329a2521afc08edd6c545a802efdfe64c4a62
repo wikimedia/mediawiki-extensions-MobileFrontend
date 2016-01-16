@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_cbb6fc3b",
+        "filename": "resources/mobile.browser/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-16T00:23:48Z",
+      "side": 1,
+      "message": "Core patch used \u0027device\u0027 not \u0027Device\u0027. Either way too generic through as global variable.",
+      "revId": "f10329a2521afc08edd6c545a802efdfe64c4a62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
