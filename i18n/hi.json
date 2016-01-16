@@ -14,7 +14,8 @@
 			"Phoenix303",
 			"NehalDaveND",
 			"Angpradesh",
-			"Sfic"
+			"Sfic",
+			"YmKavishwar"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "ईमेल पता (वैकल्पिक)",
@@ -104,7 +105,7 @@
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलें",
 	"mobile-frontend-main-menu-featured": "विशेष",
 	"mobile-frontend-main-menu-login": "लॉग इन करें",
-	"mobile-frontend-main-menu-logout": "लॉग आउट करें",
+	"mobile-frontend-main-menu-logout": "प्रस्थान",
 	"mobile-frontend-main-menu-nearby": "पास में",
 	"mobile-frontend-main-menu-settings": "सेटिंग्स",
 	"mobile-frontend-main-menu-settings-heading": "सेटिंग्स",
