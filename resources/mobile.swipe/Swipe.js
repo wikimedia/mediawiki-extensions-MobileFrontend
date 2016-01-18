@@ -3,7 +3,7 @@
 	 * Class to assist a view in implementing swipe gestures on a specific element
 	 *
 	 * @class Swipe
-	 * @extends Class
+	 * @extends OO.EventEmitter
 	 *
 	 * Use this class in a view to help it do things on swipe gestures.
 	 *
@@ -47,8 +47,11 @@
 	 *     </code>
 	 */
 	function Swipe() {
+		Swipe.super.apply( this, arguments );
 		this.initialize.apply( this, arguments );
 	}
+	OO.inheritClass( Swipe, OO.EventEmitter );
+
 	OO.mfExtend( Swipe, {
 		/**
 		 * Constructor.
