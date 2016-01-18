@@ -40,7 +40,7 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بایت|بایت ها}} حذف‌شده{{PLURAL:$1|}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|ویرایش}}",
 	"mobile-frontend-diffview-explained": "خطوط زیر اضافه شده (+) و برداشته شده (-):",
-	"mobile-frontend-diffview-title": "تغییرةل/آلِشتیةل",
+	"mobile-frontend-diffview-title": "گؤەڕیال(تغییرات)",
 	"mobile-frontend-disable-images": "غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه",
 	"mobile-frontend-dismiss-notification": "مرخص نمودن این اعلان",
 	"mobile-frontend-donate-image-anon": "لطفاً برای نمایش صفحه بارگزاری‌ها وارد شوید.",
