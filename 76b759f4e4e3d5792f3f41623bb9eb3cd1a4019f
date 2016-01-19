@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f02e323d",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:02:41Z",
+      "side": 1,
+      "message": "Should be passed as an option just as we do in skins.minerva.editor",
+      "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_70456217",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:02:41Z",
+      "side": 1,
+      "message": "I find the different sampling rate a little strange.\nShouldn\u0027t we just be consistent?\nOtherwise it gives false impression that there is more activity in beta than expected.\n\nHave commented on task.",
+      "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b0e3da01",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:02:41Z",
+      "side": 1,
+      "message": "Rather than defining for one time use this should be created and passed as as an option into LanguageOverlay itself when it\u0027s first created.",
+      "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

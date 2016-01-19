@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f06072a1",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:02:41Z",
+      "side": 0,
+      "message": "Move seems useful and uncontroversial.\nCan you generalise this in a separate patchset so we can merge this sooner and separate from introducing the schema?",
+      "revId": "302bb06ee217c72e2adfc52a3a1a66105f672e95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
