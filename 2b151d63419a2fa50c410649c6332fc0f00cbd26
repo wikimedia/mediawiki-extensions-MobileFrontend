@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_90381e3b",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:20:31Z",
+      "side": 0,
+      "message": "The main problem here is that this code should not be loading in the desktop page at all but as you see in the comment you removed this line is needed in mobile.\n\nSince the code is being loaded in desktop, a better short term solution would be to check if the current skin is Minerva and exit early when that\u0027s the case!",
+      "revId": "2b151d63419a2fa50c410649c6332fc0f00cbd26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
