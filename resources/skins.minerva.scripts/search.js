@@ -37,6 +37,12 @@
 		} );
 	}
 
+	// Only continue on mobile devices as it breaks desktop search
+	// See https://phabricator.wikimedia.org/T108432
+	if ( mw.config.get( 'skin' ) !== 'minerva' ) {
+		return;
+	}
+
 	// change the placeholder text for javascript enabled browsers
 	if ( context.isBetaGroupMember() ) {
 		searchPlaceholderMsg = 'mobile-frontend-placeholder-beta';
