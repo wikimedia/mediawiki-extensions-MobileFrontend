@@ -615,9 +615,19 @@ class ApiMobileView extends ApiBase {
 		$context = new DerivativeContext( $this->getContext() );
 		$context->setTitle( $title );
 		$context->setOutput( new OutputPage( $context ) );
+
 		$page = new ImagePage( $title );
 		$page->setContext( $context );
+
+		// T123821: Without setting the wiki page on the derivative context,
+		// DerivativeContext#getWikiPage will (eventually) fall back to
+		// RequestContext#getWikiPage. Here, the request context is distinct from the
+		// derivative context and deliberately constructed with a bad title in the prelude
+		// of api.php.
+		$context->setWikiPage( $page->getPage() );
+
 		$page->view();
+
 		$html = $context->getOutput()->getHTML();
 
 		return $html;
