@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_c751fe3b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T19:10:36Z",
+      "side": 1,
+      "message": "No need to do this.\nJust add \u0027position\u0027 \u003d\u003e \u0027top\u0027 to the ResourceLoader definition. Here mw may not be defined as startup module needs to load first.",
+      "revId": "2c777f9609091d01682e7c2ce1317210aef8e465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_a74ac281",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T19:10:36Z",
+      "side": 1,
+      "message": "This should be defined in a resources/skins.minerva.scripts.top/init.js\n\nClass files should not have side effects - they can cause issues when loaded in other skins.",
+      "revId": "2c777f9609091d01682e7c2ce1317210aef8e465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_8747867b",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T19:10:36Z",
+      "side": 1,
+      "message": "I don\u0027t think this is used by Gather any more... at least it shouldn\u0027t be. Bad rebase?",
+      "revId": "2c777f9609091d01682e7c2ce1317210aef8e465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_075b9657",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T19:10:36Z",
+      "side": 1,
+      "message": "I don\u0027t think this is used by Gather any more... at least it shouldn\u0027t be. Bad rebase?",
+      "revId": "2c777f9609091d01682e7c2ce1317210aef8e465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_4a12f35c",
+        "filename": "resources/skins.minerva.scripts.top/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T19:10:36Z",
+      "side": 1,
+      "message": "I\u0027m curious does this module get loaded on cached HTML? We may need to add a mw.loader.load call inside skins.minerva.scripts to make sure",
+      "revId": "2c777f9609091d01682e7c2ce1317210aef8e465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
