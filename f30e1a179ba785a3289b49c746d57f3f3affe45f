@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_1b468f54",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-19T21:53:59Z",
+      "side": 1,
+      "message": "This should be higher up the patch with a return statement.\n$( \u0027#searchInput\u0027 ).attr( \u0027placeholder\u0027, mw.message( searchPlaceholderMsg ) ); also shouldn\u0027t run as that might have unexpected side effects.\n\nSuch code should also be commenting explaining why it is necessary and point to the bug for future reference.",
+      "revId": "f30e1a179ba785a3289b49c746d57f3f3affe45f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
