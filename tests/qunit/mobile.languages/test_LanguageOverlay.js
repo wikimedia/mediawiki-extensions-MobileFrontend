@@ -1,15 +1,21 @@
 ( function ( M, LanguageOverlay ) {
-	var settings = M.require( 'mobile.settings/settings' );
+	var settings = M.require( 'mobile.settings/settings' ),
+		schemaMobileWebLanguageSwitcher = M.require(
+			'mobile.loggingSchemas/schemaMobileWebLanguageSwitcher' );
 
 	QUnit.module( 'MobileFrontend: LanguageOverlay', {
 		setup: function () {
 			this.sandbox.stub( settings, 'get' ).withArgs( 'langMap' )
 				.returns( '{}' );
+			if ( mw.eventLog ) {
+				this.sandbox.stub( mw.eventLog.Schema.prototype, 'log' );
+			}
 		}
 	} );
 
 	QUnit.test( 'filterLanguages', 2, function ( assert ) {
 		var overlay = new LanguageOverlay( {
+			languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
 			languages: [
 				{
 					lang: 'en',
@@ -41,6 +47,7 @@
 
 	QUnit.test( 'Preferred Languages', 3, function ( assert ) {
 		var overlay = new LanguageOverlay( {
+				languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
 				languages: [],
 				currentLanguage: 'en'
 			} );
@@ -56,12 +63,16 @@
 		setup: function () {
 			this.sandbox.stub( settings, 'get' ).withArgs( 'langMap' )
 				.returns( '{ "es": 3, "za": 100, "fr": 50 }' );
+			if ( mw.eventLog ) {
+				this.sandbox.stub( mw.eventLog.Schema.prototype, 'log' );
+			}
 		}
 	} );
 
 	QUnit.test( 'Languages get sorted by order', 2, function ( assert ) {
 		var languages,
 			overlay = new LanguageOverlay( {
+				languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
 				languages: [
 					{
 						lang: 'es'
@@ -82,6 +93,7 @@
 	QUnit.test( 'Languages get sorted by order (different scripts)', 7, function ( assert ) {
 		var languages,
 			overlay = new LanguageOverlay( {
+				languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
 				languages: [
 					{
 						langname: 'French',

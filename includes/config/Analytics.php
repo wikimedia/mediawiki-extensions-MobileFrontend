@@ -15,7 +15,17 @@ $wgMFEnableXAnalyticsLogging = false;
 /**
  * Sample rate to log events for section usage in mobile web
  *
- * This header is used for analytics purposes.
  * @var number
  */
 $wgMFSchemaMobileWebSectionUsageSampleRate = 0;
+
+
+/**
+ * Sample rate to log events for language button and overlay usage in mobile web
+ *
+ * @var array
+ */
+$wgMFSchemaMobileWebLanguageSwitcherSampleRate = array(
+	'beta' => 0,
+	'stable' => 0
+);

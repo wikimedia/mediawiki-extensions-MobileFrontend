@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var inSample, inStable, experiment,
 		settings = M.require( 'mobile.settings/settings' ),
+		util = M.require( 'mobile.startup/util' ),
 		time = M.require( 'mobile.modifiedBar/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
@@ -15,6 +16,8 @@
 		SchemaMobileWebUIClickTracking = M.require(
 			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
 		uiSchema = new SchemaMobileWebUIClickTracking(),
+		schemaMobileWebLanguageSwitcher = M.require(
+			'mobile.loggingSchemas/schemaMobileWebLanguageSwitcher' ),
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
 		betaOptinPanel;
@@ -48,13 +51,89 @@
 	 * @ignore
 	 */
 	function initButton() {
-		$( '#page-secondary-actions .languageSelector' ).on( 'click', function ( ev ) {
-			ev.preventDefault();
-			router.navigate( '/languages' );
-			uiSchema.log( {
-				name: 'languages'
+		var $languageSelector = $( '#page-secondary-actions' ).find( '.languageSelector' );
+
+		/**
+		 * Log impression when the language button is seen by the user
+		 * @ignore
+		 */
+		function logLanguageButtonImpression() {
+			if ( util.isElementInViewport( $languageSelector ) ) {
+				M.off( 'scroll', logLanguageButtonImpression );
+
+				schemaMobileWebLanguageSwitcher.log( {
+					event: 'languageButtonImpression'
+				} );
+			}
+		}
+
+		/**
+		 * Return the number of times the user has clicked on the language button
+		 *
+		 * @ignore
+		 * @param {Number} tapCount
+		 * @return {String}
+		 */
+		function getLanguageButtonTappedBucket( tapCount ) {
+			var bucket;
+
+			if ( tapCount === 0 ) {
+				bucket = '0';
+			} else if ( tapCount >= 1 && tapCount <= 4 ) {
+				bucket = '1-4';
+			} else if ( tapCount >= 5 && tapCount <= 20 ) {
+				bucket = '5-20';
+			} else if ( tapCount > 20 ) {
+				bucket = '20+';
+			}
+			bucket += ' taps';
+			return bucket;
+		}
+
+		if ( $languageSelector.length ) {
+			schemaMobileWebLanguageSwitcher.log( {
+				event: 'pageLoaded',
+				beaconCapable: $.isFunction( navigator.sendBeacon )
 			} );
-		} );
+
+			M.on( 'scroll', logLanguageButtonImpression );
+			// maybe the button is already visible?
+			logLanguageButtonImpression();
+
+			$languageSelector.on( 'click', function ( ev ) {
+				var previousTapCount = settings.get( 'mobile-language-button-tap-count' ),
+					tapCountBucket;
+
+				ev.preventDefault();
+
+				router.navigate( '/languages' );
+				uiSchema.log( {
+					name: 'languages'
+				} );
+
+				// when local storage is not available or when the key has not been previously saved
+				if ( previousTapCount === false || previousTapCount === null ) {
+					tapCountBucket = 'unknown';
+					previousTapCount = 0;
+				} else {
+					previousTapCount = parseInt( previousTapCount, 10 );
+					tapCountBucket = getLanguageButtonTappedBucket( previousTapCount );
+				}
+				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
+				schemaMobileWebLanguageSwitcher.log( {
+					event: 'languageButtonTap',
+					languageButtonVersion: 'bottom-of-article',
+					languageButtonTappedBucket: tapCountBucket,
+					primaryLanguageOfUser: (
+						navigator && navigator.languages ?
+							navigator.languages[0] :
+							navigator.language || navigator.userLanguage ||
+								navigator.browserLanguage || navigator.systemLanguage ||
+								'unknown'
+					).toLowerCase()
+				} );
+			} );
+		}
 	}
 
 	/**
@@ -99,7 +178,8 @@
 				result.resolve( new LanguageOverlay( {
 					currentLanguage: mw.config.get( 'wgContentLanguage' ),
 					languages: data.languages,
-					variants: data.variants
+					variants: data.variants,
+					languageSwitcherSchema: schemaMobileWebLanguageSwitcher
 				} ) );
 			} );
 		} );

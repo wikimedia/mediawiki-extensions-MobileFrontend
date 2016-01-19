@@ -55,6 +55,27 @@
 			'click ul a': 'onLinkClick',
 			'input .search': 'onSearchInput'
 		} ),
+		/** @inheritdoc */
+		postRender: function () {
+			Overlay.prototype.postRender.apply( this );
+			this.options.languageSwitcherSchema.log( {
+				event: 'languageListLoaded',
+				languageOverlayVersion: 'bottom-of-article',
+				languageCount: this.$( '.site-link-list li' ).length
+			} );
+		},
+		/** @inheritdoc */
+		onExit: function () {
+			this.options.languageSwitcherSchema.log( {
+				event: 'exitModal',
+				exitModal: 'dismissed',
+				searchInputHasQuery: this.$( 'input.search' ).val().length > 0,
+				languageCount: this.$( '.site-link-list' ).children( ':visible' ).length
+			} );
+			// stop logging when the user decides to close the modal
+			this.options.languageSwitcherSchema.stopLogging = true;
+			Overlay.prototype.onExit.apply( this, arguments );
+		},
 		/**
 		 * Sorts the provided languages based on previous usage and tags them
 		 * with a property preferred for template usage
@@ -123,7 +144,18 @@
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		onLinkClick: function ( ev ) {
-			this.trackLanguage( $( ev.currentTarget ).attr( 'lang' ) );
+			var $link = this.$( ev.currentTarget ),
+				lang = $link.attr( 'lang' );
+
+			this.options.languageSwitcherSchema.log( {
+				event: 'exitModal',
+				exitModal: 'tapped-on-result',
+				languageTapped: lang,
+				positionOfLanguageTapped: $link.parents( 'li' ).index() + 1,
+				searchInputHasQuery: this.$( 'input.search' ).val().length > 0,
+				languageCount: this.$( '.site-link-list' ).children( ':visible' ).length
+			} );
+			this.trackLanguage( lang );
 		},
 
 		/**
@@ -131,6 +163,13 @@
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		onSearchInput: function ( ev ) {
+			// log when the first search character is entered
+			if ( !this.hasFirstSearchBeenLogged ) {
+				this.options.languageSwitcherSchema.log( {
+					event: 'startLanguageSearch'
+				} );
+				this.hasFirstSearchBeenLogged = true;
+			}
 			this.filterLists( $( ev.target ).val().toLowerCase() );
 		}
 	} );
