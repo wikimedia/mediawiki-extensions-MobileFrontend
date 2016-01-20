@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_19e8d2a1",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-20T19:10:15Z",
+      "side": 0,
+      "message": "Sorry Baha seems we do need this line still as I\u0027m getting errors with Gather installed.\nI\u0027ll move it over since this is my bad.",
+      "revId": "54847dc3b4df6aef9d2f5da5b994982f90c8db1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
