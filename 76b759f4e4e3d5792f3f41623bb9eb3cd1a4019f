@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_8397713c",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-20T13:46:47Z",
+      "side": 1,
+      "message": "I\u0027m not sure where those numbers came from, but I can\u0027t seem to understand why it gives false impression that there is more activity in beta than expected.",
+      "parentUuid": "6eaa8f54_70456217",
+      "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_b0e3da01",
         "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
         "patchSetId": 5
@@ -47,6 +65,24 @@
       "writtenOn": "2016-01-19T21:02:41Z",
       "side": 1,
       "message": "Rather than defining for one time use this should be created and passed as as an option into LanguageOverlay itself when it\u0027s first created.",
+      "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_a3b5cdcc",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-20T13:46:47Z",
+      "side": 1,
+      "message": "Although it the module is initialized here once it can be used multiple times throughout the site. The main reason why it\u0027s being initialized here is that I didn\u0027t want to pass around the default values across modules. I wanted to have a single source of truth for default values.",
+      "parentUuid": "6eaa8f54_b0e3da01",
       "revId": "76b759f4e4e3d5792f3f41623bb9eb3cd1a4019f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
