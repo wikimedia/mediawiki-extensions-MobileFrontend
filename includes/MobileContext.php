@@ -785,7 +785,7 @@ class MobileContext extends ContextSource {
 	 * Take a URL and return a copy that conforms to the mobile URL template
 	 * @param string $url
 	 * @param bool $forceHttps
-	 * @return string
+	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
 
