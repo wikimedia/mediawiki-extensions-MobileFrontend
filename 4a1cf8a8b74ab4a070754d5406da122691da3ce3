@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_197f72a7",
+        "filename": "includes/config/Analytics.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-20T19:42:34Z",
+      "side": 1,
+      "message": "Not sure what this is about.",
+      "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_994a8282",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-20T19:42:34Z",
+      "side": 1,
+      "message": "Why do we vary this when beta opt in panel is shown? It\u0027s not clear at all.",
+      "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
