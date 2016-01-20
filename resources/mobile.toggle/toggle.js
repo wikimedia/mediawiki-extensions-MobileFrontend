@@ -2,6 +2,7 @@
 	var context = M.require( 'mobile.context/context' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		browser = M.require( 'mobile.browser/browser' ),
+		util = M.require( 'mobile.startup/util' ),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowOptions = {
 			name: 'arrow',
@@ -339,29 +340,6 @@
 		}
 
 		/**
-		 * Check if at least half of the element's height and half of its width are in viewport
-		 *
-		 * @method
-		 * @param {jQuery.Object} $el - element that's being tested
-		 * @return {Boolean}
-		 */
-		function isElementInViewport( $el ) {
-			var windowHeight = $window.height(),
-				windowWidth = $window.width(),
-				windowScrollLeft = $window.scrollLeft(),
-				windowScrollTop = $window.scrollTop(),
-				elHeight = $el.height(),
-				elWidth = $el.width(),
-				elOffset = $el.offset();
-
-			return (
-				( windowScrollTop + windowHeight >= elOffset.top + elHeight / 2 ) &&
-				( windowScrollLeft + windowWidth >= elOffset.left + elWidth / 2 ) &&
-				( windowScrollTop <= elOffset.top + elHeight / 2 )
-			);
-		}
-
-		/**
 		 * Log when the heading is scrolled into the viewport
 		 *
 		 * @param {jQuery.Object} $heading
@@ -373,7 +351,7 @@
 			 * @ignore
 			 */
 			function log() {
-				if ( isElementInViewport( $heading ) ) {
+				if ( util.isElementInViewport( $heading ) ) {
 					$window.off( 'scroll.' + $heading.attr( 'id' ), log );
 					self.schema.log( {
 						eventName: 'scrolled-into-view',

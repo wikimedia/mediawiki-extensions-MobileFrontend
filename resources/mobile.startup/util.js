@@ -1,5 +1,6 @@
-( function ( M ) {
-	var util;
+( function ( M, $ ) {
+	var util,
+		$window = $( window );
 
 	/**
 	 * Utility library for looking up details on the current user
@@ -36,9 +37,32 @@
 				}
 			}
 			return id;
+		},
+
+		/**
+		 * Check if at least half of the element's height and half of its width are in viewport
+		 *
+		 * @method
+		 * @param {jQuery.Object} $el - element that's being tested
+		 * @return {Boolean}
+		 */
+		isElementInViewport: function ( $el ) {
+			var windowHeight = $window.height(),
+				windowWidth = $window.width(),
+				windowScrollLeft = $window.scrollLeft(),
+				windowScrollTop = $window.scrollTop(),
+				elHeight = $el.height(),
+				elWidth = $el.width(),
+				elOffset = $el.offset();
+
+			return (
+				( windowScrollTop + windowHeight >= elOffset.top + elHeight / 2 ) &&
+				( windowScrollLeft + windowWidth >= elOffset.left + elWidth / 2 ) &&
+				( windowScrollTop <= elOffset.top + elHeight / 2 )
+			);
 		}
 	};
 
 	M.define( 'mobile.startup/util', util );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
