@@ -1206,4 +1206,23 @@ class MobileFrontendHooks {
 		}
 		return true;
 	}
+
+	/**
+	 * Handler for TitleSquidURLs hook to add copies of the cache purge
+	 * URLs which are transformed according to the wgMobileUrlTemplate, so
+	 * that both mobile and non-mobile URL variants get purged.
+	 *
+	 * @see * http://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs
+	 * @param Title $title the article title
+	 * @param array &$urls the set of URLs to purge
+	 */
+	public static function onTitleSquidURLs( Title $title, array &$urls ) {
+		$context = MobileContext::singleton();
+		foreach ( $urls as $url ) {
+			$newUrl = $context->getMobileUrl( $url );
+			if ( $newUrl !== false && $newUrl !== $url ) {
+				$urls[] = $newUrl;
+			}
+		}
+	}
 }
