@@ -33,6 +33,24 @@
       "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_affe0cff",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-20T21:33:10Z",
+      "side": 1,
+      "message": "I\u0027m not sure either. I\u0027m sure there is some reasoning behind it. Adam maybe able to clarify.",
+      "parentUuid": "6eaa8f54_994a8282",
+      "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
