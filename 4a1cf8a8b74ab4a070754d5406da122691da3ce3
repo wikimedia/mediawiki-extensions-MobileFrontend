@@ -51,6 +51,24 @@
       "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_182d27ee",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-01-21T14:05:38Z",
+      "side": 1,
+      "message": "From the first point in the Sampling section of T123932: \"...to balance coverage across multiple languages without growing table too fast\".",
+      "parentUuid": "6eaa8f54_affe0cff",
+      "revId": "4a1cf8a8b74ab4a070754d5406da122691da3ce3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
