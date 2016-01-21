@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_c9dfbfd9",
+        "filename": "resources/mobile.contentOverlays/PointerOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-21T20:31:51Z",
+      "side": 1,
+      "message": "still needed?",
+      "revId": "2463cfcdb523b2fc98f1938419bce3dae58fd140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
