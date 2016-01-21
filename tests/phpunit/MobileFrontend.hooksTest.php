@@ -132,4 +132,28 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			array( false, false, false, array(), 0, false ),
 		);
 	}
+
+	public function testOnTitleSquidURLs() {
+		$this->setMwGlobals( array(
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+			'wgServer' => 'http://en.wikipedia.org',
+			'wgArticlePath' => '/wiki/$1',
+			'wgScriptPath' => '/w',
+			'wgScript' => '/w/index.php',
+		) );
+		MobileContext::setInstance( null );
+
+		$title = Title::newFromText( 'PurgeTest' );
+
+		$urls = $title->getCdnUrls();
+
+		$expected = array(
+			'http://en.wikipedia.org/wiki/PurgeTest',
+			'http://en.wikipedia.org/w/index.php?title=PurgeTest&action=history',
+			'http://en.m.wikipedia.org/w/index.php?title=PurgeTest&action=history',
+			'http://en.m.wikipedia.org/wiki/PurgeTest',
+		);
+
+		$this->assertArrayEquals( $expected, $urls );
+	}
 }
