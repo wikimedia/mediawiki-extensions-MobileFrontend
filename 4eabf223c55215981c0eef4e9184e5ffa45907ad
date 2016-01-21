@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_124ae82a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1221,
+      "author": {
+        "id": 727
+      },
+      "writtenOn": "2016-01-21T00:32:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6eaa8f54_6f881323",
+      "revId": "4eabf223c55215981c0eef4e9184e5ffa45907ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_af912b4b",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-01-20T22:50:25Z",
       "side": 1,
       "message": "Easier way to write this;\n\n$urls[] \u003d $context-\u003egetMobileUrl( $url );\n\nYou should also check that getMobileUrl didn\u0027t return false.",
+      "revId": "4eabf223c55215981c0eef4e9184e5ffa45907ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_3245a418",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1224,
+      "author": {
+        "id": 727
+      },
+      "writtenOn": "2016-01-21T00:32:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6eaa8f54_af912b4b",
       "revId": "4eabf223c55215981c0eef4e9184e5ffa45907ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
