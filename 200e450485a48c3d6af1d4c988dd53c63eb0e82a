@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_38049e16",
+        "filename": "resources/mobile.overlays/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-21T21:56:20Z",
+      "side": 1,
+      "message": "Variable no longer needed.\nUnused",
+      "revId": "200e450485a48c3d6af1d4c988dd53c63eb0e82a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_9801120a",
+        "filename": "resources/mobile.overlays/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-21T21:56:20Z",
+      "side": 1,
+      "message": "aahh recursiooon!! :)\nThis should be Overlay.apply\nThis is what\u0027s causing qunit failures :)",
+      "revId": "200e450485a48c3d6af1d4c988dd53c63eb0e82a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
