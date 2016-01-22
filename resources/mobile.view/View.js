@@ -73,9 +73,12 @@
 	 * Example:
 	 *     @example
 	 *     <pre>
-	 *     var View, Section, section;
+	 *     var View, section;
+	 *     function Section( options ) {
+	 *       View.call( this, options );
+	 *     }
 	 *     View = M.require( 'mobile.view/View' );
-	 *     Section = View.extend( {
+	 *     OO.mfExtend( Section, View, {
 	 *       template: mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
 	 *     } );
 	 *     section = new Section( { title: 'Test', text: 'Test section body' } );
@@ -124,9 +127,9 @@
 		 *     // <h1>Heading</h1>
 		 *     // {{>content}}
 		 *
-		 *     var SomeView = View.extend( {
-		 *     template: M.template.get( 'some.hogan' ),
-		 *     templatePartials: { content: M.template.get( 'sub.hogan' ) }
+		 *     oo.mfExtend( SomeView, View, {
+		 *       template: M.template.get( 'some.hogan' ),
+		 *       templatePartials: { content: M.template.get( 'sub.hogan' ) }
 		 *     }
 		 *
 		 * @property {Object}

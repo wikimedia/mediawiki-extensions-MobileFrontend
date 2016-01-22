@@ -339,7 +339,7 @@
 				"oojs"
 			],
 			"scripts": [
-				"resources/mobile.oo/Class.js"
+				"resources/mobile.oo/oo-extend.js"
 			]
 		},
 		"mobile.view": {

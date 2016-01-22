@@ -11,25 +11,20 @@
 	 * and refresh behavior.
 	 *
 	 * @class OverlayManager
-	 * @extends Class
+	 * @param {Router} router
 	 */
-	function OverlayManager() {
-		this.initialize.apply( this, arguments );
+	function OverlayManager( router ) {
+		router.on( 'route', $.proxy( this, '_checkRoute' ) );
+		this.router = router;
+		// use an object instead of an array for entries so that we don't
+		// duplicate entries that already exist
+		this.entries = {};
+		// stack of all the open overlays, stack[0] is the latest one
+		this.stack = [];
+		this.hideCurrent = true;
 	}
 
 	OO.mfExtend( OverlayManager, {
-		/** @inheritdoc */
-		initialize: function ( router ) {
-			router.on( 'route', $.proxy( this, '_checkRoute' ) );
-			this.router = router;
-			// use an object instead of an array for entries so that we don't
-			// duplicate entries that already exist
-			this.entries = {};
-			// stack of all the open overlays, stack[0] is the latest one
-			this.stack = [];
-			this.hideCurrent = true;
-		},
-
 		/**
 		 * Don't try to hide the active overlay on a route change event triggered
 		 * by hiding another overlay.

@@ -56,7 +56,7 @@
 			} );
 	} );
 
-	QUnit.test( 'View.extend, with el property', 1, function ( assert ) {
+	QUnit.test( 'View extended, with el property', 1, function ( assert ) {
 		var $testEl, view;
 		function ChildView() {
 			View.apply( this, arguments );
@@ -76,7 +76,7 @@
 		$testEl.remove();
 	} );
 
-	QUnit.test( 'View.extend, with defined template', 4, function ( assert ) {
+	QUnit.test( 'View extended, with defined template', 4, function ( assert ) {
 		var view;
 		function ChildView() {
 			View.apply( this, arguments );
@@ -103,7 +103,7 @@
 		assert.strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 	} );
 
-	QUnit.test( 'View.extend, with partials', 2, function ( assert ) {
+	QUnit.test( 'View extended, with partials', 2, function ( assert ) {
 		var view;
 
 		function ParentView() {
@@ -132,7 +132,7 @@
 		assert.strictEqual( view.$( 'p' ).text(), 'Some content', 'fill partial with data from options' );
 	} );
 
-	QUnit.test( 'View.extend, extending partials', 1, function ( assert ) {
+	QUnit.test( 'View extended, extending partials', 1, function ( assert ) {
 		var view;
 
 		function ParentView() {
@@ -165,7 +165,7 @@
 		} );
 	} );
 
-	QUnit.test( 'View.extend, extending defaults', 1, function ( assert ) {
+	QUnit.test( 'View extended, extending defaults', 1, function ( assert ) {
 		var view;
 
 		function ParentView() {
