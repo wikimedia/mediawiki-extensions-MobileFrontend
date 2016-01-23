@@ -21,6 +21,7 @@
 	"mobile-frontend-languages-header": "Телләр",
 	"mobile-frontend-languages-header-page": "$1 — Телләр",
 	"mobile-frontend-last-modified-date": "Соңгы тапкыр $1 $2 үзгәртелгән",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Рәхим итегез}}, $1!",
 	"mobile-frontend-main-menu-account-create": "Яңа кулланучыны теркәү",
 	"mobile-frontend-main-menu-button-tooltip": "Төп менюны ачу",
 	"mobile-frontend-main-menu-login": "Керү",

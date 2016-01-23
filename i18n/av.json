@@ -1,23 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gazimagomedov"
+			"Gazimagomedov",
+			"Аль-Гимравий"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Хиса-басиялъул хӀакъалъулъ баян гьечӀо",
-	"mobile-frontend-copyright": "Гьумералда бихьизабурабщинаб жо буго $1 лицензиялда рекъон бугеб.",
+	"mobile-frontend-copyright": "Гьумералда бихьизабураб щинаб жо буго $1 лицензиялда рекъон бугеб.",
 	"mobile-frontend-editor-edit": "Хисизабизе",
 	"mobile-frontend-featured-article": "Жакъасеб тӀасабищараб материал",
-	"mobile-frontend-generic-login": "{{SITENAME}} гӀуцӀун буго нужго гӀадинал гӀадамаца.",
-	"mobile-frontend-generic-login-action": "ГӀахьаллъи гьабизе бокьани, авторизация гьабе.",
 	"mobile-frontend-home-button": "Рукъ",
 	"mobile-frontend-language-article-heading": "Цоги мацӀалда цӀализе",
 	"mobile-frontend-last-modified-date": "$1 гьумералда ахирисеб хиса-баси гьабуна: $2",
-	"mobile-frontend-login": "Жаниве лъугьине",
 	"mobile-frontend-main-menu-account-create": "Аккаунт рагьизе",
 	"mobile-frontend-main-menu-button-tooltip": "Аслияб меню рагьизе",
 	"mobile-frontend-main-menu-login": "Жаниве лъугьине",
-	"mobile-frontend-main-menu-nearby": "АскӀосе гӀебеде",
+	"mobile-frontend-main-menu-nearby": "АскӀоса гӀебеде",
 	"mobile-frontend-main-menu-settings": "Рекъезабиял",
 	"mobile-frontend-main-menu-watchlist": "Халгьабиялъул сияхӀ",
 	"mobile-frontend-news-items": "ЦӀиял харбал",
@@ -26,7 +24,6 @@
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-random-button": "Цебе ккараб",
 	"mobile-frontend-terms-text": "ХӀалтӀизабиялъул къагӀидаби",
-	"mobile-frontend-username-placeholder": "ХӀалтӀизабулчиясул цӀар",
 	"mobile-frontend-view": "Телепоналъул версия",
 	"mobile-frontend-view-desktop": "Компьютералъул",
 	"mobile-frontend-view-mobile": "Телепоналъе",
