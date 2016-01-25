@@ -1818,6 +1818,9 @@
 		"MediaWikiPerformAction": [
 			"MobileFrontendHooks::onMediaWikiPerformAction"
 		],
+		"OutputPageBeforeHTML": [
+			"MobileFrontendHooks::onOutputPageBeforeHTML"
+		],
 		"SkinTemplateOutputPageBeforeExec": [
 			"MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec"
 		],

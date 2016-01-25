@@ -183,6 +183,25 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * OutputPageBeforeHTML hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML
+	 *
+	 * Applies MobileFormatter to mobile viewed content
+	 *
+	 * @param OutputPage $out
+	 * @param string $text the HTML to be wrapped inside the #mw-content-text element
+	 * @return bool
+	 */
+	public static function onOutputPageBeforeHTML( &$out, &$text ) {
+		$context = MobileContext::singleton();
+		// Perform a few extra changes if we are in mobile mode
+		if ( $context->shouldDisplayMobileView() ) {
+			$text = ExtMobileFrontend::DOMParse( $out, $text );
+		}
+		return true;
+	}
+
+	/**
 	 * BeforePageRedirect hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
@@ -1246,8 +1265,6 @@ class MobileFrontendHooks {
 					}
 				}
 			}
-			// Enable wrapped sections
-			$po->setText( ExtMobileFrontend::DOMParse( $outputPage, $po->getRawText(), $isBeta ) );
 		}
 		return true;
 	}
