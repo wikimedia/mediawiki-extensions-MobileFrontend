@@ -1225,4 +1225,21 @@ class MobileFrontendHooks {
 			}
 		}
 	}
+
+	/**
+	 * Remove corruption caused by T124356 from the parser cache
+	 *
+	 * @param string $value
+	 * @param WikiPage $wikiPage
+	 * @param ParserOptions $popts
+	 * @return bool
+	 */
+	public static function onRejectParserCacheValue( $value, $wikiPage, $popts ) {
+		if ( strpos( $value, '<a href="#/editor/' ) !== false ) {
+			// Bug T124356 parser cache corruption
+			return false;
+		}
+
+		return true;
+	}
 }

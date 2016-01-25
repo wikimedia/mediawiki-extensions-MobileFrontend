@@ -154,6 +154,7 @@ $wgHooks['PageRenderingHash'][] = 'MobileFrontendHooks::onPageRenderingHash';
 $wgHooks['AfterBuildFeedLinks'][] = 'MobileFrontendHooks::onAfterBuildFeedLinks';
 $wgHooks['MakeGlobalVariablesScript'][] = 'MobileFrontendHooks::onMakeGlobalVariablesScript';
 $wgHooks['TitleSquidURLs'][] = 'MobileFrontendHooks::onTitleSquidURLs';
+$wgHooks['RejectParserCacheValue'][] = 'MobileFrontendHooks::onRejectParserCacheValue';
 
 $wgSpecialPages += array(
 	'History' => 'SpecialMobileHistory',
