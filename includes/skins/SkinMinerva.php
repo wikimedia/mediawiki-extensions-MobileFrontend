@@ -70,6 +70,7 @@ class SkinMinerva extends SkinTemplate {
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
 		$this->prepareLanguages( $tpl );
+
 		return $tpl;
 	}
 

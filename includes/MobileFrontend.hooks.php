@@ -150,11 +150,6 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
 		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
-		// Perform a few extra changes if we are in mobile mode
-		$mobileBody = $skin->getOutput()->getProperty( 'mobileBodyText' );
-		if ( $mobileBody ) {
-			$tpl->set( 'bodytext', $mobileBody );
-		}
 		return true;
 	}
 
@@ -1119,19 +1114,8 @@ class MobileFrontendHooks {
 					}
 				}
 			}
-			// Enable wrapped sections body text
-			$realBodyAttribs = array( 'id' => 'mw-content-text' );
-			$title = $outputPage->getTitle();
-			if ( !in_array( $title->getNamespace(), array( NS_SPECIAL, NS_FILE ) ) &&
-				Action::getActionName( $context ) === 'view' ) {
-				$pageLang = $title->getPageViewLanguage();
-				$realBodyAttribs['lang'] = $pageLang->getHtmlCode();
-				$realBodyAttribs['dir'] = $pageLang->getDir();
-				$realBodyAttribs['class'] = 'mw-content-' . $pageLang->getDir();
-			}
-			$bodytext = Html::rawElement( 'div', $realBodyAttribs,
-				ExtMobileFrontend::DOMParse( $outputPage, $po->getText(), $isBeta ) );
-			$outputPage->setProperty( 'mobileBodyText', $bodytext );
+			// Enable wrapped sections
+			$po->setText( ExtMobileFrontend::DOMParse( $outputPage, $po->getText(), $isBeta ) );
 		}
 		return true;
 	}
