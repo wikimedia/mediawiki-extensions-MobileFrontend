@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_738b0324",
+        "filename": "includes/config/Analytics.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Are we not turning this on yet (hence the zeroes)?",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_938f9f26",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Might not want to use \"\u003e\" with the upcoming design changes to language overlay. Decent chance the \u003cli\u003es could be split by a priority div. (Or at the very least, we don\u0027t _know_ how it\u0027ll change yet.) How much of a performance hit is it to just use \".site-link-list li\"? If it\u0027s significant, then we can of course leave it with the direct child selector.",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_73e9c37d",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Should use \"this.$()\" for consistency (and limiting searching).",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_133f2f22",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Similar problem to above. May not be an issue for this patch though.",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b38dfbda",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Naming of this var is kind of confusing (doesn\u0027t follow traditional boolean naming)... but not a blocker.",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d380b790",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "This is a pretty long ternary (with nested ternary and boolean logic). Might want to consider breaking into an if statement, but not a big deal if left as is.",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b3ff3afc",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Feels weird to define this method when it might not even do anything. Should we consider throwing an error on line 4 if !mw.eventLog instead of returning an empty object?",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_7384625f",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Just delete all the words you changed. \"Utility library\" sounds better than \"Utility library with various random functions\" imo...",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_53f9267d",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "Did we decide these buckets? Seems more useful to just log the number and query the data later if we weren\u0027t handed these buckets.",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_760f70e5",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "redundant \"10\"",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_16987c7b",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "If this comes up often, it might be good to move it to mobile.startup/util. (Completely fine for this patch though.)",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_367c981b",
+        "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-25T22:03:13Z",
+      "side": 1,
+      "message": "I thought this was \"mw.eventLog.Schema\"? (If so, check line 66 also.)",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
