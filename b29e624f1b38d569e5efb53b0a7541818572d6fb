@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_59f9457d",
+        "filename": "includes/config/Analytics.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Yes, this should be controlled by a config variable in the mediawiki-config repo. Look at the above similar variable.",
+      "parentUuid": "6eaa8f54_738b0324",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_938f9f26",
         "filename": "resources/mobile.languages/LanguageOverlay.js",
         "patchSetId": 11
@@ -104,6 +122,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_3926c912",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Are you talking about the \"( context.isBetaGroupMember() ? samplingRate.beta : samplingRate.stable ) || 0\" line? It\u0027s pretty readable IMO.",
+      "parentUuid": "6eaa8f54_d380b790",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_b3ff3afc",
         "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
         "patchSetId": 11
@@ -115,6 +151,24 @@
       "writtenOn": "2016-01-25T22:03:13Z",
       "side": 1,
       "message": "Feels weird to define this method when it might not even do anything. Should we consider throwing an error on line 4 if !mw.eventLog instead of returning an empty object?",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b98159ca",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Who\u0027d catch the error? Our current event logging schemas are built in such a way that they get loaded even though event logging is not installed. If we throw an error, then we\u0027d be indirectly forcing MobileFrontend to depend on EventLogging.",
+      "parentUuid": "6eaa8f54_b3ff3afc",
       "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +209,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_99633d3e",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Yeah, these buckets are part of the schema.",
+      "parentUuid": "6eaa8f54_53f9267d",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_760f70e5",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 11
@@ -166,6 +238,24 @@
       "writtenOn": "2016-01-25T22:03:13Z",
       "side": 1,
       "message": "redundant \"10\"",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_99c25d05",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Really? \"Always specify this parameter to eliminate reader confusion and to guarantee predictable behavior.\" from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt",
+      "parentUuid": "6eaa8f54_760f70e5",
       "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -189,6 +279,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_39d329d9",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Sure. This is the first time we need this. We\u0027ll maybe move it in a later patch when we need to use it in a different place too.",
+      "parentUuid": "6eaa8f54_16987c7b",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_367c981b",
         "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
         "patchSetId": 11
@@ -200,6 +308,24 @@
       "writtenOn": "2016-01-25T22:03:13Z",
       "side": 1,
       "message": "I thought this was \"mw.eventLog.Schema\"? (If so, check line 66 also.)",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f9dcb1e7",
+        "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T00:22:17Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "6eaa8f54_367c981b",
       "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
