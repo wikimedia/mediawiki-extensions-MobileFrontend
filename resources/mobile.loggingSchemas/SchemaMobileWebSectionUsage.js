@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var SchemaMobileWebSectionUsage,
-		Schema = M.require( 'mobile.startup/Schema' ),
+	var Schema = M.require( 'mobile.startup/Schema' ),
 		user = M.require( 'mobile.user/user' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		experiments = mw.config.get( 'wgMFExperiments' );
@@ -9,7 +8,11 @@
 	 * @class SchemaMobileWebSectionUsage
 	 * @extends Schema
 	 */
-	SchemaMobileWebSectionUsage = Schema.extend( {
+	function SchemaMobileWebSectionUsage() {
+		Schema.apply( this, arguments );
+	}
+
+	OO.mfExtend( SchemaMobileWebSectionUsage, Schema, {
 		/**
 		 * @inheritdoc
 		 */

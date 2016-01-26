@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var Class = M.require( 'mobile.oo/Class' ),
-		settings = M.require( 'mobile.settings/settings' ),
+	var settings = M.require( 'mobile.settings/settings' ),
 		BEACON_SETTING_KEY = 'mobileFrontend/beacon';
 
 	/**
@@ -168,10 +167,6 @@
 
 		deleteBeacon();
 	};
-	// FIXME: Needed to give time for Gather to update
-	Schema.extend = Class.extend;
-	mw.log.deprecate( Schema, 'extend', Schema.extend,
-		'Schema.extend is deprecated. Do not use this. Use OO.mfExtend' );
 
 	M.define( 'mobile.startup/Schema', Schema );
 
