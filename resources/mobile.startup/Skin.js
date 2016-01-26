@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var Skin,
-		browser = M.require( 'mobile.browser/browser' ),
+	var browser = M.require( 'mobile.browser/browser' ),
 		View = M.require( 'mobile.view/View' );
 
 	/**
@@ -12,7 +11,39 @@
 	 * @uses Browser
 	 * @uses Page
 	 */
-	Skin = View.extend( {
+	function Skin( options ) {
+		var self = this;
+
+		this.page = options.page;
+		this.name = options.name;
+		this.mainMenu = options.mainMenu;
+		View.call( this, options );
+		// Must be run after merging with defaults as must be defined.
+		this.tabletModules = options.tabletModules;
+
+		/**
+		 * Tests current window size and if suitable loads styles and scripts specific for larger devices
+		 *
+		 * @method
+		 * @ignore
+		 */
+		function loadWideScreenModules() {
+			if ( browser.isWideScreen() ) {
+				// Adjust screen for tablets
+				if ( self.page.inNamespace( '' ) ) {
+					mw.loader.using( self.tabletModules ).always( function () {
+						self.off( '_resize' );
+						self.emit.call( self, 'changed' );
+					} );
+				}
+			}
+		}
+		M.on( 'resize', $.proxy( this, 'emit', '_resize' ) );
+		this.on( '_resize', loadWideScreenModules );
+		this.emit( '_resize' );
+	}
+
+	OO.mfExtend( Skin, View, {
 		/**
 		 * @inheritdoc
 		 * Skin contains components that we do not control
@@ -91,40 +122,6 @@
 					$el.add( '.overlay' ).height( scrollBottom );
 				}
 			} );
-		},
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			var self = this;
-
-			this.page = options.page;
-			this.name = options.name;
-			this.mainMenu = options.mainMenu;
-			View.prototype.initialize.apply( this, arguments );
-			// Must be run after merging with defaults as must be defined.
-			this.tabletModules = options.tabletModules;
-
-			/**
-			 * Tests current window size and if suitable loads styles and scripts specific for larger devices
-			 *
-			 * @method
-			 * @ignore
-			 */
-			function loadWideScreenModules() {
-				if ( browser.isWideScreen() ) {
-					// Adjust screen for tablets
-					if ( self.page.inNamespace( '' ) ) {
-						mw.loader.using( self.tabletModules ).always( function () {
-							self.off( '_resize' );
-							self.emit.call( self, 'changed' );
-						} );
-					}
-				}
-			}
-			M.on( 'resize', $.proxy( this, 'emit', '_resize' ) );
-			this.on( '_resize', loadWideScreenModules );
-			this.emit( '_resize' );
 		},
 		/**
 		 * @inheritdoc

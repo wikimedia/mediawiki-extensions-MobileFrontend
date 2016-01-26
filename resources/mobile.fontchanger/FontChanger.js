@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var FontChanger,
-		View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.view/View' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		settings = M.require( 'mobile.settings/settings' );
 
@@ -9,7 +8,11 @@
 	 * @class FontChanger
 	 * @extends View
 	 */
-	FontChanger = View.extend( {
+	function FontChanger() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( FontChanger, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Object} defaults.viewLink Anchor options for a link to wikidata page.

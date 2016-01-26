@@ -1,15 +1,20 @@
 ( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		settings = M.require( 'mobile.settings/settings' ),
-		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		VisualEditorOverlay;
+		overlayManager = M.require( 'mobile.startup/overlayManager' );
 
 	/**
 	 * Overlay for VisualEditor view
 	 * @class VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 */
-	VisualEditorOverlay = EditorOverlayBase.extend( {
+	function VisualEditorOverlay( options ) {
+		this.applyHeaderOptions( options, true );
+		EditorOverlayBase.apply( this, arguments );
+		this.isNewPage = options.isNewPage;
+	}
+
+	OO.mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		/** @inheritdoc **/
 		isBorderBox: false,
 		/** @inheritdoc **/
@@ -33,12 +38,6 @@
 			// Set things that are known to be true.
 			options.hasToolbar = isVE;
 			options.isVisualEditor = isVE;
-		},
-		/** @inheritdoc **/
-		initialize: function ( options ) {
-			this.applyHeaderOptions( options, true );
-			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			this.isNewPage = options.isNewPage;
 		},
 		/**
 		 * Destroy the existing VisualEditor target.

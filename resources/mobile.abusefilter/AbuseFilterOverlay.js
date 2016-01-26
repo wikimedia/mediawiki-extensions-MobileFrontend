@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var AbuseFilterOverlay,
-		Button = M.require( 'mobile.startup/Button' ),
+	var Button = M.require( 'mobile.startup/Button' ),
 		Overlay = M.require( 'mobile.overlays/Overlay' );
 
 	/**
@@ -9,7 +8,11 @@
 	 * @class AbuseFilterOverlay
 	 * @extends Overlay
 	 */
-	AbuseFilterOverlay = Overlay.extend( {
+	function AbuseFilterOverlay() {
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( AbuseFilterOverlay, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.

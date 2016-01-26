@@ -2,8 +2,7 @@
 	var Drawer = M.require( 'mobile.drawers/Drawer' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		Anchor = M.require( 'mobile.startup/Anchor' ),
-		CtaDrawer;
+		Anchor = M.require( 'mobile.startup/Anchor' );
 
 	/**
 	 * This creates the drawer at the bottom of the screen that appears when an anonymous
@@ -15,7 +14,11 @@
 	 * @uses Icon
 	 * @uses Anchor
 	 */
-	CtaDrawer = Drawer.extend( {
+	function CtaDrawer() {
+		Drawer.apply( this, arguments );
+	}
+
+	OO.mfExtend( CtaDrawer, Drawer, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Object} defaults.collapseIcon options for Icon for collapsing the drawer

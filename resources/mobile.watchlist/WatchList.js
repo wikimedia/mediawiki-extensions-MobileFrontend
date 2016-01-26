@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var WatchList,
-		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+	var WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
@@ -10,23 +9,23 @@
 	 * @class WatchList
 	 * @uses InfiniteScroll
 	 */
-	WatchList = WatchstarPageList.extend( {
+	function WatchList( options ) {
+		var lastTitle;
+
+		// Set up infinite scroll helper and listen to events
+		this.infiniteScroll = new InfiniteScroll();
+		this.infiniteScroll.on( 'load', $.proxy( this, '_loadPages' ) );
+
+		if ( options.el ) {
+			lastTitle = this.getLastTitle( options.el );
+		}
+		this.gateway = new WatchListGateway( options.api, lastTitle );
+
+		WatchstarPageList.apply( this, arguments );
+	}
+
+	OO.mfExtend( WatchList, WatchstarPageList, {
 		isBorderBox: false,
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			var lastTitle;
-
-			// Set up infinite scroll helper and listen to events
-			this.infiniteScroll = new InfiniteScroll();
-			this.infiniteScroll.on( 'load', $.proxy( this, '_loadPages' ) );
-
-			if ( options.el ) {
-				lastTitle = this.getLastTitle( options.el );
-			}
-			this.gateway = new WatchListGateway( options.api, lastTitle );
-
-			WatchstarPageList.prototype.initialize.apply( this, arguments );
-		},
 		/** @inheritdoc */
 		preRender: function () {
 			this.infiniteScroll.disable();

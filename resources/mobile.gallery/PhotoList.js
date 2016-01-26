@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var PhotoList,
-		icons = M.require( 'mobile.startup/icons' ),
+	var icons = M.require( 'mobile.startup/icons' ),
 		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
@@ -14,7 +13,24 @@
 	 * @uses InfiniteScroll
 	 * @extends View
 	 */
-	PhotoList = View.extend( {
+	function PhotoList( options ) {
+		var gatewayOptions = {
+			api: options.api
+		};
+
+		if ( options.username ) {
+			gatewayOptions.username = options.username;
+		} else if ( options.category ) {
+			gatewayOptions.category = options.category;
+		}
+		this.gateway = new PhotoListGateway( gatewayOptions );
+		// Set up infinite scroll
+		this.infiniteScroll = new InfiniteScroll( 1000 );
+		this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
+		View.call( this, options );
+	}
+
+	OO.mfExtend( PhotoList, View, {
 		template: mw.template.get( 'mobile.gallery', 'PhotoList.hogan' ),
 		/**
 		 * @cfg {Object} defaults Default options hash.
@@ -23,23 +39,6 @@
 		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
-		},
-		/** @inheritdoc */
-		initialize: function ( options ) {
-			var gatewayOptions = {
-				api: options.api
-			};
-
-			if ( options.username ) {
-				gatewayOptions.username = options.username;
-			} else if ( options.category ) {
-				gatewayOptions.category = options.category;
-			}
-			this.gateway = new PhotoListGateway( gatewayOptions );
-			// Set up infinite scroll
-			this.infiniteScroll = new InfiniteScroll( 1000 );
-			this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
-			View.prototype.initialize.apply( this, arguments );
 		},
 		/** @inheritdoc */
 		preRender: function () {

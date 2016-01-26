@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var ReferencesDrawer,
-		Drawer = M.require( 'mobile.drawers/Drawer' ),
+	var Drawer = M.require( 'mobile.drawers/Drawer' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		SchemaMobileWebUIClickTracking = M.require(
 			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
@@ -12,7 +11,11 @@
 	 * @extends Drawer
 	 * @uses Icon
 	 */
-	ReferencesDrawer = Drawer.extend( {
+	function ReferencesDrawer() {
+		Drawer.apply( this, arguments );
+	}
+
+	OO.mfExtend( ReferencesDrawer, Drawer, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.

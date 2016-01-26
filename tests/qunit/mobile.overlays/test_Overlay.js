@@ -18,9 +18,13 @@
 	} );
 
 	QUnit.test( 'HTML overlay', 2, function ( assert ) {
-		var TestOverlay, overlay;
+		var overlay;
 
-		TestOverlay = Overlay.extend( {
+		function TestOverlay() {
+			Overlay.apply( this, arguments );
+		}
+
+		OO.mfExtend( TestOverlay, Overlay, {
 			templatePartials: $.extend( Overlay.prototype.templatePartials, {
 				content: mw.template.compile( '<div class="content">YO</div>', 'hogan' )
 			} )

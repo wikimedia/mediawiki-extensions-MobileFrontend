@@ -4,8 +4,7 @@
 		browser = M.require( 'mobile.browser/browser' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.toast/toast' ),
-		user = M.require( 'mobile.user/user' ),
-		EditorOverlayBase;
+		user = M.require( 'mobile.user/user' );
 
 	/**
 	 * 'Edit' button
@@ -44,7 +43,41 @@
 	 * @uses Icon
 	 * @uses user
 	 */
-	EditorOverlayBase = Overlay.extend( {
+	function EditorOverlayBase( options ) {
+		var self = this;
+
+		if ( options.isNewPage ) {
+			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
+		}
+		// change the message to request a summary when not in article namespace
+		if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
+			options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
+		}
+		this.pageGateway = new PageGateway( options.api );
+		this.editCount = user.getEditCount();
+		this.isNewPage = options.isNewPage;
+		this.isNewEditor = options.isNewEditor;
+		this.sectionId = options.sectionId;
+		this.schema = options.editSchema;
+		this.config = mw.config.get( 'wgMFEditorOptions' );
+		this.sessionId = options.sessionId;
+		this.allowCloseWindow = mw.confirmCloseWindow( {
+			/** Returns true, if content has changed, otherwise false */
+			test: function () {
+				// Check if content has changed
+				return self.hasChanged();
+			},
+
+			/** Message to show the user, if content has changed */
+			message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
+			/** Event namespace */
+			namespace: 'editwarning'
+		} );
+
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( EditorOverlayBase, Overlay, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -173,40 +206,6 @@
 			$.cookie( 'mobileEditor', 'true', {
 				expires: 30
 			} );
-		},
-		/** @inheritdoc **/
-		initialize: function ( options ) {
-			var self = this;
-
-			if ( options.isNewPage ) {
-				options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
-			}
-			// change the message to request a summary when not in article namespace
-			if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
-				options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
-			}
-			this.pageGateway = new PageGateway( options.api );
-			this.editCount = user.getEditCount();
-			this.isNewPage = options.isNewPage;
-			this.isNewEditor = options.isNewEditor;
-			this.sectionId = options.sectionId;
-			this.schema = options.editSchema;
-			this.config = mw.config.get( 'wgMFEditorOptions' );
-			this.sessionId = options.sessionId;
-			this.allowCloseWindow = mw.confirmCloseWindow( {
-				/** Returns true, if content has changed, otherwise false */
-				test: function () {
-					// Check if content has changed
-					return self.hasChanged();
-				},
-
-				/** Message to show the user, if content has changed */
-				message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-				/** Event namespace */
-				namespace: 'editwarning'
-			} );
-
-			Overlay.prototype.initialize.apply( this, arguments );
 		},
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.

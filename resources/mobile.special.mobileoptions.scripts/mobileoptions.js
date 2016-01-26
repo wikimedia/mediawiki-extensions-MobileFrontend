@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var Checkbox,
-		context = M.require( 'mobile.context/context' ),
+	var context = M.require( 'mobile.context/context' ),
 		FontChanger = M.require( 'mobile.fontchanger/FontChanger' ),
 		View = M.require( 'mobile.view/View' ),
 		settings = M.require( 'mobile.settings/settings' );
@@ -10,7 +9,11 @@
 	 * @class Checkbox
 	 * @extends View
 	 */
-	Checkbox = View.extend( {
+	function Checkbox() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( Checkbox, View, {
 		template: mw.template.get( 'mobile.special.mobileoptions.scripts', 'Checkbox.hogan' ),
 		/**
 		 * Save the current state of the checkbox to the settings

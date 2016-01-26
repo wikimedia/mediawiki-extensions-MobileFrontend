@@ -1,7 +1,6 @@
 ( function ( M ) {
 
-	var Watchstar,
-		View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.view/View' ),
 		SchemaMobileWebWatching = M.require( 'mobile.loggingSchemas/SchemaMobileWebWatching' ),
 		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
@@ -26,7 +25,32 @@
 	 * @uses WatchstarGateway
 	 * @uses Toast
 	 */
-	Watchstar = View.extend( {
+	function Watchstar( options ) {
+		var self = this,
+			_super = View,
+			page = options.page;
+
+		// FIXME: Remove default when Gather has been updated to use new gateway. (T113753)
+		options.api = options.api || new mw.Api();
+		this.gateway = new WatchstarGateway( options.api );
+
+		if ( user.isAnon() ) {
+			_super.call( self, options );
+		} else if ( options.isWatched === undefined ) {
+			this.gateway.loadWatchStatus( page.getId() ).done( function () {
+				options.isWatched = self.gateway.isWatchedPage( page );
+				_super.call( self, options );
+			} );
+		} else {
+			this.gateway.setWatchedPage( options.page, options.isWatched );
+			_super.call( self, options );
+		}
+		this.schema = new SchemaMobileWebWatching( {
+			funnel: options.funnel
+		} );
+	}
+
+	OO.mfExtend( Watchstar, View, {
 		/**
 		 * @inheritdoc
 		 */

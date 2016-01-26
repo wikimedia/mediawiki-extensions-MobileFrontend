@@ -1,12 +1,15 @@
 ( function ( M ) {
-	var MessageBox,
-		View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * @class MessageBox
 	 * @extends View
 	 */
-	MessageBox = View.extend( {
+	function MessageBox() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( MessageBox, View, {
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/**

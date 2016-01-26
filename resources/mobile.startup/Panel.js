@@ -1,14 +1,17 @@
 ( function ( M ) {
 
-	var View = M.require( 'mobile.view/View' ),
-		Panel;
+	var View = M.require( 'mobile.view/View' );
 
 	/**
 	 * An abstract class for a {@link View} that comprises a simple panel.
 	 * @class Panel
 	 * @extends View
 	 */
-	Panel = View.extend( {
+	function Panel() {
+		View.apply( this, arguments );
+	}
+
+	OO.mfExtend( Panel, View, {
 		/** @inheritdoc */
 		className: 'panel',
 		// in milliseconds

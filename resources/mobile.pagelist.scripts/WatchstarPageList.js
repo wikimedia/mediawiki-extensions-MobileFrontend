@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var WatchstarPageList,
-		mWatchstar,
+	var mWatchstar,
 		PageList = M.require( 'mobile.pagelist/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		user = M.require( 'mobile.user/user' ),
@@ -16,19 +15,17 @@
 	 * @uses Watchstar
 	 * @extends View
 	 */
-	WatchstarPageList = PageList.extend( {
+	function WatchstarPageList( options ) {
+		this.wsGateway = new WatchstarGateway( options.api );
+		PageList.apply( this, arguments );
+	}
+
+	OO.mfExtend( WatchstarPageList, PageList, {
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {mw.Api} defaults.api
 		 */
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			this.wsGateway = new WatchstarGateway( options.api );
-			PageList.prototype.initialize.apply( this, arguments );
-		},
 		/**
 		 * Retrieve pages
 		 *

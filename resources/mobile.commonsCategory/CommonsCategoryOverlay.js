@@ -1,14 +1,17 @@
 ( function ( M ) {
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
-		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
-		CommonsCategoryOverlay;
+		PhotoList = M.require( 'mobile.gallery/PhotoList' );
 
 	/**
 	 * Overlay for displaying page issues
 	 * @class CommonsCategoryOverlay
 	 * @extends Overlay
 	 */
-	CommonsCategoryOverlay = Overlay.extend( {
+	function CommonsCategoryOverlay() {
+		Overlay.apply( this, arguments );
+	}
+
+	OO.mfExtend( CommonsCategoryOverlay, Overlay, {
 		/** @inheritdoc */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this );
