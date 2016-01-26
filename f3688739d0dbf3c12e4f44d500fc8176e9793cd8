@@ -33,6 +33,24 @@
       "revId": "f3688739d0dbf3c12e4f44d500fc8176e9793cd8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_42e06af7",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-26T13:30:19Z",
+      "side": 1,
+      "message": "Not sure, it would still boil down to comparing the tap count against boundary values.",
+      "parentUuid": "6eaa8f54_5c3cd38e",
+      "revId": "f3688739d0dbf3c12e4f44d500fc8176e9793cd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
