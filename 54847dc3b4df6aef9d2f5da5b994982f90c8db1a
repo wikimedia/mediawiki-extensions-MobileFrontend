@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_9c324bbb",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-26T01:33:10Z",
+      "side": 0,
+      "message": "Unrelated to this patchset, so a little confusing but no biggy.",
+      "revId": "54847dc3b4df6aef9d2f5da5b994982f90c8db1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
