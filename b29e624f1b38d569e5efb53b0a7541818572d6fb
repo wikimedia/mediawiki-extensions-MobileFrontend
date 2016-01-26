@@ -140,6 +140,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_ff456c48",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-26T19:48:29Z",
+      "side": 1,
+      "message": "No, I meant\n\n    mw.eventLog ? new mw.eventLog.Schema( \u003clots of content\u003e ) : {};\n\nTo be clear, I\u0027m still fine deferring to your judgment here; I just wanted to point it out as a potential point for clarity.",
+      "parentUuid": "6eaa8f54_3926c912",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_b3ff3afc",
         "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
         "patchSetId": 11
@@ -169,6 +187,24 @@
       "side": 1,
       "message": "Who\u0027d catch the error? Our current event logging schemas are built in such a way that they get loaded even though event logging is not installed. If we throw an error, then we\u0027d be indirectly forcing MobileFrontend to depend on EventLogging.",
       "parentUuid": "6eaa8f54_b3ff3afc",
+      "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_bf6ff4c2",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-26T19:48:29Z",
+      "side": 1,
+      "message": "Fair enough.",
+      "parentUuid": "6eaa8f54_b98159ca",
       "revId": "b29e624f1b38d569e5efb53b0a7541818572d6fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
