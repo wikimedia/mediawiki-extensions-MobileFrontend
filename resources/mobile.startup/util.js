@@ -3,7 +3,7 @@
 		$window = $( window );
 
 	/**
-	 * Utility library for looking up details on the current user
+	 * Utility library
 	 * @class util
 	 * @singleton
 	 */

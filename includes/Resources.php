@@ -1474,6 +1474,8 @@ $wgMinervaBootstrapModules = array(
 			'mobile-frontend-last-modified-with-user-months',
 			'mobile-frontend-last-modified-with-user-years',
 			'mobile-frontend-last-modified-with-user-just-now',
+			// mf-stop-mobile-redirect.js
+			'mobile-frontend-cookies-required',
 		),
 		'scripts' => array(
 			// FIXME: Merge preInit and init files.
@@ -1482,10 +1484,6 @@ $wgMinervaBootstrapModules = array(
 			'resources/skins.minerva.scripts/initLogging.js',
 			'resources/skins.minerva.scripts/mobileRedirect.js',
 			'resources/skins.minerva.scripts/search.js',
-		),
-		'messages' => array(
-			// mf-stop-mobile-redirect.js
-			'mobile-frontend-cookies-required',
 		),
 	),
 	// Remove when cache clears (https://phabricator.wikimedia.org/T113686)
