@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_cb20eeaa",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-01-27T10:22:01Z",
+      "side": 1,
+      "message": "We\u0027ll need to remember to make this configurable, it would be probably better passed in on creation like the schema instance.",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_6b153a4d",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-01-27T10:22:01Z",
+      "side": 1,
+      "message": "When do we toggle this to true? What if the modal is opened twice on the same pageview? Does this mean we won\u0027t log the second interaction?",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_8bb67684",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-01-27T10:22:01Z",
+      "side": 1,
+      "message": "Would you mind switching this to use mw.mobileFrontend\u0027s events? That way we have less scroll event listeners attached (https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/skins.minerva.scripts/preInit.js#L36-L38)\n\n    M.on( \u0027scroll\u0027, logLanguageButtonImpression )\n    M.off( \u0027scroll\u0027, logLanguageButtonImpression )\n\nAlso I\u0027m going to open a bug to use this everywhere else (there are like 5 other places in MF where this happens).",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_cb522e3f",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-01-27T10:22:01Z",
+      "side": 1,
+      "message": "When will this be false exactly? From what I see below it\u0027s going to be always a number (when null it is converted to 0)",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_cb39cef0",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-01-27T10:22:01Z",
+      "side": 1,
+      "message": "BROWSERS! \\o/",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
