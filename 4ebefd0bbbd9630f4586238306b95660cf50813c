@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_0b15a640",
+        "filename": "includes/references/CiteReferencesParser.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2305
+      },
+      "writtenOn": "2016-01-27T07:49:23Z",
+      "side": 1,
+      "message": "Refs in distinct groups can have the same name, so the group must also be part of the cache key.",
+      "revId": "4ebefd0bbbd9630f4586238306b95660cf50813c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
