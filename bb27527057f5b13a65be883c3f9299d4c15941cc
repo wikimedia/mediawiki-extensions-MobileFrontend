@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_a67cc9e9",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-27T12:32:52Z",
+      "side": 1,
+      "message": "Respectfully disagree. This implementation of the overlay is unique and this data can be hardcoded here.",
+      "parentUuid": "6eaa8f54_cb20eeaa",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_6b153a4d",
         "filename": "resources/mobile.languages/LanguageOverlay.js",
         "patchSetId": 18
@@ -30,6 +48,24 @@
       "writtenOn": "2016-01-27T10:22:01Z",
       "side": 1,
       "message": "When do we toggle this to true? What if the modal is opened twice on the same pageview? Does this mean we won\u0027t log the second interaction?",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c681c5c9",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-27T12:32:52Z",
+      "side": 1,
+      "message": "Yes, only one interaction will be recorded. The reason is we have a funnel which ends when the user either closes the modal or navigates away from the page.",
+      "parentUuid": "6eaa8f54_6b153a4d",
       "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -64,6 +100,24 @@
       "writtenOn": "2016-01-27T10:22:01Z",
       "side": 1,
       "message": "When will this be false exactly? From what I see below it\u0027s going to be always a number (when null it is converted to 0)",
+      "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_466dd52c",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-27T12:32:52Z",
+      "side": 1,
+      "message": "You\u0027re right, settings.get( \u0027mobile-language-button-tap-count\u0027 ) returns false if there is an error, but it\u0027s wrapped in parseInt.",
+      "parentUuid": "6eaa8f54_cb522e3f",
       "revId": "bb27527057f5b13a65be883c3f9299d4c15941cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
