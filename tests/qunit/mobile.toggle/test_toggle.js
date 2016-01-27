@@ -55,7 +55,7 @@
 	} );
 
 	QUnit.test( 'Clicking hash links', 2, function ( assert ) {
-		this.$container.find( '[href=#First_Section]' ).trigger( 'click' );
+		this.$container.find( '[href="#First_Section"]' ).trigger( 'click' );
 		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
 		assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	} );
