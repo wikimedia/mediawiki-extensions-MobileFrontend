@@ -9,16 +9,6 @@
  */
 class MinervaTemplateBeta extends MinervaTemplate {
 	/**
-	 * Render available page actions
-	 * @param array $data Data used to build page actions
-	 */
-	public function renderPageActions( $data ) {
-		if ( !$this->isMainPage ) {
-			parent::renderPageActions( $data );
-		}
-	}
-
-	/**
 	 * Get category button if categories are present
 	 * @return array A map of the button's friendly name, "categories" to its
 	 *   spec if the button can be displayed.
@@ -64,15 +54,5 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		$result += $this->getCategoryButton();
 
 		return $result;
-	}
-
-	/**
-	 * Do not render secondary actions on the user page
-	 */
-	protected function getSecondaryActionsHtml() {
-		// no secondary actions on the user page
-		if ( !$this->getSkin()->isUserPage ) {
-			return parent::getSecondaryActionsHtml();
-		}
 	}
 }

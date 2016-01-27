@@ -27,7 +27,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected $prevLengths = array();
 
 	/**
-	 * Gets HTML to place in the header bar
+	 * Gets HTML to place in the header bar. Title should always refer to a logged in user
 	 * @param Title $title The page to link to
 	 * @return string HTML representing the link in the header bar
 	 */
@@ -35,7 +35,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		return Html::element( 'a',
 			array(
 				'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user' ),
-				'href' => SpecialPage::getTitleFor( 'UserProfile', $title->getText() )->getLocalUrl(),
+				'href' => $title->getLocalUrl(),
 			),
 			$title->getText() );
 	}

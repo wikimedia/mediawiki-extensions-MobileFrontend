@@ -24,5 +24,5 @@ Then(/^I should see a link to the disclaimer$/) do
 end
 
 Then(/^I should see a link to my user profile page in the main navigation menu$/) do
-  expect(on(ArticlePage).navigation_element.link_element(href: /UserProfile\/#{user}/, text: user_label)).to be_visible
+  expect(on(ArticlePage).navigation_element.link_element(href: /User:\/#{user}/, text: user_label)).to be_visible
 end

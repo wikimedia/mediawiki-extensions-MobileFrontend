@@ -11,38 +11,11 @@ class SkinMinervaBeta extends SkinMinerva {
 	public $template = 'MinervaTemplateBeta';
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
-	/** @var bool whether the page is the user's page, i.e. User:Username */
-	public $isUserPage = false;
-
-	/** @inheritdoc **/
-	public function __construct() {
-		$title = $this->getTitle();
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
-			$pageUserId = User::idFromName( $title->getText() );
-			if ( $pageUserId ) {
-				$this->pageUser = User::newFromId( $pageUserId );
-				$this->isUserPage = true;
-			}
-		}
-		parent::__construct();
-	}
 
 	/** @inheritdoc **/
 	protected function getHeaderHtml() {
-		if ( $this->isUserPage ) {
-			// The heading is just the username without namespace
-			$html = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
-				$this->pageUser->getName() );
-			$fromDate = $this->pageUser->getRegistration();
-			if ( is_string( $fromDate ) ) {
-				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
-				$html .= Html::element( 'div', array( 'class' => 'tagline', ),
-					$this->msg( 'mobile-frontend-user-page-member-since',
-						$fromDateTs->format( 'F, Y' ) )
-				);
-			}
-		} else {
-			$html = parent::getHeaderHtml();
+		$html = parent::getHeaderHtml();
+		if ( !$this->isUserPage ) {
 			$vars = $this->getSkinConfigVariables();
 			$description = $vars['wgMFDescription'];
 			if ( $description && !$this->getTitle()->isSpecialPage() ) {
@@ -122,11 +95,6 @@ class SkinMinervaBeta extends SkinMinerva {
 			$modules[] = 'skins.minerva.categories';
 		}
 
-		// TalkOverlay feature
-		if ( $this->isUserPage ) {
-			$modules[] = 'skins.minerva.talk';
-		}
-
 		return $modules;
 	}
 
@@ -159,8 +127,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		$styles = parent::getSkinStyles();
 		if ( $title->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
-		} elseif ( $this->isUserPage ) {
-			$styles[] = 'skins.minerva.beta.userpage.styles';
 		}
 
 		return $styles;
