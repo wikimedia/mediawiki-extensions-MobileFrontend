@@ -28,9 +28,9 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 */
 	function added( $lines ) {
 		foreach ( $lines as $line ) {
-			echo '<div class="mw-diff-inline-added"><ins>'
+			$this->writeOutput( '<div class="mw-diff-inline-added"><ins>'
 				. $this->lineOrNbsp( htmlspecialchars( $line ) )
-				. "</ins></div>\n";
+				. "</ins></div>\n" );
 		}
 	}
 
@@ -41,9 +41,9 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 */
 	function deleted( $lines ) {
 		foreach ( $lines as $line ) {
-			echo '<div class="mw-diff-inline-deleted"><del>'
+			$this->writeOutput( '<div class="mw-diff-inline-deleted"><del>'
 				. $this->lineOrNbsp( htmlspecialchars( $line ) )
-				. "</del></div>\n";
+				. "</del></div>\n" );
 		}
 	}
 
@@ -55,8 +55,8 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 */
 	function context( $lines ) {
 		foreach ( $lines as $line ) {
-			echo "<div class=\"mw-diff-inline-context\">" .
-				"{$this->contextLine( htmlspecialchars( $line ) )}</div>\n";
+			$this->writeOutput( "<div class=\"mw-diff-inline-context\">" .
+				"{$this->contextLine( htmlspecialchars( $line ) )}</div>\n" );
 		}
 	}
 
@@ -95,14 +95,14 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 * @param string[] $closing New content to compare with
 	 */
 	function changed( $orig, $closing ) {
-		echo '<div class="mw-diff-inline-changed">';
+		$this->writeOutput( '<div class="mw-diff-inline-changed">' );
 		$diff = new WordLevelDiff( $orig, $closing );
 		$edits = $this->inlineWordDiff( $diff );
 
 		# WordLevelDiff returns already HTML-escaped output.
-		echo implode( '', $edits );
+		$this->writeOutput( implode( '', $edits ) );
 
-		echo "</div>\n";
+		$this->writeOutput( "</div>\n" );
 	}
 
 	/**
@@ -129,5 +129,19 @@ class InlineDiffFormatter extends TableDiffFormatter {
 		$lines = $inline->getLines();
 
 		return $lines;
+	}
+
+	/**
+	 * Writes a string to the output buffer.
+	 *
+	 * @param string $text
+	 */
+	protected function writeOutput( $text ) {
+		if ( is_callable( 'parent::writeOutput' ) ) {
+			parent::writeOutput( $text );
+		} else {
+			// Pre-Idf2a6c59 version of MediaWiki
+			echo $text;
+		}
 	}
 }
