@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6eaa8f54_663c83bd",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-28T19:40:31Z",
+      "side": 1,
+      "message": "why not make this a one line\ndisplay \u003d generatorInfo.displaytext ? generatorInfo.displaytext : page.title;",
+      "revId": "d6097f0598fffc68bdaa21faee135dfef8fef883",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_6d26b765",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 12
@@ -13,6 +30,24 @@
       "writtenOn": "2016-01-26T16:06:19Z",
       "side": 1,
       "message": "I\u0027m not entirely sure what this FIXME is about here. highlightSearchTerm does full HTML escaping so it would be safe to have HTML in the title at this point.",
+      "revId": "d6097f0598fffc68bdaa21faee135dfef8fef883",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_a6527b14",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-28T19:40:31Z",
+      "side": 1,
+      "message": "This is documenting why not to use the existing page.displayTitle property and is why iPod and iPad appear as IPod and IPad in the mobile web search experience.... a bug (personally I wonder if we should just use page.displayTitle in these cases and ignore the underlining).",
+      "parentUuid": "6eaa8f54_6d26b765",
       "revId": "d6097f0598fffc68bdaa21faee135dfef8fef883",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
