@@ -1,15 +1,33 @@
 ( function ( M ) {
 	var context = M.require( 'mobile.context/context' ),
-		samplingRate = mw.config.get( 'wgMFSchemaMobileWebLanguageSwitcherSampleRate', {} ),
-		schemaMobileWebLanguageSwitcher = mw.eventLog ? new mw.eventLog.Schema(
+		samplingRates = mw.config.get( 'wgMFSchemaMobileWebLanguageSwitcherSampleRate', {} ),
+		ignoreSamplingRate = mw.config.get( 'wgMFIgnoreEventLoggingBucketing' ),
+		schemaMobileWebLanguageSwitcher =  {};
+
+	/** @ignore */
+	function getSamplingRate() {
+		var result;
+
+		if ( ignoreSamplingRate ) {
+			return 1;
+		}
+
+		result = context.isBetaGroupMember() ? samplingRates.beta : samplingRates.stable;
+
+		return result || 0;
+	}
+
+	if ( mw.eventLog ) {
+		schemaMobileWebLanguageSwitcher = new mw.eventLog.Schema(
 			'MobileWebLanguageSwitcher',
-			( context.isBetaGroupMember() ? samplingRate.beta : samplingRate.stable ) || 0,
+			getSamplingRate(),
 			{
 				// throwing in the timestamp to have a better chance of being unique ;)
 				funnelToken: mw.user.generateRandomSessionId() + new Date().getTime(),
 				mobileMode: mw.config.get( 'wgMFMode' )
 			}
-		) : {};
+		);
+	}
 
 	/**
 	 * Whether to stop sending EventLogging events
