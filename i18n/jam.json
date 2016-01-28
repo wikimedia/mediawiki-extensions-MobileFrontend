@@ -6,5 +6,15 @@
 	},
 	"mobile-frontend-copyright": "Kantent avielobl fi anda $1 anles nuot adawaiz.‎",
 	"mobile-frontend-editor-edit": "Edit",
-	"mobile-frontend-view": "Muobail vyuu‎"
+	"mobile-frontend-home-button": "Yaad‎",
+	"mobile-frontend-main-menu-login": "Lagiin‎",
+	"mobile-frontend-main-menu-nearby": "Nierbai‎",
+	"mobile-frontend-main-menu-settings": "Setinz‎",
+	"mobile-frontend-main-menu-watchlist": "Wachlis‎",
+	"mobile-frontend-placeholder": "Saach‎ {{SITENAME}}",
+	"mobile-frontend-random-button": "Random‎",
+	"mobile-frontend-terms-text": "Toermz a Yuus",
+	"mobile-frontend-view": "Muobail vyuu‎",
+	"mobile-frontend-view-desktop": "Dextap‎",
+	"tag-mobile_edit": "Muobail edit"
 }

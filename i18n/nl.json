@@ -367,13 +367,14 @@
 	"mobile-frontend-pageaction-edit-tooltip": "De openingsparagraaf van deze pagina bewerken.",
 	"mobile-frontend-pageaction-upload-tooltip": "Een hoofdfoto voor deze pagina uploaden.",
 	"apihelp-mobileview-param-noimages": "HTML zonder afbeeldingen opvragen.",
+	"apihelp-parse-param-noimages": "Afbeeldingen in de mobiele uitvoer uitschakelen.",
 	"mobile-frontend-donate-button-label": "Doneren",
 	"mobile-frontend-meta-data-issues-categories": "Over deze categorie",
 	"mobile-frontend-loading-message": "Bezig met laden…",
-	"mobile-frontend-console-recruit": "\\o/ Hey! Dit is opensourcesoftware en we hebben vrijwilligers nodig die helpen met bouwen en verbeteren van dit en het oplossen van fouten die je niet eens in de JavaScript-console ziet!\n\nJe kunt ons backlog vinden @ https://phabricator.wikimedia.org/project/profile/67/",
+	"mobile-frontend-console-recruit": "\\o/ Hey! Dit is opensourcesoftware en we hebben vrijwilligers nodig die helpen met bouwen en verbeteren van dit en het oplossen van fouten die je niet eens in de JavaScript-console ziet!\n\nU kunt ons backlog vinden @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "Oké",
 	"mobile-frontend-panel-cancel": "Nee, bedankt",
 	"mobile-frontend-panel-betaoptin-msg": "Wilt u soms nieuwe functies uitproberen? Door mee te doen aan de beta, krijgt u toegang tot experimentele functies, met het risico op fouten en problemen.",
 	"mobile-frontend-search-feedback-link-text": "Geef ons uw mening.",
-	"mobile-frontend-search-feedback-prompt": "Kon je niet vinden wat je zocht?"
+	"mobile-frontend-search-feedback-prompt": "Kon u niet vinden wat uw zocht?"
 }
