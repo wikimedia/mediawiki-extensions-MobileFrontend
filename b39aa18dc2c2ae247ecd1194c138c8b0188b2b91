@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_3e09b934",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-28T07:37:38Z",
+      "side": 1,
+      "message": "I would prefer to not do this, couldn\u0027t we merge this change after the core change was merged?",
+      "revId": "b39aa18dc2c2ae247ecd1194c138c8b0188b2b91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
