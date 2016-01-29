@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_4b0627d3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 807,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-29T18:17:08Z",
+      "side": 1,
+      "message": "The whole hook can actually be removed if doing this.\n\nThat said I\u0027d suggest feature flagging this for the time being by introducing a config variable $wgMFAllowNonJavaScriptEditing that defaults to false\n\nWe should trial this for a bit and have a kill switch in case introducing this leads to problems.",
+      "revId": "e161c831ed280335dc8281f2fe3d096351387b3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
