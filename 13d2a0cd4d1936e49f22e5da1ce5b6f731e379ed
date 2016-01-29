@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_a0901a99",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-29T16:15:53Z",
+      "side": 1,
+      "message": "could you, btw., also fix this, while you\u0027re already here? The 2nd parameter isn\u0027t a Skin object in any case, it can be a string of a skin name or null, too :)",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_e0961297",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-29T16:15:53Z",
+      "side": 1,
+      "message": "If you want, that users can set this in any way, you need to \"register\" it in the GetPreferences hook handler (it\u0027s already here as onGetPreferences). You can, if you want, define it as an api only option, to a user needs to set this using the browser console.",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c03516d9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-29T16:15:53Z",
+      "side": 1,
+      "message": "If the skin does not exist, shouldn\u0027t this default to the mobile skin, and not to the skin set in wgDefaultSkin?\n\nAlso, you can save (a lot? I\u0027m not sure, how intensive the following calls to SkinFactory and makeSkin are in perspective of performance) some computing time, if you check, if the default skin is returned by Skin::normalizeKey (additionally you would give the handling of the skin over to the \"normal\" procedure, which is, maybe, less error prone :)\n\nif ( $normalized \u003d\u003d\u003d $context-\u003egetConfig()-\u003eget( \u0027DefaultSkin\u0027 ) ) {\n\treturn false;\n}",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_604ea274",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-29T16:15:53Z",
+      "side": 1,
+      "message": "is this needed for a special case? You could simply set $skin \u003d $normalized; and let the hook caller handle the creation of the skin object :)",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
