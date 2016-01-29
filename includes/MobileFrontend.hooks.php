@@ -697,6 +697,7 @@ class MobileFrontendHooks {
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
+		$noJsEditing = $config->get( 'MFAllowNonJavaScriptEditing' );
 
 		// show banners using WikidataPageBanner, if installed and all pre-conditions fulfilled
 		if (
@@ -781,6 +782,12 @@ class MobileFrontendHooks {
 			Hooks::run( 'BeforePageDisplayMobile', array( &$out, &$sk ) );
 		}
 
+		// add fallback editor styles to action=edit page
+		$requestAction = $out->getRequest()->getVal( 'action' );
+		if ( $noJsEditing && ( $requestAction === 'edit' || $requestAction === 'submit' ) ) {
+			$out->addModuleStyles( 'skins.minerva.fallbackeditor' );
+		}
+
 		return true;
 	}
 
@@ -807,20 +814,23 @@ class MobileFrontendHooks {
 	public static function onCustomEditor( $article, $user ) {
 		$context = MobileContext::singleton();
 
-		// redirect to mobile editor instead of showing desktop editor
-		if ( $context->shouldDisplayMobileView() && !$context->getRequest()->wasPosted() ) {
-			$output = $context->getOutput();
-			$data = $output->getRequest()->getValues();
-			// Unset these to avoid a redirect loop but make sure we pass other
-			// parameters to edit e.g. undo actions
-			unset( $data['action'] );
-			unset( $data['title'] );
+		// redirect to Special:MobileEditor if no-JS editing disabled
+		if ( !$context->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' ) ) {
 
-			$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )
-				->getFullURL( $data ) );
-			return false;
+			// redirect to mobile editor instead of showing desktop editor
+			if ( $context->shouldDisplayMobileView() && !$context->getRequest()->wasPosted() ) {
+				$output = $context->getOutput();
+				$data = $output->getRequest()->getValues();
+				// Unset these to avoid a redirect loop but make sure we pass other
+				// parameters to edit e.g. undo actions
+				unset( $data['action'] );
+				unset( $data['title'] );
+
+				$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )
+					->getFullURL( $data ) );
+				return false;
+			}
 		}
-
 		return true;
 	}
 

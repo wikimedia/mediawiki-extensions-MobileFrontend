@@ -182,7 +182,9 @@
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"notifications": "resources/skins.minerva.icons.images/bell.svg",
-				"mainmenu": "resources/skins.minerva.icons.images/hamburger.svg"
+				"mainmenu": "resources/skins.minerva.icons.images/hamburger.svg",
+				"edit": "resources/skins.minerva.icons.images/editLocked.svg",
+				"edit-enabled": "resources/skins.minerva.icons.images/edit.svg"
 			}
 		},
 		"mobile.overlay.images": {
@@ -270,8 +272,6 @@
 				"talk": "resources/skins.minerva.icons.images.scripts/talk.svg",
 				"watch": "resources/skins.minerva.icons.images.scripts/watch.svg",
 				"watched": "resources/skins.minerva.icons.images.scripts/watched.svg",
-				"edit": "resources/skins.minerva.icons.images.scripts/editLocked.svg",
-				"edit-enabled": "resources/skins.minerva.icons.images.scripts/edit.svg",
 				"user": "resources/skins.minerva.icons.images.scripts/userNormal.svg",
 				"anonymous": "resources/skins.minerva.icons.images.scripts/userAnonymous.svg"
 			}
@@ -1684,6 +1684,14 @@
 				"resources/skins.minerva.editor/init.js"
 			]
 		},
+		"skins.minerva.fallbackeditor": {
+			"targets": [
+				"mobile"
+			],
+			"styles": [
+				"resources/skins.minerva.fallbackeditor/fallbackeditor.less"
+			]
+		},
 		"skins.minerva.categories": {
 			"targets": [
 				"mobile",
@@ -2029,7 +2037,8 @@
 		"MFSchemaMobileWebLanguageSwitcherSampleRate": {
 			"beta": 0,
 			"stable": 0
-		}
+		},
+		"MFAllowNonJavaScriptEditing": false
 	},
 	"manifest_version": 1
 }

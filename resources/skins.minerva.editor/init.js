@@ -124,6 +124,10 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
+		page.$( '.edit-page' ).on( 'click', function () {
+			router.navigate( '#/editor/' + $( this ).data( 'section' ) );
+			return false;
+		} );
 		overlayManager.add( /^\/editor\/(\d+)$/, function ( sectionId ) {
 			var
 				$content = $( '#mw-content-text' ),
@@ -246,6 +250,8 @@
 		// Make sure we never create two edit links by accident
 		// FIXME: split the selector and cache it
 		if ( $caEdit.find( '.edit-page' ).length === 0 ) {
+			$( '.nojs-edit' ).removeClass( 'nojs-edit' );
+			$( '#ca-edit a' ).remove();
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || page.getLeadSectionElement().text() ) {
 				// if lead section is not empty, open editor with lead section

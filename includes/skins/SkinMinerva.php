@@ -133,17 +133,20 @@ class SkinMinerva extends SkinTemplate {
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
+		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
+			$additionalClass = $noJsEdit?' nojs-edit':'';
 			$lang = wfGetLangObj( $lang );
 			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			$html = Html::openElement( 'span' );
 			$html .= Html::element( 'a', array(
-				'href' => '#/editor/' . $section,
+				'href' =>  $this->getTitle()->getLocalUrl( array( 'action' => 'edit', 'section' => $section ) ),
 				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang )->text(),
 				'data-section' => $section,
 				// Note visibility of the edit section link button is controlled by .edit-page in ui.less so
 				// we default to enabled even though this may not be true.
-				'class' => MobileUI::iconClass( 'edit-enabled', 'element', 'edit-page icon-32px' ),
+				'class' => MobileUI::iconClass( 'edit-enabled', 'element', 'edit-page' . $additionalClass ),
 			), $message );
 			$html .= Html::closeElement( 'span' );
 			return $html;
@@ -797,6 +800,7 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function preparePageActions( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
+		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
 		$actions = $tpl->data['content_navigation']['actions'];
@@ -810,9 +814,16 @@ class SkinMinerva extends SkinTemplate {
 
 		// empty placeholder for edit and photos which both require js
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
+			$additionalClass = $noJsEdit?' nojs-edit':'';
+
 			$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
-				'class' => MobileUI::iconClass( 'edit', 'element', 'hidden' ),
+				'class' => MobileUI::iconClass( 'edit-enabled', 'element' . $additionalClass ),
+				'links' => array(
+						'edit' => array(
+							'href' => $this->getTitle()->getLocalUrl( array( 'action' => 'edit', 'section' => 0 ) )
+					)
+				)
 			);
 		}
 
