@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_56f48bb9",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:45:42Z",
+      "side": 1,
+      "message": "You would need to remove this, too.",
+      "revId": "6ae89e7924a77a9519a1dcd4c02d6f7ac8344f06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_76f187c7",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:45:42Z",
+      "side": 1,
+      "message": "And this block seems to be unused know, too.",
+      "revId": "6ae89e7924a77a9519a1dcd4c02d6f7ac8344f06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
