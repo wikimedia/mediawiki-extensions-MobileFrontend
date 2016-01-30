@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_8c7755fd",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-30T00:21:04Z",
+      "side": 0,
+      "message": "When $wgMFAllowNonJavaScriptEditing I now see all the edit icons with JS disabled I suspect because of this change.",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

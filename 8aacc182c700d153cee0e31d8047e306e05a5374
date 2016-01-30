@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_2c1661ad",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 811,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-30T00:21:04Z",
+      "side": 1,
+      "message": "!$config-\u003eget( \u0027MFAllowNonJavaScriptEditing\u0027 ) should be enough here. It\u0027s meant to be a boolean",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_ec0fe98b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-01-30T00:21:04Z",
+      "side": 1,
+      "message": "getLocalUrl( array( \u0027action\u0027 \u003d\u003e \u0027edit\u0027, \u0027section\u0027 \u003d\u003e $section ) )\nseems more future proof - what if the edit url  ever changes to not need a query string?\n\nThoughts Florian?",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
