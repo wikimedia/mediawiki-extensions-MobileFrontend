@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6eaa8f54_16285331",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 808,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:33:31Z",
+      "side": 1,
+      "message": "I would prefer:\n\n$context \u003d MobileContext::singleton();\n$config \u003d $context-\u003egetMFConfig();\n\nMobileContext::singleton() is already cached inside the function itself, but I don\u0027t see a reason why you call it here and again in L812 :)",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_2c1661ad",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
@@ -19,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_362d4f42",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:33:31Z",
+      "side": 1,
+      "message": "Resources.php should be removed, why we already have it? o.O\n\n(Just a comment to myself, you don\u0027t need to handle it :P)",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_ec0fe98b",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 6
@@ -30,6 +64,41 @@
       "writtenOn": "2016-01-30T00:21:04Z",
       "side": 1,
       "message": "getLocalUrl( array( \u0027action\u0027 \u003d\u003e \u0027edit\u0027, \u0027section\u0027 \u003d\u003e $section ) )\nseems more future proof - what if the edit url  ever changes to not need a query string?\n\nThoughts Florian?",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f60fb7e2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:33:31Z",
+      "side": 1,
+      "message": "I agree with Jon in some way, but I would love a more general solution :) What if we propose a change in core, that getEditUrl() takes an argument as the section count? In this way, we could simply pass the section number we want to edit and the rest is handled by getEditUrl (e.g. if the section parameter changes at some time or any additional argument is needed or so on). Thoughts?\n\nOtherwise: I agree with Jon, that you shouldn\u0027t assume, that getEditUrl returns an url string, that already has a question mark in it, that could result in an error. If you want to append a query to an url, use wfAppendQuery(), which handles this for you, or use the solution from Jon. However, I would prefer my suggestion :P",
+      "parentUuid": "6eaa8f54_ec0fe98b",
+      "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b6f13fdc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 818,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-01-30T18:33:31Z",
+      "side": 1,
+      "message": "btw.: Same here :)",
       "revId": "8aacc182c700d153cee0e31d8047e306e05a5374",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
