@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_96cc4368",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T20:03:42Z",
+      "side": 0,
+      "message": "This should be added to the callback to make sure that it dosent break extensions by removing this.",
+      "revId": "29d5104f670f92598e624edebf3e2efd53cf7da0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
