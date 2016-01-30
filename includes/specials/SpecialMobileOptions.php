@@ -25,6 +25,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		parent::__construct( 'MobileOptions' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Render the special page
 	 * @param string|null $par Parameter submitted as subpage
