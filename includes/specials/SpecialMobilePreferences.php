@@ -13,33 +13,38 @@ class SpecialMobilePreferences extends SpecialPreferences {
 	);
 
 	/**
-	 * @param {String} $key valid key as specified in validTabs
-	 * @return {HtmlForm}
+	 * Builds the preferences form for the given section.
+	 *
+	 * @param string $key A valid section key, which can be rendered
+	 * @return PreferencesForm
 	 */
 	public function getPreferencesForm( $key ) {
 		$prefs = array();
 		$user = $this->getUser();
 		$ctx = $this->getContext();
-		switch ( $key ) {
-			case 'personal':
-				Preferences::profilePreferences( $user, $ctx, $prefs );
-				break;
-			case 'skin':
-				Preferences::skinPreferences( $user, $ctx, $prefs );
-				break;
-			case 'dateformat':
-				Preferences::datetimePreferences( $user, $ctx, $prefs );
-				break;
-			case 'files':
-				Preferences::filesPreferences( $user, $ctx, $prefs );
-				break;
-			case 'rc':
-				Preferences::rcPreferences( $user, $ctx, $prefs );
-				break;
-		}
 
-		Preferences::loadPreferenceValues( $user, $ctx, $prefs );
-		$htmlForm = new PreferencesForm( $prefs, $ctx, 'prefs' );
+		// load any preferences element
+		$removePrefs = Preferences::getPreferences( $user, $ctx );
+		// check, if the element shouldn't be rendered
+		foreach ( $removePrefs as $formElement => $formDescriptor ) {
+			if (
+				// we render only preferences, which are in a specific section, ...
+				isset( $formDescriptor['section'] ) &&
+				(
+					// ...which is specified by the given $key
+					$formDescriptor['section'] === $key ||
+					strpos( $formDescriptor['section'], $key ) !== false
+				)
+			) {
+				// remove the preferences element from the array of elements, which are removed
+				unset( $removePrefs[$formElement] );
+			}
+		}
+		// we need the keys only
+		$removePrefs = array_keys( $removePrefs );
+
+		// get the form element (the $removePrefs param specifies, which elements shouldn't be rendered)
+		$htmlForm = Preferences::getFormObject( $user, $ctx, 'PreferencesForm', $removePrefs );
 		$htmlForm->suppressReset();
 		$htmlForm->setModifiedUser( $user );
 		$htmlForm->setId( 'mw-prefs-form' );
@@ -61,12 +66,20 @@ class SpecialMobilePreferences extends SpecialPreferences {
 			$out->addHtml( MobileUI::successBox( wfMessage( 'savedprefs' ) ) );
 		}
 
-		if ( $par && in_array( $par, $this->validTabs ) ) {
+		// combine our valid tabs array with all available tabs on the preferences form
+		$form = Preferences::getFormObject( $this->getUser(), $this->getContext() );
+		$validForRendering = $this->validTabs + $form->getPreferenceSections();
+
+		// if the requested tab can be rendered, render it, no matter, if it's visible on
+		// the main entry point (Special:MobilePreferences)
+		if ( $par && in_array( $par, $validForRendering ) ) {
 			$htmlForm = $this->getPreferencesForm( $par );
 			$htmlForm->setSubmitCallback( array( 'Preferences', 'tryUISubmit' ) );
 			$htmlForm->show();
 		} else {
 			foreach ( $this->validTabs as $tabName ) {
+				// hidden tabs allow a user to navigate to the section of the preferences page,
+				// but shouldn't be visible on the main entry point (Special:Preferences)
 				$attrs = array(
 					'class' => $baseClass = MobileUI::buttonClass( 'block' ),
 					'href' => SpecialPage::getTitleFor( $this->getName(), $tabName )->getLocalUrl(),
