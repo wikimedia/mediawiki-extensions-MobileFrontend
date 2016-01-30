@@ -11,7 +11,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private $returnToTitle;
 	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
-	/** @var array $options Array of options */
+	/** @var array $options Used in the execute() function as a map of subpages to
+	 functions that are executed when the request method is defined. */
 	private $options = array(
 		'Language' => array( 'get' => 'chooseLanguage' ),
 	);
@@ -46,14 +47,17 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setHeaders();
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
+		// check, if the subpage has a registered function, that needs to be executed
 		if ( isset( $this->options[$par] ) ) {
 			$option = $this->options[$par];
 
+			// select the correct function for the given request method (post, get)
 			if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
 				$func = $option['post'];
 			} else {
 				$func = $option['get'];
 			}
+			// run the function
 			$this->$func();
 		} else {
 			if ( $this->getRequest()->wasPosted() ) {
@@ -191,7 +195,8 @@ HTML;
 	}
 
 	/**
-	 * Render the language selector special page
+	 * Render the language selector special page, callable through Special:MobileOptions/Language
+	 * See the $options member variable of this class.
 	 */
 	private function chooseLanguage() {
 		$out = $this->getOutput();
