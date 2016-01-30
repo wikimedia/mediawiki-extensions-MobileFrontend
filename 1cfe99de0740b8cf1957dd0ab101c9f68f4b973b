@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_56a80b74",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 1965,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Here too needs \"_merge_strategy\": \"array_plus\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b69b7f67",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 1984,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Here needs \"_merge_strategy\": \"array_plus_2d\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_969e8358",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 2003,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Here too needs \"_merge_strategy\": \"array_plus\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d694fb3b",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 2011,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Here too needs \"_merge_strategy\": \"array_plus\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_3690ef45",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 2018,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Here too needs \"_merge_strategy\": \"array_plus\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_168b731c",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 2060,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-01-30T19:49:21Z",
+      "side": 1,
+      "message": "Forgot to add the config for the array merge which is\n\n\"_merge_strategy\": \"array_plus\"",
+      "revId": "1cfe99de0740b8cf1957dd0ab101c9f68f4b973b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
