@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ibrahim"
+			"Ibrahim",
+			"AryanSogd"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Бозгашт Ба Қисмати A",
@@ -21,7 +22,7 @@
 	"mobile-frontend-regular-site": "Намоиши саримизӣ",
 	"mobile-frontend-search-submit": "Бирав",
 	"mobile-frontend-terms-text": "Шартҳои Истифода",
-	"mobile-frontend-view": "Намоди мобилӣ",
+	"mobile-frontend-view": "Намуди мобилӣ",
 	"mobile-frontend-view-desktop": "Компютер",
 	"mobile-frontend-view-mobile": "Мобил",
 	"tag-mobile_edit": "Вироши мобилӣ",
