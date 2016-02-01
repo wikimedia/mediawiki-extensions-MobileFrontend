@@ -29,6 +29,7 @@
 	"mobile-frontend-copyright": "تمام مواد $1 کے تحت میسر ہے، جب تک کوئی دوسری وجہ نا ہو۔",
 	"mobile-frontend-desc": "موبائل پیشدید",
 	"mobile-frontend-diffview-anonymous": "گمنام صارف",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|ترمیم|ترامیم}}",
 	"mobile-frontend-diffview-title": "تبدیلیاں",
 	"mobile-frontend-disable-images": "موبائل سائٹ پر تصاویر غیر فعال کریں",
 	"mobile-frontend-dismiss-notification": "اس اطلاع کو ختم کریں",
@@ -94,7 +95,7 @@
 	"mobile-frontend-generic-404-title": "خطا - صفحہ نہیں ملا",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} کو آپ جیسے علم دوست افراد نے تیار کیا ہے۔</strong><br />شراکت کرنے کے لیے داخل ہوں۔",
 	"mobile-frontend-history": "اس صفحہ کا ترمیمی تاریخچہ ملاحظہ کریں۔",
-	"mobile-frontend-home-button": "سرورق",
+	"mobile-frontend-home-button": "صفحۂ اول",
 	"mobile-frontend-images-status": "تصویر",
 	"mobile-frontend-language-article-heading": "دوسری زبانوں میں پڑھیں",
 	"mobile-frontend-language-header": "یہ صفحہ $1 میں دستیاب ہے {{PLURAL:$1|زبان|زبانیں}}",
@@ -122,7 +123,7 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 سال|$3 سال}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-years": "آخری ترمیم {{PLURAL:$1|$1 سال}} قبل",
 	"mobile-frontend-lead-image-tutorial-confirm": "اپلوڈنگ شروع کریں",
-	"mobile-frontend-logged-in-homepage-notification": "خوش آمدید، $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|خوش آمدید}} $1!",
 	"mobile-frontend-logged-in-toast-notification": "داخل شد بطور $1",
 	"mobile-frontend-main-menu": "اصل مینیو",
 	"mobile-frontend-main-menu-back": "پیچھے جائیں",
@@ -151,8 +152,6 @@
 	"mobile-frontend-password-placeholder": "پاس ورڈ",
 	"mobile-frontend-placeholder": "تلاش {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "پرائیویسی",
-	"mobile-frontend-profile-activity-heading": "حالیہ سرگرمی",
-	"mobile-frontend-profile-error": "ارے نہیں!",
 	"mobile-frontend-random-button": "بےترتیب",
 	"mobile-frontend-regular-site": "نسخہ ڈیسکٹاپ",
 	"mobile-frontend-save-settings": "محفوظ کریں",
@@ -171,5 +170,6 @@
 	"tag-mobile_edit": "موبائیل ترمیم",
 	"tag-mobile_web_edit": "موبائیل ویب ترمیم",
 	"mobile-frontend-pageaction-edit-tooltip": "اس صفحے کے قیادی پٹی کو ترمیم کریں",
-	"mobile-frontend-loading-message": "لوڈ ہو رہا ہے۔۔۔"
+	"mobile-frontend-loading-message": "لوڈ ہو رہا ہے۔۔۔",
+	"mobile-frontend-panel-ok": "ٹھیک"
 }

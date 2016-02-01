@@ -7,6 +7,8 @@
 	"mobile-frontend-copyright": "Kantent avielobl fi anda $1 anles nuot adawaiz.‎",
 	"mobile-frontend-editor-edit": "Edit",
 	"mobile-frontend-home-button": "Yaad‎",
+	"mobile-frontend-language-article-heading": "Riid ina nex languij",
+	"mobile-frontend-last-modified-date": "Laas edit pah $1, a $2",
 	"mobile-frontend-main-menu-button-tooltip": "Uopm mien menyuu",
 	"mobile-frontend-main-menu-login": "Lagiin‎",
 	"mobile-frontend-main-menu-nearby": "Nierbai‎",
@@ -19,5 +21,7 @@
 	"mobile-frontend-view": "Muobail vyuu‎",
 	"mobile-frontend-view-desktop": "Dextap‎",
 	"mobile-frontend-view-mobile": "Mobail",
-	"tag-mobile_edit": "Muobail edit"
+	"tag-mobile_edit": "Muobail edit",
+	"tag-mobile_web_edit": "Mobail web edit",
+	"mobile-frontend-pageaction-edit-tooltip": "Edit di liid sekshan a dis piej."
 }
