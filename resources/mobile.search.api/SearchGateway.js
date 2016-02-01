@@ -77,15 +77,23 @@
 		/**
 		 * Return data used for creating {Page} objects
 		 * @param {String} query to search for
-		 * @param {Object} info page info from the API
+		 * @param {Object} pageInfo from the API
+		 * @param {Object} generatorInfo from the API
 		 * @return {Object} data needed to create a {Page}
 		 * @private
 		 */
-		_getPage: function ( query, info ) {
-			var page = Page.newFromJSON( info );
-			// Highlight the search term
+		_getPage: function ( query, pageInfo, generatorInfo ) {
+			var page = Page.newFromJSON( pageInfo );
+
+			// If displaytext is set in the generator result (eg. by Wikibase), use that as display title.
+			// Otherwise default to the page's title.
 			// FIXME: Given that displayTitle could have html in it be safe and just highlight text.
-			page.displayTitle = this._highlightSearchTerm( page.title, query );
+			// Note that highlightSearchTerm does full HTML escaping before highlighting.
+			page.displayTitle = this._highlightSearchTerm(
+				generatorInfo.displaytext ? generatorInfo.displaytext : page.title,
+				query
+			);
+
 			return page;
 		},
 
@@ -123,9 +131,9 @@
 
 					// We loop through the search results (rather than the pages
 					// results) here in order to maintain the correct order.
-					$.each( data.query[this.generator.name], function ( i, page ) {
-						var info, title = page.title,
-							id = page.pageid,
+					$.each( data.query[this.generator.name], function ( i, generatorInfo ) {
+						var title = generatorInfo.title,
+							id = generatorInfo.pageid,
 							mwTitle;
 
 						// Is this a redirect? If yes, get the target.
@@ -133,22 +141,18 @@
 							id = pages[redirects[title]].pageid;
 						}
 
-						if ( id && data.query.pages && data.query.pages[id] ) {
-							info = data.query.pages[id];
-						}
-
 						if ( $.inArray( id, pageIds ) === -1 ) {
-							if ( info ) {
+							if ( id && data.query.pages && data.query.pages[id] ) {
 								// return all possible page data
 								pageIds.push( id );
-								results.push( self._getPage( query, info ) );
+								results.push( self._getPage( query, data.query.pages[id], generatorInfo ) );
 							} else {
-								mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
+								mwTitle = mw.Title.newFromText( generatorInfo.title, self._searchNamespace );
 
 								results.push( new Page( {
-									id: page.pageid,
-									heading: self._highlightSearchTerm( page.title, query ),
-									title: page.title,
+									id: generatorInfo.pageid,
+									heading: self._highlightSearchTerm( generatorInfo.title, query ),
+									title: generatorInfo.title,
 									displayTitle: $( '<span>' ).text( mwTitle.getNameText() ).html(),
 									url: mwTitle.getUrl()
 								} ) );
