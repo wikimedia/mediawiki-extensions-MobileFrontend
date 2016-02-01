@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_16e12a29",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1705,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T20:23:26Z",
+      "side": 1,
+      "message": "modules added via addModuleStyles ignore dependencies so this is misleading and should be removed",
+      "revId": "b34d136bd8c3f2b6430cd916c9f261391974a29e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_96ed1a25",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T20:23:26Z",
+      "side": 1,
+      "message": "I\u0027d suggest just using a one liner for the additional classes as it\u0027s not clear from first glance how these two lines differ.\n\ne.g. $additionalClasses \u003d $noJsEdit ? \u0027edit-page icon-32px nojs-edit\u0027 : \u0027edit-page \nicon-32px\u0027\n\nps. am wondering if icon-32px is needed any more.. can you check?",
+      "revId": "b34d136bd8c3f2b6430cd916c9f261391974a29e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b6f056fb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 825,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T20:23:26Z",
+      "side": 1,
+      "message": "see above comment",
+      "revId": "b34d136bd8c3f2b6430cd916c9f261391974a29e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
