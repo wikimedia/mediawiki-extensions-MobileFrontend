@@ -16,6 +16,24 @@
       "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_d6f71255",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-01T20:58:14Z",
+      "side": 1,
+      "message": "I think numbers are bad because they don\u0027t tell much by themselves. This, on the contrary, is self-descriptive. Also, the soon-to-be-implemented language overlay is a little more advanced than this and can be named \u0027structured-overlay\u0027 as the task suggests. Having said that, I think we can discuss the merits of each approach or which word to use endlessly. Thus I suggest we go with this solution. After all the person who\u0027s analysing the language overlay needs to be able to do so easily and without referring to numbers.",
+      "parentUuid": "6eaa8f54_16f4ca82",
+      "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
