@@ -34,6 +34,24 @@
       "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_01f002c3",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T21:29:13Z",
+      "side": 1,
+      "message": "I don\u0027t suggest discussing this endlessly but what happens when we make a slight tweak to the new language overlay. Do we care that we can\u0027t distinguish results or do we resort to names such as \"structured-overlay-with-header-tweak\u0027 etc..?\n\nThe user story states \"As a product owner I would like to be able to distinguish the different language overlay versions through observation of precise descriptors.\"\n\nIt\u0027s not clear what is meant to be different and I\u0027d rather get this right upfront so we don\u0027t needlessly waste time reconfiguring things.\n\nMy gut feeling is we want to compare current experience (baseline) alongside a new experience - if that\u0027s so wouldn\u0027t an A/B test field be a better solution?",
+      "parentUuid": "6eaa8f54_d6f71255",
+      "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
