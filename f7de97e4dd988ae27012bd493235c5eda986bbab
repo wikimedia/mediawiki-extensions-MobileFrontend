@@ -16,6 +16,24 @@
       "revId": "f7de97e4dd988ae27012bd493235c5eda986bbab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f6ba4eb5",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1977,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-01T20:52:21Z",
+      "side": 0,
+      "message": "OK, I\u0027ll submit a patch.",
+      "parentUuid": "6eaa8f54_76af3e79",
+      "revId": "f7de97e4dd988ae27012bd493235c5eda986bbab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
