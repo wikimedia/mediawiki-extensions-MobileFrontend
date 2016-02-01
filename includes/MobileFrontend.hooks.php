@@ -1075,7 +1075,7 @@ class MobileFrontendHooks {
 	private static function getEventLoggingSchemas() {
 		return array(
 			'MobileWebDiffClickTracking' => 10720373,
-			'MobileWebLanguageSwitcher' => 15265240,
+			'MobileWebLanguageSwitcher' => 15302503,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
 			'MobileWebSectionUsage' => 15038458,

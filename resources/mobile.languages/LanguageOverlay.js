@@ -60,7 +60,7 @@
 			Overlay.prototype.postRender.apply( this );
 			this.options.languageSwitcherSchema.log( {
 				event: 'languageListLoaded',
-				languageOverlayVersion: 'bottom-of-article',
+				languageOverlayVersion: 'simpler-overlay',
 				languageCount: this.$( '.site-link-list li' ).length
 			} );
 		},
