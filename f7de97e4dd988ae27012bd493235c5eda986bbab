@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_76af3e79",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1977,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T20:51:36Z",
+      "side": 0,
+      "message": "I suspect we need to clean this up in wikimedia-config as well...",
+      "revId": "f7de97e4dd988ae27012bd493235c5eda986bbab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
