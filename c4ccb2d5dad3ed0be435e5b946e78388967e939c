@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f004961c",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1966,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "The default (array_merge[1]) should work fine, why does this need to be array_plus?\n\n[1] https://github.com/wikimedia/mediawiki/blob/9db32681e4821f0c88575c07c30c91f5916855b4/includes/registration/ExtensionRegistry.php#L269",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_7308b02b",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1986,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "reasonable.",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_130ffc34",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2006,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "why does array_merge (the default) doesn\u0027t suffice?",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_330a3823",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2015,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "why does array_merge (the default) doesn\u0027t suffice?",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_531c946a",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2023,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "why does array_merge (the default) doesn\u0027t suffice?",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_731f505f",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-01T17:29:14Z",
+      "side": 1,
+      "message": "why does array_merge (the default) doesn\u0027t suffice?",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
