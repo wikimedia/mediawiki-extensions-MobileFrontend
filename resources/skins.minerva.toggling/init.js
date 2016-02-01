@@ -1,7 +1,5 @@
 ( function ( M, $ ) {
-	var schema,
-		page = M.getCurrentPage(),
-		SchemaMobileWebSectionUsage = M.require( 'mobile.loggingSchemas/SchemaMobileWebSectionUsage' ),
+	var page = M.getCurrentPage(),
 		$contentContainer = $( '#mw-content-text' ),
 		Toggler = M.require( 'mobile.toggle/Toggler' );
 
@@ -17,12 +15,7 @@
 	function init( $container, prefix, page ) {
 		// distinguish headings in content from other headings
 		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
-		schema = new SchemaMobileWebSectionUsage();
-		schema.enable( page );
-		schema.log( {
-			eventName: 'entered'
-		} );
-		new Toggler( $container, prefix, page, schema );
+		new Toggler( $container, prefix, page );
 	}
 
 	// FIXME: remove when cache clears

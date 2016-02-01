@@ -13,14 +13,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgMFEnableXAnalyticsLogging = false;
 
 /**
- * Sample rate to log events for section usage in mobile web
- *
- * @var number
- */
-$wgMFSchemaMobileWebSectionUsageSampleRate = 0;
-
-
-/**
  * Sample rate to log events for language button and overlay usage in mobile web
  *
  * @var array

@@ -2,14 +2,12 @@
 	var context = M.require( 'mobile.context/context' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		browser = M.require( 'mobile.browser/browser' ),
-		util = M.require( 'mobile.startup/util' ),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowOptions = {
 			name: 'arrow',
 			additionalClassNames: 'indicator'
 		},
-		Icon = M.require( 'mobile.startup/Icon' ),
-		$window = $( window );
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * A class for enabling toggling
@@ -18,18 +16,11 @@
 	 * @param {jQuery.Object} $container to apply toggling to
 	 * @param {String} prefix a prefix to use for the id.
 	 * @param {Page} [page] to allow storage of session for future visits
-	 * @param {Schema} [schema] to log events on
 	 * @extends OO.EventEmitter
 	 */
-	function Toggler( $container, prefix, page, schema ) {
-		this.schema = schema;
+	function Toggler( $container, prefix, page ) {
 		OO.EventEmitter.call( this );
 		this._enable( $container, prefix, page );
-		if ( schema ) {
-			this.connect( this, {
-				toggled: 'onToggle'
-			} );
-		}
 	}
 	OO.mixinClass( Toggler, OO.EventEmitter );
 
@@ -132,19 +123,6 @@
 		} );
 		saveExpandedSections( expandedSections );
 	}
-
-	/**
-	 * Event handler fired when a section is toggled open/closed
-	 *
-	 * @param {Boolean} isCollapsed whether the section is now collapsed (at end of toggle)
-	 * @param {Number} sectionId that was open/closed
-	 */
-	Toggler.prototype.onToggle = function ( isCollapsed, sectionId ) {
-		this.schema.log( {
-			eventName: isCollapsed ? 'close-section' : 'open-section',
-			section: sectionId
-		} );
-	};
 
 	/**
 	 * Given a heading, toggle it and any of its children
@@ -253,16 +231,6 @@
 		expandSections = !collapseSectionsByDefault ||
 			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
-		// A/B test to measure the impact of section collapsing
-		if ( self.schema && self.schema.isUserInBucket() && self.schema.defaults.isTestA ) {
-			// Bucketed users who are in stable and using a small screen device
-			// will see expanded sections by default
-			// @see T120292
-			if ( context.getMode() === 'stable' && !browser.isWideScreen() ) {
-				expandSections = true;
-			}
-		}
-
 		$container.children( tagName ).each( function ( i ) {
 			var $heading = $( this ),
 				id = prefix + 'collapsible-block-' + i;
@@ -305,7 +273,6 @@
 					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					self.toggle.call( self, $heading );
 				}
-				logWhenHeadingIsScrolledIntoView( $heading, i );
 			}
 		} );
 
@@ -336,33 +303,6 @@
 			if ( internalRedirectHash ) {
 				window.location.hash = internalRedirectHash;
 				self.reveal( internalRedirectHash, $container );
-			}
-		}
-
-		/**
-		 * Log when the heading is scrolled into the viewport
-		 *
-		 * @param {jQuery.Object} $heading
-		 * @param {Number} sectionId that was scrolled into the viewport
-		 */
-		function logWhenHeadingIsScrolledIntoView( $heading, sectionId ) {
-			/**
-			 * Log when a heading is seen by the user
-			 * @ignore
-			 */
-			function log() {
-				if ( util.isElementInViewport( $heading ) ) {
-					$window.off( 'scroll.' + $heading.attr( 'id' ), log );
-					self.schema.log( {
-						eventName: 'scrolled-into-view',
-						section: sectionId
-					} );
-				}
-			}
-
-			if ( self.schema ) {
-				$window.on( 'scroll.' + $heading.attr( 'id' ), $.debounce( 250, log ) );
-				log();
 			}
 		}
 

@@ -1973,14 +1973,6 @@
 					"control": 0.97,
 					"A": 0.03
 				}
-			},
-			"sectionCollapsing": {
-				"name": "sectionCollapsing",
-				"enabled": false,
-				"buckets": {
-					"control": 0.5,
-					"A": 0.5
-				}
 			}
 		},
 		"MFEnableMinervaBetaFeature": false,
@@ -2054,7 +2046,6 @@
 		"MFDisplayWikibaseDescription": false,
 		"MFWikibaseImageCategory": "",
 		"MFRSSFeedLink": false,
-		"MFSchemaMobileWebSectionUsageSampleRate": 0,
 		"MFSchemaMobileWebLanguageSwitcherSampleRate": {
 			"beta": 0,
 			"stable": 0

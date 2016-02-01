@@ -879,8 +879,6 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 
 		$vars = array(
-			'wgMFSchemaMobileWebSectionUsageSampleRate' =>
-				$config->get( 'MFSchemaMobileWebSectionUsageSampleRate' ),
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
 				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
