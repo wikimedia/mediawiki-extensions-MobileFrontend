@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_5c958134",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T23:47:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6eaa8f54_a0901a99",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_e0961297",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_16f5aac7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T23:47:00Z",
+      "side": 1,
+      "message": "I was gonna explore this in a follow up. I don\u0027t want to surface broken skins and for us to be expected to serve Monobook so care is needed with such a change :-)",
+      "parentUuid": "6eaa8f54_e0961297",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_c03516d9",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
@@ -47,6 +83,24 @@
       "writtenOn": "2016-01-29T16:15:53Z",
       "side": 1,
       "message": "If the skin does not exist, shouldn\u0027t this default to the mobile skin, and not to the skin set in wgDefaultSkin?\n\nAlso, you can save (a lot? I\u0027m not sure, how intensive the following calls to SkinFactory and makeSkin are in perspective of performance) some computing time, if you check, if the default skin is returned by Skin::normalizeKey (additionally you would give the handling of the skin over to the \"normal\" procedure, which is, maybe, less error prone :)\n\nif ( $normalized \u003d\u003d\u003d $context-\u003egetConfig()-\u003eget( \u0027DefaultSkin\u0027 ) ) {\n\treturn false;\n}",
+      "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_fc9d4d6a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T23:47:00Z",
+      "side": 1,
+      "message": "Good call.",
+      "parentUuid": "6eaa8f54_c03516d9",
       "revId": "13d2a0cd4d1936e49f22e5da1ce5b6f731e379ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
