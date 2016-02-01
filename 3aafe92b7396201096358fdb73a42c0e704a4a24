@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_16f4ca82",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-01T20:53:45Z",
+      "side": 1,
+      "message": "Why are we using strings for this? Why not just numbers?\nsimpler-overlay doesn\u0027t seem very descriptive and it leads me to question things such as \"what\u0027s more simple about it\" and it also constrains us to not simplify things in any new version ;-)",
+      "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
