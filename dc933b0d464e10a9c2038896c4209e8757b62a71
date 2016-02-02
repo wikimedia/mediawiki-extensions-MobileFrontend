@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_c773daad",
+        "filename": "resources/mobile.swipe/Swipe.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-02T01:19:47Z",
+      "side": 1,
+      "message": "Shouldn\u0027t the first two parameters be swapped? We want ImageOverlayNew to inherit from ImageOverlay, right?",
+      "revId": "dc933b0d464e10a9c2038896c4209e8757b62a71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_676a26b3",
+        "filename": "resources/mobile.view/View.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-02T01:19:47Z",
+      "side": 1,
+      "message": "Here also, Section should inherit from View, not the other way around.",
+      "revId": "dc933b0d464e10a9c2038896c4209e8757b62a71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
