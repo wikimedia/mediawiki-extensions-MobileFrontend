@@ -75,7 +75,10 @@ class ApiMobileView extends ApiBase {
 		}
 
 		$title = $this->makeTitle( $params['page'] );
-		$this->addXAnalyticsItem( 'ns', (string)$title->getNamespace() );
+
+		$namespace = $title->getNamespace();
+		$this->addXAnalyticsItem( 'ns', (string)$namespace );
+
 		// See whether the actual page (or if enabled, the redirect target) is the main page
 		$this->mainPage = $this->isMainPage( $title );
 		if ( $this->mainPage && $this->noHeadings ) {
@@ -87,6 +90,13 @@ class ApiMobileView extends ApiBase {
 				array( 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) )
 			);
 		}
+
+		if ( isset( $prop['namespace'] ) ) {
+			$resultObj->addValue( null, $moduleName, array(
+				'ns' => $namespace,
+			) );
+		}
+
 		$data = $this->getData( $title, $params['noimages'] );
 		$plainData = array( 'lastmodified', 'lastmodifiedby', 'revision',
 			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' );
@@ -759,6 +769,7 @@ class ApiMobileView extends ApiBase {
 					'pageprops',
 					'description',
 					'contentmodel',
+					'namespace',
 				)
 			),
 			'sectionprop' => array(
@@ -842,7 +853,8 @@ class ApiMobileView extends ApiBase {
 				' displaytitle    - HTML of the page title for display, with {{DISPLAYTITLE}} and such applied',
 				' pageprops       - page properties',
 				' description     - page description from Wikidata',
-				'contentmodel     - page contentmodel'
+				' contentmodel    - page contentmodel',
+				' namespace       - the namespace of the page',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'pageprops' => 'What page properties to return, a pipe (|) separated list or * for'

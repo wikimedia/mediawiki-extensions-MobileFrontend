@@ -280,6 +280,23 @@ Text 2
 					'pageprops' => array( 'notoc' => '' ),
 				),
 			),
+
+			// T123580
+			array(
+				array(
+					'page' => 'Main Page',
+					'sections' => 1,
+					'onlyrequestedsections' => true,
+
+					'prop' => 'namespace', // When the namespace is requested...
+				) + $baseIn,
+				array(
+					'mainpage' => '',
+					'sections' => array(),
+
+					'ns' => 0, // ... then it is returned.
+				),
+			)
 		);
 	}
 
