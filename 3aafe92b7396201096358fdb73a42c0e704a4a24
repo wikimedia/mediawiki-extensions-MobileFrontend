@@ -52,6 +52,24 @@
       "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c4f47ece",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-02T10:42:03Z",
+      "side": 1,
+      "message": "I suspect that the person doing the analysis would have to refer to names of //treatments// regardless of how we referred to them: \"Was it treatment A or B? The \"simpler overlay\" or \"complicated overlay\" treatment? What was the version number for that treatment again?\n\nWith that in mind, I\u0027m happy to go along with that the task is asking.",
+      "parentUuid": "6eaa8f54_01f002c3",
+      "revId": "3aafe92b7396201096358fdb73a42c0e704a4a24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
