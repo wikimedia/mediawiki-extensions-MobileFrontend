@@ -21,9 +21,8 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *       var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
-	 *         PhotoList;
-	 *       PhotoList = View.extend( {
+	 *       var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' );
+	 *       OO.mfExtend( PhotoList, View, {
 	 *         //...
 	 *         initialize: function ( options ) {
 	 *           this.gateway = new PhotoListGateway( {

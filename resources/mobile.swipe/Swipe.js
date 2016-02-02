@@ -17,9 +17,8 @@
 	 *     @example
 	 *     <code>
 	 *       var Swipe = M.require( 'mobile.swipe/Swipe' ),
-	 *         ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' ),
-	 *         ImageOverlayNew;
-	 *       ImageOverlayNew = ImageOverlay.extend( {
+	 *         ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' );
+	 *       OO.mfExtend( ImageOverlayNew, ImageOverlay, {
 	 *         //...
 	 *         initialize: function ( options ) {
 	 *           var self = this;
