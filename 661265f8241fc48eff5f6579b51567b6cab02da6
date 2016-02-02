@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_0dacf983",
+        "filename": "resources/skins.minerva.fallbackeditor/fallbackeditor.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-02T21:43:09Z",
+      "side": 1,
+      "message": "Can merge with above rule.\n\nI would also recommend hiding #mw-editform-cancel and mw-editButtons-pipe-separator",
+      "revId": "661265f8241fc48eff5f6579b51567b6cab02da6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_4db2f1e5",
+        "filename": "resources/skins.minerva.fallbackeditor/fallbackeditor.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-02T21:43:09Z",
+      "side": 1,
+      "message": "Ideally this should use the standard warningbox class in core (and be orange not red) and be a core change. Drop this rule from the css file and I\u0027ll merge as is and we can work on that separately in a follow up.",
+      "revId": "661265f8241fc48eff5f6579b51567b6cab02da6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
