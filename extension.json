@@ -257,22 +257,10 @@
 				"arrow": "resources/mobile.toggle.images/arrow.svg"
 			}
 		},
-		"skins.minerva.icons.variants.js": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.overlay.images"
-			]
-		},
 		"skins.minerva.icons.images.scripts": {
 			"targets": [
 				"mobile",
 				"desktop"
-			],
-			"dependencies": [
-				"skins.minerva.icons.variants.js"
 			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
@@ -1643,7 +1631,6 @@
 				"resources/skins.minerva.scripts.top/init.js"
 			]
 		},
-		"skins.minerva.browse": [],
 		"skins.minerva.newusers": {
 			"targets": [
 				"mobile",
@@ -1794,12 +1781,6 @@
 			],
 			"scripts": [
 				"resources/skins.minerva.tablet.scripts/toc.js"
-			]
-		},
-		"skins.minerva.beta.images": {
-			"targets": [
-				"mobile",
-				"desktop"
 			]
 		}
 	},
