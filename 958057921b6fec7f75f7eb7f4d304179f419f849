@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_87564208",
+        "filename": "resources/mobile.languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-02T01:10:32Z",
+      "side": 1,
+      "message": "Is anything using it? There shouldn\u0027t be so you should be able to just clean remove it and skip the deprecation step.\n\nIf something e.g. Zero, please state it in commit message and open a task to stop using it.",
+      "revId": "958057921b6fec7f75f7eb7f4d304179f419f849",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
