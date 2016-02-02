@@ -220,6 +220,8 @@ Each item will be stripped from the page.
 
 Type: Array
 Default: array(
+	// These rules will be used for all transformations in the beta channel of the site
+	'beta' => array(),
 	// These rules will be used for all transformations
 	'base' => array(),
 	// HTML view

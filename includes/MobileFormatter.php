@@ -105,12 +105,16 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return array
 	 */
 	public function filterContent( $removeDefaults = true ) {
-		$mfRemovableClasses = MobileContext::singleton()->getMFConfig()
+		$ctx = MobileContext::singleton();
+		$mfRemovableClasses = $ctx->getMFConfig()
 			->get( 'MFRemovableClasses' );
 
 		if ( $removeDefaults ) {
 			$this->remove( $mfRemovableClasses['base'] );
 			$this->remove( $mfRemovableClasses['HTML'] ); // @todo: Migrate this variable
+			if ( $ctx->isBetaGroupMember() ) {
+				$this->remove( $mfRemovableClasses['beta'] );
+			}
 		}
 
 		if ( $this->removeMedia ) {
