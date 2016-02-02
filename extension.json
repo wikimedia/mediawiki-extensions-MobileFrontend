@@ -1992,8 +1992,7 @@
 		"MFMobileHeader": "X-WAP",
 		"MFRemovableClasses": {
 			"beta": [],
-			"base": [],
-			"HTML": []
+			"base": []
 		},
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
