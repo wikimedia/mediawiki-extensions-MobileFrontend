@@ -224,8 +224,6 @@ Default: array(
 	'beta' => array(),
 	// These rules will be used for all transformations
 	'base' => array(),
-	// HTML view
-	'HTML' => array(),
 );
 
 ##### $wgMFNoMobileCategory

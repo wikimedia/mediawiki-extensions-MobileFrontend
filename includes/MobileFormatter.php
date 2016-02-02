@@ -111,7 +111,6 @@ class MobileFormatter extends HtmlFormatter {
 
 		if ( $removeDefaults ) {
 			$this->remove( $mfRemovableClasses['base'] );
-			$this->remove( $mfRemovableClasses['HTML'] ); // @todo: Migrate this variable
 			if ( $ctx->isBetaGroupMember() ) {
 				$this->remove( $mfRemovableClasses['beta'] );
 			}
