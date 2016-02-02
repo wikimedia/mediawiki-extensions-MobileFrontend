@@ -174,6 +174,6 @@
 		}
 	} );
 
-	M.define( 'mobile.overlays/LanguageOverlay', LanguageOverlay );
+	M.define( 'mobile.languages/LanguageOverlay', LanguageOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

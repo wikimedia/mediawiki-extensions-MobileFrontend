@@ -49,7 +49,7 @@
 			return {
 				/**
 				 * @see ModuleLoader#deprecate
-				 * @param {Number} deprecatedId Defined module id, which is deprecated.
+				 * @param {String} deprecatedId Defined module id, which is deprecated.
 				 */
 				deprecate: function ( deprecatedId ) {
 					self.deprecate( deprecatedId, obj, id );
