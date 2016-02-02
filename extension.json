@@ -1991,6 +1991,7 @@
 		"MFTidyMobileViewSections": true,
 		"MFMobileHeader": "X-WAP",
 		"MFRemovableClasses": {
+			"beta": [],
 			"base": [],
 			"HTML": []
 		},
