@@ -135,4 +135,4 @@
 		assert.strictEqual( languages[6].lang, 'ko', 'Alphabetical order #6' );
 	} );
 
-} )( mw.mobileFrontend, mw.mobileFrontend.require( 'mobile.overlays/LanguageOverlay' ) );
+} )( mw.mobileFrontend, mw.mobileFrontend.require( 'mobile.languages/LanguageOverlay' ) );

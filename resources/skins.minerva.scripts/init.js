@@ -171,7 +171,7 @@
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
 			var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 				gateway = new PageGateway( new mw.Api() ),
-				LanguageOverlay = M.require( 'mobile.overlays/LanguageOverlay' );
+				LanguageOverlay = M.require( 'mobile.languages/LanguageOverlay' );
 
 			gateway.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
