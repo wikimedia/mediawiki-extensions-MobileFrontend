@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_474e509d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-02T16:47:37Z",
+      "side": 1,
+      "message": "I\u0027m not very happy to add a user option, which can\u0027t be used in any way :/ Would you be ok with adding it, when you think you need it (and it\u0027s possible to change it via the api or an UI)? :)",
+      "revId": "9fc8e5b1e7b6369ff072589a085f241e3ea4fddd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
