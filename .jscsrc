@@ -6,6 +6,7 @@
   "disallowDanglingUnderscores": null,
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
   "excludeFiles": [
+    "docs/**",
     "libs/**",
     "node_modules/**"
   ],
