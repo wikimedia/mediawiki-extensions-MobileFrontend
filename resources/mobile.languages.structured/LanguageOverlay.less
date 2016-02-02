@@ -1,0 +1,148 @@
+@import "mediawiki.ui/variables";
+@import "mediawiki.mixins";
+@import "minerva.variables";
+
+@langMinWidth: 3.2em;
+
+.language-overlay {
+	background-color: @colorGray14;
+
+	.overlay-content {
+		background-color: @colorGray14;
+	}
+
+	.panel {
+		background-color: white;
+		padding: 1em;
+	}
+
+	input.search {
+		.background-image-svg( 'magnifying-glass.svg', '' );
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		padding: 2px 0 2px 25px;
+	}
+
+	.list-header {
+		font-family: sans-serif;
+		font-weight: normal;
+		letter-spacing: 1px;
+		padding: 2em 1em 0.5em;
+		text-transform: uppercase;
+
+		span {
+			float: right;
+			padding-left: 2em;
+		}
+	}
+
+	.site-link-list {
+		// do not single out languages with variants
+		&.filtered {
+			.variants {
+				border-bottom: none;
+				.lang {
+					display: block;
+				}
+				.variant {
+					display: none;
+				}
+			}
+		}
+
+		li {
+			background-color: white;
+			border-top: solid 1px @colorGray14;
+			padding: 0;
+		}
+
+		.variants {
+			border-bottom: 1em solid @colorGray14;
+			li {
+				border-top: solid 1px @colorGray14;
+				&:last-child {
+					border-bottom: none;
+				}
+				.lang {
+					display: none;
+				}
+			}
+		}
+
+		a {
+			cursor: pointer;
+			display: table;
+			padding: 0.75em 1em;
+
+			div {
+				display: table-cell;
+				vertical-align: middle;
+				span {
+					font-size: 0.9em;
+				}
+			}
+
+			.lang,
+			.variant {
+				background-color: @colorGray9;
+				border-radius: 2px;
+				color: white;
+				display: block;
+				margin-right:0.75em;
+				min-width: @langMinWidth;  // so that the 2 letter language codes don't...
+				//... have different widths due to different letter width
+				padding: 0.5em;
+				text-align: center;
+				text-transform: uppercase;
+				// prevent breaking the lang code at a hyphen
+				white-space: nowrap;
+				letter-spacing:1px;
+			}
+
+			.langname,
+			.title {
+				display: block;
+			}
+
+			.langname {
+				color: black;
+				font-weight: bold;
+			}
+			.title {
+				color: @colorGray9;
+				padding-top: 0.5em;
+			}
+		}
+	}
+}
+
+@media all and (min-width: @deviceWidthTablet) {
+	.language-overlay {
+		.site-link-list {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthDesktop) {
+	.language-overlay {
+		.overlay-content {
+			margin: 0;
+			min-width: 100%;
+		}
+
+		.panel-body,
+		.overlay-content-body {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: @contentMaxWidthTablet;
+		}
+
+		.list-header {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
