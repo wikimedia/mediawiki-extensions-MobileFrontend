@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_df9f5c61",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-03T18:32:48Z",
+      "side": 1,
+      "message": "We should be able to do this much more cleanly and efficiently in this parser hook: https://www.mediawiki.org/wiki/Manual:Hooks/ImageBeforeProduceHTML unless there is a good reason not to (and if so we should acknowledge and explain that in the commit message).\n\nThis would also make this far easier to apply to Vector in future experiments.",
+      "revId": "ce959e8d04ad1fa1bb1ae67e4ad410c6a55526f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_dfc8bc79",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-03T18:32:48Z",
+      "side": 1,
+      "message": "Pondering whether this is a Skin concept or a Page concept (we only lazy load images inside the page)",
+      "revId": "ce959e8d04ad1fa1bb1ae67e4ad410c6a55526f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_5fbdacd0",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-03T18:32:48Z",
+      "side": 1,
+      "message": "(Note to say this can obviously be cleaned up)",
+      "revId": "ce959e8d04ad1fa1bb1ae67e4ad410c6a55526f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
