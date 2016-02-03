@@ -16,6 +16,24 @@
       "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_ee42b0b1",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-03T14:30:46Z",
+      "side": 1,
+      "message": "Sure! Do we have an immediate use case? I\u0027d be happy to upstream it if we do. For now I need this function so that I can work on the new language overlay. Upstreaming may take a long time, thus may not be appropriate for now.",
+      "parentUuid": "4ea78b8a_6e2fa0f4",
+      "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
