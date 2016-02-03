@@ -221,7 +221,6 @@
 	"mobile-frontend-main-menu-page-title": "{{doc-special|MobileMenu|unlisted=1}}",
 	"mobile-frontend-main-menu-settings": "Settings link text in main menu",
 	"mobile-frontend-main-menu-settings-heading": "{{doc-special|MobileOptions|unlisted=1}}\n{{Identical|Settings}}",
-	"mobile-frontend-main-menu-upload": "Uploads link text in main menu.\n{{Identical|Upload}}",
 	"mobile-frontend-main-menu-watchlist": "Text for watchlist link in main menu.\n{{Identical|Watchlist}}",
 	"mobile-frontend-media-details": "Caption for a button leading to the details of a media file (e.g. an image) in a preview.\n{{Identical|Detail}}",
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",

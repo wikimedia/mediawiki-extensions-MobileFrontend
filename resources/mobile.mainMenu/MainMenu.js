@@ -23,9 +23,9 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.activator selector for element that when clicked can open or close the menu
 		 */
-		defaults: $.extend( mw.config.get( 'wgMFMenuData' ), {
+		defaults: {
 			activator: undefined
-		} ),
+		},
 
 		/**
 		 * Advertise a new feature in the main menu.

@@ -1,8 +1,10 @@
 ( function ( M, $ ) {
 	var MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
-		mainMenu = new MainMenu( {
+		// FIXME: Cleanup when cache clears
+		menuData = mw.config.get( 'wgMinervaMenuData' ) || mw.config.get( 'wgMFMenuData' ),
+		mainMenu = new MainMenu( $.extend( menuData, {
 			activator: '.header .main-menu-button'
-		} );
+		} ) );
 
 	$( function () {
 		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {

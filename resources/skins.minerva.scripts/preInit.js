@@ -10,10 +10,7 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
-		MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
-		mainMenu = new MainMenu( {
-			activator: '.header .main-menu-button'
-		} ),
+		mainMenu = M.require( 'skins.minerva.scripts.top/mainMenu' ),
 		Skin = M.require( 'mobile.startup/Skin' );
 
 	skin = new Skin( {

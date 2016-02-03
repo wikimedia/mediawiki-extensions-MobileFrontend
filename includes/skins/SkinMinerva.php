@@ -117,7 +117,7 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		// All actions disabled on main apge.
 		if ( !$title->isMainPage() &&
-			in_array( $action, $this->getMFConfig()->get( 'MFPageActions' ) ) ) {
+			in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) ) ) {
 			return true;
 		} else {
 			return false;
@@ -354,20 +354,6 @@ class SkinMinerva extends SkinTemplate {
 
 		// Links specifically for mobile mode
 		if ( $this->isMobileMode ) {
-
-			// Uploads link
-			if ( $this->mobileContext->userCanUpload() ) {
-				$menu->insert( 'uploads', $isJSOnly = true )
-					->addComponent(
-						wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-						$this->getPersonalUrl(
-							$donateTitle,
-							'mobile-frontend-donate-image-anon'
-						),
-						MobileUI::iconClass( 'uploads', 'before', 'menu-item-upload' ),
-						array( 'data-event-name' => 'uploads' )
-					);
-			}
 
 			// Settings link
 			$menu->insert( 'settings' )
@@ -689,7 +675,7 @@ class SkinMinerva extends SkinTemplate {
 	protected function prepareBanners( BaseTemplate $tpl ) {
 		// Make sure Zero banner are always on top
 		$banners = array( '<div id="siteNotice"></div>' );
-		if ( $this->getMFConfig()->get( 'MFEnableSiteNotice' ) ) {
+		if ( $this->getMFConfig()->get( 'MinervaEnableSiteNotice' ) ) {
 			$siteNotice = $this->getSiteNotice();
 			if ( $siteNotice ) {
 				$banners[] = $siteNotice;
@@ -884,25 +870,11 @@ class SkinMinerva extends SkinTemplate {
 	public function getSkinConfigVariables() {
 		$title = $this->getTitle();
 		$user = $this->getUser();
-		$config = $this->getMFConfig();
 		$out = $this->getOutput();
-		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
 		$vars = array(
-			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
-				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
-			'wgMFExperiments' => $config->get( 'MFExperiments' ),
-			'wgMFIgnoreEventLoggingBucketing' => $config->get( 'MFIgnoreEventLoggingBucketing' ),
-			'wgMFMenuData' => $this->getMenuData(),
-			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
-			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),
-			'wgMFPhotoUploadEndpoint' =>
-				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
-			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
-			'wgMFMode' => $this->getMode(),
-			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
-			'wgMFTocEnabled' => $this->getOutput()->getProperty( 'MinervaTOC' )
+			'wgMinervaMenuData' => $this->getMenuData(),
+			'wgMinervaTocEnabled' => $this->getOutput()->getProperty( 'MinervaTOC' )
 		);
 
 		if ( $this->isAuthenticatedUser() ) {

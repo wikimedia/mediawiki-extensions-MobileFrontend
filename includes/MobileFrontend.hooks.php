@@ -388,6 +388,7 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
+		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
 		$pageProps = $config->get( 'MFQueryPropModules' );
 		$searchParams = $config->get( 'MFSearchAPIParams' );
@@ -439,6 +440,15 @@ class MobileFrontendHooks {
 			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
 			'wgMFLazyLoadImages' => $config->get( 'MFLazyLoadImages' ),
+			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
+				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
+			'wgMFExperiments' => $config->get( 'MFExperiments' ),
+			'wgMFIgnoreEventLoggingBucketing' => $config->get( 'MFIgnoreEventLoggingBucketing' ),
+			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
+			'wgMFPhotoUploadEndpoint' =>
+				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
+			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
+			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 		);
 
 		if ( $context->shouldDisplayMobileView() ) {
@@ -1285,6 +1295,8 @@ class MobileFrontendHooks {
 
 	/**
 	 * Handler for MakeGlobalVariablesScript hook.
+	 * For values that depend on the current page, user or request state.
+	 *
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * @param &$vars array Variables to be added into the output
 	 * @param $outputPage OutputPage instance calling the hook
@@ -1292,9 +1304,14 @@ class MobileFrontendHooks {
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		// If the device is a mobile, Remove the category entry.
-		if ( MobileContext::singleton()->shouldDisplayMobileView() ){
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ){
 			unset( $vars['wgCategories'] );
 		}
+		$title = $out->getTitle();
+
+		$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
+		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 		return true;
 	}
 
@@ -1338,9 +1355,22 @@ class MobileFrontendHooks {
 	 * Handler for Extension registration callback
 	 */
 	public static function onRegistration() {
-		global $wgResourceLoaderLESSImportPaths;
+		global $wgResourceLoaderLESSImportPaths, $wgMinervaPageActions, $wgMinervaEnableSiteNotice;
 
 		// Set LESS importpath
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
+
+		$config = MobileContext::singleton()->getConfig();
+
+		// For backwards compatiblity update new Minerva prefixed global with old MF value
+		if ( $config->has( 'MFPageActions' ) ) {
+			// FIXME: Use wfDeprecated to officially deprecate in later patchset
+			$wgMinervaPageActions = $config->get( 'MFPageActions' );
+		}
+		// For backwards compatiblity.
+		if ( $config->has( 'MFEnableSiteNotice' ) ) {
+			// FIXME: Use wfDeprecated to officially deprecate in later patchset
+			$wgMinervaEnableSiteNotice = $config->get( 'MFEnableSiteNotice' );
+		}
 	}
 }

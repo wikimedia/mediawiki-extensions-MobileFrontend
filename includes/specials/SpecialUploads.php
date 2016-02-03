@@ -75,9 +75,6 @@ class SpecialUploads extends MobileSpecialPage {
 			$threshold = $this->getUploadCountThreshold();
 			// FIXME: Use Html class?
 			$html .= '<div class="content">';
-			if ( $mobileContext->userCanUpload() ) {
-				$html .= '<div class="ctaUploadPhoto"></div>';
-			}
 			if ( $uploadCount > $threshold ) {
 				$msg = $this->msg(
 					'mobile-frontend-photo-upload-user-count-over-limit'

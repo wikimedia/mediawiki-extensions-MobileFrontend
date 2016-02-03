@@ -2018,9 +2018,8 @@
 			"h5",
 			"h6"
 		],
-		"MFUseCentralAuthToken": false,
 		"MFSpecialCaseMainPage": true,
-		"MFEnableSiteNotice": false,
+		"MinervaEnableSiteNotice": false,
 		"MFTidyMobileViewSections": true,
 		"MFMobileHeader": "X-WAP",
 		"MFRemovableClasses": {
@@ -2062,7 +2061,7 @@
 		"MFDonationUrl": false,
 		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
-		"MFPageActions": [
+		"MinervaPageActions": [
 			"edit",
 			"talk",
 			"watch"

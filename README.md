@@ -179,14 +179,6 @@ what you do. Moreover, this configuration variable will be removed in the near f
 Type: Array
 Default: array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
 
-##### $wgMFUseCentralAuthToken
-Allow editing (uploading) to external CentralAuth-enabled wikis where
-the user might not be logged in.
-FIXME: This should be determined by whether central auth is installed or not.
-
-Type: Boolean
-Default: false;
-
 ##### $wgMFSpecialCaseMainPage
 If set to true, main page HTML will receive special massaging that removes everything
 but a few select pieces.
@@ -194,7 +186,7 @@ but a few select pieces.
 Type: Boolean
 Default: true;
 
-##### $wgMFEnableSiteNotice
+##### $wgMinervaEnableSiteNotice
 Controls whether site notices should be shown.
 
 Type: Boolean
@@ -461,7 +453,7 @@ Defaults to SkinMinerva
 Type: String
 Default: 'SkinMinerva';
 
-##### $wgMFPageActions
+##### $wgMinervaPageActions
 Controls, which page action show and which not. Allowed:
 edit, talk, upload, watch
 
