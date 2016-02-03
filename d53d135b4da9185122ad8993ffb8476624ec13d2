@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_4bff3663",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-03T12:14:25Z",
+      "side": 1,
+      "message": "hmm, for me it seems to be a bit inefficient, that you create a skin object and overwrite it (maybe) later. In one of your first solutions you had an if/else statement to create only one object, why you removed it? :)",
+      "revId": "d53d135b4da9185122ad8993ffb8476624ec13d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
