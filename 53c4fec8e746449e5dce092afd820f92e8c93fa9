@@ -52,6 +52,24 @@
       "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_bfd620f5",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-03T18:47:16Z",
+      "side": 1,
+      "message": "Given the time it takes patches to be merged into core, can I suggest putting a TODO here? Would that work for now? Also, I think there maybe many other useful pieces of code that is used in MF only. By your logic should we be upstreaming that too? The rule of thumb I follow is to have at least two use cases in different extensions.",
+      "parentUuid": "4ea78b8a_dfbc3cb4",
+      "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
