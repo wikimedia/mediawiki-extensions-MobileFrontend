@@ -34,6 +34,24 @@
       "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_dfbc3cb4",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-03T18:42:16Z",
+      "side": 1,
+      "message": "hmm, you\u0027re a user :P Otherwise, I don\u0027t know any other usage, but that doesn\u0027t mean, that it shouldn\u0027t be part of core (or a language extension like ULS or Translate). However, this function as it\u0027s own doesn\u0027t seem to be \"mobile-specific\", that\u0027s what I wanted to say :)",
+      "parentUuid": "4ea78b8a_ee42b0b1",
+      "revId": "53c4fec8e746449e5dce092afd820f92e8c93fa9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
