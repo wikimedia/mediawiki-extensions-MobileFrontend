@@ -226,6 +226,19 @@ Default: array(
 	'base' => array(),
 );
 
+##### $wgMFLazyLoadImages
+Do load images in pages lazily. Currently it doesn't affect HTML-only clients
+(only JS capable ones) and it lazy loads images when they come close to the
+viewport.
+
+Type: Array
+Default: array(
+	// These will enable lazy loading images in beta mode
+	'beta' => false,
+	// These will enable lazy loading images in all modes
+	'base' => false,
+);
+
 ##### $wgMFNoMobileCategory
 DB key of the category which members will never display mobile view
 

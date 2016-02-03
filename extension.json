@@ -2014,6 +2014,10 @@
 			"beta": [],
 			"base": []
 		},
+		"MFLazyLoadImages": {
+			"base": false,
+			"beta": false
+		},
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
 		"MFNearbyRange": 10000,
