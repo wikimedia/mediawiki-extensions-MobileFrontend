@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		skin = M.require( 'skins.minerva.scripts/skin' ),
 		user = M.require( 'mobile.user/user' );
 
 	/**
@@ -21,7 +20,6 @@
 				funnel: 'page',
 				isAnon: user.isAnon()
 			} );
-			skin.emit( 'changed' );
 		}
 	}
 	init( M.getCurrentPage() );

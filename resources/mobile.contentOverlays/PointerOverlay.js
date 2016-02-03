@@ -31,7 +31,6 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Skin} defaults.skin class
 		 * @cfg {String} defaults.summary Message describing thing being pointed to.
 		 * @cfg {String} defaults.cancelMsg Cancel message.
 		 * @cfg {String} defaults.appendToElement Where pointer overlay should be appended to.
@@ -40,7 +39,6 @@
 		 * @cfg {String} [defaults.confirmMsg] Label for a confirm message.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
-			skin: undefined,
 			summary: undefined,
 			cancelMsg: mw.msg( 'mobile-frontend-pointer-dismiss' ),
 			appendToElement: undefined,
@@ -110,8 +108,11 @@
 				top: -10,
 				left: left
 			} ).appendTo( this.$el );
-			this.options.skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
-			M.on( 'resize', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
+
+			// Since the positioning of this overlay is dependent on the current viewport it makes sense to
+			// use a global window event so that on resizes it is correctly positioned.
+			$( window )
+				.on( 'resize', $.debounce( 100, $.proxy( this, 'refreshPointerArrow', this.options.target ) ) );
 		}
 	} );
 
