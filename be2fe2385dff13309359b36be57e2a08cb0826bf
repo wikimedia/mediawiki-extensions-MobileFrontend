@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_f53cb7be",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-03T21:35:40Z",
+      "side": 0,
+      "message": "I hadn\u0027t quite clicked that we already had this code in skins.minerva.scripts/init.js so I guess my point about bloating JS is irrelevant.\n\nIf the use case is for only the language overlay\nwhy not just pass it in as an argument to the LanguageOverlay below?\n\toverlayManager.add( /^\\/languages$/, function () {",
+      "revId": "be2fe2385dff13309359b36be57e2a08cb0826bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
