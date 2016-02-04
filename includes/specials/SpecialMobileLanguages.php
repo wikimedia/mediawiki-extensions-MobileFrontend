@@ -53,7 +53,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		$page = array_shift( $pages );
 
 		if ( isset( $page['langlinks'] ) ) {
-			// Set the name of each lanugage based on the system list of language names
+			// Set the name of each language based on the system list of language names
 			$languageMap = Language::fetchLanguageNames();
 			$languages = $page['langlinks'];
 			foreach ( $page['langlinks'] as $code => $langObject ) {
