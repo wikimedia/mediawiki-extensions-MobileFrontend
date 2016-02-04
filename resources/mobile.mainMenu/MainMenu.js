@@ -31,11 +31,10 @@
 		 * Advertise a new feature in the main menu.
 		 * @param {String} selector to an element inside the main menu
 		 * @param {String} msg a message to show in the pointer
-		 * @param {Skin} skin that the feature lives in, will allow pointer to update when skin gets redrawn.
 		 * @returns {jQuery.Deferred} with the PointerOverlay as the only argument.
 		 * @throws exception when you try to advertise more than one feature.
 		 */
-		advertiseNewFeature: function ( selector, msg, skin ) {
+		advertiseNewFeature: function ( selector, msg ) {
 			var d = $.Deferred(),
 				self = this;
 			if ( this._hasNewFeature ) {
@@ -54,7 +53,6 @@
 						po = new PointerOverlay( {
 							appendToElement: self.$el.parent(),
 							alignment: 'left',
-							skin: skin,
 							summary: msg,
 							target: self.$( selector )
 						} );
