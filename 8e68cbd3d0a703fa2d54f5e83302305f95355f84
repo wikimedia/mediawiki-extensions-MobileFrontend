@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_5995c534",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1990,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-04T07:45:10Z",
+      "side": 1,
+      "message": "this is a breaking change, you should add backwards-compatibility, e.g. by putting a map of the old config var to the new one in a callback of extension.json.",
+      "revId": "8e68cbd3d0a703fa2d54f5e83302305f95355f84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
