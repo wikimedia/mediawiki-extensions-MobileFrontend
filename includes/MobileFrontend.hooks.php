@@ -350,7 +350,7 @@ class MobileFrontendHooks {
 	/**
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which vary with the html
-	 * and for variables this should work cross skin including anonymous users
+	 * and for variables that should work cross skin including anonymous users
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
 	 * @param array $vars
@@ -408,6 +408,7 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
+			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' )
 		);
 
 		if ( $context->shouldDisplayMobileView() ) {
