@@ -4,8 +4,10 @@
 			"Katxis"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "no edit somri",
 	"mobile-frontend-copyright": "Kantent avielobl fi anda $1 anles nuot adawaiz.‎",
 	"mobile-frontend-editor-edit": "Edit",
+	"mobile-frontend-featured-article": "Fi tide fiicha kantent",
 	"mobile-frontend-home-button": "Yaad‎",
 	"mobile-frontend-language-article-heading": "Riid ina nex languij",
 	"mobile-frontend-last-modified-date": "Laas edit pah $1, a $2",
@@ -14,6 +16,7 @@
 	"mobile-frontend-main-menu-nearby": "Nierbai‎",
 	"mobile-frontend-main-menu-settings": "Setinz‎",
 	"mobile-frontend-main-menu-watchlist": "Wachlis‎",
+	"mobile-frontend-news-items": "Ina di nyuuz",
 	"mobile-frontend-placeholder": "Saach‎ {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Praivisi",
 	"mobile-frontend-random-button": "Random‎",

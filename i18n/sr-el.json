@@ -27,6 +27,8 @@
 	"mobile-frontend-donate-image-anon": "Prijavite se da biste videli ovu stranicu.",
 	"mobile-frontend-donate-image-heading": "Vaši skorašnji doprinosi",
 	"mobile-frontend-donate-image-title": "Otpremanja",
+	"mobile-frontend-donate-image-title-username": "Otpremanja $1",
+	"mobile-frontend-donate-image-title-you": "Vaša otpremanja",
 	"mobile-frontend-drawer-cancel": "Otkaži",
 	"mobile-frontend-pointer-dismiss": "Odbaci",
 	"mobile-frontend-edit-login-action": "<strong>Unapredite {{SITENAME}}.</strong><br />Prijavite se da bi uređivali.",
@@ -214,6 +216,11 @@
 	"mobile-frontend-watchlist-removed": "Stranica $1 je uklonjena sa vašeg spiska nadgledanja",
 	"mobile-frontend-watchlist-signup-action": "<strong>Spisak nadgledanja vam olakšava praćenje stranica.</strong><br />Otvorite nalog da biste ga koristili.",
 	"mobile-frontend-watchlist-view": "Vidi spisak nadgledanja",
+	"mobile-frontend-user-page-member-since": "Član od $1",
+	"mobile-frontend-user-page-talk": "Razgovor",
+	"mobile-frontend-user-page-contributions": "Doprinosi",
+	"mobile-frontend-user-page-uploads": "Otpremanja",
+	"mobile-frontend-user-page-create-user-page-link-label": "Napravite stranicu $1",
 	"nearby": "Stranice o temama blizu Vas",
 	"tag-mobile_edit": "Mobilno uređivanje",
 	"tag-mobile_edit-description": "Izmena načinjena sa mobilnog uređaja",
@@ -223,5 +230,6 @@
 	"mobile-frontend-donate-button-label": "Doniraj",
 	"mobile-frontend-loading-message": "Učitavam…",
 	"mobile-frontend-panel-ok": "U redu",
-	"mobile-frontend-panel-cancel": "Ne, hvala"
+	"mobile-frontend-panel-cancel": "Ne, hvala",
+	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje."
 }
