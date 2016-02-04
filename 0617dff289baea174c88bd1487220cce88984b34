@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_36f1f692",
+        "filename": "resources/skins.minerva.scripts/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-04T00:48:28Z",
+      "side": 1,
+      "message": "What\u0027s this file doing over here?",
+      "revId": "0617dff289baea174c88bd1487220cce88984b34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
