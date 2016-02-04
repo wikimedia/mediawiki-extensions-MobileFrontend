@@ -575,16 +575,14 @@ class SkinMinerva extends SkinTemplate {
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 		}
-		$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
 		$edit = $mp->getLatestEdit();
 		$link = array(
 			'data-timestamp' => $isMainPage ? '' : $edit['timestamp'],
-			'href' => $historyUrl,
+			'href' => SpecialPage::getTitleFor( 'History', $title )->getLocalURL(),
 			'text' => $lastModified,
 			'data-user-name' => $edit['name'],
 			'data-user-gender' => $edit['gender'],
 		);
-		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;
 	}
 
