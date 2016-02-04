@@ -16,6 +16,23 @@
       "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_40cdc161",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1310
+      },
+      "writtenOn": "2016-02-04T23:44:40Z",
+      "side": 1,
+      "message": "Please note that eventlogging module includes sampling abilities that you can use so you do not have to roll your own code.\nIf I read this right you are loading the user module just to see if user is in bucket, that should no longer be needed. \n\nhttps://github.com/wikimedia/mediawiki-extensions-EventLogging/commit/8b3cb1b6557e64adb3a071764a8e1697e1bb0204#diff-70b55c3dae702211f39ee4f9fcd75fdd",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
