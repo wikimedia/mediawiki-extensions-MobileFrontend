@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_736a15b3",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-05T01:00:49Z",
+      "side": 1,
+      "message": "Agreeing with Baha. I\u0027ve added that task to next sprint to make sure we do this.",
+      "parentUuid": "4ea78b8a_3336dde5",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_f32fe583",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 2
