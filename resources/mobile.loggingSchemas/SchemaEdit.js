@@ -11,10 +11,20 @@
 	}
 
 	OO.mfExtend( SchemaEdit, Schema, {
-		/** @inheritdoc **/
+		/**
+		* https://meta.wikimedia.org/wiki/Schema:Edit
+		* @inheritdoc
+		**/
 		name: 'Edit',
 		/**
-		 * https://meta.wikimedia.org/wiki/Schema:Edit
+		 * @inheritdoc
+		 */
+		isSampled: true,
+		/**
+		 * @inheritdoc
+		 */
+		samplingRate: mw.config.get( 'wgMFSchemaEditSampleRate' ),
+		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults The options hash.
 		 */
@@ -39,18 +49,18 @@
 				// Only route any events into the Edit schema if the module is actually available.
 				// It won't be if EventLogging is installed but WikimediaEvents is not.
 				return $.Deferred().reject( 'schema.Edit not loaded.' );
+			} else if ( this.isUserInBucket() ) {
+				data['action.' + data.action + '.type'] = data.type;
+				delete data.type;
+				data['action.' + data.action + '.mechanism'] = data.mechanism;
+				delete data.mechanism;
+				// data['action.' + data.action + '.timing'] = Math.round( computeDuration( ... ) );
+				data['action.' + data.action + '.message'] = data.message;
+				delete data.message;
+
+				mw.track( 'event.Edit', $.extend( {}, this.defaults, data ) );
+				return $.Deferred().resolve();
 			}
-
-			data['action.' + data.action + '.type'] = data.type;
-			delete data.type;
-			data['action.' + data.action + '.mechanism'] = data.mechanism;
-			delete data.mechanism;
-			// data['action.' + data.action + '.timing'] = Math.round( computeDuration( ... ) );
-			data['action.' + data.action + '.message'] = data.message;
-			delete data.message;
-
-			mw.track( 'event.Edit', $.extend( {}, this.defaults, data ) );
-			return $.Deferred().resolve();
 		}
 	} );
 
