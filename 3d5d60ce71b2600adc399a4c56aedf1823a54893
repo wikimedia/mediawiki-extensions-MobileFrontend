@@ -175,6 +175,24 @@
       "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_28a66751",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-05T21:19:04Z",
+      "side": 1,
+      "message": "Sorry, I just saw this. Here is the correct link: https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.startup/Schema.js#L87",
+      "parentUuid": "4ea78b8a_c8e6b313",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
