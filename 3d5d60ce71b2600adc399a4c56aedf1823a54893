@@ -157,6 +157,24 @@
       "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c8e6b313",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1310
+      },
+      "writtenOn": "2016-02-05T20:57:16Z",
+      "side": 1,
+      "message": "Excuse my tardiness on this but ... do not see the sampling, this function just samples 50%\n\nhttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.user/user.js#L73",
+      "parentUuid": "4ea78b8a_f32fe583",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
