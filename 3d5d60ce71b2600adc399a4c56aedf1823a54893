@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_8221799c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 895,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-05T19:04:48Z",
+      "side": 1,
+      "message": "Note putting inside skin here is essentially the same as using onMakeGlobalVariablesScript (the difference is this only adds to the Minerva skin)",
+      "parentUuid": "4ea78b8a_0216e94d",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_40cdc161",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 2
