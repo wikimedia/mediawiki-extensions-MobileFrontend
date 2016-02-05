@@ -177,7 +177,6 @@
 
 		.mw-ui-input {
 			padding: .8em .5em;
-			border: none;
 		}
 
 		// hide on mobile only media queries (placeholder support)
@@ -193,18 +192,18 @@
 			> label {
 				display: none;
 			}
+		}
+	}
 
-			// Make the inputs look connected in mobile mode
-			.mw-ui-input {
-				border: solid 1px @colorGrayLight;
+	// Make the inputs look connected in mobile mode
+	.mw-ui-input {
+		border: solid 1px @colorGrayLight;
 
-				#wpEmail,
-				&.loginPassword {
-					border-top-left-radius: 0;
-					border-top-right-radius: 0;
-					margin-top: -1px;
-				}
-			}
+		#wpEmail,
+		&.loginPassword {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			margin-top: -1px;
 		}
 	}
 
