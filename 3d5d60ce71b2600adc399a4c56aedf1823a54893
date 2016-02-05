@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_0216e94d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 895,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-05T19:03:11Z",
+      "side": 1,
+      "message": "Not instantly but using ResourceLoaderGetConfigVars will let you get them out in 5 minutes.\n\nonMakeGlobalVariablesScript bakes the config variables into the page HTML so would be subject to caching. Your decision!",
+      "parentUuid": "4ea78b8a_f39365a4",
+      "revId": "3d5d60ce71b2600adc399a4c56aedf1823a54893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_40cdc161",
         "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
         "patchSetId": 2
