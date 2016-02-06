@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_3ca305aa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-06T16:58:19Z",
+      "side": 1,
+      "message": "Why does this method to be public? I would make it protected, no-one should need to create a mobile skin class object :)\n\nBtw.: You can type hint $context, too :P",
+      "revId": "f5ecd5e6d3845072cbe273cba57313d6c9a34be9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_5ca0419a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-06T16:58:19Z",
+      "side": 1,
+      "message": "why do you use MobileContext here and RequestContext in the if statement? I would also propose to get the value of useskin once (and save it in a local variable) and use this for both use cases, instead of requesting it twice in two different objects :)",
+      "revId": "f5ecd5e6d3845072cbe273cba57313d6c9a34be9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_fc8c8d3c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-06T16:58:19Z",
+      "side": 1,
+      "message": "you can remove this duplicate line, if you use return false; in L135 and remove the else branch for the useskin if condition, something like:\n\nif ( useskin is set ) {\n   normalize useskin\n   if ( normalized useskin equals useskin ) {\n      set normalizedskin to skin\n      return false;\n   }\n}\nset skin to mobile skin\n\nreturn false;",
+      "revId": "f5ecd5e6d3845072cbe273cba57313d6c9a34be9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
