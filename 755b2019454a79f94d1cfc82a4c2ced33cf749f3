@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_e3337ef1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-08T23:58:19Z",
+      "side": 1,
+      "message": "I\u0027m not sure because this is just another experiment.",
+      "parentUuid": "4ea78b8a_f4b7b9d1",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_54c6cd4f",
         "filename": "extension.json",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2016-02-08T21:15:50Z",
       "side": 1,
       "message": "What\u0027s the use case for using a map here over an array? This seems like an array use case to me (such as line 1166).",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c33d22ba",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 1227,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-08T23:58:19Z",
+      "side": 1,
+      "message": "good catch",
+      "parentUuid": "4ea78b8a_54c6cd4f",
       "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
