@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_20b8ac70",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1310
+      },
+      "writtenOn": "2016-02-08T23:33:45Z",
+      "side": 1,
+      "message": "Please remember that EL now includes code to do sampling. The implementation of this bucketing function will be buggy due to using Math.random",
+      "revId": "f33c3c63e8cab44660bf7336e24806582238c31e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
