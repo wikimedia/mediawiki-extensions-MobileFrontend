@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_de2f3ef2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-08T17:08:53Z",
+      "side": 1,
+      "message": "True. Fixed in PS8 by using a dummy image as the downloading event emitter.",
+      "parentUuid": "4ea78b8a_e81b64d2",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_6827740e",
         "filename": "resources/skins.minerva.base.styles/images.less",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_3e21b2f6",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-08T17:08:53Z",
+      "side": 1,
+      "message": "Done in PS9",
+      "parentUuid": "4ea78b8a_6827740e",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_0824c006",
         "filename": "resources/skins.minerva.base.styles/images.less",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2016-02-08T13:46:09Z",
       "side": 1,
       "message": "Same with this color and @colorGray11.",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_de7dfee5",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-08T17:08:53Z",
+      "side": 1,
+      "message": "Done in PS9",
+      "parentUuid": "4ea78b8a_0824c006",
       "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
