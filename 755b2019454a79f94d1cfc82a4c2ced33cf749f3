@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_a36a6daf",
+        "filename": "i18n/en.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-08T16:02:22Z",
+      "side": 1,
+      "message": "While this is being completely uppercased elsewhere, this is a title – you\u0027ve written as much in qqq.json – and should be written in title case.",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_03a58100",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-08T16:02:22Z",
+      "side": 1,
+      "message": "The elements in this list are ordered.",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_43ba991f",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-08T16:02:22Z",
+      "side": 1,
+      "message": "Isn\u0027t this {{#hasVariants}} implied by the line above? Won\u0027t this always be true?",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_638555b1",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-08T16:02:22Z",
+      "side": 1,
+      "message": "This function (and the supporting functions) should be moved into a supporting file or module so that it can be tested in isolation.\n\nThe only side effect that this function has is reading from localStorage in getFrequentlyUsedLanguages. If you were to make the list of frequently used languages a parameter, then you\u0027d have a pure, easily-unit-testable function.",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
