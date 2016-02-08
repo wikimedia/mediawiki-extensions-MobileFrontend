@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_3d653542",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1966,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-02-08T22:03:51Z",
+      "side": 1,
+      "message": "Because this won\u0027t work. That\u0027s why array_plus was created for this.\n\nIt carnt be overridden in localsettings.php without this.",
+      "parentUuid": "6eaa8f54_f004961c",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_7308b02b",
         "filename": "extension.json",
         "patchSetId": 1
