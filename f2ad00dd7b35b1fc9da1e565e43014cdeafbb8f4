@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_e81b64d2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-08T13:46:09Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this come before you create the image tag? What if the image is cached and loads immediately before the interpreter reaches this code?",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_6827740e",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-08T13:46:09Z",
+      "side": 1,
+      "message": "There is probably a very little difference to a naked eye between this color and @colorGray14, which we should use.",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_0824c006",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-08T13:46:09Z",
+      "side": 1,
+      "message": "Same with this color and @colorGray11.",
+      "revId": "f2ad00dd7b35b1fc9da1e565e43014cdeafbb8f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
