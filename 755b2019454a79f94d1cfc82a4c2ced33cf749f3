@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "4ea78b8a_f4b7b9d1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-08T21:15:50Z",
+      "side": 1,
+      "message": "Should we just create a wiki page for the feature (if one doesn\u0027t already exist) and document this there in more detail?",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_54c6cd4f",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 1227,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-08T21:15:50Z",
+      "side": 1,
+      "message": "What\u0027s the use case for using a map here over an array? This seems like an array use case to me (such as line 1166).",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_a36a6daf",
         "filename": "i18n/en.json",
         "patchSetId": 7
@@ -36,6 +70,23 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_54cd6d61",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-08T21:15:50Z",
+      "side": 1,
+      "message": "typo (\"exits\"). Would probably also add \"language\" to the end of the comment.",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_43ba991f",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
         "patchSetId": 7
@@ -64,6 +115,23 @@
       "writtenOn": "2016-02-08T16:02:22Z",
       "side": 1,
       "message": "This function (and the supporting functions) should be moved into a supporting file or module so that it can be tested in isolation.\n\nThe only side effect that this function has is reading from localStorage in getFrequentlyUsedLanguages. If you were to make the list of frequently used languages a parameter, then you\u0027d have a pure, easily-unit-testable function.",
+      "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_3ad8db57",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-08T21:15:50Z",
+      "side": 1,
+      "message": "Thank you for cleaning this up! This might be a good candidate for upstreaming in the future ;)",
       "revId": "755b2019454a79f94d1cfc82a4c2ced33cf749f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
