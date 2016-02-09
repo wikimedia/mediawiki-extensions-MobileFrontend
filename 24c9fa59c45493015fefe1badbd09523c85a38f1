@@ -16,6 +16,24 @@
       "revId": "24c9fa59c45493015fefe1badbd09523c85a38f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_af6ec791",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-09T15:54:29Z",
+      "side": 1,
+      "message": "no, as we then run into the same problem as we\u0027ve already :) We need to wrap the lead section into it\u0027s own div consistently on _all_ pages (except the very special main page), regardless of the fact, that expandable sections are enabled or not :)\n\nBut maybe we can wrap the first preg_replace_callback into such an if statement, let me look into it :)",
+      "parentUuid": "6eaa8f54_794c41a0",
+      "revId": "24c9fa59c45493015fefe1badbd09523c85a38f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

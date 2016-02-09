@@ -16,6 +16,24 @@
       "revId": "e173802c87f00b12eff32c0fde886805b595df68",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_0f111b08",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-09T15:54:29Z",
+      "side": 0,
+      "message": "This isn\u0027t the desired behaviour, the expandable sections code should still only be added if expandableSections is true.",
+      "parentUuid": "6eaa8f54_5947057d",
+      "revId": "e173802c87f00b12eff32c0fde886805b595df68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
