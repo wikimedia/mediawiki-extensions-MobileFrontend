@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_1a295436",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "I\u0027m not sure how I feel about this. It feels like design leaking into i18n. If there are bugs with uppercasing we\u0027re likely to have this issue in other places where we use text-transform. What if we decide to sentence case this latter.. we\u0027d have to go through another round of translations?\n\nIs this a bug in text-transform?\nWhich languages?\nHow does a translator know whether they are doing this correctly?\nWhy can\u0027t we just do mw.msg().toUppercase() for example ?",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_bae840de",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "I don\u0027t think this needs to be HTML?\nIf so it should be detailed in the JS",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_3ac45068",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 10
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "I don\u0027t think this needs to be HTML?\nIf so it should be detailed in the JS",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_dab89ce4",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "I don\u0027t think this needs to be HTML?\nIf so it should be detailed in the JS",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_5accac8c",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "Use deviceTabletWidth now it\u0027s in core. Let\u0027s wean ourselves off this asap (see https://gerrit.wikimedia.org/r/260518 and friends)",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_fab478e6",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "Why ignore? It\u0027s a public library @singleton so we should document.",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_daaf3c90",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:30:11Z",
+      "side": 1,
+      "message": "Why ignore? It\u0027s a public library so we should document.",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
