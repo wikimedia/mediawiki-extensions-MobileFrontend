@@ -198,6 +198,17 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Set NetSpeed designation.
+	 * @param string $value of net speed. Currently accepts self::NETSPEED_FAST
+	 *  or self::NETSPEED_SLOW
+	 */
+	public function setNetSpeed( $value ) {
+		$this->netSpeed = $value;
+		$this->getRequest()->response()
+			->setCookie( 'NetSpeed', $this->netSpeed, 0, array( 'prefix' => '' ) );
+	}
+
+	/**
 	 * Whether the user is allowed to upload
 	 * @return boolean
 	 */
