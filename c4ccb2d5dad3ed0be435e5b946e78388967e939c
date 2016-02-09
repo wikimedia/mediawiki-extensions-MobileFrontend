@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_7513b905",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1966,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-09T22:59:09Z",
+      "side": 1,
+      "message": "I\u0027ve set the following in LocalSettings.php:\n$wgMFEditorOptions[\u0027anonymousEditing\u0027] \u003d true;\n$wgMFEditorOptions[\u0027anonymousEditing1\u0027] \u003d false;\n\n(one overwrite, one addition)\n\nResult with your change:\n\u003e mw.config.get(\u0027wgMFEditorOptions\u0027);\n\u003e Object {anonymousEditing: true, anonymousEditing1: false, skipPreview: false}\n\nResult without your change:\n\u003e mw.config.get(\u0027wgMFEditorOptions\u0027);\n\u003e Object {anonymousEditing: true, skipPreview: false, anonymousEditing1: false}\n\nApart from the fact, that the ordering has changed (which doesn\u0027t matter in an object), I can\u0027t see any difference, like I said (and expected). So, I\u0027m pretty sure, that these changes aren\u0027t needed ;)\n\nCould you please split out the ones I mentioned as unreasonable into a 2nd change and leave the \"_merge_strategy\": \"array_plus_2d\" one in MFExperiments as it is? That would make it possible for me to merge this reasonable (and important) change without the need of discussing any other (from my point of view unreasonable) changes :)",
+      "parentUuid": "4ea78b8a_3d653542",
+      "revId": "c4ccb2d5dad3ed0be435e5b946e78388967e939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_7308b02b",
         "filename": "extension.json",
         "patchSetId": 1
