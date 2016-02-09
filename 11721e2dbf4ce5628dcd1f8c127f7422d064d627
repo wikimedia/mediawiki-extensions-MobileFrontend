@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_55947d8d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T22:37:43Z",
+      "side": 1,
+      "message": "PS11-12\nJust cleaned up a little here.",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_7591799b",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T22:37:43Z",
+      "side": 1,
+      "message": "PS11-12\nSince we are inside Skin we should use this.$ rather than global $",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_15ee0520",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T22:37:43Z",
+      "side": 1,
+      "message": "PS11-12\nper Baha\u0027s suggestion",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_35f30109",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T22:37:43Z",
+      "side": 1,
+      "message": "PS11-12\nFound a bug (apparent on pages such as http://en.m.wikipedia.beta.wmflabs.org/wiki/Gallery)\ngiven we are removing items we are shifting indexes on each removal.",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_d5f70df1",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T22:37:43Z",
+      "side": 1,
+      "message": "Just to be sure..",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
