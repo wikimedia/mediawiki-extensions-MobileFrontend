@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_3adf7012",
+        "filename": "i18n/en.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:42:16Z",
+      "side": 1,
+      "message": "This is not accurate. We should talk on the bug more about this before rushing into solution mode.",
+      "revId": "883e18456a84a9cf721396fefd23d7d6c0dceba6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_5aeeecb2",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T21:42:16Z",
+      "side": 1,
+      "message": "Ideally we should be using classes for this kind of styling and I\u0027d be surprising if one doesn\u0027t already exist.",
+      "revId": "883e18456a84a9cf721396fefd23d7d6c0dceba6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
