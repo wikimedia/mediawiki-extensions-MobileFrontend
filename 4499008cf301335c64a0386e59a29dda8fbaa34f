@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_94a67ea6",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T13:31:24Z",
+      "side": 1,
+      "message": "The util function doesn\u0027t take the visibility of the element into account when deciding whether the element is in viewport or not. For example, if an image is inside a collapsed section, then it will still get loaded when the user scrolls down the page. Thus I suggest we change the isElementInViewport function to check whether the element is visible before returning true.",
+      "revId": "4499008cf301335c64a0386e59a29dda8fbaa34f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
