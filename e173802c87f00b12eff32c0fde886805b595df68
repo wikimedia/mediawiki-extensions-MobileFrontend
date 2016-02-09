@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_5947057d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T01:13:16Z",
+      "side": 0,
+      "message": "This seems like the big change here? We are now planning to always run the headingTransform regardless of whether the page has expandable sections.",
+      "revId": "e173802c87f00b12eff32c0fde886805b595df68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
