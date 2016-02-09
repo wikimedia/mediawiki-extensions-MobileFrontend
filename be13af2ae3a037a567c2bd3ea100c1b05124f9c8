@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_175b6dfe",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2016-02-09T20:34:43Z",
+      "side": 1,
+      "message": "Move the above code before #mw-mf-nearby div, so that js does not remove it.\nNo need for $output-\u003eaddWikitext(), simply use wfMessage() in third argument.\nadd an \"id\"-\u003e\"mw-mf-nearby-intro\" in array of second argument.\nUsing this id in mobile.special.nearby.styles, add a rule to center.",
+      "revId": "be13af2ae3a037a567c2bd3ea100c1b05124f9c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
