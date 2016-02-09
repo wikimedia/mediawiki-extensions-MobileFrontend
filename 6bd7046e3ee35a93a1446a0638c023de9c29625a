@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_895bcb25",
+        "filename": "i18n/en.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2016-02-09T07:37:57Z",
+      "side": 1,
+      "message": "Please Don\u0027t Use Title Case.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_29a097f0",
+        "filename": "i18n/en.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2016-02-09T07:37:57Z",
+      "side": 1,
+      "message": "Please Don\u0027t Use Title Case.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
