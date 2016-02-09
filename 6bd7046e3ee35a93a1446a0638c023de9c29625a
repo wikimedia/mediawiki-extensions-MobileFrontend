@@ -51,6 +51,108 @@
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_542ec63f",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "Do you need the parent div here? The same question applies below, if you\u0027ve chosen to remove the .lang element. Would it not be less complex to rely on display: inline-block for vertical alignment so that you could drop the CSS tables?",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_d4f2b6de",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "Why is this here? It\u0027s only ever hidden.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_7468a284",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "An equivalent but likely more performant solution would be to store the indices of the languages that match the search and only show them.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_14284e2e",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "Why include the ul?",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_d4195628",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "Give this element a well-named class. This would not only reduce the specificity of this selector (and any selectors we\u0027ll use to override it) but it\u0027ll make it more readable.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_741662f8",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T12:49:05Z",
+      "side": 1,
+      "message": "As above.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
