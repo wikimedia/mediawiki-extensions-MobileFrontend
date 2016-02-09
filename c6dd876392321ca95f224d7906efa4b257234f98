@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_8e91919e",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T01:52:23Z",
+      "side": 1,
+      "message": "What should I use instead? Without this line, the module is not found in the front-end. It fails to build somehow.",
+      "parentUuid": "4ea78b8a_c37be2bb",
+      "revId": "c6dd876392321ca95f224d7906efa4b257234f98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_e3785ec1",
         "filename": "extension.json",
         "patchSetId": 8
