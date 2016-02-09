@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_ef711fde",
+        "filename": "i18n/en.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T19:17:43Z",
+      "side": 1,
+      "message": "Thank you!",
+      "parentUuid": "4ea78b8a_6fcc4f8d",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_29a097f0",
         "filename": "i18n/en.json",
         "patchSetId": 9
@@ -313,6 +331,24 @@
       "side": 1,
       "message": "I\u0027m not sure I follow.\n\nIf you\u0027re talking about bandwidth, then the class name should be transmitted to the client twice: once in the template and once in the styles – I\u0027m not sure if the template and the styles are delivered in the same RL request but if they were, then gzip would help out too.\n\nIf you\u0027re talking about browser memory consumption, then yes, the browser will have to read and parse an additional 2600 (200 * 13) bytes of class name. I\u0027m not sure how much optimisation modern browsers do but I\u0027ll hazard a guess that the string won\u0027t be allocated 200 times during DOM construction.\n\nIt\u0027s worth noting that .language-code is shorter than div:first-child\\n\\t\\t\\t\\tspan too ;)",
       "parentUuid": "4ea78b8a_f4b812e4",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_e4a941dd",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T19:17:43Z",
+      "side": 1,
+      "message": "Sorry, in the back of mind mind I thought the template was rendered in the back-end.",
+      "parentUuid": "4ea78b8a_8f13cb04",
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
