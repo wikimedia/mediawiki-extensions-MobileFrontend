@@ -337,6 +337,7 @@
 	"mobile-frontend-watchlist-removed": "已從您的監視清單移除 $1",
 	"mobile-frontend-watchlist-signup-action": "<strong>監視清單可以幫助您記錄頁面並追蹤頁面的修改。</strong><br />註冊以開始建立清單。",
 	"mobile-frontend-watchlist-view": "檢視您的監視清單",
+	"mobile-frontend-user-page-member-since": "自 $1 以來的成員",
 	"mobile-frontend-user-page-talk": "討論",
 	"mobile-frontend-user-page-contributions": "貢獻",
 	"mobile-frontend-user-page-uploads": "上傳",
