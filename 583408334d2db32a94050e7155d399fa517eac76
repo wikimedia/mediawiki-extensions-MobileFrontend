@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_bab0403f",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2016-02-09T21:10:58Z",
+      "side": 1,
+      "message": "space after \u0027(\u0027 and before \u0027)\u0027.",
+      "revId": "583408334d2db32a94050e7155d399fa517eac76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_1a7154a7",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2016-02-09T21:10:58Z",
+      "side": 1,
+      "message": "do not use left. Use \"text-align: center\"\n\"position: relative\" is also trivial, so not needed.",
+      "revId": "583408334d2db32a94050e7155d399fa517eac76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_7a44084b",
+        "filename": "resources/mobile.special.nearby.styles/specialNearbyDesktop.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2016-02-09T21:10:58Z",
+      "side": 1,
+      "message": "this rule is not needed.",
+      "revId": "583408334d2db32a94050e7155d399fa517eac76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
