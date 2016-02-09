@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_74f502b5",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T12:57:14Z",
+      "side": 1,
+      "message": "Can you explain a little more?",
+      "parentUuid": "4ea78b8a_542ec63f",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_d4f2b6de",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
         "patchSetId": 9
@@ -82,6 +100,24 @@
       "writtenOn": "2016-02-09T12:49:05Z",
       "side": 1,
       "message": "Why is this here? It\u0027s only ever hidden.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_b4eb7ada",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T12:57:14Z",
+      "side": 1,
+      "message": "this is displayed when the variant is filtered. For example, if the language is \u0027zh-min-nan\u0027, by default its variant is shown as \u0027min-nan\u0027, but when filtered, this doesn\u0027t make sense without the language code. Thus we need this lang here so that we can show that instead of the variant when filtered.",
+      "parentUuid": "4ea78b8a_d4f2b6de",
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -105,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_94f2fecb",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T12:57:14Z",
+      "side": 1,
+      "message": "I\u0027m kind of doing that. Rather than indices I\u0027m using the language codes so that I can easily convert them to class selectors.",
+      "parentUuid": "4ea78b8a_7468a284",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_14284e2e",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
         "patchSetId": 9
@@ -122,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_34bf8acf",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T12:57:14Z",
+      "side": 1,
+      "message": "no reason",
+      "parentUuid": "4ea78b8a_14284e2e",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_d4195628",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
         "patchSetId": 9
@@ -133,6 +205,24 @@
       "writtenOn": "2016-02-09T12:49:05Z",
       "side": 1,
       "message": "Give this element a well-named class. This would not only reduce the specificity of this selector (and any selectors we\u0027ll use to override it) but it\u0027ll make it more readable.",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_f4b812e4",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-09T12:57:14Z",
+      "side": 1,
+      "message": "Say the class name is \"language-code\", if you have 200 languages on the page that\u0027s extra 200 x lenght and some more characters. That\u0027s why no class.",
+      "parentUuid": "4ea78b8a_d4195628",
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
