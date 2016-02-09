@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_c37be2bb",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T01:18:16Z",
+      "side": 1,
+      "message": "Why used ParsedMessageModule if you are not parsing any messages?",
+      "revId": "c6dd876392321ca95f224d7906efa4b257234f98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_e3785ec1",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1228,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T01:18:16Z",
+      "side": 1,
+      "message": "no reason this should not be an array",
+      "revId": "c6dd876392321ca95f224d7906efa4b257234f98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_a3826695",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-09T01:18:16Z",
+      "side": 1,
+      "message": "any reason you cannot use mw.storage instead ?\nDo we really need to save as cookies (my feeling is we don\u0027t)",
+      "revId": "c6dd876392321ca95f224d7906efa4b257234f98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
