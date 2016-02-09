@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_cfb0e340",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T16:01:53Z",
+      "side": 1,
+      "message": "My original thinking was that the \u003cdiv\u003e is mostly superfluous container element and that you could achieve the same layout without it by styling the child \u003cspan\u003e and its sibling as display: inline-block; vertical-align: middle;. However, it\u0027s consistent with the markup below, where the container element makes sense and it\u0027s a relatively minor point.",
+      "parentUuid": "4ea78b8a_74f502b5",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_d4f2b6de",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
         "patchSetId": 9
@@ -124,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_cf3a23c0",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T16:01:53Z",
+      "side": 1,
+      "message": "Mibad.",
+      "parentUuid": "4ea78b8a_b4eb7ada",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_7468a284",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
         "patchSetId": 9
@@ -153,6 +189,24 @@
       "side": 1,
       "message": "I\u0027m kind of doing that. Rather than indices I\u0027m using the language codes so that I can easily convert them to class selectors.",
       "parentUuid": "4ea78b8a_7468a284",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_ef803f4d",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T16:01:53Z",
+      "side": 1,
+      "message": "That\u0027s why I said it would be equivalent. As I said on the covering remark, the burden is on me to provide evidence here.",
+      "parentUuid": "4ea78b8a_94f2fecb",
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -223,6 +277,24 @@
       "side": 1,
       "message": "Say the class name is \"language-code\", if you have 200 languages on the page that\u0027s extra 200 x lenght and some more characters. That\u0027s why no class.",
       "parentUuid": "4ea78b8a_d4195628",
+      "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_8f13cb04",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-09T16:01:53Z",
+      "side": 1,
+      "message": "I\u0027m not sure I follow.\n\nIf you\u0027re talking about bandwidth, then the class name should be transmitted to the client twice: once in the template and once in the styles – I\u0027m not sure if the template and the styles are delivered in the same RL request but if they were, then gzip would help out too.\n\nIf you\u0027re talking about browser memory consumption, then yes, the browser will have to read and parse an additional 2600 (200 * 13) bytes of class name. I\u0027m not sure how much optimisation modern browsers do but I\u0027ll hazard a guess that the string won\u0027t be allocated 200 times during DOM construction.\n\nIt\u0027s worth noting that .language-code is shorter than div:first-child\\n\\t\\t\\t\\tspan too ;)",
+      "parentUuid": "4ea78b8a_f4b812e4",
       "revId": "6bd7046e3ee35a93a1446a0638c023de9c29625a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
