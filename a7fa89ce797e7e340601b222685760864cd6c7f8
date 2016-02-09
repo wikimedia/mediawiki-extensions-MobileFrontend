@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_c4976592",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2016-02-09T19:26:02Z",
+      "side": 1,
+      "message": "Text without typo\u0027s: Reveals information concerning interesting locations around your current location (IP address).",
+      "revId": "a7fa89ce797e7e340601b222685760864cd6c7f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
