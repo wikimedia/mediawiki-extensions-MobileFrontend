@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4ea78b8a_a0d56a49",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-02-10T13:42:39Z",
+      "side": 1,
+      "message": "The \"base\" part of wgMFLazyLoadImages is documented as applying to all modes. So, if wgMFLazyLoadImages is configured thus:\n\n    \u003c?php\n\n    $wgMFLazyLoadImages \u003d array(\n      \u0027base\u0027 \u003d\u003e true,\n    );\n\nthen I\u0027d expect to see images being lazily loaded in MFβ.",
+      "revId": "b60fc41e55d4333bfa5da8f833af3c23379a1b9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_f557a227",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 15
