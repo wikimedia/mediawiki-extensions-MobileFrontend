@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_b3237fa5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-10T19:05:19Z",
+      "side": 1,
+      "message": "Correct having it in extension.json should be fine.",
+      "parentUuid": "4ea78b8a_a6290238",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c6ff5efb",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 16
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "util.isElementInViewport will return true for all images inside a collapsed section, so if you scroll over collapsed sections it will lazy load all images inside (which is not wanted).",
       "parentUuid": "4ea78b8a_06433644",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_33378fe2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-10T19:05:19Z",
+      "side": 1,
+      "message": "Remember given this is the second condition it will only come into play when the element is actually in the viewport.\n\nWorse case situation will be a section containing many images.\n\nOnly way I can think of doing this more cleanly is checking parent element for open-section class but this feels icky,",
+      "parentUuid": "4ea78b8a_26ec32f2",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -276,6 +312,24 @@
       "side": 1,
       "message": "I completely agree, and that was my initial take on it, but I couldn\u0027t get it to trigger reliably the CSS transition by using plain setTimeout or requestAnimationFrame.\n\nRight now, (I just tested), requestAnimationFrame and setTimeout with a low value do not trigger the transition most of the time in Chrome (they do more often in Firefox, but still not all the time).\n\nI really despise that magic number, and I suspect it is very tied to my machine and it varies a lot but I\u0027ve asked for help and I haven\u0027t gotten anything useful.\n\nIf you can give it a test run and test it on your machine and report back it would be very helpful.\n\nI\u0027m not sure about why it is happening but my suspicion is that at the initial page load the browser is batching the DOM operations and as such the CSS state never changes which doesn\u0027t trigger the transition.\n\nNot sure there\u0027s a solution for that though.\n\nI\u0027m at a loss on what to do here, input really appreciated.",
       "parentUuid": "4ea78b8a_c68afe6d",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_93576305",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-10T19:05:19Z",
+      "side": 1,
+      "message": "I also agree but again I don\u0027t think this patch needs to be perfect given the initial purpose of this work is to do some measurements on the beta cluster. I would be happy to create a subtask blocking pushing this to production to resolve this if we cannot do that now.",
+      "parentUuid": "4ea78b8a_61069422",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
