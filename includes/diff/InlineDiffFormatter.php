@@ -130,18 +130,4 @@ class InlineDiffFormatter extends TableDiffFormatter {
 
 		return $lines;
 	}
-
-	/**
-	 * Writes a string to the output buffer.
-	 *
-	 * @param string $text
-	 */
-	protected function writeOutput( $text ) {
-		if ( is_callable( 'parent::writeOutput' ) ) {
-			parent::writeOutput( $text );
-		} else {
-			// Pre-Idf2a6c59 version of MediaWiki
-			echo $text;
-		}
-	}
 }
