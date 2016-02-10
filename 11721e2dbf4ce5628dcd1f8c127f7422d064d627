@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_122a948f",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T10:59:44Z",
+      "side": 1,
+      "message": "Done.\n\nI think this fixes the images in the middle of the page not loading on refresh. See https://i.imgur.com/zAnE5X8.gif, it works for me.",
+      "parentUuid": "4ea78b8a_50524b6b",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_7591799b",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 12
@@ -70,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_75209296",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T10:59:44Z",
+      "side": 1,
+      "message": "I\u0027ve verified this makes it work as Baha said. Thanks.",
+      "parentUuid": "4ea78b8a_15ee0520",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_35f30109",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 12
@@ -87,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_556b16b5",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T10:59:44Z",
+      "side": 1,
+      "message": "I\u0027m too dumb to understand this, mind if I change it with a $().filter?",
+      "parentUuid": "4ea78b8a_35f30109",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_d5f70df1",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 12
@@ -98,6 +152,24 @@
       "writtenOn": "2016-02-09T22:37:43Z",
       "side": 1,
       "message": "Just to be sure..",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_35321af0",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T10:59:44Z",
+      "side": 1,
+      "message": "I don\u0027t think this is necessary since the load handler is attached before setting the SRC so it should always fire even if the image is cached. This would be necessary if you attach the handler after you set the src attributes, which we\u0027re not doing.\n\nI\u0027ve checked, and this actually triggers the load event twice for cached images. See https://i.imgur.com/yyQFFNI.gif",
+      "parentUuid": "4ea78b8a_d5f70df1",
       "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
