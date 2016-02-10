@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_50524b6b",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-10T01:36:32Z",
+      "side": 1,
+      "message": "This should be run once the DOM is ready.",
+      "revId": "11721e2dbf4ce5628dcd1f8c127f7422d064d627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_7591799b",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 12
