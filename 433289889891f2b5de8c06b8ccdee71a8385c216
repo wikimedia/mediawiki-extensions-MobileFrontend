@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_263e72b6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "This isn\u0027t defined anywhere. It should have a default value somewhere as otherwise the below may trigger a php notice error for \u0027base\u0027 undefined.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c6ff5efb",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 16
@@ -30,6 +47,108 @@
       "writtenOn": "2016-02-10T16:20:43Z",
       "side": 1,
       "message": "This might put the nodes in the wrong position.\n\nUse replaceChild() or insertBefore() instead. So that this directly leaves the noscript and placeholder in the same place the image was.\n\nEither replace the image with noscript and insert the placeholder after it (by using insertBefore to add the placeholder \"before\" the noscript\u0027s nextSibling). This is slightly tricky since you can\u0027t rely on it having a nextSibling.\n\nAn easier approach would be to first insertBefore() the noscript before the image, and then replaceChild() the image with the placeholder. Or simply insertBefore() both of them.\n\nBefore:\n\n parent \u003d {\n   ...\n   image\n   ...\n }\n\nAfter:\n\n parent \u003d {\n   ...\n   noscript image\n   placeholder\n   ...\n }",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_06433644",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "is:visible is expensive and slow. Why is this needed?",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c6743e99",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "Should resize be off\u0027ed as well? If not, why?",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_26b43233",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "This is wrong. The html is not html-escaped from the server (and shouldn\u0027t since otherwise it won\u0027t work as html for noscript clients). Which means this should be read as html, not text. Otherwise this allows freeform text to become arbitrary html. Aside from a security issue, it will also break some urls containing special characters by wrongly unescaping them.\n\nEither way, use $.parseHTML(). Don\u0027t use $() for that as that is unstable and sometimes insecure or produces unexpected results since it also takes selectors and other things.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_a634a2a8",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "Use empty().append() instead, which is what html() will do after needless processing - and better reflects the fact that this appends the Node object from $image, it does not involve any html serialising or parsing – which is what you might think looking at an html() call.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c68afe6d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "Remove the delay but keep the async if you need. Plain setTimeout(). 100ms is a lot of time.\n\nAlso, consider using requestAnimationFrame where possible. Which does exactly what you want in a more performant way. setTimeout does not communicate your intent and typically causes more graphical processing steps than intended.\n\n var rAF \u003d window.requestAnimationFrame || setTimeout;\n rAF( function () { .. addClass .. } );",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_663eaa89",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:39:13Z",
+      "side": 1,
+      "message": "This can be relatively expensive. It may be more appropiate to call the method you want within your own code base instead of reaching through jQuery and native constructs just to indirectly call your own code. It also makes it less likely to break when someone considers removing this as \"optimisation\" or clean-up, in the future.",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
