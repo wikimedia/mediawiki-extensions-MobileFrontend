@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_0177a0fe",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-10T18:25:33Z",
+      "side": 1,
+      "message": "Uhh... that assumes, that $wgMFEnableSiteNotice and $wgMinervaPageActions are used after the skin is created, only. This may be correct for now, but to be safe I would suggest to move this into a callback of MobileFrontend (extension.json).",
+      "revId": "b963908ec6e55ac91f070ccf0c8d94247eaeda20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_818b90e7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1355,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-10T18:25:33Z",
+      "side": 1,
+      "message": "You expose this for desktop users now, too, is this desired? I don\u0027t think so? :)",
+      "revId": "b963908ec6e55ac91f070ccf0c8d94247eaeda20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
