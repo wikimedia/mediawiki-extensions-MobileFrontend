@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_f00a5723",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-10T00:26:00Z",
+      "side": 1,
+      "message": "See an earlier comment by Siebrand. I think Turkish was the language. But, good point on the function, which I will use.",
+      "parentUuid": "4ea78b8a_1a295436",
+      "revId": "aa9591fe1047f0716106c8ffaa9cbb691e94feca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_bae840de",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
         "patchSetId": 10
