@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_af6b1ded",
+        "filename": "i18n/en.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2016-02-10T08:03:28Z",
+      "side": 1,
+      "message": "I really don\u0027t understand why you made this change to all lower case, while you display in UPPERCASE in the app. Please see me explanation on PS9 on why this is a bad idea. It\u0027s also lacking from the message documentation.",
+      "revId": "84dacc494a938af876f290b9e52c9280cc6dfb7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
