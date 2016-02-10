@@ -145,24 +145,6 @@
 		},
 
 		/**
-		 * Checks whether the given user can edit the page.
-		 * @method
-		 * @param {mw.user} user Object representing a user
-		 * @return {Boolean}
-		 */
-		isEditable: function ( user ) {
-			// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
-			var editable = mw.config.get( 'wgIsProbablyEditable' );
-
-			// for logged in users check if they are blocked from editing this page
-			if ( editable && !user.isAnon() ) {
-				editable = !mw.config.get( 'wgMFUserBlockInfo' );
-			}
-
-			return editable;
-		},
-
-		/**
 		 * Return the latest revision id for this page
 		 * @method
 		 * @return {Number}

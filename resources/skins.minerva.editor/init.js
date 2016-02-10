@@ -1,6 +1,11 @@
 ( function ( M, $ ) {
 
 	var
+		// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
+		isEditable = mw.config.get( 'wgIsProbablyEditable' ),
+		blockInfo =  mw.config.get( 'wgMinervaUserBlockInfo', false ) ||
+			// FIXME: Can be removed in 30 days (Iba351e3285258c07bc11c57fb3255fca916621a4)
+			mw.config.get( 'wgMFUserBlockInfo' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		router = M.require( 'mobile.startup/router' ),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
@@ -36,6 +41,12 @@
 		$caEdit = $( '#ca-edit' ),
 		SchemaEdit = M.require( 'mobile.loggingSchemas/SchemaEdit' );
 
+	if ( user.isAnon() ) {
+		blockInfo = false;
+	} else if ( isEditable ) {
+		// for logged in users check if they are blocked from editing this page
+		isEditable = !blockInfo;
+	}
 	/**
 	 * Prepend an edit page button to the container
 	 * @method
@@ -280,14 +291,10 @@
 	 * @ignore
 	 */
 	function init() {
-		var blockInfo;
-
-		if ( currentPage.isEditable( user ) ) {
+		if ( isEditable ) {
 			setupEditor( currentPage );
 		} else {
-			if ( user.isBlocked() ) {
-				blockInfo = user.getBlockInfo();
-
+			if ( blockInfo ) {
 				$caEdit.removeClass( 'hidden' );
 				$( '#ca-edit' ).on( 'click', function ( ev ) {
 					popup.show(
@@ -315,7 +322,7 @@
 	function initCta() {
 		// Initialize edit button links (to show Cta) only, if page is editable,
 		// otherwise show an error toast
-		if ( currentPage.isEditable( user ) ) {
+		if ( isEditable ) {
 			$caEdit.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
 			// Init lead section edit button
 			makeCta( $caEdit, 0 );
