@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_09582658",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1992,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-10T22:02:26Z",
+      "side": 1,
+      "message": "So is the plan to deprecate this? If so we should mark this in some way (or very least you\u0027ll have to promise me to open a task later :-))\n\nIt needs documenting in the README",
+      "revId": "c392bcf4b265c7695e35c84d930fccbeac1173a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
