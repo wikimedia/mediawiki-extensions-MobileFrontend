@@ -114,6 +114,13 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			'id' => 'enable-images-toggle',
 		);
 
+		$options['lowres'] = array(
+			'checked' => $context->getNetSpeed() === MobileContext::NETSPEED_SLOW ? 'checked' : '',
+			'label' => $this->msg( 'mobile-frontend-settings-lowres' )->text(),
+			'description' =>  $this->msg( 'mobile-frontend-low-res-explain' )->text(),
+			'name' => 'enableLowResImages',
+		);
+
 		// beta settings
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
 			$options['beta'] = array(
@@ -235,6 +242,11 @@ HTML;
 			return;
 		}
 		wfIncrStats( 'mobile.options.saves' );
+
+		// set the net speed cookie
+		$context->setNetSpeed( $request->getBool( 'enableLowResImages' ) ?
+			MobileContext::NETSPEED_SLOW : MobileContext::NETSPEED_FAST );
+
 		if ( $request->getBool( 'enableBeta' ) ) {
 			$group = 'beta';
 			if ( !$context->isBetaGroupMember() ) {
