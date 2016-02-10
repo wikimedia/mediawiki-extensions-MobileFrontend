@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_56547956",
+        "filename": "resources/mobile.loggingSchemas/SchemaEdit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1310
+      },
+      "writtenOn": "2016-02-10T20:44:42Z",
+      "side": 1,
+      "message": "Given that eventlogging log is fire and forget I am not sure it makes sense to return anything at all.",
+      "revId": "580630a1ffd995431313351a467757f4f42eb207",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
