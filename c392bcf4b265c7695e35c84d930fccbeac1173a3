@@ -16,6 +16,24 @@
       "revId": "c392bcf4b265c7695e35c84d930fccbeac1173a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_ac8d6038",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1992,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-02-10T22:55:52Z",
+      "side": 1,
+      "message": "think we still need (at least for now) this for use cases, such as wikidata (to get labels from pageterms).  MobileFrontend also gets descriptions from pageterms, depending on different config.",
+      "parentUuid": "4ea78b8a_09582658",
+      "revId": "c392bcf4b265c7695e35c84d930fccbeac1173a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
