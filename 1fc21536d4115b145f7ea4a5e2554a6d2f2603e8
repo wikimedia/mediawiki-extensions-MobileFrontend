@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_49a85e1d",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-10T21:55:56Z",
+      "side": 1,
+      "message": "Note the above could be replaced with a toggleClass",
+      "revId": "1fc21536d4115b145f7ea4a5e2554a6d2f2603e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
