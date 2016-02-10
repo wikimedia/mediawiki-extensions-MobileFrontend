@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_93ad23ea",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T19:11:13Z",
+      "side": 1,
+      "message": "I didn\u0027t see it depended on an unmerged commit. Looks fine indeed :)",
+      "parentUuid": "4ea78b8a_b3237fa5",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c6ff5efb",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 16
@@ -172,6 +190,24 @@
       "side": 1,
       "message": "Remember given this is the second condition it will only come into play when the element is actually in the viewport.\n\nWorse case situation will be a section containing many images.\n\nOnly way I can think of doing this more cleanly is checking parent element for open-section class but this feels icky,",
       "parentUuid": "4ea78b8a_26ec32f2",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_53afabde",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T19:11:13Z",
+      "side": 1,
+      "message": "Invisible elements are not in any viewport, so that should be irrelevant. If isElementInViewport returns true for elements with no client offsets but are inside of an in-viewport parent element than that method is seriously broken.",
+      "parentUuid": "4ea78b8a_33378fe2",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
