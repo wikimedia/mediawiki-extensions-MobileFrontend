@@ -61,6 +61,8 @@
 				mw.track( 'event.Edit', $.extend( {}, this.defaults, data ) );
 				return $.Deferred().resolve();
 			}
+
+			return $.Deferred().reject( 'User not in the experimental condition.' );
 		}
 	} );
 
