@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_a6290238",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "Doesn\u0027t https://gerrit.wikimedia.org/r/#/c/268058/3/extension.json specify the default values?\n\nI\u0027ve removed my config from LocalSettings.php and I can\u0027t see any warnings in the logs.",
+      "parentUuid": "4ea78b8a_263e72b6",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c6ff5efb",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 16
@@ -106,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_26ec32f2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "util.isElementInViewport will return true for all images inside a collapsed section, so if you scroll over collapsed sections it will lazy load all images inside (which is not wanted).",
+      "parentUuid": "4ea78b8a_06433644",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c6743e99",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 16
@@ -117,6 +153,24 @@
       "writtenOn": "2016-02-10T16:39:13Z",
       "side": 1,
       "message": "Should resize be off\u0027ed as well? If not, why?",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_e6f5bab6",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "True, I forgot. Done.",
+      "parentUuid": "4ea78b8a_c6743e99",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -140,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_c61afecf",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "True, bad use of $().\n\nChanged to:   $image \u003d $( $.parseHTML( $noscript.text() ) ),\n\nAre you suggesting that using $().text will bring problems?\n\nUsing .html() to read the contents of the \u003cnoscript/\u003e tag returns the html string escaped: \"\u0026lt;img alt\u003d\"Alicante en medi...\" which won\u0027t build the DOM nodes in $.parseHTML, just give back a text node (which I would have to get the textContent of too.\n\nIt would look something like this:\n\n    $image \u003d $( $.parseHTML( $.parseHTML( $noscript.html() )[0].textContent ) ),\n\nWhich looks like a nightmare and would have to be bounds checked.\n\nI\u0027m not sure if I\u0027m misunderstanding the comment, can you clarify a bit more, please?",
+      "parentUuid": "4ea78b8a_26b43233",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_a634a2a8",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 16
@@ -151,6 +223,24 @@
       "writtenOn": "2016-02-10T16:39:13Z",
       "side": 1,
       "message": "Use empty().append() instead, which is what html() will do after needless processing - and better reflects the fact that this appends the Node object from $image, it does not involve any html serialising or parsing – which is what you might think looking at an html() call.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_a69262fe",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "Done. Thanks.",
+      "parentUuid": "4ea78b8a_a634a2a8",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -174,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_61069422",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "I completely agree, and that was my initial take on it, but I couldn\u0027t get it to trigger reliably the CSS transition by using plain setTimeout or requestAnimationFrame.\n\nRight now, (I just tested), requestAnimationFrame and setTimeout with a low value do not trigger the transition most of the time in Chrome (they do more often in Firefox, but still not all the time).\n\nI really despise that magic number, and I suspect it is very tied to my machine and it varies a lot but I\u0027ve asked for help and I haven\u0027t gotten anything useful.\n\nIf you can give it a test run and test it on your machine and report back it would be very helpful.\n\nI\u0027m not sure about why it is happening but my suspicion is that at the initial page load the browser is batching the DOM operations and as such the CSS state never changes which doesn\u0027t trigger the transition.\n\nNot sure there\u0027s a solution for that though.\n\nI\u0027m at a loss on what to do here, input really appreciated.",
+      "parentUuid": "4ea78b8a_c68afe6d",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_663eaa89",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 16
@@ -185,6 +293,24 @@
       "writtenOn": "2016-02-10T16:39:13Z",
       "side": 1,
       "message": "This can be relatively expensive. It may be more appropiate to call the method you want within your own code base instead of reaching through jQuery and native constructs just to indirectly call your own code. It also makes it less likely to break when someone considers removing this as \"optimisation\" or clean-up, in the future.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_410b5826",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T17:42:42Z",
+      "side": 1,
+      "message": "Yep, I\u0027m talking with Baha about using the event emitter instead of this. Will change it now.",
+      "parentUuid": "4ea78b8a_663eaa89",
       "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
