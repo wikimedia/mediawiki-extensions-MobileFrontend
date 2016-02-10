@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_104a935f",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2016-02-10T00:08:08Z",
+      "side": 1,
+      "message": "How about calling this \"Data-saving mode\"? That puts the benefit up front, instead of the cost (\"low-resolution images\"). Also, it is important not to suggest that this affects all images -- it only affects thumbnails.",
+      "revId": "fe0777ddf057aaf9daa2daeec89520fa28f0c15e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_75073920",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2016-02-10T00:08:08Z",
+      "side": 1,
+      "message": "this should be called like this:\n\n    MobileContext-\u003esetNetSpeed( MobileContext::NETSPEED_FAST );\n\nWe added the consts (rather than a simple boolean) to allow for the possibility of more fine-grained distinctions in the future.",
+      "revId": "fe0777ddf057aaf9daa2daeec89520fa28f0c15e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
