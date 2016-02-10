@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_7b9f2307",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T16:10:20Z",
+      "side": 1,
+      "message": "Fixed in PS16 both in Skin.js and MobileFormatter.php",
+      "parentUuid": "4ea78b8a_a0d56a49",
+      "revId": "b60fc41e55d4333bfa5da8f833af3c23379a1b9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_f557a227",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 15
@@ -30,6 +48,24 @@
       "writtenOn": "2016-02-10T13:19:21Z",
       "side": 1,
       "message": "Page height changing is not the same as the browser window being resized. I think we should emit a mobileFrontend event here. Or use track and trackSubscribe.",
+      "revId": "b60fc41e55d4333bfa5da8f833af3c23379a1b9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_7bb64387",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-02-10T16:10:20Z",
+      "side": 1,
+      "message": "I can agree to this. Any suggestions? M.emit( \u0027section-toggled\u0027 ) ?",
+      "parentUuid": "4ea78b8a_f557a227",
       "revId": "b60fc41e55d4333bfa5da8f833af3c23379a1b9f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
