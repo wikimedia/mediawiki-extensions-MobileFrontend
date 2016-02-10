@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_7b75e3c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:20:43Z",
+      "side": 1,
+      "message": "Fromage (Cheese) -\u003e Format.",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_c6ff5efb",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-10T16:20:43Z",
+      "side": 1,
+      "message": "This might put the nodes in the wrong position.\n\nUse replaceChild() or insertBefore() instead. So that this directly leaves the noscript and placeholder in the same place the image was.\n\nEither replace the image with noscript and insert the placeholder after it (by using insertBefore to add the placeholder \"before\" the noscript\u0027s nextSibling). This is slightly tricky since you can\u0027t rely on it having a nextSibling.\n\nAn easier approach would be to first insertBefore() the noscript before the image, and then replaceChild() the image with the placeholder. Or simply insertBefore() both of them.\n\nBefore:\n\n parent \u003d {\n   ...\n   image\n   ...\n }\n\nAfter:\n\n parent \u003d {\n   ...\n   noscript image\n   placeholder\n   ...\n }",
+      "revId": "433289889891f2b5de8c06b8ccdee71a8385c216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
