@@ -81,7 +81,7 @@
 
 	QUnit.test( 'test language overlay', 3, function ( assert ) {
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list.preferred-languages li' ).length,
+			this.languageOverlay.$( '.site-link-list.preferred-languages a' ).length,
 			3,
 			'There are 3 preferred languages.'
 		);
@@ -93,32 +93,39 @@
 		);
 
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list.all-languages .variants li' ).length,
+			this.languageOverlay.$( '.site-link-list.all-languages .variants a' ).length,
 			1,
 			'One language is a variant.'
 		);
 	} );
 
-	QUnit.test( 'test language overlay search', 3, function ( assert ) {
+	QUnit.test( 'test language overlay search', 4, function ( assert ) {
 		this.languageOverlay.filterLanguages( 'zh' );
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list li:not(.hidden)' ).length,
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			3,
-			'Three languages match "zh". And only those languages are visible.'
+			'Three languages match "zh" and only those languages are visible.'
+		);
+
+		this.languageOverlay.filterLanguages( 'ol' );
+		assert.ok(
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length === 1 &&
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
+			'One language (be-x-old) matches "old" and only that language is visible.'
 		);
 
 		this.languageOverlay.filterLanguages( '' );
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list li:not(.hidden)' ).length,
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			10,
 			'The search filter has been cleared. All 10 languages (including variants) are visible.'
 		);
 
 		this.languageOverlay.filterLanguages( 'ўз' );
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list li:not(.hidden)' ).length,
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			1,
-			'One language match "ўз". And only that language is visible.'
+			'One language matches "ўз" and only that language is visible.'
 		);
 	} );
 } )( mw.mobileFrontend );
