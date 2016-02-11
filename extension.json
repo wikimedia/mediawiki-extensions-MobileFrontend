@@ -1209,6 +1209,29 @@
 				"2": "mobile-frontend-language-site-choose"
 			}
 		},
+		"mobile.languages.structured": {
+			"class": "MFResourceLoaderParsedMessageModule",
+			"dependencies": [
+				"mediawiki.storage",
+				"mobile.overlays"
+			],
+			"scripts": [
+				"resources/mobile.languages.structured/util.js",
+				"resources/mobile.languages.structured/LanguageOverlay.js"
+			],
+			"styles": [
+				"resources/mobile.languages.structured/LanguageOverlay.less"
+			],
+			"templates": {
+				"LanguageOverlay.hogan": "resources/mobile.languages.structured/LanguageOverlay.hogan"
+			},
+			"messages": [
+				"mobile-frontend-language-heading",
+				"mobile-frontend-languages-structured-overlay-preferred-languages-header",
+				"mobile-frontend-languages-structured-overlay-all-languages-header",
+				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
+			]
+		},
 		"mobile.issues": {
 			"targets": [
 				"mobile",
@@ -1961,6 +1984,14 @@
 				"buckets": {
 					"control": 0.97,
 					"A": 0.03
+				}
+			},
+			"languageOverlay": {
+				"name": "languageOverlay",
+				"enabled": false,
+				"buckets": {
+					"control": 1,
+					"A": 0
 				}
 			}
 		},

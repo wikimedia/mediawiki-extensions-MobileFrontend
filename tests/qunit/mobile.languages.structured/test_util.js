@@ -1,0 +1,164 @@
+( function ( M ) {
+	var util = M.require( 'mobile.languages.structured/util' );
+
+	QUnit.module( 'MobileFrontend: Structured LanguageOverlay', {
+		setup: function () {
+			if ( mw.eventLog ) {
+				this.sandbox.stub( mw.eventLog.Schema.prototype, 'log' );
+			}
+
+			this.apiLanguages = [
+				{
+					lang: 'ar',
+					url: 'https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B1%D8%A7%D9%83_%D8%A3%D9%88%D8%A8%D8%A7%D9%85%D8%A7',
+					title: 'باراك أوباما',
+					langname: 'العربية'
+				}, {
+					lang: 'be',
+					url: 'https://be.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BA_%D0%90%D0%B1%D0%B0%D0%BC%D0%B0',
+					title: 'Барак Абама',
+					langname: 'беларуская'
+				}, {
+					lang: 'be-x-old',
+					url: 'https://be-x-old.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BA_%D0%90%D0%B1%D0%B0%D0%BC%D0%B0',
+					title: 'Барак Абама',
+					langname: 'беларуская (тарашкевіца)'
+				}, {
+					lang: 'ko',
+					url: 'https://ko.wikipedia.org/wiki/%EB%B2%84%EB%9D%BD_%EC%98%A4%EB%B0%94%EB%A7%88',
+					title: '버락 오바마',
+					langname: '한국어'
+				}, {
+					lang: 'ru',
+					url: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B0%D0%BC%D0%B0,_%D0%91%D0%B0%D1%80%D0%B0%D0%BA',
+					title: 'Обама, Барак',
+					langname: 'русский'
+				}, {
+					lang: 'uz',
+					url: 'https://uz.wikipedia.org/wiki/Barak_Obama',
+					title: 'Barak Obama',
+					langname: 'oʻzbekcha/ўзбекча'
+				}, {
+					lang: 'zh',
+					url: 'https://zh.wikipedia.org/wiki/%E8%B4%9D%E6%8B%89%E5%85%8B%C2%B7%E5%A5%A5%E5%B7%B4%E9%A9%AC',
+					title: '贝拉克·奥巴马',
+					langname: '中文'
+				}, {
+					lang: 'zh-min-nan',
+					url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama',
+					title: 'Barack Obama',
+					langname: 'Bân-lâm-gú'
+				}, {
+					lang: 'zh-yue',
+					url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC',
+					title: '奧巴馬',
+					langname: '粵語'
+				}, {
+					lang: 'zu',
+					url: 'https://zu.wikipedia.org/wiki/Barack_Obama',
+					title: 'Barack Obama',
+					langname: 'isiZulu'
+				}
+			];
+
+			this.deviceLanguage = 'en-us';
+
+			this.frequentlyUsedLanguages = {
+				'zh-min-nan': 1,
+				zh: 2,
+				en: 10,
+				ko: 1
+			};
+
+			this.structuredLanguages = {
+				preferred: [
+					{
+						lang: 'zh',
+						url: 'https://zh.wikipedia.org/wiki/%E8%B4%9D%E6%8B%89%E5%85%8B%C2%B7%E5%A5%A5%E5%B7%B4%E9%A9%AC',
+						title: '贝拉克·奥巴马',
+						langname: '中文',
+						frequency: 2
+					}, {
+						lang: 'ko',
+						url: 'https://ko.wikipedia.org/wiki/%EB%B2%84%EB%9D%BD_%EC%98%A4%EB%B0%94%EB%A7%88',
+						title: '버락 오바마',
+						langname: '한국어',
+						frequency: 1
+					}, {
+						lang: 'zh-min-nan',
+						url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama',
+						title: 'Barack Obama',
+						langname: 'Bân-lâm-gú',
+						frequency: 1
+					}
+				],
+				all: [
+					{
+						lang: 'ar',
+						url: 'https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B1%D8%A7%D9%83_%D8%A3%D9%88%D8%A8%D8%A7%D9%85%D8%A7',
+						title: 'باراك أوباما',
+						langname: 'العربية'
+					}, {
+						lang: 'be',
+						url: 'https://be.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BA_%D0%90%D0%B1%D0%B0%D0%BC%D0%B0',
+						title: 'Барак Абама',
+						langname: 'беларуская',
+						variants: [ {
+							lang: 'be-x-old',
+							url: 'https://be-x-old.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BA_%D0%90%D0%B1%D0%B0%D0%BC%D0%B0',
+							title: 'Барак Абама',
+							langname: 'беларуская (тарашкевіца)',
+							variant: 'x-old'
+						} ],
+						hasVariants: true,
+						variantsHeader: 'беларуская'
+					}, {
+						lang: 'ru',
+						url: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B0%D0%BC%D0%B0,_%D0%91%D0%B0%D1%80%D0%B0%D0%BA',
+						title: 'Обама, Барак',
+						langname: 'русский'
+					}, {
+						lang: 'uz',
+						url: 'https://uz.wikipedia.org/wiki/Barak_Obama',
+						title: 'Barak Obama',
+						langname: 'oʻzbekcha/ўзбекча'
+					}, {
+						lang: 'zh-yue',
+						url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC',
+						title: '奧巴馬',
+						langname: '粵語',
+						variant: 'yue'
+					}, {
+						lang: 'zu',
+						url: 'https://zu.wikipedia.org/wiki/Barack_Obama',
+						title: 'Barack Obama',
+						langname: 'isiZulu'
+					}
+				]
+			};
+
+			this.sandbox.stub( mw.storage, 'get' ).withArgs( 'langMap' )
+				.returns( JSON.stringify( this.frequentlyUsedLanguages ) );
+			this.saveSpy = this.sandbox.stub( util, 'saveFrequentlyUsedLanguages' );
+		}
+	} );
+
+	QUnit.test( 'test utility functions', 3, function ( assert ) {
+		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages, 'Frequently used languages is correct.' );
+
+		util.saveLanguageUsageCount( 'ko', util.getFrequentlyUsedLanguages() );
+		assert.ok( this.saveSpy.calledWith( {
+			'zh-min-nan': 1,
+			zh: 2,
+			en: 10,
+			ko: 2
+		} ), 'Frequently used language is correctly saved.' );
+
+		assert.deepEqual(
+			util.getStructuredLanguages( this.apiLanguages, this.frequentlyUsedLanguages, this.deviceLanguage ),
+			this.structuredLanguages,
+			'Structured languages are correct.'
+		);
+	} );
+
+} )( mw.mobileFrontend );

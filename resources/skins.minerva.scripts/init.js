@@ -124,16 +124,25 @@
 					event: 'languageButtonTap',
 					languageButtonVersion: 'bottom-of-article',
 					languageButtonTappedBucket: tapCountBucket,
-					primaryLanguageOfUser: (
-						navigator && navigator.languages ?
-							navigator.languages[0] :
-							navigator.language || navigator.userLanguage ||
-								navigator.browserLanguage || navigator.systemLanguage ||
-								'unknown'
-					).toLowerCase()
+					primaryLanguageOfUser: getDeviceLanguage() || 'unknown'
 				} );
 			} );
 		}
+	}
+
+	/**
+	 * Return the language code of the device in lowercase
+	 *
+	 * @ignore
+	 * @returns {String|undefined}
+	 */
+	function getDeviceLanguage() {
+		var lang = navigator && navigator.languages ?
+			navigator.languages[0] :
+			navigator.language || navigator.userLanguage ||
+				navigator.browserLanguage || navigator.systemLanguage;
+
+		return lang ? lang.toLowerCase() : undefined;
 	}
 
 	/**
@@ -166,12 +175,20 @@
 	// Routes
 	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 	overlayManager.add( /^\/languages$/, function () {
-		var result = $.Deferred();
+		var result = $.Deferred(),
+			languageOverlayExperiment = experiments.languageOverlay || false,
+			languageOverlayModule = 'mobile.languages';
 
-		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
+		if ( languageOverlayExperiment &&
+			mw.experiments.getBucket( languageOverlayExperiment, mw.user.sessionId() ) === 'A'
+		) {
+			languageOverlayModule = 'mobile.languages.structured';
+		}
+
+		loader.loadModule( languageOverlayModule, true ).done( function ( loadingOverlay ) {
 			var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 				gateway = new PageGateway( new mw.Api() ),
-				LanguageOverlay = M.require( 'mobile.languages/LanguageOverlay' );
+				LanguageOverlay = M.require( languageOverlayModule + '/LanguageOverlay' );
 
 			gateway.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
@@ -179,7 +196,8 @@
 					currentLanguage: mw.config.get( 'wgContentLanguage' ),
 					languages: data.languages,
 					variants: data.variants,
-					languageSwitcherSchema: schemaMobileWebLanguageSwitcher
+					languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
+					deviceLanguage: getDeviceLanguage()
 				} ) );
 			} );
 		} );
