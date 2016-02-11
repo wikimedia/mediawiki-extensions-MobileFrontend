@@ -1994,7 +1994,8 @@
 					"control": 1,
 					"A": 0
 				}
-			}
+			},
+			"_merge_strategy": "array_plus_2d"
 		},
 		"MFEnableMinervaBetaFeature": false,
 		"MFEnableJSConsoleRecruitment": false,
