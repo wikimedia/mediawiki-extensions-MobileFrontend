@@ -62,9 +62,7 @@
 
 			// if Nearby is already created, use the existing one
 			if ( nearby ) {
-				// FIXME: initialize is for initialization only, maybe create a "refresh" method or
-				// something similar
-				nearby.initialize( opt );
+				nearby.refresh( opt );
 			} else {
 				nearby = new Nearby( opt );
 			}

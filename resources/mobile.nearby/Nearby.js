@@ -24,38 +24,9 @@
 		if ( options.errorType ) {
 			options.errorOptions = self._errorOptions( options.errorType );
 		}
-
-		// Re-run after api/geolocation request
-		if ( options.useCurrentLocation ) {
-			// Flush any existing list of pages
-			options.pages = [];
-
-			// Get some new pages
-			this.getCurrentPosition().done( function ( coordOptions ) {
-				$.extend( options, coordOptions );
-				self._find( options ).done( function ( options ) {
-					_super.call( self, options );
-				} );
-			} ).fail( function ( errorType ) {
-				options.errorType = errorType;
-				_super.call( self, options );
-			} );
-		} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
-			// Flush any existing list of pages
-			options.pages = [];
-
-			// Get some new pages
-			this._find( options ).done( function ( options ) {
-				_super.call( self, options );
-			} ).fail( function ( errorType ) {
-				options.errorType = errorType;
-				_super.call( self, options );
-			} );
-		}
-
-		// Run it once for loader etc
-		this._isLoading = true;
 		_super.apply( this, arguments );
+
+		this.refresh( options );
 	}
 
 	OO.mfExtend( Nearby, WatchstarPageList, {
@@ -218,7 +189,8 @@
 		/** @inheritdoc */
 		postRender: function () {
 			if ( !this._isLoading ) {
-				this.$( '.spinner' ).hide();
+				this.$( '.spinner' ).addClass( 'hidden' );
+				this.$( '.page-list' ).removeClass( 'hidden' );
 			}
 			WatchstarPageList.prototype.postRender.apply( this );
 			this._postRenderLinks();
@@ -258,6 +230,51 @@
 					$( window ).scrollTop( offset.top );
 				}
 			}
+		},
+		/**
+		 * Refresh the list of the nearby articles depending on the options.
+		 * The current location, latitude/longitude, or page title can be used
+		 * to find the articles.
+		 *
+		 * @param {Object} options
+		 */
+		refresh: function ( options ) {
+			var self = this,
+				_super = WatchstarPageList;
+
+			this.$( '.spinner' ).removeClass( 'hidden' );
+			this.$( '.page-list' ).addClass( 'hidden' );
+
+			// Re-run after api/geolocation request
+			if ( options.useCurrentLocation ) {
+				// Flush any existing list of pages
+				options.pages = [];
+
+				// Get some new pages
+				this.getCurrentPosition().done( function ( coordOptions ) {
+					$.extend( options, coordOptions );
+					self._find( options ).done( function ( options ) {
+						_super.call( self, options );
+					} );
+				} ).fail( function ( errorType ) {
+					options.errorType = errorType;
+					_super.call( self, options );
+				} );
+			} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
+				// Flush any existing list of pages
+				options.pages = [];
+
+				// Get some new pages
+				this._find( options ).done( function ( options ) {
+					_super.call( self, options );
+				} ).fail( function ( errorType ) {
+					options.errorType = errorType;
+					_super.call( self, options );
+				} );
+			}
+
+			// Run it once for loader etc
+			this._isLoading = true;
 		}
 	} );
 
