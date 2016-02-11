@@ -1,0 +1,42 @@
+@import "minerva.variables.less";
+
+@transitionDuration: 0.3s;
+
+.lazy-image-placeholder {
+	display: inline-block;
+	// The image placeholder for shouldn't show for no-js devices
+	.client-nojs & {
+		display: none;
+	}
+
+	background-color: @colorGray14;
+	border: 1px solid @colorGray11;
+	border-radius: 2px;
+
+	// Hide anything around the dimensions of the placeholder (avoids spinner
+	// overflowing on smaller images
+	overflow: hidden;
+
+	// Center spinner vertically and horizontally
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// When inserted, don't show the image because we want to animate it
+	img {
+		opacity: 0;
+	}
+
+	// When the image has loaded transition background color and image opacity
+	// for a fade-in effect
+	&.loaded {
+		transition: background-color @transitionDuration ease-in;
+		background-color: transparent;
+		border: none;
+
+		img {
+			opacity: 1;
+			transition: opacity @transitionDuration ease-in;
+		}
+	}
+}
