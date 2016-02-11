@@ -9,7 +9,7 @@ Feature: Menus open correct page for anonymous users
     When I click on the main navigation button
     Then I should see a link to the disclaimer
       And I should see a link to "Log out" in the main navigation menu
-      And I should see a link to my user profile page in the main navigation menu
+      And I should see a link to my user page in the main navigation menu
       And I should see a link to the about page
       And I should see a link to "Home" in the main navigation menu
       And I should see a link to "Random" in the main navigation menu
