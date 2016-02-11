@@ -231,9 +231,7 @@
 				$placeholder.empty().append( $image );
 				// Set the loaded class after insertion of the HTML to trigger the
 				// animations.
-				setTimeout( function () {
-					$placeholder.addClass( 'loaded' );
-				}, 100 );
+				$placeholder.addClass( 'loaded' );
 			} );
 
 			// Trigger image download after binding the load handler

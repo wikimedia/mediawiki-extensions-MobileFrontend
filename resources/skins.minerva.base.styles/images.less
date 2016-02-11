@@ -1,6 +1,6 @@
 @import "minerva.variables.less";
 
-@transitionDuration: 0.3s;
+@animationDuration: 0.3s;
 
 .lazy-image-placeholder {
 	display: inline-block;
@@ -30,13 +30,30 @@
 	// When the image has loaded transition background color and image opacity
 	// for a fade-in effect
 	&.loaded {
-		transition: background-color @transitionDuration ease-in;
 		background-color: transparent;
 		border: none;
 
 		img {
+			-webkit-animation: loaded @animationDuration ease-in;
+			animation: loaded @animationDuration ease-in;
 			opacity: 1;
-			transition: opacity @transitionDuration ease-in;
 		}
+	}
+}
+
+@-webkit-keyframes loaded {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+@keyframes loaded {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
 	}
 }
