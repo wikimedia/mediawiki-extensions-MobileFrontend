@@ -1,4 +1,5 @@
 @import "minerva.variables.less";
+@import "minerva.mixins.less";
 
 @animationDuration: 0.3s;
 
@@ -30,30 +31,31 @@
 	// When the image has loaded transition background color and image opacity
 	// for a fade-in effect
 	&.loaded {
+		.animation(fadeOutContainer @animationDuration ease-in);
 		background-color: transparent;
 		border: none;
 
 		img {
-			-webkit-animation: loaded @animationDuration ease-in;
-			animation: loaded @animationDuration ease-in;
+			.animation(fadeInImage @animationDuration ease-in);
 			opacity: 1;
 		}
 	}
 }
 
-@-webkit-keyframes loaded {
-	from {
-		opacity: 0
-	}
-	to {
-		opacity: 1
-	}
+@-webkit-keyframes fadeInImage {
+	from { opacity: 0 }
+	to { opacity: 1 }
 }
-@keyframes loaded {
-	from {
-		opacity: 0
-	}
-	to {
-		opacity: 1
-	}
+@keyframes fadeInImage {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@-webkit-keyframes fadeOutContainer {
+	from { background-color: @colorGray14 }
+	to { background-color: transparent }
+}
+@keyframes fadeOutContainer {
+	from { background-color: @colorGray14 }
+	to { background-color: transparent }
 }
