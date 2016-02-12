@@ -1950,9 +1950,6 @@
 		"ThumbnailBeforeProduceHTML": [
 			"MobileFrontendHooks::onThumbnailBeforeProduceHTML"
 		],
-		"ImageBeforeProduceHTML": [
-			"MobileFrontendHooks::onImageBeforeProduceHTML"
-		],
 		"PageRenderingHash": [
 			"MobileFrontendHooks::onPageRenderingHash"
 		],
