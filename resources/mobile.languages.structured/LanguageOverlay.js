@@ -49,7 +49,7 @@
 			// cache
 			this.$searchInput = this.$( 'input.search' );
 			this.$siteLinksList = this.$( '.site-link-list' );
-			this.$languageItems = this.$siteLinksList.find( 'li' );
+			this.$languageItems = this.$siteLinksList.find( 'a' );
 			this.$subheaders = this.$( 'h3' );
 
 			if ( this.options.languageSwitcherSchema ) {
