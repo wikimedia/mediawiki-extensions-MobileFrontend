@@ -95,46 +95,42 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Render Footer elements
+	 * Get the HTML for rendering the footer elements
 	 * @param array $data Data used to build the footer
+	 * @return string html
 	 */
-	protected function renderFooter( $data ) {
-		?>
-		<div id="footer" class="post-content">
-			<?php
-				foreach ( $this->getFooterLinks() as $category => $links ) {
-			?>
-				<ul class="footer-<?php echo $category; ?>">
-					<?php
-						foreach ( $links as $link ) {
-							if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
-								echo Html::openElement( 'li', array( 'id' => "footer-{$category}-{$link}" ) );
-								$this->html( $link );
-								echo Html::closeElement( 'li' );
-							}
-						}
-					?>
-				</ul>
-			<?php
+	protected function getFooterHtml( $data ) {
+		$footer = '<div id="footer" class="post-content">';
+		foreach ( $this->getFooterLinks() as $category => $links ) {
+			$footer .= Html::openElement( 'ul', array( 'class' => 'footer-' . $category ) );
+			foreach ( $links as $link ) {
+				if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
+					$footer .= Html::rawElement( 'li',
+						array( 'id' => "footer-{$category}-{$link}" ), $data[$link] );
 				}
-			?>
-		</div>
-		<?php
+			}
+			$footer .= '</ul>';
+		}
+		$footer .= '</div>';
+		return $footer;
 	}
 
 	/**
-	 * Render available page actions
+	 * Get the HTML for rendering the available page actions
 	 * @param array $data Data used to build page actions
+	 * @return string
 	 */
-	protected function renderPageActions( $data ) {
+	protected function getPageActionsHtml( $data ) {
 		$actions = $this->getPageActions();
+		$html = '';
 		if ( $actions ) {
-			?><ul id="page-actions" class="hlist"><?php
+			$html = '<ul id="page-actions" class="hlist">';
 			foreach ( $actions as $key => $val ) {
-				echo $this->makeListItem( $key, $val );
+				$html .= $this->makeListItem( $key, $val );
 			}
-			?></ul><?php
+			$html .= '</ul>';
 		}
+		return $html;
 	}
 
 	/**
@@ -224,58 +220,56 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders the content of a page
+	 * Get the HTML for the content of a page
 	 * @param array $data Data used to build the page
+	 * @return string representing HTML of content
 	 */
-	protected function renderContent( $data ) {
+	protected function getContentHtml( $data ) {
 		if ( !$data[ 'unstyledContent' ] ) {
-			echo Html::openElement( 'div', array(
+			$content = Html::openElement( 'div', array(
 				'id' => 'bodyContent',
 				'class' => 'content',
 			) );
-			echo $data[ 'bodytext' ];
+			$content .= $data[ 'bodytext' ];
 			if ( isset( $data['subject-page'] ) ) {
-				echo $data['subject-page'];
+				$content .= $data['subject-page'];
 			}
-			?>
-			</div>
-			<?php
+			return $content . Html::closeElement( 'div' );
 		} else {
-			echo $data[ 'bodytext' ];
+			return $data[ 'bodytext' ];
 		}
 	}
 
 	/**
-	 * Renders pre-content (e.g. heading)
+	 * Get the HTML for rendering pre-content (e.g. heading)
 	 * @param array $data Data used to build the page
+	 * @return string HTML
 	 */
-	protected function renderPreContent( $data ) {
+	protected function getPreContentHtml( $data ) {
 		$internalBanner = $data[ 'internalBanner' ];
-		$preBodyText = isset( $data['prebodyhtml'] ) ? $data['prebodyhtml'] : '';
+		$preBodyHtml = isset( $data['prebodyhtml'] ) ? $data['prebodyhtml'] : '';
 		$headingHtml = isset( $data['headinghtml'] ) ? $data['headinghtml'] : '';
 		$postHeadingHtml = isset( $data['postheadinghtml'] ) ? $data['postheadinghtml'] : '';
 
-		if ( $internalBanner || $preBodyText || isset( $data['page_actions'] ) ) {
-			echo $preBodyText;
-		?>
-		<div class="pre-content heading-holder">
-			<?php
+		$html = '';
+		if ( $internalBanner || $preBodyHtml || isset( $data['page_actions'] ) ) {
+			$html .= $preBodyHtml
+				. Html::openElement( 'div', array( 'class' => 'pre-content heading-holder' ) );
 				if ( !$this->isSpecialPage ){
-					$this->renderPageActions( $data );
+					$html .= $this->getPageActionsHtml( $data );
 				}
-				echo $headingHtml;
-				echo $postHeadingHtml;
-				echo $this->html( 'subtitle' );
+				$html .= $headingHtml;
+				$html .= $postHeadingHtml;
+				$html .= $data['subtitle'];
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {
-					echo $data['_old_revision_warning'];
+					$html .= $data['_old_revision_warning'];
 				}
 
-				echo $internalBanner;
-			?>
-		</div>
-		<?php
+				$html .= $internalBanner;
+				$html .=  '</div>';
 		}
+		return $html;
 	}
 
 	/**
@@ -290,13 +284,14 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Render wrapper for loading content
+	 * Get the HTML for rendering the wrapper for loading content
 	 * @param array $data Data used to build the page
+	 * @return string HTML
 	 */
-	protected function renderContentWrapper( $data ) {
-		$this->renderPreContent( $data );
-		$this->renderContent( $data );
-		echo $this->getPostContentHtml( $data );
+	protected function getContentWrapperHtml( $data ) {
+		return $this->getPreContentHtml( $data ) .
+			$this->getContentHtml( $data ) .
+			$this->getPostContentHtml( $data );
 	}
 
 	/**
@@ -357,11 +352,11 @@ class MinervaTemplate extends BaseTemplate {
 				</div>
 				<div id="content" class="mw-body">
 				<?php
-					$this->renderContentWrapper( $data );
+					echo $this->getContentWrapperHtml( $data );
 				?>
 				</div>
 				<?php
-					$this->renderFooter( $data );
+					echo $this->getFooterHtml( $data );
 				?>
 			</div>
 		</div>
