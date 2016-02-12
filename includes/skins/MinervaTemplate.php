@@ -320,35 +320,19 @@ class MinervaTemplate extends BaseTemplate {
 	protected function render( $data ) {
 		$templateParser = new TemplateParser( __DIR__ );
 
+		// prepare template data
+		$templateData = array(
+			'banners' => $data['banners'],
+			'headelement' => $data[ 'headelement' ],
+			'headerhtml' => $this->getHeaderHtml( $data ),
+			'mainmenuhtml' => $this->getMainMenuHtml( $data ),
+			'contenthtml' => $this->getContentWrapperHtml( $data ),
+			'footerhtml' => $this->getFooterHtml( $data ),
+		);
 		// begin rendering
-		echo $data[ 'headelement' ];
+		echo $templateParser->processTemplate( 'minerva', $templateData );
+		$this->printTrail();
 		?>
-		<div id="mw-mf-viewport">
-			<nav id="mw-mf-page-left" class="navigation-drawer view-border-box">
-				<?php echo $this->getMainMenuHtml( $data ); ?>
-			</nav>
-			<div id="mw-mf-page-center">
-				<div class="banner-container">
-				<?php
-					echo $templateParser->processTemplate( 'banners', $data );
-				?>
-				</div>
-				<div class="header">
-					<?php
-						echo $this->getHeaderHtml( $data );
-					?>
-				</div>
-				<div id="content" class="mw-body">
-				<?php
-					echo $this->getContentWrapperHtml( $data );
-				?>
-				</div>
-				<?php
-					echo $this->getFooterHtml( $data );
-				?>
-			</div>
-		</div>
-		<?php $this->printTrail(); ?>
 		</body>
 		</html>
 		<?php
