@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_b9d3472f",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-13T18:40:16Z",
+      "side": 1,
+      "message": "I\u0027m not sure why you add the template in this change. I would expect to have it in the follow up change? :)",
+      "revId": "f3f7e1df665f39c1a00d88bf6e3bfb70d202b8b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
