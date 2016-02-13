@@ -101,20 +101,16 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 };
 
 /*
- * FIXME: @inheritdoc once this file is in the right repo
+ * Handle surface scroll events
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.scrollTo = function () {
-	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.scrollTo.apply( this, arguments );
+ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
+	var nativeSelection, range;
 
-	var range, nativeSelection,
-		surface = this.getSurface();
-
-	if ( ve.init.platform.constructor.static.isIos() && surface ) {
+	if ( ve.init.platform.constructor.static.isIos() ) {
 		// iOS has another bug (!) where if you change the scroll offset of a
 		// contentEditable with a cursor visible it disappears, so remove and
 		// reapply the selection in that case.
-		nativeSelection = surface.getView().nativeSelection;
+		nativeSelection = this.getSurface().getView().nativeSelection;
 		if ( nativeSelection.rangeCount && document.activeElement.contentEditable === 'true' ) {
 			range = nativeSelection.getRangeAt(0);
 			nativeSelection.removeAllRanges();
@@ -127,6 +123,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.scrollTo = function () {
  * FIXME: @inheritdoc once this file is in the right repo
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDoc, config ) {
+	var surface;
 	if ( this.overlay.isNewPage ) {
 		config = ve.extendObject( {
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user )
@@ -134,7 +131,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 	}
 
 	// Parent method
-	return ve.init.mw.MobileFrontendArticleTarget.super.prototype.createSurface.call( this, dmDoc, config );
+	surface = ve.init.mw.MobileFrontendArticleTarget.super.prototype.createSurface.call( this, dmDoc, config );
+
+	surface.connect( this, { scroll: 'onSurfaceScroll' } );
+
+	return surface;
 };
 
 /*
@@ -169,7 +170,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function
 		surface = this.getSurface();
 	surface.setToolbarHeight( toolbarHeight );
 	this.$overlay.css( 'padding-top', toolbarHeight );
-	this.scrollCursorIntoView( surface );
+	this.getSurface().scrollCursorIntoView();
 };
 
 /*
