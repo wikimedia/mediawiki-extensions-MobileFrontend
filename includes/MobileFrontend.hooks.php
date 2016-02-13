@@ -126,8 +126,12 @@ class MobileFrontendHooks {
 		// log whether user is using beta/stable
 		$mobileContext->logMobileMode();
 
-		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile
-		$userSkin = $context->getRequest()->getVal( 'useskin' );
+		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile or by
+		// setting the mobileskin preferences (api only currently)
+		$userSkin = $context->getRequest()->getVal(
+			'useskin',
+			$context->getUser()->getOption( 'mobileskin' )
+		);
 		if ( $userSkin ) {
 			// Normalize the key in case the user is passing gibberish or has old preferences
 			$normalizedSkin = Skin::normalizeKey( $userSkin );
@@ -893,6 +897,12 @@ class MobileFrontendHooks {
 				unset( $preferences['skin']['options'][$key] );
 			}
 		}
+
+		// preference that allow a user to set the preffered mobile skin using the api
+		$preferences['mobileskin'] = array(
+			'type' => 'api',
+			'default' => '',
+		);
 
 		return true;
 	}
