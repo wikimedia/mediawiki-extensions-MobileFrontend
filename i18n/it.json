@@ -19,7 +19,8 @@
 			"Martinligabue",
 			"Alexmar983",
 			"The Polish",
-			"Statix64"
+			"Statix64",
+			"C.R."
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -166,7 +167,7 @@
 	"mobile-frontend-languages-variant-header": "Varianti {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-preferred-languages-header": "Lingue preferite",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Tutte le lingue",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cera una lingua",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cerca una lingua",
 	"mobile-frontend-last-modified-date": "Ultima modifica il $1 alle $2",
 	"mobile-frontend-last-modified-days": "Ultima modifica {{PLURAL:$1|$1 giorno|$1 giorni}} fa",
 	"mobile-frontend-last-modified-hours": "Ultima modifica {{PLURAL:$1|$1 ora|$1 ore}} fa",
