@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_4c811e91",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1979,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:19:06Z",
+      "side": 1,
+      "message": "Not sure this is right (see below)",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_8c7716cf",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2018,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:19:06Z",
+      "side": 1,
+      "message": "Not sure this is right (see below)",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_6c7c1ab5",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2023,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:19:06Z",
+      "side": 1,
+      "message": "Not sure this is right. \n\"MFLazyLoadImages\": {\n\"base\": true\n}\nshould have the desired effect\n$defaults + \"MFLazyLoadImages\": {\n\"base\": true\n}\nwould result in base\u003dfalse which is wrong",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
