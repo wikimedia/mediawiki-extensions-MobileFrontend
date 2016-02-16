@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_4c2fde9c",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:24:16Z",
+      "side": 1,
+      "message": "This function is already getting very large. How can we refactor it to make it more readable?",
+      "revId": "01de3e4b212c27a0487136d05dfffdf38cb000e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_6c2ada90",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:24:16Z",
+      "side": 1,
+      "message": "Where does this magic 101 number come from?\nI missed this previously.\n\nIt\u0027s not well documented and I suspect it\u0027s use is to push the entry to the top of the list given that 100 is not the maximum number for any language but this is not obvious at all to a newcomer to the codebase.\n\nWhat if the number in mobile.languages changes? It will have side effects.\n\n\nTo make this cleaner and less confusing I would suggest inserting it at the front of the array at the bottom of this file",
+      "revId": "01de3e4b212c27a0487136d05dfffdf38cb000e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
