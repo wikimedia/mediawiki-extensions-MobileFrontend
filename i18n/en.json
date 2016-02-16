@@ -284,7 +284,6 @@
 	"mobile-frontend-search-submit": "Go",
 	"mobile-frontend-settings-images-explain": "Load all image content that appears in a page.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Data saving",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Languages",
 	"mobile-frontend-sign-in-error-heading": "Whoops",
