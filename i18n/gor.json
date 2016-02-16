@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zhoelyakin"
+			"Zhoelyakin",
+			"Marwan Mohamad"
 		]
 	},
-	"mobile-frontend-editor-edit": "Monguba"
+	"mobile-frontend-editor-edit": "Monguba",
+	"mobile-frontend-view": "Bibilohu seluler"
 }
