@@ -111,7 +111,7 @@
 		assert.ok(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length === 1 &&
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
-			'One language (be-x-old) matches "old" and only that language is visible.'
+			'One language (be-x-old) matches "ol" and only that language is visible.'
 		);
 
 		this.languageOverlay.filterLanguages( '' );

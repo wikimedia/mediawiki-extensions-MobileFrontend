@@ -8,6 +8,48 @@
 	var util = {};
 
 	/**
+	 * Return the device language if it's in the list of article languages.
+	 * If the language is a variant of a general language, and if the article
+	 * is not available in that language, then return the general language
+	 * if article is available in it. For example, if the device language is
+	 * 'en-gb', and the article is only available in 'en', then return 'en'.
+	 *
+	 * @ignore
+	 * @param {Object[]} languages list of language objects as returned by the API
+	 * @param {String|undefined} deviceLanguage the device's primary language
+	 * @returns {String|undefined} Return undefined if the article is not available in
+	 *  the (general or variant) device language
+	 */
+	function getDeviceLanguageOrParent( languages, deviceLanguage ) {
+		var parentLanguage, index,
+			deviceLanguagesWithVariants = {};
+
+		if ( !deviceLanguage ) {
+			return;
+		}
+
+		// Are we dealing with a variant?
+		index = deviceLanguage.indexOf( '-' );
+		if ( index !== -1 ) {
+			parentLanguage = deviceLanguage.slice( 0, index );
+		}
+
+		$.each( languages, function ( i, language ) {
+			if ( language.lang === parentLanguage || language.lang === deviceLanguage ) {
+				deviceLanguagesWithVariants[ language.lang ] = true;
+			}
+		} );
+
+		if ( deviceLanguagesWithVariants.hasOwnProperty( deviceLanguage ) ) {
+			// the device language is one of the available languages
+			return deviceLanguage;
+		} else if ( deviceLanguagesWithVariants.hasOwnProperty( parentLanguage ) ) {
+			// no device language, but the parent language is one of the available languages
+			return parentLanguage;
+		}
+	}
+
+	/**
 	 * Return two sets of languages: preferred and all (everything else)
 	 *
 	 * Preferred languages are the ones that the user has used before. This also
@@ -26,16 +68,23 @@
 	 * @return {Object[]}
 	 */
 	util.getStructuredLanguages = function ( languages, frequentlyUsedLanguages, deviceLanguage ) {
-		var index, lang, variant, allLanguages,
+		var index, lang, variant, allLanguages, maxFrequency = 0,
 			parentsMap = {},
 			variantsMap = {},
 			preferredLanguages = [],
 			preferredLanguagesMap = {};
 
-		// User's device language will be included to the frequently used languages
-		// map and gets the top priority
+		$.each( frequentlyUsedLanguages, function ( language, frequency ) {
+			maxFrequency = maxFrequency < frequency ? frequency : maxFrequency;
+		} );
+
+		// Is the article available in the user's device language?
+		deviceLanguage = getDeviceLanguageOrParent( languages, deviceLanguage );
+
 		if ( deviceLanguage ) {
-			frequentlyUsedLanguages[ deviceLanguage ] = 101;
+			// Make the device language the most frequently used one so that
+			// it appears at the top of the list when sorted by frequency.
+			frequentlyUsedLanguages[ deviceLanguage ] = maxFrequency + 1;
 		}
 
 		// Separate languages into preferred, parent, and variants. Parent

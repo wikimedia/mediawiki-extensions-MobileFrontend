@@ -24,6 +24,11 @@
 					title: 'Барак Абама',
 					langname: 'беларуская (тарашкевіца)'
 				}, {
+					lang: 'es',
+					url: 'https://en.wikipedia.org/wiki/Barack_Obama',
+					title: 'Barack Obama',
+					langname: 'Spanish'
+				}, {
 					lang: 'ko',
 					url: 'https://ko.wikipedia.org/wiki/%EB%B2%84%EB%9D%BD_%EC%98%A4%EB%B0%94%EB%A7%88',
 					title: '버락 오바마',
@@ -66,7 +71,6 @@
 			this.frequentlyUsedLanguages = {
 				'zh-min-nan': 1,
 				zh: 2,
-				en: 10,
 				ko: 1
 			};
 
@@ -113,6 +117,11 @@
 						hasVariants: true,
 						variantsHeader: 'беларуская'
 					}, {
+						lang: 'es',
+						url: 'https://en.wikipedia.org/wiki/Barack_Obama',
+						title: 'Barack Obama',
+						langname: 'Spanish'
+					}, {
 						lang: 'ru',
 						url: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B0%D0%BC%D0%B0,_%D0%91%D0%B0%D1%80%D0%B0%D0%BA',
 						title: 'Обама, Барак',
@@ -143,14 +152,13 @@
 		}
 	} );
 
-	QUnit.test( 'test utility functions', 3, function ( assert ) {
+	QUnit.test( 'test utility functions', 4, function ( assert ) {
 		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages, 'Frequently used languages is correct.' );
 
 		util.saveLanguageUsageCount( 'ko', util.getFrequentlyUsedLanguages() );
 		assert.ok( this.saveSpy.calledWith( {
 			'zh-min-nan': 1,
 			zh: 2,
-			en: 10,
 			ko: 2
 		} ), 'Frequently used language is correctly saved.' );
 
@@ -158,6 +166,13 @@
 			util.getStructuredLanguages( this.apiLanguages, this.frequentlyUsedLanguages, this.deviceLanguage ),
 			this.structuredLanguages,
 			'Structured languages are correct.'
+		);
+
+		// device language is a variant and only the parent language is available
+		assert.equal(
+			util.getStructuredLanguages( this.apiLanguages, {}, 'es-lx' ).preferred[0].lang,
+			'es',
+			'"es" is correctly selected as a preferred language even though the device language is "es-lx".'
 		);
 	} );
 
