@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_9daad767",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-17T18:49:51Z",
+      "side": 1,
+      "message": "Is this not changing the test conditions / potentially the meaning of the test?\nTo give me more confidence you are not breaking stuff, could you add a new test or update the test to use en-us ?",
+      "revId": "3f8aecd9dcbc4525d8547cb3bab6f99fad0d78c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
