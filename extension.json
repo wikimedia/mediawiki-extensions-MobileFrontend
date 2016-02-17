@@ -1984,11 +1984,25 @@
 					"A": 0.03
 				}
 			},
+			"@languageOverlay": "controls which language overlay shows in stable",
 			"languageOverlay": {
 				"name": "languageOverlay",
 				"enabled": false,
 				"buckets": {
+					"@control": "the ratio of users that see the simpler overlay",
 					"control": 1,
+					"@A": "the ratio of users that see the structured overlay",
+					"A": 0
+				}
+			},
+			"@languageOverlayBeta": "controls which language overlay shows in beta",
+			"languageOverlayBeta": {
+				"name": "languageOverlayBeta",
+				"enabled": false,
+				"buckets": {
+					"@control": "the ratio of users that see the simpler overlay",
+					"control": 1,
+					"@A": "the ratio of users that see the structured overlay",
 					"A": 0
 				}
 			},
