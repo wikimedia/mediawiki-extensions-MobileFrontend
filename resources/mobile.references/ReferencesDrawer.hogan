@@ -2,5 +2,8 @@
 	{{{citation}}}
 	{{{cancelButton}}}
 </div>
+{{#error}}<div class="error">{{/error}}
 <sup>{{title}}</sup>
-{{{text}}}
+{{#text}}{{{text}}}{{/text}}
+{{^text}}{{{spinner}}}{{/text}}
+{{#error}}</div>{{/error}}

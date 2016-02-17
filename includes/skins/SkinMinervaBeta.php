@@ -128,6 +128,7 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( $title->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
 		}
+		$styles[] = 'skins.minerva.content.styles.beta';
 
 		return $styles;
 	}

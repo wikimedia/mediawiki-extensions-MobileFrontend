@@ -271,6 +271,8 @@
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-random-button": "Random",
 	"mobile-frontend-references-citation": "Citation",
+	"mobile-frontend-references-citation-error": "An error occurred and it was not possible to load this citation.",
+	"mobile-frontend-references-list": "View full list of citations",
 	"mobile-frontend-regular-site": "Desktop view",
 	"mobile-frontend-requires-mobile": "This page is not available on desktop. Please click the mobile view link at the bottom of the page.",
 	"mobile-frontend-requires-optin": "This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.",

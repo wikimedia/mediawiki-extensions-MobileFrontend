@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Drawer = M.require( 'mobile.drawers/Drawer' ),
+		icons = M.require( 'mobile.startup/icons' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		SchemaMobileWebUIClickTracking = M.require(
 			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
@@ -19,8 +20,10 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
+		 * @cfg {Boolean} defaults.error whether an error message is being shown
 		 */
 		defaults: $.extend( {}, Drawer.prototype.defaults, {
+			spinner: icons.spinner().toHtmlString(),
 			cancelButton: new Icon( {
 				name: 'close-gray',
 				additionalClassNames: 'cancel',
