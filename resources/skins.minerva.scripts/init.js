@@ -176,7 +176,7 @@
 	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 	overlayManager.add( /^\/languages$/, function () {
 		var result = $.Deferred(),
-			languageOverlayExperiment = experiments.languageOverlay || false,
+			languageOverlayExperiment = context.isBetaGroupMember() ? experiments.languageOverlayBeta : experiments.languageOverlay,
 			languageOverlayModule = 'mobile.languages';
 
 		if ( languageOverlayExperiment &&
