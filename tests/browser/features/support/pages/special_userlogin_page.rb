@@ -19,12 +19,4 @@ class SpecialUserLoginPage < ArticlePage
   # signup specific
   text_field(:confirmation_field, id: 'wpCaptchaWord')
   div(:refresh_captcha, id: 'mf-captcha-reload-container')
-
-  def login_with(username, password)
-    # deal with autocomplete
-    self.username_element.when_present.clear
-    self.username = username
-    self.password = password
-    login
-  end
 end

@@ -14,21 +14,19 @@ end
 Given /^I am logged in as a new user$/ do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
-  # FIXME: Actually create a new user instead of using an existing one
-  on(SpecialUserLoginPage).login_with('Selenium_newuser', password)
+  log_in
 end
 
 Given(/^I am logged in as a user with a > (\d+) edit count$/) do |count|
   api.meta(:userinfo, uiprop: 'editcount').data['editcount'].upto(count.to_i) do |n|
     api.create_page("Ensure #{user} edit count - #{n + 1}", 'foo')
   end
-
-  visit(SpecialUserLoginPage).login_with(user, password)
+  log_in
 end
 
 Given(/^I am logged into the mobile website$/) do
   step 'I am using the mobile site'
-  visit(LoginPage).login_with(user, password, false)
+  log_in
   # avoids login failing (see https://phabricator.wikimedia.org/T109593)
   expect(on(ArticlePage).is_authenticated_element.when_present(20)).to exist
 end
