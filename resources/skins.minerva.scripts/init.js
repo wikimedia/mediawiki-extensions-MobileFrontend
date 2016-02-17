@@ -111,14 +111,19 @@
 					name: 'languages'
 				} );
 
-				// when local storage is not available or when the key has not been previously saved
-				if ( previousTapCount === false || previousTapCount === null ) {
-					tapCountBucket = 'unknown';
+				// when local storage is not available ...
+				if ( previousTapCount === false ) {
 					previousTapCount = 0;
+					tapCountBucket = 'unknown';
+				// ... or when the key has not been previously saved
+				} else if ( previousTapCount === null ) {
+					previousTapCount = 0;
+					tapCountBucket = getLanguageButtonTappedBucket( previousTapCount );
 				} else {
 					previousTapCount = parseInt( previousTapCount, 10 );
 					tapCountBucket = getLanguageButtonTappedBucket( previousTapCount );
 				}
+
 				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
 				schemaMobileWebLanguageSwitcher.log( {
 					event: 'languageButtonTap',
