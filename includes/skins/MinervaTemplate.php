@@ -66,7 +66,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return array
 	 */
 	public function getPageActions() {
-		return $this->data['page_actions'];
+		return $this->isFallbackEditor() ? array() : $this->data['page_actions'];
 	}
 
 	/**
@@ -161,10 +161,18 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	protected function isFallbackEditor() {
+		$action = $this->getSkin()->getRequest()->getVal( 'action' );
+		return $action === 'edit';
+	}
 	/**
 	 * Get page secondary actions
 	 */
 	protected function getSecondaryActions() {
+		if ( $this->isFallbackEditor() ) {
+			return array();
+		}
+
 		$result = $this->data['secondary_actions'];
 		$hasLanguages = $this->data['content_navigation']['variants'] ||
 			$this->data['language_urls'];
