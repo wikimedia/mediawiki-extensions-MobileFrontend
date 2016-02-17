@@ -52,6 +52,24 @@
       "revId": "b6043301eff98a1b8dba130557745d2a7e66913d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_3deaca9c",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-17T00:45:35Z",
+      "side": 1,
+      "message": "The bucket we need to send is \u00270 taps\u0027. I thought we should use a single location to get the bucket. We could add \u0027taps\u0027 to 0 here, but that may cause problems if we change \u0027taps\u0027 to something else later.",
+      "parentUuid": "4ea78b8a_fd043282",
+      "revId": "b6043301eff98a1b8dba130557745d2a7e66913d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
