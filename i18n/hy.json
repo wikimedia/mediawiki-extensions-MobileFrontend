@@ -10,7 +10,8 @@
 			"Arman musikyan",
 			"GrigorGB",
 			"Դավիթ Սարոյան",
-			"Aram1985"
+			"Aram1985",
+			"Աշոտ1997"
 		]
 	},
 	"beta-feature-minerva": "Միացնել բջջային տեսքը (Մինեվրա) համակարգչի համար",
@@ -33,14 +34,10 @@
 	"mobile-frontend-editor-editing-page": "<strong>Խմբագրում</strong> <span>$1</span>",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Նախադիտում</strong> $1</span>",
 	"mobile-frontend-featured-article": "Օրվա ընտրված նյութը",
-	"mobile-frontend-generic-login": "{{SITENAME}}՝ ստեղծված է ձեզ պես մարդկանց կողմից։",
-	"mobile-frontend-generic-login-action": "Ներդրում կատարելու համար մուտք գործեք։",
 	"mobile-frontend-home-button": "Գլխավոր Էջ",
 	"mobile-frontend-language-article-heading": "Կարդալ այլ լեզվով",
-	"mobile-frontend-last-modified-date": "Վերջին թարմացում $1, $2",
+	"mobile-frontend-last-modified-date": "Վերջին անգամ խմբագրվել է  $1, $2֊ին",
 	"mobile-frontend-logged-in-homepage-notification": "Բարի գալո՜ւստ, $1",
-	"mobile-frontend-logged-out": "Դուք չեք մտել համակարգ",
-	"mobile-frontend-login": "Մտնել",
 	"mobile-frontend-main-menu-account-create": "Գրանցել նոր հաշիվ",
 	"mobile-frontend-main-menu-button-tooltip": "Բացել գլխավոր ցանկը",
 	"mobile-frontend-main-menu-login": "Մուտք գործել",
@@ -57,7 +54,6 @@
 	"mobile-frontend-search-no-results": "Այս անվանումով էջեր չկան։",
 	"mobile-frontend-search-submit": "Անցնել",
 	"mobile-frontend-terms-text": "Օգտագործման պայմաններ",
-	"mobile-frontend-username-placeholder": "Մասնակցային անուն",
 	"mobile-frontend-view": "Տեսքը բջջայինով",
 	"mobile-frontend-view-desktop": "Սովորական",
 	"mobile-frontend-view-mobile": "Հեռախոս",
