@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_2562a1a9",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-18T18:13:23Z",
+      "side": 1,
+      "message": "A Skin object also extends ContextSource, so you can call getRequest() on it directly and (mostly, but for this use case it doesn\u0027t matter where you get the WebRequest object from, as long as it\u0027s the RequestContext) doesn\u0027t need to get the OutputPage object first :)\n\ntl;dr\nUse \n\n$this-\u003egetSkin()-\u003egetRequest()-\u003egetVal( \u0027action\u0027 )\n\ninstead of:\n\n$this-\u003egetSkin()-\u003egetOutput()-\u003egetRequest()-\u003egetVal( \u0027action\u0027 )",
+      "revId": "011aec6b45b94825739b1e3ec01f4c35741a1377",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
