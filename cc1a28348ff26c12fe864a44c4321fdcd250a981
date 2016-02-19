@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_12af3293",
+        "filename": "resources/skins.minerva.editor/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-19T21:19:48Z",
+      "side": 1,
+      "message": "Could you check the wgMFUserBlockInfo value, too? If I\u0027m right, the value is cache related? :/",
+      "revId": "cc1a28348ff26c12fe864a44c4321fdcd250a981",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
