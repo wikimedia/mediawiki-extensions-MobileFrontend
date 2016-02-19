@@ -27,6 +27,7 @@
 	"mobile-frontend-changeslist-ip": "ანონიმური მომხმარებელი",
 	"mobile-frontend-changeslist-nocomment": "არ არის რედაქტირების რეზიუმე",
 	"mobile-frontend-clear-search": "გასუფთავება",
+	"mobile-frontend-commons-category-view": "სურათები $1-სთვის",
 	"mobile-frontend-copyright": "შინაარსი წარმოდგენილია $1 პირობებით (თუ სხვა არ არის მითითებული).",
 	"mobile-frontend-desc": "მობილური ინტერფეისი",
 	"mobile-frontend-diffview-404-desc": "ვერსიები თქვენი მოთხოვნილი იდენტიფიკატორით არ არსებობს",
@@ -78,6 +79,7 @@
 	"mobile-frontend-editor-save": "შენახვა",
 	"mobile-frontend-editor-success": "თქვენი რედაქტირება წარმატებით განხორციელდა.",
 	"mobile-frontend-editor-success-landmark-1": "გილოცავ, შენ ახლა უკვე {{SITENAME}} რედაქტორი ხარ!",
+	"mobile-frontend-editor-success-new-page": "გილოცავთ ახალი გვერდის შექმნას!",
 	"mobile-frontend-editor-summary-placeholder": "გვითხარით რა შეცვალეთ (არასავალდებულო)",
 	"mobile-frontend-editor-summary-request": "რითი გააუმჯობესეთ გვერდი?",
 	"mobile-frontend-editor-summary": "რეზიუმე:",
@@ -191,6 +193,7 @@
 	"mobile-frontend-photo-ownership-help": "ეს რას ნიშნავს?",
 	"mobile-frontend-photo-submit": "ატვირთვა",
 	"mobile-frontend-photo-upload": "დაამატეთ სურათი ამ გვერდზე",
+	"mobile-frontend-photo-upload-anon": "გთხოვთ, გაიარეთ ავტორიზაცია ამ გვერდზე სურათის დასამატებლად.",
 	"mobile-frontend-photo-upload-comment": "გვერდზე დაემატა სურათი",
 	"mobile-frontend-photo-upload-error": "შეცდომა, კიდევ სცადეთ.",
 	"mobile-frontend-photo-upload-error-file-type": "გთხოვთ ატვირთოთ მხოლოდ სურათები.",
@@ -263,7 +266,7 @@
 	"mobile-frontend-watchlist-view": "თქვენი კონტროლის სიის ხილვა",
 	"mobile-frontend-user-page-member-since": "წევრი $1-დან",
 	"mobile-frontend-user-page-talk": "განხილვა",
-	"mobile-frontend-user-page-contributions": "წვლილის შემომტანები",
+	"mobile-frontend-user-page-contributions": "წვლილი",
 	"mobile-frontend-user-page-uploads": "ატვირთვები",
 	"mobile-frontend-user-page-no-owner-page-yet": "თქვენ ჯერ კიდევ არ გაქვთ მომხმარებლის გვერდი",
 	"mobile-frontend-user-page-no-page-yet": "$1-ის მომხმარებლის გვერდი არ არის შექმნილი",
@@ -282,5 +285,7 @@
 	"mobile-frontend-meta-data-issues-categories": "ამ კატეგორიის შესახებ",
 	"mobile-frontend-loading-message": "იტვირთება...",
 	"mobile-frontend-panel-ok": "კარგი",
-	"mobile-frontend-panel-cancel": "არა, გმადლობთ"
+	"mobile-frontend-panel-cancel": "არა, გმადლობთ",
+	"mobile-frontend-search-feedback-link-text": "დაწერეთ შეფასება.",
+	"mobile-frontend-search-feedback-prompt": "ვერ იპოვეთ, რასაც ეძებდით?"
 }
