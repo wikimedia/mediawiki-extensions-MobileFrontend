@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_cc7a63b9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1359,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-19T19:59:37Z",
+      "side": 1,
+      "message": "Don\u0027t use the singleton twice if you don\u0027t need to do so. Run MobileContext::singleton() once, save the result in a local variable and use that for both usages.",
+      "revId": "132372300f3abe06191033feaee15d2cadaab63a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_ec771fce",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1360,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-19T19:59:37Z",
+      "side": 1,
+      "message": "License handling is way more difficult as simply that :P I suggest (like Jon already said), that you use our already existing implementation:\nhttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/includes/MobileFrontend.skin.hooks.php#L60-L107\n\nIt\u0027s not perfect, but does what it\u0027s supposed to do.",
+      "revId": "132372300f3abe06191033feaee15d2cadaab63a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
