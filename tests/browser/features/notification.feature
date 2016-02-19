@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @extension-echo @firefox @login @test2.m.wikipedia.org @vagrant
+@chrome @en.m.wikipedia.beta.wmflabs.org @extension-echo @firefox @test2.m.wikipedia.org @vagrant
 Feature: Notification
 
   Background:

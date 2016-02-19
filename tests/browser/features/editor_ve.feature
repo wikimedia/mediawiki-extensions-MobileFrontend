@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @extension-visualeditor @firefox @login @vagrant
+@chrome @en.m.wikipedia.beta.wmflabs.org @extension-visualeditor @firefox @vagrant
 Feature: VisualEditor Mobile
 
   # Tests are skipped due to https://phabricator.wikimedia.org/T88559
