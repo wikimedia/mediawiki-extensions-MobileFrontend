@@ -917,7 +917,7 @@ class SkinMinerva extends SkinTemplate {
 					'blockReason' => $blockReason,
 				);
 			}
-			$vars['wgMFUserBlockInfo'] = $blockInfo;
+			$vars['wgMinervaUserBlockInfo'] = $blockInfo;
 		}
 
 		return $vars;
