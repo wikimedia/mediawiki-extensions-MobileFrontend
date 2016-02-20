@@ -160,6 +160,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	// exist when postRender is executed
 	// FIXME: Don't call a private method that is outside the class.
 	this.overlay._fixIosHeader( '[contenteditable]' );
+
+	this.maybeShowWelcomeDialog();
 };
 
 /**
