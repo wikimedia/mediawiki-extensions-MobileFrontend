@@ -21,8 +21,7 @@
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			confirmButton: new Button( {
 				additionalClassNames: 'cancel',
-				progressive: true,
-				label: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
+				progressive: true
 			} ).options
 		} ),
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {

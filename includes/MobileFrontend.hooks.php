@@ -424,7 +424,6 @@ class MobileFrontendHooks {
 		}
 
 		// Get the licensing agreement that is displayed in the uploading interface.
-		$wgMFUploadLicense = MobileFrontendSkinHooks::getLicense( 'upload' );
 		$vars += array(
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,
@@ -437,7 +436,6 @@ class MobileFrontendHooks {
 			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
-			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
 			'wgMFLazyLoadImages' => $config->get( 'MFLazyLoadImages' ),
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
