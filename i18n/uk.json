@@ -28,7 +28,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
-	"action-mf-uploadbutton": "використання MobileFrontend-орієнтованої системи завантаження.",
+	"action-mf-uploadbutton": "використання спрощеної мобільної системи завантаження.",
 	"beta-feature-minerva": "Увімкнути мобільну тему ({{int:skinname-minerva}}) на стільниці",
 	"beta-feature-minerva-description": "Робить тему оформлення, вживану на мобільних пристроях, доступною у вкладці налаштувань «{{int:prefs-rendering}}».",
 	"mobile-frontend-account-create-captcha-placeholder": "Введіть код підтвердження",
@@ -232,7 +232,7 @@
 	"mobile-frontend-nearby-title": "Поблизу",
 	"mobile-frontend-nearby-sectiontext": "Поблизу теми цієї сторінки",
 	"mobile-frontend-news-items": "У новинах",
-	"mobile-frontend-opt-in-explain": "Приєднавшись до бета-тестування, Ви отримаєте доступ до деяких експериментальних функцій, але також збільшиться ризик зустріти помилку чи проблему",
+	"mobile-frontend-opt-in-explain": "Приєднавшись до бета-тестування, Ви отримаєте доступ до останніх експериментальних функцій, які можуть мати деякі програмні дефекти.",
 	"mobile-frontend-overlay-close": "Закрити",
 	"mobile-frontend-overlay-continue": "Продовжити",
 	"mobile-frontend-page-menu-contents": "зміст",
