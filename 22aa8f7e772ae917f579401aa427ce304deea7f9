@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_5e192226",
+        "filename": "resources/mobile.special.uploads.scripts/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-22T21:25:11Z",
+      "side": 1,
+      "message": "Seems weird having this in a function. I\u0027d suggesting wrapping the code  below that invokes it.",
+      "revId": "22aa8f7e772ae917f579401aa427ce304deea7f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
