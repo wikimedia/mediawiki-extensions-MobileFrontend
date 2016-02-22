@@ -33,6 +33,24 @@
       "revId": "132372300f3abe06191033feaee15d2cadaab63a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_3e822baa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1360,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2016-02-22T16:11:37Z",
+      "side": 1,
+      "message": "I\u0027m sort of blocked here. In EditPage.php, the \u0027$msg\u0027 variable is formatted using wfMessage()-\u003eparse(). However, MobileFrontendSkinHooks::getLicense() returns a formatted link of license which makes it impossible to insert it in the message. The link html just outputs as is, because call to \"parse()\" is escaping it.\nSee https://doc.wikimedia.org/mediawiki-core/master/php/EditPage_8php_source.html#l03347\nHelp would be appreciated :/",
+      "parentUuid": "2ea41786_ec771fce",
+      "revId": "132372300f3abe06191033feaee15d2cadaab63a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
