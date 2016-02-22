@@ -19,7 +19,7 @@
 			new PhotoList( {
 				api: api,
 				username: userName
-			} ).appendTo( '.content' );
+			} ).appendTo( '#mw-content-text .content' );
 		}
 	}
 
@@ -28,7 +28,9 @@
 		if ( corsUrl ) {
 			mw.loader.using( 'mobile.foreignApi' ).done( function () {
 				var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
-				init( new JSONPForeignApi( corsUrl ) );
+				$( function () {
+					init( new JSONPForeignApi( corsUrl ) );
+				} );
 			} );
 		} else {
 			$( function () {
