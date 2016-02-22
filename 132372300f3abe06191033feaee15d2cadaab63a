@@ -51,6 +51,24 @@
       "revId": "132372300f3abe06191033feaee15d2cadaab63a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_09b37b4d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1360,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-22T16:30:46Z",
+      "side": 1,
+      "message": "? Shouldn\u0027t getLicense return an associative array with the message key as the first parameter and other needed parameters to build the message?",
+      "parentUuid": "2ea41786_3e822baa",
+      "revId": "132372300f3abe06191033feaee15d2cadaab63a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
