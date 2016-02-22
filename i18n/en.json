@@ -262,6 +262,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Contributed image from Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "Added image for use on page",
 	"mobile-frontend-photo-caption-placeholder": "Describe this image (required)",
+	"mobile-frontend-photo-upload-invalid-user": "User \"$1\" is not registered.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ uploads",
 	"mobile-frontend-placeholder": "Search {{SITENAME}}",
