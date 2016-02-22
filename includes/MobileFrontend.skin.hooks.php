@@ -55,7 +55,7 @@ class MobileFrontendSkinHooks {
 	 * @param string $context The context in which the license link appears, e.g. footer,
 	 *   editor, talk, or upload.
 	 * @param array $attribs An associative array of extra HTML attributes to add to the link
-	 * @return string
+	 * @return array Associative array containing the license text and link
 	 */
 	public static function getLicense( $context, $attribs = array() ) {
 		$config = MobileContext::singleton()->getConfig();
