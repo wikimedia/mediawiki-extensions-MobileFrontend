@@ -34,6 +34,24 @@
       "revId": "ef51c3ee560de0acda7655c7108d4adcbe18d824",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_87b0aa3f",
+        "filename": "resources/mobile.special.uploads.scripts/uploads.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-23T17:29:22Z",
+      "side": 1,
+      "message": "I disagree because if we wrap the outermost if, then the user will have to wait for the DOM to be ready and then for the \u0027mobile.foreignApi\u0027 to be loaded in order to see the photos. With the above change though, a request to \u0027mobile.foreignApi\u0027 will be made regardless of the DOM ready event which will make things faster.\n\nI\u0027ll update the commit message though.",
+      "parentUuid": "2ea41786_e7495e6b",
+      "revId": "ef51c3ee560de0acda7655c7108d4adcbe18d824",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
