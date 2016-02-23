@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_cd21e19b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-23T20:35:03Z",
+      "side": 1,
+      "message": "eww, I would suggest, that you take the MobileContext object passed to the factory function (newFromContext), save it in a local variable and use this instead.\n\nThis currently makes it harder to stub the object if needed (e.g. in tests later) and we should try to don\u0027t use the singleton as much as needed, especially if you can (relatively) easy retrieve a context object from somewhere else :)",
+      "revId": "091a83ed28a44df72f1089ccb6d37893025df9a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
