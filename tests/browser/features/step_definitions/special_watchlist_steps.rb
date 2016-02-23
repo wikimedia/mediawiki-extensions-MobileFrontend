@@ -28,9 +28,9 @@ Then(/^I should see a list of pages I am watching$/) do
 end
 
 Then(/^the a to z button should be selected$/) do
-  expect(on(WatchlistPage).list_link_element.parent.element.class_name).to match 'active'
+  expect(on(WatchlistPage).list_link_element.parent.element.class_name).to match 'is-on'
 end
 
 Then(/^the modified button should be selected$/) do
-  expect(on(WatchlistPage).feed_link_element.parent.element.class_name).to match 'active'
+  expect(on(WatchlistPage).feed_link_element.parent.element.class_name).to match 'is-on'
 end
