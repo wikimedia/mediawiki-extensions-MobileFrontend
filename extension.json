@@ -45,8 +45,7 @@
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileMenu": "SpecialMobileMenu",
 		"MobileLanguages": "SpecialMobileLanguages",
-		"Uploads": "SpecialUploads",
-		"UserProfile": "SpecialUserProfile"
+		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
 		"mobileview": "ApiMobileView"
@@ -84,7 +83,6 @@
 		"MobileSiteModule": "includes/modules/MobileSiteModule.php",
 		"MobileUserModule": "includes/modules/MobileUserModule.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
-		"SpecialUserProfile": "includes/specials/SpecialUserProfile.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileEditor": "includes/specials/SpecialMobileEditor.php",
