@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_bb95bb37",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-23T22:57:52Z",
+      "side": 1,
+      "message": "I thought that wfMessage always returns a Message object with the content language set?",
+      "revId": "aa4a847169939f219ea9ecb691923a65c3c747c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
