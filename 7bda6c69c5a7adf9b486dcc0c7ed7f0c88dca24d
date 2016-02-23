@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_4d5f3645",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "double indentation, plus it might be better styled as such:\n\n    if ( $mfReferences[\u0027base\u0027] ||\n        ( $isBeta \u0026\u0026 $mfReferences[\u0027beta\u0027] ) ) {",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_ad1caa7d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "double indentation; style comment from above",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_283668e5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Why don\u0027t we slap a \"FIXME\" on here ;)",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_48196426",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Should be able to just instantiate `drawer` here.",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_88851c5d",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Typo ;)",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_88d3dc60",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "I think \"ref\" should still be usable here, no?",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_c806b4d1",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Might be good to document the expected scope here since it\u0027s pretty crucial.",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_28d2e82c",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Might want to use a small non-zero value here? I think I recall there being issues using setTimeout with 0.",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_889afc64",
+        "filename": "tests/qunit/mobile.references/test_references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-23T14:47:17Z",
+      "side": 1,
+      "message": "Would probably be useful to add some tests for lazy-loading as well.",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
