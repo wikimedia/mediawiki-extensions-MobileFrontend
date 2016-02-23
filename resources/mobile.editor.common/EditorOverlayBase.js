@@ -58,7 +58,6 @@
 		this.isNewPage = options.isNewPage;
 		this.isNewEditor = options.isNewEditor;
 		this.sectionId = options.sectionId;
-		this.schema = options.editSchema;
 		this.config = mw.config.get( 'wgMFEditorOptions' );
 		this.sessionId = options.sessionId;
 		this.allowCloseWindow = mw.confirmCloseWindow( {
@@ -104,7 +103,6 @@
 		 * two different editing interfaces.
 		 * @cfg {String} defaults.licenseMsg Text and link of the license, under which this contribution will be
 		 * released to inform the user.
-		 * @cfg {SchemaEdit} defaults.editSchema Schema to log events to.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			hasToolbar: false,
@@ -147,7 +145,7 @@
 		 * @param {Object} data
 		 */
 		log: function ( data ) {
-			return this.schema.log( $.extend( data, {
+			mw.track( 'mf.schemaEdit', $.extend( data, {
 				editor: this.editor,
 				editingSessionId: this.sessionId
 			} ) );
@@ -192,20 +190,20 @@
 			// Ensure we don't lose this event when logging
 			this.log( {
 				action: 'saveSuccess'
-			} ).always( function () {
-				if ( self.sectionLine ) {
-					title = title + '#' + self.sectionLine;
-				}
-
-				$( window ).off( 'beforeunload.mfeditorwarning' );
-				window.location = mw.util.getUrl( title );
 			} );
+			if ( self.sectionLine ) {
+				title = title + '#' + self.sectionLine;
+			}
+
+			$( window ).off( 'beforeunload.mfeditorwarning' );
 
 			// Set a cookie for 30 days indicating that this user has edited from
 			// the mobile interface.
 			$.cookie( 'mobileEditor', 'true', {
 				expires: 30
 			} );
+
+			window.location = mw.util.getUrl( title );
 		},
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.

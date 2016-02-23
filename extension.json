@@ -688,7 +688,8 @@
 				"mobile.drawers",
 				"mobile.toast",
 				"mobile.messageBox",
-				"mediawiki.confirmCloseWindow"
+				"mediawiki.confirmCloseWindow",
+				"mobile.loggingSchemas.edit"
 			],
 			"scripts": [
 				"resources/mobile.editor.common/EditorOverlayBase.js"
@@ -1649,7 +1650,8 @@
 				"mobile.toast",
 				"skins.minerva.toggling",
 				"mobile.overlays",
-				"mediawiki.jqueryMsg"
+				"mediawiki.jqueryMsg",
+				"mobile.loggingSchemas.edit"
 			],
 			"messages": {
 				"0": "mobile-frontend-editor-disabled",
