@@ -380,6 +380,7 @@ class MobileFrontendHooks {
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which vary with the html
 	 * and for variables that should work cross skin including anonymous users
+	 * this includes use of MobileContext::isBetaGroupMember in this function
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
 	 * @param array $vars
@@ -409,9 +410,6 @@ class MobileFrontendHooks {
 		$displayDescriptions = $config->get( 'MFDisplayWikibaseDescription' );
 		$useDescriptions = $config->get( 'MFUseWikibaseDescription' );
 
-		if ( $context->isBetaGroupMember() ) {
-			$displayDescriptions = true;
-		}
 		// When set turn on Wikidata descriptions
 		// https://phabricator.wikimedia.org/T101719
 		if ( $useDescriptions && $displayDescriptions ) {
