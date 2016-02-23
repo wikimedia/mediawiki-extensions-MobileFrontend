@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_c78b021f",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-23T17:56:49Z",
+      "side": 1,
+      "message": "I would suggest to work to make the preference working, instead of simply disabling it. Someone may want to have these entries.",
+      "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
