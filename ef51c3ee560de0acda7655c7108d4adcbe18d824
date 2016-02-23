@@ -16,6 +16,24 @@
       "revId": "ef51c3ee560de0acda7655c7108d4adcbe18d824",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_e7495e6b",
+        "filename": "resources/mobile.special.uploads.scripts/uploads.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-23T17:25:56Z",
+      "side": 1,
+      "message": "I agree with jhobs that this would be clearer.\nAlso in commit message can you clarify a little more why this helps and why the bug exists in the first place?\n\nIs the issue with cached API requests happening really quickly before the DOM is ready ?\nIs it because the module is top loaded?",
+      "parentUuid": "2ea41786_e8bff0a5",
+      "revId": "ef51c3ee560de0acda7655c7108d4adcbe18d824",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
