@@ -231,6 +231,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Contribuit cu imaginea prin Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "Adăugat imagine pentru a fi utilizată în pagină",
 	"mobile-frontend-photo-caption-placeholder": "Descrieți această imagine (obligatoriu)",
+	"mobile-frontend-photo-upload-invalid-user": "Utilizatorul „$1” nu este înregistrat.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> încărcare|<span>$1</span> încărcări|<span>$1</span> de încărcări}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ încărcări",
 	"mobile-frontend-placeholder": "Căutare în {{SITENAME}}",

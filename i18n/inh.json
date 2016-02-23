@@ -2,11 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Умар"
+			"Умар",
+			"ElizaMag"
 		]
 	},
+	"mobile-frontend-editor-edit": "Хувца",
 	"mobile-frontend-featured-article": "Укх ден хьаржа йоазув",
 	"mobile-frontend-home-button": "ЦӀенга",
+	"mobile-frontend-language-article-heading": "Iодеша кхыча меттала",
+	"mobile-frontend-main-menu-login": "Чувала/яла",
+	"mobile-frontend-main-menu-settings": "Оттамаш",
 	"mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
 	"mobile-frontend-search-submit": "Дехьа гӀо"
 }

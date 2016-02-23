@@ -227,6 +227,7 @@
 	"mobile-frontend-photo-article-donate-comment": "ساهمت بصورة عبر Special:Uploads.",
 	"mobile-frontend-photo-article-edit-comment": "أضفت صورة للاستخدام في الصفحة",
 	"mobile-frontend-photo-caption-placeholder": "صف هذه الصورة (مطلوب)",
+	"mobile-frontend-photo-upload-invalid-user": "المستخدم «$1» غير مسجل.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|ملف واحد|ملفان|<span>$1</span> ملفات|<span>$1</span> ملفا|<span>$1</span> ملف}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500 + ملف",
 	"mobile-frontend-placeholder": "ابحث في {{SITENAME}}",

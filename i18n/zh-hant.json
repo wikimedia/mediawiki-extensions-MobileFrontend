@@ -246,6 +246,7 @@
 	"mobile-frontend-photo-article-donate-comment": "貢獻的圖片來自 Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "已於頁面上加入可使用的圖片",
 	"mobile-frontend-photo-caption-placeholder": "描述此圖片 (必填)",
+	"mobile-frontend-photo-upload-invalid-user": "使用者 \"$1\" 尚未註冊。",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> 個上傳|<span>$1</span> 個上傳}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "超過 500 次上傳",
 	"mobile-frontend-placeholder": "搜尋 {{SITENAME}}",

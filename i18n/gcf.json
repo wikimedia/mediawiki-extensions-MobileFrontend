@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Laetitia Kb"
+		]
+	},
+	"mobile-frontend-editor-edit": "Modifié",
+	"mobile-frontend-home-button": "Akèy",
+	"mobile-frontend-language-article-heading": "Li-y adan on dot lang",
+	"mobile-frontend-main-menu-button-tooltip": "Ouvè méni prensipal",
+	"mobile-frontend-main-menu-login": "Konecté",
+	"mobile-frontend-main-menu-nearby": "Koté-w",
+	"mobile-frontend-main-menu-settings": "Opsion",
+	"mobile-frontend-placeholder": "Chèché  {{SITENAME}}",
+	"mobile-frontend-random-button": "Aza",
+	"mobile-frontend-view-mobile": "Powtab"
+}

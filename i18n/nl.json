@@ -252,6 +252,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Bijgedragen van Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "De afbeelding voor gebruik op de pagina is toegevoegd",
 	"mobile-frontend-photo-caption-placeholder": "Beschrijf deze afbeelding (verplicht)",
+	"mobile-frontend-photo-upload-invalid-user": "Gebruiker \"$1\" is niet geregistreerd.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ uploads",
 	"mobile-frontend-placeholder": "{{SITENAME}} doorzoeken",

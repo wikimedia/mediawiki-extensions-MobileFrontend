@@ -199,6 +199,7 @@
 	"mobile-frontend-password-confirm-placeholder": "Jelszó megerősítése",
 	"mobile-frontend-password-placeholder": "Jelszó",
 	"mobile-frontend-photo-caption-placeholder": "Adj meg egy leírást a képhez (kötelező)",
+	"mobile-frontend-photo-upload-invalid-user": "„$1” felhasználó nincs regisztrálva.",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> feltöltés",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ feltöltés",
 	"mobile-frontend-placeholder": "Keresés a wikin",

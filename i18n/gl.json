@@ -234,6 +234,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Imaxe achegada desde Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "Engadiuse unha imaxe para o seu uso na páxina",
 	"mobile-frontend-photo-caption-placeholder": "Describa esta imaxe (obrigatorio)",
+	"mobile-frontend-photo-upload-invalid-user": "O usuario \"$1\" non está rexistrado.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> carga|<span>$1</span> cargas}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "+500 cargas",
 	"mobile-frontend-placeholder": "Procurar en {{SITENAME}}",

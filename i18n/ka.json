@@ -187,6 +187,7 @@
 	"mobile-frontend-photo-article-donate-comment": "გაიღო სურათი Special:Uploads-დან",
 	"mobile-frontend-photo-article-edit-comment": "გვერდზე გამოსაყენებლად დამატებულია სურათი",
 	"mobile-frontend-photo-caption-placeholder": "ამ სურათის აღწერა (სავალდებულოა)",
+	"mobile-frontend-photo-upload-invalid-user": "მომხმარებელი „$1“ არ არის დარეგისტრირებული.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> ატვირთვა|<span>$1</span> ატვირთვა}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ ატვირთვა",
 	"mobile-frontend-placeholder": "ძიება {{SITENAME}}",

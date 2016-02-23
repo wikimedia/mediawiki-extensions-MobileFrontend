@@ -163,6 +163,7 @@
 	"mobile-frontend-password-placeholder": "Лозинка",
 	"mobile-frontend-photo-article-edit-comment": "Додата слика на страницу",
 	"mobile-frontend-photo-caption-placeholder": "Опишите ову слику (обавезно)",
+	"mobile-frontend-photo-upload-invalid-user": "Корисник „$1“ није регистрован.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ отпремања",
 	"mobile-frontend-placeholder": "Претрага",
 	"mobile-frontend-privacy-link-text": "Приватност",
