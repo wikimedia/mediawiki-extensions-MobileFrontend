@@ -241,6 +241,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 					'wl_title=rc_title',
 					// FIXME: Filter out wikidata changes which currently show as anonymous (see bug 49315)
 					'rc_type!=' . RC_EXTERNAL,
+					// Filter out category membership changes
+					'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE ),
 				),
 			),
 		);
