@@ -43,6 +43,7 @@ class MobileFrontendSkinHooks {
 		} else {
 			$delimiterMsg = wfMessage( 'and' );
 		}
+		$delimiterMsg = $delimiterMsg->inContentLanguage();
 		// check, if "and" isn't disabled and exists in site language
 		return $delimiterMsg->isDisabled() || strpos( $license, $delimiterMsg->text() ) === false ? 1 : 2;
 	}
