@@ -19,7 +19,8 @@
 			"Bluemersen",
 			"LiteHell",
 			"Hwangjy9",
-			"Kurousagi"
+			"Kurousagi",
+			"Idh0854"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -240,12 +241,13 @@
 	"mobile-frontend-photo-article-donate-comment": "Special:Uploads에서 그림을 기여함",
 	"mobile-frontend-photo-article-edit-comment": "문서에 사용할 그림을 추가했습니다",
 	"mobile-frontend-photo-caption-placeholder": "이 그림 설명하기 (필수)",
+	"mobile-frontend-photo-upload-invalid-user": "\"$1\" 사용자는 등록되어 있지 않습니다.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|올리기 <span>1</span>개|올리기 <span>$1</span>개}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "올리기 500개 초과",
 	"mobile-frontend-placeholder": "{{SITENAME}} 검색",
 	"mobile-frontend-placeholder-app": "{{SITENAME}} 검색 (웹 앱)",
 	"mobile-frontend-placeholder-beta": "{{SITENAME}} 검색 (베타)",
-	"mobile-frontend-privacy-link-text": "개인 정보 정책",
+	"mobile-frontend-privacy-link-text": "개인정보",
 	"mobile-frontend-random-button": "임의 문서",
 	"mobile-frontend-references-citation": "인용",
 	"mobile-frontend-regular-site": "데스크톱 보기",
