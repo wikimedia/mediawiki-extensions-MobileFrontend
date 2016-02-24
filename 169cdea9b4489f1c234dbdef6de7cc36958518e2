@@ -16,6 +16,24 @@
       "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_fc49e96a",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2016-02-24T12:34:33Z",
+      "side": 1,
+      "message": "I think that could be done as a second step.\nThis change is simply trying to make the watchlist usable again for people that watch categories and also use mobile.",
+      "parentUuid": "2ea41786_c78b021f",
+      "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
