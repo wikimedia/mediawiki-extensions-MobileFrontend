@@ -13,9 +13,6 @@
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
-		SchemaMobileWebUIClickTracking = M.require(
-			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
-		uiSchema = new SchemaMobileWebUIClickTracking(),
 		schemaMobileWebLanguageSwitcher = M.require(
 			'mobile.loggingSchemas/schemaMobileWebLanguageSwitcher' ),
 		thumbs = page.getThumbnails(),
@@ -115,10 +112,6 @@
 				if ( $languageLink.attr( 'href' ) ) {
 					router.navigate( '/languages' );
 				}
-
-				uiSchema.log( {
-					name: 'languages'
-				} );
 
 				// when local storage is not available ...
 				if ( previousTapCount === false ) {

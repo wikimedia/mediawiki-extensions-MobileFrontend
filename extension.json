@@ -505,7 +505,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.loggingSchemas",
 				"mobile.toggle",
 				"mobile.toc.images"
 			],
@@ -1082,8 +1081,7 @@
 			"dependencies": [
 				"mobile.drawers",
 				"mobile.editor.api",
-				"mobile.references.images",
-				"mobile.loggingSchemas"
+				"mobile.references.images"
 			],
 			"messages": [
 				"mobile-frontend-references-citation-error",
@@ -1687,8 +1685,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.overlays",
-				"mobile.loggingSchemas"
+				"mobile.overlays"
 			],
 			"scripts": [
 				"resources/skins.minerva.categories/init.js"

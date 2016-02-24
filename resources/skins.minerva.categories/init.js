@@ -2,9 +2,6 @@
 
 	var loader = M.require( 'mobile.overlays/moduleLoader' ),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		SchemaMobileWebUIClickTracking = M.require(
-			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
-		uiSchema = new SchemaMobileWebUIClickTracking(),
 		user = M.require( 'mobile.user/user' );
 
 	// categories overlay
@@ -47,13 +44,7 @@
 	 * @ignore
 	 */
 	function initButton() {
-		$( '.category-button' )
-			.removeClass( 'hidden' )
-			.on( 'click', function () {
-				uiSchema.log( {
-					name: 'category-button'
-				} );
-			} );
+		$( '.category-button' ).removeClass( 'hidden' );
 	}
 
 	$( initButton );

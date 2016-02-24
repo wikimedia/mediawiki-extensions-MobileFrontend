@@ -1,10 +1,7 @@
 ( function ( M, $ ) {
 	var Drawer = M.require( 'mobile.drawers/Drawer' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		Icon = M.require( 'mobile.startup/Icon' ),
-		SchemaMobileWebUIClickTracking = M.require(
-			'mobile.loggingSchemas/SchemaMobileWebUIClickTracking' ),
-		uiSchema = new SchemaMobileWebUIClickTracking();
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * Drawer for references
@@ -41,9 +38,6 @@
 		},
 		/** @inheritdoc */
 		show: function () {
-			uiSchema.log( {
-				name: 'reference'
-			} );
 			return Drawer.prototype.show.apply( this, arguments );
 		},
 		className: 'drawer position-fixed text references',

@@ -1093,8 +1093,7 @@ class MobileFrontendHooks {
 					'dependencies' => array(
 						'mobile.overlays',
 						'skins.minerva.scripts',
-						'mediawiki.ui.anchor',
-						'mobile.loggingSchemas',
+						'mediawiki.ui.anchor'
 					),
 					'scripts' => array(
 						'resources/skins.minerva.notifications/init.js',
@@ -1157,7 +1156,6 @@ class MobileFrontendHooks {
 			'MobileWebLanguageSwitcher' => 15302503,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
-			'MobileWebUIClickTracking' => 10742159,
 			'MobileWebWatching' => 11761466,
 			'MobileWebWatchlistClickTracking' => 10720361,
 		);
@@ -1199,7 +1197,6 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
-			'resources/mobile.loggingSchemas/SchemaMobileWebUIClickTracking.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 		);
 
