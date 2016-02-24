@@ -1338,8 +1338,9 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRejectParserCacheValue( $value, $wikiPage, $popts ) {
-		if ( strpos( $value->getRawText(), '<a href="#/editor/' ) !== false ) {
+		if ( strpos( $value->getRawText(), 'edit-page' ) !== false ) {
 			// Bug T124356 parser cache corruption
+			RequestContext::getMain()->getStats()->increment( 'T124356' );
 			return false;
 		}
 
