@@ -1,14 +1,11 @@
 ( function ( M, mw, $ ) {
-	var SchemaMobileWebSearch = M.require( 'mobile.loggingSchemas/SchemaMobileWebSearch' );
-
 	/**
 	 * Coordinates the logging of MobileWebSchema events.
 	 * Implements schema defined at https://meta.wikimedia.org/wiki/Schema:MobileWebSearch
 	 *
 	 * @class
 	 */
-	function MobileWebSearchLogger( schema ) {
-		this.schema = schema;
+	function MobileWebSearchLogger() {
 		this.userSessionToken = null;
 		this.searchSessionToken = null;
 	}
@@ -47,8 +44,7 @@
 		 */
 		onSearchStart: function () {
 			this._newSearchSession();
-
-			this.schema.log( {
+			mw.track( 'mf.schemaMobileWebSearch', {
 				action: 'session-start',
 				userSessionToken: this.userSessionToken,
 				searchSessionToken: this.searchSessionToken,
@@ -65,17 +61,15 @@
 			var timeOffsetSinceStart =
 				new Date().getTime() - this.searchSessionCreatedAt;
 
-			this.schema.log( {
+			mw.track( 'mf.schemaMobileWebSearch', {
 				action: 'impression-results',
 				resultSetType: 'prefix',
 				numberOfResults: event.results.length,
 				userSessionToken: this.userSessionToken,
 				searchSessionToken: this.searchSessionToken,
-
 				// FIXME: Unless I'm mistaken, the timeToDisplayResults
 				// property isn't necessary.
 				timeToDisplayResults: timeOffsetSinceStart,
-
 				timeOffsetSinceStart: timeOffsetSinceStart
 			} );
 		},
@@ -90,12 +84,10 @@
 			var timeOffsetSinceStart =
 				new Date().getTime() - this.searchSessionCreatedAt;
 
-			this.schema.logBeacon( {
+			mw.track( 'mf.schemaMobileWebSearch', {
 				action: 'click-result',
-
 				// NOTE: clickIndex is 1-based.
 				clickIndex: event.resultIndex + 1,
-
 				userSessionToken: this.userSessionToken,
 				searchSessionToken: this.searchSessionToken,
 				timeOffsetSinceStart: timeOffsetSinceStart
@@ -109,9 +101,7 @@
 	 * search overlay.
 	 */
 	MobileWebSearchLogger.register = function () {
-		var logger = new MobileWebSearchLogger(
-			new SchemaMobileWebSearch()
-		);
+		var logger = new MobileWebSearchLogger();
 
 		$.each( {
 			'search-show': logger.onSearchShow,

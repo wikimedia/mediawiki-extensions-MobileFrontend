@@ -810,7 +810,7 @@
 			"dependencies": [
 				"mobile.pagelist.scripts",
 				"mobile.overlays",
-				"mobile.loggingSchemas"
+				"mobile.loggingSchemas.mobileWebSearch"
 			],
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"

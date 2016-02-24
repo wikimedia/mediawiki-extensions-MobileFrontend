@@ -1155,7 +1155,6 @@ class MobileFrontendHooks {
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebLanguageSwitcher' => 15302503,
 			'MobileWebMainMenuClickTracking' => 11568715,
-			'MobileWebSearch' => 12054448,
 			'MobileWebWatchlistClickTracking' => 10720361,
 		);
 	}
@@ -1176,6 +1175,9 @@ class MobileFrontendHooks {
 	 */
 	public static function onEventLoggingRegisterSchemas( &$schemas ) {
 		$schemas += self::getEventLoggingSchemas();
+		// eventually we'll get rid of the getEventLoggingSchemas function
+		// FIXME: remove the above comment when we do
+		$schemas['MobileWebSearch'] = 12054448;
 		return true;
 	}
 
@@ -1196,11 +1198,11 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
-			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 		);
 
 		$schemaModules = array();
 		$schemaEdit = $mfResourceFileModuleBoilerplate;
+		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
 		if ( class_exists( 'EventLogging' ) ) {
 			$schemaModules = array_map(
@@ -1222,6 +1224,15 @@ class MobileFrontendHooks {
 					)
 				);
 			}
+			$schemaMobileWebSearch += array(
+				'dependencies' => array(
+					'schema.MobileWebSearch',
+					'mobile.context'
+				),
+				'scripts' => array(
+					'resources/mobile.loggingSchemas/schemaMobileWebSearch.js',
+				)
+			);
 		}
 
 		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
@@ -1236,7 +1247,8 @@ class MobileFrontendHooks {
 
 		$resourceLoader->register( array(
 			'mobile.loggingSchemas' => $loggingSchemasModule,
-			'mobile.loggingSchemas.edit' => $schemaEdit
+			'mobile.loggingSchemas.edit' => $schemaEdit,
+			'mobile.loggingSchemas.mobileWebSearch' => $schemaMobileWebSearch,
 		) );
 	}
 
