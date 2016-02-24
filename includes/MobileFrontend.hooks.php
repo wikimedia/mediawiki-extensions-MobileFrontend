@@ -378,9 +378,12 @@ class MobileFrontendHooks {
 
 	/**
 	 * ResourceLoaderGetConfigVars hook handler
-	 * This should be used for variables which vary with the html
-	 * and for variables that should work cross skin including anonymous users
-	 * this includes use of MobileContext::isBetaGroupMember in this function
+	 * This should be used for variables which:
+	 *  - vary with the html
+	 *  - variables that should work cross skin including anonymous users
+	 *  - used for both, stable and beta mode (don't use
+	 *    MobileContext::isBetaGroupMember in this function - T127860)
+	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
 	 * @param array $vars
