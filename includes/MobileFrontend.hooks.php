@@ -1303,10 +1303,9 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ){
 			unset( $vars['wgCategories'] );
+			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 		}
 		$title = $out->getTitle();
-
-		$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 		return true;
 	}
