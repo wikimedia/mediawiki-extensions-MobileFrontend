@@ -232,18 +232,21 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$tables = array( 'recentchanges', 'watchlist' );
 		$fields = array( $dbr->tableName( 'recentchanges' ) . '.*' );
+		$innerConds = array(
+			'wl_user' => $user->getId(),
+			'wl_namespace=rc_namespace',
+			'wl_title=rc_title',
+			// FIXME: Filter out wikidata changes which currently show as anonymous (see bug 49315)
+			'rc_type!=' . $dbr->addQuotes( RC_EXTERNAL ),
+		);
+		// Filter out category membership changes if configured
+		if ( $user->getBoolOption( 'hidecategorization' ) ) {
+			$innerConds[] = 'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE );
+		}
 		$join_conds = array(
 			'watchlist' => array(
 				'INNER JOIN',
-				array(
-					'wl_user' => $user->getId(),
-					'wl_namespace=rc_namespace',
-					'wl_title=rc_title',
-					// FIXME: Filter out wikidata changes which currently show as anonymous (see bug 49315)
-					'rc_type!=' . $dbr->addQuotes( RC_EXTERNAL ),
-					// Filter out category membership changes
-					'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE ),
-				),
+				$innerConds,
 			),
 		);
 		$options = array( 'ORDER BY' => 'rc_timestamp DESC' );
