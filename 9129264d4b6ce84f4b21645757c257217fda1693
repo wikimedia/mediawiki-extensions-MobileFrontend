@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_897194df",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2016-02-24T21:29:38Z",
+      "side": 1,
+      "message": "This should probably be capped at \"99+\" like in other places.",
+      "revId": "9129264d4b6ce84f4b21645757c257217fda1693",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
