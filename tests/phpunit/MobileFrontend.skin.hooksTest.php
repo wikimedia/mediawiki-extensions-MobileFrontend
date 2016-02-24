@@ -12,9 +12,13 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			->disableOriginalConstructor()
 			->getMock();
 
-		$msgObj->expects( $this->any() )
+		$msgObj->expects( $this->once() )
 			->method( 'isDisabled' )
 			->will( $this->returnValue( $isDisabledValue ) );
+
+		$msgObj->expects( $this->once() )
+			->method( 'inContentLanguage' )
+			->will( $this->returnValue( $msgObj ) );
 
 		$msgObj->expects( $this->any() )
 			->method( 'text' )
