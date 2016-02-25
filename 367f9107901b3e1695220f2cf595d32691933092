@@ -16,6 +16,24 @@
       "revId": "367f9107901b3e1695220f2cf595d32691933092",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_1fbe2dcf",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-25T17:24:04Z",
+      "side": 1,
+      "message": "Then please change the core special watchlist, otherwise this would differ between mobile and desktop:\nhttps://github.com/wikimedia/mediawiki/blob/6e9b4f0e9ce4ccd6089c18b205065ef7fa077484/includes/specialpage/ChangesListSpecialPage.php#L257-L261\n:)",
+      "parentUuid": "2ea41786_9c21cbf8",
+      "revId": "367f9107901b3e1695220f2cf595d32691933092",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
