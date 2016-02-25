@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_7919817d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:25:03Z",
+      "side": 1,
+      "message": "When doing this, I would also fold $len into $listId (no reason to use an additional variable for one time use).\n\n    $listId \u003d $nodes-\u003elength - 1;",
+      "parentUuid": "2ea41786_ff3a36e3",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_1a19607e",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 13
@@ -87,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_392309a8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:25:03Z",
+      "side": 1,
+      "message": "From context it appears to be the index of the individual reference within the full list.",
+      "parentUuid": "2ea41786_9aa9d0de",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_fa756493",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 13
@@ -98,6 +134,24 @@
       "writtenOn": "2016-02-25T01:32:10Z",
       "side": 1,
       "message": "Shouldn\u0027t config.base apply to stable and beta as is done in the back end?",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_f91c916c",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:25:03Z",
+      "side": 1,
+      "message": "I wondered about this too in an earlier patch set. Is there really any reason we would have this run on stable but not beta?",
+      "parentUuid": "2ea41786_fa756493",
       "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
