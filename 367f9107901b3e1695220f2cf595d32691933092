@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_9c21cbf8",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2016-02-25T16:42:25Z",
+      "side": 1,
+      "message": "Per the incident with category membership changes appearing for ALL users when the feature was disabled on wikis again this should not check RCWatchCategoryMembership.\n\nCurrently this means on a wiki if the feature is enabled for a a period of time and then disabled all of the category watch list entries will suddenly appear for all users and there will be no way to hide them.\n\nJust do $user-\u003egetBoolOption( \u0027hidecategorization\u0027 ) please! :)",
+      "revId": "367f9107901b3e1695220f2cf595d32691933092",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
