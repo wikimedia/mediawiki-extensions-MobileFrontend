@@ -142,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_935463cb",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:19:10Z",
+      "side": 1,
+      "message": "Auto-append? I only notice one function that uses \"drawer\" below and the first check prompted is \"if ( !drawer ) //create drawer\". Doesn\u0027t that mean we can just instantiate it here?",
+      "parentUuid": "2ea41786_1b83afd2",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_88851c5d",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 8
@@ -212,6 +230,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_f338379d",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:19:10Z",
+      "side": 1,
+      "message": "var x \u003d { a: { o: 60 }, b: 80 };\nvar ref \u003d x.a;\nref.o \u003d 0;\nconsole.log( x.a.o \u003d\u003d\u003d 0);\n\n(And that link doesn\u0027t have any useful info related to this comment ;) )",
+      "parentUuid": "2ea41786_1b1c0fcb",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_c806b4d1",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 8
@@ -247,6 +283,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_33132f07",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:19:10Z",
+      "side": 1,
+      "message": "Whenever the first line in a function uses `this` I find it pretty useful to document what \"this\" is expected to be.",
+      "parentUuid": "2ea41786_bb105bae",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_28d2e82c",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 8
@@ -276,6 +330,24 @@
       "side": 1,
       "message": "I\u0027m not changing this line and am not keen to change on established code which I suspect is here for a reason :)",
       "parentUuid": "2ea41786_28d2e82c",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_d3d73b27",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-02-25T14:19:10Z",
+      "side": 1,
+      "message": "Good point.",
+      "parentUuid": "2ea41786_db15179e",
       "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
