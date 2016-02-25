@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_1fa63251",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "This should be the last line.",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_ff3a36e3",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "You can also use $listId instead of re-calculating $len - 1.",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_1a19607e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "This line should be moved inside the \u0027if\u0027 statement below as it\u0027s only used there.",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_5a36f8e5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "It maybe a good idea to prefix the class name with \u0027mf-\u0027 for example.",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9aa9d0de",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "What is $listId for?",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_fa756493",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "Shouldn\u0027t config.base apply to stable and beta as is done in the back end?",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_1a5e4018",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-25T01:32:10Z",
+      "side": 1,
+      "message": "missing tab",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
