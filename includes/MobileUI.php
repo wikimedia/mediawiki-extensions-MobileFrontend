@@ -21,7 +21,9 @@ class MobileUI {
 	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '' ) {
 		$base = 'mw-ui-icon';
 		$modifiers = 'mw-ui-icon-' . $iconType;
-		$modifiers .= ' mw-ui-icon-' . $iconName;
+		if ( $iconName ) {
+			$modifiers .= ' mw-ui-icon-' . $iconName;
+		}
 		return $base . ' ' . $modifiers . ' ' . $additionalClassNames;
 	}
 
