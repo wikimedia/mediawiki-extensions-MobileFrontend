@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_7865f2a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_1fa63251",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_ff3a36e3",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 13
@@ -54,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_98478e22",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_7919817d",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_1a19607e",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 13
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_585116dc",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_1a19607e",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_5a36f8e5",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 13
@@ -82,6 +136,24 @@
       "writtenOn": "2016-02-25T01:32:10Z",
       "side": 1,
       "message": "It maybe a good idea to prefix the class name with \u0027mf-\u0027 for example.",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_784e523e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Good call.",
+      "parentUuid": "2ea41786_5a36f8e5",
       "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -123,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_3860da9f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "You can have two references tag. Have clarified.",
+      "parentUuid": "2ea41786_392309a8",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_fa756493",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 13
@@ -158,6 +248,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_3839ba9f",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Seems correct.\nIt feels a little weird that a config could be\n{\nbase: true,\nbeta: false,\n}\nthough\n\nI\u0027ll follow the pattern in backend and lazy loading images and do as you say.",
+      "parentUuid": "2ea41786_f91c916c",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_1a5e4018",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 13
@@ -169,6 +277,24 @@
       "writtenOn": "2016-02-25T01:32:10Z",
       "side": 1,
       "message": "missing tab",
+      "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_58c27689",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_1a5e4018",
       "revId": "ee3128837aff774d71d8325a0ef03cb33ad63fc1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
