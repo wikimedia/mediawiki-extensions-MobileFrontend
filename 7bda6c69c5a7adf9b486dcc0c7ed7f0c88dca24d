@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_58eb5609",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:13:06Z",
+      "side": 1,
+      "message": "When creating a Drawer via new Drawer it automatically gets added to the DOM which results in a redraw.\n\nWe want to avoid this, until a user clicks a reference, so we only create the drawer when we need to.\n\nCan chat in IRC about it some more if unclear but this is done this way on purpose.",
+      "parentUuid": "2ea41786_935463cb",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_88851c5d",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 8
@@ -295,6 +313,24 @@
       "side": 1,
       "message": "Whenever the first line in a function uses `this` I find it pretty useful to document what \"this\" is expected to be.",
       "parentUuid": "2ea41786_bb105bae",
+      "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_78e8920b",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:13:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_33132f07",
       "revId": "7bda6c69c5a7adf9b486dcc0c7ed7f0c88dca24d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
