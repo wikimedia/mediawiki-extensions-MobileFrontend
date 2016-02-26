@@ -34,6 +34,24 @@
       "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_71baed1f",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T23:03:00Z",
+      "side": 1,
+      "message": "The fact this is quoted but RC_EXTERNAL is not confuses me... why?",
+      "parentUuid": "2ea41786_fc49e96a",
+      "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
