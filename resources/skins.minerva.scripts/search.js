@@ -1,7 +1,5 @@
 ( function ( M, $ ) {
 	var SearchOverlay, SearchGateway,
-		searchPlaceholderMsg = 'mobile-frontend-placeholder',
-		context = M.require( 'mobile.context/context' ),
 		router = M.require( 'mobile.startup/router' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		moduleConfig = {
@@ -42,13 +40,6 @@
 	if ( mw.config.get( 'skin' ) !== 'minerva' ) {
 		return;
 	}
-
-	// change the placeholder text for javascript enabled browsers
-	if ( context.isBetaGroupMember() ) {
-		searchPlaceholderMsg = 'mobile-frontend-placeholder-beta';
-	}
-
-	$( '#searchInput' ).attr( 'placeholder', mw.message( searchPlaceholderMsg ) );
 
 	// See https://phabricator.wikimedia.org/T76882 for why we disable search on Android 2
 	if ( browser.isAndroid2() ) {

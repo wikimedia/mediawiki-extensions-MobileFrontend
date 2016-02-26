@@ -837,9 +837,7 @@
 					"parse"
 				],
 				"3": "mobile-frontend-search-feedback-prompt",
-				"4": "mobile-frontend-search-feedback-link-text",
-				"5": "mobile-frontend-placeholder",
-				"6": "mobile-frontend-placeholder-beta"
+				"4": "mobile-frontend-search-feedback-link-text"
 			}
 		},
 		"mobile.search.api": {
