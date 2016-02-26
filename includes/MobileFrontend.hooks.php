@@ -1333,24 +1333,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Remove corruption caused by T124356 from the parser cache
-	 *
-	 * @param ParserOutput $value
-	 * @param WikiPage $wikiPage
-	 * @param ParserOptions $popts
-	 * @return bool
-	 */
-	public static function onRejectParserCacheValue( $value, $wikiPage, $popts ) {
-		if ( strpos( $value->getRawText(), 'edit-page' ) !== false ) {
-			// Bug T124356 parser cache corruption
-			RequestContext::getMain()->getStats()->increment( 'T124356' );
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
 	 * Handler for Extension registration callback
 	 */
 	public static function onRegistration() {

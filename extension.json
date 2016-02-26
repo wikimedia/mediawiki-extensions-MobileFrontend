@@ -1961,9 +1961,6 @@
 		],
 		"TitleSquidURLs": [
 			"MobileFrontendHooks::onTitleSquidURLs"
-		],
-		"RejectParserCacheValue": [
-			"MobileFrontendHooks::onRejectParserCacheValue"
 		]
 	},
 	"config": {
