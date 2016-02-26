@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_53225eb2",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-26T01:29:01Z",
+      "side": 1,
+      "message": "Not sure wgVersion makes sense to use here. It will change too often for proper persistence, and not often enough to make deployments possible. This is why the startup module exists so that you can export version information. But for that it\u0027s important not to mess with the target, so that the information is actually available from desktop/mobile targets.\n\nPer your suggestion recently, and my original recommendation, we\u0027re working on removing the targets system. Let\u0027s not build more on top of it. This can work just as well (if not better) without creation a new target.",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_ee05a114",
+        "filename": "resources/skins.minerva.serviceWorker/index.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-26T01:29:01Z",
+      "side": 1,
+      "message": "Creating new Promises like this is an anti-pattern. Use .then() chain and propagation instead. That way there it\u0027s logically impossible to forget a race branch that would cause the request to stall indefinitely. It also allows the system and dev tools to better understand the async action and provide meaningful data in the debugger.\n\nThere are various branches below that are not covered and would currently result in an indefinitely frozen interface.",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_ee536118",
+        "filename": "resources/skins.minerva.serviceWorker/index.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-26T01:29:01Z",
+      "side": 1,
+      "message": "Beware that there is no eviction or expiration handling in SW cache by default.\n\nhttps://slightlyoff.github.io/ServiceWorker/spec/service_worker/#cache-lifetimes\n\n\u003e The Cache objects do not expire unless authors delete the entries.\n\nEach of these should probably have a strong limit on how many items you want to keep around. Otherwise this will go bad quite quickly.\n\nload.php style urls will vary over time and will vary per-page even (as it depends on page content which modules are needed).\n\nSame with thumbnails and html pages.",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
