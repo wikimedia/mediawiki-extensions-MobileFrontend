@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_9880eefa",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:33:15Z",
+      "side": 1,
+      "message": "Sorry should have prefaced this patch with some background.\nWas at a workshop with @slightlylate and some others and was playing around with MediaWiki to try and work out how this might work so havent thought through in much detail. wgVersion probably doesn\u0027t make much sense :)\n\nIn terms of removing the targets system - we should track that in a bug. Off topic - but I think there are a bunch of things we need to fix before being able to do that safely (mostly I\u0027m worried about jquery.ui appearing in the mobile site, exhausting localStorage and impacting performance)\n\nI\u0027m open to ideas around how best to do this differently. The reason I liked the targets approach was it prevented workers from being loaded accidentally via mw.loader outside the background task environment. You wouldn\u0027t want to load a worker which uses ES6 and self inside a normal MediaWiki module.",
+      "parentUuid": "2ea41786_53225eb2",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_ee05a114",
         "filename": "resources/skins.minerva.serviceWorker/index.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_78a652a9",
+        "filename": "resources/skins.minerva.serviceWorker/index.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:33:15Z",
+      "side": 1,
+      "message": "Yup, i was hacking and not really thinking too much about how my code looked rather that it worked ;-)\n\nAll good feedback.",
+      "parentUuid": "2ea41786_ee05a114",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_ee536118",
         "filename": "resources/skins.minerva.serviceWorker/index.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2016-02-26T01:29:01Z",
       "side": 1,
       "message": "Beware that there is no eviction or expiration handling in SW cache by default.\n\nhttps://slightlyoff.github.io/ServiceWorker/spec/service_worker/#cache-lifetimes\n\n\u003e The Cache objects do not expire unless authors delete the entries.\n\nEach of these should probably have a strong limit on how many items you want to keep around. Otherwise this will go bad quite quickly.\n\nload.php style urls will vary over time and will vary per-page even (as it depends on page content which modules are needed).\n\nSame with thumbnails and html pages.",
+      "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_78773236",
+        "filename": "resources/skins.minerva.serviceWorker/index.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-26T17:33:15Z",
+      "side": 1,
+      "message": "Yup. See commit message. Haven\u0027t really thought through this in much detail but figured we might cache last 10 pages.\n\nWe now have some people at Google/Mozilla who are keen to help guide us around this fyi.",
+      "parentUuid": "2ea41786_ee536118",
       "revId": "8c39d686795a04a917860f96fbeab44fc2221072",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
