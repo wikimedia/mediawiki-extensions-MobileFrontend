@@ -814,8 +814,9 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$watchTemplate = array(
 				'id' => 'ca-watch',
-				'class' => MobileUI::iconClass( 'watch', 'element',
-					'icon-32px watch-this-article hidden' ),
+				// Use blank icon to reserve space for watchstar icon once JS loads
+				'class' => MobileUI::iconClass( '', 'element',
+					'icon-32px watch-this-article' ),
 			);
 			// standardise watch article into one menu item
 			if ( isset( $actions['watch'] ) ) {
