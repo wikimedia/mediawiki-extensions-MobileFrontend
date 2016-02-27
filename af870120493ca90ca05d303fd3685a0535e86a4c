@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_0cb360e9",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-02-27T14:48:16Z",
+      "side": 1,
+      "message": "This probably caused T128273.",
+      "revId": "af870120493ca90ca05d303fd3685a0535e86a4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
