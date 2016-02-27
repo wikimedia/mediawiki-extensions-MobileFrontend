@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_acca4c48",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-27T15:37:05Z",
+      "side": 1,
+      "message": "Please use $this-\u003egetMsg() when possible :)\n-\u003e I440767d7d500b135f5fbd4f69f4b150413263f8e",
+      "revId": "f4de926c9f9dd7acf5d40866ad5ff43b69c683f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
