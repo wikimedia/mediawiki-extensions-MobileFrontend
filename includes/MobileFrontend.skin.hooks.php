@@ -135,7 +135,9 @@ class MobileFrontendSkinHooks {
 	 * @param Title $title
 	 * @param WebRequest $req
 	 */
-	public static function desktopFooter( $sk, $tpl, $ctx, $title, $req ) {
+	public static function desktopFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
+		Title $title, WebRequest $req
+	) {
 		$footerlinks = $tpl->data['footerlinks'];
 		$args = $req->getQueryValues();
 		// avoid title being set twice
@@ -147,7 +149,7 @@ class MobileFrontendSkinHooks {
 
 		$link = Html::element( 'a',
 			array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
-			wfMessage( 'mobile-frontend-view' )->text()
+			$ctx->msg( 'mobile-frontend-view' )->text()
 		);
 		$tpl->set( 'mobileview', $link );
 		$footerlinks['places'][] = 'mobileview';
@@ -163,7 +165,9 @@ class MobileFrontendSkinHooks {
 	 * @param WebRequest $req
 	 * @return QuickTemplate
 	 */
-	protected static function mobileFooter( $sk, $tpl, $ctx, $title, $req ) {
+	protected static function mobileFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
+		Title $title, WebRequest $req
+	) {
 		$url = $sk->getOutput()->getProperty( 'desktopUrl' );
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
@@ -176,8 +180,8 @@ class MobileFrontendSkinHooks {
 			$ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) )
 		);
 
-		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
-		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
+		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->escaped();
+		$mobile = $ctx->msg( 'mobile-frontend-view-mobile' )->escaped();
 
 		$sitename = self::getSitename( true );
 		$switcherHtml = <<<HTML
@@ -228,12 +232,13 @@ HTML;
 	 * @return string
 	 */
 	public static function getSitename( $withPossibleTrademark = false ) {
-		$config = MobileContext::singleton()->getMFConfig();
+		$ctx = MobileContext::singleton();
+		$config = $ctx->getMFConfig();
 		$customLogos = $config->get( 'MFCustomLogos' );
 		$trademarkSymbol = $config->get( 'MFTrademarkSitename' );
 		$suffix = '';
 
-		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->text();
+		$footerSitename = $ctx->msg( 'mobile-frontend-footer-sitename' )->text();
 
 		// Add a trademark symbol if needed
 		if ( $withPossibleTrademark ) {

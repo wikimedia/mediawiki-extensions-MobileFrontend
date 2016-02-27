@@ -89,7 +89,7 @@ class MinervaTemplate extends BaseTemplate {
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
 			// attribute values, so need to escape the string here.
-			'placeholder' => wfMessage( 'mobile-frontend-placeholder' )->escaped(),
+			'placeholder' => $this->getMsg( 'mobile-frontend-placeholder' )->text(),
 		);
 		return $searchBox;
 	}
@@ -189,7 +189,7 @@ class MinervaTemplate extends BaseTemplate {
 					'class' => 'languageSelector',
 					'href' => $languageUrl,
 				),
-				'label' => wfMessage( 'mobile-frontend-language-article-heading' )->text()
+				'label' => $this->getMsg( 'mobile-frontend-language-article-heading' )->text()
 			);
 		}
 

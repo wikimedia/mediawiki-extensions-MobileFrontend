@@ -29,7 +29,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 	public function executeWhenAvailable( $par = '' ) {
 		$this->setHeaders();
 		$out = $this->getOutput();
-		$out->setPageTitle( wfMessage( 'mobile-frontend-main-menu-page-title' )->text() );
+		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-page-title' ) );
 		$out->setProperty( 'bodyClassName', 'navigation-enabled navigation-full-screen' );
 		$out->addModuleStyles(
 			array(

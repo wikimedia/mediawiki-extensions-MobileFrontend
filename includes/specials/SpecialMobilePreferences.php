@@ -63,7 +63,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		$this->checkReadOnly();
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
-			$out->addHtml( MobileUI::successBox( wfMessage( 'savedprefs' ) ) );
+			$out->addHtml( MobileUI::successBox( $this->msg( 'savedprefs' )->escaped() ) );
 		}
 
 		// combine our valid tabs array with all available tabs on the preferences form

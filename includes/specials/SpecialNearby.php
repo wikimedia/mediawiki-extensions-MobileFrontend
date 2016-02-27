@@ -29,7 +29,7 @@ class SpecialNearby extends MobileSpecialPage {
 
 		// set config
 		$output->addJsConfigVars( 'wgMFNearbyRange', $this->getMFConfig()->get( 'MFNearbyRange' ) );
-		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );
+		$output->setPageTitle( $this->msg( 'mobile-frontend-nearby-title' ) );
 
 		$html =
 			Html::openElement( 'div',
@@ -41,9 +41,9 @@ class SpecialNearby extends MobileSpecialPage {
 			MobileUI::contentElement(
 				MobileUI::errorBox(
 					Html::element( 'h2', array(),
-						wfMessage( 'mobile-frontend-nearby-requirements' ) ) .
+						$this->msg( 'mobile-frontend-nearby-requirements' )->text() ) .
 					Html::element( 'p', array(),
-						wfMessage( 'mobile-frontend-nearby-requirements-guidance' ) )
+						$this->msg( 'mobile-frontend-nearby-requirements-guidance' )->text() )
 				),
 				'noscript'
 			) .

@@ -14,7 +14,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	 */
 	protected function getSearchAttributes() {
 		$searchBox = parent::getSearchAttributes();
-		$searchBox['placeholder'] = wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
+		$searchBox['placeholder'] = $this->getMsg( 'mobile-frontend-placeholder-beta' )->text();
 		return $searchBox;
 	}
 
@@ -39,7 +39,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 					// be removed in categories/init.js)
 					'class' => 'category-button hidden',
 				),
-				'label' => wfMessage( 'categories' )->text()
+				'label' => $this->getMsg( 'categories' )->text()
 			),
 		);
 	}
@@ -57,7 +57,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 				'attributes' => array(
 					'href' => $donationUrl,
 				),
-				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
+				'label' => $this->getMsg( 'mobile-frontend-donate-button-label' )->text()
 			);
 		}
 

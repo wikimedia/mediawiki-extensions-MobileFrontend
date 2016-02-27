@@ -102,7 +102,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 			$tpl->set( 'subject-page', Linker::link(
 				$title->getSubjectPage(),
-				wfMessage( $msg, $title->getText() ),
+				$this->msg( $msg, $title->getText() )->escaped(),
 				array( 'class' => 'return-link' )
 			) );
 		}
@@ -138,11 +138,11 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$additionalClass = $noJsEdit?' nojs-edit':'';
 			$lang = wfGetLangObj( $lang );
-			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
+			$message = $this->msg( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			$html = Html::openElement( 'span' );
 			$html .= Html::element( 'a', array(
 				'href' =>  $this->getTitle()->getLocalUrl( array( 'action' => 'edit', 'section' => $section ) ),
-				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang )->text(),
+				'title' => $this->msg( 'editsectionhint', $tooltip )->inLanguage( $lang )->text(),
 				'data-section' => $section,
 				// Note visibility of the edit section link button is controlled by .edit-page in ui.less so
 				// we default to enabled even though this may not be true.
@@ -271,7 +271,7 @@ class SkinMinerva extends SkinTemplate {
 		// notifications archive, show the notifications icon in the header.
 		if ( $this->useEcho() && $user->isLoggedIn() ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
-			$notificationsMsg = wfMessage( 'mobile-frontend-user-button-tooltip' );
+			$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
 				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
 				$isZero = $count === 0;
@@ -279,7 +279,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 		} elseif ( !empty( $newtalks ) ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Mytalk' );
-			$notificationsMsg = wfMessage( 'mobile-frontend-user-newmessages' )->text();
+			$notificationsMsg = $this->msg( 'mobile-frontend-user-newmessages' )->text();
 		}
 
 		if ( $notificationsTitle ) {
@@ -342,7 +342,7 @@ class SkinMinerva extends SkinTemplate {
 
 		$menu->insert( 'watchlist', $isJSOnly = true )
 			->addComponent(
-				wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+				$this->msg( 'mobile-frontend-main-menu-watchlist' )->escaped(),
 				$this->getPersonalUrl(
 					$watchTitle,
 					'mobile-frontend-watchlist-purpose',
@@ -358,7 +358,7 @@ class SkinMinerva extends SkinTemplate {
 			// Settings link
 			$menu->insert( 'settings' )
 				->addComponent(
-					wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+					$this->msg( 'mobile-frontend-main-menu-settings' )->escaped(),
 					SpecialPage::getTitleFor( 'MobileOptions' )->
 						getLocalUrl( array( 'returnto' => $returnToTitle ) ),
 					MobileUI::iconClass( 'mobileoptions', 'before' ),
@@ -371,7 +371,7 @@ class SkinMinerva extends SkinTemplate {
 			// Preferences link
 			$menu->insert( 'preferences' )
 				->addComponent(
-					wfMessage( 'preferences' )->escaped(),
+					$this->msg( 'preferences' )->escaped(),
 					$this->getPersonalUrl(
 						SpecialPage::getTitleFor( 'Preferences' ),
 						'prefsnologintext2'
@@ -419,7 +419,7 @@ class SkinMinerva extends SkinTemplate {
 		// Home link
 		$menu->insert( 'home' )
 			->addComponent(
-				wfMessage( 'mobile-frontend-home-button' )->escaped(),
+				$this->msg( 'mobile-frontend-home-button' )->escaped(),
 				Title::newMainPage()->getLocalUrl(),
 				MobileUI::iconClass( 'home', 'before' ),
 				array( 'data-event-name' => 'home' )
@@ -428,7 +428,7 @@ class SkinMinerva extends SkinTemplate {
 		// Random link
 		$menu->insert( 'random' )
 			->addComponent(
-				wfMessage( 'mobile-frontend-random-button' )->escaped(),
+				$this->msg( 'mobile-frontend-random-button' )->escaped(),
 				SpecialPage::getTitleFor( 'Randompage',
 					MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
 						'#/random',
@@ -446,7 +446,7 @@ class SkinMinerva extends SkinTemplate {
 		) {
 			$menu->insert( 'nearby', $isJSOnly = true )
 				->addComponent(
-					wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+					$this->msg( 'mobile-frontend-main-menu-nearby' )->escaped(),
 					SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
 					MobileUI::iconClass( 'nearby', 'before', 'nearby' ),
 					array( 'data-event-name' => 'nearby' )
@@ -515,7 +515,7 @@ class SkinMinerva extends SkinTemplate {
 					array( 'data-event-name' => 'profile' )
 				)
 				->addComponent(
-					wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
+					$this->msg( 'mobile-frontend-main-menu-logout' )->escaped(),
 					$url,
 					MobileUI::iconClass(
 						'secondary-logout', 'element', 'secondary-action truncated-text' ),
@@ -531,7 +531,7 @@ class SkinMinerva extends SkinTemplate {
 			$url = $this->getLoginUrl( $query );
 			$menu->insert( 'auth', $isJSOnly = true )
 				->addComponent(
-					wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
+					$this->msg( 'mobile-frontend-main-menu-login' )->escaped(),
 					$url,
 					MobileUI::iconClass( 'anonymous-white', 'before' ),
 					array( 'data-event-name' => 'login' )
@@ -627,7 +627,7 @@ class SkinMinerva extends SkinTemplate {
 				$templateParser->processTemplate( 'user_page_links', $data ) );
 		} elseif ( $title->isMainPage() ) {
 			if ( $user->isLoggedIn() ) {
-				$pageTitle = wfMessage(
+				$pageTitle = $this->msg(
 					'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text();
 			} else {
 				$pageTitle = '';
