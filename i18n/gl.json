@@ -256,6 +256,7 @@
 	"mobile-frontend-search-submit": "Ir",
 	"mobile-frontend-settings-images-explain": "Cargar todas as imaxes que aparezan nunha páxina.",
 	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-lowres": "Aforro de datos",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} está dispoñible en $1 {{PLURAL:$1|lingua|linguas}}. Todas as versións dispoñibles aparecen a continuación",
 	"mobile-frontend-settings-site-header": "Lingua de {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Vaites!",

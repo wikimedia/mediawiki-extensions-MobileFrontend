@@ -12,7 +12,8 @@
 			"Whym",
 			"Sujiniku",
 			"Otokoume",
-			"2nd-player"
+			"2nd-player",
+			"Los688"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -226,6 +227,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Special:Uploads から投稿された画像",
 	"mobile-frontend-photo-article-edit-comment": "ページで使用する画像を追加しました",
 	"mobile-frontend-photo-caption-placeholder": "この画像の解説 (必須)",
+	"mobile-frontend-photo-upload-invalid-user": "利用者アカウント「$1」は登録されていません。",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|アップロード <span>$1</span> 件}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "アップロード 500+ 件",
 	"mobile-frontend-placeholder": "{{SITENAME}}内を検索",
