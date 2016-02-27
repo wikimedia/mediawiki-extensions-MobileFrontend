@@ -4,7 +4,8 @@
 		user = M.require( 'mobile.user/user' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		$talk = $( '.talk' ),
-		title = decodeURIComponent( $talk.data( 'title' ) ) || mw.config.get( 'wgPageName' ),
+		title = $talk.data( 'title' ) && decodeURIComponent( $talk.data( 'title' ) ) ||
+			mw.config.get( 'wgPageName' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		skin = M.require( 'skins.minerva.scripts/skin' );
