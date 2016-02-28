@@ -714,7 +714,6 @@
 				"mobile",
 				"desktop"
 			],
-			"@doc": "needed for qunit test",
 			"dependencies": [
 				"mobile.editor.common",
 				"mobile.microAutoSize",
