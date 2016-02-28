@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_b41a8ece",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 717,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-28T16:53:54Z",
+      "side": 0,
+      "message": "could you move this comment to the top level and say that the \"mediawiki.notification\" dependency is needed for qunit tests? :)",
+      "revId": "26535a3797c55c9850fcd08fb8baf35140cfbbb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
