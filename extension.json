@@ -174,10 +174,6 @@
 			]
 		},
 		"skins.minerva.icons.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -189,10 +185,6 @@
 			}
 		},
 		"mobile.overlay.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"class": "ResourceLoaderImageModule",
@@ -212,10 +204,6 @@
 			}
 		},
 		"mobile.issues.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -225,10 +213,6 @@
 			}
 		},
 		"mobile.toc.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -237,10 +221,6 @@
 			}
 		},
 		"mobile.references.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -249,10 +229,6 @@
 			}
 		},
 		"mobile.toggle.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -261,10 +237,6 @@
 			}
 		},
 		"skins.minerva.icons.images.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
@@ -795,10 +767,6 @@
 			]
 		},
 		"mobile.editor.overlay.withtoolbar.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"prefix": "oo-ui-icon",
 			"selector": ".oo-ui-icon-{name}",
@@ -939,10 +907,6 @@
 			]
 		},
 		"mobile.swipe.images": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"class": "ResourceLoaderImageModule",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
