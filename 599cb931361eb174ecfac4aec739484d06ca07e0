@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_eaeedab0",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-29T18:36:47Z",
+      "side": 1,
+      "message": "May wanna use Html::element or Html::rawElement here.",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_8a1406a2",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-29T18:36:47Z",
+      "side": 1,
+      "message": "Prefer early return from !$action for a less error prone and more maintainable path forwards. Also let\u0027s the main purpose of the function be outside the if statement.",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_0a2016f1",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-29T18:36:47Z",
+      "side": 1,
+      "message": "Maybe rename this variable as it isn\u0027t text but html. The core data key uses \u0027html\u0027 as well.",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
