@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_ad01dc72",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-29T20:26:25Z",
+      "side": 1,
+      "message": "Fixed in the linked change :) Thanks for mentioning!",
+      "parentUuid": "2ea41786_8a8ba6e7",
+      "revId": "f4de926c9f9dd7acf5d40866ad5ff43b69c683f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_ea7b3ae9",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "writtenOn": "2016-02-29T18:38:54Z",
       "side": 1,
       "message": "Value must not be escaped. This is a raw attribute array, it\u0027ll be naturally escaped on the way out.",
+      "revId": "f4de926c9f9dd7acf5d40866ad5ff43b69c683f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_6dfbe477",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-02-29T20:26:25Z",
+      "side": 1,
+      "message": "Fixed in the linked change in MinervaTemplate.php :)",
+      "parentUuid": "2ea41786_ea7b3ae9",
       "revId": "f4de926c9f9dd7acf5d40866ad5ff43b69c683f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
