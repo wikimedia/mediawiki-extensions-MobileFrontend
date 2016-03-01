@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_23ce5832",
+        "filename": "tests/qunit/mobile.user/test_user.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-01T17:40:36Z",
+      "side": 1,
+      "message": "2 instead of 3 :)",
+      "revId": "87837e65285320c2748a52cdfff32bfa091c35fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
