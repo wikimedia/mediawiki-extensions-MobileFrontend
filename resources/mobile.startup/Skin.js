@@ -176,28 +176,28 @@
 		 */
 		loadImages: function () {
 			var self = this,
-				$imageLinks = this.$( '#content' ).find( '.image' );
+				$imagePlaceholders = this.$( '#content' ).find( '.lazy-image-placeholder' );
 
 			/**
 			 * Load remaining images in viewport
 			 */
 			function _loadImages() {
 
-				$imageLinks = $imageLinks.filter( function ( index, link ) {
-					var $imageLink = $( link );
+				$imagePlaceholders = $imagePlaceholders.filter( function ( index, placeholder ) {
+					var $placeholder = $( placeholder );
 
 					if (
-						util.isElementInViewport( $imageLink ) &&
-						$imageLink.find( '.spinner' ).is( ':visible' )
+						util.isElementInViewport( $placeholder ) &&
+						$placeholder.find( '.spinner' ).is( ':visible' )
 					) {
-						self.loadImage( $imageLink );
+						self.loadImage( $placeholder );
 						return false;
 					}
 
 					return true;
 				} );
 
-				if ( !$imageLinks.length ) {
+				if ( !$imagePlaceholders.length ) {
 					M.off( 'scroll', _loadImages );
 					M.off( 'resize', _loadImages );
 					M.off( 'section-toggled', _loadImages );
@@ -214,11 +214,10 @@
 
 		/**
 		 * Load an image on demand
-		 * @param {jQuery.Object} $imageLink
+		 * @param {jQuery.Object} $placeholder
 		 */
-		loadImage: function ( $imageLink ) {
-			var $noscript = $imageLink.find( 'noscript' ),
-				$placeholder = $imageLink.find( '.lazy-image-placeholder' ),
+		loadImage: function ( $placeholder ) {
+			var $noscript = $placeholder.prev( 'noscript' ),
 				// Grab the image markup from the HTML only fallback
 				// Image will start downloading
 				$image = $( $.parseHTML( $noscript.text() ) ),
