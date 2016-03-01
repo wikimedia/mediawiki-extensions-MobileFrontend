@@ -1238,7 +1238,7 @@ class MobileFrontendHooks {
 				}
 			}
 			// Enable wrapped sections
-			$po->setText( ExtMobileFrontend::DOMParse( $outputPage, $po->getText(), $isBeta ) );
+			$po->setText( ExtMobileFrontend::DOMParse( $outputPage, $po->getRawText(), $isBeta ) );
 		}
 		return true;
 	}
