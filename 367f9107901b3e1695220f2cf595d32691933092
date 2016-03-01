@@ -34,6 +34,24 @@
       "revId": "367f9107901b3e1695220f2cf595d32691933092",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_3d1af57e",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2016-03-01T14:17:56Z",
+      "side": 1,
+      "message": "The code change in core was actually at https://gerrit.wikimedia.org/r/#/c/267235/1",
+      "parentUuid": "2ea41786_1fbe2dcf",
+      "revId": "367f9107901b3e1695220f2cf595d32691933092",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
