@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_92a9907a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "See Baha\u0027s earlier comments. To me this is why I like our team norm [1]\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/Team/Team_norms#Code_review :-)\n\nI think we should expand that point to say we should codify jscs/phpcs rules where we feel the status quo is not correct. Maybe something to bring into the next offsite.\n\nI dream of a world where code styling is not part of code review.\nThis may also be a time to re-evaluate whether we can automate these things now that jscs supports auto linting.",
+      "parentUuid": "2ea41786_4a6dae2c",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_6a5f4a78",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 14
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_92c0b030",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_4a260e13",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_4ac92e54",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 14
@@ -64,6 +100,24 @@
       "writtenOn": "2016-02-29T18:58:36Z",
       "side": 1,
       "message": "See comment train on PS 8...\n\nbut not blocking.",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_7233b45f",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_4ac92e54",
       "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_f2256405",
+        "filename": "tests/qunit/mobile.references/test_references.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "QUnit will reset the elements inside the #qunit-fixture element after each test, removing any events that may have existed. [1]\n\n[1] https://qunitjs.com/cookbook/#keeping-tests-atomic",
+      "parentUuid": "2ea41786_cac75e14",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_8ad166d2",
         "filename": "tests/qunit/mobile.references/test_references.js",
         "patchSetId": 14
@@ -104,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_328bfce9",
+        "filename": "tests/qunit/mobile.references/test_references.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "The variable is a property of the module that is instantiated at the start of every test. Therefore no need to tear down - variables will not leak into the next module or test.",
+      "parentUuid": "2ea41786_8ad166d2",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_6a9c2a13",
         "filename": "tests/qunit/tests.mobilefrontend/references.html",
         "patchSetId": 14
@@ -115,6 +205,24 @@
       "writtenOn": "2016-02-29T18:58:36Z",
       "side": 1,
       "message": "If it\u0027s not necessary for this second span to be on the same line, then it should be moved below. (But I understand that it might be due to HTML weirdness with whitespace sometimes.)",
+      "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_927bd0ea",
+        "filename": "tests/qunit/tests.mobilefrontend/references.html",
+        "patchSetId": 14
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T23:31:14Z",
+      "side": 1,
+      "message": "I consider this to be a code styling nitpick.",
+      "parentUuid": "2ea41786_6a9c2a13",
       "revId": "74d9dc25fb11d4bd0bb96540765aa1be038d8885",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
