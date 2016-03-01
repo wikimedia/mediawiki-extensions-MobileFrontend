@@ -2,12 +2,35 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
-			"JoostBotman"
+			"JoostBotman",
+			"Gts-tg"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "οὐ σύνοψις μεταγραφῶν",
+	"mobile-frontend-copyright": "Τό περιεχόμενο ὑπάρχειν διά $1 πλὴν ἐάν ἄλλως κηρύσσειν.",
 	"mobile-frontend-editor-edit": "Ἐκδὀς",
+	"mobile-frontend-featured-article": "Ἐξαίρετη ἐγγραφή σήμερον",
 	"mobile-frontend-home-button": "Κυρία",
+	"mobile-frontend-language-article-heading": "Ἀναγνῶναι άλλογλωσσιστί",
+	"mobile-frontend-last-modified-date": "ὕστατον μετεβλήθη εν $1, εν $2",
+	"mobile-frontend-main-menu-account-create": "Λογισμὸν ποιεῖν",
+	"mobile-frontend-main-menu-button-tooltip": "Ἀνοίγειν κύριες αἵρεσεις",
+	"mobile-frontend-main-menu-login": "Συνδεῖσθαι",
+	"mobile-frontend-main-menu-nearby": "Πλησίον",
+	"mobile-frontend-main-menu-settings": "Τὰ περιόντα",
+	"mobile-frontend-main-menu-watchlist": "Ἐφορώμενα",
+	"mobile-frontend-news-items": "Νέον τι",
 	"mobile-frontend-password": "Σῆμα:",
+	"mobile-frontend-password-placeholder": "Σῆμα",
+	"mobile-frontend-placeholder": "Ζητεῖν {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Έρημία",
+	"mobile-frontend-random-button": "Εἰκαῖο",
 	"mobile-frontend-search-submit": "Ἰέναι",
-	"mobile-frontend-username": "Ὄνομα χρωμένου:"
+	"mobile-frontend-terms-text": "Λόγοι χρήσεως",
+	"mobile-frontend-view": "Προβολή κινητού",
+	"mobile-frontend-view-desktop": "Έπιτραπέζιον",
+	"mobile-frontend-view-mobile": "Κινητό",
+	"tag-mobile_edit": "Μεταγράφειν κινητού",
+	"tag-mobile_web_edit": "Μεταγράφειν δια διαδικτυακού κινητού",
+	"mobile-frontend-pageaction-edit-tooltip": "Μεταγράφειν τὸ κύριον μέρος ταύτης δέλτου."
 }
