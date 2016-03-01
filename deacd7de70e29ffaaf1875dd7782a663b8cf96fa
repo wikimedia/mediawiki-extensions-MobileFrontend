@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_316e9ec5",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-01T19:44:26Z",
+      "side": 1,
+      "message": "Note if for whatever reason title is something other than a string this will also cause issues. \n\nI\u0027d be keen for us to assert it is a string since there is nothing stopping an editor from doing:\n\u003cdiv class\u003d\"talk\" data-title\u003d\"{}\"\u003etext\u003c/div\u003e\nand also make sure we use an id selector the talk link to avoid any other weirdness - this issue might be related to people using the talk class for other things.\n\nAlso the logic here at this point probably warrants to be inside an if block rather than this very long statement.",
+      "revId": "deacd7de70e29ffaaf1875dd7782a663b8cf96fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
