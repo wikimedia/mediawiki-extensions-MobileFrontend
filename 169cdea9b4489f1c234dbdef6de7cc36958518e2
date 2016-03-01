@@ -52,6 +52,24 @@
       "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9df529b8",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 2626
+      },
+      "writtenOn": "2016-03-01T12:09:54Z",
+      "side": 1,
+      "message": "Good point. I made it quoted as it is also quoted in the core (desktop) code: https://github.com/wikimedia/mediawiki/blob/6e9b4f0e9ce4ccd6089c18b205065ef7fa077484/includes/specialpage/ChangesListSpecialPage.php#L260\nI have of course noticed that RC_EXTERNAL is not quoted but I have thought it should not get quoted (if ever) in this particular change.\nI would consider it good to quote RC_EXTERNAL too, or is there any need not to do that? I\u0027ll make a change quoting RC_EXTERNAL and it can be further discussed there.",
+      "parentUuid": "2ea41786_71baed1f",
+      "revId": "169cdea9b4489f1c234dbdef6de7cc36958518e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
