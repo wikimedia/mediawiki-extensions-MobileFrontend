@@ -19,7 +19,8 @@
 			"Wehwei",
 			"Zhxy 519",
 			"Bowleerin",
-			"EagerLin"
+			"EagerLin",
+			"飞舞回堂前"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -299,7 +300,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "伺服器發生錯誤，無法儲存您旳編輯。請嘗試重新讀取此頁。",
 	"mobile-frontend-talk-topic-wait": "正在儲存您的新話題，請稍候。",
 	"mobile-frontend-terms-text": "使用條款",
-	"mobile-frontend-thanked-notice": "$1 已被告知您喜歡{{GENDER:$2|他|她|他們}}的編輯。",
+	"mobile-frontend-thanked-notice": "$1 已被告知您喜歡{{GENDER:$2|他|她|他}}的編輯。",
 	"mobile-frontend-user-button-tooltip": "顯示我的通知",
 	"mobile-frontend-user-newmessages": "您的對話頁面有新訊息",
 	"mobile-frontend-view": "手機版檢視",
