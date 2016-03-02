@@ -12,6 +12,8 @@
 
 	background-color: @colorGray14;
 	border: 1px solid @colorGray11;
+	// offset the borders to avoid pushing down content by 2px border on load
+	box-sizing: border-box;
 	border-radius: 2px;
 
 	// Hide anything around the dimensions of the placeholder (avoids spinner
