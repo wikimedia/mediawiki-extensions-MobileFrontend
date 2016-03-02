@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
+@chrome @firefox @test2.m.wikipedia.org @vagrant
 Feature: Manage Watchlist
 
   Background:
@@ -6,7 +6,7 @@ Feature: Manage Watchlist
       And I have recently edited pages on my watchlist
       And I am on the "Special:EditWatchlist" page
 
-  @smoke @integration
+  @integration
   Scenario: Switching to Feed view
     When I switch to the modified view of the watchlist
       And I click the Pages tab
@@ -14,6 +14,7 @@ Feature: Manage Watchlist
     Then I should see a list of diff summary links
       And the modified button should be selected
 
+  @integration
   Scenario: Switching to List view
     When I switch to the modified view of the watchlist
       And I switch to the list view of the watchlist
