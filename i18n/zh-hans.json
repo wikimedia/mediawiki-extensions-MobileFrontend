@@ -315,7 +315,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "服务器出现一个错误，您的编辑未能保存。请尝试重新加载此页面。",
 	"mobile-frontend-talk-topic-wait": "正在保存您的新话题，请稍候。",
 	"mobile-frontend-terms-text": "使用条款",
-	"mobile-frontend-thanked-notice": "$1已被告知你喜欢{{GENDER:$2|他|她|他}}的编辑。",
+	"mobile-frontend-thanked-notice": "$1已被告知您喜欢{{GENDER:$2|他|她|他}}的编辑。",
 	"mobile-frontend-user-button-tooltip": "显示我的通知",
 	"mobile-frontend-user-newmessages": "您的讨论页有您的新消息",
 	"mobile-frontend-view": "手机版视图",
