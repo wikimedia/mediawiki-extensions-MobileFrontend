@@ -145,11 +145,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $view === 'feed' ) {
 			$attrsList[ 'class' ] = MobileUI::buttonClass();
 			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsFeed[ 'class' ] = MobileUI::buttonClass( 'progressive', 'active' );
+			$attrsFeed[ 'class' ] = MobileUI::buttonClass( 'progressive', 'is-on' );
 		} else {
 			$attrsFeed[ 'class' ] = MobileUI::buttonClass();
 			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsList[ 'class' ] = MobileUI::buttonClass( 'progressive', 'active' );
+			$attrsList[ 'class' ] = MobileUI::buttonClass( 'progressive', 'is-on' );
 		}
 
 		$html =
