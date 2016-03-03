@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_4e0042af",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-03T19:29:18Z",
+      "side": 1,
+      "message": "Note that .attr() will still return null/undefined if the attribute doesn\u0027t exist. So that still needs to be accounted for separately to avoid re-triggering the original bug.",
+      "revId": "bdc0858a96ca9b01b2fbf4882fc9406c8390577c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_2e2dc641",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-03T19:29:18Z",
+      "side": 1,
+      "message": "mw.Title may throw, use mw.Title.newFromText and check for falsey return, or use try/catch.",
+      "revId": "bdc0858a96ca9b01b2fbf4882fc9406c8390577c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
