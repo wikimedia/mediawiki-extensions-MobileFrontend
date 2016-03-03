@@ -4,11 +4,35 @@
 		user = M.require( 'mobile.user/user' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		$talk = $( '.talk' ),
-		title = $talk.data( 'title' ) && decodeURIComponent( $talk.data( 'title' ) ) ||
-			mw.config.get( 'wgPageName' ),
+		// use the plain return value here - T128273
+		title = $talk.attr( 'data-title' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
-		skin = M.require( 'skins.minerva.scripts/skin' );
+		skin = M.require( 'skins.minerva.scripts/skin' ),
+		pageTitle, talkTitle;
+
+	// if there's no title for any reason, don't do anything
+	if ( !title ) {
+		return;
+	}
+	// T127190
+	title = decodeURIComponent( title );
+
+	// sanity check: the talk namespace needs to have the next higher integer
+	// of the page namespace (the api should add topics only to the talk page of the current
+	// page)
+	// (https://www.mediawiki.org/wiki/Manual:Using_custom_namespaces#Creating_a_custom_namespace)
+	// The method to get associated namespaces will change later (maybe), see T487
+	pageTitle = mw.Title.newFromText( mw.config.get( 'wgPageName' ) );
+	talkTitle = mw.Title.newFromText( title );
+	if (
+		!pageTitle ||
+		!talkTitle ||
+		( pageTitle.getMainText() !== talkTitle.getMainText() ) ||
+		( pageTitle.getNamespaceId() + 1 !== talkTitle.getNamespaceId() )
+	) {
+		return;
+	}
 
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
