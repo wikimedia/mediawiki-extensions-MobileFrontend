@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_db815250",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-03T17:59:57Z",
+      "side": 1,
+      "message": "Seems odd to switch from returning something to not, although since it was never documented originally it\u0027s probably not a big deal.",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_5bec8220",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-03T17:59:57Z",
+      "side": 1,
+      "message": "No reason for this to be here...",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
