@@ -16,6 +16,24 @@
       "revId": "deacd7de70e29ffaaf1875dd7782a663b8cf96fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9bf51a82",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-03T18:23:53Z",
+      "side": 1,
+      "message": "You may want to avoid .data() in that case and access .attr(\u0027data-title\u0027) plain. It will always be a string. JSON objects don\u0027t exist in HTML. Any attempt from jQuery to return something as JSON will be unexpected behaviour. For example, if the data attribute is for the page \"true\" or \"2015\" you want strings as well, so you really don\u0027t want .data(). And not to mention page \"false\" or \"0\".",
+      "parentUuid": "2ea41786_316e9ec5",
+      "revId": "deacd7de70e29ffaaf1875dd7782a663b8cf96fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
