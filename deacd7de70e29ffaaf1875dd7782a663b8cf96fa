@@ -34,6 +34,24 @@
       "revId": "deacd7de70e29ffaaf1875dd7782a663b8cf96fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_2e0626d2",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-03T19:28:23Z",
+      "side": 1,
+      "message": "Follow up: Idf7128580442207303af071792fb0de77c96873c :)",
+      "parentUuid": "2ea41786_9bf51a82",
+      "revId": "deacd7de70e29ffaaf1875dd7782a663b8cf96fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
