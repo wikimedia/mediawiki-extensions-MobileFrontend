@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_91ce5b5e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-03T21:09:53Z",
+      "side": 1,
+      "message": "I think this \"!\" condition is the wrong way around.",
+      "revId": "6aa01cadbff7969f510c94094cfffe43f8768250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
