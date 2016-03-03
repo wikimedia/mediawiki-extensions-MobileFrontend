@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2ea41786_71f15fc7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-03T20:58:51Z",
+      "side": 1,
+      "message": "Remove this new line so that the Bug association is in the footer (instead of the body) and gets indexed by gerrit search and various other bots for Phabricator.",
+      "revId": "98498af900818db2c535d6ea0f8e0dad025069a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_91ec1bf4",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 1
