@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_0e8d6a2e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-03T19:40:31Z",
+      "side": 1,
+      "message": "Follow up: I0bf015cc8b6adf18096ab1d50b70423748ed12cd",
+      "parentUuid": "2ea41786_ce875213",
+      "revId": "4212f2700a50c5c3e4cc897290b60ecbb6527272",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_8e107a54",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 6
