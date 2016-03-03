@@ -22,8 +22,6 @@ class MobileFormatter extends HtmlFormatter {
 	/** @var array $topHeadingTags Array of strings with possible tags,
 		can be recognized as top headings. */
 	public $topHeadingTags = array();
-	/** @var boolean $isMainPage If the html of the page added to the formatter
-		is the main page **/
 
 	/**
 	 * Saves a Title Object
