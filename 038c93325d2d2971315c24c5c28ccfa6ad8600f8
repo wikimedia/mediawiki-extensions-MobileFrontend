@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_f84c54a1",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-03T17:49:01Z",
+      "side": 1,
+      "message": "Unnecessary blank line (obviously not a blocker and it\u0027s not even in this patch technically).",
+      "revId": "038c93325d2d2971315c24c5c28ccfa6ad8600f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9b375ae0",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-03T17:49:01Z",
+      "side": 1,
+      "message": "Is \"prev\" guaranteed here? Could be problematic if another function injects anything around images.",
+      "revId": "038c93325d2d2971315c24c5c28ccfa6ad8600f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
