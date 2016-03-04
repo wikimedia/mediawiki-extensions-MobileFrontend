@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_671761f3",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T00:09:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_eaeedab0",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_8a1406a2",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 8
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_272ac92b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T00:09:37Z",
+      "side": 1,
+      "message": "Not a fan of early returns but I\u0027ve cleaned this up a little.",
+      "parentUuid": "2ea41786_8a1406a2",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_0a2016f1",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 8
@@ -47,6 +83,24 @@
       "writtenOn": "2016-02-29T18:36:47Z",
       "side": 1,
       "message": "Maybe rename this variable as it isn\u0027t text but html. The core data key uses \u0027html\u0027 as well.",
+      "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_07278d60",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T00:09:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_0a2016f1",
       "revId": "599cb931361eb174ecfac4aec739484d06ca07e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
