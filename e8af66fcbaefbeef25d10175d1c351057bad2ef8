@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_7cb73982",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T22:10:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_a5d368d6",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_65e9607b",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 15
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-04T12:30:32Z",
       "side": 1,
       "message": "This may/should reject, and we should handle it somehow.",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_bca8a11e",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T22:10:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_65e9607b",
       "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_578cce3a",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T22:10:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_05f85445",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_a581a8a6",
         "filename": "resources/skins.minerva.content.styles/text.less",
         "patchSetId": 15
@@ -64,6 +118,24 @@
       "writtenOn": "2016-03-04T12:32:10Z",
       "side": 1,
       "message": "I don\u0027t like this much since beta/stable is configurable with a config variable, so it may be that we\u0027ll get non-working citations on stable if we forget about this.\n\nMaybe add a FIXME?",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_9cfafd71",
+        "filename": "resources/skins.minerva.content.styles/text.less",
+        "patchSetId": 15
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-04T22:10:21Z",
+      "side": 1,
+      "message": "Yeh me neither. Let me put this in its own module.",
+      "parentUuid": "0e2f53b6_a581a8a6",
       "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
