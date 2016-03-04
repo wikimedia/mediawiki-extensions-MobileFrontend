@@ -2003,6 +2003,7 @@
 		},
 		"MFMinCachedPageSize": 65536,
 		"MFAutodetectMobileView": false,
+		"MFVaryOnUA": false,
 		"MFShowMobileViewToTablets": true,
 		"MFDeviceWidthMobileSmall": 280,
 		"MobileUrlTemplate": "",

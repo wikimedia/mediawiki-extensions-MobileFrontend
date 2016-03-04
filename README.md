@@ -306,6 +306,17 @@ people receiving cached versions of pages intended for someone else's devices.
 Type: Boolean
 Default: false;
 
+##### $wgMFVaryOnUA
+Set this to true, if you want to send User-Agent in the Vary header. This could improve
+your SEO ranking.
+WARNING: You should set this to true only, if you know what you're doing!
+CAUTION: Setting this to true in combination with a (frontend)caching layer (such as Varnish)
+can have a huge impact on how your caching works, as it now caches every single page multiple
+times for any possible/different User Agent string!
+
+Type: Boolean
+Default: false;
+
 ##### $wgMFShowMobileViewToTablets
 Controls whether tablets should be shown the mobile site. Works only if
 $wgMFAutodetectMobileView is true.
