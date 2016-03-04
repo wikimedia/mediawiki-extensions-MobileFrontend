@@ -50,6 +50,23 @@
       "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_a581a8a6",
+        "filename": "resources/skins.minerva.content.styles/text.less",
+        "patchSetId": 15
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-04T12:32:10Z",
+      "side": 1,
+      "message": "I don\u0027t like this much since beta/stable is configurable with a config variable, so it may be that we\u0027ll get non-working citations on stable if we forget about this.\n\nMaybe add a FIXME?",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
