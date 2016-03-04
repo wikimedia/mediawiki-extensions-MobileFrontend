@@ -10,9 +10,6 @@ class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
 
-	const NETSPEED_FAST = 'A';
-	const NETSPEED_SLOW = 'B';
-
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
 	 * @var string $mobileMode
@@ -23,11 +20,6 @@ class MobileContext extends ContextSource {
 	 * @var boolean $disableImages
 	 */
 	protected $disableImages;
-	/**
-	 * NetSpeed designation
-	 * @var string $netSpeed
-	 */
-	protected $netSpeed;
 	/**
 	 * Save explicitly requested format
 	 * @var string $useFormat
@@ -178,34 +170,6 @@ class MobileContext extends ContextSource {
 		}
 
 		return $this->disableImages;
-	}
-
-	/**
-	 * Get NetSpeed designation.
-	 * @return string MobileContext::NETSPEED_FAST or MobileContext::NETSPEED_SLOW.
-	 */
-	public function getNetSpeed() {
-		if ( is_null( $this->netSpeed ) ) {
-			$this->netSpeed = $this->getRequest()->getCookie( 'NetSpeed', '' );
-			if ( $this->netSpeed !== self::NETSPEED_FAST && $this->netSpeed !== self::NETSPEED_SLOW ) {
-				// Since we are currently delivering the richest experience
-				// to all users, make the default netSpeed 'fast'.
-				$this->netSpeed = self::NETSPEED_FAST;
-			}
-		}
-
-		return $this->netSpeed;
-	}
-
-	/**
-	 * Set NetSpeed designation.
-	 * @param string $value of net speed. Currently accepts self::NETSPEED_FAST
-	 *  or self::NETSPEED_SLOW
-	 */
-	public function setNetSpeed( $value ) {
-		$this->netSpeed = $value;
-		$this->getRequest()->response()
-			->setCookie( 'NetSpeed', $this->netSpeed, 0, array( 'prefix' => '' ) );
 	}
 
 	/**

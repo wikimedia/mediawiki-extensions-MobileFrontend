@@ -611,37 +611,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
 	}
-
-	public function getNetSpeedProvider() {
-		return array(
-			array(
-				array( 'NetSpeed' => MobileContext::NETSPEED_FAST ),
-				MobileContext::NETSPEED_FAST
-			),
-			array(
-				array( 'NetSpeed' => MobileContext::NETSPEED_SLOW ),
-				MobileContext::NETSPEED_SLOW
-			),
-			array(
-				array(),
-				MobileContext::NETSPEED_FAST,
-				'If NetSpeed cookie is absent, default to MobileContext::NETSPEED_FAST'
-			),
-			array(
-				array( 'NetSpeed' => 'Bogus value' ),
-				MobileContext::NETSPEED_FAST,
-				'If NetSpeed cookie value is invalid, default to MobileContext::NETSPEED_FAST'
-			),
-		);
-	}
-
-	/**
-	 * @dataProvider getNetSpeedProvider
-	 */
-	public function testGetNetSpeed( $cookies, $netSpeed, $message = null ) {
-		$context = $this->makeContext( '/', $cookies );
-		$this->assertEquals( $context->getNetSpeed(), $netSpeed, $message );
-	}
 }
 
 class BogusMobileContext {

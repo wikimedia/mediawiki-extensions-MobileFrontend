@@ -282,7 +282,6 @@
 	"mobile-frontend-search-submit": "Label for the button near the search box.\n{{Identical|Go}}",
 	"mobile-frontend-settings-images-explain": "Short description on [[Special:MobileOptions]], that the user can enable or disable images with this option.",
 	"mobile-frontend-settings-beta": "Text for beta on settings page.\n{{Identical|Beta}}",
-	"mobile-frontend-settings-lowres": "Text for data saving option on settings page. \"Saving\" means \"economy\", as in \"saving money (on data connection)\", not \"saving files\".",
 	"mobile-frontend-settings-site-description": "Shown on [[Special:MobileOptions]]. Parameters:\n* $1 - the number of other language versions for this wiki",
 	"mobile-frontend-settings-site-header": "Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users",
 	"mobile-frontend-sign-in-error-heading": "Heading for when an error occurred. You can translate \"Error\" instead.",

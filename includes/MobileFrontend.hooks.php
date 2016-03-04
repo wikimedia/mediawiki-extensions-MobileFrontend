@@ -350,10 +350,6 @@ class MobileFrontendHooks {
 			return;
 		}
 
-		if ( $context->getNetSpeed() !== MobileContext::NETSPEED_FAST ) {
-			$confstr .= '!light';
-		}
-
 		if ( $context->imagesDisabled() ) {
 			$confstr .= '!noimg';
 		}
@@ -1266,20 +1262,14 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * If the NetSpeed designation is not MobileContext::NETSPEED_FAST, omit
-	 * srcset attributes from image tags.
+	 * Omit srcset attributes from thumbnail image tags, to conserve bandwidth.
 	 *
 	 * @param ThumbnailImage $thumbnail
 	 * @param array &$attribs
 	 * @param array &$linkAttribs
 	 */
 	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
-		$context = MobileContext::singleton();
-
-		if (
-			$context->shouldDisplayMobileView() &&
-			$context->getNetSpeed() !== MobileContext::NETSPEED_FAST
-		) {
+		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
 			unset( $attribs['srcset'] );
 		}
 	}
