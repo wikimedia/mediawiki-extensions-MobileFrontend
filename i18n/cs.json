@@ -41,7 +41,7 @@
 	"mobile-frontend-changeslist-nocomment": "bez shrnutí editace",
 	"mobile-frontend-clear-search": "Smazat",
 	"mobile-frontend-commons-category-view": "Obrázky ke stránce $1",
-	"mobile-frontend-contribution-summary": "Všechny editace {{GENDER:$1|uživatele|uživatelky}} [[Special:UserProfile/$1|$1]]",
+	"mobile-frontend-contribution-summary": "Všechny editace {{GENDER:$1|uživatele|uživatelky}} [[User:$1|$1]]",
 	"mobile-frontend-cookies-required": "Pro přepnutí verzí jsou vyžadovány cookies. Povolte je a zkuste to znovu.",
 	"mobile-frontend-copyright": "Text je dostupný pod $1, pokud není uvedeno jinak.",
 	"mobile-frontend-desc": "Mobilní rozhraní",

@@ -30,7 +30,7 @@
 	"mobile-frontend-changeslist-nocomment": "nisciuno oggetto d' 'o cagnamiento",
 	"mobile-frontend-clear-search": "Pulezza",
 	"mobile-frontend-commons-category-view": "Immaggene pe' $1",
-	"mobile-frontend-contribution-summary": "Tuttuquante cagnamiente fatte 'a {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}",
+	"mobile-frontend-contribution-summary": "Tuttuquante cagnamiente fatte 'a {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "'E cookie ce vonno pe' putè cagnà 'a modalità 'e visualizzaziona. Si prega 'e ll'abbià e pruvà n'ata vota.",
 	"mobile-frontend-copyright": "Cuntenute suggiette a licienza 'e auso $1 se nun fuje ritto atro.",
 	"mobile-frontend-desc": "Nterfaccia d' 'o mobbile",

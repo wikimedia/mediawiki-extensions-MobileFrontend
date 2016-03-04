@@ -25,7 +25,7 @@
 	"mobile-frontend-changeslist-ip": "گمنام صارف",
 	"mobile-frontend-changeslist-nocomment": "کوئی ترمیمی خلاصہ نہیں",
 	"mobile-frontend-clear-search": "خالی کریں",
-	"mobile-frontend-contribution-summary": "جملہ ترامیم از {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}",
+	"mobile-frontend-contribution-summary": "جملہ ترامیم از {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-copyright": "تمام مواد $1 کے تحت میسر ہے، جب تک کوئی دوسری وجہ نا ہو۔",
 	"mobile-frontend-desc": "موبائل پیشدید",
 	"mobile-frontend-diffview-anonymous": "گمنام صارف",

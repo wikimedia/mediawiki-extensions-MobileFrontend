@@ -27,7 +27,7 @@
 	"mobile-frontend-changeslist-ip": "Тіркелгісіз қатысушы",
 	"mobile-frontend-changeslist-nocomment": "Түйіндемесі өңделмейді",
 	"mobile-frontend-clear-search": "Тазарту",
-	"mobile-frontend-contribution-summary": "Барлық өңдемелерді {{GENDER:$1[[Special:UserProfile/$1|$1]]}} жасаған.",
+	"mobile-frontend-contribution-summary": "Барлық өңдемелерді {{GENDER:$1[[User:$1|$1]]}} жасаған.",
 	"mobile-frontend-copyright": "Мәлімет $1 лицензиясы аясында жетімді басқа жағдайда белгіленеді.",
 	"mobile-frontend-desc": "Мобильді интерфейс",
 	"mobile-frontend-diffview-404-title": "Зақымданған нұсқа",

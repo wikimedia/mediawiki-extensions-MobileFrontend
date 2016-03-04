@@ -64,7 +64,7 @@
 	"mobile-frontend-changeslist-nocomment": "无编辑摘要",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-commons-category-view": "用于$1的图片",
-	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}}的所有编辑",
+	"mobile-frontend-contribution-summary": "由{{GENDER:$1|[[User:$1|$1]]}}做出的所有编辑",
 	"mobile-frontend-cookies-required": "需要Cookie以切换视图模式。请启用它们后重试。",
 	"mobile-frontend-copyright": "除非另有声明，本网站内容采用$1授权。",
 	"mobile-frontend-desc": "移动版前端",

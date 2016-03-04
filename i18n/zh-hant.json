@@ -48,7 +48,7 @@
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-commons-category-view": "$1 的影像",
-	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}} 做的所有編輯",
+	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[User:$1|$1]]}} 做的所有編輯",
 	"mobile-frontend-cookies-required": "切換檢視模式需要開啟 Cookies，請先開啟後再重試。",
 	"mobile-frontend-copyright": "除非另有說明，否則頁面內容均使用 $1 授權條款。",
 	"mobile-frontend-desc": "手機版前端",

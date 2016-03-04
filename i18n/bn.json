@@ -33,7 +33,7 @@
 	"mobile-frontend-changeslist-nocomment": "সম্পাদনা সারাংশ নেই",
 	"mobile-frontend-clear-search": "পরিস্কার",
 	"mobile-frontend-commons-category-view": "$1 থেকে চিত্র",
-	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}} দ্বারা তৈরি সব সম্পাদনাগুলি",
+	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[User:$1|$1]]}} দ্বারা তৈরি সব সম্পাদনাগুলি",
 	"mobile-frontend-cookies-required": "দর্শন মোডে যেতে কুকিজের প্রয়োজন। দয়া করে তাদের সক্রিয় করে আবার চেষ্টা করুন।",
 	"mobile-frontend-copyright": "বিষয়বস্তু $1-এর আওতায় প্রকাশিত যদি না অন্য কিছু নির্ধারিত থাকে।",
 	"mobile-frontend-desc": "মোবাইল ফ্রন্টএন্ড",

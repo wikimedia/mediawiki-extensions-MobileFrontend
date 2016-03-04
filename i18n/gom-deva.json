@@ -12,7 +12,7 @@
 	"mobile-frontend-changeslist-nocomment": "संपादन आपरोस ना",
 	"mobile-frontend-commons-category-view": "$1खातीर चित्रां",
 	"mobile-frontend-copyright": "हातूंतलो मजकूर $1च्या अंतर्गत उपलब्ध आसा जे मेरेन हेर नोंदी करूक नात.",
-	"mobile-frontend-editor-edit": "संस्करण",
+	"mobile-frontend-editor-edit": "संपादीत कर",
 	"mobile-frontend-featured-article": "आयचें आशयाचे आकर्षण",
 	"mobile-frontend-home-button": "घर",
 	"mobile-frontend-language-article-heading": "हेर भाशेन वाचात",
@@ -32,8 +32,8 @@
 	"mobile-frontend-view": "मोबाईल-दृश्य",
 	"mobile-frontend-view-desktop": "कम्प्युटर",
 	"mobile-frontend-view-mobile": "मोबाइल",
-	"tag-mobile_edit": "मोबाईल संस्करण",
-	"tag-mobile_web_edit": "मोबाईल जाळें संस्करण",
+	"tag-mobile_edit": "मोबाईल संपादन",
+	"tag-mobile_web_edit": "मोबाईल जाळें संपादन",
 	"mobile-frontend-pageaction-edit-tooltip": "ह्या पानाच्या मुखेल भागाचें संपादन करात.",
 	"mobile-frontend-search-feedback-link-text": "आमकां तुमच्यो प्रतिक्रिया कळयात."
 }

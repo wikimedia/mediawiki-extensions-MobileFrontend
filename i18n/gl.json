@@ -37,7 +37,7 @@
 	"mobile-frontend-changeslist-nocomment": "sen resumo de edición",
 	"mobile-frontend-clear-search": "Limpar",
 	"mobile-frontend-commons-category-view": "Imaxes para $1",
-	"mobile-frontend-contribution-summary": "Todas as edicións feitas por {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}",
+	"mobile-frontend-contribution-summary": "Todas as edicións feitas por {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "As cookies son necesarias para cambiar o modo de visualización. Permita o uso de cookies e inténteo de novo.",
 	"mobile-frontend-copyright": "Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.",
 	"mobile-frontend-desc": "Interface para dispositivos móbiles",
