@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_a5d368d6",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-04T12:30:32Z",
+      "side": 1,
+      "message": "What happens if the request fails? We should at least propagate the failure into the deferred.",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_65e9607b",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-04T12:30:32Z",
+      "side": 1,
+      "message": "This may/should reject, and we should handle it somehow.",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_05f85445",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-04T12:30:32Z",
+      "side": 1,
+      "message": "On failure we should hide the drawer or show the error message somehow. I have drawers stuck on spinners forever on my crappy pages :p",
+      "revId": "e8af66fcbaefbeef25d10175d1c351057bad2ef8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
