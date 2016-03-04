@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_3c9651f4",
+        "filename": "resources/skins.minerva.talk/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-04T21:36:19Z",
+      "side": 1,
+      "message": "No, it won\u0027t. undefined casts to string \"Undefined\" which is a valid (but wrong) title.\n\nIt might still work because of the additional mw.Title check for namespace ID below (and it\u0027s most unlikely for \"Null\" or \"Undefined\" to be the full title of a talk namespace page) - however that\u0027s only working because two errors cancel each other out, not a signal of quality code :)",
+      "parentUuid": "0e2f53b6_7c3e1928",
+      "revId": "bdc0858a96ca9b01b2fbf4882fc9406c8390577c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_2e2dc641",
         "filename": "resources/skins.minerva.talk/init.js",
         "patchSetId": 1
