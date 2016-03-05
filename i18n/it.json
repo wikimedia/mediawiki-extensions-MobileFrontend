@@ -257,7 +257,6 @@
 	"mobile-frontend-search-submit": "Vai",
 	"mobile-frontend-settings-images-explain": "Caricare tutte le immagini che vengono visualizzate in una pagina.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Risparmia dati",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} è disponibile in $1 {{PLURAL:$1|lingua|lingue}}. Tutte le versioni disponibili sono elencate di seguito",
 	"mobile-frontend-settings-site-header": "Lingue {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Oops!",

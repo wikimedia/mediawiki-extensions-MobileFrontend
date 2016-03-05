@@ -257,7 +257,6 @@
 	"mobile-frontend-search-submit": "Siirry",
 	"mobile-frontend-settings-images-explain": "Lataa kaikki sivulla olevat kuvat.",
 	"mobile-frontend-settings-beta": "Beeta",
-	"mobile-frontend-settings-lowres": "Datansäästö",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} on saatavilla {{PLURAL:$1|yhdellä|$1}} kielellä. Kaikki saatavilla olevat kieliversiot on listattu alla.",
 	"mobile-frontend-settings-site-header": "Sivuston {{SITENAME}} kielet",
 	"mobile-frontend-sign-in-error-heading": "Hups",

@@ -263,7 +263,6 @@
 	"mobile-frontend-search-submit": "Los",
 	"mobile-frontend-settings-images-explain": "Alle Bildinhalte in einer Seite laden.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Datenspeicherung",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} steht in {{PLURAL:$1|einer Sprache|$1 Sprachen}} zur Verfügung. Alle verfügbaren Sprachversionen sind unten aufgeführt.",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Sprachen",
 	"mobile-frontend-sign-in-error-heading": "Hoppla!",

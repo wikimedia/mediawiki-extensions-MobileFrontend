@@ -259,7 +259,6 @@
 	"mobile-frontend-search-submit": "Gå",
 	"mobile-frontend-settings-images-explain": "Last inn alle bilder som vises på en side.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Datasparing",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} er tilgjengelig på $1 {{PLURAL:$1|språk|språk}}. Alle tilgjengelige utgaver er listet opp nedenfor",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}-språk",
 	"mobile-frontend-sign-in-error-heading": "Hoppsann",

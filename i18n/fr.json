@@ -288,7 +288,6 @@
 	"mobile-frontend-search-submit": "Go",
 	"mobile-frontend-settings-images-explain": "Charger tout le contenu des images apparaissant dans une page.",
 	"mobile-frontend-settings-beta": "Bêta",
-	"mobile-frontend-settings-lowres": "Enregistrement des données",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} est disponible en $1 {{PLURAL:$1|langue|langues}}. Toutes les versions disponibles sont listées ci-dessous",
 	"mobile-frontend-settings-site-header": "Langues de {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Oups",

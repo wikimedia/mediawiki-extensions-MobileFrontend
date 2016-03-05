@@ -262,7 +262,6 @@
 	"mobile-frontend-search-submit": "חיפוש",
 	"mobile-frontend-settings-images-explain": "טעינת כל תוכן התמונה המופיע בדף.",
 	"mobile-frontend-settings-beta": "להפעיל ניסויים",
-	"mobile-frontend-settings-lowres": "חיסכון נתונים",
 	"mobile-frontend-settings-site-description": "אתר {{SITENAME}} זמין {{PLURAL:$1|רק בשפה אחת|ב־$1 שפות}}. כל השפות הזמינות רשומות להלן",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} – שפות",
 	"mobile-frontend-sign-in-error-heading": "אוי",

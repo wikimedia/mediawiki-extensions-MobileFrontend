@@ -256,7 +256,6 @@
 	"mobile-frontend-search-submit": "Hledat",
 	"mobile-frontend-settings-images-explain": "Načítat všechny obrázky, které se na stránce objevují.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Úspora dat",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} existuje v $1 {{PLURAL:$1|jazyce|jazycích}}. Níže jsou uvedeny všechny dostupné verze",
 	"mobile-frontend-settings-site-header": "Jazyky {{grammar:2sg|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Chyba",

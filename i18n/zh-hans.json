@@ -284,7 +284,6 @@
 	"mobile-frontend-search-submit": "搜索",
 	"mobile-frontend-settings-images-explain": "加载页面中出现的所有图片内容。",
 	"mobile-frontend-settings-beta": "测试",
-	"mobile-frontend-settings-lowres": "数据保存",
 	"mobile-frontend-settings-site-description": "{{SITENAME}}有$1种语言版本。下面列出了所有语言版本",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}语言",
 	"mobile-frontend-sign-in-error-heading": "糟糕",

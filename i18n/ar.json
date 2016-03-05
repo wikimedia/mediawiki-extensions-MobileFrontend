@@ -265,7 +265,6 @@
 	"mobile-frontend-search-submit": "اذهب",
 	"mobile-frontend-settings-images-explain": "تحميل كل محتوى الصفحة من الصور.",
 	"mobile-frontend-settings-beta": "بيتا",
-	"mobile-frontend-settings-lowres": "تحميل البيانات",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} متوفرة ب{{PLURAL:$1||لغة واحدة|لغتين|$1 لغات|$1 لغة}}. جميع النسخ الأخرى مسرودة أدناه.",
 	"mobile-frontend-settings-site-header": "لغات {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "آخ",

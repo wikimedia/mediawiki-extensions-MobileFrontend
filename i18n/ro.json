@@ -253,7 +253,6 @@
 	"mobile-frontend-search-submit": "Du-te",
 	"mobile-frontend-settings-images-explain": "Încarcă orice imagine care apare într-o pagină.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Economisește date",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} este un proiect disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}. Toate versiunile disponibile sunt enumerate mai jos",
 	"mobile-frontend-settings-site-header": "Limbile pentru {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Hopa!",

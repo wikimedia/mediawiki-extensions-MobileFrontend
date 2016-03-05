@@ -250,7 +250,6 @@
 	"mobile-frontend-search-submit": "যাও",
 	"mobile-frontend-settings-images-explain": "একটি পাতায় দৃশ্যমান সব চিত্রের বিষয়বস্তু লোড করুন।",
 	"mobile-frontend-settings-beta": "বেটা সংস্করণ",
-	"mobile-frontend-settings-lowres": "ডাটা সংরক্ষণ",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} মোট $1 {{PLURAL:$1|টি ভাষায়}} ব্যবহার করা যায়। সকল ভাষার সংস্করণগুলো নিচে দেখানো হল",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} ভাষাসমূহ",
 	"mobile-frontend-sign-in-error-heading": "ওহ",

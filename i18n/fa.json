@@ -27,7 +27,8 @@
 			"Bersam",
 			"Hosseinblue",
 			"Mehran",
-			"Mardetanha"
+			"Mardetanha",
+			"Rtemis"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -54,7 +55,7 @@
 	"mobile-frontend-changeslist-nocomment": "بدون خلاصه ویرایش",
 	"mobile-frontend-clear-search": "پاک‌کردن",
 	"mobile-frontend-commons-category-view": "تصویر برای $1",
-	"mobile-frontend-contribution-summary": "همه ویرایش ها توسط {{GENDER:$1|[[User:$1|$1]]}} انجام شده‌ است.",
+	"mobile-frontend-contribution-summary": "همه ویرایش‌های {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "کوکی‌ها نیاز به تعویض روش‌های نمایش هستند. لطفاً آنها را فعال کنید و دوباره امتحان کنید.",
 	"mobile-frontend-copyright": "محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.",
 	"mobile-frontend-desc": "ظاهر تلفن همراه",

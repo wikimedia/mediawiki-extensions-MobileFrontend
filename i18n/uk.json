@@ -271,7 +271,6 @@
 	"mobile-frontend-search-submit": "Перейти",
 	"mobile-frontend-settings-images-explain": "Завантажувати всі наявні на сторінці зображення.",
 	"mobile-frontend-settings-beta": "Бета-версія",
-	"mobile-frontend-settings-lowres": "Збереження даних",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} доступний на $1 {{PLURAL:$1|1=мові|мовах}}. Всі доступні версії перелічені нижче",
 	"mobile-frontend-settings-site-header": "Мови проекту {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Ой",

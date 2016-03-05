@@ -249,7 +249,6 @@
 	"mobile-frontend-search-submit": "表示",
 	"mobile-frontend-settings-images-explain": "ページに表示されるすべての画像コンテンツを読み込みます。",
 	"mobile-frontend-settings-beta": "ベータ",
-	"mobile-frontend-settings-lowres": "データ使用量を抑える",
 	"mobile-frontend-settings-site-description": "{{SITENAME}}は $1 {{PLURAL:$1|言語}}で利用できます。利用できるすべての言語版を以下に列挙します",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}の言語",
 	"mobile-frontend-sign-in-error-heading": "エラー",

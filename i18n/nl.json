@@ -274,7 +274,6 @@
 	"mobile-frontend-search-submit": "Zoeken",
 	"mobile-frontend-settings-images-explain": "Alle afbeeldingen die op een pagina voorkomen laden.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-lowres": "Minder data gebruiken",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} is beschikbaar in {{PLURAL:$1|één taal|$1 talen}}. Alle beschikbare versies staan hieronder",
 	"mobile-frontend-settings-site-header": "Talen voor {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Fout",
