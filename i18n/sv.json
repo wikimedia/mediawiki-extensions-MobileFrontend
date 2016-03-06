@@ -14,7 +14,8 @@
 			"Hangsna",
 			"Jenniesarina",
 			"Josve05a",
-			"Dammråtta"
+			"Dammråtta",
+			"Rockyfelle"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -42,7 +43,7 @@
 	"mobile-frontend-changeslist-nocomment": "ingen redigeringssammanfattning",
 	"mobile-frontend-clear-search": "Rensa",
 	"mobile-frontend-commons-category-view": "Bilder för $1",
-	"mobile-frontend-contribution-summary": "Alla redigeringar gjordes av {{GENDER:$1|[[User:$1|$1]]}}",
+	"mobile-frontend-contribution-summary": "Alla redigeringar gjort av {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Kakor krävs för att växla mellan visningslägen. Aktivera dem och försök igen.",
 	"mobile-frontend-copyright": "Innehållet är tillgängligt under $1 om ingenting annat anges.",
 	"mobile-frontend-desc": "Mobilt gränssnitt",

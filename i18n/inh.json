@@ -17,5 +17,7 @@
 	"mobile-frontend-privacy-link-text": "КъайлагIара",
 	"mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
 	"mobile-frontend-search-submit": "Дехьа гӀо",
-	"mobile-frontend-view": "Цхьалха куц"
+	"mobile-frontend-view": "Цхьалха куц",
+	"mobile-frontend-view-desktop": "Йоккха кеп",
+	"mobile-frontend-view-mobile": "ЗIамига кеп"
 }
