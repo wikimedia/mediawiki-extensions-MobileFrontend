@@ -383,6 +383,7 @@
 	"apihelp-mobileview-param-thumbsize": "{{doc-apihelp-param|mobileview|thumbsize}}",
 	"apihelp-mobileview-param-thumbwidth": "{{doc-apihelp-param|mobileview|thumbwidth}}",
 	"apihelp-mobileview-param-thumbheight": "{{doc-apihelp-param|mobileview|thumbheight}}",
+	"apihelp-mobileview-param-revision": "{{doc-apihelp-param|mobileview|revision}}",
 	"apihelp-mobileview-example-1": "{{doc-apihelp-example|mobileview}}",
 	"apihelp-mobileview-example-2": "{{doc-apihelp-example|mobileview}}",
 	"apihelp-mobileview-example-3": "{{doc-apihelp-example|mobileview}}",
