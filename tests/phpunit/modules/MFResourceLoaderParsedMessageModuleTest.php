@@ -74,7 +74,7 @@ class MFResourceLoaderParsedMessageModuleTest extends MediaWikiTestCase {
 	 */
 	public function testAddParsedMessages( $module, $expectedJavascript ) {
 		$rl = new MFResourceLoaderParsedMessageModule( $module );
-		$js = $rl->addParsedMessages();
+		$js = $rl->addParsedMessages( 'en' );
 
 		$this->assertEquals( $js, $expectedJavascript );
 	}

@@ -35,12 +35,13 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	/**
 	 * Processes messages which have been marked as needing parsing
 	 *
+	 * @param string $lang Language code to use
 	 * @return string JavaScript code
 	 */
-	public function addParsedMessages() {
+	public function addParsedMessages( $lang ) {
 		$js = "\n";
 		foreach ( $this->parsedMessages as $key ) {
-			$value = wfMessage( $key )->parse();
+			$value = wfMessage( $key )->inLanguage( $lang )->parse();
 			$js .= Xml::encodeJsCall( 'mw.messages.set', array( $key, $value ) );
 		}
 		return $js;
@@ -81,7 +82,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$script = parent::getScript( $context );
-		return $this->addParsedMessages() . $script;
+		return $this->addParsedMessages( $context->getLanguage() ) . $script;
 	}
 
 	/**
