@@ -35,6 +35,7 @@ class ExtMobileFrontend {
 		$html = $text ? $text : $out->getHTML();
 
 		$context = MobileContext::singleton();
+		$config = $context->getMFConfig();
 
 		$formatter = MobileFormatter::newFromContext( $context, $html );
 
@@ -42,6 +43,7 @@ class ExtMobileFrontend {
 
 		$title = $out->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
+
 		$formatter->enableExpandableSections(
 			// Don't collapse sections e.g. on JS pages
 			$out->canUseWikiPage()
@@ -49,14 +51,24 @@ class ExtMobileFrontend {
 			// And not in certain namespaces
 			&& array_search(
 				$title->getNamespace(),
-				$context->getMFConfig()->get( 'MFNamespacesWithoutCollapsibleSections' )
+				$config->get( 'MFNamespacesWithoutCollapsibleSections' )
 			) === false
 			// And not when what's shown is not actually article text
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
+
+		$mfLazyLoadReferences = $config->get( 'MFLazyLoadReferences' );
+		$mfLazyLoadImages = $config->get( 'MFLazyLoadImages' );
+
+		$removeImages = $mfLazyLoadImages['base'] ||
+			( $isBeta && $mfLazyLoadImages['beta'] );
+		$removeReferences = $mfLazyLoadReferences['base'] ||
+			( $isBeta && $mfLazyLoadReferences['beta'] );
+
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->filterContent( /* remove defaults */ !$isSpecialPage );
+			$formatter->filterContent( /* remove defaults */ !$isSpecialPage,
+				$removeReferences, $removeImages );
 		}
 
 		$contentHtml = $formatter->getText();

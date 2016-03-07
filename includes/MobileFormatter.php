@@ -102,9 +102,13 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Removes content inappropriate for mobile devices
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
+	 * @param bool $removeReferences Whether to remove references from the output
+	 * @param bool $removeImages Whether to move images into noscript tags
 	 * @return array
 	 */
-	public function filterContent( $removeDefaults = true ) {
+	public function filterContent( $removeDefaults = true,
+		$removeReferences = false, $removeImages = false
+	) {
 		$ctx = MobileContext::singleton();
 		$config = $ctx->getMFConfig();
 		$isBeta = $ctx->isBetaGroupMember();
@@ -117,26 +121,14 @@ class MobileFormatter extends HtmlFormatter {
 			}
 		}
 
-		$mfReferences = $config->get( 'MFLazyLoadReferences' );
-		if ( $mfReferences ) {
-			if ( $mfReferences['base'] ||
-				( $isBeta && $mfReferences['beta'] )
-			) {
-				$this->doRewriteReferencesForLazyLoading();
-			}
+		if ( $removeReferences ) {
+			$this->doRewriteReferencesForLazyLoading();
 		}
 
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
-		} else {
-			$mfLazyLoadImages = $config->get( 'MFLazyLoadImages' );
-
-			if (
-				$mfLazyLoadImages['base'] ||
-				( $isBeta && $mfLazyLoadImages['beta'] )
-			) {
-				$this->doRewriteImagesForLazyLoading();
-			}
+		} elseif ( $removeImages ){
+			$this->doRewriteImagesForLazyLoading();
 		}
 
 		return parent::filterContent();

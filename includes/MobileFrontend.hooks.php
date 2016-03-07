@@ -196,7 +196,7 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		// Perform a few extra changes if we are in mobile mode
 		if ( $context->shouldDisplayMobileView() ) {
-			$text = ExtMobileFrontend::DOMParse( $out, $text );
+			$text = ExtMobileFrontend::DOMParse( $out, $text, $context->isBetaGroupMember() );
 		}
 		return true;
 	}
