@@ -1994,7 +1994,7 @@
 		},
 		"MFLazyLoadImages": {
 			"base": false,
-			"beta": false
+			"beta": true
 		},
 		"MFLazyLoadReferences": {
 			"base": false,
