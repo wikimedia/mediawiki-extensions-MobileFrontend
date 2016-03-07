@@ -252,6 +252,8 @@
 	"mobile-frontend-privacy-link-text": "الخصوصية",
 	"mobile-frontend-random-button": "عشوائي",
 	"mobile-frontend-references-citation": "اقتباس",
+	"mobile-frontend-references-citation-error": "حدث خطأ وتعذر تحميل هذا الاستشهاد.",
+	"mobile-frontend-references-list": "اعرض قائمة كاملة بالاستشهادات",
 	"mobile-frontend-regular-site": "عرض سطح المكتب",
 	"mobile-frontend-requires-mobile": "هذه الصفحة غير متاحة على الحاسب المكتبي. من فضلك انقر على وصلة نسخة الجوال في أسفل الصفحة.",
 	"mobile-frontend-requires-optin": "هذه الصفحة غير متوفرة إلا إذا وافقت على استخدام وضع البيتا(الوضع التجريبي). الرجاء زيارة [[Special:MobileOptions|صفحة التفضيلات]] لتفعيل الوضع.",

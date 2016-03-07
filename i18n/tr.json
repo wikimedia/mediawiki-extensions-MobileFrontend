@@ -24,7 +24,8 @@
 			"Arystanbek",
 			"Uğurkent",
 			"McAang",
-			"KorkmazO"
+			"KorkmazO",
+			"KediÇobanı"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -247,6 +248,8 @@
 	"mobile-frontend-privacy-link-text": "Gizlilik",
 	"mobile-frontend-random-button": "Rastgele",
 	"mobile-frontend-references-citation": "Alıntı",
+	"mobile-frontend-references-citation-error": "Bir hata oluştu ve bu kaynağı yüklemek mümkün değildi.",
+	"mobile-frontend-references-list": "Kaynakların tam liste görünümü",
 	"mobile-frontend-regular-site": "Masaüstü görünümü",
 	"mobile-frontend-requires-mobile": "Bu sayfa masaüstünde kullanılamaz. Lütfen sayfanın altındaki mobil görünüm bağlantısına tıklayın.",
 	"mobile-frontend-requires-optin": "Deneme modunu tercih etmediğiniz sürece bu sayfayı kullanamazsınız. Tercih etmek için [[Special:MobileOptions|ayarlar sayfasını]] ziyaret edin.",

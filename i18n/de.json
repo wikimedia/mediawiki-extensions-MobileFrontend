@@ -250,6 +250,8 @@
 	"mobile-frontend-privacy-link-text": "Datenschutz",
 	"mobile-frontend-random-button": "Zufall",
 	"mobile-frontend-references-citation": "Zitierung",
+	"mobile-frontend-references-citation-error": "Es ist ein Fehler aufgetreten und es war nicht möglich, dieses Zitat zu laden.",
+	"mobile-frontend-references-list": "Vollständige Liste der Zitate ansehen",
 	"mobile-frontend-regular-site": "Klassische Ansicht",
 	"mobile-frontend-requires-mobile": "Diese Seite ist für Desktoprechner nicht verfügbar. Bitte wähle am Seitenende den Link für die mobile Ansicht.",
 	"mobile-frontend-requires-optin": "Diese Seite ist nicht verfügbar, bis du dich für unseren Beta-Modus angemeldet hast. Besuche zur Anmeldung die [[Special:MobileOptions|Einstellungsseite]].",

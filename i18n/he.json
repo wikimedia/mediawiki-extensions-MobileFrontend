@@ -249,6 +249,8 @@
 	"mobile-frontend-privacy-link-text": "פרטיות",
 	"mobile-frontend-random-button": "דף אקראי",
 	"mobile-frontend-references-citation": "ציטוט מקור",
+	"mobile-frontend-references-citation-error": "אירעה שגיאה ולא היה אפשר לטעון את הציטוט הזה.",
+	"mobile-frontend-references-list": "הצגת הרשימה המלאה של הציטוטים",
 	"mobile-frontend-regular-site": "תצוגה למחשבים",
 	"mobile-frontend-requires-mobile": "הדף הזה אינו זמין באתר למחשבים. נא ללחוץ על הקישור לאתר למכשירים ניידים בתחתית הדף.",
 	"mobile-frontend-requires-optin": "הדף הזה זמין רק למי שבחר להירשם לתכנית הבטא שלנו. נא לבקר [[Special:MobileOptions|בדף ההגדרות]] כדי להירשם.",
