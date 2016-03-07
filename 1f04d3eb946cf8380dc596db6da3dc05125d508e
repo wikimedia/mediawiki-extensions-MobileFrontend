@@ -16,6 +16,40 @@
       "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_976c8507",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-07T23:03:05Z",
+      "side": 1,
+      "message": "Probably don\u0027t need this anymore. Instead make sure to attach the load handler before setting the src. And needs to export srcset as well.",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_b74ee999",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-07T23:03:05Z",
+      "side": 1,
+      "message": "Unrelated and I\u0027m not a 100% sure, but you might want to experiment with using jQuery replaceWith() (or native replaceChild) so that we end up with a plain \u003cimg\u003e right where it would be otherwise. Looks like it\u0027s just the classname that needs transferring otherwise. That way you avoid any layout bugs or changes from having a span around the image, which does affect css selectors compatibility and things like layout calculation.",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
