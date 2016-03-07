@@ -1077,6 +1077,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mobile.references.gateway",
 				"mobile.drawers",
 				"mobile.editor.api",
 				"mobile.references.images"
@@ -1092,8 +1093,22 @@
 				"Drawer.hogan": "resources/mobile.references/ReferencesDrawer.hogan"
 			},
 			"scripts": [
-				"resources/mobile.references/ReferencesDrawer.js",
-				"resources/mobile.references/references.js"
+				"resources/mobile.references/ReferencesDrawer.js"
+			]
+		},
+		"mobile.references.gateway": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.startup",
+				"mobile.oo"
+			],
+			"scripts": [
+				"resources/mobile.references.gateway/ReferencesGateway.js",
+				"resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
+				"resources/mobile.references.gateway/ReferencesMobileViewGateway.js"
 			]
 		},
 		"mobile.toggle": {
@@ -1593,6 +1608,7 @@
 				"resources/skins.minerva.scripts/init.js",
 				"resources/skins.minerva.scripts/initLogging.js",
 				"resources/skins.minerva.scripts/mobileRedirect.js",
+				"resources/skins.minerva.scripts/references.js",
 				"resources/skins.minerva.scripts/search.js"
 			]
 		},

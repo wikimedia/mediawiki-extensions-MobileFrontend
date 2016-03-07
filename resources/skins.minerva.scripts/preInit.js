@@ -58,6 +58,7 @@
 			protection: {
 				edit: permissions
 			},
+			revId: mw.config.get( 'wgRevisionId' ),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
 			sections: gateway.getSectionsFromHTML( $content ),

@@ -76,20 +76,38 @@
 		},
 		/**
 		 * Fetch and render nested reference upon click
+		 * @param {String} id of the reference to be retrieved
+		 * @param {Page} page to locate reference for
+		 * @param {String} refNumber the number it identifies as in the page
+		 */
+		showReference: function ( id, page, refNumber ) {
+			var drawer = this;
+
+			// Save the page in case we have to show a nested reference.
+			this.options.page = page;
+			this.options.gateway.getReference( id, page ).done( function ( reference ) {
+				drawer.render( {
+					title: refNumber,
+					text: reference.text
+				} );
+			} ).fail( function () {
+				drawer.render( {
+					error: true,
+					title: refNumber,
+					text: mw.msg( 'mobile-frontend-references-citation-error' )
+				} );
+			} );
+		},
+		/**
+		 * Fetch and render nested reference upon click
 		 * @param {jQuery.Event} ev
 		 */
 		showNestedReference: function ( ev ) {
-			var $dest = $( ev.target ),
-				href = $dest.attr( 'href' );
+			var $dest = $( ev.target );
 
-			mw.track( 'mf.showReference', {
-				href: href,
-				title: $dest.text(),
-				page: this.options.page
-			} );
-
-			// Don't hide the already shown drawer
-			ev.stopPropagation();
+			this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text() );
+			// Don't hide the already shown drawer via propagation and stop default scroll behaviour.
+			return false;
 		}
 	} );
 
