@@ -219,17 +219,16 @@
 		 * @param {jQuery.Object} $placeholder
 		 */
 		loadImage: function ( $placeholder ) {
-			var $noscript = $placeholder.prev( 'noscript' ),
+			var
 				// Grab the image markup from the HTML only fallback
 				// Image will start downloading
-				$image = $( $.parseHTML( $noscript.text() ) ),
 				$downloadingImage = $( '<img/>' );
 
 			// When the image has loaded
 			$downloadingImage.on( 'load', function () {
 				// Swap the HTML inside the placeholder (to keep the layout and
 				// dimensions the same and not trigger layouts
-				$placeholder.empty().append( $image );
+				$placeholder.empty().append( $downloadingImage );
 				// Set the loaded class after insertion of the HTML to trigger the
 				// animations.
 				$placeholder.addClass( 'loaded' );
@@ -237,8 +236,11 @@
 
 			// Trigger image download after binding the load handler
 			$downloadingImage.attr( {
-				src: $image.attr( 'src' ),
-				srcset: $image.attr( 'srcset' )
+				width: $placeholder.attr( 'data-width' ),
+				height: $placeholder.attr( 'data-height' ),
+				src: $placeholder.attr( 'data-src' ),
+				alt: $placeholder.attr( 'data-alt' ),
+				srcset: $placeholder.attr( 'data-srcset' )
 			} );
 		},
 
