@@ -296,6 +296,7 @@ class MobileFrontendHooks {
 				'issues.hogan' => 'tests/qunit/tests.mobilefrontend/issues.hogan',
 				'page.html' => 'tests/qunit/tests.mobilefrontend/page.html',
 				'page2.html' => 'tests/qunit/tests.mobilefrontend/page2.html',
+				'references.html' => 'tests/qunit/tests.mobilefrontend/references.html',
 			),
 			'localBasePath' => $localBasePath,
 			'remoteExtPath' => 'MobileFrontend',
@@ -435,6 +436,7 @@ class MobileFrontendHooks {
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
 			'wgMFLazyLoadImages' => $config->get( 'MFLazyLoadImages' ),
+			'wgMFLazyLoadReferences' => $config->get( 'MFLazyLoadReferences' ),
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
 				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),

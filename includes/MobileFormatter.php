@@ -106,8 +106,9 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		$ctx = MobileContext::singleton();
-		$mfRemovableClasses = $ctx->getMFConfig()
-			->get( 'MFRemovableClasses' );
+		$config = $ctx->getMFConfig();
+		$isBeta = $ctx->isBetaGroupMember();
+		$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
 
 		if ( $removeDefaults ) {
 			$this->remove( $mfRemovableClasses['base'] );
@@ -116,21 +117,62 @@ class MobileFormatter extends HtmlFormatter {
 			}
 		}
 
+		$mfReferences = $config->get( 'MFLazyLoadReferences' );
+		if ( $mfReferences ) {
+			if ( $mfReferences['base'] ||
+				( $isBeta && $mfReferences['beta'] )
+			) {
+				$this->doRewriteReferencesForLazyLoading();
+			}
+		}
+
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
 		} else {
-			$mfLazyLoadImages = $ctx->getMFConfig()
-				->get( 'MFLazyLoadImages' );
+			$mfLazyLoadImages = $config->get( 'MFLazyLoadImages' );
 
 			if (
-					$mfLazyLoadImages['base'] ||
-					( $ctx->isBetaGroupMember() && $mfLazyLoadImages['beta'] )
+				$mfLazyLoadImages['base'] ||
+				( $isBeta && $mfLazyLoadImages['beta'] )
 			) {
 				$this->doRewriteImagesForLazyLoading();
 			}
 		}
 
 		return parent::filterContent();
+	}
+
+	/**
+	 * Replaces any references list with a link to Special:References
+	 */
+	private function doRewriteReferencesForLazyLoading() {
+		$doc = $this->getDoc();
+		// Accessing by tag is cheaper than class
+		$nodes = $doc->getElementsByTagName( 'ol' );
+		// PHP's DOM classes are recursive
+		// but since we are manipulating the DOMList we have to
+		// traverse it backwards
+		// see http://php.net/manual/en/class.domnodelist.php
+		$listId = $nodes->length - 1;
+		for ( $i = $listId; $i >= 0; $i-- ) {
+			$list = $nodes->item( $i );
+
+			// Use class to decide it is a list of references
+			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
+				$parent = $list->parentNode;
+				$placeholder = $doc->createElement( 'a',
+					wfMessage( 'mobile-frontend-references-list' ) );
+				$placeholder->setAttribute( 'class', 'mf-lazy-references-placeholder' );
+				// Note to render a reference we need to know its listId and title.
+				// Note: You can have multiple <references> tag on the same page
+				$citePath = "$listId/" . $this->title->getPrefixedText();
+				// FIXME: Currently a broken link see https://phabricator.wikimedia.org/T125897
+				$placeholder->setAttribute( 'href',
+					SpecialPage::getTitleFor( 'Cite', $citePath )->getLocalUrl() );
+				$parent->replaceChild( $placeholder, $list );
+				$listId -= 1;
+			}
+		}
 	}
 
 	/**

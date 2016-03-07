@@ -140,6 +140,16 @@
 				"resources/skins.minerva.content.styles/styles.less"
 			]
 		},
+		"skins.minerva.content.styles.beta": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"position": "top",
+			"styles": [
+				"resources/skins.minerva.content.styles.beta/styles.less"
+			]
+		},
 		"mobile.pagelist.styles": {
 			"targets": [
 				"mobile",
@@ -1049,10 +1059,12 @@
 			],
 			"dependencies": [
 				"mobile.drawers",
+				"mobile.editor.api",
 				"mobile.references.images",
 				"mobile.loggingSchemas"
 			],
 			"messages": [
+				"mobile-frontend-references-citation-error",
 				"mobile-frontend-references-citation"
 			],
 			"styles": [
@@ -1983,6 +1995,10 @@
 			"base": []
 		},
 		"MFLazyLoadImages": {
+			"base": false,
+			"beta": false
+		},
+		"MFLazyLoadReferences": {
 			"base": false,
 			"beta": false
 		},
