@@ -243,6 +243,8 @@
 	"mobile-frontend-privacy-link-text": "Protección de datos",
 	"mobile-frontend-random-button": "Ao chou",
 	"mobile-frontend-references-citation": "Cita",
+	"mobile-frontend-references-citation-error": "Houbo un erro e non foi posible cargar esta cita.",
+	"mobile-frontend-references-list": "Ver lista completa de citas.",
 	"mobile-frontend-regular-site": "Vista normal",
 	"mobile-frontend-requires-mobile": "Esta páxina só está dispoñible para dispositivos móbiles. Prema na ligazón de vista móbil na parte inferior da páxina.",
 	"mobile-frontend-requires-optin": "Esta páxina non está dispoñible a menos que active o noso modo beta. Visite a [[Special:MobileOptions|páxina de configuración]] para activalo.",

@@ -258,6 +258,8 @@
 	"mobile-frontend-privacy-link-text": "Конфіденційність",
 	"mobile-frontend-random-button": "Випадкова",
 	"mobile-frontend-references-citation": "Цитування",
+	"mobile-frontend-references-citation-error": "Сталася помилка і не вдалося завантажити цю примітку.",
+	"mobile-frontend-references-list": "Переглянути весь список приміток",
 	"mobile-frontend-regular-site": "Стандартний вигляд сторінки",
 	"mobile-frontend-requires-mobile": "Ця сторінка недоступна у стаціонарному вигляді. Будь ласка, натисніть на мобільний перегляд в нижній частині сторінки.",
 	"mobile-frontend-requires-optin": "Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.",

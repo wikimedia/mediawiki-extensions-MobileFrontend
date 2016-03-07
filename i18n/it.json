@@ -244,6 +244,8 @@
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-random-button": "Una pagina a caso",
 	"mobile-frontend-references-citation": "Citazione",
+	"mobile-frontend-references-citation-error": "Si è verificato un errore e non è stato possibile caricare questa citazione.",
+	"mobile-frontend-references-list": "Vedi l'elenco completo delle citazioni",
 	"mobile-frontend-regular-site": "Vista desktop",
 	"mobile-frontend-requires-mobile": "Questa pagina non è disponibile sul desktop. Clicca il collegamento alla visualizzazione per mobile in fondo alla pagina.",
 	"mobile-frontend-requires-optin": "Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.",
