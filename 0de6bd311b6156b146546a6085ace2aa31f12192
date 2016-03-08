@@ -16,6 +16,24 @@
       "revId": "0de6bd311b6156b146546a6085ace2aa31f12192",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_c4380e9e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1248,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-08T18:39:54Z",
+      "side": 0,
+      "message": "Yes, this shouldn\u0027t be a problem in theory, but there is something funky going on elsewhere in the stack.\n\nWhen exploring locally I could see the table of contents get stripped from the page, but further down the stack it reappears (I guess something else overwrites it).\n\nI think this bug has existed long enough and we need to have a short term fix in the mean time. This fix doesn\u0027t feel hacky and is reverting back to the old state but in a cleaner fashion then before (as it allows other skins to take advantage of section collapsing).\n\nAlso doing this here, forgets that other extensions may use onOutputPageParserOutput after MobileFrontend does so this solution is probably better since it leaves things to the last minute.",
+      "parentUuid": "0e2f53b6_50fcc3b1",
+      "revId": "0de6bd311b6156b146546a6085ace2aa31f12192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
