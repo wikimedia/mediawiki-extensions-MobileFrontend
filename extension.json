@@ -1701,7 +1701,8 @@
 			"dependencies": [
 				"skins.minerva.icons.images.scripts",
 				"skins.minerva.scripts",
-				"mobile.overlays"
+				"mobile.overlays",
+				"mediawiki.Title"
 			],
 			"styles": [
 				"resources/skins.minerva.talk/talk.less"
