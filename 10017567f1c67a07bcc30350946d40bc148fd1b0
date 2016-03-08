@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_c4964ef3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-08T19:12:56Z",
+      "side": 1,
+      "message": "Move to inside if or func call as its only used once and doesn\u0027t need to be done for non-mobile contexts.",
+      "revId": "10017567f1c67a07bcc30350946d40bc148fd1b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_84f5664f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-08T19:12:56Z",
+      "side": 1,
+      "message": "Can be same as below I suppose without the variable?",
+      "revId": "10017567f1c67a07bcc30350946d40bc148fd1b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_249c5a12",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-08T19:12:56Z",
+      "side": 1,
+      "message": "Redundant for hooks since MediaWiki 1.23.",
+      "revId": "10017567f1c67a07bcc30350946d40bc148fd1b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
