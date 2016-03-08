@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_f849756b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-08T22:03:06Z",
+      "side": 1,
+      "message": "Will this capture text nodes?",
+      "revId": "392c53abe1f1707926e958db433a39b22b1ca81d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
