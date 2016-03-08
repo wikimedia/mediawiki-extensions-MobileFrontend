@@ -104,6 +104,24 @@
       "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_ed0b80d7",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-08T00:38:32Z",
+      "side": 1,
+      "message": "Good point. That\u0027s another regression we should track. The image element must have its own dimension attributes as otherwise images will be rendered at the wrong size. The placeholder having these attributes set does us no good.",
+      "parentUuid": "0e2f53b6_0db0643d",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
