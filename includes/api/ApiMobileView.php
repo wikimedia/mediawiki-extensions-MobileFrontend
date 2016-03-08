@@ -534,8 +534,8 @@ class ApiMobileView extends ApiBase {
 		if ( !$this->noTransform ) {
 			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
 			$mf->setRemoveMedia( $noImages );
-			$mf->filterContent();
 			$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
+			$mf->filterContent();
 			$html = $mf->getText();
 		}
 

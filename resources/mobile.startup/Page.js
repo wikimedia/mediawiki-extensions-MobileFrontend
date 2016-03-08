@@ -109,12 +109,16 @@
 			 * <div id="bodyContent">
 			 *   <!-- content of the page.. -->
 			 *   <div id="mw-content-text">
-			 *     <div class="mw-mobilefrontend-leadsection">lead section</div>
+			 *     <div class="mf-section-0">lead section</div>
 			 *     <h2></h2>
-			 *     <div>second section</div>
+			 *     <div class="mf-section-1">second section</div>
 			 *   </div>
 			 * </div>
 			 */
+			if ( $( '.mf-section-0' ).length ) {
+				return $( '.mf-section-0' );
+			}
+			// for cached pages that are still using mw-mobilefrontend-leadsection
 			if ( $( '.mw-mobilefrontend-leadsection' ).length ) {
 				return $( '.mw-mobilefrontend-leadsection' );
 			}

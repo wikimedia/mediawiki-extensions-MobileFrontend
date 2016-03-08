@@ -38,13 +38,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		return array(
 			array(
 				'<img src="/foo/bar.jpg">Blah</img>',
-				'<div class="mw-mobilefrontend-leadsection"><span class="mw-mf-image-replacement">['
+				'<span class="mw-mf-image-replacement">['
 					. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
 				$removeImages,
 			),
 			array(
 				'<img src="/foo/bar.jpg" alt="Blah"/>',
-				'<div class="mw-mobilefrontend-leadsection">' .
 				'<span class="mw-mf-image-replacement">[Blah]</span>',
 				$removeImages,
 			),
@@ -62,10 +61,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span>'
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				'<div class="mw-mobilefrontend-leadsection"></div>'
+				'<div class="mf-section-0"></div>'
 					. '<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span>'
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
-					. '<div>' . $longLine . '</div>',
+					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			),
 			// \n</h3> in headers
@@ -74,9 +73,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $longLine
 					. '<h4><span>h4</span></h4>'
 					. 'h4 text.',
-				'<div class="mw-mobilefrontend-leadsection"></div>'
+				'<div class="mf-section-0"></div>'
 					. '<h3><span>h3</span></h3>'
-					. '<div>'
+					. '<div class="mf-section-1">'
 					. $longLine
 					. '<h4 class="in-block"><span>h4</span></h4>'
 					. 'h4 text.'
@@ -87,9 +86,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			array(
 				'<h6><span>h6</span></h6>'
 					. $longLine,
-				'<div class="mw-mobilefrontend-leadsection"></div>'
+				'<div class="mf-section-0"></div>'
 					. '<h6><span>h6</span></h6>'
-					. '<div>' . $longLine . '</div>',
+					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			),
 			// Bug 36670
@@ -97,34 +96,34 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>'
 					. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				'<div class="mw-mobilefrontend-leadsection"></div><h2>' .
+				'<div class="mf-section-0"></div><h2>' .
 				'<span class="mw-headline" id="History"><span id="Overview"></span>'
-					. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2><div>'
-					. $longLine . '</div>',
+				. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
+				. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			),
 			array(
 				'<img alt="picture of kitty" src="kitty.jpg">',
-				'<div class="mw-mobilefrontend-leadsection"><span class="mw-mf-image-replacement">' .
+				'<span class="mw-mf-image-replacement">' .
 				'[picture of kitty]</span>',
 				$removeImages,
 			),
 			array(
 				'<img src="kitty.jpg">',
-				'<div class="mw-mobilefrontend-leadsection"><span class="mw-mf-image-replacement">[' .
+				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
 				$removeImages,
 			),
 			array(
 				'<img alt src="kitty.jpg">',
-				'<div class="mw-mobilefrontend-leadsection"><span class="mw-mf-image-replacement">[' .
+				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
 				$removeImages,
 			),
 			array(
 				'<img alt src="kitty.jpg">look at the cute kitty!' .
 					'<img alt="picture of angry dog" src="dog.jpg">',
-				'<div class="mw-mobilefrontend-leadsection"><span class="mw-mf-image-replacement">[' .
+				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
 					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
 				$removeImages,

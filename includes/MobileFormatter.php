@@ -7,18 +7,6 @@
  * Converts HTML into a mobile-friendly version
  */
 class MobileFormatter extends HtmlFormatter {
-	/** @var string $pageTransformStart String prefixes to be
-		applied at start and end of output from Parser */
-	protected $pageTransformStart = '<div class="mw-mobilefrontend-leadsection">';
-	/** @var string $pageTransformEnd String prefixes to be
-		applied at start and end of output from Parser */
-	protected $pageTransformEnd = '</div>';
-	/** @var string $headingTransformStart String prefixes to be
-		applied before and after section content. */
-	protected $headingTransformStart = '</div>';
-	/** @var string $headingTransformEnd String prefixes to be
-		applied before and after section content. */
-	protected $headingTransformEnd = '<div>';
 	/** @var array $topHeadingTags Array of strings with possible tags,
 		can be recognized as top headings. */
 	public $topHeadingTags = array();
@@ -100,7 +88,7 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Removes content inappropriate for mobile devices
+	 * Performs various transformations to the content to make it appropiate for mobile devices.
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
 	 * @param bool $removeReferences Whether to remove references from the output
 	 * @param bool $removeImages Whether to move images into noscript tags
@@ -111,9 +99,9 @@ class MobileFormatter extends HtmlFormatter {
 	) {
 		$ctx = MobileContext::singleton();
 		$config = $ctx->getMFConfig();
-		$isBeta = $ctx->isBetaGroupMember();
-		$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
+		$doc = $this->getDoc();
 
+		$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
 		if ( $removeDefaults ) {
 			$this->remove( $mfRemovableClasses['base'] );
 			if ( $ctx->isBetaGroupMember() ) {
@@ -129,6 +117,16 @@ class MobileFormatter extends HtmlFormatter {
 			$this->doRemoveImages();
 		} elseif ( $removeImages ){
 			$this->doRewriteImagesForLazyLoading();
+		}
+
+		// Initial pass to sectionify the content if it is not the main page and
+		// transform headings
+		if ( !$this->mainPage ) {
+			if ( $this->expandableSections ) {
+				list( $headings, $subheadings ) = $this->getHeadings( $doc );
+				$this->makeSections( $doc, $headings );
+				$this->makeHeadingsEditable( $subheadings );
+			}
 		}
 
 		return parent::filterContent();
@@ -336,106 +334,111 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Transforms heading for toggling and editing
+	 * Splits the body of the document into sections demarcated by the $headings elements.
 	 *
-	 * - Add css classes to all h-tags (h1-h6) _inside_ a section
-	 *   to enable editing of these sections. Doesn't add this class to the first
-	 *   heading ($tagName)
-	 * - Wraps section-content inside a div to enable toggling
+	 * All member elements of the sections are added to a <code><div></code> so
+	 * that the section bodies are clearly defined (to be "expandable" for
+	 * example).
 	 *
-	 * @param string $s
-	 * @param string $tagName
-	 * @return string
+	 * @param DOMDocument $doc
+	 * @param [DOMElement] $headings The headings returned by
+	 *  {@see MobileFormatter::getHeadings}
 	 */
-	protected function headingTransform( $s, $tagName = 'h2' ) {
-		// add in-block class to all headings included in this section (except the first one)
-		// don't do this for the main page, it breaks things - Bug 190662
-		if ( !$this->mainPage && $this->expandableSections ) {
-			$s = preg_replace_callback(
-				'/<(h[1-6])>/si',
-				function ( $match ) use ( $tagName ) {
-					$tag = $match[1];
-					$cssClass = '';
-					if ( $tag !== $tagName ) {
-						$cssClass = ' class="in-block"';
-					}
-					return '<' . $tag . $cssClass . '>';
-				},
-				$s
-			);
+	protected function makeSections( DOMDocument $doc, array $headings ) {
+
+		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
+		$sibling = $body->firstChild;
+
+		$firstHeading = reset( $headings );
+
+		$sectionNumber = 0;
+		$sectionBody = $doc->createElement( 'div' );
+		$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
+
+		while ( $sibling ) {
+			$node = $sibling;
+			$sibling = $sibling->nextSibling;
+
+			// If we've found a top level heading, insert the previous section if
+			// necessary and clear the container div.
+			// Note well the use of DOMNode#nodeName here. Only DOMElement defines
+			// DOMElement#tagName.  So, if there's trailing text - represented by
+			// DOMText - then accessing #tagName will trigger an error.
+			if ( $headings && $node->nodeName === $firstHeading->nodeName ) {
+				// Insert the previous section body and reset it for the new section
+				$body->insertBefore( $sectionBody, $node );
+				$sectionNumber += 1;
+				$sectionBody = $doc->createElement( 'div' );
+				$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
+
+				continue;
+			}
+
+			// If it is not a top level heading, keep appending the nodes to the
+			// section body container.
+			$sectionBody->appendChild( $node );
 		}
 
-		// do not mark lead section on main page, and do not enable expandable sections
-		if ( !$this->mainPage ) {
-			// $tagRegEx is a regex filter for any heading with the passed tagName.
-			$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
-			// set the limit for the preg_replace call. In general, this is controlled by the  value,
-			// if expandable sections are enabled or not. If not, we have to make sure, that the lead
-			// section is marked correctly, so we loop through the matches, but limit it to 1 (which
-			// is the lead section marking). - bug T122471
-			$limit = $this->expandableSections ? -1 : 1;
-			// start the html with the lead section marker (div element)
-			$s = $this->pageTransformStart .
-				preg_replace_callback(
-					'%(' . $tagRegEx . ')%sU', function ( $matches ) {
-						// if the sections should be expandable, enable them
-						if ( $this->expandableSections ) {
-							return $this->headingTransformStart .
-								$matches[0] . $this->headingTransformEnd;
-						} else {
-							// otherwise, simply close the lead section div (this should be the
-							// first and last run for this function) and add the heading (the matched
-							// text), so we don't loose one
-							return $this->headingTransformStart . $matches[0];
-						}
-					},
-					$s,
-					// the limit we set earlier
-					$limit
+		// Append the last section body.
+		$body->appendChild( $sectionBody );
+	}
+
+	/**
+	 * Marks the headings as editable by adding the <code>in-block</code>
+	 * class to each of them, if it hasn't already been added.
+	 *
+	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
+	 * obviously connected to being editable.
+	 *
+	 * @param [DOMElement] $headings
+	 */
+	protected function makeHeadingsEditable( array $headings ) {
+		foreach ( $headings as $heading ) {
+			$class = $heading->getAttribute( 'class' );
+
+			if ( strpos( $class, 'in-block' ) === false ) {
+				$heading->setAttribute(
+					'class',
+					ltrim( $class . ' in-block' )
 				);
-
-			// we need to close the div elements properly (inside the page html, the function inside
-			// preg_replace_callback takes care of closing the div elements by starting the replacement
-			// with closing the div of the round before, so the last one is still unclosed).
-			if ( $this->expandableSections ) {
-				$s .= $this->pageTransformEnd;
 			}
 		}
-
-		return $s;
 	}
 
 	/**
-	 * Finds the first heading in the page and uses that to determine top level sections.
-	 * When a page contains no headings returns h6.
+	 * Gets all headings in the document in rank order.
 	 *
-	 * @param string $html
-	 * @return string the tag name for the top level headings
+	 * Note well that the rank order is defined by the
+	 * <code>MobileFormatter#topHeadingTags</code> property.
+	 *
+	 * @param DOMDocument $doc
+	 * @return array A two-element array where the first is the highest
+	 *  rank headings and the second is all other headings
 	 */
-	protected function findTopHeading( $html ) {
-		$tags = $this->topHeadingTags;
-		if ( !is_array( $tags ) ) {
-			throw new UnexpectedValueException( 'Possible top headings needs to be an array of strings, ' .
-				gettype( $tags ) . ' given.' );
-		}
-		foreach ( $tags as $tag ) {
-			if ( strpos( $html, '<' . $tag ) !== false ) {
-				return $tag;
+	private function getHeadings( DOMDocument $doc ) {
+		$result = array();
+		$headings = $subheadings = array();
+
+		foreach ( $this->topHeadingTags as $tagName ) {
+			$elements = $doc->getElementsByTagName( $tagName );
+
+			if ( !$elements->length ) {
+				continue;
+			}
+
+			// TODO: Under HHVM 3.6.6, `iterator_to_array` returns a one-indexed
+			// array rather than a zero-indexed array.  Create a minimal test case
+			// and raise a bug.
+			// FIXME: Remove array_values when HHVM bug fixed.
+			$elements = array_values( iterator_to_array( $elements ) );
+
+			if ( !$headings ) {
+				$headings = $elements;
+			} else {
+				$subheadings = array_merge( $subheadings, $elements );
 			}
 		}
-		return 'h6';
-	}
 
-	/**
-	 * Call headingTransform if needed
-	 *
-	 * @param string $html
-	 * @return string
-	 */
-	protected function onHtmlReady( $html ) {
-		$tagName = $this->findTopHeading( $html );
-		$html = $this->headingTransform( $html, $tagName );
-
-		return $html;
+		return array( $headings, $subheadings );
 	}
 }

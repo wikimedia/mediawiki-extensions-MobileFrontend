@@ -50,17 +50,17 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 					'mobileformat' => '',
 					'text' => "I exist\n\n<span class='nomobile'>I don't</span>"
 				),
-				'<div class="mw-mobilefrontend-leadsection"><p>I exist</p><p></p></div>' ),
+				'<div class="mf-section-0"><p>I exist</p><p></p></div>' ),
 			array(
 				array(
 					'mobileformat' => 'html',
 					'text' => "Lede<h2>Section1</h2>Text<h2>Section2</h2>Text"
 				),
-				'<div class="mw-mobilefrontend-leadsection">Lede</div>' .
+				'<div class="mf-section-0">Lede</div>' .
 				'<h2><span class="mw-headline" id="Section1">Section1</span></h2>' .
-				'<div>Text</div>' .
+				'<div class="mf-section-1">Text</div>' .
 				'<h2><span class="mw-headline" id="Section2">Section2</span></h2>' .
-				'<div>Text</div>' ),
+				'<div class="mf-section-2">Text</div>' ),
 		);
 	}
 }
