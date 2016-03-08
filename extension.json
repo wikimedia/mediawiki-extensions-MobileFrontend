@@ -642,7 +642,6 @@
 				"resources/mobile.abusefilter/AbuseFilterPanel.js"
 			],
 			"messages": [
-				"mobile-frontend-photo-ownership-confirm",
 				"mobile-frontend-editor-abusefilter-warning",
 				"mobile-frontend-editor-abusefilter-disallow",
 				"mobile-frontend-editor-abusefilter-read-more"
@@ -1488,12 +1487,6 @@
 			"dependencies": [
 				"mobile.gallery",
 				"mobile.startup"
-			],
-			"messages": [
-				"mobile-frontend-photo-upload-generic",
-				"mobile-frontend-donate-photo-upload-success",
-				"mobile-frontend-donate-photo-first-upload-success",
-				"mobile-frontend-photo-upload-user-count"
 			],
 			"scripts": [
 				"resources/mobile.special.uploads.scripts/uploads.js"

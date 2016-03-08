@@ -87,8 +87,6 @@
 	"mobile-frontend-donate-image-title": "Uploads",
 	"mobile-frontend-donate-image-title-username": "Uploads by $1",
 	"mobile-frontend-donate-image-title-you": "Uploads by you",
-	"mobile-frontend-donate-photo-first-upload-success": "Success! Thanks for your first contribution!",
-	"mobile-frontend-donate-photo-upload-success": "Success! Your image can now be used on {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Cancel",
 	"mobile-frontend-pointer-dismiss": "Dismiss",
 	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />Log in to edit.",
