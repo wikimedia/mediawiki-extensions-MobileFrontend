@@ -51,14 +51,16 @@
 	 * @ignore
 	 */
 	function initButton() {
-		var $languageSelector = $( '#page-secondary-actions' ).find( '.languageSelector' );
+		// FIXME: remove .languageSelector when cache clears
+		var $languageSwitcherBtn = $( '#language-switcher, .languageSelector' ),
+			languageButtonVersion = context.isBetaGroupMember() ? 'top-of-article' : 'bottom-of-article';
 
 		/**
 		 * Log impression when the language button is seen by the user
 		 * @ignore
 		 */
 		function logLanguageButtonImpression() {
-			if ( mw.viewport.isElementInViewport( $languageSelector[0] ) ) {
+			if ( mw.viewport.isElementInViewport( $languageSwitcherBtn[0] ) ) {
 				M.off( 'scroll', logLanguageButtonImpression );
 
 				schemaMobileWebLanguageSwitcher.log( {
@@ -90,7 +92,7 @@
 			return bucket;
 		}
 
-		if ( $languageSelector.length ) {
+		if ( $languageSwitcherBtn.length ) {
 			schemaMobileWebLanguageSwitcher.log( {
 				event: 'pageLoaded',
 				beaconCapable: $.isFunction( navigator.sendBeacon )
@@ -100,13 +102,19 @@
 			// maybe the button is already visible?
 			logLanguageButtonImpression();
 
-			$languageSelector.on( 'click', function ( ev ) {
+			$languageSwitcherBtn.on( 'click', function ( ev ) {
 				var previousTapCount = settings.get( 'mobile-language-button-tap-count' ),
+					$languageLink = context.isBetaGroupMember() ? $languageSwitcherBtn.find( 'a' ) : $languageSwitcherBtn,
 					tapCountBucket;
 
 				ev.preventDefault();
 
-				router.navigate( '/languages' );
+				// In beta the icon is still shown even though there are no languages to show.
+				// Only show the overlay if the page has other languages.
+				if ( $languageLink.attr( 'href' ) ) {
+					router.navigate( '/languages' );
+				}
+
 				uiSchema.log( {
 					name: 'languages'
 				} );
@@ -127,7 +135,7 @@
 				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
 				schemaMobileWebLanguageSwitcher.log( {
 					event: 'languageButtonTap',
-					languageButtonVersion: 'bottom-of-article',
+					languageButtonVersion: languageButtonVersion,
 					languageButtonTappedBucket: tapCountBucket,
 					primaryLanguageOfUser: getDeviceLanguage() || 'unknown'
 				} );
