@@ -266,6 +266,8 @@
 	"mobile-frontend-privacy-link-text": "Privacidad",
 	"mobile-frontend-random-button": "Aleatorio",
 	"mobile-frontend-references-citation": "Cita",
+	"mobile-frontend-references-citation-error": "Ocurrió un error y no se pudo cargar esta cita.",
+	"mobile-frontend-references-list": "Ver la lista completa de citas",
 	"mobile-frontend-regular-site": "Vista de escritorio",
 	"mobile-frontend-requires-mobile": "Esta página solo está disponible para dispositivos móviles. Pulsa en el enlace de vista móvil en la parte inferior de la página.",
 	"mobile-frontend-requires-title": "Página no disponible",

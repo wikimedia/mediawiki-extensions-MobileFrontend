@@ -9,6 +9,7 @@
 			"Red Winged Duck"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс",
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацьверджаньня",
 	"mobile-frontend-account-create-email-placeholder": "Адрас e-mail (неабавязкова)",
 	"mobile-frontend-account-create-submit": "Зарэгістравацца",
@@ -64,7 +65,6 @@
 	"mobile-frontend-main-menu-page-title": "Навігацыя па сайце",
 	"mobile-frontend-main-menu-settings": "Налады",
 	"mobile-frontend-main-menu-settings-heading": "Налады",
-	"mobile-frontend-main-menu-upload": "Запампоўкі",
 	"mobile-frontend-main-menu-watchlist": "Сьпіс назіраньня",
 	"mobile-frontend-meta-data-issues": "Хібы старонкі",
 	"mobile-frontend-meta-data-issues-header": "Хібы",
@@ -91,12 +91,6 @@
 	"mobile-frontend-password-placeholder": "Пароль",
 	"mobile-frontend-photo-article-edit-comment": "Дададзеная выява для выкарыстаньня на старонцы",
 	"mobile-frontend-photo-caption-placeholder": "Апішыце гэтую выяву (абавязкова)",
-	"mobile-frontend-photo-upload": "Дадаць выяву на гэтую старонку",
-	"mobile-frontend-photo-upload-anon": "Калі ласка, увайдзіце, каб дадаць выяву на гэтую старонку.",
-	"mobile-frontend-photo-upload-comment": "Дададзеная выява на старонку",
-	"mobile-frontend-photo-upload-error": "Памылка, паспрабуйце яшчэ раз.",
-	"mobile-frontend-photo-upload-generic": "Загрузіць выяву",
-	"mobile-frontend-photo-upload-unavailable": "Ваш браўзэр не падтрымлівае запампоўку выяваў.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ загрузак",
 	"mobile-frontend-placeholder": "Шукайце ў {{GRAMMAR:месны|{{SITENAME}}}}",
 	"mobile-frontend-placeholder-beta": "Шукайце ў {{GRAMMAR:месны|{{SITENAME}}}} (бэта)",

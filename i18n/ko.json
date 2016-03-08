@@ -20,7 +20,8 @@
 			"LiteHell",
 			"Hwangjy9",
 			"Kurousagi",
-			"Idh0854"
+			"Idh0854",
+			"HDNua"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -250,6 +251,8 @@
 	"mobile-frontend-privacy-link-text": "개인정보",
 	"mobile-frontend-random-button": "임의 문서",
 	"mobile-frontend-references-citation": "인용",
+	"mobile-frontend-references-citation-error": "오류가 발생했으며 인용구를 불러올 수 없었습니다.",
+	"mobile-frontend-references-list": "전체 인용 목록 보기",
 	"mobile-frontend-regular-site": "데스크톱 보기",
 	"mobile-frontend-requires-mobile": "이 페이지는 데스크톱에서 사용할 수 없습니다. 문서 아래에 모바일 보기 링크를 클릭해주세요.",
 	"mobile-frontend-requires-optin": "우리의 베타 모드로 선택하지 않으면 이 페이지를 사용할 수 없습니다. 선택하려면 [[Special:MobileOptions|설정 문서]]를 방문하세요.",

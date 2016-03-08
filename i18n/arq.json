@@ -3,13 +3,14 @@
 		"authors": [
 			"Bachounda",
 			"Oldstoneage",
-			"Hussam"
+			"Hussam",
+			"GeekEmad"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ما كانش تلخيص على هاد التبدال",
 	"mobile-frontend-commons-category-view": "تصاوير ب $1",
 	"mobile-frontend-copyright": "المحتاوا راه تحت النسخة $1 تاع الليسانس، غير يلا كان حاجه اخرة.",
-	"mobile-frontend-editor-edit": "تبدال",
+	"mobile-frontend-editor-edit": "بدّل",
 	"mobile-frontend-featured-article": "شي محتاوا مختار ل هاد النهار",
 	"mobile-frontend-home-button": "اللوله",
 	"mobile-frontend-language-article-heading": "اقرا بلوغه وحدخره",
