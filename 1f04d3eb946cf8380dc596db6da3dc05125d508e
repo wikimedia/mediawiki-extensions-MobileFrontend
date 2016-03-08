@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_eda9c0dd",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-08T00:22:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_17a99521",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_976c8507",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_8da47406",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-08T00:22:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_976c8507",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_b74ee999",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-03-07T23:03:05Z",
       "side": 1,
       "message": "Unrelated and I\u0027m not a 100% sure, but you might want to experiment with using jQuery replaceWith() (or native replaceChild) so that we end up with a plain \u003cimg\u003e right where it would be otherwise. Looks like it\u0027s just the classname that needs transferring otherwise. That way you avoid any layout bugs or changes from having a span around the image, which does affect css selectors compatibility and things like layout calculation.",
+      "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_0db0643d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-08T00:22:34Z",
+      "side": 1,
+      "message": "Yeh maybe but let\u0027s consider this separately since right now the placeholder carries the dimensions.",
+      "parentUuid": "0e2f53b6_b74ee999",
       "revId": "1f04d3eb946cf8380dc596db6da3dc05125d508e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
