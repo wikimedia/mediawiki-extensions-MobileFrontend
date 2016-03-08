@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_50fcc3b1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1248,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-08T07:35:31Z",
+      "side": 0,
+      "message": "I already had this in mind, but legoktm said, that this code runs _after_ the ParserCache[1].\n\n[1] http://bots.wmflabs.org/~wm-bot/logs/%23wikimedia-mobile/20160222.txt\n(search for \"[21:46:13] \u003cFlorianSW\u003e\t legoktm:\")",
+      "revId": "0de6bd311b6156b146546a6085ace2aa31f12192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
