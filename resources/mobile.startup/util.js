@@ -40,7 +40,8 @@
 		},
 
 		/**
-		 * Check if at least half of the element's height and half of its width are in viewport
+		 * Check if some of the element is in viewport
+		 * FIXME: Remove in favor of core's mw.viewport once T129466 is fixed
 		 *
 		 * @method
 		 * @param {jQuery.Object} $el - element that's being tested
@@ -56,9 +57,14 @@
 				elOffset = $el.offset();
 
 			return (
-				( windowScrollTop + windowHeight >= elOffset.top + elHeight / 2 ) &&
-				( windowScrollLeft + windowWidth >= elOffset.left + elWidth / 2 ) &&
-				( windowScrollTop <= elOffset.top + elHeight / 2 )
+				// Bottom border must be below viewport's top
+				( elOffset.top + elHeight >= windowScrollTop ) &&
+				// Top border must be above viewport's bottom
+				( elOffset.top <= windowScrollTop + windowHeight ) &&
+				// Right border must be after viewport's left border
+				( elOffset.left + elWidth >= windowScrollLeft ) &&
+				// left border must be before viewport's right border
+				( elOffset.left <= windowScrollLeft + windowWidth )
 			);
 		}
 	};
