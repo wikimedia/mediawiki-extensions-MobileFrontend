@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_4d8c2cdc",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-08T01:48:21Z",
+      "side": 1,
+      "message": "Beware that empty string and string \"0\" can both be significant attribute values in HTML. Especially with regards to alt.\n\nIn a proper DOM, one can check against null. However DOMElement::getAttribute() in PHP is a bit shitty in that it returns empty string even if the attribute doesn\u0027t exist. But hasAttribute() is available though.",
+      "revId": "32d5ac8e84d2c70a28a243b7c5e49bd948b0dcd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
