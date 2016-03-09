@@ -124,6 +124,7 @@
 				// group variants under a fake non-existing parent
 				if ( variants.length > 1 ) {
 					parentsMap[ lang ] = {
+						lang: lang,  // this key is needed for lexicographical comparison
 						variantsHeader: preferredLanguagesMap[ lang ] ? preferredLanguagesMap[ lang ].langname : '',
 						variants: variants,
 						hasVariants: true

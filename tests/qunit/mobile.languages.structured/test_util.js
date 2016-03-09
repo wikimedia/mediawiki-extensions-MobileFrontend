@@ -69,7 +69,6 @@
 			this.deviceLanguage = 'en-us';
 
 			this.frequentlyUsedLanguages = {
-				'zh-min-nan': 1,
 				zh: 2,
 				ko: 1
 			};
@@ -87,12 +86,6 @@
 						url: 'https://ko.wikipedia.org/wiki/%EB%B2%84%EB%9D%BD_%EC%98%A4%EB%B0%94%EB%A7%88',
 						title: '버락 오바마',
 						langname: '한국어',
-						frequency: 1
-					}, {
-						lang: 'zh-min-nan',
-						url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama',
-						title: 'Barack Obama',
-						langname: 'Bân-lâm-gú',
 						frequency: 1
 					}
 				],
@@ -132,11 +125,25 @@
 						title: 'Barak Obama',
 						langname: 'oʻzbekcha/ўзбекча'
 					}, {
-						lang: 'zh-yue',
-						url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC',
-						title: '奧巴馬',
-						langname: '粵語',
-						variant: 'yue'
+						hasVariants: true,
+						lang: 'zh',
+						variantsHeader: '中文',
+						variants: [
+							{
+								lang: 'zh-min-nan',
+								url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama',
+								title: 'Barack Obama',
+								langname: 'Bân-lâm-gú',
+								variant: 'min-nan'
+							},
+							{
+								lang: 'zh-yue',
+								url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC',
+								title: '奧巴馬',
+								langname: '粵語',
+								variant: 'yue'
+							}
+						]
 					}, {
 						lang: 'zu',
 						url: 'https://zu.wikipedia.org/wiki/Barack_Obama',
@@ -153,11 +160,11 @@
 	} );
 
 	QUnit.test( 'test utility functions', 4, function ( assert ) {
-		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages, 'Frequently used languages is correct.' );
+		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages,
+			'Frequently used languages is correct.' );
 
 		util.saveLanguageUsageCount( 'ko', util.getFrequentlyUsedLanguages() );
 		assert.ok( this.saveSpy.calledWith( {
-			'zh-min-nan': 1,
 			zh: 2,
 			ko: 2
 		} ), 'Frequently used language is correctly saved.' );
