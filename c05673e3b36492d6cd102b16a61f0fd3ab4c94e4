@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_4fb88b71",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T23:19:38Z",
+      "side": 1,
+      "message": "If querySelectorAll was available, the browser is likely Grade A.",
+      "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
