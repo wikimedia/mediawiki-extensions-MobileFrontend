@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_fe395a3f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-09T14:28:43Z",
+      "side": 1,
+      "message": "Any reason why we only care about the above attributes? What about the others mentioned at https://www.mediawiki.org/wiki/Help:Images#Syntax?",
+      "revId": "ae1c924d1013d5055ebf3efc5fc2b326ab183525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
