@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_2f7d4a18",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 801,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-09T19:07:52Z",
+      "side": 1,
+      "message": "IMHO this logic should happen within `getLanguageButton`, changing this use to simply\n\n    $languageButton \u003d $this-\u003egetLanguageButton();\n    if ( $hasLanguages \u0026\u0026 $languageButton ) {\n        $buttons[\u0027language\u0027] \u003d $languageButton;\n    }\n\nor something similar.",
+      "revId": "927f577572d0a126ffb8c0f2419e23203b1973d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_0fade680",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 829,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-09T19:07:52Z",
+      "side": 1,
+      "message": "IMHO this logic should be handled by `getLanguageButton`. Right now, this check is being performed twice. See L801.",
+      "revId": "927f577572d0a126ffb8c0f2419e23203b1973d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_6ffc72b2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1097,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-09T19:07:52Z",
+      "side": 1,
+      "message": "Since this is just an experiment for now, it\u0027s probably not a big deal, but IMHO we shouldn\u0027t refer to things as \"new.\" Otherwise, it\u0027ll sit there in the repo forever and still be considered \"new\" years from now. I\u0027d recommend referring to this as the \"language switcher icon\" which should differentiate it from the \"language switcher button.\"\n\nAll that being said, it is an experiment and it\u0027s nothing I\u0027d block over.",
+      "revId": "927f577572d0a126ffb8c0f2419e23203b1973d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_efb1a2dd",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-09T19:07:52Z",
+      "side": 1,
+      "message": "I think convention is generally to not use element tags in conjunction with ids/classes unless necessary. If that\u0027s correct and observed within the mediawiki environment, then this rule should be pulled outside of the li.",
+      "revId": "927f577572d0a126ffb8c0f2419e23203b1973d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
