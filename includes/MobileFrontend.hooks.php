@@ -1120,7 +1120,6 @@ class MobileFrontendHooks {
 						'echo-none',
 						'notifications',
 						'echo-overlay-link',
-						'echo-notification-count',
 					),
 					'targets' => array( 'mobile', 'desktop' ),
 				),
