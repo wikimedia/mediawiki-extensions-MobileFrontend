@@ -16,6 +16,24 @@
       "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_b20ffe32",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-09T23:37:57Z",
+      "side": 1,
+      "message": "getelementsbyclassname gets us more Opera Mini support at the cost of IE8 which is probably not the end of the world.\n\ngetElementsByTagName for noscript tags and then taking nextSibling  would give us the best support.\n\nCompare\nhttp://caniuse.com/#feat\u003dgetelementsbyclassname\nwith\nhttp://caniuse.com/#search\u003dquerySelectorAll\n\nReally depends how much support we want to add (we should have a review of our current traffic)",
+      "parentUuid": "0e2f53b6_4fb88b71",
+      "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
