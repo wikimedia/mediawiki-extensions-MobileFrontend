@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_9eef6e82",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-09T14:38:08Z",
+      "side": 1,
+      "message": "Yeah, it was weird to return something in the first place.",
+      "parentUuid": "2ea41786_db815250",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_5bec8220",
         "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
         "patchSetId": 8
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_beea3271",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-09T14:38:08Z",
+      "side": 1,
+      "message": "It\u0027s just a copy-paste. See my comment below.",
+      "parentUuid": "2ea41786_5bec8220",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_f1430f65",
         "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
         "patchSetId": 8
@@ -47,6 +83,24 @@
       "writtenOn": "2016-03-03T21:54:01Z",
       "side": 1,
       "message": "for readability consider grouping all the delete statements together.",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_5ede86df",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-09T14:38:08Z",
+      "side": 1,
+      "message": "I think the code needs many more changes. My goal is to transition to mw.eventLog.Schema and not to get distracted by other things.",
+      "parentUuid": "2ea41786_f1430f65",
       "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
