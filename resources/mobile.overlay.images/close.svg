@@ -1,16 +1,12 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<g>
-		<g>
-			
-				<rect x="-0.1" y="9.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 11.9126 -5.1819)" width="24.7" height="4.2"/>
-		</g>
-		<g>
-			
-				<rect x="10.1" y="-0.5" transform="matrix(0.7072 0.707 -0.707 0.7072 11.9109 -5.1819)" width="4.2" height="24.7"/>
-		</g>
-	</g>
-</g>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g>
+        <g>
+            <g>
+                <path d="M4.983 1.606l17.465 17.466-2.97 2.97L2.014 4.575z"/>
+            </g>
+            <g>
+                <path d="M19.407 1.605l2.97 2.97L4.914 22.042l-2.97-2.97z"/>
+            </g>
+        </g>
+    </g>
 </svg>

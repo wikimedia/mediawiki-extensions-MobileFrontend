@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-1" transform="translate(0.000000, -1.000000)" fill="#777777">
-            <path d="M12,5.512 L14.2666667,10.2894118 L19.6,10.9529412 L16,14.6687059 L16.6666667,19.8442353 L12,17.5882353 L7.2,19.8442353 L8,14.6687059 L4.26666667,10.9529412 L9.46666667,10.2894118 L12,5.512 L12,5.512 Z M12,1 L8.26666667,8.43152941 L0,9.62588235 L6,15.4649412 L4.53333333,23.56 L12,19.5788235 L19.3333333,23.56 L18,15.3322353 L24,9.49317647 L15.6,8.29882353 L12,1 L12,1 L12,1 Z" id="Shape"></path>
+<svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Shape
+    </title>
+    <g id="Page-1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" fill="#777">
+            <path d="M12 4.512l2.267 4.777 5.333.663L16 13.67l.667 5.174L12 16.588l-4.8 2.256.8-5.175-3.733-3.717 5.2-.664L12 4.51zM12 0L8.267 7.432 0 8.626l6 5.84-1.467 8.094L12 18.58l7.333 3.98L18 14.332l6-5.84L15.6 7.3 12 0z" id="Shape"/>
         </g>
     </g>
 </svg>
