@@ -16,6 +16,24 @@
       "revId": "ae1c924d1013d5055ebf3efc5fc2b326ab183525",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_affe7733",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-09T23:16:00Z",
+      "side": 1,
+      "message": "These are the minimum needed to make this validated HTML and viewable by the user. We could possibly make a case for the title attribute but given this is mobile and there is alt text and we are only talking about \u003c 10% of users (probably much less) I\u0027m not sure how useful this is.\n\nI don\u0027t think it is worth bloating the overall HTML with anything else for this usecase.",
+      "parentUuid": "0e2f53b6_fe395a3f",
+      "revId": "ae1c924d1013d5055ebf3efc5fc2b326ab183525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
