@@ -57,8 +57,6 @@
 	"mobile-frontend-donate-image-nouploads": "Nema postavljenih datoteka.",
 	"mobile-frontend-donate-image-signup-action": "Prijavite se da biste podijelili datoteke sa svijetom.",
 	"mobile-frontend-donate-image-title": "Postavljanja",
-	"mobile-frontend-donate-photo-first-upload-success": "Uspješno! Hvala Vam na prvom doprinosu!",
-	"mobile-frontend-donate-photo-upload-success": "Uspješno! Vaša se prva slika sad može koristiti na {{GRAMMAR:dativ|{{SITENAME}}}}.",
 	"mobile-frontend-drawer-cancel": "Otkaži",
 	"mobile-frontend-pointer-dismiss": "Odbaci",
 	"mobile-frontend-edit-login-action": "<strong>Unaprijedite {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",

@@ -60,8 +60,6 @@
 	"mobile-frontend-donate-image-title": "Įkelti failai",
 	"mobile-frontend-donate-image-title-username": "Įkėlė $1",
 	"mobile-frontend-donate-image-title-you": "Tavo įkėlimai",
-	"mobile-frontend-donate-photo-first-upload-success": "Pavyko! Ačiū už jūsų pirmą įnašą!",
-	"mobile-frontend-donate-photo-upload-success": "Pavyko! Jūsų paveikslėlis dabar gali būti naudojamas {{SITENAME}} tinklapyje!",
 	"mobile-frontend-drawer-cancel": "Atšaukti",
 	"mobile-frontend-pointer-dismiss": "Atmesti",
 	"mobile-frontend-edit-login-action": "<strong>Padėkite pagerinti {{SITENAME}}.</strong><br />Prisijunkite, kad galėtumėte redaguoti.",

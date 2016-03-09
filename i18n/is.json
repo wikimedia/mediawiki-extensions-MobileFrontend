@@ -52,8 +52,6 @@
 	"mobile-frontend-donate-image-nouploads": "Engin upphlöð.",
 	"mobile-frontend-donate-image-signup-action": "Stofnaðu aðgang til að deila efni þínu með heiminum.",
 	"mobile-frontend-donate-image-title": "Upphlöð",
-	"mobile-frontend-donate-photo-first-upload-success": "Það tókst! Takk fyrir fyrsta framlag þitt!",
-	"mobile-frontend-donate-photo-upload-success": "Tókst! Nú er hægt að nota myndina þína á {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Hætta við",
 	"mobile-frontend-pointer-dismiss": "Hunsa",
 	"mobile-frontend-edit-login-action": "<strong>Hjálpaðu við að bæta {{SITENAME}}.</strong><br />Skráðu þig inn til að gera breytingar.",

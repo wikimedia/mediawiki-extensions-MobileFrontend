@@ -66,8 +66,6 @@
 	"mobile-frontend-donate-image-title": "העלאות",
 	"mobile-frontend-donate-image-title-username": "העלאות של $1",
 	"mobile-frontend-donate-image-title-you": "העלאות שלך",
-	"mobile-frontend-donate-photo-first-upload-success": "יש! תודה על תרומתך הראשונה!",
-	"mobile-frontend-donate-photo-upload-success": "יש! עכשיו אפשר להשתמש בתמונה שלך ב{{GRAMMAR:תחילית|{{SITENAME}}}}",
 	"mobile-frontend-drawer-cancel": "ביטול",
 	"mobile-frontend-pointer-dismiss": "סגירה",
 	"mobile-frontend-edit-login-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להיכנס כדי לערוך.",

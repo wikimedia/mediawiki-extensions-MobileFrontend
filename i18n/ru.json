@@ -81,8 +81,6 @@
 	"mobile-frontend-donate-image-title": "Загрузки",
 	"mobile-frontend-donate-image-title-username": "Загрузки $1",
 	"mobile-frontend-donate-image-title-you": "Ваши загрузки",
-	"mobile-frontend-donate-photo-first-upload-success": "Получилось! Спасибо за ваш вклад!",
-	"mobile-frontend-donate-photo-upload-success": "Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Отмена",
 	"mobile-frontend-pointer-dismiss": "Закрыть",
 	"mobile-frontend-edit-login-action": "<strong>Помогите улучшить сайт {{SITENAME}}.</strong><br />Войдите для редактирования.",

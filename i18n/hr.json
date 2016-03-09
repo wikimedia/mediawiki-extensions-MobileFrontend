@@ -48,8 +48,6 @@
 	"mobile-frontend-donate-image-title": "Darujte nam sliku",
 	"mobile-frontend-donate-image-title-username": "Postavljene datoteke $1",
 	"mobile-frontend-donate-image-title-you": "Vaše postavljane datoteke",
-	"mobile-frontend-donate-photo-first-upload-success": "Uspješno! Hvala na Vašem prvom doprinosu.",
-	"mobile-frontend-donate-photo-upload-success": "Uspješno! Vaša se prva slika sada može koristiti na projektu {{SITENAME}}.",
 	"mobile-frontend-drawer-cancel": "Odustani",
 	"mobile-frontend-edit-login-action": "Prijavite se da biste uređivali.",
 	"mobile-frontend-edit-signup-action": "Stvorite suradnički račun da biste uređivali.",

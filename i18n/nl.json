@@ -78,8 +78,6 @@
 	"mobile-frontend-donate-image-title": "Uploads",
 	"mobile-frontend-donate-image-title-username": "Uploads van $1",
 	"mobile-frontend-donate-image-title-you": "Uw uploads",
-	"mobile-frontend-donate-photo-first-upload-success": "Bedankt voor uw eerste bijdrage!",
-	"mobile-frontend-donate-photo-upload-success": "Uw afbeelding kan nu gebruikt worden op {{SITENAME}}.",
 	"mobile-frontend-drawer-cancel": "Annuleren",
 	"mobile-frontend-pointer-dismiss": "Sluiten",
 	"mobile-frontend-edit-login-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Meld u aan om te bewerken.",

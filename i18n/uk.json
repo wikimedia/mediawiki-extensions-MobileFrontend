@@ -75,8 +75,6 @@
 	"mobile-frontend-donate-image-title": "Вивантаження",
 	"mobile-frontend-donate-image-title-username": "Завантажено $1",
 	"mobile-frontend-donate-image-title-you": "Завантажено Вами",
-	"mobile-frontend-donate-photo-first-upload-success": "Успішно! Дякуємо за Ваш перший внесок!",
-	"mobile-frontend-donate-photo-upload-success": "Успішно! Тепер Ваше зображення можна використовувати на сайті {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Скасувати",
 	"mobile-frontend-pointer-dismiss": "Відхилити",
 	"mobile-frontend-edit-login-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Увійдіть, щоб редагувати.",

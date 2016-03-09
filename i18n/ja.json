@@ -56,8 +56,6 @@
 	"mobile-frontend-donate-image-title": "アップロード",
 	"mobile-frontend-donate-image-title-username": "$1 によるアップロード",
 	"mobile-frontend-donate-image-title-you": "自身によるアップロード",
-	"mobile-frontend-donate-photo-first-upload-success": "完了しました! 初めてのアップロードありがとうございます!",
-	"mobile-frontend-donate-photo-upload-success": "完了しました! 画像は{{SITENAME}}上で使用できるようになりました!",
 	"mobile-frontend-drawer-cancel": "キャンセル",
 	"mobile-frontend-pointer-dismiss": "非表示",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}改善に協力</strong><br />編集するにはログインしてください。",

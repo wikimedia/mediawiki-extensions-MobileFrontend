@@ -57,8 +57,6 @@
 	"mobile-frontend-donate-image-title": "Încărcări",
 	"mobile-frontend-donate-image-title-username": "Încărcări de la $1",
 	"mobile-frontend-donate-image-title-you": "Încărcări de la dumneavoastră",
-	"mobile-frontend-donate-photo-first-upload-success": "Succes! Vă mulțumim pentru prima dumneavoastră contribuție!",
-	"mobile-frontend-donate-photo-upload-success": "Succes! Imaginea dumneavoastră poate fi acum folosită pe {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Revocare",
 	"mobile-frontend-pointer-dismiss": "Renunță",
 	"mobile-frontend-edit-login-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Autentificați-vă pentru a putea modifica.",

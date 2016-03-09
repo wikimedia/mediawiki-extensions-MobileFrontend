@@ -73,8 +73,6 @@
 	"mobile-frontend-donate-image-title": "Przesłane pliki",
 	"mobile-frontend-donate-image-title-username": "Przesłane przez $1",
 	"mobile-frontend-donate-image-title-you": "Przesłane przez Ciebie",
-	"mobile-frontend-donate-photo-first-upload-success": "Powiodło się! Dziękujemy za twój pierwszy wkład!",
-	"mobile-frontend-donate-photo-upload-success": "Powiodło się! Teraz twoja grafika może zostac użyta w {{GRAMMAR:MS.lp|{{SITENAME}}}}!",
 	"mobile-frontend-drawer-cancel": "Anuluj",
 	"mobile-frontend-pointer-dismiss": "Odrzuć",
 	"mobile-frontend-edit-login-action": "<strong>Pomóż w rozwoju projektu {{SITENAME}}.</strong><br />Zaloguj się, aby edytować.",

@@ -52,8 +52,6 @@
 	"mobile-frontend-donate-image-nouploads": "Nincsenek feltöltések.",
 	"mobile-frontend-donate-image-signup-action": "Regisztrálj, hogy megoszthasd a médiafájljaidat a világgal.",
 	"mobile-frontend-donate-image-title": "Feltöltések",
-	"mobile-frontend-donate-photo-first-upload-success": "Sikeres! Köszönjük az első közreműködésedet!",
-	"mobile-frontend-donate-photo-upload-success": "Sikeres! A képed már használható a(z) {{SITENAME}} projektben!",
 	"mobile-frontend-drawer-cancel": "Mégse",
 	"mobile-frontend-pointer-dismiss": "Elrejt",
 	"mobile-frontend-editor-abusefilter-disallow": "Ez a szerkesztés nem menthető el, mivel észleltünk egy problémát.",

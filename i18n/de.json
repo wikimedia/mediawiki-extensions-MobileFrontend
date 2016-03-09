@@ -66,8 +66,6 @@
 	"mobile-frontend-donate-image-title": "Hochgeladene Dateien",
 	"mobile-frontend-donate-image-title-username": "Hochgeladene Dateien von $1",
 	"mobile-frontend-donate-image-title-you": "Hochgeladene Dateien von dir",
-	"mobile-frontend-donate-photo-first-upload-success": "Erfolgreich! Vielen Dank für deinen ersten Beitrag!",
-	"mobile-frontend-donate-photo-upload-success": "Erfolgreich! Dein Bild kann jetzt auf {{SITENAME}} verwendet werden!",
 	"mobile-frontend-drawer-cancel": "Abbrechen",
 	"mobile-frontend-pointer-dismiss": "Ausblenden",
 	"mobile-frontend-edit-login-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten anmelden.",

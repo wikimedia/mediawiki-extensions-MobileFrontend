@@ -46,8 +46,6 @@
 	"mobile-frontend-donate-image-nouploads": "Жүктелгендер жоқ.",
 	"mobile-frontend-donate-image-signup-action": "Әлемге медиаңызды бөлісу үшін тіркеліңіз.",
 	"mobile-frontend-donate-image-title": "Жүктеулер",
-	"mobile-frontend-donate-photo-first-upload-success": "Сәтті болды! Бірінші үлесіңізге рахмет!",
-	"mobile-frontend-donate-photo-upload-success": "Сәтті болды! Суретіңізді {{SITENAME}} сайтында қазір қолдана аласыз!",
 	"mobile-frontend-drawer-cancel": "Болдырмау",
 	"mobile-frontend-pointer-dismiss": "Тоқтату",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын жетілдіруге көмектесіңіз.</strong><br />Өңдеу үшін кіріңіз.",

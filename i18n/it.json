@@ -65,8 +65,6 @@
 	"mobile-frontend-donate-image-title": "Caricamenti",
 	"mobile-frontend-donate-image-title-username": "Caricamenti di $1",
 	"mobile-frontend-donate-image-title-you": "Tuoi caricamenti",
-	"mobile-frontend-donate-photo-first-upload-success": "Fatto! Grazie per il tuo primo contributo!",
-	"mobile-frontend-donate-photo-upload-success": "Finito! La tua immagine ora può essere usata su {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Annulla",
 	"mobile-frontend-edit-login-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Accedi per modificare.",
 	"mobile-frontend-edit-signup-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Registrati per modificare.",

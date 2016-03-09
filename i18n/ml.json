@@ -55,8 +55,6 @@
 	"mobile-frontend-donate-image-nouploads": "അപ്‌ലോഡുകൾ ഒന്നുമില്ല.",
 	"mobile-frontend-donate-image-signup-action": "താങ്കളുടെ പക്കലുള്ള മീഡിയ ലോകവുമായി പങ്ക് വെയ്ക്കാൻ അംഗത്വമെടുക്കുക.",
 	"mobile-frontend-donate-image-title": "അപ്‌ലോഡുകൾ",
-	"mobile-frontend-donate-photo-first-upload-success": "വിജയകരം! താങ്കളുടെ ആദ്യസംഭാവനയ്ക്ക് നന്ദി!",
-	"mobile-frontend-donate-photo-upload-success": "വിജയകരം! താങ്കളെടുത്ത ചിത്രം {{SITENAME}} സംരംഭത്തിൽ ഇനി ഉപയോഗിക്കാം!",
 	"mobile-frontend-drawer-cancel": "റദ്ദാക്കുക",
 	"mobile-frontend-pointer-dismiss": "ഒഴിവാക്കുക",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} മെച്ചപ്പെടുത്തുക.</strong><br />തിരുത്താനായി പ്രവേശിക്കുക.",

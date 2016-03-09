@@ -66,8 +66,6 @@
 	"mobile-frontend-donate-image-title": "Uppladdningar",
 	"mobile-frontend-donate-image-title-username": "$1s uppladdningar",
 	"mobile-frontend-donate-image-title-you": "Dina uppladdningar",
-	"mobile-frontend-donate-photo-first-upload-success": "Åtgärden genomfördes! Tack för ditt första bidrag!",
-	"mobile-frontend-donate-photo-upload-success": "Åtgärden genomfördes! Din bild kan nu användas på {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Avbryt",
 	"mobile-frontend-pointer-dismiss": "Stäng",
 	"mobile-frontend-edit-login-action": "<strong>Hjälp till att förbättra {{SITENAME}}.</strong><br />Logga in för att redigera.",

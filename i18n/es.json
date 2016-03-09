@@ -83,8 +83,6 @@
 	"mobile-frontend-donate-image-title": "Subidas",
 	"mobile-frontend-donate-image-title-username": "Subidas de $1",
 	"mobile-frontend-donate-image-title-you": "Subidas tuyas",
-	"mobile-frontend-donate-photo-first-upload-success": "¡Bien! ¡Gracias por tu primer aporte!",
-	"mobile-frontend-donate-photo-upload-success": "¡Bien! ¡Ahora puedes usar tu imagen en {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Cancelar",
 	"mobile-frontend-pointer-dismiss": "Descartar",
 	"mobile-frontend-edit-login-action": "<strong>Ayuda a mejorar {{SITENAME}}.</strong><br />Inicia sesión para editar.",

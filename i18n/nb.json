@@ -63,8 +63,6 @@
 	"mobile-frontend-donate-image-title": "Opplastinger",
 	"mobile-frontend-donate-image-title-username": "Opplastinger fra $1",
 	"mobile-frontend-donate-image-title-you": "Dine opplastinger",
-	"mobile-frontend-donate-photo-first-upload-success": "Suksess! Takk for ditt første bidrag!",
-	"mobile-frontend-donate-photo-upload-success": "Suksess! Bildet ditt kan nå brukes på {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Avbryt",
 	"mobile-frontend-pointer-dismiss": "Lukk",
 	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Logg inn for å redigere.",

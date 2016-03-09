@@ -64,8 +64,6 @@
 	"mobile-frontend-donate-image-title": "Načtené soubory",
 	"mobile-frontend-donate-image-title-username": "Soubory {{GENDER:$1|uživatele|uživatelky}} $1",
 	"mobile-frontend-donate-image-title-you": "Vaše soubory",
-	"mobile-frontend-donate-photo-first-upload-success": "Úspěch! Díky za váš první příspěvek!",
-	"mobile-frontend-donate-photo-upload-success": "Úspěch! Nyní je možné použít na váš obrázek {{GRAMMAR:6sg|{{SITENAME}}}}!",
 	"mobile-frontend-drawer-cancel": "Storno",
 	"mobile-frontend-pointer-dismiss": "Zavřít",
 	"mobile-frontend-edit-login-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se přihlaste.",

@@ -49,8 +49,6 @@
 	"mobile-frontend-donate-image-nouploads": "No hi ha càrregues.",
 	"mobile-frontend-donate-image-signup-action": "Registreu-vos per compartir els vostres arxius multimèdia amb tothom.",
 	"mobile-frontend-donate-image-title": "Càrregues",
-	"mobile-frontend-donate-photo-first-upload-success": "Molt bé! Gràcies per la vostra primera contribució!",
-	"mobile-frontend-donate-photo-upload-success": "Molt bé! Ara la vostra imatge es pot fer servir a {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Anul·la",
 	"mobile-frontend-edit-login-action": "Inicieu sessió per editar.",
 	"mobile-frontend-edit-signup-action": "Creeu un compte per editar.",

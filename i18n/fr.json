@@ -92,8 +92,6 @@
 	"mobile-frontend-donate-image-title": "Téléversements",
 	"mobile-frontend-donate-image-title-username": "Fichiers importés par $1",
 	"mobile-frontend-donate-image-title-you": "Fichiers importés par vous",
-	"mobile-frontend-donate-photo-first-upload-success": "Bravo! Merci pour votre première contribution!",
-	"mobile-frontend-donate-photo-upload-success": "Bravo! Votre image peut maintenant être utilisée sur {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Annuler",
 	"mobile-frontend-pointer-dismiss": "Rejeter",
 	"mobile-frontend-edit-login-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",

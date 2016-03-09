@@ -53,8 +53,6 @@
 	"mobile-frontend-donate-image-title": "Xubíes",
 	"mobile-frontend-donate-image-title-username": "Xubíes por $1",
 	"mobile-frontend-donate-image-title-you": "Xubíes de to",
-	"mobile-frontend-donate-photo-first-upload-success": "¡Correuto! ¡Gracies pola primera collaboración!",
-	"mobile-frontend-donate-photo-upload-success": "¡Correuto! ¡La so imaxe yá pue usase'n {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Encaboxar",
 	"mobile-frontend-pointer-dismiss": "Descartar",
 	"mobile-frontend-edit-login-action": "<strong>Ayuda a ameyorar {{SITENAME}}.</strong><br />Anicia sesión pa editar.",

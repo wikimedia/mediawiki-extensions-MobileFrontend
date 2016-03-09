@@ -52,8 +52,6 @@
 	"mobile-frontend-donate-image-title": "Подигања",
 	"mobile-frontend-donate-image-title-username": "Подигања на $1",
 	"mobile-frontend-donate-image-title-you": "Ваши подигања",
-	"mobile-frontend-donate-photo-first-upload-success": "Успешно! Благодариме за вашиот прв придонес!",
-	"mobile-frontend-donate-photo-upload-success": "Успешно! Вашата слика сега може да се користи на {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Откажи",
 	"mobile-frontend-pointer-dismiss": "Тргни",
 	"mobile-frontend-edit-login-action": "<strong>Помогнете ни да ја подобриме страницата {{SITENAME}}.</strong><br />Најавете се за да уредувате.",

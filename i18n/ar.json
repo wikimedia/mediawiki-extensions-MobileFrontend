@@ -74,8 +74,6 @@
 	"mobile-frontend-donate-image-title": "المرفوعات",
 	"mobile-frontend-donate-image-title-username": "رُفع بواسطة $1",
 	"mobile-frontend-donate-image-title-you": "رفع من قبلك",
-	"mobile-frontend-donate-photo-first-upload-success": "نجحت! شكرا على مساهمتك الأولى!",
-	"mobile-frontend-donate-photo-upload-success": "نجحت! يمكن الآن أن تُشَاهد صورتك على {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "إلغاء",
 	"mobile-frontend-pointer-dismiss": "تجاهل",
 	"mobile-frontend-edit-login-action": "<strong>مساعدة مطلوبة {{SITENAME}}.</strong><br />سجل دخولك للتحرير",

@@ -32,8 +32,6 @@
 	"mobile-frontend-donate-image-heading": "Conlationes tuae novissimae",
 	"mobile-frontend-donate-image-nouploads": "Nulli fasciculi impositi.",
 	"mobile-frontend-donate-image-title": "Fasciculi impositi",
-	"mobile-frontend-donate-photo-first-upload-success": "Prospere additum! Gratias agimus pro prima conlatione tua!",
-	"mobile-frontend-donate-photo-upload-success": "Prospere additum! Imago tua nunc in pagina {{SITENAME}} parata habetur!",
 	"mobile-frontend-drawer-cancel": "Sinere",
 	"mobile-frontend-editor-abusefilter-disallow": "Haec recensio servari non potuit cuiusdam erroris intra inventi causa.",
 	"mobile-frontend-editor-abusefilter-read-more": "Plura legere",

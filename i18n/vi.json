@@ -65,8 +65,6 @@
 	"mobile-frontend-donate-image-title": "Tập tin tải lên",
 	"mobile-frontend-donate-image-title-username": "Tập tin do $1 tải lên",
 	"mobile-frontend-donate-image-title-you": "Tập tin mà bạn tải lên",
-	"mobile-frontend-donate-photo-first-upload-success": "Thành công! Cảm ơn bạn đã đóng góp lần đầu tiên!",
-	"mobile-frontend-donate-photo-upload-success": "Thành công! Bây giờ bạn có thể sử dụng hình ảnh của bạn trên {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Hủy bỏ",
 	"mobile-frontend-pointer-dismiss": "Bỏ qua",
 	"mobile-frontend-edit-login-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />\nHãy đăng nhập để sửa đổi.",

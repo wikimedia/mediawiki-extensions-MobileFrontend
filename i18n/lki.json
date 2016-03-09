@@ -48,8 +48,6 @@
 	"mobile-frontend-donate-image-nouploads": "هیچ بارگذاری‌ای نیست.",
 	"mobile-frontend-donate-image-signup-action": "ثبت‌نام برای اشتراک گذاری رسانه‌های خود با دنیا.",
 	"mobile-frontend-donate-image-title": "بارگذاری‌ها",
-	"mobile-frontend-donate-photo-first-upload-success": "موفقیت‌آمیز بود! ممنون به‌خاطر اولین مشارکتتان!",
-	"mobile-frontend-donate-photo-upload-success": "موفقیت‌آمیز بود! هم‌اکنون می‌توان از تصویر شما در {{SITENAME}} استفاده کرد!",
 	"mobile-frontend-drawer-cancel": "ئآهووسانن/لغو",
 	"mobile-frontend-pointer-dismiss": "نپذیرفتن",
 	"mobile-frontend-edit-login-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ورود برای ویرایش.",

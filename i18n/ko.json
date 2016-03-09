@@ -72,8 +72,6 @@
 	"mobile-frontend-donate-image-title": "올린 파일",
 	"mobile-frontend-donate-image-title-username": "$1 사용자가 올림",
 	"mobile-frontend-donate-image-title-you": "당신이 올림",
-	"mobile-frontend-donate-photo-first-upload-success": "성공했습니다! 첫 기여를 해주셔서 감사합니다!",
-	"mobile-frontend-donate-photo-upload-success": "성공했습니다! 그림은 이제 {{SITENAME}}에 사용할 수 있습니다!",
 	"mobile-frontend-drawer-cancel": "취소",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} 프로젝트를 개선하는 데 도와주세요.</strong><br />편집하려면 로그인하세요.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} 프로젝트를 개선하는 데 도와주세요.</strong><br />편집하려면 가입하세요.",

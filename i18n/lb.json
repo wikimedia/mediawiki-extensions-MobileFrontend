@@ -48,8 +48,6 @@
 	"mobile-frontend-donate-image-title": "Eropgeluede Fichieren",
 	"mobile-frontend-donate-image-title-username": "Eropgeluede vum $1",
 	"mobile-frontend-donate-image-title-you": "Eropgeluede vun Iech",
-	"mobile-frontend-donate-photo-first-upload-success": "Bravo! Merci fir Ären éischte Beitrag!",
-	"mobile-frontend-donate-photo-upload-success": "Bravo! Äert Bild kann elo op {{SITENAME}} benotzt ginn!",
 	"mobile-frontend-drawer-cancel": "Ofbriechen",
 	"mobile-frontend-edit-login-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nAlogge fir z'änneren.",
 	"mobile-frontend-edit-signup-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nSchreift Iech a fir z'änneren.",

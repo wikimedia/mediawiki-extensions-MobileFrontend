@@ -72,8 +72,6 @@
 	"mobile-frontend-donate-image-title": "上傳",
 	"mobile-frontend-donate-image-title-username": "由 $1 上傳",
 	"mobile-frontend-donate-image-title-you": "由您上傳",
-	"mobile-frontend-donate-photo-first-upload-success": "成功！感謝您做的第一次貢獻！",
-	"mobile-frontend-donate-photo-upload-success": "成功！您的圖片現在可以在 {{SITENAME}} 上使用！",
 	"mobile-frontend-drawer-cancel": "取消",
 	"mobile-frontend-pointer-dismiss": "關閉",
 	"mobile-frontend-edit-login-action": "<strong>協助改進 {{SITENAME}}。</strong><br />登入以編輯。",

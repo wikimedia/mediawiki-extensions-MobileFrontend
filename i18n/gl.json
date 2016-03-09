@@ -60,8 +60,6 @@
 	"mobile-frontend-donate-image-title": "Cargas",
 	"mobile-frontend-donate-image-title-username": "Ficheiros subidos por $1",
 	"mobile-frontend-donate-image-title-you": "Ficheiros subidos por vostede",
-	"mobile-frontend-donate-photo-first-upload-success": "Correcto! Grazas pola súa primeira contribución!",
-	"mobile-frontend-donate-photo-upload-success": "Correcto! Pode usar a súa imaxe en {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Cancelar",
 	"mobile-frontend-pointer-dismiss": "Rexeitar",
 	"mobile-frontend-edit-login-action": "<strong>Axude a mellorar {{SITENAME}}.</strong><br />Acceda ao sistema para editar.",

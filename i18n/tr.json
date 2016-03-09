@@ -74,8 +74,6 @@
 	"mobile-frontend-donate-image-nouploads": "Yüklemeler yok.",
 	"mobile-frontend-donate-image-signup-action": "Dünya ile medya paylaşmak için kaydolun.",
 	"mobile-frontend-donate-image-title": "Yüklemeler",
-	"mobile-frontend-donate-photo-first-upload-success": "Başardınız! İlk katkınız için teşekkür ederiz!",
-	"mobile-frontend-donate-photo-upload-success": "Başardınız! Görüntünüz {{SITENAME}} sitesinde artık kullanılabilir!",
 	"mobile-frontend-drawer-cancel": "İptal",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için giriş yapın.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
