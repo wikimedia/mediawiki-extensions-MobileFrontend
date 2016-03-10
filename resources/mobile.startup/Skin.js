@@ -2,7 +2,6 @@
 
 	var browser = M.require( 'mobile.browser/browser' ),
 		View = M.require( 'mobile.view/View' ),
-		util = M.require( 'mobile.startup/util' ),
 		context = M.require( 'mobile.context/context' );
 
 	/**
@@ -187,7 +186,7 @@
 					var $placeholder = $( placeholder );
 
 					if (
-						util.isElementInViewport( $placeholder ) &&
+						mw.viewport.isElementInViewport( placeholder ) &&
 						$placeholder.find( '.spinner' ).is( ':visible' )
 					) {
 						self.loadImage( $placeholder );

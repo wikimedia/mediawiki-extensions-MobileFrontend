@@ -560,6 +560,7 @@
 				"mobile.oo",
 				"mobile.user",
 				"mediawiki.api",
+				"mediawiki.viewport",
 				"mobile.settings",
 				"jquery.throttle-debounce"
 			],

@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var inSample, inStable, experiment,
 		settings = M.require( 'mobile.settings/settings' ),
-		util = M.require( 'mobile.startup/util' ),
 		time = M.require( 'mobile.modifiedBar/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
@@ -59,7 +58,7 @@
 		 * @ignore
 		 */
 		function logLanguageButtonImpression() {
-			if ( util.isElementInViewport( $languageSelector ) ) {
+			if ( mw.viewport.isElementInViewport( $languageSelector[0] ) ) {
 				M.off( 'scroll', logLanguageButtonImpression );
 
 				schemaMobileWebLanguageSwitcher.log( {
