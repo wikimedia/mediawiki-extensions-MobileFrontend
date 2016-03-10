@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_bbc9997d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T13:20:41Z",
+      "side": 1,
+      "message": "Not using hasAttribute anymore?",
+      "revId": "4dbdf3d59f86fe2f36ce602df038d3d29c7edb31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
