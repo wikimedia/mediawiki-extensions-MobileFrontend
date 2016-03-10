@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_1b652542",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-10T14:18:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2f53b6_1bda4521",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_7b40b1a8",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-10T14:11:17Z",
       "side": 1,
       "message": "This comment assumes that interator_to_array was used while getting $headings. Why not fix the indexing in the getHeadings function and just get the first element of the array below?",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_5bce8d32",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-10T14:18:25Z",
+      "side": 1,
+      "message": "Do you know how to fix the indexing? I really don\u0027t, and I agree this would be better fixed in line 425 where created instead of where used.",
+      "parentUuid": "0e2f53b6_7b40b1a8",
       "revId": "4985d10204bc372288ef51153922f3d283849719",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
