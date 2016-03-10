@@ -87,6 +87,24 @@
       "revId": "4985d10204bc372288ef51153922f3d283849719",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_816b8281",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-03-10T16:50:44Z",
+      "side": 1,
+      "message": "I\u0027ve made the change, I\u0027ve tested it and it works fine. Thanks Bman",
+      "parentUuid": "0e2f53b6_dbf8dd48",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
