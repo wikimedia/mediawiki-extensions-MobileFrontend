@@ -193,6 +193,14 @@ class MobileFormatter extends HtmlFormatter {
 			$imgPlaceholder = $doc->createElement( 'span' );
 			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
 			$imgPlaceholder->setAttribute( 'style', $dimensionsStyle );
+			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset' ] as $attr ) {
+				if ( $img->hasAttribute( $attr ) ) {
+					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
+				}
+			}
+			// Assume data saving and remove srcset attribute from the non-js experience
+			$img->removeAttribute( 'srcset' );
+
 			$imgPlaceholder->appendChild( $spinner );
 
 			// Set the placeholder where the original image was
