@@ -162,7 +162,7 @@ HTML;
 		$language = $this->getLanguage();
 		foreach ( Interwiki::getAllPrefixes( true ) as $interwiki ) {
 			$code = $interwiki['iw_prefix'];
-			$name = $language->fetchLanguageName( $code );
+			$name = Language::fetchLanguageName( $code, $language->getCode() );
 			if ( !$name ) {
 				continue;
 			}
