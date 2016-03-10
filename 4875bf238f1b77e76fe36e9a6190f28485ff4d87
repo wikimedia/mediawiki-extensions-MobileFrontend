@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_e7009b06",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-10T23:12:09Z",
+      "side": 1,
+      "message": "The below seems to be missing \u0027skin\u0027, so the module may be compiled with skinStyles expanded as Vector instead of Minerva.",
+      "revId": "4875bf238f1b77e76fe36e9a6190f28485ff4d87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_cc0ade28",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-10T23:12:09Z",
+      "side": 1,
+      "message": "Normally you\u0027d use FauxRequest to avoid leaking or touching global state.",
+      "revId": "4875bf238f1b77e76fe36e9a6190f28485ff4d87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
