@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_2c28aa2e",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 1978,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "This approach is new and it makes me wonder why we even bother having SkinMinervaBeta\n\nIf this is the way we will build features going on we should remove SkinMinervaBeta and MinervaTemplateBeta to avoid confusion and inconsistency...",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_2ce70a11",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "This is nice and takes more logic out of this class. Would be great if isFallbackEditor logic could be moved to SkinMinerva to.\n\nMight be best done in a separate hygiene patch?",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_ecdc024e",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "The heading now appears before page actions in stable.\nCSS regression: http://imgur.com/a/F6ijw\n\nThis is why I prefer we make these kind of changes in SkinMinervaBeta to avoid leaking issues like this into production channel. It keeps the changes contained.",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_ccf5beb7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 801,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "Use of getMode seems hacky to me and I\u0027d rather we didn\u0027t use it while SkinMinervaBeta exists.\n\nYou are in SkinMinerva so you should assume you are in beta.\nSkinMinervaBeta should extend shouldUseNewLanguageSwitcherButton with any further logic it needs",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_6ce8f2dd",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "This will not work for anons. Remember HTML is cached for anons so they will all get the same session ID and same bucket treatment and even worse it will vary depending on what page they use.",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_acf2faca",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "ahhhhhh. Please don\u0027t use !important even temporarily. Refactor the CSS so it is unnecessary.",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_4cb9aee5",
+        "filename": "tests/browser/features/language.feature",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-10T22:25:43Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this test needs to change.\nYou are only enabling the new feature in beta yet this test runs in stable (hence the Jenkins failure)\n\nPlease break these tests into a new feature, the existing feature should work as planned and not be impacted by your changes.",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
