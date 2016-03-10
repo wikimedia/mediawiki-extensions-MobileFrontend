@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_676e4b2c",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-03-10T23:53:29Z",
+      "side": 1,
+      "message": "These events are never emitted by MobileNotificationsWrapper",
+      "revId": "b26cbc405689fcd3052d35aa3f8e0bbd514b5e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_a77853ee",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-03-10T23:53:29Z",
+      "side": 1,
+      "message": "This one isn\u0027t either, and this line commented out as well, so it probably just needs to be removed.",
+      "revId": "b26cbc405689fcd3052d35aa3f8e0bbd514b5e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_a74fb3bf",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.less",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-03-10T23:53:29Z",
+      "side": 1,
+      "message": "Explain that this is hack, what it does, and why you need it",
+      "revId": "b26cbc405689fcd3052d35aa3f8e0bbd514b5e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
