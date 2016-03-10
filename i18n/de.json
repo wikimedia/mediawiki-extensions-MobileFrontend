@@ -358,6 +358,7 @@
 	"apihelp-mobileview-param-thumbsize": "Maximale Abmessungen des Vorschaubildes.",
 	"apihelp-mobileview-param-thumbwidth": "Maximale Vorschaubild-Breite.",
 	"apihelp-mobileview-param-thumbheight": "Maximale Vorschaubild-Höhe.",
+	"apihelp-mobileview-param-revision": "Ruft eine spezielle Version ab.",
 	"apihelp-mobileview-example-1": "Ruft Informationen zum Abschnitt 0 von [[Doom metal]] ab",
 	"apihelp-mobileview-example-2": "Hole Informationen über Abschnitt 0 und zu Abschnitten, die Verweise auf [[Candlemass]] beinhalten",
 	"apihelp-mobileview-example-3": "Hole Informationen über Abschnitt 1 und folgende, sowie Abschnitte die Verweise auf [[Candlemass]] beinhalten",

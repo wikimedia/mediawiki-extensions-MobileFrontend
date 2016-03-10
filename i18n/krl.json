@@ -9,6 +9,7 @@
 	"mobile-frontend-editor-edit": "Kohentele",
 	"mobile-frontend-home-button": "Etušivu",
 	"mobile-frontend-language-article-heading": "Luve toisella kielellä",
+	"mobile-frontend-main-menu-button-tooltip": "Avua piävalikko",
 	"mobile-frontend-main-menu-login": "Kirjauvu šiämeh",
 	"mobile-frontend-main-menu-nearby": "Lähällä",
 	"mobile-frontend-main-menu-settings": "Ašetukšet",
@@ -21,5 +22,6 @@
 	"mobile-frontend-terms-text": "Käyttöehot",
 	"mobile-frontend-view": "Mopikkaversijo",
 	"mobile-frontend-view-desktop": "Työstola",
-	"mobile-frontend-view-mobile": "Mopikka"
+	"mobile-frontend-view-mobile": "Mopikka",
+	"tag-mobile_edit": "Kohennuš mopikašta"
 }
