@@ -15,18 +15,6 @@
 		 * @inheritdoc
 		 */
 		searchNamespace: 14,
-		/**
-		 * @inheritdoc
-		 */
-		getApiData: function ( query ) {
-			return {
-				action: 'query',
-				list: 'prefixsearch',
-				pssearch: query,
-				pslimit: 5,
-				psnamespace: this.searchNamespace
-			};
-		},
 
 		/**
 		 * Saves the categories passed to this function to the page

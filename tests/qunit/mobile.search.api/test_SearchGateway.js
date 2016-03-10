@@ -13,18 +13,9 @@
 						}
 					},
 					query: {
-						redirects: [
-							{
-								from: 'Barack obama',
-								to: 'Barack Obama'
-							},
-							{
-								from: 'Barack',
-								to: 'Claude Monet'
-							}
-						],
 						pages: {
 							2: {
+								index: 1,
 								pageid: 2,
 								ns: 0,
 								title: 'Claude Monet',
@@ -35,6 +26,7 @@
 								}
 							},
 							60: {
+								index: 2,
 								pageid: 60,
 								ns: 0,
 								title: 'Barack Obama',
@@ -44,24 +36,7 @@
 									height: 80
 								}
 							}
-						},
-						prefixsearch: [
-							{
-								ns: 0,
-								title: 'Barack',
-								pageid: 245
-							},
-							{
-								ns: 0,
-								title: 'Barack Obama',
-								pageid: 60
-							},
-							{
-								ns: 0,
-								title: 'Barack obama',
-								pageid: 244
-							}
-						]
+						}
 					}
 				} );
 			} );
@@ -134,24 +109,7 @@
 							title: 'Braddy',
 							index: 1
 						}
-					},
-					prefixsearch: [
-						{
-							ns: 0,
-							title: 'Braddy',
-							pageid: 5
-						},
-						{
-							ns: 0,
-							title: 'Brad Pitt',
-							pageid: 2
-						},
-						{
-							ns: 0,
-							title: 'Bradley Cooper',
-							pageid: 4
-						}
-					]
+					}
 				}
 			};
 			this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( data ) );
