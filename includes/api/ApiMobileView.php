@@ -96,8 +96,7 @@ class ApiMobileView extends ApiBase {
 				'ns' => $namespace,
 			) );
 		}
-
-		$data = $this->getData( $title, $params['noimages'] );
+		$data = $this->getData( $title, $params['noimages'], $params['revision'] );
 		$plainData = array( 'lastmodified', 'lastmodifiedby', 'revision',
 			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' );
 		foreach ( $plainData as $name ) {
@@ -411,18 +410,17 @@ class ApiMobileView extends ApiBase {
 	 * Performs a page parse
 	 * @param WikiPage $wp
 	 * @param ParserOptions $parserOptions
-	 * @return ParserOutput
+	 * @param null|int [$oldid] Revision ID to get the text from, passing null or 0 will
+	 *   get the current revision (default value)
+	 * @return ParserOutput|null
 	 */
-	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions ) {
+	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
 		$time = microtime( true );
-		$parserOutput = $wp->getParserOutput( $parserOptions );
+		$parserOutput = $wp->getParserOutput( $parserOptions, $oldid );
 		$time = microtime( true ) - $time;
-		if ( !$parserOutput ) {
-			wfDebugLog( 'mobile', "Empty parser output on '{$wp->getTitle()->getPrefixedText()}'" .
-				": rev {$wp->getId()}, time $time" );
-			throw new Exception( __METHOD__ . ": PoolCounter didn't return parser output" );
+		if ( $parserOutput ) {
+			$parserOutput->setTOCEnabled( false );
 		}
-		$parserOutput->setTOCEnabled( false );
 
 		return $parserOutput;
 	}
@@ -449,9 +447,11 @@ class ApiMobileView extends ApiBase {
 	 * Get data of requested article.
 	 * @param Title $title
 	 * @param boolean $noImages
+	 * @param null|int [$oldid] Revision ID to get the text from, passing null or 0 will
+	 *   get the current revision (default value)
 	 * @return array
 	 */
-	private function getData( Title $title, $noImages ) {
+	private function getData( Title $title, $noImages, $oldid = null ) {
 		$mfConfig = MobileContext::singleton()->getMFConfig();
 		$useTidy = $this->getConfig()->get( 'UseTidy' );
 		$mfTidyMobileViewSections = $mfConfig->get( 'MFTidyMobileViewSections' );
@@ -485,6 +485,8 @@ class ApiMobileView extends ApiBase {
 		$latest = $wp->getLatest();
 		// Use page_touched so template updates invalidate cache
 		$touched = $wp->getTouched();
+
+		$revId = $oldid || $title->getLatestRevID();
 		if ( $this->file ) {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
 				$touched, $this->noTransform, $this->file->getSha1(), $this->variant );
@@ -503,6 +505,7 @@ class ApiMobileView extends ApiBase {
 				self::CACHE_VERSION,
 				$noImages,
 				$touched,
+				$revId,
 				$this->noTransform,
 				$parserCacheKey
 			);
@@ -516,7 +519,14 @@ class ApiMobileView extends ApiBase {
 		if ( $this->file ) {
 			$html = $this->getFilePage( $title );
 		} else {
-			$parserOutput = $this->getParserOutput( $wp, $parserOptions );
+			$parserOutput = $this->getParserOutput( $wp, $parserOptions, $oldid );
+			if ( $parserOutput === false ) {
+				$this->dieUsage(
+					"Bad revision id/title combination",
+					'invalidparams'
+				);
+				return;
+			}
 			$html = $parserOutput->getText();
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
@@ -586,7 +596,7 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$data['lastmodifiedby'] = null;
 		}
-		$data['revision'] = $title->getLatestRevID();
+		$data['revision'] = $revId;
 
 		if ( isset( $parserOutput ) ) {
 			$languages = $parserOutput->getLanguageLinks();
@@ -803,6 +813,11 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_DFLT => 0,
 			),
 			'maxlen' => array(
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_MIN => 0,
+				ApiBase::PARAM_DFLT => 0,
+			),
+			'revision' => array(
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
 				ApiBase::PARAM_DFLT => 0,
