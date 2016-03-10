@@ -32,7 +32,7 @@
 		{{#allLanguages}}
 			<li {{#hasVariants}}class="has-variants"{{/hasVariants}}>
 				{{#hasVariants}}<h3 class="list-header">{{variantsHeader}}</h3>{{/hasVariants}}
-				{{#lang}}{{! this test is important because variants may exist, but not the parent language }}
+				{{#url}}{{! this test is important because variants may exist, but not the parent language }}
 				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
 					<div>
 						<span class="lang">{{lang}}</span>
@@ -44,7 +44,7 @@
 						{{/title}}
 					</div>
 				</a>
-				{{/lang}}
+				{{/url}}
 				{{#hasVariants}}
 					<ul class="variants">
 					{{#variants}}
