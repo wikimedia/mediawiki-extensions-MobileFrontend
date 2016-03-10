@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_3628fb2e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T20:04:18Z",
+      "side": 1,
+      "message": "We should check for existence and use whichever is available in the browser. We should also limit this to grade C browsers otherwise it will run on all browsers.",
+      "parentUuid": "0e2f53b6_b20ffe32",
+      "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_7b9c3160",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Yup \u0027cause otherwise it won\u0027t work.\nI\u0027m still unsure whether to add this here via a hook or as part of the output of MobileFormatter itself in the onHTMLReady function.\nWhat do you think?",
       "parentUuid": "0e2f53b6_7b9c3160",
+      "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_961c671a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T20:04:18Z",
+      "side": 1,
+      "message": "I think the hooks is good. Although the script changes the HTML it\u0027s not in PHP so no need to add it to MobileFormatter.",
+      "parentUuid": "0e2f53b6_6172bee3",
       "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
