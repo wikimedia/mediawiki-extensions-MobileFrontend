@@ -69,6 +69,24 @@
       "revId": "4985d10204bc372288ef51153922f3d283849719",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_dbf8dd48",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T14:25:55Z",
+      "side": 1,
+      "message": "Maybe http://stackoverflow.com/questions/7536961/reset-php-array-index can help?",
+      "parentUuid": "0e2f53b6_5bce8d32",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
