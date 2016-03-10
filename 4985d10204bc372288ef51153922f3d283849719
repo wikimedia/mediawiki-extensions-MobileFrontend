@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_1bda4521",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T14:11:17Z",
+      "side": 1,
+      "message": "Do you mean \u0027removed\u0027 rather than \u0027deprecated\u0027? Otherwise it\u0027s not a breaking change. I\u0027d check with the apps folks if they\u0027re using this class before removing it.",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_7b40b1a8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-10T14:11:17Z",
+      "side": 1,
+      "message": "This comment assumes that interator_to_array was used while getting $headings. Why not fix the indexing in the getHeadings function and just get the first element of the array below?",
+      "revId": "4985d10204bc372288ef51153922f3d283849719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
