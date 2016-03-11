@@ -10,7 +10,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	protected $messages = array();
 	/** @var array Saves the target for the module (e.g. desktop and mobile). */
 	protected $targets = array( 'mobile', 'desktop' );
-	/** @var boolean Whether the module abuses getScripts. */
+	/** @var boolean Whether the module abuses getScript. */
 	protected $hasHackedScriptMode = false;
 
 	/**
@@ -33,25 +33,27 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	}
 
 	/**
-	 * Processes messages which have been marked as needing parsing
+	 * Process messages which have been marked as needing parsing
 	 *
-	 * @param string $lang Language code to use
+	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code
 	 */
-	public function addParsedMessages( $lang ) {
-		$js = "\n";
-		foreach ( $this->parsedMessages as $key ) {
-			$value = wfMessage( $key )->inLanguage( $lang )->parse();
-			$js .= Xml::encodeJsCall( 'mw.messages.set', array( $key, $value ) );
+	public function addParsedMessages( ResourceLoaderContext $context ) {
+		if ( !$this->parsedMessages ) {
+			return '';
 		}
-		return $js;
+		$messages = [];
+		foreach ( $this->parsedMessages as $key ) {
+			$messages[ $key ] = $context->msg( $key )->parse();
+		}
+		return Xml::encodeJsCall( 'mw.messages.set', array( $messages ) );
 	}
 
 	/**
-	 * Separates messages which have been marked as needing parsing from standard messages
+	 * Separate messages which have been marked as needing parsing from standard messages
 	 * @param array $messages Array of messages to process
 	 */
-	public function processMessages( $messages ) {
+	private function processMessages( $messages ) {
 		foreach ( $messages as $key => $value ) {
 			if ( is_array( $value ) ) {
 				foreach ( $value as $directive ) {
@@ -66,15 +68,6 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	}
 
 	/**
-	 * Gets list of message keys used by this module.
-	 *
-	 * @return array List of message keys
-	 */
-	public function getMessages() {
-		return $this->messages;
-	}
-
-	/**
 	 * Gets all scripts for a given context concatenated together including processed messages
 	 *
 	 * @param ResourceLoaderContext $context Context in which to generate script
@@ -82,7 +75,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$script = parent::getScript( $context );
-		return $this->addParsedMessages( $context->getLanguage() ) . $script;
+		return $this->addParsedMessages( $context ) . $script;
 	}
 
 	/**

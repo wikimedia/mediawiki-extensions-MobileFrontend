@@ -3,7 +3,7 @@
 /**
  * @group MobileFrontend
  */
-class MFResourceLoaderParsedMessageModuleTest extends MediaWikiTestCase {
+class MFResourceLoaderParsedMessageModuleTest extends ResourceLoaderTestCase {
 	private $modules = array(
 		array(
 			'messages' => array( 'foo', 'bar' ),
@@ -41,16 +41,16 @@ class MFResourceLoaderParsedMessageModuleTest extends MediaWikiTestCase {
 	}
 
 	public function providerAddParsedMessages() {
-		$msg = wfMessage( 'mobile-frontend-photo-license' )->parse();
-		$expected = "\n" . Xml::encodeJsCall( 'mw.messages.set',
-				array( 'mobile-frontend-photo-license', $msg ) );
+		$html = wfMessage( 'mobile-frontend-photo-license' )->parse();
+		$expected = Xml::encodeJsCall( 'mw.messages.set',
+				array( array( 'mobile-frontend-photo-license' => $html ) ) );
 
 		return array(
 			// test case 1
 			array(
 				$this->modules[0],
 				// expected value
-				"\n"
+				''
 			),
 			// test case 2
 			array(
@@ -62,7 +62,7 @@ class MFResourceLoaderParsedMessageModuleTest extends MediaWikiTestCase {
 			array(
 				$this->modules[2],
 				// expected value 2
-				"\n"
+				''
 			),
 		);
 	}
@@ -74,7 +74,7 @@ class MFResourceLoaderParsedMessageModuleTest extends MediaWikiTestCase {
 	 */
 	public function testAddParsedMessages( $module, $expectedJavascript ) {
 		$rl = new MFResourceLoaderParsedMessageModule( $module );
-		$js = $rl->addParsedMessages( 'en' );
+		$js = $rl->addParsedMessages( $this->getResourceLoaderContext( 'en' ) );
 
 		$this->assertEquals( $js, $expectedJavascript );
 	}
