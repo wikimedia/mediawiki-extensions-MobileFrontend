@@ -26,6 +26,7 @@ abstract class SkinTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider providerGetSitename
+	 * @covers SkinMinerva::getSitename
 	 */
 	public function testGetSitename( $configValue, $expected ) {
 		// set config variables

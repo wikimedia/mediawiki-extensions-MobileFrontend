@@ -71,6 +71,7 @@ class MFResourceLoaderParsedMessageModuleTest extends ResourceLoaderTestCase {
 
 	/**
 	 * @dataProvider providerAddParsedMessages
+	 * @covers MFResourceLoaderParsedMessageModule::addParsedMessages
 	 */
 	public function testAddParsedMessages( $module, $expectedJavascript ) {
 		$rl = new MFResourceLoaderParsedMessageModule( $module );
@@ -81,6 +82,7 @@ class MFResourceLoaderParsedMessageModuleTest extends ResourceLoaderTestCase {
 
 	/**
 	 * @dataProvider providerGetMessages
+	 * @covers MFResourceLoaderParsedMessageModule::getMessages
 	 */
 	public function testGetMessages( $module, $expectedMessages ) {
 		$rl = new MFResourceLoaderParsedMessageModule( $module );

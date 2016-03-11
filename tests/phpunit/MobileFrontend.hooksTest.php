@@ -8,6 +8,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 * Test headers and alternate/canonical links to be set or not
 	 *
 	 * @dataProvider onBeforePageDisplayDataProvider
+	 * @covers MobileFrontendHooks::OnBeforePageDisplay
 	 */
 	public function testOnBeforePageDisplay( $mobileUrlTemplate, $mfNoindexPages,
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,

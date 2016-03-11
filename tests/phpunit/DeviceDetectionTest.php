@@ -90,6 +90,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTestIsMobileDevice
+	 * @covers DeviceDetection::detectDeviceProperties
 	 */
 	public function testIsMobileDevice( $expected, $userAgent ) {
 		$detector = new DeviceDetection();
@@ -135,6 +136,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTestIsTablet
+	 * @covers DeviceDetection::isMobileDevice
 	 */
 	public function testIsTablet( $expected, $userAgent ) {
 		$detector = new DeviceDetection();
