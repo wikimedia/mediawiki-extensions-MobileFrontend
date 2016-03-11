@@ -293,6 +293,7 @@
 	"apihelp-mobileview-param-thumbsize": "Maximal Dimensioune vu Miniatur-Biller.",
 	"apihelp-mobileview-param-thumbwidth": "Maximal Breet vun der Miniatur.",
 	"apihelp-mobileview-param-thumbheight": "Maximal Héicht vun der Miniatur.",
+	"apihelp-mobileview-param-revision": "Eng spezifesch Versioun ufroen.",
 	"apihelp-parse-param-noimages": "Biller am mobilen Output desaktivéieren.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
 	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie",

@@ -383,6 +383,7 @@
 	"apihelp-mobileview-param-thumbsize": "最大缩略图尺寸。",
 	"apihelp-mobileview-param-thumbwidth": "最大缩略图宽度。",
 	"apihelp-mobileview-param-thumbheight": "最大缩略图高度。",
+	"apihelp-mobileview-param-revision": "请求一个特定修订版本。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
 	"apihelp-mobileview-example-2": "获取有关第0节和包含[[Candlemass]]的参考资料的段落的信息",
 	"apihelp-mobileview-example-3": "获得有关第1节及以后，和包含[[Candlemass]]的参考资料的段落的信息",

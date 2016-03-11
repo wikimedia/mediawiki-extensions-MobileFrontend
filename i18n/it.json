@@ -337,6 +337,7 @@
 	"apihelp-mobileview-param-thumbsize": "Dimensioni massima miniatura.",
 	"apihelp-mobileview-param-thumbwidth": "Larghezza massima miniatura.",
 	"apihelp-mobileview-param-thumbheight": "Altezza massima miniatura.",
+	"apihelp-mobileview-param-revision": "Richiedi una versione specifica.",
 	"apihelp-mobileview-example-1": "Ottieni informazioni sulla sezione 0 di [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Ottieni informazioni sulla sezione 0, e sezione contenenti i riferimenti di [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Ottieni informazioni sulla sezione 1 e successive, e sezione contenenti i riferimenti di [[Candlemass]]",

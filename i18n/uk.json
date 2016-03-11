@@ -368,6 +368,7 @@
 	"apihelp-mobileview-param-thumbsize": "Максимальний розмір мініатюри.",
 	"apihelp-mobileview-param-thumbwidth": "Максимальна ширина мініатюри.",
 	"apihelp-mobileview-param-thumbheight": "Максимальна висота мініатюри.",
+	"apihelp-mobileview-param-revision": "Подати запит на конкретну версію сторінки.",
 	"apihelp-mobileview-example-1": "Отримати інформацію про розділ 0 статті [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Отримати інформацію про розділ 0 і розділи з примітками статті [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Отримати інформацію про розділ 1 і наступні та розділи з примітками статті [[Candlemass]]",
