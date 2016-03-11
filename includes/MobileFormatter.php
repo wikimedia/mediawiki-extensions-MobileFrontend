@@ -94,19 +94,23 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param bool $removeImages Whether to move images into noscript tags
 	 * @return array
 	 */
-	public function filterContent( $removeDefaults = true,
-		$removeReferences = false, $removeImages = false
+	public function filterContent(
+		$removeDefaults = true, $removeReferences = false, $removeImages = false
 	) {
 		$ctx = MobileContext::singleton();
 		$config = $ctx->getMFConfig();
 		$doc = $this->getDoc();
 
+		$isSpecialPage = $this->title->isSpecialPage();
 		$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
-		if ( $removeDefaults ) {
-			$this->remove( $mfRemovableClasses['base'] );
-			if ( $ctx->isBetaGroupMember() ) {
-				$this->remove( $mfRemovableClasses['beta'] );
-			}
+		$removableClasses = $mfRemovableClasses['base'];
+		if ( $ctx->isBetaGroupMember() ) {
+			$removableClasses = array_merge( $removableClasses, $mfRemovableClasses['beta'] );
+		}
+
+		// Don't remove elements in special pages
+		if ( !$isSpecialPage && $removeDefaults ) {
+			$this->remove( $removableClasses );
 		}
 
 		if ( $removeReferences ) {
@@ -115,21 +119,35 @@ class MobileFormatter extends HtmlFormatter {
 
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
-		} elseif ( $removeImages ){
-			$this->doRewriteImagesForLazyLoading();
 		}
 
-		// Initial pass to sectionify the content if it is not the main page and
-		// transform headings
-		if ( !$this->mainPage ) {
-			if ( $this->expandableSections ) {
-				list( $headings, $subheadings ) = $this->getHeadings( $doc );
-				$this->makeSections( $doc, $headings );
-				$this->makeHeadingsEditable( $subheadings );
-			}
+		$transformOptions = array( 'images' => $removeImages );
+		// Sectionify the content and transform it if necessary per section
+		if ( !$this->mainPage && $this->expandableSections ) {
+			list( $headings, $subheadings ) = $this->getHeadings( $doc );
+			$this->makeSections( $doc, $headings, $transformOptions );
+			$this->makeHeadingsEditable( $subheadings );
+		} else {
+			// Otherwise apply the per-section transformations to the document as a whole
+			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
 		}
 
 		return parent::filterContent();
+	}
+
+	/*
+	 * Apply filtering per element (section) in a document.
+	 * @param DOMElement|DOMDocument $el
+	 * @param DOMDocument $doc
+	 * @param number $sectionNumber Which section is it on the document
+	 * @param array $options options about the transformations per section
+	 */
+	private function filterContentInSection(
+		$el, DOMDocument $doc, $sectionNumber, $options = array()
+	) {
+		if ( !$this->removeMedia && $options['images'] ) {
+			$this->doRewriteImagesForLazyLoading( $el, $doc );
+		}
 	}
 
 	/**
@@ -167,11 +185,13 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Enables images to be loaded asynchronously
+	 *
+	 * @param DOMElement|DOMDocument $el Element or document to rewrite images in.
+	 * @param DOMDocument $doc Document to create elements in
 	 */
-	private function doRewriteImagesForLazyLoading() {
-		$doc = $this->getDoc();
+	private function doRewriteImagesForLazyLoading( $el, DOMDocument $doc ) {
 
-		foreach ( $doc->getElementsByTagName( 'img' ) as $img ) {
+		foreach ( $el->getElementsByTagName( 'img' ) as $img ) {
 			$parent = $img->parentNode;
 			$width = $img->getAttribute( 'width' );
 			$height = $img->getAttribute( 'height' );
@@ -343,8 +363,9 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param DOMDocument $doc
 	 * @param [DOMElement] $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
+	 * @param array $transformOptions Options to pass when transforming content per section
 	 */
-	protected function makeSections( DOMDocument $doc, array $headings ) {
+	protected function makeSections( DOMDocument $doc, array $headings, $transformOptions ) {
 
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
 		$sibling = $body->firstChild;
@@ -365,6 +386,10 @@ class MobileFormatter extends HtmlFormatter {
 			// DOMElement#tagName.  So, if there's trailing text - represented by
 			// DOMText - then accessing #tagName will trigger an error.
 			if ( $headings && $node->nodeName === $firstHeading->nodeName ) {
+				if ( $sectionBody->hasChildNodes() ) {
+					// Apply transformations to the section body
+					$this->filterContentInSection( $sectionBody, $doc, $sectionNumber, $transformOptions );
+				}
 				// Insert the previous section body and reset it for the new section
 				$body->insertBefore( $sectionBody, $node );
 				$sectionNumber += 1;
