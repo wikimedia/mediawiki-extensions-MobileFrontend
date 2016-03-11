@@ -145,7 +145,7 @@ class MobileFormatter extends HtmlFormatter {
 	private function filterContentInSection(
 		$el, DOMDocument $doc, $sectionNumber, $options = array()
 	) {
-		if ( !$this->removeMedia && $options['images'] ) {
+		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->doRewriteImagesForLazyLoading( $el, $doc );
 		}
 	}
