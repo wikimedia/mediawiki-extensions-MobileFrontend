@@ -362,6 +362,7 @@
 	"apihelp-mobileview-param-thumbsize": "ממדים מרביים לתמונה הממוזערת.",
 	"apihelp-mobileview-param-thumbwidth": "רוחב מרבי לתמונה הממוזערת.",
 	"apihelp-mobileview-param-thumbheight": "גובה מרבי לתמונה הממוזערת.",
+	"apihelp-mobileview-param-revision": "בקשת גרסה מסוימת.",
 	"apihelp-mobileview-example-1": "קבלת פרטים על מקטע 0 של [[Doom metal]]",
 	"apihelp-mobileview-example-2": "קבלת פרטים על מקטע 0 ומקטעים שכוללים הפניות של [[Candlemass]]",
 	"apihelp-mobileview-example-3": "קבלת פרטים על מקטעים 1 ואילך ומקטעים שכוללים הפניות של [[Candlemass]]",
