@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_0d2194f6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-12T20:34:14Z",
+      "side": 1,
+      "message": "Ohoh, both styles are loaded in both, mobile _and_ desktop, modes. Caused T129756",
+      "revId": "7d2c695e2a276b3c3be16777ceeb8b36fb143139",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
