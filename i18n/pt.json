@@ -20,7 +20,8 @@
 			"Ti4goc",
 			"Imperadeiro90",
 			"Fernandofelippe",
-			"Fúlvio"
+			"Fúlvio",
+			"Diniscoelho"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
@@ -343,6 +344,7 @@
 	"apihelp-mobileview-param-onlyrequestedsections": "Retornar somente as secções solicitadas, mesmo com $1prop=sections.",
 	"apihelp-mobileview-param-thumbwidth": "Largura máxima da miniatura.",
 	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",
+	"apihelp-mobileview-param-revision": "Solicitar uma revisão específica.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
 	"mobile-frontend-donate-button-label": "Realizar uma doação",
 	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria",

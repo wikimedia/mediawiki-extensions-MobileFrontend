@@ -5,7 +5,8 @@
 			"GaiJin",
 			"Kaztrans",
 			"Wikibilim",
-			"Eldar zh96"
+			"Eldar zh96",
+			"Batyrbek.kz"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Құптау кодын енгізіңіз",
@@ -53,7 +54,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Бұл өңдеме сақталмады, себебі біз мәселеге кездестік.",
 	"mobile-frontend-editor-abusefilter-read-more": "Көбірек оқу",
 	"mobile-frontend-editor-abusefilter-warning": "Ескерту: Бұл өңдемені сақтағыңыз келе ме? Онда мәселе туындауы мүмкін.",
-	"mobile-frontend-editor-anon": "Кірмей ақ өңеу",
+	"mobile-frontend-editor-anon": "Кірмей-ақ өңдеу",
 	"mobile-frontend-editor-cancel": "Болдырмау",
 	"mobile-frontend-editor-cancel-confirm": "Өңдемеңізді қалырып кетуді шынымен қалайсыз ба?",
 	"mobile-frontend-editor-captcha-try-again": "Қате код, қайта байқап көріңіз.",

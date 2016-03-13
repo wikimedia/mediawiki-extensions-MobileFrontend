@@ -263,7 +263,7 @@
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj nowy wątek w dyskusji",
 	"mobile-frontend-talk-back-to-page": "Powrót do strony $1",
 	"mobile-frontend-talk-back-to-userpage": "Powrót do strony {{GENDER:$1|użytkownika|użytkowniczki}} „$1”.",
-	"mobile-frontend-talk-back-to-filepage": "Powrót do pliku \"$1\".",
+	"mobile-frontend-talk-back-to-filepage": "Powrót do pliku „$1”.",
 	"mobile-frontend-talk-edit-summary": "$1: nowa sekcja",
 	"mobile-frontend-talk-explained": "Następujące wątki dyskusji są aktualnie aktywne",
 	"mobile-frontend-talk-explained-empty": "Nie toczą się żadne dyskusje na temat tej strony.",

@@ -13,7 +13,8 @@
 			"மதனாஹரன்",
 			"ElangoRamanujam",
 			"Shrikarsan",
-			"Maathavan"
+			"Maathavan",
+			"தமிழ்க்குரிசில்"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "பாதுகாப்புக் குறியீட்டை உள்ளிடவும்",
@@ -35,7 +36,6 @@
 	"mobile-frontend-dismiss-notification": "இந்த அறிவிப்பை அகற்று",
 	"mobile-frontend-donate-image-heading": "உங்களது அண்மைய பங்களிப்புகள்",
 	"mobile-frontend-donate-image-title": "ஒரு படத்தை கொடையளிக்கவும்",
-	"mobile-frontend-donate-photo-first-upload-success": "வெற்றி ! தங்கள் முதல் பங்களிப்பிற்கு நன்றி !",
 	"mobile-frontend-drawer-cancel": "விட்டுவிடு",
 	"mobile-frontend-editor-anon": "உள்நுழையாமல் தொகுக்கவும்",
 	"mobile-frontend-editor-continue": "தொடரவும்",
@@ -94,7 +94,7 @@
 	"mobile-frontend-terms-text": "பயன்பாட்டு விதிகள்",
 	"mobile-frontend-view": "கைபேசிப் பார்வை",
 	"mobile-frontend-view-desktop": "கணினி பதிப்பு",
-	"mobile-frontend-view-mobile": "கைபேசி",
+	"mobile-frontend-view-mobile": "கைபேசிப் பதிப்பு",
 	"mobile-frontend-watchlist-a-z": "பட்டியல்",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "பக்கத்தில் தொடக்கத்தில் உள்ள நட்சத்திரத்தை சொடுக்கவும்",
 	"mobile-frontend-watchlist-add": "$1 உங்களது கவனிப்புப் பட்டியலில் சேர்க்கப்பட்டது.",
