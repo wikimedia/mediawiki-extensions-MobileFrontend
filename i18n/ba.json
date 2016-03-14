@@ -11,7 +11,12 @@
 			"Sagan"
 		]
 	},
+	"mobile-frontend-account-create-captcha-placeholder": "Электрон почта адресын раҫлау хатын ебәрергә",
+	"mobile-frontend-account-create-email-placeholder": "Электрон почта адресы (мотлаҡ түгел)",
+	"mobile-frontend-account-create-submit": "Теркәлегеҙ",
+	"mobile-frontend-app-title": "Мобиль ҡушымта",
 	"mobile-frontend-back-to-top-of-section": "Бер бүлеккә кире ҡайтырға",
+	"mobile-frontend-categories-heading": "<strong>Категориялар</strong>",
 	"mobile-frontend-changeslist-nocomment": "Үҙгәртеү аңлатмаһы юҡ",
 	"mobile-frontend-clear-search": "Таҙартыу",
 	"mobile-frontend-copyright": "Мәғлүмәт $1 буйынса таратыла (әгәр башҡаһы күрһәтелмәһә).",
@@ -46,7 +51,6 @@
 	"mobile-frontend-page-menu-history": "Тарих",
 	"mobile-frontend-password": "Серһүҙ:",
 	"mobile-frontend-password-placeholder": "Серһүҙ",
-	"mobile-frontend-photo-upload": "Был биткә тәүге фотоны өҫтәргә",
 	"mobile-frontend-placeholder": "{{SITENAME}}-та эҙләргә",
 	"mobile-frontend-placeholder-beta": "{{SITENAME}} буйлап эҙләргә (Бета)",
 	"mobile-frontend-privacy-link-text": "Сер һаҡлау",

@@ -96,7 +96,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1}}Bạn có chắc chắn muốn tạo một trang mới tại {{SITENAME}}?",
 	"mobile-frontend-editor-newpage-prompt": "Trang này chưa tồn tại. Hãy mạnh dạn tạo ra nó!",
 	"mobile-frontend-editor-placeholder": "Đề mục này còn trống. Hãy là người đầu tiên mở rộng nó!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Bạn đang tạo}} một trang mới tại {{SITENAME}}!",
+	"mobile-frontend-editor-placeholder-new-page": "Bạn {{GENDER:$1}}đang tạo một trang mới tại {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Xem trước</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Đang đổi hướng đến trang sửa đổi…",
 	"mobile-frontend-editor-save": "Lưu",

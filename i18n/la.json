@@ -18,7 +18,7 @@
 	"mobile-frontend-clear-search": "Extinguere",
 	"mobile-frontend-copyright": "Textus sub $1 praebetur nisi aliter indicatus.",
 	"mobile-frontend-desc": "Editio mobilis",
-	"mobile-frontend-diffview-404-desc": "Emendatio quaesita non invenitur",
+	"mobile-frontend-diffview-404-desc": "ID numerus istius redactionis non est.",
 	"mobile-frontend-diffview-404-title": "Conlatio irrita",
 	"mobile-frontend-diffview-anonymous": "Usor anonymus",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|octetus additus|octeti additi}}",
