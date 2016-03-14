@@ -37,11 +37,17 @@
 	 * @param {ReferencesDrawer} drawer to show the reference in
 	 */
 	function showReference( ev, drawer ) {
-		var $dest = $( ev.target ),
+		var urlComponents,
+			$dest = $( ev.target ),
 			href = $dest.attr( 'href' );
 
 		ev.preventDefault();
 
+		// If necessary strip the URL portion of the href so we are left with the fragment
+		urlComponents = href.split( '#' );
+		if ( urlComponents.length > 1 ) {
+			href = '#' + urlComponents[1];
+		}
 		drawer.showReference( href, page, $dest.text() );
 
 		// don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)

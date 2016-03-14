@@ -12,6 +12,7 @@ $specialPageAliases = array();
 /** English (English) */
 $specialPageAliases['en'] = array(
 	'History' => array( 'History' ),
+	'MobileCite' => array( 'MobileCite' ),
 	'MobileOptions' => array( 'MobileOptions' ),
 	'Uploads' => array( 'Uploads' ),
 	'MobileDiff' => array( 'MobileDiff' ),
