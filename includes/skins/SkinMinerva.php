@@ -965,7 +965,6 @@ class SkinMinerva extends SkinTemplate {
 		$modules = parent::getDefaultModules();
 		// flush unnecessary modules
 		$modules['content'] = array();
-		$modules['legacy'] = array();
 
 		$modules['top'] = 'skins.minerva.scripts.top';
 		// Define all the modules that should load on the mobile site and their dependencies.
