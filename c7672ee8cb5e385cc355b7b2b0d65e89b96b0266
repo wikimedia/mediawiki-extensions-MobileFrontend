@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_5434c546",
+        "filename": "tests/qunit/mobile.search.api/test_SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T11:41:50Z",
+      "side": 0,
+      "message": "The newly added sort is covered but isn\u0027t tested directly. Add a test case which flips the indexes of the pages and tests that they are returned in the expected order.",
+      "revId": "c7672ee8cb5e385cc355b7b2b0d65e89b96b0266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_943e4d25",
+        "filename": "tests/qunit/mobile.search.api/test_SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T11:41:50Z",
+      "side": 0,
+      "message": "This should be an array.",
+      "revId": "c7672ee8cb5e385cc355b7b2b0d65e89b96b0266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_d49bb566",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T11:41:50Z",
+      "side": 1,
+      "message": "Per the task, this is a performance change that, happily, has the added bonus of allowing us to make simplifications.",
+      "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_b4fa7171",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T11:41:50Z",
+      "side": 1,
+      "message": "I\u0027m not sure how this comment is relevant, especially when we\u0027re sorting the results in L117-119.",
+      "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_14d4fdeb",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T11:41:50Z",
+      "side": 1,
+      "message": "This belongs in SearchGateway#_getPage. With that change done then this block becomes:\n\n    $.map( results, function ( result ) {\n      return self._getPage( query, result );\n    } );",
+      "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
