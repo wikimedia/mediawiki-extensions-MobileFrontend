@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_4feeebb2",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-14T15:58:50Z",
+      "side": 1,
+      "message": "Removed",
+      "parentUuid": "ee33df1d_b4fa7171",
+      "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_14d4fdeb",
         "filename": "resources/mobile.search.api/SearchGateway.js",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2016-03-14T11:41:50Z",
       "side": 1,
       "message": "This belongs in SearchGateway#_getPage. With that change done then this block becomes:\n\n    $.map( results, function ( result ) {\n      return self._getPage( query, result );\n    } );",
+      "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_cf395b40",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-14T15:58:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_14d4fdeb",
       "revId": "99e7ff5286b4c89818d9b40380f4d15c8f6db209",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
