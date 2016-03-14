@@ -69,6 +69,24 @@
       "revId": "c7672ee8cb5e385cc355b7b2b0d65e89b96b0266",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_8fb8f375",
+        "filename": "tests/qunit/mobile.search.api/test_SearchGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-14T16:09:44Z",
+      "side": 0,
+      "message": "Ah. I missed that we were using $.map. You\u0027re right that moving to formatversion\u003d2 is out of scope for this patch.",
+      "parentUuid": "ee33df1d_6f82cfce",
+      "revId": "c7672ee8cb5e385cc355b7b2b0d65e89b96b0266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
