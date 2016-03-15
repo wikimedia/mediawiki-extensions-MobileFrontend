@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_e001c0ba",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "I think making this a property of the class rather than part of the function signature is neater.",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_e03380be",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 779,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "Rather than change the function signature you could add a property to the class and avoid overriding this function altogether.",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_a0eb3808",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "As I said in PS11 this is identical to SkinMinerva logic.\nJust compute it once inside SkinMinerva and reuse it here",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c0f2bc02",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "These are beta styles in a production stylesheet that loads at the top of the page.\n\nCopy the approach we have with \"skins.minerva.content.styles.beta\"\n\nAlso does this rule need to be so specific ? If so explain what rule you are overriding.",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c08bdc70",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "I\u0027m fine with switching to an id based selector but I\u0027d rather we did this in stable too - this would also make it cleaner for us to push to stable with caching.\n\nI\u0027d prefer languageButtonVersion was not tied to the existence of a DOM element - either use isBetaGroupMember or pass a variable via mw.config explicitly.",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_a0bdf818",
+        "filename": "tests/browser/features/step_definitions/language_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "Unused step",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_80ba741c",
+        "filename": "tests/browser/features/step_definitions/language_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 1,
+      "message": "Seems to be a duplicate of \"I see the language overlay\" step ?",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

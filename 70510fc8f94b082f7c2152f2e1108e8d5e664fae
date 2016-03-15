@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_20aa88d1",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T23:02:16Z",
+      "side": 0,
+      "message": "Although this is correct best to do this in a separate patchset in case it has a knock on effect on our integration tests that run on the betacluster",
+      "revId": "70510fc8f94b082f7c2152f2e1108e8d5e664fae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
