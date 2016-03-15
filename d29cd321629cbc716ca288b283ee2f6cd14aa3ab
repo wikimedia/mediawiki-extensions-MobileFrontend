@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_675cab4f",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 1978,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "You\u0027re right, the requirement has changed. We\u0027ll only have this feature in beta for now.",
+      "parentUuid": "0e2f53b6_2c28aa2e",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_2ce70a11",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-10T22:25:43Z",
       "side": 1,
       "message": "This is nice and takes more logic out of this class. Would be great if isFallbackEditor logic could be moved to SkinMinerva to.\n\nMight be best done in a separate hygiene patch?",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_4759a75c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "0e2f53b6_2ce70a11",
       "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_07783fbe",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "I\u0027m not quite sure what the problem is here? Even though the heading appears before page actions in stable, the presentation is the same, no?",
+      "parentUuid": "0e2f53b6_ecdc024e",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_ccf5beb7",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 9
@@ -64,6 +118,24 @@
       "writtenOn": "2016-03-10T22:25:43Z",
       "side": 1,
       "message": "Use of getMode seems hacky to me and I\u0027d rather we didn\u0027t use it while SkinMinervaBeta exists.\n\nYou are in SkinMinerva so you should assume you are in beta.\nSkinMinervaBeta should extend shouldUseNewLanguageSwitcherButton with any further logic it needs",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_873a8fe2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 801,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "Yeah, we won\u0027t need this change with the new requirement.",
+      "parentUuid": "0e2f53b6_ccf5beb7",
       "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_2762a306",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "I think this is one of the cases where breaking a rule is an efficient thing because the situation is not a normal one as I have to care for beta, stable  templates which changed and cached pages which haven\u0027t.",
+      "parentUuid": "0e2f53b6_acf2faca",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_4cb9aee5",
         "filename": "tests/browser/features/language.feature",
         "patchSetId": 9
@@ -133,6 +223,24 @@
       "side": 1,
       "message": "I changed this feature file because the tests weren\u0027t complete as I saw them. I\u0027d like to still make these changes, but I can split them out into a different patch if you\u0027d like, as you\u0027re right that they\u0027re not related.",
       "parentUuid": "0e2f53b6_4cb9aee5",
+      "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_67330b0b",
+        "filename": "tests/browser/features/language.feature",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T18:49:06Z",
+      "side": 1,
+      "message": "Yes, the tests will need an update once I finish implementing the new requirement of having this feature only in beta.",
+      "parentUuid": "ee33df1d_120fec34",
       "revId": "d29cd321629cbc716ca288b283ee2f6cd14aa3ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
