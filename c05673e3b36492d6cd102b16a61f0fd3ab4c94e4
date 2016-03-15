@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0e2f53b6_c7a3d7a6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T21:00:21Z",
+      "side": 1,
+      "message": "It\u0027s limited to grade C browsers by being inside the NORLQ object which is only run for these browsers.",
+      "parentUuid": "0e2f53b6_3628fb2e",
+      "revId": "c05673e3b36492d6cd102b16a61f0fd3ab4c94e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2f53b6_7b9c3160",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
