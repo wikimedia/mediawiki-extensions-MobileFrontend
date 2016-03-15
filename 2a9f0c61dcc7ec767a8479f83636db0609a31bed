@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_b8d9ba2e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-15T09:48:09Z",
+      "side": 1,
+      "message": "I would\u0027ve thought we\u0027d see build failures if there were strict mode violations – LSP violations being one. Thanks for the tweak!",
+      "revId": "2a9f0c61dcc7ec767a8479f83636db0609a31bed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
