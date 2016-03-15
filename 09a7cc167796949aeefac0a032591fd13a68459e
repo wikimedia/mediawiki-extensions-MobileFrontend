@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_c98793db",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T21:00:11Z",
+      "side": 1,
+      "message": "Yeh that\u0027s fair. I was aware of the live NodeList issue but had considered it not to be a problem given I wasn\u0027t adding new noscript nodes but had not considered the re-evaluation of the query. Thanks for pointing that out.",
+      "parentUuid": "ee33df1d_69de4716",
+      "revId": "09a7cc167796949aeefac0a032591fd13a68459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_e9c9b756",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-15T00:19:22Z",
       "side": 1,
       "message": "This work-around can be removed if you use the \u0027className\u0027 property instead which, unlike user-supplied attributes, always exists on the DOM node.",
+      "revId": "09a7cc167796949aeefac0a032591fd13a68459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_09717b0b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T21:00:11Z",
+      "side": 1,
+      "message": "Good point.",
+      "parentUuid": "ee33df1d_e9c9b756",
       "revId": "09a7cc167796949aeefac0a032591fd13a68459e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
