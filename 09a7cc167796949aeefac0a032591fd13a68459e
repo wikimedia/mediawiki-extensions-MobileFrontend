@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_69de4716",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-15T00:19:22Z",
+      "side": 1,
+      "message": "getElements* methods return a live NodeList. This in contrast to the newer query* methods which return a static list.\n\nThis means any access to \u0027length\u0027 and \u0027i\u0027 may result in re-evaluation of the query to reflect the current state and offsets. As such, this is relatively slow to iterate over and may cause problems depending on how it is used since any changes inside the loop are immediately reflected onto the ns result (e.g. added or removed elements).\n\nIt\u0027s generally better to apply Array#slice on it which copies the result references into a static array (but without creating new objects).",
+      "revId": "09a7cc167796949aeefac0a032591fd13a68459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_e9c9b756",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-15T00:19:22Z",
+      "side": 1,
+      "message": "This work-around can be removed if you use the \u0027className\u0027 property instead which, unlike user-supplied attributes, always exists on the DOM node.",
+      "revId": "09a7cc167796949aeefac0a032591fd13a68459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
