@@ -83,6 +83,24 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$enableSections,
 				false, false, true,
 			),
+			// https://phabricator.wikimedia.org/T130025, last section filtered
+			array(
+				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
+				.'<h2>heading 2</h2>' . $originalImage,
+				'<div class="mf-section-0"><p>text</p></div>'
+					. '<h2>heading 1</h2>'
+					. '<div class="mf-section-1"><p>text</p>'
+					. $noscript
+					. $placeholder
+					. '</div>'
+					. '<h2>heading 2</h2>'
+					. '<div class="mf-section-2">'
+					. $noscript
+					. $placeholder
+					. '</div>',
+				$enableSections,
+				false, false, true,
+			),
 
 			// # Removal of images
 			array(
