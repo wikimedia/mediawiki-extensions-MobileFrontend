@@ -187,7 +187,7 @@
 
 					if (
 						mw.viewport.isElementInViewport( placeholder ) &&
-						$placeholder.find( '.spinner' ).is( ':visible' )
+						$placeholder.is( ':visible' )
 					) {
 						self.loadImage( $placeholder );
 						return false;
