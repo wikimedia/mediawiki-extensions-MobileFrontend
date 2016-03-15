@@ -14,7 +14,7 @@ class MockApiMobileView extends ApiMobileView {
 		return Title::newFromRow( $row );
 	}
 
-	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions ) {
+	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
 		$params = $this->extractRequestParams();
 		if ( !isset( $params['text'] ) ) {
 			throw new Exception( 'Must specify page text' );

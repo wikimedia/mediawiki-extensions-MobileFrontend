@@ -5,25 +5,31 @@
  */
 class MobileFormatterTest extends MediaWikiTestCase {
 	/**
-	 * @dataProvider getHtmlData
+	 * @dataProvider provideHtmlTransform
 	 *
 	 * @param $input
 	 * @param $expected
 	 * @param callable|bool $callback
+	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::doRewriteReferencesForLazyLoading
+	 * @covers MobileFormatter::doRemoveImages
 	 */
-	public function testHtmlTransform( $input, $expected, $callback = false ) {
+	public function testHtmlTransform( $input, $expected, $callback = false,
+		$removeDefaults = false, $lazyLoadReferences = false, $lazyLoadImages = false
+	) {
 		$t = Title::newFromText( 'Mobile' );
 		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t );
 		if ( $callback ) {
 			$callback( $mf );
 		}
-		$mf->filterContent();
+		$mf->topHeadingTags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages );
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
 
-	public function getHtmlData() {
+	public function provideHtmlTransform() {
 		$enableSections = function ( MobileFormatter $mf ) {
 			$mf->enableExpandableSections();
 		};
@@ -35,27 +41,83 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$f->setIsMainPage( true );
 		};
 
+		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
+			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
+		$placeholder = '<span class="lazy-image-placeholder" '
+			. 'style="width: 100px;height: 100px;" '
+			. 'data-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
+			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
+			. Html::element( 'span',
+					array(
+						'class' => MobileUI::iconClass( 'spinner', 'element', 'loading spinner' ),
+					)
+				)
+			. '</span>';
+		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
+
 		return array(
+			// # Lazy loading images
+			// Lead section images not impacted
 			array(
-				'<img src="/foo/bar.jpg">Blah</img>',
-				'<span class="mw-mf-image-replacement">['
-					. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
-				$removeImages,
+				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
+					. '<h2>heading 2</h2>abc',
+				'<div class="mf-section-0"><p>' . $originalImage . '</p></div>'
+					. '<h2>heading 1</h2>'
+					. '<div class="mf-section-1"><p>text</p>'
+					. '</div>'
+					. '<h2>heading 2</h2><div class="mf-section-2">abc</div>',
+				$enableSections,
+				false, false, true,
 			),
+			// Test lazy loading of images outside the lead section
+			array(
+				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
+					. '<h2>heading 2</h2>abc',
+				'<div class="mf-section-0"><p>text</p></div>'
+					. '<h2>heading 1</h2>'
+					. '<div class="mf-section-1"><p>text</p>'
+					. $noscript
+					. $placeholder
+					. '</div>'
+					. '<h2>heading 2</h2><div class="mf-section-2">abc</div>',
+				$enableSections,
+				false, false, true,
+			),
+
+			// # Removal of images
 			array(
 				'<img src="/foo/bar.jpg" alt="Blah"/>',
 				'<span class="mw-mf-image-replacement">[Blah]</span>',
 				$removeImages,
 			),
 			array(
-				'fooo
-<div id="mp-itn">bar</div>
-<div id="mf-custom" title="custom">blah</div>',
-				'<div id="mainpage">' .
-				'<h2>In the news</h2><div id="mp-itn">bar</div>'
-					. '<h2>custom</h2><div id="mf-custom">blah</div><br clear="all"></div>',
-				$mainPage,
+				'<img alt="picture of kitty" src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">' .
+				'[picture of kitty]</span>',
+				$removeImages,
 			),
+			array(
+				'<img src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' .
+					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$removeImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' .
+					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$removeImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">look at the cute kitty!' .
+					'<img alt="picture of angry dog" src="dog.jpg">',
+				'<span class="mw-mf-image-replacement">[' .
+					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
+					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
+				$removeImages,
+			),
+
+			// # Section wrapping
 			// \n</h2> in headers
 			array(
 				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span>'
@@ -102,31 +164,16 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			),
+
+			// # Main page transformations
 			array(
-				'<img alt="picture of kitty" src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">' .
-				'[picture of kitty]</span>',
-				$removeImages,
-			),
-			array(
-				'<img src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			),
-			array(
-				'<img alt src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			),
-			array(
-				'<img alt src="kitty.jpg">look at the cute kitty!' .
-					'<img alt="picture of angry dog" src="dog.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
-					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
-				$removeImages,
+				'fooo
+				<div id="mp-itn">bar</div>
+				<div id="mf-custom" title="custom">blah</div>',
+				'<div id="mainpage">' .
+				'<h2>In the news</h2><div id="mp-itn">bar</div>'
+					. '<h2>custom</h2><div id="mf-custom">blah</div><br clear="all"></div>',
+				$mainPage,
 			),
 			array(
 				'<div id="foo">test</div>',
@@ -151,6 +198,93 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all">'
 					. '<div id="central-auth-images">images</div></div>',
 				$mainPage,
+			),
+		);
+	}
+
+	/**
+	 * @dataProvider provideHeadingTransform
+	 * @covers MobileFormatter::makeSections
+	 * @covers MobileFormatter::enableExpandableSections
+	 * @covers MobileFormatter::setTopHeadingTags
+	 * @covers MobileFormatter::filterContent
+	 */
+	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
+		$t = Title::newFromText( 'Mobile' );
+		$formatter = new MobileFormatter( $input, $t );
+
+		// If MobileFormatter#enableExpandableSections isn't called, then headings
+		// won't be transformed.
+		$formatter->enableExpandableSections( true );
+
+		$formatter->topHeadingTags = $topHeadingTags;
+		$formatter->filterContent();
+
+		$this->assertEquals( $expectedOutput, $formatter->getText() );
+	}
+
+	public function provideHeadingTransform() {
+		return array(
+
+			// The "in-block" class is added to a subheading.
+			array(
+				array( 'h1', 'h2' ),
+				'<h1>Foo</h1><h2>Bar</h2>',
+				'<div class="mf-section-0"></div><h1>Foo</h1>'
+					. '<div class="mf-section-1"><h2 class="in-block">Bar</h2></div>',
+			),
+
+			// The "in-block" class is added to a subheading
+			// without overwriting the existing attribute.
+			array(
+				array( 'h1', 'h2' ),
+				'<h1>Foo</h1><h2 class="baz">Bar</h2>',
+				'<div class="mf-section-0"></div><h1>Foo</h1><div class="mf-section-1">'
+					. '<h2 class="baz in-block">Bar</h2></div>',
+			),
+
+			// The "in-block" class is added to all subheadings.
+			array(
+				array( 'h1', 'h2', 'h3' ),
+				'<h1>Foo</h1><h2>Bar</h2><h3>Qux</h3>',
+				'<div class="mf-section-0"></div><h1>Foo</h1><div class="mf-section-1">'
+					. '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3></div>',
+			),
+
+			// The first heading found is the highest ranked
+			// subheading.
+			array(
+				array( 'h1', 'h2', 'h3' ),
+				'<h2>Bar</h2><h3>Qux</h3>',
+				'<div class="mf-section-0"></div><h2>Bar</h2><div class="mf-section-1">'
+					. '<h3 class="in-block">Qux</h3></div>',
+			),
+
+			// Unenclosed text is appended to the expandable container.
+			array(
+				array( 'h1', 'h2' ),
+				'<h1>Foo</h1><h2>Bar</h2>A',
+				'<div class="mf-section-0"></div><h1>Foo</h1><div class="mf-section-1">'
+					. '<h2 class="in-block">Bar</h2>A</div>',
+			),
+
+			// Unencloded text that appears before the first
+			// heading is appended to a container.
+			// FIXME: This behaviour was included for backwards
+			// compatibility but mightn't be necessary.
+			array(
+				array( 'h1', 'h2' ),
+				'A<h1>Foo</h1><h2>Bar</h2>',
+				'<div class="mf-section-0"><p>A</p></div><h1>Foo</h1><div class="mf-section-1">'
+					. '<h2 class="in-block">Bar</h2></div>',
+			),
+
+			// Multiple headings are handled identically.
+			array(
+				array( 'h1', 'h2' ),
+				'<h1>Foo</h1><h2>Bar</h2>Baz<h1>Qux</h1>Quux',
+				'<div class="mf-section-0"></div><h1>Foo</h1><div class="mf-section-1">'
+					. '<h2 class="in-block">Bar</h2>Baz</div><h1>Qux</h1><div class="mf-section-2">Quux</div>',
 			),
 		);
 	}
