@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_bd588436",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T20:59:43Z",
+      "side": 1,
+      "message": "Is the suggested patch part of the sprint? If not we\u0027ll be delaying this patch unnecessarily.",
+      "parentUuid": "ee33df1d_bd21a49c",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_fd0b2c24",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 11
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_3d44744a",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T20:59:43Z",
+      "side": 1,
+      "message": "Code in SkinMinerva is in different format. If we want to be consistent, this needs a bigger refactoring which can be done when we introduce templates.",
+      "parentUuid": "ee33df1d_fd0b2c24",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_3d16344e",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 11
@@ -47,6 +83,24 @@
       "writtenOn": "2016-03-15T20:31:27Z",
       "side": 1,
       "message": "why not override getLanguageButton protected function inside here instead to save generation of it entirely?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_bdfc04d7",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T20:59:43Z",
+      "side": 1,
+      "message": "Because the language button is expected to be in a certain format.",
+      "parentUuid": "ee33df1d_3d16344e",
       "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +135,24 @@
       "writtenOn": "2016-03-15T20:31:27Z",
       "side": 1,
       "message": "Is there any reason we can\u0027t just use the same css selector for both and use beta to distinguish the languageButtonVersion ?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_5d685884",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-15T20:59:43Z",
+      "side": 1,
+      "message": ".languageSelector is broad of a class name. Also adding an ID for primary actions seems to be consistent.",
+      "parentUuid": "ee33df1d_7d00bc04",
       "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
