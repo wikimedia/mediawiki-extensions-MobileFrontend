@@ -2,6 +2,7 @@
 
 	var browser = M.require( 'mobile.browser/browser' ),
 		View = M.require( 'mobile.view/View' ),
+		Icon = M.require( 'mobile.startup/Icon' ),
 		context = M.require( 'mobile.context/context' );
 
 	/**
@@ -219,9 +220,18 @@
 		 */
 		loadImage: function ( $placeholder ) {
 			var
+				width = $placeholder.attr( 'data-width' ),
+				height = $placeholder.attr( 'data-height' ),
 				// Grab the image markup from the HTML only fallback
 				// Image will start downloading
 				$downloadingImage = $( '<img/>' );
+
+			if ( width > 80 && height > 80 ) {
+				new Icon( {
+					name: 'spinner',
+					additionalClassNames: 'loading'
+				} ).appendTo( $placeholder );
+			}
 
 			// When the image has loaded
 			$downloadingImage.on( 'load', function () {
@@ -235,8 +245,8 @@
 
 			// Trigger image download after binding the load handler
 			$downloadingImage.attr( {
-				width: $placeholder.attr( 'data-width' ),
-				height: $placeholder.attr( 'data-height' ),
+				width: width,
+				height: height,
 				src: $placeholder.attr( 'data-src' ),
 				alt: $placeholder.attr( 'data-alt' ),
 				srcset: $placeholder.attr( 'data-srcset' )

@@ -47,11 +47,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. 'style="width: 100px;height: 100px;" '
 			. 'data-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
 			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
-			. Html::element( 'span',
-					array(
-						'class' => MobileUI::iconClass( 'spinner', 'element', 'loading spinner' ),
-					)
-				)
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
 

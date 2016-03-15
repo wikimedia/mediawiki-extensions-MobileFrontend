@@ -201,12 +201,6 @@ class MobileFormatter extends HtmlFormatter {
 			// HTML only clients
 			$noscript = $doc->createElement( 'noscript' );
 
-			// Loading status of image placeholder
-			$spinner = $doc->createElement( 'span' );
-			$spinner->setAttribute( 'class', MobileUI::iconClass(
-				'spinner', 'element', 'loading spinner'
-			) );
-
 			// To be loaded image placeholder
 			$imgPlaceholder = $doc->createElement( 'span' );
 			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
@@ -218,8 +212,6 @@ class MobileFormatter extends HtmlFormatter {
 			}
 			// Assume data saving and remove srcset attribute from the non-js experience
 			$img->removeAttribute( 'srcset' );
-
-			$imgPlaceholder->appendChild( $spinner );
 
 			// Set the placeholder where the original image was
 			$parent->replaceChild( $imgPlaceholder, $img );
