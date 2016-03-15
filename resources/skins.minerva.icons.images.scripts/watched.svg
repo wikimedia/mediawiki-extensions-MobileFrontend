@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22.915254" enable-background="new 0 0 24 24">
-    <g id="g3">
-        <path d="M8.407 7.593L12.067 0l3.662 7.593L24 8.813l-5.966 5.83 1.49 8.272-7.456-3.932L4.61 22.78l1.356-8.272L0 8.678l8.407-1.085z" id="path5" fill="#00af89"/>
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>watchlist-filled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(0.000000, -1.000000)" fill="#00AF89">
+            <path d="M12,1 L8.26666667,8.43152941 L0,9.62588235 L6,15.4649412 L4.53333333,23.56 L12,19.5788235 L19.3333333,23.56 L18,15.3322353 L24,9.49317647 L15.6,8.29882353 L12,1 L12,1 L12,1 Z" id="watchlist-filled"></path>
+        </g>
     </g>
 </svg>
