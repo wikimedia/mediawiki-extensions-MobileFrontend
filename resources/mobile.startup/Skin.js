@@ -175,14 +175,14 @@
 		 */
 		loadImages: function () {
 			var self = this,
-				$imagePlaceholders = this.$( '#content' ).find( '.lazy-image-placeholder' );
+				imagePlaceholders = this.$( '#content' ).find( '.lazy-image-placeholder' ).toArray();
 
 			/**
 			 * Load remaining images in viewport
 			 */
 			function _loadImages() {
 
-				$imagePlaceholders = $imagePlaceholders.filter( function ( index, placeholder ) {
+				imagePlaceholders = $.grep( imagePlaceholders, function ( placeholder ) {
 					var $placeholder = $( placeholder );
 
 					if (
@@ -196,7 +196,7 @@
 					return true;
 				} );
 
-				if ( !$imagePlaceholders.length ) {
+				if ( !imagePlaceholders.length ) {
 					M.off( 'scroll', _loadImages );
 					M.off( 'resize', _loadImages );
 					M.off( 'section-toggled', _loadImages );
