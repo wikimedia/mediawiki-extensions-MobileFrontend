@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_bd21a49c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "Consider basing off https://gerrit.wikimedia.org/r/270336 and using either a separate template or adding logic before template generation.",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_fd0b2c24",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "This appears to be duplicate code in includes/skins/SkinMinerva.php\nso why not refactor that to be a protected method?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_3d16344e",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "why not override getLanguageButton protected function inside here instead to save generation of it entirely?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_1d0ff034",
+        "filename": "resources/skins.minerva.icons.images/languageSwitcher.svg",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "Please run svgo on this (it\u0027s in the precommit hook)",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_7d00bc04",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "Is there any reason we can\u0027t just use the same css selector for both and use beta to distinguish the languageButtonVersion ?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_4207d51f",
+        "filename": "tests/browser/features/language.feature",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "There should be no need to change the existing tests in this patchset unless you are changing the feature which does not seem to be the case.\n\nIf there is a reason for these changes would this be better to do in a separate patchset?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c21be580",
+        "filename": "tests/browser/features/language_icon.feature",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "See comment on article_page.rb\nicon/button distinction is not obvious",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_a21ce17d",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 11
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-15T20:31:27Z",
+      "side": 1,
+      "message": "having language_button and language_icon seems a little confusing. This is still a button\n\nHow about language_button_beta or language_button_new?",
+      "revId": "98b4b512d9f06cff3a6d336d4525f54dbdd2457a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
