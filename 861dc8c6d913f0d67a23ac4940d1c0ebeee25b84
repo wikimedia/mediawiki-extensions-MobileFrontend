@@ -52,6 +52,24 @@
       "revId": "861dc8c6d913f0d67a23ac4940d1c0ebeee25b84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_3c62ac06",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-16T23:39:03Z",
+      "side": 1,
+      "message": "Let\u0027s not unnecessarily waste volunteers time and keep the same keys. Also changing the names of these keys is actually changing the code we are shipping, let\u0027s make minimal code changes at this point.\n\nIt would also result in English i18n text in non-English language which is a big plus point for doing changes in beta first, which this completely throws away.\n\nThe push should simply be removing a few isBetaGroupMember clauses.",
+      "parentUuid": "ee33df1d_7c51d4dc",
+      "revId": "861dc8c6d913f0d67a23ac4940d1c0ebeee25b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
