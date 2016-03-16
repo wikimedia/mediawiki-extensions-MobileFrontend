@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_32881aec",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T18:31:12Z",
+      "side": 1,
+      "message": "Comment could be useful here (what does \"spacing\" mean? Padding? Margin? etc.) if you end up doing another PS, but not important enough to warrant one itself.",
+      "revId": "6d6c842f3b4837a004a2c08a08300a150d4a9860",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_52d4bebe",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T18:31:12Z",
+      "side": 1,
+      "message": "As mentioned in PS6: Don\u0027t combine tag names with IDs/classes unless absolutely necessary.\nhttps://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Don.27t_qualify_ID-categorized_rules_with_tag_names_or_classes\n\nThis style can be pulled outside of the li.",
+      "revId": "6d6c842f3b4837a004a2c08a08300a150d4a9860",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_b2a6ea4e",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 18
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T18:31:12Z",
+      "side": 1,
+      "message": "I guess removing this was breaking the editor test?",
+      "revId": "6d6c842f3b4837a004a2c08a08300a150d4a9860",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
