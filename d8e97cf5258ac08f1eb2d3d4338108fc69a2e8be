@@ -118,6 +118,24 @@
       "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_727bc2bd",
+        "filename": "tests/browser/features/step_definitions/language_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T18:30:49Z",
+      "side": 1,
+      "message": "When vs. Then. The former simply waits for the element to be present while the latter makes an assertion that it is visible.",
+      "parentUuid": "ee33df1d_80ba741c",
+      "revId": "d8e97cf5258ac08f1eb2d3d4338108fc69a2e8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
