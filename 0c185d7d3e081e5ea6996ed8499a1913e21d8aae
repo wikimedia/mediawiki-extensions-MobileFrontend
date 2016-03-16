@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_e6d3935f",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T19:07:29Z",
+      "side": 1,
+      "message": "non-blocking: It\u0027s adding support for images to grade C browsers. The function name and this comment /could/ be a bit confusing as it refers to the images themselves as grade C. That being said, there\u0027s enough comments and information in the commit message to probably make it fine to leave as-is unless another PS is needed for unrelated reasons.",
+      "revId": "0c185d7d3e081e5ea6996ed8499a1913e21d8aae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c6864f6a",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T19:07:29Z",
+      "side": 1,
+      "message": "non-blocking: missing the word \"is\" here",
+      "revId": "0c185d7d3e081e5ea6996ed8499a1913e21d8aae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
