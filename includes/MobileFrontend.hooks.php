@@ -182,6 +182,20 @@ class MobileFrontendHooks {
 		return true;
 	}
 
+	public static function onSkinAfterBottomScripts( $sk, &$html ) {
+		$context = MobileContext::singleton();
+		$mfLazyLoadImages = $context->getMFConfig()->get( 'MFLazyLoadImages' );
+
+		$removeImages = $mfLazyLoadImages['base'] ||
+			( $context->isBetaGroupMember() && $mfLazyLoadImages['beta'] );
+		if ( $removeImages ) {
+			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
+				MobileFrontendSkinHooks::gradeCImageSupport()
+			) );
+		}
+		return true;
+	}
+
 	/**
 	 * OutputPageBeforeHTML hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML

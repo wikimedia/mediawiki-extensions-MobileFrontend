@@ -1,6 +1,43 @@
 <?php
 
 class MobileFrontendSkinHooks {
+	/**
+	 * Fallback for Grade C to load lazyload image placeholders.
+	 *
+	 * Note: This will add a single repaint for Grade C browsers as
+	 * images enter view but this is intentional and deemed acceptable.
+	 *
+	 * @return string The JavaScript code to load lazy placeholders in Grade C browsers
+	 */
+	public static function gradeCImageSupport() {
+		// Notes:
+		// * Document#getElementsByClassName is supported by IE9+ and #querySelectorAll is
+		//   supported by IE8+. To gain the widest possible browser support we scan for
+		//   noscript tags using #getElementsByTagName and look at the next sibling.
+		//   If the next sibling has the lazy-image-placeholder class then it will be assumed
+		//   to be a placeholder and replace with an img tag.
+		// * Iterating over the live NodeList from getElementsByTagName() is suboptimal
+		//   but in IE < 9, Array#slice() throws when given a NodeList. It also requires
+		//   the 2nd argument ('end').
+		$js = <<<JAVASCRIPT
+(window.NORLQ = window.NORLQ || []).push( function () {
+	var ns, i, p, img;
+	ns = document.getElementsByTagName( 'noscript' );
+	for ( i = 0; i < ns.length; i++ ) {
+		p = ns[i].nextSibling;
+		if ( p.className.indexOf( 'lazy-image-placeholder' ) > -1 ) {
+			img = document.createElement( 'img' );
+			img.setAttribute( 'src', p.getAttribute( 'data-src' ) );
+			img.setAttribute( 'width', p.getAttribute( 'data-width' ) );
+			img.setAttribute( 'height', p.getAttribute( 'data-height' ) );
+			img.setAttribute( 'alt', p.getAttribute( 'data-alt' ) );
+			p.parentNode.replaceChild( img, p );
+		}
+	}
+} );
+JAVASCRIPT;
+		return $js;
+	}
 
 	/**
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed

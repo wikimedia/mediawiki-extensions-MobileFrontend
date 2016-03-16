@@ -1823,6 +1823,9 @@
 		"OutputPageBeforeHTML": [
 			"MobileFrontendHooks::onOutputPageBeforeHTML"
 		],
+		"SkinAfterBottomScripts": [
+			"MobileFrontendHooks::onSkinAfterBottomScripts"
+		],
 		"SkinTemplateOutputPageBeforeExec": [
 			"MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec"
 		],
