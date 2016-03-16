@@ -103,6 +103,24 @@
       "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_52b03e3e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-16T17:37:58Z",
+      "side": 1,
+      "message": "Have moved this function to MobileFrontendSkinHooks which is invoked via MobileFrontendHooks",
+      "parentUuid": "ee33df1d_c6dc944e",
+      "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
