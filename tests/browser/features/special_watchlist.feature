@@ -4,7 +4,7 @@ Feature: Manage Watchlist
   Background:
     Given I am logged into the mobile website
       And I have recently edited pages on my watchlist
-      And I am on the "Special:Watchlist" page
+      And I am on the "Special:EditWatchlist" page
 
   @smoke @integration
   Scenario: Switching to Feed view
