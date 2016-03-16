@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_e6443371",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-03-16T20:02:22Z",
+      "side": 1,
+      "message": "Will this not break any translations we may have already gotten?",
+      "revId": "861dc8c6d913f0d67a23ac4940d1c0ebeee25b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
