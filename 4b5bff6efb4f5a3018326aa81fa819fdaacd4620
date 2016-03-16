@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_097208e2",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-16T21:12:46Z",
+      "side": 1,
+      "message": "This could be written as:\n\n    $revId \u003d $oldid ?: $title-\u003egetLatestRevID();",
+      "revId": "4b5bff6efb4f5a3018326aa81fa819fdaacd4620",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
