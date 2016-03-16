@@ -34,6 +34,24 @@
       "revId": "861dc8c6d913f0d67a23ac4940d1c0ebeee25b84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_7c51d4dc",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-16T22:18:58Z",
+      "side": 1,
+      "message": "another plus point for keeping the languages-structured name",
+      "parentUuid": "ee33df1d_692d948b",
+      "revId": "861dc8c6d913f0d67a23ac4940d1c0ebeee25b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
