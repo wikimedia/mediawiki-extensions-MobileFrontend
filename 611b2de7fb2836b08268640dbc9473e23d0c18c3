@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_c338069e",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-16T01:26:19Z",
+      "side": 1,
+      "message": "Using attr() is fine actually and should perform better by not doing all the class name parsing and filtering that jQuery does. It\u0027s a plain \u003cimg\u003e with no class yet, so whatever is in data-class can be set as-is.",
+      "revId": "611b2de7fb2836b08268640dbc9473e23d0c18c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
