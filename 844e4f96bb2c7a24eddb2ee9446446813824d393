@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_c62db443",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-16T11:03:46Z",
+      "side": 1,
+      "message": "Generally speaking, notes like this (and those that follow) should be inline comments, which survive refactoring and minor tweaks much more readily than commit messages.\n\nIn order to provide context for the reviewer, you need only say that the approach you\u0027ve taken is one that maximises the number of clients that can execute the code. That said, I do like detail.",
+      "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_06283c2e",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 1827,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-16T11:03:46Z",
+      "side": 1,
+      "message": "Why not MobileFrontendSkinHooks?",
+      "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_26e2a000",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-16T11:03:46Z",
+      "side": 1,
+      "message": "Missing @return phpDocumentor tag.",
+      "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c6dc944e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-16T11:03:46Z",
+      "side": 1,
+      "message": "While this is relevant to a few of the other functions in the MobileFormatter – one of our many God objects – I feel that this would be better homed on a new class or the skin-specific hooks class. I prefer the latter as the name of the hook, \"SkinAfterBottomScripts\" provides additional context.",
+      "revId": "844e4f96bb2c7a24eddb2ee9446446813824d393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
