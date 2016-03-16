@@ -396,6 +396,10 @@ class MobileFormatter extends HtmlFormatter {
 			$sectionBody->appendChild( $node );
 		}
 
+		if ( $sectionBody->hasChildNodes() ) {
+			// Apply transformations to the last section body
+			$this->filterContentInSection( $sectionBody, $doc, $sectionNumber, $transformOptions );
+		}
 		// Append the last section body.
 		$body->appendChild( $sectionBody );
 	}
