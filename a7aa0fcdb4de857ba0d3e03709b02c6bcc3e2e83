@@ -16,6 +16,40 @@
       "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_3c9aacbd",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-16T22:06:15Z",
+      "side": 1,
+      "message": "May wanna rename to \u0027startup\u0027 to avoid confusion with module.exports.",
+      "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_fcf7a4f0",
+        "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-16T22:06:15Z",
+      "side": 1,
+      "message": "May wanna move this to the first line in the closure for consistency with other required things. Not sure why this is passed around the long way around?",
+      "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
