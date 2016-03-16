@@ -485,8 +485,7 @@ class ApiMobileView extends ApiBase {
 		$latest = $wp->getLatest();
 		// Use page_touched so template updates invalidate cache
 		$touched = $wp->getTouched();
-
-		$revId = $oldid || $title->getLatestRevID();
+		$revId = $oldid ? $oldid : $title->getLatestRevID();
 		if ( $this->file ) {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
 				$touched, $this->noTransform, $this->file->getSha1(), $this->variant );
