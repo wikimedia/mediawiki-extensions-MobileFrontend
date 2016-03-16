@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
-		// FIXME: Cleanup when cache clears
-		menuData = mw.config.get( 'wgMinervaMenuData' ) || mw.config.get( 'wgMFMenuData' ),
+		menuData = mw.config.get( 'wgMinervaMenuData' ),
 		mainMenu = new MainMenu( $.extend( menuData, {
 			activator: '.header .main-menu-button'
 		} ) );

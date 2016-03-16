@@ -30,8 +30,6 @@
 			_super = View,
 			page = options.page;
 
-		// FIXME: Remove default when Gather has been updated to use new gateway. (T113753)
-		options.api = options.api || new mw.Api();
 		this.gateway = new WatchstarGateway( options.api );
 
 		if ( user.isAnon() ) {
@@ -92,8 +90,6 @@
 				_super = View.prototype.initialize,
 				page = options.page;
 
-			// FIXME: Remove default when Gather has been updated to use new gateway. (T113753)
-			options.api = options.api || new mw.Api();
 			this.gateway = new WatchstarGateway( options.api );
 
 			if ( user.isAnon() ) {

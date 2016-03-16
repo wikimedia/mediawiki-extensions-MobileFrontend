@@ -3,9 +3,7 @@
 	var
 		// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 		isEditable = mw.config.get( 'wgIsProbablyEditable' ),
-		blockInfo =  mw.config.get( 'wgMinervaUserBlockInfo', false ) ||
-			// FIXME: Can be removed in 30 days (Iba351e3285258c07bc11c57fb3255fca916621a4)
-			mw.config.get( 'wgMFUserBlockInfo' ),
+		blockInfo =  mw.config.get( 'wgMinervaUserBlockInfo', false ),
 		settings = M.require( 'mobile.settings/settings' ),
 		router = M.require( 'mobile.startup/router' ),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),

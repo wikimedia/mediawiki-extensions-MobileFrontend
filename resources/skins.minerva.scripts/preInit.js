@@ -21,15 +21,6 @@
 	} );
 	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
 
-	// FIXME: remove when cache clears. This is now done in 'skins.minerva.scripts.top/init.js'.
-	$( function () {
-		if ( !$( '#mw-mf-page-left' ).find( '.menu' ).length ) {
-			// Now we have a main menu button register it.
-			mainMenu.registerClickEvents();
-			mainMenu.appendTo( '#mw-mf-page-left' );
-		}
-	} );
-
 	$( window )
 		.on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) )
 		.on( 'scroll', $.debounce( 100, $.proxy( M, 'emit', 'scroll' ) ) );

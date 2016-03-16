@@ -13,8 +13,7 @@
 		var toc, toggle,
 			sections = page.getSections(),
 			$toc = $( '#toc' ),
-			// FIXME: Remove wgMFTocEnabled when cache expired
-			enableToc = mw.config.get( 'wgMinervaTocEnabled' ) || mw.config.get( 'wgMFTocEnabled' );
+			enableToc = mw.config.get( 'wgMinervaTocEnabled' );
 
 		if ( enableToc ||
 			// Fallback for old cached HTML, added 26 June, 2014

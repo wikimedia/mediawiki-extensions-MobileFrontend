@@ -18,10 +18,6 @@
 		new Toggler( $container, prefix, page );
 	}
 
-	// FIXME: remove when cache clears
-	if ( !$contentContainer.length ) {
-		$contentContainer = $( '#content #bodyContent' );
-	}
 	// avoid this running on Watchlist
 	if (
 		!page.inNamespace( 'special' ) &&
