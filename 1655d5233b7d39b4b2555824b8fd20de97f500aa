@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_7f19c67d",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-03-17T00:04:23Z",
+      "side": 1,
+      "message": "When is Minerva using pixels, when `em`s?",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_7f30a6e5",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-03-17T00:04:23Z",
+      "side": 1,
+      "message": "As it\u0027s an ID, better move it out of nested selector.",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_dfae12e4",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-03-17T00:04:23Z",
+      "side": 1,
+      "message": "We\u0027ve coming to agree on using whitespace within round brackets in MW CSS as well, to be aligned with PHP and JS and make life easier for developers.\nSee https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS#Whitespace for more info.",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_df58d237",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-03-17T00:04:23Z",
+      "side": 1,
+      "message": "It\u0027s recommended to use `border: 0` instead of `none`. No necessity for `none`",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
