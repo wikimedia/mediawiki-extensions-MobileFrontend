@@ -15,3 +15,14 @@ Feature: Language selection
   Scenario: Closing language overlay (browser button)
     When I click the browser back button
     Then I should not see the languages overlay
+
+  Scenario: Checking that there are no preferred language links
+    Then I should not see a preferred language link
+    Then I should see a non-preferred language link
+
+  @integration
+  Scenario: Checking that the preferred language link has been created
+    When I click on a language from the list of all languages
+      And I click the browser back button
+      And I see the language overlay
+    Then I should see a preferred language link

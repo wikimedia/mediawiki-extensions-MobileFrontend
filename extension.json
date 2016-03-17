@@ -1177,28 +1177,6 @@
 				"resources/mobile.buttonWithSpinner/ButtonWithSpinner.js"
 			]
 		},
-		"mobile.languages": {
-			"class": "MFResourceLoaderParsedMessageModule",
-			"dependencies": [
-				"mobile.overlays",
-				"mobile.settings",
-				"mobile.browser"
-			],
-			"scripts": [
-				"resources/mobile.languages/LanguageOverlay.js"
-			],
-			"templates": {
-				"LanguageOverlay.hogan": "resources/mobile.languages/LanguageOverlay.hogan"
-			},
-			"messages": {
-				"0": "mobile-frontend-language-heading",
-				"1": "mobile-frontend-language-header",
-				"mobile-frontend-language-variant-header": [
-					"parse"
-				],
-				"2": "mobile-frontend-language-site-choose"
-			}
-		},
 		"mobile.languages.structured": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
@@ -1969,28 +1947,6 @@
 				"buckets": {
 					"control": 0.97,
 					"A": 0.03
-				}
-			},
-			"@languageOverlay": "controls which language overlay shows in stable",
-			"languageOverlay": {
-				"name": "languageOverlay",
-				"enabled": false,
-				"buckets": {
-					"@control": "the ratio of users that see the simpler overlay",
-					"control": 1,
-					"@A": "the ratio of users that see the structured overlay",
-					"A": 0
-				}
-			},
-			"@languageOverlayBeta": "controls which language overlay shows in beta",
-			"languageOverlayBeta": {
-				"name": "languageOverlayBeta",
-				"enabled": false,
-				"buckets": {
-					"@control": "the ratio of users that see the simpler overlay",
-					"control": 1,
-					"@A": "the ratio of users that see the structured overlay",
-					"A": 0
 				}
 			},
 			"_merge_strategy": "array_plus_2d"

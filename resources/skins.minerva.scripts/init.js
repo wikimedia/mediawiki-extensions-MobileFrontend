@@ -188,20 +188,12 @@
 	// Routes
 	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 	overlayManager.add( /^\/languages$/, function () {
-		var result = $.Deferred(),
-			languageOverlayExperiment = context.isBetaGroupMember() ? experiments.languageOverlayBeta : experiments.languageOverlay,
-			languageOverlayModule = 'mobile.languages';
+		var result = $.Deferred();
 
-		if ( languageOverlayExperiment &&
-			mw.experiments.getBucket( languageOverlayExperiment, mw.user.sessionId() ) === 'A'
-		) {
-			languageOverlayModule = 'mobile.languages.structured';
-		}
-
-		loader.loadModule( languageOverlayModule, true ).done( function ( loadingOverlay ) {
+		loader.loadModule( 'mobile.languages.structured', true ).done( function ( loadingOverlay ) {
 			var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 				gateway = new PageGateway( new mw.Api() ),
-				LanguageOverlay = M.require( languageOverlayModule + '/LanguageOverlay' );
+				LanguageOverlay = M.require( 'mobile.languages.structured/LanguageOverlay' );
 
 			gateway.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
