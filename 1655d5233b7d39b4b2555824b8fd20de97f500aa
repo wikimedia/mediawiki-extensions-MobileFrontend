@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_7f242608",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:37:38Z",
+      "side": 1,
+      "message": "True.\nBmansurov using ID selectors is a bad practice (css selector performance/debugging pains). You use can use li.className to override if necessary\n\nI\u0027d suggest this should be fixed in a follow up.",
+      "parentUuid": "ee33df1d_7f30a6e5",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_dfae12e4",
         "filename": "resources/skins.minerva.beta.styles/pageactions.less",
         "patchSetId": 27
@@ -107,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_5f2162f5",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:37:38Z",
+      "side": 1,
+      "message": "Yes, but without tools to enforce this... this just won\u0027t happen. Coding conventions in JS only took off when we used jscs.\n\n\"If linters on Jenkins jobs don\u0027t complain we do not get hung up on code styling. If we feel strongly we will +1 rather than +2 with comments.\" [1]\n\nI\u0027m also more keen to maintain consistency in this repository which currently uses this style.\n\nVolker see also:\nhttps://www.mediawiki.org/wiki/Reading/Web/Coding_conventions#CSS.2FLESS\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/Team/Team_norms#Code_review",
+      "parentUuid": "ee33df1d_dfae12e4",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_df58d237",
         "filename": "resources/skins.minerva.beta.styles/pageactions.less",
         "patchSetId": 27
@@ -135,6 +171,24 @@
       "writtenOn": "2016-03-17T12:20:28Z",
       "side": 1,
       "message": "Who recommended it? I\u0027d like to know more please.",
+      "parentUuid": "ee33df1d_df58d237",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_bf7d0ee7",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:37:38Z",
+      "side": 1,
+      "message": "It would be good to capture this in a CSS linting tool if you want this enforced. Does one exist? Could we fork jscs?\n\nIt\u0027s obviously better to use 0 as it is 4 characters rather than 1 so if adopted everywhere leads to smaller CSS.",
       "parentUuid": "ee33df1d_df58d237",
       "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
