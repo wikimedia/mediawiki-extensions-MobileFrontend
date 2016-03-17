@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_cb0130bb",
+        "filename": "tests/browser/features/language_beta.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:26:21Z",
+      "side": 1,
+      "message": "This should also assert that the button is disabled and unclickable.\n\nThis reminds me... we should also make this configurable now.\nSome wikis like MediaWiki will always show a disabled language button.\nThis should be a blocker before pushing to stable..",
+      "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
