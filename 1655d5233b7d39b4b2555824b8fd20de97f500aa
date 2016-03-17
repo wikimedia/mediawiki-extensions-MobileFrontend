@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_fa632439",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-17T12:20:28Z",
+      "side": 1,
+      "message": "Good question. It\u0027s just a copy paste in this patch.",
+      "parentUuid": "ee33df1d_7f19c67d",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_7f30a6e5",
         "filename": "resources/skins.minerva.beta.styles/pageactions.less",
         "patchSetId": 27
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-17T00:04:23Z",
       "side": 1,
       "message": "As it\u0027s an ID, better move it out of nested selector.",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_5a58508c",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-17T12:20:28Z",
+      "side": 1,
+      "message": "Can\u0027t do that because I need to override the float: right above.",
+      "parentUuid": "ee33df1d_7f30a6e5",
       "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_3a558c53",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-17T12:20:28Z",
+      "side": 1,
+      "message": "Good rule to adopt for us too. Thanks.",
+      "parentUuid": "ee33df1d_dfae12e4",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_df58d237",
         "filename": "resources/skins.minerva.beta.styles/pageactions.less",
         "patchSetId": 27
@@ -64,6 +118,24 @@
       "writtenOn": "2016-03-17T00:04:23Z",
       "side": 1,
       "message": "It\u0027s recommended to use `border: 0` instead of `none`. No necessity for `none`",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_7a4f14c1",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-17T12:20:28Z",
+      "side": 1,
+      "message": "Who recommended it? I\u0027d like to know more please.",
+      "parentUuid": "ee33df1d_df58d237",
       "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
