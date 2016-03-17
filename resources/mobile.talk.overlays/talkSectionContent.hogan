@@ -1,7 +1,3 @@
-<div class="overlay-header-container position-fixed">
-	{{>header}}
-</div>
-
 <div class="content talk-section">
 	{{{section.text}}}
 	{{{spinner}}}

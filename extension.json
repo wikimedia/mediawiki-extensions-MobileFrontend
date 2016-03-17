@@ -848,7 +848,7 @@
 				"SectionAddOverlay/contentHeader.hogan": "resources/mobile.talk.overlays/talkSectionAddContentHeader.hogan",
 				"SectionAddOverlay.hogan": "resources/mobile.talk.overlays/talkSectionAdd.hogan",
 				"Section/header.hogan": "resources/mobile.talk.overlays/talkSectionHeader.hogan",
-				"Section/content.hogan": "resources/mobile.talk.overlays/talkSection.hogan"
+				"Section/content.hogan": "resources/mobile.talk.overlays/talkSectionContent.hogan"
 			},
 			"messages": [
 				"mobile-frontend-talk-overlay-header",
