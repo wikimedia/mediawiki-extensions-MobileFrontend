@@ -5,7 +5,8 @@
 			"Maxí",
 			"Snævar",
 			"Gaddi00",
-			"Sveinki"
+			"Sveinki",
+			"Sveinn í Felli"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
@@ -203,7 +204,7 @@
 	"mobile-frontend-nearby-title": "Nálægt",
 	"mobile-frontend-nearby-sectiontext": "Í nágrenni efni þessarar síðu",
 	"mobile-frontend-news-items": "Í fréttum",
-	"mobile-frontend-opt-in-explain": "Með því að taka þátt í beta prófun, munt þú fá nýjustu tilrauna möguleikana sem gætu haft hugbúnaðarvillur.",
+	"mobile-frontend-opt-in-explain": "Með því að taka þátt í beta-prófunum, munt þú fá aðgang að nýjustu tilraunaeiginleikunum, sem gætu þó verið gallaðir á einhvern hátt.",
 	"mobile-frontend-overlay-close": "Loka",
 	"mobile-frontend-overlay-continue": "Halda áfram",
 	"mobile-frontend-page-menu-contents": "efnisyfirlit",
