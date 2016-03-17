@@ -36,6 +36,9 @@
 				label: mw.msg( 'mobile-frontend-references-citation' )
 			} ).toHtmlString()
 		} ),
+		events: {
+			'click sup a': 'showNestedReference'
+		},
 		/** @inheritdoc */
 		show: function () {
 			uiSchema.log( {
@@ -76,6 +79,23 @@
 		 */
 		onHide: function () {
 			$( 'body' ).removeClass( 'drawer-enabled' );
+		},
+		/**
+		 * Fetch and render nested reference upon click
+		 * @param {jQuery.Event} ev
+		 */
+		showNestedReference: function ( ev ) {
+			var $dest = $( ev.target ),
+				href = $dest.attr( 'href' );
+
+			mw.track( 'mf.showReference', {
+				href: href,
+				title: $dest.text(),
+				page: this.options.page
+			} );
+
+			// Don't hide the already shown drawer
+			ev.stopPropagation();
 		}
 	} );
 

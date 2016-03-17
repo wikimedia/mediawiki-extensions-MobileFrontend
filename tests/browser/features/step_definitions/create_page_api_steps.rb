@@ -5,10 +5,13 @@ Given(/^I create a random page using the API$/) do
 end
 
 Given(/^I go to a page that has references$/) do
-  wikitext = "MobileFrontend is a MediaWiki extension.<ref>Test reference</ref>
-
+  wikitext = "MobileFrontend is a MediaWiki extension.
+{{#tag:ref|This is a note.<ref>This is a nested ref.</ref>|group=note}}
+==Notes==
+<references group=note />
 ==References==
-<references />"
+<references/>
+"
 
   api.create_page 'Selenium References test page', wikitext
   step 'I am on the "Selenium References test page" page'

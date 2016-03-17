@@ -153,6 +153,7 @@ class ArticlePage
 
   # references
   a(:reference, css: 'sup.reference a')
+  a(:nested_reference, css: '.drawer.references sup.reference a')
   a(:reference_drawer, css: '.drawer.references')
 
   # sections

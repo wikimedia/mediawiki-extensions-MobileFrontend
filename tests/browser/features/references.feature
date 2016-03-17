@@ -14,3 +14,9 @@ Feature: Reference popup drawer
     When I click on a reference
       And I click on the page
     Then I should not see the reference drawer
+
+  Scenario: Opening a nested reference
+    Given I go to a page that has references
+    When I click on a reference
+      And I click on a nested reference
+    Then I should see a drawer with message "This is a nested ref."
