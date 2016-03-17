@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_2bc53c91",
+        "filename": "tests/browser/features/switch_views.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:21:00Z",
+      "side": 1,
+      "message": "If I remember correctly some Selenium builds are setup to use the mobile domain e.g. MEDIAWIKI_URL\u003dhttp://en.m.wikipedia.org\n\nBe prepared that if this is the case we might start seeing these tests fail on integration.wikimedia.org ...",
+      "revId": "3e6299f24ff136c7fa501cb5bff473339f510bc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_ebd3545f",
+        "filename": "tests/browser/features/switch_views.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:21:00Z",
+      "side": 1,
+      "message": "tag with @integration ?\nSeems important",
+      "revId": "3e6299f24ff136c7fa501cb5bff473339f510bc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_0bcf98b6",
+        "filename": "tests/browser/features/switch_views.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T17:21:00Z",
+      "side": 1,
+      "message": "tag with @integration ?\nSeems important",
+      "revId": "3e6299f24ff136c7fa501cb5bff473339f510bc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
