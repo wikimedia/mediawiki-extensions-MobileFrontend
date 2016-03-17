@@ -16,6 +16,24 @@
       "revId": "7dd7f8f8e9e205f5ec8add9f1c266ee368ea146a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_2ed54948",
+        "filename": "tests/browser/features/language.feature",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-17T21:11:38Z",
+      "side": 1,
+      "message": "Ignore first line.\nThis is not causing the issue but I think it should be addressed.",
+      "parentUuid": "ee33df1d_4efd2dd1",
+      "revId": "7dd7f8f8e9e205f5ec8add9f1c266ee368ea146a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
