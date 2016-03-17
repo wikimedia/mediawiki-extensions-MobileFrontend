@@ -72,6 +72,13 @@ Given(/^I go to a page that has languages$/) do
   step 'I am on the "Selenium language test page" page'
 end
 
+Given(/^I go to a page that does not have languages$/) do
+  wikitext = 'This page is used by Selenium to test language related features.'
+
+  api.create_page 'Selenium language test page without languages', wikitext
+  step 'I am on the "Selenium language test page without languages" page'
+end
+
 Given(/^the wiki has a terms of use$/) do
   api.create_page 'MediaWiki:mobile-frontend-terms-url', 'http://m.wikimediafoundation.org/wiki/Terms_of_Use'
   api.create_page 'MediaWiki:mobile-frontend-terms-text', 'Terms of use'
