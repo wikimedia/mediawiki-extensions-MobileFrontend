@@ -963,9 +963,7 @@ class MobileContext extends ContextSource {
 			return;
 		}
 
-		$url = $this->getRequest()->getFullRequestURL();
-		$parsed = wfParseUrl( $url );
-		$query = isset( $parsed['query'] ) ? wfCgiToArray( $parsed['query'] ) : array();
+		$query = $this->getRequest()->getQueryValues();
 		unset( $query['mobileaction'] );
 		unset( $query['useformat'] );
 		unset( $query['title'] );
