@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_6b774436",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 27
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-17T17:45:47Z",
+      "side": 1,
+      "message": "In this case ID is a key selector so it\u0027s faster than a class selector. What debugging pains? Also, there is only one language switcher button on the page and it makes to select it using an ID. A class by definition applies to a class of items.",
+      "parentUuid": "ee33df1d_7f242608",
+      "revId": "1655d5233b7d39b4b2555824b8fd20de97f500aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_dfae12e4",
         "filename": "resources/skins.minerva.beta.styles/pageactions.less",
         "patchSetId": 27
