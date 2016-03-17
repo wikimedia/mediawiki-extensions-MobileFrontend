@@ -1,0 +1,48 @@
+@import "minerva.variables";
+
+.heading-holder {
+	overflow: hidden;
+}
+
+#page-actions {
+	float: none;
+	border-top: 1px solid @colorGray14;
+	border-bottom: 1px solid @colorGray12;
+	// align the left and right icons with the left and right borders respectively
+	margin: 1em -@iconGutterWidth;
+	padding: 0.5em 0;
+
+	li {
+		display: inline-block;
+		margin-bottom: 0;
+		float: right;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	#language-switcher {
+		float: left;
+
+		&.disabled {
+			cursor: default;
+			opacity: 0.25;
+		}
+	}
+}
+
+@media all and (min-width: @deviceWidthTablet) {
+	.heading-holder {
+		position: relative;
+	}
+
+	#page-actions {
+		border: none;
+		bottom: @titleSectionSpacingBottom;
+		// align the left and right icons with the left and right borders respectively
+		margin: 0 -@iconGutterWidth;
+		position: absolute;
+		right: 0;
+	}
+}

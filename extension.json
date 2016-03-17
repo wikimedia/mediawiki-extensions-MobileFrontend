@@ -130,6 +130,16 @@
 				"resources/skins.minerva.base.styles/images.less"
 			]
 		},
+		"skins.minerva.beta.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"position": "top",
+			"styles": [
+				"resources/skins.minerva.beta.styles/pageactions.less"
+			]
+		},
 		"skins.minerva.content.styles": {
 			"targets": [
 				"mobile",
@@ -190,6 +200,14 @@
 				"mainmenu": "resources/skins.minerva.icons.images/hamburger.svg",
 				"edit": "resources/skins.minerva.icons.images/editLocked.svg",
 				"edit-enabled": "resources/skins.minerva.icons.images/edit.svg"
+			}
+		},
+		"skins.minerva.icons.beta.images": {
+			"class": "ResourceLoaderImageModule",
+			"prefix": "mw-ui",
+			"selector": ".mw-ui-icon-{name}:before",
+			"images": {
+				"language-switcher": "resources/skins.minerva.icons.beta.images/languageSwitcher.svg"
 			}
 		},
 		"mobile.overlay.images": {

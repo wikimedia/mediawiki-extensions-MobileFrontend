@@ -13,3 +13,7 @@ end
 Then(/^I should not see the languages overlay$/) do
   expect(on(ArticlePage).overlay_languages_element).not_to be_visible
 end
+
+Then(/^I should see the language overlay$/) do
+  expect(on(ArticlePage).overlay_languages_element.when_present).to be_visible
+end

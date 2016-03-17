@@ -4,6 +4,7 @@ Given /^I am in beta mode$/ do
 
     # A domain is explicitly given to avoid a bug in earlier versions of Chrome
     domain = page_uri.host == 'localhost' ? nil : page_uri.host
+    # FIXME: remove 'mf_useformat' cookie from here
     browser.cookies.add 'mf_useformat', 'true', domain: domain
     browser.cookies.add 'optin', 'beta', domain: domain
 

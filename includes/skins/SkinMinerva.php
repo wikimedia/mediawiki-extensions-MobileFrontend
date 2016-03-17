@@ -24,6 +24,10 @@ class SkinMinerva extends SkinTemplate {
 	protected $mobileContext;
 	/** @var bool whether the page is the user's page, i.e. User:Username */
 	public $isUserPage = false;
+	/** @var boolean Whether the language button should be included in the secondary actions HTML */
+	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
+	/** @var bool Whether the page is also available in other languages or variants */
+	protected $doesPageHaveLanguages = false;
 
 	/**
 	 * Wrapper for MobileContext::getMFConfig()
@@ -52,6 +56,9 @@ class SkinMinerva extends SkinTemplate {
 
 		// Generate skin template
 		$tpl = parent::prepareQuickTemplate();
+
+		$this->doesPageHaveLanguages = $tpl->data['content_navigation']['variants'] ||
+			$tpl->data['language_urls'];
 
 		// Set whether or not the page content should be wrapped in div.content (for
 		// example, on a special page)
@@ -735,6 +742,27 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns an array with details for a language button.
+	 * @return array
+	 */
+	protected function getLanguageButton() {
+		$languageUrl = SpecialPage::getTitleFor(
+			'MobileLanguages',
+			$this->getSkin()->getTitle()
+		)->getLocalURL();
+
+		return array(
+			'attributes' => array(
+				'id' => 'language-switcher',
+				// FIXME: remove class when cache clears
+				'class' => 'languageSelector',
+				'href' => $languageUrl,
+			),
+			'label' => $this->msg( 'mobile-frontend-language-article-heading' )->text()
+		);
+	}
+
+	/**
 	 * Returns an array with details for a talk button.
 	 * @param Title $talkTitle Title object of the talk page
 	 * @param array $talkButton Array with data of desktop talk button
@@ -775,6 +803,11 @@ class SkinMinerva extends SkinTemplate {
 			$talkTitle = $title->getTalkPage();
 			$buttons['talk'] = $this->getTalkButton( $talkTitle, $talkButton );
 		}
+
+		if ( $this->shouldSecondaryActionsIncludeLanguageBtn && $this->doesPageHaveLanguages ) {
+			$buttons['language'] = $this->getLanguageButton();
+		}
+
 		return $buttons;
 	}
 

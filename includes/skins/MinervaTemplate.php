@@ -16,6 +16,9 @@ class MinervaTemplate extends BaseTemplate {
 	/** @var boolean Specify whether the page is main page */
 	protected $isMainPage;
 
+	/** @var boolean Whether to insert the page actions before the heading in HTML */
+	protected $shouldDisplayPageActionsBeforeHeading = true;
+
 	/**
 	 * Gets the header content for the top chrome.
 	 * @param array $data Data used to build the page
@@ -169,27 +172,7 @@ class MinervaTemplate extends BaseTemplate {
 			return array();
 		}
 
-		$result = $this->data['secondary_actions'];
-		$hasLanguages = $this->data['content_navigation']['variants'] ||
-			$this->data['language_urls'];
-
-		// If languages are available, add a languages link
-		if ( $hasLanguages ) {
-			$languageUrl = SpecialPage::getTitleFor(
-				'MobileLanguages',
-				$this->getSkin()->getTitle()
-			)->getLocalURL();
-
-			$result['language'] = array(
-				'attributes' => array(
-					'class' => 'languageSelector',
-					'href' => $languageUrl,
-				),
-				'label' => $this->getMsg( 'mobile-frontend-language-article-heading' )->text()
-			);
-		}
-
-		return $result;
+		return $this->data['secondary_actions'];
 	}
 
 	/**
@@ -255,10 +238,15 @@ class MinervaTemplate extends BaseTemplate {
 		if ( $internalBanner || $preBodyHtml || isset( $data['page_actions'] ) ) {
 			$html .= $preBodyHtml
 				. Html::openElement( 'div', array( 'class' => 'pre-content heading-holder' ) );
+				if ( !$this->shouldDisplayPageActionsBeforeHeading ) {
+					$html .= $headingHtml;
+				}
 				if ( !$this->isSpecialPage ){
 					$html .= $this->getPageActionsHtml( $data );
 				}
-				$html .= $headingHtml;
+				if ( $this->shouldDisplayPageActionsBeforeHeading ) {
+					$html .= $headingHtml;
+				}
 				$html .= $postHeadingHtml;
 				$html .= $data['subtitle'];
 				// FIXME: Temporary solution until we have design

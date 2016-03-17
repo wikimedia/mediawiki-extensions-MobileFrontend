@@ -11,6 +11,8 @@ class SkinMinervaBeta extends SkinMinerva {
 	public $template = 'MinervaTemplateBeta';
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
+	/** @inheritdoc */
+	protected $shouldSecondaryActionsIncludeLanguageBtn = false;
 
 	/** @inheritdoc **/
 	protected function getHeaderHtml() {
@@ -30,6 +32,7 @@ class SkinMinervaBeta extends SkinMinerva {
 
 	/**
 	 * Do not set page actions on the user page that hasn't been created yet.
+	 * Also add the language switcher action.
 	 *
 	 * @inheritdoc
 	 * @param BaseTemplate $tpl
@@ -44,16 +47,31 @@ class SkinMinervaBeta extends SkinMinerva {
 		}
 		if ( $setPageActions ) {
 			parent::preparePageActions( $tpl );
+			$menu = $tpl->data[ 'page_actions' ];
+
+			$languageSwitcherLinks = array();
+			$languageSwitcherClasses = 'disabled';
+			if ( $this->doesPageHaveLanguages ) {
+				$languageSwitcherLinks['mobile-frontend-language-article-heading'] = array(
+					'href' => SpecialPage::getTitleFor( 'MobileLanguages', $this->getTitle() )->getLocalURL()
+				);
+				$languageSwitcherClasses = '';
+			}
+			$menu['language-switcher'] = array( 'id' => 'language-switcher', 'text' => '',
+				'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
+				'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
+				'links' => $languageSwitcherLinks
+			);
+			$tpl->set( 'page_actions', $menu );
 		} else {
 			$tpl->set( 'page_actions', array() );
 		}
 	}
 
 	/**
-	 * Do not return secondary actions on the user page
+	 * Do not return secondary actions on the user page.
 	 *
-	 * @param BaseTemplate $tpl
-	 * @return string[]
+	 * @inheritdoc
 	 */
 	protected function getSecondaryActions( BaseTemplate $tpl ) {
 		if ( $this->isUserPage ) {
@@ -128,7 +146,9 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( $title->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
 		}
+		$styles[] = 'skins.minerva.beta.styles';
 		$styles[] = 'skins.minerva.content.styles.beta';
+		$styles[] = 'skins.minerva.icons.beta.images';
 
 		return $styles;
 	}

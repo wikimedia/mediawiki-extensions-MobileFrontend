@@ -4,7 +4,6 @@ $wgRightsUrl = "http://creativecommons.org/licenses/by-sa/3.0/";
 // Allow users to edit privacy link.
 $wgGroupPermissions['user']['editinterface'] = true;
 
-
 $wgMFIgnoreEventLoggingBucketing = true;
 $wgHooks['InterwikiLoadPrefix'][] = function ( $prefix, &$iwdata ) {
 	if ( $prefix === 'es' ) {
@@ -19,3 +18,5 @@ $wgHooks['InterwikiLoadPrefix'][] = function ( $prefix, &$iwdata ) {
 	// nothing to do, continue lookup
 	return true;
 };
+
+$wgMFEnableBeta = true;

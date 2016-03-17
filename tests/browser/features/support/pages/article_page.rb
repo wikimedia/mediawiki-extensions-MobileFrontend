@@ -137,7 +137,8 @@ class ArticlePage
 
   # secondary menu
   ## languages
-  a(:language_button, css: '.languageSelector')
+  a(:language_button, css: '#page-secondary-actions #language-switcher')
+  a(:alternative_language_button, css: '#page-actions #language-switcher')
   # Can't use generic overlay class as this will match with the LoadingOverlay that shows before loading the language overlay
   div(:overlay_languages, css: '.language-overlay')
 
