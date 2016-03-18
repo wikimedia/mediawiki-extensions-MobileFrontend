@@ -4,6 +4,21 @@
 		isBeta = context.isBetaGroupMember(),
 		ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );
 
+	mw.trackSubscribe( 'mf.showReference', function ( topic, data ) {
+		getReference( data.href, data.page ).done( function ( reference ) {
+			drawer.render( {
+				title: data.title,
+				text: reference.text
+			} );
+		} ).fail( function () {
+			drawer.render( {
+				error: true,
+				title: data.title,
+				text: mw.msg( 'mobile-frontend-references-citation-error' )
+			} );
+		} );
+	} );
+
 	/**
 	 * Return a data structure indexing all references in the given page.
 	 * @method
@@ -105,24 +120,21 @@
 	 */
 	function showReference( ev ) {
 		var $dest = $( this ),
-			href = $dest.attr( 'href' );
+			href = $dest.attr( 'href' ),
+			page = $dest.data( 'page' );
 
 		if ( !drawer ) {
 			// Note we only initialise here to avoid adding to DOM unnecessarily
 			// (Drawer currently auto appends within the postRender function )
-			drawer = new ReferencesDrawer();
+			drawer = new ReferencesDrawer( {
+				page: page
+			} );
 		}
-		getReference( href, $dest.data( 'page' ) ).done( function ( reference ) {
-			drawer.render( {
-				title: $dest.text(),
-				text: reference.text
-			} );
-		} ).fail( function () {
-			drawer.render( {
-				error: true,
-				title: $dest.text(),
-				text: mw.msg( 'mobile-frontend-references-citation-error' )
-			} );
+
+		mw.track( 'mf.showReference', {
+			href: href,
+			page: page,
+			title: $dest.text()
 		} );
 
 		ev.preventDefault();
