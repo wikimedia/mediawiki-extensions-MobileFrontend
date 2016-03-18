@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_175b35fe",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-18T18:08:58Z",
+      "side": 1,
+      "message": "It feels like this should be inside the ReferenceDrawer so I think in a follow up we should explore moving a lot of this logic into the ReferencesDrawer itself.\n\nCode I think we should move into ReferenceDrawer:\n* getReferenceData\n* getReference\n* mw.trackSubscribe\n\nThoughts?",
+      "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
