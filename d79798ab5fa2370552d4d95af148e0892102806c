@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_65064c22",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-18T11:04:21Z",
+      "side": 1,
+      "message": "I suspect that this line is due to the awkward signature of the getReferences function in the references setup file (mobile.references/references.js): there\u0027s no function to get references for the current page, which is a simple specialisation of the more general function that we already have. I suggest creating the getReferencesForCurrentPage function.\n\nThat being said, I\u0027m not in favour of this addition to the ReferencesDrawer view class. Previously, the distinction between the controlling part of the references machinery (the code in the setup file) and the corresponding view was adequately separated. In this change, the ReferencesDrawer is now concerned with fetching references for reference links as well as rendering them. This function should actually be in the setup file.\n\nOne way of achieving this would be to trigger an event representing a reference click so that it can be handled elsewhere.",
+      "revId": "d79798ab5fa2370552d4d95af148e0892102806c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
