@@ -10,7 +10,8 @@
 	 * @uses mw.Api
 	 */
 	NotificationsOverlay = function ( options ) {
-		var model, wrapperWidget,
+		var model, unreadCounter, wrapperWidget,
+			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
 		Overlay.apply( this, options );
@@ -26,8 +27,11 @@
 			return;
 		}
 
+		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
+
 		model = new mw.echo.dm.NotificationsModel(
 			echoApi,
+			unreadCounter,
 			{ type: 'all' }
 		);
 
@@ -36,8 +40,8 @@
 		} );
 
 		// Events
-		wrapperWidget.connect( this, {
-			unreadChange: 'onUnreadChange'
+		unreadCounter.connect( this, {
+			countChange: 'onUnreadCountChange'
 		} );
 
 		// Initialize
@@ -77,14 +81,15 @@
 		/**
 		 * Update the unread number on the notifications badge
 		 *
-		 * @param {mw.echo.dm.NotificationItem} items An array of the unread items
+		 * @param {Number} count Number of unread notifications
 		 * @method
 		 */
-		onUnreadChange: function ( items ) {
-			if ( items.length > 0 ) {
-				this.$badge.find( '.notification-count' ).text( items.length );
+		onUnreadCountChange: function ( count ) {
+			var $badgeCounter = this.$badge.find( '.notification-count' );
+			if ( count > 0 ) {
+				$badgeCounter.text( count ).show();
 			} else {
-				this.$badge.find( '.notification-count' ).remove();
+				$badgeCounter.hide();
 			}
 		},
 		/** @inheritdoc */
