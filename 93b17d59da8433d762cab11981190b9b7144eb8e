@@ -34,6 +34,58 @@
       "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_77e8c1dd",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-18T18:18:08Z",
+      "side": 1,
+      "message": "Okay.. so if we have a ReferencesGateway, we\u0027d pass it to ReferenceDrawer, this would mean this code could be done inside ReferenceDrawer using the ReferencesGateway.\n\nDoes that sound right?\n\nSo... (see comments below)",
+      "parentUuid": "ee33df1d_971c651a",
+      "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_f7c3315f",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-18T18:18:08Z",
+      "side": 1,
+      "message": "... this becomes page: page, gateway: new ReferencesGateway( { ... } )...",
+      "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_d7f54db7",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-18T18:18:08Z",
+      "side": 1,
+      "message": ".... and this becomes  drawer.showReference( { ... } )",
+      "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
