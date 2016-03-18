@@ -16,6 +16,24 @@
       "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_971c651a",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-18T18:13:03Z",
+      "side": 1,
+      "message": "We usually pass gateway, api and such to the View. So this looks more consistent to me.",
+      "parentUuid": "ee33df1d_175b35fe",
+      "revId": "93b17d59da8433d762cab11981190b9b7144eb8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
