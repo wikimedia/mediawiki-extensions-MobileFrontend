@@ -31,8 +31,6 @@
 	"mobile-frontend-home-button": "Башына",
 	"mobile-frontend-images-status": "Рәсемдәр",
 	"mobile-frontend-language-article-heading": "Башҡа телдә уҡырға",
-	"mobile-frontend-language-header": "Был мәҡәлә {{PLURAL:$1|1=language|languages}} телдә бар",
-	"mobile-frontend-language-site-choose": "Тел һайлау:",
 	"mobile-frontend-last-modified-date": "Һуңғы тапҡыр $1 $2 үҙгәртелгән",
 	"mobile-frontend-main-menu-account-create": "Иҫәп яҙмаһын булдырырға",
 	"mobile-frontend-main-menu-button-tooltip": "Төп менюны асырға",
