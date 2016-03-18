@@ -16,6 +16,24 @@
       "revId": "d79798ab5fa2370552d4d95af148e0892102806c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c56598ac",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-18T12:51:23Z",
+      "side": 1,
+      "message": "Good point. I\u0027d like to make the getReferences page flexible by continuing to allow passing the page object. This will help with QUnit tests.",
+      "parentUuid": "ee33df1d_65064c22",
+      "revId": "d79798ab5fa2370552d4d95af148e0892102806c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
