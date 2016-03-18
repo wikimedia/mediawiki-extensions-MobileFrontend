@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_b5a0aa3f",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1979,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-03-18T23:19:36Z",
+      "side": 1,
+      "message": "Yes it is.",
+      "parentUuid": "4ea78b8a_4c811e91",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_8c7716cf",
         "filename": "extension.json",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_158516b2",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2018,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-03-18T23:19:36Z",
+      "side": 1,
+      "message": "Yes it is.",
+      "parentUuid": "4ea78b8a_8c7716cf",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_6c7c1ab5",
         "filename": "extension.json",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-02-16T21:19:06Z",
       "side": 1,
       "message": "Not sure this is right. \n\"MFLazyLoadImages\": {\n\"base\": true\n}\nshould have the desired effect\n$defaults + \"MFLazyLoadImages\": {\n\"base\": true\n}\nwould result in base\u003dfalse which is wrong",
+      "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_358c9adb",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2023,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2016-03-18T23:19:36Z",
+      "side": 1,
+      "message": "Yes it is. Because if someone was to override an array in LocalSettings this version would override that.",
+      "parentUuid": "4ea78b8a_6c7c1ab5",
       "revId": "659bb3b340ca05aa63ba6772b1e677f93b64bf9a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
