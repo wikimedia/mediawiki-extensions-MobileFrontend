@@ -17,9 +17,9 @@
 	},
 	"devDependencies": {
 		"grunt-cli": "0.1.13",
-		"grunt-contrib-jshint": "0.11.3",
+		"grunt-contrib-jshint": "1.0.0",
 		"grunt-banana-checker": "0.4.0",
-		"grunt-jscs": "2.5.0",
+		"grunt-jscs": "2.8.0",
 		"jscs-preset-wikimedia": "1.0.0",
 		"js-beautify": "1.5.10",
 		"grunt-notify": "0.4.5",
