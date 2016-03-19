@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_1eb22ae1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2016-03-19T16:04:16Z",
+      "side": 1,
+      "message": "What is \"the simpler language overlay\"?",
+      "revId": "472aff1a8a88112015326006428e97f97a372a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
