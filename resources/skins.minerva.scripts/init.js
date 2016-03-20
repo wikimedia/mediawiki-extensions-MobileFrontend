@@ -250,10 +250,6 @@
 		cleanuptemplates.init( overlay.$el );
 	} );
 
-	// Remove any traces of the tag experiment in the HTML
-	// Remove when cache clears (https://phabricator.wikimedia.org/T113686)
-	$( '.browse-tags' ).remove();
-
 	// let the interested parties know whether the panel is shown
 	mw.track( 'minerva.betaoptin', {
 		isPanelShown: betaOptinPanel !== undefined
