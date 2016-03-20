@@ -146,7 +146,7 @@
 	"mobile-frontend-last-modified-with-user-just-now": "Қазір ғана {{PLURAL:$4|[$5 $2]|0=анонимді қатысушы}} [$3 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 минут|$3 минут}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 ай|$3 ай}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
-	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 секунт|$3 секунт}} бұрын   $4 соңғы рет {{GENDER:$1|өңдеді}}]",
+	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 секунд|$3 секунд}} бұрын   $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 жыл|$3 жыл}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-years": "Соңғы рет {{PLURAL:$1|$1 жыл|$1 жыл}} бұрын өңделді",
 	"mobile-frontend-lead-image-tutorial-confirm": "Жүктеуді бастау",

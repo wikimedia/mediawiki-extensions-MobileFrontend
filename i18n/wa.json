@@ -1,12 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lucyin"
+			"Lucyin",
+			"Srtxg"
 		]
 	},
-	"mobile-frontend-logged-out": "Vos n' estoz nén elodjî (eye)",
-	"mobile-frontend-login": "S' elodjî",
+	"mobile-frontend-copyright": "Li contnou est dzo l' licince $1 a moens k' ça soeye dit ôtrumint.",
+	"mobile-frontend-editor-edit": "Candjî",
+	"mobile-frontend-home-button": "Måjhon",
+	"mobile-frontend-language-article-heading": "Lére dins èn ôte lingaedje",
+	"mobile-frontend-languages-header-page": "$1 - Lingaedjes",
+	"mobile-frontend-last-modified-date": "Dierin candjmint l' $1, a $2",
 	"mobile-frontend-main-menu-account-create": "Ahiver on novea conte",
+	"mobile-frontend-main-menu-button-tooltip": "Drovi l' mwaisse menu",
 	"mobile-frontend-main-menu-login": "Elodjîz vs",
-	"mobile-frontend-main-menu-logout": "Si dislodjî"
+	"mobile-frontend-main-menu-logout": "Si dislodjî",
+	"mobile-frontend-main-menu-settings": "Tchuzes",
+	"mobile-frontend-main-menu-watchlist": "Djivêye des shuvous",
+	"mobile-frontend-password-placeholder": "Sicret",
+	"mobile-frontend-placeholder": "Cweri so {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privaceye",
+	"mobile-frontend-random-button": "A l' astcheyance",
+	"mobile-frontend-pageaction-edit-tooltip": "Candjî l' seccion al copete del pådje."
 }
