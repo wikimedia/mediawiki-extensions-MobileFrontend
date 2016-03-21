@@ -16,6 +16,7 @@
 	"mobile-frontend-main-menu-nearby": "Уллув",
 	"mobile-frontend-main-menu-settings": "Оттамаш",
 	"mobile-frontend-main-menu-watchlist": "Теркама дагарле",
+	"mobile-frontend-placeholder": "{{grammar:prepositional|{{SITENAME}}}} чу лаха",
 	"mobile-frontend-privacy-link-text": "КъайлагIара",
 	"mobile-frontend-random-button": "Ца ховш хинна",
 	"mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
@@ -23,5 +24,6 @@
 	"mobile-frontend-terms-text": "Пайда эцара хьáлаш",
 	"mobile-frontend-view": "Цхьалха куц",
 	"mobile-frontend-view-desktop": "Йоккха кеп",
-	"mobile-frontend-view-mobile": "ЗIамига кеп"
+	"mobile-frontend-view-mobile": "ЗIамига кеп",
+	"mobile-frontend-pageaction-edit-tooltip": "Хувца укх оагIона хьалхале лелаю дакъа"
 }
