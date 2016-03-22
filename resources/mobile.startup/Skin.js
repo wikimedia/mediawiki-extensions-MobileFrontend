@@ -2,8 +2,7 @@
 
 	var browser = M.require( 'mobile.browser/browser' ),
 		View = M.require( 'mobile.view/View' ),
-		Icon = M.require( 'mobile.startup/Icon' ),
-		context = M.require( 'mobile.context/context' );
+		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * Representation of the current skin being rendered.
@@ -14,9 +13,7 @@
 	 * @uses Page
 	 */
 	function Skin( options ) {
-		var self = this,
-			isBeta = context.isBetaGroupMember(),
-			wgMFLazyLoadImages = mw.config.get( 'wgMFLazyLoadImages' );
+		var self = this;
 
 		this.page = options.page;
 		this.name = options.name;
@@ -47,10 +44,8 @@
 		this.emit( '_resize' );
 
 		if (
-			!mw.config.get( 'wgImagesDisabled' ) && (
-				wgMFLazyLoadImages.base ||
-				( isBeta && wgMFLazyLoadImages.beta )
-			)
+			!mw.config.get( 'wgImagesDisabled' ) &&
+			mw.config.get( 'wgMFLazyLoadImages' )
 		) {
 			$( function () {
 				self.loadImages();

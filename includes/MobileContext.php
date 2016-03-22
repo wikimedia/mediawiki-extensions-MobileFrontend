@@ -9,6 +9,8 @@
 class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
+	const LAZY_LOAD_IMAGES_COOKIE_NAME = 'mfLazyLoadImages';
+	const LAZY_LOAD_IMAGES_COOKIE_VALUE = 'A';
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
@@ -20,6 +22,11 @@ class MobileContext extends ContextSource {
 	 * @var boolean $disableImages
 	 */
 	protected $disableImages;
+	/**
+	 * Save whether images will be lazy loaded for current user
+	 * @var boolean $lazyLoadImages
+	 */
+	protected $lazyLoadImages;
 	/**
 	 * Save explicitly requested format
 	 * @var string $useFormat
@@ -155,6 +162,22 @@ class MobileContext extends ContextSource {
 		}
 
 		return $this->device;
+	}
+
+	/**
+	 * Checks whether images should be lazy loaded for the current user
+	 * @return bool
+	 */
+	public function isLazyLoadImagesEnabled() {
+		if ( $this->lazyLoadImages === null ) {
+			$mfLazyLoadImages = $this->getMFConfig()->get( 'MFLazyLoadImages' );
+			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_IMAGES_COOKIE_NAME, '' );
+			$removeImages = $mfLazyLoadImages['base'] ||
+				( $this->isBetaGroupMember() && $mfLazyLoadImages['beta'] ) ||
+				$cookie === self::LAZY_LOAD_IMAGES_COOKIE_VALUE;
+			$this->lazyLoadImages = $removeImages;
+		}
+		return $this->lazyLoadImages;
 	}
 
 	/**
