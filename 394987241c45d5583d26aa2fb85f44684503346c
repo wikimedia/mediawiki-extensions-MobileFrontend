@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_9690d54f",
+        "filename": "tests/browser/features/switch_views.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-22T17:22:21Z",
+      "side": 1,
+      "message": "FYI this will not run anywhere until https://phabricator.wikimedia.org/T130429 is fixed.\nWe could tag @integration and update the task to remove the @integration tag from the scenario.\nI\u0027d rather not have an uninvoked test in the repository.",
+      "revId": "394987241c45d5583d26aa2fb85f44684503346c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
