@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_c71c641b",
+        "filename": "tests/browser/features/step_definitions/switch_views_bug_t129600.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-22T22:28:11Z",
+      "side": 1,
+      "message": "Any reason why this is in a separate file?",
+      "revId": "e1c73a67f140ceb3102d4e8b7d766c0f1b54b32d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_47d85458",
+        "filename": "tests/browser/features/support/pages/page.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-22T22:28:11Z",
+      "side": 1,
+      "message": "This may result in a false positive when the element is slow to appear, thus causing an error while hiding the true error of switching to mobile if any. Same below. For that reason I\u0027d add when_present.",
+      "revId": "e1c73a67f140ceb3102d4e8b7d766c0f1b54b32d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
