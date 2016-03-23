@@ -83,15 +83,15 @@
 			var $link = this.$( ev.currentTarget ),
 				lang = $link.attr( 'lang' ),
 				searchInputHasQuery = this.$searchInput.val().length > 0,
-				$visibleListItems = this.$siteLinksList.children( ':visible' ),
+				$visibleLanguageLinks = this.$languageItems.filter( ':visible' ),
 				index;
 
 			util.saveLanguageUsageCount( lang, util.getFrequentlyUsedLanguages() );
 
 			// find the index of the clicked language in the list of visible results
-			$.each( $visibleListItems, function ( i, item ) {
+			$.each( $visibleLanguageLinks, function ( i, link ) {
 				index = i + 1;
-				if ( $( item ).hasClass( lang ) ) {
+				if ( $( link ).hasClass( lang ) ) {
 					return false;
 				}
 			} );
@@ -103,7 +103,7 @@
 					languageTapped: lang,
 					positionOfLanguageTapped: index,
 					searchInputHasQuery: searchInputHasQuery,
-					languageCount: $visibleListItems.length
+					languageCount: $visibleLanguageLinks.length
 				} );
 			}
 		},
