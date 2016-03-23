@@ -672,8 +672,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.abusefilter"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.editor.api/EditorGateway.js"
@@ -741,6 +740,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mobile.abusefilter",
 				"mobile.editor.common",
 				"mobile.microAutoSize",
 				"oojs-ui.styles.icons-editing-core",
