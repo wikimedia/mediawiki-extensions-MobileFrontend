@@ -1,14 +1,8 @@
 {
-	"name": "MobileFrontend-dependencies",
-	"description": "Node.js dependencies used in MobileFrontend",
-	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"test": "grunt test && npm run doc",
 		"doc": "jsduck"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://git.wikimedia.org/git/mediawiki/extensions/MobileFrontend.git"
 	},
 	"dependencies": {
 		"jsdoc": "<=3.3.0",
