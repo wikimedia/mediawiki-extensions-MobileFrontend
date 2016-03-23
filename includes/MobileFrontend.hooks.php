@@ -1104,7 +1104,7 @@ class MobileFrontendHooks {
 				'mobile.notifications.overlay' => $resourceBoilerplate + array(
 					'dependencies' => array(
 						'mobile.overlays',
-						'ext.echo.ui.mobile',
+						'ext.echo.ui',
 					),
 					'scripts' => array(
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',

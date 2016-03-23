@@ -31,7 +31,7 @@
 			{ type: 'all' }
 		);
 
-		wrapperWidget = new mw.echo.ui.MobileNotificationsWrapper( model, {
+		wrapperWidget = new mw.echo.ui.NotificationsWrapper( model, {
 			$overlay: this.$overlay
 		} );
 
