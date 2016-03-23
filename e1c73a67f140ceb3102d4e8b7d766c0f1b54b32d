@@ -33,6 +33,24 @@
       "revId": "e1c73a67f140ceb3102d4e8b7d766c0f1b54b32d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_edb86727",
+        "filename": "tests/browser/features/support/pages/page.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-23T09:42:02Z",
+      "side": 1,
+      "message": "You\u0027re right. Element#click doesn\u0027t wait for the element to be present before executing – this took me a surprisingly long time to track down in the documentation (and there are folk on SO that cast aspersions about the accuracy of the documentation too!) If the element weren\u0027t present, then #click would throw, rather than fail silently, resulting in a false negative.",
+      "parentUuid": "ee33df1d_47d85458",
+      "revId": "e1c73a67f140ceb3102d4e8b7d766c0f1b54b32d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
