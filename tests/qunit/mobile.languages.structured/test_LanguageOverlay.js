@@ -79,7 +79,7 @@
 		}
 	} );
 
-	QUnit.test( 'test language overlay', 3, function ( assert ) {
+	QUnit.test( 'test language overlay', 2, function ( assert ) {
 		assert.equal(
 			this.languageOverlay.$( '.site-link-list.preferred-languages a' ).length,
 			3,
@@ -87,15 +87,9 @@
 		);
 
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list.all-languages .has-variants' ).length,
-			1,
-			'One language has variants.'
-		);
-
-		assert.equal(
-			this.languageOverlay.$( '.site-link-list.all-languages .variants a' ).length,
-			1,
-			'One language is a variant.'
+			this.languageOverlay.$( '.site-link-list.all-languages a' ).length,
+			7,
+			'Seven languages are non-preferred.'
 		);
 	} );
 

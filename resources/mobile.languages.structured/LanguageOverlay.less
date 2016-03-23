@@ -38,35 +38,9 @@
 	}
 
 	.site-link-list {
-		// do not single out languages with variants
-		&.filtered {
-			.variants {
-				border-bottom: none;
-				.lang {
-					display: block;
-				}
-				.variant {
-					display: none;
-				}
-			}
-		}
-
 		li {
 			background-color: white;
 			padding: 0;
-		}
-
-		.variants {
-			border-bottom: 1em solid @colorGray14;
-			li {
-				border-top: solid 1px @colorGray14;
-				&:last-child {
-					border-bottom: none;
-				}
-				.lang {
-					display: none;
-				}
-			}
 		}
 
 		a {
@@ -83,8 +57,7 @@
 				}
 			}
 
-			.lang,
-			.variant {
+			.lang {
 				background-color: @colorGray9;
 				border-radius: 2px;
 				color: white;

@@ -30,9 +30,7 @@
 	<h3 class="list-header">{{allLanguagesHeader}}<span>{{allLanguagesCount}}</span></h3>
 	<ul class="site-link-list all-languages">
 		{{#allLanguages}}
-			<li {{#hasVariants}}class="has-variants"{{/hasVariants}}>
-				{{#hasVariants}}<h3 class="list-header">{{variantsHeader}}</h3>{{/hasVariants}}
-				{{#url}}{{! this test is important because variants may exist, but not the parent language }}
+			<li>
 				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
 					<div>
 						<span class="lang">{{lang}}</span>
@@ -44,27 +42,6 @@
 						{{/title}}
 					</div>
 				</a>
-				{{/url}}
-				{{#hasVariants}}
-					<ul class="variants">
-					{{#variants}}
-						<li>
-							<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
-								<div>
-									<span class="lang">{{lang}}</span>
-									<span class="variant">{{variant}}</span>
-								</div>
-								<div>
-									<span class="langname">{{langname}}</span>
-									{{#title}}
-										<span class="title">{{title}}</span>
-									{{/title}}
-								</div>
-							</a>
-						</li>
-					{{/variants}}
-					</ul>
-				{{/hasVariants}}
 			</li>
 		{{/allLanguages}}
 	</ul>

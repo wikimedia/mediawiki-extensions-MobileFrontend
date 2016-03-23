@@ -56,11 +56,9 @@
 	 * includes the user device's primary language. Preferred languages are ordered
 	 * by frequency in descending order. The device's language is always at the top.
 	 *
-	 * All languages are the languages that are not preferred. Languages in this
-	 * list may have a 'variants' property which includes all variants for the
-	 * given languages. If a variant is in the preferred list, then it's omitted
-	 * from the all list. All languages are ordered in the lexicographical order of
-	 * their language codes.
+	 * All languages are the languages that are not preferred.
+	 * Languages in this list are ordered in the lexicographical order of
+	 * their language names.
 	 *
 	 * @param {Object[]} languages list of language objects as returned by the API
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
@@ -68,71 +66,29 @@
 	 * @return {Object[]}
 	 */
 	util.getStructuredLanguages = function ( languages, frequentlyUsedLanguages, deviceLanguage ) {
-		var index, lang, variant, allLanguages, maxFrequency = 0,
-			parentsMap = {},
-			variantsMap = {},
+		var maxFrequency = 0,
 			preferredLanguages = [],
-			preferredLanguagesMap = {};
-
-		$.each( frequentlyUsedLanguages, function ( language, frequency ) {
-			maxFrequency = maxFrequency < frequency ? frequency : maxFrequency;
-		} );
+			allLanguages = [];
 
 		// Is the article available in the user's device language?
 		deviceLanguage = getDeviceLanguageOrParent( languages, deviceLanguage );
-
 		if ( deviceLanguage ) {
+			$.each( frequentlyUsedLanguages, function ( language, frequency ) {
+				maxFrequency = maxFrequency < frequency ? frequency : maxFrequency;
+			} );
+
 			// Make the device language the most frequently used one so that
 			// it appears at the top of the list when sorted by frequency.
 			frequentlyUsedLanguages[ deviceLanguage ] = maxFrequency + 1;
 		}
 
-		// Separate languages into preferred, parent, and variants. Parent
-		// languages are all top level non-preferred languages. Variants are
-		// variants of parent languages if any.
+		// Separate languages into preferred and all languages.
 		$.each( languages, function ( i, language ) {
 			if ( frequentlyUsedLanguages.hasOwnProperty( language.lang ) ) {
 				language.frequency = frequentlyUsedLanguages[ language.lang ];
 				preferredLanguages.push( language );
-				preferredLanguagesMap[ language.lang ] = language;
 			} else {
-				// assuming variants are separated by a '-', i.e. zh, zh-min-nan, zh-yue
-				index = language.lang.indexOf( '-' );
-				if ( index === -1 ) {
-					parentsMap[ language.lang ] = language;
-				} else {
-					lang = language.lang.slice( 0, index );
-					variant = language.lang.slice( index + 1 );
-					language.variant = variant;
-					if ( variantsMap.hasOwnProperty( lang ) ) {
-						variantsMap[ lang ].push( language );
-					} else {
-						variantsMap[ lang ] = [ language ];
-					}
-				}
-			}
-		} );
-
-		// Attach variants to their parents
-		$.each( variantsMap, function ( lang, variants ) {
-			// parent may be in the preferred languages list
-			if ( parentsMap.hasOwnProperty( lang ) ) {
-				parentsMap[ lang ].variantsHeader = parentsMap[ lang ].langname;
-				parentsMap[ lang ].variants = variants;
-				parentsMap[ lang ].hasVariants = true;
-			} else {
-				// group variants under a fake non-existing parent
-				if ( variants.length > 1 ) {
-					parentsMap[ lang ] = {
-						lang: lang,  // this key is needed for lexicographical comparison
-						variantsHeader: preferredLanguagesMap[ lang ] ? preferredLanguagesMap[ lang ].langname : '',
-						variants: variants,
-						hasVariants: true
-					};
-				} else {
-					// make the variant a parent
-					parentsMap[ lang ] = variants[0];
-				}
+				allLanguages.push( language );
 			}
 		} );
 
@@ -152,13 +108,6 @@
 			return a.lang.localeCompare( b.lang );
 		}
 
-		allLanguages = $.map( parentsMap, function ( language ) {
-			// let's sort variants while we're at it
-			if ( language.variants ) {
-				language.variants = language.variants.sort( compareLanguagesByLanguageCode );
-			}
-			return language;
-		} );
 		allLanguages = allLanguages.sort( compareLanguagesByLanguageCode );
 
 		return {
