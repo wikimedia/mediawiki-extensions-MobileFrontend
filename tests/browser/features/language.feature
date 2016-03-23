@@ -20,7 +20,7 @@ Feature: Language selection
     Then I should not see a preferred language link
     Then I should see a non-preferred language link
 
-  @integration
+  @smoke
   Scenario: Checking that the preferred language link has been created
     When I click on a language from the list of all languages
       And I click the browser back button
