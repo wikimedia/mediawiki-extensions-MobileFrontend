@@ -76,10 +76,28 @@
 			this.structuredLanguages = {
 				all: [
 					{
-						lang: 'ar',
-						langname: 'العربية',
-						title: 'باراك أوباما',
-						url: 'https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B1%D8%A7%D9%83_%D8%A3%D9%88%D8%A8%D8%A7%D9%85%D8%A7'
+						lang: 'zh-min-nan',
+						langname: 'Bân-lâm-gú',
+						title: 'Barack Obama',
+						url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama'
+					},
+					{
+						lang: 'es',
+						langname: 'Spanish',
+						title: 'Barack Obama',
+						url: 'https://en.wikipedia.org/wiki/Barack_Obama'
+					},
+					{
+						lang: 'zu',
+						langname: 'isiZulu',
+						title: 'Barack Obama',
+						url: 'https://zu.wikipedia.org/wiki/Barack_Obama'
+					},
+					{
+						lang: 'uz',
+						langname: 'oʻzbekcha/ўзбекча',
+						title: 'Barak Obama',
+						url: 'https://uz.wikipedia.org/wiki/Barak_Obama'
 					},
 					{
 						lang: 'be',
@@ -94,40 +112,22 @@
 						url: 'https://be-x-old.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BA_%D0%90%D0%B1%D0%B0%D0%BC%D0%B0'
 					},
 					{
-						lang: 'es',
-						langname: 'Spanish',
-						title: 'Barack Obama',
-						url: 'https://en.wikipedia.org/wiki/Barack_Obama'
-					},
-					{
 						lang: 'ru',
 						langname: 'русский',
 						title: 'Обама, Барак',
 						url: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B0%D0%BC%D0%B0,_%D0%91%D0%B0%D1%80%D0%B0%D0%BA'
 					},
 					{
-						lang: 'uz',
-						langname: 'oʻzbekcha/ўзбекча',
-						title: 'Barak Obama',
-						url: 'https://uz.wikipedia.org/wiki/Barak_Obama'
-					},
-					{
-						lang: 'zh-min-nan',
-						langname: 'Bân-lâm-gú',
-						title: 'Barack Obama',
-						url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama'
+						lang: 'ar',
+						langname: 'العربية',
+						title: 'باراك أوباما',
+						url: 'https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B1%D8%A7%D9%83_%D8%A3%D9%88%D8%A8%D8%A7%D9%85%D8%A7'
 					},
 					{
 						lang: 'zh-yue',
 						langname: '粵語',
 						title: '奧巴馬',
 						url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC'
-					},
-					{
-						lang: 'zu',
-						langname: 'isiZulu',
-						title: 'Barack Obama',
-						url: 'https://zu.wikipedia.org/wiki/Barack_Obama'
 					}
 				],
 				preferred: [

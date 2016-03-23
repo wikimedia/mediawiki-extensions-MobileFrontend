@@ -98,17 +98,17 @@
 		} );
 
 		/**
-		 * Compare language codes lexicographically
+		 * Compare language names lexicographically
 		 *
 		 * @ignore
 		 * @param {Object} a first language
 		 * @param {Object} b second language
 		 */
-		function compareLanguagesByLanguageCode( a, b ) {
-			return a.lang.localeCompare( b.lang );
+		function compareLanguagesByLanguageName( a, b ) {
+			return a.langname < b.langname ? -1 : 1;
 		}
 
-		allLanguages = allLanguages.sort( compareLanguagesByLanguageCode );
+		allLanguages = allLanguages.sort( compareLanguagesByLanguageName );
 
 		return {
 			preferred: preferredLanguages,
