@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_53ff71fc",
+        "filename": "tests/browser/features/language_beta.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-23T22:48:18Z",
+      "side": 1,
+      "message": "Note the below test will also pass if there is a JS error.\nHow would we distinguish between that and the button actually being disabled?",
+      "parentUuid": "ee33df1d_8d88bbed",
+      "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_2d81afc8",
         "filename": "tests/browser/features/language_beta.feature",
         "patchSetId": 2
