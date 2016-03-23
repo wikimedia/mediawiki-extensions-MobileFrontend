@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_9320d997",
+        "filename": "tests/browser/features/language_beta.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-23T22:50:16Z",
+      "side": 1,
+      "message": "What JS error?",
+      "parentUuid": "ee33df1d_53ff71fc",
+      "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_2d81afc8",
         "filename": "tests/browser/features/language_beta.feature",
         "patchSetId": 2
@@ -84,6 +102,24 @@
       "writtenOn": "2016-03-23T11:26:33Z",
       "side": 1,
       "message": "The title of this scenario contradicts the title of the one immediately preceding it ;)",
+      "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_732395a6",
+        "filename": "tests/browser/features/language_beta.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-23T22:50:16Z",
+      "side": 1,
+      "message": "How so?",
+      "parentUuid": "ee33df1d_2d81afc8",
       "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
