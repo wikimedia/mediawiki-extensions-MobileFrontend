@@ -235,7 +235,7 @@
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"cleanup": "resources/mobile.issues.images/blue-triangle.svg",
-				"cleanup->gray": "resources/mobile.issues.images/gray-triangle.svg"
+				"cleanup-gray": "resources/mobile.issues.images/gray-triangle.svg"
 			}
 		},
 		"mobile.toc.images": {
