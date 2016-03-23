@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_9309f931",
+        "filename": "tests/browser/LocalSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-23T22:48:11Z",
+      "side": 1,
+      "message": "I think the above may get round the @integration problem",
+      "revId": "2a89a8e8de41e0deceef5bf805cf3102e3cab4e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
