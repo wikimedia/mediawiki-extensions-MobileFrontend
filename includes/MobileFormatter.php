@@ -368,6 +368,16 @@ class MobileFormatter extends HtmlFormatter {
 		$sectionBody = $doc->createElement( 'div' );
 		$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
 
+		// Mark the top level headings which will become collapsible soon.
+		foreach ( $headings as $heading ) {
+			$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
+			$heading->setAttribute( 'class', $className . 'section-heading' );
+			// prepend indicator
+			$indicator = $doc->createElement( 'div' );
+			$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
+			$heading->insertBefore( $indicator, $heading->firstChild );
+		}
+
 		while ( $sibling ) {
 			$node = $sibling;
 			$sibling = $sibling->nextSibling;

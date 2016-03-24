@@ -167,13 +167,24 @@ input.search {
 	}
 
 	.edit-page {
-		display: none;
+		display: inline-block;
+		visibility: hidden;
 	}
 
 	.open-block {
 		// Restrict to child so that child section edit links do not get revealed.
 		.edit-page {
-			display: inline-block;
+			visibility: visible;
+		}
+	}
+
+	.section-heading {
+		width: 100%;
+		border-bottom: solid 1px @sectionBorderColor;
+		margin-bottom: @headingMargin;
+
+		.indicator {
+			font-size: @indicatorFontSize;
 		}
 	}
 
@@ -188,6 +199,13 @@ input.search {
 			display: table-cell;
 			vertical-align: middle;
 		}
+	}
+}
+
+// Toggling indicators are unusable without JavaScript
+.client-nojs {
+	.section-heading .indicator {
+		display: none;
 	}
 }
 
