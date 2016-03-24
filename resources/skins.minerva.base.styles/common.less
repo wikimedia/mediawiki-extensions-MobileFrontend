@@ -51,8 +51,10 @@ textarea {
 	resize: none;
 }
 
-// For Minerva desktop
-#toc,
+
+// We hide the table of contents unless the user is viewing in tablet resolution or higher
+.client-nojs .toc-mobile,
+.toc-mobile,
 .client-js .no-js-only,
 // FIXME: Use generic rule for print stylesheets
 .printfooter,
