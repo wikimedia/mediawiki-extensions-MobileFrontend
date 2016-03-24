@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_d8aa756c",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-24T21:48:11Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this is needed. Could this information not be embedded inside the `languages` variable?",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_58e5c5d6",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-24T21:48:11Z",
+      "side": 1,
+      "message": "here I\u0027m assuming `variants` is the incorrect definition of variants?",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_98ce2d5e",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-24T21:48:11Z",
+      "side": 1,
+      "message": "It feels like this should be done further upstream in PageGateway...",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_38b1e1dc",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-24T21:48:11Z",
+      "side": 1,
+      "message": "Why is item.langname on each langlink not enough?\nWhy do we need to pass this too?",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
