@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_3f6b8cef",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 687,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-24T16:54:56Z",
+      "side": 1,
+      "message": "Currently, only mobile.editor.overlay depends on the mobile.abusefilter module (afaik), so I would recommend to move it to this module, only.",
+      "revId": "ffa1a8f88a3ae7779f529fd22cb318059f103912",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
