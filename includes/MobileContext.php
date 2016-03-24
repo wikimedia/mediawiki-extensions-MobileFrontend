@@ -474,13 +474,8 @@ class MobileContext extends ContextSource {
 			}
 		}
 		// ...and individual page blacklisting
-		if ( $noMobilePages && $title ) {
-			$name = $title->getPrefixedText();
-			foreach ( $noMobilePages as $page ) {
-				if ( $page === $name ) {
-					return true;
-				}
-			}
+		if ( $noMobilePages && $title && in_array( $title->getPrefixedText(), $noMobilePages ) ) {
+			return true;
 		}
 		return false;
 	}
