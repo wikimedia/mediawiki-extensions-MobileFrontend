@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_15a148f5",
+        "filename": "tests/browser/features/language_beta.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-24T20:24:55Z",
+      "side": 1,
+      "message": "This is fair but it would help with debugging greatly and seems no hardship to assert in addition to this a step \"the button is disabled\"\n\nWe do care about testing whether it is disabled or not don\u0027t we?\n\nIn the existing scenario ``Tapping icon does not open language overlay` we assert that the button doesn\u0027t do anything but not anything about its appearance.",
+      "parentUuid": "ee33df1d_ffa484a0",
+      "revId": "20b316ed7e69019706ae8c3a43f8ac4b568281b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_2d81afc8",
         "filename": "tests/browser/features/language_beta.feature",
         "patchSetId": 2
