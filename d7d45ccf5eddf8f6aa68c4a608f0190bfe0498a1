@@ -16,6 +16,24 @@
       "revId": "d7d45ccf5eddf8f6aa68c4a608f0190bfe0498a1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_44d31c61",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2016-03-25T15:20:39Z",
+      "side": 1,
+      "message": "I\u0027ve renamed it to \u0027onUnreadCountChange\u0027 to keep some context in the function\u0027s name.",
+      "parentUuid": "ee33df1d_5052c73f",
+      "revId": "d7d45ccf5eddf8f6aa68c4a608f0190bfe0498a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
