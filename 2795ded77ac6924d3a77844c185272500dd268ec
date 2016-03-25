@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "ee33df1d_69d0b955",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-25T11:02:41Z",
+      "side": 1,
+      "message": "AFAICT there\u0027s no inheritance here. You\u0027re simplifying the MF event logging code by using the EL-provided Schema class.",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_db815250",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 8
@@ -31,6 +48,41 @@
       "side": 1,
       "message": "Yeah, it was weird to return something in the first place.",
       "parentUuid": "2ea41786_db815250",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_feee4185",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-25T11:02:41Z",
+      "side": 1,
+      "message": "I\u0027m glad this has been tidied up.",
+      "parentUuid": "0e2f53b6_9eef6e82",
+      "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c9e7453a",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-25T11:02:41Z",
+      "side": 1,
+      "message": "Are these two type annotations really necessary? This is an instance of the mw.eventLog.Schema, not a class in and of itself.",
       "revId": "2795ded77ac6924d3a77844c185272500dd268ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

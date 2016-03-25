@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_e95fa911",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-25T11:02:41Z",
+      "side": 0,
+      "message": "This code will likely be executed before navigation occurs as control hasn\u0027t yet been returned to the browser BUT it\u0027s immediately after a window.location assignment.\n\nTo avoid any ambiguity, could you move this above L199?",
+      "revId": "184f4049e3448a96a8760987b6d14c1313cecdb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
