@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_3e07041e",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-03-25T20:51:08Z",
+      "side": 1,
+      "message": "We should actually not hide the counter when it\u0027s zero for two reasons: \n1. The user should be able to see their *read* notification list\n2. The popup re-populates each time you reopen, so the number may change, but if we remove/hide the counter, they can\u0027t reopen/repopulate anymore.\n\nBut this is probably outside the scope of this commit, since it will change the behavior. We should talk about this, though, for followup.",
+      "revId": "d35e5f07917c9221e99dcd5bbc4eb87f98c8e68c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
