@@ -834,7 +834,10 @@
 			}
 		},
 		"mobile.search.api": {
-			"class": "MFResourceLoaderParsedMessageModule",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"dependencies": [
 				"mobile.startup",
 				"mediawiki.Title"
