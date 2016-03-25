@@ -55,18 +55,21 @@
 	 * Preferred languages are the ones that the user has used before. This also
 	 * includes the user device's primary language. Preferred languages are ordered
 	 * by frequency in descending order. The device's language is always at the top.
+	 * This group also includes the variants.
 	 *
 	 * All languages are the languages that are not preferred.
 	 * Languages in this list are ordered in the lexicographical order of
 	 * their language names.
 	 *
 	 * @param {Object[]} languages list of language objects as returned by the API
+	 * @param {Array|Boolean} variants language variant objects or false if no variants exist
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
 	 * @param {String|undefined} deviceLanguage the device's primary language
 	 * @return {Object[]}
 	 */
-	util.getStructuredLanguages = function ( languages, frequentlyUsedLanguages, deviceLanguage ) {
+	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
 		var maxFrequency = 0,
+			minFrequency = 0,
 			preferredLanguages = [],
 			allLanguages = [];
 
@@ -75,6 +78,7 @@
 		if ( deviceLanguage ) {
 			$.each( frequentlyUsedLanguages, function ( language, frequency ) {
 				maxFrequency = maxFrequency < frequency ? frequency : maxFrequency;
+				minFrequency = minFrequency > frequency ? frequency : minFrequency;
 			} );
 
 			// Make the device language the most frequently used one so that
@@ -91,6 +95,21 @@
 				allLanguages.push( language );
 			}
 		} );
+
+		// Add variants to the preferred languages list and assign the lowest
+		// frequency because the variant hasn't been clicked on yet.
+		// Note that the variants data doesn't contain the article title, thus
+		// we cannot show it for the variants.
+		if ( variants ) {
+			$.each( variants, function ( i, variant ) {
+				if ( frequentlyUsedLanguages.hasOwnProperty( variant.lang ) ) {
+					variant.frequency =  frequentlyUsedLanguages[variant.lang];
+				} else {
+					variant.frequency = minFrequency - 1;
+				}
+				preferredLanguages.push( variant );
+			} );
+		}
 
 		// sort preferred languages in descending order by frequency
 		preferredLanguages = preferredLanguages.sort( function ( a, b ) {
