@@ -16,6 +16,24 @@
       "revId": "d35e5f07917c9221e99dcd5bbc4eb87f98c8e68c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_7e6fcc8f",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2016-03-25T20:54:09Z",
+      "side": 1,
+      "message": "It\u0027s just the counter, not the badge (bell).\n\nIt hides it when it\u0027s zero and brings it back when there are new notifications.",
+      "parentUuid": "ee33df1d_3e07041e",
+      "revId": "d35e5f07917c9221e99dcd5bbc4eb87f98c8e68c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
