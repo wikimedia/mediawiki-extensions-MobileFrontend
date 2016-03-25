@@ -18,5 +18,6 @@ $wgHooks['InterwikiLoadPrefix'][] = function ( $prefix, &$iwdata ) {
 	// nothing to do, continue lookup
 	return true;
 };
+$wgInterwikiCache = false;
 
 $wgMFEnableBeta = true;
