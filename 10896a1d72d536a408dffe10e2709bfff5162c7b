@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_e9c16934",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-25T12:28:10Z",
+      "side": 1,
+      "message": "It\u0027s tricky, because we\u0027re dealing with the incorrect definition of \u0027variants\u0027. So, say \u0027zh-min-nan\u0027 is available for this page, but not \u0027zh\u0027. We need the name of \u0027zh\u0027 in order for us to group \u0027zh-min-nan\u0027 under \u0027zh\u0027. That\u0027s why I suggested we merge the \u0027ungroup variant\u0027s patch first so that we don\u0027t deal with wrong version of variants. Same logic applies to the comments below.",
+      "parentUuid": "ee33df1d_d8aa756c",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_58e5c5d6",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 3
@@ -64,6 +82,24 @@
       "writtenOn": "2016-03-24T21:48:11Z",
       "side": 1,
       "message": "Why is item.langname on each langlink not enough?\nWhy do we need to pass this too?",
+      "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c9bc65b4",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-25T12:28:10Z",
+      "side": 1,
+      "message": "See my other comment.",
+      "parentUuid": "ee33df1d_38b1e1dc",
       "revId": "10896a1d72d536a408dffe10e2709bfff5162c7b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
