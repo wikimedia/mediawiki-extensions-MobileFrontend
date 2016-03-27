@@ -1,13 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Tem"
 		]
 	},
+	"mobile-frontend-editor-edit": "Cuir in Eagar",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
-	"mobile-frontend-login": "Logáil isteach",
+	"mobile-frontend-home-button": "Baile",
+	"mobile-frontend-language-article-heading": "Léigh i dteanga eile",
+	"mobile-frontend-main-menu-button-tooltip": "Osclóidh seo an príomhroghchlár",
+	"mobile-frontend-main-menu-login": "Logáil isteach",
+	"mobile-frontend-main-menu-nearby": "In aice láimhe",
 	"mobile-frontend-main-menu-settings": "Sainroghanna",
+	"mobile-frontend-main-menu-watchlist": "Liosta faire",
 	"mobile-frontend-page-menu-history": "Stair",
 	"mobile-frontend-password": "D'fhocal faire:",
-	"mobile-frontend-username": "Ainm úsáideora:"
+	"mobile-frontend-password-placeholder": "Pasfhocal",
+	"mobile-frontend-privacy-link-text": "Príobháideacht",
+	"mobile-frontend-random-button": "Fánach",
+	"mobile-frontend-terms-text": "Téarmaí Úsáide",
+	"mobile-frontend-view": "Amharc móibíleach",
+	"mobile-frontend-view-desktop": "Leagan deisce",
+	"mobile-frontend-view-mobile": "Móibíleach"
 }
