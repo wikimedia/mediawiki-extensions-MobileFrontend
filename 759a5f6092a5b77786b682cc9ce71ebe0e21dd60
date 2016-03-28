@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_297343e7",
+        "filename": "resources/skins.minerva.tablet.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T18:54:30Z",
+      "side": 1,
+      "message": "Why change the margin for .content-overlay here? It used to be \"0 auto\" above.",
+      "revId": "759a5f6092a5b77786b682cc9ce71ebe0e21dd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
