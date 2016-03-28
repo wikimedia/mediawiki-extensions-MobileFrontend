@@ -26,15 +26,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		}
 	}
 
-	.stable {
-		// FIXME: Have a class that identifies all 3 of these
-		.pre-content,
-		.content,
-		.content-overlay {
-			max-width: @contentMaxWidthTablet;
-		}
-	}
-
 	#page-actions {
 		padding: 18px 0 0 0;
 
@@ -47,14 +38,12 @@ A file for css that optimises the Minerva skin on larger devices.
 		}
 	}
 
-	// FIXME: Have a class that identifies all 4 of these
-	.content-overlay {
-		margin: 0 auto;
-	}
-
+	// FIXME: Have a class that identifies all of these selectors
 	.pre-content,
 	.content,
+	.content-overlay,
 	.post-content {
+		max-width: @contentMaxWidthTablet;
 		margin: 0 @contentPaddingTablet;
 	}
 
