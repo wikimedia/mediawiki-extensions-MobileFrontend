@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_0c8bed20",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:00:06Z",
+      "side": 1,
+      "message": "\u0027i\u0027 in \u0027it\u0027 should be capitalized.",
+      "revId": "e9f8ad07bd749bfa0ddc7a4bcb63fd3fbb6f630f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
