@@ -1146,8 +1146,7 @@
 				"mobile.startup",
 				"mobile.drawers",
 				"mobile.ajax",
-				"mobile.toast",
-				"mobile.loggingSchemas"
+				"mobile.toast"
 			],
 			"scripts": [
 				"resources/mobile.watchstar/WatchstarGateway.js",

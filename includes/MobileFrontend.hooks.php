@@ -1201,7 +1201,6 @@ class MobileFrontendHooks {
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebUIClickTracking.js',
-			'resources/mobile.loggingSchemas/SchemaMobileWebWatching.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebSearch.js',
 		);
 
