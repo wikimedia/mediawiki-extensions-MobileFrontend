@@ -24,7 +24,10 @@ class SkinMinerva extends SkinTemplate {
 	protected $mobileContext;
 	/** @var bool whether the page is the user's page, i.e. User:Username */
 	public $isUserPage = false;
-	/** @var boolean Whether the language button should be included in the secondary actions HTML */
+	/**
+	 * @var boolean Whether the language button should be included in the secondary
+	 * actions HTML on non-main pages
+	 */
 	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 	/** @var bool Whether the page is also available in other languages or variants */
 	protected $doesPageHaveLanguages = false;
@@ -804,7 +807,8 @@ class SkinMinerva extends SkinTemplate {
 			$buttons['talk'] = $this->getTalkButton( $talkTitle, $talkButton );
 		}
 
-		if ( $this->shouldSecondaryActionsIncludeLanguageBtn && $this->doesPageHaveLanguages ) {
+		if ( $this->doesPageHaveLanguages &&
+			( $title->isMainPage() || $this->shouldSecondaryActionsIncludeLanguageBtn ) ) {
 			$buttons['language'] = $this->getLanguageButton();
 		}
 
