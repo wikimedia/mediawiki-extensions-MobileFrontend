@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_6c2b99db",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-28T20:18:17Z",
+      "side": 1,
+      "message": "Why would we need to remove this out of interest?\nSurely at this point it\u0027s not dirty anymore so wouldn\u0027t fire.\n\nIt\u0027s also not clear to me where this event is fired. Is this some code in VisualEditor? If so we should document it.",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_ec7e89e0",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-28T20:18:17Z",
+      "side": 1,
+      "message": "Have we checked with the editing team that they are okay with the possibility of losing data?\n\nI feel like this is different from page clicks, so we may still want to run this after logging saveSuccess",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_cc1aa5cf",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-28T20:18:17Z",
+      "side": 1,
+      "message": "Deleting like this usually seems hacky and could have side effects on other things. (I know it was like this before but this seems to be good opportunity to reevaluate)\n\nCould you elaborate (in comments) what\u0027s going on here?",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
