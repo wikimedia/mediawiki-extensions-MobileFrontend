@@ -12,13 +12,16 @@
 	function LanguageOverlay( options ) {
 		var languages;
 
-		if ( options.languages && options.languages.length ) {
-			languages = util.getStructuredLanguages( options.languages, util.getFrequentlyUsedLanguages(), options.deviceLanguage );
-			options.allLanguages = languages.all;
-			options.allLanguagesCount = languages.all.length;
-			options.preferredLanguages = languages.preferred;
-			options.preferredLanguagesCount = languages.preferred.length;
-		}
+		languages = util.getStructuredLanguages(
+			options.languages,
+			options.variants,
+			util.getFrequentlyUsedLanguages(),
+			options.deviceLanguage
+		);
+		options.allLanguages = languages.all;
+		options.allLanguagesCount = languages.all.length;
+		options.preferredLanguages = languages.preferred;
+		options.preferredLanguagesCount = languages.preferred.length;
 
 		Overlay.call( this, options );
 	}
@@ -134,7 +137,7 @@
 		filterLanguages: function ( val ) {
 			var filteredList = [];
 
-			if ( val && this.options.languages ) {
+			if ( val ) {
 				$.each( this.options.languages, function ( i, language ) {
 					// search by language code or language name
 					if ( language.langname.toLowerCase().indexOf( val ) > -1 ||
@@ -143,6 +146,17 @@
 						filteredList.push( language.lang );
 					}
 				} );
+
+				if ( this.options.variants ) {
+					$.each( this.options.variants, function ( i, variant ) {
+						// search by variant code or variant name
+						if ( variant.langname.toLowerCase().indexOf( val ) > -1 ||
+							variant.lang.toLowerCase().indexOf( val ) > -1
+						) {
+							filteredList.push( variant.lang );
+						}
+					} );
+				}
 
 				this.$languageItems.addClass( 'hidden' );
 				if ( filteredList.length ) {

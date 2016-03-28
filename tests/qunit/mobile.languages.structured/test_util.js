@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( $, M ) {
 	var util = M.require( 'mobile.languages.structured/util' );
 
 	QUnit.module( 'MobileFrontend: Structured LanguageOverlay', {
@@ -65,6 +65,15 @@
 					langname: 'isiZulu'
 				}
 			];
+			this.apiVariants = [ {
+				langname: '不转换',
+				lang: 'zh',
+				url: '/~bmansurov/mediawiki/index.php/3?variant=zh'
+			}, {
+				langname: '简体',
+				lang: 'zh-hans',
+				url: '/~bmansurov/mediawiki/index.php/3?variant=zh-hans'
+			} ];
 
 			this.deviceLanguage = 'en-us';
 
@@ -154,7 +163,10 @@
 		}
 	} );
 
-	QUnit.test( 'test utility functions', 4, function ( assert ) {
+	QUnit.test( 'test utility functions', 6, function ( assert ) {
+		var preferredLanguages,
+			variantsMap = {};
+
 		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages,
 			'Frequently used languages is correct.' );
 
@@ -165,17 +177,29 @@
 		} ), 'Frequently used language is correctly saved.' );
 
 		assert.deepEqual(
-			util.getStructuredLanguages( this.apiLanguages, this.frequentlyUsedLanguages, this.deviceLanguage ),
+			util.getStructuredLanguages( this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage ),
 			this.structuredLanguages,
 			'Structured languages are correct.'
 		);
 
 		// device language is a variant and only the parent language is available
 		assert.equal(
-			util.getStructuredLanguages( this.apiLanguages, {}, 'es-lx' ).preferred[0].lang,
+			util.getStructuredLanguages( this.apiLanguages, false, {}, 'es-lx' ).preferred[0].lang,
 			'es',
 			'"es" is correctly selected as a preferred language even though the device language is "es-lx".'
 		);
+
+		preferredLanguages = util.getStructuredLanguages(
+			this.apiLanguages, this.apiVariants, {}, this.deviceLanguage ).preferred;
+		$.each( this.apiVariants, function ( i, variant ) {
+			variantsMap[ variant.lang ] = variant;
+		} );
+		$.each( preferredLanguages, function ( i, preferredLanguage ) {
+			assert.ok(
+				variantsMap.hasOwnProperty( preferredLanguage.lang ),
+				'Variant "' + preferredLanguage.lang + '" is in the list of preferred languages.'
+			);
+		} );
 	} );
 
-} )( mw.mobileFrontend );
+} )( jQuery, mw.mobileFrontend );
