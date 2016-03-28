@@ -16,6 +16,24 @@
       "revId": "759a5f6092a5b77786b682cc9ce71ebe0e21dd60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_495e8749",
+        "filename": "resources/skins.minerva.tablet.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-28T18:58:43Z",
+      "side": 1,
+      "message": "This was an oversight.\nThe original rule was instated in a change Thu May 22 17:08:59 2014 -0700 (Ia2ddca666c42762378e4c2bfe8e6a82ee3e43420)\n\nIt should have been included in the change for I70c9b5495142ebde401ed4def53ec1584caac2a0\nTue Sep 15 07:56:30 2015 +0500\n\ncontent-overlay should always be treated in the same way as .content",
+      "parentUuid": "ee33df1d_297343e7",
+      "revId": "759a5f6092a5b77786b682cc9ce71ebe0e21dd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
