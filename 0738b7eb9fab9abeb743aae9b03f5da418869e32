@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_3239eccb",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-03-28T21:31:53Z",
+      "side": 1,
+      "message": "There\u0027s no need for the else keyword here.",
+      "revId": "0738b7eb9fab9abeb743aae9b03f5da418869e32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
