@@ -16,6 +16,24 @@
       "revId": "43459e65dacba874682940b1ec44ad6c51922ea8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_2ce511d8",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:04:42Z",
+      "side": 1,
+      "message": "Oh I see, this is the default margin, and the other one is for tablets only.",
+      "parentUuid": "ee33df1d_4cc2153a",
+      "revId": "43459e65dacba874682940b1ec44ad6c51922ea8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
