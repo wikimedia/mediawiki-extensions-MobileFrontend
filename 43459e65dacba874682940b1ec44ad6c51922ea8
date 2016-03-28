@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_4cc2153a",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:03:46Z",
+      "side": 1,
+      "message": "Why override margin here then? In response to https://gerrit.wikimedia.org/r/#/c/279152/2/resources/skins.minerva.tablet.styles/common.less",
+      "revId": "43459e65dacba874682940b1ec44ad6c51922ea8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
