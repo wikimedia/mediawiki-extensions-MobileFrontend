@@ -53,7 +53,8 @@
 	function initButton() {
 		// FIXME: remove .languageSelector when cache clears
 		var $languageSwitcherBtn = $( '#language-switcher, .languageSelector' ),
-			languageButtonVersion = context.isBetaGroupMember() ? 'top-of-article' : 'bottom-of-article';
+			languageButtonVersion = ( !page.isMainPage() && context.isBetaGroupMember() ) ?
+				'top-of-article' : 'bottom-of-article';
 
 		/**
 		 * Log impression when the language button is seen by the user
