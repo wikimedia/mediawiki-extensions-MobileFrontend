@@ -16,6 +16,24 @@
       "revId": "0738b7eb9fab9abeb743aae9b03f5da418869e32",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_fd8ab51a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-28T23:38:11Z",
+      "side": 1,
+      "message": "Use pattern:\n\n if ( x \u003d\u003d\u003d null ) {\n   ..\n   x \u003d ..\n }\n return x;\n\nA few principles that together create this pattern:\n* Avoid redundant \u0027else\u0027 after return.\n* Avoid is_null.\n* Avoid the primary return statement being nested (makes extending the function later hard and error-prone).\n* Avoid having the primary return statement (e.g. not early returns for errors scenarios) repeated in multiple places.",
+      "parentUuid": "ee33df1d_3239eccb",
+      "revId": "0738b7eb9fab9abeb743aae9b03f5da418869e32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
