@@ -8,8 +8,7 @@
 			name: 'watched'
 		} ),
 		user = M.require( 'mobile.user/user' ),
-		Page = M.require( 'mobile.startup/Page' ),
-		SchemaMobileWebWatching = M.require( 'mobile.loggingSchemas/SchemaMobileWebWatching' );
+		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: Watchstar.js Anon', {
 		setup: function () {
@@ -41,8 +40,6 @@
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'postWithToken' )
 				.returns( $.Deferred().resolve() );
 
-			// FIXME: Should Schema.log be stubbed by default?
-			this.stub( SchemaMobileWebWatching.prototype, 'log' ).returns( null );
 			this.toastSpy = this.sandbox.spy( toast, 'show' );
 		},
 		teardown: function () {

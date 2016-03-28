@@ -1,7 +1,6 @@
 ( function ( M ) {
 
 	var View = M.require( 'mobile.view/View' ),
-		SchemaMobileWebWatching = M.require( 'mobile.loggingSchemas/SchemaMobileWebWatching' ),
 		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
@@ -43,9 +42,6 @@
 			this.gateway.setWatchedPage( options.page, options.isWatched );
 			_super.call( self, options );
 		}
-		this.schema = new SchemaMobileWebWatching( {
-			funnel: options.funnel
-		} );
 	}
 
 	OO.mfExtend( Watchstar, View, {
@@ -103,9 +99,6 @@
 				this.gateway.setWatchedPage( options.page, options.isWatched );
 				_super.call( self, options );
 			}
-			this.schema = new SchemaMobileWebWatching( {
-				funnel: options.funnel
-			} );
 		},
 		/** @inheritdoc */
 		preRender: function () {
@@ -165,9 +158,6 @@
 			checker = setInterval( function () {
 				toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
 			}, 1000 );
-			this.schema.log( {
-				isWatched: self.options.isWatched
-			} );
 			gateway.toggleStatus( page ).always( function () {
 				clearInterval( checker );
 			} ).done( function () {
