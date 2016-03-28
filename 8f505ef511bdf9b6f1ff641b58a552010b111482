@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_0ce92d7b",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:23:04Z",
+      "side": 1,
+      "message": "I\u0027d do so in a separate patch in order to solve one problem only in this patch.",
+      "parentUuid": "ee33df1d_6c2b99db",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_ec7e89e0",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 9
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_acf9214c",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:23:04Z",
+      "side": 1,
+      "message": "Can you be more clear about the data. What data?",
+      "parentUuid": "ee33df1d_ec7e89e0",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_cc1aa5cf",
         "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
         "patchSetId": 9
@@ -47,6 +83,24 @@
       "writtenOn": "2016-03-28T20:18:17Z",
       "side": 1,
       "message": "Deleting like this usually seems hacky and could have side effects on other things. (I know it was like this before but this seems to be good opportunity to reevaluate)\n\nCould you elaborate (in comments) what\u0027s going on here?",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_ccbc656a",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-28T20:23:04Z",
+      "side": 1,
+      "message": "I could, but I was wondering why I should tackle problems not related to the goal of the patch? Can we just not do so after the patch has been merged? I bet we could ask many questions about the other aspect of the already existing code.",
+      "parentUuid": "ee33df1d_cc1aa5cf",
       "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
