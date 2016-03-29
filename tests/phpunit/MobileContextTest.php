@@ -58,6 +58,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getBaseDomainProvider
+	 * @covers MobileContext::getBaseDomain
 	 */
 	public function testGetBaseDomain( $server, $baseDomain ) {
 		$this->setMwGlobals( 'wgServer', $server );
@@ -75,6 +76,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @covers MobileContext::getMobileUrl
+	 */
 	public function testGetMobileUrl() {
 		$this->setMwGlobals( array(
 			'wgMFMobileHeader' => 'X-WAP',
@@ -111,6 +115,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->assertEquals( 3, $invokes, 'Ensure that hook got the right context' );
 	}
 
+	/**
+	 * @covers MobileContext::parseMobileUrlTemplate
+	 */
 	public function testParseMobileUrlTemplate() {
 		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2/path/morepath' );
 		$context = $this->makeContext();
@@ -130,6 +137,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider updateMobileUrlHostProvider
+	 * @covers MobileContext::updateMobileUrlHost
 	 */
 	public function testUpdateMobileUrlHost( $url, $expected, $urlTemplate ) {
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
@@ -175,6 +183,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider updateDesktopUrlQueryProvider
+	 * @covers MobileContext::updateDesktopUrlQuery
 	 */
 	public function testUpdateDesktopUrlQuery( $mobile, $desktop ) {
 		$updateDesktopUrlQuery = self::getMethod( "updateDesktopUrlQuery" );
@@ -197,6 +206,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider updateDesktopUrlHostProvider
+	 * @covers MobileContext::updateDesktopUrlHost
 	 */
 	public function testUpdateDesktopUrlHost( $mobile, $desktop, $server ) {
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
@@ -231,6 +241,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @covers MobileContext::updateMobileUrlPath
+	 */
 	public function testUpdateMobileUrlPath() {
 		$this->setMwGlobals( array(
 			'wgScriptPath' => '/wiki',
@@ -257,6 +270,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider isFauxMobileDeviceProvider
+	 * @covers MobileContext::isFauxMobileDevice
 	 */
 	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat = null ) {
 		$isFauxMobileDevice = self::getMethod( 'isFauxMobileDevice' );
@@ -282,6 +296,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider shouldDisplayMobileViewProvider
+	 * @covers MobileContext::shouldDisplayMobileView
 	 */
 	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null,
 		$requestVal = array(), $msg = null
@@ -325,6 +340,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getMobileActionProvider
+	 * @covers MobileContext::getMobileAction
 	 */
 	public function testGetMobileAction( $mobileaction = null ) {
 		$context = $this->makeContext();
@@ -347,6 +363,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getUseFormatProvider
+	 * @covers MobileContext::getUseFormat
 	 */
 	public function testGetUseFormat( $explicit, $requestParam, $expected ) {
 		$context = $this->makeContext();
@@ -364,6 +381,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @covers MobileContext::getUseFormatCookieExpiry
+	 */
 	public function testGetUseFormatCookieExpiry() {
 		global $wgCookieExpiration;
 		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
@@ -391,6 +411,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @covers MobileContext::getStopMobileRedirectCookieDomain
+	 */
 	public function testGetStopMobileRedirectCookieDomain() {
 		$context = $this->makeContext();
 		$this->setMwGlobals( array(
@@ -402,6 +425,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
 	}
 
+	/**
+	 * @covers MobileContext::isLocalUrl
+	 */
 	public function testIsLocalUrl() {
 		global $wgServer;
 		$context = $this->makeContext();
@@ -411,6 +437,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider addAnalyticsLogItemProvider
+	 * @covers MobileContext::getAnalyticsLogItems
 	 */
 	public function testAddAnalyticsLogItem( $key, $val ) {
 		$context = $this->makeContext();
@@ -431,6 +458,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getXAnalyticsHeaderProvider
+	 * @covers MobileContext::getXAnalyticsHeader
 	 */
 	public function testGetXAnalyticsHeader( $existingHeader, $logItems, $expectedHeader ) {
 		$context = $this->makeContext();
@@ -473,6 +501,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider addAnalyticsLogItemFromXAnalyticsProvider
+	 * @covers MobileContext::addAnalyticsLogItemFromXanalytics
 	 */
 	public function testAddAnalyticsLogItemFromXAnalytics( $analyticsItem, $key, $val ) {
 		$context = $this->makeContext();
@@ -494,6 +523,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getMobileHostTokenProvider
+	 * @covers MobileContext::getMobileHostToken
 	 */
 	public function testGetMobileHostToken( $domainTemplate, $result ) {
 		$context = $this->makeContext();
@@ -510,6 +540,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider optInProvider
+	 * @covers MobileContext::isBetaGroupMember
 	 */
 	public function testOptIn( array $cookies, $isBeta, $enabledInSettings ) {
 		$this->setMwGlobals( 'wgMFEnableBeta', $enabledInSettings );
@@ -530,6 +561,8 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideToggleView
+	 * @covers MobileContext::checkToggleView
+	 * @covers MobileContext::doToggling
 	 * @param $page
 	 * @param $url
 	 * @param $urlTemplate

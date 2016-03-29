@@ -16,6 +16,7 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 	}
 	/**
 	 * @dataProvider providerTestNames
+	 * @covers SpecialMobileDiff::executeWhenAvailable
 	 */
 	public function testNames( $par, $expected ) {
 		$page = new MockSpecialMobileDiff();
@@ -48,6 +49,7 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider redirectFromDesktopDiffProvider
+	 * @covers SpecialMobileDiff::getMobileUrlFromDesktop
 	 */
 	public function testRedirectFromDesktopDiff( array $query, $expected ) {
 		foreach ( $query as $k => $v ) {
@@ -80,38 +82,6 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 			// https://bugzilla.wikimedia.org/63999
 			array( array( 'oldid' => 'prev', 'diff' => 5 ), 'Special:MobileDiff/5' ),
 		);
-	}
-
-	public function testInlineDiffs() {
-		// Test that covers all possibilities, must match 004.phpt from wikidiff2
-		$x = <<<END
-foo bar
-baz
-quux
-bang
-END;
-		$y = <<<END
-foo test
-baz
-bang
-END;
-		$diffExpected = <<<END
-<div class="mw-diff-inline-header"><!-- LINES 1,1 --></div>
-<div class="mw-diff-inline-changed">foo <del>bar</del><ins>test</ins></div>
-<div class="mw-diff-inline-context">baz</div>
-<div class="mw-diff-inline-deleted"><del>quux</del></div>
-<div class="mw-diff-inline-context">bang</div>
-
-END;
-		$diff = new InlineDifferenceEngine;
-		$this->assertEquals(
-			$this->strip( $diffExpected ),
-			$diff->generateTextDiffBody( $this->strip( $x ), $this->strip( $y ) )
-		);
-	}
-
-	private function strip( $text ) {
-		return str_replace( "\r", '', $text ); // Windows, $@#!%#!
 	}
 }
 

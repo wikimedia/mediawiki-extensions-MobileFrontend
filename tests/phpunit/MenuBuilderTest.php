@@ -18,12 +18,20 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 		'class' => 'mw-ui-icon mw-ui-icon-before mw-ui-icon-nearby',
 	);
 
+	/**
+	 * @covers MenuBuilder::getEntries
+	 */
 	public function test_it_shouldnt_have_entries_by_default() {
 		$menu = new MenuBuilder();
 
 		$this->assertEmpty( $menu->getEntries() );
 	}
 
+	/**
+	 * @covers MenuBuilder::insert
+	 * @covers MenuEntry::addComponent
+	 * @covers MenuBuilder::getEntries
+	 */
 	public function test_inserting_an_entry() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' )
@@ -46,6 +54,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}
 
+	/**
+	 * @covers MenuBuilder::insert
+	 * @covers MenuEntry::addComponent
+	 * @covers MenuBuilder::getEntries
+	 */
 	public function test_inserting_an_entry_after_another() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' )
@@ -94,6 +107,8 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry doesn't exist.
+	 * @covers MenuBuilder::insertAfter
+	 * @covers MenuEntry::addComponent
 	 */
 	public function test_inserting_an_entry_after_that_doesnt_exist() {
 		$menu = new MenuBuilder();
@@ -108,6 +123,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
+	 * @covers MenuBuilder::insert
 	 */
 	public function test_inserting_an_entry_with_an_existing_name() {
 		$menu = new MenuBuilder();
@@ -118,6 +134,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
+	 * @covers MenuBuilder::insert
 	 */
 	public function test_inserting_an_entry_with_an_existing_name_after() {
 		$menu = new MenuBuilder();
@@ -125,6 +142,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 		$menu->insertAfter( 'home', 'home' );
 	}
 
+	/**
+	 * @covers MenuBuilder::insert
+	 * @covers MenuEntry::addComponent
+	 * @covers MenuBuilder::getEntries
+	 */
 	public function test_inserting_an_entry_with_multiple_components() {
 		$authLoginComponent = array(
 			'text' => 'Phuedx (WMF)',
@@ -165,6 +187,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}
 
+	/**
+	 * @covers MenuBuilder::insert
+	 * @covers MenuEntry::addComponent
+	 * @covers MenuBuilder::getEntries
+	 */
 	public function test_inserting_a_javascript_only_entry() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'nearby', $isJSOnly = true )

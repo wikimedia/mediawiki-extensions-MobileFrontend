@@ -72,6 +72,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideSections
+	 * @covers ApiMobileView::parseSections
 	 */
 	public function testParseSections( $expectedSections, $expectedMissing, $str ) {
 		$data = array(
@@ -148,6 +149,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideView
+	 * @covers ApiMobileView::execute
 	 */
 	public function testView( array $input, array $expected ) {
 		$api = $this->getMobileViewApi( $input );
@@ -156,6 +158,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideViewWithTransforms
+	 * @covers ApiMobileView::execute
 	 */
 	public function testViewWithTransforms( array $input, array $expected ) {
 		if ( version_compare(

@@ -6,6 +6,7 @@
 class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getGetPluralLicenseInfo
+	 * @covers MobileFrontendSkinHooks::getPluralLicenseInfo
 	 */
 	public function testGetPluralLicenseInfo( $isDisabledValue, $license, $expectedResult ) {
 		$msgObj = $this->getMockBuilder( 'Message' )
