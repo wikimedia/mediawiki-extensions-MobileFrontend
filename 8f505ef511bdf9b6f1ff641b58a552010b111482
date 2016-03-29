@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_606435af",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-29T18:21:14Z",
+      "side": 1,
+      "message": "Yup, my bad, I thought you had introduced this but I see now this was part of the old always handler.\n\nWe should definitely get that code documented better.",
+      "parentUuid": "ee33df1d_0ce92d7b",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_ec7e89e0",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 9
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_8069798a",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-29T18:21:14Z",
+      "side": 1,
+      "message": "Right now, the editing team can rely on events being always logged here as the navigation away from the page occurs inside the deferred handler.\n\nThis changes that behaviour, note that many of these events will now be lost as http requests get cancelled - that said this speeds up the editing experience. This will however lead to less events to be logged by the editing schema which may cause alarm to the editing team if it\u0027s part of their KPIs.\n\nI do not feel comfortable merging this patch in current form without someone from the editing team Okaying this change.\n\nI would feel more comfortable if we retained the current behaviour of using `always` and doing this in a follow up.",
+      "parentUuid": "ee33df1d_acf9214c",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_cc1aa5cf",
         "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
         "patchSetId": 9
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "I could, but I was wondering why I should tackle problems not related to the goal of the patch? Can we just not do so after the patch has been merged? I bet we could ask many questions about the other aspect of the already existing code.",
       "parentUuid": "ee33df1d_cc1aa5cf",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_c05b81fb",
+        "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-03-29T18:21:14Z",
+      "side": 1,
+      "message": "Sure, it would just give me more confidence about merging since I\u0027m not sure what\u0027s going on here.",
+      "parentUuid": "ee33df1d_ccbc656a",
       "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
