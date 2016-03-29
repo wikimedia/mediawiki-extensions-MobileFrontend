@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "ee33df1d_609f1563",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-29T18:33:47Z",
+      "side": 1,
+      "message": "Not entirely true. This looks like events are always being logged, but if you look at https://gerrit.wikimedia.org/r/#/c/272921/9/resources/mobile.loggingSchemas/SchemaEdit.js line 61, it just uses mw.track behind the scene then resolves the deferred. Here we\u0027re just running the mw.track with this.log, which is identical to what we have. I don\u0027t think the behavior is changing at all.",
+      "parentUuid": "ee33df1d_8069798a",
+      "revId": "8f505ef511bdf9b6f1ff641b58a552010b111482",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_cc1aa5cf",
         "filename": "resources/mobile.loggingSchemas/schemaEdit.js",
         "patchSetId": 9
