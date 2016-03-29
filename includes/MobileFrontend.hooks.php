@@ -184,11 +184,8 @@ class MobileFrontendHooks {
 
 	public static function onSkinAfterBottomScripts( $sk, &$html ) {
 		$context = MobileContext::singleton();
-		$mfLazyLoadImages = $context->getMFConfig()->get( 'MFLazyLoadImages' );
 
-		$removeImages = $mfLazyLoadImages['base'] ||
-			( $context->isBetaGroupMember() && $mfLazyLoadImages['beta'] );
-		if ( $removeImages ) {
+		if ( $context->isLazyLoadImagesEnabled() ) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
 			) );
@@ -384,6 +381,10 @@ class MobileFrontendHooks {
 			return;
 		}
 
+		if ( $context->isLazyLoadImagesEnabled() ) {
+			$confstr .= '!lazyloadimages';
+		}
+
 		if ( $context->imagesDisabled() ) {
 			$confstr .= '!noimg';
 		}
@@ -468,7 +469,6 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
-			'wgMFLazyLoadImages' => $config->get( 'MFLazyLoadImages' ),
 			'wgMFLazyLoadReferences' => $config->get( 'MFLazyLoadReferences' ),
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
 				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
@@ -1322,6 +1322,7 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ){
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
+			$vars['wgMFLazyLoadImages'] = $context->isLazyLoadImagesEnabled();
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();

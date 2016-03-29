@@ -58,10 +58,8 @@ class ExtMobileFrontend {
 		);
 
 		$mfLazyLoadReferences = $config->get( 'MFLazyLoadReferences' );
-		$mfLazyLoadImages = $config->get( 'MFLazyLoadImages' );
 
-		$removeImages = $mfLazyLoadImages['base'] ||
-			( $isBeta && $mfLazyLoadImages['beta'] );
+		$removeImages = $context->isLazyLoadImagesEnabled();
 		$removeReferences = $mfLazyLoadReferences['base'] ||
 			( $isBeta && $mfLazyLoadReferences['beta'] );
 
