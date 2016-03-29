@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_3b10a052",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-03-29T19:57:25Z",
+      "side": 1,
+      "message": "Should we change LAZY_LOAD_IMAGES_VALUE to LAZY_LOAD_IMAGES_COOKIE_VALUE to be consistent?",
+      "revId": "8187af10d5efe5679e27ee00d994432221e6763c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
