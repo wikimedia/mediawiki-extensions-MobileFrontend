@@ -1196,7 +1196,6 @@ class MobileFrontendHooks {
 		);
 
 		$scripts = array(
-			'resources/mobile.loggingSchemas/SchemaEdit.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
 			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
 			'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
@@ -1205,6 +1204,8 @@ class MobileFrontendHooks {
 		);
 
 		$schemaModules = array();
+		$schemaEdit = $mfResourceFileModuleBoilerplate;
+
 		if ( class_exists( 'EventLogging' ) ) {
 			$schemaModules = array_map(
 				function ( $schema ) {
@@ -1212,6 +1213,19 @@ class MobileFrontendHooks {
 				},
 				array_keys( self::getEventLoggingSchemas() )
 			);
+
+			// schema.Edit is provided by WikimediaEvents
+			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
+				$schemaEdit += array(
+					'dependencies' => array(
+						'schema.Edit',
+						'mobile.user'
+					),
+					'scripts' => array(
+						'resources/mobile.loggingSchemas/schemaEdit.js',
+					)
+				);
+			}
 		}
 
 		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
@@ -1224,7 +1238,10 @@ class MobileFrontendHooks {
 			'scripts' => $scripts,
 		);
 
-		$resourceLoader->register( array( 'mobile.loggingSchemas' => $loggingSchemasModule ) );
+		$resourceLoader->register( array(
+			'mobile.loggingSchemas' => $loggingSchemasModule,
+			'mobile.loggingSchemas.edit' => $schemaEdit
+		) );
 	}
 
 	/**

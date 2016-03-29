@@ -36,8 +36,7 @@
 		isVisualEditorEnabled = veConfig,
 		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
 		drawer,
-		$caEdit = $( '#ca-edit' ),
-		SchemaEdit = M.require( 'mobile.loggingSchemas/SchemaEdit' );
+		$caEdit = $( '#ca-edit' );
 
 	if ( user.isAnon() ) {
 		blockInfo = false;
@@ -152,8 +151,7 @@
 					oldId: mw.util.getParamValue( 'oldid' ),
 					contentLang: $content.attr( 'lang' ),
 					contentDir: $content.attr( 'dir' ),
-					sessionId: mw.user.generateRandomSessionId(),
-					editSchema: new SchemaEdit
+					sessionId: mw.user.generateRandomSessionId()
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces,
 				initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
@@ -168,7 +166,7 @@
 			 * @method
 			 */
 			function logInit( editor ) {
-				editorOptions.editSchema.log( {
+				mw.track( 'mf.schemaEdit', {
 					action: 'init',
 					type: 'section',
 					mechanism: initMechanism,
