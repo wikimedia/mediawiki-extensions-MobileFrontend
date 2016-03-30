@@ -1156,7 +1156,6 @@ class MobileFrontendHooks {
 			'MobileWebLanguageSwitcher' => 15302503,
 			'MobileWebMainMenuClickTracking' => 11568715,
 			'MobileWebSearch' => 12054448,
-			'MobileWebWatching' => 11761466,
 			'MobileWebWatchlistClickTracking' => 10720361,
 		);
 	}
