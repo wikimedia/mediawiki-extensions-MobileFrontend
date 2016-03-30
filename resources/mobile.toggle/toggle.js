@@ -235,6 +235,7 @@
 
 		$container.children( tagName ).each( function ( i ) {
 			var $heading = $( this ),
+				$indicator = $heading.find( '.indicator' ),
 				id = prefix + 'collapsible-block-' + i;
 			// Be sure there is a div wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
@@ -256,8 +257,15 @@
 							self.toggle.call( self, $( this ) );
 						}
 					} );
-				indicator = new Icon( arrowOptions ).prependTo( $heading );
-				$heading.data( 'indicator', indicator );
+
+				indicator = new Icon( arrowOptions );
+				if ( $indicator.length ) {
+					// replace the existing indicator
+					$indicator.replaceWith( indicator.$el );
+				} else {
+					indicator.prependTo( $heading );
+				}
+				$heading.data( 'indicator', indicator.$el );
 				$heading.next( 'div' )
 					.addClass( 'collapsible-block' )
 					.eq( 0 )
