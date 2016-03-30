@@ -172,10 +172,9 @@ class MobileContext extends ContextSource {
 		if ( $this->lazyLoadImages === null ) {
 			$mfLazyLoadImages = $this->getMFConfig()->get( 'MFLazyLoadImages' );
 			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_IMAGES_COOKIE_NAME, '' );
-			$removeImages = $mfLazyLoadImages['base'] ||
+			$this->lazyLoadImages = $mfLazyLoadImages['base'] ||
 				( $this->isBetaGroupMember() && $mfLazyLoadImages['beta'] ) ||
 				$cookie === self::LAZY_LOAD_IMAGES_COOKIE_VALUE;
-			$this->lazyLoadImages = $removeImages;
 		}
 		return $this->lazyLoadImages;
 	}
