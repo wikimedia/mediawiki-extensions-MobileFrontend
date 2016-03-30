@@ -57,12 +57,15 @@ class SkinMinervaBeta extends SkinMinerva {
 				);
 				$languageSwitcherClasses = '';
 			}
-			$menu['language-switcher'] = array( 'id' => 'language-switcher', 'text' => '',
-				'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
-				'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
-				'links' => $languageSwitcherLinks
-			);
-			$tpl->set( 'page_actions', $menu );
+			if ( $this->getMFConfig()->get( 'MinervaAlwaysShowLanguageButton' ) ||
+				$this->doesPageHaveLanguages ) {
+				$menu['language-switcher'] = array( 'id' => 'language-switcher', 'text' => '',
+					'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
+					'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
+					'links' => $languageSwitcherLinks
+				);
+				$tpl->set( 'page_actions', $menu );
+			}
 		} else {
 			$tpl->set( 'page_actions', array() );
 		}
