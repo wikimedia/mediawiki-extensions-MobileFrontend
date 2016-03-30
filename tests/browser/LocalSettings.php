@@ -21,3 +21,6 @@ $wgHooks['InterwikiLoadPrefix'][] = function ( $prefix, &$iwdata ) {
 $wgInterwikiCache = false;
 
 $wgMFEnableBeta = true;
+
+// needed for testing whether the language button is displayed and disabled
+$wgMinervaAlwaysShowLanguageButton = true;

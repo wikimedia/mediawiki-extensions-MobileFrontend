@@ -2037,7 +2037,9 @@
 			"stable": 0
 		},
 		"MFSchemaEditSampleRate": 0.0625,
-		"MFAllowNonJavaScriptEditing": false
+		"MFAllowNonJavaScriptEditing": false,
+		"@MinervaAlwaysShowLanguageButton": "Whether to show the language switcher button even if no languages are available for the page.",
+		"MinervaAlwaysShowLanguageButton": true
 	},
 	"manifest_version": 1
 }
