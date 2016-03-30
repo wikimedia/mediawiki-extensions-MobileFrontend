@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_343f0eb3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-03-30T11:19:02Z",
+      "side": 1,
+      "message": "why do you save the value in a separate local variable? That doesn\u0027t make much sense to me :)",
+      "revId": "89ad4e5f3c00df82b40fa70237c12f2b6b889488",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
