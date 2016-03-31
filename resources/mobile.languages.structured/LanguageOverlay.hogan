@@ -15,7 +15,7 @@
 						<span class="lang">{{lang}}</span>
 					</div>
 					<div>
-						<span class="langname">{{langname}}</span>
+						<span class="autonym">{{autonym}}</span>
 						{{#title}}
 							<span class="title">{{title}}</span>
 						{{/title}}
@@ -36,7 +36,7 @@
 						<span class="lang">{{lang}}</span>
 					</div>
 					<div>
-						<span class="langname">{{langname}}</span>
+						<span class="autonym">{{autonym}}</span>
 						{{#title}}
 							<span class="title">{{title}}</span>
 						{{/title}}

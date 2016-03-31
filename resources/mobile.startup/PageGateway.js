@@ -192,33 +192,6 @@
 		},
 
 		/**
-		 * Gets language list for a page; helper function for getPageLanguages()
-		 *
-		 * @method
-		 * @private
-		 * @param  {Object} data Data from API
-		 * @return {Array} List of language objects
-		 */
-		_getLanguagesFromApiResponse: function ( data ) {
-			// allAvailableLanguages is a mapping of all codes to language names
-			var pages, langlinks, allAvailableLanguages = {};
-			$.each( data.query.languages, function ( index, item ) {
-				allAvailableLanguages[item.code] = item.name;
-			} );
-
-			pages = data.query.pages;
-			// FIXME: "|| []" wouldn't be needed if API was more consistent
-			langlinks = pages[0] ? pages[0].langlinks || [] : [];
-
-			$.each( langlinks, function ( index, item ) {
-				item.langname = allAvailableLanguages[ item.lang ];
-				item.title = item.title || false;
-			} );
-
-			return langlinks;
-		},
-
-		/**
 		 * Gets language variant list for a page; helper function for getPageLanguages()
 		 *
 		 * @method
@@ -239,7 +212,7 @@
 			// Create the data object for each variant and store it
 			$.each( generalData.variants, function ( index, item ) {
 				var variant = {
-					langname: item.name,
+					autonym: item.name,
 					lang: item.code
 				};
 				if ( variantPath ) {
@@ -272,15 +245,15 @@
 			this.api.get( {
 					action: 'query',
 					meta: 'siteinfo',
-					siprop: 'general|languages',
+					siprop: 'general',
 					prop: 'langlinks',
-					llprop: 'url',
+					llprop: 'url|autonym',
 					lllimit: 'max',
 					titles: title,
 					formatversion: 2
 				} ).done( function ( resp ) {
 					result.resolve( {
-						languages: self._getLanguagesFromApiResponse( resp ),
+						languages: resp.query.pages[0].langlinks || [],
 						variants: self._getLanguageVariantsFromApiResponse( title, resp )
 					} );
 				} ).fail( $.proxy( result, 'reject' ) );
