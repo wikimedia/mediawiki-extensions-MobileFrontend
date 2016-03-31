@@ -394,7 +394,7 @@
 	"mobile-frontend-donate-button-label": "Faire un don",
 	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie",
 	"mobile-frontend-loading-message": "Chargement…",
-	"mobile-frontend-console-recruit": "\\o/ Hé ! Ceci est un logiciel en source libre et nous avons besoin de volontaires pour nous aider à construire cette chose, la rendre meilleure et résoudre les éventuels bogues que vous pourriez voir dans cette console JavaScript !\n\nVous pouvez trouver notre carnet de commandes à https://phabricator.wikimedia.org/project/profile/67/",
+	"mobile-frontend-console-recruit": "\\o/ Hé ! Ceci est un logiciel libre et nous avons besoin de volontaires pour nous aider à le construire, l’améliorer et résoudre les éventuels bogues que vous pourriez voir dans cette console JavaScript !\n\nVous pouvez trouver notre carnet de commandes à https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "D’accord",
 	"mobile-frontend-panel-cancel": "Non merci",
 	"mobile-frontend-panel-betaoptin-msg": "Voulez-vous essayer quelques nouvelles fonctionnalités ? En adhérant à la bêta, vous aurez accès à des fonctionnalités expérimentales, au risque de rencontrer des bogues et problèmes.",
