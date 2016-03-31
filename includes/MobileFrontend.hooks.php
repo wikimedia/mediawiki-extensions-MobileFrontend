@@ -183,7 +183,9 @@ class MobileFrontendHooks {
 	public static function onSkinAfterBottomScripts( $sk, &$html ) {
 		$context = MobileContext::singleton();
 
-		if ( $context->isLazyLoadImagesEnabled() ) {
+		// TODO: We may want to enable the following script on Desktop Minerva...
+		// ... when Minerva is widely used.
+		if ( $context->shouldDisplayMobileView() && $context->isLazyLoadImagesEnabled() ) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
 			) );
