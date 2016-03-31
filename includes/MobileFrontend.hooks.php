@@ -71,8 +71,6 @@ class MobileFrontendHooks {
 		$betaSkinName = $skinName . 'Beta';
 		// Force beta for test mode to sure all modules can run
 		$name = $context->getTitle()->getDBkey();
-		$inTestMode =
-			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
 		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
 		}
