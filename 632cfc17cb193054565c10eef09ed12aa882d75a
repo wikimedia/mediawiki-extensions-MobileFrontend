@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_a1634a3a",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1554,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-04-01T21:10:33Z",
+      "side": 1,
+      "message": "This will need to be removed now per T122504#2164328, no?",
+      "revId": "632cfc17cb193054565c10eef09ed12aa882d75a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
