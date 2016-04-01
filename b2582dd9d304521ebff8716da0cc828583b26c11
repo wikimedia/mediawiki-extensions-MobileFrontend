@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_fb950144",
+        "filename": "tests/qunit/mobile.search/test_MobileWebSearchLogger.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-01T18:40:27Z",
+      "side": 1,
+      "message": "This is just another way of doing what I did below. Hope it\u0027s not a problem.",
+      "revId": "b2582dd9d304521ebff8716da0cc828583b26c11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
