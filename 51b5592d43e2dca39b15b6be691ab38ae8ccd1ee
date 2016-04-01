@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_2616304e",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-04-01T19:40:53Z",
+      "side": 1,
+      "message": "Should not pass --clean, that causes bundle to clear the list of gems which by default is your user or system gem dir. That would cause a bunch of unwanted side effect on developer laptops.",
+      "revId": "51b5592d43e2dca39b15b6be691ab38ae8ccd1ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
