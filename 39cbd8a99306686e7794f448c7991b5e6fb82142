@@ -33,6 +33,24 @@
       "revId": "39cbd8a99306686e7794f448c7991b5e6fb82142",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_bbb419e6",
+        "filename": "tests/qunit/mobile.search/test_MobileWebSearchLogger.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-01T18:39:44Z",
+      "side": 1,
+      "message": "Thanks, I couldn\u0027t figure out how I should use this.getLastTrackedEvent in the updated code so I didn\u0027t implement it. Hope it\u0027s OK.",
+      "parentUuid": "ce38dbff_bb589936",
+      "revId": "39cbd8a99306686e7794f448c7991b5e6fb82142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
