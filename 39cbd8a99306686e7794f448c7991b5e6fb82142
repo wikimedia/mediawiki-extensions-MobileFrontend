@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_b8e9bf7d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T17:25:20Z",
+      "side": 1,
+      "message": "I\u0027m not sure that our localStorage-based method interfered with sendBeacon but I think I know what you mean… we\u0027re simply relying on sendBeacon now.",
+      "revId": "39cbd8a99306686e7794f448c7991b5e6fb82142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_bb589936",
+        "filename": "tests/qunit/mobile.search/test_MobileWebSearchLogger.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T17:25:20Z",
+      "side": 1,
+      "message": "I think these tests wouldn\u0027t have needed to be changed that much had you stubbed mw#track itself and made assertions about how it was called.\n\nGiven that we\u0027re no longer talking about calls to Schema#log in the test cases, could you introduce a simple helper function that makes it obvious where the data is coming from, e.g.\n\n    this.getLastTrackedEvent \u003d function () {\n      return this.data;\n    }\n\nI think this\u0027d make the test cases a little clearer – I\u0027ll admit, having just read them back, that this could have been done at the time of writing.",
+      "revId": "39cbd8a99306686e7794f448c7991b5e6fb82142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
