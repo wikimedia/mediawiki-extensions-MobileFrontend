@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_6767a123",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T07:52:46Z",
+      "side": 1,
+      "message": "This if-else block is selecting a strategy (!!!) for fetching a reference for a page.\n\nThis function should be split apart and made into methods on the ApiReferencesService and HtmlReferencesService classes. The selection and construction of these classes, i.e. this line, should be done in either the ReferencesServiceFactory class, e.g.\n\n    var config \u003d { /* ... /* };\n    var ReferenceServiceFactory \u003d M.require( \u0027mobile.references/ReferenceServiceFactory\u0027 );\n    var referencesService \u003d ReferenceServiceFactory.factory( config );\n\nor a factory function returned by the module, e.g.\n\n    var referencesService \u003d M.require( \u0027mobile.references\u0027 )( config );",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_c7af8ddd",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T07:52:46Z",
+      "side": 1,
+      "message": "Just return the promise returned by page.getReferenceFromHTML here.",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_e7fd713a",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T07:52:46Z",
+      "side": 1,
+      "message": "This name is inaccurate.\n\nI suggest breaking this method down into three methods:\n\n1. getReferenceByID\n2. getReferenceByIDFromHtml\n3. getReferenceByIDFromApi\n\nThe first hides the complexity of attempting the 2nd, then 3rd if applicable, and manipulation of state – storing the references HTML in the document. By the way, 2 and 3 should be private.\n\n---\n\nThis method should be a member of the ReferencesService class.",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

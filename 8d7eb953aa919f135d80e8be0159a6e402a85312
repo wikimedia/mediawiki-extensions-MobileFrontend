@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_27bd9917",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-01T07:52:46Z",
+      "side": 0,
+      "message": "Just return the promise returned by jQuery.Promise#then here.",
+      "revId": "8d7eb953aa919f135d80e8be0159a6e402a85312",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
