@@ -140,7 +140,7 @@
 			if ( val ) {
 				$.each( this.options.languages, function ( i, language ) {
 					// search by language code or language name
-					if ( language.langname.toLowerCase().indexOf( val ) > -1 ||
+					if ( language.autonym.toLowerCase().indexOf( val ) > -1 ||
 							language.lang.toLowerCase().indexOf( val ) > -1
 					) {
 						filteredList.push( language.lang );
@@ -150,7 +150,7 @@
 				if ( this.options.variants ) {
 					$.each( this.options.variants, function ( i, variant ) {
 						// search by variant code or variant name
-						if ( variant.langname.toLowerCase().indexOf( val ) > -1 ||
+						if ( variant.autonym.toLowerCase().indexOf( val ) > -1 ||
 							variant.lang.toLowerCase().indexOf( val ) > -1
 						) {
 							filteredList.push( variant.lang );
