@@ -67,7 +67,7 @@
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-current-language": "{{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-diffview-404-desc": "The id for the revision you requested does not exist.",
+	"mobile-frontend-diffview-404-desc": "The ID for the revision you requested does not exist.",
 	"mobile-frontend-diffview-404-title": "Bad revision",
 	"mobile-frontend-diffview-anonymous": "Anonymous user",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} added",
