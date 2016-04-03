@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_bc69a51f",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-03T06:00:57Z",
+      "side": 1,
+      "message": "I\u0027m still thinking about how this should work with respect to https://phabricator.wikimedia.org/T130551\n\n...\nI\u0027m also wondering whether it\u0027s worth throwing away the Cite api work given that work has stalled to avoid us having to maintain two services where only one is ever needed.",
+      "parentUuid": "ce38dbff_6767a123",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_c7af8ddd",
         "filename": "resources/mobile.references/references.js",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_fc632d39",
+        "filename": "resources/mobile.references/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-03T06:00:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_c7af8ddd",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_e7fd713a",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2016-04-01T07:52:46Z",
       "side": 1,
       "message": "This name is inaccurate.\n\nI suggest breaking this method down into three methods:\n\n1. getReferenceByID\n2. getReferenceByIDFromHtml\n3. getReferenceByIDFromApi\n\nThe first hides the complexity of attempting the 2nd, then 3rd if applicable, and manipulation of state – storing the references HTML in the document. By the way, 2 and 3 should be private.\n\n---\n\nThis method should be a member of the ReferencesService class.",
+      "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_7c78bded",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-03T06:00:57Z",
+      "side": 1,
+      "message": "When looking at this again i realised we already have PageGateway.\nI\u0027ve renamed the function but made this always use HTML now but it uses PageGateway to load into the DOM and then lookup from there.\n\nThe page parameter was redundant.\n\nGiven these changes I think the function makes sense and doesn\u0027t need breaking down further but let me know if you disagree.",
+      "parentUuid": "ce38dbff_e7fd713a",
       "revId": "424ce2ff5c835682db9089eb39c763f0bd68f323",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
