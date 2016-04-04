@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_d62720b0",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 1519,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-04T11:05:40Z",
+      "side": 1,
+      "message": "This note was causing the ExtensionProcessor to choke as it\u0027s not a valid array (nor is it a valid RL module). IIRC it\u0027s not recommended to include comments in extension.json any more – I might be misremembering – so I\u0027ve removed it and I\u0027d recommend that we convert it to an (easy) task for the following sprint.",
+      "revId": "cf7b153a760b15dacdb84e52fc709bedb7e8f356",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
