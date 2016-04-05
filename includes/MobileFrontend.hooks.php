@@ -1145,19 +1145,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Returns an array of schema names mapped to a schema revision ID
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetLessVars
-	 * @param array Array of schema names associated to revision IDs
-	 */
-	private static function getEventLoggingSchemas() {
-		return array(
-			'MobileWebDiffClickTracking' => 10720373,
-			'MobileWebWatchlistClickTracking' => 10720361,
-		);
-	}
-
-	/**
 	 * EventLoggingRegisterSchemas hook handler.
 	 *
 	 * Registers our EventLogging schemas so that they can be converted to
@@ -1172,9 +1159,6 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onEventLoggingRegisterSchemas( &$schemas ) {
-		$schemas += self::getEventLoggingSchemas();
-		// eventually we'll get rid of the getEventLoggingSchemas function
-		// FIXME: remove the above comment when we do
 		$schemas['MobileWebMainMenuClickTracking'] = 11568715;
 		$schemas['MobileWebSearch'] = 12054448;
 		$schemas['MobileWebLanguageSwitcher'] = 15302503;
@@ -1206,13 +1190,6 @@ class MobileFrontendHooks {
 		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
 		if ( class_exists( 'EventLogging' ) ) {
-			$schemaModules = array_map(
-				function ( $schema ) {
-					return "schema.{$schema}";
-				},
-				array_keys( self::getEventLoggingSchemas() )
-			);
-
 			// schema.Edit is provided by WikimediaEvents
 			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
 				$schemaEdit += array(

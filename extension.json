@@ -1523,11 +1523,7 @@
 				"mobile",
 				"desktop"
 			],
-			"dependencies": [
-				"mobile.loggingSchemas"
-			],
 			"scripts": [
-				"resources/mobile.special.mobilediff.scripts/mobilediff.js"
 			]
 		},
 		"skins.minerva.special.styles": {

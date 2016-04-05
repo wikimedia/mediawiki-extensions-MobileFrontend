@@ -1,11 +1,6 @@
 ( function ( M, $ ) {
 	var watchlist,
-		WatchList = M.require( 'mobile.watchlist/WatchList' ),
-		SchemaMobileWebClickTracking = M.require( 'mobile.loggingSchemas/SchemaMobileWebClickTracking' ),
-		wlSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebWatchlistClickTracking' ),
-		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
-		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',
-		subPageName = mw.util.getParamValue( 'watchlistview' ) || 'a-z';
+		WatchList = M.require( 'mobile.watchlist/WatchList' );
 
 	/**
 	 * Initialises JavaScript on Special:Watchlist
@@ -13,8 +8,7 @@
 	 * @ignore
 	 */
 	function init() {
-		var $watchlist = $( 'ul.page-list' ),
-			actionNamePrefix = pageName + '-' + subPageName + '-';
+		var $watchlist = $( 'ul.page-list' );
 
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
@@ -25,24 +19,9 @@
 				enhance: true
 			} );
 			$watchlist.find( '.page-summary .info' ).css( 'visibility', 'visible' );
-			watchlist.on( 'unwatch', function () {
-				wlSchema.log( {
-					name: actionNamePrefix + 'unwatch'
-				} );
-			} );
-			watchlist.on( 'watch', function () {
-				wlSchema.log( {
-					name: actionNamePrefix + 'watch'
-				} );
-			} );
 		}
 		// not needed now we have JS view which has infinite scrolling
 		$( '.more' ).remove();
-
-		// Register EventLogging events
-		wlSchema.hijackLink( '.button-bar a', actionNamePrefix + 'switch' );
-		wlSchema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
-		wlSchema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
 	}
 
 	$( function () {
