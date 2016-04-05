@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_520f9533",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1130,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-05T09:43:16Z",
+      "side": 1,
+      "message": "We should discuss this – deferring chores until later – and take a stance as a team.",
+      "parentUuid": "ce38dbff_0019667e",
+      "revId": "135066e3616354e3f5266157589ce0249b0988f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_20e7cd0e",
         "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Good idea. I think the reason it was added was because it simplified the inline code.",
       "parentUuid": "ee33df1d_20e7cd0e",
+      "revId": "135066e3616354e3f5266157589ce0249b0988f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_1206ad20",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-05T09:43:16Z",
+      "side": 1,
+      "message": "There\u0027s nothing wrong with giving a chunk of code a name, which, IIRC, was what I argued when I asked for this chunk of code to be moved into a well-named function.",
+      "parentUuid": "ce38dbff_20274ab3",
       "revId": "135066e3616354e3f5266157589ce0249b0988f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
