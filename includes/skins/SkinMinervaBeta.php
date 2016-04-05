@@ -62,7 +62,8 @@ class SkinMinervaBeta extends SkinMinerva {
 				$menu['language-switcher'] = array( 'id' => 'language-switcher', 'text' => '',
 					'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
 					'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
-					'links' => $languageSwitcherLinks
+					'links' => $languageSwitcherLinks,
+					'is_js_only' => false
 				);
 				$tpl->set( 'page_actions', $menu );
 			}

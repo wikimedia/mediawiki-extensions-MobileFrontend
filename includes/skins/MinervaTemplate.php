@@ -126,12 +126,16 @@ class MinervaTemplate extends BaseTemplate {
 	protected function getPageActionsHtml( $data ) {
 		$actions = $this->getPageActions();
 		$html = '';
+		$isJSOnly = true;
 		if ( $actions ) {
-			$html = '<ul id="page-actions" class="hlist">';
 			foreach ( $actions as $key => $val ) {
+				if ( isset( $val['is_js_only'] ) && !$val['is_js_only'] ) {
+					$isJSOnly = false;
+				}
 				$html .= $this->makeListItem( $key, $val );
 			}
-			$html .= '</ul>';
+			$additionalClasses = $isJSOnly ? 'jsonly' : '';
+			$html = '<ul id="page-actions" class="hlist ' . $additionalClasses . '">' . $html . '</ul>';
 		}
 		return $html;
 	}

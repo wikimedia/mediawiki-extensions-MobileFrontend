@@ -817,6 +817,12 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepare configured and available page actions
+	 *
+	 * When adding new page actions make sure each menu item has
+	 * <code>is_js_only</code> key set to <code>true</code> or <code>false</code>.
+	 * The key will be used to decide whether to display the page actions
+	 * wrapper on the front end. The key will be considered false if not set.
+	 *
 	 * @param BaseTemplate $tpl
 	 */
 	protected function preparePageActions( BaseTemplate $tpl ) {
@@ -844,7 +850,8 @@ class SkinMinerva extends SkinTemplate {
 						'edit' => array(
 							'href' => $this->getTitle()->getLocalUrl( array( 'action' => 'edit', 'section' => 0 ) )
 					)
-				)
+				),
+				'is_js_only' => !$noJsEdit
 			);
 		}
 
@@ -854,6 +861,7 @@ class SkinMinerva extends SkinTemplate {
 				// Use blank icon to reserve space for watchstar icon once JS loads
 				'class' => MobileUI::iconClass( '', 'element',
 					'icon-32px watch-this-article' ),
+				'is_js_only' => true
 			);
 			// standardise watch article into one menu item
 			if ( isset( $actions['watch'] ) ) {
