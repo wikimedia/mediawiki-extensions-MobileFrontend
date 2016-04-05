@@ -55,26 +55,20 @@
 			this.$languageItems = this.$siteLinksList.find( 'a' );
 			this.$subheaders = this.$( 'h3' );
 
-			if ( this.options.languageSwitcherSchema ) {
-				this.options.languageSwitcherSchema.log( {
-					event: 'languageListLoaded',
-					languageOverlayVersion: 'structured-overlay',
-					languageCount: this.$languageItems.length
-				} );
-			}
+			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
+				event: 'languageListLoaded',
+				languageOverlayVersion: 'structured-overlay',
+				languageCount: this.$languageItems.length
+			} );
 		},
 		/** @inheritdoc */
 		onExit: function () {
-			if ( this.options.languageSwitcherSchema ) {
-				this.options.languageSwitcherSchema.log( {
-					event: 'exitModal',
-					exitModal: 'dismissed',
-					searchInputHasQuery: this.$searchInput.val().length > 0,
-					languageCount: this.$siteLinksList.children( ':visible' ).length
-				} );
-				// stop logging when the user decides to close the modal
-				this.options.languageSwitcherSchema.stopLogging = true;
-			}
+			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
+				event: 'exitModal',
+				exitModal: 'dismissed',
+				searchInputHasQuery: this.$searchInput.val().length > 0,
+				languageCount: this.$siteLinksList.children( ':visible' ).length
+			} );
 
 			Overlay.prototype.onExit.apply( this, arguments );
 		},
@@ -99,16 +93,14 @@
 				}
 			} );
 
-			if ( this.options.languageSwitcherSchema ) {
-				this.options.languageSwitcherSchema.log( {
-					event: 'exitModal',
-					exitModal: 'tapped-on-result',
-					languageTapped: lang,
-					positionOfLanguageTapped: index,
-					searchInputHasQuery: searchInputHasQuery,
-					languageCount: $visibleLanguageLinks.length
-				} );
-			}
+			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
+				event: 'exitModal',
+				exitModal: 'tapped-on-result',
+				languageTapped: lang,
+				positionOfLanguageTapped: index,
+				searchInputHasQuery: searchInputHasQuery,
+				languageCount: $visibleLanguageLinks.length
+			} );
 		},
 
 		/**
@@ -119,13 +111,11 @@
 			this.filterLanguages( $( ev.target ).val().toLowerCase() );
 
 			// log when the first search character is entered
-			if ( this.options.languageSwitcherSchema ) {
-				if ( !this.hasFirstSearchBeenLogged ) {
-					this.options.languageSwitcherSchema.log( {
-						event: 'startLanguageSearch'
-					} );
-					this.hasFirstSearchBeenLogged = true;
-				}
+			if ( !this.hasFirstSearchBeenLogged ) {
+				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
+					event: 'startLanguageSearch'
+				} );
+				this.hasFirstSearchBeenLogged = true;
 			}
 		},
 

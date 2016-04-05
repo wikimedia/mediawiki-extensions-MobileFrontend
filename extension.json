@@ -1182,7 +1182,8 @@
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mediawiki.storage",
-				"mobile.overlays"
+				"mobile.overlays",
+				"mobile.loggingSchemas.mobileWebLanguageSwitcher"
 			],
 			"scripts": [
 				"resources/mobile.languages.structured/util.js",
@@ -1577,6 +1578,7 @@
 				"mobile.startup",
 				"mobile.mainMenu",
 				"mobile.loggingSchemas",
+				"mobile.loggingSchemas.mobileWebLanguageSwitcher",
 				"mobile.issues",
 				"mobile.search",
 				"mobile.references",

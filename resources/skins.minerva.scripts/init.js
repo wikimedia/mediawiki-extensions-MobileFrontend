@@ -13,8 +13,6 @@
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
-		schemaMobileWebLanguageSwitcher = M.require(
-			'mobile.loggingSchemas/schemaMobileWebLanguageSwitcher' ),
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
 		betaOptinPanel;
@@ -61,7 +59,7 @@
 			if ( mw.viewport.isElementInViewport( $languageSwitcherBtn[0] ) ) {
 				M.off( 'scroll', logLanguageButtonImpression );
 
-				schemaMobileWebLanguageSwitcher.log( {
+				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
 					event: 'languageButtonImpression'
 				} );
 			}
@@ -91,7 +89,7 @@
 		}
 
 		if ( $languageSwitcherBtn.length ) {
-			schemaMobileWebLanguageSwitcher.log( {
+			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
 				event: 'pageLoaded',
 				beaconCapable: $.isFunction( navigator.sendBeacon )
 			} );
@@ -127,7 +125,7 @@
 				}
 
 				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
-				schemaMobileWebLanguageSwitcher.log( {
+				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
 					event: 'languageButtonTap',
 					languageButtonVersion: languageButtonVersion,
 					languageButtonTappedBucket: tapCountBucket,
@@ -195,7 +193,6 @@
 					currentLanguage: mw.config.get( 'wgContentLanguage' ),
 					languages: data.languages,
 					variants: data.variants,
-					languageSwitcherSchema: schemaMobileWebLanguageSwitcher,
 					deviceLanguage: getDeviceLanguage()
 				} ) );
 			} );
