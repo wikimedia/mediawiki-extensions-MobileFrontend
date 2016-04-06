@@ -69,6 +69,24 @@
       "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_2be7f410",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-06T20:40:54Z",
+      "side": 1,
+      "message": "Yeh I understood what you were suggesting but I don\u0027t really understand the need to complicate things - the 3 variables should not change and even if they do it\u0027s no hardship updating 3 values :)\n\nWith regards to the name, I dunno hah. Naming is hard I guess :-).",
+      "parentUuid": "ce38dbff_4b06b821",
+      "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
