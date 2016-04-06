@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_ab5b0425",
+        "filename": "resources/mobile.loggingSchemas/schemaMobileWebMainMenuClickTracking.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-06T19:47:58Z",
+      "side": 1,
+      "message": "I wonder how useful this info will be as we\u0027re going to remove Schema soon.",
+      "parentUuid": "ce38dbff_9862d404",
+      "revId": "b2faed161d4bbea314583c6f6ac968e1be12691b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_4b54f801",
         "filename": "resources/mobile.mainMenu/MainMenu.js",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-06T19:46:33Z",
       "side": 1,
       "message": "This logs an event for every valid entry on the menu. This should be wrapped in a click handler. Better yet, you can remove the .each above and rely on event bubbling to handle clicks for all elements in the menu, i.e.\n\n    this.$el.on( \u0027click a\u0027, function () {\n      var eventName \u003d $( this ).data( \u0027event-name\u0027 );\n\n      if ( eventName ) {\n        mw.track( /* ... */ );\n      }\n    } );",
+      "revId": "b2faed161d4bbea314583c6f6ac968e1be12691b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_0ba030f0",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-06T19:47:58Z",
+      "side": 1,
+      "message": "oops, good catch.",
+      "parentUuid": "ce38dbff_4b54f801",
       "revId": "b2faed161d4bbea314583c6f6ac968e1be12691b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
