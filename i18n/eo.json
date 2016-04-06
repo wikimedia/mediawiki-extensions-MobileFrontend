@@ -7,7 +7,8 @@
 			"Objectivesea",
 			"Remux",
 			"Yekrats",
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"Lucas"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Entajpu konfirman kodon",
@@ -30,8 +31,6 @@
 	"mobile-frontend-donate-image-heading": "Viaj lastaj kontribuoj",
 	"mobile-frontend-donate-image-title": "Alŝutoj",
 	"mobile-frontend-donate-image-title-username": "Alŝutoj de $1",
-	"mobile-frontend-donate-photo-first-upload-success": "Sukceso! Dankon pro via unua kontribuo!",
-	"mobile-frontend-donate-photo-upload-success": "Sukceso! Via bildo nun povas esti uzatan en {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Nuligi",
 	"mobile-frontend-editor-cancel": "Nuligi",
 	"mobile-frontend-editor-edit": "Redakti",
@@ -45,9 +44,6 @@
 	"mobile-frontend-home-button": "Ĉefpaĝo",
 	"mobile-frontend-images-status": "Bildoj",
 	"mobile-frontend-language-article-heading": "Legi en alia lingvo",
-	"mobile-frontend-language-header": "Ĉi tiu paĝo disponas en $1 {{PLURAL:$1|lingvo|lingvoj}}",
-	"mobile-frontend-language-site-choose": "Traserĉi lingvon",
-	"mobile-frontend-language-variant-header": "Elekti variaĵon de {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-header": "Lingvoj",
 	"mobile-frontend-languages-header-page": "$1 - Lingvoj",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Ĉiuj lingvoj",
@@ -65,7 +61,7 @@
 	"mobile-frontend-main-menu-featured": "Elstara",
 	"mobile-frontend-main-menu-login": "Ensaluti",
 	"mobile-frontend-main-menu-logout": "Elsaluti",
-	"mobile-frontend-main-menu-nearby": "Apude",
+	"mobile-frontend-main-menu-nearby": "Ĉirkaŭe",
 	"mobile-frontend-main-menu-page-title": "Navigado de retejo",
 	"mobile-frontend-main-menu-settings": "Agordoj",
 	"mobile-frontend-main-menu-settings-heading": "Agordoj",
