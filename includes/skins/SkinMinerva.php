@@ -283,7 +283,8 @@ class SkinMinerva extends SkinTemplate {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
 			$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
-				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
+				$notifUser = MWEchoNotifUser::newFromUser( $user );
+				$count = $notifUser->getAlertCount() + $notifUser->getMessageCount();
 				$isZero = $count === 0;
 				$countLabel = EchoNotificationController::formatNotificationCount( $count );
 			}
