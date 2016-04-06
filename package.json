@@ -7,7 +7,6 @@
 	},
 	"dependencies": {
 		"jsdoc": "<=3.3.0",
-		"kss": ">=0.3.6",
 		"svgo": ">=0.4.4"
 	},
 	"devDependencies": {
