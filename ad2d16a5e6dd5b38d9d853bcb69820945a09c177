@@ -16,6 +16,24 @@
       "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_18924400",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-06T19:18:15Z",
+      "side": 1,
+      "message": "Maybe but given they are in the same place I don\u0027t see the value in that. What value do you see in doing @z-indexOverlay + 1 ?",
+      "parentUuid": "ce38dbff_16b228e1",
+      "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
