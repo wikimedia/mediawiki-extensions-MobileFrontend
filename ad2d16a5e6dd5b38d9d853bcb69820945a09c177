@@ -34,6 +34,24 @@
       "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_d80a9c28",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-06T19:35:28Z",
+      "side": 1,
+      "message": "I was suggesting something like @z-indexOverlay \u003d @z-indexBase + 1.\n\nIf we for some reason have to change the @z-indexBase, the other two will automatically be changed.",
+      "parentUuid": "ce38dbff_18924400",
+      "revId": "ad2d16a5e6dd5b38d9d853bcb69820945a09c177",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
