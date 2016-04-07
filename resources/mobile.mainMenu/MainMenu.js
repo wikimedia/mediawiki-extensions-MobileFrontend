@@ -68,14 +68,16 @@
 		/**
 		 * Turn on event logging on the existing main menu by reading `event-name` data
 		 * attributes on elements.
-		 * @param {SchemaMobileWebClickTracking} schema to use
 		 */
-		enableLogging: function ( schema ) {
-			this.$( 'a' ).each( function () {
+		enableLogging: function () {
+			this.$( 'a' ).on( 'click', function () {
 				var $link = $( this ),
 					eventName = $link.data( 'event-name' );
 				if ( eventName ) {
-					schema.hijackLink( $link, eventName );
+					mw.track( 'mf.schemaMobileWebMainMenuClickTracking', {
+						name: eventName,
+						destination: $link.attr( 'href' )
+					} );
 				}
 			} );
 		},
