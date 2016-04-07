@@ -611,8 +611,7 @@
 				"resources/mobile.startup/Section.js",
 				"resources/mobile.startup/Thumbnail.js",
 				"resources/mobile.startup/Page.js",
-				"resources/mobile.startup/Skin.js",
-				"resources/mobile.startup/Schema.js"
+				"resources/mobile.startup/Skin.js"
 			],
 			"position": "bottom"
 		},
@@ -765,7 +764,6 @@
 			],
 			"dependencies": [
 				"mobile.editor.overlay",
-				"mobile.loggingSchemas",
 				"oojs-ui.styles.icons-editing-styling",
 				"jquery.textSelection",
 				"mobile.editor.overlay.withtoolbar.images"
@@ -969,7 +967,6 @@
 			"dependencies": [
 				"mediawiki.Title",
 				"mobile.overlays",
-				"mobile.loggingSchemas",
 				"mobile.toast",
 				"mobile.search.api",
 				"mobile.search",
@@ -1239,7 +1236,6 @@
 				"mobile.ajax",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
-				"mobile.loggingSchemas",
 				"mobile.pagelist.scripts",
 				"mobile.foreignApi",
 				"mobile.messageBox"
@@ -1338,8 +1334,7 @@
 			"dependencies": [
 				"mobile.startup",
 				"mobile.settings",
-				"mobile.drawers",
-				"mobile.loggingSchemas"
+				"mobile.drawers"
 			],
 			"scripts": [
 				"resources/mobile.fontchanger/FontChanger.js"
@@ -1551,7 +1546,6 @@
 		"skins.minerva.special.watchlist.scripts": {
 			"targets": "mobile",
 			"dependencies": [
-				"mobile.loggingSchemas",
 				"mobile.startup",
 				"mobile.watchlist"
 			],
@@ -1574,7 +1568,6 @@
 			"dependencies": [
 				"mobile.startup",
 				"mobile.mainMenu",
-				"mobile.loggingSchemas",
 				"mobile.loggingSchemas.mobileWebLanguageSwitcher",
 				"mobile.issues",
 				"mobile.search",
@@ -1623,8 +1616,7 @@
 			],
 			"dependencies": [
 				"skins.minerva.editor",
-				"mobile.contentOverlays",
-				"mobile.loggingSchemas"
+				"mobile.contentOverlays"
 			],
 			"scripts": [
 				"resources/skins.minerva.newusers/init.js"

@@ -1037,11 +1037,13 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderRegisterModules hook handler
+	 * ResourceLoaderRegisterModules hook handler.
 	 *
-	 * Registers the mobile.loggingSchemas module
-	 * without a dependency on the EventLogging schema modules so that calls to the various log
-	 * functions are effectively NOPs.  And registers VisualEditor and Echo related modules.
+	 * Registers:
+	 *
+	 * * EventLogging schema modules, if the EventLogging extension is loaded;
+	 * * Modules for the Visual Editor overlay, if the VisualEditor extension is loaded; and
+	 * * Modules for the notifications overlay, if the Echo extension is loaded.
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
@@ -1148,8 +1150,7 @@ class MobileFrontendHooks {
 	 * EventLoggingRegisterSchemas hook handler.
 	 *
 	 * Registers our EventLogging schemas so that they can be converted to
-	 * ResourceLoaderSchemaModules by the EventLogging extension as the
-	 * mobile.loggingSchemas module.
+	 * ResourceLoaderSchemaModules by the EventLogging extension.
 	 *
 	 * If the module has already been registered in
 	 * onResourceLoaderRegisterModules, then it is overwritten.
@@ -1166,8 +1167,14 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Registers the mobile.loggingSchemas module with optional dependency on the
-	 * EventLogging schema modules registered in onEventLoggingRegisterSchemas
+	 * Registers the mobile.logging.* modules.
+	 *
+	 * If the EventLogging extension is loaded, then the modules are defined such that they
+	 * depend on their associated EventLogging-created schema module.
+	 *
+	 * If, however, the EventLogging extension isn't loaded, then the modules are defined such
+	 * that no additional assets are requested by the ResourceLoader, i.e. they are stub
+	 * modules.
 	 *
 	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 */
@@ -1178,12 +1185,6 @@ class MobileFrontendHooks {
 			'targets' => array( 'mobile', 'desktop' ),
 		);
 
-		$scripts = array(
-			'resources/mobile.loggingSchemas/SchemaMobileWeb.js',
-			'resources/mobile.loggingSchemas/SchemaMobileWebClickTracking.js',
-		);
-
-		$schemaModules = array();
 		$schemaEdit = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebLanguageSwitcher = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebMainMenuClickTracking = $mfResourceFileModuleBoilerplate;
@@ -1232,18 +1233,7 @@ class MobileFrontendHooks {
 			);
 		}
 
-		$loggingSchemasModule = $mfResourceFileModuleBoilerplate + array(
-			'dependencies' => array_merge( array(
-				'mediawiki.experiments',
-				'mediawiki.user',
-				'mobile.startup',
-				'mobile.settings',
-			), $schemaModules ),
-			'scripts' => $scripts,
-		);
-
 		$resourceLoader->register( array(
-			'mobile.loggingSchemas' => $loggingSchemasModule,
 			'mobile.loggingSchemas.edit' => $schemaEdit,
 			'mobile.loggingSchemas.mobileWebLanguageSwitcher' =>
 				$schemaMobileWebLanguageSwitcher,

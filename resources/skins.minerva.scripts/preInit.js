@@ -76,9 +76,4 @@
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
 		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
 	}
-
-	mw.loader.using( 'mobile.loggingSchemas' ).done( function () {
-		M.require( 'mobile.startup/Schema' ).flushBeacon();
-	} );
-
 }( mw.mobileFrontend, jQuery ) );

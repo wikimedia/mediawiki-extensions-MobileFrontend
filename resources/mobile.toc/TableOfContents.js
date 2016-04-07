@@ -7,7 +7,6 @@
 	 * @class TableOfContents
 	 * @extends View
 	 * @uses Icon
-	 * @uses SchemaMobileWebClickTracking
 	 */
 	function TableOfContents() {
 		View.apply( this, arguments );
