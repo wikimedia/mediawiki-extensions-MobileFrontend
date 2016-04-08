@@ -4,10 +4,13 @@
 @import "minerva.mixins";
 
 /* Left menu */
-@menuBorder: 12px;
+@menuSectionPadding: 22px;
 @menuBorderColor: #252525;
-@menuLinkLineHeight: 22px;
+@menuLinkLineHeight: 24px;
 @menuItemFontSize: 1.2em;
+@menuItemBackgroundColor: @colorGray4;
+
+@primaryNavBackgroundColor: @colorGray3;
 
 @pageLeftListDarkBorderColor: #3e3e3e;
 @pageLeftListMediumBorderColor: #5C5C5C;
@@ -29,19 +32,15 @@
 		&::after {
 			content: '';
 			background-color: @colorProgressive;
-		  width: .65em;
-		  height: .65em;
-		  position: absolute;
-		  top: -0.4em;
-		  right: .6em;
-		  border-radius: .5em;
-		  border: solid .2em white;
+			width: .65em;
+			height: .65em;
+			position: absolute;
+			top: -.4em;
+			right: .6em;
+			border: solid .2em white;
+			border-radius: .5em;
 		}
 	}
-}
-
-nav {
-	float: left;
 }
 
 // needs to be more specific than .overlay rules
@@ -54,11 +53,10 @@ nav {
 }
 
 nav {
+	background-color: @primaryNavBackgroundColor;
+	float: left;
 	font-size: 90%;
 	min-height: 100%;
-	background: @mainMenuBackgroundColor;
-	border-left: solid @menuBorder @menuBorderColor;
-
 
 	.client-js & {
 		.secondary-action {
@@ -68,19 +66,19 @@ nav {
 			top: 0;
 			bottom: 0;
 			padding-right: 0;
-			border-left: 1px solid @colorGray7;
+			border-left: 1px solid @colorGray6;
 		}
 
 		.primary-action {
 			// 1px for the logout icon border-left
-			margin-right: @menuLinkLineHeight * 2 + 1;
+			margin-right: @iconSize + @iconGutterWidth * 2;
 		}
 	}
 
 	ul {
-		&:first-child {
-			border-bottom: @menuBorder solid @menuBorderColor;
+		padding-bottom: @menuSectionPadding;
 
+		&:first-child {
 			li:first-child {
 				border-top: none;
 			}
@@ -89,27 +87,23 @@ nav {
 		li {
 			position: relative; // ensure the logout link in beta can be position absolute
 			font-size: @menuItemFontSize;
-			border-top: 1px solid @colorGray7;
+			border-top: 1px solid @colorGray6;
 			// offset the border for the icon by 1px
 			margin-top: -1px;
+			background-color: @menuItemBackgroundColor;
 
-			&:hover {
-				background-color: @colorGray5;
-				margin-left: -@menuBorder;
-				a {
-					border-left: solid @menuBorder #3366BB;
-				}
-			}
-			&:last-child {
-				border-bottom: 1px solid @colorGray7;
+			&:first-child {
+				border-top: 0;
 			}
 
 			a {
 				color: white;
 				display: block;
-				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 9px;
+				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 15px;
 
 				&:hover {
+					background-color: @colorGray5;
+					box-shadow: inset 4px 0 0 0 @colorProgressive;
 					text-decoration: none;
 				}
 
@@ -125,12 +119,17 @@ nav {
 				font-size: 0.8em;
 				margin: 0;
 				border: none;
+				background-color: transparent;
 
 				a {
 					color: @colorGray12;
 					border: none;
 					padding: .7em 12px;
 					margin-left: 0;
+
+					&:hover {
+						box-shadow: none;
+					}
 				}
 			}
 		}
@@ -157,7 +156,7 @@ body.navigation-enabled {
 		left: @menuWidth;
 		// set border here (nav doesn't expand height)
 		border-left: solid 1px #000;
-		box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.1);
+		box-shadow: -1px 0 3px 0 rgba(0, 0, 0, .3);
 	}
 
 	.navigation-drawer,
@@ -172,14 +171,7 @@ body.navigation-enabled {
 }
 
 .primary-navigation-enabled {
-	// set background and border here (nav doesn't expand height
-	// and #mw-mf-viewport has overflow: hidden and clips blue hover borders)
-	border-left: solid @menuBorder @menuBorderColor;
-	background: @mainMenuBackgroundColor;
-
-	#mw-mf-viewport {
-		margin-left: -@menuBorder;
-	}
+	background-color: @primaryNavBackgroundColor;
 
 	nav {
 		width: @menuWidth;
