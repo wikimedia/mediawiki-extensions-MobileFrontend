@@ -168,21 +168,8 @@ A file for css that optimises the Minerva skin on larger devices.
 
 	.header {
 		margin-top: -1px;
-	}
-
-	.main-menu-button, {
-		// so that the icon image is aligned with the content
-		left: -@iconGutterWidth;
-	}
-
-	#secondary-button {
-		// so that the icon image is aligned with the content
-		right: -@iconGutterWidth;
-	}
-
-	// Search input in the header
-	#searchInput {
-		// because we're pulling .main-menu-button to the left too (see above)
-		margin-left: -@iconGutterWidth;
+		// Make sure the main menu and secondary button icon images are aligned
+		// with the content.
+		max-width: @contentMaxWidthTablet + 2 * @iconGutterWidth;
 	}
 }

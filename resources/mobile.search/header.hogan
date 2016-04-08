@@ -1,11 +1,14 @@
 <ul>
 	<li>{{{cancelButton}}}</li>
 </ul>
-<div class="overlay-search">
+<div class="overlay-title">
 	<form method="get" action="{{action}}" class="search-box">
 		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
+		{{#isBeta}}{{#clearIcon}}{{>icon}}{{/clearIcon}}{{/isBeta}}
 	</form>
 </div>
+{{^isBeta}}
 <ul>
 	<li>{{#clearIcon}}{{>icon}}{{/clearIcon}}</li>
 </ul>
+{{/isBeta}}

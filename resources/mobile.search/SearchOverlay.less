@@ -133,3 +133,32 @@
 		}
 	}
 }
+
+// FIXME: T134894
+.beta {
+	.overlay-header-container {
+		background-color: @chromeColor;
+	}
+
+	.search-overlay {
+		.overlay-header {
+			background-color: transparent;
+		}
+
+		.overlay-title {
+			// because the clear icon is absolutely positioned
+			position: relative;
+		}
+
+		input {
+			// save space for the clear icon
+			padding-right: @iconSize + @iconGutterWidth * 2;
+		}
+
+		.clear {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

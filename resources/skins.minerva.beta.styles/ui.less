@@ -1,0 +1,21 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+.header-container {
+	background-color: @chromeColor;
+}
+
+.search-overlay,
+.header {
+	.search {
+		padding: .5em 28px;
+		// FIXME: share this file with the similar file in mobile.languages.structured
+		.background-image-svg( 'magnifying-glass.svg', '' );
+		background-position: 5px center;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		border-radius: @borderRadius;
+	}
+}
+
+

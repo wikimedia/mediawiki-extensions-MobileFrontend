@@ -138,6 +138,7 @@
 			],
 			"position": "top",
 			"styles": [
+				"resources/skins.minerva.beta.styles/ui.less",
 				"resources/skins.minerva.beta.styles/pageactions.less"
 			]
 		},

@@ -8,7 +8,8 @@
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
 		router = M.require( 'mobile.startup/router' ),
-		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
+		context = M.require( 'mobile.context/context' );
 
 	/**
 	 * Overlay displaying search results
@@ -80,7 +81,8 @@
 					href: feedbackLink
 				} ).options,
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
-			}
+			},
+			isBeta: context.isBetaGroupMember()
 		} ),
 		/**
 		 * @inheritdoc
@@ -145,6 +147,9 @@
 			this.$input.val( '' ).focus();
 			this.performSearch();
 			this.$clear.hide();
+			// In beta the clear button is on top of the search input.
+			// Stop propagation so that the input doesn't receive the click.
+			return false;
 		},
 
 		/**

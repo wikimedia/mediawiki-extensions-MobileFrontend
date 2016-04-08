@@ -203,8 +203,7 @@
 		width: 100%;
 	}
 
-	.overlay-title,
-	.overlay-search {
+	.overlay-title {
 		padding: .15em @headerTitlePaddingH 0;
 	}
 
@@ -386,14 +385,8 @@
 
 @media all and (min-width: @wgMFDeviceWidthDesktop) {
 	.overlay-header {
-		.cancel {
-			// so that the icon image is aligned with the content
-			left: -@iconGutterWidth;
-		}
-		// Search input in the header
-		input.search {
-			// because we're pulling .main-menu-button to the left too (see above)
-			margin-left: -@iconGutterWidth;
-		}
+		// Make sure the close button and secondary button icon images are aligned
+		// with the content.
+		max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
 	}
 }
