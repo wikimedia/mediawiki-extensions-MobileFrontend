@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_b8e7c6de",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-04-09T17:19:17Z",
+      "side": 1,
+      "message": "hmm, never used.",
+      "revId": "5707233eda770ff9ac9b7ff627e02951d18f4e81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_18ceb25f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-04-09T17:19:17Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure you don\u0027t need to save this in a local variable, use it directly where you need it :)",
+      "revId": "5707233eda770ff9ac9b7ff627e02951d18f4e81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
