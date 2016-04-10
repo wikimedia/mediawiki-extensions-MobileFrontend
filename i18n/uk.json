@@ -64,7 +64,7 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт|байти|байтів}} вилучено",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|редагування|редагування|редагувань}}",
 	"mobile-frontend-diffview-explained": "Наступні рядки були додані (+) і видалені (-):",
-	"mobile-frontend-diffview-title": "Змінити",
+	"mobile-frontend-diffview-title": "Зміни",
 	"mobile-frontend-disable-images": "Вимкнути зображення на мобільному сайті",
 	"mobile-frontend-dismiss-notification": "приховати це сповіщення",
 	"mobile-frontend-donate-image-anon": "Для доступу до сторінки завантаження файлу слід авторизуватися.",
