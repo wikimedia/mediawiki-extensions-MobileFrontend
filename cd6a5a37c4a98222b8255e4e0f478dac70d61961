@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_b38d2739",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-10T04:50:53Z",
+      "side": 1,
+      "message": "It\u0027s better to use lowercase hex notation for gzipping reasons. See https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS#Color_property_values",
+      "revId": "cd6a5a37c4a98222b8255e4e0f478dac70d61961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_339ab775",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-10T04:50:53Z",
+      "side": 1,
+      "message": "Use instead `@borderRadius` from mediawiki.ui variables",
+      "revId": "cd6a5a37c4a98222b8255e4e0f478dac70d61961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_1395f342",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-10T04:50:53Z",
+      "side": 1,
+      "message": "Same here: `@borderRadius`",
+      "revId": "cd6a5a37c4a98222b8255e4e0f478dac70d61961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_539f7b62",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-10T04:50:53Z",
+      "side": 1,
+      "message": "Use `@colorProgressive` instead for future-proof color changing possibility.",
+      "revId": "cd6a5a37c4a98222b8255e4e0f478dac70d61961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_73a43fb0",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-10T04:50:53Z",
+      "side": 1,
+      "message": "An extra line before the child element makes it easier to read.",
+      "revId": "cd6a5a37c4a98222b8255e4e0f478dac70d61961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
