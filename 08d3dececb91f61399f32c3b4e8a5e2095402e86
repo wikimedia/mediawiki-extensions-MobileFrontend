@@ -1,0 +1,378 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_84eedb84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "This is an outdated point, right?",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_047c8b1a",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "I\u0027m not sure why you\u0027d want to ignore this since it\u0027s a public member. If you want it to be considered private, then the convention is to add the @private tag to the DocBlock and prefix the member\u0027s name with an underscore, which you\u0027ve done below with the undocumented _referencesData member.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_e487e712",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Don\u0027t return the deferred object, return the promise.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_24a0af8c",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "If you early-return the promise here, i.e.\n\n    return $.Deferred().resolve( this._referencesData ).promise();\n\nthen you can simply return the promise from the this.api.get( /* ... */ ) call below.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_84909b4f",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "As above, this should be\n\n    return d.promise();",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_44a5f399",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "One of the implicit goals of the design of this code is that dependencies are injected at construction time. Please pass an instance of the EditorGateway class as an argument to the ReferencesCiteGateway constructor.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_0495ab42",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "We are.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_24c70f4c",
+        "filename": "resources/mobile.references/ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "You can just return the promise returned by this.getReferenceData.\n\nThis pattern is known as the Explicit Construction Anti-pattern, which you can read more about here: http://bluebirdjs.com/docs/anti-patterns.html#the-explicit-construction-anti-pattern.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_44bcd3b1",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "TODO: Move this code into the ReferencesController class.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_a4295f38",
+        "filename": "resources/mobile.references/ReferencesGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "This is an abstract base class.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_04180b22",
+        "filename": "resources/mobile.references/ReferencesGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Passing in the page argument here (and binding an instance of the ReferencesGateway class to an instance of the Page class) is less flexible than passing it to the getReference(s) methods.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_44f173c7",
+        "filename": "resources/mobile.references/ReferencesGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Don\u0027t return the deferred object here but the promise, i.e.\n\n    $.Deferred.reject( /* ... */ ).promise();",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_24f54f80",
+        "filename": "resources/mobile.references/ReferencesHtmlScraperGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Since this method is intended to do exactly what Page#getReferencesByID does why not remove that method rather than deferring to it (no pun intended).",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_84337b5e",
+        "filename": "resources/mobile.references/ReferencesMobileViewGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Why is this class a sub-class of ReferencesHtmlScraperGateway? AFAICT this class overrides all behaviours of its parent class.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_a4daff1e",
+        "filename": "resources/mobile.references/ReferencesMobileViewGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Pass this dependency as an argument, rather than making the ReferencesMobileViewGateway responsible for constructing an instance of the PageGateway.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_a4303f54",
+        "filename": "resources/mobile.references/ReferencesMobileViewGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Like ReferencesHtmlScraperGateway#getReference and Page#getReferenceById, this ReferencesMobileViewGateway#getReference is supposed to be doing what PageGateway#getReferencesElements is doing.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_64ef57ae",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Since $el.length being truthy requires that $refs.length is also truthy, you can safely remove the if above, i.e.\n\n    return $el.length ? { text: $el.html() } : false;",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_e411a7b2",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "mw.Api#get returns the promise corresponding to the deferred object. This should be jQuery.Promise.\n\nAlso, $#children returns an instance of the jQuery class.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_e4cec730",
+        "filename": "tests/qunit/mobile.references/test_ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "There are four instances where the ReferencesCiteGateway will reject, which aren\u0027t covered. This test is an OK first step but there\u0027s very little coverage of the meat and bones of the class – I suspect because it\u0027s awkward to test.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_c462a336",
+        "filename": "tests/qunit/mobile.references/test_ReferencesCiteGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "That you\u0027re having to do this should be indicative of a design issue in the Code Under Test (CUT). You can\u0027t test ReferencesCiteGateway\u0027s use of the EditorGateway class directly, so you test it stubbing all uses of the method that it uses.\n\nIf, however, you were to pass an instance of the EditorGateway as an argument to the ReferencesCiteGateway constructor, i.e. you were to use Dependency Injection, then you wouldn\u0027t have to resort to boiling the ocean like this. Consider how you might test one of the failure modes of ReferencesCiteGateway#getReference, wherein the EditorGateway-initiated mw.Api#get call rejects but all others resolve.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_04d3ebd7",
+        "filename": "tests/qunit/mobile.references/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "Like ReferencesCiteGateway, ReferencesMobileViewGateway can fail and has side effects which aren\u0027t covered by this test.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_24d8aff3",
+        "filename": "tests/qunit/mobile.references/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-11T10:03:32Z",
+      "side": 1,
+      "message": "See my comment on the ReferencesCiteGateway test.",
+      "revId": "08d3dececb91f61399f32c3b4e8a5e2095402e86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
