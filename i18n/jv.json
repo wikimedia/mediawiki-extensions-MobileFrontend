@@ -14,7 +14,7 @@
 	"mobile-frontend-changeslist-ip": "Panganggo ora dikenal",
 	"mobile-frontend-changeslist-nocomment": "tanpa tingkesaning besutan",
 	"mobile-frontend-clear-search": "Busak",
-	"mobile-frontend-copyright": "Koten kasedyakaké miturut $1, kecuali ditulis liyane.",
+	"mobile-frontend-copyright": "Isi cumepak sangisoré $1 kajaba ana katerangan liya.",
 	"mobile-frontend-desc": "Antarmuka Ponsèl",
 	"mobile-frontend-diffview-404-desc": "ID untuk revisi yang Anda minta tidak ada.",
 	"mobile-frontend-diffview-404-title": "Batalaké benahan",
@@ -55,7 +55,7 @@
 	"mobile-frontend-languages-header": "Basa-basa",
 	"mobile-frontend-languages-nonexistent-title": "Kaca \"$1\" ora ana.",
 	"mobile-frontend-languages-variant-header": "variasi {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-last-modified-date": "Dipunewahi pungkasan ing tanggal $1, $jam 2",
+	"mobile-frontend-last-modified-date": "Pungkasan dibesut kala $1 tabuh $2",
 	"mobile-frontend-last-modified-days": "Dianyari pungkasan {{PLURAL:$1|$1 dina|$1 dinat}} kapungkur",
 	"mobile-frontend-last-modified-hours": "Dianyari pungkasan {{PLURAL:$1|$1 jam|$1 jam}} kapungkur",
 	"mobile-frontend-last-modified-just-now": "Lagi wae dianyari",
@@ -83,7 +83,7 @@
 	"mobile-frontend-main-menu-page-title": "Navigasi situs",
 	"mobile-frontend-main-menu-settings": "Pangaturan",
 	"mobile-frontend-main-menu-settings-heading": "Pangaturan",
-	"mobile-frontend-main-menu-watchlist": "Daptar pangawasan",
+	"mobile-frontend-main-menu-watchlist": "Pawawangan",
 	"mobile-frontend-meta-data-issues": "Halaman ini memiliki beberapa masalah",
 	"mobile-frontend-meta-data-issues-header": "Masalah",
 	"mobile-frontend-missing-image": "Gambar",
@@ -136,7 +136,7 @@
 	"mobile-frontend-terms-text": "Bebakuning Panganggo",
 	"mobile-frontend-thanked-notice": "$1 telah diberitahu bahwa Anda menyukai {{GENDER:$2|suntingannya|suntingannya|suntingan mereka}}.",
 	"mobile-frontend-user-button-tooltip": "Tampilkan pemberitahuan saya",
-	"mobile-frontend-view": "Tampilan punsèl",
+	"mobile-frontend-view": "Praèn punsèl",
 	"mobile-frontend-view-desktop": "Komputer",
 	"mobile-frontend-view-mobile": "Ponsèl",
 	"mobile-frontend-watchlist-a-z": "Daptar",
@@ -158,5 +158,5 @@
 	"nearby": "Artikel tentang tempat di dekat Anda",
 	"tag-mobile_edit": "Besutan punsèl",
 	"tag-mobile_web_edit": "Besutan jaringan punsèl",
-	"mobile-frontend-pageaction-edit-tooltip": "Sunting perangan wiwitan kaca punika."
+	"mobile-frontend-pageaction-edit-tooltip": "Besut pérangan bebuka kaca iki"
 }
