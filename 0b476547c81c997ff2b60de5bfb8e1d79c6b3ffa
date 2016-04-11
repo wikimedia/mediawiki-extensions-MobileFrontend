@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_b3c3608c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-11T16:32:58Z",
+      "side": 1,
+      "message": "it says optional in the documentation, so I just fixed it up.",
+      "parentUuid": "ce38dbff_50876a66",
+      "revId": "0b476547c81c997ff2b60de5bfb8e1d79c6b3ffa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_70842e5f",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-11T15:14:19Z",
       "side": 1,
       "message": "These don\u0027t seem misc. They seem to be getSettingTools.\n\nTo avoid this becoming a dumping ground please use a more descriptive name. Using the name `misc` is dangerous. Next thing you know this menu will contain 5+ items.\n\nLet\u0027s be clear from the start whether the expectation is that this is just a settings link, or if not what else can go in this.",
+      "revId": "0b476547c81c997ff2b60de5bfb8e1d79c6b3ffa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_333750ad",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-11T16:32:58Z",
+      "side": 1,
+      "message": "From what I understood, this area will not be the settings link area only. The area is reserved to be a dumping ground by design. Of course we won\u0027t add stuff unnecessarily.",
+      "parentUuid": "ce38dbff_70842e5f",
       "revId": "0b476547c81c997ff2b60de5bfb8e1d79c6b3ffa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
