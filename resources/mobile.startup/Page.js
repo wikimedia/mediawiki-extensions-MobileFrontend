@@ -239,14 +239,6 @@
 		},
 
 		/**
-		 * Return reference section
-		 * @method
-		 */
-		getReferenceSection: function () {
-			return this._referenceLookup;
-		},
-
-		/**
 		 * Return all the thumbnails in the article
 		 * @method
 		 * @return {Thumbnail[]}
