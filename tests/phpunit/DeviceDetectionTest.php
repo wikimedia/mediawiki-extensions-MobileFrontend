@@ -129,6 +129,10 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 				array( false, 'Mozilla/5.0 (compatible; googlebot/2.1; +http://www.google.com/bot.html)' ),
 				array( false, 'Wget/1.9' ),
 				array( false, 'Mozilla/5.0 (compatible; YandexBot/3.0)' ),
+
+				// T127021
+				array( false, 'Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1' ),
+				array( true, 'Mozilla/5.0 (Linux; Android 4.2.2; nl-nl; SAMSUNG GT-I9505 Build/JDQ39) AppleWebKit/535.19 (KHTML, like Gecko) Version/1.0 Chrome/18.0.1025.308 Mobile Safari/535.19' ),
 			)
 		);
 		// @codingStandardsIgnoreEnd

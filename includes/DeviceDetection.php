@@ -174,7 +174,9 @@ class DeviceProperties implements IDeviceProperties {
 			'pg-',
 		);
 		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
-		$isMobile = (bool)preg_match( $regex, $this->userAgent );
+		$exceptionRegex = '/SMART-TV.*SamsungBrowser/';
+		$isMobile = preg_match( $regex, $this->userAgent )
+			&& !preg_match( $exceptionRegex, $this->userAgent );
 
 		return $isMobile;
 	}
