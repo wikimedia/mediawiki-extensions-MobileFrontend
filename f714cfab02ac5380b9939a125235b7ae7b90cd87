@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_bb696e8b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-12T19:42:09Z",
+      "side": 1,
+      "message": "Ooops, copy paste fail above. Good thing you understood it.",
+      "parentUuid": "ce38dbff_c095618c",
+      "revId": "f714cfab02ac5380b9939a125235b7ae7b90cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_fe52cf68",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 10
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Here we are working with DOM elements not HTML strings.",
       "parentUuid": "ce38dbff_fe52cf68",
+      "revId": "f714cfab02ac5380b9939a125235b7ae7b90cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_5b02e2be",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-12T19:42:09Z",
+      "side": 1,
+      "message": "I was thinking of using http://php.net/manual/en/domdocument.loadhtml.php, but switching between templates and php DOM methods may not be the best idea.",
+      "parentUuid": "ce38dbff_a0813d51",
       "revId": "f714cfab02ac5380b9939a125235b7ae7b90cd87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
