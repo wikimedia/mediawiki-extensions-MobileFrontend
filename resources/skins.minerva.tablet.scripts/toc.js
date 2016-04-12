@@ -22,6 +22,7 @@
 				sections: sections
 			} );
 
+			toggle = new Toggler( toc.$el, 'toc-', null, true );
 			// if there is a toc already, replace it
 			if ( $toc.length > 0 ) {
 				// don't show toc at end of page, when no sections there
@@ -30,7 +31,6 @@
 				// otherwise append it to the lead section
 				toc.appendTo( page.getLeadSectionElement() );
 			}
-			toggle = new Toggler( toc.$el, 'toc-' );
 		}
 	}
 
