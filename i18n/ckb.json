@@ -3,7 +3,8 @@
 		"authors": [
 			"Asoxor",
 			"Calak",
-			"Muhammed taha"
+			"Muhammed taha",
+			"Sarchia"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "ناونیشانی ئیمەیل (دڵخوازانە)",
@@ -14,14 +15,17 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بایت}} سڕایەوە",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|دەستکاری}}",
 	"mobile-frontend-disable-images": "ڕێگە مەدە بە وێنەکان لەسەر سایتی مۆبایل",
+	"mobile-frontend-donate-image-title": "بارکردنەکان",
 	"mobile-frontend-editor-edit": "دەستکاریی بکە",
 	"mobile-frontend-enable-images": "ڕێگە بدە بە وێنەکان لەسەر سایتی مۆبایل",
 	"mobile-frontend-featured-article": "ناوەرۆکی ھەڵبژێردراوی ئەمڕۆ",
 	"mobile-frontend-footer-contact": "پەیوەندی",
 	"mobile-frontend-home-button": "ماڵەوە",
+	"mobile-frontend-image-cancel-confirm": "پووچەڵکردنەوەی بارکردن؟",
 	"mobile-frontend-images-status": "وێنەکان",
 	"mobile-frontend-language-article-heading": "بە زمانێکی تر بیخوێنەوە",
 	"mobile-frontend-last-modified-date": "دواجار لە $2ی $1 دەستکاری کراوە",
+	"mobile-frontend-lead-image-tutorial-confirm": "دەستپێکردنی بارکردن",
 	"mobile-frontend-logged-in-homepage-notification": "بەخێربێیت، $1!",
 	"mobile-frontend-main-menu-account-create": "ھەژمار دروست بکە",
 	"mobile-frontend-main-menu-button-tooltip": "پەڕەی سەرەکی بکەرەوە",
@@ -44,6 +48,7 @@
 	"mobile-frontend-search-submit": "بڕۆ",
 	"mobile-frontend-settings-beta": "بێتا",
 	"mobile-frontend-sign-in-error-heading": "وەی!",
+	"mobile-frontend-talk-add-overlay-submit": "زیادکردنی وتووێژ",
 	"mobile-frontend-terms-text": "مەرجەکانی بەکارھێنان",
 	"mobile-frontend-view": "بینینەوەی مۆبایلی",
 	"mobile-frontend-view-desktop": "کۆمپیوتەر",
@@ -52,6 +57,7 @@
 	"mobile-frontend-watchlist-filter-articles": "پەڕەکان",
 	"mobile-frontend-watchlist-filter-other": "دیکە",
 	"mobile-frontend-watchlist-filter-talk": "لێدوان",
+	"mobile-frontend-user-page-uploads": "بارکردنەکان",
 	"nearby": "ئەو پەڕانەی نزیکی تۆن",
 	"right-mf-uploadbutton": "بەکارھێنانی دوگمەی بارکردن لە پەڕەکانی مۆبایلدا",
 	"tag-mobile_edit": "بە مۆبایل دەستکاری کراوە",
