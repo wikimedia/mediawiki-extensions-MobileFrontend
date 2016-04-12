@@ -38,7 +38,7 @@ test2:
   # mediawiki_password: SET THIS IN THE ENVIRONMENT!
 
 integration:
-  browser: firefox
+  browser: chrome
   user_factory: true
   # mediawiki_url: THIS WILL BE SET BY JENKINS
 
