@@ -13,7 +13,8 @@
 			"Dicto23456",
 			"Лорд Бъмбъри",
 			"Vodnokon4e",
-			"Termininja"
+			"Termininja",
+			"V111P"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Въведете код за потвърждение",
@@ -108,7 +109,7 @@
 	"mobile-frontend-regular-site": "Настолен изглед",
 	"mobile-frontend-save-settings": "Съхраняване",
 	"mobile-frontend-search-submit": "Отиване",
-	"mobile-frontend-settings-images-explain": "Зарежда всички изображения, които се появяват на страницата.",
+	"mobile-frontend-settings-images-explain": "Зареждане на всички изображения, които се появяват на страницата.",
 	"mobile-frontend-settings-beta": "Бета",
 	"mobile-frontend-sign-in-heading": "Влизане",
 	"mobile-frontend-sign-up-heading": "Регистриране",
