@@ -3,6 +3,8 @@
  * MobileFormatter.php
  */
 
+use HtmlFormatter\HtmlFormatter;
+
 /**
  * Converts HTML into a mobile-friendly version
  */
