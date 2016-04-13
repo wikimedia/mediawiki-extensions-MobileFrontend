@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_2e2a372b",
+        "filename": "resources/mobile.modules/modules.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-13T18:09:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_9c8bf871",
+      "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_3c9aacbd",
         "filename": "resources/mobile.overlays/Overlay.js",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_837cfc1c",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-13T18:09:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_3c9aacbd",
+      "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_fcf7a4f0",
         "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2016-03-16T22:06:15Z",
       "side": 1,
       "message": "May wanna move this to the first line in the closure for consistency with other required things. Not sure why this is passed around the long way around?",
+      "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_03910c52",
+        "filename": "tests/qunit/mobile.languages/test_LanguageOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-13T18:09:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_fcf7a4f0",
       "revId": "a7aa0fcdb4de857ba0d3e03709b02c6bcc3e2e83",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
