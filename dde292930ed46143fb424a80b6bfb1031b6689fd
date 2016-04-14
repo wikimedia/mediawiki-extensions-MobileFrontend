@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ce38dbff_74ad292e",
+        "filename": "extension.json",
+        "patchSetId": 18
+      },
+      "lineNbr": 1123,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "I\u0027m not sure I see the value of having different modules for gateways",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_94a26d39",
+        "filename": "extension.json",
+        "patchSetId": 18
+      },
+      "lineNbr": 1134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "but I don\u0027t think we should be calling them the same thing - they should be the names of the class.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_b15d034d",
         "filename": "resources/mobile.references.gateway.htmlScraper/ReferencesGateway.js",
         "patchSetId": 18
@@ -13,6 +47,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "I think I understand what this comment is trying to say but, nevertheless, it\u0027s confusing as both jQuery#find and string concatenation are being used.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_f4ebf974",
+        "filename": "resources/mobile.references.gateway.htmlScraper/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "I don\u0027t even understand what this means and I\u0027m not sure this comment is useful so I\u0027ve removed it.\n\nIf you think a comment is useful let me know whar you think that should be.",
+      "parentUuid": "ce38dbff_b15d034d",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -36,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_14d2ddd4",
+        "filename": "resources/mobile.references.gateway.htmlScraper/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Sam - please do arrange a brown bag on this so we can talk about this together.",
+      "parentUuid": "ce38dbff_314a9385",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_f17e6be0",
         "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
         "patchSetId": 18
@@ -47,6 +117,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "This returns the deferred object (of type jQuery.Deferred). This should be\n\n    return $.Deferred().resolve( self.$references ).promise();",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_34e601ad",
+        "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_f17e6be0",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_94f42d52",
+        "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_11630f3c",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_f1c4ab13",
         "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
         "patchSetId": 18
@@ -81,6 +187,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "If you return an instance of jQuery.Promise from inside of a handler passed to jQuery.Promise#then, you don\u0027t have bind #done and #fail to the explicitly constructed deferred object above. See the deferred#then docs \u003chttps://api.jquery.com/deferred.then/\u003e for examples of this.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_b4f9714c",
+        "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_f1c4ab13",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +228,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_14a01d3d",
+        "filename": "resources/mobile.references.gateway.mobileView/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_31cf332f",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_51d3d7d6",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 18
@@ -115,6 +257,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "You mean jQuery.Promise here, right?",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_7486c9bf",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_51d3d7d6",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +298,23 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_3473a1e7",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Doing this delays the clicking of a reference without any intermediate state. Are we deeming this acceptable? I hadn\u0027t done this in the earlier patchset as I didn\u0027t want to bloat this patch by doing so.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_f11dcb79",
         "filename": "tests/qunit/mobile.references.gateway.htmlScraper/test_ReferencesGateway.js",
         "patchSetId": 18
@@ -155,6 +332,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_34b4417d",
+        "filename": "tests/qunit/mobile.references.gateway.htmlScraper/test_ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Unfortunately yup. It seems to throw an exception if the config variable is absent. What do you reckon we should do about it.",
+      "parentUuid": "ce38dbff_f11dcb79",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_74108953",
         "filename": "tests/qunit/mobile.references.gateway.htmlScraper/test_ReferencesGateway.js",
         "patchSetId": 18
@@ -166,6 +361,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "This test and the test below should be asynchronous tests as promises are being used. That the promises resolve immediately is an implementation detail.\n\nQUnit has a fairly trivial migration path to make a synchronous test asynchronous: http://api.qunitjs.com/async/.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_14765dd5",
+        "filename": "tests/qunit/mobile.references.gateway.htmlScraper/test_ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_74108953",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -200,6 +413,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "Missing call to jQuery.Deferred#promise.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_9481cd94",
+        "filename": "tests/qunit/mobile.references.gateway.mobileView/test_ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_341e0164",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
