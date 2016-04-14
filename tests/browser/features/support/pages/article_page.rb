@@ -9,7 +9,8 @@ class ArticlePage
 
   # pre-content
   h1(:first_heading, id: 'section_0')
-  a(:edit_history_link, css: '#mw-mf-last-modified a')
+  # standalone history link
+  a(:standalone_edit_history_link, css: '#mw-mf-last-modified a')
 
   # left nav
   nav(:navigation, css: 'nav')
@@ -18,6 +19,8 @@ class ArticlePage
 
   # last modified bar
   a(:last_modified_bar_history_link, href: /Special:History/)
+  a(:last_modified_bar_history_userpage_link, href: /User:/)
+
   # page actions
   ## edit
   li(:edit_button_holder, id: 'ca-edit')
