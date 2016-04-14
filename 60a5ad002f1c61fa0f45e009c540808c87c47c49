@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e4cebb2_dc43ed41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 21
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-14T21:50:40Z",
+      "side": 1,
+      "message": "This line is no longer true.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_25152d9d",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 21
