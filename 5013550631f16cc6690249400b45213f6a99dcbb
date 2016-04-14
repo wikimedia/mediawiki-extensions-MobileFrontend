@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_c000afb1",
+        "filename": "tests/browser/features/ui_links.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-14T18:36:59Z",
+      "side": 0,
+      "message": "This requirement now seems irrelevant to this scenario. Should it be moved to the scenario below?",
+      "revId": "5013550631f16cc6690249400b45213f6a99dcbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
