@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_7411a95e",
+        "filename": "includes/diff/InlineDifferenceEngine.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T12:41:48Z",
+      "side": 1,
+      "message": "I don\u0027t feel that good about a getter having the side effect of adding a module.",
+      "revId": "d2b59526354d9b4bb0acec6a520abad9ecaa1ba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
