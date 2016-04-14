@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_afbe3ef8",
+        "filename": "extension.json",
+        "patchSetId": 18
+      },
+      "lineNbr": 1134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T13:45:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_94a26d39",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_b15d034d",
         "filename": "resources/mobile.references.gateway.htmlScraper/ReferencesGateway.js",
         "patchSetId": 18
@@ -298,6 +316,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_8fec1af4",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T13:45:15Z",
+      "side": 1,
+      "message": "So I had a think about this.\nIf a second click to a reference is made, we should continue using the existing API request to the MobileViewAPI.\n\nIn this case both clicks would share the same deferred object, resolve at the same time and the last click would always resolve last... meaning an abort is never necessary.\n\nI dont think there is any value in aborting a pending mobile view API once it\u0027s started.\n\nI explored introducing a ReferencesController class but something about it feels even messier than this, but I can\u0027t put my finger on what it is.",
+      "parentUuid": "ce38dbff_3424415b",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_3473a1e7",
         "filename": "resources/skins.minerva.scripts/references.js",
         "patchSetId": 18
@@ -309,6 +345,24 @@
       "writtenOn": "2016-04-14T12:34:23Z",
       "side": 1,
       "message": "Doing this delays the clicking of a reference without any intermediate state. Are we deeming this acceptable? I hadn\u0027t done this in the earlier patchset as I didn\u0027t want to bloat this patch by doing so.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_4fba12dc",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T13:45:15Z",
+      "side": 1,
+      "message": "As a result I\u0027ve moved the mobile.references module back into the dependencies of skins.minerva.scripts",
+      "parentUuid": "ce38dbff_3473a1e7",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -413,6 +467,24 @@
       "writtenOn": "2016-04-14T09:45:25Z",
       "side": 1,
       "message": "There\u0027s a couple of missing tests, which all rely on not stubbing the behaviour of ReferencesMobileViewGateway#getReferencesElements all the time:\n\n* What happens when #getReferencesElements rejects?\n* What happens when #getReferencesElements resolves with a empty list of references (for whatever reason)?\n\nWriting these tests will allow you to demonstrate that removing the explicitly constructed deferred object was successful.\n\nRed. Green. Refactor.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_4f0df2eb",
+        "filename": "tests/qunit/mobile.references.gateway.mobileView/test_ReferencesGateway.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T13:45:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_f44ad95d",
       "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

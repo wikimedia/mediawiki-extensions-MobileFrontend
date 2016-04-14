@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_0fc00a54",
+        "filename": "extension.json",
+        "patchSetId": 18
+      },
+      "lineNbr": 1574,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-14T13:45:15Z",
+      "side": 0,
+      "message": "This causes new problems such as what to do if the module fails to load as well as how to appear responsive to the user. I think it\u0027s something we should do but not as part of this patchset.",
+      "revId": "5013550631f16cc6690249400b45213f6a99dcbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
