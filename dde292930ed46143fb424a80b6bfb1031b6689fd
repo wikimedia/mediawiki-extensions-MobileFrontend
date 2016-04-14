@@ -121,6 +121,23 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_3424415b",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-14T11:00:12Z",
+      "side": 1,
+      "message": "There\u0027s a race condition here: if the user clicks one reference and then another in quick succession, the gateway may have issued multiple requests that will race, resulting in one reference showing followed by another, possibly out of order.\n\nPromises returned by mw.Api#get – #ajax under the hood – can be aborted. Elsewhere in the MobileFrontend codebase, we store the last promise returned by a call to mw.Api#ajax and abort it if another is required. I suggest that you follow that pattern here.\n\nI\u0027d note that this only increases the complexity of the ReferencesDrawer class.",
+      "revId": "dde292930ed46143fb424a80b6bfb1031b6689fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_f11dcb79",
         "filename": "tests/qunit/mobile.references.gateway.htmlScraper/test_ReferencesGateway.js",
         "patchSetId": 18
