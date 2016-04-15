@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_4e49d369",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-15T15:16:10Z",
+      "side": 1,
+      "message": "Twice eh?",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
