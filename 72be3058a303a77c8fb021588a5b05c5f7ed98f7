@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_eebc27b4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:23:29Z",
+      "side": 1,
+      "message": "I think we should look into scoping this to minerva only and not all skins as the variable is used in minerva only.",
+      "revId": "72be3058a303a77c8fb021588a5b05c5f7ed98f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_8ee3ebd3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 924,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:23:29Z",
+      "side": 1,
+      "message": "Can you elaborate on this comment? How\u0027s Wikibase involved in this?",
+      "revId": "72be3058a303a77c8fb021588a5b05c5f7ed98f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
