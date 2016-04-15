@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_403362c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 21
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e4cebb2_dc43ed41",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_25152d9d",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 21
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "Missing \"@method\" tag and argument/return descriptions to match `getReference` method below.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_8080da4c",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Method is optional. Have updated parameter.",
+      "parentUuid": "ce38dbff_25152d9d",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_a096be95",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "It\u0027s just a good habit to get into. Some older browsers have this parameter as mandatory.",
+      "parentUuid": "ce38dbff_4512f1b6",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_057f49de",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 21
@@ -64,6 +118,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "Since this implementation should never be run anyways , why not use the values as a chance to describe the attributes of this arbitrary Object? e.g.\n\n    {\n        id: id,\n        pageTitle: \u0027the title of the page\u0027, // page.title fits here as well, so no change necessary\n        msg: \u0027describe the purpose of this attribute\u0027 // as right now I can\u0027t tell what it\u0027s for at all (the reference HTML? Reference text? An error message?)\n    }\n\nOtherwise (if you foresee use of it), can we be a bit more descriptive than \"using @interface\"? I imagine this code path would only be hit in an event where we were unable to retrieve a reference, so let\u0027s treat it like a proper error message. Please correct me if I\u0027m misunderstanding this implementation completely.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_a0dd1e76",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "I\u0027ve cleaned up this confusion.",
+      "parentUuid": "ce38dbff_057f49de",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_a0afdedd",
+        "filename": "resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Let me update that signature it\u0027s not correct.",
+      "parentUuid": "ce38dbff_e5bce569",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_457311e6",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 21
@@ -98,6 +188,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "Should probably use `this` here, not `self`, no? Leaving `self` used only in the closures.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_e0155642",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "There\u0027s no rule really, but yes no need to use self and hopefully that makes it clearer of context.",
+      "parentUuid": "ce38dbff_457311e6",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_20758e93",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "let\u0027s prefer methods over properties.",
+      "parentUuid": "ce38dbff_254d2d9c",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_650c5546",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 21
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_a0435e14",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_650c5546",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_25440d6e",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 21
@@ -149,6 +293,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "I\u0027m confused, doesn\u0027t the api request already limit to one section (the references section)?",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_c063f2d8",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Nope, a page can have more than one sections if it uses two reference tags. I\u0027ll add a comment.",
+      "parentUuid": "ce38dbff_25440d6e",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -223,6 +385,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_fd322305",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "I\u0027d rather we just used mw.config given if this is successful it will become the default in future and this would just make this method more complex.",
+      "parentUuid": "ce38dbff_a05acb1f",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_e0a333fb",
         "filename": "resources/skins.minerva.scripts/references.js",
         "patchSetId": 21
@@ -234,6 +414,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "Doesn\u0027t appear to be returning a promise. Comment may just need to be updated after copy+paste.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_600ae625",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_e0a333fb",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -257,6 +455,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_a00b5e25",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce38dbff_20851b5b",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce38dbff_60960399",
         "filename": "resources/skins.minerva.scripts/references.js",
         "patchSetId": 21
@@ -268,6 +484,24 @@
       "writtenOn": "2016-04-14T18:16:43Z",
       "side": 1,
       "message": "Pull outside of if; remove else.",
+      "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_dd8bdfc2",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T10:20:24Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "ce38dbff_60960399",
       "revId": "60a5ad002f1c61fa0f45e009c540808c87c47c49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
