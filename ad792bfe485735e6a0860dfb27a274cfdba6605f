@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e58336e_a3c24837",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-15T13:24:13Z",
+      "side": 1,
+      "message": "I didn\u0027t spot this before because I read the code properly…\n\nIgnore that comment.",
+      "parentUuid": "0e58336e_e3e7203a",
+      "revId": "ad792bfe485735e6a0860dfb27a274cfdba6605f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_03bdf416",
         "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
         "patchSetId": 25
