@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_a06d1e30",
+        "filename": "tests/browser/features/ui_links.feature",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-15T11:31:38Z",
+      "side": 1,
+      "message": "This step must come first as the step below visits \"Selenium UI test\" which will result in the page being cached for subsequent visits and not having the link!",
+      "revId": "51a6f660aa00347dfae99bf42f51a4e54c8d7ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
