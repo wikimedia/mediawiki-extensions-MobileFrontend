@@ -4,6 +4,7 @@
  * @group MobileFrontend
  */
 class MobileFormatterTest extends MediaWikiTestCase {
+	const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
 	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator"></div>';
 
 	/**
@@ -321,5 +322,21 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. 'Qux</h1><div class="mf-section-2">Quux</div>',
 			),
 		);
+	}
+
+	/**
+	 * @covers MobileFormatter::insertTOCPlaceholder
+	 */
+	public function testInsertTOCPlaceholder() {
+		$input = '<p>Hello world.</p><h2>Heading</h2>Text.';
+		$mf = new MobileFormatter( $input, Title::newFromText( 'Mobile' ) );
+		$mf->enableTOCPlaceholder();
+		$mf->enableExpandableSections();
+		$mf->topHeadingTags = array( 'h2' );
+		$mf->filterContent( false, false, false );
+		$expected = '<div class="mf-section-0"><p>Hello world.</p>'
+			. self::TOC . '</div><h2 class="section-heading">'
+			. self::SECTION_INDICATOR . 'Heading</h2><div class="mf-section-1">Text.</div>';
+		$this->assertEquals( $expected, $mf->getText() );
 	}
 }

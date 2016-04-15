@@ -37,11 +37,16 @@ class ExtMobileFrontend {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 
+		$title = $out->getTitle();
+		$ns = $title->getNamespace();
+		// Only include the table of contents element if the page is in the main namespace
+		// and the MFTOC flag has been set (which means the page originally had a table of contents)
+		$includeTOC = $out->getProperty( 'MFTOC' ) && $ns === NS_MAIN;
 		$formatter = MobileFormatter::newFromContext( $context, $html );
+		$formatter->enableTOCPlaceholder( $includeTOC );
 
 		Hooks::run( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
 
-		$title = $out->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
 
 		$formatter->enableExpandableSections(
@@ -50,7 +55,7 @@ class ExtMobileFrontend {
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
 			// And not in certain namespaces
 			&& array_search(
-				$title->getNamespace(),
+				$ns,
 				$config->get( 'MFNamespacesWithoutCollapsibleSections' )
 			) === false
 			// And not when what's shown is not actually article text

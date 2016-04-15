@@ -1261,7 +1261,7 @@ class MobileFrontendHooks {
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
-			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
+			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
 			if ( $mfUseWikibaseDescription && $isBeta ) {
 				$item = $po->getProperty( 'wikibase_item' );

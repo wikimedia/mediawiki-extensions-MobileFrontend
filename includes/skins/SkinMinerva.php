@@ -921,7 +921,8 @@ class SkinMinerva extends SkinTemplate {
 
 		$vars = array(
 			'wgMinervaMenuData' => $this->getMenuData(),
-			'wgMinervaTocEnabled' => $this->getOutput()->getProperty( 'MinervaTOC' )
+			// Expose for skins.minerva.tablet.scripts
+			'wgMinervaTocEnabled' => $this->getOutput()->getProperty( 'MFTOC' )
 		);
 
 		if ( $this->isAuthenticatedUser() ) {
