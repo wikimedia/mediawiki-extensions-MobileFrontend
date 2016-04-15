@@ -13,11 +13,14 @@
 	 * A class for enabling toggling
 	 *
 	 * @class
+	 * @param {jQuery.Object} $container to apply toggling to
+	 * @param {String} prefix a prefix to use for the id.
+	 * @param {Page} [page] to allow storage of session for future visits
 	 * @extends OO.EventEmitter
 	 */
-	function Toggler() {
+	function Toggler( $container, prefix, page ) {
 		OO.EventEmitter.call( this );
-		this._enable.apply( this, arguments );
+		this._enable( $container, prefix, page );
 	}
 	OO.mixinClass( Toggler, OO.EventEmitter );
 
@@ -210,11 +213,9 @@
 	 * @param {jQuery.Object} $container to apply toggling to
 	 * @param {String} prefix a prefix to use for the id.
 	 * @param {Page} [page] to allow storage of session for future visits
-	 * @param {Page} [isClosed] whether the element should begin closed
 	 * @private
-	 * @constructor
 	 */
-	Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
+	Toggler.prototype._enable = function ( $container, prefix, page ) {
 		var tagName, expandSections, indicator,
 			$firstHeading,
 			self = this,
@@ -278,7 +279,7 @@
 					} );
 
 				enableKeyboardActions( self, $heading );
-				if ( !isClosed && browser.isWideScreen() || expandSections ) {
+				if ( browser.isWideScreen() || expandSections ) {
 					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					self.toggle.call( self, $heading );
 				}

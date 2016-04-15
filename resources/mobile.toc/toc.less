@@ -4,11 +4,19 @@
 @paddingHorizontal: 24px;
 @iconSize: 16px;
 @iconHeadingGap: 12px;
-@fontSize: @tocFontSize;
+@paddingVertical: 1.4em;
+@fontSize: .8em;
+
 
 .client-js .toc-mobile {
+	position: relative;
+	// FIXME: Use predefined colors?
 	background-color: @colorGray15;
 	border: solid 1px @grayLightest;
+	font-size: 1.3em;
+	float: left;
+	clear: left;
+	margin: 1em 0;
 
 	.toc-button {
 		float: left;
@@ -17,8 +25,12 @@
 	}
 
 	.collapsible-heading {
-		visibility: visible;
+		font-family: @fontFamily;
+		font-size: @fontSize;
 		background-position: right center;
+		font-weight: bold;
+		padding: @paddingVertical / 2 0;
+		border-bottom: none;
 
 		// Override rules for section toggler
 		// In table of contents the collapsing caret is on the right

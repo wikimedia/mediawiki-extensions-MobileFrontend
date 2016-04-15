@@ -396,16 +396,6 @@ class MobileFormatter extends HtmlFormatter {
 				}
 				// Insert the previous section body and reset it for the new section
 				$body->insertBefore( $sectionBody, $node );
-
-				if ( $sectionNumber === 0 ) {
-					// Insert table of content placeholder which will be progressively enhanced via JS
-					$toc = $doc->createElement( 'div' );
-					$toc->setAttribute( 'id', 'toc' );
-					$toc->setAttribute( 'class', 'toc-mobile' );
-					$tocHeading = $doc->createElement( 'h2', wfMessage( 'toc' )->text() );
-					$toc->appendChild( $tocHeading );
-					$sectionBody->appendChild( $toc );
-				}
 				$sectionNumber += 1;
 				$sectionBody = $doc->createElement( 'div' );
 				$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );

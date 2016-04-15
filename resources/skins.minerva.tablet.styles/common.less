@@ -4,30 +4,8 @@ A file for css that optimises the Minerva skin on larger devices.
 
 @import "minerva.variables";
 @import "minerva.mixins";
-@paddingVertical: 1.4em;
 
 @media all and (min-width: @deviceWidthTablet) {
-	.toc-mobile {
-		// Reset the rule for mobile mode (but not for .client-nojs)
-		display: block;
-		visibility: visible;
-		position: relative;
-		font-size: 1.3em;
-		float: left;
-		clear: left;
-		margin: 1em 0;
-		border: solid 1px transparent;
-
-		> h2 {
-			visibility: hidden;
-			font-family: @fontFamily;
-			font-size: @tocFontSize;
-			font-weight: bold;
-			border-bottom: none;
-			padding: @paddingVertical / 2 0;
-		}
-	}
-
 	.content_block {
 		width: auto;
 		clear: none;
