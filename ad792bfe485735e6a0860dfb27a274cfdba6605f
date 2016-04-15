@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_a0251ebf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 25
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-15T12:39:36Z",
+      "side": 1,
+      "message": "\\t15?",
+      "revId": "ad792bfe485735e6a0860dfb27a274cfdba6605f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_e3e7203a",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-15T12:39:36Z",
+      "side": 1,
+      "message": "Sorry I didn\u0027t spot this before, but this callback will be run every time this method is called, i.e. N * M calls to jQuery#replace.",
+      "revId": "ad792bfe485735e6a0860dfb27a274cfdba6605f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_03bdf416",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-15T12:39:36Z",
+      "side": 1,
+      "message": "As in previous patch sets, more behaviour has been added to the ReferencesMobileViewGateway class that can be tested:\n\n* the class should never make more than one API call\n* when invoked more than once, it should return the last requested reference",
+      "revId": "ad792bfe485735e6a0860dfb27a274cfdba6605f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
