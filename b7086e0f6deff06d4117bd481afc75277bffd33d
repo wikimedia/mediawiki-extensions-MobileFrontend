@@ -2,6 +2,125 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e58336e_4e00b36d",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "Why is this line here?",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_2e1bbfd5",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "... or the boolean `false`",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_8e392b41",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "Should the arguments mentioned in the doc block above be added here too?",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_cef3239b",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "I think the convention in core is to throw a new Error.",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_ae3fcf1f",
+        "filename": "resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "As Sam pointed out earlier, both find and string concat is being used, which makes this comment hard to understand. Do you mean something else?",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_8e876bdc",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "Where else this cached value is being used? I see it\u0027s only used below, which can also use the original `id`.",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e58336e_2e829fcd",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-15T16:37:52Z",
+      "side": 1,
+      "message": "else is not necessary.",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_4e49d369",
         "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
         "patchSetId": 26
