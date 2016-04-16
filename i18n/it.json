@@ -341,9 +341,9 @@
 	"apihelp-mobileview-example-3": "Ottieni informazioni sulla sezione 1 e successive, e sezione contenenti i riferimenti di [[Candlemass]]",
 	"mobile-frontend-donate-button-label": "Dona",
 	"mobile-frontend-loading-message": "Caricamento…",
-	"mobile-frontend-panel-ok": "Va bene",
+	"mobile-frontend-panel-ok": "Ok",
 	"mobile-frontend-panel-cancel": "No, grazie",
-	"mobile-frontend-panel-betaoptin-msg": "Vuoi provare alcune nuove funzionalità? Unendo la beta, si otterrà l'accesso a funzioni sperimentali, con il rischio di incorrere in bug e problemi.",
+	"mobile-frontend-panel-betaoptin-msg": "Vuoi provare alcune nuove funzionalità? Aderendo alla beta, si otterrà l'accesso a funzioni sperimentali, con il rischio di incorrere in errori e problemi.",
 	"mobile-frontend-search-feedback-link-text": "Dateci il vostro feedback.",
 	"mobile-frontend-search-feedback-prompt": "Non hai trovato cosa stavi cercando?"
 }

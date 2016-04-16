@@ -32,7 +32,8 @@
 			"Csbotero",
 			"Ncontinanza",
 			"Peter Bowman",
-			"Syum90"
+			"Syum90",
+			"Lemondoge"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -252,7 +253,7 @@
 	"mobile-frontend-photo-article-donate-comment": "Imagen donada desde Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "Se ha añadido una imagen para su uso en la página",
 	"mobile-frontend-photo-caption-placeholder": "Describe esta imagen (requerido)",
-	"mobile-frontend-photo-upload-invalid-user": "El usuario «$1» no está registrado.",
+	"mobile-frontend-photo-upload-invalid-user": "La cuenta «$1» no está registrada.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> subida|<span>$1</span> subidas}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ subidas",
 	"mobile-frontend-placeholder": "Buscar en {{SITENAME}}",
@@ -346,6 +347,7 @@
 	"mobile-frontend-quick-lookup-looking": "Búsqueda de «$1».",
 	"mobile-frontend-quick-lookup-no-results": "No se encontró nada que coincida con «$1».",
 	"mobile-frontend-quick-lookup-not-internal": "Este enlace no apunta a otro lugar en este wiki.",
+	"mobile.css": "/* CSS colocados aquí afectará a los usuarios del sitio móvil */",
 	"nearby": "Páginas sobre temas cercanos a ti",
 	"right-mf-uploadbutton": "Usar el botón de carga en páginas móviles.",
 	"tag-mobile_edit": "Edición desde móvil",
