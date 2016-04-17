@@ -7,7 +7,7 @@
 			"Adam-Yourist"
 		]
 	},
-	"mobile-frontend-copyright": "Чудоаллара тIавахар $1 лицензе бокъонаца да, кхыъкхе белгалъя йице.",
+	"mobile-frontend-copyright": "Чудоаллачоа тIавахар $1 лицензе бокъонца да, нагахьа кхыдар белгалдаь деце.",
 	"mobile-frontend-editor-edit": "Нийсде",
 	"mobile-frontend-featured-article": "Укх ден хьаржа йоазув",
 	"mobile-frontend-home-button": "ЦӀенга",
@@ -17,18 +17,18 @@
 	"mobile-frontend-main-menu-login": "Чувала/яла",
 	"mobile-frontend-main-menu-nearby": "Уллув",
 	"mobile-frontend-main-menu-settings": "Оттамаш",
-	"mobile-frontend-main-menu-watchlist": "Теркама дагарле",
-	"mobile-frontend-placeholder": "{{grammar:prepositional|{{SITENAME}}}} чу лаха",
+	"mobile-frontend-main-menu-watchlist": "Теркама список",
+	"mobile-frontend-placeholder": "Хьалáха {{grammar:prepositional|{{SITENAME}}}} чу",
 	"mobile-frontend-privacy-link-text": "КъайлагIара",
-	"mobile-frontend-random-button": "Ца ховш хинна",
+	"mobile-frontend-random-button": "Ца ховш нийсъенна",
 	"mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
 	"mobile-frontend-search-submit": "Дехьа гӀо",
 	"mobile-frontend-terms-text": "Пайда эцара хьáлаш",
 	"mobile-frontend-view": "Цхьалха кеп",
-	"mobile-frontend-view-desktop": "Йоккха кеп",
-	"mobile-frontend-view-mobile": "ЗIамига кеп",
+	"mobile-frontend-view-desktop": "Доккха куц",
+	"mobile-frontend-view-mobile": "ЗIамига куц",
 	"tag-mobile_edit": "Мобильникаца даь нийсдар",
 	"tag-mobile_edit-description": "Мобильникаца даь нийсдараш (сайтага е приложенега гIолла)",
 	"tag-mobile_web_edit": "Сайтан цхьалха куца гIолла даь нийсдар",
-	"mobile-frontend-pageaction-edit-tooltip": "Хувца укх оагIона хьалхале лелаю дакъа"
+	"mobile-frontend-pageaction-edit-tooltip": "Хувца укх оагIона хьалхале леладу дакъа"
 }
