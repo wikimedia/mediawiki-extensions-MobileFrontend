@@ -127,7 +127,8 @@
 				"resources/skins.minerva.base.styles/footer.less",
 				"resources/skins.minerva.base.styles/common.less",
 				"resources/skins.minerva.base.styles/icons.less",
-				"resources/skins.minerva.base.styles/images.less"
+				"resources/skins.minerva.base.styles/images.less",
+				"resources/skins.minerva.base.styles/print.less"
 			]
 		},
 		"skins.minerva.beta.styles": {
