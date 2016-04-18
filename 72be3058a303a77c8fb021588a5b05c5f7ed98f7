@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee5cbf65_68100b05",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-18T10:25:39Z",
+      "side": 1,
+      "message": "You\u0027re right but it\u0027s complicated. Currently, we disable table of contents for _all_ skins when they operate in mobile mode. Given this is the current behaviour it should be MFTOC not MinervaTOC.\n\nMaking it Minerva specific may make sense but would be a little bit more complicated (we\u0027d end up having  if Minerva lines of code in the hooks which seems even more messy).\n\nWe should aim to pull Minerva out of MobileFrontend asap to save us all these headaches and make this clearer (things like main menu suffer from the same problem)",
+      "parentUuid": "0e58336e_eebc27b4",
+      "revId": "72be3058a303a77c8fb021588a5b05c5f7ed98f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_8ee3ebd3",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-15T16:23:29Z",
       "side": 1,
       "message": "Can you elaborate on this comment? How\u0027s Wikibase involved in this?",
+      "revId": "72be3058a303a77c8fb021588a5b05c5f7ed98f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_4801c7b8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 924,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-18T10:25:39Z",
+      "side": 1,
+      "message": "thanks for sanity checking - seems they are not using it anymore.\nhttps://github.com/search?q\u003dorg%3Awikimedia+MinervaToc\u0026ref\u003dsearchresults\u0026type\u003dCode\u0026utf8\u003d%E2%9C%93",
+      "parentUuid": "0e58336e_8ee3ebd3",
       "revId": "72be3058a303a77c8fb021588a5b05c5f7ed98f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
