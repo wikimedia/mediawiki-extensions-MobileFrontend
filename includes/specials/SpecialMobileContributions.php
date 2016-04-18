@@ -25,12 +25,27 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	}
 
 	protected function getQueryConditions() {
+		$conds = array();
+		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
+
 		if ( $this->user ) {
 			$conds = array(
 				'rev_user' => $this->user->getID(),
 			);
-		} else {
-			$conds = array();
+
+			$currentUser = $this->getContext()->getUser();
+
+			// T132653: Only list deleted/suppressed edits if the current user - not the
+			// target user (`$this->user`) – can view them.
+			// This code was taken from ContribsPager#getQueryInfo.
+			if ( $currentUser ) {
+				if ( !$currentUser->isAllowed( 'deletedhistory' ) ) {
+					$conds[] = $dbr->bitAnd( 'rev_deleted', Revision::DELETED_USER ) . ' = 0';
+				} elseif ( !$currentUser->isAllowedAny( 'suppressrevision', 'viewsuppressed' ) ) {
+					$conds[] = $dbr->bitAnd( 'rev_deleted', Revision::SUPPRESSED_USER ) .
+						' != ' . Revision::SUPPRESSED_USER;
+				}
+			}
 		}
 		return $conds;
 	}
