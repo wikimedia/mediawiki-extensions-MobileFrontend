@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "ee5cbf65_2d2105ad",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-18T08:38:29Z",
+      "side": 1,
+      "message": "This is a good point (and a good convention).",
+      "parentUuid": "0e58336e_cef3239b",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_ae3fcf1f",
         "filename": "resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
         "patchSetId": 26
