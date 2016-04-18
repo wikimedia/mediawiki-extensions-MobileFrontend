@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "ee5cbf65_b33298ed",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-18T13:42:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee5cbf65_a86d0330",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_2e1bbfd5",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 26
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "Hmm, this is similar to the documentation case above. In either case you\u0027ll see errors. In the first case the errors are being suppressed, and here they are being avoided. I am not sure how to deal with this situation, honestly. That\u0027s why I was asking the above question.",
       "parentUuid": "ee5cbf65_08f50fb6",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_f32c1092",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-18T13:42:31Z",
+      "side": 1,
+      "message": "All that matters here is docs IMO. I will leave it as so because I\u0027m not clear either and could bike shed for days :)",
+      "parentUuid": "ee5cbf65_88cd9f37",
       "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -314,6 +350,24 @@
       "side": 1,
       "message": "The problem it\u0027s solving is not clear to me. Are you saying that if the user clicks on a reference and before it appears clicks on another reference then the user should always see the last clicked reference? In which case even the first clicked reference will return data about the last clicked reference? If yes, then this way of solving the problem is wrong. This function should not mess with the data, it should always return what is being asked for. If you\u0027re not interested in the data it returns, then you should just ignore it.\n\nIf I got it wrong, please explain more. My head is exploding... boom",
       "parentUuid": "ee5cbf65_e8c89b79",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_13470452",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-18T13:42:31Z",
+      "side": 1,
+      "message": "I\u0027ve removed this for time being since I\u0027d like to wrap this mega patch up and it doesn\u0027t really matter either way given current usage. The last request will use the same deferred object as the previous.\n\nIt\u0027s probably the job of the controller to abort previous requests on second thoughts but Sam may have strong feelings towards the original behaviour.",
+      "parentUuid": "ee5cbf65_6863eb3b",
       "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
