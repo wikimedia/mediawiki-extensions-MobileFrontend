@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ee5cbf65_a86d0330",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-18T12:22:58Z",
+      "side": 1,
+      "message": "Sorry, it just felt wrong as there is no jscs:enable below. If you want to disable it for this function, then you should enable it for other parts of the file. You should also disable the specific rule you\u0027re interested in and not everything.",
+      "parentUuid": "ee5cbf65_a8e7c30c",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_2e1bbfd5",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 26
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "ee5cbf65_288293cd",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-18T12:22:58Z",
+      "side": 1,
+      "message": "That\u0027s what I meant. The comment says just \u0027text\u0027 property.",
+      "parentUuid": "ee5cbf65_28c3b362",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e58336e_8e392b41",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 26
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "No because they are documented and that would throw a jshint error and the code is unnecessary o ship.",
       "parentUuid": "0e58336e_8e392b41",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_88cd9f37",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-18T12:22:58Z",
+      "side": 1,
+      "message": "Hmm, this is similar to the documentation case above. In either case you\u0027ll see errors. In the first case the errors are being suppressed, and here they are being avoided. I am not sure how to deal with this situation, honestly. That\u0027s why I was asking the above question.",
+      "parentUuid": "ee5cbf65_08f50fb6",
       "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -154,6 +208,24 @@
       "side": 1,
       "message": "I\u0027ve never seen an interface in core, so wasn\u0027t quite sure what to do here.\n\nI agree throwing an Error rather than a string is the right thing to do but would it be better for me to leave an empty function body here?",
       "parentUuid": "ee5cbf65_2d2105ad",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_48c3870a",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-18T12:22:58Z",
+      "side": 1,
+      "message": "I wouldn\u0027t mind throwing an error for abstract functions.",
+      "parentUuid": "ee5cbf65_88b8ffe3",
       "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -224,6 +296,24 @@
       "side": 1,
       "message": "I\u0027m not sure what you are asking here and why.\n\nSee the comment above.\nWhy do you consider this a problem? What would make it clearer?",
       "parentUuid": "0e58336e_8e876bdc",
+      "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_6863eb3b",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-18T12:22:58Z",
+      "side": 1,
+      "message": "The problem it\u0027s solving is not clear to me. Are you saying that if the user clicks on a reference and before it appears clicks on another reference then the user should always see the last clicked reference? In which case even the first clicked reference will return data about the last clicked reference? If yes, then this way of solving the problem is wrong. This function should not mess with the data, it should always return what is being asked for. If you\u0027re not interested in the data it returns, then you should just ignore it.\n\nIf I got it wrong, please explain more. My head is exploding... boom",
+      "parentUuid": "ee5cbf65_e8c89b79",
       "revId": "b7086e0f6deff06d4117bd481afc75277bffd33d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
