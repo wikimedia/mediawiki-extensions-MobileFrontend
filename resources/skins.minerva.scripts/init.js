@@ -7,8 +7,6 @@
 		loader = M.require( 'mobile.overlays/moduleLoader' ),
 		router = M.require( 'mobile.startup/router' ),
 		context = M.require( 'mobile.context/context' ),
-		// FIXME: Don't pull in the mobile.references library on startup. Lazy load it when needed
-		references = M.require( 'mobile.references/references' ),
 		cleanuptemplates = M.require( 'mobile.issues/cleanuptemplates' ),
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
@@ -207,7 +205,6 @@
 	$( function () {
 		initButton();
 		initMediaViewer();
-		references.setup( page );
 	} );
 
 	// Access the beta optin experiment if available.
