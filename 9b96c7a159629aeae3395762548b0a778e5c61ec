@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee5cbf65_71a593b1",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-19T10:39:36Z",
+      "side": 1,
+      "message": "This doesn\u0027t follow the current convention of the MobileFormatter, which is to have setters for configuration parameters:\n\n   protected $isTOCEnabled \u003d false;\n\n   public function setIsTOCEnabled() {\n     $this-\u003eisTOCEnabled \u003d true;\n   }",
+      "revId": "9b96c7a159629aeae3395762548b0a778e5c61ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_d1957f44",
+        "filename": "resources/skins.minerva.base.styles/common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-19T10:39:36Z",
+      "side": 1,
+      "message": "Why isn\u0027t this line redundant, given the line immediately below? Could you detail what you\u0027re overriding here – if anything.",
+      "revId": "9b96c7a159629aeae3395762548b0a778e5c61ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee5cbf65_51916f51",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-04-19T10:39:36Z",
+      "side": 1,
+      "message": "\"is it okay\" isn\u0027t a helpful description of your assertion.\n\nThe name of the test case does a good enough job here.",
+      "revId": "9b96c7a159629aeae3395762548b0a778e5c61ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
