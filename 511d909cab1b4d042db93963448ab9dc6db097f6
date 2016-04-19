@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_200630d2",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-19T21:10:50Z",
+      "side": 1,
+      "message": "The use of the @mainMenuBackgroundColor variable is confusing now.\n\nI would expect the following:\n@mainMenuBackgroundColor: @colorGray3\n@mainMenuForegroundColor: ..",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
