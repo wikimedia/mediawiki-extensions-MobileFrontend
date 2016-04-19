@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_3dfbf712",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-19T20:06:36Z",
+      "side": 1,
+      "message": "I thought the reason why this was here was because we wanted to replace the placeholders by actual references. If that\u0027s not the case I don\u0027t see why this should still be here. Upon closer examination, I see that the HTMLScraper version of the gateway doesn\u0027t need the page object either. It just needs a jQuery selector that selects page references. Could we change that implementation so that we don\u0027t have to create a page object in the first place? We\u0027ll just use $refSections to find what we\u0027re looking for.",
+      "revId": "51f4a40525783ae20bba77f503a1a6f3a078a802",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
