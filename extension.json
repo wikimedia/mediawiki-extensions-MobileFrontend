@@ -1103,7 +1103,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
 				"mobile.oo"
 			],
 			"scripts": [

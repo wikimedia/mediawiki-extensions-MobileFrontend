@@ -14,19 +14,32 @@
 
 	OO.mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		/**
-		 * @inheritdoc
+		 * @param {String} id of a DOM element in the page
+		 * @param {jQuery.Object} $container to scan for an element
+		 * @return {jQuery.Promise} that can be used by getReference
 		 */
-		getReference: function ( id, page ) {
-			var ref,
-				$refs = page.$( 'ol.references' ),
-				$el = $refs.find( '#' + this.getEscapedId( id ) );
+		getReferenceFromContainer: function ( id, $container ) {
+			var $el, ref,
+				// Escape (almost) all CSS selector meta characters
+				// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+				meta = /[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g;
 
+			id = id.replace( meta, '\\$&' );
+			id = id.substr( 1, id.length );
+
+			$el = $container.find( '#' + id );
 			ref = $el.length ?
 				{
 					text: $el.html()
 				} : false;
 
 			return $.Deferred().resolve( ref ).promise();
+		},
+		/**
+		 * @inheritdoc
+		 */
+		getReference: function ( id, page ) {
+			return this.getReferenceFromContainer( id, page.$( 'ol.references' ) );
 		}
 	} );
 

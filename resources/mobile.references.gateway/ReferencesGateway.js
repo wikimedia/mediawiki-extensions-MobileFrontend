@@ -11,21 +11,6 @@
 	}
 
 	OO.mfExtend( ReferencesGateway, {
-		/**
-		 * Escapes reference id to remove CSS selector meta characters
-		 *
-		 * @param {String} id of a DOM element in the page
-		 * @returns {String}
-		 */
-		getEscapedId: function ( id ) {
-			var
-				// Escape (almost) all CSS selector meta characters
-				// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
-				meta = /[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g;
-
-			id = id.replace( meta, '\\$&' );
-			return id.substr( 1, id.length );
-		},
 		// jscs:disable
 		/**
 		 * Return the matched reference via API or DOM query

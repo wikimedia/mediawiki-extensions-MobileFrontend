@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var ReferencesHtmlScraperGateway = M.require(
-			'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
-		Page = M.require( 'mobile.startup/Page' );
+		'mobile.references.gateway/ReferencesHtmlScraperGateway' );
 
 	/**
 	 * Gateway for retrieving references via the MobileView API
@@ -63,18 +62,15 @@
 		 */
 		getReference: function ( id, page ) {
 			var self = this,
-				parentGetReference = ReferencesHtmlScraperGateway.prototype.getReference;
+				parentGetReferenceFromContainer = ReferencesHtmlScraperGateway.prototype.getReferenceFromContainer;
 
 			return this.getReferencesElements( page ).then( function ( $refSections ) {
-				// append to a new page to avoid side effects on the passed Page object.
-				var refPage = new Page( page.options );
+				var $container = $( '<div>' );
 
 				$refSections.each( function () {
-					// With each replace the matched element is removed from the list.
-					// That's why we always replace the first matched element.
-					refPage.$( '.mf-lazy-references-placeholder' ).eq( 0 ).replaceWith( this );
+					$( this ).appendTo( $container );
 				} );
-				return parentGetReference.call( self, id, refPage );
+				return parentGetReferenceFromContainer.call( self, id, $container );
 			} );
 		}
 	} );
