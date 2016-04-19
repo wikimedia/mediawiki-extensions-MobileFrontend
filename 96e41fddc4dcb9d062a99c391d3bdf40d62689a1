@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_cb35d5d9",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-19T22:42:44Z",
+      "side": 1,
+      "message": "This will always enable the ToC. Should pass $includeTOC from above.",
+      "revId": "96e41fddc4dcb9d062a99c391d3bdf40d62689a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_0b306de4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 925,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-19T22:42:44Z",
+      "side": 1,
+      "message": "Why not use the same name? It\u0027s not Minerva only, is it?",
+      "revId": "96e41fddc4dcb9d062a99c391d3bdf40d62689a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
