@@ -157,6 +157,20 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return String
 	 */
 	public function getPatrolledLink() {
-		return $this->markPatrolledLink();
+		$linkInfo = $this->getMarkPatrolledLinkInfo();
+		if ( $linkInfo ) {
+			$this->getOutput()->addModules( 'mobile.patrol.ajax' );
+			$linkInfo = Html::linkButton(
+				$this->msg( 'markaspatrolleddiff' )->escaped(),
+				array(
+					'href' => $this->mNewPage->getLocalUrl( array(
+						'action' => 'markpatrolled',
+						'rcid' => $linkInfo['rcid'],
+						'token' => $linkInfo['token'],
+					) ),
+				)
+			);
+		}
+		return $linkInfo;
 	}
 }

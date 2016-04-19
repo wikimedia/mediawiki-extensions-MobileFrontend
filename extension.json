@@ -1390,6 +1390,24 @@
 				"resources/mobile.swipe/Swipe.js"
 			]
 		},
+		"mobile.patrol.ajax": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.startup",
+				"mobile.toast",
+				"mediawiki.Title"
+			],
+			"scripts": [
+				"resources/mobile.patrol.ajax/init.js"
+			],
+			"messages": [
+				"markedaspatrollednotify",
+				"markedaspatrollederrornotify"
+			]
+		},
 		"mobile.site": {
 			"dependencies": [
 				"mobile.startup"

@@ -217,6 +217,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * using InlineDiffEngine
 	 */
 	function showDiff() {
+		$output = $this->getOutput();
 		$ctx = MobileContext::singleton();
 
 		$prevId = $this->prevRev ? $this->prevRev->getId() : 0;
@@ -250,7 +251,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $warnings ) {
 			$warnings = MobileUI::warningBox( $warnings );
 		}
-		$this->getOutput()->addHtml(
+		$output->addHtml(
 			$warnings .
 			'<div id="mw-mf-minidiff">' .
 			$diff .
@@ -273,7 +274,18 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					), $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
 			}
 			$history .= Html::closeElement( 'ul' );
-			$this->getOutput()->addHtml( $history );
+			$output->addHtml( $history );
+		}
+
+		$diffEngine = $this->mDiffEngine;
+		if ( $diffEngine instanceof InlineDifferenceEngine ) {
+			$output->addHtml( Html::rawElement(
+				'div',
+				array(
+					'class' => 'patrollink'
+				),
+				$diffEngine->getPatrolledLink()
+			) );
 		}
 	}
 
@@ -328,10 +340,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					Linker::link( $userPage, htmlspecialchars( $ipAddr ) ) .
 				'</div>'
 			);
-		}
-
-		if ( $this->mDiffEngine instanceof InlineDifferenceEngine ) {
-			$output->addHtml( $this->mDiffEngine->getPatrolledLink() );
 		}
 
 		$output->addHtml(
