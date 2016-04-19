@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ae564743_0b518ddd",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "If MobileFrontend isn\u0027t doing this with positive fractional values, it\u0027s not necessary on negative values either.",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_2b5f31ea",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "I know we don\u0027t have a clear rule on property values yet, but it feels very weird to me having `border-radius` before `border`. (personal note)",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_200630d2",
         "filename": "resources/mobile.mainMenu/mainmenu.less",
         "patchSetId": 3
@@ -13,6 +47,91 @@
       "writtenOn": "2016-04-19T21:10:50Z",
       "side": 1,
       "message": "The use of the @mainMenuBackgroundColor variable is confusing now.\n\nI would expect the following:\n@mainMenuBackgroundColor: @colorGray3\n@mainMenuForegroundColor: ..",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_cb6dd598",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "Also, it\u0027s better to have `background` colors specified as `background-color` instead as in the shorthand.",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_cbf4b5ce",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "For readability it\u0027s preferred to have intended selectors when there are single property rules in the same selector, preceded by an empty line.",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_ebfb79b8",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "Same as above, adding an empty line helps readability.",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_6be64915",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "Color notation should follow https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS#Color_property_values – here `rgba( 0, 0, 0, .3 );`",
+      "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_cbeaf5d6",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-19T23:19:42Z",
+      "side": 1,
+      "message": "Same as above, preferred is `background-color`",
       "revId": "511d909cab1b4d042db93963448ab9dc6db097f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
