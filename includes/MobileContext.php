@@ -11,6 +11,8 @@ class MobileContext extends ContextSource {
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
 	const LAZY_LOAD_IMAGES_COOKIE_NAME = 'mfLazyLoadImages';
 	const LAZY_LOAD_IMAGES_COOKIE_VALUE = 'A';
+	const LAZY_LOAD_REFERENCES_COOKIE_NAME = 'mfLazyLoadReferences';
+	const LAZY_LOAD_REFERENCES_COOKIE_VALUE = 'A';
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
@@ -176,8 +178,10 @@ class MobileContext extends ContextSource {
 	public function isLazyLoadReferencesEnabled() {
 		if ( $this->lazyLoadReferences === null ) {
 			$mfLazyLoadReferences = $this->getMFConfig()->get( 'MFLazyLoadReferences' );
+			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_REFERENCES_COOKIE_NAME, '' );
 			$this->lazyLoadReferences = $mfLazyLoadReferences['base'] ||
-				( $this->isBetaGroupMember() && $mfLazyLoadReferences['beta'] );
+				( $this->isBetaGroupMember() && $mfLazyLoadReferences['beta'] ) ||
+				$cookie === self::LAZY_LOAD_REFERENCES_COOKIE_VALUE;
 		}
 		return $this->lazyLoadReferences;
 	}
