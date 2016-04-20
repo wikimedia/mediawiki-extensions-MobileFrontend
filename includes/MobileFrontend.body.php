@@ -62,11 +62,8 @@ class ExtMobileFrontend {
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
 
-		$mfLazyLoadReferences = $config->get( 'MFLazyLoadReferences' );
-
 		$removeImages = $context->isLazyLoadImagesEnabled();
-		$removeReferences = $mfLazyLoadReferences['base'] ||
-			( $isBeta && $mfLazyLoadReferences['beta'] );
+		$removeReferences = $context->isLazyLoadReferencesEnabled();
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise

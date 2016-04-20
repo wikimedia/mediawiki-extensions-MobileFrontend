@@ -471,7 +471,6 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
-			'wgMFLazyLoadReferences' => $config->get( 'MFLazyLoadReferences' ),
 			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
 				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
@@ -1341,6 +1340,7 @@ class MobileFrontendHooks {
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 			$vars['wgMFLazyLoadImages'] = $context->isLazyLoadImagesEnabled();
+			$vars['wgMFLazyLoadReferences'] = $context->isLazyLoadReferencesEnabled();
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();

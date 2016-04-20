@@ -28,6 +28,11 @@ class MobileContext extends ContextSource {
 	 */
 	protected $lazyLoadImages;
 	/**
+	 * Save whether references will be lazy loaded for current user
+	 * @var boolean $lazyLoadReferences
+	 */
+	protected $lazyLoadReferences;
+	/**
 	 * Save explicitly requested format
 	 * @var string $useFormat
 	 */
@@ -162,6 +167,19 @@ class MobileContext extends ContextSource {
 		}
 
 		return $this->device;
+	}
+
+	/**
+	 * Checks whether references should be lazy loaded for the current user
+	 * @return bool
+	 */
+	public function isLazyLoadReferencesEnabled() {
+		if ( $this->lazyLoadReferences === null ) {
+			$mfLazyLoadReferences = $this->getMFConfig()->get( 'MFLazyLoadReferences' );
+			$this->lazyLoadReferences = $mfLazyLoadReferences['base'] ||
+				( $this->isBetaGroupMember() && $mfLazyLoadReferences['beta'] );
+		}
+		return $this->lazyLoadReferences;
 	}
 
 	/**

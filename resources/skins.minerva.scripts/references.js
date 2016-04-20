@@ -1,8 +1,6 @@
 ( function ( M, $ ) {
 	var drawer,
-		page = M.getCurrentPage(),
-		context = M.require( 'mobile.context/context' ),
-		isBeta = context.isBetaGroupMember();
+		page = M.getCurrentPage();
 
 	/**
 	 * Retrieves the references gateway module info to be used on the page from config
@@ -12,9 +10,7 @@
 	 * @returns {String} name of the class implementing ReferenceGateway to use
 	 */
 	function getReferenceGatewayClassName() {
-		var config = mw.config.get( 'wgMFLazyLoadReferences', {} );
-
-		return config.base || ( isBeta && config.beta ) ?
+		return mw.config.get( 'wgMFLazyLoadReferences', false ) ?
 			'ReferencesMobileViewGateway' : 'ReferencesHtmlScraperGateway';
 	}
 
