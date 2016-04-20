@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_d17aa4b8",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-20T09:03:10Z",
+      "side": 1,
+      "message": "Whoops :)",
+      "parentUuid": "ae564743_cb35d5d9",
+      "revId": "96e41fddc4dcb9d062a99c391d3bdf40d62689a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_0b306de4",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-19T22:42:44Z",
       "side": 1,
       "message": "Why not use the same name? It\u0027s not Minerva only, is it?",
+      "revId": "96e41fddc4dcb9d062a99c391d3bdf40d62689a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_91714ce0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 925,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-20T09:03:10Z",
+      "side": 1,
+      "message": "It\u0027s (currently) only exposed in Minerva and I want to make that clear to JS clients. There seems no reason to expose it to non-Minerva skins.",
+      "parentUuid": "ae564743_0b306de4",
       "revId": "96e41fddc4dcb9d062a99c391d3bdf40d62689a1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
