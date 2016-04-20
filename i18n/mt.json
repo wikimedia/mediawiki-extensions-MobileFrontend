@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Chrisportelli",
-			"Leli Forte"
+			"Leli Forte",
+			"MTSap"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Indirizz elettroniku (opzjonali)",
@@ -33,7 +34,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-home-button": "Daħla",
 	"mobile-frontend-images-status": "Stampi",
-	"mobile-frontend-language-article-heading": "Aqra f'lingwa oħra",
+	"mobile-frontend-language-article-heading": "Aqra b'lingwa oħra",
 	"mobile-frontend-last-modified-date": "Immodifikata l-aħħar: data $1, ħin $2",
 	"mobile-frontend-logged-in-homepage-notification": "Merħba, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Illogjat bħala $1.",
@@ -46,7 +47,7 @@
 	"mobile-frontend-main-menu-page-title": "Navigazzjoni tas-sit",
 	"mobile-frontend-main-menu-settings": "Konfigurazzjoni",
 	"mobile-frontend-main-menu-settings-heading": "Konfigurazzjoni għas-sit għall-mowbajl",
-	"mobile-frontend-main-menu-watchlist": "Lista ta' osservazzjonijiet",
+	"mobile-frontend-main-menu-watchlist": "Lista tas-segwiti",
 	"mobile-frontend-meta-data-issues": "Din il-paġna għandha xi problemi",
 	"mobile-frontend-meta-data-issues-header": "Anomaliji",
 	"mobile-frontend-missing-image": "Stampa",
