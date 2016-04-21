@@ -1,5 +1,6 @@
 {
 	"globals": {
+		"module": false,
 		"console": true,
 		"jQuery": true,
 		"JsDiff": true,
