@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_18a6efa7",
+        "filename": "resources/mobile.mainMenu/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-21T22:55:09Z",
+      "side": 1,
+      "message": "Why not use -mobilewatchlist to follow the pattern of -mobileoptions (which was previously -settings and got fixed in the same way)",
+      "revId": "11cd3266a618093c639e24412f76fdc85faf43f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
