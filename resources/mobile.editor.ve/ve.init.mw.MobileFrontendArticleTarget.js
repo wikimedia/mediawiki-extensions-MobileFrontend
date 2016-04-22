@@ -241,3 +241,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.close = function () {
 
 	window.history.back();
 };
+
+/* Registration */
+
+ve.init.mw.targetFactory.register( ve.init.mw.MobileFrontendArticleTarget );

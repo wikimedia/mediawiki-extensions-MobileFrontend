@@ -62,7 +62,7 @@
 			mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( mw.libs.ve.targetLoader.loadModules )
 				.then( function () {
-					overlay.target = new ve.init.mw.MobileFrontendArticleTarget( overlay, {
+					overlay.target = ve.init.mw.targetFactory.create( 'article', overlay, {
 						$element: overlay.$el,
 						// || undefined so that scrolling is not triggered for the lead (0) section
 						// (which has no header to scroll to)
