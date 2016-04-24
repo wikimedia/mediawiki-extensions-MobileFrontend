@@ -20,15 +20,36 @@
 	ModuleLoader.prototype = {
 		/**
 		 * Require (import) a module previously defined using define().
+		 * Searches core module registry using mw.loader.require before consulting
+		 * its own local registry. This method is deprecated, please do not use.
 		 *
 		 * @param {String} id Required module id.
 		 * @return {Object} Required module, can be any JavaScript object.
 		 */
 		require: function ( id ) {
-			if ( !this._register.hasOwnProperty( id ) ) {
-				throw new Error( 'Module not found: ' + id );
+			var module, args,
+				registry = this._register;
+
+			/**
+			 * @ignore
+			 */
+			function localRequire() {
+				if ( !registry.hasOwnProperty( id ) ) {
+					throw new Error( 'MobileFrontend Module not found: ' + id );
+				}
+				return registry[ id ];
 			}
-			return this._register[ id ];
+			args = id.split( '/' );
+			try {
+				module = mw.loader.require( args[0] );
+				if ( module[ args[1] ] ) {
+					return module[ args[1] ];
+				} else {
+					return localRequire();
+				}
+			} catch ( e ) {
+				return localRequire();
+			}
 		},
 
 		/**
@@ -87,6 +108,7 @@
 	mw.mobileFrontend = new ModuleLoader();
 
 	// inception to support testing (!!)
+	module.exports.ModuleLoader = ModuleLoader;
 	mw.mobileFrontend.define( 'ModuleLoader', ModuleLoader );
 
 }() );
