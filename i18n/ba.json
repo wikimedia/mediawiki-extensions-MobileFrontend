@@ -15,7 +15,8 @@
 			"Лилиә",
 			"Янмурза Баки",
 			"Гизатуллина",
-			"Ләйсән"
+			"Ләйсән",
+			"Айсар"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ҡатнашыусы мобиль интерфей аша мөхәррирләйме?",
@@ -117,7 +118,7 @@
 	"mobile-frontend-editor-undo-unsupported": "Әлегә мобиль ҡорамаларҙа баш тартыу мөмкин түгел.",
 	"mobile-frontend-editor-uploadenable": "Мөхәррирләү өсөн тәүҙә фото ҡуйығыҙ.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Нөсхә тексты ҡарау</strong><span>$1</span>",
-	"mobile-frontend-editor-wait": "Көтөп тороғоҙ,төҙәтеү һаҡлана.",
+	"mobile-frontend-editor-wait": "Көтөп тороғоҙ, төҙәтеү һаҡлана.",
 	"mobile-frontend-editor-redlink-leave": "Юҡ, рәхмәт",
 	"mobile-frontend-editor-redlink-explain": "Был бит әле булдырылмаған.",
 	"mobile-frontend-editor-redlink-create": "Яңы бит яһарға",
