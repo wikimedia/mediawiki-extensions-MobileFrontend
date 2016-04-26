@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_1cfb7045",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-26T00:11:55Z",
+      "side": 1,
+      "message": "I worry that this is too buried and if other rules are introduced this would leave to multiple @media rules with identical parameters (our LESS compiler doesn\u0027t bundle them into one)\n\nNot a problem now but something to consider.\n\nTo avoid this we always place the media queries at the bottom of the file to make these more visible.\n\nWhat do you see as advantages to doing it this way?",
+      "revId": "8ae4a10699268a176c2acd196db15cfbf3b94841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_7cf8ac46",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-04-26T00:11:55Z",
+      "side": 1,
+      "message": "use the available @colorGrayLighter variable",
+      "revId": "8ae4a10699268a176c2acd196db15cfbf3b94841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
