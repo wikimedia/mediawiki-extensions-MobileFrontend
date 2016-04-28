@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_227718ff",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-04-28T21:08:47Z",
+      "side": 1,
+      "message": "The commit message mentions that the non \u0027mf-\u0027 icons are there for backwards compatibility reasons. Do we need a FIXME comment here to remove those once cache clears?",
+      "revId": "7eb17ca631e151db19a9307e22f24084e3145c77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
