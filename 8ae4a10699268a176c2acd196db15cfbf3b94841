@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_28d54948",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-04-28T20:47:24Z",
+      "side": 1,
+      "message": "Avoids having to type out the css tree path again at the bottom.",
+      "parentUuid": "ae564743_1cfb7045",
+      "revId": "8ae4a10699268a176c2acd196db15cfbf3b94841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_7cf8ac46",
         "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-04-26T00:11:55Z",
       "side": 1,
       "message": "use the available @colorGrayLighter variable",
+      "revId": "8ae4a10699268a176c2acd196db15cfbf3b94841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_08da0578",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-04-28T20:47:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_7cf8ac46",
       "revId": "8ae4a10699268a176c2acd196db15cfbf3b94841",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
