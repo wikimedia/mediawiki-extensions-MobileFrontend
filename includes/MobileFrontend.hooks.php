@@ -1295,15 +1295,22 @@ class MobileFrontendHooks {
 	 */
 	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
 		$context = MobileContext::singleton();
+		$config = $context->getMFConfig();
 		if (
 			$context->shouldDisplayMobileView() &&
-			$context->getMFConfig()->get( 'MFStripResponsiveImages' )
+			$config->get( 'MFStripResponsiveImages' )
 		) {
-			// Remove all responsive image 'srcset' attributes.
-			// Note that in future, srcset may be used for specifying
-			// small-screen-friendly image variants as well as density
-			// variants, so this should be used with caution.
-			unset( $attribs['srcset'] );
+			$file = $thumbnail->getFile();
+			if ( !$file || !in_array( $file->getMimeType(),
+			                          $config->get( 'MFResponsiveImageWhitelist' ) ) ) {
+				// Remove all responsive image 'srcset' attributes, except
+				// from SVG->PNG renderings which usually aren't too huge,
+				// or other whitelisted types.
+				// Note that in future, srcset may be used for specifying
+				// small-screen-friendly image variants as well as density
+				// variants, so this should be used with caution.
+				unset( $attribs['srcset'] );
+			}
 		}
 	}
 
