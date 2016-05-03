@@ -257,7 +257,8 @@
 						_super.call( self, options );
 					} );
 				} ).fail( function ( errorType ) {
-					options.errorType = errorType;
+					options.errorOptions = self._errorOptions( errorType );
+					self._isLoading = false;
 					_super.call( self, options );
 				} );
 			} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
@@ -268,7 +269,8 @@
 				this._find( options ).done( function ( options ) {
 					_super.call( self, options );
 				} ).fail( function ( errorType ) {
-					options.errorType = errorType;
+					options.errorOptions = self._errorOptions( errorType );
+					self._isLoading = false;
 					_super.call( self, options );
 				} );
 			}
