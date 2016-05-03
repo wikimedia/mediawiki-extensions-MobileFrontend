@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_9db0ecd9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-03T16:53:41Z",
+      "side": 1,
+      "message": "Rather than using the global make use of $context-\u003egetMFConfig(); here",
+      "revId": "7a853a28b777db6d09b265a4de1fc8ee46122dfe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
