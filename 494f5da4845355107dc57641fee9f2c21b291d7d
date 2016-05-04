@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_c1e71a3a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-04T17:25:59Z",
+      "side": 1,
+      "message": "Are we sure we want to collapse by default on tablets? Isn\u0027t that a question for Design/PO?",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_41fcaad5",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-04T17:25:59Z",
+      "side": 1,
+      "message": "I /believe/ convention is to use double quotes in CSS selectors, although that\u0027s very minor and nitpicky (and may not even be true; I could be misremembering), so I don\u0027t really care if you change it, just figured I\u0027d mention it.",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_e195fe8a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-04T17:25:59Z",
+      "side": 1,
+      "message": "This could be taken care of in one style above instead of an additional one.\n\n    div[class^\u003d\"mf-section-\"]:not(.mf-section-0)",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
