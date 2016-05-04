@@ -16,6 +16,24 @@
       "revId": "750bcce2f97c85c3e2a85c098096470f5ab87084",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_fe8ab96c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1309,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2016-05-04T16:06:59Z",
+      "side": 1,
+      "message": "I don\u0027t like long lines. ;) could switch to an \u0026\u0026 with a line break i suppose",
+      "parentUuid": "ae564743_fbee4b85",
+      "revId": "750bcce2f97c85c3e2a85c098096470f5ab87084",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
