@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_c1643ab1",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-04T17:28:03Z",
+      "side": 1,
+      "message": "That\u0027s max-width, so mobile phones only. This is the default behavior too, I\u0027m just doing it with CSS here.",
+      "parentUuid": "ae564743_c1e71a3a",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_41fcaad5",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2016-05-04T17:25:59Z",
       "side": 1,
       "message": "This could be taken care of in one style above instead of an additional one.\n\n    div[class^\u003d\"mf-section-\"]:not(.mf-section-0)",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_41102a04",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-04T17:28:03Z",
+      "side": 1,
+      "message": "Does :not work on IE8?",
+      "parentUuid": "ae564743_e195fe8a",
       "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
