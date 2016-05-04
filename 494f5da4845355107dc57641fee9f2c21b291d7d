@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_a1d3062f",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-04T17:35:52Z",
+      "side": 1,
+      "message": "Didn\u0027t realize it was the default behavior, so that\u0027s fine.",
+      "parentUuid": "ae564743_c1643ab1",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_41fcaad5",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 2
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "Does :not work on IE8?",
       "parentUuid": "ae564743_e195fe8a",
+      "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_a19ae672",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-04T17:35:52Z",
+      "side": 1,
+      "message": "I\u0027m not sure if we even technically support any devices that run IE Mobile \u003c 9, but no, it doesn\u0027t. The support for attribute selectors overall is also a bit unclear (https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors), so per some discussion with Baha, we decided the more correct way to do this is to add a common \"mf-section\" class and move the current classes to IDs (since that\u0027s what they\u0027re being used as anyways).",
+      "parentUuid": "ae564743_41102a04",
       "revId": "494f5da4845355107dc57641fee9f2c21b291d7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
