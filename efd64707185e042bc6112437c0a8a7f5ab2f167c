@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_10915652",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-05T04:07:15Z",
+      "side": 1,
+      "message": "Default should probably be true given this is what we run in production and thus advise. Sysadmin should knowingly make this decision.\n\nIf you strongly feel that this should default to false let\u0027s talk about it but merging this should be blocked on the configuration change to avoid performance regressions.",
+      "revId": "efd64707185e042bc6112437c0a8a7f5ab2f167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
