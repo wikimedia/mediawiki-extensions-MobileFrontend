@@ -76,13 +76,25 @@
 	@baseIconSize: 24px;
 	@targetIconSize: 32px;
 	.overlay-header-container {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
 		.ve-init-mw-mobileArticleTarget-toolbar {
+			@media all and (min-width: @wgMFDeviceWidthDesktop) {
+				border: 1px solid @colorGrayLighter;
+				border-width: 0 1px;
+			}
 			// Everything is measured in ems so the easiest way to scale
 			// is to change the base font size.
 			font-size: unit( 0.8 * @targetIconSize / @baseIconSize, em );
+
 			.oo-ui-iconElement-icon {
 				/* We should be able to use 'contain' here, but some OOUI icon containers are oversized (T85139) */
 				.background-size( @targetIconSize, @targetIconSize );
+			}
+
+			.oo-ui-toolbar-bar {
+				border: 0;
+				box-shadow: none;
 			}
 		}
 	}
