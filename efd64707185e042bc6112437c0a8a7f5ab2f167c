@@ -16,6 +16,24 @@
       "revId": "efd64707185e042bc6112437c0a8a7f5ab2f167c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_10de7614",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2016-05-05T04:10:32Z",
+      "side": 1,
+      "message": "Feel free to switch the dependency order: https://gerrit.wikimedia.org/r/#/c/286505/",
+      "parentUuid": "ae564743_10915652",
+      "revId": "efd64707185e042bc6112437c0a8a7f5ab2f167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
