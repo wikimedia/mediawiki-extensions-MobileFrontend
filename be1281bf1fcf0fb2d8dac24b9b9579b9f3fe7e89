@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_7a9a2c76",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-05T17:26:50Z",
+      "side": 1,
+      "message": "This will not work for mobile browsers without media queries.\n\nMobile first!\nWe should only use media queries to provide desktop styles.",
+      "revId": "be1281bf1fcf0fb2d8dac24b9b9579b9f3fe7e89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
