@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_24e89fae",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-05-05T12:43:05Z",
+      "side": 1,
+      "message": "this doesn\u0027t need to be public, as far as I can see (like Jon asked).",
+      "revId": "19658ab881c882b5153a2f030929e39f343c09b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_44e5d3d6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-05-05T12:43:05Z",
+      "side": 1,
+      "message": "does you really need to construct the content handler in the constructor? In the worst case, this triggers a LinkCache update when you don\u0027t need it, right?",
+      "revId": "19658ab881c882b5153a2f030929e39f343c09b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
