@@ -33,6 +33,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 		$out->setProperty( 'bodyClassName', 'navigation-enabled navigation-full-screen' );
 		$out->addModuleStyles(
 			array(
+				'mobile.mainMenu.icons',
 				'mobile.mainMenu',
 			)
 		);

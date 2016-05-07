@@ -366,20 +366,42 @@
 				"resources/mobile.browser/browser.js"
 			]
 		},
+		"mobile.mainMenu.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before,.mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-{name}:before,.mw-ui-icon-mf-{name}:before",
+			"prefix": "mw-ui",
+			"variants": {
+				"invert": {
+					"color": "#FFFFFF",
+					"global": true
+				}
+			},
+			"images": {
+				"anonymous": "resources/mobile.mainMenu.icons/anonymous.svg",
+				"home": "resources/mobile.mainMenu.icons/home.svg",
+				"logout": "resources/mobile.mainMenu.icons/logout.svg",
+				"nearby": "resources/mobile.mainMenu.icons/nearby.svg",
+				"profile": "resources/mobile.mainMenu.icons/profile.svg",
+				"random": "resources/mobile.mainMenu.icons/random.svg",
+				"settings": "resources/mobile.mainMenu.icons/settings.svg",
+				"watchlist": "resources/mobile.mainMenu.icons/watchlist.svg"
+			}
+		},
 		"mobile.mainMenu": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
+				"mobile.mainMenu.icons",
 				"mobile.view",
 				"mobile.browser",
 				"mobile.loggingSchemas.mobileWebMainMenuClickTracking"
 			],
 			"position": "bottom",
 			"styles": [
-				"resources/mobile.mainMenu/mainmenu.less",
-				"resources/mobile.mainMenu/icons.less"
+				"resources/mobile.mainMenu/mainmenu.less"
 			],
 			"templates": {
 				"menu.hogan": "resources/mobile.mainMenu/menu.mustache"
