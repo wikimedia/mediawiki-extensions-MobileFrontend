@@ -8,7 +8,8 @@
 			"Remux",
 			"Yekrats",
 			"Robin van der Vliet",
-			"Lucas"
+			"Lucas",
+			"Renardo"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Entajpu konfirman kodon",
@@ -67,7 +68,7 @@
 	"mobile-frontend-last-modified-years": "Laste redaktita antaŭ {{PLURAL:$1|$1 jaro|$1 jaroj}}",
 	"mobile-frontend-logged-in-homepage-notification": "Bonvenon, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Elsalutita kiel $1",
-	"mobile-frontend-main-menu": "Ĉefa Menuo",
+	"mobile-frontend-main-menu": "Ĉefa menuo",
 	"mobile-frontend-main-menu-account-create": "Krei konton",
 	"mobile-frontend-main-menu-button-tooltip": "Malfermi ĉefmenuon",
 	"mobile-frontend-main-menu-featured": "Elstara",

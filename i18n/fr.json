@@ -101,7 +101,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
 	"mobile-frontend-editor-anonwarning": "<strong>Attention</strong> : vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
-	"mobile-frontend-editor-blocked-info-loggedin": "Votre compte est bloqué de toute modification. Le bloc a été mis en place par {{GENDER:$2|$2}} pour la raison suivante: $1",
+	"mobile-frontend-editor-blocked-info-loggedin": "Votre compte est bloqué et ne peut faire de modifications. Le blocage a été mis en place par {{GENDER:$2|$2}} pour la raison suivante : $1",
 	"mobile-frontend-editor-blocked-info": "Votre adresse IP est bloquée en modification. Le blocage a été fait par {{GENDER:$1|$1}} pour la raison suivante : $2.",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
