@@ -12,7 +12,7 @@ class MobileSiteModule extends ResourceLoaderSiteModule {
 	/** @var array Saves the target for the module.
 	 * Should not be enabled on desktop which has ResourceLoaderSiteModule
 	 */
-	protected $targets = array( 'mobile' );
+	protected $targets = [ 'mobile' ];
 
 	/**
 	 * Gets list of pages used by this module.
@@ -20,10 +20,10 @@ class MobileSiteModule extends ResourceLoaderSiteModule {
 	 * @return array
 	 */
 	protected function getPages( ResourceLoaderContext $context ) {
-		return array(
-			'MediaWiki:Mobile.css' => array( 'type' => 'style' ),
-			'MediaWiki:Mobile.js' => array( 'type' => 'script' ),
-		);
+		return [
+			'MediaWiki:Mobile.css' => [ 'type' => 'style' ],
+			'MediaWiki:Mobile.js' => [ 'type' => 'script' ],
+		];
 	}
 
 	/**

@@ -11,7 +11,7 @@ use HtmlFormatter\HtmlFormatter;
 class MobileFormatter extends HtmlFormatter {
 	/** @var array $topHeadingTags Array of strings with possible tags,
 		can be recognized as top headings. */
-	public $topHeadingTags = array();
+	public $topHeadingTags = [];
 
 	/**
 	 * Saves a Title Object
@@ -138,7 +138,7 @@ class MobileFormatter extends HtmlFormatter {
 			$this->doRemoveImages();
 		}
 
-		$transformOptions = array( 'images' => $removeImages );
+		$transformOptions = [ 'images' => $removeImages ];
 		// Sectionify the content and transform it if necessary per section
 		if ( !$this->mainPage && $this->expandableSections ) {
 			list( $headings, $subheadings ) = $this->getHeadings( $doc );
@@ -160,7 +160,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param array $options options about the transformations per section
 	 */
 	private function filterContentInSection(
-		$el, DOMDocument $doc, $sectionNumber, $options = array()
+		$el, DOMDocument $doc, $sectionNumber, $options = []
 	) {
 		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->doRewriteImagesForLazyLoading( $el, $doc );
@@ -244,7 +244,7 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	private function doRemoveImages() {
 		$doc = $this->getDoc();
-		$domElemsToReplace = array();
+		$domElemsToReplace = [];
 		foreach ( $doc->getElementsByTagName( 'img' ) as $element ) {
 			$domElemsToReplace[] = $element;
 		}
@@ -302,7 +302,7 @@ class MobileFormatter extends HtmlFormatter {
 		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
 
 		// These elements will be handled specially
-		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
+		$commonAttributes = [ 'mp-tfa', 'mp-itn' ];
 
 		// Start building the new Main Page content in the $content var
 		$content = $mainPage->createElement( 'div' );
@@ -474,8 +474,8 @@ class MobileFormatter extends HtmlFormatter {
 	 *  rank headings and the second is all other headings
 	 */
 	private function getHeadings( DOMDocument $doc ) {
-		$result = array();
-		$headings = $subheadings = array();
+		$result = [];
+		$headings = $subheadings = [];
 
 		foreach ( $this->topHeadingTags as $tagName ) {
 			$elements = $doc->getElementsByTagName( $tagName );
@@ -497,6 +497,6 @@ class MobileFormatter extends HtmlFormatter {
 			}
 		}
 
-		return array( $headings, $subheadings );
+		return [ $headings, $subheadings ];
 	}
 }

@@ -87,7 +87,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				}
 			}
 		}
-		return array( $prev, $rev );
+		return [ $prev, $rev ];
 	}
 
 	/**
@@ -119,15 +119,15 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$this->targetTitle->getPrefixedText()
 		) );
 
-		$output->addModuleStyles( array(
+		$output->addModuleStyles( [
 			'mobile.pagesummary.styles',
 			// @todo FIXME: Don't add these styles. This is only needed for the user
 			// icon to the left of the username
 			'mobile.special.pagefeed.styles'
-		) );
+		] );
 
 		// Allow other extensions to load more stuff here
-		Hooks::run( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );
+		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $ctx, $revisions ] );
 
 		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
@@ -184,21 +184,21 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$this->getOutput()->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ) )
-				. Html::openElement( 'h2', array() )
+			Html::openElement( 'div', [ 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ] )
+				. Html::openElement( 'h2', [] )
 				. Html::element( 'a',
-					array(
+					[
 						'href' => $title->getLocalURL(),
-					),
+					],
 					$title->getPrefixedText()
 				)
 				. Html::closeElement( 'h2' )
 				. $this->msg( 'mobile-frontend-diffview-comma' )->rawParams(
-					Html::element( 'span', array( 'class' => $sizeClass ),
+					Html::element( 'span', [ 'class' => $sizeClass ],
 						$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
 					),
 					Html::element(
-						'span', array( 'class' => 'mw-mf-diff-date meta' ),
+						'span', [ 'class' => 'mw-mf-diff-date meta' ],
 						$ts->getHumanTimestamp()
 					)
 				)->text()
@@ -206,7 +206,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			. $minor
 			. Html::rawElement(
 				'div',
-				array( 'id' => 'mw-mf-diff-comment' ),
+				[ 'id' => 'mw-mf-diff-comment' ],
 				$comment
 			)
 		);
@@ -260,18 +260,18 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$prev = $this->rev->getPrevious();
 		$next = $this->rev->getNext();
 		if ( $prev || $next ) {
-			$history = Html::openElement( 'ul', array( 'class' => 'hlist revision-history-links' ) );
+			$history = Html::openElement( 'ul', [ 'class' => 'hlist revision-history-links' ] );
 			if ( $prev ) {
 				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', array(
+					Html::element( 'a', [
 						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl()
-					), $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
+					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
 			}
 			if ( $next ) {
 				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', array(
+					Html::element( 'a', [
 						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )->getLocalUrl()
-					), $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
+					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
 			}
 			$history .= Html::closeElement( 'ul' );
 			$output->addHtml( $history );
@@ -281,9 +281,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $diffEngine instanceof InlineDifferenceEngine ) {
 			$output->addHtml( Html::rawElement(
 				'div',
-				array(
+				[
 					'class' => 'patrollink'
-				),
+				],
 				$diffEngine->getPatrolledLink()
 			) );
 		}
@@ -296,27 +296,27 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output = $this->getOutput();
 
 		$output->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-userinfo',
-				'class' => 'position-fixed' ) ) .
-			Html::openElement( 'div', array( 'class' => 'post-content' ) )
+			Html::openElement( 'div', [ 'id' => 'mw-mf-userinfo',
+				'class' => 'position-fixed' ] ) .
+			Html::openElement( 'div', [ 'class' => 'post-content' ] )
 		);
 
 		$userId = $this->rev->getUser();
 		if ( $userId ) {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
-			$attrs = array(
+			$attrs = [
 				'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user icon-16px' ),
 				'data-revision-id' => $this->revId,
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
-			);
+			];
 			$output->addHtml(
 				Html::openElement( 'div', $attrs ) .
 				Linker::link(
 					$user->getUserPage(),
 					htmlspecialchars( $user->getName() ),
-					array( 'class' => 'mw-mf-user-link' )
+					[ 'class' => 'mw-mf-user-link' ]
 				) .
 				'</div>' .
 				'<div class="mw-mf-roles meta">' .
@@ -333,9 +333,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
 			$output->addHtml(
-				Html::element( 'div', array(
+				Html::element( 'div', [
 					'class' =>  MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user icon-16px mw-mf-anon' ),
-				), $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
+				], $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
 				'<div>' .
 					Linker::link( $userPage, htmlspecialchars( $ipAddr ) ) .
 				'</div>'
@@ -356,7 +356,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	function listGroups( User $user ) {
 		# Get groups to which the user belongs
 		$userGroups = $user->getGroups();
-		$userMembers = array();
+		$userMembers = [];
 		foreach ( $userGroups as $n => $ug ) {
 			$memberName = User::getGroupMember( $ug, $user->getName() );
 			if ( $n == 0 ) {
@@ -426,9 +426,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	public function getDesktopUrl( $subPage ) {
 		$parts = explode( '...', $subPage );
 		if ( count( $parts ) > 1 ) {
-			$params = array( 'diff' => $parts[1], 'oldid' => $parts[0] );
+			$params = [ 'diff' => $parts[1], 'oldid' => $parts[0] ];
 		} else {
-			$params = array( 'diff' => $parts[0] );
+			$params = [ 'diff' => $parts[0] ];
 		}
 		if ( $this->getRequest()->getVal( 'unhide' ) ) {
 			$params['unhide'] = 1;

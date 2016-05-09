@@ -8,11 +8,11 @@ $wgMFIgnoreEventLoggingBucketing = true;
 $wgHooks['InterwikiLoadPrefix'][] = function ( $prefix, &$iwdata ) {
 	if ( $prefix === 'es' ) {
 		// return our hardcoded interwiki info
-		$iwdata = array(
+		$iwdata = [
 			'iw_url' => 'http://wikifoo.org/es/index.php/$1',
 			'iw_local' => 0,
 			'iw_trans' => 0,
-		);
+		];
 		return false;
 	}
 	// nothing to do, continue lookup

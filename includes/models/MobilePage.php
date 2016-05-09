@@ -59,11 +59,11 @@ class MobilePage {
 	public function getLatestEdit() {
 		$rev = Revision::newFromId( $this->getTitle()->getLatestRevID() );
 		$unixTimestamp = wfTimestamp( TS_UNIX, $this->getLatestTimestamp() );
-		$edit = array(
+		$edit = [
 			'timestamp' => $unixTimestamp,
 			'name' => '',
 			'gender' => '',
-		);
+		];
 		if ( $rev ) {
 			$userId = $rev->getUser();
 			if ( $userId ) {
@@ -92,9 +92,9 @@ class MobilePage {
 	 * @return string
 	 */
 	public static function getPlaceHolderThumbnailHtml( $className, $iconClassName = 'icon-32px' ) {
-		return Html::element( 'div', array(
+		return Html::element( 'div', [
 			'class' => 'list-thumb list-thumb-placeholder ' . $iconClassName . ' ' . $className,
-		) );
+		] );
 	}
 
 	/**
@@ -129,15 +129,15 @@ class MobilePage {
 		if ( $this->usePageImages ) {
 			$file = $this->file;
 			if ( $file ) {
-				$thumb = $file->transform( array( 'width' => $size ) );
+				$thumb = $file->transform( [ 'width' => $size ] );
 				if ( $thumb && $thumb->getUrl() ) {
 					$className = 'list-thumb ';
 					$className .= $thumb->getWidth() > $thumb->getHeight()
 						? 'list-thumb-y'
 						: 'list-thumb-x';
-					$props = array(
+					$props = [
 						'class' => $className,
-					);
+					];
 
 					$imgUrl = wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT );
 					if ( $useBackgroundImage ) {

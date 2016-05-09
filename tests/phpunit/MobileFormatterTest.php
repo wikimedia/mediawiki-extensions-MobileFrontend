@@ -26,7 +26,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		if ( $callback ) {
 			$callback( $mf );
 		}
-		$mf->topHeadingTags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
 		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages );
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
@@ -53,17 +53,17 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
 
-		return array(
+		return [
 			// # Lazy loading images
 			// Main page not impacted
-			array(
+			[
 				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
 				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
 				$mainPage,
 				false, false, true,
-			),
+			],
 			// Lead section images not impacted
-			array(
+			[
 				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
 					. '<h2>heading 2</h2>abc',
 				'<div class="mf-section-0"><p>' . $originalImage . '</p></div>'
@@ -75,9 +75,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. 'heading 2</h2><div class="mf-section-2">abc</div>',
 				$enableSections,
 				false, false, true,
-			),
+			],
 			// Test lazy loading of images outside the lead section
-			array(
+			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 					. '<h2>heading 2</h2>abc',
 				'<div class="mf-section-0"><p>text</p></div>'
@@ -91,9 +91,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. 'heading 2</h2><div class="mf-section-2">abc</div>',
 				$enableSections,
 				false, false, true,
-			),
+			],
 			// https://phabricator.wikimedia.org/T130025, last section filtered
-			array(
+			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 				.'<h2>heading 2</h2>' . $originalImage,
 				'<div class="mf-section-0"><p>text</p></div>'
@@ -109,44 +109,44 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '</div>',
 				$enableSections,
 				false, false, true,
-			),
+			],
 
 			// # Removal of images
-			array(
+			[
 				'<img src="/foo/bar.jpg" alt="Blah"/>',
 				'<span class="mw-mf-image-replacement">[Blah]</span>',
 				$removeImages,
-			),
-			array(
+			],
+			[
 				'<img alt="picture of kitty" src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">' .
 				'[picture of kitty]</span>',
 				$removeImages,
-			),
-			array(
+			],
+			[
 				'<img src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
 				$removeImages,
-			),
-			array(
+			],
+			[
 				'<img alt src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
 				$removeImages,
-			),
-			array(
+			],
+			[
 				'<img alt src="kitty.jpg">look at the cute kitty!' .
 					'<img alt="picture of angry dog" src="dog.jpg">',
 				'<span class="mw-mf-image-replacement">[' .
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
 					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
 				$removeImages,
-			),
+			],
 
 			// # Section wrapping
 			// \n</h2> in headers
-			array(
+			[
 				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span>'
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
@@ -156,9 +156,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
-			),
+			],
 			// \n</h3> in headers
-			array(
+			[
 				'<h3><span>h3</span></h3>'
 					. $longLine
 					. '<h4><span>h4</span></h4>'
@@ -172,9 +172,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. 'h4 text.'
 					. '</div>',
 				$enableSections
-			),
+			],
 			// \n</h6> in headers
-			array(
+			[
 				'<h6><span>h6</span></h6>'
 					. $longLine,
 				'<div class="mf-section-0"></div>'
@@ -182,9 +182,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				  . '<span>h6</span></h6>'
 					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
-			),
+			],
 			// Bug 36670
-			array(
+			[
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>'
 					. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
@@ -194,10 +194,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 				. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
-			),
+			],
 
 			// # Main page transformations
-			array(
+			[
 				'fooo
 				<div id="mp-itn">bar</div>
 				<div id="mf-custom" title="custom">blah</div>',
@@ -205,32 +205,32 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2>In the news</h2><div id="mp-itn">bar</div>'
 					. '<h2>custom</h2><div id="mf-custom">blah</div><br clear="all"></div>',
 				$mainPage,
-			),
-			array(
+			],
+			[
 				'<div id="foo">test</div>',
 				'<div id="foo">test</div>',
 				$mainPage,
-			),
-			array(
+			],
+			[
 				'<div id="mf-foo" title="A &amp; B">test</div>',
 				'<div id="mainpage">' .
 				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all"></div>',
 				$mainPage,
-			),
-			array(
+			],
+			[
 				'<div id="foo">test</div><div id="central-auth-images">images</div>',
 				'<div id="foo">test' .
 				'</div><div id="central-auth-images">images</div>',
 				$mainPage,
-			),
-			array(
+			],
+			[
 				'<div id="mf-foo" title="A &amp; B">test</div><div id="central-auth-images">images</div>',
 				'<div id="mainpage">' .
 				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all">'
 					. '<div id="central-auth-images">images</div></div>',
 				$mainPage,
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -255,71 +255,71 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	public function provideHeadingTransform() {
-		return array(
+		return [
 
 			// The "in-block" class is added to a subheading.
-			array(
-				array( 'h1', 'h2' ),
+			[
+				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>',
 				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
 				  . 'Foo</h1>'
 					. '<div class="mf-section-1"><h2 class="in-block">Bar</h2></div>',
-			),
+			],
 
 			// The "in-block" class is added to a subheading
 			// without overwriting the existing attribute.
-			array(
-				array( 'h1', 'h2' ),
+			[
+				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2 class="baz">Bar</h2>',
 				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Foo</h1><div class="mf-section-1">'
 					. '<h2 class="baz in-block">Bar</h2></div>',
-			),
+			],
 
 			// The "in-block" class is added to all subheadings.
-			array(
-				array( 'h1', 'h2', 'h3' ),
+			[
+				[ 'h1', 'h2', 'h3' ],
 				'<h1>Foo</h1><h2>Bar</h2><h3>Qux</h3>',
 				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Foo</h1><div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3></div>',
-			),
+			],
 
 			// The first heading found is the highest ranked
 			// subheading.
-			array(
-				array( 'h1', 'h2', 'h3' ),
+			[
+				[ 'h1', 'h2', 'h3' ],
 				'<h2>Bar</h2><h3>Qux</h3>',
 				'<div class="mf-section-0"></div><h2 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Bar</h2><div class="mf-section-1">'
 					. '<h3 class="in-block">Qux</h3></div>',
-			),
+			],
 
 			// Unenclosed text is appended to the expandable container.
-			array(
-				array( 'h1', 'h2' ),
+			[
+				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>A',
 				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Foo</h1><div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2>A</div>',
-			),
+			],
 
 			// Unencloded text that appears before the first
 			// heading is appended to a container.
 			// FIXME: This behaviour was included for backwards
 			// compatibility but mightn't be necessary.
-			array(
-				array( 'h1', 'h2' ),
+			[
+				[ 'h1', 'h2' ],
 				'A<h1>Foo</h1><h2>Bar</h2>',
 				'<div class="mf-section-0"><p>A</p></div>'
 					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Foo</h1><div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2></div>',
-			),
+			],
 
 			// Multiple headings are handled identically.
-			array(
-				array( 'h1', 'h2' ),
+			[
+				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>Baz<h1>Qux</h1>Quux',
 				'<div class="mf-section-0"></div>'
 					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
@@ -327,8 +327,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<h2 class="in-block">Bar</h2>Baz</div>'
 					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Qux</h1><div class="mf-section-2">Quux</div>',
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -339,7 +339,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mf = new MobileFormatter( $input, Title::newFromText( 'Mobile' ) );
 		$mf->enableTOCPlaceholder();
 		$mf->enableExpandableSections();
-		$mf->topHeadingTags = array( 'h2' );
+		$mf->topHeadingTags = [ 'h2' ];
 		$mf->filterContent( false, false, false );
 		$expected = '<div class="mf-section-0"><p>Hello world.</p>'
 			. self::TOC . '</div><h2 class="section-heading">'

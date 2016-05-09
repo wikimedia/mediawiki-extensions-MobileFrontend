@@ -71,10 +71,10 @@ class MobileUI {
 	public static function messageBox( $html, $className ) {
 		$templateParser = new TemplateParser( __DIR__ . '/../resources/mobile.messageBox/' );
 
-		return $templateParser->processTemplate( 'MessageBox', array(
+		return $templateParser->processTemplate( 'MessageBox', [
 			'className' => $className,
 			'msg' => $html
-		) );
+		] );
 	}
 
 	/**
@@ -112,7 +112,7 @@ class MobileUI {
 	 */
 	public static function contentElement( $html, $className = '' ) {
 		$className .= ' content ';
-		return Html::openElement( 'div', array( 'class' => $className ) ) . $html .
+		return Html::openElement( 'div', [ 'class' => $className ] ) . $html .
 			Html::closeElement( 'div' );
 	}
 }

@@ -22,9 +22,9 @@ class SkinMinervaBeta extends SkinMinerva {
 			$description = $vars['wgMFDescription'];
 			if ( $description && !$this->getTitle()->isSpecialPage() ) {
 				$html .= Html::element( 'div',
-					array(
+					[
 						'class' => 'tagline',
-					), $description );
+					], $description );
 			}
 		}
 		return $html;
@@ -49,26 +49,26 @@ class SkinMinervaBeta extends SkinMinerva {
 			parent::preparePageActions( $tpl );
 			$menu = $tpl->data[ 'page_actions' ];
 
-			$languageSwitcherLinks = array();
+			$languageSwitcherLinks = [];
 			$languageSwitcherClasses = 'disabled';
 			if ( $this->doesPageHaveLanguages ) {
-				$languageSwitcherLinks['mobile-frontend-language-article-heading'] = array(
+				$languageSwitcherLinks['mobile-frontend-language-article-heading'] = [
 					'href' => SpecialPage::getTitleFor( 'MobileLanguages', $this->getTitle() )->getLocalURL()
-				);
+				];
 				$languageSwitcherClasses = '';
 			}
 			if ( $this->getMFConfig()->get( 'MinervaAlwaysShowLanguageButton' ) ||
 				$this->doesPageHaveLanguages ) {
-				$menu['language-switcher'] = array( 'id' => 'language-switcher', 'text' => '',
+				$menu['language-switcher'] = [ 'id' => 'language-switcher', 'text' => '',
 					'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
 					'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
 					'links' => $languageSwitcherLinks,
 					'is_js_only' => false
-				);
+				];
 				$tpl->set( 'page_actions', $menu );
 			}
 		} else {
-			$tpl->set( 'page_actions', array() );
+			$tpl->set( 'page_actions', [] );
 		}
 	}
 
@@ -79,7 +79,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	protected function getSecondaryActions( BaseTemplate $tpl ) {
 		if ( $this->isUserPage ) {
-			return array();
+			return [];
 		} else {
 			return parent::getSecondaryActions( $tpl );
 		}
@@ -126,11 +126,11 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		$modules['beta'] = array(
+		$modules['beta'] = [
 			'skins.minerva.beta.scripts',
-		);
+		];
 
-		Hooks::run( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
+		Hooks::run( 'SkinMinervaDefaultModules', [ $this, &$modules ] );
 
 		// Disable CentralNotice modules in beta
 		if ( array_key_exists( 'centralnotice', $modules ) ) {
@@ -167,7 +167,7 @@ class SkinMinervaBeta extends SkinMinerva {
 		parent::prepareHeaderAndFooter( $tpl );
 		if ( $this->isUserPage ) {
 			$talkPage = $this->pageUser->getTalkPage();
-			$data = array(
+			$data = [
 				'talkPageTitle' => $talkPage->getPrefixedURL(),
 				'talkPageLink' => $talkPage->getLocalUrl(),
 				'talkPageLinkTitle' => $this->msg(
@@ -180,7 +180,7 @@ class SkinMinervaBeta extends SkinMinerva {
 					'Uploads', $this->pageUser )->getLocalURL(),
 				'uploadsPageTitle' => $this->msg(
 					'mobile-frontend-user-page-uploads' )->escaped(),
-			);
+			];
 			$templateParser = new TemplateParser( __DIR__ );
 			$tpl->set( 'postheadinghtml',
 				$templateParser->processTemplate( 'user_page_links', $data ) );

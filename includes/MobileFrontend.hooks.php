@@ -293,8 +293,8 @@ class MobileFrontendHooks {
 	) {
 		// FIXME: Global core variable don't use it.
 		global $wgResourceModules;
-		$testFiles = array();
-		$dependencies = array();
+		$testFiles = [];
+		$dependencies = [];
 		$localBasePath = dirname( __DIR__ );
 
 		// find test files for every RL module
@@ -319,9 +319,9 @@ class MobileFrontendHooks {
 			}
 		}
 
-		$testModule = array(
+		$testModule = [
 			'dependencies' => $dependencies,
-			'templates' => array(
+			'templates' => [
 				'section.hogan' => 'tests/qunit/tests.mobilefrontend/section.hogan',
 				'issues.hogan' => 'tests/qunit/tests.mobilefrontend/issues.hogan',
 				'page.html' => 'tests/qunit/tests.mobilefrontend/page.html',
@@ -329,12 +329,12 @@ class MobileFrontendHooks {
 				'pageWithStrippedRefs.html' => 'tests/qunit/tests.mobilefrontend/pageWithStrippedRefs.html',
 				'references.html' => 'tests/qunit/tests.mobilefrontend/references.html',
 				'refSection.html' => 'tests/qunit/tests.mobilefrontend/refSection.html',
-			),
+			],
 			'localBasePath' => $localBasePath,
 			'remoteExtPath' => 'MobileFrontend',
-			'targets' => array( 'mobile', 'desktop' ),
+			'targets' => [ 'mobile', 'desktop' ],
 			'scripts' => $testFiles,
-		);
+		];
 
 		// Expose templates module
 		$testModules['qunit']["tests.mobilefrontend"] = $testModule;
@@ -432,11 +432,11 @@ class MobileFrontendHooks {
 		// Avoid API warnings and allow integration with optional extensions.
 		if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
 			$pageProps[] = 'pageimages';
-			$searchParams = array_merge_recursive( $searchParams, array(
+			$searchParams = array_merge_recursive( $searchParams, [
 				'piprop' => 'thumbnail',
 				'pithumbsize' => MobilePage::SMALL_IMAGE_WIDTH,
 				'pilimit' => 50,
-			) );
+			] );
 		}
 
 		// We need to check that first descriptions are enabled (the server admin has installed
@@ -452,21 +452,21 @@ class MobileFrontendHooks {
 			if ( !in_array( 'pageterms', $pageProps ) ) {
 				$pageProps[] = 'pageterms';
 			}
-			$searchParams = array_merge_recursive( $searchParams, array(
+			$searchParams = array_merge_recursive( $searchParams, [
 				'wbptterms' => 'description',
-			) );
+			] );
 		}
 
 		// Get the licensing agreement that is displayed in the uploading interface.
-		$vars += array(
+		$vars += [
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,
 			'wgMFSearchGenerator' => $config->get( 'MFSearchGenerator' ),
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
-			'wgMFThumbnailSizes' => array(
+			'wgMFThumbnailSizes' => [
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
 				'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
-			),
+			],
 			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
@@ -480,7 +480,7 @@ class MobileFrontendHooks {
 				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
 			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
-		);
+		];
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $context->imagesDisabled();
@@ -597,7 +597,6 @@ class MobileFrontendHooks {
 		return true;
 	}
 
-
 	/**
 	 * Invocation of hook SpecialPageBeforeExecute
 	 *
@@ -698,13 +697,13 @@ class MobileFrontendHooks {
 				'formheader',
 				Html::openElement(
 					'div',
-					array( 'class' => 'watermark' )
+					[ 'class' => 'watermark' ]
 				) .
 				Html::element( 'img',
-					array(
+					[
 						'src' => $mfLogo,
 						'alt' => '',
-					)
+					]
 				) .
 				Html::closeElement( 'div' )
 			);
@@ -799,7 +798,7 @@ class MobileFrontendHooks {
 			}
 
 			$hreflink = 'android-app://' . $mfAppPackageId . '/' . $scheme . '/' . $path;
-			$out->addLink( array( 'rel' => 'alternate', 'href' => $hreflink ) );
+			$out->addLink( [ 'rel' => 'alternate', 'href' => $hreflink ] );
 		}
 
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
@@ -808,17 +807,17 @@ class MobileFrontendHooks {
 			if ( !$context->shouldDisplayMobileView() ) {
 				// add alternate link to desktop sites - bug T91183
 				$desktopUrl = $title->getFullUrl();
-				$link = array(
+				$link = [
 					'rel' => 'alternate',
 					'media' => 'only screen and (max-width: ' . $lessVars['deviceWidthTablet'] . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
-				);
+				];
 			} else {
 				// add canonical link to mobile pages, instead of noindex - bug T91183
-				$link = array(
+				$link = [
 					'rel' => 'canonical',
 					'href' => $title->getFullUrl(),
-				);
+				];
 			}
 			$out->addLink( $link );
 		}
@@ -846,14 +845,14 @@ class MobileFrontendHooks {
 			$out->addVaryHeader( 'Cookie' );
 
 			// Allow modifications in mobile only mode
-			Hooks::run( 'BeforePageDisplayMobile', array( &$out, &$sk ) );
+			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
 
 			// add fallback editor styles to action=edit page
 			$requestAction = $out->getRequest()->getVal( 'action' );
 			if ( $noJsEditing && ( $requestAction === 'edit' || $requestAction === 'submit' ) ) {
-				$out->addModuleStyles( array(
+				$out->addModuleStyles( [
 					'skins.minerva.fallbackeditor', 'mobile.messageBox'
-				) );
+				] );
 			}
 		}
 
@@ -868,7 +867,7 @@ class MobileFrontendHooks {
 	public static function onAfterBuildFeedLinks( array &$tags ) {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() && !$context->getMFConfig()->get( 'MFRSSFeedLink' ) ) {
-			$tags = array();
+			$tags = [];
 		}
 	}
 
@@ -915,10 +914,10 @@ class MobileFrontendHooks {
 	public static function onGetPreferences( $user, &$preferences ) {
 		$mfEnableMinervaBetaFeature = MobileContext::singleton()->getMFConfig()
 			->get( 'MFEnableMinervaBetaFeature' );
-		$definition = array(
+		$definition = [
 			'type' => 'api',
 			'default' => '',
-		);
+		];
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 
@@ -937,10 +936,10 @@ class MobileFrontendHooks {
 		}
 
 		// preference that allow a user to set the preffered mobile skin using the api
-		$preferences['mobileskin'] = array(
+		$preferences['mobileskin'] = [
 			'type' => 'api',
 			'default' => '',
-		);
+		];
 
 		return true;
 	}
@@ -961,16 +960,16 @@ class MobileFrontendHooks {
 
 		if ( $mfEnableMinervaBetaFeature ) {
 			// Enable the mobile skin on desktop
-			$preferences['betafeatures-minerva'] = array(
+			$preferences['betafeatures-minerva'] = [
 				'label-message' => 'beta-feature-minerva',
 				'desc-message' => 'beta-feature-minerva-description',
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
 				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
-				'screenshot' => array(
+				'screenshot' => [
 					'ltr' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-ltr.svg",
 					'rtl' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-rtl.svg",
-				),
-			);
+				],
+			];
 		}
 
 		return true;
@@ -1052,77 +1051,77 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		$resourceBoilerplate = array(
+		$resourceBoilerplate = [
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
-		);
+		];
 		self::registerMobileLoggingSchemasModule( $resourceLoader );
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
 		if ( class_exists( 'VisualEditorHooks' ) ) {
-			$resourceLoader->register( array(
-				'mobile.editor.ve' => $resourceBoilerplate + array(
-					'dependencies' => array(
+			$resourceLoader->register( [
+				'mobile.editor.ve' => $resourceBoilerplate + [
+					'dependencies' => [
 						'ext.visualEditor.mobileArticleTarget',
 						'mobile.editor.common',
 						'mobile.overlays',
-					),
-					'styles' => array(
+					],
+					'styles' => [
 						'resources/mobile.editor.ve/VisualEditorOverlay.less',
-					),
-					'scripts' => array(
+					],
+					'scripts' => [
 						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
 						'resources/mobile.editor.ve/VisualEditorOverlay.js',
-					),
-					'templates' => array(
+					],
+					'templates' => [
 						'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
 						'toolbarVE.hogan' => 'resources/mobile.editor.ve/toolbarVE.hogan',
-					),
-					'messages' => array(
+					],
+					'messages' => [
 						'mobile-frontend-page-edit-summary',
 						'mobile-frontend-editor-editing',
-					),
-					'targets' => array(
+					],
+					'targets' => [
 						'mobile',
-					),
-				),
-			) );
+					],
+				],
+			] );
 		}
 
 		// add Echo, if it's installed
 		if ( class_exists( 'MWEchoNotifUser' ) ) {
-			$resourceLoader->register( array(
-				'skins.minerva.notifications' => $resourceBoilerplate + array(
-					'dependencies' => array(
+			$resourceLoader->register( [
+				'skins.minerva.notifications' => $resourceBoilerplate + [
+					'dependencies' => [
 						'mobile.overlays',
 						'skins.minerva.scripts',
 						'mediawiki.ui.anchor'
-					),
-					'scripts' => array(
+					],
+					'scripts' => [
 						'resources/skins.minerva.notifications/init.js',
-					),
-					'targets' => array( 'mobile', 'desktop' ),
-				),
-				'mobile.notifications.overlay' => $resourceBoilerplate + array(
-					'dependencies' => array(
+					],
+					'targets' => [ 'mobile', 'desktop' ],
+				],
+				'mobile.notifications.overlay' => $resourceBoilerplate + [
+					'dependencies' => [
 						'mobile.overlays',
 						'ext.echo.ui',
-					),
-					'scripts' => array(
+					],
+					'scripts' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
-					),
-					'styles' => array(
+					],
+					'styles' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
-					),
-					'messages' => array(
+					],
+					'messages' => [
 						// defined in Echo
 						'echo-none',
 						'notifications',
 						'echo-overlay-link',
-					),
-					'targets' => array( 'mobile', 'desktop' ),
-				),
-			) );
+					],
+					'targets' => [ 'mobile', 'desktop' ],
+				],
+			] );
 		};
 
 		return true;
@@ -1139,11 +1138,11 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderGetLessVars( &$lessVars ) {
 		$config = MobileContext::singleton()->getMFConfig();
 		$lessVars = array_merge( $lessVars,
-			array(
+			[
 				'wgMFDeviceWidthMobileSmall' => "{$config->get( 'MFDeviceWidthMobileSmall' )}px",
 				'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
 				'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px'
-			)
+			]
 		);
 	}
 
@@ -1180,11 +1179,11 @@ class MobileFrontendHooks {
 	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 */
 	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
-		$mfResourceFileModuleBoilerplate = array(
+		$mfResourceFileModuleBoilerplate = [
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
-			'targets' => array( 'mobile', 'desktop' ),
-		);
+			'targets' => [ 'mobile', 'desktop' ],
+		];
 
 		$schemaEdit = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebLanguageSwitcher = $mfResourceFileModuleBoilerplate;
@@ -1194,54 +1193,54 @@ class MobileFrontendHooks {
 		if ( class_exists( 'EventLogging' ) ) {
 			// schema.Edit is provided by WikimediaEvents
 			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
-				$schemaEdit += array(
-					'dependencies' => array(
+				$schemaEdit += [
+					'dependencies' => [
 						'schema.Edit',
 						'mobile.user'
-					),
-					'scripts' => array(
+					],
+					'scripts' => [
 						'resources/mobile.loggingSchemas/schemaEdit.js',
-					)
-				);
+					]
+				];
 			}
-			$schemaMobileWebLanguageSwitcher += array(
-				'dependencies' => array(
+			$schemaMobileWebLanguageSwitcher += [
+				'dependencies' => [
 					'schema.MobileWebLanguageSwitcher',
 					'mobile.context'
-				),
-				'scripts' => array(
+				],
+				'scripts' => [
 					'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
-				),
-			);
-			$schemaMobileWebMainMenuClickTracking += array(
-				'dependencies' => array(
+				],
+			];
+			$schemaMobileWebMainMenuClickTracking += [
+				'dependencies' => [
 					'schema.MobileWebMainMenuClickTracking',
 					'mobile.context',
 					'mobile.user'
-				),
-				'scripts' => array(
+				],
+				'scripts' => [
 					'resources/mobile.loggingSchemas/schemaMobileWebMainMenuClickTracking.js',
-				)
-			);
-			$schemaMobileWebSearch += array(
-				'dependencies' => array(
+				]
+			];
+			$schemaMobileWebSearch += [
+				'dependencies' => [
 					'schema.MobileWebSearch',
 					'mobile.context'
-				),
-				'scripts' => array(
+				],
+				'scripts' => [
 					'resources/mobile.loggingSchemas/schemaMobileWebSearch.js',
-				)
-			);
+				]
+			];
 		}
 
-		$resourceLoader->register( array(
+		$resourceLoader->register( [
 			'mobile.loggingSchemas.edit' => $schemaEdit,
 			'mobile.loggingSchemas.mobileWebLanguageSwitcher' =>
 				$schemaMobileWebLanguageSwitcher,
 			'mobile.loggingSchemas.mobileWebMainMenuClickTracking' =>
 				$schemaMobileWebMainMenuClickTracking,
 			'mobile.loggingSchemas.mobileWebSearch' => $schemaMobileWebSearch,
-		) );
+		] );
 	}
 
 	/**
@@ -1312,7 +1311,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages = array_merge( $messages,
-			array(
+			[
 				'mobile-frontend-watchlist-signup-action', // watchstart sign up CTA
 				'mobile-frontend-watchlist-purpose', // Watchlist and watchstar sign in CTA
 				'mobile-frontend-donate-image-anon', // Uploads link
@@ -1320,7 +1319,7 @@ class MobileFrontendHooks {
 				'mobile-frontend-edit-signup-action', // Edit button sign-up CTA
 				'mobile-frontend-donate-image-login-action',
 				'mobile-frontend-generic-login-new', // default message
-			)
+			]
 		);
 	}
 

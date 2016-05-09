@@ -5,11 +5,11 @@
  */
 class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	/** @var array Saves a list of messages which have been marked as needing parsing. */
-	protected $parsedMessages = array();
+	protected $parsedMessages = [];
 	/** @var array Saves a list of message keys used by this module. */
-	protected $messages = array();
+	protected $messages = [];
 	/** @var array Saves the target for the module (e.g. desktop and mobile). */
-	protected $targets = array( 'mobile', 'desktop' );
+	protected $targets = [ 'mobile', 'desktop' ];
 	/** @var boolean Whether the module abuses getScript. */
 	protected $hasHackedScriptMode = false;
 
@@ -46,7 +46,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 		foreach ( $this->parsedMessages as $key ) {
 			$messages[ $key ] = $context->msg( $key )->parse();
 		}
-		return Xml::encodeJsCall( 'mw.messages.set', array( $messages ) );
+		return Xml::encodeJsCall( 'mw.messages.set', [ $messages ] );
 	}
 
 	/**
@@ -88,16 +88,16 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 		if ( $this->hasHackedScriptMode ) {
 			$derivative = new DerivativeResourceLoaderContext( $context );
 			$derivative->setDebug( true );
-			$derivative->setModules( array( $this->getName() ) );
+			$derivative->setModules( [ $this->getName() ] );
 			// @todo FIXME: Make this templates and update
 			// makeModuleResponse so that it only outputs template code.
 			// When this is done you can merge with parent array and
 			// retain file names.
 			$derivative->setOnly( 'scripts' );
 			$rl = $derivative->getResourceLoader();
-			$urls = array(
+			$urls = [
 				$rl->createLoaderURL( $this->getSource(), $derivative ),
-			);
+			];
 		} else {
 			$urls = parent::getScriptURLsForDebug( $context );
 		}

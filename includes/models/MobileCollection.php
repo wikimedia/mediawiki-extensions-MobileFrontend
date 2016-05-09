@@ -14,7 +14,7 @@ class MobileCollection implements IteratorAggregate {
 	 *
 	 * @var MobilePage[]
 	 */
-	protected $pages = array();
+	protected $pages = [];
 
 	/**
 	 * Adds a page to the collection.

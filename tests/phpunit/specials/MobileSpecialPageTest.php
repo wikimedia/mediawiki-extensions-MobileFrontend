@@ -27,37 +27,37 @@ class MobileSpecialPageTest extends MediaWikiTestCase {
 	}
 
 	public function provideGetDesktopUrl() {
-		return array(
-			array(
+		return [
+			[
 				'SpecialMobileHistory',
 				'Pagename',
-				array(),
+				[],
 				'/wiki/index.php?title=Pagename&action=history',
-			),
-			array(
+			],
+			[
 				'SpecialMobileHistory',
 				'Pagename',
-				array( 'mobileaction' => 'beta' ),
+				[ 'mobileaction' => 'beta' ],
 				'/wiki/index.php?title=Pagename&action=history',
-			),
-			array(
+			],
+			[
 				'SpecialMobileHistory',
 				'Pagename',
-				array( 'offset' => '100500' ),
+				[ 'offset' => '100500' ],
 				'/wiki/index.php?title=Pagename&action=history&offset=100500',
-			),
-			array(
+			],
+			[
 				'SpecialMobileDiff',
 				'100',
-				array( 'foo' => 'bar' ),
+				[ 'foo' => 'bar' ],
 				'/wiki/index.php?diff=100',
-			),
-			array(
+			],
+			[
 				'SpecialMobileDiff',
 				'100...101',
-				array( 'mobileaction' => 'toggle_view_mobile', 'unhide' => 1 ),
+				[ 'mobileaction' => 'toggle_view_mobile', 'unhide' => 1 ],
 				'/wiki/index.php?diff=101&oldid=100&unhide=1',
-			),
-		);
+			],
+		];
 	}
 }

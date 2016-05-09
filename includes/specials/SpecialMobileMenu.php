@@ -15,7 +15,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 	 */
 	public function __construct() {
 		parent::__construct( 'MobileMenu' );
-		$supported = array( 'vector', 'minerva' );
+		$supported = [ 'vector', 'minerva' ];
 		$name = $this->getSkin()->getSkinName();
 		if ( array_search( $name, $supported ) !== false ) {
 			$this->hasDesktopVersion = true;
@@ -32,10 +32,10 @@ class SpecialMobileMenu extends MobileSpecialPage {
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-page-title' ) );
 		$out->setProperty( 'bodyClassName', 'navigation-enabled navigation-full-screen' );
 		$out->addModuleStyles(
-			array(
+			[
 				'mobile.mainMenu.icons',
 				'mobile.mainMenu',
-			)
+			]
 		);
 	}
 }

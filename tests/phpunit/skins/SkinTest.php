@@ -5,23 +5,23 @@
  */
 abstract class SkinTest extends MediaWikiTestCase {
 	public function providerGetSitename() {
-		return array(
+		return [
 			// test case 1
-			array(
+			[
 				false,
 				'MyWiki'
-			),
+			],
 			// test case 2
-			array(
+			[
 				'registered',
 				'MyWiki<sup>®</sup>'
-			),
+			],
 			// test case 3
-			array(
+			[
 				'unregistered',
 				'MyWiki<sup>™</sup>'
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -30,10 +30,10 @@ abstract class SkinTest extends MediaWikiTestCase {
 	 */
 	public function testGetSitename( $configValue, $expected ) {
 		// set config variables
-		$values = array(
+		$values = [
 			'wgMFTrademarkSitename' => $configValue,
 			'wgSitename' => 'MyWiki'
-		);
+		];
 		$this->setMwGlobals( $values );
 
 		$sitename = SkinMinerva::getSitename( true );

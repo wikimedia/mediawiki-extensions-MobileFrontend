@@ -50,32 +50,32 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 			$edit = $mp->getLatestEdit();
-			$dataAttrs = array(
+			$dataAttrs = [
 				'data-timestamp' => $edit['timestamp'],
 				'data-user-name' => $edit['name'],
 				'data-user-gender' => $edit['gender'],
-			);
+			];
 			$className = 'title';
 		} else {
 			$className = 'title new';
 			$lastModified = '';
-			$dataAttrs = array();
+			$dataAttrs = [];
 		}
 
 		$html =
-			Html::openElement( 'li', array(
+			Html::openElement( 'li', [
 				'class' => 'page-summary',
 				'title' => $titleText,
 				'data-id' => $title->getArticleId()
-			) ) .
-			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) );
+			] ) .
+			Html::openElement( 'a', [ 'href' => $title->getLocalUrl(), 'class' => $className ] );
 		$html .= $thumb;
 		$html .=
-			Html::element( 'h3', array(), $titleText );
+			Html::element( 'h3', [], $titleText );
 
 		if ( $lastModified ) {
-			$html .= Html::openElement( 'div', array( 'class' => 'info' ) ) .
-				Html::element( 'span', array_merge( $dataAttrs, array( 'class' => 'modified-enhancement' ) ),
+			$html .= Html::openElement( 'div', [ 'class' => 'info' ] ) .
+				Html::element( 'span', array_merge( $dataAttrs, [ 'class' => 'modified-enhancement' ] ),
 					$lastModified ) .
 				Html::closeElement( 'div' );
 		}
@@ -167,7 +167,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$ns = NS_MAIN;
 		$html = '';
 		$total = 0;
-		$images = array();
+		$images = [];
 
 		$watchlist = $this->getWatchlistInfo();
 
@@ -176,18 +176,18 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			$from = $this->getNextPage( $allPages );
 			$allPages = $this->getPagesToDisplay( $allPages );
 		} else {
-			$allPages = array();
+			$allPages = [];
 			$from = false;
 		}
 
 		// Begin rendering of watchlist.
-		$watchlist = array( $ns => $allPages );
+		$watchlist = [ $ns => $allPages ];
 		if ( !MobileContext::singleton()->imagesDisabled() ) {
-			Hooks::run( 'SpecialMobileEditWatchlist::images', array(
+			Hooks::run( 'SpecialMobileEditWatchlist::images', [
 					$this->getContext(),
 					&$watchlist,
 					&$images
-				)
+				]
 			);
 		}
 
@@ -213,26 +213,26 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		}
 		if ( $from ) {
 			// show more link if there are more items to show
-			$qs = array( 'from' => $from );
+			$qs = [ 'from' => $from ];
 			$html .= Html::element( 'a',
-				array(
+				[
 					'class' => MobileUI::anchorClass( 'progressive', 'more' ),
 					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
-				),
+				],
 				$this->msg( 'mobile-frontend-watchlist-more' ) );
 		}
 		$out = $this->getOutput();
 		$out->addHtml( $html );
 		$out->addModules( 'skins.minerva.special.watchlist.scripts' );
 		$out->addModuleStyles(
-			array(
+			[
 				'skins.minerva.special.styles',
 				'skins.minerva.special.watchlist.styles',
 				// Note: This could result in this module loading twice due to T87871
 				'mobile.pagelist.styles',
 				'mobile.pagesummary.styles',
 				'mobile.special.pagefeed.styles'
-			)
+			]
 		);
 	}
 

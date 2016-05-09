@@ -96,7 +96,7 @@ class ApiParseExtender {
 				$mf->enableExpandableSections( !$params['mainpage'] );
 				// HACK: need a nice way to request a TOC- and edit link-free HTML in the first place
 				// FIXME: Should this be .mw-editsection?
-				$mf->remove( array( '.toc', 'mw-editsection', '.mw-headline-anchor' ) );
+				$mf->remove( [ '.toc', 'mw-editsection', '.mw-headline-anchor' ] );
 				$mf->filterContent();
 
 				if ( is_array( $text ) ) {

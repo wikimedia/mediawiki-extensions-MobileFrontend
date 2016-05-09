@@ -22,7 +22,7 @@ class MockApiMobileView extends ApiMobileView {
 		$parser = new Parser();
 		$po = $parser->parse( $params['text'], $wp->getTitle(), $parserOptions );
 		$po->setTOCEnabled( false );
-		$po->setText( str_replace( array( "\r", "\n" ), '', $po->getText() ) );
+		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText() ) );
 
 		return $po;
 	}
@@ -36,10 +36,10 @@ class MockApiMobileView extends ApiMobileView {
 	}
 
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array( 'text' => null ) );
+		return array_merge( parent::getAllowedParams(), [ 'text' => null ] );
 	}
 
-	protected function findFile( $title, $options = array() ) {
+	protected function findFile( $title, $options = [] ) {
 		return $this->mockFile;
 	}
 
@@ -75,46 +75,46 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @covers ApiMobileView::parseSections
 	 */
 	public function testParseSections( $expectedSections, $expectedMissing, $str ) {
-		$data = array(
+		$data = [
 			'sections' => range( 0, 9 ),
-			'refsections' => array( 5 => 1, 7 => 1 ),
-		);
+			'refsections' => [ 5 => 1, 7 => 1 ],
+		];
 
-		$missing = array();
+		$missing = [];
 		$sections = array_keys( ApiMobileView::parseSections( $str, $data, $missing ) );
 		$this->assertEquals( $expectedSections, $sections, 'Check sections' );
 		$this->assertEquals( $expectedMissing, $missing, 'Check missing' );
 	}
 
 	public function provideSections() {
-		return array(
-			array( array(), array(), '' ),
-			array( array(), array(), '  ' ),
-			array( array(), array( -1 ), '-1' ),
-			array( range( 0, 10 ), array(), 'all' ),
-			array( range( 0, 10 ), array(), ' all ' ),
-			array( array(), array( 'all!' ), 'all!' ),
-			array( array(), array( 'foo' ), ' foo ' ),
-			array( array( 0 ), array(), '0' ),
-			array( array( 1 ), array(), ' 1 ' ),
-			array( array( 0, 2 ), array(), ' 0 | 2 ' ),
-			array( range( 3, 10 ), array(), '3-' ),
-			array( array( 3, 4, 5 ), array(), '3-5' ),
-			array( array( 7 ), array(), '7-7' ),
-			array( range( 1, 5 ), array(), '5-1' ),
-			array( array( 5, 7 ), array(), 'references ' ),
-			array( array( 0, 5, 7 ), array(), '0|references' ),
-			array( array( 1, 2 ), array( 11 ), '1|1|2|1|11|2|1' ),
-			array( array( 1, 3, 4, 5 ), array(), '1|3-5|4' ),
-			array( array( 10 ), array(), '10-' ),
-			array( array(), array( '20-' ), '20-' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
-		);
+		return [
+			[ [], [], '' ],
+			[ [], [], '  ' ],
+			[ [], [ -1 ], '-1' ],
+			[ range( 0, 10 ), [], 'all' ],
+			[ range( 0, 10 ), [], ' all ' ],
+			[ [], [ 'all!' ], 'all!' ],
+			[ [], [ 'foo' ], ' foo ' ],
+			[ [ 0 ], [], '0' ],
+			[ [ 1 ], [], ' 1 ' ],
+			[ [ 0, 2 ], [], ' 0 | 2 ' ],
+			[ range( 3, 10 ), [], '3-' ],
+			[ [ 3, 4, 5 ], [], '3-5' ],
+			[ [ 7 ], [], '7-7' ],
+			[ range( 1, 5 ), [], '5-1' ],
+			[ [ 5, 7 ], [], 'references ' ],
+			[ [ 0, 5, 7 ], [], '0|references' ],
+			[ [ 1, 2 ], [ 11 ], '1|1|2|1|11|2|1' ],
+			[ [ 1, 3, 4, 5 ], [], '1|3-5|4' ],
+			[ [ 10 ], [], '10-' ],
+			[ [], [ '20-' ], '20-' ], # https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
+		];
 	}
 
 	public function setUp() {
 		parent::setUp();
 
-		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
+		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
 	}
 
 	private function getMobileViewApi( $input ) {
@@ -132,11 +132,11 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	private function executeMobileViewApi( $api, $expected ) {
 		$api->execute();
 		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$result = $api->getResult()->getResultData( null, array(
-				'BC' => array(),
-				'Types' => array(),
+			$result = $api->getResult()->getResultData( null, [
+				'BC' => [],
+				'Types' => [],
 				'Strip' => 'all',
-			) );
+			] );
 		} else {
 			$result = $api->getResultData();
 		}
@@ -171,15 +171,15 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 		$api = $this->getMobileViewApi( $input );
 		$api->mockFile = $this->getMock( 'MockFSFile',
-			array( 'getWidth', 'getHeight', 'getTitle', 'transform' ),
-			array(), '', false
+			[ 'getWidth', 'getHeight', 'getTitle', 'transform' ],
+			[], '', false
 		);
 		$api->mockFile->method( 'getWidth' )->will( $this->returnValue( 640 ) );
 		$api->mockFile->method( 'getHeight' )->will( $this->returnValue( 480 ) );
 		$api->mockFile->method( 'getTitle' )
 			->will( $this->returnValue( Title::newFromText( 'File:Foo.jpg' ) ) );
 		$api->mockFile->method( 'transform' )
-			->will( $this->returnCallback( array( $this, 'mockTransform' ) ) );
+			->will( $this->returnCallback( [ $this, 'mockTransform' ] ) );
 
 		$this->executeMobileViewApi( $api, $expected );
 	}
@@ -194,7 +194,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	public function provideView() {
-		$baseIn = array(
+		$baseIn = [
 			'action' => 'mobileview',
 			'page' => 'Foo',
 			'sections' => '1-',
@@ -205,177 +205,177 @@ Text 1
 == Section 2 ==
 Text 2
 ',
-		);
-		$baseOut = array(
-			'sections' => array(
-				0 => array( 'id' => 0 ),
-				1 => array(
+		];
+		$baseOut = [
+			'sections' => [
+				0 => [ 'id' => 0 ],
+				1 => [
 					'toclevel' => 1,
 					'line' => 'Section 1',
 					'id' => 1,
 					'*' => '<p>Text 1</p>'
-				),
-				2 => array(
+				],
+				2 => [
 					'toclevel' => 1,
 					'line' => 'Section 2',
 					'id' => 2,
 					'*' => '<p>Text 2</p>'
-				),
-			),
-		);
+				],
+			],
+		];
 
-		return array(
-			array(
+		return [
+			[
 				$baseIn,
 				$baseOut,
-			),
-			array(
-				$baseIn + array( 'prop' => 'text' ),
-				array(
-					'sections' => array(
-						array(
+			],
+			[
+				$baseIn + [ 'prop' => 'text' ],
+				[
+					'sections' => [
+						[
 							'id' => 1,
 							'*' => '<p>Text 1</p>'
-						),
-						array(
+						],
+						[
 							'id' => 2,
 							'*' => '<p>Text 2</p>'
-						),
-					),
-				),
-			),
-			array(
-				array( 'sections' => 1, 'onlyrequestedsections' => '' ) + $baseIn,
-				array(
-					'sections' => array(
+						],
+					],
+				],
+			],
+			[
+				[ 'sections' => 1, 'onlyrequestedsections' => '' ] + $baseIn,
+				[
+					'sections' => [
 						$baseOut['sections'][1],
-					),
-				),
-			),
-			array(
-				array(
+					],
+				],
+			],
+			[
+				[
 					'page' => 'Main Page',
 					'sections' => 1,
 					'onlyrequestedsections' => ''
-				) + $baseIn,
-				array(
+				] + $baseIn,
+				[
 					'mainpage' => '',
-					'sections' => array(),
-				),
-			),
-			array(
-				array(
+					'sections' => [],
+				],
+			],
+			[
+				[
 					'page' => 'Redirected',
 					'redirect' => 'yes',
-				) + $baseIn,
-				array(
+				] + $baseIn,
+				[
 					'redirected' => 'Special:BlankPage',
 					'viewable' => 'no',
-				),
-			),
-			array(
-				array(
+				],
+			],
+			[
+				[
 					'text' => '__NOTOC__',
 					'prop' => 'pageprops',
-				) + $baseIn,
-				array(
-					'sections' => array(),
-					'pageprops' => array( 'notoc' => '' ),
-				),
-			),
+				] + $baseIn,
+				[
+					'sections' => [],
+					'pageprops' => [ 'notoc' => '' ],
+				],
+			],
 
 			// T123580
-			array(
-				array(
+			[
+				[
 					'page' => 'Main Page',
 					'sections' => 1,
 					'onlyrequestedsections' => true,
 
 					'prop' => 'namespace', // When the namespace is requested...
-				) + $baseIn,
-				array(
+				] + $baseIn,
+				[
 					'mainpage' => '',
-					'sections' => array(),
+					'sections' => [],
 
 					'ns' => 0, // ... then it is returned.
-				),
-			)
-		);
+				],
+			]
+		];
 	}
 
 	public function provideViewWithTransforms() {
 
 		// Note that the dimensions are values passed to #transform, not actual
 		// thumbnail dimensions.
-		return array(
-			array(
-				array(
+		return [
+			[
+				[
 					'page' => 'Foo',
 					'text' => '',
 					'prop' => 'thumb',
-				),
-				array(
-					'sections' => array(),
-					'thumb' => array(
+				],
+				[
+					'sections' => [],
+					'thumb' => [
 						'url' => 'http://dummy',
 						'width' => 50,
 						'height' => 50,
-					)
-				),
-			),
-			array(
-				array(
+					]
+				],
+			],
+			[
+				[
 					'page' => 'Foo',
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbsize' => 55,
-				),
-				array(
-					'sections' => array(),
-					'thumb' => array(
+				],
+				[
+					'sections' => [],
+					'thumb' => [
 						'url' => 'http://dummy',
 						'width' => 55,
 						'height' => 55,
-					)
-				),
-			),
-			array(
-				array(
+					]
+				],
+			],
+			[
+				[
 					'page' => 'Foo',
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbwidth' => 100,
-				),
-				array(
-					'sections' => array(),
-					'thumb' => array(
+				],
+				[
+					'sections' => [],
+					'thumb' => [
 						'url' => 'http://dummy',
 						'width' => 100,
 						'height' => 480,
-					)
-				),
-			),
-			array(
-				array(
+					]
+				],
+			],
+			[
+				[
 					'page' => 'Foo',
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbheight' => 200,
-				),
-				array(
-					'sections' => array(),
-					'thumb' => array(
+				],
+				[
+					'sections' => [],
+					'thumb' => [
 						'url' => 'http://dummy',
 						'width' => 640,
 						'height' => 200,
-					)
-				),
-			),
-		);
+					]
+				],
+			],
+		];
 	}
 
 	public function testRedirectToSpecialPageDoesntTriggerNotices() {
-		$props = array(
+		$props = [
 			'lastmodified',
 			'lastmodifiedby',
 			'revision',
@@ -383,11 +383,11 @@ Text 2
 			'languagecount',
 			'hasvariants',
 			'displaytitle'
-		);
+		];
 
-		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
+		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
 
-		$request = new FauxRequest( array(
+		$request = new FauxRequest( [
 			'action' => 'mobileview',
 			'page' => 'Foo',
 			'sections' => '1-',
@@ -401,7 +401,7 @@ Text 2
 			'prop' => implode( '|', $props ),
 			'page' => 'Redirected',
 			'redirect' => 'yes',
-		) );
+		] );
 		$context = new RequestContext();
 		$context->setRequest( $request );
 		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );

@@ -33,7 +33,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return array List of conditions
 	 */
 	protected function getQueryConditions() {
-		$conds = array();
+		$conds = [];
 		if ( $this->title ) {
 			$conds[ 'rev_page' ] = $this->title->getArticleID();
 		}
@@ -51,7 +51,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 */
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',
-			array( 'href' => $title->getLocalUrl() ),
+			[ 'href' => $title->getLocalUrl() ],
 			$title->getText() );
 	}
 
@@ -66,13 +66,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// manually style it as a userlink
 			$headerTitle = Html::element(
 				'span',
-				array( 'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user icon-16px' ) ),
+				[ 'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user icon-16px' ) ],
 				$title
 			);
 		}
 		$this->getOutput()->addHtml(
-			Html::openElement( 'div', array( 'class' => 'content-header' ) ) .
-			Html::openElement( 'h2', array() ) .
+			Html::openElement( 'div', [ 'class' => 'content-header' ] ) .
+			Html::openElement( 'h2', [] ) .
 				$headerTitle .
 				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
@@ -113,10 +113,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	public function executeWhenAvailable( $par = '' ) {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
-		) );
+		] );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
@@ -125,13 +125,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				// make sure, the content of the page supports the default history page
 				if ( !self::shouldUseSpecialHistory( $this->title ) ) {
 					// and if not, redirect to the default history action
-					$out->redirect( $this->title->getLocalUrl( array( 'action' => 'history' ) ) );
+					$out->redirect( $this->title->getLocalUrl( [ 'action' => 'history' ] ) );
 					return;
 				}
 
 				$this->addModules();
 				$this->getOutput()->addHtml(
-					Html::openElement( 'div', array( 'class' => 'history content-unstyled' ) )
+					Html::openElement( 'div', [ 'class' => 'history content-unstyled' ] )
 				);
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
@@ -154,14 +154,14 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	protected function doQuery() {
 		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
 		$conds = $this->getQueryConditions();
-		$options = array(
+		$options = [
 			'ORDER BY' => 'rev_timestamp DESC'
-		);
+		];
 
 		$options['LIMIT'] = self::LIMIT + 1;
 
-		$tables = array( self::DB_REVISIONS_TABLE );
-		$fields = array( '*' );
+		$tables = [ self::DB_REVISIONS_TABLE ];
+		$fields = [ '*' ];
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
 
@@ -204,7 +204,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalUrl();
 		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
-			$diffLink = $rev->getTitle()->getLocalUrl( array( 'oldid' => $rev->getId() ) );
+			$diffLink = $rev->getTitle()->getLocalUrl( [ 'oldid' => $rev->getId() ] );
 		} else {
 			$diffLink = false;
 		}
@@ -235,15 +235,15 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return string
 	 */
 	protected function getMoreButton( $ts ) {
-		$attrs = array(
+		$attrs = [
 			'href' => $this->getContext()->getTitle()->
 				getLocalUrl(
-					array(
+					[
 						'offset' => $ts,
-					)
+					]
 				),
 			'class' => 'more',
-		);
+		];
 		return Html::element( 'a', $attrs, $this->msg( 'pager-older-n' )->numParams( self::LIMIT ) );
 	}
 
@@ -289,7 +289,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return string
 	 */
 	public function getDesktopUrl( $subPage ) {
-		$params = array( 'title' => $subPage, 'action' => 'history' );
+		$params = [ 'title' => $subPage, 'action' => 'history' ];
 		$offset = $this->getRequest()->getVal( 'offset' );
 		if ( $offset ) {
 			$params['offset'] = $offset;
