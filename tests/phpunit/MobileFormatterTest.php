@@ -55,6 +55,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 		return array(
 			// # Lazy loading images
+			// Main page not impacted
+			array(
+				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
+				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
+				$mainPage,
+				false, false, true,
+			),
 			// Lead section images not impacted
 			array(
 				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
