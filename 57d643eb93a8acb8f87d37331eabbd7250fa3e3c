@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_c756ee08",
+        "filename": "minerva.less/minerva.mixins.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like a useful generic mixin. It is only used in one place and I can\u0027t see a case where that will not be true.\n\nYou can add this mixin.",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_c71f0e5d",
+        "filename": "minerva.less/minerva.mixins.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "This should be done via mw-ui-icon. Standards are there for a reason :)",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_c7ac2eee",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "use a class and toggleClass",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_073c66ba",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "We use the class `visible` all over the place which does this. It\u0027s in backtotop.less, panel.less, mainmenu.less and various overlays.\n\nLet\u0027s use this opportunity to begin consolidating these.",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_e76852ba",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "What is the difference between header-container and overlay-header-container ?",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_a772daa9",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "We shouldn\u0027t need to introduce this css again - this is an unnecessary download via mw.loader.using.\n\nHow might we share the styles of ui.css so this line is not needed?",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_2766caea",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T21:43:28Z",
+      "side": 1,
+      "message": "What is different about header-container and overlay-header-container ?",
+      "revId": "57d643eb93a8acb8f87d37331eabbd7250fa3e3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
