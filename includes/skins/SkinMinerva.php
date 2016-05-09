@@ -24,6 +24,9 @@ class SkinMinerva extends SkinTemplate {
 	protected $mobileContext;
 	/** @var bool whether the page is the user's page, i.e. User:Username */
 	public $isUserPage = false;
+	/** @var ContentHandler Content handler of page; only access through getContentHandler */
+	protected $contentHandler = null;
+
 	/**
 	 * @var boolean Whether the language button should be included in the secondary
 	 * actions HTML on non-main pages
@@ -128,7 +131,15 @@ class SkinMinerva extends SkinTemplate {
 		// All actions disabled on main apge.
 		if ( !$title->isMainPage() &&
 			in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) ) ) {
-			return true;
+
+			if ( $action === 'edit' ) {
+				$contentHandler = $this->getContentHandler();
+
+				return $contentHandler->supportsDirectEditing() &&
+					$contentHandler->supportsDirectApiEditing();
+			} else {
+				return true;
+			}
 		} else {
 			return false;
 		}
@@ -161,6 +172,19 @@ class SkinMinerva extends SkinTemplate {
 			$html .= Html::closeElement( 'span' );
 			return $html;
 		}
+	}
+
+	/**
+	 * Gets content handler of current title
+	 *
+	 * @return ContentHandler
+	 */
+	protected function getContentHandler() {
+		if ( $this->contentHandler === null ) {
+			$this->contentHandler = ContentHandler::getForTitle( $this->getTitle() );
+		}
+
+		return $this->contentHandler;
 	}
 
 	/**
