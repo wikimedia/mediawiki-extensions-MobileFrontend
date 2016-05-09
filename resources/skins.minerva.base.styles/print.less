@@ -1,5 +1,29 @@
 @media print {
-	.noprint {
+	.noprint,
+	.banner-container,
+	.header,
+	.pre-content,
+	.post-content {
 		display: none;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+
+	table,
+	figure,
+	img,
+	.lazy-image-placeholder {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100%;
 	}
 }

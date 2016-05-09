@@ -32,3 +32,15 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 		}
 	}
 }
+
+@media print {
+	.collapsible-heading .indicator,
+	.collapsible-heading .edit-page {
+		display: none;
+	}
+
+	// need to be this specific in order to override the default style
+	.client-js .collapsible-block {
+		display: block;
+	}
+}
