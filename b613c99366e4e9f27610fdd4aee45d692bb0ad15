@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_4a14a344",
+        "filename": "resources/skins.minerva.base.styles/print.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-09T23:10:32Z",
+      "side": 1,
+      "message": "Merge with .noprint rule above.",
+      "revId": "b613c99366e4e9f27610fdd4aee45d692bb0ad15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
