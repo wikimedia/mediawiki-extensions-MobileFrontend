@@ -385,6 +385,10 @@ class MobileFrontendHooks {
 			return;
 		}
 
+		if ( $context->getMFConfig()->get( 'MFStripResponsiveImages' ) ) {
+			$confstr .= '!responsiveimages=0';
+		}
+
 		if ( $context->isLazyLoadImagesEnabled() ) {
 			$confstr .= '!lazyloadimages';
 		}
