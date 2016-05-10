@@ -142,6 +142,7 @@
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
+					overlayManager: overlayManager,
 					api: new mw.Api(),
 					licenseMsg: skin.getLicenseMsg(),
 					title: page.title,

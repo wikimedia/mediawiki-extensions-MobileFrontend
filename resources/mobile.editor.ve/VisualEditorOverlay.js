@@ -1,7 +1,6 @@
 ( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
-		settings = M.require( 'mobile.settings/settings' ),
-		overlayManager = M.require( 'mobile.startup/overlayManager' );
+		settings = M.require( 'mobile.settings/settings' );
 
 	/**
 	 * Overlay for VisualEditor view
@@ -127,7 +126,7 @@
 
 				self.clearSpinner();
 				self.applyHeaderOptions( self.options, false );
-				overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
+				self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 			} );
 		},
 		/** @inheritdoc **/

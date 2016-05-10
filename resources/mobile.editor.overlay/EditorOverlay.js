@@ -5,7 +5,6 @@
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		toast = M.require( 'mobile.toast/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
 
@@ -164,7 +163,9 @@
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
-			this.abuseFilterPanel = new AbuseFilterPanel().appendTo( this.$( '.panels' ) );
+			this.abuseFilterPanel = new AbuseFilterPanel( {
+				overlayManager: this.overlayManager
+			} ).appendTo( this.$( '.panels' ) );
 
 			// If in readOnly mode, make textarea readonly
 			if ( this.readOnly ) {
@@ -352,7 +353,7 @@
 					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
 
 					self.clearSpinner();
-					overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
+					self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				},
 				function () {
 					self.clearSpinner();
