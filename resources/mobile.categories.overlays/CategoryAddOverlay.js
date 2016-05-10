@@ -110,7 +110,7 @@
 
 				if ( data ) {
 					// add the new categories in wikitext markup
-					newCategories += '[[' + data + ']] ';
+					newCategories += '\n[[' + data + ']] ';
 				}
 			} );
 
