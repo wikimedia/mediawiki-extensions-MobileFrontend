@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_f3e64be2",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-10T18:12:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_019a8e16",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_a1bf625b",
         "filename": "includes/specials/SpecialMobileCite.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2016-05-10T13:46:33Z",
       "side": 1,
       "message": "languages?",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_b307b384",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-10T18:12:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_a1bf625b",
       "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_d3318758",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-10T18:12:30Z",
+      "side": 1,
+      "message": "Apologies, that screengrab is outdated and was made before we decided to use the MobileFormatter. The MobileFormatter renders the full sections so we should not in my opinion add any text around it that may not make sense giving we are rendering free text.\n\nWe can improve the design in beta. The main goal right now is to get the functionality covered.",
+      "parentUuid": "ae564743_612eeaa1",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_21ab521b",
         "filename": "resources/skins.minerva.scripts/references.js",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2016-05-10T13:46:33Z",
       "side": 1,
       "message": "Could we make this variable more descriptive?",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_f33c8b2f",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-10T18:12:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_21ab521b",
       "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
