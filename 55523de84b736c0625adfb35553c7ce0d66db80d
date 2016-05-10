@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_e98adce2",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-10T20:48:12Z",
+      "side": 1,
+      "message": "grayBlue is not a very descriptive name. It\u0027s also yet another gray. Lets give this a more meaningful name such as chrome color (we may also want to make use of \u003cmeta name\u003d\"theme-color\" content\u003d\"#A81C23\"\u003e ). Do we expect to use it for other things?",
+      "revId": "55523de84b736c0625adfb35553c7ce0d66db80d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
