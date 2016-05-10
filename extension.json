@@ -627,8 +627,6 @@
 			],
 			"scripts": [
 				"resources/mobile.startup/util.js",
-				"resources/mobile.startup/Router.js",
-				"resources/mobile.startup/OverlayManager.js",
 				"resources/mobile.startup/PageGateway.js",
 				"resources/mobile.startup/Anchor.js",
 				"resources/mobile.startup/Button.js",
@@ -1603,6 +1601,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.router",
 				"mobile.startup",
 				"mobile.mainMenu",
 				"mobile.loggingSchemas.mobileWebLanguageSwitcher",
@@ -1631,6 +1630,7 @@
 				"mobile-frontend-cookies-required"
 			],
 			"scripts": [
+				"resources/skins.minerva.scripts/OverlayManager.js",
 				"resources/skins.minerva.scripts/preInit.js",
 				"resources/skins.minerva.scripts/init.js",
 				"resources/skins.minerva.scripts/initLogging.js",
@@ -1720,6 +1720,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"skins.minerva.scripts",
 				"mobile.overlays"
 			],
 			"scripts": [

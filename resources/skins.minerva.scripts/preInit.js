@@ -7,6 +7,8 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
+		OverlayManager = M.require( 'skins.minerva.scripts/OverlayManager' ),
+		overlayManager = new OverlayManager( require( 'mediawiki.router' ) ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -77,4 +79,7 @@
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
 		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
 	}
+
+	M.define( 'skins.minerva.scripts/overlayManager', overlayManager )
+		.deprecate( 'mobile.startup/overlayManager' );
 }( mw.mobileFrontend, jQuery ) );

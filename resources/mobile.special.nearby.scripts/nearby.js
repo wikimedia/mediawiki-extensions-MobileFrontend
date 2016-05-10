@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
-		router = M.require( 'mobile.startup/router' ),
+		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' );
 
 	$( function () {

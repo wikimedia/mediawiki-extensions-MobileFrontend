@@ -7,7 +7,7 @@
 		// use the plain return value here - T128273
 		title = $talk.attr( 'data-title' ),
 		page = M.getCurrentPage(),
-		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 		skin = M.require( 'skins.minerva.scripts/skin' ),
 		pageTitle, talkTitle;
 
