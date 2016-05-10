@@ -7,7 +7,6 @@
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
-		router = M.require( 'mobile.startup/router' ),
 		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
 		context = M.require( 'mobile.context/context' );
 
@@ -24,9 +23,10 @@
 		this.api = options.api;
 		this.gateway = new options.gatewayClass( this.api );
 
+		this.router = options.router;
 		// FIXME: Remove when search registers route with overlay manager
 		// we need this because of the focus/delay hack in search.js
-		router.once( 'route', function () {
+		this.router.once( 'route', function () {
 			self._hideOnRoute();
 		} );
 	}
@@ -43,6 +43,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
 		 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
+		 * @cfg {Router} defaults.router instance
 		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
 		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
 		 * @cfg {String} defaults.searchTerm Search text.
@@ -106,7 +107,7 @@
 		 */
 		_hideOnRoute: function () {
 			var self = this;
-			router.once( 'route', function ( ev ) {
+			this.router.once( 'route', function ( ev ) {
 				if ( !self.hide() ) {
 					ev.preventDefault();
 					self._hideOnRoute();
@@ -226,7 +227,7 @@
 
 			// FIXME: ugly hack that removes search from browser history when navigating to search results
 			ev.preventDefault();
-			router.back().done( function () {
+			this.router.back().done( function () {
 				window.location.href = $link.attr( 'href' );
 			} );
 		},

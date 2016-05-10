@@ -26,6 +26,7 @@
 			SearchOverlay = M.require( moduleConfig.overlay );
 
 			new SearchOverlay( {
+				router: router,
 				gatewayClass: SearchGateway,
 				api: new mw.Api(),
 				searchTerm: searchTerm,
