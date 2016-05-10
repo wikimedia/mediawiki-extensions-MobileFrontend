@@ -1808,7 +1808,6 @@
 				"mobile.backtotop"
 			],
 			"scripts": [
-				"resources/skins.minerva.beta.scripts/commonsCategory.js",
 				"resources/skins.minerva.beta.scripts/fontchanger.js"
 			],
 			"messages": [
@@ -2076,7 +2075,6 @@
 		"MFUploadMinEdits": 0,
 		"MFUseWikibaseDescription": false,
 		"MFDisplayWikibaseDescription": false,
-		"MFWikibaseImageCategory": "",
 		"MFRSSFeedLink": false,
 		"MFSchemaMobileWebLanguageSwitcherSampleRate": {
 			"beta": 0,
