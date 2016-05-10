@@ -3,7 +3,8 @@
 		"authors": [
 			"Imre",
 			"פוילישער",
-			"Har-wradim"
+			"Har-wradim",
+			"Alefbeis"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "צי א באניצער טוט רעדאקטירן דורכן מאבילן אייבערפלאך",
@@ -83,9 +84,7 @@
 	"mobile-frontend-home-button": "היימבלאַט",
 	"mobile-frontend-images-status": "בילדער",
 	"mobile-frontend-language-article-heading": "לייענען אין אן אנדער שפראך",
-	"mobile-frontend-language-header": "דער בלאט איז פאראן אין $1 {{PLURAL:$1|שפראך|שפראכן}}",
 	"mobile-frontend-language-heading": "<strong>שפראכן</strong>",
-	"mobile-frontend-language-site-choose": "זוך שפראך",
 	"mobile-frontend-languages-404-title": "שפראכן־פעלער",
 	"mobile-frontend-languages-header": "שפּראַכן",
 	"mobile-frontend-languages-header-page": "$1 - שפראכן",
@@ -157,7 +156,7 @@
 	"mobile-frontend-talk-reply": "ענטפער",
 	"mobile-frontend-terms-text": "ניצבאדינגונגען",
 	"mobile-frontend-user-newmessages": "איר האט נײַע מעלדונגען אויף אײַער שמועס־בלאט",
-	"mobile-frontend-view": "מאבילער קוק",
+	"mobile-frontend-view": "מאביל וויו",
 	"mobile-frontend-view-desktop": "נארמאלע אויסשטעלונג",
 	"mobile-frontend-view-mobile": "מאבייל אויסשטעלונג",
 	"mobile-frontend-watchlist-a-z": "ליסטע",
