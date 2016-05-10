@@ -311,9 +311,13 @@ class MinervaTemplate extends BaseTemplate {
 	protected function getHeaderHtml( $data ) {
 		// Note these should be wrapped in divs
 		// see https://phabricator.wikimedia.org/T98498 for details
-		return '<div>' . $data['menuButton'] . '</div>'
-			. $this->getChromeHeaderContentHtml( $data )
-			. '<div>' . $data['secondaryButton'] . '</div>';
+		$html = '<div>' . $data['menuButton'] . '</div>'
+			. $this->getChromeHeaderContentHtml( $data );
+		// Do not show the secondary button container if no secondary button is available
+		if ( $data['secondaryButton'] ) {
+			$html .= '<div>' . $data['secondaryButton'] . '</div>';
+		}
+		return $html;
 	}
 
 	/**
