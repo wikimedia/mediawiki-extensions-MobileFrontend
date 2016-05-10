@@ -15,8 +15,8 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected $shouldSecondaryActionsIncludeLanguageBtn = false;
 
 	/** @inheritdoc **/
-	protected function getHeaderHtml() {
-		$html = parent::getHeaderHtml();
+	protected function getHeadingHtml() {
+		$html = parent::getHeadingHtml();
 		if ( !$this->isUserPage ) {
 			$vars = $this->getSkinConfigVariables();
 			$description = $vars['wgMFDescription'];
