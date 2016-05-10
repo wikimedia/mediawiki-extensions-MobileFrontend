@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_019a8e16",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-10T13:46:33Z",
+      "side": 1,
+      "message": "Shouldn\u0027t \u0027id\u0027 be capitalized?\n\nAlso, the qqq message indicates that the error is not specific to \"bad revision ID\". Do we want to be more generic here too?",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_a1bf625b",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-10T13:46:33Z",
+      "side": 1,
+      "message": "languages?",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_612eeaa1",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-10T13:46:33Z",
+      "side": 1,
+      "message": "According to https://phab.wmfusercontent.org/file/data/ia7y4jcl5qfad62fs6nv/PHID-FILE-7jjhxzgfpp7mivwuflzu/Screen_Shot_2016-03-04_at_2.27.49_PM.png (which is linked in the task) the title should be \"Citations\" and there should be a subtitle with the article name: \"List of citations for ArticleName\".",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_21ab521b",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-10T13:46:33Z",
+      "side": 1,
+      "message": "Could we make this variable more descriptive?",
+      "revId": "6f1292f61dd2d1151714e6a806c20edff69f0cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
