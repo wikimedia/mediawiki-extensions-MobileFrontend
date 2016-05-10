@@ -32,11 +32,11 @@
 
 	OO.mfExtend( SearchOverlay, Overlay, {
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
-			anchor: Anchor.prototype.template,
+			header: mw.template.get( 'mobile.search', 'header.hogan' ),
+			content: mw.template.get( 'mobile.search', 'content.hogan' ),
 			icon: Icon.prototype.template
 		} ),
 		className: 'overlay search-overlay',
-		template: mw.template.get( 'mobile.search', 'SearchOverlay.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.

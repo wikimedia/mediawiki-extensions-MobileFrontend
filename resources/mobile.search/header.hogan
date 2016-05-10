@@ -1,0 +1,11 @@
+<ul>
+	<li>{{{cancelButton}}}</li>
+</ul>
+<div class="overlay-search">
+	<form method="get" action="{{action}}" class="search-box">
+		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
+	</form>
+</div>
+<ul>
+	<li>{{#clearIcon}}{{>icon}}{{/clearIcon}}</li>
+</ul>

@@ -842,7 +842,8 @@
 				"resources/mobile.search/MobileWebSearchLogger.js"
 			],
 			"templates": {
-				"SearchOverlay.hogan": "resources/mobile.search/SearchOverlay.hogan"
+				"header.hogan": "resources/mobile.search/header.hogan",
+				"content.hogan": "resources/mobile.search/content.hogan"
 			},
 			"messages": {
 				"0": "mobile-frontend-clear-search",

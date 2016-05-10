@@ -1,0 +1,20 @@
+<div class="search-content overlay-header">
+	<ul>
+		<li>{{#searchContentIcon}}{{>icon}}{{/searchContentIcon}}</li>
+	</ul>
+	<div class="caption">
+		<p class="with-results">{{#searchContentIcon}}{{label}}{{/searchContentIcon}}</p>
+		<p class="without-results">{{noResultsMsg}}</p>
+		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
+	</div>
+</div>
+{{{spinner}}}
+<div class="results"></div>
+{{#feedback}}
+	<div class="search-feedback">
+		{{prompt}}
+		{{#feedback}}
+			{{>anchor}}
+		{{/feedback}}
+	</div>
+{{/feedback}}
