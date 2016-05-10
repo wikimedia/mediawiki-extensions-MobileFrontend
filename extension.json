@@ -1258,15 +1258,7 @@
 				"resources/mobile.issues/issues.less"
 			],
 			"scripts": [
-				"resources/mobile.issues/CleanupOverlay.js",
-				"resources/mobile.issues/cleanuptemplates.js"
-			],
-			"messages": [
-				"mobile-frontend-meta-data-issues",
-				"mobile-frontend-meta-data-issues-talk",
-				"mobile-frontend-meta-data-issues-header",
-				"mobile-frontend-meta-data-issues-header-talk",
-				"mobile-frontend-meta-data-issues-categories"
+				"resources/mobile.issues/CleanupOverlay.js"
 			]
 		},
 		"mobile.nearby": {
@@ -1639,6 +1631,11 @@
 				"mobile.context"
 			],
 			"messages": [
+				"mobile-frontend-meta-data-issues",
+				"mobile-frontend-meta-data-issues-talk",
+				"mobile-frontend-meta-data-issues-categories",
+				"mobile-frontend-meta-data-issues-header",
+				"mobile-frontend-meta-data-issues-header-talk",
 				"mobile-frontend-last-modified-with-user-seconds",
 				"mobile-frontend-last-modified-with-user-minutes",
 				"mobile-frontend-last-modified-with-user-hours",
@@ -1654,7 +1651,8 @@
 				"resources/skins.minerva.scripts/initLogging.js",
 				"resources/skins.minerva.scripts/mobileRedirect.js",
 				"resources/skins.minerva.scripts/references.js",
-				"resources/skins.minerva.scripts/search.js"
+				"resources/skins.minerva.scripts/search.js",
+				"resources/skins.minerva.scripts/cleanuptemplates.js"
 			]
 		},
 		"skins.minerva.scripts.top": {

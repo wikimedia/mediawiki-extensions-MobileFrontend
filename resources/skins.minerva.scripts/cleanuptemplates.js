@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var module = ( function () {
+	( function () {
 		var overlayManager = M.require( 'mobile.startup/overlayManager' ),
 			CleanupOverlay = M.require( 'mobile.issues/CleanupOverlay' );
 
@@ -114,13 +114,8 @@
 			}
 		}
 
-		return {
-			init: initPageIssues,
-			createBanner: createBanner,
-			_extractMessage: extractMessage
-		};
+		// Setup the issues banner on the page
+		initPageIssues();
 	}() );
-
-	M.define( 'mobile.issues/cleanuptemplates', module );
 
 }( mw.mobileFrontend, jQuery ) );

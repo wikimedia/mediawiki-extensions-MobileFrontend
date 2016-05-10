@@ -7,7 +7,6 @@
 		loader = M.require( 'mobile.overlays/moduleLoader' ),
 		router = M.require( 'mobile.startup/router' ),
 		context = M.require( 'mobile.context/context' ),
-		cleanuptemplates = M.require( 'mobile.issues/cleanuptemplates' ),
 		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'mobile.startup/overlayManager' ),
 		page = M.getCurrentPage(),
@@ -230,13 +229,6 @@
 				.appendTo( M.getCurrentPage().getLeadSectionElement() );
 		}
 	}
-
-	// Setup the issues banner on the page
-	cleanuptemplates.init();
-	// Show it in edit preview.
-	M.on( 'edit-preview', function ( overlay ) {
-		cleanuptemplates.init( overlay.$el );
-	} );
 
 	// let the interested parties know whether the panel is shown
 	mw.track( 'minerva.betaoptin', {
