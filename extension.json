@@ -2083,7 +2083,9 @@
 		"MFSchemaEditSampleRate": 0.0625,
 		"MFAllowNonJavaScriptEditing": false,
 		"@MinervaAlwaysShowLanguageButton": "Whether to show the language switcher button even if no languages are available for the page.",
-		"MinervaAlwaysShowLanguageButton": true
+		"MinervaAlwaysShowLanguageButton": true,
+		"@MFStripResponsiveImages": "Whether to strip 'srcset' attributes from all images on mobile renderings. This is a sort of brute-force bandwidth optimization at the cost of making images fuzzier on most devices.",
+		"MFStripResponsiveImages": true
 	},
 	"manifest_version": 1
 }

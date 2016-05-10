@@ -1299,7 +1299,15 @@ class MobileFrontendHooks {
 	 * @param array &$linkAttribs
 	 */
 	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
-		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
+		$context = MobileContext::singleton();
+		if (
+			$context->shouldDisplayMobileView() &&
+			$context->getMFConfig()->get( 'MFStripResponsiveImages' )
+		) {
+			// Remove all responsive image 'srcset' attributes.
+			// Note that in future, srcset may be used for specifying
+			// small-screen-friendly image variants as well as density
+			// variants, so this should be used with caution.
 			unset( $attribs['srcset'] );
 		}
 	}
