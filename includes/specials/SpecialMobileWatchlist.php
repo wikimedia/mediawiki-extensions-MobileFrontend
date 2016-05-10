@@ -34,7 +34,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/** @var Title $fromPageTitle Saves the Title object of the page list starts from */
 	private $fromPageTitle;
 
-
 	/**
 	 * Saves a user preference that reflects the current state of the watchlist
 	 * e.g. whether it is the feed or A-Z view and which filters are currently applied.
@@ -63,11 +62,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
 		// FIXME: Loads twice with JS enabled (T87871)
-		$output->addModuleStyles( array(
+		$output->addModuleStyles( [
 			'skins.minerva.special.watchlist.styles',
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
-		) );
+		] );
 		$req = $this->getRequest();
 		$this->view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->filter = $req->getVal( 'filter', 'all' );
@@ -86,7 +85,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $this->view === 'feed' ) {
 			$output->addHtml( $this->getWatchlistHeader( $user ) );
 			$output->addHtml(
-				Html::openElement( 'div', array( 'class' => 'content-unstyled' ) )
+				Html::openElement( 'div', [ 'class' => 'content-unstyled' ] )
 			);
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
@@ -111,7 +110,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @return array
 	 */
 	protected function getNSConditions( $column ) {
-		$conds = array();
+		$conds = [];
 		switch ( $this->filter ) {
 			case 'all':
 				// no-op
@@ -139,7 +138,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	public static function getWatchlistHeader( User $user ) {
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
-		$attrsList = $attrsFeed = array();
+		$attrsList = $attrsFeed = [];
 		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
 		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
 		if ( $view === 'feed' ) {
@@ -153,19 +152,19 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 
 		$html =
-		Html::openElement( 'ul', array( 'class' => 'button-bar mw-ui-button-group' ) ) .
+		Html::openElement( 'ul', [ 'class' => 'button-bar mw-ui-button-group' ] ) .
 			Html::openElement( 'li', $attrsList ) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
-				array( 'class' => 'button' ),
-				array( 'watchlistview' => 'a-z' )
+				[ 'class' => 'button' ],
+				[ 'watchlistview' => 'a-z' ]
 			) .
 			Html::closeElement( 'li' ) .
 			Html::openElement( 'li', $attrsFeed ) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
-				array( 'class' => 'button' ),
-				array( 'watchlistview' => 'feed', 'filter' => $filter )
+				[ 'class' => 'button' ],
+				[ 'watchlistview' => 'feed', 'filter' => $filter ]
 			) .
 			Html::closeElement( 'li' ) .
 			Html::closeElement( 'ul' );
@@ -177,31 +176,31 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * Render "second" header for filter in feed view of watchlist
 	 */
 	function showRecentChangesHeader() {
-		$filters = array(
+		$filters = [
 			'all' => 'mobile-frontend-watchlist-filter-all',
 			'articles' => 'mobile-frontend-watchlist-filter-articles',
 			'talk' => 'mobile-frontend-watchlist-filter-talk',
 			'other' => 'mobile-frontend-watchlist-filter-other',
-		);
+		];
 		$output = $this->getOutput();
 
 		$output->addHtml(
-			Html::openElement( 'ul', array( 'class' => 'mw-mf-watchlist-selector page-header-bar' ) )
+			Html::openElement( 'ul', [ 'class' => 'mw-mf-watchlist-selector page-header-bar' ] )
 		);
 
 		foreach ( $filters as $filter => $msg ) {
-			$itemAttrs = array();
+			$itemAttrs = [];
 			if ( $filter === $this->filter ) {
 				$itemAttrs['class'] = 'selected';
 			}
-			$linkAttrs = array(
+			$linkAttrs = [
 				'href' => $this->getPageTitle()->getLocalUrl(
-					array(
+					[
 						'filter' => $filter,
 						'watchlistview' => 'feed',
-					)
+					]
 				)
-			);
+			];
 			$output->addHtml(
 				Html::openElement( 'li', $itemAttrs ) .
 				Html::element( 'a', $linkAttrs, $this->msg( $msg )->plain() ) .
@@ -230,32 +229,32 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		// snip....
 
-		$tables = array( 'recentchanges', 'watchlist' );
-		$fields = array( $dbr->tableName( 'recentchanges' ) . '.*' );
-		$innerConds = array(
+		$tables = [ 'recentchanges', 'watchlist' ];
+		$fields = [ $dbr->tableName( 'recentchanges' ) . '.*' ];
+		$innerConds = [
 			'wl_user' => $user->getId(),
 			'wl_namespace=rc_namespace',
 			'wl_title=rc_title',
 			// FIXME: Filter out wikidata changes which currently show as anonymous (see bug 49315)
 			'rc_type!=' . $dbr->addQuotes( RC_EXTERNAL ),
-		);
+		];
 		// Filter out category membership changes if configured
 		if ( $user->getBoolOption( 'hidecategorization' ) ) {
 			$innerConds[] = 'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE );
 		}
-		$join_conds = array(
-			'watchlist' => array(
+		$join_conds = [
+			'watchlist' => [
 				'INNER JOIN',
 				$innerConds,
-			),
-		);
-		$options = array( 'ORDER BY' => 'rc_timestamp DESC' );
+			],
+		];
+		$options = [ 'ORDER BY' => 'rc_timestamp DESC' ];
 		$options['LIMIT'] = self::LIMIT;
 
 		$rollbacker = $user->isAllowed( 'rollback' );
 		if ( $rollbacker ) {
 			$tables[] = 'page';
-			$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
+			$join_conds['page'] = [ 'LEFT JOIN', 'rc_cur_id=page_id' ];
 			if ( $rollbacker ) {
 				$fields[] = 'page_latest';
 			}
@@ -265,10 +264,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// Until 1.22, MediaWiki used an array here. Since 1.23 (Iec4aab87), it uses a FormOptions
 		// object (which implements array-like interface ArrayAccess).
 		// Let's keep using an array and hope any new extensions are compatible with both styles...
-		$values = array();
+		$values = [];
 		Hooks::run(
 			'SpecialWatchlistQuery',
-			array( &$conds, &$tables, &$join_conds, &$fields, &$values )
+			[ &$conds, &$tables, &$join_conds, &$fields, &$values ]
 		);
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
@@ -333,16 +332,16 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$msg = Html::element( 'p', null,
 				wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
 			);
-			$msg .=	Html::element( 'img', array(
+			$msg .=	Html::element( 'img', [
 				'src' => $imgUrl,
 				'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
-			) );
+			] );
 		}
 
-		return Html::openElement( 'div', array( 'class' => 'info empty-page' ) ) .
+		return Html::openElement( 'div', [ 'class' => 'info empty-page' ] ) .
 				$msg .
 				Html::element( 'a',
-					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
+					[ 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ],
 					wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
 				) .
 				Html::closeElement( 'div' );

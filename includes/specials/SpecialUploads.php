@@ -70,7 +70,7 @@ class SpecialUploads extends MobileSpecialPage {
 		$mobileContext = MobileContext::singleton();
 
 		$html = '';
-		$attrs = array();
+		$attrs = [];
 		if ( $uploadCount !== false ) {
 			$threshold = $this->getUploadCountThreshold();
 			// FIXME: Use Html class?
@@ -84,7 +84,7 @@ class SpecialUploads extends MobileSpecialPage {
 					'mobile-frontend-photo-upload-user-count'
 				)->numParams( $uploadCount )->parse();
 				if ( $uploadCount === 0 ) {
-					$attrs = array( 'style' => 'display:none' );
+					$attrs = [ 'style' => 'display:none' ];
 				}
 			}
 			$html .= Html::openElement( 'h2', $attrs ) . $msg . Html::closeElement( 'h2' );
@@ -117,7 +117,7 @@ class SpecialUploads extends MobileSpecialPage {
 			// early return if the database is invalid
 			return false;
 		} else {
-			$dbr = wfGetDB( DB_SLAVE, array(), $mfPhotoUploadWiki );
+			$dbr = wfGetDB( DB_SLAVE, [], $mfPhotoUploadWiki );
 		}
 
 		$limit = $this->getUploadCountThreshold() + 1;
@@ -125,9 +125,9 @@ class SpecialUploads extends MobileSpecialPage {
 		$res = $dbr->select(
 			'image',
 			'img_size',
-			array( 'img_user_text' => $username ),
+			[ 'img_user_text' => $username ],
 			__METHOD__,
-			array( 'LIMIT' => $limit )
+			[ 'LIMIT' => $limit ]
 		);
 		return ( $res ) ? $res->numRows() : false;
 	}

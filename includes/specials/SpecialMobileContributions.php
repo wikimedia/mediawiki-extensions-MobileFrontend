@@ -24,7 +24,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	/**  @var bool $showUsername Whether to show the username in results or not */
 	protected $showUsername = false;
 	/** @var array Lengths of previous revisions */
-	protected $prevLengths = array();
+	protected $prevLengths = [];
 
 	/**
 	 * Gets HTML to place in the header bar. Title should always refer to a logged in user
@@ -33,10 +33,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 */
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',
-			array(
+			[
 				'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user' ),
 				'href' => $title->getLocalUrl(),
-			),
+			],
 			$title->getText() );
 	}
 
@@ -53,10 +53,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				// set page title as on desktop site - bug 66656
 				$username = $this->user->getName();
 				$out = $this->getOutput();
-				$out->addModuleStyles( array(
+				$out->addModuleStyles( [
 					'mobile.pagelist.styles',
 					'mobile.pagesummary.styles',
-				) );
+				] );
 				$out->setHTMLTitle( $this->msg(
 					'pagetitle',
 					$this->msg( 'contributions-title', $username )->plain()
@@ -68,7 +68,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
 				$res = $this->doQuery();
-				$out->addHtml( Html::openElement( 'div', array( 'class' => 'content-unstyled' ) ) );
+				$out->addHtml( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
 				$this->showContributions( $res );
 				$out->addHtml( Html::closeElement( 'div' ) );
 				return;
@@ -85,8 +85,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$numRows = $res->numRows();
 		$rev = null;
 		$out = $this->getOutput();
-		$revs = array();
-		$prevRevs = array();
+		$revs = [];
+		$prevRevs = [];
 		foreach ( $res as $row ) {
 			$rev = new Revision( $row );
 			$revs[] = $rev;
@@ -167,7 +167,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * Returns a list of query conditions that should be run against the revision table
 	 */
 	protected function getQueryConditions() {
-		$conds = array();
+		$conds = [];
 		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
 
 		if ( $this->user ) {

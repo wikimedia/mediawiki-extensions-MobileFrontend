@@ -45,7 +45,7 @@ class ExtMobileFrontend {
 		$formatter = MobileFormatter::newFromContext( $context, $html );
 		$formatter->enableTOCPlaceholder( $includeTOC );
 
-		Hooks::run( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
+		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
 		$isSpecialPage = $title->isSpecialPage();
 

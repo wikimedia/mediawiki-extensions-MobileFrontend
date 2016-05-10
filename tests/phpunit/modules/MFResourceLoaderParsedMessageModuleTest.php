@@ -4,67 +4,67 @@
  * @group MobileFrontend
  */
 class MFResourceLoaderParsedMessageModuleTest extends ResourceLoaderTestCase {
-	private $modules = array(
-		array(
-			'messages' => array( 'foo', 'bar' ),
-		),
-		array(
-			'messages' => array(
+	private $modules = [
+		[
+			'messages' => [ 'foo', 'bar' ],
+		],
+		[
+			'messages' => [
 				'foo',
-				'mobile-frontend-photo-license' => array( 'parse' ),
-			),
-		),
-		array(
-			'messages' => array(
+				'mobile-frontend-photo-license' => [ 'parse' ],
+			],
+		],
+		[
+			'messages' => [
 				'foo',
-				'mobile-frontend-photo-license' => array( 'unknown' ),
-			),
-		),
-	);
+				'mobile-frontend-photo-license' => [ 'unknown' ],
+			],
+		],
+	];
 
 	// providers
 	public function providerGetMessages() {
-		return array(
-			array(
+		return [
+			[
 				$this->modules[0],
-				array( 'foo', 'bar' ),
-			),
-			array(
+				[ 'foo', 'bar' ],
+			],
+			[
 				$this->modules[1],
-				array( 'foo' ),
-			),
-			array(
+				[ 'foo' ],
+			],
+			[
 				$this->modules[2],
-				array( 'foo' ),
-			),
-		);
+				[ 'foo' ],
+			],
+		];
 	}
 
 	public function providerAddParsedMessages() {
 		$html = wfMessage( 'mobile-frontend-photo-license' )->parse();
 		$expected = Xml::encodeJsCall( 'mw.messages.set',
-				array( array( 'mobile-frontend-photo-license' => $html ) ) );
+				[ [ 'mobile-frontend-photo-license' => $html ] ] );
 
-		return array(
+		return [
 			// test case 1
-			array(
+			[
 				$this->modules[0],
 				// expected value
 				''
-			),
+			],
 			// test case 2
-			array(
+			[
 				$this->modules[1],
 				// expected value 2
 				$expected
-			),
+			],
 			// test case 3
-			array(
+			[
 				$this->modules[2],
 				// expected value 2
 				''
-			),
-		);
+			],
+		];
 	}
 
 	// tests

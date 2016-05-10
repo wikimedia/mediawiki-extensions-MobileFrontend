@@ -49,7 +49,7 @@ class MobileContext extends ContextSource {
 	 * Key/value pairs of things to add to X-Analytics response header for anlytics
 	 * @var array
 	 */
-	protected $analyticsLogItems = array();
+	protected $analyticsLogItems = [];
 
 	/** @var IDeviceProperties $device Saves current device description */
 	private $device;
@@ -367,7 +367,7 @@ class MobileContext extends ContextSource {
 			$host = false;
 		}
 		$this->getRequest()->response()->setcookie( 'optin', $mode, 0,
-			array( 'prefix' => '', 'domain' => $host )
+			[ 'prefix' => '', 'domain' => $host ]
 		);
 	}
 
@@ -400,7 +400,7 @@ class MobileContext extends ContextSource {
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
-			Hooks::run( 'EnterMobileMode', array( $this ) );
+			Hooks::run( 'EnterMobileMode', [ $this ] );
 		}
 		return $this->mobileView;
 	}
@@ -510,7 +510,7 @@ class MobileContext extends ContextSource {
 				$dbr = wfGetDB( DB_SLAVE );
 				if ( $dbr->selectField( 'categorylinks',
 					'cl_from',
-					array( 'cl_from' => $id, 'cl_to' => $noMobileCategory ),
+					[ 'cl_from' => $id, 'cl_to' => $noMobileCategory ],
 					__METHOD__
 				) ) {
 					return true;
@@ -566,11 +566,11 @@ class MobileContext extends ContextSource {
 		}
 
 		$this->getRequest()->response()->setcookie( 'stopMobileRedirect', 'true', $expiry,
-			array(
+			[
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
 				'secure' => false,
-			)
+			]
 		);
 	}
 
@@ -617,9 +617,9 @@ class MobileContext extends ContextSource {
 	public function setDisableImagesCookie( $shouldDisableImages ) {
 		$resp = $this->getRequest()->response();
 		if ( $shouldDisableImages ) {
-			$resp->setCookie( 'disableImages', 1, 0, array( 'prefix' => '' ) );
+			$resp->setCookie( 'disableImages', 1, 0, [ 'prefix' => '' ] );
 		} else {
-			$resp->clearCookie( 'disableImages', array( 'prefix' => '' ) );
+			$resp->clearCookie( 'disableImages', [ 'prefix' => '' ] );
 		}
 	}
 
@@ -680,10 +680,10 @@ class MobileContext extends ContextSource {
 			self::USEFORMAT_COOKIE_NAME,
 			$cookieFormat,
 			$expiry,
-			array(
+			[
 				'prefix' => '',
 				'httpOnly' => false,
-			)
+			]
 		);
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
@@ -776,7 +776,7 @@ class MobileContext extends ContextSource {
 
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
-			if ( Hooks::run( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
+			if ( Hooks::run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
@@ -856,7 +856,7 @@ class MobileContext extends ContextSource {
 
 		$parsedHostParts = explode( ".", $parsedUrl['host'] );
 		$templateHostParts = explode( ".", $mobileUrlHostTemplate );
-		$targetHostParts = array();
+		$targetHostParts = [];
 
 		foreach ( $templateHostParts as $key => $templateHostPart ) {
 			if ( strstr( $templateHostPart, '%h' ) ) {
@@ -972,7 +972,7 @@ class MobileContext extends ContextSource {
 		} elseif ( $part == 'path' ) {
 			return $path;
 		} else {
-			return array( 'host' => $host, 'path' => $path );
+			return [ 'host' => $host, 'path' => $path ];
 		}
 	}
 
@@ -1098,7 +1098,7 @@ class MobileContext extends ContextSource {
 		parse_str( preg_replace( '/; */', '&', $currentHeader ), $logItems );
 		$logItems += $this->getAnalyticsLogItems();
 		if ( count( $logItems ) ) {
-			$xanalytics_items = array();
+			$xanalytics_items = [];
 			foreach ( $logItems as $key => $val ) {
 				$xanalytics_items[] = urlencode( $key ) . "=" . urlencode( $val );
 			}

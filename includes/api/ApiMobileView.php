@@ -87,25 +87,25 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
 			$resultObj->addValue( null, $moduleName,
-				array( 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) )
+				[ 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) ]
 			);
 		}
 
 		if ( isset( $prop['namespace'] ) ) {
-			$resultObj->addValue( null, $moduleName, array(
+			$resultObj->addValue( null, $moduleName, [
 				'ns' => $namespace,
-			) );
+			] );
 		}
 		$data = $this->getData( $title, $params['noimages'], $params['revision'] );
-		$plainData = array( 'lastmodified', 'lastmodifiedby', 'revision',
-			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' );
+		$plainData = [ 'lastmodified', 'lastmodifiedby', 'revision',
+			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' ];
 		foreach ( $plainData as $name ) {
 			// Bug 73109: #getData will return an empty array if the title redirects to
 			// a page in a virtual namespace (NS_SPECIAL, NS_MEDIA), so make sure that
 			// the requested data exists too.
 			if ( isset( $prop[$name] ) && isset( $data[$name] ) ) {
 				$resultObj->addValue( null, $moduleName,
-					array( $name => $data[$name] )
+					[ $name => $data[$name] ]
 				);
 			}
 		}
@@ -121,7 +121,7 @@ class ApiMobileView extends ApiBase {
 				$pageProps = array_intersect_key( $data['pageprops'], array_flip( $propNames ) );
 			}
 			$resultObj->addValue( null, $moduleName,
-				array( 'pageprops' => $pageProps )
+				[ 'pageprops' => $pageProps ]
 			);
 		}
 		if ( isset( $prop['description'] ) && isset( $data['pageprops']['wikibase_item'] ) ) {
@@ -130,29 +130,29 @@ class ApiMobileView extends ApiBase {
 			);
 			if ( $desc ) {
 				$resultObj->addValue( null, $moduleName,
-					array( 'description' => $desc )
+					[ 'description' => $desc ]
 				);
 			}
 		}
 		if ( $this->usePageImages ) {
 			$this->addPageImage( $data, $params, $prop );
 		}
-		$result = array();
-		$missingSections = array();
+		$result = [];
+		$missingSections = [];
 		if ( $this->mainPage ) {
 			if ( $onlyRequestedSections ) {
 				$requestedSections =
 					self::parseSections( $params['sections'], $data, $missingSections );
 			} else {
-				$requestedSections = array( 0 );
+				$requestedSections = [ 0 ];
 			}
 			$resultObj->addValue( null, $moduleName,
-				array( 'mainpage' => true )
+				[ 'mainpage' => true ]
 			);
 		} elseif ( isset( $params['sections'] ) ) {
 			$requestedSections = self::parseSections( $params['sections'], $data, $missingSections );
 		} else {
-			$requestedSections = array();
+			$requestedSections = [];
 		}
 		if ( isset( $data['sections'] ) ) {
 			if ( isset( $prop['sections'] ) ) {
@@ -161,7 +161,7 @@ class ApiMobileView extends ApiBase {
 					if ( !isset( $requestedSections[$i] ) && $onlyRequestedSections ) {
 						continue;
 					}
-					$section = array();
+					$section = [];
 					if ( $i > 0 ) {
 						$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
 					}
@@ -181,7 +181,7 @@ class ApiMobileView extends ApiBase {
 				$missingSections = array_keys( $requestedSections );
 			} else {
 				foreach ( array_keys( $requestedSections ) as $index ) {
-					$section = array( 'id' => $index );
+					$section = [ 'id' => $index ];
 					if ( isset( $data['text'][$index] ) ) {
 						$section[$textElement] =
 							$this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
@@ -192,7 +192,7 @@ class ApiMobileView extends ApiBase {
 				}
 			}
 			$resultObj->setIndexedTagName( $result, 'section' );
-			$resultObj->addValue( null, $moduleName, array( 'sections' => $result ) );
+			$resultObj->addValue( null, $moduleName, [ 'sections' => $result ] );
 		}
 
 		if ( isset( $prop['protection'] ) ) {
@@ -213,10 +213,10 @@ class ApiMobileView extends ApiBase {
 				$editable = intval( $editable );
 			}
 			$resultObj->addValue( null, $moduleName,
-				array(
+				[
 					'editable' => $editable,
-					ApiResult::META_BC_BOOLS => array( 'editable' ),
-				)
+					ApiResult::META_BC_BOOLS => [ 'editable' ],
+				]
 			);
 		}
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
@@ -224,7 +224,7 @@ class ApiMobileView extends ApiBase {
 		// only thing we support about it.
 		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
 			$resultObj->addValue( null, $moduleName,
-				array( 'liquidthreads' => true )
+				[ 'liquidthreads' => true ]
 			);
 		}
 		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
@@ -233,7 +233,7 @@ class ApiMobileView extends ApiBase {
 		if ( $this->maxlen < 0 ) {
 			// There is more data available
 			$resultObj->addValue( null, $moduleName,
-				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
+				[ 'continue-offset' => $params['offset'] + $params['maxlen'] ]
 			);
 		}
 	}
@@ -259,13 +259,13 @@ class ApiMobileView extends ApiBase {
 	protected function makeTitle( $name ) {
 		$title = Title::newFromText( $name );
 		if ( !$title ) {
-			$this->dieUsageMsg( array( 'invalidtitle', $name ) );
+			$this->dieUsageMsg( [ 'invalidtitle', $name ] );
 		}
 		if ( $title->inNamespace( NS_FILE ) ) {
 			$this->file = $this->findFile( $title );
 		}
 		if ( !$title->exists() && !$this->file ) {
-			$this->dieUsageMsg( array( 'notanarticle', $name ) );
+			$this->dieUsageMsg( [ 'notanarticle', $name ] );
 		}
 		return $title;
 	}
@@ -287,7 +287,7 @@ class ApiMobileView extends ApiBase {
 	 * @param array $options
 	 * @return bool|File
 	 */
-	protected function findFile( $title, $options = array() ) {
+	protected function findFile( $title, $options = [] ) {
 		return wfFindFile( $title, $options );
 	}
 
@@ -360,14 +360,14 @@ class ApiMobileView extends ApiBase {
 	public static function parseSections( $str, $data, &$missingSections ) {
 		$str = trim( $str );
 		if ( !isset( $data['sections'] ) ) {
-			return array();
+			return [];
 		}
 		$sectionCount = count( $data['sections'] );
 		if ( $str === 'all' ) {
 			return range( 0, $sectionCount );
 		}
 		$sections = array_map( 'trim', explode( '|', $str ) );
-		$ret = array();
+		$ret = [];
 		foreach ( $sections as $sec ) {
 			if ( $sec === '' ) {
 				continue;
@@ -471,13 +471,13 @@ class ApiMobileView extends ApiBase {
 					$textTitle .= $title->getFragmentForUrl();
 				}
 				$result->addValue( null, $this->getModuleName(),
-					array( 'redirected' => $textTitle )
+					[ 'redirected' => $textTitle ]
 				);
 				if ( $title->getNamespace() < 0 ) {
 					$result->addValue( null, $this->getModuleName(),
-						array( 'viewable' => 'no' )
+						[ 'viewable' => 'no' ]
 					);
-					return array();
+					return [];
 				}
 				$wp = $this->makeWikiPage( $title );
 			}
@@ -494,7 +494,7 @@ class ApiMobileView extends ApiBase {
 			if ( !$latest ) {
 				// https://bugzilla.wikimedia.org/show_bug.cgi?id=53378
 				// Title::exists() above doesn't seem to always catch recently deleted pages
-				$this->dieUsageMsg( array( 'notanarticle', $title->getPrefixedText() ) );
+				$this->dieUsageMsg( [ 'notanarticle', $title->getPrefixedText() ] );
 			}
 			$parserOptions = $this->makeParserOptions( $wp );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
@@ -539,13 +539,13 @@ class ApiMobileView extends ApiBase {
 		}
 
 		if ( $this->mainPage || $this->file ) {
-			$data = array(
-				'sections' => array(),
-				'text' => array( $html ),
-				'refsections' => array(),
-			);
+			$data = [
+				'sections' => [],
+				'text' => [ $html ],
+				'refsections' => [],
+			];
 		} else {
-			$data = array();
+			$data = [];
 			$data['sections'] = $parserOutput->getSections();
 			$sectionCount = count( $data['sections'] );
 			for ( $i = 0; $i < $sectionCount; $i++ ) {
@@ -557,11 +557,11 @@ class ApiMobileView extends ApiBase {
 				wfDebugLog( 'mobile', __METHOD__ . "(): mismatching number of " .
 					"sections from parser and split on page {$title->getPrefixedText()}, oldid=$latest" );
 				// We can't be sure about anything here, return all page HTML as one big section
-				$chunks = array( $html );
-				$data['sections'] = array();
+				$chunks = [ $html ];
+				$data['sections'] = [];
 			}
-			$data['text'] = array();
-			$data['refsections'] = array();
+			$data['text'] = [];
+			$data['refsections'] = [];
 			foreach ( $chunks as $chunk ) {
 				if ( count( $data['text'] ) ) {
 					$chunk = "<h$chunk";
@@ -588,10 +588,10 @@ class ApiMobileView extends ApiBase {
 		$data['id'] = $wp->getId();
 		$user = User::newFromId( $wp->getUser() );
 		if ( !$user->isAnon() ) {
-			$data['lastmodifiedby'] = array(
+			$data['lastmodifiedby'] = [
 				'name' => $wp->getUserText(),
 				'gender' => $user->getOption( 'gender' ),
-			);
+			];
 		} else {
 			$data['lastmodifiedby'] = null;
 		}
@@ -606,7 +606,7 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$data['languagecount'] = 0;
 			$data['displaytitle'] = htmlspecialchars( $title->getPrefixedText() );
-			$data['pageprops'] = array();
+			$data['pageprops'] = [];
 		}
 
 		$data['contentmodel'] = $title->getContentModel();
@@ -681,17 +681,17 @@ class ApiMobileView extends ApiBase {
 		$result = $this->getResult();
 		if ( isset( $prop['image'] ) ) {
 			$result->addValue( null, $this->getModuleName(),
-				array( 'image' =>
-					array(
+				[ 'image' =>
+					[
 						'file' => $data['image'],
 						'width' => $file->getWidth(),
 						'height' => $file->getHeight(),
-					)
-				)
+					]
+				]
 			);
 		}
 		if ( isset( $prop['thumb'] ) ) {
-			$resize = array();
+			$resize = [];
 			if ( isset( $params['thumbsize'] ) ) {
 				$resize['width'] = $resize['height'] = $params['thumbsize'];
 			}
@@ -715,13 +715,13 @@ class ApiMobileView extends ApiBase {
 				return;
 			}
 			$result->addValue( null, $this->getModuleName(),
-				array( 'thumb' =>
-					array(
+				[ 'thumb' =>
+					[
 						'url' => $thumb->getUrl(),
 						'width' => $thumb->getWidth(),
 						'height' => $thumb->getHeight(),
-					)
-				)
+					]
+				]
 			);
 		}
 	}
@@ -732,7 +732,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	private function addProtection( Title $title ) {
 		$result = $this->getResult();
-		$protection = array();
+		$protection = [];
 		foreach ( $title->getRestrictionTypes() as $type ) {
 			$levels = $title->getRestrictions( $type );
 			if ( $levels ) {
@@ -741,7 +741,7 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		$result->addValue( null, $this->getModuleName(),
-			array( 'protection' => $protection )
+			[ 'protection' => $protection ]
 		);
 	}
 
@@ -750,19 +750,19 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	public function getAllowedParams() {
-		$res = array(
-			'page' => array(
+		$res = [
+			'page' => [
 				ApiBase::PARAM_REQUIRED => true,
-			),
-			'redirect' => array(
-				ApiBase::PARAM_TYPE => array( 'yes', 'no' ),
+			],
+			'redirect' => [
+				ApiBase::PARAM_TYPE => [ 'yes', 'no' ],
 				ApiBase::PARAM_DFLT => 'yes',
-			),
+			],
 			'sections' => null,
-			'prop' => array(
+			'prop' => [
 				ApiBase::PARAM_DFLT => 'text|sections|normalizedtitle',
 				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_TYPE => array(
+				ApiBase::PARAM_TYPE => [
 					'id',
 					'text',
 					'sections',
@@ -779,10 +779,10 @@ class ApiMobileView extends ApiBase {
 					'description',
 					'contentmodel',
 					'namespace',
-				)
-			),
-			'sectionprop' => array(
-				ApiBase::PARAM_TYPE => array(
+				]
+			],
+			'sectionprop' => [
+				ApiBase::PARAM_TYPE => [
 					'toclevel',
 					'level',
 					'line',
@@ -790,45 +790,45 @@ class ApiMobileView extends ApiBase {
 					'index',
 					'fromtitle',
 					'anchor',
-				),
+				],
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_DFLT => 'toclevel|line',
-			),
-			'pageprops' => array(
+			],
+			'pageprops' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_DFLT => 'notoc|noeditsection|wikibase_item'
-			),
-			'variant' => array(
+			],
+			'variant' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_DFLT => false,
-			),
+			],
 			'noimages' => false,
 			'noheadings' => false,
 			'notransform' => false,
 			'onlyrequestedsections' => false,
-			'offset' => array(
+			'offset' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
 				ApiBase::PARAM_DFLT => 0,
-			),
-			'maxlen' => array(
+			],
+			'maxlen' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
 				ApiBase::PARAM_DFLT => 0,
-			),
-			'revision' => array(
+			],
+			'revision' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
 				ApiBase::PARAM_DFLT => 0,
-			),
-		);
+			],
+		];
 		if ( $this->usePageImages ) {
 			$res['prop'][ApiBase::PARAM_TYPE][] = 'image';
 			$res['prop'][ApiBase::PARAM_TYPE][] = 'thumb';
-			$res['thumbsize'] = $res['thumbwidth'] = $res['thumbheight'] = array(
+			$res['thumbsize'] = $res['thumbwidth'] = $res['thumbheight'] = [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
-			);
+			];
 		}
 		return $res;
 	}
@@ -839,18 +839,18 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	public function getParamDescription() {
-		$res = array(
+		$res = [
 			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => array(
+			'sections' => [
 				'Pipe-separated list of section numbers for which to return text.',
 				" `all' can be used to return for all. Ranges in format '1-4' mean get sections 1,2,3,4.",
 				" Ranges without second number, e.g. '1-' means get all until the end.",
 				" `references' can be used to specify that all sections containing references",
 				" should be returned."
-			),
-			'prop' => array(
+			],
+			'prop' => [
 				'Which information to get',
 				' text            - HTML of selected section(s)',
 				' sections        - information about all sections on page',
@@ -869,7 +869,7 @@ class ApiMobileView extends ApiBase {
 				' description     - page description from Wikidata',
 				' contentmodel    - page contentmodel',
 				' namespace       - the namespace of the page',
-			),
+			],
 			'sectionprop' => 'What information about sections to get',
 			'pageprops' => 'What page properties to return, a pipe (|) separated list or * for'
 				. ' all properties',
@@ -881,7 +881,7 @@ class ApiMobileView extends ApiBase {
 			'offset' =>
 				'Pretend all text result is one string, and return the substring starting at this point',
 			'maxlen' => 'Pretend all text result is one string, and limit result to this length',
-		);
+		];
 		if ( $this->usePageImages ) {
 			$res['prop'][] = ' image           - information about an image associated with this page';
 			$res['prop'][] = ' thumb           - thumbnail of an image associated with this page';
@@ -907,11 +907,11 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	public function getExamples() {
-		return array(
+		return [
 			'api.php?action=mobileview&page=Doom_metal&sections=0',
 			'api.php?action=mobileview&page=Candlemass&sections=0|references',
 			'api.php?action=mobileview&page=Candlemass&sections=1-|references',
-		);
+		];
 	}
 
 	/**
@@ -919,14 +919,14 @@ class ApiMobileView extends ApiBase {
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {
-		return array(
+		return [
 			'action=mobileview&page=Doom_metal&sections=0'
 				=> 'apihelp-mobileview-example-1',
 			'action=mobileview&page=Candlemass&sections=0|references'
 				=> 'apihelp-mobileview-example-2',
 			'action=mobileview&page=Candlemass&sections=1-|references'
 				=> 'apihelp-mobileview-example-3',
-		);
+		];
 	}
 
 	/**

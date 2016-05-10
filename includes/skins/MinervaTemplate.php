@@ -36,17 +36,17 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getSearchForm( $data ) {
 		return Html::openElement( 'form',
-				array(
+				[
 					'action' => $data['wgScript'],
 					'class' => 'search-box',
-				)
+				]
 			) .
 			$this->makeSearchInput( $this->getSearchAttributes() ) .
 			$this->makeSearchButton(
 				'fulltext',
-				array(
+				[
 					'class' => MobileUI::buttonClass( 'progressive', 'fulltext-search no-js-only' ),
-				)
+				]
 			) .
 			Html::closeElement( 'form' );
 	}
@@ -60,7 +60,7 @@ class MinervaTemplate extends BaseTemplate {
 		$this->isSpecialMobileMenuPage = $this->isSpecialPage &&
 			$title->equals( SpecialPage::getTitleFor( 'MobileMenu' ) );
 		$this->isMainPage = $title->isMainPage();
-		Hooks::run( 'MinervaPreRender', array( $this ) );
+		Hooks::run( 'MinervaPreRender', [ $this ] );
 		$this->render( $this->data );
 	}
 
@@ -69,7 +69,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return array
 	 */
 	public function getPageActions() {
-		return $this->isFallbackEditor() ? array() : $this->data['page_actions'];
+		return $this->isFallbackEditor() ? [] : $this->data['page_actions'];
 	}
 
 	/**
@@ -86,14 +86,14 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return array Array with attributes for search bar
 	 */
 	protected function getSearchAttributes() {
-		$searchBox = array(
+		$searchBox = [
 			'id' => 'searchInput',
 			'class' => 'search',
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
 			// attribute values, so need to escape the string here.
 			'placeholder' => $this->getMsg( 'mobile-frontend-placeholder' )->text(),
-		);
+		];
 		return $searchBox;
 	}
 
@@ -105,11 +105,11 @@ class MinervaTemplate extends BaseTemplate {
 	protected function getFooterHtml( $data ) {
 		$footer = '<div id="footer" class="post-content">';
 		foreach ( $this->getFooterLinks() as $category => $links ) {
-			$footer .= Html::openElement( 'ul', array( 'class' => 'footer-' . $category ) );
+			$footer .= Html::openElement( 'ul', [ 'class' => 'footer-' . $category ] );
 			foreach ( $links as $link ) {
 				if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
 					$footer .= Html::rawElement( 'li',
-						array( 'id' => "footer-{$category}-{$link}" ), $data[$link] );
+						[ 'id' => "footer-{$category}-{$link}" ], $data[$link] );
 				}
 			}
 			$footer .= '</ul>';
@@ -149,14 +149,14 @@ class MinervaTemplate extends BaseTemplate {
 		$action = Action::getActionName( RequestContext::getMain() );
 		if ( isset( $data['historyLink'] ) && $action === 'view' ) {
 			$historyLink = $data['historyLink'];
-			$args = array(
+			$args = [
 				'isMainPage' => $this->getSkin()->getTitle()->isMainPage(),
 				'link' => $historyLink['href'],
 				'text' => $historyLink['text'],
 				'username' => $historyLink['data-user-name'],
 				'userGender' => $historyLink['data-user-gender'],
 				'timestamp' => $historyLink['data-timestamp']
-			);
+			];
 			$templateParser = new TemplateParser( __DIR__ );
 			return $templateParser->processTemplate( 'history', $args );
 		} else {
@@ -173,7 +173,7 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getSecondaryActions() {
 		if ( $this->isFallbackEditor() ) {
-			return array();
+			return [];
 		}
 
 		return $this->data['secondary_actions'];
@@ -189,10 +189,10 @@ class MinervaTemplate extends BaseTemplate {
 			return '';
 		}
 		$baseClass = MobileUI::buttonClass( '', 'button' );
-		$html = Html::openElement( 'div', array(
+		$html = Html::openElement( 'div', [
 			'class' => 'post-content',
 			'id' => 'page-secondary-actions'
-		) );
+		] );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
 			if ( isset( $el['attributes']['class'] ) ) {
@@ -213,10 +213,10 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getContentHtml( $data ) {
 		if ( !$data[ 'unstyledContent' ] ) {
-			$content = Html::openElement( 'div', array(
+			$content = Html::openElement( 'div', [
 				'id' => 'bodyContent',
 				'class' => 'content',
-			) );
+			] );
 			$content .= $data[ 'bodytext' ];
 			if ( isset( $data['subject-page'] ) ) {
 				$content .= $data['subject-page'];
@@ -241,7 +241,7 @@ class MinervaTemplate extends BaseTemplate {
 		$html = '';
 		if ( $internalBanner || $preBodyHtml || isset( $data['page_actions'] ) ) {
 			$html .= $preBodyHtml
-				. Html::openElement( 'div', array( 'class' => 'pre-content heading-holder' ) );
+				. Html::openElement( 'div', [ 'class' => 'pre-content heading-holder' ] );
 				if ( !$this->shouldDisplayPageActionsBeforeHeading ) {
 					$html .= $headingHtml;
 				}
@@ -325,14 +325,14 @@ class MinervaTemplate extends BaseTemplate {
 		$templateParser = new TemplateParser( __DIR__ );
 
 		// prepare template data
-		$templateData = array(
+		$templateData = [
 			'banners' => $data['banners'],
 			'headelement' => $data[ 'headelement' ],
 			'headerhtml' => $this->getHeaderHtml( $data ),
 			'mainmenuhtml' => $this->getMainMenuHtml( $data ),
 			'contenthtml' => $this->getContentWrapperHtml( $data ),
 			'footerhtml' => $this->getFooterHtml( $data ),
-		);
+		];
 		// begin rendering
 		echo $templateParser->processTemplate( 'minerva', $templateData );
 		$this->printTrail();

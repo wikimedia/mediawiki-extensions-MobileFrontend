@@ -98,7 +98,7 @@ class MobileSpecialPage extends SpecialPage {
 		if ( $rl->isModuleRegistered( $specialScriptModuleName ) ) {
 			$out->addModules( $specialScriptModuleName );
 		}
-		Hooks::run( 'MobileSpecialPageStyles', array( $id, $out ) );
+		Hooks::run( 'MobileSpecialPageStyles', [ $id, $out ] );
 	}
 
 	/**

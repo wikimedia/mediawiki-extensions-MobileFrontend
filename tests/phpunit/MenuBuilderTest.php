@@ -5,18 +5,18 @@ namespace Tests\MobileFrontend;
 use MobileFrontend\MenuBuilder;
 
 class MenuTest extends \PHPUnit_Framework_TestCase {
-	private $homeComponent = array(
+	private $homeComponent = [
 		'text' => 'Home',
 		'href' => '/Main_page',
 		'class' => 'mw-ui-icon mw-ui-icon-before mw-ui-icon-home',
 		'data-event-name' => 'home',
-	);
+	];
 
-	private $nearbyComponent = array(
+	private $nearbyComponent = [
 		'text' => 'Nearby',
 		'href' => '/wiki/Special:Nearby',
 		'class' => 'mw-ui-icon mw-ui-icon-before mw-ui-icon-nearby',
-	);
+	];
 
 	/**
 	 * @covers MenuBuilder::getEntries
@@ -39,17 +39,17 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 				$this->homeComponent['text'],
 				$this->homeComponent['href'],
 				$this->homeComponent['class'],
-				array(
+				[
 					'data-event-name' => $this->homeComponent['data-event-name']
-				)
+				]
 			);
 
-		$expectedEntries = array(
-			array(
+		$expectedEntries = [
+			[
 				'name' => 'home',
-				'components' => array( $this->homeComponent ),
-			),
-		);
+				'components' => [ $this->homeComponent ],
+			],
+		];
 
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}
@@ -66,18 +66,18 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 				$this->homeComponent['text'],
 				$this->homeComponent['href'],
 				$this->homeComponent['class'],
-				array(
+				[
 					'data-event-name' => $this->homeComponent['data-event-name']
-				)
+				]
 			);
 		$menu->insert( 'another_home' )
 			->addComponent(
 				$this->homeComponent['text'],
 				$this->homeComponent['href'],
 				$this->homeComponent['class'],
-				array(
+				[
 					'data-event-name' => $this->homeComponent['data-event-name']
-				)
+				]
 			);
 		$menu->insertAfter( 'home', 'nearby' )
 			->addComponent(
@@ -86,20 +86,20 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 				$this->nearbyComponent['class']
 			);
 
-		$expectedEntries = array(
-			array(
+		$expectedEntries = [
+			[
 				'name' => 'home',
-				'components' => array( $this->homeComponent ),
-			),
-			array(
+				'components' => [ $this->homeComponent ],
+			],
+			[
 				'name' => 'nearby',
-				'components' => array( $this->nearbyComponent ),
-			),
-			array(
+				'components' => [ $this->nearbyComponent ],
+			],
+			[
 				'name' => 'another_home',
-				'components' => array( $this->homeComponent ),
-			),
-		);
+				'components' => [ $this->homeComponent ],
+			],
+		];
 
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}
@@ -148,18 +148,18 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	 * @covers MenuBuilder::getEntries
 	 */
 	public function test_inserting_an_entry_with_multiple_components() {
-		$authLoginComponent = array(
+		$authLoginComponent = [
 			'text' => 'Phuedx (WMF)',
 			'href' => '/wiki/User:Phuedx_(WMF)',
 			'class' =>
 				'mw-ui-icon mw-ui-icon-before mw-ui-icon-profile truncated-text primary-action',
-		);
-		$authLogoutComponent = array(
+		];
+		$authLogoutComponent = [
 			'text' => 'Logout',
 			'href' => '/wiki/Special:UserLogout',
 			'class' =>
 				'mw-ui-icon mw-ui-icon-element secondary-logout secondary-action truncated-text',
-		);
+		];
 
 		$menu = new MenuBuilder();
 		$menu->insert( 'auth' )
@@ -174,15 +174,15 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 				$authLogoutComponent['class']
 			);
 
-		$expectedEntries = array(
-			array(
+		$expectedEntries = [
+			[
 				'name' => 'auth',
-				'components' => array(
+				'components' => [
 					$authLoginComponent,
 					$authLogoutComponent
-				),
-			),
-		);
+				],
+			],
+		];
 
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}
@@ -201,13 +201,13 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 				$this->nearbyComponent['class']
 			);
 
-		$expectedEntries = array(
-			array(
+		$expectedEntries = [
+			[
 				'name' => 'nearby',
-				'components' => array( $this->nearbyComponent ),
+				'components' => [ $this->nearbyComponent ],
 				'class' => 'jsonly'
-			),
-		);
+			],
+		];
 
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
 	}

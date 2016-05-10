@@ -46,16 +46,16 @@ class SpecialMobileEditor extends MobileSpecialPage {
 
 		$html =
 			Html::openElement( 'div',
-				array(
+				[
 					'id' => 'mw-mf-editor',
 					'data-targeturl' => $targetUrl
-				)
+				]
 			) .
 			Html::openElement( 'noscript' ) .
 			MobileUI::errorBox( $this->msg( 'mobile-frontend-editor-unavailable' )->text() ) .
 			Html::openElement( 'p' ) .
 				Html::element( 'a',
-					array( 'href' => $title->getLocalUrl() ),
+					[ 'href' => $title->getLocalUrl() ],
 					$this->msg( 'returnto', $title->getText() )->text() ) .
 			Html::closeElement( 'noscript' ) .
 			Html::closeElement( 'div' ); // #mw-mf-editorunavailable

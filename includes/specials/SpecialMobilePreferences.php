@@ -4,13 +4,13 @@
  */
 class SpecialMobilePreferences extends SpecialPreferences {
 
-	protected $validTabs = array(
+	protected $validTabs = [
 		'personal',
 		'dateformat',
 		'skin',
 		'files',
 		'rc',
-	);
+	];
 
 	/**
 	 * Builds the preferences form for the given section.
@@ -19,7 +19,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 	 * @return PreferencesForm
 	 */
 	public function getPreferencesForm( $key ) {
-		$prefs = array();
+		$prefs = [];
 		$user = $this->getUser();
 		$ctx = $this->getContext();
 
@@ -49,7 +49,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		$htmlForm->setModifiedUser( $user );
 		$htmlForm->setId( 'mw-prefs-form' );
 		$htmlForm->setSubmitText( $ctx->msg( 'saveprefs' )->text() );
-		$htmlForm->setSubmitCallback( array( 'Preferences', 'tryUISubmit' ) );
+		$htmlForm->setSubmitCallback( [ 'Preferences', 'tryUISubmit' ] );
 		$htmlForm->setAction( SpecialPage::getTitleFor( $this->getName(), $key )->getLocalUrl() );
 		return $htmlForm;
 	}
@@ -74,16 +74,16 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		// the main entry point (Special:MobilePreferences)
 		if ( $par && in_array( $par, $validForRendering ) ) {
 			$htmlForm = $this->getPreferencesForm( $par );
-			$htmlForm->setSubmitCallback( array( 'Preferences', 'tryUISubmit' ) );
+			$htmlForm->setSubmitCallback( [ 'Preferences', 'tryUISubmit' ] );
 			$htmlForm->show();
 		} else {
 			foreach ( $this->validTabs as $tabName ) {
 				// hidden tabs allow a user to navigate to the section of the preferences page,
 				// but shouldn't be visible on the main entry point (Special:Preferences)
-				$attrs = array(
+				$attrs = [
 					'class' => $baseClass = MobileUI::buttonClass( 'block' ),
 					'href' => SpecialPage::getTitleFor( $this->getName(), $tabName )->getLocalUrl(),
-				);
+				];
 				$button = Html::element( 'a', $attrs, $this->msg( "prefs-$tabName" ) );
 				$out->addHtml( $button );
 			}

@@ -31,20 +31,20 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
 
 		if ( !$categories ) {
-			return array();
+			return [];
 		}
 
-		return array(
-			'categories' => array(
-				'attributes' => array(
+		return [
+			'categories' => [
+				'attributes' => [
 					'href' => '#/categories',
 					// add hidden class (the overlay works only, when JS is enabled (class will
 					// be removed in categories/init.js)
 					'class' => 'category-button hidden',
-				),
+				],
 				'label' => $this->getMsg( 'categories' )->text()
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -56,12 +56,12 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		$result = parent::getSecondaryActions();
 
 		if ( $donationUrl && !$this->isSpecialPage ) {
-			$result['donation'] = array(
-				'attributes' => array(
+			$result['donation'] = [
+				'attributes' => [
 					'href' => $donationUrl,
-				),
+				],
 				'label' => $this->getMsg( 'mobile-frontend-donate-button-label' )->text()
-			);
+			];
 		}
 
 		$result += $this->getCategoryButton();

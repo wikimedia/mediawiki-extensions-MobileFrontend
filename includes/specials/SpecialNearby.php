@@ -33,16 +33,16 @@ class SpecialNearby extends MobileSpecialPage {
 
 		$html =
 			Html::openElement( 'div',
-				array(
+				[
 					'class' => 'content-unstyled',
 					'id' => 'mw-mf-nearby',
-				)
+				]
 			) .
 			MobileUI::contentElement(
 				MobileUI::errorBox(
-					Html::element( 'h2', array(),
+					Html::element( 'h2', [],
 						$this->msg( 'mobile-frontend-nearby-requirements' )->text() ) .
-					Html::element( 'p', array(),
+					Html::element( 'p', [],
 						$this->msg( 'mobile-frontend-nearby-requirements-guidance' )->text() )
 				),
 				'noscript'

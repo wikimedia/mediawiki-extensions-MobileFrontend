@@ -5,7 +5,7 @@
  */
 class SpecialMobileDiffTest extends MediaWikiTestCase {
 	/** Keeps track of request variables that should be unset on teardown **/
-	private $unsetReqVals = array();
+	private $unsetReqVals = [];
 
 	public function tearDown() {
 		foreach ( $this->unsetReqVals as $v ) {
@@ -25,26 +25,26 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 	}
 
 	public function providerTestNames() {
-		return array(
-			array( '123', true ),
-			array( '123...124', true ),
-			array( '4...123', true ),
+		return [
+			[ '123', true ],
+			[ '123...124', true ],
+			[ '4...123', true ],
 			// same
-			array( '123...123', false ),
+			[ '123...123', false ],
 			// cases where a revision doesn't exist (revisions over 200 don't exist in our mock)
-			array( '123...500', false ),
-			array( '500...550', false ),
-			array( '500...100', false ),
-			array( '500', false ),
+			[ '123...500', false ],
+			[ '500...550', false ],
+			[ '500...100', false ],
+			[ '500', false ],
 			// bad parameters
-			array( '123...', false ),
-			array( '...123...', false ),
-			array( '452...123...', false ),
-			array( '...123', false ),
-			array( 'prev...123', false ),
-			array( '123...next', false ),
-			array( 'prev...next', false ),
-		);
+			[ '123...', false ],
+			[ '...123...', false ],
+			[ '452...123...', false ],
+			[ '...123', false ],
+			[ 'prev...123', false ],
+			[ '123...next', false ],
+			[ 'prev...next', false ],
+		];
 	}
 
 	/**
@@ -64,24 +64,24 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 	}
 
 	public function redirectFromDesktopDiffProvider() {
-		return array(
-			array( array(), false ),
+		return [
+			[ [], false ],
 			// this makes no sense but this is the url for newly created pages (oldid but no diff)
-			array( array( 'oldid' => 5 ), 'Special:MobileDiff/5' ),
-			array( array( 'diff' => 123 ), 'Special:MobileDiff/123' ),
+			[ [ 'oldid' => 5 ], 'Special:MobileDiff/5' ],
+			[ [ 'diff' => 123 ], 'Special:MobileDiff/123' ],
 			// some more complicated cases...
-			array( array( 'oldid' => 90, 'diff' => 100 ), 'Special:MobileDiff/90...100' ),
-			array( array( 'oldid' => 123, 'diff' => 'next' ), 'Special:MobileDiff/123...124' ),
-			array( array( 'oldid' => 123, 'diff' => 'prev' ), 'Special:MobileDiff/122...123' ),
+			[ [ 'oldid' => 90, 'diff' => 100 ], 'Special:MobileDiff/90...100' ],
+			[ [ 'oldid' => 123, 'diff' => 'next' ], 'Special:MobileDiff/123...124' ],
+			[ [ 'oldid' => 123, 'diff' => 'prev' ], 'Special:MobileDiff/122...123' ],
 			// bad id given (revisions older than 200 do not exist in our MockRevision)
-			array( array( 'diff' => 208, 'oldid' => 50 ), '' ),
-			array( array( 'diff' => 50, 'oldid' => 208 ), '' ),
-			array( array( 'diff' => 'prev', 'oldid' => 201 ), '' ),
+			[ [ 'diff' => 208, 'oldid' => 50 ], '' ],
+			[ [ 'diff' => 50, 'oldid' => 208 ], '' ],
+			[ [ 'diff' => 'prev', 'oldid' => 201 ], '' ],
 			// weird edge case comparing identical things
-			array( array( 'oldid' => 101, 'diff' => 101 ), 'Special:MobileDiff/101...101' ),
+			[ [ 'oldid' => 101, 'diff' => 101 ], 'Special:MobileDiff/101...101' ],
 			// https://bugzilla.wikimedia.org/63999
-			array( array( 'oldid' => 'prev', 'diff' => 5 ), 'Special:MobileDiff/5' ),
-		);
+			[ [ 'oldid' => 'prev', 'diff' => 5 ], 'Special:MobileDiff/5' ],
+		];
 	}
 }
 

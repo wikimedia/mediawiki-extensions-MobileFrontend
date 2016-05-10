@@ -12,7 +12,7 @@ class MobileUserModule extends ResourceLoaderUserModule {
 	/** @var array Sets the target for the module (e.g. desktop and mobile).
 	 * Note this is mobile only as core already has an instance of ResourceLoaderUserModule
 	 */
-	protected $targets = array( 'mobile' );
+	protected $targets = [ 'mobile' ];
 
 	/**
 	 * Gets list of pages used by this module.

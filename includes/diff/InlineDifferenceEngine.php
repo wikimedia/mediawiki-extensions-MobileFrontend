@@ -162,13 +162,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			$this->getOutput()->addModules( 'mobile.patrol.ajax' );
 			$linkInfo = Html::linkButton(
 				$this->msg( 'markaspatrolleddiff' )->escaped(),
-				array(
-					'href' => $this->mNewPage->getLocalUrl( array(
+				[
+					'href' => $this->mNewPage->getLocalUrl( [
 						'action' => 'markpatrolled',
 						'rcid' => $linkInfo['rcid'],
 						'token' => $linkInfo['token'],
-					) ),
-				)
+					] ),
+				]
 			);
 		}
 		return $linkInfo;

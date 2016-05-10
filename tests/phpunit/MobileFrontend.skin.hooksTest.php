@@ -32,12 +32,12 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	}
 
 	public function getGetPluralLicenseInfo() {
-		return array(
+		return [
 			// message disabled, license message, result
-			array( false, 'test and test', 2 ),
-			array( true, 'test and test', 1 ),
-			array( false, 'test', 1 ),
-			array( true, 'test', 1 ),
-		);
+			[ false, 'test and test', 2 ],
+			[ true, 'test and test', 1 ],
+			[ false, 'test', 1 ],
+			[ true, 'test', 1 ],
+		];
 	}
 }

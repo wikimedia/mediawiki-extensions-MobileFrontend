@@ -78,7 +78,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 					return $ua;
 				}
 
-				return array( $flag, $ua );
+				return [ $flag, $ua ];
 			},
 			$array
 		);

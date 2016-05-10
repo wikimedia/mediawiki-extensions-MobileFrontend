@@ -116,7 +116,7 @@ class DeviceProperties implements IDeviceProperties {
 	 * @return bool
 	 */
 	private function detectMobileDevice() {
-		$patterns = array(
+		$patterns = [
 			'mobi',
 			'240x240',
 			'240x320',
@@ -164,15 +164,15 @@ class DeviceProperties implements IDeviceProperties {
 			'teleca',
 			'up.browser',
 			'webos',
-		);
-		$patternsStart = array(
+		];
+		$patternsStart = [
 			'lg-',
 			'sie-',
 			'nec-',
 			'lge-',
 			'sgh-',
 			'pg-',
-		);
+		];
 		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
 		$exceptionRegex = '/SMART-TV.*SamsungBrowser/';
 		$isMobile = preg_match( $regex, $this->userAgent )

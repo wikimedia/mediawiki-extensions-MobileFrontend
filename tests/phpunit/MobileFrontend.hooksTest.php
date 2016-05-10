@@ -15,13 +15,13 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
 		// set globals
-		$this->setMwGlobals( array(
+		$this->setMwGlobals( [
 			'wgMobileUrlTemplate' => $mobileUrlTemplate,
 			'wgMFNoindexPages' => $mfNoindexPages,
 			'wgMFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
 			'wgMFAutodetectMobileView' => $mfAutoDetectMobileView,
 			'wgMFVaryOnUA' => $mfVaryOnUA,
-		) );
+		] );
 
 		// test with forced mobile view
 		$param = $this->getContextSetup( 'mobile', $mfXAnalyticsItems );
@@ -128,56 +128,56 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		MobileContext::setInstance( $context );
 
 		// return the stuff
-		return array(
+		return [
 			'out' => $out,
 			'sk' => $sk,
 			'context' => $context,
-		);
+		];
 	}
 
 	/**
 	 * Dataprovider fro testOnBeforePageDisplay
 	 */
 	public function onBeforePageDisplayDataProvider() {
-		return array(
+		return [
 			// wgMobileUrlTemplate, wgMFNoindexPages, wgMFEnableXAnalyticsLogging, wgMFAutodetectMobileView,
 			// wgMFVaryOnUA, XanalyticsItems, alternate & canonical link, XAnalytics, Vary header User-Agent
-			array( true, true, true, true, true,
-				array( 'mf-m' => 'a', 'zero' => '502-13' ), 1, true, false, ),
-			array( true, false, true, false, false,
-				array( 'mf-m' => 'a', 'zero' => '502-13' ), 0, true, false, ),
-			array( false, true, true, true, true,
-				array( 'mf-m' => 'a', 'zero' => '502-13' ), 0, true, true, ),
-			array( false, false, true, false, false,
-				array( 'mf-m' => 'a', 'zero' => '502-13' ), 0, true, false, ),
-			array( true, true, false, true, true, array(), 1, false, false, ),
-			array( true, false, false, false, false, array(), 0, false, false, ),
-			array( false, true, false, true, true, array(), 0, false, true, ),
-			array( false, false, false, false, false, array(), 0, false, false, ),
-			array( false, false, false, false, true, array(), 0, false, false, ),
-		);
+			[ true, true, true, true, true,
+				[ 'mf-m' => 'a', 'zero' => '502-13' ], 1, true, false, ],
+			[ true, false, true, false, false,
+				[ 'mf-m' => 'a', 'zero' => '502-13' ], 0, true, false, ],
+			[ false, true, true, true, true,
+				[ 'mf-m' => 'a', 'zero' => '502-13' ], 0, true, true, ],
+			[ false, false, true, false, false,
+				[ 'mf-m' => 'a', 'zero' => '502-13' ], 0, true, false, ],
+			[ true, true, false, true, true, [], 1, false, false, ],
+			[ true, false, false, false, false, [], 0, false, false, ],
+			[ false, true, false, true, true, [], 0, false, true, ],
+			[ false, false, false, false, false, [], 0, false, false, ],
+			[ false, false, false, false, true, [], 0, false, false, ],
+		];
 	}
 
 	public function testOnTitleSquidURLs() {
-		$this->setMwGlobals( array(
+		$this->setMwGlobals( [
 			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
 			'wgServer' => 'http://en.wikipedia.org',
 			'wgArticlePath' => '/wiki/$1',
 			'wgScriptPath' => '/w',
 			'wgScript' => '/w/index.php',
-		) );
+		] );
 		MobileContext::setInstance( null );
 
 		$title = Title::newFromText( 'PurgeTest' );
 
 		$urls = $title->getCdnUrls();
 
-		$expected = array(
+		$expected = [
 			'http://en.wikipedia.org/wiki/PurgeTest',
 			'http://en.wikipedia.org/w/index.php?title=PurgeTest&action=history',
 			'http://en.m.wikipedia.org/w/index.php?title=PurgeTest&action=history',
 			'http://en.m.wikipedia.org/wiki/PurgeTest',
-		);
+		];
 
 		$this->assertArrayEquals( $expected, $urls );
 	}

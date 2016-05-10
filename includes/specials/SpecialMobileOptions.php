@@ -13,9 +13,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	protected $hasDesktopVersion = true;
 	/** @var array $options Used in the execute() function as a map of subpages to
 	 functions that are executed when the request method is defined. */
-	private $options = array(
-		'Language' => array( 'get' => 'chooseLanguage' ),
-	);
+	private $options = [
+		'Language' => [ 'get' => 'chooseLanguage' ],
+	];
 	/** @var boolean Whether the special page's content should be wrapped in div.content */
 	protected $unstyledContent = false;
 
@@ -97,32 +97,32 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
 		$action = $this->getPageTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
-			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
+			[ 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action ]
 		);
 		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
 
 		// array to save the data of options, which should be displayed here
-		$options = array();
+		$options = [];
 
 		// image settings
-		$options['images'] = array(
+		$options['images'] = [
 			'checked' => $imagesChecked,
 			'label' => $disableMsg,
 			'description' => $imagesDescriptionMsg,
 			'name' => 'enableImages',
 			'id' => 'enable-images-toggle',
-		);
+		];
 
 		// beta settings
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
-			$options['beta'] = array(
+			$options['beta'] = [
 				'checked' => $imagesBeta,
 				'label' => $betaEnableMsg,
 				'description' => $betaDescriptionMsg,
 				'name' => 'enableBeta',
 				'id' => 'enable-beta-toggle',
-			);
+			];
 		}
 
 		$templateParser = new TemplateParser(
@@ -172,7 +172,7 @@ HTML;
 			} else {
 				$url = '';
 			}
-			$attrs = array( 'href' => $url );
+			$attrs = [ 'href' => $url ];
 			$count++;
 			if ( $code == $this->getConfig()->get( 'LanguageCode' ) ) {
 				$attrs['class'] = 'selected';
@@ -211,11 +211,11 @@ HTML;
 	private function submitSettingsForm() {
 		$schema = 'MobileOptionsTracking';
 		$schemaRevision = 14003392;
-		$schemaData = array(
+		$schemaData = [
 			'action' => 'success',
 			'images' => "nochange",
 			'beta' => "nochange",
-		);
+		];
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -277,7 +277,7 @@ HTML;
 	 */
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
 		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
-		$params = array();
+		$params = [];
 		if ( $returnTo ) {
 			$params['returnto'] = $returnTo->getPrefixedText();
 		}
