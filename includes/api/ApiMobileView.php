@@ -733,11 +733,12 @@ class ApiMobileView extends ApiBase {
 	private function addProtection( Title $title ) {
 		$result = $this->getResult();
 		$protection = [];
+		ApiResult::setArrayType( $protection, 'assoc' );
 		foreach ( $title->getRestrictionTypes() as $type ) {
 			$levels = $title->getRestrictions( $type );
 			if ( $levels ) {
 				$protection[$type] = $levels;
-				$result->setIndexedTagName( $protection[$type], 'level' );
+				ApiResult::setIndexedTagName( $protection[$type], 'level' );
 			}
 		}
 		$result->addValue( null, $this->getModuleName(),
