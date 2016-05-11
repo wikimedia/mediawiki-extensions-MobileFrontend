@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_b35a0651",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T23:38:36Z",
+      "side": 1,
+      "message": "(We should look to use a common class between these two in future.",
+      "revId": "b548cef6ef39a5dfcc4c14803a6e49d88c963bc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_5361eafe",
+        "filename": "resources/skins.minerva.beta.styles/ui.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T23:38:36Z",
+      "side": 1,
+      "message": "chromeContentSeparator may be a better name since it seems to be associated with the chrome and we have @chromeColor?",
+      "revId": "b548cef6ef39a5dfcc4c14803a6e49d88c963bc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
