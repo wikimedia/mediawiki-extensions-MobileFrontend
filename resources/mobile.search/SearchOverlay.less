@@ -42,7 +42,7 @@
 		cursor: pointer;
 
 		.caption {
-			padding: 1em @headerTitlePaddingH;
+			padding: 1em 0;
 		}
 
 		// FIXME: This is not a overlay-header so please find a more meaningful class name
@@ -57,7 +57,7 @@
 
 		// Since search results only contain one line, shrink the space taken up by the thumbnails
 		li {
-			padding-left: @headerHeight + @headerTitlePaddingH;
+			padding-left: @headerHeight;
 
 			.list-thumb {
 				width: @headerHeight;
@@ -136,10 +136,6 @@
 
 // FIXME: T134894
 .beta {
-	.overlay-header-container {
-		background-color: @chromeColor;
-	}
-
 	.search-overlay {
 		.overlay-header {
 			background-color: transparent;
@@ -158,7 +154,7 @@
 		.clear {
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: @iconGutterWidth;
 		}
 	}
 }

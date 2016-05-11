@@ -77,7 +77,6 @@ body {
 
 	// Search
 	> form {
-		padding: .15em @headerTitlePaddingH 0;
 		width: auto;
 		vertical-align: middle;
 	}
@@ -86,6 +85,18 @@ body {
 		vertical-align: middle;
 	}
 
+}
+.header > form,
+.overlay-header .overlay-title {
+	padding: .15em 0;
+
+	&:last-child {
+		// Reserve space to the right in case the search form in the header or
+		// overlay title in the overlay header is the last element. Use @iconGutterWidth
+		// because there is a hamburger or close/back icon next to this element and
+		// the space between them is exactly that.
+		padding-right: @iconGutterWidth;
+	}
 }
 
 // Make search input more visible for users on small screens.

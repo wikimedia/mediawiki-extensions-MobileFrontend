@@ -1,6 +1,10 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+#content {
+	border-top-color: @headerAndContentSeparatorColor;
+}
+
 .header-container {
 	background-color: @chromeColor;
 }
@@ -11,10 +15,11 @@
 		padding: .5em 28px;
 		// FIXME: share this file with the similar file in mobile.languages.structured
 		.background-image-svg( 'magnifying-glass.svg', '' );
-		background-position: 5px center;
+		background-position: 7px center;
 		background-repeat: no-repeat;
 		background-size: 20px 20px;
 		border-radius: @borderRadius;
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, .05 );
 	}
 }
 

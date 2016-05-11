@@ -203,10 +203,6 @@
 		width: 100%;
 	}
 
-	.overlay-title {
-		padding: .15em @headerTitlePaddingH 0;
-	}
-
 	.overlay-action {
 		a,
 		button {
@@ -308,6 +304,10 @@
 .overlay-header-container {
 	top: 0;
 	border-bottom: 1px solid @grayLight;
+
+	&.header-chrome {
+		background-color: @chromeColor;
+	}
 }
 
 .overlay-footer-container {
@@ -372,6 +372,12 @@
 		overflow-y: scroll;
 		// smoother scrolling (with momentum) on iOS
 		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.beta {
+	.overlay-header-container {
+		border-bottom-color: @headerAndContentSeparatorColor;
 	}
 }
 
