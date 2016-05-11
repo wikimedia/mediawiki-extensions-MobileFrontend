@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_ee72d5aa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1378,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T23:58:39Z",
+      "side": 1,
+      "message": "Can we avoid the duplication with changeUserLoginCreateForm and at least mark when one should/might be removed ?",
+      "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
