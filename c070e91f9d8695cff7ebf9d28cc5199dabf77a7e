@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_1ffbf9de",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T15:54:40Z",
+      "side": 1,
+      "message": "THis causes the title to move on category/talk overlay etc.. intended? If so please document in commit msg.",
+      "revId": "c070e91f9d8695cff7ebf9d28cc5199dabf77a7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_7fe31532",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T15:54:40Z",
+      "side": 1,
+      "message": "Maybe we should add a class called `header-chrome` that captures this to avoid fighting specificity to make this more obvious and reliable.",
+      "revId": "c070e91f9d8695cff7ebf9d28cc5199dabf77a7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_5f99f1c5",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T15:54:40Z",
+      "side": 1,
+      "message": "Using iconGutter here feels a little weird since there\u0027s no icon here. Are there other ways we could achieve this?\n\nShould this padding apply the generic overlay-title class?",
+      "revId": "c070e91f9d8695cff7ebf9d28cc5199dabf77a7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_7f9cb5b8",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T15:54:40Z",
+      "side": 1,
+      "message": "I don\u0027t like this class. How can we avoid having it?",
+      "revId": "c070e91f9d8695cff7ebf9d28cc5199dabf77a7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
