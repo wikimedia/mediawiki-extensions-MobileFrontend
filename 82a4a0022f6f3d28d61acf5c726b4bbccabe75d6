@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_a850d561",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-11T21:24:48Z",
+      "side": 0,
+      "message": "Given this value changes in some many places, I can\u0027t help but think theres a generic class describing all these things.",
+      "revId": "82a4a0022f6f3d28d61acf5c726b4bbccabe75d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
