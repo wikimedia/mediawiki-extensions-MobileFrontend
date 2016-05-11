@@ -16,6 +16,24 @@
       "revId": "82a4a0022f6f3d28d61acf5c726b4bbccabe75d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_089f4107",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-11T21:27:36Z",
+      "side": 0,
+      "message": "Can you elaborate? What value? Which all these things?",
+      "parentUuid": "ae564743_a850d561",
+      "revId": "82a4a0022f6f3d28d61acf5c726b4bbccabe75d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
