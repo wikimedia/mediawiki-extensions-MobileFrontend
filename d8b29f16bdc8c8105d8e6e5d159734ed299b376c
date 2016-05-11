@@ -33,6 +33,23 @@
       "revId": "d8b29f16bdc8c8105d8e6e5d159734ed299b376c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_c8554928",
+        "filename": "resources/skins.minerva.beta.styles/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-05-11T21:33:53Z",
+      "side": 1,
+      "message": "Also, please use whitespace in parentheses as we\u0027ve come up with a guideline for that: https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS#Whitespace",
+      "revId": "d8b29f16bdc8c8105d8e6e5d159734ed299b376c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
