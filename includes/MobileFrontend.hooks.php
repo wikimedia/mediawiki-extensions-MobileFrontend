@@ -1367,10 +1367,47 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Handler for the AuthChangeFormFields hook to add a logo on top of
+	 * the login screen. This is the AuthManager equivalent of changeUserLoginCreateForm.
+	 * @param AuthenticationRequest[] $requests
+	 * @param array $fieldInfo Field description as given by AuthenticationRequest::mergeFieldInfo
+	 * @param array $formDescriptor A form descriptor suitable for the HTMLForm constructor
+	 * @param string $action One of the AuthManager::ACTION_* constants
+	 */
+	public static function onAuthChangeFormFields(
+		array $requests, array $fieldInfo, array &$formDescriptor, $action
+	) {
+		$context = MobileContext::singleton();
+		$mfLogo = $context->getMFConfig()->get( 'MobileFrontendLogo' );
+
+		// do nothing in desktop mode
+		if ( $context->shouldDisplayMobileView() && $mfLogo ) {
+			$logoHtml = Html::rawElement( 'div', [ 'class' => 'watermark' ],
+				Html::element( 'img', [ 'src' => $mfLogo, 'alt' => '' ] ) );
+			$formDescriptor = [
+				'mfLogo' => [
+					'type' => 'info',
+					'default' => $logoHtml,
+					'raw' => true,
+				],
+			] + $formDescriptor;
+		}
+	}
+
+	/**
 	 * Handler for Extension registration callback
 	 */
 	public static function onRegistration() {
-		global $wgResourceLoaderLESSImportPaths, $wgMinervaPageActions, $wgMinervaEnableSiteNotice;
+		global $wgResourceLoaderLESSImportPaths, $wgMinervaPageActions, $wgMinervaEnableSiteNotice,
+			$wgDisableAuthManager, $wgAuthManagerAutoConfig;
+
+		// modify login/registration form
+		if ( class_exists( \MediaWiki\Auth\AuthManager::class ) && !$wgDisableAuthManager ) {
+			Hooks::register( 'AuthChangeFormFields', 'MobileFrontendHooks::onAuthChangeFormFields' );
+		} else {
+			Hooks::register( 'UserLoginForm', 'MobileFrontendHooks::onUserLoginForm' );
+			Hooks::register( 'UserCreateForm', 'MobileFrontendHooks::onUserCreateForm' );
+		}
 
 		// Set LESS importpath
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
