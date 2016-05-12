@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_f8c57665",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-12T15:42:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_627ff963",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_82b20d45",
         "filename": "/COMMIT_MSG",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_18c14a59",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-12T15:42:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_82b20d45",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_c259a52e",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2016-05-12T09:56:57Z",
       "side": 1,
       "message": "In the loop above, we check whether or not the ol node represents a list of references by inspecting its class. We do this because, as noted in a nearby comment, querying the DOM by tag name is cheaper than by CSS but it\u0027s a broad query.\n\nPlease check that the sup node has \"reference\" in its class attribute.",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_981efa0f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-12T15:42:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_c259a52e",
       "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
