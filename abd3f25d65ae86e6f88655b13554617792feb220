@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_83f5eaeb",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-12T23:59:48Z",
+      "side": 1,
+      "message": "Now I\u0027m wondering if we should use one of isBeta or headerChrome in the template.. seems silly having both when they relate to the same thing.",
+      "revId": "abd3f25d65ae86e6f88655b13554617792feb220",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
