@@ -34,6 +34,24 @@
       "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_bbbbf8b8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1378,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-12T17:22:38Z",
+      "side": 1,
+      "message": "What is the timeline for the deprecation process for \nonUserLoginForm and onUserCreateForm ?\n\nIf AuthManager is in next release we should remove these before then.",
+      "parentUuid": "ae564743_8e59992f",
+      "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
