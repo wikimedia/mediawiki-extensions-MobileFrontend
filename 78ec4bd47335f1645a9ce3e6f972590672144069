@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_627ff963",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-12T09:56:57Z",
+      "side": 1,
+      "message": "… non-ResourceLoader capable UAs (Grade C, Grade X, and UAs with JavaScript disabled).",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_82b20d45",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-12T09:56:57Z",
+      "side": 1,
+      "message": "This is a bold claim. At most, this change completes the initial prototype of lazily loaded references – we\u0027ve still got to clean up the references API, for example – which we\u0027re using to validate (or invalidate!) the idea.",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_c259a52e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-12T09:56:57Z",
+      "side": 1,
+      "message": "In the loop above, we check whether or not the ol node represents a list of references by inspecting its class. We do this because, as noted in a nearby comment, querying the DOM by tag name is cheaper than by CSS but it\u0027s a broad query.\n\nPlease check that the sup node has \"reference\" in its class attribute.",
+      "revId": "78ec4bd47335f1645a9ce3e6f972590672144069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
