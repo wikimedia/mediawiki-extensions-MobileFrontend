@@ -52,6 +52,24 @@
       "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_bbe938a9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1378,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-12T17:32:04Z",
+      "side": 1,
+      "message": "if you only care about the extension being compatible with current master, they can be removed once I2b2c9693a275fcc026916bd97f303e7a5c8df341 has been merged, which we hope to do by the end of the month.",
+      "parentUuid": "ae564743_bbbbf8b8",
+      "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
