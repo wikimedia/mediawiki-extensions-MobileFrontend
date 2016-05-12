@@ -16,6 +16,24 @@
       "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_8e59992f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1378,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-12T00:17:21Z",
+      "side": 1,
+      "message": "It can be removed whenever you don\u0027t want to support the pre-AuthManager version anymore. Which version that will be is still uncertain at this point.",
+      "parentUuid": "ae564743_ee72d5aa",
+      "revId": "38b7f6214388071f18c47531636d9cf828eb50a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
