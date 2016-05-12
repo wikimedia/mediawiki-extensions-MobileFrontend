@@ -82,8 +82,7 @@
 				} ).options,
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
 			},
-			isBeta: context.isBetaGroupMember(),
-			headerChrome: true
+			isBeta: context.isBetaGroupMember()
 		} ),
 		/**
 		 * @inheritdoc
