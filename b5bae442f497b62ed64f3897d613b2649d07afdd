@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_1b5dc4f0",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-05-12T18:04:42Z",
+      "side": 1,
+      "message": "Doesn\u0027t this patch actually fix this FIXME? :D",
+      "revId": "b5bae442f497b62ed64f3897d613b2649d07afdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_db66acb7",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-05-12T18:04:42Z",
+      "side": 1,
+      "message": "Blank line plz",
+      "revId": "b5bae442f497b62ed64f3897d613b2649d07afdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_1bedc48a",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-05-12T18:04:42Z",
+      "side": 1,
+      "message": "There is no need to count \u003e 0 here. explode is always going to return an array with 1 element at least.  ctype_digit is the only thing guarding here.",
+      "revId": "b5bae442f497b62ed64f3897d613b2649d07afdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_bb7658ff",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-05-12T18:04:42Z",
+      "side": 1,
+      "message": "You\u0027re checking ctype_digit above so it can\u0027t not be a number here",
+      "revId": "b5bae442f497b62ed64f3897d613b2649d07afdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_bba13838",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-05-12T18:04:42Z",
+      "side": 1,
+      "message": "I don\u0027t like empty return and implicit error handling at the end of the method. Would you mind doing something like this? https://gist.github.com/joakin/78bb7f9554e4593b0829c48f8480678f\n\nThat way param validation and massaging is at the top, and the happy and error path are explicit at the bottom.",
+      "revId": "b5bae442f497b62ed64f3897d613b2649d07afdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
