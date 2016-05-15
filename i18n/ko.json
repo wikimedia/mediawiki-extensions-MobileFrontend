@@ -21,7 +21,8 @@
 			"Hwangjy9",
 			"Kurousagi",
 			"Idh0854",
-			"HDNua"
+			"HDNua",
+			"Ykhwong"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -143,7 +144,7 @@
 	"mobile-frontend-first-upload-wizard-new-page-1": "{{SITENAME}}의 그림은 위키미디어 공용에서 옵니다",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "당신의 그림을 기여하세요. {{SITENAME}}의 생명이 오는 데 도와주세요!",
 	"mobile-frontend-first-upload-wizard-new-page-2": "포스터, 책 표지 등의 그림 뿐만 아니라 인터넷에서 찾은 저작권이 있는 자료를 피하세요",
-	"mobile-frontend-first-upload-wizard-new-page-2-header": "당신의 그림은 전세계 사람을 교육하는 데 도움이 됩니다",
+	"mobile-frontend-first-upload-wizard-new-page-2-header": "당신의 그림은 전 세계 사람들을 교육하는 데 도움이 됩니다",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "이해하셨습니까?",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "예!",
 	"mobile-frontend-footer-contact": "연락하기",
@@ -161,10 +162,7 @@
 	"mobile-frontend-image-uploading": "그림 '''올리는 중'''...",
 	"mobile-frontend-images-status": "그림",
 	"mobile-frontend-language-article-heading": "다른 언어로 읽기",
-	"mobile-frontend-language-header": "이 문서는 $1개 {{PLURAL:$1|언어}}로 읽을 수 있습니다.",
 	"mobile-frontend-language-heading": "<strong>언어</strong>",
-	"mobile-frontend-language-site-choose": "언어 검색",
-	"mobile-frontend-language-variant-header": "{{#language:{{CONTENTLANG}}}} 언어 종류를 선택하세요",
 	"mobile-frontend-languages-404-desc": "올바른 제목을 지정해야 합니다.",
 	"mobile-frontend-languages-404-title": "언어 오류",
 	"mobile-frontend-languages-header": "언어",

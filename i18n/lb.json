@@ -203,7 +203,7 @@
 	"mobile-frontend-password-placeholder": "Passwuert",
 	"mobile-frontend-photo-article-edit-comment": "Bild fir d'Benotzen op der Säit gouf derbäigesat",
 	"mobile-frontend-photo-caption-placeholder": "Beschreift dëst Bild (obligatoresch)",
-	"mobile-frontend-photo-upload-invalid-user": "De Benotzer \"$1\" ass net registréiert.",
+	"mobile-frontend-photo-upload-invalid-user": "E Benotzer \"$1\" ass net registréiert.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ eropgeluede Fichieren",
 	"mobile-frontend-placeholder": "Op {{SITENAME}} sichen",
 	"mobile-frontend-placeholder-app": "Op {{SITENAME}} sichen (Web-App)",
