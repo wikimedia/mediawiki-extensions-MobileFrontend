@@ -9,6 +9,12 @@ use HtmlFormatter\HtmlFormatter;
  * Converts HTML into a mobile-friendly version
  */
 class MobileFormatter extends HtmlFormatter {
+	/**
+	 * The current revision id of the Title being worked on
+	 * @var Integer $revId
+	 */
+	private $revId;
+
 	/** @var array $topHeadingTags Array of strings with possible tags,
 		can be recognized as top headings. */
 	public $topHeadingTags = [];
@@ -46,6 +52,7 @@ class MobileFormatter extends HtmlFormatter {
 		parent::__construct( $html );
 
 		$this->title = $title;
+		$this->revId = $title->getLatestRevID();
 		$this->topHeadingTags = MobileContext::singleton()
 			->getMFConfig()->get( 'MFMobileFormatterHeadings' );
 	}
@@ -171,6 +178,9 @@ class MobileFormatter extends HtmlFormatter {
 	 * Replaces any references list with a link to Special:References
 	 */
 	private function doRewriteReferencesForLazyLoading() {
+		$prefixedTitle = $this->title->getPrefixedText();
+		$citePath = "$this->revId";
+
 		$doc = $this->getDoc();
 		// Accessing by tag is cheaper than class
 		$nodes = $doc->getElementsByTagName( 'ol' );
@@ -178,8 +188,7 @@ class MobileFormatter extends HtmlFormatter {
 		// but since we are manipulating the DOMList we have to
 		// traverse it backwards
 		// see http://php.net/manual/en/class.domnodelist.php
-		$listId = $nodes->length - 1;
-		for ( $i = $listId; $i >= 0; $i-- ) {
+		for ( $i = $nodes->length - 1; $i >= 0; $i-- ) {
 			$list = $nodes->item( $i );
 
 			// Use class to decide it is a list of references
@@ -188,14 +197,24 @@ class MobileFormatter extends HtmlFormatter {
 				$placeholder = $doc->createElement( 'a',
 					wfMessage( 'mobile-frontend-references-list' ) );
 				$placeholder->setAttribute( 'class', 'mf-lazy-references-placeholder' );
-				// Note to render a reference we need to know its listId and title.
-				// Note: You can have multiple <references> tag on the same page
-				$citePath = "$listId/" . $this->title->getPrefixedText();
-				// FIXME: Currently a broken link see https://phabricator.wikimedia.org/T125897
+				// Note to render a reference we need to know only its reference
+				// Note: You can have multiple <references> tag on the same page, we render all of these in
+				// the special page together.
 				$placeholder->setAttribute( 'href',
-					SpecialPage::getTitleFor( 'Cite', $citePath )->getLocalUrl() );
+					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() );
 				$parent->replaceChild( $placeholder, $list );
-				$listId -= 1;
+			}
+		}
+
+		// rewrite refs
+		$nodes = $doc->getElementsByTagName( 'sup' );
+		foreach ( $nodes as $node ) {
+			if ( strpos( $node->getAttribute( 'class' ), 'reference' ) !== false ) {
+				$refLink = $node->firstChild;
+				$fragment = $refLink->getAttribute( 'href' );
+				$refLink->setAttribute( 'href',
+					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
+				);
 			}
 		}
 	}

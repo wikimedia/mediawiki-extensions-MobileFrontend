@@ -44,6 +44,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$f->setIsMainPage( true );
 		};
 
+		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -52,6 +53,18 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
+		$refText = '<p>They saved the world with one single unit test'
+			. '<sup class="reference"><a href="#cite-note-1">[1]</a></sup></p>';
+		$expectedReftext = '<p>They saved the world with one single unit test'
+			. '<sup class="reference"><a href="' . $citeUrl . '#cite-note-1">[1]</a></sup></p>';
+		$refhtml = '<ol class="references"><li>link 1</li><li>link 2</li></ol>';
+		$refplaceholder = Html::element( 'a',
+			[
+				'class' => 'mf-lazy-references-placeholder',
+				'href' => $citeUrl,
+			],
+			wfMessage( 'mobile-frontend-references-list' )
+		);
 
 		return [
 			// # Lazy loading images
@@ -109,6 +122,18 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '</div>',
 				$enableSections,
 				false, false, true,
+			],
+
+			// # Lazy loading references
+			[
+				$refText
+					. '<h2>references</h2>' . $refhtml,
+				'<div class="mf-section-0">' . $expectedReftext . '</div>'
+					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
+					. 'references</h2>'
+					. '<div class="mf-section-1">' . $refplaceholder . '</div>',
+				$enableSections,
+				false, true, false
 			],
 
 			// # Removal of images
