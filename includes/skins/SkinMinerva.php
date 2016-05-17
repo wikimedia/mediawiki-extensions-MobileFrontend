@@ -1002,6 +1002,16 @@ class SkinMinerva extends SkinTemplate {
 		$campaign = $req->getVal( 'campaign' );
 		$title = $this->getTitle();
 
+		if ( !$title->isSpecialPage() ) {
+			if ( $this->isAllowedPageAction( 'watch' ) ) {
+				// Explicitly add the mobile watchstar code.
+				$modules[] = 'skins.minerva.watchstar';
+			}
+			if ( $this->isAllowedPageAction( 'edit' ) ) {
+				$modules[] = 'skins.minerva.editor';
+			}
+		}
+
 		if ( $user->isLoggedIn() ) {
 			if ( $this->useEcho() ) {
 				$modules[] = 'skins.minerva.notifications';
@@ -1043,14 +1053,6 @@ class SkinMinerva extends SkinTemplate {
 
 		// Doing this unconditionally, prevents the desktop watchstar from ever leaking into mobile view.
 		$modules['watch'] = [];
-		if ( $this->isAllowedPageAction( 'watch' ) ) {
-			// Explicitly add the mobile watchstar code.
-			$modules['watch'] = [ 'skins.minerva.watchstar' ];
-		}
-
-		if ( $this->isAllowedPageAction( 'edit' ) ) {
-			$modules['editor'] = [ 'skins.minerva.editor' ];
-		}
 
 		$modules['context'] = $this->getContextSpecificModules();
 
