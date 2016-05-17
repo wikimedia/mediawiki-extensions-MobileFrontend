@@ -88,7 +88,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
-		$vars['wgMFImagesCategory'] = $this->getOutput()->getProperty( 'wgMFImagesCategory' );
 
 		return $vars;
 	}

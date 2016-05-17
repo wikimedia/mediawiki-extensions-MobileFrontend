@@ -531,9 +531,3 @@ nearby and watchlist.
 
 Type: Boolean
 Default: false;
-
-##### $wgMFWikibaseImageCategory
-Define the property that holds a string representing a category on $wgMFPhotoUploadEndpoint
-
-Type: String
-Default: '';
