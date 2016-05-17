@@ -1,0 +1,14 @@
+<form action="{{{ action }}}" class="search-box">
+	{{# isBeta }}
+		<div class="mw-ui-icon mw-ui-icon-element mw-ui-icon-magnifying-glass-white button-wrapper no-js-only">
+			{{{ searchButton }}}
+		</div>
+		<div class="input-wrapper">
+			{{{ searchInput }}}
+		</div>
+	{{/isBeta}}
+	{{^ isBeta }}
+		{{{ searchInput }}}
+		{{{ searchButton }}}
+	{{/isBeta}}
+</form>

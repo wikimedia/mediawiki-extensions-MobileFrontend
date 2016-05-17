@@ -35,20 +35,26 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getSearchForm( $data ) {
-		return Html::openElement( 'form',
-				[
-					'action' => $data['wgScript'],
-					'class' => 'search-box',
-				]
-			) .
-			$this->makeSearchInput( $this->getSearchAttributes() ) .
-			$this->makeSearchButton(
-				'fulltext',
-				[
-					'class' => MobileUI::buttonClass( 'progressive', 'fulltext-search no-js-only' ),
-				]
-			) .
-			Html::closeElement( 'form' );
+		$isBeta = MobileContext::singleton()->isBetaGroupMember();
+		$additionalButtonClasses = '';
+
+		if ( !$isBeta ) {
+			// The enclosing div already has this class in beta, so only add it
+			// in stable.
+			$additionalButtonClasses = ' no-js-only';
+		}
+
+		$args = [
+			'action' => $data['wgScript'],
+			'searchInput' => $this->makeSearchInput( $this->getSearchAttributes() ),
+			'searchButton' => $this->makeSearchButton( 'fulltext', [
+				'class' => MobileUI::buttonClass( 'progressive',
+					'fulltext-search' . $additionalButtonClasses ),
+			] ),
+			'isBeta' => $isBeta
+		];
+		$templateParser = new TemplateParser( __DIR__ );
+		return $templateParser->processTemplate( 'search_form', $args );
 	}
 
 	/**

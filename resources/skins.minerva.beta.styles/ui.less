@@ -23,4 +23,28 @@
 	}
 }
 
-
+.client-use-basic-search,
+.client-nojs {
+	.search-box {
+		.button-wrapper {
+			background-color: @colorProgressive;
+			border-radius: .2em;
+			cursor: pointer;
+			float: right;
+			margin-left: .5em;
+			padding: .375em 0;
+		}
+		.fulltext-search {
+			opacity: 0;  // the enclosing div is an icon, no need to show the text
+			padding: 0;
+		}
+		.input-wrapper {
+			overflow: hidden;
+		}
+		.search {
+			margin-right: 0;
+			padding: .5em .1em .5em 2em; // 2em - space for the magnifying glass icon
+			width: 100%;
+		}
+	}
+}

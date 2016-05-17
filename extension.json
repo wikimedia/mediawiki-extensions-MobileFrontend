@@ -211,7 +211,8 @@
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
-				"language-switcher": "resources/skins.minerva.icons.beta.images/languageSwitcher.svg"
+				"language-switcher": "resources/skins.minerva.icons.beta.images/languageSwitcher.svg",
+				"magnifying-glass-white": "resources/skins.minerva.icons.beta.images/magnifying-glass-white.svg"
 			}
 		},
 		"mobile.overlay.images": {
