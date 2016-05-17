@@ -1916,12 +1916,6 @@
 		"UserLoginComplete": [
 			"MobileFrontendHooks::onUserLoginComplete"
 		],
-		"UserLoginForm": [
-			"MobileFrontendHooks::onUserLoginForm"
-		],
-		"UserCreateForm": [
-			"MobileFrontendHooks::onUserCreateForm"
-		],
 		"BeforePageDisplay": [
 			"MobileFrontendHooks::onBeforePageDisplay"
 		],
