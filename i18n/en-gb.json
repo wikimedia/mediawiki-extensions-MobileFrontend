@@ -6,14 +6,15 @@
 			"Chase me ladies, I'm the Cavalry",
 			"Jagwar",
 			"Aursani",
-			"Macofe"
+			"Macofe",
+			"Andibing"
 		]
 	},
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-donate-image-anon": "Please log in to view the uploads page.",
 	"mobile-frontend-editor-edit": "Edit",
-	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 licence.",
-	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 licence.",
+	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
+	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
 	"mobile-frontend-home-button": "Home",
 	"mobile-frontend-language-article-heading": "Read in another language",
 	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
@@ -24,8 +25,6 @@
 	"mobile-frontend-main-menu-watchlist": "Watchlist",
 	"mobile-frontend-media-license-link": "Licence information",
 	"mobile-frontend-nearby-refresh": "Refresh location",
-	"mobile-frontend-photo-licensing": "By uploading this image, you agree to release your image under the $1 licence.",
-	"mobile-frontend-photo-licensing-with-terms": "By uploading this image, you agree to the $1 and agree to release your image under the $2 licence.",
 	"mobile-frontend-placeholder": "Search {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-random-button": "Random",
