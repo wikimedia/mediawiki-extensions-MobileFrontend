@@ -65,6 +65,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			],
 			wfMessage( 'mobile-frontend-references-list' )
 		);
+		$refSectionHtml = '<h2 class="section-heading">' . self::SECTION_INDICATOR
+			. 'references</h2>'
+			. '<div class="mf-section-1" data-is-reference-section="1">'
+			. $refplaceholder . '</div>';
 
 		return [
 			// # Lazy loading images
@@ -129,9 +133,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$refText
 					. '<h2>references</h2>' . $refhtml,
 				'<div class="mf-section-0">' . $expectedReftext . '</div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'references</h2>'
-					. '<div class="mf-section-1">' . $refplaceholder . '</div>',
+					. $refSectionHtml,
 				$enableSections,
 				false, true, false
 			],
@@ -143,9 +145,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<div class="mf-section-0">'
 					. '<p>T135923 <sup class="reference">    <a href="' . $citeUrl
 					. '#cite-note-1">[1]</a></sup></p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'references</h2>'
-					. '<div class="mf-section-1">' . $refplaceholder . '</div>',
+					. $refSectionHtml,
 				$enableSections,
 				false, true, false
 			],
@@ -155,9 +155,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<h2>references</h2>' . $refhtml,
 				'<div class="mf-section-0">'
 					. '<p>T135923 <sup class="reference"></sup></p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'references</h2>'
-					. '<div class="mf-section-1">' . $refplaceholder . '</div>',
+					. $refSectionHtml,
 				$enableSections,
 				false, true, false
 			],

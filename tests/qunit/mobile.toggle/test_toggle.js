@@ -109,9 +109,11 @@
 		}
 	} );
 
-	QUnit.test( 'Open by default', 1, function ( assert ) {
+	QUnit.test( 'Open by default', 2, function ( assert ) {
 		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ),
 			true, 'check section is visible at start' );
+		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 2 ).hasClass( 'open-block' ),
+			false, 'check reference section is hidden at start' );
 	} );
 
 	/**

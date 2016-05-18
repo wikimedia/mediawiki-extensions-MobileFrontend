@@ -128,7 +128,7 @@
 	 * @ignore
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
-		var indicator,
+		var indicator, $content,
 			wasExpanded = $heading.is( '.open-block' ),
 			page = $heading.data( 'page' ),
 			sectionId = $heading.data( 'section-number' );
@@ -143,7 +143,8 @@
 		indicator = new Icon( arrowOptions ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
-		$heading.next()
+		$content = $heading.next();
+		$content
 			.toggleClass( 'open-block' )
 			.attr( {
 				'aria-pressed': !wasExpanded,
@@ -215,7 +216,7 @@
 	 * @constructor
 	 */
 	Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
-		var tagName, expandSections, indicator,
+		var tagName, expandSections, indicator, $content,
 			$firstHeading,
 			self = this,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
@@ -233,12 +234,15 @@
 			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
 		$container.children( tagName ).each( function ( i ) {
-			var $heading = $( this ),
+			var isReferenceSection,
+				$heading = $( this ),
 				$indicator = $heading.find( '.indicator' ),
 				id = prefix + 'collapsible-block-' + i;
 			// Be sure there is a div wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'div' ) ) {
+				$content = $heading.next( 'div' );
+				isReferenceSection = Boolean( $content.attr( 'data-is-reference-section' ) );
 				$heading
 					.addClass( 'collapsible-heading ' )
 					.data( 'section-number', i )
@@ -265,7 +269,7 @@
 					indicator.prependTo( $heading );
 				}
 				$heading.data( 'indicator', indicator.$el );
-				$heading.next( 'div' )
+				$content
 					.addClass( 'collapsible-block' )
 					.eq( 0 )
 					.attr( {
@@ -278,7 +282,7 @@
 					} );
 
 				enableKeyboardActions( self, $heading );
-				if ( !isClosed && browser.isWideScreen() || expandSections ) {
+				if ( !isReferenceSection && ( !isClosed && browser.isWideScreen() || expandSections ) ) {
 					// Expand sections by default on wide screen devices or if the expand sections setting is set
 					self.toggle.call( self, $heading );
 				}
