@@ -41,7 +41,8 @@
 			"Mattho69",
 			"Wladek92",
 			"Weft",
-			"Orlodrim"
+			"Orlodrim",
+			"Yasten"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -67,6 +68,8 @@
 	"mobile-frontend-categories-hidden": "Organisationnel",
 	"mobile-frontend-changeslist-ip": "Utilisateur anonyme",
 	"mobile-frontend-changeslist-nocomment": "aucun résumé de modification",
+	"mobile-frontend-cite-error": "Un problème est survenu lors de la tentative de chargement de citations en raison d'un mauvais identificateur de révision.",
+	"mobile-frontend-cite-none-available": "Il n'y a pas de citations disponibles pour cette page.",
 	"mobile-frontend-clear-search": "Effacer",
 	"mobile-frontend-commons-category-view": "Images pour $1",
 	"mobile-frontend-contribution-summary": "Toutes les modifications faites par {{GENDER:$1|[[User:$1|$1]]}}",

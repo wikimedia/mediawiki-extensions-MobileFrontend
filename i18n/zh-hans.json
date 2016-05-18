@@ -62,6 +62,8 @@
 	"mobile-frontend-categories-hidden": "组织",
 	"mobile-frontend-changeslist-ip": "匿名用户",
 	"mobile-frontend-changeslist-nocomment": "无编辑摘要",
+	"mobile-frontend-cite-error-title": "加载引用时出错",
+	"mobile-frontend-cite-error": "由于损坏的修订标识符，当尝试加载引用时发生问题。",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-commons-category-view": "用于$1的图片",
 	"mobile-frontend-contribution-summary": "由{{GENDER:$1|[[User:$1|$1]]}}做出的所有编辑",
