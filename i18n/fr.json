@@ -68,6 +68,7 @@
 	"mobile-frontend-categories-hidden": "Organisationnel",
 	"mobile-frontend-changeslist-ip": "Utilisateur anonyme",
 	"mobile-frontend-changeslist-nocomment": "aucun résumé de modification",
+	"mobile-frontend-cite-error-title": "Erreur pendant le chargement des citations",
 	"mobile-frontend-cite-error": "Un problème est survenu lors de la tentative de chargement de citations en raison d'un mauvais identificateur de révision.",
 	"mobile-frontend-cite-none-available": "Il n'y a pas de citations disponibles pour cette page.",
 	"mobile-frontend-clear-search": "Effacer",
