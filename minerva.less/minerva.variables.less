@@ -11,6 +11,8 @@
 @rightDrawerWidth: 60%;
 
 // Headings
+@firstHeadingFontSize: 2.6525em; // 42px
+@pageActionFontSize: 1.1em; // Icons are 24px square.
 @fontSizeH1: 1.7em;
 @fontSizeH2: 1.5em;
 @fontSizeH3: 1.2em;
@@ -19,8 +21,6 @@
 @contentMargin: 16px;
 
 // old header
-// FIXME: Remove when mediawiki.ui buttons in stable
-@headerElementHeight: 30px;
 @headerBorderBottom: #e3e3e3;
 
 // new header
@@ -36,9 +36,6 @@
 @grayMediumLight: @colorGray10;
 @grayLight: @colorGray12;
 @grayLightest: @colorGray14;
-
-// page actions
-@watchStarSize: 22px;
 
 // colors
 @chromeColor: #f2f2f2;
@@ -90,9 +87,6 @@
 // note since content does not use view border box we have to include padding.
 @contentMaxWidthTablet: @wgMFDeviceWidthDesktop - ( 2 * @contentPaddingTablet );
 @contentTopPadding: 1.6em;
-
-// calculated values
-@secondaryNavWidth: @headerElementHeight;
 
 // calculated colors
 @searchBoxColorTo: darken( @searchBoxColor, 2.75% );
