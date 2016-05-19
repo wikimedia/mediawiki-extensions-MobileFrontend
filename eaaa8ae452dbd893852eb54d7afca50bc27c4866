@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_c247afbd",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-19T20:13:54Z",
+      "side": 1,
+      "message": "@iconSize doesn\u0027t take gutter into account. Should you not also add 2 * @iconGutterWidth * 3?",
+      "revId": "eaaa8ae452dbd893852eb54d7afca50bc27c4866",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
