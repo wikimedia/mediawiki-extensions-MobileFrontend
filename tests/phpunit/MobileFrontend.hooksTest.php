@@ -14,6 +14,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
+		$this->markTestIncomplete( 'T135866' );
 		// set globals
 		$this->setMwGlobals( array(
 			'wgMobileUrlTemplate' => $mobileUrlTemplate,
