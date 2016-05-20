@@ -330,7 +330,7 @@
 	"mobile-frontend-user-page-describe-yourself-editors": "編輯器",
 	"mobile-frontend-user-page-desired-action": "此頁面應該由 $1 建立與編輯",
 	"mobile-frontend-user-page-create-owner-page-link-label": "建立您自己的",
-	"mobile-frontend-user-page-create-user-page-link-label": "已建立名為 $1 的頁面",
+	"mobile-frontend-user-page-create-user-page-link-label": "建立名為 $1 的頁面",
 	"mobile-frontend-quick-lookup-looking": "正在查詢 \"$1\"。",
 	"mobile-frontend-quick-lookup-no-results": "找不到匹配 \"$1\" 的內容。",
 	"mobile-frontend-quick-lookup-not-internal": "很抱歉，此不是一個連至此 wiki 的連結。",
