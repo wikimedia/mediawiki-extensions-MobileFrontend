@@ -16,6 +16,24 @@
       "revId": "778b997d7bb4f79173c34f5cda9bf8950510203c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_15c6fa9c",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-20T15:29:22Z",
+      "side": 0,
+      "message": "Thanks Sam",
+      "parentUuid": "ae564743_676230a4",
+      "revId": "778b997d7bb4f79173c34f5cda9bf8950510203c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
