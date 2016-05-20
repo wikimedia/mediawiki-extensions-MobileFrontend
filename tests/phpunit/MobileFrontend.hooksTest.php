@@ -42,12 +42,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 				'should be canonical link, not alternate in mobile view' );
 		}
 		$varyHeader = $out->getVaryHeader();
-		// in mobile view, a vary cookie header should always be set
-		$this->assertEquals( true, (bool)strpos( $varyHeader, 'Cookie' ),
-			'in mobile view, a vary cookie header should always be set' );
-		// check, if the vary header is set in desktop mode
-		$this->assertEquals( $mfVaryHeaderSet, (bool)strpos( $varyHeader, 'User-Agent' ),
-			'check, if the vary header is set in desktop mode' );
+		$this->assertEquals( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
+			'check the status of the User-Agent vary header when wgMFVaryOnUA is enabled' );
 
 		// check, if XAnalytics is set, if it should be
 		$resp = $param['context']->getRequest()->response();
@@ -72,11 +68,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 				'should be alternate link, not canonical in desktop view' );
 		}
 		$varyHeader = $out->getVaryHeader();
-		// in desktop view the cookie vary header should never be set
-		$this->assertEquals( false, (bool)strpos( $varyHeader, 'Cookie' ),
-			'in desktop view the cookie vary header should never be set' );
 		// check, if the vary header is set in desktop mode
-		$this->assertEquals( $mfVaryHeaderSet, (bool)strpos( $varyHeader, 'User-Agent' ),
+		$this->assertEquals( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
 			'check, if the vary header is set in desktop mode' );
 		// there should never be an XAnalytics header in desktop mode
 		$resp = $param['context']->getRequest()->response();
