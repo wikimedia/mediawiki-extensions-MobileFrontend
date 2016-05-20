@@ -10,7 +10,7 @@
 	 * @uses mw.Api
 	 */
 	NotificationsOverlay = function ( options ) {
-		var model, unreadCounter, wrapperWidget,
+		var modelManager, unreadCounter, controller, wrapperWidget,
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
@@ -28,14 +28,16 @@
 		}
 
 		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
-
-		model = new mw.echo.dm.NotificationsModel(
+		modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } );
+		controller = new mw.echo.Controller(
 			echoApi,
-			unreadCounter,
-			{ type: 'all' }
+			modelManager,
+			{
+				type: [ 'message', 'alert' ]
+			}
 		);
 
-		wrapperWidget = new mw.echo.ui.NotificationsWrapper( model, {
+		wrapperWidget = new mw.echo.ui.NotificationsWrapper( controller, modelManager, {
 			$overlay: this.$overlay
 		} );
 
@@ -52,7 +54,7 @@
 
 		// Populate notifications
 		wrapperWidget.populate()
-			.then( model.updateSeenTime.bind( model, 'all' ) );
+			.then( controller.updateLocalSeenTime.bind( controller ) );
 	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
