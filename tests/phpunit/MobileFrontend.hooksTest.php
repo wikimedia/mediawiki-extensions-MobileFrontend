@@ -35,8 +35,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			// should be canonical link, not alternate in mobile view
 			$this->assertEquals( 'canonical', $links[0]['rel'] );
 		}
-		// in mobile view, a vary cookie header should always be set
-		$this->assertEquals( true, (bool)strpos( $out->getVaryHeader(), 'Cookie' ) );
 
 		// check, if XAnalytics is set, if it should be
 		$resp = $param['context']->getRequest()->response();
@@ -57,8 +55,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			// should be alternate link, not canonical in desktop view
 			$this->assertEquals( 'alternate', $links[0]['rel'] );
 		}
-		// in desktop view the cookie vary header should never be set
-		$this->assertEquals( false, (bool)strpos( $out->getVaryHeader(), 'Cookie' ) );
 		// there should never be an XAnalytics header in desktop mode
 		$resp = $param['context']->getRequest()->response();
 		$this->assertEquals( false, (bool)$resp->getHeader( 'X-Analytics' ) );
