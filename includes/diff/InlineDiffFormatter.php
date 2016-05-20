@@ -3,6 +3,8 @@
  * InlineDiffFormatter.php
  */
 
+use MediaWiki\Diff\WordAccumulator;
+
 /**
  * Extends standard Table-formatted DiffFormatter of core to enable Inline-Diff
  * format of MF with only one column.
@@ -111,7 +113,7 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 * @return array Array of changed lines
 	 */
 	private function inlineWordDiff( $diff ) {
-		$inline = new HWLDFWordAccumulator;
+		$inline = new WordAccumulator;
 		$inline->insClass = $inline->delClass = '';
 
 		foreach ( $diff->edits as $edit ) {
