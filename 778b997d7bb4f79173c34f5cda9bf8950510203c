@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_676230a4",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-20T09:09:31Z",
+      "side": 0,
+      "message": "This variable is used in skin.minerva.tablet.styles/common.less and, AFAICT, its removal in PS1/2 were causing all of the test failures.",
+      "revId": "778b997d7bb4f79173c34f5cda9bf8950510203c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
