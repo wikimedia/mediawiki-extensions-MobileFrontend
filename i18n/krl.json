@@ -3,12 +3,15 @@
 		"authors": [
 			"Ilja.mos",
 			"Likopiän tyttö",
-			"Mashoi7"
+			"Mashoi7",
+			"Varvana"
 		]
 	},
+	"mobile-frontend-copyright": "Šisältö on käytöššä luvalla $1, još ei ole toisin mainittu.",
 	"mobile-frontend-editor-edit": "Kohentele",
 	"mobile-frontend-home-button": "Etušivu",
 	"mobile-frontend-language-article-heading": "Luve toisella kielellä",
+	"mobile-frontend-last-modified-date": "Viimeset muutokšet $2, $1",
 	"mobile-frontend-main-menu-button-tooltip": "Avua piävalikko",
 	"mobile-frontend-main-menu-login": "Kirjauvu šiämeh",
 	"mobile-frontend-main-menu-nearby": "Lähällä",
@@ -23,5 +26,6 @@
 	"mobile-frontend-view": "Mopikkaversijo",
 	"mobile-frontend-view-desktop": "Työstola",
 	"mobile-frontend-view-mobile": "Mopikka",
-	"tag-mobile_edit": "Kohennuš mopikašta"
+	"tag-mobile_edit": "Kohennuš mopikašta",
+	"mobile-frontend-pageaction-edit-tooltip": "Kohentele šivun piäošua."
 }
