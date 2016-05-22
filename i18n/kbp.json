@@ -4,8 +4,10 @@
 			"Gnangbade"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "ñɔɔzʋʋ tɔm keem nabʋyʋ fɛyɩ",
 	"mobile-frontend-copyright": "Mbʋ pɛwɛɛ pɩ-taa yɔ pʋwɛɛ pɩcɛlɩna paa weyi yee ɛyʋ ɛwɛna waɖɛ yɔ asaa yee nabʋyʋ ɛwɛ ndɩ lɛ.",
 	"mobile-frontend-editor-edit": "Ñɔɔzɩ",
+	"mobile-frontend-featured-article": "Ndʋ pɩwɛɛ se tɩwɛɛ sɔnɔ yɔ",
 	"mobile-frontend-home-button": "Talɩ ɖeu",
 	"mobile-frontend-language-article-heading": "Kalɩna kʋnʋŋ lɛɛkʋ taa",
 	"mobile-frontend-last-modified-date": "Wayɩ wayɩ ñɔɔzɩtʋ $1 wiye, $2 yɔɔ",
@@ -14,6 +16,7 @@
 	"mobile-frontend-main-menu-nearby": "Pɔ-cɔlɔ",
 	"mobile-frontend-main-menu-settings": "Pasɩmamañʋʋ cɔlʋʋ",
 	"mobile-frontend-main-menu-watchlist": "Tɩŋʋʋ lolaɣ",
+	"mobile-frontend-news-items": "Sɔnɔ tɔm",
 	"mobile-frontend-placeholder": "Ñɩnɩ {{SITENAME}} yɔɔ",
 	"mobile-frontend-privacy-link-text": "Mɛsaɣ tɛɛ tɔm ɖɔkʋʋ",
 	"mobile-frontend-random-button": "Podoyi",

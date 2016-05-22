@@ -2,10 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"Erdemaslancan",
-			"Гусейн"
+			"Гусейн",
+			"Ganbarzada"
 		]
 	},
+	"mobile-frontend-copyright": "Əgər çımı əks qeyd bıənisə, im məzmun $1 çərçivədə nüşü dodə",
 	"mobile-frontend-home-button": "Әсосә сәһифә",
+	"mobile-frontend-language-article-heading": "Co zıvınədə hande",
+	"mobile-frontend-last-modified-date": "Oxnəminci kərə çı $1, saat $2 sərost bıə",
+	"mobile-frontend-main-menu-button-tooltip": "Əsas menü okə",
+	"mobile-frontend-main-menu-login": "Dəşi",
+	"mobile-frontend-main-menu-nearby": "Neziyədə",
+	"mobile-frontend-main-menu-settings": "Nizamon",
+	"mobile-frontend-main-menu-watchlist": "Çəşəvəno kardə siyohi",
+	"mobile-frontend-placeholder": "{{SITENAME}} də nəve",
+	"mobile-frontend-privacy-link-text": "Məxfi",
 	"mobile-frontend-random-button": "Рајрастә",
-	"mobile-frontend-search-submit": "Давард"
+	"mobile-frontend-search-submit": "Давард",
+	"mobile-frontend-terms-text": "Çı istifadə şərton",
+	"mobile-frontend-view": "mobilə versiyə",
+	"mobile-frontend-view-desktop": "Masa",
+	"mobile-frontend-view-mobile": "Mobil",
+	"tag-mobile_edit": "Mobil sərost bıkə",
+	"tag-mobile_web_edit": "Dı səhifə mobilə versiyə sərost bıkə",
+	"mobile-frontend-pageaction-edit-tooltip": "Çı səhifə sə sərost bıkə"
 }
