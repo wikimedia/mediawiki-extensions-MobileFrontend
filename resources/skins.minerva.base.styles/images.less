@@ -4,7 +4,6 @@
 @animationDuration: 0.3s;
 
 .lazy-image-placeholder {
-	display: inline-block;
 	// The image placeholder for shouldn't show for no-js devices
 	.client-nojs & {
 		display: none;
@@ -20,6 +19,7 @@
 	// overflowing on smaller images
 	overflow: hidden;
 
+	display: inline-block;
 	// Center spinner vertically and horizontally
 	display: flex;
 	justify-content: center;

@@ -36,6 +36,9 @@
 		"string-no-newline": true,
 		"string-quotes": [ "single" ],
 
+		"declaration-block-no-duplicate-properties": [ true, { ignore: [ "consecutive-duplicates" ] } ],
+		"declaration-block-no-shorthand-property-overrides": true,
+
 		"media-query-parentheses-space-inside": [ "always" ]
 	}
 }
