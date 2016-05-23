@@ -1,5 +1,10 @@
 {
 	"rules": {
+		"indentation": [ "tab" ],
+		"max-empty-lines": 1,
+		"no-eol-whitespace": true,
+		"no-missing-eof-newline": true,
+
 		"color-hex-case": [ "lower" ],
 		"color-hex-length": [ "short" ],
 		"color-named": [ "never" ],
