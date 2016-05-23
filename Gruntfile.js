@@ -7,6 +7,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-notify' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
 		jshint: {
@@ -36,6 +37,15 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
+		stylelint: {
+			options: {
+				syntax: 'less'
+			},
+			all: [
+				'minerva.less/**/*.less',
+				'resources/**/*.less'
+			]
+		},
 		watch: {
 			lint: {
 				files: [ 'resources/**/*.js', 'tests/qunit/**/*.js' ],
@@ -64,7 +74,7 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs', 'jsonlint', 'banana' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs', 'jsonlint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint' ] );
 
 	grunt.registerTask( 'default', [ 'test' ] );
