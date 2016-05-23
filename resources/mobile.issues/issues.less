@@ -19,7 +19,7 @@
 		li {
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
-				padding: (@smallIconSize * 2.5) @contentMargin @smallIconSize @contentMargin;
+				padding: ( @smallIconSize * 2.5 ) @contentMargin @smallIconSize @contentMargin;
 
 				// on mobile move the icon above the content
 				&:before {
@@ -33,12 +33,12 @@
 	}
 }
 
-@media all and (min-width: @deviceWidthTablet) {
+@media all and ( min-width: @deviceWidthTablet ) {
 	.overlay {
 		.cleanup {
 			li {
 				.issue-notice {
-					padding: 2em 1em 2em (@largeIconSize + 10px);
+					padding: 2em 1em 2em ( @largeIconSize + 10px );
 					margin: 0 1em 0 @headerHeight;
 
 					// FIXME: Please remove this. It should not care about how icons are rendered.

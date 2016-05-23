@@ -65,7 +65,7 @@
 	// prevent disappearing after scrolling when -webkit-overflow-scrolling: touch
 	// is used (http://stackoverflow.com/a/10170170)
 	.overlay-content * {
-		-webkit-transform: translate(0,0);
+		-webkit-transform: translate( 0, 0 );
 	}
 
 	.overlay-content .surface {
@@ -76,10 +76,10 @@
 	@baseIconSize: 24px;
 	@targetIconSize: 32px;
 	.overlay-header-container {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
 
 		.ve-init-mw-mobileArticleTarget-toolbar {
-			@media all and (min-width: @wgMFDeviceWidthDesktop) {
+			@media all and ( min-width: @wgMFDeviceWidthDesktop ) {
 				border: 1px solid @colorGrayLighter;
 				border-width: 0 1px;
 			}

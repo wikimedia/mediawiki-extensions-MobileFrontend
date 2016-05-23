@@ -24,7 +24,7 @@ body {
 	a:visited {
 		color: @colorGray6;
 		// If browser supports
-		&:nth-child(2) {
+		&:nth-child( 2 ) {
 			font-weight: bold;
 		}
 	}
@@ -101,7 +101,7 @@ body {
 
 // Make search input more visible for users on small screens.
 // Opera Mini doesn't support placeholders.
-@media all and (max-width: @wgMFDeviceWidthMobileSmall) {
+@media all and ( max-width: @wgMFDeviceWidthMobileSmall ) {
 	.header {
 		.search {
 			border: 1px solid @grayLight;
@@ -151,7 +151,7 @@ input.search {
 
 // FIXME: remove when micro.tap in stable and rule from common-js.less too
 .search-box {
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
 }
 
 .content {

@@ -49,7 +49,7 @@
 
 	height: 100%;
 	width: auto;
-	box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.3);
+	box-shadow: -5px 0 0 0 rgba( 0, 0, 0, 0.3 );
 }
 
 nav {
@@ -156,7 +156,7 @@ body.navigation-enabled {
 		left: @menuWidth;
 		// set border here (nav doesn't expand height)
 		border-left: solid 1px #000;
-		box-shadow: -1px 0 3px 0 rgba(0, 0, 0, .3);
+		box-shadow: -1px 0 3px 0 rgba( 0, 0, 0, .3 );
 	}
 
 	.navigation-drawer,
@@ -183,7 +183,7 @@ body.navigation-enabled {
 	}
 }
 
-@media all and (min-width: @deviceWidthTablet) {
+@media all and ( min-width: @deviceWidthTablet ) {
 	@rightDrawerLeftOffset: 100% - @rightDrawerWidth;
 	.secondary-navigation-enabled {
 		#mw-mf-page-center {
@@ -215,14 +215,14 @@ body.navigation-enabled {
 		background-color: #fff;
 
 		// *2 to avoid weird glitch of left nav flickering after closing
-		@transition: @duration @easing, height 0s (@duration*2);
-		.transition-transform(@transition);
+		@transition: @duration @easing, height 0s ( @duration * 2 );
+		.transition-transform( @transition );
 	}
 
 	nav {
 		width: @menuWidth;
 
-		.transition(visibility 0s @duration);
+		.transition( visibility 0s @duration );
 	}
 
 	// FIXME: Make animations a conditional class on the drawer itself
@@ -230,11 +230,11 @@ body.navigation-enabled {
 		display: block;
 
 		// +2% to accommodate for the border/box-shadow
-		.transform(translate(102%, 0));
-		.transition-transform(@duration @easing, visibility 0s @duration;);
+		.transform( translate( 102%, 0 ) );
+		.transition-transform( @duration @easing, visibility 0s @duration; );
 
 		&.visible {
-			.transform(translate(0, 0));
+			.transform( translate( 0, 0 ) );
 		}
 	}
 }
@@ -243,7 +243,7 @@ body.navigation-enabled {
 	// FIXME: Menu shouldn't need to know about drawers but a cta drawer might be open
 	.drawer .position-fixed,
 	#mw-mf-page-center {
-		.transition-transform(@duration @easing);
+		.transition-transform( @duration @easing );
 	}
 }
 
@@ -253,14 +253,14 @@ body.navigation-enabled {
 	#mw-mf-page-center {
 		// override non-animated version
 		left: 0 !important;
-		.transform(translate(@menuWidth, 0));
+		.transform( translate( @menuWidth, 0 ) );
 	}
 
 	nav {
 		// make menu scrollable when open (on small screens)
 		position: static;
 
-		.transition(none);
+		.transition( none );
 	}
 }
 
@@ -268,7 +268,7 @@ body.navigation-enabled {
 	#mw-mf-page-center {
 		// override non-animated version
 		left: 0 !important;
-		.transform(translate(-@rightDrawerWidth, 0));
+		.transform( translate( -@rightDrawerWidth, 0 ) );
 		width: 100%;
 	}
 }
@@ -277,10 +277,10 @@ body.navigation-enabled {
 	// FIXME: Make animations a conditional class on the drawer itself
 	.animations .notifications-overlay.navigation-drawer {
 		// +2% to accommodate for the border/box-shadow
-		.transform(translate(-102%, 0));
+		.transform( translate( -102%, 0 ) );
 
 		&.visible {
-			.transform(translate(0, 0));
+			.transform( translate( 0, 0 ) );
 		}
 	}
 
@@ -288,13 +288,13 @@ body.navigation-enabled {
 		// FIXME: Menu shouldn't need to know about drawers
 		.drawer .position-fixed,
 		#mw-mf-page-center {
-			.transform(translate(-@menuWidth, 0));
+			.transform( translate( -@menuWidth, 0 ) );
 		}
 	}
 
 	&.secondary-navigation-enabled.animations {
 		#mw-mf-page-center {
-			.transform(translate(@rightDrawerWidth, 0));
+			.transform( translate( @rightDrawerWidth, 0 ) );
 		}
 	}
 }
