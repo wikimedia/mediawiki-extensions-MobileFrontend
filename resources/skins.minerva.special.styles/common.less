@@ -2,21 +2,6 @@
 @import 'minerva.mixins';
 
 // FIXME: Apply these styles to all special pages
-.mw-mf-special {
-	.content-header {
-		padding: 0 0 20px;
-		border-bottom: 1px solid @headerBorderBottom;
-
-		h2 {
-			padding: 0;
-			font-size: 1.1em;
-			font-weight: bold;
-			border-bottom: none;
-			text-align: center;
-		}
-	}
-}
-
 .mw-mf-special #content {
 	@verticalPadding: .5em;
 	#section_0 {
@@ -31,10 +16,21 @@
 		padding: 0;
 		border-bottom: none;
 	}
-
 }
 
 .mw-mf-special {
+	.content-header {
+		padding: 0 0 20px;
+		border-bottom: 1px solid @headerBorderBottom;
+
+		h2 {
+			padding: 0;
+			font-size: 1.1em;
+			font-weight: bold;
+			border-bottom: none;
+			text-align: center;
+		}
+	}
 
 	.content {
 		// don't apply these styles to headings in message boxes
