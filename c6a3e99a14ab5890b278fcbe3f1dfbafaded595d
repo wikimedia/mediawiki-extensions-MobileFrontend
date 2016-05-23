@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_4f6736e6",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-05-23T14:57:20Z",
+      "side": 1,
+      "message": "This isn\u0027t used by this commit, but further down the stack; I\u0027m not sure it\u0027s worth pulling it out just to push it back in, though.",
+      "revId": "c6a3e99a14ab5890b278fcbe3f1dfbafaded595d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
