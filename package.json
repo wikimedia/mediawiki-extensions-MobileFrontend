@@ -19,6 +19,7 @@
 		"grunt-notify": "0.4.5",
 		"js-beautify": "1.5.10",
 		"jscs-preset-wikimedia": "1.0.0",
-		"grunt-stylelint": "0.3.0"
+		"grunt-stylelint": "0.3.0",
+		"stylelint-config-wikimedia": "0.2.0"
 	}
 }
