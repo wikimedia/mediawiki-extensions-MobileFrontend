@@ -32,7 +32,7 @@
 		background: none;
 		&:before {
 			content: '';
-			.background-image-svg('icons/refresh.svg', 'icons/refresh.png');
+			.background-image-svg( 'icons/refresh.svg', 'icons/refresh.png' );
 			background-position: center left;
 			background-repeat: no-repeat;
 			background-size: 16px;
@@ -93,7 +93,7 @@
 		background: #fff;
 		text-align: center;
 
-		input:not([type=submit]), img, #wpCaptchaWord {
+		input:not( [type=submit] ), img, #wpCaptchaWord {
 			border: none;
 			border-top: solid 1px @colorGray12;
 
@@ -102,7 +102,7 @@
 			}
 		}
 
-		input:not([type=submit]) {
+		input:not( [type=submit] ) {
 			-webkit-appearance: none;
 			border-radius: 0;
 			padding: .8em .5em;
@@ -133,7 +133,7 @@
 }
 
 // FIXME: Some of these rules should actually be mobile first, only hiding inputs needs to be wrapped in a media query
-@media all and (max-width: @deviceWidthTablet) {
+@media all and ( max-width: @deviceWidthTablet ) {
 	@margin: 12px;
 
 	#userloginForm {
