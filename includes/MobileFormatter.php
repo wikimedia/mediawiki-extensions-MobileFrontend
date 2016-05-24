@@ -210,11 +210,13 @@ class MobileFormatter extends HtmlFormatter {
 		$nodes = $doc->getElementsByTagName( 'sup' );
 		foreach ( $nodes as $node ) {
 			if ( strpos( $node->getAttribute( 'class' ), 'reference' ) !== false ) {
-				$refLink = $node->firstChild;
-				$fragment = $refLink->getAttribute( 'href' );
-				$refLink->setAttribute( 'href',
-					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
-				);
+				$refLink = $node->getElementsByTagName( 'a' )->item( 0 );
+				if ( $refLink ) {
+					$fragment = $refLink->getAttribute( 'href' );
+					$refLink->setAttribute( 'href',
+						SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
+					);
+				}
 			}
 		}
 	}
