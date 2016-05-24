@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_f43ff5ae",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-24T13:48:19Z",
+      "side": 1,
+      "message": "Actually, I think it\u0027s too specific and not quite right if the content of the section is mixed, i.e. the section contains text and a list of references. How about \"contains-references\" or \"is-reference-container\".",
+      "parentUuid": "ae564743_a0737cae",
+      "revId": "ca24e861a222ac48cf7696ab5f040688dd9a4101",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_20b64c3c",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 4
