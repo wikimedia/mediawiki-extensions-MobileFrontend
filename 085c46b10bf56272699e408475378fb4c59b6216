@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_c33e75d6",
+        "filename": "resources/skins.minerva.scripts/cleanuptemplates.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-24T21:25:59Z",
+      "side": 1,
+      "message": "The function does not take any arguments.",
+      "revId": "085c46b10bf56272699e408475378fb4c59b6216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
