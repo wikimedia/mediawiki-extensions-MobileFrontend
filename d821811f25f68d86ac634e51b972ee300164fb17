@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_4a4f1a6e",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-24T16:44:49Z",
+      "side": 1,
+      "message": "You can remove this as well, SessionManager will always vary on the cookie unless you use a sessions-disabled endpoint (which PHPUnit is not). Or you can do some mocking to ensure MF is the only thing adding Vary headers, something along the lines of\n\n    $this-\u003esetMwGlobals( \u0027wgSessionProviders\u0027, [] );\n    TestingAccessWrapper::newFromClass( SessionManager::class )-\u003einstance \u003d null;\n\nbut it will break again the next time someone changes OutputPage behavior. In theory the sane way to test this would be to mock OutputPage and assert that addVaryHeader gets invoked, but there are probably lots of globals / statics involved...",
+      "revId": "d821811f25f68d86ac634e51b972ee300164fb17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_8a07721a",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-24T16:44:49Z",
+      "side": 1,
+      "message": "Probably makes no difference but strpos(...) !\u003d\u003d false is a more fool-proof way to check this.",
+      "revId": "d821811f25f68d86ac634e51b972ee300164fb17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
