@@ -171,6 +171,7 @@
 		 */
 		loadImages: function () {
 			var self = this,
+				offset = $( window ).height() * 1.5,
 				imagePlaceholders = this.$( '#content' ).find( '.lazy-image-placeholder' ).toArray();
 
 			/**
@@ -182,7 +183,7 @@
 					var $placeholder = $( placeholder );
 
 					if (
-						mw.viewport.isElementInViewport( placeholder ) &&
+						mw.viewport.isElementCloseToViewport( placeholder, offset ) &&
 						$placeholder.is( ':visible' )
 					) {
 						self.loadImage( $placeholder );
