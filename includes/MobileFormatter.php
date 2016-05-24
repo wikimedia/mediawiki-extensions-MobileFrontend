@@ -207,17 +207,18 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		// rewrite refs
-		$nodes = $doc->getElementsByTagName( 'sup' );
+		$xPath = new DOMXPath( $doc );
+		$nodes = $xPath->query(
+			// sup.reference > a
+			'//sup[contains(concat(" ", normalize-space(./@class), " "), " reference ")]/a[1]'
+		);
+
 		foreach ( $nodes as $node ) {
-			if ( strpos( $node->getAttribute( 'class' ), 'reference' ) !== false ) {
-				$refLink = $node->getElementsByTagName( 'a' )->item( 0 );
-				if ( $refLink ) {
-					$fragment = $refLink->getAttribute( 'href' );
-					$refLink->setAttribute( 'href',
-						SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
-					);
-				}
-			}
+			$fragment = $node->getAttribute( 'href' );
+			$node->setAttribute(
+				'href',
+				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
+			);
 		}
 	}
 
