@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_a0737cae",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-24T13:11:06Z",
+      "side": 1,
+      "message": "This might be a style thing but I prefer \"is-references-section\". We use this type of name when we\u0027re naming about boolean variables, so why not attributes? Moreover, looking at Toggler#toggle we don\u0027t actually care about the value of the attribute, only that it\u0027s present.",
+      "revId": "ca24e861a222ac48cf7696ab5f040688dd9a4101",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_20b64c3c",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-24T13:11:06Z",
+      "side": 1,
+      "message": "Any reason that we\u0027re emitting this information?",
+      "revId": "ca24e861a222ac48cf7696ab5f040688dd9a4101",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
