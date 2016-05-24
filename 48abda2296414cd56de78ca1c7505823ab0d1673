@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_831f5d70",
+        "filename": "resources/mobile.abusefilter/AbuseFilterPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-24T21:29:29Z",
+      "side": 1,
+      "message": "options is not documented",
+      "revId": "48abda2296414cd56de78ca1c7505823ab0d1673",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
