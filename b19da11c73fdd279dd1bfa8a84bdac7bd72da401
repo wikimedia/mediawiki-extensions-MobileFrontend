@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_eaed4eef",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-24T17:16:07Z",
+      "side": 1,
+      "message": "Oops. I missed that $varyHeader is still used here.\n\nAlso, I think this actually checks mobile mode.",
+      "revId": "b19da11c73fdd279dd1bfa8a84bdac7bd72da401",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
