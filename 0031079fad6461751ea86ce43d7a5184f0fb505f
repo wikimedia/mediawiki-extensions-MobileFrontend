@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_6a893e79",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-05-24T16:57:44Z",
+      "side": 1,
+      "message": "There is another unsafe int-to-bool conversion here.",
+      "revId": "0031079fad6461751ea86ce43d7a5184f0fb505f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
