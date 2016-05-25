@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_60a83a8a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-25T09:54:57Z",
+      "side": 1,
+      "message": "I made this change, which limits the scope of the XPath query to this DOM node (element in this context) as I believe that\u0027s what Jdlrobson is intending with this change. Indeed, even if I hadn\u0027t made this change, this block of code would be run for every section of the page even though it should be run against the entire document.\n\nWith the above in mind, I think that this block of code should be extracted from this function and invoked once.",
+      "revId": "5325d826e2206fdc22b33b9eb317d4e6ca89b721",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
