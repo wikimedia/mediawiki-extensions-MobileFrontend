@@ -34,6 +34,24 @@
       "revId": "933e32aa98b2df81bf9231e4cd7fe3395d340cdf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_f7b6ca37",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-25T20:26:01Z",
+      "side": 1,
+      "message": "This gets more complicated.. if JS is disabled the language icon shows so there is only one action.\n\nSo basically there could be 1-3 action items in this menu.\n\nLEt me see if I can float these easily...",
+      "parentUuid": "ae564743_6c3b1136",
+      "revId": "933e32aa98b2df81bf9231e4cd7fe3395d340cdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
