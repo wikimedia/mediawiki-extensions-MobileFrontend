@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_11c1ce82",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-25T16:50:31Z",
+      "side": 1,
+      "message": "I see only two icons and there is too much space wasting as you can see in this screenshot: https://phabricator.wikimedia.org/M172\n\nWe should explore floating the page actions and letting the title wrap around it.",
+      "revId": "933e32aa98b2df81bf9231e4cd7fe3395d340cdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
