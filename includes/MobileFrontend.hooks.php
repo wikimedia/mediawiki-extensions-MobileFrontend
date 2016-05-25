@@ -3,6 +3,8 @@
  * MobileFrontend.hooks.php
  */
 
+use MediaWiki\Auth\AuthManager;
+
 /**
  * Hook handlers for MobileFrontend extension
  *
@@ -614,7 +616,6 @@ class MobileFrontendHooks {
 		$isMobileView = $mobileContext->shouldDisplayMobileView();
 		$context = $special->getContext();
 		$out = $context->getOutput();
-		$secureLogin = $context->getConfig()->get( 'SecureLogin' );
 		$request = $special->getContext()->getRequest();
 		$skin = $out->getSkin()->getSkinName();
 
@@ -630,7 +631,7 @@ class MobileFrontendHooks {
 			// Add default warning message to Special:UserLogin and Special:UserCreate
 			// if no warning message set.
 			if (
-				$name === 'Userlogin' &&
+				( $name === 'Userlogin' || $name === 'CreateAccount' ) &&
 				!$request->getVal( 'warning', null ) &&
 				!$context->getUser()->isLoggedIn()
 			) {
@@ -641,7 +642,7 @@ class MobileFrontendHooks {
 		if ( $isMobileView ) {
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
-			} elseif ( $name === 'Userlogin' ) {
+			} elseif ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$out->addModuleStyles( 'skins.minerva.special.userlogin.styles' );
 				$out->addModules( 'mobile.special.userlogin.scripts' );
 			}
@@ -1382,7 +1383,10 @@ class MobileFrontendHooks {
 		$mfLogo = $context->getMFConfig()->get( 'MobileFrontendLogo' );
 
 		// do nothing in desktop mode
-		if ( $context->shouldDisplayMobileView() && $mfLogo ) {
+		if (
+			$context->shouldDisplayMobileView() && $mfLogo
+			&& in_array( $action, [ AuthManager::ACTION_LOGIN, AuthManager::ACTION_CREATE ], true )
+		) {
 			$logoHtml = Html::rawElement( 'div', [ 'class' => 'watermark' ],
 				Html::element( 'img', [ 'src' => $mfLogo, 'alt' => '' ] ) );
 			$formDescriptor = [
@@ -1403,7 +1407,7 @@ class MobileFrontendHooks {
 			$wgDisableAuthManager, $wgAuthManagerAutoConfig;
 
 		// modify login/registration form
-		if ( class_exists( \MediaWiki\Auth\AuthManager::class ) && !$wgDisableAuthManager ) {
+		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
 			Hooks::register( 'AuthChangeFormFields', 'MobileFrontendHooks::onAuthChangeFormFields' );
 		} else {
 			Hooks::register( 'UserLoginForm', 'MobileFrontendHooks::onUserLoginForm' );
