@@ -70,6 +70,24 @@
       "revId": "933e32aa98b2df81bf9231e4cd7fe3395d340cdf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_f74b6ab1",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-25T20:53:48Z",
+      "side": 1,
+      "message": "Bmansurov how do you not see a language switcher icon in that screenshot? Looking at beta labs and my local instance there should always be a language icon... so always 3.",
+      "parentUuid": "ae564743_97382e3b",
+      "revId": "933e32aa98b2df81bf9231e4cd7fe3395d340cdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
