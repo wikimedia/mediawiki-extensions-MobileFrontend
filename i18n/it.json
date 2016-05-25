@@ -21,7 +21,8 @@
 			"The Polish",
 			"Statix64",
 			"C.R.",
-			"OrbiliusMagister"
+			"OrbiliusMagister",
+			"Matteocng"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -41,6 +42,9 @@
 	"mobile-frontend-categories-add-heading": "<strong>Aggiungere<span> $1</span> alle nuove categorie</strong>",
 	"mobile-frontend-changeslist-ip": "Utente anonimo",
 	"mobile-frontend-changeslist-nocomment": "nessun oggetto della modifica",
+	"mobile-frontend-cite-error-title": "Errore durante il caricamento delle citazioni",
+	"mobile-frontend-cite-error": "Si è verificato un problema durante il tentativo di caricamento delle citazioni a causa di un identificativo di revisione errato.",
+	"mobile-frontend-cite-none-available": "Non ci sono citazioni disponibili per questa pagina.",
 	"mobile-frontend-clear-search": "Pulisci",
 	"mobile-frontend-commons-category-view": "Immagini per $1",
 	"mobile-frontend-contribution-summary": "Tutte le modifiche fatte da {{GENDER:$1|[[User:$1|$1]]}}",
