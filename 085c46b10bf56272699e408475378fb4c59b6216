@@ -16,6 +16,24 @@
       "revId": "085c46b10bf56272699e408475378fb4c59b6216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_4cdc4d1c",
+        "filename": "resources/skins.minerva.scripts/cleanuptemplates.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-25T19:45:06Z",
+      "side": 1,
+      "message": "Good catch! Looks like we have some dead code here!",
+      "parentUuid": "ae564743_c33e75d6",
+      "revId": "085c46b10bf56272699e408475378fb4c59b6216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
