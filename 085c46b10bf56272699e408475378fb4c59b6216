@@ -34,6 +34,24 @@
       "revId": "085c46b10bf56272699e408475378fb4c59b6216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_32285080",
+        "filename": "resources/skins.minerva.scripts/cleanuptemplates.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-26T16:55:29Z",
+      "side": 1,
+      "message": "Rather than deleting this, should we change the function so that this feature works when previewing edits? I know it doesn\u0027t work currently, but I think it\u0027s a great opportunity to fix the issue. Besides, the \u0027edit-preview\u0027 event will be emitted and not consumed if we remove this code.",
+      "parentUuid": "ae564743_4cdc4d1c",
+      "revId": "085c46b10bf56272699e408475378fb4c59b6216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
