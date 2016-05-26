@@ -43,7 +43,7 @@
 	"mobile-frontend-changeslist-ip": "Utente anonimo",
 	"mobile-frontend-changeslist-nocomment": "nessun oggetto della modifica",
 	"mobile-frontend-cite-error-title": "Errore durante il caricamento delle citazioni",
-	"mobile-frontend-cite-error": "Si è verificato un problema durante il tentativo di caricamento delle citazioni a causa di un identificativo di revisione errato.",
+	"mobile-frontend-cite-error": "Si è verificato un problema durante il tentativo di caricamento delle citazioni a causa di un identificativo di versione errato.",
 	"mobile-frontend-cite-none-available": "Non ci sono citazioni disponibili per questa pagina.",
 	"mobile-frontend-clear-search": "Pulisci",
 	"mobile-frontend-commons-category-view": "Immagini per $1",
