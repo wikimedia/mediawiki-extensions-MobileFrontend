@@ -16,6 +16,24 @@
       "revId": "50107d2eca192e334bbcb6ecf85864403b4808cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_bfa1c492",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-05-26T11:53:24Z",
+      "side": 1,
+      "message": "I depends on how the words break, which differs by browser too. I think we could probably drop the margin a little.",
+      "parentUuid": "ae564743_7fb72cf2",
+      "revId": "50107d2eca192e334bbcb6ecf85864403b4808cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
