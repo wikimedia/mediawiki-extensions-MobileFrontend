@@ -16,9 +16,6 @@ class MinervaTemplate extends BaseTemplate {
 	/** @var boolean Specify whether the page is main page */
 	protected $isMainPage;
 
-	/** @var boolean Whether to insert the page actions before the heading in HTML */
-	protected $shouldDisplayPageActionsBeforeHeading = true;
-
 	/**
 	 * Gets the header content for the top chrome.
 	 * @param array $data Data used to build the page
@@ -248,24 +245,21 @@ class MinervaTemplate extends BaseTemplate {
 		if ( $internalBanner || $preBodyHtml || isset( $data['page_actions'] ) ) {
 			$html .= $preBodyHtml
 				. Html::openElement( 'div', [ 'class' => 'pre-content heading-holder' ] );
-				if ( !$this->shouldDisplayPageActionsBeforeHeading ) {
-					$html .= $headingHtml;
-				}
-				if ( !$this->isSpecialPage ){
-					$html .= $this->getPageActionsHtml( $data );
-				}
-				if ( $this->shouldDisplayPageActionsBeforeHeading ) {
-					$html .= $headingHtml;
-				}
-				$html .= $postHeadingHtml;
-				$html .= $data['subtitle'];
-				// FIXME: Temporary solution until we have design
-				if ( isset( $data['_old_revision_warning'] ) ) {
-					$html .= $data['_old_revision_warning'];
-				}
 
-				$html .= $internalBanner;
-				$html .=  '</div>';
+			if ( !$this->isSpecialPage ){
+				$html .= $this->getPageActionsHtml( $data );
+			}
+
+			$html .= $headingHtml;
+			$html .= $postHeadingHtml;
+			$html .= $data['subtitle'];
+			// FIXME: Temporary solution until we have design
+			if ( isset( $data['_old_revision_warning'] ) ) {
+				$html .= $data['_old_revision_warning'];
+			}
+
+			$html .= $internalBanner;
+			$html .=  '</div>';
 		}
 		return $html;
 	}

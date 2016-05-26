@@ -8,9 +8,6 @@
  * beta mode via Special:MobileOptions
  */
 class MinervaTemplateBeta extends MinervaTemplate {
-	/** @inheritdoc */
-	protected $shouldDisplayPageActionsBeforeHeading = false;
-
 	/**
 	 * Get attributes to create search input
 	 * @return array Array with attributes for search bar

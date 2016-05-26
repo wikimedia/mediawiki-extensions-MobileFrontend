@@ -1,15 +1,24 @@
 @import 'minerva.variables';
 
 .heading-holder {
+	@pageActionsHeight: @pageActionFontSize + (2 * @iconGutterWidth);
+
 	overflow: hidden;
+	position: relative;
+	padding-bottom: @pageActionsHeight;
 }
 
 #page-actions {
+	position: absolute;
 	float: none;
+	bottom: 0;
+	width: 100%;
+
 	border-top: 1px solid @colorGray14;
 	border-bottom: 1px solid @colorGray12;
+
 	// align the left and right icons with the left and right borders respectively
-	margin: 1em -@iconGutterWidth;
+	margin: 0 -@iconGutterWidth;
 	padding: 0.5em 0;
 
 	li {
@@ -33,24 +42,15 @@
 }
 
 @media all and ( min-width: @deviceWidthTablet ) {
-	@totalIconSize: ( @iconSize + ( 2 * @iconGutterWidth ) );
-	@pageActionsWidth: 3 * @totalIconSize - @iconGutterWidth;
-
-	.heading-holder {
-		position: relative;
-		#section-0 {
-			// FIXME: No need for important when pushing language switcher to stable 	41
-			// Leave space for 3 icons
-			padding-right: @pageActionsWidth / @firstHeadingFontSize * @pageActionFontSize !important;
-		}
+	#page-actions {
+		position: initial;
+		float: right;
+		width: auto;
+		border: none;
+		margin: 0 0 @iconGutterWidth @iconGutterWidth;
 	}
 
-	#page-actions {
-		border: none;
-		top: @titleSectionSpacingTop;
-		// align the left and right icons with the left and right borders respectively
-		margin: 0 -@iconGutterWidth;
-		position: absolute;
-		right: 0;
+	#language-switcher {
+		float: none;
 	}
 }
