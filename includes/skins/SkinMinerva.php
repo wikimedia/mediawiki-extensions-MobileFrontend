@@ -607,10 +607,10 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Returns the HTML representing the header.
+	 * Returns the HTML representing the heading.
 	 * @returns {String} html for header
 	 */
-	protected function getHeaderHtml() {
+	protected function getHeadingHtml() {
 		$html = '';
 		if ( $this->isUserPage ) {
 			// The heading is just the username without namespace
@@ -675,7 +675,7 @@ class SkinMinerva extends SkinTemplate {
 				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );
 			}
 		}
-		$tpl->set( 'headinghtml', $this->getHeaderHtml() );
+		$tpl->set( 'headinghtml', $this->getHeadingHtml() );
 
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
