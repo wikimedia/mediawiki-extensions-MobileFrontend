@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_dabbe607",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-26T13:46:32Z",
+      "side": 1,
+      "message": "Would it not be simpler to use the unary + operator here to convert the string to a number? We\u0027re not performing a type check on isReferenceSection anyways, so an integer should be fine and is simpler code (9 less characters). That being said, I\u0027m not sure of the performance tradeoff between Boolean() and the unary + operator for type conversion, so if someone else is, I\u0027d defer to their judgment. (Plus, this is a pretty minor usage so I\u0027m still going to +1 and not block.)\n\ne.g.\n\n    // Type conversion via the unary operator\n    isReferenceSection \u003d + $content.attr( \u0027data-is-reference-section\u0027 );\n    // or, as I\u0027m not sure which is best code style\n    isReferenceSection \u003d +$content.attr( \u0027data-is-reference-section\u0027 );",
+      "revId": "73912d8c8e9adb0739a650774338f21194721a04",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
