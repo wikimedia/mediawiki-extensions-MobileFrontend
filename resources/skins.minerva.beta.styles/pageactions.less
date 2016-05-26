@@ -33,8 +33,16 @@
 }
 
 @media all and ( min-width: @deviceWidthTablet ) {
+	@totalIconSize: ( @iconSize + ( 2 * @iconGutterWidth ) );
+	@pageActionsWidth: 3 * @totalIconSize - @iconGutterWidth;
+
 	.heading-holder {
 		position: relative;
+		#section-0 {
+			// FIXME: No need for important when pushing language switcher to stable 	41
+			// Leave space for 3 icons
+			padding-right: @pageActionsWidth / @firstHeadingFontSize * @pageActionFontSize !important;
+		}
 	}
 
 	#page-actions {
