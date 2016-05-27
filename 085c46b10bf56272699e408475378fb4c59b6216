@@ -52,6 +52,24 @@
       "revId": "085c46b10bf56272699e408475378fb4c59b6216",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_e02713c5",
+        "filename": "resources/skins.minerva.scripts/cleanuptemplates.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-27T17:21:32Z",
+      "side": 1,
+      "message": "This is not the scope of the patch which is focused on switching to using the core Router. Given this has been broken since July last year (Id4b2508a2f71922a077f55e7f297f56ac7768a59) I would rather run this by Nirzar before we take on new work to fix this... so have opened T136424.\n\nIt\u0027s not clear how the issues label should show in the editor where no heading is shown and I would rather not leave dead code blocks until the root issue is fixed. It\u0027s easier to return this at a later date if necessary.",
+      "parentUuid": "ae564743_32285080",
+      "revId": "085c46b10bf56272699e408475378fb4c59b6216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
