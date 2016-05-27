@@ -137,15 +137,11 @@ class MobileFormatter extends HtmlFormatter {
 			$this->remove( $removableClasses );
 		}
 
-		if ( $removeReferences ) {
-			$this->doRewriteReferencesForLazyLoading();
-		}
-
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
 		}
 
-		$transformOptions = [ 'images' => $removeImages ];
+		$transformOptions = [ 'images' => $removeImages, 'references' => $removeReferences ];
 		// Sectionify the content and transform it if necessary per section
 		if ( !$this->mainPage && $this->expandableSections ) {
 			list( $headings, $subheadings ) = $this->getHeadings( $doc );
@@ -154,6 +150,9 @@ class MobileFormatter extends HtmlFormatter {
 		} else {
 			// Otherwise apply the per-section transformations to the document as a whole
 			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
+		}
+		if ( $transformOptions['references'] ) {
+			$this->doRewriteReferencesLinksForLazyLoading( $doc );
 		}
 
 		return parent::filterContent();
@@ -172,18 +171,46 @@ class MobileFormatter extends HtmlFormatter {
 		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->doRewriteImagesForLazyLoading( $el, $doc );
 		}
+		if ( $options['references'] ) {
+			$this->doRewriteReferencesListsForLazyLoading( $el, $doc );
+		}
 	}
 
 	/**
-	 * Replaces any references list with a link to Special:References
+	 * Replaces any references links with a link to Special:MobileCite
+	 *
+	 * @param DOMDocument $doc Document to create and replace elements in
 	 */
-	private function doRewriteReferencesForLazyLoading() {
-		$prefixedTitle = $this->title->getPrefixedText();
+	private function doRewriteReferencesLinksForLazyLoading( DOMDocument $doc ) {
 		$citePath = "$this->revId";
 
-		$doc = $this->getDoc();
+		$xPath = new DOMXPath( $doc );
+		$nodes = $xPath->query(
+			// sup.reference > a
+			'//sup[contains(concat(" ", normalize-space(./@class), " "), " reference ")]/a[1]' );
+
+		foreach ( $nodes as $node ) {
+			$fragment = $node->getAttribute( 'href' );
+			$node->setAttribute(
+				'href',
+				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
+			);
+		}
+	}
+
+	/**
+	 * Replaces any references list with a link to Special:MobileCite
+	 *
+	 * @param DOMElement|DOMDocument $el Element or document to rewrite references in.
+	 * @param DOMDocument $doc Document to create elements in
+	 */
+	private function doRewriteReferencesListsForLazyLoading( $el, DOMDocument $doc ) {
+		$prefixedTitle = $this->title->getPrefixedText();
+		$citePath = "$this->revId";
+		$isReferenceSection = false;
+
 		// Accessing by tag is cheaper than class
-		$nodes = $doc->getElementsByTagName( 'ol' );
+		$nodes = $el->getElementsByTagName( 'ol' );
 		// PHP's DOM classes are recursive
 		// but since we are manipulating the DOMList we have to
 		// traverse it backwards
@@ -193,6 +220,7 @@ class MobileFormatter extends HtmlFormatter {
 
 			// Use class to decide it is a list of references
 			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
+				$isReferenceSection = true;
 				$parent = $list->parentNode;
 				$placeholder = $doc->createElement( 'a',
 					wfMessage( 'mobile-frontend-references-list' ) );
@@ -206,19 +234,9 @@ class MobileFormatter extends HtmlFormatter {
 			}
 		}
 
-		// rewrite refs
-		$xPath = new DOMXPath( $doc );
-		$nodes = $xPath->query(
-			// sup.reference > a
-			'//sup[contains(concat(" ", normalize-space(./@class), " "), " reference ")]/a[1]'
-		);
-
-		foreach ( $nodes as $node ) {
-			$fragment = $node->getAttribute( 'href' );
-			$node->setAttribute(
-				'href',
-				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
-			);
+		// Mark section as having references
+		if ( $isReferenceSection ) {
+			$el->setAttribute( 'data-is-reference-section', '1' );
 		}
 	}
 

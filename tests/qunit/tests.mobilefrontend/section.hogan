@@ -8,3 +8,13 @@
 	<a href="#foo">Dummy Link</a>
 </h2>
 <div></div>
+<h2>References</h2>
+<div data-is-reference-section="1">
+	<ol class="references">
+		<li id="cite_note-1">
+			<span class="mw-cite-backlink">
+				<a href="#cite_ref-1">↑</a>
+			</span> <span class="reference-text">hello</span>
+		</li>
+	</ol>
+</div>
