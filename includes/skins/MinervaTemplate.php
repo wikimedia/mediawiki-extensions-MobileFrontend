@@ -132,8 +132,11 @@ class MinervaTemplate extends BaseTemplate {
 		$isJSOnly = true;
 		if ( $actions ) {
 			foreach ( $actions as $key => $val ) {
-				if ( isset( $val['is_js_only'] ) && !$val['is_js_only'] ) {
-					$isJSOnly = false;
+				if ( isset( $val['is_js_only'] ) ) {
+					if ( !$val['is_js_only'] ) {
+						$isJSOnly = false;
+					}
+					unset( $val['is_js_only'] );  // no need to output this attribute
 				}
 				$html .= $this->makeListItem( $key, $val );
 			}
