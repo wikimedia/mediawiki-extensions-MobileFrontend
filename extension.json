@@ -1203,21 +1203,6 @@
 				"mobile-frontend-watchlist-please-wait"
 			]
 		},
-		"mobile.buttonWithSpinner": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"oojs-ui"
-			],
-			"styles": [
-				"resources/mobile.buttonWithSpinner/buttonWithSpinner.less"
-			],
-			"scripts": [
-				"resources/mobile.buttonWithSpinner/ButtonWithSpinner.js"
-			]
-		},
 		"mobile.languages.structured": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
