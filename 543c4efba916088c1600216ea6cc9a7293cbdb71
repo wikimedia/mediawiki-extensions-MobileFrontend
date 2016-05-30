@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_728467a4",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2021,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-30T16:10:24Z",
+      "side": 1,
+      "message": "Can you add a documentation about this variable? What does 1.5 mean?",
+      "revId": "543c4efba916088c1600216ea6cc9a7293cbdb71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
