@@ -90,6 +90,9 @@ class ArticlePage
   a(:talk, css: '.talk')
   a(:nearby_button, css: '#page-secondary-actions .nearby')
 
+  # wikidata descriptions
+  div(:wikidata_description, css: '.tagline')
+
   # toc
   div(:toc, css: '.toc-mobile')
 

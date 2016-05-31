@@ -24,3 +24,7 @@ $wgMFEnableBeta = true;
 
 // needed for testing whether the language button is displayed and disabled
 $wgMinervaAlwaysShowLanguageButton = true;
+
+// For those who have wikibase installed.
+$wgMFUseWikibaseDescription = true;
+$wgMFDisplayWikibaseDescription = true;
