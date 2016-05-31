@@ -31,7 +31,8 @@
 			"VerMa",
 			"PiotrAntosz",
 			"The Polish",
-			"Mateuszek045"
+			"Mateuszek045",
+			"Tsca"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego",
@@ -207,14 +208,14 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "„{{SITENAME}} –  pobliżu” ma pewne problemy.",
 	"mobile-frontend-nearby-error-guidance": "Spróbuj zaktualizować swoją lokalizację.",
-	"mobile-frontend-nearby-loading": "Pobieranie informacji o tym, co znajduje się w pobliżu ciebie",
+	"mobile-frontend-nearby-loading": "Pobieranie informacji o tym, co znajduje się w pobliżu Ciebie",
 	"mobile-frontend-nearby-lookup-ui-error": "„{{SITENAME}} – W pobliżu ciebie” nie potrafi ustalić gdzie jesteś… czy spróbować jeszcze raz?",
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Spróbuj przejść na otwartą przestrzeń z lepszym zasięgiem.",
 	"mobile-frontend-nearby-noresults": "Jesteś w szczerym polu… Nic nie znaleziono w pobliżu.",
 	"mobile-frontend-nearby-noresults-guidance": "Spróbuj utworzyć nową stronę albo uzupełnić współrzędne geograficzne na już istniejącej stronie",
-	"mobile-frontend-nearby-permission": "„{{SITENAME}} – W pobliżu ciebie” nie ma dostępu do twojej lokalizacji.",
+	"mobile-frontend-nearby-permission": "„{{SITENAME}} – W pobliżu Ciebie” nie ma dostępu do twojej lokalizacji.",
 	"mobile-frontend-nearby-refresh": "Odśwież lokalizację",
-	"mobile-frontend-nearby-requirements": "Przepraszamy! Twoja przeglądarka nie obsługuje „{{SITENAME}} - W pobliżu ciebie”.",
+	"mobile-frontend-nearby-requirements": "Przepraszamy! Twoja przeglądarka nie obsługuje „{{SITENAME}} - W pobliżu Ciebie”.",
 	"mobile-frontend-nearby-requirements-guidance": "Spróbuj innej przeglądarki lub włącz obsługę JavaScript, jeżeli masz teraz wyłączoną.",
 	"mobile-frontend-nearby-title": "W pobliżu",
 	"mobile-frontend-nearby-sectiontext": "W pobliżu",

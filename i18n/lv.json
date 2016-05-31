@@ -73,9 +73,7 @@
 	"mobile-frontend-image-cancel-confirm": "Atcelt augšupielādi?",
 	"mobile-frontend-images-status": "Attēli",
 	"mobile-frontend-language-article-heading": "Lasīt citā valodā",
-	"mobile-frontend-language-header": "Šī lapa ir pieejama $1 {{PLURAL:$1|valodās|valodā|valodās}}",
 	"mobile-frontend-language-heading": "<strong>Valodas</strong>",
-	"mobile-frontend-language-site-choose": "Meklēt valodu",
 	"mobile-frontend-languages-404-title": "Valodas kļūda",
 	"mobile-frontend-languages-header": "Valodas",
 	"mobile-frontend-languages-header-page": "$1 - valodas",
@@ -157,6 +155,7 @@
 	"nearby": "Lapas par tēmām tavā tuvumā",
 	"tag-mobile_edit": "Labojums no mobilās versijas",
 	"tag-mobile_edit-description": "Labojums veikts no lapas mobilās versijas",
+	"tag-mobile_web_edit": "Labojums no mobilās ierīces",
 	"mobile-frontend-pageaction-edit-tooltip": "Labot šīs lapas ievadsadaļu.",
 	"mobile-frontend-donate-button-label": "Ziedot",
 	"mobile-frontend-loading-message": "Ielādē…"
