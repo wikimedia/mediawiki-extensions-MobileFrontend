@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e68cf02_24c3dc62",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T21:29:19Z",
+      "side": 1,
+      "message": "Cannot use `this` here. You create a Page at the bottom. Up until then this will only use the current defaults of Page.",
+      "revId": "bf9be5f9c6f1a0c6f40993158d4cad2d21131404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_24dc7c4b",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T21:29:19Z",
+      "side": 1,
+      "message": "It\u0027s worth noting that most of these tests will pass when the wikibase extension is not installed. Add @extension-wikibase",
+      "revId": "bf9be5f9c6f1a0c6f40993158d4cad2d21131404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_c41b0820",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T21:29:19Z",
+      "side": 1,
+      "message": "Use a specific page.\nIf a page doesn\u0027t have a corresponding Wikidata entity which also has a description then it shouldn\u0027t have a wikidata description.\n\nIt would be valuable to have another page to capture that as well.\n\nNote given the complexities of making this work locally we may unfortunately have to rely on a page on the beta cluster which we know exists e.g. Albert Einstein",
+      "revId": "bf9be5f9c6f1a0c6f40993158d4cad2d21131404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
