@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e68cf02_095eb917",
+        "filename": "tests/browser/features/step_definitions/wikidata_descriptions.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "use more generic on(ArticlePage)",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_e95a5d21",
+        "filename": "tests/browser/features/step_definitions/wikidata_descriptions.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "use more generic on(ArticlePage)",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_e92c1d92",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "Currently this won\u0027t run anywhere due to the fact we do not run browser tests on test wikipedia.\n\nRemove the test2 tag in favor of @en.m.wikipedia.beta.wmflabs.org",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_a96065cd",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "You\u0027ll want to add a test for a talk page (e.g. non special page)",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_a93985cd",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "I should NOT see.\n(see task)",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_29757593",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-05-31T19:59:25Z",
+      "side": 1,
+      "message": "Rather than do this simply navigate to the page you need\ne.g.\nGiven I am on the \"Main Page\" page\nGiven I am on the \"Special:Contributions\" page",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
