@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "6e68cf02_298bb573",
+        "filename": "tests/browser/features/wikidata_descriptions.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-05-31T21:04:20Z",
+      "side": 1,
+      "message": "Fixed in the subsequent patchset (was basically a forgotten copy-paste mistake).",
+      "parentUuid": "6e68cf02_a93985cd",
+      "revId": "d3b825de0c5a44f2319462c6938f3bbd62d65bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e68cf02_29757593",
         "filename": "tests/browser/features/wikidata_descriptions.feature",
         "patchSetId": 1
