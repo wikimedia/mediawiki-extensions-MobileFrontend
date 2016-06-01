@@ -647,7 +647,7 @@ class MobileFrontendHooks {
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
 			} elseif ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
-				$out->addModuleStyles( 'skins.minerva.special.userlogin.styles' );
+				$out->addModuleStyles( [ 'mobile.ajax', 'skins.minerva.special.userlogin.styles' ] );
 				$out->addModules( 'mobile.special.userlogin.scripts' );
 			}
 		}
