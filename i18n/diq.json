@@ -63,7 +63,7 @@
 	"mobile-frontend-last-modified-date": "Peyni vurnayış $1 seate $2 kerd o.",
 	"mobile-frontend-last-modified-seconds": "Verde {{PLURAL:$1|$1 saniye|$1 saniyan}} modifiya bahdoyen",
 	"mobile-frontend-lead-image-tutorial-confirm": "Sergende  bar kerdışi ke",
-	"mobile-frontend-logged-in-homepage-notification": "$1! {{GENDER:$2|Tı xeyr ameya}}",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Xeyr ameyi}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Zey $1 cıkewtış.",
 	"mobile-frontend-main-menu-account-create": "Hesab vıraze",
 	"mobile-frontend-main-menu-button-tooltip": "Menuyê bıngehi ake",
