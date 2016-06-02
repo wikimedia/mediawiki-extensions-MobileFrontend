@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_07c0642e",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-02T15:11:59Z",
+      "side": 0,
+      "message": "Title#isSpecialPage reads, roughly, as follows:\n\n    return $this-\u003egetNamespace() \u003d\u003d\u003d NS_SPECIAL;\n\nThe second check here is redundant given the check introduced above – the title\u0027s namespace must be NS_MAIN.",
+      "revId": "6010bc275e1e01f34c31c0a22f08e08208765dcd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
