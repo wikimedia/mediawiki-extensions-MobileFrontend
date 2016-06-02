@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_b9f1c0dc",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-06-02T17:35:17Z",
+      "side": 0,
+      "message": "While you\u0027re here, do you want to change $title-\u003egetNamespae() \u003d\u003d\u003d NS_MAIN to $title-\u003einNamespace()?\n\nSee the doc for this funcction:\nPlease make use of this instead of comparing to getNamespace() This function is much more resistant to changes we may make to namespaces than code that makes direct comparisons.",
+      "revId": "a799cc90513748d4fcc6676183c82707b59dc525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
