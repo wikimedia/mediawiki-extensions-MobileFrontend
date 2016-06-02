@@ -13,7 +13,8 @@ class SpecialUserLoginPage < ArticlePage
   button(:signup_submit, id: 'wpCreateaccount')
   a(:create_account_link, id: 'mw-createaccount-join')
   div(:message_box, class: 'warningbox')
-  div(:error_box, class: 'errorbox')
+  div(:error_box, css: '#userlogin2 > .error')
+  span(:confirm_password_error_box, css: '#wpRetype + .error')
   a(:password_reset, title: 'Special:PasswordReset')
 
   # signup specific
