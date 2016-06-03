@@ -36,6 +36,7 @@
 	"mobile-frontend-changeslist-ip": "Usuario anónimo",
 	"mobile-frontend-changeslist-nocomment": "sen resumo de edición",
 	"mobile-frontend-cite-error-title": "Erro cargando citas",
+	"mobile-frontend-cite-error": "Houbo un problema ó intentar cargar as citas a causa dun identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "Non hai citas dispoñibles para esta páxina.",
 	"mobile-frontend-clear-search": "Limpar",
 	"mobile-frontend-commons-category-view": "Imaxes para $1",
