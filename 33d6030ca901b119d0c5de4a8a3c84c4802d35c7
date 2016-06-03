@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_e6f1d8db",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1951,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-06-03T22:03:55Z",
+      "side": 0,
+      "message": "The hook shouldn\u0027t be removed.",
+      "revId": "33d6030ca901b119d0c5de4a8a3c84c4802d35c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
