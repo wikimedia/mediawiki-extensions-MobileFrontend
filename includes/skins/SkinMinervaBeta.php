@@ -18,10 +18,10 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected function getHeadingHtml() {
 		$html = parent::getHeadingHtml();
 		$title = $this->getTitle();
-		if ( !$title->isMainPage() && $title->getNamespace() === NS_MAIN ) {
+		if ( !$title->isMainPage() && $title->inNamespace( NS_MAIN ) ) {
 			$vars = $this->getSkinConfigVariables();
 			$description = $vars['wgMFDescription'];
-			if ( $description && !$this->getTitle()->isSpecialPage() ) {
+			if ( $description ) {
 				$html .= Html::element( 'div',
 					[
 						'class' => 'tagline',
