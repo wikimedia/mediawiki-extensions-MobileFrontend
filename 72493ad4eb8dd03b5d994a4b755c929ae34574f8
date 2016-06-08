@@ -16,6 +16,24 @@
       "revId": "72493ad4eb8dd03b5d994a4b755c929ae34574f8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_22873a16",
+        "filename": "includes/modules/MobileSiteModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-06-08T13:40:37Z",
+      "side": 1,
+      "message": "Indeed, not strictly necessary. Though I suppose there is a difference between an implicit \"default\", and a class caring about a specific value. The latter is the case here (this is converted from the getBottom method below, as it\u0027s conventional to set this property and leave the default accessor method unchanged).",
+      "parentUuid": "0efd9372_62994280",
+      "revId": "72493ad4eb8dd03b5d994a4b755c929ae34574f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
