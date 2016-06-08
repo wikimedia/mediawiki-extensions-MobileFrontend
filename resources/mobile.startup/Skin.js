@@ -1,8 +1,7 @@
 ( function ( M, $ ) {
 
 	var browser = M.require( 'mobile.browser/browser' ),
-		View = M.require( 'mobile.view/View' ),
-		Icon = M.require( 'mobile.startup/Icon' );
+		View = M.require( 'mobile.view/View' );
 
 	/**
 	 * Representation of the current skin being rendered.
@@ -221,13 +220,6 @@
 				// Grab the image markup from the HTML only fallback
 				// Image will start downloading
 				$downloadingImage = $( '<img/>' );
-
-			if ( width > 80 && height > 80 ) {
-				new Icon( {
-					name: 'spinner',
-					additionalClassNames: 'loading'
-				} ).appendTo( $placeholder );
-			}
 
 			// When the image has loaded
 			$downloadingImage.on( 'load', function () {
