@@ -1,80 +1,124 @@
 ( function ( M, $ ) {
-	var ReferencesHtmlScraperGateway = M.require(
-		'mobile.references.gateway/ReferencesHtmlScraperGateway' );
+	var ReferencesHtmlScraperGateway =
+		M.require( 'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
+		cache = M.require( 'mobile.cache' ),
+		MemoryCache = cache.MemoryCache,
+		NoCache = cache.NoCache,
+		referencesMobileViewGateway = null;
 
 	/**
 	 * Gateway for retrieving references via the MobileView API
 	 *
+	 * By default not cached, if it receives a cache instance then it will be
+	 * used to store and get references sections.
+	 *
 	 * @class ReferencesMobileViewGateway
 	 * @extends ReferencesHtmlScraperGateway
 	 * @inheritdoc
+	 *
+	 * @constructor
+	 * @param {mw.Api} api class to use for making requests
+	 * @param {NoCache|MemoryCache} [cache] class to use for caching request
+	 * results. By default it uses the NoCache implementation, which doesn't
+	 * cache anything. The singleton instance exposed by this module uses
+	 * a MemoryCache which caches requests in-memory. Any other Cache class
+	 * compatible with mobile.cache's interface will actually work.
+	 *
 	 */
-	function ReferencesMobileViewGateway() {
-		ReferencesHtmlScraperGateway.apply( this, arguments );
+	function ReferencesMobileViewGateway( api, cache ) {
+		ReferencesHtmlScraperGateway.call( this, api );
+		this.cache = cache || new NoCache();
 	}
 
 	OO.mfExtend( ReferencesMobileViewGateway, ReferencesHtmlScraperGateway, {
 		/**
-		 * Retrieve references for a given page
+		 * Retrieve references sections for a given page.
+		 * Also cache the result for a later use.
 		 *
 		 * @method
 		 * @param {Page} page
-		 * @return {jQuery.Promise} passed an instance of the jQuery.object
-		 *  representing all the sections in the page
+		 * @return {jQuery.Promise} promise that resolves with the list of
+		 *  sections on the page
 		 */
-		getReferencesElements: function ( page ) {
-			var self = this;
+		getReferencesSections: function ( page ) {
+			var self = this,
+				cachedReferencesSections = this.cache.get( page.id );
 
-			if ( this.$references ) {
-				return $.Deferred().resolve( self.$references ).promise();
-			} else if ( this.pendingMobileViewApi ) {
-				// avoid ever making more than one api request
-				return this.pendingMobileViewApi;
+			if ( cachedReferencesSections ) {
+				return $.Deferred().resolve( cachedReferencesSections ).promise();
 			}
 
-			this.pendingMobileViewApi = this.api.get( {
+			return this.api.get( {
 				action: 'mobileview',
 				page: page.getTitle(),
 				sections: 'references',
 				prop: 'text',
 				revision: page.getRevisionId()
 			} ).then( function ( data ) {
-				var sections = data.mobileview.sections,
-					refs = [];
+				var sections = {};
 
-				if ( sections ) {
-					// There could be multiple <references> tags in the page.
-					$.each( sections, function ( i, section ) {
-						// skip the section header, just get the references
-						refs.push( $( '<div>' ).html( section.text ).find( '.references' ).eq( 0 ) );
-					} );
-				}
+				$.each( data.mobileview.sections, function ( i, section )  {
+					var $section = $( '<div>' ).html( section.text );
 
-				// cache
-				self.$references = $( refs );
+					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] =
+						$( '<div>' ).append( $section.find( '.references' ) ).html();
+				} );
 
-				return self.$references;
+				self.cache.set( page.id, sections );
+
+				return sections;
 			} );
-			return this.pendingMobileViewApi;
+		},
+		/**
+		 * Retrieve references section for a given page and section ID.
+		 *
+		 * @method
+		 * @param {Page} page
+		 * @param {String} headingId
+		 * @return {jQuery.Promise} promise that resolves with the section
+		 *  HTML or `false` if no such section exists
+		 */
+		getReferencesSection: function ( page, headingId ) {
+			return this.getReferencesSections( page ).then( function ( data ) {
+				return data.hasOwnProperty( headingId ) ? data[ headingId ] : false;
+			} );
 		},
 		/**
 		 * @inheritdoc
 		 */
 		getReference: function ( id, page ) {
-			var self = this,
-				parentGetReferenceFromContainer = ReferencesHtmlScraperGateway.prototype.getReferenceFromContainer;
+			var self = this;
 
-			return this.getReferencesElements( page ).then( function ( $refSections ) {
+			return this.getReferencesSections( page ).then( function ( sections ) {
 				var $container = $( '<div>' );
 
-				$refSections.each( function () {
-					$( this ).appendTo( $container );
+				$.each( sections, function ( i, section ) {
+					$container.append( section );
 				} );
-				return parentGetReferenceFromContainer.call( self, id, $container );
+
+				return self.getReferenceFromContainer( id, $container );
 			} );
 		}
 	} );
 
-	M.define( 'mobile.references.gateway/ReferencesMobileViewGateway',
-		ReferencesMobileViewGateway );
+	/**
+	 * Retrieve a singleton instance w/ cache that uses mw.Api
+	 * @static
+	 * @return {ReferencesMobileViewGateway}
+	 */
+	ReferencesMobileViewGateway.getSingleton = function () {
+		if ( !referencesMobileViewGateway ) {
+			referencesMobileViewGateway = new ReferencesMobileViewGateway(
+				new mw.Api(),
+				new MemoryCache()
+			);
+		}
+		return referencesMobileViewGateway;
+	};
+
+	M.define(
+		'mobile.references.gateway/ReferencesMobileViewGateway',
+		ReferencesMobileViewGateway
+	);
+
 }( mw.mobileFrontend, jQuery ) );

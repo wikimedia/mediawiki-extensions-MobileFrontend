@@ -13,14 +13,19 @@
 		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
 		mainMenu = M.require( 'skins.minerva.scripts.top/mainMenu' ),
-		Skin = M.require( 'mobile.startup/Skin' );
+		Skin = M.require( 'mobile.startup/Skin' ),
+		ReferencesMobileViewGateway = M.require(
+			'mobile.references.gateway/ReferencesMobileViewGateway'
+		),
+		skinData = {
+			el: 'body',
+			tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'skins.minerva.tablet.scripts' ] : [],
+			page: getCurrentPage(),
+			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
+			mainMenu: mainMenu
+		};
 
-	skin = new Skin( {
-		el: 'body',
-		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'skins.minerva.tablet.scripts' ] : [],
-		page: getCurrentPage(),
-		mainMenu: mainMenu
-	} );
+	skin = new Skin( skinData );
 	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
 
 	/**

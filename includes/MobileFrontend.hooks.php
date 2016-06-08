@@ -329,8 +329,7 @@ class MobileFrontendHooks {
 				'page.html' => 'tests/qunit/tests.mobilefrontend/page.html',
 				'page2.html' => 'tests/qunit/tests.mobilefrontend/page2.html',
 				'pageWithStrippedRefs.html' => 'tests/qunit/tests.mobilefrontend/pageWithStrippedRefs.html',
-				'references.html' => 'tests/qunit/tests.mobilefrontend/references.html',
-				'refSection.html' => 'tests/qunit/tests.mobilefrontend/refSection.html',
+				'references.html' => 'tests/qunit/tests.mobilefrontend/references.html'
 			],
 			'localBasePath' => $localBasePath,
 			'remoteExtPath' => 'MobileFrontend',

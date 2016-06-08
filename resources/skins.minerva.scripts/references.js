@@ -1,32 +1,34 @@
 ( function ( M, $ ) {
 	var drawer,
-		page = M.getCurrentPage();
+		skin = M.require( 'skins.minerva.scripts/skin' ),
+		page = M.getCurrentPage(),
+		ReferencesMobileViewGateway = M.require(
+			'mobile.references.gateway/ReferencesMobileViewGateway'
+		),
+		referencesMobileViewGateway = ReferencesMobileViewGateway.getSingleton(),
+		ReferencesHtmlScraperGateway = M.require(
+			'mobile.references.gateway/ReferencesHtmlScraperGateway'
+		),
+		ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );
 
 	/**
-	 * Retrieves the references gateway module info to be used on the page from config
-	 *
-	 * @method
-	 * @ignore
-	 * @returns {String} name of the class implementing ReferenceGateway to use
-	 */
-	function getReferenceGatewayClassName() {
-		return mw.config.get( 'wgMFLazyLoadReferences', false ) ?
-			'ReferencesMobileViewGateway' : 'ReferencesHtmlScraperGateway';
-	}
-
-	/**
-	 * Creates a ReferenceDrawer based on the currently available ReferenceGateway
+	 * Creates a ReferenceDrawer based on the currently available
+	 * ReferenceGateway
 	 *
 	 * @ignore
 	 * @returns {ReferencesDrawer}
 	 */
 	function referenceDrawerFactory() {
-		var gatewayClassName = getReferenceGatewayClassName(),
-			ReferencesGateway = M.require( 'mobile.references.gateway/' + gatewayClassName ),
-			ReferencesDrawer = M.require( 'mobile.references/ReferencesDrawer' );
+		var gateway = null;
+
+		if ( mw.config.get( 'wgMFLazyLoadReferences', false ) ) {
+			gateway = referencesMobileViewGateway;
+		} else {
+			gateway = new ReferencesHtmlScraperGateway( new mw.Api() );
+		}
 
 		return new ReferencesDrawer( {
-			gateway: new ReferencesGateway( new mw.Api() )
+			gateway: gateway
 		} );
 	}
 
@@ -35,22 +37,25 @@
 	 * @ignore
 	 * @param {jQuery.Event} ev Click event of the reference element
 	 * @param {ReferencesDrawer} drawer to show the reference in
+	 * @param {Page} page
 	 */
-	function showReference( ev, drawer ) {
+	function showReference( ev, drawer, page ) {
 		var urlComponents,
 			$dest = $( ev.target ),
 			href = $dest.attr( 'href' );
 
 		ev.preventDefault();
 
-		// If necessary strip the URL portion of the href so we are left with the fragment
+		// If necessary strip the URL portion of the href so we are left with the
+		// fragment
 		urlComponents = href.split( '#' );
 		if ( urlComponents.length > 1 ) {
 			href = '#' + urlComponents[1];
 		}
 		drawer.showReference( href, page, $dest.text() );
 
-		// don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)
+		// don't hide drawer (stop propagation of click) if it is already shown
+		// (e.g. click another reference)
 		if ( drawer.isVisible() ) {
 			ev.stopPropagation();
 		} else {
@@ -74,7 +79,7 @@
 		if ( !drawer ) {
 			drawer = referenceDrawerFactory();
 		}
-		showReference( ev, drawer );
+		showReference( ev, drawer, ev.data.page );
 	}
 
 	/**
@@ -88,15 +93,17 @@
 		if ( $refs.length ) {
 			$refs
 				.off( 'click' )
-				.on( 'click', onClickReference );
+				.on( 'click', {
+					page: page
+				}, onClickReference );
 			page.$( '.mw-cite-backlink a' )
 				.off( 'click' );
 		}
 	}
 
-	// Setup
-	$( function () {
+	setup( page );
+	// When references are lazy loaded you'll want to take care of nested references
+	skin.on( 'references-loaded', function ( page ) {
 		setup( page );
 	} );
-
 }( mw.mobileFrontend, jQuery ) );

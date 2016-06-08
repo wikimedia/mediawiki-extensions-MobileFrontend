@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
 
 	var browser = M.require( 'mobile.browser/browser' ),
-		View = M.require( 'mobile.view/View' );
+		View = M.require( 'mobile.view/View' ),
+		icons = M.require( 'mobile.startup/icons' );
 
 	/**
 	 * Representation of the current skin being rendered.
@@ -20,6 +21,7 @@
 		View.call( this, options );
 		// Must be run after merging with defaults as must be defined.
 		this.tabletModules = options.tabletModules;
+		this.referencesGateway = options.referencesGateway;
 
 		/**
 		 * Tests current window size and if suitable loads styles and scripts specific for larger devices
@@ -50,6 +52,10 @@
 				self.loadImages();
 			} );
 		}
+
+		if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
+			M.on( 'before-section-toggled', $.proxy( this.lazyLoadReferences, this ) );
+		}
 	}
 
 	OO.mfExtend( Skin, View, {
@@ -64,6 +70,7 @@
 		 * @cfg {Page} defaults.page page the skin is currently rendering
 		 * @cfg {Array} defaults.tabletModules modules to load when in tablet
 		 * @cfg {MainMenu} defaults.mainMenu instance of the mainMenu
+		 * @cfg {ReferencesGateway} defaults.referencesGateway instance of references gateway
 		 */
 		defaults: {
 			page: undefined,
@@ -167,11 +174,16 @@
 
 		/**
 		 * Load images on demand
+		 * @param {jQuery.Object} [$container] The container that should be
+		 *  searched for image placeholders. Defaults to "#content".
 		 */
-		loadImages: function () {
+		loadImages: function ( $container ) {
 			var self = this,
 				offset = $( window ).height() * 1.5,
-				imagePlaceholders = this.$( '#content' ).find( '.lazy-image-placeholder' ).toArray();
+				imagePlaceholders;
+
+			$container = $container || this.$( '#content' );
+			imagePlaceholders = $container.find( '.lazy-image-placeholder' ).toArray();
 
 			/**
 			 * Load remaining images in viewport
@@ -239,6 +251,60 @@
 				alt: $placeholder.attr( 'data-alt' ),
 				srcset: $placeholder.attr( 'data-srcset' )
 			} );
+		},
+
+		/**
+		* Load the references section content from API if it's not already loaded.
+		*
+		* @param {Object} data Information about the section. It's in the following form:
+		*  {
+		*      @property {String} page,
+		*      @property {Boolean} wasExpanded,
+		*      @property {jQuery.Object} $heading,
+		*      @property {Boolean} isReferenceSection
+		* }
+		*/
+		lazyLoadReferences: function ( data ) {
+			var $content, $originalContent,
+				self = this;
+
+			// If the section was expanded before toggling, do not load anything as
+			// section is being collapsed now.
+			// Also return early if lazy loading is not required or the section is
+			// not a reference section
+			if (
+				data.wasExpanded ||
+				!data.isReferenceSection
+			) {
+				return;
+			}
+
+			$content = data.$heading.next();
+
+			if ( !$content.data( 'are-references-loaded' ) ) {
+				$originalContent = $content.children().clone( true, true );
+				$content.html( icons.spinner().toHtmlString() );
+
+				this.referencesGateway
+					.getReferencesSection( data.page, data.$heading.find( '.mw-headline' ).attr( 'id' ) )
+					.done( function ( section ) {
+						$content.html( section !== false ? section : $originalContent );
+						/**
+						 * @event references-loaded
+						 * Fired when references list is loaded into the HTML
+						 */
+						self.emit( 'references-loaded', self.page );
+					} )
+					.fail( function () {
+						$content.html( $originalContent );
+					} )
+					.always( function () {
+						// lazy load images if any
+						self.loadImages( $content );
+						// Do not attempt further loading even if we're unable to load this time.
+						$content.data( 'are-references-loaded', 1 );
+					} );
+			}
 		},
 
 		/**

@@ -128,10 +128,11 @@
 	 * @ignore
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
-		var indicator, $content,
+		var indicator,
 			wasExpanded = $heading.is( '.open-block' ),
 			page = $heading.data( 'page' ),
-			sectionId = $heading.data( 'section-number' );
+			sectionNumber = $heading.data( 'section-number' ),
+			$content = $heading.next();
 
 		$heading.toggleClass( 'open-block' );
 		$heading.data( 'indicator' ).remove();
@@ -139,11 +140,20 @@
 		/**
 		 * @event toggled
 		 */
-		this.emit( 'toggled', wasExpanded, sectionId );
+		this.emit( 'toggled', wasExpanded, sectionNumber );
 		indicator = new Icon( arrowOptions ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
-		$content = $heading.next();
+		/**
+		 * @event section-toggling Emitted before a section is being toggled
+		 */
+		M.emit( 'before-section-toggled', {
+			page: page,
+			wasExpanded: wasExpanded,
+			$heading: $heading,
+			isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) )
+		} );
+
 		$content
 			.toggleClass( 'open-block' )
 			.attr( {
@@ -151,7 +161,10 @@
 				'aria-expanded': !wasExpanded
 			} );
 
-		M.emit( 'section-toggled', wasExpanded, sectionId );
+		/**
+		 * @event section-toggled Emitted after a section has been toggled
+		 */
+		M.emit( 'section-toggled', wasExpanded, sectionNumber );
 
 		if ( !browser.isWideScreen() ) {
 			storeSectionToggleState( $heading, page );
