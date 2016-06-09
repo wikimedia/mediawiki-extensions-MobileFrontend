@@ -2,6 +2,7 @@
 @import 'minerva.mixins.less';
 
 @animationDuration: 0.3s;
+@placeholderBackgroundColor: @grayLightest;
 
 .lazy-image-placeholder {
 	// The image placeholder for shouldn't show for no-js devices
@@ -9,21 +10,9 @@
 		display: none;
 	}
 
-	background-color: @colorGray14;
-	border: 1px solid @colorGray11;
-	// offset the borders to avoid pushing down content by 2px border on load
-	box-sizing: border-box;
-	border-radius: 2px;
-
-	// Hide anything around the dimensions of the placeholder (avoids spinner
-	// overflowing on smaller images
-	overflow: hidden;
+	background-color: @placeholderBackgroundColor;
 
 	display: inline-block;
-	// Center spinner vertically and horizontally
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	// When inserted, don't show the image because we want to animate it
 	img {
@@ -64,7 +53,7 @@
 
 @-webkit-keyframes fadeOutContainer {
 	from {
-		background-color: @colorGray14;
+		background-color: @placeholderBackgroundColor;
 	}
 	to {
 		background-color: transparent;
@@ -73,7 +62,7 @@
 
 @keyframes fadeOutContainer {
 	from {
-		background-color: @colorGray14;
+		background-color: @placeholderBackgroundColor;
 	}
 	to {
 		background-color: transparent;
