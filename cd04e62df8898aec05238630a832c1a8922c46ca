@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_989656f2",
+        "filename": "tests/qunit/tests.mobilefrontend/refSection.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-09T16:54:57Z",
+      "side": 1,
+      "message": "Why delete this file? It\u0027s not mentioned in the commit message.",
+      "revId": "cd04e62df8898aec05238630a832c1a8922c46ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
