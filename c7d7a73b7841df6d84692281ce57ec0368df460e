@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_499a5ebe",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-09T17:00:35Z",
+      "side": 1,
+      "message": "Should we include a FIXME to remove the deprecation warning in the future? I don\u0027t know our usual process for removal of deprecation warnings (if there is one).",
+      "revId": "c7d7a73b7841df6d84692281ce57ec0368df460e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
