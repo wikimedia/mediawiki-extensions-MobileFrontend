@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var OverlayManager = M.require( 'mobile.startup/OverlayManager' ),
+	var OverlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 		fakeRouter, overlayManager;
 
 	QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var SearchOverlay, SearchGateway,
-		router = M.require( 'mobile.startup/router' ),
+		router = require( 'mediawiki.router' ),
 		browser = M.require( 'mobile.browser/browser' ),
 		moduleConfig = {
 			modules: [ 'mobile.search.api', 'mobile.search' ],

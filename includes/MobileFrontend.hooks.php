@@ -1099,6 +1099,7 @@ class MobileFrontendHooks {
 				'skins.minerva.notifications' => $resourceBoilerplate + [
 					'dependencies' => [
 						'mobile.overlays',
+						'mediawiki.router',
 						'skins.minerva.scripts',
 						'mediawiki.ui.anchor'
 					],

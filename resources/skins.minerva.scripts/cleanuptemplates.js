@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	( function () {
-		var overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		var overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 			CleanupOverlay = M.require( 'mobile.issues/CleanupOverlay' );
 
 		/**

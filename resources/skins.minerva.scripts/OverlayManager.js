@@ -1,8 +1,4 @@
 ( function ( M, $ ) {
-
-	var overlayManager,
-		router = M.require( 'mobile.startup/router' );
-
 	/**
 	 * Manages opening and closing overlays when the URL hash changes to one
 	 * of the registered values (see OverlayManager.add()).
@@ -246,9 +242,6 @@
 		}
 	} );
 
-	overlayManager = new OverlayManager( router );
-
-	M.define( 'mobile.startup/OverlayManager', OverlayManager );
-	M.define( 'mobile.startup/overlayManager', overlayManager );
+	M.define( 'skins.minerva.scripts/OverlayManager', OverlayManager );
 
 }( mw.mobileFrontend, jQuery ) );

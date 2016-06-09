@@ -14,6 +14,7 @@
 		"jQuery.Object",
 		"jqXHR",
 		"File",
+		"Router",
 		"mw.user",
 		"mw.Api",
 		"mw.ForeignApi",

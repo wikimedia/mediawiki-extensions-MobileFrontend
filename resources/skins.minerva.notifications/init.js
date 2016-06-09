@@ -5,8 +5,8 @@
 ( function ( M, $, mw ) {
 	var mainMenu = M.require( 'skins.minerva.scripts/skin' ).getMainMenu(),
 		$btn = $( '#secondary-button.user-button' ).parent(),
-		router = M.require( 'mobile.startup/router' ),
-		overlayManager = M.require( 'mobile.startup/overlayManager' ),
+		router = require( 'mediawiki.router' ),
+		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 		icons = M.require( 'mobile.startup/icons' );
 
 	/**
