@@ -16,6 +16,24 @@
       "revId": "c7d7a73b7841df6d84692281ce57ec0368df460e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_44f40384",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-09T19:41:13Z",
+      "side": 1,
+      "message": "There is no rush to remove deprecated modules and there are plenty without a FIXME. We can one day decide to clean up all deprecated modules.",
+      "parentUuid": "0efd9372_499a5ebe",
+      "revId": "c7d7a73b7841df6d84692281ce57ec0368df460e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
