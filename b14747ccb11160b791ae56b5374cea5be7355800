@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_f605e67d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-10T20:54:49Z",
+      "side": 1,
+      "message": "Doesn\u0027t this mean that we\u0027re fine with calling the document a section? How about not setting $isReferenceSection to `true` if $el is not a DOM element?",
+      "revId": "b14747ccb11160b791ae56b5374cea5be7355800",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
