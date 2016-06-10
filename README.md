@@ -519,8 +519,7 @@ Type: Integer
 Default: 0;
 
 ##### $wgMFUseWikibaseDescription
-If set to true and running beta, will add Wikidata description to page JS as
-wgMFDescription variable
+If set to true, will add Wikidata description to page JS as wgMFDescription variable
 
 Type: Boolean
 Default: false;

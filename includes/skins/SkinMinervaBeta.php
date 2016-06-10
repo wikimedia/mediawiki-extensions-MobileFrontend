@@ -14,23 +14,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	/** @inheritdoc */
 	protected $shouldSecondaryActionsIncludeLanguageBtn = false;
 
-	/** @inheritdoc **/
-	protected function getHeadingHtml() {
-		$html = parent::getHeadingHtml();
-		$title = $this->getTitle();
-		if ( !$title->isMainPage() && $title->inNamespace( NS_MAIN ) ) {
-			$vars = $this->getSkinConfigVariables();
-			$description = $vars['wgMFDescription'];
-			if ( $description ) {
-				$html .= Html::element( 'div',
-					[
-						'class' => 'tagline',
-					], $description );
-			}
-		}
-		return $html;
-	}
-
 	/**
 	 * Do not set page actions on the user page that hasn't been created yet.
 	 * Also add the language switcher action.
@@ -84,13 +67,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		} else {
 			return parent::getSecondaryActions( $tpl );
 		}
-	}
-
-	public function getSkinConfigVariables() {
-		$vars = parent::getSkinConfigVariables();
-		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
-
-		return $vars;
 	}
 
 	/**
