@@ -217,7 +217,6 @@
 			var
 				width = $placeholder.attr( 'data-width' ),
 				height = $placeholder.attr( 'data-height' ),
-				// Grab the image markup from the HTML only fallback
 				// Image will start downloading
 				$downloadingImage = $( '<img/>' );
 
