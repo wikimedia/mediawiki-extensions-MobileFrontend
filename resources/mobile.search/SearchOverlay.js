@@ -136,7 +136,6 @@
 		 * are displayed.)
 		 */
 		onInputInput: function () {
-			this.$( '.overlay-header-container' ).css( 'top', 0 );
 			this.performSearch();
 			this.$clear.toggle( this.$input.val() !== '' );
 		},
@@ -236,10 +235,6 @@
 		postRender: function () {
 			var self = this;
 
-			// Make sure search overlay lines up with search header when the overlay is
-			// rendered. This is necessary to prevent bug 67140 while sitenotices are
-			// displayed.
-			this.$( '.overlay-header-container' ).css( 'top', $( '.header' ).offset().top );
 			// No search happening by default
 			this.$( '.spinner' ).hide();
 
