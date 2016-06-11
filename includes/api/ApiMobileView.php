@@ -50,6 +50,10 @@ class ApiMobileView extends ApiBase {
 		// Logged-in users' parser options depend on preferences
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
+		// Don't strip srcset on renderings for mobileview api; the
+		// app below it will decide how to use them.
+		MobileContext::singleton()->setStripResponsiveImages( false );
+
 		// Enough '*' keys in JSON!!!
 		$isXml = $this->getMain()->isInternalMode()
 			|| $this->getMain()->getPrinter()->getFormat() == 'XML';

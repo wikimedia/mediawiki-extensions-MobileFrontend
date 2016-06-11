@@ -1129,4 +1129,33 @@ class MobileContext extends ContextSource {
 			$this->addAnalyticsLogItem( 'mf-m', 'b' );
 		}
 	}
+
+	/**
+	 * Process-local override for MFStripResponsiveImages, used by
+	 * the mobileview API request.
+	 */
+	private $stripResponsiveImagesOverride = null;
+
+	/**
+	 * Should image thumbnails in pages remove the high-density additions
+	 * during this request?
+	 *
+	 * @return boolean
+	 */
+	public function shouldStripResponsiveImages() {
+		if ( $this->stripResponsiveImagesOverride === null ) {
+			return $this->getMFConfig()->get( 'MFStripResponsiveImages' );
+		} else {
+			return $this->stripResponsiveImagesOverride;
+		}
+	}
+
+	/**
+	 * Config override for responsive image strip mode.
+	 *
+	 * @param boolean $val
+	 */
+	public function setStripResponsiveImages( $val ) {
+		$this->stripResponsiveImagesOverride = $val;
+	}
 }

@@ -385,7 +385,7 @@ class MobileFrontendHooks {
 			return;
 		}
 
-		if ( $context->getMFConfig()->get( 'MFStripResponsiveImages' ) ) {
+		if ( $context->shouldStripResponsiveImages() ) {
 			$confstr .= '!responsiveimages=0';
 		}
 
@@ -1303,7 +1303,7 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 		if (
 			$context->shouldDisplayMobileView() &&
-			$config->get( 'MFStripResponsiveImages' )
+			$context->shouldStripResponsiveImages()
 		) {
 			$file = $thumbnail->getFile();
 			if ( !$file || !in_array( $file->getMimeType(),
