@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Agilight",
-			"Монгуш Салим"
+			"Монгуш Салим",
+			"Көпек"
 		]
 	},
 	"mobile-frontend-editor-edit": "Эдер",
@@ -19,7 +20,7 @@
 	"mobile-frontend-main-menu-watchlist": "Хайгаарал даңзызы",
 	"mobile-frontend-news-items": "Медээлерде",
 	"mobile-frontend-placeholder": "Дилээр",
-	"mobile-frontend-random-button": "Дужа-келби таварышканы",
+	"mobile-frontend-random-button": "Душ бооп таварышканы",
 	"mobile-frontend-terms-text": "Ажыглаарының байдалдары",
 	"mobile-frontend-view": "Мобильдиг янзызы",
 	"mobile-frontend-view-desktop": "Стационарлыг",

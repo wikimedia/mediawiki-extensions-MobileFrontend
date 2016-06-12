@@ -1,8 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amara-Amaziɣ"
+			"Amara-Amaziɣ",
+			"Aslmad mohamed belarhzali"
 		]
 	},
-	"mobile-frontend-news-items": "ⴳ ⵉⵏⵖⵎⵉⵙⵏ"
+	"mobile-frontend-editor-edit": "ⵙⵏⴼⵍ",
+	"mobile-frontend-home-button": "ⴰⵙⵏⵓⴱⴳ",
+	"mobile-frontend-language-article-heading": "ⵖⵔ ⵙ ⴽⵔⴰ ⵏ ⵜⵓⵜⵍⴰⵢⵜ ⵢⴰⴹⵏ",
+	"mobile-frontend-main-menu-button-tooltip": "ⵕⵥⵎ ⵓⵎⵓⵖ ⴰⴷⵙⵍⴰⵏ",
+	"mobile-frontend-main-menu-login": "ⴰⴷⴼ",
+	"mobile-frontend-news-items": "ⴳ ⵉⵏⵖⵎⵉⵙⵏ",
+	"mobile-frontend-password-placeholder": "ⵜⴰⴳⵓⵔⵉ ⵏ ⵓⵣⵔⴰⵢ",
+	"mobile-frontend-placeholder": "ⵔⵣⵓ ⴳ {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "ⵜⵉⵏⵏⵓⵜⵍⴰ",
+	"mobile-frontend-terms-text": "ⵜⵉⴼⴰⴷⵉⵡⵉⵏ ⵏ ⵓⵙⵎⵔⵙ"
 }
