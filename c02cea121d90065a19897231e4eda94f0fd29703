@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_aab927e8",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Having these as globals means that if a client of ReferencesMobileViewGateway wanted to ensure something didn\u0027t come from cache it couldn\u0027t.\n\nThe introduction of a clearCache for testing purposes makes me wonder if this is correct.\n\nWhy couldn\u0027t these be internal to the ReferencesMobileViewGateway instance? A caller can share caching between objects if they reuse the object.",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_2aeff7ae",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Note the section.id returned by mobile view takes into account all subsections e.g. h3,h4,h5 etc... and is not the same as the section id in the collapsible heading. As a result this doesn\u0027t work for several of my test articles.\n\nYou\u0027d be better off relying on the anchor as an id.",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_4ac23b5e",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "You are using a Page as an index to an Object - surely not intentional?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_ea996f81",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Although it currently isn\u0027t (although in tests should be) the Skin class could be initialised on something other than \u0027#\u0027 + data.contentId\nWhy not pass this in from the caller which has access to the current skin?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_6a8c5f33",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Creation of a ReferencesMobileViewGateway here seems wrong to me. An instance should be passed into Skin.",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_2a5257e2",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Having two events with so similar names is confusing, how could names be made clearer?\n\nWhat advantage does hooking to before the load (one line above) have over after given that toggling appears to be an atomic action from a user interface point of view?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_4ad87b7f",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-13T23:08:26Z",
+      "side": 1,
+      "message": "Any reason why you switch away from using the template? Surely the template is more readable?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
