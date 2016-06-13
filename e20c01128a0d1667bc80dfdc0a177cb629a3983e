@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_d9c8d227",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T10:44:30Z",
+      "side": 1,
+      "message": "Since this function operates on a list of class names it should be named\n\n    getSectionIdFromClassNames",
+      "revId": "e20c01128a0d1667bc80dfdc0a177cb629a3983e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_99780aef",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T10:44:30Z",
+      "side": 1,
+      "message": "This element should only be constructed if we\u0027re going to show it, i.e. L193.",
+      "range": {
+        "startLine": 180,
+        "startChar": 11,
+        "endLine": 180,
+        "endChar": 12
+      },
+      "revId": "e20c01128a0d1667bc80dfdc0a177cb629a3983e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_39b3de97",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T10:44:30Z",
+      "side": 1,
+      "message": "I think that these lines should be moved into the ReferencesGateway implementations, i.e.\n\n    ReferencesGateway#getReferences[In]Section(sectionId: Number)\n\nas the client shouldn\u0027t know how references are represented internally.",
+      "revId": "e20c01128a0d1667bc80dfdc0a177cb629a3983e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b9a6ae4e",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T10:44:30Z",
+      "side": 1,
+      "message": "Use deferred#always \u003chttps://api.jquery.com/deferred.always/\u003e to get rid of the repeated blocks here – you can even remove the call to deferred#fail entirely!",
+      "revId": "e20c01128a0d1667bc80dfdc0a177cb629a3983e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7929e699",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T10:44:30Z",
+      "side": 1,
+      "message": "This event is handled in one place \u003chttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.startup/Skin.js#L168-L210\u003e and the handler doesn\u0027t make use of either of these parameters.",
+      "revId": "e20c01128a0d1667bc80dfdc0a177cb629a3983e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
