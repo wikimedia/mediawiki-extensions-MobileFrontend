@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_32e2d300",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-13T16:54:44Z",
+      "side": 1,
+      "message": "I\u0027ll change it back. Admittedly, I didn\u0027t check the docs beforehand and simply though $this-\u003egetTitle() was a shorthand for $this-\u003egetOutput()-\u003egetPageTitle().",
+      "parentUuid": "0efd9372_9913ea04",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_b916aef4",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-06-13T07:55:02Z",
       "side": 1,
       "message": "This formatting is a little weird. The opening bracket is on its own line, but the closing one is not.",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b2688385",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-13T16:54:44Z",
+      "side": 1,
+      "message": "I changed this one to match the formatting of lines 638-641 (carried over from SkinMinervaBeta). I personally think this formatting looks fine, but are you suggesting moving the opening bracket one line above, to be on the same line as the declaration? If so, I\u0027m open to that change.",
+      "parentUuid": "0efd9372_b916aef4",
       "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
