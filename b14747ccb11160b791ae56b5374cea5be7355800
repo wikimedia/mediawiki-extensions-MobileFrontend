@@ -16,6 +16,24 @@
       "revId": "b14747ccb11160b791ae56b5374cea5be7355800",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_792a86d8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-13T09:27:18Z",
+      "side": 1,
+      "message": "I don\u0027t think it does but I see what you\u0027re driving at. The two are functionally equivalent but not semantically equivalent. Neato!",
+      "parentUuid": "0efd9372_f605e67d",
+      "revId": "b14747ccb11160b791ae56b5374cea5be7355800",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
