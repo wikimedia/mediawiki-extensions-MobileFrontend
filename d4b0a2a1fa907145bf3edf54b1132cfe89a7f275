@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_9913ea04",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-13T07:55:02Z",
+      "side": 1,
+      "message": "Why are we changing this line? Originally $title was a string, now it\u0027s not. Html::rawElement\u0027s third argument must be a string.",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b916aef4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-13T07:55:02Z",
+      "side": 1,
+      "message": "This formatting is a little weird. The opening bracket is on its own line, but the closing one is not.",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
