@@ -395,4 +395,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. self::SECTION_INDICATOR . 'Heading</h2><div class="mf-section-1">Text.</div>';
 		$this->assertEquals( $expected, $mf->getText() );
 	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T137375
+	 */
+	public function testT137375() {
+		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
+		$formatter = new MobileFormatter( $input, Title::newFromText( 'Special:Foo' ) );
+		$formatter->filterContent( false, true, false );
+	}
 }

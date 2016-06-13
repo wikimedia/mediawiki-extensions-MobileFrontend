@@ -220,7 +220,11 @@ class MobileFormatter extends HtmlFormatter {
 
 			// Use class to decide it is a list of references
 			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
-				$isReferenceSection = true;
+
+				// Only mark the section as a reference container if we're transforming a section, not the
+				// document.
+				$isReferenceSection = $el instanceof DOMElement;
+
 				$parent = $list->parentNode;
 				$placeholder = $doc->createElement( 'a',
 					wfMessage( 'mobile-frontend-references-list' ) );
