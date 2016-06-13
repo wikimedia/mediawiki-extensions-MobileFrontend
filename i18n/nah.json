@@ -1,13 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Taresi"
+			"Taresi",
+			"Teòtlalili"
 		]
 	},
 	"mobile-frontend-editor-edit": "Xicpatla",
 	"mobile-frontend-home-button": "Chāntli",
 	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Ximopanōltih}}, $1!",
 	"mobile-frontend-main-menu-account-create": "Ticchīhuaz motlapōhual",
+	"mobile-frontend-main-menu-login": "Mà kalakòwa",
 	"mobile-frontend-main-menu-settings": "Tlatlālīliztli",
 	"mobile-frontend-talk-overlay-header": "Zānīlli",
 	"mobile-frontend-terms-text": "Tequihuihcānahuatīlli",

@@ -14,5 +14,6 @@
 	"mobile-frontend-password-placeholder": "ⵜⴰⴳⵓⵔⵉ ⵏ ⵓⵣⵔⴰⵢ",
 	"mobile-frontend-placeholder": "ⵔⵣⵓ ⴳ {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "ⵜⵉⵏⵏⵓⵜⵍⴰ",
-	"mobile-frontend-terms-text": "ⵜⵉⴼⴰⴷⵉⵡⵉⵏ ⵏ ⵓⵙⵎⵔⵙ"
+	"mobile-frontend-terms-text": "ⵜⵉⴼⴰⴷⵉⵡⵉⵏ ⵏ ⵓⵙⵎⵔⵙ",
+	"mobile-frontend-view-desktop": "ⴰⵙⵉⵔⴰ"
 }
