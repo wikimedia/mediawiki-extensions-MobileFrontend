@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_0abcb3b0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-13T23:04:54Z",
+      "side": 1,
+      "message": "I think you need both.",
+      "parentUuid": "0efd9372_32e2d300",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_b916aef4",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "I changed this one to match the formatting of lines 638-641 (carried over from SkinMinervaBeta). I personally think this formatting looks fine, but are you suggesting moving the opening bracket one line above, to be on the same line as the declaration? If so, I\u0027m open to that change.",
       "parentUuid": "0efd9372_b916aef4",
+      "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_8ab0a3d9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-13T23:04:54Z",
+      "side": 1,
+      "message": "Yes, or pushing $title to the next line.",
+      "parentUuid": "0efd9372_b2688385",
       "revId": "d4b0a2a1fa907145bf3edf54b1132cfe89a7f275",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
