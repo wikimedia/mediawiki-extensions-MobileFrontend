@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_50c78c15",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "As things currently stand, I don\u0027t see a need for clients to clear the cache. If that\u0027s necessary, it can easily be achieved with a flag. Moreover, how often do page references change? Note that we only use this gateway to received references for the current page and current revision.\n\nWe construct instances of the class in different places so this is a cleaner solution that tossing around the instance just to make sure the cache is being shared. If that\u0027s the goal why don\u0027t we create an instance in this file and share it? Why even bother sharing the class itself?",
+      "parentUuid": "0efd9372_aab927e8",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-06-13T23:08:26Z",
       "side": 1,
       "message": "Note the section.id returned by mobile view takes into account all subsections e.g. h3,h4,h5 etc... and is not the same as the section id in the collapsible heading. As a result this doesn\u0027t work for several of my test articles.\n\nYou\u0027d be better off relying on the anchor as an id.",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_90d1f4d2",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ll look into it.",
+      "parentUuid": "0efd9372_2aeff7ae",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_f0d7a0c2",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "0efd9372_4ac23b5e",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_ea996f81",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2016-06-13T23:08:26Z",
       "side": 1,
       "message": "Although it currently isn\u0027t (although in tests should be) the Skin class could be initialised on something other than \u0027#\u0027 + data.contentId\nWhy not pass this in from the caller which has access to the current skin?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b0e518a2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "Pass $content? We can do so, but I was a little cautious about not passing an object as this function can change it unintentionally. I\u0027d rather pass the ID (as above) and rest assured that the function takes the sole responsibility for any DOM changes.",
+      "parentUuid": "0efd9372_ea996f81",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_30f9284b",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "I was thinking about not loading the module if lazy loading of references was not in use. Having thought about it you\u0027re right as we\u0027re loading this code in the front-end anyway.",
+      "parentUuid": "0efd9372_6a8c5f33",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2a5257e2",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 6
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_5095cce5",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "Should I change it to something like \"section-is-about-to-be-toggled\"? I thought the comment above was good enough.\n\nThe advantage we have here is that the consumer has time to change the section content before it\u0027s displayed to the user so there is no FOUC.",
+      "parentUuid": "0efd9372_2a5257e2",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_4ad87b7f",
         "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -115,6 +223,24 @@
       "writtenOn": "2016-06-13T23:08:26Z",
       "side": 1,
       "message": "Any reason why you switch away from using the template? Surely the template is more readable?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_909f3406",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T07:51:29Z",
+      "side": 1,
+      "message": "Templates are good when constructing jQuery objects and inserting them to the DOM or doing some manipulation. Here I\u0027m trying to mimic an API response and don\u0027t need to use mustache to fetch the template and then fetch its HTML string. This seemed cleaner as you can see what the API is returning easily.",
+      "parentUuid": "0efd9372_4ad87b7f",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
