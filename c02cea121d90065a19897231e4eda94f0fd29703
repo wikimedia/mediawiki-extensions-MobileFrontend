@@ -109,6 +109,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_df7b8722",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-14T21:08:17Z",
+      "side": 1,
+      "message": "This is a tough one. On the one hand, using globals rather than private vars really rubs me the wrong way, but on the other, Baha has a very valid point about not duplicating cache entries. And is asking someone to create a new instance to bypass a cache really the right method of doing so, even if it is technically future-proof?\n\nI think I\u0027m leaning to side with Baha in this instance, although it\u0027s a very close call. Ideally, I think we\u0027d be better off having one module handling all the reference code (as opposed to a skin and a module) and using private vars, but as it stands realistically, I think I agree with Baha here.\n\nI\u0027d love to hear Sam\u0027s opinions as well though as I think he tends to have great ideas around our code architecture.",
+      "parentUuid": "0efd9372_fe29319b",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
