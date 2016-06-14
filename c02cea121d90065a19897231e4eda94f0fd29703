@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_fe29319b",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T15:14:29Z",
+      "side": 1,
+      "message": "Sure, that\u0027s one way. I still think that the use case you described (npm module) can easily be accommodated by adding another key (revid) to the cache when the time comes. Creating an instance of a class as a module clutters the codebase, then you\u0027ll have to keep track of instance in order to use the cache. There will be cases where multiple instance cache the same thing. I could also argue that without the additional revid key, you\u0027d have to create multiple instance for the same page if you want different versions. I think we should let other devs to take a look at this. I strongly feel that this is the right way of doing things. As cache can be bypassed by passing a simple argument if we have a need to do so later.\n\n@phuedx, @joakino, @jhobs what do you think?",
+      "parentUuid": "0efd9372_d338a6c9",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -250,6 +268,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_79fc3b09",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T15:14:29Z",
+      "side": 1,
+      "message": "I don\u0027t understand why I need an instance of the page. I need the reference section ID so that I can query the DOM. If a user is toggling a ref section, how would I utilise an instance of a page when I need which section the user toggled?",
+      "parentUuid": "0efd9372_936e1ec3",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_6a8c5f33",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 6
@@ -296,6 +332,24 @@
       "writtenOn": "2016-06-14T09:41:37Z",
       "side": 1,
       "message": "Look a page!",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b906a31e",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T15:14:29Z",
+      "side": 1,
+      "message": "Which is of no use to me. I can directly query the page by doing `self.page` if I need it. I need the section.",
+      "parentUuid": "0efd9372_7371faa6",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
