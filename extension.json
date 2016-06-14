@@ -636,7 +636,8 @@
 				"resources/mobile.startup/Section.js",
 				"resources/mobile.startup/Thumbnail.js",
 				"resources/mobile.startup/Page.js",
-				"resources/mobile.startup/Skin.js"
+				"resources/mobile.startup/Skin.js",
+				"resources/mobile.startup/OverlayManager.js"
 			],
 			"position": "bottom"
 		},
@@ -1630,7 +1631,6 @@
 				"mobile-frontend-cookies-required"
 			],
 			"scripts": [
-				"resources/skins.minerva.scripts/OverlayManager.js",
 				"resources/skins.minerva.scripts/preInit.js",
 				"resources/skins.minerva.scripts/init.js",
 				"resources/skins.minerva.scripts/initLogging.js",

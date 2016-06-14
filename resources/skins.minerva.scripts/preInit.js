@@ -7,7 +7,7 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
-		OverlayManager = M.require( 'skins.minerva.scripts/OverlayManager' ),
+		OverlayManager = M.require( 'mobile.startup/OverlayManager' ),
 		overlayManager = new OverlayManager( require( 'mediawiki.router' ) ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		gateway = new PageGateway( new mw.Api() ),

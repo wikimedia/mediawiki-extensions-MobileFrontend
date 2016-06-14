@@ -242,6 +242,6 @@
 		}
 	} );
 
-	M.define( 'skins.minerva.scripts/OverlayManager', OverlayManager );
+	M.define( 'mobile.startup/OverlayManager', OverlayManager );
 
 }( mw.mobileFrontend, jQuery ) );
