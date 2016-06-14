@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_70361002",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T08:41:48Z",
+      "side": 1,
+      "message": "OK. Say a user taps on a reference to bring up a reference dialog (mobile.references module). This module has it\u0027s own instance of references gateway. Now, the user wants to expand the references section. The references section uses Skin\u0027s instance of references gateway. How should we share the two? Should skin provide the references gateway to both modules?",
+      "parentUuid": "0efd9372_506b0cee",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -178,6 +196,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_10586458",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T08:41:48Z",
+      "side": 1,
+      "message": "I find it overkill to create a Page object just to query a section. Remember, we\u0027re talking about sections here and we don\u0027t have any knowledge of them at the time of skin construction.",
+      "parentUuid": "0efd9372_10818492",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_6a8c5f33",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 6
@@ -266,6 +302,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_305da84b",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T08:41:48Z",
+      "side": 1,
+      "message": "I wanted to not insert spinners for each reference section without making sure that the section will ever be collapsed by the user. Besides, inserting spinners means detaching the contents of the reference section, and not just one node, but all children. I\u0027d then need to cache this data so that in case references gateway fails I\u0027ll have to re-insert it. So I\u0027d be doing these operations even if the user doesn\u0027t click on any reference section. This may increase memory consumption, especially noticeable on older mobile phones. I\u0027d rather deal with global events and find a better way to figure out how to document them in a later patch.",
+      "parentUuid": "0efd9372_704f3098",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_4ad87b7f",
         "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -313,6 +367,24 @@
       "side": 1,
       "message": "Oh I missed the `1` in which case is this not a breaking change? You are changing the function signature and that should be documented.\n\nIt still seems strange to me that you would have done this. It feels like it would have been less hassle to simply do { 1: mw.template.get( \u0027tests.mobilefrontend\u0027, \u0027refSection.html\u0027 )\n.render() } ) (and more readble - given I would have noticed that `1` first time around! :)",
       "parentUuid": "0efd9372_909f3406",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_d05d3c4d",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-14T08:41:48Z",
+      "side": 1,
+      "message": "This is a new function, I didn\u0027t see any need to keep the old one around.\n\nAlso, render() won\u0027t do it, because I need the HTML string.",
+      "parentUuid": "0efd9372_b0499892",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
