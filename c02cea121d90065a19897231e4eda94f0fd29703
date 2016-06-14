@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_d338a6c9",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-14T09:41:37Z",
+      "side": 1,
+      "message": "var ref \u003d new ReferencesGateway();\nM.define( \u0027skins.minerva.scripts/referenceGateway\u0027, ref );\nnew Page( { refGateway: M.require( \u0027skins.minerva.scripts/referenceGateway\u0027 } )\n\nwould be one way.",
+      "parentUuid": "0efd9372_70361002",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -214,6 +232,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_936e1ec3",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-14T09:41:37Z",
+      "side": 1,
+      "message": "No true. You don\u0027t need to create one. A Skin has one already (see below).",
+      "parentUuid": "0efd9372_10586458",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_6a8c5f33",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 6
@@ -243,6 +279,40 @@
       "side": 1,
       "message": "I was thinking about not loading the module if lazy loading of references was not in use. Having thought about it you\u0027re right as we\u0027re loading this code in the front-end anyway.",
       "parentUuid": "0efd9372_6a8c5f33",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7371faa6",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-14T09:41:37Z",
+      "side": 1,
+      "message": "Look a page!",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_5374b696",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-14T09:41:37Z",
+      "side": 1,
+      "message": "you could pass it in here!",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
