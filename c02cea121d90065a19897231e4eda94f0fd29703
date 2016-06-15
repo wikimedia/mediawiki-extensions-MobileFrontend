@@ -163,6 +163,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_8a5b78fc",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-06-15T15:02:05Z",
+      "side": 1,
+      "message": "Good discussion, my take on it would be:\n\n* I wouldn\u0027t bother with extracting the caching somewhere else in this case.\n* I\u0027d move the cache data structures to the class as instance variables\n* Thinking that we\u0027re designing this to keep a shared common cache across all usage of this module, I\u0027d expose a singleton variable from the module (and the Class type as private for testing).\n\nMy 2 cents.",
+      "parentUuid": "0efd9372_67392def",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -334,6 +352,24 @@
       "side": 1,
       "message": "I don\u0027t understand why I need an instance of the page. I need the reference section ID so that I can query the DOM. If a user is toggling a ref section, how would I utilise an instance of a page when I need which section the user toggled?",
       "parentUuid": "0efd9372_936e1ec3",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_eaf044d8",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-06-15T15:02:05Z",
+      "side": 1,
+      "message": "At least would you mind changing the global $(selector) to the more localized self.page.$(\u0027#\u0027 + content)? That way we\u0027re not implicitly querying the global DOM but a parameter of the function that we can manipulate for unit testing if needed so.",
+      "parentUuid": "0efd9372_79fc3b09",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -528,6 +564,24 @@
       "side": 1,
       "message": "Sounds good to me. Also note that we need both events as lazy loading of images needs to happen *after* a section has been toggled.",
       "parentUuid": "0efd9372_b4622535",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_8a29b838",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-06-15T15:02:05Z",
+      "side": 1,
+      "message": "Something I\u0027ve seen more often in JS is to suffix the event with :modifier, maybe that would fit better, not very important though, the intent is clear",
+      "parentUuid": "0efd9372_2781e592",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
