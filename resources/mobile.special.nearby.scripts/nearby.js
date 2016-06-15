@@ -110,6 +110,7 @@
 		 * current hash.
 		 */
 		router.route( /^(?!.coord|.page).*$/, refreshCurrentLocation );
+		router.checkRoute();
 
 	} );
 

@@ -1496,7 +1496,8 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.nearby"
+				"mobile.nearby",
+				"mediawiki.router"
 			],
 			"messages": [
 				"mobile-frontend-nearby-refresh"
@@ -1674,6 +1675,7 @@
 		"skins.minerva.editor": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
+				"mediawiki.router",
 				"skins.minerva.icons.images.scripts",
 				"skins.minerva.scripts",
 				"mobile.drawers",
