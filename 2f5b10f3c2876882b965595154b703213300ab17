@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_54693987",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1263,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-15T08:30:15Z",
+      "side": 1,
+      "message": "This line is not needed anymore.",
+      "revId": "2f5b10f3c2876882b965595154b703213300ab17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
