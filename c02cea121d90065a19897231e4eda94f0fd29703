@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_47e2299d",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-15T13:15:19Z",
+      "side": 1,
+      "message": "I\u0027ve thought about this a lot – sorry Bmansurov, my cogs whir somewhat slower than yours! ;) – and here\u0027s what I\u0027ve got:\n\n* the caching and cache key construction logic should be separate from the reference fetching logic – this way, an instance of a cache can be passed to any concretion of the ReferencesGateway abstract base class. Given this, it seems logical to me to place cache setting/getting //but not storing// in the abstract base class\n* there are two independent systems constructing an instance of the same class, which is non-trivial to construct unless we include a module level cache, which is a design concern. Let\u0027s separate the responsibility of constructing an instance of the class, including passing in an instance of a cache, into a distinct class: the ReferencesGatewayFactory class. By implementing the ReferencesGatewayFactory#factory method such that it always passes in the same instance of the cache, we alleviate the problem",
+      "parentUuid": "0efd9372_df7b8722",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -456,6 +474,41 @@
       "side": 1,
       "message": "I wanted to not insert spinners for each reference section without making sure that the section will ever be collapsed by the user. Besides, inserting spinners means detaching the contents of the reference section, and not just one node, but all children. I\u0027d then need to cache this data so that in case references gateway fails I\u0027ll have to re-insert it. So I\u0027d be doing these operations even if the user doesn\u0027t click on any reference section. This may increase memory consumption, especially noticeable on older mobile phones. I\u0027d rather deal with global events and find a better way to figure out how to document them in a later patch.",
       "parentUuid": "0efd9372_704f3098",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b4622535",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-15T13:15:19Z",
+      "side": 1,
+      "message": "I\u0027ve argued before that I think we can repurpose the section-toggled event as it\u0027s only listened to by one listener and that listener doesn\u0027t actually care about the detail of the event.\n\nI think Bmansurov is right to be concerned with the semantics of the name and so introduce a new event. However, I think the name is confusing. A pattern I\u0027ve seen elsewhere – IIRC the Symfony codebase and associated bundles – is to prefix events that are emitted before an action with \"before-\".\n\nWith the above in mind, I\u0027d suggest \"before-section-toggled\". What do y\u0027all think?",
+      "parentUuid": "0efd9372_305da84b",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_14597190",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-15T13:15:19Z",
+      "side": 1,
+      "message": "This event is concerned with the section that is being toggled. Why pass around details of the content of the section rather than the section itself?",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
