@@ -7,8 +7,7 @@
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
-		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
-		context = M.require( 'mobile.context/context' );
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 
 	/**
 	 * Overlay displaying search results
@@ -82,8 +81,7 @@
 					href: feedbackLink
 				} ).options,
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
-			},
-			isBeta: context.isBetaGroupMember()
+			}
 		} ),
 		/**
 		 * @inheritdoc

@@ -140,7 +140,6 @@
 			],
 			"position": "top",
 			"styles": [
-				"resources/skins.minerva.beta.styles/ui.less",
 				"resources/skins.minerva.beta.styles/pageactions.less"
 			]
 		},
@@ -203,7 +202,8 @@
 				"notifications": "resources/skins.minerva.icons.images/bell.svg",
 				"mainmenu": "resources/skins.minerva.icons.images/hamburger.svg",
 				"edit": "resources/skins.minerva.icons.images/editLocked.svg",
-				"edit-enabled": "resources/skins.minerva.icons.images/edit.svg"
+				"edit-enabled": "resources/skins.minerva.icons.images/edit.svg",
+				"magnifying-glass-white": "resources/skins.minerva.icons.images/magnifying-glass-white.svg"
 			}
 		},
 		"skins.minerva.icons.beta.images": {
@@ -211,8 +211,7 @@
 			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
-				"language-switcher": "resources/skins.minerva.icons.beta.images/languageSwitcher.svg",
-				"magnifying-glass-white": "resources/skins.minerva.icons.beta.images/magnifying-glass-white.svg"
+				"language-switcher": "resources/skins.minerva.icons.beta.images/languageSwitcher.svg"
 			}
 		},
 		"mobile.overlay.images": {

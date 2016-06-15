@@ -303,7 +303,7 @@
 
 .overlay-header-container {
 	top: @headerMarginTop;
-	border-bottom: 1px solid @grayLight;
+	border-bottom: 1px solid @chromeContentSeparator;
 
 	&.header-chrome {
 		background-color: @chromeColor;
@@ -372,12 +372,6 @@
 		overflow-y: scroll;
 		// smoother scrolling (with momentum) on iOS
 		-webkit-overflow-scrolling: touch;
-	}
-}
-
-.beta {
-	.overlay-header-container {
-		border-bottom-color: @chromeContentSeparator;
 	}
 }
 

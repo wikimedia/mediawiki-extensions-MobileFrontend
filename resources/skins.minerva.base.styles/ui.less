@@ -11,7 +11,26 @@ body {
 }
 
 #content {
-	border-top: 1px solid @grayLight;
+	//border-top: 1px solid @grayLight;
+	border-top-color: @chromeContentSeparator;
+}
+
+.header-container {
+	background-color: @chromeColor;
+}
+
+.search-overlay,
+.header {
+	.search {
+		padding: .5em 28px;
+		// FIXME: share this file with the similar file in mobile.languages.structured
+		.background-image-svg( 'magnifying-glass.svg', '' );
+		background-position: 7px center;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		border-radius: @borderRadius;
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, .05 );
+	}
 }
 
 .last-modified-bar {
@@ -115,18 +134,39 @@ body {
 .client-use-basic-search,
 .client-nojs {
 	.search-box {
-		.search,
-		.fulltext-search {
-			float: left;
-		}
+		.fulltext-search,  // FIXME: remove `.fulltext-search` selector when cache clears
+		.button-wrapper {
+			background-color: @colorProgressive;
+			border-radius: @borderRadius;
+			cursor: pointer;
+			float: right;
+			margin-left: .5em;
+			padding: .375em 0;
 
-		.search {
-			// Assume the smallest possible screen size.
-			// We want people to be able to search we don't care if it looks pretty.
-			width: 80px;
-			margin-right: 8px;
-			border: 1px solid @grayLight;
-			padding: .5em .1em;
+			.fulltext-search {
+				opacity: 0;  // the enclosing div is an icon, no need to show the text
+				padding: 0;
+			}
+		}
+		.input-wrapper {
+			overflow: hidden;
+
+			.search {
+				margin-right: 0;
+				// FIXME: use the magnifying glass width, rather than an absolute value
+				padding: .5em .1em .5em 2em; // 2em - space for the magnifying glass icon
+				width: 100%;
+			}
+		}
+		// FIXME: remove when cache clears
+		> .search,
+		> .fulltext-search {
+			display: inline-block;
+			float: none;
+		}
+		// FIXME: remove when cache clears
+		> .search {
+			max-width: 180px;
 		}
 	}
 

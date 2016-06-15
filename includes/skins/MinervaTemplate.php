@@ -32,23 +32,13 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getSearchForm( $data ) {
-		$isBeta = MobileContext::singleton()->isBetaGroupMember();
-		$additionalButtonClasses = '';
-
-		if ( !$isBeta ) {
-			// The enclosing div already has this class in beta, so only add it
-			// in stable.
-			$additionalButtonClasses = ' no-js-only';
-		}
-
 		$args = [
 			'action' => $data['wgScript'],
 			'searchInput' => $this->makeSearchInput( $this->getSearchAttributes() ),
 			'searchButton' => $this->makeSearchButton( 'fulltext', [
 				'class' => MobileUI::buttonClass( 'progressive',
-					'fulltext-search' . $additionalButtonClasses ),
-			] ),
-			'isBeta' => $isBeta
+					'fulltext-search' ),
+			] )
 		];
 		$templateParser = new TemplateParser( __DIR__ );
 		return $templateParser->processTemplate( 'search_form', $args );
