@@ -145,6 +145,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_67392def",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-15T13:49:24Z",
+      "side": 1,
+      "message": "Thanks all for the discussion.\n\nSam, honestly, I\u0027m confused about your suggestion. I don\u0027t completely understand the solution and the problem it\u0027s trying to solve. If the concern is not to use cache when desired, why can\u0027t we make the ReferenceMobileViewGateway function accept an argument \"noCache\", which would bypass the cache. Others users of the gateway would still benefit from using the cache.\n\nAlso, always having the cache in this case is good because, references for a given page and revid won\u0027t change at all. There is no need to fetch something new if it hasn\u0027t changed. For this reason, what do you think about leaving things as is?",
+      "parentUuid": "0efd9372_47e2299d",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_2aeff7ae",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 6
@@ -498,6 +516,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_2781e592",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-15T13:49:24Z",
+      "side": 1,
+      "message": "Sounds good to me. Also note that we need both events as lazy loading of images needs to happen *after* a section has been toggled.",
+      "parentUuid": "0efd9372_b4622535",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_14597190",
         "filename": "resources/mobile.toggle/toggle.js",
         "patchSetId": 6
@@ -509,6 +545,24 @@
       "writtenOn": "2016-06-15T13:15:19Z",
       "side": 1,
       "message": "This event is concerned with the section that is being toggled. Why pass around details of the content of the section rather than the section itself?",
+      "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_874ff196",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-15T13:49:24Z",
+      "side": 1,
+      "message": "OK, passing the section sounds good to me.",
+      "parentUuid": "0efd9372_14597190",
       "revId": "c02cea121d90065a19897231e4eda94f0fd29703",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
