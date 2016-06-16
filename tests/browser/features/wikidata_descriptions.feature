@@ -3,7 +3,6 @@ Feature: Wikidata descriptions
 
   Background:
     Given I am using the mobile site
-      And I have Wikidata descriptions enabled
       And I am on the "Main Page" page
 
   Scenario: Description does not appear on Main Page

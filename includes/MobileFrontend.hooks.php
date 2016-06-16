@@ -1260,14 +1260,13 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
-		$isBeta = $context->isBetaGroupMember();
 		$mfUseWikibaseDescription = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
-			if ( $mfUseWikibaseDescription && $isBeta ) {
+			if ( $mfUseWikibaseDescription ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );

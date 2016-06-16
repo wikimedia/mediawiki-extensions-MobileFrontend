@@ -625,9 +625,21 @@ class SkinMinerva extends SkinTemplate {
 				);
 			}
 		} else {
-			$title = $this->getOutput()->getPageTitle();
-			if ( $title ) {
-				$html = Html::rawElement( 'h1', [ 'id' => 'section_0' ], $title );
+			$title = $this->getTitle();
+			$pageTitle = $this->getOutput()->getPageTitle();
+			if ( $title && $pageTitle ) {
+				$html = Html::rawElement( 'h1', [
+						'id' => 'section_0',
+					], $pageTitle );
+				if ( !$title->isMainPage() && $title->inNamespace( NS_MAIN ) ) {
+					$vars = $this->getSkinConfigVariables();
+					$description = $vars['wgMFDescription'];
+					if ( $description ) {
+						$html .= Html::element( 'div', [
+								'class' => 'tagline',
+							], $description );
+					}
+				}
 			}
 		}
 		return $html;
@@ -945,7 +957,8 @@ class SkinMinerva extends SkinTemplate {
 		$vars = [
 			'wgMinervaMenuData' => $this->getMenuData(),
 			// Expose for skins.minerva.tablet.scripts
-			'wgMinervaTocEnabled' => $this->getOutput()->getProperty( 'MFTOC' )
+			'wgMinervaTocEnabled' => $this->getOutput()->getProperty( 'MFTOC' ),
+			'wgMFDescription' => $this->getOutput()->getProperty( 'wgMFDescription' ),
 		];
 
 		if ( $this->isAuthenticatedUser() ) {
