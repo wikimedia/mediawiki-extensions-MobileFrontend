@@ -12,7 +12,9 @@
 
 	background-color: @placeholderBackgroundColor;
 
-	display: inline-block;
+	// In order to avoid reflows placeholder needs to be block, or
+	// inline-block+overflow:hidden given it is nested inside an inline <a>
+	display: block;
 
 	// When inserted, don't show the image because we want to animate it
 	img {
