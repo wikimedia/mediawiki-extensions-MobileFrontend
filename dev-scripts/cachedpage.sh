@@ -1,6 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-#usage ./dev-scripts/cachedpage.sh 1bd5bc53ebb04fff7f508712a29fdf1f1d7fe14f San_Francisco
+# cachedpage.sh
+#
+# Usage: cachedpage.sh <rev> [title]
+#
+# Parameters:
+#   rev    The revision of the Git commit that you want to check out in order to test the new assets
+#          against. See https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection for a detailed
+#          explanation of Git revision selection
+#   title  The title of the page that you're testing [default: Main_Page]
 
 if
 ! git diff --exit-code --quiet # check for unstaged changes
@@ -19,14 +27,15 @@ fi
 
 git checkout $1 #go to commit caller requested
 
+HOST=${MEDIAWIKI_HOST:-"http://127.0.0.1:8080"}
+TITLE=${2:="Main_Page"}
+
 #Generate the 'cached' pages
 mkdir -p tmp
-URL=${MEDIAWIKI_URL:-"http://127.0.0.1:8080/w/index.php/"}
-TITLE=${2:="Main_Page"}
-echo "Using $URL as a development environment host."
-echo "To specify a different host set MEDIAWIKI_URL environment variable"
-echo '(e.g. by running "export MEDIAWIKI_URL=http://127.0.0.1:80/w/index.php")'
-wget "$URL$TITLE?useformat=mobile" -O tmp/cached.html
+echo "Using ${HOST} as a development environment host."
+echo "To specify a different host set MEDIAWIKI_HOST environment variable"
+echo '(e.g. by running "export MEDIAWIKI_HOST=http://127.0.0.1:80/")'
+curl "${HOST}/wiki/${TITLE}?useformat=mobile" -o tmp/cached.html
 
 #Return to previous branch
 git checkout $cur_branch
@@ -35,7 +44,7 @@ git checkout $cur_branch
 echo
 echo Cached page generated at following locations
 echo
-echo \* $URL/extensions/MobileFrontend/tmp/cached.html
+echo \* ${HOST}/w/extensions/MobileFrontend/tmp/cached.html
 
 if [ $stashed_changes ]
 then
