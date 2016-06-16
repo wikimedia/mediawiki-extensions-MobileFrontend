@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_0c395def",
+        "filename": "resources/mobile.references/setup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T21:51:35Z",
+      "side": 1,
+      "message": "Then:\n\n    page.$el.on( \u0027click\u0027, \u0027sup a\u0027, { page: page }, onClickReference );\n\nor however you access page\u0027s $el.",
+      "parentUuid": "0efd9372_c199de81",
+      "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_3e8c4b32",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 8
