@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_98174ff3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 960,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-16T13:13:22Z",
+      "side": 1,
+      "message": "This and the line below could use $out, defined above.",
+      "revId": "3ac87b6428b80b7df1c52fe01f89f82f1480f2c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
