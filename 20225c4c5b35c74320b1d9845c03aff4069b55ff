@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_41a68ebf",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-16T20:27:24Z",
+      "side": 1,
+      "message": "You\u0027re right, no need to do it this way. Thanks.",
+      "parentUuid": "0efd9372_7eb093f1",
+      "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_fe7ac31d",
         "filename": "resources/mobile.references/setup.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2016-06-16T17:57:21Z",
       "side": 1,
       "message": "Shouldn\u0027t we be attaching the event handler to the body (or a similar container) and filtering by reference? This would greatly reduce the number of event handlers in most articles.\n\ne.g.\n    $bodyContent.on( \u0027click\u0027, \u0027sup a\u0027, { page: page }, onClickReference );",
+      "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_c199de81",
+        "filename": "resources/mobile.references/setup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-16T20:27:24Z",
+      "side": 1,
+      "message": "page\u0027s $el maybe different from $bodyContent, so we need that flexibility. However, the current page\u0027s $el is also $bodyContent.",
+      "parentUuid": "0efd9372_fe7ac31d",
       "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +134,24 @@
       "writtenOn": "2016-06-16T17:57:21Z",
       "side": 1,
       "message": "I\u0027m confused. The setup module is passed to the skin and also called explicitly here? What\u0027s the purpose of this file? (This could be a symptom of a lack of documentation.)",
+      "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_6162b238",
+        "filename": "resources/skins.minerva.scripts/references.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-16T20:27:24Z",
+      "side": 1,
+      "message": "Great catch. We can setup references after the Skin has rendered.",
+      "parentUuid": "0efd9372_becddb64",
       "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
