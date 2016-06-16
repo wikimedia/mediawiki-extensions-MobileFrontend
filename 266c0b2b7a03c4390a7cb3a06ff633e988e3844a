@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_1e04e77f",
+        "filename": "resources/mobile.overlays/Overlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "I\u0027d move header-chrome in front of position-fixed if it doesn\u0027t affect specificity. That way there\u0027s less chance for someone to accidentally think it\u0027s lumped in with the {{#fixedHeader}} check.",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_bef4bb84",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "You\u0027re using the shorthand notation with a fully specified \"-right.\" No need for the zeroes or remove the \"-right\" (probably the latter).",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_9eef37ae",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "I\u0027m assuming this is a WIP thing, but these commented-out lines should be removed in the final version.",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_feee43b0",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "Earlier you use a variable for border-radius. Any reason for the deviation now?",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_dee9bfa8",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "This //seems// like the wrong way to do this, although I\u0027m not 100% of the right way and I know things can be finicky. Wouldn\u0027t \"visibility: hidden\", \"display: none\", or something along those lines be better?",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_3e30cb52",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-16T18:20:29Z",
+      "side": 1,
+      "message": "This should probably use the icon\u0027s exact width (+ any offset needed) rather than a relative measurement.",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
