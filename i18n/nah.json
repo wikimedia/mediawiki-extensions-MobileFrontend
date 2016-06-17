@@ -5,12 +5,14 @@
 			"Teòtlalili"
 		]
 	},
-	"mobile-frontend-editor-edit": "Xicpatla",
+	"mobile-frontend-editor-edit": "Mà moyèktlàli",
 	"mobile-frontend-home-button": "Chāntli",
+	"mobile-frontend-language-article-heading": "Mà mîkuilòpòwa ìka oksè tlamantli tlâtòlli",
 	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Ximopanōltih}}, $1!",
 	"mobile-frontend-main-menu-account-create": "Ticchīhuaz motlapōhual",
 	"mobile-frontend-main-menu-login": "Mà kalakòwa",
 	"mobile-frontend-main-menu-settings": "Tlatlālīliztli",
+	"mobile-frontend-placeholder": "Mà motèmo ìpan {{SITENAME}}",
 	"mobile-frontend-talk-overlay-header": "Zānīlli",
 	"mobile-frontend-terms-text": "Tequihuihcānahuatīlli",
 	"mobile-frontend-watchlist-filter-talk": "Zānīlli",

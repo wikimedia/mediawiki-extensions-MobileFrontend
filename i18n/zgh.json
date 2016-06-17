@@ -11,10 +11,12 @@
 	"mobile-frontend-main-menu-button-tooltip": "ⵕⵥⵎ ⵜⴰⵍⴳⴰⵎⵜ ⵜⴰⴷⵙⵍⴰⵏⵜ",
 	"mobile-frontend-main-menu-login": "ⴰⴷⴼ",
 	"mobile-frontend-main-menu-settings": "ⵜⵉⵙⵖⴰⵍ",
+	"mobile-frontend-main-menu-watchlist": "ⵜⴰⵍⴳⴰⵎⵜ ⵏ ⵓⴹⴼⴼⵓⵕ",
 	"mobile-frontend-news-items": "ⴳ ⵉⵏⵖⵎⵉⵙⵏ",
 	"mobile-frontend-password-placeholder": "ⵜⴰⴳⵓⵔⵉ ⵏ ⵓⵣⵔⴰⵢ",
 	"mobile-frontend-placeholder": "ⵔⵣⵓ ⴳ {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "ⵜⵉⵏⵏⵓⵜⵍⴰ",
+	"mobile-frontend-random-button": "ⴰⴷⵀⵎⴰⵙ",
 	"mobile-frontend-terms-text": "ⵜⵉⴼⴰⴷⵉⵡⵉⵏ ⵏ ⵓⵙⵎⵔⵙ",
 	"mobile-frontend-view-desktop": "ⴰⵙⵉⵔⴰ"
 }
