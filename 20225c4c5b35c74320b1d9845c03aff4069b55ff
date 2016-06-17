@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_edccd38e",
+        "filename": "resources/mobile.references/setup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:08:48Z",
+      "side": 1,
+      "message": "Sure, since this is a copy \u0026 paste, I\u0027d like to not introduce this change in this patch. Feel free to submit a follow up patch.",
+      "parentUuid": "0efd9372_0c395def",
+      "revId": "20225c4c5b35c74320b1d9845c03aff4069b55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_3e8c4b32",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 8
