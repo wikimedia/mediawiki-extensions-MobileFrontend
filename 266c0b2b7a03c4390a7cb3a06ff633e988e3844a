@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_ecbdf917",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:40:34Z",
+      "side": 1,
+      "message": "oops, meant to be just padding.",
+      "parentUuid": "0efd9372_bef4bb84",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_9eef37ae",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2016-06-16T18:20:29Z",
       "side": 1,
       "message": "I\u0027m assuming this is a WIP thing, but these commented-out lines should be removed in the final version.",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_8c69cd8b",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:40:34Z",
+      "side": 1,
+      "message": "yes, they will be unless we need to un-comment them for cached pages.",
+      "parentUuid": "0efd9372_9eef37ae",
       "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_0c2cbd44",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:40:34Z",
+      "side": 1,
+      "message": "I think I can re-use the variable here. The difference is 1px imo.",
+      "parentUuid": "0efd9372_feee43b0",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_dee9bfa8",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_8c170df3",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:40:34Z",
+      "side": 1,
+      "message": "I think some browsers won\u0027t let you submit the form if the button is hidden from the user. Security something something.",
+      "parentUuid": "0efd9372_dee9bfa8",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_3e30cb52",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
@@ -98,6 +170,24 @@
       "writtenOn": "2016-06-16T18:20:29Z",
       "side": 1,
       "message": "This should probably use the icon\u0027s exact width (+ any offset needed) rather than a relative measurement.",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_0cdb1d55",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T14:40:34Z",
+      "side": 1,
+      "message": "I\u0027ll leave a FIXME here, as I\u0027m trying to push the existing code only and not change the existing implementation.",
+      "parentUuid": "0efd9372_3e30cb52",
       "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
