@@ -23,9 +23,32 @@
 	} );
 	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
 
+	/**
+	 * Given 2 functions, it returns a function that will run both with it's
+	 * context and parameters and return the results combined
+	 * @private
+	 * @param {Function} fn1
+	 * @param {Function} fn2
+	 * @return {Function} which returns the results of [fn1, fn2]
+	 */
+	function apply2( fn1, fn2 ) {
+		return function () {
+			return [
+				fn1.apply( this, arguments ),
+				fn2.apply( this, arguments )
+			];
+		};
+	}
+
 	$( window )
-		.on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) )
-		.on( 'scroll', $.debounce( 100, $.proxy( M, 'emit', 'scroll' ) ) );
+		.on( 'resize', apply2(
+			$.debounce( 100, $.proxy( M, 'emit', 'resize' ) ),
+			$.throttle( 200, $.proxy( M, 'emit', 'resize:throttled' ) )
+		) )
+		.on( 'scroll', apply2(
+			$.debounce( 100, $.proxy( M, 'emit', 'scroll' ) ),
+			$.throttle( 200, $.proxy( M, 'emit', 'scroll:throttled' ) )
+		) );
 
 	/**
 	 * Get current page view object
