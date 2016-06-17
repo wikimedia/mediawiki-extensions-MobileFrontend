@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_5ffca608",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T16:05:54Z",
+      "side": 1,
+      "message": "Isn\u0027t a function being returned?",
+      "revId": "9a77240c0607537b90f6b90458e654087634e474",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_df36d6e3",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T16:05:54Z",
+      "side": 1,
+      "message": "Why return anything? Why not just apply?",
+      "revId": "9a77240c0607537b90f6b90458e654087634e474",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_ff2bda75",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-17T16:05:54Z",
+      "side": 1,
+      "message": "What are the benefits of using apply2 over two `.on( \u0027resize\u0027 )` event listeners?",
+      "revId": "9a77240c0607537b90f6b90458e654087634e474",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
