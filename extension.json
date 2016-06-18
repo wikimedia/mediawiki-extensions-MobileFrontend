@@ -1550,14 +1550,6 @@
 			],
 			"position": "top"
 		},
-		"mobile.special.mobilediff.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"scripts": [
-			]
-		},
 		"skins.minerva.special.styles": {
 			"targets": "mobile",
 			"position": "top",
