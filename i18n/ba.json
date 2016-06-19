@@ -239,7 +239,7 @@
 	"mobile-frontend-photo-upload-invalid-user": "\"$1\" Ҡатнашыусы иҫәп яҙмаһы теркәлмәгән.",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> {{PLURAL:$1|тейәргә}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ тейәлгәндәр",
-	"mobile-frontend-placeholder": "{{SITENAME}}-та эҙләргә",
+	"mobile-frontend-placeholder": "{{SITENAME}} эсендә эҙләргә",
 	"mobile-frontend-placeholder-app": "{{grammar:genitive|{{SITENAME}}}} бынан эҙләү (веб-ҡушымта)",
 	"mobile-frontend-placeholder-beta": "{{SITENAME}} буйлап эҙләргә (Бета)",
 	"mobile-frontend-privacy-link-text": "Сер һаҡлау",
