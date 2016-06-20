@@ -49,6 +49,7 @@ class SpecialMobileCite extends MobileSpecialPage {
 	 * @param string $pagename The revision number
 	 */
 	public function executeWhenAvailable( $param ) {
+		$this->setHeaders();
 		$out = $this->getOutput();
 		$revision = null;
 		if ( $param ) {
@@ -64,7 +65,13 @@ class SpecialMobileCite extends MobileSpecialPage {
 			$html = $this->getReferenceBodyHtml( $title, $revId );
 			$html = MobileUI::contentElement( $html );
 			$out->setPageTitle( $title->getText() );
-			$out->addHTML( $html );
+			$args = [
+				'article_link' => $title->getLocalURL(),
+				'article_link_title' => $this->msg( 'mobile-frontend-return-to-page' )->text(),
+				'html' => $html
+			];
+			$templateParser = new TemplateParser( __DIR__ );
+			$out->addHTML( $templateParser->processTemplate( 'SpecialMobileCite', $args ) );
 		} else {
 			$out->setPageTitle( $this->msg( 'mobile-frontend-cite-error-title' ) );
 			$out->addHTML( MobileUI::errorBox( $this->msg( 'mobile-frontend-cite-error' ) ) );
