@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_4e651241",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-20T10:43:57Z",
+      "side": 1,
+      "message": "L17 should be deleted, non?",
+      "revId": "b55a3d586e92a08386ab76903bce3299cdddfec9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
