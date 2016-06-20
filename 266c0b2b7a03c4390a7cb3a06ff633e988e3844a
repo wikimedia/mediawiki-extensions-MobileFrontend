@@ -159,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_a90ab81f",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-20T10:44:12Z",
+      "side": 1,
+      "message": "Can you track down a blog post/browser bug detailing this behaviour?\n\nSee http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ for details about a new – ;) – image replacement technique, which is relevant here.",
+      "parentUuid": "0efd9372_8c170df3",
+      "revId": "266c0b2b7a03c4390a7cb3a06ff633e988e3844a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_3e30cb52",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
