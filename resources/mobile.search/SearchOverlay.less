@@ -14,21 +14,33 @@
 .search-overlay {
 	background: #fff;
 
-	.overlay-header,
 	.results,
 	.search-feedback {
 		// don't use background to preserve .loading properties
 		background-color: #fff;
 	}
+	.overlay-header {
+		background-color: transparent;
+	}
+	.overlay-title {
+		// because the clear icon is absolutely positioned
+		position: relative;
+	}
 
 	input {
 		border: none;
-		padding: 0;
+		// save space for the clear icon
+		padding: 0 ( @iconSize + @iconGutterWidth * 2 ) 0 0;
 
 		// See https://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx (T102325)
 		&::-ms-clear {
 			display: none;
 		}
+	}
+	.clear {
+		position: absolute;
+		top: 0;
+		right: @iconGutterWidth;
 	}
 
 	.overlay-content {
@@ -154,27 +166,3 @@
 	}
 }
 
-// FIXME: T134894
-.beta {
-	.search-overlay {
-		.overlay-header {
-			background-color: transparent;
-		}
-
-		.overlay-title {
-			// because the clear icon is absolutely positioned
-			position: relative;
-		}
-
-		input {
-			// save space for the clear icon
-			padding-right: @iconSize + @iconGutterWidth * 2;
-		}
-
-		.clear {
-			position: absolute;
-			top: 0;
-			right: @iconGutterWidth;
-		}
-	}
-}

@@ -6,10 +6,5 @@
 		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
 	</form>
 	{{! See: T136243. Do not put the clear button inside the form as hitting enter on the input element triggers a button click, rather than submitting the form. }}
-	{{#isBeta}}{{#clearIcon}}{{>icon}}{{/clearIcon}}{{/isBeta}}
+	{{#clearIcon}}{{>icon}}{{/clearIcon}}
 </div>
-{{^isBeta}}
-<ul>
-	<li>{{#clearIcon}}{{>icon}}{{/clearIcon}}</li>
-</ul>
-{{/isBeta}}
