@@ -1266,7 +1266,8 @@ class MobileFrontendHooks {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
-			if ( $mfUseWikibaseDescription ) {
+			// FIXME: Remove beta check once enabled in production
+			if ( $mfUseWikibaseDescription || $context->isBetaGroupMember() ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
