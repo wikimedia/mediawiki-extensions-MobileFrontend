@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"AlnashPiyash2"
+			"AlnashPiyash2",
+			"Kaganer"
 		]
 	},
 	"mobile-frontend-home-button": "Доре",
 	"mobile-frontend-language-article-heading": "Мукет кылын лыдӟыны",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Берпуметӥ {{GENDER:$1|тупатон}} лэсьтэмын {{PLURAL:$3|$3 нуналлы талэсь азьло|1=толон}}] {{PLURAL:$5|викиавторен [$6 $2]|0=тодмотэм викиавторен}}",
 	"mobile-frontend-main-menu-logout": "Потыны",
-	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|Викиавторлэсь}} бамзэ учкыны.",
-	"mobile-frontend-profile-usertalk": "$1 викиавторлы гожтыны"
+	"mobile-frontend-view": "Мобильной версия"
 }
