@@ -809,6 +809,8 @@ class MobileFrontendHooks {
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
 		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
+			$link = false;
+
 			if ( !$context->shouldDisplayMobileView() ) {
 				// add alternate link to desktop sites - bug T91183
 				$desktopUrl = $title->getFullUrl();
@@ -817,14 +819,21 @@ class MobileFrontendHooks {
 					'media' => 'only screen and (max-width: ' . $lessVars['deviceWidthTablet'] . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				];
-			} else {
-				// add canonical link to mobile pages, instead of noindex - bug T91183
+			} elseif (
+				!Title::makeTitleSafe( $title->getNamespace(), strtok( $title->getText(), '/' ) )
+					->equals( SpecialPage::getTitleFor( 'MobileCite' ) )
+			) {
+				// Add canonical link to mobile pages (except for Special:MobileCite),
+				// instead of noindex - bug T91183.
 				$link = [
 					'rel' => 'canonical',
 					'href' => $title->getFullUrl(),
 				];
 			}
-			$out->addLink( $link );
+
+			if ( $link !== false ) {
+				$out->addLink( $link );
+			}
 		}
 
 		// set the vary header to User-Agent, if mobile frontend auto detects, if the mobile
