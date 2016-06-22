@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_3b272761",
+        "filename": "includes/specials/SpecialMobileCite.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-22T09:13:40Z",
+      "side": 1,
+      "message": "This conditional can go now, non?",
+      "revId": "ac9df623adfad2bea14e2dab937210032540f756",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
