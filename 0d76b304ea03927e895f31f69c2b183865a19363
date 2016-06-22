@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_8358655a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-22T18:33:35Z",
+      "side": 1,
+      "message": "Can you explain more? Are you suggesting I should check whether the newly created title is a special page title? If yes, wouldn\u0027t `equals` already check that as I\u0027m comparing the title to a special page title?",
+      "parentUuid": "0efd9372_9b6573e0",
+      "revId": "0d76b304ea03927e895f31f69c2b183865a19363",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_7b608fcc",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
