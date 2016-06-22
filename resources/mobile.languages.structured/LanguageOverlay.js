@@ -20,8 +20,8 @@
 		);
 		options.allLanguages = languages.all;
 		options.allLanguagesCount = languages.all.length;
-		options.preferredLanguages = languages.preferred;
-		options.preferredLanguagesCount = languages.preferred.length;
+		options.suggestedLanguages = languages.suggested;
+		options.suggestedLanguagesCount = languages.suggested.length;
 
 		Overlay.call( this, options );
 	}
@@ -34,7 +34,7 @@
 			inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
 			// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
 			allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
-			preferredLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-preferred-languages-header' ).toLocaleUpperCase()
+			suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase()
 		} ),
 		/** @inheritdoc */
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {

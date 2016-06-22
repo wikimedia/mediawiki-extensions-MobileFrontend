@@ -5,10 +5,10 @@
 </div>
 
 <div class="overlay-content-body">
-	{{#preferredLanguagesCount}}
-	<h3 class="list-header">{{preferredLanguagesHeader}}</h3>
-	<ol class="site-link-list preferred-languages">
-		{{#preferredLanguages}}
+	{{#suggestedLanguagesCount}}
+	<h3 class="list-header">{{suggestedLanguagesHeader}}</h3>
+	<ol class="site-link-list suggested-languages">
+		{{#suggestedLanguages}}
 			<li>
 				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
 					<div>
@@ -22,9 +22,9 @@
 					</div>
 				</a>
 			</li>
-		{{/preferredLanguages}}
+		{{/suggestedLanguages}}
 	</ol>
-	{{/preferredLanguagesCount}}
+	{{/suggestedLanguagesCount}}
 
 	{{#allLanguagesCount}}
 	<h3 class="list-header">{{allLanguagesHeader}}<span>{{allLanguagesCount}}</span></h3>
