@@ -33,6 +33,24 @@
       "revId": "ac9df623adfad2bea14e2dab937210032540f756",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_430cbd45",
+        "filename": "includes/specials/SpecialMobileCite.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-22T18:39:11Z",
+      "side": 1,
+      "message": "Do you mean I should remove the conditional? If I do so, when error happens \u0027article_link\u0027 and \u0027article_link_title\u0027 will be undefined. Also, it would be nice not to output the enclosing div when it\u0027s not needed.",
+      "parentUuid": "0efd9372_3b272761",
+      "revId": "ac9df623adfad2bea14e2dab937210032540f756",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
