@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_06b483e3",
+        "filename": "resources/mobile.cache/Cache.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-22T19:38:53Z",
+      "side": 1,
+      "message": "What\u0027s an \u0027impl\u0027? Can we expand it?",
+      "revId": "eedbbc54ebeca4241bef97712804d436594566f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_467ccb1b",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-22T19:38:53Z",
+      "side": 1,
+      "message": "Can we document these arguments?",
+      "revId": "eedbbc54ebeca4241bef97712804d436594566f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_e68cdf34",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-22T19:38:53Z",
+      "side": 1,
+      "message": "Any reason why this cannot be it\u0027s own module? Or at least we need to change this module name to indicate that it\u0027s not only \u0027ReferencesMobileViewGateway\u0027, but also an instance of it.",
+      "revId": "eedbbc54ebeca4241bef97712804d436594566f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
