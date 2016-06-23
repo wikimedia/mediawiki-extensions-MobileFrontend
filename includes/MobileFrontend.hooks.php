@@ -819,10 +819,7 @@ class MobileFrontendHooks {
 					'media' => 'only screen and (max-width: ' . $lessVars['deviceWidthTablet'] . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				];
-			} elseif (
-				!Title::makeTitleSafe( $title->getNamespace(), strtok( $title->getText(), '/' ) )
-					->equals( SpecialPage::getTitleFor( 'MobileCite' ) )
-			) {
+			} elseif ( !$title->isSpecial( 'MobileCite' ) ) {
 				// Add canonical link to mobile pages (except for Special:MobileCite),
 				// instead of noindex - bug T91183.
 				$link = [
