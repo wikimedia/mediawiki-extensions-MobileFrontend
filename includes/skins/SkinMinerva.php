@@ -616,7 +616,7 @@ class SkinMinerva extends SkinTemplate {
 			if ( is_string( $fromDate ) ) {
 				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
 				$tagline = $this->msg( 'mobile-frontend-user-page-member-since',
-						$fromDateTs->format( 'F, Y' ) );
+						$fromDateTs->format( 'F, Y' ), $this->pageUser );
 			}
 		} else {
 			$title = $this->getTitle();

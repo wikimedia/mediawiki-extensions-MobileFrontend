@@ -343,7 +343,7 @@
 	"mobile-frontend-watchlist-removed": "Removed $1 from your watchlist",
 	"mobile-frontend-watchlist-signup-action": "<strong>A watchlist helps you bookmark pages and keep track of changes to them.</strong><br />Sign up to start one now.",
 	"mobile-frontend-watchlist-view": "View your watchlist",
-	"mobile-frontend-user-page-member-since": "Member since $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Member}} since $1",
 	"mobile-frontend-user-page-talk": "Talk",
 	"mobile-frontend-user-page-contributions": "Contributions",
 	"mobile-frontend-user-page-uploads": "Uploads",
