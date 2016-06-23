@@ -31,10 +31,12 @@ class SpecialMobileCite extends MobileSpecialPage {
 			)
 		);
 		$api->execute();
-		$data = $api->getResult()->getData();
+		$data = $api->getResult()->getResultData( [ "mobileview", "sections" ], [
+			'Strip' => 'all',
+		] );
 		$html = '';
-		if ( isset( $data["mobileview"]["sections"] ) ) {
-			foreach ( $data["mobileview"]["sections"] as $section ) {
+		if ( $data !== null ) {
+			foreach ( $data as $section ) {
 				$html .= $section['*'];
 			}
 		}
