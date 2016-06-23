@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_9d1a7d71",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T18:21:49Z",
+      "side": 1,
+      "message": "-\u003eisSpecial( \u0027MobileCite\u0027 )",
+      "parentUuid": "0efd9372_8358655a",
+      "revId": "0d76b304ea03927e895f31f69c2b183865a19363",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_7b608fcc",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
