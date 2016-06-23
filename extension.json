@@ -1941,9 +1941,6 @@
 		"ResourceLoaderGetLessVars": [
 			"MobileFrontendHooks::onResourceLoaderGetLessVars"
 		],
-		"SkinPreloadExistence": [
-			"MobileFrontendHooks::onSkinPreloadExistence"
-		],
 		"ThumbnailBeforeProduceHTML": [
 			"MobileFrontendHooks::onThumbnailBeforeProduceHTML"
 		],

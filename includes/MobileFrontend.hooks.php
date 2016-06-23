@@ -399,23 +399,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * SkinPreloadExistence hook handler
-	 * Disables TOC in output before it grabs HTML
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinPreloadExistence
-	 *
-	 * @param Title[] $titles
-	 * @param Skin $skin
-	 * @return bool
-	 */
-	public static function onSkinPreloadExistence( array &$titles, Skin $skin ) {
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() && !$context->isBlacklistedPage() ) {
-			$skin->getOutput()->setTarget( 'mobile' );
-		}
-		return true;
-	}
-
-	/**
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which:
 	 *  - vary with the html
@@ -857,6 +840,11 @@ class MobileFrontendHooks {
 
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
+
+			// set the mobile target
+			if ( !$context->isBlacklistedPage() ) {
+				$out->setTarget( 'mobile' );
+			}
 
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
