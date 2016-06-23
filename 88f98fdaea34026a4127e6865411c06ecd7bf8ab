@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_fd58e9fe",
+        "filename": "extension.json",
+        "patchSetId": 23
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T19:12:40Z",
+      "side": 1,
+      "message": "These modules cannot be dependencies of mobile.startup.\nThey use libraries defined in mobile.startup.",
+      "revId": "88f98fdaea34026a4127e6865411c06ecd7bf8ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_dd5b65fb",
+        "filename": "resources/mobile.references/setup.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T19:12:40Z",
+      "side": 1,
+      "message": "I\u0027m a little puzzled why we\u0027ve moved this back.",
+      "revId": "88f98fdaea34026a4127e6865411c06ecd7bf8ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
