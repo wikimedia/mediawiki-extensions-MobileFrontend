@@ -50,6 +50,24 @@
       "revId": "eedbbc54ebeca4241bef97712804d436594566f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_dcffeefa",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T00:17:28Z",
+      "side": 1,
+      "message": "Agreed. Seems this doesn\u0027t need to be an object. We should be consistent with other modules.\n\n\u0027mobile.references.gateway/referencesMobileViewGateway\u0027, new ReferencesMobileGateway... );",
+      "parentUuid": "0efd9372_e68cdf34",
+      "revId": "eedbbc54ebeca4241bef97712804d436594566f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
