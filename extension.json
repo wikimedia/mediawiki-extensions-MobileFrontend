@@ -1423,6 +1423,12 @@
 			"class": "MobileUserModule",
 			"position": "bottom"
 		},
+		"mobile.special.mobilecite.styles": {
+			"targets": "mobile",
+			"styles": [
+				"resources/mobile.special.mobilecite.styles/mobilecite.less"
+			]
+		},
 		"mobile.special.mobilemenu.styles": {
 			"targets": "mobile",
 			"styles": [
