@@ -439,6 +439,7 @@
 			],
 			"dependencies": [
 				"mobile.modules",
+				"mediawiki.util",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg"
 			],
@@ -603,6 +604,7 @@
 				"mobile.browser",
 				"mobile.oo",
 				"mobile.user",
+				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
 				"mobile.settings",
@@ -712,6 +714,7 @@
 				"mobile.drawers",
 				"mobile.toast",
 				"mobile.messageBox",
+				"mediawiki.util",
 				"mediawiki.confirmCloseWindow",
 				"mobile.loggingSchemas.edit"
 			],
@@ -769,6 +772,7 @@
 				"mobile.editor.common",
 				"mobile.microAutoSize",
 				"oojs-ui.styles.icons-editing-core",
+				"mediawiki.util",
 				"mediawiki.notification"
 			],
 			"scripts": [
@@ -877,6 +881,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.util",
 				"mediawiki.ui.anchor",
 				"mobile.editor.common"
 			],
@@ -1064,6 +1069,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.util",
 				"mobile.startup"
 			],
 			"templates": {
@@ -1399,6 +1405,7 @@
 			"dependencies": [
 				"mobile.startup",
 				"mobile.toast",
+				"mediawiki.util",
 				"mediawiki.Title"
 			],
 			"scripts": [
@@ -1600,6 +1607,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.util",
 				"mediawiki.router",
 				"mobile.startup",
 				"mobile.mainMenu",
@@ -1658,6 +1666,7 @@
 			],
 			"dependencies": [
 				"skins.minerva.editor",
+				"mediawiki.util",
 				"mobile.contentOverlays"
 			],
 			"scripts": [
@@ -1672,6 +1681,7 @@
 		"skins.minerva.editor": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
+				"mediawiki.util",
 				"mediawiki.router",
 				"skins.minerva.icons.images.scripts",
 				"skins.minerva.scripts",

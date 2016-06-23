@@ -1119,6 +1119,7 @@ class MobileFrontendHooks {
 				],
 				'mobile.notifications.overlay' => $resourceBoilerplate + [
 					'dependencies' => [
+						'mediawiki.util',
 						'mobile.overlays',
 						'ext.echo.ui',
 					],
