@@ -16,6 +16,24 @@
       "revId": "f1bc6659d14e544034235d33046ff5d0c3ad5ab4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_97bedff8",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-23T09:45:09Z",
+      "side": 1,
+      "message": "\u003e Should we not document each individual event separately?\n\nI don\u0027t follow. I\u0027ve added four distinct DocBlocks, one for each event.\n\n\u003e Also, does @type apply to the event? What does it convey?\n\nIn the case of JSDuck, nothing! Wrong documentation generator!",
+      "parentUuid": "0efd9372_5c6ade7e",
+      "revId": "f1bc6659d14e544034235d33046ff5d0c3ad5ab4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
