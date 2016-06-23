@@ -50,6 +50,24 @@
       "revId": "5c544d0a5669e752c39250bc9a166536541dcc03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7c63620a",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-23T09:16:19Z",
+      "side": 1,
+      "message": "FWIW I suggested the class name, thinking that it was actually quite descriptive of the element that it was to be applied to – it is a container for the link to the article.\n\nThere are 51 instances of \"text-align: center\" in the MobileFrontend codebase and while I do agree the we should extract a common class, e.g. text-center, I don\u0027t think that it\u0027s within the scope of this change.",
+      "parentUuid": "0efd9372_bc1aea70",
+      "revId": "5c544d0a5669e752c39250bc9a166536541dcc03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
