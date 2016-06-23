@@ -33,6 +33,24 @@
       "revId": "88f98fdaea34026a4127e6865411c06ecd7bf8ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_88f6b9c0",
+        "filename": "resources/mobile.references/setup.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-23T22:36:33Z",
+      "side": 1,
+      "message": "Once we lazy-load references, there maybe nested refs that the user can click on in the section. Sharing this code helps us bind to the newly inserted links.",
+      "parentUuid": "0efd9372_dd5b65fb",
+      "revId": "88f98fdaea34026a4127e6865411c06ecd7bf8ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
