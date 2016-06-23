@@ -5,6 +5,26 @@
  */
 class MobileFrontendHooksTest extends MediaWikiTestCase {
 	/**
+	 * Test no alternate/canonical link is set on Special:MobileCite
+	 *
+	 * @covers MobileFrontendHooks::OnBeforePageDisplay
+	 */
+	public function testSpecialMobileCiteOnBeforePageDisplay() {
+		$this->setMwGlobals( [
+			'wgMobileUrlTemplate' => true,
+			'wgMFNoindexPages' => true
+		] );
+		$param = $this->getContextSetup( 'mobile', [], SpecialPage::getTitleFor( 'MobileCite' ) );
+		$out = $param['out'];
+		$sk = $param['sk'];
+
+		MobileFrontendHooks::onBeforePageDisplay( $out, $sk );
+
+		$links = $out->getLinkTags();
+		$this->assertEquals( 0, count( $links ),
+			'test, no alternate or canonical link is added' );
+	}
+	/**
 	 * Test headers and alternate/canonical links to be set or not
 	 *
 	 * @dataProvider onBeforePageDisplayDataProvider
@@ -82,10 +102,12 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 * outputpage and skintemplate.
 	 *
 	 * @param string $mode The mode for the test cases (desktop, mobile)
+	 * @param array $mfXAnalyticsItems
+	 * @param Title $title
 	 * @return array Array of objects, including MobileContext (context),
 	 * SkinTemplate (sk) and OutputPage (out)
 	 */
-	protected function getContextSetup( $mode, $mfXAnalyticsItems ) {
+	protected function getContextSetup( $mode, $mfXAnalyticsItems, $title = null ) {
 		// Create a new MobileContext object for this test
 		MobileContext::setInstance( null );
 		// create a new instance of MobileContext
@@ -96,8 +118,10 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$out = new OutputPage( $context );
 		// create a new, empty SkinTemplate
 		$sk = new SkinTemplate();
-		// create a new Title (main page)
-		$title = Title::newMainPage();
+		if ( is_null( $title ) ) {
+			// create a new Title (main page)
+			$title = Title::newMainPage();
+		}
 		// create a FauxRequest to use instead of a WebRequest object (FauxRequest forces
 		// the creation of a FauxResponse, which allows to investigate sent header values)
 		$request = new FauxRequest();
