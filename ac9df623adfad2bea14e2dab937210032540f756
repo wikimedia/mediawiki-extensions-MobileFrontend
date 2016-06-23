@@ -69,6 +69,24 @@
       "revId": "ac9df623adfad2bea14e2dab937210032540f756",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_14ae6a7d",
+        "filename": "includes/specials/SpecialMobileCite.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-23T13:47:09Z",
+      "side": 1,
+      "message": "You\u0027re right. Thanks for pointing it out.",
+      "parentUuid": "0efd9372_dc39aef0",
+      "revId": "ac9df623adfad2bea14e2dab937210032540f756",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
