@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_5c0bfe25",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1431,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T00:28:29Z",
+      "side": 1,
+      "message": "FYI position top not needed when using addModuleStyles directly.",
+      "revId": "5c544d0a5669e752c39250bc9a166536541dcc03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7c108253",
+        "filename": "includes/specials/SpecialMobileCite.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T00:28:29Z",
+      "side": 1,
+      "message": "setHeaders does a lot more than this ... so is this comment  necessary? - why can I not just look at SpecialPage::setHeaders to see what it\u0027s doing? I wonder if it\u0027s needed at all.\n\nFYI Note you need to override SpecialPage::getRobotPolicy() if you want to fiddle with robots.",
+      "revId": "5c544d0a5669e752c39250bc9a166536541dcc03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_bc1aea70",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-23T00:28:29Z",
+      "side": 1,
+      "message": "I\u0027m not too keen on this generic name given this is not in a generic ResourceLoader module that others can use.\n\nWe should either identify a common pattern in special pages and make this live in a shared module which is used by other pages or prefix this class with `mobilecite-`.\n\nFirst option preferred.\n\u003eag \u0027text-align: center\u0027\nsuggests a pattern may exist.",
+      "revId": "5c544d0a5669e752c39250bc9a166536541dcc03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
