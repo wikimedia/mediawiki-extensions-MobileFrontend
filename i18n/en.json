@@ -188,7 +188,7 @@
 	"mobile-frontend-languages-nonexistent-title": "The page \"$1\" does not exist.",
 	"mobile-frontend-languages-text": "$1 is available in $2 {{PLURAL:$2|language|languages}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} variants",
-	"mobile-frontend-languages-structured-overlay-preferred-languages-header": "Preferred languages",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Suggested languages",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "All languages",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Search for a language",
 	"mobile-frontend-last-modified-date": "Last edited on $1, at $2",

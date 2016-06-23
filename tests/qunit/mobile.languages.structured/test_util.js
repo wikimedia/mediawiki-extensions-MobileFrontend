@@ -139,7 +139,7 @@
 						url: 'https://zh-yue.wikipedia.org/wiki/%E5%A5%A7%E5%B7%B4%E9%A6%AC'
 					}
 				],
-				preferred: [
+				suggested: [
 					{
 						frequency: 2,
 						lang: 'zh',
@@ -164,7 +164,7 @@
 	} );
 
 	QUnit.test( 'test utility functions', 6, function ( assert ) {
-		var preferredLanguages,
+		var suggestedLanguages,
 			variantsMap = {};
 
 		assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages,
@@ -184,20 +184,20 @@
 
 		// device language is a variant and only the parent language is available
 		assert.equal(
-			util.getStructuredLanguages( this.apiLanguages, false, {}, 'es-lx' ).preferred[0].lang,
+			util.getStructuredLanguages( this.apiLanguages, false, {}, 'es-lx' ).suggested[0].lang,
 			'es',
-			'"es" is correctly selected as a preferred language even though the device language is "es-lx".'
+			'"es" is correctly selected as a suggested language even though the device language is "es-lx".'
 		);
 
-		preferredLanguages = util.getStructuredLanguages(
-			this.apiLanguages, this.apiVariants, {}, this.deviceLanguage ).preferred;
+		suggestedLanguages = util.getStructuredLanguages(
+			this.apiLanguages, this.apiVariants, {}, this.deviceLanguage ).suggested;
 		$.each( this.apiVariants, function ( i, variant ) {
 			variantsMap[ variant.lang ] = variant;
 		} );
-		$.each( preferredLanguages, function ( i, preferredLanguage ) {
+		$.each( suggestedLanguages, function ( i, suggestedLanguage ) {
 			assert.ok(
-				variantsMap.hasOwnProperty( preferredLanguage.lang ),
-				'Variant "' + preferredLanguage.lang + '" is in the list of preferred languages.'
+				variantsMap.hasOwnProperty( suggestedLanguage.lang ),
+				'Variant "' + suggestedLanguage.lang + '" is in the list of suggested languages.'
 			);
 		} );
 	} );

@@ -50,14 +50,14 @@
 	}
 
 	/**
-	 * Return two sets of languages: preferred and all (everything else)
+	 * Return two sets of languages: suggested and all (everything else)
 	 *
-	 * Preferred languages are the ones that the user has used before. This also
-	 * includes the user device's primary language. Preferred languages are ordered
+	 * Suggested languages are the ones that the user has used before. This also
+	 * includes the user device's primary language. Suggested languages are ordered
 	 * by frequency in descending order. The device's language is always at the top.
 	 * This group also includes the variants.
 	 *
-	 * All languages are the languages that are not preferred.
+	 * All languages are the languages that are not suggested.
 	 * Languages in this list are ordered in the lexicographical order of
 	 * their language names.
 	 *
@@ -70,7 +70,7 @@
 	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
 		var maxFrequency = 0,
 			minFrequency = 0,
-			preferredLanguages = [],
+			suggestedLanguages = [],
 			allLanguages = [];
 
 		// Is the article available in the user's device language?
@@ -86,17 +86,17 @@
 			frequentlyUsedLanguages[ deviceLanguage ] = maxFrequency + 1;
 		}
 
-		// Separate languages into preferred and all languages.
+		// Separate languages into suggested and all languages.
 		$.each( languages, function ( i, language ) {
 			if ( frequentlyUsedLanguages.hasOwnProperty( language.lang ) ) {
 				language.frequency = frequentlyUsedLanguages[ language.lang ];
-				preferredLanguages.push( language );
+				suggestedLanguages.push( language );
 			} else {
 				allLanguages.push( language );
 			}
 		} );
 
-		// Add variants to the preferred languages list and assign the lowest
+		// Add variants to the suggested languages list and assign the lowest
 		// frequency because the variant hasn't been clicked on yet.
 		// Note that the variants data doesn't contain the article title, thus
 		// we cannot show it for the variants.
@@ -107,12 +107,12 @@
 				} else {
 					variant.frequency = minFrequency - 1;
 				}
-				preferredLanguages.push( variant );
+				suggestedLanguages.push( variant );
 			} );
 		}
 
-		// sort preferred languages in descending order by frequency
-		preferredLanguages = preferredLanguages.sort( function ( a, b ) {
+		// sort suggested languages in descending order by frequency
+		suggestedLanguages = suggestedLanguages.sort( function ( a, b ) {
 			return b.frequency - a.frequency;
 		} );
 
@@ -130,7 +130,7 @@
 		allLanguages = allLanguages.sort( compareLanguagesByLanguageName );
 
 		return {
-			preferred: preferredLanguages,
+			suggested: suggestedLanguages,
 			all: allLanguages
 		};
 	};

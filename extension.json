@@ -1220,7 +1220,7 @@
 			},
 			"messages": [
 				"mobile-frontend-language-heading",
-				"mobile-frontend-languages-structured-overlay-preferred-languages-header",
+				"mobile-frontend-languages-structured-overlay-suggested-languages-header",
 				"mobile-frontend-languages-structured-overlay-all-languages-header",
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
 			]

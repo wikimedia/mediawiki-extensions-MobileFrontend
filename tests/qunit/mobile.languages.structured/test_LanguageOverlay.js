@@ -81,15 +81,15 @@
 
 	QUnit.test( 'test language overlay', 2, function ( assert ) {
 		assert.equal(
-			this.languageOverlay.$( '.site-link-list.preferred-languages a' ).length,
+			this.languageOverlay.$( '.site-link-list.suggested-languages a' ).length,
 			3,
-			'There are 3 preferred languages.'
+			'There are 3 suggested languages.'
 		);
 
 		assert.equal(
 			this.languageOverlay.$( '.site-link-list.all-languages a' ).length,
 			7,
-			'Seven languages are non-preferred.'
+			'Seven languages are non-suggested.'
 		);
 	} );
 
