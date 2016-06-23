@@ -34,6 +34,24 @@
       "revId": "f1bc6659d14e544034235d33046ff5d0c3ad5ab4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_347c4e1b",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-23T13:44:33Z",
+      "side": 1,
+      "message": "I mean to include comments just above the line where the event is being emitted. For example, the first block of comments should be on line 73 which pushes the line 73 down.",
+      "parentUuid": "0efd9372_97bedff8",
+      "revId": "f1bc6659d14e544034235d33046ff5d0c3ad5ab4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
