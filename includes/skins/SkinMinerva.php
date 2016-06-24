@@ -605,44 +605,47 @@ class SkinMinerva extends SkinTemplate {
 		];
 		return $link;
 	}
-
+	/**
+	 * Returns the HTML representing the tagline
+	 * @returns string html for tagline
+	 */
+	protected function getTaglineHtml() {
+		$tagline = false;
+		if ( $this->isUserPage ) {
+			$fromDate = $this->pageUser->getRegistration();
+			if ( is_string( $fromDate ) ) {
+				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
+				$tagline = $this->msg( 'mobile-frontend-user-page-member-since',
+						$fromDateTs->format( 'F, Y' ) );
+			}
+		} else {
+			$title = $this->getTitle();
+			if ( $title ) {
+				if ( !$title->isMainPage() && $title->inNamespace( NS_MAIN ) ) {
+					$vars = $this->getSkinConfigVariables();
+					$tagline = $vars['wgMFDescription'];
+				}
+			}
+		}
+		return $tagline ?
+			Html::element( 'div', [ 'class' => 'tagline' ], $tagline ) : '';
+	}
 	/**
 	 * Returns the HTML representing the heading.
 	 * @returns {String} html for header
 	 */
 	protected function getHeadingHtml() {
-		$html = '';
+		$heading = '';
 		if ( $this->isUserPage ) {
 			// The heading is just the username without namespace
-			$html = Html::rawElement( 'h1', [ 'id' => 'section_0' ],
-				$this->pageUser->getName() );
-			$fromDate = $this->pageUser->getRegistration();
-			if ( is_string( $fromDate ) ) {
-				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
-				$html .= Html::element( 'div', [ 'class' => 'tagline', ],
-					$this->msg( 'mobile-frontend-user-page-member-since',
-						$fromDateTs->format( 'F, Y' ) )
-				);
-			}
+			$heading = $this->pageUser->getName();
 		} else {
-			$title = $this->getTitle();
 			$pageTitle = $this->getOutput()->getPageTitle();
-			if ( $title && $pageTitle ) {
-				$html = Html::rawElement( 'h1', [
-						'id' => 'section_0',
-					], $pageTitle );
-				if ( !$title->isMainPage() && $title->inNamespace( NS_MAIN ) ) {
-					$vars = $this->getSkinConfigVariables();
-					$description = $vars['wgMFDescription'];
-					if ( $description ) {
-						$html .= Html::element( 'div', [
-								'class' => 'tagline',
-							], $description );
-					}
-				}
+			if ( $pageTitle ) {
+				$heading = $pageTitle;
 			}
 		}
-		return $html;
+		return Html::rawElement( 'h1', [ 'id' => 'section_0' ], $heading );
 	}
 	/**
 	 * Create and prepare header and footer content
@@ -652,6 +655,7 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
+		$postHeadingHtml = $this->getTaglineHtml();
 		if ( $this->isUserPage ) {
 			$talkPage = $this->pageUser->getTalkPage();
 			$data = [
@@ -669,8 +673,8 @@ class SkinMinerva extends SkinTemplate {
 					'mobile-frontend-user-page-uploads' )->escaped(),
 			];
 			$templateParser = new TemplateParser( __DIR__ );
-			$tpl->set( 'postheadinghtml',
-				$templateParser->processTemplate( 'user_page_links', $data ) );
+			$postHeadingHtml .=
+				$templateParser->processTemplate( 'user_page_links', $data );
 		} elseif ( $title->isMainPage() ) {
 			if ( $user->isLoggedIn() ) {
 				$pageTitle = $this->msg(
@@ -680,6 +684,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 			$out->setPageTitle( $pageTitle );
 		}
+		$tpl->set( 'postheadinghtml', $postHeadingHtml );
 
 		if ( $this->canUseWikiPage() ) {
 			// If it's a page that exists, add last edited timestamp

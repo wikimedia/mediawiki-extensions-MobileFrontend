@@ -132,34 +132,4 @@ class SkinMinervaBeta extends SkinMinerva {
 
 		return $styles;
 	}
-
-	/**
-	 * Add talk, contributions, and uploads links at the top of the user page.
-	 *
-	 * @inheritdoc
-	 * @param BaseTemplate $tpl
-	 */
-	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
-		parent::prepareHeaderAndFooter( $tpl );
-		if ( $this->isUserPage ) {
-			$talkPage = $this->pageUser->getTalkPage();
-			$data = [
-				'talkPageTitle' => $talkPage->getPrefixedURL(),
-				'talkPageLink' => $talkPage->getLocalUrl(),
-				'talkPageLinkTitle' => $this->msg(
-					'mobile-frontend-user-page-talk' )->escaped(),
-				'contributionsPageLink' => SpecialPage::getTitleFor(
-					'Contributions', $this->pageUser )->getLocalURL(),
-				'contributionsPageTitle' => $this->msg(
-					'mobile-frontend-user-page-contributions' )->escaped(),
-				'uploadsPageLink' => SpecialPage::getTitleFor(
-					'Uploads', $this->pageUser )->getLocalURL(),
-				'uploadsPageTitle' => $this->msg(
-					'mobile-frontend-user-page-uploads' )->escaped(),
-			];
-			$templateParser = new TemplateParser( __DIR__ );
-			$tpl->set( 'postheadinghtml',
-				$templateParser->processTemplate( 'user_page_links', $data ) );
-		}
-	}
 }
