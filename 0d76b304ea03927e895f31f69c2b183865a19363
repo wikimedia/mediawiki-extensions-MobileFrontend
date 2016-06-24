@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_09bacbda",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-06-24T12:30:45Z",
+      "side": 1,
+      "message": "Sorry, I was expecting you to look up the documentation for Title::isSpecial() and see that it takes an argument and checks whether the Title object is a specific special page.",
+      "parentUuid": "0efd9372_9d1a7d71",
+      "revId": "0d76b304ea03927e895f31f69c2b183865a19363",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_7b608fcc",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
