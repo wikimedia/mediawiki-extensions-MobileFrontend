@@ -321,6 +321,7 @@
 	"mobile-frontend-watchlist-view": "내 주시문서 목록 보기",
 	"mobile-frontend-user-page-talk": "토론",
 	"mobile-frontend-user-page-contributions": "기여",
+	"mobile-frontend-user-page-uploads": "업로드",
 	"mobile-frontend-user-page-no-page-yet": "$1의 사용자 페이지 없음",
 	"mobile-frontend-quick-lookup-looking": "이것을 찾고 계십니까? \"$1\"",
 	"mobile-frontend-quick-lookup-no-results": "\"$1\"과(와) 일치하는 어떠한 것도 찾을 수 없었습니다.",

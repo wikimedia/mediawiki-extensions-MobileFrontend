@@ -165,7 +165,6 @@
 	"mobile-frontend-languages-nonexistent-title": "$1 бите юҡ.",
 	"mobile-frontend-languages-text": "$1 бит $2{{PLURAL:$2|телдә|телдәрҙә}} эсендә бар.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}}варианттары",
-	"mobile-frontend-languages-structured-overlay-preferred-languages-header": "Өҫтөн һаналған телдәр",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Бөтә телдәр",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Тел буйынса эҙләү",
 	"mobile-frontend-last-modified-date": "Һуңғы тапҡыр $1 $2 үҙгәртелгән",
