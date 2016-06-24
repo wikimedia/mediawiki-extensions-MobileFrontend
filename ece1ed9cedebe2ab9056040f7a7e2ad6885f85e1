@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_2396ce97",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-24T07:28:31Z",
+      "side": 1,
+      "message": "Isn\u0027t $2 a user, rather than the user\u0027s gender? I\u0027ll leave the wording for someone from the language team.",
+      "revId": "ece1ed9cedebe2ab9056040f7a7e2ad6885f85e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
