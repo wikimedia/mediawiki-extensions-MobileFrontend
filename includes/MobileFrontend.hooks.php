@@ -16,26 +16,19 @@ use MediaWiki\Auth\AuthManager;
 class MobileFrontendHooks {
 
 	/**
-	 * LinksUpdate hook handler - saves a count of h2 elements that occur in the WikiPage
+	 * LinksUpdate hook handler.
+	 *
+	 * Removes the legacy "page_top_level_section_count" property.
+	 *
+	 * TODO: Remove this in late July/early August, 2016.
+	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LinksUpdate
 	 *
-	 * @param LinksUpdate $lu
-	 * @return bool
+	 * @param LinksUpdate $linksUpdate
+	 * @return bool Always true
 	 */
-	public static function onLinksUpdate( LinksUpdate $lu ) {
-		if ( $lu->getTitle()->isTalkPage() ) {
-			$parserOutput = $lu->getParserOutput();
-			$sections = $parserOutput->getSections();
-			$numTopics = 0;
-			foreach ( $sections as $section ) {
-				if ( $section['toclevel'] == 1 ) {
-					$numTopics += 1;
-				}
-			}
-			if ( $numTopics ) {
-				$lu->mProperties['page_top_level_section_count'] = $numTopics;
-			}
-		}
+	public static function onLinksUpdate( LinksUpdate $linksUpdate ) {
+		unset( $linksUpdate->mProperties['page_top_level_section_count'] );
 
 		return true;
 	}
