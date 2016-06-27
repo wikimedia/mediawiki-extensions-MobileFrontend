@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_e53cc02f",
+        "filename": "dev-scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-27T13:42:21Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0efd9372_6cb3c996",
+      "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_0cbcbd66",
         "filename": "dev-scripts/cachedpage.sh",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-06-16T21:47:14Z",
       "side": 1,
       "message": "So I don\u0027t know what (if anything) this changes, as I\u0027m an extreme novice in batch scripting, but just a heads-up that this line changed\n\n    # from this\n    TITLE\u003d${2:\u003d\"Main_Page\"}\n    # to this\n    TITLE\u003d$(2:-\"Main_Page\"}\n\n... just in case that was accidental. IOW, an \"\u003d\" became a \"-\".",
+      "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_4545ccb8",
+        "filename": "dev-scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-27T13:42:21Z",
+      "side": 1,
+      "message": "Nice spot! If you\u0027re interested in the difference between the two – and what the colon does – then you can read up on it here: http://www.tldp.org/LDP/abs/html/parameter-substitution.html",
+      "parentUuid": "0efd9372_0cbcbd66",
       "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_6548d0cf",
+        "filename": "dev-scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-27T13:42:21Z",
+      "side": 1,
+      "message": "Yarrrp.",
+      "parentUuid": "0efd9372_8c76edd1",
+      "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_0c6b1def",
         "filename": "dev-scripts/cachedpage.sh",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2016-06-16T21:47:14Z",
       "side": 1,
       "message": "Thank you for fixing this (as it was definitely incorrect), but for the record, I tried this url when Baha and I were debugging it last time and it didn\u0027t work.",
+      "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_854b34cc",
+        "filename": "dev-scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-27T13:42:21Z",
+      "side": 1,
+      "message": "Interesting… Maybe we could have a brief pairing session to figure out what\u0027s going on with your machine – or mine!",
+      "parentUuid": "0efd9372_0c6b1def",
       "revId": "d47553a94aaefe5b4efdfb6020b32f76df45ed42",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
