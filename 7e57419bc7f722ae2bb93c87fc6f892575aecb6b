@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_e240360c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-27T05:16:12Z",
+      "side": 1,
+      "message": "\"{String}\" should be \"string\"",
+      "revId": "7e57419bc7f722ae2bb93c87fc6f892575aecb6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_a2610ea6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 676,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-27T05:16:12Z",
+      "side": 1,
+      "message": "Wikidata descriptions won\u0027t show as the tagline HTML is only being output on the user page.",
+      "revId": "7e57419bc7f722ae2bb93c87fc6f892575aecb6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
