@@ -9,6 +9,7 @@
 			this.$el = $( '<div>' );
 			this.skin = new Skin( {
 				el: this.$el,
+				referencesGateway: this.sandbox.stub(),
 				page: new Page( {
 					title: 'Foo'
 				} )

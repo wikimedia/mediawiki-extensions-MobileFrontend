@@ -1134,12 +1134,25 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.oo"
+				"mobile.oo",
+				"mobile.cache"
 			],
 			"scripts": [
 				"resources/mobile.references.gateway/ReferencesGateway.js",
 				"resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
 				"resources/mobile.references.gateway/ReferencesMobileViewGateway.js"
+			]
+		},
+		"mobile.cache": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.modules"
+			],
+			"scripts": [
+				"resources/mobile.cache/Cache.js"
 			]
 		},
 		"mobile.toggle": {
@@ -1641,8 +1654,8 @@
 				"resources/skins.minerva.scripts/init.js",
 				"resources/skins.minerva.scripts/initLogging.js",
 				"resources/skins.minerva.scripts/mobileRedirect.js",
-				"resources/skins.minerva.scripts/references.js",
 				"resources/skins.minerva.scripts/search.js",
+				"resources/skins.minerva.scripts/references.js",
 				"resources/skins.minerva.scripts/cleanuptemplates.js"
 			]
 		},
