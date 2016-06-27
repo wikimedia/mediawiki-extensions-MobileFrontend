@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_2bea19d6",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-27T20:07:28Z",
+      "side": 0,
+      "message": "If we are going to go with this as a short term solution this needs a comment explaining that this is the height of the user links bar. I\u0027d rather avoid a short term solution though and fix this properly if we can.",
+      "revId": "1b85c7389d79312d819656316d83f9c3b6f3bd52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
