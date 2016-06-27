@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0efd9372_22987e7a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-27T08:27:41Z",
+      "side": 1,
+      "message": "Which issue?",
+      "revId": "7e57419bc7f722ae2bb93c87fc6f892575aecb6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_e240360c",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
