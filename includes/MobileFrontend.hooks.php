@@ -448,12 +448,12 @@ class MobileFrontendHooks {
 		// Wikidata) and then secondly that it is okay to display them prominently in the UI
 		// For instance a server admin may want to make them available in the page via JS for gadgets
 		// but not build them into their experience.
+		$useWikidata = $config->get( 'MFUseWikibaseDescription' );
 		$displayDescriptions = $config->get( 'MFDisplayWikibaseDescription' );
-		$useDescriptions = $config->get( 'MFUseWikibaseDescription' );
 
 		// When set turn on Wikidata descriptions
 		// https://phabricator.wikimedia.org/T101719
-		if ( $useDescriptions && $displayDescriptions ) {
+		if ( $useWikidata && $displayDescriptions ) {
 			if ( !in_array( 'pageterms', $pageProps ) ) {
 				$pageProps[] = 'pageterms';
 			}
@@ -1266,14 +1266,15 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
-		$mfUseWikibaseDescription = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
+		$useWikibase = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
+		$displayTaglines = $context->getMFConfig()->get( 'MFDisplayWikibaseDescriptionsAsTaglines' );
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
 			// FIXME: Remove beta check once enabled in production
-			if ( $mfUseWikibaseDescription || $context->isBetaGroupMember() ) {
+			if ( $useWikibase && ( $displayTaglines || $context->isBetaGroupMember() ) ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );

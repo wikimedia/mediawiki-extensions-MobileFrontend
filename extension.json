@@ -2078,6 +2078,7 @@
 		"MFUploadMinEdits": 0,
 		"MFUseWikibaseDescription": false,
 		"MFDisplayWikibaseDescription": false,
+		"MFDisplayWikibaseDescriptionsAsTaglines": false,
 		"MFRSSFeedLink": false,
 		"MFSchemaMobileWebLanguageSwitcherSampleRate": {
 			"beta": 0,

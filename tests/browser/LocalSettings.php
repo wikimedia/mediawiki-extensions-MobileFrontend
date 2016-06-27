@@ -28,3 +28,4 @@ $wgMinervaAlwaysShowLanguageButton = true;
 // For those who have wikibase installed.
 $wgMFUseWikibaseDescription = true;
 $wgMFDisplayWikibaseDescription = true;
+$wgMFDisplayWikibaseDescriptionsAsTaglines = true;

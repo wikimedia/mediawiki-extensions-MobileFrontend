@@ -519,14 +519,20 @@ Type: Integer
 Default: 0;
 
 ##### $wgMFUseWikibaseDescription
-If set to true, will add Wikidata description to page JS as wgMFDescription variable
+If set to true, Wikibase is enabled and associated features can be used
 
 Type: Boolean
 Default: false;
 
 ##### $wgMFDisplayWikibaseDescription
-If set to true wikidata descriptions will be displayed in UI elements such as search,
+If set to true, Wikibase descriptions will be displayed in UI elements such as search,
 nearby and watchlist.
+
+Type: Boolean
+Default: false;
+
+##### $wgMFDisplayWikibaseDescriptionsAsTaglines
+If set to true, Wikibase descriptions will be displayed under page titles
 
 Type: Boolean
 Default: false;
