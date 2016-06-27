@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_ab08c9dd",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 610,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-27T19:50:13Z",
+      "side": 1,
+      "message": "Sorry if I was not clear enough earlier. \"{\" and \"}\" around \"string\" are not needed.",
+      "revId": "f31accbd7100dc4d5974eb13fb393a62ea2f578c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_2bf4d9c9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 676,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-27T19:50:13Z",
+      "side": 1,
+      "message": "redundant leading space",
+      "revId": "f31accbd7100dc4d5974eb13fb393a62ea2f578c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
