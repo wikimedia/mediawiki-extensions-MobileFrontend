@@ -86,6 +86,24 @@
       "revId": "7e57419bc7f722ae2bb93c87fc6f892575aecb6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_6811c7fb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 676,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-27T16:06:54Z",
+      "side": 1,
+      "message": "See line 658, where we check whether the page is the user page. If the page is not a user page then \u0027postheadinghtml\u0027 won\u0027t get generated.",
+      "parentUuid": "0efd9372_6859c72c",
+      "revId": "7e57419bc7f722ae2bb93c87fc6f892575aecb6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
