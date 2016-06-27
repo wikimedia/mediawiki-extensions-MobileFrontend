@@ -29,18 +29,18 @@
 			this.referencesGateway = new ReferencesMobileViewGateway( new mw.Api() );
 			// We use Page object which calls getUrl which uses config variables.
 			this.sandbox.stub( mw.util, 'getUrl' ).returns( '/wiki/Reftest' );
-			this.sandbox.stub( this.referencesGateway, 'getReferencesSections' ).returns(
+			this.sandbox.stub( this.referencesGateway, 'getReferencesLists' ).returns(
 				$.Deferred().resolve( {
 					1: '<ol class="references"><li id="cite_note-1">real lazy</li>' +
 						'<li id="cite_note-2">real lazy 2</li></ol>'
 				} ).promise()
 			);
 			this.referencesGatewayEmpty = new ReferencesMobileViewGateway( new mw.Api() );
-			this.sandbox.stub( this.referencesGatewayEmpty, 'getReferencesSections' ).returns(
+			this.sandbox.stub( this.referencesGatewayEmpty, 'getReferencesLists' ).returns(
 				$.Deferred().resolve( {} ).promise()
 			);
 			this.referencesGatewayRejector = new ReferencesMobileViewGateway( new mw.Api() );
-			this.sandbox.stub( this.referencesGatewayRejector, 'getReferencesSections' ).returns(
+			this.sandbox.stub( this.referencesGatewayRejector, 'getReferencesLists' ).returns(
 				$.Deferred().reject().promise()
 			);
 		}
@@ -48,9 +48,9 @@
 
 	QUnit.test( 'Gateway only hits api once despite multiple calls', 1, function ( assert ) {
 		var gatewayHitsApi = new ReferencesMobileViewGateway( this.api, new MemoryCache() );
-		gatewayHitsApi.getReferencesSections( this.page );
-		gatewayHitsApi.getReferencesSections( this.page );
-		gatewayHitsApi.getReferencesSections( this.page );
+		gatewayHitsApi.getReferencesLists( this.page );
+		gatewayHitsApi.getReferencesLists( this.page );
+		gatewayHitsApi.getReferencesLists( this.page );
 		assert.strictEqual( this.api.get.calledOnce, true, 'The API should only ever be hit once.' );
 	} );
 
@@ -95,5 +95,4 @@
 			done();
 		} );
 	} );
-
 } )( jQuery, mw.mobileFrontend );
