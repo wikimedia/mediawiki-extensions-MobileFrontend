@@ -13,7 +13,8 @@
 			"Vks",
 			"Matěj Suchánek",
 			"Jkjk",
-			"Cvanca"
+			"Cvanca",
+			"Dvorapa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Zda uživatel edituje prostřednictvím mobilního rozhraní",
@@ -162,7 +163,6 @@
 	"mobile-frontend-languages-nonexistent-title": "Stránka „$1“ neexistuje.",
 	"mobile-frontend-languages-text": "Stránka $1 je dostupná ve $2 {{PLURAL:$2|jazyku|jazycích}}.",
 	"mobile-frontend-languages-variant-header": "Varianty jazyka {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-languages-structured-overlay-preferred-languages-header": "Preferované jazyky",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Všechny jazyky",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Hledat jazyk",
 	"mobile-frontend-last-modified-date": "Naposledy editováno $1 v $2",
@@ -247,6 +247,7 @@
 	"mobile-frontend-requires-mobile": "Tato stránka není k dispozici v klasickém zobrazení. Klikněte na odkaz na mobilní verzi v dolní části obrazovky.",
 	"mobile-frontend-requires-optin": "Tato stránka není k dispozici, pokud se nepřihlásíte k betaverzi. Připojit se můžete na stránce [[Special:MobileOptions|nastavení]].",
 	"mobile-frontend-requires-title": "Stránka není k dispozici",
+	"mobile-frontend-return-to-page": "Zpět ke článku",
 	"mobile-frontend-save-error": "Chyba při ukládání nastavení. Ujistěte se, že máte povolené cookies.",
 	"mobile-frontend-save-settings": "Uložit",
 	"mobile-frontend-saving-exit-page": "Váš příspěvek se stále ukládá. Pokud odejdete, budou vaše příspěvky ztraceny. Určitě chcete odejít?",

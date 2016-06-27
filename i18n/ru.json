@@ -311,7 +311,7 @@
 	"mobile-frontend-watchlist-add": "$1 добавлена в ваш список наблюдения",
 	"mobile-frontend-watchlist-back-home": "Домой",
 	"mobile-frontend-watchlist-cta": "Следить за этой страницей, и всеми изменениями на ней.",
-	"mobile-frontend-watchlist-cta-button-login": "Представиться",
+	"mobile-frontend-watchlist-cta-button-login": "Войти",
 	"mobile-frontend-watchlist-cta-button-signup": "Зарегистрироваться",
 	"mobile-frontend-watchlist-feed": "Изменено",
 	"mobile-frontend-watchlist-feed-empty": "Отсутствуют страницы с последними изменениями",

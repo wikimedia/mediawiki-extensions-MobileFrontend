@@ -4,7 +4,9 @@
 			"Albinus"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "Amaḱ joṛao reaḱ guṭtet́ do bạnuḱa",
 	"mobile-frontend-editor-edit": "Tońge",
+	"mobile-frontend-featured-article": "Teheń reaḱ bachaoaḱ onolko",
 	"mobile-frontend-home-button": "Mukhiạ Sakam",
 	"mobile-frontend-language-article-heading": "Eṭaḱ pạrsite paṛhaome",
 	"mobile-frontend-last-modified-date": "Mucạt́ toṅge hoelena: $1, $2",
@@ -14,6 +16,8 @@
 	"mobile-frontend-main-menu-nearby": "Sursurte",
 	"mobile-frontend-main-menu-settings": "seṭiṅ",
 	"mobile-frontend-main-menu-watchlist": "Ńeloḱ tạlika",
+	"mobile-frontend-news-items": "Sombatre",
+	"mobile-frontend-password-placeholder": "Uku nambar",
 	"mobile-frontend-placeholder": "Sendra {{Saiṭńitum}}",
 	"mobile-frontend-privacy-link-text": "Uku katha",
 	"mobile-frontend-random-button": "Baṅ oporom sakam",

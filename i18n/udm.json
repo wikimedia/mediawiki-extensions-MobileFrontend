@@ -9,5 +9,7 @@
 	"mobile-frontend-language-article-heading": "Мукет кылын лыдӟыны",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Берпуметӥ {{GENDER:$1|тупатон}} лэсьтэмын {{PLURAL:$3|$3 нуналлы талэсь азьло|1=толон}}] {{PLURAL:$5|викиавторен [$6 $2]|0=тодмотэм викиавторен}}",
 	"mobile-frontend-main-menu-logout": "Потыны",
-	"mobile-frontend-view": "Мобильной версия"
+	"mobile-frontend-sign-in-heading": "Пырон",
+	"mobile-frontend-view": "Мобильной версия",
+	"mobile-frontend-watchlist-cta-button-login": "Пырон"
 }
