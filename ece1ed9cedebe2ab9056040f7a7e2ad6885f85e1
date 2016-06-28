@@ -51,6 +51,24 @@
       "revId": "ece1ed9cedebe2ab9056040f7a7e2ad6885f85e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_171bf673",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-06-28T13:34:16Z",
+      "side": 1,
+      "message": "Not related to this patch though.",
+      "parentUuid": "0efd9372_14813fa4",
+      "revId": "ece1ed9cedebe2ab9056040f7a7e2ad6885f85e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
