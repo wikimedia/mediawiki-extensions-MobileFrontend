@@ -198,4 +198,28 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 		$this->assertArrayEquals( $expected, $urls );
 	}
+
+	/**
+	 * @covers MobileFrontendHooks::onLinksUpdate
+	 */
+	public function testOnLinksUpdateRemovesLegacyProperty() {
+		$titleStub = $this->getMockBuilder( 'Title' )
+			->getMock();
+
+		// LinksUpdate#__construct will throw if Title#getArticleID returns 0.
+		$titleStub->method( 'getArticleID' )
+			->willReturn( 1 );
+
+		$parserOutput = new ParserOutput();
+		$parserOutput->setProperty( 'page_top_level_section_count', 1 );
+
+		$linksUpdate = new LinksUpdate( $titleStub, $parserOutput );
+
+		// CUT
+		MobileFrontendHooks::onLinksUpdate( $linksUpdate );
+
+		$this->assertTrue(
+			!isset( $linksUpdate->mProperties['page_top_level_section_count'] )
+		);
+	}
 }
