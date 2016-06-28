@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_499962c6",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-28T16:37:00Z",
+      "side": 1,
+      "message": "Placeholders are /replaced/ here.",
+      "revId": "fa5fd6841318e7cba8094ee554c1d25eb6289677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
