@@ -52,6 +52,24 @@
       "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_d88d1a87",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-29T10:25:44Z",
+      "side": 1,
+      "message": "Cool. I think I\u0027ll be more general than a \u0027span\u0027 as it would allow flexibility when the heading HTML changes.",
+      "parentUuid": "0efd9372_7866aeeb",
+      "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
