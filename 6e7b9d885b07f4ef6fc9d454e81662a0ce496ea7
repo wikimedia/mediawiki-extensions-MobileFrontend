@@ -16,6 +16,24 @@
       "revId": "6e7b9d885b07f4ef6fc9d454e81662a0ce496ea7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_0e4c789e",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-29T15:53:41Z",
+      "side": 1,
+      "message": "YES!",
+      "parentUuid": "0efd9372_ee501439",
+      "revId": "6e7b9d885b07f4ef6fc9d454e81662a0ce496ea7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
