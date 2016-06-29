@@ -34,6 +34,24 @@
       "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7866aeeb",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-29T10:21:24Z",
+      "side": 1,
+      "message": "That\u0027d be neato! You\u0027re also right to ask whether h2 would be enough. I think we might have to write something like:\n\n    h2, h3, h4, h5, h6 {\n      span {\n        display: none;\n      }\n      span.mw-headline {\n        display: initial;\n      }\n    }",
+      "parentUuid": "0efd9372_5d7abcb8",
+      "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
