@@ -16,6 +16,24 @@
       "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_5d7abcb8",
+        "filename": "resources/mobile.special.mobilecite.styles/mobilecite.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-29T09:56:24Z",
+      "side": 1,
+      "message": "I wasn\u0027t sure if the heading would be only an h2 or h3, etc. too. If that\u0027s the case, we could hide all children of h2 then show .mw-headline only. That way we would support grade C browsers too. Do you know whether using an h2 is enough?",
+      "parentUuid": "0efd9372_fdc5700e",
+      "revId": "121066253eec89da7286b04f173eaba6dca4c4e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
