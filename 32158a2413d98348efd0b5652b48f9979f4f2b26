@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_1d9f9407",
+        "filename": "tests/browser/features/switch_views.feature",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-06-29T09:38:04Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be the integration tag as you\u0027ve mentioned in the commit?",
+      "revId": "32158a2413d98348efd0b5652b48f9979f4f2b26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
