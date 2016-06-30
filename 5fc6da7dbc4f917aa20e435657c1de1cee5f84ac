@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_94faca3e",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-30T18:41:57Z",
+      "side": 1,
+      "message": "https://www.mediawiki.org/wiki/Reading/Web/Team/Team_norms#Code_review\nChanged anyway.",
+      "parentUuid": "ee011f3e_1406dad1",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_14389a9a",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2016-06-30T18:06:42Z",
       "side": 1,
       "message": "Not that this //should// ever happen, but if there\u0027s ever a section with no heading text (i.e. there is an header tag, but the tag contains no title, which I\u0027ve checked and is possible to do in wikitext), this will hit as a false positive for a subsection. I recommend explicitly checking for undefined.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_74e486a4",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-30T18:41:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee011f3e_14389a9a",
       "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_b4842eb7",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-30T18:41:57Z",
+      "side": 1,
+      "message": "yes. added comment.",
+      "parentUuid": "ee011f3e_b499ceca",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_34867e6b",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 7
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_14537a44",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-30T18:41:57Z",
+      "side": 1,
+      "message": "I see your concern, but I wouldn\u0027t focus on the levels of indentation given that we have recognised that Skin needs a big rewrite (https://phabricator.wikimedia.org/T138764)\n\nIdeally I guess we\u0027d just call getReferencesSections( data.page ) multiple times but that would require refactoring that code so it doesn\u0027t make multiple api requests. Happy to do this in a follow up but I don\u0027t want to increase scope of this patch any more then necessary right now.",
+      "parentUuid": "ee011f3e_34867e6b",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_14c37a62",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 7
@@ -81,6 +153,24 @@
       "writtenOn": "2016-06-30T18:06:42Z",
       "side": 1,
       "message": "We should probably have an error message or something for the .fail case. The implementation before this patch put the original content back in if the api call failed, but now there are two function calls that can fail and we\u0027re only checking for the top level one. As I understand it, if the inner one fails, the placeholder will remain, which may be fine, but a simple \"Failed to load references\" may be more useful.\n\nI may also be overthinking it; I\u0027m not sure.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_f48eb6d4",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-30T18:41:57Z",
+      "side": 1,
+      "message": "No error message is needed. The fallback is to just show the non-js version of the section which is still functional. We may want to log this separately for our own benefits but I don\u0027t see the value of increasing the scope of work for that right now.",
+      "parentUuid": "ee011f3e_14c37a62",
       "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
