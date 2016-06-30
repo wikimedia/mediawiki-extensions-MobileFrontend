@@ -1,4 +1,4 @@
-@chrome @firefox @vagrant @en.m.wikipedia.beta.wmflabs.org
+@chrome @firefox @vagrant
 Feature: Switch between mobile and desktop views
 
   @integration
