@@ -16,6 +16,24 @@
       "revId": "65ebda65a2ca5c0d7dbce0921d8f8474195f9f12",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_e436704e",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-06-30T10:53:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0efd9372_39e8a576",
+      "revId": "65ebda65a2ca5c0d7dbce0921d8f8474195f9f12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
