@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_1406dad1",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-30T18:06:42Z",
+      "side": 1,
+      "message": "This is nit-picky, but I see no reason this should be on its own line. It implies the following function calls at the same indentation level (.done, .fail, .always) are called on gateway via daisy-chaining when in fact they\u0027re called on the result of getReferencesSections. The fact that it caused me some confusion during review (\"gateway.done()... what?\") should be example enough; I would merge this line into the one above it.\n\nThere is another example on lines 304-305, please fix it there as well if you fix it here.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_14389a9a",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-30T18:06:42Z",
+      "side": 1,
+      "message": "Not that this //should// ever happen, but if there\u0027s ever a section with no heading text (i.e. there is an header tag, but the tag contains no title, which I\u0027ve checked and is possible to do in wikitext), this will hit as a false positive for a subsection. I recommend explicitly checking for undefined.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_b499ceca",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-30T18:06:42Z",
+      "side": 1,
+      "message": "Will this fail gracefully if somehow id is still null?",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_34867e6b",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-30T18:06:42Z",
+      "side": 1,
+      "message": "Eight (let alone ten!) levels of indentation is usually the mark I use to indicate that perhaps something needs to be split out to a new function for clarity. That being said, I don\u0027t particularly see a good candidate in this case (perhaps onGatewayGetReferencesSections?), so I wouldn\u0027t block on this, but I did want to voice it as a concern.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_14c37a62",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-30T18:06:42Z",
+      "side": 1,
+      "message": "We should probably have an error message or something for the .fail case. The implementation before this patch put the original content back in if the api call failed, but now there are two function calls that can fail and we\u0027re only checking for the top level one. As I understand it, if the inner one fails, the placeholder will remain, which may be fine, but a simple \"Failed to load references\" may be more useful.\n\nI may also be overthinking it; I\u0027m not sure.",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
