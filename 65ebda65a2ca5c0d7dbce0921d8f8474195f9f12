@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_39e8a576",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-30T05:38:50Z",
+      "side": 1,
+      "message": "You should make it clear that all references sections are lazy loaded. Otherwise it\u0027s not clear why the $heading object is being passed here.",
+      "revId": "65ebda65a2ca5c0d7dbce0921d8f8474195f9f12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
