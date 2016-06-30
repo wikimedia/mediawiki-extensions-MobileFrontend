@@ -2010,7 +2010,7 @@
 			"h5",
 			"h6"
 		],
-		"MFSpecialCaseMainPage": true,
+		"MFSpecialCaseMainPage": false,
 		"MinervaEnableSiteNotice": false,
 		"MFTidyMobileViewSections": true,
 		"MFMobileHeader": "X-WAP",

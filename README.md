@@ -180,11 +180,14 @@ Type: Array
 Default: array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
 
 ##### $wgMFSpecialCaseMainPage
-If set to true, main page HTML will receive special massaging that removes everything
-but a few select pieces.
+If set to true, main page HTML will receive special massaging.
+See https://m.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting
+
+Use is discouraged as it leads to unnecessary technical debt and on the long term the goal
+is to deprecate usage of this config variable. Use at your own risk!
 
 Type: Boolean
-Default: true;
+Default: false;
 
 ##### $wgMinervaEnableSiteNotice
 Controls whether site notices should be shown.
