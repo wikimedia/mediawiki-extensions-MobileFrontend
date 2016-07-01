@@ -42,7 +42,8 @@
 			"Wladek92",
 			"Weft",
 			"Orlodrim",
-			"Yasten"
+			"Yasten",
+			"Trial"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -194,7 +195,7 @@
 	"mobile-frontend-languages-nonexistent-title": "La page « $1 » n’existe pas.",
 	"mobile-frontend-languages-text": "$1 est disponible en $2 {{PLURAL:$2|langue|langues}}.",
 	"mobile-frontend-languages-variant-header": "variantes en {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Langues supportées",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Langues suggérées",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Toutes les langues",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Rechercher une langue",
 	"mobile-frontend-last-modified-date": "Dernière modification le $1, à $2",

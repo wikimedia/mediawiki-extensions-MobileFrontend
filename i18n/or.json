@@ -4,7 +4,8 @@
 			"Jnanaranjan Sahu",
 			"Odisha1",
 			"Psubhashish",
-			"MKar"
+			"MKar",
+			"DareDevil"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ନିଶ୍ଚିତ କରିବା ପାଇଁ ପଠାଯାଇଥିବା କୋଡ଼ଟି ଏଠାରେ ଦିଅନ୍ତୁ",
@@ -65,9 +66,6 @@
 	"mobile-frontend-home-button": "ପ୍ରଧାନ ପୃଷ୍ଠା",
 	"mobile-frontend-images-status": "ଛବିଗୁଡିକ",
 	"mobile-frontend-language-article-heading": "ଅନ୍ୟ ଭାଷାରେ ପଢିବେ",
-	"mobile-frontend-language-header": "ଏହି ପୃଷ୍ଠାଟି $1 {{PLURAL:$1|language|languages}}ରେ ଅଛି ।",
-	"mobile-frontend-language-site-choose": "ଖୋଜା ଭାଷା",
-	"mobile-frontend-language-variant-header": "{{#language:{{CONTENTLANG}}}} ବିଭିନ୍ନତାରୁ ବାଛନ୍ତୁ",
 	"mobile-frontend-last-modified-date": "ଶେଷଥର $1 ଦିନ $2 ବେଳେ ବଦଳାଯାଇଥିଲା",
 	"mobile-frontend-last-modified-days": "ଗତଥର {{PLURAL:$1|$1 ଦିନ|$1 ଦିନଗୁଡିକ}} ପୂର୍ବରୁ ବଦଳା ଯାଇଥିଲା",
 	"mobile-frontend-last-modified-hours": "ଗତଥର {{PLURAL:$1|$1 hour|$1 hours}} ପୂର୍ବରୁ ବଦଳା ଯାଇଥିଲା",
@@ -113,6 +111,7 @@
 	"mobile-frontend-privacy-link-text": "ଗୁମରନୀତି",
 	"mobile-frontend-random-button": "ଯାହିତାହି",
 	"mobile-frontend-regular-site": "ଡେସ୍କଟପ ଦେଖଣା",
+	"mobile-frontend-return-to-page": "ପୁରୁଣା ପୃଷ୍ଠାକୁ ଫେରିବେ",
 	"mobile-frontend-save-settings": "ସଜାଣି ସାଇତିବେ",
 	"mobile-frontend-saving-exit-page": "ଆପଣଙ୍କ ଅବଦାନଗୁଡିକ ଏଯାଏଁ ସାଇତା ଯାଉଛି । ଯଦି ଆପଣ ଚାଲିଯିବେ ତାହେଲେ ଆପଣଙ୍କ ଅବଦାନଗୁଡିକ କଟିଯିବା । ଆପଣ ନିଶ୍ଚିତ ଯେ ଏହି ପୃଷ୍ଠାକୁ ବନ୍ଦ କରିବେ ?",
 	"mobile-frontend-search-submit": "ଯିବା",
