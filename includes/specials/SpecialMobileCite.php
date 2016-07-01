@@ -7,9 +7,6 @@
  * Provides a list of citiations available for a page
  */
 class SpecialMobileCite extends MobileSpecialPage {
-	/** @var string $mode Saves the actual mode used by user (stable|beta) */
-	protected $mode = 'beta';
-
 	/**
 	 * Construct function
 	 */
