@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_f34d2341",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-02T01:23:14Z",
+      "side": 1,
+      "message": "This norm has been quoted at me a few times, and I don\u0027t understand why. I didn\u0027t -1 for code style, I -1\u0027d for other issues. I\u0027m simply leaving my comments per the norm: \n\"If we feel strongly we will +1 rather than +2, //with comments//.\"",
+      "parentUuid": "ee011f3e_94faca3e",
+      "revId": "5fc6da7dbc4f917aa20e435657c1de1cee5f84ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_14389a9a",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 7
