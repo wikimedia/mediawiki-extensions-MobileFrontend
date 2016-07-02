@@ -59,6 +59,7 @@
 	"mobile-frontend-language-heading": "<strong>ژبې</strong>",
 	"mobile-frontend-languages-header": "ژبې",
 	"mobile-frontend-languages-header-page": "$1 - ژبې",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ملاتړې ژبې",
 	"mobile-frontend-last-modified-date": "وروستی سمون په $1 نېټه او په $2 بجو شوی",
 	"mobile-frontend-last-modified-days": "وروستی سمون {{PLURAL:$1|$1 ورځ|$1 ورځې}} مخکې",
 	"mobile-frontend-last-modified-hours": "وروستی بدلون {{PLURAL:$1|$1 گړۍ|$1 گړۍ}} دمخه ترسره شوی",
