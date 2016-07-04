@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_64b207e6",
+        "filename": "README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 551,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-04T09:10:25Z",
+      "side": 1,
+      "message": "s/: / \u003d\u003e / for these four lines.",
+      "revId": "0c9e429d92703c98b9795d245cf0681afcbc694a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_84ff2b62",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-04T09:10:25Z",
+      "side": 1,
+      "message": "$searchParams is referenced anywhere a gateway is interacting with the search API. If the admin enables Wikidata descriptions for search only, then they will be enabling them for search, Special:Nearby, and Special:Watchlist.",
+      "revId": "0c9e429d92703c98b9795d245cf0681afcbc694a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
