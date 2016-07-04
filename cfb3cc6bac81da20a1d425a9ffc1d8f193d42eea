@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_a4806f4c",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-04T05:52:12Z",
+      "side": 1,
+      "message": "I\u0027d appreciate a sample section code here so that it\u0027s easy to visualize. An actual response from the API would be great.\n\nAlso can we move the function outside the Skin class? The function is general enough and removing it helps read the code more easily.",
+      "revId": "cfb3cc6bac81da20a1d425a9ffc1d8f193d42eea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_84856b5d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-04T05:52:12Z",
+      "side": 1,
+      "message": "Isn\u0027t adding the \u0027hidden\u0027 class faster than hiding with JS?",
+      "revId": "cfb3cc6bac81da20a1d425a9ffc1d8f193d42eea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_448b8372",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-04T05:52:12Z",
+      "side": 1,
+      "message": "$originalContent has been removed. We need to show the children and remove the spinner her too.",
+      "revId": "cfb3cc6bac81da20a1d425a9ffc1d8f193d42eea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_24947f8d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-04T05:52:12Z",
+      "side": 1,
+      "message": "If the sole purpose of returning a $.Deferred is to test the function, we should find an alternative way of writing the functionality.",
+      "revId": "cfb3cc6bac81da20a1d425a9ffc1d8f193d42eea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
