@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_c83f81d2",
+        "filename": "README.md",
+        "patchSetId": 15
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-05T15:05:23Z",
+      "side": 1,
+      "message": "Isn\u0027t this the same as line 542?",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_4833910a",
+        "filename": "extension.json",
+        "patchSetId": 15
+      },
+      "lineNbr": 2084,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-05T15:05:23Z",
+      "side": 1,
+      "message": "Can we document this similar to other config vars?",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_93580e37",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 1162,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-05T15:05:23Z",
+      "side": 1,
+      "message": "Can we document this function?",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_d3af36dd",
+        "filename": "resources/mobile.search.api/extendSearchParams.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-05T15:05:23Z",
+      "side": 1,
+      "message": "Should we avoid creating this module and just add the params for the API calls when needed? I understand this this functionality is being used in 3 places, but so are the API parameters (which are hard coded in those places). For example, https://gerrit.wikimedia.org/r/#/c/296342/15/resources/mobile.nearby/NearbyGateway.js lines 127-133.\n\nWe should aim for something like https://gerrit.wikimedia.org/r/#/c/296342/15/resources/mobile.search.api/SearchGateway.js line 41. A simple if statement (from below) will do it. The benefit is that all API parameters are in one place and there is no extra dependency on this module. Moreover, there won\u0027t been a need to do the above checks.",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
