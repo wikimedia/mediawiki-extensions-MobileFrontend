@@ -5,6 +5,32 @@
 		icons = M.require( 'mobile.startup/icons' );
 
 	/**
+	 * Get the id of the section $el belongs to.
+	 * @param {jQuery.Object} $el
+	 * @ignore
+	 */
+	function getSectionId( $el ) {
+		var hSelector = 'h1,h2,h3,h4,h5,h6',
+			// e.g. matches Subheading in
+			// <h2>H</h2><div><h3 id="subheading">Subh</h3><a class="element"></a></div>
+			id = $el.prevAll( hSelector ).eq( 0 )
+				.find( '.mw-headline' ).attr( 'id' );
+
+		// if there's no headline preceding the placeholder then it is inside a section
+		// and the id is of the collapsible heading preceding the section.
+		// e.g. matches heading in
+		// <div id="mw-content-text">
+		//   <h2 id="heading">Heading</h2>
+		//   <div><a class="element"></a></div>
+		// </div>
+		if ( id === undefined ) {
+			id = $el.parents( '#mw-content-text > div' ).prevAll( hSelector ).eq( 0 )
+				.find( '.mw-headline' ).attr( 'id' );
+		}
+		return id;
+	}
+
+	/**
 	 * Representation of the current skin being rendered.
 	 *
 	 * @class Skin
@@ -256,6 +282,8 @@
 		/**
 		* Load the references section content from API if it's not already loaded.
 		*
+		* All references tags content will be loaded per section.
+		*
 		* @param {Object} data Information about the section. It's in the following form:
 		*  {
 		*      @property {String} page,
@@ -263,9 +291,11 @@
 		*      @property {jQuery.Object} $heading,
 		*      @property {Boolean} isReferenceSection
 		* }
+		* @returns {jQuery.Deferred} rejected when not a reference section.
 		*/
 		lazyLoadReferences: function ( data ) {
-			var $content, $originalContent,
+			var $content, $spinner,
+				gateway = this.referencesGateway,
 				self = this;
 
 			// If the section was expanded before toggling, do not load anything as
@@ -282,13 +312,42 @@
 			$content = data.$heading.next();
 
 			if ( !$content.data( 'are-references-loaded' ) ) {
-				$originalContent = $content.children().clone( true, true );
-				$content.html( icons.spinner().toHtmlString() );
+				$content.children().addClass( 'hidden' );
+				$spinner = $( icons.spinner().toHtmlString() ).prependTo( $content );
 
-				this.referencesGateway
-					.getReferencesSection( data.page, data.$heading.find( '.mw-headline' ).attr( 'id' ) )
-					.done( function ( section ) {
-						$content.html( section !== false ? section : $originalContent );
+				// First ensure we retrieve all of the possible lists
+				return gateway.getReferencesLists( data.page )
+					.done( function () {
+						var lastId;
+
+						$content.find( '.mf-lazy-references-placeholder' ).each( function () {
+							var refListIndex = 0,
+								$placeholder = $( this ),
+								// search for id of the collapsible heading
+								id = getSectionId( $placeholder );
+
+							if ( lastId !== id ) {
+								// If the placeholder belongs to a new section reset index
+								refListIndex = 0;
+								lastId = id;
+							} else {
+								// otherwise increment it
+								refListIndex++;
+							}
+
+							if ( id ) {
+								gateway.getReferencesList( data.page, id ).done( function ( refListElements ) {
+									// Note if no section html is provided no substitution will happen so user is
+									// forced to rely on placeholder link.
+									if ( refListElements && refListElements[refListIndex] ) {
+										$placeholder.replaceWith( refListElements[refListIndex] );
+									}
+								} );
+							}
+						} );
+						// Show the section now the references lists have been placed.
+						$spinner.remove();
+						$content.children().removeClass( 'hidden' );
 						/**
 						 * @event references-loaded
 						 * Fired when references list is loaded into the HTML
@@ -296,7 +355,9 @@
 						self.emit( 'references-loaded', self.page );
 					} )
 					.fail( function () {
-						$content.html( $originalContent );
+						$spinner.remove();
+						// unhide on a failure
+						$content.children().removeClass( 'hidden' );
 					} )
 					.always( function () {
 						// lazy load images if any
@@ -304,6 +365,8 @@
 						// Do not attempt further loading even if we're unable to load this time.
 						$content.data( 'are-references-loaded', 1 );
 					} );
+			} else {
+				return $.Deferred().reject();
 			}
 		},
 

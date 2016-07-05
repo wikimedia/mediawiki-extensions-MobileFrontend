@@ -32,7 +32,7 @@
 
 	OO.mfExtend( ReferencesMobileViewGateway, ReferencesHtmlScraperGateway, {
 		/**
-		 * Retrieve references sections for a given page.
+		 * Retrieve references list for a given page.
 		 * Also cache the result for a later use.
 		 *
 		 * @method
@@ -40,7 +40,7 @@
 		 * @return {jQuery.Promise} promise that resolves with the list of
 		 *  sections on the page
 		 */
-		getReferencesSections: function ( page ) {
+		getReferencesLists: function ( page ) {
 			var self = this,
 				cachedReferencesSections = this.cache.get( page.id );
 
@@ -60,8 +60,7 @@
 				$.each( data.mobileview.sections, function ( i, section )  {
 					var $section = $( '<div>' ).html( section.text );
 
-					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] =
-						$( '<div>' ).append( $section.find( '.references' ) ).html();
+					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] = $section.find( '.references' );
 				} );
 
 				self.cache.set( page.id, sections );
@@ -70,7 +69,7 @@
 			} );
 		},
 		/**
-		 * Retrieve references section for a given page and section ID.
+		 * Retrieve all the references lists for a given page and section ID.
 		 *
 		 * @method
 		 * @param {Page} page
@@ -78,8 +77,8 @@
 		 * @return {jQuery.Promise} promise that resolves with the section
 		 *  HTML or `false` if no such section exists
 		 */
-		getReferencesSection: function ( page, headingId ) {
-			return this.getReferencesSections( page ).then( function ( data ) {
+		getReferencesList: function ( page, headingId ) {
+			return this.getReferencesLists( page ).then( function ( data ) {
 				return data.hasOwnProperty( headingId ) ? data[ headingId ] : false;
 			} );
 		},
@@ -89,7 +88,7 @@
 		getReference: function ( id, page ) {
 			var self = this;
 
-			return this.getReferencesSections( page ).then( function ( sections ) {
+			return this.getReferencesLists( page ).then( function ( sections ) {
 				var $container = $( '<div>' );
 
 				$.each( sections, function ( i, section ) {
