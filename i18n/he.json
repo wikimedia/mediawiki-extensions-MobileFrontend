@@ -320,7 +320,7 @@
 	"mobile-frontend-watchlist-removed": "הדף $1 הוסר מרשימת המעקב שלך",
 	"mobile-frontend-watchlist-signup-action": "<strong>רשימת המעקב עוזרת לך להוסיף סימניות לדפים ולעקוב אחרי שינויים בהם.</strong>יש להירשם כדי ליצור אותה.",
 	"mobile-frontend-watchlist-view": "הצגת רשימת המעקב שלך",
-	"mobile-frontend-user-page-member-since": "חבר מאז $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|רשום|רשומה}} מאז $1",
 	"mobile-frontend-user-page-talk": "שיחה",
 	"mobile-frontend-user-page-contributions": "תרומות",
 	"mobile-frontend-user-page-uploads": "העלאות",

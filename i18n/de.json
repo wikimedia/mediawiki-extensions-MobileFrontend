@@ -322,7 +322,7 @@
 	"mobile-frontend-watchlist-removed": "$1 wurde von deiner Beobachtungsliste entfernt",
 	"mobile-frontend-watchlist-signup-action": "<strong>Eine Beobachtungsliste hilft dir Seiten einzumerken und Änderungen an ihnen zu verfolgen.</strong> Registriere dich, um jetzt zu beginnen.",
 	"mobile-frontend-watchlist-view": "Deine Beobachtungsliste ansehen",
-	"mobile-frontend-user-page-member-since": "Mitglied seit $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Mitglied}} seit $1",
 	"mobile-frontend-user-page-talk": "Diskussion",
 	"mobile-frontend-user-page-contributions": "Beiträge",
 	"mobile-frontend-user-page-uploads": "Hochgeladene Dateien",
