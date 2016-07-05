@@ -17,8 +17,6 @@
 	border-top: 1px solid @colorGray14;
 	border-bottom: 1px solid @colorGray12;
 
-	// align the left and right icons with the left and right borders respectively
-	margin: 0 -@iconGutterWidth;
 	padding: 0.5em 0;
 
 	li {
@@ -33,11 +31,16 @@
 
 	#language-switcher {
 		float: left;
+		margin-left: -@iconGutterWidth;
 
 		&.disabled {
 			cursor: default;
 			opacity: 0.25;
 		}
+	}
+
+	#ca-edit {
+		margin-right: -@iconGutterWidth;
 	}
 }
 
