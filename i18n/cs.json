@@ -315,7 +315,7 @@
 	"mobile-frontend-watchlist-removed": "Stránka $1 odebrána ze sledovaných",
 	"mobile-frontend-watchlist-signup-action": "<strong>Seznam sledovaných stránek vám umožňuje mít přehled o změnách stránek, jež vás zajímají.</strong> Zaregistrujte se, ať si ho můžete založit.",
 	"mobile-frontend-watchlist-view": "Zobrazit seznam sledovaných stránek",
-	"mobile-frontend-user-page-member-since": "Členem od $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Členem|Členkou}} od $1",
 	"mobile-frontend-user-page-talk": "Diskuse",
 	"mobile-frontend-user-page-contributions": "Příspěvky",
 	"mobile-frontend-user-page-uploads": "Načtené soubory",

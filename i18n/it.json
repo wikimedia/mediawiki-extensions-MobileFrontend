@@ -317,7 +317,7 @@
 	"mobile-frontend-watchlist-removed": "$1 rimossa dai tuoi osservati speciali",
 	"mobile-frontend-watchlist-signup-action": "<strong>Gli osservati speciali ti consentono di salvare le pagine e tenere traccia delle modifiche ad esse.</strong>Registrati per iniziare ora.",
 	"mobile-frontend-watchlist-view": "Vedi i tuoi osservati speciali",
-	"mobile-frontend-user-page-member-since": "Membro dal $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Membro}} dal $1",
 	"mobile-frontend-user-page-talk": "Discussione",
 	"mobile-frontend-user-page-contributions": "Contributi",
 	"mobile-frontend-user-page-uploads": "Caricamenti",

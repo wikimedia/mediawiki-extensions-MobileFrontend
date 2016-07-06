@@ -310,7 +310,7 @@
 	"mobile-frontend-watchlist-removed": "$1 foi removida da sua lista de vigiados",
 	"mobile-frontend-watchlist-signup-action": "<strong>A lista de vigiados ajuda-o a marcar e acompanhar as páginas e as suas alterações.</strong><br />Registe-se para começar uma agora.",
 	"mobile-frontend-watchlist-view": "Ver a sua lista de vigiados",
-	"mobile-frontend-user-page-member-since": "Membro desde $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Membro}} desde $1",
 	"mobile-frontend-user-page-talk": "Discussão",
 	"mobile-frontend-user-page-contributions": "Contribuições",
 	"mobile-frontend-user-page-uploads": "Carregamentos",

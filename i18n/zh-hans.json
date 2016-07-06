@@ -342,7 +342,7 @@
 	"mobile-frontend-watchlist-removed": "已从您的监视列表中移除$1",
 	"mobile-frontend-watchlist-signup-action": "<strong>监视列表帮助您标记页面，并保持追踪它们的更改。</strong>注册以开始创建。",
 	"mobile-frontend-watchlist-view": "查看你的监视列表",
-	"mobile-frontend-user-page-member-since": "自$1以来的成员",
+	"mobile-frontend-user-page-member-since": "自$1以来的{{GENDER:$2|成员}}",
 	"mobile-frontend-user-page-talk": "讨论",
 	"mobile-frontend-user-page-contributions": "贡献",
 	"mobile-frontend-user-page-uploads": "上传",

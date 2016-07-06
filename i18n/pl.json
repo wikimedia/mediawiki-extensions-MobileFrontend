@@ -308,7 +308,7 @@
 	"mobile-frontend-watchlist-removed": "Usunięto „$1” z twojej listy obserwowanych",
 	"mobile-frontend-watchlist-signup-action": "<strong>Lista obserwowanych pomaga tworzyć zakładki do stron i śledzić w nich zmiany.</strong><br />Zarejestruj się, aby zacząć już teraz.",
 	"mobile-frontend-watchlist-view": "Zobacz swoją listę obserwowanych",
-	"mobile-frontend-user-page-member-since": "Użytkownik od $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Użytkownik|Użytkowniczka}} od $1",
 	"mobile-frontend-user-page-talk": "Dyskusja",
 	"mobile-frontend-user-page-contributions": "Edycje",
 	"mobile-frontend-user-page-no-owner-page-yet": "Nie masz na razie strony użytkownika",
