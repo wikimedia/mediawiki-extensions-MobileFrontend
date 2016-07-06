@@ -1,4 +1,4 @@
-<div class="overlay-header saving-header hideable hidden">
+<div class="overlay-header header saving-header hideable hidden">
 	<ul>
 		<li>{{{cancelButton}}}</li>
 	</ul>

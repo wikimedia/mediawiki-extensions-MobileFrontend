@@ -1,5 +1,5 @@
-<div class="overlay-header-container header-chrome{{#fixedHeader}} position-fixed{{/fixedHeader}}">
-	<div class="overlay-header">
+<div class="overlay-header-container header-container header-chrome{{#fixedHeader}} position-fixed{{/fixedHeader}}">
+	<div class="overlay-header header">
 		{{>header}}
 	</div>
 </div>

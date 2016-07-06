@@ -17,6 +17,7 @@ body {
 
 .header-container {
 	background-color: @chromeColor;
+	border-bottom: 1px solid transparent;
 }
 
 .search-overlay,
@@ -69,6 +70,8 @@ body {
 .header {
 	display: table;
 	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 	height: @headerHeight;
 	white-space: nowrap;
 	// When banners are present we want to easily distinguish between them and the header so add border
@@ -104,6 +107,9 @@ body {
 		vertical-align: middle;
 	}
 
+	.header-action > * {
+		min-height: @headerHeight;
+	}
 }
 .header > form,
 .overlay-header .overlay-title {
