@@ -121,6 +121,24 @@
       "revId": "10954db313da7a613e4278f6af01da48db607e62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_37e8250b",
+        "filename": "resources/mobile.search.api/extendSearchParams.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-06T16:54:28Z",
+      "side": 1,
+      "message": "Thanks for this note Baha. It really made me rethink this function.\n\nI decided to take the opposite approach and make this function a drop in replacement for $.extend in the context of search-like gateways, as well as mixing in the other search-related configuration values. I did this not to be contrary but to make it very clear what my intention is.\n\nLet me know what you think on the latest patch set and if you still feel the same way, then I can roll back.",
+      "parentUuid": "ee011f3e_d3af36dd",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
