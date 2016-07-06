@@ -14,6 +14,10 @@ When /^I click on a language from the list of all languages$/ do
   on(ArticlePage).non_suggested_language_link_element.when_present.click
 end
 
+Then(/^I should see a toast with message about page not being available in other languages$/) do
+  expect(on(ArticlePage).toast_element.when_present.text).to match 'This page is not available in other languages.'
+end
+
 Then(/^I should not see the languages overlay$/) do
   expect(on(ArticlePage).overlay_languages_element).not_to be_visible
 end

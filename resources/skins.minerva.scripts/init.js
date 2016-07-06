@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var inSample, inStable, experiment,
+		toast = M.require( 'mobile.toast/toast' ),
 		settings = M.require( 'mobile.settings/settings' ),
 		time = M.require( 'mobile.modifiedBar/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),
@@ -106,6 +107,8 @@
 				// Only show the overlay if the page has other languages.
 				if ( $languageLink.attr( 'href' ) ) {
 					router.navigate( '/languages' );
+				} else {
+					toast.show( mw.msg( 'mobile-frontend-languages-not-available' ) );
 				}
 
 				// when local storage is not available ...

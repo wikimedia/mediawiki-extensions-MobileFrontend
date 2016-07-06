@@ -181,6 +181,7 @@
 	"mobile-frontend-images-status": "Images",
 	"mobile-frontend-language-article-heading": "Read in another language",
 	"mobile-frontend-language-heading": "<strong>Languages</strong>",
+	"mobile-frontend-languages-not-available": "This page is not available in other languages.",
 	"mobile-frontend-languages-404-desc": "A valid title must be specified.",
 	"mobile-frontend-languages-404-title": "Languages error",
 	"mobile-frontend-languages-header": "Languages",
