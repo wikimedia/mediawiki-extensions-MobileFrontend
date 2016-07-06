@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_feddda74",
+        "filename": "README.md",
+        "patchSetId": 15
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-06T09:01:30Z",
+      "side": 1,
+      "message": "Well spotted. I left this here to test you…",
+      "parentUuid": "ee011f3e_c83f81d2",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_4833910a",
         "filename": "extension.json",
         "patchSetId": 15
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_5eeb4609",
+        "filename": "extension.json",
+        "patchSetId": 15
+      },
+      "lineNbr": 2084,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-06T09:01:30Z",
+      "side": 1,
+      "message": "Done. I think that this is the correct thing to do at the moment, but I think that long hand documentation in README.md or on-wiki would be preferable.",
+      "parentUuid": "ee011f3e_4833910a",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_93580e37",
         "filename": "includes/MobileContext.php",
         "patchSetId": 15
@@ -47,6 +83,24 @@
       "writtenOn": "2016-07-05T15:05:23Z",
       "side": 1,
       "message": "Can we document this function?",
+      "revId": "10954db313da7a613e4278f6af01da48db607e62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_3ee8020b",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 1162,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-06T09:01:30Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "ee011f3e_93580e37",
       "revId": "10954db313da7a613e4278f6af01da48db607e62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
