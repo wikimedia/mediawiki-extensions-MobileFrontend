@@ -49,28 +49,8 @@
 			display: block;
 			padding: 0.75em 1em;
 
-			div {
-				display: table-cell;
-				vertical-align: middle;
-				span {
-					font-size: 0.9em;
-				}
-			}
-
-			.lang {
-				background-color: @colorGray9;
-				border-radius: 2px;
-				color: #fff;
-				display: block;
-				margin-right: 0.75em;
-				min-width: @langMinWidth;  // so that the 2 letter language codes don't...
-				//... have different widths due to different letter width
-				padding: 0.5em;
-				text-align: center;
-				text-transform: uppercase;
-				// prevent breaking the lang code at a hyphen
-				white-space: nowrap;
-				letter-spacing: 1px;
+			span {
+				font-size: 0.9em;
 			}
 
 			.autonym,

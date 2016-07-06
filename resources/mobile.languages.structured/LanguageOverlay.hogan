@@ -11,15 +11,10 @@
 		{{#suggestedLanguages}}
 			<li>
 				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
-					<div>
-						<span class="lang">{{lang}}</span>
-					</div>
-					<div>
-						<span class="autonym">{{autonym}}</span>
-						{{#title}}
-							<span class="title">{{title}}</span>
-						{{/title}}
-					</div>
+					<span class="autonym">{{autonym}}</span>
+					{{#title}}
+						<span class="title">{{title}}</span>
+					{{/title}}
 				</a>
 			</li>
 		{{/suggestedLanguages}}
@@ -32,15 +27,10 @@
 		{{#allLanguages}}
 			<li>
 				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
-					<div>
-						<span class="lang">{{lang}}</span>
-					</div>
-					<div>
-						<span class="autonym">{{autonym}}</span>
-						{{#title}}
-							<span class="title">{{title}}</span>
-						{{/title}}
-					</div>
+					<span class="autonym">{{autonym}}</span>
+					{{#title}}
+						<span class="title">{{title}}</span>
+					{{/title}}
 				</a>
 			</li>
 		{{/allLanguages}}
