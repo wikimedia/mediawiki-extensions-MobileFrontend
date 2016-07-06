@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_3c4acac8",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-06T15:48:31Z",
+      "side": 1,
+      "message": "There is no need to keep this \u003cdiv\u003e anymore. We should also remove the related CSS.",
+      "revId": "676fb40089597bddae6aa6c9c8e5fd9313838e2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_1c2a66d7",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-06T15:48:31Z",
+      "side": 1,
+      "message": "This variable is no longer needed.",
+      "revId": "676fb40089597bddae6aa6c9c8e5fd9313838e2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_9c1656ab",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-06T15:48:31Z",
+      "side": 1,
+      "message": "This is the rule that we should remove once we get rid of the inner div.",
+      "revId": "676fb40089597bddae6aa6c9c8e5fd9313838e2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
