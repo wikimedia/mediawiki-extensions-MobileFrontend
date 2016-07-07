@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_d08b9e19",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-07T02:46:00Z",
+      "side": 1,
+      "message": "When $wgMinervaAlwaysShowLanguageButton is false, the last child won\u0027t be the language button, but something else, probably the watchstar icon. Thus we cannot float it left. Come to think about it, we cannot even add the margin-left for this reason.",
+      "revId": "4421d81d640dedc7bb79085ed8ec698deb740765",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
