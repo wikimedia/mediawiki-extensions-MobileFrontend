@@ -181,6 +181,7 @@
 	"mobile-frontend-images-status": "图像",
 	"mobile-frontend-language-article-heading": "其他语言",
 	"mobile-frontend-language-heading": "<strong>语言</strong>",
+	"mobile-frontend-languages-not-available": "此页面在其他语言不可用。",
 	"mobile-frontend-languages-404-desc": "必须指定一个有效标题。",
 	"mobile-frontend-languages-404-title": "语言错误",
 	"mobile-frontend-languages-header": "语言",
