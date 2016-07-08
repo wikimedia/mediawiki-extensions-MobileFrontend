@@ -12,7 +12,6 @@
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		skin = M.require( 'skins.minerva.scripts/skin' ),
-		browser = M.require( 'mobile.browser/browser' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
 		} ),
@@ -22,7 +21,6 @@
 		currentPage = M.getCurrentPage(),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
-		context = M.require( 'mobile.context/context' ),
 		user = M.require( 'mobile.user/user' ),
 		popup = M.require( 'mobile.toast/toast' ),
 		// FIXME: Disable on IE < 10 for time being
@@ -182,22 +180,10 @@
 			 * @method
 			 */
 			function loadSourceEditor() {
-				var rlModuleName, moduleName;
-
 				logInit( 'wikitext' );
 
-				// use the new wikitexteditor with a basic toolbar as a test for beta users and users
-				// without an iphone (bottom toolbars doesn't work) - Bug T109224
-				// FIXME: Make this working with iOS8
-				if ( !user.inUserBucketA() && context.isBetaGroupMember() && !browser.isIos( 8 ) ) {
-					moduleName = 'mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar';
-					rlModuleName = 'mobile.editor.overlay.withtoolbar';
-				} else {
-					moduleName = 'mobile.editor.overlay/EditorOverlay';
-					rlModuleName = 'mobile.editor.overlay';
-				}
-				loader.loadModule( rlModuleName ).done( function () {
-					var EditorOverlay = M.require( moduleName );
+				loader.loadModule( 'mobile.editor.overlay' ).done( function () {
+					var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
 			}

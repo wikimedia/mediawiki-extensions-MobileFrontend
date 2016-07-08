@@ -786,53 +786,6 @@
 				"mobile-frontend-editor-viewing-source-page"
 			]
 		},
-		"mobile.editor.overlay.withtoolbar": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.editor.overlay",
-				"oojs-ui.styles.icons-editing-styling",
-				"jquery.textSelection",
-				"mobile.editor.overlay.withtoolbar.images"
-			],
-			"scripts": [
-				"resources/mobile.editor.overlay.withtoolbar/AddReferenceOverlay.js",
-				"resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.js"
-			],
-			"styles": [
-				"resources/mobile.editor.overlay.withtoolbar/EditorOverlayWithToolbar.less"
-			],
-			"templates": {
-				"editorFooter.hogan": "resources/mobile.editor.overlay.withtoolbar/editorFooter.hogan",
-				"contentAddReference.hogan": "resources/mobile.editor.overlay.withtoolbar/contentAddReference.hogan"
-			},
-			"messages": [
-				"mobile-frontend-editor-bold",
-				"mobile-frontend-editor-italic",
-				"mobile-frontend-editor-reference",
-				"mobile-frontend-editor-insert-reference",
-				"mobile-frontend-editor-reference-placeholder",
-				"mobile-frontend-editor-italic-text",
-				"mobile-frontend-editor-bold-text",
-				"mobile-frontend-editor-add-reference"
-			]
-		},
-		"mobile.editor.overlay.withtoolbar.images": {
-			"class": "ResourceLoaderImageModule",
-			"prefix": "oo-ui-icon",
-			"selector": ".oo-ui-icon-{name}",
-			"position": "bottom",
-			"images": {
-				"reference": {
-					"file": {
-						"rtl": "resources/mobile.editor.overlay.withtoolbar.images/reference-rtl.svg",
-						"ltr": "resources/mobile.editor.overlay.withtoolbar.images/reference-ltr.svg"
-					}
-				}
-			}
-		},
 		"mobile.search": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
