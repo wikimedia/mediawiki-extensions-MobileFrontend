@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee011f3e_19442a1c",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 1208,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-08T09:08:49Z",
+      "side": 1,
+      "message": "Wikidata descriptions have been pushed to stable so I\u0027ve removed this line and updated the DocBlock and associated unit tests. Also, sure! Let\u0027s chat!",
+      "parentUuid": "ee011f3e_0d6b4db6",
+      "revId": "e1277585825c3d9011e9034e80fbdc0d69340dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee011f3e_2d3a91c0",
         "filename": "resources/mobile.search.util/extendSearchParams.js",
         "patchSetId": 17
@@ -30,6 +48,24 @@
       "writtenOn": "2016-07-06T22:01:25Z",
       "side": 1,
       "message": "I\u0027d argue the use of keyword arguments here just confuses things.  Why are you not using a named parameter?",
+      "revId": "e1277585825c3d9011e9034e80fbdc0d69340dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_995f7ae8",
+        "filename": "resources/mobile.search.util/extendSearchParams.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-08T09:08:49Z",
+      "side": 1,
+      "message": "Perhaps I should replicate the comment in the DocBlock here too.",
+      "parentUuid": "ee011f3e_2d3a91c0",
       "revId": "e1277585825c3d9011e9034e80fbdc0d69340dc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
