@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
 # Enable this pre-commit hook by running 'make installhooks'
+set -euo pipefail
 
 # check for trailing whitespace
-if [[ `git diff --cached --check` ]]; then
-	git diff --cached --check
-	exit 1
-fi
+git diff --cached --check
 
-make jshint || exit 1
-make jscs || exit 1
+make jshint
+make jscs
 
 if git diff --name-only --cached | grep --regexp '\.js$' ; then
-	make qunit || exit 1
+	make qunit
 fi
 
 if git diff --name-only --cached | grep --regexp '\.*php$' ; then
-	make phplint || exit 1
+	make phplint
 fi
 
 if git diff --name-only --cached | grep --regexp 'includes/skins/.*php$' ; then
