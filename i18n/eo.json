@@ -66,7 +66,7 @@
 	"mobile-frontend-last-modified-months": "Laste redaktita antaŭ {{PLURAL:$1|$1 monato|$1 monatoj}}",
 	"mobile-frontend-last-modified-seconds": "Laste redaktita antaŭ {{PLURAL:$1|$1 sekundo|$1 sekundoj}}",
 	"mobile-frontend-last-modified-years": "Laste redaktita antaŭ {{PLURAL:$1|$1 jaro|$1 jaroj}}",
-	"mobile-frontend-logged-in-homepage-notification": "Bonvenon, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Bonvenon}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Elsalutita kiel $1",
 	"mobile-frontend-main-menu": "Ĉefa menuo",
 	"mobile-frontend-main-menu-account-create": "Krei konton",

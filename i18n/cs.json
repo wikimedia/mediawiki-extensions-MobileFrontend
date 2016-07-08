@@ -156,6 +156,7 @@
 	"mobile-frontend-images-status": "Obrázky",
 	"mobile-frontend-language-article-heading": "Přečíst v jiném jazyce",
 	"mobile-frontend-language-heading": "<strong>Jazyky</strong>",
+	"mobile-frontend-languages-not-available": "Tato stránka není v jiných jazycích dostupná.",
 	"mobile-frontend-languages-404-desc": "Musí být zadán platný název.",
 	"mobile-frontend-languages-404-title": "Chyba jazyků",
 	"mobile-frontend-languages-header": "Jazyky",
