@@ -3,7 +3,7 @@
 set -euo pipefail
 
 git-staged-files() {
-	git diff --cached -C -C --name-only --diff-filter=ACMRTUXB "$@"
+	git diff --cached -C -C -z --name-only --diff-filter=ACMRTUXB "$@"
 }
 
 git-is-staged() {
@@ -11,6 +11,8 @@ git-is-staged() {
 	git-staged-files --quiet "$@" 2> /dev/null || diff=$?
 	[[ diff -eq 1 ]] || return 1
 }
+
+map() { IFS= read -rd $'\0' "$@"; }
 
 # check for trailing whitespace
 git diff --cached --check
@@ -30,15 +32,13 @@ if git-is-staged 'includes/skins/*.php'; then
 	make validatehtml > $result
 fi
 
-for file in `git-staged-files | grep -i '\.png$'`
-do
+git-staged-files \*.png|while map file; do
 	echo "Compressing $file"
 	optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep Output
 	git add "$file"
 done
 
-for file in `git-staged-files | grep -i '\.svg$'`
-do
+git-staged-files \*.svg|while map file; do
 	make nodecheck
 	echo "Compressing $file"
 	# If anyone can figure out how to get the pretty option to work from the config
