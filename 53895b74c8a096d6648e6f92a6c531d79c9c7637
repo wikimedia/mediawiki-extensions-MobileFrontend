@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_faa2163a",
+        "filename": "resources/mobile.overlays/Overlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-11T23:49:19Z",
+      "side": 1,
+      "message": "Should this instance be changed to \u0027.header-action\u0027 too?",
+      "revId": "53895b74c8a096d6648e6f92a6c531d79c9c7637",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_7a7626d7",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-11T23:49:19Z",
+      "side": 1,
+      "message": "The variable for the size is called @iconSize, let\u0027s use it.",
+      "revId": "53895b74c8a096d6648e6f92a6c531d79c9c7637",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
