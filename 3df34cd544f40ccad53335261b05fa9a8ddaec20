@@ -16,6 +16,24 @@
       "revId": "3df34cd544f40ccad53335261b05fa9a8ddaec20",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_c43c9ebf",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-11T10:46:33Z",
+      "side": 0,
+      "message": "I didn\u0027t realize it applied to both spans... I\u0027ll restore it.",
+      "parentUuid": "ce061b56_394e739c",
+      "revId": "3df34cd544f40ccad53335261b05fa9a8ddaec20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
