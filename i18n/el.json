@@ -9,7 +9,8 @@
 			"ZaDiak",
 			"Nikosguard",
 			"Stam.nikos",
-			"SucreRouge"
+			"SucreRouge",
+			"Ανώνυμος Βικιπαιδιστής"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Εισαγάγετε τον κωδικό επιβεβαίωσης",
@@ -33,8 +34,6 @@
 	"mobile-frontend-donate-image-heading": "Οι πρόσφατες συνεισφορές σας",
 	"mobile-frontend-donate-image-nouploads": "Χωρίς επιφορτώσεις.",
 	"mobile-frontend-donate-image-title": "Επιφορτώσεις",
-	"mobile-frontend-donate-photo-first-upload-success": "Επιτυχία! Ευχαριστούμε για την πρώτη σας συνεισφορά!",
-	"mobile-frontend-donate-photo-upload-success": "Επιτυχία! Η εικόνα σας μπορεί τώρα να χρησιμοποιηθεί στη {{ΌΝΟΜΑ_ΤΟΠΟΘΕΣΊΑΣ}}!",
 	"mobile-frontend-drawer-cancel": "Άκυρο",
 	"mobile-frontend-editor-abusefilter-disallow": "Αυτή η επεξεργασία δεν μπορεί να αποθηκευτεί, διότι εντοπίσαμε ένα ζήτημα.",
 	"mobile-frontend-editor-abusefilter-read-more": "Διαβάστε περισσότερα",
@@ -77,9 +76,8 @@
 	"mobile-frontend-home-button": "Αρχική",
 	"mobile-frontend-images-status": "Εικόνες",
 	"mobile-frontend-language-article-heading": "Διαβάστε σε άλλη γλώσσα",
-	"mobile-frontend-language-header": "Αυτή η σελίδα είναι διαθέσιμη σε $1 {{PLURAL:$1|γλώσσα|γλώσσες}}",
 	"mobile-frontend-language-heading": "<strong>Γλώσσες</strong>",
-	"mobile-frontend-language-site-choose": "Αναζήτηση γλώσσας",
+	"mobile-frontend-languages-not-available": "Αυτή η σελίδα δεν είναι διαθέσιμη σε άλλες γλώσσες",
 	"mobile-frontend-languages-header": "Γλώσσες",
 	"mobile-frontend-languages-nonexistent-title": "Η σελίδα \"$1\" δεν υπάρχει.",
 	"mobile-frontend-languages-text": "Η σελίδα $1 είναι διαθέσιμη σε $2 {{PLURAL:$2|γλώσσα|γλώσσες}}.",

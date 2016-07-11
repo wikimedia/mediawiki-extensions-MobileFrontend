@@ -5,6 +5,7 @@
 			"Kaganer"
 		]
 	},
+	"mobile-frontend-editor-edit": "Тупатон",
 	"mobile-frontend-editor-editing": "Тупатон",
 	"mobile-frontend-editor-keep-editing": "Тупатъянэз азьланьтоно",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>бамез эскерон</strong></span>",
@@ -15,8 +16,13 @@
 	"mobile-frontend-languages-header": "Кылъёс",
 	"mobile-frontend-languages-header-page": "$1 — Кылъёс",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Берпуметӥ {{GENDER:$1|тупатон}} лэсьтэмын {{PLURAL:$3|$3 нуналлы талэсь азьло|1=толон}}] {{PLURAL:$5|викиавторен [$6 $2]|0=тодмотэм викиавторен}}",
+	"mobile-frontend-main-menu-login": "Пырыны",
 	"mobile-frontend-main-menu-logout": "Потыны",
+	"mobile-frontend-main-menu-settings": "Настройкаос",
+	"mobile-frontend-main-menu-watchlist": "Чаклан список",
+	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-sign-in-heading": "Пырыны",
+	"mobile-frontend-terms-text": "Кутонлэн условиосы",
 	"mobile-frontend-view": "Мобильной версия",
 	"mobile-frontend-watchlist-cta-button-login": "Пырыны"
 }
