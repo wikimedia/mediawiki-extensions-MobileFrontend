@@ -2018,6 +2018,7 @@
 		"MFPhotoUploadEndpoint": "",
 		"MFUploadMinEdits": 0,
 		"MFUseWikibaseDescription": false,
+		"MFUseWikibase": false,
 		"MFDisplayWikibaseDescription": false,
 		"MFDisplayWikibaseDescriptionsAsTaglines": false,
 		"MFRSSFeedLink": false,

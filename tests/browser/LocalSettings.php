@@ -26,6 +26,6 @@ $wgMFEnableBeta = true;
 $wgMinervaAlwaysShowLanguageButton = true;
 
 // For those who have wikibase installed.
-$wgMFUseWikibaseDescription = true;
+$wgMFUseWikibase = true;
 $wgMFDisplayWikibaseDescription = true;
 $wgMFDisplayWikibaseDescriptionsAsTaglines = true;
