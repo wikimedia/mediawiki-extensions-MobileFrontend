@@ -172,6 +172,8 @@
 				this.$content.prop( 'readonly', true );
 			}
 
+			this.$content.on( 'input', this._resizeEditor.bind( this ) );
+
 			if ( !self.options.isAnon ) {
 				this._loadContent();
 			}
@@ -272,14 +274,35 @@
 		},
 
 		/**
+		 * Resize the editor textarea, maintaining scroll position in iOS
+		 */
+		_resizeEditor: function () {
+			var scrollTop;
+
+			if ( !this.$scrollContainer ) {
+				this.$scrollContainer = $( OO.ui.Element.static.getClosestScrollableContainer( this.$content[ 0 ] ) );
+				this.$content.css( 'padding-bottom', this.$scrollContainer.height() * 0.6 );
+			}
+
+			if ( this.$content.prop( 'scrollHeight' ) ) {
+				scrollTop = this.$scrollContainer.scrollTop();
+				this.$content
+					.css( 'height', 'auto' )
+					// can't reuse prop( 'scrollHeight' ) because we need the current value
+					.css( 'height', ( this.$content.prop( 'scrollHeight' ) + 2 ) + 'px' );
+				this.$scrollContainer.scrollTop( scrollTop );
+			}
+		},
+
+		/**
 		 * Set content to the user input field.
 		 * @param {String} content The content to set.
 		 */
 		setContent: function ( content ) {
 			this.$content
 				.show()
-				.val( content )
-				.microAutosize();
+				.val( content );
+			this._resizeEditor();
 		},
 
 		/**
