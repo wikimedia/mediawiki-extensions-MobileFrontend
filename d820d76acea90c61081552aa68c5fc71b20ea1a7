@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_0519807e",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1163,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-07-11T19:00:03Z",
+      "side": 1,
+      "message": "unnecessary comma :P",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_c535b8d9",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-07-11T19:00:03Z",
+      "side": 1,
+      "message": "it would be better to have a data provider for this test and set the globals only in the test case (according to the data provider). The data provider should also provide the expected result, so you\u0027ve three parameters:\n\npublic function test_showing_descriptions_is_disabled_by_default( $useWikibaseDescriptions, $displayWikibaseDescriptions, $shouldShowWikibaseDescriptions ) {\n\nThis would make the test much more readable and easier to understand. Also: Maybe you want to move the test into the MobileContext.php test and rename it to cover the method in MobileContext (if we at any time want to get a statistic, how much functions we covered with tests), or add a @covers annotation :)",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
