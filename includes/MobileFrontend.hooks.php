@@ -1241,15 +1241,12 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
-		$useWikibase = $context->getMFConfig()->get( 'MFUseWikibaseDescription' );
-		$displayTaglines = $context->getMFConfig()->get( 'MFDisplayWikibaseDescriptionsAsTaglines' );
 
 		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
-			// FIXME: Remove beta check once enabled in production
-			if ( $useWikibase && ( $displayTaglines || $context->isBetaGroupMember() ) ) {
+			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) ) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );

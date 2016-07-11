@@ -1161,14 +1161,25 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
-	 * and watchlists.
+	 * and watchlists; or as taglines on article pages.
 	 *
+	 * @param string $feature If <code>'tagline'</code>, then
+	 *  <code>wgMFDisplayWikibaseDescriptionsAsTaglines</code> tested instead of
+	 *  <code>wgMFDisplayWikibaseDescription</code>, which is more general. Defaults to
+	 *  <code>'search'</code>
 	 * @return bool
 	 */
-	public function shouldShowWikibaseDescriptions() {
+	public function shouldShowWikibaseDescriptions( $feature = 'search' ) {
 		$config = $this->getMFConfig();
 
-		return $config->get( 'MFUseWikibaseDescription' )
-			&& $config->get( 'MFDisplayWikibaseDescription' );
+		if ( !$config->get( 'MFUseWikibaseDescription' ) ) {
+			return false;
+		}
+
+		return $config->get(
+			$feature === 'tagline'
+			? 'MFDisplayWikibaseDescriptionsAsTaglines'
+			: 'MFDisplayWikibaseDescription'
+		);
 	}
 }

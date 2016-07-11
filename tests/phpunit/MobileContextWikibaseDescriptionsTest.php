@@ -24,6 +24,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 		$this->setMwGlobals( [
 			'wgMFUseWikibaseDescription' => false,
 			'wgMFDisplayWikibaseDescription' => false,
+			'wgMFDisplayWikibaseDescriptionsAsTaglines' => false,
 		] );
 
 		$this->assertFalse( $this->context->shouldShowWikibaseDescriptions() );
@@ -38,5 +39,17 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 		$this->setMwGlobals( 'wgMFDisplayWikibaseDescription', true );
 
 		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions() );
+	}
+
+	/**
+	 * @covers MobileContext::shouldShowWikibaseDescriptions
+	 */
+	public function test_showing_descriptions_as_taglines_can_be_enabled() {
+		$this->setMwGlobals( [
+			'wgMFUseWikibaseDescription' => true,
+			'wgMFDisplayWikibaseDescriptionsAsTaglines' => true,
+		] );
+
+		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions( 'tagline' ) );
 	}
 }
