@@ -67,12 +67,12 @@ class SpecialMobileCite extends MobileSpecialPage {
 			$link = $this->getLinkRenderer()->makeLink(
 				$title, $this->msg( 'mobile-frontend-return-to-page' )->text()
 			);
-			$args = [
-				'article_link' => $link,
-				'html' => $html
-			];
-			$templateParser = new TemplateParser( __DIR__ );
-			$out->addHTML( $templateParser->processTemplate( 'SpecialMobileCite', $args ) );
+			$out->addHTML(
+				'<div class="pre-content mobile-cite-article-link-container">' .
+				$link .
+				'</div>' .
+				$html
+			);
 		} else {
 			$out->setPageTitle( $this->msg( 'mobile-frontend-cite-error-title' ) );
 			$out->addHTML( MobileUI::errorBox( $this->msg( 'mobile-frontend-cite-error' ) ) );
