@@ -37,7 +37,7 @@
 			headings: undefined,
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
-			headerButtonsListClassName: 'overlay-action',
+			headerButtonsListClassName: 'header-action',
 			headerButtons: [ {
 				href: '#/talk/new',
 				className: 'add continue hidden',
@@ -143,7 +143,7 @@
 		 * @private
 		 */
 		_setupAddDiscussionButton: function () {
-			var $add = this.$( '.overlay-action .add' );
+			var $add = this.$( '.header-action .add' );
 			M.on( 'talk-discussion-added', $.proxy( this, '_loadContent', this.options ) );
 			if ( !user.isAnon() ) {
 				$add.removeClass( 'hidden' );

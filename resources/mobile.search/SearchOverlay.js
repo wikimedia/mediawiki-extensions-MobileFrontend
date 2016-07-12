@@ -31,6 +31,7 @@
 	}
 
 	OO.mfExtend( SearchOverlay, Overlay, {
+		isBorderBox: false,
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.search', 'header.hogan' ),
 			content: mw.template.get( 'mobile.search', 'content.hogan' ),

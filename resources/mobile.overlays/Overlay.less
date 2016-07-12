@@ -97,7 +97,7 @@
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
 //         <div class="overlay-title"><h2>Overlay</h2></div>
-//         <div class="overlay-action"><button class="submit">Submit</button></div>
+//         <div class="header-action"><button class="submit">Submit</button></div>
 //       </div>
 //     </div>
 //     <div class="content">Overlay with completion action.</div>
@@ -192,18 +192,14 @@
 }
 
 .overlay-header {
-	display: table;
-	width: 100%;
-	border-spacing: 0;
-	border-collapse: collapse;
 
 	.overlay-title {
 		// Expand the title as wide as possible to limit the size of the
-		// overlay-action. (Both are displayed as table-cells.)
+		// header-action. (Both are displayed as table-cells.)
 		width: 100%;
 	}
 
-	.overlay-action {
+	.header-action {
 		a,
 		button {
 			display: table-cell;
@@ -275,9 +271,8 @@
 		width: @headerHeight;
 	}
 
-	.overlay-action a,
+	.header-action a,
 	button {
-		min-height: @headerHeight;
 		&:focus {
 			outline: 0;
 		}
@@ -302,8 +297,8 @@
 }
 
 .overlay-header-container {
-	top: @headerMarginTop;
-	border-bottom: 1px solid @chromeContentSeparator;
+	top: 0;
+	border-bottom-color: @chromeContentSeparator;
 
 	&.header-chrome {
 		background-color: @chromeColor;

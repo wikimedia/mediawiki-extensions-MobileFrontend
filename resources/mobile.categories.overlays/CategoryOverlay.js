@@ -28,7 +28,7 @@
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-categories-heading' ),
 			subheading: mw.msg( 'mobile-frontend-categories-subheading' ),
-			headerButtonsListClassName: 'overlay-action',
+			headerButtonsListClassName: 'header-action',
 			headerButtons: [ {
 				href: '#/categories/add',
 				className: 'add continue hidden',

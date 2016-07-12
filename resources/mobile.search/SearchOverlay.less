@@ -39,7 +39,9 @@
 	}
 	.clear {
 		position: absolute;
-		top: 0;
+		top: 50%;
+		// offset it half the icon size (size defined in mediawiki ui)
+		margin-top: -@iconSize / 2;
 		right: @iconGutterWidth;
 	}
 

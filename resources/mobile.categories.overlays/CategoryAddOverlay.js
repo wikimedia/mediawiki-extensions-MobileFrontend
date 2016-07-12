@@ -27,7 +27,7 @@
 		 * is being saved.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
-			headerButtonsListClassName: 'overlay-action',
+			headerButtonsListClassName: 'header-action',
 			waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
 			waitIcon: icons.spinner().toHtmlString()
 		} ),

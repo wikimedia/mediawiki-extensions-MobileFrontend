@@ -1,4 +1,4 @@
-<div class="overlay-header-container position-fixed">
+<div class="overlay-header-container header-container position-fixed">
 	{{>contentHeader}}
 	{{>saveHeader}}
 </div>
