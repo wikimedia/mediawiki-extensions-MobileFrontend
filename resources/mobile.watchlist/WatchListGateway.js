@@ -42,7 +42,16 @@
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
-				}, mw.config.get( 'wgMFSearchAPIParams' ), this.continueParams );
+				}, this.continueParams, mw.config.get( 'wgMFSearchAPIParams' ) );
+
+			// Are Wikibase descriptions enabled?
+			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).search ) {
+				if ( $.inArray( 'pageterms', params.prop ) === -1 ) {
+					params.prop.push( 'pageterms' );
+				}
+
+				params.wbptterms = 'description';
+			}
 
 			if ( this.canContinue === false ) {
 				return $.Deferred();

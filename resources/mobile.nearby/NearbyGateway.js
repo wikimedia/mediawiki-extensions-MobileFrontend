@@ -122,7 +122,7 @@
 				d = $.Deferred(),
 				self = this;
 
-			requestParams = {
+			requestParams = $.extend( {
 				colimit: 'max',
 				prop: [ 'coordinates' ].concat( mw.config.get( 'wgMFQueryPropModules' ) ),
 				generator: 'geosearch',
@@ -130,8 +130,16 @@
 				ggsnamespace: ns,
 				ggslimit: limit,
 				formatversion: 2
-			};
-			$.extend( requestParams, params, mw.config.get( 'wgMFSearchAPIParams' ) );
+			}, params, mw.config.get( 'wgMFSearchAPIParams' ) );
+
+			// Are Wikibase descriptions enabled?
+			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).search ) {
+				if ( $.inArray( 'pageterms', params.prop ) === -1 ) {
+					requestParams.prop.push( 'pageterms' );
+				}
+
+				requestParams.wbptterms = 'description';
+			}
 
 			this.api.ajax( requestParams ).then( function ( resp ) {
 				var pages;
