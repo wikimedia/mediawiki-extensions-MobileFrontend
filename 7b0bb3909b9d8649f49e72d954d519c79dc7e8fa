@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_1ce1d297",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T18:43:52Z",
+      "side": 1,
+      "message": "This is not available from mediawiki mixins alone.",
+      "revId": "7b0bb3909b9d8649f49e72d954d519c79dc7e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
