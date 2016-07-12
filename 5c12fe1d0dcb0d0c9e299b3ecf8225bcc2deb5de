@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_82b8bc75",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 2030,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T20:28:37Z",
+      "side": 1,
+      "message": "Should this be removed at this point?",
+      "revId": "5c12fe1d0dcb0d0c9e299b3ecf8225bcc2deb5de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_a2b7c080",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T20:28:37Z",
+      "side": 1,
+      "message": "Would there be any value here if we add a comment that this test can be removed when deprecated?",
+      "revId": "5c12fe1d0dcb0d0c9e299b3ecf8225bcc2deb5de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
