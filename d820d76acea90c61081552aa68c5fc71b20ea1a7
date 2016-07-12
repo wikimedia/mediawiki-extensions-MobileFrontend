@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce061b56_9c8782dc",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T18:39:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce061b56_0519807e",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce061b56_e699dfc9",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ce061b56_7c8c5e00",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T18:39:52Z",
+      "side": 1,
+      "message": "We use both. We should probably standardise on one but until we have some level of enforcement let\u0027s not worry about that.",
+      "parentUuid": "ce061b56_e699dfc9",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce061b56_c535b8d9",
         "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
         "patchSetId": 1
@@ -47,6 +83,23 @@
       "writtenOn": "2016-07-11T19:00:03Z",
       "side": 1,
       "message": "it would be better to have a data provider for this test and set the globals only in the test case (according to the data provider). The data provider should also provide the expected result, so you\u0027ve three parameters:\n\npublic function test_showing_descriptions_is_disabled_by_default( $useWikibaseDescriptions, $displayWikibaseDescriptions, $shouldShowWikibaseDescriptions ) {\n\nThis would make the test much more readable and easier to understand. Also: Maybe you want to move the test into the MobileContext.php test and rename it to cover the method in MobileContext (if we at any time want to get a statistic, how much functions we covered with tests), or add a @covers annotation :)",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_1c243207",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T18:39:52Z",
+      "side": 1,
+      "message": "This tests the default. I don\u0027t think we should be testing default values given they can change at any time depending on where theyare run. I would prefer to explicitly set it to false beforehand.",
       "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
