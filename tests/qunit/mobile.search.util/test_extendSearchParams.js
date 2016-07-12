@@ -1,0 +1,99 @@
+( function ( M, $ ) {
+
+	var extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
+
+	QUnit.module( 'mobile.search.util/extendSearchParams', QUnit.newMwEnvironment( {
+		config: {
+			wgMFSearchAPIParams: {
+				foo: 'bar'
+			},
+			wgMFQueryPropModules: [ 'baz' ],
+			wgMFDisplayWikibaseDescriptions: {
+				search: true,
+				nearby: false
+			}
+		}
+	} ) );
+
+	QUnit.test( 'it throws if the feature is invalid', function ( assert ) {
+		var expectedError = new Error( '"foo" isn\'t a feature that shows Wikibase descriptions.' );
+
+		QUnit.expect( 1 );
+
+		assert.throws( function () {
+			extendSearchParams( 'foo', {} );
+		}, expectedError );
+	} );
+
+	QUnit.test( 'it extends the parameters', function ( assert ) {
+		var params = extendSearchParams( 'search', {
+				qux: 'quux',
+				prop: [ 'corge' ]
+			} ),
+			expectedParams = {
+				qux: 'quux',
+				foo: 'bar', // from wgMFSearchAPIParams
+				prop: [ 'corge', 'baz', 'pageterms' ], // from wgMFQueryPropModules and Wikibase-specific
+				wbptterms: 'description'
+			};
+
+		QUnit.expect( 1 );
+
+		assert.deepEqual( params, expectedParams );
+	} );
+
+	QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is disabled', function ( assert ) {
+		var params = extendSearchParams( 'nearby', {
+			qux: 'quux'
+		} );
+
+		QUnit.expect( 2 );
+
+		assert.equal( $.inArray( params.prop, 'pageterms' ), -1 );
+		assert.equal( params.wbptterms, undefined );
+	} );
+
+	QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
+		var params = extendSearchParams( 'search', {
+				foo: 'quux',
+				wbptterms: 'grault'
+			} ),
+			expectedParams = {
+				foo: 'bar',
+				prop: [ 'baz', 'pageterms' ],
+				wbptterms: 'description'
+			};
+
+		QUnit.expect( 1 );
+
+		assert.deepEqual(
+			params,
+			expectedParams,
+			'The value of the "foo" and "wbptterms" parameters are overridden.'
+		);
+	} );
+
+	QUnit.test( 'it is variadic', function ( assert ) {
+		var params = extendSearchParams(
+				'search',
+				{
+					baz: 'qux'
+				},
+				{
+					quux: 'corge'
+				}
+			),
+			expectedParams = {
+				foo: 'bar',
+				baz: 'qux',
+				quux: 'corge',
+				prop: [ 'baz', 'pageterms' ],
+				wbptterms: 'description'
+			};
+
+		QUnit.expect( 1 );
+
+		assert.deepEqual( params, expectedParams );
+	} );
+
+}( mw.mobileFrontend, jQuery ) );

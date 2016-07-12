@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var Page = M.require( 'mobile.startup/Page' );
+	var Page = M.require( 'mobile.startup/Page' ),
+		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
 	 * @class WatchListGateway
@@ -34,24 +35,15 @@
 		 */
 		loadWatchlist: function () {
 			var self = this,
-				params = $.extend( {
-					prop: [ 'info', 'revisions' ].concat( mw.config.get( 'wgMFQueryPropModules' ) ),
+				params = extendSearchParams( 'watchlist', {
+					prop: [ 'info', 'revisions' ],
 					format: 'json',
 					formatversion: 2,
 					rvprop: 'timestamp|user',
 					generator: 'watchlistraw',
 					gwrnamespace: '0',
 					gwrlimit: this.limit
-				}, this.continueParams, mw.config.get( 'wgMFSearchAPIParams' ) );
-
-			// Are Wikibase descriptions enabled?
-			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).watchlist ) {
-				if ( $.inArray( 'pageterms', params.prop ) === -1 ) {
-					params.prop.push( 'pageterms' );
-				}
-
-				params.wbptterms = 'description';
-			}
+				}, this.continueParams );
 
 			if ( this.canContinue === false ) {
 				return $.Deferred();

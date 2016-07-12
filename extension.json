@@ -805,6 +805,18 @@
 				"4": "mobile-frontend-search-feedback-link-text"
 			}
 		},
+		"mobile.search.util": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.startup"
+			],
+			"scripts": [
+				"resources/mobile.search.util/extendSearchParams.js"
+			]
+		},
 		"mobile.search.api": {
 			"targets": [
 				"mobile",
@@ -812,7 +824,8 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mediawiki.Title"
+				"mediawiki.Title",
+				"mobile.search.util"
 			],
 			"scripts": [
 				"resources/mobile.search.api/SearchGateway.js"
@@ -1145,7 +1158,8 @@
 				"mobile.startup",
 				"mobile.drawers",
 				"mobile.ajax",
-				"mobile.toast"
+				"mobile.toast",
+				"mobile.search.util"
 			],
 			"scripts": [
 				"resources/mobile.watchstar/WatchstarGateway.js",
@@ -1217,7 +1231,8 @@
 				"mediawiki.language",
 				"mobile.pagelist.scripts",
 				"mobile.foreignApi",
-				"mobile.messageBox"
+				"mobile.messageBox",
+				"mobile.search.util"
 			],
 			"messages": [
 				"mobile-frontend-nearby-distance",

@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
 	var limit = 50,
 		Page = M.require( 'mobile.startup/Page' ),
-		ns = mw.config.get( 'wgMFContentNamespace' );
+		ns = mw.config.get( 'wgMFContentNamespace' ),
+		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
 	 * FIXME: Api should surely know this and return it in response to save us the hassle
@@ -122,24 +123,15 @@
 				d = $.Deferred(),
 				self = this;
 
-			requestParams = $.extend( {
+			requestParams = extendSearchParams( 'nearby', {
 				colimit: 'max',
-				prop: [ 'coordinates' ].concat( mw.config.get( 'wgMFQueryPropModules' ) ),
+				prop: [ 'coordinates' ],
 				generator: 'geosearch',
 				ggsradius: range,
 				ggsnamespace: ns,
 				ggslimit: limit,
 				formatversion: 2
-			}, params, mw.config.get( 'wgMFSearchAPIParams' ) );
-
-			// Are Wikibase descriptions enabled?
-			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).nearby ) {
-				if ( $.inArray( 'pageterms', params.prop ) === -1 ) {
-					requestParams.prop.push( 'pageterms' );
-				}
-
-				requestParams.wbptterms = 'description';
-			}
+			}, params );
 
 			this.api.ajax( requestParams ).then( function ( resp ) {
 				var pages;
