@@ -45,7 +45,7 @@
 				}, this.continueParams, mw.config.get( 'wgMFSearchAPIParams' ) );
 
 			// Are Wikibase descriptions enabled?
-			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).search ) {
+			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).watchlist ) {
 				if ( $.inArray( 'pageterms', params.prop ) === -1 ) {
 					params.prop.push( 'pageterms' );
 				}

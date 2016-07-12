@@ -546,7 +546,9 @@ Set which features will use Wikibase descriptions, e.g.
 
 ```
 $wgMFDisplayWikibaseDescriptions = [
-  'search' => false,
+  'search' => true,
+  'nearby' => true,
+  'watchlist' => false,
   'tagline' => true,
 ];
 ```
@@ -556,6 +558,8 @@ Default:
 ```
 [
   'search' => false,
+  'nearby' => false,
+  'watchlist' => false,
   'tagline' => false,
 ]
 ```

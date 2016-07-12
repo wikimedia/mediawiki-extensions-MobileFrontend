@@ -29,5 +29,7 @@ $wgMinervaAlwaysShowLanguageButton = true;
 $wgMFUseWikibase = true;
 $wgMFDisplayWikibaseDescriptions = [
 	'search' => true,
+	'nearby' => true,
+	'watchlist' => true,
 	'tagline' => true,
 ];

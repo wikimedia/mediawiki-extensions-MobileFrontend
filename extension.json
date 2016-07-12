@@ -2023,6 +2023,8 @@
 		"MFDisplayWikibaseDescriptionsAsTaglines": false,
 		"MFDisplayWikibaseDescriptions": {
 			"search": false,
+			"nearby": false,
+			"watchlist": false,
 			"tagline": false
 		},
 		"MFRSSFeedLink": false,
