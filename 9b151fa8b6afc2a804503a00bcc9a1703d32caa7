@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_e281c8a5",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1171,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T20:25:53Z",
+      "side": 1,
+      "message": "Maybe \u0027\u0027 or \u0027tagline\u0027 would be a more sensible default given the current status quo at this point?",
+      "revId": "9b151fa8b6afc2a804503a00bcc9a1703d32caa7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_7c63be3b",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-12T20:25:53Z",
+      "side": 1,
+      "message": "Please add a @covers",
+      "revId": "9b151fa8b6afc2a804503a00bcc9a1703d32caa7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
