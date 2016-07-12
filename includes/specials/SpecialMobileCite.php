@@ -64,9 +64,11 @@ class SpecialMobileCite extends MobileSpecialPage {
 			$html = $this->getReferenceBodyHtml( $title, $revId );
 			$html = MobileUI::contentElement( $html );
 			$out->setPageTitle( $title->getText() );
+			$link = $this->getLinkRenderer()->makeLink(
+				$title, $this->msg( 'mobile-frontend-return-to-page' )->text()
+			);
 			$args = [
-				'article_link' => $title->getLocalURL(),
-				'article_link_title' => $this->msg( 'mobile-frontend-return-to-page' )->text(),
+				'article_link' => $link,
 				'html' => $html
 			];
 			$templateParser = new TemplateParser( __DIR__ );
