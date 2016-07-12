@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "ce061b56_e699dfc9",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-12T14:13:27Z",
+      "side": 1,
+      "message": "Line 1156 says `boolean`. I suppose `bool` is fine too?",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce061b56_c535b8d9",
         "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
         "patchSetId": 1
