@@ -423,7 +423,7 @@ class MobileFrontendHooks {
 
 		// When set turn on Wikidata descriptions
 		// https://phabricator.wikimedia.org/T101719
-		if ( $context->shouldShowWikibaseDescriptions() ) {
+		if ( $context->shouldShowWikibaseDescriptions( 'search' ) ) {
 			if ( !in_array( 'pageterms', $pageProps ) ) {
 				$pageProps[] = 'pageterms';
 			}

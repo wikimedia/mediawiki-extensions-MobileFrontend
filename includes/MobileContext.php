@@ -1160,26 +1160,56 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
-	 * and watchlists; or as taglines on article pages.
+	* Gets whether Wikibase descriptions should be shown in search results, including nearby search,
+	* and watchlists; or as taglines on article pages based on legacy configuration variables.
 	 *
-	 * @param string $feature If <code>'tagline'</code>, then
-	 *  <code>wgMFDisplayWikibaseDescriptionsAsTaglines</code> tested instead of
-	 *  <code>wgMFDisplayWikibaseDescription</code>, which is more general. Defaults to
-	 *  <code>'search'</code>
-	 * @return bool
+	 * @param string $feature
+	 * @return boolean
 	 */
-	public function shouldShowWikibaseDescriptions( $feature = 'search' ) {
+	private function shouldShowWikibaseDescriptionsLegacy( $feature ) {
 		$config = $this->getMFConfig();
 
-		if ( ! ( $config->get( 'MFUseWikibase' ) || $config->get( 'MFUseWikibaseDescription' ) ) ) {
+		if ( !$config->get( 'MFUseWikibaseDescription' ) ) {
 			return false;
 		}
 
-		return $config->get(
-			$feature === 'tagline'
-			? 'MFDisplayWikibaseDescriptionsAsTaglines'
-			: 'MFDisplayWikibaseDescription'
-		);
+		if ( $feature === 'tagline' ) {
+			return $config->get( 'MFDisplayWikibaseDescriptionsAsTaglines' );
+		}
+
+		return $config->get( 'MFDisplayWikibaseDescription' );
+	}
+
+	/**
+	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
+	 * and watchlists; or as taglines on article pages.
+	 *
+	 * TODO: In early August, the legacy <code>$wgMFUseWikibaseDescription</code> and
+	 * <code>$wgMFDisplayWikibaseDescriptionsAsTaglines</code> configuration variables will be
+	 * removed and <code>MobileContext#shouldUseWikidataDescriptionsLegacy</code> can be removed.
+	 *
+	 * @param string $feature
+	 * @return boolean
+	 * @throws DomainException If `feature` isn't one that shows Wikidata descriptions. See the
+	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
+	 */
+	public function shouldShowWikibaseDescriptions( $feature ) {
+		$config = $this->getMFConfig();
+		$displayWikibaseDescriptions = $config->get( 'MFDisplayWikibaseDescriptions' );
+
+		if ( !isset( $displayWikibaseDescriptions[ $feature ] ) ) {
+			throw new DomainException(
+				"\"{$feature}\" isn't a feature that shows Wikidata descriptions."
+			);
+		}
+
+		if (
+			$config->get( 'MFUseWikibase' )
+			&& $displayWikibaseDescriptions[ $feature ]
+		) {
+			return true;
+		}
+
+		return $this->shouldShowWikibaseDescriptionsLegacy( $feature );
 	}
 }
