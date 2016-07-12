@@ -24,8 +24,6 @@ body {
 .header {
 	.search {
 		padding: .5em 28px;
-		// FIXME: share this file with the similar file in mobile.languages.structured
-		.background-image-svg( 'magnifying-glass.svg', '' );
 		background-position: 7px center;
 		background-repeat: no-repeat;
 		background-size: 20px 20px;
@@ -183,6 +181,7 @@ body {
 }
 
 input.search {
+	.background-image-svg( 'magnifying-glass.svg', 'magnifying-glass.png' );
 	outline: 0;
 	width: 100%;
 	// FIXME: unable to check but the important may not be needed for Nokia S60;
