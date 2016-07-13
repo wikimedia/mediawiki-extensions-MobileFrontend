@@ -51,6 +51,24 @@
       "revId": "13634c25bd10b728861794fd61277d7644090b43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_1ebd5164",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 2030,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T18:29:54Z",
+      "side": 1,
+      "message": "I\u0027m curious why you feel this is necessary, given the documentation in README.md.",
+      "parentUuid": "ae0ba75f_388cad3a",
+      "revId": "13634c25bd10b728861794fd61277d7644090b43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
