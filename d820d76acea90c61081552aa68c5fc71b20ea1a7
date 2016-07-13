@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ae0ba75f_72b816e3",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T08:35:45Z",
+      "side": 1,
+      "message": "I\u0027ve followed Jdlrobson\u0027s suggestion below.\n\nOn the contrary, I actually mostly dislike data providers as I find them hard to document and thus harder to read than functions, whereas PHPUnit actually supports snake-cased function names in it\u0027s – prettier, IMO – TestDox output \u003chttps://phpunit.de/manual/current/en/other-uses-for-tests.html\u003e. We may have to agree to disagree on this.\n\nI\u0027ll be sure to add the @covers annotation though. Good point!",
+      "parentUuid": "ce061b56_c535b8d9",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce061b56_1c243207",
         "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
         "patchSetId": 1
@@ -100,6 +118,24 @@
       "writtenOn": "2016-07-12T18:39:52Z",
       "side": 1,
       "message": "This tests the default. I don\u0027t think we should be testing default values given they can change at any time depending on where theyare run. I would prefer to explicitly set it to false beforehand.",
+      "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_f2f406bc",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T08:35:45Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "ce061b56_1c243207",
       "revId": "d820d76acea90c61081552aa68c5fc71b20ea1a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
