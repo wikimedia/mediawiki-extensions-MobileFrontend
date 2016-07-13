@@ -16,6 +16,24 @@
       "revId": "59b52903858b1b309587ca42a596acf8820726ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_fef4cdbb",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T17:59:44Z",
+      "side": 1,
+      "message": "Good spot! Done.",
+      "parentUuid": "ae0ba75f_58fff162",
+      "revId": "59b52903858b1b309587ca42a596acf8820726ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
