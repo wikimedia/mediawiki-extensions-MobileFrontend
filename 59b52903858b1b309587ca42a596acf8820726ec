@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0ba75f_58fff162",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T15:16:27Z",
+      "side": 1,
+      "message": "Doesn\u0027t `params` need to be `requestParams` here and above?",
+      "revId": "59b52903858b1b309587ca42a596acf8820726ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
