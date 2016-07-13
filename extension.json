@@ -456,15 +456,6 @@
 				"mobile-frontend-last-modified-with-user-just-now"
 			]
 		},
-		"mobile.microAutoSize": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"scripts": [
-				"libs/micro.js/micro.autosize.js"
-			]
-		},
 		"mediawiki.template.hogan": {
 			"targets": [
 				"mobile",
@@ -770,7 +761,6 @@
 			"dependencies": [
 				"mobile.abusefilter",
 				"mobile.editor.common",
-				"mobile.microAutoSize",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
 				"mediawiki.notification"
