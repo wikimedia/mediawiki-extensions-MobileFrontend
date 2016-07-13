@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae0ba75f_3e00156d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T18:26:51Z",
+      "side": 1,
+      "message": "Yes. Done.",
+      "parentUuid": "ae0ba75f_d890019b",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae0ba75f_b8c7fd99",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ae0ba75f_3e2f75f5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1249,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T18:26:51Z",
+      "side": 1,
+      "message": "I think we did check $wgMFUseWikibaseDescription. See L1244 and L1252:\n\n    $useWikibase \u003d ...\n\nand\n\n    if ( $useWikibase \u0026\u0026 ...",
+      "parentUuid": "ae0ba75f_b8c7fd99",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae0ba75f_98ddd976",
         "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2016-07-13T14:41:52Z",
       "side": 1,
       "message": "Don\u0027t we need to add @covers here too?",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_9e3f8120",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-13T18:26:51Z",
+      "side": 1,
+      "message": "Yes. Done.",
+      "parentUuid": "ae0ba75f_98ddd976",
       "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
