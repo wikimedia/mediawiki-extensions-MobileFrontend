@@ -69,6 +69,24 @@
       "revId": "13634c25bd10b728861794fd61277d7644090b43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_be7a45b7",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 2030,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-13T18:33:21Z",
+      "side": 1,
+      "message": "We shouldn\u0027t duplicate unnecessary information.\nThere was a long discussion and agreement to use the README here:\nhttps://gerrit.wikimedia.org/r/#/c/209882/\n\nThe @\u0027s below are the anti-pattern that should probably be removed.",
+      "parentUuid": "ae0ba75f_1ebd5164",
+      "revId": "13634c25bd10b728861794fd61277d7644090b43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
