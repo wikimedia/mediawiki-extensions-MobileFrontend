@@ -2,6 +2,8 @@
 @import 'minerva.mixins';
 @import 'mediawiki.ui/variables';
 
+/* stylelint-disable no-descending-specificity */
+
 @contentHeaderBorderColor: #e2e2e2;
 
 .mw-ui-icon-back {
@@ -223,6 +225,10 @@
 			&[disabled] {
 				opacity: .5;
 			}
+
+			&:focus {
+				outline: 0;
+			}
 		}
 	}
 
@@ -270,13 +276,6 @@
 	> ul, button {
 		width: @headerHeight;
 	}
-
-	.header-action a,
-	button {
-		&:focus {
-			outline: 0;
-		}
-	}
 }
 
 .overlay-header-container,
@@ -310,7 +309,7 @@
 	bottom: 0;
 	border-top: 1px solid @grayLight;
 
-	& a {
+	a {
 		display: block;
 		// The 1em bottom whitespace is applied as padding since Chrome and Safari ignore
 		// it otherwise. The 10px padding corresponds with the icon margin.

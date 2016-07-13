@@ -62,10 +62,13 @@ textarea {
 	display: none;
 }
 
+/* TODO: Fix specificity */
+/* stylelint-disable no-descending-specificity */
 .no-js-only,
 .client-js .jsonly {
 	display: inherit;
 }
+/* stylelint-enable no-descending-specificity */
 
 .position-fixed {
 	// use !important to override more specific rules (e.g. in Overlay.less)

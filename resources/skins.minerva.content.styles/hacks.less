@@ -12,6 +12,10 @@ FIXME: Review all of these hacks to see if they still apply.
 @import 'minerva.variables';
 @import 'minerva.mixins';
 
+.collapsible td {
+	width: auto !important;
+}
+
 .content {
 	// Hide cleanup templates by default to non-javascript users as these stop them from reading the article itself
 	// Talk page informational boxes
@@ -71,10 +75,6 @@ FIXME: Review all of these hacks to see if they still apply.
 	}
 }
 
-.collapsible td {
-	width: auto !important;
-}
-
 /* bug 34878: Set an optimal width for a column.
  * Makes sure that on small screens column-count is only honored if column-width hint is not violated.
  * https://developer.mozilla.org/en-US/docs/CSS/column-width
@@ -125,8 +125,8 @@ FIXME: Review all of these hacks to see if they still apply.
 		table {
 			// Make {{col-beg}}, {{col-break}}, and {{col-end}} templates display single column tables
 			&.multicol {
-				> tbody > tr > td,
-				> tr > td {
+				> tr > td,
+				> tbody > tr > td {
 					display: block !important;
 					width: auto !important;
 				}

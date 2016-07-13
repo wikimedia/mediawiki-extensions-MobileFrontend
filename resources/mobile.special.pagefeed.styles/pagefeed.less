@@ -13,9 +13,9 @@
 		min-width: 30%;
 	}
 
+	a,
 	a:visited,
-	a:hover,
-	a {
+	a:hover {
 		padding: .5em 1em;
 		display: block;
 		color: inherit;
@@ -47,19 +47,19 @@
 			border-left: 0;
 		}
 
-		&.selected {
-			a {
-				border-bottom: solid 3px @colorProgressive;
-				font-weight: bold;
-			}
-		}
-
+		/* stylelint-disable no-descending-specificity */
 		a {
 			display: block;
 			color: @colorGray5;
 			margin: 0 1px 0 0;
 			border-bottom: 3px solid transparent;
 		}
+
+		&.selected a {
+			border-bottom: solid 3px @colorProgressive;
+			font-weight: bold;
+		}
+		/* stylelint-enable no-descending-specificity */
 	}
 }
 

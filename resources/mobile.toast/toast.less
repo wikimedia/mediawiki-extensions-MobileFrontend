@@ -44,44 +44,6 @@
 	}
 }
 
-.animations {
-	.mw-notification,
-	.drawer {
-		@duration: .25s;
-		display: block;
-		visibility: hidden;
-		/* we can't determine the actual size of the drawer in CSS, so this is
-		 * an estimate; it doesn't have to be exact because it's used only for
-		 * the sliding animation, not for hiding the drawer */
-		.transform( translate( 0, 100px ) );
-		// counter translate with bottom to avoid empty blank space at the bottom
-		// especially on browsers that don't support position: fixed
-		bottom: 100px;
-		opacity: 0;
-
-		// Only apply the transition when an animation is needed (when drawer/toast hidden/shown)
-		&.animated, &.mw-notification-tag-toast {
-			// delay visibility transition to make other transitions visible
-			// http://fvsch.com/code/transition-fade/test5.html
-			// need to assign to a temporary variable to preserve commas
-			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
-			@transition: @duration, opacity @duration, visibility 0s @duration, bottom 0s @duration;
-			.transition-transform( @transition );
-		}
-
-		&.visible, &.mw-notification-visible {
-			bottom: 0;
-			// need to assign to a temporary variable to preserve commas
-			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
-			@transition: @duration, opacity @duration;
-			.transition-transform( @transition );
-			visibility: visible;
-			opacity: 1;
-			.transform( translate( 0, 0 ) );
-		}
-	}
-}
-
 .mw-notification,
 .toast {
 	font-size: .9em;
@@ -126,4 +88,42 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+}
+
+.animations {
+	.mw-notification,
+	.drawer {
+		@duration: .25s;
+		display: block;
+		visibility: hidden;
+		/* we can't determine the actual size of the drawer in CSS, so this is
+		 * an estimate; it doesn't have to be exact because it's used only for
+		 * the sliding animation, not for hiding the drawer */
+		.transform( translate( 0, 100px ) );
+		// counter translate with bottom to avoid empty blank space at the bottom
+		// especially on browsers that don't support position: fixed
+		bottom: 100px;
+		opacity: 0;
+
+		// Only apply the transition when an animation is needed (when drawer/toast hidden/shown)
+		&.animated, &.mw-notification-tag-toast {
+			// delay visibility transition to make other transitions visible
+			// http://fvsch.com/code/transition-fade/test5.html
+			// need to assign to a temporary variable to preserve commas
+			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
+			@transition: @duration, opacity @duration, visibility 0s @duration, bottom 0s @duration;
+			.transition-transform( @transition );
+		}
+
+		&.visible, &.mw-notification-visible {
+			bottom: 0;
+			// need to assign to a temporary variable to preserve commas
+			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
+			@transition: @duration, opacity @duration;
+			.transition-transform( @transition );
+			visibility: visible;
+			opacity: 1;
+			.transform( translate( 0, 0 ) );
+		}
+	}
 }

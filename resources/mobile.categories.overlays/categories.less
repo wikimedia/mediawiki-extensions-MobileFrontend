@@ -9,19 +9,6 @@
 
 // FIXME: code duplication with special watchlist, consolidate!
 .category-header {
-	/* source: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
-	/* width for two links */
-	li:first-child:nth-last-child( 2 ),
-	li:first-child:nth-last-child( 2 ) ~ li {
-		width: 50%;
-	}
-
-	/* width for four links */
-	li:first-child:nth-last-child( 4 ),
-	li:first-child:nth-last-child( 4 ) ~ li {
-		width: 25%;
-	}
-
 	margin-bottom: -1px;
 
 	li {
@@ -33,18 +20,31 @@
 		line-height: 1.5;
 		padding: 5px 0 0;
 
-		&.selected {
-			a {
-				border-bottom: solid 3px @colorProgressive;
-				font-weight: bold;
-			}
-		}
-
 		a {
 			display: block;
 			color: @colorGray5;
 			margin: 0 1px 0 0;
 			border-bottom: 3px solid transparent;
 		}
+
+		&.selected a {
+			border-bottom: solid 3px @colorProgressive;
+			font-weight: bold;
+		}
 	}
+
+	/* source: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+	/* width for two links */
+	li:first-child:nth-last-child( 2 ),
+	li:first-child:nth-last-child( 2 ) ~ li {
+		width: 50%;
+	}
+
+	/* width for four links */
+	/* stylelint-disable no-descending-specificity */
+	li:first-child:nth-last-child( 4 ),
+	li:first-child:nth-last-child( 4 ) ~ li {
+		width: 25%;
+	}
+	/* stylelint-enable no-descending-specificity */
 }

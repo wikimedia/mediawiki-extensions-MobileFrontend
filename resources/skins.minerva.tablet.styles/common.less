@@ -123,12 +123,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		padding-left: 0;
 		padding-right: 0;
 		font-size: 1em;
-		&.active {
-			background-color: transparent;
-			#mw-mf-last-modified {
-				background-color: @lastModifiedBarActiveBackgroundColor;
-			}
-		}
 
 		// This rule must be scoped to .last-modified-bar to prevent side effects on the MainPage bar
 		#mw-mf-last-modified {
@@ -137,6 +131,14 @@ A file for css that optimises the Minerva skin on larger devices.
 			padding-left: 16px;
 			padding-right: 16px;
 		}
+
+		&.active {
+			background-color: transparent;
+			#mw-mf-last-modified {
+				background-color: @lastModifiedBarActiveBackgroundColor;
+			}
+		}
+
 	}
 }
 

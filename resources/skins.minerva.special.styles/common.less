@@ -18,7 +18,19 @@
 	}
 }
 
+// used in Special:Nearby and Special:UserLogin
+.errorbox,
+.error {
+	color: @colorErrorText;
+	background: @colorErrorBackground;
+}
+
 .mw-mf-special {
+	h1,
+	h2 {
+		font-family: @fontFamily;
+	}
+
 	.content-header {
 		padding: 0 0 20px;
 		border-bottom: 1px solid @headerBorderBottom;
@@ -42,22 +54,10 @@
 		}
 	}
 
-	h1,
-	h2 {
-		font-family: @fontFamily;
-	}
-
 	.error {
 		h2 {
 			margin-top: 0;
 			text-transform: none;
 		}
 	}
-}
-
-// used in Special:Nearby and Special:UserLogin
-.errorbox,
-.error {
-	color: @colorErrorText;
-	background: @colorErrorBackground;
 }

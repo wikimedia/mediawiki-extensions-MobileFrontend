@@ -83,11 +83,16 @@
 		}
 	}
 
-	&.thumbs {
-		.title {
-			// 22px is the width of the watchlist star, +2px for additional padding
-			padding-right: 24px;
-		}
+	.info {
+		font-size: .7em;
+		text-transform: uppercase;
+	}
+
+	// FIXME: Add component class to all info classes in currently defined page-lists
+	.info,
+	.component {
+		color: @grayMedium;
+		line-height: 1.2;
 	}
 
 	.title {
@@ -100,6 +105,13 @@
 		}
 	}
 
+	&.thumbs {
+		.title {
+			// 22px is the width of the watchlist star, +2px for additional padding
+			padding-right: 24px;
+		}
+	}
+
 	// FIXME: rename to something more general, e.g. .side
 	.list-thumb {
 		position: absolute;
@@ -107,6 +119,12 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+	}
+
+	p {
+		font-size: .9em;
+		// See bug 63610
+		line-height: normal;
 	}
 
 	&.side-list .list-thumb {
@@ -127,24 +145,6 @@
 	// something on watchlist that doesn't exist
 	.title.new h3 {
 		color: @redBase;
-	}
-
-	p {
-		font-size: .9em;
-		// See bug 63610
-		line-height: normal;
-	}
-
-	// FIXME: Add component class to all info classes in currently defined page-lists
-	.info,
-	.component {
-		color: @grayMedium;
-		line-height: 1.2;
-	}
-
-	.info {
-		font-size: .7em;
-		text-transform: uppercase;
 	}
 }
 

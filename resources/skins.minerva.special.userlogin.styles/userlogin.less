@@ -18,8 +18,8 @@
 
 // FIXME: Move to ConfirmEdit extension
 /* fancycaptcha reload button */
-#mf-captcha-reload-container,
-.confirmedit-captcha-reload {
+.confirmedit-captcha-reload,
+#mf-captcha-reload-container {
 	border-top: 1px dashed #e1e1e1;
 	display: inline-block;
 	padding: 14px 25%;
@@ -30,7 +30,7 @@
 		color: @colorGray7;
 		font-weight: bold;
 		background: none;
-		&:before {
+		&:before { /* stylelint-disable-line no-descending-specificity */
 			// Note icon is provided in mobile.ajax
 			content: '';
 			background-position: center left;
@@ -41,21 +41,6 @@
 			display: inline-block;
 			padding-right: 8px;
 			line-height: 1;
-		}
-	}
-}
-
-#mw-mf-login,
-#mw-mf-accountcreate,
-#userloginForm {
-	.watermark {
-		text-align: center;
-		// FIXME: Should we set the height here?
-		height: 72px;
-		margin-bottom: @headingMargin;
-		img {
-			// Important to override default max-width and height auto combo
-			height: 72px !important;
 		}
 	}
 }
@@ -92,6 +77,13 @@
 		background: #fff;
 		text-align: center;
 
+		input:not( [type=submit] ) {
+			-webkit-appearance: none;
+			border-radius: 0;
+			padding: .8em .5em;
+			margin: 0;
+		}
+
 		input:not( [type=submit] ), img, #wpCaptchaWord {
 			border: 0;
 			border-top: solid 1px @colorGray12;
@@ -99,13 +91,6 @@
 			&:first-child {
 				border-top: 0;
 			}
-		}
-
-		input:not( [type=submit] ) {
-			-webkit-appearance: none;
-			border-radius: 0;
-			padding: .8em .5em;
-			margin: 0;
 		}
 
 		// CAPTCHA's are well known by internet users, save the space of the explanation
@@ -127,6 +112,21 @@
 
 		.confirmedit-captcha-reload {
 			position: relative;
+		}
+	}
+}
+
+#mw-mf-login,
+#mw-mf-accountcreate,
+#userloginForm {
+	.watermark {
+		text-align: center;
+		// FIXME: Should we set the height here?
+		height: 72px;
+		margin-bottom: @headingMargin;
+		img {
+			// Important to override default max-width and height auto combo
+			height: 72px !important;
 		}
 	}
 }
@@ -167,6 +167,18 @@
 		text-align: center;
 	}
 
+	// Make the inputs look connected in mobile mode
+	.mw-ui-input {
+		border: solid 1px @colorGrayLight;
+
+		&#wpEmail,
+		&.loginPassword {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			margin-top: -1px;
+		}
+	}
+
 	.mw-ui-vform {
 		margin: auto;
 
@@ -187,18 +199,6 @@
 			> label {
 				display: none;
 			}
-		}
-	}
-
-	// Make the inputs look connected in mobile mode
-	.mw-ui-input {
-		border: solid 1px @colorGrayLight;
-
-		&#wpEmail,
-		&.loginPassword {
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-			margin-top: -1px;
 		}
 	}
 

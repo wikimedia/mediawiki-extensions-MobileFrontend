@@ -28,11 +28,6 @@
 		opacity: 0.8;
 	}
 
-	/* center arrow in RTL wikis */
-	.rtl > & .arrow-up {
-		transform: translate( 50%, -50% );
-	}
-
 	> .arrow-up {
 		width: 0;
 		height: 0;
@@ -43,5 +38,10 @@
 		top: 50%;
 		left: 50%;
 		transform: translate( -50%, -50% );
+	}
+
+	/* center arrow in RTL wikis */
+	.rtl > & .arrow-up {
+		transform: translate( 50%, -50% );
 	}
 }
