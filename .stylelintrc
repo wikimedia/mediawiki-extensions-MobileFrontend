@@ -1,7 +1,6 @@
 {
 	"extends": "stylelint-config-wikimedia",
 	"rules": {
-		"value-border-zero": null,
 		"number-leading-zero": null,
 		"declaration-no-important": null,
 		"no-descending-specificity": null,
