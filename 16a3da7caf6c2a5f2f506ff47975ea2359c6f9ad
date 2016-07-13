@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0ba75f_d890019b",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T14:41:52Z",
+      "side": 1,
+      "message": "Don\u0027t we need to document the default value here?",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_b8c7fd99",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1249,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T14:41:52Z",
+      "side": 1,
+      "message": "Previously (on the left) we didn\u0027t use to check whether \u0027MFUseWikibaseDescription\u0027 was set (as we do in the above function). Now we do here. Let\u0027s document this in the commit message.",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_98ddd976",
+        "filename": "tests/phpunit/MobileContextWikibaseDescriptionsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T14:41:52Z",
+      "side": 1,
+      "message": "Don\u0027t we need to add @covers here too?",
+      "revId": "16a3da7caf6c2a5f2f506ff47975ea2359c6f9ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

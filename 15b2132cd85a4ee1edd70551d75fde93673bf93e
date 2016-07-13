@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0ba75f_78f755f3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1252,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T14:41:52Z",
+      "side": 0,
+      "message": "Are we removing the beta check because of the comment above? If so, let\u0027s document the change in the commit message.",
+      "revId": "15b2132cd85a4ee1edd70551d75fde93673bf93e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
