@@ -1158,4 +1158,17 @@ class MobileContext extends ContextSource {
 	public function setStripResponsiveImages( $val ) {
 		$this->stripResponsiveImagesOverride = $val;
 	}
+
+	/**
+	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
+	 * and watchlists.
+	 *
+	 * @return bool
+	 */
+	public function shouldShowWikibaseDescriptions() {
+		$config = $this->getMFConfig();
+
+		return $config->get( 'MFUseWikibaseDescription' )
+			&& $config->get( 'MFDisplayWikibaseDescription' );
+	}
 }
