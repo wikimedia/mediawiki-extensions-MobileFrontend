@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_ed2385fe",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1181,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-13T20:36:28Z",
+      "side": 1,
+      "message": "Please add an additional test case.\n\nBefore change the following would render a wikidata description\n$wgMFUseWikibaseDescription \u003d true;\n$wgMFDisplayWikibaseDescription \u003d true;\n\nAfter change it will not because MFDisplayWikibaseDescriptionsAsTaglines defaults to false in extension.json.\n$wgMFDisplayWikibaseDescriptionsAsTaglines \u003d false;\n$wgMFUseWikibaseDescription \u003d true;\n$wgMFDisplayWikibaseDescription \u003d true;\n\n$wgMFDisplayWikibaseDescription should trump $wgMFDisplayWikibaseDescriptionsAsTaglines to not degrade our existing services.",
+      "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
