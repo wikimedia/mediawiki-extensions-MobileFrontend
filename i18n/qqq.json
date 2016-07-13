@@ -33,7 +33,8 @@
 			"Jdlrobson",
 			"JoostBotman",
 			"Orlodrim",
-			"UV"
+			"UV",
+			"Nike"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -180,7 +181,7 @@
 	"mobile-frontend-languages-nonexistent-title": "Shown as error message on [[Special:MobileLanguages]] when the title parameter given does not map to an existing page.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-languages-text": "Parameters:\n* $1 - page title\n* $2 - number of languages\nSee also:\n* {{msg-mw|Mobile-frontend-languages-header|page title}}",
 	"mobile-frontend-languages-variant-header": "See also:\n* {{msg-mw|Mobile-frontend-language-variant-header}}",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Title of the suggested languages in the structured language overlay. The text will be upper-cased with JS and CSS.",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Title of the suggested languages in the structured language overlay. The text will be upper-cased with JS and CSS.\nSee also {{msg-wm|uls-uls-common-languages}}",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Title of all languages in the structured language overlay. The text will be upper-cased with JS and CSS.",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Instructional text for the language overlay search input box",
 	"mobile-frontend-last-modified-date": "Text that displays the date the page was last modified. Parameters:\n* $1 - date\n* $2 - time\n{{Related|Mobile-frontend-last-modified}}",
