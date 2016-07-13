@@ -842,10 +842,9 @@ class SkinMinerva extends SkinTemplate {
 			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
 			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
 				$talkButton = $namespaces[$talkId];
+				$talkTitle = $title->getTalkPage();
+				$buttons['talk'] = $this->getTalkButton( $talkTitle, $talkButton );
 			}
-
-			$talkTitle = $title->getTalkPage();
-			$buttons['talk'] = $this->getTalkButton( $talkTitle, $talkButton );
 		}
 
 		if ( $this->doesPageHaveLanguages &&
