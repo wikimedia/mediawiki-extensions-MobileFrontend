@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0ba75f_78959535",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2033,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T15:10:56Z",
+      "side": 1,
+      "message": "Let\u0027s add deprecated comments above.",
+      "revId": "6de4bc354122daefea6445127e45a1f0ce872814",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_58b1b1db",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1217,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T15:10:56Z",
+      "side": 1,
+      "message": "Can we return $this-\u003eshouldShowWikibaseDescriptionsLegacy( $feature ) instead of the last 3 lines of code?",
+      "revId": "6de4bc354122daefea6445127e45a1f0ce872814",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
