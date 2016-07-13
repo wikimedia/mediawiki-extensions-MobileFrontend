@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0ba75f_b8989d7d",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T15:02:51Z",
+      "side": 1,
+      "message": "Do you mean `$wgMFUseWikibase`?",
+      "revId": "13634c25bd10b728861794fd61277d7644090b43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0ba75f_388cad3a",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 2030,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-13T15:02:51Z",
+      "side": 1,
+      "message": "Can we add a \"@\" comment above and indicate that this feature is deprecated as we do in readme?",
+      "revId": "13634c25bd10b728861794fd61277d7644090b43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
