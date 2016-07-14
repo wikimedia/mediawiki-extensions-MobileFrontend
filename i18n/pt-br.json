@@ -18,7 +18,8 @@
 			"Fasouzafreitas",
 			"Macofe",
 			"TheEduGobi",
-			"Dianakc"
+			"Dianakc",
+			"Peter Fernando"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -92,6 +93,7 @@
 	"mobile-frontend-image-uploading": "'''Enviando''' imagem...",
 	"mobile-frontend-images-status": "Imagens",
 	"mobile-frontend-language-article-heading": "Ler em outro idioma",
+	"mobile-frontend-languages-not-available": "Esta página não está disponível em outros idiomas.",
 	"mobile-frontend-last-modified-date": "Modificado pela última vez em $1 às $2",
 	"mobile-frontend-last-modified-days": "Atualizado {{PLURAL:$1|$1 dia|$1 dias}} atrás",
 	"mobile-frontend-last-modified-hours": "Atualizado {{PLURAL:$1|$1 hora|$1 horas}} atrás",
@@ -214,6 +216,7 @@
 	"mobile-frontend-watchlist-more": "mais",
 	"mobile-frontend-watchlist-removed": "Remover $1 da lista de páginas vigiadas",
 	"mobile-frontend-watchlist-view": "Veja sua lista de páginas vigiadas",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Membro}} desde $1",
 	"nearby": "Páginas próximas a você",
 	"tag-mobile_edit": "Edição móvel",
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (site ou aplicativo)",
