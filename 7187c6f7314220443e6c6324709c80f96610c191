@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eed2fc9_222114ad",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-14T21:28:30Z",
+      "side": 1,
+      "message": "I don\u0027t think MobileFrontend should be documenting external API parameters which are prone to change... especially at this level.\n\nThat said, I\u0027ve expanded the documentation for getPageLanguages to help make this a little clearer and provided a link to suitable wiki pages which contain this information.",
+      "parentUuid": "6eed2fc9_e249ccd4",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eed2fc9_6215dc9c",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6eed2fc9_621b1c83",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-14T21:28:30Z",
+      "side": 1,
+      "message": "I\u0027ve had a go at improving the message, but generally I feel there is no need to repeat a well named parameter name",
+      "parentUuid": "6eed2fc9_6215dc9c",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eed2fc9_a226a40f",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-07-14T20:31:47Z",
       "side": 1,
       "message": "This can be done a bit cleaner by keeping args.llprop\u0027s default value in the args definition above and removing the else block.",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_96a92ddf",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-14T21:28:30Z",
+      "side": 1,
+      "message": "I thought about this. I felt explicitly setting it in one place was clearer. Otherwise there are two places to look where llprop is set.",
+      "parentUuid": "6eed2fc9_a226a40f",
       "revId": "7187c6f7314220443e6c6324709c80f96610c191",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
