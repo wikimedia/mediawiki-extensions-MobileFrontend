@@ -34,6 +34,24 @@
       "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_61ae7ee6",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1181,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-14T13:14:33Z",
+      "side": 1,
+      "message": "I think you\u0027re both right. To move forward we need to make sure to use $wgMFDisplayWikibaseDescriptionsAsTaglines in mediawiki-config before these changes hit production.",
+      "parentUuid": "6eed2fc9_36edde23",
+      "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
