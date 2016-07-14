@@ -180,14 +180,15 @@
 	// Routes
 	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 	overlayManager.add( /^\/languages$/, function () {
-		var result = $.Deferred();
+		var result = $.Deferred(),
+			lang = mw.config.get( 'wgUserLanguage' );
 
 		loader.loadModule( 'mobile.languages.structured', true ).done( function ( loadingOverlay ) {
 			var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 				gateway = new PageGateway( new mw.Api() ),
 				LanguageOverlay = M.require( 'mobile.languages.structured/LanguageOverlay' );
 
-			gateway.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
+			gateway.getPageLanguages( mw.config.get( 'wgPageName' ), lang ).done( function ( data ) {
 				loadingOverlay.hide();
 				result.resolve( new LanguageOverlay( {
 					currentLanguage: mw.config.get( 'wgContentLanguage' ),

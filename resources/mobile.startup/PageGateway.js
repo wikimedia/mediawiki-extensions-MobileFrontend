@@ -235,28 +235,36 @@
 		 *
 		 * @method
 		 * @param {String} title the title of the page languages should be retrieved for
+		 * @param {String} [language] when provided the names of the languages returned
+		 *  will be translated additionally into this language.
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks
-		 * and variant links
+		 * and variant links as defined @ https://en.m.wikipedia.org/w/api.php?action=help&modules=query%2Blanglinks
 		 */
-		getPageLanguages: function ( title ) {
+		getPageLanguages: function ( title, language ) {
 			var self = this,
-				result = $.Deferred();
-
-			this.api.get( {
+				result = $.Deferred(),
+				args = {
 					action: 'query',
 					meta: 'siteinfo',
 					siprop: 'general',
 					prop: 'langlinks',
-					llprop: 'url|autonym',
 					lllimit: 'max',
 					titles: title,
 					formatversion: 2
-				} ).done( function ( resp ) {
-					result.resolve( {
-						languages: resp.query.pages[0].langlinks || [],
-						variants: self._getLanguageVariantsFromApiResponse( title, resp )
-					} );
-				} ).fail( $.proxy( result, 'reject' ) );
+				};
+
+			if ( language ) {
+				args.llprop = 'url|autonym|langname';
+				args.llinlanguagecode = language;
+			} else {
+				args.llprop = 'url|autonym';
+			}
+			this.api.get( args ).done( function ( resp ) {
+				result.resolve( {
+					languages: resp.query.pages[0].langlinks || [],
+					variants: self._getLanguageVariantsFromApiResponse( title, resp )
+				} );
+			} ).fail( $.proxy( result, 'reject' ) );
 
 			return result;
 		},

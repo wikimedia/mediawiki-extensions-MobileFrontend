@@ -29,6 +29,12 @@
 	OO.mfExtend( LanguageOverlay, Overlay, {
 		/** @inheritdoc */
 		className: Overlay.prototype.className + ' language-overlay',
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults
+		 * @cfg {Object[]} defaults.languages each object has keys as
+		 *  returned by the langlink API https://www.mediawiki.org/wiki/API:Langlinks
+		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
@@ -129,8 +135,10 @@
 
 			if ( val ) {
 				$.each( this.options.languages, function ( i, language ) {
+					var langname = language.langname;
 					// search by language code or language name
 					if ( language.autonym.toLowerCase().indexOf( val ) > -1 ||
+							( langname && langname.toLowerCase().indexOf( val ) > -1 ) ||
 							language.lang.toLowerCase().indexOf( val ) > -1
 					) {
 						filteredList.push( language.lang );
