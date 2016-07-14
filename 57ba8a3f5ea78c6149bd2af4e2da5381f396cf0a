@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_813d6a8d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-14T13:30:37Z",
+      "side": 1,
+      "message": "Change to \u0027$wgMFUseWikibase\u0027?",
+      "revId": "57ba8a3f5ea78c6149bd2af4e2da5381f396cf0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
