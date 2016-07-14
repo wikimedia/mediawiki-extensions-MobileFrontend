@@ -70,6 +70,24 @@
       "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_fcfe95aa",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1181,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-14T15:13:20Z",
+      "side": 1,
+      "message": "This change would thus lead to the description disappearing for users using the above configuration until they make the necessary config change.\n\nIt would defeat the point of deprecating it and allowing users (if any?!) time to update their config in the places it\u0027s deployed separately to this change.",
+      "parentUuid": "6eed2fc9_8180ca4c",
+      "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
