@@ -87,6 +87,24 @@
       "revId": "13634c25bd10b728861794fd61277d7644090b43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_01eb3a0a",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 2030,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-14T13:25:17Z",
+      "side": 1,
+      "message": "I felt that configuration variables and their descriptions should live in the same place. I\u0027m fine either way.",
+      "parentUuid": "ae0ba75f_1ebd5164",
+      "revId": "13634c25bd10b728861794fd61277d7644090b43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
