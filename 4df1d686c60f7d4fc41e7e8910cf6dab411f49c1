@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_07686a83",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-07-14T16:52:41Z",
+      "side": 1,
+      "message": "As this workaround is really really ugly I would love to get some reviews and maybe a merge to Iadda9ae362a21fbee770240234b8f55326219932 before this change is merged :P :]",
+      "revId": "4df1d686c60f7d4fc41e7e8910cf6dab411f49c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
