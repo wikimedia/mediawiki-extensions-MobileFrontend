@@ -466,7 +466,25 @@ class MobileFrontendHooks {
 			$vars['wgMFCodeMirror'] = true;
 		}
 
+		$vars += self::getWikibaseStaticConfigVars( $context );
+
 		return true;
+	}
+
+	/**
+	 * @param MobileContext $context
+	 */
+	private static function getWikibaseStaticConfigVars( MobileContext $context ) {
+		$config = $context->getMFConfig();
+		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
+		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
+
+		foreach ( $features as $feature ) {
+			$result['wgMFDisplayWikibaseDescriptions'][$feature] =
+				$context->shouldShowWikibaseDescriptions( $feature );
+		}
+
+		return $result;
 	}
 
 	/**
@@ -1337,6 +1355,7 @@ class MobileFrontendHooks {
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
+
 		return true;
 	}
 
