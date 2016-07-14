@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6eed2fc9_d90e4637",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T23:30:08Z",
+      "side": 1,
+      "message": "Ok, makes sense. To be honest, I got a bit confused about where the names were coming from when trying to trace it back from this patch, but what you said makes sense. Thanks for making it easier for contributors to track stuff down!",
+      "parentUuid": "6eed2fc9_222114ad",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eed2fc9_6215dc9c",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 2
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "6eed2fc9_1919ee7e",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T23:30:08Z",
+      "side": 1,
+      "message": "Cool.",
+      "parentUuid": "6eed2fc9_621b1c83",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eed2fc9_a226a40f",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 2
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "I thought about this. I felt explicitly setting it in one place was clearer. Otherwise there are two places to look where llprop is set.",
       "parentUuid": "6eed2fc9_a226a40f",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_b90b7a25",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T23:30:08Z",
+      "side": 1,
+      "message": "I don\u0027t //particularly// agree, but this is minor anyways, so perfectly fine by me.",
+      "parentUuid": "6eed2fc9_96a92ddf",
       "revId": "7187c6f7314220443e6c6324709c80f96610c191",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
