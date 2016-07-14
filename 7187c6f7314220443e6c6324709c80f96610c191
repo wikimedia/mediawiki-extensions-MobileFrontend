@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_e249ccd4",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T20:31:47Z",
+      "side": 1,
+      "message": "I think some documentation on one or more of these lines is in order. I have no idea what the difference is between language.langname and language.lang without searching extensively through code, especially because our constructor doesn\u0027t document the options parameter. (Autonym, I\u0027ll admit, I had to search wikipedia for, but after doing so I think it\u0027s self-explanatory enough.) I assume one is the language code and the other is the name of the language in the user\u0027s current language, but the names are certainly confusing. I\u0027m surprised we don\u0027t use exonym for the language name, given we use autonym already and the dichotomy would make things much clearer.",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_6215dc9c",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T20:31:47Z",
+      "side": 1,
+      "message": "Minor, but this should have \"language\" or \"the language\" after [language] as seen for \"title\" above. For an example of why this is important, look at how our docs are formatted on https://doc.wikimedia.org/MobileFrontend/master/js/#!/api/PageGateway.",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_a226a40f",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-14T20:31:47Z",
+      "side": 1,
+      "message": "This can be done a bit cleaner by keeping args.llprop\u0027s default value in the args definition above and removing the else block.",
+      "revId": "7187c6f7314220443e6c6324709c80f96610c191",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
