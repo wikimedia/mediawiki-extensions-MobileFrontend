@@ -16,6 +16,24 @@
       "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eed2fc9_36edde23",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1181,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-14T08:39:58Z",
+      "side": 1,
+      "message": "I\u0027m not sure that I follow. Only $wgMFDisplayWikibaseDescriptionsAsTaglines is used in the hook associated with adding the tagline to the output \u003chttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/includes/MobileFrontend.hooks.php#L1245\u003e whereas $wgMFDisplayWikibaseDescription is used everywhere else.",
+      "parentUuid": "6eed2fc9_ed2385fe",
+      "revId": "cc888edf2749fecd3867b4b18db47467e297ae6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
