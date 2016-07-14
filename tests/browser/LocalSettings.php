@@ -27,5 +27,7 @@ $wgMinervaAlwaysShowLanguageButton = true;
 
 // For those who have wikibase installed.
 $wgMFUseWikibase = true;
-$wgMFDisplayWikibaseDescription = true;
-$wgMFDisplayWikibaseDescriptionsAsTaglines = true;
+$wgMFDisplayWikibaseDescriptions = [
+	'search' => true,
+	'tagline' => true,
+];

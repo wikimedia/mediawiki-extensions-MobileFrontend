@@ -523,25 +523,39 @@ Default: 0;
 
 ##### $wgMFUseWikibaseDescription (deprecated)
 
-See `$wgMFUseWikibaseDescription`
+See `$wgMFUseWikibase`
 
-##### $wgMFDisplayWikibaseDescription
-If set to true, Wikibase descriptions will be displayed in UI elements such as search,
-nearby and watchlist.
+##### $wgMFDisplayWikibaseDescription (deprecated)
 
-Type: Boolean
-Default: false;
+See `$wgMFDisplayWikibaseDescriptions`
 
-##### $wgMFDisplayWikibaseDescriptionsAsTaglines
-If set to true, Wikibase descriptions will be displayed under page titles
+##### $wgMFDisplayWikibaseDescriptionsAsTaglines (deprecated)
 
-Type: Boolean
-Default: false;
+See `$wgMFDisplayWikibaseDescriptions`
 
 ##### $wgMFUseWikibase
 
 If set to true, the use Wikibase is enabled and associated features is enabled. See
-`$wgMFDisplayWikibaseDescription`
+`$wgMFDisplayWikibaseDescriptions`
 
 Type: Boolean
 Default: false;
+
+##### $wgMFDisplayWikibaseDescriptions
+Set which features will use Wikibase descriptions, e.g.
+
+```
+$wgMFDisplayWikibaseDescriptions = [
+  'search' => false,
+  'tagline' => true,
+];
+```
+
+Type: Array
+Default:
+```
+[
+  'search' => false,
+  'tagline' => false,
+]
+```

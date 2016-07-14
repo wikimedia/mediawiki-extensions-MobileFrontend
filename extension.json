@@ -2021,6 +2021,10 @@
 		"MFUseWikibase": false,
 		"MFDisplayWikibaseDescription": false,
 		"MFDisplayWikibaseDescriptionsAsTaglines": false,
+		"MFDisplayWikibaseDescriptions": {
+			"search": false,
+			"tagline": false
+		},
 		"MFRSSFeedLink": false,
 		"MFSchemaMobileWebLanguageSwitcherSampleRate": {
 			"beta": 0,
