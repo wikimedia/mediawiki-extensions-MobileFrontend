@@ -1172,7 +1172,7 @@ class MobileContext extends ContextSource {
 	public function shouldShowWikibaseDescriptions( $feature = 'search' ) {
 		$config = $this->getMFConfig();
 
-		if ( !$config->get( 'MFUseWikibaseDescription' ) ) {
+		if ( ! ( $config->get( 'MFUseWikibase' ) || $config->get( 'MFUseWikibaseDescription' ) ) ) {
 			return false;
 		}
 

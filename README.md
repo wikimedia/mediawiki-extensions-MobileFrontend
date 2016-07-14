@@ -521,11 +521,9 @@ Set the minimum edits the user needs before they can upload images in mobile mod
 Type: Integer
 Default: 0;
 
-##### $wgMFUseWikibaseDescription
-If set to true, Wikibase is enabled and associated features can be used
+##### $wgMFUseWikibaseDescription (deprecated)
 
-Type: Boolean
-Default: false;
+See `$wgMFUseWikibaseDescription`
 
 ##### $wgMFDisplayWikibaseDescription
 If set to true, Wikibase descriptions will be displayed in UI elements such as search,
@@ -536,6 +534,14 @@ Default: false;
 
 ##### $wgMFDisplayWikibaseDescriptionsAsTaglines
 If set to true, Wikibase descriptions will be displayed under page titles
+
+Type: Boolean
+Default: false;
+
+##### $wgMFUseWikibase
+
+If set to true, the use Wikibase is enabled and associated features is enabled. See
+`$wgMFDisplayWikibaseDescription`
 
 Type: Boolean
 Default: false;
