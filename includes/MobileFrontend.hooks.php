@@ -421,17 +421,6 @@ class MobileFrontendHooks {
 			] );
 		}
 
-		// When set turn on Wikidata descriptions
-		// https://phabricator.wikimedia.org/T101719
-		if ( $context->shouldShowWikibaseDescriptions( 'search' ) ) {
-			if ( !in_array( 'pageterms', $pageProps ) ) {
-				$pageProps[] = 'pageterms';
-			}
-			$searchParams = array_merge_recursive( $searchParams, [
-				'wbptterms' => 'description',
-			] );
-		}
-
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
 			'wgMFSearchAPIParams' => $searchParams,

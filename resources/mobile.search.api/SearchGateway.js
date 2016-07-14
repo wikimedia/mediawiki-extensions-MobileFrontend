@@ -32,6 +32,15 @@
 					prop: mw.config.get( 'wgMFQueryPropModules' )
 				}, mw.config.get( 'wgMFSearchAPIParams' ) );
 
+			// Are Wikibase descriptions enabled?
+			if ( mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ).search ) {
+				if ( $.inArray( 'pageterms', data.prop ) === -1 ) {
+					data.prop.push( 'pageterms' );
+				}
+
+				data.wbptterms = 'description';
+			}
+
 			data['g' + prefix + 'search'] = query;
 			data['g' + prefix + 'namespace'] = this.searchNamespace;
 			data['g' + prefix + 'limit'] = 15;
