@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_39c82a25",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-15T09:16:00Z",
+      "side": 1,
+      "message": "The problem described here is about rounding errors, isn\u0027t it? Anyway, the positioning of the clear icon looks good after I applied your patch.",
+      "revId": "e8f968f704c18590125d09e72de4b2117452a47c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
