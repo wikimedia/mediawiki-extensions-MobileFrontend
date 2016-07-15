@@ -352,6 +352,26 @@
 		} );
 	} );
 
+	QUnit.test( '#getPageLanguages', 1, function ( assert ) {
+		var spy = this.sandbox.spy( this.api, 'get' );
+		// prevent rogue ajax request
+		this.sandbox.stub( jQuery, 'ajax' ).returns( $.Deferred().resolve() );
+		pageGateway.getPageLanguages( 'Title', 'fr' );
+		assert.ok(
+			spy.calledWith( {
+				action: 'query',
+				meta: 'siteinfo',
+				siprop: 'general',
+				prop: 'langlinks',
+				llprop: 'url|autonym|langname',
+				llinlanguagecode: 'fr',
+				lllimit: 'max',
+				titles: 'Title',
+				formatversion: 2
+			} )
+		);
+	} );
+
 	QUnit.test( '#_getAPIResponseFromHTML', 1, function ( assert ) {
 		var resp = pageGateway._getAPIResponseFromHTML(
 			mw.template.get( 'tests.mobilefrontend', 'page.html' ).render()

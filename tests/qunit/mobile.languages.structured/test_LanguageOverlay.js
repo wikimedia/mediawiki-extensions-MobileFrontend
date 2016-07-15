@@ -40,6 +40,7 @@
 				lang: 'zh-min-nan',
 				url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama',
 				title: 'Barack Obama',
+				langname: 'Chinese',
 				autonym: 'Bân-lâm-gú'
 			}, {
 				lang: 'zh-yue',
@@ -93,7 +94,7 @@
 		);
 	} );
 
-	QUnit.test( 'test language overlay search', 4, function ( assert ) {
+	QUnit.test( 'test language overlay search', 5, function ( assert ) {
 		this.languageOverlay.filterLanguages( 'zh' );
 		assert.equal(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
@@ -106,6 +107,13 @@
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length === 1 &&
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
 			'One language (be-x-old) matches "ol" and only that language is visible.'
+		);
+
+		this.languageOverlay.filterLanguages( 'chin' );
+		assert.ok(
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length === 1 &&
+			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).hasClass( 'zh-min-nan' ),
+			'One language (zh-min-nan) matches "Chin" (langname) and only that language is visible.'
 		);
 
 		this.languageOverlay.filterLanguages( '' );
