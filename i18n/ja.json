@@ -14,7 +14,8 @@
 			"Otokoume",
 			"2nd-player",
 			"Los688",
-			"Rxy"
+			"Rxy",
+			"組曲師"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -138,7 +139,7 @@
 	"mobile-frontend-images-status": "画像",
 	"mobile-frontend-language-article-heading": "別の言語で閲覧",
 	"mobile-frontend-language-heading": "<strong>言語</strong>",
-	"mobile-frontend-languages-not-available": "このページの他の言語版はありません。",
+	"mobile-frontend-languages-not-available": "このページに他の言語版はありません。",
 	"mobile-frontend-languages-404-desc": "有効なページ名を指定してください。",
 	"mobile-frontend-languages-404-title": "言語エラー",
 	"mobile-frontend-languages-header": "言語",
