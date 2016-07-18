@@ -12,7 +12,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
 	/** @inheritdoc */
-	protected $shouldSecondaryActionsIncludeLanguageBtn = false;
+	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 
 	/**
 	 * Do not set page actions on the user page that hasn't been created yet.
@@ -41,9 +41,10 @@ class SkinMinervaBeta extends SkinMinerva {
 				];
 				$languageSwitcherClasses = '';
 			}
+			$languageSwitcherClasses .= ' language-selector';
 			if ( $this->getMFConfig()->get( 'MinervaAlwaysShowLanguageButton' ) ||
 				$this->doesPageHaveLanguages ) {
-				$menu['language-switcher'] = [ 'id' => 'language-switcher', 'text' => '',
+				$menu['language-switcher'] = [ 'text' => '',
 					'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
 					'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
 					'links' => $languageSwitcherLinks,
