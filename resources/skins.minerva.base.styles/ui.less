@@ -133,7 +133,8 @@ body {
 	.header {
 		.search {
 			border: 1px solid @grayLight;
-			padding: 0.3em 0.1em;
+			// Remove the space for the search icon inside the search bar and increase height to size of button
+			padding: 0.5em 0.1em;
 			background: none;  // so that the icon doesn't overlap with the placeholder
 		}
 	}
@@ -163,8 +164,8 @@ body {
 
 			.search {
 				margin-right: 0;
-				// FIXME: use the magnifying glass width, rather than an absolute value
-				padding: 0.5em 0.1em 0.5em 2em; // 2em - space for the magnifying glass icon
+				// Given no clear icon is needed in basic search mode, maximise space for placeholder text
+				padding-right: 0.1em;
 				width: 100%;
 			}
 		}
