@@ -155,6 +155,7 @@
 	"mobile-frontend-images-status": "그림",
 	"mobile-frontend-language-article-heading": "다른 언어로 읽기",
 	"mobile-frontend-language-heading": "<strong>언어</strong>",
+	"mobile-frontend-languages-not-available": "이 문서는 다른 언어로 읽을 수 없습니다.",
 	"mobile-frontend-languages-404-desc": "올바른 제목을 지정해야 합니다.",
 	"mobile-frontend-languages-404-title": "언어 오류",
 	"mobile-frontend-languages-header": "언어",
