@@ -8,11 +8,6 @@ Installation
 
 See <https://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation>
 
-Configuration
--------------
-
-See <https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settings>
-
 Development
 -----------
 
@@ -111,9 +106,11 @@ Adhere to <http://semver.org/> when changing versions.
 > add functionality in a backwards-compatible manner, and PATCH version when
 > you make backwards-compatible bug fixes.
 
-#### Configuration options
 
-##### $wgMFEnableXAnalyticsLogging
+Configuration options
+---------------------
+
+#### $wgMFEnableXAnalyticsLogging
 
 Whether or not to enable the use of the X-Analytics HTTP response header.  This
 header is used for analytics purposes.
@@ -123,7 +120,7 @@ See: https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMinervaAlwaysShowLanguageButton
+#### $wgMinervaAlwaysShowLanguageButton
 
 Whether to show the language switcher button even if no languages are available
 for the page.
@@ -131,7 +128,7 @@ for the page.
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFAppPackageId
+#### $wgMFAppPackageId
 
 ID of the App to deep link to replacing the browser. Set `false` to have no
 such link.
@@ -141,14 +138,14 @@ See: <https://developers.google.com/app-indexing/webmasters/details>
 * Type: `Boolean|String`
 * Default: `false`
 
-##### $wgMFAppScheme
+#### $wgMFAppScheme
 
 Scheme to use for the deep link.
 
 * Type: `String`
 * Default: `'http'`
 
-##### $wgMFEditorOptions
+#### $wgMFEditorOptions
 
 Options to control several functions of the mobile editor.  Possible values:
 
@@ -173,7 +170,7 @@ Options to control several functions of the mobile editor.  Possible values:
   ]
 ```
 
-##### $wgMFEnableSiteNotice
+#### $wgMFEnableSiteNotice
 
 Whether site notice's can be shown in the mobile skin.
 
@@ -182,7 +179,7 @@ See: <https://www.mediawiki.org/wiki/Manual:$wgSiteNotice>
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFIgnoreEventLoggingBucketing
+#### $wgMFIgnoreEventLoggingBucketing
 
 Disable EventLogging bucketing for purposes of development.  When enabled all
 events are logged regardless of any existing sampling rate specified in the
@@ -191,7 +188,7 @@ schema.
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFExperiments
+#### $wgMFExperiments
 
 A list of experiments active on the skin.
 
@@ -211,14 +208,14 @@ A list of experiments active on the skin.
   ]
 ```
 
-##### $wgMFEnableMinervaBetaFeature
+#### $wgMFEnableMinervaBetaFeature
 
 Controls whether the "Minerva as a desktop skin" beta feature is enabled.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFEnableJSConsoleRecruitment
+#### $wgMFEnableJSConsoleRecruitment
 
 Controls whether a message should be logged to the console to attempt to
 recruit volunteers.
@@ -226,7 +223,7 @@ recruit volunteers.
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFIsBannerEnabled
+#### $wgMFIsBannerEnabled
 
 Whether or not the banner experiment is enabled.
 
@@ -235,7 +232,7 @@ See: <https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image>
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFMobileFormatterHeadings
+#### $wgMFMobileFormatterHeadings
 
 This is a list of html tags, that could be recognized as the first heading of
 a page.  This is an interim solution to fix Bug T110436 and shouldn't be used,
@@ -245,7 +242,7 @@ removed in the near future (hopefully).
 * Type: `Array`
 * Default: `['h1', 'h2', 'h3', 'h4', 'h5', 'h6']`
 
-##### $wgMFSpecialCaseMainPage
+#### $wgMFSpecialCaseMainPage
 
 If set to true, main page HTML will receive special massaging.
 
@@ -258,14 +255,14 @@ risk!
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMinervaEnableSiteNotice
+#### $wgMinervaEnableSiteNotice
 
 Controls whether site notices should be shown.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFTidyMobileViewSections
+#### $wgMFTidyMobileViewSections
 
 Controls whether API `action=mobileview` should have every HTML section tidied
 for invalid markup.
@@ -273,7 +270,7 @@ for invalid markup.
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFMobileHeader
+#### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from
 mobile devices. The default value is for backwards compatibility.
@@ -283,7 +280,7 @@ Set to `false` to explicitly disable this way of detection.
 * Type: `String`
 * Default: `'X-WAP'`
 
-##### $wgMFRemovableClasses
+#### $wgMFRemovableClasses
 
 Make the classes, tags and ids stripped from page content configurable. Each
 item will be stripped from the page.
@@ -299,7 +296,7 @@ item will be stripped from the page.
   ]
 ```
 
-##### $wgMFLazyLoadImages
+#### $wgMFLazyLoadImages
 
 Do load images in pages lazily. Currently it doesn't affect HTML-only clients
 (only JS capable ones) and it lazy loads images when they come close to the
@@ -316,21 +313,21 @@ viewport.
   ]
 ```
 
-##### $wgMFNoMobileCategory
+#### $wgMFNoMobileCategory
 
 DB key of the category which members will never display mobile view.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFNoMobilePages
+#### $wgMFNoMobilePages
 
 Prefixed names of pages that will never display mobile view.
 
 * Type: `Array`
 * Default: `[]`
 
-##### $wgMFNearbyRange
+#### $wgMFNearbyRange
 
 The range in meters that should be searched to find nearby pages on
 *Special:Nearby* (defaults to 10km).
@@ -338,14 +335,14 @@ The range in meters that should be searched to find nearby pages on
 * Type: `Integer`
 * Default: `10000`
 
-##### $wgMFNearby
+#### $wgMFNearby
 
 Whether geodata related functionality should be enabled.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFNearbyEndpoint
+#### $wgMFNearbyEndpoint
 
 An optional alternative api to query for nearby pages, e.g.
 <https://en.m.wikipedia.org/w/api.php>
@@ -355,7 +352,7 @@ If set forces nearby to operate in JSONP mode.
 * Type: `String`
 * Default: `''`
 
-##### $wgMFSearchAPIParams
+#### $wgMFSearchAPIParams
 
 Define a set of params that should be passed in every gateway query.
 
@@ -369,14 +366,14 @@ Define a set of params that should be passed in every gateway query.
 ```
 
 
-##### $wgMFPageActions
+#### $wgMFPageActions
 
 Controls, which page action show and which not. Allowed: `edit`, `watch`
 
 * Type: `Array`
 * Default: `['edit', 'watch']`
 
-##### $wgMFQueryPropModules
+#### $wgMFQueryPropModules
 
 Define a set of page props that should be associated with requests for pages
 via the API.
@@ -384,14 +381,14 @@ via the API.
 * Type: `Array`
 * Default: `['pageprops']`
 
-##### $wgMFRSSFeedLink
+#### $wgMFRSSFeedLink
 
 Sets RSS feed `<link>` being outputted or not while on mobile version.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFSearchGenerator
+#### $wgMFSearchGenerator
 
 Define the generator that should be used for mobile search.
 
@@ -404,7 +401,7 @@ Define the generator that should be used for mobile search.
   ]
 ```
 
-##### $wgMFMinCachedPageSize
+#### $wgMFMinCachedPageSize
 
 Pages with smaller parsed HTML size are not cached.  Set to 0 to cache
 everything or to some large value to disable caching completely.
@@ -412,7 +409,7 @@ everything or to some large value to disable caching completely.
 * Type: `Integer`
 * Default: `64 * 1024`
 
-##### $wgMFAutodetectMobileView
+#### $wgMFAutodetectMobileView
 
 Set this to true to automatically show mobile view depending on people's
 user-agent.
@@ -424,7 +421,7 @@ someone else's devices.*
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFVaryOnUA
+#### $wgMFVaryOnUA
 
 Set this to `true`, if you want to send `User-Agent` in the `Vary` header. This
 could improve your SEO ranking.
@@ -439,7 +436,7 @@ string!*
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFShowMobileViewToTablets
+#### $wgMFShowMobileViewToTablets
 
 Controls whether tablets should be shown the mobile site. Works only if
 `$wgMFAutodetectMobileView` is `true`.
@@ -447,7 +444,7 @@ Controls whether tablets should be shown the mobile site. Works only if
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFDeviceWidthMobileSmall
+#### $wgMFDeviceWidthMobileSmall
 
 Devices with available screen of this value and less will have some styles
 adapted for improved reading on small screens.
@@ -455,7 +452,7 @@ adapted for improved reading on small screens.
 * Type: `Integer`
 * Default: `280`
 
-##### $wgMFDeviceWidthTablet
+#### $wgMFDeviceWidthTablet
 
 Minimum available screen width at which a device can be considered
 a tablet/desktop.
@@ -463,7 +460,7 @@ a tablet/desktop.
 * Type: `Integer`
 * Default: `768`
 
-##### $wgMobileUrlTemplate
+#### $wgMobileUrlTemplate
 
 Template for mobile URLs.
 
@@ -494,7 +491,7 @@ your URL template would look like:
 * Type: `String`
 * Default: `''`
 
-##### $wgMobileFrontendFormatCookieExpiry
+#### $wgMobileFrontendFormatCookieExpiry
 
 The number of seconds the `useformat` cookie should be valid.
 
@@ -506,7 +503,7 @@ If this value is not set, it will default to `$wgCookieExpiration`
 * Type: `Integer|null`
 * Default: `null`
 
-##### $wgMFNoindexPages
+#### $wgMFNoindexPages
 
 Set to false to allow search engines to index your mobile pages. So far, Google
 seems to mix mobile and non-mobile pages in its search results, creating
@@ -515,7 +512,7 @@ confusion.
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFStopRedirectCookieHost
+#### $wgMFStopRedirectCookieHost
 
 Set the domain of the `stopMobileRedirect` cookie.
 
@@ -528,7 +525,7 @@ include the preceding `.` (e.g. yes: `.wikipedia.org`, **no**: `wikipedia.org`)
 * Type: `String|null`
 * Default: `null`
 
-##### $wgMFCustomLogos
+#### $wgMFCustomLogos
 
 Make the logos configurable.
 
@@ -556,7 +553,7 @@ Example:
 * Type: `Array`
 * Default: `[]`
 
-##### $wgMobileFrontendLogo
+#### $wgMobileFrontendLogo
 
 Path to the logo used in the login/signup form.  The standard height is `72px`
 (FIXME: Merge with `$wgMFCustomLogos`)
@@ -564,7 +561,7 @@ Path to the logo used in the login/signup form.  The standard height is `72px`
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFTrademarkSitename
+#### $wgMFTrademarkSitename
 
 Whether to append a trademark notice to the sitename in the page footer.
 
@@ -577,7 +574,7 @@ You can also edit the `mobile-frontend-footer-sitename` message directly.
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgDeviceDetectionClass
+#### $wgDeviceDetectionClass
 
 Name of the class used for mobile device detection, must be inherited from
 `IDeviceDetector`.
@@ -585,21 +582,21 @@ Name of the class used for mobile device detection, must be inherited from
 * Type: `String`
 * Default: `'DeviceDetection'`
 
-##### $wgMFEnableBeta
+#### $wgMFEnableBeta
 
 Whether beta mode is enabled.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFDonationUrl
+#### $wgMFDonationUrl
 
 Optional string to mobile friendly url for donation page.
 
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFContentNamespace
+#### $wgMFContentNamespace
 
 The content namespace(s) that *Special:Nearby* and *Special:Random* should use.
 Should be one or more of `NS_*` constants, pipe-separated.
@@ -607,14 +604,14 @@ Should be one or more of `NS_*` constants, pipe-separated.
 * Type: `Integer|String`
 * Default: `NS_MAIN`
 
-##### $wgMFDefaultSkinClass
+#### $wgMFDefaultSkinClass
 
 The default skin for MobileFrontend.
 
 * Type: `String`
 * Default: `'SkinMinerva'`
 
-##### $wgMinervaPageActions
+#### $wgMinervaPageActions
 
 Controls, which page action show and which not.  Allowed: `edit`, `talk`,
 `upload`, `watch`
@@ -622,7 +619,7 @@ Controls, which page action show and which not.  Allowed: `edit`, `talk`,
 * Type: `Array`
 * Default: `['edit', 'talk', 'upload', 'watch']`
 
-##### $wgMFNamespacesWithoutCollapsibleSections
+#### $wgMFNamespacesWithoutCollapsibleSections
 
 In which namespaces sections shoudn't be collapsed.
 
@@ -641,7 +638,7 @@ In which namespaces sections shoudn't be collapsed.
   ]
 ```
 
-##### $wgMFCollapseSectionsByDefault
+#### $wgMFCollapseSectionsByDefault
 
 Controls whether to collapse sections by default.
 
@@ -653,7 +650,7 @@ Set to `false` for "dictionary style", sections are not collapsed.
 * Type: `Boolean`
 * Default: `true`
 
-##### $wgMFPhotoUploadWiki
+#### $wgMFPhotoUploadWiki
 
 The wiki id/dbname for where photos are uploaded, if photos are uploaded to
 a wiki other than the local wiki (eg commonswiki).
@@ -661,7 +658,7 @@ a wiki other than the local wiki (eg commonswiki).
 * Type: `String|null`
 * Default: `null`
 
-##### $wgMFPhotoUploadEndpoint
+#### $wgMFPhotoUploadEndpoint
 
 An api to which any photos should be uploaded.
 e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
@@ -669,7 +666,7 @@ e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
 * Type: `String`
 * Default: Defaults to the current wiki
 
-##### $wgMFUploadMinEdits
+#### $wgMFUploadMinEdits
 
 Set the minimum edits the user needs before they can upload images in mobile
 mode.
@@ -677,19 +674,19 @@ mode.
 * Type: `Integer`
 * Default: `0`
 
-##### $wgMFUseWikibaseDescription (deprecated)
+#### $wgMFUseWikibaseDescription (deprecated)
 
 See `$wgMFUseWikibase`
 
-##### $wgMFDisplayWikibaseDescription (deprecated)
+#### $wgMFDisplayWikibaseDescription (deprecated)
 
 See `$wgMFDisplayWikibaseDescriptions`
 
-##### $wgMFDisplayWikibaseDescriptionsAsTaglines (deprecated)
+#### $wgMFDisplayWikibaseDescriptionsAsTaglines (deprecated)
 
 See `$wgMFDisplayWikibaseDescriptions`
 
-##### $wgMFUseWikibase
+#### $wgMFUseWikibase
 
 If set to true, the use Wikibase is enabled and associated features is enabled.
 See `$wgMFDisplayWikibaseDescriptions`
@@ -697,7 +694,7 @@ See `$wgMFDisplayWikibaseDescriptions`
 * Type: `Boolean`
 * Default: `false`
 
-##### $wgMFDisplayWikibaseDescriptions
+#### $wgMFDisplayWikibaseDescriptions
 
 Set which features will use Wikibase descriptions, e.g.
 
