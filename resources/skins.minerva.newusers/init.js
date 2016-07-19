@@ -11,7 +11,7 @@ editing. You can replicate this by appending campaign=leftNavSignup to the URL o
 editable page whilst logged in, although you must be in test group A to see the CTA.
 */
 ( function ( M, $ ) {
-	var PageActionOverlay = M.require( 'mobile.contentOverlays/PointerOverlay' ),
+	var PageActionOverlay = require( 'mobile.pointerOverlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		escapeHash = util.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,

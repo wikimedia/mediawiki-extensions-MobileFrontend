@@ -45,10 +45,10 @@
 			$( function () {
 				var $activator = $( self.activator ).eq( 0 );
 				$activator.addClass( 'indicator-circle' );
-				mw.loader.using( 'mobile.contentOverlays' ).done( function () {
+				mw.loader.using( 'mobile.pointerOverlay' ).done( function () {
 					$activator.one( 'click', function () {
 						var po,
-							PointerOverlay = M.require( 'mobile.contentOverlays/PointerOverlay' );
+							PointerOverlay = require( 'mobile.pointerOverlay' );
 
 						po = new PointerOverlay( {
 							appendToElement: self.$el.parent(),

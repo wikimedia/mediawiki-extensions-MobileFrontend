@@ -1111,7 +1111,7 @@
 				"resources/mobile.toggle/toggle.js"
 			]
 		},
-		"mobile.contentOverlays": {
+		"mobile.pointerOverlay": {
 			"targets": [
 				"mobile",
 				"desktop"
@@ -1123,13 +1123,13 @@
 				"mobile-frontend-pointer-dismiss"
 			],
 			"styles": [
-				"resources/mobile.contentOverlays/tutorials.less"
+				"resources/mobile.pointerOverlay/PointerOverlay.less"
 			],
 			"scripts": [
-				"resources/mobile.contentOverlays/PointerOverlay.js"
+				"resources/mobile.pointerOverlay/PointerOverlay.js"
 			],
 			"templates": {
-				"PointerOverlay.hogan": "resources/mobile.contentOverlays/PointerOverlay.hogan"
+				"PointerOverlay.hogan": "resources/mobile.pointerOverlay/PointerOverlay.hogan"
 			}
 		},
 		"mobile.watchstar": {
@@ -1623,7 +1623,7 @@
 			"dependencies": [
 				"skins.minerva.editor",
 				"mediawiki.util",
-				"mobile.contentOverlays"
+				"mobile.pointerOverlay"
 			],
 			"scripts": [
 				"resources/skins.minerva.newusers/init.js"

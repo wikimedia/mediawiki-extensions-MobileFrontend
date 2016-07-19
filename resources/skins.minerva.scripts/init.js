@@ -174,10 +174,10 @@
 					// Animate to top while loading the content overlays
 					$.when(
 						scrollToTop(),
-						mw.loader.using( 'mobile.contentOverlays' )
+						mw.loader.using( 'mobile.pointerOverlay' )
 					).done( function () {
 						var po,
-							PointerOverlay = M.require( 'mobile.contentOverlays/PointerOverlay' );
+							PointerOverlay = require( 'mobile.pointerOverlay' );
 
 						// Show pointer toast in the new languages button
 						po = new PointerOverlay( {

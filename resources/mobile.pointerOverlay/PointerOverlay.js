@@ -24,7 +24,7 @@
 		 * @inheritdoc
 		 */
 		closeOnContentTap: true,
-		template: mw.template.get( 'mobile.contentOverlays', 'PointerOverlay.hogan' ),
+		template: mw.template.get( 'mobile.pointerOverlay', 'PointerOverlay.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -141,6 +141,6 @@
 		}
 	} );
 
-	M.define( 'mobile.contentOverlays/PointerOverlay', PointerOverlay );
+	module.exports = PointerOverlay;
 
 }( mw.mobileFrontend, jQuery ) );
