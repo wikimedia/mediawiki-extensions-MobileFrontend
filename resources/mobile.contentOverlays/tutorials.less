@@ -22,10 +22,12 @@
 	text-align: center;
 	box-shadow: 0 1px 5px 0 rgba( 117, 117, 117, .8 );
 	margin-top: 10px;
+	color: #fff;
 
 	p {
 		line-height: 1.4;
 		margin: 0 0 1em;
+		text-align: left;
 	}
 
 	.button {
@@ -40,20 +42,16 @@
 		position: absolute;
 		border-right: 10px solid transparent;
 		border-left: 10px solid transparent;
+		border-bottom: 10px solid transparent;
 	}
 
-	&.tutorial-overlay {
+	&.pointer-overlay-tutorial {
 		background: @colorTutorial;
 		box-shadow: none;
-		color: #fff;
-
-		p {
-			text-align: left;
-		}
 
 		// Pointer color nested so it may be changed in other tutorials
 		.tutorial-pointer {
-			border-bottom: 10px solid @colorTutorial;
+			border-bottom-color: @colorTutorial;
 		}
 
 		.button {
@@ -71,6 +69,22 @@
 
 		.button-bar {
 			text-align: right;
+		}
+	}
+
+	&.pointer-overlay-compact {
+		background: @toastNotificationColor;
+		width: auto;
+		right: auto;
+		padding: .6em;
+
+		// Pointer color nested so it may be changed in other tutorials
+		.tutorial-pointer {
+			border-bottom-color: @toastNotificationColor;
+		}
+
+		p {
+			margin: 0;
 		}
 	}
 }
