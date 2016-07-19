@@ -94,6 +94,12 @@ See: https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
 Type: Boolean
 Default: false
 
+##### $wgMinervaAlwaysShowLanguageButton
+Whether to show the language switcher button even if no languages are available for the page.
+
+Type: Boolean
+Default: true
+
 ##### $wgMFAppPackageId
 ID of the App to deep link to replacing the browser. Set 'false' to have no such link.
 
@@ -125,6 +131,14 @@ Default: array(
 	'anonymousEditing' => true,
 	'skipPreview' => false,
 );
+
+##### $wgMFEnableSiteNotice
+Whether site notice's can be shown in the mobile skin.
+
+See: https://www.mediawiki.org/wiki/Manual:$wgSiteNotice
+
+Type: Boolean
+Default: false
 
 ##### $wgMFIgnoreEventLoggingBucketing
 Disable EventLogging bucketing for purposes of development.
@@ -277,6 +291,15 @@ Default: array(
 	'ppprop' => 'displaytitle',
 );
 
+
+##### $wgMFPageActions
+Controls, which page action show and which not. Allowed: edit, watch
+
+Type: Array
+Default: [
+ 'edit', 'watch'
+]
+
 ##### $wgMFQueryPropModules
 Define a set of page props that should be associated with requests for pages via the API.
 
@@ -284,6 +307,12 @@ Type: Array
 Default: array(
 	'pageprops',
 );
+
+##### $wgMFRSSFeedLink
+Sets RSS feed <link> being outputted or not while on mobile version.
+
+Type: Boolean
+Default: false
 
 ##### $wgMFSearchGenerator
 Define the generator that should be used for mobile search.
