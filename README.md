@@ -213,7 +213,7 @@ A list of experiments active on the skin.
 
 ##### $wgMFEnableMinervaBetaFeature
 
-Controls whether the "Minerva as a desktop skin" beta feature is enabled
+Controls whether the "Minerva as a desktop skin" beta feature is enabled.
 
 * Type: `Boolean`
 * Default: `false`
@@ -268,7 +268,7 @@ Controls whether site notices should be shown.
 ##### $wgMFTidyMobileViewSections
 
 Controls whether API `action=mobileview` should have every HTML section tidied
-for invalid markup
+for invalid markup.
 
 * Type: `Boolean`
 * Default: `true`
@@ -318,14 +318,14 @@ viewport.
 
 ##### $wgMFNoMobileCategory
 
-DB key of the category which members will never display mobile view
+DB key of the category which members will never display mobile view.
 
 * Type: `Boolean`
 * Default: `false`
 
 ##### $wgMFNoMobilePages
 
-Prefixed names of pages that will never display mobile view
+Prefixed names of pages that will never display mobile view.
 
 * Type: `Array`
 * Default: `[]`
@@ -340,7 +340,7 @@ The range in meters that should be searched to find nearby pages on
 
 ##### $wgMFNearby
 
-Whether geodata related functionality should be enabled
+Whether geodata related functionality should be enabled.
 
 * Type: `Boolean`
 * Default: `false`
@@ -350,7 +350,7 @@ Whether geodata related functionality should be enabled
 An optional alternative api to query for nearby pages, e.g.
 <https://en.m.wikipedia.org/w/api.php>
 
-If set forces nearby to operate in JSONP mode
+If set forces nearby to operate in JSONP mode.
 
 * Type: `String`
 * Default: `''`
@@ -407,7 +407,7 @@ Define the generator that should be used for mobile search.
 ##### $wgMFMinCachedPageSize
 
 Pages with smaller parsed HTML size are not cached.  Set to 0 to cache
-everything or to some large value to disable caching completely
+everything or to some large value to disable caching completely.
 
 * Type: `Integer`
 * Default: `64 * 1024`
@@ -458,7 +458,7 @@ adapted for improved reading on small screens.
 ##### $wgMFDeviceWidthTablet
 
 Minimum available screen width at which a device can be considered
-a tablet/desktop
+a tablet/desktop.
 
 * Type: `Integer`
 * Default: `768`
@@ -496,7 +496,7 @@ your URL template would look like:
 
 ##### $wgMobileFrontendFormatCookieExpiry
 
-The number of seconds the `useformat` cookie should be valid
+The number of seconds the `useformat` cookie should be valid.
 
 The useformat cookie gets set when a user manually elects to view either the
 mobile or desktop view of the site.
@@ -517,7 +517,7 @@ confusion.
 
 ##### $wgMFStopRedirectCookieHost
 
-Set the domain of the `stopMobileRedirect` cookie
+Set the domain of the `stopMobileRedirect` cookie.
 
 If this value is not set, it will default to the top domain of the host name
 (e.g. `en.wikipedia.org = .wikipedia.org`)
@@ -587,7 +587,7 @@ Name of the class used for mobile device detection, must be inherited from
 
 ##### $wgMFEnableBeta
 
-Whether beta mode is enabled
+Whether beta mode is enabled.
 
 * Type: `Boolean`
 * Default: `false`
@@ -624,7 +624,7 @@ Controls, which page action show and which not.  Allowed: `edit`, `talk`,
 
 ##### $wgMFNamespacesWithoutCollapsibleSections
 
-In which namespaces sections shoudn't be collapsed
+In which namespaces sections shoudn't be collapsed.
 
 * Type: `Array`
 * Default:
@@ -672,7 +672,7 @@ e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
 ##### $wgMFUploadMinEdits
 
 Set the minimum edits the user needs before they can upload images in mobile
-mode
+mode.
 
 * Type: `Integer`
 * Default: `0`
