@@ -79,33 +79,10 @@ tests/browser directory.
 
 ### Releasing
 
-A new version of MobileFrontend is released every two weeks. A developer needs
-to generate release notes and create a file with the title
-"RELEASE-NOTES-X.X.X.mediawiki" where "X.X.X" is the software version. Once
-a new release is due, the contents of the above file is moved to
-HISTORY.mediawiki and the file itself is deleted. Ideally, we need to create
-a bot similar to <https://wikitech.wikimedia.org/wiki/Jouncebot> that reads
-a calendar and pings a developer on \#wikimedia-mobile to remind them about
-a release.
+A new version of MobileFrontend is released every two weeks following the
+Wikimedia release train if there are new changes.
 
-#### Generating release notes
-
-You can generate release notes by running (replace {branch name / commit SHA}):
-
-    make releasenotes from={branch name / commit SHA} to={branch name / commit SHA}
-
-Which will output a list of commits between two branches or commit SHAs.
-
-#### Versioning
-
-Adhere to <http://semver.org/> when changing versions.
-
-> Given a version number MAJOR.MINOR.PATCH, increment the:
->
-> MAJOR version when you make incompatible API changes, MINOR version when you
-> add functionality in a backwards-compatible manner, and PATCH version when
-> you make backwards-compatible bug fixes.
-
+MobileFrontend follows the version naming from MediaWiki.
 
 Configuration options
 ---------------------
