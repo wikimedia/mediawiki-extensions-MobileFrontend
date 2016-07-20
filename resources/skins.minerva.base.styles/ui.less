@@ -25,7 +25,7 @@ body {
 .search-overlay,
 .header {
 	.search {
-		padding: .5em 28px;
+		padding: .5em 0 .5em 34px;
 		background-position: 7px center;
 		background-repeat: no-repeat;
 		background-size: 20px 20px;
@@ -191,9 +191,13 @@ input.search {
 	background-color: #fff !important; /* remove fennec default background also see bug 36490 */
 	// get rid of rounded corners in Safari
 	-webkit-appearance: none;
-	// get rid of X in Chrome
-	&::-webkit-search-cancel-button {
-		-webkit-appearance: none;
+
+	// [T139928] Hide all pseudo-elements added to search inputs in WebKit.
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		display: none;
 	}
 }
 
