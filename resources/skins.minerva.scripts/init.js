@@ -13,7 +13,9 @@
 		page = M.getCurrentPage(),
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
-		betaOptinPanel;
+		betaOptinPanel,
+		TOP_OF_ARTICLE = 'top-of-article',
+		BOTTOM_OF_ARTICLE = 'bottom-of-article';
 
 	/**
 	 * Event handler for clicking on an image thumbnail
@@ -47,8 +49,8 @@
 		// FIXME: remove #language-switcher when cache clears (T139794)
 		var $languageSwitcherBtn = $( '#language-switcher, .language-selector' );
 
-		$( '#page-secondary-actions .language-selector' ).data( 'version', 'bottom-of-article' );
-		$( '#page-actions .language-selector' ).data( 'version', 'top-of-article' );
+		$( '#page-secondary-actions .language-selector' ).data( 'version', BOTTOM_OF_ARTICLE );
+		$( '#page-actions .language-selector' ).data( 'version', TOP_OF_ARTICLE );
 		/**
 		 * Log impression when the language button is seen by the user
 		 * @ignore
@@ -97,8 +99,10 @@
 			logLanguageButtonImpression();
 
 			$languageSwitcherBtn.on( 'click', function ( ev ) {
-				var previousTapCount = settings.get( 'mobile-language-button-tap-count' ),
-					$languageLink = context.isBetaGroupMember() ? $languageSwitcherBtn.find( 'a' ) : $languageSwitcherBtn,
+				var version = $( this ).data( 'version' ),
+					previousTapCount = settings.get( 'mobile-language-button-tap-count' ),
+					$languageLink = version === TOP_OF_ARTICLE ?
+						$languageSwitcherBtn.find( 'a' ) : $languageSwitcherBtn,
 					tapCountBucket;
 
 				ev.preventDefault();
@@ -127,7 +131,7 @@
 				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
 				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
 					event: 'languageButtonTap',
-					languageButtonVersion: $( this ).data( 'version' ),
+					languageButtonVersion: version,
 					languageButtonTappedBucket: tapCountBucket,
 					primaryLanguageOfUser: getDeviceLanguage() || 'unknown'
 				} );
