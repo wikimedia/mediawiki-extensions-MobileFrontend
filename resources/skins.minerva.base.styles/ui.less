@@ -269,10 +269,9 @@ input.search {
 }
 
 .stable {
-	// Remove when/if page-secondary-actions are promoted to stable
-	#language-switcher,
-	// FIXME: remove .languageSelector when cache clears
-	.languageSelector {
+	// FIXME: Exists only for caching reasons (T139794)
+	#page-secondary-actions #language-switcher,
+	#page-secondary-actions .language-selector {
 		margin-top: 1em;
 	}
 }

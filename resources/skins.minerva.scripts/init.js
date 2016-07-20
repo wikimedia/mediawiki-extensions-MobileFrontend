@@ -44,11 +44,11 @@
 	 * @ignore
 	 */
 	function initButton() {
-		// FIXME: remove .languageSelector when cache clears
-		var $languageSwitcherBtn = $( '#language-switcher, .languageSelector' ),
-			languageButtonVersion = ( !page.isMainPage() && context.isBetaGroupMember() ) ?
-				'top-of-article' : 'bottom-of-article';
+		// FIXME: remove #language-switcher when cache clears (T139794)
+		var $languageSwitcherBtn = $( '#language-switcher, .language-selector' );
 
+		$( '#page-secondary-actions .language-selector' ).data( 'version', 'bottom-of-article' );
+		$( '#page-actions .language-selector' ).data( 'version', 'top-of-article' );
 		/**
 		 * Log impression when the language button is seen by the user
 		 * @ignore
@@ -127,7 +127,7 @@
 				settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
 				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
 					event: 'languageButtonTap',
-					languageButtonVersion: languageButtonVersion,
+					languageButtonVersion: $( this ).data( 'version' ),
 					languageButtonTappedBucket: tapCountBucket,
 					primaryLanguageOfUser: getDeviceLanguage() || 'unknown'
 				} );

@@ -797,9 +797,7 @@ class SkinMinerva extends SkinTemplate {
 
 		return [
 			'attributes' => [
-				'id' => 'language-switcher',
-				// FIXME: remove class when cache clears
-				'class' => 'languageSelector',
+				'class' => 'language-selector',
 				'href' => $languageUrl,
 			],
 			'label' => $this->msg( 'mobile-frontend-language-article-heading' )->text()
