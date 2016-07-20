@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e2673f8_e0c53b43",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-20T17:46:24Z",
+      "side": 1,
+      "message": "I was see-sawing between both solutions. Not using 0 and 1 just means a few more if statements. I\u0027ll submit and you can see what you think.",
+      "parentUuid": "0e2673f8_c0959744",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_6a6f6cc1",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Joaquin\u0027s approach in the linked patch makes more sense IMHO. Means fewer changes when we move from beta to prod.",
       "parentUuid": "0e2673f8_6a6f6cc1",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_00bdefad",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-20T17:46:24Z",
+      "side": 1,
+      "message": "This line already existed. I haven\u0027t modified it. Joaquin\u0027s patch looks good but I don\u0027t see how this discussion is related to this change.",
+      "parentUuid": "0e2673f8_80bd5fd4",
       "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -107,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "0e2673f8_20d753f4",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-20T17:46:24Z",
+      "side": 1,
+      "message": "See above comment.",
+      "parentUuid": "0e2673f8_e0989b7e",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_0a94f08c",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 4
@@ -118,6 +172,24 @@
       "writtenOn": "2016-07-20T13:34:21Z",
       "side": 1,
       "message": "What do you think if we use what is done in the Back to top button? Seems to work fine:\n\n    $( \u0027html, body\u0027 ).animate( { scrollTop: 0 }, 400 );\n\n    // https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.backtotop/BackToTopOverlay.js#L49",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_c0c91757",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-20T17:46:24Z",
+      "side": 1,
+      "message": "I\u0027m fine with using animations but I vaguely remembered concerns about doing so in kick off.",
+      "parentUuid": "0e2673f8_0a94f08c",
       "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
