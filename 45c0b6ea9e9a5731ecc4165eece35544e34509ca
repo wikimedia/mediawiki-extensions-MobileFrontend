@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2673f8_74e63515",
+        "filename": "resources/skins.minerva.beta.styles/pageactions.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-20T06:57:10Z",
+      "side": 1,
+      "message": "We need to change this one to `.language-selector` too.",
+      "revId": "45c0b6ea9e9a5731ecc4165eece35544e34509ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
