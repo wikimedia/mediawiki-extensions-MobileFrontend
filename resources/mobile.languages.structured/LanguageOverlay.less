@@ -17,10 +17,15 @@
 	}
 
 	input.search {
+		@languageSearchIconSize: 24px;
+		@languageSearchIconRightGutter: 6px;
+
+		// N.B. the lack of left margin.
 		background-position: 0 center;
+
 		background-repeat: no-repeat;
-		background-size: 24px 24px;
-		padding: 2px 0 2px 30px;
+		background-size: @languageSearchIconSize @languageSearchIconSize;
+		padding: 2px 0 2px @languageSearchIconSize + @languageSearchIconRightGutter;
 	}
 
 	.list-header {
