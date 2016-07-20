@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e2673f8_c0959744",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-20T16:45:58Z",
+      "side": 1,
+      "message": "+1, as commented below.",
+      "parentUuid": "0e2673f8_ea435c41",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_6a6f6cc1",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e2673f8_80bd5fd4",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-20T16:45:58Z",
+      "side": 1,
+      "message": "Joaquin\u0027s approach in the linked patch makes more sense IMHO. Means fewer changes when we move from beta to prod.",
+      "parentUuid": "0e2673f8_6a6f6cc1",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_0a5eb017",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2016-07-20T13:34:21Z",
       "side": 1,
       "message": "If we target here #page-secondary-actions .language-selector, then as you well  took care of, it may be the case that we will have the old HTML with just this button to open the modal.\n\nI believe (in pro of explicitness) that we should target #page-secondary-actions .language-selector here, and in the handler, if the top button exists, do this, and if it doesn\u0027t (cached HTML) then explicitly call the function in line 132.\n\nWhat do you think?",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_e0989b7e",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-20T16:45:58Z",
+      "side": 1,
+      "message": "+1 to Joaquin\u0027s approach. Using any integer array lookups (besides 0 when length \u003d\u003d\u003d 1) generally makes me wary.",
+      "parentUuid": "0e2673f8_0a5eb017",
       "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
