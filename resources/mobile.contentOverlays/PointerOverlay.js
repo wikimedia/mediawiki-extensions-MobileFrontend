@@ -6,10 +6,7 @@
 	 * @class PointerOverlay
 	 * @extends Overlay
 	 */
-	function PointerOverlay( options ) {
-		// FIXME: This should not have a default fallback. This is a non-optional parameter.
-		// Remove when all existing uses in Gather have been updated.
-		this.appendToElement = options.appendToElement || '#mw-mf-page-center';
+	function PointerOverlay() {
 		Overlay.apply( this, arguments );
 	}
 
@@ -31,6 +28,10 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.isCompact whether the pointer overlay should be compact
+		 * @cfg {Number} defaults.timeout in milliseconds. If not zero the pointer overlay will
+		 *  hide after this duration of time.
+		 * @cfg {String} defaults.isTutorial whether the pointer overlay contains tutorial like instructions
 		 * @cfg {String} defaults.summary Message describing thing being pointed to.
 		 * @cfg {String} defaults.cancelMsg Cancel message.
 		 * @cfg {String} defaults.appendToElement Where pointer overlay should be appended to.
@@ -40,6 +41,9 @@
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			summary: undefined,
+			isCompact: false,
+			isTutorial: false,
+			timeout: 0,
 			cancelMsg: mw.msg( 'mobile-frontend-pointer-dismiss' ),
 			appendToElement: undefined,
 			target: undefined,
@@ -58,6 +62,18 @@
 				self = this;
 
 			Overlay.prototype.postRender.apply( this );
+
+			if ( this.options.isCompact ) {
+				this.$el.addClass( 'pointer-overlay-compact' );
+			}
+			if ( this.options.isTutorial ) {
+				this.$el.addClass( 'pointer-overlay-tutorial' );
+			}
+			if ( this.options.timeout ) {
+				setTimeout( function () {
+					self.hide();
+				}, this.options.timeout );
+			}
 			if ( self.options.target ) {
 				$target = $( self.options.target );
 				// Ensure we position the overlay correctly but do not show the arrow
@@ -80,11 +96,17 @@
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
 		_position: function ( $pa ) {
-			var paOffset = $pa.offset(),
+			var overlayOffset, left,
+				paOffset = $pa.offset(),
 				h = $pa.outerHeight( true ),
 				y = paOffset.top + h;
 
 			this.$el.css( 'top', y );
+			if ( this.options.autoHide ) {
+				overlayOffset = this.$el.offset();
+				left = paOffset.left;
+				this.$el.css( 'left', left );
+			}
 		},
 		/**
 		 * Position overlay and add pointer arrow that points at specified element
@@ -99,7 +121,10 @@
 
 			this._position( $pa );
 			// add the entire width of the pointer
-			left = paOffset.left + 20 - overlayOffset.left;
+			left = 20;
+			if ( !this.options.autoHide ) {
+				left += paOffset.left - overlayOffset.left;
+			}
 			if ( this.alignment === 'center' ) {
 				left -= center;
 			}

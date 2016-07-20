@@ -1,5 +1,5 @@
 <p>{{{summary}}}</p>
 <div class="button-bar">
-	<button class="button cancel inline">{{cancelMsg}}</button>
+	{{#cancelMsg}}<button class="button cancel inline">{{cancelMsg}}</button>{{/cancelMsg}}
 	{{#confirmMsg}}<button class="button actionable">{{confirmMsg}}</button>{{/confirmMsg}}
 </div>
