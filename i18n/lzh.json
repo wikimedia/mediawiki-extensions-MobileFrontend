@@ -4,7 +4,8 @@
 			"StephDC",
 			"LNDDYL",
 			"Jason924tw",
-			"SolidBlock"
+			"SolidBlock",
+			"Suchichi02"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "電郵 （可選）",
@@ -91,6 +92,7 @@
 	"mobile-frontend-watchlist-filter-talk": "議",
 	"mobile-frontend-watchlist-more": "詳",
 	"mobile-frontend-watchlist-view": "閱爾哨站",
+	"mobile-frontend-user-page-talk": "議",
 	"tag-mobile_edit": "於掌中卷所纂",
 	"tag-mobile_web_edit": "掌中纂",
 	"mobile-frontend-pageaction-edit-tooltip": "纂頁首段"

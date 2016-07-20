@@ -7,6 +7,7 @@
 	},
 	"mobile-frontend-editor-edit": "Тупатон",
 	"mobile-frontend-editor-editing": "Тупатон",
+	"mobile-frontend-editor-editing-page": "<span>$1 <strong>тупатон</strong></span>",
 	"mobile-frontend-editor-keep-editing": "Тупатъянэз азьланьтоно",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>бамез эскерон</strong></span>",
 	"mobile-frontend-editor-tutorial-confirm": "Тупатыны кутсконо",
