@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2673f8_ea435c41",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-20T13:34:21Z",
+      "side": 1,
+      "message": "I disagree with using magic numbers here and below (0 and 1). \n\nWhat do you think if we target them specifically with `.page-actions .language-selector` here, and the next one with `#page-secondary-actions .language-selector`? More explicit and easier to grep the codebase later.\n\nI understand that it is because if in the HTML there is only the bottom language button then it will behave well by opening the modal, but it seems very very implicit :( I comment on this below",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_6a6f6cc1",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-20T13:34:21Z",
+      "side": 1,
+      "message": "This is going to give me conflicts with https://gerrit.wikimedia.org/r/#/c/299994/1/resources/skins.minerva.scripts/init.js haha :)",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_0a5eb017",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-20T13:34:21Z",
+      "side": 1,
+      "message": "If we target here #page-secondary-actions .language-selector, then as you well  took care of, it may be the case that we will have the old HTML with just this button to open the modal.\n\nI believe (in pro of explicitness) that we should target #page-secondary-actions .language-selector here, and in the handler, if the top button exists, do this, and if it doesn\u0027t (cached HTML) then explicitly call the function in line 132.\n\nWhat do you think?",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_0a94f08c",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-20T13:34:21Z",
+      "side": 1,
+      "message": "What do you think if we use what is done in the Back to top button? Seems to work fine:\n\n    $( \u0027html, body\u0027 ).animate( { scrollTop: 0 }, 400 );\n\n    // https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.backtotop/BackToTopOverlay.js#L49",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
