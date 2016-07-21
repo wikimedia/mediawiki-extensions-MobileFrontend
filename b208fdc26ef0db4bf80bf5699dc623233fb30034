@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee2affbd_892599bf",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-21T11:53:40Z",
+      "side": 1,
+      "message": "Won\u0027t this log a tap on the language switcher in the action bar, and if the user clicks it another one will be logged? Will we get duplicate taps for taps at the bottom?\n\nI think we shouldn\u0027t be calling captureTap here, but I may be wrong, so I\u0027m not going to fix it myself.",
+      "revId": "b208fdc26ef0db4bf80bf5699dc623233fb30034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
