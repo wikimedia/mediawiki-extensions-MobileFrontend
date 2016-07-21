@@ -16,6 +16,24 @@
       "revId": "b208fdc26ef0db4bf80bf5699dc623233fb30034",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae2487f3_4758ae35",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-21T17:27:03Z",
+      "side": 1,
+      "message": "Yes you are correct. This was from before we checked with Adam whether this behaviour was wanted.\n\nAdam in standup said that we only needed to log the click to the new language switcher so this can go. Removed.",
+      "parentUuid": "ee2affbd_892599bf",
+      "revId": "b208fdc26ef0db4bf80bf5699dc623233fb30034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
