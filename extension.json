@@ -230,7 +230,7 @@
 				}
 			},
 			"images": {
-				"close": "resources/mobile.overlay.images/close.svg"
+				"overlay-close": "resources/mobile.overlay.images/close.svg"
 			}
 		},
 		"mobile.issues.images": {
