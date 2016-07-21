@@ -2050,7 +2050,11 @@
 		"MFSchemaEditSampleRate": 0.0625,
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
-		"MFStripResponsiveImages": true
+		"MinervaBottomLanguageButton": true,
+		"MFStripResponsiveImages": true,
+		"MFResponsiveImageWhitelist": [
+			"image/svg+xml"
+		]
 	},
 	"manifest_version": 1
 }

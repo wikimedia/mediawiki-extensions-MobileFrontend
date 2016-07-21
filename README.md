@@ -257,6 +257,15 @@ Set to `false` to explicitly disable this way of detection.
 * Type: `String`
 * Default: `'X-WAP'`
 
+#### $wgMinervaBottomLanguageButton
+
+Whether the language button at the bottom of the page is enabled
+
+Whether to show the language switcher button even if no languages are available for the page.
+
+* Type: `Boolean`
+* Default: `true`
+
 #### $wgMFRemovableClasses
 
 Make the classes, tags and ids stripped from page content configurable. Each
