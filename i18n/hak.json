@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hakka"
+			"Hakka",
+			"唐吉訶德的侍從"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "mò phiên-si̍p chak-yeu",
@@ -9,7 +10,7 @@
 	"mobile-frontend-editor-edit": "Phiên-siá",
 	"mobile-frontend-featured-article": "Pún-ngit ke thi̍t-set nui-yùng",
 	"mobile-frontend-home-button": "Thèu-ya̍p",
-	"mobile-frontend-language-article-heading": "Sṳ́-yung khì-thâ ngî-ngièn ye̍t-thu̍k",
+	"mobile-frontend-language-article-heading": "Yung khì-thâ ngî-ngièn thu̍k",
 	"mobile-frontend-last-modified-date": "Chui-heu phiên-siá yî  $1 $2",
 	"mobile-frontend-main-menu-account-create": "Kien-li̍p chong-ho",
 	"mobile-frontend-main-menu-button-tooltip": "Khôi-khí chú sién-tân",

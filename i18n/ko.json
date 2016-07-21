@@ -257,7 +257,7 @@
 	"mobile-frontend-search-submit": "보기",
 	"mobile-frontend-settings-images-explain": "한 페이지 안에 모든 그림 내용을 불러옵니다.",
 	"mobile-frontend-settings-beta": "베타",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}은(는) $1개의 {{PLURAL:$1|언어}}로 읽을 수 있습니다. 읽을 수 있는 모든 버전은 아래와 같습니다",
+	"mobile-frontend-settings-site-description": "{{SITENAME}}은(는) $1개의 {{PLURAL:$1|언어}}로 읽을 수 있습니다. 읽을 수 있는 모든 버전은 아래에 나열되어 있습니다",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} 언어",
 	"mobile-frontend-sign-in-error-heading": "이런",
 	"mobile-frontend-sign-in-heading": "로그인",
