@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee2affbd_09536944",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-21T11:36:53Z",
+      "side": 1,
+      "message": "missing end quote",
+      "revId": "ef45d4315e38e3407e623d414ed775641cc138ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee2affbd_494d619b",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 2053,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-21T11:36:53Z",
+      "side": 1,
+      "message": "Duplicate var declaration.",
+      "revId": "ef45d4315e38e3407e623d414ed775641cc138ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
