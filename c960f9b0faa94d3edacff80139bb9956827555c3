@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e1983c1_095fede9",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T08:08:38Z",
+      "side": 1,
+      "message": "We need to make sure there is enough room for the clear icon. Otherwise, something like this will happen: https://phabricator.wikimedia.org/P3545#16916",
+      "revId": "c960f9b0faa94d3edacff80139bb9956827555c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e1983c1_6954a1ca",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T08:08:38Z",
+      "side": 1,
+      "message": "Why do we want the search text touch the right border? Shouldn\u0027t there be some space after the text just as there is before?",
+      "revId": "c960f9b0faa94d3edacff80139bb9956827555c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
