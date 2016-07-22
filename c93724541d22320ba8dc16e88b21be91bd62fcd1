@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae2487f3_5b8c0300",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-22T00:26:58Z",
+      "side": 0,
+      "message": "Rather than move would be great to update the test(s) that are impacted. You should comment what was broken by this change in the test...",
+      "revId": "c93724541d22320ba8dc16e88b21be91bd62fcd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
