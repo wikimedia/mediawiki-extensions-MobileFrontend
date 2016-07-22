@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e1983c1_29be29d2",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T09:00:42Z",
+      "side": 1,
+      "message": "We need to reserve space for the clear icon. Otherwise the text will go under it.",
+      "revId": "1d7d432a44e0b48a035ffeb2195fa4e885e96dc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e1983c1_09c36d62",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T09:00:42Z",
+      "side": 1,
+      "message": "Where is this .1em coming from? Can we use a variable here?",
+      "revId": "1d7d432a44e0b48a035ffeb2195fa4e885e96dc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
