@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e1983c1_693dc18a",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T07:43:46Z",
+      "side": 1,
+      "message": "Browser support is not good for this function. Let\u0027s not use it.",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e1983c1_a6f3669b",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-22T07:43:46Z",
+      "side": 1,
+      "message": "`deviceLanguage` may be unavailable. See line 77.",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
