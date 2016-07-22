@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e1983c1_9a967d96",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-22T17:08:27Z",
+      "side": 1,
+      "message": "Can you elaborate? I\u0027m pretty sure this method has been around for a long long time. According to mozilla only the last 2 options are not widely supported.",
+      "parentUuid": "8e1983c1_693dc18a",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e1983c1_a6f3669b",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2
