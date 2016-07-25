@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "aed9e73f_e8460754",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-25T16:04:10Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s fine, I just didn\u0027t realize localeCompare had compatibility issues and thought it was a clearer option. I\u0027ll switch to Joaquin\u0027s version.",
+      "parentUuid": "aed9e73f_28fb8f12",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e1983c1_a6f3669b",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2

@@ -16,6 +16,24 @@
       "revId": "c93724541d22320ba8dc16e88b21be91bd62fcd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_88581b37",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-25T16:04:10Z",
+      "side": 0,
+      "message": "So I thought about this comment for a while, and I don\u0027t think it\u0027s valid. The definition of what is the correct sort order has changed, thus this variable should change to match what is correct. Changing the test would mean either introducing a new variable (which is pointless) or testing that the sort order is not equal, which does not cover all bases.\n\nAs for commenting, I can be more explicit in the commit message, but I did mention that I updated the test to match the new behavior.",
+      "parentUuid": "ae2487f3_5b8c0300",
+      "revId": "c93724541d22320ba8dc16e88b21be91bd62fcd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
