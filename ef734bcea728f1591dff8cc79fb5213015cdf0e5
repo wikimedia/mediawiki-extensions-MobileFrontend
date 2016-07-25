@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "aed9e73f_25a57ab2",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-25T14:47:29Z",
+      "side": 1,
+      "message": "That\u0027s what I meant. Since the last two options are not supported well, the functionality may not be the same across all browsers. That\u0027s why we may want to implement something that works the same on all browsers.",
+      "parentUuid": "8e1983c1_9a967d96",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e1983c1_a6f3669b",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2
