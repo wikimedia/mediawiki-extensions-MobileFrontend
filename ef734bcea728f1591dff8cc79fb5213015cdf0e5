@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "aed9e73f_28fb8f12",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-25T15:54:45Z",
+      "side": 1,
+      "message": "Why not just change the line for:\n\n    return a.autonym.toLocaleLowerCase() \u003c b.autonym.toLocaleLowerCase() ? -1 : 1;\n\nAm I missing something? :(\n\nps: excellent support https://msdn.microsoft.com/en-us/library/94h6w1kx(v\u003dvs.94).aspx",
+      "parentUuid": "aed9e73f_25a57ab2",
+      "revId": "ef734bcea728f1591dff8cc79fb5213015cdf0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e1983c1_a6f3669b",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2
