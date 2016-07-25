@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "ee2affbd_29358df4",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-25T09:25:32Z",
+      "side": 1,
+      "message": "I don\u0027t think it is haha",
+      "parentUuid": "0e2673f8_00bdefad",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_0a5eb017",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 4
@@ -189,6 +207,24 @@
       "writtenOn": "2016-07-20T17:46:24Z",
       "side": 1,
       "message": "I\u0027m fine with using animations but I vaguely remembered concerns about doing so in kick off.",
+      "parentUuid": "0e2673f8_0a94f08c",
+      "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee2affbd_093a49e4",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-25T09:25:32Z",
+      "side": 1,
+      "message": "Way to break gerrit review... prf",
       "parentUuid": "0e2673f8_0a94f08c",
       "revId": "fdd9621e48d06008f5e88f68f08427d4bad7022b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
