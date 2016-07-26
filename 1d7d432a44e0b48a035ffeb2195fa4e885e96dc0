@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aed9e73f_723ad9e5",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-26T17:44:46Z",
+      "side": 1,
+      "message": "The space is reserved in SearchOverlay by a more specific css rule.",
+      "parentUuid": "8e1983c1_29be29d2",
+      "revId": "1d7d432a44e0b48a035ffeb2195fa4e885e96dc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e1983c1_09c36d62",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2016-07-22T09:00:42Z",
       "side": 1,
       "message": "Where is this .1em coming from? Can we use a variable here?",
+      "revId": "1d7d432a44e0b48a035ffeb2195fa4e885e96dc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_5235d5f2",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-26T17:44:46Z",
+      "side": 1,
+      "message": "The deleted rule above:\npadding: 0.5em 0.1em 0.5em 0.3em;",
+      "parentUuid": "8e1983c1_09c36d62",
       "revId": "1d7d432a44e0b48a035ffeb2195fa4e885e96dc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
