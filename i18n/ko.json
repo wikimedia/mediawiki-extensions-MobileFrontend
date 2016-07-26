@@ -71,7 +71,7 @@
 	"mobile-frontend-donate-image-nouploads": "올린 파일이 없습니다.",
 	"mobile-frontend-donate-image-signup-action": "미디어를 세계와 공유하려면 가입하세요.",
 	"mobile-frontend-donate-image-title": "올린 파일",
-	"mobile-frontend-donate-image-title-username": "$1 사용자가 올림",
+	"mobile-frontend-donate-image-title-username": "$1님이 올림",
 	"mobile-frontend-donate-image-title-you": "당신이 올림",
 	"mobile-frontend-drawer-cancel": "취소",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} 프로젝트를 개선하는 데 도와주세요.</strong><br />편집하려면 로그인하세요.",

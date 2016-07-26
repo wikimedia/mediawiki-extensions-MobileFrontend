@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Amara-Amaziɣ",
-			"Aslmad mohamed belarhzali"
+			"Aslmad mohamed belarhzali",
+			"ⵕⴰⵊⵉ"
 		]
 	},
 	"mobile-frontend-editor-edit": "ⵙⵏⴼⵍ",
 	"mobile-frontend-home-button": "ⴰⵙⵏⵓⴱⴳ",
 	"mobile-frontend-language-article-heading": "ⵖⵔ ⵙ ⴽⵔⴰ ⵏ ⵜⵓⵜⵍⴰⵢⵜ ⵢⴰⴹⵏ",
+	"mobile-frontend-last-modified-date": "ⴰⵙⵏⴼⵍ ⴰⵎⴳⴳⴰⵔⵓ ⴳ $1, ⵖⵔ $2",
 	"mobile-frontend-main-menu-account-create": "ⵕⵥⵎ ⴽⵔⴰ ⵏ ⵓⵎⵉⴹⴰⵏ",
 	"mobile-frontend-main-menu-button-tooltip": "ⵕⵥⵎ ⵜⴰⵍⴳⴰⵎⵜ ⵜⴰⴷⵙⵍⴰⵏⵜ",
 	"mobile-frontend-main-menu-login": "ⴰⴷⴼ",
