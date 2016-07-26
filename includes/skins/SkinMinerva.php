@@ -866,10 +866,8 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function preparePageActions( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
-		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = [];
-		$actions = $tpl->data['content_navigation']['actions'];
 
 		if ( $this->isUserPage ) {
 			if ( !$this->getTitle()->exists() ) {
@@ -878,46 +876,76 @@ class SkinMinerva extends SkinTemplate {
 			}
 		}
 
-		// empty placeholder for edit and photos which both require js
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
-			$additionalClass = $noJsEdit?' nojs-edit':'';
-
-			$menu['edit'] = [ 'id' => 'ca-edit', 'text' => '',
-				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
-				'class' => MobileUI::iconClass( 'edit-enabled', 'element' . $additionalClass ),
-				'links' => [
-						'edit' => [
-							'href' => $this->getTitle()->getLocalUrl( [ 'action' => 'edit', 'section' => 0 ] )
-					]
-				],
-				'is_js_only' => !$noJsEdit
-			];
+			$menu['edit'] = $this->createEditPageAction();
 		}
 
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
-			$watchTemplate = [
-				'id' => 'ca-watch',
-				// Use blank icon to reserve space for watchstar icon once JS loads
-				'class' => MobileUI::iconClass( '', 'element',
-					'icon-32px watch-this-article' ),
-				'is_js_only' => true
-			];
-			// standardise watch article into one menu item
-			if ( isset( $actions['watch'] ) ) {
-				$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
-			} elseif ( isset( $actions['unwatch'] ) ) {
-				$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
-				$menu['watch']['class'] .= ' watched';
-			} else {
-				// placeholder for not logged in
-				$menu['watch'] = $watchTemplate;
-				// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
-				$menu['watch']['text'] = '';
-				$menu['watch']['href'] = $this->getLoginUrl( [ 'returnto' => $title ] );
-			}
+
+			// SkinTemplate#buildContentNavigationUrls creates distinct "watch" and "unwatch" actions.
+			// Pass these actions in as context for #createWatchPageAction.
+			$actions = $tpl->data['content_navigation']['actions'];
+
+			$menu['watch'] = $this->createWatchPageAction( $actions );
 		}
 
 		$tpl->set( 'page_actions', $menu );
+	}
+
+	/**
+	 * Creates the "edit" page action: the well-known pencil icon that, when tapped, will open an
+	 * editor with the lead section loaded.
+	 *
+	 * @return array A map compatible with BaseTemplat#makeListItem
+	 */
+	protected function createEditPageAction() {
+		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$additionalClass = $noJsEdit ? ' nojs-edit' : '';
+
+		return [
+			'id' => 'ca-edit',
+			'text' => '',
+			'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
+			'class' => MobileUI::iconClass( 'edit-enabled', 'element' . $additionalClass ),
+			'links' => [
+				'edit' => [
+					'href' => $this->getTitle()->getLocalUrl( [ 'action' => 'edit', 'section' => 0 ] )
+				],
+			],
+			'is_js_only' => !$noJsEdit
+		];
+	}
+
+	/**
+	 * Creates the "watch" or "unwatch" action: the well-known star icon that, when tapped, will
+	 * add the page to or remove the page from the user's watchlist; or, if the user is logged out,
+	 * will direct the user's UA to Special:Login.
+	 *
+	 * @return array A map compatible with BaseTemplat#makeListItem
+	 */
+	protected function createWatchPageAction( $actions ) {
+		$baseResult = [
+			'id' => 'ca-watch',
+			// Use blank icon to reserve space for watchstar icon once JS loads
+			'class' => MobileUI::iconClass( '', 'element', 'icon-32px watch-this-article' ),
+			'is_js_only' => true
+		];
+
+		if ( isset( $actions['watch'] ) ) {
+			$result = array_merge( $actions['watch'], $baseResult );
+		} elseif ( isset( $actions['unwatch'] ) ) {
+			$result = array_merge( $actions['unwatch'], $baseResult );
+			$result['class'] .= ' watched';
+		} else {
+			// placeholder for not logged in
+			$result = array_merge( $watchTemplate, [
+				// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
+				'text' => '',
+				'href' => $this->getLoginUrl( [ 'returnto' => $title ] ),
+			] );
+		}
+
+		return $result;
 	}
 
 	/**
