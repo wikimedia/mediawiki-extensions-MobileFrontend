@@ -15,46 +15,12 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 
 	/**
-	 * Do not set page actions on the user page that hasn't been created yet.
-	 * Also add the language switcher action.
+	 * The "switch-language" is always allowed in MFBeta.
 	 *
 	 * @inheritdoc
-	 * @param BaseTemplate $tpl
 	 */
-	protected function preparePageActions( BaseTemplate $tpl ) {
-		$setPageActions = true;
-
-		if ( $this->isUserPage ) {
-			if ( !$this->getTitle()->exists() ) {
-				$setPageActions = false;
-			}
-		}
-		if ( $setPageActions ) {
-			parent::preparePageActions( $tpl );
-			$menu = $tpl->data[ 'page_actions' ];
-
-			$languageSwitcherLinks = [];
-			$languageSwitcherClasses = 'disabled';
-			if ( $this->doesPageHaveLanguages ) {
-				$languageSwitcherLinks['mobile-frontend-language-article-heading'] = [
-					'href' => SpecialPage::getTitleFor( 'MobileLanguages', $this->getTitle() )->getLocalURL()
-				];
-				$languageSwitcherClasses = '';
-			}
-			$languageSwitcherClasses .= ' language-selector';
-			if ( $this->getMFConfig()->get( 'MinervaAlwaysShowLanguageButton' ) ||
-				$this->doesPageHaveLanguages ) {
-				$menu['language-switcher'] = [ 'text' => '',
-					'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
-					'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
-					'links' => $languageSwitcherLinks,
-					'is_js_only' => false
-				];
-				$tpl->set( 'page_actions', $menu );
-			}
-		} else {
-			$tpl->set( 'page_actions', [] );
-		}
+	protected function isAllowedPageAction( $action ) {
+		return $action === 'switch-language' ? true : parent::isAllowedPageAction( $action );
 	}
 
 	/**
@@ -128,7 +94,6 @@ class SkinMinervaBeta extends SkinMinerva {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
 		}
 		$styles[] = 'skins.minerva.content.styles.beta';
-		$styles[] = 'skins.minerva.icons.beta.images';
 
 		return $styles;
 	}
