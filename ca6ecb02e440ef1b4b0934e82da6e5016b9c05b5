@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aed9e73f_0d4df0e0",
+        "filename": "resources/mobile.search.util/extendSearchParams.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-26T18:47:54Z",
+      "side": 1,
+      "message": "It looks to me like the problem only arises when wmgMFSearchAPIParams already has wbpterms set... so let\u0027s add a test case for that.",
+      "revId": "ca6ecb02e440ef1b4b0934e82da6e5016b9c05b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
