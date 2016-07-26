@@ -66,7 +66,7 @@
 	}
 
 	.results {
-		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, .3 );
+		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, 0.3 );
 
 		// Since search results only contain one line, shrink the space taken up by the thumbnails
 		li {
@@ -102,16 +102,16 @@
 			margin: 0;
 		}
 		.wikidata-description {
-			font-size: .8em;
+			font-size: 0.8em;
 			margin-top: 0.5em;
 		}
 	}
 
 	.search-feedback {
-		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, .3 );
+		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, 0.3 );
 		border-top: 1px solid @colorGray12;
-		font-size: .8em;
-		padding: .5em 1em;
+		font-size: 0.8em;
+		padding: 0.5em 1em;
 	}
 
 	&.no-results .search-feedback {
@@ -159,10 +159,10 @@
 .animations {
 	.search-overlay {
 		&.visible {
-			.animation( fadeIn .5s );
+			.animation( fadeIn 0.5s );
 		}
 		&.fade-out {
-			.animation( fadeOut .5s );
+			.animation( fadeOut 0.5s );
 		}
 	}
 }

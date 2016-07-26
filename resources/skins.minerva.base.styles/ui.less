@@ -28,12 +28,12 @@ body {
 		@searchIconSize: 20px;
 		@searchIconGutter: 6px;
 
-		padding: .5em 0 .5em @searchIconSize + (2 * @searchIconGutter);
+		padding: 0.5em 0 0.5em @searchIconSize + (2 * @searchIconGutter);
 		background-position: @searchIconGutter center;
 		background-repeat: no-repeat;
 		background-size: @searchIconSize @searchIconSize;
 		border-radius: @borderRadius;
-		box-shadow: 0 1px 1px rgba( 0, 0, 0, .05 );
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
 	}
 }
 
@@ -116,7 +116,7 @@ body {
 }
 .header > form,
 .overlay-header .overlay-title {
-	padding: .15em 0;
+	padding: 0.15em 0;
 
 	&:last-child {
 		// Reserve space to the right in case the search form in the header or
@@ -133,7 +133,7 @@ body {
 	.header {
 		.search {
 			border: 1px solid @grayLight;
-			padding: .3em .1em;
+			padding: 0.3em 0.1em;
 			background: none;  // so that the icon doesn't overlap with the placeholder
 		}
 	}
@@ -150,8 +150,8 @@ body {
 			border-radius: @borderRadius;
 			cursor: pointer;
 			float: right;
-			margin-left: .5em;
-			padding: .375em 0;
+			margin-left: 0.5em;
+			padding: 0.375em 0;
 
 			.fulltext-search {
 				opacity: 0;  // the enclosing div is an icon, no need to show the text
@@ -164,7 +164,7 @@ body {
 			.search {
 				margin-right: 0;
 				// FIXME: use the magnifying glass width, rather than an absolute value
-				padding: .5em .1em .5em 2em; // 2em - space for the magnifying glass icon
+				padding: 0.5em 0.1em 0.5em 2em; // 2em - space for the magnifying glass icon
 				width: 100%;
 			}
 		}
@@ -343,12 +343,12 @@ input.search {
 	height: 1.2em;
 	line-height: 1.2em;
 	min-width: 1em;
-	margin: .6em .6em 0 0;
+	margin: 0.6em 0.6em 0 0;
 	padding: 0 0.1em;
 	text-align: center;
 	position: absolute;
 	right: 0;
-	top: -.1em;
+	top: -0.1em;
 
 	&.zero {
 		display: none;
@@ -356,7 +356,7 @@ input.search {
 
 	// FIXME: There must be a better way of doing this
 	&.max {
-		right: .2em;
+		right: 0.2em;
 		width: 2em;
 		height: 2em;
 		line-height: 2em;
