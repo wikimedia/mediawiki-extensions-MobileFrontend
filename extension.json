@@ -83,6 +83,7 @@
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
 		"MobileSiteModule": "includes/modules/MobileSiteModule.php",
 		"MobileUserModule": "includes/modules/MobileUserModule.php",
+		"MobileUserStylesModule": "includes/modules/MobileUserStylesModule.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
@@ -1377,7 +1378,7 @@
 			"class": "MobileSiteModule"
 		},
 		"mobile.usermodule.styles": {
-			"class": "MobileUserModule",
+			"class": "MobileUserStylesModule",
 			"position": "top"
 		},
 		"mobile.usermodule": {

@@ -1,15 +1,15 @@
 <?php
 /**
- * MobileUserModule.php
+ * MobileUserStylesModule.php
  */
 
 /**
- * Alternative of ResourceLoaderUserModule for mobile web.
- * Differs from the user module by not loading common.js,
+ * Alternative of ResourceLoaderUserStylesModule for mobile web.
+ * Differs from the user module by not loading common.css,
  * which predate Minerva and may be incompatible.
  */
-class MobileUserModule extends ResourceLoaderUserModule {
-	// Should not be enabled on desktop which loads 'user' instead
+class MobileUserStylesModule extends ResourceLoaderUserStylesModule {
+	// Should not be enabled on desktop which loads 'user.styles' instead
 	protected $targets = [ 'mobile' ];
 
 	/**
@@ -19,9 +19,9 @@ class MobileUserModule extends ResourceLoaderUserModule {
 	 */
 	protected function getPages( ResourceLoaderContext $context ) {
 		$pages = parent::getPages( $context );
-		// Remove $userpage/common.js
+		// Remove $userpage/common.css
 		foreach ( array_keys( $pages ) as $key ) {
-			if ( preg_match( '/common\.js/', $key ) ) {
+			if ( preg_match( '/common\.css/', $key ) ) {
 				unset( $pages[$key] );
 			}
 		}
