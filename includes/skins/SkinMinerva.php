@@ -122,27 +122,39 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Returns true, if the pageaction is configured to be displayed.
+	 * Gets whether or not the page action is allowed.
+	 *
+	 * Page actions isn't allowed when:
+	 * <ul>
+	 *   <li>
+	 *     the action is disabled (by removing it from the <code>MinervaPageActions</code>
+	 *     configuration variable; or
+	 *   </li>
+	 *   <li>the user is on the main page</li>
+	 * </ul>
+	 *
+	 * Furthermore, the "edit" page action isn't allowed if the content of the page doesn't support
+	 * direct editing via the API.
+	 *
 	 * @param string $action
 	 * @return boolean
 	 */
 	protected function isAllowedPageAction( $action ) {
-		$title = $this->getTitle();
-		// All actions disabled on main apge.
-		if ( !$title->isMainPage() &&
-			in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) ) ) {
-
-			if ( $action === 'edit' ) {
-				$contentHandler = $this->getContentHandler();
-
-				return $contentHandler->supportsDirectEditing() &&
-					$contentHandler->supportsDirectApiEditing();
-			} else {
-				return true;
-			}
-		} else {
+		if (
+			! in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) )
+			|| $this->getTitle()->isMainPage()
+		) {
 			return false;
 		}
+
+		if ( $action === 'edit' ) {
+			$contentHandler = $this->getContentHandler();
+
+			return $contentHandler->supportsDirectEditing() &&
+				$contentHandler->supportsDirectApiEditing();
+		}
+
+		return true;
 	}
 
 	/**
