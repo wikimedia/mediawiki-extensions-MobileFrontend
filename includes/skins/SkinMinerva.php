@@ -140,9 +140,12 @@ class SkinMinerva extends SkinTemplate {
 	 * @return boolean
 	 */
 	protected function isAllowedPageAction( $action ) {
+		$title = $this->getTitle();
+
 		if (
 			! in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) )
-			|| $this->getTitle()->isMainPage()
+			|| $title->isMainPage()
+			|| ( $this->isUserPage && !$title->exists() )
 		) {
 			return false;
 		}
@@ -877,16 +880,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @param BaseTemplate $tpl
 	 */
 	protected function preparePageActions( BaseTemplate $tpl ) {
-		$title = $this->getTitle();
-		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = [];
-
-		if ( $this->isUserPage ) {
-			if ( !$this->getTitle()->exists() ) {
-				$tpl->set( 'page_actions', $menu );
-				return;
-			}
-		}
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$menu['edit'] = $this->createEditPageAction();

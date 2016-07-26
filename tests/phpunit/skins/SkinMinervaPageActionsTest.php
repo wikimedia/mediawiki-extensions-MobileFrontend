@@ -103,4 +103,20 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 
 		$this->assertEquals( $expected, $this->skin->isAllowedPageAction( 'edit' ) );
 	}
+
+	/**
+	 * @covers SkinMinerva::isAllowedPageAction
+	 */
+	public function test_page_actions_when_on_user_pages() {
+		$this->skin->isUserPage = true;
+
+		$this->assertFalse(
+			$this->skin->isAllowedPageAction( 'talk' ),
+			"No page actions are allowed when on a existing user's page that hasn't been created yet."
+		);
+
+		$skin = $this->getSkin( Title::newFromText( 'User:Admin' ) );
+
+		$this->assertTrue( $skin->isAllowedPageAction( 'talk' ) );
+	}
 }
