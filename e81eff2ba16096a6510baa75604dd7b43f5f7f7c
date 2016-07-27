@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8edee325_217008a3",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2016-07-27T09:11:26Z",
+      "side": 1,
+      "message": "This is going to sequentially animate and then start loading resulting in a noticeable delay until the toast shows up. This should happen in parallel as it did in the previous patch.",
+      "revId": "e81eff2ba16096a6510baa75604dd7b43f5f7f7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
