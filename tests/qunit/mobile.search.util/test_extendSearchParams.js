@@ -53,10 +53,23 @@
 		assert.equal( params.wbptterms, undefined );
 	} );
 
+	QUnit.test( 'it adds the MobileFrontend configuration to given terms types', function ( assert ) {
+		var params = extendSearchParams( 'search', {
+				wbptterms: 'grault'
+			} );
+
+		QUnit.expect( 1 );
+
+		assert.equal(
+			params.wbptterms,
+			'grault|description',
+			'The given "wbptterms" is added to the default.'
+		);
+	} );
+
 	QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
 		var params = extendSearchParams( 'search', {
-				foo: 'quux',
-				wbptterms: 'grault'
+				foo: 'quux'
 			} ),
 			expectedParams = {
 				foo: 'bar',
@@ -69,7 +82,7 @@
 		assert.deepEqual(
 			params,
 			expectedParams,
-			'The value of the "foo" and "wbptterms" parameters are overridden.'
+			'The value of "foo" is overridden by the configuration.'
 		);
 	} );
 

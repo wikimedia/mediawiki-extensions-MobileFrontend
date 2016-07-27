@@ -54,7 +54,14 @@
 				result.prop.push( 'pageterms' );
 			}
 
-			result.wbptterms = 'description';
+			// Add "description" to the wbptterms terms parameter, if needed
+			if ( result.wbptterms ) {
+				if ( result.wbptterms.indexOf( 'description' ) === -1 ) {
+					result.wbptterms += '|description';
+				}
+			} else {
+				result.wbptterms = 'description';
+			}
 		}
 
 		return result;
