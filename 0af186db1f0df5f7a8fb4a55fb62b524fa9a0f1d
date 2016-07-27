@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_dda2eba3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T18:49:16Z",
+      "side": 1,
+      "message": "This should be feature flagged (I think using wgMinervaUseNewActionBar is fine).\nThe card asks to prepare not actually push it to stable.\nThere are cards in next sprint to enable the config variable.",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_bdc43f96",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -81,6 +98,23 @@
       "writtenOn": "2016-07-27T18:45:23Z",
       "side": 1,
       "message": "Is $self necessary here? Unless I\u0027m misunderstanding, I don\u0027t see a need for scope preservation. If just used for fewer object creations, might I recommend using a different name just due to self\u0027s evolution into a dev notice to search for scope changes? Maybe $this or $button?",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_1da533b2",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T18:49:16Z",
+      "side": 1,
+      "message": "Seems like this should be pulled out and fixed separately. It confused me seeing it in this patchset.",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
