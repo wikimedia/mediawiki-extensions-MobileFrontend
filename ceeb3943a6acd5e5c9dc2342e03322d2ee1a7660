@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6edb6f39_fdf167c9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1291,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T18:41:07Z",
+      "side": 1,
+      "message": "Note that without a isBetaGroupMember flag this breaks the display in beta.",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_ddcbcb73",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1292,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T18:41:07Z",
+      "side": 1,
+      "message": "can i suggest prefixing this with \"feature-\" - this will give a signal to what the class is for.",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_1dbe13d2",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T18:41:07Z",
+      "side": 1,
+      "message": "This adds a lot of styles that will be unused until this is enabled.\nAre we okay with that? Should we add a FIXME to make sure we clean up after ourselves?",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
