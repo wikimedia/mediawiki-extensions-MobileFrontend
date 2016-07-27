@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_bd26ff0f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-27T19:04:13Z",
+      "side": 1,
+      "message": "It is feature flagged. See #isAllowedPageAction and the MinervaPageActions configuration variable, which I mentioned in the commit message.",
+      "parentUuid": "6edb6f39_dda2eba3",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_bdc43f96",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -104,6 +122,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_7dff1763",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-27T19:04:13Z",
+      "side": 1,
+      "message": "I think you\u0027re right. I erred about doing this and should\u0027ve listened to my gut.",
+      "parentUuid": "6edb6f39_dd158beb",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_5db89be2",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 3
@@ -132,6 +168,24 @@
       "writtenOn": "2016-07-27T18:49:16Z",
       "side": 1,
       "message": "Seems like this should be pulled out and fixed separately. It confused me seeing it in this patchset.",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_fd4967d4",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-27T19:04:13Z",
+      "side": 1,
+      "message": "I tried to explain the change in the commit message: if this isn\u0027t done, then if both the page action and the bottom button are on the same page and you tap the bottom button, then the language switcher overlay won\u0027t open.\n\nSee the browser test failures against PS2.",
+      "parentUuid": "6edb6f39_1da533b2",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
