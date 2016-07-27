@@ -16,6 +16,24 @@
       "revId": "bfeab6581ad89140b179181317a92c2c8dc3daf9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8edee325_b21b8820",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-27T16:42:46Z",
+      "side": 1,
+      "message": "They can both be 0.1em now.\nThis only mattered when I was trying to do the mobile first thing but I got burnt out with that patchset and abandoned it.",
+      "parentUuid": "8edee325_f2bc301d",
+      "revId": "bfeab6581ad89140b179181317a92c2c8dc3daf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
