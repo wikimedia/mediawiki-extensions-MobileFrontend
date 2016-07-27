@@ -133,16 +133,6 @@
 				"resources/skins.minerva.base.styles/print.less"
 			]
 		},
-		"skins.minerva.beta.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"position": "top",
-			"styles": [
-				"resources/skins.minerva.beta.styles/pageactions.less"
-			]
-		},
 		"skins.minerva.content.styles": {
 			"targets": [
 				"mobile",
@@ -1915,6 +1905,9 @@
 		"OutputPageParserOutput": [
 			"MobileFrontendHooks::onOutputPageParserOutput"
 		],
+		"OutputPageBodyAttributes": [
+			"MobileFrontendHooks::onOutputPageBodyAttributes"
+		],
 		"HTMLFileCache::useFileCache": [
 			"MobileFrontendHooks::onHTMLFileCache_useFileCache"
 		],
@@ -2052,6 +2045,7 @@
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
 		"MinervaBottomLanguageButton": true,
+		"MinervaUsePageActionBarV2": false,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"

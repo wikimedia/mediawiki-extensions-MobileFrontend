@@ -1266,6 +1266,32 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * OutputPageBodyAttributes hook handler.
+	 *
+	 * If the new action bar is enabled, via the <code>$wgMinervaUsePageActionBarV2</code>, then the
+	 * <code>feature-action-bar-v2</code> CSS feature flag is added to the <code>body</code> tag.
+	 *
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBodyAttributes
+	 *
+	 * @param OutputPage $outputPage
+	 * @param Skin $skin
+	 * @param array $bodyAttrs
+	 */
+	public static function onOutputPageBodyAttributes(
+		OutputPage $outputPage,
+		Skin $skin,
+		array &$bodyAttributes
+	) {
+		$context = MobileContext::singleton();
+		$config = $context->getMFConfig();
+
+		// TODO: Remove this when the new action bar is actually considered stable (see T130849).
+		if ( $config->get( 'MinervaUsePageActionBarV2' ) || $context->isBetaGroupMember() ) {
+			$bodyAttributes['class'] .= ' feature-page-action-bar-v2';
+		}
+	}
+
+	/**
 	 * HTMLFileCache::useFileCache hook handler
 	 * Disables file caching for mobile pageviews
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/HTMLFileCache::useFileCache
