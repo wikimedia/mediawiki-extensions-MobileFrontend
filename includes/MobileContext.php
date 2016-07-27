@@ -1204,8 +1204,8 @@ class MobileContext extends ContextSource {
 		}
 
 		if (
-			$config->get( 'MFUseWikibase' )
-			&& $displayWikibaseDescriptions[ $feature ]
+			$this->isBetaGroupMember() ||
+			( $config->get( 'MFUseWikibase' ) && $displayWikibaseDescriptions[ $feature ] )
 		) {
 			return true;
 		}

@@ -455,13 +455,12 @@ class MobileFrontendHooks {
 			$vars['wgMFCodeMirror'] = true;
 		}
 
-		$vars += self::getWikibaseStaticConfigVars( $context );
-
 		return true;
 	}
 
 	/**
 	 * @param MobileContext $context
+	 * @return array
 	 */
 	private static function getWikibaseStaticConfigVars( MobileContext $context ) {
 		$config = $context->getMFConfig();
@@ -1330,7 +1329,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * @param &$vars array Variables to be added into the output
-	 * @param $outputPage OutputPage instance calling the hook
+	 * @param $out OutputPage instance calling the hook
 	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
@@ -1344,6 +1343,8 @@ class MobileFrontendHooks {
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
+
+		$vars += self::getWikibaseStaticConfigVars( $context );
 
 		return true;
 	}
