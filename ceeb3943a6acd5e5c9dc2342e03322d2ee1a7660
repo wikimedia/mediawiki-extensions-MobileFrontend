@@ -2,6 +2,91 @@
   "comments": [
     {
       "key": {
+        "uuid": "6edb6f39_bd7c3f1d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "Mismatch between the name for the variable here and in extension.json. Perhaps you meant to include \"Bar\" at the end of the variable name?",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_3d902f46",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 2040,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "I\u0027d advise against using the word \"New\" in any configuration variables. Eventually it won\u0027t be new and it will make less sense.",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_bd9b5f67",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1272,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "Again, references to the word \"new\" aren\u0027t great for posterity. I suspect the features epic will help with this if we include versioning...",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_1db293e4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1279,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "May be worth documenting that this one is passed in as a reference and may be modified. Not sure what the convention is here (if there is any).",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_fdd32703",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1289,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "This should refer to the specific cleanup task mentioned in T140260\u0027s AC. I think it\u0027s T130849?",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_fdf167c9",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -36,6 +121,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_5dfa5b74",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1292,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "Additionally, as I mentioned elsewhere, let\u0027s get rid of \"new\" if we can (prefixing with \"feature-\" should help with that).",
+      "parentUuid": "6edb6f39_ddcbcb73",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_1dbe13d2",
         "filename": "resources/skins.minerva.base.styles/pageactions.less",
         "patchSetId": 3
@@ -47,6 +150,52 @@
       "writtenOn": "2016-07-27T18:41:07Z",
       "side": 1,
       "message": "This adds a lot of styles that will be unused until this is enabled.\nAre we okay with that? Should we add a FIXME to make sure we clean up after ourselves?",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_5d397b3d",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "Styling on ids is gross. Can we use a class instead, or is this unavoidable?",
+      "range": {
+        "startLine": 108,
+        "startChar": 1,
+        "endLine": 108,
+        "endChar": 14
+      },
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_7d3e3728",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T19:04:12Z",
+      "side": 1,
+      "message": "See above about ids.",
+      "range": {
+        "startLine": 139,
+        "startChar": 2,
+        "endLine": 139,
+        "endChar": 10
+      },
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
