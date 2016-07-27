@@ -1,4 +1,4 @@
-@chrome @firefox @en.m.wikipedia.beta.wmflabs.org @vagrant @extension-wikibase
+@chrome @firefox @en.m.wikipedia.beta.wmflabs.org @vagrant
 Feature: Wikidata descriptions
 
   Background:
