@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_06eb1b0a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1272,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T16:41:36Z",
+      "side": 1,
+      "message": "Yeah that seems fine by me. We may want to have a discussion with the engineers around convention for versioning config variables during implementation of the features epic.",
+      "parentUuid": "6edb6f39_b1c54844",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_1db293e4",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -118,6 +136,24 @@
       "side": 1,
       "message": "PHPDoc/Doxygen can detect when a parameter is passed by reference from the signature of the function.\n\nGenerally speaking, I minimally document the parameters so that style linters don\u0027t shout at me, but precede them with a reference to the canonical documentation of the hook.\n\nDo you think that this is sufficient?",
       "parentUuid": "6edb6f39_1db293e4",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_863d6b8d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1279,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T16:41:36Z",
+      "side": 1,
+      "message": "Yep, that sounds good to me. Wasn\u0027t aware that the function signature was automatically checked for references.",
+      "parentUuid": "6edb6f39_71aca085",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -317,6 +353,24 @@
       "side": 1,
       "message": "Given that this is a copypasta of existing styles, I\u0027m going to say that this is out of scope.",
       "parentUuid": "6edb6f39_5d397b3d",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_06515bdd",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T16:41:36Z",
+      "side": 1,
+      "message": "Fair enough.",
+      "parentUuid": "6edb6f39_71fae074",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
