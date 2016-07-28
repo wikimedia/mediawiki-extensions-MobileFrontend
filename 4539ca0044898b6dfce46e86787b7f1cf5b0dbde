@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ee86bcb_fc2c0992",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T19:08:00Z",
+      "side": 1,
+      "message": "Unless I\u0027m misunderstanding, this block is describing the opposite of the intended behavior. \"switch-language\" should only be allowed when one of those configurations is truthy, no?",
+      "revId": "4539ca0044898b6dfce46e86787b7f1cf5b0dbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
