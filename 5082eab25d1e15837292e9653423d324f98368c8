@@ -51,6 +51,24 @@
       "revId": "5082eab25d1e15837292e9653423d324f98368c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ee86bcb_9c0ea536",
+        "filename": "tests/phpunit/specials/SpecialMobileLanguagesTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T18:57:47Z",
+      "side": 1,
+      "message": "Yeah, personally I feel that it\u0027s symptomatic of a greater problem with almost all of our special pages: they generally comprise of one public method that does all processing and HTML construction (executeWhenAvailable). Thus, any tests and effectively trying to test a View and Controller simultaneously, which is where we hit frustrations like these. I\u0027ll comment on the big tech debt card that it\u0027s an area to consider.",
+      "parentUuid": "6edb6f39_09f5ecb5",
+      "revId": "5082eab25d1e15837292e9653423d324f98368c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
