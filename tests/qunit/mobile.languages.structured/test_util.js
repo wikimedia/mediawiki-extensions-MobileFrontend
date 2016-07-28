@@ -91,12 +91,6 @@
 						url: 'https://zh-min-nan.wikipedia.org/wiki/Barack_Obama'
 					},
 					{
-						lang: 'es',
-						autonym: 'Spanish',
-						title: 'Barack Obama',
-						url: 'https://en.wikipedia.org/wiki/Barack_Obama'
-					},
-					{
 						lang: 'zu',
 						autonym: 'isiZulu',
 						title: 'Barack Obama',
@@ -107,6 +101,12 @@
 						autonym: 'oʻzbekcha/ўзбекча',
 						title: 'Barak Obama',
 						url: 'https://uz.wikipedia.org/wiki/Barak_Obama'
+					},
+					{
+						lang: 'es',
+						autonym: 'Spanish',
+						title: 'Barack Obama',
+						url: 'https://en.wikipedia.org/wiki/Barack_Obama'
 					},
 					{
 						lang: 'be',
@@ -179,7 +179,7 @@
 		assert.deepEqual(
 			util.getStructuredLanguages( this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage ),
 			this.structuredLanguages,
-			'Structured languages are correct.'
+			'Structured languages are correct, including sort order.'
 		);
 
 		// device language is a variant and only the parent language is available
