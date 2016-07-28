@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6edb6f39_495a94fa",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T18:43:41Z",
+      "side": 1,
+      "message": "@param here. The property tag is used for documenting the properties of an object.",
+      "revId": "5082eab25d1e15837292e9653423d324f98368c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
