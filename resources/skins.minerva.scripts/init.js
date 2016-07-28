@@ -167,7 +167,7 @@
 			} );
 
 			// If both buttons are shown setup switch behaviour.
-			if ( $legacyBtn.length && $primaryBtn.length ) {
+			if ( ( $legacyBtn && $legacyBtn.length ) && $primaryBtn.length ) {
 				$legacyBtn.on( 'click', function ( ev ) {
 					ev.preventDefault();
 
