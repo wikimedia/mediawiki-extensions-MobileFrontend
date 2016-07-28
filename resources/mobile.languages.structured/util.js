@@ -124,7 +124,7 @@
 		 * @param {Object} b second language
 		 */
 		function compareLanguagesByLanguageName( a, b ) {
-			return a.autonym < b.autonym ? -1 : 1;
+			return a.autonym.toLocaleLowerCase() < b.autonym.toLocaleLowerCase() ? -1 : 1;
 		}
 
 		allLanguages = allLanguages.sort( compareLanguagesByLanguageName );
