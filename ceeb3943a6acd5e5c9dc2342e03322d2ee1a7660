@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_312f78f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6edb6f39_bd7c3f1d",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_3d902f46",
         "filename": "extension.json",
         "patchSetId": 3
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_b1c54844",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1272,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "Done. I think including a small version number in the name of the feature seems reasonable, if you can foresee multiple changes, which I can in this case.",
+      "parentUuid": "6edb6f39_bd9b5f67",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_1db293e4",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -64,6 +100,24 @@
       "writtenOn": "2016-07-27T19:04:12Z",
       "side": 1,
       "message": "May be worth documenting that this one is passed in as a reference and may be modified. Not sure what the convention is here (if there is any).",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_71aca085",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1279,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "PHPDoc/Doxygen can detect when a parameter is passed by reference from the signature of the function.\n\nGenerally speaking, I minimally document the parameters so that style linters don\u0027t shout at me, but precede them with a reference to the canonical documentation of the hook.\n\nDo you think that this is sufficient?",
+      "parentUuid": "6edb6f39_1db293e4",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_31d9382d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1289,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6edb6f39_fdd32703",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_fdf167c9",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -98,6 +170,24 @@
       "writtenOn": "2016-07-27T18:41:07Z",
       "side": 1,
       "message": "Note that without a isBetaGroupMember flag this breaks the display in beta.",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_f1bfd0a5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1291,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "I detest that damned method. Done.",
+      "parentUuid": "6edb6f39_fdf167c9",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -139,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_11bd1cae",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1292,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "Good points. Well made. Done and done.",
+      "parentUuid": "6edb6f39_5dfa5b74",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_1dbe13d2",
         "filename": "resources/skins.minerva.base.styles/pageactions.less",
         "patchSetId": 3
@@ -150,6 +258,24 @@
       "writtenOn": "2016-07-27T18:41:07Z",
       "side": 1,
       "message": "This adds a lot of styles that will be unused until this is enabled.\nAre we okay with that? Should we add a FIXME to make sure we clean up after ourselves?",
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_11d43cec",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "As I mentioned in the commit, this adds approximately 240 bytes to the compressed file. Granted there\u0027s a few more resources consumed by the UA in processing and storing these styles – I haven\u0027t read any literature around this (or, y\u0027know, the WebKit source), have you? If so, cool! Share!\n\nGiven that we\u0027re looking to enable these new styles quickly and then tidy up after ourselves soon after that (T130849), I feel that the complexity of conditionally delivering an asset is unnecessary.\n\nYou\u0027re absolutely right about the FIXME though.",
+      "parentUuid": "6edb6f39_1dbe13d2",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -173,6 +299,24 @@
         "endLine": 108,
         "endChar": 14
       },
+      "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_71fae074",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:32Z",
+      "side": 1,
+      "message": "Given that this is a copypasta of existing styles, I\u0027m going to say that this is out of scope.",
+      "parentUuid": "6edb6f39_5d397b3d",
       "revId": "ceeb3943a6acd5e5c9dc2342e03322d2ee1a7660",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
