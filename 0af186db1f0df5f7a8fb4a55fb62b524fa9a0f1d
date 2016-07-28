@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_71cd8034",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "This bug was fixed in I85db419.",
+      "parentUuid": "6edb6f39_fd76c738",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_1dd4534b",
         "filename": "README.md",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-07-27T18:45:23Z",
       "side": 1,
       "message": "If you don\u0027t fix the horrible grammar in the first sentence it\u0027s gonna drive me nuts. ;)",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_511b24d4",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "Done. I\u0027ve also updated the documentation to reflect that the variable is superseded by $wgMinervaPageActions.",
+      "parentUuid": "6edb6f39_1dd4534b",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -88,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_715e607d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 968,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "No…\n\nYes. Done.",
+      "parentUuid": "6edb6f39_bdc43f96",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_ddfe6bab",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -99,6 +153,24 @@
       "writtenOn": "2016-07-27T18:45:23Z",
       "side": 1,
       "message": "Why do we use \u0027language-switch\u0027 for the icon name and \u0027language-selector\u0027 for the CSS class? Would it not be simpler to use the same name for both?",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_d1549459",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 985,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "Yes. As I\u0027ve said in the follow-on patch, I think that changing the selectors in the CSS is out of scope for this change but definitely A Thing That We Should Do™.",
+      "parentUuid": "6edb6f39_ddfe6bab",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -134,6 +206,24 @@
       "side": 1,
       "message": "I think you\u0027re right. I erred about doing this and should\u0027ve listened to my gut.",
       "parentUuid": "6edb6f39_dd158beb",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_d12574be",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "OK. The core test suite seems to disagree with us. You can\u0027t define a placeholder/empty resource. I guess in most cases it\u0027s a hinderance which outweighs developer happiness.",
+      "parentUuid": "6edb6f39_7dff1763",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -186,6 +276,24 @@
       "side": 1,
       "message": "I tried to explain the change in the commit message: if this isn\u0027t done, then if both the page action and the bottom button are on the same page and you tap the bottom button, then the language switcher overlay won\u0027t open.\n\nSee the browser test failures against PS2.",
       "parentUuid": "6edb6f39_1da533b2",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_51c88425",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T10:21:21Z",
+      "side": 1,
+      "message": "I see that you fixed this bug as part of I85db419. Done without doing anything!",
+      "parentUuid": "6edb6f39_fd4967d4",
       "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
