@@ -177,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "6edb6f39_4686036c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 985,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-28T16:34:53Z",
+      "side": 1,
+      "message": "Perfectly reasonable.",
+      "parentUuid": "6edb6f39_d1549459",
+      "revId": "0af186db1f0df5f7a8fb4a55fb62b524fa9a0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6edb6f39_dd158beb",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 3
