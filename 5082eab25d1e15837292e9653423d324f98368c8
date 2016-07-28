@@ -34,6 +34,23 @@
       "revId": "5082eab25d1e15837292e9653423d324f98368c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_09f5ecb5",
+        "filename": "tests/phpunit/specials/SpecialMobileLanguagesTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-28T18:47:27Z",
+      "side": 1,
+      "message": "I\u0027m always torn between using PHP\u0027s Reflection* classes and ReflectionMethod#setAccessible or writing a proxy \u003chttps://en.wikipedia.org/wiki/Proxy_pattern\u003e which changes the accessibility level of the CUT.\n\nHowever, regardless of the method that I use, I know that it\u0027s symptomatic of the more general problem of our code violating SRP \u003chttps://en.wikipedia.org/wiki/Single_responsibility_principle\u003e.\n\nIt\u0027s a good exercise to consider how - and to where - you might extract this logic so it\u0027s more easily testable, but the doing so is way out of scope for this change.",
+      "revId": "5082eab25d1e15837292e9653423d324f98368c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
