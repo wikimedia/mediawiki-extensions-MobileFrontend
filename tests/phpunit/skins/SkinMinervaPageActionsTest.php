@@ -10,6 +10,10 @@ class TestSkinMinerva extends SkinMinerva {
 	public function setContentHandler( ContentHandler $contentHandler ) {
 		$this->contentHandler = $contentHandler;
 	}
+
+	public function setDoesPageHaveLanguages( $doesPageHaveLanguages ) {
+		$this->doesPageHaveLanguages = $doesPageHaveLanguages;
+	}
 }
 
 /**
@@ -118,5 +122,36 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 		$skin = $this->getSkin( Title::newFromText( 'User:Admin' ) );
 
 		$this->assertTrue( $skin->isAllowedPageAction( 'talk' ) );
+	}
+
+	public static function switchLanguagePageActionProvider() {
+		return [
+			[ true, false, true, true ],
+			[ false, true, true, true ],
+			[ true, false, false, false ],
+		];
+	}
+
+	/**
+	 * The "switch-language" page action is allowed when: v2 of the page action bar is enabled and
+	 * if the page has interlanguage links or if the <code>$wgMinervaAlwaysShowLanguageButton</code>
+	 * configuration variable is set to truthy.
+	 *
+	 * @dataProvider switchLanguagePageActionProvider
+	 * @covers SkinMinerva::isAllowedPageAction
+	 */
+	public function test_switch_language_page_action(
+		$doesPageHaveLanguages,
+		$minervaAlwaysShowLanguageButton,
+		$minervaUsePageActionBarV2,
+		$expected
+	) {
+		$this->skin->setDoesPageHaveLanguages( $doesPageHaveLanguages );
+		$this->setMwGlobals( [
+			'wgMinervaAlwaysShowLanguageButton' => $minervaAlwaysShowLanguageButton,
+			'wgMinervaUsePageActionBarV2' => $minervaUsePageActionBarV2,
+		] );
+
+		$this->assertEquals( $expected, $this->skin->isAllowedPageAction( 'switch-language' ) );
 	}
 }

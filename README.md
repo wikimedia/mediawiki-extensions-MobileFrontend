@@ -352,12 +352,18 @@ Define a set of params that should be passed in every gateway query.
 ```
 
 
-#### $wgMFPageActions
+#### $wgMFPageActions (deprecated)
 
-Controls, which page action show and which not. Allowed: `edit`, `watch`
+See `$wgMinervaPageActions`.
+
+#### $wgMinervaPageActions
+
+
+Controls which page actions, if any, are displayed. Allowed: `edit`, `watch`, `talk`, and
+`switch-language`.
 
 * Type: `Array`
-* Default: `['edit', 'watch']`
+* Default: `['edit', 'talk', 'watch', 'switch-language']`
 
 #### $wgMFQueryPropModules
 
@@ -604,14 +610,6 @@ Whether to show the language switcher button even if no languages are available 
 * Type: `Boolean`
 * Default: `true`
 
-
-#### $wgMinervaPageActions
-
-Controls, which page action show and which not.  Allowed: `edit`, `talk`,
-`upload`, `watch`
-
-* Type: `Array`
-* Default: `['edit', 'talk', 'upload', 'watch']`
 
 #### $wgMFNamespacesWithoutCollapsibleSections
 

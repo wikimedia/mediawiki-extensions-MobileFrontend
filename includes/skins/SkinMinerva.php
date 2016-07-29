@@ -133,17 +133,22 @@ class SkinMinerva extends SkinTemplate {
 	 *   <li>the user is on the main page</li>
 	 * </ul>
 	 *
-	 * Furthermore, the "edit" page action isn't allowed if the content of the page doesn't support
-	 * direct editing via the API.
+	 * The "edit" page action is allowed if the content of the page supports direct editing via the
+	 * API.
+	 *
+	 * The "switch-language" is allowed if <code>$wgMinervaUsePageActionBarV2</code> is truthy and
+	 * there are interlanguage links on the page, or <code>$wgMinervaAlwaysShowLanguageButton</code>
+	 * is truthy.
 	 *
 	 * @param string $action
 	 * @return boolean
 	 */
 	protected function isAllowedPageAction( $action ) {
 		$title = $this->getTitle();
+		$config = $this->getMFConfig();
 
 		if (
-			! in_array( $action, $this->getMFConfig()->get( 'MinervaPageActions' ) )
+			! in_array( $action, $config->get( 'MinervaPageActions' ) )
 			|| $title->isMainPage()
 			|| ( $this->isUserPage && !$title->exists() )
 		) {
@@ -155,6 +160,11 @@ class SkinMinerva extends SkinTemplate {
 
 			return $contentHandler->supportsDirectEditing() &&
 				$contentHandler->supportsDirectApiEditing();
+		}
+
+		if ( $action === 'switch-language' ) {
+			return $config->get( 'MinervaUsePageActionBarV2' ) &&
+				( $this->doesPageHaveLanguages || $config->get( 'MinervaAlwaysShowLanguageButton' ) );
 		}
 
 		return true;
@@ -909,6 +919,10 @@ class SkinMinerva extends SkinTemplate {
 			$menu['watch'] = $this->createWatchPageAction( $actions );
 		}
 
+		if ( $this->isAllowedPageAction( 'switch-language' ) ) {
+			$menu['switch-language'] = $this->createSwitchLanguageAction();
+		}
+
 		$tpl->set( 'page_actions', $menu );
 	}
 
@@ -916,7 +930,7 @@ class SkinMinerva extends SkinTemplate {
 	 * Creates the "edit" page action: the well-known pencil icon that, when tapped, will open an
 	 * editor with the lead section loaded.
 	 *
-	 * @return array A map compatible with BaseTemplat#makeListItem
+	 * @return array A map compatible with BaseTemplate#makeListItem
 	 */
 	protected function createEditPageAction() {
 		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
@@ -941,7 +955,7 @@ class SkinMinerva extends SkinTemplate {
 	 * add the page to or remove the page from the user's watchlist; or, if the user is logged out,
 	 * will direct the user's UA to Special:Login.
 	 *
-	 * @return array A map compatible with BaseTemplat#makeListItem
+	 * @return array A map compatible with BaseTemplate#makeListItem
 	 */
 	protected function createWatchPageAction( $actions ) {
 		$baseResult = [
@@ -967,6 +981,33 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Creates the the "switch-language" action: the icon that, when tapped, opens the language
+	 * switcher.
+	 *
+	 * @return array A map compatible with BaseTemplate#makeListItem
+	 */
+	protected function createSwitchLanguageAction() {
+		$languageSwitcherLinks = [];
+		$languageSwitcherClasses = 'language-selector';
+
+		if ( $this->doesPageHaveLanguages ) {
+			$languageSwitcherLinks['mobile-frontend-language-article-heading'] = [
+				'href' => SpecialPage::getTitleFor( 'MobileLanguages', $this->getTitle() )->getLocalURL()
+			];
+		} else {
+			$languageSwitcherClasses .= ' disabled';
+		}
+
+		return [
+			'text' => '',
+			'itemtitle' => $this->msg( 'mobile-frontend-language-article-heading' ),
+			'class' => MobileUI::iconClass( 'language-switcher', 'element', $languageSwitcherClasses ),
+			'links' => $languageSwitcherLinks,
+			'is_js_only' => false
+		];
 	}
 
 	/**
