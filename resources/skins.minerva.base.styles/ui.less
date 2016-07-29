@@ -338,8 +338,6 @@ input.search {
 	text-indent: 0;
 	display: inline-block;
 	font-weight: bold;
-	color: #fff;
-	background: #c91f2c;
 	border-radius: 2px;
 	height: 1.2em;
 	line-height: 1.2em;
@@ -350,6 +348,13 @@ input.search {
 	position: absolute;
 	right: 0;
 	top: -0.1em;
+	color: #777;
+	background: #d2d2d2;
+
+	&.notification-unseen {
+		color: #fff;
+		background: #c91f2c;
+	}
 
 	&.zero {
 		display: none;

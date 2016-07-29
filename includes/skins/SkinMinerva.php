@@ -312,18 +312,30 @@ class SkinMinerva extends SkinTemplate {
 		$notificationsTitle = '';
 		$countLabel = '';
 		$isZero = true;
+		$hasUnseen = false;
 
 		$user = $this->getUser();
 		$newtalks = $this->getNewtalks();
 		$currentTitle = $this->getTitle();
+
 		// If Echo is available, the user is logged in, and they are not already on the
 		// notifications archive, show the notifications icon in the header.
 		if ( $this->useEcho() && $user->isLoggedIn() ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
 			$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
-				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
+				$notifUser = MWEchoNotifUser::newFromUser( $user );
+				$echoSeenTime = EchoSeenTime::newFromUser( $user )->getTime( 'all', /*flags*/ 0, TS_ISO_8601 );
+
+				$notifLastUnreadTime = $notifUser->getLastUnreadNotificationTime();
+				$count = $notifUser->getNotificationCount();
+
 				$isZero = $count === 0;
+				$hasUnseen = (
+					$count > 0 &&
+					$echoSeenTime < $notifLastUnreadTime->getTimestamp( TS_ISO_8601 )
+				);
+
 				$countLabel = EchoNotificationController::formatNotificationCount( $count );
 			}
 		} elseif ( !empty( $newtalks ) ) {
@@ -332,7 +344,9 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $notificationsTitle ) {
-			$spanClass = $isZero ? 'zero notification-count' : 'notification-count';
+			$spanClass = $isZero ? 'zero' : '';
+			$spanClass .= ' notification-count';
+			$spanClass .= $hasUnseen ? ' notification-unseen' : '';
 
 			$url = $notificationsTitle->getLocalURL(
 				[ 'returnto' => $currentTitle->getPrefixedText() ] );

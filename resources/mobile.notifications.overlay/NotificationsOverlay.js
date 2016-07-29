@@ -54,7 +54,8 @@
 
 		// Populate notifications
 		wrapperWidget.populate()
-			.then( controller.updateLocalSeenTime.bind( controller ) );
+			.then( controller.updateLocalSeenTime.bind( controller ) )
+			.then( this.setBadgeSeen.bind( this ) );
 	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
@@ -94,6 +95,16 @@
 				$badgeCounter.hide();
 			}
 		},
+		/**
+                 * Mark that all the notifications in the badge are seen.
+                 *
+                 * @method
+                 */
+		setBadgeSeen: function () {
+			this.$badge
+				.find( '.notification-count' )
+				.removeClass( 'notification-unseen' );
+		},
 		/** @inheritdoc */
 		preRender: function () {
 			this.options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
@@ -104,8 +115,6 @@
 
 			if ( this.options.notifications || this.options.errorMessage ) {
 				this.$( '.loading' ).remove();
-				// Reset the badge
-				this.markAsRead();
 			}
 		}
 	} );
