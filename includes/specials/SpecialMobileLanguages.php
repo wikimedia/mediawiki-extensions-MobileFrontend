@@ -48,6 +48,17 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			$data = $data['query']['pages'];
 		}
 
+		return $this->processLanguages( $data );
+	}
+
+	/**
+	 * Processes languages to add 'langname' property, update 'url' property to mobile domain,
+	 * and sort languages in case-insensitive order.
+	 *
+	 * @property array $data list of languages to process
+	 * @return array list of processed languages
+	 */
+	protected function processLanguages( $data ) {
 		// Silly strict php
 		$pages = array_values( $data );
 		$page = array_shift( $pages );
@@ -66,6 +77,10 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				$langObject['url'] = MobileContext::singleton()->getMobileUrl( $langObject['url'] );
 				$languages[$code] = $langObject;
 			}
+			$compareLanguage = function( $a, $b ) {
+				return strcasecmp( $a['langname'], $b['langname'] );
+			};
+			usort( $languages, $compareLanguage );
 			return $languages;
 		} else {
 			// No langlinks available

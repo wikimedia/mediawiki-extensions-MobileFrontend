@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * @group MobileFrontend
+ */
+class SpecialMobileLanguagesTest extends MediaWikiTestCase {
+	/**
+	 * Data provider for testProcessLanguages
+	 */
+	public function providerProcessLanguages() {
+		$input = [
+			'bs' => [
+				'lang' => 'bs',
+				'url' => 'http://bs.wikipedia.org',
+				'title' => 'bosnian'
+			],
+			'de' => [
+				'lang' => 'de',
+				'url' => 'http://de.wikipedia.org',
+				'title' => 'German'
+			],
+			'es' => [
+				'lang' => 'es',
+				'url' => 'http://es.wikipedia.org',
+				'title' => 'Spanish',
+			],
+			'simple' => [
+				'lang' => 'simple',
+				'url' => 'http://simple.wikipedia.org',
+				'title' => 'Simple English'
+			]
+		];
+
+		$expected = [
+			'bs' => [
+				'langname' => 'bosanski'
+			] + $input['bs'],
+			'de' => [
+				'langname' => 'Deutsch'
+			] + $input['de'],
+			'es' => [
+				'langname' => 'español'
+			] + $input['es'],
+			'simple' => [
+				'langname' => 'Simple English'
+			] + $input['simple']
+		];
+
+		// Transform URLs to mobile version, which is dependent on wgMobileUrlTemplate
+		$ctx = MobileContext::singleton();
+		foreach ( $expected as $key => &$value ) {
+			$value['url'] = $ctx->getMobileUrl( $value['url'] );
+		}
+
+		return [
+			[ // Works with one language
+				[
+					$input['es']
+				],
+				[
+					$expected['es']
+				]
+			],
+			[ // Sorts two languages
+				[
+					$input['es'],
+					$input['bs']
+				],
+				[
+					$expected['bs'],
+					$expected['es']
+				]
+			],
+			[ // Should still sort correctly if already in correct order
+				[
+					$input['bs'],
+					$input['es']
+				],
+				[
+					$expected['bs'],
+					$expected['es']
+				]
+			],
+			[ // Sorts languages case-insensitive
+				[
+					$input['simple'],
+					$input['de'],
+					$input['bs'],
+					$input['es']
+				],
+				[
+					$expected['bs'],
+					$expected['de'],
+					$expected['es'],
+					$expected['simple']
+				]
+			],
+			[ // Should still sort correctly if already in correct order (mixed case)
+				[
+					$input['bs'],
+					$input['de'],
+					$input['es'],
+					$input['simple']
+				],
+				[
+					$expected['bs'],
+					$expected['de'],
+					$expected['es'],
+					$expected['simple']
+				]
+			]
+		];
+	}
+
+	/**
+	 * @dataProvider providerProcessLanguages
+	 * @covers SpecialMobileLanguages::processLanguages
+	 */
+	public function testProcessLanguages( $langlinks, $expected ) {
+		$apiResult = [
+			42 => [
+				'langlinks' => $langlinks
+			]
+		];
+		$sp = new SpecialMobileLanguages();
+		$class = new ReflectionClass( 'SpecialMobileLanguages' );
+		$method = $class->getMethod( 'processLanguages' );
+		$method->setAccessible( true );
+		$this->assertEquals(
+			$expected,
+			$method->invokeArgs( $sp, [ $apiResult ] ),
+			'Property langname should be added, URL should be transformed, and languages should be sorted.'
+		);
+	}
+}
