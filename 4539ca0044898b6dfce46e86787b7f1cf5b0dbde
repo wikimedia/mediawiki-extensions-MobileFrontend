@@ -16,6 +16,24 @@
       "revId": "4539ca0044898b6dfce46e86787b7f1cf5b0dbde",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeb83fd6_5f48838c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-07-29T06:58:52Z",
+      "side": 1,
+      "message": "Nice catch. I\u0027ve switched from the negative to the positive when describing both the edit and switch-language page actions.",
+      "parentUuid": "4ee86bcb_fc2c0992",
+      "revId": "4539ca0044898b6dfce46e86787b7f1cf5b0dbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
