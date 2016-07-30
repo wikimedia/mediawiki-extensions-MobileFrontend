@@ -3,7 +3,8 @@
 		"authors": [
 			"Babanwalia",
 			"Satdeep gill",
-			"ਪ੍ਰਚਾਰਕ"
+			"ਪ੍ਰਚਾਰਕ",
+			"Tow"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ",
@@ -23,7 +24,7 @@
 	"mobile-frontend-main-menu-account-create": "ਖਾਤਾ ਬਣਾਉ",
 	"mobile-frontend-main-menu-button-tooltip": "ਮੁੱਖ ਮੀਨੂ ਖੋਲ੍ਹੋ",
 	"mobile-frontend-main-menu-login": "ਲਾਗ ਇਨ",
-	"mobile-frontend-main-menu-nearby": "ਨੇੜੇ-ਤੇੜੇ",
+	"mobile-frontend-main-menu-nearby": "ਨੇੜੇ",
 	"mobile-frontend-main-menu-settings": "ਸੈਟਿੰਗਾਂ",
 	"mobile-frontend-main-menu-watchlist": "ਨਿਗਰਾਨ-ਸੂਚੀ",
 	"mobile-frontend-meta-data-issues-talk": "ਇਸ ਗੱਲਬਾਤ ਸਫ਼ੇ ਬਾਬਤ",
