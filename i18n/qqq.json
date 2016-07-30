@@ -294,7 +294,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Used as label for link from user talk page to user page. Parameters:\n* $1 - username",
 	"mobile-frontend-talk-back-to-projectpage": "Used as label for link from project talk page to project page. Parameters:\n* $1 - page title",
 	"mobile-frontend-talk-back-to-filepage": "Used as label for link from file talk page to file page. Parameters:\n* $1 - page title",
-	"mobile-frontend-talk-edit-summary": "Edit summary when creating a new talk section ($1 is name of section)",
 	"mobile-frontend-talk-explained": "Explains that the user is seeing talk page headings",
 	"mobile-frontend-talk-explained-empty": "Explains why the list is empty.",
 	"mobile-frontend-talk-overlay-header": "Heading for talk overlay.\n{{Identical|Talk}}",
