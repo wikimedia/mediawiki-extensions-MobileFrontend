@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb2c7f3_54edbd21",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-01T20:31:42Z",
+      "side": 1,
+      "message": "This will treat all subtitle\u0027s as a warning which is not the case.\nI know this will impact subpages but I imagine there are other use cases we are not aware of.\n\nOther solutions might be:\n* Hide subtitle in css/MobileFormatter and restore the old patch.\n* Modify Article::setOldSubtitle where this runs to invoke a hook\n* Talk with Nirzar about styling. Technically this is not a warning at all.",
+      "revId": "b7baa42cee51844bf49b1c76244035a96870d4b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
