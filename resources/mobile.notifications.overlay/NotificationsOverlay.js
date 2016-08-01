@@ -27,6 +27,8 @@
 			return;
 		}
 
+		mw.echo.config.maxPrioritizedActions = 1;
+
 		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
 		modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } );
 		controller = new mw.echo.Controller(
