@@ -121,7 +121,7 @@
 
 			this._position( $pa );
 			// add the entire width of the pointer
-			left = 20;
+			left = 24;
 			if ( !this.options.autoHide ) {
 				left += paOffset.left - overlayOffset.left;
 			}
@@ -130,7 +130,7 @@
 			}
 
 			this.$pointer = $( '<div class="tutorial-pointer"></div>' ).css( {
-				top: -10,
+				top: -6,
 				left: left
 			} ).appendTo( this.$el );
 
