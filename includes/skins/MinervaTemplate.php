@@ -245,10 +245,13 @@ class MinervaTemplate extends BaseTemplate {
 
 			$html .= $headingHtml;
 			$html .= $postHeadingHtml;
-			$html .= $data['subtitle'];
-			// FIXME: Temporary solution until we have design
-			if ( isset( $data['_old_revision_warning'] ) ) {
-				$html .= $data['_old_revision_warning'];
+
+			if ( $this->getSkin()->getRequest()->getText( 'oldid' ) ) {
+				// Revision info. See T139930
+				$html .= MobileUI::warningBox( $data['subtitle'] );
+			} else {
+				// Subpage breadcrumbs. See T102210
+				$html .= $data['subtitle'];
 			}
 
 			$html .= $internalBanner;
