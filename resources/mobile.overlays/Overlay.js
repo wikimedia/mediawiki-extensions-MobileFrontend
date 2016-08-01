@@ -65,6 +65,7 @@
 		 * @cfg {String} defaults.backButton HTML of the back button.
 		 * @cfg {String} defaults.headerButtonsListClassName A comma separated string of class
 		 * names of the wrapper of the header buttons.
+		 * @cfg {Boolean} defaults.headerChrome Whether the header has chrome.
 		 * @cfg {Boolean} defaults.fixedHeader Whether the header is fixed.
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.
 		 * @cfg {Object} [defaults.footerAnchor] options for an optional Anchor that can appear in the footer
@@ -84,6 +85,7 @@
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			headerButtonsListClassName: '',
+			headerChrome: true,
 			fixedHeader: true,
 			spinner: icons.spinner().toHtmlString()
 		},
