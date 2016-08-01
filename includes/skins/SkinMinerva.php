@@ -81,7 +81,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
 		$this->prepareBanners( $tpl );
-		$this->prepareWarnings( $tpl );
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
 		$this->prepareLanguages( $tpl );
@@ -803,25 +802,6 @@ class SkinMinerva extends SkinTemplate {
 		// Allow other extensions to add or override tools
 		Hooks::run( 'MobileMenu', [ 'sitelinks', &$menu ] );
 		return $menu->getEntries();
-	}
-
-	/**
-	 * @return html for a message to display at top of old revisions
-	 */
-	protected function getOldRevisionHtml() {
-		return $this->getOutput()->getSubtitle();
-	}
-
-	/**
-	 * Prepare warnings for mobile output
-	 * @param BaseTemplate $tpl
-	 */
-	protected function prepareWarnings( BaseTemplate $tpl ) {
-		$out = $this->getOutput();
-		if ( $out->getRequest()->getText( 'oldid' ) ) {
-			$tpl->set( '_old_revision_warning',
-				MobileUI::warningBox( $this->getOldRevisionHtml() ) );
-		}
 	}
 
 	/**
