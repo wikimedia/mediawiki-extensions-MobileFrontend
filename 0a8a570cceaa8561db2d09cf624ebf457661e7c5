@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb2c7f3_ea818aa5",
+        "filename": "resources/mobile.browser/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-02T05:12:43Z",
+      "side": 1,
+      "message": "Wha\u0027t s the definition of \"low resolution\"?",
+      "revId": "0a8a570cceaa8561db2d09cf624ebf457661e7c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
