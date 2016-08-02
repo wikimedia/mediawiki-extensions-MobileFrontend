@@ -16,6 +16,24 @@
       "revId": "b7baa42cee51844bf49b1c76244035a96870d4b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb2c7f3_aae9527d",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-02T04:39:23Z",
+      "side": 1,
+      "message": "Thanks! \n* Hiding subtitles may not be a good idea because it was identified as a problem before in T102210.\n* Will need to look into it.\n* That sounds like a good idea.",
+      "parentUuid": "aeb2c7f3_54edbd21",
+      "revId": "b7baa42cee51844bf49b1c76244035a96870d4b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
