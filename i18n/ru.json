@@ -355,6 +355,7 @@
 	"apihelp-mobileview-param-thumbsize": "Максимальные размеры эскизов.",
 	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
 	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры",
+	"apihelp-mobileview-param-revision": "Запросить определенную версию.",
 	"apihelp-mobileview-example-1": "Получить информацию о раздел 0 статьи [[Doom metal]]",
 	"apihelp-parse-param-noimages": "Отключить изображения на мобильном сайте.",
 	"apihelp-parse-param-mainpage": "Применить мобильные изменения для главной страницы.",

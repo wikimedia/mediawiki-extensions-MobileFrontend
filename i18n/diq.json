@@ -6,7 +6,8 @@
 			"Gorizon",
 			"Marmase",
 			"Mirzali",
-			"Kumkumuk"
+			"Kumkumuk",
+			"Gırd"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kodê tesdiqi cı de",
@@ -35,7 +36,7 @@
 	"mobile-frontend-edit-login-action": "Qandê vırnayışi qeyd be.",
 	"mobile-frontend-edit-signup-action": "Qandê vurnayışi bıveciye.",
 	"mobile-frontend-editor-abusefilter-read-more": "Zêde bıwane",
-	"mobile-frontend-editor-cancel": "Bıterkn",
+	"mobile-frontend-editor-cancel": "Bıtexelne",
 	"mobile-frontend-editor-continue": "Bahdoyên",
 	"mobile-frontend-editor-edit": "Bıvurne",
 	"mobile-frontend-editor-editing-page": "<strong>vurêno</strong><span>$1</span>",
@@ -120,7 +121,7 @@
 	"mobile-frontend-talk-add-overlay-content-placeholder": "To aqıl de çıçi esto?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Mewzu",
 	"mobile-frontend-talk-add-overlay-submit": "Werênayış cı ke",
-	"mobile-frontend-talk-overlay-header": "Mışewre",
+	"mobile-frontend-talk-overlay-header": "Vacenayış",
 	"mobile-frontend-talk-overlay-lead-header": "Werênayışo bêname",
 	"mobile-frontend-talk-reply": "Cewab",
 	"mobile-frontend-terms-text": "Şertê gureynayışi (xebetnayışi)",
@@ -137,7 +138,7 @@
 	"mobile-frontend-watchlist-filter-all": "Pêro",
 	"mobile-frontend-watchlist-filter-articles": "Peli",
 	"mobile-frontend-watchlist-filter-other": "Zewbi",
-	"mobile-frontend-watchlist-filter-talk": "mışewre",
+	"mobile-frontend-watchlist-filter-talk": "Vacenayış",
 	"mobile-frontend-watchlist-more": "Zewbi",
 	"mobile-frontend-watchlist-removed": "Lista şımaya serykerdışi ra $1 wedariya.",
 	"mobile-frontend-watchlist-view": "Lista serykerdışê xo bıvêne",
