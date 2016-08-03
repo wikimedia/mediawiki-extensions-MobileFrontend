@@ -20,7 +20,8 @@ class SkinMinervaBeta extends SkinMinerva {
 	 * @inheritdoc
 	 */
 	protected function isAllowedPageAction( $action ) {
-		return $action === 'switch-language' ? true : parent::isAllowedPageAction( $action );
+		return !$this->getTitle()->isMainPage() && $action === 'switch-language' ?
+			true : parent::isAllowedPageAction( $action );
 	}
 
 	/**
