@@ -20,7 +20,8 @@
 			"Zhxy 519",
 			"Bowleerin",
 			"EagerLin",
-			"飞舞回堂前"
+			"飞舞回堂前",
+			"一個正常人"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -153,6 +154,7 @@
 	"mobile-frontend-image-heading-describe": "'''描述'''圖片",
 	"mobile-frontend-image-uploading": "'''上傳'''圖片...",
 	"mobile-frontend-images-status": "圖片",
+	"mobile-frontend-language-change": "變更語言",
 	"mobile-frontend-language-article-heading": "使用其他語言閱讀",
 	"mobile-frontend-language-heading": "<strong>語言</strong>",
 	"mobile-frontend-languages-404-desc": "必須指定一個有效標題。",
