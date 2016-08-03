@@ -3,7 +3,9 @@
 @import 'mediawiki.mixins';
 
 // Used for messages on login screen (They're more informational than actual warnings.)
-.warningbox {
+// FIXME: standardise these two classes
+.warningbox,
+.mw-revision {
 	border: 1px solid @colorGray12;
 	background-color: @colorGray14;
 	color: @grayDark;
@@ -16,7 +18,8 @@
 
 .successbox,
 .errorbox,
-.warningbox {
+.warningbox,
+.mw-revision {
 	padding: 1em @contentMargin;
 	margin: 0 0 1em;
 
