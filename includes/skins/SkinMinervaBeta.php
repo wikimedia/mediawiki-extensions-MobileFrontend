@@ -1,7 +1,10 @@
 <?php
+
 /**
  * SkinMinervaBeta.php
  */
+
+use MobileFrontend\MenuBuilder;
 
 /**
  * Beta-Implementation of stable class SkinMinerva
@@ -97,5 +100,62 @@ class SkinMinervaBeta extends SkinMinerva {
 		$styles[] = 'skins.minerva.content.styles.beta';
 
 		return $styles;
+	}
+
+	protected function getMenuData() {
+		$data = parent::getMenuData();
+		$data['groups'][] = $this->getConfigurationTools();
+
+		return $data;
+	}
+
+	/**
+	 * Like <code>SkinMinerva#getDiscoveryTools</code> and <code>#getPersonalTools</code>, create
+	 * a group of configuration-related menu items. Currently, only the Settings menu item is in the
+	 * group.
+	 *
+	 * @return array
+	 */
+	private function getConfigurationTools() {
+		$menu = new MenuBuilder();
+
+		$this->insertSettingsMenuItem( $menu );
+
+		return $menu->getEntries();
+	}
+
+	/**
+	 * @inheritdoc
+	 *
+	 * Adds the Log{in,out} menu item and, if the user is logged in, the Watchlist and Contributions
+	 * menu items too.
+	 *
+	 * @param MenuBuilder $menu
+	 */
+	protected function buildPersonalTools( MenuBuilder $menu ) {
+		$this->insertLogInOutMenuItem( $menu );
+
+		$user = $this->getUser();
+
+		if ( $user->isLoggedIn() ) {
+			$this->insertWatchlistMenuItem( $menu );
+			$this->insertContributionsMenuItem( $menu, $user );
+		}
+	}
+
+	/**
+	 * Inserts the Contributions menu item into the menu.
+	 *
+	 * @param MenuBuilder $menu
+	 * @param User $user The user to whom the contributions belong
+	 */
+	private function insertContributionsMenuItem( MenuBuilder $menu, User $user ) {
+		$menu->insert( 'settings' )
+			->addComponent(
+				$this->msg( 'mobile-frontend-main-menu-contributions' )->escaped(),
+				SpecialPage::getTitleFor( 'Contributions', $user->getName() )->getLocalUrl(),
+				MobileUI::iconClass( 'mf-contributions-invert', 'before' ),
+				[ 'data-event-name' => 'contributions' ]
+			);
 	}
 }
