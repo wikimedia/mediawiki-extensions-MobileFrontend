@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ebed7c6_9cd6a9c7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1014,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-04T22:55:51Z",
+      "side": 1,
+      "message": "This looks like a breaking change to the MobileMenu hook (we should really sort that out one of these days...)",
+      "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ebed7c6_3cef5584",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-04T22:55:51Z",
+      "side": 1,
+      "message": "Does this work in Hogan? We\u0027ll have to be careful with this template since it is parsed in both Hogan and Mustache.",
+      "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
