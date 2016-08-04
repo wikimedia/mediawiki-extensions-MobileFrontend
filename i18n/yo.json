@@ -1,27 +1,32 @@
 {
 	"@metadata": {
 		"authors": [
-			"Demmy"
+			"Demmy",
+			"Wikicology"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "Kò sí ìsọníṣókí àtúnṣe",
 	"mobile-frontend-copyright": "Gbogbo ohun inú ibí yìí wà lábẹ́ $1 àyàfi tí a bá sọ pé kò rí bẹ̀ẹ̀.",
 	"mobile-frontend-editor-edit": "Àtúnṣe",
+	"mobile-frontend-featured-article": "Àyọkà tí a ṣàfihàn rẹ̀ lóní",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-home-button": "Ibùdó",
 	"mobile-frontend-language-article-heading": "Ìkàwé ní èdè míràn",
 	"mobile-frontend-last-modified-date": "Àtúnṣe ojúewé yìí wáyé gbẹ̀yìn ní ọjọ́ $1, ní ago $2",
+	"mobile-frontend-main-menu-account-create": "Fi orúkọ sí lẹ̀",
 	"mobile-frontend-main-menu-button-tooltip": "Ìṣí ojúewé ètò àkọ́kọ́",
 	"mobile-frontend-main-menu-login": "Ìjáwọlé",
 	"mobile-frontend-main-menu-nearby": "Ìtòsí",
 	"mobile-frontend-main-menu-settings": "Àwọn ìtòjọ",
 	"mobile-frontend-main-menu-watchlist": "Ìmójútó",
+	"mobile-frontend-news-items": "Ní àwọn ìròyìn",
+	"mobile-frontend-password-placeholder": "ọ̀rọ̀ ìgbaniwọlé",
 	"mobile-frontend-placeholder": "Ṣ'àwáàrí nínú {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Àkíyèsí ìmúlò",
 	"mobile-frontend-random-button": "Ojúewé àrìnnàkò",
 	"mobile-frontend-search-submit": "Lọ",
 	"mobile-frontend-settings-site-header": "Àwọn èdè {{SITENAME}}",
 	"mobile-frontend-terms-text": "Àdéhùn ìmúlò",
-	"mobile-frontend-username": "Orúkọ oníṣe:",
 	"mobile-frontend-view": "Ìwò lójú fóónù",
 	"mobile-frontend-view-desktop": "Ojú ẹ̀rọ orí tábìlì",
 	"mobile-frontend-view-mobile": "Ojú fóónù",
