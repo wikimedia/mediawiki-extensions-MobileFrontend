@@ -391,7 +391,8 @@
 				"resources/mobile.mainMenu/mainmenu.less"
 			],
 			"templates": {
-				"menu.hogan": "resources/mobile.mainMenu/menu.mustache"
+				"menu.hogan": "resources/mobile.mainMenu/menu.mustache",
+				"menuGroup.hogan": "resources/mobile.mainMenu/menuGroup.mustache"
 			},
 			"scripts": [
 				"resources/mobile.mainMenu/MainMenu.js"
