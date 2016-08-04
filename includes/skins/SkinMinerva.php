@@ -389,14 +389,12 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Prepares and returns urls and links personal to the given user
-	 * @return array
+	 * Inserts the Watchlist menu item into the menu.
+	 *
+	 * @param MenuBuilder $menu
 	 */
-	protected function getPersonalTools() {
-		$returnToTitle = $this->getTitle()->getPrefixedText();
-		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
+	protected function insertWatchlistMenuItem( MenuBuilder $menu ) {
 		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
-		$menu = new MenuBuilder();
 
 		// Watchlist link
 		$watchlistQuery = [];
@@ -423,6 +421,16 @@ class SkinMinerva extends SkinTemplate {
 				MobileUI::iconClass( 'mf-watchlist-invert', 'before' ),
 				[ 'data-event-name' => 'watchlist' ]
 			);
+	}
+
+	/**
+	 * If the user is using a mobile device (or the UA presents itself as a mobile device), then the
+	 * Settings menu item is inserted into the menu; otherwise the Preferences menu item is inserted.
+	 *
+	 * @param MenuBuilder $menu
+	 */
+	protected function insertSettingsMenuItem( MenuBuilder $menu ) {
+		$returnToTitle = $this->getTitle()->getPrefixedText();
 
 		// Links specifically for mobile mode
 		if ( $this->isMobileMode ) {
@@ -452,9 +460,30 @@ class SkinMinerva extends SkinTemplate {
 					[ 'data-event-name' => 'preferences' ]
 				);
 		}
+	}
 
-		// Login/Logout links
-		$this->insertLogInOutLink( $menu );
+	/**
+	 * Builds the personal tools menu item group.
+	 *
+	 * ... by adding the Watchlist, Settings, and Log{in,out} menu items in the given order.
+	 *
+	 * @param MenuBuilder $menu
+	 */
+	protected function buildPersonalTools( MenuBuilder $menu ) {
+		$this->insertWatchlistMenuItem( $menu );
+		$this->insertSettingsMenuItem( $menu );
+		$this->insertLogInOutMenuItem( $menu );
+	}
+
+	/**
+	 * Prepares and returns urls and links personal to the given user
+	 * @return array
+	 */
+	protected function getPersonalTools() {
+		$menu = new MenuBuilder();
+
+		$this->buildPersonalTools( $menu );
+
 		// Allow other extensions to add or override tools
 		Hooks::run( 'MobileMenu', [ 'personal', &$menu ] );
 		return $menu->getEntries();
@@ -556,7 +585,7 @@ class SkinMinerva extends SkinTemplate {
 	 *
 	 * @param MenuBuilder $menu
 	 */
-	protected function insertLogInOutLink( MenuBuilder $menu ) {
+	protected function insertLogInOutMenuItem( MenuBuilder $menu ) {
 		$query = [];
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
