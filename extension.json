@@ -1881,9 +1881,6 @@
 		"Gadgets::allowLegacy": [
 			"MobileFrontendHooks::onAllowLegacyGadgets"
 		],
-		"UnitTestsList": [
-			"MobileFrontendHooks::onUnitTestsList"
-		],
 		"CentralAuthLoginRedirectData": [
 			"MobileFrontendHooks::onCentralAuthLoginRedirectData"
 		],
