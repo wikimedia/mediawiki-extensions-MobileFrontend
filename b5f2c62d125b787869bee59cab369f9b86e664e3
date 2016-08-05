@@ -51,6 +51,24 @@
       "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ebed7c6_c20cbc48",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-08-05T08:53:16Z",
+      "side": 1,
+      "message": "I\u0027ve tested this locally on both regular wiki pages and on Special:MobileMenu – Hogan (IIRC?) and Mustache respectively. Is that what you mean?",
+      "parentUuid": "2ebed7c6_3cef5584",
+      "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
