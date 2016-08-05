@@ -9,19 +9,7 @@
 			<a href="#" class="catlink">{{hiddencatlink}}</a>
 		</li>
 	</ul>
-	<ul class="topic-title-list normal-catlist">
-		{{#items}}
-			<li>
-				<a href="{{url}}">{{title}}</a>
-			</li>
-		{{/items}}
-	</ul>
-	<ul class="topic-title-list hidden hidden-catlist">
-		{{#hiddenitems}}
-			<li>
-				<a href="{{url}}">{{title}}</a>
-			</li>
-		{{/hiddenitems}}
-	</ul>
+	<ul class="topic-title-list normal-catlist"></ul>
+	<ul class="topic-title-list hidden hidden-catlist"></ul>
 </div>
 {{{spinner}}}

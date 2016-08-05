@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**
@@ -9,7 +10,10 @@
 	 * @extends Overlay
 	 * @uses CategoryGateway
 	 */
-	function CategoryOverlay() {
+	function CategoryOverlay( options ) {
+		this.infiniteScroll = new InfiniteScroll();
+		this.infiniteScroll.on( 'load', $.proxy( this, '_loadCategories' ) );
+		this.gateway = new CategoryGateway( options.api );
 		Overlay.apply( this, arguments );
 	}
 
@@ -45,7 +49,8 @@
 		 * @inheritdoc
 		 */
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
-			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' )
+			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' ),
+			item: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlayItem.hogan' )
 		} ),
 		events: $.extend( {}, Overlay.prototype.events, {
 			'click .catlink': 'onCatlinkClick'
@@ -60,29 +65,32 @@
 				this.$( '.add' ).removeClass( 'hidden' );
 			}
 			if ( !this.options.items ) {
-				this._loadCategories( this.options );
+				this._loadCategories();
 			}
-			if ( this.options.showHidden ) {
-				this._changeView();
-			}
-			M.off( 'category-added' ).on( 'category-added', $.proxy( this, '_loadCategories', this.options ) );
+			M.off( 'category-added' ).on( 'category-added', $.proxy( this, '_loadCategories' ) );
 		},
 
 		/**
 		 * Get a list of categories the page belongs to and re-renders the overlay content
-		 * @param {Object} options Object passed to the constructor.
 		 */
-		_loadCategories: function ( options ) {
-			var gateway = new CategoryGateway( options.api ),
-				self = this;
+		_loadCategories: function () {
+			var self = this,
+				$normalCatlist = this.$( '.normal-catlist' ),
+				$hiddenCatlist = this.$( '.hidden-catlist' ),
+				apiResult;
 
-			this.$( '.topic-title-list' ).empty();
 			this.showSpinner();
-			gateway.getCategories( options.title ).done( function ( data ) {
+			this.infiniteScroll.setElement( this.$el );
+			// InfiniteScroll is enabled once it's created, but we want to wait, until at least one element is
+			// in the list before we enable it. So disable it here and enable once the elements are loaded.
+			this.infiniteScroll.disable();
+			apiResult = this.gateway.getCategories( this.options.title );
+			if ( apiResult === false ) {
+				self.clearSpinner();
+				return;
+			}
+			apiResult.done( function ( data ) {
 				if ( data.query && data.query.pages ) {
-					options.items = [];
-					options.hiddenitems = [];
-
 					// add categories to overlay
 					$.each( data.query.pages, function ( index, page ) {
 						if ( page.categories ) {
@@ -90,30 +98,30 @@
 								var title = mw.Title.newFromText( category.title, category.ns );
 
 								if ( category.hidden !== undefined ) {
-									options.hiddenitems.push( {
+									$hiddenCatlist.append( self.templatePartials.item.render( {
 										url: title.getUrl(),
 										title: title.getNameText()
-									} );
+									} ) );
 								} else {
-									options.items.push( {
+									$normalCatlist.append( self.templatePartials.item.render( {
 										url: title.getUrl(),
 										title: title.getNameText()
-									} );
+									} ) );
 								}
 							} );
 						}
 					} );
 
-					if ( options.items.length === 0 && options.hiddenitems.length === 0 ) {
-						options.subheading = mw.msg( 'mobile-frontend-categories-nocat' );
-					} else if ( options.items.length === 0 && options.hiddenitems.length > 0 ) {
-						options.showHidden = true;
+					if ( $normalCatlist.length === 0 && $normalCatlist.length === 0 ) {
+						self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
+					} else if ( $normalCatlist.length === 0 && $normalCatlist.length > 0 ) {
+						this._changeView();
 					}
 				} else {
-					options.subheading = mw.msg( 'mobile-frontend-categories-nocat' );
+					self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
 				}
-				self.render( options );
 				self.clearSpinner();
+				self.infiniteScroll.enable();
 			} );
 		},
 

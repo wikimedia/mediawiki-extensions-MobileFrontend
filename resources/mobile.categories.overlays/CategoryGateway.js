@@ -11,6 +11,8 @@
 		CategoryGateway.parent.apply( this, arguments );
 	}
 	prototype = {
+		continueParams: {},
+		canContinue: true,
 		/**
 		 * @inheritdoc
 		 */
@@ -34,15 +36,29 @@
 		/**
 		 * Returns the categories the title belongs to.
 		 * @param {String} title Title of the current page (to add the categories to)
-		 * @returns {jQuery.Deferred}
+		 * @returns {jQuery.Deferred|Boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
 		 */
 		getCategories: function ( title ) {
-			return this.api.get( {
+			var self = this;
+
+			if ( this.canContinue === false ) {
+				return false;
+			}
+
+			return this.api.get( $.extend( {}, {
 				action: 'query',
 				prop: 'categories',
 				titles: title,
 				clprop: 'hidden',
-				cllimit: 50 // FIXME: Replace with InfiniteScroll
+				cllimit: 50
+			}, this.continueParams ) ).then( function ( data ) {
+				if ( data.hasOwnProperty( 'continue' ) ) {
+					self.continueParams = data.continue;
+				} else {
+					self.canContinue = false;
+				}
+
+				return data;
 			} );
 		}
 	};

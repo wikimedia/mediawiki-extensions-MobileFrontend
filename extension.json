@@ -975,6 +975,7 @@
 				"mobile.search.api",
 				"mobile.search",
 				"mobile.editor.common",
+				"mobile.infiniteScroll",
 				"oojs-ui"
 			],
 			"scripts": [
@@ -988,6 +989,7 @@
 			],
 			"templates": {
 				"CategoryOverlay.hogan": "resources/mobile.categories.overlays/CategoryOverlay.hogan",
+				"CategoryOverlayItem.hogan": "resources/mobile.categories.overlays/CategoryOverlayItem.hogan",
 				"CategoryAddOverlay.hogan": "resources/mobile.categories.overlays/CategoryAddOverlay.hogan",
 				"CategoryAddOverlayHeader.hogan": "resources/mobile.categories.overlays/CategoryAddOverlayHeader.hogan"
 			},
