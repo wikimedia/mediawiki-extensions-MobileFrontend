@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ebed7c6_42218cab",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1014,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-08-05T08:52:08Z",
+      "side": 1,
+      "message": "The MobileMenu hook is run in SkinMinerva#getDiscoveryTools, #getPersonalTools, and #getSitelinks.\n\nThis change does change the shape of the data structure embedded in the page for rendering the main menu on the client side but it doesn\u0027t change the behaviour of the hook or the expected behaviour of the hook from the viewpoint of the listener.",
+      "parentUuid": "2ebed7c6_9cd6a9c7",
+      "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ebed7c6_3cef5584",
         "filename": "resources/mobile.mainMenu/menu.mustache",
         "patchSetId": 1
