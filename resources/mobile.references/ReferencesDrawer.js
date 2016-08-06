@@ -22,7 +22,7 @@
 		defaults: $.extend( {}, Drawer.prototype.defaults, {
 			spinner: icons.spinner().toHtmlString(),
 			cancelButton: new Icon( {
-				name: 'close-gray',
+				name: 'overlay-close-gray',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
