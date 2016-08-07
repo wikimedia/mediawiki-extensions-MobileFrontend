@@ -166,6 +166,7 @@
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} 변종",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "제안 언어",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "모든 언어들",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "언어 검색",
 	"mobile-frontend-last-modified-date": "$1 $2에 마지막으로 편집됨",
 	"mobile-frontend-last-modified-days": "{{PLURAL:$1|$1일}} 전에 마지막으로 편집됨",
 	"mobile-frontend-last-modified-hours": "{{PLURAL:$1|$1시간}} 전에 마지막으로 편집됨",
