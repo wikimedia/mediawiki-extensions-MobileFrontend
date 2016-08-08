@@ -37,7 +37,7 @@
 			cancelButton: new Icon( {
 				tagName: 'button',
 				// Uses a dark theme so swap out the icon
-				name: 'close-gray',
+				name: 'overlay-close-gray',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
