@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee9d9f70_44d4434c",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-08-08T22:44:28Z",
+      "side": 1,
+      "message": "There are not three values for `background-position` possible! Might have worked for you because your browser was ignoring the property and still rendering the default value `left top` (`left 0`). Still wrong.",
+      "revId": "13a719f2b193aa742e467f5c7f02b77034e109b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
