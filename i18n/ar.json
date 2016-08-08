@@ -49,6 +49,7 @@
 	"mobile-frontend-categories-hidden": "منظمة",
 	"mobile-frontend-changeslist-ip": "مستخدم مجهول",
 	"mobile-frontend-changeslist-nocomment": "لا يوجد ملخص تحرير",
+	"mobile-frontend-cite-error-title": "خطأ في تحميل الاستشهادات",
 	"mobile-frontend-clear-search": "إفراغ",
 	"mobile-frontend-commons-category-view": "صورةلل$1",
 	"mobile-frontend-contribution-summary": "كل التعديلات التي أجريت من قبل {{GENDER:$1|[[User:$1|$1]]}}",
@@ -99,6 +100,7 @@
 	"mobile-frontend-editor-keep-editing": "تابع التحرير",
 	"mobile-frontend-editor-licensing": "عندما تحفظ تعديلاتك أنت توافق ضمناً على طرح مساهمتك بموجب رخصة $1{{PLURAL:$2|license|licenses}}.",
 	"mobile-frontend-editor-licensing-with-terms": "عندما تحفظ تعديلاتك أنت توافق على $1 وعلى طرح مساهمتك بموجب رخصة $2{{PLURAL:$3|license|licenses}}.",
+	"mobile-frontend-editor-terms-link": "[$1 شروط الاستخدام]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|هل أنت متأكد من أنك تريد إنشاء|هل أنت متأكدة من أنك تريدي إنشاء}} صفحة جديدة على {{SITENAME}}؟",
 	"mobile-frontend-editor-newpage-prompt": "هذه الصفحة غير موجودة. لماذا لا تتجرأ وتقوم بإنشائها؟",
 	"mobile-frontend-editor-placeholder": "هذا القسم فارغ. كن أول من يوسّعه!",
@@ -182,7 +184,7 @@
 	"mobile-frontend-last-modified-years": "آخر تعديل  منذ {{PLURAL:$1|أقل من سنة واحدة|سنة واحدة|سنتين|$1 سنوات|$1 سنة}}مرت",
 	"mobile-frontend-lead-image-tutorial-confirm": "ابدأ الرفع",
 	"mobile-frontend-lead-image-tutorial-summary": "تأكد أن صفحتك تساعد في توضيح الصفحة. يجب أن تكون صورة أنشأتها وألا تخرق حقوق النشر.",
-	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|أهلاً بك}}, $1!",
+	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|أهلاً بك}}، $1!",
 	"mobile-frontend-logged-in-toast-notification": "مسجل الدخول بحساب $1.",
 	"mobile-frontend-main-menu": "القائمة الرئيسية",
 	"mobile-frontend-main-menu-back": "ارجع إلى الخلف",
@@ -246,6 +248,7 @@
 	"mobile-frontend-requires-mobile": "هذه الصفحة غير متاحة على الحاسب المكتبي. من فضلك انقر على وصلة نسخة الجوال في أسفل الصفحة.",
 	"mobile-frontend-requires-optin": "هذه الصفحة غير متوفرة إلا إذا وافقت على استخدام وضع البيتا(الوضع التجريبي). الرجاء زيارة [[Special:MobileOptions|صفحة التفضيلات]] لتفعيل الوضع.",
 	"mobile-frontend-requires-title": "الصفحة غير متوفرة",
+	"mobile-frontend-return-to-page": "عد إلى الصفحة",
 	"mobile-frontend-save-error": "حدث خطأ أثناء حفظ التعديلات. الرجاء التأكد من أن ملفات تعريف الإرتباط (كوكيز) مفعلة.",
 	"mobile-frontend-save-settings": "احفظ",
 	"mobile-frontend-saving-exit-page": "لا تزال مساهمتك قيد الحفظ. إذا غادرت فستُفقد تعديلاتك. هل أنت متأكد أنك تريد الخروج؟",
@@ -313,6 +316,7 @@
 	"mobile-frontend-watchlist-signup-action": "سجل لبدء واحدة الآن.",
 	"mobile-frontend-watchlist-view": "اعرض قائمة مراقبتك",
 	"mobile-frontend-user-page-talk": "نقاش",
+	"mobile-frontend-user-page-contributions": "مساهمات",
 	"mobile-frontend-user-page-uploads": "المرفوعات",
 	"mobile-frontend-user-page-no-owner-page-yet": "ليس لديك صفحة المستخدم بعد",
 	"mobile-frontend-user-page-no-page-yet": "لا يوجد صفحة المستخدم للحصول على $1",
@@ -348,5 +352,6 @@
 	"mobile-frontend-loading-message": "جاري التحميل...",
 	"mobile-frontend-panel-ok": "موافق",
 	"mobile-frontend-panel-cancel": "لا شكر",
-	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك"
+	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك",
+	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟"
 }
