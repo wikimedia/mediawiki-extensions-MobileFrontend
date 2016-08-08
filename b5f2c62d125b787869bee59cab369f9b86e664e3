@@ -69,6 +69,24 @@
       "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee9d9f70_f3518366",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-08T18:50:47Z",
+      "side": 1,
+      "message": "When I asked this question I hadn\u0027t tested locally and I just wanted to check we considered the quirks between the two libraries during implementation.\n\nApparently you have so that\u0027s good and it delayed someone merging so we could have that discussion so that\u0027s also good :). (I can also now verify myself).",
+      "parentUuid": "2ebed7c6_c20cbc48",
+      "revId": "b5f2c62d125b787869bee59cab369f9b86e664e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
