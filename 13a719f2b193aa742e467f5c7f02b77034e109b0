@@ -16,6 +16,24 @@
       "revId": "13a719f2b193aa742e467f5c7f02b77034e109b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee9d9f70_ee26ed10",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-09T19:23:11Z",
+      "side": 1,
+      "message": "Why does this not inherit the styles from the same place as the search input?\n\nAn additional rule should not be needed when the styling has the same result.\n\nPlease remove any overrides here and/or make the language search selector more generic.",
+      "parentUuid": "ee9d9f70_44d4434c",
+      "revId": "13a719f2b193aa742e467f5c7f02b77034e109b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
