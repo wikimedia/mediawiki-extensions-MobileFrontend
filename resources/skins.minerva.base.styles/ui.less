@@ -22,9 +22,10 @@ body {
 	border-bottom: 1px solid transparent;
 }
 
-.search-overlay,
-.language-overlay,
-.header {
+.search-box {
+	// FIXME: remove when micro.tap in stable and rule from common-js.less too
+	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
+
 	.search {
 		@searchIconSize: 20px;
 		@searchIconGutter: 6px;
@@ -204,11 +205,6 @@ input.search {
 	&::-webkit-search-results-decoration {
 		display: none;
 	}
-}
-
-// FIXME: remove when micro.tap in stable and rule from common-js.less too
-.search-box {
-	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
 }
 
 .content {
