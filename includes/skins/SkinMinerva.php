@@ -1011,8 +1011,10 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getMenuData() {
 		$data = [
-			'discovery' => $this->getDiscoveryTools(),
-			'personal' => $this->getPersonalTools(),
+			'groups' => [
+				$this->getDiscoveryTools(),
+				$this->getPersonalTools(),
+			],
 			'sitelinks' => $this->getSiteLinks(),
 		];
 		return $data;

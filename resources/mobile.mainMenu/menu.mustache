@@ -1,29 +1,15 @@
 <div class="menu view-border-box">
+	{{#groups}}
 	<ul>
-		{{#discovery}}
-			<li class="{{class}}">
-				{{#components}}
-					<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
-				{{/components}}
-			</li>
-		{{/discovery}}
+		{{! "." means "current context", which allows us to iterate over Plain Old PHP Arrays™. }}
+		{{#.}}
+			{{> menuGroup}}
+		{{/.}}
 	</ul>
-	<ul>
-		{{#personal}}
-			<li class="{{class}}">
-				{{#components}}
-					<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
-				{{/components}}
-			</li>
-		{{/personal}}
-	</ul>
+	{{/groups}}
 	<ul class="hlist">
 		{{#sitelinks}}
-			<li class="{{class}}">
-				{{#components}}
-					<a href="{{href}}" class="{{class}}" data-event-name="{{data-event-name}}">{{text}}</a>
-				{{/components}}
-			</li>
+			{{> menuGroup}}
 		{{/sitelinks}}
 	</ul>
 </div>

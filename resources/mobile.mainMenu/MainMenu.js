@@ -18,6 +18,10 @@
 		isTemplateMode: true,
 		/** @inheritdoc */
 		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
+		/** @inheritdoc */
+		templatePartials: {
+			menuGroup: mw.template.get( 'mobile.mainMenu', 'menuGroup.hogan' )
+		},
 
 		/**
 		 * @cfg {Object} defaults Default options hash.
