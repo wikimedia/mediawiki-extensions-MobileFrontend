@@ -762,12 +762,21 @@
 				"mobile-frontend-editor-viewing-source-page"
 			]
 		},
+		"mobile.search.images": {
+			"class": "ResourceLoaderImageModule",
+			"prefix": "mw-ui",
+			"selector": ".mw-ui-icon-{name}:before",
+			"images": {
+				"clear": "resources/mobile.search.images/clear.svg"
+			}
+		},
 		"mobile.search": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mobile.pagelist.scripts",
 				"mobile.overlays",
-				"mobile.loggingSchemas.mobileWebSearch"
+				"mobile.loggingSchemas.mobileWebSearch",
+				"mobile.search.images"
 			],
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"
