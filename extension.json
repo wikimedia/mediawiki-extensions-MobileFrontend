@@ -372,7 +372,8 @@
 				"profile": "resources/mobile.mainMenu.icons/profile.svg",
 				"random": "resources/mobile.mainMenu.icons/random.svg",
 				"settings": "resources/mobile.mainMenu.icons/settings.svg",
-				"watchlist": "resources/mobile.mainMenu.icons/watchlist.svg"
+				"watchlist": "resources/mobile.mainMenu.icons/watchlist.svg",
+				"contributions": "resources/mobile.mainMenu.icons/contributions.svg"
 			}
 		},
 		"mobile.mainMenu": {
