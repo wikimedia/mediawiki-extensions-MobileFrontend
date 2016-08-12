@@ -185,7 +185,7 @@
 	"mobile-frontend-lead-image-tutorial-confirm": "올리기 시작",
 	"mobile-frontend-lead-image-tutorial-summary": "그림이 문서를 설명하는 데 도움이 될 수 있는지 확인하세요. 저작권을 위반하지 않은 당신이 만든 그림이어야 합니다.",
 	"mobile-frontend-logged-in-homepage-notification": "$1님, {{GENDER:$1|환영합니다}}!",
-	"mobile-frontend-logged-in-toast-notification": "$1 사용자로 로그인했습니다.",
+	"mobile-frontend-logged-in-toast-notification": "$1님으로 로그인되었습니다.",
 	"mobile-frontend-main-menu": "주 메뉴",
 	"mobile-frontend-main-menu-back": "돌아가기",
 	"mobile-frontend-main-menu-account-create": "계정 만들기",
