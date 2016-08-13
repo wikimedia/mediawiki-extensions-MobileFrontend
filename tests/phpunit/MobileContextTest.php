@@ -339,6 +339,20 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * A null title shouldn't result in a fatal exception - bug T142914
+	 */
+	public function testRedirectMobileEnabledPages() {
+		$this->setMwGlobals( [
+			'wgTitle' => null,
+		] );
+		$mobileContext = $this->makeContext();
+		$mobileContext->getRequest()->setVal( 'action', 'history' );
+		$mobileContext->setUseFormat( 'mobile' );
+
+		$this->assertTrue( $mobileContext->shouldDisplayMobileView() );
+	}
+
+	/**
 	 * @dataProvider getMobileActionProvider
 	 * @covers MobileContext::getMobileAction
 	 */

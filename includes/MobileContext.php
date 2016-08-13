@@ -418,9 +418,12 @@ class MobileContext extends ContextSource {
 		}
 
 		if ( $request->getVal( 'action' ) === 'history' &&
+			// IContextSource::getTitle() can be null
+			$title !== null &&
 			// check, if SpecialMobileHistory supports the history action set for this title
 			// content model
-			SpecialMobileHistory::shouldUseSpecialHistory( $title ) ) {
+			SpecialMobileHistory::shouldUseSpecialHistory( $title )
+		) {
 			$values = $this->getRequest()->getValues();
 			// avoid infinite redirect loops
 			unset( $values['action'] );
