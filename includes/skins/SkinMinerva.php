@@ -389,6 +389,22 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Inserts the Contributions menu item into the menu.
+	 *
+	 * @param MenuBuilder $menu
+	 * @param User $user The user to whom the contributions belong
+	 */
+	private function insertContributionsMenuItem( MenuBuilder $menu, User $user ) {
+		$menu->insert( 'contribs' )
+			->addComponent(
+				$this->msg( 'mobile-frontend-main-menu-contributions' )->escaped(),
+				SpecialPage::getTitleFor( 'Contributions', $user->getName() )->getLocalUrl(),
+				MobileUI::iconClass( 'mf-contributions-invert', 'before' ),
+				[ 'data-event-name' => 'contributions' ]
+			);
+	}
+
+	/**
 	 * Inserts the Watchlist menu item into the menu.
 	 *
 	 * @param MenuBuilder $menu
@@ -470,9 +486,14 @@ class SkinMinerva extends SkinTemplate {
 	 * @param MenuBuilder $menu
 	 */
 	protected function buildPersonalTools( MenuBuilder $menu ) {
-		$this->insertWatchlistMenuItem( $menu );
-		$this->insertSettingsMenuItem( $menu );
 		$this->insertLogInOutMenuItem( $menu );
+
+		$user = $this->getUser();
+
+		if ( $user->isLoggedIn() ) {
+			$this->insertWatchlistMenuItem( $menu );
+			$this->insertContributionsMenuItem( $menu, $user );
+		}
 	}
 
 	/**
@@ -507,6 +528,21 @@ class SkinMinerva extends SkinTemplate {
 		} else {
 			$tpl->set( 'language_urls', false );
 		}
+	}
+
+	/**
+	 * Like <code>SkinMinerva#getDiscoveryTools</code> and <code>#getPersonalTools</code>, create
+	 * a group of configuration-related menu items. Currently, only the Settings menu item is in the
+	 * group.
+	 *
+	 * @return array
+	 */
+	private function getConfigurationTools() {
+		$menu = new MenuBuilder();
+
+		$this->insertSettingsMenuItem( $menu );
+
+		return $menu->getEntries();
 	}
 
 	/**
@@ -1043,9 +1079,11 @@ class SkinMinerva extends SkinTemplate {
 			'groups' => [
 				$this->getDiscoveryTools(),
 				$this->getPersonalTools(),
+				$this->getConfigurationTools(),
 			],
 			'sitelinks' => $this->getSiteLinks(),
 		];
+
 		return $data;
 	}
 	/**
