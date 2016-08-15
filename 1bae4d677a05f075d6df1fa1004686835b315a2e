@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea727be_d8a2e1a3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-15T23:14:14Z",
+      "side": 1,
+      "message": "This menu item should not be named \"settings\". There is already such a menu entry in this file. Let\u0027s rename it to \"contributions\".",
+      "range": {
+        "startLine": 398,
+        "startChar": 18,
+        "endLine": 398,
+        "endChar": 26
+      },
+      "revId": "1bae4d677a05f075d6df1fa1004686835b315a2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
