@@ -266,6 +266,17 @@ Whether to show the language switcher button even if no languages are available 
 * Type: `Boolean`
 * Default: `true`
 
+#### $wgMinervaUseFooterV2
+
+A temporary configuration variable to control display of a new footer which impacts styling
+of the last modified bar and with a slight different arrangement of footer icons.
+
+The config variable currently controls whether the styles and template for new footer should be invoked.
+Enabling this in current state will break rendering of footer in stable.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFRemovableClasses
 
 Make the classes, tags and ids stripped from page content configurable. Each

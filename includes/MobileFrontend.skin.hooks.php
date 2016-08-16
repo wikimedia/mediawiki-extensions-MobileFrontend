@@ -205,6 +205,8 @@ JAVASCRIPT;
 	protected static function mobileFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
 		Title $title, WebRequest $req
 	) {
+		$inBeta = $ctx->isBetaGroupMember();
+
 		$url = $sk->getOutput()->getProperty( 'desktopUrl' );
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
@@ -213,18 +215,18 @@ JAVASCRIPT;
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop', true )
 			);
 		}
-		$url = htmlspecialchars(
-			$ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) )
-		);
+		$desktopUrl = $ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
 
 		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->escaped();
 		$mobile = $ctx->msg( 'mobile-frontend-view-mobile' )->escaped();
-
+		$desktopToggler = Html::element( 'a',
+			[ 'id' => "mw-mf-display-toggle", "href" => $desktopUrl ], $desktop );
 		$sitename = self::getSitename( true );
+		$siteheading = Html::rawElement( 'h2', [], $sitename );
 		$switcherHtml = <<<HTML
-<h2>{$sitename}</h2>
+{$siteheading}
 <ul>
-	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
+	<li>{$mobile}</li><li>{$desktopToggler}</li>
 </ul>
 HTML;
 
@@ -243,20 +245,32 @@ HTML;
 		Hooks::run( 'SkinMinervaOutputPageBeforeExec', [ &$sk, &$tpl ], '1.26' );
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
+		$tpl->set( 'footer-site-heading-html', $sitename );
+		$tpl->set( 'desktop-toggle', $desktopToggler );
 		$tpl->set( 'mobile-license', $licenseText );
 		$tpl->set( 'privacy', $sk->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'terms-use', self::getTermsLink( $sk ) );
 
-		$tpl->set( 'footerlinks', [
-			'info' => [
-				'mobile-switcher',
-				'mobile-license',
-			],
-			'places' => [
-				'terms-use',
-				'privacy',
-			],
-		] );
+		$places = [
+			'terms-use',
+			'privacy',
+		];
+
+		if ( $inBeta ) {
+			$places[] = 'desktop-toggle';
+			$footerlinks = [
+				'places' => $places,
+			];
+		} else {
+			$footerlinks = [
+				'info' => [
+					'mobile-switcher',
+					'mobile-license',
+				],
+				'places' => $places,
+			];
+		}
+		$tpl->set( 'footerlinks', $footerlinks );
 		return $tpl;
 	}
 

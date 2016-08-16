@@ -198,6 +198,26 @@
 				"language-switcher": "resources/skins.minerva.icons.images/languageSwitcher.svg"
 			}
 		},
+		"skins.minerva.icons.images.variants": {
+			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
+			"class": "ResourceLoaderImageModule",
+			"prefix": "mw-ui",
+			"variants": {
+				"gray": {
+					"color": "#BBB",
+					"global": true
+				},
+				"invert": {
+					"color": "#FFF",
+					"global": true
+				}
+			},
+			"images": {
+				"clock": "resources/skins.minerva.icons.images.variants/clock.svg",
+				"arrow": "resources/skins.minerva.icons.images.variants/arrow.svg"
+			}
+		},
 		"mobile.overlay.images": {
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
@@ -242,14 +262,6 @@
 				"citation": "resources/mobile.references.images/cite.svg"
 			}
 		},
-		"mobile.toggle.images": {
-			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
-			"selector": ".mw-ui-icon-{name}:before",
-			"images": {
-				"arrow": "resources/mobile.toggle.images/arrow.svg"
-			}
-		},
 		"skins.minerva.icons.images.scripts": {
 			"class": "ResourceLoaderImageModule",
 			"prefix": "mw-ui",
@@ -271,6 +283,16 @@
 			"position": "top",
 			"styles": [
 				"resources/skins.minerva.mainPage.beta.styles/common.less"
+			]
+		},
+		"skins.minerva.footerV2.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"position": "top",
+			"styles": [
+				"resources/skins.minerva.footerV2.styles/common.less"
 			]
 		},
 		"skins.minerva.mainPage.styles": {
@@ -1113,7 +1135,7 @@
 			],
 			"dependencies": [
 				"mobile.settings",
-				"mobile.toggle.images",
+				"skins.minerva.icons.images.variants",
 				"mobile.startup"
 			],
 			"styles": [
@@ -2048,6 +2070,7 @@
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
 		"MinervaBottomLanguageButton": true,
+		"MinervaUseFooterV2": false,
 		"MinervaUsePageActionBarV2": false,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [

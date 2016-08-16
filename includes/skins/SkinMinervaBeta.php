@@ -18,6 +18,14 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 
 	/**
+	 * Whether the new footer is to be used
+	 * @return boolean
+	 */
+	public function isFooterV2() {
+		return true;
+	}
+
+	/**
 	 * The "switch-language" is always allowed in MFBeta.
 	 *
 	 * @inheritdoc
@@ -98,6 +106,10 @@ class SkinMinervaBeta extends SkinMinerva {
 			$styles[] = 'skins.minerva.mainPage.beta.styles';
 		}
 		$styles[] = 'skins.minerva.content.styles.beta';
+		$styles[] = 'skins.minerva.icons.images.variants';
+		if ( self::isFooterV2() ) {
+			$styles[] = 'skins.minerva.footerV2.styles';
+		}
 
 		return $styles;
 	}

@@ -1,0 +1,71 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
+.feature-footer-v2 footer {
+	margin-top: 32px;
+	overflow: auto;
+	background-color: @footerBgColor;
+
+	.last-modified-bar {
+		border-top: solid 1px @footerBorderColor;
+		border-bottom: solid 1px @footerBorderColor;
+		background-color: @lastModifiedBarBgColor;
+		display: block;
+		color: @lastModifiedBarTextColor;
+		line-height: 1.5em;
+		transition: background-color 0.2s ease, color 0.2s ease;
+
+		&.active {
+			background-color: @lastModifiedBarActiveBackgroundColor;
+			color: #fff;
+		}
+	}
+
+	.last-modifier-tagline {
+		display: block;
+		width: 100%;
+		font-size: 0.9em;
+		padding: 7px 2em 7px 0;
+	}
+
+	.indicator {
+		position: absolute;
+		right: -1em;
+
+		&:before {
+			transform: rotateZ( -90deg );
+		}
+	}
+
+	> .post-content {
+		overflow: auto;
+		margin-top: 42px;
+
+		> * {
+			font-size: 0.875em;
+			margin-bottom: 9px;
+		}
+
+		> h2 {
+			border-bottom: solid 1px @footerBorderColor;
+			padding-bottom: 10px;
+			margin-top: 42px;
+			font-size: 1em;
+			font-weight: bold;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media ( min-width: @deviceWidthTablet ) {
+	.feature-footer-v2 footer {
+		.last-modified-bar {
+			padding-left: 0;
+			padding-right: 0;
+			font-size: 1em;
+		}
+	}
+}
