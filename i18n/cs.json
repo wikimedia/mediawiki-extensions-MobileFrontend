@@ -14,7 +14,8 @@
 			"Matěj Suchánek",
 			"Jkjk",
 			"Cvanca",
-			"Dvorapa"
+			"Dvorapa",
+			"Marek Pavlica"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Zda uživatel edituje prostřednictvím mobilního rozhraní",
@@ -190,6 +191,7 @@
 	"mobile-frontend-main-menu-settings": "Nastavení",
 	"mobile-frontend-main-menu-settings-heading": "Nastavení",
 	"mobile-frontend-main-menu-watchlist": "Sledované",
+	"mobile-frontend-main-menu-contributions": "Příspěvky",
 	"mobile-frontend-media-details": "Podrobnosti",
 	"mobile-frontend-media-license-link": "Informace o licenci",
 	"mobile-frontend-meta-data-issues": "Nedostatky stránky",
