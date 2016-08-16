@@ -3,8 +3,8 @@
 
 	QUnit.module( 'MobileFrontend InfiniteScroll', {
 		teardown: function () {
-			// Remove all scroll events after each test
-			$( window ).off( 'scroll' );
+			// Leave window at the top
+			window.scrollTo( 0, 0 );
 		}
 	} );
 
@@ -18,8 +18,9 @@
 		assert.strictEqual( is2.threshold, 100,
 			'Without a threshold we get a default' );
 
-		// Scrolling has been bound to the window
-		$( window ).trigger( 'scroll' );
+		// Scrolling has been bound to the global mobileFrontend handler
+		M.emit( 'scroll:throttled' );
+
 		assert.ok( scrolledSpy.calledTwice,
 			'Scrolling has been bound and is handler is called on scroll' );
 	} );
@@ -44,6 +45,7 @@
 
 		// Scroll to the bottom of the body
 		window.scrollTo( 0, $( 'body' ).offset().top + $( 'body' ).outerHeight() );
+		M.emit( 'scroll:throttled' );
 	} );
 
 	QUnit.test( 'doesn\'t emit when disabled', 1, function ( assert ) {
@@ -54,6 +56,7 @@
 		// Scroll to top and bottom of the body
 		window.scrollTo( 0, 0 );
 		window.scrollTo( 0, $( 'body' ).offset().top + $( 'body' ).outerHeight() );
+		M.emit( 'scroll:throttled' );
 		assert.strictEqual( emitSpy.called, false, 'emit should not be called' );
 	} );
 

@@ -69,10 +69,7 @@
 		 * @private
 		 */
 		_bindScroll: function () {
-			// FIXME: Consider using setInterval instead or some sort of
-			// dethrottling/debouncing to avoid performance degradation
-			// e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
-			$( window ).on( 'scroll', $.proxy( this, '_onScroll' ) );
+			M.on( 'scroll:throttled', $.proxy( this, '_onScroll' ) );
 		},
 		/**
 		 * Scroll handler. Triggers load event when near the end of the container.
