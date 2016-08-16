@@ -7,7 +7,8 @@
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
-		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
+		isBeta = M.require( 'mobile.context/context' ).isBetaGroupMember();
 
 	/**
 	 * Overlay displaying search results
@@ -82,7 +83,8 @@
 					href: feedbackLink
 				} ).options,
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
-			}
+			},
+			isBeta: isBeta
 		} ),
 		/**
 		 * @inheritdoc
@@ -232,10 +234,8 @@
 
 		/** @inheritdoc */
 		postRender: function () {
-			var self = this;
-
-			// No search happening by default
-			this.$( '.spinner' ).hide();
+			var self = this,
+				timer;
 
 			Overlay.prototype.postRender.call( this );
 
@@ -243,6 +243,32 @@
 			this.$clear = this.$( '.clear' );
 			this.$searchContent = this.$( '.search-content' ).hide();
 			this.$searchFeedback = this.$( '.search-feedback' ).hide();
+			this.$resultContainer = this.$( '.results' );
+
+			if ( isBeta ) {
+				// Show a spinner on top of search results
+				this.$spinner = this.$( '.spinner-container' );
+				M.on( 'search-start', function ( searchData ) {
+					timer = setTimeout( function () {
+						self.$spinner.show();
+					}, 2000 - searchData.delay );
+				} );
+				M.on( 'search-results', function () {
+					self.$spinner.hide();
+					clearTimeout( timer );
+				} );
+			} else {
+				// Show a spinner in place search results
+				this.$spinner = this.$( '.spinner' );
+				M.on( 'search-start', function () {
+					self.resetSearch();
+					self.$spinner.show();
+				} );
+				M.on( 'search-results', function () {
+					self.$searchFeedback.show();
+					self.$spinner.hide();
+				} );
+			}
 
 			// Hide the clear button if the search input is empty
 			if ( self.$input.val() === '' ) {
@@ -296,7 +322,7 @@
 				api = this.api,
 				pageList,
 				query = this.$input.val(),
-				$resultContainer = this.$( '.results' );
+				delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
 
 			// it seems the input event can be fired when virtual keyboard is closed
 			// (Chrome for Android)
@@ -305,43 +331,39 @@
 					self._pendingQuery.abort();
 				}
 				clearTimeout( this.timer );
-				self.$searchContent.hide();
-				self.$searchFeedback.hide();
-				$resultContainer.empty();
 
 				if ( query.length ) {
-					this.$( '.spinner' ).show();
-
 					this.timer = setTimeout( function () {
-
-						// FIXME: The query might be useful here, bit it ain't necessary right now.
 						/**
 						 * @event search-start Fired immediately before the search API request is
 						 *  sent
+						 * @property {Object} data related to the current search
 						 */
-						M.emit( 'search-start' );
+						M.emit( 'search-start', {
+							query: query,
+							delay: delay
+						} );
 
 						self._pendingQuery = self.gateway.search( query ).done( function ( data ) {
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {
 								self.$el.toggleClass( 'no-results', data.results.length === 0 );
-								self.$searchFeedback.show();
 								self.$searchContent
 									.show()
 									.find( 'p' )
 									.hide()
 									.filter( data.results.length ? '.with-results' : '.without-results' )
 									.show();
-								self.$( '.spinner' ).hide();
+
 								pageList = new WatchstarPageList( {
 									api: api,
 									funnel: 'search',
 									pages: data.results,
-									el: $resultContainer
+									el: self.$resultContainer
 								} );
 
-								self.$results = $resultContainer.find( 'li' );
+								self.$results = self.$resultContainer.find( 'li' );
 
 								/**
 								 * @event search-results Fired when search API returns results
@@ -354,13 +376,24 @@
 								} );
 							}
 						} );
-					}, this.gateway.isCached( query ) ? 0 : SEARCH_DELAY );
+					}, delay );
 				} else {
-					self.$( '.spinner' ).hide();
+					self.resetSearch();
 				}
 
 				this.lastQuery = query;
 			}
+		},
+		/**
+		 * Clear results
+		 *
+		 * @private
+		 */
+		resetSearch: function () {
+			this.$spinner.hide();
+			this.$searchContent.hide();
+			this.$searchFeedback.hide();
+			this.$resultContainer.empty();
 		}
 	} );
 
