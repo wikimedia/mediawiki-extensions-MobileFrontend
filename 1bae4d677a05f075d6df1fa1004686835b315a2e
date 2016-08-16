@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e89af39_53225c51",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-08-16T12:29:46Z",
+      "side": 1,
+      "message": "Smaller Wikipedias? If so, could you point me to the Varnish VCL or documentation. The last I read, the Varnish TTL //cap// was 7 days. If I\u0027ve got it wrong, then I need to know.",
+      "revId": "1bae4d677a05f075d6df1fa1004686835b315a2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea727be_d8a2e1a3",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -19,6 +36,24 @@
         "endLine": 398,
         "endChar": 26
       },
+      "revId": "1bae4d677a05f075d6df1fa1004686835b315a2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_d3fe4cab",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-08-16T12:29:46Z",
+      "side": 1,
+      "message": "Mibad. Nice catch.",
+      "parentUuid": "aea727be_d8a2e1a3",
       "revId": "1bae4d677a05f075d6df1fa1004686835b315a2e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
