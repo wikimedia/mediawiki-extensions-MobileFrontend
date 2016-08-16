@@ -561,7 +561,8 @@ Whether to append a trademark notice to the sitename in the page footer.
 * If set to `'registered'` adds a ® to the sitename.
 * If set to `false`, adds nothing (the default).
 
-You can also edit the `mobile-frontend-footer-sitename` message directly.
+Alternatively, you can also edit the `mobile-frontend-footer-sitename`
+message directly.
 
 * Type: `Boolean`
 * Default: `false`

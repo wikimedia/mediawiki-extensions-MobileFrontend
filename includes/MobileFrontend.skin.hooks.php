@@ -292,7 +292,7 @@ HTML;
 		if ( isset( $customLogos['copyright'] ) ) {
 			$attributes =  [
 				'src' => $customLogos['copyright'],
-				'alt' => $footerSitename . $suffix,
+				'alt' => $footerSitename,
 			];
 			if ( isset( $customLogos['copyright-height'] ) ) {
 				$attributes['height'] = $customLogos['copyright-height'];
