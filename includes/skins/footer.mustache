@@ -1,0 +1,12 @@
+{{#footer}}
+<div id="footer" class="post-content">
+{{#lists}}
+<ul class="footer-{{name}}">
+	{{! "." means "current context", which allows us to iterate over Plain Old PHP Arrays™. }}
+	{{#items}}
+		<li id="footer-{{category}}-{{name}}">{{{linkhtml}}}</li>
+	{{/items}}
+</ul>
+{{/lists}}
+</div>
+{{/footer}}

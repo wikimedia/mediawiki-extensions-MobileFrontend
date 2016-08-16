@@ -66,12 +66,33 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Returns footer links
-	 * @param string $option
+	 * Returns template data for footer
+	 *
+	 * @param array $data Data used to build the page
 	 * @return array
 	 */
-	public function getFooterLinks( $option = null ) {
-		return $this->data['footerlinks'];
+	protected function getFooterTemplateData( $data ) {
+		$groups = [];
+
+		foreach ( $data['footerlinks'] as $category => $links ) {
+			$items = [];
+			foreach ( $links as $link ) {
+				if ( isset( $this->data[$link] ) && $data[$link] !== '' ) {
+					$items[] = [
+						'category' => $category,
+						'name' => $link,
+						'linkhtml' => $data[$link],
+					];
+				}
+			}
+			$groups[] = [
+				'name' => $category,
+				'items' => $items,
+			];
+		}
+		return [
+			'lists' => $groups,
+		];
 	}
 
 	/**
@@ -88,27 +109,6 @@ class MinervaTemplate extends BaseTemplate {
 			'placeholder' => $this->getMsg( 'mobile-frontend-placeholder' )->text(),
 		];
 		return $searchBox;
-	}
-
-	/**
-	 * Get the HTML for rendering the footer elements
-	 * @param array $data Data used to build the footer
-	 * @return string html
-	 */
-	protected function getFooterHtml( $data ) {
-		$footer = '<div id="footer" class="post-content">';
-		foreach ( $this->getFooterLinks() as $category => $links ) {
-			$footer .= Html::openElement( 'ul', [ 'class' => 'footer-' . $category ] );
-			foreach ( $links as $link ) {
-				if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
-					$footer .= Html::rawElement( 'li',
-						[ 'id' => "footer-{$category}-{$link}" ], $data[$link] );
-				}
-			}
-			$footer .= '</ul>';
-		}
-		$footer .= '</div>';
-		return $footer;
 	}
 
 	/**
@@ -323,7 +323,7 @@ class MinervaTemplate extends BaseTemplate {
 			'headerhtml' => $this->getHeaderHtml( $data ),
 			'mainmenuhtml' => $this->getMainMenuHtml( $data ),
 			'contenthtml' => $this->getContentWrapperHtml( $data ),
-			'footerhtml' => $this->getFooterHtml( $data ),
+			'footer' => $this->getFooterTemplateData( $data ),
 		];
 		// begin rendering
 		echo $templateParser->processTemplate( 'minerva', $templateData );
