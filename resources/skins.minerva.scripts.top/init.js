@@ -15,21 +15,6 @@
 	function createMainMenu() {
 		var options = mw.config.get( 'wgMinervaMenuData' );
 
-		// [T117970] Since `wgMinervaMenuData` is added to the page on the server, rather than via the
-		// `ResourceLoaderGetConfigVars` hook, it may be stale, whereas the template that it's passed to
-		// won't be.
-		//
-		// FIXME: Remove this shim when the cache clears.
-		if ( !options.groups ) {
-			options.groups = [
-				options.discovery,
-				options.personal
-			];
-
-			delete options.discovery;
-			delete options.personal;
-		}
-
 		options.activator = '.header .main-menu-button';
 
 		return new MainMenu( options );
@@ -43,7 +28,5 @@
 		}
 	} );
 
-	M.define( 'skins.minerva.scripts.top/mainMenu', mainMenu )
-		// Used by Gather
-		.deprecate( 'skins.minerva.scripts/mainMenu' );
+	M.define( 'skins.minerva.scripts.top/mainMenu', mainMenu );
 }( mw.mobileFrontend, jQuery ) );
