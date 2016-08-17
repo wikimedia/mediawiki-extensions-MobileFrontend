@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_e060bfce",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-17T19:10:38Z",
+      "side": 1,
+      "message": "Would you like to switch instances of `$this-\u003edata` with `$data`?",
+      "range": {
+        "startLine": 77,
+        "startChar": 12,
+        "endLine": 77,
+        "endChar": 23
+      },
+      "revId": "209ee5c61b071228506b2d9877b43b80edaab8eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
