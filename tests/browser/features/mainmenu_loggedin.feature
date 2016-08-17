@@ -5,6 +5,7 @@ Feature: Menus open correct page for anonymous users
     Given I am logged into the mobile website
       And I am on the "Main Page" page
 
+  @integration
   Scenario: Check links in menu
     When I click on the main navigation button
     Then I should see a link to the disclaimer
@@ -14,6 +15,7 @@ Feature: Menus open correct page for anonymous users
       And I should see a link to "Home" in the main navigation menu
       And I should see a link to "Random" in the main navigation menu
       And I should see a link to "Settings" in the main navigation menu
+      And I should see a link to "Contributions" in the main navigation menu
       And I should see a link to "Watchlist" in the main navigation menu
 
   @extension-geodata

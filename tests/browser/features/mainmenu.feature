@@ -13,7 +13,6 @@ Feature: Menus open correct page for anonymous users
       And I should see a link to "Home" in the main navigation menu
       And I should see a link to "Random" in the main navigation menu
       And I should see a link to "Settings" in the main navigation menu
-      And I should see a link to "Watchlist" in the main navigation menu
       And I should see a link to "Log in" in the main navigation menu
 
   @extension-geodata
