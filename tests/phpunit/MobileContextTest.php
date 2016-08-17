@@ -1,9 +1,22 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @group MobileFrontend
  */
 class MobileContextTest extends MediaWikiTestCase {
+
+	/**
+	 * @var Config
+	 */
+	private $config;
+
+	/**
+	 * @var IContextSource
+	 */
+	private $baseContext;
+
 	/**
 	 * PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	 * protected and private methods directly through the Reflection API
@@ -22,12 +35,16 @@ class MobileContextTest extends MediaWikiTestCase {
 	protected function setUp() {
 		parent::setUp();
 		// Permit no access to the singleton
-		MobileContext::setInstance( new BogusMobileContext() );
+		MobileContext::setInstanceForTesting( new BogusMobileContext() );
+
+		$this->config = new GlobalVarConfig();
+		$this->baseContext = RequestContext::getMain();
 	}
 
 	protected function tearDown() {
-		MobileContext::setInstance( null ); // refresh it
 		parent::tearDown();
+
+		MobileContext::resetServiceForTesting();
 	}
 
 	/**
@@ -48,11 +65,13 @@ class MobileContextTest extends MediaWikiTestCase {
 		$request->setRequestURL( $url );
 		$request->setCookies( $cookies, '' );
 
-		$context = new DerivativeContext( RequestContext::getMain() );
+		$context = new DerivativeContext( $this->baseContext );
 		$context->setRequest( $request );
 		$context->setOutput( new OutputPage( $context ) );
-		$instance = unserialize( 'O:13:"MobileContext":0:{}' );
+
+		$instance = new MobileContext( $context, $this->config );
 		$instance->setContext( $context );
+
 		return $instance;
 	}
 
@@ -653,10 +672,25 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 		$req->setRequestURL( '/w/index.php?title=Special:Search&mobileaction=toggle_view_mobile' );
 		RequestContext::getMain()->setRequest( $req );
-		MobileContext::setInstance( null );
+		MobileContext::resetServiceForTesting();
 		$this->setMwGlobals( 'wgTitle', null );
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
+	}
+
+	public function test_singleton_is_constructed_by_MediaWikiServices() {
+		MobileContext::resetServiceForTesting();
+
+		$expectedInstance = MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.MobileContext' );
+
+		$this->assertSame( $expectedInstance, MobileContext::singleton() );
+	}
+
+	public function test_getMFConfig_returns_the_config() {
+		$context = $this->makeContext();
+
+		$this->assertSame( $this->config, $context->getMFConfig() );
 	}
 }
 

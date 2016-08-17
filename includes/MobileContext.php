@@ -99,7 +99,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * @var Config MobileFrontend's config object
 	 */
-	private $configObj;
+	private $config;
 	/**
 	 * @var String Domain to use for the stopMobileRedirect cookie
 	 */
@@ -110,31 +110,57 @@ class MobileContext extends ContextSource {
 	private $mobileUrlTemplate = false;
 
 	/**
-	 * Returns the actual MobileContext Instance or create a new if no exists
-	 * @return MobileContext
+	 * Gets the singleton instance.
+	 *
+	 * @deprecated Removing this method is one of the goals
+	 *  [T143189][https://phabricator.wikimedia.org/T143875].
+	 * @deprecated If you're creating a new class, then it should accept an instance of
+	 * `MobileContext` at construction time.
+	 * @deprecated If you're adding code to a pre-existing class, then first consider if the class can
+	 *  be split apart so that you can do the above. If you're confident that this can't be done,
+	 *  then you can use this method.
+	 *
+	 * @return {MobileContext}
 	 */
 	public static function singleton() {
 		if ( !self::$instance ) {
-			self::$instance = new MobileContext( RequestContext::getMain() );
+			self::$instance =
+				MediaWikiServices::getInstance()->getService( 'MobileFrontend.MobileContext' );
 		}
+
 		return self::$instance;
 	}
 
 	/**
-	 * Set $this->instance to the given instance of MobileContext or null
-	 * @param MobileContext|null $instance MobileContext instance or null to set
-	 * @return MobileContext|null
+	 * Overrides the singleton instance.
+	 *
+	 * @deprecated See `MobileContext::singleton`.
+	 *
+	 * @warning This method should only accept instances of `MobileContext`. The `BogusMobileContext`
+	 *  class is used in the `MobileContextTest` test suite and will be removed.
+	 *
+	 * @param {MobileContext} $instance
 	 */
-	public static function setInstance( /* MobileContext|null */ $instance ) {
+	public static function setInstanceForTesting( $instance ) {
 		self::$instance = $instance;
 	}
 
 	/**
-	 * Set the IontextSource Object
-	 * @param IContextSource $context The IContextSource Object has to set
+	 * Resets the `MobileFrontend.MobileContext` service and singleton instance.
+	 *
+	 * @deprecated See `MobileContext::singleton`.
+	 *
+	 * @throws MWException If called outside the MediaWiki PHPUnit test suite
+	 *  (see `MediaWikiServices#resetServiceForTesting`).
 	 */
-	protected function __construct( IContextSource $context ) {
+	public static function resetServiceForTesting() {
+		self::$instance = null;
+		MediaWikiServices::getInstance()->resetServiceForTesting( 'MobileFrontend.MobileContext' );
+	}
+
+	public function __construct( IContextSource $context, Config $config ) {
 		$this->setContext( $context );
+		$this->config = $config;
 	}
 
 	/**
@@ -142,7 +168,7 @@ class MobileContext extends ContextSource {
 	 * @return Config
 	 */
 	public function getMFConfig() {
-		return MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		return $this->config;
 	}
 
 	/**
