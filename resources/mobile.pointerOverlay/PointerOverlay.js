@@ -136,8 +136,10 @@
 
 			// Since the positioning of this overlay is dependent on the current viewport it makes sense to
 			// use a global window event so that on resizes it is correctly positioned.
-			$( window )
-				.on( 'resize', $.debounce( 100, $.proxy( this, 'refreshPointerArrow', this.options.target ) ) );
+			M.on(
+				'resize',
+				$.proxy( this, 'refreshPointerArrow', this.options.target )
+			);
 		}
 	} );
 

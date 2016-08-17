@@ -175,7 +175,7 @@
 				self.adjustDetails();
 			} );
 
-			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
+			M.on( 'resize:throttled', $.proxy( this, '_positionImage' ) );
 		},
 
 		/**
