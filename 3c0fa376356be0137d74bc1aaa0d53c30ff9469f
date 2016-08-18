@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_e4e8c9b1",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-18T21:56:50Z",
+      "side": 1,
+      "message": "Do you mean it\u0027s inherited from Overlay? I didn\u0027t see it there.",
+      "parentUuid": "6e89af39_3059305e",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_f05ec847",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_c4faed72",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-18T21:56:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e89af39_f05ec847",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_9048248e",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-08-18T20:06:15Z",
       "side": 1,
       "message": "Rather than have multiple isBeta checks I think it would  make sense to have a clearSpinner method given there are 3 lines similar to this.",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_a405e17e",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-18T21:56:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e89af39_9048248e",
       "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
