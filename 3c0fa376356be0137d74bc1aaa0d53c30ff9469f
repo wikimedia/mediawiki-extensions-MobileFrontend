@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_3059305e",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-18T20:06:15Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed. It\u0027s already global to the module",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_f05ec847",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-18T20:06:15Z",
+      "side": 1,
+      "message": "Could this be folded into a method resetSearch and used below?",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_9048248e",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-18T20:06:15Z",
+      "side": 1,
+      "message": "Rather than have multiple isBeta checks I think it would  make sense to have a clearSpinner method given there are 3 lines similar to this.",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_703ad8e5",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-18T20:06:15Z",
+      "side": 1,
+      "message": "Should we use a variable for this?",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
