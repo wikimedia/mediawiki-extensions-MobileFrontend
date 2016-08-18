@@ -121,6 +121,24 @@
       "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_64ebf9a0",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-18T21:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e89af39_703ad8e5",
+      "revId": "3c0fa376356be0137d74bc1aaa0d53c30ff9469f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
