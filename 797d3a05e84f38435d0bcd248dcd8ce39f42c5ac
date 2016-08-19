@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_9334a948",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-19T17:03:32Z",
+      "side": 1,
+      "message": "why is there a hideSpinner but not a showSpinner ? This feels strange and we can probably clean this up a little more.",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_1340b9a7",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-19T17:03:32Z",
+      "side": 1,
+      "message": "It feels like this could be moved into a initResults function.",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_d33e3126",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-19T17:03:32Z",
+      "side": 1,
+      "message": "Can the isBeta logic be moved into resetSearch ? It\u0027s only ever called in beta.",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_b339a540",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-19T17:03:32Z",
+      "side": 1,
+      "message": "This is a strange function name considering in beta mode it doesn\u0027t actually hide the spinner.\n\nMaybe initResults would be a good name since this seems to be invoked whenever results are shown. This would also be more consistent in naming with resetSearch",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
