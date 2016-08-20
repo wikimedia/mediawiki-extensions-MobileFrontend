@@ -1,12 +1,7 @@
 ( function ( M, $ ) {
 	var SearchOverlay, SearchGateway,
 		router = require( 'mediawiki.router' ),
-		browser = M.require( 'mobile.browser/browser' ),
-		moduleConfig = {
-			modules: [ 'mobile.search.api', 'mobile.search' ],
-			api: 'mobile.search.api/SearchGateway',
-			overlay: 'mobile.search/SearchOverlay'
-		};
+		browser = M.require( 'mobile.browser/browser' );
 
 	/**
 	 * Reveal the search overlay
@@ -21,9 +16,9 @@
 
 		ev.preventDefault();
 
-		mw.loader.using( moduleConfig.modules ).done( function () {
-			SearchGateway = M.require( moduleConfig.api );
-			SearchOverlay = M.require( moduleConfig.overlay );
+		mw.loader.using( [ 'mobile.search.api', 'mobile.search' ] ).done( function () {
+			SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
+			SearchOverlay = M.require( 'mobile.search/SearchOverlay' );
 
 			new SearchOverlay( {
 				router: router,
