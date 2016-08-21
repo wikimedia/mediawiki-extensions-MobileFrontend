@@ -4,7 +4,8 @@
 			"Waihorace",
 			"LNDDYL",
 			"Yueman",
-			"Ktchankt"
+			"Ktchankt",
+			"Obonggi"
 		]
 	},
 	"mobile-frontend-account-create-submit": "開戶口",
@@ -56,6 +57,7 @@
 	"mobile-frontend-main-menu-settings": "設定",
 	"mobile-frontend-main-menu-settings-heading": "設定",
 	"mobile-frontend-main-menu-watchlist": "監視清單",
+	"mobile-frontend-main-menu-contributions": "貢獻",
 	"mobile-frontend-media-details": "細節",
 	"mobile-frontend-meta-data-issues-header-talk": "關於呢版",
 	"mobile-frontend-missing-image": "圖",
