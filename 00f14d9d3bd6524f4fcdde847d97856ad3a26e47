@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_2e361ae5",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T20:34:08Z",
+      "side": 1,
+      "message": "I meant \u0027mw-ui-icon-small\u0027.",
+      "parentUuid": "6e89af39_93b81b76",
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_1a9fe056",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 6
