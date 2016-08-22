@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_f3631f39",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T20:26:31Z",
+      "side": 1,
+      "message": "because we don\u0027t have any linting and I copied it from mobile.overlay.images ?",
+      "parentUuid": "6e89af39_1a80c0f8",
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_3a7d7c18",
         "filename": "extension.json",
         "patchSetId": 6
@@ -36,6 +54,24 @@
         "endLine": 288,
         "endChar": 25
       },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_b3c8b726",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T20:26:31Z",
+      "side": 1,
+      "message": "Done. I had to wrestle with OSX and case insensitivity. Thank you :P",
+      "parentUuid": "6e89af39_3a7d7c18",
       "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_d3cd4336",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2073,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T20:26:31Z",
+      "side": 1,
+      "message": "Yes. Unlike MinervaUsePageActionBarV2 I have made clear this is a temporary configuration variable. It\u0027s only really practical for us during tis transition - not third parties.",
+      "parentUuid": "6e89af39_5a7a4820",
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_fa9a1465",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 6
@@ -82,6 +136,24 @@
         "endLine": 155,
         "endChar": 47
       },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_93b81b76",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T20:26:31Z",
+      "side": 1,
+      "message": "Yes. It\u0027s a variant of the \u0027arrow\u0027 icon used by the toggle code.",
+      "parentUuid": "6e89af39_fa9a1465",
       "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
