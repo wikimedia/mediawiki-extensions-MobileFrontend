@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_1a80c0f8",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T12:56:13Z",
+      "side": 1,
+      "message": "Why is this color not shortened to #FFF?",
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_3a7d7c18",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T12:56:13Z",
+      "side": 1,
+      "message": "Can we use capitalize the \u0027v\u0027: footerV2 for consistency? (here and in the folder name)",
+      "range": {
+        "startLine": 288,
+        "startChar": 17,
+        "endLine": 288,
+        "endChar": 25
+      },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_5a7a4820",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2073,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T12:56:13Z",
+      "side": 1,
+      "message": "Can we document this in the README file?",
+      "range": {
+        "startLine": 2073,
+        "startChar": 3,
+        "endLine": 2073,
+        "endChar": 21
+      },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_fa9a1465",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T12:56:13Z",
+      "side": 1,
+      "message": "Has this class name been created yet?",
+      "range": {
+        "startLine": 155,
+        "startChar": 31,
+        "endLine": 155,
+        "endChar": 47
+      },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_1a9fe056",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-22T12:56:13Z",
+      "side": 1,
+      "message": "Should this module not be added if the feature is enabled?",
+      "range": {
+        "startLine": 102,
+        "startChar": 2,
+        "endLine": 102,
+        "endChar": 46
+      },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
