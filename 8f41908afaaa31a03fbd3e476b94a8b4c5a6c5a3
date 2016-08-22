@@ -16,6 +16,24 @@
       "revId": "8f41908afaaa31a03fbd3e476b94a8b4c5a6c5a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_336e872b",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T19:48:25Z",
+      "side": 1,
+      "message": "This will stay here forever and no it would be irresponsible to break caching. Everything will be cached as normal.\n\nAll this line does in invalidates the existing templates in memory (based on file contents).\n\nVersioning is a good thing - and we can use it to push out future changes.",
+      "parentUuid": "6e89af39_e9841ab8",
+      "revId": "8f41908afaaa31a03fbd3e476b94a8b4c5a6c5a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
