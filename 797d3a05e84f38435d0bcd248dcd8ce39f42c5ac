@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e89af39_2e645ae1",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "Are you intentional overriding this.$spinner defintion above ? If so please rearrange when you define these variables.",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_8e5b8e25",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "This is already called on L357",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_9334a948",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 4
@@ -31,6 +65,24 @@
       "side": 1,
       "message": "Because this is the only place it\u0027s being used.",
       "parentUuid": "6e89af39_9334a948",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_8e446e4c",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "Exactly. This flags that the name of hideSpinner is bad to me.",
+      "parentUuid": "6e89af39_258c8237",
       "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -72,6 +124,41 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_ee1c126d",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "This is a synchronous function. Ordering shouldn\u0027t matter.\n\nIf we can group multiple method calls into a single method call that\u0027s great.\nRight now a hideSpinner method isn\u0027t so useful.",
+      "parentUuid": "6e89af39_4580aef9",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_ce759694",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "Use hideSpinner (if hideSpinner exists)",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_d33e3126",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 4
@@ -107,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_6ebd8216",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "On L325\nYou run resetSearch if the user is in stable.\nThen here, if !query.length and it is beta you run resetSearch.\n\nThus it seems tied to query.length not beta status.",
+      "parentUuid": "6e89af39_a5779234",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_b339a540",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 4
@@ -136,6 +241,24 @@
       "side": 1,
       "message": "Maybe I should change it to hideSpinnerInStable? How does initResults describe hiding the spinner better than my suggestion?",
       "parentUuid": "6e89af39_b339a540",
+      "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_eef7b2f0",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-22T21:07:41Z",
+      "side": 1,
+      "message": "This seems worse.\nWhat I\u0027m trying to get at is that SearchOverlay is a very large file and for someone (myself) who\u0027s not looked at it in a while I\u0027m lost what\u0027s happening here. performSearch is a huge function and seems to transition between various states.\n\nI see a startSearch, resetSearch and completeSearch state.\nIt\u0027s okay if their behaviour differs in beta/stable but it sems these three functions could replace the need for a hideSpinner.\n\nHave a look at https://gerrit.wikimedia.org/r/306058 to see how I\u0027m thinking.",
+      "parentUuid": "6e89af39_459fce55",
       "revId": "797d3a05e84f38435d0bcd248dcd8ce39f42c5ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
