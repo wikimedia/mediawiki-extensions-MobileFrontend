@@ -14,3 +14,4 @@ composer.phar
 .DS_Store
 composer.lock
 tests/report
+.bundle/
