@@ -43,6 +43,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_749aacbe",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T22:31:09Z",
+      "side": 1,
+      "message": "Then let\u0027s remove $url as it\u0027s not being used anywhere.",
+      "parentUuid": "6e89af39_d907191e",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_f9b85576",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 12
@@ -72,6 +90,24 @@
       "side": 1,
       "message": "I played around with doing this but there was no pleasant way to do this.\nI figured since it\u0027s temporary and essentially a one liner this was the cleanest approach but I\u0027m open to alternative ideas.",
       "parentUuid": "6e89af39_f9b85576",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_b494148f",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T22:31:09Z",
+      "side": 1,
+      "message": "How about making the skin function public and use $this-\u003egetSkin()-\u003eisFooterV2() where needed?",
+      "parentUuid": "6e89af39_b90a4d27",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -113,6 +149,24 @@
       "side": 1,
       "message": "Do you been changing the div to a footer tag? If not, why not? This simplifies the template.",
       "parentUuid": "6e89af39_797b85bd",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_14f32808",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T22:31:09Z",
+      "side": 1,
+      "message": "That\u0027s fine as long as we mention any changes to stable in the commit message.",
+      "parentUuid": "6e89af39_7910e55b",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -183,6 +237,24 @@
       "side": 1,
       "message": "It works for me. Can you please debug a little more to see why this is happening rather than just post a screenshot?",
       "parentUuid": "6e89af39_594ec999",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_74e1cc28",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T22:31:09Z",
+      "side": 1,
+      "message": "My bad. It\u0027s a non-issue.",
+      "parentUuid": "6e89af39_39173d58",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
