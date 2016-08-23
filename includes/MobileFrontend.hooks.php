@@ -1083,6 +1083,7 @@ class MobileFrontendHooks {
 						'mediawiki.util',
 						'mobile.overlays',
 						'ext.echo.ui',
+						'ext.echo.badgeicons',
 					],
 					'scripts' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
@@ -1095,6 +1096,7 @@ class MobileFrontendHooks {
 						'echo-none',
 						'notifications',
 						'echo-overlay-link',
+						'echo-mark-all-as-read-confirmation',
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],
