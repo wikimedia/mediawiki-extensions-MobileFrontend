@@ -61,6 +61,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_b4eb3408",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:35:47Z",
+      "side": 1,
+      "message": "Good call. I was previously still using it in the footer.",
+      "parentUuid": "6e89af39_749aacbe",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_f9b85576",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 12
@@ -108,6 +126,24 @@
       "side": 1,
       "message": "How about making the skin function public and use $this-\u003egetSkin()-\u003eisFooterV2() where needed?",
       "parentUuid": "6e89af39_b90a4d27",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_74c8ecaa",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:35:47Z",
+      "side": 1,
+      "message": "Yeh that works. For some reason I thought getSkin always returned SkinMinerva. Thanks for pointing that out.",
+      "parentUuid": "6e89af39_b494148f",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
