@@ -3,6 +3,7 @@
 
 @thumbGap: 15px;
 @thumbWidth: 70px;
+@colorSpinnerOverlayBackground: #fff;
 
 .mw-ui-icon-search-content {
 	.m-background-image( 'search-content.png' );
@@ -10,6 +11,10 @@
 
 .search-overlay {
 	background: #fff;
+
+	.spinner {
+		display: none;
+	}
 
 	.results,
 	.search-feedback {
@@ -164,3 +169,29 @@
 	}
 }
 
+.beta {
+	.search-overlay {
+		.overlay-content {
+			position: relative;
+		}
+
+		.spinner-container {
+			background-color: @colorSpinnerOverlayBackground;
+			bottom: 0;
+			display: none;
+			left: 0;
+			opacity: 0.7;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: @z-indexOverOverlay;
+
+			.spinner {
+				display: block;
+				left: 50% - ( @iconSize + 2 * @iconGutterWidth ) / 2;
+				position: absolute;
+				top: 50% - @iconSize / 2;  // no gutter vertically
+			}
+		}
+	}
+}
