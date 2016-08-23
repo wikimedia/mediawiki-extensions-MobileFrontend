@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_798545b1",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T21:44:28Z",
+      "side": 1,
+      "message": "Why are we not using $url instead of $desktopUrl?",
+      "range": {
+        "startLine": 224,
+        "startChar": 47,
+        "endLine": 224,
+        "endChar": 58
+      },
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_f9b85576",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T21:44:28Z",
+      "side": 1,
+      "message": "Can we use the similar function from the skin file instead of creating this function?",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_797b85bd",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T21:44:28Z",
+      "side": 1,
+      "message": "Why are we pushing this change to stable?",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 34
+      },
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_d982b996",
+        "filename": "resources/skins.minerva.icons.images.variants/clock.svg",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T21:44:28Z",
+      "side": 1,
+      "message": "This file is unnecessarily big. Let\u0027s reduce it\u0027s size using svgo.",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_594ec999",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-23T21:44:28Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be working: https://phabricator.wikimedia.org/T141002#2577533",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
