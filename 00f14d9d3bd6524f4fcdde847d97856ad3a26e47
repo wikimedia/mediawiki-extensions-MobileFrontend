@@ -178,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_2ec61a4f",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "Yup that\u0027s been merged.",
+      "parentUuid": "6e89af39_2e361ae5",
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_1a9fe056",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 6
@@ -195,6 +213,24 @@
         "endLine": 102,
         "endChar": 46
       },
+      "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_4e0c463e",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e89af39_1a9fe056",
       "revId": "00f14d9d3bd6524f4fcdde847d97856ad3a26e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
