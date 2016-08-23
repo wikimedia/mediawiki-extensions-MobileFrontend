@@ -45,6 +45,14 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Whether the new footer is to be used
+	 * @return boolean
+	 */
+	public function isFooterV2() {
+		return $this->getMFConfig()->get( 'MinervaUseFooterV2' );
+	}
+
+	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */

@@ -311,7 +311,7 @@
 	 * @param {JQuery.Object} [$lastModifiedLink]
 	 */
 	function initHistoryLink( $lastModifiedLink ) {
-		var delta, historyUrl, msg,
+		var delta, historyUrl, msg, $bar,
 			ts, username, gender;
 
 		historyUrl = $lastModifiedLink.attr( 'href' );
@@ -322,7 +322,12 @@
 		if ( ts ) {
 			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
 			if ( time.isRecent( delta ) ) {
-				$lastModifiedLink.closest( '.last-modified-bar' ).addClass( 'active' );
+				$bar = $lastModifiedLink.closest( '.last-modified-bar' );
+				$bar.addClass( 'active' );
+				// in beta update icons to be inverted
+				$bar.find( '.mw-ui-icon' ).each( function () {
+					$( this ).attr( 'class', $( this ).attr( 'class' ).replace( '-gray', '-invert' ) );
+				} );
 			}
 			msg = time.getLastModifiedMessage( ts, username, gender, historyUrl );
 			$lastModifiedLink.replaceWith( msg );
@@ -346,6 +351,7 @@
 	$( function () {
 		// Update anything else that needs enhancing (e.g. watchlist)
 		initModifiedInfo();
-		initHistoryLink( $( '#mw-mf-last-modified a' ) );
+		// FIXME: Drop id selector when footer v2 in stable (T141002)
+		initHistoryLink( $( '#mw-mf-last-modified a, .last-modifier-tagline a' ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );

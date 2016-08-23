@@ -91,6 +91,7 @@ class MinervaTemplate extends BaseTemplate {
 			];
 		}
 		return [
+			'v1' => !$this->getSkin()->isFooterV2(),
 			'lists' => $groups,
 		];
 	}
@@ -146,6 +147,9 @@ class MinervaTemplate extends BaseTemplate {
 		if ( isset( $data['historyLink'] ) && $action === 'view' ) {
 			$historyLink = $data['historyLink'];
 			$args = [
+				'clockIconClass' => MobileUI::iconClass( 'clock-gray', 'before' ),
+				'arrowIconClass' => MobileUI::iconClass(
+					'arrow-gray', 'element', 'mw-ui-icon-small indicator' ),
 				'isMainPage' => $this->getSkin()->getTitle()->isMainPage(),
 				'link' => $historyLink['href'],
 				'text' => $historyLink['text'],
@@ -154,7 +158,8 @@ class MinervaTemplate extends BaseTemplate {
 				'timestamp' => $historyLink['data-timestamp']
 			];
 			$templateParser = new TemplateParser( __DIR__ );
-			return $templateParser->processTemplate( 'history', $args );
+			$templateName = $this->getSkin()->isFooterV2() ? 'history-beta' : 'history';
+			return $templateParser->processTemplate( $templateName, $args );
 		} else {
 			return '';
 		}

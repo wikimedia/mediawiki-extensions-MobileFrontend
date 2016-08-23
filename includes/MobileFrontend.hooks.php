@@ -1276,6 +1276,9 @@ class MobileFrontendHooks {
 		if ( $config->get( 'MinervaUsePageActionBarV2' ) || $context->isBetaGroupMember() ) {
 			$bodyAttributes['class'] .= ' feature-page-action-bar-v2';
 		}
+		if ( $config->get( 'MinervaUseFooterV2' ) || $context->isBetaGroupMember() ) {
+			$bodyAttributes['class'] .= ' feature-footer-v2';
+		}
 	}
 
 	/**
