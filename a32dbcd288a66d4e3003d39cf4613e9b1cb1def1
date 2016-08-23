@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_d907191e",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "because $url is escaped using htmlspecialchars and I want a valid URL (Html::element escapes too)",
+      "parentUuid": "6e89af39_798545b1",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_f9b85576",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 12
@@ -36,6 +54,24 @@
       "writtenOn": "2016-08-23T21:44:28Z",
       "side": 1,
       "message": "Can we use the similar function from the skin file instead of creating this function?",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_b90a4d27",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "I played around with doing this but there was no pleasant way to do this.\nI figured since it\u0027s temporary and essentially a one liner this was the cleanest approach but I\u0027m open to alternative ideas.",
+      "parentUuid": "6e89af39_f9b85576",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_7910e55b",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "Do you been changing the div to a footer tag? If not, why not? This simplifies the template.",
+      "parentUuid": "6e89af39_797b85bd",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_d982b996",
         "filename": "resources/skins.minerva.icons.images.variants/clock.svg",
         "patchSetId": 12
@@ -82,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "6e89af39_591c097a",
+        "filename": "resources/skins.minerva.icons.images.variants/clock.svg",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e89af39_d982b996",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e89af39_594ec999",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 12
@@ -93,6 +165,24 @@
       "writtenOn": "2016-08-23T21:44:28Z",
       "side": 1,
       "message": "This doesn\u0027t seem to be working: https://phabricator.wikimedia.org/T141002#2577533",
+      "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_39173d58",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-23T22:25:03Z",
+      "side": 1,
+      "message": "It works for me. Can you please debug a little more to see why this is happening rather than just post a screenshot?",
+      "parentUuid": "6e89af39_594ec999",
       "revId": "a32dbcd288a66d4e3003d39cf4613e9b1cb1def1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
