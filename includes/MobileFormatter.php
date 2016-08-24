@@ -266,7 +266,7 @@ class MobileFormatter extends HtmlFormatter {
 			$imgPlaceholder = $doc->createElement( 'span' );
 			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
 			$imgPlaceholder->setAttribute( 'style', $dimensionsStyle );
-			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class' ] as $attr ) {
+			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'style' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
 					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
 				}
