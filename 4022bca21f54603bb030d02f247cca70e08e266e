@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_c6968697",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-24T19:28:05Z",
+      "side": 1,
+      "message": "Why do we need this class? Why not directly apply the styles to the v2 footer li elements?",
+      "range": {
+        "startLine": 8,
+        "startChar": 34,
+        "endLine": 8,
+        "endChar": 49
+      },
+      "revId": "4022bca21f54603bb030d02f247cca70e08e266e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
