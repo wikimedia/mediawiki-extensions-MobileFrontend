@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_203572f4",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-24T17:39:07Z",
+      "side": 0,
+      "message": "This now happens on both search-end in beta or stable.",
+      "revId": "bd93a78e4310c2c98d2e356452ea1e95b729f14a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
