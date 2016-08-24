@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_a00fa23a",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-08-24T17:43:52Z",
+      "side": 1,
+      "message": "Unless the extra specificity is needed, I see no reason for the \".animations\" selector. If the specificity is needed, then the order of the selectors in this rule should be switched, per linting failure.",
+      "revId": "662f7a527fc2ea0fb4d4d2286e66a1a3effa5313",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_201c927c",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-08-24T17:43:52Z",
+      "side": 1,
+      "message": "Duplicate selector.",
+      "revId": "662f7a527fc2ea0fb4d4d2286e66a1a3effa5313",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
