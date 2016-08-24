@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_a6633ad9",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-24T19:24:11Z",
+      "side": 1,
+      "message": "Why not apply this to body? While at the top of the page, when a user pulls the page down, the body background appears, which is now white. If we apply this to the whole body, then that bg will be gray too.",
+      "revId": "60c1d814176784765d9c38cc9a088e53a5245698",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
