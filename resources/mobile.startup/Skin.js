@@ -275,6 +275,7 @@
 				height: height,
 				src: $placeholder.attr( 'data-src' ),
 				alt: $placeholder.attr( 'data-alt' ),
+				style: $placeholder.attr( 'data-style' ),
 				srcset: $placeholder.attr( 'data-srcset' )
 			} );
 		},
