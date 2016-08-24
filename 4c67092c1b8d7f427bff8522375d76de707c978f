@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_e109ac35",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-24T22:05:34Z",
+      "side": 1,
+      "message": "This is good but the spaces before and after the separate are not equal as described at, for example, https://css-tricks.com/fighting-the-space-between-inline-block-elements/. What do you think is the best way to fix it?",
+      "revId": "4c67092c1b8d7f427bff8522375d76de707c978f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
