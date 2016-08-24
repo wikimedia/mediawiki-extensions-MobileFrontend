@@ -1842,9 +1842,6 @@
 		"APIGetDescription": [
 			"ApiParseExtender::onAPIGetDescription"
 		],
-		"LinksUpdate": [
-			"MobileFrontendHooks::onLinksUpdate"
-		],
 		"RequestContextCreateSkin": [
 			"MobileFrontendHooks::onRequestContextCreateSkin"
 		],

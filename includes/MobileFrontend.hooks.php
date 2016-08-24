@@ -16,24 +16,6 @@ use MediaWiki\Auth\AuthManager;
 class MobileFrontendHooks {
 
 	/**
-	 * LinksUpdate hook handler.
-	 *
-	 * Removes the legacy "page_top_level_section_count" property.
-	 *
-	 * TODO: Remove this in late July/early August, 2016.
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LinksUpdate
-	 *
-	 * @param LinksUpdate $linksUpdate
-	 * @return bool Always true
-	 */
-	public static function onLinksUpdate( LinksUpdate $linksUpdate ) {
-		unset( $linksUpdate->mProperties['page_top_level_section_count'] );
-
-		return true;
-	}
-
-	/**
 	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
 	 * for mobile users.
 	 */
