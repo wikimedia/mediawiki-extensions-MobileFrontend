@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_5b542fca",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-24T18:12:30Z",
+      "side": 1,
+      "message": "Using out of sync searches control the latest search was wrong.",
+      "range": {
+        "startLine": 259,
+        "startChar": 11,
+        "endLine": 259,
+        "endChar": 17
+      },
+      "revId": "5344519f3585f0612fde972ff6f23f05148ec689",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
