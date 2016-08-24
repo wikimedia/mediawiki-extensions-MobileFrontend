@@ -16,6 +16,24 @@
       "revId": "4c67092c1b8d7f427bff8522375d76de707c978f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_d3f1e3db",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-08-24T22:27:41Z",
+      "side": 1,
+      "message": "Can you upload a screenshot? The spaces should be equal; that link simply refers to the fact that there ARE spaces. I think as long as the spaces are equal, having them there is fine in this instance.",
+      "parentUuid": "4e96ab59_e109ac35",
+      "revId": "4c67092c1b8d7f427bff8522375d76de707c978f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
