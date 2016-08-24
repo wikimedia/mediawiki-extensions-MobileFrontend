@@ -34,7 +34,8 @@
 			"Peter Bowman",
 			"Syum90",
 			"Lemondoge",
-			"Rubentl134"
+			"Rubentl134",
+			"Dgstranz"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -232,7 +233,7 @@
 	"mobile-frontend-nearby-noresults": "Todo tranquilo aquí... No se encontraron páginas con temas cercanos.",
 	"mobile-frontend-nearby-noresults-guidance": "Prueba a crear una página nueva o añadir una ubicación a una ya existente.",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} Nearby no tiene permiso para acceder a tu ubicación.",
-	"mobile-frontend-nearby-permission-guidance": "Asegúrate de que has dado permiso para mostrar donde estás. Tal vez debas comprobar las preferencias de ubicación de tu navegador.",
+	"mobile-frontend-nearby-permission-guidance": "Asegúrate de que has dado permiso para mostrar dónde estás. Tal vez debas comprobar las preferencias de ubicación de tu navegador.",
 	"mobile-frontend-nearby-refresh": "Actualizar ubicación",
 	"mobile-frontend-nearby-requirements": "Lo sentimos, tu navegador web no admite {{SITENAME}} Cercanos.",
 	"mobile-frontend-nearby-requirements-guidance": "Prueba con otro navegador o activa JavaScript si está desactivado.",
