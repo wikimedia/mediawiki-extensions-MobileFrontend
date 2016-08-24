@@ -245,18 +245,27 @@
 			this.$searchFeedback = this.$( '.search-feedback' ).hide();
 			this.$resultContainer = this.$( '.results' );
 
+			/**
+			 * Hide the spinner and abort timed spinner shows.
+			 * @ignore
+			 */
+			function clearSearch() {
+				self.$spinner.hide();
+				clearTimeout( timer );
+			}
+
 			if ( isBeta ) {
 				// Show a spinner on top of search results
 				this.$spinner = this.$( '.spinner-container' );
 				M.on( 'search-start', function ( searchData ) {
+					if ( timer ) {
+						clearSearch();
+					}
 					timer = setTimeout( function () {
 						self.$spinner.show();
 					}, 2000 - searchData.delay );
 				} );
-				M.on( 'search-results', function () {
-					self.$spinner.hide();
-					clearTimeout( timer );
-				} );
+				M.on( 'search-results', clearSearch );
 			} else {
 				// Show a spinner in place search results
 				this.$spinner = this.$( '.spinner' );
