@@ -5,6 +5,12 @@
 @placeholderBackgroundColor: @grayLightest;
 
 .lazy-image-placeholder {
+	// If the placeholder itself is inside an inline element do not use block
+	// See https://phabricator.wikimedia.org/T143558
+	span & {
+		display: inline;
+	}
+
 	// The image placeholder for shouldn't show for no-js devices
 	.client-nojs & {
 		display: none;
