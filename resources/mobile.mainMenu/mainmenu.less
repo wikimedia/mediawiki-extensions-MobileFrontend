@@ -12,8 +12,6 @@
 @menuItemFontSize: 1.2em;
 @menuItemBackgroundColor: @colorGray4;
 
-@primaryNavBackgroundColor: @colorGray3;
-
 @pageLeftListDarkBorderColor: #3e3e3e;
 @pageLeftListMediumBorderColor: #5c5c5c;
 @pageLeftListLightBorderColor: #717171;
@@ -209,12 +207,14 @@ body.navigation-enabled {
 
 // FIXME: Cleanup animation css
 .animations {
-
-	#mw-mf-page-center {
-		min-height: 100%;
+	&.stable {
 		// We need to ensure the content has a white background - otherwise it will
 		// overlap the menu during the main menu reveal/hide animation
 		background-color: #fff;
+	}
+
+	#mw-mf-page-center {
+		min-height: 100%;
 
 		// *2 to avoid weird glitch of left nav flickering after closing
 		@transition: @duration @easing, height 0s ( @duration * 2 );
