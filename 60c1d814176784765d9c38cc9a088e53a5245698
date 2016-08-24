@@ -16,6 +16,24 @@
       "revId": "60c1d814176784765d9c38cc9a088e53a5245698",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_c1ce7086",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-24T20:59:59Z",
+      "side": 1,
+      "message": "I originally tried that but there\u0027s a problem with the main menu.\n\nI couldn\u0027t get this working and I wasn\u0027t too confident with tinkering with its implementation. Feel free to have a go with a follow up if you fancy a go.",
+      "parentUuid": "4e96ab59_a6633ad9",
+      "revId": "60c1d814176784765d9c38cc9a088e53a5245698",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
