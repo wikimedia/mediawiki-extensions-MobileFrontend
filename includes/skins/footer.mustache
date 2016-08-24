@@ -5,11 +5,9 @@
 	<h2>{{{headinghtml}}}</h2>
 	<div>{{{licensehtml}}}</div>
 	{{#lists}}
-	<ul class="footer-{{name}} hlist">
+	<ul class="footer-{{name}} hlist hlist-separated">
 		{{! "." means "current context", which allows us to iterate over Plain Old PHP Arrays™. }}
-		{{#items}}
-			<li id="footer-{{category}}-{{name}}">{{{linkhtml}}}</li>
-		{{/items}}
+		{{#items}}<li id="footer-{{category}}-{{name}}">{{{linkhtml}}}</li>{{/items}}
 	</ul>
 	{{/lists}}
 </div>
