@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_96fca9d7",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-24T23:58:53Z",
+      "side": 1,
+      "message": "Use the position-fixed class - theoretically this allows this to work if position fixed is not supported by the browser.",
+      "revId": "475a5369b9b61e2dfb9ca46d6e8eb9fc1ad3be91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_b6e0c526",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-24T23:58:53Z",
+      "side": 1,
+      "message": "Please use transform mixin",
+      "revId": "475a5369b9b61e2dfb9ca46d6e8eb9fc1ad3be91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
