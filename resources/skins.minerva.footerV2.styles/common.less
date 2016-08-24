@@ -1,10 +1,18 @@
 @import 'minerva.variables';
 @import 'minerva.mixins';
 
+.feature-footer-v2 #mw-mf-page-center,
+.animations.feature-footer-v2 #mw-mf-page-center {
+	background-color: @chromeColor;
+}
+
+.mw-body {
+	background-color: @skinContentBgColor;
+	padding-bottom: 32px;
+}
+
 .feature-footer-v2 footer {
-	margin-top: 32px;
 	overflow: auto;
-	background-color: @footerBgColor;
 
 	.last-modified-bar {
 		border-top: solid 1px @footerBorderColor;
