@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_5b16ef5b",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-24T19:05:12Z",
+      "side": 1,
+      "message": "We should combine this with the above rule, similar to how line #9 is done.",
+      "revId": "5a989dd15df95806f6503042fdf7d9deeb04d5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
