@@ -22,6 +22,24 @@
       "revId": "4022bca21f54603bb030d02f247cca70e08e266e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_66f792f3",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-24T19:33:44Z",
+      "side": 1,
+      "message": "Because hlist is used in various other places including in editor content.",
+      "parentUuid": "4e96ab59_c6968697",
+      "revId": "4022bca21f54603bb030d02f247cca70e08e266e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
