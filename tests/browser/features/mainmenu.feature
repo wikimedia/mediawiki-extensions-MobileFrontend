@@ -20,7 +20,3 @@ Feature: Menus open correct page for anonymous users
     Given at least one article with geodata exists
     When I click on the main navigation button
     Then I should see a link to "Nearby" in the main navigation menu
-
-  Scenario: Watchlist URL is set correctly
-    When I click on "Watchlist" in the main navigation menu
-    Then I should see a message box at the top of the login page
