@@ -12,6 +12,7 @@
 
 .feature-footer-v2 footer {
 	overflow: auto;
+	padding-bottom: 6px;
 
 	// FIXME: Move to skins.minerva.content.styles/lists.less when pushing to stable
 	.hlist-separated {
@@ -63,7 +64,6 @@
 		margin-top: 42px;
 
 		> * {
-			font-size: 0.875em;
 			margin-bottom: 9px;
 		}
 
@@ -77,6 +77,11 @@
 			&:first-child {
 				margin-top: 0;
 			}
+		}
+
+		.hlist,
+		.license {
+			font-size: 0.875em;
 		}
 	}
 }
