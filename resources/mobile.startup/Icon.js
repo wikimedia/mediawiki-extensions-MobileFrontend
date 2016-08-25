@@ -23,6 +23,7 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.hasText Whether the icon has text.
+		 * @cfg {Boolean} defaults.isSmall Whether the icon should be small.
 		 * @cfg {String} [defaults.href] value of href attribute, when set tagName will default to anchor tag
 		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
 		 * @cfg {String} defaults.base String used as a base for generating class names.
@@ -36,6 +37,7 @@
 			hasText: false,
 			href: undefined,
 			tagName: 'div',
+			isSmall: false,
 			base: 'mw-ui-icon',
 			name: '',
 			modifier: 'mw-ui-icon-element',
