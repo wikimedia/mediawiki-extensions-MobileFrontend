@@ -182,6 +182,7 @@
 		 * Event handler that toggles the details bar.
 		 */
 		onToggleDetails: function () {
+			this.$( '.cancel, .slider-button' ).toggle();
 			this.$details.toggle();
 			this._positionImage();
 		},
