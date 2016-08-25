@@ -18,7 +18,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "other",
 	"require": {
-		"MediaWiki": ">= 1.25.0"
+		"MediaWiki": ">= 1.27.0"
 	},
 	"callback": "MobileFrontendHooks::onRegistration",
 	"GroupPermissions": {
@@ -1952,6 +1952,9 @@
 		],
 		"TitleSquidURLs": [
 			"MobileFrontendHooks::onTitleSquidURLs"
+		],
+		"MediaWikiServices": [
+			"MobileFrontendHooks::onMediaWikiServices"
 		]
 	},
 	"config": {

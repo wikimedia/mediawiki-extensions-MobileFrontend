@@ -3,6 +3,8 @@
  * MobileContext.php
  */
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Provide various request-dependant methods to use in mobile context
  */
@@ -140,10 +142,7 @@ class MobileContext extends ContextSource {
 	 * @return Config
 	 */
 	public function getMFConfig() {
-		if ( !$this->configObj instanceof Config ) {
-			$this->configObj = ConfigFactory::getDefaultInstance()->makeConfig( 'mobilefrontend' );
-		}
-		return $this->configObj;
+		return MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 	}
 
 	/**
