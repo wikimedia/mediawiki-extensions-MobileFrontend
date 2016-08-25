@@ -22,6 +22,24 @@
       "revId": "e0fc6338a907a13c0ea47bfa82b12e569a7c6493",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_9de844b1",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T17:55:48Z",
+      "side": 1,
+      "message": "Not to do with this patch so fixed separately. good catch.",
+      "parentUuid": "4e96ab59_3dbe70d2",
+      "revId": "e0fc6338a907a13c0ea47bfa82b12e569a7c6493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
