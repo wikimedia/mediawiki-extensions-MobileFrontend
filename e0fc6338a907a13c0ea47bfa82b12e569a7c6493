@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_3dbe70d2",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-25T17:46:04Z",
+      "side": 1,
+      "message": "The close tag is for div. I should have caught it previously.",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 7
+      },
+      "revId": "e0fc6338a907a13c0ea47bfa82b12e569a7c6493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
