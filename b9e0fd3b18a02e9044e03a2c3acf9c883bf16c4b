@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_3d1670ad",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T18:04:21Z",
+      "side": 1,
+      "message": "Could this line be moved into _loadCategories where you are enabling? This would mean we wouldn\u0027t need the disable call or this method.",
+      "revId": "b9e0fd3b18a02e9044e03a2c3acf9c883bf16c4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
