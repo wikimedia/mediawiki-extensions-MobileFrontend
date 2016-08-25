@@ -2,45 +2,47 @@
 # Enable this pre-commit hook by running 'make installhooks'
 set -euo pipefail
 
+git-staged-files() {
+	git diff --cached -C -C --name-only --diff-filter=ACMRTUXB "$@"
+}
+
+git-is-staged() {
+	local diff=0
+	git-staged-files --quiet "$@" 2> /dev/null || diff=$?
+	[[ diff -eq 1 ]] || return 1
+}
+
 # check for trailing whitespace
 git diff --cached --check
 
 make jshint
 make jscs
 
-if git diff --name-only --cached | grep --regexp '\.js$' ; then
+if git-is-staged \*.js; then
 	make qunit
 fi
 
-if git diff --name-only --cached | grep --regexp '\.*php$' ; then
+if git-is-staged \*.php; then
 	make phplint
 fi
 
-if git diff --name-only --cached | grep --regexp 'includes/skins/.*php$' ; then
+if git-is-staged 'includes/skins/*.php'; then
 	make validatehtml > $result
 fi
 
-for file in `git diff --cached --name-only | grep -i ".png\$"`
+for file in `git-staged-files | grep -i '\.png$'`
 do
 	echo "Compressing $file"
-	if [ -f $file ]; then
-		optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep "Output"
-		git add "$file"
-	else
-		echo 'file was removed'
-	fi
+	optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep Output
+	git add "$file"
 done
 
-for file in `git diff --cached --name-only | grep -i ".svg\$"`
+for file in `git-staged-files | grep -i '\.svg$'`
 do
 	make nodecheck
 	echo "Compressing $file"
-	if [ -f $file ]; then
-		# If anyone can figure out how to get the pretty option to work from the config
-		# file, feel free to remove it here.
-		node_modules/.bin/svgo --config=.svgo.yml "$file" --pretty
-		git add "$file"
-	else
-		echo 'file was removed'
-	fi
+	# If anyone can figure out how to get the pretty option to work from the config
+	# file, feel free to remove it here.
+	node_modules/.bin/svgo --config=.svgo.yml "$file" --pretty
+	git add "$file"
 done
