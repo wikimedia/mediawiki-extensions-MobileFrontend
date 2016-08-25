@@ -55,6 +55,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				$out = $this->getOutput();
 				$out->addModuleStyles( [
 					'mobile.pagelist.styles',
+					'skins.minerva.icons.images.scripts',
 					'mobile.pagesummary.styles',
 				] );
 				$out->setHTMLTitle( $this->msg(
