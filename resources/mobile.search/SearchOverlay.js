@@ -64,6 +64,7 @@
 			clearIcon: new Icon( {
 				tagName: 'button',
 				name: 'clear',
+				isSmall: true,
 				label: mw.msg( 'mobile-frontend-clear-search' ),
 				additionalClassNames: 'clear'
 			} ).options,
