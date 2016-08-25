@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_7d955835",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlayItem.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T17:52:28Z",
+      "side": 1,
+      "message": "should be \"{{title}}\" not {{{title}}}",
+      "revId": "5944f3cf399cf887cbedc3e2e95ada6d098d03af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_9d9a0465",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlayItem.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T17:52:28Z",
+      "side": 1,
+      "message": "This can be {{title}} I think. Do we expect it to contain HTML? i don\u0027t think we do. It\u0027s not a display title.",
+      "revId": "5944f3cf399cf887cbedc3e2e95ada6d098d03af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
