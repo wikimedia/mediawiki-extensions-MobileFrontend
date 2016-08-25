@@ -28,6 +28,7 @@
 	"mobile-frontend-home-button": "Acuèlh",
 	"mobile-frontend-images-status": "Imatges",
 	"mobile-frontend-language-article-heading": "Legir dins una autra lenga",
+	"mobile-frontend-languages-header-page": "$1 - Lengas",
 	"mobile-frontend-last-modified-date": "Darrièra modificacion lo $1, a $2",
 	"mobile-frontend-last-modified-days": "Darrièra modificacion i a {{PLURAL:$1|$1 jorn|$1 jorns}}",
 	"mobile-frontend-last-modified-hours": "Darrièra modificacion i a {{PLURAL:$1|$1 ora|$1 oras}}",
