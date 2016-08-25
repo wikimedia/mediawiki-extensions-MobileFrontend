@@ -14,35 +14,65 @@ git-is-staged() {
 
 map() { IFS= read -rd $'\0' "$@"; }
 
-# check for trailing whitespace
-git diff --cached --check
+compress-png() {
+	git-staged-files \*.png|while map file; do
+		echo "Compressing $file"
+		optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep Output
+		git add "$file"
+	done
+}
 
-make jshint
-make jscs
+compress-svg() {
+	git-staged-files \*.svg|while map file; do
+		make nodecheck
+		echo "Compressing $file"
+		# If anyone can figure out how to get the pretty option to work from the config
+		# file, feel free to remove it here.
+		node_modules/.bin/svgo --config=.svgo.yml "$file" --pretty
+		git add "$file"
+	done
+}
 
-if git-is-staged \*.js; then
-	make qunit
-fi
+test-whitespace() { git diff --cached --check; }
 
-if git-is-staged \*.php; then
-	make phplint
-fi
+test-js() {
+	local err=0
 
-if git-is-staged 'includes/skins/*.php'; then
-	make validatehtml > $result
-fi
+	make jshint || err+=1
+	make jscs || err+=1
 
-git-staged-files \*.png|while map file; do
-	echo "Compressing $file"
-	optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep Output
-	git add "$file"
-done
+	if git-is-staged \*.js; then
+		make qunit || err+=1
+	fi
 
-git-staged-files \*.svg|while map file; do
-	make nodecheck
-	echo "Compressing $file"
-	# If anyone can figure out how to get the pretty option to work from the config
-	# file, feel free to remove it here.
-	node_modules/.bin/svgo --config=.svgo.yml "$file" --pretty
-	git add "$file"
-done
+	return $err
+}
+
+test-php() {
+	local err=0
+	if git-is-staged \*.php; then
+		make phplint || err+=1
+	fi
+
+	# todo: where is result set?
+	if git-is-staged 'includes/skins/*.php'; then
+		make validatehtml > $result || err+=1
+	fi
+
+	return $err
+}
+
+main() {
+	local err=0
+
+	compress-png
+	compress-svg
+
+	test-whitespace || err+=1
+	test-js || err+=1
+	test-php || err+=1
+
+	return $err
+}
+
+main "$@"
