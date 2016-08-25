@@ -12,7 +12,7 @@
 	{{{spinner}}}
 {{/isBeta}}
 {{#isBeta}}
-<div class="spinner-container">
+<div class="spinner-container position-fixed">
 	{{{spinner}}}
 </div>
 {{/isBeta}}

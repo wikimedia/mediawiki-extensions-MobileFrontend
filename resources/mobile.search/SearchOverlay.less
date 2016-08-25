@@ -181,16 +181,17 @@
 			display: none;
 			left: 0;
 			opacity: 0.7;
-			position: absolute;
 			right: 0;
-			top: 0;
+			top: @headerHeight;
 			z-index: @z-indexOverOverlay;
 
 			.spinner {
 				display: block;
-				left: 50% - ( @iconSize + 2 * @iconGutterWidth ) / 2;
+				left: 50%;
 				position: absolute;
-				top: 50% - @iconSize / 2;  // no gutter vertically
+				top: 50%;
+				margin-top: -@headerHeight / 2;
+				.transform( translate( -50%, -50% ) );
 			}
 		}
 	}
