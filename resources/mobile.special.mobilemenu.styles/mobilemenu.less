@@ -2,6 +2,10 @@
 @import 'minerva.mixins';
 
 body.navigation-full-screen {
+	&.feature-footer-v2 {
+		background-color: @primaryNavBackgroundColor;
+	}
+
 	nav {
 		// !important needed to override media query rules set in mainmenu.less
 		width: 100% !important;
