@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_f6fecdaa",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T00:15:54Z",
+      "side": 1,
+      "message": "Why do you disable here? Comment needed",
+      "revId": "242e85ed1d23b342233de9f747ae6886a382a7d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_5606c1d2",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlayItem.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-25T00:15:54Z",
+      "side": 1,
+      "message": "To ensure this escapes wrap in quotes (this sets attributes for me - allowing possible injection attack)",
+      "revId": "242e85ed1d23b342233de9f747ae6886a382a7d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
