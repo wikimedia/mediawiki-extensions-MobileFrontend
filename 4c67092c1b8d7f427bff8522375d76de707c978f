@@ -34,6 +34,24 @@
       "revId": "4c67092c1b8d7f427bff8522375d76de707c978f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_7d22b851",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-25T17:40:57Z",
+      "side": 1,
+      "message": "https://phabricator.wikimedia.org/P3871#18620",
+      "parentUuid": "4e96ab59_d3f1e3db",
+      "revId": "4c67092c1b8d7f427bff8522375d76de707c978f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
