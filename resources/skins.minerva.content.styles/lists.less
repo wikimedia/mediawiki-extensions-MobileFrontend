@@ -60,3 +60,15 @@ dl {
 		font-weight: bold;
 	}
 }
+
+/* the following rule is completely copied from mediawiki.skinning.content[1], as
+ * don't want to include this module in mobile/minerva, see T129375.
+ * [1] https://github.com/wikimedia/mediawiki/blob/0687f250d6fb4196a7aa60af4fe11c7d21f3c455
+ *	/resources/src/mediawiki.skinning/content.css#L260
+ */
+/* Hide elements that are marked as "empty" according to legacy Tidy rules,
+ * except if a client script removes the mw-hide-empty-elt class from the body
+ */
+body.mw-hide-empty-elt .mw-empty-elt {
+	display: none;
+}
