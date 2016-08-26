@@ -221,7 +221,9 @@
 
 					if (
 						mw.viewport.isElementCloseToViewport( placeholder, offset ) &&
-						$placeholder.is( ':visible' )
+						// If a placeholder is an inline element without a height attribute set it will record as hidden
+						// to circumvent this we also need to test the height (see T143768).
+						( $placeholder.is( ':visible' ) || $placeholder.height() === 0 )
 					) {
 						self.loadImage( $placeholder );
 						return false;
