@@ -156,7 +156,7 @@
 				section: 'new',
 				sectiontitle: heading,
 				title: self.title,
-				summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
+				summary: mw.msg( 'newsectionsummary', heading ),
 				text: text + ' ~~~~'
 			} ).done( function () {
 				result.resolve( 'ok' );
