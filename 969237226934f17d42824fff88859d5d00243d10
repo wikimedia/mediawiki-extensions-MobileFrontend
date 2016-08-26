@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_f39b3066",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-26T19:45:46Z",
+      "side": 1,
+      "message": "Should be `.client-nojs \u0026`.",
+      "revId": "969237226934f17d42824fff88859d5d00243d10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
