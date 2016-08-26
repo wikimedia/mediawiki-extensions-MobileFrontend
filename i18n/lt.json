@@ -265,7 +265,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Grįžti į naudotojo \"{{GENDER:$1|$1}}\" puslapį.",
 	"mobile-frontend-talk-back-to-projectpage": "Grįžti į projekto \"$1\" puslapį.",
 	"mobile-frontend-talk-back-to-filepage": "Grįžti į failą \"$1\".",
-	"mobile-frontend-talk-edit-summary": "Naujas aptarimo skyrius: $1",
 	"mobile-frontend-talk-explained": "Dabar aktyvūs šie pokalbiai",
 	"mobile-frontend-talk-explained-empty": "Nėra pokalbių apie šį puslapį.",
 	"mobile-frontend-talk-overlay-header": "Aptarimas",

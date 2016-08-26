@@ -259,7 +259,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Volver a la páxina {{GENDER:$1|del usuariu «$1»|de la usuaria «$1»}}.",
 	"mobile-frontend-talk-back-to-projectpage": "Volver a la páxina del proyeutu «$1».",
 	"mobile-frontend-talk-back-to-filepage": "Volver al ficheru «$1».",
-	"mobile-frontend-talk-edit-summary": "Nueva seición del alderique: $1",
 	"mobile-frontend-talk-explained": "Les siguientes conversaciones tan actives nesti momentu",
 	"mobile-frontend-talk-explained-empty": "Nun hai conversaciones sobro esta páxina.",
 	"mobile-frontend-talk-overlay-header": "Alderique",

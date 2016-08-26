@@ -269,7 +269,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Tilbake til {{GENDER:$1|$1}}s brukerside.",
 	"mobile-frontend-talk-back-to-projectpage": "Tilbake til prosjektsiden «$1».",
 	"mobile-frontend-talk-back-to-filepage": "Tilbake til filen «$1».",
-	"mobile-frontend-talk-edit-summary": "Nytt diskusjonsavsnitt: $1",
 	"mobile-frontend-talk-explained": "Følgende diskusjoner er aktive",
 	"mobile-frontend-talk-explained-empty": "Det er ingen diskusjoner om dennne siden.",
 	"mobile-frontend-talk-overlay-header": "Diskusjon",

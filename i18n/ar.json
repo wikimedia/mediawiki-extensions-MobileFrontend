@@ -273,7 +273,6 @@
 	"mobile-frontend-talk-back-to-userpage": "عد إلى صفحة {{GENDER:$1|$1}}",
 	"mobile-frontend-talk-back-to-projectpage": "عد إلى صفحة المشروع «$1»",
 	"mobile-frontend-talk-back-to-filepage": "عد إلى الملف «$1».",
-	"mobile-frontend-talk-edit-summary": "قسم نقاش جديد: $1",
 	"mobile-frontend-talk-explained": "المحادثات التالية نشطة حاليا",
 	"mobile-frontend-talk-explained-empty": "لا توجد محادثات عن هذه الصفحة.",
 	"mobile-frontend-talk-overlay-header": "نقاش",

@@ -271,7 +271,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Quay lại trang của thành viên “$1”.",
 	"mobile-frontend-talk-back-to-projectpage": "Quay lại trang dự án “$1”.",
 	"mobile-frontend-talk-back-to-filepage": "Quay lại tập tin “$1”.",
-	"mobile-frontend-talk-edit-summary": "Phần thảo luận mới: $1",
 	"mobile-frontend-talk-explained": "Các cuộc thảo luận sau đây đang tiếp diễn",
 	"mobile-frontend-talk-explained-empty": "Không có cuộc thảo luận nào về trang này.",
 	"mobile-frontend-talk-overlay-header": "Thảo luận",

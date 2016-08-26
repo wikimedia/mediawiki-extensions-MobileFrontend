@@ -284,7 +284,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Вернуться к странице участника «{{GENDER:$1|$1}}».",
 	"mobile-frontend-talk-back-to-projectpage": "Вернуться к странице проекта «$1».",
 	"mobile-frontend-talk-back-to-filepage": "Вернуться к файлу «$1».",
-	"mobile-frontend-talk-edit-summary": "Новый раздел обсуждения: $1",
 	"mobile-frontend-talk-explained": "Эти обсуждения являются активными",
 	"mobile-frontend-talk-explained-empty": "На этой странице нет обсуждений.",
 	"mobile-frontend-talk-overlay-header": "Обсуждение",

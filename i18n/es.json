@@ -291,7 +291,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Volver a la página \"{{GENDER:$1|del usuario $1|de la usuaria $1}}\".",
 	"mobile-frontend-talk-back-to-projectpage": "Volver a la página del proyecto \"$1\".",
 	"mobile-frontend-talk-back-to-filepage": "Volver al archivo \"$1\".",
-	"mobile-frontend-talk-edit-summary": "Sección de discusión nueva: $1",
 	"mobile-frontend-talk-explained": "Las siguientes conversaciones están actualmente activas",
 	"mobile-frontend-talk-explained-empty": "No hay ninguna conversación sobre esta página.",
 	"mobile-frontend-talk-overlay-header": "Discusión",

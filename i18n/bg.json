@@ -95,7 +95,7 @@
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Опитайте на открито пространство с по-добър сигнал.",
 	"mobile-frontend-nearby-noresults": "Не бяха открити страници за обекти, разположени близо до вас.",
 	"mobile-frontend-nearby-noresults-guidance": "Опитайте се да създадете нова страница или да добавите местоположение към вече съществуваща",
-	"mobile-frontend-nearby-permission": "„{{SITENAME}} Наблизо“ няма права да достъпи Вашето местоположение.",
+	"mobile-frontend-nearby-permission": "„{{SITENAME}} Наблизо“ няма право на достъп до Вашето местоположение.",
 	"mobile-frontend-nearby-requirements": "Съжаляваме! Вашият уеб браузър не поддържа „{{SITENAME}} Наблизо“.",
 	"mobile-frontend-nearby-requirements-guidance": "Опитайте с друг браузър или активирайте JavaScript, ако сте го спрели.",
 	"mobile-frontend-nearby-title": "Наблизо",

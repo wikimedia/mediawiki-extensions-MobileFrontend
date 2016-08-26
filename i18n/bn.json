@@ -262,7 +262,6 @@
 	"mobile-frontend-talk-back-to-userpage": "\"{{GENDER:$1|$1}}\"-এর ব্যবহারকারী পাতায় ফিরুন।",
 	"mobile-frontend-talk-back-to-projectpage": "\"$1\" প্রকল্প পাতায় ফিরুন।",
 	"mobile-frontend-talk-back-to-filepage": "\"$1\" ফাইলে ফিরুন।",
-	"mobile-frontend-talk-edit-summary": "নতুন আলাপের অনুচ্ছেদ: $1",
 	"mobile-frontend-talk-explained": "নিম্নলিখিত আলোচনা বর্তমানে সক্রিয়",
 	"mobile-frontend-talk-explained-empty": "এই পাতা সম্পর্কে কোন আলোচনা নেই।",
 	"mobile-frontend-talk-overlay-header": "আলাপ",

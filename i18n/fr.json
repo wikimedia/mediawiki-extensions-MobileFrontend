@@ -300,7 +300,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Retour à la page utilisateur de \"{{GENDER:$1|$1}}\".",
 	"mobile-frontend-talk-back-to-projectpage": "Retour à la page du projet \"$1\".",
 	"mobile-frontend-talk-back-to-filepage": "Retour au fichier \"$1\".",
-	"mobile-frontend-talk-edit-summary": "Nouvelle section de discussion : $1",
 	"mobile-frontend-talk-explained": "Les conversations suivantes sont actives en ce moment",
 	"mobile-frontend-talk-explained-empty": "Il n’y a pas de conversations sur cette page.",
 	"mobile-frontend-talk-overlay-header": "Discussion",
