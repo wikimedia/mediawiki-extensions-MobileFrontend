@@ -1499,7 +1499,8 @@
 			],
 			"dependencies": [
 				"mobile.nearby",
-				"mediawiki.router"
+				"mediawiki.router",
+				"mediawiki.Uri"
 			],
 			"messages": [
 				"mobile-frontend-nearby-refresh"
