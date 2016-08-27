@@ -4,6 +4,7 @@
 @thumbGap: 15px;
 @thumbWidth: 70px;
 @colorSpinnerOverlayBackground: #fff;
+@clearIconRightGutterWidth: 0.5em;
 
 .mw-ui-icon-search-content {
 	.m-background-image( 'search-content.png' );
@@ -32,7 +33,7 @@
 	.header input {
 		border: 0;
 		// save space for the clear icon
-		padding-right: ( @iconSize + @iconGutterWidth * 2 );
+		padding-right: ( @iconSize + @iconGutterWidth + @clearIconRightGutterWidth );
 
 		// See https://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx (T102325)
 		&::-ms-clear {
@@ -42,7 +43,7 @@
 	.clear {
 		position: absolute;
 		top: ( @headerHeight / 2 ) - ( @iconSize / 2 );
-		right: @iconGutterWidth;
+		right: @clearIconRightGutterWidth;
 		margin-top: @headerMarginTop;
 	}
 
