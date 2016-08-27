@@ -61,6 +61,12 @@
 		&:before {
 			.transform( rotate( -90deg ) );
 		}
+
+		.client-nojs & {
+			// Certain browsers e.g. Opera Mini do not support css transforms
+			// We assume that we do not run JS on these browsers so hide the chevron
+			display: none;
+		}
 	}
 
 	> .post-content {
