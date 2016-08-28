@@ -272,7 +272,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Tillbaka till användarsidan \"{{GENDER:$1|$1}}\".",
 	"mobile-frontend-talk-back-to-projectpage": "Tillbaka till projektsidan \"$1\".",
 	"mobile-frontend-talk-back-to-filepage": "Tillbaka till filen \"$1\".",
-	"mobile-frontend-talk-edit-summary": "Nytt diskussionsavsnitt: $1",
 	"mobile-frontend-talk-explained": "Följande diskussioner är för närvarande aktiva",
 	"mobile-frontend-talk-explained-empty": "Det finns inga diskussioner om denna sida.",
 	"mobile-frontend-talk-overlay-header": "Diskussion",
