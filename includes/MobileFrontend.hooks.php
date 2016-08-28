@@ -4,7 +4,6 @@
  */
 
 use MediaWiki\Auth\AuthManager;
-use MediaWiki\MediaWikiServices;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -1428,19 +1427,5 @@ class MobileFrontendHooks {
 			// FIXME: Use wfDeprecated to officially deprecate in later patchset
 			$wgMinervaEnableSiteNotice = $config->get( 'MFEnableSiteNotice' );
 		}
-	}
-
-	/**
-	 * MediaWikiServices hook handler.
-	 *
-	 * For now, loads the <code>ServiceWiring.php</code> service wiring file. As we add more
-	 * top-level services, that file may need to be split up.
-	 *
-	 * @param MediaWikiServices $services
-	 */
-	public static function onMediaWikiServices( MediaWikiServices $services ) {
-		$services->loadWiringFiles( [
-			__DIR__ . '/ServiceWiring.php',
-		] );
 	}
 }
