@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_0496aa42",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-29T19:12:19Z",
+      "side": 1,
+      "message": "Previously, you mentioned that we should not mess with implementation details and here it looks like we\u0027re doing so.",
+      "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
