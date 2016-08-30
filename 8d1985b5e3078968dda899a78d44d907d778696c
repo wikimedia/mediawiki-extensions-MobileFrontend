@@ -34,6 +34,24 @@
       "revId": "8d1985b5e3078968dda899a78d44d907d778696c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_c6057f7e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 901,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-30T23:21:32Z",
+      "side": 1,
+      "message": "the if statement is confusing as written.\n\nIf beta features extension is unavailable \u003d\u003d\u003d  !class_exists( \u0027BetaFeatures\u0027 )\nif user has disabled beta feature \u003d BetaFeatures::isFeatureEnabled( $user, \u0027betafeatures-minerva\u0027 )\nif site has enabled beta feature \u003d $mfEnableMinervaBetaFeature\n\nso previously we were testing\nif beta features extension is unavailable OR user has disabled beta feature OR site has disabled beta feature THEN remove skin from preferences.\n\nNow we have an additional parameter\nSite has made Minerva the default skin \u003d $defaultSkin !\u003d\u003d \u0027minerva\u0027\n\nTherefore the new test is\n( Site has NOT made Minerva the default skin ) OR",
+      "parentUuid": "4e96ab59_e686fb17",
+      "revId": "8d1985b5e3078968dda899a78d44d907d778696c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
