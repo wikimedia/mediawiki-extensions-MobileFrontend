@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_c105697e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-08-30T21:20:15Z",
+      "side": 1,
+      "message": "Logging comment from IRC here:\nThe logic in this patch set contradicts your comment on PS3. Am I missing something?",
+      "revId": "af913312a70d0fbc83d1af513c391faf28643dec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
