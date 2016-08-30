@@ -16,6 +16,24 @@
       "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_fc9a0a65",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-30T23:10:40Z",
+      "side": 1,
+      "message": "I\u0027m a little confused with this comment.\n\nWe rotate the chevron in exactly the same way above. All this rule does is override that and do the opposite.\n\nWe could add an mw-ui-icon-flip in future if that is what you are talking about here - it would be a useful addition since we do this in 2 places now - but I\u0027m not sure how that is related to this change.",
+      "parentUuid": "4e96ab59_0496aa42",
+      "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
