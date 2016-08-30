@@ -52,6 +52,24 @@
       "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_823600e3",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-30T23:57:49Z",
+      "side": 1,
+      "message": "I don\u0027t agree that what we did previously was wrong for reasons I\u0027ve brought up previously.\n\nThis icon is the icon we use for toggling. Flipping that icon in ResourceLoaderImage module would be incorrect as now the arrows would point the wrong way for collapsed sections.\n\nAdding an additional icon to the css would bloat the CSS unnecessarily by introducing 4 new icons for all users (as I\u0027ve discussed previously - we\u0027d need 2 different colours). Icons are top loaded so this would have a detrimental effect on first paint.\n\nCSS transform support is pretty darn good. THis is why we use a transform to flip the toggle icon.\n\nLet\u0027s focus on the problem at hand - this icon doesn\u0027t render correctly in RTL mode. Let\u0027s fix this for users then if needed discuss reassessing the implementation, but I don\u0027t see a better way of implementing it.",
+      "parentUuid": "4e96ab59_9c3586f6",
+      "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
