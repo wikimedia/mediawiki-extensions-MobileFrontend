@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_3c7812bf",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-30T23:36:47Z",
+      "side": 1,
+      "message": "Does css janus allow you to do something like?\n.transform( rotate( -90deg ) );/*rtl:.transform( rotate( -90deg ) );*/\nbecause that would be even cleaner (I can\u0027t find any docs)",
+      "revId": "2d75c1806a006392f5cea46597002c907257d443",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
