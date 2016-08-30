@@ -16,6 +16,24 @@
       "revId": "8d1985b5e3078968dda899a78d44d907d778696c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_e686fb17",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 901,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-08-30T19:38:50Z",
+      "side": 1,
+      "message": "Can you explain? I thought this patch\u0027s intention was simply to add the defaultSkin check, not change the existing logic?",
+      "parentUuid": "4e96ab59_66cccb8d",
+      "revId": "8d1985b5e3078968dda899a78d44d907d778696c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
