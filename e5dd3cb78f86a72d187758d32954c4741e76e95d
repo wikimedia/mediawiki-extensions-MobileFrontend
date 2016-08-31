@@ -70,6 +70,24 @@
       "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_947aeab7",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-08-31T14:02:01Z",
+      "side": 1,
+      "message": "What would happen if the chevron was slightly different from the toggle icon? Would you not include it as a separate icon, or would you say: \"This bloats CSS, thus we won\u0027t show this icon?\".\n\nYou\u0027re also assuming that these icons will evolve in sync. I think, right now, by pure chance, you can create the chevron by rotating the toggle icon, but if we had to make the toggle icon a little different, and keep the chevron as is, you\u0027d still have to create a new icon. So rather than postponing what is imminent, I suggest we do it the right way this time.\n\nThere is no need to load this icon at the top. The icon shows in the footer, thus it\u0027s OK to load it later. Nothing is forcing us to bundle these icons with the rest of the top icons.",
+      "parentUuid": "4e96ab59_823600e3",
+      "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
