@@ -88,6 +88,24 @@
       "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_5f225b51",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-08-31T15:02:35Z",
+      "side": 1,
+      "message": "I suggest you refresh yourself on the motivation that started this\nhttps://phabricator.wikimedia.org/T102154\n\nThis is not pure chance. Nirzar told me this icon is the same.\n\nI don\u0027t see why we\u0027d purposely not load these icons at the top when we have them available.\n\nLet\u0027s talk about this post standup as a group.",
+      "parentUuid": "2e93376b_947aeab7",
+      "revId": "e5dd3cb78f86a72d187758d32954c4741e76e95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
