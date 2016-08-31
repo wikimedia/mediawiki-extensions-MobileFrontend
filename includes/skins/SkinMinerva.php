@@ -996,7 +996,7 @@ class SkinMinerva extends SkinTemplate {
 			'class' => MobileUI::iconClass( 'edit-enabled', 'element' . $additionalClass ),
 			'links' => [
 				'edit' => [
-					'href' => $this->getTitle()->getLocalUrl( [ 'action' => 'edit', 'section' => 0 ] )
+					'href' => $this->getTitle()->getLocalURL( [ 'action' => 'edit', 'section' => 0 ] )
 				],
 			],
 			'is_js_only' => !$noJsEdit
