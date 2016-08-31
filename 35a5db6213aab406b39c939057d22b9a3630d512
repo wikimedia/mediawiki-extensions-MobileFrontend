@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_511c146b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-08-31T09:38:52Z",
+      "side": 1,
+      "message": "You already have a reference to the \"MF config\" (MobileContext#getMFConfig) so you can pass it through to MobileFrontendHooks::hasEnabledMinervaBetaFeature.\n\n---\n\nJust a note that\n\n    not X and not Y\n\nis equivalent to\n\n    not (X or Y)\n\nwhich, given the explanatory comment immediately above this line, seems more readable still.\n\nThis is a personal preference and you needn\u0027t change it if you don\u0027t agree.",
+      "revId": "35a5db6213aab406b39c939057d22b9a3630d512",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
