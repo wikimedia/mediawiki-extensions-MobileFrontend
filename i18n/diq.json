@@ -17,7 +17,7 @@
 	"mobile-frontend-back-to-top-of-section": "Yew cay ser çek",
 	"mobile-frontend-categories-heading": "<strong>Kategoriy</strong>",
 	"mobile-frontend-categories-add": "Kategoriye ke",
-	"mobile-frontend-categories-search": "Kategoriya bıvin",
+	"mobile-frontend-categories-search": "Kategoriyan cı geyre",
 	"mobile-frontend-categories-hidden": "Organizasyonel",
 	"mobile-frontend-changeslist-ip": "Karbero bêname",
 	"mobile-frontend-changeslist-nocomment": "nê vurnaye xulasa",
@@ -42,7 +42,7 @@
 	"mobile-frontend-editor-cancel": "Bıtexelne",
 	"mobile-frontend-editor-continue": "Bahdoyên",
 	"mobile-frontend-editor-edit": "Bıvurne",
-	"mobile-frontend-editor-editing": "Vurniye no",
+	"mobile-frontend-editor-editing": "Vurniyeno",
 	"mobile-frontend-editor-editing-page": "<strong>vurêno</strong><span>$1</span>",
 	"mobile-frontend-editor-keep-editing": "Vurnayışi bışevekne",
 	"mobile-frontend-editor-previewing-page": "<span><strong>ver mosnêno</strong> $1</span>",
@@ -51,7 +51,7 @@
 	"mobile-frontend-editor-tutorial-cancel": "Nê, teşekur kenan",
 	"mobile-frontend-editor-tutorial-confirm": "Dest bıke vırnayış",
 	"mobile-frontend-editor-wait": "vurnayışo beno qeyd, teneke bıpawe.",
-	"mobile-frontend-editor-redlink-leave": "Në tesekur kena",
+	"mobile-frontend-editor-redlink-leave": "Nê, teşekur.",
 	"mobile-frontend-editor-redlink-explain": "İn per hona nëvıraziya ya.",
 	"mobile-frontend-editor-redlink-create": "Pele vıraze",
 	"mobile-frontend-enable-images": "Mobile site ra resıman aktiv kere",
@@ -170,5 +170,5 @@
 	"mobile-frontend-meta-data-issues-categories": "Heqa ena kategori",
 	"mobile-frontend-loading-message": "Bar beno...",
 	"mobile-frontend-panel-ok": "Temam",
-	"mobile-frontend-panel-cancel": "Në tesekur kena"
+	"mobile-frontend-panel-cancel": "Nê, teşekur"
 }
