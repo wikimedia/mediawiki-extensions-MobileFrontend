@@ -10,7 +10,7 @@
 	 * @uses mw.Api
 	 */
 	NotificationsOverlay = function ( options ) {
-		var modelManager, unreadCounter, controller, wrapperWidget,
+		var modelManager, unreadCounter, wrapperWidget,
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
@@ -29,9 +29,12 @@
 
 		mw.echo.config.maxPrioritizedActions = 1;
 
+		this.count = 0;
+		this.doneLoading = false;
+
 		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
 		modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } );
-		controller = new mw.echo.Controller(
+		this.controller = new mw.echo.Controller(
 			echoApi,
 			modelManager,
 			{
@@ -39,13 +42,39 @@
 			}
 		);
 
-		wrapperWidget = new mw.echo.ui.NotificationsWrapper( controller, modelManager, {
+		wrapperWidget = new mw.echo.ui.NotificationsWrapper( this.controller, modelManager, {
 			$overlay: this.$overlay
 		} );
+
+		// Mark all read
+		this.markAllReadButton = new OO.ui.ButtonWidget( {
+			icon: 'doubleCheck',
+			title: mw.msg( 'echo-mark-all-as-read' )
+		} );
+		this.markAllReadButton.toggle( false );
+		this.$( '.overlay-header' )
+			.append(
+				$( '<div>' )
+					.addClass( 'notifications-overlay-header-markAllRead' )
+					.append(
+						this.markAllReadButton.$element
+					)
+			);
+
+		// TODO: We should be using 'toast' (which uses mw.notify)
+		// when this bug is fixed: https://phabricator.wikimedia.org/T143837
+		this.confirmationWidget = new mw.echo.ui.ConfirmationPopupWidget();
+		this.$overlay.append( this.confirmationWidget.$element );
 
 		// Events
 		unreadCounter.connect( this, {
 			countChange: 'onUnreadCountChange'
+		} );
+		modelManager.connect( this, {
+			update: 'checkShowMarkAllRead'
+		} );
+		this.markAllReadButton.connect( this, {
+			click: 'onMarkAllReadButtonClick'
 		} );
 
 		// Initialize
@@ -56,12 +85,15 @@
 
 		// Populate notifications
 		wrapperWidget.populate()
-			.then( controller.updateLocalSeenTime.bind( controller ) )
-			.then( this.setBadgeSeen.bind( this ) );
+			.then( this.setDoneLoading.bind( this ) )
+			.then( this.controller.updateLocalSeenTime.bind( this.controller ) )
+			.then( this.setBadgeSeen.bind( this ) )
+			.then( this.checkShowMarkAllRead.bind( this ) );
 	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
 		className: 'overlay notifications-overlay navigation-drawer',
+		isBorderBox: false,
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -77,6 +109,49 @@
 			} ).options
 		} ),
 		/**
+		 * Set done loading flag for notifications list
+		 *
+		 * @method
+		 */
+		setDoneLoading: function () {
+			this.doneLoading = true;
+		},
+		/**
+		 * Check if notifications have finished loading
+		 *
+		 * @method
+		 * @return {Boolean} Notifications list has finished loading
+		 */
+		isDoneLoading: function () {
+			return this.doneLoading;
+		},
+		/**
+		 * Toggle mark all read button
+		 *
+		 * @method
+		 */
+		checkShowMarkAllRead: function () {
+			this.markAllReadButton.toggle(
+				this.isDoneLoading() &&
+				this.controller.manager.hasLocalUnread()
+			);
+		},
+		/**
+		 * Respond to mark all read button click
+		 */
+		onMarkAllReadButtonClick: function () {
+			var overlay = this,
+				numNotifications = this.controller.manager.getLocalNotifications().length;
+
+			this.controller.markLocalNotificationsRead()
+				.then( function () {
+					overlay.confirmationWidget.setLabel(
+						mw.msg( 'echo-mark-all-as-read-confirmation', numNotifications )
+					);
+					overlay.confirmationWidget.showAnimated();
+				} );
+		},
+		/**
 		 * Fall back to notifications archive page.
 		 * @method
 		 */
@@ -91,17 +166,21 @@
 		 */
 		onUnreadCountChange: function ( count ) {
 			var $badgeCounter = this.$badge.find( '.notification-count' );
-			if ( count > 0 ) {
+			this.count = count;
+
+			if ( this.count > 0 ) {
 				$badgeCounter.text( count ).show();
 			} else {
 				$badgeCounter.hide();
 			}
+
+			this.checkShowMarkAllRead();
 		},
 		/**
-                 * Mark that all the notifications in the badge are seen.
-                 *
-                 * @method
-                 */
+		 * Mark that all the notifications in the badge are seen.
+		 *
+		 * @method
+		 */
 		setBadgeSeen: function () {
 			this.$badge
 				.find( '.notification-count' )
