@@ -287,7 +287,7 @@
 	"mobile-frontend-sign-in-why": "如果您拥有{{SITENAME}}账户，您可以在下面登录。",
 	"mobile-frontend-sign-up-heading": "注册",
 	"mobile-frontend-talk-fullpage": "作为wiki页面阅读",
-	"mobile-frontend-talk-add-overlay-content-placeholder": "你在想什么？",
+	"mobile-frontend-talk-add-overlay-content-placeholder": "您在想什么？",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "主题",
 	"mobile-frontend-talk-add-overlay-submit": "添加讨论",
 	"mobile-frontend-talk-back-to-page": "返回“$1”页面。",
