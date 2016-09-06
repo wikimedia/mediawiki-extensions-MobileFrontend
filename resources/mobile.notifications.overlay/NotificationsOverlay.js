@@ -141,7 +141,7 @@
 		 */
 		onMarkAllReadButtonClick: function () {
 			var overlay = this,
-				numNotifications = this.controller.manager.getLocalNotifications().length;
+				numNotifications = this.controller.manager.getLocalUnread().length;
 
 			this.controller.markLocalNotificationsRead()
 				.then( function () {
