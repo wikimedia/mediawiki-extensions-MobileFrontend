@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_e716f44c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-07T13:25:57Z",
+      "side": 1,
+      "message": "I read this commit message first and then I read the bug. These are some of the questions I asked myself – out loud – before I did the latter:\n\n* All list items?\n* All lists?\n* All pages?\n* Why?\n\nPlease include more detail in this commit message.",
+      "revId": "41b2ce0fd2e1d755e151e71cca90f9a446084743",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
