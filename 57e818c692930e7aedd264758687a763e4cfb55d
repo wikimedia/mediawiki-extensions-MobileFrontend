@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_8340b65c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-08T21:43:27Z",
+      "side": 1,
+      "message": "There is a possibility of no dimensions as seen in the code at https://gerrit.wikimedia.org/r/#/c/309409/3/includes/MobileFormatter.php (line 263, the empty string).",
+      "range": {
+        "startLine": 10,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "57e818c692930e7aedd264758687a763e4cfb55d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_a3b69283",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-08T21:43:27Z",
+      "side": 1,
+      "message": "There is a possibility of an unknown number of spaces around the colon as well. We should not assume \u0027no space before\u0027 or \u0027one or no space after\u0027.",
+      "range": {
+        "startLine": 260,
+        "startChar": 25,
+        "endLine": 260,
+        "endChar": 27
+      },
+      "revId": "57e818c692930e7aedd264758687a763e4cfb55d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
