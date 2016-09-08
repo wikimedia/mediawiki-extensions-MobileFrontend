@@ -21,8 +21,6 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	protected function setUp() {
 		parent::setUp();
-		// Permit no access to the singleton
-		MobileContext::setInstanceForTesting( new BogusMobileContext() );
 	}
 
 	protected function tearDown() {
@@ -658,11 +656,5 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->setMwGlobals( 'wgTitle', null );
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
-	}
-}
-
-class BogusMobileContext {
-	public function __call( $who, $cares ) {
-		throw new Exception( "Don't touch me!" );
 	}
 }
