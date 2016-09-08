@@ -245,6 +245,51 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * @see MobileFormatter#getImageDimensions
+	 *
+	 * @param DOMElement $img
+	 * @param string $dimension Either "width" or "height"
+	 * @return string|null
+	 */
+	private function getImageDimension( DOMElement $img, $dimension ) {
+		$style = $img->getAttribute( 'style' );
+		$numMatches = preg_match( "/.*?{$dimension} *\: *([^;]*)/", $style, $matches );
+
+		if ( !$numMatches && !$img->hasAttribute( $dimension ) ) {
+			return null;
+		}
+
+		return $numMatches
+			? trim( $matches[1] )
+			: $img->getAttribute( $dimension ) . 'px';
+	}
+
+	/**
+	 * Determine the user perceived width and height of an image element based on `style`, `width`,
+	 * and `height` attributes.
+	 *
+	 * As in the browser, the `style` attribute takes precedence over the `width` and `height`
+	 * attributes. If the image has no `style`, `width` or `height` attributes, then the image is
+	 * dimensionless.
+	 *
+	 * @param DOMElement $img
+	 * @return array with width and height parameters if dimensions are found
+	 */
+	public function getImageDimensions( DOMElement $img ) {
+		$result = [];
+
+		foreach ( [ 'width', 'height' ] as $dimensionName ) {
+			$dimension = $this->getImageDimension( $img, $dimensionName );
+
+			if ( $dimension ) {
+				$result[$dimensionName] = $dimension;
+			}
+		}
+
+		return $result;
+	}
+
+	/**
 	 * Enables images to be loaded asynchronously
 	 *
 	 * @param DOMElement|DOMDocument $el Element or document to rewrite images in.
@@ -254,10 +299,10 @@ class MobileFormatter extends HtmlFormatter {
 
 		foreach ( $el->getElementsByTagName( 'img' ) as $img ) {
 			$parent = $img->parentNode;
-			$width = $img->getAttribute( 'width' );
-			$height = $img->getAttribute( 'height' );
-			$dimensionsStyle = ( $width ? "width: {$width}px;" : '' ) .
-				( $height ? "height: {$height}px;" : '' );
+			$dimensions = $this->getImageDimensions( $img );
+
+			$dimensionsStyle = ( isset( $dimensions['width'] ) ? "width: {$dimensions['width']};" : '' ) .
+				( isset( $dimensions['height'] ) ? "height: {$dimensions['height']};" : '' );
 
 			// HTML only clients
 			$noscript = $doc->createElement( 'noscript' );
@@ -273,6 +318,10 @@ class MobileFormatter extends HtmlFormatter {
 			}
 			// Assume data saving and remove srcset attribute from the non-js experience
 			$img->removeAttribute( 'srcset' );
+
+			// T145222: Add a non-breaking space inside placeholders to ensure that they do not report
+			// themselves as invisible when inline.
+			$imgPlaceholder->appendChild( $doc->createEntityReference( 'nbsp' ) );
 
 			// Set the placeholder where the original image was
 			$parent->replaceChild( $imgPlaceholder, $img );

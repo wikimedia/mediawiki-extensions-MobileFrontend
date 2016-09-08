@@ -45,12 +45,21 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		};
 
 		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
+		$imageStyles = '<img src="math.jpg" style="vertical-align: -3.505ex; '
+			. 'width: 24.412ex; height:7.343ex; background:none;">';
+		$placeholderStyles = '<span class="lazy-image-placeholder" '
+			. 'style="width: 24.412ex;height: 7.343ex;" '
+			. 'data-src="math.jpg">'
+			. ' '
+			. '</span>';
+		$noscriptStyles = '<noscript>' . $imageStyles . '</noscript>';
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
 			. 'style="width: 100px;height: 100px;" '
 			. 'data-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
 			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
+			. ' '
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
 		$refText = '<p>They saved the world with one single unit test'
@@ -103,6 +112,22 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<div class="mf-section-1"><p>text</p>'
 					. $noscript
 					. $placeholder
+					. '</div>'
+					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
+					. 'heading 2</h2><div class="mf-section-2">abc</div>',
+				$enableSections,
+				false, false, true,
+			],
+			// Test lazy loading of images with style attributes
+			[
+				'<p>text</p><h2>heading 1</h2><p>text</p>' . $imageStyles
+					. '<h2>heading 2</h2>abc',
+				'<div class="mf-section-0"><p>text</p></div>'
+					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
+					. 'heading 1</h2>'
+					. '<div class="mf-section-1"><p>text</p>'
+					. $noscriptStyles
+					. $placeholderStyles
 					. '</div>'
 					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
 					. 'heading 2</h2><div class="mf-section-2">abc</div>',
@@ -377,6 +402,75 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
 					. 'Qux</h1><div class="mf-section-2">Quux</div>',
 			],
+		];
+	}
+
+	/**
+	 * @dataProvider provideGetImageDimensions
+	 *
+	 * @param array $expected what we expect the dimensions to be.
+	 * @param string $w value of width attribute (if any)
+	 * @param stirng $h value of height attribute (if any)
+	 * @param string $style value of style attribute (if any)
+	 * @covers MobileFormatter::getImageDimensions
+	 */
+	public function testGetImageDimensions( $expected, $w, $h, $style ) {
+		$mf = new MobileFormatter( '', Title::newFromText( 'Mobile' ) );
+		$doc = new DOMDocument();
+		$img = $doc->createElement( 'img' );
+		if ( $style ) {
+			$img->setAttribute( 'style', $style );
+		}
+		if ( $w ) {
+			$img->setAttribute( 'width', $w );
+		}
+		if ( $h ) {
+			$img->setAttribute( 'height', $h );
+		}
+		$this->assertEquals( $expected, $mf->getImageDimensions( $img ) );
+	}
+
+	public function provideGetImageDimensions() {
+		return [
+			[
+				[ 'width' => '500px', 'height' => '500px' ],
+				'500',
+				'500',
+				''
+			],
+			[
+				[ 'width' => '200px', 'height' => 'auto' ],
+				'500',
+				'500',
+				'width: 200px; height: auto;'
+			],
+			[
+				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
+				'500',
+				'500',
+				'width: 24.412ex; height: 7.343ex'
+			],
+			[
+				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
+				'500',
+				'500',
+				'height: 7.343ex; width: 24.412ex'
+			],
+			[
+				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
+				'500',
+				'500',
+				'height: 7.343ex; background-image: url(foo.jpg); width:    24.412ex   ; '
+					. 'font-family: "Comic Sans";'
+			],
+
+			// <img src="..." alt="..." />
+			[
+				[],
+				'',
+				'',
+				''
+			]
 		];
 	}
 
