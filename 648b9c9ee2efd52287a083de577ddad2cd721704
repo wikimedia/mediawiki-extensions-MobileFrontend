@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_54f4c783",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-08T17:03:29Z",
+      "side": 1,
+      "message": "I haven\u0027t investigated but I found a test case this doesn\u0027t work for:\nhttps://phabricator.wikimedia.org/P4002",
+      "revId": "648b9c9ee2efd52287a083de577ddad2cd721704",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
