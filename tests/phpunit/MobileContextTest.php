@@ -34,8 +34,6 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	protected function setUp() {
 		parent::setUp();
-		// Permit no access to the singleton
-		MobileContext::setInstanceForTesting( new BogusMobileContext() );
 
 		$this->config = new GlobalVarConfig();
 		$this->baseContext = RequestContext::getMain();
@@ -691,11 +689,5 @@ class MobileContextTest extends MediaWikiTestCase {
 		$context = $this->makeContext();
 
 		$this->assertSame( $this->config, $context->getMFConfig() );
-	}
-}
-
-class BogusMobileContext {
-	public function __call( $who, $cares ) {
-		throw new Exception( "Don't touch me!" );
 	}
 }
