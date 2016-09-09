@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_1734fcf0",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-09T09:10:49Z",
+      "side": 0,
+      "message": "Test cases that are missing:\n\n* What about a style attribute like the following:\n\n    width: 24.412ex; height: 7.343ex\n\nI can see that your regular expressions handle this case and arbitrary whitespace but there\u0027s no corresponding unit tests.\n\nIn my experience, writing tests after your code tends towards writing as few test cases as possible to exercise the happy path, whereas writing tests before you write code tends towards writing tests that exercise the happy path only after all sad paths have been exhausted.\n\nBalancing writing enough unit tests to divine your design and writing too many tests that your test suite loses flexibility is an art, one which is sometimes lost on me but I still find valuable to pursue.\n\n* What about the not-inconceivable case where an image has width and height attributes and inline styles for width, height, or width and height",
+      "revId": "7d95519970f64530436c4a22faa17611ed2d8f71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

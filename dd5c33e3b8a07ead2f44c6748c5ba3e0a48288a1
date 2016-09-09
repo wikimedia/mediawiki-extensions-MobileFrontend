@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_72ff0efd",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-09T09:10:49Z",
+      "side": 1,
+      "message": "preg_match returns the number of matches. Since 0 is falsy, the common pattern – so common that it\u0027s probably a PHP idiom – is as follows:\n\n    if ( preg_match ( $regex, $value, $matches ) ) {\n      // $matches contains at least one element.\n    }",
+      "revId": "dd5c33e3b8a07ead2f44c6748c5ba3e0a48288a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_d20fe231",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-09T09:10:49Z",
+      "side": 1,
+      "message": "See my note about test cases in MobileFormatterTest.php.\n\nImagine the following img element:\n\n    \u003cimg width\u003d\"123\" height\u003d\"456\" ... /\u003e\n\nThe resultant placeholder will look like the following:\n\n    \u003cspan data-width\u003d\"123\" data-height\u003d\"456\" data-style\u003d\"width: 123px; height: 456px\" ... \u003e\u003c/span\u003e\n\nIs this duplication necessary? Which attribute(s) do you think should take precedence?",
+      "revId": "dd5c33e3b8a07ead2f44c6748c5ba3e0a48288a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
