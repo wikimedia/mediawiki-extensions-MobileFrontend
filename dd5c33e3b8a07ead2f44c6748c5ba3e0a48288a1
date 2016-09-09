@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e93376b_38a5659b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-09T18:30:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e93376b_72ff0efd",
+      "revId": "dd5c33e3b8a07ead2f44c6748c5ba3e0a48288a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e93376b_d20fe231",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-09T09:10:49Z",
       "side": 1,
       "message": "See my note about test cases in MobileFormatterTest.php.\n\nImagine the following img element:\n\n    \u003cimg width\u003d\"123\" height\u003d\"456\" ... /\u003e\n\nThe resultant placeholder will look like the following:\n\n    \u003cspan data-width\u003d\"123\" data-height\u003d\"456\" data-style\u003d\"width: 123px; height: 456px\" ... \u003e\u003c/span\u003e\n\nIs this duplication necessary? Which attribute(s) do you think should take precedence?",
+      "revId": "dd5c33e3b8a07ead2f44c6748c5ba3e0a48288a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_18aa696d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-09T18:30:09Z",
+      "side": 1,
+      "message": "Yes. I think the duplication is necessary ... if only for semantic value. The style will override height and width attributes, but the width and height express the true value of the image pre-rendering which is arguably important information.\n\nGiven the original image had this characteristics we should mimic it for whatever reason it exists that way.",
+      "parentUuid": "2e93376b_d20fe231",
       "revId": "dd5c33e3b8a07ead2f44c6748c5ba3e0a48288a1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
