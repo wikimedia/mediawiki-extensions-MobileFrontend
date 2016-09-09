@@ -128,53 +128,12 @@
 		},
 
 		/**
-		 * Setup position fixed emulation using position absolute.
-		 */
-		setupPositionFixedEmulation: function () {
-			var $el = this.$el,
-				// FIXME: Move all the variables below to Browser.js
-				ua = window.navigator.userAgent,
-				isIos = browser.isIos(),
-				isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua );
-
-			$el.addClass( 'no-position-fixed' );
-			this.on( 'scroll', function () {
-				var scrollTop = $( window ).scrollTop(),
-					windowHeight = $( window ).height(),
-					activeElement = document.activeElement,
-					scrollBottom = scrollTop + windowHeight;
-				if ( isOldIPhone ) {
-					if ( activeElement.tagName === 'TEXTAREA' || activeElement.tagName === 'INPUT' ) {
-						// add the height of the open soft keyboard
-						scrollBottom -= 120;
-					} else {
-						// add the height of the address bar
-						scrollBottom += 60;
-					}
-				}
-
-				if ( scrollTop === 0 ) {
-					// special case when we're at the beginning of the page and many
-					// browsers (e.g. Android 2.x) return wrong window height because
-					// of the URL bar
-					$el.add( '.overlay' ).height( '100%' );
-				} else {
-					// keep expanding the viewport until the end of the page reached
-					// #notification has bottom: 0 and sticks to the end of the viewport
-					$el.add( '.overlay' ).height( scrollBottom );
-				}
-			} );
-		},
-		/**
 		 * @inheritdoc
 		 */
 		postRender: function () {
 			var $el = this.$el;
 			if ( browser.supportsAnimations() ) {
 				$el.addClass( 'animations' );
-			}
-			if ( !browser.supportsPositionFixed() ) {
-				this.setupPositionFixedEmulation();
 			}
 			if ( browser.supportsTouchEvents() ) {
 				$el.addClass( 'touch-events' );
