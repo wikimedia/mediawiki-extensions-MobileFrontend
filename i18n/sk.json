@@ -6,7 +6,8 @@
 			"Sudo77(new)",
 			"Teslaton",
 			"TomášPolonec",
-			"Wizzard"
+			"Wizzard",
+			"LacoR"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Skočiť o sekciu späť",
@@ -24,8 +25,6 @@
 	"mobile-frontend-home-button": "Hlavná stránka",
 	"mobile-frontend-images-status": "Obrázky",
 	"mobile-frontend-language-article-heading": "Čítať v inom jazyku",
-	"mobile-frontend-language-header": "Tento článok je dostupný v $1 {{PLURAL:$1|jazyku|jazykoch}}",
-	"mobile-frontend-language-site-choose": "Hľadať jazyk",
 	"mobile-frontend-last-modified-date": "Naposledy upravené $1 o $2",
 	"mobile-frontend-main-menu-account-create": "Vytvoriť účet",
 	"mobile-frontend-main-menu-button-tooltip": "Otvoriť hlavné menu",
@@ -58,6 +57,7 @@
 	"mobile-frontend-view": "Mobilné zobrazenie",
 	"mobile-frontend-view-desktop": "Štandardné",
 	"mobile-frontend-view-mobile": "Mobilné",
+	"mobile-frontend-user-page-uploads": "Nahrané súbory",
 	"tag-mobile_edit": "Úprava z mobilu",
 	"tag-mobile_web_edit": "Úprava z mobilného webu",
 	"mobile-frontend-pageaction-edit-tooltip": "Upraviť úvodnú sekciu"
