@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_8fbc5069",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-09-10T00:01:56Z",
+      "side": 1,
+      "message": "You could find a way to reuse (or make reusable) mw.echo.ui.NotificationBadgeWidget.prototype.getCappedNotificationCount for this. But even if you don\u0027t you should at least use mw.config.get( \u0027wgEchoMaxNotificationCount\u0027 ) + 1 instead of hardcoding 100.",
+      "range": {
+        "startLine": 176,
+        "startChar": 7,
+        "endLine": 177,
+        "endChar": 24
+      },
+      "revId": "279e32f28d21f33da2b47a3c7096e03e4d422d3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
