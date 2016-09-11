@@ -26,7 +26,8 @@
 									lat: 37.787,
 									lon: -122.41,
 									primary: '',
-									globe: 'earth'
+									globe: 'earth',
+									dist: 120200
 								} ]
 							},
 							18618509: {
@@ -43,7 +44,8 @@
 									lat: 37.787,
 									lon: -122.51,
 									primary: '',
-									globe: 'earth'
+									globe: 'earth',
+									dist: 0
 								} ]
 							},
 							9297443: {
@@ -54,7 +56,8 @@
 									lat: 37.7854,
 									lon: -122.61,
 									primary: '',
-									globe: 'earth'
+									globe: 'earth',
+									dist: 177400
 								} ]
 							}
 						}
@@ -91,24 +94,24 @@
 
 	QUnit.test( '#getPages', 6, function ( assert ) {
 		m.getPages( {
-			latitude: 37.786825199999996,
-			longitude: -122.4
+			latitude: 37.787,
+			longitude: -122.51
 		} ).done( function ( pages ) {
 			assert.strictEqual( pages.length, 3 );
-			assert.strictEqual( pages[ 0 ].title, 'The Montgomery (San Francisco)' );
+			assert.strictEqual( pages[ 0 ].title, 'Wikimedia Foundation' );
 			assert.ok( !pages[ 0 ].thumbnail.isLandscape );
 			assert.strictEqual( pages[ 2 ].title, 'W San Francisco' );
 			assert.strictEqual( pages[ 2 ].thumbnail, undefined );
-			assert.strictEqual( pages[ 2 ].dist.toPrecision( 6 ), '23.3769' );
+			assert.strictEqual( pages[ 2 ].dist.toPrecision( 6 ), '177.400' );
 		} );
 	} );
 
 	QUnit.test( '#getPagesAroundPage', 4, function ( assert ) {
-		m.getPagesAroundPage( 'The Montgomery (San Francisco)' ).done( function ( pages ) {
+		m.getPagesAroundPage( 'Wikimedia Foundation' ).done( function ( pages ) {
 			assert.strictEqual( pages.length, 2 );
 			assert.strictEqual( pages[ 1 ].title, 'W San Francisco' );
 			assert.strictEqual( pages[ 1 ].thumbnail, undefined );
-			assert.strictEqual( pages[ 1 ].dist.toPrecision( 6 ), '22.2639' );
+			assert.strictEqual( pages[ 1 ].dist.toPrecision( 6 ), '177.400' );
 		} );
 	} );
 

@@ -5,42 +5,6 @@
 		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
-	 * FIXME: Api should surely know this and return it in response to save us the hassle
-	 * FIXME: Add some tests :)
-	 * Apply the Haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula ) and calculate the distance
-	 * between two points as the crow flies.
-	 * @method
-	 * @ignore
-	 * @param {Object} from with latitude and longitude keys
-	 * @param {Object} to with latitude and longitude keys
-	 * @return {Number} distance in kilometers
-	 */
-	function calculateDistance( from, to ) {
-		var distance, a,
-			toRadians = Math.PI / 180,
-			deltaLat, deltaLng,
-			startLat, endLat,
-			haversinLat, haversinLng,
-			radius = 6378; // radius of Earth in km
-
-		if ( from.latitude === to.latitude && from.longitude === to.longitude ) {
-			distance = 0;
-		} else {
-			deltaLat = ( to.longitude - from.longitude ) * toRadians;
-			deltaLng = ( to.latitude - from.latitude ) * toRadians;
-			startLat = from.latitude * toRadians;
-			endLat = to.latitude * toRadians;
-
-			haversinLat = Math.sin( deltaLat / 2 ) * Math.sin( deltaLat / 2 );
-			haversinLng = Math.sin( deltaLng / 2 ) * Math.sin( deltaLng / 2 );
-
-			a = haversinLat + Math.cos( startLat ) * Math.cos( endLat ) * haversinLng;
-			return 2 * radius * Math.asin( Math.sqrt( a ) );
-		}
-		return distance;
-	}
-
-	/**
 	 * API for retrieving nearby pages
 	 * @class NearbyGateway
 	 * @param {Object} options
@@ -118,7 +82,7 @@
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		_search: function ( params, range, exclude ) {
-			var loc, requestParams,
+			var requestParams,
 				d = $.Deferred(),
 				self = this;
 
@@ -132,6 +96,12 @@
 				formatversion: 2
 			}, params );
 
+			if ( params.ggscoord ) {
+				requestParams.codistancefrompoint = params.ggscoord;
+			} else if ( params.ggspage ) {
+				requestParams.codistancefrompage = params.ggspage;
+			}
+
 			this.api.ajax( requestParams ).then( function ( resp ) {
 				var pages;
 				if ( resp.query ) {
@@ -140,39 +110,15 @@
 					pages = [];
 				}
 
-				// If we have coordinates then set them so that the results are sorted by
-				// distance
-				if ( params.ggscoord ) {
-					loc = {
-						latitude: params.ggscoord[0],
-						longitude: params.ggscoord[1]
-					};
-				}
-				// If we have no coords (searching for a page's nearby), find the
-				// page in the results and get its coords.
-				if ( params.ggspage ) {
-					$.each( pages, function ( i, page ) {
-						if ( params.ggspage === page.title ) {
-							loc = {
-								latitude: page.coordinates[0].lat,
-								longitude: page.coordinates[0].lon
-							};
-						}
-					} );
-				}
-
 				pages = $.map( pages, function ( page, i ) {
-					var coords, lngLat, p;
+					var coords, p;
 					p = Page.newFromJSON( page );
 					p.anchor = 'item_' + i;
-					if ( page.coordinates && loc ) { // FIXME: protect against bug 47133 (remove when resolved)
+
+					if ( page.coordinates ) { // FIXME: protect against bug T49133 (remove when resolved)
 						coords = page.coordinates[0];
-						lngLat = {
-							latitude: coords.lat,
-							longitude: coords.lon
-						};
 						// FIXME: Make part of the Page object
-						p.dist = calculateDistance( loc, lngLat );
+						p.dist = coords.dist / 1000;
 						p.latitude = coords.lat;
 						p.longitude = coords.lon;
 						p.proximity = self._distanceMessage( p.dist );
