@@ -71,7 +71,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3 detik|$3 detik}} yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} tahun yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}",
 	"mobile-frontend-last-modified-years": "Dianyari pungkasan {{PLURAL:$1|$1 taun|$1 taun}} kapungkur",
-	"mobile-frontend-lead-image-tutorial-confirm": "Miwiti pangunggahan",
+	"mobile-frontend-lead-image-tutorial-confirm": "Wiwit ngunggah",
 	"mobile-frontend-lead-image-tutorial-summary": "Pastikan bahwa gambar Anda dapat membantu mengilustrasikan halaman. Gambar tersebut harus gambar yang Anda buat sendiri, yang tidak melanggar hak cipta.",
 	"mobile-frontend-logged-in-homepage-notification": "Sugeng Rawuh, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Mlebu minangka $1",
