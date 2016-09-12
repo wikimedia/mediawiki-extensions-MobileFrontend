@@ -83,7 +83,7 @@
 	"mobile-frontend-disable-images": "停用移动版网站的图像",
 	"mobile-frontend-dismiss-notification": "关闭本通知",
 	"mobile-frontend-donate-image-anon": "请登录以查看上传页面。",
-	"mobile-frontend-donate-image-heading": "你最近的贡献",
+	"mobile-frontend-donate-image-heading": "您最近的贡献",
 	"mobile-frontend-donate-image-login-action": "<strong>{{SITENAME}}上的媒体是由向您一样的人们捐赠的。</strong><br />登录以共享您的媒体。",
 	"mobile-frontend-donate-image-nouploads": "无上传。",
 	"mobile-frontend-donate-image-signup-action": "注册以共享您的媒体至全世界。",
