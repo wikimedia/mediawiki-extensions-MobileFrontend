@@ -149,34 +149,6 @@
 				this.supportsCSSProperty( 'transition' );
 		} ),
 		/**
-		 * Detect if fixed position is supported in browser
-		 * http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
-		 * https://github.com/Modernizr/Modernizr/issues/167
-		 * http://mobilehtml5.org/
-		 * @method
-		 * @return {Boolean}
-		 */
-		supportsPositionFixed: memoize( function () {
-			var support = false,
-				userAgent = this.userAgent;
-
-			$.each( [
-				// Webkit 534+
-				/AppleWebKit\/(53[4-9]|5[4-9]\d|[6-9]\d\d|\d{4,})/,
-				// Android 2+ (we lockViewport for Android 2 meaning we can support it)
-				/Android [2-9]/,
-				// any Firefox
-				/Firefox/,
-				// Trident (IE 10+)
-				/Trident\/[6-9]|Trident\/1\d[\d\.]+/
-			], function ( index, item ) {
-				if ( item.test( userAgent ) ) {
-					support = true;
-				}
-			} );
-			return support;
-		} ),
-		/**
 		 * Whether touchstart and other touch events are supported by the current browser.
 		 *
 		 * @method

@@ -28,12 +28,6 @@
 		}
 	} );
 
-	QUnit.test( '#setupPositionFixedEmulation', 1, function ( assert ) {
-		this.skin.setupPositionFixedEmulation();
-		assert.strictEqual( this.$el.hasClass( 'no-position-fixed' ), true,
-			'Skin is marked as working in emulated mode.' );
-	} );
-
 	QUnit.test( '#lazyLoadReferences', 1, function ( assert ) {
 		var $content = this.$el;
 		this.skin.lazyLoadReferences( {
