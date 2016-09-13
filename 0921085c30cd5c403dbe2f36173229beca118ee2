@@ -40,6 +40,24 @@
       "revId": "0921085c30cd5c403dbe2f36173229beca118ee2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_57b66dd8",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-13T09:31:34Z",
+      "side": 1,
+      "message": "\u003e Is it necessary to check the existence of p.className?\n\nYes.\n\nNodes returned by Node.firstChild, Node.nextSibling, and Node.previousSibling aren\u0027t guaranteed to be element nodes, e.g. they could be text or comment nodes.\n\nThe following test would have the same effect but be less readable IMO:\n\n    p \u0026\u0026 p.nodeType \u003d\u003d\u003d 1\n\nwhere 1 is the value of the Node.ELEMENT_NODE constant.\n\n---\n\nFor good reason, this script is very tightly bound to the structure of the RL-disabled fallback that we use for lazily-loaded images. This change represents the cheapest check we can add to make it resilient against other similar fallbacks being present on the page.",
+      "parentUuid": "2e93376b_9e1ab27c",
+      "revId": "0921085c30cd5c403dbe2f36173229beca118ee2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
