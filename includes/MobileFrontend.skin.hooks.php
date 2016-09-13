@@ -25,7 +25,7 @@ class MobileFrontendSkinHooks {
 	ns = document.getElementsByTagName( 'noscript' );
 	for ( i = 0; i < ns.length; i++ ) {
 		p = ns[i].nextSibling;
-		if ( p.className.indexOf( 'lazy-image-placeholder' ) > -1 ) {
+		if ( p && p.className && p.className.indexOf( 'lazy-image-placeholder' ) > -1 ) {
 			img = document.createElement( 'img' );
 			img.setAttribute( 'src', p.getAttribute( 'data-src' ) );
 			img.setAttribute( 'width', p.getAttribute( 'data-width' ) );
