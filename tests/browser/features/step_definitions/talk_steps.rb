@@ -1,5 +1,8 @@
 When(/^I click the talk button$/) do
-  on(ArticlePage).talk_element.when_present.click
+  on(ArticlePage) do |page|
+    page.wait_until_rl_module_ready('skins.minerva.talk')
+    page.talk_element.when_present.click
+  end
 end
 
 When(/^I click the add discussion button$/) do
@@ -7,7 +10,10 @@ When(/^I click the add discussion button$/) do
 end
 
 Then(/^I should see the talk overlay$/) do
-  expect(on(ArticlePage).overlay_heading_element.when_present.text).to match 'Talk'
+  on(ArticlePage) do |page|
+    page.wait_until_rl_module_ready('mobile.talk.overlays')
+    expect(on(ArticlePage).overlay_heading_element.when_present.text).to match 'Talk'
+  end
 end
 
 Then(/^there should be no talk button$/) do

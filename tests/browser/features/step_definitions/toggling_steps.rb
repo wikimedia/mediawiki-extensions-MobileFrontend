@@ -1,5 +1,8 @@
 When(/^I click on the first collapsible section heading$/) do
-  on(ArticlePage).first_section_element.when_present.click
+  on(ArticlePage) do |page|
+    page.wait_until_rl_module_ready('skins.minerva.toggling')
+    page.first_section_element.when_present.click
+  end
 end
 
 Then(/^I should not see the content of the first section$/) do
