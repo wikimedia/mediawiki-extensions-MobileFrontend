@@ -11,7 +11,7 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 		foreach ( $this->unsetReqVals as $v ) {
 			MobileContext::singleton()->getRequest()->unsetVal( $v );
 		}
-		MobileContext::resetServiceForTesting();
+		MobileContext::setInstance( null ); // refresh MobileContext instance
 		parent::tearDown();
 	}
 	/**
@@ -142,3 +142,4 @@ class MockInlineDifferenceEngine extends InlineDifferenceEngine {
 		return '';
 	}
 }
+
