@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_90fd9c3b",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-09-14T14:14:39Z",
+      "side": 1,
+      "message": "These lines are all unnecessary (they are optional parameters that default to `false`).",
+      "range": {
+        "startLine": 467,
+        "startChar": 4,
+        "endLine": 469,
+        "endChar": 9
+      },
+      "revId": "0e2a7096b65577e6fb2eb0d8d28a7fd9f88521d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
