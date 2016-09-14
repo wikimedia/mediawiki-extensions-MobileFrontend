@@ -32,6 +32,8 @@
 					generator: this.generator.name
 				} );
 
+			data.redirects = '';
+
 			data['g' + prefix + 'search'] = query;
 			data['g' + prefix + 'namespace'] = this.searchNamespace;
 			data['g' + prefix + 'limit'] = 15;
