@@ -336,6 +336,8 @@
 	"mobile-frontend-quick-lookup-looking": "تبحث عن\"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "لا يمكن أن تجد أي شيء مطابقة\"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "عذرا، هذا ليس رابط في هذا الويكي.",
+	"mobile.css": "/* CSS المعروض هنا سيؤثر على مستخدمي موقع المحمول */",
+	"mobile.js": "/* أي JavaScript هنا سيتم تحميله لمستخدمي موقع المحمول */",
 	"nearby": "صفحات فيها مواضيع قريبة منك",
 	"right-mf-uploadbutton": "استخدم زر الرفع على صفحات الجوال.",
 	"tag-mobile_edit": "تحرير من الجوال",
@@ -371,6 +373,7 @@
 	"mobile-frontend-loading-message": "جاري التحميل...",
 	"mobile-frontend-panel-ok": "موافق",
 	"mobile-frontend-panel-cancel": "لا شكر",
+	"mobile-frontend-panel-betaoptin-msg": "هل تريد تجربة بعض الخصائص الجديدة؟ بالاشترك في البيتا، فستحصل الخصائص التجريبية، لكن مع احتمال مصادفة بعض العلل والقضايا.",
 	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك",
 	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟"
 }
