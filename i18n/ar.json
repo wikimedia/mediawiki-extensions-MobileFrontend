@@ -371,6 +371,7 @@
 	"mobile-frontend-donate-button-label": "تبرّع",
 	"mobile-frontend-meta-data-issues-categories": "عن هذا التصنيف",
 	"mobile-frontend-loading-message": "جاري التحميل...",
+	"mobile-frontend-console-recruit": "\\o/ مرحبا! هذا برنامج مفتوح المصدر ونحتاج لمتطوعين لمساعدتنا في بناء هذا الشيء، وجعله أفضل وإصلاح أي علل ربما تكون تراها في كونصول JavaScript هذا!\n\nيمكنك أن تجد سجلنا المتأخر @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "موافق",
 	"mobile-frontend-panel-cancel": "لا شكر",
 	"mobile-frontend-panel-betaoptin-msg": "هل تريد تجربة بعض الخصائص الجديدة؟ بالاشترك في البيتا، فستحصل الخصائص التجريبية، لكن مع احتمال مصادفة بعض العلل والقضايا.",
