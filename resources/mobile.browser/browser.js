@@ -108,11 +108,11 @@
 		 * @method
 		 * @return {Boolean}
 		 */
-		isWideScreen: function () {
+		isWideScreen: memoize( function () {
 			var val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
 			// Check portrait and landscape mode to be consistent
 			return window.innerWidth >= val || window.innerHeight >= val;
-		},
+		} ),
 		/**
 		 * Checks browser support for a given CSS property
 		 * @param {String} [property] the name of the property being tested
