@@ -176,17 +176,36 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML
 	 *
 	 * Applies MobileFormatter to mobile viewed content
+	 * Also enables Related Articles in the footer in the beta mode.
 	 *
 	 * @param OutputPage $out
 	 * @param string $text the HTML to be wrapped inside the #mw-content-text element
 	 * @return bool
 	 */
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
+		global $wgRelatedArticlesFooterBlacklistedSkins;
+
 		$context = MobileContext::singleton();
 		// Perform a few extra changes if we are in mobile mode
 		if ( $context->shouldDisplayMobileView() ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text, $context->isBetaGroupMember() );
 		}
+
+		// FIXME: remove the following when RelatedArticles are promoted from beta to stable
+		// Configure related articles to be shown in the footer for the beta mode
+		// The reason this code is here rather than inside the 'BeforePageDisplay' hook is
+		// that we want to execute this code before RelatedArticles decides not to show
+		// related articles if the skin is blacklisted.
+		if (
+			ExtensionRegistry::getInstance()->isLoaded( 'RelatedArticles' ) &&
+			MobileContext::singleton()->isBetaGroupMember()
+		) {
+			$needle = array_search( 'minerva', $wgRelatedArticlesFooterBlacklistedSkins ?: [] );
+			if ( $needle !== false ) {
+				array_splice( $wgRelatedArticlesFooterBlacklistedSkins, $needle, 1 );
+			}
+		}
+
 		return true;
 	}
 
