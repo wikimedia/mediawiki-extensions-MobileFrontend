@@ -147,15 +147,6 @@ Options to control several functions of the mobile editor.  Possible values:
   ]
 ```
 
-#### $wgMFEnableSiteNotice
-
-Whether site notice's can be shown in the mobile skin.
-
-See: <https://www.mediawiki.org/wiki/Manual:$wgSiteNotice>
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFIgnoreEventLoggingBucketing
 
 Disable EventLogging bucketing for purposes of development.  When enabled all
@@ -235,6 +226,7 @@ risk!
 #### $wgMinervaEnableSiteNotice
 
 Controls whether site notices should be shown.
+See <https://www.mediawiki.org/wiki/Manual:$wgSiteNotice>.
 
 * Type: `Boolean`
 * Default: `false`
@@ -363,12 +355,7 @@ Define a set of params that should be passed in every gateway query.
 ```
 
 
-#### $wgMFPageActions (deprecated)
-
-See `$wgMinervaPageActions`.
-
 #### $wgMinervaPageActions
-
 
 Controls which page actions, if any, are displayed. Allowed: `edit`, `watch`, `talk`, and
 `switch-language`.

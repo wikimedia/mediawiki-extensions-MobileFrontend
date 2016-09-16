@@ -1434,11 +1434,16 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Handler for Extension registration callback
+	 * Extension registration callback.
+	 *
+	 * `extension.json` has parsed and the configuration merged with the current state of the
+	 * application. `MediaWikiServices` isn't bootstrapped so no services defined by extensions are
+	 * available.
+	 *
+	 * @warning DO NOT try to access services defined by MobileFrontend here.
 	 */
 	public static function onRegistration() {
-		global $wgResourceLoaderLESSImportPaths, $wgMinervaPageActions, $wgMinervaEnableSiteNotice,
-			$wgDisableAuthManager, $wgAuthManagerAutoConfig;
+		global $wgResourceLoaderLESSImportPaths, $wgDisableAuthManager;
 
 		// modify login/registration form
 		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
@@ -1450,19 +1455,6 @@ class MobileFrontendHooks {
 
 		// Set LESS importpath
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
-
-		$config = MobileContext::singleton()->getConfig();
-
-		// For backwards compatiblity update new Minerva prefixed global with old MF value
-		if ( $config->has( 'MFPageActions' ) ) {
-			// FIXME: Use wfDeprecated to officially deprecate in later patchset
-			$wgMinervaPageActions = $config->get( 'MFPageActions' );
-		}
-		// For backwards compatiblity.
-		if ( $config->has( 'MFEnableSiteNotice' ) ) {
-			// FIXME: Use wfDeprecated to officially deprecate in later patchset
-			$wgMinervaEnableSiteNotice = $config->get( 'MFEnableSiteNotice' );
-		}
 	}
 
 	/**
