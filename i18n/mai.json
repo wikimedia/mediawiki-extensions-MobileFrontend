@@ -3,7 +3,8 @@
 		"authors": [
 			"Tulsi Bhagat",
 			"बिप्लब आनन्द",
-			"Bijay chaurasia"
+			"Bijay chaurasia",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "कुनो सम्पादन सारांश",
@@ -26,10 +27,10 @@
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "बेतरतीब",
 	"mobile-frontend-terms-text": "उपयोगक शर्तसभ",
-	"mobile-frontend-view": "मोबाइल दृष्टि",
+	"mobile-frontend-view": "दूरभाष दृष्टि",
 	"mobile-frontend-view-desktop": "डेस्कटप",
-	"mobile-frontend-view-mobile": "मोबाइल",
-	"tag-mobile_edit": "मोबाइल सम्पादन",
-	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
+	"mobile-frontend-view-mobile": "दूरभाष",
+	"tag-mobile_edit": "दूरभाष सम्पादन",
+	"tag-mobile_web_edit": "दूरभाष जाल सम्पादन",
 	"mobile-frontend-pageaction-edit-tooltip": "ई पन्नाके नेतृत्व अनुभागक सम्पादित करी।"
 }

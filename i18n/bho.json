@@ -4,7 +4,8 @@
 			"Amire80",
 			"Nepaboy",
 			"Ganesh",
-			"SatyamMishra"
+			"SatyamMishra",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "संपादन के छोट विवरण (सारांश) नइखे",
@@ -28,10 +29,10 @@
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
 	"mobile-frontend-sign-up-heading": "खाता खोलीं",
 	"mobile-frontend-terms-text": "उपयोग के शर्त कुल",
-	"mobile-frontend-view": "मोबाइल अवलोकन",
+	"mobile-frontend-view": "दूरभाष अवलोकन",
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
-	"mobile-frontend-view-mobile": "मोबाइल",
-	"tag-mobile_edit": "मोबाइल संपादन",
+	"mobile-frontend-view-mobile": "दूरभाष",
+	"tag-mobile_edit": "दूरभाष संपादन",
 	"tag-mobile_web_edit": "मोबाइल वेब संपादन",
 	"mobile-frontend-pageaction-edit-tooltip": "ए पन्ना के मुख्य खंड के संपादन करीं"
 }

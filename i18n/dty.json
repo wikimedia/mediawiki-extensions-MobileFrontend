@@ -3,7 +3,8 @@
 		"authors": [
 			"जनक राज भट्ट",
 			"रमेश सिंह बोहरा",
-			"Nirajan pant"
+			"Nirajan pant",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "कोई सम्पादन सारांश आथिन",
@@ -25,10 +26,10 @@
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "कोइ पन एक",
 	"mobile-frontend-terms-text": "प्रयोगका कसम",
-	"mobile-frontend-view": "मोबाइल दृश्य",
+	"mobile-frontend-view": "दूरभाष दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटप",
-	"mobile-frontend-view-mobile": "मोबाइल",
-	"tag-mobile_edit": "मोबाइल सम्पादन",
-	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
+	"mobile-frontend-view-mobile": "दूरभाष",
+	"tag-mobile_edit": "दूरभाष सम्पादन",
+	"tag-mobile_web_edit": "दूरभाष वेब सम्पादन",
 	"mobile-frontend-pageaction-edit-tooltip": "ये पानाका मुख्य भागलाई सम्पादन गर |"
 }

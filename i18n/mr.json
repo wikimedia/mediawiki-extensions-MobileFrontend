@@ -12,7 +12,8 @@
 			"V.narsikar",
 			"संतोष दहिवळ",
 			"BPositive",
-			"अभय नातू"
+			"अभय नातू",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "विपत्रपत्ता (ई-मेल) (ऐच्छिक)",
@@ -23,7 +24,7 @@
 	"mobile-frontend-changeslist-nocomment": "बदलांचा आढावा नाही",
 	"mobile-frontend-clear-search": "हटवा",
 	"mobile-frontend-copyright": "इतर काही नोंद केली नसल्यास,येथील मजकूर $1च्या अंतर्गत उपलब्ध आहे.",
-	"mobile-frontend-desc": "मोबाइल फ्रंटएंड",
+	"mobile-frontend-desc": "दूरभाष फ्रंटएंड",
 	"mobile-frontend-diffview-404-title": "खराब आवृत्ती",
 	"mobile-frontend-diffview-anonymous": "अनामिक सदस्य",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|बाइटची|बाइट्सची}} भर घातली",
@@ -156,7 +157,6 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "विषय",
 	"mobile-frontend-talk-add-overlay-submit": "चर्चा जोडा",
 	"mobile-frontend-talk-back-to-page": "\"$1\" पानाकडे परत चला.",
-	"mobile-frontend-talk-edit-summary": "नवीन चर्चा विभाग: $1",
 	"mobile-frontend-talk-explained": "पुढील चर्चा सध्या चालू आहेत",
 	"mobile-frontend-talk-explained-empty": "या पानाविषयी चर्चा नाहीत.",
 	"mobile-frontend-talk-overlay-header": "चर्चा",

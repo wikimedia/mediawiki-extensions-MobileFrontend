@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Angpradesh",
-			"Samyo"
+			"Samyo",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "एक अनुभाग पीछू जा",
@@ -10,12 +11,9 @@
 	"mobile-frontend-copyright": "सामग्री $1 केरऽ अधीन छै जब तलक अलग सं॑ उल्लेख नै करलऽ गेलऽ हुअ॑",
 	"mobile-frontend-editor-edit": "संपादन करऽ",
 	"mobile-frontend-featured-article": "आजकऽ निर्वाचित लेख",
-	"mobile-frontend-generic-login": "{{SITENAME}} तोरे ऐन्हऽ लोगऽ द्वारा बनैलऽ गेलऽ .",
-	"mobile-frontend-generic-login-action": "योगदान करै लेली लॉग-इन करऽ",
 	"mobile-frontend-home-button": "मुखपृष्ठ",
 	"mobile-frontend-language-article-heading": "दोसरऽ भाषा मं॑ पढ़ऽ",
 	"mobile-frontend-last-modified-date": "पिछला दाफी $1 पर संपादित करलऽ गेलै, $2 प॑",
-	"mobile-frontend-login": "लॉग इन",
 	"mobile-frontend-main-menu-account-create": "नवीन खाता बनाबऽ",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलऽ",
 	"mobile-frontend-main-menu-login": "लॉग-इन करऽ",
@@ -30,10 +28,9 @@
 	"mobile-frontend-regular-site": "इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ",
 	"mobile-frontend-search-submit": "चलॊ",
 	"mobile-frontend-terms-text": "उपयोग केरऽ शर्तें",
-	"mobile-frontend-username-placeholder": "यूजरनाम",
-	"mobile-frontend-view": "मोबाइल दृश्य",
+	"mobile-frontend-view": "दूरभाष दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
-	"mobile-frontend-view-mobile": "मोबाइल",
+	"mobile-frontend-view-mobile": "दूरभाष",
 	"tag-mobile_edit": "मोबाईल संपादन",
 	"tag-mobile_web_edit": "मोबाईल वेब संपादन",
 	"mobile-frontend-pageaction-edit-tooltip": "इ पन्ना केरऽ भूमिका क॑ सम्पादित करऽ"
