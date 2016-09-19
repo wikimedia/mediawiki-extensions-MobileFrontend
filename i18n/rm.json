@@ -2,15 +2,27 @@
 	"@metadata": {
 		"authors": [
 			"Gion-andri",
-			"Kazu89"
+			"Kazu89",
+			"Terfili"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Siglir enavos in chapitel",
+	"mobile-frontend-changeslist-nocomment": "negina resumaziun da la midada",
 	"mobile-frontend-copyright": "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.",
+	"mobile-frontend-editor-edit": "Modifitgar",
 	"mobile-frontend-featured-article": "Artitgels dal di",
 	"mobile-frontend-home-button": "Chasa",
+	"mobile-frontend-main-menu-account-create": "Crear in conto d'utilisader",
+	"mobile-frontend-main-menu-login": "T'annunziar",
+	"mobile-frontend-main-menu-nearby": "Sper",
+	"mobile-frontend-main-menu-settings": "Configuraziun",
+	"mobile-frontend-main-menu-watchlist": "Glista d'observaziun",
+	"mobile-frontend-password-placeholder": "Pled-clav",
+	"mobile-frontend-placeholder": "Tschertgar {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Protecziun da datas",
 	"mobile-frontend-random-button": "Casual",
 	"mobile-frontend-regular-site": "Visitar la pagina regulara da {{SITENAME}}",
 	"mobile-frontend-search-submit": "Dai",
+	"mobile-frontend-terms-text": "Cundiziuns d'utilisaziun",
 	"mobile-frontend-view": "Versiun mobila"
 }

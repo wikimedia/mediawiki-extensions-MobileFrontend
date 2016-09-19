@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yejianfei"
+			"Yejianfei",
+			"GnuDoyng"
 		]
 	},
+	"mobile-frontend-editor-edit": "Siŭ-gāi",
 	"mobile-frontend-talk-reply": "回覆"
 }
