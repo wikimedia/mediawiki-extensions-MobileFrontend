@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_34cf56b7",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-20T20:50:55Z",
+      "side": 1,
+      "message": "Firstly, this idea is neat and I think it\u0027ll save us a whole lot of pain.\n\nAs discussed, this shouldn\u0027t be a step, i.e. be exposed to the test author at a high level, but a method on PageObject, i.e.\n\n    module PageObjectExtensions do\n      module ResourceLoader do\n        def module_loaded?(module) do\n          wait_until do\n            browser.execute_script(\"return mw.loader.getState(\u0027#{module_name}\u0027) \u003d\u003d\u003d \u0027ready\u0027\")\n          end\n\n          yield\n        end\n      end\n    end\n\n    # Somewhere else... init.rb?\n    PageObject.include PageObjectExtensions::ResourceLoader",
+      "revId": "98cc6f316576bd9abe98997c369cd055e3bd21f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
