@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_83b8cd75",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-20T11:56:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e82f318_a3f23101",
+      "revId": "948ebdc184e3ffb81ec7df33496ae6a5d8ae7499",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_63baf91f",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -47,6 +65,42 @@
       "writtenOn": "2016-09-20T09:40:20Z",
       "side": 1,
       "message": "This line also triggers a notice as the \"minerva\" key shouldn\u0027t exist.",
+      "parentUuid": "0e82f318_63baf91f",
+      "revId": "948ebdc184e3ffb81ec7df33496ae6a5d8ae7499",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_c371e5de",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-20T11:56:16Z",
+      "side": 1,
+      "message": "Doesn\u0027t this line not get executed if \"minerva\" is not in the list of blacklisted skins (line 167)?",
+      "parentUuid": "0e82f318_c380054e",
+      "revId": "948ebdc184e3ffb81ec7df33496ae6a5d8ae7499",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_037bfdbd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-20T11:56:16Z",
+      "side": 1,
+      "message": "Makes sense.",
       "parentUuid": "0e82f318_63baf91f",
       "revId": "948ebdc184e3ffb81ec7df33496ae6a5d8ae7499",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
