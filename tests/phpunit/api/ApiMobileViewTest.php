@@ -131,15 +131,11 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 	private function executeMobileViewApi( $api, $expected ) {
 		$api->execute();
-		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$result = $api->getResult()->getResultData( null, [
-				'BC' => [],
-				'Types' => [],
-				'Strip' => 'all',
-			] );
-		} else {
-			$result = $api->getResultData();
-		}
+		$result = $api->getResult()->getResultData( null, [
+			'BC' => [],
+			'Types' => [],
+			'Strip' => 'all',
+		] );
 		$this->assertTrue(
 			isset( $result['mobileview'] ),
 			'API output should be encloded in mobileview element'
@@ -408,11 +404,7 @@ Text 2
 
 		$api->execute();
 
-		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$result = $api->getResult()->getResultData();
-		} else {
-			$result = $api->getResultData();
-		}
+		$result = $api->getResult()->getResultData();
 
 		foreach ( $props as $prop ) {
 			$this->assertFalse(

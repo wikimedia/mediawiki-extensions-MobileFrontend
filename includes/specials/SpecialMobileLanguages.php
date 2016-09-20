@@ -36,17 +36,8 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		);
 
 		$api->execute();
-		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$data = (array)$api->getResult()->getResultData( [ 'query', 'pages' ],
-				[ 'Strip' => 'all' ] );
-		} else {
-			$data = $api->getResult()->getData();
-			// Paranoia
-			if ( !isset( $data['query']['pages'] ) ) {
-				return [];
-			}
-			$data = $data['query']['pages'];
-		}
+		$data = (array)$api->getResult()->getResultData( [ 'query', 'pages' ],
+			[ 'Strip' => 'all' ] );
 
 		return $this->processLanguages( $data );
 	}
