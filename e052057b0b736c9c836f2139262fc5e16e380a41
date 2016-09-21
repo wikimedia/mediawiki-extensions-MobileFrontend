@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_fef2f401",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-21T19:04:06Z",
+      "side": 1,
+      "message": "I think we use the global here instead of getMFConfig as we are monkey patching the default. Am I correct?\n\nThis got me thinking so I\u0027ve raised\nhttps://phabricator.wikimedia.org/T146312",
+      "revId": "e052057b0b736c9c836f2139262fc5e16e380a41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_bee87c0c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-21T19:04:06Z",
+      "side": 1,
+      "message": "Do we want to leave a FIXME to remove this when this goes to stable?",
+      "revId": "e052057b0b736c9c836f2139262fc5e16e380a41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
