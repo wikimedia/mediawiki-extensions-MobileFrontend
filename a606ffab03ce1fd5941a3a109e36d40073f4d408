@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_28ad3581",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-21T09:28:11Z",
+      "side": 1,
+      "message": "As I alluded to – but didn\u0027t explain – before, use array_splice to remove a value by index from a list.\n\nThis is important because PHP represents lists and maps – and more! – using the same data structure internally, an ordered dictionary. In PHP, a list is an ordered dictionary where the keys are sequential, i.e. [ 1, 2, 3 ] is [ 0 \u003d\u003e 1, 1 \u003d\u003e 2, 2 \u003d\u003e 3 ]. When you unset an index the keys become non-sequential, i.e.\n\n    $list \u003d [ 1, 2, 3 ];\n    unset( $list[1] ); // $list \u003d [ 0 \u003d\u003e 1, 2 \u003d\u003e 3]\n\nWhy is this important? You\u0027re inadvertently changing the type of this global variable, defined in another extension, from a list to a dictionary.\n\nA side effect of this action would surface if we were to send this variable to the client: when PHP JSON-encodes an array, it has to determine if the array should be encoded as a list or as a map. It does this by testing whether all of the keys are sequential integers. If they are, then the array is encoded as a list, otherwise as a map [0].\n\n[0]: https://github.com/php/php-src/blob/master/ext/json/json_encoder.c#L38-L62",
+      "revId": "a606ffab03ce1fd5941a3a109e36d40073f4d408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
