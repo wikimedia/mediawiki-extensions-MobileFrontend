@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_c9bd7baf",
+        "filename": "tests/browser/features/step_definitions/talk_steps.rb",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-09-21T16:31:57Z",
+      "side": 1,
+      "message": "Should this not be one line up?",
+      "revId": "dd8a8cbcb4621598c0997b16db3842d018297bf1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
