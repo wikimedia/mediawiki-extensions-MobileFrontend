@@ -86,7 +86,7 @@
 		// Populate notifications
 		wrapperWidget.populate()
 			.then( this.setDoneLoading.bind( this ) )
-			.then( this.controller.updateLocalSeenTime.bind( this.controller ) )
+			.then( this.controller.updateSeenTime.bind( this.controller ) )
 			.then( this.setBadgeSeen.bind( this ) )
 			.then( this.checkShowMarkAllRead.bind( this ) );
 	};
