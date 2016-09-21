@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_b1218df8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-21T21:16:40Z",
+      "side": 1,
+      "message": "Since I\u0027m changing the contents of this variable, I opted for using the global variable. Do you know if it\u0027s possible to change the config variable if I use getMFConfig?",
+      "parentUuid": "0e82f318_fef2f401",
+      "revId": "e052057b0b736c9c836f2139262fc5e16e380a41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_bee87c0c",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-21T19:04:06Z",
       "side": 1,
       "message": "Do we want to leave a FIXME to remove this when this goes to stable?",
+      "revId": "e052057b0b736c9c836f2139262fc5e16e380a41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_d17d21e6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-21T21:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e82f318_bee87c0c",
       "revId": "e052057b0b736c9c836f2139262fc5e16e380a41",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
