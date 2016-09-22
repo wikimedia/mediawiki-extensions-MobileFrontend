@@ -16,6 +16,24 @@
       "revId": "e523969824a6ae3f7ea8d12e11c56f164ebf4e56",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_c68b9ae6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-22T21:33:55Z",
+      "side": 1,
+      "message": "I\u0027m falling back to an empty array thus it won\u0027t be undefined.",
+      "parentUuid": "0e82f318_a696a640",
+      "revId": "e523969824a6ae3f7ea8d12e11c56f164ebf4e56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
