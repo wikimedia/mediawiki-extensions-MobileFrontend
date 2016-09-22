@@ -21,20 +21,6 @@
 		"MediaWiki": ">= 1.27.0"
 	},
 	"callback": "MobileFrontendHooks::onRegistration",
-	"GroupPermissions": {
-		"*": {
-			"mf-uploadbutton": false
-		},
-		"autoconfirmed": {
-			"mf-uploadbutton": true
-		},
-		"sysop": {
-			"mf-uploadbutton": true
-		}
-	},
-	"AvailableRights": [
-		"mf-uploadbutton"
-	],
 	"ConfigRegistry": {
 		"mobilefrontend": "GlobalVarConfig::newInstance"
 	},
@@ -2053,7 +2039,6 @@
 		"MFCollapseSectionsByDefault": true,
 		"MFPhotoUploadWiki": null,
 		"MFPhotoUploadEndpoint": "",
-		"MFUploadMinEdits": 0,
 		"MFUseWikibaseDescription": false,
 		"MFUseWikibase": false,
 		"MFDisplayWikibaseDescription": false,

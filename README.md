@@ -657,14 +657,6 @@ e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
 * Type: `String`
 * Default: Defaults to the current wiki
 
-#### $wgMFUploadMinEdits
-
-Set the minimum edits the user needs before they can upload images in mobile
-mode.
-
-* Type: `Integer`
-* Default: `0`
-
 #### $wgMFUseWikibaseDescription (deprecated)
 
 See `$wgMFUseWikibase`

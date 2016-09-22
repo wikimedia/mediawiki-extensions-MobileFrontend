@@ -38,7 +38,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
-	"action-mf-uploadbutton": "The error message, if the user don't have the right to see the upload button on mobile pages.\n\n{{Doc-action|mf-uploadbutton}}",
 	"beta-feature-minerva": "Name of the Minerva beta feature. Used as checkbox label.\n\nRefers to {{msg-mw|Skinname-minerva}}.\n\nSee also:\n* {{msg-mw|Beta-feature-minerva-description}}",
 	"beta-feature-minerva-description": "Describe the Minerva beta feature - it makes a new skin available.\n\nThis description is for the label {{msg-mw|Beta-feature-minerva}}.",
 	"mobile-frontend-account-create-captcha-placeholder": "Placeholder for captcha input field",
@@ -354,7 +353,6 @@
 	"mobile.css": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.js}} (Optional message)",
 	"mobile.js": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.css}} (Optional message)",
 	"nearby": "{{doc-special|Nearby}}",
-	"right-mf-uploadbutton": "Description of right to see the upload button on mobile pages.\n\n{{Doc-right|mf-uploadbutton}}",
 	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
 	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
 	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit-description}}",
