@@ -8,11 +8,12 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 	private $unsetReqVals = [];
 
 	public function tearDown() {
+		parent::tearDown();
+
 		foreach ( $this->unsetReqVals as $v ) {
 			MobileContext::singleton()->getRequest()->unsetVal( $v );
 		}
-		MobileContext::setInstance( null ); // refresh MobileContext instance
-		parent::tearDown();
+		MobileContext::resetInstanceForTesting();
 	}
 	/**
 	 * @dataProvider providerTestNames
@@ -142,4 +143,3 @@ class MockInlineDifferenceEngine extends InlineDifferenceEngine {
 		return '';
 	}
 }
-

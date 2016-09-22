@@ -22,12 +22,13 @@ class MobileContextTest extends MediaWikiTestCase {
 	protected function setUp() {
 		parent::setUp();
 		// Permit no access to the singleton
-		MobileContext::setInstance( new BogusMobileContext() );
+		MobileContext::setInstanceForTesting( new BogusMobileContext() );
 	}
 
 	protected function tearDown() {
-		MobileContext::setInstance( null ); // refresh it
 		parent::tearDown();
+
+		MobileContext::resetInstanceForTesting();
 	}
 
 	/**
@@ -653,7 +654,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 		$req->setRequestURL( '/w/index.php?title=Special:Search&mobileaction=toggle_view_mobile' );
 		RequestContext::getMain()->setRequest( $req );
-		MobileContext::setInstance( null );
+		MobileContext::resetInstanceForTesting();
 		$this->setMwGlobals( 'wgTitle', null );
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );

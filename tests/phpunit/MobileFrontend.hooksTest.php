@@ -108,8 +108,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 * SkinTemplate (sk) and OutputPage (out)
 	 */
 	protected function getContextSetup( $mode, $mfXAnalyticsItems, $title = null ) {
-		// Create a new MobileContext object for this test
-		MobileContext::setInstance( null );
+		MobileContext::resetInstanceForTesting();
 		// create a new instance of MobileContext
 		$context = MobileContext::singleton();
 		// create a DerivativeContext to use in MobileContext later
@@ -141,8 +140,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		foreach ( $mfXAnalyticsItems as $key => $val ) {
 			$context->addAnalyticsLogItem( $key, $val );
 		}
-		// set the newly created MobileContext object as the current instance to use
-		MobileContext::setInstance( $context );
 
 		// return the stuff
 		return [
@@ -183,7 +180,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			'wgScriptPath' => '/w',
 			'wgScript' => '/w/index.php',
 		] );
-		MobileContext::setInstance( null );
+		MobileContext::resetInstanceForTesting();
 
 		$title = Title::newFromText( 'PurgeTest' );
 

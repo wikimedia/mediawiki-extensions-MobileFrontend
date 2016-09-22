@@ -121,12 +121,22 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set $this->instance to the given instance of MobileContext or null
-	 * @param MobileContext|null $instance MobileContext instance or null to set
-	 * @return MobileContext|null
+	 * Overrides the singleton instance.
+	 *
+	 * @warning This method should only accept instances of `MobileContext`. The `BogusMobileContext`
+	 *  class is used in the `MobileContextTest` test suite and will be removed.
+	 *
+	 * @param MobileContext|BogusContext $instance
 	 */
-	public static function setInstance( /* MobileContext|null */ $instance ) {
+	public static function setInstanceForTesting( $instance ) {
 		self::$instance = $instance;
+	}
+
+	/**
+	 * Resets the singleton instance.
+	 */
+	public static function resetInstanceForTesting() {
+		self::$instance = null;
 	}
 
 	/**
