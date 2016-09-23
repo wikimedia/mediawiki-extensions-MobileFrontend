@@ -14,7 +14,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobiliojo interfeisą",
-	"action-mf-uploadbutton": "naudoti supaprastintą mobiliojo įkelimo sistemą",
 	"beta-feature-minerva": "Aktyvuoti mobiliojo stilių ({{int:skinname-minerva}}) darbalaukyje",
 	"beta-feature-minerva-description": "Padaryti mobiliuosiuose įrenginiuose naudojamus stilius pasirinktinais darbalaukių stiliais \"{{int:prefs-rendering}}\" parinkčių kortelėje.",
 	"mobile-frontend-account-create-captcha-placeholder": "Įvesti patvirtinimo kodą",
@@ -323,7 +322,6 @@
 	"mobile-frontend-quick-lookup-no-results": "Nepavyko rasti nieko, kas atitiktų \"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "Atsiprašome, tai ne šio vikio nuoroda.",
 	"nearby": "Teminiai puslapiai netoli jūsų",
-	"right-mf-uploadbutton": "Naudoti įkėlimo mygtuką mobiliuosiuose puslapiuose",
 	"tag-mobile_edit": "Keitimas mob. telefonu",
 	"tag-mobile_edit-description": "Pakeitimas atliktas iš mobiliojo (saityno ar programėlės)",
 	"tag-mobile_web_edit": "Keitimas įskiepiu mobiliesiems",

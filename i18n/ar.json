@@ -27,7 +27,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
-	"action-mf-uploadbutton": "استخدام نظام تحميل المحمول مبسطة",
 	"beta-feature-minerva": "فعل واجهة المحمول (مينيرفا) على جهاز سطح المكتب",
 	"beta-feature-minerva-description": "اجعل المظهر المستخدم على الأجهزة النقالة مظهر سطح المكتب قابلاً للانتقاء من صفحة التفضيلات «{{int:prefs-rendering}}».",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
@@ -339,7 +338,6 @@
 	"mobile.css": "/* CSS المعروض هنا سيؤثر على مستخدمي موقع المحمول */",
 	"mobile.js": "/* أي JavaScript هنا سيتم تحميله لمستخدمي موقع المحمول */",
 	"nearby": "صفحات فيها مواضيع قريبة منك",
-	"right-mf-uploadbutton": "استخدم زر الرفع على صفحات الجوال.",
 	"tag-mobile_edit": "تحرير من الجوال",
 	"tag-mobile_edit-description": "تحرير بواسطة موقع الجوال",
 	"tag-mobile_web_edit": "تعديل ويب جوال",
