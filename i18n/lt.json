@@ -244,7 +244,7 @@
 	"mobile-frontend-return-to-page": "Grįžti į puslapį",
 	"mobile-frontend-save-error": "Klaida išsaugant nustatymus. Prašome įsitikinti, kad esate aktyvavę slapukus.",
 	"mobile-frontend-save-settings": "Išsaugoti",
-	"mobile-frontend-saving-exit-page": "Vyksta jūsų atliktų pakeitimų išsaugojimas. Jeigu išeisite, jūsų atlikti pakeitimai bus prarasti. Ar tikrai norite išeiti?",
+	"mobile-frontend-saving-exit-page": "Vis dar vyksta jūsų atliktų pakeitimų išsaugojimas. Jeigu išeisite, jūsų atlikti pakeitimai bus prarasti. Ar tikrai norite išeiti?",
 	"mobile-frontend-search-content": "Ieškoti puslapiuose",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' norėdami pamatyti ar ši frazė atsiranda bet kur.",
 	"mobile-frontend-search-no-results": "Nėra puslapių su tokiu pavadinimu.",
