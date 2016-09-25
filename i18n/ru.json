@@ -35,11 +35,11 @@
 			"Iniquity",
 			"Adam-Yourist",
 			"Mailman",
-			"Jack who built the house"
+			"Jack who built the house",
+			"Jackie"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
-	"action-mf-uploadbutton": "использование упрощенной мобильной системы загрузки",
 	"beta-feature-minerva": "Включает мобильную тему оформления ({{int:skinname-minerva}}) в обычной версии",
 	"beta-feature-minerva-description": "Делает выбор темы оформления, используемой на мобильных устройствах, доступным в обычной версии (в разделе настроек «{{int:prefs-rendering}}»).",
 	"mobile-frontend-account-create-captcha-placeholder": "Введите код подтверждения",
@@ -156,7 +156,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "Не удалось найти страницу, которую вы ищете.",
 	"mobile-frontend-generic-404-title": "Ошибкаː страница не найдена",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} сделан такими же людьми, как и вы.</strong><br />Войдите, чтоб внести свой вклад.",
+	"mobile-frontend-generic-login-new": "<strong>Проект {{SITENAME}} делается такими же людьми, как и вы.</strong><br />Войдите, чтобы внести свой вклад.",
 	"mobile-frontend-history": "Посмотреть историю изменений этой страницы.",
 	"mobile-frontend-history-404-desc": "Невозможно посмотреть историю страницы, которая не существует. Она может быть удалена или вы могли пройти по неверной ссылке.",
 	"mobile-frontend-history-404-title": "Нет такой страницы",
@@ -342,7 +342,6 @@
 	"mobile-frontend-quick-lookup-no-results": "По запросу \"$1\" ничего не найдено.",
 	"mobile-frontend-quick-lookup-not-internal": "К сожалению, это не внутренняя вики-ссылка.",
 	"nearby": "Страницы на темы об объектах поблизости",
-	"right-mf-uploadbutton": "использование кнопки загрузки на страницах для мобильных устройств",
 	"tag-mobile_edit": "Правка с моб. устройства",
 	"tag-mobile_edit-description": "Правки с мобильного устройства (через сайт или приложение)",
 	"tag-mobile_web_edit": "Правка через мобильную версию сайта",
