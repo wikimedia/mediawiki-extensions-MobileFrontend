@@ -140,8 +140,8 @@ class SkinMinerva extends SkinTemplate {
 	 *   <li>the user is on the main page</li>
 	 * </ul>
 	 *
-	 * The "edit" page action is allowed if the content of the page supports direct editing via the
-	 * API.
+	 * The "edit" page action is not allowed if editing is not possible on the page
+	 * see @method: isCurrentPageEditable
 	 *
 	 * The "switch-language" is allowed if <code>$wgMinervaUsePageActionBarV2</code> is truthy and
 	 * there are interlanguage links on the page, or <code>$wgMinervaAlwaysShowLanguageButton</code>
@@ -163,10 +163,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $action === 'edit' ) {
-			$contentHandler = $this->getContentHandler();
-
-			return $contentHandler->supportsDirectEditing() &&
-				$contentHandler->supportsDirectApiEditing();
+			return $this->isCurrentPageEditable();
 		}
 
 		if ( $action === 'switch-language' ) {
@@ -1064,17 +1061,22 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Checks to see if the current page is (probably) editable.
+	 * Checks to see if the current page is (probably) editable and it is possible for the
+	 * editor to handle the existing content handler type.
 	 *
-	 * This is the same check that sets wgIsProbablyEditable later in the page output
+	 * This is mostly the same check that sets wgIsProbablyEditable later in the page output
 	 * process.
 	 *
 	 * @return boolean
 	 */
 	protected function isCurrentPageEditable() {
+		$contentHandler = $this->getContentHandler();
+
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		return $title->quickUserCan( 'edit', $user )
+			&& $contentHandler->supportsDirectEditing()
+			&& $contentHandler->supportsDirectApiEditing()
 			&& ( $title->exists() || $title->quickUserCan( 'create', $user ) );
 	}
 
@@ -1170,7 +1172,7 @@ class SkinMinerva extends SkinTemplate {
 				// Explicitly add the mobile watchstar code.
 				$modules[] = 'skins.minerva.watchstar';
 			}
-			if ( $this->isAllowedPageAction( 'edit' ) ) {
+			if ( $this->isCurrentPageEditable() ) {
 				$modules[] = 'skins.minerva.editor';
 			}
 		}
