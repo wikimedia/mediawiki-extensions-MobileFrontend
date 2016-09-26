@@ -2,7 +2,8 @@
 	"private": true,
 	"scripts": {
 		"test": "grunt test && npm run doc",
-		"doc": "jsduck"
+		"doc": "jsduck",
+		"lint:modules": "resource-modules ./"
 	},
 	"dependencies": {
 		"jsdoc": "3.4.2",
@@ -17,6 +18,7 @@
 		"grunt-jsonlint": "^1.1.0",
 		"grunt-notify": "^0.4.5",
 		"grunt-stylelint": "^0.6.0",
+		"resource-modules": "^1.0.17",
 		"stylelint-config-wikimedia": "^0.3.0"
 	}
 }
