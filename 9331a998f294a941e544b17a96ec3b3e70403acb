@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_3bc47a11",
+        "filename": "resources/skins.minerva.editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T20:30:45Z",
+      "side": 1,
+      "message": "mw.message returns mw.Message: https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw-method-message",
+      "revId": "9331a998f294a941e544b17a96ec3b3e70403acb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
