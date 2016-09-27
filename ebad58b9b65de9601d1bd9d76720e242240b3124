@@ -16,6 +16,24 @@
       "revId": "ebad58b9b65de9601d1bd9d76720e242240b3124",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_3692cf00",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-27T21:28:28Z",
+      "side": 1,
+      "message": "See PS1 discussion. Yes we do.\n* Moving this to isCurrentPageEditable() would remove the code from the user page which is the issue we are trying to fix.\n* Removing this check would make the edit icon show at the top of the user  page.\n\nGiven the confusion from yourself and Sam do we want to talk about this post standup tomorrow, as it seems we could make this clearer somehow, but right now I\u0027m not sure how.",
+      "parentUuid": "0e82f318_568103c7",
+      "revId": "ebad58b9b65de9601d1bd9d76720e242240b3124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
