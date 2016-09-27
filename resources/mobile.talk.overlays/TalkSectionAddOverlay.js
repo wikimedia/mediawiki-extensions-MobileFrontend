@@ -105,29 +105,29 @@
 					}
 				}
 			} ).fail( function ( error ) {
-				var editMsg = 'mobile-frontend-talk-topic-error';
+				var editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
 
 				self.$confirm.prop( 'disabled', false );
 				switch ( error.details ) {
 					case 'protectedpage':
-						editMsg = 'mobile-frontend-talk-topic-error-protected';
+						editMsg = mw.msg( 'mobile-frontend-talk-topic-error-protected' );
 						break;
 					case 'noedit':
 					case 'blocked':
-						editMsg = 'mobile-frontend-talk-topic-error-permission';
+						editMsg = mw.msg( 'mobile-frontend-talk-topic-error-permission' );
 						break;
 					case 'spamdetected':
-						editMsg = 'mobile-frontend-talk-topic-error-spam';
+						editMsg = mw.msg( 'mobile-frontend-talk-topic-error-spam' );
 						break;
 					case 'badtoken':
-						editMsg = 'mobile-frontend-talk-topic-error-badtoken';
+						editMsg = mw.msg( 'mobile-frontend-talk-topic-error-badtoken' );
 						break;
 					default:
-						editMsg = 'mobile-frontend-talk-topic-error';
+						editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
 						break;
 				}
 
-				toast.show( mw.msg( editMsg ), 'error' );
+				toast.show( editMsg, 'error' );
 				self.showHidden( '.save-header, .save-panel' );
 			} );
 		},

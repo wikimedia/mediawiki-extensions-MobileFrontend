@@ -180,13 +180,12 @@
 			this.pageGateway.invalidatePage( title );
 
 			if ( this.isNewPage ) {
-				msg = 'mobile-frontend-editor-success-new-page';
+				msg = mw.msg( 'mobile-frontend-editor-success-new-page' );
 			} else if ( this.isNewEditor ) {
-				msg = 'mobile-frontend-editor-success-landmark-1';
+				msg = mw.msg( 'mobile-frontend-editor-success-landmark-1' );
 			} else {
-				msg = 'mobile-frontend-editor-success';
+				msg = mw.msg( 'mobile-frontend-editor-success' );
 			}
-			msg = mw.msg( msg );
 			toast.showOnPageReload( msg, 'success' );
 
 			// Ensure we don't lose this event when logging

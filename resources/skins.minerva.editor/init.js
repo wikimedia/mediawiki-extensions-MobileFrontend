@@ -292,7 +292,7 @@
 				$( '.edit-page' ).detach();
 			} else {
 				$caEdit.removeClass( 'hidden' );
-				showSorryToast( 'mobile-frontend-editor-disabled' );
+				showSorryToast( mw.msg( 'mobile-frontend-editor-disabled' ) );
 			}
 		}
 	}
@@ -322,7 +322,7 @@
 			} );
 		} else {
 			$caEdit.removeClass( 'hidden' );
-			showSorryToast( 'mobile-frontend-editor-disabled' );
+			showSorryToast( mw.msg( 'mobile-frontend-editor-disabled' ) );
 		}
 	}
 
@@ -330,11 +330,11 @@
 	 * Show a toast message with sincere condolences.
 	 * @method
 	 * @ignore
-	 * @param {String} msg Message key for sorry message
+	 * @param {String} msg Message for sorry message
 	 */
 	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {
-			popup.show( mw.msg( msg ) );
+			popup.show( msg );
 			ev.preventDefault();
 		} );
 	}
@@ -342,11 +342,11 @@
 	if ( !isEditingSupported ) {
 		// Editing is disabled (or browser is blacklisted)
 		$caEdit.removeClass( 'hidden' );
-		showSorryToast( 'mobile-frontend-editor-unavailable' );
+		showSorryToast( mw.msg( 'mobile-frontend-editor-unavailable' ) );
 	} else if ( isNewFile ) {
 		$caEdit.removeClass( 'hidden' );
 		// Is a new file page (enable upload image only) Bug 58311
-		showSorryToast( 'mobile-frontend-editor-uploadenable' );
+		showSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ) );
 	} else {
 		if ( user.isAnon() ) {
 			// Cta's will be rendered in EditorOverlay, if anonymous editing is enabled.
