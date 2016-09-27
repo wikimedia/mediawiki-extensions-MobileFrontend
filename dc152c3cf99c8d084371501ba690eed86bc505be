@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_7bcfd2b5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T19:14:36Z",
+      "side": 1,
+      "message": "This comment doesn\u0027t apply to this function anymore. Probably should be replaced by something else.",
+      "range": {
+        "startLine": 143,
+        "startChar": 1,
+        "endLine": 144,
+        "endChar": 8
+      },
+      "revId": "dc152c3cf99c8d084371501ba690eed86bc505be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_bbc86aab",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T19:14:36Z",
+      "side": 1,
+      "message": "One too many \"the\"s in this sentence.",
+      "revId": "dc152c3cf99c8d084371501ba690eed86bc505be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_dbc35e8b",
+        "filename": "tests/browser/features/step_definitions/user_page_steps.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T19:14:36Z",
+      "side": 1,
+      "message": "How about a line break before this line?",
+      "revId": "dc152c3cf99c8d084371501ba690eed86bc505be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
