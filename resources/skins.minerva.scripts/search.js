@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var SearchOverlay, SearchGateway,
 		router = require( 'mediawiki.router' ),
-		browser = M.require( 'mobile.browser/browser' );
+		browser = M.require( 'mobile.browser/Browser' ).getSingleton();
 
 	/**
 	 * Reveal the search overlay

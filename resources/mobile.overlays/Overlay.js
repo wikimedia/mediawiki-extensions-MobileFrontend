@@ -6,7 +6,7 @@
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		browser = M.require( 'mobile.browser/browser' ),
+		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
 		$window = $( window );
 
 	/**

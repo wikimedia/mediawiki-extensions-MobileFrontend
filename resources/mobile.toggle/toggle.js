@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var context = M.require( 'mobile.context/context' ),
 		settings = M.require( 'mobile.settings/settings' ),
-		browser = M.require( 'mobile.browser/browser' ),
+		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowOptions = {
 			name: 'arrow',
