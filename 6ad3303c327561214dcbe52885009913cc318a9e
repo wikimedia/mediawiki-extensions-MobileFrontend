@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_b19fa954",
+        "filename": "resources/skins.minerva.special.watchlist.styles/specialWatchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-09-27T23:01:17Z",
+      "side": 0,
+      "message": "Accomplished in I77c1fcfb200",
+      "parentUuid": "0e82f318_b13de9ba",
+      "revId": "6ad3303c327561214dcbe52885009913cc318a9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_f15e8116",
         "filename": "resources/skins.minerva.tablet.styles/common.less",
         "patchSetId": 2
