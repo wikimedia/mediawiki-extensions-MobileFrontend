@@ -1270,7 +1270,6 @@ class MobileFrontendHooks {
 	/**
 	 * OutputPageBodyAttributes hook handler.
 	 *
-	 * If the new action bar is enabled, via the <code>$wgMinervaUsePageActionBarV2</code>, then the
 	 * <code>feature-action-bar-v2</code> CSS feature flag is added to the <code>body</code> tag.
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBodyAttributes
@@ -1287,10 +1286,8 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 
-		// TODO: Remove this when the new action bar is actually considered stable (see T130849).
-		if ( $config->get( 'MinervaUsePageActionBarV2' ) || $context->isBetaGroupMember() ) {
-			$bodyAttributes['class'] .= ' feature-page-action-bar-v2';
-		}
+		$bodyAttributes['class'] .= ' feature-page-action-bar-v2';
+
 		if ( $config->get( 'MinervaUseFooterV2' ) || $context->isBetaGroupMember() ) {
 			$bodyAttributes['class'] .= ' feature-footer-v2';
 		}

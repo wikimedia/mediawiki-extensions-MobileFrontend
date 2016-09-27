@@ -126,9 +126,10 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 
 	public static function switchLanguagePageActionProvider() {
 		return [
-			[ true, false, true, true ],
-			[ false, true, true, true ],
-			[ true, false, false, false ],
+			[ true, false, true ],
+			[ false, true, true ],
+			[ false, false, false ],
+			[ true, false, true ],
 		];
 	}
 
@@ -143,13 +144,11 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 	public function test_switch_language_page_action(
 		$doesPageHaveLanguages,
 		$minervaAlwaysShowLanguageButton,
-		$minervaUsePageActionBarV2,
 		$expected
 	) {
 		$this->skin->setDoesPageHaveLanguages( $doesPageHaveLanguages );
 		$this->setMwGlobals( [
 			'wgMinervaAlwaysShowLanguageButton' => $minervaAlwaysShowLanguageButton,
-			'wgMinervaUsePageActionBarV2' => $minervaUsePageActionBarV2,
 		] );
 
 		$this->assertEquals( $expected, $this->skin->isAllowedPageAction( 'switch-language' ) );

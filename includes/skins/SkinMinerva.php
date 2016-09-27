@@ -143,8 +143,8 @@ class SkinMinerva extends SkinTemplate {
 	 * The "edit" page action is not allowed if editing is not possible on the page
 	 * see @method: isCurrentPageEditable
 	 *
-	 * The "switch-language" is allowed if <code>$wgMinervaUsePageActionBarV2</code> is truthy and
-	 * there are interlanguage links on the page, or <code>$wgMinervaAlwaysShowLanguageButton</code>
+	 * The "switch-language" is allowed if there are interlanguage links on the page,
+	 * or <code>$wgMinervaAlwaysShowLanguageButton</code>
 	 * is truthy.
 	 *
 	 * @param string $action
@@ -167,8 +167,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $action === 'switch-language' ) {
-			return $config->get( 'MinervaUsePageActionBarV2' ) &&
-				( $this->doesPageHaveLanguages || $config->get( 'MinervaAlwaysShowLanguageButton' ) );
+			return $this->doesPageHaveLanguages || $config->get( 'MinervaAlwaysShowLanguageButton' );
 		}
 
 		return true;

@@ -723,14 +723,3 @@ usually are diagrams that compress well and benefit from the higher resolution.
     "image/svg+xml",
   ]
 ```
-
-#### $wgMinervaUsePageActionBarV2
-
-Whether or not to use the v2 styles for the page action bar – the set of icons
-displayed near to the title of the page.
-
-When enabled the page actions will appear horizontally below the title at mobile widths and to the
-right of the title at tablet widths. The language switcher will always be the leftmost page action.
-
-* Type: `Boolean`
-* Default: `false`
