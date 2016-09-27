@@ -58,7 +58,8 @@
 	"mobile-frontend-view-desktop": "Štandardné",
 	"mobile-frontend-view-mobile": "Mobilné",
 	"mobile-frontend-user-page-uploads": "Nahrané súbory",
-	"tag-mobile_edit": "Úprava z mobilu",
-	"tag-mobile_web_edit": "Úprava z mobilného webu",
+	"nearby": "Stránky o blízkych lokalitách",
+	"tag-mobile_edit": "úprava z mobilu",
+	"tag-mobile_web_edit": "úprava z mobilného webu",
 	"mobile-frontend-pageaction-edit-tooltip": "Upraviť úvodnú sekciu"
 }
