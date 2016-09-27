@@ -16,6 +16,24 @@
       "revId": "c4fccd16ff4ffbfe0fe2e753df56e81ad7562ae6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_a09f5505",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1175,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-27T18:00:36Z",
+      "side": 1,
+      "message": "Not quite... remember... isAllowedPageAction also checks existence in MinervaPageActions and if it\u0027s a user page.\n\n\nThis is actually the key line needed to fix this bug! If we leave it in tact the test will fail!",
+      "parentUuid": "0e82f318_9de71edf",
+      "revId": "c4fccd16ff4ffbfe0fe2e753df56e81ad7562ae6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
