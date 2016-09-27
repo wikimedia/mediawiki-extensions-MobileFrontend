@@ -83,7 +83,7 @@
 		QUnit.expect( tests.length );
 		$( tests ).each( function ( i ) {
 			m._distanceMessage( this[ 0 ] );
-			assert.ok( mw.msg.getCall( i ).calledWith( this[ 1 ], mw.language.convertNumber( this[ 2 ] ) ), 'failed test ' + i );
+			assert.deepEqual( mw.msg.getCall( i ).args, [this[ 1 ], mw.language.convertNumber( this[ 2 ] )] );
 		} );
 
 		mw.msg.restore();
