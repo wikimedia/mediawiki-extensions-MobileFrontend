@@ -867,6 +867,7 @@
 				"mobile-frontend-talk-overlay-lead-header",
 				"mobile-frontend-talk-add-overlay-subject-placeholder",
 				"mobile-frontend-talk-add-overlay-content-placeholder",
+				"mobile-frontend-talk-add-overlay-submit",
 				"mobile-frontend-talk-reply-success",
 				"mobile-frontend-talk-reply",
 				"mobile-frontend-talk-reply-info",
@@ -881,6 +882,7 @@
 				"mobile-frontend-editor-cancel-confirm",
 				"mobile-frontend-editor-error",
 				"mobile-frontend-editor-error-conflict",
+				"mobile-frontend-editor-save",
 				"newsectionsummary"
 			]
 		},
