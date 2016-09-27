@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_568103c7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T21:14:39Z",
+      "side": 1,
+      "message": "Since we\u0027re using isCurrentPageEditable() below, I don\u0027t think we need this check anymore, do we? We should probably move this to isCurrentPageEditable().",
+      "revId": "ebad58b9b65de9601d1bd9d76720e242240b3124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
