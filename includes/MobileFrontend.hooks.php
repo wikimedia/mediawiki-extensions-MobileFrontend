@@ -535,13 +535,10 @@ class MobileFrontendHooks {
 		$logType = $rc->getAttribute( 'rc_log_type' );
 		// Only log edits and uploads
 		if ( $context->shouldDisplayMobileView() && ( $logType === 'upload' || is_null( $logType ) ) ) {
-			$rcId = $rc->getAttribute( 'rc_id' );
-			$revId = $rc->getAttribute( 'rc_this_oldid' );
-			$logId = $rc->getAttribute( 'rc_logid' );
-			ChangeTags::addTags( 'mobile edit', $rcId, $revId, $logId );
+			$rc->addTags( 'mobile edit' );
 			// Tag as mobile web edit specifically, if it isn't coming from the apps
 			if ( strpos( $userAgent, 'WikipediaApp/' ) !== 0 ) {
-				ChangeTags::addTags( 'mobile web edit', $rcId, $revId, $logId );
+				$rc->addTags( 'mobile web edit' );
 			}
 		}
 		return true;
