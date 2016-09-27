@@ -16,6 +16,24 @@
       "revId": "1a7842a0adbee6df5e96b2e15549ce4f67b0403e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_c0ac4935",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-27T18:08:58Z",
+      "side": 1,
+      "message": "Yup I\u0027m aware of these guidelines, but I don\u0027t always manage to rely on these as I\u0027ve always relied on my eyes...\n\nTo get to the root of the problem what tool/bash script do you use to enforce this and ensure you don\u0027t make this mistake?",
+      "parentUuid": "0e82f318_bd6ea291",
+      "revId": "1a7842a0adbee6df5e96b2e15549ce4f67b0403e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
