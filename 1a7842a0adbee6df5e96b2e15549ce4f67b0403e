@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_bd6ea291",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-27T12:57:05Z",
+      "side": 1,
+      "message": "From the Pro Git Book [0]:\n\n\u003e Short (50 chars or less) summary of changes\n\n\u003e More detailed explanatory text, if necessary.  Wrap it to\nabout 72 characters or so.\n\n[0] https://git-scm.com/book/ch5-2.html#_commit_guidelines",
+      "revId": "1a7842a0adbee6df5e96b2e15549ce4f67b0403e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
