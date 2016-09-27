@@ -222,20 +222,33 @@
 	 */
 	function loadImageOverlay( title ) {
 		var result = $.Deferred(),
-			rlModuleName = useNewMediaViewer ? 'mobile.mediaViewer.beta' : 'mobile.mediaViewer',
-			moduleName = useNewMediaViewer ? 'ImageOverlayBeta' : 'ImageOverlay';
+			/**
+			 * @private
+			 * @ignore
+			 * @param {ImageOverlay} ImageOverlay Overlay class to initialize
+			 */
+			resolveWithOverlay = function ( ImageOverlay ) {
+				result.resolve(
+					new ImageOverlay( {
+						api: new mw.Api(),
+						thumbnails: thumbs,
+						title: decodeURIComponent( title )
+					} )
+				);
+			};
 
-		loader.loadModule( rlModuleName ).done( function () {
-			var ImageOverlay = M.require( rlModuleName + '/' + moduleName );
+		if ( useNewMediaViewer ) {
+			loader.loadModule( 'mobile.mediaViewer.beta' ).done( function () {
+				var ImageOverlayBeta = M.require( 'mobile.mediaViewer.beta/ImageOverlayBeta' );
+				resolveWithOverlay( ImageOverlayBeta );
+			} );
+		} else {
+			loader.loadModule( 'mobile.mediaViewer' ).done( function () {
+				var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' );
+				resolveWithOverlay( ImageOverlay );
+			} );
+		}
 
-			result.resolve(
-				new ImageOverlay( {
-					api: new mw.Api(),
-					thumbnails: thumbs,
-					title: decodeURIComponent( title )
-				} )
-			);
-		} );
 		return result;
 	}
 
