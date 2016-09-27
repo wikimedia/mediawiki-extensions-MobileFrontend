@@ -34,6 +34,24 @@
       "revId": "ebad58b9b65de9601d1bd9d76720e242240b3124",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_314ad95f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-27T22:12:02Z",
+      "side": 1,
+      "message": "You\u0027re right, I was confused by the types of user page we have:\n  1) One that the user own\n  2) One that the user doesn\u0027t own (i.e. someone else\u0027s user page)\n  3) One for a username that doesn\u0027t exist",
+      "parentUuid": "0e82f318_3692cf00",
+      "revId": "ebad58b9b65de9601d1bd9d76720e242240b3124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
