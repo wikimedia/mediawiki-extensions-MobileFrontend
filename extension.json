@@ -1287,18 +1287,6 @@
 				"resources/mobile.gallery/PhotoList.js"
 			]
 		},
-		"mobile.commonsCategory": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.gallery"
-			],
-			"scripts": [
-				"resources/mobile.commonsCategory/CommonsCategoryOverlay.js"
-			]
-		},
 		"mobile.betaoptin": {
 			"targets": [
 				"mobile",
