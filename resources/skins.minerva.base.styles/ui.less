@@ -3,9 +3,6 @@
 @import 'mediawiki.mixins';
 
 /* stylelint-disable no-descending-specificity */
-
-@topBarBackgroundColor: #f3f3f3;
-
 html,
 body {
 	// Ensure overlays take up full screen
@@ -13,7 +10,6 @@ body {
 }
 
 #content {
-	//border-top: 1px solid @grayLight;
 	border-top-color: @chromeContentSeparator;
 }
 
@@ -42,7 +38,7 @@ body {
 .last-modified-bar {
 	background-color: transparent;
 	display: block;
-	color: @colorGray6;
+	color: @colorGray5;
 	transition: background-color 0.2s ease, color 0.2s ease;
 
 	a,
@@ -80,7 +76,7 @@ body {
 	height: @headerHeight;
 	white-space: nowrap;
 	// When banners are present we want to easily distinguish between them and the header so add border
-	border-top: 1px solid @colorGrayLight;
+	border-top: 1px solid @colorGray12;
 	margin-top: @headerMarginTop;
 
 	// button
@@ -184,7 +180,7 @@ body {
 	}
 
 	.content h2 {
-		border-bottom: solid 1px @sectionBorderColor;
+		border-bottom: solid 1px @colorGray14;
 	}
 
 }
@@ -244,7 +240,7 @@ input.search {
 
 	.section-heading {
 		width: 100%;
-		border-bottom: solid 1px @sectionBorderColor;
+		border-bottom: solid 1px @colorGray14;
 		margin-bottom: @headingMargin;
 
 		.indicator {
@@ -335,7 +331,7 @@ input.search {
 	text-indent: 0;
 	display: inline-block;
 	font-weight: bold;
-	border-radius: 2px;
+	border-radius: @borderRadius;
 	height: 1.2em;
 	line-height: 1.2em;
 	min-width: 1em;
@@ -345,7 +341,7 @@ input.search {
 	position: absolute;
 	right: 0;
 	top: -0.1em;
-	color: #777;
+	color: @colorGray7;
 	background: #d2d2d2;
 
 	&.notification-unseen {

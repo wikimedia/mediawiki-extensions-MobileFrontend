@@ -4,8 +4,6 @@
 
 /* stylelint-disable no-descending-specificity */
 
-@contentHeaderBorderColor: #e2e2e2;
-
 .mw-ui-icon-back {
 	.m-background-image( 'back-ltr.png' );
 }
@@ -162,8 +160,8 @@
 	// Appears before the content providing an explanation of what follows
 	// Only used on overlays in beta (nearby pages)- may not want to push to stable
 	.content-header {
-		background: @searchBoxColorTo;
-		border-bottom: 1px solid @contentHeaderBorderColor;
+		background-color: @colorGray15;
+		border-bottom: 1px solid @colorGray14;
 		padding: 20px @contentMargin;
 		line-height: inherit;
 	}

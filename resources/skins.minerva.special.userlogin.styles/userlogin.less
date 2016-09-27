@@ -72,7 +72,7 @@
 	.captcha {
 		margin: 0.8em 0 0;
 		border: solid 1px @colorGray12;
-		border-radius: 5px;
+		border-radius: @borderRadius;
 		overflow: hidden;
 		background: #fff;
 		text-align: center;
@@ -84,7 +84,9 @@
 			margin: 0;
 		}
 
-		input:not( [type='submit'] ), img, #wpCaptchaWord {
+		input:not( [type='submit'] ),
+		img,
+		#wpCaptchaWord {
 			border: 0;
 			border-top: solid 1px @colorGray12;
 

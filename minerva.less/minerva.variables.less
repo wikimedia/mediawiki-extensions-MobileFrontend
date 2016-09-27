@@ -23,10 +23,7 @@
 // Content
 @contentMargin: 16px;
 
-// old header
-@headerBorderBottom: #e3e3e3;
-
-// new header
+// Header
 @headerTitleFontSize: 1em;
 @headerHeight: 3.35em;
 @headerMarginTop: -1px;  // used to hide the header border top when a banner is not present
@@ -34,7 +31,7 @@
 @titleSectionSpacingTop: 20px;
 @titleSectionSpacingBottom: 25px;
 
-@grayDark: #252525;
+@grayDark: @colorGray2;
 @grayMediumDark: @colorGray5;
 @grayMedium: @colorGray7;
 @grayMediumLight: @colorGray10;
@@ -50,7 +47,7 @@
 @colorTutorial: #2e76ff;
 @linkColor: #002bb8;
 @lastModifiedBarActiveBackgroundColor: #00af8b;
-@toastNotificationColor: #373737;
+@toastNotificationColor: @colorGray2;
 
 // Use when an element is selected. FIXME: This should be in mediawiki ui.
 @selectedBackgroundColor: #e6eeff;
@@ -72,12 +69,10 @@
 @contentLineHeight: 1.65;
 
 @headingMargin: 0.5em;
-// FIXME: Merge with @grayLightest (?)
-@sectionBorderColor: #e2e3e4;
 @sectionIconWidth: 30px;
 
 // information messages, e.g. empty watchlist message
-@infoColor: #707070;
+@infoColor: @colorGray7;
 
 // blockquotes
 @blockquotePaddingRight: 25px;
@@ -92,9 +87,6 @@
 // note since content does not use view border box we have to include padding.
 @contentMaxWidthTablet: @wgMFDeviceWidthDesktop - ( 2 * @contentPaddingTablet );
 @contentTopPadding: 1.6em;
-
-// calculated colors
-@searchBoxColorTo: darken( @searchBoxColor, 2.75% );
 
 // Wiki specific variables
 @infoboxWidth: 320px;

@@ -6,6 +6,7 @@
 // Styleguide 3.
 
 .drawer {
+	background-color: @colorGray15;
 	// needed for Android 4.x
 	position: absolute;
 	// needed for MSIE 9 (Windows Phone 7)
@@ -30,7 +31,6 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: @searchBoxColorTo;
 	box-shadow: 0 -1px 8px 0 rgba( 0, 0, 0, 0.35 );
 	word-wrap: break-word;
 	// needs to be higher than for overlays to show on top of overlays
@@ -52,7 +52,7 @@
 	margin: 0 10% 20px;
 	width: 80%;
 	text-align: center;
-	border-radius: 3px;
+	border-radius: @borderRadius;
 
 	// Toast notification error state
 	//
