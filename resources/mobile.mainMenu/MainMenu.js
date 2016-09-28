@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var browser = M.require( 'mobile.browser/browser' ),
+	var browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
 		View = M.require( 'mobile.view/View' );
 
 	/**

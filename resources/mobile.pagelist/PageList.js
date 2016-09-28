@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var View = M.require( 'mobile.view/View' ),
-		browser = M.require( 'mobile.browser/browser' );
+		browser = M.require( 'mobile.browser/Browser' ).getSingleton();
 
 	/**
 	 * List of items page view

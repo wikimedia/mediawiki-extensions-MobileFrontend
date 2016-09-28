@@ -193,7 +193,16 @@
 		} )
 	};
 
-	browser = new Browser( window.navigator.userAgent, $( 'html' ) );
+	/**
+	 * @static
+	 * @returns {Browser}
+	 */
+	Browser.getSingleton = function () {
+		if ( !browser ) {
+			browser = new Browser( window.navigator.userAgent, $( 'html' ) );
+		}
+		return browser;
+	};
+
 	M.define( 'mobile.browser/Browser', Browser );
-	M.define( 'mobile.browser/browser', browser );
 }( mw.mobileFrontend, jQuery ) );

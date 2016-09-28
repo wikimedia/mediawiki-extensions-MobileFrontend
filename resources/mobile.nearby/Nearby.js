@@ -2,7 +2,7 @@
 	var MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
-		browser = M.require( 'mobile.browser/browser' ),
+		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
 		icons = M.require( 'mobile.startup/icons' );
 
 	/**
