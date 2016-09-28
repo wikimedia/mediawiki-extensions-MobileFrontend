@@ -23,6 +23,7 @@
 		 * @cfg {Boolean} defaults.block is stacked button
 		 * @cfg {Boolean} defaults.progressive is progressive action
 		 * @cfg {Boolean} defaults.constructive is constructive action
+		 *   This option is deprecated. Please use `progressive`.
 		 * @cfg {Boolean} defaults.quiet is quiet button
 		 * @cfg {Boolean} defaults.destructive is destructive action
 		 * @cfg {String} defaults.additionalClassNames Additional class name(s).

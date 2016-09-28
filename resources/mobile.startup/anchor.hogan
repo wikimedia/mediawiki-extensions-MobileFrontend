@@ -2,6 +2,6 @@
 	{{#href}}href="{{href}}"{{/href}}
 	class="mw-ui-anchor
 		{{#progressive}}mw-ui-progressive{{/progressive}}
-		{{#constructive}}mw-ui-constructive{{/constructive}}
+		{{#constructive}}mw-ui-progressive{{/constructive}}
 		{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
 	">{{label}}</a>

@@ -3,6 +3,6 @@
 	class="mw-ui-button {{#progressive}}mw-ui-progressive{{/progressive}}
 		{{#block}}mw-ui-block{{/block}}
 		{{#quiet}}mw-ui-quiet{{/quiet}}
-		{{#constructive}}mw-ui-constructive{{/constructive}}
+		{{#constructive}}mw-ui-progressive{{/constructive}}
 		{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
 	">{{label}}</{{tagName}}>

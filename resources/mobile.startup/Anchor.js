@@ -17,7 +17,8 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.progressive is progressive action
-		 * @cfg {Boolean} defaults.constructive is constructive action
+		 * @cfg {Boolean} defaults.constructive is constructive action.
+		 *   This option is deprecated. Please use `progressive`.
 		 * @cfg {Boolean} defaults.destructive is destructive action
 		 * @cfg {String} defaults.additionalClassNames Additional class name(s).
 		 * @cfg {String} defaults.href url
