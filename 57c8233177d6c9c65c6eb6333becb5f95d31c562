@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_37f9e6e6",
+        "filename": "minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-28T18:50:11Z",
+      "side": 1,
+      "message": "As I discussed with VolkerE minerva.variables.less imports mediawiki ui so this can become:\n@lastModifiedBarActiveBackgroundColor: @colorConstructive\nhowever VolkerE is keen to deprecate @colorConstructive on the long term.",
+      "revId": "57c8233177d6c9c65c6eb6333becb5f95d31c562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
