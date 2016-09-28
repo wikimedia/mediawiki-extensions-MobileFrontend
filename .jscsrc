@@ -8,6 +8,7 @@
   "excludeFiles": [
     "docs/**",
     "libs/**",
+    "vendor/**",
     "node_modules/**"
   ],
   "jsDoc": {
