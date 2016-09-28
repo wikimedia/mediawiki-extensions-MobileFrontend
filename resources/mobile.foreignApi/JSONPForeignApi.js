@@ -1,4 +1,6 @@
 ( function ( M, $ ) {
+	var ForeignApi = mw.ForeignApi;
+
 	/**
 	 * Extends mw.ForeignApi to force it to use JSONP for non-POST requests
 	 * @class JSONPForeignApi
@@ -7,10 +9,10 @@
 	function JSONPForeignApi( endpoint, options ) {
 		options = options || {};
 		options.origin = undefined;
-		mw.ForeignApi.call( this, endpoint, options );
+		ForeignApi.call( this, endpoint, options );
 		delete this.defaults.parameters.origin;
 	}
-	OO.inheritClass( JSONPForeignApi, mw.ForeignApi );
+	OO.inheritClass( JSONPForeignApi, ForeignApi );
 
 	/**
 	 * See https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.Api-method-ajax
@@ -29,7 +31,7 @@
 				centralauthtoken: false
 			} );
 		}
-		return mw.ForeignApi.prototype.ajax.call( this, data, options );
+		return ForeignApi.prototype.ajax.call( this, data, options );
 	};
 
 	M.define( 'mobile.foreignApi/JSONPForeignApi', JSONPForeignApi );
