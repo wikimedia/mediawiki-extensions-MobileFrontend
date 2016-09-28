@@ -766,7 +766,8 @@
 			},
 			"messages": [
 				"mobile-frontend-editor-blocked-info",
-				"mobile-frontend-editor-viewing-source-page"
+				"mobile-frontend-editor-viewing-source-page",
+				"mobile-frontend-editor-anon"
 			]
 		},
 		"mobile.search.images": {
@@ -1669,11 +1670,10 @@
 					"parse"
 				],
 				"3": "mobile-frontend-editor-cta",
-				"4": "mobile-frontend-editor-anon",
-				"5": "mobile-frontend-editor-undo-unsupported",
-				"6": "mobile-frontend-editor-edit",
-				"7": "mobile-frontend-editor-redlink-create",
-				"8": "mobile-frontend-editor-redlink-leave",
+				"4": "mobile-frontend-editor-undo-unsupported",
+				"5": "mobile-frontend-editor-edit",
+				"6": "mobile-frontend-editor-redlink-create",
+				"7": "mobile-frontend-editor-redlink-leave",
 				"mobile-frontend-editor-redlink-explain": [
 					"parse"
 				]
