@@ -603,7 +603,6 @@
 			},
 			"messages": [
 				"mobile-frontend-loading-message",
-				"mobile-frontend-console-recruit",
 				"mobile-frontend-editor-licensing",
 				"mobile-frontend-editor-licensing-with-terms",
 				"mobile-frontend-editor-terms-link"
@@ -1331,11 +1330,7 @@
 			],
 			"templates": {
 				"FontChanger.hogan": "resources/mobile.fontchanger/FontChanger.hogan"
-			},
-			"messages": [
-				"mobile-frontend-fontchanger-desc",
-				"mobile-frontend-fontchanger-link"
-			]
+			}
 		},
 		"mobile.infiniteScroll": {
 			"targets": [
@@ -1377,7 +1372,8 @@
 			],
 			"messages": [
 				"markedaspatrollednotify",
-				"markedaspatrollederrornotify"
+				"markedaspatrollederrornotify",
+				"markedaspatrollederror-noautopatrol"
 			]
 		},
 		"mobile.site": {
@@ -1433,7 +1429,9 @@
 			},
 			"messages": [
 				"mobile-frontend-expand-sections-description",
-				"mobile-frontend-expand-sections-status"
+				"mobile-frontend-expand-sections-status",
+				"mobile-frontend-fontchanger-desc",
+				"mobile-frontend-fontchanger-link"
 			]
 		},
 		"mobile.special.mobileeditor.scripts": {
@@ -1602,7 +1600,8 @@
 				"mobile-frontend-last-modified-with-user-months",
 				"mobile-frontend-last-modified-with-user-years",
 				"mobile-frontend-last-modified-with-user-just-now",
-				"mobile-frontend-cookies-required"
+				"mobile-frontend-cookies-required",
+				"mobile-frontend-console-recruit"
 			],
 			"scripts": [
 				"resources/skins.minerva.scripts/preInit.js",
