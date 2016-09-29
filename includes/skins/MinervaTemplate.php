@@ -90,10 +90,22 @@ class MinervaTemplate extends BaseTemplate {
 				'items' => $items,
 			];
 		}
-		return [
-			'v1' => !$this->getSkin()->isFooterV2(),
-			'lists' => $groups,
-		];
+
+		if ( $this->getSkin()->isFooterV2() ) {
+			// This turns off the footer id and allows us to distinguish the old footer with the new design
+			return [
+				'lastmodified' => $this->getHistoryLinkHtml( $data ),
+				'headinghtml' => $data['footer-site-heading-html'],
+				'licensehtml' => $data['mobile-license'],
+				'lists' => $groups,
+				'v1' => false,
+			];
+		} else {
+			return [
+				'v1' => true,
+				'lists' => $groups,
+			];
+		}
 	}
 
 	/**
@@ -265,7 +277,7 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected function getPostContentHtml( $data ) {
 		return $this->getSecondaryActionsHtml() .
-			$this->getHistoryLinkHtml( $data );
+			( $this->getSkin()->isFooterV2() ? '' : $this->getHistoryLinkHtml( $data ) );
 	}
 
 	/**

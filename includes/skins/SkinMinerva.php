@@ -1268,6 +1268,10 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->getOutput()->getRequest()->getText( 'oldid' ) ) {
 			$styles[] = 'mobile.messageBox';
 		}
+		if ( $this->isFooterV2() ) {
+			$styles[] = 'skins.minerva.footerV2.styles';
+		}
+
 		return $styles;
 	}
 

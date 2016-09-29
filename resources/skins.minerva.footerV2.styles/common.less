@@ -19,20 +19,6 @@
 	overflow: auto;
 	padding-bottom: 6px;
 
-	// FIXME: Move to skins.minerva.content.styles/lists.less when pushing to stable
-	.hlist-separated {
-		li:after {
-			content: '•';
-			padding-left: 8px;
-			color: @linkColor;
-			font-size: 16px;
-			line-height: 1;
-		}
-		:last-child:after {
-			content: '';
-		}
-	}
-
 	.last-modified-bar {
 		border-bottom: solid 1px @footerBorderColor;
 		background-color: @lastModifiedBarBgColor;
