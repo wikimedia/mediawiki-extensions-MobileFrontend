@@ -16,6 +16,24 @@
       "revId": "f7ea2560323e0be751484441ac2af966bd57f13f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_18d08e54",
+        "filename": "resources/skins.minerva.content.styles/lists.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-29T17:12:59Z",
+      "side": 1,
+      "message": "It should and can be used on Special:MobileDiff - would also fix that flash of unstyled content on that pay yay.\nhttps://en.m.wikipedia.org/wiki/Special:MobileDiff/589685723",
+      "parentUuid": "0e82f318_18f96ee6",
+      "revId": "f7ea2560323e0be751484441ac2af966bd57f13f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
