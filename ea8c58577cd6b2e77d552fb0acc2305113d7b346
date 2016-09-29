@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_4bd30e30",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1275,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-29T19:57:57Z",
+      "side": 1,
+      "message": "outdated documentation",
+      "range": {
+        "startLine": 1273,
+        "startChar": 1,
+        "endLine": 1275,
+        "endChar": 3
+      },
+      "revId": "ea8c58577cd6b2e77d552fb0acc2305113d7b346",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
