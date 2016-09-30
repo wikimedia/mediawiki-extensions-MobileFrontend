@@ -34,6 +34,24 @@
       "revId": "1a7842a0adbee6df5e96b2e15549ce4f67b0403e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_9f31c0eb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-09-30T10:32:08Z",
+      "side": 1,
+      "message": "vim, simply.\n\nI use thoughtbot\u0027s dotfiles [0] as a base and add a few minor tweaks of my own (unrelated to git).\n\n[0]: https://github.com/thoughtbot/dotfiles",
+      "parentUuid": "0e82f318_c0ac4935",
+      "revId": "1a7842a0adbee6df5e96b2e15549ce4f67b0403e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
