@@ -104,6 +104,24 @@
       "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_bcebef75",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-30T21:16:25Z",
+      "side": 1,
+      "message": "I thought the reason it was here in the first place was because we\u0027re floating this element in the above code. If we scope the above code to mobile screens only, there won\u0027t be a need to float this element.",
+      "parentUuid": "0e82f318_1c215b9a",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
