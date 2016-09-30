@@ -2049,7 +2049,6 @@
 		"MinervaAlwaysShowLanguageButton": true,
 		"MinervaBottomLanguageButton": true,
 		"MinervaUseFooterV2": false,
-		"MinervaUsePageActionBarV2": false,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"
