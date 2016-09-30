@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_1a415e5f",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-30T17:50:26Z",
+      "side": 1,
+      "message": "The new V2 page actions rules should not be limited to small devices only. They should apply to anything below tablet sized windows.",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_7a5eda49",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-30T17:50:26Z",
+      "side": 1,
+      "message": "This should apply to the language selector in wide screens too.",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_ba58525a",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-09-30T17:50:26Z",
+      "side": 1,
+      "message": "This can be removed, no?",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
