@@ -4,6 +4,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Devices\DeviceDetectorService;
 
 /**
  * Provide various request-dependant methods to use in mobile context
@@ -53,8 +54,17 @@ class MobileContext extends ContextSource {
 	 */
 	protected $analyticsLogItems = [];
 
-	/** @var IDeviceProperties $device Saves current device description */
-	private $device;
+	/**
+	 * The memoized result of `MobileContext#isMobileDevice`.
+	 *
+	 * This defaults to `null`, meaning that `MobileContext#isMobileDevice` has
+	 * yet to be called.
+	 *
+	 * @see MobileContext#isMobileDevice
+	 *
+	 * @var {bool|null} $isMobileDevice
+	 **/
+	private $isMobileDevice = null;
 
 	/**
 	 * @var string $action MediaWiki 'action'
@@ -144,31 +154,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Gets the current device description
-	 * @return IDeviceProperties
-	 */
-	public function getDevice() {
-		$mobileHeader = $this->getMFConfig()->get( 'MFMobileHeader' );
-
-		if ( $this->device ) {
-			return $this->device;
-		}
-		$detector = DeviceDetection::factory();
-		$request = $this->getRequest();
-
-		if ( $mobileHeader && $this->getRequest()->getHeader( $mobileHeader ) !== false ) {
-			$this->device = new HtmlDeviceProperties();
-		} else {
-			$userAgent = $request->getHeader( 'User-agent' );
-			$acceptHeader = $request->getHeader( 'Accept' );
-			$acceptHeader = $acceptHeader === false ? '' : $acceptHeader;
-			$this->device = $detector->detectDeviceProperties( $userAgent, $acceptHeader );
-		}
-
-		return $this->device;
-	}
-
-	/**
 	 * Checks whether references should be lazy loaded for the current user
 	 * @return bool
 	 */
@@ -214,42 +199,40 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Check whether the device is a mobile device
+	 * Detects whether the UA is sending the request from a device and, if so,
+	 * whether to display the mobile view to that device.
+	 *
+	 * The mobile view will always be displayed to mobile devices. However, it
+	 * will only be displayed to tablet devices if `$wgMFShowMobileViewToTablets`
+	 * is truthy.
+	 *
+	 * @FIXME: This should be renamed to something more appropriate, e.g.
+	 * `shouldDisplayMobileViewToDevice`.
+	 *
+	 * @see MobileContext::shouldDisplayMobileView
+	 *
 	 * @return bool
 	 */
 	public function isMobileDevice() {
+		if ( $this->isMobileDevice !== null ) {
+			return $this->isMobileDevice;
+		}
+
+		$this->isMobileDevice = false;
+
 		$config = $this->getMFConfig();
+		$properties = DeviceDetectorService::factory( $config )
+			->detectDeviceProperties( $this->getRequest(), $_SERVER );
 
-		if ( !$config->get( 'MFAutodetectMobileView' ) ) {
-			return false;
+		if ( $properties ) {
+			$showMobileViewToTablets = $config->get( 'MFShowMobileViewToTablets' );
+
+			$this->isMobileDevice =
+				$properties->isMobileDevice()
+				|| ( $properties->isTabletDevice() && $showMobileViewToTablets );
 		}
-		if ( $this->getAMF() ) {
-			return true;
-		}
-		$device = $this->getDevice();
-		return $device->isMobileDevice()
-			&& !( !$config->get( 'MFShowMobileViewToTablets' ) && $device->isTablet() );
 
-	}
-
-	/**
-	 * Check for mobile device when using Apache Mobile Filter (AMF)
-	 *
-	 * IF AMF is enabled, make sure we use it to detect mobile devices.
-	 * Tablets are currently served desktop site.
-	 *
-	 * AMF docs: http://wiki.apachemobilefilter.org/
-	 *
-	 * @return bool
-	 */
-	public function getAMF() {
-		$showMobileViewToTablets = $this->getMFConfig()->get( 'MFShowMobileViewToTablets' );
-
-		$amf = isset( $_SERVER['AMF_DEVICE_IS_MOBILE'] ) && $_SERVER['AMF_DEVICE_IS_MOBILE'] === 'true';
-		if ( !$showMobileViewToTablets && $amf ) {
-			$amf &= $_SERVER['AMF_DEVICE_IS_TABLET'] === 'false';
-		}
-		return $amf;
+		return $this->isMobileDevice;
 	}
 
 	/**
