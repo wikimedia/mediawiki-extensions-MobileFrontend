@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_5c6033cc",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-30T19:02:01Z",
+      "side": 1,
+      "message": "whoops not sure what happened here, this was supposed to move down with the rest of it.",
+      "parentUuid": "0e82f318_1a415e5f",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_7a5eda49",
         "filename": "resources/skins.minerva.base.styles/pageactions.less",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_bca04ff2",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-30T19:02:01Z",
+      "side": 1,
+      "message": "Yup the above was a mistake I\u0027ve moved @media all and ( max-width: @wgMFDeviceWidthMobileSmall ) { down below.\n\nI\u0027m not sure how this got onto gerrit - there were a lot more changes too :)",
+      "parentUuid": "0e82f318_7a5eda49",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_ba58525a",
         "filename": "resources/skins.minerva.base.styles/pageactions.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2016-09-30T17:50:26Z",
       "side": 1,
       "message": "This can be removed, no?",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_1c215b9a",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-30T19:02:01Z",
+      "side": 1,
+      "message": "I\u0027m not sure.\nRemoving it seems to push the content slightly down. Whether that\u0027s intentional or not I\u0027m not sure.\n\nWhat is the reason you think we can remove it?",
+      "parentUuid": "0e82f318_ba58525a",
       "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
