@@ -22,14 +22,3 @@ end
 Then(/^there should be a link to my uploads$/) do
   expect(on(UserPage).uploads_link_element).to be_visible
 end
-
-Then(/^there should be a link to create my user page$/) do
-  expect(on(UserPage).edit_link_element).to be_visible
-end
-
-When(/^I click the create my user page link$/) do
-  on(UserPage) do |page|
-    page.wait_until_rl_module_ready('skins.minerva.editor')
-    page.edit_link_element.click
-  end
-end
