@@ -6,6 +6,16 @@
 		]
 	},
 	"mobile-frontend-editor-edit": "Siŭ-gāi",
+	"mobile-frontend-home-button": "Tàu-hiĕk",
+	"mobile-frontend-main-menu-button-tooltip": "Páh kŭi cuō chái-dăng",
+	"mobile-frontend-main-menu-nearby": "Hó-gê̤ṳng",
+	"mobile-frontend-main-menu-settings": "Siék-diâng",
+	"mobile-frontend-main-menu-watchlist": "Gáng-sê-dăng",
+	"mobile-frontend-privacy-link-text": "Ṳ̄ng-sṳ̆",
+	"mobile-frontend-random-button": "Sùi-biêng muōng káng",
 	"mobile-frontend-talk-reply": "回覆",
-	"mobile-frontend-view": "Chiū-gĭ ché̤ṳ"
+	"mobile-frontend-terms-text": "Sāi-ê̤ṳng Dèu-kuāng",
+	"mobile-frontend-view": "Chiū-gĭ ché̤ṳ",
+	"mobile-frontend-view-desktop": "Diêng-nō̤ káng",
+	"mobile-frontend-view-mobile": "Iè-dông siék-bê káng"
 }
