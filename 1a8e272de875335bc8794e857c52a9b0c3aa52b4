@@ -69,6 +69,24 @@
       "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_266fe190",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-03T19:04:40Z",
+      "side": 0,
+      "message": "If an FOUC is happening, then we should move.",
+      "parentUuid": "0e82f318_e63ea986",
+      "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
