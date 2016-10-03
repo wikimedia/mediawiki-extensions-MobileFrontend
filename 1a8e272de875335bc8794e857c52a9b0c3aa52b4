@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_8b817b94",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-03T12:27:57Z",
+      "side": 0,
+      "message": "Shouldn\u0027t you keep this for footer V1?",
+      "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_cb52933e",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-03T12:27:57Z",
+      "side": 0,
+      "message": "Although we\u0027re pushing this to stable, we\u0027re not enabling the feature without the flag. That\u0027s why I\u0027d keep it here and not load the code for users who don\u0027t see the V2.",
+      "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
