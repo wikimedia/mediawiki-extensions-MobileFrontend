@@ -17,7 +17,7 @@
 
 .heading-holder {
 	@pageActionsHeight: @pageActionFontSize + (2 * @iconGutterWidth);
-	padding: @titleSectionSpacingTop 0 @pageActionsHeight;
+	padding: @titleSectionSpacingTop 0 (@pageActionsHeight + 0.5em);
 	overflow: hidden;
 	position: relative;
 
@@ -28,7 +28,7 @@
 	.tagline {
 		color: @colorGray5;
 		font-size: 0.85em;
-		margin: 7px 0 10px 0;
+		margin: 7px 0 0;
 
 		&:first-letter {
 			text-transform: capitalize;
