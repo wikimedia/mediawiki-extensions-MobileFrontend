@@ -51,6 +51,24 @@
       "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_e63ea986",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-03T19:01:40Z",
+      "side": 0,
+      "message": "How passionate are you about keeping this out of the patch Baha? I think it\u0027s something we\u0027ll want to do eventually when the V2 footer becomes universally accepted, the timeframe of which I would expect to be relatively quick. Thus, I think the tradeoff in bytes is fine for now to eliminate an FOUC, but if you feel strongly that this change should be made separately, then I can upload a new PS.",
+      "parentUuid": "0e82f318_e3cf7bb3",
+      "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
