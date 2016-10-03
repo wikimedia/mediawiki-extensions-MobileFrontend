@@ -54,6 +54,12 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 			}
 		}
 		/* stylelint-enable no-descending-specificity */
+
+		// Fix for v1 footer links
+		// FIXME: Remove this rule once FooterV2 is in production everywhere
+		&.hlist-separated li:after {
+			content: '';
+		}
 	}
 }
 
