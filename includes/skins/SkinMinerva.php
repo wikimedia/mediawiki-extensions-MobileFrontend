@@ -140,8 +140,8 @@ class SkinMinerva extends SkinTemplate {
 	 *   <li>the user is on the main page</li>
 	 * </ul>
 	 *
-	 * The "edit" page action is not allowed if editing is not possible on the page
-	 * see @method: isCurrentPageEditable
+	 * The "edit" page action is allowed if the content of the page supports direct editing via the
+	 * API.
 	 *
 	 * The "switch-language" is allowed if there are interlanguage links on the page,
 	 * or <code>$wgMinervaAlwaysShowLanguageButton</code>
@@ -163,7 +163,10 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $action === 'edit' ) {
-			return $this->isCurrentPageEditable();
+			$contentHandler = $this->getContentHandler();
+
+			return $contentHandler->supportsDirectEditing() &&
+				$contentHandler->supportsDirectApiEditing();
 		}
 
 		if ( $action === 'switch-language' ) {
@@ -1060,22 +1063,17 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Checks to see if the current page is (probably) editable and it is possible for the
-	 * editor to handle the existing content handler type.
+	 * Checks to see if the current page is (probably) editable.
 	 *
-	 * This is mostly the same check that sets wgIsProbablyEditable later in the page output
+	 * This is the same check that sets wgIsProbablyEditable later in the page output
 	 * process.
 	 *
 	 * @return boolean
 	 */
 	protected function isCurrentPageEditable() {
-		$contentHandler = $this->getContentHandler();
-
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		return $title->quickUserCan( 'edit', $user )
-			&& $contentHandler->supportsDirectEditing()
-			&& $contentHandler->supportsDirectApiEditing()
 			&& ( $title->exists() || $title->quickUserCan( 'create', $user ) );
 	}
 
@@ -1171,7 +1169,7 @@ class SkinMinerva extends SkinTemplate {
 				// Explicitly add the mobile watchstar code.
 				$modules[] = 'skins.minerva.watchstar';
 			}
-			if ( $this->isCurrentPageEditable() ) {
+			if ( $this->isAllowedPageAction( 'edit' ) ) {
 				$modules[] = 'skins.minerva.editor';
 			}
 		}
