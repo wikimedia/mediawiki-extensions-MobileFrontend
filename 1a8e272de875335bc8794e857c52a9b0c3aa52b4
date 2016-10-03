@@ -33,6 +33,24 @@
       "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_e3cf7bb3",
+        "filename": "resources/skins.minerva.footerV2.styles/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-03T17:46:21Z",
+      "side": 0,
+      "message": "Although moving this to stable would allow us to cleanup how we style .user-links\n\nWe can do this in a follow up however - it\u0027s not essential for this work.",
+      "parentUuid": "0e82f318_cb52933e",
+      "revId": "1a8e272de875335bc8794e857c52a9b0c3aa52b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
