@@ -72,3 +72,16 @@ dl {
 body.mw-hide-empty-elt .mw-empty-elt {
 	display: none;
 }
+
+.hlist-separated {
+	li:after {
+		content: '•';
+		padding-left: 8px;
+		color: @linkColor;
+		font-size: 16px;
+		line-height: 1;
+	}
+	:last-child:after {
+		content: '';
+	}
+}

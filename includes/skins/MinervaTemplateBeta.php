@@ -19,33 +19,6 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	}
 
 	/**
-	 * Gets template data for rendering
-	 *
-	 * @inheritdoc
-	 */
-	protected function getFooterTemplateData( $data ) {
-		$tmpData = parent::getFooterTemplateData( $data );
-		// This turns off the footer id and allows us to distinguish the old footer with the new design
-
-		$tmpData = array_merge( $tmpData, [
-			'lastmodified' => $this->getHistoryLinkHtml( $data ),
-			'headinghtml' => $data['footer-site-heading-html'],
-			'licensehtml' => $data['mobile-license']
-		] );
-		return $tmpData;
-	}
-
-	/**
-	 * Removes the last modified bar from the post content area
-	 * so that it can instead be placed in the footer
-	 *
-	 * @inheritdoc
-	 */
-	protected function getPostContentHtml( $data ) {
-		return $this->getSecondaryActionsHtml();
-	}
-
-	/**
 	 * Get category button if categories are present
 	 * @return array A map of the button's friendly name, "categories" to its
 	 *   spec if the button can be displayed.

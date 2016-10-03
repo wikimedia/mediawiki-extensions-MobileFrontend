@@ -107,9 +107,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		}
 		$styles[] = 'skins.minerva.content.styles.beta';
 		$styles[] = 'skins.minerva.icons.images.variants';
-		if ( self::isFooterV2() ) {
-			$styles[] = 'skins.minerva.footerV2.styles';
-		}
 
 		return $styles;
 	}

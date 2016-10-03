@@ -256,7 +256,7 @@ HTML;
 			'privacy',
 		];
 
-		if ( $inBeta ) {
+		if ( $ctx->getMFConfig()->get( 'MinervaUseFooterV2' ) || $inBeta ) {
 			$places[] = 'desktop-toggle';
 			$footerlinks = [
 				'places' => $places,
