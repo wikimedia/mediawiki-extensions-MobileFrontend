@@ -130,7 +130,7 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		page.$( '.edit-page' ).on( 'click', function () {
+		page.$( '.edit-page, .edit-link' ).removeClass( disabledClass ).on( 'click', function () {
 			router.navigate( '#/editor/' + $( this ).data( 'section' ) );
 			return false;
 		} );
@@ -218,7 +218,8 @@
 			return result;
 		} );
 		$caEdit.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
-
+		// reveal edit links on user pages
+		page.$( '.edit-link' ).removeClass( 'hidden' );
 		currentPage.getRedLinks().on( 'click', function ( ev ) {
 			var drawerOptions = {
 					progressiveButton: new Button( {
