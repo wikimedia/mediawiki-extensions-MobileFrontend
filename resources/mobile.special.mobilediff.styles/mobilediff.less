@@ -4,11 +4,19 @@
 @userinfoBackgroundColor: #f0f0f0;
 @userinfoBorderColor: #c0c0c0;
 @diffDateColor: #c6c6c6;
-@userInfoHeight: 5em;
+// includes padding as well as enough space for 2 lines of user groups
+@userInfoHeight: 8em;
+@userInfoPadding: 1em;
 
 // FIXME: Not a long term solution (see bug 64607) - footers and position fixed elements do not play well
 #footer {
 	display: none;
+}
+
+// In lieu of no generic way to handle this we reserve space below the footer
+// the footer can sit above the user info box.
+footer {
+	margin-bottom: @userInfoHeight + ( 2 * @userInfoPadding );
 }
 
 // FIXME: Overly specific selector
@@ -75,8 +83,8 @@
 
 	// FIXME: Overly specific selector
 	#mw-mf-userinfo {
-		min-height: @userInfoHeight;
-		padding: 1em;
+		height: @userInfoHeight;
+		padding: @userInfoPadding;
 		background-color: @colorGray15;
 		border-top: solid 1px @colorGray12;
 		bottom: 0;
