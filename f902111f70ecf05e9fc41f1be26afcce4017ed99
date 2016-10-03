@@ -122,6 +122,24 @@
       "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_6bc3678c",
+        "filename": "resources/skins.minerva.base.styles/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-03T09:27:29Z",
+      "side": 1,
+      "message": "Looking at PS4, I see that all page actions container elements (#page-action li) have the float:right rule. This rule is then overridden for the language selector container element on L116 to float:left. For tablet widths and above this doesn\u0027t change.\n\nIMO it\u0027d be wiser to change this rule to float: inherit so that the language selector page action container acts like the others, rather than remaining a special case.",
+      "parentUuid": "0e82f318_bcebef75",
+      "revId": "f902111f70ecf05e9fc41f1be26afcce4017ed99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
