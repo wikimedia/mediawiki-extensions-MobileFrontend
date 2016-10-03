@@ -16,7 +16,10 @@
 }
 
 .heading-holder {
-	padding: @titleSectionSpacingTop 0 @titleSectionSpacingBottom;
+	@pageActionsHeight: @pageActionFontSize + (2 * @iconGutterWidth);
+	padding: @titleSectionSpacingTop 0 @pageActionsHeight;
+	overflow: hidden;
+	position: relative;
 
 	h1 {
 		padding-right: @contentMargin;
@@ -41,18 +44,26 @@
 
 #page-actions {
 	font-size: @pageActionFontSize;
-	float: right;
+	float: none;
 	border: 0;
 	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid @colorGray14;
+	border-bottom: 1px solid @colorGray12;
+
+	padding: 0.5em 0;
 
 	li {
-		display: block;
+		display: inline-block;
 		// Needed for non-JavaScript users
 		position: relative;
 		cursor: pointer;
 		// Override .hlist rule.
 		margin-right: 0;
-		margin-bottom: 20px;
+		margin-bottom: 0;
+		float: right;
 
 		// FIXME: use .cloaked class
 		// file inputs are notoriously difficult to style
@@ -79,55 +90,22 @@
 		}
 
 		&:first-child {
-			margin-top: 3px;
+			margin-top: 0;
 		}
 	}
-}
 
-// FIXME: Merge these styles with those above as part of T130849.
-.feature-page-action-bar-v2 {
-	.heading-holder {
-		@pageActionsHeight: @pageActionFontSize + (2 * @iconGutterWidth);
+	.language-selector {
+		float: left;
+		margin-left: -@iconGutterWidth;
 
-		overflow: hidden;
-		position: relative;
-		padding-bottom: @pageActionsHeight;
+		&.disabled {
+			cursor: default;
+			opacity: 0.25;
+		}
 	}
 
-	#page-actions {
-		position: absolute;
-		float: none;
-		bottom: 0;
-		width: 100%;
-
-		border-top: 1px solid @colorGray14;
-		border-bottom: 1px solid @colorGray12;
-
-		padding: 0.5em 0;
-
-		li {
-			display: inline-block;
-			margin-bottom: 0;
-			float: right;
-
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-
-		.language-selector {
-			float: left;
-			margin-left: -@iconGutterWidth;
-
-			&.disabled {
-				cursor: default;
-				opacity: 0.25;
-			}
-		}
-
-		#ca-edit {
-			margin-right: -@iconGutterWidth;
-		}
+	#ca-edit {
+		margin-right: -@iconGutterWidth;
 	}
 }
 
@@ -145,14 +123,12 @@
 }
 
 @media all and ( min-width: @deviceWidthTablet ) {
-	.feature-page-action-bar-v2 {
-		#page-actions {
-			position: initial;
-			float: right;
-			width: auto;
-			border: 0;
-			margin: 0 0 @iconGutterWidth @iconGutterWidth;
-		}
+	#page-actions {
+		position: initial;
+		float: right;
+		width: auto;
+		border: 0;
+		margin: 0 0 @iconGutterWidth @iconGutterWidth;
 
 		.language-selector {
 			float: none;

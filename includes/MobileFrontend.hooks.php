@@ -1270,8 +1270,6 @@ class MobileFrontendHooks {
 	/**
 	 * OutputPageBodyAttributes hook handler.
 	 *
-	 * <code>feature-action-bar-v2</code> CSS feature flag is added to the <code>body</code> tag.
-	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBodyAttributes
 	 *
 	 * @param OutputPage $outputPage
@@ -1285,8 +1283,6 @@ class MobileFrontendHooks {
 	) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
-
-		$bodyAttributes['class'] .= ' feature-page-action-bar-v2';
 
 		if ( $config->get( 'MinervaUseFooterV2' ) || $context->isBetaGroupMember() ) {
 			$bodyAttributes['class'] .= ' feature-footer-v2';
