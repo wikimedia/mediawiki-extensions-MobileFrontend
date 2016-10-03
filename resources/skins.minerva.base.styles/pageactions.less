@@ -84,19 +84,6 @@
 	}
 }
 
-// On small devices that don't support Javascript, hide the page actions bar
-@media all and ( max-width: @wgMFDeviceWidthMobileSmall ) {
-	.client-nojs {
-		#page-actions {
-			display: none;
-		}
-
-		#section_0 {
-			border: 0;
-		}
-	}
-}
-
 // FIXME: Merge these styles with those above as part of T130849.
 .feature-page-action-bar-v2 {
 	.heading-holder {
@@ -140,6 +127,19 @@
 
 		#ca-edit {
 			margin-right: -@iconGutterWidth;
+		}
+	}
+}
+
+// On small devices that don't support Javascript, hide the page actions bar
+@media all and ( max-width: @wgMFDeviceWidthMobileSmall ) {
+	.client-nojs {
+		#page-actions {
+			display: none;
+		}
+
+		#section_0 {
+			border: 0;
 		}
 	}
 }
