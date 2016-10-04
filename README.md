@@ -565,14 +565,6 @@ message directly.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgDeviceDetectionClass
-
-Name of the class used for mobile device detection, must be inherited from
-`IDeviceDetector`.
-
-* Type: `String`
-* Default: `'DeviceDetection'`
-
 #### $wgMFEnableBeta
 
 Whether beta mode is enabled.
