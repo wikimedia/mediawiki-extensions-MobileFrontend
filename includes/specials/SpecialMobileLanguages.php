@@ -134,17 +134,16 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * @param string $pagename The name of the page
 	 */
 	public function executeWhenAvailable( $pagename ) {
+		$output = $this->getOutput();
 		if ( !is_string( $pagename ) || $pagename === '' ) {
-			wfHttpError( 404, $this->msg( 'mobile-frontend-languages-404-title' )->text(),
-				$this->msg( 'mobile-frontend-languages-404-desc' )->text()
+			$output->setStatusCode( 404 );
+			throw new ErrorPageError(
+				$this->msg( 'mobile-frontend-languages-404-title' ),
+				$this->msg( 'mobile-frontend-languages-404-desc' )
 			);
-
-			return;
 		}
 
 		$this->title = Title::newFromText( $pagename );
-
-		$output = $this->getOutput();
 
 		$html = '';
 		if ( $this->title && $this->title->exists() ) {
