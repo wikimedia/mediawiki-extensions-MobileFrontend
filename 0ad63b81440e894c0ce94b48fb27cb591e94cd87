@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_8e8fbb77",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-04T22:14:51Z",
+      "side": 1,
+      "message": "Should we not keep the original documentation too?",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_8ee6db3d",
+        "filename": "includes/devices/CompositeDeviceDetector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-04T22:14:51Z",
+      "side": 1,
+      "message": "`children` should probably be not declared dynamically as it\u0027s not part of the interface.",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_aeef1f1a",
+        "filename": "includes/devices/CompositeDeviceDetector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-04T22:14:51Z",
+      "side": 1,
+      "message": "Doesn\u0027t the method need \"@inheritdoc\"?",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_cedb737a",
+        "filename": "includes/devices/CompositeDeviceDetector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-04T22:14:51Z",
+      "side": 1,
+      "message": "As it currently stands neither AMFDeviceDetector#detectDeviceProperties nor RequestHeaderDeviceDetector#detectDeviceProperties return null.",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
