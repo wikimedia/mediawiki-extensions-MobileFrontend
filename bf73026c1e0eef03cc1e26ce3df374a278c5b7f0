@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_4ee06324",
+        "filename": "includes/devices/AMFDeviceDetector.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-04T22:13:33Z",
+      "side": 1,
+      "message": "In which cases does the function return `null`? I think it should return `null` when neither `AMF_DEVICE_IS_MOBILE` nor `AMF_DEVICE_IS_TABLET` is set.",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_e314d053",
         "filename": "includes/devices/DeviceDetector.php",
         "patchSetId": 3
