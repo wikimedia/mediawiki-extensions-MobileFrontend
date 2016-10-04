@@ -31,7 +31,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
-	"action-mf-uploadbutton": "het versimpelde mobiele uploadsysteem te gebruiken",
 	"beta-feature-minerva": "Mobiel thema ({{int:skinname-minerva}}) op desktop activeren",
 	"beta-feature-minerva-description": "Het uiterlijk dat gebruikt wordt voor mobiele apparaten te selecteren maken in het tabblad \"{{int:prefs-rendering}}\" in de voorkeuren.",
 	"mobile-frontend-account-create-captcha-placeholder": "Bevestigingscode invoeren",
@@ -162,6 +161,7 @@
 	"mobile-frontend-language-change": "Taal wijzigen",
 	"mobile-frontend-language-article-heading": "In een andere taal lezen",
 	"mobile-frontend-language-heading": "<strong>Talen</strong>",
+	"mobile-frontend-languages-not-available": "Deze pagina is niet beschikbaar in andere talen.",
 	"mobile-frontend-languages-404-desc": "Er moet een geldige paginanaam opgegeven worden.",
 	"mobile-frontend-languages-404-title": "Fout in talen",
 	"mobile-frontend-languages-header": "Talen",
@@ -334,7 +334,6 @@
 	"mobile-frontend-quick-lookup-no-results": "Kan geen resultaten vinden die overeenkomen met \"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "Dit is helaas geen koppeling naar deze wiki.",
 	"nearby": "Pagina's over onderwerpen bij u in de buurt",
-	"right-mf-uploadbutton": "De uploadknop op mobiele pagina's gebruiken",
 	"tag-mobile_edit": "Bewerking via mobiel",
 	"tag-mobile_edit-description": "bewerking gemaakt via mobiel (website of app)",
 	"tag-mobile_web_edit": "Bewerking via mobiele website",
