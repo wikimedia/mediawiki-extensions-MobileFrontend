@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_41a11190",
+        "filename": "includes/devices/DeviceDetector.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-05T13:58:07Z",
+      "side": 1,
+      "message": "Yes, that sounds good.",
+      "parentUuid": "0e82f318_c14b4161",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_6e17e74a",
         "filename": "includes/devices/DeviceProperties.php",
         "patchSetId": 3
