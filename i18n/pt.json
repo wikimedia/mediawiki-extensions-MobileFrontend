@@ -25,7 +25,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
-	"action-mf-uploadbutton": "usar o sistema simplificado de carregamentos para dispositivos móveis",
 	"beta-feature-minerva": "Ativar tema móvel ({{int:skinname-minerva}}) no ambiente de trabalho.",
 	"mobile-frontend-account-create-captcha-placeholder": "Introduza o código de confirmação",
 	"mobile-frontend-account-create-email-placeholder": "Endereço de correio electrónico (opcional)",
@@ -263,7 +262,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Voltar à página de {{GENDER:$1|utilizador|utilizadora|utilizador(a)}} \"{{GENDER:$1|$1}}\".",
 	"mobile-frontend-talk-back-to-projectpage": "Voltar à página de projeto \"$1\".",
 	"mobile-frontend-talk-back-to-filepage": "Voltar ao ficheiro \"$1\".",
-	"mobile-frontend-talk-edit-summary": "Nova secção de discussão: $1",
 	"mobile-frontend-talk-explained": "As seguintes discussões estão atualmente ativas",
 	"mobile-frontend-talk-explained-empty": "Não existem discussões sobre esta página.",
 	"mobile-frontend-talk-overlay-header": "Discussão",
@@ -321,7 +319,6 @@
 	"mobile-frontend-quick-lookup-no-results": "Não foi encontrada nenhuma correspondência com \"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "Desculpe, esta não é uma ligação interna para esta wiki.",
 	"nearby": "Páginas em tópicos próximas de si",
-	"right-mf-uploadbutton": "Utilizar o botão de carregamento em páginas móveis",
 	"tag-mobile_edit": "Edição via telefone móvel",
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (sítio ou aplicação)",
 	"tag-mobile_web_edit": "Edição feita através do sítio móvel",

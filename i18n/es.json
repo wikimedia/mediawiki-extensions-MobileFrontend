@@ -39,7 +39,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
-	"action-mf-uploadbutton": "utilizar el sistema de subidas simplificado para móviles.",
 	"beta-feature-minerva": "Activar la interfaz para móviles ({{int:skinname-minerva}}) en el escritorio",
 	"beta-feature-minerva-description": "Hacer que la apariencia usada en dispositivos móviles sea una apariencia de escritorio seleccionable en la pestaña de preferencias \"{{int:prefs-rendering}}\".",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
@@ -348,9 +347,8 @@
 	"mobile-frontend-quick-lookup-no-results": "No se encontró nada que coincida con «$1».",
 	"mobile-frontend-quick-lookup-not-internal": "Este enlace no apunta a otro lugar en este wiki.",
 	"mobile.css": "/* CSS colocados aquí afectará a los usuarios del sitio móvil */",
-	"mobile.js": "/* Cualquier código JavaScript que aquí se cargará para los usuarios de la versión móvil de su sitio */",
+	"mobile.js": "/* Cualquier código JavaScript escrito aquí se cargará para los usuarios de la versión móvil */",
 	"nearby": "Páginas sobre temas cercanos a ti",
-	"right-mf-uploadbutton": "Usar el botón de carga en páginas móviles.",
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
 	"tag-mobile_web_edit": "Edición vía web móvil",
