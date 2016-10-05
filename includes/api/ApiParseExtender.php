@@ -88,6 +88,7 @@ class ApiParseExtender {
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] && $mfSpecialCaseMainPage );
 				$mf->enableExpandableSections( !$params['mainpage'] );
+				$mf->disableScripts();
 				// HACK: need a nice way to request a TOC- and edit link-free HTML in the first place
 				// FIXME: Should this be .mw-editsection?
 				$mf->remove( [ '.toc', 'mw-editsection', '.mw-headline-anchor' ] );
