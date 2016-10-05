@@ -1033,7 +1033,8 @@
 			],
 			"dependencies": [
 				"mediawiki.util",
-				"mobile.startup"
+				"mobile.startup",
+				"mobile.overlays"
 			],
 			"templates": {
 				"Cta.hogan": "resources/mobile.drawers/CtaDrawer.hogan"
