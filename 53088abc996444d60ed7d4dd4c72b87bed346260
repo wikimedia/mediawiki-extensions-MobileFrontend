@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_3ad9a6f8",
+        "filename": "includes/devices/RequestHeaderDeviceDetector.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-05T20:30:59Z",
+      "side": 1,
+      "message": "Class `AMFDeviceDetector` has a DocBlock, implying this class should have one as well.",
+      "revId": "53088abc996444d60ed7d4dd4c72b87bed346260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
