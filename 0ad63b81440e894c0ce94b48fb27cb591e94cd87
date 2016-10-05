@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_01f639f6",
+        "filename": "includes/devices/CompositeDeviceDetector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:25:25Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0e82f318_8ee6db3d",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_aeef1f1a",
         "filename": "includes/devices/CompositeDeviceDetector.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2016-10-04T22:14:51Z",
       "side": 1,
       "message": "Doesn\u0027t the method need \"@inheritdoc\"?",
+      "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_61e0d524",
+        "filename": "includes/devices/CompositeDeviceDetector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:25:25Z",
+      "side": 1,
+      "message": "Nope. Documentation is inherited from overridden members by default.\n\nIf you want to add to the inherited documentation, then you use @inheritdoc to include it as part of the DocBlock.",
+      "parentUuid": "0e82f318_aeef1f1a",
       "revId": "0ad63b81440e894c0ce94b48fb27cb591e94cd87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
