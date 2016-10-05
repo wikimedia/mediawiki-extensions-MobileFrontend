@@ -244,7 +244,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( !$prevId ) {
 			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
 			$diff = '<ins>'
-				. nl2br( htmlspecialchars( $this->rev->getText( $audience ) ) )
+				. nl2br(
+					htmlspecialchars(
+						ContentHandler::getContentText( $this->rev->getContent( $audience ) )
+					)
+				)
 				. '</ins>';
 		}
 
