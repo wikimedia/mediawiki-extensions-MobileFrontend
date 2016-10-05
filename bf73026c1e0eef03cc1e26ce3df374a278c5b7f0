@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_616375d9",
+        "filename": "includes/devices/AMFDeviceDetector.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "You\u0027re totally right. This is a bug. I\u0027ve added a unit test and fixed the bug. Done.",
+      "parentUuid": "0e82f318_4ee06324",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_e314d053",
         "filename": "includes/devices/DeviceDetector.php",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2016-10-04T21:56:08Z",
       "side": 1,
       "message": "Method parameters need documentation.\n\nAlso, I wonder if renaming the method to `getDeviceProperties` makes more sense? Maybe not.",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_c14b4161",
+        "filename": "includes/devices/DeviceDetector.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "I\u0027ve documented the method parameters.\n\nI prefer to use \"get\" when the method simply provides read-only access to a  member variable and other verbs when the method does something. Do you think that\u0027s reasonable?",
+      "parentUuid": "0e82f318_e314d053",
       "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_4f84ddb4",
+        "filename": "includes/devices/DeviceProperties.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": ";) Done",
+      "parentUuid": "0e82f318_6e17e74a",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_8e2b3b77",
         "filename": "includes/devices/DeviceProperties.php",
         "patchSetId": 3
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_6ff6015c",
+        "filename": "includes/devices/DeviceProperties.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "I think you\u0027re right. The copyright notice suffices. Done.",
+      "parentUuid": "0e82f318_8e2b3b77",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_2e3fafb2",
         "filename": "includes/devices/DeviceProperties.php",
         "patchSetId": 3
@@ -98,6 +170,24 @@
       "writtenOn": "2016-10-04T21:56:08Z",
       "side": 1,
       "message": "Isn\u0027t the default access modifier \u0027public\u0027? Either we should make these properties private or get rid of the below two getters.",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_8ff33568",
+        "filename": "includes/devices/DeviceProperties.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "I prefer getters. Done.",
+      "parentUuid": "0e82f318_2e3fafb2",
       "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +228,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_6f8d21d8",
+        "filename": "includes/devices/RequestHeaderDeviceDetector.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "Nope. Documentation is inherited from overridden members by default.\n\nIf you want to add to the inherited documentation, then you use @inheritdoc to include it as part of the DocBlock.",
+      "parentUuid": "0e82f318_8e597b2f",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_eea75706",
         "filename": "tests/phpunit/devices/AMFDeviceDetectorTest.php",
         "patchSetId": 3
@@ -161,6 +269,24 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_e1504510",
+        "filename": "tests/phpunit/devices/AMFDeviceDetectorTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0e82f318_eea75706",
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_2eb5ef2f",
         "filename": "tests/phpunit/devices/AMFDeviceDetectorTest.php",
         "patchSetId": 3
@@ -178,6 +304,24 @@
         "endLine": 64,
         "endChar": 48
       },
+      "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_0152b915",
+        "filename": "tests/phpunit/devices/AMFDeviceDetectorTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-05T13:17:15Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0e82f318_2eb5ef2f",
       "revId": "bf73026c1e0eef03cc1e26ce3df374a278c5b7f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
