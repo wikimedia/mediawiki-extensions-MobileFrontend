@@ -5,12 +5,12 @@ Feature: Language selection
     Given I am using the mobile site
 
   @smoke @integration
-  Scenario: Language button in beta
+  Scenario: Language button
     Given I go to a page that has languages
     Then I should see the switch-language page action
 
   @smoke @integration
-  Scenario: Language button in beta (on a page that doesn't have languages)
+  Scenario: Language button (on a page that doesn't have languages)
     Given I go to a page that does not have languages
     Then I should see the disabled switch-language page action
 
