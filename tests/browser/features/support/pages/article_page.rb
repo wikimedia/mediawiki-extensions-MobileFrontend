@@ -10,7 +10,7 @@ class ArticlePage
   # pre-content
   h1(:first_heading, id: 'section_0')
   # standalone history link
-  a(:standalone_edit_history_link, css: '#mw-mf-last-modified a')
+  a(:standalone_edit_history_link, css: '.last-modified-bar a')
 
   # left nav
   nav(:navigation, css: 'nav')
@@ -154,7 +154,7 @@ class ArticlePage
   # footer
   a(:desktop_link, text: 'Desktop')
   a(:terms_link, css: '#footer-places-terms-use')
-  a(:license_link, css: '#footer-info-mobile-license a')
+  a(:license_link, css: 'footer .license a')
   a(:privacy_link, text: 'Privacy')
 
   # pagelist

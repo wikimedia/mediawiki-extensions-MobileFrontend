@@ -2049,7 +2049,7 @@
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
 		"MinervaBottomLanguageButton": true,
-		"MinervaUseFooterV2": false,
+		"MinervaUseFooterV2": true,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"
