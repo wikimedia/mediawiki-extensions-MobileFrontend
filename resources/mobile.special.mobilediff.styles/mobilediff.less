@@ -13,6 +13,12 @@
 	display: none;
 }
 
+#mw-mf-page-center {
+	// See https://phabricator.wikimedia.org/T144579#2699879
+	// This prevents the footer margin bottom from collapsing on iOS9.3
+	border-bottom: 1px solid transparent;
+}
+
 // In lieu of no generic way to handle this we reserve space below the footer
 // the footer can sit above the user info box.
 footer {
