@@ -1,14 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Don Alessandro"
+			"Don Alessandro",
+			"Danvintius Bookix"
 		]
 	},
 	"mobile-frontend-copyright": "Башкъасы бильдирильмесе, малюмат $1 лицензиясынен бериле.",
+	"mobile-frontend-editor-edit": "Денъиштир",
 	"mobile-frontend-history": "Бу саифенинъ денъиштирильме тарихыны косьтер.",
 	"mobile-frontend-language-article-heading": "Башкъа тильде окъу",
-	"mobile-frontend-language-header": "Бу саифе $1 {{PLURAL:$1|тильде}} бар",
-	"mobile-frontend-language-site-choose": "Тильни къыдырув",
 	"mobile-frontend-languages-header-page": "$1 — Тиллер",
 	"mobile-frontend-languages-text": "$1 саифеси $2 {{PLURAL:$2|тильде}} бар.",
 	"mobile-frontend-main-menu-login": "Кириш",

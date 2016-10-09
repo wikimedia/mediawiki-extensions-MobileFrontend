@@ -6,7 +6,8 @@
 			"SpeedyGonsales",
 			"Fraxinus",
 			"Teoo3",
-			"Ex13"
+			"Ex13",
+			"Ivi104"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite \"captcha\" tekst",
@@ -195,7 +196,7 @@
 	"mobile-frontend-password-placeholder": "Zaporka",
 	"mobile-frontend-photo-article-donate-comment": "Slika iz Special:Uploads",
 	"mobile-frontend-photo-article-edit-comment": "Dodana slika na stranicu (s mobilnog uređaja)",
-	"mobile-frontend-photo-caption-placeholder": "Opis ove slike (obavezno)",
+	"mobile-frontend-photo-caption-placeholder": "Opišite ovu sliku (obavezno)",
 	"mobile-frontend-photo-upload-invalid-user": "Suradnički račun \"$1\" nije registriran.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> postavljena datoteka|<span>$1</span> postavljene datoteke|<span>$1</span> postavljenih datoteka}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Više od 500 postavljenih datoteka",
