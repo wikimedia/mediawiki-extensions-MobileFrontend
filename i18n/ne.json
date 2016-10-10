@@ -78,6 +78,7 @@
 	"mobile-frontend-talk-overlay-header": "कुरा",
 	"mobile-frontend-talk-reply": "जवाफ दिने",
 	"mobile-frontend-terms-text": "प्रयोगका सर्तहरू",
+	"mobile-frontend-thanked-notice": "तपाईंलाई {{GENDER:$2|उनको}} सम्पादन राम्रो लाग्यो भनी $1 लाई सूचना पठाईयो ।",
 	"mobile-frontend-view": "दूरभाष दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटप",
 	"mobile-frontend-view-mobile": "दूरभाष",
