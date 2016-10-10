@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_4ba45605",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2016-10-10T07:13:14Z",
+      "side": 1,
+      "message": "I think this comment applies to the call in SkinMinerva.php, not to the function itself. The function doesn\u0027t carry any intent about the value of $timestamp, it just overrides the local value with it.",
+      "revId": "b11b1ebdb9b191ab961f8b1564c32332fabafab7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
