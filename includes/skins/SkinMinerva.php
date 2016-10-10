@@ -690,8 +690,10 @@ class SkinMinerva extends SkinTemplate {
 	protected function getHistoryLink( Title $title ) {
 		$user = $this->getUser();
 		$isMainPage = $title->isMainPage();
+		// Get rev_timestamp of current revision (preloaded by MediaWiki core)
+		$timestamp = $this->getOutput()->getRevisionTimestamp();
 		$mp = new MobilePage( $this->getTitle(), false );
-		$timestamp = $mp->getLatestTimestamp();
+		$mp->setLatestTimestamp( $timestamp );
 		// Main pages tend to include transclusions (see bug 51924)
 		if ( $isMainPage ) {
 			$lastModified = $this->msg( 'mobile-frontend-history' )->plain();
@@ -704,6 +706,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 		$edit = $mp->getLatestEdit();
 		$link = [
+			// Use $edit['timestamp'] (Unix format) instead of $timestamp (MW format)
 			'data-timestamp' => $isMainPage ? '' : $edit['timestamp'],
 			'href' => SpecialPage::getTitleFor( 'History', $title )->getLocalURL(),
 			'text' => $lastModified,
