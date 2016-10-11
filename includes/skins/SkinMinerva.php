@@ -936,9 +936,11 @@ class SkinMinerva extends SkinTemplate {
 			}
 		}
 
-		if ( MobileContext::singleton()->getMFConfig()->get( 'MinervaBottomLanguageButton' ) &&
+		if ( $title->isMainPage() && $this->doesPageHaveLanguages || (
+			MobileContext::singleton()->getMFConfig()->get( 'MinervaBottomLanguageButton' ) &&
 			$this->doesPageHaveLanguages &&
-			( $title->isMainPage() || $this->shouldSecondaryActionsIncludeLanguageBtn ) ) {
+			$this->shouldSecondaryActionsIncludeLanguageBtn )
+		) {
 			$buttons['language'] = $this->getLanguageButton();
 		}
 
