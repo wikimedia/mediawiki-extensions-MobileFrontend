@@ -4,6 +4,7 @@
 	 * Gateway for retrieving references
 	 *
 	 * @class ReferencesGateway
+	 * @abstract
 	 * @param {mw.Api} api
 	 */
 	function ReferencesGateway( api ) {
@@ -11,7 +12,8 @@
 	}
 
 	OO.mfExtend( ReferencesGateway, {
-		// jscs:disable
+		// jscs:disable jsDoc
+		// (Disabled as signature does not match the abstract base class arguments/return value)
 		/**
 		 * Return the matched reference via API or DOM query
 		 *
@@ -19,12 +21,12 @@
 		 * @param {String} id CSS selector
 		 * @param {Page} page to find reference for
 		 * @returns {jQuery.Promise} resolves with an Object representing reference with a `text` property
-			  or false if the reference does not exist
+		 *  or false if the reference does not exist
 		 */
 		getReference: function () {
 			throw new Error( 'Method unimplemented' );
 		}
-		// jscs:enable
+		// jscs:enable jsDoc
 	} );
 
 	M.define( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway );
