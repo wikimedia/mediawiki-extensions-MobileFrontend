@@ -19,10 +19,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		return $method;
 	}
 
-	protected function setUp() {
-		parent::setUp();
-	}
-
 	protected function tearDown() {
 		parent::tearDown();
 
@@ -265,76 +261,6 @@ class MobileContextTest extends MediaWikiTestCase {
 			"http://en.wikipedia.org/wiki/mobile/Gustavus_Airport",
 			wfAssembleUrl( $parsedUrl )
 		);
-	}
-
-	/**
-	 * @dataProvider isFauxMobileDeviceProvider
-	 * @covers MobileContext::isFauxMobileDevice
-	 */
-	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat = null ) {
-		$isFauxMobileDevice = self::getMethod( 'isFauxMobileDevice' );
-
-		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';
-
-		$context = $this->makeContext();
-		$context->setUseFormat( $useformat );
-		$this->$testMethod(
-			$isFauxMobileDevice->invokeArgs( $context, [] ),
-			$msg
-		);
-	}
-
-	public function isFauxMobileDeviceProvider() {
-		return [
-			[ false, 'Nothing set' ],
-			[ true, 'useformat=mobile', 'mobile' ],
-			[ true, 'useformat=mobile-wap', 'mobile-wap' ],
-			[ false, 'useformat=yourmom', 'yourmom' ],
-		];
-	}
-
-	/**
-	 * @dataProvider shouldDisplayMobileViewProvider
-	 * @covers MobileContext::shouldDisplayMobileView
-	 */
-	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null,
-		$requestVal = [], $msg = null
-	) {
-		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
-
-		$this->setMwGlobals( [
-			'wgMFMobileHeader' => 'X-WAP',
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
-		] );
-		$context = $this->makeContext();
-		$request = $context->getRequest();
-		if ( count( $requestVal ) ) {
-			foreach ( $requestVal as $key => $val ) {
-				if ( $key == 'useformat' ) {
-					$context->setUseFormat( $val );
-				} else {
-					$request->setVal( $key, $val );
-				}
-			}
-		}
-
-		if ( !is_null( $xWap ) ) {
-			$request->setHeader( 'X-WAP', $xWap );
-		}
-
-		$this->$testMethod( $context->shouldDisplayMobileView(), $msg );
-	}
-
-	public function shouldDisplayMobileViewProvider() {
-		return [
-			[ false, null, [] ],
-			[ true, 'yes', [] ],
-			[ true, 'no', [] ],
-			[ false, 'yes', [ 'useformat' => 'desktop' ] ],
-			[ true, null, [ 'useformat' => 'mobile-wap' ] ],
-			[ false, null, [ 'useformat' => 'desktop' ] ],
-			[ true, null, [ 'useformat' => 'mobile' ] ],
-		];
 	}
 
 	/**
