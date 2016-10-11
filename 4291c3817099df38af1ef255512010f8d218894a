@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_5c0173b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-11T19:14:52Z",
+      "side": 1,
+      "message": "I don\u0027t think this is true. Wouldn\u0027t this increase the bytes shipped of HTML?",
+      "revId": "4291c3817099df38af1ef255512010f8d218894a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_fc185f25",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1254,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-11T19:14:52Z",
+      "side": 1,
+      "message": "I remember issues with the table of contents being outputted twice in HTML. I can\u0027t find the Phabricator ticket right now, but if we merge this we should either do this straight into stable or investigate thoroughly to ensure we don\u0027t cause cache pollution.",
+      "revId": "4291c3817099df38af1ef255512010f8d218894a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
