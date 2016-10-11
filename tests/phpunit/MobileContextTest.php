@@ -76,7 +76,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testGetMobileUrl() {
 		$this->setMwGlobals( [
-			'wgMFMobileHeader' => 'X-WAP',
+			'wgMFMobileHeader' => 'X-Subdomain',
 			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
 			'wgServer' => '//en.wikipedia.org',
 		] );
@@ -93,7 +93,7 @@ class MobileContextTest extends MediaWikiTestCase {
 					$invokes++;
 			} ]
 		] );
-		$context->getRequest()->setHeader( 'X-WAP', 'no' );
+		$context->getRequest()->setHeader( 'X-Subdomain', 'M' );
 		$this->assertEquals(
 			'http://en.m.wikipedia.org/wiki/Article',
 			$context->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' )
@@ -167,12 +167,12 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testUsingMobileDomain() {
 		$this->setMwGlobals( [
-			'wgMFMobileHeader' => 'X-WAP',
+			'wgMFMobileHeader' => 'X-Subdomain',
 			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 		$context = $this->makeContext();
 		$this->assertFalse( $context->usingMobileDomain() );
-		$context->getRequest()->setHeader( 'X-WAP', '1' );
+		$context->getRequest()->setHeader( 'X-Subdomain', 'M' );
 		$this->assertTrue( $context->usingMobileDomain() );
 	}
 
