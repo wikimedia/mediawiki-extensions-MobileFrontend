@@ -13,8 +13,7 @@
 		page = M.getCurrentPage(),
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
-		betaOptinPanel,
-		TOP_OF_ARTICLE = 'top-of-article';
+		betaOptinPanel;
 
 	/**
 	 * Event handler for clicking on an image thumbnail
@@ -45,89 +44,10 @@
 	 * @ignore
 	 */
 	function initButton() {
-		var version = TOP_OF_ARTICLE,
-			// This catches language selectors in page actions and in secondary actions (e.g. Main Page)
-			$primaryBtn = $( '.language-selector' );
-
-		/**
-		 * Log impression when the language button is seen by the user
-		 * @ignore
-		 */
-		function logLanguageButtonImpression() {
-			// Note we do not log an event for both buttons when they are both visible
-			if ( mw.viewport.isElementInViewport( $primaryBtn ) ) {
-				M.off( 'scroll', logLanguageButtonImpression );
-
-				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-					event: 'languageButtonImpression'
-				} );
-			}
-		}
-
-		/**
-		 * Return the number of times the user has clicked on the language button
-		 *
-		 * @ignore
-		 * @param {Number} tapCount
-		 * @return {String}
-		 */
-		function getLanguageButtonTappedBucket( tapCount ) {
-			var bucket;
-
-			if ( tapCount === 0 ) {
-				bucket = '0';
-			} else if ( tapCount >= 1 && tapCount <= 4 ) {
-				bucket = '1-4';
-			} else if ( tapCount >= 5 && tapCount <= 20 ) {
-				bucket = '5-20';
-			} else if ( tapCount > 20 ) {
-				bucket = '20+';
-			}
-			bucket += ' taps';
-			return bucket;
-		}
-
-		/**
-		 * Capture a tap on the language switcher
-		 *
-		 * @ignore
-		 */
-		function captureTap() {
-			var tapCountBucket,
-				previousTapCount = settings.get( 'mobile-language-button-tap-count' );
-
-			// when local storage is not available ...
-			if ( previousTapCount === false ) {
-				previousTapCount = 0;
-				tapCountBucket = 'unknown';
-			// ... or when the key has not been previously saved
-			} else if ( previousTapCount === null ) {
-				previousTapCount = 0;
-				tapCountBucket = getLanguageButtonTappedBucket( previousTapCount );
-			} else {
-				previousTapCount = parseInt( previousTapCount, 10 );
-				tapCountBucket = getLanguageButtonTappedBucket( previousTapCount );
-			}
-
-			settings.save( 'mobile-language-button-tap-count', previousTapCount + 1 );
-			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-				event: 'languageButtonTap',
-				languageButtonVersion: version,
-				languageButtonTappedBucket: tapCountBucket,
-				primaryLanguageOfUser: getDeviceLanguage() || 'unknown'
-			} );
-		}
+		// This catches language selectors in page actions and in secondary actions (e.g. Main Page)
+		var $primaryBtn = $( '.language-selector' );
 
 		if ( $primaryBtn.length ) {
-			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-				event: 'pageLoaded',
-				beaconCapable: $.isFunction( navigator.sendBeacon )
-			} );
-
-			M.on( 'scroll', logLanguageButtonImpression );
-			// maybe the button is already visible?
-			logLanguageButtonImpression();
-
 			// We only bind the click event to the first language switcher in page
 			$primaryBtn.on( 'click', function ( ev ) {
 				ev.preventDefault();
@@ -137,7 +57,6 @@
 				} else {
 					toast.show( mw.msg( 'mobile-frontend-languages-not-available' ) );
 				}
-				captureTap();
 			} );
 		}
 	}
@@ -311,5 +230,10 @@
 		initModifiedInfo();
 		// FIXME: Drop id selector when footer v2 in stable (T141002)
 		initHistoryLink( $( '#mw-mf-last-modified a, .last-modifier-tagline a' ) );
+	} );
+
+	// FIXME: Remove after cache clears (T130849) - this removes any artifacts associated with previous EventLogging
+	mw.requestIdleCallback( function () {
+		settings.remove( 'mobile-language-button-tap-count' );
 	} );
 }( mw.mobileFrontend, jQuery ) );

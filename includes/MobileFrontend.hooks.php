@@ -428,8 +428,6 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
-			'wgMFSchemaMobileWebLanguageSwitcherSampleRate' =>
-				$config->get( 'MFSchemaMobileWebLanguageSwitcherSampleRate' ),
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFIgnoreEventLoggingBucketing' => $config->get( 'MFIgnoreEventLoggingBucketing' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
@@ -1148,7 +1146,6 @@ class MobileFrontendHooks {
 	public static function onEventLoggingRegisterSchemas( &$schemas ) {
 		$schemas['MobileWebMainMenuClickTracking'] = 11568715;
 		$schemas['MobileWebSearch'] = 12054448;
-		$schemas['MobileWebLanguageSwitcher'] = 15302503;
 		return true;
 	}
 
@@ -1172,7 +1169,6 @@ class MobileFrontendHooks {
 		];
 
 		$schemaEdit = $mfResourceFileModuleBoilerplate;
-		$schemaMobileWebLanguageSwitcher = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebMainMenuClickTracking = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
@@ -1189,15 +1185,6 @@ class MobileFrontendHooks {
 					]
 				];
 			}
-			$schemaMobileWebLanguageSwitcher += [
-				'dependencies' => [
-					'schema.MobileWebLanguageSwitcher',
-					'mobile.context'
-				],
-				'scripts' => [
-					'resources/mobile.loggingSchemas/schemaMobileWebLanguageSwitcher.js',
-				],
-			];
 			$schemaMobileWebMainMenuClickTracking += [
 				'dependencies' => [
 					'schema.MobileWebMainMenuClickTracking',
@@ -1221,8 +1208,6 @@ class MobileFrontendHooks {
 
 		$resourceLoader->register( [
 			'mobile.loggingSchemas.edit' => $schemaEdit,
-			'mobile.loggingSchemas.mobileWebLanguageSwitcher' =>
-				$schemaMobileWebLanguageSwitcher,
 			'mobile.loggingSchemas.mobileWebMainMenuClickTracking' =>
 				$schemaMobileWebMainMenuClickTracking,
 			'mobile.loggingSchemas.mobileWebSearch' => $schemaMobileWebSearch,
