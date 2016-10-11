@@ -14,8 +14,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	public $template = 'MinervaTemplateBeta';
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
-	/** @inheritdoc */
-	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 
 	/**
 	 * Whether the new footer is to be used

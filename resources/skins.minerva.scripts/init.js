@@ -14,8 +14,7 @@
 		thumbs = page.getThumbnails(),
 		experiments = mw.config.get( 'wgMFExperiments' ) || {},
 		betaOptinPanel,
-		TOP_OF_ARTICLE = 'top-of-article',
-		BOTTOM_OF_ARTICLE = 'bottom-of-article';
+		TOP_OF_ARTICLE = 'top-of-article';
 
 	/**
 	 * Event handler for clicking on an image thumbnail
@@ -41,39 +40,14 @@
 	}
 
 	/**
-	 * Scroll viewport to top
-	 * @return {jQuery.Promise} promise that resolves when the animation is
-	 * complete
-	 * @ignore
-	 */
-	function scrollToTop() {
-		var deferred = $.Deferred();
-
-		$( 'html, body' ).animate( {
-			scrollTop: 0
-		}, 400, 'swing', function () {
-			deferred.resolve();
-		} );
-
-		return deferred.promise();
-	}
-
-	/**
 	 * Hijack the Special:Languages link and replace it with a trigger to a LanguageOverlay
 	 * that displays the same data
 	 * @ignore
 	 */
 	function initButton() {
 		var version = TOP_OF_ARTICLE,
-			// FIXME: remove #language-switcher when cache clears (T139794)
-			$legacyBtn = $( '#page-secondary-actions .language-selector, #language-switcher' ),
-			$primaryBtn = $( '#page-actions .language-selector' );
-
-		if ( !$primaryBtn.length ) {
-			$primaryBtn = $legacyBtn;
-			$legacyBtn = null;
-			version = BOTTOM_OF_ARTICLE;
-		}
+			// This catches language selectors in page actions and in secondary actions (e.g. Main Page)
+			$primaryBtn = $( '.language-selector' );
 
 		/**
 		 * Log impression when the language button is seen by the user
@@ -165,35 +139,6 @@
 				}
 				captureTap();
 			} );
-
-			// If both buttons are shown setup switch behaviour.
-			if ( ( $legacyBtn && $legacyBtn.length ) && $primaryBtn.length ) {
-				$legacyBtn.on( 'click', function ( ev ) {
-					ev.preventDefault();
-
-					// Animate to top while loading the content overlays
-					$.when(
-						scrollToTop(),
-						mw.loader.using( 'mobile.pointerOverlay' )
-					).done( function () {
-						var po,
-							PointerOverlay = require( 'mobile.pointerOverlay' );
-
-						// Show pointer toast in the new languages button
-						po = new PointerOverlay( {
-							summary: mw.msg( 'mobile-frontend-language-change' ),
-							target: '#page-actions .language-selector',
-							autoHide: true,
-							isCompact: true,
-							timeout: 5000,
-							cancelMsg: null
-						} );
-						po.show();
-						$legacyBtn.blur();
-					} );
-
-				} );
-			}
 		}
 	}
 

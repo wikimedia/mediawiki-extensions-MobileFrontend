@@ -247,15 +247,6 @@ mobile devices.
 * Type: `String`
 * Default: `'X-Subdomain'`
 
-#### $wgMinervaBottomLanguageButton
-
-Whether the language button at the bottom of the page is enabled
-
-Whether to show the language switcher button even if no languages are available for the page.
-
-* Type: `Boolean`
-* Default: `true`
-
 #### $wgMinervaUseFooterV2
 
 A temporary configuration variable to control display of a new footer which impacts styling
