@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_ffaf71dc",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-11T20:18:35Z",
+      "side": 1,
+      "message": "I think we can improve documentation here as mobile and tablet devices are treated differently in the code. We may even want to rename the function to include the word \"tablet\" in some form.",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_7f8b8172",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-11T20:18:35Z",
+      "side": 1,
+      "message": "Can we not cache the result of this function? Does anything affect the return value of the function once the value of $this-\u003edevice is not `false`?",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_5ffb2511",
+        "filename": "includes/devices/DeviceDetectorService.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-11T20:18:35Z",
+      "side": 1,
+      "message": "typo in \"iterates\"",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
