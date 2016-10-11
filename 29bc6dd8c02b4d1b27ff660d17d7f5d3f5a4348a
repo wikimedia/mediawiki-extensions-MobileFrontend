@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_3c59175e",
+        "filename": "includes/devices/CustomHeaderDeviceDetector.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-11T20:05:02Z",
+      "side": 1,
+      "message": "Don\u0027t we need to document the argument?",
+      "revId": "29bc6dd8c02b4d1b27ff660d17d7f5d3f5a4348a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
