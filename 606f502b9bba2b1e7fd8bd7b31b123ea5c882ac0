@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e6c1747_e92fd19a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-12T23:08:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e6c1747_69ae81e6",
+      "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e6c1747_0986ed6a",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-12T21:38:47Z",
       "side": 1,
       "message": "I see the header chrome doesn\u0027t have border bottom color either. Should we not remove the color from here?",
+      "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_89281d98",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-12T23:08:43Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand what you mean and see the connection.\n\n\u003e ag header-chrome\nshows me one css rule which doesn\u0027t have a border bottom color.\n\nWith this particular example I wasn\u0027t sure whether to do border-top: solid 1px transparent; or border-top: solid 1px @chromeContentSeparator;\n\nHowever when using @chromeContentSeparator I see a border appear. Question for Nirzar I guess? Do we want that border to be visible? I figured no since I\u0027ve not heard any complaints about the status quo.",
+      "parentUuid": "2e6c1747_0986ed6a",
       "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
