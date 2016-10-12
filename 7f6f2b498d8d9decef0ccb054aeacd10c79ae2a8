@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e6f8b3b_eb25f3bd",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-12T12:58:27Z",
+      "side": 1,
+      "message": "You\u0027re absolutely right about improving the documentation. Done.\n\nIMO this function should be better named and shouldn\u0027t be public. However, I can be sure that it\u0027s called by another extension (which is possible but not likely). I think we need to go through the process of deprecating it.",
+      "parentUuid": "4e6f8b3b_ffaf71dc",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e6f8b3b_7f8b8172",
         "filename": "includes/MobileContext.php",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4e6f8b3b_0b332f0b",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-12T12:58:27Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "4e6f8b3b_7f8b8172",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e6f8b3b_5ffb2511",
         "filename": "includes/devices/DeviceDetectorService.php",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2016-10-11T20:18:35Z",
       "side": 1,
       "message": "typo in \"iterates\"",
+      "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_cb42f7b1",
+        "filename": "includes/devices/DeviceDetectorService.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-12T12:58:27Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "4e6f8b3b_5ffb2511",
       "revId": "7f6f2b498d8d9decef0ccb054aeacd10c79ae2a8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
