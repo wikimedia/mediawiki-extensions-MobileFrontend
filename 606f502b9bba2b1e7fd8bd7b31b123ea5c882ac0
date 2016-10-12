@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_69ae81e6",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-12T21:38:47Z",
+      "side": 1,
+      "message": "border -\u003e margin?",
+      "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_0986ed6a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-12T21:38:47Z",
+      "side": 1,
+      "message": "I see the header chrome doesn\u0027t have border bottom color either. Should we not remove the color from here?",
+      "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
