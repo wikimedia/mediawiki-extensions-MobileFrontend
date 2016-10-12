@@ -64,11 +64,12 @@ class ExtMobileFrontend {
 
 		$removeImages = $context->isLazyLoadImagesEnabled();
 		$removeReferences = $context->isLazyLoadReferencesEnabled();
+		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox();
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
 			$formatter->filterContent( /* remove defaults */ !$isSpecialPage,
-				$removeReferences, $removeImages );
+				$removeReferences, $removeImages, $showFirstParagraphBeforeInfobox );
 		}
 
 		$contentHtml = $formatter->getText();

@@ -38,6 +38,11 @@ class MobileContext extends ContextSource {
 	 */
 	protected $lazyLoadReferences;
 	/**
+	 * Whether to show the first paragraph before the infobox in the lead section
+	 * @var boolean $showFirstParagraphBeforeInfobox
+	 */
+	protected $showFirstParagraphBeforeInfobox;
+	/**
 	 * Save explicitly requested format
 	 * @var string $useFormat
 	 */
@@ -192,6 +197,19 @@ class MobileContext extends ContextSource {
 				$cookie === self::LAZY_LOAD_IMAGES_COOKIE_VALUE;
 		}
 		return $this->lazyLoadImages;
+	}
+
+	/**
+	 * Checks whether the first paragraph from the lead section should be
+	 * shown before all infoboxes that come earlier.
+	 * @return bool
+	 */
+	public function shouldShowFirstParagraphBeforeInfobox() {
+		if ( $this->showFirstParagraphBeforeInfobox === null ) {
+			$this->showFirstParagraphBeforeInfobox = $this->getConfigVariable(
+				'MFShowFirstParagraphBeforeInfobox' );
+		}
+		return $this->showFirstParagraphBeforeInfobox;
 	}
 
 	/**
