@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_3d510ede",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-12T13:10:27Z",
+      "side": 0,
+      "message": "This setting should be deleted asynchronously:\n\n    mw.requestIdleCallback( function () {\n      settings.remove( \u0027mobile-language-button-tap-count\u0027 );\n    } );",
+      "revId": "a4b87ae907126d7e3f6dcc92a9081ec62cd44be5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
