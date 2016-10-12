@@ -1,8 +1,7 @@
 <?php
 
-/**
- * @group MobileFrontend
- */
+use Tests\MobileFrontend\Context;
+
 class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 
 	/**
