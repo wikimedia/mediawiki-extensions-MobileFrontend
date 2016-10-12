@@ -147,7 +147,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			throw new Exception( 'mOldid and mNewid must be set to get diff cache key.' );
 		}
 
-		return wfMemcKey( 'diff', 'inline', MW_DIFF_VERSION,
+		return wfMemcKey( 'diff', 'inline', self::DIFF_VERSION,
 			'oldid', $this->mOldid, 'newid', $this->mNewid );
 	}
 
