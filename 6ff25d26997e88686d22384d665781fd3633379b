@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_0c499b6a",
+        "filename": "tests/phpunit/context/MobileContextShouldDisplayMobileViewIntegrationTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-12T23:20:13Z",
+      "side": 1,
+      "message": "ws error (I\u0027ve fixed for you)",
+      "revId": "6ff25d26997e88686d22384d665781fd3633379b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
