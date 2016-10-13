@@ -88,6 +88,24 @@
       "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_2fd9e42c",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T18:47:37Z",
+      "side": 1,
+      "message": "It still complains about redundant parameters although interestingly it doesn\u0027t complain about the redundant return.\n\nAn alternative approach to this is I add abstract here, add the parameters to getReference function signature and add a line to disable complaints from jshint about unused variables instead.\n\nAll I want is autofixing asap so whatever works for everyone. :)",
+      "parentUuid": "2e6c1747_4fc38061",
+      "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
