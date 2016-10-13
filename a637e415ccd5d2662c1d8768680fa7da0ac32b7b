@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_41b7d5d3",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T16:10:49Z",
+      "side": 0,
+      "message": "This test is the only one that fails and seems easily fixed if we want it:\n\n And I am editing a new article with VisualEditor # features/step_definitions/editor_ve_steps.rb:1\n16:20:34       timed out after 5 seconds, waiting for {:css\u003d\u003e\".visual-editor .oo-ui-icon-edit-ve\", :tag_name\u003d\u003e\"span\"} to become present (Watir::Wait::TimeoutError)\n\nOr should this be part of VisualEditor?",
+      "revId": "a637e415ccd5d2662c1d8768680fa7da0ac32b7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
