@@ -96,7 +96,8 @@
 		"MobileFrontend\\Devices\\DeviceProperties": "includes/devices/DeviceProperties.php",
 		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
 		"MobileFrontend\\Devices\\CustomHeaderDeviceDetector": "includes/devices/CustomHeaderDeviceDetector.php",
-		"MobileFrontend\\Devices\\UADeviceDetector": "includes/devices/UADeviceDetector.php"
+		"MobileFrontend\\Devices\\UADeviceDetector": "includes/devices/UADeviceDetector.php",
+		"MobileFrontend\\Devices\\DeviceDetectorService": "includes/devices/DeviceDetectorService.php"
 	},
 	"ResourceModules": {
 		"skins.minerva.base.reset": {
