@@ -2048,7 +2048,7 @@
 		"MFSchemaEditSampleRate": 0.0625,
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
-		"MinervaBottomLanguageButton": true,
+		"MinervaBottomLanguageButton": false,
 		"MinervaUseFooterV2": true,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [

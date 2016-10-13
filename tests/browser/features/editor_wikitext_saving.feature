@@ -14,7 +14,6 @@ Feature: Wikitext Editor (Makes actual saves)
       And I click submit
     Then I should see a toast notification
       And the text of the first heading should be "Selenium no languages test page"
-      And I should not see the read in another language button
 
   @editing
   Scenario: Successful edit reloads language button
@@ -25,7 +24,6 @@ Feature: Wikitext Editor (Makes actual saves)
       And I click continue
       And I click submit
     Then I should see a toast notification
-      And I should see the read in another language button
 
   @editing
   Scenario: Redirects

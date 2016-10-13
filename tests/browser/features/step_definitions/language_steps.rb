@@ -1,7 +1,3 @@
-When /^I click the language button$/ do
-  on(ArticlePage).language_button_element.when_present.click
-end
-
 When(/^I click the language overlay close button$/) do
   on(ArticlePage).overlay_languages_element.when_present.button_element(class: 'cancel').click
 end
