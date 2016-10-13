@@ -16,6 +16,24 @@
       "revId": "4e2e8010d8288e34a1c5ae265cfaaf68d5d28f20",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_6ccdaa34",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T17:35:48Z",
+      "side": 0,
+      "message": "I\u0027m not sure I understand the question... can you rephrase?\n\nI can replicate the issue in production locally. It\u0027s always been present apparently, when footer version 2 is used. It was only the enabling of the footer in stable that made it obvious.",
+      "parentUuid": "2e6c1747_6c104aae",
+      "revId": "4e2e8010d8288e34a1c5ae265cfaaf68d5d28f20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
