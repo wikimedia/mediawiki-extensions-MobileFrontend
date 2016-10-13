@@ -52,6 +52,24 @@
       "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_cf43f013",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T18:27:46Z",
+      "side": 1,
+      "message": "Sure but jscs is not jsdoc. I tried adding the @abstract tag and jscs still complains. That\u0027s an upstream bug that\u0027s not going to get fixed given the non-active state of the project :/\n\nI\u0027ve made this line more explicit I hope you find that better.",
+      "parentUuid": "2e6c1747_ec843aa6",
+      "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
