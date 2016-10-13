@@ -16,6 +16,24 @@
       "revId": "f1dc517f24da618860c6258b3cab141a308724a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_ecbc3a1d",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T16:04:43Z",
+      "side": 0,
+      "message": "Boom! Well done Sherlock.",
+      "parentUuid": "2e6c1747_9d7a13b8",
+      "revId": "f1dc517f24da618860c6258b3cab141a308724a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

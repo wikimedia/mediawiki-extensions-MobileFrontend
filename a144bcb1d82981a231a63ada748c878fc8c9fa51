@@ -39,6 +39,24 @@
       "revId": "a144bcb1d82981a231a63ada748c878fc8c9fa51",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_6c804a4c",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-13T16:04:43Z",
+      "side": 1,
+      "message": "Whoops. Updated to be explicit. Nice catch.",
+      "parentUuid": "2e6c1747_5d489b8c",
+      "revId": "a144bcb1d82981a231a63ada748c878fc8c9fa51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
