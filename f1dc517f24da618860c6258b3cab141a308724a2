@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_9d7a13b8",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-13T13:25:35Z",
+      "side": 0,
+      "message": "This is the line that\u0027s breaking the JSDoc linter. There\u0027s no * at the start of it.",
+      "revId": "f1dc517f24da618860c6258b3cab141a308724a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
