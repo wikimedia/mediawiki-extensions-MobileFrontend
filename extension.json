@@ -91,7 +91,12 @@
 		"SkinMinerva": "includes/skins/SkinMinerva.php",
 		"SkinMinervaBeta": "includes/skins/SkinMinervaBeta.php",
 		"MobileFrontend\\MenuBuilder": "includes/MenuBuilder.php",
-		"MobileFrontend\\MenuEntry": "includes/MenuBuilder.php"
+		"MobileFrontend\\MenuEntry": "includes/MenuBuilder.php",
+		"MobileFrontend\\Devices\\DeviceDetector": "includes/devices/DeviceDetector.php",
+		"MobileFrontend\\Devices\\DeviceProperties": "includes/devices/DeviceProperties.php",
+		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
+		"MobileFrontend\\Devices\\CustomHeaderDeviceDetector": "includes/devices/CustomHeaderDeviceDetector.php",
+		"MobileFrontend\\Devices\\UADeviceDetector": "includes/devices/UADeviceDetector.php"
 	},
 	"ResourceModules": {
 		"skins.minerva.base.reset": {
