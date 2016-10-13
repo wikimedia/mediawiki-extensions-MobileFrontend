@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_d893b9a4",
+        "filename": "tests/browser/features/step_definitions/language_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-13T14:42:12Z",
+      "side": 0,
+      "message": "Should this step be repurposed for the language switcher icon in the page actions bar instead of outright removed? I don\u0027t see a step for it in this file, which leads me to believe it has its own file, which can probably be merged into this one with this change.",
+      "revId": "3b6205ccd8d0a898c4e2eb8e1d6277b9e2e111c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
