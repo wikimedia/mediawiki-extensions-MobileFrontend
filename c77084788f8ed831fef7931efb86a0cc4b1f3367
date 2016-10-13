@@ -34,6 +34,24 @@
       "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_ec843aa6",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-13T17:49:54Z",
+      "side": 1,
+      "message": "http://usejsdoc.org/tags-abstract.html",
+      "parentUuid": "2e6c1747_0cdef6de",
+      "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
