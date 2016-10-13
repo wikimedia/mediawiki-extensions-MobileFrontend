@@ -69,6 +69,24 @@
       "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_c23e22d7",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2285
+      },
+      "writtenOn": "2016-10-13T23:09:22Z",
+      "side": 1,
+      "message": "There shouldn\u0027t be any border in reality. it needs border in Overlays. but i dont know the code enough to know if #content is available in overlays. in article views, there shouldn\u0027t be any border above the content. if central notice is there, the border should come from the notice.",
+      "parentUuid": "2e6c1747_89281d98",
+      "revId": "606f502b9bba2b1e7fd8bd7b31b123ea5c882ac0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
