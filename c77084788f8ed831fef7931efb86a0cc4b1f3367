@@ -70,6 +70,24 @@
       "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_4fc38061",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-13T18:37:33Z",
+      "side": 1,
+      "message": "I believe `@abstract` goes on the `getReference` function, not the class, as represented in the docs. If it still complains after that change, consider it a +1 from me. I\u0027d be keen to follow documentation as strictly as we can before forcing any skips so we catch future problems down the road. If it still fails though, then we\u0027ve done our due diligence. :)",
+      "parentUuid": "2e6c1747_cf43f013",
+      "revId": "c77084788f8ed831fef7931efb86a0cc4b1f3367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
