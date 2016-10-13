@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_3d53df44",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-13T13:34:20Z",
+      "side": 1,
+      "message": "If phuedx\u0027s suggested change doesn\u0027t fix it, can you include a link to the upstream bug here for reference?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "a144bcb1d82981a231a63ada748c878fc8c9fa51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_5d489b8c",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-10-13T13:34:20Z",
+      "side": 1,
+      "message": "May want to document this change in the commit message because it\u0027s a dependency (not a devDependency) and is switching from limited to \"any,\" but not a big deal if left omitted.",
+      "revId": "a144bcb1d82981a231a63ada748c878fc8c9fa51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
