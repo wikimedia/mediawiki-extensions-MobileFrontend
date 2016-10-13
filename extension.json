@@ -1970,7 +1970,7 @@
 		"MFSpecialCaseMainPage": false,
 		"MinervaEnableSiteNotice": false,
 		"MFTidyMobileViewSections": true,
-		"MFMobileHeader": "X-WAP",
+		"MFMobileHeader": "X-Subdomain",
 		"MFRemovableClasses": {
 			"beta": [],
 			"base": []

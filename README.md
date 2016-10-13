@@ -242,12 +242,10 @@ for invalid markup.
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from
-mobile devices. The default value is for backwards compatibility.
-
-Set to `false` to explicitly disable this way of detection.
+mobile devices.
 
 * Type: `String`
-* Default: `'X-WAP'`
+* Default: `'X-Subdomain'`
 
 #### $wgMinervaBottomLanguageButton
 

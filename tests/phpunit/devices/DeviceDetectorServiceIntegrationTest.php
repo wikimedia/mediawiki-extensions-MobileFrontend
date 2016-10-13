@@ -74,8 +74,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 		// <https://github.com/wikimedia/operations-puppet/blob/2a2714c28eab25eed469375dc5322ea6a6ef85df/modules/varnish/templates/text-frontend.inc.vcl.erb#L74-L78>.
 		// @codingStandardsIgnoreEnd
 
-		// @FIXME Change the default value of $wgMFMobileHeader to "X-Subdomain".
-		$this->request->setHeader( 'X-WAP', 'M' );
+		$this->request->setHeader( 'X-Subdomain', 'M' );
 
 		$properties =  $this->detectDeviceProperties();
 
@@ -87,7 +86,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	 * @FIXME Should this really be the case?
 	 */
 	public function test_it_should_prioritize_the_amf_environment_variables() {
-		$this->request->setHeader( 'X-WAP', 'M' );
+		$this->request->setHeader( 'X-Subdomain', 'M' );
 
 		$this->server[ 'AMF_DEVICE_IS_TABLET' ] = 'true';
 
