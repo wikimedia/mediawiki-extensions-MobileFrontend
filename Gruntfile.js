@@ -24,6 +24,10 @@ module.exports = function ( grunt ) {
 			}
 		},
 		jscs: {
+			options: {
+				config: '.jscsrc',
+				fix: true
+			},
 			main: [
 				'**/*.js',
 				'!tests/qunit/**'
