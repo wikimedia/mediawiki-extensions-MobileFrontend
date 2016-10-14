@@ -10,7 +10,8 @@ body {
 }
 
 #content {
-	border-top-color: @chromeContentSeparator;
+	// avoid margin collapsing (see T147956)
+	border-top: solid 1px transparent;
 }
 
 .header-container {
