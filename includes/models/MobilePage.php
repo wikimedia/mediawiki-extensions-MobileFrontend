@@ -21,6 +21,10 @@ class MobilePage {
 	 */
 	private $rev;
 	/**
+	 * @var string|bool
+	 */
+	private $revisionTimestamp;
+	/**
 	 * @var File Associated page image file (see PageImages extension)
 	 */
 	private $file;
