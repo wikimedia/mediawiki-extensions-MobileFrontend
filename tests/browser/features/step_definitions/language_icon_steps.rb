@@ -1,4 +1,5 @@
 When /^I click the switch-language page action$/ do
+  on(ArticlePage).wait_until_rl_module_ready('skins.minerva.scripts')
   on(ArticlePage).switch_language_page_action_element.when_present.click
 end
 

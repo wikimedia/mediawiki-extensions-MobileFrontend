@@ -3,6 +3,7 @@ When(/^I click a search result$/) do
 end
 
 When(/^I click the placeholder search box$/) do
+  on(ArticlePage).wait_until_rl_module_ready('skins.minerva.scripts')
   on(ArticlePage).search_box_placeholder_element.when_present.click
   # this check is needed to accommodate for the hack for opening the virtual
   # keyboard (see comments in search.js)
