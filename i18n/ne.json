@@ -6,7 +6,8 @@
 			"Nirjal stha",
 			"NehalDaveND",
 			"राम प्रसाद जोशी",
-			"सरोज कुमार ढकाल"
+			"सरोज कुमार ढकाल",
+			"Krish Dulal"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
@@ -81,7 +82,7 @@
 	"mobile-frontend-thanked-notice": "तपाईंलाई {{GENDER:$2|उनको}} सम्पादन राम्रो लाग्यो भनी $1 लाई सूचना पठाईयो ।",
 	"mobile-frontend-view": "दूरभाष दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटप",
-	"mobile-frontend-view-mobile": "दूरभाष",
+	"mobile-frontend-view-mobile": "मोबाइल",
 	"mobile-frontend-watchlist-a-z": "सूची",
 	"mobile-frontend-watchlist-cta-button-login": "प्रवेश (लग ईन)",
 	"mobile-frontend-watchlist-cta-button-signup": "साइन अप",
@@ -95,8 +96,8 @@
 	"mobile-frontend-user-page-contributions": "योगदानहरू",
 	"mobile-frontend-user-page-uploads": "अपलोडहरू",
 	"mobile-frontend-user-page-describe-yourself-editors": "सम्पादकहरू",
-	"tag-mobile_edit": "दूरभाष सम्पादन",
-	"tag-mobile_web_edit": "दूरभाष जाल सम्पादन",
+	"tag-mobile_edit": "मोबाइल सम्पादन",
+	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
 	"mobile-frontend-pageaction-edit-tooltip": "यस पृष्ठको भूमिका सम्पादन गर्नुहोस् ।",
 	"mobile-frontend-donate-button-label": "दान गर्ने",
 	"mobile-frontend-loading-message": "लोड हुदैछ...",
