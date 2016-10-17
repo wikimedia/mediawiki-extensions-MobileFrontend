@@ -2,17 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Taresi",
-			"Teòtlalili"
+			"Teòtlalili",
+			"Akapochtli"
 		]
 	},
-	"mobile-frontend-editor-edit": "Mà moyèktlàli",
+	"mobile-frontend-editor-edit": "Xicpatla",
 	"mobile-frontend-home-button": "Chāntli",
-	"mobile-frontend-language-article-heading": "Mà mîkuilòpòwa ìka oksè tlamantli tlâtòlli",
+	"mobile-frontend-language-article-heading": "Tamapohuaz ica occe pinotlahtolli",
 	"mobile-frontend-logged-in-homepage-notification": "{{GENDER:$1|Ximopanōltih}}, $1!",
 	"mobile-frontend-main-menu-account-create": "Ticchīhuaz motlapōhual",
-	"mobile-frontend-main-menu-login": "Mà kalakòwa",
+	"mobile-frontend-main-menu-login": "Xicalaqui",
 	"mobile-frontend-main-menu-settings": "Tlatlālīliztli",
-	"mobile-frontend-placeholder": "Mà motèmo ìpan {{SITENAME}}",
+	"mobile-frontend-password-placeholder": "Ichtacamachiyotl",
+	"mobile-frontend-placeholder": "\n\n\n\n\n\n\nTictemoz ipan {{SITENAME}}",
 	"mobile-frontend-talk-overlay-header": "Zānīlli",
 	"mobile-frontend-terms-text": "Tequihuihcānahuatīlli",
 	"mobile-frontend-watchlist-filter-talk": "Zānīlli",
