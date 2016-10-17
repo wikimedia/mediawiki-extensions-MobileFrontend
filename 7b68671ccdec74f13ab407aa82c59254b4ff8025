@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e97535f_b3992783",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-17T09:57:23Z",
+      "side": 1,
+      "message": "This explains what this patch does but not why it does it. How about \"Load key icons without JS enabled\"?",
+      "revId": "7b68671ccdec74f13ab407aa82c59254b4ff8025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_9396234e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-17T09:57:23Z",
+      "side": 1,
+      "message": "This is the cost of loading the arrow variant, right? You haven\u0027t explained that the clock and arrow used in the last modified bar are now loaded without JS enabled.",
+      "revId": "7b68671ccdec74f13ab407aa82c59254b4ff8025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_937d031a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-17T09:57:23Z",
+      "side": 1,
+      "message": "With the talk icon added to skins.minerva.icons.images I get the following numbers: 8.14 KiB before; 8.87 KiB after.",
+      "revId": "7b68671ccdec74f13ab407aa82c59254b4ff8025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
