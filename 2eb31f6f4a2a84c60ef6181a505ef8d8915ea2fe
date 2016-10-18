@@ -22,6 +22,24 @@
       "revId": "2eb31f6f4a2a84c60ef6181a505ef8d8915ea2fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_838020fb",
+        "filename": "includes/ResponsiveImages/Context.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-18T13:09:08Z",
+      "side": 1,
+      "message": "Generally, I agree. Config is a tricky one too though ;) State? Environment?",
+      "parentUuid": "cea0dbb8_a3fb24de",
+      "revId": "2eb31f6f4a2a84c60ef6181a505ef8d8915ea2fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
