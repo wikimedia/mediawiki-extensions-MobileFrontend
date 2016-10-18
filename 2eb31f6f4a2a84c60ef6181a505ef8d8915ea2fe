@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_a3fb24de",
+        "filename": "includes/ResponsiveImages/Context.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-18T11:52:21Z",
+      "side": 1,
+      "message": "ok, this could be a general discussion, however: having yet another interface/definition with the name \"Context\" feels bad :P Could we have a name, which is more appropriate to the goal this class tries to achieve? Something like \"Settings\", \"Config\", or something similar (as it seems to be that, that it holds some configuration/logic if another function should be enabled) :)",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "2eb31f6f4a2a84c60ef6181a505ef8d8915ea2fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
