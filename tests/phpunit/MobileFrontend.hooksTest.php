@@ -4,6 +4,13 @@
  * @group MobileFrontend
  */
 class MobileFrontendHooksTest extends MediaWikiTestCase {
+
+	protected function setUp() {
+		parent::setUp();
+
+		MobileContext::resetInstanceForTesting();
+	}
+
 	/**
 	 * Test no alternate/canonical link is set on Special:MobileCite
 	 *
@@ -180,8 +187,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			'wgScriptPath' => '/w',
 			'wgScript' => '/w/index.php',
 		] );
-		MobileContext::resetInstanceForTesting();
-
 		$title = Title::newFromText( 'PurgeTest' );
 
 		$urls = $title->getCdnUrls();
@@ -194,5 +199,45 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		];
 
 		$this->assertArrayEquals( $expected, $urls );
+	}
+
+	/**
+	 * @dataProvider provideOnPageRenderingHash
+	 * @covers MobileFrontendHooks::onPageRenderingHash
+	 *
+	 * @param bool $shouldConfstrChange Whether $confstr parameter should have
+	 *  changed
+	 * @param bool $forceMobileView
+	 * @param bool $stripResponsiveImages
+	 */
+	public function testOnPageRenderingHash(
+		$shouldConfstrChange,
+		$forceMobileView,
+		$stripResponsiveImages
+	) {
+		$context = MobileContext::singleton();
+		$context->setForceMobileView( $forceMobileView );
+		$context->setStripResponsiveImages( $stripResponsiveImages );
+
+		$expectedConfstr = $confstr = '';
+
+		if ( $shouldConfstrChange ) {
+			$expectedConfstr = '!responsiveimages=0';
+		}
+
+		$user = new User();
+		$forOptions = [];
+
+		MobileFrontendHooks::onPageRenderingHash( $confstr, $user, $forOptions );
+
+		$this->assertEquals( $expectedConfstr, $confstr );
+	}
+
+	public static function provideOnPageRenderingHash() {
+		return [
+			[ true, true, true ],
+			[ false, true, false ],
+			[ false, false, true ],
+		];
 	}
 }

@@ -376,20 +376,11 @@ class MobileFrontendHooks {
 	public static function onPageRenderingHash( &$confstr, User $user, &$forOptions ) {
 		$context = MobileContext::singleton();
 
-		if ( !$context->shouldDisplayMobileView() ) {
-			return;
-		}
-
-		if ( $context->shouldStripResponsiveImages() ) {
+		if (
+			$context->shouldDisplayMobileView()
+			&& $context->shouldStripResponsiveImages()
+		) {
 			$confstr .= '!responsiveimages=0';
-		}
-
-		if ( $context->isLazyLoadImagesEnabled() ) {
-			$confstr .= '!lazyloadimages';
-		}
-
-		if ( $context->imagesDisabled() ) {
-			$confstr .= '!noimg';
 		}
 	}
 
