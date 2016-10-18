@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_a3ad64e9",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-18T11:44:08Z",
+      "side": 1,
+      "message": "I prefer to have constructors and factory methods to be at the top of a class, but this is just a personal preference :P",
+      "revId": "6fa5451749fefbd0f2e08098c647aa580959859b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_83b3804c",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-18T11:44:08Z",
+      "side": 1,
+      "message": "Move the member variables to the top of the class (just for better readability).",
+      "revId": "6fa5451749fefbd0f2e08098c647aa580959859b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_63b07c3f",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-18T11:44:08Z",
+      "side": 1,
+      "message": "Same as newFromGlobalState",
+      "revId": "6fa5451749fefbd0f2e08098c647aa580959859b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
