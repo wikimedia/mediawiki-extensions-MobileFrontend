@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "cea0dbb8_7ab0193f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "I\u0027m a little confused with what\u0027s happening here given you find the infobox but then you iterate through all the nodes to find it again. Do you use this just to avoid iterating through the section unnecessarily?\n\nCould you use this node to work out where the infobox appears in the DOM?\n\nSimilarly could you find the first non empty P node using a xpath query rather than iterating through the NodeList?",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea0dbb8_54ee4cb2",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 5
@@ -98,6 +115,92 @@
       "writtenOn": "2016-10-18T21:18:02Z",
       "side": 1,
       "message": "First write for humans, then for computers. It would be nice to have an function:\n\nprivate function isInfoboxNode($node) {\n  return $node-\u003enodeName \u003d\u003d \u0027table\u0027 \n    \u0026\u0026  $node-\u003ehasAttribute( \u0027class\u0027 ) \n    \u0026\u0026 strpos( $node-\u003egetAttribute( \u0027class\u0027 ), \u0027infobox\u0027 ) !\u003d\u003d false;\n}\n\nand then use it in the way :\n\n  } elseif (!$infobox \u0026\u0026 $this-\u003eisInfoboxNode($childNode) {\n\nIt will be much easier to understand what code is doing (now we have to read all checks.",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_faa309fc",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "+1 to this idea (either function or variable)\n\n(and also for the first if statement which is also not clear at first glance\nisFirstNonEmptyParagraph)",
+      "parentUuid": "cea0dbb8_744030a9",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_1a9fcdba",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_ba84615f",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "You can use SECTION_INDICATOR constant which will protect you if the implementation of this ever changes.\n\n(PS. it\u0027s a shame we have to worry about this in the formatter tests :/)\n\nSame applies to section-heading but no constant exists for that.\n\nA helper might be useful here to future proof this and make it more readable. Especially given the recent conversations around sections and details tags.\n\ne.g. sectionHtml( title, text, sectionNumber );",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_7a97f993",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "See note below about infobox - same question applies here.",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_9a9abdbc",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-18T21:50:42Z",
+      "side": 1,
+      "message": "Since this is repeated in multiple tests and given that it is community created/curated content consider using a content in case we ever need to change the test.\n\nFor example what would happen if the community renamed infobox class to infobox-v2 ?",
       "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
