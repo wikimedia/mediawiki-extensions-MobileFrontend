@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_efffcdfa",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "There are aalready at least 3 almost identical getters for a config variable (line 184 and 168).\n\nWould be nice to create sth like :\n\nprivate function getSystemConfigVariable($settingName) {\n   $configVars \u003d $this-\u003egetMFConfig()-\u003eget($settingName);\n   if ($value \u003d\u003d\u003d null) { \n     //doesn\u0027t exist, default value? exception?, do we want to handle that ?\n   }\n   if ($this-\u003eisBetaGroupMemeber() \u0026\u0026 array_key_exists(\u0027beta\u0027, $configVars) {\n     return $configVars[\u0027beta\u0027];\n   }\n   return $configVars[\u0027base\u0027];\n}\n\nthen this function gets super simple:\n\npublic function shouldShowFirstParagraphBeforeInfobox() {\n    if ($this-\u003eshowFirstParagraphBeforeInfobox \u003d\u003d\u003d null) {\n      $this-\u003eshowFirstParagraphBeforeInfobox \u003d $this-\u003egetSystemConfigVariable(\u0027MFShowFirstParagraphBeforeInfobox\u0027);\n    }\n    return $this-\u003eshowFirstParagraphBeforeInfobox;\n}",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_749cb05f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "It would be nice to add \u0027showFirstSectionBeforeInfobox\u0027 as a constant, lets call it TRANSFORMER_SHOW_FIRST_SECTION_BEFORE_INFOBOX and use it below (more than 2 uses of same string might lead to silly typos)",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_54ee4cb2",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "It took me a while to findout that this variable is `$firstPAfterInbox`, not just `$firstP`. Maybe it\u0027s worth to change the name ?",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_ef1a2dd0",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "Sometimes you type \n \n  if ($infoboxes-\u003elength)\n\nand sometimes\n\n  if ($xpath-\u003equery(.....)-\u003elength \u003e 0)\n\n\nConsistency is the key",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_f4b680d6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "On line 222 you\u0027re already doing a `break;` statement, you won\u0027t do more loops when you already have `$firstP`, `!$fistP` check is not necessary",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_744030a9",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-18T21:18:02Z",
+      "side": 1,
+      "message": "First write for humans, then for computers. It would be nice to have an function:\n\nprivate function isInfoboxNode($node) {\n  return $node-\u003enodeName \u003d\u003d \u0027table\u0027 \n    \u0026\u0026  $node-\u003ehasAttribute( \u0027class\u0027 ) \n    \u0026\u0026 strpos( $node-\u003egetAttribute( \u0027class\u0027 ), \u0027infobox\u0027 ) !\u003d\u003d false;\n}\n\nand then use it in the way :\n\n  } elseif (!$infobox \u0026\u0026 $this-\u003eisInfoboxNode($childNode) {\n\nIt will be much easier to understand what code is doing (now we have to read all checks.",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
