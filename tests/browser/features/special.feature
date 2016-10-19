@@ -5,6 +5,7 @@ Feature: Generic special page features
     Given I am using the mobile site
       And I am on the "Main Page" page
 
+  @login
   Scenario: Search from Watchlist
     Given I am logged into the mobile website
     When I click on "Watchlist" in the main navigation menu
