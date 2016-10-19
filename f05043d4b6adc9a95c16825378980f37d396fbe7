@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cea0dbb8_5aeb150a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "I think this a good optimization, but given that we maybe getting rid of the beta mode, this change may not be necessary. Let\u0027s hear what other devs have to say about this.",
+      "parentUuid": "cea0dbb8_efffcdfa",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea0dbb8_749cb05f",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-18T21:18:02Z",
       "side": 1,
       "message": "It would be nice to add \u0027showFirstSectionBeforeInfobox\u0027 as a constant, lets call it TRANSFORMER_SHOW_FIRST_SECTION_BEFORE_INFOBOX and use it below (more than 2 uses of same string might lead to silly typos)",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_bad2215c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea0dbb8_749cb05f",
       "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "cea0dbb8_dae3a59b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea0dbb8_7ab0193f",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea0dbb8_54ee4cb2",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 5
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "cea0dbb8_1a334dc2",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "Actually, this paragraph can come before any infoboxes. It is first non-empty, non-coordinates paragraph though. I\u0027ll add a comment to clarify.",
+      "parentUuid": "cea0dbb8_54ee4cb2",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea0dbb8_ef1a2dd0",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 5
@@ -81,6 +153,24 @@
       "writtenOn": "2016-10-18T21:18:02Z",
       "side": 1,
       "message": "Sometimes you type \n \n  if ($infoboxes-\u003elength)\n\nand sometimes\n\n  if ($xpath-\u003equery(.....)-\u003elength \u003e 0)\n\n\nConsistency is the key",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_fa6b09ed",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "cea0dbb8_ef1a2dd0",
       "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -156,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "cea0dbb8_5a85559e",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea0dbb8_1a9fcdba",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea0dbb8_ba84615f",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 5
@@ -201,6 +309,24 @@
       "writtenOn": "2016-10-18T21:50:42Z",
       "side": 1,
       "message": "Since this is repeated in multiple tests and given that it is community created/curated content consider using a content in case we ever need to change the test.\n\nFor example what would happen if the community renamed infobox class to infobox-v2 ?",
+      "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_d51b7672",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T00:43:15Z",
+      "side": 1,
+      "message": "What do you mean by \"consider using a content\"? Is there a typo?",
+      "parentUuid": "cea0dbb8_9a9abdbc",
       "revId": "f05043d4b6adc9a95c16825378980f37d396fbe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
