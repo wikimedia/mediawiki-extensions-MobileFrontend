@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_db4cc4a1",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-19T21:48:44Z",
+      "side": 1,
+      "message": "Fatal error: Object does not implement ArrayAccess in /srv/jenkins-workspace/workspace/mediawiki-extensions-hhvm/src/extensions/MobileFrontend/includes/MobileFormatter.php on line 217\n\n(don\u0027t use length)",
+      "revId": "7ad5c9753f631df80ffa008a8cc149d97eb475bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
