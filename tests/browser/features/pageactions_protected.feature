@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @adminuser
 Feature: Page actions menu when anonymous
 
   Background:
