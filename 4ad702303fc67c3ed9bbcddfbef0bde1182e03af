@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_4059e35c",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T20:43:27Z",
+      "side": 1,
+      "message": "Not needed anymore.",
+      "revId": "4ad702303fc67c3ed9bbcddfbef0bde1182e03af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
