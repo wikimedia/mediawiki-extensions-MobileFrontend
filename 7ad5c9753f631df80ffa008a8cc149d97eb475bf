@@ -16,6 +16,24 @@
       "revId": "7ad5c9753f631df80ffa008a8cc149d97eb475bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_f6e0bdf9",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-19T23:07:08Z",
+      "side": 1,
+      "message": "This is weird as DOMXPath::query returns a DOMNodeList which has a length property: http://php.net/manual/en/class.domnodelist.php",
+      "parentUuid": "cea0dbb8_db4cc4a1",
+      "revId": "7ad5c9753f631df80ffa008a8cc149d97eb475bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
