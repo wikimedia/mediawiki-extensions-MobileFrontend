@@ -154,15 +154,28 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Utility function that returns a config variable depending on the mobile mode.
+	 * @param $variableName
+	 * @return mixed|null
+	 */
+	private function getConfigVariable( $variableName ) {
+		$configVariable = $this->getMFConfig()->get( $variableName ) ?: [];
+		if ( $this->isBetaGroupMember() && array_key_exists( 'beta', $configVariable ) ) {
+			return $configVariable['beta'];
+		} elseif ( array_key_exists( 'base', $configVariable ) ) {
+			return $configVariable['base'];
+		}
+		return null;
+	}
+
+	/**
 	 * Checks whether references should be lazy loaded for the current user
 	 * @return bool
 	 */
 	public function isLazyLoadReferencesEnabled() {
 		if ( $this->lazyLoadReferences === null ) {
-			$mfLazyLoadReferences = $this->getMFConfig()->get( 'MFLazyLoadReferences' );
 			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_REFERENCES_COOKIE_NAME, '' );
-			$this->lazyLoadReferences = $mfLazyLoadReferences['base'] ||
-				( $this->isBetaGroupMember() && $mfLazyLoadReferences['beta'] ) ||
+			$this->lazyLoadReferences = $this->getConfigVariable( 'MFLazyLoadReferences' ) ||
 				$cookie === self::LAZY_LOAD_REFERENCES_COOKIE_VALUE;
 		}
 		return $this->lazyLoadReferences;
@@ -174,10 +187,8 @@ class MobileContext extends ContextSource {
 	 */
 	public function isLazyLoadImagesEnabled() {
 		if ( $this->lazyLoadImages === null ) {
-			$mfLazyLoadImages = $this->getMFConfig()->get( 'MFLazyLoadImages' );
 			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_IMAGES_COOKIE_NAME, '' );
-			$this->lazyLoadImages = $mfLazyLoadImages['base'] ||
-				( $this->isBetaGroupMember() && $mfLazyLoadImages['beta'] ) ||
+			$this->lazyLoadImages = $this->getConfigVariable( 'MFLazyLoadImages' ) ||
 				$cookie === self::LAZY_LOAD_IMAGES_COOKIE_VALUE;
 		}
 		return $this->lazyLoadImages;
