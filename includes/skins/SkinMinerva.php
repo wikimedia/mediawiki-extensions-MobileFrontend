@@ -27,11 +27,6 @@ class SkinMinerva extends SkinTemplate {
 	/** @var ContentHandler Content handler of page; only access through getContentHandler */
 	protected $contentHandler = null;
 
-	/**
-	 * @var boolean Whether the language button should be included in the secondary
-	 * actions HTML on non-main pages
-	 */
-	protected $shouldSecondaryActionsIncludeLanguageBtn = true;
 	/** @var bool Whether the page is also available in other languages or variants */
 	protected $doesPageHaveLanguages = false;
 
@@ -936,11 +931,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 		}
 
-		if ( $title->isMainPage() && $this->doesPageHaveLanguages || (
-			MobileContext::singleton()->getMFConfig()->get( 'MinervaBottomLanguageButton' ) &&
-			$this->doesPageHaveLanguages &&
-			$this->shouldSecondaryActionsIncludeLanguageBtn )
-		) {
+		if ( $this->doesPageHaveLanguages && $title->isMainPage() ) {
 			$buttons['language'] = $this->getLanguageButton();
 		}
 
