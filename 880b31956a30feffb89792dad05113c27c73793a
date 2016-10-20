@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_581673ad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-20T20:48:46Z",
+      "side": 1,
+      "message": "Would you please also explain why this is important?",
+      "revId": "880b31956a30feffb89792dad05113c27c73793a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
