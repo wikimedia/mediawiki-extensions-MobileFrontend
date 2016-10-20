@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_754a60ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-20T18:33:57Z",
+      "side": 1,
+      "message": "How does this impact the API if the feature flag is on?\nHow does it impact the API when you visit in beta?",
+      "revId": "6b6ef94aeb81a7e41a2fe83907d9e6281c43dd52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_d5436cb5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-20T18:33:57Z",
+      "side": 1,
+      "message": "Should probably use @var to document this.",
+      "revId": "6b6ef94aeb81a7e41a2fe83907d9e6281c43dd52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_1539d43e",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-20T18:33:57Z",
+      "side": 1,
+      "message": "you\u0027ve forgotten to include the types here",
+      "revId": "6b6ef94aeb81a7e41a2fe83907d9e6281c43dd52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_f53d502a",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-20T18:33:57Z",
+      "side": 1,
+      "message": "you\u0027ve forgotten to include a type here",
+      "revId": "6b6ef94aeb81a7e41a2fe83907d9e6281c43dd52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
