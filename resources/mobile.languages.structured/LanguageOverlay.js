@@ -57,27 +57,9 @@
 			Overlay.prototype.postRender.apply( this );
 
 			// cache
-			this.$searchInput = this.$( 'input.search' );
 			this.$siteLinksList = this.$( '.site-link-list' );
 			this.$languageItems = this.$siteLinksList.find( 'a' );
 			this.$subheaders = this.$( 'h3' );
-
-			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-				event: 'languageListLoaded',
-				languageOverlayVersion: 'structured-overlay',
-				languageCount: this.$languageItems.length
-			} );
-		},
-		/** @inheritdoc */
-		onExit: function () {
-			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-				event: 'exitModal',
-				exitModal: 'dismissed',
-				searchInputHasQuery: this.$searchInput.val().length > 0,
-				languageCount: this.$siteLinksList.children( ':visible' ).length
-			} );
-
-			Overlay.prototype.onExit.apply( this, arguments );
 		},
 		/**
 		 * Article link click event handler
@@ -86,7 +68,6 @@
 		onLinkClick: function ( ev ) {
 			var $link = this.$( ev.currentTarget ),
 				lang = $link.attr( 'lang' ),
-				searchInputHasQuery = this.$searchInput.val().length > 0,
 				$visibleLanguageLinks = this.$languageItems.filter( ':visible' ),
 				index;
 
@@ -99,15 +80,6 @@
 					return false;
 				}
 			} );
-
-			mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-				event: 'exitModal',
-				exitModal: 'tapped-on-result',
-				languageTapped: lang,
-				positionOfLanguageTapped: index,
-				searchInputHasQuery: searchInputHasQuery,
-				languageCount: $visibleLanguageLinks.length
-			} );
 		},
 
 		/**
@@ -116,14 +88,6 @@
 		 */
 		onSearchInput: function ( ev ) {
 			this.filterLanguages( $( ev.target ).val().toLowerCase() );
-
-			// log when the first search character is entered
-			if ( !this.hasFirstSearchBeenLogged ) {
-				mw.track( 'mf.schemaMobileWebLanguageSwitcher', {
-					event: 'startLanguageSearch'
-				} );
-				this.hasFirstSearchBeenLogged = true;
-			}
 		},
 
 		/**
