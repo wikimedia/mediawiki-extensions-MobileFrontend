@@ -43,6 +43,12 @@ class MobileFormatter extends HtmlFormatter {
 	protected $mainPage = false;
 
 	/**
+	 * Name of the transformation option
+	 * @const string SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX
+	 */
+	const SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX = 'showFirstParagraphBeforeInfobox';
+
+	/**
 	 * Constructor
 	 *
 	 * @param string $html Text to process
@@ -116,10 +122,13 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
 	 * @param bool $removeReferences Whether to remove references from the output
 	 * @param bool $removeImages Whether to move images into noscript tags
+	 * @param bool $showFirstParagraphBeforeInfobox Whether the first paragraph from the lead
+	 *  section should be shown before all infoboxes that come earlier.
 	 * @return array
 	 */
 	public function filterContent(
-		$removeDefaults = true, $removeReferences = false, $removeImages = false
+		$removeDefaults = true, $removeReferences = false, $removeImages = false,
+		$showFirstParagraphBeforeInfobox = false
 	) {
 		$ctx = MobileContext::singleton();
 		$config = $ctx->getMFConfig();
@@ -141,7 +150,11 @@ class MobileFormatter extends HtmlFormatter {
 			$this->doRemoveImages();
 		}
 
-		$transformOptions = [ 'images' => $removeImages, 'references' => $removeReferences ];
+		$transformOptions = [
+			'images' => $removeImages,
+			'references' => $removeReferences,
+			self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX => $showFirstParagraphBeforeInfobox
+		];
 		// Sectionify the content and transform it if necessary per section
 		if ( !$this->mainPage && $this->expandableSections ) {
 			list( $headings, $subheadings ) = $this->getHeadings( $doc );
@@ -173,6 +186,48 @@ class MobileFormatter extends HtmlFormatter {
 		}
 		if ( $options['references'] ) {
 			$this->doRewriteReferencesListsForLazyLoading( $el, $doc );
+		}
+	}
+
+	/*
+	 * Move the first paragraph in the lead section above the infobox
+	 *
+	 * In order for a paragraph to be moved the following conditions must be met:
+	 *   - the lead section contains at least one infobox;
+	 *   - the paragraph doesn't already appear before the first infobox
+	 *     if any in the DOM;
+	 *   - the paragraph contains text content, e.g. no <p></p>;
+	 *   - the paragraph doesn't contain coordinates, i.e. span#coordinates.
+	 *
+	 * Note that the first paragraph is not moved before hatnotes, or mbox or other
+	 * elements that are not infoboxes.
+	 *
+	 * @param DOMElement $leadSectionBody
+	 * @param DOMDocument $doc Document to which the section belongs
+	 */
+	private function moveFirstParagraphBeforeInfobox( $leadSectionBody, $doc ) {
+		$xPath = new DOMXPath( $doc );
+		// Find infoboxes and paragraphs that have text content, i.e. paragraphs
+		// that are not empty nor are wrapper paragraphs that contain span#coordinates.
+		$infoboxAndParagraphs = $xPath->query(
+			'.//table[contains(@class,"infobox")] | .//p[string-length(text()) > 0]',
+			$leadSectionBody
+		);
+		// We need both an infobox and a paragraph and the first element of our query result
+		// ought to be an infobox.
+		if ( $infoboxAndParagraphs->length >= 2 &&
+			$infoboxAndParagraphs->item( 0 )->nodeName == 'table'
+		) {
+			$firstP = null;
+			for ( $i = 1; $i < $infoboxAndParagraphs->length; $i++ ) {
+				if ( $infoboxAndParagraphs->item( $i )->nodeName == 'p' ) {
+					$firstP = $infoboxAndParagraphs->item( $i );
+					break;
+				}
+			}
+			if ( $firstP ) {
+				$leadSectionBody->insertBefore( $firstP, $infoboxAndParagraphs->item( 0 ) );
+			}
 		}
 	}
 
@@ -457,6 +512,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Splits the body of the document into sections demarcated by the $headings elements.
+	 * Also moves the first paragraph in the lead section above the infobox.
 	 *
 	 * All member elements of the sections are added to a <code><div></code> so
 	 * that the section bodies are clearly defined (to be "expandable" for
@@ -505,14 +561,19 @@ class MobileFormatter extends HtmlFormatter {
 				// Insert the previous section body and reset it for the new section
 				$body->insertBefore( $sectionBody, $node );
 
-				if ( $sectionNumber === 0 && $this->isTOCEnabled ) {
-					// Insert table of content placeholder which will be progressively enhanced via JS
-					$toc = $doc->createElement( 'div' );
-					$toc->setAttribute( 'id', 'toc' );
-					$toc->setAttribute( 'class', 'toc-mobile' );
-					$tocHeading = $doc->createElement( 'h2', wfMessage( 'toc' )->text() );
-					$toc->appendChild( $tocHeading );
-					$sectionBody->appendChild( $toc );
+				if ( $sectionNumber === 0 ) {
+					if ( $this->isTOCEnabled ) {
+						// Insert table of content placeholder which will be progressively enhanced via JS
+						$toc = $doc->createElement( 'div' );
+						$toc->setAttribute( 'id', 'toc' );
+						$toc->setAttribute( 'class', 'toc-mobile' );
+						$tocHeading = $doc->createElement( 'h2', wfMessage( 'toc' )->text() );
+						$toc->appendChild( $tocHeading );
+						$sectionBody->appendChild( $toc );
+					}
+					if ( $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ) {
+						$this->moveFirstParagraphBeforeInfobox( $sectionBody, $doc );
+					}
 				}
 				$sectionNumber += 1;
 				$sectionBody = $doc->createElement( 'div' );
@@ -524,6 +585,11 @@ class MobileFormatter extends HtmlFormatter {
 			// If it is not a top level heading, keep appending the nodes to the
 			// section body container.
 			$sectionBody->appendChild( $node );
+		}
+
+		// If the document had the lead section only:
+		if ( $sectionNumber == 0 && $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ) {
+			$this->moveFirstParagraphBeforeInfobox( $sectionBody, $doc );
 		}
 
 		if ( $sectionBody->hasChildNodes() ) {

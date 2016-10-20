@@ -6,6 +6,31 @@
 class MobileFormatterTest extends MediaWikiTestCase {
 	const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
 	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator"></div>';
+	const HATNOTE_CLASSNAME = 'hatnote';
+	const INFOBOX_CLASSNAME = 'infobox';
+
+	/**
+	 * Helper function that creates section headings from a heading and title
+	 *
+	 * @param string $heading
+	 * @param string $title
+	 * @return string
+	 */
+	private function makeSectionHeading( $heading, $title ) {
+		return "<$heading class=\"section-heading\">" . self::SECTION_INDICATOR .
+			"$title</$heading>";
+	}
+
+	/**
+	 * Helper function that creates sections from section number and content HTML.
+	 *
+	 * @param string $sectionNumber
+	 * @param string $contentHtml
+	 * @return string
+	 */
+	private function makeSectionHtml( $sectionNumber, $contentHtml='' ) {
+		return "<div class=\"mf-section-$sectionNumber\">$contentHtml</div>";
+	}
 
 	/**
 	 * @dataProvider provideHtmlTransform
@@ -16,12 +41,14 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param bool $removeDefaults
 	 * @param bool $lazyLoadReferences
 	 * @param bool $lazyLoadImages
+	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::filterContent
 	 * @covers MobileFormatter::doRewriteReferencesForLazyLoading
 	 * @covers MobileFormatter::doRemoveImages
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
-		$removeDefaults = false, $lazyLoadReferences = false, $lazyLoadImages = false
+		$removeDefaults = false, $lazyLoadReferences = false, $lazyLoadImages = false,
+		$showFirstParagraphBeforeInfobox = false
 	) {
 		$t = Title::newFromText( 'Mobile' );
 		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
@@ -30,7 +57,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$callback( $mf );
 		}
 		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages );
+		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages,
+			$showFirstParagraphBeforeInfobox );
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
@@ -46,7 +74,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mainPage = function( MobileFormatter $f ) {
 			$f->setIsMainPage( true );
 		};
-
 		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
 		$imageStyles = '<img src="math.jpg" style="vertical-align: -3.505ex; '
 			. 'width: 24.412ex; height:7.343ex; background:none;">';
@@ -306,6 +333,265 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all">'
 					. '<div id="central-auth-images">images</div></div>',
 				$mainPage,
+			],
+
+			// Infobox and the first paragraph in lead section transformations
+			[
+				// no lead section, no infobox, a section
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml( 0, '' ) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// hat-note, lead section, no infobox, another section
+				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+				'<p>paragraph 1</p>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+					'<p>paragraph 1</p>' .
+					'<p>paragraph 2</p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// hat-note, lead section, infobox, another section
+				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p>paragraph 1</p>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+					'<p>paragraph 2</p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// first paragraph is already before the lead section
+				'<p>paragraph 1</p>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+					'<p>paragraph 2</p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// infobox, but no paragraphs in the lead section
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 1</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 1</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// no lead section, infobox after the first section
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 1</p>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>',
+
+				$this->makeSectionHtml( 0, '' ) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// two infoboxes, lead section, another section
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 1</td></tr></table>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
+				'<p>paragraph 1</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 1</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 1</td></tr></table>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 1</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// first paragraph (which has coordinates and is hidden on mobile),
+				// infobox, lead section
+				'<p><span><span id="coordinates">Coordinates</span></span></p>'.
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p>paragraph 2</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p><span><span id="coordinates">Coordinates</span></span></p>'.
+					'<p>paragraph 2</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+			[
+				// hatnote, infobox, thumbnail, lead section, another section
+				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<div class="thumb">Thumbnail</div>' .
+				'<p>paragraph 1</p>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+					'<div class="thumb">Thumbnail</div>' .
+					'<p>paragraph 2</p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+
+			[
+				// empty first paragraph, infobox, second paragraph, another section
+				'<p></p>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p></p>' .
+					'<p>paragraph 2</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+
+			[
+				// infobox, empty first paragraph, second paragraph, another section
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p></p>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p>paragraph 2</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+					'<p></p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+
+			[
+				// 2 hat-notes, ambox, 2 infoboxes, 2 paragraphs, another section
+				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+				'<table class="ambox"><tr><td>ambox</td></tr></table>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 1</td></tr></table>' .
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
+				'<p>paragraph 1</p>' .
+				'<p>paragraph 2</p>' .
+				'<h2>Heading 1</h2>' .
+				'<p>paragraph 3</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+					'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
+					'<table class="ambox"><tr><td>ambox</td></tr></table>' .
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 1</td></tr></table>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
+					'<p>paragraph 2</p>'
+				) .
+				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
+				$this->makeSectionHtml(
+					1,
+					'<p>paragraph 3</p>'
+				),
+
+				$enableSections, false, false, false, true,
 			],
 		];
 	}

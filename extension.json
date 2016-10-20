@@ -1953,6 +1953,10 @@
 			"beta": [],
 			"base": []
 		},
+		"MFShowFirstParagraphBeforeInfobox": {
+			"base": false,
+			"beta": true
+		},
 		"MFLazyLoadImages": {
 			"base": false,
 			"beta": true
