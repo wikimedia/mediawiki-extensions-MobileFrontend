@@ -367,20 +367,26 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * PageRenderingHash hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PageRenderingHash
+	 * Varies the parser cache if responsive images should have their variants
+	 * stripped from the parser output, since the transformation happens during
+	 * the parse.
 	 *
-	 * @param string &$confstr Reference to a hash key string which can be modified
-	 * @param User $user User object that is requesting the page
-	 * @param array &$forOptions Array of options used to generate the $confstr hash key
+	 * See `$wgMFStripResponsiveImages` and `$wgMFResponsiveImageWhitelist` for
+	 * more detail about the stripping of responsive images.
+	 *
+	 * See https://www.mediawiki.org/wiki/Manual:Hooks/PageRenderingHash for more
+	 * detail about the `PageRenderingHash` hook.
+	 *
+	 * @param string &$confstr The parser cache key
+	 * @param User $user User
+	 * @param array &$forOptions
+	 *
+	 * @param string &$confstr Reference to the parser cache key
+	 * @param User $user The user that is requesting the page
+	 * @param array &$forOptions The options used to generate the parser cache key
 	 */
 	public static function onPageRenderingHash( &$confstr, User $user, &$forOptions ) {
-		$context = MobileContext::singleton();
-
-		if (
-			$context->shouldDisplayMobileView()
-			&& $context->shouldStripResponsiveImages()
-		) {
+		if ( MobileContext::singleton()->shouldStripResponsiveImages() ) {
 			$confstr .= '!responsiveimages=0';
 		}
 	}
@@ -1132,19 +1138,22 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Omit srcset attributes from thumbnail image tags, to conserve bandwidth.
+	 * Removes the responsive image's variants from the parser output if
+	 * configured to do so and the thumbnail's MIME type isn't whitelisted.
 	 *
-	 * @param ThumbnailImage $thumbnail
-	 * @param array &$attribs
-	 * @param array &$linkAttribs
+	 * See https://www.mediawiki.org/wiki/Manual:Hooks/ThumbnailBeforeProduceHTML
+	 * for more detail about the `ThumbnailBeforeProduceHTML` hook.
+	 *
+	 * @param ThumbnailImage $thumbnail The thumbnail
+	 * @param array &$attribs The attributes of the DOMElement being contructed
+	 *  to represent the thumbnail
+	 * @param array &$linkAttribs The attributes of the DOMElement being
+	 *  constructed to represent the link to original file
 	 */
 	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
-		if (
-			$context->shouldDisplayMobileView() &&
-			$context->shouldStripResponsiveImages()
-		) {
+		if ( $context->shouldStripResponsiveImages() ) {
 			$file = $thumbnail->getFile();
 			if ( !$file || !in_array( $file->getMimeType(),
 					$config->get( 'MFResponsiveImageWhitelist' ) ) ) {

@@ -210,19 +210,12 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideOnPageRenderingHash
 	 * @covers MobileFrontendHooks::onPageRenderingHash
-	 *
-	 * @param bool $shouldConfstrChange Whether $confstr parameter should have
-	 *  changed
-	 * @param bool $forceMobileView
-	 * @param bool $stripResponsiveImages
 	 */
 	public function testOnPageRenderingHash(
 		$shouldConfstrChange,
-		$forceMobileView,
 		$stripResponsiveImages
 	) {
 		$context = MobileContext::singleton();
-		$context->setForceMobileView( $forceMobileView );
 		$context->setStripResponsiveImages( $stripResponsiveImages );
 
 		$expectedConfstr = $confstr = '';
@@ -241,9 +234,79 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 	public static function provideOnPageRenderingHash() {
 		return [
-			[ true, true, true ],
-			[ false, true, false ],
-			[ false, false, true ],
+			[ true, true ],
+			[ false, false ],
+		];
+	}
+
+	/**
+	 * @dataProvider provideDoThumbnailBeforeProduceHTML
+	 * @covers MobileFrontendHooks::onPageRenderingHash
+	 */
+	public function testDoThumbnailBeforeProduceHTML(
+		$expected,
+		$mimeType,
+		$stripResponsiveImages = true
+	) {
+		$file = $mimeType ? $this->factoryFile( $mimeType ) : null;
+		$thumbnail = new ThumbnailImage(
+			$file,
+
+			// The following is stub data that stops `ThumbnailImage#__construct`
+			// triggering a warning.
+			'/foo.svg',
+			false,
+			[
+				'width' => 375,
+				'height' => 667
+			]
+		);
+
+		MobileContext::singleton()->setStripResponsiveImages( $stripResponsiveImages );
+
+		// We're only asserting that the `srcset` attribute is unset.
+		$attribs = [ 'srcset' => 'bar' ];
+
+		$linkAttribs = [];
+
+		MobileFrontendHooks::onThumbnailBeforeProduceHTML(
+			$thumbnail,
+			$attribs,
+			$linkAttribs
+		);
+
+		$this->assertEquals( $expected, array_key_exists( 'srcset', $attribs ) );
+	}
+
+	/**
+	 * Creates an instance of `File` which has the given MIME type.
+	 *
+	 * @return File
+	 */
+	private function factoryFile( $mimeType ) {
+		$file = $this->getMockBuilder( 'File' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$file->method( 'getMimeType' )
+			->willReturn( $mimeType );
+
+		return $file;
+	}
+
+	public static function provideDoThumbnailBeforeProduceHTML() {
+		return [
+			[ false, 'image/jpg' ],
+
+			// `ThumbnailImage#getFile` can return `null`.
+			[ false, null ],
+
+			// It handles an image with a whitelisted MIME type.
+			[ true, 'image/svg+xml' ],
+
+			// It handles the stripping of responsive image variants from the parser
+			// output being disabled.
+			[ true, 'image/jpg', false ],
 		];
 	}
 }
