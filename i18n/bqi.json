@@ -5,5 +5,17 @@
 		]
 	},
 	"mobile-frontend-editor-edit": "ڤیرایئشت کاری",
-	"mobile-frontend-view": "دیئن موڤایلی"
+	"mobile-frontend-home-button": "سرآسونه",
+	"mobile-frontend-main-menu-button-tooltip": "نوم جاگه اصلی نه ڤا کونين.",
+	"mobile-frontend-main-menu-login": "ڤامین اوڤیڌن",
+	"mobile-frontend-main-menu-nearby": "نزیک",
+	"mobile-frontend-main-menu-settings": "میزونکاریا",
+	"mobile-frontend-main-menu-watchlist": "سیل برگ",
+	"mobile-frontend-placeholder": "پی جوری {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "شخصی",
+	"mobile-frontend-random-button": "بختكی",
+	"mobile-frontend-view": "دیئن موڤایلی",
+	"mobile-frontend-view-desktop": "ميزكار",
+	"mobile-frontend-view-mobile": "موبايل",
+	"tag-mobile_edit": "ویرایشت موبایلی"
 }
