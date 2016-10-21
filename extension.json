@@ -343,15 +343,8 @@
 		},
 		"mobile.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
-			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before,.mw-ui-icon-mf-{name}-{variant}:before",
-			"selectorWithoutVariant": ".mw-ui-icon-{name}:before,.mw-ui-icon-mf-{name}:before",
+			"selector": ".mw-ui-icon-{name}:before,.mw-ui-icon-mf-{name}:before",
 			"prefix": "mw-ui",
-			"variants": {
-				"invert": {
-					"color": "#FFFFFF",
-					"global": true
-				}
-			},
 			"images": {
 				"anonymous": "resources/mobile.mainMenu.icons/anonymous.svg",
 				"home": "resources/mobile.mainMenu.icons/home.svg",
