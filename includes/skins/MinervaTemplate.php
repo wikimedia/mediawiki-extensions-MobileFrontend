@@ -34,7 +34,7 @@ class MinervaTemplate extends BaseTemplate {
 	protected function getSearchForm( $data ) {
 		$args = [
 			'action' => $data['wgScript'],
-			'searchInput' => $this->makeSearchInput( $this->getSearchAttributes() ),
+			'searchInput' => $this->makeSearchInput( $data['searchInputAttributes'] ),
 			'searchButton' => $this->makeSearchButton( 'fulltext', [
 				'class' => MobileUI::buttonClass( 'progressive',
 					'fulltext-search' ),
@@ -106,22 +106,6 @@ class MinervaTemplate extends BaseTemplate {
 				'lists' => $groups,
 			];
 		}
-	}
-
-	/**
-	 * Get attributes to create search input
-	 * @return array Array with attributes for search bar
-	 */
-	protected function getSearchAttributes() {
-		$searchBox = [
-			'id' => 'searchInput',
-			'class' => 'search',
-			'autocomplete' => 'off',
-			// The placeholder gets fed to HTML::element later which escapes all
-			// attribute values, so need to escape the string here.
-			'placeholder' => $this->getMsg( 'mobile-frontend-placeholder' )->text(),
-		];
-		return $searchBox;
 	}
 
 	/**
