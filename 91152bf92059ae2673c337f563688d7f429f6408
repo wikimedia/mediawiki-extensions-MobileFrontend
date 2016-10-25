@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ea7efd1_e0335c5e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-25T21:39:11Z",
+      "side": 1,
+      "message": "we prefer three equals to make compare the types of both values, too :)",
+      "range": {
+        "startLine": 101,
+        "startChar": 23,
+        "endLine": 101,
+        "endChar": 27
+      },
+      "revId": "91152bf92059ae2673c337f563688d7f429f6408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ea7efd1_c038603d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-25T21:39:11Z",
+      "side": 1,
+      "message": "unnecessary, just put the array directly as a parameter to $tpl-\u003eset().",
+      "range": {
+        "startLine": 107,
+        "startChar": 2,
+        "endLine": 107,
+        "endChar": 13
+      },
+      "revId": "91152bf92059ae2673c337f563688d7f429f6408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
