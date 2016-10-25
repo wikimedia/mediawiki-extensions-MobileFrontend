@@ -16,6 +16,24 @@
       "revId": "4095e851f2d367e72c304f7406f4fe5eb37441ee",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_f269e9bd",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-25T17:02:26Z",
+      "side": 1,
+      "message": "Nope... we don\u0027t want secondary actions on a user page",
+      "parentUuid": "aea567c8_210145ba",
+      "revId": "4095e851f2d367e72c304f7406f4fe5eb37441ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
