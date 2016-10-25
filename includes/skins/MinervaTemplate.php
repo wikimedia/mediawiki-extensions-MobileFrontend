@@ -197,23 +197,22 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getSecondaryActionsHtml() {
-		// no secondary actions on the user page
-		if ( $this->getSkin()->isUserPage ) {
-			return '';
-		}
 		$baseClass = MobileUI::buttonClass( '', 'button' );
 		$html = Html::openElement( 'div', [
 			'class' => 'post-content',
 			'id' => 'page-secondary-actions'
 		] );
 
-		foreach ( $this->getSecondaryActions() as $el ) {
-			if ( isset( $el['attributes']['class'] ) ) {
-				$el['attributes']['class'] .= ' ' . $baseClass;
-			} else {
-				$el['attributes']['class'] = $baseClass;
+		// no secondary actions on the user page
+		if ( !$this->getSkin()->isUserPage ) {
+			foreach ( $this->getSecondaryActions() as $el ) {
+				if ( isset( $el['attributes']['class'] ) ) {
+					$el['attributes']['class'] .= ' ' . $baseClass;
+				} else {
+					$el['attributes']['class'] = $baseClass;
+				}
+				$html .= Html::element( 'a', $el['attributes'], $el['label'] );
 			}
-			$html .= Html::element( 'a', $el['attributes'], $el['label'] );
 		}
 
 		return $html . Html::closeElement( 'div' );
