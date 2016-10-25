@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea567c8_418c49db",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1267,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-25T13:35:14Z",
+      "side": 1,
+      "message": "Do we really need that? SkinMinerva has sth called \"addToBodyAttributes\" when it adds all necessary body classes there. We could add that `feature-footer-v2` there instead of polluting MobileFrontend.hooks with skin-related stuff.\n\nThen overwrite it in SkinMinervaBeta to always add that class and remove the whole onOutputPageBodyAttributes() here",
+      "revId": "1f7fc411c60c037092281043c8437f7eb175acd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
