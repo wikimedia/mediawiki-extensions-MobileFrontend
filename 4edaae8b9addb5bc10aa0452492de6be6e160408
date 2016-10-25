@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea567c8_dc26fc62",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-10-25T14:11:23Z",
+      "side": 1,
+      "message": "The template shouldn\u0027t know about the skin or the mode it\u0027s in. I would suggest to use another approach:\nSet the message key into a template data, then you can retrieve it with the data-array, which is provided in templates.\n\nAnother approach could be to create a new protected function \"getSearchPlaceholderMsg\", returning the message object and overwrite the whole function in MinervaTemplateBeta.",
+      "range": {
+        "startLine": 116,
+        "startChar": 7,
+        "endLine": 116,
+        "endChar": 44
+      },
+      "revId": "4edaae8b9addb5bc10aa0452492de6be6e160408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
