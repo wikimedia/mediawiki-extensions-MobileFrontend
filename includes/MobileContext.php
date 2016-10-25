@@ -297,19 +297,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Wether useformat is mobile
-	 * @return bool
-	 */
-	protected function isFauxMobileDevice() {
-		$useFormat = $this->getUseFormat();
-		if ( $useFormat !== 'mobile' && $useFormat !== 'mobile-wap' ) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
 	 * Sets the value of $this->mobileMode property to the value of the 'optin' cookie.
 	 * If the cookie is not set the value will be an empty string.
 	 */
@@ -461,7 +448,7 @@ class MobileContext extends ContextSource {
 		$useFormat = $this->getUseFormat();
 		if ( $useFormat == 'desktop' ) {
 			return false;
-		} elseif ( $this->isFauxMobileDevice() ) {
+		} elseif ( $useFormat == 'mobile' ) {
 			return true;
 		}
 
@@ -549,7 +536,9 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Get useformat from request for e.g. for isFauxMobileDevice()
+	 * Gets the value of the `useformat` query string parameter. This can be
+	 * overridden using the `MobileContext#setUseFormat`.
+	 *
 	 * @return string
 	 */
 	public function getUseFormat() {
@@ -561,8 +550,9 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set useformat as var
-	 * @param string $useFormat The useformat value to set
+	 * Overrides the value of `MobileContext#getUseFormat`.
+	 *
+	 * @param string $useFormat
 	 */
 	public function setUseFormat( $useFormat ) {
 		$this->useFormat = $useFormat;

@@ -103,9 +103,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 			// overrides the custom header.
 			[ false, 'M', 'desktop' ],
 
-			// If the format is either "mobile-wap" or "mobile", then the mobile view
-			// should be displayed.
-			[ true, null, 'mobile-wap' ],
+			// If the format is "mobile", then the mobile view should be displayed.
 			[ true, null, 'mobile' ],
 			[ false, null, 'foo' ],
 
