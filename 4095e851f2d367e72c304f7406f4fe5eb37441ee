@@ -34,6 +34,24 @@
       "revId": "4095e851f2d367e72c304f7406f4fe5eb37441ee",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8eaa6398_1e2d8d8b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-25T17:36:18Z",
+      "side": 1,
+      "message": "Ignore my comment. I was looking at the patchset you updated. Sorry!",
+      "parentUuid": "aea567c8_f269e9bd",
+      "revId": "4095e851f2d367e72c304f7406f4fe5eb37441ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
