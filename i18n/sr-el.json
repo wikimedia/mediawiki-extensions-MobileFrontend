@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Milicevic01",
-			"Srdjan m"
+			"Srdjan m",
+			"Сербијана"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite tekst koji vidite iznad",
-	"mobile-frontend-account-create-email-placeholder": "Adresa e-pošte (opciono)",
+	"mobile-frontend-account-create-email-placeholder": "Imejl adresa (opciono)",
 	"mobile-frontend-account-create-submit": "Otvori nalog",
 	"mobile-frontend-back-to-top-of-section": "Nazad na prethodni odeljak",
 	"mobile-frontend-categories-heading": "<strong>Kategorije</strong>",
@@ -68,13 +69,6 @@
 	"mobile-frontend-editor-wait": "Čuvanje izmene, molimo sačekajte.",
 	"mobile-frontend-editor-redlink-leave": "Ne, hvala.",
 	"mobile-frontend-editor-redlink-create": "Napravi stranicu",
-	"mobile-frontend-editor-bold": "Podebljano",
-	"mobile-frontend-editor-italic": "Iskošeno",
-	"mobile-frontend-editor-bold-text": "Podebljan tekst",
-	"mobile-frontend-editor-italic-text": "Iskošen tekst",
-	"mobile-frontend-editor-reference": "Referenca",
-	"mobile-frontend-editor-insert-reference": "Ubaci referencu",
-	"mobile-frontend-editor-add-reference": "Dodaj",
 	"mobile-frontend-enable-images": "Omogući slike na mobilnim stranicama",
 	"mobile-frontend-expand-sections-description": "Uvek raširi sve odeljke kada prelazim na novu stranicu.",
 	"mobile-frontend-expand-sections-status": "Raširi sve odeljke",
@@ -93,7 +87,7 @@
 	"mobile-frontend-history-404-desc": "Ne možete videti istoriju nepostojeće stranice. Verovatno je obrisana ili ste kliknuli na lošu vezu.",
 	"mobile-frontend-history-404-title": "Nema takve stranice",
 	"mobile-frontend-home-button": "Početak",
-	"mobile-frontend-image-cancel-confirm": "Otkaži slanje?",
+	"mobile-frontend-image-cancel-confirm": "Otkaži otpremanje?",
 	"mobile-frontend-image-heading-describe": "'''Opiši''' sliku",
 	"mobile-frontend-image-uploading": "'''Otpremam''' sliku...",
 	"mobile-frontend-images-status": "Slike",
@@ -174,7 +168,6 @@
 	"mobile-frontend-talk-back-to-userpage": "Nazad na stranicu {{GENDER:$1|korisnika|korisnice}} „$1“.",
 	"mobile-frontend-talk-back-to-projectpage": "Nazad na stranicu projekta „$1“.",
 	"mobile-frontend-talk-back-to-filepage": "Nazad na datoteku „$1“.",
-	"mobile-frontend-talk-edit-summary": "Novi odeljak: $1",
 	"mobile-frontend-talk-explained-empty": "Nema diskusija o ovoj stranici.",
 	"mobile-frontend-talk-overlay-header": "Razgovor",
 	"mobile-frontend-talk-overlay-lead-header": "Neimenovana temа",

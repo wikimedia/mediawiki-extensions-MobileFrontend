@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"AlnashPiyash2",
-			"Kaganer"
+			"Kaganer",
+			"Wadorgurt"
 		]
 	},
 	"mobile-frontend-editor-edit": "Тупатон",
@@ -17,6 +18,7 @@
 	"mobile-frontend-languages-header": "Кылъёс",
 	"mobile-frontend-languages-header-page": "$1 — Кылъёс",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Берпуметӥ {{GENDER:$1|тупатон}} лэсьтэмын {{PLURAL:$3|$3 нуналлы талэсь азьло|1=толон}}] {{PLURAL:$5|викиавторен [$6 $2]|0=тодмотэм викиавторен}}",
+	"mobile-frontend-main-menu-button-tooltip": "Валтӥсь меню усьтыны",
 	"mobile-frontend-main-menu-login": "Пырыны",
 	"mobile-frontend-main-menu-logout": "Потыны",
 	"mobile-frontend-main-menu-settings": "Настройкаос",
