@@ -1884,9 +1884,6 @@
 		"OutputPageParserOutput": [
 			"MobileFrontendHooks::onOutputPageParserOutput"
 		],
-		"OutputPageBodyAttributes": [
-			"MobileFrontendHooks::onOutputPageBodyAttributes"
-		],
 		"HTMLFileCache::useFileCache": [
 			"MobileFrontendHooks::onHTMLFileCache_useFileCache"
 		],
@@ -2025,7 +2022,10 @@
 		"MFSchemaEditSampleRate": 0.0625,
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
-		"MinervaUseFooterV2": true,
+		"MinervaUseFooterV2": {
+			"beta": true,
+			"base": true
+		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"

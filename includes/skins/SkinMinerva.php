@@ -44,7 +44,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return boolean
 	 */
 	public function isFooterV2() {
-		return $this->getMFConfig()->get( 'MinervaUseFooterV2' );
+		return $this->mobileContext->getConfigVariable( 'MinervaUseFooterV2' );
 	}
 
 	/**
@@ -1239,14 +1239,23 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * This will be called by OutputPage::headElement when it is creating the
-	 * "<body>" tag, - adds output property bodyClassName to the existing classes
+	 * Modifies the `<body>` element's attributes.
+	 *
+	 * By default, the `class` attribute is set to the output's "bodyClassName"
+	 * property. If `SkinMinerva#isFooterV2` is truthy (i.e.
+	 * `$wgMinervaUseFooterV2` is truthy), then the "feature-footer-v2" CSS
+	 * feature class is added to the `class` attribute.
+	 *
 	 * @param OutputPage $out
 	 * @param array $bodyAttrs
 	 */
 	public function addToBodyAttributes( $out, &$bodyAttrs ) {
-		// does nothing by default - used by Special:MobileMenu
 		$classes = $out->getProperty( 'bodyClassName' );
+
+		if ( $this->isFooterV2() ) {
+			$classes .= ' feature-footer-v2';
+		}
+
 		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
 
