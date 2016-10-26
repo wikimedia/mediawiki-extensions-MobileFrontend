@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_1feb47a2",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-26T17:18:44Z",
+      "side": 1,
+      "message": "Yarrrp. This overrides the behaviour of SkinMinerva#isFooterV2, which checks the $wgMinervaUseFooterV2 config variable.",
+      "parentUuid": "4eb4ebfb_3c85f19f",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_7c9a59bf",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 4
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "It\u0027s worth pointing out that given addToBodyAttributes contains no hooks, a false positive could only apply when we make additional changes inside MobileFrontend... in which case it should be pretty easy to remedy.",
       "parentUuid": "4eb4ebfb_7c9a59bf",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_ffff7b63",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-26T17:18:44Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "4eb4ebfb_5ccafd4b",
       "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
