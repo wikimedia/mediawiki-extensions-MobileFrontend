@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_d07f0c62",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T21:37:04Z",
+      "side": 1,
+      "message": "given this is the existing behaviour and given the leaking classes is more important to rectify I\u0027m happy to take this conversation into a follow up.\n\nI just feel like we\u0027re making our lives unnecessarily difficult for no value by continuing to support this. The only reason we added it was to aid deployment of this feature which has already happened. Now seems a great time to remove/repurpose.",
+      "parentUuid": "4eb4ebfb_70b0383f",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_7c9a59bf",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 4
