@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4eb4ebfb_3c85f19f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T15:40:55Z",
+      "side": 1,
+      "message": "Is this needed?",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_7c9a59bf",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 4
@@ -13,6 +30,24 @@
       "writtenOn": "2016-10-26T14:20:02Z",
       "side": 1,
       "message": "Would be nice to have something like `assertContains($needle, $haystack)` that checks if string contains another string. If someone (I know, edge case) changes sth with adding extra body classes, change ordering, or just remove that useless space in front this test will cause false negative. \n\nIn assertContainsString just explode by space and check $this-\u003eassertContains() and vouila (or do some regex magic).",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_5ccafd4b",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T15:40:55Z",
+      "side": 1,
+      "message": "It\u0027s worth pointing out that given addToBodyAttributes contains no hooks, a false positive could only apply when we make additional changes inside MobileFrontend... in which case it should be pretty easy to remedy.",
+      "parentUuid": "4eb4ebfb_7c9a59bf",
       "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
