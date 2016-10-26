@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_70b0383f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T21:34:33Z",
+      "side": 1,
+      "message": "Do we want/need to override this?\n\nThe default is true.\nIf it\u0027s set to false, I think there\u0027s a good motivation to do that and I don\u0027t think it is the role of beta to change that unexpectedly.",
+      "parentUuid": "4eb4ebfb_1feb47a2",
+      "revId": "273f395504bd60f26ccc1e25888a02eb75265da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_7c9a59bf",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 4
