@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_624072a9",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-26T19:34:03Z",
+      "side": 1,
+      "message": "Rather than creating this function, how about we take another approach and make the `MinervaUseFooterV2` config variable a object with keys \"base\" and \"beta\". Then we make appropriate changes to the base function to reflect this change. This would allow us to configure features using config variables and not hardcode them into skins.",
+      "revId": "9a87bd8039bc7e5eb43d57fe5e585625769ee425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
