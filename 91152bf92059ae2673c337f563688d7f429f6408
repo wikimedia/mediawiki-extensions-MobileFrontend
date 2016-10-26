@@ -61,6 +61,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_1cdeb5de",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T15:47:48Z",
+      "side": 1,
+      "message": "Well.. the task you are working on is about retaining the placeholder in beta mode and says \"This will be useful when we remove SkinMinervaBeta.\"\n\nI\u0027d argue moving this code here but leaving the code which makes it happen (which is the modification of the result to getMode) leaves this in a more confusing state than before and makes it harder to remove SkinMinervaBeta (and given there are no tests easy to break!).\n\n\"...talks about setting the beta mode when all features are turned on\"\nThis statement confuses me and was not what I thought we were doing (I was thinking the opposite).\n\nTo be honest, I\u0027m a little worried that we\u0027ve not discussed the end goal in enough detail and I\u0027m worried we might be working on this without the team having a shared understanding.",
+      "parentUuid": "4eb4ebfb_fc32e9bb",
+      "revId": "91152bf92059ae2673c337f563688d7f429f6408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ea7efd1_c038603d",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
