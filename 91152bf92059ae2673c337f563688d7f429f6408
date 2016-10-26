@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "6ea7efd1_c615184f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-26T09:34:46Z",
+      "side": 1,
+      "message": "Note that getMode will always return stable... If the goal is to remove SkinMinervaBeta this will always be falsey when that does get removed.\n\nIt\u0027s worth mentioning this in the commit message.\nWe\u0027ll probably want to either devise a way to set mode in the constructor of SkinMinerva or keep SkinMinervaBeta as a simple wrapper which just overrides the mode value.\n\nRight now I\u0027m not clear what the strategy is. Can you clarify?",
+      "parentUuid": "6ea7efd1_e0335c5e",
+      "revId": "91152bf92059ae2673c337f563688d7f429f6408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ea7efd1_c038603d",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
