@@ -43,6 +43,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_fc32e9bb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-26T14:27:44Z",
+      "side": 1,
+      "message": "Isn\u0027t that up for a debate? T147944 talks about setting the beta mode when all features are turned on. Whatever we do, the commit message in this patch won\u0027t help with that decision, will it?",
+      "parentUuid": "6ea7efd1_c615184f",
+      "revId": "91152bf92059ae2673c337f563688d7f429f6408",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ea7efd1_c038603d",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
