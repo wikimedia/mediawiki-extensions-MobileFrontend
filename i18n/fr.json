@@ -43,7 +43,8 @@
 			"Weft",
 			"Orlodrim",
 			"Yasten",
-			"Trial"
+			"Trial",
+			"The RedBurn"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -317,8 +318,8 @@
 	"mobile-frontend-thanked-notice": "$1 a été averti que vous avez aimé {{GENDER:$2|sa}} modification.",
 	"mobile-frontend-user-button-tooltip": "Afficher mes notifications",
 	"mobile-frontend-user-newmessages": "Vous avez de nouveaux messages sur votre page de discussion",
-	"mobile-frontend-view": "Affichage mobile",
-	"mobile-frontend-view-desktop": "Bureau",
+	"mobile-frontend-view": "Version mobile",
+	"mobile-frontend-view-desktop": "Désactiver la version mobile",
 	"mobile-frontend-view-mobile": "Mobile",
 	"mobile-frontend-watchlist-a-z": "Liste",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Vous ne surveillez pour le moment aucune page. Votre liste de suivi vous aide à garder trace des pages qui vous intéressent. Surveillez les pages en cliquant sur l’icône étoile.",

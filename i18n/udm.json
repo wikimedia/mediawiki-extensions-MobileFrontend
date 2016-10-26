@@ -21,12 +21,16 @@
 	"mobile-frontend-main-menu-button-tooltip": "Валтӥсь меню усьтыны",
 	"mobile-frontend-main-menu-login": "Пырыны",
 	"mobile-frontend-main-menu-logout": "Потыны",
+	"mobile-frontend-main-menu-nearby": "Матысьёсыз",
 	"mobile-frontend-main-menu-settings": "Настройкаос",
 	"mobile-frontend-main-menu-watchlist": "Чаклан список",
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
+	"mobile-frontend-random-button": "Олокыӵе",
 	"mobile-frontend-sign-in-heading": "Пырыны",
 	"mobile-frontend-terms-text": "Кутонлэн условиосы",
 	"mobile-frontend-view": "Мобильной версия",
+	"mobile-frontend-view-desktop": "Ӝӧквыл",
+	"mobile-frontend-view-mobile": "Мобильной",
 	"mobile-frontend-watchlist-cta-button-login": "Пырыны",
 	"mobile-frontend-watchlist-filter-all": "Ваньзэ"
 }
