@@ -16,6 +16,24 @@
       "revId": "9a87bd8039bc7e5eb43d57fe5e585625769ee425",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_d60a64d5",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-10-27T08:01:24Z",
+      "side": 1,
+      "message": "As we discussed in standup, I\u0027d prefer it if SkinMinerva wasn\u0027t aware of the distinction between stable and beta.\n\nWith that in mind, I notice that you\u0027ve added MobileContext#getConfigVariable. I\u0027m going to make it public and defer to it in SkinMinerva#isFooterV2.",
+      "parentUuid": "4eb4ebfb_624072a9",
+      "revId": "9a87bd8039bc7e5eb43d57fe5e585625769ee425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
