@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_367868ed",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2025,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-27T15:10:38Z",
+      "side": 1,
+      "message": "In production we set this to true. [1]\nMobileContext#getConfigVariable\n\nWhat happens when this is true?\n\n[1] https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/InitialiseSettings.php#L14601",
+      "revId": "1fb091f7420293dffdf6e25de5698646283de890",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
