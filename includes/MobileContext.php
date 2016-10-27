@@ -159,11 +159,34 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Utility function that returns a config variable depending on the mobile mode.
+	 * Gets the value of a config variable whose value depends on whether the
+	 * user is a member of the beta group.
+	 *
+	 * @warning If the value of the config variable doesn't behave this way, then
+	 *  `null` is returned.
+	 *
+	 * @example
+	 * Given the following config variables:
+	 *
+	 * ```
+	 * $wgFoo = [
+	 *   'beta' => 'bar',
+	 *   'base' => 'baz',
+	 * ];
+	 * $wgQux = 'quux';
+	 * ```
+	 *
+	 * `MobileContext#getConfigVariable( 'Foo' )` would return `'bar'` if the user
+	 * is a member of the beta group and `'baz'` otherwise; and
+	 * `#getConfigVariable( 'Qux' )` would return `null`.
+	 *
 	 * @param $variableName
 	 * @return mixed|null
+	 * @throws ConfigException If the config variable doesn't exist
+	 *
+	 * @TODO Should this be renamed, e.g. `getFlag`, or extracted?
 	 */
-	private function getConfigVariable( $variableName ) {
+	public function getConfigVariable( $variableName ) {
 		$configVariable = $this->getMFConfig()->get( $variableName ) ?: [];
 		if ( $this->isBetaGroupMember() && array_key_exists( 'beta', $configVariable ) ) {
 			return $configVariable['beta'];
