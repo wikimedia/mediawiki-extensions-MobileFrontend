@@ -177,7 +177,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$noJsEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$additionalClass = $noJsEdit?' nojs-edit':'';
@@ -978,7 +978,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array A map compatible with BaseTemplate#makeListItem
 	 */
 	protected function createEditPageAction() {
-		$noJsEdit = MobileContext::singleton()->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$noJsEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
 		$additionalClass = $noJsEdit ? ' nojs-edit' : '';
 
 		return [
