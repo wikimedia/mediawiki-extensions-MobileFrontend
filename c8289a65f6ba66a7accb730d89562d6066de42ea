@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_63e19197",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 2025,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-27T15:10:38Z",
+      "side": 1,
+      "message": "In production this is still set to true.\nWhat happens if a site config overrides this with true?",
+      "revId": "c8289a65f6ba66a7accb730d89562d6066de42ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_43de95df",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-27T15:10:38Z",
+      "side": 1,
+      "message": "What if this is set to the old value of true or false?",
+      "revId": "c8289a65f6ba66a7accb730d89562d6066de42ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
