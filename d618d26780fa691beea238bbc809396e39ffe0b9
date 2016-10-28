@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_ed47ca7a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-28T08:13:02Z",
+      "side": 1,
+      "message": "As I\u0027ve mentioned before this will run isBetaGroupMember in desktop mode where there is no concept of beta [1]\n\nThis is problematic as it could lead to cache pollution since desktop doesn\u0027t vary. Given we don\u0027t surface Minerva as a desktop skin this is not a problem on the short term but if neglected could easily lead to beta functionality appearing on the desktop skin.\n\nIn the constructor we already do this check:\n$this-\u003eisMobileMode \u003d $this-\u003emobileContext-\u003eshouldDisplayMobileView();\n\nAdding a line:\n$this-\u003eisBetaMode \u003d $this-\u003eisMobileMode \u0026\u0026 $this-\u003emobileContext-\u003eisBetaGroupMember() : true : false;\nis probably the safest way to do this.\n\n[1] https://phabricator.wikimedia.org/T148197#2748798",
+      "revId": "d618d26780fa691beea238bbc809396e39ffe0b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
