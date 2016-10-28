@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_887dd419",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-28T11:09:05Z",
+      "side": 1,
+      "message": "Still not clear to me what happens when this is true as it is in production...",
+      "revId": "44c716e54e499bb7c4d45c82ad4196ca38be6324",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
