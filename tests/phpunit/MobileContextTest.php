@@ -583,4 +583,45 @@ class MobileContextTest extends MediaWikiTestCase {
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
 	}
+
+	/**
+	 * @dataProvider provideGetConfigVariable
+	 * @covers MobileContext::getConfigVariable
+	 */
+	public function testGetConfigVariable(
+		$expected,
+		$wgMinervaUseFooterV2,
+		$mobileMode = 'stable'
+	) {
+		$this->setMwGlobals( [
+			'wgMFEnableBeta' => true,
+			'wgMinervaUseFooterV2' => $wgMinervaUseFooterV2
+		] );
+
+		$context = MobileContext::singleton();
+		$context->setMobileMode( $mobileMode );
+
+		$this->assertEquals(
+			$expected,
+			$context->getConfigVariable( 'MinervaUseFooterV2' )
+		);
+	}
+
+	public static function provideGetConfigVariable() {
+		$wgMinervaUseFooterV2 = [
+			'beta' => 'bar',
+			'base' => 'foo',
+		];
+
+		return [
+			[ 'foo', $wgMinervaUseFooterV2, 'stable' ],
+			[ 'bar', $wgMinervaUseFooterV2, 'beta' ],
+
+			[ null, [ 'alpha' => 'baz' ] ],
+
+			// When the config variable isn't an array, then its value is returned
+			// regardless of whether the user is a member of the beta group.
+			[ true, true ],
+		];
+	}
 }

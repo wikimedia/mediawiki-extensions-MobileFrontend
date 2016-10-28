@@ -166,19 +166,31 @@ class MobileContext extends ContextSource {
 	 *  `null` is returned.
 	 *
 	 * @example
-	 * Given the following config variables:
-	 *
 	 * ```
 	 * $wgFoo = [
 	 *   'beta' => 'bar',
 	 *   'base' => 'baz',
 	 * ];
 	 * $wgQux = 'quux';
-	 * ```
+	 * $wgCorge = [
+	 *   'grault' => 'garply',
+	 * ];
 	 *
-	 * `MobileContext#getConfigVariable( 'Foo' )` would return `'bar'` if the user
-	 * is a member of the beta group and `'baz'` otherwise; and
-	 * `#getConfigVariable( 'Qux' )` would return `null`.
+	 * $context = MobileContext::singleton();
+	 * $context->getConfigVariable( 'Foo' ); // => 'baz'
+	 *
+	 * $context->setMobileMode( 'beta' );
+	 * $context->getConfigVariable( 'Foo' ); // => 'bar'
+	 *
+	 * // If the config variable isn't a dictionary, then its value will be
+	 * // returned returned regardless of whether the user is a member of the beta
+	 * // group.
+	 * $context->getConfigVariable( 'Qux' ); // => 'quux'
+	 *
+	 * // If the config variable is a dictionary but doesn't have "beta" or "base"
+	 * // entries, then `null` will be returned.
+	 * $context->getConfigVariable( 'Corge' ); // => null
+	 * ```
 	 *
 	 * @param $variableName
 	 * @return mixed|null
@@ -188,6 +200,11 @@ class MobileContext extends ContextSource {
 	 */
 	public function getConfigVariable( $variableName ) {
 		$configVariable = $this->getMFConfig()->get( $variableName ) ?: [];
+
+		if ( !is_array( $configVariable ) ) {
+			return $configVariable;
+		}
+
 		if ( $this->isBetaGroupMember() && array_key_exists( 'beta', $configVariable ) ) {
 			return $configVariable['beta'];
 		} elseif ( array_key_exists( 'base', $configVariable ) ) {
