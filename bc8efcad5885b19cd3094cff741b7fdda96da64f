@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_6e5bb127",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-28T11:06:32Z",
+      "side": 1,
+      "message": "What if $wgMinervaUseFooterV2 is true or false (since these are current possible values)?",
+      "revId": "bc8efcad5885b19cd3094cff741b7fdda96da64f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
