@@ -226,7 +226,7 @@
 	"mobile-frontend-password-placeholder": "Palavra-chave",
 	"mobile-frontend-photo-article-edit-comment": "Imagem adicionada para uso na página",
 	"mobile-frontend-photo-caption-placeholder": "Descreva esta imagem (obrigatório)",
-	"mobile-frontend-photo-upload-invalid-user": "A conta de utilizador \"$1\" não está registada.",
+	"mobile-frontend-photo-upload-invalid-user": "O utilizador \"$1\" não está registado.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> carregamento|<span>$1</span> carregamentos}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "+ de 500 carregamentos",
 	"mobile-frontend-placeholder": "Pesquisar em {{SITENAME}}",
