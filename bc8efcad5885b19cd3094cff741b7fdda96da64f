@@ -52,6 +52,24 @@
       "revId": "bc8efcad5885b19cd3094cff741b7fdda96da64f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_4e86b56b",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-28T11:34:50Z",
+      "side": 1,
+      "message": "Reading the code and comments I see that it will return true or false (hence why I +2ed your follow up), but I\u0027d argue that /proving/ and /ensuring/ this is the case going forward via testing this is more important than testing the value \u0027qux\u0027.\n\nIf a setup has this value set as \u0027qux\u0027 does it matter if it breaks?\nIf a setup has the value set as false and this change turns its value to true, we care more.",
+      "parentUuid": "4eb4ebfb_eead81e8",
+      "revId": "bc8efcad5885b19cd3094cff741b7fdda96da64f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
