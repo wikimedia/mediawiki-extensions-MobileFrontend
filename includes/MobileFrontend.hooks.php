@@ -1244,28 +1244,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * OutputPageBodyAttributes hook handler.
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBodyAttributes
-	 *
-	 * @param OutputPage $outputPage
-	 * @param Skin $skin
-	 * @param array $bodyAttrs
-	 */
-	public static function onOutputPageBodyAttributes(
-		OutputPage $outputPage,
-		Skin $skin,
-		array &$bodyAttributes
-	) {
-		$context = MobileContext::singleton();
-		$config = $context->getMFConfig();
-
-		if ( $config->get( 'MinervaUseFooterV2' ) || $context->isBetaGroupMember() ) {
-			$bodyAttributes['class'] .= ' feature-footer-v2';
-		}
-	}
-
-	/**
 	 * HTMLFileCache::useFileCache hook handler
 	 * Disables file caching for mobile pageviews
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/HTMLFileCache::useFileCache
