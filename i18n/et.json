@@ -131,6 +131,7 @@
 	"mobile-frontend-images-status": "Pildid",
 	"mobile-frontend-language-article-heading": "Loe teises keeles",
 	"mobile-frontend-language-heading": "<strong>Keeled</strong>",
+	"mobile-frontend-languages-not-available": "See lehekülg pole teistes keeltes saadaval.",
 	"mobile-frontend-languages-404-desc": "Tuleb määrata sobiv pealkiri.",
 	"mobile-frontend-languages-404-title": "Keeletõrge",
 	"mobile-frontend-languages-header": "Keeled",

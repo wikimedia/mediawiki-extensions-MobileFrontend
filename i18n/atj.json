@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amqui"
+			"Amqui",
+			"Benoit Rochon"
 		]
 	},
-	"mobile-frontend-home-button": "Otitikowin"
+	"mobile-frontend-home-button": "Otitikowin",
+	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}"
 }
