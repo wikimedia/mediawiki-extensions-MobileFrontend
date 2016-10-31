@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_9f529a69",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 605,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-31T18:56:10Z",
+      "side": 1,
+      "message": "One option is to move the paragraph 1 above the container that encloses the infobox. I don\u0027t know if it has side effects such as the container that contains the infobox may have some text above the infobox already.",
+      "revId": "edde0871567b767958dc311f85a49ab9a30e0bdb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
