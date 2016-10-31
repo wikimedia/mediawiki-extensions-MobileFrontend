@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_ae164ef4",
+        "filename": "tests/qunit/mobile.nearby/test_NearbyGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-31T09:04:42Z",
+      "side": 1,
+      "message": "This test is failing. I think the wrong assumption is being made about the units. It sounds like the distance is supposed to be in kms and then divided by 1000 to show meters. How to page.dist and coordinates.dist differ?\n\nExpected: \"177.400\"\nActual: \"0.177400\"",
+      "revId": "33886210c55442aac5324dd1e203765bd6756193",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
