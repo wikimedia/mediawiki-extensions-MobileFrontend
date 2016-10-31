@@ -210,7 +210,7 @@ class MobileFormatter extends HtmlFormatter {
 		// Find infoboxes and paragraphs that have text content, i.e. paragraphs
 		// that are not empty nor are wrapper paragraphs that contain span#coordinates.
 		$infoboxAndParagraphs = $xPath->query(
-			'.//table[contains(@class,"infobox")] | .//p[string-length(text()) > 0]',
+			'.//table[contains(@class,"infobox")] | ./p[string-length(text()) > 0]',
 			$leadSectionBody
 		);
 		// We need both an infobox and a paragraph and the first element of our query result

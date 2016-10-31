@@ -593,6 +593,25 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 				$enableSections, false, false, false, true,
 			],
+
+			[
+				// Minimal test case for T149561: `p` elements should be immediate
+				// descendants of the section container element (`div`, currently).
+
+				'<table class="' . self::INFOBOX_CLASSNAME . '">' .
+				'<tr><td><p>SURPRISE PARAGRAPH</p></td></tr></table>' .
+				'<p>paragraph 1</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<p>paragraph 1</p>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '">' .
+					'<tr><td><p>SURPRISE PARAGRAPH</p></td></tr></table>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
+
 		];
 	}
 
