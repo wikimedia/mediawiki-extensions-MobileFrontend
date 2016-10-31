@@ -1990,7 +1990,6 @@
 		"MobileFrontendLogo": false,
 		"MFTrademarkSitename": false,
 		"MFEnableBeta": false,
-		"MFDonationUrl": false,
 		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MinervaPageActions": [
