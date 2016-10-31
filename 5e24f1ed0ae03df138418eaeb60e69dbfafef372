@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_1f9b2a1d",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-10-31T19:07:23Z",
+      "side": 1,
+      "message": "I\u0027m not sure where to express this logic, but from a user perspective, I don\u0027t think we should ever display a button to show 1 more item. Instead that item should be shown instead of the button.\n\nThe button would only be there if there are at least 2 more items.",
+      "range": {
+        "startLine": 61,
+        "startChar": 48,
+        "endLine": 61,
+        "endChar": 76
+      },
+      "revId": "5e24f1ed0ae03df138418eaeb60e69dbfafef372",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
