@@ -385,7 +385,6 @@
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
-	"mobile-frontend-donate-button-label": "Donate",
 	"mobile-frontend-meta-data-issues-categories": "About this category",
 	"mobile-frontend-loading-message": "Loading…",
 	"mobile-frontend-console-recruit": "\\o/ Hey! This is open source software and we need volunteers to help us build this thing, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/profile/67/",

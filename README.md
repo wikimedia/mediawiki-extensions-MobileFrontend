@@ -561,13 +561,6 @@ Whether beta mode is enabled.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFDonationUrl
-
-Optional string to mobile friendly url for donation page.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFContentNamespace
 
 The content namespace(s) that *Special:Nearby* and *Special:Random* should use.

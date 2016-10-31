@@ -46,21 +46,11 @@ class MinervaTemplateBeta extends MinervaTemplate {
 
 	/**
 	 * Get page secondary actions
+	 *
+	 * @return array An array of button definitions
 	 */
 	protected function getSecondaryActions() {
-		$donationUrl = $this->getSkin()->getMFConfig()->get( 'MFDonationUrl' );
-
 		$result = parent::getSecondaryActions();
-
-		if ( $donationUrl && !$this->isSpecialPage ) {
-			$result['donation'] = [
-				'attributes' => [
-					'href' => $donationUrl,
-				],
-				'label' => $this->getMsg( 'mobile-frontend-donate-button-label' )->text()
-			];
-		}
-
 		$result += $this->getCategoryButton();
 
 		return $result;
