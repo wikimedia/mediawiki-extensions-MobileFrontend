@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_baf204de",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-31T20:20:12Z",
+      "side": 0,
+      "message": "+1 - I\u0027ll remove this from other languages",
+      "parentUuid": "4eb4ebfb_7a911c9c",
+      "revId": "a55c16ff66e31cb1a349ed4c93a1e7b99b19a5b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_fafbecdc",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-31T20:00:47Z",
       "side": 0,
       "message": "We should not remove this function as it also contains the category button.",
+      "revId": "a55c16ff66e31cb1a349ed4c93a1e7b99b19a5b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_fa588cff",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-10-31T20:20:12Z",
+      "side": 0,
+      "message": "ah, you\u0027re right, I missed this one. I checked like two times \"is it dontate-button-only\"...",
+      "parentUuid": "4eb4ebfb_fafbecdc",
       "revId": "a55c16ff66e31cb1a349ed4c93a1e7b99b19a5b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
