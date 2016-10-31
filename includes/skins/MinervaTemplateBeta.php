@@ -9,16 +9,6 @@
  */
 class MinervaTemplateBeta extends MinervaTemplate {
 	/**
-	 * Get attributes to create search input
-	 * @return array Array with attributes for search bar
-	 */
-	protected function getSearchAttributes() {
-		$searchBox = parent::getSearchAttributes();
-		$searchBox['placeholder'] = $this->getMsg( 'mobile-frontend-placeholder-beta' )->text();
-		return $searchBox;
-	}
-
-	/**
 	 * Get category button if categories are present
 	 * @return array A map of the button's friendly name, "categories" to its
 	 *   spec if the button can be displayed.
