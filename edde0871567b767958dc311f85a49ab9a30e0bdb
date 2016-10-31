@@ -16,6 +16,23 @@
       "revId": "edde0871567b767958dc311f85a49ab9a30e0bdb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_ffd19ed1",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-10-31T18:57:21Z",
+      "side": 1,
+      "message": "Another approach may be to only consider infoboxes that are direct children of the lead section.",
+      "revId": "edde0871567b767958dc311f85a49ab9a30e0bdb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
