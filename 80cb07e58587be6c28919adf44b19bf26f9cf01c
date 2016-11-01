@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_1556625f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-11-01T23:42:16Z",
+      "side": 1,
+      "message": "What is the previous sibling? The css seems to only look for open-block on the collapsible block itself.",
+      "range": {
+        "startLine": 60,
+        "startChar": 1,
+        "endLine": 60,
+        "endChar": 50
+      },
+      "revId": "80cb07e58587be6c28919adf44b19bf26f9cf01c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
