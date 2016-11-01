@@ -13,12 +13,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * Helper function that creates section headings from a heading and title
 	 *
 	 * @param string $heading
-	 * @param string $title
+	 * @param string $innerHtml of the heading element
 	 * @return string
 	 */
-	private function makeSectionHeading( $heading, $title ) {
+	private function makeSectionHeading( $heading, $innerHtml ) {
 		return "<$heading class=\"section-heading\">" . self::SECTION_INDICATOR .
-			"$title</$heading>";
+			"$innerHtml</$heading>";
 	}
 
 	/**
@@ -104,8 +104,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			],
 			wfMessage( 'mobile-frontend-references-list' )
 		);
-		$refSectionHtml = '<h2 class="section-heading">' . self::SECTION_INDICATOR
-			. 'references</h2>'
+		$refSectionHtml = $this->makeSectionHeading( 'h2', 'references' )
 			. '<div class="mf-section-1" data-is-reference-section="1">'
 			. $refplaceholder . '</div>';
 
@@ -123,12 +122,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
 					. '<h2>heading 2</h2>abc',
 				'<div class="mf-section-0"><p>' . $originalImage . '</p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 1</h2>'
+					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. '<div class="mf-section-1"><p>text</p>'
 					. '</div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 2</h2><div class="mf-section-2">abc</div>',
+					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. '<div class="mf-section-2">abc</div>',
 				$enableSections,
 				false, false, true,
 			],
@@ -137,14 +135,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 					. '<h2>heading 2</h2>abc',
 				'<div class="mf-section-0"><p>text</p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 1</h2>'
+					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. '<div class="mf-section-1"><p>text</p>'
 					. $noscript
 					. $placeholder
 					. '</div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 2</h2><div class="mf-section-2">abc</div>',
+					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. '<div class="mf-section-2">abc</div>',
 				$enableSections,
 				false, false, true,
 			],
@@ -153,14 +150,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $imageStyles
 					. '<h2>heading 2</h2>abc',
 				'<div class="mf-section-0"><p>text</p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 1</h2>'
+					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. '<div class="mf-section-1"><p>text</p>'
 					. $noscriptStyles
 					. $placeholderStyles
 					. '</div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'heading 2</h2><div class="mf-section-2">abc</div>',
+					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. '<div class="mf-section-2">abc</div>',
 				$enableSections,
 				false, false, true,
 			],
@@ -169,12 +165,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 				.'<h2>heading 2</h2>' . $originalImage,
 				'<div class="mf-section-0"><p>text</p></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR . 'heading 1</h2>'
+					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. '<div class="mf-section-1"><p>text</p>'
 					. $noscript
 					. $placeholder
 					. '</div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR . 'heading 2</h2>'
+					. $this->makeSectionHeading( 'h2', 'heading 2' )
 					. '<div class="mf-section-2">'
 					. $noscript
 					. $placeholder
@@ -255,9 +251,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
 				'<div class="mf-section-0"></div>'
-					. '<h2 class="section-heading">' . self::SECTION_INDICATOR
-					. '<span class="mw-headline" id="Forty-niners">Forty-niners</span>'
-					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
+					. $this->makeSectionHeading( 'h2',
+						'<span class="mw-headline" id="Forty-niners">Forty-niners</span>'
+						. '<a class="edit-page" href="#editor/2">Edit</a>'
+					)
 					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			],
@@ -268,8 +265,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<h4><span>h4</span></h4>'
 					. 'h4 text.',
 				'<div class="mf-section-0"></div>'
-					. '<h3 class="section-heading">' . self::SECTION_INDICATOR
-					 . '<span>h3</span></h3>'
+					. $this->makeSectionHeading( 'h3', '<span>h3</span>' )
 					. '<div class="mf-section-1">'
 					. $longLine
 					. '<h4 class="in-block"><span>h4</span></h4>'
@@ -282,8 +278,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h6><span>h6</span></h6>'
 					. $longLine,
 				'<div class="mf-section-0"></div>'
-					. '<h6 class="section-heading">' . self::SECTION_INDICATOR
-				  . '<span>h6</span></h6>'
+					. $this->makeSectionHeading( 'h6', '<span>h6</span>' )
 					. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			],
@@ -292,10 +287,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>'
 					. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				'<div class="mf-section-0"></div><h2 class="section-heading">'
-				. self::SECTION_INDICATOR
-				. '<span class="mw-headline" id="History"><span id="Overview"></span>'
-				. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
+				'<div class="mf-section-0"></div>'
+				. $this->makeSectionHeading( 'h2',
+					'<span class="mw-headline" id="History"><span id="Overview"></span>'
+						. 'History</span><a class="edit-page" href="#editor/2">Edit</a>'
+					)
 				. '<div class="mf-section-1">' . $longLine . '</div>',
 				$enableSections
 			],
@@ -643,8 +639,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>',
-				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
-				  . 'Foo</h1>'
+				'<div class="mf-section-0"></div>'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
 					. '<div class="mf-section-1"><h2 class="in-block">Bar</h2></div>',
 			],
 
@@ -653,8 +649,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2 class="baz">Bar</h2>',
-				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Foo</h1><div class="mf-section-1">'
+				'<div class="mf-section-0"></div>'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
+					. '<div class="mf-section-1">'
 					. '<h2 class="baz in-block">Bar</h2></div>',
 			],
 
@@ -662,8 +659,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2', 'h3' ],
 				'<h1>Foo</h1><h2>Bar</h2><h3>Qux</h3>',
-				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Foo</h1><div class="mf-section-1">'
+				'<div class="mf-section-0"></div>'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
+					. '<div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3></div>',
 			],
 
@@ -672,8 +670,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2', 'h3' ],
 				'<h2>Bar</h2><h3>Qux</h3>',
-				'<div class="mf-section-0"></div><h2 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Bar</h2><div class="mf-section-1">'
+				'<div class="mf-section-0"></div>'
+					. $this->makeSectionHeading( 'h2', 'Bar' )
+					. '<div class="mf-section-1">'
 					. '<h3 class="in-block">Qux</h3></div>',
 			],
 
@@ -681,8 +680,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>A',
-				'<div class="mf-section-0"></div><h1 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Foo</h1><div class="mf-section-1">'
+				'<div class="mf-section-0"></div>'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
+					. '<div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2>A</div>',
 			],
 
@@ -694,8 +694,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				[ 'h1', 'h2' ],
 				'A<h1>Foo</h1><h2>Bar</h2>',
 				'<div class="mf-section-0"><p>A</p></div>'
-					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Foo</h1><div class="mf-section-1">'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
+					. '<div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2></div>',
 			],
 
@@ -704,11 +704,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>Baz<h1>Qux</h1>Quux',
 				'<div class="mf-section-0"></div>'
-					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
-					.'Foo</h1><div class="mf-section-1">'
+					. $this->makeSectionHeading( 'h1', 'Foo' )
+					. '<div class="mf-section-1">'
 					. '<h2 class="in-block">Bar</h2>Baz</div>'
-					. '<h1 class="section-heading">' . self::SECTION_INDICATOR
-					. 'Qux</h1><div class="mf-section-2">Quux</div>',
+					. $this->makeSectionHeading( 'h1', 'Qux' )
+					. '<div class="mf-section-2">Quux</div>',
 			],
 		];
 	}
@@ -793,8 +793,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mf->topHeadingTags = [ 'h2' ];
 		$mf->filterContent( false, false, false );
 		$expected = '<div class="mf-section-0"><p>Hello world.</p>'
-			. self::TOC . '</div><h2 class="section-heading">'
-			. self::SECTION_INDICATOR . 'Heading</h2><div class="mf-section-1">Text.</div>';
+			. self::TOC . '</div>'
+			. $this->makeSectionHeading( 'h2', 'Heading' )
+			. '<div class="mf-section-1">Text.</div>';
 		$this->assertEquals( $expected, $mf->getText() );
 	}
 
