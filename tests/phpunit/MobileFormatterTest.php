@@ -26,10 +26,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param string $sectionNumber
 	 * @param string $contentHtml
+	 * @param boolean $isReferenceSection whether the section contains references
 	 * @return string
 	 */
-	private function makeSectionHtml( $sectionNumber, $contentHtml='' ) {
-		return "<div class=\"mf-section-$sectionNumber\">$contentHtml</div>";
+	private function makeSectionHtml( $sectionNumber, $contentHtml='', $isReferenceSection=false ) {
+		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
+		return "<div class=\"mf-section-$sectionNumber\"$attrs>$contentHtml</div>";
 	}
 
 	/**
@@ -105,8 +107,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			wfMessage( 'mobile-frontend-references-list' )
 		);
 		$refSectionHtml = $this->makeSectionHeading( 'h2', 'references' )
-			. '<div class="mf-section-1" data-is-reference-section="1">'
-			. $refplaceholder . '</div>';
+			. $this->makeSectionHtml( 1, $refplaceholder, true );
 
 		return [
 			// # Lazy loading images
@@ -121,12 +122,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
 					. '<h2>heading 2</h2>abc',
-				'<div class="mf-section-0"><p>' . $originalImage . '</p></div>'
+				$this->makeSectionHtml( 0, '<p>' . $originalImage . '</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
-					. '<div class="mf-section-1"><p>text</p>'
-					. '</div>'
+					. $this->makeSectionHtml( 1, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 2' )
-					. '<div class="mf-section-2">abc</div>',
+					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
 			],
@@ -134,14 +134,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 					. '<h2>heading 2</h2>abc',
-				'<div class="mf-section-0"><p>text</p></div>'
+					$this->makeSectionHtml( 0, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
-					. '<div class="mf-section-1"><p>text</p>'
-					. $noscript
-					. $placeholder
-					. '</div>'
+					. $this->makeSectionHtml( 1,
+						'<p>text</p>' . $noscript . $placeholder
+					)
 					. $this->makeSectionHeading( 'h2', 'heading 2' )
-					. '<div class="mf-section-2">abc</div>',
+					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
 			],
@@ -149,14 +148,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $imageStyles
 					. '<h2>heading 2</h2>abc',
-				'<div class="mf-section-0"><p>text</p></div>'
+				$this->makeSectionHtml( 0, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
-					. '<div class="mf-section-1"><p>text</p>'
-					. $noscriptStyles
-					. $placeholderStyles
-					. '</div>'
+					. $this->makeSectionHtml( 1,
+						'<p>text</p>' . $noscriptStyles . $placeholderStyles
+					)
 					. $this->makeSectionHeading( 'h2', 'heading 2' )
-					. '<div class="mf-section-2">abc</div>',
+					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
 			],
@@ -164,17 +162,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
 				.'<h2>heading 2</h2>' . $originalImage,
-				'<div class="mf-section-0"><p>text</p></div>'
+				$this->makeSectionHtml( 0, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
-					. '<div class="mf-section-1"><p>text</p>'
-					. $noscript
-					. $placeholder
-					. '</div>'
+					. $this->makeSectionHtml( 1,
+						'<p>text</p>' . $noscript . $placeholder
+					)
 					. $this->makeSectionHeading( 'h2', 'heading 2' )
-					. '<div class="mf-section-2">'
-					. $noscript
-					. $placeholder
-					. '</div>',
+					. $this->makeSectionHtml( 2, $noscript . $placeholder ),
 				$enableSections,
 				false, false, true,
 			],
@@ -183,8 +177,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				$refText
 					. '<h2>references</h2>' . $refhtml,
-				'<div class="mf-section-0">' . $expectedReftext . '</div>'
-					. $refSectionHtml,
+				$this->makeSectionHtml( 0, $expectedReftext ) . $refSectionHtml,
 				$enableSections,
 				false, true, false
 			],
@@ -193,9 +186,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>T135923 <sup class="reference">    <a href="#cite-note-1">[1]</a></sup></p>'
 					. '<h2>references</h2>' . $refhtml,
-				'<div class="mf-section-0">'
-					. '<p>T135923 <sup class="reference">    <a href="' . $citeUrl
-					. '#cite-note-1">[1]</a></sup></p></div>'
+				$this->makeSectionHtml( 0, '<p>T135923 <sup class="reference">    '
+					. '<a href="' . $citeUrl
+					. '#cite-note-1">[1]</a></sup></p>'
+				)
 					. $refSectionHtml,
 				$enableSections,
 				false, true, false
@@ -204,9 +198,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<p>T135923 <sup class="reference"></sup></p>'
 					. '<h2>references</h2>' . $refhtml,
-				'<div class="mf-section-0">'
-					. '<p>T135923 <sup class="reference"></sup></p></div>'
-					. $refSectionHtml,
+				$this->makeSectionHtml( 0,
+					'<p>T135923 <sup class="reference"></sup></p>'
+				) . $refSectionHtml,
 				$enableSections,
 				false, true, false
 			],
@@ -250,12 +244,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span>'
 					. '<a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h2',
 						'<span class="mw-headline" id="Forty-niners">Forty-niners</span>'
 						. '<a class="edit-page" href="#editor/2">Edit</a>'
 					)
-					. '<div class="mf-section-1">' . $longLine . '</div>',
+					. $this->makeSectionHtml( 1, $longLine ),
 				$enableSections
 			],
 			// \n</h3> in headers
@@ -264,22 +258,21 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $longLine
 					. '<h4><span>h4</span></h4>'
 					. 'h4 text.',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h3', '<span>h3</span>' )
-					. '<div class="mf-section-1">'
-					. $longLine
-					. '<h4 class="in-block"><span>h4</span></h4>'
-					. 'h4 text.'
-					. '</div>',
+					. $this->makeSectionHtml( 1, $longLine
+						. '<h4 class="in-block"><span>h4</span></h4>'
+						. 'h4 text.'
+					),
 				$enableSections
 			],
 			// \n</h6> in headers
 			[
 				'<h6><span>h6</span></h6>'
 					. $longLine,
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h6', '<span>h6</span>' )
-					. '<div class="mf-section-1">' . $longLine . '</div>',
+					. $this->makeSectionHtml( 1, $longLine ),
 				$enableSections
 			],
 			// Bug 36670
@@ -287,12 +280,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>'
 					. 'History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 				. $this->makeSectionHeading( 'h2',
 					'<span class="mw-headline" id="History"><span id="Overview"></span>'
 						. 'History</span><a class="edit-page" href="#editor/2">Edit</a>'
 					)
-				. '<div class="mf-section-1">' . $longLine . '</div>',
+				. $this->makeSectionHtml( 1, $longLine ),
 				$enableSections
 			],
 
@@ -639,9 +632,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1"><h2 class="in-block">Bar</h2></div>',
+					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>' )
 			],
 
 			// The "in-block" class is added to a subheading
@@ -649,20 +642,18 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2 class="baz">Bar</h2>',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1">'
-					. '<h2 class="baz in-block">Bar</h2></div>',
+					. $this->makeSectionHtml( 1, '<h2 class="baz in-block">Bar</h2>' ),
 			],
 
 			// The "in-block" class is added to all subheadings.
 			[
 				[ 'h1', 'h2', 'h3' ],
 				'<h1>Foo</h1><h2>Bar</h2><h3>Qux</h3>',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1">'
-					. '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3></div>',
+					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3>' )
 			],
 
 			// The first heading found is the highest ranked
@@ -670,20 +661,18 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2', 'h3' ],
 				'<h2>Bar</h2><h3>Qux</h3>',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h2', 'Bar' )
-					. '<div class="mf-section-1">'
-					. '<h3 class="in-block">Qux</h3></div>',
+					. $this->makeSectionHtml( 1, '<h3 class="in-block">Qux</h3>' ),
 			],
 
 			// Unenclosed text is appended to the expandable container.
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>A',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1">'
-					. '<h2 class="in-block">Bar</h2>A</div>',
+					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>A' )
 			],
 
 			// Unencloded text that appears before the first
@@ -693,22 +682,20 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'A<h1>Foo</h1><h2>Bar</h2>',
-				'<div class="mf-section-0"><p>A</p></div>'
+				$this->makeSectionHtml( 0, '<p>A</p>' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1">'
-					. '<h2 class="in-block">Bar</h2></div>',
+					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>' ),
 			],
 
 			// Multiple headings are handled identically.
 			[
 				[ 'h1', 'h2' ],
 				'<h1>Foo</h1><h2>Bar</h2>Baz<h1>Qux</h1>Quux',
-				'<div class="mf-section-0"></div>'
+				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. '<div class="mf-section-1">'
-					. '<h2 class="in-block">Bar</h2>Baz</div>'
+					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>Baz' )
 					. $this->makeSectionHeading( 'h1', 'Qux' )
-					. '<div class="mf-section-2">Quux</div>',
+					. $this->makeSectionHtml( 2, 'Quux' ),
 			],
 		];
 	}
@@ -792,10 +779,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mf->enableExpandableSections();
 		$mf->topHeadingTags = [ 'h2' ];
 		$mf->filterContent( false, false, false );
-		$expected = '<div class="mf-section-0"><p>Hello world.</p>'
-			. self::TOC . '</div>'
+		$expected = $this->makeSectionHtml( 0, '<p>Hello world.</p>' . self::TOC )
 			. $this->makeSectionHeading( 'h2', 'Heading' )
-			. '<div class="mf-section-1">Text.</div>';
+			. $this->makeSectionHtml( 1, 'Text.' );
 		$this->assertEquals( $expected, $mf->getText() );
 	}
 
