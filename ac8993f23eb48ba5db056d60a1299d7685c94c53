@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_4fbd7dd0",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 610,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-01T20:56:05Z",
+      "side": 1,
+      "message": "Should we not also start moving to ID selectors in JS files, Page.js for example?",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_8faa6581",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-01T20:56:05Z",
+      "side": 1,
+      "message": "Any reason for keeping the class around in tests?",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
