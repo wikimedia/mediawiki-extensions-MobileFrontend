@@ -331,7 +331,6 @@
 	"apihelp-parse-param-mobileformat": "Tagasta parsimisväljund mobiiliseadmetele sobivas vormingus.",
 	"apihelp-parse-param-noimages": "Keela pildid mobiiliväljundis.",
 	"apihelp-parse-param-mainpage": "Rakenda transformatsioone mobiiliversiooni esilehel.",
-	"mobile-frontend-donate-button-label": "Anneta",
 	"mobile-frontend-meta-data-issues-categories": "Selle kategooria kohta",
 	"mobile-frontend-loading-message": "Laadimine…",
 	"mobile-frontend-panel-ok": "Sobib",

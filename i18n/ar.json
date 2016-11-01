@@ -369,7 +369,6 @@
 	"apihelp-parse-param-mobileformat": "أرجع خرج محلل بصيغة مناسبة للأجهزة المحمولة.",
 	"apihelp-parse-param-noimages": "تعطيل الصور في خرج الجوال.",
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
-	"mobile-frontend-donate-button-label": "تبرّع",
 	"mobile-frontend-meta-data-issues-categories": "عن هذا التصنيف",
 	"mobile-frontend-loading-message": "جاري التحميل...",
 	"mobile-frontend-console-recruit": "\\o/ مرحبا! هذا برنامج مفتوح المصدر ونحتاج لمتطوعين لمساعدتنا في بناء هذا الشيء، وجعله أفضل وإصلاح أي علل ربما تكون تراها في كونصول JavaScript هذا!\n\nيمكنك أن تجد سجلنا المتأخر @ https://phabricator.wikimedia.org/project/profile/67/",
