@@ -262,6 +262,7 @@
 	"mobile-frontend-placeholder-beta": "Phrase used to prompt the user to use a search interface for a mobile full screen search with identifier that it is in beta mode",
 	"mobile-frontend-privacy-link-text": "Custom version of \"Privacy policy\" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.\n{{Identical|Privacy}}",
 	"mobile-frontend-random-button": "This is the label of one of the buttons that appear if you click the wiki logo near the search box.\n\nThis buttons takes the user to a random page.\n{{Identical|Random}}",
+	"mobile-frontend-redirected-from": "Toast message informing the user that they were redirected from their original page. Parameters:\n* $1 - the original page title from which the user was redirected",
 	"mobile-frontend-references-citation": "The title of the reference drawer that opens up when a reference link is clicked.\n{{Identical|Citation}}",
 	"mobile-frontend-references-citation-error": "Error message body that shows when a citation fails to load via the API.",
 	"mobile-frontend-references-list": "Label for a link to the list of the citations in the article.",

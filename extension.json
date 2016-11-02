@@ -1583,7 +1583,8 @@
 				"mobile-frontend-last-modified-with-user-years",
 				"mobile-frontend-last-modified-with-user-just-now",
 				"mobile-frontend-cookies-required",
-				"mobile-frontend-console-recruit"
+				"mobile-frontend-console-recruit",
+				"mobile-frontend-redirected-from"
 			],
 			"scripts": [
 				"resources/skins.minerva.scripts/preInit.js",
