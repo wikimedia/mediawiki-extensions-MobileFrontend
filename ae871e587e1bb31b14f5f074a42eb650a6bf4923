@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_aaa3cc3e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2016-11-02T11:48:19Z",
+      "side": 0,
+      "message": "Can\u0027t remove this, actually. It\u0027s superfluous for English-language wikis, but not in other languages.",
+      "range": {
+        "startLine": 245,
+        "startChar": 19,
+        "endLine": 245,
+        "endChar": 33
+      },
+      "revId": "ae871e587e1bb31b14f5f074a42eb650a6bf4923",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
