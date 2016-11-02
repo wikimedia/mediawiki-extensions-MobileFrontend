@@ -342,7 +342,7 @@
 	"mobile-frontend-quick-lookup-no-results": "По запросу \"$1\" ничего не найдено.",
 	"mobile-frontend-quick-lookup-not-internal": "К сожалению, это не внутренняя вики-ссылка.",
 	"nearby": "Страницы на темы об объектах поблизости",
-	"tag-mobile_edit": "Правка с моб. устройства",
+	"tag-mobile_edit": "правка с мобильного устройства",
 	"tag-mobile_edit-description": "Правки с мобильного устройства (через сайт или приложение)",
 	"tag-mobile_web_edit": "правка из мобильной версии",
 	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта",
