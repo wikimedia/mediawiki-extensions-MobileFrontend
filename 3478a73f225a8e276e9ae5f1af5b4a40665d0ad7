@@ -16,6 +16,24 @@
       "revId": "3478a73f225a8e276e9ae5f1af5b4a40665d0ad7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_406ae7b2",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T14:47:26Z",
+      "side": 1,
+      "message": "On the task you commented saying we should only hide for JS users, so I left it visible for non-JS. Are you now suggesting the opposite, or am I misunderstanding?",
+      "parentUuid": "4eb4ebfb_dd8260a9",
+      "revId": "3478a73f225a8e276e9ae5f1af5b4a40665d0ad7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
