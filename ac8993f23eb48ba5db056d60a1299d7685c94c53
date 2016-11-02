@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_11f66fd4",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 610,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-02T20:14:21Z",
+      "side": 1,
+      "message": "Yes, but that can be done in a follow up.\n\nI\u0027m not too familiar with that code and wasn\u0027t completely able to grok why it\u0027s even needed in there. If I read correctly it only uses it to find the lead section - which could be done without any class or id selector. Do you know anything about the history of it?",
+      "parentUuid": "4eb4ebfb_4fbd7dd0",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_8faa6581",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-01T20:56:05Z",
       "side": 1,
       "message": "Any reason for keeping the class around in tests?",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_b1657bac",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-02T20:14:21Z",
+      "side": 1,
+      "message": "I\u0027m not sure. I\u0027m not too familiar with that code. We need to keep the class regardless for caching reasons, so I figured that could be deferred to later.",
+      "parentUuid": "4eb4ebfb_8faa6581",
       "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
