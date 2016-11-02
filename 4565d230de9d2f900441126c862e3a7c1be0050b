@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_600603d3",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-11-02T15:10:40Z",
+      "side": 1,
+      "message": "This makes the link of the redirectedfrom message unclickable, right? So, mobile users aren\u0027t able to easily go to the source page anymore :(",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 81
+      },
+      "revId": "4565d230de9d2f900441126c862e3a7c1be0050b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
