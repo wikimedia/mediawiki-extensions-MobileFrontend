@@ -87,6 +87,24 @@
       "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_91671f22",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-02T21:04:20Z",
+      "side": 1,
+      "message": "Pmiaza you are not wrong. I inferred Baha might be referring to the qunit test\u0027s and asking if I could remove it all together. Baha can you clarify?",
+      "parentUuid": "4eb4ebfb_d1cc878e",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
