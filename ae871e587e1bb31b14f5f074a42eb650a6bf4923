@@ -22,6 +22,30 @@
       "revId": "ae871e587e1bb31b14f5f074a42eb650a6bf4923",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_cc199080",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2016-11-02T21:17:14Z",
+      "side": 0,
+      "message": "frell you are right...",
+      "parentUuid": "4eb4ebfb_aaa3cc3e",
+      "range": {
+        "startLine": 245,
+        "startChar": 19,
+        "endLine": 245,
+        "endChar": 33
+      },
+      "revId": "ae871e587e1bb31b14f5f074a42eb650a6bf4923",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
