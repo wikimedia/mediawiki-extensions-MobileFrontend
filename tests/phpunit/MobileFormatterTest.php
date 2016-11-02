@@ -601,6 +601,23 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$enableSections, false, false, false, true,
 			],
 
+			[
+				// T149389: If the infobox is inside one or more containers, i.e. not an
+				// immediate child of the section container element, then
+				// MobileFormatter#moveFirstParagraphBeforeInfobox will trigger a "Not
+				// Found Error" warning.
+				// Do not touch infoboxes that are not immediate children of the lead section
+				'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
+				'<p>paragraph 1</p>',
+
+				$this->makeSectionHtml(
+					0,
+					'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
+					'<p>paragraph 1</p>'
+				),
+
+				$enableSections, false, false, false, true,
+			],
 		];
 	}
 
