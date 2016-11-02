@@ -1,0 +1,170 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_d2b7e6d1",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "This method doesn\u0027t return anything.",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_f200a26f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 571,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "Maybe replace with \"for collapsing\" since \"soon\" is no longer appropriate?",
+      "range": {
+        "startLine": 571,
+        "startChar": 33,
+        "endLine": 571,
+        "endChar": 67
+      },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_b239fa40",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "This may be more readable as the following, although I\u0027m fine if you decide to leave it as-is:\n\n    $sectionClass \u003d \u0027mf-section-\u0027 . $sectionNumber;\n    if ( $sectionNumber \u003e 0 \u0026\u0026 $this-\u003escriptsEnabled ) {\n        $sectionClass \u003d \u0027collapsible-block \u0027 . $sectionClass;\n    }",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_f21662ab",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 652,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "Missing space before concatenation operator (I\u0027m actually surprised Jenkins didn\u0027t pick this up).",
+      "range": {
+        "startLine": 652,
+        "startChar": 67,
+        "endLine": 652,
+        "endChar": 68
+      },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_522876dd",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "Do we normally collapse these lines into one if there are no rules added that don\u0027t apply to both?",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 21
+      },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_928cbe00",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "I believe this half of the condition is redundant. `window.mfTempOpenSection` should return either `function` or `undefined`.",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_92639e3b",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "Should probably have spaces around this, but since other function signatures in this file are missing them, I\u0027d be ok with leaving it for a later hygiene patch.",
+      "range": {
+        "startLine": 20,
+        "startChar": 74,
+        "endLine": 20,
+        "endChar": 75
+      },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_92d27ed4",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T22:55:06Z",
+      "side": 1,
+      "message": "Should probably move this line with the other declarations at the top of the function.",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
