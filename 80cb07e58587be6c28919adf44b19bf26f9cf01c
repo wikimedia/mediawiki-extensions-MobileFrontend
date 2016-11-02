@@ -22,6 +22,24 @@
       "revId": "80cb07e58587be6c28919adf44b19bf26f9cf01c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_6a75c491",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-02T09:22:00Z",
+      "side": 1,
+      "message": "The previous sibling is always the heading. This is currently needed to style the header correctly.\nCould you elaborate on why you feel this is -1 worthy? I can add a comment.",
+      "parentUuid": "4eb4ebfb_1556625f",
+      "revId": "80cb07e58587be6c28919adf44b19bf26f9cf01c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
