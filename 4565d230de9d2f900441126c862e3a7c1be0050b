@@ -22,6 +22,30 @@
       "revId": "4565d230de9d2f900441126c862e3a7c1be0050b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_40af8791",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-02T15:17:12Z",
+      "side": 1,
+      "message": "Correct. I believe this was a design decision based on use cases. If you feel strongly this should remain, feel free to comment on the associated Phab task and I\u0027m sure Nirzar will be able to provide more detailed information.",
+      "parentUuid": "4eb4ebfb_600603d3",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 81
+      },
+      "revId": "4565d230de9d2f900441126c862e3a7c1be0050b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
