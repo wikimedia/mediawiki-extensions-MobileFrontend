@@ -69,6 +69,24 @@
       "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_d1cc878e",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-02T20:19:58Z",
+      "side": 1,
+      "message": "Correct me if I\u0027m wrong but this is a test case and we\u0027re doing a dump exact string match assertion. If we remove class from here all unit test will fail.",
+      "parentUuid": "4eb4ebfb_b1657bac",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
