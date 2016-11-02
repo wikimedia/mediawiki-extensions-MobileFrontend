@@ -240,7 +240,8 @@ class SkinMinerva extends SkinTemplate {
 	 * @return string
 	 */
 	public function getPageClasses( $title ) {
-		$className = $this->getMode();
+		$className = parent::getPageClasses( $title );
+		$className .= ' ' . $this->getMode();
 		if ( $title->isMainPage() ) {
 			$className .= ' page-Main_Page ';
 		} elseif ( $title->isSpecialPage() ) {
