@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_46aaf817",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T15:19:43Z",
+      "side": 1,
+      "message": "Thanks for moving this here where it is more useful.\n\nIs this explained in a task or wiki page somewhere? This got me curious and is too vague for me to fully understand.",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_86b7e080",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T15:19:43Z",
+      "side": 1,
+      "message": "It\u0027s worth noting the inconsistency with MobileFrontend.skin.hooks.php \nShould we move this to Skins/Hooks.php beforehand / at the same time for consistency?",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_0683d09c",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T15:19:43Z",
+      "side": 1,
+      "message": "I must say, I found it a little confusing to find hooks in 2 different places, especially given MobileFrontend.skins.hooks.php does not have any methods that are directly called from extension.json\n\nCould this and onThumbnailBeforeProduceHTML not live inside MobileFrontend.hooks.php ? What are the benefits of mixing these methods with the testable methods?",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
