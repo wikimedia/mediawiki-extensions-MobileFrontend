@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_4128a2dd",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 610,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-03T17:02:39Z",
+      "side": 1,
+      "message": "I think section classes were introduced when we worked on lazy loading of images: I0675be5dcaab71e7693090e5c7114fe5c8339586",
+      "parentUuid": "4eb4ebfb_11f66fd4",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_8faa6581",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 7
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Pmiaza you are not wrong. I inferred Baha might be referring to the qunit test\u0027s and asking if I could remove it all together. Baha can you clarify?",
       "parentUuid": "4eb4ebfb_d1cc878e",
+      "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_61727e12",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-03T17:02:39Z",
+      "side": 1,
+      "message": "Silly initial question as pointed out by Piotr.",
+      "parentUuid": "4eb4ebfb_91671f22",
       "revId": "ac8993f23eb48ba5db056d60a1299d7685c94c53",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
