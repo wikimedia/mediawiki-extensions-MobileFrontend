@@ -245,7 +245,7 @@
 	"mobile-frontend-search-content": "Procurar nas páginas",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' para ver se esta frase aparece em qualquer lugar.",
 	"mobile-frontend-search-no-results": "Nenhuma página com este título.",
-	"mobile-frontend-search-submit": "Ir",
+	"mobile-frontend-search-submit": "Continuar",
 	"mobile-frontend-settings-images-explain": "Carregar todo o conteúdo de imagem que apareça na página.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} está disponível em $1 {{PLURAL:$1|idioma|idiomas}}. Abaixo, estão listadas todas as versões disponíveis",
