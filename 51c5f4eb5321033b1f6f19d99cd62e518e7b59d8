@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_7bc90dae",
+        "filename": "resources/skins.minerva.scripts/preInit.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-03T11:46:52Z",
+      "side": 1,
+      "message": "Perhaps a neater solution would be to use the wgRedirectedFrom config variable and a message, i.e.\n\n    var redirectFromTitle \u003d mw.config.get( \u0027wgRedirectedFrom\u0027 );\n\n    if ( redirectedFrom ) {\n      toast.show( mw.msg( \u0027mobile-frontend-redirect-from\u0027, mw.config.get( \u0027wgRedirectedFrom\u0027 ) );\n    }",
+      "revId": "51c5f4eb5321033b1f6f19d99cd62e518e7b59d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
