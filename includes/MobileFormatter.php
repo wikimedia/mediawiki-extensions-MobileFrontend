@@ -531,8 +531,7 @@ class MobileFormatter extends HtmlFormatter {
 		$firstHeading = reset( $headings );
 
 		$sectionNumber = 0;
-		$sectionBody = $doc->createElement( 'div' );
-		$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
+		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber );
 
 		// Mark the top level headings which will become collapsible soon.
 		foreach ( $headings as $heading ) {
@@ -576,9 +575,7 @@ class MobileFormatter extends HtmlFormatter {
 					}
 				}
 				$sectionNumber += 1;
-				$sectionBody = $doc->createElement( 'div' );
-				$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
-
+				$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber );
 				continue;
 			}
 
@@ -598,6 +595,23 @@ class MobileFormatter extends HtmlFormatter {
 		}
 		// Append the last section body.
 		$body->appendChild( $sectionBody );
+	}
+
+	/**
+	 * Creates a Section body element
+	 *
+	 * @param DOMDocument $doc
+	 * @param int $sectionNumber
+	 *
+	 * @return DOMElement
+	 */
+	private function createSectionBodyElement( DOMDocument $doc, $sectionNumber ) {
+		// FIXME: The class `/mf\-section\-[0-9]+/` is kept for caching reasons
+		// but given class is unique usage is discouraged. [T126825]
+		$sectionBody = $doc->createElement( 'div' );
+		$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
+		$sectionBody->setAttribute( 'id', 'mf-section-' . $sectionNumber );
+		return $sectionBody;
 	}
 
 	/**

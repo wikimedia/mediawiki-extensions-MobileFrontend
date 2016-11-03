@@ -31,7 +31,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	private function makeSectionHtml( $sectionNumber, $contentHtml='', $isReferenceSection=false ) {
 		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
-		return "<div class=\"mf-section-$sectionNumber\"$attrs>$contentHtml</div>";
+		return "<div class=\"mf-section-$sectionNumber\" id=\"mf-section-$sectionNumber\""
+			. "$attrs>$contentHtml</div>";
 	}
 
 	/**
