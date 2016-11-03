@@ -236,6 +236,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_fb1cfd7d",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-03T13:10:44Z",
+      "side": 1,
+      "message": "Cool, I figured there was a good reason. Thanks for the comment.",
+      "parentUuid": "4eb4ebfb_5b0d3138",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_92639e3b",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 7
@@ -271,6 +289,24 @@
       "side": 1,
       "message": "I\u0027ll submit a followup. Is there a phpcs rule we can use to enforce this? Linting problems annoy the hell out of me.\nhttps://phabricator.wikimedia.org/T149887",
       "parentUuid": "4eb4ebfb_92639e3b",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_3b34a5f0",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-11-03T13:10:44Z",
+      "side": 1,
+      "message": "I\u0027m not too familiar with phpcs rules, sorry. Thanks for creating the task! Part of my professional goal this quarter includes making the extension more consistent for volunteers, so I\u0027ll probably end up looking into this.",
+      "parentUuid": "4eb4ebfb_3b1a6574",
       "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
