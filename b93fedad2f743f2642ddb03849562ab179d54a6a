@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_66f614d6",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2016-11-03T14:12:38Z",
+      "side": 1,
+      "message": "This should be numParams(), so that numbers are transformed.",
+      "revId": "b93fedad2f743f2642ddb03849562ab179d54a6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
