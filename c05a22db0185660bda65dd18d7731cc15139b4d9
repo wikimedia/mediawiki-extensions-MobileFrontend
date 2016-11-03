@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_782a3391",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_d2b7e6d1",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_f200a26f",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 7
@@ -42,6 +60,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_f81c037e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 571,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_f200a26f",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_b239fa40",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 7
@@ -53,6 +89,24 @@
       "writtenOn": "2016-11-02T22:55:06Z",
       "side": 1,
       "message": "This may be more readable as the following, although I\u0027m fine if you decide to leave it as-is:\n\n    $sectionClass \u003d \u0027mf-section-\u0027 . $sectionNumber;\n    if ( $sectionNumber \u003e 0 \u0026\u0026 $this-\u003escriptsEnabled ) {\n        $sectionClass \u003d \u0027collapsible-block \u0027 . $sectionClass;\n    }",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_580e573f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_b239fa40",
       "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -82,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_b8167b58",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 652,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_f21662ab",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_522876dd",
         "filename": "resources/skins.minerva.content.styles/main.less",
         "patchSetId": 7
@@ -99,6 +171,24 @@
         "endLine": 48,
         "endChar": 21
       },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_7b10ed53",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "There are many benefits of using this style, readability and changeability being two key ones.\n\nSee also \"Nicer diffs/Dead code elimination\" on the LESS RFC:\nhttps://www.mediawiki.org/wiki/Requests_for_comment/LESS#Case_study:_LESS_in_MobileFrontend",
+      "parentUuid": "4eb4ebfb_522876dd",
       "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -128,6 +218,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_5b0d3138",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "... unless for some reason this code is run on another skin (which is possible!) OR this JS is run on cached HTML. I\u0027ll clarify in a comment.",
+      "parentUuid": "4eb4ebfb_928cbe00",
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_92639e3b",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 7
@@ -145,6 +253,24 @@
         "endLine": 20,
         "endChar": 75
       },
+      "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_3b1a6574",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-03T10:46:54Z",
+      "side": 1,
+      "message": "I\u0027ll submit a followup. Is there a phpcs rule we can use to enforce this? Linting problems annoy the hell out of me.\nhttps://phabricator.wikimedia.org/T149887",
+      "parentUuid": "4eb4ebfb_92639e3b",
       "revId": "c05a22db0185660bda65dd18d7731cc15139b4d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
