@@ -2,6 +2,10 @@ MEDIAWIKI_LOAD_URL ?= http://localhost:8080/w/load.php
 ifndef MW_INSTALL_PATH
 $(error MW_INSTALL_PATH is not set. Please set it to your root mediawiki installation.)
 endif
+GRUNT=${MW_INSTALL_PATH}/extensions/MobileFrontend/node_modules/grunt/bin/grunt
+WIKI=wiki
+PROJECT=MobileFrontend
+
 
 # From https://gist.github.com/prwhite/8168133
 help:					## Show this help message
@@ -38,14 +42,17 @@ docs: jsduck phpdoc			## Build the styleguide, JavaScript, and PHP documentation
 nodecheck:
 	@dev-scripts/nodecheck.sh
 
+mwnodecheck:
+	@dev-scripts/nodecheck.sh ${MW_INSTALL_PATH}
+
 jscs: nodecheck			## Check the JavaScript coding style
-	@grunt jscs
+	@${GRUNT} jscs
 
 jshinttests: nodecheck			## Lint the JS tests
-	@grunt jshint:tests
+	@${GRUNT} jshint:tests
 
 jshint: nodecheck 	## Lint the JavaScript files
-	@grunt jshint
+	@${GRUNT} jshint
 
 dependencies: nodecheck kssnodecheck phpcheck remotes
 
@@ -56,10 +63,10 @@ phplint: phpcheck			## Lint the PHP files
 	@php composer.phar test
 
 phpunit:				## Run the PHPUnit test suite
-	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --group MobileFrontend ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --wiki ${WIKI} --group ${PROJECT} ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
 
-qunit:                 ## Run the QUnit test suite
-	cd ${MW_INSTALL_PATH} && grunt qunit
+qunit: mwnodecheck		## Run the QUnit test suite
+	cd ${MW_INSTALL_PATH} && node_modules/grunt/bin/grunt qunit
 
 tests: jshint phplint phpunit qunit	## Run the PHPUnit test suite after linting
 
