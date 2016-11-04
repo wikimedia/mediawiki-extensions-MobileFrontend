@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_0d252803",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-04T11:41:17Z",
+      "side": 1,
+      "message": "The comment was introduced by a change for T133496.\n\nI think the comment makes more sense against $wgMFStripResponsiveImages. I\u0027ll move it.",
+      "parentUuid": "4eb4ebfb_46aaf817",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_86b7e080",
         "filename": "includes/ResponsiveImages/Hooks.php",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_4d59f08f",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-04T11:41:17Z",
+      "side": 1,
+      "message": "None of the methods in that file are hook handlers. I wonder if that file is itself inconsistent with MobileFrontend.hooks.php.",
+      "parentUuid": "4eb4ebfb_86b7e080",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_0683d09c",
         "filename": "includes/ResponsiveImages/Hooks.php",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2016-11-03T15:19:43Z",
       "side": 1,
       "message": "I must say, I found it a little confusing to find hooks in 2 different places, especially given MobileFrontend.skins.hooks.php does not have any methods that are directly called from extension.json\n\nCould this and onThumbnailBeforeProduceHTML not live inside MobileFrontend.hooks.php ? What are the benefits of mixing these methods with the testable methods?",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_edf55c4d",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-04T11:41:17Z",
+      "side": 1,
+      "message": "Registering hook handlers in extension.json requires that they can be invoked statically, which isn\u0027t conducive to writing hook handlers that are easily isolated (via Dependency Injection) and testable (think of all the calls to MobileContext::singleton).\n\nConsider how many dependencies would have to be injected via the constructor (or setters, if you\u0027re into that), if we were to keep all hook handlers on one class and take this same approach.\n\nI\u0027ve chosen to extract these two hook handlers as they are closely related, require the same state to function, and because it makes MobileFrontendHooks simpler.\n\nI\u0027m not sure if I can assuage your confusion. I\u0027d remind you can //always// find out where a hook handler lives by reading extension.json.\n\n---\n\nCertainly, we could move the static methods to MobileFrontendHooks as it would avoid any confusion and make this class simpler. This class can change for three reasons so it violates the Single Responsibility Principle, for example. I consider this a reasonable tradeoff as everything about how to deal with these two hooks is in this file and has been tested in isolation.\n\nI\u0027m not sure that this convinces you. I\u0027ll certainly note that having hook handlers in multiple files might cause confusion.",
+      "parentUuid": "4eb4ebfb_0683d09c",
       "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
