@@ -141,7 +141,7 @@
 	"mobile-frontend-editor-uploadenable": "Shown when try to edit a new file page.",
 	"mobile-frontend-editor-viewing-source-page": "A heading saying which page's source code is being viewed. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
 	"mobile-frontend-editor-wait": "Text that displays while a page edit is being saved.",
-	"mobile-frontend-editor-redlink-leave": "Used as a message for a link, that the user doesn't want to edit a page, that does not exist yet.\n{{Identical|No thanks}}",
+	"mobile-frontend-editor-redlink-leave": "Used as a label for a button which the user can click to avoid editing a page which does not exist yet (red link): the question/alternative button is {{msg-mw|mobile-frontend-editor-redlink-create}}\n----\n{{Identical|No thanks}}",
 	"mobile-frontend-editor-redlink-explain": "Question for the user, if he want to edit a page, which link he clicked and that does not exist yet, or not.",
 	"mobile-frontend-editor-redlink-create": "Label for a create page button.\n{{Identical|Create page}}",
 	"mobile-frontend-enable-images": "Unused at this time.\n\nSee also:\n* {{msg-mw|Mobile-frontend-disable-images}}",
