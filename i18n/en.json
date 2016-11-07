@@ -262,6 +262,7 @@
 	"mobile-frontend-placeholder-beta": "Search {{SITENAME}} (Beta)",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-random-button": "Random",
+	"mobile-frontend-redirected-from": "Redirected from \"$1\"",
 	"mobile-frontend-references-citation": "Citation",
 	"mobile-frontend-references-citation-error": "An error occurred and it was not possible to load this citation.",
 	"mobile-frontend-references-list": "View full list of citations",

@@ -13,6 +13,7 @@
 		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
 		mainMenu = M.require( 'skins.minerva.scripts.top/mainMenu' ),
+		toast = M.require( 'mobile.toast/toast' ),
 		Skin = M.require( 'mobile.startup/Skin' ),
 		ReferencesMobileViewGateway = M.require(
 			'mobile.references.gateway/ReferencesMobileViewGateway'
@@ -23,10 +24,15 @@
 			page: getCurrentPage(),
 			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
 			mainMenu: mainMenu
-		};
+		},
+		redirectedFromTitle = mw.config.get( 'wgRedirectedFrom' );
 
 	skin = new Skin( skinData );
 	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
+
+	if ( redirectedFromTitle ) {
+		toast.show( mw.msg( 'mobile-frontend-redirected-from', redirectedFromTitle ) );
+	}
 
 	/**
 	 * Given 2 functions, it returns a function that will run both with it's
