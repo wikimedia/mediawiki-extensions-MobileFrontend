@@ -10,6 +10,12 @@ use HtmlFormatter\HtmlFormatter;
  */
 class MobileFormatter extends HtmlFormatter {
 	/**
+	 * Whether scripts can be added in the output.
+	 * @var boolean $scriptsEnabled
+	 */
+	private $scriptsEnabled = true;
+
+	/**
 	 * The current revision id of the Title being worked on
 	 * @var Integer $revId
 	 */
@@ -63,6 +69,12 @@ class MobileFormatter extends HtmlFormatter {
 			->getMFConfig()->get( 'MFMobileFormatterHeadings' );
 	}
 
+	/**
+	 * Disables the generation of script tags in output HTML.
+	 */
+	public function disableScripts() {
+		$this->scriptsEnabled = false;
+	}
 	/**
 	 * Creates and returns a MobileFormatter
 	 *
@@ -421,9 +433,8 @@ class MobileFormatter extends HtmlFormatter {
 		if ( $this->mainPage ) {
 			$element = $this->parseMainPage( $this->getDoc() );
 		}
-		$html = parent::getText( $element );
 
-		return $html;
+		return parent::getText( $element );
 	}
 
 	/**
@@ -533,16 +544,23 @@ class MobileFormatter extends HtmlFormatter {
 		$sectionNumber = 0;
 		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber );
 
-		// Mark the top level headings which will become collapsible soon.
+		// Mark the top level headings which could control collapsing
 		foreach ( $headings as $heading ) {
+			$sectionNumber += 1;
 			$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
 			$heading->setAttribute( 'class', $className . 'section-heading' );
+			if ( $this->scriptsEnabled ) {
+				$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
+			}
+
 			// prepend indicator
 			$indicator = $doc->createElement( 'div' );
 			$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
 			$heading->insertBefore( $indicator, $heading->firstChild );
 		}
 
+		// reset section number
+		$sectionNumber = 0;
 		while ( $sibling ) {
 			$node = $sibling;
 			$sibling = $sibling->nextSibling;
@@ -606,10 +624,17 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return DOMElement
 	 */
 	private function createSectionBodyElement( DOMDocument $doc, $sectionNumber ) {
+		$sectionClass = 'mf-section-' . $sectionNumber;
+		if ( $sectionNumber > 0 && $this->scriptsEnabled ) {
+			// TODO: Probably good to rename this to the more generic 'section'.
+			// We have no idea how the skin will use this.
+			$sectionClass .= ' collapsible-block';
+		}
+
 		// FIXME: The class `/mf\-section\-[0-9]+/` is kept for caching reasons
 		// but given class is unique usage is discouraged. [T126825]
 		$sectionBody = $doc->createElement( 'div' );
-		$sectionBody->setAttribute( 'class', 'mf-section-' . $sectionNumber );
+		$sectionBody->setAttribute( 'class', $sectionClass );
 		$sectionBody->setAttribute( 'id', 'mf-section-' . $sectionNumber );
 		return $sectionBody;
 	}

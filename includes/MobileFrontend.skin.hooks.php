@@ -2,6 +2,28 @@
 
 class MobileFrontendSkinHooks {
 	/**
+	 * Make it possible to open sections while JavaScript is still loading.
+	 *
+	 * @return string The JavaScript code to add event handlers to the skin
+	 */
+	public static function interimTogglingSupport() {
+		$js = <<<JAVASCRIPT
+function mfTempOpenSection( id ) {
+	var block = document.getElementById( "mf-section-" + id );
+	block.className += " open-block";
+	// The previous sibling to the content block is guaranteed to be the
+	// associated heading due to mobileformatter. We need to add the same
+	// class to flip the collapse arrow icon.
+	// <h[1-6]>heading</h[1-6]><div id="mf-section-[1-9]+"></div>
+	block.previousSibling.className += " open-block";
+}
+JAVASCRIPT;
+		return Html::inlineScript(
+			ResourceLoader::filter( 'minify-js', $js )
+		);
+	}
+
+	/**
 	 * Fallback for Grade C to load lazyload image placeholders.
 	 *
 	 * Note: This will add a single repaint for Grade C browsers as

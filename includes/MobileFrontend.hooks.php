@@ -177,6 +177,7 @@ class MobileFrontendHooks {
 	 *
 	 * Applies MobileFormatter to mobile viewed content
 	 * Also enables Related Articles in the footer in the beta mode.
+	 * Adds inline script to allow opening of sections while JS is still loading
 	 *
 	 * @param OutputPage $out
 	 * @param string $text the HTML to be wrapped inside the #mw-content-text element
@@ -186,6 +187,8 @@ class MobileFrontendHooks {
 		global $wgRelatedArticlesFooterBlacklistedSkins;
 
 		$context = MobileContext::singleton();
+		$title = $context->getTitle();
+
 		// Perform a few extra changes if we are in mobile mode
 		if ( $context->shouldDisplayMobileView() ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text, $context->isBetaGroupMember() );
@@ -206,6 +209,9 @@ class MobileFrontendHooks {
 			}
 		}
 
+		if ( !$title->isMainPage() && !$title->isSpecialPage() ) {
+			$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+		}
 		return true;
 	}
 

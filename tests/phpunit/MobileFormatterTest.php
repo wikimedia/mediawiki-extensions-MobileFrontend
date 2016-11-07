@@ -14,11 +14,14 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param string $heading
 	 * @param string $innerHtml of the heading element
+	 * @param integer [$sectionNumber] heading corresponds to
 	 * @return string
 	 */
-	private function makeSectionHeading( $heading, $innerHtml ) {
-		return "<$heading class=\"section-heading\">" . self::SECTION_INDICATOR .
-			"$innerHtml</$heading>";
+	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber=1 ) {
+		return "<$heading class=\"section-heading\""
+			. " onclick=\"javascript:mfTempOpenSection($sectionNumber)\">"
+			. self::SECTION_INDICATOR
+			. "$innerHtml</$heading>";
 	}
 
 	/**
@@ -31,7 +34,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	private function makeSectionHtml( $sectionNumber, $contentHtml='', $isReferenceSection=false ) {
 		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
-		return "<div class=\"mf-section-$sectionNumber\" id=\"mf-section-$sectionNumber\""
+		$className = "mf-section-$sectionNumber";
+
+		if ( $sectionNumber > 0 ) {
+			$className = $className . ' collapsible-block';
+		}
+
+		return "<div class=\"$className\" id=\"mf-section-$sectionNumber\""
 			. "$attrs>$contentHtml</div>";
 	}
 
@@ -126,7 +135,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$this->makeSectionHtml( 0, '<p>' . $originalImage . '</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. $this->makeSectionHtml( 1, '<p>text</p>' )
-					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
@@ -140,7 +149,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHtml( 1,
 						'<p>text</p>' . $noscript . $placeholder
 					)
-					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
@@ -154,7 +163,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHtml( 1,
 						'<p>text</p>' . $noscriptStyles . $placeholderStyles
 					)
-					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
 				false, false, true,
@@ -168,7 +177,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHtml( 1,
 						'<p>text</p>' . $noscript . $placeholder
 					)
-					. $this->makeSectionHeading( 'h2', 'heading 2' )
+					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, $noscript . $placeholder ),
 				$enableSections,
 				false, false, true,
@@ -712,7 +721,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
 					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>Baz' )
-					. $this->makeSectionHeading( 'h1', 'Qux' )
+					. $this->makeSectionHeading( 'h1', 'Qux', 2 )
 					. $this->makeSectionHtml( 2, 'Quux' ),
 			],
 		];
