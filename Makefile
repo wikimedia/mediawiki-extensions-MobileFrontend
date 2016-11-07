@@ -49,7 +49,7 @@ jscs: nodecheck			## Check the JavaScript coding style
 	@${GRUNT} jscs
 
 jshinttests: nodecheck			## Lint the JS tests
-	@${GRUNT} jshint:tests
+	@${GRUNT} jshint:test
 
 jshint: nodecheck 	## Lint the JavaScript files
 	@${GRUNT} jshint
