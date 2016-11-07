@@ -37,7 +37,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$className = "mf-section-$sectionNumber";
 
 		if ( $sectionNumber > 0 ) {
-			$className = $className . ' collapsible-block';
+			$className = $className . ' ' . MobileFormatter::STYLE_COLLAPSIBLE_SECTION_CLASS;
 		}
 
 		return "<div class=\"$className\" id=\"mf-section-$sectionNumber\""
