@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_915263e1",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-07T19:18:16Z",
+      "side": 1,
+      "message": "The name is also pretty generic, now it\u0027s only disabling the JS for CollapsibleSections. There are no other scripts.",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_d1e22b2e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-07T19:18:16Z",
+      "side": 1,
+      "message": "I don\u0027t think using $sectionNumber variable is good here. Then setting it to 0 again creates more confusion - at least to me.\n\nI would extract whole foreach($headings as $heading) into separate private function called `preapreSectionHeadings` and keep all headings related stuff there.",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_51d5fb45",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-07T19:18:16Z",
+      "side": 1,
+      "message": "instead of doing some dark magic with checking, pass \"$collapsbile\" as an extra parameter. On line 545 when creating first section you always pass it as false, then lower in the while($sibling){} loop you pass `$this-\u003escriptsEnabled`.\n\nLess logic, more readable code",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_515bbbfd",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-07T19:18:16Z",
+      "side": 1,
+      "message": "we use same strings in some places (here and in tests). Would be nice to create consts and use those consts everywhere instead of typing it in all places",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_b1c43f95",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-07T19:18:16Z",
+      "side": 1,
+      "message": "do we really need that JS comment attached to every single element?",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
