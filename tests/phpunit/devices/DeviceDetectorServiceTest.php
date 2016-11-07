@@ -19,6 +19,9 @@ class StubDeviceDetector implements DeviceDetector {
 	}
 }
 
+/**
+ * @group MobileFrontend
+ */
 class DeviceDetectorServiceTest extends MediaWikiTestCase {
 	protected function setUp() {
 		parent::setUp();

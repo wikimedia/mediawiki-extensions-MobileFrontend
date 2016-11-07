@@ -4,6 +4,9 @@ namespace Tests\MobileFrontend;
 
 use MobileFrontend\MenuBuilder;
 
+/**
+ * @group MobileFrontend
+ */
 class MenuTest extends \PHPUnit_Framework_TestCase {
 	private $homeComponent = [
 		'text' => 'Home',

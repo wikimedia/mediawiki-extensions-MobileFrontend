@@ -20,6 +20,9 @@ class TestSkinMinerva extends SkinMinerva {
 	}
 }
 
+/**
+ * @group MobileFrontend
+ */
 class SkinMinervaTest extends MediaWikiTestCase {
 
 	public function testAddToBodyAttributes() {

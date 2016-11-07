@@ -6,6 +6,9 @@ use MediaWikiTestCase;
 use WebRequest;
 use MobileFrontend\Devices\AMFDeviceDetector;
 
+/**
+ * @group MobileFrontend
+ */
 class AMFDeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
