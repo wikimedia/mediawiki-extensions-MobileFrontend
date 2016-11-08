@@ -63,7 +63,7 @@ phplint: phpcheck			## Lint the PHP files
 	@php composer.phar test
 
 phpunit:				## Run the PHPUnit test suite
-	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --wiki ${WIKI} --group ${PROJECT} ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --wiki ${WIKI} --group ${PROJECT}
 
 qunit: mwnodecheck		## Run the QUnit test suite
 	cd ${MW_INSTALL_PATH} && node_modules/grunt/bin/grunt qunit

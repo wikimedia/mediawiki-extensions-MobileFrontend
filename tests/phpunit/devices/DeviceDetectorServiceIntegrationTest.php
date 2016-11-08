@@ -12,6 +12,7 @@ use MobileFrontend\Devices\DeviceDetectorService;
  * `MobileFrontend\Devices\DeviceDetectorService`'s behaviour with no stubbed
  * dependencies.
  *
+ * @group MobileFrontend
  * @group integration
  */
 class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {

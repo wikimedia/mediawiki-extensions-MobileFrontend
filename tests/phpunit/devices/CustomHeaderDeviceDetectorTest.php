@@ -7,6 +7,9 @@ use FauxRequest;
 use HashConfig;
 use MobileFrontend\Devices\CustomHeaderDeviceDetector;
 
+/**
+ * @group MobileFrontend
+ */
 class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 
 	/**

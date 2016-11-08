@@ -10,6 +10,7 @@ use MobileContext;
  * `MobileContext#shouldDisplayMobileView` and `#shoudDisplayMobileViewInternal`
  * with no stubbed dependencies.
  *
+ * @group MobileFrontend
  * @group integration
  */
 class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestCase {

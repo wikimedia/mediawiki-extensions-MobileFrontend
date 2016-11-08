@@ -7,6 +7,9 @@ use FauxRequest;
 use GlobalVarConfig;
 use MobileFrontend\Devices\UADeviceDetector;
 
+/**
+ * @group MobileFrontend
+ */
 class UADeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
