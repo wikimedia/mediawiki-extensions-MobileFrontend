@@ -12,11 +12,11 @@
 			"Nsaa",
 			"Laaknor",
 			"Kingu",
-			"Tarjeimo"
+			"Tarjeimo",
+			"Jon Harald Søby"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
-	"action-mf-uploadbutton": "bruk det forenklede opplastingsystemet for mobil",
 	"beta-feature-minerva": "Bruk mobilt utseende ({{int:skinname-minerva}}) på stasjonære maskiner",
 	"beta-feature-minerva-description": "Gjør utseendet som brukes på mobilenheter tilgjengelig som et valgbart utseende under fanen «{{int:prefs-rendering}}» i innstillingene.",
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",
@@ -238,6 +238,7 @@
 	"mobile-frontend-placeholder-beta": "Søk i {{SITENAME}} (beta)",
 	"mobile-frontend-privacy-link-text": "Personvern",
 	"mobile-frontend-random-button": "Tilfeldig artikkel",
+	"mobile-frontend-redirected-from": "Omdirigert fra «$1»",
 	"mobile-frontend-references-citation": "Sitering",
 	"mobile-frontend-references-citation-error": "Det oppsto en feil og referansen kunne ikke lastes.",
 	"mobile-frontend-references-list": "Vis fullstendig liste over siteringer",
@@ -326,7 +327,6 @@
 	"mobile-frontend-quick-lookup-no-results": "Søket etter «$1» ga ingen treff.",
 	"mobile-frontend-quick-lookup-not-internal": "Beklager, dette er ikke en lenke til denne wikien.",
 	"nearby": "Sider om temaer nær deg",
-	"right-mf-uploadbutton": "Bruke opplastingsknappen på mobilsider",
 	"tag-mobile_edit": "Mobilredigering",
 	"tag-mobile_edit-description": "Redigeringer gjort fra mobil (web eller app)",
 	"tag-mobile_web_edit": "Mobilwebredigering",
@@ -358,7 +358,6 @@
 	"apihelp-parse-param-mobileformat": "Returner parserresultat i et format som passer for mobile enheter.",
 	"apihelp-parse-param-noimages": "Slå av bilder i mobilresultater.",
 	"apihelp-parse-param-mainpage": "Bruk forsideomgjøring for mobil.",
-	"mobile-frontend-donate-button-label": "Doner",
 	"mobile-frontend-meta-data-issues-categories": "Om denne kategorien",
 	"mobile-frontend-loading-message": "Laster…",
 	"mobile-frontend-console-recruit": "\\o/ Hei du! Dette er åpen kildekode-programvare som du kan være med å bygge – og du kan bli med å fikse feil du kommer over i JavaScript-konsollen!\n\nDu finner backloggen vår @ https://phabricator.wikimedia.org/project/profile/67/",

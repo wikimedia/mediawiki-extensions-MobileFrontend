@@ -1,10 +1,22 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Irus"
+		]
+	},
 	"mobile-frontend-back-to-top-of-section": "Bai un sekshon patras",
-	"mobile-frontend-copyright": "Teksto ta disponibel bou di e a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; otro rekisitonan por ta aplikabel. Mira <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Rekisitonan pa uso</a> pa detayenan. {{SITENAME}} ta un marka registrá di e <a href='http://www.wikimediafoundation.org/'>Fundashon Wikimedia, Inc.</a>, un organisashon káritativo.",
-	"mobile-frontend-featured-article": "E Artíkulo Estelar Di Awe",
+	"mobile-frontend-copyright": "E kontenido ta disponé bou di $1, a menos ku ta unique ta alkontrario.",
+	"mobile-frontend-editor-edit": "Editá",
+	"mobile-frontend-featured-article": "Kontenido estado di awe",
 	"mobile-frontend-home-button": "Página Prinsipal",
+	"mobile-frontend-language-article-heading": "Lesa na otro idioma",
+	"mobile-frontend-main-menu-login": "Registro na",
+	"mobile-frontend-placeholder": "Búskeda di {{SITENAME}}",
 	"mobile-frontend-random-button": "Kualkier",
 	"mobile-frontend-regular-site": "Mira e página aki riba un base regular",
-	"mobile-frontend-search-submit": "Buska"
+	"mobile-frontend-search-submit": "Buska",
+	"mobile-frontend-terms-text": "Kontenido ta Uza",
+	"mobile-frontend-view": "Bista móvil",
+	"mobile-frontend-view-desktop": "Ofisina",
+	"mobile-frontend-view-mobile": "Móvil"
 }

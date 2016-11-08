@@ -36,7 +36,8 @@
 			"Adam-Yourist",
 			"Mailman",
 			"Jack who built the house",
-			"Jackie"
+			"Jackie",
+			"Kareyac"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -255,6 +256,7 @@
 	"mobile-frontend-placeholder-beta": "Поиск по {{grammar:genitive|{{SITENAME}}}} (бета-версия)",
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-random-button": "Случайная",
+	"mobile-frontend-redirected-from": "Перенаправлено с \"$1\"",
 	"mobile-frontend-references-citation": "Цитата",
 	"mobile-frontend-references-list": "Посмотреть полный список цитат",
 	"mobile-frontend-regular-site": "Обычная версия",

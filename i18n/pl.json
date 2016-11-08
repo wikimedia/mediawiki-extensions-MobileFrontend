@@ -235,6 +235,7 @@
 	"mobile-frontend-placeholder-beta": "Przeszukaj {{GRAMMAR:B.lp|{{SITENAME}}}} (Beta)",
 	"mobile-frontend-privacy-link-text": "Polityka prywatności",
 	"mobile-frontend-random-button": "Losuj",
+	"mobile-frontend-redirected-from": "Przekierowano z „$1”",
 	"mobile-frontend-references-citation": "Przypisy",
 	"mobile-frontend-regular-site": "Wersja dla urządzeń stacjonarnych",
 	"mobile-frontend-requires-title": "Strona niedostępna",

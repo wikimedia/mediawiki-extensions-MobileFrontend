@@ -269,6 +269,7 @@
 	"mobile-frontend-placeholder-beta": "Rechercher {{SITENAME}} (Beta)",
 	"mobile-frontend-privacy-link-text": "Confidentialité",
 	"mobile-frontend-random-button": "Au hasard",
+	"mobile-frontend-redirected-from": "Redirigé depuis « $1 »",
 	"mobile-frontend-references-citation": "Citation",
 	"mobile-frontend-references-citation-error": "Une erreur s’est produite et il n’a pas été possible de charger cette citation.",
 	"mobile-frontend-references-list": "Afficher la liste complète des citations",
