@@ -96,14 +96,13 @@
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
 		_position: function ( $pa ) {
-			var overlayOffset, left,
+			var left,
 				paOffset = $pa.offset(),
 				h = $pa.outerHeight( true ),
 				y = paOffset.top + h;
 
 			this.$el.css( 'top', y );
 			if ( this.options.autoHide ) {
-				overlayOffset = this.$el.offset();
 				left = paOffset.left;
 				this.$el.css( 'left', left );
 			}

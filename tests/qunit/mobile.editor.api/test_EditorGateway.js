@@ -593,9 +593,9 @@
 
 	QUnit.test( '#save, when token has expired', 2, function ( assert ) {
 		var gateway = new EditorGateway( {
-				api: new mw.Api(),
-				title: 'MediaWiki:Test.css'
-			} );
+			api: new mw.Api(),
+			title: 'MediaWiki:Test.css'
+		} );
 
 		this.sandbox.stub( mw.Api.prototype, 'post' )
 			.onFirstCall().returns( $.Deferred().reject( 'badtoken' ) )

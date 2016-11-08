@@ -12,6 +12,7 @@
 	function init( page ) {
 		var $container = $( '#ca-watch' );
 		if ( !page.inNamespace( 'special' ) ) {
+			// eslint-disable-next-line no-new
 			new Watchstar( {
 				api: new mw.Api(),
 				el: $container,

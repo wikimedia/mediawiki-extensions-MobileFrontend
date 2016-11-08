@@ -11,10 +11,10 @@
 			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// the first call returns a getContent deferred for a blocked user.
 			getContentStub.onCall( 0 ).returns( $.Deferred().resolve( 'section 0', {
-					blockid: 1,
-					blockedby: 'Test',
-					blockreason: 'Testreason'
-				} ) );
+				blockid: 1,
+				blockedby: 'Test',
+				blockreason: 'Testreason'
+			} ) );
 			// all other calls returns a deferred for unblocked users.
 			getContentStub.returns( $.Deferred().resolve( 'section 0', {} ) );
 			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
@@ -24,6 +24,7 @@
 
 	// has to be the first test here! See comment in setup stub.
 	QUnit.test( '#initialize, blocked user', 1, function ( assert ) {
+		// eslint-disable-next-line no-new
 		new EditorOverlay( {
 			title: 'test.css'
 		} );

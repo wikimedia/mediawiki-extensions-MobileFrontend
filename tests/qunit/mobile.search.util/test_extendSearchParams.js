@@ -55,8 +55,8 @@
 
 	QUnit.test( 'it adds the MobileFrontend configuration to given terms types', function ( assert ) {
 		var params = extendSearchParams( 'search', {
-				wbptterms: 'grault'
-			} );
+			wbptterms: 'grault'
+		} );
 
 		QUnit.expect( 1 );
 
@@ -88,13 +88,13 @@
 
 	QUnit.test( 'it is variadic', function ( assert ) {
 		var params = extendSearchParams(
-				'search',
-				{
-					baz: 'qux'
-				},
-				{
-					quux: 'corge'
-				}
+			'search',
+			{
+				baz: 'qux'
+			},
+			{
+				quux: 'corge'
+			}
 			),
 			expectedParams = {
 				foo: 'bar',

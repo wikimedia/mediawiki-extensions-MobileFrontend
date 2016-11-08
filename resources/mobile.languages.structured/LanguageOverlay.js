@@ -68,14 +68,12 @@
 		onLinkClick: function ( ev ) {
 			var $link = this.$( ev.currentTarget ),
 				lang = $link.attr( 'lang' ),
-				$visibleLanguageLinks = this.$languageItems.filter( ':visible' ),
-				index;
+				$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
 
 			util.saveLanguageUsageCount( lang, util.getFrequentlyUsedLanguages() );
 
 			// find the index of the clicked language in the list of visible results
 			$.each( $visibleLanguageLinks, function ( i, link ) {
-				index = i + 1;
 				if ( $( link ).hasClass( lang ) ) {
 					return false;
 				}

@@ -33,7 +33,7 @@
 	 * @param {jQuery.Object} $container an element to associate with the Browser object
 	 */
 	function Browser( ua, $container ) {
-		this.userAgent  = ua;
+		this.userAgent = ua;
 		this.$el = $container;
 		if ( this.isAndroid2() ) {
 			this.lockViewport();

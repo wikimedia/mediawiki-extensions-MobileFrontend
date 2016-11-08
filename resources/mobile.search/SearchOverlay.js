@@ -21,6 +21,7 @@
 		var self = this;
 		Overlay.call( this, options );
 		this.api = options.api;
+		// eslint-disable-next-line new-cap
 		this.gateway = new options.gatewayClass( this.api );
 
 		this.router = options.router;
@@ -330,7 +331,6 @@
 			var
 				self = this,
 				api = this.api,
-				pageList,
 				query = this.$input.val(),
 				delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
 
@@ -366,7 +366,8 @@
 									.filter( data.results.length ? '.with-results' : '.without-results' )
 									.show();
 
-								pageList = new WatchstarPageList( {
+								// eslint-disable-next-line no-new
+								new WatchstarPageList( {
 									api: api,
 									funnel: 'search',
 									pages: data.results,

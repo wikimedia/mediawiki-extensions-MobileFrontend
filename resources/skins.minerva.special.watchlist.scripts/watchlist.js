@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var watchlist,
-		WatchList = M.require( 'mobile.watchlist/WatchList' );
+	var WatchList = M.require( 'mobile.watchlist/WatchList' );
 
 	/**
 	 * Initialises JavaScript on Special:Watchlist
@@ -12,7 +11,8 @@
 
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
-			watchlist = new WatchList( {
+			// eslint-disable-next-line no-new
+			new WatchList( {
 				api: new mw.Api(),
 				el: $watchlist,
 				funnel: 'watchlist',

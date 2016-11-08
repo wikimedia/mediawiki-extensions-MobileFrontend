@@ -13,14 +13,16 @@
 	} );
 
 	QUnit.test( 'Load section from api only, if needed', 2, function ( assert ) {
-		var overlay = new TalkSectionOverlay( {
+		// eslint-disable-next-line no-new
+		new TalkSectionOverlay( {
 			api: this.api,
 			section: 'Testtext'
 		} );
 
 		assert.strictEqual( renderFromApiSpy.callCount, 0, 'Section requested from api, if no section given.' );
 
-		overlay = new TalkSectionOverlay( {
+		// eslint-disable-next-line no-new
+		new TalkSectionOverlay( {
 			api: this.api
 		} );
 		assert.ok( renderFromApiSpy.calledOnce, 'No Api request, if section given' );

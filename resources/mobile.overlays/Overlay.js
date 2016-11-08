@@ -1,4 +1,3 @@
-/*jshint unused:vars */
 ( function ( M, $ ) {
 
 	var View = M.require( 'mobile.view/View' ),
@@ -219,7 +218,7 @@
 		 * state (see PhotoUploadProgress)
 		 * @return {Boolean} Whether the overlay was successfully hidden or not
 		 */
-		hide: function ( force ) {
+		hide: function () {
 			if ( this.fullScreen ) {
 				$( 'html' ).removeClass( 'overlay-enabled' );
 				// return to last known scroll position

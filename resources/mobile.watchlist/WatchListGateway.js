@@ -14,13 +14,13 @@
 
 		if ( lastTitle ) {
 			this.continueParams = {
-				continue: 'gwrcontinue||',
+				'continue': 'gwrcontinue||',
 				gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
 			};
 			this.shouldSkipFirstTitle = true;
 		} else {
 			this.continueParams = {
-				continue: ''
+				'continue': ''
 			};
 			this.shouldSkipFirstTitle = false;
 		}

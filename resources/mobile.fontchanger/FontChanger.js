@@ -59,9 +59,9 @@
 			this.setPercentage( settings.get( this.options.name, true ) || 100 );
 
 			this.fontchanger.on( 'click', function () {
-					self.setPercentage( 100 );
-					return false;
-				} );
+				self.setPercentage( 100 );
+				return false;
+			} );
 
 			this.changeMinus.on( 'click', function () {
 				self.setPercentage( self.fontchanger.val() - 10 );

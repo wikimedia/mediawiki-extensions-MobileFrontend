@@ -156,7 +156,7 @@
 							protection: protection,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
-							isMainPage: mv.hasOwnProperty( 'mainpage' ) ? true : false,
+							isMainPage: mv.hasOwnProperty( 'mainpage' ),
 							historyUrl: mw.util.getUrl( title, {
 								action: 'history'
 							} ),

@@ -10,7 +10,7 @@
 	 * @ignore
 	 */
 	function init( page ) {
-		var toc, toggle,
+		var toc,
 			sections = page.getSections(),
 			$toc = $( '#toc' ),
 			enableToc = mw.config.get( 'wgMinervaTocEnabled' );
@@ -22,7 +22,8 @@
 				sections: sections
 			} );
 
-			toggle = new Toggler( toc.$el, 'toc-', null, true );
+			// eslint-disable-next-line no-new
+			new Toggler( toc.$el, 'toc-', null, true );
 			// if there is a toc already, replace it
 			if ( $toc.length > 0 ) {
 				// don't show toc at end of page, when no sections there

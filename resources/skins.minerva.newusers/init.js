@@ -1,4 +1,3 @@
-// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 /* This code currently handles two different editing tutorials/CTAs:
 
 EditTutorial - When an editor registers via the edit page action, upon returning to the

@@ -25,7 +25,7 @@
 			oldId: options.oldId,
 			isNewPage: options.isNewPage
 		} );
-		this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
+		this.readOnly = !!options.oldId; // If old revision, readOnly mode
 		if ( this.isVisualEditorEnabled() ) {
 			options.editSwitcher = true;
 		}
@@ -189,14 +189,14 @@
 		_prepareAnonWarning: function ( options ) {
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
-				returntoquery: 'action=edit&section=' + options.sectionId,
-				warning: 'mobile-frontend-edit-login-action'
-			}, options.queryParams ),
-			signupParams = $.extend( {
-				type: 'signup',
-				warning: 'mobile-frontend-edit-signup-action'
-			}, options.signupQueryParams );
+					returnto: options.returnTo || mw.config.get( 'wgPageName' ),
+					returntoquery: 'action=edit&section=' + options.sectionId,
+					warning: 'mobile-frontend-edit-login-action'
+				}, options.queryParams ),
+				signupParams = $.extend( {
+					type: 'signup',
+					warning: 'mobile-frontend-edit-signup-action'
+				}, options.signupQueryParams );
 
 			options.loginButton = $.extend( {
 				href: mw.util.getUrl( 'Special:UserLogin', params )
@@ -332,6 +332,7 @@
 					// check if user is blocked
 					if ( userinfo && userinfo.hasOwnProperty( 'blockid' ) ) {
 						// Workaround to parse a message parameter for mw.message, see T96885
+						// eslint-disable-next-line new-cap
 						parser = new mw.jqueryMsg.parser();
 						ast = parser.wikiTextToAst( userinfo.blockreason );
 						parsedBlockReason = parser.emitter.emit( ast );

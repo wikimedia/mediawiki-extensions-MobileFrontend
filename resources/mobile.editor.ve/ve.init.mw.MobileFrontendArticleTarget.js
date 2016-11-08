@@ -5,9 +5,7 @@
  * @license The MIT License (MIT); see LICENSE.txt
  */
 
-/* global ve, $ */
-
-// jscs:disable
+/* global ve */
 
 /**
  * MediaWiki mobile frontend article target.
@@ -84,14 +82,15 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function ()
  * Handle window scroll events
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
-	var target = this;
+	var $window, windowTop, contentTop,
+		target = this;
 	// The window can only scroll in iOS if the keyboard has been opened
 	if ( this.useScrollContainer ) {
 		// iOS applies a scroll offset to the window to move the cursor
 		// into view. Apply this offset to the surface instead.
-		var $window = $( target.getElementWindow() ),
-			windowTop = $window.scrollTop(),
-			contentTop = target.$scrollContainer.scrollTop();
+		$window = $( target.getElementWindow() );
+		windowTop = $window.scrollTop();
+		contentTop = target.$scrollContainer.scrollTop();
 
 		$window.scrollTop( 0 );
 		target.scrollTo( contentTop + windowTop );
@@ -112,7 +111,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
 		// reapply the selection in that case.
 		nativeSelection = this.getSurface().getView().nativeSelection;
 		if ( nativeSelection.rangeCount && document.activeElement.contentEditable === 'true' ) {
-			range = nativeSelection.getRangeAt(0);
+			range = nativeSelection.getRangeAt( 0 );
 			nativeSelection.removeAllRanges();
 			nativeSelection.addRange( range );
 		}
@@ -142,10 +141,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
  * FIXME: @inheritdoc once this file is in the right repo
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
+	var surface = this.getSurface();
+
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
-
-	var surface = this.getSurface();
 
 	this.overlay.clearSpinner();
 

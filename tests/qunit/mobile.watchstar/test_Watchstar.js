@@ -20,6 +20,7 @@
 	QUnit.test( 'Anonymous user opens drawer', 1, function ( assert ) {
 		var $el = $( '<div>' );
 
+		// eslint-disable-next-line no-new
 		new Watchstar( {
 			api: new mw.Api(),
 			el: $el,

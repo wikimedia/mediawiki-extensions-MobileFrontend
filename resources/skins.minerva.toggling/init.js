@@ -21,6 +21,7 @@
 		if ( window.mfTempOpenSection !== undefined ) {
 			delete window.mfTempOpenSection;
 		}
+		// eslint-disable-next-line no-new
 		new Toggler( $container, prefix, page );
 	}
 
