@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_a5e2b99a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-08T10:34:05Z",
+      "side": 1,
+      "message": "Yeh, I\u0027m not a fan of any of this code.\nWhat I\u0027d like to see is us pass a JSON to the skin so it can take care of this and other things.\nHow can we start moving in this direction?",
+      "parentUuid": "4eb4ebfb_915263e1",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_d1e22b2e",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-07T19:18:16Z",
       "side": 1,
       "message": "I don\u0027t think using $sectionNumber variable is good here. Then setting it to 0 again creates more confusion - at least to me.\n\nI would extract whole foreach($headings as $heading) into separate private function called `preapreSectionHeadings` and keep all headings related stuff there.",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_25e5899f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-08T10:34:05Z",
+      "side": 1,
+      "message": "Sounds sensible.",
+      "parentUuid": "4eb4ebfb_d1e22b2e",
       "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_45ee5587",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-08T10:34:05Z",
+      "side": 1,
+      "message": "Sounds sensible.",
+      "parentUuid": "4eb4ebfb_51d5fb45",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_515bbbfd",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 10
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_65eb9178",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-08T10:34:05Z",
+      "side": 1,
+      "message": "Sounds sensible.",
+      "parentUuid": "4eb4ebfb_515bbbfd",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_b1c43f95",
         "filename": "includes/MobileFrontend.skin.hooks.php",
         "patchSetId": 10
@@ -81,6 +153,24 @@
       "writtenOn": "2016-11-07T19:18:16Z",
       "side": 1,
       "message": "do we really need that JS comment attached to every single element?",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_05d16dd0",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-08T10:34:05Z",
+      "side": 1,
+      "message": "This block is only added once and is minified on L21. Yay.",
+      "parentUuid": "4eb4ebfb_b1c43f95",
       "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
