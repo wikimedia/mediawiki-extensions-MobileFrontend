@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_8dc47c95",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 0,
+      "message": "The point of this is to unify our coding standards. Where it was simple enough to get the code to pass our existing standards those changes have been made, and where you have extra restrictions that aren\u0027t yet in our eslint config, they should be filed upstream.",
+      "parentUuid": "4eb4ebfb_1b2c258e",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_db735dae",
         "filename": ".jscsrc",
         "patchSetId": 1
@@ -104,6 +122,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_2d5b28ff",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_9b6dd5c9",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_7b6569dc",
         "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
         "patchSetId": 1
@@ -115,6 +151,24 @@
       "writtenOn": "2016-11-09T10:26:34Z",
       "side": 0,
       "message": "This appears to be a useful fix. What rule provides this?",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_2d0208bf",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 0,
+      "message": "http://eslint.org/docs/rules/no-unused-vars",
+      "parentUuid": "4eb4ebfb_7b6569dc",
       "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +192,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_ed0b00d8",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 0,
+      "message": "http://eslint.org/docs/rules/space-infix-ops I think",
+      "parentUuid": "4eb4ebfb_3b5fe114",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_1b5ae522",
         "filename": "resources/mobile.overlays/Overlay.js",
         "patchSetId": 1
@@ -149,6 +221,24 @@
       "writtenOn": "2016-11-09T10:26:34Z",
       "side": 0,
       "message": "Doesn\u0027t this conflicts with the rule we have that enforced parameters should be documented in jsdoc?",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_cd0e04e8",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 0,
+      "message": "Parameters that exist must be documented, but you can also document parameters that aren\u0027t used.",
+      "parentUuid": "4eb4ebfb_1b5ae522",
       "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

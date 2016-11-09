@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_4dbe74fb",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 1,
+      "message": "sorry, I just commented out locally because on ubuntu, it fires a new toast for every error, which totally breaks my desktop.",
+      "parentUuid": "4eb4ebfb_fb49796b",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_3b3121ea",
         "filename": "Gruntfile.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-09T10:26:34Z",
       "side": 1,
       "message": "I think there\u0027s something wrong here. eslint hangs when I try to run it.\nbut replacing everything with\nresources/**/*.js\ndoesn\u0027t.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_2d3448a6",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 1,
+      "message": "WFM locally, and on Jenkins apparently.",
+      "parentUuid": "4eb4ebfb_3b3121ea",
       "revId": "361bea1752482375865ff52c7d948113a93348a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_ad485833",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 1,
+      "message": "If we don\u0027t want this rule that should be upstreamed. I don\u0027t think there\u0027s anything special about MF in this respect. These lines serve as a reminder the .parser should probably be renamed .Parser.",
+      "parentUuid": "4eb4ebfb_1b430545",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_5b606dcc",
         "filename": "resources/mobile.gallery/PhotoListGateway.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2016-11-09T10:26:34Z",
       "side": 1,
       "message": "This appears to be a useful fix. What rule provides this?",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_4d6434ae",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-09T14:20:03Z",
+      "side": 1,
+      "message": "http://eslint.org/docs/rules/quote-props with the \u0027keywords\u0027 option",
+      "parentUuid": "4eb4ebfb_5b606dcc",
       "revId": "361bea1752482375865ff52c7d948113a93348a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
