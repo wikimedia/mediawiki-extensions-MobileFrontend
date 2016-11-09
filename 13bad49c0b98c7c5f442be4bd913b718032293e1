@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_c0480c8f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T09:46:04Z",
+      "side": 1,
+      "message": "createSectionBodyElement has a parameter $isCollapsible  could this be applicable here as well?",
+      "revId": "13bad49c0b98c7c5f442be4bd913b718032293e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

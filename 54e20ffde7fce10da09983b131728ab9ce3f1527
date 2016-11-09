@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_004f1498",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T09:46:04Z",
+      "side": 0,
+      "message": "Not clear why this is moved.\nI intentionally added it to the JS block in case we ever moved this to a template. The comment corresponds to the line that follows it, when moved it makes less sense.\n\nNote the code is minified below so will never show up in the template.",
+      "revId": "54e20ffde7fce10da09983b131728ab9ce3f1527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
