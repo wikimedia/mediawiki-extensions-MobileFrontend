@@ -11,7 +11,8 @@
 			"GrigorGB",
 			"Դավիթ Սարոյան",
 			"Aram1985",
-			"Աշոտ1997"
+			"Աշոտ1997",
+			"Kareyac"
 		]
 	},
 	"beta-feature-minerva": "Միացնել բջջային տեսքը (Մինեվրա) համակարգչի համար",
@@ -49,6 +50,7 @@
 	"mobile-frontend-placeholder": "Որոնել {{SITENAME}} կայքում",
 	"mobile-frontend-privacy-link-text": "Գաղտնիություն",
 	"mobile-frontend-random-button": "Պատահական",
+	"mobile-frontend-redirected-from": "Վերահղված է \"$1\"-ից",
 	"mobile-frontend-save-settings": "Պահպանել կարգավորումները",
 	"mobile-frontend-search-content": "Ընտրել էջերում",
 	"mobile-frontend-search-no-results": "Այս անվանումով էջեր չկան։",
