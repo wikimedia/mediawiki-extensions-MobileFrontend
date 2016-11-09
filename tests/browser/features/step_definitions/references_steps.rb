@@ -1,5 +1,6 @@
 When(/^I click on a reference$/) do
   on(ArticlePage) do |page|
+    page.wait_until_rl_module_ready('skins.minerva.scripts')
     page.reference_element.click
     page.reference_drawer_element.when_present
   end
