@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_1b2c258e",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This will be lost in the conversion.",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_db735dae",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This is the same as `space-in-parens` from what I can see.\nGiven we explicitly chosen to relax this rule this should continue in the eslint config",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_c016cc59",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "In eslint this is provided by \"no-underscore-dangle\": 0",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_db259da9",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This will be lost in the conversion.",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_e01f886e",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "It seems that all these rules will be lost in the transition.",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_9b6dd5c9",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This file doesn\u0027t follow MobileFrontend\u0027s style guidelines. Instead of imposing it rules on all files it would be better if it disabled the specific rules it overrides.",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_7b6569dc",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This appears to be a useful fix. What rule provides this?",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_3b5fe114",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "This appears to be a useful fix. What rule provides this?",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_1b5ae522",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 0,
+      "message": "Doesn\u0027t this conflicts with the rule we have that enforced parameters should be documented in jsdoc?",
+      "revId": "70ba4e111e01c0822fcdc2addb1d0cdc8c33e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

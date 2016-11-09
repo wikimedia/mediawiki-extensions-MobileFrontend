@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_fb49796b",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "I know certain team members rely on this so losing this wouldn\u0027t be ideal.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_3b3121ea",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "I think there\u0027s something wrong here. eslint hangs when I try to run it.\nbut replacing everything with\nresources/**/*.js\ndoesn\u0027t.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_1b430545",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "Rather than lines like this it would be better to start with them disabled globally in eslint. We may not want to adopt this rule.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_5b606dcc",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "This appears to be a useful fix. What rule provides this?",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_5baf4dde",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "Rather than doing this I\u0027d suggest not setting it in the eslint config for the time being.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_7bb44933",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-09T10:26:34Z",
+      "side": 1,
+      "message": "Rather than doing this I\u0027d suggest not setting it in the eslint config for the time being.",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
