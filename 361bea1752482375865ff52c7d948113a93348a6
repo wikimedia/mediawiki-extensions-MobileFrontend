@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_dc391040",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-10T09:11:01Z",
+      "side": 1,
+      "message": "Okay worked this out - it should also exclude vendor/ and docs/",
+      "parentUuid": "4eb4ebfb_2d3448a6",
+      "revId": "361bea1752482375865ff52c7d948113a93348a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_1b430545",
         "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 1
