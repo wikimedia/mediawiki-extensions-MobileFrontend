@@ -5,6 +5,11 @@
 			"Benoit Rochon"
 		]
 	},
+	"mobile-frontend-editor-edit": "Meckotcita",
 	"mobile-frontend-home-button": "Otitikowin",
-	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}"
+	"mobile-frontend-main-menu-account-create": "Masinahotiso",
+	"mobile-frontend-main-menu-login": "Posi",
+	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Nitcictaman",
+	"mobile-frontend-view": "Aripoc takapikenikan otci"
 }
