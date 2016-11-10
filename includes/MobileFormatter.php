@@ -10,6 +10,10 @@ use HtmlFormatter\HtmlFormatter;
  */
 class MobileFormatter extends HtmlFormatter {
 	/**
+	 * Class name for collapsible section wrappers
+	 */
+	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
+	/**
 	 * Whether scripts can be added in the output.
 	 * @var boolean $scriptsEnabled
 	 */
@@ -542,25 +546,9 @@ class MobileFormatter extends HtmlFormatter {
 		$firstHeading = reset( $headings );
 
 		$sectionNumber = 0;
-		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber );
+		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber, false );
+		$this->prepareHeadings( $doc, $headings, $this->scriptsEnabled );
 
-		// Mark the top level headings which could control collapsing
-		foreach ( $headings as $heading ) {
-			$sectionNumber += 1;
-			$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
-			$heading->setAttribute( 'class', $className . 'section-heading' );
-			if ( $this->scriptsEnabled ) {
-				$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
-			}
-
-			// prepend indicator
-			$indicator = $doc->createElement( 'div' );
-			$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
-			$heading->insertBefore( $indicator, $heading->firstChild );
-		}
-
-		// reset section number
-		$sectionNumber = 0;
 		while ( $sibling ) {
 			$node = $sibling;
 			$sibling = $sibling->nextSibling;
@@ -593,7 +581,7 @@ class MobileFormatter extends HtmlFormatter {
 					}
 				}
 				$sectionNumber += 1;
-				$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber );
+				$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber, $this->scriptsEnabled );
 				continue;
 			}
 
@@ -616,19 +604,45 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * Prepare section headings, add required classes and onclick actions
+	 *
+	 * @param DOMDocument $doc
+	 * @param array $headings
+	 * @param bool $isCollapsible
+	 */
+	private function prepareHeadings( DOMDocument $doc, array $headings, $isCollapsible ) {
+		$sectionNumber = 0;
+		// Mark the top level headings which could control collapsing
+		foreach ( $headings as $heading ) {
+			$sectionNumber += 1;
+			$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
+			$heading->setAttribute( 'class', $className . 'section-heading' );
+			if ( $isCollapsible ) {
+				$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
+			}
+
+			// prepend indicator
+			$indicator = $doc->createElement( 'div' );
+			$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
+			$heading->insertBefore( $indicator, $heading->firstChild );
+		}
+	}
+
+	/**
 	 * Creates a Section body element
 	 *
 	 * @param DOMDocument $doc
 	 * @param int $sectionNumber
+	 * @param bool $isCollapsible
 	 *
 	 * @return DOMElement
 	 */
-	private function createSectionBodyElement( DOMDocument $doc, $sectionNumber ) {
+	private function createSectionBodyElement( DOMDocument $doc, $sectionNumber, $isCollapsible ) {
 		$sectionClass = 'mf-section-' . $sectionNumber;
-		if ( $sectionNumber > 0 && $this->scriptsEnabled ) {
+		if ( $isCollapsible ) {
 			// TODO: Probably good to rename this to the more generic 'section'.
 			// We have no idea how the skin will use this.
-			$sectionClass .= ' collapsible-block';
+			$sectionClass .= ' ' . self::STYLE_COLLAPSIBLE_SECTION_CLASS;
 		}
 
 		// FIXME: The class `/mf\-section\-[0-9]+/` is kept for caching reasons
