@@ -59,4 +59,4 @@
 		MemoryCache: MemoryCache,
 		NoCache: NoCache
 	} );
-} )( mw.mobileFrontend );
+}( mw.mobileFrontend ) );

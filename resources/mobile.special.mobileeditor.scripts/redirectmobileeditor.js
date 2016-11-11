@@ -6,4 +6,4 @@
 	} else {
 		location.replace( 'index.php?title=' + mw.config.get( 'wgMainPageTitle' ) );
 	}
-} )( jQuery );
+}( jQuery ) );

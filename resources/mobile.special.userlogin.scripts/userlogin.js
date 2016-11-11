@@ -5,4 +5,4 @@
 		$( '#wpRemember' ).prop( 'checked', true );
 	} );
 
-} )( mw.mobileFrontend, jQuery );
+}( mw.mobileFrontend, jQuery ) );

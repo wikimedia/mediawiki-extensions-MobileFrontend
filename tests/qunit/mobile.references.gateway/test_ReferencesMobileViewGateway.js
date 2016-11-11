@@ -95,4 +95,4 @@
 			done();
 		} );
 	} );
-} )( jQuery, mw.mobileFrontend );
+}( jQuery, mw.mobileFrontend ) );

@@ -130,4 +130,4 @@
 			'One language matches "ўз" and only that language is visible.'
 		);
 	} );
-} )( mw.mobileFrontend );
+}( mw.mobileFrontend ) );

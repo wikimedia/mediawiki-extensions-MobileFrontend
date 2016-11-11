@@ -46,4 +46,4 @@
 		this.clock.tick( 1000 );
 		assert.strictEqual( overlay.$el[ 0 ].parentNode, null, 'No longer in DOM' );
 	} );
-} )( mw.mobileFrontend, jQuery );
+}( mw.mobileFrontend, jQuery ) );

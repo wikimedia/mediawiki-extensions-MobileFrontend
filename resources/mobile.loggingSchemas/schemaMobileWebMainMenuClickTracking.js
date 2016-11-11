@@ -32,4 +32,4 @@
 	mw.trackSubscribe( 'mf.schemaMobileWebMainMenuClickTracking', function ( topic, data ) {
 		schemaMobileWebMainMenuClickTracking.log( data );
 	} );
-} )( mw.mobileFrontend );
+}( mw.mobileFrontend ) );

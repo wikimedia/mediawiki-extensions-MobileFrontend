@@ -6,4 +6,4 @@
 	$( function () {
 		skin.getMainMenu().enableLogging();
 	} );
-} )( mw.mobileFrontend, jQuery );
+}( mw.mobileFrontend, jQuery ) );

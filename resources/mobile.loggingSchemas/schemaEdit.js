@@ -34,4 +34,4 @@
 		schemaEdit.log( data );
 	} );
 
-} )( mw.mobileFrontend );
+}( mw.mobileFrontend ) );
