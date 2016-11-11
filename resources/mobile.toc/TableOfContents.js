@@ -18,8 +18,8 @@
 		},
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.tocIcon HTML of the Table of Contents icon.
-		 * @cfg {String} defaults.contentsMsg TOC contents message.
+		 * @cfg {string} defaults.tocIcon HTML of the Table of Contents icon.
+		 * @cfg {string} defaults.contentsMsg TOC contents message.
 		 */
 		defaults: {
 			tocIcon: new Icon( {

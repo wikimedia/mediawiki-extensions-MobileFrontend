@@ -7,6 +7,7 @@
 	/**
 	 * Get the id of the section $el belongs to.
 	 * @param {jQuery.Object} $el
+	 * @return {string}
 	 * @ignore
 	 */
 	function getSectionId( $el ) {
@@ -37,6 +38,9 @@
 	 * @extends View
 	 * @uses Browser
 	 * @uses Page
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function Skin( options ) {
 		var self = this;
@@ -247,10 +251,10 @@
 		 *
 		 * @param {Object} data Information about the section. It's in the following form:
 		 * {
-		 *     @property {String} page,
-		 *     @property {Boolean} wasExpanded,
+		 *     @property {string} page,
+		 *     @property {boolean} wasExpanded,
 		 *     @property {jQuery.Object} $heading,
-		 *     @property {Boolean} isReferenceSection
+		 *     @property {boolean} isReferenceSection
 		 * }
 		 * @return {jQuery.Deferred} rejected when not a reference section.
 		 */
@@ -334,6 +338,7 @@
 		/**
 		 * Returns the appropriate license message including links/name to
 		 * terms of use (if any) and license page
+		 * @return {string}
 		 */
 		getLicenseMsg: function () {
 			var licenseMsg,

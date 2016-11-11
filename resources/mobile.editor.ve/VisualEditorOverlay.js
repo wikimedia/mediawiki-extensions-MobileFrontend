@@ -6,6 +6,9 @@
 	 * Overlay for VisualEditor view
 	 * @class VisualEditorOverlay
 	 * @extends EditorOverlayBase
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function VisualEditorOverlay( options ) {
 		this.applyHeaderOptions( options, true );
@@ -29,8 +32,8 @@
 		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
 		 * FIXME: Must be smarter way to do this.
 		 * @method
-		 * @param {Object} options
-		 * @param {Boolean} isVE whether the options are being generated for a VisualEditorOverlay
+		 * @param {Object} options Configuration options
+		 * @param {boolean} isVE whether the options are being generated for a VisualEditorOverlay
 		 *  or a EditorOverlay
 		 */
 		applyHeaderOptions: function ( options, isVE ) {

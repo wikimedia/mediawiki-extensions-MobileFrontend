@@ -6,6 +6,9 @@
 	 * A wrapper for creating a button.
 	 * @class Button
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function Button( options ) {
 		if ( options.href ) {
@@ -19,16 +22,16 @@
 		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.tagName The name of the tag in which the button is wrapped.
-		 * @cfg {Boolean} defaults.block is stacked button
-		 * @cfg {Boolean} defaults.progressive is progressive action
-		 * @cfg {Boolean} defaults.constructive is constructive action
+		 * @cfg {string} defaults.tagName The name of the tag in which the button is wrapped.
+		 * @cfg {boolean} defaults.block is stacked button
+		 * @cfg {boolean} defaults.progressive is progressive action
+		 * @cfg {boolean} defaults.constructive is constructive action
 		 *   This option is deprecated. Please use `progressive`.
-		 * @cfg {Boolean} defaults.quiet is quiet button
-		 * @cfg {Boolean} defaults.destructive is destructive action
-		 * @cfg {String} defaults.additionalClassNames Additional class name(s).
-		 * @cfg {String} defaults.href url
-		 * @cfg {String} defaults.label of button
+		 * @cfg {boolean} defaults.quiet is quiet button
+		 * @cfg {boolean} defaults.destructive is destructive action
+		 * @cfg {string} defaults.additionalClassNames Additional class name(s).
+		 * @cfg {string} defaults.href url
+		 * @cfg {string} defaults.label of button
 		 */
 		defaults: {
 			tagName: 'a',

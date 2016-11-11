@@ -16,14 +16,14 @@
 	SearchGateway.prototype = {
 		/**
 		 * The namespace to search in.
-		 * @type {Number}
+		 * @type {number}
 		 */
 		searchNamespace: 0,
 
 		/**
 		 * Get the data used to do the search query api call.
 		 * @method
-		 * @param {String} query to search for
+		 * @param {string} query to search for
 		 * @return {Object}
 		 */
 		getApiData: function ( query ) {
@@ -48,7 +48,7 @@
 
 		/**
 		 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
-		 * @param {String} str a string
+		 * @param {string} str a string
 		 * @return {Object} a regular expression that can be used to search for that str
 		 * @private
 		 */
@@ -60,9 +60,9 @@
 		/**
 		 * Takes a label potentially beginning with term
 		 * and highlights term if it is present with strong
-		 * @param {String} label a piece of text
-		 * @param {String} term a string to search for from the start
-		 * @return {String} safe html string with matched terms encapsulated in strong tags
+		 * @param {string} label a piece of text
+		 * @param {string} term a string to search for from the start
+		 * @return {string} safe html string with matched terms encapsulated in strong tags
 		 * @private
 		 */
 		_highlightSearchTerm: function ( label, term ) {
@@ -74,7 +74,7 @@
 
 		/**
 		 * Return data used for creating {Page} objects
-		 * @param {String} query to search for
+		 * @param {string} query to search for
 		 * @param {Object} pageInfo from the API
 		 * @return {Object} data needed to create a {Page}
 		 * @private
@@ -97,7 +97,7 @@
 
 		/**
 		 * Process the data returned by the api call.
-		 * @param {String} query to search for
+		 * @param {string} query to search for
 		 * @param {Object} data from api
 		 * @return {Array}
 		 * @private
@@ -124,7 +124,7 @@
 		/**
 		 * Perform a search for the given query.
 		 * @method
-		 * @param {String} query to search for
+		 * @param {string} query to search for
 		 * @return {jQuery.Deferred}
 		 */
 		search: function ( query ) {
@@ -160,8 +160,8 @@
 		/**
 		 * Check if the search has already been performed in given session.
 		 * @method
-		 * @param {String} query
-		 * @return {Boolean}
+		 * @param {string} query
+		 * @return {boolean}
 		 */
 		isCached: function ( query ) {
 			return Boolean( this.searchCache[ query ] );

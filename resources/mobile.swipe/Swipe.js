@@ -2,9 +2,6 @@
 	/**
 	 * Class to assist a view in implementing swipe gestures on a specific element
 	 *
-	 * @class Swipe
-	 * @extends OO.EventEmitter
-	 *
 	 * Use this class in a view to help it do things on swipe gestures.
 	 *
 	 * 1. Initialize it in the constructor `initialize` and listen to the
@@ -44,6 +41,11 @@
 	 *         },
 	 *       } );
 	 *     </code>
+	 *
+	 * @class Swipe
+	 * @extends OO.EventEmitter
+	 *
+	 * @constructor
 	 */
 	function Swipe() {
 		Swipe.super.apply( this, arguments );
@@ -54,7 +56,7 @@
 	OO.mfExtend( Swipe, {
 		/**
 		 * Constructor.
-		 * @param {Number} minDistance minimal distance in pixel between touchstart and touchend
+		 * @param {number} minDistance minimal distance in pixel between touchstart and touchend
 		 * to be recognized as a swipe event. Default: 200
 		 */
 		initialize: function ( minDistance ) {

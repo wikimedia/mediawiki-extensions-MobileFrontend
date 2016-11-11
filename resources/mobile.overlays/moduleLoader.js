@@ -11,9 +11,9 @@
 		/**
 		 * Loads a module via ResourceLoader, displays a full screen LoadingOverlay during load time.
 		 * @method
-		 * @param {String} name ResourceLoader module name to load asynchronously.
-		 * @param {Boolean} delegateHide if true the caller is responsible for hiding the intermediate loader.
-		 * @param {Boolean} [showLoadingOverlay] if false a loading overlay will be hidden while
+		 * @param {string} name ResourceLoader module name to load asynchronously.
+		 * @param {boolean} delegateHide if true the caller is responsible for hiding the intermediate loader.
+		 * @param {boolean} [showLoadingOverlay] if false a loading overlay will be hidden while
 		 *  loading the module. Defaults to true.
 		 * @return {jQuery.Deferred}
 		 */

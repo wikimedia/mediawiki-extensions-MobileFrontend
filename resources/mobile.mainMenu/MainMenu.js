@@ -7,6 +7,9 @@
 	 *
 	 * @class MainMenu
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function MainMenu( options ) {
 		this.activator = options.activator;
@@ -25,7 +28,7 @@
 
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.activator selector for element that when clicked can open or close the menu
+		 * @cfg {string} defaults.activator selector for element that when clicked can open or close the menu
 		 */
 		defaults: {
 			activator: undefined
@@ -33,8 +36,8 @@
 
 		/**
 		 * Advertise a new feature in the main menu.
-		 * @param {String} selector to an element inside the main menu
-		 * @param {String} msg a message to show in the pointer
+		 * @param {string} selector to an element inside the main menu
+		 * @param {string} msg a message to show in the pointer
 		 * @return {jQuery.Deferred} with the PointerOverlay as the only argument.
 		 * @throws exception when you try to advertise more than one feature.
 		 */
@@ -120,7 +123,7 @@
 
 		/**
 		 * Check whether the navigation drawer is open
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isOpen: function () {
 			// FIXME: We should be moving away from applying classes to the body
@@ -139,7 +142,7 @@
 
 		/**
 		 * Toggle open navigation drawer
-		 * @param {String} [drawerType] A name that identifies the navigation drawer that
+		 * @param {string} [drawerType] A name that identifies the navigation drawer that
 		 *     should be toggled open. Defaults to 'primary'.
 		 */
 		openNavigationDrawer: function ( drawerType ) {

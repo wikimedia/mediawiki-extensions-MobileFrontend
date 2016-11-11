@@ -77,7 +77,7 @@
 
 		/**
 		 * Set a new percentage (doesn't change the value higher then 200% and lower then 10%)
-		 * @param {Number} percentage New percentage value
+		 * @param {number} percentage New percentage value
 		 */
 		setPercentage: function ( percentage ) {
 			// disallow changes under 10% and over 200%

@@ -4,8 +4,8 @@
 
 	/**
 	 * Calculate the correct unit of timestamp
-	 * @param {Number} timestampDelta
-	 * @return {{value: Number, unit: String}}
+	 * @param {number} timestampDelta
+	 * @return {{value: number, unit: string}}
 	 * @ignore
 	 */
 	function timeAgo( timestampDelta ) {
@@ -21,8 +21,8 @@
 
 	/**
 	 * Calculate the correct unit of timestamp delta
-	 * @param {Number} timestamp
-	 * @return {{value: Number, unit: String}}
+	 * @param {number} timestamp
+	 * @return {{value: Number, unit: string}}
 	 * @ignore
 	 */
 	function getTimeAgoDelta( timestamp ) {
@@ -33,8 +33,8 @@
 
 	/**
 	 * Whether timestamp delta is less than a day old
-	 * @param {{value: Number, unit: String}} delta Object of timestamp and its label
-	 * @return {Boolean}
+	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
+	 * @return {boolean}
 	 * @ignore
 	 */
 	function isRecent( delta ) {
@@ -44,8 +44,8 @@
 
 	/**
 	 * Is delta less than 10 seconds?
-	 * @param {{value: Number, unit: String}} delta Object of timestamp and its label
-	 * @return {Boolean}
+	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
+	 * @return {boolean}
 	 * @ignore
 	 */
 	function isNow( delta ) {
@@ -54,11 +54,12 @@
 
 	/**
 	 * Return a message relating to the last modified relative time.
-	 * @param {String} ts timestamp
-	 * @param {String} username of the last user to modify the page
-	 * @param {String} [gender] of the last user to modify the page
-	 * @param {String} [historyUrl] url to the history page for the message, if omitted
+	 * @param {string} ts timestamp
+	 * @param {string} username of the last user to modify the page
+	 * @param {string} [gender] of the last user to modify the page
+	 * @param {string} [historyUrl] url to the history page for the message, if omitted
 	 *  returns plain text string rather than html
+	 * @return {string}
 	 * @ignore
 	 */
 	function getLastModifiedMessage( ts, username, gender, historyUrl ) {

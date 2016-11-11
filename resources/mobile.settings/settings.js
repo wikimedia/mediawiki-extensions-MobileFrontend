@@ -10,7 +10,7 @@
 		/**
 		 * Checks whether cookies are enabled
 		 * @method
-		 * @return {Boolean} Whether cookies are enabled
+		 * @return {boolean} Whether cookies are enabled
 		 */
 		function cookiesEnabled() {
 			// If session cookie already set, return true
@@ -28,11 +28,11 @@
 		/**
 		 * Saves a user setting for a later browser settings via localStorage
 		 * @method
-		 * @param {String} name The key to refer to this value
-		 * @param {String} value The value to store alongside the key
-		 * @param {Boolean} [useCookieFallback] When set this will use
+		 * @param {string} name The key to refer to this value
+		 * @param {string} value The value to store alongside the key
+		 * @param {boolean} [useCookieFallback] When set this will use
 		 * cookies when local storage not available.
-		 * @return {Boolean} Whether the save was successful or not
+		 * @return {boolean} Whether the save was successful or not
 		 */
 		function save( name, value, useCookieFallback ) {
 			var success = mw.storage.set( name, value ),
@@ -46,10 +46,10 @@
 		/**
 		 * Retrieves a user setting from a previous browser setting
 		 * @method
-		 * @param {String} name The key to refer to this value
-		 * @param {Boolean} [useCookieFallback] When set this will use cookies
+		 * @param {string} name The key to refer to this value
+		 * @param {boolean} [useCookieFallback] When set this will use cookies
 		 * when local storage not available.
-		 * @return {String|Boolean} Returns the associated value or False if nothing
+		 * @return {string|boolean} Returns the associated value or False if nothing
 		 * is found
 		 */
 		function get( name, useCookieFallback ) {
@@ -63,10 +63,10 @@
 		/**
 		 * Deletes a user setting from a previous browser setting
 		 * @method
-		 * @param {String} name The key to refer to this value
-		 * @param {Boolean} [useCookieFallback] When set this will use cookies
+		 * @param {string} name The key to refer to this value
+		 * @param {boolean} [useCookieFallback] When set this will use cookies
 		 * when local storage not available.
-		 * @return {Boolean} Whether the delete was successful or not
+		 * @return {boolean} Whether the delete was successful or not
 		 */
 		function remove( name, useCookieFallback ) {
 			var success = mw.storage.remove( name );

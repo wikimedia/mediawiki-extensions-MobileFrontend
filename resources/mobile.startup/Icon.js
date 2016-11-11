@@ -6,6 +6,9 @@
 	 * A wrapper for creating an icon.
 	 * @class Icon
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function Icon( options ) {
 		if ( options.hasText ) {
@@ -22,16 +25,16 @@
 		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Boolean} defaults.hasText Whether the icon has text.
-		 * @cfg {Boolean} defaults.isSmall Whether the icon should be small.
-		 * @cfg {String} [defaults.href] value of href attribute, when set tagName will default to anchor tag
-		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
-		 * @cfg {String} defaults.base String used as a base for generating class names.
+		 * @cfg {boolean} defaults.hasText Whether the icon has text.
+		 * @cfg {boolean} defaults.isSmall Whether the icon should be small.
+		 * @cfg {string} [defaults.href] value of href attribute, when set tagName will default to anchor tag
+		 * @cfg {string} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
+		 * @cfg {string} defaults.base String used as a base for generating class names.
 		 * Defaults to 'mw-ui-icon'.
-		 * @cfg {String} defaults.name Name of the icon.
-		 * @cfg {String} defaults.modifier Additional class name.
+		 * @cfg {string} defaults.name Name of the icon.
+		 * @cfg {string} defaults.modifier Additional class name.
 		 * Defaults to 'mw-ui-icon-element'.
-		 * @cfg {String} defaults.title Tooltip text.
+		 * @cfg {string} defaults.title Tooltip text.
 		 */
 		defaults: {
 			hasText: false,
@@ -46,7 +49,7 @@
 		/**
 		 * Return the full class name that is required for the icon to render
 		 * @method
-		 * @return {String}
+		 * @return {string}
 		 */
 		getClassName: function () {
 			return this.$el.attr( 'class' );
@@ -54,7 +57,7 @@
 		/**
 		 * Return the class that relates to the icon glyph
 		 * @method
-		 * @return {String}
+		 * @return {string}
 		 */
 		getGlyphClassName: function () {
 			return this.options.base + '-' + this.options.name;
@@ -62,7 +65,7 @@
 		/**
 		 * Return the HTML representation of this view
 		 * @method
-		 * @return {String}
+		 * @return {string}
 		 */
 		toHtmlString: function () {
 			return $( '<div>' ).append( this.$el ).html();

@@ -12,6 +12,9 @@
 	 * @uses PhotoItem
 	 * @uses InfiniteScroll
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function PhotoList( options ) {
 		var gatewayOptions = {
@@ -34,7 +37,7 @@
 		template: mw.template.get( 'mobile.gallery', 'PhotoList.hogan' ),
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 * @cfg {string} defaults.spinner HTML of the spinner icon.
 		 * @cfg {mw.Api} defaults.api instance of an api
 		 */
 		defaults: {
@@ -56,7 +59,7 @@
 		/**
 		 * Check to see if the current view is an empty list.
 		 * @method
-		 * @return {Boolean} whether no images have been rendered
+		 * @return {boolean} whether no images have been rendered
 		 */
 		isEmpty: function () {
 			return this.$list.find( 'li' ).length === 0;

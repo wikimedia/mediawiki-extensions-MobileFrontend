@@ -16,13 +16,13 @@
 		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Boolean} defaults.progressive is progressive action
-		 * @cfg {Boolean} defaults.constructive is constructive action.
+		 * @cfg {boolean} defaults.progressive is progressive action
+		 * @cfg {boolean} defaults.constructive is constructive action.
 		 *   This option is deprecated. Please use `progressive`.
-		 * @cfg {Boolean} defaults.destructive is destructive action
-		 * @cfg {String} defaults.additionalClassNames Additional class name(s).
-		 * @cfg {String} defaults.href url
-		 * @cfg {String} defaults.label of anchor
+		 * @cfg {boolean} defaults.destructive is destructive action
+		 * @cfg {string} defaults.additionalClassNames Additional class name(s).
+		 * @cfg {string} defaults.href url
+		 * @cfg {string} defaults.label of anchor
 		 */
 		defaults: {
 			progressive: undefined,

@@ -13,6 +13,9 @@
 	 * @uses WatchstarGateway
 	 * @uses Watchstar
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function WatchstarPageList( options ) {
 		this.wsGateway = new WatchstarGateway( options.api );

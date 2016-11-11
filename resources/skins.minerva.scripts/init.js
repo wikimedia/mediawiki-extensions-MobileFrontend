@@ -65,7 +65,7 @@
 	 * Return the language code of the device in lowercase
 	 *
 	 * @ignore
-	 * @return {String|undefined}
+	 * @return {string|undefined}
 	 */
 	function getDeviceLanguage() {
 		var lang = navigator && navigator.languages ?
@@ -81,7 +81,7 @@
 	 * @method
 	 * @ignore
 	 * @uses ImageOverlay
-	 * @param {String} title Url of image
+	 * @param {string} title Url of image
 	 * @return {jQuery.Deferred}
 	 */
 	function loadImageOverlay( title ) {

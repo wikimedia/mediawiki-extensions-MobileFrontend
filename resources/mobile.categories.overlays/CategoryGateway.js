@@ -20,8 +20,8 @@
 
 		/**
 		 * Saves the categories passed to this function to the page
-		 * @param {String} title Title of the current page (to add the categories to)
-		 * @param {String} categories List of Categories to add
+		 * @param {string} title Title of the current page (to add the categories to)
+		 * @param {string} categories List of Categories to add
 		 * @return {jQuery.Deferred}
 		 */
 		save: function ( title, categories ) {
@@ -35,8 +35,8 @@
 
 		/**
 		 * Returns the categories the title belongs to.
-		 * @param {String} title Title of the current page (to add the categories to)
-		 * @return {jQuery.Deferred|Boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
+		 * @param {string} title Title of the current page (to add the categories to)
+		 * @return {jQuery.Deferred|boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
 		 */
 		getCategories: function ( title ) {
 			var self = this;

@@ -73,7 +73,7 @@
 		 *
 		 * @method
 		 * @param {Page} page
-		 * @param {String} headingId
+		 * @param {string} headingId
 		 * @return {jQuery.Promise} promise that resolves with the section
 		 *  HTML or `false` if no such section exists
 		 */

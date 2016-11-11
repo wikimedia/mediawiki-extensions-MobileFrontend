@@ -20,7 +20,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 	/**
 	 * Whether or not the user should see the leftNav guider
 	 * @ignore
-	 * @return {Boolean}
+	 * @return {boolean}
 	 */
 	function shouldShowLeftNavEditTutorial() {
 		return mw.util.getParamValue( 'campaign' ) === 'leftNavSignup' &&
@@ -30,7 +30,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 	/**
 	 * If the user came from an edit button signup, show guider.
 	 * @ignore
-	 * @return {Boolean}
+	 * @return {boolean}
 	 */
 	function shouldShowTutorial() {
 		var shouldShowEditTutorial = mw.util.getParamValue( 'article_action' ) === 'signup-edit' && !inEditor;

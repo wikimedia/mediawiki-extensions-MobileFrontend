@@ -95,9 +95,9 @@
 		 * Retrieve a page from the api
 		 *
 		 * @method
-		 * @param {String} title the title of the page to be retrieved
-		 * @param {String} endpoint an alternative api url to retrieve the page from
-		 * @param {Boolean} leadOnly When set only the lead section content is returned
+		 * @param {string} title the title of the page to be retrieved
+		 * @param {string} endpoint an alternative api url to retrieve the page from
+		 * @param {boolean} leadOnly When set only the lead section content is returned
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function ( title, endpoint, leadOnly ) {
@@ -185,7 +185,7 @@
 		 * Invalidate the internal cache for a given page
 		 *
 		 * @method
-		 * @param {String} title the title of the page who's cache you want to invalidate
+		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function ( title ) {
 			delete this.cache[title];
@@ -196,9 +196,9 @@
 		 *
 		 * @method
 		 * @private
-		 * @param  {String} title Name of the page to obtain variants for
+		 * @param  {string} title Name of the page to obtain variants for
 		 * @param  {Object} data Data from API
-		 * @return {Array|Boolean} List of language variant objects or false if no variants exist
+		 * @return {Array|boolean} List of language variant objects or false if no variants exist
 		 */
 		_getLanguageVariantsFromApiResponse: function ( title, data ) {
 			var generalData = data.query.general,
@@ -234,8 +234,8 @@
 		 * Retrieve available languages for a given title
 		 *
 		 * @method
-		 * @param {String} title the title of the page languages should be retrieved for
-		 * @param {String} [language] when provided the names of the languages returned
+		 * @param {string} title the title of the page languages should be retrieved for
+		 * @param {string} [language] when provided the names of the languages returned
 		 *  will be translated additionally into this language.
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks
 		 * and variant links as defined @ https://en.m.wikipedia.org/w/api.php?action=help&modules=query%2Blanglinks

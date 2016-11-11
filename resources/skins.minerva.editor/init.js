@@ -46,8 +46,8 @@
 	 * Prepend an edit page button to the container
 	 * @method
 	 * @ignore
-	 * @param {Number} section number
-	 * @param {String} container CSS selector of the container
+	 * @param {number} section number
+	 * @param {string} container CSS selector of the container
 	 * @return {jQuery.Object} newly created edit page button
 	 */
 	function addEditButton( section, container ) {
@@ -65,7 +65,7 @@
 	 * @method
 	 * @ignore
 	 * @param {jQuery.Object} $el Element which will render a drawer on click
-	 * @param {Number} section number representing the section
+	 * @param {number} section number representing the section
 	 */
 	function makeCta( $el, section ) {
 		$el
@@ -101,7 +101,7 @@
 	 * editor for this wiki.
 	 * @method
 	 * @ignore
-	 * @return {String} Either 'VisualEditor' or 'SourceEditor'
+	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
 		var preferredEditor = settings.get( 'preferredEditor', true );
@@ -161,7 +161,7 @@
 			 * won't have loaded yet.
 			 * @private
 			 * @ignore
-			 * @param {String} editor name e.g. wikitext or visualeditor
+			 * @param {string} editor name e.g. wikitext or visualeditor
 			 * @method
 			 */
 			function logInit( editor ) {
@@ -331,7 +331,7 @@
 	 * Show a toast message with sincere condolences.
 	 * @method
 	 * @ignore
-	 * @param {String} msg Message for sorry message
+	 * @param {string} msg Message for sorry message
 	 */
 	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {

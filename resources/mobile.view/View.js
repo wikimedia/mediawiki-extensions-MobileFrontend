@@ -8,8 +8,8 @@
 	 * Generate a unique integer id (unique within the entire client session).
 	 * Useful for temporary DOM ids.
 	 * @ignore
-	 * @param {String} prefix Prefix to be used when generating the id.
-	 * @return {String}
+	 * @param {string} prefix Prefix to be used when generating the id.
+	 * @return {string}
 	 */
 	function uniqueId( prefix ) {
 		var id = ( ++idCounter ).toString();
@@ -92,7 +92,7 @@
 	OO.mfExtend( View, {
 		/**
 		 * A css class to apply to the containing element of the View.
-		 * @property {String} className
+		 * @property {string} className
 		 */
 		className: undefined,
 		/**
@@ -103,18 +103,18 @@
 		/**
 		 * Tells the View to ignore tagName and className when constructing the element
 		 * and to rely solely on the template
-		 * @property {Boolean} isTemplateMode
+		 * @property {boolean} isTemplateMode
 		 */
 		isTemplateMode: false,
 
 		/**
 		 * Whether border box box sizing model should be used
-		 * @property {Boolean} isBorderBox
+		 * @property {boolean} isBorderBox
 		 */
 		isBorderBox: true,
 		/**
 		 * @property {Mixed}
-		 * Specifies the template used in render(). Object|String|HoganTemplate
+		 * Specifies the template used in render(). Object|string|HoganTemplate
 		 */
 		template: undefined,
 
@@ -140,8 +140,8 @@
 		 * A set of default options that are merged with options passed into the initialize function.
 		 *
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {jQuery.Object|String} [defaults.el] jQuery selector to use for rendering.
-		 * @cfg {Boolean} [defaults.enhance] Whether to enhance views already in DOM.
+		 * @cfg {jQuery.Object|string} [defaults.el] jQuery selector to use for rendering.
+		 * @cfg {boolean} [defaults.enhance] Whether to enhance views already in DOM.
 		 * When enabled, the template is disabled so that it is not rendered in the DOM.
 		 * Use in conjunction with View::defaults.$el to associate the View with an existing
 		 * already rendered element in the DOM.
@@ -220,12 +220,14 @@
 		 */
 		postRender: $.noop,
 
+		// eslint-disable-next-line valid-jsdoc
 		/**
 		 * Fill this.$el with template rendered using data if template is set.
 		 *
 		 * @method
 		 * @param {Object} data Template data. Will be merged into the view's
 		 * options
+		 * @chainable
 		 */
 		render: function ( data ) {
 			var html;
@@ -250,7 +252,7 @@
 		 * ($el's) scope.
 		 *
 		 * @method
-		 * @param {String} query A jQuery CSS selector.
+		 * @param {string} query A jQuery CSS selector.
 		 * @return {jQuery.Object} jQuery object containing results of the search.
 		 */
 		$: function ( query ) {
@@ -301,8 +303,8 @@
 		 * using `selector`). This only works for delegate-able events: not `focus`,
 		 * `blur`, and not `change`, `submit`, and `reset` in Internet Explorer.
 		 *
-		 * @param {String} eventName
-		 * @param {String} selector
+		 * @param {string} eventName
+		 * @param {string} selector
 		 * @param {Function} listener
 		 */
 		delegate: function ( eventName, selector, listener ) {
@@ -325,8 +327,8 @@
 		 * A finer-grained `undelegateEvents` for removing a single delegated event.
 		 * `selector` and `listener` are both optional.
 		 *
-		 * @param {String} eventName
-		 * @param {String} selector
+		 * @param {string} eventName
+		 * @param {string} selector
 		 * @param {Function} listener
 		 */
 		undelegate: function ( eventName, selector, listener ) {
@@ -347,7 +349,6 @@
 		'remove',
 		'detach'
 	], function ( i, prop ) {
-		/** @ignore **/
 		View.prototype[prop] = function () {
 			this.$el[prop].apply( this.$el, arguments );
 			return this;

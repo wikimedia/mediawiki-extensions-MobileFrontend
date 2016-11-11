@@ -14,7 +14,7 @@
 	OO.mfExtend( Thumbnail, View, {
 		/**
 		 * @cfg {Object} defaults options
-		 * @cfg {String} defaults.filename uri decoded filename including File: prefix associated with thumbnail
+		 * @cfg {string} defaults.filename uri decoded filename including File: prefix associated with thumbnail
 		 */
 		defaults: {
 			filename: undefined
@@ -25,14 +25,14 @@
 		},
 		/**
 		 * Obtain description for thumbnail
-		 * @return {String}
+		 * @return {string}
 		 */
 		getDescription: function () {
 			return this.options.description;
 		},
 		/**
 		 * Return the page title for the thumbnail
-		 * @return {String}
+		 * @return {string}
 		 */
 		getFileName: function () {
 			return this.options.filename;

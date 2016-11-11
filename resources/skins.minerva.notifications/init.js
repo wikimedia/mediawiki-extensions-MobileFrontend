@@ -14,7 +14,7 @@
 	 * @method
 	 * @ignore
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere
-	 * @param {String} moduleName Name of a module to fetch
+	 * @param {string} moduleName Name of a module to fetch
 	 * @return {jQuery.Deferred}
 	 */
 	function loadModuleScript( moduleName ) {

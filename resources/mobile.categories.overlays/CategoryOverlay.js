@@ -9,6 +9,9 @@
 	 * @class CategoryOverlay
 	 * @extends Overlay
 	 * @uses CategoryGateway
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function CategoryOverlay( options ) {
 		this.infiniteScroll = new InfiniteScroll();
@@ -22,9 +25,9 @@
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {mw.Api} defaults.api to use to construct gateway
-		 * @cfg {String} defaults.heading Title of the list of categories this page is
+		 * @cfg {string} defaults.heading Title of the list of categories this page is
 		 * categorized in.
-		 * @cfg {String} defaults.subheading Introduction text for the list of categories,
+		 * @cfg {string} defaults.subheading Introduction text for the list of categories,
 		 * the page belongs to.
 		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons.

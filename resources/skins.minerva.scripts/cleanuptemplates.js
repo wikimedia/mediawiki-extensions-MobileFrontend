@@ -9,7 +9,7 @@
 		 * friendly for mobile display.
 		 * @param {Object} $box element to extract the message from
 		 * @ignore
-		 * @return {String} html of message.
+		 * @return {string} html of message.
 		 */
 		function extractMessage( $box ) {
 			var selector = '.mbox-text, .ambox-text',
@@ -34,7 +34,7 @@
 		 *
 		 * @ignore
 		 *
-		 * @param {String} labelText The text value of the element
+		 * @param {string} labelText The text value of the element
 		 * @return {jQuery}
 		 */
 		function createLinkElement( labelText ) {
@@ -45,8 +45,8 @@
 		/**
 		 * Render a banner in a containing element.
 		 * @param {jQuery.Object} $container to render the page issues banner inside.
-		 * @param {String} labelText what the label of the page issues banner should say
-		 * @param {String} headingText the heading of the overlay that is created when the page issues banner is clicked
+		 * @param {string} labelText what the label of the page issues banner should say
+		 * @param {string} headingText the heading of the overlay that is created when the page issues banner is clicked
 		 * @ignore
 		 */
 		function createBanner( $container, labelText, headingText ) {

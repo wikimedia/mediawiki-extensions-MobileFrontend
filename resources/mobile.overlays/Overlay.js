@@ -24,25 +24,25 @@
 	OO.mfExtend( Overlay, View, {
 		/**
 		 * Identify whether the element contains position fixed elements
-		 * @property {Boolean}
+		 * @property {boolean}
 		 */
 		hasFixedHeader: true,
 		/**
 		 * Is overlay fullscreen
-		 * @property {Boolean}
+		 * @property {boolean}
 		 */
 		fullScreen: true,
 
 		/**
 		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		 * odd consequences on Opera Mobile (see bug 52361)
-		 * @property {String|jQuery.Object}
+		 * @property {string|jQuery.Object}
 		 */
 		appendToElement: '#mw-mf-viewport',
 
 		/**
 		 * Default class name
-		 * @property {String}
+		 * @property {string}
 		 */
 		className: 'overlay',
 		templatePartials: {
@@ -54,14 +54,14 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.saveMessage Caption for save button on edit form.
-		 * @cfg {String} defaults.cancelButton HTML of the cancel button.
-		 * @cfg {String} defaults.backButton HTML of the back button.
-		 * @cfg {String} defaults.headerButtonsListClassName A comma separated string of class
+		 * @cfg {string} defaults.saveMessage Caption for save button on edit form.
+		 * @cfg {string} defaults.cancelButton HTML of the cancel button.
+		 * @cfg {string} defaults.backButton HTML of the back button.
+		 * @cfg {string} defaults.headerButtonsListClassName A comma separated string of class
 		 * names of the wrapper of the header buttons.
-		 * @cfg {Boolean} defaults.headerChrome Whether the header has chrome.
-		 * @cfg {Boolean} defaults.fixedHeader Whether the header is fixed.
-		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 * @cfg {boolean} defaults.headerChrome Whether the header has chrome.
+		 * @cfg {boolean} defaults.fixedHeader Whether the header is fixed.
+		 * @cfg {string} defaults.spinner HTML of the spinner icon.
 		 * @cfg {Object} [defaults.footerAnchor] options for an optional Anchor that can appear in the footer
 		 */
 		defaults: {
@@ -90,7 +90,7 @@
 		},
 		/**
 		 * Flag overlay to close on content tap
-		 * @property {Boolean}
+		 * @property {boolean}
 		 */
 		closeOnContentTap: false,
 
@@ -216,9 +216,9 @@
 		/**
 		 * Detach the overlay from the current view
 		 * @method
-		 * @param {Boolean} [force] Whether the overlay should be closed regardless of
+		 * @param {boolean} [force] Whether the overlay should be closed regardless of
 		 * state (see PhotoUploadProgress)
-		 * @return {Boolean} Whether the overlay was successfully hidden or not
+		 * @return {boolean} Whether the overlay was successfully hidden or not
 		 */
 		hide: function () {
 			if ( this.fullScreen ) {
@@ -247,7 +247,7 @@
 		 * into consideration.
 		 * @method
 		 * @private
-		 * @param {Number} windowHeight The height of the window
+		 * @param {number} windowHeight The height of the window
 		 */
 		_resizeContent: function ( windowHeight ) {
 			this.$overlayContent.height(
@@ -269,7 +269,7 @@
 		 *
 		 * @method
 		 * @private
-		 * @param {String} el CSS selector for elements that may trigger virtual
+		 * @param {string} el CSS selector for elements that may trigger virtual
 		 * keyboard (usually inputs, textareas, contenteditables).
 		 */
 		_fixIosHeader: function ( el ) {
@@ -310,7 +310,7 @@
 		 * And we want display: table for headers.
 		 * @method
 		 * @protected
-		 * @param {String} className CSS selector to show
+		 * @param {string} className CSS selector to show
 		 */
 		showHidden: function ( className ) {
 			this.$( '.hideable' ).addClass( 'hidden' );

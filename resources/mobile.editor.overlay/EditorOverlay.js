@@ -16,6 +16,9 @@
 	 * @uses EditorGateway
 	 * @uses VisualEditorOverlay
 	 * @extends EditorOverlayBase
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function EditorOverlay( options ) {
 		this.gateway = new EditorGateway( {
@@ -89,7 +92,7 @@
 		/**
 		 * Check whether VisualEditor is enabled or not.
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isVisualEditorEnabled: function () {
 			return mw.config.get( 'wgVisualEditorConfig' ) &&
@@ -296,7 +299,7 @@
 
 		/**
 		 * Set content to the user input field.
-		 * @param {String} content The content to set.
+		 * @param {string} content The content to set.
 		 */
 		setContent: function ( content ) {
 			this.$content
@@ -307,7 +310,7 @@
 
 		/**
 		 * Returns the content of the user input field.
-		 * @return {String}
+		 * @return {string}
 		 */
 		getContent: function () {
 			return this.$content.val();
@@ -393,8 +396,8 @@
 		 * Reveals an abuse filter panel inside the view.
 		 * @method
 		 * @private
-		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
-		 * @param {String} message Message to show in the AbuseFilter overlay
+		 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
+		 * @param {string} message Message to show in the AbuseFilter overlay
 		 */
 		_showAbuseFilter: function ( type, message ) {
 			this.abuseFilterPanel.show( type, message );
@@ -489,7 +492,7 @@
 		/**
 		 * Checks whether the existing content has changed.
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		hasChanged: function () {
 			return this.gateway.hasChanged;

@@ -23,6 +23,9 @@
 	 * @uses Icon
 	 * @uses WatchstarGateway
 	 * @uses Toast
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function Watchstar( options ) {
 		var self = this,
@@ -57,7 +60,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {mw.Api} defaults.api
 		 * @cfg {Page} defaults.page Current page.
-		 * @cfg {String} defaults.funnel to log events with
+		 * @cfg {string} defaults.funnel to log events with
 		 */
 		defaults: {
 			page: undefined,

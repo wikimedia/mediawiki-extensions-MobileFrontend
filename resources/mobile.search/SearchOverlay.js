@@ -16,6 +16,9 @@
 	 * @extends Overlay
 	 * @uses SearchGateway
 	 * @uses Icon
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function SearchOverlay( options ) {
 		var self = this;
@@ -48,17 +51,17 @@
 		 * @cfg {Router} defaults.router instance
 		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
 		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
-		 * @cfg {String} defaults.searchTerm Search text.
-		 * @cfg {String} defaults.placeholderMsg Search input placeholder text.
-		 * @cfg {String} defaults.clearMsg Tooltip for clear button that appears when you type
+		 * @cfg {string} defaults.searchTerm Search text.
+		 * @cfg {string} defaults.placeholderMsg Search input placeholder text.
+		 * @cfg {string} defaults.clearMsg Tooltip for clear button that appears when you type
 		 * into search box.
-		 * @cfg {String} defaults.searchContentMsg Caption for a button performing full text
+		 * @cfg {string} defaults.searchContentMsg Caption for a button performing full text
 		 * search of a given search query.
-		 * @cfg {String} defaults.noResultsMsg Message informing user that no pages were found
+		 * @cfg {string} defaults.noResultsMsg Message informing user that no pages were found
 		 * for a given query.
-		 * @cfg {String} defaults.searchContentNoResultsMsg Used when no pages with matching
+		 * @cfg {string} defaults.searchContentNoResultsMsg Used when no pages with matching
 		 * titles were found.
-		 * @cfg {String} defaults.action The value of wgScript
+		 * @cfg {string} defaults.action The value of wgScript
 		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
@@ -145,6 +148,7 @@
 
 		/**
 		 * Initialize the button that clears the search field
+		 * @return {boolean} False to cancel the native event
 		 */
 		onClickClear: function () {
 			this.$input.val( '' ).focus();
@@ -217,7 +221,7 @@
 			 * @type {Object}
 			 * @property {jQuery.Object} result The jQuery-wrapped DOM element that
 			 *  the user clicked
-			 * @property {Number} resultIndex The zero-based index of the
+			 * @property {number} resultIndex The zero-based index of the
 			 *  result in the set of results
 			 * @property {jQuery.Event} originalEvent The original event
 			 */

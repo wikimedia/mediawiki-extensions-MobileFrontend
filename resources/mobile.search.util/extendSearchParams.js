@@ -17,10 +17,10 @@
 	 * );
 	 * ```
 	 *
-	 * @param {String} feature The name of the feature
+	 * @param {string} feature The name of the feature
 	 * @throws {Error} If `feature` isn't one that shows Wikidata descriptions. See the
 	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
-	 *
+	 * @return {Object}
 	 * @ignore
 	 */
 	function extendSearchParams( feature ) {

@@ -23,7 +23,7 @@
 		 * Searches core module registry using mw.loader.require before consulting
 		 * its own local registry. This method is deprecated, please do not use.
 		 *
-		 * @param {String} id Required module id.
+		 * @param {string} id Required module id.
 		 * @return {Object} Required module, can be any JavaScript object.
 		 */
 		require: function ( id ) {
@@ -32,6 +32,7 @@
 
 			/**
 			 * @ignore
+			 * @return {Object} Module
 			 */
 			function localRequire() {
 				if ( !registry.hasOwnProperty( id ) ) {
@@ -55,7 +56,7 @@
 		/**
 		 * Define a module which can be later required (imported) using require().
 		 *
-		 * @param {String} id Defined module id.
+		 * @param {string} id Defined module id.
 		 * @param {Object} obj Defined module body, can be any JavaScript object.
 		 * @return {Object}
 		 */
@@ -70,7 +71,7 @@
 			return {
 				/**
 				 * @see ModuleLoader#deprecate
-				 * @param {String} deprecatedId Defined module id, which is deprecated.
+				 * @param {string} deprecatedId Defined module id, which is deprecated.
 				 */
 				deprecate: function ( deprecatedId ) {
 					self.deprecate( deprecatedId, obj, id );
@@ -81,9 +82,9 @@
 		/**
 		 * Deprecate a module and give an replacement (if there is any).
 		 *
-		 * @param {String} id Defined module id, which is deprecated.
+		 * @param {string} id Defined module id, which is deprecated.
 		 * @param {Object} obj Defined module body, can be any JavaScript object.
-		 * @param {String} [replacement] Give an optional replacement for this module (which
+		 * @param {string} [replacement] Give an optional replacement for this module (which
 		 * needs to be already defined!)
 		 */
 		deprecate: function ( id, obj, replacement ) {

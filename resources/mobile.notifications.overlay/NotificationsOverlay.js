@@ -8,6 +8,9 @@
 	 * @class NotificationsOverlay
 	 * @extend Overlay
 	 * @uses mw.Api
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	NotificationsOverlay = function ( options ) {
 		var modelManager, unreadCounter, wrapperWidget,
@@ -97,7 +100,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.heading Heading text.
+		 * @cfg {string} defaults.heading Heading text.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'notifications' ),
@@ -120,7 +123,7 @@
 		 * Check if notifications have finished loading
 		 *
 		 * @method
-		 * @return {Boolean} Notifications list has finished loading
+		 * @return {boolean} Notifications list has finished loading
 		 */
 		isDoneLoading: function () {
 			return this.doneLoading;
@@ -161,7 +164,7 @@
 		/**
 		 * Update the unread number on the notifications badge
 		 *
-		 * @param {Number} count Number of unread notifications
+		 * @param {number} count Number of unread notifications
 		 * @method
 		 */
 		onUnreadCountChange: function ( count ) {

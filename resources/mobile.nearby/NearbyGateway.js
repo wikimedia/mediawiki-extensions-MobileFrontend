@@ -7,7 +7,7 @@
 	/**
 	 * API for retrieving nearby pages
 	 * @class NearbyGateway
-	 * @param {Object} options
+	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api
 	 */
 	function NearbyGateway( options ) {
@@ -20,8 +20,8 @@
 		 * depending on size.
 		 * @method
 		 * @private
-		 * @param {Number} d The distance in meters.
-		 * @return {String} message stating how far the user is from the point of interest.
+		 * @param {number} d The distance in meters.
+		 * @return {string} message stating how far the user is from the point of interest.
 		 */
 		_distanceMessage: function ( d ) {
 			if ( d < 1 ) {
@@ -49,8 +49,8 @@
 		 * Returns a list of pages around a given point
 		 * @method
 		 * @param {Object} coords In form { latitude: 0, longitude: 2 }
-		 * @param {Number} range Number of meters to perform a geosearch for
-		 * @param {String} exclude Name of a title to exclude from the list of results
+		 * @param {number} range Number of meters to perform a geosearch for
+		 * @param {string} exclude Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		getPages: function ( coords, range, exclude ) {
@@ -62,8 +62,8 @@
 		/**
 		 * Gets the pages around a page. It excludes itself from the search
 		 * @method
-		 * @param {String} page Page title like "W_San_Francisco"
-		 * @param {Number} range Number of meters to perform a geosearch for
+		 * @param {string} page Page title like "W_San_Francisco"
+		 * @param {number} range Number of meters to perform a geosearch for
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		getPagesAroundPage: function ( page, range ) {
@@ -77,8 +77,8 @@
 		 * @method
 		 * @private
 		 * @param {Object} params Parameters to use for searching
-		 * @param {Number} range Number of meters to perform a geosearch for
-		 * @param {String} exclude Name of a title to exclude from the list of results
+		 * @param {number} range Number of meters to perform a geosearch for
+		 * @param {string} exclude Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		_search: function ( params, range, exclude ) {

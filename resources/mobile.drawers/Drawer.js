@@ -16,7 +16,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
+		 * @cfg {string} defaults.cancelButton HTML of the button that closes the drawer.
 		 */
 		defaults: $.extend( {}, Panel.prototype.defaults, {
 			cancelButton: new Icon( {
@@ -29,12 +29,12 @@
 		className: 'drawer position-fixed',
 		/**
 		 * Defines an element that the Drawer should automatically be appended to.
-		 * @property {String}
+		 * @property {string}
 		 */
 		appendToElement: 'body',
 		/**
 		 * Whether the drawer should disappear on a scroll event
-		 * @property {Boolean}
+		 * @property {boolean}
 		 */
 		closeOnScroll: true,
 		events: $.extend( {}, Panel.prototype.events, {

@@ -8,7 +8,7 @@
 	 *
 	 * @method
 	 * @param {jQuery.Object} $container to enable toggling on
-	 * @param {String} prefix a prefix to use for the id.
+	 * @param {string} prefix a prefix to use for the id.
 	 * @param {Page} page The current page
 	 * @ignore
 	 */

@@ -16,8 +16,8 @@
 	 *
 	 * @ignore
 	 * @param {Object[]} languages list of language objects as returned by the API
-	 * @param {String|undefined} deviceLanguage the device's primary language
-	 * @return {String|undefined} Return undefined if the article is not available in
+	 * @param {string|undefined} deviceLanguage the device's primary language
+	 * @return {string|undefined} Return undefined if the article is not available in
 	 *  the (general or variant) device language
 	 */
 	function getDeviceLanguageOrParent( languages, deviceLanguage ) {
@@ -62,9 +62,9 @@
 	 * their language names.
 	 *
 	 * @param {Object[]} languages list of language objects as returned by the API
-	 * @param {Array|Boolean} variants language variant objects or false if no variants exist
+	 * @param {Array|boolean} variants language variant objects or false if no variants exist
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
-	 * @param {String|undefined} deviceLanguage the device's primary language
+	 * @param {string} [deviceLanguage] the device's primary language
 	 * @return {Object[]}
 	 */
 	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
@@ -122,6 +122,7 @@
 		 * @ignore
 		 * @param {Object} a first language
 		 * @param {Object} b second language
+		 * @return {number} Comparison value, 1 or -1
 		 */
 		function compareLanguagesByLanguageName( a, b ) {
 			return a.autonym.toLocaleLowerCase() < b.autonym.toLocaleLowerCase() ? -1 : 1;
@@ -159,7 +160,7 @@
 	 * Increment the current language usage by one and save it to the device.
 	 * Cap the result at 100.
 	 *
-	 * @param {String} languageCode
+	 * @param {string} languageCode
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
 	 */
 	util.saveLanguageUsageCount = function ( languageCode, frequentlyUsedLanguages ) {

@@ -24,10 +24,10 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Array} defaults.headings A list of {Section} objects to render heading links
 		 * for. If not set ajax request will be performed.
-		 * @cfg {String} defaults.heading Heading for talk overlay.
-		 * @cfg {String} defaults.leadHeading Heading for a discussion which has no heading
+		 * @cfg {string} defaults.heading Heading for talk overlay.
+		 * @cfg {string} defaults.leadHeading Heading for a discussion which has no heading
 		 * (lead section of talk page).
-		 * @cfg {String} defaults.headerButtonsListClassName Class name of the header buttons
+		 * @cfg {string} defaults.headerButtonsListClassName Class name of the header buttons
 		 * list
 		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons. Default list includes an 'add' button, which opens

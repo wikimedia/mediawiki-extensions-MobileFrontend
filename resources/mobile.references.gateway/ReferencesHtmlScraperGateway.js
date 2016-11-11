@@ -14,7 +14,7 @@
 
 	OO.mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		/**
-		 * @param {String} id of a DOM element in the page
+		 * @param {string} id of a DOM element in the page
 		 * @param {jQuery.Object} $container to scan for an element
 		 * @return {jQuery.Promise} that can be used by getReference
 		 */

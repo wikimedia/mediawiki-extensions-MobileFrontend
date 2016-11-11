@@ -2,7 +2,9 @@
 	/**
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.mixin.LookupElement
-	 * @param {Object} options
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 * @param {CategoryGateway} options.gateway to use to retrieve search results
 	 * @param {jQuery.Object} options.suggestions container element for search suggestions
 	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.

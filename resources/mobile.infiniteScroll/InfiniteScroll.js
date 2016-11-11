@@ -51,7 +51,7 @@
 	 */
 	/**
 	 * Constructor.
-	 * @param {Number} threshold distance in pixels used to calculate if scroll
+	 * @param {number} threshold distance in pixels used to calculate if scroll
 	 * position is near the end of the $el
 	 */
 	function InfiniteScroll( threshold ) {
@@ -106,7 +106,7 @@
 		 * Is the scroll position near the end of the container element?
 		 * @method
 		 * @private
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		scrollNearEnd: function () {
 			var scrollBottom = $( window ).scrollTop() + $( window ).height(),

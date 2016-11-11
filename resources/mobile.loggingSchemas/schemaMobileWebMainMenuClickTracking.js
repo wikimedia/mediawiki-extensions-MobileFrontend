@@ -13,11 +13,11 @@
 			0.5,
 			/**
 			 * @cfg {Object} defaults Default options hash
-			 * @cfg {String} defaults.mobileMode whether user is in stable or beta
-			 * @cfg {String|undefined} defaults.username Username if the user is logged in, otherwise -
+			 * @cfg {string} defaults.mobileMode whether user is in stable or beta
+			 * @cfg {string} [defaults.username] Username if the user is logged in, otherwise -
 			 *  undefined. Assigning undefined will make event logger omit this property when sending
 			 *  the data to a server. According to the schema username is optional.
-			 * @cfg {Number|undefined} defaults.userEditCount The number of edits the user has made
+			 * @cfg {number} [defaults.userEditCount] The number of edits the user has made
 			 *  if the user is logged in, otherwise - undefined. Assigning undefined will make event
 			 *  logger omit this property when sending the data to a server. According to the schema
 			 *  userEditCount is optional.

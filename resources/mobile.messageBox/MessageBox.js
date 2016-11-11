@@ -14,9 +14,9 @@
 		isTemplateMode: true,
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} [defaults.heading] heading to show along with message (text)
-		 * @cfg {String} defaults.msg message to show (html)
-		 * @cfg {String} defaults.className either errorbox, warningbox or successbox
+		 * @cfg {string} [defaults.heading] heading to show along with message (text)
+		 * @cfg {string} defaults.msg message to show (html)
+		 * @cfg {string} defaults.className either errorbox, warningbox or successbox
 		 */
 		defaults: {},
 		template: mw.template.get( 'mobile.messageBox', 'MessageBox.hogan' )

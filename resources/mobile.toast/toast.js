@@ -15,8 +15,8 @@
 	/**
 	 * Show a message with the given class in a toast.
 	 * @method
-	 * @param {String} msg Message to show in the toast
-	 * @param {String} cssClass CSS class to add to the element
+	 * @param {string} msg Message to show in the toast
+	 * @param {string} cssClass CSS class to add to the element
 	 */
 	Toast.prototype.show = function ( msg, cssClass ) {
 		this.notification = mw.notify( msg, {
@@ -44,8 +44,8 @@
 	 * This is to ensure that the page needs to be reloaded before adding
 	 * a new message for showing later.
 	 * @method
-	 * @param {String} content Content to be placed in element
-	 * @param {String} className class to add to element
+	 * @param {string} content Content to be placed in element
+	 * @param {string} className class to add to element
 	 */
 	Toast.prototype.showOnPageReload = function ( content, className ) {
 		if ( settings.get( settingsKey ) ) {

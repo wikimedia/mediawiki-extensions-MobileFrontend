@@ -15,7 +15,7 @@
 	 * If cookies are not enabled, show a toast and die.
 	 * @method
 	 * @ignore
-	 * @return {Boolean|undefined}
+	 * @return {boolean|undefined}
 	 */
 	function desktopViewClick() {
 		if ( !cookiesEnabled() ) {

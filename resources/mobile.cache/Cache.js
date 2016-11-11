@@ -19,8 +19,8 @@
 	/**
 	 * Retrieve a cached value from a key
 	 * @method get
-	 * @param {String} key
-	 * @return {*}
+	 * @param {string} key
+	 * @return {Mixed}
 	 */
 	MemoryCache.prototype.get = function ( key ) {
 		return this._cache[ key ];
@@ -29,8 +29,8 @@
 	/**
 	 * Cache a value by key
 	 * @method set
-	 * @param {String} key
-	 * @param {*} value
+	 * @param {string} key
+	 * @param {Mixed} value
 	 */
 	MemoryCache.prototype.set = function ( key, value ) {
 		this._cache[ key ] = value;

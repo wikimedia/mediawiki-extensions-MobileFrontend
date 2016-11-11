@@ -3,8 +3,9 @@
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
-	 * @param {Number} size
-	 * @ignore.
+	 * @ignore
+	 * @param {number} size
+	 * @return {number}
 	 */
 	function findSizeBucket( size ) {
 		var i = 0;
@@ -17,8 +18,10 @@
 	/**
 	 * API for retrieving image thumbnails for a given page
 	 * @class ImageGateway
-	 * @cfg {Object} options
-	 * @cfg {mw.Api} options.api
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
+	 * @cfg {mw.Api} api
 	 */
 	function ImageGateway( options ) {
 		this._cache = {};
@@ -27,7 +30,7 @@
 	ImageGateway.prototype = {
 		/**
 		 * Get thumbnail via the API and cache it. Return the result from the cache if exists.
-		 * @param {String} title Url of image
+		 * @param {string} title Url of image
 		 * @return {jQuery.Deferred} with the image info
 		 */
 		getThumb: function ( title ) {

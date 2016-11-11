@@ -42,6 +42,7 @@
 	 * @extends Overlay
 	 * @uses Icon
 	 * @uses user
+	 * @param {Object} options Configuration options
 	 */
 	function EditorOverlayBase( options ) {
 		var self = this;
@@ -62,15 +63,15 @@
 		this.sessionId = options.sessionId;
 		this.overlayManager = options.overlayManager;
 		this.allowCloseWindow = mw.confirmCloseWindow( {
-			/** Returns true, if content has changed, otherwise false */
+			// Returns true if content has changed
 			test: function () {
 				// Check if content has changed
 				return self.hasChanged();
 			},
 
-			/** Message to show the user, if content has changed */
+			// Message to show the user, if content has changed
 			message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-			/** Event namespace */
+			// Event namespace
 			namespace: 'editwarning'
 		} );
 
@@ -83,27 +84,27 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {OverlayManager} defaults.overlayManager instance
 		 * @cfg {mw.Api} defaults.api to interact with
-		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
+		 * @cfg {boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
-		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes
+		 * @cfg {string} defaults.continueMsg Caption for the next button on edit form which takes
 		 * you to the screen that shows a preview and license information.
-		 * @cfg {String} defaults.cancelMsg Caption for cancel button on edit form.
-		 * @cfg {String} defaults.closeMsg Caption for a button that takes you back to editing
+		 * @cfg {string} defaults.cancelMsg Caption for cancel button on edit form.
+		 * @cfg {string} defaults.closeMsg Caption for a button that takes you back to editing
 		 * from edit preview screen.
-		 * @cfg {String} defaults.summaryRequestMsg Header above edit summary input field asking
+		 * @cfg {string} defaults.summaryRequestMsg Header above edit summary input field asking
 		 * the user to summarize the changes they made to the page.
-		 * @cfg {String} defaults.summaryMsg A placeholder with examples for the summary input
+		 * @cfg {string} defaults.summaryMsg A placeholder with examples for the summary input
 		 * field asking user what they changed.
-		 * @cfg {String} defaults.placeholder Placeholder text for empty sections.
-		 * @cfg {String} defaults.waitMsg Text that displays while a page edit is being saved.
-		 * @cfg {String} defaults.waitIcon HTML of the icon that displays while a page edit
+		 * @cfg {string} defaults.placeholder Placeholder text for empty sections.
+		 * @cfg {string} defaults.waitMsg Text that displays while a page edit is being saved.
+		 * @cfg {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
-		 * @cfg {String} defaults.captchaMsg Placeholder for captcha input field.
-		 * @cfg {String} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
+		 * @cfg {string} defaults.captchaMsg Placeholder for captcha input field.
+		 * @cfg {string} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
 		 * and a new one is displayed.
-		 * @cfg {String} defaults.switchMsg Label for button that allows the user to switch between
+		 * @cfg {string} defaults.switchMsg Label for button that allows the user to switch between
 		 * two different editing interfaces.
-		 * @cfg {String} defaults.licenseMsg Text and link of the license, under which this contribution will be
+		 * @cfg {string} defaults.licenseMsg Text and link of the license, under which this contribution will be
 		 * released to inform the user.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
@@ -156,6 +157,7 @@
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 * @method
+		 * @return {boolean} The user confirmed saving
 		 */
 		confirmSave: function () {
 			if ( this.isNewPage &&
@@ -209,7 +211,7 @@
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.
 		 * @method
-		 * @param {String} text Text of message to display to user
+		 * @param {string} text Text of message to display to user
 		 */
 		reportError: function ( text ) {
 			toast.show( text, 'error' );
@@ -339,8 +341,8 @@
 		/**
 		 * Check, if the user should be asked if they really want to leave the page.
 		 * Returns false, if he hasn't made changes, otherwise true.
-		 * @param {Boolean} [force] Whether this function should always return false
-		 * @return {Boolean}
+		 * @param {boolean} [force] Whether this function should always return false
+		 * @return {boolean}
 		 */
 		shouldConfirmLeave: function ( force ) {
 			if ( force || !this.hasChanged() ) {

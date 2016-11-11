@@ -5,7 +5,7 @@
 	/**
 	 * @class WatchListGateway
 	 * @param {mw.Api} api
-	 * @param {String} lastTitle of page listed in Watchlist to be used as a continuation parameter
+	 * @param {string} lastTitle of page listed in Watchlist to be used as a continuation parameter
 	 */
 	function WatchListGateway( api, lastTitle ) {
 		this.api = api;

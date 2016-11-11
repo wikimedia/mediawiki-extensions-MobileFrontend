@@ -52,7 +52,7 @@
 		 * @method
 		 * @private
 		 * @param {Overlay} overlay to hide
-		 * @return {Boolean} Whether the overlay has been hidden
+		 * @return {boolean} Whether the overlay has been hidden
 		 */
 		_hideOverlay: function ( overlay ) {
 			var result;
@@ -156,7 +156,7 @@
 		 * Check if a given path matches one of the entries.
 		 * @method
 		 * @private
-		 * @param {String} path Path (hash) to check.
+		 * @param {string} path Path (hash) to check.
 		 * @param {Object} entry Entry object created in OverlayManager#add.
 		 * @return {Object|null} Match object with factory function's result. Returns null if no match.
 		 * or null if no match.

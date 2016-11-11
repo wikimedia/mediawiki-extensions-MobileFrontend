@@ -3,6 +3,9 @@
 	 * API for managing clickable watchstar
 	 *
 	 * @class WatchstarGateway
+	 *
+	 * @constructor
+	 * @param {mw.Api} api
 	 */
 	function WatchstarGateway( api ) {
 		this.api = api;
@@ -29,7 +32,7 @@
 		 * Loads the watch status for a given list of page ids in bulk
 		 * @method
 		 * @param {Array} ids A list of page ids
-		 * @param {Boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
+		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
 		 * @return {jQuery.Deferred}
 		 */
 		loadWatchStatus: function ( ids, markAsAllWatched ) {
@@ -59,7 +62,7 @@
 		 * Marks whether a given page is watched or not to avoid an API call
 		 * @method
 		 * @param {Page} page Page view object
-		 * @param {Boolean} isWatched True if page is watched
+		 * @param {boolean} isWatched True if page is watched
 		 */
 		setWatchedPage: function ( page, isWatched ) {
 			this._cache[ page.getId() ] = isWatched;
@@ -69,7 +72,7 @@
 		 * Check if a given page is watched
 		 * @method
 		 * @param {Page} page Page view object
-		 * @return {Boolean|undefined} undefined when the watch status is not known.
+		 * @return {boolean|undefined} undefined when the watch status is not known.
 		 */
 		isWatchedPage: function ( page ) {
 			var id = page.getId();

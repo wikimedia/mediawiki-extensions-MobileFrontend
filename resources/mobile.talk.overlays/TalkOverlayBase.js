@@ -8,6 +8,9 @@
 	 * @extends Overlay
 	 * @uses Page
 	 * @uses PageGateway
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function TalkOverlayBase( options ) {
 		this.pageGateway = new PageGateway( options.api );

@@ -77,7 +77,7 @@
 		/**
 		 * Handles the 'search-result-click' event.
 		 *
-		 * @param {Object} event with property {Number} event.index The zero-based index of the result in the
+		 * @param {Object} event with property {number} event.index The zero-based index of the result in the
 		 *  set of results
 		 */
 		onSearchResultClick: function ( event ) {

@@ -8,6 +8,9 @@
 	 * @class AbuseFilterPanel
 	 * @extends View
 	 * @uses AbuseFilterOverlay
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 * FIXME: should extend Panel not View. Or the name should be changed to something meaningful.
 	 */
 	function AbuseFilterPanel( options ) {
@@ -19,7 +22,7 @@
 	OO.mfExtend( AbuseFilterPanel, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.readMoreMsg A caption for the button allowing the user to read
+		 * @cfg {string} defaults.readMoreMsg A caption for the button allowing the user to read
 		 * more about the problems with their edit.
 		 * @cfg {OverlayManager} defaults.overlayManager instance
 		 */
@@ -32,8 +35,8 @@
 		/**
 		 * Show the panel. Create a route to show AbuseFilterOverlay with message.
 		 * @method
-		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
-		 * @param {String} message Message to show in the AbuseFilter overlay
+		 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
+		 * @param {string} message Message to show in the AbuseFilter overlay
 		 */
 		show: function ( type, message ) {
 			var msg;

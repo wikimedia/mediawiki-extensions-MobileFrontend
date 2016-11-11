@@ -11,7 +11,7 @@
 		/**
 		 * Gets current mobile mode
 		 * @method
-		 * @return {String} Name of mode
+		 * @return {string} Name of mode
 		 */
 		getMode: function () {
 			return mw.config.get( 'wgMFMode' );
@@ -20,7 +20,7 @@
 		/**
 		 * Determines if mobile mode is beta
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isBetaGroupMember: function () {
 			return this.getMode() === 'beta';

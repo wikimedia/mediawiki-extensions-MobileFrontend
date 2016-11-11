@@ -15,7 +15,6 @@
 		"dot-notation": [ "error", { "allowKeywords": true } ],
 		"object-property-newline": "error",
 		"wrap-iife": 0,
-		"valid-jsdoc": 0,
 		"computed-property-spacing": 0,
 		"no-use-before-define": 0,
 		"no-underscore-dangle": 0

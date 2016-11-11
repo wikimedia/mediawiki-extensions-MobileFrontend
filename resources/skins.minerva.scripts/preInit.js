@@ -109,6 +109,7 @@
 	 *
 	 * @method
 	 * @private
+	 * @return {Page}
 	 * @ignore
 	 */
 	function loadCurrentPage() {

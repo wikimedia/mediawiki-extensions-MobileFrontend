@@ -5,6 +5,8 @@
 	 *
 	 * @class ReferencesGateway
 	 * @abstract
+	 *
+	 * @constructor
 	 * @param {mw.Api} api
 	 */
 	function ReferencesGateway( api ) {
@@ -16,14 +18,12 @@
 		 * Return the matched reference via API or DOM query
 		 *
 		 * @method
-		 * @param {String} id CSS selector
+		 * @param {string} id CSS selector
 		 * @param {Page} page to find reference for
 		 * @return {jQuery.Promise} resolves with an Object representing reference with a `text` property
 		 *  or false if the reference does not exist
 		 */
-		getReference: function () {
-			throw new Error( 'Method unimplemented' );
-		}
+		getReference: null
 	} );
 
 	M.define( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway );

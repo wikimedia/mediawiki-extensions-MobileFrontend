@@ -4,7 +4,9 @@
 	/**
 	 * API for retrieving gallery photos
 	 * @class PhotoListApi
-	 * @param {Object} options
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api
 	 */
 	function PhotoListGateway( options ) {
@@ -26,8 +28,8 @@
 		 * date suffix in format YYYY-MM-DD HH-MM
 		 * @method
 		 * @private
-		 * @param {String} title Title of file
-		 * @return {String} Description for file
+		 * @param {string} title Title of file
+		 * @return {string} Description for file
 		 */
 		_getDescription: function ( title ) {
 			title = title.replace( /\.[^\. ]+$/, '' ); // replace filename suffix
@@ -38,6 +40,7 @@
 		/**
 		 * Returns the value in pixels of a medium thumbnail
 		 * @method
+		 * @return {number}
 		 */
 		getWidth: function () {
 			return IMAGE_WIDTH;

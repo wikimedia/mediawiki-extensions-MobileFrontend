@@ -2,12 +2,14 @@
 	/**
 	 * API that helps save and retrieve page content
 	 * @class EditorGateway
-	 * @param {Object} options
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api an Api to use.
-	 * @param {String} options.title the title to edit
-	 * @param {Number} options.sectionId the id of the section to operate edits on.
-	 * @param {Number} [options.oldId] revision to operate on. If absent defaults to latest.
-	 * @param {Boolean} [options.isNewPage] whether the page being created is new
+	 * @param {string} options.title the title to edit
+	 * @param {number} options.sectionId the id of the section to operate edits on.
+	 * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
+	 * @param {boolean} [options.isNewPage] whether the page being created is new
 	 */
 	function EditorGateway( options ) {
 		this.api = options.api;
@@ -82,7 +84,7 @@
 		 * Mark content as modified and set changes to be submitted when #save
 		 * is invoked.
 		 * @method
-		 * @param {String} content New section content.
+		 * @param {string} content New section content.
 		 */
 		setContent: function ( content ) {
 			if ( this.originalContent !== content ) {
@@ -97,7 +99,7 @@
 		 * Mark content as modified and set text that should be prepended to given
 		 * section when #save is invoked.
 		 * @method
-		 * @param {String} text Text to be prepended.
+		 * @param {string} text Text to be prepended.
 		 */
 		setPrependText: function ( text ) {
 			this.prependtext = text;
@@ -107,11 +109,11 @@
 		/**
 		 * Save the new content of the section, previously set using #setContent.
 		 * @method
-		 * @param {Object} options
-		 *      [options.summary] String Optional summary for the edit.
-		 *     [options.captchaId] String If CAPTCHA was requested, ID of the
+		 * @param {Object} options Configuration options
+		 * @param {string} [options.summary] Optional summary for the edit.
+		 * @param {string} [options.captchaId] If CAPTCHA was requested, ID of the
 		 * captcha.
-		 *     [options.captchaWord] String If CAPTCHA was requested, term
+		 * @param {string} [options.captchaWord] If CAPTCHA was requested, term
 		 * displayed in the CAPTCHA.
 		 * @return {jQuery.Deferred} On failure callback is passed an object with
 		 * `type` and `details` properties. `type` is a string describing the type

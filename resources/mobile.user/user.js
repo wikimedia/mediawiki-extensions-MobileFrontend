@@ -18,7 +18,7 @@
 		/**
 		 * Find current users edit count
 		 * @method
-		 * @return {Number} the edit count of the current user on the current wiki.
+		 * @return {number} the edit count of the current user on the current wiki.
 		 */
 		getEditCount: function () {
 			return mw.config.get( 'wgUserEditCount' );
@@ -28,6 +28,8 @@
 		 * For reasons I do not understand getGroups in core causes an unnecessary ajax request
 		 * The information this returns is identical to the content of the config variable.
 		 * To avoid an unnecessary ajax request on every page view simply use config variable.
+		 *
+		 * @return {jQuery.Deferred}
 		 */
 		getGroups: function () {
 			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
@@ -36,7 +38,7 @@
 		* Wrapper for mw.user.sessionId().
 		*
 		* @method
-		* @return {String}
+		* @return {string}
 		*/
 		getSessionId: function () {
 			// FIXME: Remove this when we're confident enough old IDs have been removed.
@@ -52,7 +54,7 @@
 		/**
 		* User Bucketing for A/B testing
 		* (we want this to be the same everywhere)
-		* @return {Boolean}
+		* @return {boolean}
 		*/
 		inUserBucketA: function () {
 			return mw.config.get( 'wgUserId' ) % 2 === 0;

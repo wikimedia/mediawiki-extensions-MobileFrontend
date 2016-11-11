@@ -14,15 +14,15 @@
 		 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
 		 *
 		 * @method
-		 * @param {String} hash A hash to escape
-		 * @return {String}
+		 * @param {string} hash A hash to escape
+		 * @return {string}
 		 */
 		escapeHash: function ( hash ) {
 			return hash.replace( /(:|\.)/g, '\\$1' );
 		},
 		/**
 		 * Return wgWikiBaseItemID config variable or 'wikidataid' query parameter if exits
-		 * @return {null|String}
+		 * @return {null|string}
 		 */
 		getWikiBaseItemId: function () {
 			var id = mw.config.get( 'wgWikibaseItemId' ),

@@ -8,6 +8,9 @@
 	 * @extends PageList
 	 * @class WatchList
 	 * @uses InfiniteScroll
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function WatchList( options ) {
 		var lastTitle;
@@ -75,6 +78,7 @@
 		 * Get the last title from the rendered HTML.
 		 * Used for initializing the API
 		 * @param {jQuery.Object} $el Dom element of the list
+		 * @return {string}
 		 */
 		getLastTitle: function ( $el ) {
 			return $el.find( 'li:last' ).attr( 'title' );

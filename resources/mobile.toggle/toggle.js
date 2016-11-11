@@ -193,7 +193,7 @@
 	 * Reveals an element and its parent section as identified by it's id
 	 *
 	 * @ignore
-	 * @param {String} selector A css selector that identifies a single element
+	 * @param {string} selector A css selector that identifies a single element
 	 * @param {Object} $container jQuery element to search in
 	 */
 	Toggler.prototype.reveal = function ( selector, $container ) {
@@ -222,7 +222,7 @@
 	 * is enabled.
 	 *
 	 * @param {jQuery.Object} $container to apply toggling to
-	 * @param {String} prefix a prefix to use for the id.
+	 * @param {string} prefix a prefix to use for the id.
 	 * @param {Page} [page] to allow storage of session for future visits
 	 * @param {Page} [isClosed] whether the element should begin closed
 	 * @private

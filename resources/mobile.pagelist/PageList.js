@@ -15,7 +15,7 @@
 	OO.mfExtend( PageList, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Boolean} defaults.imagesDisabled whether to show images or not.
+		 * @cfg {boolean} defaults.imagesDisabled whether to show images or not.
 		 * @cfg {Page[]} defaults.pages Array of page objects returned from the server.
 		 * E.g. [
 		 *   {

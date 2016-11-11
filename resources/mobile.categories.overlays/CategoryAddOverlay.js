@@ -11,6 +11,7 @@
 	 * @class CategoryAddOverlay
 	 * @extends Overlay
 	 * @uses CategoryGateway
+	 * @param {Object} options Configuration options
 	 */
 	function CategoryAddOverlay( options ) {
 		options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
@@ -22,8 +23,8 @@
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {mw.Api} defaults.api to use to construct gateway
-		 * @cfg {String} defaults.waitMsg Text that displays while a page edit is being saved.
-		 * @cfg {String} defaults.waitIcon HTML of the icon that displays while a page edit
+		 * @cfg {string} defaults.waitMsg Text that displays while a page edit is being saved.
+		 * @cfg {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {

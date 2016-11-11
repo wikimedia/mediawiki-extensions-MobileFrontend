@@ -12,6 +12,7 @@
 		/**
 		 * Memoized version of the method
 		 * @ignore
+		 * @return {Function}
 		 */
 		var memoized = function () {
 			var cache = this[ '__cache' + memoized.cacheId ] ||
@@ -29,7 +30,7 @@
 	/**
 	 * Representation of user's current browser
 	 * @class Browser
-	 * @param {String} ua the user agent of the current browser
+	 * @param {string} ua the user agent of the current browser
 	 * @param {jQuery.Object} $container an element to associate with the Browser object
 	 */
 	function Browser( ua, $container ) {
@@ -61,8 +62,8 @@
 		/**
 		 * Returns whether the current browser is an ios device.
 		 * FIXME: jquery.client does not support iPad detection so we cannot use it.
-		 * @param {Number} [version] integer describing a specific version you want to test against.
-		 * @return {Boolean}
+		 * @param {number} [version] integer describing a specific version you want to test against.
+		 * @return {boolean}
 		 */
 		isIos: memoize( function ( version ) {
 			var ua = this.userAgent,
@@ -98,7 +99,7 @@
 		/**
 		 * Determine if a device is Android 2.
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isAndroid2: memoize( function () {
 			return /Android 2/.test( this.userAgent );
@@ -106,7 +107,7 @@
 		/**
 		 * Determine if a device has a widescreen.
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isWideScreen: memoize( function () {
 			var val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
@@ -115,8 +116,8 @@
 		} ),
 		/**
 		 * Checks browser support for a given CSS property
-		 * @param {String} [property] the name of the property being tested
-		 * @return {Boolean}
+		 * @param {string} [property] the name of the property being tested
+		 * @return {boolean}
 		 */
 		supportsCSSProperty: memoize( function ( property ) {
 			var elem = document.createElement( 'foo' );
@@ -134,7 +135,7 @@
 		 * former.
 		 * See http://stackoverflow.com/a/12621264/365238
 		 *
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		supportsAnimations: memoize( function () {
 			// don't trust Android 2.x, really
@@ -152,7 +153,7 @@
 		 * Whether touchstart and other touch events are supported by the current browser.
 		 *
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		supportsTouchEvents: memoize( function () {
 			return 'ontouchstart' in window;
@@ -160,14 +161,14 @@
 		/**
 		 * Detect if browser supports geolocation
 		 * @method
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		supportsGeoLocation: memoize( function () {
 			return 'geolocation' in navigator;
 		} ),
 		/**
 		 * Detect if we support file input uploads
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		supportsFileUploads: memoize( function () {
 			var browserSupported;

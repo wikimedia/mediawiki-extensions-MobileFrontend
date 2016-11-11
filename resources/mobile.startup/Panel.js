@@ -6,6 +6,9 @@
 	 * An abstract class for a {@link View} that comprises a simple panel.
 	 * @class Panel
 	 * @extends View
+	 *
+	 * @constructor
+	 * @param {Object} options Configuration options
 	 */
 	function Panel() {
 		View.apply( this, arguments );
@@ -64,6 +67,7 @@
 		/**
 		 * Determines if panel is visible
 		 * @method
+		 * @return {boolean} Panel is visible
 		 */
 		isVisible: function () {
 			return this.$el.hasClass( 'visible' );
