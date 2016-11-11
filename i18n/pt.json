@@ -315,7 +315,7 @@
 	"mobile-frontend-user-page-desired-action": "Esta página deveria ser criada e editada por $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Criar a sua própria página",
 	"mobile-frontend-user-page-create-user-page-link-label": "Criar uma página intitulada $1",
-	"mobile-frontend-quick-lookup-looking": "A procurar por \"$1\".",
+	"mobile-frontend-quick-lookup-looking": "A procurar \"$1\".",
 	"mobile-frontend-quick-lookup-no-results": "Não foi encontrada nenhuma correspondência com \"$1\".",
 	"mobile-frontend-quick-lookup-not-internal": "Desculpe, esta não é uma ligação interna para esta wiki.",
 	"nearby": "Páginas sobre temas perto de si",
