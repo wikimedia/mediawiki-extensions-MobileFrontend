@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2eb1770d_874029aa",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-14T10:56:14Z",
+      "side": 0,
+      "message": "Can we keep this documentation? It\u0027s useful.\nIf documenting object keys is not possible we should document that in the commit message.",
+      "revId": "bdaf9a472cfdc0f54e94399a2a63685bac1d6030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
