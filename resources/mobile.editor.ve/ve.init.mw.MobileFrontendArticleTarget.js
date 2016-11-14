@@ -190,11 +190,16 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text
  * FIXME: @inheritdoc once this file is in the right repo
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
+	var target = this;
 	// If changes have been made tell the user they have to save first
 	if ( !this.getSurface().getModel().hasBeenModified() ) {
 		this.overlay.switchToSourceEditor();
-	} else if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-		this.showSaveDialog();
+	} else {
+		OO.ui.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ).done( function ( confirmed ) {
+			if ( confirmed ) {
+				target.showSaveDialog();
+			}
+		} );
 	}
 };
 
