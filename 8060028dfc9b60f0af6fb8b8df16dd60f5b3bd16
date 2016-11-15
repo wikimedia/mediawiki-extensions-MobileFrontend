@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2eb1770d_13957235",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-15T13:16:00Z",
+      "side": 1,
+      "message": "headingText is not the second parameter. It\u0027s a property of options\n\n * @param {string} options.headingText",
+      "revId": "8060028dfc9b60f0af6fb8b8df16dd60f5b3bd16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
