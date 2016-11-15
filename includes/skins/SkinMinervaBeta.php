@@ -45,16 +45,4 @@ class SkinMinervaBeta extends SkinMinerva {
 
 		return $modules;
 	}
-
-	/**
-	 * Get the needed styles for this skin
-	 * @return array
-	 */
-	protected function getSkinStyles() {
-		$title = $this->getTitle();
-		$styles = parent::getSkinStyles();
-		$styles[] = 'skins.minerva.icons.images.variants';
-
-		return $styles;
-	}
 }
