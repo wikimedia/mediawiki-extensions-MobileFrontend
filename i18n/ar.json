@@ -248,6 +248,7 @@
 	"mobile-frontend-placeholder-beta": "ابحث في {{SITENAME}} (تجريبي)",
 	"mobile-frontend-privacy-link-text": "الخصوصية",
 	"mobile-frontend-random-button": "عشوائي",
+	"mobile-frontend-redirected-from": "تم التحويل من \"$1\"",
 	"mobile-frontend-references-citation": "اقتباس",
 	"mobile-frontend-references-citation-error": "حدث خطأ وتعذر تحميل هذا الاستشهاد.",
 	"mobile-frontend-references-list": "اعرض قائمة كاملة بالاستشهادات",
