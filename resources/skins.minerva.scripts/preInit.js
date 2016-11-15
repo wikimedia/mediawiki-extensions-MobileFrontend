@@ -24,15 +24,32 @@
 			page: getCurrentPage(),
 			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
 			mainMenu: mainMenu
-		},
-		redirectedFromTitle = mw.config.get( 'wgRedirectedFrom' );
+		};
 
 	skin = new Skin( skinData );
 	M.define( 'skins.minerva.scripts/skin', skin ).deprecate( 'mobile.startup/skin' );
 
-	if ( redirectedFromTitle ) {
-		toast.show( mw.msg( 'mobile-frontend-redirected-from', redirectedFromTitle ) );
-	}
+	( function ( wgRedirectedFrom ) {
+		// If the user has been redirected, then show them a toast message (see
+		// https://phabricator.wikimedia.org/T146596).
+
+		var redirectedFrom;
+
+		if ( wgRedirectedFrom === null ) {
+			return;
+		}
+
+		redirectedFrom = mw.Title.newFromText( wgRedirectedFrom );
+
+		if ( redirectedFrom ) {
+
+			// mw.Title.getPrefixedText includes the human-readable namespace prefix.
+			toast.show( mw.msg(
+				'mobile-frontend-redirected-from',
+				redirectedFrom.getPrefixedText()
+			) );
+		}
+	}( mw.config.get( 'wgRedirectedFrom' ) ) );
 
 	/**
 	 * Given 2 functions, it returns a function that will run both with it's
