@@ -5,11 +5,13 @@
 
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
+use MobileFrontend\WMFBaseDomainExtractor;
 
 /**
  * Provide various request-dependant methods to use in mobile context
  */
 class MobileContext extends ContextSource {
+
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
 	const LAZY_LOAD_IMAGES_COOKIE_NAME = 'mfLazyLoadImages';
@@ -397,14 +399,10 @@ class MobileContext extends ContextSource {
 		$user->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
 		$user->saveSettings();
 
-		$host = $this->getBaseDomain();
-		// Deal with people running off localhost. see http://curl.haxx.se/rfc/cookie_spec.html
-		if ( strpos( $host, '.' ) === false ) {
-			$host = false;
-		}
-		$this->getRequest()->response()->setcookie( 'optin', $mode, 0,
-			[ 'prefix' => '', 'domain' => $host ]
-		);
+		$this->getRequest()->response()->setCookie( 'optin', $mode, 0, [
+			'prefix' => '',
+			'domain' => $this->getCookieDomain()
+		] );
 	}
 
 	/**
@@ -666,38 +664,28 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Return the basic second level domain or just IP adress
+	 * Return the base level domain or IP address
+	 *
 	 * @return string
 	 */
-	public function getBaseDomain() {
-		$server = $this->getConfig()->get( 'Server' );
-
-		$parsedUrl = wfParseUrl( $server );
-		$host = $parsedUrl['host'];
-		// Validates value as IP address
-		if ( !IP::isValid( $host ) ) {
-			$domainParts = explode( '.', $host );
-			$domainParts = array_reverse( $domainParts );
-			// Although some browsers will accept cookies without the initial .,
-			// » RFC 2109 requires it to be included.
-			$host = count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
-		}
-
-		return $host;
+	public function getCookieDomain() {
+		$helper = new WMFBaseDomainExtractor();
+		return $helper->getCookieDomain( $this->getMFConfig()->get( 'Server' ) );
 	}
 
 	/**
 	 * Determine the correct domain to use for the stopMobileRedirect cookie
 	 *
 	 * Will use $wgMFStopRedirectCookieHost if it's set, otherwise will use
-	 * result of getBaseDomain()
+	 * result of getCookieDomain()
 	 * @return string
 	 */
 	public function getStopMobileRedirectCookieDomain() {
 		$mfStopRedirectCookieHost = $this->getMFConfig()->get( 'MFStopRedirectCookieHost' );
 
 		if ( !$mfStopRedirectCookieHost ) {
-			self::$mfStopRedirectCookieHost = $this->getBaseDomain();
+			self::$mfStopRedirectCookieHost = $this->getCookieDomain();
+
 		} else {
 			self::$mfStopRedirectCookieHost = $mfStopRedirectCookieHost;
 		}
