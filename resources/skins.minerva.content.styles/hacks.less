@@ -134,14 +134,14 @@ FIXME: Review all of these hacks to see if they still apply.
 		}
 		// Deal with Template:Multiple_image.  T38030 and T148505
 		.thumb .thumbinner {
-			> div {
-				.flex-display( flex );
-				justify-content: center;
-				flex-wrap: wrap;
-				align-content: flex-start;
-			}
+			.flex-display( flex );
+			justify-content: center;
+			flex-wrap: wrap;
+			align-content: flex-start;
+
 			> .thumbcaption {
 				.flex( 1, 0, 100% );
+				display: block;
 			}
 		}
 	}
