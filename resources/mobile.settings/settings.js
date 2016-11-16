@@ -10,7 +10,7 @@
 			/**
 			 * Checks whether cookies are enabled
 			 * @method
-			 * @returns {Boolean} Whether cookies are enabled
+			 * @return {Boolean} Whether cookies are enabled
 			 */
 			function cookiesEnabled() {
 				// If session cookie already set, return true
@@ -32,7 +32,7 @@
 			 * @param {String} value The value to store alongside the key
 			 * @param {Boolean} [useCookieFallback] When set this will use
 			 * cookies when local storage not available.
-			 * @returns {Boolean} Whether the save was successful or not
+			 * @return {Boolean} Whether the save was successful or not
 			 */
 			function save( name, value, useCookieFallback ) {
 				var success = mw.storage.set( name, value ),
@@ -49,7 +49,7 @@
 			 * @param {String} name The key to refer to this value
 			 * @param {Boolean} [useCookieFallback] When set this will use cookies
 			 * when local storage not available.
-			 * @returns {String|Boolean} Returns the associated value or False if nothing
+			 * @return {String|Boolean} Returns the associated value or False if nothing
 			 * is found
 			 */
 			function get( name, useCookieFallback ) {
@@ -66,7 +66,7 @@
 			 * @param {String} name The key to refer to this value
 			 * @param {Boolean} [useCookieFallback] When set this will use cookies
 			 * when local storage not available.
-			 * @returns {Boolean} Whether the delete was successful or not
+			 * @return {Boolean} Whether the delete was successful or not
 			 */
 			function remove( name, useCookieFallback ) {
 				var success = mw.storage.remove( name );

@@ -16,7 +16,7 @@
 	 * ReferenceGateway
 	 *
 	 * @ignore
-	 * @returns {ReferencesDrawer}
+	 * @return {ReferencesDrawer}
 	 */
 	function referenceDrawerFactory() {
 		var gateway = null;

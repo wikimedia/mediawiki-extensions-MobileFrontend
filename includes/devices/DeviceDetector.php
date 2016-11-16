@@ -43,7 +43,7 @@ interface DeviceDetector {
 	 *
 	 * @param WebRequest $request
 	 * @param array $server Per the above, the `$_SERVER` superglobal
-	 * @return {DeviceProperties|null}
+	 * @return DeviceProperties|null
 	 */
 	function detectDeviceProperties( WebRequest $request, array $server );
 }

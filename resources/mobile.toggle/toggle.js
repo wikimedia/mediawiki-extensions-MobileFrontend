@@ -27,7 +27,7 @@
 	 *
 	 * @method
 	 * @param {Page} page
-	 * @returns {Object} representing open sections
+	 * @return {Object} representing open sections
 	 * @ignore
 	 */
 	function getExpandedSections( page ) {

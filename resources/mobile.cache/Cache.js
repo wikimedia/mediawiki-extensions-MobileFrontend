@@ -20,7 +20,7 @@
 	 * Retrieve a cached value from a key
 	 * @method get
 	 * @param {String} key
-	 * @returns {*}
+	 * @return {*}
 	 */
 	MemoryCache.prototype.get = function ( key ) {
 		return this._cache[ key ];

@@ -31,7 +31,7 @@
 	WatchListGateway.prototype = {
 		/**
 		 * Load the list of items on the watchlist
-		 * @returns {jQuery.Deferred}
+		 * @return {jQuery.Deferred}
 		 */
 		loadWatchlist: function () {
 			var self = this,

@@ -296,7 +296,7 @@
 	 *
 	 * @static
 	 * @param {Object} resp as representing a page in the API
-	 * @returns {Page}
+	 * @return {Page}
 	 */
 	Page.newFromJSON = function ( resp ) {
 		var revision, displayTitle,

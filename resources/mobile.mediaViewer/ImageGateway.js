@@ -28,7 +28,7 @@
 		/**
 		 * Get thumbnail via the API and cache it. Return the result from the cache if exists.
 		 * @param {String} title Url of image
-		 * @returns {jQuery.Deferred} with the image info
+		 * @return {jQuery.Deferred} with the image info
 		 */
 		getThumb: function ( title ) {
 			var result = this._cache[title],

@@ -15,7 +15,7 @@
 	 * @ignore
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere
 	 * @param {String} moduleName Name of a module to fetch
-	 * @returns {jQuery.Deferred}
+	 * @return {jQuery.Deferred}
 	 */
 	function loadModuleScript( moduleName ) {
 		var d = $.Deferred(),
@@ -48,7 +48,7 @@
 		 * @ignore
 		 * @private
 		 * @uses NotificationsOverlay
-		 * @returns {jQuery.Deferred} with an instance of NotificationsOverlay
+		 * @return {jQuery.Deferred} with an instance of NotificationsOverlay
 		 */
 		function loadNotificationOverlay() {
 			var result = $.Deferred();

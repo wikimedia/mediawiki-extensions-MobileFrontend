@@ -48,7 +48,7 @@
 	 * @ignore
 	 * @param {Number} section number
 	 * @param {String} container CSS selector of the container
-	 * @returns {jQuery.Object} newly created edit page button
+	 * @return {jQuery.Object} newly created edit page button
 	 */
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' )

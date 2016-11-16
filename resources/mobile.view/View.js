@@ -9,7 +9,7 @@
 	 * Useful for temporary DOM ids.
 	 * @ignore
 	 * @param {String} prefix Prefix to be used when generating the id.
-	 * @returns {String}
+	 * @return {String}
 	 */
 	function uniqueId( prefix ) {
 		var id = ( ++idCounter ).toString();

@@ -6,7 +6,7 @@
 	 * arguments. Instances do not share a cache.
 	 * @ignore
 	 * @param {Function} method Method to be memoized
-	 * @returns {Function}
+	 * @return {Function}
 	 */
 	function memoize( method ) {
 		/**
@@ -134,7 +134,7 @@
 		 * former.
 		 * See http://stackoverflow.com/a/12621264/365238
 		 *
-		 * @returns {Boolean}
+		 * @return {Boolean}
 		 */
 		supportsAnimations: memoize( function () {
 			// don't trust Android 2.x, really
@@ -195,7 +195,7 @@
 
 	/**
 	 * @static
-	 * @returns {Browser}
+	 * @return {Browser}
 	 */
 	Browser.getSingleton = function () {
 		if ( !browser ) {

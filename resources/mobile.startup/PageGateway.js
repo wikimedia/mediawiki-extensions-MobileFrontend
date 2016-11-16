@@ -34,7 +34,7 @@
 	 * @private
 	 * @ignore
 	 * @param {Array} sections Array of section objects created from response HTML
-	 * @returns {Array} Ordered array of sections
+	 * @return {Array} Ordered array of sections
 	 */
 	function transformSections( sections ) {
 		var
@@ -274,7 +274,7 @@
 		 * @method
 		 * @private
 		 * @param {jQuery.Object} $el object from which sections are extracted
-		 * @returns {Array} Array of section objects created from headings in $el
+		 * @return {Array} Array of section objects created from headings in $el
 		 * FIXME: Where's a better place for these two functions to live?
 		 */
 		_getAPIResponseFromHTML: function ( $el ) {
@@ -301,7 +301,7 @@
 		 * Order sections hierarchically
 		 * @method
 		 * @param {jQuery.Object} $el object from which sections are extracted
-		 * @returns {Array} Ordered array of sections
+		 * @return {Array} Ordered array of sections
 		 */
 		getSectionsFromHTML: function ( $el ) {
 			return transformSections( this._getAPIResponseFromHTML( $el ) );

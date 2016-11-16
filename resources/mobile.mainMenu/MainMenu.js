@@ -35,7 +35,7 @@
 		 * Advertise a new feature in the main menu.
 		 * @param {String} selector to an element inside the main menu
 		 * @param {String} msg a message to show in the pointer
-		 * @returns {jQuery.Deferred} with the PointerOverlay as the only argument.
+		 * @return {jQuery.Deferred} with the PointerOverlay as the only argument.
 		 * @throws exception when you try to advertise more than one feature.
 		 */
 		advertiseNewFeature: function ( selector, msg ) {
