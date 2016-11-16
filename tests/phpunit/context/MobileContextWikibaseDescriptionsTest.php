@@ -1,7 +1,5 @@
 <?php
 
-use Tests\MobileFrontend\Context;
-
 /**
  * @group MobileFrontend
  */

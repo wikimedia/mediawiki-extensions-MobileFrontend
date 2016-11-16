@@ -4,8 +4,6 @@
  * SkinMinervaBeta.php
  */
 
-use MobileFrontend\MenuBuilder;
-
 /**
  * Beta-Implementation of stable class SkinMinerva
  */
