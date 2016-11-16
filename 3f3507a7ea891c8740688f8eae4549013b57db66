@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_8236e0e2",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-16T12:32:13Z",
+      "side": 1,
+      "message": "Any idea how I can test this particular warning - what api parameters do I use?",
+      "revId": "3f3507a7ea891c8740688f8eae4549013b57db66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
