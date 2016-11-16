@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_df2033ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-16T12:13:47Z",
+      "side": 1,
+      "message": "typo here in `cluser`",
+      "revId": "44fb4710489369c33a406ee461b7e249f49af950",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_1f30ebfb",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-16T12:13:47Z",
+      "side": 1,
+      "message": "Given these changes, introducing constants, are harmless I\u0027d like to see these pulled out into a separate patchset.\n\nThat way say we broke this and had to revert we wouldn\u0027t lose these useful changes.",
+      "revId": "44fb4710489369c33a406ee461b7e249f49af950",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_ff1bf783",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-16T12:13:47Z",
+      "side": 1,
+      "message": "Can we add some more test cases that show what this test fixes?\n\ne.g.\n\u003e website.co.uk\n\u003e en.m.wikipedia.wmflabs.org",
+      "revId": "44fb4710489369c33a406ee461b7e249f49af950",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
