@@ -16,6 +16,24 @@
       "revId": "3f3507a7ea891c8740688f8eae4549013b57db66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_ed5eadeb",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-11-16T16:07:02Z",
+      "side": 1,
+      "message": "It appears that you have to request specific sections and prop\u003dtext, and at least one requested section must not exist in the page. For example, https://en.wikipedia.org/w/api.php?action\u003dmobileview\u0026page\u003dTest\u0026sections\u003d170\u0026prop\u003dtext",
+      "parentUuid": "eec4bf7e_8236e0e2",
+      "revId": "3f3507a7ea891c8740688f8eae4549013b57db66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
