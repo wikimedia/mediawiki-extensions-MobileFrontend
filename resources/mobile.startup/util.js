@@ -22,7 +22,7 @@
 		},
 		/**
 		 * Return wgWikiBaseItemID config variable or 'wikidataid' query parameter if exits
-		 * @returns {null|String}
+		 * @return {null|String}
 		 */
 		getWikiBaseItemId: function () {
 			var id = mw.config.get( 'wgWikibaseItemId' ),

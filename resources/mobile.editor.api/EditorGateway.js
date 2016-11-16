@@ -23,7 +23,7 @@
 		/**
 		 * Get the content of a page.
 		 * @method
-		 * @returns {jQuery.Deferred}
+		 * @return {jQuery.Deferred}
 		 */
 		getContent: function () {
 			var options,
@@ -235,7 +235,7 @@
 		 * Get page preview from the API and abort any existing previews.
 		 * @method
 		 * @param {Object} options API query parameters
-		 * @returns {jQuery.Deferred}
+		 * @return {jQuery.Deferred}
 		 */
 		getPreview: function ( options ) {
 			var result = $.Deferred(),

@@ -133,7 +133,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Get the header for the watchlist page
-	 * @param User user
+	 * @param User $user
 	 * @return string Parsed HTML
 	 */
 	public static function getWatchlistHeader( User $user ) {

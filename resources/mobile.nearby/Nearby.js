@@ -172,7 +172,7 @@
 		 * @private
 		 * @param {String} key to a defined error message
 		 * @param {String} msg Message to use, instead of a mapped error message from this.errorMessages
-		 * @returns {Object}
+		 * @return {Object}
 		 */
 		_errorOptions: function ( key, msg ) {
 			var message;

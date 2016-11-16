@@ -52,7 +52,7 @@
 		 * @method
 		 * @private
 		 * @param {Overlay} overlay to hide
-		 * @returns {Boolean} Whether the overlay has been hidden
+		 * @return {Boolean} Whether the overlay has been hidden
 		 */
 		_hideOverlay: function ( overlay ) {
 			var result;

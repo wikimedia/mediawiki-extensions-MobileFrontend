@@ -20,7 +20,7 @@
 		 * @method
 		 * @param {String} id CSS selector
 		 * @param {Page} page to find reference for
-		 * @returns {jQuery.Promise} resolves with an Object representing reference with a `text` property
+		 * @return {jQuery.Promise} resolves with an Object representing reference with a `text` property
 		 *  or false if the reference does not exist
 		 */
 		getReference: function () {

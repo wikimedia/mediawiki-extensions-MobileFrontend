@@ -17,7 +17,7 @@
 	 * @ignore
 	 * @param {Object[]} languages list of language objects as returned by the API
 	 * @param {String|undefined} deviceLanguage the device's primary language
-	 * @returns {String|undefined} Return undefined if the article is not available in
+	 * @return {String|undefined} Return undefined if the article is not available in
 	 *  the (general or variant) device language
 	 */
 	function getDeviceLanguageOrParent( languages, deviceLanguage ) {
@@ -138,7 +138,7 @@
 	/**
 	 * Return a map of frequently used languages on the current device.
 	 *
-	 * @returns {Object}
+	 * @return {Object}
 	 */
 	util.getFrequentlyUsedLanguages = function () {
 		var languageMap = mw.storage.get( 'langMap' );

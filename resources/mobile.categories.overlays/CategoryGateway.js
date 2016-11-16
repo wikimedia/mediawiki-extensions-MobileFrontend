@@ -22,7 +22,7 @@
 		 * Saves the categories passed to this function to the page
 		 * @param {String} title Title of the current page (to add the categories to)
 		 * @param {String} categories List of Categories to add
-		 * @returns {jQuery.Deferred}
+		 * @return {jQuery.Deferred}
 		 */
 		save: function ( title, categories ) {
 			return this.api.postWithToken( 'edit', {
@@ -36,7 +36,7 @@
 		/**
 		 * Returns the categories the title belongs to.
 		 * @param {String} title Title of the current page (to add the categories to)
-		 * @returns {jQuery.Deferred|Boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
+		 * @return {jQuery.Deferred|Boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
 		 */
 		getCategories: function ( title ) {
 			var self = this;

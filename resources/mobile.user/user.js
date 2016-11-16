@@ -18,7 +18,7 @@
 		/**
 		 * Find current users edit count
 		 * @method
-		 * @returns {Number} the edit count of the current user on the current wiki.
+		 * @return {Number} the edit count of the current user on the current wiki.
 		 */
 		getEditCount: function () {
 			return mw.config.get( 'wgUserEditCount' );

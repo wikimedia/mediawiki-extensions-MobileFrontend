@@ -300,7 +300,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Returns, if Extension:Echo should be used.
-	 * return boolean
+	 * @return bool
 	 */
 	protected function useEcho() {
 		return class_exists( 'MWEchoNotifUser' );
@@ -737,7 +737,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 	/**
 	 * Returns the HTML representing the tagline
-	 * @returns string html for tagline
+	 * @return string HTML for tagline
 	 */
 	protected function getTaglineHtml() {
 		$tagline = false;
@@ -762,7 +762,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 	/**
 	 * Returns the HTML representing the heading.
-	 * @returns {String} html for header
+	 * @return string HTML for header
 	 */
 	protected function getHeadingHtml() {
 		$heading = '';

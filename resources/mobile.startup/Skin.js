@@ -151,7 +151,7 @@
 
 		/**
 		 * Return the instance of MainMenu
-		 * @returns {MainMenu}
+		 * @return {MainMenu}
 		 */
 		getMainMenu: function () {
 			return this.mainMenu;
@@ -241,19 +241,19 @@
 		},
 
 		/**
-		* Load the references section content from API if it's not already loaded.
-		*
-		* All references tags content will be loaded per section.
-		*
-		* @param {Object} data Information about the section. It's in the following form:
-		*  {
-		*      @property {String} page,
-		*      @property {Boolean} wasExpanded,
-		*      @property {jQuery.Object} $heading,
-		*      @property {Boolean} isReferenceSection
-		* }
-		* @returns {jQuery.Deferred} rejected when not a reference section.
-		*/
+		 * Load the references section content from API if it's not already loaded.
+		 *
+		 * All references tags content will be loaded per section.
+		 *
+		 * @param {Object} data Information about the section. It's in the following form:
+		 * {
+		 *     @property {String} page,
+		 *     @property {Boolean} wasExpanded,
+		 *     @property {jQuery.Object} $heading,
+		 *     @property {Boolean} isReferenceSection
+		 * }
+		 * @return {jQuery.Deferred} rejected when not a reference section.
+		 */
 		lazyLoadReferences: function ( data ) {
 			var $content, $spinner,
 				gateway = this.referencesGateway,

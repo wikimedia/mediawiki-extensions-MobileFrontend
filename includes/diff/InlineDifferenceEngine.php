@@ -139,7 +139,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * Returns the cache key for diff body text or content.
 	 *
 	 * @throws Exception when no mOldid and mNewid is set
-	 * @see DifferenceEngine:getDiffBodyCacheKey
+	 * @see DifferenceEngine::getDiffBodyCacheKey
 	 * @return string
 	 */
 	protected function getDiffBodyCacheKey() {
