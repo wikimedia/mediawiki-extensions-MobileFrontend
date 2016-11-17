@@ -1695,17 +1695,11 @@
 				"mobile.overlays",
 				"mediawiki.Title"
 			],
-			"styles": [
-				"resources/skins.minerva.talk/talk.less"
-			],
 			"scripts": [
 				"resources/skins.minerva.talk/init.js"
 			],
 			"messages": [
-				"mobile-frontend-talk-overlay-header",
-				"mobile-frontend-talk-add-overlay-submit",
-				"mobile-frontend-editor-licensing",
-				"mobile-frontend-editor-licensing-with-terms"
+				"mobile-frontend-talk-add-overlay-submit"
 			]
 		},
 		"skins.minerva.toggling": {
