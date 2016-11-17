@@ -16,6 +16,24 @@
       "revId": "8060028dfc9b60f0af6fb8b8df16dd60f5b3bd16",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_9b8086fb",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2eb1770d_13957235",
+      "revId": "8060028dfc9b60f0af6fb8b8df16dd60f5b3bd16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
