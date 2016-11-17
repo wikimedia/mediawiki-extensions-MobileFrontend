@@ -58,3 +58,13 @@ body {
 	// No mobile should trump any other class. e.g. .content table { display: table; }
 	display: none !important;
 }
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	.client-js {
+		// Avoid flash of unstyled content for tablet users while JavaScript is loading
+		// onclick attribute is removed by the toggling code.
+		[onclick] + .collapsible-block {
+			display: block;
+		}
+	}
+}
