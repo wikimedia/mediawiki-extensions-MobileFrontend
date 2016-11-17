@@ -18,12 +18,7 @@
 	 */
 	function Overlay() {
 		this.isIos = browser.isIos();
-		this.isIos8 = browser.isIos( 8 );
-		// https://phabricator.wikimedia.org/T106934
-		// tldr: closing keyboard doesn't trigger a blur event
-		if ( this.isIos8 ) {
-			this.hasFixedHeader = false;
-		}
+		this.useVirtualKeyboardHack = browser.isIos( 4 ) || browser.isIos( 5 );
 		View.apply( this, arguments );
 	}
 
@@ -118,7 +113,6 @@
 
 		/** @inheritdoc */
 		postRender: function () {
-			var self = this;
 
 			this.$overlayContent = this.$( '.overlay-content' );
 			this.$spinner = this.$( '.spinner' );
@@ -127,10 +121,18 @@
 			}
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
+			this.setupEmulatedIosOverlayScrolling();
+		},
 
+		/**
+		 * Setups an emulated scroll behaviour for overlays in ios.
+		 * @method
+		 */
+		setupEmulatedIosOverlayScrolling: function () {
+			var self = this;
 			if ( this.isIos && this.hasFixedHeader ) {
-				this.$( '.overlay-content' ).on( 'touchstart', $.proxy( this, 'onTouchStart' ) );
-				this.$( '.overlay-content' ).on( 'touchmove', $.proxy( this, 'onTouchMove' ) );
+				this.$( '.overlay-content' ).on( 'touchstart', $.proxy( this, 'onTouchStart' ) )
+					.on( 'touchmove', $.proxy( this, 'onTouchMove' ) );
 				// wait for things to render before doing any calculations
 				setTimeout( function () {
 					self._fixIosHeader( 'textarea, input' );
@@ -282,12 +284,12 @@
 							var keyboardHeight = 0;
 
 							// detect virtual keyboard height
-							if ( !self.isIos8 ) {
+							if ( self.useVirtualKeyboardHack ) {
 								// this method does not work in iOS 8.02
 								$window.scrollTop( 999 );
 								keyboardHeight = $window.scrollTop();
 								$window.scrollTop( 0 );
-							} // FIXME: implement a solution from https://devforums.apple.com/message/1050636#1050636
+							}
 
 							if ( $window.height() > keyboardHeight ) {
 								self._resizeContent( $window.height() - keyboardHeight );
@@ -296,6 +298,8 @@
 					} )
 					.on( 'blur', function () {
 						self._resizeContent( $window.height() );
+						// restore the fixed header in view.
+						$window.scrollTop( 0 );
 					} );
 			}
 		},
