@@ -16,6 +16,24 @@
       "revId": "bdaf9a472cfdc0f54e94399a2a63685bac1d6030",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2eb1770d_73fcb6b1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Well everything as valid-jsdoc is disabled. I couldn\u0027t tell you the differences between what valid-jsdoc implements and what we already have.",
+      "parentUuid": "2eb1770d_8727090d",
+      "revId": "bdaf9a472cfdc0f54e94399a2a63685bac1d6030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
