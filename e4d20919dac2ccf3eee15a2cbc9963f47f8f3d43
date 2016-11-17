@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_d6413510",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-17T14:29:18Z",
+      "side": 1,
+      "message": "Thanks for the clarifications!",
+      "parentUuid": "eec4bf7e_7b96d250",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_bfe0dff8",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "Lower case is the standard on MW core, OOJS, VE, etc. I also think it is more correct and consistent. Anything capitalised will pass an instanceof check, anything lower case is the typeof value.",
       "parentUuid": "eec4bf7e_bfe0dff8",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_3bebbaa2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-17T14:29:18Z",
+      "side": 1,
+      "message": "Yes but this can be done in a follow up patchset, no rather than as part of a migration to eslint?\n\nThat said I\u0027m not bothered about these ones in comparison to the other 2.",
+      "parentUuid": "eec4bf7e_3bc97a7c",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -177,6 +213,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_5bee6eb2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-17T14:29:18Z",
+      "side": 1,
+      "message": "You may not but the reading team did. We are using it in this repo because this team decided it was important after we discussed jscs rules and how we wanted to code. I know Joaquin was a proponent of this and I\u0027d like to seek his input before removing it. This will delay code review  as he\u0027s on vacation (which I\u0027d like to avoid since we\u0027re so close to merging).\n\nDo we really need to increase the scope of this from migrate to eslint to migrate to eslint and reassess current configuration or can we assess this in a follow up patchset?",
+      "parentUuid": "eec4bf7e_fba9c28e",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_3ff5efb5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -206,6 +260,24 @@
       "side": 1,
       "message": "Same as above.",
       "parentUuid": "eec4bf7e_3ff5efb5",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_f63c3990",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-17T14:29:18Z",
+      "side": 1,
+      "message": "and same as above. it\u0027s cheap to retain this and remove it in a follow up  after some discussion explicitly if necessary, but I think this rule is a good one which helps readability.",
+      "parentUuid": "eec4bf7e_dbaefe94",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
