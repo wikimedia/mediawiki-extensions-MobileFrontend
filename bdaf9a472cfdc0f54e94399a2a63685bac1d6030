@@ -16,6 +16,24 @@
       "revId": "bdaf9a472cfdc0f54e94399a2a63685bac1d6030",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2eb1770d_13221251",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:22:01Z",
+      "side": 0,
+      "message": "We can but elsewhere options were documented alongside defaults which is probably why it got cleaned up. In this case we don\u0027t have that so we can document here.",
+      "parentUuid": "2eb1770d_874029aa",
+      "revId": "bdaf9a472cfdc0f54e94399a2a63685bac1d6030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

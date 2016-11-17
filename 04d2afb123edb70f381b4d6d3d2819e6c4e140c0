@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2eb1770d_53289a32",
+        "filename": "resources/mobile.foreignApi/JSONPForeignApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:22:01Z",
+      "side": 1,
+      "message": "Yes.",
+      "parentUuid": "2eb1770d_c73d112b",
+      "revId": "04d2afb123edb70f381b4d6d3d2819e6c4e140c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2eb1770d_674d1de0",
         "filename": "resources/mobile.issues/CleanupOverlay.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-14T10:56:14Z",
       "side": 1,
       "message": "This doesn\u0027t work it should be @param {string} options.headingText to work with jsduck.",
+      "revId": "04d2afb123edb70f381b4d6d3d2819e6c4e140c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2eb1770d_d31caa1a",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:22:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2eb1770d_674d1de0",
       "revId": "04d2afb123edb70f381b4d6d3d2819e6c4e140c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
