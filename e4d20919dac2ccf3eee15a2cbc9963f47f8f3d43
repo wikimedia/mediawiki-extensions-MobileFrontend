@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_bbb34afd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eec4bf7e_1f134b07",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_3f160ff7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-16T09:56:15Z",
       "side": 1,
       "message": "This also seems to restored in the follow up?",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_9b99a683",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eec4bf7e_3f160ff7",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_7b96d250",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eec4bf7e_dfdb9353",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_bfe0dff8",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2016-11-16T09:56:15Z",
       "side": 1,
       "message": "I see that this is not enforced... For instance when I switch back to {Boolean} there are no failures.\n\n\nWith that in mind why are we changing all the values to lowercase in the rest of the patchset if we cannot enforce it?\n\nThe reason we added this rule was to avoid inconsistencies and reviews where people complained that the casing was wrong and capitalised was what devs were doing most.\n\nI\u0027m worried by shifting this back we\u0027re more likely to lead to inconsistency given we have been trained by jscs over the last few years to capitalise.",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_3bc97a7c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Lower case is the standard on MW core, OOJS, VE, etc. I also think it is more correct and consistent. Anything capitalised will pass an instanceof check, anything lower case is the typeof value.",
+      "parentUuid": "eec4bf7e_bfe0dff8",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_fba9c28e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "That should be discussed upstream, but !!x is quite common and I don\u0027t see much problem with it.",
+      "parentUuid": "eec4bf7e_ffbd37d5",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_3ff5efb5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -98,6 +188,24 @@
       "writtenOn": "2016-11-16T09:56:15Z",
       "side": 1,
       "message": "According to https://github.com/eslint/eslint/issues/5667 we don\u0027t have to lose this.",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_dbaefe94",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-17T11:19:48Z",
+      "side": 1,
+      "message": "Same as above.",
+      "parentUuid": "eec4bf7e_3ff5efb5",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
