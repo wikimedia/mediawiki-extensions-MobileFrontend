@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_418fa8d1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-11-18T10:11:19Z",
+      "side": 1,
+      "message": "This also requires a title and crashs when there is none.",
+      "range": {
+        "startLine": 198,
+        "startChar": 11,
+        "endLine": 198,
+        "endChar": 38
+      },
+      "revId": "eea0340103e7e7f6987ac1b0c00f19f60fa7cdb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_6182acab",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-11-18T10:11:19Z",
+      "side": 1,
+      "message": "My first idea was to add the check here, but … (see above).",
+      "revId": "eea0340103e7e7f6987ac1b0c00f19f60fa7cdb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
