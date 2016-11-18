@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_c7b748f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:36:46Z",
+      "side": 1,
+      "message": "extra space in the beginning of the line",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_27f284ce",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1702,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:36:46Z",
+      "side": 1,
+      "message": "talk overlay specific messages should also be moved to `mobile.talk.overlays`",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_e7db6c53",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:36:46Z",
+      "side": 1,
+      "message": "Rather than hardcoding `overlay` should we use whatever class names Overlay may have?",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
