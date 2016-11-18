@@ -52,6 +52,24 @@
       "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_cc52cf16",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-18T11:13:30Z",
+      "side": 1,
+      "message": "I misread your media query and thought you meant `min-width`.\nThanks for this comment about \"limiting the scope of the rule to small screen devices\". The opposite problem applies in this situation - collapsing breaks for the tablet view. As you point out this creates more work for us...\n\nCould you rephrase your concerns to focus more on what is wrong with the solution I have proposed?\n\nThere are many ways we can solve yes, but I came to the conclusion this was the cleanest and quickest way to solve this problem. If you feel there is an issue with it please let me know which parts.\n\nAs noted in the commit message it avoids the need for new classes/markup.  This _is_ a CSS only fix.",
+      "parentUuid": "ceb9bbfa_c13e18d7",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
