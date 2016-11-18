@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_3216404e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "fixed (although strange because I fixed that one earlier via gerrit. Probably with PatchSet 3 I overwrote my fix with old comment)",
+      "parentUuid": "ceb9bbfa_e1523c3f",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_01c3f00b",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-18T10:00:45Z",
       "side": 1,
       "message": "string[] would be more specific.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_8710305d",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "ceb9bbfa_01c3f00b",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_27072421",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "on Vagrant we have PHP 5.5.9. Array constants are available only in PHP5.6 and above. I wanted to create this as const but with current version it\u0027s not possible",
+      "parentUuid": "ceb9bbfa_677d1c17",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_41e1e896",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2016-11-18T10:00:45Z",
       "side": 1,
       "message": "Weird whitespace here.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_1249fc6a",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_41e1e896",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_3291a09d",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_a1d1e4d2",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_477a1821",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2016-11-18T15:58:30Z",
       "side": 1,
       "message": "This one too: constant.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_f2ffa8fa",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Same as above",
+      "parentUuid": "ceb9bbfa_477a1821",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_f24d6876",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_e1c7dc13",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_c7e2a8d0",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -132,6 +258,24 @@
       "writtenOn": "2016-11-18T15:58:30Z",
       "side": 1,
       "message": "If the function is specific to WMF, its name should reflect as much.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_d2526416",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "This whole class is WMF specific, I think it will be better to rename class so somewhere in future someone can use StrategyPattern and inject different class",
+      "parentUuid": "ceb9bbfa_c7e2a8d0",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_723a78c2",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_078b001d",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_0191b0fb",
         "filename": "tests/phpunit/BaseDomainExtractorTest.php",
         "patchSetId": 3
@@ -166,6 +328,24 @@
       "writtenOn": "2016-11-18T10:02:26Z",
       "side": 1,
       "message": "Another test case for you: one can access MediaWiki Vagrant wikis via http://$wiki.wiki.local.wmftest.net:8080/.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_322d208c",
+        "filename": "tests/phpunit/BaseDomainExtractorTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-18T17:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_0191b0fb",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
