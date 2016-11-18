@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_01641044",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-18T09:49:40Z",
+      "side": 1,
+      "message": "There was a typo here which I\u0027ve fixed for you.",
+      "revId": "489af82e20bed9776b1126f37b7cf6f78ec55534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
