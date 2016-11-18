@@ -67,6 +67,23 @@
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_0191b0fb",
+        "filename": "tests/phpunit/BaseDomainExtractorTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-18T10:02:26Z",
+      "side": 1,
+      "message": "Another test case for you: one can access MediaWiki Vagrant wikis via http://$wiki.wiki.local.wmftest.net:8080/.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
