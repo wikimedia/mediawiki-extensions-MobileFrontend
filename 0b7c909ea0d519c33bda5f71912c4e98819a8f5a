@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_61550c52",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-18T09:54:50Z",
+      "side": 0,
+      "message": "Should add\ndoRewriteReferencesLinksForLazyLoading, makeSections and doRewriteReferencesListsForLazyLoading",
+      "revId": "0b7c909ea0d519c33bda5f71912c4e98819a8f5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
