@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_677d1c17",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:58:30Z",
+      "side": 1,
+      "message": "Should probably be a constant.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_41e1e896",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -70,6 +87,23 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_477a1821",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:58:30Z",
+      "side": 1,
+      "message": "This one too: constant.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_e1c7dc13",
         "filename": "includes/BaseDomainExtractor.php",
         "patchSetId": 3
@@ -81,6 +115,40 @@
       "writtenOn": "2016-11-18T10:00:45Z",
       "side": 1,
       "message": "Whitespace before //.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_c7e2a8d0",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:58:30Z",
+      "side": 1,
+      "message": "If the function is specific to WMF, its name should reflect as much.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_078b001d",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:58:30Z",
+      "side": 1,
+      "message": "string[] rather than array\u003cstring\u003e",
       "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
