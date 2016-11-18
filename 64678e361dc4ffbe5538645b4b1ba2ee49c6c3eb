@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_01c3f00b",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-18T10:00:45Z",
+      "side": 1,
+      "message": "string[] would be more specific.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_41e1e896",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-18T10:00:45Z",
+      "side": 1,
+      "message": "Weird whitespace here.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_a1d1e4d2",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-18T10:00:45Z",
+      "side": 1,
+      "message": "As above, string[] would be more specific.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_e1c7dc13",
+        "filename": "includes/BaseDomainExtractor.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-11-18T10:00:45Z",
+      "side": 1,
+      "message": "Whitespace before //.",
+      "revId": "64678e361dc4ffbe5538645b4b1ba2ee49c6c3eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
