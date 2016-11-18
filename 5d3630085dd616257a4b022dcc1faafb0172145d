@@ -34,6 +34,24 @@
       "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_c13e18d7",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T10:32:27Z",
+      "side": 1,
+      "message": "\u003e That will break section collapsing on mobile (it would expand all the sections on mobile and it would not be possible to close them).\nNo, it doesn\u0027t. The proposed code will work exactly as before on small screen devices.\n\n\u003e This also wouldn\u0027t fix the FOUC problem with tablets as they would be collapsed by default due to a lack of the open-block class.\nYes it does. Since we\u0027re limiting the scope of the rule to small screen devices, tablets won\u0027t have collapsed sections by default.\n\nBut, as you say, more work is needed to make collapsing working on tablets once the toggling code has loaded. I have a sneak suspicion that it can be done with CSS only.",
+      "parentUuid": "ceb9bbfa_814380b6",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
