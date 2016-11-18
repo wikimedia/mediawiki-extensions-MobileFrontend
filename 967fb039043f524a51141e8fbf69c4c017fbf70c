@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_47cc588c",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-18T15:39:48Z",
+      "side": 1,
+      "message": "browser.isIos doesn\u0027t support versions 3, 6, and 7.",
+      "revId": "967fb039043f524a51141e8fbf69c4c017fbf70c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
