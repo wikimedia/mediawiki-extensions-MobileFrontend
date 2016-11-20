@@ -54,7 +54,7 @@
 	"mobile-frontend-contribution-summary": "Todas as edições realizadas {{GENDER:$1|pelo utilizador|pela utilizadora}} [[User:$1|$1]]",
 	"mobile-frontend-cookies-required": "Os cookies são necessários para alterar os modos de apresentação. Por favor, ative-os e tente novamente.",
 	"mobile-frontend-copyright": "Conteúdo disponibilizado nos termos da $1, salvo indicação em contrário.",
-	"mobile-frontend-desc": "Interface para Telemóveis",
+	"mobile-frontend-desc": "Interface para dispositivos móveis",
 	"mobile-frontend-diffview-404-desc": "Não existe um identificador para a revisão que pediu.",
 	"mobile-frontend-diffview-404-title": "Erro de revisão",
 	"mobile-frontend-diffview-anonymous": "Utilizador anónimo",

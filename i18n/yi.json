@@ -67,6 +67,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|איר שאפט}} א נייעם בלאט אויף {{SITENAME}}!",
 	"mobile-frontend-editor-save": "אויפֿהיטן",
 	"mobile-frontend-editor-success": "הצלחה! אייער רעדאקטירונג איז געווארן אויפגעהיטן.",
+	"mobile-frontend-editor-summary-placeholder": "ביישפיל: פֿאַרראכטן פֿעלער, צוגעלייגט אינהאַלט",
 	"mobile-frontend-editor-summary-request": "וויאזוי האט איר פארבעסערט דעם בלאט?",
 	"mobile-frontend-editor-summary": "רעזומע:",
 	"mobile-frontend-editor-tutorial-confirm": "אנהייבן רעדאקטירן",
