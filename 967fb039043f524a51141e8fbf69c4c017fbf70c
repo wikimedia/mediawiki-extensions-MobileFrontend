@@ -34,6 +34,24 @@
       "revId": "967fb039043f524a51141e8fbf69c4c017fbf70c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_d0c812ad",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-21T19:12:25Z",
+      "side": 1,
+      "message": "That\u0027s fine by me given versions 6 and 7 work without the piece of code that\u0027s being applied below.",
+      "parentUuid": "ceb9bbfa_87995083",
+      "revId": "967fb039043f524a51141e8fbf69c4c017fbf70c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
