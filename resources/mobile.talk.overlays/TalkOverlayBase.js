@@ -16,6 +16,7 @@
 		Overlay.apply( this, arguments );
 	}
 	OO.mfExtend( TalkOverlayBase, Overlay, {
+		className: 'talk-overlay overlay'
 	} );
 
 	M.define( 'mobile.talk.overlays/TalkOverlayBase', TalkOverlayBase );

@@ -1,4 +1,38 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
 .talk-overlay {
+	.error {
+		border: solid 1px @redBase;
+	}
+
+	.comment {
+		margin: 40px 0 10px 0;
+
+		.comment-content {
+			margin: 0 @contentMargin;
+		}
+
+		.wikitext-editor {
+			margin-top: 1em;
+			// Normally, wikitext editors don't have a border
+			border: 1px solid @grayLight;
+		}
+
+		// Restrict width of save button (otherwise 100%)
+		button.mw-ui-block {
+			max-width: 10em;
+		}
+	}
+
+	.overlay-content {
+		padding-bottom: 3.5em;
+	}
+
+	a {
+		cursor: pointer;
+	}
+
 	.panel.save-panel {
 		padding: 1em;
 	}
@@ -13,5 +47,17 @@
 			border-radius: 0;
 			border: 0;
 		}
+	}
+
+	.content-header {
+		.add {
+			margin-top: 1em;
+		}
+	}
+}
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	.content.talk-section {
+		margin: 0 auto 0 0;
 	}
 }
