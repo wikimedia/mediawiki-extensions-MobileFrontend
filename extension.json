@@ -52,6 +52,8 @@
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
 		"MobileFrontendHooks": "includes/MobileFrontend.hooks.php",
 		"MobileFrontendSkinHooks": "includes/MobileFrontend.skin.hooks.php",
+		"MobileFrontend\\BaseDomainExtractorInterface": "includes/BaseDomainExtractorInterface.php",
+		"MobileFrontend\\WMFBaseDomainExtractor": "includes/WMFBaseDomainExtractor.php",
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
 		"MobileCollection": "includes/models/MobileCollection.php",

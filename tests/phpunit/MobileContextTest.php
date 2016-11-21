@@ -52,26 +52,6 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider getBaseDomainProvider
-	 * @covers MobileContext::getBaseDomain
-	 */
-	public function testGetBaseDomain( $server, $baseDomain ) {
-		$this->setMwGlobals( 'wgServer', $server );
-		$this->assertEquals( $baseDomain, $this->makeContext()->getBaseDomain() );
-	}
-
-	public function getBaseDomainProvider() {
-		return [
-			[ 'https://en.wikipedia.org', '.wikipedia.org' ],
-			[ 'http://en.m.wikipedia.org', '.wikipedia.org' ],
-			[ '//en.m.wikipedia.org', '.wikipedia.org' ],
-			[ 'http://127.0.0.1', '127.0.0.1' ],
-			[ 'http://127.0.0.1:8080', '127.0.0.1' ],
-			[ 'http://localhost', 'localhost' ],
-		];
-	}
-
-	/**
 	 * @covers MobileContext::getMobileUrl
 	 */
 	public function testGetMobileUrl() {
