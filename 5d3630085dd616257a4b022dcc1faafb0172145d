@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_8d8f27d1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:10:37Z",
+      "side": 1,
+      "message": "From what I can see there are no browsers I know of that wouldn\u0027t be supported. That said, there may be some ones e.g. old Nokia based phones that I cannot confidently say one way or the above.\n\nI probably should have been more assertive and confident in this sentence.\nIf there is a browser this doesn\u0027t work for, that browser should probably not be Grade A.",
+      "parentUuid": "ceb9bbfa_6cd4e3be",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_3ed731f4",
         "filename": "resources/skins.minerva.content.styles/main.less",
         "patchSetId": 1
@@ -125,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_ed622337",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:10:37Z",
+      "side": 1,
+      "message": "Does the comment below help with that specific issue?\nThis is just a media query we repeat in various other places. I could move it to tablet.less if you would prefer it there.",
+      "parentUuid": "ceb9bbfa_8c85f7b3",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_2cf5cb4c",
         "filename": "resources/skins.minerva.content.styles/main.less",
         "patchSetId": 1
@@ -136,6 +172,24 @@
       "writtenOn": "2016-11-18T14:08:40Z",
       "side": 1,
       "message": "* [onclick] is too generic, and can lead to errors in the future.\n* JS implementation coupling with CSS. What will happen if we remove `onclick` selectors in favor of event listeners in the future?\n* attribute selector compatibility is unknown for most of the mobile devices: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors. Maybe we should find another way of doing this? A combination of `.collapsible-heading + .collapsible-block` and `.open-block + .open-block`?",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_cd587f8f",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:10:37Z",
+      "side": 1,
+      "message": "* Fair point about [onclick] - it may be used by other things.. but it has to be a sibling that precedes collapsible-block. That seems pretty specific to me already.\n\n* If we remove onclick attributes in future for some reason, this css selector would need to be changed or removed. It would really depend on what we are doing but I don\u0027t see any reason to worry about this right now.\n\n* Attribute selectors are css2 so should not cause any issues with mobile. http://caniuse.com/#feat\u003dcss-sel2 is probably a better reference than the Mozilla table which is incomplete not unknown.",
+      "parentUuid": "ceb9bbfa_2cf5cb4c",
       "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
