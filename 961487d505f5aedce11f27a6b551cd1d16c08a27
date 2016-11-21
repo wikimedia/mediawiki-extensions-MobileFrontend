@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_30750e93",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:53:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb9bbfa_c7b748f1",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_27f284ce",
         "filename": "extension.json",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_702dc68a",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1702,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:53:56Z",
+      "side": 1,
+      "message": "Good point.",
+      "parentUuid": "ceb9bbfa_27f284ce",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_e7db6c53",
         "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2016-11-18T15:36:46Z",
       "side": 1,
       "message": "Rather than hardcoding `overlay` should we use whatever class names Overlay may have?",
+      "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_07b2e0e4",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:53:56Z",
+      "side": 1,
+      "message": "There may be an opportunity to generalise the css rules to all overlays but right now they appear to have been written explicitly for talk overlays.\n\nDoing the former is a little more complicated then fixing the latter, so I suggest using the talk-overlay class (as we do with other editors) and then doing a review of all overlay styles outside mobile.overlays and trying to tease out patterns.",
+      "parentUuid": "ceb9bbfa_e7db6c53",
       "revId": "961487d505f5aedce11f27a6b551cd1d16c08a27",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
