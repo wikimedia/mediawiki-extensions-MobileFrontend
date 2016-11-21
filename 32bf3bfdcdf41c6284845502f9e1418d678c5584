@@ -34,6 +34,24 @@
       "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_b026bec7",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1706,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-21T20:39:14Z",
+      "side": 0,
+      "message": "Shouldn\u0027t each module be self-contained? If we remove mobile.talk.overlays, then skins.minerva.talk will have an error because it doesn\u0027t have access to this message.",
+      "parentUuid": "ceb9bbfa_d02a52d7",
+      "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
