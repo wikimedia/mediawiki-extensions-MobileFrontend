@@ -273,6 +273,14 @@
 				"resources/skins.minerva.mainPage.styles/common.less"
 			]
 		},
+		"skins.minerva.userpage.icons": {
+			"class": "ResourceLoaderImageModule",
+			"prefix": "mw-ui",
+			"selector": ".mw-ui-icon-{name}:before",
+			"images": {
+				"talk": "resources/skins.minerva.userpage.icons/talk.svg"
+			}
+		},
 		"skins.minerva.userpage.styles": {
 			"targets": [
 				"mobile",
