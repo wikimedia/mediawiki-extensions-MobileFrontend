@@ -55,7 +55,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param bool $lazyLoadImages
 	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::filterContent
-	 * @covers MobileFormatter::doRewriteReferencesForLazyLoading
 	 * @covers MobileFormatter::doRemoveImages
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
@@ -635,7 +634,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @dataProvider provideHeadingTransform
 	 * @covers MobileFormatter::makeSections
 	 * @covers MobileFormatter::enableExpandableSections
-	 * @covers MobileFormatter::setTopHeadingTags
 	 * @covers MobileFormatter::filterContent
 	 */
 	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
@@ -732,7 +730,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param array $expected what we expect the dimensions to be.
 	 * @param string $w value of width attribute (if any)
-	 * @param stirng $h value of height attribute (if any)
+	 * @param string $h value of height attribute (if any)
 	 * @param string $style value of style attribute (if any)
 	 * @covers MobileFormatter::getImageDimensions
 	 */
@@ -796,9 +794,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		];
 	}
 
-	/**
-	 * @covers MobileFormatter::insertTOCPlaceholder
-	 */
 	public function testInsertTOCPlaceholder() {
 		$input = '<p>Hello world.</p><h2>Heading</h2>Text.';
 		$mf = new MobileFormatter( $input, Title::newFromText( 'Mobile' ) );

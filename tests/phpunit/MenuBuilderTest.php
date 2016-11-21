@@ -22,7 +22,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	];
 
 	/**
-	 * @covers MenuBuilder::getEntries
+	 * @covers \MobileFrontend\MenuBuilder::getEntries
 	 */
 	public function test_it_shouldnt_have_entries_by_default() {
 		$menu = new MenuBuilder();
@@ -31,9 +31,9 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers MenuBuilder::insert
-	 * @covers MenuEntry::addComponent
-	 * @covers MenuBuilder::getEntries
+	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuEntry::addComponent
+	 * @covers \MobileFrontend\MenuBuilder::getEntries
 	 */
 	public function test_inserting_an_entry() {
 		$menu = new MenuBuilder();
@@ -58,9 +58,9 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers MenuBuilder::insert
-	 * @covers MenuEntry::addComponent
-	 * @covers MenuBuilder::getEntries
+	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuEntry::addComponent
+	 * @covers \MobileFrontend\MenuBuilder::getEntries
 	 */
 	public function test_inserting_an_entry_after_another() {
 		$menu = new MenuBuilder();
@@ -110,8 +110,8 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry doesn't exist.
-	 * @covers MenuBuilder::insertAfter
-	 * @covers MenuEntry::addComponent
+	 * @covers \MobileFrontend\MenuBuilder::insertAfter
+	 * @covers \MobileFrontend\MenuEntry::addComponent
 	 */
 	public function test_inserting_an_entry_after_that_doesnt_exist() {
 		$menu = new MenuBuilder();
@@ -126,7 +126,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
-	 * @covers MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuBuilder::insert
 	 */
 	public function test_inserting_an_entry_with_an_existing_name() {
 		$menu = new MenuBuilder();
@@ -137,7 +137,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
-	 * @covers MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuBuilder::insert
 	 */
 	public function test_inserting_an_entry_with_an_existing_name_after() {
 		$menu = new MenuBuilder();
@@ -146,9 +146,9 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers MenuBuilder::insert
-	 * @covers MenuEntry::addComponent
-	 * @covers MenuBuilder::getEntries
+	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuEntry::addComponent
+	 * @covers \MobileFrontend\MenuBuilder::getEntries
 	 */
 	public function test_inserting_an_entry_with_multiple_components() {
 		$authLoginComponent = [
@@ -191,9 +191,9 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers MenuBuilder::insert
-	 * @covers MenuEntry::addComponent
-	 * @covers MenuBuilder::getEntries
+	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @covers \MobileFrontend\MenuEntry::addComponent
+	 * @covers \MobileFrontend\MenuBuilder::getEntries
 	 */
 	public function test_inserting_a_javascript_only_entry() {
 		$menu = new MenuBuilder();
