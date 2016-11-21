@@ -1303,6 +1303,7 @@ class SkinMinerva extends SkinTemplate {
 			$styles[] = 'skins.minerva.mainPage.styles';
 		} elseif ( $this->isUserPage ) {
 			$styles[] = 'skins.minerva.userpage.styles';
+			$styles[] = 'skins.minerva.userpage.icons';
 		} elseif ( $title->isSpecialPage() ) {
 			$styles[] = 'mobile.messageBox';
 			$styles['special'] = 'skins.minerva.special.styles';
