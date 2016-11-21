@@ -52,6 +52,24 @@
       "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_d33dbcb9",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1706,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T20:48:48Z",
+      "side": 0,
+      "message": "Thanks for the clarification.\nHmm, I thought this was dependent on mobile.talk.overlays but now I see it isn\u0027t.\n\nSo yes we\u0027ll either have to ship it twice or bundle it inside a common module.\n\nI\u0027ve gone for the former and re-added it here, as we should probably use a different message key for this anyway.",
+      "parentUuid": "ceb9bbfa_b026bec7",
+      "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
