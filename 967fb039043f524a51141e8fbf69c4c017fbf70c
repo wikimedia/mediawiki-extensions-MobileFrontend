@@ -16,6 +16,24 @@
       "revId": "967fb039043f524a51141e8fbf69c4c017fbf70c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_87995083",
+        "filename": "resources/mobile.overlays/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T18:57:31Z",
+      "side": 1,
+      "message": "Do you think it would be sufficient to just test 4 and 5 (where we know the issue to exist) and rename isOldIos to useKeyboardHack ?\n\nI could update isIos to take a second parameter but it feels like that might be overkill for this purpose.",
+      "parentUuid": "ceb9bbfa_47cc588c",
+      "revId": "967fb039043f524a51141e8fbf69c4c017fbf70c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
