@@ -16,6 +16,24 @@
       "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_d02a52d7",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1706,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-21T20:06:21Z",
+      "side": 0,
+      "message": "Yes, thus we were shipping it twice as it is provided by mobile.talk.overlays\n\nWhat am I missing?",
+      "parentUuid": "ceb9bbfa_70fca6b1",
+      "revId": "32bf3bfdcdf41c6284845502f9e1418d678c5584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
