@@ -5,7 +5,9 @@
 		]
 	},
 	"mobile-frontend-editor-edit": "ڤیرایئشت کاری",
+	"mobile-frontend-featured-article": "مينۈنأ نازدار امرو",
 	"mobile-frontend-home-button": "سرآسونه",
+	"mobile-frontend-main-menu-account-create": "راسد کردن هساڤ کارياري",
 	"mobile-frontend-main-menu-button-tooltip": "نوم جاگه اصلی نه ڤا کونين.",
 	"mobile-frontend-main-menu-login": "ڤامین اوڤیڌن",
 	"mobile-frontend-main-menu-nearby": "نزیک",
@@ -20,5 +22,6 @@
 	"mobile-frontend-view": "دیئن موڤایلی",
 	"mobile-frontend-view-desktop": "ميزكار",
 	"mobile-frontend-view-mobile": "موبايل",
-	"tag-mobile_edit": "ویرایشت موبایلی"
+	"tag-mobile_edit": "ویرایشت موبایلی",
+	"tag-mobile_web_edit": "ڤيرایشت تیارگه موبایلی"
 }

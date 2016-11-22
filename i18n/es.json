@@ -375,6 +375,8 @@
 	"apihelp-mobileview-example-3": "Obtener información acerca de las secciones 1 y posteriores y de las secciones que contiene referencias a [[Candlemass]]",
 	"apihelp-parse-param-noimages": "Desactivar imágenes en la salida para móviles.",
 	"apihelp-parse-param-mainpage": "Aplicar las transformaciones de la página principal para móviles.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> es mutuamente excluyente con <var>thumbwidth</var> y <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> no tiene sentido en la página principal; se ignora.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "No se {{PLURAL:$2|encuentra la sección|encuentran las secciones}} $1.",
 	"mobile-frontend-meta-data-issues-categories": "Acerca de esta categoría",
 	"mobile-frontend-loading-message": "Cargando…",
