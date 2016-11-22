@@ -26,9 +26,10 @@ class SkinMinerva extends SkinTemplate {
 	public $isUserPage = false;
 	/** @var ContentHandler Content handler of page; only access through getContentHandler */
 	protected $contentHandler = null;
-
 	/** @var bool Whether the page is also available in other languages or variants */
 	protected $doesPageHaveLanguages = false;
+	/** @var bool Whether to show the categories button on the page */
+	protected $shouldShowCategoriesButton = false;
 
 	/**
 	 * Wrapper for MobileContext::getMFConfig()
@@ -272,6 +273,18 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Whether the output page contains category links
+	 * @return bool
+	 */
+	private function hasCategoryLinks() {
+		$categoryLinks = $this->getOutput()->getCategoryLinks();
+		if ( !count( $categoryLinks ) ) {
+			return false;
+		}
+		return !empty( $categoryLinks['normal'] ) || !empty( $categoryLinks['hidden'] );
+	}
+
+	/**
 	 * Initiate class
 	 */
 	public function __construct() {
@@ -285,6 +298,8 @@ class SkinMinerva extends SkinTemplate {
 				$this->isUserPage = true;
 			}
 		}
+		$this->shouldShowCategoriesButton = $this->mobileContext->getConfigVariable(
+			'MinervaShowCategoriesButton' ) && $this->hasCategoryLinks();
 	}
 
 	/**
@@ -933,6 +948,22 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns an array with details for a categories button.
+	 * @return array
+	 */
+	protected function getCategoryButton() {
+		return [
+			'attributes' => [
+				'href' => '#/categories',
+				// add hidden class (the overlay works only, when JS is enabled (class will
+				// be removed in categories/init.js)
+				'class' => 'category-button hidden',
+			],
+			'label' => $this->msg( 'categories' )->text()
+		];
+	}
+
+	/**
 	 * Returns an array of links for page secondary actions
 	 * @param BaseTemplate $tpl
 	 * @return string[]
@@ -958,6 +989,10 @@ class SkinMinerva extends SkinTemplate {
 
 		if ( $this->doesPageHaveLanguages && $title->isMainPage() ) {
 			$buttons['language'] = $this->getLanguageButton();
+		}
+
+		if ( $this->shouldShowCategoriesButton ) {
+			$buttons['categories'] = $this->getCategoryButton();
 		}
 
 		return $buttons;
@@ -1228,6 +1263,10 @@ class SkinMinerva extends SkinTemplate {
 			$this->isWikiTextTalkPage()
 		) {
 			$modules[] = 'skins.minerva.talk';
+		}
+
+		if ( $this->shouldShowCategoriesButton ) {
+			$modules[] = 'skins.minerva.categories';
 		}
 
 		return $modules;

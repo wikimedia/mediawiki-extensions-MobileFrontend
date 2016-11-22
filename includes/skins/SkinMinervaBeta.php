@@ -14,19 +14,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	protected $mode = 'beta';
 
 	/**
-	 * Returns an array of modules related to the current context of the page.
-	 * @return array
-	 */
-	public function getContextSpecificModules() {
-		$modules = parent::getContextSpecificModules();
-		if ( $this->getCategoryLinks( false ) ) {
-			$modules[] = 'skins.minerva.categories';
-		}
-
-		return $modules;
-	}
-
-	/**
 	 * Returns the javascript modules to load.
 	 * @return array
 	 */
