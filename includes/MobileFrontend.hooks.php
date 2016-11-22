@@ -364,10 +364,10 @@ class MobileFrontendHooks {
 		// Enables mobile cookies on wikis w/o mobile domain
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
-		$cookies[] = 'stopMobileRedirect';
+		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
 
 		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
-			$cookies[] = 'optin'; // beta cookie
+			$cookies[] = MobileContext::OPTIN_COOKIE_NAME; // beta cookie
 		}
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
 		// only for HTTP but we don't vary on protocol.
@@ -750,11 +750,12 @@ class MobileFrontendHooks {
 		$request = $context->getRequest();
 
 		// Migrate prefixed disableImages cookie to unprefixed cookie.
-		if ( isset( $_COOKIE[$config->get( 'CookiePrefix' ) . 'disableImages'] ) ) {
-			if ( (bool)$request->getCookie( 'disableImages' ) ) {
+		$rawCookie = $config->get( 'CookiePrefix' ) . MobileContext::DISABLE_IMAGES_COOKIE_NAME;
+		if ( isset( $_COOKIE[ $rawCookie ] ) ) {
+			if ( (bool)$request->getCookie( MobileContext::DISABLE_IMAGES_COOKIE_NAME ) ) {
 				$context->setDisableImagesCookie( true );
 			}
-			$request->response()->clearCookie( 'disableImages' );
+			$request->response()->clearCookie( MobileContext::DISABLE_IMAGES_COOKIE_NAME );
 		}
 
 		# Add deep link to a mobile app specified by $wgMFAppScheme

@@ -470,11 +470,11 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function optInProvider() {
 		return [
 			[ [], false, true ],
-			[ [ 'optin' => 'beta' ], true, true ],
-			[ [ 'optin' => 'foobar' ], false, true ],
+			[ [ MobileContext::OPTIN_COOKIE_NAME => MobileContext::MODE_BETA ], true, true ],
+			[ [ MobileContext::OPTIN_COOKIE_NAME => 'foobar' ], false, true ],
 			[ [], false, false ],
-			[ [ 'optin' => 'beta' ], false, false ],
-			[ [ 'optin' => 'foobar' ], false, false ],
+			[ [ MobileContext::OPTIN_COOKIE_NAME => MobileContext::MODE_BETA ], false, false ],
+			[ [ MobileContext::OPTIN_COOKIE_NAME => 'foobar' ], false, false ],
 		];
 	}
 
@@ -571,7 +571,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testGetConfigVariable(
 		$expected,
 		$wgMinervaUseFooterV2,
-		$mobileMode = 'stable'
+		$mobileMode = MobileContext::MODE_STABLE
 	) {
 		$this->setMwGlobals( [
 			'wgMFEnableBeta' => true,
@@ -594,8 +594,8 @@ class MobileContextTest extends MediaWikiTestCase {
 		];
 
 		return [
-			[ 'foo', $wgMinervaUseFooterV2, 'stable' ],
-			[ 'bar', $wgMinervaUseFooterV2, 'beta' ],
+			[ 'foo', $wgMinervaUseFooterV2, MobileContext::MODE_STABLE ],
+			[ 'bar', $wgMinervaUseFooterV2, MobileContext::MODE_BETA ],
 
 			[ null, [ 'alpha' => 'baz' ] ],
 
