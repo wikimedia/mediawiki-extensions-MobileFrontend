@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_4a5faae8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-22T19:58:12Z",
+      "side": 1,
+      "message": "Yes, please be as little ambiguous as possible.",
+      "parentUuid": "ceb9bbfa_8d8f27d1",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_3ed731f4",
         "filename": "resources/skins.minerva.content.styles/main.less",
         "patchSetId": 1
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "Does the comment below help with that specific issue?\nThis is just a media query we repeat in various other places. I could move it to tablet.less if you would prefer it there.",
       "parentUuid": "ceb9bbfa_8c85f7b3",
+      "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_2a5476c8",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-22T19:58:12Z",
+      "side": 1,
+      "message": "Moving this rule to tablet styles is better imo.",
+      "parentUuid": "ceb9bbfa_ed622337",
       "revId": "5d3630085dd616257a4b022dcc1faafb0172145d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
