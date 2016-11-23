@@ -34,3 +34,12 @@ end
 Then(/^the modified button should be selected$/) do
   expect(on(WatchlistPage).feed_link_element.parent.element.class_name).to match 'is-on'
 end
+
+Then(/^I am informed on how to add pages to my watchlist$/) do
+  expect(on(WatchlistPage).empty_howto_element.when_present).to be_visible
+end
+
+Then(/^I am told there are no new changes$/) do
+  expect(on(WatchlistPage).empty_panel_element.when_present).to be_visible
+  expect(on(WatchlistPage).empty_howto_element).not_to be_visible
+end

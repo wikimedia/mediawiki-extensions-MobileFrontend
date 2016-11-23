@@ -13,8 +13,6 @@ Given /^I am in beta mode$/ do
 end
 
 Given /^I am logged in as a new user$/ do
-  step 'I am on the "Main Page" page'
-  step 'I click on "Log in" in the main navigation menu'
   log_in
 end
 
