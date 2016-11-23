@@ -3,7 +3,7 @@
 	var
 		// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 		isEditable = mw.config.get( 'wgIsProbablyEditable' ),
-		blockInfo =  mw.config.get( 'wgMinervaUserBlockInfo', false ),
+		blockInfo = mw.config.get( 'wgMinervaUserBlockInfo', false ),
 		settings = M.require( 'mobile.settings/settings' ),
 		router = require( 'mediawiki.router' ),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),

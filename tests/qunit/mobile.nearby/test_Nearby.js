@@ -13,6 +13,7 @@
 
 	QUnit.test( '#render empty list', 4, function ( assert ) {
 		var $el = $( '<div>' );
+		// eslint-disable-next-line no-new
 		new Nearby( {
 			api: api,
 			latitude: 37.7,
@@ -70,6 +71,7 @@
 
 	QUnit.test( '#render with a location', 2, function ( assert ) {
 		var $el = $( '<div>' );
+		// eslint-disable-next-line no-new
 		new Nearby( {
 			api: api,
 			latitude: 37.7,
@@ -100,6 +102,7 @@
 
 	QUnit.test( '#render with current location', 2, function ( assert ) {
 		var $el = $( '<div>' );
+		// eslint-disable-next-line no-new
 		new Nearby( {
 			api: api,
 			useCurrentLocation: true,
@@ -145,6 +148,7 @@
 	QUnit.test( '#getting a title will trigger a different API method', 1, function ( assert ) {
 		var $el = $( '<div>' ),
 			pageTitle = 'Hello Friends!';
+		// eslint-disable-next-line no-new
 		new Nearby( {
 			api: api,
 			pageTitle: pageTitle,

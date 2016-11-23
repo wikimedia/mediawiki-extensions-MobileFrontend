@@ -38,8 +38,7 @@ test-whitespace() { git diff --cached --check; }
 test-js() {
 	local err=0
 
-	make jshint || err+=1
-	make jscs || err+=1
+	make eslint || err+=1
 
 	if git-is-staged \*.js; then
 		make qunit || err+=1

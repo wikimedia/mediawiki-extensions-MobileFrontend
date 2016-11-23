@@ -331,7 +331,7 @@
 		return new Page(
 			$.extend( resp, {
 				id: resp.pageid,
-				isMissing: resp.missing ? true : false,
+				isMissing: !!resp.missing,
 				url: mw.util.getUrl( resp.title ),
 				displayTitle: displayTitle // this is HTML!
 			} )

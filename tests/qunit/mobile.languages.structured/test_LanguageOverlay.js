@@ -131,4 +131,3 @@
 		);
 	} );
 } )( mw.mobileFrontend );
-

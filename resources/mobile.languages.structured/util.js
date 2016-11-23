@@ -103,7 +103,7 @@
 		if ( variants ) {
 			$.each( variants, function ( i, variant ) {
 				if ( frequentlyUsedLanguages.hasOwnProperty( variant.lang ) ) {
-					variant.frequency =  frequentlyUsedLanguages[variant.lang];
+					variant.frequency = frequentlyUsedLanguages[variant.lang];
 				} else {
 					variant.frequency = minFrequency - 1;
 				}

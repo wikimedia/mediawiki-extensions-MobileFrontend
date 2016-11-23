@@ -45,14 +45,8 @@ nodecheck:
 mwnodecheck:
 	@dev-scripts/nodecheck.sh ${MW_INSTALL_PATH}
 
-jscs: nodecheck			## Check the JavaScript coding style
-	@${GRUNT} jscs
-
-jshinttests: nodecheck			## Lint the JS tests
-	@${GRUNT} jshint:test
-
-jshint: nodecheck 	## Lint the JavaScript files
-	@${GRUNT} jshint
+eslint: nodecheck			## Check the JavaScript coding style
+	@${GRUNT} eslint:all
 
 dependencies: nodecheck kssnodecheck phpcheck remotes
 
@@ -68,7 +62,7 @@ phpunit:				## Run the PHPUnit test suite
 qunit: mwnodecheck		## Run the QUnit test suite
 	cd ${MW_INSTALL_PATH} && node_modules/grunt/bin/grunt qunit
 
-tests: jshint phplint phpunit qunit	## Run the PHPUnit test suite after linting
+tests: eslint phplint phpunit qunit	## Run the PHPUnit test suite after linting
 
 cucumber: checkcucumber			## Run the browser test suite
 	@dev-scripts/cucumber.sh
@@ -76,7 +70,7 @@ cucumber: checkcucumber			## Run the browser test suite
 checkcucumber:
 	@dev-scripts/cucumber_check.sh
 
-lint: jshint phplint checkcucumber	## Lint all of the JavaScript, PHP, and browser test files
+lint: eslint phplint checkcucumber	## Lint all of the JavaScript, PHP, and browser test files
 
 installhooks:				## Install the pre-commit and pre-review Git hooks
 	ln -sf ${PWD}/dev-scripts/pre-commit .git/hooks/pre-commit

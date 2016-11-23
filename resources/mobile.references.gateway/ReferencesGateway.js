@@ -12,8 +12,6 @@
 	}
 
 	OO.mfExtend( ReferencesGateway, {
-		// jscs:disable jsDoc
-		// (Disabled as signature does not match the abstract base class arguments/return value)
 		/**
 		 * Return the matched reference via API or DOM query
 		 *
@@ -26,7 +24,6 @@
 		getReference: function () {
 			throw new Error( 'Method unimplemented' );
 		}
-		// jscs:enable jsDoc
 	} );
 
 	M.define( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway );

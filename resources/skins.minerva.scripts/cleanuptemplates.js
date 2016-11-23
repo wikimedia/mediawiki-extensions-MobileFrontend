@@ -97,11 +97,11 @@
 		function initPageIssues() {
 			var ns = mw.config.get( 'wgNamespaceNumber' ),
 				// Categories have no lead section
-				$container = ns === 14 ? $( '#bodyContent' )
-					: M.getCurrentPage().getLeadSectionElement();
+				$container = ns === 14 ? $( '#bodyContent' ) :
+					M.getCurrentPage().getLeadSectionElement();
 
 			if ( ns === 0 ) {
-				createBanner( $container, mw.msg(  'mobile-frontend-meta-data-issues' ),
+				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues' ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
 			// Create a banner for talk pages (namespace 1) in beta mode to make them more readable.
 			} else if ( ns === 1 ) {

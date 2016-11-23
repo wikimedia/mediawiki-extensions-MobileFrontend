@@ -1,4 +1,3 @@
-/* jshint -W100 */
 ( function ( M, $ ) {
 	var pageGateway,
 		PageGateway = M.require( 'mobile.startup/PageGateway' );

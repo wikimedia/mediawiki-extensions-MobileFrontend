@@ -13,7 +13,7 @@
 		this.category = options.category;
 		this.limit = 10;
 		this.continueParams = {
-			continue: ''
+			'continue': ''
 		};
 		this.canContinue = true;
 	}
@@ -109,10 +109,10 @@
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
 						photos = $.map( resp.query.pages, function ( page ) {
-								return self._getImageDataFromPage.call( self, page );
-							} ).sort( function ( a, b ) {
-								return a.timestamp < b.timestamp ? 1 : -1;
-							} );
+							return self._getImageDataFromPage.call( self, page );
+						} ).sort( function ( a, b ) {
+							return a.timestamp < b.timestamp ? 1 : -1;
+						} );
 
 						if ( resp.hasOwnProperty( 'continue' ) ) {
 							self.continueParams = resp.continue;

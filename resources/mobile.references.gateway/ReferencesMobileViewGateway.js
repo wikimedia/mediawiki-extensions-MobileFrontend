@@ -57,7 +57,7 @@
 			} ).then( function ( data ) {
 				var sections = {};
 
-				$.each( data.mobileview.sections, function ( i, section )  {
+				$.each( data.mobileview.sections, function ( i, section ) {
 					var $section = $( '<div>' ).html( section.text );
 
 					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] = $section.find( '.references' );

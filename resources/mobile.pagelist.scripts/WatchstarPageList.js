@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 
-	var mWatchstar,
-		PageList = M.require( 'mobile.pagelist/PageList' ),
+	var PageList = M.require( 'mobile.pagelist/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		user = M.require( 'mobile.user/user' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -95,6 +94,6 @@
 		}
 	} );
 
-	mWatchstar = M.define( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList );
+	M.define( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList );
 
 }( mw.mobileFrontend, jQuery ) );

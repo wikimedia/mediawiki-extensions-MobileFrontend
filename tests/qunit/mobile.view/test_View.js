@@ -49,11 +49,11 @@
 			'remove',
 			'detach'
 		].forEach( function ( prop ) {
-				var stub = self.sandbox.stub( view.$el, prop );
-				view[ prop ]( 'test', 1 );
-				assert.ok( stub.calledWith( 'test', 1 ) );
-				stub.restore();
-			} );
+			var stub = self.sandbox.stub( view.$el, prop );
+			view[ prop ]( 'test', 1 );
+			assert.ok( stub.calledWith( 'test', 1 ) );
+			stub.restore();
+		} );
 	} );
 
 	QUnit.test( 'View extended, with el property', 1, function ( assert ) {
@@ -218,7 +218,7 @@
 	} );
 
 	QUnit.test( 'View#postRender', 1, function ( assert ) {
-		var view, spy = this.sandbox.spy();
+		var spy = this.sandbox.spy();
 		function ChildView() {
 			View.apply( this, arguments );
 		}
@@ -229,7 +229,8 @@
 			}
 		} );
 
-		view = new ChildView();
+		// eslint-disable-next-line no-new
+		new ChildView();
 		assert.ok( spy.calledOnce, 'invoke postRender' );
 	} );
 
