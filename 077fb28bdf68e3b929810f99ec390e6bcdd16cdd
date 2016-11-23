@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_9a49896d",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-23T13:44:02Z",
+      "side": 1,
+      "message": "As this file is empty, can we remove it and in SkinMinervaBeta point $template to \u0027MinervaTemplate\u0027 ?",
+      "revId": "077fb28bdf68e3b929810f99ec390e6bcdd16cdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_9a22a9a1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-23T13:44:02Z",
+      "side": 1,
+      "message": "as a small performance improvement can we add `hasCategoryLinks()` method, that does `count()` check on `$this-\u003egetOutput()-\u003egetCategoryLinks()` ?\n\nMethod Skin::getCategoryLinks() does some heavy HTML processing. There is no need to do that as we don\u0027t use generated html",
+      "revId": "077fb28bdf68e3b929810f99ec390e6bcdd16cdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
