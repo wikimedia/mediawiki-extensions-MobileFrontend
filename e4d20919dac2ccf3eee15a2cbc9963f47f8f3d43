@@ -178,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_5b7d3ae3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-23T00:04:16Z",
+      "side": 1,
+      "message": "Probably - although it\u0027d be a lot of work to untangle now :(",
+      "parentUuid": "eec4bf7e_3bebbaa2",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_ffbd37d5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -231,6 +249,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_fbd2ce5c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-23T00:04:16Z",
+      "side": 1,
+      "message": "The scope is to migrate to eslint *and* eslint-config-wikimedia where feasible (so I\u0027ve left in exceptions for things that are going to be hard to fix, like use-before-define or dangling underscores). The point of using eslint-config-wikimedia is avoid different conventions from project to project.\n\nI don\u0027t have a strong opinion on which is better, but any change should be upstream.",
+      "parentUuid": "eec4bf7e_5bee6eb2",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_3ff5efb5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -278,6 +314,24 @@
       "side": 1,
       "message": "and same as above. it\u0027s cheap to retain this and remove it in a follow up  after some discussion explicitly if necessary, but I think this rule is a good one which helps readability.",
       "parentUuid": "eec4bf7e_dbaefe94",
+      "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_5b2f7af3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-11-23T00:04:16Z",
+      "side": 1,
+      "message": "Given this wouldn\u0027t be incompatible with eslint-config-wikimedia, feel free to add object-property-newline.",
+      "parentUuid": "eec4bf7e_f63c3990",
       "revId": "e4d20919dac2ccf3eee15a2cbc9963f47f8f3d43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
