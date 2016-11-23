@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_1721f4f6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-23T23:38:37Z",
+      "side": 1,
+      "message": "there is no need to do isset() check first as empty doesn\u0027t trigger notice/warning error on undefined array keys",
+      "revId": "01d6576b271f43f9b6d26c46b00c3051c6730d82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
