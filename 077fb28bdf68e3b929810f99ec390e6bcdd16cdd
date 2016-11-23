@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ceb9bbfa_3da0373e",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-23T18:35:41Z",
+      "side": 1,
+      "message": "Yes, I will do it in a follow up patch: https://phabricator.wikimedia.org/T147944",
+      "parentUuid": "ceb9bbfa_5d5e4b7c",
+      "revId": "077fb28bdf68e3b929810f99ec390e6bcdd16cdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb9bbfa_9a22a9a1",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2016-11-23T13:44:02Z",
       "side": 1,
       "message": "as a small performance improvement can we add `hasCategoryLinks()` method, that does `count()` check on `$this-\u003egetOutput()-\u003egetCategoryLinks()` ?\n\nMethod Skin::getCategoryLinks() does some heavy HTML processing. There is no need to do that as we don\u0027t use generated html",
+      "revId": "077fb28bdf68e3b929810f99ec390e6bcdd16cdd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_1d8693be",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-23T18:35:41Z",
+      "side": 1,
+      "message": "good idea",
+      "parentUuid": "ceb9bbfa_9a22a9a1",
       "revId": "077fb28bdf68e3b929810f99ec390e6bcdd16cdd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
