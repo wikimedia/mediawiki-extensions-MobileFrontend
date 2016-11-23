@@ -9,7 +9,7 @@
  */
 class SkinMinervaBeta extends SkinMinerva {
 	/** @var string $template Name of this template */
-	public $template = 'MinervaTemplateBeta';
+	public $template = 'MinervaTemplate';
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'beta';
 

@@ -82,7 +82,6 @@
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
 		"MinervaTemplate": "includes/skins/MinervaTemplate.php",
-		"MinervaTemplateBeta": "includes/skins/MinervaTemplateBeta.php",
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
 		"SkinMinerva": "includes/skins/SkinMinerva.php",
 		"SkinMinervaBeta": "includes/skins/SkinMinervaBeta.php",
