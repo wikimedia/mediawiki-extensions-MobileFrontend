@@ -370,11 +370,14 @@ class SkinMinerva extends SkinTemplate {
 		// notifications archive, show the notifications icon in the header.
 		if ( $this->useEcho() && $user->isLoggedIn() ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
-			$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
-			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
+			if ( $currentTitle->equals( $notificationsTitle ) ) {
+				// Don't show the secondary button at all
+				$notificationsTitle = null;
+			} else {
 				$notifUser = MWEchoNotifUser::newFromUser( $user );
 				$echoSeenTime = EchoSeenTime::newFromUser( $user )->getTime( 'all', /*flags*/ 0, TS_ISO_8601 );
 
+				$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
 				$notifLastUnreadTime = $notifUser->getLastUnreadNotificationTime();
 				$count = $notifUser->getNotificationCount();
 
