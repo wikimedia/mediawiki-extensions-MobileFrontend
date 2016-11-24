@@ -10,11 +10,12 @@
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
 			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// the first call returns a getContent deferred for a blocked user.
-			getContentStub.onCall( 0 ).returns( $.Deferred().resolve( 'section 0', {
+			this.dBlockedContent = $.Deferred().resolve( 'section 0', {
 				blockid: 1,
 				blockedby: 'Test',
 				blockreason: 'Testreason'
-			} ) );
+			} );
+			getContentStub.onCall( 0 ).returns( this.dBlockedContent );
 			// all other calls returns a deferred for unblocked users.
 			getContentStub.returns( $.Deferred().resolve( 'section 0', {} ) );
 			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
@@ -29,11 +30,13 @@
 			title: 'test.css'
 		} );
 
-		assert.strictEqual(
-			$( '.mw-notification-content' ).text(),
-			'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.',
-			'There is a toast notice, that i am blocked from editing'
-		);
+		return this.dBlockedContent.then( function () {
+			assert.strictEqual(
+				$( '.mw-notification-content' ).text(),
+				'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.',
+				'There is a toast notice, that i am blocked from editing'
+			);
+		} );
 	} );
 
 	QUnit.test( '#initialize, with given page and section', 5, function ( assert ) {
