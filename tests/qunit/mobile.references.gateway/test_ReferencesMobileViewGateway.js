@@ -48,10 +48,11 @@
 
 	QUnit.test( 'Gateway only hits api once despite multiple calls', 1, function ( assert ) {
 		var gatewayHitsApi = new ReferencesMobileViewGateway( this.api, new MemoryCache() );
-		gatewayHitsApi.getReferencesLists( this.page );
-		gatewayHitsApi.getReferencesLists( this.page );
-		gatewayHitsApi.getReferencesLists( this.page );
-		assert.strictEqual( this.api.get.calledOnce, true, 'The API should only ever be hit once.' );
+		return gatewayHitsApi.getReferencesLists( this.page ).then( function () {
+			gatewayHitsApi.getReferencesLists( this.page );
+			gatewayHitsApi.getReferencesLists( this.page );
+			assert.strictEqual( this.api.get.calledOnce, true, 'The API should only ever be hit once.' );
+		}.bind( this ) );
 	} );
 
 	QUnit.test( 'checking good reference', 1, function ( assert ) {

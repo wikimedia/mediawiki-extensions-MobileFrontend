@@ -93,10 +93,10 @@
 	} );
 
 	QUnit.test( '#getPages', 6, function ( assert ) {
-		m.getPages( {
+		return m.getPages( {
 			latitude: 37.787,
 			longitude: -122.51
-		} ).done( function ( pages ) {
+		} ).then( function ( pages ) {
 			assert.strictEqual( pages.length, 3 );
 			assert.strictEqual( pages[ 0 ].title, 'Wikimedia Foundation' );
 			assert.ok( !pages[ 0 ].thumbnail.isLandscape );
@@ -107,7 +107,7 @@
 	} );
 
 	QUnit.test( '#getPagesAroundPage', 4, function ( assert ) {
-		m.getPagesAroundPage( 'Wikimedia Foundation' ).done( function ( pages ) {
+		return m.getPagesAroundPage( 'Wikimedia Foundation' ).then( function ( pages ) {
 			assert.strictEqual( pages.length, 2 );
 			assert.strictEqual( pages[ 1 ].title, 'W San Francisco' );
 			assert.strictEqual( pages[ 1 ].thumbnail, undefined );

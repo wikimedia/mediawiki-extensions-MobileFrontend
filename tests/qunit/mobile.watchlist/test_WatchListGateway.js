@@ -95,7 +95,7 @@
 		this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
-		gateway.loadWatchlist().done( function ( pages ) {
+		return gateway.loadWatchlist().then( function ( pages ) {
 			var params = mw.Api.prototype.get.firstCall.args[0];
 
 			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
@@ -121,7 +121,7 @@
 		stub = this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response1 ) );
 
-		gateway.loadWatchlist().done( function ( pages ) {
+		return gateway.loadWatchlist().then( function ( pages ) {
 			var params = mw.Api.prototype.get.firstCall.args[0];
 
 			assert.strictEqual( params.continue, 'gwrcontinue||', 'It should set the continue parameter' );
@@ -135,7 +135,7 @@
 			// Let's call for the next page
 			stub.returns( $.Deferred().resolve( response ) );
 
-			gateway.loadWatchlist().done( function ( pages ) {
+			return gateway.loadWatchlist().then( function ( pages ) {
 				// Albert Einstein should be the first result of the next page (not removed)
 				assert.equal( pages.length, 7, 'Albert should be in the results' );
 				assert.equal( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
@@ -151,7 +151,7 @@
 				batchcomplete: ''
 			} ) );
 
-		gateway.loadWatchlist().done( function ( pages ) {
+		return gateway.loadWatchlist().then( function ( pages ) {
 			assert.deepEqual( pages, [] );
 		} );
 	} );
@@ -162,7 +162,7 @@
 		this.sandbox.stub( mw.Api.prototype, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
-		gateway.loadWatchlist().done( function ( pages ) {
+		return gateway.loadWatchlist().then( function ( pages ) {
 			assert.equal( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );
 			assert.equal( pages[6].isMissing, true, 'zzzz page is marked as new' );
 		} );

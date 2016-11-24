@@ -61,7 +61,10 @@
 			return fakeOverlay;
 		} );
 
-		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
+		// Wait for $.ready because OverlayManager#add() does
+		return $.when( $.ready ).then( function () {
+			assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
+		} );
 	} );
 
 	QUnit.test( '#replaceCurrent', 3, function ( assert ) {
