@@ -372,11 +372,11 @@ $specialPageAliases['sv'] = array(
 /** Ukrainian (українська) */
 $specialPageAliases['uk'] = array(
 	'History' => array( 'Історія' ),
-	'MobileOptions' => array( 'Налаштування_мобільної_версії' ),
-	'Uploads' => array( 'Мобільне_Завантаження' ),
-	'MobileDiff' => array( 'Мобільна_різниця_версій' ),
-	'MobileMenu' => array( 'Мобільне_меню' ),
-	'Nearby' => array( 'Поблизу' ),
+	'MobileOptions' => array( 'Налаштування_мобільної_версії', 'Настройки_мобильной_версии' ),
+	'Uploads' => array( 'Мобільне_Завантаження', 'Загрузки' ),
+	'MobileDiff' => array( 'Мобільна_різниця_версій', 'Сравнение_версий' ),
+	'MobileMenu' => array( 'Мобільне_меню', 'Мобильное_меню' ),
+	'Nearby' => array( 'Поблизу', 'Поблизости' ),
 );
 
 /** Urdu (اردو) */
