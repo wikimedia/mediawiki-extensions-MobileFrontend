@@ -2030,6 +2030,10 @@
 			"beta": true,
 			"base": true
 		},
+		"MinervaShowCategoriesButton": {
+			"base": false,
+			"beta": true
+		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"

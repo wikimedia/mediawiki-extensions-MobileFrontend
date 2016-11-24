@@ -4,7 +4,9 @@ namespace Tests\MobileFrontend\Skins;
 
 use MediaWikiTestCase;
 use MobileContext;
+use OutputPage;
 use SkinMinerva;
+use TestingAccessWrapper;
 
 class TestSkinMinerva extends SkinMinerva {
 
@@ -21,6 +23,7 @@ class TestSkinMinerva extends SkinMinerva {
 }
 
 /**
+ * @covers SkinMinerva
  * @group MobileFrontend
  */
 class SkinMinervaTest extends MediaWikiTestCase {
@@ -64,5 +67,60 @@ class SkinMinervaTest extends MediaWikiTestCase {
 
 	private function factorySkin( MobileContext $context ) {
 		return new TestSkinMinerva( $context );
+	}
+
+	/**
+	 * @dataProvider provideHasCategoryLinks
+	 * @param array $categoryLinks
+	 * @param bool $expected
+	 */
+	public function testHasCategoryLinks( array $categoryLinks, $expected ) {
+		$outputPage = $this->getMockBuilder( OutputPage::class )
+			->disableOriginalConstructor()
+			->getMock();
+		$outputPage->expects( $this->once() )
+			->method( 'getCategoryLinks' )
+			->will( $this->returnValue( $categoryLinks ) );
+
+		$skin = TestingAccessWrapper::newFromObject(
+			$this->getMockBuilder( SkinMinerva::class )
+				->disableOriginalConstructor()
+				->getMock()
+		);
+		$skin->expects( $this->once() )
+			->method( 'getOutput' )
+			->will( $this->returnValue( $outputPage ) );
+		$this->assertEquals( $skin->hasCategoryLinks(), $expected );
+	}
+
+	public function provideHasCategoryLinks() {
+		return [
+			[ [], false ],
+			[
+				[
+					'normal' => '<ul><li><a href="/wiki/Category:1">1</a></li></ul>'
+				],
+				true
+			],
+			[
+				[
+					'hidden' => '<ul><li><a href="/wiki/Category:Hidden">Hidden</a></li></ul>'
+				],
+				true
+			],
+			[
+				[
+					'normal' => '<ul><li><a href="/wiki/Category:1">1</a></li></ul>',
+					'hidden' => '<ul><li><a href="/wiki/Category:Hidden">Hidden</a></li></ul>'
+				],
+				true
+			],
+			[
+				[
+					'unexpected' => '<ul><li><a href="/wiki/Category:1">1</a></li></ul>'
+				],
+				false
+			],
+		];
 	}
 }
