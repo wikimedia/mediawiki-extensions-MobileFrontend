@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_8b103d5d",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-24T21:05:04Z",
+      "side": 1,
+      "message": "incorrect brackets placement. OutputPage::addHtml() gets only one param, SpecialMobileWatchlist::getWatchlistHeader() takes two",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_4b33450b",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-24T21:05:04Z",
+      "side": 1,
+      "message": "missing @param definition for $view",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_4619fc7d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-24T21:05:04Z",
+      "side": 1,
+      "message": "$view -\u003e is is bool or string? as if We want to pass strings would be nice to do a strict check \u003d\u003e \n    \n    $view !\u003d\u003d false \n\nas someone can pass empty string",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_c604ec19",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-11-24T21:05:04Z",
+      "side": 1,
+      "message": "as we\u0027re passing \u0027a-z\u0027 in parameter in SpecialMobileEditWatchlist do we have to specify that \u0027a-z\u0027 here? Can we just use $view param.",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
