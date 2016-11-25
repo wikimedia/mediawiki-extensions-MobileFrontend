@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_607bc3ec",
+        "filename": "includes/skins/footer.mustache",
+        "patchSetId": 10
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-25T19:03:18Z",
+      "side": 1,
+      "message": "Any change to a template partial needs to adjust the version number in minerva.template due to the existence of https://phabricator.wikimedia.org/T113095",
+      "revId": "05615c76373670d77fb7aa7ddf770f4d2a323572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
