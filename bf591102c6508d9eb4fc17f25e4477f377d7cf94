@@ -22,6 +22,24 @@
       "revId": "bf591102c6508d9eb4fc17f25e4477f377d7cf94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_e0cc733a",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-25T19:25:00Z",
+      "side": 1,
+      "message": "There is no  Countable like interface for Empty.",
+      "parentUuid": "aebe47e0_e05d937f",
+      "revId": "bf591102c6508d9eb4fc17f25e4477f377d7cf94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
