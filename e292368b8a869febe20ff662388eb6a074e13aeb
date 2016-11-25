@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_e0523316",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-11-25T16:06:38Z",
+      "side": 1,
+      "message": "*grml*",
+      "range": {
+        "startLine": 437,
+        "startChar": 47,
+        "endLine": 437,
+        "endChar": 53
+      },
+      "revId": "e292368b8a869febe20ff662388eb6a074e13aeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_a03d5bba",
+        "filename": "resources/skins.minerva.content.styles/hacks.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-11-25T16:06:38Z",
+      "side": 1,
+      "message": "o.O git, what did you do? (this was supposed to be a git pull --rebase)",
+      "revId": "e292368b8a869febe20ff662388eb6a074e13aeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
