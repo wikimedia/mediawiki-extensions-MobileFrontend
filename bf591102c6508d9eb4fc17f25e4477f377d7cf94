@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_e05d937f",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-11-25T19:08:11Z",
+      "side": 1,
+      "message": "Is it worth doing that? What you really want to do at the only usage (count( $mobilePages ) \u003d\u003d\u003d 0 in SpecialMobileEditWatchlist) is that you need to know, if there are pages in or not. You don\u0027t need the size of the pages array. So I would suggest to implement an \"isEmpty()\" method, instead of implementing Countable (however, implementing Countable could be useful later). The isEmpty method could then just return empty( $pages );. This would avoid the overhead of counting the elements of pages when you really don\u0027t need to.",
+      "range": {
+        "startLine": 23,
+        "startChar": 9,
+        "endLine": 23,
+        "endChar": 30
+      },
+      "revId": "bf591102c6508d9eb4fc17f25e4477f377d7cf94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
