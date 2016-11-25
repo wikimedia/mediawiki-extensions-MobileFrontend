@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "aebe47e0_a0d2fb2a",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-25T17:37:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aebe47e0_4b33450b",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aebe47e0_4619fc7d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 3
@@ -64,6 +82,24 @@
       "writtenOn": "2016-11-24T21:05:04Z",
       "side": 1,
       "message": "as we\u0027re passing \u0027a-z\u0027 in parameter in SpecialMobileEditWatchlist do we have to specify that \u0027a-z\u0027 here? Can we just use $view param.",
+      "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_60cce38c",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-25T17:37:56Z",
+      "side": 1,
+      "message": "Yeh it\u0027s needed in case the user is visiting for the first time and no preference is saved (it then falls back to a-z)",
+      "parentUuid": "aebe47e0_c604ec19",
       "revId": "dbfc1fdeb47555563dedc398f68ef58067e5db38",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
