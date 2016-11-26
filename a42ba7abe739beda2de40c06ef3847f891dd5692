@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_d647f57a",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-26T17:31:15Z",
+      "side": 1,
+      "message": "Any reason they\u0027re hardcoded?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 62
+      },
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_b64c81a0",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-26T17:31:15Z",
+      "side": 1,
+      "message": "Do we want to set sizes and types?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
