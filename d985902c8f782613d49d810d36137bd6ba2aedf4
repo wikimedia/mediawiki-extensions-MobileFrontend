@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_56e1a596",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-26T16:46:52Z",
+      "side": 1,
+      "message": "Should be using a message",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 43
+      },
+      "revId": "d985902c8f782613d49d810d36137bd6ba2aedf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
