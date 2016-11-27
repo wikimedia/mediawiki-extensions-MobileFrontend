@@ -7,7 +7,8 @@
 			"Marmase",
 			"Mirzali",
 			"Kumkumuk",
-			"Gırd"
+			"Gırd",
+			"1917 Ekim Devrimi"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kodê tesdiqi cı de",
@@ -161,13 +162,12 @@
 	"mobile-frontend-user-page-contributions": "İştıraki",
 	"mobile-frontend-user-page-uploads": "Barkerdışi",
 	"mobile-frontend-user-page-no-owner-page-yet": "Qet pera karberi ya şıma çıni ya",
-	"nearby": "Nezdı ra peri",
+	"nearby": "Nezdı ra sernamey perran",
 	"tag-mobile_edit": "Vurriyayışo mobil",
 	"tag-mobile_edit-description": "Mobil ra vurnayış (web yana app)",
 	"tag-mobile_web_edit": "Vurriyayena mobil webi",
 	"tag-mobile_web_edit-description": "Vurnayışo ke sita torra seyare sera biyo",
 	"mobile-frontend-pageaction-edit-tooltip": "Cay dekewtena pela bıvurnê",
-	"mobile-frontend-donate-button-label": "Bac",
 	"mobile-frontend-meta-data-issues-categories": "Heqa ena kategori",
 	"mobile-frontend-loading-message": "Bar beno...",
 	"mobile-frontend-panel-ok": "Temam",
