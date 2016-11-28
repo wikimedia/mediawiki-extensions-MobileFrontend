@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_cc62c106",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-28T18:40:28Z",
+      "side": 1,
+      "message": "I don\u0027t think phpdoc treats parameters wrapped in square brackets as optional. You should instead write \"optional\" in the description.",
+      "range": {
+        "startLine": 137,
+        "startChar": 18,
+        "endLine": 137,
+        "endChar": 25
+      },
+      "revId": "ff99eb0cc7d1d150e4e9135351fc69e838e0070d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_6c59755d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-28T18:40:28Z",
+      "side": 1,
+      "message": "The default value is not a string. Maybe you should also add \"|null\".",
+      "range": {
+        "startLine": 137,
+        "startChar": 11,
+        "endLine": 137,
+        "endChar": 17
+      },
+      "revId": "ff99eb0cc7d1d150e4e9135351fc69e838e0070d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
