@@ -1565,6 +1565,7 @@
 				"skins.minerva.scripts.top",
 				"mediawiki.util",
 				"mediawiki.router",
+				"mediawiki.Title",
 				"mobile.startup",
 				"mobile.mainMenu",
 				"mobile.issues",
