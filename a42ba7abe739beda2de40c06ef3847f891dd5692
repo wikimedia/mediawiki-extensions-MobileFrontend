@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "aebe47e0_2f536f45",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:47:38Z",
+      "side": 1,
+      "message": "that\u0027s fair.. but I think the same out the box experience can be achieved with a static json?\n\n#1 is true - but we\u0027d need to allow skins hooks/configuration options to change the other values in the manifest. For instance the theme_color would change depending on skin.",
+      "parentUuid": "aebe47e0_8fccbb8d",
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aebe47e0_d647f57a",
         "filename": "includes/api/ApiWebappManifest.php",
         "patchSetId": 2
