@@ -5,7 +5,8 @@
 			"Eleassar",
 			"Irena Plahuta",
 			"Yerpo",
-			"Skalcaa"
+			"Skalcaa",
+			"Janezdrilc"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ali uporabnik ureja prek mobilnega vmesnika ali ne",
@@ -100,8 +101,8 @@
 	"mobile-frontend-last-modified-years": "Zadnjič spremenjeno pred $1 {{PLURAL:$1|letom|letoma|leti}}.",
 	"mobile-frontend-lead-image-tutorial-confirm": "Začni nalagati",
 	"mobile-frontend-lead-image-tutorial-summary": "Poskrbite, da lahko vaša slika pomaga ilustrirati stran. Slika mora biti vaše delo in ne sme kršiti avtorskih pravic.",
-	"mobile-frontend-logged-in-homepage-notification": "$1, {{GENDER:$1|dobrodošli}}!",
-	"mobile-frontend-logged-in-toast-notification": "Prijavljeni ste kot $1.",
+	"mobile-frontend-logged-in-homepage-notification": "$1, {{GENDER:$1|dobrodošel|dobrodošla}}!",
+	"mobile-frontend-logged-in-toast-notification": "{{GENDER:|Prijavljen|Prijavljena}} si kot $1.",
 	"mobile-frontend-main-menu-account-create": "Ustvarite račun",
 	"mobile-frontend-main-menu-button-tooltip": "Odpre glavni meni",
 	"mobile-frontend-main-menu-featured": "Izbrano",
@@ -171,7 +172,6 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Zadeva",
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj razpravo",
 	"mobile-frontend-talk-back-to-page": "Vrnitev na stran »$1«.",
-	"mobile-frontend-talk-edit-summary": "Nov pogovorni razdelek: $1",
 	"mobile-frontend-talk-explained": "Trenutno so aktivni naslednji pogovori",
 	"mobile-frontend-talk-explained-empty": "O tej strani ni nobenega pogovora.",
 	"mobile-frontend-talk-overlay-header": "Pogovor",
