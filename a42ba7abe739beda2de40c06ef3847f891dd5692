@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "aebe47e0_0f1c2b69",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T18:57:30Z",
+      "side": 1,
+      "message": "This is an interesting way of doing this that I hadn\u0027t thought of.\n\nThe downsides of using the API seem to be\n1) It\u0027s a very specific use case - is there any reason to call this API outside the context of the skin?\n2) The API has little caching so doing this for every page view is likely to cause some performance degradation.\n3) The API is meant to support other format types such as xml.\n\nThat said given this content will not change and should be customisable on a site basis it feels to me like it would make more sense for the repo to have a static json.\n\nYou could use a $wgMFManifestUrl config value to define a manifest file and by default point to one in the MobileFrontend repo.\n\nWhat do you think?",
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aebe47e0_d647f57a",
         "filename": "includes/api/ApiWebappManifest.php",
         "patchSetId": 2
