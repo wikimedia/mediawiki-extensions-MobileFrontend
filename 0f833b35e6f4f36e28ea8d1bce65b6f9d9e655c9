@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_8fbddb18",
+        "filename": "resources/skins.minerva.categories.styles/categories.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:05:43Z",
+      "side": 1,
+      "message": "I\u0027m not familiar with this style of class name - usually we use mw-mf- prefixes (or even better avoid them altogether)",
+      "revId": "0f833b35e6f4f36e28ea8d1bce65b6f9d9e655c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_6fba8720",
+        "filename": "resources/skins.minerva.categories.styles/categories.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:05:43Z",
+      "side": 1,
+      "message": "How is this different from the list-header class?",
+      "revId": "0f833b35e6f4f36e28ea8d1bce65b6f9d9e655c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_6f91679c",
+        "filename": "resources/skins.minerva.categories.styles/categories.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:05:43Z",
+      "side": 1,
+      "message": "How is this different from other list styles we have e.g. in talk overlay? Anything we can share?",
+      "revId": "0f833b35e6f4f36e28ea8d1bce65b6f9d9e655c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_af977f92",
+        "filename": "resources/skins.minerva.categories.styles/categories.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:05:43Z",
+      "side": 1,
+      "message": "These can all be nested above for readability.",
+      "revId": "0f833b35e6f4f36e28ea8d1bce65b6f9d9e655c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

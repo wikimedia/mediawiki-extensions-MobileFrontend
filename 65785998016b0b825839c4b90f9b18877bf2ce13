@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_2fa48f03",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 997,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-28T19:05:43Z",
+      "side": 0,
+      "message": "I wonder if we should change the name of this flag to showShowCategories now?",
+      "revId": "65785998016b0b825839c4b90f9b18877bf2ce13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
