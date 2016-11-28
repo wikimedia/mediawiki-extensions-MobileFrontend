@@ -134,13 +134,19 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Get the header for the watchlist page
 	 * @param User $user
+	 * @param string|null $view the name of the view to show (optional)
+	 *  If absent user preferences will be consulted.
 	 * @return string Parsed HTML
 	 */
-	public static function getWatchlistHeader( User $user ) {
+	public static function getWatchlistHeader( User $user, $view = null ) {
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = $attrsFeed = [];
-		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
+		// https://phabricator.wikimedia.org/T150650
+		if ( $view === null ) {
+			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
+		}
 		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
+
 		if ( $view === 'feed' ) {
 			$attrsList[ 'class' ] = MobileUI::buttonClass();
 			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
