@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aebe47e0_8fccbb8d",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1837
+      },
+      "writtenOn": "2016-11-28T19:20:27Z",
+      "side": 1,
+      "message": "While I agree this is a very specific use of the API, I also think someone who installs the MobileFrontend extension might want to have a full out of the box mobile experience (and does not necessarily know how to create a webapp manifest).\n\n1) Having it available as an API means that other skins can use it.\n2) I don\u0027t think it is retrieved on each page view, only once when the user adds the webapp to its home screen.\n3) The other formats have been disabled by using getCustomPrinter() (see patch set 3)",
+      "parentUuid": "aebe47e0_0f1c2b69",
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aebe47e0_d647f57a",
         "filename": "includes/api/ApiWebappManifest.php",
         "patchSetId": 2
