@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_8fa96024",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-11-28T02:23:41Z",
+      "side": 1,
+      "message": "You need to put the type first and the name second, so the correct syntax is:\n\n    @param {HTMLElement} options Description of options\n\nHowever, it looks like the correct type isn\u0027t HTMLElement but Object. You can document properties of objects like so:\n\n    @param {Object} options\n    @param {jQuery} options.$notifReadState Description blah blah\n    @param {jQuery} options.$crossWikiUnreadFilter Blah blah",
+      "range": {
+        "startLine": 12,
+        "startChar": 11,
+        "endLine": 12,
+        "endChar": 32
+      },
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
