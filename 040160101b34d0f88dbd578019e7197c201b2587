@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_b3659cac",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-29T20:52:34Z",
+      "side": 1,
+      "message": "Please add a header to this api query as described by Reedy.",
+      "revId": "040160101b34d0f88dbd578019e7197c201b2587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_5249a869",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-29T20:52:34Z",
+      "side": 1,
+      "message": "Please make this configurable. Our designer is guaranteed to want to change these values so I guess a 3rd party too :)",
+      "revId": "040160101b34d0f88dbd578019e7197c201b2587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_923060e7",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-29T20:52:34Z",
+      "side": 1,
+      "message": "Please make this configurable",
+      "revId": "040160101b34d0f88dbd578019e7197c201b2587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_732dc440",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-29T20:52:34Z",
+      "side": 1,
+      "message": "Please add a feature flag so that we can easily disable this if there\u0027s a problem via configuration. Given the suggestion to make theme colour configurable and given that\u0027s unique to this task using that may be reasonable, otherwise something explicit like EnableManifest would work. I\u0027ll leave that you.\n\nif ( $this-\u003egetConfig()-\u003eget( \u0027\u003cconfig variable name\u003e\u0027 ) ) {\n\n}",
+      "revId": "040160101b34d0f88dbd578019e7197c201b2587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
