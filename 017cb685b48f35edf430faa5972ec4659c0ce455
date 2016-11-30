@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ed34346_5c967550",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T20:17:28Z",
+      "side": 1,
+      "message": "What were you thinking with regards to making this more matrix like? Indentation so columns line up or something else?\n\nI was trying to match the columns but obviously failed and will try again!",
+      "parentUuid": "8ed34346_7ce13129",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ed34346_5cde7571",
         "filename": "resources/mobile.mainMenu/menu.mustache",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2016-11-30T20:07:08Z",
       "side": 1,
       "message": "This comment should not be in HTML, why not make it a mustache comment. I\u0027m actually in favor of removing it.",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_1cf23dce",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T20:17:28Z",
+      "side": 1,
+      "message": "I thought it was important given that it may be unclear why this is in a mustache file. I forgot mustache comments were a thing - that would be much better.",
+      "parentUuid": "8ed34346_1c911d9d",
       "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
