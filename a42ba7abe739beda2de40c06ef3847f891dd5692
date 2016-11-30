@@ -194,6 +194,24 @@
       "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_4a94638d",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T22:07:05Z",
+      "side": 1,
+      "message": "Sorry just saw this thread - see my comment on the latest patchset - we should assume a size for AppleTouchIcon as it\u0027s only used for the purpose of showing an icon on ios/android.\n\na future patchset can explicitly allow the setting of a size by introducing\nhttps://www.mediawiki.org/wiki/Manual:$wgAppleTouchIconSize\n\nFYI https://www.wikipedia.org/static/apple-touch/wikipedia.png is 144x144.\n\nIn mean time we can update:\nhttps://www.mediawiki.org/wiki/Manual:$wgAppleTouchIcon\nto say the size should be at least 144X144 - any larger ones will be scaled down without loss of quality.",
+      "parentUuid": "aebe47e0_277ca6b3",
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
