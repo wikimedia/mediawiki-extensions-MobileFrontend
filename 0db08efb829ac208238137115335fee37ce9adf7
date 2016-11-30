@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_ca6993be",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T22:00:23Z",
+      "side": 1,
+      "message": "This should not be used OR should only be used if AppleTouchIcon and Favicon is not defined\n\nThis icon will be used on the home screen and AppleTouchIcon is optimised specifically for that purpose.",
+      "revId": "0db08efb829ac208238137115335fee37ce9adf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_aa6e57c2",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T22:00:23Z",
+      "side": 1,
+      "message": "This should not be used OR\n only be used in AppleTouchIcon is not defined",
+      "revId": "0db08efb829ac208238137115335fee37ce9adf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_caa873db",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-11-30T22:00:23Z",
+      "side": 1,
+      "message": "This should also specify `sizes` and type so that it\u0027s clear which icon should be used for the home screen.\n\n      sizes: \u002748x48\u0027,\n      type: \u0027image/png\u0027\n\nOtherwise this happens:\nhttp://imgur.com/a/VHSJm",
+      "revId": "0db08efb829ac208238137115335fee37ce9adf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
