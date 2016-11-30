@@ -2,6 +2,91 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ed34346_dc05e5c5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1085,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "This is for the filter, not the general notification popup - it should be in the other module (below) and also in the folder for overlay.filter and not overlay",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_5c44351c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1125,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "So initially we made this in the same file as the mobile popup to make things easier -- but I\u0027m not sure it should stay this way.\n\nFor one, the same file should not be loaded in two different modules; either we split this file out to its own module that both \"skins.minerva.notifications\" and \"skins.minerva.notifications.filter\" are dependent on, or (better) we create filter_init.js (or name it whatever) that holds *only the relevant initialization methods for the special page* and that is the one you load here.\n\nThis will be better overall, because with the way things are set up in here, it means that init is loaded basically on every mobile pageload (because the init file initializes the notifications badge)\n\nCreate a new init file just for the special page and take all the relevant initialization from your current init into there.",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_7c6ed194",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1134,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "I don\u0027t think you need all of those dependencies. You probably need the mobile.overlays and ext.echo.ui. I don\u0027t think you need the rest?",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_dc5e05ec",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1147,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "I don\u0027t think you need all those messages?",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_dcbcc569",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "Add newline between description and the rest",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aebe47e0_8fa96024",
         "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
         "patchSetId": 5
@@ -19,6 +104,114 @@
         "endLine": 12,
         "endChar": 32
       },
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_fc666125",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "So I\u0027m actually a little concerned about attaching the listener here if this class loads multiple times.\n\nYou will end up attaching the \u0027on\u0027 listener to the button (and labels) every time the overlay opens, which means it\u0027ll run this function multiple times.\n\nInstead, you should attach the \u0027on\u0027 event in the initialization file, and then here only do the appending to the overlay-content, which does need to happen each time.",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_9c752dcb",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "i18n?",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_5c78b5bf",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "Why is -row defined as display:table; ?\nIf it has any divs that are defined as display:table-cell; it might cause issues, no?\n\n(I may just be missing something, just want to verify this was intentional)",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_1c591d5e",
+        "filename": "resources/mobile.notifications.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "As I pointed out in the comment in hooks, this should be in the mobile.notifications.overlay.filter folder (and module)\n\nAlso, just for convenience (though it\u0027s totally up to you) you might want to name this file mw.echo.ui.NotificationsInboxWidget.less - this is the convention we usually use in OOUI\u0027ed widgets to make it easy to find the file that controls the style. In this case it\u0027s not really that crucial because there is only 2 files, so it\u0027s up to you.",
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_7f7b63be",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "Is this meant to be \u0027one\u0027 or \u0027on\u0027 ?",
+      "range": {
+        "startLine": 150,
+        "startChar": 32,
+        "endLine": 150,
+        "endChar": 35
+      },
+      "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_ff4d339f",
+        "filename": "resources/skins.minerva.special.styles/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2016-11-30T21:44:03Z",
+      "side": 1,
+      "message": "remove space",
       "revId": "cc7c7f9f390c7265af0086bb1a415e7eaa97776d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
