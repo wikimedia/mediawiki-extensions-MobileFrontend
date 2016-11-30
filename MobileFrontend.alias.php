@@ -88,6 +88,19 @@ $specialPageAliases['bgn'] = array(
 	'Nearby' => array( 'بئ_نزینکی_ئا' ),
 );
 
+/** Bengali (বাংলা) */
+$specialPageAliases['bn'] = array(
+	'History' => array( 'ইতিহাস' ),
+	'MobileCite' => array( 'মোবাইল_উদ্ধৃতি' ),
+	'MobileOptions' => array( 'মোবাইল_বিকল্প' ),
+	'Uploads' => array( 'আপলোডসমূহ' ),
+	'MobileDiff' => array( 'মোবাইল_পার্থক্য' ),
+	'MobileEditor' => array( 'মোবাইল_সম্পাদক' ),
+	'MobileMenu' => array( 'মোবাইল_মেনু' ),
+	'MobileLanguages' => array( 'মোবাইল_ভাষাসমূহ' ),
+	'Nearby' => array( 'কাছাকাছি' ),
+);
+
 /** Catalan (català) */
 $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),
