@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ed34346_3ca97979",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-30T20:21:01Z",
+      "side": 1,
+      "message": "Yes, columns should line up.",
+      "parentUuid": "8ed34346_5c967550",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ed34346_5cde7571",
         "filename": "resources/mobile.mainMenu/menu.mustache",
         "patchSetId": 1
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "I thought it was important given that it may be unclear why this is in a mustache file. I forgot mustache comments were a thing - that would be much better.",
       "parentUuid": "8ed34346_1c911d9d",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_3cc0592f",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-30T20:21:01Z",
+      "side": 1,
+      "message": "I think a more informative link maybe T151972.",
+      "parentUuid": "8ed34346_1cf23dce",
       "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
