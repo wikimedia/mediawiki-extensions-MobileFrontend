@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_7ce13129",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-30T20:07:08Z",
+      "side": 1,
+      "message": "Maybe a nitpick, but there are extra spaces before the last 0.\n\nIt would also be good to have this data look like a matrix.",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_5cde7571",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-30T20:07:08Z",
+      "side": 1,
+      "message": "wrong indentation",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_1c911d9d",
+        "filename": "resources/mobile.mainMenu/menu.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-11-30T20:07:08Z",
+      "side": 1,
+      "message": "This comment should not be in HTML, why not make it a mustache comment. I\u0027m actually in favor of removing it.",
+      "revId": "017cb685b48f35edf430faa5972ec4659c0ce455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
