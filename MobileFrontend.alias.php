@@ -20,7 +20,6 @@ $specialPageAliases['en'] = array(
 	'MobileMenu' => array( 'MobileMenu' ),
 	'MobileLanguages' => array( 'MobileLanguages' ),
 	'Nearby' => array( 'Nearby' ),
-	'TopicTag' => array( 'TopicTag' ),
 );
 
 /** Afrikaans (Afrikaans) */
@@ -40,8 +39,7 @@ $specialPageAliases['ar'] = array(
 	'MobileMenu' => array( 'قائمة_المحمول' ),
 	'MobileLanguages' => array( 'لغات_المحمول' ),
 	'Nearby' => array( 'قريب' ),
-	'TopicTag' => array( 'وسم_الموضوع' ),
-);
+  );
 
 /** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
