@@ -170,6 +170,30 @@
       "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_277ca6b3",
+        "filename": "includes/api/ApiWebappManifest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1837
+      },
+      "writtenOn": "2016-11-30T11:20:26Z",
+      "side": 1,
+      "message": "We have classes like MimeAnalyzer but they seem to work only with local files and I think $wgLogo can be a distant file.",
+      "parentUuid": "aebe47e0_8f683b86",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "a42ba7abe739beda2de40c06ef3847f891dd5692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
