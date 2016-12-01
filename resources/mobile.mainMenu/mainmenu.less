@@ -9,8 +9,8 @@
 @menuSectionPadding: 22px;
 @menuBorderColor: #252525;
 @menuLinkLineHeight: 24px;
-@menuItemFontSize: 1.2em;
-@menuItemBackgroundColor: @colorGray4;
+@menuItemFontSize: 0.875em;
+@menuItemBackgroundColor: @skinContentBgColor;
 
 @pageLeftListDarkBorderColor: #3e3e3e;
 @pageLeftListMediumBorderColor: #5c5c5c;
@@ -37,7 +37,7 @@
 			position: absolute;
 			top: -0.4em;
 			right: 0.6em;
-			border: solid 0.2em #fff;
+			border: 0.2em solid #fff;
 			border-radius: 0.5em;
 		}
 	}
@@ -46,7 +46,6 @@
 // needs to be more specific than .overlay rules
 .notifications-overlay.navigation-drawer {
 	right: 0;
-
 	height: 100%;
 	width: auto;
 	box-shadow: -5px 0 0 0 rgba( 0, 0, 0, 0.3 );
@@ -55,7 +54,6 @@
 nav {
 	background-color: @primaryNavBackgroundColor;
 	float: left;
-	font-size: 90%;
 	min-height: 100%;
 
 	.client-js & {
@@ -66,7 +64,7 @@ nav {
 			top: 0;
 			bottom: 0;
 			padding-right: 0;
-			border-left: 1px solid @colorGray6;
+			border-left: 1px solid @grayMediumLight;
 		}
 
 		.primary-action {
@@ -85,49 +83,56 @@ nav {
 		}
 
 		li {
+			background-color: @menuItemBackgroundColor;
 			position: relative; // ensure the logout link in beta can be position absolute
-			font-size: @menuItemFontSize;
-			border-top: 1px solid @colorGray6;
+			border-top: 1px solid @colorGray14;
 			// offset the border for the icon by 1px
 			margin-top: -1px;
-			background-color: @menuItemBackgroundColor;
+			font-size: @menuItemFontSize;
 
 			&:first-child {
 				border-top: 0;
 			}
 
 			a {
-				color: #fff;
+				color: @colorGray5;
 				display: block;
 				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 15px;
 
 				&:hover {
-					background-color: @colorGray5;
 					box-shadow: inset 4px 0 0 0 @colorProgressive;
 					text-decoration: none;
 				}
 
 				&:visited,
 				&:active {
-					color: #fff;
+					color: @colorGray5;
+				}
+
+				&.mw-ui-icon {
+					font-weight: bold;
+					line-height: 1.857; // equals `26px` at `font-size: 14px` above
+
+					&:before {
+						font-size: 16px;
+					}
 				}
 			}
 		}
 
 		&.hlist {
 			li {
-				font-size: 0.8em;
-				margin: 0;
-				border: 0;
 				background-color: transparent;
+				border: 0;
+				margin: 0;
+				font-size: 0.75em; // equals `12px` at base `font-size: 16px`
 
 				a {
-					color: @colorGray12;
-					border: 0;
+					color: @colorProgressive;
 					padding: 0.7em 12px;
-					margin-left: 0;
 
 					&:hover {
+						background-color: transparent;
 						box-shadow: none;
 					}
 				}
@@ -136,8 +141,7 @@ nav {
 	}
 }
 
-body.navigation-enabled {
-
+.navigation-enabled {
 	#mw-mf-viewport {
 		// disable horizontal scrolling
 		overflow: hidden;
@@ -154,9 +158,6 @@ body.navigation-enabled {
 		height: 100%;
 		// Overriden in mainmenuAnimation
 		left: @menuWidth;
-		// set border here (nav doesn't expand height)
-		border-left: solid 1px #000;
-		box-shadow: -1px 0 3px 0 rgba( 0, 0, 0, 0.3 );
 	}
 
 	.navigation-drawer,
@@ -166,7 +167,8 @@ body.navigation-enabled {
 
 	.transparent-shield {
 		background: @semiTransparent;
-		opacity: 1;
+		opacity: 0.5;
+		.transition( opacity 0.25s ease-in-out );
 	}
 }
 
@@ -255,7 +257,6 @@ body.navigation-enabled {
 	nav {
 		// make menu scrollable when open (on small screens)
 		position: static;
-
 		.transition( none );
 	}
 }

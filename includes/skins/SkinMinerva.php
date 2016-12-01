@@ -441,7 +441,7 @@ class SkinMinerva extends SkinTemplate {
 			->addComponent(
 				$this->msg( 'mobile-frontend-main-menu-contributions' )->escaped(),
 				SpecialPage::getTitleFor( 'Contributions', $user->getName() )->getLocalUrl(),
-				MobileUI::iconClass( 'mf-contributions-invert', 'before' ),
+				MobileUI::iconClass( 'mf-contributions', 'before' ),
 				[ 'data-event-name' => 'contributions' ]
 			);
 	}
@@ -476,7 +476,7 @@ class SkinMinerva extends SkinTemplate {
 					'mobile-frontend-watchlist-purpose',
 					$watchlistQuery
 				),
-				MobileUI::iconClass( 'mf-watchlist-invert', 'before' ),
+				MobileUI::iconClass( 'mf-watchlist', 'before' ),
 				[ 'data-event-name' => 'watchlist' ]
 			);
 	}
@@ -499,7 +499,7 @@ class SkinMinerva extends SkinTemplate {
 					$this->msg( 'mobile-frontend-main-menu-settings' )->escaped(),
 					SpecialPage::getTitleFor( 'MobileOptions' )->
 						getLocalUrl( [ 'returnto' => $returnToTitle ] ),
-					MobileUI::iconClass( 'mf-settings-invert', 'before' ),
+					MobileUI::iconClass( 'mf-settings', 'before' ),
 					[ 'data-event-name' => 'settings' ]
 				);
 
@@ -600,7 +600,7 @@ class SkinMinerva extends SkinTemplate {
 			->addComponent(
 				$this->msg( 'mobile-frontend-home-button' )->escaped(),
 				Title::newMainPage()->getLocalUrl(),
-				MobileUI::iconClass( 'mf-home-invert', 'before' ),
+				MobileUI::iconClass( 'mf-home', 'before' ),
 				[ 'data-event-name' => 'home' ]
 			);
 
@@ -611,7 +611,7 @@ class SkinMinerva extends SkinTemplate {
 				SpecialPage::getTitleFor( 'Randompage',
 					MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
 						'#/random',
-				MobileUI::iconClass( 'mf-random-invert', 'before' ),
+				MobileUI::iconClass( 'mf-random', 'before' ),
 				[
 					'id' => 'randomButton',
 					'data-event-name' => 'random',
@@ -627,7 +627,7 @@ class SkinMinerva extends SkinTemplate {
 				->addComponent(
 					$this->msg( 'mobile-frontend-main-menu-nearby' )->escaped(),
 					SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-					MobileUI::iconClass( 'mf-nearby-invert', 'before', 'nearby' ),
+					MobileUI::iconClass( 'mf-nearby', 'before', 'nearby' ),
 					[ 'data-event-name' => 'nearby' ]
 				);
 		}
@@ -690,14 +690,14 @@ class SkinMinerva extends SkinTemplate {
 				->addComponent(
 					$username,
 					Title::newFromText( $username, NS_USER )->getLocalUrl(),
-					MobileUI::iconClass( 'mf-profile-invert', 'before', 'truncated-text primary-action' ),
+					MobileUI::iconClass( 'mf-profile', 'before', 'truncated-text primary-action' ),
 					[ 'data-event-name' => 'profile' ]
 				)
 				->addComponent(
 					$this->msg( 'mobile-frontend-main-menu-logout' )->escaped(),
 					$url,
 					MobileUI::iconClass(
-						'mf-logout-invert', 'element', 'secondary-action truncated-text' ),
+						'mf-logout', 'element', 'secondary-action truncated-text' ),
 					[ 'data-event-name' => 'logout' ]
 				);
 		} else {
@@ -712,7 +712,7 @@ class SkinMinerva extends SkinTemplate {
 				->addComponent(
 					$this->msg( 'mobile-frontend-main-menu-login' )->escaped(),
 					$url,
-					MobileUI::iconClass( 'mf-anonymous-invert', 'before' ),
+					MobileUI::iconClass( 'mf-anonymous', 'before' ),
 					[ 'data-event-name' => 'login' ]
 				);
 		}
