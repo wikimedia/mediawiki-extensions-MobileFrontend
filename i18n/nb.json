@@ -13,7 +13,8 @@
 			"Laaknor",
 			"Kingu",
 			"Tarjeimo",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Jeblad"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
@@ -195,9 +196,9 @@
 	"mobile-frontend-main-menu-contributions": "Bidrag",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Lisensinformasjon",
-	"mobile-frontend-meta-data-issues": "Problemer med siden",
+	"mobile-frontend-meta-data-issues": "Merknader for siden",
 	"mobile-frontend-meta-data-issues-talk": "Om denne diskusjonssiden",
-	"mobile-frontend-meta-data-issues-header": "Problemer",
+	"mobile-frontend-meta-data-issues-header": "Merknader",
 	"mobile-frontend-meta-data-issues-header-talk": "Om denne siden",
 	"mobile-frontend-missing-image": "Bilde",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
