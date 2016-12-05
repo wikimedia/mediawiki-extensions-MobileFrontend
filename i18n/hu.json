@@ -40,7 +40,7 @@
 	"mobile-frontend-clear-search": "Törlés",
 	"mobile-frontend-contribution-summary": "Az összes [[User:$1|$1]] által végzett módosítás",
 	"mobile-frontend-cookies-required": "A sütik kötelezőek a módok közötti váltáshoz. Engedélyezd őket, majd próbáld újra.",
-	"mobile-frontend-copyright": "A lap szövege $1 alatt van, ha nincs külön jelölve.",
+	"mobile-frontend-copyright": "A lap szövege $1 alatt érhető el, ha nincs külön jelölve.",
 	"mobile-frontend-desc": "Mobil felület",
 	"mobile-frontend-diffview-404-desc": "A kért azonosítójú lapváltozat nem létezik.",
 	"mobile-frontend-diffview-404-title": "Rossz változat",

@@ -4,6 +4,24 @@
 			"Khanmarat"
 		]
 	},
+	"mobile-frontend-copyright": "Мәғлүмәтне $1-та ҡарап пулаты (әгәр пашҡасы күрсәтелмәсә).",
 	"mobile-frontend-editor-edit": "Төсәткәле",
-	"mobile-frontend-view": "Мобиль аңыш"
+	"mobile-frontend-home-button": "Паш питкә",
+	"mobile-frontend-language-article-heading": "Пашҡа телтә уғығалы",
+	"mobile-frontend-last-modified-date": "$1 $2-гә суңҡы тапҡыр төсәтелгән",
+	"mobile-frontend-main-menu-button-tooltip": "Төп менюны ацҡалы",
+	"mobile-frontend-main-menu-login": "Системаға танытылғалы",
+	"mobile-frontend-main-menu-nearby": "Йыуыҡта",
+	"mobile-frontend-main-menu-settings": "Ҡороулар",
+	"mobile-frontend-main-menu-watchlist": "Көсәтеү күцермәлек",
+	"mobile-frontend-placeholder": "{{SITENAME}} эцтә эстәгәле",
+	"mobile-frontend-privacy-link-text": "Серне саҡлау",
+	"mobile-frontend-random-button": "Көтөлмәгән",
+	"mobile-frontend-terms-text": "Ҡулланыуның шартлары",
+	"mobile-frontend-view": "Мобиль аңыш",
+	"mobile-frontend-view-desktop": "Стационар",
+	"mobile-frontend-view-mobile": "Мобиль",
+	"tag-mobile_edit": "Мобиль ҡоралтан төсәтеү",
+	"tag-mobile_web_edit": "Мобиль версиятан төсәткәле",
+	"mobile-frontend-pageaction-edit-tooltip": "Питнең төп пүлеген төсәткәле"
 }
