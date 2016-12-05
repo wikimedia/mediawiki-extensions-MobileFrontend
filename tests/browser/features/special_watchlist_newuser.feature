@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @integration @test2.m.wikipedia.org @vagrant @login
+@chrome @firefox @integration @test2.m.wikipedia.org @vagrant @login
 Feature: Manage Watchlist
 
   Background:
