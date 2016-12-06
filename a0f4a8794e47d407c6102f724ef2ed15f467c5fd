@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_952277a1",
+        "filename": "minerva.less/minerva.mixins.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-06T18:34:20Z",
+      "side": 0,
+      "message": "Any reason We don\u0027t support Opera vendor in mixin in core? Please note in commit message",
+      "revId": "a0f4a8794e47d407c6102f724ef2ed15f467c5fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
