@@ -386,6 +386,7 @@
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
+	"apihelp-webapp-manifest-description": "Returns a webapp manifest.",
 	"apierror-mobilefrontend-badidtitle": "Bad revision id/title combination.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> is mutually exclusive with <var>thumbwidth</var> and <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> makes no sense on the main page, ignoring.",

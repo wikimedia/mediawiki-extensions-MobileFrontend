@@ -35,7 +35,8 @@
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
-		"mobileview": "ApiMobileView"
+		"mobileview": "ApiMobileView",
+		"webapp-manifest": "ApiWebappManifest"
 	},
 	"ValidSkinNames": {
 		"minerva": "Minerva"
@@ -61,6 +62,7 @@
 		"MobileUI": "includes/MobileUI.php",
 		"ApiMobileView": "includes/api/ApiMobileView.php",
 		"ApiParseExtender": "includes/api/ApiParseExtender.php",
+		"ApiWebappManifest": "includes/api/ApiWebappManifest.php",
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
 		"MobileSiteModule": "includes/modules/MobileSiteModule.php",
@@ -2030,7 +2032,10 @@
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"
-		]
+		],
+		"MFEnableManifest": true,
+		"MFManifestThemeColor": "#252525",
+		"MFManifestBackgroundColor": "#FFFFFF"
 	},
 	"manifest_version": 1
 }
