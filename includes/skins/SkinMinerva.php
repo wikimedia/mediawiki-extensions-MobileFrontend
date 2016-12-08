@@ -67,12 +67,9 @@ class SkinMinerva extends SkinTemplate {
 			$out->addLink(
 				[
 					'rel' => 'manifest',
-					'href' => wfExpandUrl(
-						wfAppendQuery(
-							wfScript( 'api' ),
-							[ 'action' => 'webapp-manifest' ]
-						),
-						PROTO_RELATIVE
+					'href' => wfAppendQuery(
+						wfScript( 'api' ),
+						[ 'action' => 'webapp-manifest' ]
 					)
 				]
 			);
