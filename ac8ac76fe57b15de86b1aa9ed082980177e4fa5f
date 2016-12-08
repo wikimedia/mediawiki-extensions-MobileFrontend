@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ed52f32_ade09df8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 1111,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-12-08T06:21:23Z",
+      "side": 1,
+      "message": "Please use ExtensionRegistry::getInstance()-\u003eisLoaded( \u0027Echo\u0027 ); now that Echo uses extension.json, we can use the new standard way of checking whether an extension is installed.",
+      "range": {
+        "startLine": 1111,
+        "startChar": 7,
+        "endLine": 1111,
+        "endChar": 19
+      },
+      "revId": "ac8ac76fe57b15de86b1aa9ed082980177e4fa5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
