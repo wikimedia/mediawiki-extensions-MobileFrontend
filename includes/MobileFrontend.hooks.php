@@ -1135,6 +1135,7 @@ class MobileFrontendHooks {
 		$lessVars = array_merge( $lessVars,
 			[
 				'wgMFDeviceWidthMobileSmall' => "{$config->get( 'MFDeviceWidthMobileSmall' )}px",
+				'wgMinervaApplyKnownTemplateHacks' => "{$config->get( 'MinervaApplyKnownTemplateHacks' )}",
 				'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
 				'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px'
 			]

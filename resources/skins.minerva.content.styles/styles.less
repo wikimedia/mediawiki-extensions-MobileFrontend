@@ -7,4 +7,6 @@
 @import 'links.less';
 @import 'text.less';
 @import 'tables.less';
-@import 'hacks.less';
+& when (@wgMinervaApplyKnownTemplateHacks = 1) {
+	@import (multiple) 'hacks.less';
+}

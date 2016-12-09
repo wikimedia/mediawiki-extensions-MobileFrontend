@@ -343,6 +343,12 @@ Define a set of params that should be passed in every gateway query.
   ]
 ```
 
+#### $wgMinervaApplyKnownTemplateHacks
+
+When enabled and hacks.less exists, hacks.less workarounds are included in stylesheet.
+
+* Type: `Boolean`
+* Default: `true`
 
 #### $wgMinervaPageActions
 
