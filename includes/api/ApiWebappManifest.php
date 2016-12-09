@@ -21,7 +21,7 @@ class ApiWebappManifest extends ApiBase {
 		$resultObj->addValue( null, 'display', 'browser' );
 		$resultObj->addValue( null, 'theme_color', $config->get( 'MFManifestThemeColor' ) );
 		$resultObj->addValue( null, 'background_color', $config->get( 'MFManifestBackgroundColor' ) );
-		$resultObj->addValue( null, 'start_url', Title::newMainPage()->getFullUrl() );
+		$resultObj->addValue( null, 'start_url', Title::newMainPage()->getLocalUrl() );
 
 		$icons = [];
 
@@ -30,7 +30,7 @@ class ApiWebappManifest extends ApiBase {
 			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_RELATIVE );
 			$appleTouchIconSize = getimagesize( $appleTouchIconUrl );
 			$icon = [
-				'src' => $appleTouchIconUrl
+				'src' => $appleTouchIcon
 			];
 			if ( $appleTouchIconSize !== false ) {
 				$icon['sizes'] = $appleTouchIconSize[0].'x'.$appleTouchIconSize[1];
