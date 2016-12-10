@@ -16,6 +16,24 @@
       "revId": "f4da64de21ad458e443ccc83fb285c0ab0be914f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2edfb757_6e998f80",
+        "filename": "minerva.less/minerva.mixins.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-12-10T00:28:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ed34346_95fb9711",
+      "revId": "f4da64de21ad458e443ccc83fb285c0ab0be914f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
