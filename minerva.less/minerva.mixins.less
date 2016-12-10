@@ -1,4 +1,5 @@
 @import 'mediawiki.mixins.less';
+@import 'mediawiki.mixins.animation.less';
 
 // Shorthand for background-image-svg in core
 .background-image-svg-quick( @url ) {
@@ -23,27 +24,6 @@
 	.m-background-image-svg( ~'@{url}.svg', ~'@{url}.png' );
 }
 
-.box-sizing( @value ) {
-	-moz-box-sizing: @value;
-	-webkit-box-sizing: @value;
-	box-sizing: @value;
-}
-
-.background-size( @width: auto, @height: auto ) {
-	/* use -webkit prefix for older android browsers eg. nexus 1 */
-	-o-background-size: @width @height;
-	-webkit-background-size: @width @height;
-	background-size: @width @height;
-}
-
-.vertical-gradient ( @startColor: #808080, @endColor: #fff, @startPos: 0, @endPos: 100% ) {
-	background-color: @endColor;
-	background-image: -moz-linear-gradient( top, @startColor @startPos, @endColor @endPos ); // Firefox 3.6+
-	background-image: -webkit-gradient( linear, left top, left bottom, color-stop( @startPos, @startColor ), color-stop( @endPos, @endColor ) ); // Safari 4+, Chrome 2+
-	background-image: -webkit-linear-gradient( top, @startColor @startPos, @endColor @endPos ); // Safari 5.1+, Chrome 10+
-	background-image: linear-gradient( @startColor @startPos, @endColor @endPos ); // Standard
-}
-
 .transform( @transform ) {
 	-webkit-transform: @transform;
 	transform: @transform;
@@ -64,9 +44,4 @@
 
 	-webkit-transition: -webkit-transform @arguments;
 	transition: transform @arguments;
-}
-
-.animation( @args ) {
-	-webkit-animation: @args;
-	animation: @args;
 }
