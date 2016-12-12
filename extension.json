@@ -166,7 +166,6 @@
 		},
 		"skins.minerva.icons.images": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"notifications": "resources/skins.minerva.icons.images/bell.svg",
@@ -181,7 +180,6 @@
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"variants": {
 				"gray": {
 					"color": "#BBB",
@@ -201,7 +199,6 @@
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"variants": {
 				"gray": {
 					"color": "#BBB",
@@ -218,7 +215,6 @@
 		},
 		"mobile.issues.images": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"cleanup": "resources/mobile.issues.images/blue-triangle.svg",
@@ -227,7 +223,6 @@
 		},
 		"mobile.toc.images": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"toc": "resources/mobile.toc.images/contents-ltr.svg"
@@ -235,7 +230,6 @@
 		},
 		"mobile.references.images": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"citation": "resources/mobile.references.images/cite.svg"
@@ -243,7 +237,6 @@
 		},
 		"skins.minerva.icons.images.scripts": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"position": "bottom",
 			"images": {
@@ -276,7 +269,6 @@
 		},
 		"skins.minerva.userpage.icons": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"talk": "resources/skins.minerva.userpage.icons/talk.svg"
@@ -354,8 +346,7 @@
 		},
 		"mobile.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before,.mw-ui-icon-mf-{name}:before",
-			"prefix": "mw-ui",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
 				"anonymous": "resources/mobile.mainMenu.icons/anonymous.svg",
 				"home": "resources/mobile.mainMenu.icons/home.svg",
@@ -756,7 +747,6 @@
 		},
 		"mobile.search.images": {
 			"class": "ResourceLoaderImageModule",
-			"prefix": "mw-ui",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
 				"clear": "resources/mobile.search.images/clear.svg"
@@ -913,7 +903,6 @@
 			"class": "ResourceLoaderImageModule",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
-			"prefix": "mw-ui",
 			"variants": {
 				"invert": {
 					"color": "#FFFFFF",
