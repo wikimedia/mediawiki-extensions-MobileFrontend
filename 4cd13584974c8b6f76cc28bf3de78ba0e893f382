@@ -46,6 +46,30 @@
       "revId": "4cd13584974c8b6f76cc28bf3de78ba0e893f382",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2edfb757_c08042fc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1318,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-12T23:16:49Z",
+      "side": 1,
+      "message": "Yes, I agree that it is a product decision. I don\u0027t see a decision on the task though, but regardless, looking at this piece of code it looks better suited for the CentralNotice extension and should be documented. It can always use MobileContext if the class exists to detect beta mode.",
+      "parentUuid": "2edfb757_20c38663",
+      "range": {
+        "startLine": 1318,
+        "startChar": 49,
+        "endLine": 1318,
+        "endChar": 76
+      },
+      "revId": "4cd13584974c8b6f76cc28bf3de78ba0e893f382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
