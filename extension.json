@@ -543,8 +543,7 @@
 				"mobile.toggle"
 			],
 			"scripts": [
-				"resources/mobile.backtotop/BackToTopOverlay.js",
-				"resources/mobile.backtotop/backtotop.js"
+				"resources/mobile.backtotop/BackToTopOverlay.js"
 			],
 			"styles": [
 				"resources/mobile.backtotop/backtotop.less"
@@ -1666,6 +1665,18 @@
 				"resources/skins.minerva.fallbackeditor/fallbackeditor.less"
 			]
 		},
+		"skins.minerva.backtotop": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.backtotop"
+			],
+			"scripts": [
+				"resources/skins.minerva.backtotop/init.js"
+			]
+		},
 		"skins.minerva.categories": {
 			"targets": [
 				"mobile",
@@ -2015,6 +2026,10 @@
 		"MinervaEnableFontChanger": {
 		  "base": false,
 		  "beta": true
+		},
+		"MinervaEnableBackToTop": {
+			"base": false,
+			"beta": true
 		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [

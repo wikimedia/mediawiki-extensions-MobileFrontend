@@ -128,12 +128,15 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * Test whether the font changer module is correctly added to the list context modules
 	 *
-	 * @covers SkinMinerva::getContextSpecificModules
-	 * @dataProvider provideFontChangerModule
-	 * @param $wgMinervaEnableFontChanger
-	 * @param $expected
+	 * @covers       SkinMinerva::getContextSpecificModules
+	 * @dataProvider provideGetContextSpecificModules
+	 * @param string $configName Config name that needs to be set
+	 * @param mixed $configValue Config value that is assigned to $configName
+	 * @param string $moduleName Module name that is being tested
+	 * @param bool $expected Whether the module is expected to be returned by the function being tested
 	 */
-	public function testFontChangerModule( $wgMinervaEnableFontChanger, $expected ) {
+	public function testGetContextSpecificModules( $configName, $configValue,
+												   $moduleName, $expected ) {
 		$skin = TestingAccessWrapper::newFromObject(
 			$this->getMockBuilder( SkinMinerva::class )
 				->disableOriginalConstructor()
@@ -147,21 +150,23 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			->method( 'getTitle' )
 			->will( $this->returnValue( $title ) );
 
-		$this->setMwGlobals( 'wgMinervaEnableFontChanger', [
-			'base' => $wgMinervaEnableFontChanger
+		$this->setMwGlobals( $configName, [
+			'base' => $configValue
 		] );
 
 		if ( $expected ) {
-			$this->assertContains( 'skins.minerva.fontchanger', $skin->getContextSpecificModules() );
+			$this->assertContains( $moduleName, $skin->getContextSpecificModules() );
 		} else {
-			$this->assertNotContains( 'skins.minerva.fontchanger', $skin->getContextSpecificModules() );
+			$this->assertNotContains( $moduleName, $skin->getContextSpecificModules() );
 		}
 	}
 
-	public function provideFontChangerModule() {
+	public function provideGetContextSpecificModules() {
 		return [
-			[ true, true ],
-			[ false, false ],
+			[ 'wgMinervaEnableFontChanger', true, 'skins.minerva.fontchanger', true ],
+			[ 'wgMinervaEnableFontChanger', false, 'skins.minerva.fontchanger', false ],
+			[ 'wgMinervaEnableBackToTop', true, 'skins.minerva.backtotop', true ],
+			[ 'wgMinervaEnableBackToTop', false, 'skins.minerva.backtotop', false ],
 		];
 	}
 }
