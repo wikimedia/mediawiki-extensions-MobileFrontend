@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2edfb757_8016baf4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1318,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-12T23:08:18Z",
+      "side": 1,
+      "message": "Do we actually want to continue supporting this?\n\nThis seems hacky and better done inside the CentralNotice extension where the module is added - it can check the skin name and make a decision based on that. This would be a great time to do that.",
+      "range": {
+        "startLine": 1318,
+        "startChar": 49,
+        "endLine": 1318,
+        "endChar": 76
+      },
+      "revId": "4cd13584974c8b6f76cc28bf3de78ba0e893f382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
