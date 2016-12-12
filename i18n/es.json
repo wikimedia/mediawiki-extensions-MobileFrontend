@@ -120,7 +120,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Esta página no existe. ¿Te animas a crearla?",
 	"mobile-frontend-editor-placeholder": "Esta sección está vacía. ¡Sé el primero en ampliarla!",
 	"mobile-frontend-editor-placeholder-new-page": "¡{{GENDER:$1|Estás creando}} una página nueva en {{SITENAME}}!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>Previsualización</strong><span>de $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Previsualización</strong> de «$1»</span>",
 	"mobile-frontend-editor-redirect-title": "Redirigiendo al editor…",
 	"mobile-frontend-editor-save": "Guardar",
 	"mobile-frontend-editor-success": "Se ha guardado tu modificación.",

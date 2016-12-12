@@ -370,6 +370,7 @@
 	"apihelp-parse-param-mobileformat": "أرجع خرج محلل بصيغة مناسبة للأجهزة المحمولة.",
 	"apihelp-parse-param-noimages": "تعطيل الصور في خرج الجوال.",
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
+	"apihelp-webapp-manifest-description": "يرجع webapp manifest.",
 	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيئ.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> يتنافى مع <var>thumbwidth</var> و <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> ليس لها معنى على الصفحة الرئيسية، جاري تجاهلها.",

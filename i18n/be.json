@@ -3,12 +3,14 @@
 		"authors": [
 			"Mikalai Udodau",
 			"Чаховіч Уладзіслаў",
-			"Дзяніс Тутэйшы"
+			"Дзяніс Тутэйшы",
+			"Mechanizatar"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацверджання",
 	"mobile-frontend-account-create-email-placeholder": "Адрас электроннай пошты (неабавязкова)",
 	"mobile-frontend-account-create-submit": "Зарэгістравацца",
+	"mobile-frontend-categories-heading": "<strong>Катэгорыі</strong>",
 	"mobile-frontend-changeslist-ip": "Ананімны ўдзельнік",
 	"mobile-frontend-changeslist-nocomment": "няма тлумачэння праўкі",
 	"mobile-frontend-clear-search": "Ачысціць",
@@ -18,6 +20,7 @@
 	"mobile-frontend-diffview-anonymous": "Ананімны ўдзельнік",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт дададзены|байты дададзена|байтаў дададзена}}",
 	"mobile-frontend-diffview-bytesnochange": "Аб'ём не змяніўся",
+	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт|байты|байтаў}} выдалена",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|праўка|праўкі|правак}}",
 	"mobile-frontend-diffview-title": "Змены",
 	"mobile-frontend-donate-image-nouploads": "Няма ўкладанняў.",
@@ -31,7 +34,6 @@
 	"mobile-frontend-home-button": "Дадому",
 	"mobile-frontend-language-article-heading": "Чытаць на іншай мове",
 	"mobile-frontend-language-heading": "<strong>Мовы</strong>",
-	"mobile-frontend-language-site-choose": "Пошук мовы",
 	"mobile-frontend-languages-404-title": "Моўная памылка",
 	"mobile-frontend-languages-header": "Мовы",
 	"mobile-frontend-languages-header-page": "$1 - Мовы",
@@ -76,7 +78,7 @@
 	"mobile-frontend-watchlist-filter-other": "Іншае",
 	"mobile-frontend-watchlist-filter-talk": "Размовы",
 	"mobile-frontend-watchlist-more": "яшчэ",
-	"nearby": "Старонкі побач з вамі",
+	"nearby": "Старонкі на тэмы побач з вамі",
 	"tag-mobile_edit": "Праўка з маб. прылады",
 	"tag-mobile_web_edit": "Праўка праз мабільную версію сайта",
 	"mobile-frontend-pageaction-edit-tooltip": "Правіць вядучы раздзел старонкі."

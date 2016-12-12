@@ -349,6 +349,7 @@
 	"apihelp-parse-param-mobileformat": "Дај расчленувачки извод во формат погоден за мобилни уреди.",
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
+	"apihelp-webapp-manifest-description": "Дава манифест на семрежиот прилог.",
 	"apierror-mobilefrontend-badidtitle": "Неважечка комбинација назнака/наслов за преработката.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> е взаемно исклучиво со <var>thumbwidth</var> и <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> е бесмислено на главната страница. Затоа, го занемарувам.",

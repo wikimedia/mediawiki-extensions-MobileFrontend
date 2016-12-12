@@ -360,6 +360,7 @@
 	"apihelp-parse-param-mobileformat": "Returnera tolk-utdata i ett format som passar mobila enheter.",
 	"apihelp-parse-param-noimages": "Inaktivera bilder i mobil utdata.",
 	"apihelp-parse-param-mainpage": "Applicera mobila transformationer av huvudsidan.",
+	"apihelp-webapp-manifest-description": "Returnerar ett webbappsmanifest.",
 	"apierror-mobilefrontend-badidtitle": "Dålig kombination av sidversions-ID/titel.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> är ömsesidigt uteslutande med <var>thumbwidth</var> och <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> är meningslös på huvudsidan, ignoreras.",

@@ -360,6 +360,7 @@
 	"apihelp-parse-param-mobileformat": "Gebe die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
 	"apihelp-parse-param-mainpage": "Wendet mobile Umwandlungen der Hauptseite an.",
+	"apihelp-webapp-manifest-description": "Gibt ein Webapp-Manifest zurück.",
 	"apierror-mobilefrontend-badidtitle": "Ungültige Versionskennung-/Titel-Kombination.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> schließt sich gegenseitig mit <var>thumbwidth</var> und <var>thumbheight</var> aus.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> macht auf der Hauptseite keinen Sinn. Wird ignoriert.",
