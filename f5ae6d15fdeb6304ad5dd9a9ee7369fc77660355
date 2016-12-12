@@ -16,6 +16,24 @@
       "revId": "f5ae6d15fdeb6304ad5dd9a9ee7369fc77660355",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2edfb757_40b212e6",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1679,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-12-12T23:20:14Z",
+      "side": 1,
+      "message": "It can be - it was in fact a part of that module. I was trying to keep the module clean and make it not have side effects. I agree it\u0027s true that skins.minerva.* is getting bloated, but the solution doesn\u0027t seem to be in minimizing these kinds of starter scripts. I\u0027d sit as a team and talk about options now that feature flagging is in place. I have been thinking about it, but haven\u0027t come up with a good solution for it.",
+      "parentUuid": "2edfb757_807a3a1e",
+      "revId": "f5ae6d15fdeb6304ad5dd9a9ee7369fc77660355",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
