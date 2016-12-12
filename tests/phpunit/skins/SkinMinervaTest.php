@@ -7,6 +7,7 @@ use MobileContext;
 use OutputPage;
 use SkinMinerva;
 use TestingAccessWrapper;
+use Title;
 
 class TestSkinMinerva extends SkinMinerva {
 
@@ -121,6 +122,46 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				],
 				false
 			],
+		];
+	}
+
+	/**
+	 * Test whether the font changer module is correctly added to the list context modules
+	 *
+	 * @covers SkinMinerva::getContextSpecificModules
+	 * @dataProvider provideFontChangerModule
+	 * @param $wgMinervaEnableFontChanger
+	 * @param $expected
+	 */
+	public function testFontChangerModule( $wgMinervaEnableFontChanger, $expected ) {
+		$skin = TestingAccessWrapper::newFromObject(
+			$this->getMockBuilder( SkinMinerva::class )
+				->disableOriginalConstructor()
+				->setMethods( [ 'getTitle' ] )
+				->getMock()
+		);
+		$skin->mobileContext = MobileContext::singleton();
+		$skin->isMobileMode = $skin->mobileContext->shouldDisplayMobileView();
+		$title = Title::newFromText( 'Test' );
+		$skin->expects( $this->any() )
+			->method( 'getTitle' )
+			->will( $this->returnValue( $title ) );
+
+		$this->setMwGlobals( 'wgMinervaEnableFontChanger', [
+			'base' => $wgMinervaEnableFontChanger
+		] );
+
+		if ( $expected ) {
+			$this->assertContains( 'skins.minerva.fontchanger', $skin->getContextSpecificModules() );
+		} else {
+			$this->assertNotContains( 'skins.minerva.fontchanger', $skin->getContextSpecificModules() );
+		}
+	}
+
+	public function provideFontChangerModule() {
+		return [
+			[ true, true ],
+			[ false, false ],
 		];
 	}
 }

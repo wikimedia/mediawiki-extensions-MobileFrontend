@@ -1283,6 +1283,10 @@ class SkinMinerva extends SkinTemplate {
 			$modules[] = 'skins.minerva.categories';
 		}
 
+		if ( $this->mobileContext->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
+			$modules[] = 'skins.minerva.fontchanger';
+		}
+
 		return $modules;
 	}
 
