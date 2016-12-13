@@ -71,22 +71,24 @@ class MockWikiPage extends WikiPage {
 class ApiMobileViewTest extends MediaWikiTestCase {
 
 	/**
-	 * @dataProvider provideSections
-	 * @covers ApiMobileView::parseSections
+	 * @dataProvider provideGetRequestedSectionIds
+	 * @covers ApiMobileView::getRequestedSectionIds
 	 */
-	public function testParseSections( $expectedSections, $expectedMissing, $str ) {
+	public function testGetRequestedSectionIds( $expectedSections, $expectedMissing, $str ) {
 		$data = [
 			'sections' => range( 0, 9 ),
 			'refsections' => [ 5 => 1, 7 => 1 ],
 		];
 
 		$missing = [];
-		$sections = array_keys( ApiMobileView::parseSections( $str, $data, $missing ) );
+		$sections = array_keys(
+			ApiMobileView::getRequestedSectionIds( $str, $data, $missing )
+		);
 		$this->assertEquals( $expectedSections, $sections, 'Check sections' );
 		$this->assertEquals( $expectedMissing, $missing, 'Check missing' );
 	}
 
-	public function provideSections() {
+	public function provideGetRequestedSectionIds() {
 		return [
 			[ [], [], '' ],
 			[ [], [], '  ' ],
