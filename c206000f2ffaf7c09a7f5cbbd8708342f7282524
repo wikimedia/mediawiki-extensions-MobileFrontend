@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_f359e205",
+        "filename": "includes/HookHandler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-12-14T15:32:12Z",
+      "side": 1,
+      "message": "Please, no statics -\u003e static is old global, just under new nice name. Static methods are ok only when they serve as pure functions (example round()). They cannot be associated with app state (as they serve as global).\n\nStatic methods belongs to a class, not an instance of class. Interface is not class therefore you should not define static methods inside interfaces.",
+      "revId": "c206000f2ffaf7c09a7f5cbbd8708342f7282524",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_935866ff",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1403,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2016-12-14T15:32:12Z",
+      "side": 1,
+      "message": "but classes in an empty array",
+      "revId": "c206000f2ffaf7c09a7f5cbbd8708342f7282524",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
