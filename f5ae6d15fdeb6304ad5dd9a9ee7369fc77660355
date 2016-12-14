@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_1100eb6c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-14T23:12:51Z",
+      "side": 0,
+      "message": "This config option (MFDefaultSkinClass) is supposed to allow a 3rd party to change the skin from Minerva and to make it easier for us to port Minerva out of MobileFrontend.\n\nIt was a requested feature at one of the hackathons.\n\nFor example:\n\n$wgVectorResponsive \u003d true;\n$wgMFDefaultSkinClass \u003d \u0027SkinVector\u0027;\n\nJust remove the references to beta and you\u0027ll be fine.\nProbably worth dropping a note while you are here in the docs to make clearer why this method is important.",
+      "revId": "f5ae6d15fdeb6304ad5dd9a9ee7369fc77660355",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
