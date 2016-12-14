@@ -29,9 +29,9 @@
 
 			$el = $container.find( '#' + id );
 			ref = $el.length ?
-				{
-					text: $el.html()
-				} : false;
+			{
+				text: $el.html()
+			} : false;
 
 			return $.Deferred().resolve( ref ).promise();
 		},
