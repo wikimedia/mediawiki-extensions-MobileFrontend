@@ -17,7 +17,10 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
-		$out->addModuleStyles( 'mobile.special.pagefeed.styles' );
+		$out->addModuleStyles( [
+			'mobile.special.pagefeed.styles',
+			'skins.minerva.icons.images.scripts'
+		] );
 		$this->setHeaders();
 		$out->setProperty( 'unstyledContent', true );
 		parent::execute( $par );
