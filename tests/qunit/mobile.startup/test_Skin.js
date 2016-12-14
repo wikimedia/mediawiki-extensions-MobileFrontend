@@ -42,4 +42,79 @@
 		} );
 	} );
 
+	QUnit.test( '#getSectionId', 5, function ( assert ) {
+		var
+			$el = $(
+				[
+					'<div>',
+					'<h2><span class="mw-headline" id="heading">H</span></h2>',
+					'<div>',
+					'<h3><span class="mw-headline" id="subheading">Subh</span></h3>',
+					'<a class="element"></a>',
+					'</div>',
+					'</div>'
+				].join( '' )
+			),
+			$elTwo = $(
+				[
+					'<div>',
+					'<h2><span class="mw-headline" id="Notes_and_references">Notes and references</span></h2>',
+					'<div>',
+					'<h3 class="in-block"><span class="mw-headline" id="Notes">Notes</span></h3>',
+					'<div class="reflist"><a class="element"></a></div>',
+					'</div>',
+					'</div>'
+				].join( '' )
+			),
+			$elThree = $(
+				[
+					'<div id="mw-content-text">',
+					'<h2><span class="mw-headline" id="heading">Heading</span></h2>',
+					'<div><a class="element"></a></div>',
+					'</div>'
+				].join( '' )
+			),
+			$elFour = $(
+				[
+					'<div id="mw-content-text">',
+					'<div><a class="element"></a></div>'
+				].join( '' )
+			),
+			$elFive = $(
+				[
+					'<div id="mw-content-text">',
+					'<h2><span class="mw-headline" id="Foo">Foo</span></h2>',
+					'<div>',
+					'<p>Foo content.</p>',
+					'</div>',
+					'<h2><span class="mw-headline" id="Bar">Bar</span></h2>',
+					'<div class="reflist"><a class="element"></a></div>',
+					'</div>',
+					'</div>'
+				].join( '' )
+			);
+
+		assert.strictEqual(
+			Skin.getSectionId( $el.find( '.element' ) ),
+			'subheading'
+		);
+		assert.strictEqual(
+			Skin.getSectionId( $elTwo.find( '.element' ) ),
+			'Notes',
+			'https://phabricator.wikimedia.org/T146394'
+		);
+		assert.strictEqual(
+			Skin.getSectionId( $elThree.find( '.element' ) ),
+			'heading'
+		);
+		assert.strictEqual(
+			Skin.getSectionId( $elFour.find( '.element' ) ),
+			null
+		);
+		assert.strictEqual(
+			Skin.getSectionId( $elFive.find( '.element' ) ),
+			'Bar'
+		);
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
