@@ -1,0 +1,215 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_5bbd59ac",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 1157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "This if statement is the same as the one that proceeds it so they can both be merged into one.",
+      "range": {
+        "startLine": 1157,
+        "startChar": 0,
+        "endLine": 1157,
+        "endChar": 63
+      },
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_fbe2cdcf",
+        "filename": "jsduck.json",
+        "patchSetId": 17
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "See my comments in the JS :)",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_bbcd7564",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "We usually refer to this as jQuery.Object so for consistency with other documentation we should probably call it jQuery.Object here too. We can always move them all to jQuery if that\u0027s preferred in a later patchset.",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_5bd439ec",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_3b00656d",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "This method should not be necessary. What happens if you remove it?",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_7beeddb2",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "You can use the mixin here for better browser support/consistency\n\n.box-sizing( border-box );",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_5b4af9c9",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "See below - this comment is a little vague and I\u0027m not clear what it means",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_7b4dbddf",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "See below - this comment is a little vague and I\u0027m not clear what it means",
+      "range": {
+        "startLine": 36,
+        "startChar": 12,
+        "endLine": 36,
+        "endChar": 23
+      },
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_bb4335b6",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "See below - this comment is a little vague and I\u0027m not clear what it means",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 11
+      },
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_db3dc92a",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "Could you expand this inline comment. Is this something someone in the future could fix? What further information could you give them that they need to do to understand this comment?",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_fb0f6d8b",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:00:45Z",
+      "side": 1,
+      "message": "Can you not use the result of $notifReadState to simplify this line?",
+      "range": {
+        "startLine": 83,
+        "startChar": 39,
+        "endLine": 83,
+        "endChar": 63
+      },
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
