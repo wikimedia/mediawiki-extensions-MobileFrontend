@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_7bc25d8a",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-12-15T18:27:07Z",
+      "side": 1,
+      "message": "I don\u0027t know that we\u0027ve got a team styleguide (or an official styleguide) that covers this, but this else is redundant.",
+      "revId": "5240a4ef2fac7786d878c61c4c9603dafa4bf8dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
