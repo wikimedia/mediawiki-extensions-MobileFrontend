@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e0e73b5_18000704",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T16:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e0e73b5_209f13bb",
+      "revId": "67b46a0f0a5f71af14597b5fc7deec5ce15875c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e0e73b5_80f23fde",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e0e73b5_b69fcd05",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T16:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e0e73b5_80f23fde",
+      "revId": "67b46a0f0a5f71af14597b5fc7deec5ce15875c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e0e73b5_807d9f19",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2016-12-15T13:35:49Z",
       "side": 1,
       "message": "It took me a little while to figure out why this couldn\u0027t be replaced by jQuery.closest(). Could you add one or more examples in the DocBlock. Admittedly, the unit tests serve as good documentation but not everyone immediately reaches for the unit tests ;)",
+      "revId": "67b46a0f0a5f71af14597b5fc7deec5ce15875c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_38fbcb13",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T16:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e0e73b5_807d9f19",
       "revId": "67b46a0f0a5f71af14597b5fc7deec5ce15875c9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
