@@ -7,28 +7,31 @@
 	/**
 	 * Get the id of the section $el belongs to.
 	 * @param {jQuery.Object} $el
-	 * @return {string}
+	 * @return {string|null} either the anchor (id attribute of the section heading
+	 *  or null if none found)
 	 * @ignore
 	 */
 	function getSectionId( $el ) {
-		var hSelector = 'h1,h2,h3,h4,h5,h6',
+		var id,
+			hSelector = 'h1,h2,h3,h4,h5,h6',
+			$parent = $el.parent(),
 			// e.g. matches Subheading in
 			// <h2>H</h2><div><h3 id="subheading">Subh</h3><a class="element"></a></div>
-			id = $el.prevAll( hSelector ).eq( 0 )
-				.find( '.mw-headline' ).attr( 'id' );
+			$heading = $el.prevAll( hSelector ).eq( 0 );
 
-		// if there's no headline preceding the placeholder then it is inside a section
-		// and the id is of the collapsible heading preceding the section.
-		// e.g. matches heading in
-		// <div id="mw-content-text">
-		//   <h2 id="heading">Heading</h2>
-		//   <div><a class="element"></a></div>
-		// </div>
-		if ( id === undefined ) {
-			id = $el.parents( '#mw-content-text > div' ).prevAll( hSelector ).eq( 0 )
-				.find( '.mw-headline' ).attr( 'id' );
+		if ( $heading.length ) {
+			id = $heading.find( '.mw-headline' ).attr( 'id' );
+			if ( id ) {
+				return id;
+			}
 		}
-		return id;
+		if ( $parent.length ) {
+			// if we couldnt find a sibling heading, check the sibling of the parents
+			// consider <div><h2 /><div><$el/></div></div>
+			return getSectionId( $parent );
+		} else {
+			return null;
+		}
 	}
 
 	/**
@@ -368,6 +371,7 @@
 		}
 	} );
 
+	Skin.getSectionId = getSectionId;
 	M.define( 'mobile.startup/Skin', Skin );
 
 }( mw.mobileFrontend, jQuery ) );
