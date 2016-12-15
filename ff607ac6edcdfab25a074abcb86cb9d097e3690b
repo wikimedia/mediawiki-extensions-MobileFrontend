@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_fea87bda",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-15T19:52:05Z",
+      "side": 1,
+      "message": "long term vision: it seems we could add the text to each section in \u0027sections\u0027 rather than create this separation here.. but I need to refactor execute first to understand how that method works.",
+      "range": {
+        "startLine": 515,
+        "startChar": 10,
+        "endLine": 515,
+        "endChar": 14
+      },
+      "revId": "ff607ac6edcdfab25a074abcb86cb9d097e3690b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
