@@ -28,11 +28,16 @@ class ApiWebappManifest extends ApiBase {
 		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
 		if ( $appleTouchIcon !== false ) {
 			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_RELATIVE );
-			$appleTouchIconSize = getimagesize( $appleTouchIconUrl );
+			$request = MWHttpRequest::factory( $appleTouchIconUrl );
+			$request->execute();
+			$appleTouchIconContent = $request->getContent();
+			if ( !empty( $appleTouchIconContent ) ) {
+				$appleTouchIconSize = getimagesizefromstring( $appleTouchIconContent );
+			}
 			$icon = [
 				'src' => $appleTouchIcon
 			];
-			if ( $appleTouchIconSize !== false ) {
+			if ( isset( $appleTouchIconSize ) && $appleTouchIconSize !== false ) {
 				$icon['sizes'] = $appleTouchIconSize[0].'x'.$appleTouchIconSize[1];
 				$icon['type'] = $appleTouchIconSize['mime'];
 			}
