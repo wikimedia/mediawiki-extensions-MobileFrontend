@@ -19,11 +19,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		$modules['beta'] = [
-			'skins.minerva.beta.scripts',
-		];
-
-		Hooks::run( 'SkinMinervaDefaultModules', [ $this, &$modules ] );
 
 		// Disable CentralNotice modules in beta
 		if ( array_key_exists( 'centralnotice', $modules ) ) {

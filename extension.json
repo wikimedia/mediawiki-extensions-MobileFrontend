@@ -1729,22 +1729,16 @@
 				"mobile-frontend-watchlist-please-wait"
 			]
 		},
-		"skins.minerva.beta.scripts": {
+		"skins.minerva.fontchanger": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"skins.minerva.scripts",
-				"mobile.settings",
-				"mobile.foreignApi",
-				"mobile.backtotop"
+				"mobile.settings"
 			],
 			"scripts": [
-				"resources/skins.minerva.beta.scripts/fontchanger.js"
-			],
-			"messages": [
-				"mobile-frontend-commons-category-view"
+				"resources/skins.minerva.fontchanger/init.js"
 			]
 		},
 		"skins.minerva.tablet.scripts": {
@@ -2017,6 +2011,10 @@
 		"MinervaShowCategoriesButton": {
 			"base": false,
 			"beta": true
+		},
+		"MinervaEnableFontChanger": {
+		  "base": false,
+		  "beta": true
 		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [

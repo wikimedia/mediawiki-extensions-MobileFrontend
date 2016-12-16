@@ -63,7 +63,6 @@
 	"mobile-frontend-cite-error": "A problem occurred while attempting to load citations due to a bad revision identifier.",
 	"mobile-frontend-cite-none-available": "There are no citations available for this page.",
 	"mobile-frontend-clear-search": "Clear",
-	"mobile-frontend-commons-category-view": "Images for $1",
 	"mobile-frontend-contribution-summary": "All edits made by {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Cookies are required to switch view modes. Please enable them and try again.",
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
