@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_35f2a904",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-16T20:21:42Z",
+      "side": 1,
+      "message": "As I\u0027ve mentioned before the use of MobileContext inside Minerva is incorrect as i causes long term issues with pulling Minerva out of MobileFrontend and existing on it\u0027s own (consider a 3rd party who wants the Minerva skin but doesn\u0027t want to maintain a separate skin/mobile domain). \n\n\nYes.. I hear you.. we\u0027re not there yet... but this seems like a golden opportunity to rectify this rather than encourage this behaviour.\n\nWe already have a getDefaultMobileSkin method inside MobileFrontendHooks - could we pass an isBeta flag there as part of construction?\n\nIf we don\u0027t do that now.. when will be a better time to do it?",
+      "revId": "3cbc95ee61ee767827bb6e8cd928876fb4993bed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
