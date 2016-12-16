@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_35918953",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-16T21:01:16Z",
+      "side": 0,
+      "message": "oh.. this line shouldn\u0027t be needed.\nYou only need:\n$skinName \u003d $mobileContext-\u003egetMFConfig()-\u003eget( \u0027MFDefaultSkinClass\u0027 )\nreturn new $skinName( $context );",
+      "revId": "ec67492b65073c1bd552e10157dab748718734f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
