@@ -1287,6 +1287,10 @@ class SkinMinerva extends SkinTemplate {
 			$modules[] = 'skins.minerva.fontchanger';
 		}
 
+		if ( $this->mobileContext->getConfigVariable( 'MinervaEnableBackToTop' ) ) {
+			$modules[] = 'skins.minerva.backtotop';
+		}
+
 		return $modules;
 	}
 
