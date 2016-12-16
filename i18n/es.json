@@ -64,7 +64,6 @@
 	"mobile-frontend-cite-error": "Ocurrió un error al intentar cargar las citas debido a un identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "No hay citas disponibles para esta página.",
 	"mobile-frontend-clear-search": "Limpiar",
-	"mobile-frontend-commons-category-view": "Imágenes de $1",
 	"mobile-frontend-contribution-summary": "Todas las ediciones de {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Se requieren \"cookies\" para cambiar los modos de visualización. Habilítalas y vuelve a intentarlo.",
 	"mobile-frontend-copyright": "El contenido está disponible bajo la licencia $1, salvo que se indique lo contrario.",

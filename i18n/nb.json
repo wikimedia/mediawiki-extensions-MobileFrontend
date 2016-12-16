@@ -43,7 +43,6 @@
 	"mobile-frontend-cite-error": "Det oppsto et feil under lasting av referanser på grunn av et ugyldig revisjonsnummer.",
 	"mobile-frontend-cite-none-available": "Det finnes ingen referanser på denne siden.",
 	"mobile-frontend-clear-search": "Tilbakestill",
-	"mobile-frontend-commons-category-view": "Bilder for $1",
 	"mobile-frontend-contribution-summary": "Alle redigeringer gjort av {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Informasjonskapsler kreves for å bytte visningstilstand. Aktiver dem og prøv igjen.",
 	"mobile-frontend-copyright": "Innholdet er tilgjengelig under $1 hvis ikke annet er angitt.",

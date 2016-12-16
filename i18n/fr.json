@@ -73,7 +73,6 @@
 	"mobile-frontend-cite-error": "Un problème est survenu lors de la tentative de chargement de citations en raison d'un mauvais identificateur de révision.",
 	"mobile-frontend-cite-none-available": "Il n'y a pas de citations disponibles pour cette page.",
 	"mobile-frontend-clear-search": "Effacer",
-	"mobile-frontend-commons-category-view": "Images pour $1",
 	"mobile-frontend-contribution-summary": "Toutes les modifications faites par {{GENDER:$1|[[User:$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Les cookies sont nécessaires pour basculer entre les modes d’affichage. Veuillez les autoriser et réessayer.",
 	"mobile-frontend-copyright": "Le contenu est disponible sous licence $1 sauf mention contraire.",
