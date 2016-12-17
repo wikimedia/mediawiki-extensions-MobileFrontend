@@ -9,7 +9,8 @@
 			"Tacsipacsi",
 			"Csega",
 			"ViDam",
-			"Dorgan"
+			"Dorgan",
+			"Csigabi"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
@@ -307,7 +308,7 @@
 	"mobile-frontend-user-page-uploads": "Feltöltések",
 	"mobile-frontend-user-page-no-owner-page-yet": "Még nincs felhasználói lapod",
 	"mobile-frontend-user-page-no-page-yet": "$1 nem rendelkezik felhasználói lappal",
-	"mobile-frontend-user-page-describe-yourself": "Bemutatkouhatsz a többi $1 a felhasználói lapodon",
+	"mobile-frontend-user-page-describe-yourself": "Bemutatkozhatsz a többi $1 a felhasználói lapodon",
 	"mobile-frontend-user-page-describe-yourself-editors": "szerkesztőnek",
 	"mobile-frontend-user-page-desired-action": "Ezt a lapot csak $1 hozhatja létre és szerkesztheti",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Készítsd el a sajátodat",
