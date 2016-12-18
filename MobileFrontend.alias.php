@@ -113,6 +113,19 @@ $specialPageAliases['ce'] = array(
 	'Nearby' => array( 'Гергахьо' ),
 );
 
+/** Czech (čeština) */
+$specialPageAliases['cs'] = array(
+	'History' => array( 'Historie' ),
+	'MobileCite' => array( 'Mobilní_citace' ),
+	'MobileOptions' => array( 'Mobilní_nastavení' ),
+	'Uploads' => array( 'Vaše_soubory' ),
+	'MobileDiff' => array( 'Mobilní_rozdíl' ),
+	'MobileEditor' => array( 'Mobilní_editor' ),
+	'MobileMenu' => array( 'Mobilní_menu' ),
+	'MobileLanguages' => array( 'Mobilní_jazyky' ),
+	'Nearby' => array( 'Poblíž' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'History' => array( 'Versionsgeschichte' ),
