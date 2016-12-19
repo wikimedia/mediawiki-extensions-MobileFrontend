@@ -252,13 +252,14 @@
 			if ( !this._thumbs ) {
 				this.$el.find( 'a.image, a.thumbimage' ).each( function () {
 					var $a = $( this ),
+						legacyMatch = $a.attr( 'href' ).match( /title=([^\/&]+)/ ),
 						match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
-					if ( match ) {
+					if ( legacyMatch || match ) {
 						thumbs.push(
 							new Thumbnail( {
 								el: $a,
-								filename: decodeURIComponent( match[0] )
+								filename: decodeURIComponent( legacyMatch ? legacyMatch[1] : match[0] )
 							} )
 						);
 					}
