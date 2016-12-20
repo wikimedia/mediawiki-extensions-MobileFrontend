@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_6622a7a4",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-12-20T08:01:09Z",
+      "side": 1,
+      "message": "what if the wiki doesn\u0027t use english as the content language. E.g. in german the namespace has the name \"Datei:\" :)",
+      "range": {
+        "startLine": 255,
+        "startChar": 40,
+        "endLine": 255,
+        "endChar": 44
+      },
+      "revId": "02fe9fc6afe055cb68c4778e6ab2c49f9be25938",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
