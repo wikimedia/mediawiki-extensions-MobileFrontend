@@ -63,6 +63,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			if ( $this->getRequest()->wasPosted() ) {
 				$this->submitSettingsForm();
 			} else {
+				if ( $context->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
+					$this->getOutput()->addModules( 'mobile.special.mobileoptions.scripts.fontchanger' );
+				}
 				$this->getSettingsForm();
 			}
 		}
