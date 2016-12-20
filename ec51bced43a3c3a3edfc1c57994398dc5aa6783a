@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_5cbd3662",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-12-20T17:04:03Z",
+      "side": 1,
+      "message": "use tabs instead of spaces, please. See:\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Whitespace\n:)",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 8
+      },
+      "revId": "ec51bced43a3c3a3edfc1c57994398dc5aa6783a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
