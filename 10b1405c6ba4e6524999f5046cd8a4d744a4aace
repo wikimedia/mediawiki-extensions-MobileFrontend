@@ -59,6 +59,24 @@
     },
     {
       "key": {
+        "uuid": "0e0e73b5_a116494b",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-12-20T12:28:42Z",
+      "side": 1,
+      "message": "Interesting! I asked her to change it to {jQuery} because that\u0027s what we use in VE, Echo, etc.,  I didn\u0027t realize MF used something different.",
+      "parentUuid": "0e0e73b5_bbcd7564",
+      "revId": "10b1405c6ba4e6524999f5046cd8a4d744a4aace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e0e73b5_5bd439ec",
         "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
         "patchSetId": 17
