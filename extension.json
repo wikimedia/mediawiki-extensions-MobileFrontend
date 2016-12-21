@@ -1393,8 +1393,7 @@
 			"position": "top",
 			"dependencies": [
 				"mobile.startup",
-				"mobile.settings",
-				"mobile.fontchanger"
+				"mobile.settings"
 			],
 			"scripts": [
 				"resources/mobile.special.mobileoptions.scripts/mobileoptions.js"
@@ -1404,7 +1403,18 @@
 			},
 			"messages": [
 				"mobile-frontend-expand-sections-description",
-				"mobile-frontend-expand-sections-status",
+				"mobile-frontend-expand-sections-status"
+			]
+		},
+		"mobile.special.mobileoptions.scripts.fontchanger": {
+			"targets": "mobile",
+			"dependencies": [
+				"mobile.fontchanger"
+			],
+			"scripts": [
+				"resources/mobile.special.mobileoptions.scripts.fontchanger/init.js"
+			],
+			"messages": [
 				"mobile-frontend-fontchanger-desc",
 				"mobile-frontend-fontchanger-link"
 			]

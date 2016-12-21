@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var context = M.require( 'mobile.context/context' ),
-		FontChanger = M.require( 'mobile.fontchanger/FontChanger' ),
 		View = M.require( 'mobile.view/View' ),
 		settings = M.require( 'mobile.settings/settings' );
 
@@ -38,7 +37,6 @@
 	 */
 	function initLocalStorageElements() {
 		var cb,
-			fc,
 			saveLI = $( '#mw-mf-settings-save' );
 
 		if ( context.isBetaGroupMember() ) {
@@ -48,13 +46,6 @@
 				description: mw.msg( 'mobile-frontend-expand-sections-description' )
 			} );
 			cb.insertBefore( saveLI );
-
-			fc = new FontChanger( {
-				name: 'userFontSize',
-				enableMsg: mw.msg( 'mobile-frontend-fontchanger-link' ),
-				descriptionMsg: mw.msg( 'mobile-frontend-fontchanger-desc' )
-			} );
-			fc.insertBefore( saveLI );
 		}
 	}
 
