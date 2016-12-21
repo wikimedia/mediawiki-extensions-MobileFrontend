@@ -63,18 +63,31 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			if ( $this->getRequest()->wasPosted() ) {
 				$this->submitSettingsForm();
 			} else {
-				if ( $context->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
-					$this->getOutput()->addModules( 'mobile.special.mobileoptions.scripts.fontchanger' );
-				}
-				$this->getSettingsForm();
+				$this->addSettingsForm();
 			}
 		}
 	}
 
 	/**
-	 * Render the settings form (with actual set settings) to display to user
+	 * Gets the Resource Loader modules that should be added to the output.
+	 *
+	 * @return string[]
 	 */
-	private function getSettingsForm() {
+	private function getModules( MobileContext $context ) {
+		$result = [];
+
+		if ( $context->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
+			$result[] = 'mobile.special.mobileoptions.scripts.fontchanger';
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Render the settings form (with actual set settings) and add it to the
+	 * output as well as any supporting modules.
+	 */
+	private function addSettingsForm() {
 		$out = $this->getOutput();
 		$context = MobileContext::singleton();
 		$user = $this->getUser();
@@ -153,6 +166,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 HTML;
 		// @codingStandardsIgnoreEnd
 		$out->addHTML( $html );
+
+		$modules = $this->getModules( $context );
+
+		$this->getOutput()
+			->addModules( $modules );
 	}
 
 	/**
@@ -234,7 +252,7 @@ HTML;
 			$schemaData['action'] = 'error';
 			$schemaData['errorText'] = $errorText;
 			ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
-			$this->getSettingsForm();
+			$this->addSettingsForm();
 			return;
 		}
 		wfIncrStats( 'mobile.options.saves' );
