@@ -5,6 +5,7 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "هيژ چکسدإیي مإن ڤيرایشت ني",
+	"mobile-frontend-copyright": "مإنۈنأ ايچو سي $1 مإن دسرسإ مأر یو کإ یأ جۈر دیأ نڤشدإ ڤابۈ.",
 	"mobile-frontend-editor-edit": "ڤیرایئشت کاری",
 	"mobile-frontend-featured-article": "مينۈنأ نازدار امرو",
 	"mobile-frontend-home-button": "سرآسونه",
@@ -26,5 +27,6 @@
 	"mobile-frontend-view-desktop": "ميزكار",
 	"mobile-frontend-view-mobile": "موبايل",
 	"tag-mobile_edit": "ویرایشت موبایلی",
-	"tag-mobile_web_edit": "ڤيرایشت تیارگه موبایلی"
+	"tag-mobile_web_edit": "ڤيرایشت تیارگه موبایلی",
+	"mobile-frontend-pageaction-edit-tooltip": "ڤيرایشت سر بأرجا اي بألگأ."
 }
