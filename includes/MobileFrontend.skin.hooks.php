@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class MobileFrontendSkinHooks {
 	/**
 	 * Make it possible to open sections while JavaScript is still loading.
@@ -145,7 +147,11 @@ JAVASCRIPT;
 			}
 			if ( $rightsPage ) {
 				$title = Title::newFromText( $rightsPage );
-				$link = Linker::linkKnown( $title, $rightsText, $attribs );
+				$link = MediaWikiServices::getInstance()->getLinkRenderer()->makeKnownLink(
+					$title,
+					new HtmlArmor( $rightsText ),
+					$attribs
+				);
 			} elseif ( $rightsUrl ) {
 				$link = Linker::makeExternalLink( $rightsUrl, $rightsText, true, '', $attribs );
 			} else {

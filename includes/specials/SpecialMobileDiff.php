@@ -318,9 +318,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			];
 			$output->addHtml(
 				Html::openElement( 'div', $attrs ) .
-				Linker::link(
+				$this->getLinkRenderer()->makeLink(
 					$user->getUserPage(),
-					htmlspecialchars( $user->getName() ),
+					$user->getName(),
 					[ 'class' => 'mw-mf-user-link' ]
 				) .
 				'</div>' .
@@ -342,7 +342,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					'class' =>  MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user icon-16px mw-mf-anon' ),
 				], $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
 				'<div>' .
-					Linker::link( $userPage, htmlspecialchars( $ipAddr ) ) .
+					$this->getLinkRenderer()->makeLink( $userPage, $ipAddr ) .
 				'</div>'
 			);
 		}

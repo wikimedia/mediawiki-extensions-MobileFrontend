@@ -3,6 +3,7 @@
  * SkinMinerva.php
  */
 use MobileFrontend\MenuBuilder;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
@@ -151,9 +152,9 @@ class SkinMinerva extends SkinTemplate {
 				default: // generic (all other NS)
 					$msg = 'mobile-frontend-talk-back-to-page';
 			}
-			$tpl->set( 'subject-page', Linker::link(
+			$tpl->set( 'subject-page', MediaWikiServices::getInstance()->getLinkRenderer()->makeLink(
 				$title->getSubjectPage(),
-				$this->msg( $msg, $title->getText() )->escaped(),
+				$this->msg( $msg, $title->getText() )->text(),
 				[ 'class' => 'return-link' ]
 			) );
 		}

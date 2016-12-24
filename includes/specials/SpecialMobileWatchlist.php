@@ -3,6 +3,8 @@
  * SpecialMobileWatchlist.php
  */
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Implements the Watchlist special page
  */
@@ -157,17 +159,18 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$attrsList[ 'class' ] = MobileUI::buttonClass( 'progressive', 'is-on' );
 		}
 
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		$html =
 		Html::openElement( 'ul', [ 'class' => 'button-bar mw-ui-button-group' ] ) .
 			Html::openElement( 'li', $attrsList ) .
-			Linker::link( $sp,
+			$linkRenderer->makeLink( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
 				[ 'class' => 'button' ],
 				[ 'watchlistview' => 'a-z' ]
 			) .
 			Html::closeElement( 'li' ) .
 			Html::openElement( 'li', $attrsFeed ) .
-			Linker::link( $sp,
+			$linkRenderer->makeLink( $sp,
 				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
 				[ 'class' => 'button' ],
 				[ 'watchlistview' => 'feed', 'filter' => $filter ]
