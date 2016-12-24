@@ -27,7 +27,8 @@
 			"Esketti",
 			"HanV",
 			"Mbch331",
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"Mainframe98"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -344,6 +345,7 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Een hoofdfoto voor deze pagina uploaden.",
 	"apihelp-mobileview-param-noimages": "HTML zonder afbeeldingen opvragen.",
 	"apihelp-parse-param-noimages": "Afbeeldingen uitschakelen in de mobiele uitvoer.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Kopje|Kopjes}} $1 niet gevonden.",
 	"mobile-frontend-meta-data-issues-categories": "Over deze categorie",
 	"mobile-frontend-loading-message": "Bezig met laden…",
 	"mobile-frontend-console-recruit": "Hallo! Dit is opensourcesoftware en we hebben vrijwilligers nodig die helpen met bouwen en verbeteren hiervan en het oplossen van fouten die niet eens in de JavaScript-console te zien zijn!\n\nU kunt onze backlog vinden op https://phabricator.wikimedia.org/project/profile/67/.",
