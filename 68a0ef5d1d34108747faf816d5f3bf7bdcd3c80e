@@ -33,6 +33,24 @@
       "revId": "68a0ef5d1d34108747faf816d5f3bf7bdcd3c80e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_7215a53f",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2016-12-25T19:02:22Z",
+      "side": 1,
+      "message": "not in static functions :)",
+      "parentUuid": "0e0e73b5_9c0b922d",
+      "revId": "68a0ef5d1d34108747faf816d5f3bf7bdcd3c80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
