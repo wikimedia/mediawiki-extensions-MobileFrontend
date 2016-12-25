@@ -1,18 +1,32 @@
 {
 	"@metadata": {
 		"authors": [
-			"Karthi.dr"
+			"Karthi.dr",
+			"Girmitya"
 		]
 	},
+	"mobile-frontend-editor-edit": "Badlo",
 	"mobile-frontend-featured-article": "Aaj ke featured article",
 	"mobile-frontend-home-button": "Pahila Panna",
 	"mobile-frontend-images-status": "Chhapa",
-	"mobile-frontend-login": "Log in karo",
+	"mobile-frontend-language-article-heading": "Duusra bhasa me parrho",
+	"mobile-frontend-last-modified-date": "$1 ke $2 baje, ii panna ke badlaa gais rahaa",
+	"mobile-frontend-main-menu-button-tooltip": "Main menu ke kholo",
+	"mobile-frontend-main-menu-login": "Log in",
+	"mobile-frontend-main-menu-nearby": "Nagiich",
+	"mobile-frontend-main-menu-settings": "Settings",
+	"mobile-frontend-main-menu-watchlist": "Dhyaan suchi",
 	"mobile-frontend-page-menu-history": "Itihaas",
 	"mobile-frontend-placeholder": "{{SITENAME}} khojo",
 	"mobile-frontend-privacy-link-text": "Gupt",
 	"mobile-frontend-random-button": "Koi bhi",
 	"mobile-frontend-search-submit": "Jaao",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Bhasa",
-	"mobile-frontend-username": "Sadasya ke naam:"
+	"mobile-frontend-terms-text": "Terms of Use",
+	"mobile-frontend-view": "Mobile view",
+	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-mobile": "Mobile",
+	"tag-mobile_edit": "Mobile edit",
+	"tag-mobile_web_edit": "Mobile web edit",
+	"mobile-frontend-pageaction-edit-tooltip": "Ii panna ke lead hissa ke badlo"
 }
