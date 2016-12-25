@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_bc0c1646",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-12-25T06:29:39Z",
+      "side": 1,
+      "message": "This used to be interpreted as HTML, so it should probably stay that way for now...you\u0027ll need to armor it with HtmlArmor, see the on-wiki documentation for how.",
+      "revId": "68a0ef5d1d34108747faf816d5f3bf7bdcd3c80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_9c0b922d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-12-25T06:29:39Z",
+      "side": 1,
+      "message": "This extends from SpecialPage, so just use $this-\u003egetLinkRenderer();",
+      "revId": "68a0ef5d1d34108747faf816d5f3bf7bdcd3c80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
