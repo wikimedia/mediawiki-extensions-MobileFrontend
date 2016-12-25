@@ -139,13 +139,13 @@ class SkinMinerva extends SkinTemplate {
 		if ( $title->isTalkPage() ) {
 			// if it's a talk page for which we have a special message, use it
 			switch ( $title->getNamespace() ) {
-				case 3: // User NS
+				case NS_USER_TALK:
 					$msg = 'mobile-frontend-talk-back-to-userpage';
 					break;
-				case 5: // Project NS
+				case NS_PROJECT_TALK:
 					$msg = 'mobile-frontend-talk-back-to-projectpage';
 					break;
-				case 7: // File NS
+				case NS_FILE_TALK:
 					$msg = 'mobile-frontend-talk-back-to-filepage';
 					break;
 				default: // generic (all other NS)
