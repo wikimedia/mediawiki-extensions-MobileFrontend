@@ -1681,7 +1681,8 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.backtotop"
+				"mobile.backtotop",
+				"mobile.browser"
 			],
 			"scripts": [
 				"resources/skins.minerva.backtotop/init.js"
