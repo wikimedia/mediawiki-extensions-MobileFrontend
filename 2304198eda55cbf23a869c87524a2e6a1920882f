@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_64adbfe6",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T18:52:36Z",
+      "side": 1,
+      "message": "please follow our coding conventions, and the () isn\u0027t needed.\n\nisNotIos \u003d !browser.isIos(),",
+      "range": {
+        "startLine": 4,
+        "startChar": 16,
+        "endLine": 4,
+        "endChar": 18
+      },
+      "revId": "2304198eda55cbf23a869c87524a2e6a1920882f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_84aaf3cf",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T18:52:36Z",
+      "side": 1,
+      "message": "please indent by one more line :)",
+      "range": {
+        "startLine": 3,
+        "startChar": 1,
+        "endLine": 5,
+        "endChar": 43
+      },
+      "revId": "2304198eda55cbf23a869c87524a2e6a1920882f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_046043ca",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T18:52:36Z",
+      "side": 1,
+      "message": "please follow our coding conventions:\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript\n\nif ( isNotIos ) {",
+      "range": {
+        "startLine": 8,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 14
+      },
+      "revId": "2304198eda55cbf23a869c87524a2e6a1920882f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_e45acf21",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T18:52:36Z",
+      "side": 1,
+      "message": "indent by one more tab",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 15,
+        "endChar": 5
+      },
+      "revId": "2304198eda55cbf23a869c87524a2e6a1920882f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_c4a0ebf3",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T18:52:36Z",
+      "side": 1,
+      "message": "put the closing bracket (}) on a new line :)",
+      "range": {
+        "startLine": 15,
+        "startChar": 5,
+        "endLine": 15,
+        "endChar": 6
+      },
+      "revId": "2304198eda55cbf23a869c87524a2e6a1920882f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
