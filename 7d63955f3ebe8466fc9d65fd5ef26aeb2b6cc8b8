@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_0e5f4445",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T17:21:49Z",
+      "side": 1,
+      "message": "no need for a separate var keyword for each variable, just use commas :P",
+      "range": {
+        "startLine": 3,
+        "startChar": 1,
+        "endLine": 3,
+        "endChar": 4
+      },
+      "revId": "7d63955f3ebe8466fc9d65fd5ef26aeb2b6cc8b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_ee5d104b",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T17:21:49Z",
+      "side": 1,
+      "message": "please remove this tab.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 1
+      },
+      "revId": "7d63955f3ebe8466fc9d65fd5ef26aeb2b6cc8b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_2e2b2895",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-01-03T17:21:49Z",
+      "side": 1,
+      "message": "hmm, the isNotIos flag will probably not change during the scroll event. So, instead of having a useless event (and computation and a call to hide()) each time some iOS user scrolls, I would propose: Don\u0027t add the event listener at all, if the device is an iOS device :)",
+      "range": {
+        "startLine": 11,
+        "startChar": 59,
+        "endLine": 11,
+        "endChar": 70
+      },
+      "revId": "7d63955f3ebe8466fc9d65fd5ef26aeb2b6cc8b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
