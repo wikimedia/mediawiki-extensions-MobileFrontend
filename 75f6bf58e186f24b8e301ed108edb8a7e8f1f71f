@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_95046781",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-03T09:51:49Z",
+      "side": 1,
+      "message": "Add space between T and : so that the phabricator task gets an alert that you have made this patch for faster review.",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 11
+      },
+      "revId": "75f6bf58e186f24b8e301ed108edb8a7e8f1f71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_35c81b5a",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-03T09:51:49Z",
+      "side": 1,
+      "message": "Your patch is going to hit issues with eslint and Jenkins will -1 due to a code styling inconsistency. Variables must be grouped at the top of the file so you\u0027ll need to move this up.\n\nhttp://eslint.org/docs/rules/one-var",
+      "revId": "75f6bf58e186f24b8e301ed108edb8a7e8f1f71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_75ad737f",
+        "filename": "resources/skins.minerva.backtotop/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-03T09:51:49Z",
+      "side": 1,
+      "message": "FYI we actually have a handy helper to do this.\n\nvar browser \u003d M.require( \u0027mobile.browser/Browser\u0027 ).getSingleton()\n\nbrowser.isIos()\n\nAlso this will be executed on every scroll event.\nIs there a reason you want to do this rather than to simply avoid binding the scroll event in the first place?",
+      "revId": "75f6bf58e186f24b8e301ed108edb8a7e8f1f71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
