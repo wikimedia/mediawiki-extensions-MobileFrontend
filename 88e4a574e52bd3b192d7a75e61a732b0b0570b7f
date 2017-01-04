@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee12ffd6_692aa5d9",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-04T00:55:38Z",
+      "side": 1,
+      "message": "I\u0027m not too familiar with the captcha extension but what can question contain and where does it get generated - can you point me at the code? could a would be vandal edit a wiki page to generate script tags here?",
+      "revId": "88e4a574e52bd3b192d7a75e61a732b0b0570b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
