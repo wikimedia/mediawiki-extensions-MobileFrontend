@@ -66,9 +66,9 @@
 				.then( function () {
 					overlay.target = ve.init.mw.targetFactory.create( 'article', overlay, {
 						$element: overlay.$el,
-						// || undefined so that scrolling is not triggered for the lead (0) section
+						// || null so that scrolling is not triggered for the lead (0) section
 						// (which has no header to scroll to)
-						section: overlay.options.sectionId || undefined
+						section: overlay.options.sectionId || null
 					} );
 					overlay.target.activating = true;
 					overlay.target.load();
