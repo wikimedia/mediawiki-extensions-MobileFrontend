@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee12ffd6_a31af67c",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-04T20:58:08Z",
+      "side": 1,
+      "message": "Why not use a template here?",
+      "revId": "c7aa30dbd2609a59ec2b9712a11b0e758bd12288",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee12ffd6_c315ea4e",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-04T20:58:08Z",
+      "side": 1,
+      "message": "We should update getSitename() documentation to indicate that the site name is not only used in the footer.",
+      "revId": "c7aa30dbd2609a59ec2b9712a11b0e758bd12288",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
