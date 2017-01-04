@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kengšepā"
+		]
+	},
+	"mobile-frontend-home-button": "Kuod",
+	"mobile-frontend-main-menu-account-create": "Lūo kont",
+	"mobile-frontend-password-placeholder": "Sallisõnā",
+	"mobile-frontend-placeholder": "Vȯtš {{SITENAME}}"
+}
