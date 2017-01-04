@@ -93,7 +93,6 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
 		// Construct various Minerva-specific interface elements
-		$this->prepareSearchInputAttributes( $tpl );
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
@@ -103,29 +102,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareLanguages( $tpl );
 
 		return $tpl;
-	}
-
-	/**
-	 * Prepare data used to create the search input
-	 *
-	 * @param QuickTemplate $tpl
-	 */
-	protected function prepareSearchInputAttributes( $tpl ) {
-		// Beta mode makes sense in the mobile context only
-		if ( $this->isMobileMode && $this->mobileContext->isBetaGroupMember() ) {
-			$placeholderMessage = 'mobile-frontend-placeholder-beta';
-		} else {
-			$placeholderMessage = 'mobile-frontend-placeholder';
-		}
-
-		$tpl->set( 'searchInputAttributes', [
-			'id' => 'searchInput',
-			'class' => 'search',
-			'autocomplete' => 'off',
-			// The placeholder gets fed to HTML::element later which escapes all
-			// attribute values, so need to escape the string here.
-			'placeholder' => $this->msg( $placeholderMessage )->text(),
-		] );
 	}
 
 	/**

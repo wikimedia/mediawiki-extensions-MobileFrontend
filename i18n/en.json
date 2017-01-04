@@ -257,8 +257,6 @@
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ uploads",
 	"mobile-frontend-placeholder": "Search {{SITENAME}}",
-	"mobile-frontend-placeholder-app": "Search {{SITENAME}} (Web App)",
-	"mobile-frontend-placeholder-beta": "Search {{SITENAME}} (Beta)",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-random-button": "Random",
 	"mobile-frontend-redirected-from": "Redirected from \"$1\"",

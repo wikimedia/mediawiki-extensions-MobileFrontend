@@ -30,7 +30,7 @@ Feature: Basic site for legacy devices
       And I click on the main navigation button
     Then I should not see a link to "Nearby" in the main navigation menu
 
-  @smoke @integration
+  @smoke @integration @skip
   Scenario: Search with JavaScript disabled
     Given the page "Selenium search test" exists
     When I type into search box "Test is used by Selenium web driver"

@@ -5,7 +5,7 @@ Feature: Search
     Given I am using the mobile site
       And the page "Selenium search test" exists
       And I am on the "Main Page" page
-      And I click the placeholder search box
+      And I click the search icon
       And I see the search overlay
 
   Scenario: Closing search (overlay button)
@@ -27,6 +27,7 @@ Feature: Search
       And I click the search in pages button
     Then I should see a list of search results
 
+  @skip
   Scenario: Search with enter key
     When I type into search box "Test is used by Selenium web driver"
       And I press the enter key
@@ -43,6 +44,6 @@ Feature: Search
     When I type into search box "Selenium search tes"
     And I click a search result
     And the text of the first heading should be "Selenium search test"
-    And I click the placeholder search box
+    And I click the search icon
     And I type into search box "Main Page"
     Then search results should contain "Main Page"

@@ -19,6 +19,21 @@ body {
 	border-bottom: 1px solid transparent;
 }
 
+#searchIcon {
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		color: transparent;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
 .search-box {
 	// FIXME: remove when micro.tap in stable and rule from common-js.less too
 	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
@@ -87,7 +102,7 @@ body {
 	}
 
 	// Search field
-	> form,
+	.main,
 	// Spinner
 	> div {
 		vertical-align: middle;
@@ -100,9 +115,28 @@ body {
 	}
 
 	// Search
-	> form {
+	.main {
 		width: auto;
 		vertical-align: middle;
+
+		h1 {
+			margin-left: 5px;
+			font-size: 1em;
+
+			span {
+				font-size: 1.25em;
+			}
+
+			img {
+				height: 18px;
+				width: auto;
+				vertical-align: middle;
+			}
+
+			> * {
+				float: left;
+			}
+		}
 	}
 
 	> .header-title {
@@ -140,53 +174,9 @@ body {
 }
 
 /* Search */
-
-.client-use-basic-search,
-.client-nojs {
-	.search-box {
-		.fulltext-search,  // FIXME: remove `.fulltext-search` selector when cache clears
-		.button-wrapper {
-			background-color: @colorProgressive;
-			border-radius: @borderRadius;
-			cursor: pointer;
-			float: right;
-			margin-left: 0.5em;
-			padding: 0.375em 0;
-
-			.fulltext-search {
-				opacity: 0;  // the enclosing div is an icon, no need to show the text
-				padding: 0;
-			}
-		}
-		.input-wrapper {
-			overflow: hidden;
-
-			.search {
-				margin-right: 0;
-				// Given no clear icon is needed in basic search mode, maximise space for placeholder text
-				padding-right: 0.1em;
-				width: 100%;
-			}
-		}
-		// FIXME: remove when cache clears
-		> .search,
-		> .fulltext-search {
-			display: inline-block;
-			float: none;
-		}
-		// FIXME: remove when cache clears
-		> .search {
-			max-width: 180px;
-		}
-	}
-
-	.content h2 {
-		border-bottom: solid 1px @colorGray14;
-	}
-
-}
-
 input.search {
+	// FIXME: input's cannot have child elements so not possible to use mw-ui-icon-before here
+	// How can we avoid multiple use of magnifying glass icon?
 	.background-image-svg( 'magnifying-glass.svg', 'magnifying-glass.png' );
 	outline: 0;
 	width: 100%;

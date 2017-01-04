@@ -9,9 +9,16 @@
 			{{>banners}}
 		</div>
 		<div class="header-container">
-			<div class="header">
-				{{{headerhtml}}}
-			</div>
+			<form class="header" action="{{wgScript}}">
+				<div>{{{menuButton}}}</div>
+				<div class="main">
+					<h1>
+						<span>{{{headinghtml}}}</span>
+					</h1>
+				</div>
+				<div>{{{searchButton}}}</div>
+				{{^isAnon}}<div>{{{secondaryButton}}}</div>{{/isAnon}}
+			</form>
 		</div>
 		<div id="content" class="mw-body">
 			{{{contenthtml}}}

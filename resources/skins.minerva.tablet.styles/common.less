@@ -7,6 +7,12 @@ A file for css that optimises the Minerva skin on larger devices.
 @paddingVertical: 1.4em;
 
 @media all and ( min-width: @deviceWidthTablet ) {
+	.header {
+		.search-box {
+			display: block;
+		}
+	}
+
 	.toc-mobile {
 		// Reset the rule for mobile mode (but not for .client-nojs)
 		display: block;

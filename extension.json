@@ -172,7 +172,7 @@
 				"mainmenu": "resources/skins.minerva.icons.images/hamburger.svg",
 				"edit": "resources/skins.minerva.icons.images/editLocked.svg",
 				"edit-enabled": "resources/skins.minerva.icons.images/edit.svg",
-				"magnifying-glass-white": "resources/skins.minerva.icons.images/magnifying-glass-white.svg",
+				"magnifying-glass": "resources/skins.minerva.icons.images/magnifying-glass.svg",
 				"language-switcher": "resources/skins.minerva.icons.images/languageSwitcher.svg"
 			}
 		},
