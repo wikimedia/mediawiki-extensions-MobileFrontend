@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee12ffd6_57d76ff2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-05T21:01:41Z",
+      "side": 1,
+      "message": "We should probably note that this is true only on mobile.",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee12ffd6_f733035e",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-05T21:01:41Z",
+      "side": 1,
+      "message": "Why are the menu button and the secondary button inside the form?",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
