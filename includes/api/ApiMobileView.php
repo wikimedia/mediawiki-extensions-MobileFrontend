@@ -128,6 +128,7 @@ class ApiMobileView extends ApiBase {
 				$propNames = explode( '|', $propNames );
 				$pageProps = array_intersect_key( $data['pageprops'], array_flip( $propNames ) );
 			}
+			ApiResult::setArrayType( $pageProps, 'assoc' );
 			$resultObj->addValue( null, $moduleName,
 				[ 'pageprops' => $pageProps ]
 			);
