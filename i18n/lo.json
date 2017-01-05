@@ -4,9 +4,20 @@
 			"Aefgh39622"
 		]
 	},
+	"mobile-frontend-copyright": "ເນື້ອໃນສາມາດໃຊ້ໄດ້ພາຍໃຕ້ $1 ຖ້າບໍ່ແມ່ນຢ່າງອື່ນໃດທີ່ລະບຸໄວ້.",
 	"mobile-frontend-editor-edit": "ແກ້ໄຂ",
+	"mobile-frontend-home-button": "ໜ້າທຳອິດ",
+	"mobile-frontend-last-modified-date": "ແກ້ໄຂຄັ້ງລ້າສຸດເມື່ອ $1, ເວລາ $2",
 	"mobile-frontend-main-menu-button-tooltip": "ເປີດລາຍການຫຼັກ",
+	"mobile-frontend-main-menu-login": "ເຂົ້າສູ່ລະບົບ",
+	"mobile-frontend-main-menu-settings": "ການຕັ້ງຄ່າ",
+	"mobile-frontend-main-menu-watchlist": "ລາຍການຕິດຕາມ",
+	"mobile-frontend-placeholder": "ຄົ້ນຫາ {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "ຄວາມເປັນສ່ວນໂຕ",
+	"mobile-frontend-random-button": "ສຸ່ມ",
 	"mobile-frontend-terms-text": "ເງື່ອນໄຂການໃຊ້ງານ",
-	"mobile-frontend-view": "ລຸ້ນໂທລະສັບມືຖື"
+	"mobile-frontend-view": "ລຸ້ນໂທລະສັບມືຖື",
+	"mobile-frontend-view-desktop": "ເດສທອບ",
+	"mobile-frontend-view-mobile": "ມືຖື",
+	"tag-mobile_edit": "ການແກ້ໄຂເທິງອຸປະກອນມືຖື"
 }
