@@ -10,6 +10,7 @@
 	"mobile-frontend-last-modified-date": "ແກ້ໄຂຄັ້ງລ້າສຸດເມື່ອ $1, ເວລາ $2",
 	"mobile-frontend-main-menu-button-tooltip": "ເປີດລາຍການຫຼັກ",
 	"mobile-frontend-main-menu-login": "ເຂົ້າສູ່ລະບົບ",
+	"mobile-frontend-main-menu-nearby": "ຢູ່ໃກ້ຄຽງ",
 	"mobile-frontend-main-menu-settings": "ການຕັ້ງຄ່າ",
 	"mobile-frontend-main-menu-watchlist": "ລາຍການຕິດຕາມ",
 	"mobile-frontend-placeholder": "ຄົ້ນຫາ {{SITENAME}}",
