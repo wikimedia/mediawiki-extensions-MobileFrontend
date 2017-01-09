@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e01838a_0ded7222",
+        "filename": "i18n/en.json",
+        "patchSetId": 13
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-09T01:58:38Z",
+      "side": 0,
+      "message": "All that code is dead though - have removed it now.",
+      "parentUuid": "ee12ffd6_37d4fbeb",
+      "revId": "60f5cfc3ea8fddc512ba76c5479a5561001b3db6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee12ffd6_8c996774",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 3

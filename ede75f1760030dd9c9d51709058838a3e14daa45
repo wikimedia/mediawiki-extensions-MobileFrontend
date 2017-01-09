@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e01838a_edf1f6ff",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-09T01:58:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee12ffd6_57d76ff2",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee12ffd6_f733035e",
         "filename": "includes/skins/minerva.mustache",
         "patchSetId": 13
@@ -30,6 +48,24 @@
       "writtenOn": "2017-01-05T21:01:41Z",
       "side": 1,
       "message": "Why are the menu button and the secondary button inside the form?",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e01838a_2d914e9d",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-09T01:58:38Z",
+      "side": 1,
+      "message": "The problem arises as searchButton needs to be inside the form to make it submittable. In a future patch we will also need to make the \nsearch input inside the form.\n\nThe search input is likely to go to the left of the div containing the searchButton.\n\nCurrently our header (form here) is display table.  The children are table-cell. \n\nOf course, Instead of wrapping everything inside the form, we can add another level of nesting but this will interfere with the table display and will be tricky.\n\nI thus decided this way was the neatest/simplest but it\u0027s certainly not the only way.\n\nWhy should the menu button and the secondary button not be inside the form in your opinion?",
+      "parentUuid": "ee12ffd6_f733035e",
       "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
