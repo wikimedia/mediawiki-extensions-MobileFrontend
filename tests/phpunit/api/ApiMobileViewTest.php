@@ -413,4 +413,34 @@ Text 2
 			);
 		}
 	}
+
+	public function testEmptyResultArraysAreAssociative() {
+		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
+
+		$request = new FauxRequest( [
+			'action' => 'mobileview',
+			'page' => 'Foo',
+			'text' => 'foo',
+			'onlyrequestedsections' => '',
+			'sections' => 1,
+			'prop' => 'protection|pageprops',
+			'pageprops' => 'foo', // intentionally nonexistent
+		] );
+
+		$context = new RequestContext();
+		$context->setRequest( $request );
+		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
+
+		$api->execute();
+
+		$result = $api->getResult()->getResultData();
+
+		$protection = $result['mobileview']['protection'];
+		$pageprops = $result['mobileview']['pageprops'];
+
+		$this->assertTrue( $protection[ApiResult::META_TYPE] === 'assoc' );
+		$this->assertTrue( count( $protection ) === 1 ); // the only element is the array type flag
+		$this->assertTrue( $pageprops[ApiResult::META_TYPE] === 'assoc' );
+		$this->assertTrue( count( $pageprops ) === 1 ); // the only element is the array type flag
+	}
 }

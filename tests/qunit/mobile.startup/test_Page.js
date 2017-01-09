@@ -94,7 +94,7 @@
 				},
 				{
 					thumbnail: false,
-					pageprops: {},
+					pageprops: [],
 					terms: {
 						label: [
 							'<script>alert("oops, XSS possible!");</script>'
