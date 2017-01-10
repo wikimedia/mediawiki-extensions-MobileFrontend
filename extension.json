@@ -160,8 +160,7 @@
 			],
 			"position": "top",
 			"styles": [
-				"resources/skins.minerva.tablet.styles/common.less",
-				"resources/skins.minerva.tablet.styles/hacks.less"
+				"resources/skins.minerva.tablet.styles/styles.less"
 			]
 		},
 		"skins.minerva.icons.images": {
@@ -1997,6 +1996,7 @@
 		"MFEnableBeta": false,
 		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
+		"MinervaApplyKnownTemplateHacks": true,
 		"MinervaPageActions": [
 			"edit",
 			"talk",
