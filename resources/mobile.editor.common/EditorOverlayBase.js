@@ -380,11 +380,18 @@
 				this.$( '.captcha-panel#question' ).detach();
 				this.$( '.captcha-panel img' ).attr( 'src', details.url );
 			} else {
-				// handle mime types (other than image based ones) as plain text by default.
-				// e.g. QuestyCaptcha (question - answer), MathCaptcha (solve a math formula) or
-				// SimpleCaptcha (simple math formula)
+				// not image based CAPTCHA.
 				this.$( '.captcha-panel #image' ).detach();
-				this.$( '.captcha-panel #question' ).text( details.question );
+				if ( details.mime.indexOf( 'text/html' ) === 0 ) {
+					// handle mime type of HTML as HTML content (display as-is).
+					// QuestyCaptcha now have default MIME type "text/html": see T147606
+					this.$( '.captcha-panel #question' ).html( details.question );
+				} else {
+					// handle mime types (other than image based ones and HTML based ones) as plain text by default.
+					// e.g. MathCaptcha (solve a math formula) or
+					// SimpleCaptcha (simple math formula)
+					this.$( '.captcha-panel #question' ).text( details.question );
+				}
 			}
 
 			this.showHidden( '.save-header, .captcha-panel' );
