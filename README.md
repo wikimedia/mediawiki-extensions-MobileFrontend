@@ -345,10 +345,10 @@ Define a set of params that should be passed in every gateway query.
 
 #### $wgMinervaApplyKnownTemplateHacks
 
-When enabled and hacks.less exists, hacks.less workarounds are included in stylesheet.
+When enabled and hacks.less exists, hacks.less workarounds are included in stylesheet. These should only be needed for Wikimedia based wikis or wikis using common templates such as Template:Infobox on those wikis.
 
 * Type: `Boolean`
-* Default: `true`
+* Default: `false`
 
 #### $wgMinervaPageActions
 
