@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_4ea92478",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2000,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-01-11T23:19:23Z",
+      "side": 1,
+      "message": "Please update the docs! :]",
+      "revId": "9d77cdea5e39875722867133be071c6dff10c40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
