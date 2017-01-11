@@ -26,7 +26,7 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|byte|bytes}} removite",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|modification|modificationes}}",
 	"mobile-frontend-diffview-explained": "Le sequente lineas ha essite addite (+) e removite (-):",
-	"mobile-frontend-diffview-title": "Cambios",
+	"mobile-frontend-diffview-title": "Cambiamentos",
 	"mobile-frontend-disable-images": "Disactivar imagines in sito mobile",
 	"mobile-frontend-dismiss-notification": "clauder iste notification",
 	"mobile-frontend-donate-image-anon": "Aperi session pro vider le pagina de incargamento.",
