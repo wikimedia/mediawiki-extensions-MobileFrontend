@@ -38,7 +38,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		parent::execute( $par );
 		$context = MobileContext::singleton();
 
-		wfIncrStats( 'mobile.options.views' );
 		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( !$this->returnToTitle ) {
 			$this->returnToTitle = Title::newMainPage();
@@ -243,7 +242,6 @@ HTML;
 
 		if ( $user->isLoggedIn() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
 			$errorText = __METHOD__ . '(): token mismatch';
-			wfIncrStats( 'mobile.options.errors' );
 			wfDebugLog( 'mobile', $errorText );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
@@ -255,7 +253,6 @@ HTML;
 			$this->addSettingsForm();
 			return;
 		}
-		wfIncrStats( 'mobile.options.saves' );
 
 		if ( $request->getBool( 'enableBeta' ) ) {
 			$group = 'beta';
