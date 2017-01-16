@@ -1069,6 +1069,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.api",
 				"mobile.oo",
 				"mobile.cache"
 			],
