@@ -979,7 +979,6 @@
 			],
 			"scripts": [
 				"resources/mobile.overlays/Overlay.js",
-				"resources/mobile.overlays/ContentOverlay.js",
 				"resources/mobile.overlays/LoadingOverlay.js",
 				"resources/mobile.overlays/moduleLoader.js"
 			],
