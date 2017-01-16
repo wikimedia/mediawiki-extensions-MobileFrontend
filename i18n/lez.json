@@ -8,15 +8,22 @@
 	"mobile-frontend-copyright": "Къене авайбур $1 лицензиядалди гъил агакьдай я (муькуь затl къалурнавачтlа).",
 	"mobile-frontend-editor-edit": "Дуьзар хъувун",
 	"mobile-frontend-home-button": "КIвализ",
+	"mobile-frontend-language-article-heading": "Муькуь чlалал кlелун.",
+	"mobile-frontend-last-modified-date": "Эхиримжи сефер дубщап хъувун: $1 $2-з.",
 	"mobile-frontend-main-menu-button-tooltip": "Кьилин меню ахъаюн",
 	"mobile-frontend-main-menu-login": "Гьахьун",
 	"mobile-frontend-main-menu-nearby": "Мукьва авай",
 	"mobile-frontend-main-menu-settings": "Низамарунар",
+	"mobile-frontend-main-menu-watchlist": "Вилив хуьнин сиягь",
 	"mobile-frontend-password": "Парол:",
 	"mobile-frontend-placeholder": "{{SITENAME}} къекъуьн",
 	"mobile-frontend-privacy-link-text": "Чинебанвал",
 	"mobile-frontend-random-button": "Дуьшуьшдин",
 	"mobile-frontend-search-submit": "ЭлячIун",
 	"mobile-frontend-terms-text": "Кардик кутунин шартlар",
-	"mobile-frontend-view": "Мобил жуьре"
+	"mobile-frontend-view": "Мобил жуьре",
+	"mobile-frontend-view-desktop": "Стационар тир",
+	"tag-mobile_edit": "Мобил аппаратдай дуьзар хъувун.",
+	"tag-mobile_web_edit": "Мобил жуьредай дуьзар хъувун.",
+	"mobile-frontend-pageaction-edit-tooltip": "И чинин тухузвай пай дуьзар хъувун."
 }
