@@ -7,7 +7,8 @@
 			"Fraxinus",
 			"Teoo3",
 			"Ex13",
-			"Ivi104"
+			"Ivi104",
+			"Bugoslav"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite \"captcha\" tekst",
@@ -84,7 +85,7 @@
 	"mobile-frontend-editor-redirect-title": "Preusmjeravam na uređivač...",
 	"mobile-frontend-editor-save": "Spremi",
 	"mobile-frontend-editor-success": "Vaše uređivanje je uspješno spremljeno.",
-	"mobile-frontend-editor-success-landmark-1": "Čestitamo, postali se urednik projekta {{SITENAME}}!",
+	"mobile-frontend-editor-success-landmark-1": "Čestitamo, postali ste sudionik projekta {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Čestitamo na stvaranju nove stranice!",
 	"mobile-frontend-editor-summary-placeholder": "Primjer: popravljeno, dodan sadržaj",
 	"mobile-frontend-editor-summary-request": "Kako ste unaprijedili stranicu?",
