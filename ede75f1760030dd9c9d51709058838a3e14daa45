@@ -87,6 +87,24 @@
       "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_5daf7b91",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-17T21:16:46Z",
+      "side": 1,
+      "message": "\u003e Why should the menu button and the secondary button not be inside the form in your opinion?\n\nI understand the menu and secondary buttons are not part of the form, but I cannot see a more controlled/simple/neat way to do this but retain the table-cell style display. Can you?",
+      "parentUuid": "4efb0bce_5d809b4b",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
