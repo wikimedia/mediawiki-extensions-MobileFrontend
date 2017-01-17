@@ -1996,7 +1996,7 @@
 		"MFEnableBeta": false,
 		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
-		"MinervaApplyKnownTemplateHacks": true,
+		"MinervaApplyKnownTemplateHacks": false,
 		"MinervaPageActions": [
 			"edit",
 			"talk",
