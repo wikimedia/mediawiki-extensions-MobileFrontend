@@ -105,6 +105,24 @@
       "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_cfe852e0",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-17T21:45:48Z",
+      "side": 1,
+      "message": "Having played around with alternative approaches, I see your point.",
+      "parentUuid": "4efb0bce_5daf7b91",
+      "revId": "ede75f1760030dd9c9d51709058838a3e14daa45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
