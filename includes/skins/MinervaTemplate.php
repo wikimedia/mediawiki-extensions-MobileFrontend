@@ -289,7 +289,7 @@ class MinervaTemplate extends BaseTemplate {
 				'id' => 'searchIcon',
 				'class' => MobileUI::iconClass( 'magnifying-glass', 'element' ),
 			], $input ),
-			'secondaryButton' => $data['secondaryButton'],
+			'secondaryButtonData' => $data['secondaryButtonData'],
 			'mainmenuhtml' => $this->getMainMenuHtml( $data ),
 			'contenthtml' => $this->getContentWrapperHtml( $data ),
 			'footer' => $this->getFooterTemplateData( $data ),

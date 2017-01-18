@@ -17,7 +17,7 @@
 					</h1>
 				</div>
 				<div>{{{searchButton}}}</div>
-				{{^isAnon}}<div>{{{secondaryButton}}}</div>{{/isAnon}}
+				{{^isAnon}}<div>{{#secondaryButtonData}}{{>secondaryButton}}{{/secondaryButtonData}}</div>{{/isAnon}}
 			</form>
 		</div>
 		<div id="content" class="mw-body">
