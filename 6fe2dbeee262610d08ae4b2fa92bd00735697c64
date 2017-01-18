@@ -22,6 +22,30 @@
       "revId": "6fe2dbeee262610d08ae4b2fa92bd00735697c64",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_c0c37860",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-18T23:34:03Z",
+      "side": 1,
+      "message": "(as in minerva.mustache has a line {{\u003esecondaryButton}})",
+      "parentUuid": "4efb0bce_80e6a011",
+      "range": {
+        "startLine": 361,
+        "startChar": 57,
+        "endLine": 361,
+        "endChar": 72
+      },
+      "revId": "6fe2dbeee262610d08ae4b2fa92bd00735697c64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
