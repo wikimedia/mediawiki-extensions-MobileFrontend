@@ -1,11 +1,12 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g>
-        <g>
-            <g>
-                <path d="M4.983 1.606l17.465 17.466-2.97 2.97L2.014 4.575z"/>
-            </g>
-            <g>
-                <path d="M19.407 1.605l2.97 2.97L4.914 22.042l-2.97-2.97z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon-export
+    </title>
+    <g id="Page-1" fill="none" fill-rule="evenodd">
+        <g id="icon-export" fill="#54595D">
+            <g id="close">
+                <path id="Page-1" d="M19.75 5.592L18.158 4l-6.283 6.283L5.592 4 4 5.592l6.283 6.283L4 18.158l1.592 1.592 6.283-6.283 6.283 6.283 1.592-1.592-6.283-6.283z"/>
             </g>
         </g>
     </g>
