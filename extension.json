@@ -282,19 +282,6 @@
 				"resources/skins.minerva.userpage.styles/userpage.less"
 			]
 		},
-		"mobile.oo": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"oojs"
-			],
-			"scripts": [
-				"resources/mobile.oo/modules.js",
-				"resources/mobile.oo/oo-extend.js"
-			]
-		},
 		"mobile.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
@@ -473,7 +460,7 @@
 				"mediawiki.user",
 				"jquery.cookie",
 				"mediawiki.storage",
-				"mobile.oo",
+				"oojs",
 				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
@@ -502,6 +489,8 @@
 				"resources/mobile.startup/panel.less"
 			],
 			"scripts": [
+				"resources/mobile.startup/modules.js",
+				"resources/mobile.startup/oo-extend.js",
 				"resources/mobile.startup/View.js",
 				"resources/mobile.startup/browser.js",
 				"resources/mobile.startup/time.js",
@@ -979,7 +968,7 @@
 			],
 			"dependencies": [
 				"mediawiki.api",
-				"mobile.oo",
+				"mobile.startup",
 				"mobile.cache"
 			],
 			"scripts": [
@@ -994,7 +983,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.oo"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.cache/Cache.js"
@@ -1219,7 +1208,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.oo"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.infiniteScroll/InfiniteScroll.js"
@@ -1231,7 +1220,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.oo"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.swipe/Swipe.js"

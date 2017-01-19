@@ -13,7 +13,7 @@
 
 		assert.strictEqual( this.loader.require( 'foo' ), 1, 'Returns appropriate module' );
 		assert.strictEqual( this.loader.require( 'bar' ), 5, 'Returns appropriate module' );
-		assert.ok( this.loader.require( 'mobile.oo/ModuleLoader' ),
+		assert.ok( this.loader.require( 'mobile.startup/ModuleLoader' ),
 			'Retrieving an export from a known ResourceLoader module does not throw an exception' );
 
 		assert.throws( function () {
