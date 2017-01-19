@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' );
+	var Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
 	 * Overlay that initially shows loading animation until
@@ -12,8 +12,10 @@
 	}
 
 	OO.mfExtend( LoadingOverlay, Overlay, {
-		template: mw.template.get( 'mobile.overlays', 'LoadingOverlay.hogan' )
+		template: mw.template.get( 'mobile.startup', 'LoadingOverlay.hogan' )
 	} );
 
-	M.define( 'mobile.overlays/LoadingOverlay', LoadingOverlay );
+	M.define( 'mobile.startup/LoadingOverlay', LoadingOverlay )
+		.deprecate( 'mobile.overlays/LoadingOverlay' );
+
 }( mw.mobileFrontend ) );

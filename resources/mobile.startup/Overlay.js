@@ -1,11 +1,11 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.startup/View' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		$window = $( window );
 
 	/**
@@ -46,11 +46,11 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
-			header: mw.template.get( 'mobile.overlays', 'header.hogan' ),
+			header: mw.template.get( 'mobile.startup', 'header.hogan' ),
 			anchor: Anchor.prototype.template,
 			button: Button.prototype.template
 		},
-		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
+		template: mw.template.get( 'mobile.startup', 'Overlay.hogan' ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -318,6 +318,7 @@
 		}
 	} );
 
-	M.define( 'mobile.overlays/Overlay', Overlay );
+	M.define( 'mobile.startup/Overlay', Overlay )
+		.deprecate( 'mobile.overlays/Overlay' );
 
 }( mw.mobileFrontend, jQuery ) );

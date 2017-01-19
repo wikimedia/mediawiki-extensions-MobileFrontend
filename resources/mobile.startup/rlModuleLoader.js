@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var loader,
-		LoadingOverlay = M.require( 'mobile.overlays/LoadingOverlay' );
+		LoadingOverlay = M.require( 'mobile.startup/LoadingOverlay' );
 
 	/**
 	 * Utility library for looking up details on the current user
@@ -33,6 +33,7 @@
 			} );
 		}
 	};
-	M.define( 'mobile.overlays/moduleLoader', loader );
+	M.define( 'mobile.startup/rlModuleLoader', loader )
+		.deprecate( 'mobile.overlays/moduleLoader' );
 
 }( mw.mobileFrontend ) );

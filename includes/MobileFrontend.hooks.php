@@ -1055,7 +1055,7 @@ class MobileFrontendHooks {
 					'dependencies' => [
 						'ext.visualEditor.mobileArticleTarget',
 						'mobile.editor.common',
-						'mobile.overlays',
+						'mobile.startup',
 					],
 					'styles' => [
 						'resources/mobile.editor.ve/VisualEditorOverlay.less',
@@ -1084,7 +1084,7 @@ class MobileFrontendHooks {
 			$resourceLoader->register( [
 				'skins.minerva.notifications' => $resourceBoilerplate + [
 					'dependencies' => [
-						'mobile.overlays',
+						'mobile.startup',
 						'mediawiki.router',
 						'skins.minerva.scripts',
 						'mediawiki.ui.anchor'
@@ -1097,7 +1097,7 @@ class MobileFrontendHooks {
 				'mobile.notifications.overlay' => $resourceBoilerplate + [
 					'dependencies' => [
 						'mediawiki.util',
-						'mobile.overlays',
+						'mobile.startup',
 						'ext.echo.ui',
 						'ext.echo.badgeicons',
 					],

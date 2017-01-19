@@ -455,6 +455,8 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mobile.overlay.images",
+				"mobile.ajax",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -467,12 +469,18 @@
 				"jquery.throttle-debounce"
 			],
 			"templates": {
+				"header.hogan": "resources/mobile.startup/OverlayHeader.hogan",
+				"Overlay.hogan": "resources/mobile.startup/Overlay.hogan",
+				"LoadingOverlay.hogan": "resources/mobile.startup/LoadingOverlay.hogan",
 				"anchor.hogan": "resources/mobile.startup/anchor.hogan",
 				"icon.hogan": "resources/mobile.startup/icon.hogan",
 				"Section.hogan": "resources/mobile.startup/Section.hogan",
 				"button.hogan": "resources/mobile.startup/button.hogan"
 			},
 			"messages": [
+				"mobile-frontend-editor-save",
+				"mobile-frontend-overlay-close",
+				"mobile-frontend-overlay-continue",
 				"mobile-frontend-last-modified-with-user-seconds",
 				"mobile-frontend-last-modified-with-user-minutes",
 				"mobile-frontend-last-modified-with-user-hours",
@@ -486,7 +494,8 @@
 				"mobile-frontend-editor-terms-link"
 			],
 			"styles": [
-				"resources/mobile.startup/panel.less"
+				"resources/mobile.startup/panel.less",
+				"resources/mobile.startup/Overlay.less"
 			],
 			"scripts": [
 				"resources/mobile.startup/modules.js",
@@ -509,7 +518,10 @@
 				"resources/mobile.startup/Thumbnail.js",
 				"resources/mobile.startup/Page.js",
 				"resources/mobile.startup/Skin.js",
-				"resources/mobile.startup/OverlayManager.js"
+				"resources/mobile.startup/OverlayManager.js",
+				"resources/mobile.startup/Overlay.js",
+				"resources/mobile.startup/LoadingOverlay.js",
+				"resources/mobile.startup/rlModuleLoader.js"
 			],
 			"position": "bottom"
 		},
@@ -532,7 +544,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.overlays",
 				"mobile.startup"
 			],
 			"templates": {
@@ -565,7 +576,6 @@
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"oojs-ui",
-				"mobile.overlays",
 				"mobile.editor.api",
 				"mobile.startup",
 				"mobile.drawers",
@@ -654,7 +664,7 @@
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mobile.pagelist.scripts",
-				"mobile.overlays",
+				"mobile.startup",
 				"mobile.loggingSchemas.mobileWebSearch",
 				"mobile.search.images"
 			],
@@ -765,7 +775,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.overlays",
 				"mobile.startup",
 				"mobile.swipe.images"
 			],
@@ -829,7 +838,7 @@
 			],
 			"dependencies": [
 				"mediawiki.Title",
-				"mobile.overlays",
+				"mobile.startup",
 				"mobile.toast",
 				"mobile.search.api",
 				"mobile.search",
@@ -867,35 +876,6 @@
 				"mobile-frontend-categories-hidden"
 			]
 		},
-		"mobile.overlays": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mobile.overlay.images",
-				"mobile.ajax"
-			],
-			"scripts": [
-				"resources/mobile.overlays/Overlay.js",
-				"resources/mobile.overlays/LoadingOverlay.js",
-				"resources/mobile.overlays/moduleLoader.js"
-			],
-			"messages": [
-				"mobile-frontend-editor-save",
-				"mobile-frontend-overlay-close",
-				"mobile-frontend-overlay-continue"
-			],
-			"templates": {
-				"header.hogan": "resources/mobile.overlays/OverlayHeader.hogan",
-				"Overlay.hogan": "resources/mobile.overlays/Overlay.hogan",
-				"LoadingOverlay.hogan": "resources/mobile.overlays/LoadingOverlay.hogan"
-			},
-			"styles": [
-				"resources/mobile.overlays/Overlay.less"
-			]
-		},
 		"mobile.drawers": {
 			"targets": [
 				"mobile",
@@ -903,8 +883,7 @@
 			],
 			"dependencies": [
 				"mediawiki.util",
-				"mobile.startup",
-				"mobile.overlays"
+				"mobile.startup"
 			],
 			"templates": {
 				"Cta.hogan": "resources/mobile.drawers/CtaDrawer.hogan"
@@ -999,7 +978,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.overlays"
+				"mobile.startup"
 			],
 			"messages": [
 				"mobile-frontend-pointer-dismiss"
@@ -1046,7 +1025,7 @@
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mediawiki.storage",
-				"mobile.overlays"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.languages.structured/util.js",
@@ -1071,7 +1050,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.overlays",
+				"mobile.startup",
 				"mobile.issues.images"
 			],
 			"templates": {
@@ -1522,7 +1501,6 @@
 				"mobile.startup",
 				"mobile.toast",
 				"skins.minerva.toggling",
-				"mobile.overlays",
 				"mediawiki.jqueryMsg",
 				"mobile.loggingSchemas.edit"
 			],
@@ -1574,7 +1552,7 @@
 			],
 			"dependencies": [
 				"skins.minerva.scripts",
-				"mobile.overlays"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/skins.minerva.categories/init.js"
@@ -1588,7 +1566,7 @@
 			"dependencies": [
 				"skins.minerva.icons.images.scripts",
 				"skins.minerva.scripts",
-				"mobile.overlays",
+				"mobile.startup",
 				"mediawiki.Title"
 			],
 			"scripts": [
