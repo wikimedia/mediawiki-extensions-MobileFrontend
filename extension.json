@@ -282,28 +282,16 @@
 				"resources/skins.minerva.userpage.styles/userpage.less"
 			]
 		},
-		"mobile.modules": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"oojs"
-			],
-			"scripts": [
-				"resources/mobile.modules/modules.js"
-			]
-		},
 		"mobile.oo": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.modules",
 				"oojs"
 			],
 			"scripts": [
+				"resources/mobile.oo/modules.js",
 				"resources/mobile.oo/oo-extend.js"
 			]
 		},
@@ -325,7 +313,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.modules"
+				"mobile.oo"
 			],
 			"scripts": [
 				"resources/mobile.context/context.js"
@@ -406,7 +394,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.modules",
+				"mobile.oo",
 				"mediawiki.util",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg"
@@ -525,7 +513,7 @@
 			],
 			"dependencies": [
 				"jquery.cookie",
-				"mobile.modules",
+				"mobile.oo",
 				"mediawiki.storage"
 			],
 			"scripts": [
@@ -620,7 +608,7 @@
 			"dependencies": [
 				"mediawiki.user",
 				"mediawiki.storage",
-				"mobile.modules"
+				"mobile.oo"
 			],
 			"scripts": [
 				"resources/mobile.user/user.js"
@@ -1084,7 +1072,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.modules"
+				"mobile.oo"
 			],
 			"scripts": [
 				"resources/mobile.cache/Cache.js"
