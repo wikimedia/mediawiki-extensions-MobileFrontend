@@ -469,6 +469,7 @@
 				"jquery.throttle-debounce"
 			],
 			"templates": {
+				"Cta.hogan": "resources/mobile.startup/CtaDrawer.hogan",
 				"header.hogan": "resources/mobile.startup/OverlayHeader.hogan",
 				"Overlay.hogan": "resources/mobile.startup/Overlay.hogan",
 				"LoadingOverlay.hogan": "resources/mobile.startup/LoadingOverlay.hogan",
@@ -478,6 +479,8 @@
 				"button.hogan": "resources/mobile.startup/button.hogan"
 			},
 			"messages": [
+				"mobile-frontend-watchlist-cta-button-signup",
+				"mobile-frontend-watchlist-cta-button-login",
 				"mobile-frontend-editor-save",
 				"mobile-frontend-overlay-close",
 				"mobile-frontend-overlay-continue",
@@ -495,7 +498,8 @@
 			],
 			"styles": [
 				"resources/mobile.startup/panel.less",
-				"resources/mobile.startup/Overlay.less"
+				"resources/mobile.startup/Overlay.less",
+				"resources/mobile.startup/drawer.less"
 			],
 			"scripts": [
 				"resources/mobile.startup/modules.js",
@@ -521,7 +525,9 @@
 				"resources/mobile.startup/OverlayManager.js",
 				"resources/mobile.startup/Overlay.js",
 				"resources/mobile.startup/LoadingOverlay.js",
-				"resources/mobile.startup/rlModuleLoader.js"
+				"resources/mobile.startup/rlModuleLoader.js",
+				"resources/mobile.startup/Drawer.js",
+				"resources/mobile.startup/CtaDrawer.js"
 			],
 			"position": "bottom"
 		},
@@ -578,7 +584,6 @@
 				"oojs-ui",
 				"mobile.editor.api",
 				"mobile.startup",
-				"mobile.drawers",
 				"mobile.toast",
 				"mobile.messageBox",
 				"mediawiki.util",
@@ -876,37 +881,13 @@
 				"mobile-frontend-categories-hidden"
 			]
 		},
-		"mobile.drawers": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.util",
-				"mobile.startup"
-			],
-			"templates": {
-				"Cta.hogan": "resources/mobile.drawers/CtaDrawer.hogan"
-			},
-			"styles": [
-				"resources/mobile.drawers/drawer.less"
-			],
-			"scripts": [
-				"resources/mobile.drawers/Drawer.js",
-				"resources/mobile.drawers/CtaDrawer.js"
-			],
-			"messages": [
-				"mobile-frontend-watchlist-cta-button-signup",
-				"mobile-frontend-watchlist-cta-button-login"
-			]
-		},
 		"mobile.toast": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.drawers",
+				"mobile.startup",
 				"mediawiki.notify"
 			],
 			"scripts": [
@@ -923,7 +904,7 @@
 			],
 			"dependencies": [
 				"mobile.references.gateway",
-				"mobile.drawers",
+				"mobile.startup",
 				"mobile.editor.api",
 				"mobile.references.images"
 			],
@@ -1000,7 +981,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.drawers",
 				"mobile.ajax",
 				"mobile.toast",
 				"mobile.search.util"
@@ -1156,8 +1136,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.drawers"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.fontchanger/FontChanger.js"
@@ -1496,7 +1475,6 @@
 				"mediawiki.router",
 				"skins.minerva.icons.images.scripts",
 				"skins.minerva.scripts",
-				"mobile.drawers",
 				"mediawiki.ui.input",
 				"mobile.startup",
 				"mobile.toast",
