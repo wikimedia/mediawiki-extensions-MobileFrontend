@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_63372ee1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-19T01:18:08Z",
+      "side": 1,
+      "message": "This logic feels like it belongs better in Echo.\nThis code is meant to just integrate Echo not apply different results.\n\nConsider folding this logic into EchoNotificationController",
+      "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_c32702b0",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-19T01:18:08Z",
+      "side": 1,
+      "message": "Let\u0027s find out why from the start rather than hacking around this! Is there a bug open?",
+      "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
