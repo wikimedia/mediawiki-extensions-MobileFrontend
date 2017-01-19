@@ -307,18 +307,6 @@
 				"resources/mobile.view/View.js"
 			]
 		},
-		"mobile.browser": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.view"
-			],
-			"scripts": [
-				"resources/mobile.browser/browser.js"
-			]
-		},
 		"mobile.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
@@ -342,7 +330,7 @@
 			"dependencies": [
 				"mobile.mainMenu.icons",
 				"mobile.view",
-				"mobile.browser",
+				"mobile.startup",
 				"mobile.loggingSchemas.mobileWebMainMenuClickTracking"
 			],
 			"position": "bottom",
@@ -396,7 +384,7 @@
 			],
 			"dependencies": [
 				"mobile.view",
-				"mobile.browser",
+				"mobile.startup",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles"
 			],
@@ -499,7 +487,7 @@
 				"mediawiki.user",
 				"jquery.cookie",
 				"mediawiki.storage",
-				"mobile.browser",
+				"mobile.view",
 				"mobile.oo",
 				"mediawiki.util",
 				"mediawiki.api",
@@ -529,6 +517,7 @@
 				"resources/mobile.startup/panel.less"
 			],
 			"scripts": [
+				"resources/mobile.startup/browser.js",
 				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/settings.js",
@@ -1609,7 +1598,7 @@
 			],
 			"dependencies": [
 				"mobile.backtotop",
-				"mobile.browser"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/skins.minerva.backtotop/init.js"
