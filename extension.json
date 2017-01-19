@@ -376,30 +376,6 @@
 				"resources/mobile.messageBox/MessageBox.js"
 			]
 		},
-		"mobile.modifiedBar": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.oo",
-				"mediawiki.util",
-				"mediawiki.language",
-				"mediawiki.jqueryMsg"
-			],
-			"scripts": [
-				"resources/mobile.modifiedBar/time.js"
-			],
-			"messages": [
-				"mobile-frontend-last-modified-with-user-seconds",
-				"mobile-frontend-last-modified-with-user-minutes",
-				"mobile-frontend-last-modified-with-user-hours",
-				"mobile-frontend-last-modified-with-user-days",
-				"mobile-frontend-last-modified-with-user-months",
-				"mobile-frontend-last-modified-with-user-years",
-				"mobile-frontend-last-modified-with-user-just-now"
-			]
-		},
 		"mediawiki.template.hogan": {
 			"targets": [
 				"mobile",
@@ -452,9 +428,8 @@
 			],
 			"dependencies": [
 				"mobile.infiniteScroll",
-				"mobile.modifiedBar",
-				"mobile.pagelist.scripts",
-				"mobile.modifiedBar"
+				"mobile.startup",
+				"mobile.pagelist.scripts"
 			],
 			"scripts": [
 				"resources/mobile.watchlist/WatchListGateway.js",
@@ -519,10 +494,11 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.language",
+				"mediawiki.jqueryMsg",
 				"mediawiki.user",
 				"jquery.cookie",
 				"mediawiki.storage",
-				"mobile.modifiedBar",
 				"mobile.browser",
 				"mobile.oo",
 				"mediawiki.util",
@@ -537,6 +513,13 @@
 				"button.hogan": "resources/mobile.startup/button.hogan"
 			},
 			"messages": [
+				"mobile-frontend-last-modified-with-user-seconds",
+				"mobile-frontend-last-modified-with-user-minutes",
+				"mobile-frontend-last-modified-with-user-hours",
+				"mobile-frontend-last-modified-with-user-days",
+				"mobile-frontend-last-modified-with-user-months",
+				"mobile-frontend-last-modified-with-user-years",
+				"mobile-frontend-last-modified-with-user-just-now",
 				"mobile-frontend-loading-message",
 				"mobile-frontend-editor-licensing",
 				"mobile-frontend-editor-licensing-with-terms",
@@ -546,6 +529,7 @@
 				"resources/mobile.startup/panel.less"
 			],
 			"scripts": [
+				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/settings.js",
 				"resources/mobile.startup/user.js",
@@ -1511,8 +1495,7 @@
 				"mobile.search",
 				"mobile.references",
 				"mobile.betaoptin",
-				"mobile.toast",
-				"mobile.modifiedBar"
+				"mobile.toast"
 			],
 			"messages": [
 				"mobile-frontend-language-change",

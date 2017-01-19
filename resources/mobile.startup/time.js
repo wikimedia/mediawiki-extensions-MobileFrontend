@@ -100,12 +100,12 @@
 		}
 	}
 
-	M.define( 'mobile.modifiedBar/time', {
+	M.define( 'mobile.startup/time', {
 		getLastModifiedMessage: getLastModifiedMessage,
 		timeAgo: timeAgo,
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
 		isRecent: isRecent
-	} ).deprecate( 'modules/lastEdited/time' );
+	} ).deprecate( 'mobile.modifiedBar/time' );
 
 }( mw.mobileFrontend, jQuery ) );
