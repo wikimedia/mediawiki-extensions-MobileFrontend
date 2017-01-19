@@ -19,23 +19,6 @@
 		 */
 		escapeHash: function ( hash ) {
 			return hash.replace( /(:|\.)/g, '\\$1' );
-		},
-		/**
-		 * Return wgWikiBaseItemID config variable or 'wikidataid' query parameter if exits
-		 * @return {null|string}
-		 */
-		getWikiBaseItemId: function () {
-			var id = mw.config.get( 'wgWikibaseItemId' ),
-				idOverride;
-
-			if ( !id ) {
-				idOverride = mw.util.getParamValue( 'wikidataid' );
-				if ( idOverride ) {
-					mw.config.set( 'wgWikibaseItemId', idOverride );
-					id = idOverride;
-				}
-			}
-			return id;
 		}
 	};
 
