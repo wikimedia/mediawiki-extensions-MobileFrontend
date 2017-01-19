@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_a1d99b85",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-19T19:24:20Z",
+      "side": 1,
+      "message": "Given the comments above, does it make sense to re-create the header layout and make each element be part of the table view, i.e. split up the contents of div.main inside the header into separate divs so that they are also shown as table-cells?",
+      "revId": "75239e6b83eaafa39b16f9336a0d5318c7c34573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_21dfeb6d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-19T19:24:20Z",
+      "side": 1,
+      "message": "Won\u0027t these hard-coded values cause problems if the logo is wide enough to push everything after it outside page boundaries?\n\nAlso, it was not clear from the mock-up whether there should be a fixed margin-left on the search input, but I think it makes more sense to center this input inside the remaining space we have. Ignore this suggestion if the design specification was to add margin left.",
+      "revId": "75239e6b83eaafa39b16f9336a0d5318c7c34573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
