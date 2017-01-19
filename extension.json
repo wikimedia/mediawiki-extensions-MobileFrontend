@@ -494,20 +494,6 @@
 				"resources/mobile.ajax/spinner.less"
 			]
 		},
-		"mobile.settings": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"jquery.cookie",
-				"mobile.oo",
-				"mediawiki.storage"
-			],
-			"scripts": [
-				"resources/mobile.settings/settings.js"
-			]
-		},
 		"mobile.backtotop": {
 			"targets": [
 				"mobile",
@@ -533,6 +519,8 @@
 				"desktop"
 			],
 			"dependencies": [
+				"jquery.cookie",
+				"mediawiki.storage",
 				"mobile.modifiedBar",
 				"mobile.browser",
 				"mobile.oo",
@@ -540,7 +528,6 @@
 				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
-				"mobile.settings",
 				"jquery.throttle-debounce"
 			],
 			"templates": {
@@ -560,6 +547,7 @@
 			],
 			"scripts": [
 				"resources/mobile.startup/context.js",
+				"resources/mobile.startup/settings.js",
 				"resources/mobile.startup/util.js",
 				"resources/mobile.startup/PageGateway.js",
 				"resources/mobile.startup/Anchor.js",
@@ -643,7 +631,7 @@
 				"oojs-ui",
 				"mobile.overlays",
 				"mobile.editor.api",
-				"mobile.settings",
+				"mobile.startup",
 				"mobile.drawers",
 				"mobile.toast",
 				"mobile.messageBox",
@@ -1072,7 +1060,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.settings",
 				"skins.minerva.icons.images.variants",
 				"mobile.startup"
 			],
@@ -1268,7 +1255,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.settings",
 				"mobile.drawers"
 			],
 			"scripts": [
@@ -1366,8 +1352,7 @@
 			"targets": "mobile",
 			"position": "top",
 			"dependencies": [
-				"mobile.startup",
-				"mobile.settings"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.special.mobileoptions.scripts/mobileoptions.js"
@@ -1540,7 +1525,6 @@
 				"mobile.references",
 				"mobile.betaoptin",
 				"mobile.toast",
-				"mobile.settings",
 				"mobile.modifiedBar"
 			],
 			"messages": [
@@ -1613,7 +1597,7 @@
 				"skins.minerva.scripts",
 				"mobile.drawers",
 				"mediawiki.ui.input",
-				"mobile.settings",
+				"mobile.startup",
 				"mobile.toast",
 				"skins.minerva.toggling",
 				"mobile.overlays",
@@ -1730,7 +1714,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.settings"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/skins.minerva.fontchanger/init.js"
