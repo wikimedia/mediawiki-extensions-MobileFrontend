@@ -55,8 +55,8 @@
 	 */
 	NoCache.prototype.set = function () { };
 
-	M.define( 'mobile.cache', {
+	M.define( 'mobile.startup/cache', {
 		MemoryCache: MemoryCache,
 		NoCache: NoCache
-	} );
+	} ).deprecate( 'mobile.cache' );
 }( mw.mobileFrontend ) );

@@ -493,6 +493,7 @@
 				"resources/mobile.startup/oo-extend.js",
 				"resources/mobile.startup/View.js",
 				"resources/mobile.startup/browser.js",
+				"resources/mobile.startup/cache.js",
 				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/settings.js",
@@ -968,25 +969,12 @@
 			],
 			"dependencies": [
 				"mediawiki.api",
-				"mobile.startup",
-				"mobile.cache"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.references.gateway/ReferencesGateway.js",
 				"resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
 				"resources/mobile.references.gateway/ReferencesMobileViewGateway.js"
-			]
-		},
-		"mobile.cache": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.cache/Cache.js"
 			]
 		},
 		"mobile.toggle": {
