@@ -1200,7 +1200,7 @@ class MobileFrontendHooks {
 			$schemaMobileWebMainMenuClickTracking += [
 				'dependencies' => [
 					'schema.MobileWebMainMenuClickTracking',
-					'mobile.context',
+					'mobile.startup',
 					'mobile.user'
 				],
 				'scripts' => [
@@ -1210,7 +1210,7 @@ class MobileFrontendHooks {
 			$schemaMobileWebSearch += [
 				'dependencies' => [
 					'schema.MobileWebSearch',
-					'mobile.context'
+					'mobile.startup',
 				],
 				'scripts' => [
 					'resources/mobile.loggingSchemas/schemaMobileWebSearch.js',

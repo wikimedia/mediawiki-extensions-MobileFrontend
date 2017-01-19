@@ -307,18 +307,6 @@
 				"resources/mobile.view/View.js"
 			]
 		},
-		"mobile.context": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.oo"
-			],
-			"scripts": [
-				"resources/mobile.context/context.js"
-			]
-		},
 		"mobile.browser": {
 			"targets": [
 				"mobile",
@@ -545,7 +533,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.context",
 				"mobile.modifiedBar",
 				"mobile.browser",
 				"mobile.oo",
@@ -572,6 +559,7 @@
 				"resources/mobile.startup/panel.less"
 			],
 			"scripts": [
+				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/util.js",
 				"resources/mobile.startup/PageGateway.js",
 				"resources/mobile.startup/Anchor.js",
@@ -1255,7 +1243,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.context",
 				"mediawiki.experiments",
 				"jquery.cookie"
 			],
@@ -1554,8 +1541,7 @@
 				"mobile.betaoptin",
 				"mobile.toast",
 				"mobile.settings",
-				"mobile.modifiedBar",
-				"mobile.context"
+				"mobile.modifiedBar"
 			],
 			"messages": [
 				"mobile-frontend-language-change",
