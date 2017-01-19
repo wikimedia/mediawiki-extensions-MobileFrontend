@@ -295,18 +295,6 @@
 				"resources/mobile.oo/oo-extend.js"
 			]
 		},
-		"mobile.view": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.oo"
-			],
-			"scripts": [
-				"resources/mobile.view/View.js"
-			]
-		},
 		"mobile.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
@@ -329,7 +317,6 @@
 			],
 			"dependencies": [
 				"mobile.mainMenu.icons",
-				"mobile.view",
 				"mobile.startup",
 				"mobile.loggingSchemas.mobileWebMainMenuClickTracking"
 			],
@@ -351,7 +338,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.view"
+				"mobile.startup"
 			],
 			"position": "top",
 			"styles": [
@@ -383,7 +370,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.view",
 				"mobile.startup",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles"
@@ -487,7 +473,6 @@
 				"mediawiki.user",
 				"jquery.cookie",
 				"mediawiki.storage",
-				"mobile.view",
 				"mobile.oo",
 				"mediawiki.util",
 				"mediawiki.api",
@@ -517,6 +502,7 @@
 				"resources/mobile.startup/panel.less"
 			],
 			"scripts": [
+				"resources/mobile.startup/View.js",
 				"resources/mobile.startup/browser.js",
 				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
