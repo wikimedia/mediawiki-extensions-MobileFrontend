@@ -1190,7 +1190,7 @@ class MobileFrontendHooks {
 				$schemaEdit += [
 					'dependencies' => [
 						'schema.Edit',
-						'mobile.user'
+						'mobile.startup'
 					],
 					'scripts' => [
 						'resources/mobile.loggingSchemas/schemaEdit.js',
@@ -1200,8 +1200,7 @@ class MobileFrontendHooks {
 			$schemaMobileWebMainMenuClickTracking += [
 				'dependencies' => [
 					'schema.MobileWebMainMenuClickTracking',
-					'mobile.startup',
-					'mobile.user'
+					'mobile.startup'
 				],
 				'scripts' => [
 					'resources/mobile.loggingSchemas/schemaMobileWebMainMenuClickTracking.js',

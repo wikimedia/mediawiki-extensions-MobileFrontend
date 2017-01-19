@@ -519,12 +519,12 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.user",
 				"jquery.cookie",
 				"mediawiki.storage",
 				"mobile.modifiedBar",
 				"mobile.browser",
 				"mobile.oo",
-				"mobile.user",
 				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
@@ -548,6 +548,7 @@
 			"scripts": [
 				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/settings.js",
+				"resources/mobile.startup/user.js",
 				"resources/mobile.startup/util.js",
 				"resources/mobile.startup/PageGateway.js",
 				"resources/mobile.startup/Anchor.js",
@@ -574,20 +575,6 @@
 			],
 			"scripts": [
 				"resources/mobile.foreignApi/JSONPForeignApi.js"
-			]
-		},
-		"mobile.user": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.user",
-				"mediawiki.storage",
-				"mobile.oo"
-			],
-			"scripts": [
-				"resources/mobile.user/user.js"
 			]
 		},
 		"mobile.abusefilter": {

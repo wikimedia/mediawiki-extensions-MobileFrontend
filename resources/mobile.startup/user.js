@@ -61,6 +61,7 @@
 		}
 
 	};
-	M.define( 'mobile.user/user', user );
+	M.define( 'mobile.startup/user', user )
+		.deprecate( 'mobile.user/user' );
 
 }( mw.mobileFrontend, jQuery ) );
