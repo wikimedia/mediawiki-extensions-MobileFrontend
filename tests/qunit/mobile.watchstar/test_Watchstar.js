@@ -1,13 +1,13 @@
 ( function ( $, M ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
+		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' ),
 		toast = M.require( 'mobile.toast/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'
 		} ),
-		user = M.require( 'mobile.user/user' ),
+		user = M.require( 'mobile.startup/user' ),
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: Watchstar.js Anon', {

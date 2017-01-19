@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var BackToTopOverlay = M.require( 'mobile.backtotop/BackToTopOverlay' ),
 		backtotop = new BackToTopOverlay(),
-		browser = M.require( 'mobile.browser/Browser' ).getSingleton();
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton();
 
 	// check if browser user agent is iOS (T141598)
 	if ( browser.isIos() ) {

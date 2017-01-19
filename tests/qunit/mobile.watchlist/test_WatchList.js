@@ -1,7 +1,7 @@
 ( function ( $, M ) {
 
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
-		user = M.require( 'mobile.user/user' ),
+		user = M.require( 'mobile.startup/user' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'

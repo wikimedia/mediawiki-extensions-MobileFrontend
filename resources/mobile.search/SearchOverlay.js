@@ -1,14 +1,14 @@
 ( function ( M, $ ) {
 
 	var
-		Overlay = M.require( 'mobile.overlays/Overlay' ),
+		Overlay = M.require( 'mobile.startup/Overlay' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
 		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
-		isBeta = M.require( 'mobile.context/context' ).isBetaGroupMember();
+		isBeta = M.require( 'mobile.startup/context' ).isBetaGroupMember();
 
 	/**
 	 * Overlay displaying search results

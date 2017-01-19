@@ -35,4 +35,4 @@
 			unit: 'years'
 		} );
 	} );
-}( mw.mobileFrontend.require( 'mobile.modifiedBar/time' ) ) );
+}( mw.mobileFrontend.require( 'mobile.startup/time' ) ) );

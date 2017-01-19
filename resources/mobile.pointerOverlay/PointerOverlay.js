@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' );
+	var Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
 	 * Page overlay prompting a user for given action

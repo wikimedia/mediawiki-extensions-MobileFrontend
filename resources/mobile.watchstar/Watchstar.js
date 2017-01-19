@@ -1,6 +1,6 @@
 ( function ( M ) {
 
-	var View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.startup/View' ),
 		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
@@ -12,8 +12,8 @@
 			additionalClassNames: 'watch-this-article watched'
 		} ),
 		toast = M.require( 'mobile.toast/toast' ),
-		user = M.require( 'mobile.user/user' ),
-		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' );
+		user = M.require( 'mobile.startup/user' ),
+		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' );
 
 	/**
 	 * A clickable watchstar

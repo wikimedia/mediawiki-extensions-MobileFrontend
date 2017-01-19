@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Drawer = M.require( 'mobile.drawers/Drawer' ),
+	var Drawer = M.require( 'mobile.startup/Drawer' ),
 		icons = M.require( 'mobile.startup/icons' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 

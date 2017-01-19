@@ -1,5 +1,5 @@
 ( function ( $, M ) {
-	var Browser = M.require( 'mobile.browser/Browser' ),
+	var Browser = M.require( 'mobile.startup/Browser' ),
 		// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
 		$html = $( '<html>' );
 

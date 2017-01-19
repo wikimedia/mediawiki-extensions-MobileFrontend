@@ -2,7 +2,7 @@
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
-		user = M.require( 'mobile.user/user' );
+		user = M.require( 'mobile.startup/user' );
 	/**
 	 * Overlay for talk page
 	 * @extends Overlay

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var settings = M.require( 'mobile.settings/settings' );
+	var settings = M.require( 'mobile.startup/settings' );
 
 	QUnit.module( 'MobileFrontend settings', {
 		setup: function () {

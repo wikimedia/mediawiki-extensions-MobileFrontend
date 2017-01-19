@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.startup/View' );
 
 	/**
 	 * Displays a little arrow at the bottom right of the viewport.

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var Button = M.require( 'mobile.startup/Button' ),
-		Overlay = M.require( 'mobile.overlays/Overlay' );
+		Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
 	 * Overlay that shows a message about abuse. This overlay is rendered when the error code from the API

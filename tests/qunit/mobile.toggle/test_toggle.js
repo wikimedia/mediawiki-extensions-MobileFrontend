@@ -2,8 +2,8 @@
 
 	var toggle,
 		sectionHtml = mw.template.get( 'tests.mobilefrontend', 'section.hogan' ).render(),
-		settings = M.require( 'mobile.settings/settings' ),
-		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
+		settings = M.require( 'mobile.startup/settings' ),
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		page = { title: 'Toggle test' },
 		Toggler = M.require( 'mobile.toggle/Toggler' );
 

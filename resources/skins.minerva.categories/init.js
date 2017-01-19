@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var loader = M.require( 'mobile.overlays/moduleLoader' ),
+	var loader = M.require( 'mobile.startup/rlModuleLoader' ),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
-		user = M.require( 'mobile.user/user' );
+		user = M.require( 'mobile.startup/user' );
 
 	// categories overlay
 	overlayManager.add( /^\/categories$/, function () {

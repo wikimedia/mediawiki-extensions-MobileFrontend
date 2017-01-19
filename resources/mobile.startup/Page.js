@@ -1,7 +1,7 @@
 ( function ( HTML, M, $ ) {
 
-	var time = M.require( 'mobile.modifiedBar/time' ),
-		View = M.require( 'mobile.view/View' ),
+	var time = M.require( 'mobile.startup/time' ),
+		View = M.require( 'mobile.startup/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		Thumbnail = M.require( 'mobile.startup/Thumbnail' );
 

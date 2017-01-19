@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
-		browser = M.require( 'mobile.browser/Browser' ).getSingleton(),
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.toast/toast' ),
-		user = M.require( 'mobile.user/user' );
+		user = M.require( 'mobile.startup/user' );
 
 	/**
 	 * 'Edit' button

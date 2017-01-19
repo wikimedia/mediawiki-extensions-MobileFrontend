@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Toast,
 		settingsKey = 'mobileFrontend/toast',
-		settings = M.require( 'mobile.settings/settings' );
+		settings = M.require( 'mobile.startup/settings' );
 
 	/**
 	 * Wrapper for one global Toast

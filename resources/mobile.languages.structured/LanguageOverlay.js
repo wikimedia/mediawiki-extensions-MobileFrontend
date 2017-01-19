@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.languages.structured/util' );
 
 	/**

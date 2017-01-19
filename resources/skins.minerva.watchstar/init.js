@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		user = M.require( 'mobile.user/user' );
+		user = M.require( 'mobile.startup/user' );
 
 	/**
 	 * Toggle the watch status of a known page

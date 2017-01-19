@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
-		Overlay = M.require( 'mobile.overlays/Overlay' );
+		Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
 	 * Base overlay for talk page overlays

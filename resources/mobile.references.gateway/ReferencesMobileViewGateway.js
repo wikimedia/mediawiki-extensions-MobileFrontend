@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var ReferencesHtmlScraperGateway =
 		M.require( 'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
-		cache = M.require( 'mobile.cache' ),
+		cache = M.require( 'mobile.startup/cache' ),
 		MemoryCache = cache.MemoryCache,
 		NoCache = cache.NoCache,
 		referencesMobileViewGateway = null;

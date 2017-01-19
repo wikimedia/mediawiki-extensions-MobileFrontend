@@ -1,6 +1,6 @@
 ( function ( M ) {
-	var user = M.require( 'mobile.user/user' ),
-		context = M.require( 'mobile.context/context' ),
+	var user = M.require( 'mobile.startup/user' ),
+		context = M.require( 'mobile.startup/context' ),
 		/**
 		 * MobileWebMainMenuClickTracking schema
 		 * https://meta.wikimedia.org/wiki/Schema:MobileWebMainMenuClickTracking

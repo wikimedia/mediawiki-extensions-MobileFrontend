@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 

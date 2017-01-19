@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		icon = new Icon( {
 			name: 'cleanup-gray',

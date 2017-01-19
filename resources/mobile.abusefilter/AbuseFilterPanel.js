@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var
-		View = M.require( 'mobile.view/View' ),
+		View = M.require( 'mobile.startup/View' ),
 		AbuseFilterOverlay = M.require( 'mobile.abusefilter/AbuseFilterOverlay' );
 
 	/**

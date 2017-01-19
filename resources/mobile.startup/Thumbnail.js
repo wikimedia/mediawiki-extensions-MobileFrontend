@@ -1,6 +1,6 @@
 ( function ( M ) {
 
-	var View = M.require( 'mobile.view/View' );
+	var View = M.require( 'mobile.startup/View' );
 
 	/**
 	 * Representation of a thumbnail

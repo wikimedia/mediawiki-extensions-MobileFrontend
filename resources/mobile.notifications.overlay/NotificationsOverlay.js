@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Overlay = M.require( 'mobile.overlays/Overlay' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		NotificationsOverlay;
 

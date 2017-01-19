@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var context = M.require( 'mobile.context/context' ),
-		View = M.require( 'mobile.view/View' ),
-		settings = M.require( 'mobile.settings/settings' );
+	var context = M.require( 'mobile.startup/context' ),
+		View = M.require( 'mobile.startup/View' ),
+		settings = M.require( 'mobile.startup/settings' );
 
 	/**
 	 * Wrapper for checkboxes styled as in MediaWiki UI style guide

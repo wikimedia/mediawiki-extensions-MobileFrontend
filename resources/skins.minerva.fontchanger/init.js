@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var settings = M.require( 'mobile.settings/settings' ),
+	var settings = M.require( 'mobile.startup/settings' ),
 		userFontSize = settings.get( 'userFontSize', true );
 
 	if ( userFontSize !== '100' ) {

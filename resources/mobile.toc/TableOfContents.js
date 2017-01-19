@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.startup/View' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**

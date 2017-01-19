@@ -1,6 +1,6 @@
 ( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
-		settings = M.require( 'mobile.settings/settings' );
+		settings = M.require( 'mobile.startup/settings' );
 
 	/**
 	 * Overlay for VisualEditor view

@@ -4,7 +4,7 @@
 			'mobile.references.gateway/ReferencesMobileViewGateway'
 		),
 		Page = M.require( 'mobile.startup/Page' ),
-		cache = M.require( 'mobile.cache' ),
+		cache = M.require( 'mobile.startup/cache' ),
 		MemoryCache = cache.MemoryCache;
 
 	QUnit.module( 'MobileFrontend: mobileView references gateway', {

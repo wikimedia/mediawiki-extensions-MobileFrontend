@@ -4,10 +4,10 @@
 		// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 		isEditable = mw.config.get( 'wgIsProbablyEditable' ),
 		blockInfo = mw.config.get( 'wgMinervaUserBlockInfo', false ),
-		settings = M.require( 'mobile.settings/settings' ),
+		settings = M.require( 'mobile.startup/settings' ),
 		router = require( 'mediawiki.router' ),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
-		loader = M.require( 'mobile.overlays/moduleLoader' ),
+		loader = M.require( 'mobile.startup/rlModuleLoader' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
@@ -21,7 +21,7 @@
 		currentPage = M.getCurrentPage(),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
-		user = M.require( 'mobile.user/user' ),
+		user = M.require( 'mobile.startup/user' ),
 		popup = M.require( 'mobile.toast/toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
@@ -32,7 +32,7 @@
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = veConfig,
-		CtaDrawer = M.require( 'mobile.drawers/CtaDrawer' ),
+		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' ),
 		drawer,
 		$caEdit = $( '#ca-edit' );
 

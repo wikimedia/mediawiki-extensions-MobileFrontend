@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var View = M.require( 'mobile.view/View' ),
+	var View = M.require( 'mobile.startup/View' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		settings = M.require( 'mobile.settings/settings' );
+		settings = M.require( 'mobile.startup/settings' );
 
 	/**
 	 * FontChanger wrapper

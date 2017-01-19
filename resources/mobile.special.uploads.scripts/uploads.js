@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var
-		user = M.require( 'mobile.user/user' ),
+		user = M.require( 'mobile.startup/user' ),
 		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),

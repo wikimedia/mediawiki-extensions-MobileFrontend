@@ -3,7 +3,7 @@
 		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
-		View = M.require( 'mobile.view/View' );
+		View = M.require( 'mobile.startup/View' );
 
 	/**
 	 * Creates a list of photo items

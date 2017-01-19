@@ -3,7 +3,7 @@
 		Section = M.require( 'mobile.startup/Section' ),
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
-		settings = M.require( 'mobile.settings/settings' ),
+		settings = M.require( 'mobile.startup/settings' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		toast = M.require( 'mobile.toast/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );

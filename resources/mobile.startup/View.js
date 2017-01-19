@@ -77,7 +77,7 @@
 	 *     function Section( options ) {
 	 *       View.call( this, options );
 	 *     }
-	 *     View = M.require( 'mobile.view/View' );
+	 *     View = M.require( 'mobile.startup/View' );
 	 *     OO.mfExtend( Section, View, {
 	 *       template: mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
 	 *     } );

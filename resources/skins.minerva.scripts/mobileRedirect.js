@@ -4,7 +4,7 @@
 
 ( function ( M, $ ) {
 
-	var settings = M.require( 'mobile.settings/settings' ),
+	var settings = M.require( 'mobile.startup/settings' ),
 		cookiesEnabled = settings.cookiesEnabled,
 		popup = M.require( 'mobile.toast/toast' );
 
