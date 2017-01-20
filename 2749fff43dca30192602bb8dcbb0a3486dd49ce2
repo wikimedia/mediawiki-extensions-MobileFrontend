@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4efb0bce_ab0174bb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 2305
+      },
+      "writtenOn": "2017-01-20T14:26:35Z",
+      "side": 1,
+      "message": "Do you mean the whole logic inside $this-\u003euseEcho() {} ?\nThis code is very specific to MobileFrontend, I don\u0027t see how we could keep it in echo. Previously, we checked that the user was logged in, now we check that the user is notifiable, so the logic isn\u0027t fundamentally modified.\nI\u0027ve also added performance improvements which would be cumbersome to make if the code were in echo.",
+      "parentUuid": "4efb0bce_63372ee1",
+      "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efb0bce_c32702b0",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-01-19T01:18:08Z",
       "side": 1,
       "message": "Let\u0027s find out why from the start rather than hacking around this! Is there a bug open?",
+      "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_cb65d0ab",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2305
+      },
+      "writtenOn": "2017-01-20T14:26:35Z",
+      "side": 1,
+      "message": "There is no bug on this, the double count appears only in mobile view, not on desktop echo.",
+      "parentUuid": "4efb0bce_c32702b0",
       "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
