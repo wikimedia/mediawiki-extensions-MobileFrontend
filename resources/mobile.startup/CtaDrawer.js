@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var Drawer = M.require( 'mobile.drawers/Drawer' ),
+	var Drawer = M.require( 'mobile.startup/Drawer' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' );
@@ -44,7 +44,7 @@
 			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
 		} ),
-		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
+		template: mw.template.get( 'mobile.startup', 'Cta.hogan' ),
 		/**
 		 * @inheritdoc
 		 */
@@ -72,6 +72,7 @@
 		}
 	} );
 
-	M.define( 'mobile.drawers/CtaDrawer', CtaDrawer );
+	M.define( 'mobile.startup/CtaDrawer', CtaDrawer )
+		.deprecate( 'mobile.drawers/CtaDrawer' );
 
 }( mw.mobileFrontend, jQuery ) );
