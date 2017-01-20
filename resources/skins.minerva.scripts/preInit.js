@@ -13,7 +13,7 @@
 		gateway = new PageGateway( new mw.Api() ),
 		Page = M.require( 'mobile.startup/Page' ),
 		mainMenu = M.require( 'skins.minerva.scripts.top/mainMenu' ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		Skin = M.require( 'mobile.startup/Skin' ),
 		ReferencesMobileViewGateway = M.require(
 			'mobile.references.gateway/ReferencesMobileViewGateway'

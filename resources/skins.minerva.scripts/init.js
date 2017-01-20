@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var inSample, inStable, experiment,
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		settings = M.require( 'mobile.startup/settings' ),
 		time = M.require( 'mobile.startup/time' ),
 		token = settings.get( 'mobile-betaoptin-token' ),

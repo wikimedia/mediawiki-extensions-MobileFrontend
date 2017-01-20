@@ -2,7 +2,7 @@
 
 	var Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIcon = new Icon( {
 			name: 'watched'

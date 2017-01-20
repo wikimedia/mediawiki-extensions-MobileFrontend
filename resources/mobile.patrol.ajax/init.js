@@ -13,7 +13,7 @@
 	$( function () {
 		var $patrolLinks = $( '.patrollink a' ),
 			Icon = M.require( 'mobile.startup/Icon' ),
-			toast = M.require( 'mobile.toast/toast' ),
+			toast = M.require( 'mobile.startup/toast' ),
 			$spinner = $( new Icon( {
 				name: 'spinner',
 				additionalClassNames: 'savespinner loading'

@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**

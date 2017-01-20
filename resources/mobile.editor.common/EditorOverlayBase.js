@@ -3,7 +3,7 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		Icon = M.require( 'mobile.startup/Icon' ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		user = M.require( 'mobile.startup/user' );
 
 	/**

@@ -11,7 +11,7 @@
 			name: 'watched',
 			additionalClassNames: 'watch-this-article watched'
 		} ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		user = M.require( 'mobile.startup/user' ),
 		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' );
 
