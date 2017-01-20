@@ -351,24 +351,6 @@
 				"resources/mediawiki.template.hogan/hogan.js"
 			]
 		},
-		"mobile.pagelist": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mobile.pagelist.styles",
-				"mobile.pagesummary.styles"
-			],
-			"scripts": [
-				"resources/mobile.pagelist/PageList.js"
-			],
-			"templates": {
-				"PageListItem.hogan": "resources/mobile.pagelist/PageListItem.hogan",
-				"PageList.hogan": "resources/mobile.pagelist/PageList.hogan"
-			}
-		},
 		"mobile.pagelist.scripts": {
 			"targets": [
 				"mobile",
@@ -376,7 +358,7 @@
 			],
 			"dependencies": [
 				"mobile.watchstar",
-				"mobile.pagelist"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.pagelist.scripts/WatchstarPageList.js"
@@ -455,6 +437,8 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mobile.pagelist.styles",
+				"mobile.pagesummary.styles",
 				"mediawiki.notify",
 				"mobile.overlay.images",
 				"mobile.ajax",
@@ -470,6 +454,8 @@
 				"jquery.throttle-debounce"
 			],
 			"templates": {
+				"PageListItem.hogan": "resources/mobile.startup/PageListItem.hogan",
+				"PageList.hogan": "resources/mobile.startup/PageList.hogan",
 				"Cta.hogan": "resources/mobile.startup/CtaDrawer.hogan",
 				"header.hogan": "resources/mobile.startup/OverlayHeader.hogan",
 				"Overlay.hogan": "resources/mobile.startup/Overlay.hogan",
@@ -532,6 +518,7 @@
 				"resources/mobile.startup/rlModuleLoader.js",
 				"resources/mobile.startup/Drawer.js",
 				"resources/mobile.startup/CtaDrawer.js",
+				"resources/mobile.startup/PageList.js",
 				"resources/mobile.startup/toast.js"
 			],
 			"position": "bottom"
