@@ -12,6 +12,9 @@
 	"mobile-frontend-main-menu-login": "Posi",
 	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Nitcictaman",
+	"mobile-frontend-talk-overlay-header": "Ka ici arimowaniok",
 	"mobile-frontend-terms-text": "Ke ici nosinetakiniwok orocowe masinhikan",
-	"mobile-frontend-view": "Aripoc takapikenikan otci"
+	"mobile-frontend-view": "Aripoc takapikenikan otci",
+	"mobile-frontend-watchlist-filter-talk": "Ka ici arimowaniok",
+	"mobile-frontend-user-page-talk": "Ka ici arimowaniok"
 }
