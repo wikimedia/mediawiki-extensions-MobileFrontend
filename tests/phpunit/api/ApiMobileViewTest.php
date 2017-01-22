@@ -167,13 +167,18 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 		$api = $this->getMobileViewApi( $input );
 		$api->mockFile = $this->getMock( 'MockFSFile',
-			[ 'getWidth', 'getHeight', 'getTitle', 'transform' ],
+			[ 'getWidth', 'getHeight', 'getTitle', 'getMimeType', 'transform' ],
 			[], '', false
 		);
 		$api->mockFile->method( 'getWidth' )->will( $this->returnValue( 640 ) );
 		$api->mockFile->method( 'getHeight' )->will( $this->returnValue( 480 ) );
 		$api->mockFile->method( 'getTitle' )
 			->will( $this->returnValue( Title::newFromText( 'File:Foo.jpg' ) ) );
+		if ( array_key_exists( 'type', $input ) ) {
+			$api->mockFile->method( 'getMimeType' )->will( $this->returnValue(
+				$input[ 'type' ] === 'image/svg' ? 'image/svg' : 'image/png' )
+			);
+		}
 		$api->mockFile->method( 'transform' )
 			->will( $this->returnCallback( [ $this, 'mockTransform' ] ) );
 
@@ -367,6 +372,74 @@ Text 2
 					]
 				],
 			],
+			[
+				[
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbwidth' => 200,
+					'type' => 'image/svg' // contrived but needed for testing
+				],
+				[
+					'sections' => [],
+					'thumb' => [
+						'url' => 'http://dummy',
+						'width' => 200,
+						'height' => 150,
+					]
+				],
+			],
+			[
+				[
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbheight' => 200,
+					'type' => 'image/svg' // contrived but needed for testing
+				],
+				[
+					'sections' => [],
+					'thumb' => [
+						'url' => 'http://dummy',
+						'width' => 267,
+						'height' => 200,
+					]
+				],
+			],
+			[
+				[
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbwidth' => 800,
+					'type' => 'image/svg' // contrived but needed for testing
+				],
+				[
+					'sections' => [],
+					'thumb' => [
+						'url' => 'http://dummy',
+						'width' => 800,
+						'height' => 600,
+					]
+				],
+			],
+			[
+				[
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbheight' => 800,
+					'type' => 'image/svg' // contrived but needed for testing
+				],
+				[
+					'sections' => [],
+					'thumb' => [
+						'url' => 'http://dummy',
+						'width' => 1067,
+						'height' => 800,
+					]
+				],
+			],
 		];
 	}
 
@@ -442,5 +515,32 @@ Text 2
 		$this->assertTrue( count( $protection ) === 1 ); // the only element is the array type flag
 		$this->assertTrue( $pageprops[ApiResult::META_TYPE] === 'assoc' );
 		$this->assertTrue( count( $pageprops ) === 1 ); // the only element is the array type flag
+	}
+
+	public function testImageScaling() {
+		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
+		$scale = $this->getNonPublicMethod( 'ApiMobileView', 'getScaledDimen' );
+		$this->assertEquals( $scale->invokeArgs( $api, [ 100, 50, 20 ] ), 10, 'Check scaling downward' );
+		$this->assertEquals( $scale->invokeArgs( $api, [ 50, 100, 20 ] ), 40, 'Check scaling downward' );
+		$this->assertEquals( $scale->invokeArgs( $api, [ 100, 50, 200 ] ), 100, 'Check scaling upward' );
+		$this->assertEquals( $scale->invokeArgs( $api, [ 50, 100, 200 ] ), 400, 'Check scaling upward' );
+		$this->assertEquals( $scale->invokeArgs( $api, [ 0, 1, 2 ] ), 0, 'Check divide by zero' );
+	}
+
+	public function testIsSVG() {
+		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
+		$isSVG = $this->getNonPublicMethod( 'ApiMobileView', 'isSVG' );
+		$this->assertTrue( $isSVG->invokeArgs( $api, [ 'image/svg' ] ) );
+		$this->assertTrue( $isSVG->invokeArgs( $api, [ 'image/svg+xml' ] ) );
+		$this->assertFalse( $isSVG->invokeArgs( $api, [ ' image/svg' ] ) );
+		$this->assertFalse( $isSVG->invokeArgs( $api, [ 'image/png' ] ) );
+		$this->assertFalse( $isSVG->invokeArgs( $api, [ null ] ) );
+	}
+
+	private static function getNonPublicMethod( $className, $methodName ) {
+		$reflectionClass = new ReflectionClass( $className );
+		$method = $reflectionClass->getMethod( $methodName );
+		$method->setAccessible( true );
+		return $method;
 	}
 }

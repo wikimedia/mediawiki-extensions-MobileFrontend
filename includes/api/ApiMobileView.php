@@ -736,10 +736,14 @@ class ApiMobileView extends ApiBase {
 				$resize['height'] = $params['thumbheight'];
 			}
 			if ( isset( $resize['width'] ) && !isset( $resize['height'] ) ) {
-				$resize['height'] = $file->getHeight(); // Limit by width
+				$resize['height'] = $this->isSVG( $file->getMimeType() )
+					? $this->getScaledDimen( $file->getWidth(), $file->getHeight(), $resize['width'] )
+					: $file->getHeight();
 			}
 			if ( !isset( $resize['width'] ) && isset( $resize['height'] ) ) {
-				$resize['width'] = $file->getWidth(); // Limit by width
+				$resize['width'] = $this->isSVG( $file->getMimeType() )
+					? $this->getScaledDimen( $file->getHeight(), $file->getWidth(), $resize['height'] )
+					: $file->getWidth();
 			}
 			if ( !$resize ) {
 				$resize['width'] = $resize['height'] = 50; // Default
@@ -758,6 +762,18 @@ class ApiMobileView extends ApiBase {
 				]
 			);
 		}
+	}
+
+	/**
+	 * When only one dimension is given in a thumbnail request, scale the other proportionally
+	 * with respect to the original file dimensions.
+	 */
+	private function getScaledDimen( $srcX, $srcY, $dstX ) {
+		return $srcX === 0 ? 0 : (int) round( $srcY * $dstX / $srcX );
+	}
+
+	private function isSVG( $typeStr ) {
+		return strpos( $typeStr, 'image/svg' ) === 0;
 	}
 
 	/**
