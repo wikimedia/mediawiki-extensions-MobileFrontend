@@ -5,10 +5,29 @@
 			"Katxis"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "no resoma de edita",
+	"mobile-frontend-copyright": "Contenis es disponable su $1, estra diferente notada.",
 	"mobile-frontend-editor-edit": "Edita",
+	"mobile-frontend-featured-article": "La contenis spesial de oji",
+	"mobile-frontend-home-button": "Paje prima",
+	"mobile-frontend-language-article-heading": "Leje en un otra lingua",
+	"mobile-frontend-last-modified-date": "Edita pasada a $1, a $2",
+	"mobile-frontend-main-menu-account-create": "Crea un conta",
 	"mobile-frontend-main-menu-button-tooltip": "Abre la menu xef",
 	"mobile-frontend-main-menu-login": "Identifia",
+	"mobile-frontend-main-menu-nearby": "Prosima",
 	"mobile-frontend-main-menu-settings": "Ajustas",
+	"mobile-frontend-main-menu-watchlist": "Lista de pajes oservada",
+	"mobile-frontend-news-items": "En la novas",
+	"mobile-frontend-password-placeholder": "Sinia secreta",
+	"mobile-frontend-placeholder": "Xerca {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privatia",
-	"mobile-frontend-view": "Vista portable"
+	"mobile-frontend-random-button": "Acaso",
+	"mobile-frontend-terms-text": "Acordas de usa",
+	"mobile-frontend-view": "Vista portable",
+	"mobile-frontend-view-desktop": "Table",
+	"mobile-frontend-view-mobile": "Portable",
+	"tag-mobile_edit": "Edita portable",
+	"tag-mobile_web_edit": "Edita de rede portable",
+	"mobile-frontend-pageaction-edit-tooltip": "Edita la parte prima de esta paje"
 }
