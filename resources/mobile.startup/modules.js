@@ -109,7 +109,6 @@
 	mw.mobileFrontend = new ModuleLoader();
 
 	// inception to support testing (!!)
-	module.exports.ModuleLoader = ModuleLoader;
-	mw.mobileFrontend.define( 'ModuleLoader', ModuleLoader );
+	mw.mobileFrontend.ModuleLoader = ModuleLoader;
 
 }() );

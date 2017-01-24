@@ -1,5 +1,4 @@
-( function ( M ) {
-	var ModuleLoader = M.require( 'ModuleLoader' );
+( function ( ModuleLoader ) {
 
 	QUnit.module( 'MobileFrontend ModuleLoader', {
 		setup: function () {
@@ -7,14 +6,12 @@
 		}
 	} );
 
-	QUnit.test( '#require', 5, function ( assert ) {
+	QUnit.test( '#require', 4, function ( assert ) {
 		this.loader.define( 'foo', 1 );
 		this.loader.define( 'bar', 5 );
 
 		assert.strictEqual( this.loader.require( 'foo' ), 1, 'Returns appropriate module' );
 		assert.strictEqual( this.loader.require( 'bar' ), 5, 'Returns appropriate module' );
-		assert.ok( this.loader.require( 'mobile.startup/ModuleLoader' ),
-			'Retrieving an export from a known ResourceLoader module does not throw an exception' );
 
 		assert.throws( function () {
 			this.loader.require( 'undefinedmodule' );
@@ -33,4 +30,4 @@
 		}, 'Cannot define two modules with the same name' );
 		assert.strictEqual( this.loader.require( 'bar' ), 5, 'Returns first definition of module.' );
 	} );
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend.ModuleLoader ) );
