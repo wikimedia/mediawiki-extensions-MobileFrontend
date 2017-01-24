@@ -213,7 +213,7 @@ class MobileFrontendHooks {
 			}
 		}
 
-		if ( !$title->isMainPage() && !$title->isSpecialPage() ) {
+		if ( $context->shouldDisplayMobileView() && !$title->isMainPage() && !$title->isSpecialPage() ) {
 			$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
 		}
 		return true;
