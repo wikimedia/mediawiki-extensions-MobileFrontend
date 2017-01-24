@@ -392,13 +392,13 @@
 				"toc"
 			]
 		},
-		"mobile.ajax": {
+		"mobile.ajax.styles": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"styles": [
-				"resources/mobile.ajax/spinner.less"
+				"resources/mobile.ajax.styles/spinner.less"
 			]
 		},
 		"mobile.backtotop": {
@@ -430,7 +430,7 @@
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
 				"mobile.overlay.images",
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -944,7 +944,7 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mobile.search.util"
 			],
 			"scripts": [
@@ -1011,7 +1011,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
 				"mobile.pagelist.scripts",
