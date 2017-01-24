@@ -332,19 +332,23 @@ input.search {
 	font-weight: bold;
 	text-align: center;
 
-	span {
+	.circle {
 		border-radius: @iconSize;
-		border: 1px solid @notificationColorRead;
+		border: 2px solid @notificationColorRead;
 		box-sizing: border-box;
 		display: inline-block;
 		min-width: @iconSize;
 		padding: 0 5px;
+
+		span {
+			font-size: 13px;
+		}
 	}
 
 	&.notification-unseen {
 		color: @notificationColorUnread;
 
-		span {
+		.circle {
 			background: @notificationBackgroundUnread;
 			border-color: @notificationBackgroundUnread;
 		}
