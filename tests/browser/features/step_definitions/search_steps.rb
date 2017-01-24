@@ -12,8 +12,12 @@ When(/^I click the search icon$/) do
   end
 end
 
+When(/^I click the search input field$/) do
+  on(ArticlePage).search_box_placeholder_element.when_present.click
+end
+
 When(/^I click the search button$/) do
-  on(ArticlePage).search_button_element.when_present.click
+  on(ArticlePage).search_icon_element.when_present.click
 end
 
 When(/^I see the search in pages button$/) do
@@ -60,7 +64,7 @@ Then(/^I should see a list of search results$/) do
 end
 
 Then(/^I should see the search button$/) do
-  expect(on(ArticlePage).search_button_element.when_present).to be_visible
+  expect(on(ArticlePage).search_icon_element.when_present).to be_visible
 end
 
 When(/^I should see the search overlay$/) do

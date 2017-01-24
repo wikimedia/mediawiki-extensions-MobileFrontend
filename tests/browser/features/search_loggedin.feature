@@ -6,6 +6,7 @@ Feature: Search
       And the page "Selenium search test" exists
       And I am logged into the mobile website
       And I am on the "Main Page" page
+      And I am viewing the site in mobile mode
       And I click the search icon
       And I see the search overlay
       And I type into search box "Selenium search tes"

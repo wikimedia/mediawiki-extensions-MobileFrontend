@@ -7,9 +7,25 @@ A file for css that optimises the Minerva skin on larger devices.
 @paddingVertical: 1.4em;
 
 @media all and ( min-width: @deviceWidthTablet ) {
+	.client-js {
+		#searchIcon {
+			// Use visibility to maintain layout of the chrome header.
+			visibility: hidden;
+		}
+	}
+
 	.header {
+		.branding-box {
+			width: @brandingBoxWidth;
+		}
+
 		.search-box {
-			display: block;
+			display: table-cell;
+			width: auto;
+
+			.search {
+				width: @searchBoxWidth;
+			}
 		}
 	}
 

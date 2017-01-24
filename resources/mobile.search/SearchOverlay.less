@@ -17,6 +17,10 @@
 		display: none;
 	}
 
+	.search-box {
+		display: block;
+	}
+
 	.results,
 	.search-feedback {
 		// don't use background to preserve .loading properties
@@ -44,7 +48,7 @@
 	.clear {
 		position: absolute;
 		top: ( @headerHeight / 2 ) - ( @iconSize / 2 );
-		right: @clearIconRightGutterWidth;
+		right: 0;
 		margin-top: @headerMarginTop;
 	}
 
@@ -194,6 +198,38 @@
 				position: absolute;
 				top: 10%;
 			}
+		}
+	}
+}
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	.search-overlay {
+		.search-box {
+			display: table-cell;
+		}
+		.search-content,
+		.results {
+			width: @searchBoxWidth;
+			margin-left: (@iconSize + 2 * @iconGutterWidth) + @brandingBoxWidth;
+		}
+
+		.overlay-title {
+			width: @searchBoxWidth;
+			padding-left: (@iconSize + 2 * @iconGutterWidth) + @brandingBoxWidth;
+		}
+
+		ul {
+			width: auto;
+		}
+	}
+
+}
+
+@media all and ( min-width: @wgMFDeviceWidthDesktop ) {
+	.search-overlay {
+		.overlay-content {
+			// align with the search form
+			max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
 		}
 	}
 }

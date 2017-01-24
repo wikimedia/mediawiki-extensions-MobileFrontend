@@ -11,10 +11,15 @@
 		<div class="header-container">
 			<form class="header" action="{{wgScript}}">
 				<div>{{{menuButton}}}</div>
-				<div class="main">
+				<div class="branding-box">
 					<h1>
 						<span>{{{headinghtml}}}</span>
 					</h1>
+				</div>
+				<div class="search-box">
+					<input class="search" type="search" name="search" id="searchInput"
+					   autocomplete="off" placeholder="{{placeholder}}"
+					   value="{{search}}">
 				</div>
 				<div>{{{searchButton}}}</div>
 				{{^isAnon}}<div>{{#secondaryButtonData}}{{>secondaryButton}}{{/secondaryButtonData}}</div>{{/isAnon}}

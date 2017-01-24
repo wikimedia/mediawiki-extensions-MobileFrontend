@@ -57,7 +57,6 @@ class ArticlePage
 
   # search
   button(:search_icon, css: '#searchIcon input')
-  button(:search_button, css: '.search-box .button-wrapper')
   p(:search_within_pages, css: '.without-results')
   text_field(:search_box_placeholder, name: 'search', index: 0)
   text_field(:search_box2, name: 'search', index: 1)

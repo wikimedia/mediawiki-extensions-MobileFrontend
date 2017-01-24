@@ -21,6 +21,10 @@
 @headerTitleFontSize: 1em;
 @headerHeight: 3.35em;
 @headerMarginTop: -1px;  // used to hide the header border top when a banner is not present
+@searchBoxWidth: 375/16em;
+@iconSizeTotal: @iconSize + @iconGutterWidth + @iconGutterWidth;
+@deviceWidthTabletEms: unit( @deviceWidthTablet/16, em );
+@brandingBoxWidth: @deviceWidthTabletEms - ( @iconSizeTotal * 3 ) - @searchBoxWidth;
 
 @titleSectionSpacingTop: 20px;
 @titleSectionSpacingBottom: 25px;

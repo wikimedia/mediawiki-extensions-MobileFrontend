@@ -249,7 +249,7 @@
 			this.$clear = this.$( '.clear' );
 			this.$searchContent = this.$( '.search-content' ).hide();
 			this.$searchFeedback = this.$( '.search-feedback' ).hide();
-			this.$resultContainer = this.$( '.results' );
+			this.$resultContainer = this.$( '.results-list-container' );
 
 			/**
 			 * Hide the spinner and abort timed spinner shows.
