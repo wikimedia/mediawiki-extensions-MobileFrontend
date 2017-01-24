@@ -5,4 +5,12 @@
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="utf8"/>
 	<exclude-pattern>vendor</exclude-pattern>
+
+	<rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+		<properties>
+			<property name="equalsSpacing" value="1" />
+				<property name="requiredSpacesAfterOpen" value="1"/>
+				<property name="requiredSpacesBeforeClose" value="1" />
+		</properties>
+	</rule>
 </ruleset>

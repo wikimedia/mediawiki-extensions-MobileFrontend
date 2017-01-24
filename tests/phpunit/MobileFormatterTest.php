@@ -17,7 +17,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param integer [$sectionNumber] heading corresponds to
 	 * @return string
 	 */
-	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber=1 ) {
+	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
 		return "<$heading class=\"section-heading\""
 			. " onclick=\"javascript:mfTempOpenSection($sectionNumber)\">"
 			. self::SECTION_INDICATOR
@@ -32,7 +32,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param boolean $isReferenceSection whether the section contains references
 	 * @return string
 	 */
-	private function makeSectionHtml( $sectionNumber, $contentHtml='', $isReferenceSection=false ) {
+	private function makeSectionHtml( $sectionNumber, $contentHtml = '',
+		$isReferenceSection = false
+	) {
 		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
 		$className = "mf-section-$sectionNumber";
 
