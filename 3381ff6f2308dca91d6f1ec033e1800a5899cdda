@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_2cbdd716",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 887,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-25T23:28:26Z",
+      "side": 1,
+      "message": "Can we add a message saying that this module is deprecated? We should also add a FIXME to remove the module on a later date.",
+      "revId": "3381ff6f2308dca91d6f1ec033e1800a5899cdda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
