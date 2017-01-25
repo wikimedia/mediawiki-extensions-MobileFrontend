@@ -69,6 +69,24 @@
       "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_3bf136c9",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2305
+      },
+      "writtenOn": "2017-01-25T02:08:15Z",
+      "side": 1,
+      "message": "It seems to somehow no longer be an issue.",
+      "parentUuid": "4efb0bce_cb65d0ab",
+      "revId": "2749fff43dca30192602bb8dcbb0a3486dd49ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
