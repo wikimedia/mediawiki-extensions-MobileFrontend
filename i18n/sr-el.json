@@ -197,7 +197,7 @@
 	"mobile-frontend-watchlist-removed": "Stranica $1 je uklonjena sa vašeg spiska nadgledanja",
 	"mobile-frontend-watchlist-signup-action": "<strong>Spisak nadgledanja vam olakšava praćenje stranica.</strong><br />Otvorite nalog da biste ga koristili.",
 	"mobile-frontend-watchlist-view": "Vidi spisak nadgledanja",
-	"mobile-frontend-user-page-member-since": "Član od $1",
+	"mobile-frontend-user-page-member-since": "{{GENDER:$2|Član|Članica}} od $1",
 	"mobile-frontend-user-page-talk": "Razgovor",
 	"mobile-frontend-user-page-contributions": "Doprinosi",
 	"mobile-frontend-user-page-uploads": "Otpremanja",

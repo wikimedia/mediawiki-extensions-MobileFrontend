@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"mobile-frontend-copyright": "La kontenajo esas disponebla sub $1, ecepte kande kontree mencionata.",
+	"mobile-frontend-editor-edit": "Redaktar",
+	"mobile-frontend-home-button": "Frontispico",
+	"mobile-frontend-language-article-heading": "Lektar en altra linguo.",
+	"mobile-frontend-last-modified-date": "Laste redaktita ye $1, $2 kloki",
+	"mobile-frontend-main-menu-account-create": "Krear konto",
+	"mobile-frontend-main-menu-button-tooltip": "Apertar la precipua menuo",
+	"mobile-frontend-main-menu-login": "Enirar",
+	"mobile-frontend-main-menu-nearby": "Vicina",
+	"mobile-frontend-main-menu-settings": "Parametri",
+	"mobile-frontend-main-menu-watchlist": "Surveyo-listo",
+	"mobile-frontend-password-placeholder": "Pasovorto",
+	"mobile-frontend-placeholder": "Serchez en {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privateso",
+	"mobile-frontend-random-button": "Hazarde",
+	"mobile-frontend-terms-text": "Kondicioni por uzado",
+	"mobile-frontend-view": "Vidado por portebla aparati",
+	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-mobile": "Portebla",
+	"tag-mobile_edit": "Redaktita per posh-telefonilo",
+	"mobile-frontend-pageaction-edit-tooltip": "Redaktar la precipua segmento de ica pagino."
+}
