@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_6c3d0fb8",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 14
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-25T23:20:22Z",
+      "side": 1,
+      "message": "For some reason I\u0027m not seeing any placeholder message on my end. May it be related to caching?",
+      "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_ec6fbfc1",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-25T23:20:22Z",
+      "side": 1,
+      "message": "We should probably use @iconSizeFull here and below.",
+      "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
