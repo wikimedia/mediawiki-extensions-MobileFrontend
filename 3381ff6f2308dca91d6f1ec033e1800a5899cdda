@@ -16,6 +16,24 @@
       "revId": "3381ff6f2308dca91d6f1ec033e1800a5899cdda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_4cc5b38f",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 887,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-25T23:46:11Z",
+      "side": 1,
+      "message": "I forgot we can add deprecated fields :)",
+      "parentUuid": "2ef897d1_2cbdd716",
+      "revId": "3381ff6f2308dca91d6f1ec033e1800a5899cdda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
