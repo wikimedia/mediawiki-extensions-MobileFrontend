@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_ace0a7f8",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 14
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-26T00:07:09Z",
+      "side": 1,
+      "message": "Nice catch. Fixed.",
+      "parentUuid": "2ef897d1_6c3d0fb8",
+      "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_ec6fbfc1",
         "filename": "resources/mobile.search/SearchOverlay.less",
         "patchSetId": 14
@@ -30,6 +48,24 @@
       "writtenOn": "2017-01-25T23:20:22Z",
       "side": 1,
       "message": "We should probably use @iconSizeFull here and below.",
+      "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_0cf21bce",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-26T00:07:09Z",
+      "side": 1,
+      "message": "Is it okay if I do this in a follow up? I see lots of uses of this pattern.",
+      "parentUuid": "2ef897d1_ec6fbfc1",
       "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
