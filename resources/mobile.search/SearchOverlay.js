@@ -65,6 +65,7 @@
 		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			headerChrome: true,
 			clearIcon: new Icon( {
 				tagName: 'button',
 				name: 'clear',

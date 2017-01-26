@@ -15,8 +15,13 @@ body {
 }
 
 .header-container {
-	background-color: @chromeColor;
-	border-bottom: 1px solid transparent;
+	border-bottom: solid 1px @chromeContentSeparator;
+
+	&.header-chrome {
+		background-color: @chromeColor;
+		border: 0;
+		box-shadow: inset 0 -1px 3px rgba( 0, 0, 0, 0.08 );
+	}
 }
 
 #searchIcon {
