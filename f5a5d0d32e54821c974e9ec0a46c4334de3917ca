@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_1230f2fb",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-01-26T11:49:42Z",
+      "side": 1,
+      "message": "I\u0027m not against this but I wanted to note that the console will be pretty noisy given there\u0027ll be two deprecation warnings!",
+      "revId": "f5a5d0d32e54821c974e9ec0a46c4334de3917ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
