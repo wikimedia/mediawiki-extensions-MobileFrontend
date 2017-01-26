@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var PageList = M.require( 'mobile.pagelist/PageList' ),
+	var PageList = M.require( 'mobile.startup/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		user = M.require( 'mobile.startup/user' ),
 		Page = M.require( 'mobile.startup/Page' ),
