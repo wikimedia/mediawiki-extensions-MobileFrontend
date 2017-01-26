@@ -22,7 +22,7 @@
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		user = M.require( 'mobile.startup/user' ),
-		popup = M.require( 'mobile.toast/toast' ),
+		popup = M.require( 'mobile.startup/toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = router.isSupported() && !blacklisted,

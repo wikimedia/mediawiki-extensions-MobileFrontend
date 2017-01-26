@@ -6,7 +6,7 @@
 
 	var settings = M.require( 'mobile.startup/settings' ),
 		cookiesEnabled = settings.cookiesEnabled,
-		popup = M.require( 'mobile.toast/toast' );
+		popup = M.require( 'mobile.startup/toast' );
 
 	/**
 	 * An event handler for the toggle to desktop link.

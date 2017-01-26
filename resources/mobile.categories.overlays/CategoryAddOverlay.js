@@ -4,7 +4,7 @@
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
 		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		toast = M.require( 'mobile.toast/toast' );
+		toast = M.require( 'mobile.startup/toast' );
 
 	/**
 	 * Displays the list of categories for a page

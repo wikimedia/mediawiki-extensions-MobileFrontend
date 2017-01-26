@@ -5,7 +5,7 @@
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
 		settings = M.require( 'mobile.startup/settings' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		toast = M.require( 'mobile.toast/toast' ),
+		toast = M.require( 'mobile.startup/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
 
 	/**

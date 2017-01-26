@@ -455,6 +455,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.notify",
 				"mobile.overlay.images",
 				"mobile.ajax",
 				"mediawiki.language",
@@ -496,6 +497,9 @@
 				"mobile-frontend-editor-licensing-with-terms",
 				"mobile-frontend-editor-terms-link"
 			],
+			"skinStyles": {
+				"minerva": "resources/mobile.startup/toast.less"
+			},
 			"styles": [
 				"resources/mobile.startup/panel.less",
 				"resources/mobile.startup/Overlay.less",
@@ -527,7 +531,8 @@
 				"resources/mobile.startup/LoadingOverlay.js",
 				"resources/mobile.startup/rlModuleLoader.js",
 				"resources/mobile.startup/Drawer.js",
-				"resources/mobile.startup/CtaDrawer.js"
+				"resources/mobile.startup/CtaDrawer.js",
+				"resources/mobile.startup/toast.js"
 			],
 			"position": "bottom"
 		},
@@ -584,7 +589,6 @@
 				"oojs-ui",
 				"mobile.editor.api",
 				"mobile.startup",
-				"mobile.toast",
 				"mobile.messageBox",
 				"mediawiki.util",
 				"mediawiki.confirmCloseWindow",
@@ -844,7 +848,6 @@
 			"dependencies": [
 				"mediawiki.Title",
 				"mobile.startup",
-				"mobile.toast",
 				"mobile.search.api",
 				"mobile.search",
 				"mobile.editor.common",
@@ -882,20 +885,9 @@
 			]
 		},
 		"mobile.toast": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mediawiki.notify"
-			],
-			"scripts": [
-				"resources/mobile.toast/toast.js"
-			],
-			"skinStyles": {
-				"minerva": "resources/mobile.toast/toast.less"
-			}
+			"deprecated": true,
+			"targets": [ "mobile", "desktop" ],
+			"dependencies": [ "mobile.startup" ]
 		},
 		"mobile.references": {
 			"targets": [
@@ -982,7 +974,6 @@
 			"dependencies": [
 				"mobile.startup",
 				"mobile.ajax",
-				"mobile.toast",
 				"mobile.search.util"
 			],
 			"scripts": [
@@ -1086,7 +1077,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.toast",
+				"mobile.startup",
 				"mobile.infiniteScroll"
 			],
 			"templates": {
@@ -1179,7 +1170,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.toast",
 				"mediawiki.util",
 				"mediawiki.Title"
 			],
@@ -1404,8 +1394,7 @@
 				"mobile.issues",
 				"mobile.search",
 				"mobile.references",
-				"mobile.betaoptin",
-				"mobile.toast"
+				"mobile.betaoptin"
 			],
 			"messages": [
 				"mobile-frontend-language-change",
@@ -1477,7 +1466,6 @@
 				"skins.minerva.scripts",
 				"mediawiki.ui.input",
 				"mobile.startup",
-				"mobile.toast",
 				"skins.minerva.toggling",
 				"mediawiki.jqueryMsg",
 				"mobile.loggingSchemas.edit"
@@ -1623,7 +1611,7 @@
 		},
 		"minerva": {
 			"mediawiki.notification": [
-				"resources/mobile.toast/toast.less"
+				"resources/mobile.startup/toast.less"
 			]
 		}
 	},
