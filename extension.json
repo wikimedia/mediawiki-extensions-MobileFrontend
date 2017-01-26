@@ -871,11 +871,6 @@
 				"mobile-frontend-categories-hidden"
 			]
 		},
-		"mobile.toast": {
-			"deprecated": true,
-			"targets": [ "mobile", "desktop" ],
-			"dependencies": [ "mobile.startup" ]
-		},
 		"mobile.references": {
 			"targets": [
 				"mobile",

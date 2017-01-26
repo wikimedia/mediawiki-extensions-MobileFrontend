@@ -74,7 +74,6 @@
 		}
 	};
 
-	M.define( 'mobile.startup/toast', new Toast() )
-		.deprecate( 'mobile.toast/toast' );
+	M.define( 'mobile.startup/toast', new Toast() );
 
 }( mw.mobileFrontend, jQuery ) );
