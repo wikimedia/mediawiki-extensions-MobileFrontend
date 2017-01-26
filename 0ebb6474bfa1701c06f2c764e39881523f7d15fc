@@ -16,6 +16,24 @@
       "revId": "0ebb6474bfa1701c06f2c764e39881523f7d15fc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_c28607e0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-26T19:44:50Z",
+      "side": 1,
+      "message": "Yup.\nSo soon because I am confident that we are the only ones that use it.",
+      "parentUuid": "2ef897d1_42245707",
+      "revId": "0ebb6474bfa1701c06f2c764e39881523f7d15fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
