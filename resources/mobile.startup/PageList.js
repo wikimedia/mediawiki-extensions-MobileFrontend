@@ -66,12 +66,13 @@
 		postRender: function () {
 			this.renderPageImages();
 		},
-		template: mw.template.get( 'mobile.pagelist', 'PageList.hogan' ),
+		template: mw.template.get( 'mobile.startup', 'PageList.hogan' ),
 		templatePartials: {
-			item: mw.template.get( 'mobile.pagelist', 'PageListItem.hogan' )
+			item: mw.template.get( 'mobile.startup', 'PageListItem.hogan' )
 		}
 	} );
 
-	M.define( 'mobile.pagelist/PageList', PageList );
+	M.define( 'mobile.startup/PageList', PageList )
+		.deprecate( 'mobile.pagelist/PageList' );
 
 }( mw.mobileFrontend, jQuery ) );
