@@ -69,6 +69,24 @@
       "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_5dcf9b82",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-26T12:27:05Z",
+      "side": 1,
+      "message": "Sounds good.",
+      "parentUuid": "2ef897d1_0cf21bce",
+      "revId": "bdfd88ad1ca0c90f698f8dbc9f896e210d5ce6b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
