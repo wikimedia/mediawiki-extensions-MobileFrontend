@@ -511,7 +511,7 @@ Make the logos configurable.
 Currently, `copyright`, `copyright-width`, and `copyright-height` elements are
 supported.
 
-* `copyright` is the URL of the logo displayed in the footer
+* `copyright` is the URL of the logo displayed in the header and footer
 * `copyright-width` (optional) is the width in pixels of the copyright image
   you want to display
 * `copyright-height` (optional) is the height in pixels of the copyright image
@@ -519,6 +519,8 @@ supported.
 * If the actual `copyright` dimensions are 200x30, then you may want to set the
   width and height to 100 and 15 respectively (in order to support retina
   screens).
+* Note that if -width and -height are not used sysadmin should ensure the image
+used is appropriately sized (suggested dimensions < 120px width and 18px height).
 
 Example:
 ```php
