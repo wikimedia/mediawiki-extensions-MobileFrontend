@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var SearchOverlay, SearchGateway,
+	var SearchOverlay = M.require( 'mobile.search/SearchOverlay' ),
+		SearchGateway = M.require( 'mobile.search.api/SearchGateway' ),
 		router = require( 'mediawiki.router' ),
 		browser = M.require( 'mobile.browser/Browser' ).getSingleton();
 
@@ -15,20 +16,17 @@
 			placeholder = $this.attr( 'placeholder' );
 
 		ev.preventDefault();
-
-		mw.loader.using( [ 'mobile.search.api', 'mobile.search' ] ).done( function () {
-			SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
-			SearchOverlay = M.require( 'mobile.search/SearchOverlay' );
-
-			new SearchOverlay( {
-				router: router,
-				gatewayClass: SearchGateway,
-				api: new mw.Api(),
-				searchTerm: searchTerm,
-				placeholderMsg: placeholder
-			} ).show();
-			router.navigate( '/search' );
-		} );
+		// The loading of SearchOverlay should never be done inside a callback
+		// as this will result in issues with input focus
+		// see https://phabricator.wikimedia.org/T156508#2977463
+		new SearchOverlay( {
+			router: router,
+			gatewayClass: SearchGateway,
+			api: new mw.Api(),
+			searchTerm: searchTerm,
+			placeholderMsg: placeholder
+		} ).show();
+		router.navigate( '/search' );
 	}
 
 	// Only continue on mobile devices as it breaks desktop search
