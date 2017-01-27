@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_2986d76a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-01-27T20:13:22Z",
+      "side": 1,
+      "message": "Do you know why we already load mobile.search at startup?",
+      "revId": "f78a816c5c607732003a89e898a22d7cfd6427ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
