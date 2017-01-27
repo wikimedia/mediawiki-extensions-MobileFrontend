@@ -339,15 +339,20 @@ input.search {
 	text-align: center;
 
 	.circle {
-		border-radius: @iconSize;
+		border-radius: 50%;
 		border: 2px solid @notificationColorRead;
 		box-sizing: border-box;
 		display: inline-block;
+		height: 100%;
 		min-width: @iconSize;
-		padding: 0 5px;
+		padding: 0 2px;
 
 		span {
+			display: inline-block;
 			font-size: 13px;
+			height: 100%;
+			line-height: 13px;
+			vertical-align: middle;
 		}
 	}
 
