@@ -16,6 +16,24 @@
       "revId": "f78a816c5c607732003a89e898a22d7cfd6427ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_c984e360",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-01-27T20:17:20Z",
+      "side": 1,
+      "message": "Loading mobile.search at startup avoids a lag when clicking search input and displaying the search overlay. The SearchOverlay doesn\u0027t show a LoadingOverlay as it loads like the EditorOverlay does.\n\nI believe a while back we had a separate search gateway for beta with different behaviour and we selected between them.\n\nObviously, feel free to git blame if you want to verify that.",
+      "parentUuid": "2ef897d1_2986d76a",
+      "revId": "f78a816c5c607732003a89e898a22d7cfd6427ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
