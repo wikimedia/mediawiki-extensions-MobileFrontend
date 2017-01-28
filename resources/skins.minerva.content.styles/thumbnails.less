@@ -22,16 +22,6 @@
 			// !important is needed because of Bug T87198 for example
 			max-width: 100% !important;
 		}
-
-		/* bug 20030 */
-		.noresize {
-			width: 100%;
-			overflow-x: auto;
-
-			img {
-				max-width: none !important;
-			}
-		}
 	}
 
 	.thumbcaption {
@@ -45,5 +35,10 @@
 
 	.thumbborder {
 		border: 1px solid @colorGray12;
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	.magnify {
+		display: none;
 	}
 }

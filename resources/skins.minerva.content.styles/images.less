@@ -48,7 +48,7 @@
 
 	// Prevent inline styles on images in wikitext
 	// Note we restrict to img's to avoid conflicts with VisualEditor shields
-	// See bug 62460
+	// See bug T64460
 	a > img {
 		// make sure that images in articles don't cause a horizontal scrollbar
 		// on small screens
@@ -56,8 +56,13 @@
 		height: auto !important;
 	}
 
-	// Hide the image magnification icon normally displayed in image captions
-	div.magnify {
-		display: none;
+	// bug T22030
+	.noresize {
+		max-width: 100%;
+		overflow-x: auto;
+
+		a > img {
+			max-width: none !important;
+		}
 	}
 }
