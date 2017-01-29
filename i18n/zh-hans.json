@@ -274,7 +274,7 @@
 	"mobile-frontend-save-settings": "保存",
 	"mobile-frontend-saving-exit-page": "您的贡献仍在保存当中。如果离开，您的贡献将会丢失。您真的想要离开吗？",
 	"mobile-frontend-search-content": "在页面内搜索",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}'''以显示该词语是否出现于其他地方。",
+	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content/zh-hans}}'''以显示该词语是否出现于其他地方。",
 	"mobile-frontend-search-no-results": "没有页面使用此标题。",
 	"mobile-frontend-search-submit": "搜索",
 	"mobile-frontend-settings-images-explain": "加载页面中出现的所有图片内容。",
