@@ -269,8 +269,6 @@ HTML;
 
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
 		Hooks::run( 'MobileSiteOutputPageBeforeExec', [ &$sk, &$tpl ] );
-		// FIXME: Deprecate this hook.
-		Hooks::run( 'SkinMinervaOutputPageBeforeExec', [ &$sk, &$tpl ], '1.26' );
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'footer-site-heading-html', $sitename );
