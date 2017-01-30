@@ -280,22 +280,11 @@ HTML;
 		$places = [
 			'terms-use',
 			'privacy',
+			'desktop-toggle'
 		];
-
-		if ( $ctx->getMFConfig()->get( 'MinervaUseFooterV2' ) || $inBeta ) {
-			$places[] = 'desktop-toggle';
-			$footerlinks = [
-				'places' => $places,
-			];
-		} else {
-			$footerlinks = [
-				'info' => [
-					'mobile-switcher',
-					'mobile-license',
-				],
-				'places' => $places,
-			];
-		}
+		$footerlinks = [
+			'places' => $places,
+		];
 		$tpl->set( 'footerlinks', $footerlinks );
 		return $tpl;
 	}

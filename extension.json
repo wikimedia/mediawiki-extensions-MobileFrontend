@@ -116,7 +116,6 @@
 			"styles": [
 				"resources/skins.minerva.base.styles/ui.less",
 				"resources/skins.minerva.base.styles/pageactions.less",
-				"resources/skins.minerva.base.styles/footer.less",
 				"resources/skins.minerva.base.styles/common.less",
 				"resources/skins.minerva.base.styles/icons.less",
 				"resources/skins.minerva.base.styles/images.less",
@@ -1832,10 +1831,6 @@
 		"MFSchemaEditSampleRate": 0.0625,
 		"MFAllowNonJavaScriptEditing": false,
 		"MinervaAlwaysShowLanguageButton": true,
-		"MinervaUseFooterV2": {
-			"beta": true,
-			"base": true
-		},
 		"MinervaShowCategoriesButton": {
 			"base": false,
 			"beta": true

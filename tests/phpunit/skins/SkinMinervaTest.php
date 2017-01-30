@@ -37,26 +37,18 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			$this->addToBodyAttributes( 'no-js', false )
 		);
 
-		// When `$wgMinervaUseFooterV2' is truthy, then the "feature-footer-v2"
-		// feature class is added to the `class` attribute.
 		$classes = $this->addToBodyAttributes( 'no-js', true );
 
 		$this->assertContains( 'no-js', $classes );
-		$this->assertContains( 'feature-footer-v2', $classes );
 	}
 
 	private function addToBodyAttributes(
-		$bodyClassName,
-		$wgMinervaUseFooterV2
+		$bodyClassName
 	) {
 		$context = MobileContext::singleton();
 
 		$outputPage = $context->getOutput();
 		$outputPage->setProperty( 'bodyClassName', $bodyClassName );
-
-		$this->setMwGlobals( 'wgMinervaUseFooterV2', [
-			'base' => $wgMinervaUseFooterV2
-		] );
 
 		$bodyAttrs = [ 'class' => '' ];
 

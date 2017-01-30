@@ -42,14 +42,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Whether the new footer is to be used
-	 * @return boolean
-	 */
-	public function isFooterV2() {
-		return $this->mobileContext->getConfigVariable( 'MinervaUseFooterV2' );
-	}
-
-	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */
@@ -1329,19 +1321,13 @@ class SkinMinerva extends SkinTemplate {
 	 * Modifies the `<body>` element's attributes.
 	 *
 	 * By default, the `class` attribute is set to the output's "bodyClassName"
-	 * property. If `SkinMinerva#isFooterV2` is truthy (i.e.
-	 * `$wgMinervaUseFooterV2` is truthy), then the "feature-footer-v2" CSS
-	 * feature class is added to the `class` attribute.
+	 * property.
 	 *
 	 * @param OutputPage $out
 	 * @param array $bodyAttrs
 	 */
 	public function addToBodyAttributes( $out, &$bodyAttrs ) {
 		$classes = $out->getProperty( 'bodyClassName' );
-
-		if ( $this->isFooterV2() ) {
-			$classes .= ' feature-footer-v2';
-		}
 
 		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
@@ -1355,6 +1341,7 @@ class SkinMinerva extends SkinTemplate {
 		$styles = [
 			'skins.minerva.base.reset',
 			'skins.minerva.base.styles',
+			'skins.minerva.footerV2.styles',
 			'skins.minerva.content.styles',
 			'skins.minerva.tablet.styles',
 			'mediawiki.ui.icon',
@@ -1372,9 +1359,6 @@ class SkinMinerva extends SkinTemplate {
 		}
 		if ( $this->getOutput()->getRequest()->getText( 'oldid' ) ) {
 			$styles[] = 'mobile.messageBox';
-		}
-		if ( $this->isFooterV2() ) {
-			$styles[] = 'skins.minerva.footerV2.styles';
 		}
 
 		return $styles;

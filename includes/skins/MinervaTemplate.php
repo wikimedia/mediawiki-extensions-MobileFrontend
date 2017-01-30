@@ -91,21 +91,13 @@ class MinervaTemplate extends BaseTemplate {
 			];
 		}
 
-		if ( $this->getSkin()->isFooterV2() ) {
-			// This turns off the footer id and allows us to distinguish the old footer with the new design
-			return [
-				'lastmodified' => $this->getHistoryLinkHtml( $data ),
-				'headinghtml' => $data['footer-site-heading-html'],
-				'licensehtml' => $data['mobile-license'],
-				'lists' => $groups,
-				'v1' => false,
-			];
-		} else {
-			return [
-				'v1' => true,
-				'lists' => $groups,
-			];
-		}
+		// This turns off the footer id and allows us to distinguish the old footer with the new design
+		return [
+			'lastmodified' => $this->getHistoryLinkHtml( $data ),
+			'headinghtml' => $data['footer-site-heading-html'],
+			'licensehtml' => $data['mobile-license'],
+			'lists' => $groups,
+		];
 	}
 
 	/**
@@ -154,8 +146,7 @@ class MinervaTemplate extends BaseTemplate {
 				'timestamp' => $historyLink['data-timestamp']
 			];
 			$templateParser = new TemplateParser( __DIR__ );
-			$templateName = $this->getSkin()->isFooterV2() ? 'history-beta' : 'history';
-			return $templateParser->processTemplate( $templateName, $args );
+			return $templateParser->processTemplate( 'history', $args );
 		} else {
 			return '';
 		}
@@ -259,8 +250,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * @return string
 	 */
 	protected function getPostContentHtml( $data ) {
-		return $this->getSecondaryActionsHtml() .
-			( $this->getSkin()->isFooterV2() ? '' : $this->getHistoryLinkHtml( $data ) );
+		return $this->getSecondaryActionsHtml();
 	}
 
 	/**
