@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_a17d2ee6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-01-31T14:03:17Z",
+      "side": 1,
+      "message": "What did you expect?",
+      "range": {
+        "startLine": 16,
+        "startChar": 57,
+        "endLine": 17,
+        "endChar": 32
+      },
+      "revId": "423dd34f9ef06c9a9d8d6150f98729821d0e96e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_6186161a",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-01-31T14:03:17Z",
+      "side": 1,
+      "message": "I want to note that this could\u0027ve been $mfConfig, since we don\u0027t create instances of GlobalVarConfig with a prefix other than \"wg\" but I accept that this is less fragile a solution.",
+      "range": {
+        "startLine": 627,
+        "startChar": 59,
+        "endLine": 627,
+        "endChar": 68
+      },
+      "revId": "423dd34f9ef06c9a9d8d6150f98729821d0e96e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
