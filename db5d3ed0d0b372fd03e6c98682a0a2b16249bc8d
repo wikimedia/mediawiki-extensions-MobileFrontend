@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_7a28f432",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-01T12:27:12Z",
+      "side": 1,
+      "message": "$configVariable would\u0027ve sufficed ;)",
+      "range": {
+        "startLine": 573,
+        "startChar": 3,
+        "endLine": 573,
+        "endChar": 23
+      },
+      "revId": "db5d3ed0d0b372fd03e6c98682a0a2b16249bc8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
