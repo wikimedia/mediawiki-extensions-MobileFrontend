@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_e5d43fee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4517
+      },
+      "writtenOn": "2017-02-02T23:06:35Z",
+      "side": 1,
+      "message": "Revert to Patch 1.",
+      "revId": "d866a578828a75f6f77a0569ece1d410d7b86ba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
