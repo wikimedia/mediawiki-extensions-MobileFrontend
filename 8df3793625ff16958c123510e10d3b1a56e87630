@@ -16,6 +16,24 @@
       "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_a5de4712",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-02T23:04:36Z",
+      "side": 1,
+      "message": "Please could you define \"too many things\" for me?  I\u0027m not sure how I could simplify this method as I only see it doing 2 things (but maybe you can break it down more?)\n\nFrom what I understand it does the following\n1) Contains logic for creating template data for new and old footer\n2) Loops through data[\u0027footerlinks\u0027] which is created by core to construct some template data that we can actually use for our footer.\nThis involves plucking out the license and converting the rest of the links into Mustache friendly variables. How would I do this if not at the same time and avoid iterating through it twice?\n\n#1 is removed in the follow up where we only need to support one footer.",
+      "parentUuid": "2ef897d1_e5c9df7c",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
