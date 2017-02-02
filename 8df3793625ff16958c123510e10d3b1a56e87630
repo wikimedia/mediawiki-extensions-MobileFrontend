@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_65e96f7b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-02T23:27:19Z",
+      "side": 1,
+      "message": "The code\u0027s hacky.\n\nI agree it\u0027s a pain but that\u0027s how things work right now and how we\u0027ve architected the skin word.\n\nmobileFooter inside MobileFrontend.skin.hooks.php only runs on the mobile site. This is what sets mobile-license and footer-site-heading-html. We can of course make sure those always get set, but MobileFrontend\u0027s hooks are not invoked in desktop so then we\u0027re back to square one...\n\nA second approach would then be to do some \"am i the mobile site?\" checks inside this code. However, remember the long term plan is for Minerva to be in its own repo and not depend on MobileFrontend.\n\nFor this reason MinervaTemplate is supposed to be agnostic about whether it is running in desktop or mobile mode and should not be querying MobileContext to see where it\u0027s running.\n\nSo this seemed like the less evil way of doing this.\n\nA better approach would be for core to set the license field outside an array e.g. \u0027license\u0027 - we could then override it in MobileFrontend\u0027s skin hook and it would always be set.\n\nI guess similar footer-site-heading-html could be consolidated so that it shares code with the code that powers the image in the top left corner of Vector.\n\nThat\u0027s how I\u0027d do it in anyway.. but that\u0027s quite a big chunk of work for a patch to remove some php warnings.",
+      "parentUuid": "2ef897d1_454433bd",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_6515ef9b",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 2
