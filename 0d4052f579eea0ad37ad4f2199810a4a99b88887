@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_d39fceb7",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T15:12:43Z",
+      "side": 0,
+      "message": "I wonder how this is related to the current goal of the patch. Can this be done in a separate patch?",
+      "revId": "0d4052f579eea0ad37ad4f2199810a4a99b88887",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

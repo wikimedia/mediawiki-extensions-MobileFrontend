@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2ef897d1_3362a2d6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T15:12:43Z",
+      "side": 1,
+      "message": "Has this been captured in a task?",
+      "revId": "db5d3ed0d0b372fd03e6c98682a0a2b16249bc8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_7a28f432",
         "filename": "tests/phpunit/MobileContextTest.php",
         "patchSetId": 4
