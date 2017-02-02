@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_ae0629cf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-02T17:15:38Z",
+      "side": 1,
+      "message": "No, but you can trust me to either write a patch or update the card\u0027s acceptance criteria once this is merged!",
+      "parentUuid": "2ef897d1_3362a2d6",
+      "revId": "db5d3ed0d0b372fd03e6c98682a0a2b16249bc8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_7a28f432",
         "filename": "tests/phpunit/MobileContextTest.php",
         "patchSetId": 4
@@ -30,6 +48,30 @@
       "writtenOn": "2017-02-01T12:27:12Z",
       "side": 1,
       "message": "$configVariable would\u0027ve sufficed ;)",
+      "range": {
+        "startLine": 573,
+        "startChar": 3,
+        "endLine": 573,
+        "endChar": 23
+      },
+      "revId": "db5d3ed0d0b372fd03e6c98682a0a2b16249bc8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_0e009dae",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-02T17:15:38Z",
+      "side": 1,
+      "message": "I like fun config variables ;-)",
+      "parentUuid": "2ef897d1_7a28f432",
       "range": {
         "startLine": 573,
         "startChar": 3,
