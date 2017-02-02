@@ -34,6 +34,58 @@
       "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_a5340747",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T23:18:23Z",
+      "side": 1,
+      "message": "Sorry, I should have been clearer. Broadly speaking the function is doing two things: getting data for mobile mode and non-mobile mode. Well constructed functions should only do one thing. As you say it\u0027s also rendering two different versions of the footer, which will be removed in a follow up patch, so that\u0027s not my concern here.",
+      "parentUuid": "2ef897d1_a5de4712",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_454433bd",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T23:18:23Z",
+      "side": 1,
+      "message": "By looking at this line my immediate thought is \"Why `mobile-license` may not be defined?\".\n\nIf we had two functions for getting the footer template data depending on the mobile mode, it would have been much clearer, because when I\u0027m looking at the function that gets the data for non-mobile site, then it\u0027s immediately clear that `mobile-license` is not defined here.",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_6515ef9b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T23:18:23Z",
+      "side": 1,
+      "message": "Here also, separation would make it easy to understand what\u0027s going on. Once I\u0027m reading a function, I should mentally be thinking about mobile only, or desktop only. This kind of `if` checks divert my attention and make it hard for me to keep track of multiple possibilities.\n\nAnd lastly, testing this function will be hard. Had the function not have so many code paths, it would be easy to test.",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
