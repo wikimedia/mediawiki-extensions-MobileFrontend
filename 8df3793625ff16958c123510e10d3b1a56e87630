@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_e5c9df7c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-02T22:55:30Z",
+      "side": 1,
+      "message": "The function is already doing too many things. I suggest we create two helper functions that return data based on the mobile mode. Those functions may delegate to other helper functions, ideally.",
+      "revId": "8df3793625ff16958c123510e10d3b1a56e87630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
