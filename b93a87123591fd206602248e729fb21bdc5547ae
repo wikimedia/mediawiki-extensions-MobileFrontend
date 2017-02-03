@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_ec52e469",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-03T19:18:08Z",
+      "side": 1,
+      "message": "yes, but it\u0027s footer headinghtml (check footer.mustache for future reference)",
+      "parentUuid": "2ef897d1_eca9c479",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_cc13a804",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -87,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_4cd218d7",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-03T19:18:08Z",
+      "side": 1,
+      "message": "yup, I also thought about it, kept it as it is as a peformance quirk (we have to do foreach inside foreach once again just to find $link \u003d\u003d\u003d \u0027copyright\u0027)",
+      "parentUuid": "2ef897d1_ec7ae41e",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_6c95d434",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -98,6 +134,24 @@
       "writtenOn": "2017-02-03T18:51:00Z",
       "side": 1,
       "message": "If we don\u0027t want the \u0027info\u0027 key, we should abort early in the loop (probably at line 127).",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_acc3cc09",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-03T19:18:08Z",
+      "side": 1,
+      "message": "we cannot do that, if we abort early in the loop then we won\u0027t enter into `foreach($links as $link){}` statement, if the copyright link is inside info category we wouldn\u0027t pick it up",
+      "parentUuid": "2ef897d1_6c95d434",
       "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
