@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_acb2ace2",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "Along with my comment to line 135 this code should be moved to a function.",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_eca9c479",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "The function documentation says that it returns template data for the footer, but here we\u0027re returning data for the heading too.",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_cc13a804",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "The description is not clear.",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_ec1664f5",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "missing types in documentation and function signature",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_ec7ae41e",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "The comment makes it sound like we\u0027re dealing with specific mode but what the code is really doing is that it\u0027s setting a variable value. \n\nCould we extract this funcitonality to a function where we can directly access the key \u0027copyright\u0027 (without using a loop) and get the license link if we wanted.",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_6c95d434",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T18:51:00Z",
+      "side": 1,
+      "message": "If we don\u0027t want the \u0027info\u0027 key, we should abort early in the loop (probably at line 127).",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
