@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_0c8300af",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-03T19:31:51Z",
+      "side": 1,
+      "message": "Does it really make sense to create a method for this only to see it removed in say 24 hours?\nhttps://gerrit.wikimedia.org/r/335080\n\nI think we are making this harder for ourselves and I think merging the above patch will help us come to a more straightforward solution.",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_eca9c479",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
