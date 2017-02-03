@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_aceaac71",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T19:27:49Z",
+      "side": 1,
+      "message": "cool",
+      "parentUuid": "2ef897d1_ec52e469",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_cc13a804",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -123,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_8ceff081",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T19:27:49Z",
+      "side": 1,
+      "message": "Isn\u0027t data[\u0027footerlinks\u0027] well defined somewhere in core so that we can query the \u0027copyright\u0027 key directly? Or is it arbitrary? If it is arbitrary, looks like we\u0027re blindly using any \u0027copyright\u0027 thats supplied, or the last one if there are many.",
+      "parentUuid": "2ef897d1_4cd218d7",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_6c95d434",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -152,6 +188,24 @@
       "side": 1,
       "message": "we cannot do that, if we abort early in the loop then we won\u0027t enter into `foreach($links as $link){}` statement, if the copyright link is inside info category we wouldn\u0027t pick it up",
       "parentUuid": "2ef897d1_6c95d434",
+      "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_8c96d0f1",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T19:27:49Z",
+      "side": 1,
+      "message": "Looks like another good reason to move copyright away from this file. We\u0027re keeping it for performance reasons, but here we\u0027re throwing away the array constructed earlier because the category is \u0027info\u0027.",
+      "parentUuid": "2ef897d1_acc3cc09",
       "revId": "b93a87123591fd206602248e729fb21bdc5547ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
