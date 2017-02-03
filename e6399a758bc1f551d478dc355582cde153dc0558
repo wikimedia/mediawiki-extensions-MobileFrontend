@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_27101753",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T20:20:37Z",
+      "side": 1,
+      "message": "Is it on purpose that we define header related rules in ui.less, while footer gets its own file?",
+      "revId": "e6399a758bc1f551d478dc355582cde153dc0558",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_e719df7f",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-03T20:20:37Z",
+      "side": 1,
+      "message": "Probably, it\u0027s the right time to move the above rules outside this file.",
+      "revId": "e6399a758bc1f551d478dc355582cde153dc0558",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
