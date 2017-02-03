@@ -11,6 +11,8 @@ class ArticlePage
   h1(:first_heading, id: 'section_0')
   # standalone history link
   a(:standalone_edit_history_link, css: '.last-modified-bar a')
+  # beta mode indicator
+  a(:beta_mode_indicator, css: '.branding-box sup')
 
   # left nav
   nav(:navigation, css: 'nav')
