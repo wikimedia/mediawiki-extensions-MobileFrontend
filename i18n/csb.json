@@ -4,5 +4,14 @@
 			"Kirsan"
 		]
 	},
-	"mobile-frontend-view": "Mòbilnô wersjô."
+	"mobile-frontend-language-article-heading": "Przeczëtôj w jinszim jãzëkù",
+	"mobile-frontend-last-modified-date": "Òstatnô edicjô: $1, $2",
+	"mobile-frontend-main-menu-login": "Wlogùj mie",
+	"mobile-frontend-main-menu-watchlist": "Lësta ùzérónëch artiklów",
+	"mobile-frontend-terms-text": "Warënczi kòrzëstaniô",
+	"mobile-frontend-view": "Mòbilnô wersjô.",
+	"mobile-frontend-view-desktop": "Klasycznô",
+	"mobile-frontend-view-mobile": "Mòbilnô",
+	"tag-mobile_edit": "Edicjô z mòbilnégò ùrządzeniô",
+	"tag-mobile_web_edit": "Edicjô z mòbilny wersje"
 }
