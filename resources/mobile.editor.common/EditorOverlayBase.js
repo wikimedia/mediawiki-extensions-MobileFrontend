@@ -207,6 +207,10 @@
 			} );
 
 			window.location = mw.util.getUrl( title );
+			if ( self.sectionLine ) {
+				// since the path and only the hash has changed it has not triggered a refresh so forcefully refresh
+				window.location.reload();
+			}
 		},
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.
