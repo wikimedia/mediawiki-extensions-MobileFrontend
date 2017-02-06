@@ -1,7 +1,7 @@
 @import 'minerva.variables';
 @import 'minerva.mixins';
 
-.feature-footer-v2 {
+body {
 	background-color: @chromeColor;
 
 	#mw-mf-page-center {
@@ -14,7 +14,7 @@
 	padding-bottom: 32px;
 }
 
-.feature-footer-v2 footer {
+footer {
 	border-top: solid 1px @footerBorderColor;
 	overflow: auto;
 	padding-bottom: 6px;
@@ -82,12 +82,12 @@
 	}
 }
 
-.rtl.feature-footer-v2 footer .indicator:before {
+.rtl footer .indicator:before {
 	.transform( rotate( 90deg ) );
 }
 
 @media ( min-width: @deviceWidthTablet ) {
-	.feature-footer-v2 footer {
+	footer {
 		.last-modified-bar {
 			padding-left: 0;
 			padding-right: 0;

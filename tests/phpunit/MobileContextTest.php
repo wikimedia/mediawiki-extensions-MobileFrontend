@@ -570,12 +570,12 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testGetConfigVariable(
 		$expected,
-		$wgMinervaUseFooterV2,
+		$madeUpConfigVariable,
 		$mobileMode = MobileContext::MODE_STABLE
 	) {
 		$this->setMwGlobals( [
 			'wgMFEnableBeta' => true,
-			'wgMinervaUseFooterV2' => $wgMinervaUseFooterV2
+			'wgMFMadeUpConfigVariable' => $madeUpConfigVariable
 		] );
 
 		$context = MobileContext::singleton();
@@ -583,19 +583,19 @@ class MobileContextTest extends MediaWikiTestCase {
 
 		$this->assertEquals(
 			$expected,
-			$context->getConfigVariable( 'MinervaUseFooterV2' )
+			$context->getConfigVariable( 'MFMadeUpConfigVariable' )
 		);
 	}
 
 	public static function provideGetConfigVariable() {
-		$wgMinervaUseFooterV2 = [
+		$madeUpConfigVariable = [
 			'beta' => 'bar',
 			'base' => 'foo',
 		];
 
 		return [
-			[ 'foo', $wgMinervaUseFooterV2, MobileContext::MODE_STABLE ],
-			[ 'bar', $wgMinervaUseFooterV2, MobileContext::MODE_BETA ],
+			[ 'foo', $madeUpConfigVariable, MobileContext::MODE_STABLE ],
+			[ 'bar', $madeUpConfigVariable, MobileContext::MODE_BETA ],
 
 			[ null, [ 'alpha' => 'baz' ] ],
 
