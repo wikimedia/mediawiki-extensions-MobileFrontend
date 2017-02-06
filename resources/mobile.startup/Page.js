@@ -125,8 +125,8 @@
 			if ( $( '.mw-mobilefrontend-leadsection' ).length ) {
 				return $( '.mw-mobilefrontend-leadsection' );
 			}
-			// FIXME: Remove this, when the cache has cleared - bug T122471
-			return this.$( '> div > div' ).eq( 0 );
+			// no lead section found
+			return null;
 		},
 
 		/**

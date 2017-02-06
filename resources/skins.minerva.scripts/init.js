@@ -228,12 +228,6 @@
 	$( function () {
 		// Update anything else that needs enhancing (e.g. watchlist)
 		initModifiedInfo();
-		// FIXME: Drop id selector when footer v2 in stable (T141002)
-		initHistoryLink( $( '#mw-mf-last-modified a, .last-modifier-tagline a' ) );
-	} );
-
-	// FIXME: Remove after cache clears (T130849) - this removes any artifacts associated with previous EventLogging
-	mw.requestIdleCallback( function () {
-		settings.remove( 'mobile-language-button-tap-count' );
+		initHistoryLink( $( '.last-modifier-tagline a' ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );

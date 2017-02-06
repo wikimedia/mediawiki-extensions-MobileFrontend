@@ -168,16 +168,6 @@ body {
 				width: 100%;
 			}
 		}
-		// FIXME: remove when cache clears
-		> .search,
-		> .fulltext-search {
-			display: inline-block;
-			float: none;
-		}
-		// FIXME: remove when cache clears
-		> .search {
-			max-width: 180px;
-		}
 	}
 
 	.content h2 {
@@ -270,14 +260,6 @@ input.search {
 	}
 }
 
-.stable {
-	// FIXME: Exists only for caching reasons (T139794)
-	#page-secondary-actions #language-switcher,
-	#page-secondary-actions .language-selector {
-		margin-top: 1em;
-	}
-}
-
 #page-secondary-actions {
 	// Clears floating on table of contents on stub pages.
 	clear: both;
@@ -285,7 +267,11 @@ input.search {
 	a {
 		margin: 10px 2px 2px 0;
 	}
+	.language-selector {
+		margin-top: 1em;
+	}
 }
+
 .truncated-text {
 	white-space: nowrap;
 	overflow: hidden;

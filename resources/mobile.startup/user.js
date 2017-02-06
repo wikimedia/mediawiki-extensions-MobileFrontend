@@ -1,12 +1,10 @@
 ( function ( M, $ ) {
-	var user, requestedClear;
-
 	/**
 	 * Utility library for looking up details on the current user
 	 * @class user
 	 * @singleton
 	 */
-	user = {
+	var user = {
 		/* @see mediaWiki.user */
 		tokens: mw.user.tokens,
 		/* @see mediaWiki.user */
@@ -41,13 +39,6 @@
 		* @return {string}
 		*/
 		getSessionId: function () {
-			// FIXME: Remove this when we're confident enough old IDs have been removed.
-			if ( !requestedClear ) {
-				requestedClear = true;
-				mw.requestIdleCallback( function () {
-					mw.storage.remove( 'sessionId' );
-				} );
-			}
 			return mw.user.sessionId();
 		},
 
