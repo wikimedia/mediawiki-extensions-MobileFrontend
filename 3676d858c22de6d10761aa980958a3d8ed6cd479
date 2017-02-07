@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_63927502",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T11:32:33Z",
+      "side": 0,
+      "message": "This line is from January 2016!",
+      "revId": "3676d858c22de6d10761aa980958a3d8ed6cd479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_e38665bd",
+        "filename": "resources/mobile.startup/user.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T11:32:33Z",
+      "side": 0,
+      "message": "These lines are from February 2016!",
+      "revId": "3676d858c22de6d10761aa980958a3d8ed6cd479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_a3a74d4b",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T11:32:33Z",
+      "side": 0,
+      "message": "These changes are from June 2016!",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 180,
+        "endChar": 3
+      },
+      "revId": "3676d858c22de6d10761aa980958a3d8ed6cd479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_83a2113a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T11:32:33Z",
+      "side": 0,
+      "message": "These changes are from July 2016!",
+      "range": {
+        "startLine": 273,
+        "startChar": 0,
+        "endLine": 279,
+        "endChar": 1
+      },
+      "revId": "3676d858c22de6d10761aa980958a3d8ed6cd479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_23723de3",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T11:32:33Z",
+      "side": 0,
+      "message": "These changes are from October 2016!",
+      "range": {
+        "startLine": 231,
+        "startChar": 0,
+        "endLine": 237,
+        "endChar": 56
+      },
+      "revId": "3676d858c22de6d10761aa980958a3d8ed6cd479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
