@@ -2042,6 +2042,10 @@
 			"base": false,
 			"beta": true
 		},
+		"MinervaUseHeaderV2": {
+			"beta": true,
+			"base": false
+		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"

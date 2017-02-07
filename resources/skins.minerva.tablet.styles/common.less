@@ -9,12 +9,11 @@ A file for css that optimises the Minerva skin on larger devices.
 @media all and ( min-width: @deviceWidthTablet ) {
 	.client-js {
 		#searchIcon {
-			// Use visibility to maintain layout of the chrome header.
-			visibility: hidden;
+			display: none;
 		}
 	}
 
-	.header {
+	.feature-header-v2 .header {
 		.branding-box {
 			width: @brandingBoxWidth;
 		}

@@ -92,6 +92,9 @@ class SkinMinerva extends SkinTemplate {
 		// Set the links for page secondary actions
 		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
+		// FIXME: Remove when header v2 is in stable.
+		$tpl->set( 'headerV2', $this->mobileContext->getConfigVariable( 'MinervaUseHeaderV2' ) );
+
 		// Construct various Minerva-specific interface elements
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );

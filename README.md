@@ -344,6 +344,22 @@ Define a set of params that should be passed in every gateway query.
 ```
 
 
+#### $wgMinervaUseHeaderV2
+
+A temporary configuration variable to control display of a new header which converts the search input
+to an icon and shows the site logo.
+
+The config variable currently controls whether the styles and template for new header should be invoked.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'beta' => true,
+    'base' => false,
+  ]
+```
+
 #### $wgMinervaPageActions
 
 Controls which page actions, if any, are displayed. Allowed: `edit`, `watch`, `talk`, and

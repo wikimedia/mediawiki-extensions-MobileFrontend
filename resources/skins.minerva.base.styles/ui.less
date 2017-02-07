@@ -39,9 +39,11 @@ body {
 	}
 }
 
-.search-box {
+.header .search-box {
 	// FIXME: remove when micro.tap in stable and rule from common-js.less too
 	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
+	// FIXME: Remove when cache clears
+	width: 100%;
 
 	.search {
 		@searchIconSize: 20px;
@@ -111,6 +113,8 @@ body {
 
 	// Search field
 	.main,
+	// FIXME: form selector is only necessary until cache has cleared. Please remove promptly (T157987)
+	> form,
 	// Spinner
 	> div {
 		vertical-align: middle;
@@ -166,10 +170,15 @@ body {
 .feature-header-v2 {
 	.search-box {
 		display: none;
+		width: auto;
+	}
+}
 
-		.search {
-			margin-top: 0;
-		}
+// FIXME: Fold into .header css rules when cache has cleared
+.feature-header-v2,
+.feature-header-v1 {
+	.header .search-box .search {
+		margin-top: 0;
 	}
 }
 
@@ -188,6 +197,8 @@ body {
 
 // Make search input more visible for users on small screens.
 // Opera Mini doesn't support placeholders.
+// FIXME: As soon as HeaderV2 feature flag is removed this entire block can disappear as a search icon
+// will now be shown on Opera Mini instead.
 @media all and ( max-width: @wgMFDeviceWidthMobileSmall ) {
 	.header {
 		.search {
@@ -279,10 +290,61 @@ input.search {
 	}
 }
 
+// FIXME: Remove block when feature-header-v1 no longer supported
+.client-js {
+	.feature-header-v1 .search-box {
+		padding-right: 1em;
+	}
+	.is-authenticated {
+		.feature-header-v1 .search-box {
+			padding-right: 0;
+		}
+	}
+}
+
+// FIXME: Remove block when feature-header-v1 no longer supported
+.feature-header-v1 {
+	#searchIcon {
+		// This is overriden for non-JS clients (see fixme block below)
+		display: none;
+	}
+}
+
 // Toggling indicators are unusable without JavaScript
 .client-nojs {
 	.section-heading .indicator {
 		display: none;
+	}
+
+	// FIXME: Remove when cache has cleared (T157987)
+	.header > form {
+		width: auto;
+		vertical-align: middle;
+
+		.button-wrapper,
+		.fulltext-search {
+			background-color: #36c;
+			border-radius: 2px;
+			cursor: pointer;
+			float: right;
+			margin-left: 0.5em;
+			padding: 0.375em 0;
+		}
+
+		> .input-wrapper {
+			overflow: hidden;
+		}
+
+		input.search {
+			margin-right: 0;
+			padding-right: 0.1em;
+			width: 100%;
+		}
+	}
+
+	// FIXME: Remove when feature-header-v1 no longer supported
+	.feature-header-v1 #searchIcon {
+		display: block;
 	}
 }
 
