@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ef897d1_6d8b84c5",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-07T00:09:06Z",
+      "side": 1,
+      "message": "I think this is just historic reasons. Ideally we\u0027d just have one less file and let LESS handle imports. I\u0027m not sure why we list files in extension.json like this. Maybe a good time to revisit that as an increase in scope to the bundler work [https://phabricator.wikimedia.org/T144402]?",
+      "parentUuid": "2ef897d1_27101753",
+      "revId": "e6399a758bc1f551d478dc355582cde153dc0558",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_e719df7f",
         "filename": "resources/skins.minerva.base.styles/footer.less",
         "patchSetId": 1
