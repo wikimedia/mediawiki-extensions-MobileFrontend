@@ -4,7 +4,8 @@
 			"Babanwalia",
 			"Satdeep gill",
 			"ਪ੍ਰਚਾਰਕ",
-			"Tow"
+			"Tow",
+			"Sony dandiwal"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ",
@@ -25,7 +26,7 @@
 	"mobile-frontend-main-menu-button-tooltip": "ਮੁੱਖ ਮੀਨੂ ਖੋਲ੍ਹੋ",
 	"mobile-frontend-main-menu-login": "ਦਾਖਲ",
 	"mobile-frontend-main-menu-nearby": "ਨੇੜੇ",
-	"mobile-frontend-main-menu-settings": "ਪਸੰਦਾੰ",
+	"mobile-frontend-main-menu-settings": "ਪਸੰਦਾਂ",
 	"mobile-frontend-main-menu-watchlist": "ਨਿਗਰਾਨ-ਸੂਚੀ",
 	"mobile-frontend-meta-data-issues-talk": "ਇਸ ਗੱਲਬਾਤ ਸਫ਼ੇ ਬਾਬਤ",
 	"mobile-frontend-meta-data-issues-header-talk": "ਇਸ ਸਫ਼ੇ ਬਾਬਤ",
@@ -50,6 +51,5 @@
 	"tag-mobile_edit": "ਮੋਬਾਈਲ ਰਾਹੀਂ ਸੋਧ",
 	"tag-mobile_web_edit": "ਮੋਬਾਈਲੀ ਵੈੱਬ ਸੋਧ",
 	"mobile-frontend-pageaction-edit-tooltip": "ਇਸ ਸਫ਼ੇ ਦਾ ਅਗੇਤਰਾ ਹਿੱਸਾ ਸੋਧੋ।",
-	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।",
-	"mobile-frontend-donate-button-label": "ਦਾਨ"
+	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।"
 }
