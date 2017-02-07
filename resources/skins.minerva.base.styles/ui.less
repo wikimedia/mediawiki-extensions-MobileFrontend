@@ -53,6 +53,9 @@ body {
 		background-size: @searchIconSize @searchIconSize;
 		border-radius: @borderRadius;
 		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
+		// FIXME: Necessary to support rendering of cached HTML. Move when new header in production
+		// and cache has cleared.
+		margin-top: 0.4em;
 	}
 }
 
@@ -150,10 +153,6 @@ body {
 		}
 	}
 
-	.search-box {
-		display: none;
-	}
-
 	> .header-title {
 		vertical-align: middle;
 	}
@@ -162,6 +161,18 @@ body {
 		min-height: @headerHeight;
 	}
 }
+
+// FIXME: Fold into .header css rules when cache has cleared
+.feature-header-v2 {
+	.search-box {
+		display: none;
+
+		.search {
+			margin-top: 0;
+		}
+	}
+}
+
 .header > form,
 .overlay-header .overlay-title {
 	padding: 0.15em 0;

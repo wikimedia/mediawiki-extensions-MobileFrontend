@@ -19,6 +19,11 @@
 
 	.search-box {
 		display: block;
+
+		input {
+			// FIXME: Not necessary when cache has cleared (T157987)
+			margin-top: 0;
+		}
 	}
 
 	.results,
@@ -208,7 +213,7 @@
 }
 
 @media all and ( min-width: @deviceWidthTablet ) {
-	.search-overlay {
+	.feature-header-v2 .search-overlay {
 		.search-box {
 			display: table-cell;
 		}
