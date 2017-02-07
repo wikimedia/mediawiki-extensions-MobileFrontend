@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_c33fe91e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T10:50:49Z",
+      "side": 1,
+      "message": "The Resource Loader will output a comment at the top of its output, which will have no visible effect.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "b8fd43a8f7d69c06465f94e6e20f13b911e802d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_63303554",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-07T10:50:49Z",
+      "side": 1,
+      "message": "You agreed with Bmansurov that these rules should be defined elsewhere. Are you going to move \u0027em?",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 1
+      },
+      "revId": "b8fd43a8f7d69c06465f94e6e20f13b911e802d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
