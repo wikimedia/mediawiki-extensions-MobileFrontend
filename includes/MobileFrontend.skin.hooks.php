@@ -250,13 +250,6 @@ JAVASCRIPT;
 		$desktopToggler = Html::element( 'a',
 			[ 'id' => "mw-mf-display-toggle", "href" => $desktopUrl ], $desktop );
 		$sitename = self::getSitename( true );
-		$siteheading = Html::rawElement( 'h2', [], $sitename );
-		$switcherHtml = <<<HTML
-{$siteheading}
-<ul>
-	<li>{$mobile}</li><li>{$desktopToggler}</li>
-</ul>
-HTML;
 
 		// Generate the licensing text displayed in the footer of each page.
 		// See Skin::getCopyright for desktop equivalent.
@@ -270,7 +263,6 @@ HTML;
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
 		Hooks::run( 'MobileSiteOutputPageBeforeExec', [ &$sk, &$tpl ] );
 
-		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'footer-site-heading-html', $sitename );
 		$tpl->set( 'desktop-toggle', $desktopToggler );
 		$tpl->set( 'mobile-license', $licenseText );
