@@ -9,9 +9,16 @@ body {
 	height: 100%;
 }
 
+body {
+	background-color: @chromeColor;
+}
+
+// FIXME: should we use .mw-body here instead?
 #content {
 	// avoid margin collapsing (see T147956)
 	border-top: solid 1px transparent;
+	background-color: @skinContentBgColor;
+	padding-bottom: 32px;
 }
 
 .header-container {
