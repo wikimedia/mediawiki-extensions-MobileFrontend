@@ -476,6 +476,8 @@ class ApiMobileView extends ApiBase {
 	 * @param Title $title
 	 * @param ParserOutput $parserOutput
 	 * @param boolean $useTidy whether the provided HTML should be tidied (optional)
+	 * @param integer $revId this is a temporary parameter to avoid debug log warnings.
+	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
 	 *  - refsections: [] where all keys are section ids of sections with refs
 	 *    that contain references
@@ -484,7 +486,7 @@ class ApiMobileView extends ApiBase {
 	 *      or of length 1 when there is a mismatch.
 	 */
 	protected function parseSectionsData( $html, Title $title, ParserOutput $parserOutput,
-		$useTidy = false
+		$useTidy = false, $revId = null
 	) {
 		$data = [];
 		$data['sections'] = $parserOutput->getSections();
@@ -496,7 +498,7 @@ class ApiMobileView extends ApiBase {
 		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 		if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
 			wfDebugLog( 'mobile', __METHOD__ . "(): mismatching number of " .
-				"sections from parser and split on page {$title->getPrefixedText()}, oldid=$latest" );
+				"sections from parser and split on page {$title->getPrefixedText()}, oldid=$revId" );
 			// We can't be sure about anything here, return all page HTML as one big section
 			$chunks = [ $html ];
 			$data['sections'] = [];
@@ -624,7 +626,7 @@ class ApiMobileView extends ApiBase {
 			];
 		} else {
 			$data = $this->parseSectionsData( $html, $title, $parserOutput,
-				$mfConfig->get( 'MFTidyMobileViewSections' ) && $this->getConfig()->get( 'UseTidy' ) );
+				$mfConfig->get( 'MFTidyMobileViewSections' ) && $this->getConfig()->get( 'UseTidy' ), $latest );
 			if ( $this->usePageImages ) {
 				$image = $this->getPageImage( $title );
 				if ( $image ) {
