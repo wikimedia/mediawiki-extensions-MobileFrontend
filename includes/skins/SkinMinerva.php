@@ -1341,7 +1341,6 @@ class SkinMinerva extends SkinTemplate {
 		$styles = [
 			'skins.minerva.base.reset',
 			'skins.minerva.base.styles',
-			'skins.minerva.footerV2.styles',
 			'skins.minerva.content.styles',
 			'skins.minerva.tablet.styles',
 			'mediawiki.ui.icon',
