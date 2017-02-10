@@ -4,11 +4,17 @@
 			"Kirsan"
 		]
 	},
+	"mobile-frontend-copyright": "Zamkłosc ùprzëstãpnianô na licencje $1, jeżlë nie pòdóno jinaczi.",
+	"mobile-frontend-history": "Òbaczë historiã zjinaków ti starnë.",
+	"mobile-frontend-home-button": "Przédnô",
 	"mobile-frontend-language-article-heading": "Przeczëtôj w jinszim jãzëkù",
 	"mobile-frontend-last-modified-date": "Òstatnô edicjô: $1, $2",
 	"mobile-frontend-main-menu-login": "Wlogùj mie",
 	"mobile-frontend-main-menu-logout": "Wëlogùj",
+	"mobile-frontend-main-menu-nearby": "W òkòlim",
 	"mobile-frontend-main-menu-watchlist": "Lësta ùzérónëch artiklów",
+	"mobile-frontend-nearby-title": "W òkòlim",
+	"mobile-frontend-random-button": "Kawlowò",
 	"mobile-frontend-terms-text": "Warënczi kòrzëstaniô",
 	"mobile-frontend-view": "Mòbilnô wersjô.",
 	"mobile-frontend-view-desktop": "Klasycznô",
