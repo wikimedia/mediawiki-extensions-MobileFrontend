@@ -46,6 +46,8 @@
 	"mobile-frontend-categories-hidden": "組織",
 	"mobile-frontend-changeslist-ip": "匿名使用者",
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
+	"mobile-frontend-cite-error-title": "載入引文錯誤",
+	"mobile-frontend-cite-error": "由於一個損毀的修訂識別碼，在試圖載入引文時發生問題。",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[User:$1|$1]]}} 做的所有編輯",
 	"mobile-frontend-cookies-required": "切換檢視模式需要開啟 Cookies，請先開啟後再重試。",
