@@ -233,6 +233,30 @@
       "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_e08a571c",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T22:40:35Z",
+      "side": 1,
+      "message": "Yes, I was talking about \"feature-header-v1\" (highlighted). I see only one rule that uses this class: line 177 of https://gerrit.wikimedia.org/r/#/c/336353/5/resources/skins.minerva.base.styles/ui.less\n\nThat rule also uses V2, which means we can remove these selectors completely. Then there won\u0027t be need for this class.",
+      "parentUuid": "ee375f69_a0e8cfde",
+      "range": {
+        "startLine": 3,
+        "startChar": 70,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
