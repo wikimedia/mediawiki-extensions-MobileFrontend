@@ -100,6 +100,10 @@
 				$container = ns === 14 ? $( '#bodyContent' ) :
 					M.getCurrentPage().getLeadSectionElement();
 
+			if ( $container === null ) {
+				return;
+			}
+
 			if ( ns === 0 ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues' ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );

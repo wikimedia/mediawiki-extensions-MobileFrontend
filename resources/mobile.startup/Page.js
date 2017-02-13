@@ -104,7 +104,7 @@
 		/**
 		 * Get the lead section of the page view.
 		 * @method
-		 * @return {jQuery.Object}
+		 * @return {jQuery.Object|null}
 		 */
 		getLeadSectionElement: function () {
 			/*
