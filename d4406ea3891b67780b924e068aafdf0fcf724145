@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee375f69_c021534d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee375f69_4d681c85",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee375f69_cd0aecd5",
         "filename": "README.md",
         "patchSetId": 5
@@ -30,6 +48,30 @@
       "writtenOn": "2017-02-13T21:32:24Z",
       "side": 1,
       "message": "This part is only related to small screens.",
+      "range": {
+        "startLine": 348,
+        "startChar": 76,
+        "endLine": 349,
+        "endChar": 10
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_801cab19",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee375f69_cd0aecd5",
       "range": {
         "startLine": 348,
         "startChar": 76,
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "ee375f69_4016a3f7",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee375f69_adf208de",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee375f69_4dffbca7",
         "filename": "extension.json",
         "patchSetId": 5
@@ -70,6 +130,24 @@
       "writtenOn": "2017-02-13T21:32:24Z",
       "side": 1,
       "message": "Documentation says this value is false by default.",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_6013a706",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2046,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee375f69_4dffbca7",
       "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -93,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "ee375f69_00d73b29",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Whoops this can go and was for me during dev :) Removing.",
+      "parentUuid": "ee375f69_ede57007",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee375f69_8deb84db",
         "filename": "includes/skins/minerva.mustache",
         "patchSetId": 5
@@ -104,6 +200,30 @@
       "writtenOn": "2017-02-13T21:32:24Z",
       "side": 1,
       "message": "I don\u0027t think we need this class.",
+      "range": {
+        "startLine": 3,
+        "startChar": 70,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_a0e8cfde",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:31:30Z",
+      "side": 1,
+      "message": "Can you clarify which class you are talking about?\nfeature-header-v1 allows us to differentiate the cached HTML from the new HTML and feature-header-v2 allows us to roll out the new header and new styles.\n\nBoth classes are being used - are you saying there\u0027s an opportunity to refactor and not need those?",
+      "parentUuid": "ee375f69_8deb84db",
       "range": {
         "startLine": 3,
         "startChar": 70,
