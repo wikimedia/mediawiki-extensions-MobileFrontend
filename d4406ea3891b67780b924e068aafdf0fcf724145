@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee375f69_4d681c85",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "Could we mention this variable in the commit message?",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_cd0aecd5",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "This part is only related to small screens.",
+      "range": {
+        "startLine": 348,
+        "startChar": 76,
+        "endLine": 349,
+        "endChar": 10
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_adf208de",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "Wrong comment, below also.",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_4dffbca7",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 2046,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "Documentation says this value is false by default.",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_ede57007",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "Can you clarify what action should be taken with this FIXME?",
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_8deb84db",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T21:32:24Z",
+      "side": 1,
+      "message": "I don\u0027t think we need this class.",
+      "range": {
+        "startLine": 3,
+        "startChar": 70,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
