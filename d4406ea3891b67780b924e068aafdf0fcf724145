@@ -257,6 +257,30 @@
       "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_00d97b2c",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-13T22:58:00Z",
+      "side": 1,
+      "message": "Mm.. I see what you mean.\nI\u0027m going to wait till https://gerrit.wikimedia.org/r/#/c/336352/1 is done then I\u0027ll revisit this. I had thought there was a good reason but maybe that\u0027s not the case no more.",
+      "parentUuid": "ee375f69_e08a571c",
+      "range": {
+        "startLine": 3,
+        "startChar": 70,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "d4406ea3891b67780b924e068aafdf0fcf724145",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
