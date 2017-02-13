@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee375f69_aacf4e81",
+        "filename": "includes/skins/minerva.mustache",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T18:43:19Z",
+      "side": 1,
+      "message": "We should add a FIXME here too so that the change doesn\u0027t slip our attention once cache clears.",
+      "revId": "48660fae63ef020494e8406d8f2eea7e17209173",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_eabc76d7",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-13T18:43:19Z",
+      "side": 1,
+      "message": "Although this fixes the vertical placement of the search box, the box is still not correctly aligned horizontally on a tablet size. The horizontal alignment issue is clearly visible when you open the search overlay. I don\u0027t think it\u0027s a blocker, but it maybe worth noting in the commit message.",
+      "revId": "48660fae63ef020494e8406d8f2eea7e17209173",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
