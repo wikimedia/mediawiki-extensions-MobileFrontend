@@ -204,7 +204,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} «I nærheten» har problemer.",
 	"mobile-frontend-nearby-error-guidance": "Prøv å friske opp plasseringen din.",
-	"mobile-frontend-nearby-loading": "Laster inn emner nær din nåværende posisjon",
+	"mobile-frontend-nearby-loading": "Laster inn emner nær der du er",
 	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} «I nærheten» finner ikke ut av hvor du er… prøv igjen?",
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Prøv i et åpent område med bedre dekning.",
 	"mobile-frontend-nearby-noresults": "Du befinner deg visst utenfor allfarvei… Det ble ikke funnet noen sider om temaer i nærheten.",

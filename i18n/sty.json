@@ -4,8 +4,10 @@
 			"Khanmarat"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "Төсәтеүнең аңнатмасы йуҡ",
 	"mobile-frontend-copyright": "Мәғлүмәтне $1-та ҡарап пулаты (әгәр пашҡасы күрсәтелмәсә).",
 	"mobile-frontend-editor-edit": "Төсәткәле",
+	"mobile-frontend-featured-article": "Пөгөнкө сайланҡан материал",
 	"mobile-frontend-home-button": "Паш питкә",
 	"mobile-frontend-language-article-heading": "Пашҡа телтә уғығалы",
 	"mobile-frontend-last-modified-date": "$1 $2-гә суңҡы тапҡыр төсәтелгән",
@@ -14,6 +16,7 @@
 	"mobile-frontend-main-menu-nearby": "Йыуыҡта",
 	"mobile-frontend-main-menu-settings": "Ҡоролошлар",
 	"mobile-frontend-main-menu-watchlist": "Көсәтеү күцермәлек",
+	"mobile-frontend-news-items": "Йаңалыҡлар",
 	"mobile-frontend-placeholder": "{{SITENAME}} эцтә эстәгәле",
 	"mobile-frontend-privacy-link-text": "Серне саҡлау",
 	"mobile-frontend-random-button": "Көтөлмәгән",

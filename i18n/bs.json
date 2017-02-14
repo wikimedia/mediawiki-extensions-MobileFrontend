@@ -275,7 +275,7 @@
 	"mobile-frontend-talk-topic-error-spam": "Tema je odbijena jer je sadržavala neželjeni sadržaj.",
 	"mobile-frontend-talk-topic-error-badtoken": "Došlo je do greške na serveru. Vaša se izmjena ne može sačuvati. Pokušajte osvježiti stranicu.",
 	"mobile-frontend-talk-topic-wait": "Čuvanje Vaše teme; molimo, sačekajte.",
-	"mobile-frontend-terms-text": "Uslovi korišćenja",
+	"mobile-frontend-terms-text": "Uslovi korištenja",
 	"mobile-frontend-thanked-notice": "Rekli smo {{GENDER:$1|korisniku|korisnici}} $1 da Vam se {{GENDER:$2|svidjela}} njihova izmjena.",
 	"mobile-frontend-user-button-tooltip": "Prikaži moja obavještenja",
 	"mobile-frontend-user-newmessages": "Imate nove poruke na Vašoj stranici za razgovor",

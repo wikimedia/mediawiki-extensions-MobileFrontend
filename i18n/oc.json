@@ -24,6 +24,7 @@
 	"mobile-frontend-donate-image-title": "Telecargaments",
 	"mobile-frontend-editor-abusefilter-read-more": "Ne saber mai",
 	"mobile-frontend-editor-edit": "Modificar",
+	"mobile-frontend-editor-newpage-prompt": "Aquesta pagina existís pas. Perqué vos lançariatz pas per la crear ?",
 	"mobile-frontend-editor-redlink-explain": "Aquesta pagina es pas encara estada creada.",
 	"mobile-frontend-featured-article": "Contengut recomandat del jorn",
 	"mobile-frontend-footer-contact": "Contacte",
@@ -91,6 +92,7 @@
 	"nearby": "Paginas sus de subjèctes prèp d'en çò vòstre",
 	"tag-mobile_edit": "Modificacion per mobil",
 	"tag-mobile_web_edit": "Modificacion pel web mobil",
+	"tag-mobile_web_edit-description": "Modificacion efectuada dempuèi lo site web mobil",
 	"mobile-frontend-pageaction-edit-tooltip": "Modificar la seccion fial director d'aquesta pagina.",
 	"mobile-frontend-meta-data-issues-categories": "A prepaus d'aquesta categoria",
 	"mobile-frontend-panel-ok": "D'acòrdi"
