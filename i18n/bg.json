@@ -118,8 +118,6 @@
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> качване|<span>$1</span> качвания}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ качвания",
 	"mobile-frontend-placeholder": "Търсене в {{SITENAME}}",
-	"mobile-frontend-placeholder-app": "Търсене в {{SITENAME}} (уеб приложение)",
-	"mobile-frontend-placeholder-beta": "Търсене в {{SITENAME}} (бета)",
 	"mobile-frontend-privacy-link-text": "Поверителност",
 	"mobile-frontend-random-button": "Случайна",
 	"mobile-frontend-references-citation": "Цитиране",

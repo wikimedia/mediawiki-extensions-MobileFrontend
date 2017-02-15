@@ -234,8 +234,6 @@
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> opplasting|<span>$1</span> opplastinger}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ opplastinger",
 	"mobile-frontend-placeholder": "Søk i {{SITENAME}}",
-	"mobile-frontend-placeholder-app": "Søk i {{SITENAME}} (Webapp)",
-	"mobile-frontend-placeholder-beta": "Søk i {{SITENAME}} (beta)",
 	"mobile-frontend-privacy-link-text": "Personvern",
 	"mobile-frontend-random-button": "Tilfeldig artikkel",
 	"mobile-frontend-redirected-from": "Omdirigert fra «$1»",

@@ -241,8 +241,6 @@
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> 個上傳|<span>$1</span> 個上傳}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "超過 500 次上傳",
 	"mobile-frontend-placeholder": "搜尋 {{SITENAME}}",
-	"mobile-frontend-placeholder-app": "搜尋 {{SITENAME}} (Web App)",
-	"mobile-frontend-placeholder-beta": "搜尋 {{SITENAME}}  (測試版)",
 	"mobile-frontend-privacy-link-text": "隱私",
 	"mobile-frontend-random-button": "隨機",
 	"mobile-frontend-redirected-from": "重新導向自 \"$1\"",
