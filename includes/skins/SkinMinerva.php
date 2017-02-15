@@ -46,13 +46,8 @@ class SkinMinerva extends SkinTemplate {
 	 * @return QuickTemplate
 	 */
 	protected function prepareQuickTemplate() {
-		$appleTouchIcon = $this->getConfig()->get( 'AppleTouchIcon' );
-
 		$out = $this->getOutput();
 		// add head items
-		if ( $appleTouchIcon !== false ) {
-			$out->addLink( [ 'rel' => 'apple-touch-icon', 'href' => $appleTouchIcon ] );
-		}
 		$out->addMeta( 'viewport', 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, ' .
 				'maximum-scale=5.0, width=device-width'
 		);
