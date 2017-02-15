@@ -3,6 +3,7 @@ Feature: Search
 
   Scenario: Clicking on a watchstar toggles the watchstar
     Given I am using the mobile site
+      And I am in beta mode
       And the page "Selenium search test" exists
       And I am logged into the mobile website
       And I am on the "Main Page" page
