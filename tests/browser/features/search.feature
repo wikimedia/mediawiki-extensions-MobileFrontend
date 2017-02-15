@@ -5,7 +5,8 @@ Feature: Search
     Given I am using the mobile site
       And the page "Selenium search test" exists
       And I am on the "Main Page" page
-      And I click the placeholder search box
+      And I am viewing the site in mobile mode
+      And I click the search icon
       And I see the search overlay
 
   Scenario: Closing search (overlay button)
@@ -43,6 +44,6 @@ Feature: Search
     When I type into search box "Selenium search tes"
     And I click a search result
     And the text of the first heading should be "Selenium search test"
-    And I click the placeholder search box
+    And I click the search icon
     And I type into search box "Main Page"
     Then search results should contain "Main Page"

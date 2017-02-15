@@ -25,3 +25,14 @@ Feature: Check UI components
       And the page "Selenium UI test" exists
       And I am on the "Selenium UI test" page
     Then I should see a link to the terms of use
+
+  @smoke @integration
+  Scenario: Check that the beta mode indicator is hidden in stable.
+    Given I am on the "Main Page" page
+    Then I should not see the beta mode indicator
+
+  @smoke @integration
+  Scenario: Check that the beta mode indicator is visible in beta.
+    Given I am on the "Main Page" page
+      And I am in beta mode
+    Then I should see the beta mode indicator

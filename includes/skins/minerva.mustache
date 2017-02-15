@@ -1,5 +1,7 @@
 {{{headelement}}}
-<div id="mw-mf-viewport">
+{{! FIXME: The feature-header-v2 classes are temporary and help with transition from cached HTML}}
+<div id="mw-mf-viewport"
+	class="{{#isHeaderV2}}feature-header-v2{{/isHeaderV2}}{{^isHeaderV2}}feature-header-v1{{/isHeaderV2}}">
 	{{>ie8Html5Support}}
 	<nav id="mw-mf-page-left" class="navigation-drawer view-border-box">
 		{{{mainmenuhtml}}}
@@ -8,10 +10,25 @@
 		<div class="banner-container">
 			{{>banners}}
 		</div>
-		<div class="header-container">
-			<div class="header">
-				{{{headerhtml}}}
-			</div>
+		<div class="header-container header-chrome">
+			<form class="header" action="{{wgScript}}">
+				<div>{{{menuButton}}}</div>
+				{{#isHeaderV2}}
+				<div class="branding-box">
+					<h1>
+						<span>{{{headinghtml}}}</span>
+						<sup>&beta;</sup>
+					</h1>
+				</div>
+				{{/isHeaderV2}}
+				<div class="search-box">
+					<input class="search" type="search" name="search" id="searchInput"
+					   autocomplete="off" placeholder="{{placeholder}}"
+					   value="{{search}}">
+				</div>
+				<div>{{{searchButton}}}</div>
+				{{^isAnon}}<div>{{#secondaryButtonData}}{{>secondaryButton}}{{/secondaryButtonData}}</div>{{/isAnon}}
+			</form>
 		</div>
 		<div id="content" class="mw-body">
 			{{{contenthtml}}}

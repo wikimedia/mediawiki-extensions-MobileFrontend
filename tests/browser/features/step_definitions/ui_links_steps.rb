@@ -18,6 +18,14 @@ Then(/^I should see the history link$/) do
   expect(on(ArticlePage).standalone_edit_history_link_element).to be_visible
 end
 
+Then(/^I should see the beta mode indicator$/) do
+  expect(on(ArticlePage).beta_mode_indicator_element).to be_visible
+end
+
+Then(/^I should not see the beta mode indicator$/) do
+  expect(on(ArticlePage).beta_mode_indicator_element).not_to be_visible
+end
+
 Then(/^I should see the last modified bar history link$/) do
   expect(on(ArticlePage).last_modified_bar_history_link_element).to be_visible
 end

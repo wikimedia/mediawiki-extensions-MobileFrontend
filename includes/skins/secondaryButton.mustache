@@ -1,0 +1,13 @@
+<a href="{{href}}" title="{{title}}"
+   class="{{class}} user-button main-header-button" id="secondary-button">
+    {{title}}
+</a>
+<div title="{{title}}" class="notification-count
+            {{#isNotificationCountZero}}zero{{/isNotificationCountZero}}
+    {{#hasUnseenNotifications}}notification-unseen{{/hasUnseenNotifications}}">
+	<div class="circle">
+		 <span>
+			{{notificationCount}}
+		</span>
+	</div>
+</div>

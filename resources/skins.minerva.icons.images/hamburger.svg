@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g>
-        <g>
-            <path fill="#676767" d="M23 21H1v-3h22v3z"/>
-        </g>
-        <g>
-            <path fill="#676767" d="M23 14H1v-3h22v3z"/>
-        </g>
-        <g>
-            <path fill="#676767" d="M23 7H1V4h22v3z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon-export
+    </title>
+    <g id="Page-1" fill="none" fill-rule="evenodd">
+        <g id="icon-export" fill="#54595D">
+            <g id="menuIcon">
+                <path d="M21 19H2v-2h19v2zm0-6H2v-2h19v2zm0-6H2V5h19v2z" id="Combined-Shape"/>
+            </g>
         </g>
     </g>
 </svg>

@@ -16,12 +16,14 @@
 	{{{spinner}}}
 </div>
 {{/isBeta}}
-<div class="results"></div>
-{{#feedback}}
-	<div class="search-feedback">
-		{{prompt}}
-		{{#feedback}}
-			{{>anchor}}
-		{{/feedback}}
-	</div>
-{{/feedback}}
+<div class="results">
+	<div class="results-list-container"></div>
+	{{#feedback}}
+		<div class="search-feedback">
+			{{prompt}}
+			{{#feedback}}
+				{{>anchor}}
+			{{/feedback}}
+		</div>
+	{{/feedback}}
+</div>

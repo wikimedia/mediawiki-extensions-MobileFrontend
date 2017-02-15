@@ -79,7 +79,7 @@
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			headerButtonsListClassName: '',
-			headerChrome: true,
+			headerChrome: false,
 			fixedHeader: true,
 			spinner: icons.spinner().toHtmlString()
 		},

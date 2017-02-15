@@ -84,8 +84,10 @@ class SkinMinerva extends SkinTemplate {
 		// Set the links for page secondary actions
 		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
+		// FIXME: Remove when header v2 is in stable.
+		$tpl->set( 'headerV2', $this->mobileContext->getConfigVariable( 'MinervaUseHeaderV2' ) );
+
 		// Construct various Minerva-specific interface elements
-		$this->prepareSearchInputAttributes( $tpl );
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
@@ -95,29 +97,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareLanguages( $tpl );
 
 		return $tpl;
-	}
-
-	/**
-	 * Prepare data used to create the search input
-	 *
-	 * @param QuickTemplate $tpl
-	 */
-	protected function prepareSearchInputAttributes( $tpl ) {
-		// Beta mode makes sense in the mobile context only
-		if ( $this->isMobileMode && $this->mobileContext->isBetaGroupMember() ) {
-			$placeholderMessage = 'mobile-frontend-placeholder-beta';
-		} else {
-			$placeholderMessage = 'mobile-frontend-placeholder';
-		}
-
-		$tpl->set( 'searchInputAttributes', [
-			'id' => 'searchInput',
-			'class' => 'search',
-			'autocomplete' => 'off',
-			// The placeholder gets fed to HTML::element later which escapes all
-			// attribute values, so need to escape the string here.
-			'placeholder' => $this->msg( $placeholderMessage )->text(),
-		] );
 	}
 
 	/**
@@ -326,41 +305,12 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Creates element relating to secondary button
-	 * @param string $title Title attribute value of secondary button
-	 * @param string $url of secondary button
-	 * @param string $spanLabel text of span associated with secondary button.
-	 * @param string $spanClass the class of the secondary button
-	 * @return string html relating to button
-	 */
-	protected function createSecondaryButton( $title, $url, $spanLabel, $spanClass ) {
-		return Html::openElement( 'a', [
-				'title' => $title,
-				'href' => $url,
-				'class' => MobileUI::iconClass( 'notifications', 'element',
-					'user-button main-header-button icon-32px' ),
-				'id' => 'secondary-button',
-			] ) .
-			Html::element(
-				'span',
-				[ 'class' => 'label' ],
-				$title
-			) .
-			Html::closeElement( 'a' ) .
-			Html::element(
-				'span',
-				[ 'class' => $spanClass ],
-				$spanLabel
-			);
-	}
-
-	/**
 	 * Prepares the user button.
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareUserButton( QuickTemplate $tpl ) {
 		// Set user button to empty string by default
-		$tpl->set( 'secondaryButton', '' );
+		$tpl->set( 'secondaryButtonData', '' );
 		$notificationsTitle = '';
 		$countLabel = '';
 		$isZero = true;
@@ -399,16 +349,17 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $notificationsTitle ) {
-			$spanClass = $isZero ? 'zero' : '';
-			$spanClass .= ' notification-count';
-			$spanClass .= $hasUnseen ? ' notification-unseen' : '';
-
 			$url = $notificationsTitle->getLocalURL(
 				[ 'returnto' => $currentTitle->getPrefixedText() ] );
 
-			$tpl->set( 'secondaryButton',
-				$this->createSecondaryButton( $notificationsMsg, $url, $countLabel, $spanClass )
-			);
+			$tpl->set( 'secondaryButtonData', [
+				'class' => MobileUI::iconClass( 'notifications' ),
+				'title' => $notificationsMsg,
+				'url' => $url,
+				'notificationCount' => $countLabel,
+				'isNotificationCountZero' => $isZero,
+				'hasUnseenNotifications' => $hasUnseen
+			] );
 		}
 	}
 

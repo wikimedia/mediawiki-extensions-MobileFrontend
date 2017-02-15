@@ -65,6 +65,7 @@
 		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			headerChrome: true,
 			clearIcon: new Icon( {
 				tagName: 'button',
 				name: 'clear',
@@ -249,7 +250,7 @@
 			this.$clear = this.$( '.clear' );
 			this.$searchContent = this.$( '.search-content' ).hide();
 			this.$searchFeedback = this.$( '.search-feedback' ).hide();
-			this.$resultContainer = this.$( '.results' );
+			this.$resultContainer = this.$( '.results-list-container' );
 
 			/**
 			 * Hide the spinner and abort timed spinner shows.

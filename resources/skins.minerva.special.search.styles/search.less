@@ -24,8 +24,12 @@
 }
 
 .mw-search-createlink,
-.mw-search-profile-tabs,
-// FIXME: Revisit when search input is not in a table
-.client-js #search {
+.mw-search-profile-tabs {
 	display: none;
+}
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	#search {
+		display: none;
+	}
 }

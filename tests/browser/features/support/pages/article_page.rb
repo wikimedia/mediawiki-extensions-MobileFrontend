@@ -11,6 +11,8 @@ class ArticlePage
   h1(:first_heading, id: 'section_0')
   # standalone history link
   a(:standalone_edit_history_link, css: '.last-modified-bar a')
+  # beta mode indicator
+  a(:beta_mode_indicator, css: '.branding-box sup')
 
   # left nav
   nav(:navigation, css: 'nav')
@@ -56,7 +58,7 @@ class ArticlePage
   button(:watch_confirm, class: 'mw-htmlform-submit')
 
   # search
-  button(:search_button, css: '.search-box .button-wrapper')
+  button(:search_icon, css: '#searchIcon input')
   p(:search_within_pages, css: '.without-results')
   text_field(:search_box_placeholder, name: 'search', index: 0)
   text_field(:search_box2, name: 'search', index: 1)

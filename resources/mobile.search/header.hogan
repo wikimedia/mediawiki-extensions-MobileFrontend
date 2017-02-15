@@ -1,6 +1,3 @@
-<ul>
-	<li>{{{cancelButton}}}</li>
-</ul>
 <div class="overlay-title">
 	<form method="get" action="{{action}}" class="search-box">
 		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
@@ -8,3 +5,6 @@
 	{{! See: T136243. Do not put the clear button inside the form as hitting enter on the input element triggers a button click, rather than submitting the form. }}
 	{{#clearIcon}}{{>icon}}{{/clearIcon}}
 </div>
+<ul>
+	<li>{{{cancelButton}}}</li>
+</ul>
