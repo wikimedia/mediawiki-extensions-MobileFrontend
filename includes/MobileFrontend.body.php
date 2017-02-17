@@ -27,11 +27,11 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
-	 * @param string $mode mobile mode, i.e. stable or beta
+	 * @param string $text override out html
 	 *
 	 * @return string
 	 */
-	public static function DOMParse( OutputPage $out, $text = null, $isBeta = false ) {
+	public static function DOMParse( OutputPage $out, $text = null ) {
 		$html = $text ? $text : $out->getHTML();
 
 		$context = MobileContext::singleton();

@@ -48,7 +48,6 @@ class MobileFrontendHooks {
 		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
 		$betaSkinName = $skinName . 'Beta';
 		// Force beta for test mode to sure all modules can run
-		$name = $context->getTitle()->getDBkey();
 		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
 		}
@@ -195,7 +194,7 @@ class MobileFrontendHooks {
 
 		// Perform a few extra changes if we are in mobile mode
 		if ( $context->shouldDisplayMobileView() ) {
-			$text = ExtMobileFrontend::DOMParse( $out, $text, $context->isBetaGroupMember() );
+			$text = ExtMobileFrontend::DOMParse( $out, $text );
 		}
 
 		// FIXME: remove the following when RelatedArticles are promoted from beta to stable

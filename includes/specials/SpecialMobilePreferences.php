@@ -19,7 +19,6 @@ class SpecialMobilePreferences extends SpecialPreferences {
 	 * @return PreferencesForm
 	 */
 	public function getPreferencesForm( $key ) {
-		$prefs = [];
 		$user = $this->getUser();
 		$ctx = $this->getContext();
 

@@ -234,8 +234,6 @@ JAVASCRIPT;
 	protected static function mobileFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
 		Title $title, WebRequest $req
 	) {
-		$inBeta = $ctx->isBetaGroupMember();
-
 		$url = $sk->getOutput()->getProperty( 'desktopUrl' );
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
@@ -247,7 +245,6 @@ JAVASCRIPT;
 		$desktopUrl = $ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
 
 		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->escaped();
-		$mobile = $ctx->msg( 'mobile-frontend-view-mobile' )->escaped();
 		$desktopToggler = Html::element( 'a',
 			[ 'id' => "mw-mf-display-toggle", "href" => $desktopUrl ], $desktop );
 		$sitename = self::getSitename( true );

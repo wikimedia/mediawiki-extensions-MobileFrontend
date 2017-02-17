@@ -442,9 +442,7 @@ class ApiMobileView extends ApiBase {
 	 * @return ParserOutput|null
 	 */
 	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
-		$time = microtime( true );
 		$parserOutput = $wp->getParserOutput( $parserOptions, $oldid );
-		$time = microtime( true ) - $time;
 		if ( $parserOutput ) {
 			$parserOutput->setTOCEnabled( false );
 		}

@@ -67,7 +67,6 @@ class SpecialUploads extends MobileSpecialPage {
 	 */
 	public function getUserUploadsPageHtml( User $user ) {
 		$uploadCount = $this->getUserUploadCount( $user->getName() );
-		$mobileContext = MobileContext::singleton();
 
 		$html = '';
 		$attrs = [];

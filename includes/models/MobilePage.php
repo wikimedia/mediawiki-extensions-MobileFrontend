@@ -29,10 +29,6 @@ class MobilePage {
 	 */
 	private $file;
 	/**
-	 * @var string Page content
-	 */
-	private $content;
-	/**
 	 * @var boolean Whether to use page images
 	 */
 	private $usePageImages;

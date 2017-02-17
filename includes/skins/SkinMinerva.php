@@ -1078,7 +1078,6 @@ class SkinMinerva extends SkinTemplate {
 	 * @return boolean
 	 */
 	protected function isCurrentPageEditableByUser() {
-		$contentHandler = $this->getContentHandler();
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
