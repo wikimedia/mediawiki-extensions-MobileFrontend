@@ -51,6 +51,9 @@ class MobilePage {
 		}
 	}
 
+	/**
+	 * @return Revision|bool
+	 */
 	private function getRevision() {
 		if ( $this->rev === null ) {
 			$this->rev = Revision::newKnownCurrent(

@@ -51,6 +51,11 @@ class ApiWebappManifest extends ApiBase {
 		$main->setCacheMode( 'public' );
 	}
 
+	/**
+	 * Get the JSON printer
+	 *
+	 * @return ApiFormatJson
+	 */
 	public function getCustomPrinter() {
 		return new ApiFormatJson( $this->getMain(), 'json' );
 	}

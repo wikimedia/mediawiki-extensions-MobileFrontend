@@ -32,6 +32,11 @@ class MobileCollection implements IteratorAggregate, Countable {
 		$this->pages[] = $page;
 	}
 
+	/**
+	 * Get the Iterator object
+	 *
+	 * @return ArrayIterator
+	 */
 	public function getIterator() {
 		return new ArrayIterator( $this->pages );
 	}

@@ -2,11 +2,15 @@
 
 /**
  * @group MobileFrontend
+ * @coversDefaultClass \MobileFrontend\WMFBaseDomainExtractor
  */
 class WMFBaseDomainExtractorTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider getBaseDomainProvider
-	 * @covers MobileContext::getBaseDomain
+	 * @covers ::getCookieDomain
+	 * @covers ::matchBaseHostname
+	 * @covers ::extractSubdomain
+	 * @covers ::endsWith
 	 */
 	public function testGetBaseDomain( $server, $baseDomain ) {
 		$extractor = new \MobileFrontend\WMFBaseDomainExtractor();

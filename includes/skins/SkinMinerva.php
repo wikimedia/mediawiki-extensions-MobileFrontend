@@ -1013,6 +1013,7 @@ class SkinMinerva extends SkinTemplate {
 	 * add the page to or remove the page from the user's watchlist; or, if the user is logged out,
 	 * will direct the user's UA to Special:Login.
 	 *
+	 * @param array $actions
 	 * @return array A map compatible with BaseTemplate#makeListItem
 	 */
 	protected function createWatchPageAction( $actions ) {

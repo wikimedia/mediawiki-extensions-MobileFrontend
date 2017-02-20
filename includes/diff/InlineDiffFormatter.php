@@ -101,7 +101,7 @@ class InlineDiffFormatter extends TableDiffFormatter {
 		$diff = new WordLevelDiff( $orig, $closing );
 		$edits = $this->inlineWordDiff( $diff );
 
-		# WordLevelDiff returns already HTML-escaped output.
+		// WordLevelDiff returns already HTML-escaped output.
 		$this->writeOutput( implode( '', $edits ) );
 
 		$this->writeOutput( "</div>\n" );

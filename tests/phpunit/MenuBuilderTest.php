@@ -108,7 +108,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @expectedException DomainException
+	 * @expectedException \DomainException
 	 * @expectedExceptionMessage The "home" entry doesn't exist.
 	 * @covers \MobileFrontend\MenuBuilder::insertAfter
 	 * @covers \MobileFrontend\MenuEntry::addComponent
@@ -124,7 +124,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @expectedException DomainException
+	 * @expectedException \DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
 	 * @covers \MobileFrontend\MenuBuilder::insert
 	 */
@@ -135,7 +135,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @expectedException DomainException
+	 * @expectedException \DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
 	 * @covers \MobileFrontend\MenuBuilder::insert
 	 */

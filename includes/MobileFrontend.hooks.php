@@ -42,7 +42,7 @@ class MobileFrontendHooks {
 	 * @param MobileContext $mobileContext
 	 * @return Skin
 	 */
-	protected static function getDefaultMobileSkin( RequestContext $context,
+	protected static function getDefaultMobileSkin( IContextSource $context,
 		MobileContext $mobileContext
 	) {
 		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
@@ -660,8 +660,8 @@ class MobileFrontendHooks {
 	/**
 	 * Decide if the login/usercreate page should be overwritten by a mobile only
 	 * special specialpage. If not, do some changes to the template.
+	 *
 	 * @param QuickTemplate $tpl Login or Usercreate template
-	 * @param String $mode Is this function called in context of UserCreate or UserLogin?
 	 */
 	public static function changeUserLoginCreateForm( &$tpl ) {
 		$context = MobileContext::singleton();
@@ -758,7 +758,7 @@ class MobileFrontendHooks {
 			$request->response()->clearCookie( MobileContext::DISABLE_IMAGES_COOKIE_NAME );
 		}
 
-		# Add deep link to a mobile app specified by $wgMFAppScheme
+		// Add deep link to a mobile app specified by $wgMFAppScheme
 		if ( ( $mfAppPackageId !== false ) && ( $title->isContentPage() )
 			&& ( $request->getRawQueryString() === '' )
 		) {
