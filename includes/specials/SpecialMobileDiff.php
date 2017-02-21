@@ -136,7 +136,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->showDiff();
 		$output->addHtml( '</div>' );
 
-		$this->showFooter();
+		$this->showFooter( $ctx );
 
 		$output->addHtml( '</div>' );
 
@@ -200,7 +200,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					),
 					Html::element(
 						'span', [ 'class' => 'mw-mf-diff-date meta' ],
-						$ts->getHumanTimestamp()
+						$this->getLanguage()->getHumanTimestamp( $ts )
 					)
 				)->text()
 			. Html::closeElement( 'div' )
@@ -219,7 +219,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	function showDiff() {
 		$output = $this->getOutput();
-		$ctx = MobileContext::singleton();
 
 		$prevId = $this->prevRev ? $this->prevRev->getId() : 0;
 		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
@@ -296,8 +295,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Render the footer including userinfos (Name, Role, Editcount)
+	 *
+	 * @param IContextSource $context Context
 	 */
-	function showFooter() {
+	private function showFooter( IContextSource $context ) {
 		$output = $this->getOutput();
 
 		$output->addHtml(
@@ -325,7 +326,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				) .
 				'</div>' .
 				'<div class="mw-mf-roles meta">' .
-					$this->listGroups( $user ) .
+					$this->listGroups( $user, $context ) .
 				'</div>' .
 				'<div class="mw-mf-edit-count meta">' .
 					$this->msg(
@@ -356,18 +357,15 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Get the list of groups of user
 	 * @param User $user The user object to get the list from
+	 * @param IContextSource $context The context
 	 * @return string comma separated list of user groups
 	 */
-	function listGroups( User $user ) {
+	private function listGroups( User $user, IContextSource $context ) {
 		# Get groups to which the user belongs
 		$userGroups = $user->getGroups();
 		$userMembers = [];
-		foreach ( $userGroups as $n => $ug ) {
-			$memberName = User::getGroupMember( $ug, $user->getName() );
-			if ( $n == 0 ) {
-				$memberName = $this->getLanguage()->ucfirst( $memberName );
-			}
-			$userMembers[] = User::makeGroupLinkHTML( $ug, $memberName );
+		foreach ( $userGroups as $group ) {
+			$userMembers[] = UserGroupMembership::getLink( $group, $context, 'html' );
 		}
 
 		return $this->getLanguage()->commaList( $userMembers );
