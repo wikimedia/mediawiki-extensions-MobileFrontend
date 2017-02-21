@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_5ced0e21",
+        "filename": "tests/phpunit/skins/SkinMinervaPageActionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-02-21T10:44:52Z",
+      "side": 1,
+      "message": "This line is odd. Why isn\u0027t the SkinMinerva constructor setting the MobileContext as its context? AFAIK MobileContext is an IContextSource implementation.",
+      "revId": "bd969d0aaa2cab8f65f51c25d47f42249c68569f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
