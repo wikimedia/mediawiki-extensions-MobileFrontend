@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_d7825797",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-21T16:15:12Z",
+      "side": 1,
+      "message": "Do you think it maybe cleaner to remove `|null` from above and say that this parameter is optional in the description? That way users won\u0027t be forced to pass `null` if they don\u0027t have Message.",
+      "revId": "951a84f945335660e1f3177b30ed503bf16b66ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
