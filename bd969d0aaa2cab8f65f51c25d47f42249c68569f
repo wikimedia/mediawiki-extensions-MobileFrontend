@@ -16,6 +16,24 @@
       "revId": "bd969d0aaa2cab8f65f51c25d47f42249c68569f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_f7999b81",
+        "filename": "tests/phpunit/skins/SkinMinervaPageActionsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-21T15:00:15Z",
+      "side": 1,
+      "message": "not really, this is bit more complex and required more refactoring.\n\nThe real issue is that SkinMinerva uses two context, the MobileContext that implements IContextSource -\u003e that right, but it stores that context as $this-\u003emobileContext variable. Then inside it uses $this-\u003emobileContext, but all parent classes (SkinTemplate, Skin, ContextSource) still use $this-\u003econtext.\n\nSkinMinerva doesn\u0027t override $this-\u003egetContext() class, it means MobileContext wrapper is used only inside SkinMinerva and  Context is used everywhere else",
+      "parentUuid": "ce3c5b53_5ced0e21",
+      "revId": "bd969d0aaa2cab8f65f51c25d47f42249c68569f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
