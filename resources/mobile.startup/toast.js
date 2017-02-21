@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Toast,
 		settingsKey = 'mobileFrontend/toast',
 		settings = M.require( 'mobile.startup/settings' );
@@ -8,8 +8,7 @@
 	 * @class
 	 */
 	Toast = function Toast() {
-		// FIXME: Use mw.requestIdleCallback, once it's available (T111456)
-		$( this._showPending() );
+		mw.requestIdleCallback( this._showPending.bind( this ) );
 	};
 
 	/**
@@ -76,4 +75,4 @@
 
 	M.define( 'mobile.startup/toast', new Toast() );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
