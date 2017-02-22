@@ -28,7 +28,7 @@ class ApiParseExtender {
 	 * APIGetParamDescription hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetParamDescription
 	 * @param ApiBase $module
-	 * @param Array|bool $params
+	 * @param array|bool $params
 	 * @return bool
 	 */
 	public static function onAPIGetParamDescription( ApiBase &$module, &$params ) {
@@ -44,7 +44,7 @@ class ApiParseExtender {
 	 * APIGetDescription hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetDescription
 	 * @param ApiBase $module
-	 * @param Array|string $desc
+	 * @param array|string $desc
 	 * @return bool
 	 */
 	public static function onAPIGetDescription( ApiBase &$module, &$desc ) {

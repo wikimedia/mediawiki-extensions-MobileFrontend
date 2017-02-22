@@ -187,7 +187,7 @@ class MobileFormatter extends HtmlFormatter {
 		return parent::filterContent();
 	}
 
-	/*
+	/**
 	 * Apply filtering per element (section) in a document.
 	 * @param DOMElement|DOMDocument $el
 	 * @param DOMDocument $doc
@@ -205,7 +205,7 @@ class MobileFormatter extends HtmlFormatter {
 		}
 	}
 
-	/*
+	/**
 	 * Move the first paragraph in the lead section above the infobox
 	 *
 	 * In order for a paragraph to be moved the following conditions must be met:

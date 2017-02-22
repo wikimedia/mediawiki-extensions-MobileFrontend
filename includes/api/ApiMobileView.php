@@ -790,11 +790,21 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * When only one dimension is given in a thumbnail request, scale the other proportionally
 	 * with respect to the original file dimensions.
+	 *
+	 * @param int $srcX image width
+	 * @param int $srcY image height
+	 * @param int $dstX target image width
+	 * @return int
 	 */
 	private function getScaledDimen( $srcX, $srcY, $dstX ) {
 		return $srcX === 0 ? 0 : (int) round( $srcY * $dstX / $srcX );
 	}
 
+	/**
+	 * Verify if mime type is SVG
+	 * @param string $typeStr mime type
+	 * @return bool
+	 */
 	private function isSVG( $typeStr ) {
 		return strpos( $typeStr, 'image/svg' ) === 0;
 	}

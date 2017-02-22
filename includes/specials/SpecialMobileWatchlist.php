@@ -233,7 +233,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$user = $this->getUser();
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
-		# Possible where conditions
+		// Possible where conditions
 		$conds = $this->getNSConditions( 'rc_namespace' );
 
 		// snip....

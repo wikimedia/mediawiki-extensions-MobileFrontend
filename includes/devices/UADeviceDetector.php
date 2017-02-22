@@ -30,6 +30,10 @@ use WebRequest;
  * header matches a list of regular expressions.
  */
 class UADeviceDetector implements DeviceDetector {
+
+	/**
+	 * @inheritdoc
+	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		$userAgent = $request->getHeader( 'User-Agent' );
 

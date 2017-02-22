@@ -70,6 +70,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	/**
 	 * Gets the Resource Loader modules that should be added to the output.
 	 *
+	 * @param MobileContext $context
 	 * @return string[]
 	 */
 	private function getModules( MobileContext $context ) {

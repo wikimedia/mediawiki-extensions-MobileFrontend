@@ -41,6 +41,9 @@ class CustomHeaderDeviceDetector implements DeviceDetector {
 		$this->customHeaderName = $config->get( 'MFMobileHeader' );
 	}
 
+	/**
+	 * @inheritdoc
+	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		if (
 			$this->customHeaderName

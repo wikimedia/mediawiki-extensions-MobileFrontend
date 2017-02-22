@@ -8,6 +8,9 @@ use DomainException;
  * Model for a menu that can be presented in a skin.
  */
 class MenuBuilder {
+	/**
+	 * @var MenuEntry[]
+	 */
 	private $entries = [];
 
 	/**

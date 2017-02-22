@@ -46,7 +46,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * Processes languages to add 'langname' property, update 'url' property to mobile domain,
 	 * and sort languages in case-insensitive order.
 	 *
-	 * @property array $data list of languages to process
+	 * @param array $data list of languages to process
 	 * @return array list of processed languages
 	 */
 	protected function processLanguages( $data ) {
@@ -132,6 +132,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	/**
 	 * Render the page with a list of languages the page is available in
 	 * @param string $pagename The name of the page
+	 * @throws ErrorPageError
 	 */
 	public function executeWhenAvailable( $pagename ) {
 		$output = $this->getOutput();

@@ -11,6 +11,10 @@ use WebRequest;
  * @link http://wiki.apachemobilefilter.org/index.php/Main_Page
  */
 class AMFDeviceDetector implements DeviceDetector {
+
+	/**
+	 * @inheritdoc
+	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		$hasIsMobile = isset( $server['AMF_DEVICE_IS_MOBILE'] );
 		$hasIsTablet = isset( $server['AMF_DEVICE_IS_TABLET'] );
