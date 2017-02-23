@@ -3,7 +3,8 @@
 		"authors": [
 			"Gazeb",
 			"Tkalyn",
-			"Dicto23456"
+			"Dicto23456",
+			"KHMELNYTSKYIA"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Вернути ся о секцію назад",
@@ -12,20 +13,15 @@
 	"mobile-frontend-desc": "Мобілный інтерфейс",
 	"mobile-frontend-disable-images": "Выпнути образчікы в мобілній верзії",
 	"mobile-frontend-dismiss-notification": "заперти гевто повідомлїня",
-	"mobile-frontend-editor-edit": "Едітовати",
+	"mobile-frontend-editor-edit": "Редагувати",
 	"mobile-frontend-enable-images": "Занути образчікы в мобілній верзії",
 	"mobile-frontend-featured-article": "Статя дня",
 	"mobile-frontend-footer-contact": "Контакт",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
-	"mobile-frontend-generic-login": "{{SITENAME}} створюється такими ж людьми, як і ви.",
 	"mobile-frontend-home-button": "Домів",
 	"mobile-frontend-images-status": "Образчікы",
-	"mobile-frontend-language-header": "Статя доступна в $1 {{PLURAL:$1|языцї|языках}}",
 	"mobile-frontend-language-heading": "<strong>Языкы</strong>",
-	"mobile-frontend-language-site-choose": "Гляданя языка",
 	"mobile-frontend-languages-header": "Языкы",
-	"mobile-frontend-logged-out": "Неприголошеный(а)",
-	"mobile-frontend-login": "Приголосити ся",
 	"mobile-frontend-main-menu-account-create": "Створити конто",
 	"mobile-frontend-main-menu-featured": "Выбране",
 	"mobile-frontend-main-menu-login": "Приголошіня",
@@ -48,8 +44,6 @@
 	"mobile-frontend-settings-beta": "Бета",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} є доступна в $1 {{PLURAL:$1|языцї|языках}}. Ниже суть зазначены вшыткы доступны верзії",
 	"mobile-frontend-settings-site-header": "Языкы {{grammar:2sg|{{SITENAME}}}}",
-	"mobile-frontend-username": "Імя хоснователя:",
-	"mobile-frontend-username-placeholder": "Імя хоснователя",
 	"mobile-frontend-view": "Мобілна верзія",
 	"mobile-frontend-view-desktop": "Десктоп",
 	"mobile-frontend-view-mobile": "Мобільный"
