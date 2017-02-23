@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_e4f559b6",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-23T14:33:13Z",
+      "side": 0,
+      "message": "I think you should remove the form selector, and not `.main`.",
+      "revId": "91dee39da122facbb04bbcb15fb9f4cd5355e795",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
