@@ -120,8 +120,6 @@ body {
 
 	// Search field
 	.main,
-	// FIXME: form selector is only necessary until cache has cleared. Please remove promptly (T157987)
-	> form,
 	// Spinner
 	> div {
 		vertical-align: middle;
@@ -321,32 +319,6 @@ input.search {
 .client-nojs {
 	.section-heading .indicator {
 		display: none;
-	}
-
-	// FIXME: Remove when cache has cleared (T157987)
-	.header > form {
-		width: auto;
-		vertical-align: middle;
-
-		.button-wrapper,
-		.fulltext-search {
-			background-color: #36c;
-			border-radius: 2px;
-			cursor: pointer;
-			float: right;
-			margin-left: 0.5em;
-			padding: 0.375em 0;
-		}
-
-		> .input-wrapper {
-			overflow: hidden;
-		}
-
-		input.search {
-			margin-right: 0;
-			padding-right: 0.1em;
-			width: 100%;
-		}
 	}
 
 	// FIXME: Remove when feature-header-v1 no longer supported
