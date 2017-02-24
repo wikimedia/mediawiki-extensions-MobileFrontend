@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_a79aec73",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-02-24T11:58:21Z",
+      "side": 1,
+      "message": "Shouldn\u0027t you also remove this?",
+      "range": {
+        "startLine": 121,
+        "startChar": 1,
+        "endLine": 121,
+        "endChar": 16
+      },
+      "revId": "7ee2e2273056e7fc62e4d56d1afe6528601b21f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
