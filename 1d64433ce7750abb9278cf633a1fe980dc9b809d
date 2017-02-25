@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_b548cf33",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-02-25T01:09:45Z",
+      "side": 1,
+      "message": "If we make a special case here, we can also add `background-repeat: none`, `padding` etc. to get rid of repeated icons.",
+      "revId": "1d64433ce7750abb9278cf633a1fe980dc9b809d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_15417b0e",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-02-25T01:09:45Z",
+      "side": 1,
+      "message": "For DRY reasons I\u0027d use class `mw-ui-input` on this element, as we have things centralized there, and override just the properties needed.",
+      "revId": "1d64433ce7750abb9278cf633a1fe980dc9b809d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
