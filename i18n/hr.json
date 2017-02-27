@@ -8,7 +8,8 @@
 			"Teoo3",
 			"Ex13",
 			"Ivi104",
-			"Bugoslav"
+			"Bugoslav",
+			"Srdjan m"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite \"captcha\" tekst",
@@ -37,7 +38,7 @@
 	"mobile-frontend-diffview-404-desc": "ID zahtijevane izmjene ne postoji.",
 	"mobile-frontend-diffview-404-title": "Kriva izmjena.",
 	"mobile-frontend-diffview-anonymous": "Anonimni suradnik",
-	"mobile-frontend-diffview-bytesadded": "Dodano $1 {{PLURAL:$1|bajt|bajta|bajtova}}",
+	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Dodan $1 bajt|Dodana $1 bajta|Dodano $1 bajtova}}",
 	"mobile-frontend-diffview-bytesnochange": "Nema promjene veličine",
 	"mobile-frontend-diffview-bytesremoved": "Obrisano $1 {{PLURAL:$1|bajt|bajta|bajtova}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|uređivanje|uređivanja}}",

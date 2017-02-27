@@ -41,7 +41,7 @@
 	"mobile-frontend-diffview-404-desc": "ID zahtijevane izmjene ne postoji.",
 	"mobile-frontend-diffview-404-title": "Loša revizija",
 	"mobile-frontend-diffview-anonymous": "Anonimni korisnik",
-	"mobile-frontend-diffview-bytesadded": "Dodano $1 {{PLURAL:$1|bajt|bajta|bajtova}}",
+	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Dodan $1 bajt|Dodana $1 bajta|Dodano $1 bajtova}}",
 	"mobile-frontend-diffview-bytesnochange": "Bez promjene veličine",
 	"mobile-frontend-diffview-bytesremoved": "Uklonjeno $1 {{PLURAL:$1|bajt|bajta|bajtova}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|izmjеnа|izmjеnе}}",
