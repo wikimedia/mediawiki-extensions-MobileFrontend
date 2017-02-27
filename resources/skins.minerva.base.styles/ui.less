@@ -46,28 +46,6 @@ body {
 	}
 }
 
-.header .search-box {
-	// FIXME: remove when micro.tap in stable and rule from common-js.less too
-	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
-	// FIXME: Remove when cache clears
-	width: 100%;
-
-	.search {
-		@searchIconSize: 20px;
-		@searchIconGutter: 6px;
-
-		padding: 0.5em 0 0.5em @searchIconSize + (2 * @searchIconGutter);
-		background-position: left @searchIconGutter center;
-		background-repeat: no-repeat;
-		background-size: @searchIconSize @searchIconSize;
-		border-radius: @borderRadius;
-		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
-		// FIXME: Necessary to support rendering of cached HTML. Move when new header in production
-		// and cache has cleared.
-		margin-top: 0.4em;
-	}
-}
-
 .last-modified-bar {
 	background-color: transparent;
 	display: block;
@@ -112,6 +90,9 @@ body {
 	border-top: 1px solid @colorGray12;
 	margin-top: @headerMarginTop;
 
+	.search-box {
+		width: 100%;
+	}
 	// button
 	> div {
 		width: @headerHeight;
@@ -215,18 +196,37 @@ body {
 	}
 }
 
+.search-box {
+	// FIXME: remove when micro.tap in stable and rule from common-js.less too
+	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
+
+	.search {
+		@searchIconSize: 20px;
+		@searchIconGutter: 6px;
+		// FIXME: input's cannot have child elements so not possible to use mw-ui-icon-before here
+		// How can we avoid multiple use of magnifying glass icon?
+		.background-image-svg( 'magnifying-glass.svg', 'magnifying-glass.png' );
+		outline: 0;
+		width: 100%;
+		// FIXME: unable to check but the important may not be needed for Nokia S60;
+		background-color: #fff !important; /* remove fennec default background also see bug 36490 */
+		// get rid of rounded corners in Safari
+		-webkit-appearance: none;
+
+		padding: 0.5em 0 0.5em @searchIconSize + (2 * @searchIconGutter);
+		background-position: left @searchIconGutter center;
+		background-repeat: no-repeat;
+		background-size: @searchIconSize @searchIconSize;
+		border-radius: @borderRadius;
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
+		// FIXME: Necessary to support rendering of cached HTML. Move when new header in production
+		// and cache has cleared.
+		margin-top: 0.4em;
+	}
+}
+
 /* Search */
 input.search {
-	// FIXME: input's cannot have child elements so not possible to use mw-ui-icon-before here
-	// How can we avoid multiple use of magnifying glass icon?
-	.background-image-svg( 'magnifying-glass.svg', 'magnifying-glass.png' );
-	outline: 0;
-	width: 100%;
-	// FIXME: unable to check but the important may not be needed for Nokia S60;
-	background-color: #fff !important; /* remove fennec default background also see bug 36490 */
-	// get rid of rounded corners in Safari
-	-webkit-appearance: none;
-
 	// [T139928] Hide all pseudo-elements added to search inputs in WebKit.
 	&::-webkit-search-decoration,
 	&::-webkit-search-cancel-button,
