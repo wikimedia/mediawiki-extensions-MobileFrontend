@@ -69,6 +69,24 @@
       "revId": "1d64433ce7750abb9278cf633a1fe980dc9b809d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_79ceb987",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-27T20:24:42Z",
+      "side": 1,
+      "message": "and one more thing, styling is bit different, here we do display:none but the mw-ui-input hides those as with -webkit-appearance:none",
+      "parentUuid": "ce3c5b53_15417b0e",
+      "revId": "1d64433ce7750abb9278cf633a1fe980dc9b809d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
