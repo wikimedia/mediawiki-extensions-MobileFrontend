@@ -16,6 +16,24 @@
       "revId": "9a2ae37d4a0dab4e5e3c7572231e95b4add33a12",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_25047f7f",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-28T19:30:27Z",
+      "side": 1,
+      "message": "I\u0027d like to keep it here - LanguageOverlay.less it looks pretty organised and it has no knowledge of header-v2 and hacks related to headerv2. IMHO it\u0027s better to keep all hacks all together, once we start fixing them it will be easier to find all feature-header-v2 hacks.",
+      "parentUuid": "ce3c5b53_e5af7776",
+      "revId": "9a2ae37d4a0dab4e5e3c7572231e95b4add33a12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
