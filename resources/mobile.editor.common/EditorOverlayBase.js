@@ -305,33 +305,6 @@
 			this[this.nextStep]();
 		},
 		/**
-		 * Set up the editor switching interface
-		 * The actual behavior of the editor buttons is initialized in postRender()
-		 * @method
-		 */
-		initializeSwitcher: function () {
-			var toolFactory = new OO.ui.ToolFactory(),
-				toolGroupFactory = new OO.ui.ToolGroupFactory(),
-				toolbar;
-
-			toolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory, {
-				classes: [ 'editor-switcher' ]
-			} );
-			toolFactory.register( EditVeTool );
-
-			toolbar.setup( [
-				{
-					icon: 'advanced',
-					indicator: 'down',
-					type: 'list',
-					include: [ { group: 'editorSwitcher' } ]
-				}
-			] );
-
-			this.$el.find( '.switcher-container' ).html( toolbar.$element );
-			this.switcherToolbar = toolbar;
-		},
-		/**
 		 * @inheritdoc
 		 */
 		hide: function () {

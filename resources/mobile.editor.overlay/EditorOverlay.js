@@ -133,23 +133,43 @@
 			var self = this;
 
 			if ( this.isVisualEditorEnabled() ) {
-				this.initializeSwitcher();
-				/**
-				 * 'Edit' button handler
-				 */
-				this.switcherToolbar.tools.editVe.onSelect = function () {
-					// If the user tries to switch to the VisualEditor, check if any changes have
-					// been made, and if so, tell the user they have to save first.
-					if ( !self.gateway.hasChanged ) {
-						self._switchToVisualEditor( self.options );
-					} else {
-						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-							self.onStageChanges();
-						} else {
-							self.switcherToolbar.tools.editVe.setActive( false );
+				mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
+					var switchToolbar,
+						toolFactory = new OO.ui.ToolFactory(),
+						toolGroupFactory = new OO.ui.ToolGroupFactory();
+
+					toolFactory.register( mw.libs.ve.MWEditModeVisualTool );
+					toolFactory.register( mw.libs.ve.MWEditModeSourceTool );
+					switchToolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory, {
+						classes: [ 'editor-switcher' ]
+					} );
+
+					switchToolbar.on( 'switchEditor', function ( mode ) {
+						if ( mode === 'visual' ) {
+							// If the user tries to switch to the VisualEditor, check if any changes have
+							// been made, and if so, tell the user they have to save first.
+							if ( !self.gateway.hasChanged ) {
+								self._switchToVisualEditor( self.options );
+							} else {
+								if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+									self.onStageChanges();
+								}
+							}
 						}
-					}
-				};
+					} );
+
+					switchToolbar.setup( [
+						{
+							type: 'list',
+							icon: 'edit',
+							title: mw.msg( 'visualeditor-mweditmode-tooltip' ),
+							include: [ 'editModeVisual', 'editModeSource' ]
+						}
+					] );
+
+					self.$el.find( '.switcher-container' ).html( switchToolbar.$element );
+					switchToolbar.emit( 'updateState' );
+				} );
 			}
 
 			EditorOverlayBase.prototype.postRender.apply( this );
@@ -385,7 +405,6 @@
 				function () {
 					self.clearSpinner();
 					self.$content.show();
-					self.switcherToolbar.tools.editVe.setActive( false );
 					// FIXME: We should show an error notification, but right now toast
 					// notifications are not dismissible when shown within the editor.
 				}
