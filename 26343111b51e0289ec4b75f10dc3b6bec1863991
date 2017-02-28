@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_002369a7",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-02-28T20:37:48Z",
+      "side": 1,
+      "message": "it would be nice to add a better comment why do we want to define display 3 times, even a link to stackoverlow/some documentation would help because tbh it looks really hacky (I think I know why it\u0027s done this way but at first glance it looks like merge issue)",
+      "revId": "26343111b51e0289ec4b75f10dc3b6bec1863991",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
