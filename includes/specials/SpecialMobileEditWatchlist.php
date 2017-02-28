@@ -167,7 +167,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	protected function executeViewEditWatchlist() {
 		$ns = NS_MAIN;
 		$html = '';
-		$total = 0;
 		$images = [];
 
 		$watchlist = $this->getWatchlistInfo();
