@@ -5,8 +5,24 @@
 			"Санюн Вадик"
 		]
 	},
+	"mobile-frontend-copyright": "Содержанийым $1 лийцензий почеш кучылт кертыда (весым возымо огыл гын).",
 	"mobile-frontend-editor-edit": "Тӧрлаташ",
+	"mobile-frontend-home-button": "Мӧҥгӧ",
+	"mobile-frontend-language-article-heading": "Вес йылме дене лудаш",
+	"mobile-frontend-last-modified-date": "Пытартыш гана $1 кечын $2 шагатлан тӧрлаталтын",
+	"mobile-frontend-main-menu-button-tooltip": "Тӱҥ менюм почаш",
 	"mobile-frontend-main-menu-login": "Пураш",
+	"mobile-frontend-main-menu-nearby": "Воктене",
 	"mobile-frontend-main-menu-settings": "Келыштарымаш",
-	"mobile-frontend-view": "Мобильный версий"
+	"mobile-frontend-main-menu-watchlist": "Эскерымаш лаштык",
+	"mobile-frontend-placeholder": "{{SITENAME}} сайтыште кычалаш",
+	"mobile-frontend-privacy-link-text": "Конфиденциальность",
+	"mobile-frontend-random-button": "Чокым лаштык",
+	"mobile-frontend-terms-text": "Пайдаланымаш условий",
+	"mobile-frontend-view": "Мобильный версий",
+	"mobile-frontend-view-desktop": "Стационарный",
+	"mobile-frontend-view-mobile": "Мобильный",
+	"tag-mobile_edit": "Телефон гоч тӧрлаташ",
+	"tag-mobile_web_edit": "мобильный гочын тӧрлаташ",
+	"mobile-frontend-pageaction-edit-tooltip": "Лаштыкын тӱҥ ужашыжым тӧрлаташ."
 }
