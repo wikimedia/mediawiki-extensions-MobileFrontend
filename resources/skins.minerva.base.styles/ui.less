@@ -388,34 +388,42 @@ input.search {
 }
 
 .notification-count {
+	@circleSize: 24px;
+	@borderSize: 2px;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	height: @iconSize;
+	height: @circleSize;
 	background: @notificationBackgroundRead;
 	color: @notificationColorRead;
 	cursor: pointer;
-	font-weight: bold;
-	text-align: center;
 
 	.circle {
 		border-radius: 50%;
-		border: 2px solid @notificationColorRead;
-		box-sizing: border-box;
-		display: inline-block;
-		height: 100%;
-		min-width: @iconSize;
-		padding: 0 2px;
+		border: @borderSize solid @notificationColorRead;
+		margin: auto;
+		height: @circleSize - @borderSize;
+		width: @circleSize - @borderSize;
+
+		/* stylelint-disable declaration-block-no-duplicate-properties */
+		// Center the text number inside the circle
+		display: block; // Fallback for old iOS
+		text-align: center; // Fallback for old iOS
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		justify-content: center;
 
 		span {
-			display: inline-block;
+			font-weight: bold;
 			font-size: 13px;
-			height: 100%;
-			line-height: 13px;
-			vertical-align: middle;
+			line-height: 1;
+			letter-spacing: -0.5px;
 		}
 	}
 
