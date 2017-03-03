@@ -709,12 +709,21 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getTaglineHtml() {
 		$tagline = false;
+
 		if ( $this->isUserPage ) {
 			$fromDate = $this->pageUser->getRegistration();
 			if ( is_string( $fromDate ) ) {
-				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
+				$fromDateTs = wfTimestamp( TS_UNIX, $fromDate );
+
+				// This is shown when js is disabled. js enhancement made due to caching
 				$tagline = $this->msg( 'mobile-frontend-user-page-member-since',
-						$fromDateTs->format( 'F, Y' ), $this->pageUser );
+						$this->getLanguage()->userDate( new MWTimestamp( $fromDateTs ), $this->getUser() ),
+						$this->pageUser );
+
+				// Define html attributes for usage with js enhancement (unix timestamp, gender)
+				$attrs = [ 'id' => 'tagline-userpage',
+					'data-userpage-registration-date' => $fromDateTs,
+					'data-userpage-gender' => $this->pageUser->getOption( 'gender' ) ];
 			}
 		} else {
 			$title = $this->getTitle();
@@ -725,8 +734,10 @@ class SkinMinerva extends SkinTemplate {
 				}
 			}
 		}
+
+		$attrs[ 'class' ] = 'tagline';
 		return $tagline ?
-			Html::element( 'div', [ 'class' => 'tagline' ], $tagline ) : '';
+			Html::element( 'div', $attrs, $tagline ) : '';
 	}
 	/**
 	 * Returns the HTML representing the heading.

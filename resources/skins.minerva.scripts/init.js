@@ -225,9 +225,44 @@
 		} );
 	}
 
+	/**
+	 * Initialisation function for user creation module.
+	 *
+	 * Enhances an element representing a time
+	 + to show a human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 * @ignore
+	 * @param {JQuery.Object} [$tagline]
+	 */
+	function initRegistrationDate( $tagline ) {
+		var msg, ts;
+
+		ts = $tagline.data( 'userpage-registration-date' );
+
+		if ( ts ) {
+			msg = time.getRegistrationMessage( ts, $tagline.data( 'userpage-gender' ) );
+			$tagline.text( msg );
+		}
+	}
+
+	/**
+	 * Initialisation function for registration date on user page
+	 *
+	 * Enhances .tagline-userpage element
+	 * to show human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 * @ignore
+	 */
+	function initRegistrationInfo() {
+		$( '#tagline-userpage' ).each( function () {
+			initRegistrationDate( $( this ) );
+		} );
+	}
+
 	$( function () {
 		// Update anything else that needs enhancing (e.g. watchlist)
 		initModifiedInfo();
+		initRegistrationInfo();
 		initHistoryLink( $( '.last-modifier-tagline a' ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );
