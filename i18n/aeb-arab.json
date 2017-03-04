@@ -5,5 +5,13 @@
 		]
 	},
 	"mobile-frontend-editor-edit": "بدّل",
-	"mobile-frontend-main-menu-login": "أدخل"
+	"mobile-frontend-language-article-heading": "أقرا بلغة أخرى",
+	"mobile-frontend-last-modified-date": "آخر تبديل نهار $1، معا $2",
+	"mobile-frontend-main-menu-login": "أدخل",
+	"mobile-frontend-main-menu-watchlist": "ليستة الپاجات إلّي نتبّعها",
+	"mobile-frontend-news-items": "في الأخبار",
+	"mobile-frontend-password-placeholder": "كلمة السر",
+	"mobile-frontend-random-button": "بالزهر",
+	"tag-mobile_edit": "تبديل مالپورطابل",
+	"mobile-frontend-pageaction-edit-tooltip": "تبديل طرف المقدمة في هذي الپاج."
 }
