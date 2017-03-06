@@ -40,8 +40,11 @@ class MobileSpecialPage extends SpecialPage {
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
 		$this->config = $ctx->getMFConfig();
-		$this->getOutput()->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
+		$out = $this->getOutput();
+		$out->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
 		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
+			# We are not going to return any real content
+			$out->setStatusCode( 404 );
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
 		} elseif ( $this->mode !== 'stable' ) {
 			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
