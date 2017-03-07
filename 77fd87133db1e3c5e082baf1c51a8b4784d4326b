@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae41e7d8_8ea94324",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-07T20:56:19Z",
+      "side": 1,
+      "message": "Why not do this directly in the template?",
+      "revId": "77fd87133db1e3c5e082baf1c51a8b4784d4326b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae41e7d8_6eacff32",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-07T20:56:19Z",
+      "side": 1,
+      "message": "Why not do this directly in the template?",
+      "revId": "77fd87133db1e3c5e082baf1c51a8b4784d4326b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae41e7d8_4ea33b40",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-07T20:56:19Z",
+      "side": 1,
+      "message": "Why not do this directly in the template?",
+      "revId": "77fd87133db1e3c5e082baf1c51a8b4784d4326b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae41e7d8_ee66cf25",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-07T20:56:19Z",
+      "side": 1,
+      "message": "Why not do this directly in the template?",
+      "revId": "77fd87133db1e3c5e082baf1c51a8b4784d4326b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
