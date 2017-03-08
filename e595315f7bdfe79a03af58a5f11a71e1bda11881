@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_e51a657e",
+        "filename": "includes/diff/InlineDifferenceEngine.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-08T23:41:33Z",
+      "side": 1,
+      "message": "What if $linkInfo[\u0027rcid\u0027] is not defined?",
+      "revId": "e595315f7bdfe79a03af58a5f11a71e1bda11881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
