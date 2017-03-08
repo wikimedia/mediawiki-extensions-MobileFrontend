@@ -16,6 +16,24 @@
       "revId": "e595315f7bdfe79a03af58a5f11a71e1bda11881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_68162c4f",
+        "filename": "includes/diff/InlineDifferenceEngine.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-08T23:44:20Z",
+      "side": 1,
+      "message": "Then the method is broken and has not provided the data this code needs, and therefor this link will not mark the change as patrolled when clicked, which is an error that should produce a warning in the logs.\n\nThe previous warning happened because when the method contract was change (\"breaking change\"), this caller was forgotten to be migrated.",
+      "parentUuid": "8e46e3ee_e51a657e",
+      "revId": "e595315f7bdfe79a03af58a5f11a71e1bda11881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
