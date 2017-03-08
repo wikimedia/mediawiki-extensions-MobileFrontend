@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_4552396c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-08T23:15:48Z",
+      "side": 1,
+      "message": "Wonder if element-standalone is clear enough. More like icon-standalone. But don\u0027t fully know about mobile frontend naming conventions elsewhere.",
+      "revId": "63f56c2a196c1d48e75a25c55aebbe51f2e860b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
