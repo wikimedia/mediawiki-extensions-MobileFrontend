@@ -34,6 +34,24 @@
       "revId": "e595315f7bdfe79a03af58a5f11a71e1bda11881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_0fd76a29",
+        "filename": "includes/diff/InlineDifferenceEngine.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-09T19:01:53Z",
+      "side": 1,
+      "message": "Sure.\nPreviously this broke because the breaking change was not communicated well to the maintainers rather than forgotten. The warning, since it was rare went un-noticed for some time.\n\nTo rephrase my question:\nShould we have better protection than warnings in a log?\n\nFrom your response it seems you don\u0027t mind relying on the log file here.",
+      "parentUuid": "8e46e3ee_68162c4f",
+      "revId": "e595315f7bdfe79a03af58a5f11a71e1bda11881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
