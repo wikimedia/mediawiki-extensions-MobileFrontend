@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_a66e9891",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-10T21:10:15Z",
+      "side": 1,
+      "message": "I\u0027m not convinced about this. This is not a canonical URL for a page that is supposed to only show languages. It\u0027s pointing to something with completely different content.\n\nA better thing to do would be to ensure the canonical URL is the mobile URL since we know that always will render something and never 404.",
+      "revId": "ce75fcece0158bd5b5f51c4bda9dd2f3930e9395",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
