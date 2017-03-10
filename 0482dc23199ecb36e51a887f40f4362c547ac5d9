@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_e621004d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-10T21:26:28Z",
+      "side": 0,
+      "message": ".main  class appears to be used in the ImageOverlay but does not appear inside a .header class so is not impacted by this change so this looks good to me.\n\nGood catch!",
+      "revId": "0482dc23199ecb36e51a887f40f4362c547ac5d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
