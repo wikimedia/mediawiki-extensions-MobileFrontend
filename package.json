@@ -2,8 +2,7 @@
 	"private": true,
 	"scripts": {
 		"test": "grunt test && npm run doc",
-		"predoc": "bundle install --path vendor/bundle",
-		"doc": "bundle exec jsduck"
+		"doc": "jsduck"
 	},
 	"dependencies": {
 		"jsdoc": "3.4.2",
