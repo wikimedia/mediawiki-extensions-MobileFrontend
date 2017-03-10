@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_06e66c13",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-10T21:33:44Z",
+      "side": 1,
+      "message": "Not sure about this.\nSkinMinerva extends SkinTemplate which extends  Skin which extends ContextSource which implements  IContextSource\nMobileContext extends ContextSource\n\nSo not only are we changing the contract of IContextSource but it now takes itself in the constructor...?\n\nHmm.\n\nThis is why I\u0027d rather  see us eradicate usages of MobileContext from inside here, moving them to hooks instead.\n\nThis also helps other skin builders to build mobile site compatible skins.",
+      "revId": "20bff8aafdfeb3b8c9d3edc9fb6b4ad30f31263b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
