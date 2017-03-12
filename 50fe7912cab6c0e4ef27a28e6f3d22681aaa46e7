@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_692dc040",
+        "filename": "resources/mobile.startup/time.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 4565
+      },
+      "writtenOn": "2017-03-12T23:35:32Z",
+      "side": 1,
+      "message": "For debugging I\u0027ve added console.log ( args ); in the line befor this and got this as an output:\n\nArray [ \"mobile-frontend-joined-days\", \"unknown\", \"4\" ]\n\nwhich is exactly what I expected, as the input here should be\n\nArray [ \"name-of-system-message\", \"first parameter, here gender\", \"second parameter, here number of days\" ]\n\nas far as I understood it.",
+      "range": {
+        "startLine": 130,
+        "startChar": 2,
+        "endLine": 130,
+        "endChar": 48
+      },
+      "revId": "50fe7912cab6c0e4ef27a28e6f3d22681aaa46e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
