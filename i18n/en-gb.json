@@ -7,7 +7,8 @@
 			"Jagwar",
 			"Aursani",
 			"Macofe",
-			"Andibing"
+			"Andibing",
+			"Anomie"
 		]
 	},
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
@@ -31,7 +32,6 @@
 	"mobile-frontend-terms-text": "Terms of Use",
 	"mobile-frontend-view": "Mobile view",
 	"mobile-frontend-view-desktop": "Desktop",
-	"mobile-frontend-view-mobile": "Mobile",
 	"tag-mobile_edit": "Mobile edit",
 	"tag-mobile_web_edit": "Mobile web edit",
 	"mobile-frontend-pageaction-edit-tooltip": "Edit the lead section of this page.",
