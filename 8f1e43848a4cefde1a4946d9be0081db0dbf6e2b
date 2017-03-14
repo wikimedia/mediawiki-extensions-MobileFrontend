@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_9c49616d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 731,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T19:19:04Z",
+      "side": 1,
+      "message": "This key should probably be updated to use the word Joined\ne.g. \"Joined on \u003ctimestamp\u003e\"\n\nThere is an unavoidable flash of unstyled content here because of this change, but we can make it more subtle by using similar language.",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_dc47e94e",
+        "filename": "resources/mobile.startup/time.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T19:19:04Z",
+      "side": 1,
+      "message": "Since this only runs on the user page it should probably only be loaded on the user page. (similar to skins.minerva.userpage.styles)\n\nWe can always do this in a follow up if too complicated.\n\nAlternatively we could explore generalising this method and defining the message keys in data attributes.\n\nwhat do others think?",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_5c6af9b2",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T19:19:04Z",
+      "side": 1,
+      "message": "See comment in other file. This code is loaded everywhere and only needs to be loaded on the user page (unlike the last modified bar code which runs on every pagE). The code is minimal but it feels like we might want to separate this into its own JS file?",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
