@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_6cd70029",
+        "filename": "resources/mobile.startup/time.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 4565
+      },
+      "writtenOn": "2017-03-14T23:58:24Z",
+      "side": 1,
+      "message": "\u003e One way we could generalise it is using a data attribute e.g.\n \u003e data-seconds data-minutes etc which points to the message key.\n That won\u0027t work for somebody who is 11 months an 29 days in when the page gets cached and hence is 1 year in when the user visits the page. Same for my \"15 seconds since registered\" imaginative friend I always name ;). For this reason the html content that get\u0027s cached cannot provide any information about a duration as durations always depends on the time the code is run and the time php ran is the time the html got cached, not the time the user visits the page. That part needs to be up to the js. What data attributes provide must be something that doesn\u0027t change (like the information when the user was registered, as we have now).\n\n\n \u003e We could the run the last modified code on anything with a certain\n \u003e class (rather than id) to enhance it.\n \u003e \n \u003e e.g. timestamp-message-relative\nThat\u0027s great, I think I\u0027m going to try this.",
+      "parentUuid": "8e46e3ee_1cf5517f",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_5c6af9b2",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 10
