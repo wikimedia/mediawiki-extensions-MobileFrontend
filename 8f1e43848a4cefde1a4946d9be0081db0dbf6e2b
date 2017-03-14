@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_1cf5517f",
+        "filename": "resources/mobile.startup/time.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T20:06:44Z",
+      "side": 1,
+      "message": "Sounds good to me! I\u0027d be happy for you to learn it!\n\nOne way we could generalise it is using a data attribute e.g. data-seconds data-minutes etc which points to the message key.\n\nWe could the run the last modified code on anything with a certain class (rather than id) to enhance it.\n\ne.g. timestamp-message-relative\n\nFeel free to write a follow up patch to explore this so that we can keep the generalization and the fix separate and make this work easier to follow.",
+      "parentUuid": "8e46e3ee_1cc7914b",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_5c6af9b2",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 10
