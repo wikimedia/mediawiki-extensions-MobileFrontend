@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_7c8b3521",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 731,
+      "author": {
+        "id": 4565
+      },
+      "writtenOn": "2017-03-14T20:03:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e46e3ee_9c49616d",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_dc47e94e",
         "filename": "resources/mobile.startup/time.js",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_1cc7914b",
+        "filename": "resources/mobile.startup/time.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 4565
+      },
+      "writtenOn": "2017-03-14T20:03:53Z",
+      "side": 1,
+      "message": "Generalising the method was exactly what I thought about above when stating \"this reuses a lot of code of the from the functionality to show the latest edit in a bar at the bottom of mobile view. Duplicated code maybe should be avoided somehow.\" I usually consider the duplication of code bad itself and tend do generalise code whenever possible, though I don\u0027t know how to do this here. What you mentioned would be an additional reason to do this generalisation.\n\nI don\u0027t think this is too complicated at all. I admit that I don\u0027t know how to do this yet, but if you don\u0027t feel a need to hurry about this patch I\u0027d be glad to learn it ;)",
+      "parentUuid": "8e46e3ee_dc47e94e",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_5c6af9b2",
         "filename": "resources/skins.minerva.scripts/init.js",
         "patchSetId": 10
@@ -47,6 +83,24 @@
       "writtenOn": "2017-03-14T19:19:04Z",
       "side": 1,
       "message": "See comment in other file. This code is loaded everywhere and only needs to be loaded on the user page (unlike the last modified bar code which runs on every pagE). The code is minimal but it feels like we might want to separate this into its own JS file?",
+      "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_9cd9612f",
+        "filename": "resources/skins.minerva.scripts/init.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 4565
+      },
+      "writtenOn": "2017-03-14T20:03:53Z",
+      "side": 1,
+      "message": "Agreed",
+      "parentUuid": "8e46e3ee_5c6af9b2",
       "revId": "8f1e43848a4cefde1a4946d9be0081db0dbf6e2b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
