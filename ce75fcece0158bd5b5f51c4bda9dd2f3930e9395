@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "8e46e3ee_699132fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T22:59:54Z",
+      "side": 1,
+      "message": "This is not true. The mobile special page always serves content.",
+      "revId": "ce75fcece0158bd5b5f51c4bda9dd2f3930e9395",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_8996fef1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T22:59:54Z",
+      "side": 1,
+      "message": "sure the existing canonical URL is not reliable as it 404s and the desktop URL never returns content.",
+      "revId": "ce75fcece0158bd5b5f51c4bda9dd2f3930e9395",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_299b2a1d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-14T22:59:54Z",
+      "side": 1,
+      "message": "It\u0027s not clear what problem you expect this to solve...",
+      "revId": "ce75fcece0158bd5b5f51c4bda9dd2f3930e9395",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_a66e9891",
         "filename": "includes/specials/SpecialMobileLanguages.php",
         "patchSetId": 1
