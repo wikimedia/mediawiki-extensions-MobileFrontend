@@ -2,21 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"Amqui",
-			"Benoit Rochon"
+			"Benoit Rochon",
+			"Jean-paul echaquan"
 		]
 	},
 	"mobile-frontend-editor-edit": "Meckotcita",
 	"mobile-frontend-home-button": "Otitikowin",
 	"mobile-frontend-language-article-heading": "Tapwatcike arotc kotak arimowewinik",
-	"mobile-frontend-main-menu-account-create": "Masinahotiso",
+	"mobile-frontend-last-modified-date": "Pamitcitc kaki ocitakaniwok $1, nac $2",
 	"mobile-frontend-main-menu-button-tooltip": "Nta cena nihe nictam ka masinatek",
 	"mobile-frontend-main-menu-login": "Posi",
 	"mobile-frontend-main-menu-nearby": "Nipemictew",
+	"mobile-frontend-main-menu-settings": "Ke actain",
+	"mobile-frontend-main-menu-watchlist": "Ka masinateki",
 	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Nitcictaman",
+	"mobile-frontend-random-button": "Arotc",
 	"mobile-frontend-talk-overlay-header": "Ka ici arimowaniok",
 	"mobile-frontend-terms-text": "Ke ici nosinetakiniwok orocowe masinhikan",
 	"mobile-frontend-view": "Aripoc takapikenikan otci",
+	"mobile-frontend-view-desktop": "Kipaha ka nokok",
 	"mobile-frontend-watchlist-filter-talk": "Ka ici arimowaniok",
-	"mobile-frontend-user-page-talk": "Ka ici arimowaniok"
+	"mobile-frontend-user-page-talk": "Ka ici arimowaniok",
+	"tag-mobile_edit": "Keki meckotciparik",
+	"mobile-frontend-pageaction-edit-tooltip": "Meckotcika anihe ka kitcitik."
 }
