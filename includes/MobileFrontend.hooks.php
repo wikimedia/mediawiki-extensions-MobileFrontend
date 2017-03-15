@@ -1021,7 +1021,7 @@ class MobileFrontendHooks {
 		}
 
 		// add Echo, if it's installed
-		if ( class_exists( 'MWEchoNotifUser' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$resourceLoader->register( [
 				'skins.minerva.notifications' => $resourceBoilerplate + [
 					'dependencies' => [
@@ -1054,6 +1054,28 @@ class MobileFrontendHooks {
 						'notifications',
 						'echo-overlay-link',
 						'echo-mark-all-as-read-confirmation',
+					],
+					'targets' => [ 'mobile', 'desktop' ],
+				],
+				'skins.minerva.notifications.filter.styles' => $resourceBoilerplate + [
+					'styles' => [
+						'resources/skins.minerva.notifications.filter.styles/SpecialNotificationsOverlay.less',
+					],
+					'targets' => [ 'mobile', 'desktop' ],
+				],
+				'mobile.notifications.filter.overlay' => $resourceBoilerplate + [
+					'dependencies' => [
+						'mobile.startup',
+						'ext.echo.ui',
+					],
+					'scripts' => [
+						'resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js',
+					],
+					'styles' => [
+						'resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.less',
+					],
+					'messages' => [
+						'mobile-frontend-notifications-filter-title',
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],

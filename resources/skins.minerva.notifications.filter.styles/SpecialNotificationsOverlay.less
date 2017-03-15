@@ -1,0 +1,71 @@
+@import 'minerva.variables';
+
+.mw-echo-ui-notificationsInboxWidget {
+	&-cell {
+		&-placeholder {
+			display: table-cell;
+			width: 100%;
+		}
+	}
+
+	&-sidebar {
+		// echo notificationsInboxWidget cell
+		// in the desktop version is hidden
+		// in the mobile version.
+		&.mw-echo-ui-notificationsInboxWidget-cell {
+			display: none;
+		}
+	}
+
+	&-main {
+		&-toolbar {
+			&-top {
+				display: table;
+				.row {
+					display: table-row;
+				}
+			}
+
+			&-affixed {
+				position: fixed;
+				z-index: 2;
+				top: 0;
+				background-color: @skinContentBgColor;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				box-shadow: 0 2px 0 0 rgba( 0, 0, 0, 0.1 );
+			}
+
+			&-readState {
+				// echo notificationsInboxWidget cell for readState
+				// in the desktop version is hidden
+				// in the mobile version.
+				&.mw-echo-ui-notificationsInboxWidget-cell {
+					display: none;
+				}
+			}
+
+			&-settings,
+			&-pagination {
+				// display for echo notificationsInboxWidget cell pagination
+				// is changed from display: inline-block in the desktop version to
+				// display: table-cell in the mobile version.
+				&.mw-echo-ui-notificationsInboxWidget-cell {
+					display: table-cell;
+				}
+			}
+
+			&-nav-filter {
+				&.mw-echo-ui-notificationsInboxWidget-cell {
+					display: table-cell;
+				}
+			}
+		}
+	}
+	// height for echo notificationsInboxWidget
+	// is changed from 8em in the desktop version to
+	// 4em in the mobile version.
+	& &-toolbarWrapper {
+		height: 4em;
+	}
+}

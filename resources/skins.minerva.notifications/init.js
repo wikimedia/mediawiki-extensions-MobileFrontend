@@ -7,7 +7,8 @@
 		$btn = $( '#secondary-button.user-button' ).parent(),
 		router = require( 'mediawiki.router' ),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
-		icons = M.require( 'mobile.startup/icons' );
+		icons = M.require( 'mobile.startup/icons' ),
+		initialized = false;
 
 	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
@@ -35,6 +36,12 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
+		var filterOverlayDeferred = $.Deferred(),
+			$notifReadState,
+			$crossWikiUnreadFilter,
+			filterStatusButton,
+			$readStateButton;
+
 		$btn.on( 'click', function () {
 			router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
@@ -77,6 +84,75 @@
 					router.back();
 				} );
 			} );
+		} );
+
+		// This code will currently only be invoked on Special:Notifications
+		// The code is bundled here since it makes use of loadModuleScript. This also allows
+		// the possibility of invoking the filter from outside the Special page in future.
+		// Once the 'ext.echo.special.onInitialize' hook has fired, load notification filter.
+		mw.hook( 'ext.echo.special.onInitialize' ).add( function () {
+			overlayManager.add( /^\/notifications-filter$/, function () {
+				return filterOverlayDeferred.then( function ( overlay ) {
+					mainMenu.openNavigationDrawer( 'secondary' );
+					overlay.on( 'hide', function () {
+						mainMenu.closeNavigationDrawers();
+					} );
+					return overlay;
+				} );
+			} );
+
+			// The 'ext.echo.special.onInitialize' hook is fired whenever special page notification changes display on click of a filter.
+			// Hence the hook is restricted from firing more than once.
+			if ( initialized ) {
+				return;
+			}
+			$crossWikiUnreadFilter = $( '.mw-echo-ui-crossWikiUnreadFilterWidget' );
+			$notifReadState = $( '.mw-echo-ui-notificationsInboxWidget-main-toolbar-readState' );
+			$readStateButton = $notifReadState.find( '.oo-ui-buttonElement' );
+
+			// Load the notification filter overlay
+			loadModuleScript( 'mobile.notifications.filter.overlay' ).done( function () {
+				var NotificationsFilterOverlay = M.require( 'mobile.notifications.filter.overlay/NotificationsFilterOverlay' );
+				filterOverlayDeferred.resolve(
+					new NotificationsFilterOverlay( {
+						$notifReadState: $notifReadState,
+						$crossWikiUnreadFilter: $crossWikiUnreadFilter
+					} )
+				);
+			} );
+
+			$readStateButton.on( 'click', function () {
+				router.navigate( 'Special:Notifications' );
+				// Important that we also prevent propagation to avoid interference with events that may be
+				// binded on #mw-mf-page-center that close overlay
+				return false;
+			} );
+			$crossWikiUnreadFilter.on( 'click', '.oo-ui-optionWidget', function () {
+				router.navigate( 'Special:Notifications' );
+				// Important that we also prevent propagation to avoid interference with events that may be
+				// binded on #mw-mf-page-center that close overlay
+				return false;
+			} );
+
+			// Create filter button once the notifications overlay has been loaded
+			filterStatusButton = new OO.ui.ButtonWidget(
+				{
+					classes: [ 'mw-echo-ui-notificationsInboxWidget-main-toolbar-nav-filter-placeholder' ],
+					icon: 'funnel',
+					label: 'Filter'
+				} );
+			$( '.mw-echo-ui-notificationsInboxWidget-cell-placeholder' ).append(
+				$( '<div>' )
+					.addClass( 'mw-echo-ui-notificationsInboxWidget-main-toolbar-nav-filter' )
+					.addClass( 'mw-echo-ui-notificationsInboxWidget-cell' )
+					.append( filterStatusButton.$element )
+			);
+
+			filterStatusButton.$element.on( 'click', function () {
+				router.navigate( '#/notifications-filter' );
+				return false;
+			} );
+			initialized = true;
 		} );
 	} );
 }( mw.mobileFrontend, jQuery, mw ) );
