@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_ba168caa",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-16T22:42:42Z",
+      "side": 1,
+      "message": "Whitespace",
+      "revId": "144b4e55a3bc368b3ab4928c732967f3295853ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_7a5ec47c",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-16T22:42:42Z",
+      "side": 1,
+      "message": "Where does this color come from? I don\u0027t think it\u0027s needed and its inconsisent with the color palette that we use for the site (you can see that defined in minerva.less/minerva.variables.less).\n\nFYI The default color is #002bb8 which is defined in the LESS variable @linkColor",
+      "revId": "144b4e55a3bc368b3ab4928c732967f3295853ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_ba1c4c7d",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-16T22:42:42Z",
+      "side": 1,
+      "message": "Rather than doing this please use a URL in the repository as this is very tricky to change in future! This also won\u0027t work on older browsers which do not support SVG.\n\nThe problem seems to stem from this icon being defined twice:\nonce in skins.minerva.userpage.icons\nand once in skins.minerva.icons.images.scripts\n\n( https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/extension.json#L242 )\nThe latter one does not look like it\u0027s used anywhere so I think you can fix this just by removing the asset and the line I\u0027ve pointed to in extension.json",
+      "revId": "144b4e55a3bc368b3ab4928c732967f3295853ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
