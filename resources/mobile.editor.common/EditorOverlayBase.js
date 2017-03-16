@@ -308,12 +308,18 @@
 		 * @inheritdoc
 		 */
 		hide: function () {
-			// trigger the customEvent for mw.confirmCloseWindow
-			if ( !this.allowCloseWindow.trigger() ) {
-				return;
+			var self = this;
+			if ( this.hasChanged() ) {
+				OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).done( function ( confirmed ) {
+					if ( confirmed ) {
+						self.allowCloseWindow.release();
+						Overlay.prototype.hide.call( self );
+					}
+				} );
+			} else {
+				this.allowCloseWindow.release();
+				Overlay.prototype.hide.call( this );
 			}
-			this.allowCloseWindow.release();
-			return Overlay.prototype.hide.apply( this, arguments );
 		},
 		/**
 		 * Check, if the user should be asked if they really want to leave the page.
