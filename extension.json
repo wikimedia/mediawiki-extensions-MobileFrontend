@@ -239,7 +239,6 @@
 			"selector": ".mw-ui-icon-{name}:before",
 			"position": "bottom",
 			"images": {
-				"talk": "resources/skins.minerva.icons.images.scripts/talk.svg",
 				"watch": "resources/skins.minerva.icons.images.scripts/watch.svg",
 				"watched": "resources/skins.minerva.icons.images.scripts/watched.svg",
 				"user": "resources/skins.minerva.icons.images.scripts/userNormal.svg",
