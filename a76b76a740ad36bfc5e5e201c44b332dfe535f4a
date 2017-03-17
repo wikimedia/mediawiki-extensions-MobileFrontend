@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8e46e3ee_41fc373b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-17T17:06:56Z",
+      "side": 1,
+      "message": "There is no need to comment on your changes between patches.\n\nThe commit message purpose is to document the changes the patch introduces to the codebase so this line can be removed.",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_46620dd7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -19,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_e1f8e348",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-17T17:06:56Z",
+      "side": 1,
+      "message": "This can happen sometimes if you accidentally type below the \"Change-Id\" line. Make sure it\u0027s the last line of your commit message before submitting :)",
+      "parentUuid": "8e46e3ee_46620dd7",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_e65eb916",
         "filename": "resources/skins.minerva.userpage.styles/userpage.less",
         "patchSetId": 2
@@ -30,6 +65,23 @@
       "writtenOn": "2017-03-17T12:20:12Z",
       "side": 1,
       "message": "wrong indentation",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_21ffab32",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-17T17:06:56Z",
+      "side": 1,
+      "message": "See earlier comment. It\u0027s not clear to me why this is necessary. This should already be the default @linkColor and if it isn\u0027t then there\u0027s a rule somewhere that should be removed.",
       "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
