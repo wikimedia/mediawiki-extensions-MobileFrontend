@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_46620dd7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-03-17T12:20:12Z",
+      "side": 1,
+      "message": "Why to change ids?\n\nThe commit message should end like:\n\nBug: XXX\nChange-Id: XXX\n\nThe commit then will be auto linked to the phabricator task.",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_e65eb916",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-03-17T12:20:12Z",
+      "side": 1,
+      "message": "wrong indentation",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_6680694c",
+        "filename": "resources/skins.minerva.userpage.styles/userpage.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-03-17T12:20:12Z",
+      "side": 1,
+      "message": "Here too. Also you can merge this rule with the above.",
+      "revId": "a76b76a740ad36bfc5e5e201c44b332dfe535f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
