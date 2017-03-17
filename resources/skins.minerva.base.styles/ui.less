@@ -215,7 +215,7 @@ body {
 		padding: 0.5em 0 0.5em @searchIconSize + (2 * @searchIconGutter);
 		background-position: left @searchIconGutter center;
 		background-repeat: no-repeat;
-		background-size: @searchIconSize @searchIconSize;
+		.background-size( @searchIconSize, @searchIconSize );
 		border-radius: @borderRadius;
 		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
 		// FIXME: Necessary to support rendering of cached HTML. Move when new header in production
