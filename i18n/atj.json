@@ -3,9 +3,12 @@
 		"authors": [
 			"Amqui",
 			"Benoit Rochon",
-			"Jean-paul echaquan"
+			"Jean-paul echaquan",
+			"Jeannette Coocoo"
 		]
 	},
+	"mobile-frontend-copyright": "Patoc karokitasonaniwon kata natcipitcikatek ohwe mawotosinihikan$1 kekotc nama takatc e itasinatek.",
+	"mobile-frontend-diffview-anonymous": "Nama kiskeritakosiw ka ki masinahak",
 	"mobile-frontend-editor-edit": "Meckotcita",
 	"mobile-frontend-editor-summary": "Nosem:",
 	"mobile-frontend-home-button": "Otitikowin",
@@ -16,6 +19,7 @@
 	"mobile-frontend-main-menu-nearby": "Nipemictew",
 	"mobile-frontend-main-menu-settings": "Ke actain",
 	"mobile-frontend-main-menu-watchlist": "Ka masinateki",
+	"mobile-frontend-news-items": "Tipatcimowina",
 	"mobile-frontend-placeholder": "Nantokaskeritcikatek {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Nitcictaman",
 	"mobile-frontend-random-button": "Arotc",
@@ -27,5 +31,6 @@
 	"mobile-frontend-watchlist-filter-talk": "Ka ici arimowaniok",
 	"mobile-frontend-user-page-talk": "Ka ici arimowaniok",
 	"tag-mobile_edit": "Keki meckotciparik",
+	"tag-mobile_web_edit": "Meckotapihikan nte pamikicikwepitcikanicicik e ici mitcicihikatek",
 	"mobile-frontend-pageaction-edit-tooltip": "Meckotcika anihe ka kitcitik."
 }
