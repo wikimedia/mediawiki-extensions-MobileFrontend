@@ -286,7 +286,12 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		$out->addModuleStyles( 'mobile.usermodule.styles' );
+		$styles = [ 'mobile.usermodule.styles' ];
+		if ( $this->mobileContext->getConfigVariable( 'MinervaPrintStyles' ) ) {
+			$styles[] = 'skins.minerva.print.styles';
+		}
+
+		$out->addModuleStyles( $styles );
 		$out->addModuleScripts( 'mobile.usermodule' );
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}

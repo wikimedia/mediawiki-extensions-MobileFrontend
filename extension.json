@@ -153,6 +153,16 @@
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
 		},
+		"skins.minerva.print.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"position": "top",
+			"styles": [
+				"resources/skins.minerva.print.styles/styles.less"
+			]
+		},
 		"skins.minerva.tablet.styles": {
 			"targets": [
 				"mobile",
@@ -1801,6 +1811,10 @@
 		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MinervaApplyKnownTemplateHacks": false,
+		"MinervaPrintStyles": {
+			"base": false,
+			"beta": true
+		},
 		"MinervaPageActions": [
 			"edit",
 			"talk",
