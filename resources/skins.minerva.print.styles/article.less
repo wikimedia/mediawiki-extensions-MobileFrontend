@@ -1,0 +1,51 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
+.pre-content {
+	display: block;
+	padding: 51px 0 35px;
+
+	h1 {
+		font-size: 70px;
+		font-weight: normal;
+		font-style: italic;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: @colorGray1;
+	}
+
+	.tagline {
+		font-size: 36px;
+	}
+
+	#page-actions {
+		display: none;
+	}
+}
+
+#bodyContent {
+	padding-top: 55px;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		display: block;
+		width: 55px;
+		height: 2px;
+		background: @printBorderColor;
+	}
+}
+
+#mw-content-text {
+	font-size: 36px;
+
+	a {
+		text-decoration: underline;
+		color: @colorGray2;
+	}
+}
