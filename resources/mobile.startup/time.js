@@ -100,8 +100,40 @@
 		}
 	}
 
+	/**
+	 * Return a message relating to the registration date of the user
+	 * @param {string} ts timestamp
+	 * @param {string} [gender] of the last user editing this page
+	 * @return {string}
+	 * @ignore
+	 */
+	function getRegistrationMessage( ts, gender ) {
+		var delta, html,
+			keys = {
+				seconds: 'mobile-frontend-joined-seconds',
+				minutes: 'mobile-frontend-joined-minutes',
+				hours: 'mobile-frontend-joined-hours',
+				days: 'mobile-frontend-joined-days',
+				months: 'mobile-frontend-joined-months',
+				years: 'mobile-frontend-joined-years'
+			},
+			args = [];
+
+		gender = gender || 'unknown';
+
+		delta = getTimeAgoDelta( parseInt( ts, 10 ) );
+		if ( isNow( delta ) ) {
+			args.push( 'mobile-frontend-joined-just-now', gender );
+		} else {
+			args.push( keys[ delta.unit ], gender, mw.language.convertNumber( delta.value ) );
+		}
+		html = mw.message.apply( this, args ).parse();
+		return html;
+	}
+
 	M.define( 'mobile.startup/time', {
 		getLastModifiedMessage: getLastModifiedMessage,
+		getRegistrationMessage: getRegistrationMessage,
 		timeAgo: timeAgo,
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
