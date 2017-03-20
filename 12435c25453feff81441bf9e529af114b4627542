@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_40a0a7f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-20T17:39:35Z",
+      "side": 1,
+      "message": "Try to make the first line has descriptive has possible as some UIs will only show this line and without opening the commit it\u0027s not possible to see what changed here.\n\n\"Fixed 3 issues with user pages\" would be much more descriptive.",
+      "revId": "12435c25453feff81441bf9e529af114b4627542",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_a0b96b2b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-20T17:39:35Z",
+      "side": 1,
+      "message": "We descoped this so you are actually fixing only 2 issues now.",
+      "revId": "12435c25453feff81441bf9e529af114b4627542",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
