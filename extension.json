@@ -1828,8 +1828,8 @@
 			"beta": true
 		},
 		"MinervaEnableFontChanger": {
-		  "base": false,
-		  "beta": true
+			"base": false,
+			"beta": true
 		},
 		"MinervaEnableBackToTop": {
 			"base": false,
