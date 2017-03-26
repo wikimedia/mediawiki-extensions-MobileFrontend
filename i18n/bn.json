@@ -5,7 +5,8 @@
 			"Bellayet",
 			"Nasir8891",
 			"Tauhid16",
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"Zaheen"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
@@ -230,7 +231,7 @@
 	"mobile-frontend-user-button-tooltip": "আমার বিজ্ঞপ্তিগুলো দেখাও",
 	"mobile-frontend-user-newmessages": "আপনার আলাপ পাতায় আপনার জন্য নতুন বার্তা আছে",
 	"mobile-frontend-view": "মোবাইল সংস্করণ",
-	"mobile-frontend-view-desktop": "ডেক্সটপ",
+	"mobile-frontend-view-desktop": "ডেস্কটপ",
 	"mobile-frontend-watchlist-a-z": "তালিকা",
 	"mobile-frontend-watchlist-a-z-empty-howto": "আপনার নজরতালিকায় বর্তমানে কোন পাতা নেই। আপনার নজরতালিকা আপনি আগ্রহী এমন পাতা ট্র্যাক রাখতে সাহায্য করে। তারকা আইকনে টোকা দিয়ে পাতা নজরতালিকায় রাখুন।",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "তারকা আইকনে ক্লিক করুন",

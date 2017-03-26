@@ -95,6 +95,7 @@
 	"mobile-frontend-history-404-title": "Säit gëtt et net",
 	"mobile-frontend-home-button": "Haaptsäit",
 	"mobile-frontend-images-status": "Biller",
+	"mobile-frontend-joined-just-now": "Elo grad {{GENDER:$1|bäigetrueden}}",
 	"mobile-frontend-language-change": "Sprooch wiesselen",
 	"mobile-frontend-language-article-heading": "An enger anerer Sprooch liesen",
 	"mobile-frontend-language-heading": "<strong>Sproochen</strong>",

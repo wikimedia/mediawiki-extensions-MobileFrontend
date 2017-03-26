@@ -44,7 +44,8 @@
 			"Orlodrim",
 			"Yasten",
 			"Trial",
-			"The RedBurn"
+			"The RedBurn",
+			"Od1n"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -308,7 +309,7 @@
 	"tag-mobile_edit-description": "Modification effectuée depuis un mobile (web ou application)",
 	"tag-mobile_web_edit": "Modification par le web mobile",
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
-	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section fil directeur de cette page.",
+	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section introductrice de cette page.",
 	"apihelp-mobileview-description": "Retourne les données nécessaires pour les vues mobiles.",
 	"apihelp-mobileview-param-page": "Titre de la page à traiter.",
 	"apihelp-mobileview-param-redirect": "Si les redirections doivent être suivies.",
