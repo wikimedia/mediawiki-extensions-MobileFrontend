@@ -585,24 +585,12 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Prepares a url to the Special:UserLogin with query parameters,
-	 * taking into account $wgSecureLogin
+	 * Prepares a url to the Special:UserLogin with query parameters
 	 * @param array $query
 	 * @return string
 	 */
 	public function getLoginUrl( $query ) {
-		if ( $this->isMobileMode ) {
-			// FIXME: Does mobile really need special casing here?
-			$secureLogin = $this->getConfig()->get( 'SecureLogin' );
-
-			if ( WebRequest::detectProtocol() != 'https' && $secureLogin ) {
-				$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-				return $this->mobileContext->getMobileUrl( $loginUrl, $secureLogin );
-			}
-			return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
-		} else {
-			return SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-		}
+		return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
 	}
 
 	/**
@@ -629,8 +617,7 @@ class SkinMinerva extends SkinTemplate {
 			if ( !empty( $returntoquery ) ) {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
-			$url = SpecialPage::getTitleFor( 'Userlogout' )->getFullURL( $query );
-			$url = $this->mobileContext->getMobileUrl( $url, $this->getConfig()->get( 'SecureLogin' ) );
+			$url = SpecialPage::getTitleFor( 'Userlogout' )->getLocalURL( $query );
 			$username = $user->getName();
 
 			$menu->insert( 'auth' )
