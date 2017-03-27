@@ -51,6 +51,7 @@
 	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
+		"MinervaHooks": "includes/Minerva.hooks.php",
 		"MobileFrontendHooks": "includes/MobileFrontend.hooks.php",
 		"MobileFrontendSkinHooks": "includes/MobileFrontend.skin.hooks.php",
 		"MobileFrontend\\BaseDomainExtractorInterface": "includes/BaseDomainExtractorInterface.php",
@@ -87,6 +88,7 @@
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
 		"SkinMinerva": "includes/skins/SkinMinerva.php",
 		"SkinMinervaBeta": "includes/skins/SkinMinervaBeta.php",
+		"ICustomizableSkin": "includes/skins/ICustomizableSkin.php",
 		"MobileFrontend\\MenuBuilder": "includes/MenuBuilder.php",
 		"MobileFrontend\\MenuEntry": "includes/MenuBuilder.php",
 		"MobileFrontend\\Devices\\DeviceDetector": "includes/devices/DeviceDetector.php",
@@ -1606,6 +1608,9 @@
 		],
 		"APIGetDescription": [
 			"ApiParseExtender::onAPIGetDescription"
+		],
+		"BeforePageDisplayMobile": [
+			"MinervaHooks::onBeforePageDisplayMobile"
 		],
 		"RequestContextCreateSkin": [
 			"MobileFrontendHooks::onRequestContextCreateSkin"
