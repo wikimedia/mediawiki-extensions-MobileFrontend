@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_99a0989c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 21
+      },
+      "lineNbr": 1126,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-28T14:44:41Z",
+      "side": 1,
+      "message": "This should be mobile.startup",
+      "revId": "13819bd99e4a3ae036e6ac3b5aedaae8ec4ecc79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_79a34ca9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 21
+      },
+      "lineNbr": 1138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-28T14:44:41Z",
+      "side": 1,
+      "message": "This should be mobile.startup",
+      "revId": "13819bd99e4a3ae036e6ac3b5aedaae8ec4ecc79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_19bd68d1",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-28T14:44:41Z",
+      "side": 1,
+      "message": "Overlay now lives in the mobile.startup module\nvar Overlay \u003d M.require( \u0027mobile.startup\u0027).Overlay\nshould fix this.",
+      "revId": "13819bd99e4a3ae036e6ac3b5aedaae8ec4ecc79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_b980f4fa",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-28T14:44:41Z",
+      "side": 1,
+      "message": "You\u0027ll need to @import \u0027minerva.mixins\u0027; for this to work!",
+      "revId": "13819bd99e4a3ae036e6ac3b5aedaae8ec4ecc79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
