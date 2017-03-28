@@ -109,9 +109,11 @@
 			expandedSections = getExpandedSections( page ),
 			// the number of days between now and the time a setting was saved
 			daysDifference;
-		$.each( expandedSections, function ( page, sections ) {
+		Object.keys( expandedSections ).forEach( function ( page ) {
+			var sections = expandedSections[ page ];
 			// clean the setting if it is more than a day old
-			$.each( sections, function ( section, timestamp ) {
+			Object.keys( sections ).forEach( function ( section ) {
+				var timestamp = sections[ section ];
 				daysDifference = Math.floor( ( now - timestamp ) / 1000 / 60 / 60 / 24 );
 				if ( daysDifference >= 1 ) {
 					delete expandedSections[page][section];

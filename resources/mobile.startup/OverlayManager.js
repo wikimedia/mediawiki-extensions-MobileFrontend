@@ -124,15 +124,12 @@
 		 */
 		_checkRoute: function ( ev ) {
 			var
-				self = this,
 				current = this.stack[0],
 				match;
 
-			$.each( this.entries, function ( id, entry ) {
-				match = self._matchRoute( ev.path, entry );
-				// if matched (match not equal to null), break out of the loop
-				return match === null;
-			} );
+			match = Object.keys( this.entries ).reduce( function ( m, id ) {
+				return m || this._matchRoute( ev.path, this.entries[ id ] );
+			}.bind( this ), null );
 
 			// if there is an overlay in the stack and it's opened, try to close it
 			if (

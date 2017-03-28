@@ -84,7 +84,7 @@
 		/** @inheritdoc */
 		preRender: function () {
 			var self = this;
-			$.each( this.options.thumbnails, function ( i, thumbnail ) {
+			this.options.thumbnails.forEach( function ( thumbnail, i ) {
 				if ( thumbnail.getFileName() === self.options.title ) {
 					self.options.caption = thumbnail.getDescription();
 					self.galleryOffset = i;

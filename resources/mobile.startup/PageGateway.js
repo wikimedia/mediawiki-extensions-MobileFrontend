@@ -46,7 +46,7 @@
 
 		// if the first section level is not equal to collapseLevel, this first
 		// section will not have a parent and will be appended to the result.
-		$.each( sections, function ( i, section ) {
+		sections.forEach( function ( section ) {
 			if ( section.line !== undefined ) {
 				section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
 			}
@@ -210,11 +210,13 @@
 			}
 
 			// Create the data object for each variant and store it
-			$.each( generalData.variants, function ( index, item ) {
-				var variant = {
-					autonym: item.name,
-					lang: item.code
-				};
+			Object.keys( generalData.variants ).forEach( function ( index ) {
+				var item = generalData.variants[ index ],
+					variant = {
+						autonym: item.name,
+						lang: item.code
+					};
+
 				if ( variantPath ) {
 					variant.url = variantPath
 						.replace( '$1', title )

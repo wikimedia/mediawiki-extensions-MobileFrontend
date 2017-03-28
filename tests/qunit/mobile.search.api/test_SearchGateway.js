@@ -64,7 +64,7 @@
 			[ '<script>alert("FAIL")</script> should be safe',
 				'<script>alert("FAIL"', '<strong>&lt;script&gt;alert("FAIL"</strong>)&lt;/script&gt; should be safe' ]
 		];
-		$.each( data, function ( i, item ) {
+		data.forEach( function ( item, i ) {
 			assert.strictEqual( gateway._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
 		} );
 	} );

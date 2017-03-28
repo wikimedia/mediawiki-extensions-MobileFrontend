@@ -73,7 +73,7 @@
 		var result = [],
 			self = this;
 
-		$.each( data.results, function ( i, value ) {
+		data.results.forEach( function ( value ) {
 			if (
 				!$( 'div[data-title="' + value.title + '"]' ).length &&
 				$.inArray( value.displayTitle, self.categories ) === -1
