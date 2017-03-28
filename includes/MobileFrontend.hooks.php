@@ -13,6 +13,9 @@ use MediaWiki\MediaWikiServices;
  *	on<HookName>()
  * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
  *	onRequestContextCreateSkin()
+ *
+ * If you're hook changes the behaviour of the Minerva skin you are in the wrong place.
+ * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
 
@@ -571,40 +574,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		$mobileContext = MobileContext::singleton();
-		$isMobileView = $mobileContext->shouldDisplayMobileView();
-		$context = $special->getContext();
-		$out = $context->getOutput();
-		$request = $special->getContext()->getRequest();
-		$skin = $out->getSkin()->getSkinName();
-
+		$isMobileView = MobileContext::singleton()->shouldDisplayMobileView();
 		$name = $special->getName();
 
-		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
-		// FIXME: Upstream to core (?)
-		if ( $skin === 'minerva' ) {
-			if ( $name === 'Preferences' ) {
-				$out->addModules( 'skins.minerva.special.preferences.scripts' );
-			}
-
-			// Add default warning message to Special:UserLogin and Special:UserCreate
-			// if no warning message set.
-			if (
-				( $name === 'Userlogin' || $name === 'CreateAccount' ) &&
-				!$request->getVal( 'warning', null ) &&
-				!$context->getUser()->isLoggedIn()
-			) {
-				$request->setVal( 'warning', 'mobile-frontend-generic-login-new' );
-			}
-		}
-
-		if ( $isMobileView ) {
-			if ( $name === 'Search' ) {
-				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
-			} elseif ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
-				$out->addModuleStyles( [ 'mobile.ajax.styles', 'skins.minerva.special.userlogin.styles' ] );
-				$out->addModules( 'mobile.special.userlogin.scripts' );
-			}
+		if ( $isMobileView && ( $name === 'Userlogin' || $name === 'CreateAccount' ) ) {
+			$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
 		}
 
 		return true;

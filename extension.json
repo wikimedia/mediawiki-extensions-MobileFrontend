@@ -1661,6 +1661,7 @@
 			"MobileFrontendHooks::onAbuseFilterBuilder"
 		],
 		"SpecialPageBeforeExecute": [
+			"MinervaHooks::onSpecialPageBeforeExecute",
 			"MobileFrontendHooks::onSpecialPageBeforeExecute"
 		],
 		"UserLoginComplete": [
