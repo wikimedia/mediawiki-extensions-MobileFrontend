@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_ded4b8ee",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T23:46:18Z",
+      "side": 1,
+      "message": "filter() before map() is more common I think. Right now this first fills the array with nulls.\n\nIn that case, it essentially becomes a reduce(). Perhaps worth trying? (arr.push inside an if).",
+      "range": {
+        "startLine": 41,
+        "startChar": 41,
+        "endLine": 41,
+        "endChar": 48
+      },
+      "revId": "d0ee8e51cef69a1d86a1e9474b88fffc30aa804c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
