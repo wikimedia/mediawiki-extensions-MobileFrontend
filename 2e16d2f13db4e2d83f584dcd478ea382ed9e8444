@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_40e8c7af",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-29T19:36:23Z",
+      "side": 0,
+      "message": ":-o",
+      "revId": "2e16d2f13db4e2d83f584dcd478ea382ed9e8444",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
