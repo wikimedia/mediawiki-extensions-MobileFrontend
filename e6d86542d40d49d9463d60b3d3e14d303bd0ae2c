@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_5e63c83b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 851,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T23:59:36Z",
+      "side": 1,
+      "message": "probably not necessary",
+      "revId": "e6d86542d40d49d9463d60b3d3e14d303bd0ae2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_3e5efc7b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T23:59:36Z",
+      "side": 1,
+      "message": "do we want to keep them as global options? if yes then probably we have to prefix them somehow. IMHO would be better to move them into SkinMinerva class",
+      "revId": "e6d86542d40d49d9463d60b3d3e14d303bd0ae2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
