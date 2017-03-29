@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_9ec39061",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T23:33:26Z",
+      "side": 1,
+      "message": "`if ( $skin instanceOf SkinMinerva )` as this is clearly designed for our skin.\n\nAlso instead of `if(); if(); if();` probably better is to make a `switch() { case }`, it iwll make it bit more readable, as currently only one `if(){}` is valid.",
+      "revId": "0cf6441278fe8ff6c3718cfbe9b8fb2b14751770",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_fed2d42b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T23:33:26Z",
+      "side": 1,
+      "message": "we can collapse both if statements into one",
+      "revId": "0cf6441278fe8ff6c3718cfbe9b8fb2b14751770",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
