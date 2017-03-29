@@ -106,7 +106,7 @@
 			this.showHidden( '.saving-header' );
 
 			// add wikitext to add to the page
-			$.each( $( '.suggestion' ), function () {
+			$( '.suggestion' ).each( function () {
 				var data = $( this ).data( 'title' );
 
 				if ( data ) {

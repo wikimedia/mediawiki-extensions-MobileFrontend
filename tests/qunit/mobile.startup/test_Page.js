@@ -54,7 +54,7 @@
 			[ 'User talk:Jon', 3 ],
 			[ 'Special:Nearby', -1 ]
 		];
-		$.each( testCases, function ( i, tc ) {
+		testCases.forEach( function ( tc ) {
 			var p = new Page( {
 				title: tc[ 0 ]
 			} );
@@ -73,7 +73,7 @@
 			[ 'User talk:Jon', true ],
 			[ 'Special:Nearby', false ]
 		];
-		$.each( testCases, function ( i, tc ) {
+		testCases.forEach( function ( tc ) {
 			var p = new Page( {
 				title: tc[ 0 ]
 			} );
@@ -110,7 +110,7 @@
 			'Check against XSS in Page.js constructor displaytitle (when title set)'
 		);
 
-		$.each( titleJSON, function ( i, json ) {
+		titleJSON.forEach( function ( json ) {
 			p = Page.newFromJSON( json );
 
 			assert.strictEqual(

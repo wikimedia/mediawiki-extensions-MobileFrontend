@@ -78,7 +78,7 @@
 			util.saveLanguageUsageCount( lang, util.getFrequentlyUsedLanguages() );
 
 			// find the index of the clicked language in the list of visible results
-			$.each( $visibleLanguageLinks, function ( i, link ) {
+			$visibleLanguageLinks.each( function ( i, link ) {
 				if ( $( link ).hasClass( lang ) ) {
 					return false;
 				}
@@ -102,7 +102,7 @@
 			var filteredList = [];
 
 			if ( val ) {
-				$.each( this.options.languages, function ( i, language ) {
+				this.options.languages.forEach( function ( language ) {
 					var langname = language.langname;
 					// search by language code or language name
 					if ( language.autonym.toLowerCase().indexOf( val ) > -1 ||
@@ -114,7 +114,7 @@
 				} );
 
 				if ( this.options.variants ) {
-					$.each( this.options.variants, function ( i, variant ) {
+					this.options.variants.forEach( function ( variant ) {
 						// search by variant code or variant name
 						if ( variant.autonym.toLowerCase().indexOf( val ) > -1 ||
 							variant.lang.toLowerCase().indexOf( val ) > -1

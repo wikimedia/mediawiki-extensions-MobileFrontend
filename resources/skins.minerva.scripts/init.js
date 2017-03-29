@@ -32,7 +32,7 @@
 	 */
 	function initMediaViewer() {
 		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
-			$.each( thumbs, function ( i, thumb ) {
+			thumbs.forEach( function ( thumb ) {
 				thumb.$el.off().data( 'thumb', thumb ).on( 'click', onClickImage );
 			} );
 		}

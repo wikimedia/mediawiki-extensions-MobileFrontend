@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var View = M.require( 'mobile.startup/View' ),
 		icons = M.require( 'mobile.startup/icons' );
@@ -20,8 +20,8 @@
 		this.id = options.id || null;
 		this.anchor = options.anchor;
 		this.children = [];
-		$.each( options.children || [], function () {
-			self.children.push( new Section( this ) );
+		( options.children || [] ).forEach( function ( section ) {
+			self.children.push( new Section( section ) );
 		} );
 		View.call( this, options );
 	}
@@ -41,4 +41,4 @@
 	} );
 	M.define( 'mobile.startup/Section', Section );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -214,16 +214,15 @@
 		 * @inheritdoc
 		 */
 		preRender: function () {
-			var self = this;
 			this.sections = [];
 			this._sectionLookup = {};
 			this.title = this.options.title;
 
-			$.each( this.options.sections, function () {
-				var section = new Section( this );
-				self.sections.push( section );
-				self._sectionLookup[section.id] = section;
-			} );
+			this.options.sections.forEach( function ( sectionData ) {
+				var section = new Section( sectionData );
+				this.sections.push( section );
+				this._sectionLookup[section.id] = section;
+			}.bind( this ) );
 		},
 
 		/**

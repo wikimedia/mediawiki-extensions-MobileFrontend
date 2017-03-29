@@ -190,11 +190,12 @@
 		);
 
 		suggestedLanguages = util.getStructuredLanguages(
-			this.apiLanguages, this.apiVariants, {}, this.deviceLanguage ).suggested;
-		$.each( this.apiVariants, function ( i, variant ) {
+			this.apiLanguages, this.apiVariants, {}, this.deviceLanguage
+		).suggested;
+		this.apiVariants.forEach( function ( variant ) {
 			variantsMap[ variant.lang ] = variant;
 		} );
-		$.each( suggestedLanguages, function ( i, suggestedLanguage ) {
+		suggestedLanguages.forEach( function ( suggestedLanguage ) {
 			assert.ok(
 				variantsMap.hasOwnProperty( suggestedLanguage.lang ),
 				'Variant "' + suggestedLanguage.lang + '" is in the list of suggested languages.'
