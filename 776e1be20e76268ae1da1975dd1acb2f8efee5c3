@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_5ed3c861",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-29T23:41:58Z",
+      "side": 1,
+      "message": "This sounds like a good idea.\n\nLong term I\u0027d like to see if we can upstream this method to core.",
+      "parentUuid": "6e436fe2_dee8380e",
+      "revId": "776e1be20e76268ae1da1975dd1acb2f8efee5c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_9ed95086",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2017-03-29T22:56:04Z",
       "side": 1,
       "message": "would be nice to keep keys as constants. This is just an idea to improve, not a change request, you might skip it.",
+      "revId": "776e1be20e76268ae1da1975dd1acb2f8efee5c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_fec894ac",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-29T23:41:58Z",
+      "side": 1,
+      "message": "agree",
+      "parentUuid": "6e436fe2_9ed95086",
       "revId": "776e1be20e76268ae1da1975dd1acb2f8efee5c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
