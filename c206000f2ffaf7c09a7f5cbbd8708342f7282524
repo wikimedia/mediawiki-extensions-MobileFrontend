@@ -33,6 +33,24 @@
       "revId": "c206000f2ffaf7c09a7f5cbbd8708342f7282524",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_fe8094fb",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1403,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T23:37:36Z",
+      "side": 1,
+      "message": "but classes is* an empty array",
+      "parentUuid": "0e0e73b5_935866ff",
+      "revId": "c206000f2ffaf7c09a7f5cbbd8708342f7282524",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
