@@ -45,6 +45,29 @@
       "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_e33d5db9",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T20:15:45Z",
+      "side": 1,
+      "message": "It\u0027d be good to verify whether this is worth doing. Doesn\u0027t seem like an obvious improvement. A plain for-in loop would be cleaner if one needs to reference the value manually still.",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 51
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
