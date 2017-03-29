@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_4321b199",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T20:10:44Z",
+      "side": 1,
+      "message": "Could use the more common $().each() idiom of using \u0027this\u0027 inside jQuery callbacks and drop parameters.",
+      "range": {
+        "startLine": 82,
+        "startChar": 9,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_c32dc18c",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T20:10:44Z",
+      "side": 1,
+      "message": "One thing to keep in mind here and elsewhere is that $.each() silently tolerates it if the leaf node of the property path is undefined, null, false or some such.\n\nIf \u0027options\u0027 is undefined it will throw either way, but if options is defined and \u0027languages\u0027 is optional in some way, that this will break the code. the below, for example, has a conditional for \u0027variants\u0027.",
+      "range": {
+        "startLine": 105,
+        "startChar": 4,
+        "endLine": 105,
+        "endChar": 27
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
