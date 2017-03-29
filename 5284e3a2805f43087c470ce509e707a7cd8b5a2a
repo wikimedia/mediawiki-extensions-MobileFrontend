@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_5e27485f",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-03-29T23:27:40Z",
+      "side": 1,
+      "message": "In my tests it seems that $.each fails with false, undefined and null:\n\n    $.each(null, (x) \u003d\u003e console.log(x))\n    Uncaught TypeError: Cannot read property \u0027length\u0027 of null\n\n    $.each(undefined, (x) \u003d\u003e console.log(x))\n    Uncaught TypeError: Cannot read property \u0027length\u0027 of undefined\n\n    $.each(false, (x) \u003d\u003e console.log(x))\n    Uncaught TypeError: Cannot use \u0027in\u0027 operator to search for \u0027length\u0027 in \n    false\n\n    $.each(({a: null}).a, (x) \u003d\u003e console.log(x))\n    Uncaught TypeError: Cannot read property \u0027length\u0027 of null\n\nIs this what you referred to?",
+      "parentUuid": "6e436fe2_c32dc18c",
+      "range": {
+        "startLine": 105,
+        "startChar": 4,
+        "endLine": 105,
+        "endChar": 27
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_e33d5db9",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2
@@ -59,6 +83,30 @@
       "writtenOn": "2017-03-29T20:15:45Z",
       "side": 1,
       "message": "It\u0027d be good to verify whether this is worth doing. Doesn\u0027t seem like an obvious improvement. A plain for-in loop would be cleaner if one needs to reference the value manually still.",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 51
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_be168cf4",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-03-29T23:27:40Z",
+      "side": 1,
+      "message": "Yeah, in certain cases it may not be worth, but I feel like using the ES5 construct implicitly protects against enumerating unwanted properties. With the for in construct we should probably too use hasOwnProperty so it would be a bit more noisy in certain cases.",
+      "parentUuid": "6e436fe2_e33d5db9",
       "range": {
         "startLine": 79,
         "startChar": 3,
