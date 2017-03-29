@@ -1,6 +1,7 @@
-Given(/^the page "(.+)" has the following edits:$/) do |page, table|
-  page = page.gsub(' ', '_')
+Given(/^I am on a page that has the following edits:$/) do |table|
+  page = 'Selenium_diff_test_'.concat(@random_string)
   table.rows.each { |(text)| api.edit(title: page, text: text) }
+  visit(ArticlePage, using_params: { article_name: page })
 end
 
 When(/^I clear the editor$/) do
