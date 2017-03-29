@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_dee8380e",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T22:56:04Z",
+      "side": 1,
+      "message": "Instead of `method_exists()` that checks the existence of method lets create an interface `ICustomizableSkin` that has one public method called `public function setSkinOptions(array $options);` and then here we can do \"if ($skin instanceOf ICustomizableSkin)\".\n\nThe interface will add:\n - clean definition of required method, right now it\u0027s clear that MinervaSkin requires that method to work properly\n - will check method arguments",
+      "revId": "776e1be20e76268ae1da1975dd1acb2f8efee5c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9ed95086",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-29T22:56:04Z",
+      "side": 1,
+      "message": "would be nice to keep keys as constants. This is just an idea to improve, not a change request, you might skip it.",
+      "revId": "776e1be20e76268ae1da1975dd1acb2f8efee5c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
