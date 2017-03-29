@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_9e915055",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T23:37:25Z",
+      "side": 1,
+      "message": "Interesting. Seems that tolerance was removed some jQuery releases ago. Makes sense I suppose. Either way is god news, such check really should be done by the caller. Thanks for checking :)",
+      "parentUuid": "6e436fe2_5e27485f",
+      "range": {
+        "startLine": 105,
+        "startChar": 4,
+        "endLine": 105,
+        "endChar": 27
+      },
+      "revId": "5284e3a2805f43087c470ce509e707a7cd8b5a2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_e33d5db9",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 2
