@@ -82,8 +82,8 @@
 			}
 
 			// Convert the map to an Array.
-			pages = $.map( data.query.pages, function ( page ) {
-				return page;
+			pages = Object.keys( data.query.pages ).map( function ( id ) {
+				return data.query.pages[ id ];
 			} );
 
 			// Sort results alphabetically (the api map doesn't have any order). The
@@ -100,7 +100,7 @@
 			}
 
 			// Transform the items to a sensible format
-			return $.map( pages, function ( item ) {
+			return pages.map( function ( item ) {
 				return Page.newFromJSON( item );
 			} );
 		}

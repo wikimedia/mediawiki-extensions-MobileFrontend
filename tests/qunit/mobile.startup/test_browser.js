@@ -29,11 +29,6 @@
 		function cache( obj, method ) {
 			return obj[ '__cache' + obj[ method ].cacheId ];
 		}
-		function keys( obj ) {
-			return $.map( obj, function ( key ) {
-				return key;
-			} );
-		}
 
 		// Check that the same methods across different instances have their own
 		// cache and don't interfere with one another
@@ -49,12 +44,12 @@
 		// Check that the caches have been filled
 		// NOTE: In the constructor isAndroid2 is called with empty
 		// so account for that on the assertions:
-		assert.strictEqual( keys( cache( ipad, 'isIos' ) ).length, 2, 'isIos on ipad cached as expected' );
-		assert.strictEqual( keys( cache( ipad, 'isAndroid2' ) ).length, 1, 'isAndroid2 on ipad cached as expected' );
-		assert.strictEqual( keys( cache( android2, 'isIos' ) ).length, 1, 'isIos on android cached as expected' );
-		assert.strictEqual( keys( cache( android2, 'isAndroid2' ) ).length, 1, 'isAndroid2 on android2 cached as expected' );
-		assert.strictEqual( keys( cache( iphone, 'isAndroid2' ) ).length, 1, 'isAndroid2 on iphone cached as expected' );
-		assert.strictEqual( keys( cache( iphone, 'isIos' ) ).length, 2, 'isIos on iphone cached as expected' );
+		assert.strictEqual( Object.keys( cache( ipad, 'isIos' ) ).length, 2, 'isIos on ipad cached as expected' );
+		assert.strictEqual( Object.keys( cache( ipad, 'isAndroid2' ) ).length, 1, 'isAndroid2 on ipad cached as expected' );
+		assert.strictEqual( Object.keys( cache( android2, 'isIos' ) ).length, 1, 'isIos on android cached as expected' );
+		assert.strictEqual( Object.keys( cache( android2, 'isAndroid2' ) ).length, 1, 'isAndroid2 on android2 cached as expected' );
+		assert.strictEqual( Object.keys( cache( iphone, 'isAndroid2' ) ).length, 1, 'isAndroid2 on iphone cached as expected' );
+		assert.strictEqual( Object.keys( cache( iphone, 'isIos' ) ).length, 2, 'isIos on iphone cached as expected' );
 
 		// Mess up the cache and see if the objects return the correct value when
 		// called again with the same arguments
