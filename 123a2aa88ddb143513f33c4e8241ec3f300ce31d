@@ -16,6 +16,23 @@
       "revId": "123a2aa88ddb143513f33c4e8241ec3f300ce31d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_923f00d3",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-30T17:57:46Z",
+      "side": 1,
+      "message": "do we need that? probably not",
+      "revId": "123a2aa88ddb143513f33c4e8241ec3f300ce31d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
