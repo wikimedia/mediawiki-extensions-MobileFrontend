@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_9248608e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1275,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-03-30T17:52:40Z",
+      "side": 1,
+      "message": "use the SkinMinerva::OPTION_TOGGLING constant",
+      "revId": "123a2aa88ddb143513f33c4e8241ec3f300ce31d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
