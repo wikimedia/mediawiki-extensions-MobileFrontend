@@ -1,0 +1,244 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_9ede3013",
+        "filename": "i18n/en.json",
+        "patchSetId": 23
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "We don\u0027t use Title Case in MediaWiki, so this should not capitalize \"notifications\"",
+      "range": {
+        "startLine": 343,
+        "startChar": 55,
+        "endLine": 343,
+        "endChar": 68
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_5ee8a8af",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 23
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "This should be an explanation of where the message appears (like the ones above)",
+      "range": {
+        "startLine": 343,
+        "startChar": 48,
+        "endLine": 343,
+        "endChar": 68
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_bed76cf1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 1122,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "You can merge this if statement into the one above, since the conditions are the same",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_beee8caf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 1137,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "This module shouldn\u0027t have any dependencies",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9e1b90d4",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "This line and the next few are indented one level too many",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_5e15089b",
+        "filename": "resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "This should use mw.message( \u0027...-title\u0027 ).escaped() , because it\u0027s unsafe to inject message contents into HTML without escaping (or using something that escapes for you)",
+      "range": {
+        "startLine": 43,
+        "startChar": 39,
+        "endLine": 43,
+        "endChar": 46
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9e82b0cc",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "This line is commented out. Is it needed, or can it be removed?",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_5e8c28ff",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "Also commented-out code that could possibly be removed",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_1e6f8027",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "It seems that NotificationsFilterOverlay does not actually use $readStateButton?",
+      "range": {
+        "startLine": 63,
+        "startChar": 5,
+        "endLine": 63,
+        "endChar": 21
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9e695020",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "I\u0027m confused, how does this not break? By the time $crossWikiUnreadFilter gets assigned here, line 62 has already executed and tried to use it, and it\u0027ll see $crossWikiUnreadFilter as unset because lime 81 hasn\u0027t run yet. Am I missing something?\n\nI\u0027ll trace this in a debugger after dinner to see what actually happens.",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_3ecd9c34",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "You should never return the result of a .done() call. If overlayManager is going to do something with the result, you should use .then(); if it isn\u0027t, then you should drop the return keyword.",
+      "range": {
+        "startLine": 111,
+        "startChar": 5,
+        "endLine": 111,
+        "endChar": 11
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9ec87027",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-03-30T00:01:45Z",
+      "side": 1,
+      "message": "There\u0027s no point waiting for loadNotificationFilterOverlay here because we\u0027re in code that only executes after that has finished. Maybe this code should be somewhere else so it runs earlier?",
+      "range": {
+        "startLine": 111,
+        "startChar": 12,
+        "endLine": 111,
+        "endChar": 41
+      },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
