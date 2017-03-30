@@ -108,9 +108,9 @@
 
 			if ( data.query ) {
 
-				results = data.query.pages || [];
-				results = $.map( results, function ( result ) {
-					return self._getPage( query, result );
+				results = data.query.pages || {};
+				results = Object.keys( results ).map( function ( id ) {
+					return self._getPage( query, results[ id ] );
 				} );
 				// sort in order of index
 				results.sort( function ( a, b ) {

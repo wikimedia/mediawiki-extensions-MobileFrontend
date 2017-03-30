@@ -37,10 +37,11 @@
 	 * @return {Array} Ordered array of sections
 	 */
 	function transformSections( sections ) {
-		var
-			collapseLevel = Math.min.apply( this, $.map( sections, function ( s ) {
-				return s.level;
-			} ) ).toString(),
+		var sectionLevels = sections.map( function ( s ) { return s.level; } ),
+			existingSectionLevels = sectionLevels.filter( function ( level ) {
+				return !!level;
+			} ),
+			collapseLevel = Math.min.apply( this, existingSectionLevels ).toString(),
 			lastSection,
 			result = [];
 
