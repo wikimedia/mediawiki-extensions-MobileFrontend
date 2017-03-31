@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_09009fae",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-31T01:33:32Z",
+      "side": 1,
+      "message": "Looks like this is the same as the default for .search-box lower done. This rule is then redundant now, right?",
+      "range": {
+        "startLine": 94,
+        "startChar": 2,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "e7f41b3959c0a56c33abe510f5282e1bbc1b53b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
