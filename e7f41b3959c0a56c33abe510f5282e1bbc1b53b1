@@ -22,6 +22,53 @@
       "revId": "e7f41b3959c0a56c33abe510f5282e1bbc1b53b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_d5cec4b8",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-03T10:26:14Z",
+      "side": 1,
+      "message": "The rules added to .search-box below are overridden by the rules defined immediately below. If these rules aren\u0027t defined here, then .search-box will be\n\n    display: table-cell;\n    width: 3.35em;\n\nat mobile widths.\n\nWhy add the defaults below?",
+      "parentUuid": "6e436fe2_09009fae",
+      "range": {
+        "startLine": 94,
+        "startChar": 2,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "e7f41b3959c0a56c33abe510f5282e1bbc1b53b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_75e7b03b",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-03T10:26:14Z",
+      "side": 1,
+      "message": "Per @Krinkle\u0027s comment above, which situation do these rules cover?",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 13
+      },
+      "revId": "e7f41b3959c0a56c33abe510f5282e1bbc1b53b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
