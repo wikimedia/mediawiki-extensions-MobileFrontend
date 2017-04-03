@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_89f4a151",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-03T23:40:58Z",
+      "side": 1,
+      "message": "The line above sets:\n\n .header .search-box { display: none; width: auto; }\n\nLine 178 sets:\n\n .search-box { display: none; width: auto; }\n\n\nI don\u0027t see any other styles for search-box, but I guess you mean \u0027.header \u003e div { width: @headerHeight; display: table-cell; }\u0027 that seems very generic indeed and would indeed override the default search-box styles. In light of that, yeah, the above line isn\u0027t so redundant after all, but it still smells like tech debt or at least worth documenting what each of these three is supposed to apply to (header search box, header div, general search box).",
+      "parentUuid": "6e436fe2_d5cec4b8",
+      "range": {
+        "startLine": 94,
+        "startChar": 2,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "e7f41b3959c0a56c33abe510f5282e1bbc1b53b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_75e7b03b",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 1
