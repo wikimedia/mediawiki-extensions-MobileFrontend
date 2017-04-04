@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_c16fdd8d",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:28:04Z",
+      "side": 1,
+      "message": "This comment probably belongs on ICustomizableSkin. Let\u0027s move the conversation there.",
+      "parentUuid": "6e436fe2_21ad61e7",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_618fe926",
+        "filename": "includes/skins/ICustomizableSkin.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:28:04Z",
+      "side": 1,
+      "message": "Baha says: Are we calling features \"options\" now? Why not call these things \"features\"?\n\nI don\u0027t think we\u0027ve ever officially adopted the term `feature` and I think this is a little vague and doesn\u0027t make much sense in this context.\n\nWhat would this method be called if it included feature?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_0181454f",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 14
