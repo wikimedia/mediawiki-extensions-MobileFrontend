@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_34a041f1",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-04T18:39:20Z",
+      "side": 1,
+      "message": "do we need $context? we don\u0027t as SpecialPage can provide us everything we need:\n - getOutput()\n - getRequest()\n - getSkin()\n - getUser()",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_f480994d",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-04T18:39:20Z",
+      "side": 1,
+      "message": "previously we had \u0027mobile.ajax.styles\u0027, is it on purpose?\n\nAlso \u0027mobile.ajax\u0027 looks like something generic. Should we keep it in MobileFrontend.hooks.php ?",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_211a417f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-04T18:39:20Z",
+      "side": 1,
+      "message": "silly performance improvement but we don\u0027t need $out temporary variable as we use it only once.",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_612049a9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 598,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-04T18:39:20Z",
+      "side": 1,
+      "message": "wrap `$name \u003d\u003d\u003d \u0027UserLogin\u0027 || $name \u003d\u003d \u0027CreateAccount\u0027` with (), right now this check is incorrect. It will add `userlogin.scripts` everytime when `$name \u003d\u003d\u003d \u0027CreateAccount\u0027` even when $isMobileView is set to false.",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
