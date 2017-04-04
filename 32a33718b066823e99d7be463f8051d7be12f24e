@@ -16,6 +16,24 @@
       "revId": "32a33718b066823e99d7be463f8051d7be12f24e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_61dda916",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:33:53Z",
+      "side": 0,
+      "message": "It\u0027s not. I just noticed it as part of this change. I can do a separate patch for that though.",
+      "parentUuid": "6e436fe2_a1909199",
+      "revId": "32a33718b066823e99d7be463f8051d7be12f24e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

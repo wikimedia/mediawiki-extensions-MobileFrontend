@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_21e7a1e0",
+        "filename": "includes/skins/ICustomizableSkin.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:33:53Z",
+      "side": 1,
+      "message": "Would this make sense outside MobileFrontend if we upstreamed this to core?",
+      "parentUuid": "6e436fe2_618fe926",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_0181454f",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 14
@@ -65,6 +83,24 @@
       "writtenOn": "2017-04-04T16:52:34Z",
       "side": 1,
       "message": "It\u0027s not clear what these options are at first glance. Can we group document them?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_41daed22",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:33:53Z",
+      "side": 1,
+      "message": "Sure.",
+      "parentUuid": "6e436fe2_0181454f",
       "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -88,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_81aa356c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:33:53Z",
+      "side": 1,
+      "message": "This is part of the Skin in core - not something we control.",
+      "parentUuid": "6e436fe2_e1969996",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_c19b5dc0",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 14
@@ -99,6 +153,24 @@
       "writtenOn": "2017-04-04T16:52:34Z",
       "side": 1,
       "message": "Should we not get rid of this too?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_81c1d535",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T17:33:53Z",
+      "side": 1,
+      "message": "Yes, although out of scope of this change as this doesn\u0027t relate to MobileContext usage in skin.\n\nThis should be done as part of:\nhttps://phabricator.wikimedia.org/T147944",
+      "parentUuid": "6e436fe2_c19b5dc0",
       "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
