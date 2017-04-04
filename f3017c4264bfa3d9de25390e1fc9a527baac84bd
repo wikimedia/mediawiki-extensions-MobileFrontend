@@ -34,6 +34,24 @@
       "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_b206a121",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T21:44:13Z",
+      "side": 1,
+      "message": "I disabled JS and removed this line. The stylesheet is loading fine. How can I test where that\u0027s not the case.",
+      "parentUuid": "6e436fe2_546b8dee",
+      "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
