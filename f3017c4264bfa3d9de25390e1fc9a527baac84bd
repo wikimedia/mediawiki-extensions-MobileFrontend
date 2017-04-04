@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_41342da7",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:56:43Z",
+      "side": 1,
+      "message": "Any reason why these styles should be loaded at the top? Don\u0027t you have to wait until the page loads before printing anyway?",
+      "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
