@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_12f8b5e1",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T21:01:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e436fe2_34a041f1",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_f480994d",
         "filename": "includes/Minerva.hooks.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2017-04-04T18:39:20Z",
       "side": 1,
       "message": "previously we had \u0027mobile.ajax.styles\u0027, is it on purpose?\n\nAlso \u0027mobile.ajax\u0027 looks like something generic. Should we keep it in MobileFrontend.hooks.php ?",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_32fb71e0",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T21:01:19Z",
+      "side": 1,
+      "message": "Fixed. There was an upstream change. I\u0027ll document why this is here.",
+      "parentUuid": "6e436fe2_f480994d",
       "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
