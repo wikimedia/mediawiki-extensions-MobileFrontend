@@ -461,7 +461,7 @@ class SkinMinerva extends SkinTemplate {
 						SpecialPage::getTitleFor( 'Preferences' ),
 						'prefsnologintext2'
 					),
-					MobileUI::iconClass( 'mf-settings-invert', 'before' ),
+					MobileUI::iconClass( 'mf-settings', 'before' ),
 					[ 'data-event-name' => 'preferences' ]
 				);
 		}
