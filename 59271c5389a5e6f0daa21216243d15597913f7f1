@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_920045b1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T21:02:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e436fe2_211a417f",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_612049a9",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -100,6 +118,24 @@
       "writtenOn": "2017-04-04T18:39:20Z",
       "side": 1,
       "message": "wrap `$name \u003d\u003d\u003d \u0027UserLogin\u0027 || $name \u003d\u003d \u0027CreateAccount\u0027` with (), right now this check is incorrect. It will add `userlogin.scripts` everytime when `$name \u003d\u003d\u003d \u0027CreateAccount\u0027` even when $isMobileView is set to false.",
+      "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_b2fb01ba",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 598,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T21:02:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e436fe2_612049a9",
       "revId": "59271c5389a5e6f0daa21216243d15597913f7f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
