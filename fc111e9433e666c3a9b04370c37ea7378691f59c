@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_21ad61e7",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 1,
+      "message": "Are we calling features \"options\" now? Why not call these things \"features\"?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_0181454f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 1,
+      "message": "It\u0027s not clear what these options are at first glance. Can we group document them?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_e1969996",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 1,
+      "message": "Why is this not an option similar to \"toggling\" et al. above?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_c19b5dc0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 1,
+      "message": "Should we not get rid of this too?",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_41ee6d20",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 1240,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 1,
+      "message": "This pattern has repeated twice so far. It would be nice to abstract this away.",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_a1909199",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T16:52:34Z",
+      "side": 0,
+      "message": "How is this change related to the main theme of the patch?",
+      "revId": "32a33718b066823e99d7be463f8051d7be12f24e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
