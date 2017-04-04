@@ -16,6 +16,24 @@
       "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_546b8dee",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T19:44:23Z",
+      "side": 1,
+      "message": "This needs to work without JavaScript. Bottom loaded styles need JavaScript.",
+      "parentUuid": "6e436fe2_41342da7",
+      "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
