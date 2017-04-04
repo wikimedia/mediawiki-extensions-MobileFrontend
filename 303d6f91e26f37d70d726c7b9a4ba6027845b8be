@@ -122,6 +122,57 @@
     },
     {
       "key": {
+        "uuid": "6e436fe2_61d84980",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 23
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "Would it be better to use a LESS variable here?\n e.g. @skinContentBgColor",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_a1be51f8",
+        "filename": "resources/mobile.notifications.filter.overlay/SpecialNotificationsOverlay.less",
+        "patchSetId": 23
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "why? What if the mobile skin is used on a tablet device? Should it revert back to 8em?",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_8195558b",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "These jquery objects seem to only be used inside the hook. Moving them to the scope of the code they are serving helps readability.",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_9e82b0cc",
         "filename": "resources/skins.minerva.notifications.filter/init.js",
         "patchSetId": 23
@@ -133,6 +184,23 @@
       "writtenOn": "2017-03-30T00:01:45Z",
       "side": 1,
       "message": "This line is commented out. Is it needed, or can it be removed?",
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_61f129fe",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "Use the `done` method here rather than using a 2nd parameter. It\u0027s more consistent with the rest of the code in this repo and I think the callback method might be deprecated.\n\nmw.loader.using( moduleName ).done",
       "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -173,6 +241,23 @@
         "endLine": 63,
         "endChar": 21
       },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_21fb21e0",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "It\u0027s not clear to me why this is needed. Why would the hook be run twice. Can you explain in an inline comment or update your code so that it only ever needs to run once?",
       "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -236,6 +321,23 @@
         "endLine": 111,
         "endChar": 41
       },
+      "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_41d50d46",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T16:56:31Z",
+      "side": 1,
+      "message": "This probably needs a comment to explain why it is needed and what it does.\n\nI know we have similar code but even I have forgotten it\u0027s purpose! :)",
       "revId": "303d6f91e26f37d70d726c7b9a4ba6027845b8be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
