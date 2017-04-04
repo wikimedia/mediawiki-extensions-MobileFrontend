@@ -52,6 +52,24 @@
       "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_0d6bb4b6",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-04T21:49:58Z",
+      "side": 1,
+      "message": "My bad. We\u0027re using addModuleStyles so this field has no effect. If you use that method you always add to the top of the page.\n\nWe can remove this line if it\u0027s confusing, but it\u0027s my opinion that it\u0027s good to be explicit.",
+      "parentUuid": "6e436fe2_b206a121",
+      "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
