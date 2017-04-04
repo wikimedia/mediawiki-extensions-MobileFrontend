@@ -70,6 +70,24 @@
       "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_8d95848b",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-04T22:00:29Z",
+      "side": 1,
+      "message": "I see. A potential confusion may arise when some future developer changes \"top\" to \"bottom\" and expects this module to be loaded at the bottom of the page.",
+      "parentUuid": "6e436fe2_0d6bb4b6",
+      "revId": "f3017c4264bfa3d9de25390e1fc9a527baac84bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
