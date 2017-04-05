@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_d2648447",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-05T23:44:34Z",
+      "side": 1,
+      "message": "Since you\u0027ve removed the custom font, we should also remove this line.",
+      "revId": "7daca1aea6c726183417002e10ecaaed79558af0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_925efc79",
+        "filename": "resources/skins.minerva.print.styles/article.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-05T23:44:34Z",
+      "side": 1,
+      "message": "Sorry for the wrong suggestion. I thought the color was the background color. It looks like this color is the header background color only? https://app.zeplin.io/project.html#pid\u003d58b5f95e7b103f89913c25de\u0026sid\u003d58b5f9bbb11dc08a800c1255\n\nIf that\u0027s the case, we should rename the variable to something more appropriate, e.g. @printHeaderBackgroundColor.",
+      "revId": "7daca1aea6c726183417002e10ecaaed79558af0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
