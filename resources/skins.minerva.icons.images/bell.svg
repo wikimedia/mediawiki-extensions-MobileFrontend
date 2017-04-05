@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-export</title>
-    <desc>Created with Sketch.</desc>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        icon-export
+    </title>
     <defs>
-        <path d="M9.6425,21.3639373 C10.8775,21.3639373 11.8777941,20.4079006 11.8777941,19.2275436 L7.40720588,19.2275436 C7.40720588,20.4079006 8.4075,21.3639373 9.6425,21.3639373 L9.6425,21.3639373 Z" id="path-1"></path>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4.47058824" height="2.13639373" fill="white">
-            <use xlink:href="#path-1"></use>
+        <path d="M9.643 21.364c1.234 0 2.235-.956 2.235-2.136h-4.47c0 1.18 1 2.136 2.234 2.136z" id="path-1"/>
+        <mask id="mask-2" x="0" y="0" width="4.471" height="2.136" fill="#fff">
+            <use xlink:href="#path-1"/>
         </mask>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" fill="none" fill-rule="evenodd">
         <g id="icon-export">
             <g id="notificationIcon">
-                <g id="Bell" transform="translate(2.000000, 1.000000)">
-                    <use id="Page-1-Copy" stroke="#54595D" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
-                    <path d="M16.8931189,9.07967336 L16.8931189,13.0776005 L18.6615625,16.680843 L18.6615625,17.7765155 L0.6234375,17.7765155 L0.6234375,16.680843 L2.39188113,13.0776005 L2.39188113,9.07967336 C2.39188113,6.18559262 4.21611052,3.67023234 6.86870942,2.60954063 C7.13073689,1.32696472 8.2846917,0.382831237 9.6425,0.382831237 C11.0003083,0.382831237 12.1542631,1.32696472 12.4162906,2.60954063 C15.0688895,3.67023234 16.8931189,6.18559262 16.8931189,9.07967336 Z M10.9190307,3.97378136 L8.36596932,3.97378136 C5.92779571,4.52687101 4.11086703,6.61315771 4.11086703,9.11426164 L4.11086703,13.5877809 L2.40882612,16.0278823 L16.8761739,16.0278823 L15.174133,13.5877809 L15.174133,9.11426164 C15.1983007,5.03848258 11.5581859,4.02422393 10.9190307,3.97378136 Z" id="Combined-Shape" fill="#54595D"></path>
+                <g id="Bell" transform="translate(2 1)">
+                    <use id="Page-1-Copy" stroke="#54595D" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"/>
+                    <path d="M16.893 9.08v3.998l1.769 3.603v1.096H.623V16.68l1.769-3.603V9.08c0-2.894 1.824-5.41 4.477-6.47C7.13 1.327 8.285.383 9.643.383c1.357 0 2.511.944 2.773 2.227 2.653 1.06 4.477 3.576 4.477 6.47zM10.92 3.974H8.366c-2.438.553-4.255 2.64-4.255 5.14v4.474l-1.702 2.44h14.467l-1.702-2.44V9.114c.024-4.076-3.616-5.09-4.255-5.14z" id="Combined-Shape" fill="#54595D"/>
                 </g>
             </g>
         </g>
