@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e436fe2_352608b6",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-06T14:09:30Z",
+      "side": 1,
+      "message": "I think you mean \"is available\".",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_21ad61e7",
         "filename": "includes/Minerva.hooks.php",
         "patchSetId": 14
@@ -66,6 +83,24 @@
       "side": 1,
       "message": "Would this make sense outside MobileFrontend if we upstreamed this to core?",
       "parentUuid": "6e436fe2_618fe926",
+      "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_c5e5f007",
+        "filename": "includes/skins/ICustomizableSkin.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-06T14:09:30Z",
+      "side": 1,
+      "message": "\u003e What would this method be called if it included feature?\n\nisFeatureEnabled\n\n\u003e Would this make sense outside MobileFrontend if we upstreamed this to core?\n\nIf your question is \"Would isFeatureEnabled make sense...\", then no. Not without a clear definition of what a feature is but this also applies to the as-yet-undefined term \"option.\"\n\nYou\u0027ve asked for a definition of the term \"feature\" a number of times now and I\u0027ve always responded with: \"An element of the user experience.\" This mayn\u0027t have been recorded conversations but I do remember them clearly.",
+      "parentUuid": "6e436fe2_21e7a1e0",
       "revId": "fc111e9433e666c3a9b04370c37ea7378691f59c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
