@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_e5326cbc",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-06T14:09:30Z",
+      "side": 1,
+      "message": "Just a note that this is a signal that a stub is required. This assertion is only made because it\u0027s required by the mocking framework and doesn\u0027t add value to the test (the main assertion is at the bottom).",
+      "revId": "21b7ef45437030d69675857b73d2032c8ca2f836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
