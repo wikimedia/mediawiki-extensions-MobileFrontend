@@ -16,6 +16,24 @@
       "revId": "c43ced49bd550d9749f17e63601d010ed3bc49f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_a6554754",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1851,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-07T01:34:14Z",
+      "side": 1,
+      "message": "Acceptance criteria say: log pages where infoboxes are wrapped and feature flag this tool. \n\nThe tool is enabled by default so once it\u0027s pushed to production we will start logging stuff without another SWAT deploy to enable feature. If we start logging too many pages we are able to disable it quickly. \n\nThis feature doesn\u0027t have side effects, just logs stuff. The only feature downside is higher CPU usage - it has to search the whole section for all infoboxes. I couldn\u0027t use the search defined in moveFirstParagraphBeforeInfobox() as this search finds only immediate section children.",
+      "parentUuid": "4e506ba4_a6f1c794",
+      "revId": "c43ced49bd550d9749f17e63601d010ed3bc49f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
