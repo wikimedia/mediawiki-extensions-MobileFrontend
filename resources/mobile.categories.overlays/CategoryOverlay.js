@@ -95,9 +95,9 @@
 			apiResult.done( function ( data ) {
 				if ( data.query && data.query.pages ) {
 					// add categories to overlay
-					$.each( data.query.pages, function ( index, page ) {
+					data.query.pages.forEach( function ( page ) {
 						if ( page.categories ) {
-							$.each( page.categories, function ( index, category ) {
+							page.categories.forEach( function ( category ) {
 								var title = mw.Title.newFromText( category.title, category.ns );
 
 								if ( category.hidden !== undefined ) {

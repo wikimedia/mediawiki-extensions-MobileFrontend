@@ -249,7 +249,6 @@
 			"selector": ".mw-ui-icon-{name}:before",
 			"position": "bottom",
 			"images": {
-				"talk": "resources/skins.minerva.icons.images.scripts/talk.svg",
 				"watch": "resources/skins.minerva.icons.images.scripts/watch.svg",
 				"watched": "resources/skins.minerva.icons.images.scripts/watched.svg",
 				"user": "resources/skins.minerva.icons.images.scripts/userNormal.svg",
@@ -403,13 +402,13 @@
 				"toc"
 			]
 		},
-		"mobile.ajax": {
+		"mobile.ajax.styles": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"styles": [
-				"resources/mobile.ajax/spinner.less"
+				"resources/mobile.ajax.styles/spinner.less"
 			]
 		},
 		"mobile.backtotop": {
@@ -441,7 +440,7 @@
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
 				"mobile.overlay.images",
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -955,7 +954,7 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mobile.search.util"
 			],
 			"scripts": [
@@ -1022,7 +1021,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.ajax",
+				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
 				"mobile.pagelist.scripts",
@@ -1849,16 +1848,12 @@
 			"beta": true
 		},
 		"MinervaEnableFontChanger": {
-		  "base": false,
-		  "beta": true
+			"base": false,
+			"beta": true
 		},
 		"MinervaEnableBackToTop": {
 			"base": false,
 			"beta": true
-		},
-		"MinervaUseHeaderV2": {
-			"beta": true,
-			"base": false
 		},
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [

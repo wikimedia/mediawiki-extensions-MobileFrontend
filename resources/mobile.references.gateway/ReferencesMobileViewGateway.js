@@ -57,7 +57,7 @@
 			} ).then( function ( data ) {
 				var sections = {};
 
-				$.each( data.mobileview.sections, function ( i, section ) {
+				data.mobileview.sections.forEach( function ( section ) {
 					var $section = $( '<div>' ).html( section.text );
 
 					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] = $section.find( '.references' );
@@ -91,8 +91,8 @@
 			return this.getReferencesLists( page ).then( function ( sections ) {
 				var $container = $( '<div>' );
 
-				$.each( sections, function ( i, section ) {
-					$container.append( section );
+				Object.keys( sections ).forEach( function ( sectionId ) {
+					$container.append( sections[ sectionId ] );
 				} );
 
 				return self.getReferenceFromContainer( id, $container );

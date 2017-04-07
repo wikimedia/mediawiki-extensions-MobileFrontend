@@ -57,13 +57,12 @@
 		 * Infinite scroll is re-enabled in postRender.
 		 */
 		_loadPages: function () {
-			var self = this;
 			this.gateway.loadWatchlist().done( function ( pages ) {
-				$.each( pages, function ( i, page ) {
-					self.appendPage( page );
-				} );
-				self.render();
-			} );
+				pages.forEach( function ( page ) {
+					this.appendPage( page );
+				}.bind( this ) );
+				this.render();
+			}.bind( this ) );
 		},
 
 		/**

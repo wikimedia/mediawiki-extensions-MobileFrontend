@@ -145,28 +145,6 @@ body {
 	}
 }
 
-// FIXME: Fold into .header css rules when cache has cleared
-.feature-header-v2 {
-	.search-box {
-		display: none;
-		width: auto;
-	}
-}
-
-// FIXME: Fold into .header css rules when cache has cleared
-.feature-header-v2,
-.feature-header-v1 {
-	.header .search-box .search {
-		margin-top: 0;
-	}
-}
-
-// Always show the language search input
-// FIXME: Clean up header v2 .search-box styles
-.feature-header-v2 .language-overlay .search-box {
-	display: block;
-}
-
 .header > form,
 .overlay-header .overlay-title {
 	padding: 0.15em 0;
@@ -198,6 +176,8 @@ body {
 .search-box {
 	// FIXME: remove when micro.tap in stable and rule from common-js.less too
 	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
+	display: none;
+	width: auto;
 
 	.search {
 		@searchIconSize: 20px;
@@ -218,9 +198,7 @@ body {
 		.background-size( @searchIconSize, @searchIconSize );
 		border-radius: @borderRadius;
 		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
-		// FIXME: Necessary to support rendering of cached HTML. Move when new header in production
-		// and cache has cleared.
-		margin-top: 0.4em;
+		margin-top: 0;
 	}
 }
 
@@ -294,35 +272,10 @@ input.search {
 	}
 }
 
-// FIXME: Remove block when feature-header-v1 no longer supported
-.client-js {
-	.feature-header-v1 .search-box {
-		padding-right: 1em;
-	}
-	.is-authenticated {
-		.feature-header-v1 .search-box {
-			padding-right: 0;
-		}
-	}
-}
-
-// FIXME: Remove block when feature-header-v1 no longer supported
-.feature-header-v1 {
-	#searchIcon {
-		// This is overriden for non-JS clients (see fixme block below)
-		display: none;
-	}
-}
-
 // Toggling indicators are unusable without JavaScript
 .client-nojs {
 	.section-heading .indicator {
 		display: none;
-	}
-
-	// FIXME: Remove when feature-header-v1 no longer supported
-	.feature-header-v1 #searchIcon {
-		display: block;
 	}
 }
 

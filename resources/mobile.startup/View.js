@@ -337,7 +337,7 @@
 		}
 	} );
 
-	$.each( [
+	[
 		'append',
 		'prepend',
 		'appendTo',
@@ -348,7 +348,7 @@
 		'insertBefore',
 		'remove',
 		'detach'
-	], function ( i, prop ) {
+	].forEach( function ( prop ) {
 		View.prototype[prop] = function () {
 			this.$el[prop].apply( this.$el, arguments );
 			return this;

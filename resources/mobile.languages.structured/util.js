@@ -34,7 +34,7 @@
 			parentLanguage = deviceLanguage.slice( 0, index );
 		}
 
-		$.each( languages, function ( i, language ) {
+		languages.forEach( function ( language ) {
 			if ( language.lang === parentLanguage || language.lang === deviceLanguage ) {
 				deviceLanguagesWithVariants[ language.lang ] = true;
 			}
@@ -76,7 +76,8 @@
 		// Is the article available in the user's device language?
 		deviceLanguage = getDeviceLanguageOrParent( languages, deviceLanguage );
 		if ( deviceLanguage ) {
-			$.each( frequentlyUsedLanguages, function ( language, frequency ) {
+			Object.keys( frequentlyUsedLanguages ).forEach( function ( language ) {
+				var frequency = frequentlyUsedLanguages[ language ];
 				maxFrequency = maxFrequency < frequency ? frequency : maxFrequency;
 				minFrequency = minFrequency > frequency ? frequency : minFrequency;
 			} );
@@ -87,7 +88,7 @@
 		}
 
 		// Separate languages into suggested and all languages.
-		$.each( languages, function ( i, language ) {
+		languages.forEach( function ( language ) {
 			if ( frequentlyUsedLanguages.hasOwnProperty( language.lang ) ) {
 				language.frequency = frequentlyUsedLanguages[ language.lang ];
 				suggestedLanguages.push( language );
@@ -101,7 +102,7 @@
 		// Note that the variants data doesn't contain the article title, thus
 		// we cannot show it for the variants.
 		if ( variants ) {
-			$.each( variants, function ( i, variant ) {
+			variants.forEach( function ( variant ) {
 				if ( frequentlyUsedLanguages.hasOwnProperty( variant.lang ) ) {
 					variant.frequency = frequentlyUsedLanguages[variant.lang];
 				} else {

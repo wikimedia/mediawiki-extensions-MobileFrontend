@@ -121,7 +121,7 @@
 
 			this.gateway.getPhotos().done( function ( photos ) {
 				if ( photos.length ) {
-					$.each( photos, function ( i, photo ) {
+					photos.forEach( function ( photo ) {
 						self.appendPhoto( photo );
 					} );
 					// try loading more when end is near only if we got photos last time

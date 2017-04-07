@@ -23,7 +23,7 @@
 		_loadIntoCache: function ( resp ) {
 			var self = this;
 			if ( resp.query && resp.query.pages ) {
-				$.each( resp.query.pages, function ( id ) {
+				Object.keys( resp.query.pages ).forEach( function ( id ) {
 					self._cache[ id ] = resp.query.pages[ id ].hasOwnProperty( 'watched' );
 				} );
 			}
@@ -40,7 +40,7 @@
 				result = $.Deferred();
 
 			if ( markAsAllWatched ) {
-				$.each( ids, function ( i, id ) {
+				ids.forEach( function ( id ) {
 					self._cache[ id ] = true;
 				} );
 				result.resolve();
