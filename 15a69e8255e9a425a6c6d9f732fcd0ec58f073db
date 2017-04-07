@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_9710735d",
+        "filename": "resources/skins.minerva.print.styles/quotes.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-07T17:24:12Z",
+      "side": 1,
+      "message": "I\u0027d like to get an answer to the question I posed to Nirzar before merging this.\n\nIf the design in the non-print version is broken and needs updating too maybe we can avoid this override altogether.",
+      "revId": "15a69e8255e9a425a6c6d9f732fcd0ec58f073db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
