@@ -245,8 +245,31 @@ class MobileFormatter extends HtmlFormatter {
 				$leadSectionBody->insertBefore( $firstP, $infoboxAndParagraphs->item( 0 ) );
 			}
 		}
+		/**
+		 * @see https://phabricator.wikimedia.org/T149884
+		 * @todo remove after research is done
+		 */
+		if ( MobileContext::singleton()->getMFConfig()->get( 'MFLogWrappedInfoboxes' ) ) {
+			$this->logInfoboxesWrappedInContainers( $leadSectionBody, $xPath );
+		}
 	}
 
+	/**
+	 * Finds all infoboxes which are one or more levels deep in $xPath content. When at least one
+	 * element is found - log the page title and revision
+	 *
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @param $leadSectionBody
+	 * @param DOMXPath $xPath
+	 */
+	private function logInfoboxesWrappedInContainers( $leadSectionBody, DOMXPath $xPath ) {
+		$infoboxes = $xPath->query( './/table[contains(@class,"infobox")]', $leadSectionBody );
+		if ( $infoboxes->length > 0 ) {
+			\MediaWiki\Logger\LoggerFactory::getInstance( 'MobileFrontend' )->debug(
+				"Found infobox wrapped with container on {$this->title} (rev:{$this->revId})"
+			);
+		}
+	}
 	/**
 	 * Replaces any references links with a link to Special:MobileCite
 	 *

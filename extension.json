@@ -1847,7 +1847,8 @@
 		],
 		"MFEnableManifest": true,
 		"MFManifestThemeColor": "#252525",
-		"MFManifestBackgroundColor": "#FFFFFF"
+		"MFManifestBackgroundColor": "#FFFFFF",
+		"MFLogWrappedInfoboxes": true
 	},
 	"manifest_version": 1
 }
