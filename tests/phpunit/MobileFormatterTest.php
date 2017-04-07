@@ -817,4 +817,36 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter = new MobileFormatter( $input, Title::newFromText( 'Special:Foo' ) );
 		$formatter->filterContent( false, true, false );
 	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @covers MobileFormatter::filterContent
+	 */
+	public function testLoggingOfInfoboxesBeingWrappedInContainers() {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+
+		$input =
+			'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
+			'<p>paragraph 1</p>';
+		$title = 'Special:T149884';
+
+		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title ) );
+		$formatter->enableExpandableSections();
+
+		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->once() )
+			->method( 'debug' )
+			->will( $this->returnCallback( function( $message ) use ( $title ) {
+				// Debug message contains Page title
+				$this->assertContains( $title, $message );
+				// and contains revision id which is 0 by default
+				$this->assertContains( '0', $message );
+			} ) );
+
+		$this->setLogger( 'MobileFrontend', $loggerMock );
+		$formatter->filterContent( false, false, false, true );
+	}
 }
