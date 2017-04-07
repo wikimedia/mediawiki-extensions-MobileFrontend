@@ -1,0 +1,56 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
+.printfooter {
+	display: block;
+	padding-top: 108px;
+	font-size: 30px;
+}
+
+footer {
+	border-top: solid 4px #000;
+	padding-top: 23px;
+	background: #fff !important;
+
+	.mw-ui-icon:before {
+		display: none !important;
+	}
+
+	.last-modified-bar {
+		background: none !important;
+		border: 0 !important;
+	}
+
+	.last-modifier-tagline {
+		font-size: 36px;
+		padding-top: 0 !important;
+		padding-bottom: 16px !important;
+	}
+
+	.last-modified-bar,
+	.last-modified-bar a {
+		font-weight: bold !important;
+		color: #000 !important;
+	}
+
+	.post-content {
+		margin-top: 15px !important;
+		// FIXME: There is a print style in skins.minerva.base.styles
+		// that sets display: none; When promoting to stable the !important here
+		// should be dropped and skins.minerva.base.styles moved into here.
+		display: block !important;
+
+		// ... and add these instead.
+		.hlist,
+		h2 {
+			display: none;
+		}
+
+		.license a,
+		.license {
+			font-size: 30px;
+			color: @printBorderColor;
+			font-weight: normal;
+		}
+	}
+}
