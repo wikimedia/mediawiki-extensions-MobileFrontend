@@ -782,7 +782,7 @@ class MobileFrontendHooks {
 			$requestAction = $out->getRequest()->getVal( 'action' );
 			if ( $noJsEditing && ( $requestAction === 'edit' || $requestAction === 'submit' ) ) {
 				$out->addModuleStyles( [
-					'skins.minerva.fallbackeditor', 'mobile.messageBox'
+					'mobile.fallbackeditor.styles', 'mobile.messageBox'
 				] );
 			}
 		}

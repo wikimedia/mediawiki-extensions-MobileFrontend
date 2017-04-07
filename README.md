@@ -676,6 +676,13 @@ $wgMFDisplayWikibaseDescriptions = [
   ]
 ```
 
+#### $wgMFAllowNonJavaScriptEditing
+
+Adds support for non-JavaScript editing on mobile skins.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFStripResponsiveImages
 
 Whether to strip `srcset` attributes from all images on mobile renderings. This
