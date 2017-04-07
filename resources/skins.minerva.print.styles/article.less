@@ -1,6 +1,9 @@
 @import 'minerva.variables';
 @import 'minerva.mixins';
 
+@dividerHeight: 2px;
+@dividerSpacing: 28px;
+
 .pre-content {
 	display: block;
 	padding: 51px 0 35px;
@@ -28,17 +31,42 @@
 #bodyContent {
 	padding-top: 55px;
 	position: relative;
-
 	&:before {
-		position: absolute;
 		top: 0;
-		left: 0;
-		content: '';
-		display: block;
-		width: 55px;
-		height: 2px;
-		background: @printBorderColor;
 	}
+}
+
+.thumbinner {
+	width: auto !important;
+}
+
+.thumb {
+	position: relative;
+	padding: (@dividerSpacing*2) + @dividerHeight 0 !important;
+	text-align: left;
+	margin: 0 !important;
+
+	&:after {
+		bottom: @dividerHeight + @dividerSpacing;
+	}
+}
+
+.thumb:after,
+#bodyContent:before {
+	position: absolute;
+	left: 0;
+	content: '';
+	display: block;
+	width: 55px;
+	height: @dividerHeight;
+	background: @printBorderColor;
+}
+
+.thumbcaption {
+	margin-top: 23px !important;
+	width: 100%;
+	font-style: italic;
+	font-size: 28px;
 }
 
 #mw-content-text {
