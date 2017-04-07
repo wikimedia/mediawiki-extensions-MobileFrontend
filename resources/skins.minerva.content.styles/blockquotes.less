@@ -11,27 +11,10 @@
 @import 'minerva.mixins.less';
 
 blockquote {
+	border-left: 3px solid @colorGray12;
 	font-family: @fontFamilyHeading;
 	font-size: 1.1em;
-	quotes: '\201C' '\201D';
 	padding: 1em @blockquotePaddingRight 1em @blockquotePaddingLeft;
 	position: relative;
 	overflow: hidden;
-
-	&:before {
-		content: open-quote;
-		font-size: 3em;
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-
-	&:after {
-		content: close-quote;
-		font-size: 3em;
-		line-height: 1;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-	}
 }
