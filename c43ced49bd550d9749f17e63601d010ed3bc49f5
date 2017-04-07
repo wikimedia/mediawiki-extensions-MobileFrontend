@@ -51,6 +51,24 @@
       "revId": "c43ced49bd550d9749f17e63601d010ed3bc49f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_cd7f4e62",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-07T19:43:03Z",
+      "side": 1,
+      "message": "Good idea. I\u0027ll use ServiceWirings and pass MobileContext as a dependency to MobileFormatter",
+      "parentUuid": "4e506ba4_cd698ebe",
+      "revId": "c43ced49bd550d9749f17e63601d010ed3bc49f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
