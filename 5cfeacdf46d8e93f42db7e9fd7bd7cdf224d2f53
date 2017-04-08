@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_ee0fa18b",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-08T02:51:15Z",
+      "side": 1,
+      "message": "Note that overwriting the prototype to a plain object means you also lose the otherwise implicit existence of  obj.constructor pointing to the constructor.\n\n function Foo() {}\n obj \u003d new Foo();\n obj.constructor \u003d\u003d\u003d Foo; // true\n function Bar() {}\n Bar.prototype \u003d {};\n obj \u003d new Bar();\n obj.constructor \u003d\u003d\u003d Bar; // false\n obj.constructor \u003d\u003d\u003d Object; // true\n\ninstanceof is not affected gladly since that is based the actual inheritance and in that regard \u0027constructor\u0027 is just another property, it\u0027s not __proto__ or anything.\n\nWhatever Bar.prototype may be, instances of Bar do still inherit from it, it just means its instances inherits from a plain object now instead of the implicit prototype created for each function.\n\nThis isn\u0027t a bad thing in any way. If anything, it might actually simplify inheritance in some ways. But I don\u0027t know if anything important in MobileFrontend or other MediaWiki code makes assumptions about obj.constructor.\n\nIt also means that the object created for it is now dereferenced which may cause some non-trivial GC overhead *but* that isn\u0027t anything to worry about since virtually all class extend patterns do this (incl. OO.extendClass) and not something to deal with here.",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 29
+      },
+      "revId": "5cfeacdf46d8e93f42db7e9fd7bd7cdf224d2f53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
