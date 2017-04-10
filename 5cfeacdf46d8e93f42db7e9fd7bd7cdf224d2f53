@@ -22,6 +22,30 @@
       "revId": "5cfeacdf46d8e93f42db7e9fd7bd7cdf224d2f53",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_98f89848",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-10T17:48:20Z",
+      "side": 1,
+      "message": "Yeh this is all true but we are not using constructors in any way in MobileFrontend and nothing should inherit from it.\n\nThis and View are the only examples of code in MobileFrontend that would be impacted by this.",
+      "parentUuid": "4e506ba4_ee0fa18b",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 29
+      },
+      "revId": "5cfeacdf46d8e93f42db7e9fd7bd7cdf224d2f53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
