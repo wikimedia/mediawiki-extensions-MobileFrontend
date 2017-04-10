@@ -46,11 +46,19 @@ h4 {
 
 .pre-content h1,
 .content h1,
+.content h2 {
+	font-family: @fontFamilyHeading;
+}
+
+h3, h4, h5, h6 {
+	font-family: @fontFamily;
+}
+
+.pre-content h1,
+.content h1,
 .content h2,
 h3, h4, h5, h6 {
-	font-family: @fontFamilyHeading;
 	line-height: @headingLineHeight;
-
 	word-wrap: break-word;
 
 	// This value isn't valid per the specification [0] but fixes the behaviour in
