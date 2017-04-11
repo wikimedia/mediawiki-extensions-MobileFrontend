@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_3ad5adba",
+        "filename": "resources/mobile.startup/View.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-11T22:16:14Z",
+      "side": 1,
+      "message": "Why not assign View.prototype \u003d {}, and then call mixin, like the other ones in this commit? Did it cause a problem? If so, perhaps we should do it differently in that case, or at least document why this one didn\u0027t work (e.g. if it\u0027s gonna be temporary and worked towards aligning later)",
+      "range": {
+        "startLine": 91,
+        "startChar": 1,
+        "endLine": 91,
+        "endChar": 40
+      },
+      "revId": "e12c791b91c288eafc5afbbe7b5a9b52bf50d1bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
