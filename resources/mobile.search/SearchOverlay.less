@@ -13,8 +13,23 @@
 .search-overlay {
 	background: #fff;
 
-	.spinner {
+	.spinner-container {
+		background-color: @colorSpinnerOverlayBackground;
+		bottom: 0;
 		display: none;
+		left: 0;
+		opacity: 0.7;
+		right: 0;
+		top: @headerHeight;
+		z-index: @z-indexOverOverlay;
+
+		.spinner {
+			display: block;
+			left: 50%;
+			margin-left: -( @iconSize + @iconGutterWidth * 2 ) / 2;
+			position: absolute;
+			top: 10%;
+		}
 	}
 
 	.search-box {
@@ -53,6 +68,7 @@
 	}
 
 	.overlay-content {
+		position: relative;
 		// used to close the overlay in firefox
 		height: 100%;
 		width: 100%;
@@ -179,38 +195,12 @@
 	}
 }
 
-.beta {
-	.search-overlay {
-		.overlay-content {
-			position: relative;
-		}
-
-		.spinner-container {
-			background-color: @colorSpinnerOverlayBackground;
-			bottom: 0;
-			display: none;
-			left: 0;
-			opacity: 0.7;
-			right: 0;
-			top: @headerHeight;
-			z-index: @z-indexOverOverlay;
-
-			.spinner {
-				display: block;
-				left: 50%;
-				margin-left: -( @iconSize + @iconGutterWidth * 2 ) / 2;
-				position: absolute;
-				top: 10%;
-			}
-		}
-	}
-}
-
 @media all and ( min-width: @deviceWidthTablet ) {
 	.search-overlay {
 		.search-box {
 			display: table-cell;
 		}
+		.spinner-container,
 		.search-content,
 		.results {
 			width: @searchBoxWidth;
@@ -220,6 +210,11 @@
 		.overlay-title {
 			width: @searchBoxWidth;
 			padding-left: (@iconSize + 2 * @iconGutterWidth) + @brandingBoxWidth;
+		}
+
+		.spinner-container {
+			left: auto;
+			right: auto;
 		}
 
 		ul {

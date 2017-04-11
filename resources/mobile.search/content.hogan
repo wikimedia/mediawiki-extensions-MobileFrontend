@@ -8,14 +8,9 @@
 		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
 	</div>
 </div>
-{{^isBeta}}
-	{{{spinner}}}
-{{/isBeta}}
-{{#isBeta}}
 <div class="spinner-container position-fixed">
 	{{{spinner}}}
 </div>
-{{/isBeta}}
 <div class="results">
 	<div class="results-list-container"></div>
 	{{#feedback}}
