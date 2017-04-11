@@ -846,7 +846,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$this->assertContains( '0', $message );
 			} ) );
 
-		$this->setLogger( 'MobileFrontend', $loggerMock );
+		$this->setLogger( 'mobile', $loggerMock );
 		$formatter->filterContent( false, false, false, true );
 	}
 }

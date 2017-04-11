@@ -265,7 +265,7 @@ class MobileFormatter extends HtmlFormatter {
 	private function logInfoboxesWrappedInContainers( $leadSectionBody, DOMXPath $xPath ) {
 		$infoboxes = $xPath->query( './/table[contains(@class,"infobox")]', $leadSectionBody );
 		if ( $infoboxes->length > 0 ) {
-			\MediaWiki\Logger\LoggerFactory::getInstance( 'MobileFrontend' )->debug(
+			\MediaWiki\Logger\LoggerFactory::getInstance( 'mobile' )->debug(
 				"Found infobox wrapped with container on {$this->title} (rev:{$this->revId})"
 			);
 		}
