@@ -13,6 +13,17 @@ class MobileFormatter extends HtmlFormatter {
 	 * Class name for collapsible section wrappers
 	 */
 	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
+
+	/**
+	 * Do not lazy load images smaller than this size (in pixels)
+	 * @var int
+	 */
+	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_PX = 50;
+	/**
+	 * Do not lazy load images smaller than this size (in relative to x-height of the current font)
+	 * @var int
+	 */
+	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX = 10;
 	/**
 	 * Whether scripts can be added in the output.
 	 * @var boolean $scriptsEnabled
@@ -383,12 +394,54 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * Is image dimension small enough to not lazy load it
+	 *
+	 * @param string $dimension in css format, supports only px|ex units
+	 * @return bool
+	 */
+	public function isDimensionSmallerThanThreshold( $dimension ) {
+		$matches = null;
+		if ( preg_match( '/(\d+)(\.\d+)?(px|ex)/', $dimension, $matches ) === 0 ) {
+			return false;
+		}
+
+		$size = $matches[1];
+		$unit = array_pop( $matches );
+
+		switch ( strtolower( $unit ) ) {
+			case 'px':
+				return $size <= self::SMALL_IMAGE_DIMENSION_THRESHOLD_IN_PX;
+			case 'ex':
+				return $size <= self::SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX;
+			default:
+				return false;
+		}
+	}
+
+	/**
+	 * @param array $dimensions
+	 * @return bool
+	 */
+	private function skipLazyLoadingForSmallDimensions( array $dimensions ) {
+		if ( array_key_exists( 'width', $dimensions )
+			 && $this->isDimensionSmallerThanThreshold( $dimensions['width'] ) ) {
+			return true;
+		};
+		if ( array_key_exists( 'height', $dimensions )
+			 && $this->isDimensionSmallerThanThreshold( $dimensions['height'] ) ) {
+			return true;
+		}
+		return false;
+	}
+	/**
 	 * Enables images to be loaded asynchronously
 	 *
 	 * @param DOMElement|DOMDocument $el Element or document to rewrite images in.
 	 * @param DOMDocument $doc Document to create elements in
 	 */
 	private function doRewriteImagesForLazyLoading( $el, DOMDocument $doc ) {
+		$lazyLoadSkipSmallImages = MobileContext::singleton()->getMFConfig()
+			->get( 'MFLazyLoadSkipSmallImages' );
 
 		foreach ( $el->getElementsByTagName( 'img' ) as $img ) {
 			$parent = $img->parentNode;
@@ -396,6 +449,11 @@ class MobileFormatter extends HtmlFormatter {
 
 			$dimensionsStyle = ( isset( $dimensions['width'] ) ? "width: {$dimensions['width']};" : '' ) .
 				( isset( $dimensions['height'] ) ? "height: {$dimensions['height']};" : '' );
+
+			if ( $lazyLoadSkipSmallImages
+				 && $this->skipLazyLoadingForSmallDimensions( $dimensions ) ) {
+				continue;
+			}
 
 			// HTML only clients
 			$noscript = $doc->createElement( 'noscript' );

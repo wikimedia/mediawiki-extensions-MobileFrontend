@@ -1771,6 +1771,7 @@
 			"base": false,
 			"beta": true
 		},
+		"MFLazyLoadSkipSmallImages": false,
 		"MFLazyLoadReferences": {
 			"base": false,
 			"beta": false
