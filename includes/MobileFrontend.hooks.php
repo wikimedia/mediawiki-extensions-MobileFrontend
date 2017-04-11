@@ -5,6 +5,7 @@
 
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Logger\LoggerFactory;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -49,7 +50,15 @@ class MobileFrontendHooks {
 		MobileContext $mobileContext
 	) {
 		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
-		$skin = new $skinName( $context );
+
+		if ( class_exists( $skinName ) ) {
+			$skin = new $skinName( $context );
+		} else {
+			throw new \RuntimeException(
+				'wgMFDefaultSkinClass is not setup correctly. '.
+				'It should point to the class name of a valid skin e.g. SkinMinerva, SkinVector'
+			);
+		}
 		return $skin;
 	}
 

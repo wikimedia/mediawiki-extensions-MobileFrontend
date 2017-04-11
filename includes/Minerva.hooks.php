@@ -11,6 +11,7 @@
  * Hook handler method names should be in the form of:
  *	on<HookName>()
  */
+
 class MinervaHooks {
 	/**
 	 * ResourceLoaderGetLessVars hook handler
@@ -40,6 +41,10 @@ class MinervaHooks {
 
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'MobileFrontend' ) ) {
 			die( 'This version of the MobileFrontend extension requires MediaWiki 1.25+' );
+		}
+		// Setup alias for compatibility with SkinMinervaNeue.
+		if ( !class_exists( 'SkinMinervaNeue' ) ) {
+			class_alias( 'SkinMinerva', 'SkinMinervaNeue', true );
 		}
 	}
 

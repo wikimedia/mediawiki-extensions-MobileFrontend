@@ -32,23 +32,13 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	protected $doesPageHaveLanguages = false;
 	/** @var SkinUserPageHelper Helper class for UserPage handling */
 	protected $userPageHelper;
-	/**
-	 * Return skin specific configuration
-	 * Note that while MobileFrontend and Minerva live in the same skin this will also return
-	 * MobileFrontend config.
-	 * @return Config
-	 */
-	public function getMFConfig() {
-		// FIXME: When Minerva lives in its own skin this will make sense and be Minerva.Config
-		return MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-	}
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
 	 * @return string
 	 */
 	public function getSitename() {
-		$config = $this->getMFConfig();
+		$config = $this->getConfig();
 		$customLogos = $config->get( 'MinervaCustomLogos' );
 
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
@@ -203,7 +193,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	protected function isAllowedPageAction( $action ) {
 		$title = $this->getTitle();
-		$config = $this->getMFConfig();
+		$config = $this->getConfig();
 
 		if (
 			! in_array( $action, $config->get( 'MinervaPageActions' ) )
@@ -233,7 +223,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		$noJsEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$noJsEdit = $this->getConfig()->get( 'MFAllowNonJavaScriptEditing' );
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$additionalClass = $noJsEdit ? ' nojs-edit': '';
@@ -617,7 +607,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 * @return array
 	 */
 	protected function getDiscoveryTools() {
-		$config = $this->getMFConfig();
+		$config = $this->getConfig();
 		$menu = new MenuBuilder();
 
 		// Home link
@@ -676,7 +666,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	protected function insertLogInOutMenuItem( MenuBuilder $menu ) {
 		$query = [];
-		$canEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$canEdit = $this->getConfig()->get( 'MFAllowNonJavaScriptEditing' );
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
 			unset( $returntoquery['title'] );
@@ -898,7 +888,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	protected function prepareBanners( BaseTemplate $tpl ) {
 		// Make sure Zero banner are always on top
 		$banners = [ '<div id="siteNotice"></div>' ];
-		if ( $this->getMFConfig()->get( 'MinervaEnableSiteNotice' ) ) {
+		if ( $this->getConfig()->get( 'MinervaEnableSiteNotice' ) ) {
 			$siteNotice = $this->getSiteNotice();
 			if ( $siteNotice ) {
 				$banners[] = $siteNotice;
@@ -1065,7 +1055,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 * @return array A map compatible with BaseTemplate#makeListItem
 	 */
 	protected function createEditPageAction() {
-		$noJsEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
+		$noJsEdit = $this->getConfig()->get( 'MFAllowNonJavaScriptEditing' );
 		$additionalClass = $noJsEdit ? ' nojs-edit' : '';
 
 		return [
