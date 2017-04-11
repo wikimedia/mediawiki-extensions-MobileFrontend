@@ -64,9 +64,9 @@ class MinervaHooks {
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 */
-	public static function onBeforePageDisplayMobile( OutputPage $out, Skin $skin ) {
-		// In mobile mode MobileContext will always be available.
-		$mobileContext = MobileContext::singleton();
+	public static function onRequestContextCreateSkinMobile(
+		MobileContext $mobileContext, Skin $skin
+	) {
 		// setSkinOptions is not available
 		if ( $skin instanceof SkinMinerva ) {
 			$skin->setSkinOptions( [
