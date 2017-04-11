@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_f513d603",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1263,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-11T23:35:47Z",
+      "side": 1,
+      "message": "Previously those modules (skin.minerva.categories, skin.minerva.fontchanger and skin.minerva.backtotop) where inside $modules[\u0027context\u0027] array, now we append those to $modules array directly",
+      "revId": "124688f972a7d1b774f50b8bcee96646d85df1ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
