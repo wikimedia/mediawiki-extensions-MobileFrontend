@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_31870bde",
+        "filename": "resources/skins.minerva.print.styles/footer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T22:05:09Z",
+      "side": 1,
+      "message": "Haven\u0027t seen this class in HTML. Where is it coming from, do you know?",
+      "revId": "2c18b0b3ea1f63e6cab724094d90e3a1e611dcee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
