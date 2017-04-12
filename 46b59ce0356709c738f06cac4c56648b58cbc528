@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_dbf288cd",
+        "filename": "resources/skins.minerva.print.styles/footer.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T18:47:38Z",
+      "side": 1,
+      "message": "What \"none declaration\"?",
+      "range": {
+        "startLine": 38,
+        "startChar": 78,
+        "endLine": 38,
+        "endChar": 83
+      },
+      "revId": "46b59ce0356709c738f06cac4c56648b58cbc528",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
