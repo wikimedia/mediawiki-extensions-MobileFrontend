@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_1660c5fb",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T20:56:43Z",
+      "side": 1,
+      "message": "Looks like you forgot \"!important\".",
+      "revId": "1eba86912a77488b55d9df715dad5f8e21275dab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
