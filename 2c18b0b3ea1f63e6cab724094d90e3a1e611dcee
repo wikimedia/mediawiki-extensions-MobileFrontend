@@ -16,6 +16,24 @@
       "revId": "2c18b0b3ea1f63e6cab724094d90e3a1e611dcee",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_91c85f27",
+        "filename": "resources/skins.minerva.print.styles/footer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T22:08:37Z",
+      "side": 1,
+      "message": "it comes from core.\nIt\u0027s at the bottom of the content and is the line that says the url for which the article came from.",
+      "parentUuid": "4e506ba4_31870bde",
+      "revId": "2c18b0b3ea1f63e6cab724094d90e3a1e611dcee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
