@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_bb5c5c4f",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T20:10:30Z",
+      "side": 1,
+      "message": "Why?\n\n!important should be avoided where possible and this rule is so specific already (we only have one type of sup inside branding-box).\n\nSame reason I don\u0027t !important various other css rules in this file.",
+      "parentUuid": "4e506ba4_9bd96086",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_3bce0cba",
         "filename": "resources/skins.minerva.print.styles/header.less",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2017-04-12T18:29:13Z",
       "side": 1,
       "message": "Shouldn\u0027t we round these numbers ourselves rather than leaving them browsers?",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_db59285f",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T20:10:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_3bce0cba",
       "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
