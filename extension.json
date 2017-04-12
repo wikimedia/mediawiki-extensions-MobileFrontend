@@ -1609,8 +1609,8 @@
 		"APIGetDescription": [
 			"ApiParseExtender::onAPIGetDescription"
 		],
-		"BeforePageDisplayMobile": [
-			"MinervaHooks::onBeforePageDisplayMobile"
+		"RequestContextCreateSkinMobile": [
+			"MinervaHooks::onRequestContextCreateSkinMobile"
 		],
 		"RequestContextCreateSkin": [
 			"MobileFrontendHooks::onRequestContextCreateSkin"

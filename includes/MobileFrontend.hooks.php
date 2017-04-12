@@ -120,6 +120,7 @@ class MobileFrontendHooks {
 			}
 		}
 		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
+		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
 		return false;
 	}
