@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_560acd25",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T20:18:20Z",
+      "side": 1,
+      "message": "Oh I see. Thanks for explaining it makes it easier. Not sure how I missed that in testing.\n\nLooks like the rule is overly specific so I\u0027ll add !important :/\n.beta .header .branding-box h1 sup",
+      "parentUuid": "4e506ba4_7b1c947c",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_3bce0cba",
         "filename": "resources/skins.minerva.print.styles/header.less",
         "patchSetId": 8
