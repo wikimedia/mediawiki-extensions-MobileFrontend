@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_9bd96086",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T18:29:13Z",
+      "side": 1,
+      "message": "Needs \"!important\" or \".beta\".",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_3bce0cba",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T18:29:13Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we round these numbers ourselves rather than leaving them browsers?",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
