@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_1b6c7098",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T18:36:04Z",
+      "side": 1,
+      "message": "I couldn\u0027t find this requirement in the mock-up. Are you also using this mock: https://app.zeplin.io/project.html#pid\u003d58b5f95e7b103f89913c25de\u0026sid\u003d58b5f9bbb11dc08a800c125f ?",
+      "revId": "45ec1da6dcfd9d49843a711c4c7a1c1a994c3c62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
