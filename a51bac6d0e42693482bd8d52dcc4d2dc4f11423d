@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_11c44f43",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T21:58:05Z",
+      "side": 1,
+      "message": "(In pixels)",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_31e38bd6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T21:58:05Z",
+      "side": 1,
+      "message": "No need. width attributes should always say pixels in MediaWiki land.\n\nNote there is a units attribute but I\u0027ve never seen that so I think that would be over-engineering.\n\nhttps://www.w3.org/MarkUp/html3/img.html",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_d1d4a7ee",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T21:58:05Z",
+      "side": 1,
+      "message": "Should we temporarily feature flag this just in case? Switching config is easier than reverting.",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
