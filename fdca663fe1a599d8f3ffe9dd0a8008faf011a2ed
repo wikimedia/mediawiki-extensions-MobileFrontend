@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_7b1c947c",
+        "filename": "resources/skins.minerva.print.styles/header.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T20:14:21Z",
+      "side": 1,
+      "message": "Otherwise the beta symbol is not hidden. You can easily test this by opening a page while in beta mode.",
+      "parentUuid": "4e506ba4_bb5c5c4f",
+      "revId": "fdca663fe1a599d8f3ffe9dd0a8008faf011a2ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_3bce0cba",
         "filename": "resources/skins.minerva.print.styles/header.less",
         "patchSetId": 8
