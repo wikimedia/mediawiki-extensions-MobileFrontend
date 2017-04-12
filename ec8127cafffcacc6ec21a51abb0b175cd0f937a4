@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_7b281433",
+        "filename": "resources/skins.minerva.print.styles/infobox.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-12T18:40:43Z",
+      "side": 1,
+      "message": "This is overriding the table\u0027s topmost border color.",
+      "revId": "ec8127cafffcacc6ec21a51abb0b175cd0f937a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
