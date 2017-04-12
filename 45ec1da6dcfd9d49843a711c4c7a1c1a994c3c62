@@ -34,6 +34,24 @@
       "revId": "45ec1da6dcfd9d49843a711c4c7a1c1a994c3c62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_1141afac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-12T21:59:51Z",
+      "side": 1,
+      "message": "(Left alignment is implied by the whitespace to the right of the image)",
+      "parentUuid": "4e506ba4_9134df47",
+      "revId": "45ec1da6dcfd9d49843a711c4c7a1c1a994c3c62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
