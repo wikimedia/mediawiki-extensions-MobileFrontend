@@ -838,7 +838,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
-			->method( 'debug' )
+			->method( 'info' )
 			->will( $this->returnCallback( function( $message ) use ( $title ) {
 				// Debug message contains Page title
 				$this->assertContains( $title, $message );
