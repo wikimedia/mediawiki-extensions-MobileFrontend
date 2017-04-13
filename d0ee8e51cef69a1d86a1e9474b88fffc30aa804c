@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_a1a0a63f",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-13T20:32:32Z",
+      "side": 0,
+      "message": "I\u0027ve previously very rigorously migrated code in the other direction. .bind() should only be used when preparing callables for external code to code so that context is bound, as a shortcut to preparing a closure manually. For example:\n\n obj.on(\u0027change\u0027, thing.handleChange);\n // ^ breaks because handleChange uses \u0027this\u0027 and passing this\n // by value breaks the \u0027thing\u0027 call context.\n\n // Fix:\n obj.on(\u0027change\u0027, function () {\n   return thing.handleChange.apply(thing, arguments);\n });\n\n // Nicer fix:\n obj.on(\u0027change\u0027, thing.handleChange.bind(thing));\n\nThis makes perfect sense :)\n\nHowever, referencing an object in lexical scope, where you have to deal with inner functions having their own \u0027this\u0027 reference that shadows the other one - that is in my opinion a very different problem and does not call for the same solution in order to be \"consistent\".\n\nI would always recommend avoiding use of bind to work around lexical scope problems. This can lead to very confusing and counter-intuitive code. By omitting this use of bind() you\u0027ll always know that a function runs in the scope that it was naturally called in, without needing to see if at the end a .bind() was tacked on or not.\n\nTo solve lexical scope problems, use lexical scope!\n\nIt also enforces naturally consistency. For example, we often use \u0027this\u0027 inside jQuery callbacks. Using the other \u0027this\u0027 there would require changing that to be unlike other cases, or might even be impossible if there is no other way to get to that reference. It\u0027s also quite error prone as its easy to forget to add bind() at one of the layers. Lexical scope scales to multiple layers with minimal maintenance overhead and no runtime overhead, either (unlike bind).\n\n Overlay.prototype.method \u003d function () {\n   this.otherMethod();\n\n   $foo.each( function () {\n     this.innerHTML \u003d \u0027\u0027;\n   } );\n\n   $boo.each( function ( i, node ) { // inconsistent\n     this.otherMethod( node );\n     // visually expect \u0027this\u0027 to be node, but\n     // realise different after you spot bind() below\n   }.bind( this ) );\n\n   this.save().then( function () {\n     this.otherMethod();\n   }.bind( this ) );\n};\n\nOverlay.prototype.method \u003d function () {\n   var overlay \u003d this;\n   this.otherMethod();\n\n   $foo.each( function () {\n     this.innerHTML \u003d \u0027\u0027;\n   } );\n\n   $boo.each( function () { // consistent\n     overlay.otherMethod( this );\n   } );\n\n   this.save().then( function () {\n     overlay.otherMethod();\n     // ^ descriptive\n   } );\n};\n\nI\u0027ll leave it up to you, but if you agree, I\u0027d like to take it a step further and make it a convention. It\u0027s already adopted by OOjs, VisualEditor and MediaWiki core.",
+      "range": {
+        "startLine": 103,
+        "startChar": 4,
+        "endLine": 103,
+        "endChar": 16
+      },
+      "revId": "d0ee8e51cef69a1d86a1e9474b88fffc30aa804c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
