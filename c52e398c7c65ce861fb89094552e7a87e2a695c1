@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_01a71a4d",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-13T20:40:14Z",
+      "side": 1,
+      "message": "I\u0027m unable to verify this right now but I feel like there was a strong reason for adding \u0027input\u0027 - I believe one of the browser tests that run on the beta cluster depended on it.  We should be able to determine that pretty quickly after merging so I suggest we simply revert this if that proves to be true.",
+      "revId": "c52e398c7c65ce861fb89094552e7a87e2a695c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
