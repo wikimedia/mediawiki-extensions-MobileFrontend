@@ -38,7 +38,7 @@ FIXME: Review all of these hacks to see if they still apply.
 		&.infobox {
 			font-size: 90%;
 			position: relative;
-			border: 0;
+			border: 1px solid @colorGray14;
 			margin-bottom: 2em;
 			text-align: left;
 			background-color: @colorGray15;
@@ -46,8 +46,13 @@ FIXME: Review all of these hacks to see if they still apply.
 			th, td {
 				vertical-align: top;
 				border: 0;
-				border-bottom: 1px solid @colorGray13;
-				padding: 0.2em;
+				border-bottom: 1px solid @colorGray14;
+				font-size: 13px;
+				padding: 7px 10px;
+			}
+
+			td {
+				width: 100%;
 			}
 
 			tr:last-child th,
