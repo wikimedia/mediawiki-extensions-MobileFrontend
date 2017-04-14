@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_d9aa8682",
+        "filename": "resources/skins.minerva.content.styles/styles.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-14T02:36:27Z",
+      "side": 1,
+      "message": "This is just a random comment that forces the LESS compiler to clear the cache. Changes to hacks.less won\u0027t be visible without this kind of change in this file.",
+      "parentUuid": "4e506ba4_79a9f2db",
+      "revId": "13a5413908b6363441ada39c5c66f9534d8a3e00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_99ae3ee3",
         "filename": "resources/skins.minerva.tablet.styles/styles.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-04-14T00:18:40Z",
       "side": 1,
       "message": "I\u0027m not sure what this is for either...",
+      "revId": "13a5413908b6363441ada39c5c66f9534d8a3e00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_79afb291",
+        "filename": "resources/skins.minerva.tablet.styles/styles.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-14T02:36:27Z",
+      "side": 1,
+      "message": "Sam as the other one.",
+      "parentUuid": "4e506ba4_99ae3ee3",
       "revId": "13a5413908b6363441ada39c5c66f9534d8a3e00",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
