@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_399a8a76",
+        "filename": "resources/skins.minerva.content.styles/styles.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-14T02:43:04Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be necessary.\nLESS compiler does clear the cache for partials. Only templates have this issue. I helped review code for Ori  when he implemented this.\n\nThe only case your encounter issues is if the value of @wgMinervaApplyKnownTemplateHacks changes (as the raw content of the file doesn\u0027t change)\n\nOr are you saying there\u0027s been a regression in how the LESS compiler works?",
+      "parentUuid": "4e506ba4_d9aa8682",
+      "revId": "13a5413908b6363441ada39c5c66f9534d8a3e00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_99ae3ee3",
         "filename": "resources/skins.minerva.tablet.styles/styles.less",
         "patchSetId": 1
