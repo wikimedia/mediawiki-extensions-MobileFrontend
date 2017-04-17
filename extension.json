@@ -67,8 +67,6 @@
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
 		"MobileSiteModule": "includes/modules/MobileSiteModule.php",
-		"MobileUserModule": "includes/modules/MobileUserModule.php",
-		"MobileUserStylesModule": "includes/modules/MobileUserStylesModule.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
@@ -1170,14 +1168,6 @@
 				"mobile.startup"
 			],
 			"class": "MobileSiteModule"
-		},
-		"mobile.usermodule.styles": {
-			"class": "MobileUserStylesModule",
-			"position": "top"
-		},
-		"mobile.usermodule": {
-			"class": "MobileUserModule",
-			"position": "bottom"
 		},
 		"mobile.special.mobilecite.styles": {
 			"targets": "mobile",
