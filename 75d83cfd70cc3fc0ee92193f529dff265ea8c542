@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_288d4b36",
+        "filename": "resources/mobile.mainMenu/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-17T20:54:17Z",
+      "side": 0,
+      "message": "For future-compat, when hardcoding rtl rules, always use @noflip to ensure none of the properties in this ruleset will be flipped.\n\nEven if the current properties here are not supported by CSSJanus, because 1) Someone might change this ruleset later and add a property for something simple that is already supported, like padding or float. And 2) Because the ones currently unsupported might become supported - which is what happened in this case.",
+      "range": {
+        "startLine": 273,
+        "startChar": 0,
+        "endLine": 273,
+        "endChar": 6
+      },
+      "revId": "75d83cfd70cc3fc0ee92193f529dff265ea8c542",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
