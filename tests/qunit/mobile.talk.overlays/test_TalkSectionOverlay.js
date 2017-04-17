@@ -6,6 +6,8 @@
 
 	QUnit.module( 'MobileFrontend TalkSectionOverlay - logged in', {
 		setup: function () {
+			// don't create toasts in test environment
+			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			this.api = new mw.Api();
 			renderFromApiSpy = this.sandbox.stub( TalkSectionOverlay.prototype, 'renderFromApi' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
