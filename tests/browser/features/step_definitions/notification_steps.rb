@@ -8,7 +8,7 @@ end
 Given(/^I have no notifications$/) do
   expect(on(ArticlePage).notifications_button_element.when_present).to be_visible
   # This is somewhat hacky, but I don't want this test making use of Echo's APIs which may change
-  browser.execute_script("$( function () { $( '.notification-count' ).hide(); } );")
+  browser.execute_script("$( function () { $( '.notification-count span' ).hide(); } );")
 end
 
 When(/^I click the notifications overlay close button$/) do
