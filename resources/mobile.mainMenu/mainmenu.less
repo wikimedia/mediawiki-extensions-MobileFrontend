@@ -269,29 +269,3 @@ nav {
 		width: 100%;
 	}
 }
-
-.rtl {
-	// FIXME: Make animations a conditional class on the drawer itself
-	&.animations .notifications-overlay.navigation-drawer {
-		// +2% to accommodate for the border/box-shadow
-		.transform( translate( -102%, 0 ) );
-
-		&.visible {
-			.transform( translate( 0, 0 ) );
-		}
-	}
-
-	&.primary-navigation-enabled.animations {
-		// FIXME: Menu shouldn't need to know about drawers
-		.drawer .position-fixed,
-		#mw-mf-page-center {
-			.transform( translate( -@menuWidth, 0 ) );
-		}
-	}
-
-	&.secondary-navigation-enabled.animations {
-		#mw-mf-page-center {
-			.transform( translate( @rightDrawerWidth, 0 ) );
-		}
-	}
-}
