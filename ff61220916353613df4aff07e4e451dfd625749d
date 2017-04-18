@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_e5f1c1db",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:50:07Z",
+      "side": 1,
+      "message": "This worries me a little as it makes assumptions about the parser works.\nCould the Parser have a method that provides a single source of true that this can call instead?",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_c5f605d4",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:50:07Z",
+      "side": 1,
+      "message": "Does this need to be done at this level ?\nCould deduplication not happen before even making the chunks?",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
