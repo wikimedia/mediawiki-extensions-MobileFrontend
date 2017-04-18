@@ -14,13 +14,14 @@
 	 */
 	NotificationsOverlay = function ( options ) {
 		var modelManager, unreadCounter, wrapperWidget,
+			self = this,
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
 		Overlay.apply( this, options );
 
 		// Anchor tag that corresponds to a notifications badge
-		this.$badge = options.$badge;
+		this.badge = options.badge;
 		this.$overlay = $( '<div>' )
 			.addClass( 'notifications-overlay-overlay position-fixed' );
 
@@ -32,7 +33,6 @@
 
 		mw.echo.config.maxPrioritizedActions = 1;
 
-		this.count = 0;
 		this.doneLoading = false;
 
 		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
@@ -87,11 +87,12 @@
 		);
 
 		// Populate notifications
-		wrapperWidget.populate()
-			.then( this.setDoneLoading.bind( this ) )
-			.then( this.controller.updateSeenTime.bind( this.controller ) )
-			.then( this.setBadgeSeen.bind( this ) )
-			.then( this.checkShowMarkAllRead.bind( this ) );
+		wrapperWidget.populate().then( function () {
+			self.setDoneLoading();
+			self.controller.updateSeenTime();
+			self.badge.markAsSeen();
+			self.checkShowMarkAllRead();
+		} );
 	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
@@ -159,7 +160,7 @@
 		 * @method
 		 */
 		onError: function () {
-			window.location.href = this.$badge.attr( 'href' );
+			window.location.href = this.badge.getNotificationURL();
 		},
 		/**
 		 * Update the unread number on the notifications badge
@@ -168,29 +169,13 @@
 		 * @method
 		 */
 		onUnreadCountChange: function ( count ) {
-			var $badgeCounter = this.$badge.find( '.notification-count' );
-			this.count = this.controller.manager.getUnreadCounter().getCappedNotificationCount( count );
+			this.badge.setCount(
+				this.controller.manager.getUnreadCounter().getCappedNotificationCount( count )
+			);
 
-			if ( this.count >= 0 ) {
-				$badgeCounter.find( 'span' ).text(
-					mw.msg( 'echo-badge-count', mw.language.convertNumber( this.count ) )
-				).show();
-			}
-			if ( this.count === 0 ) {
-				$badgeCounter.removeClass( 'notification-unseen' );
-			}
 			this.checkShowMarkAllRead();
 		},
-		/**
-		 * Mark that all the notifications in the badge are seen.
-		 *
-		 * @method
-		 */
-		setBadgeSeen: function () {
-			this.$badge
-				.find( '.notification-count' )
-				.removeClass( 'notification-unseen' );
-		},
+
 		/** @inheritdoc */
 		preRender: function () {
 			this.options.heading = '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>';

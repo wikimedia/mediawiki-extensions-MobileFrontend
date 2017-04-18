@@ -281,13 +281,14 @@ class SkinMinervaTest extends MediaWikiTestCase {
 		$hasUnseen
 	) {
 		return [
-			'class' => MobileUI::iconClass( 'notifications' ),
+			'notificationIconClass' => MobileUI::iconClass( 'notifications' ),
 			'title' => $notificationsMsg,
 			'url' => SpecialPage::getTitleFor( $notificationsTitle )
 				->getLocalURL(
 					[ 'returnto' => $title->getPrefixedText() ] ),
 			'notificationCount' => $countLabel,
 			'isNotificationCountZero' => $isZero,
+			'hasNotifications' => $hasUnseen,
 			'hasUnseenNotifications' => $hasUnseen
 		];
 	}

@@ -1653,6 +1653,7 @@
 			"MobileFrontendHooks::onDiffViewHeader"
 		],
 		"ResourceLoaderTestModules": [
+			"MinervaHooks::onResourceLoaderTestModules",
 			"MobileFrontendHooks::onResourceLoaderTestModules"
 		],
 		"GetCacheVaryCookies": [
@@ -1705,6 +1706,7 @@
 			"MobileFrontendHooks::onCentralAuthSilentLoginRedirect"
 		],
 		"ResourceLoaderRegisterModules": [
+			"MinervaHooks::onResourceLoaderRegisterModules",
 			"MobileFrontendHooks::onResourceLoaderRegisterModules"
 		],
 		"EventLoggingRegisterSchemas": [

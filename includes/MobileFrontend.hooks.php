@@ -978,18 +978,6 @@ class MobileFrontendHooks {
 		// add Echo, if it's installed
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$resourceLoader->register( [
-				'skins.minerva.notifications' => $resourceBoilerplate + [
-					'dependencies' => [
-						'mobile.startup',
-						'mediawiki.router',
-						'skins.minerva.scripts',
-						'mediawiki.ui.anchor'
-					],
-					'scripts' => [
-						'resources/skins.minerva.notifications/init.js',
-					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
 				'mobile.notifications.overlay' => $resourceBoilerplate + [
 					'dependencies' => [
 						'mediawiki.util',
