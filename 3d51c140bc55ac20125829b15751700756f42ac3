@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_1441810e",
+        "filename": "includes/skins/secondaryButton.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T16:59:11Z",
+      "side": 1,
+      "message": "Yup you are right about the second tag. I\u0027ll clean that.\n\nThe first tag however makes sure only one of the A tags should display at a given time.",
+      "parentUuid": "4e506ba4_9b9f0462",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 79
+      },
+      "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_bb9a0074",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2017-04-18T10:14:03Z",
       "side": 1,
       "message": "Why not rerender secondaryButton.mustache here? At the expense of sending a small template to the client (which is compressed and can be cached by the RL), we don\u0027t duplicate logic between the server and the client.",
+      "range": {
+        "startLine": 174,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 4
+      },
+      "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_d46a397e",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T16:59:11Z",
+      "side": 1,
+      "message": "Let me think about this as I\u0027m not sure.\n\nA few early concerns\n1) It\u0027s a mustache file not a hogan file but we could of course trick ResourceLoader into thinking this is a hogan file\n2) Badgecounter is outside the NotificationOverlay view so we\u0027d need to think about how to rebind things that are binded elsewhere - probably resulting in a new view.",
+      "parentUuid": "4e506ba4_bb9a0074",
       "range": {
         "startLine": 174,
         "startChar": 0,
