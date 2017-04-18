@@ -111,8 +111,9 @@
 					var photos;
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
-						photos = $.map( resp.query.pages, function ( page ) {
-							return self._getImageDataFromPage.call( self, page );
+						// but it is a map of {[id]: page}
+						photos = Object.keys( resp.query.pages ).map( function ( id ) {
+							return self._getImageDataFromPage.call( self, resp.query.pages[id] );
 						} ).sort( function ( a, b ) {
 							return a.timestamp < b.timestamp ? 1 : -1;
 						} );

@@ -11,8 +11,8 @@
 			this.sandbox.stub( api, 'ajax', function () {
 				return $.Deferred().resolve( {
 					query: {
-						pages: {
-							20004112: {
+						pages: [
+							{
 								pageid: 20004112,
 								ns: 0,
 								title: 'The Montgomery (San Francisco)',
@@ -30,7 +30,7 @@
 									dist: 120200
 								} ]
 							},
-							18618509: {
+							{
 								pageid: 18618509,
 								ns: 0,
 								title: 'Wikimedia Foundation',
@@ -48,7 +48,7 @@
 									dist: 0
 								} ]
 							},
-							9297443: {
+							{
 								pageid: 9297443,
 								ns: 0,
 								title: 'W San Francisco',
@@ -60,7 +60,7 @@
 									dist: 177400
 								} ]
 							}
-						}
+						]
 					}
 				} );
 			} );

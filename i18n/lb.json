@@ -96,6 +96,7 @@
 	"mobile-frontend-home-button": "Haaptsäit",
 	"mobile-frontend-images-status": "Biller",
 	"mobile-frontend-joined-just-now": "Elo grad {{GENDER:$1|bäigetrueden}}",
+	"mobile-frontend-joined-years": "{{PLURAL:$2|Virun engem Joer|Viru(n) $2 Joer}} {{GENDER:$1|bäeigetreeden}}",
 	"mobile-frontend-language-change": "Sprooch wiesselen",
 	"mobile-frontend-language-article-heading": "An enger anerer Sprooch liesen",
 	"mobile-frontend-language-heading": "<strong>Sproochen</strong>",

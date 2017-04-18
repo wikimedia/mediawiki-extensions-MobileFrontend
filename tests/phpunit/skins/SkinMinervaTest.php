@@ -3,25 +3,11 @@
 namespace Tests\MobileFrontend\Skins;
 
 use MediaWikiTestCase;
-use MobileContext;
 use OutputPage;
 use SkinMinerva;
 use TestingAccessWrapper;
 use Title;
-
-class TestSkinMinerva extends SkinMinerva {
-
-	/**
-	 * The Minimum Viable Constructor for SkinMinerva.
-	 *
-	 * @FIXME Why doesn't SkinMinerva have its dependencies injected?
-	 *
-	 * @param MobileContext $mobileContext
-	 */
-	public function __construct( MobileContext $mobileContext ) {
-		$this->mobileContext = $mobileContext;
-	}
-}
+use RequestContext;
 
 /**
  * @covers SkinMinerva
@@ -45,21 +31,38 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	private function addToBodyAttributes(
 		$bodyClassName
 	) {
-		$context = MobileContext::singleton();
+		$context = RequestContext::getMain();
 
 		$outputPage = $context->getOutput();
 		$outputPage->setProperty( 'bodyClassName', $bodyClassName );
 
 		$bodyAttrs = [ 'class' => '' ];
 
-		$this->factorySkin( $context )
-			->addToBodyAttributes( $outputPage, $bodyAttrs );
+		$skin = new SkinMinerva();
+		$skin->addToBodyAttributes( $outputPage, $bodyAttrs );
 
 		return explode( ' ', $bodyAttrs[ 'class' ] );
 	}
 
-	private function factorySkin( MobileContext $context ) {
-		return new TestSkinMinerva( $context );
+	public function testHasCategoryLinksWhenOptionIsOff() {
+		$outputPage = $this->getMockBuilder( OutputPage::class )
+			->disableOriginalConstructor()
+			->getMock();
+		$outputPage->expects( $this->never() )
+			->method( 'getCategoryLinks' );
+
+		$context = $this->getMockBuilder( 'IContextSource' )->getMock();
+		$context->expects( $this->any() )
+			->method( 'getOutput' )
+			->willReturn( $outputPage );
+
+		$skin = new SkinMinerva();
+		$skin->setContext( $context );
+		$skin->setSkinOptions( [ SkinMinerva::OPTION_CATEGORIES => false ] );
+
+		$skin = TestingAccessWrapper::newFromObject( $skin );
+
+		$this->assertEquals( $skin->hasCategoryLinks(), false );
 	}
 
 	/**
@@ -75,14 +78,17 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			->method( 'getCategoryLinks' )
 			->will( $this->returnValue( $categoryLinks ) );
 
-		$skin = TestingAccessWrapper::newFromObject(
-			$this->getMockBuilder( SkinMinerva::class )
-				->disableOriginalConstructor()
-				->getMock()
-		);
-		$skin->expects( $this->once() )
+		$context = $this->getMockBuilder( 'IContextSource' )->getMock();
+		$context->expects( $this->any() )
 			->method( 'getOutput' )
-			->will( $this->returnValue( $outputPage ) );
+			->willReturn( $outputPage );
+
+		$skin = new SkinMinerva();
+		$skin->setContext( $context );
+		$skin->setSkinOptions( [ SkinMinerva::OPTION_CATEGORIES => true ] );
+
+		$skin = TestingAccessWrapper::newFromObject( $skin );
+
 		$this->assertEquals( $skin->hasCategoryLinks(), $expected );
 	}
 
@@ -122,12 +128,12 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	 *
 	 * @covers       SkinMinerva::getContextSpecificModules
 	 * @dataProvider provideGetContextSpecificModules
-	 * @param string $configName Config name that needs to be set
-	 * @param mixed $configValue Config value that is assigned to $configName
+	 * @param string $fontchangerValue whether font changer feature is enabled
+	 * @param mixed  $backToTopValue whether back to top feature is enabled
 	 * @param string $moduleName Module name that is being tested
 	 * @param bool $expected Whether the module is expected to be returned by the function being tested
 	 */
-	public function testGetContextSpecificModules( $configName, $configValue,
+	public function testGetContextSpecificModules( $fontchangerValue, $backToTopValue,
 												   $moduleName, $expected ) {
 		$skin = TestingAccessWrapper::newFromObject(
 			$this->getMockBuilder( SkinMinerva::class )
@@ -135,15 +141,14 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				->setMethods( [ 'getTitle' ] )
 				->getMock()
 		);
-		$skin->mobileContext = MobileContext::singleton();
-		$skin->isMobileMode = $skin->mobileContext->shouldDisplayMobileView();
 		$title = Title::newFromText( 'Test' );
 		$skin->expects( $this->any() )
 			->method( 'getTitle' )
 			->will( $this->returnValue( $title ) );
 
-		$this->setMwGlobals( $configName, [
-			'base' => $configValue
+		$skin->setSkinOptions( [
+			'fontChanger' => $fontchangerValue,
+			'backToTop' => $backToTopValue,
 		] );
 
 		if ( $expected ) {
@@ -155,10 +160,10 @@ class SkinMinervaTest extends MediaWikiTestCase {
 
 	public function provideGetContextSpecificModules() {
 		return [
-			[ 'wgMinervaEnableFontChanger', true, 'skins.minerva.fontchanger', true ],
-			[ 'wgMinervaEnableFontChanger', false, 'skins.minerva.fontchanger', false ],
-			[ 'wgMinervaEnableBackToTop', true, 'skins.minerva.backtotop', true ],
-			[ 'wgMinervaEnableBackToTop', false, 'skins.minerva.backtotop', false ],
+			[ true, false, 'skins.minerva.fontchanger', true ],
+			[ false, true, 'skins.minerva.fontchanger', false ],
+			[ false, true, 'skins.minerva.backtotop', true ],
+			[ false, false, 'skins.minerva.backtotop', false ],
 		];
 	}
 }

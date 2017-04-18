@@ -50,7 +50,8 @@
 				prop: 'categories',
 				titles: title,
 				clprop: 'hidden',
-				cllimit: 50
+				cllimit: 50,
+				formatversion: 2
 			}, this.continueParams ) ).then( function ( data ) {
 				if ( data.hasOwnProperty( 'continue' ) ) {
 					self.continueParams = data.continue;

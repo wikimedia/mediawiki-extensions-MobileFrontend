@@ -8,6 +8,7 @@
 
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
+			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// the first call returns a getContent deferred for a blocked user.
 			this.dBlockedContent = $.Deferred().resolve( 'section 0', {
@@ -25,15 +26,17 @@
 
 	// has to be the first test here! See comment in setup stub.
 	QUnit.test( '#initialize, blocked user', 1, function ( assert ) {
+		var toastStub = this.toastStub;
 		// eslint-disable-next-line no-new
 		new EditorOverlay( {
 			title: 'test.css'
 		} );
 
 		return this.dBlockedContent.then( function () {
-			assert.strictEqual(
-				$( '.mw-notification-content' ).text(),
-				'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.',
+			assert.ok(
+				toastStub.calledWith(
+					'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.'
+				),
 				'There is a toast notice, that i am blocked from editing'
 			);
 		} );

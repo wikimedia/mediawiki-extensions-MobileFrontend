@@ -10,7 +10,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
-	"beta-feature-minerva": "ডেস্কটপে মোবাইল স্কিন ({{int:skinname-minerva}}) সক্রিয় করো",
+	"beta-feature-minerva": "ডেস্কটপে মোবাইল স্কিন ({{int:skinname-minerva}}) সক্রিয় করুন",
 	"beta-feature-minerva-description": "\"{{int:prefs-rendering}}\" পছন্দসমূহ ট্যাবের অধীনে মোবাইল ডিভাইসে ব্যবহৃত স্কিনটি একটি নির্বাচনযোগ্য ডেস্কটপ স্কিন তৈরি করে।",
 	"mobile-frontend-account-create-captcha-placeholder": "নিশ্চিতকরণ কোড লিখুন",
 	"mobile-frontend-categories-heading": "<strong>বিষয়শ্রেণীসমূহ</strong>",
@@ -29,7 +29,7 @@
 	"mobile-frontend-cite-error-title": "উদ্ধৃতি লোড করার সময় ত্রুটি",
 	"mobile-frontend-cite-error": "একটি খারাপ সংস্করণ শনাক্তকারীর কারণে উদ্ধৃতি লোড করার চেষ্টা করার সময় একটি ত্রুটি ঘটেছে।",
 	"mobile-frontend-cite-none-available": "এই পাতাটির জন্য কোন উদ্ধৃতি উপলব্ধ নেই।",
-	"mobile-frontend-clear-search": "পরিস্কার",
+	"mobile-frontend-clear-search": "পরিষ্কার",
 	"mobile-frontend-cookies-required": "দর্শন মোডে যেতে কুকিজের প্রয়োজন। দয়া করে তাদের সক্রিয় করে আবার চেষ্টা করুন।",
 	"mobile-frontend-copyright": "বিষয়বস্তু $1-এর আওতায় প্রকাশিত যদি না অন্য কিছু নির্ধারিত থাকে।",
 	"mobile-frontend-desc": "মোবাইল ফ্রন্টএন্ড",

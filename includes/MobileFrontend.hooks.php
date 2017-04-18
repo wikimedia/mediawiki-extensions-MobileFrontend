@@ -13,6 +13,9 @@ use MediaWiki\MediaWikiServices;
  *	on<HookName>()
  * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
  *	onRequestContextCreateSkin()
+ *
+ * If you're hook changes the behaviour of the Minerva skin you are in the wrong place.
+ * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
 
@@ -117,6 +120,7 @@ class MobileFrontendHooks {
 			}
 		}
 		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
+		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
 		return false;
 	}
@@ -183,8 +187,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
-		global $wgRelatedArticlesFooterBlacklistedSkins;
-
 		$context = MobileContext::singleton();
 		$title = $context->getTitle();
 
@@ -195,21 +197,6 @@ class MobileFrontendHooks {
 		// Perform a few extra changes if we are in mobile mode
 		if ( $context->shouldDisplayMobileView() ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text );
-		}
-
-		// FIXME: remove the following when RelatedArticles are promoted from beta to stable
-		// Configure related articles to be shown in the footer for the beta mode
-		// The reason this code is here rather than inside the 'BeforePageDisplay' hook is
-		// that we want to execute this code before RelatedArticles decides not to show
-		// related articles if the skin is blacklisted.
-		if (
-			ExtensionRegistry::getInstance()->isLoaded( 'RelatedArticles' ) &&
-			MobileContext::singleton()->isBetaGroupMember()
-		) {
-			$needle = array_search( 'minerva', $wgRelatedArticlesFooterBlacklistedSkins ?: [] );
-			if ( $needle !== false ) {
-				array_splice( $wgRelatedArticlesFooterBlacklistedSkins, $needle, 1 );
-			}
 		}
 
 		if ( $context->shouldDisplayMobileView() && !$title->isMainPage() && !$title->isSpecialPage() ) {
@@ -588,40 +575,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		$mobileContext = MobileContext::singleton();
-		$isMobileView = $mobileContext->shouldDisplayMobileView();
-		$context = $special->getContext();
-		$out = $context->getOutput();
-		$request = $special->getContext()->getRequest();
-		$skin = $out->getSkin()->getSkinName();
-
+		$isMobileView = MobileContext::singleton()->shouldDisplayMobileView();
 		$name = $special->getName();
 
-		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
-		// FIXME: Upstream to core (?)
-		if ( $skin === 'minerva' ) {
-			if ( $name === 'Preferences' ) {
-				$out->addModules( 'skins.minerva.special.preferences.scripts' );
-			}
-
-			// Add default warning message to Special:UserLogin and Special:UserCreate
-			// if no warning message set.
-			if (
-				( $name === 'Userlogin' || $name === 'CreateAccount' ) &&
-				!$request->getVal( 'warning', null ) &&
-				!$context->getUser()->isLoggedIn()
-			) {
-				$request->setVal( 'warning', 'mobile-frontend-generic-login-new' );
-			}
-		}
-
-		if ( $isMobileView ) {
-			if ( $name === 'Search' ) {
-				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
-			} elseif ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
-				$out->addModuleStyles( [ 'mobile.ajax.styles', 'skins.minerva.special.userlogin.styles' ] );
-				$out->addModules( 'mobile.special.userlogin.scripts' );
-			}
+		if ( $isMobileView && ( $name === 'Userlogin' || $name === 'CreateAccount' ) ) {
+			$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
 		}
 
 		return true;
@@ -720,7 +678,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgWPBSkinBlacklist, $wgWPBEnableDefaultBanner;
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -730,20 +687,6 @@ class MobileFrontendHooks {
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 		$noJsEditing = $config->get( 'MFAllowNonJavaScriptEditing' );
-
-		// show banners using WikidataPageBanner, if installed and all pre-conditions fulfilled
-		if (
-			ExtensionRegistry::getInstance()->isLoaded( 'WikidataPageBanner' ) &&
-			$context->isBetaGroupMember()
-		) {
-			// turn default banners on
-			$wgWPBEnableDefaultBanner = true;
-			// Turn on the banner experiment
-			$needle = array_search( 'minerva', $wgWPBSkinBlacklist );
-			if ( $needle !== false ) {
-				unset( $wgWPBSkinBlacklist[$needle] );
-			}
-		}
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();

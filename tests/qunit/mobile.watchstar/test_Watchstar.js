@@ -37,6 +37,8 @@
 
 	QUnit.module( 'MobileFrontend: Watchstar.js', {
 		setup: function () {
+			// Avoid unnecessary mw.notify animations
+			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'postWithToken' )
 				.returns( $.Deferred().resolve() );

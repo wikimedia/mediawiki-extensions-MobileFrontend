@@ -31,7 +31,7 @@
 	 * @ignore
 	 */
 	function getExpandedSections( page ) {
-		var expandedSections = $.parseJSON(
+		var expandedSections = JSON.parse(
 			settings.get( 'expandedSections', false ) || '{}'
 		);
 		expandedSections[page.title] = expandedSections[page.title] || {};

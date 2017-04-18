@@ -10,9 +10,15 @@ use MediaWiki\MediaWikiServices;
  * A skin that works on both desktop and mobile
  * @ingroup Skins
  */
-class SkinMinerva extends SkinTemplate {
-	/** @var boolean $isMobileMode Describes whether reader is on a mobile device */
-	protected $isMobileMode = false;
+class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
+	/** Set of keys for available skin options. See $skinOptions. */
+	const OPTION_MOBILE_OPTIONS = 'mobileOptionsLink';
+	const OPTION_CATEGORIES = 'categories';
+	const OPTION_FONT_CHANGER = 'fontChanger';
+	const OPTION_BACK_TO_TOP = 'backToTop';
+	const OPTION_TOGGLING = 'toggling';
+	const OPTION_PRINT_STYLES = 'printStyles';
+
 	/** @var string $skinname Name of this skin */
 	public $skinname = 'minerva';
 	/** @var string $template Name of this used template */
@@ -21,24 +27,58 @@ class SkinMinerva extends SkinTemplate {
 	public $useHeadElement = true;
 	/** @var string $mode Describes 'stability' of the skin - beta, stable */
 	protected $mode = 'stable';
-	/** @var MobileContext $mobileContext Safes an instance of MobileContext */
-	protected $mobileContext;
 	/** @var bool whether the page is the user's page, i.e. User:Username */
 	public $isUserPage = false;
 	/** @var ContentHandler Content handler of page; only access through getContentHandler */
 	protected $contentHandler = null;
 	/** @var bool Whether the page is also available in other languages or variants */
 	protected $doesPageHaveLanguages = false;
-	/** @var bool Whether to show the categories button on the page */
-	protected $shouldShowCategoriesButton = false;
 
 	/**
-	 * Wrapper for MobileContext::getMFConfig()
-	 * @see MobileContext::getMFConfig()
+	 * Return skin specific configuration
+	 * Note that while MobileFrontend and Minerva live in the same skin this will also return
+	 * MobileFrontend config.
 	 * @return Config
 	 */
 	public function getMFConfig() {
-		return $this->mobileContext->getMFConfig();
+		// FIXME: When Minerva lives in its own skin this will make sense and be Minerva.Config
+		return MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+	}
+
+	/** @var array skin specific options */
+	protected $skinOptions = [
+		/**
+		 * Whether the main menu should include a link to
+		 * Special:Preferences of Special:MobileOptions
+		 */
+		self::OPTION_MOBILE_OPTIONS => false,
+		/** Whether a categories button should appear at the bottom of the skin. */
+		self::OPTION_CATEGORIES => false,
+		/** Whether an option to change font size appears in Special:MobileOptions */
+		self::OPTION_FONT_CHANGER => false,
+		/** Whether a back to top button appears at the bottom of the view page */
+		self::OPTION_BACK_TO_TOP => false,
+		/** Whether sections can be collapsed (requires MobileFrontend and MobileFormatter) */
+		self::OPTION_TOGGLING => false,
+		/** Whether print styles should be loaded */
+		self::OPTION_PRINT_STYLES => false,
+	];
+
+	/**
+	 * override an existing option or options with new values
+	 * @param array $options
+	 */
+	public function setSkinOptions( $options ) {
+		$this->skinOptions = array_merge( $this->skinOptions, $options );
+	}
+
+	/**
+	 * Return whether a skin option is truthy
+	 * @param string $key
+	 * @return boolean
+	 */
+	public function getSkinOption( $key ) {
+		return $this->skinOptions[$key];
 	}
 
 	/**
@@ -248,11 +288,15 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Whether the output page contains category links
+	 * Whether the output page contains category links and the category feature is enabled.
 	 * @return bool
 	 */
 	private function hasCategoryLinks() {
+		if ( !$this->getSkinOption( self::OPTION_CATEGORIES ) ) {
+			return false;
+		}
 		$categoryLinks = $this->getOutput()->getCategoryLinks();
+
 		if ( !count( $categoryLinks ) ) {
 			return false;
 		}
@@ -263,8 +307,6 @@ class SkinMinerva extends SkinTemplate {
 	 * Initiate class
 	 */
 	public function __construct() {
-		$this->mobileContext = MobileContext::singleton();
-		$this->isMobileMode = $this->mobileContext->shouldDisplayMobileView();
 		$title = $this->getTitle();
 		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
 			$pageUserId = User::idFromName( $title->getText() );
@@ -273,8 +315,6 @@ class SkinMinerva extends SkinTemplate {
 				$this->isUserPage = true;
 			}
 		}
-		$this->shouldShowCategoriesButton = $this->mobileContext->getConfigVariable(
-			'MinervaShowCategoriesButton' ) && $this->hasCategoryLinks();
 	}
 
 	/**
@@ -284,7 +324,7 @@ class SkinMinerva extends SkinTemplate {
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
 		$styles = [ 'mobile.usermodule.styles' ];
-		if ( $this->mobileContext->getConfigVariable( 'MinervaPrintStyles' ) ) {
+		if ( $this->getSkinOption( self::OPTION_PRINT_STYLES ) ) {
 			$styles[] = 'skins.minerva.print.styles';
 		}
 
@@ -443,7 +483,7 @@ class SkinMinerva extends SkinTemplate {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
 
 		// Links specifically for mobile mode
-		if ( $this->isMobileMode ) {
+		if ( $this->getSkinOption( self::OPTION_MOBILE_OPTIONS ) ) {
 
 			// Settings link
 			$menu->insert( 'settings' )
@@ -466,7 +506,7 @@ class SkinMinerva extends SkinTemplate {
 						SpecialPage::getTitleFor( 'Preferences' ),
 						'prefsnologintext2'
 					),
-					MobileUI::iconClass( 'mf-settings-invert', 'before' ),
+					MobileUI::iconClass( 'mf-settings', 'before' ),
 					[ 'data-event-name' => 'preferences' ]
 				);
 		}
@@ -944,7 +984,7 @@ class SkinMinerva extends SkinTemplate {
 			$buttons['language'] = $this->getLanguageButton();
 		}
 
-		if ( $this->shouldShowCategoriesButton ) {
+		if ( $this->hasCategoryLinks() ) {
 			$buttons['categories'] = $this->getCategoryButton();
 		}
 
@@ -1218,15 +1258,15 @@ class SkinMinerva extends SkinTemplate {
 			$modules[] = 'skins.minerva.talk';
 		}
 
-		if ( $this->shouldShowCategoriesButton ) {
+		if ( $this->hasCategoryLinks() ) {
 			$modules[] = 'skins.minerva.categories';
 		}
 
-		if ( $this->mobileContext->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
+		if ( $this->getSkinOption( self::OPTION_FONT_CHANGER ) ) {
 			$modules[] = 'skins.minerva.fontchanger';
 		}
 
-		if ( $this->mobileContext->getConfigVariable( 'MinervaEnableBackToTop' ) ) {
+		if ( $this->getSkinOption( self::OPTION_BACK_TO_TOP ) ) {
 			$modules[] = 'skins.minerva.backtotop';
 		}
 
@@ -1253,7 +1293,7 @@ class SkinMinerva extends SkinTemplate {
 
 		$modules['context'] = $this->getContextSpecificModules();
 
-		if ( $this->isMobileMode ) {
+		if ( $this->getSkinOption( self::OPTION_TOGGLING ) ) {
 			$modules['toggling'] = [ 'skins.minerva.toggling' ];
 		}
 		$modules['site'] = 'mobile.site';

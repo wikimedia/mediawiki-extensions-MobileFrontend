@@ -90,9 +90,6 @@ body {
 	border-top: 1px solid @colorGray12;
 	margin-top: @headerMarginTop;
 
-	.search-box {
-		width: 100%;
-	}
 	> div {
 		width: @headerHeight;
 		position: relative;
@@ -173,11 +170,16 @@ body {
 	}
 }
 
+.search-box,
+// Selector is needed to override table-cell rules
+.header .search-box {
+	display: none;
+	width: auto;
+}
+
 .search-box {
 	// FIXME: remove when micro.tap in stable and rule from common-js.less too
 	-webkit-tap-highlight-color: rgba( 255, 255, 255, 0 );
-	display: none;
-	width: auto;
 
 	.search {
 		@searchIconSize: 20px;

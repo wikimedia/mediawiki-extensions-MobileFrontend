@@ -36,7 +36,8 @@
 			"Apflu",
 			"EagerLin",
 			"Fengchao",
-			"飞舞回堂前"
+			"飞舞回堂前",
+			"Arthur2e5"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -90,7 +91,7 @@
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "您真的想要放弃您的编辑？",
 	"mobile-frontend-editor-captcha-try-again": "错误代码，请重试。",
-	"mobile-frontend-editor-continue": "下一个",
+	"mobile-frontend-editor-continue": "下一步",
 	"mobile-frontend-editor-cta": "帮助改善此页面！",
 	"mobile-frontend-editor-disabled": "本页面受到保护以防止被破坏。",
 	"mobile-frontend-editor-edit": "编辑",
@@ -141,7 +142,7 @@
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}是由像您一样的人构筑的。</strong><br />登录以贡献。",
 	"mobile-frontend-history": "查看本页面的编辑历史。",
 	"mobile-frontend-history-404-desc": "无法查看不存在页面的历史。它可能被删除或者您点击了一个死链。",
-	"mobile-frontend-history-404-title": "没有这个页面",
+	"mobile-frontend-history-404-title": "无此页面",
 	"mobile-frontend-history-no-results": "没有与过滤器条件匹配的历史。",
 	"mobile-frontend-home-button": "首页",
 	"mobile-frontend-images-status": "图像",

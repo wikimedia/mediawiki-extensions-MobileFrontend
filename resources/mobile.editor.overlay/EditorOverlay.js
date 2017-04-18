@@ -162,7 +162,7 @@
 						{
 							type: 'list',
 							icon: 'edit',
-							title: mw.msg( 'visualeditor-mweditmode-tooltip' ),
+							title: mw.msg( 'visualeditor-mweditmode-tooltip' ), // resource-modules-disable-line
 							include: [ 'editModeVisual', 'editModeSource' ]
 						}
 					] );

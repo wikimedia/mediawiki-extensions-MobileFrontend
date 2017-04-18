@@ -817,4 +817,74 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter = new MobileFormatter( $input, Title::newFromText( 'Special:Foo' ) );
 		$formatter->filterContent( false, true, false );
 	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
+	 * @covers MobileFormatter::filterContent
+	 * @param string $input
+	 */
+	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+
+		$title = 'Special:T149884';
+
+		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title ) );
+		$formatter->enableExpandableSections();
+
+		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->once() )
+			->method( 'info' )
+			->will( $this->returnCallback( function( $message ) use ( $title ) {
+				// Debug message contains Page title
+				$this->assertContains( $title, $message );
+				// and contains revision id which is 0 by default
+				$this->assertContains( '0', $message );
+			} ) );
+
+		$this->setLogger( 'mobile', $loggerMock );
+		$formatter->filterContent( false, false, false, true );
+	}
+
+	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
+		$box = '<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>';
+
+		return [
+			// wrapped once
+			[ "<div>$box</div>" ],
+			// wrapped twice
+			[ "<div><p>$box</p></div>" ],
+			// wrapped inside different infobox
+			[ "<table class=\"" . self::INFOBOX_CLASSNAME . "\"><tr><td>$box</td></tr></table>" ],
+			// wrapped multiple times
+			[ "<div><div><p><span><div><p>Test</p>$box</div></span></p></div></div>" ]
+		];
+	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @covers MobileFormatter::filterContent
+	 */
+	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+
+		$input = '<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>';
+		$title = 'Special:T149884';
+
+		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title ) );
+		$formatter->enableExpandableSections();
+
+		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->never() )
+			->method( 'debug' );
+
+		$this->setLogger( 'mobile', $loggerMock );
+		$formatter->filterContent( false, false, false, true );
+	}
 }

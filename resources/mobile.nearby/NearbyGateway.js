@@ -104,13 +104,16 @@
 
 			this.api.ajax( requestParams ).then( function ( resp ) {
 				var pages;
+
+				// resp.query.pages is an Array<Page> instead of a map like in other
+				// API requests
 				if ( resp.query ) {
 					pages = resp.query.pages || [];
 				} else {
 					pages = [];
 				}
 
-				pages = $.map( pages, function ( page, i ) {
+				pages = pages.map( function ( page, i ) {
 					var coords, p;
 					p = Page.newFromJSON( page );
 					p.anchor = 'item_' + i;
@@ -127,8 +130,10 @@
 					}
 					if ( exclude !== page.title ) {
 						return p;
+					} else {
+						return null;
 					}
-				} );
+				} ).filter( function ( page ) { return !!page; } );
 
 				pages.sort( function ( a, b ) {
 					return a.dist > b.dist ? 1 : -1;

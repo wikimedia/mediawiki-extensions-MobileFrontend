@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	/**
 	 * Utility function for the structured language overlay
 	 *
@@ -145,7 +145,7 @@
 	util.getFrequentlyUsedLanguages = function () {
 		var languageMap = mw.storage.get( 'langMap' );
 
-		return languageMap ? $.parseJSON( languageMap ) : {};
+		return languageMap ? JSON.parse( languageMap ) : {};
 	};
 
 	/**
@@ -175,4 +175,4 @@
 
 	M.define( 'mobile.languages.structured/util', util );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
