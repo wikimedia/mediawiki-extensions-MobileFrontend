@@ -93,6 +93,30 @@
       "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_74e2459e",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-18T17:57:46Z",
+      "side": 1,
+      "message": "You\u0027re definitely right about #2. It\u0027s likely that we\u0027ve bound event listeners directly to DOM elements rather than relying on event bubbling.",
+      "parentUuid": "4e506ba4_d46a397e",
+      "range": {
+        "startLine": 174,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 4
+      },
+      "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
