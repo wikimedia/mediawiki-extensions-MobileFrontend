@@ -1,0 +1,19 @@
+@media print {
+	// Chrome: override the default margins and reveal the footer
+	// Experimental technology (see https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size)
+	@page {
+		size: legal;
+		margin: 50px 0;
+	}
+
+	html {
+		padding: 0 50px;
+	}
+
+	@import 'header.less';
+	@import 'article.less';
+	@import 'blockquotes.less';
+	@import 'infobox.less';
+	@import 'references.less';
+	@import 'footer.less';
+}

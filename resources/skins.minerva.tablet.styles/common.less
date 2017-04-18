@@ -6,7 +6,7 @@ A file for css that optimises the Minerva skin on larger devices.
 @import 'minerva.mixins';
 @paddingVertical: 1.4em;
 
-@media all and ( min-width: @deviceWidthTablet ) {
+@media screen and ( min-width: @deviceWidthTablet ) {
 	.client-js {
 		#searchIcon {
 			display: none;
@@ -110,13 +110,6 @@ A file for css that optimises the Minerva skin on larger devices.
 			}
 		}
 
-		// Blockquotes
-		blockquote {
-			// Increase horizontal padding
-			padding-right: @blockquotePaddingRight + 10px;
-			padding-left: @blockquotePaddingLeft + 10px;
-		}
-
 		// Override rules in common.less
 		table {
 			display: table;
@@ -142,7 +135,7 @@ A file for css that optimises the Minerva skin on larger devices.
 	}
 }
 
-@media all and ( min-width: @wgMFDeviceWidthDesktop ) {
+@media screen and ( min-width: @wgMFDeviceWidthDesktop ) {
 	// FIXME: Zero should use banner-container class or better - append to banner-container
 	#mw-mf-page-center .mw-mf-banner,
 	.banner-container,

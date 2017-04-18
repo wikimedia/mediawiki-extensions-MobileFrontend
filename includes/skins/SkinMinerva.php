@@ -17,6 +17,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	const OPTION_FONT_CHANGER = 'fontChanger';
 	const OPTION_BACK_TO_TOP = 'backToTop';
 	const OPTION_TOGGLING = 'toggling';
+	const OPTION_PRINT_STYLES = 'printStyles';
 
 	/** @var string $skinname Name of this skin */
 	public $skinname = 'minerva';
@@ -59,6 +60,8 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		self::OPTION_BACK_TO_TOP => false,
 		/** Whether sections can be collapsed (requires MobileFrontend and MobileFormatter) */
 		self::OPTION_TOGGLING => false,
+		/** Whether print styles should be loaded */
+		self::OPTION_PRINT_STYLES => false,
 	];
 
 	/**
@@ -320,7 +323,12 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		$out->addModuleStyles( 'mobile.usermodule.styles' );
+		$styles = [ 'mobile.usermodule.styles' ];
+		if ( $this->getSkinOption( self::OPTION_PRINT_STYLES ) ) {
+			$styles[] = 'skins.minerva.print.styles';
+		}
+
+		$out->addModuleStyles( $styles );
 		$out->addModuleScripts( 'mobile.usermodule' );
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}

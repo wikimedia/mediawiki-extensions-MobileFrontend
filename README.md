@@ -339,6 +339,19 @@ When enabled and hacks.less exists, hacks.less workarounds are included in style
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMinervaPrintStyles
+
+A temporary configuration variable to control roll out of styles to improve the MobileFrontend print experience.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'beta' => true,
+    'base' => false,
+  ]
+```
+
 #### $wgMinervaPageActions
 
 Controls which page actions, if any, are displayed. Allowed: `edit`, `watch`, `talk`, and

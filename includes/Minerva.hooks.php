@@ -70,6 +70,8 @@ class MinervaHooks {
 		// setSkinOptions is not available
 		if ( $skin instanceof SkinMinerva ) {
 			$skin->setSkinOptions( [
+				SkinMinerva::OPTION_PRINT_STYLES
+					=> $mobileContext->getConfigVariable( 'MinervaPrintStyles' ),
 				SkinMinerva::OPTION_CATEGORIES
 					=> $mobileContext->getConfigVariable( 'MinervaShowCategoriesButton' ),
 				SkinMinerva::OPTION_FONT_CHANGER

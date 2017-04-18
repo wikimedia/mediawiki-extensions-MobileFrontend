@@ -1,0 +1,95 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
+@dividerHeight: 2px;
+@dividerSpacing: 28px;
+
+.pre-content {
+	display: block;
+	padding: 51px 0 35px;
+
+	h1 {
+		font-size: 70px;
+		font-weight: normal;
+		font-style: italic;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: @colorGray1;
+	}
+
+	.tagline {
+		font-size: 36px;
+	}
+
+	#page-actions {
+		display: none;
+	}
+}
+
+#bodyContent {
+	padding-top: 55px;
+	position: relative;
+	&:before {
+		top: 0;
+	}
+}
+
+.thumbinner {
+	width: auto !important;
+}
+
+.thumb {
+	position: relative;
+	padding: (@dividerSpacing*2) + @dividerHeight 0 !important;
+	text-align: left;
+	margin: 0 !important;
+
+	&:after {
+		bottom: @dividerHeight + @dividerSpacing;
+	}
+}
+
+.thumb:after,
+#bodyContent:before {
+	position: absolute;
+	left: 0;
+	content: '';
+	display: block;
+	width: 55px;
+	height: @dividerHeight;
+	background: @printBorderColor;
+}
+
+.thumbcaption {
+	margin-top: 23px !important;
+	width: 100%;
+	font-style: italic;
+	font-size: 28px;
+}
+
+#mw-content-text {
+	font-size: 36px;
+
+	a {
+		text-decoration: underline;
+		color: @colorGray2;
+	}
+
+	.section-heading {
+		border-bottom: 0;
+	}
+
+	h2 {
+		font-size: 48px;
+	}
+
+	h3 {
+		font-size: 40px;
+	}
+
+	h4, h5, h6 {
+		font-size: 36px;
+	}
+}
