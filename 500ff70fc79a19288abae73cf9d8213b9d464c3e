@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_aa062821",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1027,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "Yeh.. I was going to do this and thought it would be better in a follow up, but on second thoughts maybe not.",
+      "parentUuid": "4e506ba4_aaeaa89a",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_0a407c5a",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-04-18T21:02:41Z",
       "side": 1,
       "message": "NotificationBadge uses a `mobile.notifications` -\u003e should we put this as a dependency?",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_65fff1fc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1028,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "I assume you mean `mobile.notifications.overlay`\n\nThe answer is no.. as this is a soft dependency using mw.loader to load this code.\n\nIf I put this in here it also pulls in the oojs ui library which will more than double the initial payload.. so trying to avoid that explicitly (see commit msg)",
+      "parentUuid": "4e506ba4_0a407c5a",
       "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_05062d20",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1030,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "Nope not with how ResourceLoader works. \n\nIt\u0027s going to load anyway as other things depend on it.\nEven if Echo is not installed the entire mobile.startup library will load.",
+      "parentUuid": "4e506ba4_eaa8b01f",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_ca44d4bf",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2017-04-18T21:02:41Z",
       "side": 1,
       "message": "I like this change.",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_454af560",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_ca44d4bf",
       "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_a515f941",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "Whoops my bad. Added back in. It provides styles.",
+      "parentUuid": "4e506ba4_ea267010",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_0ab07cf0",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2017-04-18T21:02:41Z",
       "side": 1,
       "message": "Badge object is a requirement, it would be better to pass as an argument, not a options property as it might be easily missed.",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_e50b0125",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "Possibly.. but this is not how our Views and Overlays work if you take a look at resources/mobile.startup/View.js (Overlay also extends View)\n\nIt would need a big refactor of this library. I think this approach is fine. We can always make NotificationsOverlay throw an exception if one is not provided.",
+      "parentUuid": "4e506ba4_0ab07cf0",
       "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_652611b7",
+        "filename": "resources/skins.minerva.notifications.badge/NotificationBadge.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "I can clean this up I will... but yep they are the same thing.",
+      "parentUuid": "4e506ba4_ea5e7047",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_6a526041",
         "filename": "resources/skins.minerva.notifications.badge/NotificationBadge.js",
         "patchSetId": 1
@@ -132,6 +258,24 @@
       "writtenOn": "2017-04-18T21:02:41Z",
       "side": 1,
       "message": "if (options.el is not defined then $el will be undefined). \nAlso (correct me if I\u0027m wrong, this part is bit rusty) but we set `var $el` - there is no this.$el - am I right?",
+      "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_8531ddeb",
+        "filename": "resources/skins.minerva.notifications.badge/NotificationBadge.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-18T21:19:19Z",
+      "side": 1,
+      "message": "$el will always be defined in View. Confusing variable names I know...\nhttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/resources/mobile.startup/View.js#L177",
+      "parentUuid": "4e506ba4_6a526041",
       "revId": "500ff70fc79a19288abae73cf9d8213b9d464c3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
