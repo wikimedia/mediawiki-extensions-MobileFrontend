@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_9b9f0462",
+        "filename": "includes/skins/secondaryButton.mustache",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-18T10:14:03Z",
+      "side": 1,
+      "message": "I\u0027m not quite sure whether the first tag is necessary here but the second one (hasUnseenNotifications) definitely isn\u0027t as it\u0027ll always be true in this context.",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 79
+      },
+      "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_bb9a0074",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-18T10:14:03Z",
+      "side": 1,
+      "message": "Why not rerender secondaryButton.mustache here? At the expense of sending a small template to the client (which is compressed and can be cached by the RL), we don\u0027t duplicate logic between the server and the client.",
+      "range": {
+        "startLine": 174,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 4
+      },
+      "revId": "3d51c140bc55ac20125829b15751700756f42ac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
