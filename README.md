@@ -147,15 +147,6 @@ Options to control several functions of the mobile editor.  Possible values:
   ]
 ```
 
-#### $wgMFIgnoreEventLoggingBucketing
-
-Disable EventLogging bucketing for purposes of development.  When enabled all
-events are logged regardless of any existing sampling rate specified in the
-schema.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFExperiments
 
 A list of experiments active on the skin.

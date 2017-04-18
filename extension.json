@@ -1733,7 +1733,6 @@
 			"anonymousEditing": true,
 			"skipPreview": false
 		},
-		"MFIgnoreEventLoggingBucketing": false,
 		"MFExperiments": {
 			"betaoptin": {
 				"name": "betaoptin",
