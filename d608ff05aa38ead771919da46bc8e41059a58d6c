@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_fb04f9c9",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 684,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-04-19T21:48:34Z",
+      "side": 1,
+      "message": "MFAllowNonJavaScriptEditing is false in extension.json right now…",
+      "range": {
+        "startLine": 684,
+        "startChar": 12,
+        "endLine": 684,
+        "endChar": 16
+      },
+      "revId": "d608ff05aa38ead771919da46bc8e41059a58d6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
