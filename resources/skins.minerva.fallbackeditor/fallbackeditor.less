@@ -15,3 +15,53 @@ textarea.mw-ui-input {
 	max-height: 14em;
 }
 
+.action-submit,
+.action-edit {
+	#page-secondary-actions,
+	#page-actions {
+		display: none;
+	}
+
+	.heading-holder {
+		padding-bottom: 8px;
+		padding-top: 0;
+		font-weight: bold;
+	}
+
+	.editCheckboxes {
+		margin-top: 8px;
+	}
+
+	#mw-anon-edit-warning {
+		padding: 8px;
+	}
+
+	// Parsing information doesn't need to be so big
+	.preview-limit-report-wrapper,
+	// neither to headers for diffs
+	.diff-otitle,
+	.diff-ntitle,
+	// neither does the page title
+	#section_0,
+	// neither do all the warnings
+	#editpage-copywarn,
+	#mw-anon-edit-warning {
+		.secondary-text();
+	}
+
+	// Preview header is hidden given the warning box already
+	// tells the user they are in preview mode.
+	.previewnote h2 {
+		display: none;
+	}
+
+	// show changes specific
+	#wikiDiff table {
+		margin-top: 0;
+
+		.diff-otitle,
+		.diff-ntitle {
+			text-align: left;
+		}
+	}
+}

@@ -2,6 +2,8 @@
 @import 'minerva.mixins';
 @import 'mediawiki.mixins';
 
+// Necessary for fallback editor preview.
+.previewnote p,
 // Used for messages on login screen (They're more informational than actual warnings.)
 // FIXME: standardise these two classes
 .warningbox,
@@ -16,13 +18,20 @@
 	background: @colorSuccessBackground;
 }
 
+// Necessary for fallback editor preview.
+.previewnote p,
 .successbox,
 .errorbox,
 .warningbox,
 .mw-revision {
 	padding: 1em @contentMargin;
 	margin: 0 0 1em;
+}
 
+.successbox,
+.errorbox,
+.warningbox,
+.mw-revision {
 	h2 {
 		font: bold 100% @fontFamily;
 		padding: 0;
