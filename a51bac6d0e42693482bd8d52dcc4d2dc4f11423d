@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_1b48c55f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-19T21:46:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_11c44f43",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_31e38bd6",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_db701da6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-19T21:46:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_31e38bd6",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_d1d4a7ee",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2017-04-12T21:58:05Z",
       "side": 1,
       "message": "Should we temporarily feature flag this just in case? Switching config is easier than reverting.",
+      "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_7b6a2980",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-04-19T21:46:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_d1d4a7ee",
       "revId": "a51bac6d0e42693482bd8d52dcc4d2dc4f11423d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
