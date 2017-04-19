@@ -87,6 +87,24 @@
       "revId": "ff61220916353613df4aff07e4e451dfd625749d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_a0396040",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-04-19T21:06:42Z",
+      "side": 1,
+      "message": "Embedding the style tags in the HTML was what was decided in T155813, largely for performance reasons (i.e. a few milliseconds on time to first paint). But if MobileFrontend wants to extract the styles and do things some different way I really don\u0027t care, I just wrote this patch to keep it from losing styles entirely if/when the core deduplication is deployed.",
+      "parentUuid": "4e506ba4_f56ac8e9",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
