@@ -4,10 +4,10 @@ namespace Tests\MobileFrontend\Skins;
 
 use MediaWikiTestCase;
 use OutputPage;
-use SkinMinerva;
-use TestingAccessWrapper;
-use Title;
 use RequestContext;
+use SkinMinerva;
+use Title;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * @covers SkinMinerva
