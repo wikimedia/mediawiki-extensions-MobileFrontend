@@ -398,9 +398,20 @@ class MobileContext extends ContextSource {
 			wfIncrStats( 'mobile.opt_in_cookie_unset' );
 		}
 		$this->mobileMode = $mode;
+
 		$user = $this->getUser();
-		$user->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
-		$user->saveSettings();
+		if ( $user->getId() ) {
+			$user->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
+			DeferredUpdates::addCallableUpdate( function () use ( $user, $mode ) {
+				if ( wfReadOnly() ) {
+					return;
+				}
+
+				$latestUser = $user->getInstanceForUpdate();
+				$latestUser->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
+				$latestUser->saveSettings();
+			} );
+		}
 
 		$this->getRequest()->response()->setCookie( self::OPTIN_COOKIE_NAME, $mode, 0, [
 			'prefix' => '',
