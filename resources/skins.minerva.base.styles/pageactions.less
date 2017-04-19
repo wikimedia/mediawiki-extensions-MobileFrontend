@@ -5,10 +5,14 @@
 
 // hide menu items when not possible to use
 .client-nojs #ca-watch,
-.client-nojs #ca-edit,
 #ca-talk.selected {
 	// Important as this is not negotiable.
 	display: none !important;
+}
+
+.client-nojs #ca-edit {
+	// This is negotiable as non-JS editing might be enabled.
+	display: none;
 }
 
 #page-actions .nojs-edit {

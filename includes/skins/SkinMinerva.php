@@ -220,7 +220,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$noJsEdit = $this->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' );
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
-			$additionalClass = $noJsEdit?' nojs-edit':'';
+			$additionalClass = $noJsEdit ? ' nojs-edit': '';
 			$lang = wfGetLangObj( $lang );
 			$message = $this->msg( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			$html = Html::openElement( 'span' );
