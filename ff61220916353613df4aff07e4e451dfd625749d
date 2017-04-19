@@ -69,6 +69,24 @@
       "revId": "ff61220916353613df4aff07e4e451dfd625749d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_f56ac8e9",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-19T20:38:51Z",
+      "side": 1,
+      "message": "As an API consumers I wouldn\u0027t want style tags embedded inside HTML.\nI would want styles made available in a separate property. The $chunks represent HTML of each section. Including style tags makes big assumptions on how the client will render them.\n\nWhat is wrong with returning all styles for all sections unconditionally in a single property? e.g. styles\n\nI\u0027ve added @bearnd as I\u0027d like to hear his thoughts as a consumer of this API but something about this feels wrong.\n\nAlso we need to be careful here that MobileFormatter and ApiMobileView don\u0027t duplicate work. The current state of both pieces of those code is a little messy.",
+      "parentUuid": "4e506ba4_4cf1bdc7",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
