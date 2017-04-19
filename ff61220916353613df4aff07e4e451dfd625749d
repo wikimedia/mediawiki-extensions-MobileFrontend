@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_2c00f1ae",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-04-19T13:47:43Z",
+      "side": 1,
+      "message": "It\u0027s not a very big assumption, just that the items in question will be \u003cstyle\u003e tags with a \u0027data-mw-embedded-module\u0027 attribute. Parsoid is (probably) going to be relying on this same assumption, although it\u0027ll probably do DOM manipulation rather than regexing HTML text to implement it.\n\nThe one extra assumption here is that the attribute will be quoted with double quotes (rather than single quotes or unquoted) and will be consistently escaped, which again doesn\u0027t seem like an unwarranted assumption.\n\nI updated the documentation in the core patch to clearly indicate this guarantee.",
+      "parentUuid": "4e506ba4_e5f1c1db",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_c5f605d4",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2017-04-18T21:50:07Z",
       "side": 1,
       "message": "Does this need to be done at this level ?\nCould deduplication not happen before even making the chunks?",
+      "revId": "ff61220916353613df4aff07e4e451dfd625749d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_4cf1bdc7",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-04-19T13:47:43Z",
+      "side": 1,
+      "message": "The deduplication already happened in the Parser. The point of this patch is to partially *undo* that so every chunk contains the styles.\n\nFor example, the parser might give you\n\n \u003ch1\u003eSection 1\u003c/h1\u003e\n \u003cstyle data-mw-embedded-module\u003d\"foo\"\u003e/* Content of foo */\u003c/style\u003e\n Text of section 1.\n\n \u003ch1\u003eSection 2\u003c/h1\u003e\n \u003cstyle data-mw-embedded-module\u003d\"foo\"\u003e\u003c/style\u003e\n Text of section 2.\n\n \u003ch1\u003eSection 3\u003c/h1\u003e\n \u003cstyle data-mw-embedded-module\u003d\"foo\"\u003e\u003c/style\u003e\n Text of section 3.\n \u003cstyle data-mw-embedded-module\u003d\"foo\"\u003e\u003c/style\u003e\n Text of section 3.\n \u003cstyle data-mw-embedded-module\u003d\"foo\"\u003e\u003c/style\u003e\n Text of section 3.\n\nIf something is using action\u003dmobileview to get Section 2 or Section 3 without having Section 1 on the page, that HTML needs to contain the \"content of foo\" bit or it won\u0027t render correctly.\n\n$seen here is making sure that Section 3 will wind up with only one copy of \"content of foo\" rather than three.",
+      "parentUuid": "4e506ba4_c5f605d4",
       "revId": "ff61220916353613df4aff07e4e451dfd625749d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
