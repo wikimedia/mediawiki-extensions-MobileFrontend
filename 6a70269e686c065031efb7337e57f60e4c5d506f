@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_325fdb14",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-20T20:32:01Z",
+      "side": 1,
+      "message": "@krinkle I tried the replaceWith solution here: https://gerrit.wikimedia.org/r/#/c/349131/1\n\nI ran the animation by Nirzar. He says the animation is slightly different but it\u0027s acceptable so it\u0027s definitely something we can consider.\n\n@bmansurov I\u0027d rather not add css in JavaScript or interfere with the existing inline styles of the placeholder (which were originally on the image). I only wipe out width and height as I am knowingly copying them across to the image.\n\nI\u0027d rather not do this at all tbh.",
+      "parentUuid": "4e506ba4_b21c4b6b",
+      "range": {
+        "startLine": 239,
+        "startChar": 6,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_7711d55e",
         "filename": "resources/skins.minerva.content.styles/images.less",
         "patchSetId": 5
@@ -108,6 +132,24 @@
       "writtenOn": "2017-04-20T19:51:24Z",
       "side": 1,
       "message": "Why is this rule needed when the image can be only stretched to the width of the placeholder, which can only stretch as far as it\u0027s container\u0027s width since you\u0027re removing the placeholder width and height in https://gerrit.wikimedia.org/r/#/c/349107/5/resources/mobile.startup/Skin.js\n\nI can see the problem doesn\u0027t happen without this rule too.",
+      "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_5212a702",
+        "filename": "resources/skins.minerva.content.styles/images.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-20T20:32:01Z",
+      "side": 1,
+      "message": "The width and height only get removed when the image is loaded.\nThis is for images that have not been loaded.",
+      "parentUuid": "4e506ba4_7711d55e",
       "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
