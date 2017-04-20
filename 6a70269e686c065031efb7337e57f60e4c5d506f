@@ -46,6 +46,30 @@
       "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_d7830956",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-20T18:16:37Z",
+      "side": 1,
+      "message": "I avoiding using attr(\u0027style\u0027) as we currently don\u0027t copy the style attribute to the downloaded image. We only copy width/height so I was a little hesitant.\n\nBy animate do you mean jQuery\u0027s animate method?",
+      "parentUuid": "4e506ba4_4df9b449",
+      "range": {
+        "startLine": 239,
+        "startChar": 6,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
