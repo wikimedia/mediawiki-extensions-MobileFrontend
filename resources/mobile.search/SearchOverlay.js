@@ -6,9 +6,9 @@
 		Icon = M.require( 'mobile.startup/Icon' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
+		SEARCH_SPINNER_DELAY = 2000,
 		$html = $( 'html' ),
-		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
-		isBeta = M.require( 'mobile.startup/context' ).isBetaGroupMember();
+		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 
 	/**
 	 * Overlay displaying search results
@@ -89,8 +89,7 @@
 					href: feedbackLink
 				} ).options,
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
-			},
-			isBeta: isBeta
+			}
 		} ),
 		/**
 		 * @inheritdoc
@@ -261,30 +260,17 @@
 				clearTimeout( timer );
 			}
 
-			if ( isBeta ) {
-				// Show a spinner on top of search results
-				this.$spinner = this.$( '.spinner-container' );
-				M.on( 'search-start', function ( searchData ) {
-					if ( timer ) {
-						clearSearch();
-					}
-					timer = setTimeout( function () {
-						self.$spinner.show();
-					}, 2000 - searchData.delay );
-				} );
-				M.on( 'search-results', clearSearch );
-			} else {
-				// Show a spinner in place search results
-				this.$spinner = this.$( '.spinner' );
-				M.on( 'search-start', function () {
-					self.resetSearch();
+			// Show a spinner on top of search results
+			this.$spinner = this.$( '.spinner-container' );
+			M.on( 'search-start', function ( searchData ) {
+				if ( timer ) {
+					clearSearch();
+				}
+				timer = setTimeout( function () {
 					self.$spinner.show();
-				} );
-				M.on( 'search-results', function () {
-					self.$searchFeedback.show();
-					self.$spinner.hide();
-				} );
-			}
+				}, SEARCH_SPINNER_DELAY - searchData.delay );
+			} );
+			M.on( 'search-results', clearSearch );
 
 			// Hide the clear button if the search input is empty
 			if ( self.$input.val() === '' ) {
