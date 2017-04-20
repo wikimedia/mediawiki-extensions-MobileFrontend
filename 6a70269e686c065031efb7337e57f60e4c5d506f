@@ -22,6 +22,30 @@
       "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_4df9b449",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-20T01:02:15Z",
+      "side": 1,
+      "message": "Looking at open tasks about lazy loading, replaceWith() would likely solve 5 of 6.",
+      "parentUuid": "4e506ba4_cde4e4a5",
+      "range": {
+        "startLine": 239,
+        "startChar": 6,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
