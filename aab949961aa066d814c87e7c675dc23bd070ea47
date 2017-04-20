@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_66584d5a",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-20T13:55:58Z",
+      "side": 1,
+      "message": "Might be a nice opportunity to make this a module-level constant.",
+      "range": {
+        "startLine": 270,
+        "startChar": 7,
+        "endLine": 270,
+        "endChar": 11
+      },
+      "revId": "aab949961aa066d814c87e7c675dc23bd070ea47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
