@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_cde4e4a5",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-20T01:01:17Z",
+      "side": 1,
+      "message": "attr(\u0027style\u0027, \u0027\u0027) or removeAttr(\u0027style\u0027) might be cleaner and performs better.\n\nAlternatively, we should consider simply doing $placeholder.replaceWith($downloadingImage) so that the DOM matches the non-lazyload use case exactly. However for that to work, transitions need to be converted to use animations and need to be changed to start immediately racing with load instead of merely starting after the load - this would imho improve perceptual performance overall. E.g. fade of 200ms is fine if it loaded pretty quickly, but if it takes 3 seconds to load, having the browser render that progressively in the open is probably better to showing a blank canvas for three seconds and then fading in.\n\nTriggering the transition directly or using an animation achieves that, e.g. duration 200ms + delay of X starting immediately at load start.",
+      "range": {
+        "startLine": 239,
+        "startChar": 6,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "6a70269e686c065031efb7337e57f60e4c5d506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
