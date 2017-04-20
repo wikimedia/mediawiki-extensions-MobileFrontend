@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_b2a9abde",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-04-20T20:11:04Z",
+      "side": 1,
+      "message": "Where are you deploying?\n\nYou also seem to be doing other changes not related to promoting the feature to stable. Why not document those here?",
+      "revId": "4bf3c29a8e9123bf8ddc58b83146b767d615218f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
