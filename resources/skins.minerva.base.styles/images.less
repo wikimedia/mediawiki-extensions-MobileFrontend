@@ -10,7 +10,7 @@
 	// and https://phabricator.wikimedia.org/T144567
 	li &,
 	span & {
-		display: inline;
+		display: inline-block;
 	}
 
 	// The image placeholder for shouldn't show for no-js devices
@@ -23,24 +23,12 @@
 	// In order to avoid reflows placeholder needs to be block, or
 	// inline-block+overflow:hidden given it is nested inside an inline <a>
 	display: block;
+}
 
-	// When inserted, don't show the image because we want to animate it
-	img {
-		opacity: 0;
-	}
-
-	// When the image has loaded transition background color and image opacity
-	// for a fade-in effect
-	&.loaded {
-		.animation( fadeOutContainer @animationDuration ease-in );
-		background-color: transparent;
-		border: 0;
-
-		img {
-			.animation( fadeInImage @animationDuration ease-in );
-			opacity: 1;
-		}
-	}
+// When the image has loaded transition background color and image opacity
+// for a fade-in effect
+img.image-lazy-loaded {
+	.animation( fadeInImage @animationDuration ease-in );
 }
 
 @-webkit-keyframes fadeInImage {
@@ -58,23 +46,5 @@
 	}
 	to {
 		opacity: 1;
-	}
-}
-
-@-webkit-keyframes fadeOutContainer {
-	from {
-		background-color: @placeholderBackgroundColor;
-	}
-	to {
-		background-color: transparent;
-	}
-}
-
-@keyframes fadeOutContainer {
-	from {
-		background-color: @placeholderBackgroundColor;
-	}
-	to {
-		background-color: transparent;
 	}
 }

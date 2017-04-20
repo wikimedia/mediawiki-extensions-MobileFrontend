@@ -230,10 +230,8 @@
 			$downloadingImage.on( 'load', function () {
 				// Swap the HTML inside the placeholder (to keep the layout and
 				// dimensions the same and not trigger layouts
-				$placeholder.empty().append( $downloadingImage );
-				// Set the loaded class after insertion of the HTML to trigger the
-				// animations.
-				$placeholder.addClass( 'loaded' );
+				$downloadingImage.addClass( 'image-lazy-loaded' );
+				$placeholder.replaceWith( $downloadingImage );
 			} );
 
 			// Trigger image download after binding the load handler
@@ -243,6 +241,7 @@
 				height: height,
 				src: $placeholder.attr( 'data-src' ),
 				alt: $placeholder.attr( 'data-alt' ),
+				style: $placeholder.attr( 'style' ),
 				srcset: $placeholder.attr( 'data-srcset' )
 			} );
 		},
