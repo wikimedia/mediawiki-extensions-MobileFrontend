@@ -338,11 +338,6 @@ input.search {
 .notification-count {
 	@circleSize: 24px;
 	@borderSize: 2px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	margin: auto;
 	height: @circleSize;
 	background: @notificationBackgroundRead;
@@ -395,6 +390,10 @@ input.search {
 		height: 2em;
 		line-height: 2em;
 		font-size: 0.7em;
+	}
+
+	&:hover {
+		text-decoration: none;
 	}
 }
 

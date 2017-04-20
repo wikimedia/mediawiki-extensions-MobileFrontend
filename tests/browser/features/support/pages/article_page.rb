@@ -78,7 +78,7 @@ class ArticlePage
     page.search_overlay_page_list_element.element.h3
   end
 
-  a(:notifications_button, id: 'secondary-button', class: 'user-button')
+  a(:notifications_button, css: '.user-button')
   div(:notifications_overlay, class: 'notifications-overlay')
   button(:notifications_overlay_close_button) do |page|
     page.notifications_overlay_element.button_element(class: 'cancel')

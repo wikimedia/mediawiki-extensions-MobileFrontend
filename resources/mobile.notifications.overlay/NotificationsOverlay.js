@@ -171,14 +171,14 @@
 			var $badgeCounter = this.$badge.find( '.notification-count' );
 			this.count = this.controller.manager.getUnreadCounter().getCappedNotificationCount( count );
 
-			if ( this.count > 0 ) {
+			if ( this.count >= 0 ) {
 				$badgeCounter.find( 'span' ).text(
 					mw.msg( 'echo-badge-count', mw.language.convertNumber( this.count ) )
 				).show();
-			} else {
-				$badgeCounter.hide();
 			}
-
+			if ( this.count === 0 ) {
+				$badgeCounter.removeClass( 'notification-unseen' );
+			}
 			this.checkShowMarkAllRead();
 		},
 		/**
