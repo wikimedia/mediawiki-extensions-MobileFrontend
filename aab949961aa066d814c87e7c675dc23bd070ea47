@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4e506ba4_9cc4c895",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-20T16:37:30Z",
+      "side": 1,
+      "message": "The template in previous incarnation had both a spinner and a spinner wrapped in a container, presumably because the container was needed for the new design (I\u0027m guessing to render it as a block element)\n\nApparently I forgot to migrate the new styles.\nIt also looks like this has been broken in beta as well for some time HAH! :)",
+      "parentUuid": "4e506ba4_e1d0c7ce",
+      "range": {
+        "startLine": 263,
+        "startChar": 3,
+        "endLine": 263,
+        "endChar": 50
+      },
+      "revId": "aab949961aa066d814c87e7c675dc23bd070ea47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_66584d5a",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2017-04-20T13:55:58Z",
       "side": 1,
       "message": "Might be a nice opportunity to make this a module-level constant.",
+      "range": {
+        "startLine": 270,
+        "startChar": 7,
+        "endLine": 270,
+        "endChar": 11
+      },
+      "revId": "aab949961aa066d814c87e7c675dc23bd070ea47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_3c957489",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-20T16:37:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e506ba4_66584d5a",
       "range": {
         "startLine": 270,
         "startChar": 7,
