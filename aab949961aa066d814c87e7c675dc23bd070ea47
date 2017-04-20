@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e506ba4_e1d0c7ce",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-04-20T15:56:03Z",
+      "side": 1,
+      "message": ".search-overlay.spinner has the display: none; rule so the spinner never shows up. Previously this selector was .spinner, why was it changed?",
+      "range": {
+        "startLine": 263,
+        "startChar": 3,
+        "endLine": 263,
+        "endChar": 50
+      },
+      "revId": "aab949961aa066d814c87e7c675dc23bd070ea47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_66584d5a",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 2
