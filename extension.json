@@ -1481,12 +1481,12 @@
 				"resources/skins.minerva.editor/init.js"
 			]
 		},
-		"skins.minerva.fallbackeditor": {
+		"mobile.fallbackeditor.styles": {
 			"targets": [
 				"mobile"
 			],
 			"styles": [
-				"resources/skins.minerva.fallbackeditor/fallbackeditor.less"
+				"resources/mobile.fallbackeditor.styles/fallbackeditor.less"
 			]
 		},
 		"skins.minerva.backtotop": {
