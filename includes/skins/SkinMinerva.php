@@ -323,13 +323,12 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		$styles = [ 'mobile.usermodule.styles' ];
+		$styles = [];
 		if ( $this->getSkinOption( self::OPTION_PRINT_STYLES ) ) {
 			$styles[] = 'skins.minerva.print.styles';
 		}
 
 		$out->addModuleStyles( $styles );
-		$out->addModuleScripts( 'mobile.usermodule' );
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
