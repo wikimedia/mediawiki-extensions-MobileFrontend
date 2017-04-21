@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_fbcdcf88",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-21T03:02:23Z",
+      "side": 1,
+      "message": "This is no longer used now.",
+      "range": {
+        "startLine": 237,
+        "startChar": 4,
+        "endLine": 237,
+        "endChar": 38
+      },
+      "revId": "0737ec068fe5f83d51ec3d65afec9d56c1144157",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
