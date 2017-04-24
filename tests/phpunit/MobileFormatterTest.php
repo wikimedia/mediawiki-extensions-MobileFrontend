@@ -72,8 +72,28 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
 		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages,
 			$showFirstParagraphBeforeInfobox );
+
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
+	}
+
+	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
+		$smallPic =  '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
+		$enableSections = function ( MobileFormatter $mf ) {
+			$mf->enableExpandableSections();
+		};
+		$this->setMwGlobals( [
+			'wgMFLazyLoadSkipSmallImages' => true
+		] );
+
+		$this->testHtmlTransform(
+			'<p>text</p><h2>heading 1</h2>' . $smallPic,
+			$this->makeSectionHtml( 0, '<p>text</p>' )
+			. $this->makeSectionHeading( 'h2', 'heading 1' )
+			. $this->makeSectionHtml( 1, $smallPic ),
+			$enableSections,
+			false, false, true
+		);
 	}
 
 	public function provideHtmlTransform() {
@@ -88,14 +108,15 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$f->setIsMainPage( true );
 		};
 		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
-		$imageStyles = '<img src="math.jpg" style="vertical-align: -3.505ex; '
-			. 'width: 24.412ex; height:7.343ex; background:none;">';
+		$lazyLoadedImageStyles = '<img src="bigPicture.jpg" style="vertical-align: -3.505ex; '
+			. 'width: 84.412ex; height:70.343ex; background:none;">';
+
 		$placeholderStyles = '<span class="lazy-image-placeholder" '
-			. 'style="width: 24.412ex;height: 7.343ex;" '
-			. 'data-src="math.jpg">'
+			. 'style="width: 84.412ex;height: 70.343ex;" '
+			. 'data-src="bigPicture.jpg">'
 			. ' '
 			. '</span>';
-		$noscriptStyles = '<noscript>' . $imageStyles . '</noscript>';
+		$noscriptStyles = '<noscript>' . $lazyLoadedImageStyles . '</noscript>';
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -157,7 +178,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			],
 			// Test lazy loading of images with style attributes
 			[
-				'<p>text</p><h2>heading 1</h2><p>text</p>' . $imageStyles
+				'<p>text</p><h2>heading 1</h2><p>text</p>' . $lazyLoadedImageStyles
 					. '<h2>heading 2</h2>abc',
 				$this->makeSectionHtml( 0, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
@@ -793,6 +814,34 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'',
 				''
 			]
+		];
+	}
+
+	/**
+	 * @dataProvider provideIsDimensionSmallerThanThreshold
+	 * @covers MobileFormatter::isDimensionSmallerThanThreshold
+	 */
+	public function testIsDimensionSmallerThanThreshold( $dimension, $expected ) {
+		$mf = new MobileFormatter( '', Title::newFromText( 'Test' ) );
+		$this->assertEquals( $expected, $mf->isDimensionSmallerThanThreshold( $dimension ) );
+	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T162623
+	 */
+	public function provideIsDimensionSmallerThanThreshold() {
+		return [
+			[ '40px', true ],
+			[ '50px', true ],
+			[ '57px', false ],
+			[ '100ox', false ],
+			[ '10', false ],
+			[ '5.12ex', true ],
+			[ '9.89ex', true ],
+			[ '15.1ex', false ],
+			[ '10in', false ],
+			[ 'big', false ],
+			[ '', false ]
 		];
 	}
 
