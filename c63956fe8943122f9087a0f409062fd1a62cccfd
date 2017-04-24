@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_ff1da514",
+        "filename": "includes/LiveWikipediaContentFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-24T22:06:51Z",
+      "side": 1,
+      "message": "Rename to MwApiMobileFormatter",
+      "revId": "c63956fe8943122f9087a0f409062fd1a62cccfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_1f197127",
+        "filename": "includes/LiveWikipediaContentFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-24T22:06:51Z",
+      "side": 1,
+      "message": "Make configurable",
+      "revId": "c63956fe8943122f9087a0f409062fd1a62cccfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
