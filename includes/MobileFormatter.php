@@ -185,8 +185,8 @@ class MobileFormatter extends HtmlFormatter {
 		// Sectionify the content and transform it if necessary per section
 		if ( !$this->mainPage && $this->expandableSections ) {
 			list( $headings, $subheadings ) = $this->getHeadings( $doc );
-			$this->makeSections( $doc, $headings, $transformOptions );
 			$this->makeHeadingsEditable( $subheadings );
+			$this->makeSections( $doc, $headings, $transformOptions );
 		} else {
 			// Otherwise apply the per-section transformations to the document as a whole
 			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
@@ -746,7 +746,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected function makeHeadingsEditable( array $headings ) {
 		foreach ( $headings as $heading ) {
 			$class = $heading->getAttribute( 'class' );
-
 			if ( strpos( $class, 'in-block' ) === false ) {
 				$heading->setAttribute(
 					'class',
