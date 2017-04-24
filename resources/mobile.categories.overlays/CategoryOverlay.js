@@ -100,7 +100,7 @@
 							page.categories.forEach( function ( category ) {
 								var title = mw.Title.newFromText( category.title, category.ns );
 
-								if ( category.hidden !== undefined ) {
+								if ( category.hidden ) {
 									$hiddenCatlist.append( self.templatePartials.item.render( {
 										url: title.getUrl(),
 										title: title.getNameText()

@@ -63,6 +63,20 @@ This page is used by Selenium to test geo related features.
   end
 end
 
+Given(/^I am in a wiki that has categories$/) do
+  msg = 'This page is used by Selenium to test category related features.'
+  wikitext = msg + '
+
+[[Category:Test category]]
+[[Category:Selenium artifacts]]
+[[Category:Selenium hidden category]]'
+
+  api.create_page 'Category:Selenium artifacts', msg
+  api.create_page 'Category:Test category', msg
+  api.create_page 'Category:Selenium hidden category', '__HIDDENCAT__' + msg
+  api.create_page 'Selenium categories test page', wikitext
+end
+
 Given(/^I go to a page that has languages$/) do
   wikitext = 'This page is used by Selenium to test language related features.
 
