@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_c453406d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-24T20:51:58Z",
+      "side": 1,
+      "message": "@krinkle If we do this automatically, we have an img tag not a placeholder.. so we cannot set the gray background color we need to fade in from (your codepen uses divs which thus avoids this problem)",
+      "revId": "1011b9383db39b57cf81e8ea5ce6c6dbe5d8bdc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
