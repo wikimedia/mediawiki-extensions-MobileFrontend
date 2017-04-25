@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_f1ecf9f3",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-25T03:01:36Z",
+      "side": 1,
+      "message": "I don\u0027t know what reflow bug this is describing, but I can\u0027t imagine any scenario in which \u003cspan\u003e with display: block; for image placeholder will go well, it should definitely be inline-block. Otherwise it will always take up the full line (as any block element would) instead of allowing text before and after.\n\nI guess this usually goes unnoticed, not because it\u0027s inside \u003ca\u003e, but because most images are floated left or right.\n\nWhen they are inline, the problem becomes obvious. \"Text text \u003cimg width\u003d100 height\u003d100/\u003e  text text\" produces one line. Whereas Text text \u003cdiv style\u003d\"width: 100px; height: 100px\"\u003e\u003c/div\u003e  text text\" will produce 3 lines.\n\nThis problem is also visible in the screenshot from https://phabricator.wikimedia.org/T159100#3208520. It is now less visible after this patch on fast connections because the placeholder goes away (thus causing a reflow, and then after that the layout will naturally be correct). But it will still be rendered incorrectly while loading and while off-screen, which is wasteful and will cause FOUC / visible reflows.",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 25,
+        "endChar": 16
+      },
+      "revId": "a1838d7574d5ec9b4ce1d96f5d3fbee8ddd68f96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
