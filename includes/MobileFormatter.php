@@ -226,6 +226,9 @@ class MobileFormatter extends HtmlFormatter {
 	 *   - the paragraph contains text content, e.g. no <p></p>;
 	 *   - the paragraph doesn't contain coordinates, i.e. span#coordinates.
 	 *
+	 * Additionally if paragraph immediate sibling is a list (ol or ul element), the list
+	 * is also moved along with paragraph above infobox.
+	 *
 	 * Note that the first paragraph is not moved before hatnotes, or mbox or other
 	 * elements that are not infoboxes.
 	 *
@@ -253,7 +256,21 @@ class MobileFormatter extends HtmlFormatter {
 				}
 			}
 			if ( $firstP ) {
-				$leadSectionBody->insertBefore( $firstP, $infoboxAndParagraphs->item( 0 ) );
+				$listElementAfterParagraph = null;
+				$where = $infoboxAndParagraphs->item( 0 );
+
+				$elementAfterParagraphQuery = $xPath->query( 'following-sibling::*[1]', $firstP );
+				if ( $elementAfterParagraphQuery->length > 0 ) {
+					$elem = $elementAfterParagraphQuery->item( 0 );
+					if ( $elem->tagName === 'ol' || $elem->tagName === 'ul' ) {
+						$listElementAfterParagraph = $elem;
+					}
+				}
+
+				$leadSectionBody->insertBefore( $firstP, $where );
+				if ( $listElementAfterParagraph !== null ) {
+					$leadSectionBody->insertBefore( $listElementAfterParagraph, $where );
+				}
 			}
 		}
 		/**
