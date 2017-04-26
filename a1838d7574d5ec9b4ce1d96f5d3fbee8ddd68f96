@@ -22,6 +22,30 @@
       "revId": "a1838d7574d5ec9b4ce1d96f5d3fbee8ddd68f96",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_fa59a005",
+        "filename": "resources/skins.minerva.base.styles/images.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-26T22:34:06Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/350496 Placeholders should not be block    \n\nFeel free to +2!",
+      "parentUuid": "4e506ba4_f1ecf9f3",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 25,
+        "endChar": 16
+      },
+      "revId": "a1838d7574d5ec9b4ce1d96f5d3fbee8ddd68f96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
