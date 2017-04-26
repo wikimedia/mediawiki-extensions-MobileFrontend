@@ -583,7 +583,20 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 				$enableSections, false, false, false, true,
 			],
+			[
+				// infobox, a paragraph, list element
+				// @see https://phabricator.wikimedia.org/T149852
+				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
+				'<p>paragraph</p>' .
+				'<ol><li>item 1</li><li>item 2</li></ol>',
 
+				$this->makeSectionHtml(
+					0,
+					'<p>paragraph</p><ol><li>item 1</li><li>item 2</li></ol>' .
+					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
+				),
+				$enableSections, false, false, false, true,
+			],
 			[
 				// 2 hat-notes, ambox, 2 infoboxes, 2 paragraphs, another section
 				'<div class="' . self::HATNOTE_CLASSNAME . '">hatnote</div>' .
@@ -593,6 +606,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
 				'<p>paragraph 1</p>' .
 				'<p>paragraph 2</p>' .
+				'<ul><li>item</li></ul>'.
 				'<h2>Heading 1</h2>' .
 				'<p>paragraph 3</p>',
 
@@ -604,7 +618,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 1</p>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 1</td></tr></table>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
-					'<p>paragraph 2</p>'
+					'<p>paragraph 2</p><ul><li>item</li></ul>'
 				) .
 				$this->makeSectionHeading( 'h2', 'Heading 1' ) .
 				$this->makeSectionHtml(
