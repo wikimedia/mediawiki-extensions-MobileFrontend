@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_0728b931",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-26T20:52:54Z",
+      "side": 1,
+      "message": "I wondered whether we should add dl here.. but I decided it was probably best to wait to find an example in the wild before making that call.",
+      "revId": "6515c3ba1529c843d6e49f466911eec001e305bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
