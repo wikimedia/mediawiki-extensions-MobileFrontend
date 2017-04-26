@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_64073b20",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 24
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-26T20:00:05Z",
+      "side": 0,
+      "message": "Unnecessary change",
+      "revId": "d9e11934eaa9dba13a5b8a54abbe366d0f68185f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

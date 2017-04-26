@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_a70c653e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 1084,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-26T20:00:05Z",
+      "side": 1,
+      "message": "I\u0027ve fixed the whitespace here to make the diff more readable.",
+      "revId": "6865f4d35f0d548b101d07af9f1e51397f9fd657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
