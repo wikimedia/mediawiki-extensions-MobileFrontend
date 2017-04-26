@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_67441d4b",
+        "filename": "resources/skins.minerva.notifications.filter/init.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-26T20:00:30Z",
+      "side": 1,
+      "message": "This file duplicates a lot of functionality inside skins.minerva.notifications (much of it appears to be a copy and paste)\nIt\u0027s also very hard to see what need code you\u0027ve added.\n\nWhy not move the new bits of code into skins.minerva.notifications instead?",
+      "revId": "cc3e720b63d5ecb718c7b25819fa49bac73d5c31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
