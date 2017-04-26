@@ -20,9 +20,11 @@
 
 	background-color: @placeholderBackgroundColor;
 
-	// In order to avoid reflows placeholder needs to be block, or
-	// inline-block+overflow:hidden given it is nested inside an inline <a>
-	display: block;
+	// In order to avoid reflows placeholder needs to be inline-block
+	// Otherwise display block will always take up the full line
+	// instead of allowing text before and after
+	// see T146298
+	display: inline-block;
 }
 
 // When the image has loaded transition background color and image opacity
