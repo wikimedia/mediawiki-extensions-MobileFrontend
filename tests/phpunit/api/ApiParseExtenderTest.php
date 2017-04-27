@@ -27,7 +27,7 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 	}
 
 	private function doTest( array $params, $expected ) {
-		$params += [ 'action' => 'parse' ];
+		$params += [ 'action' => 'parse', 'wrapoutputclass' => '' ];
 		$req = new FauxRequest( $params );
 		$api = new ApiMain( $req );
 		$api->execute();

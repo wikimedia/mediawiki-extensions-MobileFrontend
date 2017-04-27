@@ -32,7 +32,12 @@ class MockApiMobileView extends ApiMobileView {
 	}
 
 	protected function makeParserOptions( WikiPage $wp ) {
-		return new ParserOptions( $this->getUser() );
+		$popt = new ParserOptions( $this->getUser() );
+		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) ) {
+			// Let the client handle it.
+			$popt->setWrapOutputClass( false );
+		}
+		return $popt;
 	}
 
 	public function getAllowedParams() {

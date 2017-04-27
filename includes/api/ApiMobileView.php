@@ -465,7 +465,12 @@ class ApiMobileView extends ApiBase {
 	 * @return ParserOptions
 	 */
 	protected function makeParserOptions( WikiPage $wp ) {
-		return $wp->makeParserOptions( $this );
+		$popt = $wp->makeParserOptions( $this );
+		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) ) {
+			// Let the client handle it.
+			$popt->setWrapOutputClass( false );
+		}
+		return $popt;
 	}
 
 	/**
