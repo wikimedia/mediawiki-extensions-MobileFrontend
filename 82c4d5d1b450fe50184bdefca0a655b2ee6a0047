@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_19cd6c34",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-28T20:23:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_f96e8029",
+      "revId": "82c4d5d1b450fe50184bdefca0a655b2ee6a0047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_195ecc7b",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_59c3f40a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-28T20:23:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_195ecc7b",
+      "revId": "82c4d5d1b450fe50184bdefca0a655b2ee6a0047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_d92aa4d7",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2017-04-28T20:18:46Z",
       "side": 1,
       "message": "it\u0027s not a mobile-frontend, maybe we should change the msg identifier?",
+      "revId": "82c4d5d1b450fe50184bdefca0a655b2ee6a0047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_9952dc69",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-28T20:23:08Z",
+      "side": 1,
+      "message": "This is on my todo list. The problem with renaming message identifiers is you lose all existing translations.\n\nWe\u0027re going to have to work out how to change the message prefixes before doing the switchover.",
+      "parentUuid": "2e4df70f_d92aa4d7",
       "revId": "82c4d5d1b450fe50184bdefca0a655b2ee6a0047",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
