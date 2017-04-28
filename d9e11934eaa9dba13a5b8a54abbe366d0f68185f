@@ -16,6 +16,23 @@
       "revId": "d9e11934eaa9dba13a5b8a54abbe366d0f68185f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_f9cf6080",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 26
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-28T19:48:11Z",
+      "side": 0,
+      "message": "I\u0027ve removed this unrelated change from the commit.",
+      "revId": "d9e11934eaa9dba13a5b8a54abbe366d0f68185f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
