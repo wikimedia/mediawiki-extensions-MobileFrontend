@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_cf6e5693",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1361,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-04-28T23:54:18Z",
+      "side": 1,
+      "message": "Hey @krinkle\n\nAny idea why wfLoadSkin doesn\u0027t work here?\n\nI was hoping to accelerate making Minerva an official skin by making it a submodule of MobileFrontend.\n\nI\u0027d obviously need to setup i18n for Minerva before doing this officially, but this seems to be my main blocker now..",
+      "revId": "c4b70f51471db032a6751ea907e0b8f6f6f617b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
