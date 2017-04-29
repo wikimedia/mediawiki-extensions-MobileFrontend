@@ -16,6 +16,24 @@
       "revId": "c4b70f51471db032a6751ea907e0b8f6f6f617b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_4fa566b0",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1361,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-29T01:30:12Z",
+      "side": 1,
+      "message": "Define \"doesn\u0027t work\". I assume you\u0027re not getting an uncaught PHP exception from this exact line.\n\nHowever looking a bit further, one thing that comes to mind is that while this function takes a custom path, skin.json itself is not aware of that. It uses \"remoteSkinPath\": \"MinervaNeue\" which will map to \"$wgStyleDirectory/MinervaNeue\" which presumably doesn\u0027t exist (where $wgStyleDirectory\u003d$IP/skins).\n\nI don\u0027t think doing this will accelerate anything. Rather, a submodule will likely incur more technical debt for no added value in the meantime.\n\nWhat\u0027s wrong with just creating a new skin repo and having it be part of the release cycle?\n\nIf you want to practice isolation, I\u0027d just move it to a directory here in the extension, move some files around and enforce socially that it doesn\u0027t use any methods, classes or variables from MobileFrontend.\n\nThen create an empty mediawiki/skins/MinervaNeueu repo, have it be deployed in beta and wmf, have MF Jenkins jobs depend on it, and then moving code to it and use it from there instead or whatever you have in mind.",
+      "parentUuid": "2e4df70f_cf6e5693",
+      "revId": "c4b70f51471db032a6751ea907e0b8f6f6f617b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
