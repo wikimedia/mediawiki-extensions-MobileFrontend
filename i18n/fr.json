@@ -347,5 +347,6 @@
 	"mobile-frontend-panel-cancel": "Non merci",
 	"mobile-frontend-panel-betaoptin-msg": "Voulez-vous essayer quelques nouvelles fonctionnalités ? En adhérant à la bêta, vous aurez accès à des fonctionnalités expérimentales, au risque de rencontrer des bogues et problèmes.",
 	"mobile-frontend-search-feedback-link-text": "Donnez-nous votre avis.",
-	"mobile-frontend-search-feedback-prompt": "Vous n’avez pas trouvé ce que vous cherchiez ?"
+	"mobile-frontend-search-feedback-prompt": "Vous n’avez pas trouvé ce que vous cherchiez ?",
+	"mobile-frontend-notifications-filter-title": "Filtrer les notifications"
 }

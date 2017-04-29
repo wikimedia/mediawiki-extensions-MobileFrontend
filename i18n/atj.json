@@ -21,6 +21,7 @@
 	"mobile-frontend-main-menu-nearby": "Nepemictew",
 	"mobile-frontend-main-menu-settings": "Ke actain",
 	"mobile-frontend-main-menu-watchlist": "Ka masinateki",
+	"mobile-frontend-main-menu-contributions": "Witcihewin",
 	"mobile-frontend-news-items": "Tipatcimowina",
 	"mobile-frontend-placeholder": "Nantokiskeritcikatek {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Nitcictaman",
@@ -32,6 +33,7 @@
 	"mobile-frontend-watchlist-filter-articles": "Masinahikana",
 	"mobile-frontend-watchlist-filter-talk": "Ka ici arimowaniok",
 	"mobile-frontend-user-page-talk": "Ka ici arimowaniok",
+	"mobile-frontend-user-page-contributions": "Witcihewin",
 	"tag-mobile_edit": "Ke ki meckotciparik",
 	"tag-mobile_web_edit": "Meckotapihikan nte pamikicikwepitcikanicicik e ici mitcicihikatek",
 	"mobile-frontend-pageaction-edit-tooltip": "Meckotcika anihe ka kitcitik."
