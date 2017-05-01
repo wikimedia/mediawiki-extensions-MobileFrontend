@@ -16,7 +16,9 @@
 		// opts out of (since the styles are largely Vectorish).
 		// FIXME: Once Parser and Parsoid output are synchronized, we'll want to move these
 		// from here into the regular Minerva content styles.
-		figure[typeof*='mw:Image'] {
+		figure[typeof*='mw:Image'],
+		figure[typeof*='mw:Video'],
+		figure[typeof*='mw:Audio'] {
 			max-width: 100%;
 			background-color: transparent;
 			border: 0;
