@@ -39,6 +39,24 @@
       "revId": "528149b919214836fddaf76f3e2ec6c4cc79ca8a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_c8940790",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-05-01T23:29:44Z",
+      "side": 1,
+      "message": "Looks like this does in fact work",
+      "parentUuid": "2e4df70f_c847274f",
+      "revId": "528149b919214836fddaf76f3e2ec6c4cc79ca8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
