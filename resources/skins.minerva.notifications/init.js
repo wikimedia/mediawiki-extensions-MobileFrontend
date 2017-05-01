@@ -36,18 +36,20 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		var filterOverlayDeferred = $.Deferred(),
-			$notifReadState,
-			$crossWikiUnreadFilter,
-			filterStatusButton,
-			$readStateButton;
 
-		$btn.on( 'click', function () {
+		/**
+		 * Click event handler which opens the drawer and disables default link behaviour
+		 * @method
+		 * @ignore
+		 * @return {Boolean}
+		 */
+		function openNavigationDrawer() {
 			router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
 			return false;
-		} );
+		}
+		$btn.on( 'click', openNavigationDrawer );
 
 		/**
 		 * Load the notification overlay.
@@ -86,71 +88,58 @@
 			} );
 		} );
 
-		// This code will currently only be invoked on Special:Notifications
-		// The code is bundled here since it makes use of loadModuleScript. This also allows
-		// the possibility of invoking the filter from outside the Special page in future.
-		// Once the 'ext.echo.special.onInitialize' hook has fired, load notification filter.
-		mw.hook( 'ext.echo.special.onInitialize' ).add( function () {
-			overlayManager.add( /^\/notifications-filter$/, function () {
-				return filterOverlayDeferred.then( function ( overlay ) {
-					mainMenu.openNavigationDrawer( 'secondary' );
-					overlay.on( 'hide', function () {
-						mainMenu.closeNavigationDrawers();
-					} );
-					return overlay;
-				} );
-			} );
-
-			// The 'ext.echo.special.onInitialize' hook is fired whenever special page notification changes display on click of a filter.
-			// Hence the hook is restricted from firing more than once.
-			if ( initialized ) {
-				return;
-			}
-			$crossWikiUnreadFilter = $( '.mw-echo-ui-crossWikiUnreadFilterWidget' );
-			$notifReadState = $( '.mw-echo-ui-notificationsInboxWidget-main-toolbar-readState' );
-			$readStateButton = $notifReadState.find( '.oo-ui-buttonElement' );
-
-			// Load the notification filter overlay
-			loadModuleScript( 'mobile.notifications.filter.overlay' ).done( function () {
-				var NotificationsFilterOverlay = M.require( 'mobile.notifications.filter.overlay/NotificationsFilterOverlay' );
-				filterOverlayDeferred.resolve(
-					new NotificationsFilterOverlay( {
-						$notifReadState: $notifReadState,
-						$crossWikiUnreadFilter: $crossWikiUnreadFilter
-					} )
-				);
-			} );
-
-			$readStateButton.on( 'click', function () {
-				router.navigate( 'Special:Notifications' );
-				// Important that we also prevent propagation to avoid interference with events that may be
-				// binded on #mw-mf-page-center that close overlay
-				return false;
-			} );
-			$crossWikiUnreadFilter.on( 'click', '.oo-ui-optionWidget', function () {
-				router.navigate( 'Special:Notifications' );
-				// Important that we also prevent propagation to avoid interference with events that may be
-				// binded on #mw-mf-page-center that close overlay
-				return false;
-			} );
-
+		/**
+		 * Adds a filter button to the UI inside notificationsInboxWidget
+		 * @method
+		 * @ignore
+		 */
+		function addFilterButton() {
 			// Create filter button once the notifications overlay has been loaded
-			filterStatusButton = new OO.ui.ButtonWidget(
+			var filterStatusButton = new OO.ui.ButtonWidget(
 				{
+					href: '#/notifications-filter',
 					classes: [ 'mw-echo-ui-notificationsInboxWidget-main-toolbar-nav-filter-placeholder' ],
 					icon: 'funnel',
 					label: 'Filter'
 				} );
+
 			$( '.mw-echo-ui-notificationsInboxWidget-cell-placeholder' ).append(
 				$( '<div>' )
 					.addClass( 'mw-echo-ui-notificationsInboxWidget-main-toolbar-nav-filter' )
 					.addClass( 'mw-echo-ui-notificationsInboxWidget-cell' )
 					.append( filterStatusButton.$element )
 			);
+		}
 
-			filterStatusButton.$element.on( 'click', function () {
-				router.navigate( '#/notifications-filter' );
-				return false;
+		// This code will currently only be invoked on Special:Notifications
+		// The code is bundled here since it makes use of loadModuleScript. This also allows
+		// the possibility of invoking the filter from outside the Special page in future.
+		// Once the 'ext.echo.special.onInitialize' hook has fired, load notification filter.
+		mw.hook( 'ext.echo.special.onInitialize' ).add( function () {
+			// The 'ext.echo.special.onInitialize' hook is fired whenever special page notification changes display on click of a filter.
+			// Hence the hook is restricted from firing more than once.
+			if ( initialized ) {
+				return;
+			}
+
+			// Load the notification filter overlay
+			loadModuleScript( 'mobile.notifications.filter.overlay' ).done( function () {
+				var $crossWikiUnreadFilter = $( '.mw-echo-ui-crossWikiUnreadFilterWidget' ),
+					$notifReadState = $( '.mw-echo-ui-notificationsInboxWidget-main-toolbar-readState' ),
+					NotificationsFilterOverlay = M.require( 'mobile.notifications.filter.overlay/NotificationsFilterOverlay' );
+
+				// setup the filter button (now we have OOjs UI)
+				addFilterButton();
+
+				// setup route
+				overlayManager.add( /^\/notifications-filter$/, function () {
+					mainMenu.openNavigationDrawer( 'secondary' );
+					return new NotificationsFilterOverlay( {
+						$notifReadState: $notifReadState,
+						mainMenu: mainMenu,
+						$crossWikiUnreadFilter: $crossWikiUnreadFilter
+					} );
+				} );
 			} );
 			initialized = true;
 		} );
