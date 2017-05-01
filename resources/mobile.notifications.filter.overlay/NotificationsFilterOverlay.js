@@ -13,9 +13,21 @@
 	 *
 	 */
 	NotificationsFilterOverlay = function ( options ) {
+		var self = this;
 		Overlay.apply( this, options );
 
 		// Initialize
+		this.on( 'hide', function () {
+			options.mainMenu.closeNavigationDrawers();
+		} );
+		options.$crossWikiUnreadFilter.on( 'click', function () {
+			self.hide();
+		} );
+
+		options.$notifReadState.find( '.oo-ui-buttonElement' ).on( 'click', function () {
+			self.hide();
+		} );
+
 		this.$( '.overlay-content' ).append(
 			$( '<div>' )
 				.addClass( 'notifications-filter-overlay-read-state' )
