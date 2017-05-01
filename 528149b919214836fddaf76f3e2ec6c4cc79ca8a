@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_4853171b",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-05-01T23:17:50Z",
+      "side": 1,
+      "message": "It\u0027s wrong to call openNavigationDrawer here (and on the line below) because you need to navigate to Special:Notifications, not #/notifications. This is a trick to close the panel. As you pointed out IRL though, this is not a very good trick, because just about any string works.",
+      "range": {
+        "startLine": 134,
+        "startChar": 34,
+        "endLine": 134,
+        "endChar": 54
+      },
+      "revId": "528149b919214836fddaf76f3e2ec6c4cc79ca8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_c847274f",
+        "filename": "resources/skins.minerva.notifications/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-05-01T23:17:50Z",
+      "side": 1,
+      "message": "This potentially causes the overlayManager callback to be registered quite late; does this not break direct navigation to #/notifications-filter in the address bar?",
+      "revId": "528149b919214836fddaf76f3e2ec6c4cc79ca8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
