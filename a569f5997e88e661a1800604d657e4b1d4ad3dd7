@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_a8a6564e",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-02T19:23:40Z",
+      "side": 1,
+      "message": "Redundant since MediaWiki 1.22. Please omit from any new code to avoid introducing new risk factors.",
+      "range": {
+        "startLine": 41,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 14
+      },
+      "revId": "a569f5997e88e661a1800604d657e4b1d4ad3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
