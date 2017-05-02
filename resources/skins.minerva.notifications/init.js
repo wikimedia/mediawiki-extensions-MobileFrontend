@@ -19,18 +19,15 @@
 	 * @return {jQuery.Deferred}
 	 */
 	function loadModuleScript( moduleName ) {
-		var d = $.Deferred(),
-			$spinner = $( icons.spinner().toHtmlString() );
+		var $spinner = $( icons.spinner().toHtmlString() );
 
 		$btn.hide().after( $spinner );
-		mw.loader.using( moduleName, function () {
+		return mw.loader.using( moduleName ).then( function () {
 			// FIXME: Some code uses the loading class while other code uses the
 			// spinner class. Make all code consistent so it's easier to change.
 			$spinner.remove();
 			$btn.show();
-			d.resolve();
 		} );
-		return d;
 	}
 
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
