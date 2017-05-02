@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_4ee47fa3",
+        "filename": "includes/IContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "Don\u0027t constrain an implementation\u0027s constructor. Your only concern here is the method below.\n\nAn example of why this is an issue is evidenced by the differences between the DefaultContentProvider and the MwApiContentProvider constructors: the latter simply doesn\u0027t require access to the $out and $html parameters. Why must they be passed in?\n\nYou\u0027ll have to create a factory, sure, but your implementations are much more flexible.\n\n---\n\nAlso, you need to explain why these parameters are necessary.",
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_4e879fdc",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 62,
+        "startChar": 38,
+        "endLine": 62,
+        "endChar": 63
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_6e8cdbff",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "PHP probably won\u0027t complain about this but this isn\u0027t the same as the IContentProvider interface, which requires\n\n    $html \u003d \u0027\u0027",
+      "range": {
+        "startLine": 9,
+        "startChar": 72,
+        "endLine": 9,
+        "endChar": 84
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_ee78ebef",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "Remove this.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 75
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_2e56d35f",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "If this were true, then you could get rid of the awkward property access syntax below, i.e.\n\n    $parse \u003d $json-\u003e{\u0027parse\u0027};\n\nbecomes\n\n    $parse \u003d $json[ \u0027parse\u0027 ];",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_8e64c746",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-02T10:03:03Z",
+      "side": 1,
+      "message": "file_get_contents can return false.",
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
