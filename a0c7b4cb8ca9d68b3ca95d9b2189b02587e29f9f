@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_e880defb",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 924,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T18:02:57Z",
+      "side": 0,
+      "message": "Should be moved to \ntestLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped ?",
+      "revId": "a0c7b4cb8ca9d68b3ca95d9b2189b02587e29f9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
