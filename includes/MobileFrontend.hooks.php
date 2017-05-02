@@ -435,11 +435,6 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $context->imagesDisabled();
 		}
-		// add CodeMirror specific things, if it is installed (for CodeMirror editor)
-		if ( class_exists( 'CodeMirrorHooks' ) ) {
-			$vars += CodeMirrorHooks::getGlobalVariables( MobileContext::singleton() );
-			$vars['wgMFCodeMirror'] = true;
-		}
 
 		return true;
 	}
