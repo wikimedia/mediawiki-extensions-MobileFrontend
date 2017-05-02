@@ -225,6 +225,7 @@ class MobileFormatter extends HtmlFormatter {
 	 *     if any in the DOM;
 	 *   - the paragraph contains text content, e.g. no <p></p>;
 	 *   - the paragraph doesn't contain coordinates, i.e. span#coordinates.
+	 *   - article belongs to the MAIN namespace
 	 *
 	 * Additionally if paragraph immediate sibling is a list (ol or ul element), the list
 	 * is also moved along with paragraph above infobox.
@@ -236,6 +237,10 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param DOMDocument $doc Document to which the section belongs
 	 */
 	private function moveFirstParagraphBeforeInfobox( $leadSectionBody, $doc ) {
+		// Move lead parapgraph only on pages in MAIN namespace (see @T163805)
+		if ( $this->title->getNamespace() !== NS_MAIN ) {
+			return;
+		}
 		$xPath = new DOMXPath( $doc );
 		// Find infoboxes and paragraphs that have text content, i.e. paragraphs
 		// that are not empty nor are wrapper paragraphs that contain span#coordinates.
@@ -291,8 +296,8 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param DOMXPath $xPath
 	 */
 	private function logInfoboxesWrappedInContainers( $leadSectionBody, DOMXPath $xPath ) {
-		$infoboxes = $xPath->query( './*//table[contains(@class,"infobox")]', $leadSectionBody );
-
+		$infoboxes = $xPath->query( './*//table[contains(@class,"infobox")]' .
+			'[not(ancestor::table[contains(@class,"infobox")])]', $leadSectionBody );
 		if ( $infoboxes->length > 0 ) {
 			\MediaWiki\Logger\LoggerFactory::getInstance( 'mobile' )->info(
 				"Found infobox wrapped with container on {$this->title} (rev:{$this->revId})"
