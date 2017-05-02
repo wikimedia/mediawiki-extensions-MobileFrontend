@@ -22,6 +22,29 @@
       "revId": "a569f5997e88e661a1800604d657e4b1d4ad3dd7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_886cba06",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-02T19:25:23Z",
+      "side": 1,
+      "message": "Currently this calls the function immediately instead of when it resolves and adds its return value (undefined?) to the promise chain, which seems unintended :)",
+      "range": {
+        "startLine": 92,
+        "startChar": 10,
+        "endLine": 92,
+        "endChar": 33
+      },
+      "revId": "a569f5997e88e661a1800604d657e4b1d4ad3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
