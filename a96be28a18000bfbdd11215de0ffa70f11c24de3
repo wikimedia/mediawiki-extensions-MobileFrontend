@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_cb307cff",
+        "filename": "includes/IContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_4ee47fa3",
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_4e879fdc",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 7
@@ -30,6 +48,30 @@
       "writtenOn": "2017-05-02T10:03:03Z",
       "side": 1,
       "message": "?",
+      "range": {
+        "startLine": 62,
+        "startChar": 38,
+        "endLine": 62,
+        "endChar": 63
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_0b0e643e",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Not sure I follow question mark. newFromContext \n\nAs commit msg says:\nMoved various transformation setters/getters inside the\n    MobileFormatter::newFromContext method for readability\n\nThis is now an optional argument to the formatter.",
+      "parentUuid": "2e4df70f_4e879fdc",
       "range": {
         "startLine": 62,
         "startChar": 38,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_5efbc811",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_6e8cdbff",
+      "range": {
+        "startLine": 9,
+        "startChar": 72,
+        "endLine": 9,
+        "endChar": 84
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_ee78ebef",
         "filename": "includes/MwApiContentProvider.php",
         "patchSetId": 7
@@ -76,6 +142,30 @@
       "writtenOn": "2017-05-02T10:03:03Z",
       "side": 1,
       "message": "Remove this.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 75
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_cb071c1e",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_ee78ebef",
       "range": {
         "startLine": 11,
         "startChar": 0,
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_be168c4b",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Sure.. but how and why would I use `use_include_path` for an absolute URL ?",
+      "parentUuid": "2e4df70f_2e56d35f",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_8e64c746",
         "filename": "includes/MwApiContentProvider.php",
         "patchSetId": 7
@@ -122,6 +236,24 @@
       "writtenOn": "2017-05-02T10:03:03Z",
       "side": 1,
       "message": "file_get_contents can return false.",
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_5e22e8a3",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-02T20:51:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_8e64c746",
       "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
