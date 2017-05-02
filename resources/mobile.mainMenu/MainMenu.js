@@ -45,7 +45,7 @@
 			var d = $.Deferred(),
 				self = this;
 			if ( this._hasNewFeature ) {
-				throw 'A new feature is already being advertised.';
+				throw new Error( 'A new feature is already being advertised.' );
 			} else {
 				this._hasNewFeature = true;
 			}

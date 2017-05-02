@@ -68,7 +68,7 @@
 				if ( self.page.inNamespace( '' ) ) {
 					mw.loader.using( self.tabletModules ).always( function () {
 						self.off( '_resize' );
-						self.emit.call( self, 'changed' );
+						self.emit( 'changed' );
 					} );
 				}
 			}
