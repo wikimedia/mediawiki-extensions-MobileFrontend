@@ -238,5 +238,6 @@
 	"mobile-frontend-panel-ok": "OK",
 	"mobile-frontend-panel-cancel": "Nee, merci",
 	"mobile-frontend-search-feedback-link-text": "Gitt eis Äre Feedback.",
-	"mobile-frontend-search-feedback-prompt": "Hutt Dir dat net fonnt wat Dir gesicht hutt?"
+	"mobile-frontend-search-feedback-prompt": "Hutt Dir dat net fonnt wat Dir gesicht hutt?",
+	"mobile-frontend-notifications-filter-title": "Notifikatioune filteren"
 }

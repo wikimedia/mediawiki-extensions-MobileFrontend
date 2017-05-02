@@ -27,7 +27,8 @@
 			"KorkmazO",
 			"KediÇobanı",
 			"1917 Ekim Devrimi",
-			"Vito Genovese"
+			"Vito Genovese",
+			"Bulgu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -293,5 +294,6 @@
 	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/profile/67/",
 	"mobile-frontend-panel-ok": "Tamam",
 	"mobile-frontend-panel-cancel": "Hayır, teşekkürler",
-	"mobile-frontend-panel-betaoptin-msg": "Bazı yeni özellikleri denemek ister misiniz? Beta'ya katılarak, hatalar ve sorunlarla karşılaşmayı göze alarak deneysel özelliklere erişim sağlayabilirsiniz."
+	"mobile-frontend-panel-betaoptin-msg": "Bazı yeni özellikleri denemek ister misiniz? Beta'ya katılarak, hatalar ve sorunlarla karşılaşmayı göze alarak deneysel özelliklere erişim sağlayabilirsiniz.",
+	"mobile-frontend-notifications-filter-title": "Süzgeç bildirimleri"
 }

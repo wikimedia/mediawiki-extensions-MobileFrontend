@@ -261,7 +261,7 @@
 	"mobile-frontend-user-page-no-owner-page-yet": "Nie masz na razie strony użytkownika",
 	"mobile-frontend-user-page-no-page-yet": "Nie ma strony użytkownika $1",
 	"mobile-frontend-user-page-describe-yourself-editors": "edytorzy",
-	"mobile-frontend-user-page-desired-action": "Ta strona powinna być utworzona i edytowana $1",
+	"mobile-frontend-user-page-desired-action": "Ta strona powinna być utworzona i edytowana przez użytkownika $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Utwórz własną",
 	"mobile-frontend-user-page-create-user-page-link-label": "Tworzenie strony o nazwie $1",
 	"mobile.js": "/* Umieszczony tutaj kod JavaScript zostanie załadowany przez użytkowników korzystających z wersji mobilnej */",
