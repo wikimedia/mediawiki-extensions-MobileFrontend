@@ -70,6 +70,24 @@
       "revId": "c4b70f51471db032a6751ea907e0b8f6f6f617b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_17699e88",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1361,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-03T17:53:30Z",
+      "side": 1,
+      "message": "\u003e Ideally no renaming of classes unless it is intended that all existing references, sub classes, method calls,  hooks, permalinks, user preferences etc will break (e.g. renaming from minerva to minervaneue will break all these things).\n\nThis is the case. The only thing that is currently different is the name of the repo - https://gerrit.wikimedia.org/r/#/admin/projects/mediawiki/skins/MinervaNeue\nIt\u0027s on my todo list to rename that repo/create a new one. https://phabricator.wikimedia.org/T164408\n\n\u003eAs for how to move it out, I think it\u0027s best to just do it. Create the separate repo, add a run-time check here in MobileFrontend that Minerva must be installed (pretty straight forward).\n\nOkay. That sounds fine. I\u0027ll abandon this patch and work on the precursor.\n\n\u003e So I\u0027d make sure that the new skin has a page on mediawiki.org and a REL1_30 branch by the time the next release gets branched, and make sure that ExtensionDistributor supports it, similar to how it supports MF to be downloaded through it, and the run-time check with descriptive error message. Presumably from either an ExtensionRegistration callback, or from wgExtensionFunctions callback.\n\nYep all this is done on https://gerrit.wikimedia.org/r/347768",
+      "parentUuid": "2e4df70f_bc8534a1",
+      "revId": "c4b70f51471db032a6751ea907e0b8f6f6f617b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
