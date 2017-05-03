@@ -59,6 +59,13 @@ dl {
 	dt {
 		font-weight: bold;
 	}
+	dd {
+		display: block;
+		// Some dd's may contain images so these need to be scrollable
+		// Text will not become scrollable.
+		// (see T160946)
+		overflow: auto;
+	}
 }
 
 /* the following rule is completely copied from mediawiki.skinning.content[1], as
