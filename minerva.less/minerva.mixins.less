@@ -1,49 +1,14 @@
 @import 'mediawiki.mixins.less';
 @import 'mediawiki.mixins.animation.less';
 
-// Shorthand for background-image-svg in core
-.background-image-svg-quick( @url ) {
-	.background-image-svg( ~'@{url}.svg', ~'@{url}.png' );
-}
-
+// FIXME: This mixin should not be necessary and only exists because of
+// https://phabricator.wikimedia.org/T142532
+// Please do not use it.
 .m-background-image( @url ) {
 	&:after,
 	&:before {
 		.background-image( @url );
 	}
-}
-
-.m-background-image-svg( @svg, @fallback ) {
-	&:after,
-	&:before {
-		.background-image-svg( @svg, @fallback );
-	}
-}
-
-.m-background-image-svg-quick( @url ) {
-	.m-background-image-svg( ~'@{url}.svg', ~'@{url}.png' );
-}
-
-.transform( @transform ) {
-	-webkit-transform: @transform;
-	transform: @transform;
-}
-
-.transition( ... ) {
-	// avoid Webkit bugs
-	-webkit-backface-visibility: hidden;
-
-	-webkit-transition: @arguments;
-	transition: @arguments;
-}
-
-// can't use `.transition()` because WebKit requires `-webkit-` prefix before `transform`
-.transition-transform( ... ) {
-	// avoid Webkit bugs
-	-webkit-backface-visibility: hidden;
-
-	-webkit-transition: -webkit-transform @arguments;
-	transition: transform @arguments;
 }
 
 // Generic mixin for applying styles to text that accompanies/adds context to workflows
