@@ -351,6 +351,9 @@
 			]
 		},
 		"mobile.pagelist.scripts": {
+			"messages": [
+				"mobile-frontend-watchlist-error"
+			],
 			"targets": [
 				"mobile",
 				"desktop"
