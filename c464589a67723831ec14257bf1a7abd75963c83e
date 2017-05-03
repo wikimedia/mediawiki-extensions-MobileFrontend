@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_9a6ab3b0",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-03T19:44:39Z",
+      "side": 1,
+      "message": "button doesn\u0027t support href attribute",
+      "revId": "c464589a67723831ec14257bf1a7abd75963c83e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
