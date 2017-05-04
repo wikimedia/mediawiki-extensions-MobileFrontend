@@ -67,6 +67,8 @@
 				confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 
 			empty = ( !this.$subject.val() && !this.$ta.val() );
+			// TODO: Replace with an OOUI dialog
+			// eslint-disable-next-line no-alert
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
 				return TalkOverlayBase.prototype.hide.apply( this, arguments );
 			} else {

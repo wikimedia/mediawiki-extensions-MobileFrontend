@@ -127,7 +127,9 @@
 		var isNewPage = page.options.id === 0;
 
 		if ( mw.util.getParamValue( 'undo' ) ) {
-			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
+			// TODO: Replace with an OOUI dialog
+			// eslint-disable-next-line no-alert
+			alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
 		page.$( '.edit-page, .edit-link' ).removeClass( disabledClass ).on( 'click', function () {

@@ -1,7 +1,7 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var FontChanger = M.require( 'mobile.fontchanger/FontChanger' );
 
-	$( function() {
+	$( function () {
 		var saveLI = $( '#mw-mf-settings-save' ),
 			fontChanger = new FontChanger( {
 				name: 'userFontSize',

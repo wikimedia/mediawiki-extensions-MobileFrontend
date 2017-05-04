@@ -151,6 +151,8 @@
 							if ( !self.gateway.hasChanged ) {
 								self._switchToVisualEditor( self.options );
 							} else {
+								// TODO: Replace with an OOUI dialog
+								// eslint-disable-next-line no-alert
 								if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
 									self.onStageChanges();
 								}
