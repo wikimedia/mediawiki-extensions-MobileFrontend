@@ -22,6 +22,29 @@
       "revId": "0ae07d065241b7f3ee0d59a12c05f1fc05461375",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_1a51fddd",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-04T00:46:05Z",
+      "side": 1,
+      "message": "^",
+      "range": {
+        "startLine": 119,
+        "startChar": 8,
+        "endLine": 119,
+        "endChar": 12
+      },
+      "revId": "0ae07d065241b7f3ee0d59a12c05f1fc05461375",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
