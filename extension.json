@@ -1678,9 +1678,6 @@
 		"GetPreferences": [
 			"MobileFrontendHooks::onGetPreferences"
 		],
-		"GetBetaFeaturePreferences": [
-			"MobileFrontendHooks::onGetBetaFeaturePreferences"
-		],
 		"Gadgets::allowLegacy": [
 			"MobileFrontendHooks::onAllowLegacyGadgets"
 		],
@@ -1746,7 +1743,6 @@
 			},
 			"_merge_strategy": "array_plus_2d"
 		},
-		"MFEnableMinervaBetaFeature": false,
 		"MFEnableJSConsoleRecruitment": false,
 		"MFMobileFormatterHeadings": [
 			"h1",

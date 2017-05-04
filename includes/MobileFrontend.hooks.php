@@ -824,23 +824,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Check whether Minerva has been enabled as a desktop skin via the Minerva
-	 * beta feature.
-	 *
-	 * @param User $user
-	 *
-	 * @return bool
-	 */
-	private static function hasEnabledMinervaBetaFeature( $user ) {
-		$config = MobileContext::singleton()->getMFConfig();
-		$mfEnableMinervaBetaFeature = $config->get( 'MFEnableMinervaBetaFeature' );
-		$canEnableMinervaFeature = class_exists( 'BetaFeatures' ) && $mfEnableMinervaBetaFeature;
-
-		return $canEnableMinervaFeature &&
-			BetaFeatures::isFeatureEnabled( $user, 'betafeatures-minerva' );
-	}
-
-	/**
 	 * GetPreferences hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
 	 *
@@ -861,7 +844,8 @@ class MobileFrontendHooks {
 
 		// Remove the Minerva skin from the preferences unless Minerva has been enabled in
 		// BetaFeatures provided that the user has not set it as the default skin.
-		if ( $defaultSkin !== 'minerva' && !self::hasEnabledMinervaBetaFeature( $user ) ) {
+		// FIXME: This can be removed when Minerva lives in its own repository.
+		if ( $defaultSkin !== 'minerva' ) {
 			// Preference key/values are backwards. The value is the name of the skin. The
 			// key is the text+links to display.
 			if ( !empty( $preferences['skin']['options'] ) ) {
@@ -875,37 +859,6 @@ class MobileFrontendHooks {
 			'type' => 'api',
 			'default' => '',
 		];
-
-		return true;
-	}
-
-	/**
-	 * GetBetaFeaturePreferences hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
-	 *
-	 * @param User $user
-	 * @param array $preferences
-	 *
-	 * @return bool
-	 */
-	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		$context = MobileContext::singleton();
-		$extensionAssetsPath = $context->getConfig()->get( 'ExtensionAssetsPath' );
-		$mfEnableMinervaBetaFeature = $context->getMFConfig()->get( 'MFEnableMinervaBetaFeature' );
-
-		if ( $mfEnableMinervaBetaFeature ) {
-			// Enable the mobile skin on desktop
-			$preferences['betafeatures-minerva'] = [
-				'label-message' => 'beta-feature-minerva',
-				'desc-message' => 'beta-feature-minerva-description',
-				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
-				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
-				'screenshot' => [
-					'ltr' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-ltr.svg",
-					'rtl' => "$extensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-rtl.svg",
-				],
-			];
-		}
 
 		return true;
 	}
