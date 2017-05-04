@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_cffbbddd",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-04T19:27:31Z",
+      "side": 1,
+      "message": "I prefer to keep old behavior:\n\n  $classname .\u003d \u0027 \u0027 . ($this-\u003egetSkinOption( self::OPTIONS_MOBILE_BETA) ? \u0027beta\u0027 : \u0027stable\u0027);",
+      "revId": "6f47a3e478dc5bd73c96c279f1ed2991508023fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
