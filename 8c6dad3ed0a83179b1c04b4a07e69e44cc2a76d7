@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_a315484f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-04T14:42:52Z",
+      "side": 1,
+      "message": "$suffix is not define, it will throw a php notice",
+      "revId": "8c6dad3ed0a83179b1c04b4a07e69e44cc2a76d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
