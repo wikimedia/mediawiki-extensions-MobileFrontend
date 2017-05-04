@@ -279,7 +279,7 @@
 	"apihelp-mobileview-param-noheadings": "Ne prikazuj naslove na rezultatu.",
 	"apihelp-mobileview-param-notransform": "Ne pretvaraj HTML u mobilnu verziju.",
 	"mobile-frontend-meta-data-issues-categories": "O ovoj kategoriji",
-	"mobile-frontend-loading-message": "Učitavam…",
+	"mobile-frontend-loading-message": "Učitavanje...",
 	"mobile-frontend-panel-ok": "U redu",
 	"mobile-frontend-panel-cancel": "Ne, hvala",
 	"mobile-frontend-panel-betaoptin-msg": "Želite li isprobati nove mogućnosti? Korištenjem beta verzije, dobit ćete pristup eksperimentalnim mogućnostima uz rizik mogućih grešaka i problema.",
