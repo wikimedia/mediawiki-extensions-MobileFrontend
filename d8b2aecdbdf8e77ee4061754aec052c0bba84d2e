@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2094ce8c",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-04T10:20:05Z",
+      "side": 1,
+      "message": "This is going to call markAsSeen with notificationsOverlay as the this context.\n\nI\u0027m guessing what you want to do here is call the method with the badge as this, so\n\n    this.badge.markAsSeen.bind( this.badge )",
+      "range": {
+        "startLine": 92,
+        "startChar": 20,
+        "endLine": 92,
+        "endChar": 44
+      },
+      "revId": "d8b2aecdbdf8e77ee4061754aec052c0bba84d2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_20c28e89",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-04T10:20:05Z",
+      "side": 1,
+      "message": "Given the methods that are called don\u0027t return anything meaningful neither data nor promises and this is basically running a series of synchronous side effects, this would probably be clear as a normal function with one .then. Something like this:\n\n\n\t\t// Populate notifications\n\t\twrapperWidget.populate()\n\t\t\t.then( function () {\n\t\t\t\tthis.setDoneLoading();\n\t\t\t\tthis.controller.updateSeenTime();\n\t\t\t\tthis.badge.markAsSeen();\n\t\t\t\tthis.checkShowMarkAllRead();\n\t\t\t}.bind( this ) );\n\nMaybe even create a onPopulated that does those and just do:\n\n\t\twrapperWidget.populate()\n\t\t\t.then( this.onPopulated.bind( this ) )",
+      "range": {
+        "startLine": 89,
+        "startChar": 2,
+        "endLine": 93,
+        "endChar": 51
+      },
+      "revId": "d8b2aecdbdf8e77ee4061754aec052c0bba84d2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
