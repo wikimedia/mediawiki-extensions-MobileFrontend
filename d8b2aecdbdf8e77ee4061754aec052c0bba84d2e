@@ -45,6 +45,30 @@
       "revId": "d8b2aecdbdf8e77ee4061754aec052c0bba84d2e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_09c3f562",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-04T16:56:20Z",
+      "side": 1,
+      "message": "I\u0027m fine with this and it\u0027s a lot cleaner.\n\nI\u0027m not sure about the history of this code and if there\u0027s any reason it was originally done this way.",
+      "parentUuid": "0e1cb3f9_20c28e89",
+      "range": {
+        "startLine": 89,
+        "startChar": 2,
+        "endLine": 93,
+        "endChar": 51
+      },
+      "revId": "d8b2aecdbdf8e77ee4061754aec052c0bba84d2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
