@@ -85,7 +85,6 @@
 		"MinervaTemplate": "includes/skins/MinervaTemplate.php",
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
 		"SkinMinerva": "includes/skins/SkinMinerva.php",
-		"SkinMinervaBeta": "includes/skins/SkinMinervaBeta.php",
 		"ICustomizableSkin": "includes/skins/ICustomizableSkin.php",
 		"MobileFrontend\\MenuBuilder": "includes/MenuBuilder.php",
 		"MobileFrontend\\MenuEntry": "includes/MenuBuilder.php",

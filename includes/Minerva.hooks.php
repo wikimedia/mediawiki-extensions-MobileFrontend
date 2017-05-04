@@ -70,6 +70,8 @@ class MinervaHooks {
 		// setSkinOptions is not available
 		if ( $skin instanceof SkinMinerva ) {
 			$skin->setSkinOptions( [
+				SkinMinerva::OPTIONS_MOBILE_BETA
+					=> $mobileContext->isBetaGroupMember(),
 				SkinMinerva::OPTION_PRINT_STYLES
 					=> $mobileContext->getConfigVariable( 'MinervaPrintStyles' ),
 				SkinMinerva::OPTION_CATEGORIES

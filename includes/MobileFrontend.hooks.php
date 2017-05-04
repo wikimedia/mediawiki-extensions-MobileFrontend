@@ -49,11 +49,6 @@ class MobileFrontendHooks {
 		MobileContext $mobileContext
 	) {
 		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
-		$betaSkinName = $skinName . 'Beta';
-		// Force beta for test mode to sure all modules can run
-		if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
-			$skinName = $betaSkinName;
-		}
 		$skin = new $skinName( $context );
 		return $skin;
 	}

@@ -19,6 +19,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	const OPTION_BACK_TO_TOP = 'backToTop';
 	const OPTION_TOGGLING = 'toggling';
 	const OPTION_PRINT_STYLES = 'printStyles';
+	const OPTIONS_MOBILE_BETA = 'beta';
 
 	/** @var string $skinname Name of this skin */
 	public $skinname = 'minerva';
@@ -26,8 +27,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	public $template = 'MinervaTemplate';
 	/** @var boolean $useHeadElement Specify whether show head elements */
 	public $useHeadElement = true;
-	/** @var string $mode Describes 'stability' of the skin - beta, stable */
-	protected $mode = 'stable';
 	/** @var bool whether the page is the user's page, i.e. User:Username */
 	public $isUserPage = false;
 	/** @var ContentHandler Content handler of page; only access through getContentHandler */
@@ -92,6 +91,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 
 	/** @var array skin specific options */
 	protected $skinOptions = [
+		self::OPTIONS_MOBILE_BETA => false,
 		/**
 		 * Whether the main menu should include a link to
 		 * Special:Preferences of Special:MobileOptions
@@ -302,7 +302,8 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	public function getPageClasses( $title ) {
 		$className = parent::getPageClasses( $title );
-		$className .= ' ' . $this->getMode();
+		$className .= ' ' . ( $this->getSkinOption( self::OPTIONS_MOBILE_BETA ) ? 'beta' : 'stable' );
+
 		if ( $title->isMainPage() ) {
 			$className .= ' page-Main_Page ';
 		} elseif ( $title->isSpecialPage() ) {
@@ -313,14 +314,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 			$className .= ' is-authenticated';
 		}
 		return $className;
-	}
-
-	/**
-	 * Get the current mode of the skin [stable|beta] that is running
-	 * @return string
-	 */
-	protected function getMode() {
-		return $this->mode;
 	}
 
 	/**
