@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_5a477522",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-04T00:44:22Z",
+      "side": 1,
+      "message": "No longer needed. It would also be invalid for an image element to have child nodes.",
+      "range": {
+        "startLine": 519,
+        "startChar": 3,
+        "endLine": 519,
+        "endChar": 69
+      },
+      "revId": "0ae07d065241b7f3ee0d59a12c05f1fc05461375",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
