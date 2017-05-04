@@ -67,7 +67,9 @@ class MinervaTemplate extends BaseTemplate {
 		return [
 			'lastmodified' => $this->getHistoryLinkHtml( $data ),
 			'headinghtml' => $data['footer-site-heading-html'],
-			'licensehtml' => $data['mobile-license'],
+			// Note mobile-license is only available on the mobile skin. It is outputted as part of
+			// footer-info on desktop hence the conditional check.
+			'licensehtml' => isset( $data['mobile-license'] ) ? $data['mobile-license'] : '',
 			'lists' => $groups,
 		];
 	}

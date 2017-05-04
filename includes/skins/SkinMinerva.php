@@ -4,6 +4,7 @@
  */
 use MobileFrontend\MenuBuilder;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Logger\LoggerFactory;
 
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
@@ -43,6 +44,50 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	public function getMFConfig() {
 		// FIXME: When Minerva lives in its own skin this will make sense and be Minerva.Config
 		return MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+	}
+
+	/**
+	 * Returns the site name for the footer, either as a text or <img> tag
+	 * @param boolean $withPossibleTrademark If true and a trademark symbol is specified
+	 *     by $wgMFTrademarkSitename, append that trademark symbol to the sitename/logo.
+	 *     This param exists so that the trademark symbol can be appended in some
+	 *     contexts, for example, the footer, but not in others. See bug T95007.
+	 * @return string
+	 */
+	public function getSitename() {
+		$config = $this->getMFConfig();
+		$mfLogos = $config->get( 'MFCustomLogos' );
+		// use of MFCustomLogos is kept for backwards compatibility.
+		$customLogos = array_merge( $config->get( 'MinervaCustomLogos' ),
+			$mfLogos );
+
+		// FIXME: Remove when config has been updated.
+		if ( $mfLogos && count( $mfLogos ) > 0 ) {
+			LoggerFactory::getInstance( 'mobile' )->info(
+				"MFCustomLogos config option is deprecated. Please use MinervaCustomLogos instead."
+			);
+		}
+
+		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
+
+		// If there's a custom site logo, use that instead of text
+		if ( isset( $customLogos['copyright'] ) ) {
+			$attributes =  [
+				'src' => $customLogos['copyright'],
+				'alt' => $footerSitename,
+			];
+			if ( isset( $customLogos['copyright-height'] ) ) {
+				$attributes['height'] = $customLogos['copyright-height'];
+			}
+			if ( isset( $customLogos['copyright-width'] ) ) {
+				$attributes['width'] = $customLogos['copyright-width'];
+			}
+			$sitename = Html::element( 'img', $attributes );
+		} else {
+			$sitename = $footerSitename;
+		}
+
+		return $sitename;
 	}
 
 	/** @var array skin specific options */
@@ -831,7 +876,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 			}
 		}
 		$tpl->set( 'headinghtml', $this->getHeadingHtml() );
-
+		$tpl->set( 'footer-site-heading-html', $this->getSitename() );
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
 			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin

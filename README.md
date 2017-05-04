@@ -505,6 +505,10 @@ include the preceding `.` (e.g. yes: `.wikipedia.org`, **no**: `wikipedia.org`)
 
 #### $wgMFCustomLogos
 
+Use $wgMinervaCustomLogos instead.
+
+#### $wgMinervaCustomLogos
+
 Make the logos configurable.
 
 Currently, `copyright`, `copyright-width`, and `copyright-height` elements are
@@ -541,19 +545,6 @@ Path to the logo used in the login/signup form.  The standard height is `72px`
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFTrademarkSitename
-
-Whether to append a trademark notice to the sitename in the page footer.
-
-* If set to `true` or `'unregistered'`, adds a ™ to the sitename.
-* If set to `'registered'` adds a ® to the sitename.
-* If set to `false`, adds nothing (the default).
-
-Alternatively, you can also edit the `mobile-frontend-footer-sitename`
-message directly.
-
-* Type: `Boolean`
-* Default: `false`
 
 #### $wgMFEnableBeta
 
