@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_035f54e9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-04T13:21:37Z",
+      "side": 0,
+      "message": "please remove those copies from en.json and qqq.json",
+      "revId": "af12dc18b4ff14aeb7d0c30ba4468f162c4beff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_a35308e2",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-04T13:21:37Z",
+      "side": 0,
+      "message": "please remove those assets",
+      "revId": "af12dc18b4ff14aeb7d0c30ba4468f162c4beff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
