@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_ce96554f",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "why do we assign $neableSections and $includeTOC when passing those as function arguments?",
+      "parentUuid": "2e4df70f_0b0e643e",
+      "range": {
+        "startLine": 62,
+        "startChar": 38,
+        "endLine": 62,
+        "endChar": 63
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_6e8cdbff",
         "filename": "includes/MwApiContentProvider.php",
         "patchSetId": 7
@@ -213,6 +237,30 @@
       "side": 1,
       "message": "Sure.. but how and why would I use `use_include_path` for an absolute URL ?",
       "parentUuid": "2e4df70f_2e56d35f",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "a96be28a18000bfbdd11215de0ffa70f11c24de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_8ea05d9c",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "I think Phuedx was talking about next line (17)\n\n    $json \u003d json_decode( $resp, true );\n\nThen you can access $json as regular array;",
+      "parentUuid": "2e4df70f_be168c4b",
       "range": {
         "startLine": 16,
         "startChar": 35,
