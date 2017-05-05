@@ -7,8 +7,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Nangtukeun yén pamaké téh ngéit maké séluler atawa henteu",
-	"beta-feature-minerva": "Hirupan kalakop sélulér ({{int:skinname-minerva}}) dina déstop",
-	"beta-feature-minerva-description": "Jadikeun kalakop nu dipaké na pakakas sélulér téh jadi kulit nu bisa dipilihan na déstop liwat préférénsi \"{{int:prefs-rendering}}\".",
 	"mobile-frontend-account-create-captcha-placeholder": "Asupkeun kodeu konfirmasi",
 	"mobile-frontend-categories-heading": "<strong>Kategori</strong>",
 	"mobile-frontend-categories-subheading": "Kaca nu kaasup kana kategori:",
@@ -28,7 +26,7 @@
 	"mobile-frontend-cite-none-available": "Taya catetan nu sayaga pikeun ieu kaca.",
 	"mobile-frontend-clear-search": "Bersihkeun",
 	"mobile-frontend-cookies-required": "Kuki dibutuhkeun ajang ngaganti pidangan. Pék aktifkeun kuki sarta cobaan deui.",
-	"mobile-frontend-copyright": "Eusi nu nyangkruk ditangtayungan ku $1 iwal lamun disebutkeun béda.",
+	"mobile-frontend-copyright": "Eusi nu nyangkaruk ditangtayungan ku $1 iwal lamun disebutkeun béda.",
 	"mobile-frontend-desc": "Mobile Frontend",
 	"mobile-frontend-diffview-404-desc": "ID pikeun révisi nu anjeun pénta teu sayaga.",
 	"mobile-frontend-diffview-404-title": "Révisi goréng",

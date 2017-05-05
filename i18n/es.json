@@ -39,8 +39,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
-	"beta-feature-minerva": "Activar la interfaz para móviles ({{int:skinname-minerva}}) en el escritorio",
-	"beta-feature-minerva-description": "Hacer que la apariencia usada en dispositivos móviles sea una apariencia de escritorio seleccionable en la pestaña de preferencias \"{{int:prefs-rendering}}\".",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-categories-heading": "<strong>Categorías</strong>",
 	"mobile-frontend-categories-subheading": "La página pertenece a las siguientes categorías:",

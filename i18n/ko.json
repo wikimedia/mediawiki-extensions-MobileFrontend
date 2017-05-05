@@ -27,8 +27,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
-	"beta-feature-minerva": "데스크탑에서 모바일 스킨 ({{int:skinname-minerva}})을 활성화",
-	"beta-feature-minerva-description": "모바일 기기에서 사용되는 스킨을 \"{{int:prefs-rendering}}\" 환경 설정에서 선택할 수 있는 데스크톱 스킨으로 만듭니다.",
 	"mobile-frontend-account-create-captcha-placeholder": "인증 코드를 입력하세요",
 	"mobile-frontend-categories-heading": "<strong>분류</strong>",
 	"mobile-frontend-categories-subheading": "문서는 다음 분류에 속합니다:",

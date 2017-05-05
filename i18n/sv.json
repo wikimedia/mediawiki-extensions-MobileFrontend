@@ -19,8 +19,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
-	"beta-feature-minerva": "Aktivera mobilt utseende ({{int:skinname-minerva}}) på stationära datorer",
-	"beta-feature-minerva-description": "Gör utseendet som används på mobila enheter till ett valbart utseende för stationära enheter under \"{{int:prefs-rendering}}\"-fliken i inställningarna.",
 	"mobile-frontend-account-create-captcha-placeholder": "Ange bekräftelsekod",
 	"mobile-frontend-categories-heading": "<strong>Kategorier</strong>",
 	"mobile-frontend-categories-subheading": "Sidan hör till följande kategorier:",

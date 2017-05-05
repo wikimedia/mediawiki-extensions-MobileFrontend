@@ -10,8 +10,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
-	"beta-feature-minerva": "ডেস্কটপে মোবাইল স্কিন ({{int:skinname-minerva}}) সক্রিয় করুন",
-	"beta-feature-minerva-description": "\"{{int:prefs-rendering}}\" পছন্দসমূহ ট্যাবের অধীনে মোবাইল ডিভাইসে ব্যবহৃত স্কিনটি একটি নির্বাচনযোগ্য ডেস্কটপ স্কিন তৈরি করে।",
 	"mobile-frontend-account-create-captcha-placeholder": "নিশ্চিতকরণ কোড লিখুন",
 	"mobile-frontend-categories-heading": "<strong>বিষয়শ্রেণীসমূহ</strong>",
 	"mobile-frontend-categories-subheading": "এই পাতাটি নিম্নোক্ত বিষয়শ্রেণীর অন্তর্গত:",

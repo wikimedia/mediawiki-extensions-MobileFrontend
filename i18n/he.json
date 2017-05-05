@@ -19,8 +19,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
-	"beta-feature-minerva": "הפעלת העיצוב למכשירים ניידים ({{int:skinname-minerva}}) במחשב",
-	"beta-feature-minerva-description": "הוספת האפשרות לבחור בעיצוב שמשמש למכשירים ניידים בתור אחד העיצובים בלשונית \"{{int:prefs-rendering}}\" בהעדפות.",
 	"mobile-frontend-account-create-captcha-placeholder": "נא להזין קוד ביטחון",
 	"mobile-frontend-categories-heading": "<strong>קטגוריות</strong>",
 	"mobile-frontend-categories-subheading": "הדף שייך לקטגוריות הבאות:",

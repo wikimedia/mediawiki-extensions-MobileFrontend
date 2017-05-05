@@ -36,8 +36,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego",
-	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
-	"beta-feature-minerva-description": "Pozwala wybrać mobilną skórkę jako domyślną (w zakładce preferencji „{{int:prefs-rendering}}”) i używać jej podczas normalnego przeglądania.",
 	"mobile-frontend-account-create-captcha-placeholder": "Wprowadź kod potwierdzenia",
 	"mobile-frontend-categories-heading": "<strong>Kategorie</strong>",
 	"mobile-frontend-categories-subheading": "Strona należy do następujących kategorii:",

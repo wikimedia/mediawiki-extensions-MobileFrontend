@@ -32,8 +32,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
-	"beta-feature-minerva": "Masaüstü görünümde ({{int:skinname-minerva}}) temasını etkinleştirin",
-	"beta-feature-minerva-description": "Tercihlerimdeki \"{{int:prefs-rendering}}\" bölümünde mobil cihazlar için kullanılın temayı, masaüstü içinde seçilebilir tema yapın.",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-categories-heading": "<strong>Kategoriler</strong>",
 	"mobile-frontend-categories-subheading": "Bu sayfa aşağıdaki kategorilerde yer alır:",

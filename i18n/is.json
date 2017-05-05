@@ -11,8 +11,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
-	"beta-feature-minerva": "Virkja farsímaviðmót ({{int:skinname-minerva}}) á einkatölvu",
-	"beta-feature-minerva-description": "Gera viðmótið sem er notað í farsímum aðgengilegt sem viðmót fyrir einkatölvur undir stillingaflipanum „{{int:prefs-rendering}}“.",
 	"mobile-frontend-account-create-captcha-placeholder": "Sláðu inn staðfestingarkóða",
 	"mobile-frontend-categories-heading": "<strong>Flokkar</strong>",
 	"mobile-frontend-categories-subheading": "Þessi síða tilheyrir þessum flokkum:",

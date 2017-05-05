@@ -12,8 +12,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
-	"beta-feature-minerva": "Uključi mobilnu temu ({{int:skinname-minerva}}) na računarnoj verziji",
-	"beta-feature-minerva-description": "Omogućava korištenje mobile teme na računarnoj verziji stranice pod karticom \"{{int:prefs-rendering}}\" u Postavkama.",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kod za potvrdu",
 	"mobile-frontend-categories-heading": "<strong>Kategorije</strong>",
 	"mobile-frontend-categories-subheading": "Ova se stranica nalazi u sljedećim kategorijama:",
@@ -279,7 +277,7 @@
 	"apihelp-mobileview-param-noheadings": "Ne prikazuj naslove na rezultatu.",
 	"apihelp-mobileview-param-notransform": "Ne pretvaraj HTML u mobilnu verziju.",
 	"mobile-frontend-meta-data-issues-categories": "O ovoj kategoriji",
-	"mobile-frontend-loading-message": "Učitavanje...",
+	"mobile-frontend-loading-message": "Učitavam…",
 	"mobile-frontend-panel-ok": "U redu",
 	"mobile-frontend-panel-cancel": "Ne, hvala",
 	"mobile-frontend-panel-betaoptin-msg": "Želite li isprobati nove mogućnosti? Korištenjem beta verzije, dobit ćete pristup eksperimentalnim mogućnostima uz rizik mogućih grešaka i problema.",

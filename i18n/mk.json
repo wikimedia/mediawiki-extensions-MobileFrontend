@@ -5,8 +5,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Дали корисникот уредува од мобилниот посредник",
-	"beta-feature-minerva": "Активирај го мобилното руво ({{int:skinname-minerva}})  како немобилно",
-	"beta-feature-minerva-description": "Можност рувото за мобилни уреди да се користи обично (немобилно), избирајќи го во јазичето „{{int:prefs-rendering}}“ во нагодувањата.",
 	"mobile-frontend-account-create-captcha-placeholder": "Внесете го потврдниот код",
 	"mobile-frontend-categories-heading": "<strong>Категории</strong>",
 	"mobile-frontend-categories-subheading": "Страницата им припаѓа на следниве категории:",
@@ -305,5 +303,6 @@
 	"mobile-frontend-panel-cancel": "Не, благодарам",
 	"mobile-frontend-panel-betaoptin-msg": "Дали би сакале да ги пробате новите можности? На бета-верзијата добивате пристап до пробни функции, но со ризик да наидете на грешки и проблеми.",
 	"mobile-frontend-search-feedback-link-text": "Дајте ни ваше мислење.",
-	"mobile-frontend-search-feedback-prompt": "Не го најдовте она што го баравте?"
+	"mobile-frontend-search-feedback-prompt": "Не го најдовте она што го баравте?",
+	"mobile-frontend-notifications-filter-title": "Филтрирање на известувања"
 }

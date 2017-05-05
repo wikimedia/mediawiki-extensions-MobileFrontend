@@ -49,8 +49,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
-	"beta-feature-minerva": "Activer le thème mobile ({{int:skinname-minerva}}) sur le bureau",
-	"beta-feature-minerva-description": "Faire du thème utilisé sur les périphériques mobiles un thème de bureau sélectionnable dans l’onglet « {{int:prefs-rendering}} » des préférences.",
 	"mobile-frontend-account-create-captcha-placeholder": "Entrez le code de confirmation",
 	"mobile-frontend-categories-heading": "<strong>Catégories</strong>",
 	"mobile-frontend-categories-subheading": "La page appartient aux catégories suivantes:",

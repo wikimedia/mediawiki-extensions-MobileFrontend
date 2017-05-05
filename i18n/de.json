@@ -20,8 +20,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer über die mobile Oberfläche bearbeitet",
-	"beta-feature-minerva": "Die mobile Benutzeroberfläche „{{int:skinname-minerva}}“ auf dem Desktop aktivieren",
-	"beta-feature-minerva-description": "Macht aus der auf mobilen Geräten verwendeten Benutzeroberfläche unter der Einstellungs-Registerkarte „{{int:prefs-rendering}}“ eine auswählbare Desktop-Benutzeroberfläche.",
 	"mobile-frontend-account-create-captcha-placeholder": "Bestätigungscode eingeben",
 	"mobile-frontend-categories-heading": "<strong>Kategorien</strong>",
 	"mobile-frontend-categories-subheading": "Die Seite wurde den folgenden Kategorien zugeordnet:",
