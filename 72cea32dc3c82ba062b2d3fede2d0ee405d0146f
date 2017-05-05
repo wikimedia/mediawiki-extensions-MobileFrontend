@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2ba583b1",
+        "filename": "resources/mobile.ajax.styles/spinner.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-05T20:39:19Z",
+      "side": 1,
+      "message": "This previously set both :before and :after. Was :after not needed?",
+      "range": {
+        "startLine": 8,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 9
+      },
+      "revId": "72cea32dc3c82ba062b2d3fede2d0ee405d0146f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
