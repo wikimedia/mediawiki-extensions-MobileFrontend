@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_4e900547",
+        "filename": "includes/DefaultContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "can we decide earlier what to pass? Passing just an extra $html in case we want to override something sounds like overthinking.",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_0e9a0d67",
+        "filename": "includes/IContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "interface shouldn\u0027t contain static functions. Static methods are class level methods, they belong to the implementation, to the class, not to an instance of it. The interface defines the instance of class.\n\nIn this scenario you should have a separate factory that knows how to build each IContentProvider (would be awesome to have a CompilerPass but our DI isn\u0027t ready for such magic yet). \n\nAs you see the DefaultContentProvider doesn\u0027t need GlobalVarConfig, there is no need to specify that variable everywhere",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2eb271e5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "missing new @param definitions",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_8ebdbdaf",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "in this place you need to create a different class, lets call it \"ContentProviderFactory::getProvider()\" where you pass all methods. Then ContentProviderFactory will have a logic that \n  a) takes current provider from config \n  b) creates an instance of config provider (passing only whats necessary to a provider)\n  c) returns the provider\n  d) if provider is not found, log it\n\nHow the ContentProvidder should look like (pseudo code):\n\n  const DEFAULT \u003d \u0027default\u0027;\n  const MWAPI \u003d \u0027mwapi\u0027;\n\n  public static function getProvider( ... ) {\n    switch ($config-\u003egetProvider()) {\n        case self::DEFAULT:\n           $html \u003d $html ? $html : $out-\u003egetHtml();\n           return new DefaultProvider($html);\n        case self::MWAPI:\n            return new MWAPiProvider(GlobalVarConf, $out);\n        default:\n            throw new \\RuntimeExcetion(\u0027Unknown provider\u0027);\n  }",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_0eb1addc",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "don\u0027t assign variables when passing them as function parameters. Additionally, those assignments are unnecessary.",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2e8cb139",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "previous this hook was executed before $formatter-\u003efilterContent(), now call it after, is it on purpose. If yes why?",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_6ed709f3",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "this logic should go to getHTML(), public static function factory() doesn\u0027t belong here",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_eee239d0",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "I think that Phuedx had in mind line 26:\n\n  $json \u003d json_decode( $resp, true);\n\nthen you\u0027ll be able to use $json as a regular array instead of doing some magic $json-\u003e{\u0027parse\u0027};",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_cecad54a",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-05T23:46:06Z",
+      "side": 1,
+      "message": "A hint, instead of isset() it\u0027s better to do array_key_exists.\n\nisset() will return false both when $json doesn\u0027t exists or array index doesn\u0027t exists. \narray_key_exists() will throw a notice when $json doesn\u0027t exists.",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
