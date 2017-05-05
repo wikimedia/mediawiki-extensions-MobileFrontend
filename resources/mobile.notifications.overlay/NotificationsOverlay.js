@@ -193,7 +193,7 @@
 		},
 		/** @inheritdoc */
 		preRender: function () {
-			this.options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
+			this.options.heading = '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>';
 		},
 		/** @inheritdoc */
 		postRender: function () {
