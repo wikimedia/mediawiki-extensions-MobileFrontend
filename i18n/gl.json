@@ -13,8 +13,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
-	"beta-feature-minerva": "Activar a interface para móbiles ({{int:skinname-minerva}}) no escritorio",
-	"beta-feature-minerva-description": "Facer o tema usado en dispositivos móbiles un tema de escritorio seleccionable na lapela de preferencias \"{{int:prefs-rendering}}\"",
 	"mobile-frontend-account-create-captcha-placeholder": "Insira o código de confirmación",
 	"mobile-frontend-categories-heading": "<strong>Categorías</strong>",
 	"mobile-frontend-categories-subheading": "A páxina pertence ás seguintes categorías:",
@@ -311,5 +309,6 @@
 	"mobile-frontend-panel-cancel": "Non, grazas",
 	"mobile-frontend-panel-betaoptin-msg": "Quere probar algúns trebellos novos? Ó unirse á beta, accederá a trebellos experimentais, co risco de encontrarse con algúns erros e problemas.",
 	"mobile-frontend-search-feedback-link-text": "Envíenos os seus comentarios.",
-	"mobile-frontend-search-feedback-prompt": "Non atopou o que procuraba?"
+	"mobile-frontend-search-feedback-prompt": "Non atopou o que procuraba?",
+	"mobile-frontend-notifications-filter-title": "Filtrar as notificacións"
 }
