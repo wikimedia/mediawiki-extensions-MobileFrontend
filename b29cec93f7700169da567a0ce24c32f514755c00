@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_05a983dc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-08T13:53:13Z",
+      "side": 1,
+      "message": "@krinkle already did this. I\u0027ve rebased the patch and this is now not part of the commit so you\u0027ll probably want to remove this line.",
+      "revId": "b29cec93f7700169da567a0ce24c32f514755c00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_459f7bb9",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-08T13:53:13Z",
+      "side": 1,
+      "message": "This is not really necessary.",
+      "revId": "b29cec93f7700169da567a0ce24c32f514755c00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
