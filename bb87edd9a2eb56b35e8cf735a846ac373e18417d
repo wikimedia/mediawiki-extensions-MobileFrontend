@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_72d92783",
+        "filename": "resources/skins.minerva.scripts/search.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-08T11:33:43Z",
+      "side": 0,
+      "message": "Damn I didn\u0027t see this and it was driving me crazy not seeing how it was used before.",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 63
+      },
+      "revId": "bb87edd9a2eb56b35e8cf735a846ac373e18417d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
