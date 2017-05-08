@@ -3,6 +3,7 @@
 	var ReferencesMobileViewGateway = M.require(
 			'mobile.references.gateway/ReferencesMobileViewGateway'
 		),
+		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		cache = M.require( 'mobile.startup/cache' ),
 		MemoryCache = cache.MemoryCache;
@@ -41,7 +42,7 @@
 			);
 			this.referencesGatewayRejector = new ReferencesMobileViewGateway( new mw.Api() );
 			this.sandbox.stub( this.referencesGatewayRejector, 'getReferencesLists' ).returns(
-				$.Deferred().reject().promise()
+				$.Deferred().reject( ReferencesGateway.ERROR_OTHER ).promise()
 			);
 		}
 	} );
@@ -74,16 +75,17 @@
 
 	QUnit.test( 'checking bad reference', 1, function ( assert ) {
 		var done = assert.async( 1 );
-		this.referencesGateway.getReference( '#cite_note-bad', this.page ).done( function ( ref ) {
-			assert.ok( ref === false, 'When bad id given false returned.' );
+		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
+			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
+				'When reference not found error message reflects that.' );
 			done();
 		} );
 	} );
 
 	QUnit.test( 'checking reference on non-existent page', 1, function ( assert ) {
 		var done = assert.async( 1 );
-		this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).done( function ( ref ) {
-			assert.ok( ref === false,
+		this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
+			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
 				'When getReferencesElement returns empty list of elements reference is false.' );
 			done();
 		} );
@@ -91,8 +93,8 @@
 
 	QUnit.test( 'checking reference when gateway rejects', 1, function ( assert ) {
 		var done = assert.async( 1 );
-		this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).fail( function () {
-			assert.ok( true, 'getReference is rejected if API query fails' );
+		this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).fail( function ( err ) {
+			assert.ok( err === ReferencesGateway.ERROR_OTHER, 'getReference is rejected if API query fails' );
 			done();
 		} );
 	} );

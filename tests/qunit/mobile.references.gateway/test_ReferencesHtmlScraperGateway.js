@@ -2,6 +2,7 @@
 
 	var ReferencesHtmlScraperGateway = M.require(
 			'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
+		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: htmlScraper references gateway', {
@@ -28,8 +29,8 @@
 
 	QUnit.test( 'checking bad reference', 1, function ( assert ) {
 		var done = assert.async( 1 );
-		this.referencesGateway.getReference( '#cite_note-bad', this.page ).done( function ( ref ) {
-			assert.ok( ref === false, 'When bad id given false returned.' );
+		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
+			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
 			done();
 		} );
 	} );

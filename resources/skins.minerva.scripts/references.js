@@ -63,8 +63,6 @@
 			drawer.render( {
 				text: undefined
 			} );
-			// use setTimeout so that browser calculates dimensions before show()
-			setTimeout( $.proxy( drawer, 'show' ), 0 );
 		}
 	}
 
