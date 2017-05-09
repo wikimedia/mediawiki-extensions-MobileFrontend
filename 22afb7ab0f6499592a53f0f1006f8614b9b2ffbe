@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_fc6e6592",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-05-09T13:51:25Z",
+      "side": 1,
+      "message": "If some strange interaction of hook functions or the like results in a document with multiple `\u003cdiv class\u003d\"mw-parser-output\"\u003e` and no other top-level elements, this will process only the last one.\n\nThat\u0027s an unlikely situation though.",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
