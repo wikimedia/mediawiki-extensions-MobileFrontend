@@ -16,6 +16,40 @@
       "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_1fc46b43",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-09T17:27:09Z",
+      "side": 1,
+      "message": "this is pretty strange contruction, we assign value to $node variable twice, why? while() loop looks more appropriate here.",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_bfc0df30",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 652,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-09T17:27:09Z",
+      "side": 1,
+      "message": "in many places in MobileFormatter we use an XPath::query() instead of manual traversing. It would be nice to stick to one method.",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
