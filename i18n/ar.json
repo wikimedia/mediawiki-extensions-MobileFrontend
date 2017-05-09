@@ -27,8 +27,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
-	"beta-feature-minerva": "فعل واجهة المحمول (مينيرفا) على جهاز سطح المكتب",
-	"beta-feature-minerva-description": "اجعل المظهر المستخدم على الأجهزة النقالة مظهر سطح المكتب قابلاً للانتقاء من صفحة التفضيلات «{{int:prefs-rendering}}».",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
 	"mobile-frontend-categories-heading": "<strong>التصنيفات</strong>",
 	"mobile-frontend-categories-subheading": "تنتمي هذه الصفحة إلى التصنيفات التالية:",
@@ -325,5 +323,6 @@
 	"mobile-frontend-panel-cancel": "لا شكر",
 	"mobile-frontend-panel-betaoptin-msg": "هل تريد تجربة بعض الخصائص الجديدة؟ بالاشترك في البيتا، فستحصل الخصائص التجريبية، لكن مع احتمال مصادفة بعض العلل والقضايا.",
 	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك",
-	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟"
+	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟",
+	"mobile-frontend-notifications-filter-title": "إخطارات المرشح"
 }

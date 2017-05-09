@@ -34,8 +34,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
-	"beta-feature-minerva": "فعال‌سازی پوسته موبایل ({{int:skinname-minerva}}) بر روی میزکار",
-	"beta-feature-minerva-description": "ساختن پوستهٔ مورد استفاده در دستگاه‌های تلفن همراه پوستهٔ دسکتاپ قابل انتخاب تحت تب ظاهری \"{{int:prefs-rendering}}\" ترجیحات.",
 	"mobile-frontend-account-create-captcha-placeholder": "کد امنیتی را وارد کنید",
 	"mobile-frontend-categories-heading": "<strong>رده‌ها</strong>",
 	"mobile-frontend-categories-subheading": "صفحه متعلق به رده‌های زیر است:",
@@ -331,5 +329,6 @@
 	"mobile-frontend-panel-cancel": "نه ممنون",
 	"mobile-frontend-panel-betaoptin-msg": "آیا می‌خواهید از امکانات جدید استفاده کنید؟با پیوستن به بتا, شما (به همراه ریسک مواجهه با باگ ها و دیگر مشکلات!) به امکانات آزمایشی دسترسی خواهید داشت.",
 	"mobile-frontend-search-feedback-link-text": "بازخوردتان را با ما در میان بگذارید.",
-	"mobile-frontend-search-feedback-prompt": "آنچه که دنبالش بودید را نیافتید؟"
+	"mobile-frontend-search-feedback-prompt": "آنچه که دنبالش بودید را نیافتید؟",
+	"mobile-frontend-notifications-filter-title": "اعلان‌های پالایه"
 }
