@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_1f41cbac",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-05-09T17:39:39Z",
+      "side": 1,
+      "message": "That\u0027s a very strange question. A for loop of this form is roughly equivalent to \n\n  $node \u003d $containerChild;\n  while ( $node ) {\n      // Body is executed here\n      // This simplified equivalence assumes no\n      // \"continue\" statements in the body.\n\n      $node \u003d $node-\u003enextSibling;\n  }\n\nIt\u0027s used because it\u0027s a more convenient syntax in cases like this: it takes fewer lines, it separates iteration management from the body of the loop, and it doesn\u0027t need special work to support \u0027continue\u0027 should that be needed.",
+      "parentUuid": "0e1cb3f9_1fc46b43",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_bfc0df30",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
