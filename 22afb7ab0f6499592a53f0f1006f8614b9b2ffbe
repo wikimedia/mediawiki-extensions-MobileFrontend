@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_c5ff00a6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-09T21:09:16Z",
+      "side": 1,
+      "message": "My question was more about the general approach. To iterate over items usually do{}while()|while(){}|foreach() is used where for() loop is used mostly to repeat a section of code known number of times. I\u0027m not saying it\u0027s bad, but tbh it took me a while to understand whats going here as this is the first time when I see for() statement in such scenario.",
+      "parentUuid": "0e1cb3f9_1f41cbac",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_bfc0df30",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
