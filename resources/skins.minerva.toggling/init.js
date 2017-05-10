@@ -1,7 +1,12 @@
 ( function ( M, $ ) {
 	var page = M.getCurrentPage(),
-		$contentContainer = $( '#mw-content-text' ),
+		$contentContainer = $( '#mw-content-text > .mw-parser-output' ),
 		Toggler = M.require( 'mobile.toggle/Toggler' );
+
+	// If there was no mw-parser-output wrapper, just use the parent
+	if ( $contentContainer.length === 0 ) {
+		$contentContainer = $( '#mw-content-text' );
+	}
 
 	/**
 	 * Initialises toggling code.
