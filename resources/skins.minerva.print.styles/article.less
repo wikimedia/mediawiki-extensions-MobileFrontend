@@ -4,6 +4,10 @@
 @dividerHeight: 2px;
 @dividerSpacing: 28px;
 
+.hatnote {
+	display: none;
+}
+
 .pre-content {
 	display: block;
 	padding: 51px 0 35px;
@@ -38,6 +42,11 @@
 
 .thumbinner {
 	width: auto !important;
+	// Force image link to take up maximum available space so that
+	// the thumbnail inside can be aligned left rather than centered
+	> a {
+		width: 100%;
+	}
 }
 
 .thumb {
@@ -79,6 +88,8 @@
 
 	.section-heading {
 		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 16px;
 	}
 
 	h2 {
@@ -87,9 +98,19 @@
 
 	h3 {
 		font-size: 40px;
+		margin-bottom: 13px;
 	}
 
 	h4, h5, h6 {
 		font-size: 36px;
+		margin-bottom: 12px;
+	}
+
+	.wikitable {
+		font-size: 16px;
+	}
+
+	table.infobox {
+		font-size: 30px;
 	}
 }
