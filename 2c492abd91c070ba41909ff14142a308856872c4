@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2766f6b7",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-10T23:59:21Z",
+      "side": 1,
+      "message": "Looks like you\u0027ve introduced this for writing tests? It seemed tests could be written without this change too.",
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2714b6eb",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-10T23:59:21Z",
+      "side": 1,
+      "message": "If a reference is already visible, you\u0027d be calling this again. We should only run this if the drawer is not already visible.",
+      "range": {
+        "startLine": 95,
+        "startChar": 5,
+        "endLine": 96,
+        "endChar": 48
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_67f38ee4",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-10T23:59:21Z",
+      "side": 1,
+      "message": "Since the function is now responsible for hiding the drawer too, I suggest we rename the function to something that captures this change.",
+      "range": {
+        "startLine": 97,
+        "startChar": 6,
+        "endLine": 100,
+        "endChar": 5
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_07f652c2",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-10T23:59:21Z",
+      "side": 1,
+      "message": "Since you\u0027ve moved the code that\u0027s responsible to showing the drawer from references.js to line 96 of this file, this drawer won\u0027t be shown if it\u0027s not already visible.",
+      "range": {
+        "startLine": 102,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 8
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
