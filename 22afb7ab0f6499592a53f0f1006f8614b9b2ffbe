@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_500bb0d9",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2017-05-10T00:04:23Z",
+      "side": 1,
+      "message": "I did some code review to figure out how likely. The HTML we are parsing here actually comes from OutputPage::getHTML(), during the OutputPageBeforeHTML hook. As such it could have arbitrary quantities of hook-generated crap in it. Various other hooks could have modified the output buffer, appending, prepending, or even wrapping or replacing. So the question is how hard we want to try to figure out what is going on. I don\u0027t think it makes sense to use the \u003cbody\u003e as the top level just because a hook appends an element.\n\nI am now leaning towards XPath //body/div[@class\u003d\"mw-parser-output\"][1], i.e. the first child of the body which is a \u003cdiv\u003e with class\u003d\"mw-parser-output\".",
+      "parentUuid": "0e1cb3f9_fc6e6592",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_1fc46b43",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_109bf8c2",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2017-05-10T00:04:23Z",
+      "side": 1,
+      "message": "It\u0027s a normal way to iterate through linked lists, in C and C-like languages.",
+      "parentUuid": "0e1cb3f9_c5ff00a6",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_bfc0df30",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
@@ -83,6 +119,24 @@
       "writtenOn": "2017-05-09T17:27:09Z",
       "side": 1,
       "message": "in many places in MobileFormatter we use an XPath::query() instead of manual traversing. It would be nice to stick to one method.",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_d0ffc0a5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 652,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2017-05-10T00:04:23Z",
+      "side": 1,
+      "message": "I was implementing an algorithm which didn\u0027t have an XPath equivalent.",
+      "parentUuid": "0e1cb3f9_bfc0df30",
       "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
