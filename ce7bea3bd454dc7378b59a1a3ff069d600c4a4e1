@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_64aaac18",
+        "filename": "resources/skins.minerva.content.styles/hacks.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-10T22:38:03Z",
+      "side": 0,
+      "message": "Isn\u0027t this change not only print style related? The commit message doesn\u0027t mention this.",
+      "revId": "ce7bea3bd454dc7378b59a1a3ff069d600c4a4e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
