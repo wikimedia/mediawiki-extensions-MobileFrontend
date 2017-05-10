@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_a00af727",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-10T12:41:50Z",
+      "side": 1,
+      "message": "I\u0027m guessing we can remove this in 10 days?",
+      "revId": "d154fa36b5c3a32d2ddcf93eced5af88d748b947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_000e433e",
+        "filename": "resources/skins.minerva.toggling/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-10T12:41:50Z",
+      "side": 1,
+      "message": "Can also use !$contentContainer.length here",
+      "revId": "d154fa36b5c3a32d2ddcf93eced5af88d748b947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
