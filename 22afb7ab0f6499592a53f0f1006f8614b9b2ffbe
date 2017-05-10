@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_d14edf3b",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-05-10T15:29:09Z",
+      "side": 1,
+      "message": "\u003e The HTML we are parsing here actually comes from OutputPage::getHTML(), during the OutputPageBeforeHTML hook\n\nIt looks to me that it comes from the ParserOutput object that was passed to OutputPage::addParserOutputText(), unless that ParserOutput contains the empty string.\n\nThe hook gets passed $parserOutput-\u003egetText(), which MobileFrontendHooks::onOutputPageBeforeHTML() passes on to ExtMobileFrontend::DOMParse(), which only uses $out-\u003egetHTML() if $text is falsey.\n\nThat\u0027s not to say other hooks couldn\u0027t have modified the ParserOutput, or hooked OutputPageBeforeHTML and modified $text before MobileFrontend sees it.",
+      "parentUuid": "0e1cb3f9_500bb0d9",
+      "revId": "22afb7ab0f6499592a53f0f1006f8614b9b2ffbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_1fc46b43",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
