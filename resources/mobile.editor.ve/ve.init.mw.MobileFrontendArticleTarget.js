@@ -83,6 +83,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function ()
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	var $window, windowTop, contentTop,
+		surface = this.surface,
 		target = this;
 	// The window can only scroll in iOS if the keyboard has been opened
 	if ( this.useScrollContainer ) {
@@ -93,9 +94,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 		contentTop = target.$scrollContainer.scrollTop();
 
 		$window.scrollTop( 0 );
-		target.scrollTo( contentTop + windowTop );
+		surface.scrollTo( contentTop + windowTop );
 		// Make sure we didn't overshoot the cursor
-		target.scrollCursorIntoView( target.getSurface() );
+		surface.scrollCursorIntoView( target.getSurface() );
 	}
 };
 
