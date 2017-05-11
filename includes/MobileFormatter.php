@@ -32,7 +32,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * The current revision id of the Title being worked on
-	 * @var Integer $revId
+	 * @var integer $revId
 	 */
 	private $revId;
 
@@ -660,7 +660,6 @@ class MobileFormatter extends HtmlFormatter {
 		$firstHeading = reset( $headings );
 		$sectionNumber = 0;
 		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber, false );
-		$this->prepareHeadings( $doc, $headings, $this->scriptsEnabled );
 
 		while ( $containerChild ) {
 			$node = $containerChild;
@@ -671,7 +670,10 @@ class MobileFormatter extends HtmlFormatter {
 			// Note well the use of DOMNode#nodeName here. Only DOMElement defines
 			// DOMElement#tagName.  So, if there's trailing text - represented by
 			// DOMText - then accessing #tagName will trigger an error.
-			if ( $headings && $node->nodeName === $firstHeading->nodeName ) {
+			if ( $firstHeading && $node->nodeName === $firstHeading->nodeName ) {
+				// The heading we are transforming is always 1 section ahead of the
+				// section we are currently processing
+				$this->prepareHeading( $doc, $node, $sectionNumber + 1, $this->scriptsEnabled );
 				if ( $sectionBody->hasChildNodes() ) {
 					// Apply transformations to the section body
 					$this->filterContentInSection( $sectionBody, $doc, $sectionNumber, $transformOptions );
@@ -720,25 +722,21 @@ class MobileFormatter extends HtmlFormatter {
 	 * Prepare section headings, add required classes and onclick actions
 	 *
 	 * @param DOMDocument $doc
-	 * @param array $headings
+	 * @param DOMElement $heading
+	 * @param integer $sectionNumber
 	 * @param bool $isCollapsible
 	 */
-	private function prepareHeadings( DOMDocument $doc, array $headings, $isCollapsible ) {
-		$sectionNumber = 0;
-		// Mark the top level headings which could control collapsing
-		foreach ( $headings as $heading ) {
-			$sectionNumber += 1;
-			$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
-			$heading->setAttribute( 'class', $className . 'section-heading' );
-			if ( $isCollapsible ) {
-				$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
-			}
-
-			// prepend indicator
-			$indicator = $doc->createElement( 'div' );
-			$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
-			$heading->insertBefore( $indicator, $heading->firstChild );
+	private function prepareHeading( DOMDocument $doc, $heading, $sectionNumber, $isCollapsible ) {
+		$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
+		$heading->setAttribute( 'class', $className . 'section-heading' );
+		if ( $isCollapsible ) {
+			$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
 		}
+
+		// prepend indicator
+		$indicator = $doc->createElement( 'div' );
+		$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
+		$heading->insertBefore( $indicator, $heading->firstChild );
 	}
 
 	/**
