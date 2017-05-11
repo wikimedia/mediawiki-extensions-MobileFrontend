@@ -379,6 +379,33 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	}
 
 	/**
+	 * Get Echo notification target user
+	 * @param User $user
+	 * @return MWEchoNotifUser
+	 */
+	protected function getEchoNotifUser( User $user ) {
+		return MWEchoNotifUser::newFromUser( $user );
+	}
+
+	/**
+	 * Get the last time user has seen Echo notifications
+	 * @param User $user
+	 * @return string|bool Timestamp in TS_ISO_8601 format, or false if no stored time
+	 */
+	protected function getEchoSeenTime( User $user ) {
+		return EchoSeenTime::newFromUser( $user )->getTime( 'all', /*flags*/ 0, TS_ISO_8601 );
+	}
+
+	/**
+	 * Get formatted Echo notification count
+	 * @param int $count
+	 * @return string
+	 */
+	protected function getFormattedEchoNotificationCount( $count ) {
+		return EchoNotificationController::formatNotificationCount( $count );
+	}
+
+	/**
 	 * Prepares the user button.
 	 * @param QuickTemplate $tpl
 	 */
@@ -402,8 +429,8 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 				// Don't show the secondary button at all
 				$notificationsTitle = null;
 			} else {
-				$notifUser = MWEchoNotifUser::newFromUser( $user );
-				$echoSeenTime = EchoSeenTime::newFromUser( $user )->getTime( 'all', /*flags*/ 0, TS_ISO_8601 );
+				$notifUser = $this->getEchoNotifUser( $user );
+				$echoSeenTime = $this->getEchoSeenTime( $user );
 
 				$notificationsMsg = $this->msg( 'mobile-frontend-user-button-tooltip' )->text();
 				$notifLastUnreadTime = $notifUser->getLastUnreadNotificationTime();
@@ -412,10 +439,12 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 				$isZero = $count === 0;
 				$hasUnseen = (
 					$count > 0 &&
+					$echoSeenTime !== false &&
+					$notifLastUnreadTime !== false &&
 					$echoSeenTime < $notifLastUnreadTime->getTimestamp( TS_ISO_8601 )
 				);
 
-				$countLabel = EchoNotificationController::formatNotificationCount( $count );
+				$countLabel = $this->getFormattedEchoNotificationCount( $count );
 			}
 		} elseif ( !empty( $newtalks ) ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Mytalk' );
