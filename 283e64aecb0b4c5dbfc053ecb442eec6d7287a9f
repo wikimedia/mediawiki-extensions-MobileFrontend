@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_4a6f718f",
+        "filename": "resources/skins.minerva.print.styles/article.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-11T07:28:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_8448208e",
+      "range": {
+        "startLine": 47,
+        "startChar": 1,
+        "endLine": 47,
+        "endChar": 4
+      },
+      "revId": "283e64aecb0b4c5dbfc053ecb442eec6d7287a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_a44d249d",
         "filename": "resources/skins.minerva.print.styles/article.less",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2017-05-10T22:38:03Z",
       "side": 1,
       "message": "The commit message \"* Reset font size of tables to 16px\" does not seem to apply to infoboxes? If so, we should mention it.",
+      "revId": "283e64aecb0b4c5dbfc053ecb442eec6d7287a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2a66bdb7",
+        "filename": "resources/skins.minerva.print.styles/article.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-11T07:28:44Z",
+      "side": 1,
+      "message": "I\u0027ve updated the commit message but this is intentional per the mocks.",
+      "parentUuid": "0e1cb3f9_a44d249d",
       "revId": "283e64aecb0b4c5dbfc053ecb442eec6d7287a9f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
