@@ -225,7 +225,7 @@
 			 *  result in the set of results
 			 * @property {jQuery.Event} originalEvent The original event
 			 */
-			M.emit( 'search-result-click', {
+			this.emit( 'search-result-click', {
 				result: $result,
 				resultIndex: this.$results.index( $result ),
 				originalEvent: ev
@@ -262,7 +262,7 @@
 
 			// Show a spinner on top of search results
 			this.$spinner = this.$( '.spinner-container' );
-			M.on( 'search-start', function ( searchData ) {
+			this.on( 'search-start', function ( searchData ) {
 				if ( timer ) {
 					clearSearch();
 				}
@@ -270,7 +270,7 @@
 					self.$spinner.show();
 				}, SEARCH_SPINNER_DELAY - searchData.delay );
 			} );
-			M.on( 'search-results', clearSearch );
+			this.on( 'search-results', clearSearch );
 
 			// Hide the clear button if the search input is empty
 			if ( self.$input.val() === '' ) {
@@ -291,7 +291,7 @@
 			/**
 			 * @event search-show Fired after the search overlay is shown
 			 */
-			M.emit( 'search-show' );
+			this.emit( 'search-show' );
 		},
 
 		/**
@@ -340,7 +340,7 @@
 						 *  sent
 						 * @property {Object} data related to the current search
 						 */
-						M.emit( 'search-start', {
+						self.emit( 'search-start', {
 							query: query,
 							delay: delay
 						} );
@@ -373,7 +373,7 @@
 								 * @property {Object[]} results The results returned by the search
 								 *  API
 								 */
-								M.emit( 'search-results', {
+								self.emit( 'search-results', {
 									results: data.results
 								} );
 							}

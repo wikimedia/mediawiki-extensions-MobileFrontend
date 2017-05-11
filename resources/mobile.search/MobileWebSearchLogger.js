@@ -99,14 +99,15 @@
 	 * Convenience function that wires up an instance of the
 	 * MobileWebSearchLogger class to the search-* events emitted by the
 	 * search overlay.
+	 * @param {SearchOverlay} searchOverlay
 	 */
-	MobileWebSearchLogger.register = function () {
+	MobileWebSearchLogger.register = function ( searchOverlay ) {
 		var logger = new MobileWebSearchLogger();
 
-		M.on( 'search-show', logger.onSearchShow.bind( logger ) );
-		M.on( 'search-start', logger.onSearchStart.bind( logger ) );
-		M.on( 'search-results', logger.onSearchResults.bind( logger ) );
-		M.on( 'search-result-click', logger.onSearchResultClick.bind( logger ) );
+		searchOverlay.on( 'search-show', logger.onSearchShow.bind( logger ) );
+		searchOverlay.on( 'search-start', logger.onSearchStart.bind( logger ) );
+		searchOverlay.on( 'search-results', logger.onSearchResults.bind( logger ) );
+		searchOverlay.on( 'search-result-click', logger.onSearchResultClick.bind( logger ) );
 	};
 
 	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger );

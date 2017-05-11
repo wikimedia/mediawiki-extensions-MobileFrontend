@@ -2,6 +2,7 @@
 	var SearchOverlay = M.require( 'mobile.search/SearchOverlay' ),
 		SearchGateway = M.require( 'mobile.search.api/SearchGateway' ),
 		router = require( 'mediawiki.router' ),
+		searchLogger = M.require( 'mobile.search/MobileWebSearchLogger' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton();
 
 	/**
@@ -11,7 +12,8 @@
 	 * @ignore
 	 */
 	function openSearchOverlay( ev ) {
-		var $this = $( this ),
+		var overlay,
+			$this = $( this ),
 			searchTerm = $this.val(),
 			placeholder = $this.attr( 'placeholder' );
 
@@ -19,13 +21,15 @@
 		// The loading of SearchOverlay should never be done inside a callback
 		// as this will result in issues with input focus
 		// see https://phabricator.wikimedia.org/T156508#2977463
-		new SearchOverlay( {
+		overlay = new SearchOverlay( {
 			router: router,
 			gatewayClass: SearchGateway,
 			api: new mw.Api(),
 			searchTerm: searchTerm,
 			placeholderMsg: placeholder
-		} ).show();
+		} );
+		searchLogger.register( overlay );
+		overlay.show();
 		router.navigate( '/search' );
 	}
 
@@ -48,7 +52,5 @@
 			// Apparently needed for main menu to work correctly.
 			.prop( 'readonly', true );
 	}
-
-	M.require( 'mobile.search/MobileWebSearchLogger' ).register();
 
 }( mw.mobileFrontend, jQuery ) );
