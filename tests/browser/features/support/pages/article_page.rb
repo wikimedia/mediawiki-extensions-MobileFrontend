@@ -31,6 +31,8 @@ class ArticlePage
   end
   li(:upload_page_action, id: 'ca-upload')
 
+  div(:signup_edit_tutorial, class: 'pointer-overlay-tutorial')
+
   a(:edit_link, text: 'Edit')
   div(:anon_editor_warning, css: '.anon-msg')
   div(:editor_overlay, class: 'editor-overlay')

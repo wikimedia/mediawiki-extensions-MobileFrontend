@@ -11,6 +11,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 */
 ( function ( M, $ ) {
 	var PageActionOverlay = require( 'mobile.pointerOverlay' ),
+		skin = M.require( 'skins.minerva.scripts/skin' ),
 		util = M.require( 'mobile.startup/util' ),
 		escapeHash = util.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
@@ -55,12 +56,16 @@ editable page whilst logged in, although you must be in test group A to see the 
 
 		editOverlay = new PageActionOverlay( {
 			target: target,
-			skin: M.require( 'skins.minerva.scripts/skin' ),
+			skin: skin,
+			isTutorial: true,
 			className: 'slide active editing',
 			appendToElement: '#mw-mf-page-center',
 			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-tutorial-cancel' )
+		} );
+		skin.mainMenu.on( 'open', function () {
+			editOverlay.hide();
 		} );
 		editOverlay.show();
 		$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
