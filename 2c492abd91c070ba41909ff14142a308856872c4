@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_f5789def",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T17:55:21Z",
+      "side": 1,
+      "message": "I\u0027ve added a comment about how we can test in the test file at https://gerrit.wikimedia.org/r/#/c/352614/3/tests/qunit/mobile.references/test_ReferencesDrawer.js\n\nThis is a problem because we can test the function without changing the function signature and without making the function more complicated.",
+      "parentUuid": "0e1cb3f9_8a3d898c",
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_2714b6eb",
         "filename": "resources/mobile.references/ReferencesDrawer.js",
         "patchSetId": 3
@@ -72,6 +90,30 @@
       "side": 1,
       "message": "That was also the case in resources/skins.minerva.scripts/references.js\nand it seems to be intentional\n\nI don\u0027t completely understand the reasoning behind calling this in a timeout but I\u0027m sure there was a good reason and I do not feel comfortable changing that!",
       "parentUuid": "0e1cb3f9_2714b6eb",
+      "range": {
+        "startLine": 95,
+        "startChar": 5,
+        "endLine": 96,
+        "endChar": 48
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_753ecd27",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T17:55:21Z",
+      "side": 1,
+      "message": "In https://phabricator.wikimedia.org/diffusion/EMFR/browse/master/resources/skins.minerva.scripts/references.js;cc7beb67f14f85cf7e91d3461723633df39a4643$67\nthe function is run only if the drawer is invisible, unlike in here.",
+      "parentUuid": "0e1cb3f9_6a459517",
       "range": {
         "startLine": 95,
         "startChar": 5,
@@ -131,6 +173,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_154431bc",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T17:55:21Z",
+      "side": 1,
+      "message": "That makes sense. We may want to update the description of the function to include the extra work the new function is doing then.",
+      "parentUuid": "0e1cb3f9_4a48d132",
+      "range": {
+        "startLine": 97,
+        "startChar": 6,
+        "endLine": 100,
+        "endChar": 5
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_07f652c2",
         "filename": "resources/mobile.references/ReferencesDrawer.js",
         "patchSetId": 3
@@ -171,6 +237,29 @@
         "startChar": 4,
         "endLine": 106,
         "endChar": 8
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_d57b19ea",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T17:55:21Z",
+      "side": 1,
+      "message": "This can be modified as seen below code without changing the showReference() function signature:\n\n\t\tthis.drawer.showReference( \u0027#cite_note-bad\u0027, this.page, \u00271\u0027 );\n\t\tsetTimeout( function () {\n\t\t\tassert.ok( hideSpy.calledOnce, \u0027Hide is called.\u0027 );\n\t\t\tdone();\n\t\t}, 0 );",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
       },
       "revId": "2c492abd91c070ba41909ff14142a308856872c4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
