@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_8415759e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T09:42:43Z",
+      "side": 1,
+      "message": "Type declarations for PHP\u0027s build in scalar types was introduced in PHP 7.0.0. By the looks of it, the HHVM version that we\u0027re using (3.2.14) either doesn\u0027t support \u0027em or isn\u0027t configured to.",
+      "range": {
+        "startLine": 408,
+        "startChar": 55,
+        "endLine": 408,
+        "endChar": 58
+      },
+      "revId": "b77553e6b0d216020c00708ad0af57911fbef417",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
