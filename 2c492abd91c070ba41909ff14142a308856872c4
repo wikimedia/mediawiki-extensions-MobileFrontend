@@ -264,6 +264,30 @@
       "revId": "2c492abd91c070ba41909ff14142a308856872c4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_50ce37ba",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T19:02:25Z",
+      "side": 1,
+      "message": "QUnit actually handles thenables being returned from the test function, so you could rewrite Bmansurov\u0027s suggestion as:\n\n    var promise \u003d $.Deferred().resolve( false );\n\n    this.sandbox.stub( this.gateway, \u0027getReference\u0027 ).returns( promise );\n\n    this.drawer.showReference( \u0027#cite_note-bad\u0027, this.page, \u00271\u0027 );\n\n    return promise.then( function () {\n      assert.ok( hideSpy.calledOnce, \u0027Hide is called.\u0027 );\n    } );",
+      "parentUuid": "0e1cb3f9_d57b19ea",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
