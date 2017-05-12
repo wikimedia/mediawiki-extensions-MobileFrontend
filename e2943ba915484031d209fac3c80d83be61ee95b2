@@ -16,6 +16,24 @@
       "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ff5b9e24",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T11:07:57Z",
+      "side": 1,
+      "message": "Skins are created here:\nhttps://github.com/wikimedia/mediawiki/blob/master/includes/ServiceWiring.php#L141\n\nRemember MobileFrontend creates a skin a second time in a hacky way (as Piotr discovered in his bug report).\n\nYou can easily replicate this by switching useskin\u003dminerva\u0026useformat\u003ddesktop",
+      "parentUuid": "0e1cb3f9_5f6acab2",
+      "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
