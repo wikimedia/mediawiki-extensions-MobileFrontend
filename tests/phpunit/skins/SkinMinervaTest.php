@@ -3,11 +3,34 @@
 namespace Tests\MobileFrontend\Skins;
 
 use MediaWikiTestCase;
+use MobileUI;
+use MWTimestamp;
 use OutputPage;
+use QuickTemplate;
 use RequestContext;
 use SkinMinerva;
+use SpecialPage;
 use Title;
+use User;
 use Wikimedia\TestingAccessWrapper;
+
+class Template extends QuickTemplate {
+	public function execute() {
+	}
+}
+
+class EchoNotifUser {
+	public function __construct( $echoLastUnreadNotificationTime, $echoNotificationCount ) {
+		$this->echoLastUnreadNotificationTime = $echoLastUnreadNotificationTime;
+		$this->echoNotificationCount = $echoNotificationCount;
+	}
+	public function getLastUnreadNotificationTime() {
+		return $this->echoLastUnreadNotificationTime;
+	}
+	public function getNotificationCount() {
+		return $this->echoNotificationCount;
+	}
+}
 
 /**
  * @covers SkinMinerva
@@ -164,5 +187,202 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			[ false, true, 'skins.minerva.backtotop', true ],
 			[ false, false, 'skins.minerva.backtotop', false ],
 		];
+	}
+
+	/**
+	 * Test the notification user button
+	 *
+	 * @covers SkinMinerva::prepareUserButton
+	 * @dataProvider providePrepareUserButton
+	 * @param array|string $expectedSecondaryButtonData Expected test case outcome
+	 * @param string $message Test message
+	 * @param Title $title
+	 * @param bool $useEcho Whether to use Extension:Echo
+	 * @param bool $isUserLoggedIn
+	 * @param string $newtalks New talk page messages for the current user
+	 * @param MWTimestamp|bool $echoLastUnreadNotificationTime Timestamp or false
+	 * @param int $echoNotificationCount
+	 * @param string|bool $echoSeenTime String in format TS_ISO_8601 or false
+	 * @param string $formattedEchoNotificationCount
+	 */
+	public function testPrepareUserButton(
+		$expectedSecondaryButtonData, $message, $title, $useEcho, $isUserLoggedIn,
+		$newtalks, $echoLastUnreadNotificationTime = false,
+		$echoNotificationCount = false, $echoSeenTime = false,
+		$formattedEchoNotificationCount = false
+	) {
+		$user = $this->getMockBuilder( User::class )
+			->disableOriginalConstructor()
+			->setMethods( [ 'isLoggedIn' ] )
+			->getMock();
+		$user->expects( $this->any() )
+			->method( 'isLoggedIn' )
+			->will( $this->returnValue( $isUserLoggedIn ) );
+
+		$skin = TestingAccessWrapper::newFromObject(
+			$this->getMockBuilder( SkinMinerva::class )
+				->disableOriginalConstructor()
+				->setMethods( [ 'getTitle', 'getUser', 'getNewtalks', 'useEcho',
+								'getEchoNotifUser', 'getEchoSeenTime',
+								'getFormattedEchoNotificationCount' ] )
+				->getMock()
+		);
+		$skin->expects( $this->any() )
+			->method( 'getTitle' )
+			->will( $this->returnValue( $title ) );
+		$skin->expects( $this->any() )
+			->method( 'getUser' )
+			->will( $this->returnValue( $user ) );
+		$skin->expects( $this->any() )
+			->method( 'getNewtalks' )
+			->will( $this->returnValue( $newtalks ) );
+		$skin->expects( $this->any() )
+			->method( 'useEcho' )
+			->will( $this->returnValue( $useEcho ) );
+		$skin->expects( $this->any() )
+			->method( 'getEchoNotifUser' )
+			->will( $this->returnValue(
+				new EchoNotifUser(
+					$echoLastUnreadNotificationTime, $echoNotificationCount
+				)
+			) );
+		$skin->expects( $this->any() )
+			->method( 'getEchoSeenTime' )
+			->will( $this->returnValue( $echoSeenTime ) );
+		$skin->expects( $this->any() )
+			->method( 'getFormattedEchoNotificationCount' )
+			->will( $this->returnValue( $formattedEchoNotificationCount ) );
+
+		$tpl = new Template();
+		$skin->prepareUserButton( $tpl );
+		$this->assertEquals(
+			$expectedSecondaryButtonData,
+			$tpl->get( 'secondaryButtonData' ),
+			$message
+		);
+	}
+
+	/**
+	 * Utility function that returns the expected secondary button data given parameters
+	 * @param Title $title Page title
+	 * @param string $notificationsMsg
+	 * @param string $notificationsTitle
+	 * @param string $countLabel
+	 * @param bool $isZero
+	 * @param bool $hasUnseen
+	 */
+	private function getSecondaryButtonExpectedResult(
+		$title,
+		$notificationsMsg,
+		$notificationsTitle,
+		$countLabel,
+		$isZero,
+		$hasUnseen
+	) {
+		return [
+			'class' => MobileUI::iconClass( 'notifications' ),
+			'title' => $notificationsMsg,
+			'url' => SpecialPage::getTitleFor( $notificationsTitle )
+				->getLocalURL(
+					[ 'returnto' => $title->getPrefixedText() ] ),
+			'notificationCount' => $countLabel,
+			'isNotificationCountZero' => $isZero,
+			'hasUnseenNotifications' => $hasUnseen
+		];
+	}
+
+	/**
+	 * Data provider for the test case testPrepareUserButton with Echo enabled
+	 * @param Title @title Page title
+	 */
+	private function providePrepareUserButtonEcho( Title $title ) {
+		return [
+			[ '', 'Echo, not logged in, no talk page alerts',
+			  $title, true, false, '' ],
+			[ '', 'Echo, logged in, no talk page alerts',
+			  Title::newFromText( 'Special:Notifications' ), true, true, '' ],
+			[ '', 'Echo, logged in, talk page alert',
+			  Title::newFromText( 'Special:Notifications' ), true, true,
+			  'newtalks alert' ],
+			[ $this->getSecondaryButtonExpectedResult(
+				$title,
+				'Show my notifications',
+				'Notifications',
+				'99+',
+				false,
+				true
+			  ), 'Echo, logged in, no talk page alerts, 110 notifications, ' +
+			  'last un-read nofication time after last echo seen time',
+			  $title, true, true, '',
+			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			  110, '2017-05-11T20:23:20Z', '99+' ],
+			[ $this->getSecondaryButtonExpectedResult(
+				$title,
+				'Show my notifications',
+				'Notifications',
+				'3',
+				false,
+				false
+			  ), 'Echo, logged in, no talk page alerts, 3 notifications, ' +
+			  'last un-read nofication time before last echo seen time',
+			  $title, true, true, '',
+			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			  3, '2017-05-11T22:23:20Z', '3' ],
+			[ $this->getSecondaryButtonExpectedResult(
+				$title,
+				'Show my notifications',
+				'Notifications',
+				'5',
+				false,
+				false
+			  ), 'Echo, logged in, no talk page alerts, 5 notifications, ' +
+			  'no last un-read nofication time',
+			  $title, true, true, '', false, 5, '2017-05-11T22:23:20Z', '5' ],
+			[ $this->getSecondaryButtonExpectedResult(
+				$title,
+				'Show my notifications',
+				'Notifications',
+				'0',
+				true,
+				false
+			  ), 'Echo, logged in, no talk page alerts, 0 notifications, ' +
+			  'no last echo seen time',
+			  $title, true, true, '',
+			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			  0, false, '0' ]
+		];
+	}
+
+	/**
+	 * Data provider for the test case testPrepareUserButton with Echo disabled
+	 * @param Title @title Page title
+	 */
+	private function providePrepareUserButtonNoEcho( Title $title ) {
+		return [
+			[ '', 'No Echo, not logged in, no talk page alerts',
+			  $title, false, false, '' ],
+			[ '', 'No Echo, logged in, no talk page alerts',
+			  $title, false, true, '' ],
+			[ $this->getSecondaryButtonExpectedResult(
+				$title,
+				'You have new messages on your talk page',
+				'Mytalk',
+				'',
+				true,
+				false
+			  ), 'No Echo, not logged in, talk page alert',
+			  $title, false, false, 'newtalks alert' ],
+		];
+	}
+
+	/**
+	 * Data provider for the test case testPrepareUserButton
+	 */
+	public function providePrepareUserButton() {
+		$title = Title::newFromText( 'Test' );
+		return array_merge(
+			$this->providePrepareUserButtonEcho( $title ),
+			$this->providePrepareUserButtonNoEcho( $title )
+		);
 	}
 }
