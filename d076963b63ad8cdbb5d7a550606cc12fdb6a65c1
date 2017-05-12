@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_70425b15",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T19:12:17Z",
+      "side": 1,
+      "message": "Following on from Bmansurov\u0027s comment below, you can get the promise object here.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 25
+      },
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_7559ed00",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 14
@@ -53,6 +76,24 @@
       "writtenOn": "2017-05-12T18:09:42Z",
       "side": 1,
       "message": "See my comment to an earlier patchset regarding this.",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_1048bf31",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T19:12:17Z",
+      "side": 1,
+      "message": "s/Deferred/Promise/",
+      "parentUuid": "0e1cb3f9_959121fe",
       "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
