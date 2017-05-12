@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_7559ed00",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T17:55:21Z",
+      "side": 1,
+      "message": "You should be returning a promise here: result.promise().",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
