@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e1cb3f9_909fefb8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-12T18:48:00Z",
+      "side": 1,
+      "message": "missing @return tag",
+      "revId": "19b35f7b80a0d51813b799ef834e68379dca5eac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_d5a6b94f",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 4
