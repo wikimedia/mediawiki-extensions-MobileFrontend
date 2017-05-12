@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_e40a3129",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T10:51:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_2eb271e5",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_8ebdbdaf",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 9
@@ -121,6 +139,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_bf00c605",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T10:51:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_6ed709f3",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_eee239d0",
         "filename": "includes/MwApiContentProvider.php",
         "patchSetId": 9
@@ -138,6 +174,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_0408852e",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T10:51:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_eee239d0",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_cecad54a",
         "filename": "includes/MwApiContentProvider.php",
         "patchSetId": 9
@@ -149,6 +203,24 @@
       "writtenOn": "2017-05-05T23:46:06Z",
       "side": 1,
       "message": "A hint, instead of isset() it\u0027s better to do array_key_exists.\n\nisset() will return false both when $json doesn\u0027t exists or array index doesn\u0027t exists. \narray_key_exists() will throw a notice when $json doesn\u0027t exists.",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_7f0a2e26",
+        "filename": "includes/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T10:51:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_cecad54a",
       "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
