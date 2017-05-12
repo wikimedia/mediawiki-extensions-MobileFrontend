@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e1cb3f9_55e4e9a2",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T18:09:42Z",
+      "side": 1,
+      "message": "Since the wording is very similar to \"when a reference does not exist\" above, I\u0027d change this to something general error message as the property name ERROR_OTHER suggests.",
+      "range": {
+        "startLine": 35,
+        "startChar": 68,
+        "endLine": 35,
+        "endChar": 99
+      },
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_7559ed00",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 14
@@ -13,6 +36,46 @@
       "writtenOn": "2017-05-12T17:55:21Z",
       "side": 1,
       "message": "You should be returning a promise here: result.promise().",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_959121fe",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T18:09:42Z",
+      "side": 1,
+      "message": "See my comment to an earlier patchset regarding this.",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_95b84176",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T18:09:42Z",
+      "side": 1,
+      "message": "Regarding this too I\u0027ve left a comment to an earlier patch. Besides to what\u0027s there, I\u0027d suggest we don\u0027t copy paste this code as is (especially to multiple places, e.g. below too) as according to https://gerrit.wikimedia.org/r/#/c/135270/, no strong reason was indicated when timeout was first used. I suggest we simplify the code to drawer.show().",
+      "range": {
+        "startLine": 96,
+        "startChar": 4,
+        "endLine": 97,
+        "endChar": 47
+      },
       "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
