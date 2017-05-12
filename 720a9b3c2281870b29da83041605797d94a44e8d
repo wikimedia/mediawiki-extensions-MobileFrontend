@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_e4a6b14f",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T10:59:00Z",
+      "side": 1,
+      "message": "Not sure what you\u0027re going for here but it might be easier on the eye to list the parameters out like:\n\n    function foo(\n      $bar,\n      $baz,\n      $qux,\n      $quux\n    ) {\n    }",
+      "range": {
+        "startLine": 276,
+        "startChar": 0,
+        "endLine": 276,
+        "endChar": 9
+      },
+      "revId": "720a9b3c2281870b29da83041605797d94a44e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_4483ddad",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T10:59:00Z",
+      "side": 1,
+      "message": "You can make this slightly more readable by using strtotime \u003chttp://php.net/manual/en/function.strtotime.php\u003e.\n\nThis applies to the instances below too.",
+      "range": {
+        "startLine": 322,
+        "startChar": 31,
+        "endLine": 322,
+        "endChar": 67
+      },
+      "revId": "720a9b3c2281870b29da83041605797d94a44e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_5f05ea11",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-12T10:59:00Z",
+      "side": 1,
+      "message": "I recommend that you break this data provider into a couple of distinct cases, e.g. logged in/out or echo/no echo, using the function names as inline documentation i.e.\n\n    function provideFoo() {\n      return array_merge(\n        provideFooCaseA(),\n        provideFooCaseB()\n      );\n    }\n\nUnfortunately for us, we\u0027re not using a version of PHPUnit that supports multiple @dataProvider annotations (PHPUnit 5.7+).",
+      "range": {
+        "startLine": 291,
+        "startChar": 0,
+        "endLine": 358,
+        "endChar": 4
+      },
+      "revId": "720a9b3c2281870b29da83041605797d94a44e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
