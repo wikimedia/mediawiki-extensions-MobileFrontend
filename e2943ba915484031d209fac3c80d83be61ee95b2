@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_9a7070a5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-12T14:30:46Z",
+      "side": 1,
+      "message": "each Skin implements ContextSource interface - we should use this interface (built in setContext() method).\n\n@jdlrobson - code you just pasted are even bigger mess as Skin, nor SkinTemplate nor SkinVector do no implement `__construct($skinName);`. It\u0027s a big mess and I wouldn\u0027t touch Skin constructor for now, at least until we fix how core handles Skin initialization.\n\nAnyway in this we call $this-\u003egetTitle() which calls $this-\u003egetContext() which logs a debug statement and uses the global context. It\u0027s a technical debt.\n\nThe only \"easy\" solution is to create methods for \"isUserPage()\" and `getUserPage()` and move this logic there.",
+      "parentUuid": "0e1cb3f9_7fd22ed7",
+      "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_dfbd7a17",
         "filename": "tests/phpunit/skins/SkinMinervaPageActionsTest.php",
         "patchSetId": 2
