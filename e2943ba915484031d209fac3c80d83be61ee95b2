@@ -37,6 +37,42 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_1fd8d2f3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T13:29:54Z",
+      "side": 1,
+      "message": "Can you share the bug report you\u0027re referring to?",
+      "parentUuid": "0e1cb3f9_ff5b9e24",
+      "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_7fd22ed7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T13:29:54Z",
+      "side": 1,
+      "message": "Here: https://phabricator.wikimedia.org/diffusion/EMFR/browse/master/includes/MobileFrontend.hooks.php;cc7beb67f14f85cf7e91d3461723633df39a4643$52",
+      "parentUuid": "0e1cb3f9_5f6acab2",
+      "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_dfbd7a17",
         "filename": "tests/phpunit/skins/SkinMinervaPageActionsTest.php",
         "patchSetId": 2
@@ -48,6 +84,24 @@
       "writtenOn": "2017-05-12T11:13:07Z",
       "side": 1,
       "message": "Note this and the line that follows attempt to do exactly the same so it should be enough to simply not pass this as a parameter.",
+      "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_df525a6a",
+        "filename": "tests/phpunit/skins/SkinMinervaPageActionsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-12T13:29:54Z",
+      "side": 1,
+      "message": "Good catch. Not passing the request context is not an option without other changes because the constructor of SkinMinerva is accessing the title object which uses request context\u0027s title behind the scenes.",
+      "parentUuid": "0e1cb3f9_dfbd7a17",
       "revId": "e2943ba915484031d209fac3c80d83be61ee95b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
