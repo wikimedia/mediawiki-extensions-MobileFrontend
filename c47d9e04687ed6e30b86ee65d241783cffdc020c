@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_9f8ce23b",
+        "filename": "includes/DefaultContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T12:54:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_4e900547",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_0e9a0d67",
         "filename": "includes/IContentProvider.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2017-05-05T23:46:06Z",
       "side": 1,
       "message": "interface shouldn\u0027t contain static functions. Static methods are class level methods, they belong to the implementation, to the class, not to an instance of it. The interface defines the instance of class.\n\nIn this scenario you should have a separate factory that knows how to build each IContentProvider (would be awesome to have a CompilerPass but our DI isn\u0027t ready for such magic yet). \n\nAs you see the DefaultContentProvider doesn\u0027t need GlobalVarConfig, there is no need to specify that variable everywhere",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ffa07e9c",
+        "filename": "includes/IContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T12:54:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_0e9a0d67",
       "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -88,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_5faf2a91",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T12:54:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_8ebdbdaf",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_0eb1addc",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 9
@@ -105,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_3f97d64c",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T12:54:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_0eb1addc",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_2e8cb139",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 9
@@ -116,6 +188,24 @@
       "writtenOn": "2017-05-05T23:46:06Z",
       "side": 1,
       "message": "previous this hook was executed before $formatter-\u003efilterContent(), now call it after, is it on purpose. If yes why?",
+      "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_7fb46ee4",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-12T12:54:47Z",
+      "side": 1,
+      "message": "The purpose of the hook is to make amendments to the MobileFormatter before it runs so I\u0027ve moved it back. This was an oversight.",
+      "parentUuid": "0e1cb3f9_2e8cb139",
       "revId": "c47d9e04687ed6e30b86ee65d241783cffdc020c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
