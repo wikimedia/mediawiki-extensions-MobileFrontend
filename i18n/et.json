@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-tutorial-cancel": "Ei, aitäh",
 	"mobile-frontend-editor-tutorial-confirm": "Alusta redigeerimist",
 	"mobile-frontend-editor-tutorial-summary": "Proovi lehekülge \"$1\" parandada.<br />Ära karda kasutada märgistuskeelt.",
-	"mobile-frontend-editor-unavailable": "Mobiiliga redigeerimine pole praegu sinu veebilehitsejas saadaval. Palun proovi teist veebilehitsejat.",
+	"mobile-frontend-editor-unavailable": "Mobiiliga redigeerimine pole praegu sinu brauseris saadaval. Palun proovi teist brauserit.",
 	"mobile-frontend-editor-undo-unsupported": "Tagasivõtmine pole praegu mobiiliseadmetes toetatud.",
 	"mobile-frontend-editor-uploadenable": "Et redigeerida, laadi esmalt pilt üles.",
 	"mobile-frontend-editor-viewing-source-page": "<span>Lehekülje $1<strong>lähteteksti vaatamine</strong></span>",
@@ -160,10 +160,10 @@
 	"mobile-frontend-nearby-noresults": "Valitseb tühjus... Läheduses paiknevate nähtuste kohta ei leidu ühtegi lehekülge.",
 	"mobile-frontend-nearby-noresults-guidance": "Proovi alustada uue leheküljega või lisada olemasolevale asukoht.",
 	"mobile-frontend-nearby-permission": "{{GRAMMAR:genitive|{{SITENAME}}}} lähikonna funktsioonil pole luba juurdepääsuks sinu asukohale.",
-	"mobile-frontend-nearby-permission-guidance": "Palun veendu, et annad loa näidata oma asukohta. Võimalik, et sul on vaja veebilehitseja asukohasätted üle kontrollida.",
+	"mobile-frontend-nearby-permission-guidance": "Palun veendu, et annad loa näidata oma asukohta. Võimalik, et sul on vaja brauseri asukohasätted üle kontrollida.",
 	"mobile-frontend-nearby-refresh": "Värskenda asukohta",
-	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu veebilehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
-	"mobile-frontend-nearby-requirements-guidance": "Proovi teist veebilehitsejat või luba JavaScript, juhul kui oled selle keelanud.",
+	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu brauser {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
+	"mobile-frontend-nearby-requirements-guidance": "Proovi teist brauserit või luba JavaScript, juhul kui oled selle keelanud.",
 	"mobile-frontend-nearby-title": "Lähikond",
 	"mobile-frontend-news-items": "Päevakajaline",
 	"mobile-frontend-opt-in-explain": "Kui proovid beetat, antakse sulle ligipääs uutele katselistele funktsioonidele, mille juures võid kokku puutuda tarkvaravigadega.",
@@ -283,5 +283,6 @@
 	"mobile-frontend-meta-data-issues-categories": "Selle kategooria kohta",
 	"mobile-frontend-loading-message": "Laadimine…",
 	"mobile-frontend-panel-ok": "Sobib",
-	"mobile-frontend-panel-cancel": "Ei, aitäh"
+	"mobile-frontend-panel-cancel": "Ei, aitäh",
+	"mobile-frontend-notifications-filter-title": "Teavituste filtrimine"
 }
