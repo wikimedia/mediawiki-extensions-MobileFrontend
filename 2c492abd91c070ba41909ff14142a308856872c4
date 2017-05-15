@@ -288,6 +288,30 @@
       "revId": "2c492abd91c070ba41909ff14142a308856872c4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_166e74c4",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "Done. The stub method is a nice idea.",
+      "parentUuid": "0e1cb3f9_50ce37ba",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "2c492abd91c070ba41909ff14142a308856872c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
