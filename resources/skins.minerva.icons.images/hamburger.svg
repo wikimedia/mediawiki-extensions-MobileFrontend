@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        icon-export
-    </title>
-    <g id="Page-1" fill="none" fill-rule="evenodd">
-        <g id="icon-export" fill="#54595D">
-            <g id="menuIcon">
-                <path d="M21 19H2v-2h19v2zm0-6H2v-2h19v2zm0-6H2V5h19v2z" id="Combined-Shape"/>
-            </g>
-        </g>
-    </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon-export</title><g id="Page-1" fill="none" fill-rule="evenodd"><g id="icon-export" fill="#54595D"><g id="menuIcon"><path d="M21 19H2v-2h19v2zm0-6H2v-2h19v2zm0-6H2V5h19v2z" id="Combined-Shape"/></g></g></g></svg>

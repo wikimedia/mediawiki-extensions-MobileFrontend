@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "grunt test && npm run doc",
+		"test": "grunt test && npm run doc && dev-scripts/svg_check.sh",
 		"doc": "jsduck",
 		"lint:modules": "resource-modules ./"
 	},
