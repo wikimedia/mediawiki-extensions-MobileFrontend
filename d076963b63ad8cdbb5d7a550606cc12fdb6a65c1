@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_76481061",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_55e4e9a2",
+      "range": {
+        "startLine": 35,
+        "startChar": 68,
+        "endLine": 35,
+        "endChar": 99
+      },
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_70425b15",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 14
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_d60b1c25",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "It might be rejected so it has to be done below.",
+      "parentUuid": "0e1cb3f9_70425b15",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 25
+      },
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_7559ed00",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 14
@@ -59,6 +107,24 @@
       "writtenOn": "2017-05-12T17:55:21Z",
       "side": 1,
       "message": "You should be returning a promise here: result.promise().",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_761a5075",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "0e1cb3f9_7559ed00",
       "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -100,6 +166,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_962cc490",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_1048bf31",
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_95b84176",
         "filename": "resources/mobile.references/ReferencesDrawer.js",
         "patchSetId": 14
@@ -111,6 +195,30 @@
       "writtenOn": "2017-05-12T18:09:42Z",
       "side": 1,
       "message": "Regarding this too I\u0027ve left a comment to an earlier patch. Besides to what\u0027s there, I\u0027d suggest we don\u0027t copy paste this code as is (especially to multiple places, e.g. below too) as according to https://gerrit.wikimedia.org/r/#/c/135270/, no strong reason was indicated when timeout was first used. I suggest we simplify the code to drawer.show().",
+      "range": {
+        "startLine": 96,
+        "startChar": 4,
+        "endLine": 97,
+        "endChar": 47
+      },
+      "revId": "d076963b63ad8cdbb5d7a550606cc12fdb6a65c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_b63788df",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-15T09:25:58Z",
+      "side": 1,
+      "message": "Okay... :) I don\u0027t like this line at all, and I\u0027d rather not change the existing behaviour here until I\u0027ve understood it better and convinced myself it\u0027s not needed, but that said if this does break things we\u0027ll find out sooner if it\u0027s in master even if this makes me a little nervous.\nI should note although the commit message doesn\u0027t say anything, the inline comment does say \"use setTimeout so that browser calculates dimensions before show()\" so it\u0027s not completely undocumented but equally I don\u0027t know exactly what this means.\n\nIt has been removed!",
+      "parentUuid": "0e1cb3f9_95b84176",
       "range": {
         "startLine": 96,
         "startChar": 4,
