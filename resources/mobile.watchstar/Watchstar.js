@@ -184,7 +184,7 @@
 					toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 				}
 			} ).fail( function () {
-				toast.show( 'mobile-frontend-watchlist-error', 'error' );
+				toast.show( mw.msg( 'mobile-frontend-watchlist-error' ), 'error' );
 			} );
 		},
 

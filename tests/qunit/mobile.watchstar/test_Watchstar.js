@@ -63,7 +63,7 @@
 			$el = w.$el;
 
 		$el.trigger( 'click' );
-		assert.ok( this.spy.calledWith( 'csrf', {
+		assert.ok( this.spy.calledWith( 'watch', {
 			action: 'watch',
 			pageids: 42
 		} ), 'The watch happened' );
@@ -84,7 +84,7 @@
 			$el = w.$el;
 
 		$el.trigger( 'click' );
-		assert.ok( this.spy.calledWith( 'csrf', {
+		assert.ok( this.spy.calledWith( 'watch', {
 			action: 'watch',
 			unwatch: true,
 			pageids: 42
