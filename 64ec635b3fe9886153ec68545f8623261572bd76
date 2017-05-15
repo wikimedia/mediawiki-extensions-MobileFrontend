@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_f6ce60b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-15T09:48:01Z",
+      "side": 1,
+      "message": "Was this not the case before?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "64ec635b3fe9886153ec68545f8623261572bd76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_16d2f45d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-15T09:48:01Z",
+      "side": 1,
+      "message": "Why is this change being made?",
+      "revId": "64ec635b3fe9886153ec68545f8623261572bd76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_b6c9c8b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-15T09:48:01Z",
+      "side": 1,
+      "message": "See the above. Why?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 13
+      },
+      "revId": "64ec635b3fe9886153ec68545f8623261572bd76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_76ec9020",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 726,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-15T09:48:01Z",
+      "side": 1,
+      "message": "s/I/i",
+      "range": {
+        "startLine": 726,
+        "startChar": 11,
+        "endLine": 726,
+        "endChar": 12
+      },
+      "revId": "64ec635b3fe9886153ec68545f8623261572bd76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
