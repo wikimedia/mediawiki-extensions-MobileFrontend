@@ -142,6 +142,19 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. $this->makeSectionHtml( 1, $refplaceholder, true );
 
 		return [
+			// Nested headings are not wrapped
+			[
+				'<div class="wrapper"><p>Text goes here i think 2testestestestest</p>'
+					. '<h2>Heading</h2>I am awesome</div>'
+					. 'Text<h2>test</h2><p>more text</p>',
+				$this->makeSectionHtml( 0,
+					'<div class="wrapper"><p>Text goes here i think 2testestestestest</p>'
+						. '<h2>Heading</h2>I am awesome</div>Text' )
+					. $this->makeSectionHeading( 'h2', 'test' )
+					. $this->makeSectionHtml( 1, '<p>more text</p>' ),
+				$enableSections,
+				false, false, false
+			],
 			// # Lazy loading images
 			// Main page not impacted
 			[
