@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_516b96ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-15T14:41:36Z",
+      "side": 1,
+      "message": "This is a solution that works, but I was also wondering why not fall back to parsing HTML and displaying the reference in a drawer? Jumping to an anchor greatly differs from opening a reference drawer in the user\u0027s eyes. For better user experience I\u0027d like to avoid that if possible. What\u0027s preventing us from parsing the HTML to find the false reference?",
+      "range": {
+        "startLine": 10,
+        "startChar": 39,
+        "endLine": 10,
+        "endChar": 63
+      },
+      "revId": "26d0a5504da61c4a65cc454873724ba5ccda159e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_f1b2ea91",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-15T14:41:36Z",
+      "side": 1,
+      "message": "This not true anymore.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 45
+      },
+      "revId": "26d0a5504da61c4a65cc454873724ba5ccda159e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_91ea8e9b",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-15T14:41:36Z",
+      "side": 1,
+      "message": "Since you\u0027re showing the drawer here, what\u0027s the benefit of calling \u0027show()\u0027 again on lines 97 and 108?",
+      "range": {
+        "startLine": 91,
+        "startChar": 3,
+        "endLine": 91,
+        "endChar": 17
+      },
+      "revId": "26d0a5504da61c4a65cc454873724ba5ccda159e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
