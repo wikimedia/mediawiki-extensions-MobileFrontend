@@ -350,9 +350,6 @@
 			]
 		},
 		"mobile.pagelist.scripts": {
-			"messages": [
-				"mobile-frontend-watchlist-error"
-			],
 			"targets": [
 				"mobile",
 				"desktop"
@@ -969,6 +966,7 @@
 			"messages": [
 				"watchthispage",
 				"unwatchthispage",
+				"mobile-frontend-watchlist-error",
 				"mobile-frontend-watchlist-add",
 				"mobile-frontend-watchlist-removed",
 				"mobile-frontend-watchlist-cta",
