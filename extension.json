@@ -93,7 +93,11 @@
 		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
 		"MobileFrontend\\Devices\\CustomHeaderDeviceDetector": "includes/devices/CustomHeaderDeviceDetector.php",
 		"MobileFrontend\\Devices\\UADeviceDetector": "includes/devices/UADeviceDetector.php",
-		"MobileFrontend\\Devices\\DeviceDetectorService": "includes/devices/DeviceDetectorService.php"
+		"MobileFrontend\\Devices\\DeviceDetectorService": "includes/devices/DeviceDetectorService.php",
+		"MobileFrontend\\ContentProviders\\ContentProviderFactory": "includes/content-providers/ContentProviderFactory.php",
+		"MobileFrontend\\ContentProviders\\DefaultContentProvider": "includes/content-providers/DefaultContentProvider.php",
+		"MobileFrontend\\ContentProviders\\IContentProvider": "includes/content-providers/IContentProvider.php",
+		"MobileFrontend\\ContentProviders\\MwApiContentProvider": "includes/content-providers/MwApiContentProvider.php"
 	},
 	"ResourceModules": {
 		"skins.minerva.base.reset": {
@@ -1723,6 +1727,8 @@
 		]
 	},
 	"config": {
+		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
+		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
 		"MFEnableXAnalyticsLogging": false,
 		"MFAppPackageId": false,
 		"MFAppScheme": "http",
@@ -1756,7 +1762,7 @@
 		"MFMobileHeader": "X-Subdomain",
 		"MFRemovableClasses": {
 			"beta": [],
-			"base": []
+			"base": [ ".toc", ".mw-editsection", ".navbox", ".nomobile" ]
 		},
 		"MFShowFirstParagraphBeforeInfobox": {
 			"base": false,

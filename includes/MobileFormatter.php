@@ -4,6 +4,7 @@
  */
 
 use HtmlFormatter\HtmlFormatter;
+use MobileFrontend\ContentProviders\IContentProvider;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -94,11 +95,18 @@ class MobileFormatter extends HtmlFormatter {
 	 * Creates and returns a MobileFormatter
 	 *
 	 * @param MobileContext $context
-	 * @param string $html
+	 * @param IContentProvider $provider
+	 * @param boolean $enableSections (optional)
+	 *  whether to wrap the content of sections
+	 * @param boolean $includeTOC (optional) whether to include the
+	 *  table of contents in output HTML
 	 *
 	 * @return MobileFormatter
 	 */
-	public static function newFromContext( MobileContext $context, $html ) {
+	public static function newFromContext( MobileContext $context,
+		IContentProvider $provider,
+		$enableSections = false, $includeTOC = false
+	) {
 		$mfSpecialCaseMainPage = $context->getMFConfig()->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
@@ -106,7 +114,7 @@ class MobileFormatter extends HtmlFormatter {
 		$isFilePage = $title->inNamespace( NS_FILE );
 		$isSpecialPage = $title->isSpecialPage();
 
-		$html = self::wrapHTML( $html );
+		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new MobileFormatter( $html, $title );
 		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
 
@@ -114,6 +122,9 @@ class MobileFormatter extends HtmlFormatter {
 		if ( $context->getContentTransformations() && !$isFilePage ) {
 			$formatter->setRemoveMedia( $context->imagesDisabled() );
 		}
+
+		$formatter->enableExpandableSections( $enableSections );
+		$formatter->enableTOCPlaceholder( $includeTOC );
 
 		return $formatter;
 	}

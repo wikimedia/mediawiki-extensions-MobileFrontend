@@ -5,6 +5,7 @@
 
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
+use MobileFrontend\ContentProviders\ContentProviderFactory;
 
 /**
  * Implements additional functions to use in MobileFrontend
@@ -32,24 +33,20 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function DOMParse( OutputPage $out, $text = null ) {
-		$html = $text ? $text : $out->getHTML();
-
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
+		$factory = new ContentProviderFactory();
+		$provider = $factory->getProvider( $config, $out, $text );
 
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
 		// Only include the table of contents element if the page is in the main namespace
 		// and the MFTOC flag has been set (which means the page originally had a table of contents)
 		$includeTOC = $out->getProperty( 'MFTOC' ) && $ns === NS_MAIN;
-		$formatter = MobileFormatter::newFromContext( $context, $html );
-		$formatter->enableTOCPlaceholder( $includeTOC );
-
-		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
 		$isSpecialPage = $title->isSpecialPage();
 
-		$formatter->enableExpandableSections(
+		$expandSections = (
 			// Don't collapse sections e.g. on JS pages
 			$out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
@@ -61,6 +58,11 @@ class ExtMobileFrontend {
 			// And not when what's shown is not actually article text
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
+
+		$formatter = MobileFormatter::newFromContext( $context, $provider,
+			$expandSections, $includeTOC );
+
+		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
 		$removeImages = $context->isLazyLoadImagesEnabled();
 		$removeReferences = $context->isLazyLoadReferencesEnabled();

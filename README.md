@@ -191,6 +191,23 @@ See: <https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image>
 * Type: `Boolean`
 * Default: `true`
 
+#### $wgMFContentProviderClass
+
+Name of PHP class that is responsible for formatting HTML for mobile.
+Must implement IContentProvider.
+
+* Type: `string`
+* Default: `DefaultContentProvider`
+
+
+#### $wgMwApiContentProviderBaseUri"
+
+URL to be used by the MwApiMobileFormatter class. Points to a MediaWiki
+API that can be queried to obtain content.
+
+* Type: `string`
+* Default: `https://en.wikipedia.org/w/api.php`
+
 #### $wgMFMobileFormatterHeadings
 
 This is a list of html tags, that could be recognized as the first heading of
