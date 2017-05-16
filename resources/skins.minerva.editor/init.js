@@ -288,7 +288,10 @@
 							'mobile-frontend-editor-blocked-info-loggedin',
 							blockInfo.blockReason,
 							blockInfo.blockedBy
-						)
+						),
+						{
+							autoHide: false
+						}
 					);
 					ev.preventDefault();
 				} );

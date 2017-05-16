@@ -15,13 +15,24 @@
 	 * Show a message with the given class in a toast.
 	 * @method
 	 * @param {string} msg Message to show in the toast
-	 * @param {string} cssClass CSS class to add to the element
+	 * @param {Object} options CSS class to add to the element if a string. If an object, more options for the
+	 *  notification, see mw.notification.show. For backwards compatibility reasons if a string is given it will be
+	 *  treated as options.type
 	 */
-	Toast.prototype.show = function ( msg, cssClass ) {
-		this.notification = mw.notify( msg, {
-			type: cssClass,
+	Toast.prototype.show = function ( msg, options ) {
+		if ( typeof options === 'string' ) {
+			mw.log.warn( 'The use of the cssClass parameter of Toast.show is deprecated, please convert it to an ' +
+				'options object.' );
+			options = {
+				type: options
+			};
+		}
+
+		options = $.extend( {
 			tag: 'toast'
-		} );
+		}, options );
+
+		this.notification = mw.notify( msg, options );
 	};
 
 	/**
