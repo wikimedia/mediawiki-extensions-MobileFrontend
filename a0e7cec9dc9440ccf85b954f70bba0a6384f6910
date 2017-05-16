@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_cc7ce8b6",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-16T09:53:55Z",
+      "side": 1,
+      "message": "Done. Migrated to actual promises returned from the tests.",
+      "parentUuid": "0e1cb3f9_1ce53506",
+      "range": {
+        "startLine": 22,
+        "startChar": 3,
+        "endLine": 22,
+        "endChar": 10
+      },
+      "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_dce7bd0b",
         "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
         "patchSetId": 16
@@ -36,6 +60,24 @@
       "writtenOn": "2017-05-15T16:06:35Z",
       "side": 1,
       "message": "Can we also check if the hash has changed since our code is hijacking the default behavior?",
+      "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ec776ccd",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-16T09:53:55Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0e1cb3f9_dce7bd0b",
       "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_8c86f0aa",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-16T09:53:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_fcb881e4",
+      "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_1cbc55d4",
         "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
         "patchSetId": 16
@@ -70,6 +130,24 @@
       "writtenOn": "2017-05-15T16:06:35Z",
       "side": 1,
       "message": "Here also we should check if the drawer.show() has been called.",
+      "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ac817494",
+        "filename": "tests/qunit/mobile.references/test_ReferencesDrawer.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-05-16T09:53:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_1cbc55d4",
       "revId": "a0e7cec9dc9440ccf85b954f70bba0a6384f6910",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
