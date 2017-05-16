@@ -47,10 +47,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
-	 * @param boolean $withPossibleTrademark If true and a trademark symbol is specified
-	 *     by $wgMFTrademarkSitename, append that trademark symbol to the sitename/logo.
-	 *     This param exists so that the trademark symbol can be appended in some
-	 *     contexts, for example, the footer, but not in others. See bug T95007.
 	 * @return string
 	 */
 	public function getSitename() {
