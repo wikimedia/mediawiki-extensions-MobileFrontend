@@ -1187,7 +1187,7 @@ class MobileFrontendHooks {
 		) {
 			$file = $thumbnail->getFile();
 			if ( !$file || !in_array( $file->getMimeType(),
-			                          $config->get( 'MFResponsiveImageWhitelist' ) ) ) {
+					$config->get( 'MFResponsiveImageWhitelist' ) ) ) {
 				// Remove all responsive image 'srcset' attributes, except
 				// from SVG->PNG renderings which usually aren't too huge,
 				// or other whitelisted types.

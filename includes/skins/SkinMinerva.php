@@ -5,6 +5,7 @@
 use MobileFrontend\MenuBuilder;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Minerva\SkinUserPageHelper;
 
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
@@ -27,13 +28,12 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	public $template = 'MinervaTemplate';
 	/** @var boolean $useHeadElement Specify whether show head elements */
 	public $useHeadElement = true;
-	/** @var bool whether the page is the user's page, i.e. User:Username */
-	public $isUserPage = false;
 	/** @var ContentHandler Content handler of page; only access through getContentHandler */
 	protected $contentHandler = null;
 	/** @var bool Whether the page is also available in other languages or variants */
 	protected $doesPageHaveLanguages = false;
-
+	/** @var SkinUserPageHelper Helper class for UserPage handling */
+	protected $userPageHelper;
 	/**
 	 * Return skin specific configuration
 	 * Note that while MobileFrontend and Minerva live in the same skin this will also return
@@ -233,7 +233,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		if (
 			! in_array( $action, $config->get( 'MinervaPageActions' ) )
 			|| $title->isMainPage()
-			|| ( $this->isUserPage && !$title->exists() )
+			|| ( $this->getUserPageHelper()->isUserPage() && !$title->exists() )
 		) {
 			return false;
 		}
@@ -338,17 +338,13 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	}
 
 	/**
-	 * Initiate class
+	 * @return SkinUserPageHelper
 	 */
-	public function __construct() {
-		$title = $this->getTitle();
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
-			$pageUserId = User::idFromName( $title->getText() );
-			if ( $pageUserId ) {
-				$this->pageUser = User::newFromId( $pageUserId );
-				$this->isUserPage = true;
-			}
+	public function getUserPageHelper() {
+		if ( $this->userPageHelper === null ) {
+			$this->userPageHelper = new SkinUserPageHelper( $this->getContext() );
 		}
+		return $this->userPageHelper;
 	}
 
 	/**
@@ -802,20 +798,21 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	protected function getTaglineHtml() {
 		$tagline = false;
 
-		if ( $this->isUserPage ) {
-			$fromDate = $this->pageUser->getRegistration();
+		if ( $this->getUserPageHelper()->isUserPage() ) {
+			$pageUser = $this->getUserPageHelper()->getPageUser();
+			$fromDate = $pageUser->getRegistration();
 			if ( is_string( $fromDate ) ) {
 				$fromDateTs = wfTimestamp( TS_UNIX, $fromDate );
 
 				// This is shown when js is disabled. js enhancement made due to caching
 				$tagline = $this->msg( 'mobile-frontend-user-page-member-since',
 						$this->getLanguage()->userDate( new MWTimestamp( $fromDateTs ), $this->getUser() ),
-						$this->pageUser );
+						$pageUser );
 
 				// Define html attributes for usage with js enhancement (unix timestamp, gender)
 				$attrs = [ 'id' => 'tagline-userpage',
 					'data-userpage-registration-date' => $fromDateTs,
-					'data-userpage-gender' => $this->pageUser->getOption( 'gender' ) ];
+					'data-userpage-gender' => $pageUser->getOption( 'gender' ) ];
 			}
 		} else {
 			$title = $this->getTitle();
@@ -837,9 +834,9 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	protected function getHeadingHtml() {
 		$heading = '';
-		if ( $this->isUserPage ) {
+		if ( $this->getUserPageHelper()->isUserPage() ) {
 			// The heading is just the username without namespace
-			$heading = $this->pageUser->getName();
+			$heading = $this->getUserPageHelper()->getPageUser()->getName();
 		} else {
 			$pageTitle = $this->getOutput()->getPageTitle();
 			if ( $pageTitle ) {
@@ -857,19 +854,20 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$user = $this->getUser();
 		$out = $this->getOutput();
 		$postHeadingHtml = $this->getTaglineHtml();
-		if ( $this->isUserPage ) {
-			$talkPage = $this->pageUser->getTalkPage();
+		if ( $this->getUserPageHelper()->isUserPage() ) {
+			$pageUser = $this->getUserPageHelper()->getPageUser();
+			$talkPage = $pageUser->getTalkPage();
 			$data = [
 				'talkPageTitle' => $talkPage->getPrefixedURL(),
 				'talkPageLink' => $talkPage->getLocalUrl(),
 				'talkPageLinkTitle' => $this->msg(
 					'mobile-frontend-user-page-talk' )->escaped(),
 				'contributionsPageLink' => SpecialPage::getTitleFor(
-					'Contributions', $this->pageUser )->getLocalURL(),
+					'Contributions', $pageUser )->getLocalURL(),
 				'contributionsPageTitle' => $this->msg(
 					'mobile-frontend-user-page-contributions' )->escaped(),
 				'uploadsPageLink' => SpecialPage::getTitleFor(
-					'Uploads', $this->pageUser )->getLocalURL(),
+					'Uploads', $pageUser )->getLocalURL(),
 				'uploadsPageTitle' => $this->msg(
 					'mobile-frontend-user-page-uploads' )->escaped(),
 			];
@@ -1032,7 +1030,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		// in stable it will link to the wikitext talk page
 		$title = $this->getTitle();
 		$namespaces = $tpl->data['content_navigation']['namespaces'];
-		if ( !$this->isUserPage && $this->isTalkAllowed() ) {
+		if ( !$this->getUserPageHelper()->isUserPage() && $this->isTalkAllowed() ) {
 			// FIXME [core]: This seems unnecessary..
 			$subjectId = $title->getNamespaceKey( '' );
 			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
@@ -1314,7 +1312,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 
 		// TalkOverlay feature
 		if (
-			$this->isUserPage ||
+			$this->getUserPageHelper()->isUserPage() ||
 			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
 			$this->isWikiTextTalkPage()
 		) {
@@ -1398,7 +1396,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		];
 		if ( $title->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.styles';
-		} elseif ( $this->isUserPage ) {
+		} elseif ( $this->getUserPageHelper()->isUserPage() ) {
 			$styles[] = 'skins.minerva.userpage.styles';
 			$styles[] = 'skins.minerva.userpage.icons';
 		} elseif ( $title->isSpecialPage() ) {

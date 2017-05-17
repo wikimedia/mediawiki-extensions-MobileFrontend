@@ -54,7 +54,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	private function addToBodyAttributes(
 		$bodyClassName
 	) {
-		$context = RequestContext::getMain();
+		$context = new RequestContext();
 		$context->setTitle( Title::newFromText( 'Test' ) );
 
 		$outputPage = $context->getOutput();
@@ -63,6 +63,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 		$bodyAttrs = [ 'class' => '' ];
 
 		$skin = new SkinMinerva();
+		$skin->setContext( $context );
 		$skin->addToBodyAttributes( $outputPage, $bodyAttrs );
 
 		return explode( ' ', $bodyAttrs[ 'class' ] );
@@ -75,7 +76,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 		$outputPage->expects( $this->never() )
 			->method( 'getCategoryLinks' );
 
-		$context = RequestContext::getMain();
+		$context = new RequestContext();
 		$context->setTitle( Title::newFromText( 'Test' ) );
 		$context->setOutput( $outputPage );
 
@@ -101,7 +102,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 			->method( 'getCategoryLinks' )
 			->will( $this->returnValue( $categoryLinks ) );
 
-		$context = RequestContext::getMain();
+		$context = new RequestContext();
 		$context->setTitle( Title::newFromText( 'Test' ) );
 		$context->setOutput( $outputPage );
 

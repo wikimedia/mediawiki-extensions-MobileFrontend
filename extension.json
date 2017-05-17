@@ -97,7 +97,8 @@
 		"MobileFrontend\\ContentProviders\\ContentProviderFactory": "includes/content-providers/ContentProviderFactory.php",
 		"MobileFrontend\\ContentProviders\\DefaultContentProvider": "includes/content-providers/DefaultContentProvider.php",
 		"MobileFrontend\\ContentProviders\\IContentProvider": "includes/content-providers/IContentProvider.php",
-		"MobileFrontend\\ContentProviders\\MwApiContentProvider": "includes/content-providers/MwApiContentProvider.php"
+		"MobileFrontend\\ContentProviders\\MwApiContentProvider": "includes/content-providers/MwApiContentProvider.php",
+		"MediaWiki\\Minerva\\SkinUserPageHelper": "includes/skins/SkinUserPageHelper.php"
 	},
 	"ResourceModules": {
 		"skins.minerva.base.reset": {

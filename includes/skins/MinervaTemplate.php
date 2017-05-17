@@ -151,9 +151,10 @@ class MinervaTemplate extends BaseTemplate {
 			'class' => 'post-content',
 			'id' => 'page-secondary-actions'
 		] );
-
+		/** @var $skin SkinMinerva $skin */
+		$skin = $this->getSkin();
 		// no secondary actions on the user page
-		if ( !$this->getSkin()->isUserPage ) {
+		if ( $skin instanceof SkinMinerva && !$skin->getUserPageHelper()->isUserPage() ) {
 			foreach ( $this->getSecondaryActions() as $el ) {
 				if ( isset( $el['attributes']['class'] ) ) {
 					$el['attributes']['class'] .= ' ' . $baseClass;
