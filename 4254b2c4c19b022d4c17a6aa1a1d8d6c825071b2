@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_9325a8be",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-17T19:22:47Z",
+      "side": 1,
+      "message": "This line is necessary as on line 128 we call RequestContext::getMain() which creates global RequestContext instance. I did it inside this patch as it removes all calls to `RemoveContext::getMain()` inside unit tests.",
+      "revId": "4254b2c4c19b022d4c17a6aa1a1d8d6c825071b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
