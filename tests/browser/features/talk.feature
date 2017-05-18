@@ -34,6 +34,16 @@ Feature: Talk
     When I click the talk button
     Then there should be an add discussion button
 
+  @integration
+  Scenario: A newly created topic appears in the list of topics immediately
+    Given the page "Talk:Selenium talk test" exists
+      And I am logged in as a user with a > 5 edit count
+      And the page "Selenium talk test" exists
+    When I click the talk button
+	  And no topic is present
+	  And I add a topic called "New topic"
+    Then I should see the topic called "New topic" in the list of topics
+
   Scenario: Add discussion on talk page not possible as logged out user
     Given the page "Talk:Selenium talk test" exists
       And the page "Selenium talk test" exists

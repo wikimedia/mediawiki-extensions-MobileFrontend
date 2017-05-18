@@ -61,6 +61,7 @@
 		this.sandbox.stub( this.api, 'get' )
 			.returns( $.Deferred().resolve( response ) );
 
+		pageGateway.invalidatePage( 'Test' );
 		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
@@ -173,6 +174,7 @@
 			}
 		} ) );
 
+		pageGateway.invalidatePage( 'Test' );
 		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
@@ -478,6 +480,7 @@
 			}
 		} ) );
 
+		pageGateway.invalidatePage( 'Test' );
 		pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp.protection, expected );
 		} );

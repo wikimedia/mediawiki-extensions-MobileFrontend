@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
+	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
+		cache = {};
 
 	/**
 	 * Add child to listOfSections if the level of child is the same as the last
@@ -88,7 +89,6 @@
 	 */
 	function PageGateway( api ) {
 		this.api = api;
-		this.cache = {};
 	}
 
 	PageGateway.prototype = {
@@ -111,8 +111,8 @@
 					edit: [ '*' ]
 				};
 
-			if ( !this.cache[title] ) {
-				page = this.cache[title] = $.Deferred();
+			if ( !cache[title] ) {
+				page = cache[title] = $.Deferred();
 				this.api.get( {
 					action: 'mobileview',
 					page: title,
@@ -179,7 +179,7 @@
 				} ).fail( $.proxy( page, 'reject' ) );
 			}
 
-			return this.cache[title];
+			return cache[title];
 		},
 
 		/**
@@ -189,7 +189,7 @@
 		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function ( title ) {
-			delete this.cache[title];
+			delete cache[title];
 		},
 
 		/**
