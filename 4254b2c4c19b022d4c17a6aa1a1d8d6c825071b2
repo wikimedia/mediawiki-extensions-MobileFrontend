@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_84e79c0c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 859,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-18T13:05:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_562cde8e",
+      "range": {
+        "startLine": 859,
+        "startChar": 15,
+        "endLine": 859,
+        "endChar": 56
+      },
+      "revId": "4254b2c4c19b022d4c17a6aa1a1d8d6c825071b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_b653fa19",
         "filename": "includes/skins/SkinMinervaUserPageHelper.php",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2017-05-17T20:26:05Z",
       "side": 1,
       "message": "Not needed and conflicts with the method on line 59.",
+      "range": {
+        "startLine": 41,
+        "startChar": 5,
+        "endLine": 41,
+        "endChar": 30
+      },
+      "revId": "4254b2c4c19b022d4c17a6aa1a1d8d6c825071b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_24f6d0c2",
+        "filename": "includes/skins/SkinMinervaUserPageHelper.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-18T13:05:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e1cb3f9_b653fa19",
       "range": {
         "startLine": 41,
         "startChar": 5,
@@ -76,6 +124,30 @@
       "writtenOn": "2017-05-17T20:26:05Z",
       "side": 1,
       "message": "Why can we not get rid of this instance?",
+      "range": {
+        "startLine": 129,
+        "startChar": 40,
+        "endLine": 129,
+        "endChar": 65
+      },
+      "revId": "4254b2c4c19b022d4c17a6aa1a1d8d6c825071b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_e4a538b2",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-18T13:05:21Z",
+      "side": 1,
+      "message": "This is pretty difficult test and I would like to rewrite it in a follow-up patch.\n\nWhy? MobileContext::singleton() calls RequestContext::getMain(), SkinTemplate also uses RequestContext::getMain(). Plut on top of that this function is used in 2 different tests. For example when running `::testOnBeforePageDisplay()` RequestContext::getMain() is called 4 times.",
+      "parentUuid": "0e1cb3f9_d656ae08",
       "range": {
         "startLine": 129,
         "startChar": 40,
