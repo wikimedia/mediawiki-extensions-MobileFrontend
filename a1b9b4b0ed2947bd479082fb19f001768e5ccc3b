@@ -22,6 +22,30 @@
       "revId": "a1b9b4b0ed2947bd479082fb19f001768e5ccc3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ca1fdd5c",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-05-18T17:48:45Z",
+      "side": 1,
+      "message": "Interestingly, since I6c21e3e4 the position property of a module is irrelevant as all modules are loaded in the \u003chead\u003e asynchronously.\n\nI\u0027ll move it, as I think you\u0027re correct, and submit a change to remove all instances of the position property.",
+      "parentUuid": "0e1cb3f9_c4611434",
+      "range": {
+        "startLine": 342,
+        "startChar": 3,
+        "endLine": 342,
+        "endChar": 20
+      },
+      "revId": "a1b9b4b0ed2947bd479082fb19f001768e5ccc3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
