@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_444e64c5",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-18T15:19:44Z",
+      "side": 1,
+      "message": "The convention is to create a separate folder for each module. For example, we already have folders like mobile.special.pagefeed.styles. Even the icons module below has its own folder. I\u0027d also create one for this module.",
+      "range": {
+        "startLine": 308,
+        "startChar": 15,
+        "endLine": 308,
+        "endChar": 30
+      },
+      "revId": "0b58047315fb4083e509888b387507087596a9b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
