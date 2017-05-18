@@ -299,6 +299,15 @@
 				"contributions": "resources/mobile.mainMenu.icons/contributions.svg"
 			}
 		},
+		"mobile.mainMenu.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"styles": [
+				"resources/mobile.mainMenu.styles/mainmenu.less"
+			]
+		},
 		"mobile.mainMenu": {
 			"targets": [
 				"mobile",
@@ -306,13 +315,11 @@
 			],
 			"dependencies": [
 				"mobile.mainMenu.icons",
+				"mobile.mainMenu.styles",
 				"mobile.startup",
 				"mobile.loggingSchemas.mobileWebMainMenuClickTracking"
 			],
 			"position": "bottom",
-			"styles": [
-				"resources/mobile.mainMenu/mainmenu.less"
-			],
 			"templates": {
 				"menu.hogan": "resources/mobile.mainMenu/menu.mustache",
 				"menuGroup.hogan": "resources/mobile.mainMenu/menuGroup.mustache"

@@ -34,7 +34,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 		$out->addModuleStyles(
 			[
 				'mobile.mainMenu.icons',
-				'mobile.mainMenu',
+				'mobile.mainMenu.styles',
 			]
 		);
 	}
