@@ -321,17 +321,24 @@
 				"resources/mobile.mainMenu/MainMenu.js"
 			]
 		},
+		"mobile.messageBox.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"position": "top",
+			"styles": [
+				"resources/mobile.messageBox.styles/messageBox.less"
+			]
+		},
 		"mobile.messageBox": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup"
-			],
-			"position": "top",
-			"styles": [
-				"resources/mobile.messageBox/messageBox.less"
+				"mobile.startup",
+				"mobile.messageBox.styles"
 			],
 			"templates": {
 				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.mustache"

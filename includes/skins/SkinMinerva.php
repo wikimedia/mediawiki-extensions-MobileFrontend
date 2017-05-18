@@ -1402,14 +1402,14 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 			$styles[] = 'skins.minerva.userpage.styles';
 			$styles[] = 'skins.minerva.userpage.icons';
 		} elseif ( $title->isSpecialPage() ) {
-			$styles[] = 'mobile.messageBox';
+			$styles[] = 'mobile.messageBox.styles';
 			$styles['special'] = 'skins.minerva.special.styles';
 		}
 		if ( $title->isSpecial( 'Notifications' ) ) {
 			$styles[] = 'skins.minerva.notifications.filter.styles';
 		}
 		if ( $this->getOutput()->getRequest()->getText( 'oldid' ) ) {
-			$styles[] = 'mobile.messageBox';
+			$styles[] = 'mobile.messageBox.styles';
 		}
 
 		return $styles;
