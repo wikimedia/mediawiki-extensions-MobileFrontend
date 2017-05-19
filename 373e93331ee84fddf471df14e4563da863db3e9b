@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e1cb3f9_1aee841f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-19T09:08:02Z",
+      "side": 1,
+      "message": "I see we use MobileFrontend here. Might be a good time to make this Minerva.",
+      "revId": "373e93331ee84fddf471df14e4563da863db3e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_5a95dc87",
         "filename": "includes/skins/SkinMinervaUserPageHelper.php",
         "patchSetId": 4
