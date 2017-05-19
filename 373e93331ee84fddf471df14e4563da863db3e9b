@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_5a95dc87",
+        "filename": "includes/skins/SkinMinervaUserPageHelper.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-19T09:07:13Z",
+      "side": 1,
+      "message": "Can I suggest you use the namespace Minerva here?\nThis is going to make my migration of Minerva out of MobileFrontend harder :)",
+      "revId": "373e93331ee84fddf471df14e4563da863db3e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
