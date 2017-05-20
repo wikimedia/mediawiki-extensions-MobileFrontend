@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_980cd1f1",
+        "filename": "includes/skins/SkinUserPageHelper.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-20T18:06:21Z",
+      "side": 1,
+      "message": "Use $context for consistency.",
+      "range": {
+        "startLine": 28,
+        "startChar": 45,
+        "endLine": 28,
+        "endChar": 59
+      },
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_1801a1b3",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-20T18:06:21Z",
+      "side": 1,
+      "message": "How does the test end up modifying the context? If the consumers of this call setter methods on the objects received via the context, then you probably want to use \u0027new RequestContext\u0027 or newExtraneousContext() instead of deriving from the main context.\n\nIn addition, none of this should matter given that the default MediaWikiTestCase::tearDown(), *already* calls RequestContext::resetMain, so the line added above shouldn\u0027t make any difference. Does it?",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 129,
+        "endChar": 68
+      },
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
