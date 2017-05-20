@@ -77,6 +77,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
 
+	/**
+	 * @covers MobileFormatter::enableExpandableSections
+	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::doRewriteImagesForLazyLoading
+	 * @covers MobileFormatter::skipLazyLoadingForSmallDimensions
+	 */
 	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
 		$smallPic =  '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
 		$enableSections = function ( MobileFormatter $mf ) {
@@ -872,6 +878,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		];
 	}
 
+	/**
+	 * @covers MobileFormatter::enableTOCPlaceholder
+	 * @covers MobileFormatter::enableExpandableSections
+	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::getText
+	 */
 	public function testInsertTOCPlaceholder() {
 		$input = '<p>Hello world.</p><h2>Heading</h2>Text.';
 		$mf = new MobileFormatter( $input, Title::newFromText( 'Mobile' ) );
@@ -887,6 +899,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T137375
+	 * @covers MobileFormatter::filterContent
 	 */
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';

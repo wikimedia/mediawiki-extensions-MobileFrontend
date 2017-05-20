@@ -245,6 +245,8 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * A null title shouldn't result in a fatal exception - bug T142914
+	 * @covers MobileContext::shouldDisplayMobileView
+	 * @covers MobileContext::useFormat
 	 */
 	public function testRedirectMobileEnabledPages() {
 		$this->setMwGlobals( [
@@ -550,6 +552,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		];
 	}
 
+	/**
+	 * @codeCoverageIgnore
+	 */
 	public function testBug71329() {
 		SpecialPageFactory::resetList();
 		RequestContext::resetMain();
