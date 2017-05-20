@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_123500ed",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-20T15:56:14Z",
+      "side": 1,
+      "message": "This seems a little weird to me. To avoid deprecation warnings users will have to call show( undefined, undefined, {} )\n\nInstead of doing this should we not make msg options now and if it\u0027s a string treat it as the message key and log the deprecation warning?\n\nOtherwise devs will have to update their calls of show twice. Once to do show( undefined, undefined, {} ) and then to do show(  {} ) ...",
+      "revId": "24e4ce3e58cc1e219d90e57b14990d9e6982ab51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
