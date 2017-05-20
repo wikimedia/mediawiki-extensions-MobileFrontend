@@ -514,9 +514,6 @@
 				"mobile-frontend-editor-licensing-with-terms",
 				"mobile-frontend-editor-terms-link"
 			],
-			"skinStyles": {
-				"minerva": "resources/mobile.startup/toast.less"
-			},
 			"styles": [
 				"resources/mobile.startup/panel.less",
 				"resources/mobile.startup/Overlay.less",
@@ -696,6 +693,9 @@
 				"mobile.loggingSchemas.mobileWebSearch",
 				"mobile.search.images"
 			],
+			"skinStyles": {
+				"minerva": "skinStyles/mobile.search/SearchOverlay.less"
+			},
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"
 			],
@@ -1001,6 +1001,9 @@
 				"mediawiki.storage",
 				"mobile.startup"
 			],
+			"skinStyles": {
+				"minerva": "skinStyles/mobile.languages.structured/LanguageOverlay.less"
+			},
 			"scripts": [
 				"resources/mobile.languages.structured/util.js",
 				"resources/mobile.languages.structured/LanguageOverlay.js"
@@ -1241,8 +1244,8 @@
 				"resources/mobile.special.nearby.styles/specialNearby.less"
 			],
 			"skinStyles": {
-				"vector": "resources/mobile.special.nearby.styles/specialNearbyDesktop.less",
-				"monobook": "resources/mobile.special.nearby.styles/specialNearbyDesktop.less"
+				"vector": "skinStyles/mobile.special.nearby.styles/desktop.less",
+				"monobook": "skinStyles/mobile.special.nearby.styles/desktop.less"
 			},
 			"position": "top"
 		},
@@ -1626,13 +1629,21 @@
 	"@note1": "ResourceModuleSkinStyles must only contain customizations for 'minerva'.",
 	"@note2": "For other skins, just use 'skinStyles' in module definition.",
 	"@note3": "Otherwise their own customizations are overridden. (T167216)",
+	"@note5": "Do not use it for modules which non-ResourceLoaderFileModule classes (T167478).",
 	"ResourceModuleSkinStyles": {
 		"minerva": {
+			"mobile.startup": [
+				"skinStyles/mobile.startup/toast.less",
+				"skinStyles/mobile.startup/Overlay.less"
+			],
 			"mobile.special.mobilemenu.styles": [
-				"resources/mobile.special.mobilemenu.styles/mobilemenu.less"
+				"skinStyles/mobile.special.mobilemenu.styles/minerva.less"
+			],
+			"ext.echo.styles.special": [
+				"skinStyles/ext.echo.styles.special/SpecialNotificationsOverlay.less"
 			],
 			"mediawiki.notification": [
-				"resources/mobile.startup/toast.less"
+				"skinStyles/mobile.startup/toast.less"
 			]
 		}
 	},

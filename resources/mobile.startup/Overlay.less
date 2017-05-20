@@ -1,6 +1,5 @@
 @import 'minerva.variables';
 @import 'minerva.mixins';
-@import 'mediawiki.ui/variables';
 
 /* stylelint-disable no-descending-specificity */
 
@@ -10,8 +9,6 @@
 		// FIXME: override old overlay styles, remove when old overlays gone
 		display: block;
 	}
-
-	background-color: @skinContentBgColor;
 
 	.overlay, #mw-mf-page-center {
 		// use height instead of bottom 0 so that overlay expands when there's
@@ -135,10 +132,6 @@
 		border-bottom: 1px solid @grayLightest;
 	}
 
-	.license {
-		.secondary-text();
-	}
-
 	.content {
 		// AbuseFilterOverlay
 		// FIXME: Don't hijack formatting of all cancel buttons just to center some
@@ -234,8 +227,6 @@
 	h2 {
 		display: table;
 		width: 100%;
-		// FIXME: should not be necessary, scope other h2s to .content
-		font-size: @headerTitleFontSize;
 
 		> * {
 			width: 1em;
@@ -360,13 +351,5 @@
 		.panel {
 			padding: 12px @contentPaddingTablet;
 		}
-	}
-}
-
-@media all and ( min-width: @wgMFDeviceWidthDesktop ) {
-	.overlay-header {
-		// Make sure the close button and secondary button icon images are aligned
-		// with the content.
-		max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
 	}
 }

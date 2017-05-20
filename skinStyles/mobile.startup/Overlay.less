@@ -1,0 +1,16 @@
+@import 'minerva.variables';
+@import 'minerva.mixins';
+
+.overlay .license {
+	.license {
+		.secondary-text();
+	}
+}
+
+@media all and ( min-width: @wgMFDeviceWidthDesktop ) {
+	.overlay-header {
+		// Make sure the close button and secondary button icon images are aligned
+		// with the content.
+		max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
+	}
+}
