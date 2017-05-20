@@ -76,7 +76,8 @@
 			var self = this;
 
 			return this._loadModuleScript( 'mobile.notifications.overlay' ).then( function () {
-				var NotificationsOverlay = M.require( 'mobile.notifications.overlay/NotificationsOverlay' );
+				var NotificationsOverlay =
+					M.require( 'mobile.notifications.overlay/NotificationsOverlay' ); // resource-modules-disable-line
 				return new NotificationsOverlay( {
 					badge: self
 				} );
