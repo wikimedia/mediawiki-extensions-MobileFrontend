@@ -86,8 +86,8 @@
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
 		"SkinMinerva": "includes/skins/SkinMinerva.php",
 		"ICustomizableSkin": "includes/skins/ICustomizableSkin.php",
-		"MediaWiki\\Minerva\\MenuBuilder": "includes/MenuBuilder.php",
-		"MediaWiki\\Minerva\\MenuEntry": "includes/MenuBuilder.php",
+		"MediaWiki\\Minerva\\MenuBuilder": "includes/skins/MenuBuilder.php",
+		"MediaWiki\\Minerva\\MenuEntry": "includes/skins/MenuBuilder.php",
 		"MobileFrontend\\Devices\\DeviceDetector": "includes/devices/DeviceDetector.php",
 		"MobileFrontend\\Devices\\DeviceProperties": "includes/devices/DeviceProperties.php",
 		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
@@ -285,48 +285,48 @@
 				"resources/skins.minerva.userpage.styles/userpage.less"
 			]
 		},
-		"mobile.mainMenu.icons": {
+		"skins.minerva.mainMenu.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
-				"anonymous": "resources/mobile.mainMenu.icons/anonymous.svg",
-				"home": "resources/mobile.mainMenu.icons/home.svg",
-				"logout": "resources/mobile.mainMenu.icons/logout.svg",
-				"nearby": "resources/mobile.mainMenu.icons/nearby.svg",
-				"profile": "resources/mobile.mainMenu.icons/profile.svg",
-				"random": "resources/mobile.mainMenu.icons/random.svg",
-				"settings": "resources/mobile.mainMenu.icons/settings.svg",
-				"watchlist": "resources/mobile.mainMenu.icons/watchlist.svg",
-				"contributions": "resources/mobile.mainMenu.icons/contributions.svg"
+				"anonymous": "resources/skins.minerva.mainMenu.icons/anonymous.svg",
+				"home": "resources/skins.minerva.mainMenu.icons/home.svg",
+				"logout": "resources/skins.minerva.mainMenu.icons/logout.svg",
+				"nearby": "resources/skins.minerva.mainMenu.icons/nearby.svg",
+				"profile": "resources/skins.minerva.mainMenu.icons/profile.svg",
+				"random": "resources/skins.minerva.mainMenu.icons/random.svg",
+				"settings": "resources/skins.minerva.mainMenu.icons/settings.svg",
+				"watchlist": "resources/skins.minerva.mainMenu.icons/watchlist.svg",
+				"contributions": "resources/skins.minerva.mainMenu.icons/contributions.svg"
 			}
 		},
-		"mobile.mainMenu.styles": {
+		"skins.minerva.mainMenu.styles": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"styles": [
-				"resources/mobile.mainMenu.styles/mainmenu.less"
+				"resources/skins.minerva.mainMenu.styles/mainmenu.less"
 			]
 		},
-		"mobile.mainMenu": {
+		"skins.minerva.mainMenu": {
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.mainMenu.icons",
-				"mobile.mainMenu.styles",
+				"skins.minerva.mainMenu.icons",
+				"skins.minerva.mainMenu.styles",
 				"mobile.startup",
 				"mobile.loggingSchemas.mobileWebMainMenuClickTracking"
 			],
 			"position": "bottom",
 			"templates": {
-				"menu.hogan": "resources/mobile.mainMenu/menu.mustache",
-				"menuGroup.hogan": "resources/mobile.mainMenu/menuGroup.mustache"
+				"menu.hogan": "resources/skins.minerva.mainMenu/menu.mustache",
+				"menuGroup.hogan": "resources/skins.minerva.mainMenu/menuGroup.mustache"
 			},
 			"scripts": [
-				"resources/mobile.mainMenu/MainMenu.js"
+				"resources/skins.minerva.mainMenu/MainMenu.js"
 			]
 		},
 		"mobile.messageBox.styles": {
@@ -1382,7 +1382,7 @@
 				"mediawiki.router",
 				"mediawiki.Title",
 				"mobile.startup",
-				"mobile.mainMenu",
+				"skins.minerva.mainMenu",
 				"mobile.issues",
 				"mobile.search.api",
 				"mobile.search",
@@ -1432,7 +1432,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"mobile.mainMenu"
+				"skins.minerva.mainMenu"
 			],
 			"scripts": [
 				"resources/skins.minerva.scripts.top/init.js"
@@ -1613,6 +1613,9 @@
 			"mediawiki.notification": [
 				"resources/mobile.startup/toast.less"
 			]
+		},
+		"vector": {
+			"mobile.special.mobilemenu.styles": "skinStyles/mobile.special.mobilemenu.styles/vector.less"
 		}
 	},
 	"Hooks": {

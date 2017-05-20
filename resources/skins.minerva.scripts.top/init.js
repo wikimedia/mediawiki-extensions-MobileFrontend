@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var MainMenu = M.require( 'mobile.mainMenu/MainMenu' ),
+	var MainMenu = M.require( 'skins.minerva.mainMenu/MainMenu' ),
 		mainMenu = createMainMenu();
 
 	/**

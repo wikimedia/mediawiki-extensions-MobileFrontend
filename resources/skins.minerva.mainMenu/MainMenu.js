@@ -20,10 +20,10 @@
 		/** @inheritdoc */
 		isTemplateMode: true,
 		/** @inheritdoc */
-		template: mw.template.get( 'mobile.mainMenu', 'menu.hogan' ),
+		template: mw.template.get( 'skins.minerva.mainMenu', 'menu.hogan' ),
 		/** @inheritdoc */
 		templatePartials: {
-			menuGroup: mw.template.get( 'mobile.mainMenu', 'menuGroup.hogan' )
+			menuGroup: mw.template.get( 'skins.minerva.mainMenu', 'menuGroup.hogan' )
 		},
 
 		/**
@@ -159,6 +159,6 @@
 		}
 	} );
 
-	M.define( 'mobile.mainMenu/MainMenu', MainMenu );
+	M.define( 'skins.minerva.mainMenu/MainMenu', MainMenu );
 
 }( mw.mobileFrontend, jQuery ) );

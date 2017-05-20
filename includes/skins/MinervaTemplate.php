@@ -248,7 +248,7 @@ class MinervaTemplate extends BaseTemplate {
 	protected function getMainMenuHtml( $data ) {
 		if ( $this->isSpecialMobileMenuPage ) {
 			$templateParser = new TemplateParser(
-				__DIR__ . '/../../resources/mobile.mainMenu/' );
+				__DIR__ . '/../../resources/skins.minerva.mainMenu/' );
 
 			return $templateParser->processTemplate( 'menu', $data['menu_data'] );
 		} else {

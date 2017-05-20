@@ -79,6 +79,12 @@ class MinervaHooks {
 		// FIXME: Upstream to core (?)
 		if ( $skin instanceof SkinMinerva ) {
 			switch ( $name ) {
+				case 'MobileMenu':
+					$out->addModules( [
+						'skins.minerva.mainMenu.icons',
+						'skins.minerva.mainMenu'
+					] );
+					break;
 				case 'Preferences':
 					$out->addModules( 'skins.minerva.special.preferences.scripts' );
 					break;
