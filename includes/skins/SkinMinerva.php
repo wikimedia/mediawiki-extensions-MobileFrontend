@@ -132,17 +132,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$out->addMeta( 'viewport', 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, ' .
 				'maximum-scale=5.0, width=device-width'
 		);
-		if ( $this->getConfig()->get( 'MFEnableManifest' ) ) {
-			$out->addLink(
-				[
-					'rel' => 'manifest',
-					'href' => wfAppendQuery(
-						wfScript( 'api' ),
-						[ 'action' => 'webapp-manifest' ]
-					)
-				]
-			);
-		}
 
 		// Generate skin template
 		$tpl = parent::prepareQuickTemplate();

@@ -18,6 +18,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 */
 	public function testSpecialMobileCiteOnBeforePageDisplay() {
 		$this->setMwGlobals( [
+			'wgMFEnableManifest' => false,
 			'wgMobileUrlTemplate' => true,
 			'wgMFNoindexPages' => true
 		] );
@@ -43,6 +44,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	) {
 		// set globals
 		$this->setMwGlobals( [
+			'wgMFEnableManifest' => false,
 			'wgMobileUrlTemplate' => $mobileUrlTemplate,
 			'wgMFNoindexPages' => $mfNoindexPages,
 			'wgMFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,

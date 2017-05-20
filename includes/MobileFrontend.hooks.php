@@ -765,6 +765,18 @@ class MobileFrontendHooks {
 				$out->setTarget( 'mobile' );
 			}
 
+			if ( $config->get( 'MFEnableManifest' ) ) {
+				$out->addLink(
+					[
+						'rel' => 'manifest',
+						'href' => wfAppendQuery(
+							wfScript( 'api' ),
+							[ 'action' => 'webapp-manifest' ]
+						)
+					]
+				);
+			}
+
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
 
