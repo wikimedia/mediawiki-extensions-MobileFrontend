@@ -1,8 +1,9 @@
 <?php
 
-namespace Tests\MobileFrontend;
+namespace Tests\MediaWiki\Minerva;
 
-use MobileFrontend\MenuBuilder;
+use MediaWiki\Minerva\MenuBuilder;
+use MediaWiki\Minerva\MenuEntry;
 
 /**
  * @group MobileFrontend
@@ -22,20 +23,21 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	];
 
 	/**
-	 * @covers \MobileFrontend\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuBuilder::getEntries
 	 */
-	public function test_it_shouldnt_have_entries_by_default() {
+	public function testItShouldntHaveEntriesByDefault() {
 		$menu = new MenuBuilder();
 
 		$this->assertEmpty( $menu->getEntries() );
 	}
 
 	/**
-	 * @covers \MobileFrontend\MenuBuilder::insert
-	 * @covers \MobileFrontend\MenuEntry::addComponent
-	 * @covers \MobileFrontend\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::search
+	 * @covers \MediaWiki\Minerva\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuEntry::addComponent
 	 */
-	public function test_inserting_an_entry() {
+	public function testInsertingAnEntry() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' )
 			->addComponent(
@@ -58,11 +60,12 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\MenuBuilder::insert
-	 * @covers \MobileFrontend\MenuEntry::addComponent
-	 * @covers \MobileFrontend\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::search
+	 * @covers \MediaWiki\Minerva\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuEntry::addComponent
 	 */
-	public function test_inserting_an_entry_after_another() {
+	public function testInsertingAnEntryAfterAnother() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' )
 			->addComponent(
@@ -110,10 +113,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException \DomainException
 	 * @expectedExceptionMessage The "home" entry doesn't exist.
-	 * @covers \MobileFrontend\MenuBuilder::insertAfter
-	 * @covers \MobileFrontend\MenuEntry::addComponent
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insertAfter
+	 * @covers \MediaWiki\Minerva\MenuBuilder::search
+	 * @covers \MediaWiki\Minerva\MenuEntry::addComponent
 	 */
-	public function test_inserting_an_entry_after_that_doesnt_exist() {
+	public function testInsertAfterWhenTargetEntryDoesntExist() {
 		$menu = new MenuBuilder();
 		$menu->insertAfter( 'home', 'nearby' )
 			->addComponent(
@@ -125,32 +129,49 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @expectedException \DomainException
-	 * @expectedExceptionMessage The "home" entry already exists.
-	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @expectedExceptionMessage The "car" entry already exists.
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insertAfter
 	 */
-	public function test_inserting_an_entry_with_an_existing_name() {
+	public function testInsertAfterWithAnEntryWithAnExistingName() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' );
-		$menu->insert( 'home' );
+		$menu->insert( 'car' );
+		$menu->insertAfter( 'home', 'car' );
 	}
 
 	/**
 	 * @expectedException \DomainException
 	 * @expectedExceptionMessage The "home" entry already exists.
-	 * @covers \MobileFrontend\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
 	 */
-	public function test_inserting_an_entry_with_an_existing_name_after() {
+	public function testInsertingAnEntryWithAnExistingName() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'home' );
-		$menu->insertAfter( 'home', 'home' );
+		$menu->insert( 'home' );
 	}
 
 	/**
-	 * @covers \MobileFrontend\MenuBuilder::insert
-	 * @covers \MobileFrontend\MenuEntry::addComponent
-	 * @covers \MobileFrontend\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insertAfter
 	 */
-	public function test_inserting_an_entry_with_multiple_components() {
+	public function testInsertingAnEntryAfterAnotherOne() {
+		$menu = new MenuBuilder();
+		$menu->insert( 'first' );
+		$menu->insert( 'last' );
+		$menu->insertAfter( 'first', 'middle' );
+		$items = $menu->getEntries();
+		$this->assertCount( 3, $items );
+		$this->assertSame( 'first', $items[0]['name'] );
+		$this->assertSame( 'middle', $items[1]['name'] );
+		$this->assertSame( 'last', $items[2]['name'] );
+	}
+
+	/**
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuEntry::addComponent
+	 */
+	public function testinsertingAnEntryWithMultipleComponents() {
 		$authLoginComponent = [
 			'text' => 'Phuedx (WMF)',
 			'href' => '/wiki/User:Phuedx_(WMF)',
@@ -191,11 +212,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\MenuBuilder::insert
-	 * @covers \MobileFrontend\MenuEntry::addComponent
-	 * @covers \MobileFrontend\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuBuilder::insert
+	 * @covers \MediaWiki\Minerva\MenuBuilder::getEntries
+	 * @covers \MediaWiki\Minerva\MenuEntry::addComponent
 	 */
-	public function test_inserting_a_javascript_only_entry() {
+	public function testInsertingAJavascriptOnlyEntry() {
 		$menu = new MenuBuilder();
 		$menu->insert( 'nearby', $isJSOnly = true )
 			->addComponent(
@@ -213,5 +234,20 @@ class MenuTest extends \PHPUnit_Framework_TestCase {
 		];
 
 		$this->assertEquals( $expectedEntries, $menu->getEntries() );
+	}
+
+	/**
+	 * @covers \MediaWiki\Minerva\MenuEntry::__construct
+	 * @covers \MediaWiki\Minerva\MenuEntry::getName()
+	 * @covers \MediaWiki\Minerva\MenuEntry::isJSOnly()
+	 * @covers \MediaWiki\Minerva\MenuEntry::getComponents()
+	 */
+	public function testMenuEntryConstruction() {
+		$name = 'test';
+		$isJSOnly = true;
+		$entry = new MenuEntry( $name, $isJSOnly );
+		$this->assertSame( $name, $entry->getName() );
+		$this->assertSame( $isJSOnly, $entry->isJSOnly() );
+		$this->assertSame( [], $entry->getComponents() );
 	}
 }

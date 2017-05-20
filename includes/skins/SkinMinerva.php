@@ -2,7 +2,7 @@
 /**
  * SkinMinerva.php
  */
-use MobileFrontend\MenuBuilder;
+use MediaWiki\Minerva\MenuBuilder;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Logger\LoggerFactory;
 
