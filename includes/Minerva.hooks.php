@@ -13,6 +13,24 @@
  */
 class MinervaHooks {
 	/**
+	 * ResourceLoaderGetLessVars hook handler
+	 *
+	 * Add the context-based less variables.
+	 *
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetLessVars
+	 * @param array &$lessVars Variables already added
+	 */
+	public static function onResourceLoaderGetLessVars( &$lessVars ) {
+		// FIXME: Load from Minerva.Config when MobileFrontend and Minerva are separated
+		$config = MobileContext::singleton()->getMFConfig();
+		$lessVars = array_merge( $lessVars,
+			[
+				'wgMinervaApplyKnownTemplateHacks' => "{$config->get( 'MinervaApplyKnownTemplateHacks' )}",
+			]
+		);
+	}
+
+	/**
 	 * Invocation of hook SpecialPageBeforeExecute
 	 *
 	 * We use this hook to ensure that login/account creation pages
