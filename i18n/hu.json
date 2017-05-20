@@ -14,8 +14,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
-	"beta-feature-minerva": "Mobil felület ({{int:skinname-minerva}}) engedélyezése asztali verzióban",
-	"beta-feature-minerva-description": "A mobil eszközökön használt felület kiválaszthatóvá tétele asztali felületként a beállítások „{{int:prefs-rendering}}” fülén.",
 	"mobile-frontend-account-create-captcha-placeholder": "Írd be a megerősítő kódot",
 	"mobile-frontend-categories-heading": "<strong>Kategóriák</strong>",
 	"mobile-frontend-categories-subheading": "A lap az alábbi kategóriákba tartozik:",
