@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_88e8fc78",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-21T09:09:30Z",
+      "side": 1,
+      "message": "Could we decouple this from the hygiene changes?\n\nThese lines brings in a lot of risk whereas the rest of the changes seem like good refactors that are harmless.",
+      "revId": "bd9c7a78981fc19c4f7e5082a33cc1afc395309c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
