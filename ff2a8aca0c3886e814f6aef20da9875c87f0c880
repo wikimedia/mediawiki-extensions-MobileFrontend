@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_28cf705c",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-21T08:48:21Z",
+      "side": 1,
+      "message": "Why not\nToast.prototype.show \u003d function ( msg, options ) {\n typeof options \u003d\u003d\u003d \u0027string\u0027 ?",
+      "revId": "ff2a8aca0c3886e814f6aef20da9875c87f0c880",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
