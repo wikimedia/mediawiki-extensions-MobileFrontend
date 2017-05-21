@@ -60,6 +60,7 @@
 	"mobile-frontend-editor-summary-request": "Како сте унапредили страницу?",
 	"mobile-frontend-editor-summary": "Опис:",
 	"mobile-frontend-editor-switch-confirm": "Морате сачувати измене пре пребацивања на други уређивачки режим.",
+	"mobile-frontend-editor-switch-editor": "Замени уређивач",
 	"mobile-frontend-editor-switch-visual-editor": "Пребаци ме на Визуелни уређивач",
 	"mobile-frontend-editor-tutorial-cancel": "Не, хвала",
 	"mobile-frontend-editor-tutorial-confirm": "Почни уређивање",
@@ -207,5 +208,6 @@
 	"mobile-frontend-loading-message": "Учитавам…",
 	"mobile-frontend-panel-ok": "У реду",
 	"mobile-frontend-panel-cancel": "Не, хвала",
-	"mobile-frontend-search-feedback-link-text": "Дајте нам Ваше мишљење."
+	"mobile-frontend-search-feedback-link-text": "Дајте нам Ваше мишљење.",
+	"mobile-frontend-notifications-filter-title": "Филтрирај обавештења"
 }
