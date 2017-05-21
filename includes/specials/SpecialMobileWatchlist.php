@@ -70,7 +70,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			'mobile.pagesummary.styles',
 		] );
 		$req = $this->getRequest();
-		$this->view = $req->getVal( 'watchlistview', 'a-z' );
+
+		# Show watchlist feed if that person is an editor
+		$watchlistEditCountThreshold = $this->getConfig()->get( 'MFWatchlistEditCountThreshold' );
+		$defaultView = $this->getUser()->getEditCount() > $watchlistEditCountThreshold  ? 'feed' : 'a-z';
+		$this->view = $req->getVal( 'watchlistview', $defaultView );
+
 		$this->filter = $req->getVal( 'filter', 'all' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
