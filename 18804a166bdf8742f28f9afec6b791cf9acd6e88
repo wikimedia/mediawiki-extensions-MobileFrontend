@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e1cb3f9_bb042c81",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-21T10:12:35Z",
+      "side": 1,
+      "message": "This seems a little weird to me. Why wouldn\u0027t $skin be an instance of SkinMinerva ? MinervaTemplate and SkinMinerva are very closely coupled.",
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_980cd1f1",
         "filename": "includes/skins/SkinUserPageHelper.php",
         "patchSetId": 9
