@@ -104,6 +104,23 @@
       "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_7520d896",
+        "filename": "tests/phpunit/skins/SkinUserPageHelperTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-05-22T19:53:50Z",
+      "side": 1,
+      "message": "I see no assertions here. What are we testing?",
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
