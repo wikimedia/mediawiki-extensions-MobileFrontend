@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_d248da62",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-22T16:38:29Z",
+      "side": 1,
+      "message": "this is a part of the defensive approach. SkinMinerva is the only Skin that implements getUserPageHelper() (previously only SkinMinerva was implementing isUserPage), If `$this-\u003egetSkin()` returns something else than SkinMinerva previously code would throw a notice \"Undefined property isUserPage\", assume that this $skin-\u003eisUserPage \u003d null and continue. So even if we pass wrong skin it will work. Currently if we pass wrong skin it will throw an error \"Method doesn\u0027t exist\" and stop the php execution.\n\nThis scenario shouldn\u0027t happen, but just to be safe it is better to protect ourselves as `$this-\u003egetSkin()` is implemented inside `QuickTemplate` which is part of MediaWiki Core [Keep in mind that setting SkinMinerva is a hack]",
+      "parentUuid": "0e1cb3f9_bb042c81",
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e1cb3f9_980cd1f1",
         "filename": "includes/skins/SkinUserPageHelper.php",
         "patchSetId": 9
@@ -53,6 +71,30 @@
       "writtenOn": "2017-05-20T18:06:21Z",
       "side": 1,
       "message": "How does the test end up modifying the context? If the consumers of this call setter methods on the objects received via the context, then you probably want to use \u0027new RequestContext\u0027 or newExtraneousContext() instead of deriving from the main context.\n\nIn addition, none of this should matter given that the default MediaWikiTestCase::tearDown(), *already* calls RequestContext::resetMain, so the line added above shouldn\u0027t make any difference. Does it?",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 129,
+        "endChar": 68
+      },
+      "revId": "18804a166bdf8742f28f9afec6b791cf9acd6e88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_b28a066d",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-22T16:38:29Z",
+      "side": 1,
+      "message": "This test is pretty complex, refactoring it now would add lots of code which is not related to this patch (here I just try to tackle SkinMinerva). I want to refactor it in a follow-up patch.\n\nI checked the MediaWikiTestCase and you\u0027re right, it calls RequestContext::resetMain() so my addition in `::tearDown()` shouldn\u0027t be necessary. I\u0027ll remove it.",
+      "parentUuid": "0e1cb3f9_1801a1b3",
       "range": {
         "startLine": 129,
         "startChar": 2,
