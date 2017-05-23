@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_0982a0a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-23T23:11:16Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "7b1500e34af70afaf39764e7fcb3c645fc987184",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_c98b48c3",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-23T23:11:16Z",
+      "side": 1,
+      "message": "Instead of doing this you can use $this-\u003egetConfig()-\u003e\nSee https://github.com/wikimedia/mediawiki/blob/master/includes/specialpage/SpecialPage.php#L211 for an example usage.",
+      "revId": "7b1500e34af70afaf39764e7fcb3c645fc987184",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_29b3e497",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-23T23:11:16Z",
+      "side": 1,
+      "message": "Replace this with two lines:\n$defaultView \u003d $this-\u003egetUser()-\u003egetEditCount() \u003e $wgMFWatchlistEditCountThreshold )  ? \u0027feed\u0027 : \u0027a-z\u0027\n$this-\u003eview \u003d $req-\u003egetVal( \u0027watchlistview\u0027, defaultView );",
+      "revId": "7b1500e34af70afaf39764e7fcb3c645fc987184",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
