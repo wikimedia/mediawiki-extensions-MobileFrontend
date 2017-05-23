@@ -14,6 +14,10 @@ class TestSkinMinerva extends SkinMinerva {
 	public function setDoesPageHaveLanguages( $doesPageHaveLanguages ) {
 		$this->doesPageHaveLanguages = $doesPageHaveLanguages;
 	}
+
+	public function overWriteUserPageHelper( $helper ) {
+		$this->userPageHelper = $helper;
+	}
 }
 
 /**
@@ -37,7 +41,7 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 	 * @return TestSkinMinerva
 	 */
 	private function getSkin( Title $title ) {
-		$requestContext = RequestContext::getMain();
+		$requestContext = new RequestContext();
 		$requestContext->setTitle( $title );
 
 		$result = new TestSkinMinerva();
@@ -111,15 +115,35 @@ class SkinMinervaPageActionsTest extends MediaWikiTestCase {
 	/**
 	 * @covers SkinMinerva::isAllowedPageAction
 	 */
-	public function test_page_actions_when_on_user_pages() {
-		$this->skin->isUserPage = true;
+	public function testPageActionsWhenOnUserPage() {
+		$userPageHelper = $this->getMockBuilder( \MediaWiki\Minerva\SkinUserPageHelper::class )
+			->disableOriginalConstructor()
+			->getMock();
 
-		$this->assertFalse(
-			$this->skin->isAllowedPageAction( 'talk' ),
-			"No page actions are allowed when on a existing user's page that hasn't been created yet."
-		);
+		$userPageHelper->expects( $this->once() )
+			->method( 'isUserPage' )
+			->willReturn( true );
 
 		$skin = $this->getSkin( Title::newFromText( 'User:Admin' ) );
+		$skin->overWriteUserPageHelper( $userPageHelper );
+
+		$this->assertFalse( $skin->isAllowedPageAction( 'talk' ) );
+	}
+
+	/**
+	 * @covers SkinMinerva::isAllowedPageAction
+	 */
+	public function testPageActionsWhenNotOnUserPage() {
+		$userPageHelper = $this->getMockBuilder( \MediaWiki\Minerva\SkinUserPageHelper::class )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$userPageHelper->expects( $this->once() )
+			->method( 'isUserPage' )
+			->willReturn( false );
+
+		$skin = $this->getSkin( Title::newFromText( 'User:Admin' ) );
+		$skin->overWriteUserPageHelper( $userPageHelper );
 
 		$this->assertTrue( $skin->isAllowedPageAction( 'talk' ) );
 	}

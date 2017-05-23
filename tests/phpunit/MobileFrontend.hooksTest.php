@@ -118,6 +118,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		MobileContext::resetInstanceForTesting();
 		// create a new instance of MobileContext
 		$context = MobileContext::singleton();
+
 		// create a DerivativeContext to use in MobileContext later
 		$mainContext = new DerivativeContext( RequestContext::getMain() );
 		// create a new, empty OutputPage
