@@ -113,6 +113,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->rev = $rev;
 		$this->prevRev = $prev;
 		$this->targetTitle = $this->rev->getTitle();
+		$this->getSkin()->setRelevantTitle( $this->targetTitle );
 
 		$output->setPageTitle( $this->msg(
 			'mobile-frontend-diffview-title',
@@ -132,6 +133,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
+		$this->setupDifferenceEngine();
 		$this->showHeader();
 		$this->showDiff();
 		$output->addHtml( '</div>' );
@@ -141,6 +143,39 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output->addHtml( '</div>' );
 
 		return true;
+	}
+
+	/**
+	 * Returns the ID of the previous Revision, if it is set, otherwise 0.
+	 *
+	 * @return int|null
+	 */
+	protected function getPrevId() {
+		return $this->prevRev ? $this->prevRev->getId() : 0;
+	}
+
+	/**
+	 * Setups the DifferenceEngine.
+	 */
+	protected function setupDifferenceEngine() {
+		$contentHandler = $this->rev->getContentHandler();
+		$de = $contentHandler->createDifferenceEngine( $this->getContext(), $this->getPrevId(),
+			$this->revId );
+		// HACK:
+		if ( get_class( $de ) == 'DifferenceEngine' ) {
+			$de = new $this->diffClass(
+				$this->getContext(),
+				$this->getPrevId(),
+				$this->revId,
+				0,
+				false,
+				(bool)$this->getRequest()->getVal( 'unhide' )
+			);
+		} else {
+			$de->showDiffPage();
+			return;
+		}
+		$this->mDiffEngine = $de;
 	}
 
 	/**
@@ -220,25 +255,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	function showDiff() {
 		$output = $this->getOutput();
 
-		$prevId = $this->prevRev ? $this->prevRev->getId() : 0;
+		$prevId = $this->getPrevId();
 		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
-		$contentHandler = $this->rev->getContentHandler();
-		$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
-		// HACK:
-		if ( get_class( $de ) == 'DifferenceEngine' ) {
-			$de = new $this->diffClass(
-				$this->getContext(),
-				$prevId,
-				$this->revId,
-				0,
-				false,
-				$unhide
-			);
-		} else {
-			$de->showDiffPage();
-			return;
-		}
-		$this->mDiffEngine = $de;
+		$de = $this->mDiffEngine;
 		$diff = $de->getDiffBody();
 		if ( !$prevId ) {
 			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
@@ -281,14 +300,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$output->addHtml( $history );
 		}
 
-		$diffEngine = $this->mDiffEngine;
-		if ( $diffEngine instanceof InlineDifferenceEngine ) {
+		if ( $de instanceof InlineDifferenceEngine ) {
 			$output->addHtml( Html::rawElement(
 				'div',
 				[
 					'class' => 'patrollink'
 				],
-				$diffEngine->getPatrolledLink()
+				$de->getPatrolledLink()
 			) );
 		}
 	}
