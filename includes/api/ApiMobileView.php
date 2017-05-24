@@ -79,6 +79,7 @@ class ApiMobileView extends ApiBase {
 		}
 
 		$title = $this->makeTitle( $params['page'] );
+		RequestContext::getMain()->setTitle( $title );
 
 		$namespace = $title->getNamespace();
 		$this->addXAnalyticsItem( 'ns', (string)$namespace );
