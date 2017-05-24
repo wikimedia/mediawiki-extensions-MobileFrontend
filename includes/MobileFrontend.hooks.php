@@ -1144,7 +1144,7 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		if ( $context->shouldDisplayMobileView() ) {
-			$outputPage->enableTOC( false );
+			$po->setTOCEnabled( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
 			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) ) {
