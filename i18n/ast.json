@@ -6,8 +6,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuariu ta editando o non pela interfaz pa móvil",
-	"beta-feature-minerva": "Activar la piel pa móvil ({{int:skinname-minerva}}) nel escritoriu",
-	"beta-feature-minerva-description": "Facer que la piel que s'usa nos preseos móviles seya una piel seleicionable pal escritoriu na llingüeta de preferencies  «{{int:prefs-rendering}}».",
 	"mobile-frontend-account-create-captcha-placeholder": "Escriba'l códigu de confirmación",
 	"mobile-frontend-categories-heading": "<strong>Categoríes</strong>",
 	"mobile-frontend-categories-subheading": "La páxina pertenez a les siguientes categoríes:",
@@ -302,5 +300,6 @@
 	"mobile-frontend-panel-cancel": "Non, gracies",
 	"mobile-frontend-panel-betaoptin-msg": "¿Prestaríate probar dalgunes carauterístiques nueves? Xuniéndote a beta tendrás accesu a carauterístiques esperimentales, col riesgu d'atopate bugs y problemes.",
 	"mobile-frontend-search-feedback-link-text": "Unvianos un comentariu.",
-	"mobile-frontend-search-feedback-prompt": "¿Nun alcontrasti lo que buscabes?"
+	"mobile-frontend-search-feedback-prompt": "¿Nun alcontrasti lo que buscabes?",
+	"mobile-frontend-notifications-filter-title": "Filtriar avisos"
 }
