@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_c4c7a265",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1460,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-05-25T19:11:58Z",
+      "side": 1,
+      "message": "missing mobile.startup dependency and mediawiki.router (see resources/skins.minerva.notifications/init.js lines 9 and 10)",
+      "revId": "b365ca7422b0a2ccb40a4977264d69ede26c1e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
