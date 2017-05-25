@@ -16,6 +16,24 @@
       "revId": "b365ca7422b0a2ccb40a4977264d69ede26c1e9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_c49ec265",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1460,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-25T19:13:40Z",
+      "side": 1,
+      "message": "These dependencies are already provided by skins.minerva.scripts\nWe can repeat them... and be explicit rather than rely on skins.minerva.scripts but I\u0027m not sure what best practice is here.",
+      "parentUuid": "0e1cb3f9_c4c7a265",
+      "revId": "b365ca7422b0a2ccb40a4977264d69ede26c1e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
