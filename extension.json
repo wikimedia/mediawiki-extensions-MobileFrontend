@@ -1876,7 +1876,8 @@
 		"MFEnableManifest": true,
 		"MFManifestThemeColor": "#252525",
 		"MFManifestBackgroundColor": "#FFFFFF",
-		"MFLogWrappedInfoboxes": true
+		"MFLogWrappedInfoboxes": true,
+		"MFWatchlistEditCountThreshold": 10
 	},
 	"manifest_version": 1
 }
