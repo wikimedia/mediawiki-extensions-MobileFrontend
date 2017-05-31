@@ -43,6 +43,27 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
+	 * Obtain the requested page properties.
+	 * @param string $propNames requested list of pageprops separated by '|'. If '*'
+	 *  all page props will be returned.
+	 * @param array $data data available as returned by getData
+	 * @return Array associative
+	 */
+	public function getMobileViewPageProps( $propNames, $data ) {
+		if ( array_key_exists( 'pageprops', $data ) ) {
+			if ( $propNames == '*' ) {
+				$pageProps = $data['pageprops'];
+			} else {
+				$pageProps = array_intersect_key( $data['pageprops'],
+					array_flip( explode( '|', $propNames ) ) );
+			}
+		} else {
+			$pageProps = [];
+		}
+		return $pageProps;
+	}
+
+	/**
 	 * Execute the requested Api actions.
 	 * @todo: Write some unit tests for API results
 	 */
@@ -122,18 +143,13 @@ class ApiMobileView extends ApiBase {
 			$this->addXAnalyticsItem( 'page_id', (string)$data['id'] );
 		}
 		if ( isset( $prop['pageprops'] ) ) {
-			$propNames = $params['pageprops'];
-			if ( $propNames == '*' && isset( $data['pageprops'] ) ) {
-				$pageProps = $data['pageprops'];
-			} else {
-				$propNames = explode( '|', $propNames );
-				$pageProps = array_intersect_key( $data['pageprops'], array_flip( $propNames ) );
-			}
-			ApiResult::setArrayType( $pageProps, 'assoc' );
+			$mvPageProps = $this->getMobileViewPageProps( $params['pageprops'], $data );
+			ApiResult::setArrayType( $mvPageProps, 'assoc' );
 			$resultObj->addValue( null, $moduleName,
-				[ 'pageprops' => $pageProps ]
+				[ 'pageprops' => $mvPageProps ]
 			);
 		}
+
 		if ( isset( $prop['description'] ) && isset( $data['pageprops']['wikibase_item'] ) ) {
 			$desc = ExtMobileFrontend::getWikibaseDescription(
 				$data['pageprops']['wikibase_item']
