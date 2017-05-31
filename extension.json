@@ -1310,11 +1310,8 @@
 		"mobile.special.uploads.styles": {
 			"targets": "mobile",
 			"styles": [
-				"resources/mobile.special.uploads.styles/uploads.less"
+				"resources/mobile.special.uploads.styles/default.less"
 			],
-			"skinStyles": {
-				"default": "resources/mobile.special.uploads.styles/default.less"
-			},
 			"position": "top"
 		},
 		"mobile.special.pagefeed.styles": {
