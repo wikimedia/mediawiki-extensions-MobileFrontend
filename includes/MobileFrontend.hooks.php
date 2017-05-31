@@ -415,7 +415,6 @@ class MobileFrontendHooks {
 				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
 				'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
 			],
-			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
