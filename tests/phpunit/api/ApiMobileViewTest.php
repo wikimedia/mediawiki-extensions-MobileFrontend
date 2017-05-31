@@ -544,6 +544,68 @@ Text 2
 		$this->assertFalse( $isSVG->invokeArgs( $api, [ null ] ) );
 	}
 
+	public function provideGetMobileViewPageProps() {
+		return [
+			// Request all available page properties
+			[
+				'*',
+				[
+					'pageprops' => [ 'wikibase_item' => 'Q76', 'notoc' => true ],
+				],
+				[ 'wikibase_item' => 'Q76', 'notoc' => true ],
+			],
+			// Request non-existent property
+			[
+				'monkey',
+				[
+					'pageprops' => [ 'wikibase_item' => 'Q76', 'notoc' => true ],
+				],
+				[],
+			],
+			// Filter out available page properties with '|'
+			[
+				'wikibase_item|notoc',
+				[
+					'pageprops' => [ 'wikibase_item' => 'Q76', 'notoc' => true ],
+				],
+				[ 'wikibase_item' => 'Q76', 'notoc' => true ],
+			],
+			// Filter out available page properties without '|'
+			[
+				'wikibase_item',
+				[
+					'pageprops' => [ 'wikibase_item' => 'Q76', 'notoc' => true ],
+				],
+				[ 'wikibase_item' => 'Q76' ],
+			],
+			// When no page properties available (T161026)
+			[
+				'wikibase_item',
+				[
+					'title' => 'Foo'
+				],
+				[],
+			],
+			// Request all from nothing
+			[
+				'*',
+				[],
+				[],
+			]
+		];
+	}
+	/**
+	 * @dataProvider provideGetMobileViewPageProps
+	 * @covers ApiMobileView::getMobileViewPageProps
+	 */
+	public function testGetMobileViewPageProps( $requested, $available, $returned ) {
+		$context = new RequestContext();
+		$api = new ApiMobileView( new ApiMain( $context ), 'mobileview' );
+		$actual = $api->getMobileViewPageProps( $requested, $available );
+
+		$this->assertEquals( $returned, $actual );
+	}
+
 	private static function getNonPublicMethod( $className, $methodName ) {
 		$reflectionClass = new ReflectionClass( $className );
 		$method = $reflectionClass->getMethod( $methodName );
