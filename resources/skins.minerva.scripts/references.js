@@ -41,7 +41,7 @@
 	 */
 	function showReference( ev, drawer, page ) {
 		var urlComponents,
-			$dest = $( ev.target ),
+			$dest = $( ev.currentTarget ),
 			href = $dest.attr( 'href' );
 
 		ev.preventDefault();
