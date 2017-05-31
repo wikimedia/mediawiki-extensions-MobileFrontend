@@ -1,13 +1,13 @@
-{{^hasUnseenNotifications}}
+{{^hasNotifications}}
 <a href="{{url}}" title="{{title}}"
-   class="{{class}} user-button main-header-button" id="secondary-button">
+   class="{{notificationIconClass}} user-button main-header-button" id="secondary-button">
     {{title}}
 </a>
-{{/hasUnseenNotifications}}
-{{#hasUnseenNotifications}}
+{{/hasNotifications}}
+{{#hasNotifications}}
 <a href="{{url}}" title="{{title}}"
   id="secondary-button"
-  class="notification-count user-button notification-unseen
+  class="notification-count user-button {{#hasUnseenNotifications}}notification-unseen{{/hasUnseenNotifications}}
     {{#isNotificationCountZero}}zero{{/isNotificationCountZero}}">
 	<div class="circle">
 		 <span>
@@ -15,4 +15,4 @@
 		</span>
 	</div>
 </a>
-{{/hasUnseenNotifications}}
+{{/hasNotifications}}

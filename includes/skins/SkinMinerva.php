@@ -437,11 +437,12 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 				[ 'returnto' => $currentTitle->getPrefixedText() ] );
 
 			$tpl->set( 'secondaryButtonData', [
-				'class' => MobileUI::iconClass( 'notifications' ),
+				'notificationIconClass' => MobileUI::iconClass( 'notifications' ),
 				'title' => $notificationsMsg,
 				'url' => $url,
 				'notificationCount' => $countLabel,
 				'isNotificationCountZero' => $isZero,
+				'hasNotifications' => $hasUnseen,
 				'hasUnseenNotifications' => $hasUnseen
 			] );
 		}
