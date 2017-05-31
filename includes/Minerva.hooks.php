@@ -110,57 +110,6 @@ class MinervaHooks {
 	}
 
 	/**
-	 * ResourceLoaderRegisterModules hook handler.
-	 *
-	 * Registers:
-	 *
-	 * * EventLogging schema modules, if the EventLogging extension is loaded;
-	 * * Modules for the Visual Editor overlay, if the VisualEditor extension is loaded; and
-	 * * Modules for the notifications overlay, if the Echo extension is loaded.
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 *
-	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
-	 * @return bool Always true
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		$resourceBoilerplate = [
-			'localBasePath' => dirname( __DIR__ ),
-			// Rename to Minerva when you move to a skin
-			'remoteExtPath' => 'MobileFrontend',
-		];
-
-		if ( class_exists( 'MWEchoNotifUser' ) ) {
-			$resourceLoader->register( [
-				'skins.minerva.notifications.badge' => $resourceBoilerplate + [
-					'dependencies' => [
-						'mediawiki.router',
-						'mobile.startup',
-					],
-					'scripts' => [
-						'resources/skins.minerva.notifications.badge/NotificationBadge.js',
-					],
-					'templates' => [
-						'badge.hogan' => 'includes/skins/secondaryButton.mustache',
-					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
-				'skins.minerva.notifications' => $resourceBoilerplate + [
-					'dependencies' => [
-						'skins.minerva.notifications.badge',
-						'mediawiki.ui.anchor',
-						'skins.minerva.scripts',
-					],
-					'scripts' => [
-						'resources/skins.minerva.notifications/init.js',
-					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
-			] );
-		}
-	}
-
-	/**
 	 * BeforePageDisplayMobile hook handler.
 	 *
 	 * @param OutputPage $out
