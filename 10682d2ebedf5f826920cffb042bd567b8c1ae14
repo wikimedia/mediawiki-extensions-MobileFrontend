@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_2c798bf2",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-05-31T18:57:57Z",
+      "side": 1,
+      "message": "Does this mean it will get called twice? Not clear what\u0027s TODO here...",
+      "revId": "10682d2ebedf5f826920cffb042bd567b8c1ae14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
