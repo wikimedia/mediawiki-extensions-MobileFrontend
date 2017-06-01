@@ -8,7 +8,6 @@
 		loader = M.require( 'mobile.startup/rlModuleLoader' ),
 		router = require( 'mediawiki.router' ),
 		context = M.require( 'mobile.startup/context' ),
-		useNewMediaViewer = context.isBetaGroupMember(),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 		page = M.getCurrentPage(),
 		thumbs = page.getThumbnails(),
@@ -85,35 +84,14 @@
 	 * @return {jQuery.Deferred}
 	 */
 	function loadImageOverlay( title ) {
-		var result = $.Deferred(),
-			/**
-			 * @private
-			 * @ignore
-			 * @param {ImageOverlay} ImageOverlay Overlay class to initialize
-			 */
-			resolveWithOverlay = function ( ImageOverlay ) {
-				result.resolve(
-					new ImageOverlay( {
-						api: new mw.Api(),
-						thumbnails: thumbs,
-						title: decodeURIComponent( title )
-					} )
-				);
-			};
-
-		if ( useNewMediaViewer ) {
-			loader.loadModule( 'mobile.mediaViewer.beta' ).done( function () {
-				var ImageOverlayBeta = M.require( 'mobile.mediaViewer.beta/ImageOverlayBeta' );
-				resolveWithOverlay( ImageOverlayBeta );
+		return loader.loadModule( 'mobile.mediaViewer' ).then( function () {
+			var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' );
+			return new ImageOverlay( {
+				api: new mw.Api(),
+				thumbnails: thumbs,
+				title: decodeURIComponent( title )
 			} );
-		} else {
-			loader.loadModule( 'mobile.mediaViewer' ).done( function () {
-				var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' );
-				resolveWithOverlay( ImageOverlay );
-			} );
-		}
-
-		return result;
+		} );
 	}
 
 	// Routes

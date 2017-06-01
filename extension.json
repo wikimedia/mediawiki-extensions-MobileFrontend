@@ -789,7 +789,7 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.swipe.images"
+				"mobile.mediaViewer.images"
 			],
 			"styles": [
 				"resources/mobile.mediaViewer/mediaViewer.less"
@@ -806,20 +806,7 @@
 				"mobile-frontend-media-license-link"
 			]
 		},
-		"mobile.mediaViewer.beta": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.mediaViewer",
-				"mobile.swipe"
-			],
-			"scripts": [
-				"resources/mobile.mediaViewer.beta/ImageOverlayBeta.js"
-			]
-		},
-		"mobile.swipe.images": {
+		"mobile.mediaViewer.images": {
 			"class": "ResourceLoaderImageModule",
 			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
 			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
@@ -832,14 +819,14 @@
 			"images": {
 				"previous": {
 					"file": {
-						"ltr": "resources/mobile.swipe.images/move-rtl.svg",
-						"rtl": "resources/mobile.swipe.images/move-ltr.svg"
+						"ltr": "resources/mobile.mediaViewer.images/move-rtl.svg",
+						"rtl": "resources/mobile.mediaViewer.images/move-ltr.svg"
 					}
 				},
 				"next": {
 					"file": {
-						"ltr": "resources/mobile.swipe.images/move-ltr.svg",
-						"rtl": "resources/mobile.swipe.images/move-rtl.svg"
+						"ltr": "resources/mobile.mediaViewer.images/move-ltr.svg",
+						"rtl": "resources/mobile.mediaViewer.images/move-rtl.svg"
 					}
 				}
 			}
@@ -1149,18 +1136,6 @@
 			],
 			"scripts": [
 				"resources/mobile.infiniteScroll/InfiniteScroll.js"
-			]
-		},
-		"mobile.swipe": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.swipe/Swipe.js"
 			]
 		},
 		"mobile.patrol.ajax": {
