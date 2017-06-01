@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var context = M.require( 'mobile.startup/context' ),
-		View = M.require( 'mobile.startup/View' ),
+	var View = M.require( 'mobile.startup/View' ),
 		settings = M.require( 'mobile.startup/settings' );
 
 	/**
@@ -39,7 +38,7 @@
 		var cb,
 			saveLI = $( '#mw-mf-settings-save' );
 
-		if ( context.isBetaGroupMember() ) {
+		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) ) {
 			cb = new Checkbox( {
 				name: 'expandSections',
 				label: mw.msg( 'mobile-frontend-expand-sections-status' ),
