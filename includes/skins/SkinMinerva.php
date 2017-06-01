@@ -4,7 +4,6 @@
  */
 use MediaWiki\Minerva\MenuBuilder;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Minerva\SkinUserPageHelper;
 
 /**
@@ -19,7 +18,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	const OPTION_FONT_CHANGER = 'fontChanger';
 	const OPTION_BACK_TO_TOP = 'backToTop';
 	const OPTION_TOGGLING = 'toggling';
-	const OPTION_PRINT_STYLES = 'printStyles';
 	const OPTIONS_MOBILE_BETA = 'beta';
 
 	/** @var string $skinname Name of this skin */
@@ -51,17 +49,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	public function getSitename() {
 		$config = $this->getMFConfig();
-		$mfLogos = $config->get( 'MFCustomLogos' );
-		// use of MFCustomLogos is kept for backwards compatibility.
-		$customLogos = array_merge( $config->get( 'MinervaCustomLogos' ),
-			$mfLogos );
-
-		// FIXME: Remove when config has been updated.
-		if ( $mfLogos && count( $mfLogos ) > 0 ) {
-			LoggerFactory::getInstance( 'mobile' )->info(
-				"MFCustomLogos config option is deprecated. Please use MinervaCustomLogos instead."
-			);
-		}
+		$customLogos = $config->get( 'MinervaCustomLogos' );
 
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 
@@ -101,8 +89,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		self::OPTION_BACK_TO_TOP => false,
 		/** Whether sections can be collapsed (requires MobileFrontend and MobileFormatter) */
 		self::OPTION_TOGGLING => false,
-		/** Whether print styles should be loaded */
-		self::OPTION_PRINT_STYLES => false,
 	];
 
 	/**
@@ -343,9 +329,8 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
 		$styles = [];
-		if ( $this->getSkinOption( self::OPTION_PRINT_STYLES ) ) {
-			$styles[] = 'skins.minerva.print.styles';
-		}
+		// FIXME: Merge this module with skins.minerva.base.styles
+		$styles[] = 'skins.minerva.print.styles';
 
 		$out->addModuleStyles( $styles );
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );

@@ -15,10 +15,6 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 
 		// Set relevant configuration variables to their default values.
 		$this->setMwGlobals( [
-			'wgMFUseWikibaseDescription' => false,
-			'wgMFDisplayWikibaseDescription' => false,
-			'wgMFDisplayWikibaseDescriptionsAsTaglines' => false,
-
 			'wgMFUseWikibase' => false,
 			'wgMFDisplayWikibaseDescriptions' => [
 				'search' => true,
@@ -31,39 +27,13 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
-	 * @covers MobileContext::shouldShowWikibaseDescriptionsLegacy
 	 */
 	public function test_showing_descriptions_is_disabled_by_default() {
 		$this->assertFalse( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
-
-		$this->setMwGlobals( 'wgMFUseWikibaseDescription', true );
-
-		$this->assertFalse(
-			$this->context->shouldShowWikibaseDescriptions( 'search' ),
-			'Showing descriptions is flagged by wgMFDisplayWikibaseDescription.'
-		);
-
-		$this->setMwGlobals( 'wgMFDisplayWikibaseDescription', true );
-
-		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
 	}
 
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
-	 * @covers MobileContext::shouldShowWikibaseDescriptionsLegacy
-	 */
-	public function test_showing_descriptions_as_taglines_can_be_enabled() {
-		$this->setMwGlobals( [
-			'wgMFUseWikibaseDescription' => true,
-			'wgMFDisplayWikibaseDescriptionsAsTaglines' => true,
-		] );
-
-		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions( 'tagline' ) );
-	}
-
-	/**
-	 * @covers MobileContext::shouldShowWikibaseDescriptions
-	 * @covers MobileContext::shouldShowWikibaseDescriptionsLegacy
 	 */
 	public function test_showing_descriptions_can_be_enabled() {
 		$this->setMwGlobals( [
@@ -74,16 +44,9 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 			$this->context->shouldShowWikibaseDescriptions( 'search' ),
 			'Showing descriptions is flagged by new variables.'
 		);
-
-		$this->setMwGlobals( [
-			'wgMFUseWikibase' => false,
-			'wgMFUseWikibaseDescription' => true,
-			'wgMFDisplayWikibaseDescription' => true,
-		] );
-
-		$this->assertTrue(
-			$this->context->shouldShowWikibaseDescriptions( 'search' ),
-			'Showing descriptions is still flagged by deprecated variables.'
+		$this->assertFalse(
+			$this->context->shouldShowWikibaseDescriptions( 'tagline' ),
+			'Showing descriptions is flagged by tagline variable.'
 		);
 	}
 
@@ -99,7 +62,6 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 * @expectedException DomainException
 	 *
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
-	 * @covers MobileContext::shouldShowWikibaseDescriptionsLegacy
 	 */
 	public function test_it_throws_an_exception_if_feature_is_invalid( $feature ) {
 		$this->context->shouldShowWikibaseDescriptions( $feature );
