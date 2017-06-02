@@ -246,6 +246,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				$comment
 			)
 		);
+
+		if ( $this->mDiffEngine instanceof InlineDifferenceEngine ) {
+			// TODO: The hook gets originally called in the DifferenceEngine::showDiffPage() method
+			Hooks::run( 'DiffViewHeader', [ $this->mDiffEngine, $this->prevRev, $this->rev ] );
+		}
 	}
 
 	/**
