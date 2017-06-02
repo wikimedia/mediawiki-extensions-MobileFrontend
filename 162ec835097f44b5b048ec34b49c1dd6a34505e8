@@ -16,6 +16,24 @@
       "revId": "162ec835097f44b5b048ec34b49c1dd6a34505e8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce153bd1_2e911853",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-02T16:08:52Z",
+      "side": 1,
+      "message": "I\u0027ve updated the note, but I think name is correct because it\u0027s sufixed with UserOption.",
+      "parentUuid": "ce153bd1_13679b23",
+      "revId": "162ec835097f44b5b048ec34b49c1dd6a34505e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
