@@ -36,22 +36,27 @@
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
+				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
 			},
 			locating: {
 				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
+				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
 			},
 			permission: {
 				heading: mw.msg( 'mobile-frontend-nearby-permission' ),
+				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
 			},
 			http: {
 				heading: mw.msg( 'mobile-frontend-nearby-error' ),
+				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-error-guidance' )
 			},
 			incompatible: {
 				heading: mw.msg( 'mobile-frontend-nearby-requirements' ),
+				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},

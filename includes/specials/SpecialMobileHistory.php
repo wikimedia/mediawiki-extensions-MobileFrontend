@@ -20,6 +20,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var Title|null $title Null if no title passed */
 	protected $title;
 
+	/** @var string a message key for the error message heading that should be shown on a 404 */
+	protected $errorNotFoundTitleMsg = 'mobile-frontend-history-404-title';
+	/** @var string a message key for the error message description that should be shown on a 404 */
+	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-history-404-desc';
+
 	/**
 	 * Construct function
 	 */
@@ -76,15 +81,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$headerTitle .
 				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
-		);
-	}
-
-	/**
-	 * Show an error page, if page not found
-	 */
-	protected function showPageNotFound() {
-		wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
-			$this->msg( 'mobile-frontend-history-404-desc' )->text()
 		);
 	}
 
