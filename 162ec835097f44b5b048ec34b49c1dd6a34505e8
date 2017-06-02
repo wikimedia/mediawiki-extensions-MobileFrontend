@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce153bd1_13679b23",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-02T14:29:31Z",
+      "side": 1,
+      "message": "We should note that this flag does not affect tablets as in tablets sections are expanded by default. We should probably rename the flag to make this clear.",
+      "revId": "162ec835097f44b5b048ec34b49c1dd6a34505e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
