@@ -136,7 +136,7 @@
 			settings.save( 'mobile-betaoptin-token', token );
 		}
 
-		inStable = !context.isBetaGroupMember();
+		inStable = context.getMode() === 'stable';
 		inSample = mw.experiments.getBucket( experiment, token ) === 'A';
 		if ( inStable && ( inSample || mw.util.getParamValue( 'debug' ) ) ) {
 			betaOptinPanel = new BetaOptinPanel( {
