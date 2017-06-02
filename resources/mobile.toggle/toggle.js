@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var context = M.require( 'mobile.startup/context' ),
-		settings = M.require( 'mobile.startup/settings' ),
+	var settings = M.require( 'mobile.startup/settings' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowOptions = {
@@ -246,7 +245,7 @@
 			collapseSectionsByDefault = true;
 		}
 		expandSections = !collapseSectionsByDefault ||
-			( context.isBetaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
+			( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) && settings.get( 'expandSections', true ) === 'true' );
 
 		$container.children( tagName ).each( function ( i ) {
 			var isReferenceSection,

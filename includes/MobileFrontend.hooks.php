@@ -1238,6 +1238,10 @@ class MobileFrontendHooks {
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 
+		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
+		$vars['wgMFExpandAllSectionsUserOption'] =
+			$context->getConfigVariable( 'MFExpandAllSectionsUserOption' );
+
 		$vars += self::getWikibaseStaticConfigVars( $context );
 
 		return true;

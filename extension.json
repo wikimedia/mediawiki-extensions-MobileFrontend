@@ -1843,6 +1843,10 @@
 		"MFCollapseSectionsByDefault": true,
 		"MFPhotoUploadWiki": null,
 		"MFPhotoUploadEndpoint": "",
+		"MFExpandAllSectionsUserOption": {
+			"base": false,
+			"beta": true
+		},
 		"MFUseWikibaseDescription": false,
 		"MFUseWikibase": false,
 		"MFDisplayWikibaseDescription": false,
