@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae1ac700_311660f7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-05T14:42:35Z",
+      "side": 1,
+      "message": "What\u0027s the point of having this variable if we\u0027re falling back to 0? Why not execute the function only when Minerva is active? This change seems to be trying to hide a bug.",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
