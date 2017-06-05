@@ -127,6 +127,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			// icon to the left of the username
 			'mobile.special.pagefeed.styles'
 		] );
+		$output->addModules( 'mobile.special.mobilediff.images' );
 
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $ctx, $revisions ] );
@@ -195,15 +196,16 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = MobileUI::iconClass( 'bytesadded', 'before', 'icon-12px meta mw-mf-bytesadded' );
+			$sizeClass = MobileUI::iconClass( 'bytesadded', 'before',
+				'meta mw-mf-bytesadded mw-ui-icon-small' );
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
 			$sizeClass = MobileUI::iconClass( 'bytesneutral', 'before',
-				'icon-12px meta mw-mf-bytesneutral' );
+				'meta mw-mf-bytesneutral mw-ui-icon-small' );
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
 			$sizeClass = MobileUI::iconClass( 'bytesremoved', 'before',
-				'icon-12px meta mw-mf-bytesremoved' );
+				'meta mw-mf-bytesremoved mw-ui-icon-small' );
 			$bytesChanged = abs( $bytesChanged );
 		}
 
