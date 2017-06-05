@@ -106,6 +106,24 @@
       "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_23b7f5d4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-05T22:04:29Z",
+      "side": 1,
+      "message": "ok, current code is different than the original one.\n\nPreviously $config-\u003eget() would return null/false, then MWNamespace::getCanonicalName() would return false which is acceptable $subPage (https://github.com/wikimedia/mediawiki/blob/master/includes/specialpage/SpecialPage.php#L82) and at the end it wouldn\u0027t enter into this IF block: https://github.com/wikimedia/mediawiki/blob/master/includes/specialpage/SpecialPageFactory.php#L696\n\n\nNow if we always pass a NS_MAIN, it means canonicalName will be passed as a $subPage, which means it will always enter the if block in https://github.com/wikimedia/mediawiki/blob/master/includes/specialpage/SpecialPageFactory.php#L696 and the Title will be always translated into Randompage/Main",
+      "parentUuid": "ae1ac700_c394f93b",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
