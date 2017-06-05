@@ -676,7 +676,8 @@
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-{name}:before",
 			"images": {
-				"clear": "resources/mobile.search.images/clear.svg"
+				"clear": "resources/mobile.search.images/clear.svg",
+				"search-content": "resources/mobile.search.images/search-content.svg"
 			}
 		},
 		"mobile.search": {
