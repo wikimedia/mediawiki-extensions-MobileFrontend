@@ -34,6 +34,24 @@
       "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_0c8b0374",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-05T16:48:02Z",
+      "side": 1,
+      "message": "The problem from my point of view is that we\u0027re unconditionally falling back to 0 knowing that this won\u0027t work on some wikis. Thus we\u0027re replacing one bug with another. The initial bug is that the variable may not be defined. The new bug is that we\u0027re using the wrong value of the variable for some wikis.",
+      "parentUuid": "ae1ac700_91408caa",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
