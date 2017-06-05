@@ -70,6 +70,24 @@
       "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_2cc0472f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-05T18:10:39Z",
+      "side": 1,
+      "message": "Hmm, I\u0027m not sure. You don\u0027t seem to agree that the code before the change breaks when MFContentNamespace is not set, which maybe the case as you say. You also say commons uses something other than 0, and yet say it is not a bug to fall back to 0.\n\nYour solution doesn\u0027t seem like an improvement over the existing code. It\u0027s just making things easier for moving Minerva out of MF. I think we should hear what other devs have to say. Note I didn\u0027t give a -1, so no need to make me happy. I just don\u0027t feel like merging this code, as I\u0027m not convinced to merge code knowing that an edge case is not met. Having said that, I\u0027m not opposed if someone else merges the patch after reading this conversation.",
+      "parentUuid": "ae1ac700_ec324fbc",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
