@@ -843,6 +843,7 @@
 				"mobile.search",
 				"mobile.editor.common",
 				"mobile.infiniteScroll",
+				"oojs-ui.styles.icons-interactions",
 				"oojs-ui"
 			],
 			"scripts": [
