@@ -52,6 +52,24 @@
       "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_ec324fbc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-05T17:25:24Z",
+      "side": 1,
+      "message": "0 should work for the majority of wikis .. especially 3rd party ones. The only wiki I know that uses something other than 0 is Commons.\n\nGiven in production we are using MobileFrontend and Minerva together this is not going to introduce any bugs in our stack it just makes my life easier and Jenkins happy when I pull this code into a new repo.\n\nThere is no bug here before or after the change.\n\nWhat can I do to make you happy here...? :)",
+      "parentUuid": "ae1ac700_0c8b0374",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
