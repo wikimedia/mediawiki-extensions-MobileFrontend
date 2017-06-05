@@ -16,6 +16,24 @@
       "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_91408caa",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-05T15:22:25Z",
+      "side": 1,
+      "message": "I\u0027m not sure i understand where you are coming from. There\u0027s no bug here as far as I\u0027m concerned.\n\nThing I\u0027m trying to solve: I\u0027m accounting for when the variable does not exist, which will be possible when I pull Minerva out of MobileFrontend.\n\nProblem:\nThe reason we have this variable is that on some wikis the random and nearby feature doesn\u0027t operate on the 0 namespace, for example on Commons we use the file namespace.\n\nThe problem is the variable is used for Nearby by Minerva and there is no config variable in core. In core for instance the desktop site of commons uses https://commons.wikimedia.org/wiki/MediaWiki:Sidebar to update the random link.\n\nAn alternative solution would be to change the config name to MinervaContentNamespace. If we do this we\u0027d need to find a new way to make Nearby work - either introducing a new config NearbyContentNamespace OR allowing Nearby to operate in different namespaces when passed a parameter and passing in that parameter here.",
+      "parentUuid": "ae1ac700_311660f7",
+      "revId": "473248b42e57534d0c8c4ff04dd495646d951c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
