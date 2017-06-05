@@ -223,6 +223,12 @@
 				}
 			},
 			"images": {
+				"back": {
+					"file": {
+						"ltr": "resources/mobile.overlay.images/back-ltr.svg",
+						"rtl": "resources/mobile.overlay.images/back-rtl.svg"
+					}
+				},
 				"overlay-close": "resources/mobile.overlay.images/close.svg"
 			}
 		},
