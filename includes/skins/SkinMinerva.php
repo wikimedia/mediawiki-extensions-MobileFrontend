@@ -1111,7 +1111,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$baseResult = [
 			'id' => 'ca-watch',
 			// Use blank icon to reserve space for watchstar icon once JS loads
-			'class' => MobileUI::iconClass( '', 'element', 'icon-32px watch-this-article' ),
+			'class' => MobileUI::iconClass( '', 'element', 'watch-this-article' ),
 			'is_js_only' => true
 		];
 		$title = $this->getTitle();
