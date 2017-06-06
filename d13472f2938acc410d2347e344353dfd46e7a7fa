@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e294b1e_540f4c33",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 461,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-06T22:01:40Z",
+      "side": 1,
+      "message": "nitpick resources/mobile.startup.images/alert-bell.svg should probably reflect the icon name - this seems to be how we do it for other icons.\n\ne.g. resources/mobile.startup.images/error.svg",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e294b1e_d4fa7c0d",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-06T22:01:40Z",
+      "side": 1,
+      "message": "It\u0027s worth noting that this breaks any extensions that use\n\nmw.notify(\u0027hello error\u0027, { type: \u0027error\u0027, tag: \u0027toast\u0027 } )\ninstead of the MobileFrontend toast.\nBefore: icon would show\nAfter: icon doesn\u0027t show\n\nA  different approach might be to always include the icon and hide it by default only showing it when the class mw-notification-type-error  is present. Thoughts?",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e294b1e_94040419",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-06T22:01:40Z",
+      "side": 1,
+      "message": "It\u0027s worth documenting this with a FIXME pointing to https://phabricator.wikimedia.org/T14990 as we are wastefully creating an element here just to get its class",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
