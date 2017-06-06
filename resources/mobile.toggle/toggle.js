@@ -336,7 +336,8 @@
 		checkInternalRedirectAndHash();
 		checkHash( this );
 		// Restricted to links created by editors and thus outside our control
-		$container.find( 'a' ).on( 'click', function () {
+		// T166544 - don't do this for reference links - they will be handled elsewhere
+		$container.find( 'a:not(.reference a)' ).on( 'click', function () {
 			// the link might be an internal link with a hash.
 			// if it is check if we need to reveal any sections.
 			if ( $( this ).attr( 'href' ) !== undefined &&
