@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae1ac700_4f7b28ec",
+        "filename": "phpcs.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 161
+      },
+      "writtenOn": "2017-06-06T15:48:21Z",
+      "side": 1,
+      "message": "Please repeat this line and use it for node_modules\n\nHaving all ignore in the config file allows phpcbf to use it",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "ebcdca486786d897369146d34f92cd6885dd5d65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
