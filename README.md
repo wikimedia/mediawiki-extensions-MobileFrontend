@@ -570,14 +570,6 @@ Whether beta mode is enabled.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFContentNamespace
-
-The content namespace(s) that *Special:Nearby* and *Special:Random* should use.
-Should be one or more of `NS_*` constants, pipe-separated.
-
-* Type: `Integer|String`
-* Default: `NS_MAIN`
-
 #### $wgMFDefaultSkinClass
 
 The default skin for MobileFrontend.

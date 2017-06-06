@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var limit = 50,
 		Page = M.require( 'mobile.startup/Page' ),
-		ns = mw.config.get( 'wgMFContentNamespace' ),
+		ns = mw.config.get( 'wgContentNamespaces' ),
 		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**

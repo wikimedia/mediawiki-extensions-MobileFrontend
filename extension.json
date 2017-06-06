@@ -1840,7 +1840,6 @@
 		"MinervaCustomLogos": [],
 		"MobileFrontendLogo": false,
 		"MFEnableBeta": false,
-		"MFContentNamespace": 0,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MinervaApplyKnownTemplateHacks": false,
 		"MinervaPrintStyles": {

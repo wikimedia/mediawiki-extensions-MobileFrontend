@@ -648,9 +648,7 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$menu->insert( 'random' )
 			->addComponent(
 				$this->msg( 'mobile-frontend-random-button' )->escaped(),
-				SpecialPage::getTitleFor( 'Randompage',
-					MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
-						'#/random',
+				SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() . '#/random',
 				MobileUI::iconClass( 'mf-random', 'before' ),
 				[
 					'id' => 'randomButton',
