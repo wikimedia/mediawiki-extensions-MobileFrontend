@@ -32,7 +32,7 @@
 					href: '#/notifications-filter',
 					classes: [ 'mw-echo-ui-notificationsInboxWidget-main-toolbar-nav-filter-placeholder' ],
 					icon: 'funnel',
-					label: 'Filter'
+					label: mw.msg( 'mobile-frontend-notifications-filter' )
 				} );
 
 			$( '.mw-echo-ui-notificationsInboxWidget-cell-placeholder' ).append(

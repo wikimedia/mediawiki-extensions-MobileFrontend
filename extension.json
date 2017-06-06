@@ -1452,6 +1452,9 @@
 			"scripts": [
 				"resources/skins.minerva.notifications/init.js"
 			],
+			"messages": [
+				"mobile-frontend-notifications-filter"
+			],
 			"targets": [ "mobile", "desktop" ]
 		},
 		"skins.minerva.editor": {
