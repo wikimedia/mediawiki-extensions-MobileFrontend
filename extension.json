@@ -1179,12 +1179,6 @@
 		},
 		"mobile.special.mobilemenu.styles": {
 			"targets": "mobile",
-			"styles": [
-				"resources/mobile.special.mobilemenu.styles/mobilemenu.less"
-			],
-			"skinStyles": {
-				"vector": "resources/mobile.special.mobilemenu.styles/mobilemenu.less"
-			},
 			"position": "top"
 		},
 		"mobile.special.mobileoptions.styles": {
@@ -1274,6 +1268,9 @@
 		},
 		"mobile.special.history.styles": {
 			"targets": "mobile",
+			"styles": [
+				"resources/mobile.special.history.styles/default.less"
+			],
 			"position": "top"
 		},
 		"mobile.special.uploads.scripts": {
@@ -1618,19 +1615,17 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
+	"@note1": "ResourceModuleSkinStyles must only contain customizations for 'minerva'.",
+	"@note2": "For other skins, just use 'skinStyles' in module definition.",
+	"@note3": "Otherwise their own customizations are overridden. (T167216)",
 	"ResourceModuleSkinStyles": {
-		"default": {
-			"mobile.special.history.styles": [
-				"resources/mobile.special.history.styles/default.less"
-			]
-		},
 		"minerva": {
+			"mobile.special.mobilemenu.styles": [
+				"resources/mobile.special.mobilemenu.styles/mobilemenu.less"
+			],
 			"mediawiki.notification": [
 				"resources/mobile.startup/toast.less"
 			]
-		},
-		"vector": {
-			"mobile.special.mobilemenu.styles": "skinStyles/mobile.special.mobilemenu.styles/vector.less"
 		}
 	},
 	"Hooks": {
