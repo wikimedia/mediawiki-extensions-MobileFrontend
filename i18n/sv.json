@@ -314,5 +314,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Vill du prova på några nya funktioner? Genom att gå med i beta kommer du att få tillgång till experimentella funktioner, med risk för att stöta på buggar och problem.",
 	"mobile-frontend-search-feedback-link-text": "Ge oss din återkoppling.",
 	"mobile-frontend-search-feedback-prompt": "Hittade du inte det som du letade efter?",
+	"mobile-frontend-notifications-filter": "Filter",
 	"mobile-frontend-notifications-filter-title": "Filtrera aviseringar"
 }

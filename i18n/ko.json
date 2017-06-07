@@ -293,5 +293,6 @@
 	"mobile-frontend-panel-ok": "네",
 	"mobile-frontend-panel-cancel": "괜찮습니다",
 	"mobile-frontend-panel-betaoptin-msg": "새 기능을 써보겠습니까? 베타에 참여하면, 버그와 문제가 생길 수 있는 위험을 감수하며 실험적인 기능에 접근하게 됩니다.",
+	"mobile-frontend-notifications-filter": "필터",
 	"mobile-frontend-notifications-filter-title": "필터 알림"
 }
