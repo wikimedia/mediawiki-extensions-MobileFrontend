@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_8626fac7",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T19:01:51Z",
+      "side": 1,
+      "message": "This won\u0027t work.\nhttp://localhost:8888/w/load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003dmobile.references.images\u0026only\u003dstyles\u0026skin\u003dminerva\u0026r\u003d3\n\n/*\n[9ec3217d16fc110b95a86bfa] /w/load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003dmobile.references.images\u0026only\u003dstyles\u0026skin\u003dminerva\u0026r\u003d3   InvalidArgumentException from line 89 of /Users/jrobson/git/core/includes/resourceloader/ResourceLoaderImage.php: Invalid file type for image files of \u0027@FIXME\u0027 (valid: svg, png, gif, jpg) in module \u0027mobile.references.images\u0027\nBacktrace:\n#0 /Users/jrobson/git/core/includes/resourceloader/ResourceLoaderImageModule.php(270): ResourceLoaderImage-\u003e__construct(string, string, string, string, array)\n#1 /Users/jrobson/git/core/includes/resourceloader/ResourceLoaderImageModule.php(434): ResourceLoaderImageModule-\u003egetImages(DerivativeResourceLoaderContext)\n#2 /Users/jrobson/git/core/includes/resourceloader/ResourceLoaderImageModule.php(423): ResourceLoaderImageModule-\u003egetFileHashes(DerivativeResourceLoaderContext)\n#3 /Users/jrobson/git/core/includes/resourceloader/ResourceLoaderModule.php(764): ResourceLoaderImageModule-\u003egetDefinitionSummary(DerivativeResourceLoaderContext)\n#4 /Users/jrobson/git/core/includes/resourceloader/ResourceLoader.php(650): ResourceLoaderModule-\u003egetVersionHash(ResourceLoaderContext)\n#5 [internal function]: ResourceLoader-\u003e{closure}(string)\n#6 /Users/jrobson/git/core/includes/resourceloader/ResourceLoader.php(663): array_map(Closure, array)\n#7 /Users/jrobson/git/core/includes/resourceloader/ResourceLoader.php(743): ResourceLoader-\u003egetCombinedVersion(ResourceLoaderContext, array)\n#8 /Users/jrobson/git/core/load.php(53): ResourceLoader-\u003erespond(ResourceLoaderContext)\n#9 {main}\n*/\n.mw-ui-icon-citation:before{background-image:url(/w/load.php?modules\u003dmobile.references.images\u0026image\u003dcitation\u0026format\u003drasterized\u0026lang\u003den\u0026skin\u003dminerva);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2229.143%22%20viewBox%3D%220%200%2012%2014.571428%22%3E%3Cg%20id%3D%22g3%22%3E%3Cpath%20d%3D%22M7.714%206.857L6%205.143%204.286%206.857V1.714H2.57v11.143h6.86s.856%200%20.856-.857V1.714H7.714v5.143z%22%20id%3D%22path5%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M0%200v14.57h10.286c.857%200%201.714-.856%201.714-1.713V0H0zm10.286%2012c0%20.857-.857.857-.857.857H2.57V1.714h1.716v5.143L6%205.143l1.714%201.714V1.714h2.572V12z%22%20id%3D%22path7%22%20fill%3D%22%23575757%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);background-image:-o-linear-gradient(transparent,transparent),url(/w/load.php?modules\u003dmobile.references.images\u0026image\u003dcitation\u0026format\u003drasterized\u0026lang\u003den\u0026skin\u003dminerva)}",
+      "revId": "dfd5d2ff7c8590b6f0ff3b806f188f2d29b81759",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
