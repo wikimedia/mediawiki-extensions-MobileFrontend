@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e81134c_5b99cf7f",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T14:49:40Z",
+      "side": 1,
+      "message": "If you look at the history of the css change relates  to an attempt to consolidate and make the the toast code with mw.notify https://gerrit.wikimedia.org/r/#/c/258969/\n\nYes the UI is different but it\u0027s using exactly the same underlying code in core - it\u0027s just how Minerva skins it.\n\nThere is a lot of usages of mw.notify code that could invoke this from inside the Minerva skin:\nhttps://github.com/search?l\u003dJavaScript\u0026q\u003dorg%3Awikimedia+mw.notify\u0026type\u003dCode\nBefore they would show a bell, now they wouldn\u0027t. So by removing this code we\u0027d be breaking support for those and we\u0027d need to be mindful that we are. It\u0027s my thinking if we can avoid this, we should, as otherwise we are creating a potential bug.\n\nIf we need to show a warning icon we\u0027ll need to reconsider our approach here just like we are right now.\n\nOf course, we might want to consider updating mw.notify in core to support icons. If we needed a warning icon that\u0027s what I\u0027d suggest we look into.\n\nIf we\u0027re still committed to the approach of using the core mw.notify method we should look to throw away our toast code to make this more explicit.",
+      "parentUuid": "0e81134c_38f2d1ce",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e294b1e_94040419",
         "filename": "resources/mobile.startup/toast.js",
         "patchSetId": 2
