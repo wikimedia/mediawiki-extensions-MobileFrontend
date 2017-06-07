@@ -104,6 +104,24 @@
       "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_a115284f",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T20:57:00Z",
+      "side": 1,
+      "message": "Sorry wrong task.\nhttps://phabricator.wikimedia.org/T104008",
+      "parentUuid": "0e81134c_d8a4e5b7",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
