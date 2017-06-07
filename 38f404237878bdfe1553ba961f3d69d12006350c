@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_616420e2",
+        "filename": "resources/mobile.startup/toast.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T19:38:00Z",
+      "side": 1,
+      "message": "Note the PNG fallback for older browsers no longer exists.\n\nSince this can only be used in JS and all JS clients support SVG this is probably fine but we should probably document this is intentional in the commit message or an inline comment?",
+      "revId": "38f404237878bdfe1553ba961f3d69d12006350c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
