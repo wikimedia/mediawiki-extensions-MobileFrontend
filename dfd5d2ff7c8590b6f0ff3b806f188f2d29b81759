@@ -16,6 +16,24 @@
       "revId": "dfd5d2ff7c8590b6f0ff3b806f188f2d29b81759",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_463012fd",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-07T19:03:35Z",
+      "side": 1,
+      "message": "What\u0027s the best place to add this FIXME to?",
+      "parentUuid": "0e81134c_8626fac7",
+      "revId": "dfd5d2ff7c8590b6f0ff3b806f188f2d29b81759",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
