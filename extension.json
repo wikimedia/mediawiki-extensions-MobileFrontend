@@ -454,6 +454,13 @@
 				"BackToTopOverlay.hogan": "resources/mobile.backtotop/BackToTopOverlay.hogan"
 			}
 		},
+		"mobile.startup.images": {
+			"class": "ResourceLoaderImageModule",
+			"selector": ".mw-ui-icon-{name}:before",
+			"images": {
+				"error": "resources/mobile.startup.images/error.svg"
+			}
+		},
 		"mobile.startup": {
 			"targets": [
 				"mobile",
@@ -463,6 +470,7 @@
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
+				"mobile.startup.images",
 				"mobile.overlay.images",
 				"mobile.ajax.styles",
 				"mediawiki.language",
