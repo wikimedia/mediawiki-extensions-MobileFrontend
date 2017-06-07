@@ -167,13 +167,6 @@ A list of experiments active on the skin.
   ]
 ```
 
-#### $wgMFEnableMinervaBetaFeature
-
-Controls whether the "Minerva as a desktop skin" beta feature is enabled.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFEnableJSConsoleRecruitment
 
 Controls whether a message should be logged to the console to attempt to
@@ -347,19 +340,6 @@ When enabled and hacks.less exists, hacks.less workarounds are included in style
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMinervaPrintStyles
-
-A temporary configuration variable to control roll out of styles to improve the MobileFrontend print experience.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    'beta' => true,
-    'base' => false,
-  ]
-```
-
 #### $wgMinervaPageActions
 
 Controls which page actions, if any, are displayed. Allowed: `edit`, `watch`, `talk`, and
@@ -447,14 +427,6 @@ adapted for improved reading on small screens.
 * Type: `Integer`
 * Default: `280`
 
-#### $wgMFDeviceWidthTablet
-
-Minimum available screen width at which a device can be considered
-a tablet/desktop.
-
-* Type: `Integer`
-* Default: `768`
-
 #### $wgMobileUrlTemplate
 
 Template for mobile URLs.
@@ -520,10 +492,6 @@ include the preceding `.` (e.g. yes: `.wikipedia.org`, **no**: `wikipedia.org`)
 * Type: `String|null`
 * Default: `null`
 
-#### $wgMFCustomLogos
-
-Use $wgMinervaCustomLogos instead.
-
 #### $wgMinervaCustomLogos
 
 Make the logos configurable.
@@ -557,7 +525,7 @@ Example:
 #### $wgMobileFrontendLogo
 
 Path to the logo used in the login/signup form.  The standard height is `72px`
-(FIXME: Merge with `$wgMFCustomLogos`)
+(FIXME: Merge with `$wgMinervaCustomLogos`)
 
 * Type: `Boolean`
 * Default: `false`
@@ -649,18 +617,6 @@ e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
 
 * Type: `String`
 * Default: Defaults to the current wiki
-
-#### $wgMFUseWikibaseDescription (deprecated)
-
-See `$wgMFUseWikibase`
-
-#### $wgMFDisplayWikibaseDescription (deprecated)
-
-See `$wgMFDisplayWikibaseDescriptions`
-
-#### $wgMFDisplayWikibaseDescriptionsAsTaglines (deprecated)
-
-See `$wgMFDisplayWikibaseDescriptions`
 
 #### $wgMFUseWikibase
 

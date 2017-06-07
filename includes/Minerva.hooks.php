@@ -123,8 +123,6 @@ class MinervaHooks {
 			$skin->setSkinOptions( [
 				SkinMinerva::OPTIONS_MOBILE_BETA
 					=> $mobileContext->isBetaGroupMember(),
-				SkinMinerva::OPTION_PRINT_STYLES
-					=> $mobileContext->getConfigVariable( 'MinervaPrintStyles' ),
 				SkinMinerva::OPTION_CATEGORIES
 					=> $mobileContext->getConfigVariable( 'MinervaShowCategoriesButton' ),
 				SkinMinerva::OPTION_FONT_CHANGER

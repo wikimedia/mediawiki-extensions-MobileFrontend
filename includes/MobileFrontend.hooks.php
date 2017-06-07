@@ -422,6 +422,8 @@ class MobileFrontendHooks {
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			'wgMFPhotoUploadEndpoint' =>
 				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
+			// Expose the threshold as defined in core to JS clients so they can tell whether
+			// they are in tablet or mobile mode.
 			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 		];

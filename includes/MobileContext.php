@@ -1206,33 +1206,8 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	* Gets whether Wikibase descriptions should be shown in search results, including nearby search,
-	* and watchlists; or as taglines on article pages based on legacy configuration variables.
-	 *
-	 * @param string $feature
-	 * @return boolean
-	 */
-	private function shouldShowWikibaseDescriptionsLegacy( $feature ) {
-		$config = $this->getMFConfig();
-
-		if ( !$config->get( 'MFUseWikibaseDescription' ) ) {
-			return false;
-		}
-
-		if ( $feature === 'tagline' ) {
-			return $config->get( 'MFDisplayWikibaseDescriptionsAsTaglines' );
-		}
-
-		return $config->get( 'MFDisplayWikibaseDescription' );
-	}
-
-	/**
 	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
 	 * and watchlists; or as taglines on article pages.
-	 *
-	 * TODO: In early August, the legacy <code>$wgMFUseWikibaseDescription</code> and
-	 * <code>$wgMFDisplayWikibaseDescriptionsAsTaglines</code> configuration variables will be
-	 * removed and <code>MobileContext#shouldUseWikidataDescriptionsLegacy</code> can be removed.
 	 *
 	 * @param string $feature
 	 * @return boolean
@@ -1254,8 +1229,8 @@ class MobileContext extends ContextSource {
 			( $config->get( 'MFUseWikibase' ) && $displayWikibaseDescriptions[ $feature ] )
 		) {
 			return true;
+		} else {
+			return false;
 		}
-
-		return $this->shouldShowWikibaseDescriptionsLegacy( $feature );
 	}
 }

@@ -1836,16 +1836,11 @@
 		"MobileFrontendFormatCookieExpiry": null,
 		"MFNoindexPages": true,
 		"MFStopRedirectCookieHost": null,
-		"MFCustomLogos": [],
 		"MinervaCustomLogos": [],
 		"MobileFrontendLogo": false,
 		"MFEnableBeta": false,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MinervaApplyKnownTemplateHacks": false,
-		"MinervaPrintStyles": {
-			"base": false,
-			"beta": true
-		},
 		"MinervaPageActions": [
 			"edit",
 			"talk",
@@ -1865,10 +1860,7 @@
 			"base": false,
 			"beta": true
 		},
-		"MFUseWikibaseDescription": false,
 		"MFUseWikibase": false,
-		"MFDisplayWikibaseDescription": false,
-		"MFDisplayWikibaseDescriptionsAsTaglines": false,
 		"MFDisplayWikibaseDescriptions": {
 			"search": false,
 			"nearby": false,
