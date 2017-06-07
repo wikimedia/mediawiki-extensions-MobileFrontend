@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_c6bc02d8",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1180,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-06-07T17:09:55Z",
+      "side": 1,
+      "message": "This is now a no-op module; can it be removed?",
+      "range": {
+        "startLine": 1180,
+        "startChar": 3,
+        "endLine": 1180,
+        "endChar": 35
+      },
+      "revId": "89517bf8f821207e035d46610fb293ee3b3c6fd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
