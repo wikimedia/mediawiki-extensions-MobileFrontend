@@ -32,7 +32,12 @@
 				additionalClassNames: 'text',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-references-citation' )
-			} ).toHtmlString()
+			} ).toHtmlString(),
+			errorClassName: new Icon( {
+				name: 'error',
+				hasText: true,
+				isSmall: true
+			} ).getClassName()
 		} ),
 		events: {
 			'click sup a': 'showNestedReference'
