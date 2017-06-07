@@ -22,6 +22,30 @@
       "revId": "3c4319d3a25c8b4077060ac75664cec88fde61df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_db2e1ff7",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T15:09:57Z",
+      "side": 1,
+      "message": "Good idea! Done!",
+      "parentUuid": "0e81134c_db9e1fbd",
+      "range": {
+        "startLine": 339,
+        "startChar": 19,
+        "endLine": 339,
+        "endChar": 22
+      },
+      "revId": "3c4319d3a25c8b4077060ac75664cec88fde61df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
