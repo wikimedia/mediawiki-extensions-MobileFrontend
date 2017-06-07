@@ -34,6 +34,24 @@
       "revId": "dfd5d2ff7c8590b6f0ff3b806f188f2d29b81759",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_a169a8be",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-07T19:36:36Z",
+      "side": 1,
+      "message": "You can add it alongside selector (1 level up)\n\nAnother approach might be to actually move this to a mobile.startup.images RL and add the FIXME on the toast since that\u0027s the one which is causing the problem.\nThat would be good as then we\u0027d only have one error.svg / error.png in the codebase and a css rule with the FIXME",
+      "parentUuid": "0e81134c_463012fd",
+      "revId": "dfd5d2ff7c8590b6f0ff3b806f188f2d29b81759",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
