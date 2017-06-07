@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_db9e1fbd",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-07T14:20:13Z",
+      "side": 1,
+      "message": "Wouldn\u0027t changing this to \u0027:not(.reference) \u003e a\u0027 or \u0027a:not(.reference a)\u0027 be cleaner and probably more performant?",
+      "range": {
+        "startLine": 339,
+        "startChar": 19,
+        "endLine": 339,
+        "endChar": 22
+      },
+      "revId": "3c4319d3a25c8b4077060ac75664cec88fde61df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
