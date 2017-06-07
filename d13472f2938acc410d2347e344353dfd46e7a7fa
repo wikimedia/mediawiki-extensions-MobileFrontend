@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e81134c_38f2d1ce",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-07T13:23:31Z",
+      "side": 1,
+      "message": "What extensions are running on MobileFrontend? If any extension calls `mw.notify(\u0027hello error\u0027, { type: \u0027error\u0027, tag: \u0027toast\u0027 } )` on a non-Minerva skin, the UI is completely different. I don\u0027t know of any extension that would call that function on Minerva. Can you give some examples?\n\nYour alternative approach works as long as we display only the error icon. Say, we have a new design later where we need to show a warning icon for some messages. How would that work?",
+      "parentUuid": "4e294b1e_d4fa7c0d",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e294b1e_94040419",
         "filename": "resources/mobile.startup/toast.js",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2017-06-06T22:01:40Z",
       "side": 1,
       "message": "It\u0027s worth documenting this with a FIXME pointing to https://phabricator.wikimedia.org/T14990 as we are wastefully creating an element here just to get its class",
+      "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_d8a4e5b7",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-07T13:23:31Z",
+      "side": 1,
+      "message": "The link you pasted doesn\u0027t seem related to constructing Icons.",
+      "parentUuid": "4e294b1e_94040419",
       "revId": "d13472f2938acc410d2347e344353dfd46e7a7fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
