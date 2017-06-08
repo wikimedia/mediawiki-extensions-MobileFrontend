@@ -134,9 +134,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
-		$this->setupDifferenceEngine();
-		$this->showHeader();
-		$this->showDiff();
+		$this->displayMobileDiff();
 		$output->addHtml( '</div>' );
 
 		$this->showFooter( $ctx );
@@ -156,15 +154,16 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	/**
-	 * Setups the DifferenceEngine.
+	 * Setups the mobile DifferenceEngine and displays a mobile optimised diff.
 	 */
-	protected function setupDifferenceEngine() {
+	protected function displayMobileDiff() {
+		$useMobileMode = false;
 		$contentHandler = $this->rev->getContentHandler();
-		$de = $contentHandler->createDifferenceEngine( $this->getContext(), $this->getPrevId(),
-			$this->revId );
-		// HACK:
-		if ( get_class( $de ) == 'DifferenceEngine' ) {
-			$de = new $this->diffClass(
+		$this->mDiffEngine = $contentHandler->createDifferenceEngine( $this->getContext(),
+			$this->getPrevId(), $this->revId );
+
+		if ( get_class( $this->mDiffEngine ) == 'DifferenceEngine' ) {
+			$this->mDiffEngine = new $this->diffClass(
 				$this->getContext(),
 				$this->getPrevId(),
 				$this->revId,
@@ -172,11 +171,15 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				false,
 				(bool)$this->getRequest()->getVal( 'unhide' )
 			);
-		} else {
-			$de->showDiffPage();
-			return;
+			$useMobileMode = true;
 		}
-		$this->mDiffEngine = $de;
+
+		$this->showHeader();
+		if ( $useMobileMode ) {
+			$this->addMobileDiff();
+		} else {
+			$this->mDiffEngine->showDiffPage();
+		}
 	}
 
 	/**
@@ -186,7 +189,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Day and time of edit
 	 * Edit Comment
 	 */
-	function showHeader() {
+	private function showHeader() {
 		$title = $this->targetTitle;
 
 		if ( $this->prevRev ) {
@@ -259,7 +262,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Render the inline difference between two revisions
 	 * using InlineDiffEngine
 	 */
-	function showDiff() {
+	private function addMobileDiff() {
 		$output = $this->getOutput();
 
 		$prevId = $this->getPrevId();
