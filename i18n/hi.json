@@ -16,7 +16,8 @@
 			"Angpradesh",
 			"Sfic",
 			"YmKavishwar",
-			"Rajat11"
+			"Rajat11",
+			"Anamdas"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>श्रेणियाँ</strong>",
@@ -196,5 +197,6 @@
 	"mobile-frontend-loading-message": "लोड हो रहा है ...",
 	"mobile-frontend-panel-ok": "ठीक",
 	"mobile-frontend-panel-cancel": "नहीं धन्यवाद",
-	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?"
+	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?",
+	"mobile-frontend-notifications-filter": "छननी"
 }

@@ -14,8 +14,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobiliojo interfeisą",
-	"beta-feature-minerva": "Aktyvuoti mobiliojo stilių ({{int:skinname-minerva}}) darbalaukyje",
-	"beta-feature-minerva-description": "Padaryti mobiliuosiuose įrenginiuose naudojamus stilius pasirinktinais darbalaukių stiliais \"{{int:prefs-rendering}}\" parinkčių kortelėje.",
 	"mobile-frontend-account-create-captcha-placeholder": "Įvesti patvirtinimo kodą",
 	"mobile-frontend-categories-heading": "<strong>Kategorijos</strong>",
 	"mobile-frontend-categories-subheading": "Puslapis priklauso šioms kategorijoms:",
@@ -303,5 +301,6 @@
 	"mobile-frontend-panel-cancel": "Ne, ačiū",
 	"mobile-frontend-panel-betaoptin-msg": "Ar norite išbandyti naujas funkcijas? Prisijungdami prie beta versijos galėsite pasiekti eksperimentines funkcijas, bet su rizika, kad kils klaidų ir problemų.",
 	"mobile-frontend-search-feedback-link-text": "Pateikite mums savo atsiliepimą.",
-	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?"
+	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?",
+	"mobile-frontend-notifications-filter": "Filtras"
 }
