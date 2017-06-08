@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e81134c_635bbd27",
+        "filename": "extension.json",
+        "patchSetId": 14
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-08T22:58:45Z",
+      "side": 1,
+      "message": "Thanks for asking.\n\nEssentially, because they are skinStyles and in future these files will live in the new Minerva repository not in MobileFrontend.\n\nPutting them in a folder makes it much easier for me to pull them out via a script.\n\nIf Vector loads mobile.startup these skins will not get included.",
+      "parentUuid": "0e81134c_63165d4f",
+      "revId": "8e09f935f8a09df4431706c2e7307d3336a01520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e81134c_4330f9e5",
         "filename": "extension.json",
         "patchSetId": 14
@@ -30,6 +48,30 @@
       "writtenOn": "2017-06-08T22:43:40Z",
       "side": 1,
       "message": "Is the bug documented? Can we link it here?",
+      "range": {
+        "startLine": 1641,
+        "startChar": 2,
+        "endLine": 1641,
+        "endChar": 8
+      },
+      "revId": "8e09f935f8a09df4431706c2e7307d3336a01520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_63e89d0c",
+        "filename": "extension.json",
+        "patchSetId": 14
+      },
+      "lineNbr": 1641,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-08T22:58:45Z",
+      "side": 1,
+      "message": "I\u0027m still looking into this.\nLooking into this a bit more, this actually might be an issue with MFResourceLoaderParsedMessageModule in which case hopefully I can bundle all the skinStyles here.",
+      "parentUuid": "0e81134c_4330f9e5",
       "range": {
         "startLine": 1641,
         "startChar": 2,
