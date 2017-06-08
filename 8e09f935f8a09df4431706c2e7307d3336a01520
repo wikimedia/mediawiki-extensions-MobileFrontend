@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_63165d4f",
+        "filename": "extension.json",
+        "patchSetId": 14
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-08T22:43:40Z",
+      "side": 1,
+      "message": "Since these files are still resources, any reason why they are taken outside the \"resources\" directory?",
+      "revId": "8e09f935f8a09df4431706c2e7307d3336a01520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_4330f9e5",
+        "filename": "extension.json",
+        "patchSetId": 14
+      },
+      "lineNbr": 1641,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-08T22:43:40Z",
+      "side": 1,
+      "message": "Is the bug documented? Can we link it here?",
+      "range": {
+        "startLine": 1641,
+        "startChar": 2,
+        "endLine": 1641,
+        "endChar": 8
+      },
+      "revId": "8e09f935f8a09df4431706c2e7307d3336a01520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
