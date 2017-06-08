@@ -80,8 +80,11 @@ class MinervaHooks {
 		if ( $skin instanceof SkinMinerva ) {
 			switch ( $name ) {
 				case 'MobileMenu':
-					$out->addModules( [
+					$out->addModuleStyles( [
 						'skins.minerva.mainMenu.icons',
+						'skins.minerva.mainMenu.styles',
+					] );
+					$out->addModules( [
 						'skins.minerva.mainMenu'
 					] );
 					break;
