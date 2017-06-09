@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "0e81134c_26a5c0b1",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T17:05:31Z",
+      "side": 1,
+      "message": "Makes sense. On the other hand, as a developer I\u0027d be surprised to find out that seemingly similar functions don\u0027t operate the same way. I\u0027d have to keep this extra info in mind ;).",
+      "parentUuid": "0e81134c_c6c5d491",
+      "range": {
+        "startLine": 93,
+        "startChar": 24,
+        "endLine": 93,
+        "endChar": 45
+      },
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e81134c_862d8c8d",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 4
@@ -172,6 +196,24 @@
       "side": 1,
       "message": "I\u0027ve tried..\nbasically what it boils down to is if #heading behaviour is different for mustache and hogan",
       "parentUuid": "0e81134c_66474851",
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_46aa4484",
+        "filename": "resources/mobile.messageBox/MessageBox.mustache",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T17:05:31Z",
+      "side": 1,
+      "message": "Thanks, I missed the part where you were using this file in PHP.",
+      "parentUuid": "0e81134c_e63c9890",
       "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
