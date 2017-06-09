@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_2622a0a3",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T16:28:23Z",
+      "side": 1,
+      "message": "We should add |false here because the default is false.",
+      "range": {
+        "startLine": 69,
+        "startChar": 11,
+        "endLine": 69,
+        "endChar": 17
+      },
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_e61b3872",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T16:28:23Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we make all such boxes the same? Why don\u0027t this and the successBox below accept a $heading?",
+      "range": {
+        "startLine": 93,
+        "startChar": 24,
+        "endLine": 93,
+        "endChar": 45
+      },
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_862d8c8d",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T16:28:23Z",
+      "side": 1,
+      "message": "This is not being used.",
+      "range": {
+        "startLine": 124,
+        "startChar": 2,
+        "endLine": 124,
+        "endChar": 50
+      },
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_66474851",
+        "filename": "resources/mobile.messageBox/MessageBox.mustache",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-09T16:28:23Z",
+      "side": 1,
+      "message": "These changes to the front-end are not documented in the commit message. Also, how\u0027s PHP implementation related to this resource? Can you elaborate?",
+      "revId": "bc14e7bd76b94ac319f1ce35acdd043a9dd75782",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
