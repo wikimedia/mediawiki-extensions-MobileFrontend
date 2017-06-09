@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e81134c_a310c25c",
+        "filename": "extension.json",
+        "patchSetId": 16
+      },
+      "lineNbr": 1246,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-09T16:16:12Z",
+      "side": 1,
+      "message": "These are not moved because of the bug documented later (T167216)",
+      "revId": "3f03a792f166067c0757d0d6241638ba259101fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e81134c_e3156a4e",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 16
