@@ -25,8 +25,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o utilizador está ou não a editar através da interface móvel",
-	"beta-feature-minerva": "Ativar o tema móvel ({{int:skinname-minerva}}) no ambiente de trabalho.",
-	"beta-feature-minerva-description": "Tornar o tema usado em dispositivos móveis um tema selecionável para o ambiente de trabalho, no separador \"{{int:prefs-rendering}}\".",
 	"mobile-frontend-account-create-captcha-placeholder": "Introduza o código de confirmação",
 	"mobile-frontend-categories-heading": "<strong>Categorias</strong>",
 	"mobile-frontend-categories-subheading": "A página pertence às seguintes categorias:",
@@ -130,6 +128,13 @@
 	"mobile-frontend-history-no-results": "O filtro fornecido não tem nenhum histórico relacionado.",
 	"mobile-frontend-home-button": "Início",
 	"mobile-frontend-images-status": "Imagens",
+	"mobile-frontend-joined-just-now": "{{GENDER:$1|Registou-se}} agora mesmo",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 segundo|$2 segundos}}",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 minuto|$2 minutos}}",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 hora|$2 horas}}",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 dia|$2 dias}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 mês|$2 meses}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 ano|$2 anos}}",
 	"mobile-frontend-language-change": "Alterar língua",
 	"mobile-frontend-language-article-heading": "Ler noutra língua",
 	"mobile-frontend-language-heading": "<strong>Noutras línguas</strong>",
@@ -302,6 +307,7 @@
 	"apihelp-parse-param-mobileformat": "Devolver o resultado da análise sintática numa forma adequada para dispositivos móveis.",
 	"apihelp-parse-param-noimages": "Desativar imagens no resultado para dispositivos móveis.",
 	"apihelp-parse-param-mainpage": "Aplicar as transformações da página principal para dispositivos móveis.",
+	"apihelp-webapp-manifest-description": "Devolve um manifesto de aplicação web.",
 	"apierror-mobilefrontend-badidtitle": "Combinação incorreta de identificador de revisão e título.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> é mutuamente exclusivo com <var>thumbwidth</var> e <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> não faz sentido na página principal, ignorado.",
@@ -313,5 +319,7 @@
 	"mobile-frontend-panel-cancel": "Não, obrigado",
 	"mobile-frontend-panel-betaoptin-msg": "Quer testar algumas funcionalidades novas? Ao adotar a versão beta, terá acesso a funcionalidades experimentais, e corre o risco de encontrar erros e problemas.",
 	"mobile-frontend-search-feedback-link-text": "Dê-nos a sua opinião.",
-	"mobile-frontend-search-feedback-prompt": "Não encontrou o que procurava?"
+	"mobile-frontend-search-feedback-prompt": "Não encontrou o que procurava?",
+	"mobile-frontend-notifications-filter": "Filtrar",
+	"mobile-frontend-notifications-filter-title": "Filtrar notificações"
 }

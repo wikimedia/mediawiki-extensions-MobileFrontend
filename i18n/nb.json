@@ -14,12 +14,11 @@
 			"Kingu",
 			"Tarjeimo",
 			"Jon Harald Søby",
-			"Jeblad"
+			"Jeblad",
+			"Pmt"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
-	"beta-feature-minerva": "Bruk mobilt utseende ({{int:skinname-minerva}}) på stasjonære maskiner",
-	"beta-feature-minerva-description": "Gjør utseendet som brukes på mobilenheter tilgjengelig som et valgbart utseende under fanen «{{int:prefs-rendering}}» i innstillingene.",
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",
 	"mobile-frontend-categories-heading": "<strong>Kategorier</strong>",
 	"mobile-frontend-categories-subheading": "Denne siden er ordnet i følgende kategorier:",
@@ -314,5 +313,6 @@
 	"mobile-frontend-panel-cancel": "Nei takk",
 	"mobile-frontend-panel-betaoptin-msg": "Vil du teste noen nye funksjoner? Ved å bli med i beta-testingen får du tilgang på nye, eksperimentelle funksjoner, men med en viss risiko for å støte på feil.",
 	"mobile-frontend-search-feedback-link-text": "Gi oss tilbakemelding",
-	"mobile-frontend-search-feedback-prompt": "Fant du ikke det du lette etter?"
+	"mobile-frontend-search-feedback-prompt": "Fant du ikke det du lette etter?",
+	"mobile-frontend-notifications-filter": "Filter"
 }
