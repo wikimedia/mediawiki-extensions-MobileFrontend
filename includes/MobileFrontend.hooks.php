@@ -1001,12 +1001,6 @@ class MobileFrontendHooks {
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],
-				'skins.minerva.notifications.filter.styles' => $resourceBoilerplate + [
-					'styles' => [
-						'resources/skins.minerva.notifications.filter.styles/SpecialNotificationsOverlay.less',
-					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
 				'mobile.notifications.filter.overlay' => $resourceBoilerplate + [
 					'dependencies' => [
 						'mobile.startup',

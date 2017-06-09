@@ -1376,9 +1376,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 			$styles[] = 'mobile.messageBox.styles';
 			$styles['special'] = 'skins.minerva.special.styles';
 		}
-		if ( $title->isSpecial( 'Notifications' ) ) {
-			$styles[] = 'skins.minerva.notifications.filter.styles';
-		}
 		if ( $this->getOutput()->getRequest()->getText( 'oldid' ) ) {
 			$styles[] = 'mobile.messageBox.styles';
 		}
