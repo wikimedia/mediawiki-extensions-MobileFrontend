@@ -2,9 +2,60 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e81134c_231cd27b",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 16
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-09T16:15:06Z",
+      "side": 0,
+      "message": "This block is now in skinStyles/mobile.languages.structured/LanguageOverlay.less",
+      "revId": "7872f0b7fbee7e032034415fb5f82cbf6018b60a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_83301efe",
+        "filename": "resources/mobile.search/SearchOverlay.less",
+        "patchSetId": 16
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-09T16:15:06Z",
+      "side": 0,
+      "message": "These lines got moved to\tskinStyles/mobile.search/SearchOverlay.less",
+      "revId": "7872f0b7fbee7e032034415fb5f82cbf6018b60a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e81134c_c32626c9",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 15
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-09T16:15:06Z",
+      "side": 0,
+      "message": "These lines have moved to \tskinStyles/mobile.startup/Overlay.less",
+      "revId": "7872f0b7fbee7e032034415fb5f82cbf6018b60a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e81134c_6333ba0b",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 16
       },
       "lineNbr": 14,
       "author": {
