@@ -283,5 +283,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "আপনি কি কিছু নতুন বৈশিষ্ট্য ব্যবহার করতে চান? বেটায় যোগদান করে, আপনি পরীক্ষামূলক বৈশিষ্ট্য ব্যবহারের প্রবেশাধিকার পাবেন, তবে এতে বাগ এবং সমস্যা সম্মুখীন হওয়ার ঝুঁকি রয়েছে।",
 	"mobile-frontend-search-feedback-link-text": "আপনার প্রতিক্রিয়া আমাদের জানান।",
 	"mobile-frontend-search-feedback-prompt": "আপনি যা খুঁজেছিলেন তা পাননি?",
+	"mobile-frontend-notifications-filter": "ছাঁকনি",
 	"mobile-frontend-notifications-filter-title": "বিজ্ঞপ্তি ছাঁকুন"
 }

@@ -6,7 +6,8 @@
 			"Jason924tw",
 			"SolidBlock",
 			"Suchichi02",
-			"逆襲的天邪鬼"
+			"逆襲的天邪鬼",
+			"Itsmine"
 		]
 	},
 	"mobile-frontend-diffview-editcount": "<div>$1</div>{{PLURAL:$1|edit|纂}}",
@@ -38,7 +39,7 @@
 	"mobile-frontend-logged-in-homepage-notification": "$1，歡迎蒞臨！",
 	"mobile-frontend-main-menu-button-tooltip": "啟主列",
 	"mobile-frontend-main-menu-login": "登簿",
-	"mobile-frontend-main-menu-logout": "去簿",
+	"mobile-frontend-main-menu-logout": "出籍",
 	"mobile-frontend-main-menu-nearby": "近郊",
 	"mobile-frontend-main-menu-settings": "簿註",
 	"mobile-frontend-main-menu-settings-heading": "簿註",
