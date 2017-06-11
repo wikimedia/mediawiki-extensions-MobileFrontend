@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_aa164e4b",
+        "filename": "resources/mobile.overlay.images/close.svg.tmp",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-11T21:41:09Z",
+      "side": 1,
+      "message": "Unrelated file?",
+      "range": {
+        "startLine": 1,
+        "startChar": 1,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "81bbf6ee43698d2ab28e057988e03e7826541d45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
