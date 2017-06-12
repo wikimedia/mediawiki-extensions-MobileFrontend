@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ae1ac700_4ce81b0c",
+        "filename": "resources/mobile.infiniteScroll/InfiniteScroll.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-12T18:28:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_cba63ca7",
+      "range": {
+        "startLine": 140,
+        "startChar": 1,
+        "endLine": 140,
+        "endChar": 32
+      },
+      "revId": "f284afb32de1eb68681b7003551d5b87492fae27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_ebc6984d",
         "filename": "resources/mobile.startup/OverlayManager.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2017-05-02T20:34:18Z",
       "side": 1,
       "message": "Consistency :) - This one does do initClass before assigning prototypes. May wanna move to before the local \u0027prototype\u0027 variable so that this is more obvious to our future selves.",
+      "range": {
+        "startLine": 244,
+        "startChar": 1,
+        "endLine": 244,
+        "endChar": 32
+      },
+      "revId": "f284afb32de1eb68681b7003551d5b87492fae27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae1ac700_accd37be",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-12T18:28:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4df70f_ebc6984d",
       "range": {
         "startLine": 244,
         "startChar": 1,
