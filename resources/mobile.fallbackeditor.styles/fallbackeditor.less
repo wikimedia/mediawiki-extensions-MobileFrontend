@@ -1,7 +1,8 @@
 // Additional Styles for no-js editing mode
-@import 'minerva.variables';
+
+// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
+// Move Minerva specific rules into skinStyles.
 @import 'minerva.mixins';
-@import 'mediawiki.mixins';
 
 .editHelp, .cancelLink, .mw-editButtons-pipe-separator {
 	display: none;
