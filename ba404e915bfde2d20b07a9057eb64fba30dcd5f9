@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_504f65c0",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-14T23:30:56Z",
+      "side": 1,
+      "message": "I\u0027m trying to make this less scary.. but every time I do I uncover messes like this..!!!!",
+      "revId": "ba404e915bfde2d20b07a9057eb64fba30dcd5f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
