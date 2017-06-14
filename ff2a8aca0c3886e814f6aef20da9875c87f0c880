@@ -16,6 +16,24 @@
       "revId": "ff2a8aca0c3886e814f6aef20da9875c87f0c880",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_40823899",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2017-06-14T14:52:47Z",
+      "side": 1,
+      "message": "I\u0027m not sure, why I made it that complicated. You\u0027re right! :)",
+      "parentUuid": "0e1cb3f9_28cf705c",
+      "revId": "ff2a8aca0c3886e814f6aef20da9875c87f0c880",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
