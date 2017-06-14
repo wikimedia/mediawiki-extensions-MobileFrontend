@@ -49,6 +49,69 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	}
 
 	/**
+	 * Render the inline difference between two revisions
+	 * using InlineDiffEngine
+	 */
+	public function showDiffPage( $diffOnly = false ) {
+		$output = $this->getOutput();
+
+		$prevId = $this->getOldid();
+		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
+		$diff = $this->getDiffBody();
+
+		$rev = Revision::newFromId( $this->getNewid() );
+
+		if ( !$prevId ) {
+			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+			$diff = '<ins>'
+				. nl2br(
+					htmlspecialchars(
+						ContentHandler::getContentText( $rev->getContent( $audience ) )
+					)
+				)
+				. '</ins>';
+		}
+
+		$warnings = $this->getWarningMessageText();
+		if ( $warnings ) {
+			$warnings = MobileUI::warningBox( $warnings );
+		}
+		$output->addHtml(
+			$warnings .
+			'<div id="mw-mf-minidiff">' .
+			$diff .
+			'</div>'
+		);
+		$prev = $rev->getPrevious();
+		$next = $rev->getNext();
+		if ( $prev || $next ) {
+			$history = Html::openElement( 'ul', [ 'class' => 'hlist revision-history-links' ] );
+			if ( $prev ) {
+				$history .= Html::openElement( 'li' ) .
+					Html::element( 'a', [
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl()
+					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
+			}
+			if ( $next ) {
+				$history .= Html::openElement( 'li' ) .
+					Html::element( 'a', [
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )->getLocalUrl()
+					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
+			}
+			$history .= Html::closeElement( 'ul' );
+			$output->addHtml( $history );
+		}
+
+		$output->addHtml( Html::rawElement(
+			'div',
+			[
+				'class' => 'patrollink'
+			],
+			$this->getPatrolledLink()
+		) );
+	}
+
+	/**
 	 * Checks whether the diff should be hidden from the current user
 	 * This is based on whether the user is allowed to see it and whether
 	 * the flag unhide is set to allow viewing deleted revisions.

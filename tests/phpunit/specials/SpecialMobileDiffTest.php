@@ -94,7 +94,7 @@ class MockSpecialMobileDiff extends SpecialMobileDiff {
 	public function executeBadQuery() {
 		return false;
 	}
-	public function showDiff() {
+	public function displayDiffPage() {
 		// showDiff can be stubed, but the differenceengine has to be created
 		$this->mDiffEngine = new $this->diffClass();
 	}

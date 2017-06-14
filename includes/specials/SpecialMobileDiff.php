@@ -134,7 +134,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
-		$this->displayMobileDiff();
+		$this->displayDiffPage();
 		$output->addHtml( '</div>' );
 
 		$this->showFooter( $ctx );
@@ -156,8 +156,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Setups the mobile DifferenceEngine and displays a mobile optimised diff.
 	 */
-	protected function displayMobileDiff() {
-		$useMobileMode = false;
+	protected function displayDiffPage() {
 		$contentHandler = $this->rev->getContentHandler();
 		$this->mDiffEngine = $contentHandler->createDifferenceEngine( $this->getContext(),
 			$this->getPrevId(), $this->revId );
@@ -171,15 +170,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				false,
 				(bool)$this->getRequest()->getVal( 'unhide' )
 			);
-			$useMobileMode = true;
 		}
 
 		$this->showHeader();
-		if ( $useMobileMode ) {
-			$this->addMobileDiff();
-		} else {
-			$this->mDiffEngine->showDiffPage();
-		}
+		$this->mDiffEngine->showDiffPage();
 	}
 
 	/**
@@ -255,69 +249,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $this->mDiffEngine instanceof InlineDifferenceEngine ) {
 			// TODO: The hook gets originally called in the DifferenceEngine::showDiffPage() method
 			Hooks::run( 'DiffViewHeader', [ $this->mDiffEngine, $this->prevRev, $this->rev ] );
-		}
-	}
-
-	/**
-	 * Render the inline difference between two revisions
-	 * using InlineDiffEngine
-	 */
-	private function addMobileDiff() {
-		$output = $this->getOutput();
-
-		$prevId = $this->getPrevId();
-		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
-		$de = $this->mDiffEngine;
-		$diff = $de->getDiffBody();
-		if ( !$prevId ) {
-			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
-			$diff = '<ins>'
-				. nl2br(
-					htmlspecialchars(
-						ContentHandler::getContentText( $this->rev->getContent( $audience ) )
-					)
-				)
-				. '</ins>';
-		}
-
-		$warnings = $de->getWarningMessageText();
-		if ( $warnings ) {
-			$warnings = MobileUI::warningBox( $warnings );
-		}
-		$output->addHtml(
-			$warnings .
-			'<div id="mw-mf-minidiff">' .
-			$diff .
-			'</div>'
-		);
-		$prev = $this->rev->getPrevious();
-		$next = $this->rev->getNext();
-		if ( $prev || $next ) {
-			$history = Html::openElement( 'ul', [ 'class' => 'hlist revision-history-links' ] );
-			if ( $prev ) {
-				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl()
-					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
-			}
-			if ( $next ) {
-				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )->getLocalUrl()
-					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
-			}
-			$history .= Html::closeElement( 'ul' );
-			$output->addHtml( $history );
-		}
-
-		if ( $de instanceof InlineDifferenceEngine ) {
-			$output->addHtml( Html::rawElement(
-				'div',
-				[
-					'class' => 'patrollink'
-				],
-				$de->getPatrolledLink()
-			) );
 		}
 	}
 
