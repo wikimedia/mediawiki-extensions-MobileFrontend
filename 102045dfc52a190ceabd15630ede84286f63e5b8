@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee859f59_cb208999",
+        "filename": "includes/Minerva.ServiceWiring.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-14T21:35:09Z",
+      "side": 1,
+      "message": "There\u0027s a FIXME above... that said it\u0027s tempting to remove this as the migration script actually takes care of this. See L246 of https://gerrit.wikimedia.org/r/#/c/356633/10/scripts/migrate.py\n\n(it doesn\u0027t take care of the FIXME line)",
+      "parentUuid": "ee859f59_c0fb88dd",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee859f59_20eb740b",
         "filename": "includes/Minerva.hooks.php",
         "patchSetId": 30
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ee859f59_9d82c6a8",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-14T21:35:09Z",
+      "side": 1,
+      "message": "Not sure I understand. We are doing this in MobileFrontend.hooks.php too.",
+      "parentUuid": "ee859f59_20eb740b",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee859f59_e0324cbc",
         "filename": "includes/Minerva.hooks.php",
         "patchSetId": 30
@@ -47,6 +83,24 @@
       "writtenOn": "2017-06-14T13:36:09Z",
       "side": 1,
       "message": "do we want to keep this forever?",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_fdb75282",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-14T21:35:09Z",
+      "side": 1,
+      "message": "I\u0027m still trying to work this out.\nhttps://phabricator.wikimedia.org/T164408\n\nIt seems certain parts of the code expect the skin to have the same name as the repo :/",
+      "parentUuid": "ee859f59_e0324cbc",
       "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +135,24 @@
       "writtenOn": "2017-06-14T13:36:09Z",
       "side": 1,
       "message": "lets rename this to getConfig(), also update the docblock",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_1dbd7663",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-14T21:35:09Z",
+      "side": 1,
+      "message": "Sounds good.",
+      "parentUuid": "ee859f59_c0d2a85d",
       "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
