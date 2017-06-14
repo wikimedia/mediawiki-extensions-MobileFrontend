@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_c0fb88dd",
+        "filename": "includes/Minerva.ServiceWiring.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-14T13:36:09Z",
+      "side": 1,
+      "message": "can we at least add a TODO to change it to minerva somewhere in future?",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_20eb740b",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-14T13:36:09Z",
+      "side": 1,
+      "message": "this is not required as extension.json has a property to specify serviceWiring files. Please check https://www.mediawiki.org/wiki/Manual:Extension.json/Schema#ServiceWiringFiles\n\nexample of use:\nhttps://github.com/wikimedia/mediawiki-extensions-WikibaseMediaInfo/blob/master/extension.json",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_e0324cbc",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-14T13:36:09Z",
+      "side": 1,
+      "message": "do we want to keep this forever?",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_40bf98f6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-14T13:36:09Z",
+      "side": 1,
+      "message": "nice!",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_c0d2a85d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-14T13:36:09Z",
+      "side": 1,
+      "message": "lets rename this to getConfig(), also update the docblock",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
