@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_bde22acf",
+        "filename": "tests/phpunit/ResponsiveImages/HooksTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-14T21:09:53Z",
+      "side": 1,
+      "message": "Note that you can use descriptive keys here to make this data set easier to understand/review/maintain. The keys won\u0027t be used by PHPUnit, (the order will be), but it can help.\n\nE.g.:\n\n return [\n   [ \u0027shouldConfigChange\u0027 \u003d\u003e true, \u0027forceMobile\u0027 \u003d\u003e true, \u0027strip\u0027 \u003d\u003e true ],\n   ..\n ];\n\nIn addition, if there is use in having a descriptive name for a test case, you can also use keys in the main array. Those *are* used by PHPUnit in the test output. E.g. the below will result test failure for data set \"Support disabling all\" instead of \"data set #4 (false, false, false)\"\n\n return [\n  \u0027Support disabling all\u0027 \u003d\u003e [ false, false, false ]\n ];\n\nThis is probably not useful for this particular data provider, but thought I\u0027d add it here in case you didn\u0027t know about it yet :) Only recently learned of it myself.",
+      "range": {
+        "startLine": 55,
+        "startChar": 3,
+        "endLine": 55,
+        "endChar": 7
+      },
+      "revId": "1d114bb0b8eea19f63753db5f25ef2e6d84f4df3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
