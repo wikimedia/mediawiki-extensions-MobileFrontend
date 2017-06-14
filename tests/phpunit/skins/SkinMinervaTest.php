@@ -33,11 +33,14 @@ class EchoNotifUser {
 }
 
 /**
- * @covers SkinMinerva
+ * @coversDefaultClass  SkinMinerva
  * @group MobileFrontend
  */
 class SkinMinervaTest extends MediaWikiTestCase {
 
+	/**
+	 * @covers ::addToBodyAttributes
+	 */
 	public function testAddToBodyAttributes() {
 		// The `class` attribute gets set to the "bodyClassName" property by
 		// default.
@@ -69,6 +72,11 @@ class SkinMinervaTest extends MediaWikiTestCase {
 		return explode( ' ', $bodyAttrs[ 'class' ] );
 	}
 
+	/**
+	 * @covers ::setContext
+	 * @covers ::setSkinOptions
+	 * @covers ::hasCategoryLinks
+	 */
 	public function testHasCategoryLinksWhenOptionIsOff() {
 		$outputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
@@ -93,6 +101,9 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	 * @dataProvider provideHasCategoryLinks
 	 * @param array $categoryLinks
 	 * @param bool $expected
+	 * @covers ::setContext
+	 * @covers ::setSkinOptions
+	 * @covers::hasCategoryLinks
 	 */
 	public function testHasCategoryLinks( array $categoryLinks, $expected ) {
 		$outputPage = $this->getMockBuilder( OutputPage::class )
@@ -149,7 +160,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * Test whether the font changer module is correctly added to the list context modules
 	 *
-	 * @covers       SkinMinerva::getContextSpecificModules
+	 * @covers       ::getContextSpecificModules
 	 * @dataProvider provideGetContextSpecificModules
 	 * @param string $fontchangerValue whether font changer feature is enabled
 	 * @param mixed  $backToTopValue whether back to top feature is enabled
@@ -193,7 +204,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * Test the notification user button
 	 *
-	 * @covers SkinMinerva::prepareUserButton
+	 * @covers ::prepareUserButton
 	 * @dataProvider providePrepareUserButton
 	 * @param array|string $expectedSecondaryButtonData Expected test case outcome
 	 * @param string $message Test message
@@ -202,9 +213,9 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	 * @param bool $isUserLoggedIn
 	 * @param string $newtalks New talk page messages for the current user
 	 * @param MWTimestamp|bool $echoLastUnreadNotificationTime Timestamp or false
-	 * @param int $echoNotificationCount
+	 * @param int|bool $echoNotificationCount
 	 * @param string|bool $echoSeenTime String in format TS_ISO_8601 or false
-	 * @param string $formattedEchoNotificationCount
+	 * @param string|bool $formattedEchoNotificationCount
 	 */
 	public function testPrepareUserButton(
 		$expectedSecondaryButtonData, $message, $title, $useEcho, $isUserLoggedIn,
@@ -271,6 +282,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	 * @param string $countLabel
 	 * @param bool $isZero
 	 * @param bool $hasUnseen
+	 * @return array
 	 */
 	private function getSecondaryButtonExpectedResult(
 		$title,
@@ -296,6 +308,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * Data provider for the test case testPrepareUserButton with Echo enabled
 	 * @param Title @title Page title
+	 * @return array
 	 */
 	private function providePrepareUserButtonEcho( Title $title ) {
 		return [
@@ -358,6 +371,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	/**
 	 * Data provider for the test case testPrepareUserButton with Echo disabled
 	 * @param Title @title Page title
+	 * @return array
 	 */
 	private function providePrepareUserButtonNoEcho( Title $title ) {
 		return [
@@ -379,6 +393,7 @@ class SkinMinervaTest extends MediaWikiTestCase {
 
 	/**
 	 * Data provider for the test case testPrepareUserButton
+	 * @return array
 	 */
 	public function providePrepareUserButton() {
 		$title = Title::newFromText( 'Test' );

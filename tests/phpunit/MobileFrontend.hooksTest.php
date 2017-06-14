@@ -182,6 +182,9 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		];
 	}
 
+	/**
+	 * @codeCoverageIgnore
+	 */
 	public function testOnTitleSquidURLs() {
 		$this->setMwGlobals( [
 			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',

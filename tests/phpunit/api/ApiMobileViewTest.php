@@ -75,6 +75,12 @@ class MockWikiPage extends WikiPage {
  */
 class ApiMobileViewTest extends MediaWikiTestCase {
 
+	public function setUp() {
+		parent::setUp();
+
+		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
+	}
+
 	/**
 	 * @dataProvider provideGetRequestedSectionIds
 	 * @covers ApiMobileView::getRequestedSectionIds
@@ -118,12 +124,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		];
 	}
 
-	public function setUp() {
-		parent::setUp();
-
-		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
-	}
-
 	private function getMobileViewApi( $input ) {
 		$request = new FauxRequest( $input );
 		$context = new RequestContext();
@@ -153,6 +153,20 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideView
 	 * @covers ApiMobileView::execute
+	 * @covers ApiMobileView::makeTitle
+	 * @covers ApiMobileView::getPageImage
+	 * @covers ApiMobileView::isMainPage
+	 * @covers ApiMobileView::stringSplitter
+	 * @covers ApiMobileView::prepareSection
+	 * @covers ApiMobileView::getRequestedSectionIds
+	 * @covers ApiMobileView::getParserOutput
+	 * @covers ApiMobileView::parseSectionsData
+	 * @covers ApiMobileView::getData
+	 * @covers ApiMobileView::getFilePage
+	 * @covers ApiMobileView::addPageImage
+	 * @covers ApiMobileView::addProtection
+	 * @covers ApiMobileView::getAllowedParams
+	 * @covers ApiMobileView::getResult
 	 */
 	public function testView( array $input, array $expected ) {
 		$api = $this->getMobileViewApi( $input );
@@ -162,6 +176,20 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideViewWithTransforms
 	 * @covers ApiMobileView::execute
+	 * @covers ApiMobileView::makeTitle
+	 * @covers ApiMobileView::getPageImage
+	 * @covers ApiMobileView::isMainPage
+	 * @covers ApiMobileView::stringSplitter
+	 * @covers ApiMobileView::prepareSection
+	 * @covers ApiMobileView::getRequestedSectionIds
+	 * @covers ApiMobileView::getParserOutput
+	 * @covers ApiMobileView::parseSectionsData
+	 * @covers ApiMobileView::getData
+	 * @covers ApiMobileView::getFilePage
+	 * @covers ApiMobileView::addPageImage
+	 * @covers ApiMobileView::addProtection
+	 * @covers ApiMobileView::getAllowedParams
+	 * @covers ApiMobileView::getResult
 	 */
 	public function testViewWithTransforms( array $input, array $expected ) {
 		if ( version_compare(
@@ -450,6 +478,10 @@ Text 2
 		];
 	}
 
+	/**
+	 * @covers ApiMobileView::execute
+	 * @covers ApiMobileView::getResult
+	 */
 	public function testRedirectToSpecialPageDoesntTriggerNotices() {
 		$props = [
 			'lastmodified',
@@ -494,6 +526,23 @@ Text 2
 		}
 	}
 
+	/**
+	 * @covers ApiMobileView::execute
+	 * @covers ApiMobileView::makeTitle
+	 * @covers ApiMobileView::getPageImage
+	 * @covers ApiMobileView::isMainPage
+	 * @covers ApiMobileView::stringSplitter
+	 * @covers ApiMobileView::prepareSection
+	 * @covers ApiMobileView::getRequestedSectionIds
+	 * @covers ApiMobileView::getParserOutput
+	 * @covers ApiMobileView::parseSectionsData
+	 * @covers ApiMobileView::getData
+	 * @covers ApiMobileView::getFilePage
+	 * @covers ApiMobileView::addPageImage
+	 * @covers ApiMobileView::addProtection
+	 * @covers ApiMobileView::getAllowedParams
+	 * @covers ApiMobileView::getResult
+	 */
 	public function testEmptyResultArraysAreAssociative() {
 		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => 'MockApiMobileView' ] );
 
@@ -524,6 +573,9 @@ Text 2
 		$this->assertTrue( count( $pageprops ) === 1 ); // the only element is the array type flag
 	}
 
+	/**
+	 * @covers ApiMobileView::getScaledDimen
+	 */
 	public function testImageScaling() {
 		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
 		$scale = $this->getNonPublicMethod( 'ApiMobileView', 'getScaledDimen' );
@@ -534,6 +586,9 @@ Text 2
 		$this->assertEquals( $scale->invokeArgs( $api, [ 0, 1, 2 ] ), 0, 'Check divide by zero' );
 	}
 
+	/**
+	 * @covers ApiMobileView::isSVG
+	 */
 	public function testIsSVG() {
 		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
 		$isSVG = $this->getNonPublicMethod( 'ApiMobileView', 'isSVG' );
