@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 // Drawers
 //
 // Drawers appear at the bottom of the page and contain CTAs
@@ -25,7 +21,8 @@
 // Styleguide 4.1.
 .drawer {
 	text-align: center;
-	padding: 0 @contentMargin 1em;
+	padding-top: 0;
+	padding-bottom: 1em;
 	max-width: 500px;
 	margin: 0 auto;
 

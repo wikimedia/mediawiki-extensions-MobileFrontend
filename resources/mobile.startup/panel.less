@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 #bodyContent {
 	.panel {
 		background-color: @grayLightest;
@@ -12,7 +8,8 @@
 		text-align: center;
 
 		.content {
-			padding: 1em @contentMargin;
+			padding-top: 1em;
+			padding-bottom: 1em;
 			margin: 0;
 		}
 	}

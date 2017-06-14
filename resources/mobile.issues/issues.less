@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 @smallIconSize: 24px;
 @largeIconSize: 50px;
 
@@ -21,7 +17,8 @@
 		li {
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
-				padding: ( @smallIconSize * 2.5 ) @contentMargin @smallIconSize @contentMargin;
+				padding-top: ( @smallIconSize * 2.5 );
+				padding-bottom: @smallIconSize;
 
 				// on mobile move the icon above the content
 				&:before {
@@ -41,7 +38,7 @@
 			li {
 				.issue-notice {
 					padding: 2em 1em 2em ( @largeIconSize + 10px );
-					margin: 0 1em 0 @headerHeight;
+					margin: 0 1em 0 3.35em;
 
 					// FIXME: Please remove this. It should not care about how icons are rendered.
 					&:before {

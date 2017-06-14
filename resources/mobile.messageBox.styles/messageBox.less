@@ -1,7 +1,4 @@
 @import 'mobile.variables';
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
 
 // Necessary for fallback editor preview.
 .previewnote p,
@@ -25,7 +22,8 @@
 .errorbox,
 .warningbox,
 .mw-revision {
-	padding: 1em @contentMargin;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	margin: 0 0 1em;
 }
 

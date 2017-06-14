@@ -1,10 +1,6 @@
 @import 'mobile.variables';
 @import 'mediawiki.mixins.less';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 .backtotop {
 	/* initially hide the element */
 	visibility: hidden;
@@ -17,7 +13,7 @@
 	border-radius: 100%;
 	box-shadow: 0.1em 0.2em 0.3em #d3d3d3;
 	bottom: 20px;
-	right: @contentMargin;
+	right: 0;
 	cursor: pointer;
 	z-index: @z-indexOverlay;
 	background-color: @colorProgressive;

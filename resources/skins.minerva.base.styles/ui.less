@@ -51,7 +51,8 @@ body {
 	}
 
 	#mw-mf-last-modified {
-		padding: 5px @contentMargin;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		background-color: @colorGray14;
 	}
 
@@ -411,4 +412,50 @@ input.search {
 	display: inline-block !important;
 	visibility: visible;
 	float: right;
+}
+
+// It may be better to express these in a single class
+// or think about using extend or a mixin to stay with semantic selectors
+// https://css-tricks.com/the-extend-concept/
+.last-modified-bar #mw-mf-last-modified,
+#bodyContent .panel .content,
+.overlay .content-header,
+.overlay .panel,
+.page-list.side-list .list-thumb,
+.overlay .cleanup li .issue-notice,
+.editor-overlay .wikitext-editor
+.page-list li,
+.topic-title-list li,
+.site-link-list li,
+.previewnote p,
+.pointer-overlay,
+.drawer,
+.successbox,
+.errorbox,
+.list-header,
+.warningbox,
+.mw-revision {
+	padding-left: @contentPadding;
+	padding-right: @contentPadding;
+}
+
+.talk-overlay .comment .comment-content,
+.backtotop,
+.image-list,
+.pre-content,
+.content,
+.post-content {
+	margin: 0 @contentMargin;
+}
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	// FIXME: this should be one generic class name
+	.page-summary-list,
+	.topic-title-list,
+	.site-link-list,
+	.overlay .panel,
+	.list-header {
+		padding-left: @contentPaddingTablet;
+		padding-right: @contentPaddingTablet;
+	}
 }

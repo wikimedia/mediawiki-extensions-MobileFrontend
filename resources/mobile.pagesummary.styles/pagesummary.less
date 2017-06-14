@@ -1,10 +1,6 @@
 @import 'mobile.variables';
 @import 'mediawiki.mixins.less';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 // Pages
 //
 // Styleguide 5.
@@ -41,7 +37,8 @@
 .list-header {
 	font-weight: bold;
 	font-size: 0.85em;
-	padding: 0.5em @contentMargin 0.4em @contentMargin;
+	padding-top: 0.5em;
+	padding-bottom: 0.4em;
 	background-color: @grayLightest;
 	color: @grayMedium;
 }
@@ -64,8 +61,3 @@
 	}
 }
 
-@media all and ( min-width: @deviceWidthTablet ) {
-	.list-header {
-		padding: 0.5em @contentPaddingTablet 0.4em @contentMargin;
-	}
-}

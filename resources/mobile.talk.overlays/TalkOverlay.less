@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 .talk-overlay {
 	.error {
 		border: solid 1px @colorErrorText;
@@ -11,10 +7,6 @@
 
 	.comment {
 		margin: 40px 0 10px 0;
-
-		.comment-content {
-			margin: 0 @contentMargin;
-		}
 
 		.wikitext-editor {
 			margin-top: 1em;

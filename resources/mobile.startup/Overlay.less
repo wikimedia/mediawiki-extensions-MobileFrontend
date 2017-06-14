@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 /* stylelint-disable no-descending-specificity */
 
 .overlay-enabled {
@@ -130,7 +126,8 @@
 	}
 
 	.panel {
-		padding: 12px @contentMargin;
+		padding-top: 12px;
+		padding-bottom: 12px;
 		border-bottom: 1px solid @grayLightest;
 	}
 
@@ -148,7 +145,8 @@
 	.content-header {
 		background-color: @colorGray15;
 		border-bottom: 1px solid @colorGray14;
-		padding: 20px @contentMargin;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		line-height: inherit;
 	}
 
@@ -348,7 +346,8 @@
 @media all and ( min-width: @deviceWidthTablet ) {
 	.overlay {
 		.panel {
-			padding: 12px @contentPaddingTablet;
+			padding-top: 12px;
+			padding-bottom: 12px;
 		}
 	}
 }

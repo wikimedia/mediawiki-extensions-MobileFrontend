@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 @itemPaddingV: 0.8em;
 @titleMarginV: 0.5em;
 @thumbGap: 15px;
@@ -46,7 +42,8 @@
 		color: @colorGray6;
 		position: relative;
 		border-bottom: solid 1px @grayLightest;
-		padding: @itemPaddingV @contentMargin;
+		padding-top: @itemPaddingV;
+		padding-bottom: @itemPaddingV;
 		// avoid the gap between thumbnails
 		margin: -1px 0 0;
 		line-height: 1;
@@ -131,7 +128,8 @@
 	}
 
 	&.side-list .list-thumb {
-		padding: @itemPaddingV @contentMargin;
+		padding-top: @itemPaddingV;
+		padding-bottom: @itemPaddingV;
 		color: @colorGray2;
 
 		p {
@@ -152,6 +150,7 @@
 	.page-summary-list,
 	.topic-title-list,
 	.site-link-list {
-		padding: 0 @contentPaddingTablet;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 }
