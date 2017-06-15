@@ -22,6 +22,29 @@
       "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_1f67a523",
+        "filename": "resources/skins.minerva.editor/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-15T18:57:26Z",
+      "side": 1,
+      "message": "Please note that `false` can also be returned, when storage is disabled or disallowed for some reason. Account for null suffices when dealing with defaults, but when checking the other way around, you can\u0027t assume a value whenever it isn\u0027t null.\n\nIt might make sense to change mw.storage to return null instead of false to hide this case. Not sure. It also isn\u0027t new, so this was already broken I think.",
+      "range": {
+        "startLine": 107,
+        "startChar": 7,
+        "endLine": 107,
+        "endChar": 31
+      },
+      "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
