@@ -93,6 +93,30 @@
       "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_a280befa",
+        "filename": "resources/skins.minerva.editor/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-15T20:29:44Z",
+      "side": 1,
+      "message": "Patch: I6bed62457d2e6483",
+      "parentUuid": "ee859f59_e2aec694",
+      "range": {
+        "startLine": 107,
+        "startChar": 7,
+        "endLine": 107,
+        "endChar": 31
+      },
+      "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
