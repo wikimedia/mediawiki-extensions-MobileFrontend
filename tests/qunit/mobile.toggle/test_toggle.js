@@ -2,7 +2,6 @@
 
 	var toggle,
 		sectionHtml = mw.template.get( 'tests.mobilefrontend', 'section.hogan' ).render(),
-		settings = M.require( 'mobile.startup/settings' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		page = { title: 'Toggle test' },
 		Toggler = M.require( 'mobile.toggle/Toggler' );
@@ -23,7 +22,7 @@
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.remove( 'expandedSections', false );
+			mw.storage.remove( 'expandedSections' );
 		}
 	} );
 
@@ -105,7 +104,7 @@
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.remove( 'expandedSections', false );
+			mw.storage.remove( 'expandedSections' );
 		}
 	} );
 
@@ -125,14 +124,14 @@
 	QUnit.module( 'MobileFrontend toggle.js: user setting', {
 		setup: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
-			settings.save( 'expandSections', 'true', true );
+			mw.storage.set( 'expandSections', 'true' );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			toggle = new Toggler( this.$container, '', page );
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.save( 'expandSections', '', true );
-			settings.remove( 'expandedSections', false );
+			mw.storage.set( 'expandSections', '' );
+			mw.storage.remove( 'expandedSections' );
 		}
 	} );
 
@@ -155,8 +154,8 @@
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.remove( 'expandSections', true );
-			settings.remove( 'expandedSections', false );
+			mw.storage.remove( 'expandSections' );
+			mw.storage.remove( 'expandedSections' );
 		}
 	} );
 
@@ -201,8 +200,8 @@
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.remove( 'expandedSections', false );
-			settings.remove( 'expandSections', true );
+			mw.storage.remove( 'expandedSections' );
+			mw.storage.remove( 'expandSections' );
 		}
 	} );
 
@@ -229,7 +228,7 @@
 
 	QUnit.test( 'Check for and remove obsolete stored sections.', 2, function ( assert ) {
 		this.expandedSections[ this.pageTitle ][ this.headline ] = ( new Date( 1990, 1, 1 ) ).getTime();
-		settings.save( 'expandedSections',
+		mw.storage.set( 'expandedSections',
 			JSON.stringify( this.expandedSections )
 		);
 		this.expandedSections = Toggler._getExpandedSections( page );
@@ -298,8 +297,8 @@
 		},
 		teardown: function () {
 			window.location.hash = '#';
-			settings.remove( 'expandedSections', false );
-			settings.remove( 'expandSections', true );
+			mw.storage.remove( 'expandedSections' );
+			mw.storage.remove( 'expandSections' );
 		}
 	} );
 
@@ -313,7 +312,7 @@
 
 		// save a toggle state manually
 		this.expandedSections[ this.pageTitle ][ this.headline ] = ( new Date() ).getTime();
-		settings.save( 'expandedSections', JSON.stringify( this.expandedSections ), false );
+		mw.storage.set( 'expandedSections', JSON.stringify( this.expandedSections ) );
 		this.expandedSections = Toggler._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],
 			'number',

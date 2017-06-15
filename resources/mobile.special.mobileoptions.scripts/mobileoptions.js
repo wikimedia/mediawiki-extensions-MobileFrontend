@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var View = M.require( 'mobile.startup/View' ),
-		settings = M.require( 'mobile.startup/settings' );
+	var View = M.require( 'mobile.startup/View' );
 
 	/**
 	 * Wrapper for checkboxes styled as in MediaWiki UI style guide
@@ -14,17 +13,17 @@
 	OO.mfExtend( Checkbox, View, {
 		template: mw.template.get( 'mobile.special.mobileoptions.scripts', 'Checkbox.hogan' ),
 		/**
-		 * Save the current state of the checkbox to the settings
+		 * Save the current state of the checkbox to the storage
 		 * @method
 		 */
 		save: function () {
-			settings.save( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
+			mw.storage.set( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false' );
 		},
 		/** @inheritdoc */
 		postRender: function () {
 			var cbview = this;
 			this.cb = this.$( 'input[type=checkbox]' );
-			this.cb.prop( 'checked', settings.get( this.options.name, true ) === 'true' );
+			this.cb.prop( 'checked', mw.storage.get( this.options.name ) === 'true' );
 			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( cbview, 'save' ) );
 		}
 	} );

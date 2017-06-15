@@ -527,7 +527,6 @@
 				"resources/mobile.startup/cache.js",
 				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
-				"resources/mobile.startup/settings.js",
 				"resources/mobile.startup/user.js",
 				"resources/mobile.startup/util.js",
 				"resources/mobile.startup/PageGateway.js",

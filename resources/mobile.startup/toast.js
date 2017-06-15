@@ -1,7 +1,6 @@
 ( function ( M ) {
 	var Toast,
-		settingsKey = 'mobileFrontend/toast',
-		settings = M.require( 'mobile.startup/settings' );
+		storageKey = 'mobileFrontend/toast';
 
 	/**
 	 * Wrapper for one global Toast
@@ -48,7 +47,7 @@
 	};
 
 	/**
-	 * Save the toast data in settings so that we can show it on page reload.
+	 * Save the toast data in storage so that we can show it on page reload.
 	 * Also check whether there is a pending message that's not shown yet.
 	 * If yes, output a warning message and discard this message.
 	 * This is to ensure that the page needs to be reloaded before adding
@@ -58,29 +57,29 @@
 	 * @param {string} className class to add to element
 	 */
 	Toast.prototype.showOnPageReload = function ( content, className ) {
-		if ( settings.get( settingsKey ) ) {
+		if ( mw.storage.get( storageKey ) ) {
 			mw.log.warn(
 				'A pending toast message already exits. ' +
 				'The page should have been reloaded by now.'
 			);
 			return;
 		}
-		settings.save( settingsKey, JSON.stringify( {
+		mw.storage.set( storageKey, JSON.stringify( {
 			content: content,
 			className: className
 		} ) );
 	};
 
 	/**
-	 * Show the previously saved toast data and delete it from settings
+	 * Show the previously saved toast data and delete it from storage
 	 * @private
 	 */
 	Toast.prototype._showPending = function () {
-		var data = settings.get( settingsKey );
+		var data = mw.storage.get( storageKey );
 		if ( data ) {
 			data = JSON.parse( data );
 			this.show( data.content, data.className );
-			settings.remove( settingsKey );
+			mw.storage.remove( storageKey );
 		}
 	};
 

@@ -1,6 +1,5 @@
 ( function ( M, $, ve ) {
-	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
-		settings = M.require( 'mobile.startup/settings' );
+	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' );
 
 	/**
 	 * Overlay for VisualEditor view
@@ -120,7 +119,7 @@
 				mechanism: 'navigate'
 			} );
 			// Save a user setting indicating that this user prefers using the SourceEditor
-			settings.save( 'preferredEditor', 'SourceEditor', true );
+			mw.storage.set( 'preferredEditor', 'SourceEditor' );
 			this.showSpinner();
 			this.$( '.surface' ).hide();
 			// Load the SourceEditor and replace the VisualEditor overlay with it

@@ -3,7 +3,6 @@
 		Section = M.require( 'mobile.startup/Section' ),
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
-		settings = M.require( 'mobile.startup/settings' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
@@ -392,7 +391,7 @@
 				mechanism: 'navigate'
 			} );
 			// Save a user setting indicating that this user prefers using the VisualEditor
-			settings.save( 'preferredEditor', 'VisualEditor', true );
+			mw.storage.set( 'preferredEditor', 'VisualEditor' );
 			// Load the VisualEditor and replace the SourceEditor overlay with it
 			this.showSpinner();
 			this.$content.hide();

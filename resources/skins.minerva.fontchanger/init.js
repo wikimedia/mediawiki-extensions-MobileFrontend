@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var settings = M.require( 'mobile.startup/settings' ),
-		userFontSize = settings.get( 'userFontSize', true );
+	var userFontSize = mw.storage.get( 'userFontSize' );
 
 	if ( userFontSize !== '100' ) {
 		$( '.content p' ).css( 'font-size', userFontSize + '%' );

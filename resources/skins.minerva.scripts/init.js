@@ -1,9 +1,8 @@
 ( function ( M, $ ) {
 	var inSample, inStable, experiment,
 		toast = M.require( 'mobile.startup/toast' ),
-		settings = M.require( 'mobile.startup/settings' ),
 		time = M.require( 'mobile.startup/time' ),
-		token = settings.get( 'mobile-betaoptin-token' ),
+		token = mw.storage.get( 'mobile-betaoptin-token' ),
 		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
 		loader = M.require( 'mobile.startup/rlModuleLoader' ),
 		router = require( 'mediawiki.router' ),
@@ -133,7 +132,7 @@
 	if ( experiment && token !== false && token !== '~' && !page.isMainPage() && !page.inNamespace( 'special' ) ) {
 		if ( !token ) {
 			token = mw.user.generateRandomSessionId();
-			settings.save( 'mobile-betaoptin-token', token );
+			mw.storage.set( 'mobile-betaoptin-token', token );
 		}
 
 		inStable = context.getMode() === 'stable';
@@ -145,7 +144,7 @@
 				} )
 			} )
 				.on( 'hide', function () {
-					settings.save( 'mobile-betaoptin-token', '~' );
+					mw.storage.set( 'mobile-betaoptin-token', '~' );
 				} )
 				.appendTo( M.getCurrentPage().getLeadSectionElement() );
 		}

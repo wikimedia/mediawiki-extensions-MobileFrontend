@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var settings = M.require( 'mobile.startup/settings' ),
-		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
+	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
 		arrowOptions = {
 			name: 'arrow',
@@ -31,7 +30,7 @@
 	 */
 	function getExpandedSections( page ) {
 		var expandedSections = JSON.parse(
-			settings.get( 'expandedSections', false ) || '{}'
+			mw.storage.get( 'expandedSections' ) || '{}'
 		);
 		expandedSections[page.title] = expandedSections[page.title] || {};
 		return expandedSections;
@@ -43,8 +42,8 @@
 	 * Save expandedSections to localStorage
 	 */
 	function saveExpandedSections( expandedSections ) {
-		settings.save(
-			'expandedSections', JSON.stringify( expandedSections ), false
+		mw.storage.set(
+			'expandedSections', JSON.stringify( expandedSections )
 		);
 	}
 
@@ -245,7 +244,7 @@
 			collapseSectionsByDefault = true;
 		}
 		expandSections = !collapseSectionsByDefault ||
-			( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) && settings.get( 'expandSections', true ) === 'true' );
+			( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) && mw.storage.get( 'expandSections' ) === 'true' );
 
 		$container.children( tagName ).each( function ( i ) {
 			var isReferenceSection,

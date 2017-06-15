@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var View = M.require( 'mobile.startup/View' ),
-		Button = M.require( 'mobile.startup/Button' ),
-		settings = M.require( 'mobile.startup/settings' );
+		Button = M.require( 'mobile.startup/Button' );
 
 	/**
 	 * FontChanger wrapper
@@ -44,7 +43,7 @@
 		 * @method
 		 */
 		save: function () {
-			settings.save( this.options.name, this.fontchanger.val(), true );
+			mw.storage.set( this.options.name, this.fontchanger.val() );
 		},
 
 		/**
@@ -56,7 +55,7 @@
 			this.fontchanger = this.$( '.fontchanger-value' );
 			this.changePlus = this.$( '.fontchanger.plus' );
 			this.changeMinus = this.$( '.fontchanger.minus' );
-			this.setPercentage( settings.get( this.options.name, true ) || 100 );
+			this.setPercentage( mw.storage.get( this.options.name ) || 100 );
 
 			this.fontchanger.on( 'click', function () {
 				self.setPercentage( 100 );

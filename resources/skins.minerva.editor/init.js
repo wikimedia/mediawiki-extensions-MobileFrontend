@@ -4,7 +4,6 @@
 		// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 		isEditable = mw.config.get( 'wgIsProbablyEditable' ),
 		blockInfo = mw.config.get( 'wgMinervaUserBlockInfo', false ),
-		settings = M.require( 'mobile.startup/settings' ),
 		router = require( 'mediawiki.router' ),
 		overlayManager = M.require( 'skins.minerva.scripts/overlayManager' ),
 		loader = M.require( 'mobile.startup/rlModuleLoader' ),
@@ -104,8 +103,8 @@
 	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
-		var preferredEditor = settings.get( 'preferredEditor', true );
-		if ( preferredEditor === null ) {
+		var preferredEditor = mw.storage.get( 'preferredEditor' );
+		if ( !preferredEditor ) {
 			// For now, we are going to ignore which editor is set as the default for the
 			// wiki and always default to the source editor. Once we decide to honor the
 			// default editor setting for the wiki, we'll want to use:
