@@ -45,6 +45,30 @@
       "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_22edae22",
+        "filename": "resources/skins.minerva.editor/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-15T19:47:36Z",
+      "side": 1,
+      "message": "According to https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.storage, null is never returned. I think we can safely replace null with false.",
+      "parentUuid": "ee859f59_1f67a523",
+      "range": {
+        "startLine": 107,
+        "startChar": 7,
+        "endLine": 107,
+        "endChar": 31
+      },
+      "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
