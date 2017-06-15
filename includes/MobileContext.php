@@ -13,7 +13,6 @@ use MobileFrontend\WMFBaseDomainExtractor;
 class MobileContext extends ContextSource {
 	const MODE_BETA = 'beta';
 	const MODE_STABLE = 'stable';
-	const DISABLE_IMAGES_COOKIE_NAME = 'disableImages';
 	const OPTIN_COOKIE_NAME = 'optin';
 	const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
@@ -254,22 +253,6 @@ class MobileContext extends ContextSource {
 				'MFShowFirstParagraphBeforeInfobox' );
 		}
 		return $this->showFirstParagraphBeforeInfobox;
-	}
-
-	/**
-	 * Checks whether images are disabled for the current user
-	 * @return bool
-	 */
-	public function imagesDisabled() {
-		if ( is_null( $this->disableImages ) ) {
-			$this->disableImages = (
-				( isset( $_COOKIE[ self::DISABLE_IMAGES_COOKIE_NAME ] )
-				  && $_COOKIE[ self::DISABLE_IMAGES_COOKIE_NAME ] === '1' ) ||
-				(bool) $this->getRequest()->getCookie( self::DISABLE_IMAGES_COOKIE_NAME )
-			);
-		}
-
-		return $this->disableImages;
 	}
 
 	/**
@@ -664,19 +647,6 @@ class MobileContext extends ContextSource {
 		$useFormatFromCookie = $this->getRequest()->getCookie( self::USEFORMAT_COOKIE_NAME, '' );
 
 		return $useFormatFromCookie;
-	}
-
-	/**
-	 * Set or unset cookie to disable images on pages
-	 * @param bool $shouldDisableImages
-	 */
-	public function setDisableImagesCookie( $shouldDisableImages ) {
-		$resp = $this->getRequest()->response();
-		if ( $shouldDisableImages ) {
-			$resp->setCookie( self::DISABLE_IMAGES_COOKIE_NAME, 1, 0, [ 'prefix' => '' ] );
-		} else {
-			$resp->clearCookie( self::DISABLE_IMAGES_COOKIE_NAME, [ 'prefix' => '' ] );
-		}
 	}
 
 	/**

@@ -30,11 +30,9 @@
 	 * @ignore
 	 */
 	function initMediaViewer() {
-		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
-			thumbs.forEach( function ( thumb ) {
-				thumb.$el.off().data( 'thumb', thumb ).on( 'click', onClickImage );
-			} );
-		}
+		thumbs.forEach( function ( thumb ) {
+			thumb.$el.off().data( 'thumb', thumb ).on( 'click', onClickImage );
+		} );
 	}
 
 	/**

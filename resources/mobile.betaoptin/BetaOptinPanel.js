@@ -20,7 +20,6 @@
 		defaults: $.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
 			editToken: mw.user.tokens.get( 'editToken' ),
-			enableImages: mw.config.get( 'wgImagesDisabled' ) ? 0 : 1,
 			text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
 			buttons: [
 				new Button( {

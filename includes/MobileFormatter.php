@@ -119,9 +119,6 @@ class MobileFormatter extends HtmlFormatter {
 		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
 
 		$formatter->setIsMainPage( $isMainPage );
-		if ( $context->getContentTransformations() && !$isFilePage ) {
-			$formatter->setRemoveMedia( $context->imagesDisabled() );
-		}
 
 		$formatter->enableExpandableSections( $enableSections );
 		$formatter->enableTOCPlaceholder( $includeTOC );

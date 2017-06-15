@@ -120,7 +120,6 @@
 					redirect: 'yes',
 					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|protection|displaytitle|revision',
 					noheadings: 'yes',
-					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
 				}, options ).done( function ( resp ) {

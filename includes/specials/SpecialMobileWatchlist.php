@@ -58,12 +58,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
 
 		$ctx = MobileContext::singleton();
-		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
+		$this->usePageImages = defined( 'PAGE_IMAGES_INSTALLED' );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
 		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
-		// FIXME: Loads twice with JS enabled (T87871)
 		$output->addModuleStyles( [
 			'skins.minerva.special.watchlist.styles',
 			'mobile.pagelist.styles',
