@@ -1,9 +1,5 @@
 @import 'mobile.variables';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 @paddingHorizontal: 24px;
 @iconSize: 16px;
 @iconHeadingGap: 12px;
@@ -40,7 +36,7 @@
 		font-size: ( 7 * @fontSize ) / 8;
 		width: auto;
 		> ul {
-			padding-bottom: @fontSize + @headingMargin;
+			padding-bottom: @fontSize + 0.5em;
 		}
 
 		ul {
