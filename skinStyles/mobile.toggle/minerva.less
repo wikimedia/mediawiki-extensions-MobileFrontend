@@ -1,0 +1,24 @@
+@import 'minerva.variables';
+
+.client-js {
+	.collapsible-heading,
+	.collapsible-block {
+		clear: both;
+	}
+
+	.collapsible-heading {
+		cursor: pointer;
+		position: relative;
+
+		.indicator {
+			float: left;
+			margin-top: 0.7em;
+			font-size: @indicatorFontSize;
+		}
+	}
+
+	.collapsible-block {
+		// bug 41401 - without this content doesn't always take up whole width
+		width: 100%;
+	}
+}

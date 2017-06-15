@@ -1,7 +1,3 @@
-@import 'mobile.variables';
-
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
 @import 'minerva.variables';
 
 @media all and ( min-width: @deviceWidthTablet ) {
@@ -19,7 +15,8 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 1em @contentMargin;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	line-height: 1.4;
 	font-size: 0.9em;
 	text-align: center;
@@ -76,7 +73,7 @@
 	}
 
 	&.pointer-overlay-compact {
-		background: @toastNotificationColor;
+		background: @colorGray2;
 		width: auto;
 		/* @noflip */
 		right: auto;
@@ -84,7 +81,7 @@
 
 		// Pointer color nested so it may be changed in other tutorials
 		.tutorial-pointer {
-			border-bottom-color: @toastNotificationColor;
+			border-bottom-color: @colorGray2;
 		}
 
 		p {

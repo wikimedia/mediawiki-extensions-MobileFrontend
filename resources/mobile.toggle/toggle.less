@@ -1,32 +1,3 @@
-/* Styling of sections and toggling
-moved from beta_common.css in
-Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
-*/
-@import 'mobile.variables';
-
-.client-js {
-	.collapsible-heading,
-	.collapsible-block {
-		clear: both;
-	}
-
-	.collapsible-heading {
-		cursor: pointer;
-		position: relative;
-
-		.indicator {
-			float: left;
-			margin-top: 0.7em;
-			font-size: @indicatorFontSize;
-		}
-	}
-
-	.collapsible-block {
-		// bug 41401 - without this content doesn't always take up whole width
-		width: 100%;
-	}
-}
-
 @media print {
 	.collapsible-heading .indicator,
 	.collapsible-heading .edit-page {
