@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_3fbdc963",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-15T18:53:37Z",
+      "side": 1,
+      "message": "Unexpected third parameter.",
+      "range": {
+        "startLine": 46,
+        "startChar": 57,
+        "endLine": 46,
+        "endChar": 64
+      },
+      "revId": "87ecb9bd5e261cf0cc5c9405c123626ed451681c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
