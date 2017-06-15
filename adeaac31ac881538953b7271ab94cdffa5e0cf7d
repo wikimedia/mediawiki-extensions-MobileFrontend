@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_c2cf0281",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-15T20:17:21Z",
+      "side": 1,
+      "message": "\"It.. got away from me, yeah\" :)",
+      "range": {
+        "startLine": 17,
+        "startChar": 26,
+        "endLine": 17,
+        "endChar": 29
+      },
+      "revId": "adeaac31ac881538953b7271ab94cdffa5e0cf7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
