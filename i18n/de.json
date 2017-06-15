@@ -280,6 +280,7 @@
 	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website",
 	"mobile-frontend-pageaction-edit-tooltip": "Bearbeite den Einführungsabschnitt für diese Seite.",
 	"apihelp-mobileview-description": "Gibt Daten zurück, die für mobile Ansichten benötigt werden.",
+	"apihelp-mobileview-summary": "Gibt nötige Daten für mobile Ansichten zurück.",
 	"apihelp-mobileview-param-page": "Titel der zu verarbeitenden Seite.",
 	"apihelp-mobileview-param-redirect": "Ob Weiterleitungen gefolgt werden soll.",
 	"apihelp-mobileview-param-sectionprop": "Welche Informationen über Abschnitte abgerufen werden sollen.",
