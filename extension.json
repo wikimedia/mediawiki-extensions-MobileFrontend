@@ -1769,9 +1769,6 @@
 		],
 		"TitleSquidURLs": [
 			"MobileFrontendHooks::onTitleSquidURLs"
-		],
-		"MediaWikiServices": [
-			"MobileFrontendHooks::onMediaWikiServices"
 		]
 	},
 	"config": {
@@ -1906,5 +1903,8 @@
 		"MFLogWrappedInfoboxes": true,
 		"MFWatchlistEditCountThreshold": 10
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"manifest_version": 1
 }
