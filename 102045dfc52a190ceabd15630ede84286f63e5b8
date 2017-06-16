@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "ee859f59_28ffc863",
+        "filename": "includes/Minerva.hooks.php",
+        "patchSetId": 30
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-16T18:20:26Z",
+      "side": 1,
+      "message": "I think that `ServiceWiringFiles` was introduced after setting up ServiceWirings.php file in MobileFrontend and no one implemented the new way in MobileFrontend.",
+      "parentUuid": "ee859f59_9d82c6a8",
+      "revId": "102045dfc52a190ceabd15630ede84286f63e5b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee859f59_e0324cbc",
         "filename": "includes/Minerva.hooks.php",
         "patchSetId": 30
