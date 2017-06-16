@@ -1,4 +1,6 @@
 @import 'mediawiki.ui/variables';
+// FIXME: Remove this dependency. Should not depend on mobile.variables
+@import 'mobile.variables.less';
 
 @skinContentBgColor: #fff;
 
@@ -28,20 +30,11 @@
 @titleSectionSpacingTop: 20px;
 @titleSectionSpacingBottom: 25px;
 
-@grayDark: @colorGray2;
-@grayMediumDark: @colorGray5;
-@grayMedium: @colorGray7;
-@grayMediumLight: @colorGray10;
-@grayLight: @colorGray12;
-@grayLightest: @colorGray14;
-
 // colors
 @chromeColor: @grayLightest;
 @chromeContentSeparator: @colorGray13;
 @semiTransparent: rgba( 0, 0, 0, 0.8 );
-// note this is also used for red links
-@redBase: @colorErrorText;
-@colorTutorial: #2e76ff;
+
 @linkColor: #002bb8;
 @lastModifiedBarActiveBackgroundColor: #00af89;
 @toastNotificationColor: @colorGray2;
@@ -53,23 +46,17 @@
 @colorWarningBackground: #feb;
 @colorWarningBorder: #fde29b;
 @colorWarningText: #850;
-@colorSuccessBackground: #e1fddf;
 @colorSuccessBorder: #b7fdb5;
-@colorSuccessText: #009000;
 @colorErrorBackground: #fae3e3;
 @colorErrorBorder: #fac5c5;
 
 // typography
-@fontFamily: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
 @fontFamilyHeading: 'Linux Libertine', 'Georgia', 'Times', serif;
 @fontScalingFactor: 1;
 @contentLineHeight: 1.65;
 
 @headingMargin: 0.5em;
 @sectionIconWidth: 30px;
-
-// information messages, e.g. empty watchlist message
-@infoColor: @colorGray7;
 
 // blockquotes
 @blockquotePaddingRight: 25px;
@@ -78,9 +65,6 @@
 // custom tablet styling
 @contentPaddingTablet: 3.35em;
 
-// FIXME: To be moved to includes/Config in a follow up patch.
-@wgMFDeviceWidthDesktop: 62.5em; // 1000px / 16 px;
-
 // note since content does not use view border box we have to include padding.
 @contentMaxWidthTablet: @wgMFDeviceWidthDesktop - ( 2 * @contentPaddingTablet );
 @contentTopPadding: 1.6em;
@@ -88,17 +72,6 @@
 // Wiki specific variables
 @infoboxWidth: 320px;
 
-// OOJs specific icon variables
-@baseIconSize: 24px;
-@targetIconSize: 32px;
-
-// z-index definitions (see bug 64707)
-@z-indexBase: 0;
-@z-indexOverlay: 1;
-@z-indexOverOverlay: 2;
-
-// table of contents
-@tocFontSize: 0.8em;
 // indicators
 @indicatorFontSize: 0.4em;
 

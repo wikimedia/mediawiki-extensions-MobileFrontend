@@ -1,16 +1,6 @@
 @import 'mediawiki.mixins.less';
 @import 'mediawiki.mixins.animation.less';
 
-// FIXME: This mixin should not be necessary and only exists because of
-// https://phabricator.wikimedia.org/T142532
-// Please do not use it.
-.m-background-image( @url ) {
-	&:after,
-	&:before {
-		.background-image( @url );
-	}
-}
-
 // Generic mixin for applying styles to text that accompanies/adds context to workflows
 .secondary-text() {
 	font-size: 0.9em;

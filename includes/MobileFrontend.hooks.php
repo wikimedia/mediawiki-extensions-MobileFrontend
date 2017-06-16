@@ -1303,6 +1303,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onRegistration() {
 		global $wgResourceLoaderLESSImportPaths, $wgDisableAuthManager;
+		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/mobile.less/";
 
 		// modify login/registration form
 		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
@@ -1312,8 +1313,9 @@ class MobileFrontendHooks {
 			Hooks::register( 'UserCreateForm', 'MobileFrontendHooks::onUserCreateForm' );
 		}
 
-		// Set LESS importpath
-		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
+		if ( class_exists( 'MinervaHooks' ) ) {
+			MinervaHooks::onRegistration();
+		}
 	}
 
 	/**

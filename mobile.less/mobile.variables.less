@@ -1,0 +1,40 @@
+/* GOAL: Upstream all these variables to core */
+@import 'mediawiki.ui/variables';
+
+// z-index definitions (see bug 64707)
+@z-indexBase: 0;
+@z-indexOverlay: 1;
+@z-indexOverOverlay: 2;
+
+@fontFamily: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+
+// OOJs specific icon variables
+@baseIconSize: 24px;
+@targetIconSize: 32px;
+
+// FIXME: This is very minerva specific but used by mobile.toc
+@tocFontSize: 0.8em;
+
+// ==== Colors
+// Gray Colors
+@grayDark: @colorGray2;
+@grayMediumDark: @colorGray5;
+@grayMedium: @colorGray7;
+@grayMediumLight: @colorGray10;
+@grayLight: @colorGray12;
+@grayLightest: @colorGray14;
+
+// note this is also used for red links
+@redBase: @colorErrorText;
+// information messages, e.g. empty watchlist message
+@infoColor: @colorGray7;
+// background color for help screens/tutorials
+@colorTutorial: #2e76ff;
+
+// TODO: Can these be made to use core variables (or swapped out for some)?
+@colorSuccessBackground: #e1fddf;
+@colorSuccessText: #009000;
+
+// FIXME: To be moved to includes/Config in a follow up patch.
+@wgMFDeviceWidthDesktop: 62.5em; // 1000px / 16 px;
+

@@ -31,6 +31,19 @@ class MinervaHooks {
 	}
 
 	/**
+	 * Skin registration callback.
+	 */
+	public static function onRegistration() {
+		// Set LESS importpath
+		global $wgResourceLoaderLESSImportPaths;
+		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
+
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'MobileFrontend' ) ) {
+			die( 'This version of the MobileFrontend extension requires MediaWiki 1.25+' );
+		}
+	}
+
+	/**
 	 * ResourceLoaderTestModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
 	 *
