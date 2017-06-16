@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_b4deb86e",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-16T15:10:11Z",
+      "side": 1,
+      "message": "Why\u0027s this?",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_d43c9c90",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-16T15:10:11Z",
+      "side": 1,
+      "message": "Is there a specific order of the classes in this selector (preferable)?\nIf nothing else, I\u0027d put more specific behind more general like `.page-list li, .page-list.side-list .list-thumb,`",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_f4d2005d",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-16T15:10:11Z",
+      "side": 1,
+      "message": "Don\u0027t you want to change it to `margin` to resemble the variable more appropriately?",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_f441a00f",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-16T15:10:11Z",
+      "side": 1,
+      "message": "same here, specific order?",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
