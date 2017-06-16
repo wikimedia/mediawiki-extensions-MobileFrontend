@@ -1,6 +1,11 @@
 // FIXME: some of this could be removed if we reused .page-list styling
+@import 'mobile.variables';
+@import 'mediawiki.ui/variables';
+@import 'mediawiki.mixins.less';
+
+// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
+// Move Minerva specific rules into skinStyles.
 @import 'minerva.variables';
-@import 'minerva.mixins';
 
 .notifications-overlay {
 	// position: fixed + sliding drawer causes weird rendering bugs in Android
