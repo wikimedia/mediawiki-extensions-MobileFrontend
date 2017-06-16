@@ -21,7 +21,11 @@ a {
 	&.new,
 	&.new:visited,
 	&.new:hover {
-		color: @redBase;
+		color: @redLinkColor;
+		// Take care of headings in page lists.
+		> * {
+			color: @redLinkColor;
+		}
 	}
 
 	&.external {
