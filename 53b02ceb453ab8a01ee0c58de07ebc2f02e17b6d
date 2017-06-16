@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee859f59_4891ecfa",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-16T18:48:15Z",
+      "side": 1,
+      "message": "Removed",
+      "parentUuid": "ee859f59_b4deb86e",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee859f59_d43c9c90",
         "filename": "resources/skins.minerva.base.styles/ui.less",
         "patchSetId": 20
@@ -30,6 +48,24 @@
       "writtenOn": "2017-06-16T15:10:11Z",
       "side": 1,
       "message": "Is there a specific order of the classes in this selector (preferable)?\nIf nothing else, I\u0027d put more specific behind more general like `.page-list li, .page-list.side-list .list-thumb,`",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_e8fb0043",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-16T18:48:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee859f59_d43c9c90",
       "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee859f59_88f83448",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-16T18:48:15Z",
+      "side": 1,
+      "message": "No it seems like we are using this as padding so i\u0027ll rename this to contentPadding",
+      "parentUuid": "ee859f59_f4d2005d",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee859f59_f441a00f",
         "filename": "resources/skins.minerva.content.styles/main.less",
         "patchSetId": 20
@@ -64,6 +118,24 @@
       "writtenOn": "2017-06-16T15:10:11Z",
       "side": 1,
       "message": "same here, specific order?",
+      "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_a8f5f84d",
+        "filename": "resources/skins.minerva.content.styles/main.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-16T18:48:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee859f59_f441a00f",
       "revId": "53b02ceb453ab8a01ee0c58de07ebc2f02e17b6d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
