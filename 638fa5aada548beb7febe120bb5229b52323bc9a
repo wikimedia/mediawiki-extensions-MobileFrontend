@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_2bd34263",
+        "filename": "skinStyles/mobile.search/SearchOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-16T20:04:06Z",
+      "side": 1,
+      "message": "previously this tag was inside .search_overlay{}, now it\u0027s in root, why?",
+      "revId": "638fa5aada548beb7febe120bb5229b52323bc9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

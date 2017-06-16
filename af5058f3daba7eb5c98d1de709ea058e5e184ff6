@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_0b3d1e8a",
+        "filename": "skinStyles/mobile.pointerOverlay/minerva.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-16T20:04:06Z",
+      "side": 0,
+      "message": "why did you remove that?",
+      "revId": "af5058f3daba7eb5c98d1de709ea058e5e184ff6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
