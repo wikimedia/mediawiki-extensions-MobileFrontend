@@ -1315,18 +1315,4 @@ class MobileFrontendHooks {
 		// Set LESS importpath
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/minerva.less/";
 	}
-
-	/**
-	 * MediaWikiServices hook handler.
-	 *
-	 * For now, loads the <code>ServiceWiring.php</code> service wiring file. As we add more
-	 * top-level services, that file may need to be split up.
-	 *
-	 * @param MediaWikiServices $services
-	 */
-	public static function onMediaWikiServices( MediaWikiServices $services ) {
-		$services->loadWiringFiles( [
-			__DIR__ . '/ServiceWiring.php',
-		] );
-	}
 }
