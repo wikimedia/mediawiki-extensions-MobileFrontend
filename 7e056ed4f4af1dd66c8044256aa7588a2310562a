@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_1328f0dc",
+        "filename": "resources/mobile.backtotop/backtotop.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "Why setting to `0` instead – should be in the commit msg",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_b37b24eb",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "Not convinced, that it\u0027s a good idea to change this to fixed value instead of negative set variable.",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_b3524469",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "Was this missing?",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_53e9987a",
+        "filename": "resources/skins.minerva.base.styles/ui.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "Why do you think, that\u0027s preferable? I\u0027d work with a mixin/Less @extend way instead? https://css-tricks.com/the-extend-concept/ Results in to the point specific code like below, but in place of the separate selectors.  Also you wouldn\u0027t introduce a styling-specific class, but stay with semantic selectors.",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_b3ffa4a6",
+        "filename": "skinStyles/mobile.notifications.overlay/minerva.less",
+        "patchSetId": 21
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "But here padding is used as margin! It\u0027d be good to clarify such different var use per comment.",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee859f59_339bb41d",
+        "filename": "skinStyles/mobile.pointerOverlay/minerva.less~35660d2... Cleanup mobile.less and minerva.less mixins_variables",
+        "patchSetId": 21
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-19T09:30:35Z",
+      "side": 1,
+      "message": "Where does this file come from?",
+      "revId": "7e056ed4f4af1dd66c8044256aa7588a2310562a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
