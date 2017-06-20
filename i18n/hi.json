@@ -117,7 +117,6 @@
 	"mobile-frontend-history-404-title": "ऐसा कोई पृष्ठ नहीं",
 	"mobile-frontend-history-no-results": "फ़िल्टर में कोई भी इतिहास मैच नहीं मिला।",
 	"mobile-frontend-home-button": "घर",
-	"mobile-frontend-images-status": " चित्र",
 	"mobile-frontend-joined-just-now": "अभी अभी {{GENDER:$1|जुड़े}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 सेकंड|$2 सेकेण्ड}} पहले {{GENDER:$1|शामिल हुए}}",
 	"mobile-frontend-language-change": "भाषा बदलें",
