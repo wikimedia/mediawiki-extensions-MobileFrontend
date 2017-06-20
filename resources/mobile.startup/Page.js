@@ -3,7 +3,8 @@
 	var time = M.require( 'mobile.startup/time' ),
 		View = M.require( 'mobile.startup/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
-		Thumbnail = M.require( 'mobile.startup/Thumbnail' );
+		Thumbnail = M.require( 'mobile.startup/Thumbnail' ),
+		BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 	/**
 	 * Mobile page view object
@@ -241,20 +242,39 @@
 		},
 
 		/**
-		 * Return all the thumbnails in the article
+		 * Return all the thumbnails in the article. Images which have a class or link container (.image|.thumbimage)
+		 * that matches one of the items of the constant BLACKLISTED_THUMBNAIL_CLASS_SELECTORS will be excluded.
+		 * A thumbnail nested inside one of these classes will still be returned.
+		 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is a valid thumbnail
+		 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
+		 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
 		 * @method
 		 * @return {Thumbnail[]}
 		 */
 		getThumbnails: function () {
-			var thumbs = [];
+			var $thumbs,
+				blacklistSelector = '.' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
+				thumbs = [];
 
 			if ( !this._thumbs ) {
-				this.$el.find( 'a.image, a.thumbimage' ).each( function () {
+				$thumbs = this.$el.find( 'a.image, a.thumbimage' )
+					.not( blacklistSelector );
+
+				$thumbs.each( function () {
 					var $a = $( this ),
+						$lazyImage = $a.find( '.lazy-image-placeholder' ),
+						valid = $a.find( blacklistSelector ).length === 0,
 						legacyMatch = $a.attr( 'href' ).match( /title=([^\/&]+)/ ),
 						match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
-					if ( legacyMatch || match ) {
+					// filter out invalid lazy loaded images if so far image is valid
+					if ( $lazyImage.length && valid ) {
+						// if the regex matches it means the image has one of the classes - so we must invert the result
+						valid = !new RegExp( '\\b(' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
+							.test( $lazyImage.data( 'class' ) );
+					}
+
+					if ( valid && ( legacyMatch || match ) ) {
 						thumbs.push(
 							new Thumbnail( {
 								el: $a,
