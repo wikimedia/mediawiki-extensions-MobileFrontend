@@ -16,6 +16,24 @@
       "revId": "af5058f3daba7eb5c98d1de709ea058e5e184ff6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_da3db22a",
+        "filename": "skinStyles/mobile.pointerOverlay/minerva.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-20T21:35:15Z",
+      "side": 0,
+      "message": "Bad rebase! Thanks for finding this :)",
+      "parentUuid": "ee859f59_0b3d1e8a",
+      "revId": "af5058f3daba7eb5c98d1de709ea058e5e184ff6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
