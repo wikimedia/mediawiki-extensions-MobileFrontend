@@ -78,7 +78,6 @@
 		this.emit( '_resize' );
 
 		if (
-			!mw.config.get( 'wgImagesDisabled' ) &&
 			mw.config.get( 'wgMFLazyLoadImages' )
 		) {
 			$( function () {

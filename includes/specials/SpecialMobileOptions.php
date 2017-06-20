@@ -103,10 +103,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		$betaEnabled = $context->isBetaGroupMember();
 
-		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
 		$imagesBeta = $betaEnabled ? 'checked' : '';
-		$imagesDescriptionMsg = $this->msg( 'mobile-frontend-settings-images-explain' )->parse();
-		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
 		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
 		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
 
@@ -120,15 +117,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		// array to save the data of options, which should be displayed here
 		$options = [];
-
-		// image settings
-		$options['images'] = [
-			'checked' => $imagesChecked,
-			'label' => $disableMsg,
-			'description' => $imagesDescriptionMsg,
-			'name' => 'enableImages',
-			'id' => 'enable-images-toggle',
-		];
 
 		// beta settings
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
@@ -269,20 +257,12 @@ HTML;
 			}
 		}
 		$context->setMobileMode( $group );
-		$imagesDisabled = !$request->getBool( 'enableImages' );
-		if ( $context->imagesDisabled() !== $imagesDisabled ) {
-			// Only record when the state has changed
-			$schemaData['images'] = $imagesDisabled ? "off" : "on";
-		}
-		$context->setDisableImagesCookie( $imagesDisabled );
-
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
 		if ( $returnToTitle ) {
 			$url = $returnToTitle->getFullURL();
 		} else {
 			$url = $this->getPageTitle()->getFullURL( 'success' );
 		}
-		ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
 	}
 

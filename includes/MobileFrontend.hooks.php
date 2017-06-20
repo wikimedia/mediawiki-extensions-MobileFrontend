@@ -428,10 +428,6 @@ class MobileFrontendHooks {
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 		];
 
-		if ( $context->shouldDisplayMobileView() ) {
-			$vars['wgImagesDisabled'] = $context->imagesDisabled();
-		}
-
 		return true;
 	}
 
@@ -680,15 +676,6 @@ class MobileFrontendHooks {
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();
-
-		// Migrate prefixed disableImages cookie to unprefixed cookie.
-		$rawCookie = $config->get( 'CookiePrefix' ) . MobileContext::DISABLE_IMAGES_COOKIE_NAME;
-		if ( isset( $_COOKIE[ $rawCookie ] ) ) {
-			if ( (bool)$request->getCookie( MobileContext::DISABLE_IMAGES_COOKIE_NAME ) ) {
-				$context->setDisableImagesCookie( true );
-			}
-			$request->response()->clearCookie( MobileContext::DISABLE_IMAGES_COOKIE_NAME );
-		}
 
 		// Add deep link to a mobile app specified by $wgMFAppScheme
 		if ( ( $mfAppPackageId !== false ) && ( $title->isContentPage() )
