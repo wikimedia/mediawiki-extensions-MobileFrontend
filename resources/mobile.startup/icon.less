@@ -1,0 +1,17 @@
+@import 'mediawiki.mixins.less';
+
+.mf-mw-ui-icon-rotate-anti-clockwise:before {
+	.transform( rotate( -90deg ) );
+}
+.mf-mw-ui-icon-rotate-clockwise:before {
+	.transform( rotate( 90deg ) );
+}
+
+.rtl {
+	.mf-mw-ui-icon-rotate-anti-clockwise:before {
+		.transform( rotate( 90deg ) );
+	}
+	.mf-mw-ui-icon-rotate-clockwise:before {
+		.transform( rotate( -90deg ) );
+	}
+}
