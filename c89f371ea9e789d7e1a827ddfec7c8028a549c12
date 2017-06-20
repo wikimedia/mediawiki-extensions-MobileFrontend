@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8a9b6b_105ec417",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-06-20T08:50:22Z",
+      "side": 1,
+      "message": "This is a poorly named variable. I had to read through this method to understand why you hadn\u0027t removed it.",
+      "range": {
+        "startLine": 106,
+        "startChar": 2,
+        "endLine": 106,
+        "endChar": 13
+      },
+      "revId": "c89f371ea9e789d7e1a827ddfec7c8028a549c12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
