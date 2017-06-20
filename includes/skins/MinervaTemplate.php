@@ -111,7 +111,7 @@ class MinervaTemplate extends BaseTemplate {
 			$args = [
 				'clockIconClass' => MobileUI::iconClass( 'clock-gray', 'before' ),
 				'arrowIconClass' => MobileUI::iconClass(
-					'arrow-gray', 'element', 'mw-ui-icon-small indicator' ),
+					'arrow-gray', 'element', 'mw-ui-icon-small mf-mw-ui-icon-rotate-anti-clockwise indicator' ),
 				'isMainPage' => $this->getSkin()->getTitle()->isMainPage(),
 				'link' => $historyLink['href'],
 				'text' => $historyLink['text'],

@@ -141,6 +141,7 @@
 		 * @event toggled
 		 */
 		this.emit( 'toggled', wasExpanded, sectionNumber );
+		arrowOptions.rotation = wasExpanded ? 0 : 180;
 		indicator = new Icon( arrowOptions ).prependTo( $heading );
 		$heading.data( 'indicator', indicator );
 
