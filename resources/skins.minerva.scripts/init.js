@@ -115,9 +115,6 @@
 		return result;
 	} );
 
-	// for Special:Uploads
-	M.on( 'photo-loaded', initMediaViewer );
-
 	// Setup
 	$( function () {
 		initButton();

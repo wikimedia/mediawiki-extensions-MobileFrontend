@@ -82,33 +82,13 @@
 			this.$( '.empty' ).remove();
 		},
 		/**
-		 * Prepend a photo to the view.
-		 * @method
-		 * @param {Object} photoData Options describing a new {PhotoItem}
-		 * FIXME: Code duplication with PhotoList::appendPhoto
-		 */
-		prependPhoto: function ( photoData ) {
-			var photoItem;
-
-			photoData.width = this.gateway.getWidth();
-			photoItem = new PhotoItem( photoData ).prependTo( this.$list );
-			this.hideEmptyMessage();
-			M.emit( 'photo-loaded', photoItem.$el );
-		},
-		/**
 		 * Append a photo to the view.
 		 * @method
 		 * @param {Object} photoData Options describing a new {PhotoItem}
 		 */
 		appendPhoto: function ( photoData ) {
-			var photoItem = new PhotoItem( photoData ).appendTo( this.$list );
+			new PhotoItem( photoData ).appendTo( this.$list );
 			this.hideEmptyMessage();
-			/**
-			 * @event photo-loaded
-			 * @param {jQuery.Object} element belonging to view
-			 * Fired when a new {PhotoItem} has been added to the current view.
-			 */
-			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		/**
 		 * Load photos into the view using {{PhotoListApi}} when the end is near
