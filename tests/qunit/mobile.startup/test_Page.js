@@ -15,8 +15,9 @@
 		assert.strictEqual( p2.isMainPage(), false, 'check not marked as main page' );
 	} );
 
-	QUnit.test( '#getThumbnails', 5, function ( assert ) {
-		var p, textPage, pLegacyUrls, thumbs;
+	QUnit.test( '#getThumbnails', 10, function ( assert ) {
+		var p, textPage, pLegacyUrls, thumbs, pNoViewer, pMetadata, pLazyImages,
+			pLazyImagesTypo, pMetadataNested;
 
 		p = new Page( {
 			el: $( '<div><a href="/wiki/File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
@@ -28,6 +29,21 @@
 			el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 		} );
 		thumbs = p.getThumbnails();
+		pNoViewer = new Page( {
+			el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box noviewer"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		} );
+		pMetadata = new Page( {
+			el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" class="metadata" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		} );
+		pMetadataNested = new Page( {
+			el: $( '<div class="noviewer"><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		} );
+		pLazyImages = new Page( {
+			el: $( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><noscript><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" width="28" height="28" class="noviewer" data-file-width="151" data-file-height="151"></noscript><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="noviewer">&nbsp;</span></a></div>' )
+		} );
+		pLazyImagesTypo = new Page( {
+			el: $( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><noscript><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" width="28" height="28" class="noviewer" data-file-width="151" data-file-height="151"></noscript><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
+		} );
 
 		assert.strictEqual( thumbs.length, 1, 'Found expected number of thumbnails.' );
 		assert.strictEqual( thumbs[0].getFileName(), 'File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg',
@@ -41,6 +57,23 @@
 		assert.strictEqual( thumbs[0].getFileName(), 'File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg',
 			'Found expected filename.' );
 
+		thumbs = pNoViewer.getThumbnails();
+		assert.strictEqual( thumbs.length, 0, 'This page has no thumbnails.' );
+
+		thumbs = pMetadata.getThumbnails();
+		assert.strictEqual( thumbs.length, 0, 'This page has no thumbnails.' );
+
+		thumbs = pMetadataNested.getThumbnails();
+		assert.strictEqual( thumbs.length, 1,
+			'Images inside a container with the class are included. To be revisited later if needed by community.' );
+
+		thumbs = pLazyImages.getThumbnails();
+		assert.strictEqual( thumbs.length, 0,
+			'Consider whether the class is on an image which has not been lazy loaded.' );
+
+		thumbs = pLazyImagesTypo.getThumbnails();
+		assert.strictEqual( thumbs.length, 1,
+			'Thumbnail found if there is a typo.' );
 	} );
 
 	QUnit.test( '#getNamespaceId', 8, function ( assert ) {
