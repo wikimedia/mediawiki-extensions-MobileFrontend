@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ce8a9b6b_9cc5e292",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:31:16Z",
+      "side": 1,
+      "message": "i\u0027ve prefixed with mf- to show this is from MobileFrontend.",
+      "parentUuid": "ce8a9b6b_0691a3fb",
+      "range": {
+        "startLine": 21,
+        "startChar": 29,
+        "endLine": 21,
+        "endChar": 40
+      },
+      "revId": "228c22bd4f5fd05ceb8cc25dd09b82cb37042732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8a9b6b_a6fbf743",
         "filename": "resources/mobile.startup/Icon.js",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2017-06-21T14:27:25Z",
       "side": 1,
       "message": "These should be documented above.\n\nOn another note I wonder if it would be cleaner if we rotated a number of degrees, for example, 90, 180, and 270. That would take care of the missing option of 180 degrees (granted it\u0027s not used now). The upside is that there will be one default property instead of a potential three and the current two.",
+      "range": {
+        "startLine": 46,
+        "startChar": 3,
+        "endLine": 47,
+        "endChar": 26
+      },
+      "revId": "228c22bd4f5fd05ceb8cc25dd09b82cb37042732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_9c44021e",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:31:16Z",
+      "side": 1,
+      "message": "Documented.\n\nThe 180 degrees example would be useful for replacing the rule:\n.open-block .mw-ui-icon-arrow:before\n\nI thought about this but it proved a little trickier - best done in the follow up.\n\nI\u0027ve updated the option to be `rotation`",
+      "parentUuid": "ce8a9b6b_a6fbf743",
       "range": {
         "startLine": 46,
         "startChar": 3,
@@ -87,6 +135,30 @@
         "startChar": 33,
         "endLine": 3,
         "endChar": 40
+      },
+      "revId": "228c22bd4f5fd05ceb8cc25dd09b82cb37042732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_3c5156de",
+        "filename": "resources/mobile.startup/icon.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:31:16Z",
+      "side": 1,
+      "message": "Not easily. We need to rotate the pseudo element.. not the actual container to get the desired effect.",
+      "parentUuid": "ce8a9b6b_c6b15b8f",
+      "range": {
+        "startLine": 3,
+        "startChar": 1,
+        "endLine": 3,
+        "endChar": 12
       },
       "revId": "228c22bd4f5fd05ceb8cc25dd09b82cb37042732",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
