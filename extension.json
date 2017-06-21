@@ -692,9 +692,6 @@
 				"mobile.loggingSchemas.mobileWebSearch",
 				"mobile.search.images"
 			],
-			"skinStyles": {
-				"minerva": "skinStyles/mobile.search/SearchOverlay.less"
-			},
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"
 			],
@@ -1000,9 +997,6 @@
 				"mediawiki.storage",
 				"mobile.startup"
 			],
-			"skinStyles": {
-				"minerva": "skinStyles/mobile.languages.structured/LanguageOverlay.less"
-			},
 			"scripts": [
 				"resources/mobile.languages.structured/util.js",
 				"resources/mobile.languages.structured/LanguageOverlay.js"
@@ -1628,9 +1622,14 @@
 	"@note1": "ResourceModuleSkinStyles must only contain customizations for 'minerva'.",
 	"@note2": "For other skins, just use 'skinStyles' in module definition.",
 	"@note3": "Otherwise their own customizations are overridden. (T167216)",
-	"@note5": "Do not use it for modules which non-ResourceLoaderFileModule classes (T167478).",
 	"ResourceModuleSkinStyles": {
 		"minerva": {
+			"mobile.search": {
+				"minerva": "skinStyles/mobile.search/SearchOverlay.less"
+			},
+			"mobile.languages.structured": {
+				"minerva": "skinStyles/mobile.languages.structured/LanguageOverlay.less"
+			},
 			"mobile.startup": [
 				"skinStyles/mobile.startup/toast.less",
 				"skinStyles/mobile.startup/Overlay.less"
