@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "ce8a9b6b_dc0feae2",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T18:39:58Z",
+      "side": 1,
+      "message": "I see. Since we haven\u0027t seen this in the wild yet, may not need it at all. I\u0027d keep the code as simple as possible because later we may incorrectly think that this is a valid code that\u0027s solving some problem, while in fact, it was introduced as a precautionary measure. Ideally, we should only deal with what the task is asking for, but if you want to keep this, I\u0027d at least document it.",
+      "parentUuid": "ce8a9b6b_6165f9a9",
+      "range": {
+        "startLine": 261,
+        "startChar": 14,
+        "endLine": 261,
+        "endChar": 36
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8a9b6b_8136dde2",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
