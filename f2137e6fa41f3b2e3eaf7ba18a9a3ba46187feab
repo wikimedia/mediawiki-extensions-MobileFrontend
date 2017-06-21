@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ce8a9b6b_7cb35e4d",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:22:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8a9b6b_263aa7e5",
+      "range": {
+        "startLine": 251,
+        "startChar": 4,
+        "endLine": 251,
+        "endChar": 12
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8a9b6b_c104e519",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2017-06-21T15:19:44Z",
       "side": 1,
       "message": "I couldn\u0027t come up with a case where a parent of an \u0027a\u0027 would have this class. Isn\u0027t it true that only children of \u0027a\u0027s, i.e. \u0027img\u0027 elements have this class?",
+      "range": {
+        "startLine": 261,
+        "startChar": 14,
+        "endLine": 261,
+        "endChar": 36
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_6165f9a9",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:22:38Z",
+      "side": 1,
+      "message": "I think so but I wanted to play it safe. I don\u0027t know how this is used in the wild but it\u0027s possible.\nFor example it might be useful in pages like https://en.m.wikipedia.org/wiki/2014_FIFA_World_Cup#Group B\nif the flag icons were links\n\ne.g.\n\u003cdiv id\u003d\"section-with-lots-of-flag-icons\" class\u003d\"noviewer\"\u003e\n\nAny downsides of including it?",
+      "parentUuid": "ce8a9b6b_c104e519",
       "range": {
         "startLine": 261,
         "startChar": 14,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "ce8a9b6b_fcd3ce62",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:22:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8a9b6b_8136dde2",
+      "range": {
+        "startLine": 269,
+        "startChar": 53,
+        "endLine": 269,
+        "endChar": 97
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8a9b6b_4130f5e5",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2017-06-21T15:19:44Z",
       "side": 1,
       "message": "This whole thing can be replaced by:\n\nvalid \u003d new RegExp( /\\bBLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join(\u0027|\u0027)/ ).test( $lazyImage.data( \u0027class\u0027 ) );\n\nNote, however, that the leading dots from BLACKLISTED_THUMBNAIL_CLASS_SELECTORS need to be removed on line 7.\n\nWhen joining is needed, we can easily replace the line 251 with the following:\n\n\u0027.\u0027 + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( \u0027.,\u0027 );",
+      "range": {
+        "startLine": 267,
+        "startChar": 6,
+        "endLine": 272,
+        "endChar": 10
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_81f57dc9",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-21T18:22:38Z",
+      "side": 1,
+      "message": "Neato! This is super nice!",
+      "parentUuid": "ce8a9b6b_4130f5e5",
       "range": {
         "startLine": 267,
         "startChar": 6,
