@@ -515,6 +515,7 @@
 				"mobile-frontend-editor-terms-link"
 			],
 			"styles": [
+				"resources/mobile.startup/icon.less",
 				"resources/mobile.startup/panel.less",
 				"resources/mobile.startup/Overlay.less",
 				"resources/mobile.startup/drawer.less"
@@ -799,8 +800,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.mediaViewer.images"
+				"mobile.startup"
 			],
 			"styles": [
 				"resources/mobile.mediaViewer/mediaViewer.less"
@@ -816,31 +816,6 @@
 				"mobile-frontend-media-details",
 				"mobile-frontend-media-license-link"
 			]
-		},
-		"mobile.mediaViewer.images": {
-			"class": "ResourceLoaderImageModule",
-			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
-			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
-			"variants": {
-				"invert": {
-					"color": "#FFFFFF",
-					"global": true
-				}
-			},
-			"images": {
-				"previous": {
-					"file": {
-						"ltr": "resources/mobile.mediaViewer.images/move-rtl.svg",
-						"rtl": "resources/mobile.mediaViewer.images/move-ltr.svg"
-					}
-				},
-				"next": {
-					"file": {
-						"ltr": "resources/mobile.mediaViewer.images/move-ltr.svg",
-						"rtl": "resources/mobile.mediaViewer.images/move-rtl.svg"
-					}
-				}
-			}
 		},
 		"mobile.categories.overlays": {
 			"targets": [
