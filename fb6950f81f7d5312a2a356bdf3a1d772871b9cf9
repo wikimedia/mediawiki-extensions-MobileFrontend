@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae8f277b_4f9fcd55",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T23:32:41Z",
+      "side": 1,
+      "message": "haha, good one.",
+      "range": {
+        "startLine": 45,
+        "startChar": 551,
+        "endLine": 45,
+        "endChar": 564
+      },
+      "revId": "fb6950f81f7d5312a2a356bdf3a1d772871b9cf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
