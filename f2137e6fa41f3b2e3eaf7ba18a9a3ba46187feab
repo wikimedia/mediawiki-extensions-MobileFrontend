@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8a9b6b_263aa7e5",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T15:19:44Z",
+      "side": 1,
+      "message": "Can we rename this to something that denotes blacklisted thumbnail classes? I say so because it gets confusing down the lines what the selector by itself means.",
+      "range": {
+        "startLine": 251,
+        "startChar": 4,
+        "endLine": 251,
+        "endChar": 12
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_c104e519",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T15:19:44Z",
+      "side": 1,
+      "message": "I couldn\u0027t come up with a case where a parent of an \u0027a\u0027 would have this class. Isn\u0027t it true that only children of \u0027a\u0027s, i.e. \u0027img\u0027 elements have this class?",
+      "range": {
+        "startLine": 261,
+        "startChar": 14,
+        "endLine": 261,
+        "endChar": 36
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_8136dde2",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T15:19:44Z",
+      "side": 1,
+      "message": "Rather than doing this, you can use the word boundary selector like so:\n\n/\\bs/\n\nThis will match \"noviewer \", \" noviewer\", and \"noviewer\", but not \"anoviewer\", or anything else, for example.",
+      "range": {
+        "startLine": 269,
+        "startChar": 53,
+        "endLine": 269,
+        "endChar": 97
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8a9b6b_4130f5e5",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-21T15:19:44Z",
+      "side": 1,
+      "message": "This whole thing can be replaced by:\n\nvalid \u003d new RegExp( /\\bBLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join(\u0027|\u0027)/ ).test( $lazyImage.data( \u0027class\u0027 ) );\n\nNote, however, that the leading dots from BLACKLISTED_THUMBNAIL_CLASS_SELECTORS need to be removed on line 7.\n\nWhen joining is needed, we can easily replace the line 251 with the following:\n\n\u0027.\u0027 + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( \u0027.,\u0027 );",
+      "range": {
+        "startLine": 267,
+        "startChar": 6,
+        "endLine": 272,
+        "endChar": 10
+      },
+      "revId": "f2137e6fa41f3b2e3eaf7ba18a9a3ba46187feab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
