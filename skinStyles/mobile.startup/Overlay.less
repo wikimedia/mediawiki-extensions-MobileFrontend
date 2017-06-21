@@ -1,9 +1,26 @@
 @import 'minerva.variables';
 @import 'minerva.mixins';
 
-.overlay .license {
+.overlay {
+	padding-top: @headerHeight;
+
 	.license {
 		.secondary-text();
+	}
+
+	.header-action {
+		a,
+		button {
+			height: @headerHeight;
+		}
+	}
+
+	.slider-button {
+		top: @headerHeight;
+	}
+
+	> ul, button {
+		width: @headerHeight;
 	}
 }
 

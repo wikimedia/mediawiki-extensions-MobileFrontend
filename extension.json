@@ -954,9 +954,6 @@
 			"messages": [
 				"mobile-frontend-pointer-dismiss"
 			],
-			"styles": [
-				"resources/mobile.pointerOverlay/PointerOverlay.less"
-			],
 			"scripts": [
 				"resources/mobile.pointerOverlay/PointerOverlay.js"
 			],
@@ -1506,14 +1503,6 @@
 				"resources/skins.minerva.editor/init.js"
 			]
 		},
-		"mobile.fallbackeditor.styles": {
-			"targets": [
-				"mobile"
-			],
-			"styles": [
-				"resources/mobile.fallbackeditor.styles/fallbackeditor.less"
-			]
-		},
 		"skins.minerva.backtotop": {
 			"targets": [
 				"mobile",
@@ -1630,6 +1619,15 @@
 			"mobile.languages.structured": {
 				"minerva": "skinStyles/mobile.languages.structured/LanguageOverlay.less"
 			},
+			"mobile.toggle": [
+				"skinStyles/mobile.toggle/minerva.less"
+			],
+			"mobile.pointerOverlay": [
+				"skinStyles/mobile.pointerOverlay/minerva.less"
+			],
+			"mediawiki.action.edit.styles": [
+				"skinStyles/mediawiki.action.edit.styles/minerva.less"
+			],
 			"mobile.startup": [
 				"skinStyles/mobile.startup/toast.less",
 				"skinStyles/mobile.startup/Overlay.less"

@@ -1,10 +1,6 @@
 @import 'mobile.variables';
 @import 'mediawiki.mixins.animation';
 
-// FIXME: `mobile.` LESS modules should not import `minerva.` LESS modules.
-// Move Minerva specific rules into skinStyles.
-@import 'minerva.variables';
-
 @thumbGap: 15px;
 @thumbWidth: 70px;
 @colorSpinnerOverlayBackground: #fff;
@@ -20,7 +16,6 @@
 		left: 0;
 		opacity: 0.7;
 		right: 0;
-		top: @headerHeight;
 		z-index: @z-indexOverOverlay;
 
 		.spinner {
@@ -60,12 +55,6 @@
 			display: none;
 		}
 	}
-	.clear {
-		position: absolute;
-		top: ( @headerHeight / 2 ) - ( @iconSize / 2 );
-		right: 0;
-		margin-top: @headerMarginTop;
-	}
 
 	.overlay-content {
 		position: relative;
@@ -92,15 +81,6 @@
 	.results {
 		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, 0.3 );
 
-		// Since search results only contain one line, shrink the space taken up by the thumbnails
-		li {
-			padding-left: @headerHeight;
-
-			.list-thumb {
-				width: @headerHeight;
-			}
-		}
-
 		li:last-child {
 			border-bottom: 0;
 		}
@@ -113,11 +93,8 @@
 	li.page-summary {
 		display: table;
 		height: @thumbWidth;
-		padding-left: @thumbWidth + @thumbGap;
 		width: 100%;
-		.list-thumb {
-			width: @thumbWidth;
-		}
+
 		.title {
 			display: table-cell;
 			vertical-align: middle;

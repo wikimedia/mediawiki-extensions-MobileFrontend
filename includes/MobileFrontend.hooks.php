@@ -772,7 +772,7 @@ class MobileFrontendHooks {
 			$requestAction = $out->getRequest()->getVal( 'action' );
 			if ( $noJsEditing && ( $requestAction === 'edit' || $requestAction === 'submit' ) ) {
 				$out->addModuleStyles( [
-					'mobile.fallbackeditor.styles', 'mobile.messageBox'
+					'mobile.messageBox'
 				] );
 			}
 		}
@@ -941,8 +941,8 @@ class MobileFrontendHooks {
 						'mobile.editor.common',
 						'mobile.startup',
 					],
-					'styles' => [
-						'resources/mobile.editor.ve/VisualEditorOverlay.less',
+					'skinStyles' => [
+						'minerva' => 'skinStyles/mobile.editor.ve/minerva.less'
 					],
 					'scripts' => [
 						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
@@ -978,6 +978,9 @@ class MobileFrontendHooks {
 					],
 					'styles' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
+					],
+					'skinStyles' => [
+						'minerva' => 'skinStyles/mobile.notifications.overlay/minerva.less',
 					],
 					'messages' => [
 						// defined in Echo
