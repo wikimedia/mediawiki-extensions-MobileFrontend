@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae8f277b_09053d7c",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-22T19:15:44Z",
+      "side": 1,
+      "message": "Any reason why the default value is supplied? Since PHP converts the expression value to boolean when needed, i.e. inside the `if` statement, we could omit the default boolean value.",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 55
+      },
+      "revId": "a9372aeb0f023d41be5cbecda787287aa0050d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae8f277b_6985e9b0",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-22T19:15:44Z",
+      "side": 1,
+      "message": "here too",
+      "range": {
+        "startLine": 103,
+        "startChar": 40,
+        "endLine": 103,
+        "endChar": 57
+      },
+      "revId": "a9372aeb0f023d41be5cbecda787287aa0050d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae8f277b_a9e3d19b",
+        "filename": "resources/mobile.messageBox/MessageBox.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-22T19:15:44Z",
+      "side": 1,
+      "message": "Sure, but do we need this code here since we can pass a `hasHeading` option like we do in https://gerrit.wikimedia.org/r/#/c/356878/6/resources/mobile.nearby/Nearby.js ?",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 57
+      },
+      "revId": "a9372aeb0f023d41be5cbecda787287aa0050d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
