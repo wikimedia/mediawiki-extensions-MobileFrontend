@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ae8f277b_f8276060",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-22T21:48:39Z",
+      "side": 1,
+      "message": "Yes, exactly. An empty string would be nice. Or at least, some way of telling what the $heading the function is expecting is not actually a $boolean, but rather that\u0027s the default value. Right now, I think it\u0027s a little confusion.",
+      "parentUuid": "ae8f277b_a947517b",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 55
+      },
+      "revId": "a9372aeb0f023d41be5cbecda787287aa0050d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae8f277b_6985e9b0",
         "filename": "includes/MobileUI.php",
         "patchSetId": 6
@@ -107,6 +131,30 @@
       "side": 1,
       "message": "We don\u0027t, but it might be confusing for a dev to pass heading and not see it. We should either keep it or update the documentation to say heading must be passed with hasHeading\n\nShould probably also be in preRender not the init step.",
       "parentUuid": "ae8f277b_a9e3d19b",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 57
+      },
+      "revId": "a9372aeb0f023d41be5cbecda787287aa0050d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_0e19cb7e",
+        "filename": "resources/mobile.messageBox/MessageBox.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-22T21:48:39Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "ae8f277b_e94d599f",
       "range": {
         "startLine": 10,
         "startChar": 2,
