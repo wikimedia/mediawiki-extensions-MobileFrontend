@@ -22,6 +22,30 @@
       "revId": "f1855ad69c8c7503939e8121d107c1db31a946ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae8f277b_5eb3f94c",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-22T15:41:06Z",
+      "side": 1,
+      "message": "done!",
+      "parentUuid": "ae8f277b_18e10998",
+      "range": {
+        "startLine": 51,
+        "startChar": 61,
+        "endLine": 51,
+        "endChar": 74
+      },
+      "revId": "f1855ad69c8c7503939e8121d107c1db31a946ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
