@@ -17,6 +17,10 @@ class MobileSpecialPage extends SpecialPage {
 	protected $unstyledContent = true;
 	/** @var Config MobileFrontend's config object */
 	protected $config = null;
+	/** @var string a message key for the error message heading that should be shown on a 404 */
+	protected $errorNotFoundTitleMsg = 'mobile-frontend-generic-404-title';
+	/** @var string a message key for the error message description that should be shown on a 404 */
+	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-generic-404-desc';
 
 	/**
 	 * Wrapper for MobileContext::getMFConfig
@@ -116,8 +120,15 @@ class MobileSpecialPage extends SpecialPage {
 	 * Render mobile specific error page, when special page can not be found
 	 */
 	protected function showPageNotFound() {
-		wfHttpError( 404, $this->msg( 'mobile-frontend-generic-404-title' )->text(),
-			$this->msg( 'mobile-frontend-generic-404-desc' )->text() );
+		$this->getOutput()->setStatusCode( 404 );
+		$this->getOutput()->addHTML(
+			MobileUI::contentElement(
+				MobileUI::errorBox(
+					$this->msg( $this->errorNotFoundDescriptionMsg )->text(),
+					$this->msg( $this->errorNotFoundTitleMsg )->text()
+				)
+			)
+		);
 	}
 
 	/**

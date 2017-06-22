@@ -66,15 +66,23 @@ class MobileUI {
 	 * Return a message box.
 	 * @param string $html of contents of box
 	 * @param string $className corresponding to box
+	 * @param string $heading (optional)
 	 * @return string of html representing a box.
 	 */
-	public static function messageBox( $html, $className ) {
+	public static function messageBox( $html, $className, $heading = '' ) {
 		$templateParser = new TemplateParser( __DIR__ . '/../resources/mobile.messageBox/' );
 
-		return $templateParser->processTemplate( 'MessageBox', [
+		$templateOptions = [
 			'className' => $className,
 			'msg' => $html
-		] );
+		];
+		if ( $heading ) {
+			$templateOptions += [
+				'heading' => $heading,
+				'hasHeading' => true,
+			];
+		}
+		return $templateParser->processTemplate( 'MessageBox', $templateOptions );
 	}
 
 	/**
@@ -89,10 +97,11 @@ class MobileUI {
 	/**
 	 * Return an error box.
 	 * @param string $html of contents of error box
+	 * @param string $heading (optional)
 	 * @return string of html representing an error box.
 	 */
-	public static function errorBox( $html ) {
-		return self::messageBox( $html, 'errorbox' );
+	public static function errorBox( $html, $heading = '' ) {
+		return self::messageBox( $html, 'errorbox', $heading );
 	}
 
 	/**
@@ -111,8 +120,10 @@ class MobileUI {
 	 * @return string of html
 	 */
 	public static function contentElement( $html, $className = '' ) {
-		$className .= ' content ';
-		return Html::openElement( 'div', [ 'class' => $className ] ) . $html .
-			Html::closeElement( 'div' );
+		$templateParser = new TemplateParser( __DIR__ );
+		return $templateParser->processTemplate( 'ContentBox', [
+			'className' => $className,
+			'html' => $html,
+		] );
 	}
 }
