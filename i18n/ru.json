@@ -40,7 +40,8 @@
 			"Kareyac",
 			"Redredsonia",
 			"Av6",
-			"Facenapalm"
+			"Facenapalm",
+			"Alexey zakharenkov"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -58,6 +59,7 @@
 	"mobile-frontend-changeslist-nocomment": "Нет описания правки",
 	"mobile-frontend-cite-error": "Возникла проблема при попытке загрузки цитирования из-за некорректного идентификатора версии.",
 	"mobile-frontend-clear-search": "Очистить",
+	"mobile-frontend-contributions-404-title": "Пользователь не найден",
 	"mobile-frontend-cookies-required": "Для переключения режимов просмотра требуются файлы cookie. Пожалуйста, включите их и повторите попытку.",
 	"mobile-frontend-copyright": "Содержание доступно по лицензии $1 (если не указано иное).",
 	"mobile-frontend-desc": "Мобильный интерфейс",
@@ -142,7 +144,6 @@
 	"mobile-frontend-history-404-title": "Нет такой страницы",
 	"mobile-frontend-history-no-results": "По заданному фильтру в истории ничего не найдено.",
 	"mobile-frontend-home-button": "Домой",
-	"mobile-frontend-images-status": "Изображения",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Присоединился|Присоединилась}} только что",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Присоединился|Присоединилась}} {{PLURAL:$2|$2 секунду|$2 секунды|$2 секунд}} назад",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Присоединился|Присоединилась}} {{PLURAL:$2|$2 минуту|$2 минуты}} назад",
@@ -224,7 +225,6 @@
 	"mobile-frontend-search-content": "Искать на страницах",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
 	"mobile-frontend-search-no-results": "Нет страниц с таким названием.",
-	"mobile-frontend-settings-images-explain": "Загрузить все изображения, которые присутствуют на странице.",
 	"mobile-frontend-settings-beta": "Бета-версия",
 	"mobile-frontend-settings-site-description": "Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках}}. Ниже перечислены все доступные версии",
 	"mobile-frontend-settings-site-header": "Языки проекта «{{SITENAME}}»",

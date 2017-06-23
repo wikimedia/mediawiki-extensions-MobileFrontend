@@ -3,15 +3,16 @@
 		"authors": [
 			"Amara-Amaziɣ",
 			"Aslmad mohamed belarhzali",
-			"ⵕⴰⵊⵉ"
+			"ⵕⴰⵊⵉ",
+			"YesIn"
 		]
 	},
 	"mobile-frontend-editor-edit": "ⵙⵏⴼⵍ",
 	"mobile-frontend-home-button": "ⴰⵙⵏⵓⴱⴳ",
 	"mobile-frontend-language-article-heading": "ⵖⵔ ⵙ ⴽⵔⴰ ⵏ ⵜⵓⵜⵍⴰⵢⵜ ⵢⴰⴹⵏ",
-	"mobile-frontend-last-modified-date": "ⴰⵙⵏⴼⵍ ⴰⵎⴳⴳⴰⵔⵓ ⴳ $1, ⵖⵔ $2",
+	"mobile-frontend-last-modified-date": "ⴰⵙⵏⴼⵍ ⴰⵎⴳⴳⴰⵔⵓ ⴳ $1, ⴳ $2",
 	"mobile-frontend-main-menu-button-tooltip": "ⵔⵥⵎ ⵜⴰⵍⴳⴰⵎⵜ ⵜⴰⴷⵙⵍⴰⵏⵜ",
-	"mobile-frontend-main-menu-login": "ⴰⴷⴼ",
+	"mobile-frontend-main-menu-login": "ⴽⵛⵎ",
 	"mobile-frontend-main-menu-settings": "ⵜⵉⵙⵖⴰⵍ",
 	"mobile-frontend-main-menu-watchlist": "ⵜⴰⵍⴳⴰⵎⵜ ⵏ ⵓⴹⴼⴼⵓⵔ",
 	"mobile-frontend-news-items": "ⴷⴳ ⵉⵏⵖⵎⵉⵙⵏ",
