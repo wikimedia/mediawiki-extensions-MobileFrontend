@@ -35,44 +35,6 @@
 		},
 
 		/**
-		 * Advertise a new feature in the main menu.
-		 * @param {string} selector to an element inside the main menu
-		 * @param {string} msg a message to show in the pointer
-		 * @return {jQuery.Deferred} with the PointerOverlay as the only argument.
-		 * @throws exception when you try to advertise more than one feature.
-		 */
-		advertiseNewFeature: function ( selector, msg ) {
-			var d = $.Deferred(),
-				self = this;
-			if ( this._hasNewFeature ) {
-				throw new Error( 'A new feature is already being advertised.' );
-			} else {
-				this._hasNewFeature = true;
-			}
-			$( function () {
-				var $activator = $( self.activator ).eq( 0 );
-				$activator.addClass( 'indicator-circle' );
-				mw.loader.using( 'mobile.pointerOverlay' ).done( function () {
-					$activator.one( 'click', function () {
-						var po,
-							PointerOverlay = require( 'mobile.pointerOverlay' );
-
-						po = new PointerOverlay( {
-							appendToElement: self.$el.parent(),
-							alignment: 'left',
-							summary: msg,
-							target: self.$( selector )
-						} );
-						po.show();
-						d.resolve( po );
-						$activator.removeClass( 'indicator-circle' );
-					} );
-				} );
-			} );
-			return d;
-		},
-
-		/**
 		 * Turn on event logging on the existing main menu by reading `event-name` data
 		 * attributes on elements.
 		 */
