@@ -275,6 +275,7 @@
 						}
 					} );
 
+				arrowOptions.rotation = expandSections ? 180 : 0;
 				indicator = new Icon( arrowOptions );
 				if ( $indicator.length ) {
 					// replace the existing indicator
