@@ -23,6 +23,8 @@
 	"mobile-frontend-cite-error": "Се јави проблем при обидот да вчитам наводи поради неисправна назнака на преработката.",
 	"mobile-frontend-cite-none-available": "На страницава нема наводи.",
 	"mobile-frontend-clear-search": "Исчисти",
+	"mobile-frontend-contributions-404-desc": "Не можам да барам придонеси без корисник или со непостоечки корисник.",
+	"mobile-frontend-contributions-404-title": "Укажано е неважечко корисничко име",
 	"mobile-frontend-cookies-required": "За да ги префрлате режимите на преглед, ќе ви требаат колачиња. Овозможете ги, па обидете се повторно.",
 	"mobile-frontend-copyright": "Содржината е достапна под $1 освен ако не е поинаку наведено.",
 	"mobile-frontend-desc": "Мобилен посредник",

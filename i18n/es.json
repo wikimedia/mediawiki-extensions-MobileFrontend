@@ -35,7 +35,8 @@
 			"Syum90",
 			"Lemondoge",
 			"Rubentl134",
-			"Dgstranz"
+			"Dgstranz",
+			"Josecurioso"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -57,6 +58,8 @@
 	"mobile-frontend-cite-error": "Ocurrió un error al intentar cargar las citas debido a un identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "No hay citas disponibles para esta página.",
 	"mobile-frontend-clear-search": "Limpiar",
+	"mobile-frontend-contributions-404-desc": "No se pueden buscar contribuciones sin usuario o con un usuario que no existe",
+	"mobile-frontend-contributions-404-title": "Usuario incorrecto",
 	"mobile-frontend-cookies-required": "Se requieren \"cookies\" para cambiar los modos de visualización. Habilítalas y vuelve a intentarlo.",
 	"mobile-frontend-copyright": "El contenido está disponible bajo la licencia $1, salvo que se indique lo contrario.",
 	"mobile-frontend-desc": "Interfaz móvil",
@@ -141,7 +144,6 @@
 	"mobile-frontend-history-404-title": "La página no existe",
 	"mobile-frontend-history-no-results": "El filtro siempre no encontró coincidencias en los historiales.",
 	"mobile-frontend-home-button": "Inicio",
-	"mobile-frontend-images-status": "Imágenes",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Se unió}} recientemente",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Se unió}} hace {{PLURAL:$2|$2 segundo|$2 segundos}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Se unió}} hace {{PLURAL:$2|$2 minuto|$2 minutos}}",
@@ -228,7 +230,6 @@
 	"mobile-frontend-search-content": "Buscar en las páginas",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' para comprobar si esta frase aparece en algún lugar.",
 	"mobile-frontend-search-no-results": "No hay ninguna página con este título.",
-	"mobile-frontend-settings-images-explain": "Cargar todas las imágenes que aparezcan en una página.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} está disponible en  $1 {{PLURAL:$1|idioma|idiomas}}. Todas las versiones disponibles se enumeran a continuación",
 	"mobile-frontend-settings-site-header": "Idiomas de {{SITENAME}}",
