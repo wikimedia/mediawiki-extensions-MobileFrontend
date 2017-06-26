@@ -1588,12 +1588,12 @@
 	"@note3": "Otherwise their own customizations are overridden. (T167216)",
 	"ResourceModuleSkinStyles": {
 		"minerva": {
-			"mobile.search": {
-				"minerva": "skinStyles/mobile.search/SearchOverlay.less"
-			},
-			"mobile.languages.structured": {
-				"minerva": "skinStyles/mobile.languages.structured/LanguageOverlay.less"
-			},
+			"mobile.search": [
+				"skinStyles/mobile.search/SearchOverlay.less"
+			],
+			"mobile.languages.structured": [
+				"skinStyles/mobile.languages.structured/LanguageOverlay.less"
+			],
 			"mobile.toggle": [
 				"skinStyles/mobile.toggle/minerva.less"
 			],
