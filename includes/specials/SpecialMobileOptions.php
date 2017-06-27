@@ -219,10 +219,9 @@ HTML;
 	 */
 	private function submitSettingsForm() {
 		$schema = 'MobileOptionsTracking';
-		$schemaRevision = 14003392;
+		$schemaRevision = 16934032;
 		$schemaData = [
 			'action' => 'success',
-			'images' => "nochange",
 			'beta' => "nochange",
 		];
 		$context = MobileContext::singleton();
