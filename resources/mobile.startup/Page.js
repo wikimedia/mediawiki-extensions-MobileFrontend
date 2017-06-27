@@ -245,7 +245,7 @@
 		 * Return all the thumbnails in the article. Images which have a class or link container (.image|.thumbimage)
 		 * that matches one of the items of the constant BLACKLISTED_THUMBNAIL_CLASS_SELECTORS will be excluded.
 		 * A thumbnail nested inside one of these classes will still be returned.
-		 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is a valid thumbnail
+		 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
 		 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
 		 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
 		 * @method
@@ -263,7 +263,8 @@
 				$thumbs.each( function () {
 					var $a = $( this ),
 						$lazyImage = $a.find( '.lazy-image-placeholder' ),
-						valid = $a.find( blacklistSelector ).length === 0,
+						// Parents need to be checked as well.
+						valid = $a.parents( blacklistSelector ).length === 0 && $a.find( blacklistSelector ).length === 0,
 						legacyMatch = $a.attr( 'href' ).match( /title=([^\/&]+)/ ),
 						match = $a.attr( 'href' ).match( /[^\/]+$/ );
 

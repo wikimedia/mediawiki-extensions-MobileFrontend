@@ -15,8 +15,8 @@
 		assert.strictEqual( p2.isMainPage(), false, 'check not marked as main page' );
 	} );
 
-	QUnit.test( '#getThumbnails', 10, function ( assert ) {
-		var p, textPage, pLegacyUrls, thumbs, pNoViewer, pMetadata, pLazyImages,
+	QUnit.test( '#getThumbnails', 11, function ( assert ) {
+		var p, textPage, pLegacyUrls, thumbs, pNoViewer, pMetadata, pLazyImages, metadataTable,
 			pLazyImagesTypo, pMetadataNested;
 
 		p = new Page( {
@@ -44,6 +44,9 @@
 		pLazyImagesTypo = new Page( {
 			el: $( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><noscript><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" width="28" height="28" class="noviewer" data-file-width="151" data-file-height="151"></noscript><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
 		} );
+		metadataTable = new Page( {
+			el: $( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><noscript><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" data-file-width="262" data-file-height="204"></noscript><span class="lazy-image-placeholder" style="width: 50px;height: 39px;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"> </span></a></div></td></tr></table>' )
+		} );
 
 		assert.strictEqual( thumbs.length, 1, 'Found expected number of thumbnails.' );
 		assert.strictEqual( thumbs[0].getFileName(), 'File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg',
@@ -64,12 +67,16 @@
 		assert.strictEqual( thumbs.length, 0, 'This page has no thumbnails.' );
 
 		thumbs = pMetadataNested.getThumbnails();
-		assert.strictEqual( thumbs.length, 1,
-			'Images inside a container with the class are included. To be revisited later if needed by community.' );
+		assert.strictEqual( thumbs.length, 0,
+			'Images inside a container with the class are not included. Images inside tables for example.' );
 
 		thumbs = pLazyImages.getThumbnails();
 		assert.strictEqual( thumbs.length, 0,
 			'Consider whether the class is on an image which has not been lazy loaded.' );
+
+		thumbs = metadataTable.getThumbnails();
+		assert.strictEqual( thumbs.length, 0,
+			'Consider whether the lazy loaded image is inside a .metadata container.' );
 
 		thumbs = pLazyImagesTypo.getThumbnails();
 		assert.strictEqual( thumbs.length, 1,
