@@ -32,7 +32,8 @@
 			"PiotrAntosz",
 			"The Polish",
 			"Mateuszek045",
-			"Tsca"
+			"Tsca",
+			"InternerowyGołąb"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego",
@@ -52,6 +53,7 @@
 	"mobile-frontend-changeslist-nocomment": "brak opisu edycji",
 	"mobile-frontend-cite-error-title": "Błąd ładowania cytowań",
 	"mobile-frontend-clear-search": "Wyczyść",
+	"mobile-frontend-contributions-404-title": "Wybrano złą nazwę użytkownika",
 	"mobile-frontend-copyright": "Treść udostępniana na licencji $1, jeśli nie podano inaczej.",
 	"mobile-frontend-desc": "Mobilny interfejs użytkownika",
 	"mobile-frontend-diffview-404-title": "Zła wersja",
