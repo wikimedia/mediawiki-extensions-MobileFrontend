@@ -19,8 +19,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Zda uživatel edituje prostřednictvím mobilního rozhraní",
-	"beta-feature-minerva": "Zapnutí mobilního vzhledu ({{int:skinname-minerva}}) na desktopu",
-	"beta-feature-minerva-description": "Přidá do nabídky vzhledů v uživatelském nastavení na desktopu i vzhled používaný na mobilních zařízeních.",
 	"mobile-frontend-account-create-captcha-placeholder": "Zadejte potvrzovací kód",
 	"mobile-frontend-categories-heading": "<strong>Kategorie</strong>",
 	"mobile-frontend-categories-subheading": "Tato stránka patří do následujících kategorií:",
@@ -123,7 +121,6 @@
 	"mobile-frontend-history-404-title": "Taková stránka neexistuje",
 	"mobile-frontend-history-no-results": "Zadanému filtru neodpovídá žádná historie.",
 	"mobile-frontend-home-button": "Domů",
-	"mobile-frontend-images-status": "Obrázky",
 	"mobile-frontend-language-change": "Změnit jazyk",
 	"mobile-frontend-language-article-heading": "Přečíst v jiném jazyce",
 	"mobile-frontend-language-heading": "<strong>Jazyky</strong>",
@@ -190,6 +187,7 @@
 	"mobile-frontend-placeholder": "Hledání na {{grammar:6sg|{{SITENAME}}}}",
 	"mobile-frontend-privacy-link-text": "Ochrana soukromí",
 	"mobile-frontend-random-button": "Náhodně",
+	"mobile-frontend-redirected-from": "Přesměrováno z „$1“",
 	"mobile-frontend-references-citation": "Citace",
 	"mobile-frontend-references-citation-error": "Došlo k chybě a tuto citaci se nepodařilo načíst.",
 	"mobile-frontend-references-list": "Zobrazit úplný seznam citací",
@@ -202,7 +200,6 @@
 	"mobile-frontend-search-content": "Hledat v obsahu stránek",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', zda se tento text někde neobjevuje.",
 	"mobile-frontend-search-no-results": "Neexistuje žádná stránka s tímto názvem.",
-	"mobile-frontend-settings-images-explain": "Načítat všechny obrázky, které se na stránce objevují.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} existuje v $1 {{PLURAL:$1|jazyce|jazycích}}. Níže jsou uvedeny všechny dostupné verze",
 	"mobile-frontend-settings-site-header": "Jazyky {{grammar:2sg|{{SITENAME}}}}",
@@ -277,5 +274,7 @@
 	"mobile-frontend-panel-cancel": "Ne, děkuji",
 	"mobile-frontend-panel-betaoptin-msg": "Chcete vyzkoušet některé nové funkce? Připojením k betaverzi získáte přístup k experimentálním funkcím, ale s rizikem, že narazíte na chyby či problémy.",
 	"mobile-frontend-search-feedback-link-text": "Sdělte nám svůj názor.",
-	"mobile-frontend-search-feedback-prompt": "Nenašli jste to, co jste hledali?"
+	"mobile-frontend-search-feedback-prompt": "Nenašli jste to, co jste hledali?",
+	"mobile-frontend-notifications-filter": "Filtr",
+	"mobile-frontend-notifications-filter-title": "Filtrovat notifikace"
 }
