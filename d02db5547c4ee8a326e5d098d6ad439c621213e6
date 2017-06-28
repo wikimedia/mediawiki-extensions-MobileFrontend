@@ -16,6 +16,24 @@
       "revId": "d02db5547c4ee8a326e5d098d6ad439c621213e6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_a8d72ec3",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-06-28T17:07:41Z",
+      "side": 1,
+      "message": "Wait… why was this here in the first place?",
+      "parentUuid": "8e742343_e88696df",
+      "revId": "d02db5547c4ee8a326e5d098d6ad439c621213e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
