@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Akamycoco",
-			"Corainn"
+			"Corainn",
+			"Hitaypayan"
 		]
 	},
 	"mobile-frontend-editor-edit": "Smr’zyut miru’",
@@ -13,5 +14,6 @@
 	"mobile-frontend-placeholder": "hhkangi’",
 	"mobile-frontend-random-button": "Gmluw sa gn-nyahan pkita’",
 	"mobile-frontend-terms-text": "gaga’ na awsa’ mbing",
-	"mobile-frontend-view": "Ringwa’ rsrasun"
+	"mobile-frontend-view": "Ringwa’ rsrasun",
+	"mobile-frontend-view-desktop": "tyennawpan"
 }

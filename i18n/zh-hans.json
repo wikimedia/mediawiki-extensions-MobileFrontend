@@ -196,7 +196,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1米}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}}附近遇到一些问题。",
 	"mobile-frontend-nearby-error-guidance": "请尝试刷新您的位置。",
-	"mobile-frontend-nearby-loading": "正在载入你当前位置附近的主题",
+	"mobile-frontend-nearby-loading": "正在载入您当前位置附近的主题",
 	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}}附近无法获取您的位置，要重试吗？",
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "请尝试去有更佳信号的开放地区。",
 	"mobile-frontend-nearby-noresults": "这里真安静啊...找不到任何与附近话题相关的页面。",

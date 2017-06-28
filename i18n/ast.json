@@ -24,6 +24,8 @@
 	"mobile-frontend-cite-error": "Asocedió un error al intentar cargar les cites por cuenta d'un identificador de revisión incorreutu.",
 	"mobile-frontend-cite-none-available": "Nun hai cites disponibles pa esta páxina.",
 	"mobile-frontend-clear-search": "Llimpiar",
+	"mobile-frontend-contributions-404-desc": "Nun pueden buscase contribuciones ensin usuariu o d'un usuariu que nun esiste.",
+	"mobile-frontend-contributions-404-title": "Dióse un usuariu incorreutu",
 	"mobile-frontend-cookies-required": "Les cookies son necesaries pa cambiar los modos de vista. Por favor, actíveles y vuelva a intentalo.",
 	"mobile-frontend-copyright": "El conteníu ta disponible baxo los términos de la $1 si nun s'indica otra cosa.",
 	"mobile-frontend-desc": "Interfaz pa móviles",
