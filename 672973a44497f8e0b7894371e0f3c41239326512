@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e742343_5cd9a62b",
+        "filename": "resources/mobile.gallery/gallery.less",
+        "patchSetId": 28
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-29T18:23:37Z",
+      "side": 1,
+      "message": "WOOT!",
+      "parentUuid": "8e742343_ac82dbcb",
+      "revId": "672973a44497f8e0b7894371e0f3c41239326512",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e742343_2c27cbc6",
         "filename": "resources/mobile.talk.overlays/TalkOverlay.less",
         "patchSetId": 28
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e742343_3ce85aaf",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.less",
+        "patchSetId": 28
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-29T18:23:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e742343_2c27cbc6",
+      "revId": "672973a44497f8e0b7894371e0f3c41239326512",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e742343_cc33a709",
         "filename": "resources/skins.minerva.base.styles/footer.less",
         "patchSetId": 28
@@ -47,6 +83,24 @@
       "writtenOn": "2017-06-29T13:03:16Z",
       "side": 1,
       "message": "Still here.",
+      "revId": "672973a44497f8e0b7894371e0f3c41239326512",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_fccad249",
+        "filename": "resources/skins.minerva.base.styles/footer.less",
+        "patchSetId": 28
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-06-29T18:23:37Z",
+      "side": 1,
+      "message": "Done for reals this time :) lolz",
+      "parentUuid": "8e742343_cc33a709",
       "revId": "672973a44497f8e0b7894371e0f3c41239326512",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
