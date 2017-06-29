@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e742343_5c2f66f3",
+        "filename": "resources/mobile.gallery/gallery.less",
+        "patchSetId": 29
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-06-29T18:28:43Z",
+      "side": 1,
+      "message": "You\u0027ve removed `margin-top: 20px` as well in PS 29 now, that should be left in, but only if it\u0027s not overwritten by concatenated rule.",
+      "revId": "cdf8ee383f74ce90479f4946e2ebf43bccf90ed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
