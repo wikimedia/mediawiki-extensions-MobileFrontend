@@ -31,6 +31,8 @@
 	"mobile-frontend-cite-error": "Houbo un problema ó intentar cargar as citas a causa dun identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "Non hai citas dispoñibles para esta páxina.",
 	"mobile-frontend-clear-search": "Limpar",
+	"mobile-frontend-contributions-404-desc": "Non se poden buscar contribucións sen usuario ou cun usuario que non existe",
+	"mobile-frontend-contributions-404-title": "Nome de usuario incorrecto",
 	"mobile-frontend-cookies-required": "As cookies son necesarias para cambiar o modo de visualización. Permita o uso de cookies e inténteo de novo.",
 	"mobile-frontend-copyright": "Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.",
 	"mobile-frontend-desc": "Interface para dispositivos móbiles",
