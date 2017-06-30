@@ -1308,6 +1308,8 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		$modules['content'] = [];
 		// dequeue default watch module (not needed, no watchstar in this skin)
 		$modules['watch'] = [];
+		// disable default skin search modules
+		$modules['search'] = [];
 
 		$modules['minerva'] = array_merge(
 			$this->getContextSpecificModules(),
