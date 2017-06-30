@@ -1304,26 +1304,27 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		// flush unnecessary modules
+		// dequeue default content modules (toc, sortable, collapsible, etc.)
 		$modules['content'] = [];
-
-		$modules['top'] = 'skins.minerva.scripts.top';
-		// Define all the modules that should load on the mobile site and their dependencies.
-		// Do not add mobules here.
-		$modules['stable'] = 'skins.minerva.scripts';
-
-		// Doing this unconditionally, prevents the desktop watchstar from ever leaking into mobile view.
+		// dequeue default watch module (not needed, no watchstar in this skin)
 		$modules['watch'] = [];
 
-		$modules['context'] = $this->getContextSpecificModules();
+		$modules['minerva'] = array_merge(
+			$this->getContextSpecificModules(),
+			[
+				'skins.minerva.scripts.top',
+				'skins.minerva.scripts',
+				'mobile.site',
+			]
+		);
 
 		if ( $this->getSkinOption( self::OPTION_TOGGLING ) ) {
+			// Extension can unload "toggling" modules via the hook
 			$modules['toggling'] = [ 'skins.minerva.toggling' ];
 		}
-		$modules['site'] = 'mobile.site';
 
-		// FIXME: Upstream?
 		Hooks::run( 'SkinMinervaDefaultModules', [ $this, &$modules ] );
+
 		return $modules;
 	}
 
