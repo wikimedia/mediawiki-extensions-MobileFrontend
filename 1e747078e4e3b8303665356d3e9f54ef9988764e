@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e742343_0c4af35f",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-03T17:45:26Z",
+      "side": 1,
+      "message": "Should return this value as before. Hide needs to report whether it was successful or not.\n\n(Not sure how to  deal with the hasChanged block but it looks like this is not a problem)",
+      "revId": "1e747078e4e3b8303665356d3e9f54ef9988764e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
