@@ -8,9 +8,7 @@
 
 	/**
 	 * Mobile toggling
-	 *
-	 *
-	 **/
+	 */
 	QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 		setup: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
@@ -93,9 +91,7 @@
 
 	/**
 	 * Tablet toggling
-	 *
-	 *
-	 **/
+	 */
 	QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 		setup: function () {
 			this.$container = $( '<div>' ).html( sectionHtml );
@@ -117,10 +113,7 @@
 
 	/**
 	 * Expand sections user setting
-	 *
-	 *
-	 **/
-
+	 */
 	QUnit.module( 'MobileFrontend toggle.js: user setting', {
 		setup: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
@@ -141,10 +134,7 @@
 
 	/**
 	 * Accessibility
-	 *
-	 *
-	 **/
-
+	 */
 	QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 		setup: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );

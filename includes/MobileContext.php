@@ -73,7 +73,7 @@ class MobileContext extends ContextSource {
 	 * @see MobileContext#isMobileDevice
 	 *
 	 * @var {bool|null} $isMobileDevice
-	 **/
+	 */
 	private $isMobileDevice = null;
 
 	/**
