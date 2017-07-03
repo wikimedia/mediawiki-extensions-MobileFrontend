@@ -1782,17 +1782,17 @@
 			"base": [ ".toc", ".mw-editsection", ".navbox", ".nomobile" ]
 		},
 		"MFShowFirstParagraphBeforeInfobox": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFLazyLoadImages": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFLazyLoadSkipSmallImages": false,
 		"MFLazyLoadReferences": {
 			"base": false,
-			"beta": false
+			"beta": true
 		},
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
