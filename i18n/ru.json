@@ -312,5 +312,6 @@
 	"mobile-frontend-panel-ok": "Ок",
 	"mobile-frontend-panel-cancel": "Нет, спасибо",
 	"mobile-frontend-search-feedback-link-text": "Напишите отзыв.",
-	"mobile-frontend-search-feedback-prompt": "Не удалось найти то, что вы искали?"
+	"mobile-frontend-search-feedback-prompt": "Не удалось найти то, что вы искали?",
+	"mobile-frontend-notifications-filter": "Фильтр"
 }
