@@ -10,6 +10,9 @@
 	"mobile-frontend-home-button": "ⴰⵙⵏⵓⴱⴳ",
 	"mobile-frontend-language-article-heading": "ⵖⵔ ⵙ ⵜⵓⵜⵍⴰⵢⵜ ⵢⴰⴹⵏ",
 	"mobile-frontend-main-menu-login": "ⴽⵛⵎ",
+	"mobile-frontend-main-menu-settings": "ⵜⵉⵙⵖⴰⵍ",
+	"mobile-frontend-main-menu-watchlist": "ⵜⴰⵍⴳⴰⵎⵜ ⵏ ⵓⴹⴼⴼⵓⵔ",
 	"mobile-frontend-news-items": "ⴳ ⵉⵏⵖⵎⵉⵙⵏ",
-	"mobile-frontend-placeholder": "ⵙⵉⴳⴳⵍ ⴳ {{SITENAME}}"
+	"mobile-frontend-placeholder": "ⵙⵉⴳⴳⵍ ⴳ {{SITENAME}}",
+	"mobile-frontend-random-button": "ⵙ ⵓⴷⵀⵎⴰⵙ"
 }
