@@ -138,7 +138,6 @@
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay',
 		events: $.extend( {}, Overlay.prototype.events, {
-			// FIXME: This should be .close (see bug 71203)
 			'click .back': 'onClickBack',
 			'click .continue': 'onClickContinue',
 			'click .submit': 'onClickSubmit'
