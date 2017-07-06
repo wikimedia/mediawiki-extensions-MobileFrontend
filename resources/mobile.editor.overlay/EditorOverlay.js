@@ -270,8 +270,6 @@
 					el: self.$preview,
 					text: parsedText
 				} ).$( 'a' ).on( 'click', false );
-				// Emit event so we can perform enhancements to page
-				M.emit( 'edit-preview', self );
 			} ).fail( function () {
 				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 			} ).always( function () {

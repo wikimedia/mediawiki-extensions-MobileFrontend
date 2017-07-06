@@ -106,7 +106,6 @@
 			return this.api.postWithToken( 'watch', data ).done( function () {
 				var newStatus = !self.isWatchedPage( page );
 				self.setWatchedPage( page, newStatus );
-				M.emit( 'watched', page, newStatus );
 			} );
 		}
 	};
