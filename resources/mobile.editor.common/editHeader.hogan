@@ -1,6 +1,6 @@
 <div class="overlay-header header initial-header hideable hidden">
 	<ul>
-		<li>{{{backButton}}}</li>
+		<li>{{{cancelButton}}}</li>
 	</ul>
 	{{^hasToolbar}}
 	<div class="overlay-title">

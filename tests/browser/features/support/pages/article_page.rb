@@ -37,7 +37,7 @@ class ArticlePage
   div(:anon_editor_warning, css: '.anon-msg')
   div(:editor_overlay, class: 'editor-overlay')
   button(:editor_overlay_close_button) do |page|
-    page.editor_overlay_element.button_element(css: '.back')
+    page.editor_overlay_element.button_element(css: '.cancel')
   end
 
   ## upload
