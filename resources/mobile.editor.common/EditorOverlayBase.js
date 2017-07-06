@@ -182,6 +182,9 @@
 
 			// FIXME: use generic method for following 3 lines
 			this.pageGateway.invalidatePage( title );
+			// Close the overlay to cancel the hash fragment
+			// otherwise clicking back will take you back to the editor.
+			self.hide();
 
 			if ( this.isNewPage ) {
 				msg = mw.msg( 'mobile-frontend-editor-success-new-page' );
@@ -320,7 +323,7 @@
 				} );
 			} else {
 				this.allowCloseWindow.release();
-				Overlay.prototype.hide.call( this );
+				return Overlay.prototype.hide.call( self );
 			}
 		},
 		/**
