@@ -38,6 +38,8 @@ textarea.mw-ui-input {
 	}
 
 	// Parsing information doesn't need to be so big
+	.mw-editnotice,
+	.mw-editTools,
 	.preview-limit-report-wrapper,
 	// neither to headers for diffs
 	.diff-otitle,
@@ -48,6 +50,15 @@ textarea.mw-ui-input {
 	#editpage-copywarn,
 	#mw-anon-edit-warning {
 		.secondary-text();
+	}
+
+	// add separation btween
+	.mw-editnotice {
+		margin-bottom: 8px;
+
+		li {
+			margin-bottom: 0;
+		}
 	}
 
 	// Preview header is hidden given the warning box already
