@@ -645,8 +645,9 @@ class ApiMobileView extends ApiBase {
 				'refsections' => [],
 			];
 		} else {
-			$data = $this->parseSectionsData( $html, $title, $parserOutput,
-				$mfConfig->get( 'MFTidyMobileViewSections' ) && $this->getConfig()->get( 'UseTidy' ), $latest );
+			$useTidy = $this->getConfig()->get( 'TidyConfig' ) !== null
+				&& $mfConfig->get( 'MFTidyMobileViewSections' );
+			$data = $this->parseSectionsData( $html, $title, $parserOutput, $useTidy, $latest );
 			if ( $this->usePageImages ) {
 				$image = $this->getPageImage( $title );
 				if ( $image ) {

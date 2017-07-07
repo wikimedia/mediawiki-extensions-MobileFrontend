@@ -14,18 +14,19 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 	 * @covers ApiParseExtender::onAPIAfterExecute
 	 */
 	public function testApi( array $params, $expected ) {
-		global $wgUseTidy;
+		global $wgTidyConfig;
 
 		$this->setMwGlobals( 'wgMFRemovableClasses',
 			[
 				'base' => [ '.nomobile' ]
 			]
 		);
-		if ( $wgUseTidy ) {
+		if ( $wgTidyConfig !== null ) {
+			$oldTidyConfig = $wgTidyConfig;
 			// Should work both with Tidy and without it
-			$this->setMwGlobals( 'wgUseTidy', false );
+			$this->setMwGlobals( 'wgTidyConfig', null );
 			$this->doTest( $params, $expected );
-			$wgUseTidy = true;
+			$wgTidyConfig = $oldTidyConfig;
 		}
 		$this->doTest( $params, $expected );
 	}
