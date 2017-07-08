@@ -168,7 +168,8 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	 * @param bool $expected Whether the module is expected to be returned by the function being tested
 	 */
 	public function testGetContextSpecificModules( $fontchangerValue, $backToTopValue,
-												   $moduleName, $expected ) {
+		$moduleName, $expected
+	) {
 		$skin = TestingAccessWrapper::newFromObject(
 			$this->getMockBuilder( SkinMinerva::class )
 				->disableOriginalConstructor()
@@ -313,12 +314,12 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	private function providePrepareUserButtonEcho( Title $title ) {
 		return [
 			[ '', 'Echo, not logged in, no talk page alerts',
-			  $title, true, false, '' ],
+				$title, true, false, '' ],
 			[ '', 'Echo, logged in, no talk page alerts',
-			  Title::newFromText( 'Special:Notifications' ), true, true, '' ],
+				Title::newFromText( 'Special:Notifications' ), true, true, '' ],
 			[ '', 'Echo, logged in, talk page alert',
-			  Title::newFromText( 'Special:Notifications' ), true, true,
-			  'newtalks alert' ],
+				Title::newFromText( 'Special:Notifications' ), true, true,
+				'newtalks alert' ],
 			[ $this->getSecondaryButtonExpectedResult(
 				$title,
 				'Show my notifications',
@@ -326,11 +327,11 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				'99+',
 				false,
 				true
-			  ), 'Echo, logged in, no talk page alerts, 110 notifications, ' +
-			  'last un-read nofication time after last echo seen time',
-			  $title, true, true, '',
-			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
-			  110, '2017-05-11T20:23:20Z', '99+' ],
+			), 'Echo, logged in, no talk page alerts, 110 notifications, ' +
+				'last un-read nofication time after last echo seen time',
+			$title, true, true, '',
+			MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			110, '2017-05-11T20:23:20Z', '99+' ],
 			[ $this->getSecondaryButtonExpectedResult(
 				$title,
 				'Show my notifications',
@@ -338,11 +339,11 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				'3',
 				false,
 				false
-			  ), 'Echo, logged in, no talk page alerts, 3 notifications, ' +
-			  'last un-read nofication time before last echo seen time',
-			  $title, true, true, '',
-			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
-			  3, '2017-05-11T22:23:20Z', '3' ],
+			), 'Echo, logged in, no talk page alerts, 3 notifications, ' +
+			'last un-read nofication time before last echo seen time',
+			$title, true, true, '',
+			MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			3, '2017-05-11T22:23:20Z', '3' ],
 			[ $this->getSecondaryButtonExpectedResult(
 				$title,
 				'Show my notifications',
@@ -350,9 +351,9 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				'5',
 				false,
 				false
-			  ), 'Echo, logged in, no talk page alerts, 5 notifications, ' +
-			  'no last un-read nofication time',
-			  $title, true, true, '', false, 5, '2017-05-11T22:23:20Z', '5' ],
+			), 'Echo, logged in, no talk page alerts, 5 notifications, ' +
+				'no last un-read nofication time',
+			$title, true, true, '', false, 5, '2017-05-11T22:23:20Z', '5' ],
 			[ $this->getSecondaryButtonExpectedResult(
 				$title,
 				'Show my notifications',
@@ -360,11 +361,11 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				'0',
 				true,
 				false
-			  ), 'Echo, logged in, no talk page alerts, 0 notifications, ' +
-			  'no last echo seen time',
-			  $title, true, true, '',
-			  MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
-			  0, false, '0' ]
+			), 'Echo, logged in, no talk page alerts, 0 notifications, ' +
+				'no last echo seen time',
+			$title, true, true, '',
+			MWTimestamp::getInstance( strtotime( '2017-05-11T21:23:20Z' ) ),
+			0, false, '0' ]
 		];
 	}
 
@@ -376,9 +377,9 @@ class SkinMinervaTest extends MediaWikiTestCase {
 	private function providePrepareUserButtonNoEcho( Title $title ) {
 		return [
 			[ '', 'No Echo, not logged in, no talk page alerts',
-			  $title, false, false, '' ],
+				$title, false, false, '' ],
 			[ '', 'No Echo, logged in, no talk page alerts',
-			  $title, false, true, '' ],
+				$title, false, true, '' ],
 			[ $this->getSecondaryButtonExpectedResult(
 				$title,
 				'You have new messages on your talk page',
@@ -386,8 +387,8 @@ class SkinMinervaTest extends MediaWikiTestCase {
 				'',
 				true,
 				false
-			  ), 'No Echo, not logged in, talk page alert',
-			  $title, false, false, 'newtalks alert' ],
+			), 'No Echo, not logged in, talk page alert',
+			$title, false, false, 'newtalks alert' ],
 		];
 	}
 

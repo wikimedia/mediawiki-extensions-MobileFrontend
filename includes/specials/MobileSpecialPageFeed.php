@@ -84,8 +84,8 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @todo FIXME: use an array as an argument?
 	 */
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
-		$title = null, $isAnon = false, $bytes = 0, $isMinor = false ) {
-
+		$title = null, $isAnon = false, $bytes = 0, $isMinor = false
+	) {
 		$output = $this->getOutput();
 		$user = $this->getUser();
 		$lang = $this->getLanguage();

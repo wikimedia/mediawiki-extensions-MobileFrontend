@@ -83,7 +83,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();
 		if ( $this->optionsChanged ) {
-			DeferredUpdates::addCallableUpdate( function() use ( $user ) {
+			DeferredUpdates::addCallableUpdate( function () use ( $user ) {
 				$user->saveSettings();
 			} );
 		}

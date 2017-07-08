@@ -205,7 +205,7 @@ class MinervaTemplate extends BaseTemplate {
 			$html .= $preBodyHtml
 				. Html::openElement( 'div', [ 'class' => 'pre-content heading-holder' ] );
 
-			if ( !$this->isSpecialPage ){
+			if ( !$this->isSpecialPage ) {
 				$html .= $this->getPageActionsHtml( $data );
 			}
 

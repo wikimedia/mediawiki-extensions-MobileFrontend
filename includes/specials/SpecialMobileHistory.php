@@ -254,7 +254,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();
 		if ( $numRows > 0 ) {
-
 			foreach ( $res as $row ) {
 				$rev1 = new Revision( $row );
 				if ( $rev2 ) {

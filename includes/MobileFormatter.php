@@ -355,7 +355,6 @@ class MobileFormatter extends HtmlFormatter {
 
 			// Use class to decide it is a list of references
 			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
-
 				// Only mark the section as a reference container if we're transforming a section, not the
 				// document.
 				$isReferenceSection = $el instanceof DOMElement;
@@ -455,11 +454,13 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	private function skipLazyLoadingForSmallDimensions( array $dimensions ) {
 		if ( array_key_exists( 'width', $dimensions )
-			 && $this->isDimensionSmallerThanThreshold( $dimensions['width'] ) ) {
+			&& $this->isDimensionSmallerThanThreshold( $dimensions['width'] )
+		) {
 			return true;
 		};
 		if ( array_key_exists( 'height', $dimensions )
-			 && $this->isDimensionSmallerThanThreshold( $dimensions['height'] ) ) {
+			&& $this->isDimensionSmallerThanThreshold( $dimensions['height'] )
+		) {
 			return true;
 		}
 		return false;
@@ -482,7 +483,8 @@ class MobileFormatter extends HtmlFormatter {
 				( isset( $dimensions['height'] ) ? "height: {$dimensions['height']};" : '' );
 
 			if ( $lazyLoadSkipSmallImages
-				 && $this->skipLazyLoadingForSmallDimensions( $dimensions ) ) {
+				&& $this->skipLazyLoadingForSmallDimensions( $dimensions )
+			) {
 				continue;
 			}
 

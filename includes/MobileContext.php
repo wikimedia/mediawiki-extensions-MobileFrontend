@@ -789,7 +789,6 @@ class MobileContext extends ContextSource {
 	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
-
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
 			if ( Hooks::run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {

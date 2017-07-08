@@ -65,7 +65,6 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 		}
 
 		if ( $formatCookie !== null ) {
-
 			// N.B. that the format and the "stop mobile redirect" cookies
 			// ("mf_useformat" and "stopMobileRedirect" respectively) aren't prefix
 			// with MediaWiki's cookie prefix ($wgCookiePrefix).

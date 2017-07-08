@@ -107,10 +107,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$mf->enableExpandableSections();
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
-		$removeImages = function( MobileFormatter $f ) {
+		$removeImages = function ( MobileFormatter $f ) {
 			$f->setRemoveMedia();
 		};
-		$mainPage = function( MobileFormatter $f ) {
+		$mainPage = function ( MobileFormatter $f ) {
 			$f->setIsMainPage( true );
 		};
 		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
@@ -925,7 +925,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'info' )
-			->will( $this->returnCallback( function( $message ) use ( $title ) {
+			->will( $this->returnCallback( function ( $message ) use ( $title ) {
 				// Debug message contains Page title
 				$this->assertContains( $title, $message );
 				// and contains revision id which is 0 by default
