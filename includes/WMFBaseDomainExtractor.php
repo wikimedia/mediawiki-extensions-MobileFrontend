@@ -101,7 +101,6 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		}
 		$subdomain = array_pop( $subdomains );
 		return $subdomain . $baseDomain;
-
 	}
 
 	/**

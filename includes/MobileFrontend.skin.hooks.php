@@ -36,13 +36,13 @@ JAVASCRIPT;
 	public static function gradeCImageSupport() {
 		// Notes:
 		// * Document#getElementsByClassName is supported by IE9+ and #querySelectorAll is
-		//   supported by IE8+. To gain the widest possible browser support we scan for
-		//   noscript tags using #getElementsByTagName and look at the next sibling.
-		//   If the next sibling has the lazy-image-placeholder class then it will be assumed
-		//   to be a placeholder and replace with an img tag.
+		// supported by IE8+. To gain the widest possible browser support we scan for
+		// noscript tags using #getElementsByTagName and look at the next sibling.
+		// If the next sibling has the lazy-image-placeholder class then it will be assumed
+		// to be a placeholder and replace with an img tag.
 		// * Iterating over the live NodeList from getElementsByTagName() is suboptimal
-		//   but in IE < 9, Array#slice() throws when given a NodeList. It also requires
-		//   the 2nd argument ('end').
+		// but in IE < 9, Array#slice() throws when given a NodeList. It also requires
+		// the 2nd argument ('end').
 		$js = <<<JAVASCRIPT
 (window.NORLQ = window.NORLQ || []).push( function () {
 	var ns, i, p, img;

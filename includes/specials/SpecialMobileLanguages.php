@@ -68,7 +68,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				$langObject['url'] = MobileContext::singleton()->getMobileUrl( $langObject['url'] );
 				$languages[$code] = $langObject;
 			}
-			$compareLanguage = function( $a, $b ) {
+			$compareLanguage = function ( $a, $b ) {
 				return strcasecmp( $a['langname'], $b['langname'] );
 			};
 			usort( $languages, $compareLanguage );

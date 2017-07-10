@@ -507,7 +507,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 
 		// Links specifically for mobile mode
 		if ( $this->getSkinOption( self::OPTION_MOBILE_OPTIONS ) ) {
-
 			// Settings link
 			$menu->insert( 'settings' )
 				->addComponent(
@@ -1033,7 +1032,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 		}
 
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
-
 			// SkinTemplate#buildContentNavigationUrls creates distinct "watch" and "unwatch" actions.
 			// Pass these actions in as context for #createWatchPageAction.
 			$actions = $tpl->data['content_navigation']['actions'];
@@ -1142,7 +1140,6 @@ class SkinMinerva extends SkinTemplate implements ICustomizableSkin {
 	 * @return boolean
 	 */
 	protected function isCurrentPageEditableByUser() {
-
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		return $title->quickUserCan( 'edit', $user )

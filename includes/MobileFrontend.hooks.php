@@ -814,7 +814,6 @@ class MobileFrontendHooks {
 
 		// redirect to Special:MobileEditor if no-JS editing disabled
 		if ( !$context->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' ) ) {
-
 			// redirect to mobile editor instead of showing desktop editor
 			if ( $context->shouldDisplayMobileView() && !$context->getRequest()->wasPosted() ) {
 				$output = $context->getOutput();
@@ -1223,7 +1222,7 @@ class MobileFrontendHooks {
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		// If the device is a mobile, Remove the category entry.
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ){
+		if ( $context->shouldDisplayMobileView() ) {
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 			$vars['wgMFLazyLoadImages'] = $context->isLazyLoadImagesEnabled();

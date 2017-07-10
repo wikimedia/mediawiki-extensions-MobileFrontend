@@ -340,7 +340,6 @@ Text 2
 	}
 
 	public function provideViewWithTransforms() {
-
 		// Note that the dimensions are values passed to #transform, not actual
 		// thumbnail dimensions.
 		return [

@@ -818,7 +818,7 @@ class ApiMobileView extends ApiBase {
 	 * @return int
 	 */
 	private function getScaledDimen( $srcX, $srcY, $dstX ) {
-		return $srcX === 0 ? 0 : (int) round( $srcY * $dstX / $srcX );
+		return $srcX === 0 ? 0 : (int)round( $srcY * $dstX / $srcX );
 	}
 
 	/**
