@@ -11,6 +11,7 @@
 	"mobile-frontend-editor-edit": "Modifitgar",
 	"mobile-frontend-featured-article": "Cuntegn dal di",
 	"mobile-frontend-home-button": "Chasa",
+	"mobile-frontend-language-article-heading": "Leger en ina autra lingua",
 	"mobile-frontend-main-menu-login": "T'annunziar",
 	"mobile-frontend-main-menu-nearby": "Sper",
 	"mobile-frontend-main-menu-settings": "Configuraziun",
@@ -20,5 +21,6 @@
 	"mobile-frontend-privacy-link-text": "Protecziun da datas",
 	"mobile-frontend-random-button": "Casual",
 	"mobile-frontend-terms-text": "Cundiziuns d'utilisaziun",
-	"mobile-frontend-view": "Versiun mobila"
+	"mobile-frontend-view": "Versiun mobila",
+	"mobile-frontend-view-desktop": "desktop"
 }

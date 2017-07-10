@@ -1,10 +1,14 @@
 {
-	"@metadata": [],
-	"mobile-frontend-back-to-top-of-section": "A tsallaka baya sashe guda",
+	"@metadata": {
+		"authors": [
+			"DonCamillo"
+		]
+	},
 	"mobile-frontend-copyright": "Matanin ya samu ne a ƙarƙashin lasisin <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; tana yiyuwa wasu ƙa'idoji su yi tasiri. A duba <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> don ƙarin bayani. {{SITENAME}} sunan kasuwanci ne mai rajista na <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, haƙuma wadda ba ta neman riba ba.",
+	"mobile-frontend-editor-edit": "Gyara",
 	"mobile-frontend-featured-article": "Zaɓaɓɓar maƙala ta yau",
 	"mobile-frontend-home-button": "Marhabin",
-	"mobile-frontend-random-button": "Randam",
-	"mobile-frontend-regular-site": "A duba wannan shafi a kan {{SITENAME}} na kullum",
-	"mobile-frontend-search-submit": "Mu je"
+	"mobile-frontend-main-menu-settings": "Sigogi",
+	"mobile-frontend-privacy-link-text": "Sirrinka",
+	"mobile-frontend-random-button": "Randam"
 }
