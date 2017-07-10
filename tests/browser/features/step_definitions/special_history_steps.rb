@@ -1,12 +1,3 @@
-When(/^I click the more link$/) do
-  on(SpecialHistoryPage).more_link_element.click
-end
-
-When(/^I open the latest diff$/) do
-  on(SpecialHistoryPage).last_contribution_link_element.click
-  expect(on(SpecialMobileDiffPage).user_info_element.when_present(20)).to be_visible
-end
-
 Then(/^I should see a more button$/) do
   expect(on(SpecialHistoryPage).more_link_element).to be_visible
 end
