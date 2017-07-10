@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_c8d96e2e",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-10T16:03:48Z",
+      "side": 1,
+      "message": "Yes that\u0027s another way of looking at it. Yet this confuses things more so might be a good time to work out what\u0027s happening there.",
+      "parentUuid": "4eb4ebfb_4d59f08f",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_0683d09c",
         "filename": "includes/ResponsiveImages/Hooks.php",
         "patchSetId": 4
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "Registering hook handlers in extension.json requires that they can be invoked statically, which isn\u0027t conducive to writing hook handlers that are easily isolated (via Dependency Injection) and testable (think of all the calls to MobileContext::singleton).\n\nConsider how many dependencies would have to be injected via the constructor (or setters, if you\u0027re into that), if we were to keep all hook handlers on one class and take this same approach.\n\nI\u0027ve chosen to extract these two hook handlers as they are closely related, require the same state to function, and because it makes MobileFrontendHooks simpler.\n\nI\u0027m not sure if I can assuage your confusion. I\u0027d remind you can //always// find out where a hook handler lives by reading extension.json.\n\n---\n\nCertainly, we could move the static methods to MobileFrontendHooks as it would avoid any confusion and make this class simpler. This class can change for three reasons so it violates the Single Responsibility Principle, for example. I consider this a reasonable tradeoff as everything about how to deal with these two hooks is in this file and has been tested in isolation.\n\nI\u0027m not sure that this convinces you. I\u0027ll certainly note that having hook handlers in multiple files might cause confusion.",
       "parentUuid": "4eb4ebfb_0683d09c",
+      "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_0d0be82e",
+        "filename": "includes/ResponsiveImages/Hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-10T16:03:48Z",
+      "side": 1,
+      "message": "I think the confusion comes from the contents of skin.hooks which itself contains no hooks but is a little similar to this.\n\nIt is a class with a bunch of methods that are then invoked inside MobileFrontend.hooks.php\n\nOf course those hooks could be moved into the file MobileFrontend.skin.hooks.php and it could be renamed skins/Hooks.php to be consistent with this.",
+      "parentUuid": "4eb4ebfb_edf55c4d",
       "revId": "47c13459e74e37e8922cc4922b56f0108805953e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
