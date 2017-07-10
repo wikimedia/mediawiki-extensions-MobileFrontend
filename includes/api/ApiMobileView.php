@@ -495,7 +495,6 @@ class ApiMobileView extends ApiBase {
 	 * @param string $html representing the entire page
 	 * @param Title $title
 	 * @param ParserOutput $parserOutput
-	 * @param boolean $useTidy whether the provided HTML should be tidied (optional)
 	 * @param integer $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
@@ -505,9 +504,7 @@ class ApiMobileView extends ApiBase {
 	 *  - text: [] of the text of each individual section. length === same as sections
 	 *      or of length 1 when there is a mismatch.
 	 */
-	protected function parseSectionsData( $html, Title $title, ParserOutput $parserOutput,
-		$useTidy = false, $revId = null
-	) {
+	protected function parseSectionsData( $html, Title $title, ParserOutput $parserOutput, $revId = null ) {
 		$data = [];
 		$data['sections'] = $parserOutput->getSections();
 		$sectionCount = count( $data['sections'] );
@@ -528,9 +525,6 @@ class ApiMobileView extends ApiBase {
 		foreach ( $chunks as $chunk ) {
 			if ( count( $data['text'] ) ) {
 				$chunk = "<h$chunk";
-			}
-			if ( $useTidy && count( $chunks ) > 1 ) {
-				$chunk = MWTidy::tidy( $chunk );
 			}
 			if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
 				$data['refsections'][count( $data['text'] )] = true;
@@ -645,9 +639,7 @@ class ApiMobileView extends ApiBase {
 				'refsections' => [],
 			];
 		} else {
-			$useTidy = $this->getConfig()->get( 'TidyConfig' ) !== null
-				&& $mfConfig->get( 'MFTidyMobileViewSections' );
-			$data = $this->parseSectionsData( $html, $title, $parserOutput, $useTidy, $latest );
+			$data = $this->parseSectionsData( $html, $title, $parserOutput, $latest );
 			if ( $this->usePageImages ) {
 				$image = $this->getPageImage( $title );
 				if ( $image ) {
