@@ -25,7 +25,7 @@ When(/^I see the search in pages button$/) do
 end
 
 When(/^I click the search in pages button$/) do
-  on(ArticlePage).search_within_pages_element.when_present.click
+  on(ArticlePage).search_content_header_element.when_present.click
 end
 
 When(/^I click a search watch star$/) do

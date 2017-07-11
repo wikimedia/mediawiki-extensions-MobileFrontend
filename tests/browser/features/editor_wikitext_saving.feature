@@ -23,6 +23,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And I type "ABC GHI" into the editor
       And I click continue
       And I click submit
+      And I do not see the wikitext editor overlay
     Then I should see a toast notification
 
   @editing
