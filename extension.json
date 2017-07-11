@@ -1775,7 +1775,6 @@
 		],
 		"MFSpecialCaseMainPage": false,
 		"MinervaEnableSiteNotice": false,
-		"MFTidyMobileViewSections": true,
 		"MFMobileHeader": "X-Subdomain",
 		"MFRemovableClasses": {
 			"beta": [],

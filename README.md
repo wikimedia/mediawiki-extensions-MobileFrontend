@@ -219,14 +219,6 @@ risk!
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFTidyMobileViewSections
-
-Controls whether API `action=mobileview` should have every HTML section tidied
-for invalid markup.
-
-* Type: `Boolean`
-* Default: `true`
-
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from
