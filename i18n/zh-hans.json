@@ -205,7 +205,7 @@
 	"mobile-frontend-nearby-permission-guidance": "请确保您授予权限以显示你的位置。您可能需要检查您的浏览器的位置设置。",
 	"mobile-frontend-nearby-refresh": "刷新位置",
 	"mobile-frontend-nearby-requirements": "对不起！你的网页浏览器不支持{{SITENAME}}附近功能。",
-	"mobile-frontend-nearby-requirements-guidance": "请尝试其他浏览器或启用JavaScript（如果你停用了它）。",
+	"mobile-frontend-nearby-requirements-guidance": "请尝试其他浏览器或启用JavaScript（如果您停用了它）。",
 	"mobile-frontend-nearby-title": "附近",
 	"mobile-frontend-news-items": "新闻动态",
 	"mobile-frontend-opt-in-explain": "加入测试版，您将可以使用最新实验功能，但可能存在软件缺陷。",
