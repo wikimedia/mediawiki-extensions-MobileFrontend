@@ -62,6 +62,7 @@ class ArticlePage
   # search
   button(:search_icon, css: '#searchIcon')
   p(:search_within_pages, css: '.without-results')
+  div(:search_content_header, css: '.search-content')
   text_field(:search_box_placeholder, name: 'search', index: 0)
   text_field(:search_box2, name: 'search', index: 1)
   li(:search_results, css: '.search-overlay .page-list li')
