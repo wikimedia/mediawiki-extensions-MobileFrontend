@@ -236,6 +236,7 @@
 	"mobile-frontend-talk-add-overlay-content-placeholder": "What is on your mind?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subject",
 	"mobile-frontend-talk-add-overlay-submit": "Add discussion",
+	"minerva-talk-add-topic": "Add discussion",
 	"mobile-frontend-talk-back-to-page": "Return to \"$1\" page.",
 	"mobile-frontend-talk-back-to-userpage": "Return to the user page of \"{{GENDER:$1|$1}}\".",
 	"mobile-frontend-talk-back-to-projectpage": "Return to the project page \"$1\".",

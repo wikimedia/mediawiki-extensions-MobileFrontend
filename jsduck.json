@@ -15,6 +15,7 @@
 		"jqXHR",
 		"File",
 		"Router",
+		"MainMenu",
 		"mw.user",
 		"mw.Api",
 		"mw.ForeignApi",

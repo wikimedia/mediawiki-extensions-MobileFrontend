@@ -504,11 +504,17 @@
 				"mobile-frontend-overlay-continue",
 				"mobile-frontend-last-modified-with-user-seconds",
 				"mobile-frontend-last-modified-with-user-minutes",
-				"mobile-frontend-last-modified-with-user-hours",
 				"mobile-frontend-last-modified-with-user-days",
 				"mobile-frontend-last-modified-with-user-months",
 				"mobile-frontend-last-modified-with-user-years",
 				"mobile-frontend-last-modified-with-user-just-now",
+				"mobile-frontend-joined-just-now",
+				"mobile-frontend-joined-seconds",
+				"mobile-frontend-joined-minutes",
+				"mobile-frontend-joined-hours",
+				"mobile-frontend-joined-days",
+				"mobile-frontend-joined-months",
+				"mobile-frontend-joined-years",
 				"mobile-frontend-loading-message",
 				"mobile-frontend-editor-licensing",
 				"mobile-frontend-editor-licensing-with-terms",
@@ -908,7 +914,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"skins.minerva.icons.images.variants",
 				"mobile.startup"
 			],
 			"styles": [
@@ -1358,20 +1363,6 @@
 				"mobile-frontend-meta-data-issues-header",
 				"mobile-frontend-meta-data-issues-header-talk",
 				"mobile-frontend-languages-not-available",
-				"mobile-frontend-last-modified-with-user-seconds",
-				"mobile-frontend-last-modified-with-user-minutes",
-				"mobile-frontend-last-modified-with-user-hours",
-				"mobile-frontend-last-modified-with-user-days",
-				"mobile-frontend-last-modified-with-user-months",
-				"mobile-frontend-last-modified-with-user-years",
-				"mobile-frontend-last-modified-with-user-just-now",
-				"mobile-frontend-joined-just-now",
-				"mobile-frontend-joined-seconds",
-				"mobile-frontend-joined-minutes",
-				"mobile-frontend-joined-hours",
-				"mobile-frontend-joined-days",
-				"mobile-frontend-joined-months",
-				"mobile-frontend-joined-years",
 				"mobile-frontend-cookies-required",
 				"mobile-frontend-console-recruit",
 				"mobile-frontend-redirected-from"
@@ -1519,13 +1510,14 @@
 				"resources/skins.minerva.talk/init.js"
 			],
 			"messages": [
-				"mobile-frontend-talk-add-overlay-submit"
+				"minerva-talk-add-topic"
 			]
 		},
 		"skins.minerva.toggling": {
 			"class": "MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mobile.toggle",
+				"skins.minerva.icons.images.variants",
 				"skins.minerva.scripts"
 			],
 			"scripts": [
@@ -1544,14 +1536,6 @@
 			],
 			"scripts": [
 				"resources/skins.minerva.watchstar/init.js"
-			],
-			"messages": [
-				"watchthispage",
-				"unwatchthispage",
-				"mobile-frontend-watchlist-add",
-				"mobile-frontend-watchlist-removed",
-				"mobile-frontend-watchlist-cta",
-				"mobile-frontend-watchlist-please-wait"
 			]
 		},
 		"skins.minerva.fontchanger": {

@@ -76,7 +76,7 @@
 		( page.inNamespace( 'talk' ) || page.inNamespace( 'user_talk' ) )
 	) {
 		new Button( {
-			label: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+			label: mw.msg( 'minerva-talk-add-topic' ),
 			href: '#/talk/new',
 			progressive: true
 		} ).prependTo( '#content #bodyContent' );

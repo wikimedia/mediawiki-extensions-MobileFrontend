@@ -237,6 +237,7 @@
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Placeholder text to prompt user to add content to talk page content",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Placeholder text to prompt user to add a new talk page topic subject. This corresponds to {{msg-mw|subject}} in desktop MediaWiki.\n{{Identical|Subject}}",
 	"mobile-frontend-talk-add-overlay-submit": "Label for button which submits a new talk page topic",
+	"minerva-talk-add-topic": "Label for button which shows at bottom of talk pages in mobile view prompting addition of topic",
 	"mobile-frontend-talk-back-to-page": "Used as generic label for link from talk page to subject page. Parameters:\n* $1 - page title",
 	"mobile-frontend-talk-back-to-userpage": "Used as label for link from user talk page to user page. Parameters:\n* $1 - username",
 	"mobile-frontend-talk-back-to-projectpage": "Used as label for link from project talk page to project page. Parameters:\n* $1 - page title",
