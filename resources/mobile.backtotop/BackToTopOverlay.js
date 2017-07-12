@@ -50,6 +50,6 @@
 		}
 	} );
 
-	M.define( 'mobile.backtotop/BackToTopOverlay', BackToTopOverlay );
+	M.define( 'mobile.backtotop/BackToTopOverlay', BackToTopOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

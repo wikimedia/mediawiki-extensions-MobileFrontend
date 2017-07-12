@@ -85,6 +85,6 @@
 
 	} );
 
-	M.define( 'mobile.watchlist/WatchList', WatchList );
+	M.define( 'mobile.watchlist/WatchList', WatchList ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

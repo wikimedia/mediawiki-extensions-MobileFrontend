@@ -138,6 +138,6 @@
 		}
 	} );
 
-	M.define( 'mobile.languages.structured/LanguageOverlay', LanguageOverlay );
+	M.define( 'mobile.languages.structured/LanguageOverlay', LanguageOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

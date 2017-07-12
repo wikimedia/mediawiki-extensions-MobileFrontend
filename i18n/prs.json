@@ -5,22 +5,11 @@
 		]
 	},
 	"mobile-frontend-copyright": "محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.",
-	"mobile-frontend-editor-edit": "ویرایش",
-	"mobile-frontend-home-button": "خانه",
-	"mobile-frontend-language-article-heading": "خواندن به زبان دیگر",
 	"mobile-frontend-last-modified-date": "آخرین ویرایش در روز $1، در ساعت $2",
-	"mobile-frontend-main-menu-button-tooltip": "باز کردن منوی اصلی",
-	"mobile-frontend-main-menu-login": "ورود به سیستم",
-	"mobile-frontend-main-menu-nearby": "در نزدیکی",
-	"mobile-frontend-main-menu-settings": "تنظیمات",
-	"mobile-frontend-main-menu-watchlist": "فهرست پیگیری‌ها",
-	"mobile-frontend-placeholder": "جستجوی {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "حریم خصوصی",
-	"mobile-frontend-random-button": "تصادفی",
 	"mobile-frontend-terms-text": "شرایط استفاده",
 	"mobile-frontend-view": "نسخه موبایل",
 	"mobile-frontend-view-desktop": "کامپیوتر",
 	"mobile-frontend-view-mobile": "موبایل",
-	"tag-mobile_edit": "ویرایش موبایل",
-	"mobile-frontend-pageaction-edit-tooltip": "ویرایش بخش اول این صفحه."
+	"tag-mobile_edit": "ویرایش موبایل"
 }

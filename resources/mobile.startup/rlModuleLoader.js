@@ -33,7 +33,7 @@
 			} );
 		}
 	};
-	M.define( 'mobile.startup/rlModuleLoader', loader )
+	M.define( 'mobile.startup/rlModuleLoader', loader ) // resource-modules-disable-line
 		.deprecate( 'mobile.overlays/moduleLoader' );
 
 }( mw.mobileFrontend ) );

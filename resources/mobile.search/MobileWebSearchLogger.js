@@ -110,6 +110,6 @@
 		searchOverlay.on( 'search-result-click', logger.onSearchResultClick.bind( logger ) );
 	};
 
-	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger );
+	M.define( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, mw ) );

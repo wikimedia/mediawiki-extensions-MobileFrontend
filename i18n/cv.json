@@ -5,18 +5,14 @@
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Категорисем</strong>",
-	"mobile-frontend-editor-edit": "Тӳрлет",
 	"mobile-frontend-editor-editing": "Тӳрлетни",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>Тӳрлетни</strong></span>",
-	"mobile-frontend-home-button": "Киле",
 	"mobile-frontend-images-status": "Ӳкерчĕксем",
 	"mobile-frontend-language-heading": "<strong>Чĕлхесем</strong>",
 	"mobile-frontend-languages-header": "Чĕлхесем",
 	"mobile-frontend-languages-header-page": "$1 - Чĕлхесем",
 	"mobile-frontend-main-menu-account-create": "Аккаунт ту",
-	"mobile-frontend-main-menu-login": "Кĕр",
 	"mobile-frontend-missing-image": "Ӳкерчĕк",
-	"mobile-frontend-placeholder": "{{SITENAME}} шырамалли",
 	"mobile-frontend-search-submit": "Куç",
 	"mobile-frontend-watchlist-back-home": "Килелле"
 }

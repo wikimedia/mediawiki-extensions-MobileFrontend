@@ -149,6 +149,6 @@
 		}
 	} );
 
-	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay );
+	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

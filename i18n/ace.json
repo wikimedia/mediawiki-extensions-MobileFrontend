@@ -7,20 +7,10 @@
 	},
 	"mobile-frontend-back-to-top-of-section": "Riwang u bagian sigoh nyoe",
 	"mobile-frontend-copyright": "Asoë na di yup $1 keucuali meunyö na hai la'én nyang geupeugah.",
-	"mobile-frontend-editor-edit": "Andam",
 	"mobile-frontend-featured-article": "Teunuléh peuniléh uroë nyoë",
-	"mobile-frontend-home-button": "Keue",
-	"mobile-frontend-language-article-heading": "Beuët lam bahsa la'én",
 	"mobile-frontend-last-modified-date": "Seuneulheuëh geuandam bak $1, poh $2",
-	"mobile-frontend-main-menu-button-tooltip": "Peuhah menu utama",
-	"mobile-frontend-main-menu-login": "Tamöng",
-	"mobile-frontend-main-menu-nearby": "Silingka",
-	"mobile-frontend-main-menu-settings": "Neuatô",
-	"mobile-frontend-main-menu-watchlist": "Dapeuta keunalön",
-	"mobile-frontend-placeholder": "Mita {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Rahsia",
 	"mobile-frontend-profile-usertalk": "Marit ngön $1",
-	"mobile-frontend-random-button": "Beurangkari",
 	"mobile-frontend-regular-site": "Eu on nyoe bak {{SITENAME}} biyasa",
 	"mobile-frontend-search-submit": "Jak u",
 	"mobile-frontend-terms-text": "Kri Ngui",
@@ -28,6 +18,5 @@
 	"mobile-frontend-view-desktop": "Komputer",
 	"mobile-frontend-view-mobile": "Seluler",
 	"tag-mobile_edit": "Neuandam seluler",
-	"tag-mobile_web_edit": "Neuandam web seluler",
-	"mobile-frontend-pageaction-edit-tooltip": "Andam bagian ateuëh miëng nyoë"
+	"tag-mobile_web_edit": "Neuandam web seluler"
 }

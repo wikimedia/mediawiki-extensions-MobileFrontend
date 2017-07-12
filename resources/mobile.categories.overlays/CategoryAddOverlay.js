@@ -133,6 +133,6 @@
 		}
 	} );
 
-	M.define( 'mobile.categories.overlays/CategoryAddOverlay', CategoryAddOverlay );
+	M.define( 'mobile.categories.overlays/CategoryAddOverlay', CategoryAddOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

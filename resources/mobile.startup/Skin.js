@@ -370,6 +370,6 @@
 	} );
 
 	Skin.getSectionId = getSectionId;
-	M.define( 'mobile.startup/Skin', Skin );
+	M.define( 'mobile.startup/Skin', Skin ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

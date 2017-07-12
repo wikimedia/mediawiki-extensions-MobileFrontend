@@ -6,22 +6,11 @@
 	},
 	"mobile-frontend-changeslist-nocomment": "Coppite gi amul tënk",
 	"mobile-frontend-copyright": "Ëmbéef laa ngi jàppandi ci anamu $1, lu moy yeneeni tektal",
-	"mobile-frontend-editor-edit": "Soppi",
 	"mobile-frontend-featured-article": "Jukkib bés bi",
-	"mobile-frontend-home-button": "Xët wu njëkk",
-	"mobile-frontend-language-article-heading": "Jàng ci weneen làkk",
 	"mobile-frontend-last-modified-date": "$1, ci $2 lañu ko mujjee soppi",
-	"mobile-frontend-main-menu-button-tooltip": "Ubbi njël lu njëkk li",
-	"mobile-frontend-main-menu-login": "Dugg",
-	"mobile-frontend-main-menu-nearby": "Ci wetu",
-	"mobile-frontend-main-menu-settings": "Jekkal",
-	"mobile-frontend-main-menu-watchlist": "Limu toppte",
 	"mobile-frontend-news-items": "Xibaar",
-	"mobile-frontend-placeholder": "Seet ci {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Sutura",
-	"mobile-frontend-random-button": "Ci mbetteel",
 	"mobile-frontend-terms-text": "Anami Jëfandiku",
 	"mobile-frontend-view": "Woneyiin bu mobil",
-	"mobile-frontend-view-desktop": "Bindwaay",
-	"mobile-frontend-pageaction-edit-tooltip": "Soppi pàcc bi jiitu bu xët wi"
+	"mobile-frontend-view-desktop": "Bindwaay"
 }

@@ -176,6 +176,6 @@
 		}
 	} );
 
-	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay );
+	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

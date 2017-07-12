@@ -126,5 +126,5 @@
 		}
 	} );
 
-	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer );
+	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer ); // resource-modules-disable-line
 }( mw.mobileFrontend, jQuery ) );

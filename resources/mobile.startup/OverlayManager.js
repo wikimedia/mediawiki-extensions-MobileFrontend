@@ -239,6 +239,6 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/OverlayManager', OverlayManager );
+	M.define( 'mobile.startup/OverlayManager', OverlayManager ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

@@ -257,6 +257,6 @@
 			}
 		}
 	} );
-	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay );
+	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

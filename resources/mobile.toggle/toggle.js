@@ -358,6 +358,6 @@
 	Toggler._expandStoredSections = expandStoredSections;
 	Toggler._cleanObsoleteStoredSections = cleanObsoleteStoredSections;
 
-	M.define( 'mobile.toggle/Toggler', Toggler );
+	M.define( 'mobile.toggle/Toggler', Toggler ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

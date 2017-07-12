@@ -33,5 +33,5 @@
 		template: mw.template.get( 'mobile.toc', 'toc.hogan' )
 	} );
 
-	M.define( 'mobile.toc/TableOfContents', TableOfContents );
+	M.define( 'mobile.toc/TableOfContents', TableOfContents ); // resource-modules-disable-line
 }( mw.mobileFrontend ) );

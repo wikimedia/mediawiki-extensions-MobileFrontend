@@ -34,5 +34,5 @@
 			className: icon.getClassName()
 		} )
 	} );
-	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay );
+	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay ); // resource-modules-disable-line
 }( mw.mobileFrontend, jQuery ) );

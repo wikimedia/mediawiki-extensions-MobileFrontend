@@ -399,6 +399,6 @@
 		}
 	} );
 
-	M.define( 'mobile.search/SearchOverlay', SearchOverlay );
+	M.define( 'mobile.search/SearchOverlay', SearchOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

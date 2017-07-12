@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var ReferencesHtmlScraperGateway =
+	var moduleName = 'mobile.references.gateway/ReferencesMobileViewGateway',
+		ReferencesHtmlScraperGateway =
 		M.require( 'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
 		cache = M.require( 'mobile.startup/cache' ),
 		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
@@ -120,9 +121,6 @@
 		return referencesMobileViewGateway;
 	};
 
-	M.define(
-		'mobile.references.gateway/ReferencesMobileViewGateway',
-		ReferencesMobileViewGateway
-	);
+	M.define( moduleName, ReferencesMobileViewGateway ); // resource-modules-disable-line
 
 }( mw.mobileFrontend, jQuery ) );

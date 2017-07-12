@@ -152,5 +152,5 @@
 		}
 	} );
 
-	M.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay );
+	M.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay ); // resource-modules-disable-line
 }( mw.mobileFrontend, jQuery ) );
