@@ -5,18 +5,14 @@
 			"Si Gam Acèh"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "Riwang u bagian sigoh nyoe",
 	"mobile-frontend-copyright": "Asoë na di yup $1 keucuali meunyö na hai la'én nyang geupeugah.",
 	"mobile-frontend-featured-article": "Teunuléh peuniléh uroë nyoë",
 	"mobile-frontend-last-modified-date": "Seuneulheuëh geuandam bak $1, poh $2",
+	"mobile-frontend-news-items": "Lam haba",
 	"mobile-frontend-privacy-link-text": "Rahsia",
-	"mobile-frontend-profile-usertalk": "Marit ngön $1",
-	"mobile-frontend-regular-site": "Eu on nyoe bak {{SITENAME}} biyasa",
-	"mobile-frontend-search-submit": "Jak u",
 	"mobile-frontend-terms-text": "Kri Ngui",
 	"mobile-frontend-view": "Seuneudeuh seluler",
 	"mobile-frontend-view-desktop": "Komputer",
-	"mobile-frontend-view-mobile": "Seluler",
 	"tag-mobile_edit": "Neuandam seluler",
 	"tag-mobile_web_edit": "Neuandam web seluler"
 }

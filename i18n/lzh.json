@@ -24,7 +24,6 @@
 	"mobile-frontend-editor-summary-request": "爾如何善本頁？",
 	"mobile-frontend-featured-article": "今日絕妙佳文",
 	"mobile-frontend-history-404-title": "無此頁",
-	"mobile-frontend-images-status": "圖",
 	"mobile-frontend-language-heading": "<strong>語</strong>",
 	"mobile-frontend-languages-header": "語言",
 	"mobile-frontend-languages-header-page": "$1 - 語言",
@@ -58,5 +57,5 @@
 	"mobile-frontend-watchlist-filter-talk": "議",
 	"mobile-frontend-watchlist-more": "詳",
 	"tag-mobile_edit": "於掌中卷所纂",
-	"tag-mobile_web_edit": "掌中纂"
+	"tag-mobile_web_edit": "纂於掌中卷"
 }
