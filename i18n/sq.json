@@ -20,7 +20,6 @@
 	"mobile-frontend-enable-images": "Aktivizo figurat në versionin për celular",
 	"mobile-frontend-featured-article": "Përmbajtja e ditës",
 	"mobile-frontend-footer-contact": "Kontakti",
-	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-images-status": "Fotografitë",
 	"mobile-frontend-language-header": "Ky artikull është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}",
 	"mobile-frontend-language-site-choose": "Kërkoni gjuhën",

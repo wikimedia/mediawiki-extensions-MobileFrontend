@@ -59,7 +59,6 @@
 	"mobile-frontend-last-modified-months": "Jälgimäzekse kohendettu {{PLURAL:$1|$1 kuu|$1 kuudu}} tagaperin",
 	"mobile-frontend-last-modified-seconds": "Jälgimäzekse kohendettu {{PLURAL:$1|$1 sekuntu|$1 sekuntua}} tagaperin",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Jälgimäzekse {{GENDER:$1|kohendanuh}} {{PLURAL:$3|$3 päivy|$3 päiviä}} tagaperin] {{PLURAL:$5|[$6 $2]|0=anoniimu käyttäi}}",
-	"mobile-frontend-logged-in-homepage-notification": "Tule terveh, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Kirjutannuhes käyttäjänny $1.",
 	"mobile-frontend-main-menu-back": "Mene järilleh",
 	"mobile-frontend-main-menu-account-create": "Registriiruiččei",

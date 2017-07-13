@@ -17,7 +17,6 @@
 	"mobile-frontend-enable-images": "Мобил сайтда суратла кёрюнюрча эт",
 	"mobile-frontend-featured-article": "Бюгюннгю сайланнган материал",
 	"mobile-frontend-footer-contact": "Контакт информация",
-	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} сизнича адамла бла къуралгъанды.",
 	"mobile-frontend-generic-login-action": "Къошум этер ючюн авторизацияны ётюгюз.",
 	"mobile-frontend-images-status": "Суратла",

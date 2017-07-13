@@ -30,7 +30,6 @@
 	"mobile-frontend-last-modified-months": "{{PLURAL:$1|Een maond|$1 maonden}} elejen veur t lest bie-ewörken",
 	"mobile-frontend-last-modified-seconds": "{{PLURAL:$1|Een sekonde|$1 sekonden}} elejen ewiezigd",
 	"mobile-frontend-last-modified-years": "{{PLURAL:$1|Een|$1}} jaor elejen ewiezigd",
-	"mobile-frontend-logged-in-homepage-notification": "Welkom, $1!",
 	"mobile-frontend-logged-in-toast-notification": "An-emeld as $1.",
 	"mobile-frontend-logged-out": "Niet an-emeld",
 	"mobile-frontend-login": "Anmelden",

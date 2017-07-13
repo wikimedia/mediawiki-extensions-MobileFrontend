@@ -14,7 +14,6 @@
 	"mobile-frontend-enable-images": "Zèt aafbeildinge óppe mobiel site aan",
 	"mobile-frontend-featured-article": "Sjterartikel",
 	"mobile-frontend-footer-contact": "Kóntak",
-	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-images-status": "Aafbeildjinge",
 	"mobile-frontend-language-header": "Dees pagina is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}",
 	"mobile-frontend-language-site-choose": "Zeuk spraok",

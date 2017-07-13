@@ -14,7 +14,6 @@
 	"mobile-frontend-enable-images": "Wezesha picha katika wavuti wa simu ya rununu",
 	"mobile-frontend-featured-article": "Makala Bora ya Leo",
 	"mobile-frontend-footer-contact": "Mawasiliano",
-	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-images-status": "Picha",
 	"mobile-frontend-language-header": "Makala haya yanapatikana katika {{PLURAL:$1|language|lugha}} $1",
 	"mobile-frontend-language-site-choose": "Tafuta lugha",
