@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dinkawiki"
+			"Dinkawiki",
+			"Amire80"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "acïn cökpiny cony",
@@ -11,7 +12,7 @@
 	"mobile-frontend-news-items": "Në wëlëyamic",
 	"mobile-frontend-privacy-link-text": "Këcïthiaan",
 	"mobile-frontend-terms-text": "Tɛ̈ ee yelooi",
-	"mobile-frontend-view": "ɣoi cäth",
+	"mobile-frontend-view": "Ɣoi cäth",
 	"mobile-frontend-view-desktop": "Agennhom",
 	"tag-mobile_edit": "Cokic cäth",
 	"tag-mobile_web_edit": "Cokic cäth anuëët"
