@@ -22,7 +22,8 @@
 			"EagerLin",
 			"飞舞回堂前",
 			"一個正常人",
-			"Wwycheuk"
+			"Wwycheuk",
+			"A2093064"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -71,7 +72,7 @@
 	"mobile-frontend-editor-blocked-info": "您的 IP 位址已被封鎖禁止編輯，封鎖您的人為 {{GENDER:$1|$1}}，由於下列原因：$2",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你確定要放棄你的編輯？",
-	"mobile-frontend-editor-captcha-try-again": "驗証碼錯誤，請重試。",
+	"mobile-frontend-editor-captcha-try-again": "驗證碼錯誤，請重試。",
 	"mobile-frontend-editor-continue": "下一步",
 	"mobile-frontend-editor-editing": "正在編輯",
 	"mobile-frontend-editor-editing-page": "<span><strong>正在編輯</strong> $1</span>",
