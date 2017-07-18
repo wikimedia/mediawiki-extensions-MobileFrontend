@@ -184,6 +184,8 @@
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (site ou aplicativo)",
 	"tag-mobile_web_edit": "Edição feita através do sítio móvel",
 	"tag-mobile_web_edit-description": "Edição feita através do sítio para celulares",
+	"apihelp-webapp-manifest-description": "Retorna um manifesto do webapp.",
+	"apihelp-webapp-manifest-summary": "Retorna um manifesto do webapp.",
 	"mobile-frontend-loading-message": "Carregando…",
 	"mobile-frontend-panel-ok": "Entendi",
 	"mobile-frontend-panel-cancel": "Não obrigado"
