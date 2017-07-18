@@ -23,7 +23,7 @@
 				result = $.Deferred(),
 				// Escape (almost) all CSS selector meta characters
 				// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
-				meta = /[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g;
+				meta = /[!"$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g;
 
 			id = id.replace( meta, '\\$&' );
 			id = id.substr( 1, id.length );

@@ -31,10 +31,8 @@
 		this.$( '.overlay-content' ).append(
 			$( '<div>' )
 				.addClass( 'notifications-filter-overlay-read-state' )
-				.append(
-					options.$notifReadState
-				),
-				options.$crossWikiUnreadFilter
+				.append( options.$notifReadState ),
+			options.$crossWikiUnreadFilter
 		);
 	};
 

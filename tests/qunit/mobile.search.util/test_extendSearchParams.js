@@ -88,13 +88,13 @@
 
 	QUnit.test( 'it is variadic', function ( assert ) {
 		var params = extendSearchParams(
-			'search',
-			{
-				baz: 'qux'
-			},
-			{
-				quux: 'corge'
-			}
+				'search',
+				{
+					baz: 'qux'
+				},
+				{
+					quux: 'corge'
+				}
 			),
 			expectedParams = {
 				foo: 'bar',

@@ -32,7 +32,7 @@
 		 * @return {string} Description for file
 		 */
 		_getDescription: function ( title ) {
-			title = title.replace( /\.[^\. ]+$/, '' ); // replace filename suffix
+			title = title.replace( /\.[^. ]+$/, '' ); // replace filename suffix
 			// strip namespace: prefix and date suffix from remainder
 			return title.replace( /^[^:]*:/, '' )
 				.replace( / \d{4}-\d{1,2}-\d{1,2} \d{1,2}-\d{1,2}$/, '' );

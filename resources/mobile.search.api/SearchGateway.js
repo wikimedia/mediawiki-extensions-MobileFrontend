@@ -53,7 +53,9 @@
 		 * @private
 		 */
 		_createSearchRegEx: function ( str ) {
-			str = str.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&' );
+			// '\[' can be unescaped, but leave it balanced with '`]'
+			// eslint-disable-next-line no-useless-escape
+			str = str.replace( /[-\[\]{}()*+?.,\\^$|#\s]/g, '\\$&' );
 			return new RegExp( '^(' + str + ')', 'ig' );
 		},
 

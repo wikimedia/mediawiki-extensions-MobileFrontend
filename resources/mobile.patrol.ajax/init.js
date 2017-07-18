@@ -30,8 +30,7 @@
 			apiRequest.postWithToken( 'patrol', {
 				action: 'patrol',
 				rcid: rcid
-			} )
-			.done( function ( data ) {
+			} ).done( function ( data ) {
 				var title;
 
 				// Disable all patrollinks from the page.
@@ -50,8 +49,7 @@
 					// This should never happen as errors should trigger fail
 					toast.show( mw.msg( 'markedaspatrollederrornotify' ), 'error' );
 				}
-			} )
-			.fail( function ( error ) {
+			} ).fail( function ( error ) {
 				$spinner.remove();
 				// Restore the patrol link. This allows the user to try again
 				// (or open it in a new window, bypassing this ajax module).

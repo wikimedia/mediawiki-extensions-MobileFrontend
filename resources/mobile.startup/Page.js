@@ -265,8 +265,8 @@
 						$lazyImage = $a.find( '.lazy-image-placeholder' ),
 						// Parents need to be checked as well.
 						valid = $a.parents( blacklistSelector ).length === 0 && $a.find( blacklistSelector ).length === 0,
-						legacyMatch = $a.attr( 'href' ).match( /title=([^\/&]+)/ ),
-						match = $a.attr( 'href' ).match( /[^\/]+$/ );
+						legacyMatch = $a.attr( 'href' ).match( /title=([^/&]+)/ ),
+						match = $a.attr( 'href' ).match( /[^/]+$/ );
 
 					// filter out invalid lazy loaded images if so far image is valid
 					if ( $lazyImage.length && valid ) {
