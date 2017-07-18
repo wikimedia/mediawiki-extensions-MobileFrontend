@@ -326,6 +326,7 @@
 				"mobile-frontend-overlay-continue",
 				"mobile-frontend-last-modified-with-user-seconds",
 				"mobile-frontend-last-modified-with-user-minutes",
+				"mobile-frontend-last-modified-with-user-hours",
 				"mobile-frontend-last-modified-with-user-days",
 				"mobile-frontend-last-modified-with-user-months",
 				"mobile-frontend-last-modified-with-user-years",
