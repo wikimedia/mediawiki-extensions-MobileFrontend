@@ -682,7 +682,6 @@ class MobileFrontendHooks {
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
-		$noJsEditing = $config->get( 'MFAllowNonJavaScriptEditing' );
 
 		$title = $sk->getTitle();
 		$request = $context->getRequest();
@@ -780,7 +779,7 @@ class MobileFrontendHooks {
 
 			// add fallback editor styles to action=edit page
 			$requestAction = $out->getRequest()->getVal( 'action' );
-			if ( $noJsEditing && ( $requestAction === 'edit' || $requestAction === 'submit' ) ) {
+			if ( $requestAction === 'edit' || $requestAction === 'submit' ) {
 				$out->addModuleStyles( [
 					'mobile.messageBox.styles'
 				] );
@@ -800,36 +799,6 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() && !$context->getMFConfig()->get( 'MFRSSFeedLink' ) ) {
 			$tags = [];
 		}
-	}
-
-	/**
-	 * CustomEditor hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/CustomEditor
-	 *
-	 * @param Article $article
-	 * @param User $user
-	 * @return bool
-	 */
-	public static function onCustomEditor( $article, $user ) {
-		$context = MobileContext::singleton();
-
-		// redirect to Special:MobileEditor if no-JS editing disabled
-		if ( !$context->getMFConfig()->get( 'MFAllowNonJavaScriptEditing' ) ) {
-			// redirect to mobile editor instead of showing desktop editor
-			if ( $context->shouldDisplayMobileView() && !$context->getRequest()->wasPosted() ) {
-				$output = $context->getOutput();
-				$data = $output->getRequest()->getValues();
-				// Unset these to avoid a redirect loop but make sure we pass other
-				// parameters to edit e.g. undo actions
-				unset( $data['action'] );
-				unset( $data['title'] );
-
-				$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )
-					->getFullURL( $data ) );
-				return false;
-			}
-		}
-		return true;
 	}
 
 	/**
