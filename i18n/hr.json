@@ -35,7 +35,7 @@
 	"mobile-frontend-diffview-anonymous": "Anonimni suradnik",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Dodan $1 bajt|Dodana $1 bajta|Dodano $1 bajtova}}",
 	"mobile-frontend-diffview-bytesnochange": "Nema promjene veličine",
-	"mobile-frontend-diffview-bytesremoved": "Obrisano $1 {{PLURAL:$1|bajt|bajta|bajtova}}",
+	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|Obrisan $1 bajt|Obrisana $1 bajta|Obrisano $1 bajtova}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|uređivanje|uređivanja}}",
 	"mobile-frontend-diffview-title": "Promjene",
 	"mobile-frontend-donate-image-anon": "Prijavite se da biste vidjeli stranicu postavljanja.",
