@@ -504,7 +504,9 @@ class ApiMobileView extends ApiBase {
 	 *  - text: [] of the text of each individual section. length === same as sections
 	 *      or of length 1 when there is a mismatch.
 	 */
-	protected function parseSectionsData( $html, Title $title, ParserOutput $parserOutput, $revId = null ) {
+	protected function parseSectionsData( $html, Title $title,
+		ParserOutput $parserOutput, $revId = null
+	) {
 		$data = [];
 		$data['sections'] = $parserOutput->getSections();
 		$sectionCount = count( $data['sections'] );
