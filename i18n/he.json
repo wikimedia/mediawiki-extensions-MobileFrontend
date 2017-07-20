@@ -15,7 +15,8 @@
 			"Danny-w",
 			"YaronSh",
 			"LaG roiL",
-			"קיפודנחש"
+			"קיפודנחש",
+			"Uziel302"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
@@ -154,7 +155,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "אפשר לנסות להשתמש בדפדפן אחר או להפעיל תמיכה ב־JavaScript אם כיבית אותה.",
 	"mobile-frontend-nearby-title": "בסביבה",
 	"mobile-frontend-news-items": "בחדשות",
-	"mobile-frontend-opt-in-explain": "על־ידי הצטרפות לבטא, תקבלו גישה לאפשרויות ניסיוניות החדשות ביותר, אבל ייתכן שיש בהם בעיות בתכנה.",
+	"mobile-frontend-opt-in-explain": "על־ידי הצטרפות לבטא, תקבלו גישה לאפשרויות הניסיוניות החדשות ביותר, אבל ייתכן שיש בהן בעיות בתוכנה.",
 	"mobile-frontend-overlay-close": "סגירה",
 	"mobile-frontend-overlay-continue": "המשך",
 	"mobile-frontend-page-edit-summary": "<span><strong>תקציר עריכה</strong> $1</span>",
