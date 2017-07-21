@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_258299ce",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-07-21T17:39:06Z",
+      "side": 1,
+      "message": "What\u0027s a SkinContext? :-)",
+      "range": {
+        "startLine": 130,
+        "startChar": 28,
+        "endLine": 130,
+        "endChar": 39
+      },
+      "revId": "7f633d7c64ee4fb649c58591f08a1c93bf7b6b12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
