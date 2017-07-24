@@ -743,7 +743,7 @@ class MobileFormatter extends HtmlFormatter {
 			$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
 		}
 
-		// prepend indicator
+		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
 		$indicator = $doc->createElement( 'div' );
 		$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
 		$heading->insertBefore( $indicator, $heading->firstChild );
