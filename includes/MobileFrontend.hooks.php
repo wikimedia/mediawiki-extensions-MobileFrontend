@@ -193,13 +193,14 @@ class MobileFrontendHooks {
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
 		$context = MobileContext::singleton();
 		$title = $context->getTitle();
+		$config =  $context->getMFConfig();
 
 		if ( !$title ) {
 			return true;
 		}
 
 		// Perform a few extra changes if we are in mobile mode
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $context->shouldDisplayMobileView() || $config->get( 'MFAlwaysUseMobileFormatter' ) ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text );
 		}
 

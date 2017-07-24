@@ -196,6 +196,13 @@ API that can be queried to obtain content.
 * Type: `string`
 * Default: `https://en.wikipedia.org/w/api.php`
 
+#### $wgMFAlwaysUseMobileFormatter
+
+When enabled the MobileFormatter will run on desktop views as well as mobile views.
+
+* Type: `boolean`
+* Default: `false`
+
 #### $wgMFMobileFormatterHeadings
 
 This is a list of html tags, that could be recognized as the first heading of
