@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_0e444c6d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-07-24T19:55:03Z",
+      "side": 1,
+      "message": "We don\u0027t need the MediaWikiServices here, we can use `$context-\u003egetConfig()`.",
+      "revId": "373bea474e75e7f58c8b64f7c1d5fe9e27155abf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
