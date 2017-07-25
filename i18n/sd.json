@@ -19,6 +19,7 @@
 	"mobile-frontend-editor-cancel-confirm": "ڇا توھان سچ ۾ پنھنجي ترميم ڇڏي ڏيڻ ٿا چاھيو؟",
 	"mobile-frontend-editor-licensing": "تبديليون سانڍڻ سان، توھان پنھنجون ڀاڱيداريون $1 {{PLURAL:$2|لائسنس|لائسنسن}} تحت ڏيڻ تي راضپو ڏيکاريو ٿا.",
 	"mobile-frontend-editor-previewing-page": "<span><strong>پيشِ نگاھ</strong> $1</span>",
+	"mobile-frontend-editor-save": "سانڍيو",
 	"mobile-frontend-editor-summary-placeholder": "مثال:ھجي درست ڪئي، مواد وڌو",
 	"mobile-frontend-editor-summary-request": "توھان صفحي کي ڪيئن بھتر بڻايو؟",
 	"mobile-frontend-featured-article": "اڄ جو نمايان مواد",
