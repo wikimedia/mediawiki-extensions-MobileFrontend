@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_009bb4c2",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-07-25T14:16:32Z",
+      "side": 1,
+      "message": "this section indicator is used only on line 23, we can safely remove it",
+      "revId": "700b1fd7686d75b8be6fde926b75f1d9cda266c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_209830c3",
+        "filename": "tests/phpunit/api/ApiParseExtenderTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-07-25T14:16:32Z",
+      "side": 1,
+      "message": "we can safely remove the SECTION_INDICATOR as it is not used anywhere else",
+      "revId": "700b1fd7686d75b8be6fde926b75f1d9cda266c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

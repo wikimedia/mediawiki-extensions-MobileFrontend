@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_e091c89d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 739,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-07-25T14:16:32Z",
+      "side": 0,
+      "message": "$doc is not used any more, we can drop this argument",
+      "range": {
+        "startLine": 739,
+        "startChar": 34,
+        "endLine": 739,
+        "endChar": 50
+      },
+      "revId": "373bea474e75e7f58c8b64f7c1d5fe9e27155abf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
