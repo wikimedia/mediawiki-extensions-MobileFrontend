@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_daf598c8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 738,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-07-25T19:29:31Z",
+      "side": 1,
+      "message": "DOMNode::nextSibling() returns DOMNode, not DOMElement (DOMElement extends DOMNode). \n\nThere is a possibility that $contanerChild-\u003enextSibling might return something else than DOMElement (example: DOMText) and this will break execution with PHP Fatal error:  Uncaught TypeError: Argument 1 passed to ups() must be an instance of DOMElement, instance of DOMText given.\n\nAlso PHP is case insensitive when it comes to class names but it would be nice to stick to proper names and use capitalized DOM",
+      "range": {
+        "startLine": 738,
+        "startChar": 32,
+        "endLine": 738,
+        "endChar": 45
+      },
+      "revId": "fa673b6af71b2bfde50c4c191de9e9b003f03c7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
