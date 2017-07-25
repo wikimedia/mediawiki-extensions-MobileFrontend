@@ -22,6 +22,30 @@
       "revId": "fa673b6af71b2bfde50c4c191de9e9b003f03c7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_7d6c9e05",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 738,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-25T21:18:12Z",
+      "side": 1,
+      "message": "I\u0027ve played it safe and dropped the type check..",
+      "parentUuid": "6e71af52_daf598c8",
+      "range": {
+        "startLine": 738,
+        "startChar": 32,
+        "endLine": 738,
+        "endChar": 45
+      },
+      "revId": "fa673b6af71b2bfde50c4c191de9e9b003f03c7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
