@@ -28,7 +28,6 @@
 		"History": "SpecialMobileHistory",
 		"MobileCite": "SpecialMobileCite",
 		"MobileDiff": "SpecialMobileDiff",
-		"MobileEditor": "SpecialMobileEditor",
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileMenu": "SpecialMobileMenu",
 		"MobileLanguages": "SpecialMobileLanguages",
@@ -66,7 +65,6 @@
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
-		"SpecialMobileEditor": "includes/specials/SpecialMobileEditor.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
 		"SpecialMobileMenu": "includes/specials/SpecialMobileMenu.php",
 		"SpecialMobileWatchlist": "includes/specials/SpecialMobileWatchlist.php",
@@ -1022,12 +1020,6 @@
 				"mobile-frontend-fontchanger-link"
 			]
 		},
-		"mobile.special.mobileeditor.scripts": {
-			"targets": "mobile",
-			"scripts": [
-				"resources/mobile.special.mobileeditor.scripts/redirectmobileeditor.js"
-			]
-		},
 		"mobile.special.nearby.styles": {
 			"targets": [
 				"mobile",
@@ -1201,9 +1193,6 @@
 		"BeforePageDisplay": [
 			"MobileFrontendHooks::onBeforePageDisplay"
 		],
-		"CustomEditor": [
-			"MobileFrontendHooks::onCustomEditor"
-		],
 		"GetPreferences": [
 			"MobileFrontendHooks::onGetPreferences"
 		],
@@ -1354,7 +1343,6 @@
 		},
 		"MFRSSFeedLink": false,
 		"MFSchemaEditSampleRate": 0.0625,
-		"MFAllowNonJavaScriptEditing": false,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"
