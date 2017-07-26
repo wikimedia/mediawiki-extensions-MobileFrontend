@@ -186,9 +186,9 @@ JAVASCRIPT;
 		// Certain pages might be blacklisted and not have a mobile equivalent.
 		if ( !$ctx->isBlacklistedPage() ) {
 			if ( $ctx->shouldDisplayMobileView() ) {
-				MobileFrontendSkinHooks::mobileFooter( $skin, $tpl, $ctx, $title, $req );
+				self::mobileFooter( $skin, $tpl, $ctx, $title, $req );
 			} else {
-				MobileFrontendSkinHooks::desktopFooter( $skin, $tpl, $ctx, $title, $req );
+				self::desktopFooter( $skin, $tpl, $ctx, $title, $req );
 			}
 		}
 	}

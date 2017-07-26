@@ -149,9 +149,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$attrsList = $attrsFeed = [];
 		// https://phabricator.wikimedia.org/T150650
 		if ( $view === null ) {
-			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
+			$view = $user->getOption( self::VIEW_OPTION_NAME, 'a-z' );
 		}
-		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
+		$filter = $user->getOption( self::FILTER_OPTION_NAME, 'all' );
 
 		if ( $view === 'feed' ) {
 			$attrsList[ 'class' ] = MobileUI::buttonClass();

@@ -83,7 +83,7 @@ class ExtMobileFrontend {
 			$pageUserId = User::idFromName( $title->getText() );
 			if ( $pageUserId && !$title->exists() ) {
 				$pageUser = User::newFromId( $pageUserId );
-				$contentHtml = ExtMobileFrontend::getUserPageContent(
+				$contentHtml = self::getUserPageContent(
 					$out, $pageUser );
 			}
 		}
