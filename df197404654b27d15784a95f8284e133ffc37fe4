@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_8771150e",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-27T22:23:35Z",
+      "side": 0,
+      "message": "Why do we need to override the entire template partial content?\nIf you compare this to other overlays - all we are doing is changing the content of the overlay.\n\nWhy is this necessary? Shouldn\u0027t this be possible programatically e.g. inside render method?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_477b2dec",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-27T22:23:35Z",
+      "side": 0,
+      "message": "Why is \u003cstrong\u003e necessary?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_a76e9128",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-27T22:23:35Z",
+      "side": 0,
+      "message": "Why headerButtonsListClassName and headerButtons ?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_07644544",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-27T22:23:35Z",
+      "side": 0,
+      "message": "yuk. We create an object just to get its options?\nshouldn\u0027t this be appended somewhere instead?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
