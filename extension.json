@@ -86,6 +86,7 @@
 		"MobileFrontend\\ContentProviders\\ContentProviderFactory": "includes/content-providers/ContentProviderFactory.php",
 		"MobileFrontend\\ContentProviders\\DefaultContentProvider": "includes/content-providers/DefaultContentProvider.php",
 		"MobileFrontend\\ContentProviders\\IContentProvider": "includes/content-providers/IContentProvider.php",
+		"MobileFrontend\\ContentProviders\\McsContentProvider": "includes/content-providers/McsContentProvider.php",
 		"MobileFrontend\\ContentProviders\\MwApiContentProvider": "includes/content-providers/MwApiContentProvider.php"
 	},
 	"ResourceModules": {
@@ -1242,6 +1243,7 @@
 	"config": {
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
+		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
 		"MFEnableXAnalyticsLogging": false,
 		"MFAppPackageId": false,
 		"MFAppScheme": "http",
