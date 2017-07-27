@@ -1276,7 +1276,6 @@
 			"beta": [],
 			"base": [
 				".toc",
-				".mw-editsection",
 				".navbox",
 				".nomobile"
 			]
