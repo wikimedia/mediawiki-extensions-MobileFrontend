@@ -22,6 +22,30 @@
       "revId": "4495c6ef0aae92ade6e2ef76b234a02ce657ea69",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_072f65f4",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1290,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-27T22:01:02Z",
+      "side": 0,
+      "message": "The fact that SkinMinerva::doEditSection exists makes this a noop\n(mw-editsection is added  here:\nhttps://github.com/wikimedia/mediawiki/blob/d1cf48a397edbbe9c6a63d6f83861d676f686d07/includes/skins/Skin.php#L1574\n)",
+      "parentUuid": "4e7eab26_2705c17c",
+      "range": {
+        "startLine": 1290,
+        "startChar": 4,
+        "endLine": 1290,
+        "endChar": 21
+      },
+      "revId": "4495c6ef0aae92ade6e2ef76b234a02ce657ea69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
