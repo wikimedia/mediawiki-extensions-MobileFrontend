@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_2705c17c",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1290,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-07-27T21:57:52Z",
+      "side": 0,
+      "message": "This is done by Minerva using CSS display:none (instead of stripping), is that right?",
+      "range": {
+        "startLine": 1290,
+        "startChar": 4,
+        "endLine": 1290,
+        "endChar": 21
+      },
+      "revId": "4495c6ef0aae92ade6e2ef76b234a02ce657ea69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
