@@ -1,4 +1,5 @@
 <?php
+use MediaWiki\MediaWikiServices;
 
 class MockApiMobileView extends ApiMobileView {
 	/** @var PHPUnit_Framework_MockObject_MockObject */
@@ -126,7 +127,14 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 
 	private function getMobileViewApi( $input ) {
 		$request = new FauxRequest( $input );
-		$context = new RequestContext();
+		$context = RequestContext::getMain();
+		$skinFactory = MediaWikiServices::getInstance()->getSkinFactory();
+		// to test this is working we force the fallback skin which makes zero changes to the
+		// parser result. This means tests will reliably pass no matter what the default skin is
+		// T170624 has the background
+		$context->setSkin( $skinFactory->makeSkin( 'fallback' ) );
+		$context->setOutput( new OutputPage( $context ) );
+		$this->setMwGlobals( 'wgOut', $context->getOutput() );
 		$context->setRequest( $request );
 
 		if ( !defined( 'PAGE_IMAGES_INSTALLED' ) ) {
@@ -169,9 +177,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @covers ApiMobileView::getResult
 	 */
 	public function testView( array $input, array $expected ) {
-		// TODO: reproduce locally and fix the test
-		// @see https://phabricator.wikimedia.org/T170880
-		$this->markTestSkipped( 'Test fails on CI env, not possible to reproduce it locally ' );
 		$api = $this->getMobileViewApi( $input );
 		$this->executeMobileViewApi( $api, $expected );
 	}
