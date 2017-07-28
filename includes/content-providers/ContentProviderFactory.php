@@ -29,8 +29,9 @@ class ContentProviderFactory {
 
 		switch ( $contentProviderClass ) {
 			case self::MW_API:
+				$skinName = $out->getSkin()->getSkinName();
 				$baseUrl = $config->get( 'MFMwApiContentProviderBaseUri' );
-				return new $contentProviderClass( $baseUrl, $out );
+				return new $contentProviderClass( $baseUrl, $out, $skinName );
 			case self::PHP_PARSER:
 				return new $contentProviderClass( $html ? $html : $out->getHTML() );
 			default:
