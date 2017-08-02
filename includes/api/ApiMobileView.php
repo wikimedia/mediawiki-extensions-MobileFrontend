@@ -109,11 +109,8 @@ class ApiMobileView extends ApiBase {
 		$this->mainPage = $this->isMainPage( $title );
 		if ( $this->mainPage && $this->noHeadings ) {
 			$this->noHeadings = false;
-			if ( is_callable( [ $this, 'addWarning' ] ) ) {
-				$this->addWarning( 'apiwarn-mobilefrontend-ignoringnoheadings', 'ignoringnoheadings' );
-			} else {
-				$this->setWarning( "``noheadings'' makes no sense on the main page, ignoring" );
-			}
+			$this->addWarning( 'apiwarn-mobilefrontend-ignoringnoheadings', 'ignoringnoheadings' );
+
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
 			$resultObj->addValue( null, $moduleName,
@@ -256,15 +253,11 @@ class ApiMobileView extends ApiBase {
 			);
 		}
 		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
-			if ( is_callable( [ $this, 'addWarning' ] ) ) {
-				$this->addWarning( [
-					'apiwarn-mobilefrontend-sectionsnotfound',
-					Message::listParam( $missingSections ),
-					count( $missingSections )
-				], 'sectionsnotfound' );
-			} else {
-				$this->setWarning( 'Section(s) ' . implode( ', ', $missingSections ) . ' not found' );
-			}
+			$this->addWarning( [
+				'apiwarn-mobilefrontend-sectionsnotfound',
+				Message::listParam( $missingSections ),
+				count( $missingSections )
+			], 'sectionsnotfound' );
 		}
 		if ( $this->maxlen < 0 ) {
 			// There is more data available
@@ -295,21 +288,13 @@ class ApiMobileView extends ApiBase {
 	protected function makeTitle( $name ) {
 		$title = Title::newFromText( $name );
 		if ( !$title ) {
-			if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-				$this->dieWithError( [ 'apierror-invalidtitle', wfEscapeWikiText( $name ) ] );
-			} else {
-				$this->dieUsageMsg( [ 'invalidtitle', $name ] );
-			}
+			$this->dieWithError( [ 'apierror-invalidtitle', wfEscapeWikiText( $name ) ] );
 		}
 		if ( $title->inNamespace( NS_FILE ) ) {
 			$this->file = $this->findFile( $title );
 		}
 		if ( !$title->exists() && !$this->file ) {
-			if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-				$this->dieWithError( [ 'apierror-missingtitle' ] );
-			} else {
-				$this->dieUsageMsg( [ 'notanarticle' ] );
-			}
+			$this->dieWithError( [ 'apierror-missingtitle' ] );
 		}
 		return $title;
 	}
@@ -585,11 +570,7 @@ class ApiMobileView extends ApiBase {
 			if ( !$latest ) {
 				// https://bugzilla.wikimedia.org/show_bug.cgi?id=53378
 				// Title::exists() above doesn't seem to always catch recently deleted pages
-				if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-					$this->dieWithError( [ 'apierror-missingtitle' ] );
-				} else {
-					$this->dieUsageMsg( [ 'notanarticle' ] );
-				}
+				$this->dieWithError( [ 'apierror-missingtitle' ] );
 			}
 			$parserOptions = $this->makeParserOptions( $wp );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
@@ -615,11 +596,7 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$parserOutput = $this->getParserOutput( $wp, $parserOptions, $oldid );
 			if ( $parserOutput === false ) {
-				if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-					$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
-				} else {
-					$this->dieUsage( 'Bad revision id/title combination', 'invalidparams' );
-				}
+				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
 				return;
 			}
 			$html = $parserOutput->getText();
@@ -736,14 +713,7 @@ class ApiMobileView extends ApiBase {
 		if ( isset( $params['thumbsize'] )
 			&& ( isset( $params['thumbwidth'] ) || isset( $params['thumbheight'] ) )
 		) {
-			if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-				$this->dieWithError( 'apierror-mobilefrontend-toomanysizeparams', 'toomanysizeparams' );
-			} else {
-				$this->dieUsage(
-					"`thumbsize' is mutually exclusive with `thumbwidth' and `thumbheight'",
-					'toomanysizeparams'
-				);
-			}
+			$this->dieWithError( 'apierror-mobilefrontend-toomanysizeparams', 'toomanysizeparams' );
 		}
 
 		$file = $this->findFile( $data['image'] );
