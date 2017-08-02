@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_6b1a8f1e",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-08-02T17:50:11Z",
+      "side": 0,
+      "message": "Do you mean we\u0027re overriding the template in child classes? As far as I know the TalkOverlayBase doesn\u0027t have this template partial. It\u0027s the first time we\u0027re adding it here.",
+      "parentUuid": "4e7eab26_8771150e",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_477b2dec",
         "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
         "patchSetId": 1
