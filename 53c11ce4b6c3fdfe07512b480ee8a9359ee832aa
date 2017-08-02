@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_8ac3430a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 1,
+      "message": "Reminder: review the discussion points in the thread titled \"Using a bundler in another of our extensions\" too!",
+      "revId": "53c11ce4b6c3fdfe07512b480ee8a9359ee832aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_3cf60bd5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 1,
+      "message": "I like that you\u0027ve identified a portion of code that could be improved. Do you have another example of something that is a paradigm? If not, what are some things you do like about this example?",
+      "revId": "53c11ce4b6c3fdfe07512b480ee8a9359ee832aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

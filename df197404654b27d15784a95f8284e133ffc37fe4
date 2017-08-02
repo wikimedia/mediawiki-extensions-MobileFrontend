@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e7eab26_0a443a6d",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Are TalkOverlays a Minerva-specific functionality or something every skin (or at least multiple skins) support?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9cae1fe3",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "This look like a fundamental pattern for supplying dependencies. What do you think about asking for these in a constructor or other method?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_8771150e",
         "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
         "patchSetId": 1
@@ -54,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_bc867b68",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "I\u0027m not sure I understand this comment and would be curious to hear more. Are you thinking this should be a header tag instead? I\u0027ve read that bold is considered to only have styling effects whereas strong is a semantic structure that happens to have a default styling difference. It seems to me that a header would be preferable here but that strong isn\u0027t wrong.",
+      "parentUuid": "4e7eab26_477b2dec",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_a76e9128",
         "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
         "patchSetId": 1
@@ -71,6 +123,23 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_ca0dd242",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Do we want to namespace skin specific classes? Most of the TalkOverlay specific classes live under .talk-overlay.",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_07644544",
         "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
         "patchSetId": 1
@@ -82,6 +151,331 @@
       "writtenOn": "2017-07-27T22:23:35Z",
       "side": 0,
       "message": "yuk. We create an object just to get its options?\nshouldn\u0027t this be appended somewhere instead?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_0a11935f",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "postRender() calls _loadContent() which calls _addContent() which calls render() which, I assume, would trigger postRender(). Can this cause a loop?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_c55e1c17",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Missing @inheritdoc here and on clearSpinner().",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_fc5e4316",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "I\u0027d be interested in discussing alternatives to embedding network calls into the views themselves. This seems like it would make it difficult to test presentation. Generally speaking, this widget feels like a one-stop shop for everything that\u0027s needed in a specific use case. It works great and completely DRYs up code for that one case but probably wouldn\u0027t be very extensible for other purposes.",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_f00f5c31",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Can this responsibility be pushed up into the service?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_fc94038f",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "This is another example where the view feels like it makes too many assumptions and takes on too many responsibilities instead of emitting an event or invoking a listener\u0027s callback.",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_8516d4aa",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "There\u0027s a FIXME in PageGateway that says to return a Page object directly. I assume this hasn\u0027t been fixed yet because it\u0027s an API. Can we add a \"getPageV2()\" that does this in the mean time rather than converting a PageData object here? How is the API versioned?",
+      "range": {
+        "startLine": 126,
+        "startChar": 14,
+        "endLine": 126,
+        "endChar": 34
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_3c1dab14",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Should we keep a reference to an Icon object instead?",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 19
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_5cd0b722",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "It would be nice to match the newline spacing between methods used in the other file. This code is literally dense.",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_1cf30fd3",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Useless else :]",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9cbdbfd3",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "The boolean value of this condition is the the only real conditional and should be directly injected into `self.$confirm.prop( \u0027disabled\u0027, VALUE );` rather than using if / else.",
+      "range": {
+        "startLine": 86,
+        "startChar": 8,
+        "endLine": 86,
+        "endChar": 62
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_dcc34760",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "How does a client customize this value? Why isn\u0027t this timeout cleared in hide()?",
+      "range": {
+        "startLine": 91,
+        "startChar": 6,
+        "endLine": 91,
+        "endChar": 9
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9ce61f12",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Does the client have any seams for detecting when a save completes?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_3ceccbf1",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "This feels like a big thing for a view to do.",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_dcdca74d",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "This might read better as a separate method even if it was only used in one place. It would read best if that method could live on the error object itself.",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 5
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_1cca2f71",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Missing documentation describing any prerequisites to calling this function. For example, does the client have to login first?",
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_1c146feb",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "Are there constant symbols we should use for success (`\u0027ok\u0027`)? Hardcoding it here seems to guarantee that it will have to be hardcoded at least one other place if it is ever checked. I\u0027d actually even want to discuss symbolizing many of the other strings too.",
+      "range": {
+        "startLine": 167,
+        "startChar": 20,
+        "endLine": 167,
+        "endChar": 24
+      },
+      "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_5cf3d7e3",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2017-08-02T23:44:40Z",
+      "side": 0,
+      "message": "This module hides the data client. How does a client retry from a recoverable error like token is fugged?",
       "revId": "df197404654b27d15784a95f8284e133ffc37fe4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
