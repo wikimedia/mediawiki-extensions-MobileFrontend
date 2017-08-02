@@ -169,7 +169,8 @@ HTML;
 		$selector = '';
 		$count = 0;
 		$language = $this->getLanguage();
-		foreach ( Interwiki::getAllPrefixes( true ) as $interwiki ) {
+		$interwikiLookup = \MediaWiki\MediaWikiServices::getInstance()->getInterwikiLookup();
+		foreach ( $interwikiLookup->getAllPrefixes( true ) as $interwiki ) {
 			$code = $interwiki['iw_prefix'];
 			$name = Language::fetchLanguageName( $code, $language->getCode() );
 			if ( !$name ) {
