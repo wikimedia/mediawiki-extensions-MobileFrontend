@@ -592,7 +592,8 @@ class ApiMobileView extends ApiBase {
 				}
 			}
 			$parserOptions = $this->makeParserOptions( $wp );
-			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
+			$parserCacheKey = \MediaWiki\MediaWikiServices::getInstance()->getParserCache()->getKey( $wp,
+					$parserOptions );
 			$key = wfMemcKey(
 				'mf',
 				'mobileview',
