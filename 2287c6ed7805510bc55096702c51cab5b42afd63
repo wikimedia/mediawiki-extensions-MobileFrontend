@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_7fe2309e",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-07T19:01:52Z",
+      "side": 1,
+      "message": "Looks like 1.27 was very wrong.\nWe require at least 1.30 - so I\u0027d suggest we bump that up! Maybe in a separate preceding commit as it\u0027s unrelated to this change now?",
+      "revId": "2287c6ed7805510bc55096702c51cab5b42afd63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
