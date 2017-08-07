@@ -16,6 +16,24 @@
       "revId": "2287c6ed7805510bc55096702c51cab5b42afd63",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_7a31dee8",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-07T19:46:20Z",
+      "side": 1,
+      "message": "I\u0027m sure that commit requires 1.29 because it uses only addWarning(), on 1.28 it\u0027s going to fail so I would like to keep that change. in a follow-up patch we can update to 1.30 and put information why we\u0027re bumping to 1.30",
+      "parentUuid": "4e7eab26_7fe2309e",
+      "revId": "2287c6ed7805510bc55096702c51cab5b42afd63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
