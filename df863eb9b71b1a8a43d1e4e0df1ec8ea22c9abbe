@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_1ae8da76",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-07T20:56:15Z",
+      "side": 1,
+      "message": "once we\u0027re touching this part of code it would be nice to cache \u0027.mf-section-0\u0027 lookup. On line 124 we\u0027re checking for lookup emptiness just to do the same lookup once again.\n\n  var mfFirstSection \u003d this.$( \u0027.mf-section-0\u0027 );\n  return mfFirstSection.length? mfFirstSection : this.$( \u0027.mw-parser-output\u0027 );\n\nAlso this introduced a technical debt as `mw-parser-output` class can be overriden (https://github.com/wikimedia/mediawiki/blob/master/includes/parser/ParserOptions.php#L786) and IMHO this value shouldn\u0027t be hardcoded.",
+      "range": {
+        "startLine": 124,
+        "startChar": 8,
+        "endLine": 124,
+        "endChar": 14
+      },
+      "revId": "df863eb9b71b1a8a43d1e4e0df1ec8ea22c9abbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
