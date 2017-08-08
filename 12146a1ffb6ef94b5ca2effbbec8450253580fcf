@@ -1,0 +1,204 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_7996c998",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "this is a config variable, it\u0027s not defined as global, I\u0027m not sure if just setting up $wgMFMcsContentProviderBaseUri will work. It\u0027s better to use config in extension.json",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 30
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_b983d156",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1243,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "Should we define wgMFMcsContentProviderBaseUri ?",
+      "range": {
+        "startLine": 1243,
+        "startChar": 2,
+        "endLine": 1243,
+        "endChar": 8
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_19bea513",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "missing Wikipedia docblock",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_79afa9de",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "This class requires `allow_url_fopen` to be set. Would be nice to mention that. Also it would be nice to add @since tag",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_39b9212a",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "missing phpdocblock",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_f97399ad",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "baseUrl and out are not defined. PHP will silently define those vars upon first initialization but it would be nice to define those first.",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9980554d",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "getTitle() can return null. It\u0027s super edge case but still can happen. Probably this check is not necessary but defensive programming is always a plus",
+      "range": {
+        "startLine": 27,
+        "startChar": 11,
+        "endLine": 27,
+        "endChar": 27
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_395a8123",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "[Important]\n\nhttp://docs.php.net/file_get_contents\n\nNote: If you\u0027re opening a URI with special characters, such as spaces, you need to encode the URI with urlencode().",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_59b42d33",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "[Important] `file_get_contents` can return false, jsond_decode( false, true ) will return null, which isn\u0027t bool and it will throw notices while accessing $json as associative array.",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_f9d7194d",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-08T18:45:33Z",
+      "side": 1,
+      "message": "I like this idea, onyl thing I would recommend is a single return point plus extract the if(){} body to a separate function, something like that:\n\n  $html \u003d \u0027\u0027;\n  if ( $json !\u003d\u003d false ) {\n    $html \u003d $this-\u003ebuildHTML ( $json );\n  }\n  return $html;",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
