@@ -223,7 +223,7 @@
 				width = $placeholder.attr( 'data-width' ),
 				height = $placeholder.attr( 'data-height' ),
 				// Image will start downloading
-				$downloadingImage = $( '<img/>' );
+				$downloadingImage = $( '<img>' );
 
 			// When the image has loaded
 			$downloadingImage.on( 'load', function () {

@@ -265,7 +265,7 @@
 			}
 			this.gateway.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
 				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
-				self.sectionLine = $( '<div/>' ).html( parsedSectionLine ).text();
+				self.sectionLine = $( '<div>' ).html( parsedSectionLine ).text();
 				new Section( {
 					el: self.$preview,
 					text: parsedText
