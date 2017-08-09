@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_3d958689",
+        "filename": "resources/mobile.watchstar/watchstar.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-09T20:42:20Z",
+      "side": 1,
+      "message": "It doesnt\u0027 look like this works. It needs to be on the \u003cbutton\u003e element... :/",
+      "revId": "5b3e68e62bd09a5438cb146c55da7b933f53e760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
