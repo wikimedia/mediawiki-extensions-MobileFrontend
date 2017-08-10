@@ -8,6 +8,7 @@ use OutputPage;
 class ContentProviderFactory {
 	const MW_API = 'MobileFrontend\\ContentProviders\\MwApiContentProvider';
 	const PHP_PARSER = 'MobileFrontend\\ContentProviders\\DefaultContentProvider';
+	const MCS_API = 'MobileFrontend\\ContentProviders\\McsContentProvider';
 
 	/**
 	 * Create an instance of IContentProvider
@@ -28,6 +29,9 @@ class ContentProviderFactory {
 		}
 
 		switch ( $contentProviderClass ) {
+			case self::MCS_API:
+				$baseUrl = $config->get( 'MFMcsContentProviderBaseUri' );
+				return new $contentProviderClass( $baseUrl, $out );
 			case self::MW_API:
 				$skinName = $out->getSkin()->getSkinName();
 				$baseUrl = $config->get( 'MFMwApiContentProviderBaseUri' );
