@@ -609,4 +609,36 @@ class MobileContextTest extends MediaWikiTestCase {
 			[ true, true ],
 		];
 	}
+
+	/**
+	 * @dataProvider provideShouldStripResponsiveImages
+	 * @covers MobileContext::shouldStripResponsiveImages
+	 */
+	public function testShouldStripResponsiveImages(
+		$expected,
+		$forceMobileView,
+		$wgMFStripResponsiveImages,
+		$stripResponsiveImages = null
+	) {
+		$context = MobileContext::singleton();
+		$context->setForceMobileView( $forceMobileView );
+
+		$this->setMwGlobals(
+			'wgMFStripResponsiveImages',
+			$wgMFStripResponsiveImages
+		);
+
+		$context->setStripResponsiveImages( $stripResponsiveImages );
+
+		$this->assertEquals( $expected, $context->shouldStripResponsiveImages() );
+	}
+
+	public static function provideShouldStripResponsiveImages() {
+		return [
+			[ true, true, true ],
+			[ false, true, false ],
+			[ false, false, true ],
+			[ false, true, true, false ],
+		];
+	}
 }

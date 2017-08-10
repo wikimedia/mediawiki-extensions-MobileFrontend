@@ -1159,7 +1159,8 @@ class MobileContext extends ContextSource {
 	 */
 	public function shouldStripResponsiveImages() {
 		if ( $this->stripResponsiveImagesOverride === null ) {
-			return $this->getMFConfig()->get( 'MFStripResponsiveImages' );
+			return $this->shouldDisplayMobileView()
+				&& $this->getMFConfig()->get( 'MFStripResponsiveImages' );
 		} else {
 			return $this->stripResponsiveImagesOverride;
 		}
