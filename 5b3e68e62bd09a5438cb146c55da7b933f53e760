@@ -16,6 +16,24 @@
       "revId": "5b3e68e62bd09a5438cb146c55da7b933f53e760",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_5df172c7",
+        "filename": "resources/mobile.watchstar/watchstar.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2017-08-10T13:32:56Z",
+      "side": 1,
+      "message": "There is some browser dependent stuff going on here....\n\nalso, this of course fixes just one of the problems, let me move this into Minerva instead and fix it for all page actions.",
+      "parentUuid": "4e7eab26_3d958689",
+      "revId": "5b3e68e62bd09a5438cb146c55da7b933f53e760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
