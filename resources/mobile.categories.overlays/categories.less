@@ -12,12 +12,13 @@
 
 	li {
 		display: inline-block;
-		border-left: 1px solid @colorGray13;
 		margin: 0 0 0 -1px;
-		border-bottom: 1px solid @colorGray13;
-		text-align: center;
-		line-height: 1.5;
+		border-width: 0 0 1px 1px;
+		border-style: solid;
+		border-color: @colorGray12;
 		padding: 5px 0 0;
+		line-height: 1.5;
+		text-align: center;
 
 		a {
 			display: block;
@@ -27,7 +28,7 @@
 		}
 
 		&.selected a {
-			border-bottom: solid 3px @colorProgressive;
+			border-bottom-color: @colorProgressive;
 			font-weight: bold;
 		}
 	}
