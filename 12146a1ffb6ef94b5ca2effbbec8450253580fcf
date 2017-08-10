@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_eab5f9ca",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1243,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e7eab26_b983d156",
+      "range": {
+        "startLine": 1243,
+        "startChar": 2,
+        "endLine": 1243,
+        "endChar": 8
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_19bea513",
         "filename": "includes/content-providers/McsContentProvider.php",
         "patchSetId": 2
@@ -65,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_aaaff176",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "what\u0027s that?\nJust copying patterns in other content providers...",
+      "parentUuid": "4e7eab26_19bea513",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_79afa9de",
         "filename": "includes/content-providers/McsContentProvider.php",
         "patchSetId": 2
@@ -76,6 +118,30 @@
       "writtenOn": "2017-08-08T18:45:33Z",
       "side": 1,
       "message": "This class requires `allow_url_fopen` to be set. Would be nice to mention that. Also it would be nice to add @since tag",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_0ac16533",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Wouldn\u0027t a since refer to MobileFrontend? MobileFrontend is not versioned. What would such a value say (I ask as we haven\u0027t used this anywhere before)",
+      "parentUuid": "4e7eab26_79afa9de",
       "range": {
         "startLine": 8,
         "startChar": 6,
@@ -111,6 +177,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_2abc61b0",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Unused. Removed.",
+      "parentUuid": "4e7eab26_39b9212a",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_f97399ad",
         "filename": "includes/content-providers/McsContentProvider.php",
         "patchSetId": 2
@@ -122,6 +212,24 @@
       "writtenOn": "2017-08-08T18:45:33Z",
       "side": 1,
       "message": "baseUrl and out are not defined. PHP will silently define those vars upon first initialization but it would be nice to define those first.",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_0ad88521",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e7eab26_f97399ad",
       "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -168,6 +276,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_ea03b977",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e7eab26_395a8123",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_59b42d33",
         "filename": "includes/content-providers/McsContentProvider.php",
         "patchSetId": 2
@@ -196,6 +322,24 @@
       "writtenOn": "2017-08-08T18:45:33Z",
       "side": 1,
       "message": "I like this idea, onyl thing I would recommend is a single return point plus extract the if(){} body to a separate function, something like that:\n\n  $html \u003d \u0027\u0027;\n  if ( $json !\u003d\u003d false ) {\n    $html \u003d $this-\u003ebuildHTML ( $json );\n  }\n  return $html;",
+      "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_2aea219d",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-10T15:08:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e7eab26_f9d7194d",
       "revId": "12146a1ffb6ef94b5ca2effbbec8450253580fcf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
