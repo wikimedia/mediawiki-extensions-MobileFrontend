@@ -780,6 +780,10 @@ class MobileFrontendHooks {
 				);
 			}
 
+			// In mobile mode MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
+			// We load MediaWiki:Mobile.css/js instead
+			$out->addModules( [ 'mobile.site' ] );
+
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
 
