@@ -2,34 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"Sahran",
-			"Tel'et"
+			"Tel'et",
+			"Uzdil"
 		]
 	},
-	"mobile-frontend-account-create-submit": "خەتلىتىش",
-	"mobile-frontend-back-to-top-of-section": "كەينىگە بىر ئابزاس داجى",
-	"mobile-frontend-changeslist-ip": "ئاتسىز ئىشلەتكۈچى",
 	"mobile-frontend-clear-search": "تازىلا",
 	"mobile-frontend-diffview-anonymous": "ئاتسىز ئىشلەتكۈچى",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|قېتىم|قېتىم}} تەھرىرلەنگەن",
 	"mobile-frontend-featured-article": "بۈگۈنكى ئالاھىدە ماقالە",
-	"mobile-frontend-footer-contact": "ئالاقەداش",
-	"mobile-frontend-images-status": "سۈرەتلەر",
-	"mobile-frontend-main-menu-account-create": "ھېسابات قۇر",
-	"mobile-frontend-main-menu-featured": "ئالاھىدىلىك",
 	"mobile-frontend-missing-image": "سۈرەت",
-	"mobile-frontend-page-menu-history": "تارىخ",
-	"mobile-frontend-password": "پارول:",
-	"mobile-frontend-password-confirm-placeholder": "پارولنى مۇقىملاشتۇرۇڭ",
-	"mobile-frontend-password-placeholder": "پارول",
 	"mobile-frontend-privacy-link-text": "شەخسىي سىر",
-	"mobile-frontend-regular-site": "بۇ بەتنى ئەسلى {{SITENAME}} دا كۆرسەت",
-	"mobile-frontend-search-submit": "يۆتكەل",
-	"mobile-frontend-sign-up-heading": "خەتلىتىش",
 	"mobile-frontend-view": "يان تېلېفون كۆرۈنۈشى",
 	"mobile-frontend-view-desktop": "ئۈستەلئۈستى",
-	"mobile-frontend-view-mobile": "يانفون",
 	"mobile-frontend-watchlist-filter-all": "ھەممىسى",
 	"mobile-frontend-watchlist-filter-articles": "ماقالىلەر",
 	"mobile-frontend-watchlist-filter-other": "باشقا",
-	"mobile-frontend-watchlist-filter-talk": "مۇنازىرە"
+	"mobile-frontend-watchlist-filter-talk": "مۇنازىرە",
+	"tag-mobile_edit": "يانفون نەشىرىنى تەھرىرلەش",
+	"tag-mobile_web_edit": "يانفون بېتىنى تەھرىرلەش"
 }
