@@ -47,7 +47,7 @@ class ApiWebappManifest extends ApiBase {
 		$resultObj->addValue( null, 'icons', $icons );
 
 		$main = $this->getMain();
-		$main->setCacheControl( [ 's-maxage'=>86400, 'max-age'=>86400 ] );
+		$main->setCacheControl( [ 's-maxage' => 86400, 'max-age' => 86400 ] );
 		$main->setCacheMode( 'public' );
 	}
 

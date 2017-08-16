@@ -72,7 +72,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		# Show watchlist feed if that person is an editor
 		$watchlistEditCountThreshold = $this->getConfig()->get( 'MFWatchlistEditCountThreshold' );
-		$defaultView = $this->getUser()->getEditCount() > $watchlistEditCountThreshold  ? 'feed' : 'a-z';
+		$defaultView = $this->getUser()->getEditCount() > $watchlistEditCountThreshold ? 'feed' : 'a-z';
 		$this->view = $req->getVal( 'watchlistview', $defaultView );
 
 		$this->filter = $req->getVal( 'filter', 'all' );

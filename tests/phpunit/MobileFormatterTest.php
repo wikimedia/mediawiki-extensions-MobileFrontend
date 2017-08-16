@@ -84,7 +84,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @covers MobileFormatter::skipLazyLoadingForSmallDimensions
 	 */
 	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
-		$smallPic =  '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
+		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
 		$enableSections = function ( MobileFormatter $mf ) {
 			$mf->enableExpandableSections();
 		};

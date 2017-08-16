@@ -193,7 +193,7 @@ class MobileFrontendHooks {
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
 		$context = MobileContext::singleton();
 		$title = $context->getTitle();
-		$config =  $context->getMFConfig();
+		$config = $context->getMFConfig();
 
 		if ( !$title ) {
 			return true;
@@ -428,8 +428,8 @@ class MobileFrontendHooks {
 			'wgMFSearchGenerator' => $config->get( 'MFSearchGenerator' ),
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => [
-				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
-				'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
+				'tiny' => MobilePage::TINY_IMAGE_WIDTH,
+				'small' => MobilePage::SMALL_IMAGE_WIDTH,
 			],
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),

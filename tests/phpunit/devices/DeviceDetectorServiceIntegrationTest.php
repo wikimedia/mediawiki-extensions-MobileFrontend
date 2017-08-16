@@ -62,7 +62,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	public function test_it_should_handle_a_request_from_desktop_browsers() {
-		$properties =  $this->detectDeviceProperties();
+		$properties = $this->detectDeviceProperties();
 
 		$this->assertFalse( $properties->isMobileDevice() );
 		$this->assertFalse( $properties->isTabletDevice() );
@@ -76,7 +76,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 
 		$this->request->setHeader( 'X-Subdomain', 'M' );
 
-		$properties =  $this->detectDeviceProperties();
+		$properties = $this->detectDeviceProperties();
 
 		$this->assertTrue( $properties->isMobileDevice() );
 		$this->assertFalse( $properties->isTabletDevice() );
@@ -90,7 +90,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 
 		$this->server[ 'AMF_DEVICE_IS_TABLET' ] = 'true';
 
-		$properties =  $this->detectDeviceProperties();
+		$properties = $this->detectDeviceProperties();
 
 		$this->assertFalse(
 			$properties->isMobileDevice(),

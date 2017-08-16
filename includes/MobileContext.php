@@ -157,7 +157,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getMFConfig() {
 		/** @var Config $config */
-		$config =  MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		return $config;
 	}
 
