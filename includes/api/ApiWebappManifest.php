@@ -27,7 +27,7 @@ class ApiWebappManifest extends ApiBase {
 
 		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
 		if ( $appleTouchIcon !== false ) {
-			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_RELATIVE );
+			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_CURRENT );
 			$request = MWHttpRequest::factory( $appleTouchIconUrl );
 			$request->execute();
 			$appleTouchIconContent = $request->getContent();
