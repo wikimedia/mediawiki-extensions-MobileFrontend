@@ -5,7 +5,7 @@
 		user = M.require( 'mobile.startup/user' );
 	/**
 	 * Overlay for talk page
-	 * @extends Overlay
+	 * @extends TalkOverlayBase
 	 * @class TalkOverlay
 	 * @uses Page
 	 * @uses TalkSectionOverlay
