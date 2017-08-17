@@ -41,7 +41,7 @@
 		 * @param {jQuery.Event} ev
 		 */
 		onOptin: function ( ev ) {
-			$( ev.currentTarget ).closest( 'form' ).submit();
+			this.$( ev.currentTarget ).closest( 'form' ).submit();
 		}
 	} );
 

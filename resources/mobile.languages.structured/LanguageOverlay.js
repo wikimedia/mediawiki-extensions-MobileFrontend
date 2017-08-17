@@ -73,13 +73,14 @@
 		onLinkClick: function ( ev ) {
 			var $link = this.$( ev.currentTarget ),
 				lang = $link.attr( 'lang' ),
+				self = this,
 				$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
 
 			util.saveLanguageUsageCount( lang, util.getFrequentlyUsedLanguages() );
 
 			// find the index of the clicked language in the list of visible results
 			$visibleLanguageLinks.each( function ( i, link ) {
-				if ( $( link ).hasClass( lang ) ) {
+				if ( self.$( link ).hasClass( lang ) ) {
 					return false;
 				}
 			} );
@@ -90,7 +91,7 @@
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		onSearchInput: function ( ev ) {
-			this.filterLanguages( $( ev.target ).val().toLowerCase() );
+			this.filterLanguages( this.$( ev.target ).val().toLowerCase() );
 		},
 
 		/**

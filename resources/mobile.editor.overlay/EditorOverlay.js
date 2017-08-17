@@ -1,3 +1,4 @@
+/* global $ */
 ( function ( M, $ ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		Section = M.require( 'mobile.startup/Section' ),
@@ -114,7 +115,7 @@
 		 */
 		onClickContinue: function ( ev ) {
 			// handle the click on "Edit without logging in"
-			if ( this.options.isAnon && $( ev.target ).hasClass( 'anonymous' ) ) {
+			if ( this.options.isAnon && this.$( ev.target ).hasClass( 'anonymous' ) ) {
 				this._showEditorAfterWarning();
 				return false;
 			}
@@ -302,6 +303,8 @@
 			var scrollTop;
 
 			if ( !this.$scrollContainer ) {
+				// FIXME: We are using global jQuery here which suggests this should be passed as an option to the
+				// View or should make use of an event.
 				this.$scrollContainer = $( OO.ui.Element.static.getClosestScrollableContainer( this.$content[ 0 ] ) );
 				this.$content.css( 'padding-bottom', this.$scrollContainer.height() * 0.6 );
 			}

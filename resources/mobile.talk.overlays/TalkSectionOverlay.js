@@ -54,7 +54,7 @@
 		 */
 		postRender: function () {
 			TalkOverlayBase.prototype.postRender.apply( this );
-			this.$saveButton = $( '.save-button' );
+			this.$saveButton = this.$( '.save-button' );
 			if ( !this.options.section ) {
 				this.renderFromApi( this.options );
 			} else {

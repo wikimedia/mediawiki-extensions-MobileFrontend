@@ -2,7 +2,8 @@
 
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
-		icons = M.require( 'mobile.startup/icons' );
+		icons = M.require( 'mobile.startup/icons' ),
+		spinner = icons.spinner();
 
 	/**
 	 * Get the id of the section $el belongs to.
@@ -121,7 +122,7 @@
 		 * @private
 		 */
 		_onPageCenterClick: function ( ev ) {
-			var $target = $( ev.target );
+			var $target = this.$( ev.target );
 
 			// Make sure the menu is open and we are not clicking on the menu button
 			if (
@@ -182,7 +183,7 @@
 			function _loadImages() {
 
 				imagePlaceholders = $.grep( imagePlaceholders, function ( placeholder ) {
-					var $placeholder = $( placeholder );
+					var $placeholder = self.$( placeholder );
 
 					if (
 						mw.viewport.isElementCloseToViewport( placeholder, offset ) &&
@@ -279,7 +280,7 @@
 
 			if ( !$content.data( 'are-references-loaded' ) ) {
 				$content.children().addClass( 'hidden' );
-				$spinner = $( icons.spinner().toHtmlString() ).prependTo( $content );
+				$spinner = spinner.$el.prependTo( $content );
 
 				// First ensure we retrieve all of the possible lists
 				return gateway.getReferencesLists( data.page )
@@ -347,12 +348,12 @@
 				licensePlural = mw.language.convertNumber( mfLicense.plural );
 
 			if ( mfLicense.link ) {
-				if ( $( '#footer-places-terms-use' ).length > 0 ) {
+				if ( this.$( '#footer-places-terms-use' ).length > 0 ) {
 					licenseMsg = mw.msg(
 						'mobile-frontend-editor-licensing-with-terms',
 						mw.message(
 							'mobile-frontend-editor-terms-link',
-							$( '#footer-places-terms-use a' ).attr( 'href' )
+							this.$( '#footer-places-terms-use a' ).attr( 'href' )
 						).parse(),
 						mfLicense.link,
 						licensePlural

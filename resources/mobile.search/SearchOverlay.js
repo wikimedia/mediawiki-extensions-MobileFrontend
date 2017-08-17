@@ -79,6 +79,7 @@
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).options,
 			searchTerm: '',
+			// FIXME: Do not use global $
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
@@ -213,7 +214,7 @@
 		 * @param {jQuery.Event} ev
 		 */
 		onClickResult: function ( ev ) {
-			var $link = $( ev.currentTarget ),
+			var $link = this.$( ev.currentTarget ),
 				$result = $link.closest( 'li' );
 
 			/**

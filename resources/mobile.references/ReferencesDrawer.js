@@ -118,7 +118,7 @@
 		 * @return {boolean} False to cancel the native event
 		 */
 		showNestedReference: function ( ev ) {
-			var $dest = $( ev.target );
+			var $dest = this.$( ev.target );
 
 			this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text() );
 			// Don't hide the already shown drawer via propagation and stop default scroll behaviour.
