@@ -21,7 +21,7 @@ class MobileContext extends ContextSource {
 	const LAZY_LOAD_IMAGES_COOKIE_VALUE = 'A';
 	const LAZY_LOAD_REFERENCES_COOKIE_NAME = 'mfLazyLoadReferences';
 	const LAZY_LOAD_REFERENCES_COOKIE_VALUE = 'A';
-
+	const LOGGER_CHANNEL = 'mobile';
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
 	 * @var string $mobileMode

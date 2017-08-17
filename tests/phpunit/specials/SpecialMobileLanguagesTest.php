@@ -115,6 +115,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider providerProcessLanguages
 	 * @covers SpecialMobileLanguages::processLanguages
+	 * @covers SpecialMobileLanguages::isLanguageObjectValid
 	 */
 	public function testProcessLanguages( $langlinks, $expected ) {
 		$apiResult = [
@@ -131,5 +132,39 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 			$method->invokeArgs( $sp, [ $apiResult ] ),
 			'Property langname should be added, URL should be transformed, and languages should be sorted.'
 		);
+	}
+
+	/**
+	 * Test an edge case when URL key is missing in langObject
+	 *
+	 * @covers SpecialMobileLanguages::processLanguages
+	 * @covers SpecialMobileLanguages::isLanguageObjectValid
+	 */
+	public function testProcessLanguagesWhenURLKeyIsMissing() {
+		$testUri = 'http://localhost/test';
+		$langObject = [
+			'lang' => 'pl',
+			'title' => 'Polski'
+		];
+		$expected = [];
+
+		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->once() )
+			->method( 'warning' )
+			->with( $this->isType( 'string' ), $this->equalTo(
+				[
+					'uri' => $testUri,
+					'langObject' => $langObject
+				]
+		) );
+		$this->setLogger( MobileContext::LOGGER_CHANNEL, $loggerMock );
+
+		$requestMock = $this->getMock( FauxRequest::class );
+		$requestMock->expects( $this->once() )
+			->method( 'getFullRequestURL' )
+			->willReturn( $testUri );
+
+		RequestContext::getMain()->setRequest( $requestMock );
+		$this->testProcessLanguages( [ $langObject ], $expected );
 	}
 }

@@ -58,15 +58,14 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			// Set the name of each language based on the system list of language names
 			$languageMap = Language::fetchLanguageNames();
 			$languages = $page['langlinks'];
-			foreach ( $page['langlinks'] as $code => $langObject ) {
-				if ( !isset( $languageMap[$langObject['lang']] ) ) {
-					// Bug T93500: DB might still have preantiquated rows with bogus languages
-					unset( $languages[$code] );
+			foreach ( $page['langlinks'] as $index => $langObject ) {
+				if ( !$this->isLanguageObjectValid( $languageMap, $langObject ) ) {
+					unset( $languages[$index] );
 					continue;
 				}
 				$langObject['langname'] = $languageMap[$langObject['lang']];
 				$langObject['url'] = MobileContext::singleton()->getMobileUrl( $langObject['url'] );
-				$languages[$code] = $langObject;
+				$languages[$index] = $langObject;
 			}
 			$compareLanguage = function ( $a, $b ) {
 				return strcasecmp( $a['langname'], $b['langname'] );
@@ -79,6 +78,33 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		}
 	}
 
+	/**
+	 * Verify if passed language object contains all necessary information
+	 *
+	 * @see https://phabricator.wikimedia.org/T93500
+	 * @see https://phabricator.wikimedia.org/T172316
+	 * @param array $languageMap array of language names, indexed by code.
+	 * @param array $langObject array of lang objects
+	 * @return bool
+	 */
+	private function isLanguageObjectValid( $languageMap, $langObject ) {
+		if ( !isset( $languageMap[$langObject['lang']] ) ) {
+			// Bug T93500: DB might still have preantiquated rows with bogus languages
+			return false;
+		}
+		if ( !array_key_exists( 'url', $langObject ) ) {
+			// Bug T172316: Some lang objects do not have url. We would like to log those instances
+			\MediaWiki\Logger\LoggerFactory::getInstance( MobileContext::LOGGER_CHANNEL )->warning(
+				'`url` key is undefined in language object',
+				[
+					'uri' => RequestContext::getMain()->getRequest()->getFullRequestURL(),
+					'langObject' => $langObject,
+				]
+			);
+			return false;
+		}
+		return true;
+	}
 	/**
 	 * Returns an array of language variants that the page is available in
 	 * @return array
