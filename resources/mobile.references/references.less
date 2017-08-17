@@ -14,13 +14,16 @@
 	max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
 	overflow-y: auto;
 	padding: @drawerPadding;
+
 	&.text {
 		font-size: 1em;
 	}
 
 	a {
+		// Removing external images here
 		background-image: none;
-		color: #5880c0;
+		color: @colorProgressive;
+		padding-right: 0;
 	}
 
 	.cite {
