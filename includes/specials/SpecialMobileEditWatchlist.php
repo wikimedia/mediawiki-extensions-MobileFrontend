@@ -221,11 +221,10 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		}
 		$out = $this->getOutput();
 		$out->addHtml( $html );
-		$out->addModules( 'skins.minerva.special.watchlist.scripts' );
+		$out->addModules( 'mobile.special.watchlist.scripts' );
 		$out->addModuleStyles(
 			[
-				'skins.minerva.special.styles',
-				'skins.minerva.special.watchlist.styles',
+				'mobile.special.watchlist.styles',
 				'mobile.pagelist.styles',
 				'mobile.pagesummary.styles',
 				'mobile.special.pagefeed.styles'

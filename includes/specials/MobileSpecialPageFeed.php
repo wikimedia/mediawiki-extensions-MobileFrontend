@@ -19,7 +19,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$out = $this->getOutput();
 		$out->addModuleStyles( [
 			'mobile.special.pagefeed.styles',
-			'skins.minerva.icons.images.scripts'
+			'mobile.special.user.icons'
 		] );
 		$this->setHeaders();
 		$out->setProperty( 'unstyledContent', true );

@@ -121,7 +121,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		) );
 
 		$output->addModuleStyles( [
-			'skins.minerva.icons.images.scripts',
+			'mobile.special.user.icons',
 			'mobile.pagesummary.styles',
 			// @todo FIXME: Don't add these styles. This is only needed for the user
 			// icon to the left of the username
