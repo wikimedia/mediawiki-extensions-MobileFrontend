@@ -27,6 +27,7 @@
 			id: 'secondary-button',
 			additionalClassNames: 'main-header-button',
 			tagName: 'a',
+			href: '#',
 			title: mw.msg( 'mobile-frontend-nearby-refresh' ),
 			label: mw.msg( 'mobile-frontend-nearby-refresh' )
 		} );
