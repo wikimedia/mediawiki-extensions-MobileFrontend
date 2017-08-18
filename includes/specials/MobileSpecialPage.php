@@ -99,7 +99,10 @@ class MobileSpecialPage extends SpecialPage {
 		$specialScriptModuleName = 'mobile.special.' . $id . '.scripts';
 
 		if ( $rl->isModuleRegistered( $specialStyleModuleName ) ) {
-			$out->addModuleStyles( $specialStyleModuleName );
+			$out->addModuleStyles( [
+				'mobile.special.styles',
+				$specialStyleModuleName
+			] );
 		}
 
 		if ( $rl->isModuleRegistered( $specialScriptModuleName ) ) {

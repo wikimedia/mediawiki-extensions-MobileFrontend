@@ -5,8 +5,8 @@
 
 /**
  * Alternate of ResourceLoaderSiteModule for mobile web.
- * Mobile.[css|js] is a temporary drop-in replacement for Common.css/js, which
- * predates Minerva and is not compatible.
+ * Mobile.[css|js] is a temporary drop-in replacement for Common.css/js which contains JS that
+ * is usually incompatible
  */
 class MobileSiteModule extends ResourceLoaderWikiModule {
 	// Should not be enabled on desktop which has ResourceLoaderSiteModule instead

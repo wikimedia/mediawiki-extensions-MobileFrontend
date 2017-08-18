@@ -3,7 +3,7 @@
 /**
  * @group MobileFrontend
  */
-class SkinMinervaTest extends MediaWikiTestCase {
+class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getGetPluralLicenseInfo
 	 * @covers MobileFrontendSkinHooks::getPluralLicenseInfo

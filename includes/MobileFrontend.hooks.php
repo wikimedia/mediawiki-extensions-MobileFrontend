@@ -830,9 +830,8 @@ class MobileFrontendHooks {
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 
-		// Remove the Minerva skin from the preferences unless Minerva has been enabled in
-		// BetaFeatures provided that the user has not set it as the default skin.
-		// FIXME: This can be removed when Minerva lives in its own repository.
+		// Remove the Minerva skin from the preferences page
+		// FIXME: This can be removed when T171644 has been resolved.
 		if ( $defaultSkin !== 'minerva' ) {
 			// Preference key/values are backwards. The value is the name of the skin. The
 			// key is the text+links to display.
@@ -1290,10 +1289,6 @@ class MobileFrontendHooks {
 		} else {
 			Hooks::register( 'UserLoginForm', 'MobileFrontendHooks::onUserLoginForm' );
 			Hooks::register( 'UserCreateForm', 'MobileFrontendHooks::onUserCreateForm' );
-		}
-
-		if ( class_exists( 'MinervaHooks' ) ) {
-			MinervaHooks::onRegistration();
 		}
 	}
 }
