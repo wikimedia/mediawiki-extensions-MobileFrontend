@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_928eb131",
+        "filename": "resources/mobile.backtotop/backtotop.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-18T15:37:50Z",
+      "side": 1,
+      "message": "@colorGray12",
+      "revId": "f301017bbecdd65599cc6290380428c7502769ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
