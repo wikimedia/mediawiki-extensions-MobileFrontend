@@ -26,8 +26,7 @@
 			name: 'refresh',
 			id: 'secondary-button',
 			additionalClassNames: 'main-header-button',
-			tagName: 'a',
-			href: '#',
+			tagName: 'button',
 			title: mw.msg( 'mobile-frontend-nearby-refresh' ),
 			label: mw.msg( 'mobile-frontend-nearby-refresh' )
 		} );
