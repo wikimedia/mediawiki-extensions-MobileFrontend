@@ -59,7 +59,7 @@
 		} );
 
 		assert.ok( overlay.$( '.add' ).length > 0, 'There is an "Add discussion" button' );
-		assert.strictEqual( $.trim( overlay.$( '.content-header' ).text() ),
+		assert.strictEqual( overlay.$( '.content-header' ).text().trim(),
 			mw.msg( 'mobile-frontend-talk-explained-empty' ),
 			'Check the header knows it is empty.' );
 	} );
@@ -75,7 +75,7 @@
 			'The text of the second item is the section heading.' );
 		assert.strictEqual( overlay.$( '.topic-title-list li a' ).data( 'id' ), 50,
 			'The data id is set.' );
-		assert.strictEqual( $.trim( overlay.$( '.content-header' ).text() ),
+		assert.strictEqual( overlay.$( '.content-header' ).text().trim(),
 			mw.msg( 'mobile-frontend-talk-explained' ),
 			'Check the header knows it is not empty.' );
 	} );
