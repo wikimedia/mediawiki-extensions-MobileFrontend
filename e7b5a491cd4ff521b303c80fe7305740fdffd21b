@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_20dbd67d",
+        "filename": "resources/mobile.fontchanger/FontChanger.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-08-22T18:46:27Z",
+      "side": 1,
+      "message": "bound?",
+      "range": {
+        "startLine": 74,
+        "startChar": 41,
+        "endLine": 74,
+        "endChar": 47
+      },
+      "revId": "e7b5a491cd4ff521b303c80fe7305740fdffd21b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
