@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
@@ -49,7 +49,7 @@
 
 		QUnit.expect( 2 );
 
-		assert.equal( $.inArray( params.prop, 'pageterms' ), -1 );
+		assert.equal( params.prop.indexOf( 'pageterms' ), -1 );
 		assert.equal( params.wbptterms, undefined );
 	} );
 
@@ -109,4 +109,4 @@
 		assert.deepEqual( params, expectedParams );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

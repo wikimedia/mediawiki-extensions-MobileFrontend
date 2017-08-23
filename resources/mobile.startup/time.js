@@ -38,8 +38,7 @@
 	 * @ignore
 	 */
 	function isRecent( delta ) {
-		var u = delta.unit;
-		return $.inArray( u, [ 'seconds', 'minutes', 'hours' ] ) > -1;
+		return [ 'seconds', 'minutes', 'hours' ].indexOf( delta.unit ) > -1;
 	}
 
 	/**

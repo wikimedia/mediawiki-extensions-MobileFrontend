@@ -95,8 +95,13 @@
 		 * @return {boolean}
 		 */
 		isVisualEditorEnabled: function () {
-			return mw.config.get( 'wgVisualEditorConfig' ) &&
-				$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
+			var ns = mw.config.get( 'wgVisualEditorConfig' ) &&
+				mw.config.get( 'wgVisualEditorConfig' ).namespaces;
+
+			return ns &&
+				ns.indexOf(
+					mw.config.get( 'wgNamespaceNumber' )
+				) > -1 &&
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
@@ -492,7 +497,7 @@
 					} else {
 						if ( key === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
-						} else if ( $.inArray( key, whitelistedErrorInfo ) > -1 ) {
+						} else if ( whitelistedErrorInfo.indexOf( key ) > -1 ) {
 							msg = response.error.info;
 						} else {
 							msg = mw.msg( 'mobile-frontend-editor-error' );

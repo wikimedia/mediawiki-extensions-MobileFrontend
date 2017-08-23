@@ -50,7 +50,7 @@
 		result.prop = result.prop.concat( mw.config.get( 'wgMFQueryPropModules' ) );
 
 		if ( displayWikibaseDescriptions[feature] ) {
-			if ( $.inArray( 'pageterms', result.prop ) === -1 ) {
+			if ( result.prop.indexOf( 'pageterms' ) === -1 ) {
 				result.prop.push( 'pageterms' );
 			}
 

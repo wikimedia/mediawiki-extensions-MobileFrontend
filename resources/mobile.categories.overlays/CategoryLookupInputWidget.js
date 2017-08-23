@@ -13,7 +13,7 @@
 		this.$element = $( '<div>' );
 		this.gateway = options.gateway;
 		this.$suggestions = options.suggestions;
-		this.categories = options.categories;
+		this.categories = options.categories || [];
 		this.$saveButton = options.saveButton;
 		options.placeholder = mw.msg( 'mobile-frontend-categories-search' );
 		OO.ui.TextInputWidget.call( this, options );
@@ -77,7 +77,7 @@
 		data.results.forEach( function ( value ) {
 			if (
 				!$el.find( 'div[data-title="' + value.title + '"]' ).length &&
-				$.inArray( value.displayTitle, self.categories ) === -1
+				self.categories.indexOf( value.displayTitle ) === -1
 			) {
 				result.push(
 					new OO.ui.MenuOptionWidget( {
