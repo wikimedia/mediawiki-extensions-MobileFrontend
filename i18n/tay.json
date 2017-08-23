@@ -8,11 +8,18 @@
 		]
 	},
 	"mobile-frontend-diffview-anonymous": "Inqing lalu’ nqu squliq cyux mbing",
+	"mobile-frontend-pointer-dismiss": "Ql’iy",
 	"mobile-frontend-editor-editing": "smr’zyut miru’",
 	"mobile-frontend-editor-editing-page": "<span><strong>smr’zyut miru’</strong> $1</span>",
+	"mobile-frontend-editor-save": "Cucun",
+	"mobile-frontend-overlay-close": "Ql’iy",
+	"mobile-frontend-references-citation": "’nagal sa",
+	"mobile-frontend-save-settings": "Cucun",
 	"mobile-frontend-terms-text": "gaga’ na awsa’ mbing",
 	"mobile-frontend-view": "Ringwa’ rsrasun",
 	"mobile-frontend-view-desktop": "tyennawpan",
+	"mobile-frontend-watchlist-a-z": "Binzyagan sa kktan",
+	"mobile-frontend-watchlist-filter-other": "Bzinah",
 	"tag-mobile_edit": "Ssr’zyut miru’ rinwa’ rsrasun",
 	"tag-mobile_web_edit": "Ani kahul sa ringwa’ rsrasun gmyah sa wangye’ na ringwa’ rsrasun, ruw sr’zyut miru’ kya la"
 }
