@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var View = M.require( 'mobile.startup/View' ),
 		Button = M.require( 'mobile.startup/Button' );
 
@@ -71,9 +71,6 @@
 				self.setPercentage( parseInt( self.fontchanger.val() ) + 10 );
 				return false;
 			} );
-			// FIXME: This should be an event and bound inside
-			// resources/mobile.special.mobileoptions.scripts.fontchanger/init.js
-			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( this, 'save' ) );
 		},
 
 		/**
@@ -92,4 +89,4 @@
 
 	M.define( 'mobile.fontchanger/FontChanger', FontChanger );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

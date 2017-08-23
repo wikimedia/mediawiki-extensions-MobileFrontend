@@ -10,5 +10,6 @@
 			} );
 
 		fontChanger.insertBefore( saveLI );
+		$( 'form.mw-mf-settings' ).on( 'submit', fontChanger.save.bind( fontChanger ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );
