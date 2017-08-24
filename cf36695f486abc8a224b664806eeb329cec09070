@@ -22,6 +22,30 @@
       "revId": "cf36695f486abc8a224b664806eeb329cec09070",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_1177ff9b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-24T15:07:38Z",
+      "side": 1,
+      "message": "Yeh, i\u0027m not sure, so i\u0027ll do the safest thing and add a FIXME and allow it here.",
+      "parentUuid": "4e7eab26_3bbe9cab",
+      "range": {
+        "startLine": 305,
+        "startChar": 28,
+        "endLine": 305,
+        "endChar": 110
+      },
+      "revId": "cf36695f486abc8a224b664806eeb329cec09070",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
