@@ -16,6 +16,7 @@
 	"mobile-frontend-categories-add-wait": "ٿاڱو شامل ڀي رهيو آهي، مهرباني ڪري انتظار ڪريو",
 	"mobile-frontend-changeslist-nocomment": "ترميمي تَتُ ڪونھي",
 	"mobile-frontend-copyright": "مواد موجود آهي $1 جي تحت، نہ تہ ٻي صورت ۾ نوٽ ڪيل آهي.",
+	"mobile-frontend-editor-abusefilter-read-more": "وڌيڪ پڙھو",
 	"mobile-frontend-editor-cancel-confirm": "ڇا توھان سچ ۾ پنھنجي ترميم ڇڏي ڏيڻ ٿا چاھيو؟",
 	"mobile-frontend-editor-licensing": "تبديليون سانڍڻ سان، توھان پنھنجون ڀاڱيداريون $1 {{PLURAL:$2|لائسنس|لائسنسن}} تحت ڏيڻ تي راضپو ڏيکاريو ٿا.",
 	"mobile-frontend-editor-previewing-page": "<span><strong>پيشِ نگاھ</strong> $1</span>",
@@ -36,9 +37,11 @@
 	"mobile-frontend-overlay-close": "بند ڪريو",
 	"mobile-frontend-privacy-link-text": "ذاتيات",
 	"mobile-frontend-save-settings": "سانڍيو",
+	"mobile-frontend-talk-fullpage": "وڪي صفحي طور پڙھو",
 	"mobile-frontend-terms-text": "استعمال جا اصول",
 	"mobile-frontend-view": "موبائل ڏيک",
 	"mobile-frontend-view-desktop": "ميزڀر",
+	"mobile-frontend-watchlist-filter-all": "سڀ",
 	"tag-mobile_edit": "موبائل ترميم",
 	"tag-mobile_web_edit": "موبائل ويب ترميم"
 }
