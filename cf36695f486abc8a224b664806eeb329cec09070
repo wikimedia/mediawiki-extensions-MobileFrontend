@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_3bbe9cab",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-08-24T10:31:10Z",
+      "side": 1,
+      "message": "From https://doc.wikimedia.org/oojs-ui/v0.17.10/js/#!/api/OO.ui.Element-static-method-getClosestScrollableContainer\n\nThis seems like it is going to traverse up the DOM and could return a dom element not in the current overlay dom element, so this.$ (which is this.$el.find won\u0027t actually work.\n\nIt seems like normal $ with a note would be the thing to do here.\n\nI\u0027m not sure if that condition can happen in practice, but it seems like a good idea.",
+      "range": {
+        "startLine": 305,
+        "startChar": 28,
+        "endLine": 305,
+        "endChar": 110
+      },
+      "revId": "cf36695f486abc8a224b664806eeb329cec09070",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
