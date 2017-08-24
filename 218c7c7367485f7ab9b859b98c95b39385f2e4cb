@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_bb928c4c",
+        "filename": "resources/mobile.categories.overlays/CategoryLookupInputWidget.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-08-24T10:17:05Z",
+      "side": 1,
+      "message": "self.categories ultimately comes from mw.config.get( \u0027wgCategories\u0027 ) which can be null, but maybe the skin.minerva.categories doesn\u0027t get output if there aren\u0027t any, so I\u0027m a bit confused. Do you need to guard somewhere against categories being null (constructor?) in here or can that not happen?",
+      "range": {
+        "startLine": 80,
+        "startChar": 9,
+        "endLine": 80,
+        "endChar": 19
+      },
+      "revId": "218c7c7367485f7ab9b859b98c95b39385f2e4cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_db97583b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2017-08-24T10:17:05Z",
+      "side": 1,
+      "message": "Can this be null? should we guard against it?",
+      "range": {
+        "startLine": 98,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 54
+      },
+      "revId": "218c7c7367485f7ab9b859b98c95b39385f2e4cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
