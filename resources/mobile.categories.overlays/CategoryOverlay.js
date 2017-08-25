@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -16,7 +16,7 @@
 	 */
 	function CategoryOverlay( options ) {
 		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( 'load', $.proxy( this, '_loadCategories' ) );
+		this.infiniteScroll.on( 'load', this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
 		M.on( 'category-added', this._loadCategories.bind( this ) );
 		Overlay.apply( this, arguments );
@@ -152,4 +152,4 @@
 
 	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

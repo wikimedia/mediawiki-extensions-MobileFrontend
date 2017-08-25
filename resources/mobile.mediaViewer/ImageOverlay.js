@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
@@ -181,7 +181,7 @@
 				self.adjustDetails();
 			} );
 
-			M.on( 'resize:throttled', $.proxy( this, '_positionImage' ) );
+			M.on( 'resize:throttled', this._positionImage.bind( this ) );
 		},
 
 		/**
@@ -260,4 +260,4 @@
 	} );
 	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

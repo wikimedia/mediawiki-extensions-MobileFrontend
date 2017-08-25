@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -90,6 +90,7 @@
 		 */
 		_loadContent: function ( options ) {
 			var self = this;
+			options = options || this.options;
 
 			// show a spinner
 			this.showSpinner();
@@ -145,7 +146,7 @@
 		 */
 		_setupAddDiscussionButton: function () {
 			var $add = this.$( '.header-action .add' );
-			M.on( 'talk-discussion-added', $.proxy( this, '_loadContent', this.options ) );
+			M.on( 'talk-discussion-added', this._loadContent.bind( this ) );
 			if ( !user.isAnon() ) {
 				$add.removeClass( 'hidden' );
 			} else {
@@ -156,4 +157,4 @@
 
 	M.define( 'mobile.talk.overlays/TalkOverlay', TalkOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

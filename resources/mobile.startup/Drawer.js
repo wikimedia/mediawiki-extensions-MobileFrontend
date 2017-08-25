@@ -50,8 +50,8 @@
 			$( function () {
 				self.appendTo( self.appendToElement );
 			} );
-			this.on( 'show', $.proxy( this, 'onShowDrawer' ) );
-			this.on( 'hide', $.proxy( this, 'onHideDrawer' ) );
+			this.on( 'show', this.onShowDrawer.bind( this ) );
+			this.on( 'hide', this.onHideDrawer.bind( this ) );
 		},
 		/**
 		 * Stop Propagation event handler
@@ -71,9 +71,9 @@
 
 			setTimeout( function () {
 				var $window = util.getWindow();
-				$window.one( 'click.drawer', $.proxy( self, 'hide' ) );
+				$window.one( 'click.drawer', self.hide.bind( self ) );
 				if ( self.closeOnScroll ) {
-					$window.one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+					$window.one( 'scroll.drawer', self.hide.bind( self ) );
 				}
 			}, self.minHideDelay );
 		},

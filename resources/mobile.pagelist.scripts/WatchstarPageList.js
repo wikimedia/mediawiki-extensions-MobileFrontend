@@ -88,12 +88,16 @@
 						 * @event watch
 						 * Fired when an article in the PageList is watched.
 						 */
-						watchstar.on( 'watch', $.proxy( self, 'emit', 'watch' ) );
+						watchstar.on( 'watch', ( function () {
+							this.emit( 'watch' );
+						} ).bind( this ) );
 						/**
 						 * @event unwatch
 						 * Fired when an article in the PageList is watched.
 						 */
-						watchstar.on( 'unwatch', $.proxy( self, 'emit', 'unwatch' ) );
+						watchstar.on( 'unwatch', ( function () {
+							this.emit( 'unwatch' );
+						} ).bind( this ) );
 					} );
 				} );
 			}

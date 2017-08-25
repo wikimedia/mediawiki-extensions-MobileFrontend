@@ -29,7 +29,7 @@
 		this.gateway = new PhotoListGateway( gatewayOptions );
 		// Set up infinite scroll
 		this.infiniteScroll = new InfiniteScroll( 1000 );
-		this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
+		this.infiniteScroll.on( 'load', this._loadPhotos.bind( this ) );
 		View.call( this, options );
 	}
 

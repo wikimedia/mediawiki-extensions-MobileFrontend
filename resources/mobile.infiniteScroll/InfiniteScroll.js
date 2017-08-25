@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var util = M.require( 'mobile.startup/util' );
 
 	/**
@@ -32,7 +32,7 @@
 	 *           } );
 	 *           // 1. Set up infinite scroll helper and listen to events
 	 *           this.infiniteScroll = new InfiniteScroll( 1000 );
-	 *           this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
+	 *           this.infiniteScroll.on( 'load', this._loadPhotos.bind( this ) );
 	 *           View.prototype.initialize.apply( this, arguments );
 	 *         },
 	 *         preRender: function () {
@@ -71,7 +71,7 @@
 		 */
 		_bindScroll: function () {
 			if ( !this._scrollHandler ) {
-				this._scrollHandler = $.proxy( this, '_onScroll' );
+				this._scrollHandler = this._onScroll.bind( this );
 				M.on( 'scroll:throttled', this._scrollHandler );
 			}
 		},
@@ -143,4 +143,4 @@
 	} );
 
 	M.define( 'mobile.infiniteScroll/InfiniteScroll', InfiniteScroll );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

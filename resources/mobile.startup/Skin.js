@@ -71,7 +71,7 @@
 		}
 
 		if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
-			M.on( 'before-section-toggled', $.proxy( this.lazyLoadReferences, this ) );
+			M.on( 'before-section-toggled', this.lazyLoadReferences.bind( this ) );
 		}
 	}
 

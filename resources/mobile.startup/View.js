@@ -294,7 +294,7 @@
 					if ( method ) {
 						// Extract event and selector from the key
 						match = key.match( delegateEventSplitter );
-						this.delegate( match[ 1 ], match[ 2 ], $.proxy( method, this ) );
+						this.delegate( match[ 1 ], match[ 2 ], method.bind( this ) );
 					}
 				}
 			}

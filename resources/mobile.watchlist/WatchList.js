@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
@@ -17,7 +17,7 @@
 
 		// Set up infinite scroll helper and listen to events
 		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( 'load', $.proxy( this, '_loadPages' ) );
+		this.infiniteScroll.on( 'load', this._loadPages.bind( this ) );
 
 		if ( options.el ) {
 			lastTitle = this.getLastTitle( options.el );
@@ -87,4 +87,4 @@
 
 	M.define( 'mobile.watchlist/WatchList', WatchList );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

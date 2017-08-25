@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Drawer = M.require( 'mobile.startup/Drawer' ),
 		util = M.require( 'mobile.startup/util' ),
 		icons = M.require( 'mobile.startup/icons' ),
@@ -66,8 +66,8 @@
 				this.$el.css( 'max-height', windowHeight / 2 );
 			}
 
-			this.on( 'show', $.proxy( this, 'onShow' ) );
-			this.on( 'hide', $.proxy( this, 'onHide' ) );
+			this.on( 'show', this.onShow.bind( this ) );
+			this.on( 'hide', this.onHide.bind( this ) );
 		},
 		/**
 		 * Make body not scrollable
@@ -128,4 +128,4 @@
 	} );
 
 	M.define( 'mobile.references/ReferencesDrawer', ReferencesDrawer ); // resource-modules-disable-line
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

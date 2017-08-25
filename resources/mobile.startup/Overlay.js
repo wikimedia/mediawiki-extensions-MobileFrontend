@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var View = M.require( 'mobile.startup/View' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
@@ -130,8 +130,8 @@
 		setupEmulatedIosOverlayScrolling: function () {
 			var self = this;
 			if ( this.isIos && this.hasFixedHeader ) {
-				this.$( '.overlay-content' ).on( 'touchstart', $.proxy( this, 'onTouchStart' ) )
-					.on( 'touchmove', $.proxy( this, 'onTouchMove' ) );
+				this.$( '.overlay-content' ).on( 'touchstart', this.onTouchStart.bind( this ) )
+					.on( 'touchmove', this.onTouchMove.bind( this ) );
 				// wait for things to render before doing any calculations
 				setTimeout( function () {
 					self._fixIosHeader( self.$( 'textarea, input' ) );
@@ -200,7 +200,7 @@
 			}
 
 			if ( this.closeOnContentTap ) {
-				$html.find( '#mw-mf-page-center' ).one( 'click', $.proxy( this, 'hide' ) );
+				$html.find( '#mw-mf-page-center' ).one( 'click', this.hide.bind( this ) );
 			}
 
 			// prevent scrolling and bouncing outside of .overlay-content
@@ -328,4 +328,4 @@
 	M.define( 'mobile.startup/Overlay', Overlay )
 		.deprecate( 'mobile.overlays/Overlay' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

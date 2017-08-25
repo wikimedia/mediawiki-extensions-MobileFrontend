@@ -12,7 +12,7 @@
 	 * @param {Router} router
 	 */
 	function OverlayManager( router ) {
-		router.on( 'route', $.proxy( this, '_checkRoute' ) );
+		router.on( 'route', this._checkRoute.bind( this ) );
 		this.router = router;
 		// use an object instead of an array for entries so that we don't
 		// duplicate entries that already exist
@@ -44,7 +44,7 @@
 		 */
 		_showOverlay: function ( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
-			overlay.once( '_om_hide', $.proxy( this, '_onHideOverlay' ) );
+			overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
 
 			overlay.show();
 		},
@@ -67,7 +67,7 @@
 
 			// if closing prevented, reattach the callback
 			if ( !result ) {
-				overlay.once( '_om_hide', $.proxy( this, '_onHideOverlay' ) );
+				overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
 			}
 
 			return result;
