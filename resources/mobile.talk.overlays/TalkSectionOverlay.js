@@ -134,7 +134,7 @@
 
 					if (
 						response.error &&
-						$.inArray( response.error.code, whitelistedErrorInfo ) > -1
+						whitelistedErrorInfo.indexOf( response.error.code ) > -1
 					) {
 						msg = response.error.info;
 					} else {
