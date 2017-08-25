@@ -107,7 +107,7 @@
 	"mobile-frontend-expand-sections-status": "모든 문단 확장",
 	"mobile-frontend-fontchanger-link": "글자 크기",
 	"mobile-frontend-fontchanger-desc": "읽기 쉽도록 글자의 크기를 늘리거나 줄입니다.",
-	"mobile-frontend-featured-article": "오늘의 알찬 내용",
+	"mobile-frontend-featured-article": "오늘의 알찬 글",
 	"mobile-frontend-generic-404-desc": "찾고 있는 문서를 찾을 수 없습니다.",
 	"mobile-frontend-generic-404-title": "오류 - 페이지를 찾을 수 없습니다",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} 프로젝트는 여러분과 같은 사람들이 만듭니다.</strong><br />기여하려면 로그인하세요.",

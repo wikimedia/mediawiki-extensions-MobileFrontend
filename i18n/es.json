@@ -269,7 +269,7 @@
 	"apihelp-mobileview-param-offset": "Simular que todos los resultados textuales son una cadena y devolver la subcadena a partir de este punto.",
 	"apihelp-mobileview-param-maxlen": "Simular que todos los resultados textuales son una cadena y limitar los resultados a esta longitud.",
 	"apihelp-mobileview-param-thumbsize": "Tamaño máximo de miniatura",
-	"apihelp-mobileview-param-thumbwidth": "Ancho máximo de miniaturas.",
+	"apihelp-mobileview-param-thumbwidth": "Anchura máxima de las miniaturas.",
 	"apihelp-mobileview-param-thumbheight": "Altura máxima de miniaturas.",
 	"apihelp-mobileview-param-revision": "Solicitar una revisión en particular.",
 	"apihelp-mobileview-example-1": "Obtener información acerca de la sección 0 de [[Doom metal]]",
