@@ -22,6 +22,30 @@
       "revId": "6a4c8148a2056ff24d6427eb1abef06b326a7a71",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_cf7a28b8",
+        "filename": "resources/mobile.backtotop/BackToTopOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-25T20:35:38Z",
+      "side": 1,
+      "message": "Whoooops!",
+      "parentUuid": "4e7eab26_4fbf185c",
+      "range": {
+        "startLine": 53,
+        "startChar": 4,
+        "endLine": 53,
+        "endChar": 20
+      },
+      "revId": "6a4c8148a2056ff24d6427eb1abef06b326a7a71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
