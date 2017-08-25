@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_4fbf185c",
+        "filename": "resources/mobile.backtotop/BackToTopOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-08-25T20:28:53Z",
+      "side": 1,
+      "message": "mw.log.deprecate() takes (obj,key,value) and is for creating a deprecated property that, on access, will send a statsd increment for a given key and log a message with mw.log.warn().\n\nI think you\u0027re looking for mw.log.warn instead?",
+      "range": {
+        "startLine": 53,
+        "startChar": 4,
+        "endLine": 53,
+        "endChar": 20
+      },
+      "revId": "6a4c8148a2056ff24d6427eb1abef06b326a7a71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
