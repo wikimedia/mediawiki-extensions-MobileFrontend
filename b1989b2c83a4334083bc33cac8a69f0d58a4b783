@@ -22,6 +22,30 @@
       "revId": "b1989b2c83a4334083bc33cac8a69f0d58a4b783",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_0fb59077",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-25T20:31:46Z",
+      "side": 1,
+      "message": "Thanks Krinkle what you write makes sense.\n\nThis sounds like it might relate to the other changes I\u0027ve begun in https://gerrit.wikimedia.org/r/#/c/373963/1 - so I\u0027ll need to work out the best way of getting to the same end result.\n\nMy brain is a little fried from dissecting this and trying to review $.Deferred and $.proxy usages so I\u0027ll take another look Monday, but what you write makes sense.. It just might make more sense to change the $.proxy usages after changing the $.Deferreds",
+      "parentUuid": "4e7eab26_2f93ac05",
+      "range": {
+        "startLine": 276,
+        "startChar": 13,
+        "endLine": 276,
+        "endChar": 41
+      },
+      "revId": "b1989b2c83a4334083bc33cac8a69f0d58a4b783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
