@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_b21e1f0f",
+        "filename": "resources/mobile.startup/images/error.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-08-25T22:11:40Z",
+      "side": 1,
+      "message": "This is completely the same icon as above. What\u0027s the reason?",
+      "revId": "1e669bbfdcea31fc38bba1fe76a18bf3353f1b99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
