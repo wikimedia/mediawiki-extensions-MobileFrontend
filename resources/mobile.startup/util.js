@@ -8,6 +8,15 @@
 	 */
 	util = {
 		/**
+		 * Wrapper class for the Deferred method
+		 *
+		 * @method
+		 * @return {jQuery.Deferred}
+		 */
+		Deferred: function () {
+			return $.Deferred();
+		},
+		/**
 		 * Adds a class to the document
 		 *
 		 * @method

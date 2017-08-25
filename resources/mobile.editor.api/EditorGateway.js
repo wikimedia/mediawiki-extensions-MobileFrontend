@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var util = M.require( 'mobile.startup/util' );
 
 	/**
@@ -32,16 +32,20 @@
 		getContent: function () {
 			var options,
 				self = this,
-				result = $.Deferred();
+				// Using this.api.get which returns a promise
+				result = util.Deferred();
 
 			if ( this.content !== undefined ) {
-				result.resolve( this.content );
+				result.resolve( {
+					text: self.content,
+					user: self.userinfo
+				} );
 			} else {
 				options = {
 					action: 'query',
 					prop: 'revisions',
 					rvprop: [ 'content', 'timestamp' ],
-					titles: this.title,
+					titles: self.title,
 					// get block information for this user
 					meta: 'userinfo',
 					uiprop: 'blockinfo',
@@ -74,11 +78,14 @@
 					}
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
+					self.userinfo = resp.query.userinfo;
 
-					result.resolve( self.content, resp.query.userinfo );
+					result.resolve( {
+						text: self.content || '',
+						user: self.userinfo
+					} );
 				} );
 			}
-
 			return result;
 		},
 
@@ -123,13 +130,14 @@
 		 */
 		save: function ( options ) {
 			var self = this,
-				result = $.Deferred();
+				result = util.Deferred();
 
 			options = options || {};
 
 			/**
 			 * Save content. Make an API request.
 			 * @ignore
+			 * @return {jQuery.Deferred}
 			 */
 			function saveContent() {
 				var apiOptions = {
@@ -215,14 +223,16 @@
 							details: 'unknown'
 						} );
 					}
-				} ).fail( $.proxy( result, 'reject', {
-					type: 'error',
-					details: 'http'
-				} ) );
+				} ).fail( function () {
+					result.reject( {
+						type: 'error',
+						details: 'http'
+					} );
+				} );
+				return result;
 			}
 
-			saveContent();
-			return result;
+			return saveContent();
 		},
 
 		/**
@@ -242,7 +252,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		getPreview: function ( options ) {
-			var result = $.Deferred(),
+			var result = util.Deferred(),
 				sectionLine = '',
 				self = this;
 
@@ -269,11 +279,16 @@
 					) {
 						sectionLine = resp.parse.sections[0].line;
 					}
-					result.resolve( resp.parse.text['*'], sectionLine );
+					result.resolve( {
+						text: resp.parse.text['*'],
+						line: sectionLine
+					} );
 				} else {
 					result.reject();
 				}
-			} ).fail( $.proxy( result, 'reject' ) );
+			} ).fail( function () {
+				result.reject();
+			} );
 
 			return result;
 		}
@@ -281,4 +296,4 @@
 
 	M.define( 'mobile.editor.api/EditorGateway', EditorGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

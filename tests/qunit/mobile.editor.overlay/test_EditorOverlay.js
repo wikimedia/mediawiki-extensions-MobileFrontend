@@ -11,16 +11,19 @@
 			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// the first call returns a getContent deferred for a blocked user.
-			this.dBlockedContent = $.Deferred().resolve( 'section 0', {
-				blockid: 1,
-				blockedby: 'Test',
-				blockreason: 'Testreason'
+			this.dBlockedContent = $.Deferred().resolve( {
+				text: 'section 0',
+				user: {
+					blockid: 1,
+					blockedby: 'Test',
+					blockreason: 'Testreason'
+				}
 			} );
 			getContentStub.onCall( 0 ).returns( this.dBlockedContent );
 			// all other calls returns a deferred for unblocked users.
 			getContentStub.returns( $.Deferred().resolve( 'section 0', {} ) );
 			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
-				.returns( $.Deferred().resolve( 'previewtest' ) );
+				.returns( $.Deferred().resolve( { text: 'previewtest' } ) );
 		}
 	} );
 

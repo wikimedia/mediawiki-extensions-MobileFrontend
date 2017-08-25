@@ -38,12 +38,12 @@
 		 *
 		 * @method
 		 * @param {Page} page
-		 * @return {jQuery.Promise} promise that resolves with the list of
+		 * @return {jQuery.Deferred} promise that resolves with the list of
 		 *  sections on the page
 		 */
 		getReferencesLists: function ( page ) {
 			var self = this,
-				result = $.Deferred(),
+				result = util.Deferred(),
 				cachedReferencesSections = this.cache.get( page.id );
 
 			if ( cachedReferencesSections ) {
@@ -66,9 +66,8 @@
 				} );
 
 				self.cache.set( page.id, sections );
-
 				result.resolve( sections );
-			} ).fail( function () {
+			}, function () {
 				result.reject( ReferencesGateway.ERROR_OTHER );
 			} );
 

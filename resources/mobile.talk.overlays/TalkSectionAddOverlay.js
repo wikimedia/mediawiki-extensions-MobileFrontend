@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		util = M.require( 'mobile.startup/util' ),
 		toast = M.require( 'mobile.startup/toast' ),
@@ -149,8 +149,9 @@
 		save: function () {
 			var heading = this.$subject.val(),
 				self = this,
-				text = this.$ta.val(),
-				result = $.Deferred();
+				d = util.Deferred(),
+				text = this.$ta.val();
+
 			this.$ta.removeClass( 'error' );
 			this.$subject.removeClass( 'error' );
 
@@ -160,26 +161,25 @@
 			this.$( '.content' ).empty().addClass( 'loading' );
 			// FIXME: while saving: a spinner would be nice
 			// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
-			this.editorApi.postWithToken( 'edit', {
+			return this.editorApi.postWithToken( 'edit', {
 				action: 'edit',
 				section: 'new',
 				sectiontitle: heading,
 				title: self.title,
 				summary: mw.msg( 'newsectionsummary', heading ),
 				text: text + ' ~~~~'
-			} ).done( function () {
-				result.resolve( 'ok' );
-			} ).fail( function ( msg ) {
-				result.reject( {
+			} ).then( function () {
+				return 'ok';
+			}, function ( msg ) {
+				// FIXME: Throw an Error
+				return d.reject( {
 					type: 'error',
 					details: msg
 				} );
 			} );
-
-			return result;
 		}
 	} );
 
 	M.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -131,28 +131,24 @@
 		 * @return {jQuery.Deferred}
 		 */
 		search: function ( query ) {
-			var result = $.Deferred(),
-				request,
+			var request,
 				self = this;
 
 			if ( !this.isCached( query ) ) {
 				request = this.api.get( this.getApiData( query ) )
-					.done( function ( data ) {
+					.then( function ( data ) {
 						// resolve the Deferred object
-						result.resolve( {
+						return {
 							query: query,
 							results: self._processData( query, data )
-						} );
-					} )
-					.fail( function () {
+						};
+					}, function () {
 						// reset cached result, it maybe contains no value
 						self.searchCache[query] = undefined;
-						// reject
-						result.reject();
 					} );
 
 				// cache the result to prevent the execution of one search query twice in one session
-				this.searchCache[query] = result.promise( {
+				this.searchCache[query] = request.promise( {
 					abort: request.abort
 				} );
 			}

@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Page = M.require( 'mobile.startup/Page' ),
+		util = M.require( 'mobile.startup/util' ),
 		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
@@ -46,7 +47,7 @@
 				}, this.continueParams );
 
 			if ( this.canContinue === false ) {
-				return $.Deferred();
+				return util.Deferred().resolve();
 			}
 			if ( this.shouldSkipFirstTitle ) {
 				// If we are calling the api from the last item of the previous page
@@ -109,4 +110,4 @@
 
 	M.define( 'mobile.watchlist/WatchListGateway', WatchListGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

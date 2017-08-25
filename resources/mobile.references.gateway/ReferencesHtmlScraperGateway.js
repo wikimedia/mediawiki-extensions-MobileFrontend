@@ -1,5 +1,6 @@
-( function ( M, $ ) {
-	var ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' );
+( function ( M ) {
+	var ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * Gateway for retrieving references via the content of the Page
@@ -20,7 +21,7 @@
 		 */
 		getReferenceFromContainer: function ( id, $container ) {
 			var $el,
-				result = $.Deferred(),
+				result = util.Deferred(),
 				// Escape (almost) all CSS selector meta characters
 				// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 				meta = /[!"$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g;
@@ -34,7 +35,6 @@
 			} else {
 				result.reject( ReferencesGateway.ERROR_NOT_EXIST );
 			}
-
 			return result.promise();
 		},
 		/**
@@ -47,4 +47,4 @@
 
 	M.define( 'mobile.references.gateway/ReferencesHtmlScraperGateway',
 		ReferencesHtmlScraperGateway );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

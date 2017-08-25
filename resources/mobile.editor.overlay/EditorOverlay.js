@@ -271,7 +271,10 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			this.gateway.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
+			this.gateway.getPreview( params ).done( function ( result ) {
+				var parsedText = result.text,
+					parsedSectionLine = result.line;
+
 				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
 				self.sectionLine = self.parseHTML( '<div>' ).html( parsedSectionLine ).text();
 				new Section( {
@@ -355,8 +358,10 @@
 			this.showSpinner();
 
 			this.gateway.getContent()
-				.done( function ( content, userinfo ) {
-					var parser, ast, parsedBlockReason;
+				.done( function ( result ) {
+					var parser, ast, parsedBlockReason,
+						content = result.text,
+						userinfo = result.user;
 
 					self.setContent( content );
 					// check if user is blocked

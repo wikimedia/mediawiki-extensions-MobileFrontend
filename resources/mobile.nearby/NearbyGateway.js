@@ -1,7 +1,8 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var limit = 50,
 		Page = M.require( 'mobile.startup/Page' ),
 		ns = mw.config.get( 'wgContentNamespaces' ),
+		util = M.require( 'mobile.startup/util' ),
 		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
@@ -83,7 +84,7 @@
 		 */
 		_search: function ( params, range, exclude ) {
 			var requestParams,
-				d = $.Deferred(),
+				d = util.Deferred(),
 				self = this;
 
 			requestParams = extendSearchParams( 'nearby', {
@@ -140,16 +141,17 @@
 				} );
 				d.resolve( pages );
 			}, function ( error, details ) {
+				// FIXME: Refactor errors so that we can return the api result
+				// and avoid unnecessary usage of the util
 				if ( details && details.error && details.error.info ) {
 					d.reject( error, details.error.info );
 				} else {
 					d.reject( error, '' );
 				}
 			} );
-
 			return d;
 		}
 	};
 
 	M.define( 'mobile.nearby/NearbyGateway', NearbyGateway );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

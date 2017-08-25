@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	/** @ignore @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
@@ -90,11 +90,12 @@
 		 * Obtain users current location and return a deferred object with the
 		 * longitude and latitude values
 		 * Resolve return object with 'incompatible' if browser doesn't support geo location
+		 * FIXME: This should be refactored into a LocationGateway
 		 *
 		 * @return {jQuery.Deferred}
 		 */
 		getCurrentPosition: function () {
-			var result = $.Deferred();
+			var result = util.Deferred();
 			if ( browser.supportsGeoLocation() ) {
 				navigator.geolocation.getCurrentPosition(
 					function ( geo ) {
@@ -132,7 +133,7 @@
 		 * @private
 		 */
 		_find: function ( options ) {
-			var result = $.Deferred(),
+			var result = util.Deferred(),
 				self = this;
 
 			/**
@@ -282,4 +283,4 @@
 
 	M.define( 'mobile.nearby/Nearby', Nearby );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

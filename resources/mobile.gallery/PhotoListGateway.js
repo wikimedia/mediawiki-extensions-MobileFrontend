@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small,
 		util = M.require( 'mobile.startup/util' );
 
@@ -104,11 +104,10 @@
 		 * @return {jQuery.Deferred} where parameter is a list of JavaScript objects describing an image.
 		 */
 		getPhotos: function () {
-			var self = this,
-				result = $.Deferred();
+			var self = this;
 
 			if ( this.canContinue === true ) {
-				this.api.ajax( this.getQuery() ).done( function ( resp ) {
+				return this.api.ajax( this.getQuery() ).then( function ( resp ) {
 					var photos;
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
@@ -126,18 +125,16 @@
 						}
 
 						// FIXME: Should reply with a list of PhotoItem or Photo classes.
-						result.resolve( photos );
+						return photos;
 					} else {
-						result.resolve( [] );
+						return [];
 					}
-				} ).fail( $.proxy( result, 'reject' ) );
+				} );
 			} else {
-				result.resolve( [] );
+				return util.Deferred().reject();
 			}
-
-			return result;
 		}
 	};
 
 	M.define( 'mobile.gallery/PhotoListGateway', PhotoListGateway );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

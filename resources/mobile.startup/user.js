@@ -1,10 +1,13 @@
-( function ( M, $ ) {
+( function ( M ) {
+	var user,
+		util = M.require( 'mobile.startup/util' );
+
 	/**
 	 * Utility library for looking up details on the current user
 	 * @class user
 	 * @singleton
 	 */
-	var user = {
+	user = {
 		/* @see mediaWiki.user */
 		tokens: mw.user.tokens,
 		/* @see mediaWiki.user */
@@ -30,7 +33,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		getGroups: function () {
-			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
+			return util.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
 		},
 		/**
 		* Wrapper for mw.user.sessionId().
@@ -55,4 +58,4 @@
 	M.define( 'mobile.startup/user', user )
 		.deprecate( 'mobile.user/user' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

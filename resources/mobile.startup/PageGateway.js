@@ -103,7 +103,8 @@
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function ( title, endpoint, leadOnly ) {
-			var page, timestamp,
+			var timestamp,
+				d = util.Deferred(),
 				options = endpoint ? {
 					url: endpoint,
 					dataType: 'jsonp'
@@ -113,8 +114,7 @@
 				};
 
 			if ( !cache[title] ) {
-				page = cache[title] = $.Deferred();
-				this.api.get( {
+				cache[title] = this.api.get( {
 					action: 'mobileview',
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
@@ -123,18 +123,13 @@
 					noheadings: 'yes',
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
-				}, options ).done( function ( resp ) {
+				}, options ).then( function ( resp ) {
 					var sections, lastModified, resolveObj, mv;
 
-					if ( resp.error || !resp.mobileview.sections ) {
-						page.reject( resp );
-					// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
-					} else if ( resp.mobileview.hasOwnProperty( 'liquidthreads' ) ) {
-						page.reject( {
-							error: {
-								code: 'lqt'
-							}
-						} );
+					if ( resp.error ) {
+						return d.reject( resp.error );
+					} else if ( !resp.mobileview.sections ) {
+						return d.reject( 'No sections' );
 					} else {
 						mv = resp.mobileview;
 						sections = transformSections( mv.sections );
@@ -174,9 +169,11 @@
 							} );
 						}
 						// FIXME: Return a Page class here
-						page.resolve( resolveObj );
+						return resolveObj;
 					}
-				} ).fail( $.proxy( page, 'reject' ) );
+				}, function () {
+					return d.reject();
+				} );
 			}
 
 			return cache[title];
@@ -245,7 +242,6 @@
 		 */
 		getPageLanguages: function ( title, language ) {
 			var self = this,
-				result = $.Deferred(),
 				args = {
 					action: 'query',
 					meta: 'siteinfo',
@@ -262,14 +258,14 @@
 			} else {
 				args.llprop = 'url|autonym';
 			}
-			this.api.get( args ).done( function ( resp ) {
-				result.resolve( {
+			return this.api.get( args ).then( function ( resp ) {
+				return {
 					languages: resp.query.pages[0].langlinks || [],
 					variants: self._getLanguageVariantsFromApiResponse( title, resp )
-				} );
-			} ).fail( $.proxy( result, 'reject' ) );
-
-			return result;
+				};
+			}, function () {
+				return util.Deferred().reject();
+			} );
 		},
 
 		/**

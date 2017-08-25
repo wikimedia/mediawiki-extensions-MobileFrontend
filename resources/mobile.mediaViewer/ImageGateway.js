@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
 		util = M.require( 'mobile.startup/util' );
 
@@ -28,42 +28,40 @@
 		this._cache = {};
 		this.api = options.api;
 	}
-	ImageGateway.prototype = {
-		/**
-		 * Get thumbnail via the API and cache it. Return the result from the cache if exists.
-		 * @param {string} title Url of image
-		 * @return {jQuery.Deferred} with the image info
-		 */
-		getThumb: function ( title ) {
-			var result = this._cache[title],
-				$window = util.getWindow(),
-				imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ? window.devicePixelRatio : 1;
+	/**
+	 * Get thumbnail via the API and cache it. Return the result from the cache if exists.
+	 * @param {string} title Url of image
+	 * @return {jQuery.Deferred} with the image info
+	 */
+	ImageGateway.prototype.getThumb = function ( title ) {
+		var cachedThumb = this._cache[title],
+			$window = util.getWindow(),
+			imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ? window.devicePixelRatio : 1;
 
-			if ( !result ) {
-				this._cache[title] = result = $.Deferred();
-
-				this.api.get( {
-					action: 'query',
-					prop: 'imageinfo',
-					titles: title,
-					formatversion: 2,
-					iiprop: [ 'url', 'extmetadata' ],
-					// request an image devicePixelRatio times bigger than the reported screen size
-					// for retina displays and zooming
-					iiurlwidth: findSizeBucket( $window.width() * imageSizeMultiplier ),
-					iiurlheight: findSizeBucket( $window.height() * imageSizeMultiplier )
-				} ).done( function ( resp ) {
-					if ( resp.query && resp.query.pages ) {
-						result.resolve( resp.query.pages[0].imageinfo[0] );
-					}
-				} );
-			}
-
-			return result;
+		if ( !cachedThumb ) {
+			this._cache[title] = this.api.get( {
+				action: 'query',
+				prop: 'imageinfo',
+				titles: title,
+				formatversion: 2,
+				iiprop: [ 'url', 'extmetadata' ],
+				// request an image devicePixelRatio times bigger than the reported screen size
+				// for retina displays and zooming
+				iiurlwidth: findSizeBucket( $window.width() * imageSizeMultiplier ),
+				iiurlheight: findSizeBucket( $window.height() * imageSizeMultiplier )
+			} ).then( function ( resp ) {
+				if ( resp.query && resp.query.pages ) {
+					return resp.query.pages[0].imageinfo[0];
+				} else {
+					throw new Error( 'The API failed to return any pages matching the titles.' );
+				}
+			} );
 		}
+
+		return this._cache[title];
 	};
 
 	ImageGateway._findSizeBucket = findSizeBucket;
 	M.define( 'mobile.mediaViewer/ImageGateway', ImageGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

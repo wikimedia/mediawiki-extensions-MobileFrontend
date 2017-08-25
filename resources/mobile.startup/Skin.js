@@ -2,8 +2,8 @@
 
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
-		Deferred = $.Deferred,
 		util = M.require( 'mobile.startup/util' ),
+		Deferred = util.Deferred,
 		when = $.when,
 		icons = M.require( 'mobile.startup/icons' ),
 		viewport = mw.viewport,

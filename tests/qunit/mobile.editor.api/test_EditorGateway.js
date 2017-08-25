@@ -53,7 +53,7 @@
 		} );
 
 		return gateway.getContent().done( function ( resp ) {
-			assert.strictEqual( resp, 'section', 'return section content' );
+			assert.strictEqual( resp.text, 'section', 'return section content' );
 			return gateway.getContent();
 		} ).then( function () {
 			assert.ok( spy.calledOnce, 'cache content' );
@@ -71,7 +71,7 @@
 		} );
 
 		return gateway.getContent().done( function ( resp ) {
-			assert.strictEqual( resp, '', 'return empty section' );
+			assert.strictEqual( resp.text, '', 'return empty section' );
 			assert.ok( !spy.called, 'don\'t try to retrieve content using API' );
 		} );
 	} );
@@ -574,7 +574,10 @@
 		assert.ok( postStub.calledWithMatch( {
 			text: 'test content'
 		} ) );
-		assert.ok( doneSpy.calledWith( '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>' ) );
+		assert.ok( doneSpy.calledWith( {
+			line: '',
+			text: '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>'
+		} ) );
 	} );
 
 	QUnit.test( '#EditorGateway, check without sectionLine', function ( assert ) {
@@ -595,8 +598,8 @@
 
 		return gateway.getPreview( {
 			text: 'test content'
-		} ).done( function ( text, sectionLine ) {
-			assert.strictEqual( sectionLine, '', 'Ok, no section line returned' );
+		} ).done( function ( section ) {
+			assert.strictEqual( section.line, '', 'Ok, no section line returned' );
 		} );
 	} );
 
@@ -625,8 +628,8 @@
 
 		return gateway.getPreview( {
 			text: 'test content'
-		} ).done( function ( text, sectionLine ) {
-			assert.strictEqual( sectionLine, 'Testsection', 'Ok, section line returned' );
+		} ).done( function ( section ) {
+			assert.strictEqual( section.line, 'Testsection', 'Ok, section line returned' );
 		} );
 	} );
 

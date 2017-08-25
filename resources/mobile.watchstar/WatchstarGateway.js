@@ -1,4 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
+	var util = M.require( 'mobile.startup/util' );
+
 	/**
 	 * API for managing clickable watchstar
 	 *
@@ -36,26 +38,23 @@
 		 * @return {jQuery.Deferred}
 		 */
 		loadWatchStatus: function ( ids, markAsAllWatched ) {
-			var self = this,
-				result = $.Deferred();
+			var self = this;
 
 			if ( markAsAllWatched ) {
 				ids.forEach( function ( id ) {
 					self._cache[ id ] = true;
 				} );
-				result.resolve();
+				return util.Deferred().resolve();
 			} else {
-				this.api.get( {
+				return this.api.get( {
 					action: 'query',
 					prop: 'info',
 					inprop: 'watched',
 					pageids: ids
-				} ).done( function ( resp ) {
+				} ).then( function ( resp ) {
 					self._loadIntoCache( resp );
-					result.resolve();
 				} );
 			}
-			return result;
 		},
 
 		/**
@@ -112,4 +111,4 @@
 
 	M.define( 'mobile.watchstar/WatchstarGateway', WatchstarGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

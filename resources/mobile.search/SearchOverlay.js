@@ -330,7 +330,8 @@
 			// it seems the input event can be fired when virtual keyboard is closed
 			// (Chrome for Android)
 			if ( query !== this.lastQuery ) {
-				if ( self._pendingQuery ) {
+				// Check abort exists because the query may have already completed
+				if ( self._pendingQuery && self._pendingQuery.abort ) {
 					self._pendingQuery.abort();
 				}
 				clearTimeout( this.timer );
