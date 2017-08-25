@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_bc66f8e7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-25T16:30:59Z",
+      "side": 1,
+      "message": "missing case when user is on Special:Search page (add \u0027mobile.special.search.styles\u0027)",
+      "revId": "f307a0917939d09236caf0bb8525f2ae994408a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_dc63c4d7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-08-25T16:30:59Z",
+      "side": 1,
+      "message": "can this be merged with stuff that happens on line 803?",
+      "revId": "f307a0917939d09236caf0bb8525f2ae994408a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
