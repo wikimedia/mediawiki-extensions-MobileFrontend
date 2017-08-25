@@ -15,7 +15,7 @@ use MediaWiki\Logger\LoggerFactory;
  * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
  *	onRequestContextCreateSkin()
  *
- * If you're hook changes the behaviour of the Minerva skin you are in the wrong place.
+ * If your hook changes the behaviour of the Minerva skin, you are in the wrong place.
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
@@ -117,7 +117,7 @@ class MobileFrontendHooks {
 		if ( $userSkin ) {
 			// Normalize the key in case the user is passing gibberish or has old preferences
 			$normalizedSkin = Skin::normalizeKey( $userSkin );
-			// If the skin has been normalized and is different from user input use it
+			// If the skin has been normalized and is different from user input, use it
 			if ( $normalizedSkin === $userSkin ) {
 				$skin = $normalizedSkin;
 				return false;
@@ -780,7 +780,7 @@ class MobileFrontendHooks {
 				);
 			}
 
-			// In mobile mode MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
+			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
 			// We load MediaWiki:Mobile.css/js instead
 			$out->addModules( [ 'mobile.site' ] );
 

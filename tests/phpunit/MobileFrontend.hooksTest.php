@@ -252,7 +252,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$thumbnail = new ThumbnailImage(
 			$file,
 
-			// The following is stub data that stops `ThumbnailImage#__construct`
+			// The following is stub data that stops `ThumbnailImage#__construct`,
 			// triggering a warning.
 			'/foo.svg',
 			false,
