@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_2f93ac05",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-08-25T20:27:31Z",
+      "side": 1,
+      "message": "All Deferred and Promise methods are static, detachable, and pre-bound by design. This is one of the reasons for that design.\n\nSo the usual way to do this would be to pass obj.fail( other.reject ) as-is without needing to bind.\n\nLooking more closely, you might want to consider rewriting this and the statement before by use of chaining. It\u0027s generally recommended against trying to wrap a deferred manually, due to the likelihood of forgetting one of the sub-cases which would result in a deferred that\u0027s indefinitely pending. It also has the benefit of automatically forwarding any error handling, without needing to catch/reject like this.\n\nExample:\n\nInstead of:\n\n\n wrapped \u003d $.Deferred();\n \n something.done( function ( data ) {\n   wrapped.resolve( data.changed );\n   /* or */\n   wrapped.reject( data.error );\n } ).fail( wrapped.reject );\n \n return wrapped;\n\n\nYou can write:\n\n \n  return something.then( function ( data ) {\n    return data.changed;\n    /* or */\n    return $.Deferred().reject( data.error );\n  } );\n\n\nThis also has the benefit of being prepared for how you\u0027d write this in ES6 with native Promise, or in ES7 with async/await.",
+      "range": {
+        "startLine": 276,
+        "startChar": 13,
+        "endLine": 276,
+        "endChar": 41
+      },
+      "revId": "b1989b2c83a4334083bc33cac8a69f0d58a4b783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
