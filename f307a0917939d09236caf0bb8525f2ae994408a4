@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_bc703870",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-25T16:40:01Z",
+      "side": 1,
+      "message": "These are done via skinStyles now.\nmobile.special.search.styles no longer exists.\n\nWe\u0027re gonna be skinning the mediawiki.special.search.styles from now on which is added in core.\n\nThis is the motivation of the patch. This module is not necessary.",
+      "parentUuid": "4e7eab26_bc66f8e7",
+      "revId": "f307a0917939d09236caf0bb8525f2ae994408a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_dc63c4d7",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2017-08-25T16:30:59Z",
       "side": 1,
       "message": "can this be merged with stuff that happens on line 803?",
+      "revId": "f307a0917939d09236caf0bb8525f2ae994408a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_7c6650b9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-25T16:40:01Z",
+      "side": 1,
+      "message": "Nope.\n\nWhen oldid is applied - it\u0027s not a special page so onSpecialPageBeforeExecute does not get invoked.\n\nWe also do not want to load mobile.special.styles on that page (special page styles currently interfere with page styles)",
+      "parentUuid": "4e7eab26_dc63c4d7",
       "revId": "f307a0917939d09236caf0bb8525f2ae994408a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
