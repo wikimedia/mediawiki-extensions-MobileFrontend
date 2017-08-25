@@ -71,11 +71,12 @@
 	 */
 	CategoryLookupInputWidget.prototype.getLookupMenuOptionsFromData = function ( data ) {
 		var result = [],
+			$el = this.$element,
 			self = this;
 
 		data.results.forEach( function ( value ) {
 			if (
-				!$( 'div[data-title="' + value.title + '"]' ).length &&
+				!$el.find( 'div[data-title="' + value.title + '"]' ).length &&
 				$.inArray( value.displayTitle, self.categories ) === -1
 			) {
 				result.push(

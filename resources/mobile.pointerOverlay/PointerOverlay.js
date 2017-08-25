@@ -75,6 +75,7 @@
 				}, this.options.timeout );
 			}
 			if ( self.options.target ) {
+				// FIXME: this option should be a jQuery object already. Avoid use of global $.
 				$target = $( self.options.target );
 				// Ensure we position the overlay correctly but do not show the arrow
 				self._position( $target );

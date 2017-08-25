@@ -134,7 +134,7 @@
 					.on( 'touchmove', $.proxy( this, 'onTouchMove' ) );
 				// wait for things to render before doing any calculations
 				setTimeout( function () {
-					self._fixIosHeader( 'textarea, input' );
+					self._fixIosHeader( self.$( 'textarea, input' ) );
 				}, 0 );
 			}
 		},
@@ -197,6 +197,8 @@
 			}
 
 			if ( this.closeOnContentTap ) {
+				// FIXME: $( '#mw-mf-page-center' ) should be passed in as an option
+				// for this to work.
 				$( '#mw-mf-page-center' ).one( 'click', $.proxy( this, 'hide' ) );
 			}
 
@@ -269,15 +271,15 @@
 		 *
 		 * @method
 		 * @private
-		 * @param {string} el CSS selector for elements that may trigger virtual
+		 * @param {jQuery.Object} $el for elements that may trigger virtual
 		 * keyboard (usually inputs, textareas, contenteditables).
 		 */
-		_fixIosHeader: function ( el ) {
+		_fixIosHeader: function ( $el ) {
 			var self = this;
 
 			if ( this.isIos ) {
 				this._resizeContent( $( window ).height() );
-				$( el )
+				$el
 					.on( 'focus', function () {
 						setTimeout( function () {
 							var keyboardHeight = 0;

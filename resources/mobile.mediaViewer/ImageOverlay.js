@@ -75,7 +75,7 @@
 		 */
 		onSlide: function ( ev ) {
 			this.setNewImage(
-				$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' )
+				this.$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' )
 			);
 		},
 		/**
@@ -243,7 +243,7 @@
 					} );
 				}
 			}
-			$( '.image-wrapper' ).css( 'bottom', detailsHeight );
+			this.$( '.image-wrapper' ).css( 'bottom', detailsHeight );
 		},
 
 		/**

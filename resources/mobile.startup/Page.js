@@ -119,12 +119,12 @@
 			 *   </div>
 			 * </div>
 			 */
-			if ( $( '.mf-section-0' ).length ) {
-				return $( '.mf-section-0' );
+			if ( this.$( '.mf-section-0' ).length ) {
+				return this.$( '.mf-section-0' );
 			}
 			// for cached pages that are still using mw-mobilefrontend-leadsection
-			if ( $( '.mw-mobilefrontend-leadsection' ).length ) {
-				return $( '.mw-mobilefrontend-leadsection' );
+			if ( this.$( '.mw-mobilefrontend-leadsection' ).length ) {
+				return this.$( '.mw-mobilefrontend-leadsection' );
 			}
 			// no lead section found
 			return null;
