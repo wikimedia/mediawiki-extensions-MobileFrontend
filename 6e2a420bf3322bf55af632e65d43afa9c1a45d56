@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_63146bed",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-08-27T02:30:50Z",
+      "side": 1,
+      "message": "In standards Promise, async, and then(), returning from a promise handler always casts non-Promise values to Promise.resolve(), which means this needs to explicitly throw or return $.Deferred().reject( .. ) to preserve behaviour.",
+      "range": {
+        "startLine": 168,
+        "startChar": 4,
+        "endLine": 169,
+        "endChar": 12
+      },
+      "revId": "6e2a420bf3322bf55af632e65d43afa9c1a45d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
