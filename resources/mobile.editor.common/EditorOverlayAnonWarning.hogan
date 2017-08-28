@@ -5,4 +5,5 @@
 		{{#loginButton}}{{>button}}{{/loginButton}}
 		{{#signupButton}}{{>button}}{{/signupButton}}
 	</div>
+	<p>{{ctaMessage}}</p>
 </div>

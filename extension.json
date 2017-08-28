@@ -478,7 +478,8 @@
 				"22": "mobile-frontend-editor-switch-confirm",
 				"23": "mobile-frontend-editor-switch-editor",
 				"24": "mobile-frontend-editor-switch-visual-editor",
-				"25": "mobile-frontend-editor-anonwarning"
+				"25": "mobile-frontend-editor-anonwarning",
+				"26": "mobile-frontend-editor-anon-cta-message"
 			}
 		},
 		"mobile.editor.overlay": {
