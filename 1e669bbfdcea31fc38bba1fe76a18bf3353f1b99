@@ -16,6 +16,24 @@
       "revId": "1e669bbfdcea31fc38bba1fe76a18bf3353f1b99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_e35054db",
+        "filename": "resources/mobile.startup/images/error.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-28T14:39:43Z",
+      "side": 1,
+      "message": "It\u0027s not minified (whitespace). You need to use it without the pretty parameter. Jenkins is going to complain otherwise.\n\nThe script was added as we had a 1mb svg added which increased first paint. This protects against that happening again by making sure the svgs are as small as possible.\n\n\u003e  The shell script is wrong here and makes unnecessary reglementations.\nWe can change this, but this increases the scope of the work, so really it depends how delayed you want this to be. If you can use without pretty parameter we can get this merged for today\u0027s train, if you can\u0027t, my team needs to talk about what the change means and remind ourselves of why we did it this way and update the script.",
+      "parentUuid": "4e7eab26_b21e1f0f",
+      "revId": "1e669bbfdcea31fc38bba1fe76a18bf3353f1b99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
