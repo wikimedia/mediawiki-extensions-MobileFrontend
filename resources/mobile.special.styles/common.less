@@ -1,0 +1,58 @@
+@import 'mediawiki.ui/variables';
+@import 'mobile.variables';
+
+// used in Special:Nearby and Special:UserLogin
+.errorbox,
+.error {
+	color: @colorErrorText;
+	background: @colorErrorBackground;
+}
+
+.mw-ui-button-group,
+.page-list {
+	margin: 0;
+}
+
+.ns-special {
+	ul {
+		list-style: none;
+	}
+
+	.content-header {
+		padding: 0 0 20px;
+		border-bottom: 1px solid @colorGray12;
+
+		ul {
+			&:after {
+				content: ' ';
+				clear: both;
+				display: block;
+			}
+		}
+
+		h2 {
+			padding: 0;
+			font-size: 1.1em;
+			font-weight: bold;
+			border-bottom: 0;
+			text-align: center;
+		}
+	}
+
+	.content {
+		// don't apply these styles to headings in message boxes
+		> h2 {
+			text-align: center;
+			margin: 0.7em 0;
+			font-size: 1.1em;
+			color: @grayMedium;
+		}
+	}
+
+	.error {
+		h2 {
+			margin-top: 0;
+			text-transform: none;
+		}
+	}
+}

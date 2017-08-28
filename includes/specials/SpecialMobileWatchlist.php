@@ -62,9 +62,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
-		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
+		$output->addModules( 'mobile.special.watchlist.scripts' );
 		$output->addModuleStyles( [
-			'skins.minerva.special.watchlist.styles',
+			'mobile.special.watchlist.styles',
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
 		] );

@@ -580,8 +580,13 @@ class MobileFrontendHooks {
 		$isMobileView = MobileContext::singleton()->shouldDisplayMobileView();
 		$name = $special->getName();
 
-		if ( $isMobileView && ( $name === 'Userlogin' || $name === 'CreateAccount' ) ) {
-			$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
+		if ( $isMobileView ) {
+			$special->getOutput()->addModuleStyles(
+				[ 'mobile.special.styles', 'mobile.messageBox.styles' ]
+			);
+			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
+				$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
+			}
 		}
 
 		return true;
@@ -783,6 +788,10 @@ class MobileFrontendHooks {
 			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
 			// We load MediaWiki:Mobile.css/js instead
 			$out->addModules( [ 'mobile.site' ] );
+
+			if ( $out->getRequest()->getText( 'oldid' ) ) {
+				$styles[] = 'mobile.messageBox.styles';
+			}
 
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
