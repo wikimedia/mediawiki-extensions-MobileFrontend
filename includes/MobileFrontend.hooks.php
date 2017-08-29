@@ -810,22 +810,8 @@ class MobileFrontendHooks {
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 
-		// Remove the Minerva skin from the preferences page
-		// FIXME: This can be removed when T171644 has been resolved.
-		if ( $defaultSkin !== 'minerva' ) {
-			// Preference key/values are backwards. The value is the name of the skin. The
-			// key is the text+links to display.
-			if ( !empty( $preferences['skin']['options'] ) ) {
-				$key = array_search( 'minerva', $preferences['skin']['options'] );
-				unset( $preferences['skin']['options'][$key] );
-			}
-		}
-
 		// preference that allow a user to set the preffered mobile skin using the api
-		$preferences['mobileskin'] = [
-			'type' => 'api',
-			'default' => '',
-		];
+		$preferences['mobileskin'] = $definition;
 
 		return true;
 	}
