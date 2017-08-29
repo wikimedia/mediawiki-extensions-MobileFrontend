@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_e54ff16b",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-08-29T14:13:35Z",
+      "side": 1,
+      "message": "What do you say to adding \u0027editor-\u0027 before \u0027anon\u0027? That would make the message\u0027s intention clearer.",
+      "range": {
+        "startLine": 482,
+        "startChar": 11,
+        "endLine": 482,
+        "endChar": 43
+      },
+      "revId": "c0ae201c8c0288c0be9817374bade51477ec5406",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
