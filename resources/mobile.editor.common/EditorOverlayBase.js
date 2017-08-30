@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
-		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		user = M.require( 'mobile.startup/user' );
@@ -258,10 +257,6 @@
 		},
 		/** @inheritdoc **/
 		postRender: function () {
-			// Add a class so editor can make some Android 2 specific customisations.
-			if ( browser.isAndroid2() ) {
-				this.$el.addClass( 'android-2' );
-			}
 			// log edit attempt
 			this.log( {
 				action: 'ready'

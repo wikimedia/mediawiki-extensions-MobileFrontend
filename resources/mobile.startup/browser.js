@@ -36,9 +36,6 @@
 	function Browser( ua, $container ) {
 		this.userAgent = ua;
 		this.$el = $container;
-		if ( this.isAndroid2() ) {
-			this.lockViewport();
-		}
 		this._fixIosLandscapeBug();
 	}
 
@@ -97,14 +94,6 @@
 			}
 		},
 		/**
-		 * Determine if a device is Android 2.
-		 * @method
-		 * @return {boolean}
-		 */
-		isAndroid2: memoize( function () {
-			return /Android 2/.test( this.userAgent );
-		} ),
-		/**
 		 * Determine if a device has a widescreen.
 		 * @method
 		 * @return {boolean}
@@ -138,13 +127,6 @@
 		 * @return {boolean}
 		 */
 		supportsAnimations: memoize( function () {
-			// don't trust Android 2.x, really
-			// animations cause textareas to misbehave on it
-			// (http://stackoverflow.com/a/5734984/365238)
-			if ( this.isAndroid2() ) {
-				return false;
-			}
-
 			return this.supportsCSSProperty( 'animationName' ) &&
 				this.supportsCSSProperty( 'transform' ) &&
 				this.supportsCSSProperty( 'transition' );
