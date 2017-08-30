@@ -89,7 +89,7 @@
 
 	QUnit.module( 'MobileFrontend: WatchListGateway', {} );
 
-	QUnit.test( 'load results from the first page', 3, function ( assert ) {
+	QUnit.test( 'load results from the first page', function ( assert ) {
 		var gateway = new WatchListGateway( new mw.Api() );
 
 		this.sandbox.stub( mw.Api.prototype, 'get' )
@@ -105,7 +105,7 @@
 		} );
 	} );
 
-	QUnit.test( 'load results from the second page from last item of first', 6, function ( assert ) {
+	QUnit.test( 'load results from the second page from last item of first', function ( assert ) {
 		var lastTitle = 'Albert Einstein',
 			gateway = new WatchListGateway( new mw.Api(), lastTitle ),
 			response1 = $.extend( {}, response, {
@@ -143,7 +143,7 @@
 		} );
 	} );
 
-	QUnit.test( 'it doesn\'t throw an error when no pages are returned', 1, function ( assert ) {
+	QUnit.test( 'it doesn\'t throw an error when no pages are returned', function ( assert ) {
 		var gateway = new WatchListGateway( new mw.Api() );
 
 		this.sandbox.stub( mw.Api.prototype, 'get' )
@@ -156,7 +156,7 @@
 		} );
 	} );
 
-	QUnit.test( 'it should mark pages as new if necessary', 2, function ( assert ) {
+	QUnit.test( 'it should mark pages as new if necessary', function ( assert ) {
 		var gateway = new WatchListGateway( new mw.Api() );
 
 		this.sandbox.stub( mw.Api.prototype, 'get' )

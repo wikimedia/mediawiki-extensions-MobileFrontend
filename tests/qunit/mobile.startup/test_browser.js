@@ -5,7 +5,7 @@
 
 	QUnit.module( 'Browser.js' );
 
-	QUnit.test( 'isIos()', 8, function ( assert ) {
+	QUnit.test( 'isIos()', function ( assert ) {
 		var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 			browser4 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 4_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 			browser5 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
@@ -21,7 +21,7 @@
 		assert.strictEqual( browser5.isIos( 5 ), true );
 	} );
 
-	QUnit.test( 'Methods are cached', 8, function ( assert ) {
+	QUnit.test( 'Methods are cached', function ( assert ) {
 		var ipad = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 			iphone = new Browser( 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/11A465 Safari/9537.53', $html ),
 			android2 = new Browser( 'Android 2', $html );

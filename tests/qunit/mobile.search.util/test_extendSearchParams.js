@@ -18,8 +18,6 @@
 	QUnit.test( 'it throws if the feature is invalid', function ( assert ) {
 		var expectedError = new Error( '"foo" isn\'t a feature that shows Wikibase descriptions.' );
 
-		QUnit.expect( 1 );
-
 		assert.throws( function () {
 			extendSearchParams( 'foo', {} );
 		}, expectedError );
@@ -37,8 +35,6 @@
 				wbptterms: 'description'
 			};
 
-		QUnit.expect( 1 );
-
 		assert.deepEqual( params, expectedParams );
 	} );
 
@@ -46,8 +42,6 @@
 		var params = extendSearchParams( 'nearby', {
 			qux: 'quux'
 		} );
-
-		QUnit.expect( 2 );
 
 		assert.equal( params.prop.indexOf( 'pageterms' ), -1 );
 		assert.equal( params.wbptterms, undefined );
@@ -57,8 +51,6 @@
 		var params = extendSearchParams( 'search', {
 			wbptterms: 'grault'
 		} );
-
-		QUnit.expect( 1 );
 
 		assert.equal(
 			params.wbptterms,
@@ -76,8 +68,6 @@
 				prop: [ 'baz', 'pageterms' ],
 				wbptterms: 'description'
 			};
-
-		QUnit.expect( 1 );
 
 		assert.deepEqual(
 			params,
@@ -103,8 +93,6 @@
 				prop: [ 'baz', 'pageterms' ],
 				wbptterms: 'description'
 			};
-
-		QUnit.expect( 1 );
 
 		assert.deepEqual( params, expectedParams );
 	} );

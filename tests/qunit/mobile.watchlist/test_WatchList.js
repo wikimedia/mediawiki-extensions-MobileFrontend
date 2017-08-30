@@ -26,7 +26,7 @@
 		}
 	} );
 
-	QUnit.test( 'In watched mode', 3, function ( assert ) {
+	QUnit.test( 'In watched mode', function ( assert ) {
 		var pl = new WatchList( {
 			api: new mw.Api(),
 			pages: [ {

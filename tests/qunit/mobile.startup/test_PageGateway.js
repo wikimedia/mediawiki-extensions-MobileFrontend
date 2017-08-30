@@ -9,7 +9,7 @@
 		}
 	} );
 
-	QUnit.test( '#getPage (h1s)', 1, function ( assert ) {
+	QUnit.test( '#getPage (h1s)', function ( assert ) {
 		var response = {
 			mobileview: {
 				id: -1,
@@ -62,7 +62,7 @@
 			.returns( $.Deferred().resolve( response ) );
 
 		pageGateway.invalidatePage( 'Test' );
-		pageGateway.getPage( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
 					action: 'history'
@@ -121,7 +121,7 @@
 		} );
 	} );
 
-	QUnit.test( '#getPage', 2, function ( assert ) {
+	QUnit.test( '#getPage', function ( assert ) {
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			mobileview: {
 				id: -1,
@@ -236,7 +236,7 @@
 		assert.ok( this.api.get.calledOnce, 'cache page' );
 	} );
 
-	QUnit.test( '#getPageLanguages', 2, function ( assert ) {
+	QUnit.test( '#getPageLanguages', function ( assert ) {
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			query: {
 				pages: [
@@ -311,7 +311,7 @@
 			}
 		} ) );
 
-		pageGateway.getPageLanguages( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPageLanguages( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp.languages, [
 				{
 					lang: 'es',
@@ -353,7 +353,7 @@
 		} );
 	} );
 
-	QUnit.test( '#getPageLanguages', 1, function ( assert ) {
+	QUnit.test( '#getPageLanguages', function ( assert ) {
 		var spy = this.sandbox.spy( this.api, 'get' );
 		// prevent rogue ajax request
 		this.sandbox.stub( jQuery, 'ajax' ).returns( $.Deferred().resolve() );
@@ -373,7 +373,7 @@
 		);
 	} );
 
-	QUnit.test( '#_getAPIResponseFromHTML', 1, function ( assert ) {
+	QUnit.test( '#_getAPIResponseFromHTML', function ( assert ) {
 		var resp = pageGateway._getAPIResponseFromHTML(
 			mw.template.get( 'tests.mobilefrontend', 'page.html' ).render()
 		);
@@ -411,7 +411,7 @@
 		] );
 	} );
 
-	QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', 1, function ( assert ) {
+	QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert ) {
 		var resp = pageGateway.getSectionsFromHTML(
 			mw.template.get( 'tests.mobilefrontend', 'page2.html' ).render()
 		);
@@ -452,7 +452,7 @@
 		] );
 	} );
 
-	QUnit.test( '#getPage (move protected page)', 1, function ( assert ) {
+	QUnit.test( '#getPage (move protected page)', function ( assert ) {
 		var expected = {
 			edit: [ '*' ],
 			move: [ 'sysop' ]
@@ -481,7 +481,7 @@
 		} ) );
 
 		pageGateway.invalidatePage( 'Test' );
-		pageGateway.getPage( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPage( 'Test' ).done( function ( resp ) {
 			assert.deepEqual( resp.protection, expected );
 		} );
 	} );

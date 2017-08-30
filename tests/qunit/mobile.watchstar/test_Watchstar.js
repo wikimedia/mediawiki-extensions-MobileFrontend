@@ -17,7 +17,7 @@
 		}
 	} );
 
-	QUnit.test( 'Anonymous user opens drawer', 1, function ( assert ) {
+	QUnit.test( 'Anonymous user opens drawer', function ( assert ) {
 		var $el = $( '<div>' );
 
 		// eslint-disable-next-line no-new
@@ -51,7 +51,7 @@
 		}
 	} );
 
-	QUnit.test( 'Logged in user watches article', 3, function ( assert ) {
+	QUnit.test( 'Logged in user watches article', function ( assert ) {
 		var
 			w = new Watchstar( {
 				api: new mw.Api(),
@@ -72,7 +72,7 @@
 		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
 	} );
 
-	QUnit.test( 'Logged in user unwatches article', 2, function ( assert ) {
+	QUnit.test( 'Logged in user unwatches article', function ( assert ) {
 		var
 			w = new Watchstar( {
 				api: new mw.Api(),

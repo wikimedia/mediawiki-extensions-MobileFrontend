@@ -3,7 +3,7 @@
 
 	QUnit.module( 'MobileFrontend user.js' );
 
-	QUnit.test( '#getSessionId', 2, function ( assert ) {
+	QUnit.test( '#getSessionId', function ( assert ) {
 		var sessionId = user.getSessionId();
 
 		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );

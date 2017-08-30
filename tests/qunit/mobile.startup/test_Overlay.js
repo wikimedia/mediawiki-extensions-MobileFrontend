@@ -7,7 +7,7 @@
 		}
 	} );
 
-	QUnit.test( 'Simple overlay', 1, function ( assert ) {
+	QUnit.test( 'Simple overlay', function ( assert ) {
 		var overlay = new Overlay( {
 			heading: '<h2>Title</h2>',
 			content: 'Text'
@@ -17,7 +17,7 @@
 		overlay.hide();
 	} );
 
-	QUnit.test( 'HTML overlay', 2, function ( assert ) {
+	QUnit.test( 'HTML overlay', function ( assert ) {
 		var overlay;
 
 		function TestOverlay() {
@@ -36,7 +36,7 @@
 		assert.strictEqual( overlay.$el.find( '.content' ).text(), 'YO' );
 	} );
 
-	QUnit.test( 'Close overlay', 1, function ( assert ) {
+	QUnit.test( 'Close overlay', function ( assert ) {
 		var overlay = new Overlay( {
 			heading: '<h2>Title</h2>',
 			content: 'Text'

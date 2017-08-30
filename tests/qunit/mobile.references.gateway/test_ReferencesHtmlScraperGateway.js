@@ -19,20 +19,19 @@
 		}
 	} );
 
-	QUnit.test( 'checking good reference', 1, function ( assert ) {
-		var done = assert.async( 1 );
-		this.referencesGateway.getReference( '#cite_note-1', this.page ).done( function ( ref ) {
+	QUnit.test( 'checking good reference', function ( assert ) {
+		return this.referencesGateway.getReference( '#cite_note-1', this.page ).done( function ( ref ) {
 			assert.strictEqual( $( '<div>' ).html( ref.text ).find( '.reference-text' ).text(), 'hello' );
-			done();
 		} );
 	} );
 
-	QUnit.test( 'checking bad reference', 1, function ( assert ) {
-		var done = assert.async( 1 );
+	QUnit.test( 'checking bad reference', function ( assert ) {
+		var done = $.Deferred();
 		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
-			done();
+			done.resolve();
 		} );
+		return done;
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

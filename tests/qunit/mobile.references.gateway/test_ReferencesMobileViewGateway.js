@@ -47,7 +47,7 @@
 		}
 	} );
 
-	QUnit.test( 'Gateway only hits api once despite multiple calls', 1, function ( assert ) {
+	QUnit.test( 'Gateway only hits api once despite multiple calls', function ( assert ) {
 		var gatewayHitsApi = new ReferencesMobileViewGateway( this.api, new MemoryCache() );
 		return gatewayHitsApi.getReferencesLists( this.page ).then( function () {
 			gatewayHitsApi.getReferencesLists( this.page );
@@ -56,46 +56,49 @@
 		}.bind( this ) );
 	} );
 
-	QUnit.test( 'checking good reference', 1, function ( assert ) {
-		var done = assert.async( 1 );
-		this.referencesGateway.getReference( '#cite_note-1', this.page ).done( function ( ref ) {
+	QUnit.test( 'checking good reference', function ( assert ) {
+		return this.referencesGateway.getReference( '#cite_note-1', this.page ).done( function ( ref ) {
 			assert.strictEqual( ref.text, 'real lazy' );
-			done();
 		} );
 	} );
 
-	QUnit.test( 'checking good reference (subsequent calls)', 1, function ( assert ) {
-		var done = assert.async( 1 );
-		this.referencesGateway.getReference( '#cite_note-1', this.page );
-		this.referencesGateway.getReference( '#cite_note-2', this.page ).done( function ( ref ) {
-			assert.strictEqual( ref.text, 'real lazy 2' );
-			done();
+	QUnit.test( 'checking good reference (subsequent calls)', function ( assert ) {
+		var page = this.page,
+			referencesGateway = this.referencesGateway;
+
+		return referencesGateway.getReference( '#cite_note-1', page ).always( function () {
+			return referencesGateway.getReference( '#cite_note-2', page ).done( function ( ref ) {
+				assert.strictEqual( ref.text, 'real lazy 2' );
+			} );
 		} );
 	} );
 
-	QUnit.test( 'checking bad reference', 1, function ( assert ) {
-		var done = assert.async( 1 );
+	QUnit.test( 'checking bad reference', function ( assert ) {
+		var done = $.Deferred();
 		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
 				'When reference not found error message reflects that.' );
-			done();
+			done.resolve();
 		} );
+		return done;
 	} );
 
-	QUnit.test( 'checking reference on non-existent page', 1, function ( assert ) {
-		var done = assert.async( 1 );
+	QUnit.test( 'checking reference on non-existent page', function ( assert ) {
+		var done = $.Deferred();
 		this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
 				'When getReferencesElement returns empty list of elements reference is false.' );
-			done();
+			done.resolve();
 		} );
+		return done;
 	} );
 
-	QUnit.test( 'checking reference when gateway rejects', 1, function ( assert ) {
-		var done = assert.async( 1 );
+	QUnit.test( 'checking reference when gateway rejects', function ( assert ) {
+		var done = $.Deferred();
 		this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).fail( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_OTHER, 'getReference is rejected if API query fails' );
-			done();
+			done.resolve();
 		} );
+		return done;
 	} );
 }( jQuery, mw.mobileFrontend ) );

@@ -3,7 +3,7 @@
 
 	QUnit.module( 'MobileFrontend Page' );
 
-	QUnit.test( '#isMainPage', 2, function ( assert ) {
+	QUnit.test( '#isMainPage', function ( assert ) {
 		var p = new Page( {
 				title: 'Main Page',
 				isMainPage: true
@@ -15,7 +15,7 @@
 		assert.strictEqual( p2.isMainPage(), false, 'check not marked as main page' );
 	} );
 
-	QUnit.test( '#getThumbnails', 11, function ( assert ) {
+	QUnit.test( '#getThumbnails', function ( assert ) {
 		var p, textPage, pLegacyUrls, thumbs, pNoViewer, pMetadata, pLazyImages, metadataTable,
 			pLazyImagesTypo, pMetadataNested;
 
@@ -83,7 +83,7 @@
 			'Thumbnail found if there is a typo.' );
 	} );
 
-	QUnit.test( '#getNamespaceId', 8, function ( assert ) {
+	QUnit.test( '#getNamespaceId', function ( assert ) {
 		var testCases = [
 			[ 'Main Page', 0 ],
 			[ 'San Francisco', 0 ],
@@ -102,7 +102,7 @@
 		} );
 	} );
 
-	QUnit.test( '#isTalkPage', 8, function ( assert ) {
+	QUnit.test( '#isTalkPage', function ( assert ) {
 		var testCases = [
 			[ 'Main Page', false ],
 			[ 'San Francisco', false ],
@@ -121,7 +121,7 @@
 		} );
 	} );
 
-	QUnit.test( '#allowsXSS', 3, function ( assert ) {
+	QUnit.test( '#allowsXSS', function ( assert ) {
 		var p = new Page( {
 				title: '<script>alert("oops, XSS possible!");</script>'
 			} ),

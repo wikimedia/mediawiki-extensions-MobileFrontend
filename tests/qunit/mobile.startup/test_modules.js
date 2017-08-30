@@ -6,7 +6,7 @@
 		}
 	} );
 
-	QUnit.test( '#require', 4, function ( assert ) {
+	QUnit.test( '#require', function ( assert ) {
 		this.loader.define( 'foo', 1 );
 		this.loader.define( 'bar', 5 );
 
@@ -21,7 +21,7 @@
 		}, 'Cannot require an undefined export on a known module.' );
 	} );
 
-	QUnit.test( '#define', 2, function ( assert ) {
+	QUnit.test( '#define', function ( assert ) {
 		var loader = this.loader;
 		loader.define( 'foo', 1 );
 		loader.define( 'bar', 5 );

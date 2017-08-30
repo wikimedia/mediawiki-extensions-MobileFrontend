@@ -24,7 +24,7 @@
 		}
 	} );
 
-	QUnit.test( 'View', 2, function ( assert ) {
+	QUnit.test( 'View', function ( assert ) {
 		var view = new View( {
 			el: 'body'
 		} );
@@ -32,7 +32,7 @@
 		assert.strictEqual( view.$el[ 0 ].tagName.toUpperCase(), 'BODY', 'assign proper jQuery object to $el' );
 	} );
 
-	QUnit.test( 'View, jQuery proxy functions', 10, function ( assert ) {
+	QUnit.test( 'View, jQuery proxy functions', function ( assert ) {
 		var self = this,
 			view = new View( {
 				el: 'body'
@@ -56,7 +56,7 @@
 		} );
 	} );
 
-	QUnit.test( 'View extended, with el property', 1, function ( assert ) {
+	QUnit.test( 'View extended, with el property', function ( assert ) {
 		var $testEl, view;
 		function ChildView() {
 			View.apply( this, arguments );
@@ -76,7 +76,7 @@
 		$testEl.remove();
 	} );
 
-	QUnit.test( 'View extended, with defined template', 4, function ( assert ) {
+	QUnit.test( 'View extended, with defined template', function ( assert ) {
 		var view;
 		function ChildView() {
 			View.apply( this, arguments );
@@ -103,7 +103,7 @@
 		assert.strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 	} );
 
-	QUnit.test( 'View extended, with partials', 2, function ( assert ) {
+	QUnit.test( 'View extended, with partials', function ( assert ) {
 		var view;
 
 		function ParentView() {
@@ -132,7 +132,7 @@
 		assert.strictEqual( view.$( 'p' ).text(), 'Some content', 'fill partial with data from options' );
 	} );
 
-	QUnit.test( 'View extended, extending partials', 1, function ( assert ) {
+	QUnit.test( 'View extended, extending partials', function ( assert ) {
 		var view;
 
 		function ParentView() {
@@ -165,7 +165,7 @@
 		} );
 	} );
 
-	QUnit.test( 'View extended, extending defaults', 1, function ( assert ) {
+	QUnit.test( 'View extended, extending defaults', function ( assert ) {
 		var view;
 
 		function ParentView() {
@@ -200,7 +200,7 @@
 		} );
 	} );
 
-	QUnit.test( 'View#preRender', 1, function ( assert ) {
+	QUnit.test( 'View#preRender', function ( assert ) {
 		var view;
 		function ChildView() {
 			View.apply( this, arguments );
@@ -217,7 +217,7 @@
 		assert.strictEqual( view.$el.html(), '<p>hello</p>', 'manipulate template data' );
 	} );
 
-	QUnit.test( 'View#postRender', 1, function ( assert ) {
+	QUnit.test( 'View#postRender', function ( assert ) {
 		var spy = this.sandbox.spy();
 		function ChildView() {
 			View.apply( this, arguments );
@@ -234,7 +234,7 @@
 		assert.ok( spy.calledOnce, 'invoke postRender' );
 	} );
 
-	QUnit.test( 'View#delegateEvents', 3, function ( assert ) {
+	QUnit.test( 'View#delegateEvents', function ( assert ) {
 
 		var view;
 		function EventsView() {
@@ -274,7 +274,7 @@
 		view.$el.trigger( 'click' );
 	} );
 
-	QUnit.test( 'View#render (with isTemplateMode)', 2, function ( assert ) {
+	QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 		var view, view2;
 		function TemplateModeView() {
 			View.apply( this, arguments );
@@ -302,7 +302,7 @@
 		assert.ok( view2.$el.hasClass( 'bar' ) );
 	} );
 
-	QUnit.test( 'View#render events (with isTemplateMode)', 4, function ( assert ) {
+	QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 		var view;
 		function TemplateModeView() {
 			View.apply( this, arguments );

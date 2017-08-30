@@ -11,7 +11,7 @@
 		}
 	} );
 
-	QUnit.test( '#render empty list', 4, function ( assert ) {
+	QUnit.test( '#render empty list', function ( assert ) {
 		var $el = $( '<div>' );
 		// eslint-disable-next-line no-new
 		new Nearby( {
@@ -69,7 +69,7 @@
 		}
 	} );
 
-	QUnit.test( '#render with a location', 2, function ( assert ) {
+	QUnit.test( '#render with a location', function ( assert ) {
 		var $el = $( '<div>' );
 		// eslint-disable-next-line no-new
 		new Nearby( {
@@ -86,7 +86,7 @@
 		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
 	} );
 
-	QUnit.test( '#render with location error', 4, function ( assert ) {
+	QUnit.test( '#render with location error', function ( assert ) {
 		var $el = $( '<div>' ),
 			n = new Nearby( {
 				range: 1000,
@@ -100,7 +100,7 @@
 			n.errorMessages.locating.heading, 'Check it is the correct heading' );
 	} );
 
-	QUnit.test( '#render with current location', 2, function ( assert ) {
+	QUnit.test( '#render with current location', function ( assert ) {
 		var $el = $( '<div>' );
 		// eslint-disable-next-line no-new
 		new Nearby( {
@@ -115,13 +115,16 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
 		setup: function () {
+			this.deferred = $.Deferred();
 			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
-				.returns( $.Deferred().reject() );
+				.returns( this.deferred.reject() );
 		}
 	} );
 
-	QUnit.test( '#render with a server error', 3, function ( assert ) {
+	QUnit.test( '#render with a server error', function ( assert ) {
 		var $el = $( '<div>' ),
+			spy = this.spy,
+			done = $.Deferred(),
 			n = new Nearby( {
 				api: api,
 				latitude: 37.7,
@@ -129,13 +132,17 @@
 				range: 1000,
 				el: $el
 			} );
-		assert.ok( this.spy.calledWithMatch( {
-			latitude: 37.7,
-			longitude: -122
-		}, 1000 ), 'Check API got called' );
-		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
-		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
-			n.errorMessages.http.heading, 'Check it is the correct heading' );
+		this.deferred.fail( function () {
+			assert.ok( spy.calledWithMatch( {
+				latitude: 37.7,
+				longitude: -122
+			}, 1000 ), 'Check API got called' );
+			assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
+			assert.strictEqual( $el.find( '.errorbox h2' ).text(),
+				n.errorMessages.http.heading, 'Check it is the correct heading' );
+			done.resolve();
+		} );
+		return done;
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
@@ -145,7 +152,7 @@
 		}
 	} );
 
-	QUnit.test( '#getting a title will trigger a different API method', 1, function ( assert ) {
+	QUnit.test( '#getting a title will trigger a different API method', function ( assert ) {
 		var $el = $( '<div>' ),
 			pageTitle = 'Hello Friends!';
 		// eslint-disable-next-line no-new

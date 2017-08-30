@@ -9,7 +9,7 @@
 		}
 	} );
 
-	QUnit.test( 'Test "add new discussion" Overlay and save process', 4, function ( assert ) {
+	QUnit.test( 'Test "add new discussion" Overlay and save process', function ( assert ) {
 		var overlay = new TalkSectionAddOverlay( {
 			api: this.api,
 			title: 'Talk:No exist'

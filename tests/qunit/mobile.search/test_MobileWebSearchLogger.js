@@ -9,7 +9,7 @@
 		}
 	} );
 
-	QUnit.test( 'it should log when the search is shown', 1, function ( assert ) {
+	QUnit.test( 'it should log when the search is shown', function ( assert ) {
 		var self = this;
 
 		// The user opens the search overlay.
@@ -24,7 +24,7 @@
 		} ), 'Search start is logged correctly.' );
 	} );
 
-	QUnit.test( 'it should log when the search API request completes', 5, function ( assert ) {
+	QUnit.test( 'it should log when the search API request completes', function ( assert ) {
 		var data;
 
 		// The user opens the search overlay, searches for a term, and is shown
@@ -44,7 +44,7 @@
 		assert.strictEqual( this.logger.searchSessionToken, data.searchSessionToken );
 	} );
 
-	QUnit.test( 'it should refresh the user session token when the search is shown again', 1, function ( assert ) {
+	QUnit.test( 'it should refresh the user session token when the search is shown again', function ( assert ) {
 		// The user opens the search overlay, searches for a term, closes the
 		// search overlay, opens the search overlay, and searches for a term.
 		this.logger.onSearchShow();
@@ -58,7 +58,7 @@
 		);
 	} );
 
-	QUnit.test( 'it should log when the user clicks a result', 2, function ( assert ) {
+	QUnit.test( 'it should log when the user clicks a result', function ( assert ) {
 		var data;
 
 		// The user opens the search overlay, searches for a term, is shown
@@ -80,7 +80,7 @@
 		assert.strictEqual( 1, data.clickIndex );
 	} );
 
-	QUnit.test( 'it should refresh the search session token when the search API request completes again', 1, function ( assert ) {
+	QUnit.test( 'it should refresh the search session token when the search API request completes again', function ( assert ) {
 		var event = {
 			results: []
 		};

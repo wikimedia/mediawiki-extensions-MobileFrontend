@@ -163,7 +163,7 @@
 		}
 	} );
 
-	QUnit.test( 'test utility functions', 6, function ( assert ) {
+	QUnit.test( 'test utility functions', function ( assert ) {
 		var suggestedLanguages,
 			variantsMap = {};
 

@@ -80,7 +80,7 @@
 		}
 	} );
 
-	QUnit.test( 'test language overlay', 2, function ( assert ) {
+	QUnit.test( 'test language overlay', function ( assert ) {
 		assert.equal(
 			this.languageOverlay.$( '.site-link-list.suggested-languages a' ).length,
 			3,
@@ -94,7 +94,7 @@
 		);
 	} );
 
-	QUnit.test( 'test language overlay search', 5, function ( assert ) {
+	QUnit.test( 'test language overlay search', function ( assert ) {
 		this.languageOverlay.filterLanguages( 'zh' );
 		assert.equal(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,

@@ -5,7 +5,7 @@
 
 	QUnit.module( 'MobileFrontend: WatchstarGateway.js' );
 
-	QUnit.test( '_loadIntoCache', 2, function ( assert ) {
+	QUnit.test( '_loadIntoCache', function ( assert ) {
 		var gateway = new WatchstarGateway( new mw.Api() );
 		gateway._loadIntoCache( {
 			query: {
@@ -25,7 +25,7 @@
 		} ) ), false, 'Able to check watch status' );
 	} );
 
-	QUnit.test( 'isWatchedPage', 1, function ( assert ) {
+	QUnit.test( 'isWatchedPage', function ( assert ) {
 		var gateway = new WatchstarGateway( new mw.Api() );
 		assert.ok(
 			gateway.isWatchedPage(

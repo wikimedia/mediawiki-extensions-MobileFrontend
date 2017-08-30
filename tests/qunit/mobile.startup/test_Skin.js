@@ -28,7 +28,7 @@
 		}
 	} );
 
-	QUnit.test( '#lazyLoadReferences', 1, function ( assert ) {
+	QUnit.test( '#lazyLoadReferences', function ( assert ) {
 		var $content = this.$el;
 		this.skin.lazyLoadReferences( {
 			wasExpanded: false,
@@ -42,7 +42,7 @@
 		} );
 	} );
 
-	QUnit.test( '#getSectionId', 5, function ( assert ) {
+	QUnit.test( '#getSectionId', function ( assert ) {
 		var
 			$el = $(
 				[

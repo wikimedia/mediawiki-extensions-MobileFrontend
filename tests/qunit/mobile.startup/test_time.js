@@ -1,7 +1,7 @@
 ( function ( m ) {
 	QUnit.module( 'MobileFrontend: mf-last-modified' );
 
-	QUnit.test( 'timeAgo()', 8, function ( assert ) {
+	QUnit.test( 'timeAgo()', function ( assert ) {
 		assert.deepEqual( m.timeAgo( 40 ), {
 			value: 40,
 			unit: 'seconds'

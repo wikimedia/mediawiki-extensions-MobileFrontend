@@ -25,7 +25,7 @@
 	} );
 
 	// has to be the first test here! See comment in setup stub.
-	QUnit.test( '#initialize, blocked user', 1, function ( assert ) {
+	QUnit.test( '#initialize, blocked user', function ( assert ) {
 		var toastStub = this.toastStub;
 		// eslint-disable-next-line no-new
 		new EditorOverlay( {
@@ -42,7 +42,7 @@
 		} );
 	} );
 
-	QUnit.test( '#initialize, with given page and section', 5, function ( assert ) {
+	QUnit.test( '#initialize, with given page and section', function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'test',
 			sectionId: 0
@@ -58,7 +58,7 @@
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 	} );
 
-	QUnit.test( '#initialize, without a section', 4, function ( assert ) {
+	QUnit.test( '#initialize, without a section', function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'test.css'
 		} );
@@ -69,7 +69,7 @@
 		assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
 	} );
 
-	QUnit.test( '#preview', 1, function ( assert ) {
+	QUnit.test( '#preview', function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'test',
 			sectionId: 0
@@ -79,7 +79,7 @@
 		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
 	} );
 
-	QUnit.test( '#without-preview', 1, function ( assert ) {
+	QUnit.test( '#without-preview', function ( assert ) {
 		var editorOverlay;
 
 		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFEditorOptions' ).returns( {
@@ -94,7 +94,7 @@
 		assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
 	} );
 
-	QUnit.test( '#initialize, as anonymous', 2, function ( assert ) {
+	QUnit.test( '#initialize, as anonymous', function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'Main_page',
 			isAnon: true
