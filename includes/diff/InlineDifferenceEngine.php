@@ -12,7 +12,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * Checks whether the given Revision was deleted
 	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isDeletedDiff() {
 		return $this->mNewRev && $this->mNewRev->isDeleted( Revision::DELETED_TEXT );
@@ -23,7 +23,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * restricted.
 	 * FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isSuppressedDiff() {
 		return $this->isDeletedDiff() &&
@@ -35,7 +35,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * and current revisions.
 	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isUserAllowedToSee() {
 		$user = $this->getUser();
@@ -117,7 +117,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * the flag unhide is set to allow viewing deleted revisions.
 	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isHiddenFromUser() {
 		if ( $this->isDeletedDiff() && ( !$this->unhide || !$this->isUserAllowedToSee() ) ) {

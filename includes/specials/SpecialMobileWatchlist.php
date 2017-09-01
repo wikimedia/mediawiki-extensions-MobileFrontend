@@ -302,7 +302,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * Render the Watchlist items.
 	 * When ?from not set, adds a link "more" to see the other watchlist items.
 	 * @param ResultWrapper $res ResultWrapper from db
-	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 * @param bool $feed Render as feed (true) or list (false) view?
 	 * @todo FIXME: use templates/PageList.html when server side templates
 	 * are available to keep consistent with nearby view
 	 */
@@ -320,7 +320,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * If the user doesn't watch any page, show information how to watch some.
-	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 * @param bool $feed Render as feed (true) or list (false) view?
 	 */
 	function showEmptyList( $feed ) {
 		$this->getOutput()->addHtml( self::getEmptyListHtml( $feed, $this->getLanguage() ) );
@@ -329,7 +329,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Get the HTML needed to show if a user doesn't watch any page, show information
 	 * how to watch pages where no pages have been watched.
-	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 * @param bool $feed Render as feed (true) or list (false) view?
 	 * @param Language $lang The language of the current mode
 	 * @return string
 	 */

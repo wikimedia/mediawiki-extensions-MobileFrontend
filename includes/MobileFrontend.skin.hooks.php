@@ -92,7 +92,7 @@ JAVASCRIPT;
 	 *
 	 * @param string $license
 	 * @param Message $msgObj delimiter (optional)
-	 * @return integer Returns 2, if there are multiple licenses, 1 otherwise.
+	 * @return int Returns 2, if there are multiple licenses, 1 otherwise.
 	 */
 	public static function getPluralLicenseInfo( $license, $msgObj = null ) {
 		// for plural support we need the info, if there is one or more licenses used in the license text

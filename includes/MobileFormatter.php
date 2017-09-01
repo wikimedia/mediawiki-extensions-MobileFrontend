@@ -96,9 +96,9 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @param MobileContext $context
 	 * @param IContentProvider $provider
-	 * @param boolean $enableSections (optional)
+	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
-	 * @param boolean $includeTOC (optional) whether to include the
+	 * @param bool $includeTOC (optional) whether to include the
 	 *  table of contents in output HTML
 	 *
 	 * @return MobileFormatter
@@ -129,7 +129,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Mark whether a placeholder table of contents should be included at the end of the lead
 	 * section
-	 * @param boolean $flag
+	 * @param bool $flag
 	 */
 	public function enableTOCPlaceholder( $flag = true ) {
 		$this->isTOCEnabled = $flag;
@@ -146,7 +146,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Change mainPage (is this the main page) to $value (standard: true)
-	 * @param boolean $value
+	 * @param bool $value
 	 */
 	public function setIsMainPage( $value = true ) {
 		$this->mainPage = $value;

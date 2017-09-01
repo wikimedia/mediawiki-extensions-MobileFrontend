@@ -34,7 +34,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the revision object from ID
-	 * @param integer $id ID of the wanted revision
+	 * @param int $id ID of the wanted revision
 	 * @return Revision
 	 */
 	public static function getRevision( $id ) {
@@ -92,7 +92,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Render the diff page
-	 * @return boolean false when revision not exist
+	 * @return bool false when revision not exist
 	 * @param string $par Revision IDs separated by three points (e.g. 123...124)
 	 */
 	function executeWhenAvailable( $par ) {
@@ -328,7 +328,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the url for the mobile diff special page to use in Desktop footer
-	 * @return boolean|string Return URL or false when revision id's not set
+	 * @return bool|string Return URL or false when revision id's not set
 	 */
 	public static function getMobileUrlFromDesktop() {
 		$req = MobileContext::singleton()->getRequest();

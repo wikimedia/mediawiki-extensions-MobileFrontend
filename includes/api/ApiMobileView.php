@@ -324,7 +324,7 @@ class ApiMobileView extends ApiBase {
 	 * Check if page is the main page after follow redirect when followRedirects is true.
 	 *
 	 * @param Title $title Title object to check
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function isMainPage( $title ) {
 		if ( $title->isRedirect() && $this->followRedirects ) {
@@ -439,7 +439,7 @@ class ApiMobileView extends ApiBase {
 	 * Performs a page parse
 	 * @param WikiPage $wp
 	 * @param ParserOptions $parserOptions
-	 * @param null|int [$oldid] Revision ID to get the text from, passing null or 0 will
+	 * @param null|int [ $oldid] Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
 	 * @return ParserOutput|null
 	 */
@@ -480,7 +480,7 @@ class ApiMobileView extends ApiBase {
 	 * @param string $html representing the entire page
 	 * @param Title $title
 	 * @param ParserOutput $parserOutput
-	 * @param integer $revId this is a temporary parameter to avoid debug log warnings.
+	 * @param int $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
 	 *  - refsections: [] where all keys are section ids of sections with refs

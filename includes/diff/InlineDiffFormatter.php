@@ -13,10 +13,10 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	/**
 	 * Get the header of diff block. Remember: Given line numbers will not be visible,
 	 * it's a one column diff style.
-	 * @param integer $xbeg line number of left side to compare with
-	 * @param integer $xlen Number of trailing lines after the changed line on left side
-	 * @param integer $ybeg right side line number to compare with
-	 * @param integer $ylen Number of trailing lines after the changed line on right side
+	 * @param int $xbeg line number of left side to compare with
+	 * @param int $xlen Number of trailing lines after the changed line on left side
+	 * @param int $ybeg right side line number to compare with
+	 * @param int $ylen Number of trailing lines after the changed line on right side
 	 * @return string
 	 */
 	function blockHeader( $xbeg, $xlen, $ybeg, $ylen ) {

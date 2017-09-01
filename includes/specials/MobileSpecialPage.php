@@ -113,7 +113,7 @@ class MobileSpecialPage extends SpecialPage {
 
 	/**
 	 * Returns if this page is listed on Special:SpecialPages
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isListed() {
 		return $this->listed;

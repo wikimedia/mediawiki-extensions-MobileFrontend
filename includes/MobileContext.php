@@ -404,7 +404,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Wether user is Beta group member
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isBetaGroupMember() {
 		return $this->getMobileMode() === self::MODE_BETA;
@@ -595,7 +595,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Set Cookie to stop automatically redirect to mobile page
-	 * @param integer $expiry Expire time of cookie
+	 * @param int $expiry Expire time of cookie
 	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
 		if ( is_null( $expiry ) ) {
@@ -1155,7 +1155,7 @@ class MobileContext extends ContextSource {
 	 * Should image thumbnails in pages remove the high-density additions
 	 * during this request?
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function shouldStripResponsiveImages() {
 		if ( $this->stripResponsiveImagesOverride === null ) {
@@ -1169,7 +1169,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Config override for responsive image strip mode.
 	 *
-	 * @param boolean $val
+	 * @param bool $val
 	 */
 	public function setStripResponsiveImages( $val ) {
 		$this->stripResponsiveImagesOverride = $val;
@@ -1180,7 +1180,7 @@ class MobileContext extends ContextSource {
 	 * and watchlists; or as taglines on article pages.
 	 *
 	 * @param string $feature
-	 * @return boolean
+	 * @return bool
 	 * @throws DomainException If `feature` isn't one that shows Wikidata descriptions. See the
 	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
 	 */

@@ -140,7 +140,7 @@ class MobilePage {
 	/**
 	 * Get a small sized thumbnail in div container.
 	 *
-	 * @param boolean $useBackgroundImage Whether the thumbnail should have a background image
+	 * @param bool $useBackgroundImage Whether the thumbnail should have a background image
 	 * @return string
 	 */
 	public function getSmallThumbnailHtml( $useBackgroundImage = false ) {

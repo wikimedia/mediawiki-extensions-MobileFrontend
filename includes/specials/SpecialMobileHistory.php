@@ -88,7 +88,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * Checks, if the given title supports the use of SpecialMobileHistory.
 	 *
 	 * @param Title $title The title to check
-	 * @return boolean True, if SpecialMobileHistory can be used, false otherwise
+	 * @return bool True, if SpecialMobileHistory can be used, false otherwise
 	 */
 	public static function shouldUseSpecialHistory( Title $title ) {
 		$contentHandler = ContentHandler::getForTitle( $title );
@@ -227,7 +227,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Get a button to show more entries of history
-	 * @param integer $ts The offset to start the history list from
+	 * @param int $ts The offset to start the history list from
 	 * @return string
 	 */
 	protected function getMoreButton( $ts ) {

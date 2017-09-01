@@ -270,7 +270,7 @@ HTML;
 	 * Get the URL of this special page
 	 * @param string|null $option Subpage string, or false to not use a subpage
 	 * @param Title $returnTo Destination to returnto after successfully action on the page returned
-	 * @param boolean $fullUrl Whether to get the local url, or the full url
+	 * @param bool $fullUrl Whether to get the local url, or the full url
 	 *
 	 * @return string
 	 */
