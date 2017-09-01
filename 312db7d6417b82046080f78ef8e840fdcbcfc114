@@ -16,6 +16,24 @@
       "revId": "312db7d6417b82046080f78ef8e840fdcbcfc114",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_356aeb12",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-09-01T14:07:27Z",
+      "side": 1,
+      "message": "Whenever MobileFrontend master drops compatibility with pre-Ic3a434c versions of MediaWiki core. Feel free to amend the patch to add that comment or to just remove the call if you already don\u0027t maintain such compatibility.",
+      "parentUuid": "4e7eab26_95e4ff39",
+      "revId": "312db7d6417b82046080f78ef8e840fdcbcfc114",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
