@@ -62,8 +62,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		// check 2 parameters are passed and are numbers
 		if ( count( $revids ) === 2 && $revids[0] && $revids[1] ) {
-			$id = intval( $revids[1] );
-			$prevId = intval( $revids[0] );
+			$id = (int)$revids[1];
+			$prevId = (int)$revids[0];
 			if ( $id && $prevId ) {
 				$rev = static::getRevision( $id );
 				// deal with identical ids
@@ -79,7 +79,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				}
 			}
 		} elseif ( count( $revids ) === 1 ) {
-			$id = intval( $revids[0] );
+			$id = (int)$revids[0];
 			if ( $id ) {
 				$rev = static::getRevision( $id );
 				if ( $rev ) {
@@ -95,7 +95,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @return bool false when revision not exist
 	 * @param string $par Revision IDs separated by three points (e.g. 123...124)
 	 */
-	function executeWhenAvailable( $par ) {
+	public function executeWhenAvailable( $par ) {
 		$ctx = MobileContext::singleton();
 		$this->setHeaders();
 		$output = $this->getOutput();
@@ -105,7 +105,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$rev = $revisions[1];
 		$prev = $revisions[0];
 
-		if ( is_null( $rev ) ) {
+		if ( $rev === null ) {
 			$this->executeBadQuery();
 			return false;
 		}
@@ -132,14 +132,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $ctx, $revisions ] );
 
-		$output->addHtml( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
+		$output->addHTML( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
 		$this->displayDiffPage();
-		$output->addHtml( '</div>' );
+		$output->addHTML( '</div>' );
 
 		$this->showFooter( $ctx );
 
-		$output->addHtml( '</div>' );
+		$output->addHTML( '</div>' );
 
 		return true;
 	}
@@ -243,7 +243,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 
 		return Html::openElement( 'div', [ 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ] )
-			. Html::openElement( 'h2', [] )
+			. Html::openElement( 'h2' )
 				. Html::element( 'a',
 					[
 						'href' => $this->targetTitle->getLocalURL()
@@ -301,7 +301,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	private function showFooter( IContextSource $context ) {
 		$output = $this->getOutput();
 
-		$output->addHtml(
+		$output->addHTML(
 			Html::openElement( 'div', [ 'id' => 'mw-mf-userinfo',
 				'class' => 'position-fixed' ] ) .
 			Html::openElement( 'div', [ 'class' => 'post-content' ] )
@@ -317,7 +317,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
 			];
-			$output->addHtml(
+			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
 				$this->getLinkRenderer()->makeLink(
 					$user->getUserPage(),
@@ -338,7 +338,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} else {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
-			$output->addHtml(
+			$output->addHTML(
 				Html::element( 'div', [
 					'class' => MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user mw-mf-anon' ),
 				], $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
@@ -348,7 +348,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			);
 		}
 
-		$output->addHtml(
+		$output->addHTML(
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'div' )
 		);
