@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_95e4ff39",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-09-01T12:37:07Z",
+      "side": 1,
+      "message": "Yes an inline comment about when we can remove this call would be useful.",
+      "revId": "312db7d6417b82046080f78ef8e840fdcbcfc114",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
