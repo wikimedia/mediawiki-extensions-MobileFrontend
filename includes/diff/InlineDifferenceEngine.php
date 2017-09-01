@@ -206,12 +206,20 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return string
 	 */
 	protected function getDiffBodyCacheKey() {
+		global $wgMemc;
 		if ( !$this->mOldid || !$this->mNewid ) {
 			throw new Exception( 'mOldid and mNewid must be set to get diff cache key.' );
 		}
 
-		return wfMemcKey( 'diff', 'inline', self::DIFF_VERSION,
-			'oldid', $this->mOldid, 'newid', $this->mNewid );
+		return $wgMemc->makeKey(
+			'diff',
+			'inline',
+			self::DIFF_VERSION,
+			'oldid',
+			$this->mOldid,
+			'newid',
+			$this->mNewid
+		);
 	}
 
 	/**

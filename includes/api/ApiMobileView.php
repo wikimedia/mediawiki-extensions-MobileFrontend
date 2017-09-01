@@ -530,11 +530,11 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	private function getData( Title $title, $noImages, $oldid = null ) {
+		global $wgMemc;
+
 		$mfConfig = MobileContext::singleton()->getMFConfig();
 		$mfMinCachedPageSize = $mfConfig->get( 'MFMinCachedPageSize' );
 		$mfSpecialCaseMainPage = $mfConfig->get( 'MFSpecialCaseMainPage' );
-
-		global $wgMemc;
 
 		$result = $this->getResult();
 		$wp = $this->makeWikiPage( $title );
@@ -563,8 +563,16 @@ class ApiMobileView extends ApiBase {
 		$touched = $wp->getTouched();
 		$revId = $oldid ? $oldid : $title->getLatestRevID();
 		if ( $this->file ) {
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
-				$touched, $this->noTransform, $this->file->getSha1(), $this->variant );
+			$key = $wgMemc->makeKey(
+				'mf',
+				'mobileview',
+				self::CACHE_VERSION,
+				$noImages,
+				$touched,
+				$this->noTransform,
+				$this->file->getSha1(),
+				$this->variant
+			);
 			$cacheExpiry = 3600;
 		} else {
 			if ( !$latest ) {
@@ -575,7 +583,7 @@ class ApiMobileView extends ApiBase {
 			$parserOptions = $this->makeParserOptions( $wp );
 			$parserCacheKey = \MediaWiki\MediaWikiServices::getInstance()->getParserCache()->getKey( $wp,
 					$parserOptions );
-			$key = wfMemcKey(
+			$key = $wgMemc->makeKey(
 				'mf',
 				'mobileview',
 				self::CACHE_VERSION,
