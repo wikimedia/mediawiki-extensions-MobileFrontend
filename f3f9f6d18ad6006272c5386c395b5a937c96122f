@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_f3e23b97",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2017-09-01T19:10:45Z",
+      "side": 1,
+      "message": "You should use whatever cache object the key is going into. So in this case $wgMemc.",
+      "range": {
+        "startLine": 586,
+        "startChar": 10,
+        "endLine": 586,
+        "endChar": 48
+      },
+      "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
