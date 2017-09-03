@@ -39,6 +39,7 @@
 			"Josecurioso"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Accede o crea una cuenta para dar seguimiento a tus ediciones",
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-categories-heading": "<strong>Categorías</strong>",
@@ -254,6 +255,7 @@
 	"tag-mobile_web_edit": "Edición vía web móvil",
 	"tag-mobile_web_edit-description": "Edición realizada desde un sitio web móvil",
 	"apihelp-mobileview-description": "Devuelve los datos necesarios para las vistas en móviles.",
+	"apihelp-mobileview-summary": "Devuelve datos necesarios para las vistas móviles.",
 	"apihelp-mobileview-param-page": "Título de la página que se procesará.",
 	"apihelp-mobileview-param-redirect": "Si deben seguirse las redirecciones.",
 	"apihelp-mobileview-param-sections": "Lista separada por barras verticales de números de sección para los que devolver texto. Se puede emplear \"all\" para devolver todos; rangos en el formato \"1-4\" para obtener las secciones 1, 2, 3 y 4; rangos sin segundo número (por ejemplo, \"1-\") para obtener las secciones desde el número indicado hasta el final; o \"references\" para obtener todas las secciones que contengan referencias.",
@@ -279,6 +281,7 @@
 	"apihelp-parse-param-noimages": "Desactivar imágenes en la salida para móviles.",
 	"apihelp-parse-param-mainpage": "Aplicar las transformaciones de la página principal para móviles.",
 	"apihelp-webapp-manifest-description": "Devuelve un manifiesto de aplicación web.",
+	"apihelp-webapp-manifest-summary": "Devuelve un manifiesto de aplicación web.",
 	"apierror-mobilefrontend-badidtitle": "Mala combinación de identificador de revisión y título.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> es mutuamente excluyente con <var>thumbwidth</var> y <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> no tiene sentido en la página principal; se ignora.",
