@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e7eab26_54f20b66",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-04T20:16:16Z",
+      "side": 1,
+      "message": "The explicit asserting of tests is indeed largely redundant and mainly served as a way to workaround the fact that QUnit wasn\u0027t very good at catching async errors.\n\nHowever do note that if you do a good reason to use it, a new method assert.expect() was introduced a few releases back that is not deprecated and provides the same feature (fail the test if the number of assertions doesn\u0027t match).\n\nOnly the QUnit.test(name, expectedCount, fn) signature was deprecated, not the feature itself.\n\nThe main use case for asserting the count, in my opinion, is when a test is more of an integration test and less of a unit test and is hard to track with promise rejections and errors, in which case assert.expect() can be a last resort to make sure the test doesn\u0027t pass when in reality one of the intended branches wasn\u0027t called or something like that.\n\nFor example:\n\n QUnit.test(\u0027example\u0027, 2, function (assert) {\n  var obj;\n  var done \u003d assert.async();\n\n  obj.on(\u0027start\u0027, function (x) {\n    assert.equal(x, \u0027a\u0027);\n  });\n  obj.on(\u0027end\u0027, function (x) {\n    assert.equal(x, \u0027b\u0027);\n    done();\n  });\n  obj.do();\n});\n\nThis is an anti-pattern, but as-is, without the asserting of 2 counts, the \"start\" event could be missing and the test still pass.\n\nA better way to write this:\n\n QUnit.test(\u0027example\u0027, function (assert) {\n  var obj;\n  var data;\n\n  obj.on(\u0027start\u0027, function (x) {\n    data.push({ start: x });\n  });\n  obj.on(\u0027end\u0027, function (x) {\n    data.push({ end: x })\n  });\n  return obj.do().then(function () {\n    assert.deepEqual(data, [ {start: \u0027a\u0027 }, { end: \u0027b\u0027 }]);\n  });\n});\n\nBut as stop-gap, one could use assert.expect() instead.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 44
+      },
+      "revId": "09782a6fb394c359663aed2aa196d67c016466e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_14f00361",
         "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
         "patchSetId": 4
