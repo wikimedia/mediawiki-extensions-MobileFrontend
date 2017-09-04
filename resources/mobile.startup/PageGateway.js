@@ -148,7 +148,7 @@
 						// no protection level. When an array this means there is no protection level set.
 						// So to keep the data type consistent either use the predefined protection level, or
 						// extend it with what is returned by API.
-						protection = $.isArray( mv.protection ) ? protection : $.extend( protection, mv.protection );
+						protection = Array.isArray( mv.protection ) ? protection : $.extend( protection, mv.protection );
 						resolveObj = {
 							title: title,
 							id: mv.id,
