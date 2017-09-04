@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_14f00361",
+        "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 427,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-04T20:08:41Z",
+      "side": 1,
+      "message": "I don\u0027t particularly mind, but note that assert.async() is in no way deprecated. It seems to me that using a Deferred here would make the test harder to understand and less strict. assert.async(), for example, has a built-in timeout and is enforced to be only called once, whereas Deferred is disconnected from QUnit and actually tolerates multiple resolve() second (all but the first are silently ignored).\n\nThis seems like an understandable workaround if you want to avoid assert.async(), but that may\u0027ve been unintentional.",
+      "range": {
+        "startLine": 427,
+        "startChar": 3,
+        "endLine": 427,
+        "endChar": 23
+      },
+      "revId": "09782a6fb394c359663aed2aa196d67c016466e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
