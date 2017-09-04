@@ -4,7 +4,8 @@
 			"George Animal",
 			"Ghybu",
 			"Gomada",
-			"Bikarhêner"
+			"Bikarhêner",
+			"Cûndûllah el-Kurdî"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Kategorî</strong>",
@@ -92,6 +93,7 @@
 	"mobile-frontend-watchlist-filter-talk": "Gotûbêj",
 	"mobile-frontend-watchlist-more": "bêhtir",
 	"tag-mobile_edit": "Guherandina mobîl",
+	"tag-mobile_web_edit": "Guherandina malpera mobîl",
 	"mobile-frontend-loading-message": "Tê barkirin...",
 	"mobile-frontend-panel-ok": "Baş e",
 	"mobile-frontend-panel-cancel": "Na spas"
