@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_e737cbf9",
+        "filename": "resources/mobile.startup/Gateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-04T21:25:02Z",
+      "side": 1,
+      "message": "I assume this should be d instead of creating a second (different) Deferred.",
+      "range": {
+        "startLine": 38,
+        "startChar": 9,
+        "endLine": 38,
+        "endChar": 21
+      },
+      "revId": "80ac55d70759d7170930f086e4b86cb26a405200",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
