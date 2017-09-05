@@ -82,25 +82,6 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			$diff .
 			'</div>'
 		);
-		$prev = $rev->getPrevious();
-		$next = $rev->getNext();
-		if ( $prev || $next ) {
-			$history = Html::openElement( 'ul', [ 'class' => 'hlist revision-history-links' ] );
-			if ( $prev ) {
-				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl()
-					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
-			}
-			if ( $next ) {
-				$history .= Html::openElement( 'li' ) .
-					Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )->getLocalUrl()
-					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
-			}
-			$history .= Html::closeElement( 'ul' );
-			$output->addHtml( $history );
-		}
 
 		$output->addHtml( Html::rawElement(
 			'div',
@@ -236,4 +217,5 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		}
 		return $linkInfo;
 	}
+
 }

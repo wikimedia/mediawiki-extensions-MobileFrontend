@@ -178,14 +178,49 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Render the header of a diff page including:
+	 * Navigation links
 	 * Name with url to page
 	 * Bytes added/removed
 	 * Day and time of edit
 	 * Edit Comment
 	 */
 	private function showHeader() {
-		$title = $this->targetTitle;
+		if ( $this->rev->isMinor() ) {
+			$minor = ChangesList::flag( 'minor' );
+		} else {
+			$minor = '';
+		}
+		$this->getOutput()->addHTML(
+			$this->getRevisionNavigationLinksHTML() .
+			$this->getIntroHTML() .
+			$minor .
+			$this->getCommentHTML()
+		);
+	}
 
+	/**
+	 * Get the edit comment
+	 * @return string Build HTML for edit comment section
+	 */
+	private function getCommentHTML() {
+		if ( $this->rev->getComment() !== '' ) {
+			$comment = Linker::formatComment( $this->rev->getComment(), $this->targetTitle );
+		} else {
+			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
+		}
+
+		return Html::rawElement(
+			'div',
+			[ 'id' => 'mw-mf-diff-comment' ],
+			$comment
+		);
+	}
+
+	/**
+	 * Get the intro HTML
+	 * @return string Built HTML for intro section
+	 */
+	private function getIntroHTML() {
 		if ( $this->prevRev ) {
 			$bytesChanged = $this->rev->getSize() - $this->prevRev->getSize();
 		} else {
@@ -205,46 +240,57 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'meta mw-mf-bytesremoved mw-ui-icon-small' );
 			$bytesChanged = abs( $bytesChanged );
 		}
-
-		if ( $this->rev->isMinor() ) {
-			$minor = ChangesList::flag( 'minor' );
-		} else {
-			$minor = '';
-		}
-		if ( $this->rev->getComment() !== '' ) {
-			$comment = Linker::formatComment( $this->rev->getComment(), $title );
-		} else {
-			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
-		}
-
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
-		$this->getOutput()->addHtml(
-			Html::openElement( 'div', [ 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ] )
-				. Html::openElement( 'h2', [] )
+
+		return Html::openElement( 'div', [ 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ] )
+			. Html::openElement( 'h2', [] )
 				. Html::element( 'a',
 					[
-						'href' => $title->getLocalURL(),
+						'href' => $this->targetTitle->getLocalURL()
 					],
-					$title->getPrefixedText()
+					$this->targetTitle->getPrefixedText()
 				)
-				. Html::closeElement( 'h2' )
-				. $this->msg( 'mobile-frontend-diffview-comma' )->rawParams(
-					Html::element( 'span', [ 'class' => $sizeClass ],
-						$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
-					),
-					Html::element(
-						'span', [ 'class' => 'mw-mf-diff-date meta' ],
-						$this->getLanguage()->getHumanTimestamp( $ts )
-					)
-				)->text()
-			. Html::closeElement( 'div' )
-			. $minor
-			. Html::rawElement(
-				'div',
-				[ 'id' => 'mw-mf-diff-comment' ],
-				$comment
-			)
-		);
+			. Html::closeElement( 'h2' )
+			. $this->msg( 'mobile-frontend-diffview-comma' )->rawParams(
+				Html::element( 'span', [ 'class' => $sizeClass ],
+					$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
+				),
+				Html::element(
+					'span', [ 'class' => 'mw-mf-diff-date meta' ],
+					$this->getLanguage()->getHumanTimestamp( $ts )
+				)
+			)->text()
+		. Html::closeElement( 'div' );
+	}
+
+	/**
+	 * Render the revision navigation links
+	 * @return string built HTML for Revision navigation links
+	 */
+	private function getRevisionNavigationLinksHTML() {
+		$prev = $this->rev->getPrevious();
+		$next = $this->rev->getNext();
+		$history = '';
+
+		if ( $prev || $next ) {
+			$history = Html::openElement( 'ul', [ 'class' => 'hlist revision-history-links' ] );
+			if ( $prev ) {
+				$history .= Html::openElement( 'li', [ 'class' => 'revision-history-prev' ] )
+					. Html::element( 'a', [
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )
+							->getLocalURL()
+					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
+			}
+			if ( $next ) {
+				$history .= Html::openElement( 'li', [ 'class' => 'revision-history-next' ] )
+					. Html::element( 'a', [
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )
+							->getLocalURL()
+					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
+			}
+			$history .= Html::closeElement( 'ul' );
+		}
+		return $history;
 	}
 
 	/**
