@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_1b5d8e19",
+        "filename": "resources/mobile.startup/Gateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-09-05T13:56:17Z",
+      "side": 1,
+      "message": "Good point. I should have done this, I\u0027ve been so focused on closing out the non-standard usages I forgot to plug the hole :)",
+      "parentUuid": "4e7eab26_a73d43db",
+      "range": {
+        "startLine": 29,
+        "startChar": 29,
+        "endLine": 29,
+        "endChar": 38
+      },
+      "revId": "80ac55d70759d7170930f086e4b86cb26a405200",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_e737cbf9",
         "filename": "resources/mobile.startup/Gateway.js",
         "patchSetId": 5
