@@ -51,6 +51,10 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	/**
 	 * Render the inline difference between two revisions
 	 * using InlineDiffEngine
+	 * @throws MWException If the content is not an instance of TextContent and
+	 * wgContentHandlerTextFallback was set to 'fail'.
+	 *
+	 * @param bool $diffOnly
 	 */
 	public function showDiffPage( $diffOnly = false ) {
 		$output = $this->getOutput();
@@ -76,14 +80,14 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		if ( $warnings ) {
 			$warnings = MobileUI::warningBox( $warnings );
 		}
-		$output->addHtml(
+		$output->addHTML(
 			$warnings .
 			'<div id="mw-mf-minidiff">' .
 			$diff .
 			'</div>'
 		);
 
-		$output->addHtml( Html::rawElement(
+		$output->addHTML( Html::rawElement(
 			'div',
 			[
 				'class' => 'patrollink'
@@ -101,11 +105,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return bool
 	 */
 	public function isHiddenFromUser() {
-		if ( $this->isDeletedDiff() && ( !$this->unhide || !$this->isUserAllowedToSee() ) ) {
-			return true;
-		} else {
-			return false;
-		}
+		return $this->isDeletedDiff() && ( !$this->unhide || !$this->isUserAllowedToSee() );
 	}
 
 	/**
@@ -139,7 +139,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 				)->parse();
 			} else {
 				// Give explanation and add a link to view the diff...
-				$query = $this->getRequest()->appendQueryValue( 'unhide', '1', true );
+				$query = $this->getRequest()->appendQueryValue( 'unhide', '1' );
 				$link = $this->getTitle()->getFullURL( $query );
 				$msg = $context->msg(
 					$suppressed ? 'rev-suppressed-unhide-diff' : 'rev-deleted-unhide-diff',
@@ -154,10 +154,11 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * Creates an inline diff
 	 * @param Content $otext Old content
 	 * @param Content $ntext New content
+	 * @throws \MediaWiki\Diff\ComplexityException
 	 *
 	 * @return string
 	 */
-	function generateTextDiffBody( $otext, $ntext ) {
+	public function generateTextDiffBody( $otext, $ntext ) {
 		global $wgContLang;
 
 		// First try wikidiff2
@@ -173,9 +174,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		$nta = explode( "\n", $wgContLang->segmentForDiff( $ntext ) );
 		$diffs = new Diff( $ota, $nta );
 		$formatter = new InlineDiffFormatter();
-		$difftext = $wgContLang->unsegmentForDiff( $formatter->format( $diffs ) );
-
-		return $difftext;
+		return $wgContLang->unsegmentForDiff( $formatter->format( $diffs ) );
 	}
 
 	/**
@@ -208,7 +207,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			$linkInfo = Html::linkButton(
 				$this->msg( 'markaspatrolleddiff' )->escaped(),
 				[
-					'href' => $this->mNewPage->getLocalUrl( [
+					'href' => $this->mNewPage->getLocalURL( [
 						'action' => 'markpatrolled',
 						'rcid' => $linkInfo['rcid'],
 					] ),
