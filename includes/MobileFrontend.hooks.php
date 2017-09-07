@@ -781,7 +781,8 @@ class MobileFrontendHooks {
 
 			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
 			// We load MediaWiki:Mobile.css/js instead
-			$out->addModules( [ 'mobile.site' ] );
+			// We load mobile.init so that lazy loading images works on all skins
+			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
 
 			if ( $out->getRequest()->getText( 'oldid' ) ) {
 				$styles[] = 'mobile.messageBox.styles';
