@@ -109,33 +109,13 @@
 		 */
 		defaults: {
 			page: undefined,
-			tabletModules: [],
-			mainMenu: undefined
+			tabletModules: []
 		},
 
 		/**
 		 * @inheritdoc
 		 */
 		events: {},
-
-		/**
-		 * Close navigation if content tapped
-		 * @param {jQuery.Event} ev
-		 * @private
-		 */
-		_onPageCenterClick: function ( ev ) {
-			var $target = this.$( ev.target );
-
-			// Make sure the menu is open and we are not clicking on the menu button
-			if (
-				this.mainMenu &&
-				this.mainMenu.isOpen() &&
-				!$target.hasClass( 'main-menu-button' )
-			) {
-				this.mainMenu.closeNavigationDrawers();
-				ev.preventDefault();
-			}
-		},
 
 		/**
 		 * @inheritdoc
@@ -155,18 +135,11 @@
 			 */
 			this.emit( 'changed' );
 
-			// FIXME: This can be removed soon and is only here
-			// for backwards compatibility. Use `emit` from now on.
-			if ( this.mainMenu ) {
-				this.$( '#mw-mf-page-center' ).on( 'click',
-					$.proxy( this, '_onPageCenterClick' ) );
-			} else {
-				/**
-				 * @event click
-				 * Fired when the skin is clicked.
-				 */
-				this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
-			}
+			/**
+			 * @event click
+			 * Fired when the skin is clicked.
+			 */
+			this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
 		},
 
 		/**
