@@ -157,7 +157,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$options['LIMIT'] = self::LIMIT + 1;
 
 		$tables = [ self::DB_REVISIONS_TABLE ];
-		$fields = [ '*' ];
+		$fields = Revision::selectFields();
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
 
