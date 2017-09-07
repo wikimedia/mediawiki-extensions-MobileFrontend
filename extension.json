@@ -282,6 +282,19 @@
 				"error": "resources/mobile.startup.images/error.svg"
 			}
 		},
+		"mobile.init": {
+			"dependencies": [
+				"mobile.references.gateway",
+				"mobile.startup"
+			],
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"scripts": [
+				"resources/mobile.init/init.js"
+			]
+		},
 		"mobile.startup": {
 			"targets": [
 				"mobile",
