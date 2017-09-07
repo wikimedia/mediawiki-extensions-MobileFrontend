@@ -134,6 +134,7 @@
 	"mobile-frontend-nearby-noresults": "Tiho je ovdje... Nije nađena niti jedna stranica u blizini.",
 	"mobile-frontend-nearby-noresults-guidance": "Stvorite novu stranicu ili dodajte lokaciju postojećoj",
 	"mobile-frontend-nearby-requirements-guidance": "Probajte s drugim preglednikom ili omogućite JavaScript ako je onemogućen.",
+	"mobile-frontend-nearby-title": "U blizini",
 	"mobile-frontend-news-items": "U vijestima",
 	"mobile-frontend-opt-in-explain": "Rabeći beta inačicu, dobivate pristup eksperimentalnim mogućnosti, ali uz rizik mogućih pogrješaka i problema.",
 	"mobile-frontend-overlay-close": "Zatvori",
