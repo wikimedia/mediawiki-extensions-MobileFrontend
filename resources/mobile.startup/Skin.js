@@ -51,7 +51,10 @@
 
 		this.page = options.page;
 		this.name = options.name;
-		this.mainMenu = options.mainMenu;
+		if ( options.mainMenu ) {
+			this.mainMenu = options.mainMenu;
+			mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
+		}
 		View.call( this, options );
 		// Must be run after merging with defaults as must be defined.
 		this.tabletModules = options.tabletModules;
@@ -102,7 +105,6 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page page the skin is currently rendering
 		 * @cfg {Array} defaults.tabletModules modules to load when in tablet
-		 * @cfg {MainMenu} defaults.mainMenu instance of the mainMenu
 		 * @cfg {ReferencesGateway} defaults.referencesGateway instance of references gateway
 		 */
 		defaults: {
@@ -126,6 +128,7 @@
 
 			// Make sure the menu is open and we are not clicking on the menu button
 			if (
+				this.mainMenu &&
 				this.mainMenu.isOpen() &&
 				!$target.hasClass( 'main-menu-button' )
 			) {
@@ -151,17 +154,19 @@
 			 * Fired when appearance of skin changes.
 			 */
 			this.emit( 'changed' );
-			// FIXME: Move back into events when T98200 resolved
-			this.$( '#mw-mf-page-center' ).on( 'click',
-				$.proxy( this, '_onPageCenterClick' ) );
-		},
 
-		/**
-		 * Return the instance of MainMenu
-		 * @return {MainMenu}
-		 */
-		getMainMenu: function () {
-			return this.mainMenu;
+			// FIXME: This can be removed soon and is only here
+			// for backwards compatibility. Use `emit` from now on.
+			if ( this.mainMenu ) {
+				this.$( '#mw-mf-page-center' ).on( 'click',
+					$.proxy( this, '_onPageCenterClick' ) );
+			} else {
+				/**
+				 * @event click
+				 * Fired when the skin is clicked.
+				 */
+				this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
+			}
 		},
 
 		/**
