@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_e499f023",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2017-09-07T18:53:26Z",
+      "side": 1,
+      "message": "This does nothing...this class isn\u0027t namespaced.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 14
+      },
+      "revId": "3d7bd860678f5d87183effc8994e8ae27bd4d411",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
