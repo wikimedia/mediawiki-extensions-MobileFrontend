@@ -17,10 +17,6 @@ class MobileContext extends ContextSource {
 	const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
-	const LAZY_LOAD_IMAGES_COOKIE_NAME = 'mfLazyLoadImages';
-	const LAZY_LOAD_IMAGES_COOKIE_VALUE = 'A';
-	const LAZY_LOAD_REFERENCES_COOKIE_NAME = 'mfLazyLoadReferences';
-	const LAZY_LOAD_REFERENCES_COOKIE_VALUE = 'A';
 	const LOGGER_CHANNEL = 'mobile';
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
@@ -32,16 +28,6 @@ class MobileContext extends ContextSource {
 	 * @var boolean $disableImages
 	 */
 	protected $disableImages;
-	/**
-	 * Save whether images will be lazy loaded for current user
-	 * @var boolean $lazyLoadImages
-	 */
-	protected $lazyLoadImages;
-	/**
-	 * Save whether references will be lazy loaded for current user
-	 * @var boolean $lazyLoadReferences
-	 */
-	protected $lazyLoadReferences;
 	/**
 	 * Whether to show the first paragraph before the infobox in the lead section
 	 * @var boolean $showFirstParagraphBeforeInfobox
@@ -221,12 +207,7 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isLazyLoadReferencesEnabled() {
-		if ( $this->lazyLoadReferences === null ) {
-			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_REFERENCES_COOKIE_NAME, '' );
-			$this->lazyLoadReferences = $this->getConfigVariable( 'MFLazyLoadReferences' ) ||
-				$cookie === self::LAZY_LOAD_REFERENCES_COOKIE_VALUE;
-		}
-		return $this->lazyLoadReferences;
+		return $this->getConfigVariable( 'MFLazyLoadReferences' );
 	}
 
 	/**
@@ -234,12 +215,7 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isLazyLoadImagesEnabled() {
-		if ( $this->lazyLoadImages === null ) {
-			$cookie = $this->getRequest()->getCookie( self::LAZY_LOAD_IMAGES_COOKIE_NAME, '' );
-			$this->lazyLoadImages = $this->getConfigVariable( 'MFLazyLoadImages' ) ||
-				$cookie === self::LAZY_LOAD_IMAGES_COOKIE_VALUE;
-		}
-		return $this->lazyLoadImages;
+		return $this->getConfigVariable( 'MFLazyLoadImages' );
 	}
 
 	/**
