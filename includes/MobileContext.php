@@ -23,11 +23,7 @@ class MobileContext extends ContextSource {
 	 * @var string $mobileMode
 	 */
 	protected $mobileMode;
-	/**
-	 * Save whether images are disabled for the current user
-	 * @var boolean $disableImages
-	 */
-	protected $disableImages;
+
 	/**
 	 * Whether to show the first paragraph before the infobox in the lead section
 	 * @var boolean $showFirstParagraphBeforeInfobox
