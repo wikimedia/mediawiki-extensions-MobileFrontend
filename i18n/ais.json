@@ -2,20 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"Bunukwiki",
-			"Tokoabibi"
+			"Tokoabibi",
+			"Benel"
 		]
 	},
+	"mobile-frontend-categories-normal": "tina lacul namakay",
 	"mobile-frontend-categories-hidden": "mikumi",
 	"mobile-frontend-clear-search": "palawpis",
 	"mobile-frontend-diffview-title": "misumad",
 	"mobile-frontend-pointer-dismiss": "edeben",
 	"mobile-frontend-editor-cancel": "palawpes",
 	"mobile-frontend-editor-continue": "nuzikuzan",
+	"mobile-frontend-editor-editing": "mikawaway-kalumyiti henay ayza",
+	"mobile-frontend-editor-keep-editing": "palalid mikawaway-kalumyiti",
 	"mobile-frontend-editor-save": "suped",
 	"mobile-frontend-editor-summary": "pecu’ nu lacul:",
+	"mobile-frontend-fontchanger-link": "hacica-tabaki nu kataci nu silit",
+	"mobile-frontend-languages-404-title": "kamu a mungangaw",
 	"mobile-frontend-languages-header-page": "$1 -kamu",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "sacahamin a kamu",
 	"mobile-frontend-main-menu": "sausi  pili’",
 	"mobile-frontend-main-menu-settings-heading": "setin",
+	"mobile-frontend-media-details": "pulitaay a kalunasulitan",
 	"mobile-frontend-missing-image": "zunga",
 	"mobile-frontend-nearby-title": "capi",
 	"mobile-frontend-news-items": "ayzaay a sinbun",
@@ -29,6 +37,7 @@
 	"mobile-frontend-view": "baziyoung nu mobaylu(zikecan a dinwa) ciwsace",
 	"mobile-frontend-view-desktop": "tinnaway a baziyong",
 	"mobile-frontend-watchlist-a-z": "piazihan tu sulit",
+	"mobile-frontend-watchlist-back-home": "tatiku saayaway a belih",
 	"mobile-frontend-watchlist-cta-button-login": "patalabu",
 	"mobile-frontend-watchlist-cta-button-signup": "pangangan",
 	"mobile-frontend-watchlist-feed": "masumad tuway",

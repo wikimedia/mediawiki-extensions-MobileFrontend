@@ -115,7 +115,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Svi jezici",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Pretraga jezika",
 	"mobile-frontend-last-modified-date": "Zadnja promjena $1, $2",
-	"mobile-frontend-last-modified-with-user-days": "[$4 Zadnja promjena {{GENDER:$1|suradnika|suradnice}} {{PLURAL:$5|[$6 $2]|0=neprijavljenog suradnika}} prije {{PLURAL:$3|$3 dan|$3 dana}}]",
+	"mobile-frontend-last-modified-with-user-days": "[$4 Zadnji je put {{GENDER:$1|uređivao|uređivala|uređivala–uređivao}} {{PLURAL:$5|{{GENDER:$1|suradnik|suradnica}} [$6 $2]|0=anonimna suradnica – anonomni suradnik}} prije {{PLURAL:$3|$3 dan|$3 dana}}].",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Zadnja promjena {{GENDER:$1|suradnika|suradnice}} {{PLURAL:$5|[$6 $2]|0=neprijavljenog suradnika}} prije {{PLURAL:$3|$3 sat|$3 sata|$3 sati}}]",
 	"mobile-frontend-last-modified-with-user-just-now": "Upravo [$3 promijenio {{GENDER:$1|suradnik|suradnica}}] {{PLURAL:$4|[$5 $2]|0=neprijavljeni suradnik}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Zadnja promjena {{GENDER:$1|suradnika|suradnice}} {{PLURAL:$5|[$6 $2]|0=neprijavljenog suradnika}} prije {{PLURAL:$3|$3 minutu|$3 minute|$3 minuta}}]",
