@@ -15,7 +15,8 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 
 	/**
 	 * Registers core modules and runs registration hooks.
-	 * @param $options List of options; if not given or empty, an empty module will be constructed
+	 * @param array $options List of options; if not given or empty,
+	 *  an empty module will be constructed
 	 */
 	public function __construct( $options ) {
 		foreach ( $options as $member => $option ) {

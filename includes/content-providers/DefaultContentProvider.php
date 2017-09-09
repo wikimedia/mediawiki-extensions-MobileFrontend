@@ -16,7 +16,7 @@ class DefaultContentProvider implements IContentProvider {
 	}
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function getHTML() {
 		return $this->html;
