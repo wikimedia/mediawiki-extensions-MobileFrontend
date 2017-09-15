@@ -54,7 +54,7 @@ class DeviceDetectorService implements DeviceDetector {
 	}
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		foreach ( $this->children as $child ) {

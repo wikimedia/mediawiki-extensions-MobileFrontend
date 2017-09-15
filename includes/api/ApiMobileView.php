@@ -382,7 +382,7 @@ class ApiMobileView extends ApiBase {
 	 * Parses requested sections string into a list of sections
 	 * @param string $str String to parse
 	 * @param array $data Processed parser output
-	 * @param array $missingSections Upon return, contains the list of sections that were
+	 * @param array &$missingSections Upon return, contains the list of sections that were
 	 * requested but are not present in parser output (passed by reference)
 	 * @return array
 	 */
@@ -439,7 +439,7 @@ class ApiMobileView extends ApiBase {
 	 * Performs a page parse
 	 * @param WikiPage $wp
 	 * @param ParserOptions $parserOptions
-	 * @param null|int [ $oldid] Revision ID to get the text from, passing null or 0 will
+	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
 	 * @return ParserOutput|null
 	 */
@@ -906,6 +906,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Returns usage examples for this module.
 	 * @see ApiBase::getExamplesMessages()
+	 * @return array
 	 */
 	protected function getExamplesMessages() {
 		return [

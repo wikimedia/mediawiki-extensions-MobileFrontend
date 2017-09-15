@@ -42,7 +42,7 @@ class CustomHeaderDeviceDetector implements DeviceDetector {
 	}
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		if (

@@ -18,6 +18,7 @@ class MobileCollection implements IteratorAggregate, Countable {
 
 	/**
 	 * Return size of the collection
+	 * @return int
 	 */
 	public function count() {
 		return count( $this->pages );

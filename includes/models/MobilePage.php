@@ -75,7 +75,7 @@ class MobilePage {
 
 	/**
 	 * Set rev_timestamp of latest edit to this page
-	 * @param string Timestamp (MW format)
+	 * @param string $timestamp Timestamp (MW format)
 	 */
 	public function setLatestTimestamp( $timestamp ) {
 		$this->revisionTimestamp = $timestamp;

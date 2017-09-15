@@ -177,7 +177,7 @@ class MobileContext extends ContextSource {
 	 * $context->getConfigVariable( 'Corge' ); // => null
 	 * ```
 	 *
-	 * @param $variableName
+	 * @param string $variableName
 	 * @return mixed|null
 	 * @throws ConfigException If the config variable doesn't exist
 	 *
@@ -736,7 +736,7 @@ class MobileContext extends ContextSource {
 	 *
 	 * Eg if a desktop domain is en.wikipedia.org, but the mobile variant is
 	 * en.m.wikipedia.org, the mobile token is 'm.'
-	 * @param $mobileUrlHostTemplate string
+	 * @param string $mobileUrlHostTemplate
 	 * @return string
 	 */
 	public function getMobileHostToken( $mobileUrlHostTemplate ) {
@@ -746,6 +746,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Get the template for mobile URLs.
 	 * @see $wgMobileUrlTemplate
+	 * @return string
 	 */
 	public function getMobileUrlTemplate() {
 		if ( !$this->mobileUrlTemplate ) {
@@ -829,7 +830,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update host of given URL to conform to mobile URL template.
-	 * @param array $parsedUrl
+	 * @param array &$parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlHost( &$parsedUrl ) {
@@ -866,7 +867,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the host of a given URL to strip out any mobile tokens
-	 * @param array $parsedUrl
+	 * @param array &$parsedUrl
 	 *		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
@@ -883,7 +884,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the query portion of a given URL to remove any 'useformat' params
-	 * @param array $parsedUrl
+	 * @param array &$parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlQuery( &$parsedUrl ) {
@@ -902,7 +903,7 @@ class MobileContext extends ContextSource {
 	 * this is intended to provide. This will hopefully be implemented someday
 	 * in the not to distant future.
 	 *
-	 * @param array $parsedUrl
+	 * @param array &$parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {

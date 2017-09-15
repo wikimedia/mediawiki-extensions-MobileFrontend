@@ -51,7 +51,7 @@ class McsContentProvider implements IContentProvider {
 	}
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function getHTML() {
 		$out = $this->out;

@@ -13,7 +13,7 @@ use WebRequest;
 class AMFDeviceDetector implements DeviceDetector {
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		$hasIsMobile = isset( $server['AMF_DEVICE_IS_MOBILE'] );

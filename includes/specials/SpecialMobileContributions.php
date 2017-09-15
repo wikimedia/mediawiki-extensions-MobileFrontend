@@ -170,6 +170,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Returns a list of query conditions that should be run against the revision table
+	 * @return array
 	 */
 	protected function getQueryConditions() {
 		$conds = [];

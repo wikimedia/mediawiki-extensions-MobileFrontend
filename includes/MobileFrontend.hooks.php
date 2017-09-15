@@ -67,7 +67,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *
 	 * @param IContextSource $context
-	 * @param Skin|null|string $skin
+	 * @param Skin|null|string &$skin
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
@@ -156,8 +156,8 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param SkinTemplate $skin
-	 * @param QuickTemplate $tpl
+	 * @param SkinTemplate &$skin
+	 * @param QuickTemplate &$tpl
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
@@ -186,8 +186,8 @@ class MobileFrontendHooks {
 	 * Also enables Related Articles in the footer in the beta mode.
 	 * Adds inline script to allow opening of sections while JS is still loading
 	 *
-	 * @param OutputPage $out
-	 * @param string $text the HTML to be wrapped inside the #mw-content-text element
+	 * @param OutputPage &$out
+	 * @param string &$text the HTML to be wrapped inside the #mw-content-text element
 	 * @return bool
 	 */
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
@@ -216,8 +216,8 @@ class MobileFrontendHooks {
 	 *
 	 * Ensures URLs are handled properly for select special pages.
 	 * @param OutputPage $out
-	 * @param string $redirect
-	 * @param string $code
+	 * @param string &$redirect
+	 * @param string &$code
 	 * @return bool
 	 */
 	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
@@ -282,8 +282,8 @@ class MobileFrontendHooks {
 	 * ResourceLoaderTestModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
 	 *
-	 * @param array $testModules
-	 * @param ResourceLoader $resourceLoader
+	 * @param array &$testModules
+	 * @param ResourceLoader &$resourceLoader
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules,
@@ -345,7 +345,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *
 	 * @param OutputPage $out
-	 * @param array $cookies
+	 * @param array &$cookies
 	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
@@ -377,10 +377,6 @@ class MobileFrontendHooks {
 	 * See https://www.mediawiki.org/wiki/Manual:Hooks/PageRenderingHash for more
 	 * detail about the `PageRenderingHash` hook.
 	 *
-	 * @param string &$confstr The parser cache key
-	 * @param User $user User
-	 * @param array &$forOptions
-	 *
 	 * @param string &$confstr Reference to the parser cache key
 	 * @param User $user The user that is requesting the page
 	 * @param array &$forOptions The options used to generate the parser cache key
@@ -401,7 +397,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
-	 * @param array $vars
+	 * @param array &$vars
 	 * @return bool
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
@@ -467,7 +463,7 @@ class MobileFrontendHooks {
 	/**
 	 * Hook for SpecialPage_initList in SpecialPageFactory.
 	 *
-	 * @param array $list list of special page classes
+	 * @param array &$list list of special page classes
 	 * @return bool hook return value
 	 */
 	public static function onSpecialPage_initList( &$list ) {
@@ -500,7 +496,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
-	 * @param array $tags
+	 * @param array &$tags
 	 * @return bool
 	 */
 	public static function onListDefinedTags( &$tags ) {
@@ -556,7 +552,7 @@ class MobileFrontendHooks {
 	 * AbuseFilter-builder hook handler that adds user_mobile variable to list
 	 *  of valid vars
 	 *
-	 * @param array $builder Array in AbuseFilter::getBuilderValues to add to.
+	 * @param array &$builder Array in AbuseFilter::getBuilderValues to add to.
 	 * @return bool
 	 */
 	public static function onAbuseFilterBuilder( &$builder ) {
@@ -599,8 +595,8 @@ class MobileFrontendHooks {
 	 * Used here to handle watchlist actions made by anons to be handled after
 	 * login or account creation.
 	 *
-	 * @param User $currentUser
-	 * @param string $injected_html
+	 * @param User &$currentUser
+	 * @param string &$injected_html
 	 * @return bool
 	 */
 	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
@@ -625,7 +621,7 @@ class MobileFrontendHooks {
 	 * Decide if the login/usercreate page should be overwritten by a mobile only
 	 * special specialpage. If not, do some changes to the template.
 	 *
-	 * @param QuickTemplate $tpl Login or Usercreate template
+	 * @param QuickTemplate &$tpl Login or Usercreate template
 	 */
 	public static function changeUserLoginCreateForm( &$tpl ) {
 		$context = MobileContext::singleton();
@@ -656,7 +652,7 @@ class MobileFrontendHooks {
 	 * UserLoginForm hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginForm
 	 *
-	 * @param QuickTemplate $template Login form template object
+	 * @param QuickTemplate &$template Login form template object
 	 * @return bool
 	 */
 	public static function onUserLoginForm( &$template ) {
@@ -668,7 +664,7 @@ class MobileFrontendHooks {
 	 * UserCreateForm hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserCreateForm
 	 *
-	 * @param QuickTemplate $template Account creation form template object
+	 * @param QuickTemplate &$template Account creation form template object
 	 * @return bool
 	 */
 	public static function onUserCreateForm( &$template ) {
@@ -680,8 +676,8 @@ class MobileFrontendHooks {
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
-	 * @param OutputPage $out
-	 * @param Skin $sk
+	 * @param OutputPage &$out
+	 * @param Skin &$sk
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
@@ -825,7 +821,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
 	 *
 	 * @param User $user
-	 * @param array $preferences
+	 * @param array &$preferences
 	 *
 	 * @return bool
 	 */
@@ -874,7 +870,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
 	 * @param CentralAuthUser $centralUser
-	 * @param array $data
+	 * @param array &$data
 	 *
 	 * @return bool
 	 */
@@ -892,7 +888,7 @@ class MobileFrontendHooks {
 	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
 	 * @see SpecialCentralLogin in CentralAuth extension
 	 * @param CentralAuthUser $centralUser
-	 * @param string $url to redirect to
+	 * @param string &$url to redirect to
 	 * @param array $info token information
 	 *
 	 * @return bool
@@ -1035,7 +1031,7 @@ class MobileFrontendHooks {
 	 * If the module has already been registered in
 	 * onResourceLoaderRegisterModules, then it is overwritten.
 	 *
-	 * @param array $schemas The schemas currently registered with the EventLogging
+	 * @param array &$schemas The schemas currently registered with the EventLogging
 	 *  extension
 	 * @return bool Always true
 	 */
@@ -1055,7 +1051,7 @@ class MobileFrontendHooks {
 	 * that no additional assets are requested by the ResourceLoader, i.e. they are stub
 	 * modules.
 	 *
-	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
+	 * @param ResourceLoader $resourceLoader The ResourceLoader object
 	 */
 	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
 		$mfResourceFileModuleBoilerplate = [
@@ -1183,7 +1179,7 @@ class MobileFrontendHooks {
 	/**
 	 * LoginFormValidErrorMessages hook handler to promote MF specific error message be valid.
 	 *
-	 * @param array $messages Array of already added messages
+	 * @param array &$messages Array of already added messages
 	 */
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages = array_merge( $messages,
@@ -1204,8 +1200,8 @@ class MobileFrontendHooks {
 	 * For values that depend on the current page, user or request state.
 	 *
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
-	 * @param &$vars array Variables to be added into the output
-	 * @param $out OutputPage instance calling the hook
+	 * @param array &$vars Variables to be added into the output
+	 * @param OutputPage $out OutputPage instance calling the hook
 	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
@@ -1253,7 +1249,7 @@ class MobileFrontendHooks {
 	 * the login screen. This is the AuthManager equivalent of changeUserLoginCreateForm.
 	 * @param AuthenticationRequest[] $requests
 	 * @param array $fieldInfo Field description as given by AuthenticationRequest::mergeFieldInfo
-	 * @param array $formDescriptor A form descriptor suitable for the HTMLForm constructor
+	 * @param array &$formDescriptor A form descriptor suitable for the HTMLForm constructor
 	 * @param string $action One of the AuthManager::ACTION_* constants
 	 */
 	public static function onAuthChangeFormFields(

@@ -32,7 +32,7 @@ use WebRequest;
 class UADeviceDetector implements DeviceDetector {
 
 	/**
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
 	public function detectDeviceProperties( WebRequest $request, array $server ) {
 		$userAgent = $request->getHeader( 'User-Agent' );
