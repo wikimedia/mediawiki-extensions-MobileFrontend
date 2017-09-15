@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_6ec2888a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-09-15T16:55:16Z",
+      "side": 1,
+      "message": "This function returns a string",
+      "revId": "6516e05e6d2db5b891a065505e76bd47805f711f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
