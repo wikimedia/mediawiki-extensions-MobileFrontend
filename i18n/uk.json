@@ -27,9 +27,8 @@
 			"Piramidion"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Увійдіть у систему або створіть обліковий запис, щоб відстежувати свої редагування.",
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
-	"beta-feature-minerva": "Увімкнути мобільну тему ({{int:skinname-minerva}}) на стільниці",
-	"beta-feature-minerva-description": "Робить тему оформлення, вживану на мобільних пристроях, доступною у вкладці налаштувань «{{int:prefs-rendering}}».",
 	"mobile-frontend-account-create-captcha-placeholder": "Введіть код підтвердження",
 	"mobile-frontend-categories-heading": "<strong>Категорії</strong>",
 	"mobile-frontend-categories-subheading": "Сторінка належить до таких категорій:",
@@ -48,6 +47,8 @@
 	"mobile-frontend-cite-error": "Сталася помилка під час спроби завантажити цитування, спричинена поганим ідентифікатором редагування.",
 	"mobile-frontend-cite-none-available": "Для цієї сторінки немає цитувань.",
 	"mobile-frontend-clear-search": "Очистити",
+	"mobile-frontend-contributions-404-desc": "Неможливо переглянути внесок без вказаного користувача, або з користувачем, який не існує.",
+	"mobile-frontend-contributions-404-title": "Вказане хибне ім'я користувача",
 	"mobile-frontend-copyright": "Вміст доступний на умовах $1, якщо не вказано інше.",
 	"mobile-frontend-desc": "Мобільний інтерфейс",
 	"mobile-frontend-diffview-404-desc": "Не існує версії із заданим вами ідентифікатором",
@@ -115,7 +116,6 @@
 	"mobile-frontend-history-404-desc": "Не можна переглянути історію для сторінки, яка не існує. Це було видалено або ви може маєте підписку з поганим посиланням.",
 	"mobile-frontend-history-404-title": "Немає такої сторінки",
 	"mobile-frontend-history-no-results": "Жодних збігів у історії для фільтру немає.",
-	"mobile-frontend-images-status": "Зображення",
 	"mobile-frontend-joined-just-now": "Щойно {{GENDER:$1|приєднався|приєдналася}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Приєднався|Приєдналася}} {{PLURAL:$2|$2 секунду|$2 секунди|$2 секунд}} тому",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Приєднався|Приєдналася}} {{PLURAL:$2|$2 хвилину|$2 хвилини|$2 хвилин}} тому",
@@ -184,7 +184,6 @@
 	"mobile-frontend-search-content": "Пошук серед сторінок",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' щоб побачити, чи ця фраза з'являється в будь-якому місці.",
 	"mobile-frontend-search-no-results": "Немає сторінки з цією назвою.",
-	"mobile-frontend-settings-images-explain": "Завантажувати всі наявні на сторінці зображення.",
 	"mobile-frontend-settings-beta": "Бета-версія",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} доступний на $1 {{PLURAL:$1|1=мові|мовах}}. Всі доступні версії перелічені нижче",
 	"mobile-frontend-settings-site-header": "Мови проекту {{SITENAME}}",
@@ -242,6 +241,7 @@
 	"tag-mobile_web_edit": "Редагування через мобільну версію",
 	"tag-mobile_web_edit-description": "Редагування, зроблене з мобільної версії сайту",
 	"apihelp-mobileview-description": "Виводить дані, необхідні для мобільного перегляду.",
+	"apihelp-mobileview-summary": "Виводить дані, необхідні для мобільних переглядів.",
 	"apihelp-mobileview-param-page": "Заголовок сторінки для обробки.",
 	"apihelp-mobileview-param-redirect": "Чи переходити за перенаправленнями.",
 	"apihelp-mobileview-param-sections": "Список номерів розділів, розділених вертикальною рискою, для яких виводити текст. «all» — для всіх. Інтервал у форматі «1-4» означає отримання розділів 1, 2, 3, 4. Інтервали без другого номера, напр. «1-», означають отримання до кінця. «references» — для виведення усіх розділів, де є примітки.",
@@ -267,6 +267,7 @@
 	"apihelp-parse-param-noimages": "Вимкнути зображення у мобільному результаті.",
 	"apihelp-parse-param-mainpage": "Застосувати перетворення головної сторінки у мобільному вигляді.",
 	"apihelp-webapp-manifest-description": "Повертає маніфест webapp.",
+	"apihelp-webapp-manifest-summary": "Виводить маніфест webapp.",
 	"apierror-mobilefrontend-badidtitle": "Погана комбінація ідентифікатора/назви версії.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> є взаємовиключним із <var>thumbwidth</var> і <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не має сенсу на головній сторінці, проігноровано.",
@@ -276,5 +277,6 @@
 	"mobile-frontend-panel-cancel": "Ні, дякую",
 	"mobile-frontend-panel-betaoptin-msg": "Ви хочете спробувати деякі нові функції? Приєднавшись до бета-версії, Ви отримаєте доступ до експериментальних функцій, з ризиком виникнення баґів і проблем.",
 	"mobile-frontend-search-feedback-link-text": "Напишіть нам свій відгук.",
-	"mobile-frontend-search-feedback-prompt": "Не вдалося знайти те, що Ви шукали?"
+	"mobile-frontend-search-feedback-prompt": "Не вдалося знайти те, що Ви шукали?",
+	"mobile-frontend-notifications-filter-title": "Сповіщення фільтра"
 }

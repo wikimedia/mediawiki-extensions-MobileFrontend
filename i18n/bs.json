@@ -118,7 +118,7 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|dan|dana}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|sat|sata|sati}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Stranicu je maloprije] {{GENDER:$1|izmijenio|izmijenila}} {{PLURAL:$4|[$5 $2]|0=anonimni korisnik}}",
-	"mobile-frontend-last-modified-with-user-minutes": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|minutu|minute|minuta}}",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|minut|minute|minuta}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|mjesec|mjeseca|mjeseci}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|sekund|sekunde|sekundi}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Posljednju izmjenu] {{GENDER:$1|napravio|napravila}} je {{PLURAL:$5|[$6 $2]|0=anonimni korisnik}} prije $3 {{PLURAL:$3|godinu|godine|godina}}",
