@@ -186,7 +186,7 @@
 	"mobile-frontend-photo-upload-user-count-over-limit": "超过500次上传",
 	"mobile-frontend-privacy-link-text": "隐私",
 	"mobile-frontend-references-citation": "引用",
-	"mobile-frontend-references-citation-error": "发生错误，无法加载该地点。",
+	"mobile-frontend-references-citation-error": "发生错误，无法加载该引文。",
 	"mobile-frontend-references-list": "查看完整引用列表",
 	"mobile-frontend-requires-mobile": "该页面在桌面端不可用。请点击页面底部的手机版视图链接。",
 	"mobile-frontend-requires-optin": "本页不可用，除非你选择使用我们的测试版。访问[[Special:MobileOptions|设置页面]]进行选择。",
