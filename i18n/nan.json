@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ianbu",
-			"唐吉訶德的侍從"
+			"唐吉訶德的侍從",
+			"Luuva"
 		]
 	},
 	"mobile-frontend-copyright": "Nā bô lēng-gōa kóng, chiàu $1 thang īng.",
@@ -12,9 +13,8 @@
 	"mobile-frontend-news-items": "Sin-bûn sū-kiāⁿ",
 	"mobile-frontend-privacy-link-text": "Ún-su",
 	"mobile-frontend-terms-text": "欲用的條款",
-	"mobile-frontend-view": "chhiú-ki-á khoàⁿ",
+	"mobile-frontend-view": "chhiú-ki-á biú",
 	"mobile-frontend-view-desktop": "Tiān-náu",
-	"mobile-frontend-view-mobile": "Chhiú-ki-á",
 	"tag-mobile_edit": "用手機改",
 	"tag-mobile_web_edit": "tī chhiú-ki-á bāng-ia̍h kái--ê"
 }
