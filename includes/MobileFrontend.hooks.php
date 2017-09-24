@@ -4,8 +4,6 @@
  */
 
 use MediaWiki\Auth\AuthManager;
-use MediaWiki\MediaWikiServices;
-use MediaWiki\Logger\LoggerFactory;
 
 /**
  * Hook handlers for MobileFrontend extension

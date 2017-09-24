@@ -235,7 +235,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	protected function doFeedQuery() {
 		$user = $this->getUser();
-		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
+		$dbr = wfGetDB( DB_REPLICA, 'watchlist' );
 
 		// Possible where conditions
 		$conds = $this->getNSConditions( 'rc_namespace' );

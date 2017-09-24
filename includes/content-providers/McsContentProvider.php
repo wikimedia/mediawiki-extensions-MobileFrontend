@@ -2,7 +2,6 @@
 
 namespace MobileFrontend\ContentProviders;
 
-use MobileFrontend\ContentProviders\IContentProvider;
 use OutputPage;
 
 /**

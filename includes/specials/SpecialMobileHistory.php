@@ -43,7 +43,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$conds[ 'rev_page' ] = $this->title->getArticleID();
 		}
 		if ( $this->offset ) {
-				$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
+				$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
 				$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
 		}
 		return $conds;
@@ -148,7 +148,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return ResultWrapper
 	 */
 	protected function doQuery() {
-		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
+		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
 		$conds = $this->getQueryConditions();
 		$options = [
 			'ORDER BY' => 'rev_timestamp DESC'

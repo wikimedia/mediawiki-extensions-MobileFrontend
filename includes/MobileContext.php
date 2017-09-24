@@ -513,7 +513,7 @@ class MobileContext extends ContextSource {
 		if ( $noMobileCategory && $title ) {
 			$id = $title->getArticleID();
 			if ( $id ) {
-				$dbr = wfGetDB( DB_SLAVE );
+				$dbr = wfGetDB( DB_REPLICA );
 				if ( $dbr->selectField( 'categorylinks',
 					'cl_from',
 					[ 'cl_from' => $id, 'cl_to' => $noMobileCategory ],

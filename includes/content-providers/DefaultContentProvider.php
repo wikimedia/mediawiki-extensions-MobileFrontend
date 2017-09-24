@@ -2,8 +2,6 @@
 
 namespace MobileFrontend\ContentProviders;
 
-use MobileFrontend\ContentProviders\IContentProvider;
-
 class DefaultContentProvider implements IContentProvider {
 	/**
 	 * Constructor

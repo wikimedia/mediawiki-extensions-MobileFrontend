@@ -99,7 +99,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				$prevRevs[] = $rev->getParentId();
 			}
 		}
-		$this->prevLengths = Revision::getParentLengths( wfGetDB( DB_SLAVE ), $prevRevs );
+		$this->prevLengths = Revision::getParentLengths( wfGetDB( DB_REPLICA ), $prevRevs );
 		if ( $numRows > 0 ) {
 			$count = 0;
 			foreach ( $revs as $rev ) {
@@ -174,7 +174,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 */
 	protected function getQueryConditions() {
 		$conds = [];
-		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
+		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
 
 		if ( $this->user ) {
 			if ( $this->user->getId() ) {

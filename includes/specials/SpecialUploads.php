@@ -108,7 +108,7 @@ class SpecialUploads extends MobileSpecialPage {
 
 		$mfPhotoUploadWiki = $this->getMFConfig()->get( 'MFPhotoUploadWiki' );
 		if ( !$mfPhotoUploadWiki ) {
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 		} elseif (
 				$mfPhotoUploadWiki &&
 				!in_array( $mfPhotoUploadWiki, $wgConf->getLocalDatabases() )
@@ -116,7 +116,7 @@ class SpecialUploads extends MobileSpecialPage {
 			// early return if the database is invalid
 			return false;
 		} else {
-			$dbr = wfGetDB( DB_SLAVE, [], $mfPhotoUploadWiki );
+			$dbr = wfGetDB( DB_REPLICA, [], $mfPhotoUploadWiki );
 		}
 
 		$limit = $this->getUploadCountThreshold() + 1;
