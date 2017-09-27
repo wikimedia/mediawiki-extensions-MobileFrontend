@@ -46,6 +46,30 @@
       "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_f1b77782",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2017-09-27T21:56:43Z",
+      "side": 1,
+      "message": "Practically speaking, yes they\u0027re probably the same. But $wgMemc is a global so people can replace it with anything. From a code quality perspective, it should be the same object being used to generate the key that is also called for get()/set(). In the long run switching $wgMemc to ObjectCache::getLocalClusterInstance() is probably a good idea, but that should mean all uses of $wgMemc, and maybe even a separate patch.",
+      "parentUuid": "0e6af365_d1203399",
+      "range": {
+        "startLine": 586,
+        "startChar": 10,
+        "endLine": 586,
+        "endChar": 48
+      },
+      "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
