@@ -22,6 +22,30 @@
       "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_d1203399",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-09-27T20:51:06Z",
+      "side": 1,
+      "message": "What is the difference between using ObjectCache::getLocalClusterInstance() and $wgMemc? \n\nFrom my understanding, there is no difference as both things will return same BagOfStuff. $wgMemc is initialized in Setup.php by calling wfGetMainCache() which will call ObjectCache::getInstance( $wgMainCacheType. ). Calling ObjectCache::getLocalClusterInstance() will do the same. (call ObjectCache::getInstance( $wgMainCacheType );\n\nThe only difference is $wgMemc will have the BagOfStuff already initialized, calling ObjectCache::getLocalClusterInstance() adds two additional function calls which arent the cost at all. IMHO calling ObjectCache directly instead of using $wgMemc is a much better approach, at least because of two reasons:\n - using $wgMemc requires accessing a global variable, which is bad, globals are bad in general\n - when we get a service for ObjectCache it will easier to turn it into a function that gets cache object from services.",
+      "parentUuid": "4e7eab26_f3e23b97",
+      "range": {
+        "startLine": 586,
+        "startChar": 10,
+        "endLine": 586,
+        "endChar": 48
+      },
+      "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
