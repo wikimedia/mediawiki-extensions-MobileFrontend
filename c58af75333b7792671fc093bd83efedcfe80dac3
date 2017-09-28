@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_b8c55b92",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-09-28T20:11:01Z",
+      "side": 1,
+      "message": "are we sure? The previous code was totally broken because call from line 119 was overwritten by the call from line 123. \n\nIn the previous solution we were enabling sections when the flag was on, now we will enable sections only when the flag is on and this is not a special page which is IMHO different behavior. We can disable expandable sections on the MainPage but we should keep old behavior on special pages.",
+      "range": {
+        "startLine": 119,
+        "startChar": 56,
+        "endLine": 119,
+        "endChar": 71
+      },
+      "revId": "c58af75333b7792671fc093bd83efedcfe80dac3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
