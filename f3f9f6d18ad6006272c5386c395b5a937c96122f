@@ -70,6 +70,30 @@
       "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_a519b529",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-09-28T13:37:35Z",
+      "side": 1,
+      "message": "fair enough",
+      "parentUuid": "0e6af365_f1b77782",
+      "range": {
+        "startLine": 586,
+        "startChar": 10,
+        "endLine": 586,
+        "endChar": 48
+      },
+      "revId": "f3f9f6d18ad6006272c5386c395b5a937c96122f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
