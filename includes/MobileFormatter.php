@@ -59,7 +59,7 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected $expandableSections = false;
 	/**
-	 * Whether actual page is the main page
+	 * Whether actual page is the main page and should be special cased
 	 * @var boolean $mainPage
 	 */
 	protected $mainPage = false;
@@ -110,17 +110,14 @@ class MobileFormatter extends HtmlFormatter {
 		$mfSpecialCaseMainPage = $context->getMFConfig()->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
-		$isMainPage = $title->isMainPage() && $mfSpecialCaseMainPage;
+		$isMainPage = $title->isMainPage();
 		$isFilePage = $title->inNamespace( NS_FILE );
-		$isSpecialPage = $title->isSpecialPage();
 
 		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new MobileFormatter( $html, $title );
-		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
+		$formatter->enableExpandableSections( !$isMainPage && $enableSections );
 
-		$formatter->setIsMainPage( $isMainPage );
-
-		$formatter->enableExpandableSections( $enableSections );
+		$formatter->setIsMainPage( $isMainPage && $mfSpecialCaseMainPage );
 		$formatter->enableTOCPlaceholder( $includeTOC );
 
 		return $formatter;
@@ -146,6 +143,8 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Change mainPage (is this the main page) to $value (standard: true)
+	 * This enables special casing for the main page.
+	 * @deprecated
 	 * @param bool $value
 	 */
 	public function setIsMainPage( $value = true ) {
