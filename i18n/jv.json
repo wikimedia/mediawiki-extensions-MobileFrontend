@@ -7,6 +7,7 @@
 			"Kenrick95"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Mlebua log utawa gawéa akun saperlu nglacak besutan-besutané panjenengan",
 	"abusefilter-edit-builder-vars-user-mobile": "Nemtokaké yèn panganggo mbesut sarana mukantara sèlulèr apa ora",
 	"mobile-frontend-account-create-captcha-placeholder": "Isinen kodhe konfirmasi",
 	"mobile-frontend-categories-heading": "<strong>Kategori</strong>",
@@ -155,11 +156,13 @@
 	"mobile-frontend-references-citation-error": "Ana masalah lan mokal ngamot sitiran iki.",
 	"mobile-frontend-references-list": "Deleng pratélan pepak sitirané",
 	"mobile-frontend-requires-mobile": "Kaca iki ora ana ing dhèstop. Kliken pranala praupan punsèl ing ngisor kaca.",
+	"mobile-frontend-requires-optin": "Kaca iki ora ana kajaba panjenengan milih nganggo modhe béta. Wacanen [[Special:MobileOptions|kaca setèlan]] saperlu milih modhe béta.",
 	"mobile-frontend-requires-title": "Kaca ora ana",
 	"mobile-frontend-return-to-page": "Bali menyang kaca",
 	"mobile-frontend-save-error": "Ana masalah nalika nyimpen setèlan. Panjenengan kudu ngurubaké kuki.",
 	"mobile-frontend-save-settings": "Simpen",
 	"mobile-frontend-search-content": "Golek ing sajroning kaca-kaca",
+	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' saperlu ngertèni unèn-unèn iki ana ing ngendi baé.",
 	"mobile-frontend-search-no-results": "Ora ana kaca mawa sesirah iki.",
 	"mobile-frontend-settings-beta": "Béta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} cumepak ing $1 {{PLURAL:$1|basa}}. Kabéh vèrsi kapacak ing pratélan ngisor iki",
@@ -231,9 +234,11 @@
 	"apihelp-mobileview-param-thumbheight": "Dhuwur thumbnail maksimum.",
 	"apihelp-mobileview-param-revision": "Nyuwun révisi mirunggan.",
 	"apihelp-mobileview-example-1": "Nyuwun katerangan ngenani pérangan 0 saka [[Doom metal]]",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Pérangan|Pérangan}} $1 ora ana.",
 	"mobile-frontend-loading-message": "Ngamot…",
 	"mobile-frontend-panel-ok": "Ha'a",
 	"mobile-frontend-panel-cancel": "Ora, suwun",
+	"mobile-frontend-panel-betaoptin-msg": "Panjenengan gelem njajal sawatara fitur anyar? Kanthi nganggo modhe béta, panjenengan bakal éntuk aksès menyang fitur-fitur uji-coba kanggo nguji ana-orané masalah ing fitur-fitur mau.",
 	"mobile-frontend-search-feedback-link-text": "Nyuwun sarané panjenengan.",
 	"mobile-frontend-search-feedback-prompt": "Ora nemokaké sing panjenengan golèki?",
 	"mobile-frontend-notifications-filter-title": "Saring wara-wara"

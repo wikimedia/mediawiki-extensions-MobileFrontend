@@ -23,7 +23,8 @@
 			"Hiba Alshawi",
 			"PhiberOptik",
 			"Shbib Al-Subaie",
-			"Maroen1990"
+			"Maroen1990",
+			"علاء"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "سجل الدخول أو أنشيء حسابا لتتبع تعديلاتك",
@@ -269,7 +270,7 @@
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
 	"apihelp-webapp-manifest-description": "يرجع webapp manifest.",
 	"apihelp-webapp-manifest-summary": "يرجع webapp manifest.",
-	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيئ.",
+	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيء.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> يتنافى مع <var>thumbwidth</var> و <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> ليس لها معنى على الصفحة الرئيسية، جارٍ تجاهلها.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|قسم|أقسام}} $1 لم يتم العثور عليها.",
