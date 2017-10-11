@@ -348,7 +348,7 @@
 			}
 		} );
 
-		if ( !browser.isWideScreen() ) {
+		if ( !browser.isWideScreen() && page ) {
 			expandStoredSections( this, $container, page );
 			cleanObsoleteStoredSections( page );
 		}
