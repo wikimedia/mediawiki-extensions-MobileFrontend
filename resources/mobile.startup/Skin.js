@@ -56,30 +56,7 @@
 			mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
 		}
 		View.call( this, options );
-		// Must be run after merging with defaults as must be defined.
-		this.tabletModules = options.tabletModules;
 		this.referencesGateway = options.referencesGateway;
-
-		/**
-		 * Tests current window size and if suitable loads styles and scripts specific for larger devices
-		 *
-		 * @method
-		 * @ignore
-		 */
-		function loadWideScreenModules() {
-			if ( browser.isWideScreen() ) {
-				// Adjust screen for tablets
-				if ( self.page.inNamespace( '' ) ) {
-					mw.loader.using( self.tabletModules ).always( function () {
-						self.off( '_resize' );
-						self.emit( 'changed' );
-					} );
-				}
-			}
-		}
-		M.on( 'resize', $.proxy( this, 'emit', '_resize' ) );
-		this.on( '_resize', loadWideScreenModules );
-		this.emit( '_resize' );
 
 		if (
 			mw.config.get( 'wgMFLazyLoadImages' )
@@ -104,12 +81,10 @@
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page page the skin is currently rendering
-		 * @cfg {Array} defaults.tabletModules modules to load when in tablet
 		 * @cfg {ReferencesGateway} defaults.referencesGateway instance of references gateway
 		 */
 		defaults: {
-			page: undefined,
-			tabletModules: []
+			page: undefined
 		},
 
 		/**
