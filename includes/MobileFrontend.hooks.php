@@ -647,30 +647,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * UserLoginForm hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginForm
-	 *
-	 * @param QuickTemplate &$template Login form template object
-	 * @return bool
-	 */
-	public static function onUserLoginForm( &$template ) {
-		self::changeUserLoginCreateForm( $template );
-		return true;
-	}
-
-	/**
-	 * UserCreateForm hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserCreateForm
-	 *
-	 * @param QuickTemplate &$template Account creation form template object
-	 * @return bool
-	 */
-	public static function onUserCreateForm( &$template ) {
-		self::changeUserLoginCreateForm( $template );
-		return true;
-	}
-
-	/**
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
@@ -1283,15 +1259,7 @@ class MobileFrontendHooks {
 	 * @warning DO NOT try to access services defined by MobileFrontend here.
 	 */
 	public static function onRegistration() {
-		global $wgResourceLoaderLESSImportPaths, $wgDisableAuthManager;
+		global $wgResourceLoaderLESSImportPaths;
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/mobile.less/";
-
-		// modify login/registration form
-		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
-			Hooks::register( 'AuthChangeFormFields', 'MobileFrontendHooks::onAuthChangeFormFields' );
-		} else {
-			Hooks::register( 'UserLoginForm', 'MobileFrontendHooks::onUserLoginForm' );
-			Hooks::register( 'UserCreateForm', 'MobileFrontendHooks::onUserCreateForm' );
-		}
 	}
 }

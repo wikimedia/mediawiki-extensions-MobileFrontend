@@ -1171,6 +1171,9 @@
 		"APIGetDescription": [
 			"ApiParseExtender::onAPIGetDescription"
 		],
+		"AuthChangeFormFields": [
+			"MobileFrontendHooks::onAuthChangeFormFields"
+		],
 		"RequestContextCreateSkinMobile": [],
 		"RequestContextCreateSkin": [
 			"MobileFrontendHooks::onRequestContextCreateSkin"
