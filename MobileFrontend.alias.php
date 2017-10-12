@@ -383,7 +383,14 @@ $specialPageAliases['uk'] = [
 
 /** Urdu (اردو) */
 $specialPageAliases['ur'] = [
-	'History' => [ 'تاریخ' ],
+	'History' => [ 'تاریخچہ', 'تاریخ' ],
+	'MobileCite' => [ 'موبائل_حوالہ' ],
+	'MobileOptions' => [ 'اختیارات_موبائل', 'موبائل_اختیارات' ],
+	'Uploads' => [ 'اپلوڈ_کردہ' ],
+	'MobileDiff' => [ 'موبائل_فرق' ],
+	'MobileMenu' => [ 'موبائل_مینو' ],
+	'MobileLanguages' => [ 'موبائل_کی_زبانیں' ],
+	'Nearby' => [ 'آس_پاس', 'پاس_پڑوس' ],
 ];
 
 /** Vietnamese (Tiếng Việt) */
