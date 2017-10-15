@@ -272,7 +272,7 @@
 	"apihelp-mobileview-example-2": "Get information about section 0 and sections containing references of [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Get information about sections 1 and later and sections containing references of [[Candlemass]]",
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
-	"apihelp-parse-param-noimages": "غیر فعال کردن تصاویر بر روی خروجی تلفن همراه",
+	"apihelp-parse-param-noimages": "غیرفعال کردن تصاویر بر روی خروجی تلفن همراه",
 	"apihelp-parse-param-mainpage": "اعمال تغییرات صفحهٔ اصلی گوشی همراه.",
 	"apihelp-webapp-manifest-description": "بازگشت بیانیهٔ اپلیکیشن وب",
 	"apihelp-webapp-manifest-summary": "بازگشت بیانیهٔ اپلیکیشن وب",
