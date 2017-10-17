@@ -156,10 +156,19 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$options['LIMIT'] = self::LIMIT + 1;
 
-		$tables = [ self::DB_REVISIONS_TABLE ];
-		$fields = Revision::selectFields();
+		if ( is_callable( [ Revision::class, 'getQueryInfo' ] ) ) {
+			$revQuery = Revision::getQueryInfo();
+		} else {
+			$revQuery = [
+				'tables' => [ self::DB_REVISIONS_TABLE ],
+				'fields' => Revision::selectFields(),
+				'joins' => [],
+			];
+		}
 
-		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
+		$res = $dbr->select(
+			$revQuery['tables'], $revQuery['fields'], $conds, __METHOD__, $options, $revQuery['joins']
+		);
 
 		return $res;
 	}
