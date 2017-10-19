@@ -4,7 +4,8 @@
 			"Horus",
 			"Nullzero",
 			"Octahedron80",
-			"Aefgh39622"
+			"Aefgh39622",
+			"Ans"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ไม่มีคำอธิบายอย่างย่อ",
@@ -21,6 +22,6 @@
 	"mobile-frontend-terms-text": "ข้อกำหนดการใช้งาน",
 	"mobile-frontend-view": "รุ่นโมบายล์",
 	"mobile-frontend-view-desktop": "คอมพิวเตอร์ตั้งโต๊ะ",
-	"tag-mobile_edit": "แก้ไขจากมือถือ",
-	"tag-mobile_web_edit": "การแก้ไขเว็บเคลื่อนที่"
+	"tag-mobile_edit": "แก้ไขจากอุปกรณ์พกพา",
+	"tag-mobile_web_edit": "การแก้ไขเว็บสำหรับอุปกรณ์พกพา"
 }
