@@ -116,11 +116,11 @@
 			"class": "ResourceLoaderImageModule",
 			"variants": {
 				"gray": {
-					"color": "#BBB",
+					"color": "#a2a9b1",
 					"global": true
 				},
 				"invert": {
-					"color": "#FFFFFF",
+					"color": "#fff",
 					"global": true
 				}
 			},
