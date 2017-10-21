@@ -646,7 +646,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * example).
 	 *
 	 * @param DOMDocument $doc
-	 * @param [DOMElement] $headings The headings returned by
+	 * @param DOMElement $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section
 	 */
@@ -780,7 +780,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
 	 * obviously connected to being editable.
 	 *
-	 * @param [DOMElement] $headings
+	 * @param DOMElement $headings
 	 */
 	protected function makeHeadingsEditable( array $headings ) {
 		foreach ( $headings as $heading ) {

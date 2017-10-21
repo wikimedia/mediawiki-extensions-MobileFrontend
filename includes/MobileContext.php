@@ -868,7 +868,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Update the host of a given URL to strip out any mobile tokens
 	 * @param array &$parsedUrl
-	 *		Result of parseUrl() or wfParseUrl()
+	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
 		$server = $this->getConfig()->get( 'Server' );
