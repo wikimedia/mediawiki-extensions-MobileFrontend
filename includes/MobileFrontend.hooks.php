@@ -928,14 +928,17 @@ class MobileFrontendHooks {
 					],
 					'scripts' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
+						'resources/mobile.notifications.overlay/NotificationsFilterOverlay.js',
 					],
 					'styles' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
+						'resources/mobile.notifications.overlay/NotificationsFilterOverlay.less',
 					],
 					'skinStyles' => [
 						'minerva' => 'skinStyles/mobile.notifications.overlay/minerva.less',
 					],
 					'messages' => [
+						'mobile-frontend-notifications-filter-title',
 						// defined in Echo
 						'echo-none',
 						'notifications',
@@ -944,20 +947,11 @@ class MobileFrontendHooks {
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],
-				'mobile.notifications.filter.overlay' => $resourceBoilerplate + [
+				'mobile.notifications.filter.overlay' => [
 					'dependencies' => [
-						'mobile.startup',
-						'ext.echo.ui',
+						'mobile.notifications.overlay',
 					],
-					'scripts' => [
-						'resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.js',
-					],
-					'styles' => [
-						'resources/mobile.notifications.filter.overlay/NotificationsFilterOverlay.less',
-					],
-					'messages' => [
-						'mobile-frontend-notifications-filter-title',
-					],
+					'deprecated' => 'Please use "mobile.notifications.overlay" instead.',
 					'targets' => [ 'mobile', 'desktop' ],
 				],
 			] );
