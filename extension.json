@@ -265,7 +265,8 @@
 		},
 		"mobile.init": {
 			"dependencies": [
-				"mobile.betaoptin",
+				"mediawiki.experiments",
+				"jquery.cookie",
 				"mobile.references.gateway",
 				"mobile.startup"
 			],
@@ -273,7 +274,19 @@
 				"mobile",
 				"desktop"
 			],
+			"messages": [
+				"mobile-frontend-panel-betaoptin-msg",
+				"mobile-frontend-panel-ok",
+				"mobile-frontend-panel-cancel"
+			],
+			"templates": {
+				"Panel.hogan": "resources/mobile.init/Panel.hogan"
+			},
+			"styles": [
+				"resources/mobile.init/panel.less"
+			],
 			"scripts": [
+				"resources/mobile.init/BetaOptinPanel.js",
 				"resources/mobile.init/init.js"
 			]
 		},
@@ -856,32 +869,6 @@
 				"resources/mobile.gallery/PhotoListGateway.js",
 				"resources/mobile.gallery/PhotoItem.js",
 				"resources/mobile.gallery/PhotoList.js"
-			]
-		},
-		"mobile.betaoptin": {
-			"deprecated": true,
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mediawiki.experiments",
-				"jquery.cookie"
-			],
-			"messages": [
-				"mobile-frontend-panel-betaoptin-msg",
-				"mobile-frontend-panel-ok",
-				"mobile-frontend-panel-cancel"
-			],
-			"templates": {
-				"Panel.hogan": "resources/mobile.betaoptin/Panel.hogan"
-			},
-			"styles": [
-				"resources/mobile.betaoptin/panel.less"
-			],
-			"scripts": [
-				"resources/mobile.betaoptin/BetaOptinPanel.js"
 			]
 		},
 		"mobile.infiniteScroll": {

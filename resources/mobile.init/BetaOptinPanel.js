@@ -16,7 +16,7 @@
 		templatePartials: $.extend( {}, Panel.prototype.templatePartials, {
 			button: Button.prototype.template
 		} ),
-		template: mw.template.get( 'mobile.betaoptin', 'Panel.hogan' ),
+		template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
 		defaults: $.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
 			editToken: mw.user.tokens.get( 'editToken' ),
@@ -45,6 +45,6 @@
 		}
 	} );
 
-	M.define( 'mobile.betaoptin/BetaOptinPanel', BetaOptinPanel );
+	M.define( 'mobile.init/BetaOptinPanel', BetaOptinPanel );
 
 }( mw.mobileFrontend, jQuery ) );
