@@ -33,7 +33,7 @@
 			} ).options
 		},
 		/** @inheritdoc */
-		template: mw.template.get( 'mobile.fontchanger', 'FontChanger.hogan' ),
+		template: mw.template.get( 'mobile.special.mobileoptions.scripts.fontchanger', 'FontChanger.hogan' ),
 		/** @inheritdoc */
 		templatePartials: {
 			button: Button.prototype.template
