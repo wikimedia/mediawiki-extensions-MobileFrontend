@@ -405,28 +405,6 @@
 				"resources/mobile.foreignApi/JSONPForeignApi.js"
 			]
 		},
-		"mobile.abusefilter": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"templates": {
-				"Overlay.hogan": "resources/mobile.abusefilter/AbuseFilterOverlay.hogan",
-				"Panel.hogan": "resources/mobile.abusefilter/AbuseFilterPanel.hogan"
-			},
-			"scripts": [
-				"resources/mobile.abusefilter/AbuseFilterOverlay.js",
-				"resources/mobile.abusefilter/AbuseFilterPanel.js"
-			],
-			"messages": [
-				"mobile-frontend-editor-abusefilter-warning",
-				"mobile-frontend-editor-abusefilter-disallow",
-				"mobile-frontend-editor-abusefilter-read-more"
-			]
-		},
 		"mobile.editor.api": {
 			"targets": [
 				"mobile",
@@ -451,12 +429,16 @@
 				"mobile.loggingSchemas.edit"
 			],
 			"scripts": [
+				"resources/mobile.editor.common/AbuseFilterOverlay.js",
+				"resources/mobile.editor.common/AbuseFilterPanel.js",
 				"resources/mobile.editor.common/EditorOverlayBase.js"
 			],
 			"styles": [
 				"resources/mobile.editor.common/editor.less"
 			],
 			"templates": {
+				"AbuseFilterOverlay.hogan": "resources/mobile.editor.common/AbuseFilterOverlay.hogan",
+				"AbuseFilterPanel.hogan": "resources/mobile.editor.common/AbuseFilterPanel.hogan",
 				"editHeader.hogan": "resources/mobile.editor.common/editHeader.hogan",
 				"previewHeader.hogan": "resources/mobile.editor.common/previewHeader.hogan",
 				"saveHeader.hogan": "resources/mobile.editor.common/saveHeader.hogan",
@@ -492,7 +474,10 @@
 				"23": "mobile-frontend-editor-switch-editor",
 				"24": "mobile-frontend-editor-switch-visual-editor",
 				"25": "mobile-frontend-editor-anonwarning",
-				"26": "mobile-frontend-editor-anon-cta-message"
+				"26": "mobile-frontend-editor-anon-cta-message",
+				"27": "mobile-frontend-editor-abusefilter-warning",
+				"28": "mobile-frontend-editor-abusefilter-disallow",
+				"29": "mobile-frontend-editor-abusefilter-read-more"
 			}
 		},
 		"mobile.editor.overlay": {
@@ -501,7 +486,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.abusefilter",
 				"mobile.editor.common",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",

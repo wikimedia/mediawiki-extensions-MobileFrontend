@@ -1,7 +1,7 @@
 ( function ( M ) {
 	var
 		View = M.require( 'mobile.startup/View' ),
-		AbuseFilterOverlay = M.require( 'mobile.abusefilter/AbuseFilterOverlay' );
+		AbuseFilterOverlay = M.require( 'mobile.editor.common/AbuseFilterOverlay' );
 
 	/**
 	 * Panel that shows an error message related to the abusefilter extension.
@@ -29,7 +29,7 @@
 		defaults: {
 			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more' )
 		},
-		template: mw.template.get( 'mobile.abusefilter', 'Panel.hogan' ),
+		template: mw.template.get( 'mobile.editor.common', 'AbuseFilterPanel.hogan' ),
 		className: 'panel hidden',
 
 		/**
@@ -68,6 +68,7 @@
 		}
 	} );
 
-	M.define( 'mobile.abusefilter/AbuseFilterPanel', AbuseFilterPanel );
+	M.define( 'mobile.editor.common/AbuseFilterPanel', AbuseFilterPanel )
+		.deprecate( 'mobile.abusefilter/AbuseFilterPanel' );
 
 }( mw.mobileFrontend ) );

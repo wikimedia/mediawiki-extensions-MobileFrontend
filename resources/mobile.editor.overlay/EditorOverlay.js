@@ -3,7 +3,7 @@
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
-		AbuseFilterPanel = M.require( 'mobile.abusefilter/AbuseFilterPanel' ),
+		AbuseFilterPanel = M.require( 'mobile.editor.common/AbuseFilterPanel' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );

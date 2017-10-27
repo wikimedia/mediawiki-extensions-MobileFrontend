@@ -26,7 +26,7 @@
 		} ),
 		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 			button: Button.prototype.template,
-			content: mw.template.get( 'mobile.abusefilter', 'Overlay.hogan' )
+			content: mw.template.get( 'mobile.editor.common', 'AbuseFilterOverlay.hogan' )
 		} ),
 		className: 'overlay abusefilter-overlay',
 
@@ -38,5 +38,6 @@
 		}
 	} );
 
-	M.define( 'mobile.abusefilter/AbuseFilterOverlay', AbuseFilterOverlay );
+	M.define( 'mobile.editor.common/AbuseFilterOverlay', AbuseFilterOverlay )
+		.deprecate( 'mobile.abusefilter/AbuseFilterOverlay' );
 }( mw.mobileFrontend, jQuery ) );
