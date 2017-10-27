@@ -77,7 +77,6 @@
 	"mobile-frontend-donate-image-title": "{{doc-special|Uploads|unlisted=1}}\n{{Identical|Upload}}",
 	"mobile-frontend-donate-image-title-username": "{{doc-special|Uploads|unlisted=1}}\n\nParameters:\n* $1 - username whose uploads are being shown",
 	"mobile-frontend-donate-image-title-you": "{{doc-special|Uploads|unlisted=1}} Used when the user whose uploads are being viewed is the currently logged in user",
-	"mobile-frontend-pointer-dismiss": "Label of button that dismisses overlay pointing at a particular new feature.",
 	"mobile-frontend-edit-login-action": "Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to login.",
 	"mobile-frontend-edit-signup-action": "Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to sign up.",
 	"mobile-frontend-editor-abusefilter-disallow": "A message telling their user that their edit has been disallowed by AbuseFilter.",
