@@ -210,8 +210,6 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	public function getPatrolledLink() {
 		$linkInfo = $this->getMarkPatrolledLinkInfo();
 		if ( $linkInfo ) {
-			$this->getOutput()->addModules( 'mobile.patrol.ajax' );
-
 			$linkInfo = Html::linkButton(
 				$this->msg( 'markaspatrolleddiff' )->escaped(),
 				[
