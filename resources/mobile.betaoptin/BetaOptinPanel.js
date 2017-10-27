@@ -45,6 +45,6 @@
 		}
 	} );
 
-	M.define( 'mobile.betaoptin/BetaOptinPanel', BetaOptinPanel ); // resource-modules-disable-line
+	M.define( 'mobile.betaoptin/BetaOptinPanel', BetaOptinPanel );
 
 }( mw.mobileFrontend, jQuery ) );

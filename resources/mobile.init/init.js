@@ -8,9 +8,16 @@
 ( function ( M, $ ) {
 	var currentPage, skin,
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
 		gateway = new PageGateway( new mw.Api() ),
+		util = mw.util,
+		user = mw.user,
+		storage = mw.storage,
+		context = M.require( 'mobile.startup/context' ),
 		userFontSize = mw.storage.get( 'userFontSize' ),
 		Page = M.require( 'mobile.startup/Page' ),
+		experiments = mw.experiments,
+		activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 		Skin = M.require( 'mobile.startup/Skin' ),
 		ReferencesMobileViewGateway = M.require(
 			'mobile.references.gateway/ReferencesMobileViewGateway'
@@ -107,8 +114,49 @@
 		return currentPage;
 	}
 
+	/**
+	 * Displays a prompt to ask the user to join the mobile beta mode.
+	 *
+	 * @method
+	 * @private
+	 * @param {Object} experiment sampling data
+	 * @param {Page} page
+	 * @ignore
+	 */
+	function displayBetaOptIn( experiment, page ) {
+		var betaOptinPanel, inStable, inSample,
+			token = storage.get( 'mobile-betaoptin-token' );
+
+		// local storage is supported in this case, when ~ means it was dismissed
+		if ( token !== false && token !== '~' &&
+			!page.isMainPage() && !page.inNamespace( 'special' )
+		) {
+			if ( !token ) {
+				token = user.generateRandomSessionId();
+				storage.set( 'mobile-betaoptin-token', token );
+			}
+
+			inStable = context.getMode() === 'stable';
+			inSample = experiments.getBucket( experiment, token ) === 'A';
+			if ( inStable && ( inSample || util.getParamValue( 'debug' ) ) ) {
+				betaOptinPanel = new BetaOptinPanel( {
+					postUrl: util.getUrl( 'Special:MobileOptions', {
+						returnto: page.title
+					} )
+				} );
+
+				betaOptinPanel
+					.on( 'hide', function () {
+						storage.set( 'mobile-betaoptin-token', '~' );
+					} ).appendTo( page.getLeadSectionElement() );
+			}
+		}
+	}
 	if ( userFontSize !== '100' ) {
 		$( '#content p, .content p' ).css( 'font-size', userFontSize + '%' );
+	}
+	if ( activeExperiments.betaoptin ) {
+		displayBetaOptIn( activeExperiments.betaoptin, getCurrentPage() );
 	}
 
 	$.extend( M, {

@@ -265,6 +265,7 @@
 		},
 		"mobile.init": {
 			"dependencies": [
+				"mobile.betaoptin",
 				"mobile.references.gateway",
 				"mobile.startup"
 			],
@@ -282,6 +283,8 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.ui.button",
+				"mediawiki.ui.icon",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
@@ -856,6 +859,7 @@
 			]
 		},
 		"mobile.betaoptin": {
+			"deprecated": true,
 			"targets": [
 				"mobile",
 				"desktop"
