@@ -127,7 +127,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			// icon to the left of the username
 			'mobile.special.pagefeed.styles'
 		] );
-		$output->addModules( 'mobile.special.mobilediff.images' );
+		$output->addModules( 'mobile.special.mobilediff.scripts' );
 
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $ctx, $revisions ] );

@@ -963,25 +963,6 @@
 				"resources/mobile.infiniteScroll/InfiniteScroll.js"
 			]
 		},
-		"mobile.patrol.ajax": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mediawiki.util",
-				"mediawiki.Title"
-			],
-			"scripts": [
-				"resources/mobile.patrol.ajax/init.js"
-			],
-			"messages": [
-				"markedaspatrollednotify",
-				"markedaspatrollederrornotify",
-				"markedaspatrollederror-noautopatrol"
-			]
-		},
 		"mobile.site": {
 			"dependencies": [
 				"mobile.startup"
@@ -1154,6 +1135,23 @@
 				"bytesneutral": "resources/mobile.special.mobilediff.images/bytes-neutral.svg",
 				"bytesremoved": "resources/mobile.special.mobilediff.images/bytes-removed.svg"
 			}
+		},
+		"mobile.special.mobilediff.scripts": {
+			"targets": "mobile",
+			"dependencies": [
+				"mobile.special.mobilediff.images",
+				"mobile.startup",
+				"mediawiki.util",
+				"mediawiki.Title"
+			],
+			"messages": [
+				"markedaspatrollednotify",
+				"markedaspatrollederrornotify",
+				"markedaspatrollederror-noautopatrol"
+			],
+			"scripts": [
+				"resources/mobile.special.mobilediff.scripts/init.js"
+			]
 		},
 		"mobile.special.mobilediff.styles": {
 			"targets": "mobile",
