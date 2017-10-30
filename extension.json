@@ -724,24 +724,6 @@
 				"resources/mobile.toggle/toggle.js"
 			]
 		},
-		"mobile.pointerOverlay": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"messages": [
-				"mobile-frontend-pointer-dismiss"
-			],
-			"scripts": [
-				"resources/mobile.pointerOverlay/PointerOverlay.js"
-			],
-			"templates": {
-				"PointerOverlay.hogan": "resources/mobile.pointerOverlay/PointerOverlay.hogan"
-			}
-		},
 		"mobile.watchstar": {
 			"targets": [
 				"mobile",

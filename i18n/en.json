@@ -76,7 +76,6 @@
 	"mobile-frontend-donate-image-title": "Uploads",
 	"mobile-frontend-donate-image-title-username": "Uploads by $1",
 	"mobile-frontend-donate-image-title-you": "Uploads by you",
-	"mobile-frontend-pointer-dismiss": "Dismiss",
 	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />Log in to edit.",
 	"mobile-frontend-edit-signup-action": "<strong>Help improve {{SITENAME}}.</strong><br />Sign up to edit.",
 	"mobile-frontend-editor-abusefilter-disallow": "This edit cannot be saved because we have detected an issue.",
