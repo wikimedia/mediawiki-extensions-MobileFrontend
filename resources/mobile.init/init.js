@@ -9,6 +9,7 @@
 	var currentPage, skin,
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		gateway = new PageGateway( new mw.Api() ),
+		userFontSize = mw.storage.get( 'userFontSize' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Skin = M.require( 'mobile.startup/Skin' ),
 		ReferencesMobileViewGateway = M.require(
@@ -104,6 +105,10 @@
 			namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 		} );
 		return currentPage;
+	}
+
+	if ( userFontSize !== '100' ) {
+		$( '#content p, .content p' ).css( 'font-size', userFontSize + '%' );
 	}
 
 	$.extend( M, {

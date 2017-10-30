@@ -917,24 +917,6 @@
 				"resources/mobile.betaoptin/BetaOptinPanel.js"
 			]
 		},
-		"mobile.fontchanger": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.fontchanger/FontChanger.js"
-			],
-			"styles": [
-				"resources/mobile.fontchanger/FontChanger.less"
-			],
-			"templates": {
-				"FontChanger.hogan": "resources/mobile.fontchanger/FontChanger.hogan"
-			}
-		},
 		"mobile.infiniteScroll": {
 			"targets": [
 				"mobile",
@@ -1024,9 +1006,16 @@
 		"mobile.special.mobileoptions.scripts.fontchanger": {
 			"targets": "mobile",
 			"dependencies": [
-				"mobile.fontchanger"
+				"mobile.startup"
+			],
+			"templates": {
+				"FontChanger.hogan": "resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.hogan"
+			},
+			"styles": [
+				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.less"
 			],
 			"scripts": [
+				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.js",
 				"resources/mobile.special.mobileoptions.scripts.fontchanger/init.js"
 			],
 			"messages": [
@@ -1274,6 +1263,10 @@
 		]
 	},
 	"config": {
+		"MFEnableFontChanger": {
+			"base": false,
+			"beta": true
+		},
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",

@@ -76,7 +76,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function getModules( MobileContext $context ) {
 		$result = [];
 
-		if ( $context->getConfigVariable( 'MinervaEnableFontChanger' ) ) {
+		if ( $context->getConfigVariable( 'MFEnableFontChanger' ) ) {
 			$result[] = 'mobile.special.mobileoptions.scripts.fontchanger';
 		}
 
