@@ -256,25 +256,6 @@
 				"resources/mobile.ajax.styles/spinner.less"
 			]
 		},
-		"mobile.backtotop": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mobile.toggle"
-			],
-			"scripts": [
-				"resources/mobile.backtotop/BackToTopOverlay.js"
-			],
-			"styles": [
-				"resources/mobile.backtotop/backtotop.less"
-			],
-			"templates": {
-				"BackToTopOverlay.hogan": "resources/mobile.backtotop/BackToTopOverlay.hogan"
-			}
-		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-{name}:before",
