@@ -22,6 +22,30 @@
       "revId": "de69eca837490c50668b91850578d3a8199a2ff1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_8dd2932b",
+        "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-10-31T12:42:18Z",
+      "side": 1,
+      "message": "This allows the test to pass if the wiki it is run on does not have the content language set to English. For our Jenkins runs, it makes no difference. But for my local test system, the tests would fail because the namespace names are in German.\n\nThe purpose of that base class is to make sure that unit tests see English as the content language, and thus isolates the tests from the local setup. Ideally, unit tests should be completely independent of the local setup - if they are not, they are really system tests.",
+      "parentUuid": "6e5a8fde_0d28e331",
+      "range": {
+        "startLine": 6,
+        "startChar": 45,
+        "endLine": 6,
+        "endChar": 49
+      },
+      "revId": "de69eca837490c50668b91850578d3a8199a2ff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
