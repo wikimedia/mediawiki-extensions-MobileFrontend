@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_0d28e331",
+        "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2017-10-31T12:12:13Z",
+      "side": 1,
+      "message": "I don\u0027t understand this part of the change (at a glance – I haven\u0027t yet looked at this test case).\n\nCould you explain why this is necessary?",
+      "range": {
+        "startLine": 6,
+        "startChar": 45,
+        "endLine": 6,
+        "endChar": 49
+      },
+      "revId": "de69eca837490c50668b91850578d3a8199a2ff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
