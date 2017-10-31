@@ -79,8 +79,7 @@
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).options,
 			searchTerm: '',
-			// FIXME: Do not use global $
-			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
+			placeholderMsg: '',
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
 			action: mw.config.get( 'wgScript' ),
