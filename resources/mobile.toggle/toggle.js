@@ -335,7 +335,7 @@
 		}
 
 		checkInternalRedirectAndHash();
-		checkHash( this );
+		checkHash();
 		// Restricted to links created by editors and thus outside our control
 		// T166544 - don't do this for reference links - they will be handled elsewhere
 		$container.find( 'a:not(.reference a)' ).on( 'click', function () {
@@ -344,8 +344,11 @@
 			if ( $( this ).attr( 'href' ) !== undefined &&
 				$( this ).attr( 'href' ).indexOf( '#' ) > -1
 			) {
-				checkHash( this );
+				checkHash();
 			}
+		} );
+		$( window ).on( 'hashchange', function () {
+			checkHash();
 		} );
 
 		if ( !browser.isWideScreen() && page ) {
