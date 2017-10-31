@@ -8,7 +8,7 @@
 ( function ( M, $ ) {
 	var currentPage, skin,
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
-		BetaOptinPanel = M.require( 'mobile.betaoptin/BetaOptinPanel' ),
+		BetaOptinPanel = M.require( 'mobile.init/BetaOptinPanel' ),
 		gateway = new PageGateway( new mw.Api() ),
 		util = mw.util,
 		user = mw.user,
