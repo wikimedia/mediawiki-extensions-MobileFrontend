@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var m = M.require( 'mobile.gallery/PhotoListApi' );
+	var m = M.require( 'mobile.gallery/PhotoListGateway' );
 
 	QUnit.module( 'MobileFrontend mobile.gallery/PhotoListApi' );
 
