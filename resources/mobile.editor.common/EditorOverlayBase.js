@@ -4,7 +4,8 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
-		user = M.require( 'mobile.startup/user' );
+		user = M.require( 'mobile.startup/user' ),
+		mwUser = mw.user;
 
 	/**
 	 * 'Edit' button
@@ -48,7 +49,7 @@
 		var self = this;
 
 		if ( options.isNewPage ) {
-			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
+			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
 		}
 		// change the message to request a summary when not in article namespace
 		if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
@@ -162,7 +163,7 @@
 			if ( this.isNewPage &&
 				// TODO: Replace with an OOUI dialog
 				// eslint-disable-next-line no-alert
-				!window.confirm( mw.msg( 'mobile-frontend-editor-new-page-confirm', mw.user ) )
+				!window.confirm( mw.msg( 'mobile-frontend-editor-new-page-confirm', mwUser ) )
 			) {
 				return false;
 			} else {

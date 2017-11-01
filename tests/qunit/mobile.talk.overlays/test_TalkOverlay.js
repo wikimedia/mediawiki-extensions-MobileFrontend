@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		user = mw.user,
 		TalkOverlay = M.require( 'mobile.talk.overlays/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
@@ -22,7 +23,7 @@
 				} )
 			);
 
-			this.user = mw.user.getName() || '';
+			this.user = user.getName() || '';
 		},
 		teardown: function () {
 			mw.config.set( 'wgUserName', this.user );

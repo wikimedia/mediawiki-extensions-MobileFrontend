@@ -1,4 +1,6 @@
 ( function ( M, mw ) {
+	var user = mw.user;
+
 	/**
 	 * Coordinates the logging of MobileWebSchema events.
 	 * Implements schema defined at https://meta.wikimedia.org/wiki/Schema:MobileWebSearch
@@ -18,7 +20,7 @@
 		 * @private
 		 */
 		_newUserSession: function () {
-			this.userSessionToken = mw.user.generateRandomSessionId();
+			this.userSessionToken = user.generateRandomSessionId();
 		},
 
 		/**
@@ -28,7 +30,7 @@
 		 * @private
 		 */
 		_newSearchSession: function () {
-			this.searchSessionToken = mw.user.generateRandomSessionId();
+			this.searchSessionToken = user.generateRandomSessionId();
 			this.searchSessionCreatedAt = new Date().getTime();
 		},
 
