@@ -150,6 +150,11 @@
 						storage.set( 'mobile-betaoptin-token', '~' );
 					} ).appendTo( page.getLeadSectionElement() );
 			}
+
+			// let the interested parties e.g. QuickSurveys know whether the panel is shown
+			mw.track( 'mobile.betaoptin', {
+				isPanelShown: betaOptinPanel !== undefined
+			} );
 		}
 	}
 	if ( userFontSize !== '100' ) {
