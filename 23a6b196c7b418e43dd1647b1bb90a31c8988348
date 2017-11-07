@@ -45,6 +45,52 @@
       "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_44d8b522",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-07T21:12:29Z",
+      "side": 1,
+      "message": "This is redundant, and removing it will also help in preparing use of native Promise in favour of jQuery Deferred.",
+      "range": {
+        "startLine": 49,
+        "startChar": 51,
+        "endLine": 49,
+        "endChar": 61
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_2404997f",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-07T21:12:29Z",
+      "side": 1,
+      "message": "Given in other parts of this commit you started to remove the anti-pattern of wrapping promises in favour of native chaining, would be nice to apply it here as well. E.g. return the return of `this.api.get()` and use `.then()` to modify the return value and return `sections` from here. And in the second parameter to `.then()` (the chained fail handler) you\u0027d return self.reject() so that only in that case a promise is manually created.",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 23
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
