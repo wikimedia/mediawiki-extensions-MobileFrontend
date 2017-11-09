@@ -1109,6 +1109,9 @@
 		"APIGetDescription": [
 			"ApiParseExtender::onAPIGetDescription"
 		],
+		"APIQuerySiteInfoGeneralInfo": [
+			"MobileFrontendHooks::onAPIQuerySiteInfoGeneralInfo"
+		],
 		"AuthChangeFormFields": [
 			"MobileFrontendHooks::onAuthChangeFormFields"
 		],
