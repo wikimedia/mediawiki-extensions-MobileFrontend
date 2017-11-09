@@ -178,28 +178,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	}
 
 	/**
-	 * Reimplements getDiffBodyCacheKey from DifferenceEngine
-	 * Returns the cache key for diff body text or content.
-	 *
-	 * @throws Exception when no mOldid and mNewid is set
-	 * @see DifferenceEngine::getDiffBodyCacheKey
-	 * @return string
+	 * @inheritDoc
 	 */
-	protected function getDiffBodyCacheKey() {
-		global $wgMemc;
-		if ( !$this->mOldid || !$this->mNewid ) {
-			throw new Exception( 'mOldid and mNewid must be set to get diff cache key.' );
-		}
+	protected function getDiffBodyCacheKeyParams() {
+		$params = parent::getDiffBodyCacheKeyParams();
+		$params[0] = 'inline-diff';
 
-		return $wgMemc->makeKey(
-			'diff',
-			'inline',
-			self::DIFF_VERSION,
-			'oldid',
-			$this->mOldid,
-			'newid',
-			$this->mNewid
-		);
+		return $params;
 	}
 
 	/**
