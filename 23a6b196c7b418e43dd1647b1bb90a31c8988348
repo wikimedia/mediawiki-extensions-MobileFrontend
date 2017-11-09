@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6e5a8fde_b0dd1519",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-09T21:10:35Z",
+      "side": 1,
+      "message": "For now it is.. but maybe not in future.\n\nI guess I felt strange about having a ImageGateway that didn\u0027t extend the Gateway, thus it is only linked to Gateway by name.\n\nThat said I obviously didn\u0027t extend the base Gateway class, which shows how torn I am about this.\n\nI see two options:\n* Make sure ImageGateway calls OO.mfExtend\n** cons: mfExtend call unnecessary.\n* Drop the Gateway class entirely.\n** cons: might cause future confusion\n\nAny thoughts on the trade off?",
+      "parentUuid": "6e5a8fde_04b39de9",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 35
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_c4e345d3",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 14
@@ -36,6 +60,30 @@
       "writtenOn": "2017-11-07T21:09:47Z",
       "side": 1,
       "message": "I don\u0027t think it was intentional to throw a Deferred object here. That\u0027d create some odd state for consumers of this promise chain where the error parameter would itself be a promise.\n\nEither throw an Error object and let jQuery.Deferred catch it and produce a rejected promise, or return (not throw) a rejected promise manually.",
+      "range": {
+        "startLine": 146,
+        "startChar": 5,
+        "endLine": 146,
+        "endChar": 23
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_f0a5cd9a",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-09T21:10:35Z",
+      "side": 1,
+      "message": "good catch! Think that was an artifact of a previous iteration.",
+      "parentUuid": "6e5a8fde_c4e345d3",
       "range": {
         "startLine": 146,
         "startChar": 5,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "6e5a8fde_1082e902",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-09T21:10:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e5a8fde_44d8b522",
+      "range": {
+        "startLine": 49,
+        "startChar": 51,
+        "endLine": 49,
+        "endChar": 61
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_2404997f",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 14
@@ -82,6 +154,30 @@
       "writtenOn": "2017-11-07T21:12:29Z",
       "side": 1,
       "message": "Given in other parts of this commit you started to remove the anti-pattern of wrapping promises in favour of native chaining, would be nice to apply it here as well. E.g. return the return of `this.api.get()` and use `.then()` to modify the return value and return `sections` from here. And in the second parameter to `.then()` (the chained fail handler) you\u0027d return self.reject() so that only in that case a promise is manually created.",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 23
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_307da517",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-09T21:10:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e5a8fde_2404997f",
       "range": {
         "startLine": 68,
         "startChar": 4,
