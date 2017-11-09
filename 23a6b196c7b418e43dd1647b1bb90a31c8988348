@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6e5a8fde_73d2475f",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-09T22:13:53Z",
+      "side": 1,
+      "message": "I didn\u0027t notice the missing call to OO.mfExtend, good catch. I don\u0027t have a preference on whether or not this class extends Gateway. But, as a general rule of thumb, one should avoid calling methods of a class (especially the constructor) with a \u0027this\u0027 object that isn\u0027t an instance of that class.\n\nRight now ImageGateway\u0027s prototype is plain (no parent class, no inherited Gateway methods). Calling Gateway.apply(this) means it will invoke the statements in that function with a \u0027this\u0027 object that isn\u0027t instanceof Gateway.\n\nSo whichever way you go, I would say, either have Gateway.apply *and* mfExtend, or have neither. Right now I would expect it to start throwing exceptions at any point when the Gateway constructor tries to do anything relating to its own prototype, which is rather unexpected.",
+      "parentUuid": "6e5a8fde_b0dd1519",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 35
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_c4e345d3",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 14
