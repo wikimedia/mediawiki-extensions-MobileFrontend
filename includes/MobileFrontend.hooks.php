@@ -1243,4 +1243,15 @@ class MobileFrontendHooks {
 		global $wgResourceLoaderLESSImportPaths;
 		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/mobile.less/";
 	}
+
+	/**
+	 * Add the base mobile site URL to the siteinfo API output.
+	 * @param ApiQuerySiteinfo $module
+	 * @param array &$result
+	 */
+	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $module, array &$result ) {
+		global $wgCanonicalServer;
+		$ctx = MobileContext::singleton();
+		$result['mobileserver'] = $ctx->getMobileUrl( $wgCanonicalServer );
+	}
 }
