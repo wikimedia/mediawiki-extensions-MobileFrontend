@@ -49,7 +49,8 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.json',
 				'**/*.json',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**'
 			]
 		}
 	} );
