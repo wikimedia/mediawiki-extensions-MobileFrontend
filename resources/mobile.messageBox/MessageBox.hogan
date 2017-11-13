@@ -1,0 +1,4 @@
+<div class="{{className}}">
+	{{#heading}}<h2>{{heading}}</h2>{{/heading}}
+	{{{msg}}}
+</div>
