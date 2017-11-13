@@ -159,6 +159,7 @@
 	"mobile-frontend-return-to-page": "صفحہ کی جانب واپس",
 	"mobile-frontend-save-settings": "محفوظ کریں",
 	"mobile-frontend-search-content": "صفحات میں تلاش",
+	"mobile-frontend-search-content-no-results": "اس عبارت کو دیکھنے کے لیے '''{{int:mobile-frontend-search-content}}''' کریں۔",
 	"mobile-frontend-search-no-results": "اس عنوان سے کوئی صفحہ موجود نہیں۔",
 	"mobile-frontend-settings-beta": "آزمائشی",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|زبان|زبانوں}} میں دستیاب ہے۔ تمام دستیاب نسخے ذیل میں درج ہیں",
