@@ -1175,6 +1175,7 @@ class MobileFrontendHooks {
 		$vars['wgMFExpandAllSectionsUserOption'] =
 			$context->getConfigVariable( 'MFExpandAllSectionsUserOption' );
 
+		$vars['wgMFEnableFontChanger'] = $context->getConfigVariable( 'MFEnableFontChanger' );
 		$vars += self::getWikibaseStaticConfigVars( $context );
 
 		return true;

@@ -16,8 +16,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private $options = [
 		'Language' => [ 'get' => 'chooseLanguage' ],
 	];
-	/** @var boolean Whether the special page's content should be wrapped in div.content */
-	protected $unstyledContent = false;
 
 	/**
 	 * Construct function
@@ -68,22 +66,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
-	 * Gets the Resource Loader modules that should be added to the output.
-	 *
-	 * @param MobileContext $context
-	 * @return string[]
-	 */
-	private function getModules( MobileContext $context ) {
-		$result = [];
-
-		if ( $context->getConfigVariable( 'MFEnableFontChanger' ) ) {
-			$result[] = 'mobile.special.mobileoptions.scripts.fontchanger';
-		}
-
-		return $result;
-	}
-
-	/**
 	 * Render the settings form (with actual set settings) and add it to the
 	 * output as well as any supporting modules.
 	 */
@@ -93,6 +75,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$user = $this->getUser();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
+		$out->enableOOUI();
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
 			$out->wrapWikiMsg(
@@ -101,64 +84,62 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			);
 		}
 
-		$betaEnabled = $context->isBetaGroupMember();
-
-		$imagesBeta = $betaEnabled ? 'checked' : '';
-		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
-		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
-
-		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
-		$action = $this->getPageTitle()->getLocalURL();
-		$html = Html::openElement( 'form',
-			[ 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action ]
-		);
-		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
-		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
-
-		// array to save the data of options, which should be displayed here
-		$options = [];
+		$fields = [];
+		$form = new OOUI\FormLayout( [
+			'method' => 'POST',
+			'id' => 'mobile-options',
+			'action' => $this->getPageTitle()->getLocalURL(),
+		] );
+		$form->addClasses( [ 'mw-mf-settings' ] );
 
 		// beta settings
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
-			$options['beta'] = [
-				'checked' => $imagesBeta,
-				'label' => $betaEnableMsg,
-				'description' => $betaDescriptionMsg,
-				'name' => 'enableBeta',
-				'id' => 'enable-beta-toggle',
-			];
+			$fields[] = new OOUI\FieldLayout(
+				new OOUI\CheckboxInputWidget( [
+					'name' => 'enableBeta',
+					'infusable' => true,
+					'selected' => $context->isBetaGroupMember(),
+					'id' => 'enable-beta-toggle',
+					'value' => '1',
+				] ),
+				[
+					'label' => new OOUI\LabelWidget( [
+						'label' => new OOUI\HtmlSnippet(
+							Html::openElement( 'div' ) .
+							Html::element( 'strong', [],
+								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
+							Html::element( 'div', [ 'class' => 'option-description' ],
+								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
+							) .
+							Html::closeElement( 'div' )
+						)
+					] ),
+					'id' => 'beta-field',
+				]
+			);
 		}
 
-		$templateParser = new TemplateParser(
-			__DIR__ . '/../../resources/mobile.special.mobileoptions.scripts' );
-		// @codingStandardsIgnoreStart Long line
-		foreach( $options as $key => $data ) {
-			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
-				$html .= Html::element( 'input',
-					array(
-						'type' => 'hidden',
-						'name' => $data['name'],
-						'value' => $data['checked'],
-					)
-				);
-			} else {
-				$html .= $templateParser->processTemplate( 'checkbox', $data );
-			}
+		$fields[] = new OOUI\ButtonInputWidget( [
+			'id' => 'mw-mf-settings-save',
+			'infusable' => true,
+			'value' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'label' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'flags' => [ 'primary', 'progressive' ],
+			'type' => 'submit',
+		] );
+
+		if ( $user->isLoggedIn() ) {
+			$fields[] = new OOUI\HtmlSnippet( Html::hidden( 'token', $user->getEditToken() ) );
 		}
-		$className = MobileUI::buttonClass( 'constructive' );
-		$html .= <<<HTML
-		<input type="submit" class="{$className}" id="mw-mf-settings-save" value="{$saveSettings}">
-		$token
-		$returnto
-	</form>
-HTML;
+		$fields[] = new OOUI\HtmlSnippet(
+			Html::hidden( 'returnto', $this->returnToTitle->getFullText() )
+		);
+
 		// @codingStandardsIgnoreEnd
-		$out->addHTML( $html );
-
-		$modules = $this->getModules( $context );
-
-		$this->getOutput()
-			->addModules( $modules );
+		$form->appendContent(
+			$fields
+		);
+		$out->addHTML( $form );
 	}
 
 	/**

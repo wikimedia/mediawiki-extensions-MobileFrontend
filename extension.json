@@ -944,35 +944,20 @@
 			"targets": "mobile",
 			"position": "top",
 			"dependencies": [
+				"jquery.cookie",
 				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.special.mobileoptions.scripts/mobileoptions.js"
 			],
-			"templates": {
-				"Checkbox.hogan": "resources/mobile.special.mobileoptions.scripts/checkbox.mustache"
-			},
 			"messages": [
+				"mobile-frontend-settings-save",
+				"mobile-frontend-fontchanger-option-small",
+				"mobile-frontend-fontchanger-option-medium",
+				"mobile-frontend-fontchanger-option-large",
+				"mobile-frontend-fontchanger-option-xlarge",
 				"mobile-frontend-expand-sections-description",
-				"mobile-frontend-expand-sections-status"
-			]
-		},
-		"mobile.special.mobileoptions.scripts.fontchanger": {
-			"targets": "mobile",
-			"dependencies": [
-				"mobile.startup"
-			],
-			"templates": {
-				"FontChanger.hogan": "resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.hogan"
-			},
-			"styles": [
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.less"
-			],
-			"scripts": [
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.js",
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/init.js"
-			],
-			"messages": [
+				"mobile-frontend-expand-sections-status",
 				"mobile-frontend-fontchanger-desc",
 				"mobile-frontend-fontchanger-link"
 			]

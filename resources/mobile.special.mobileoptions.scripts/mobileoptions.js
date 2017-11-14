@@ -1,51 +1,146 @@
 ( function ( M, $ ) {
-	var View = M.require( 'mobile.startup/View' );
+	var storage = mw.storage,
+		cookie = $.cookie,
+		notification,
+		toast = M.require( 'mobile.startup/toast' ),
+		EXPAND_SECTIONS_KEY = 'expandSections',
+		msg = mw.msg,
+		FONT_SIZE_KEY = 'userFontSize';
 
 	/**
-	 * Wrapper for checkboxes styled as in MediaWiki UI style guide
-	 * @class Checkbox
-	 * @extends View
+	 * Notifies the user that settings were asynchronously saved.
+	 * @method
+	 * @ignore
 	 */
-	function Checkbox() {
-		View.apply( this, arguments );
+	function notify() {
+		if ( notification ) {
+			clearTimeout( notification );
+		}
+		notification = setTimeout( function () {
+			toast.show( msg( 'mobile-frontend-settings-save' ) );
+		}, 1000 );
+	}
+	/**
+	 * Creates a label for use with a form input
+	 * @method
+	 * @ignore
+	 * @param {String} heading
+	 * @param {String} description
+	 * @return {OO.ui.LabelWidget}
+	 */
+	function createLabel( heading, description ) {
+		var $label = $( '<div>' );
+		$label.append( $( '<strong>' ).text( heading ) );
+		$label.append(
+			$( '<div class="option-description">' )
+				.text( description )
+		);
+
+		return new OO.ui.LabelWidget( {
+			label: $label
+		} );
 	}
 
-	OO.mfExtend( Checkbox, View, {
-		template: mw.template.get( 'mobile.special.mobileoptions.scripts', 'Checkbox.hogan' ),
-		/**
-		 * Save the current state of the checkbox to the storage
-		 * @method
-		 */
-		save: function () {
-			mw.storage.set( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false' );
-		},
-		/** @inheritdoc */
-		postRender: function () {
-			var cbview = this;
-			this.cb = this.$( 'input[type=checkbox]' );
-			this.cb.prop( 'checked', mw.storage.get( this.options.name ) === 'true' );
-			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( cbview, 'save' ) );
-		}
-	} );
+	/**
+	 * Adds a font changer field to the form
+	 * @method
+	 * @param {jQuery.Object} $form
+	 * @ignore
+	 */
+	function addFontChangerToForm( $form ) {
+		var fontChanger, fontChangerDropdown;
+
+		fontChangerDropdown = new OO.ui.DropdownInputWidget( {
+			value: parseInt( storage.get( FONT_SIZE_KEY ), 10 ),
+			options: [
+				{
+					data: 90,
+					label: msg( 'mobile-frontend-fontchanger-option-small' )
+				},
+				{
+					data: 100,
+					label: msg( 'mobile-frontend-fontchanger-option-medium' )
+				},
+				{
+					data: 120,
+					label: msg( 'mobile-frontend-fontchanger-option-large' )
+				},
+				{
+					data: 140,
+					label: msg( 'mobile-frontend-fontchanger-option-xlarge' )
+				}
+			]
+		} );
+		fontChanger = new OO.ui.FieldLayout(
+			fontChangerDropdown,
+			{
+				label: createLabel( mw.msg( 'mobile-frontend-fontchanger-link' ),
+					mw.msg( 'mobile-frontend-fontchanger-desc' ) ).$element
+			}
+		);
+		fontChangerDropdown.on( 'change', function ( value ) {
+			storage.set( FONT_SIZE_KEY, value );
+			notify();
+		} );
+
+		fontChanger.$element.prependTo( $form );
+	}
+
+	/**
+	 * Adds an expand all sections field to the form
+	 * @param {jQuery.Object} $form
+	 * @ignore
+	 * @method
+	 */
+	function addExpandAllSectionsToForm( $form ) {
+		var cb, cbField;
+
+		cb = new OO.ui.CheckboxInputWidget( {
+			name: EXPAND_SECTIONS_KEY,
+			selected: storage.get( EXPAND_SECTIONS_KEY ) === 'true'
+		} );
+		cbField = new OO.ui.FieldLayout(
+			cb,
+			{
+				label: createLabel(
+					mw.msg( 'mobile-frontend-expand-sections-status' ),
+					mw.msg( 'mobile-frontend-expand-sections-description' )
+				).$element
+			}
+		);
+		cb.on( 'change', function () {
+			storage.set( EXPAND_SECTIONS_KEY, this.isSelected() ? 'true' : 'false' );
+			notify();
+		}.bind( cb ) );
+
+		cbField.$element.prependTo( $form );
+	}
 
 	/**
 	 * Add features, that depends on localStorage, such as "exapnd all sections" or "fontchanger".
 	 * The checkbox is used for turning on/off expansion of all sections on page load.
 	 * @method
+	 * @ignore
 	 */
 	function initLocalStorageElements() {
-		var cb,
-			saveLI = $( '#mw-mf-settings-save' );
+		var
+			enableToggle = OO.ui.infuse( $( '#enable-beta-toggle' ) ),
+			$form = $( '#mobile-options' );
+
+		// The beta toggle will now work without clicking submit
+		enableToggle.on( 'change', function () {
+			cookie( 'optin', this.isSelected() ? 'beta' : '' );
+			notify();
+		}.bind( enableToggle ) );
 
 		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) ) {
-			cb = new Checkbox( {
-				name: 'expandSections',
-				label: mw.msg( 'mobile-frontend-expand-sections-status' ),
-				description: mw.msg( 'mobile-frontend-expand-sections-description' )
-			} );
-			cb.insertBefore( saveLI );
+			addExpandAllSectionsToForm( $form );
+		}
+
+		if ( mw.config.get( 'wgMFEnableFontChanger' ) ) {
+			addFontChangerToForm( $form );
 		}
 	}
 
-	$( initLocalStorageElements );
+	mw.loader.using( 'oojs-ui-widgets' ).then( initLocalStorageElements );
 }( mw.mobileFrontend, jQuery ) );
