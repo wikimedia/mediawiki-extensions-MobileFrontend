@@ -53,6 +53,7 @@
 	"mobile-frontend-editor-error-preview": "mungangaw, miasip pataayaway miazih kasabelih mungangaw. piedeben han pitaneng aca",
 	"mobile-frontend-editor-keep-editing": "palalid mikawaway-kalumyiti",
 	"mobile-frontend-editor-licensing": "misuped tu sumad, dayhiw kisu patubeli tu $1 {{PLURAL:$2|sapabeli tu kinli a cedang}} patiyakay kisu paaninay.",
+	"mobile-frontend-editor-licensing-with-terms": "misuped tu sumad, tungusay patubeli kisu $1 i $2 {{PLURAL:$3|sapabeli tu kinli a cedang}} patiyak tisuwan paanin.",
 	"mobile-frontend-editor-terms-link": "[$1 mamaala a cedang]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|kadihan kisu}}ipabaw {{SITENAME}} patizeng baluhayay a kasabelih haw?",
 	"mobile-frontend-editor-placeholder": "tina tusil ku inayi’ay. mala sakacacay a tademaw amikawaway-kalumyitiay!",
