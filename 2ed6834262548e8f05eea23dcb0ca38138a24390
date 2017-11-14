@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e578bb4_849a8616",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-14T22:54:30Z",
+      "side": 1,
+      "message": "TODO: this renders as raw html",
+      "revId": "2ed6834262548e8f05eea23dcb0ca38138a24390",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e578bb4_64fbca45",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-14T22:54:30Z",
+      "side": 1,
+      "message": "TODO",
+      "revId": "2ed6834262548e8f05eea23dcb0ca38138a24390",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
