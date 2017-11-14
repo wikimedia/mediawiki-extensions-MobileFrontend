@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e578bb4_a4e8e278",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-14T22:54:30Z",
+      "side": 1,
+      "message": "This does not appear to work...",
+      "revId": "70117b6cdae00c627ba8e4687e9ed9e979e9317f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
