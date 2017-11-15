@@ -125,7 +125,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 					$output[] = [
 						'langname' => $varname,
 						'url' => $this->title->getLocalURL( [ 'variant' => $code ] ),
-						'lang' => wfBCP47( $code )
+						'lang' => LanguageCode::bcp47( $code ),
 					];
 				}
 			}
