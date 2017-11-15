@@ -28,6 +28,42 @@
 		}
 	} );
 
+	QUnit.test( '#loadImagesList (success)', function ( assert ) {
+		var stub = this.sandbox.stub( this.skin, 'loadImage' )
+			.returns( $.Deferred().resolve() );
+
+		return this.skin.loadImagesList( [
+			$( '<div>' ), $( '<div>' )
+		] ).done( function () {
+			assert.ok( stub.calledTwice,
+				'Stub was called twice and resolves successfully.' );
+		} );
+	} );
+
+	QUnit.test( '#loadImagesList (one image fails)', function ( assert ) {
+		var stub = this.sandbox.stub( this.skin, 'loadImage' ),
+			d = $.Deferred();
+
+		stub.onCall( 0 ).returns( $.Deferred().resolve() );
+		stub.onCall( 1 ).returns( $.Deferred().reject() );
+
+		this.skin.loadImagesList( [
+			$( '<div>' ), $( '<div>' )
+		] ).fail( function () {
+			assert.ok( stub.calledTwice,
+				'Stub was called twice and overall result was failure.' );
+		} ).always( function () {
+			d.resolve();
+		} );
+		return d;
+	} );
+
+	QUnit.test( '#loadImagesList (empty list)', function ( assert ) {
+		return this.skin.loadImagesList( [] ).done( function () {
+			assert.ok( true, 'An empty list always resolves successfully' );
+		} );
+	} );
+
 	QUnit.test( '#lazyLoadReferences', function ( assert ) {
 		var $content = this.$el;
 		this.skin.lazyLoadReferences( {

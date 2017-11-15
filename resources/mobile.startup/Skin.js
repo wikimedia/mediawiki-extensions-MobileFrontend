@@ -2,7 +2,10 @@
 
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
+		Deferred = $.Deferred,
+		when = $.when,
 		icons = M.require( 'mobile.startup/icons' ),
+		viewport = mw.viewport,
 		spinner = icons.spinner();
 
 	/**
@@ -62,7 +65,7 @@
 			mw.config.get( 'wgMFLazyLoadImages' )
 		) {
 			$( function () {
-				self.loadImages();
+				self.setupImageLoading();
 			} );
 		}
 
@@ -116,41 +119,63 @@
 			 */
 			this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
 		},
-
 		/**
-		 * Load images on demand
+		 * Get images that have not yet been loaded in the page
 		 * @param {jQuery.Object} [$container] The container that should be
 		 *  searched for image placeholders. Defaults to "#content".
+		 * @return {Array} of unloaded image placeholders in the page
 		 */
-		loadImages: function ( $container ) {
+		getUnloadedImages: function ( $container ) {
+			$container = $container || this.$( '#content' );
+			return $container.find( '.lazy-image-placeholder' ).toArray();
+		},
+		/**
+		 * Setup listeners to watch unloaded images and load them into the page
+		 * as and when they are needed.
+		 * @param {jQuery.Object} [$container] The container that should be
+		 *  searched for image placeholders. Defaults to "#content".
+		 * @return {jQuery.Deferred} which will be resolved when the attempts to load all images subject to
+		 *  loading have been completed.
+		 */
+		setupImageLoading: function ( $container ) {
 			var self = this,
 				offset = $( window ).height() * 1.5,
-				imagePlaceholders;
+				loadImagesList = this.loadImagesList.bind( this ),
+				imagePlaceholders = this.getUnloadedImages( $container );
 
-			$container = $container || this.$( '#content' );
-			imagePlaceholders = $container.find( '.lazy-image-placeholder' ).toArray();
+			/**
+			 * Check whether an image should be loaded based on its proximity to the
+			 * viewport; and whether it is displayed to the user.
+			 * @param {jQuery.Object} $placeholder
+			 * @return {Boolean}
+			 * @ignore
+			 */
+			function shouldLoadImage( $placeholder ) {
+				return viewport.isElementCloseToViewport( $placeholder[0], offset ) &&
+					// If a placeholder is an inline element without a height attribute set it will record as hidden
+					// to circumvent this we also need to test the height (see T143768).
+					( $placeholder.is( ':visible' ) || $placeholder.height() === 0 );
+			}
 
 			/**
 			 * Load remaining images in viewport
+			 * @ignore
+			 * @return {jQuery.Deferred}
 			 */
 			function _loadImages() {
-
+				var images = [];
+				// Filter unloaded images to only the images that still need to be loaded
 				imagePlaceholders = $.grep( imagePlaceholders, function ( placeholder ) {
 					var $placeholder = self.$( placeholder );
-
-					if (
-						mw.viewport.isElementCloseToViewport( placeholder, offset ) &&
-						// If a placeholder is an inline element without a height attribute set it will record as hidden
-						// to circumvent this we also need to test the height (see T143768).
-						( $placeholder.is( ':visible' ) || $placeholder.height() === 0 )
-					) {
-						self.loadImage( $placeholder );
+					// Check length to ensure the image is still in the DOM.
+					if ( $placeholder.length && shouldLoadImage( $placeholder ) ) {
+						images.push( placeholder );
 						return false;
 					}
-
 					return true;
 				} );
 
+				// When no images are left unbind all events
 				if ( !imagePlaceholders.length ) {
 					M.off( 'scroll:throttled', _loadImages );
 					M.off( 'resize:throttled', _loadImages );
@@ -158,6 +183,8 @@
 					self.off( 'changed', _loadImages );
 				}
 
+				// load any remaining images.
+				return loadImagesList( images );
 			}
 
 			M.on( 'scroll:throttled', _loadImages );
@@ -165,15 +192,33 @@
 			M.on( 'section-toggled', _loadImages );
 			this.on( 'changed', _loadImages );
 
-			_loadImages();
+			return _loadImages();
 		},
+		/**
+		 * Load an image on demand
+		 * @param {Array} [images] a list of images that have not been loaded. If none given all will be loaded
+		 * @return {jQuery.Deferred}
+		 */
+		loadImagesList: function ( images ) {
+			var callbacks,
+				$ = this.$.bind( this ),
+				loadImage = this.loadImage.bind( this );
 
+			images = images || this.getUnloadedImages();
+			callbacks = images.map( function ( placeholder ) {
+				return loadImage( $( placeholder ) );
+			} );
+
+			return when.apply( null, callbacks );
+		},
 		/**
 		 * Load an image on demand
 		 * @param {jQuery.Object} $placeholder
+		 * @return {jQuery.Deferred}
 		 */
 		loadImage: function ( $placeholder ) {
 			var
+				d = Deferred(),
 				width = $placeholder.attr( 'data-width' ),
 				height = $placeholder.attr( 'data-height' ),
 				// Image will start downloading
@@ -185,6 +230,10 @@
 				// dimensions the same and not trigger layouts
 				$downloadingImage.addClass( 'image-lazy-loaded' );
 				$placeholder.replaceWith( $downloadingImage );
+				d.resolve();
+			} );
+			$downloadingImage.on( 'error', function () {
+				d.reject();
 			} );
 
 			// Trigger image download after binding the load handler
@@ -197,6 +246,7 @@
 				style: $placeholder.attr( 'style' ),
 				srcset: $placeholder.attr( 'data-srcset' )
 			} );
+			return d;
 		},
 
 		/**
@@ -216,6 +266,8 @@
 		lazyLoadReferences: function ( data ) {
 			var $content, $spinner,
 				gateway = this.referencesGateway,
+				getUnloadedImages = this.getUnloadedImages.bind( this ),
+				loadImagesList = this.loadImagesList.bind( this ),
 				self = this;
 
 			// If the section was expanded before toggling, do not load anything as
@@ -281,12 +333,12 @@
 					} )
 					.always( function () {
 						// lazy load images if any
-						self.loadImages( $content );
+						loadImagesList( getUnloadedImages( $content ) );
 						// Do not attempt further loading even if we're unable to load this time.
 						$content.data( 'are-references-loaded', 1 );
 					} );
 			} else {
-				return $.Deferred().reject();
+				return Deferred().reject();
 			}
 		},
 
