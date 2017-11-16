@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_a538d53b",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-16T23:51:19Z",
+      "side": 1,
+      "message": "This essentially means cases where the request succeeds but there is an error property, it will call resolve(undefined) instead of rejecting. \n\nEither access the property unconditionally (and let the exception be caught by jQuery to reject it for you), or throw or reject manually from an else branch.",
+      "range": {
+        "startLine": 56,
+        "startChar": 5,
+        "endLine": 56,
+        "endChar": 6
+      },
+      "revId": "a720ab9bd13646749470d0a8401e2440b89d2098",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
