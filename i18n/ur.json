@@ -120,7 +120,7 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 دن}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 گھنٹہ|$3 گھنٹے}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 آخری {{GENDER:$1|ترمیم}}] بس ابھی از {{PLURAL:$4|[$5 $2]|0=گمنام صارف}}",
-	"mobile-frontend-last-modified-with-user-minutes": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 منٹ|$3 منٹس}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 منٹ}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 مہینہ|$3 مہینے}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 ثانیہ|$3 ثانیے}} قبل] از {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 برس|$3 سال}} قبل] {{PLURAL:$5|[$6 $2]|0=کسی گمنام صارف}} نے کی",
