@@ -760,16 +760,16 @@ class MobileFrontendHooks {
 			// We load mobile.init so that lazy loading images works on all skins
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
 
-			if ( $out->getRequest()->getText( 'oldid' ) ) {
-				$styles[] = 'mobile.messageBox.styles';
-			}
-
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
 
-			// add fallback editor styles to action=edit page
+			// Warning box styles are needed when reviewing old revisions
+			// and inside the fallback editor styles to action=edit page
 			$requestAction = $out->getRequest()->getVal( 'action' );
-			if ( $requestAction === 'edit' || $requestAction === 'submit' ) {
+			if (
+				$out->getRequest()->getText( 'oldid' ) ||
+				$requestAction === 'edit' || $requestAction === 'submit'
+			) {
 				$out->addModuleStyles( [
 					'mobile.messageBox.styles'
 				] );
