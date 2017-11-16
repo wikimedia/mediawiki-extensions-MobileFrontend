@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "2e5417b0_2916094e",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-16T00:09:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e5a8fde_73d2475f",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 35
+      },
+      "revId": "23a6b196c7b418e43dd1647b1bb90a31c8988348",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_c4e345d3",
         "filename": "resources/mobile.nearby/NearbyGateway.js",
         "patchSetId": 14
