@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_d6e7c5dd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 766,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-11-17T15:16:15Z",
+      "side": 1,
+      "message": "The comment is outdated now, no?",
+      "revId": "65425692b60eef1ace2267fa6a0f8e2b562456ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
