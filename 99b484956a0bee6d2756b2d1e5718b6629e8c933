@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_14446b6d",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-20T18:42:42Z",
+      "side": 1,
+      "message": "a flag argument is usually a code smell and makes code much more difficult to maitain: https://martinfowler.com/bliki/FlagArgument.html\n\nI prefer to clean this code a bit, instead `unconditionally` flag pass a function that filters which images to load, then create two functions\n\n```\nlazyLoadImages: function($container) {\n  loadImages( $container, function shouldLoadImage ($placeholder) .... //is around view port);\n```\n\nand\n\n```\nloadAllImages: function( $container ) {\n  loadImages( $container, () \u003d\u003e { return true; } );\n```\n\nAlso, my concern is that from the implementation I assume that this function can be called twice, this is kind\u0027a scary because at the end of this function we listen to scroll, resize, section-toggled events, which shouldn\u0027t happen if we load all images uncoditionally (all images are there, there is no readon to load them).\n\nThose listeners should be registered in `lazyLoadImages()` and not in `loadAllImages()`",
+      "range": {
+        "startLine": 133,
+        "startChar": 2,
+        "endLine": 133,
+        "endChar": 52
+      },
+      "revId": "99b484956a0bee6d2756b2d1e5718b6629e8c933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
