@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_7b3583f2",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-21T20:42:56Z",
+      "side": 1,
+      "message": "Race condition, can fail with `jQuery.fn.offset() requires a valid DOM element`\n\nProblem happens (not often, typical race condition) when user is on slow connection, he scrollsdown a bit, then up and hits \"download\".\n\nIn that scenario with have two $placeholder elements (one created and triggered by scrolling) and second one triggered by DownloadIcon.onClick() to predownload all images. If the second one reached first, the $placeholder will not exist as it gets replaced with image element.",
+      "revId": "17d70234d70ad51a04c879c6b45f8d54d835c959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
