@@ -19,12 +19,7 @@
 		 * @cfg {string} defaults.className either errorbox, warningbox or successbox
 		 */
 		defaults: {},
-		template: mw.template.get( 'mobile.messageBox', 'MessageBox.hogan' ),
-		preRender: function () {
-			// Mustache (serverside) only allows truthy block tags.
-			// In case a dev added a heading but not hasHeading we set its value here.
-			this.options.hasHeading = Boolean( this.options.heading );
-		}
+		template: mw.template.get( 'mobile.messageBox', 'MessageBox.hogan' )
 	} );
 
 	M.define( 'mobile.messageBox/MessageBox', MessageBox );
