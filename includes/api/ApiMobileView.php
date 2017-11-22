@@ -452,7 +452,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
 		$parserOutput = $wp->getParserOutput( $parserOptions, $oldid );
-		if ( $parserOutput ) {
+		if ( $parserOutput && !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
 			$parserOutput->setTOCEnabled( false );
 		}
 
@@ -615,7 +615,7 @@ class ApiMobileView extends ApiBase {
 				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
 				return;
 			}
-			$html = $parserOutput->getText();
+			$html = $parserOutput->getText( [ 'allowTOC' => false ] );
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 

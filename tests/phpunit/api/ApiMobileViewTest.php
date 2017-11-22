@@ -22,8 +22,10 @@ class MockApiMobileView extends ApiMobileView {
 		}
 		$parser = new Parser();
 		$po = $parser->parse( $params['text'], $wp->getTitle(), $parserOptions );
-		$po->setTOCEnabled( false );
-		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText() ) );
+		if ( !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
+			$po->setTOCEnabled( false );
+		}
+		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText( [ 'allowTOC' => false ] ) ) );
 
 		return $po;
 	}
