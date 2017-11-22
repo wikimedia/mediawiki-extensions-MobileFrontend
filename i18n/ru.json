@@ -57,7 +57,7 @@
 	"mobile-frontend-categories-nodata": "Произошла ошибка. Вы добавили какие-нибудь категории для сохранения?",
 	"mobile-frontend-categories-summary": "Добавленые в категории",
 	"mobile-frontend-categories-add-heading": "<strong>Добавьте <span> $1</span> в новые категории</strong>",
-	"mobile-frontend-categories-add-wait": "Сохранение категорий, пожалуйста подождите.",
+	"mobile-frontend-categories-add-wait": "Сохранение категорий, пожалуйста, подождите.",
 	"mobile-frontend-categories-normal": "На основе содержания",
 	"mobile-frontend-categories-hidden": "Организационный",
 	"mobile-frontend-changeslist-nocomment": "Нет описания правки",
