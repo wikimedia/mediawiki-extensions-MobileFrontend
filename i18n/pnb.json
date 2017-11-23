@@ -3,28 +3,23 @@
 		"authors": [
 			"Khalid Mahmood",
 			"Saanvel",
-			"Abbas dhothar"
+			"Abbas dhothar",
+			"BukhariSaeed"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "اک سیکشن پچھے چلو",
 	"mobile-frontend-changeslist-nocomment": "لکھائی دا خلاصہ کوئی نہیں",
 	"mobile-frontend-copyright": "لکھت $1 لسنس تھلے ہیگا اے۔",
 	"mobile-frontend-desc": "موبائل وکھالہ",
-	"mobile-frontend-disable-images": "موبائل آلی ویب سائٹ تے فوٹواں بند کرو",
-	"mobile-frontend-enable-images": "موبائل آلی ویب سائٹ تے فوٹواں آن کرو",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|حصہ|حصے}}",
 	"mobile-frontend-featured-article": "اج دی چونویں لکھت",
 	"mobile-frontend-last-modified-date": "آخری واری $1 نوں، $2 وجے پلٹیا گیا",
-	"mobile-frontend-main-menu-account-create": "کھاتہ کھولو",
 	"mobile-frontend-news-items": "دساں چ",
 	"mobile-frontend-opt-in-explain": "بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔",
-	"mobile-frontend-password": "کنجی:",
-	"mobile-frontend-password-placeholder": "کنجی",
 	"mobile-frontend-privacy-link-text": "پرائیویسی",
-	"mobile-frontend-regular-site": "ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو",
-	"mobile-frontend-search-submit": "چلو",
 	"mobile-frontend-terms-text": "ورتن شرطاں",
 	"mobile-frontend-view": "موبائیل سائٹ",
 	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
+	"mobile-frontend-watchlist-filter-talk": "گل بات",
 	"tag-mobile_edit": "موبائیل توں لکھائی",
 	"tag-mobile_web_edit": "موبائیل ویب سائیٹ توں تبدیلی"
 }
