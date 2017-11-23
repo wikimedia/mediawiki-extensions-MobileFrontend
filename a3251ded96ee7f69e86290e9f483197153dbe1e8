@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_d8ffeafa",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2017-11-23T20:52:05Z",
+      "side": 1,
+      "message": "This actually doesn\u0027t take MenuOptionWidgets, it takes plain objects – this block should be like this:\n\n\toptions: [\n\t\t// @todo:  i18n labels\n\t\t{\n\t\t\tdata: 90,\n\t\t\tlabel: msg( \u0027mobile-frontend-fontchanger-option-small\u0027 )\n\t\t},\n\t\t{\n\t\t\tdata: 100,\n\t\t\tlabel: msg( \u0027mobile-frontend-fontchanger-option-medium\u0027 )\n\t\t},\n\t\t{\n\t\t\tdata: 120,\n\t\t\tlabel: msg( \u0027mobile-frontend-fontchanger-option-large\u0027 )\n\t\t},\n\t\t{\n\t\t\tdata: 140,\n\t\t\tlabel: msg( \u0027mobile-frontend-fontchanger-option-xlarge\u0027 )\n\t\t}\n\t]\n\nThe MenuOptionWidget actually works by accident (as it happens, it has the properties \u0027data\u0027 and \u0027label\u0027).\n\nAlso, I think you fixed this @todo :)",
+      "range": {
+        "startLine": 42,
+        "startChar": 14,
+        "endLine": 42,
+        "endChar": 30
+      },
+      "revId": "a3251ded96ee7f69e86290e9f483197153dbe1e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
