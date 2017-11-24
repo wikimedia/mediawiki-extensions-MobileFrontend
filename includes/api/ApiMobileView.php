@@ -621,7 +621,8 @@ class ApiMobileView extends ApiBase {
 				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
 				return;
 			}
-			$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true ] );
+			$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true,
+				'deduplicateStyles' => false ] );
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 
