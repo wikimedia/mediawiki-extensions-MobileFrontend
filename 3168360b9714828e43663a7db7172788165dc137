@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_d0ccde8e",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "This breaks linting. If linting errors are introduced, they are fixed while eslint is running in CI so eslint never reports any problems. The problem is that files with errors will be checked in, not fixed files.",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_908096fb",
+        "filename": "tests/selenium/.eslintrc.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "This is reduntand:\n\n parserOptions\": {\"ecmaVersion\": 6}\n\nFrom https://eslint.org/docs/user-guide/configuring\n\nes6 - enable all ECMAScript 6 features except for modules (this automatically sets the ecmaVersion parser option to 6).",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_3021ca9b",
+        "filename": "tests/selenium/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "I am pretty sure this used to work, but looks like it works when there is only one file in the folder. :(\n\nFor MobileFronted it returns:\n\n Error: Error: more than one config file specified",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_70199227",
+        "filename": "tests/selenium/helpers/mobile.mode.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "Is there a reason this is not a regular page, but a helper?",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_b0131a05",
+        "filename": "tests/selenium/pageobjects/special/common/history.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "Why are page objects in pageobjects, pageobjects/special and pageobjects/special/common folders? What\u0027s wrong with having just pageobjects folder?",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_b0f2facb",
+        "filename": "tests/selenium/pageobjects/special/editwatchlist.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "White-space:\n throw new Error( \u0027@todo: check if feedTabButtonElement has .is-on class\u0027 );",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_10be46d1",
+        "filename": "tests/selenium/pageobjects/special/editwatchlist.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "White-space:\n throw new Error( \u0027@todo: check if listTabButtonElement has .is-on class\u0027 );",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_30bd4ad2",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "White-space:\n client.getToken( title, \u0027watch\u0027, function ( err, token ) {",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_50b8cee2",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "White-space:\n }, function ( err ) {",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_90d2562b",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "White-space:\n }, \u0027POST\u0027 );",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_100126ba",
+        "filename": "tests/selenium/specs/contributions.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "$ ./node_modules/.bin/wdio tests/selenium/wdio.conf.js --spec extensions/MobileFrontend/tests/selenium/specs/contributions.js \n ...\n [chrome #0-0] 3 failing (25s)\n [chrome #0-0]\n [chrome #0-0] 1) Contribution page User page has correct contributions link:\n [chrome #0-0] stale element reference: element is not attached to the page document\n [chrome #0-0] Error: stale element reference: element is not attached to the page document\n [chrome #0-0]     at element(\".user-links a[href^\u003d\"/wiki/Special:Contributions/\"]\") - index.js:423:3\n ...\n\nFor one of the tests, screenshot says \"You don\u0027t have a user page yet\".",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_70e872de",
+        "filename": "tests/selenium/specs/watchlist-new-user.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "/// should be //",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_90eb76db",
+        "filename": "tests/selenium/specs/watchlist.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2017-11-24T13:46:40Z",
+      "side": 1,
+      "message": "/// should be //",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
