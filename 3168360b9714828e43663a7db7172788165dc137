@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_13b81074",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_d0ccde8e",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_908096fb",
         "filename": "tests/selenium/.eslintrc.json",
         "patchSetId": 6
@@ -70,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_f3bc8c69",
+        "filename": "tests/selenium/helpers/mobile.mode.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "I\u0027m using this as a helper to make testing easier. We have similar thing in ArticlePage that click link in footer to enable mobile mode. This one supposed to be faster (change only cookie).",
+      "parentUuid": "0edf5380_70199227",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_b0131a05",
         "filename": "tests/selenium/pageobjects/special/common/history.page.js",
         "patchSetId": 6
@@ -81,6 +117,24 @@
       "writtenOn": "2017-11-24T13:46:40Z",
       "side": 1,
       "message": "Why are page objects in pageobjects, pageobjects/special and pageobjects/special/common folders? What\u0027s wrong with having just pageobjects folder?",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_53b29893",
+        "filename": "tests/selenium/pageobjects/special/common/history.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "I was trying to put some structure around page objects. In MobileFrontend we can have normal pages, special pages. special/common is for abstraction/shared logic. For example History and Contributions pages are very similar, they both extend HistoryCommonsPage to follow DRY.",
+      "parentUuid": "0edf5380_b0131a05",
       "revId": "3168360b9714828e43663a7db7172788165dc137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_33b71483",
+        "filename": "tests/selenium/pageobjects/special/editwatchlist.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_b0f2facb",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_10be46d1",
         "filename": "tests/selenium/pageobjects/special/editwatchlist.page.js",
         "patchSetId": 6
@@ -115,6 +187,24 @@
       "writtenOn": "2017-11-24T13:46:40Z",
       "side": 1,
       "message": "White-space:\n throw new Error( \u0027@todo: check if listTabButtonElement has .is-on class\u0027 );",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_93ac2034",
+        "filename": "tests/selenium/pageobjects/special/editwatchlist.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_10be46d1",
       "revId": "3168360b9714828e43663a7db7172788165dc137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +228,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_d3a6a84f",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_30bd4ad2",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_50b8cee2",
         "filename": "tests/selenium/pageobjects/watch.page.js",
         "patchSetId": 6
@@ -155,6 +263,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_73a99c21",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_50b8cee2",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_90d2562b",
         "filename": "tests/selenium/pageobjects/watch.page.js",
         "patchSetId": 6
@@ -166,6 +292,24 @@
       "writtenOn": "2017-11-24T13:46:40Z",
       "side": 1,
       "message": "White-space:\n }, \u0027POST\u0027 );",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_b3a3243f",
+        "filename": "tests/selenium/pageobjects/watch.page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "0edf5380_90d2562b",
       "revId": "3168360b9714828e43663a7db7172788165dc137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -223,6 +367,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_5371f8dc",
+        "filename": "tests/selenium/specs/contributions.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "this test was checking that User page has a contributions link that is clickable. I\u0027ll add a test to verify that it redirects to an user contributions page",
+      "parentUuid": "0edf5380_d347c84e",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_933d40bb",
         "filename": "tests/selenium/specs/history.js",
         "patchSetId": 6
@@ -240,6 +402,24 @@
     },
     {
       "key": {
+        "uuid": "0edf5380_f36becec",
+        "filename": "tests/selenium/specs/history.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "this test was checking that ArticlePage had a last modified link that is clickable. I\u0027ll add a test to verify that it redirects to a history page",
+      "parentUuid": "0edf5380_933d40bb",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0edf5380_70e872de",
         "filename": "tests/selenium/specs/watchlist-new-user.js",
         "patchSetId": 6
@@ -251,6 +431,24 @@
       "writtenOn": "2017-11-24T13:46:40Z",
       "side": 1,
       "message": "/// should be //",
+      "revId": "3168360b9714828e43663a7db7172788165dc137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_13677023",
+        "filename": "tests/selenium/specs/watchlist-new-user.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-24T18:05:24Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "0edf5380_70e872de",
       "revId": "3168360b9714828e43663a7db7172788165dc137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
