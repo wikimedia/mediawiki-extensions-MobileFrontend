@@ -1,20 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Albinus"
+			"Albinus",
+			"Manik Soren"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Amaḱ joṛao reaḱ guṭtet́ do bạnuḱa",
 	"mobile-frontend-featured-article": "Teheń reaḱ bachaoaḱ onolko",
 	"mobile-frontend-last-modified-date": "Mucạt́ toṅge hoelena: $1, $2",
-	"mobile-frontend-main-menu-account-create": "Hisạb khata benaome",
 	"mobile-frontend-news-items": "Sombatre",
-	"mobile-frontend-password-placeholder": "Uku nambar",
 	"mobile-frontend-privacy-link-text": "Uku katha",
 	"mobile-frontend-terms-text": "Beohar reaḱ ạn",
 	"mobile-frontend-view": "Mobaiyel sećte",
 	"mobile-frontend-view-desktop": "Deskṭop",
-	"mobile-frontend-view-mobile": "Mobayel",
-	"tag-mobile_edit": "Mobayelte toṅge",
+	"tag-mobile_edit": "ᱢᱳᱵᱟᱭᱤᱞ ᱛᱮ ᱥᱟᱯᱲᱟᱣ",
 	"tag-mobile_web_edit": "Mobaiyete web toṅge"
 }
