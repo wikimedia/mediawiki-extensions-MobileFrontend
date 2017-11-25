@@ -2,14 +2,18 @@
 	"@metadata": {
 		"authors": [
 			"Albinus",
-			"Manik Soren"
+			"Manik Soren",
+			"Ramjit Tudu"
 		]
 	},
+	"mobile-frontend-categories-search": "ᱦᱟᱹᱴᱤᱧᱠᱚ ᱥᱮᱸᱫᱽᱨᱟ",
 	"mobile-frontend-changeslist-nocomment": "Amaḱ joṛao reaḱ guṭtet́ do bạnuḱa",
 	"mobile-frontend-featured-article": "Teheń reaḱ bachaoaḱ onolko",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ᱢᱤᱫ ᱯᱟᱹᱨᱥᱤ ᱥᱮᱸᱫᱽᱨᱟᱭᱢᱮ",
 	"mobile-frontend-last-modified-date": "Mucạt́ toṅge hoelena: $1, $2",
 	"mobile-frontend-news-items": "Sombatre",
 	"mobile-frontend-privacy-link-text": "Uku katha",
+	"mobile-frontend-search-content": "ᱥᱟᱦᱴᱟ ᱛᱟᱞᱟᱨᱮ ᱥᱮᱸᱫᱽᱨᱟᱭᱢᱮ",
 	"mobile-frontend-terms-text": "Beohar reaḱ ạn",
 	"mobile-frontend-view": "Mobaiyel sećte",
 	"mobile-frontend-view-desktop": "Deskṭop",
