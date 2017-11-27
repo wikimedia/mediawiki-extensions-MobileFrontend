@@ -36,7 +36,7 @@ class SpecialUploads extends MobileSpecialPage {
 					$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title-username', $par ) );
 					$output->setStatusCode( 404 );
 					$html = MobileUI::contentElement(
-						MobileUI::errorBox(
+						Html::errorBox(
 							$this->msg( 'mobile-frontend-photo-upload-invalid-user', $par ) )
 					);
 				} else {
