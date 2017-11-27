@@ -78,7 +78,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 
 		$warnings = $this->getWarningMessageText();
 		if ( $warnings ) {
-			$warnings = Html::warningBox( $warnings );
+			$warnings = MobileUI::warningBox( $warnings );
 		}
 		$output->addHTML(
 			$warnings .

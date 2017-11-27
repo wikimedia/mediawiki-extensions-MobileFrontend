@@ -176,7 +176,7 @@
 				"mobile.messageBox.styles"
 			],
 			"templates": {
-				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.hogan"
+				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.mustache"
 			},
 			"scripts": [
 				"resources/mobile.messageBox/MessageBox.js"

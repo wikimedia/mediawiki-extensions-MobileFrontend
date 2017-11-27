@@ -116,7 +116,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		} else {
 			// For users who exist but have not made any edits
 			$out->addHtml(
-				Html::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
+				MobileUI::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}
 
