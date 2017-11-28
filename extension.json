@@ -1265,6 +1265,9 @@
 		},
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
+		"MFSpecialPageTaglines": {
+			"MobileOptions": "mobile-frontend-settings-tagline"
+		},
 		"MFNearbyRange": 10000,
 		"MFNearby": false,
 		"MFNearbyEndpoint": "",

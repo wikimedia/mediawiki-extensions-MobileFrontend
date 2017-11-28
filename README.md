@@ -581,6 +581,23 @@ $wgMFDisplayWikibaseDescriptions = [
     'tagline' => false,
   ]
 ```
+#### $wgMFSpecialPageTaglines
+Set taglines for special pages
+
+```php
+$wgMFSpecialPageTaglines = [
+  "SpecialPageName" => "valid-message-key",
+];
+```
+
+* Type: `Array`
+* Default:
+```php
+  [
+    "MobileOptions" => "mobile-frontend-settings-tagline"
+  ]
+```
+
 
 #### $wgMFStripResponsiveImages
 

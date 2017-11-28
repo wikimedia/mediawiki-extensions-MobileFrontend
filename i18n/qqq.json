@@ -199,6 +199,7 @@
 	"mobile-frontend-search-content": "Caption for a button performing full text search of a given search query.\n\nUsed in {{msg-mw|Mobile-frontend-search-content-no-results}}.",
 	"mobile-frontend-search-content-no-results": "Used when no pages with matching titles were found.\n\nRefers to {{msg-mw|Mobile-frontend-search-content}}.",
 	"mobile-frontend-search-no-results": "Message informing user that no pages were found for a given query.",
+	"mobile-frontend-settings-tagline": "Tagline for Special:MobileOptions - will show under heading",
 	"mobile-frontend-settings-beta": "Text for beta on settings page.\n{{Identical|Beta}}",
 	"mobile-frontend-settings-site-description": "Shown on [[Special:MobileOptions]]. Parameters:\n* $1 - the number of other language versions for this wiki",
 	"mobile-frontend-settings-site-header": "Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users",

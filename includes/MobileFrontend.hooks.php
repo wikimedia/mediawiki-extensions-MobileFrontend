@@ -571,7 +571,9 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		$isMobileView = MobileContext::singleton()->shouldDisplayMobileView();
+		$context = MobileContext::singleton();
+		$isMobileView = $context->shouldDisplayMobileView();
+		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines', [] );
 		$name = $special->getName();
 
 		if ( $isMobileView ) {
@@ -580,6 +582,10 @@ class MobileFrontendHooks {
 			);
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
+			}
+			if ( array_key_exists( $name, $taglines ) ) {
+				self::setTagline( $special->getOutput(),
+					wfMessage( $taglines[$name] ) );
 			}
 		}
 
@@ -1061,6 +1067,16 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Sets a tagline for a given page that can be displayed by the skin.
+	 *
+	 * @param OutputPage $outputPage
+	 * @param string $desc
+	 */
+	private static function setTagline( OutputPage $outputPage, $desc ) {
+		$outputPage->setProperty( 'wgMFDescription', $desc );
+	}
+
+	/**
 	 * OutputPageParserOutput hook handler
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
@@ -1075,13 +1091,17 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ) {
 			$po->setTOCEnabled( false );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
-
-			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) ) {
+			$title = $outputPage->getTitle();
+			// Only set the tagline if the feature has been enabled and the article is in the main namespace
+			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) &&
+				!$title->isMainPage() &&
+				$title->getNamespace() === NS_MAIN
+			) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
 					if ( $desc ) {
-						$outputPage->setProperty( 'wgMFDescription', $desc );
+						self::setTagline( $outputPage, $desc );
 					}
 				}
 			}
