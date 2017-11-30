@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_4afb0245",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T18:01:41Z",
+      "side": 1,
+      "message": "This is not obvious :/ but the keys in this array should not be changed as it turns off functionality.\nThey are identifiers to specific functions e.g.\nhttps://www.mediawiki.org/wiki/Manual:Hooks/SpecialPage_initList\n\nThere should be no complaints from phpcs if you rewrite as this:\n\"SpecialPage_initList\": [ \"MobileFrontendHooks::onSpecialPageInitList\" ]",
+      "revId": "52f9100e6f044d571037e0b7542d6d9771e9ca75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_6aac0633",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 562,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T18:01:41Z",
+      "side": 1,
+      "message": "This is calling itself and will thus lead to an infinite loop!\nThis line should probably be kept as it was with an inline comment to stop it from complaining\n// @codingStandardsIgnoreLine \u003csniffname\u003e",
+      "revId": "52f9100e6f044d571037e0b7542d6d9771e9ca75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
