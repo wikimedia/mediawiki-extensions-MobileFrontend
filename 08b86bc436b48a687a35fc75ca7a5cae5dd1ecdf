@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_a0858fa1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-30T21:49:13Z",
+      "side": 1,
+      "message": "this is not a part of this task, can we extract that to a different patch?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_20485f8c",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-30T21:49:13Z",
+      "side": 1,
+      "message": "from my understanding we want to add taglines to many pages, not only to the settings one, In that scenario probably `mobile-frontend-tagline-settings` would a better pick",
+      "range": {
+        "startLine": 201,
+        "startChar": 1,
+        "endLine": 201,
+        "endChar": 35
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_23e349d6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-11-30T21:49:13Z",
+      "side": 1,
+      "message": "I need to verify that with Nirzar but probably we want to show the taglines on many pages, not only on MobileOptions. Because of that having a map \u003ctitle: wfmessageIndex\u003e would be a better pick",
+      "range": {
+        "startLine": 583,
+        "startChar": 15,
+        "endLine": 583,
+        "endChar": 39
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
