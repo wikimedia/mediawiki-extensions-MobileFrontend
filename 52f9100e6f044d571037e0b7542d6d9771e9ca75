@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "eee3df47_2d95f835",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T18:59:58Z",
+      "side": 1,
+      "message": "typo in MobileFrontend",
+      "revId": "52f9100e6f044d571037e0b7542d6d9771e9ca75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_4afb0245",
         "filename": "extension.json",
         "patchSetId": 1
