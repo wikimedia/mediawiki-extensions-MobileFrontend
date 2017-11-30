@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_2316a95a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T21:58:19Z",
+      "side": 1,
+      "message": "The purpose of doing this was to make MobileFrontend control the logic of when to add a tagline.\n\nRight now that burden is shared between Minerva [1] and MobileFrontend which I find unpredictable.\n\nMy goal is to have the logic in one single place.\n\n[1] https://gerrit.wikimedia.org/r/#/c/393920/4/includes/skins/SkinMinerva.php",
+      "parentUuid": "eee3df47_a0858fa1",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_20485f8c",
         "filename": "i18n/en.json",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_43264dca",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T21:58:19Z",
+      "side": 1,
+      "message": "We tend to group messages by feature\nso Nearby for instance would be\nmobile-frontend-nearby-tagline",
+      "parentUuid": "eee3df47_20485f8c",
+      "range": {
+        "startLine": 201,
+        "startChar": 1,
+        "endLine": 201,
+        "endChar": 35
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_23e349d6",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2017-11-30T21:49:13Z",
       "side": 1,
       "message": "I need to verify that with Nirzar but probably we want to show the taglines on many pages, not only on MobileOptions. Because of that having a map \u003ctitle: wfmessageIndex\u003e would be a better pick",
+      "range": {
+        "startLine": 583,
+        "startChar": 15,
+        "endLine": 583,
+        "endChar": 39
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_deffd4fa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-11-30T21:58:19Z",
+      "side": 1,
+      "message": "We will. Can do that now yes.",
+      "parentUuid": "eee3df47_23e349d6",
       "range": {
         "startLine": 583,
         "startChar": 15,
