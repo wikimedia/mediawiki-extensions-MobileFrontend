@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "eee3df47_09d73b29",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1281,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-01T23:08:05Z",
+      "side": 1,
+      "message": "We document our config variables in README.md\nLet\u0027s add some docs for this there.",
+      "revId": "691291fcf4d8c93a09dcc5368cf73a044012fa62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_89f50bca",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
