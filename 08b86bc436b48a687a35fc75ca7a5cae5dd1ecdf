@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_d50a0e29",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-01T17:28:57Z",
+      "side": 1,
+      "message": "ok, makes sense",
+      "parentUuid": "eee3df47_2316a95a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_20485f8c",
         "filename": "i18n/en.json",
         "patchSetId": 4
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "We tend to group messages by feature\nso Nearby for instance would be\nmobile-frontend-nearby-tagline",
       "parentUuid": "eee3df47_20485f8c",
+      "range": {
+        "startLine": 201,
+        "startChar": 1,
+        "endLine": 201,
+        "endChar": 35
+      },
+      "revId": "08b86bc436b48a687a35fc75ca7a5cae5dd1ecdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_58059312",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-01T17:28:57Z",
+      "side": 1,
+      "message": "ok, makes sense",
+      "parentUuid": "eee3df47_43264dca",
       "range": {
         "startLine": 201,
         "startChar": 1,
