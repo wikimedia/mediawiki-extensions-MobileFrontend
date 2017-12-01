@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_89f50bca",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-01T23:07:22Z",
+      "side": 1,
+      "message": "For readability I suggest pushing\n\n\u003e !$title-\u003einNamespaces( $config-\u003eget( \u0027MFMobileFormatterNamespaceBlacklist\u0027 )\n\ninto a named variable. This if statement is hard to read as is!\n\ne.g. isAllowedNamespace \u003d !$title-\u003einNamespaces( $config-\u003eget( \u0027MFMobileFormatterNamespaceBlacklist\u0027 )",
+      "revId": "691291fcf4d8c93a09dcc5368cf73a044012fa62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_29279f60",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-01T23:07:22Z",
+      "side": 1,
+      "message": "This code although harmless does not need to be run in pages within MFMobileFormatterNamespaceBlacklist\n\nCurrently it runs on Template namespace.\n\nFrom the looks of this, !$title-\u003eisMainPage() is the only difference with the above block, so this can be moved up inside the if statement above and wrapped in a $title-\u003eisMainPage() if statement.",
+      "revId": "691291fcf4d8c93a09dcc5368cf73a044012fa62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
