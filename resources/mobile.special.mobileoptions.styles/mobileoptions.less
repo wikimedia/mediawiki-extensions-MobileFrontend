@@ -11,6 +11,11 @@ SETTINGS PAGE
 	#mw-mf-settings-save {
 		display: none;
 	}
+	// Checkboxes in form will be upgraded to toggle switches with JS
+	// Minimise FOUC
+	#mobile-options .oo-ui-checkboxInputWidget {
+		visibility: hidden;
+	}
 }
 
 form.mw-mf-settings {

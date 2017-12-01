@@ -100,9 +100,9 @@
 	function addExpandAllSectionsToForm( $form ) {
 		var cb, cbField;
 
-		cb = new OO.ui.CheckboxInputWidget( {
+		cb = new OO.ui.ToggleSwitchWidget( {
 			name: EXPAND_SECTIONS_KEY,
-			selected: storage.get( EXPAND_SECTIONS_KEY ) === 'true'
+			value: storage.get( EXPAND_SECTIONS_KEY ) === 'true'
 		} );
 		cbField = new OO.ui.FieldLayout(
 			cb,
@@ -113,10 +113,10 @@
 				).$element
 			}
 		);
-		cb.on( 'change', function () {
-			storage.set( EXPAND_SECTIONS_KEY, this.isSelected() ? 'true' : 'false' );
+		cb.on( 'change', function ( value ) {
+			storage.set( EXPAND_SECTIONS_KEY, value ? 'true' : 'false' );
 			notify();
-		}.bind( cb ) );
+		} );
 
 		cbField.$element.prependTo( $form );
 	}
@@ -128,11 +128,26 @@
 	 * @ignore
 	 */
 	function initLocalStorageElements() {
-		var
+		var toggleSwitch,
 			enableToggle = OO.ui.infuse( $( '#enable-beta-toggle' ) ),
+			$checkbox = enableToggle.$element,
 			$form = $( '#mobile-options' );
 
-		enableToggle.on( 'change', function () {
+		toggleSwitch = new OO.ui.ToggleSwitchWidget( {
+			value: enableToggle.isSelected()
+		} );
+		// Strangely the ToggleSwitchWidget does not behave as an input so any change
+		// to it is not reflected in the form. (see T182466)
+		// Ideally we'd replaceWith here and not have to hide the original element.
+		toggleSwitch.$element.insertAfter( $checkbox );
+		// although the checkbox is hidden already, that is done via visibility
+		// as a result, it still takes up space. We don't want it to any more now that the
+		// new toggle switch has been added.
+		$checkbox.hide();
+
+		toggleSwitch.on( 'change', function ( value ) {
+			$checkbox.find( 'input' )
+				.prop( 'checked', value );
 			notify( true );
 			$form.submit();
 		} );
