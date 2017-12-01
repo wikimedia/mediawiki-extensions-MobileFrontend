@@ -198,12 +198,16 @@ class MobileFrontendHooks {
 		}
 
 		// Perform a few extra changes if we are in mobile mode
-		if ( $context->shouldDisplayMobileView() || $config->get( 'MFAlwaysUseMobileFormatter' ) ) {
+		$namespaceAllowed = !$title->inNamespaces(
+			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
+		);
+		$displayMobileView = $context->shouldDisplayMobileView();
+		$alwaysUseFormatter = $config->get( 'MFAlwaysUseMobileFormatter' );
+		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseFormatter ) ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text );
-		}
-
-		if ( $context->shouldDisplayMobileView() && !$title->isMainPage() && !$title->isSpecialPage() ) {
-			$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+			if ( !$title->isMainPage() ) {
+				$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+			}
 		}
 		return true;
 	}

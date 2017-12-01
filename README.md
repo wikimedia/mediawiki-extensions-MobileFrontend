@@ -267,6 +267,21 @@ viewport.
   ]
 ```
 
+#### $wgMFMobileFormaterNamespaceBlacklist
+
+Array of namespaces in which the usual transformation of page content for mobile view
+doesn't happen, which prevents templates containing only content that doesn't show
+on mobile from rendering as blank.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    NS_TEMPLATE,
+    NS_SPECIAL
+  ]
+```
+
 #### $wgMFNoMobileCategory
 
 DB key of the category which members will never display mobile view.

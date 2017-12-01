@@ -1278,6 +1278,10 @@
 			"base": false,
 			"beta": true
 		},
+		"MFMobileFormatterNamespaceBlacklist": [
+			10,
+			-1
+		],
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
 		"MFNearbyRange": 10000,
