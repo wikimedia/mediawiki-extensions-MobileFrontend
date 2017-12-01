@@ -1073,7 +1073,12 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		if ( $context->shouldDisplayMobileView() ) {
-			$po->setTOCEnabled( false );
+			// Remove TOC from the ParserOutput HTML
+			$po->setText( preg_replace(
+				'#' . preg_quote( Parser::TOC_START, '#' ) . '.*?' . preg_quote( Parser::TOC_END, '#' ) . '#s',
+				'',
+				$po->getRawText()
+			) );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 
 			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) ) {
