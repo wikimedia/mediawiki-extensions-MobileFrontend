@@ -267,11 +267,12 @@ viewport.
   ]
 ```
 
-#### $wgMFMobileFormaterNamespaceBlacklist
+#### $wgMFMobileFormatterNamespaceBlacklist
 
-Array of namespaces in which the usual transformation of page content for mobile view
-doesn't happen, which prevents templates containing only content that doesn't show
-on mobile from rendering as blank.
+Array of namespaces that blacklists certain namespaces from applying mobile
+transformations to page content. This will disable lazy loading images and
+references; special casing and section formatting on the given page.
+MFRemovableClasses will not apply for any blacklisted pages.
 
 * Type: `Array`
 * Default:
