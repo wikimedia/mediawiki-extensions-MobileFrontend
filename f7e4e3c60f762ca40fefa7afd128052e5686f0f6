@@ -45,6 +45,30 @@
       "revId": "f7e4e3c60f762ca40fefa7afd128052e5686f0f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_6cd4074c",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-04T23:26:03Z",
+      "side": 1,
+      "message": "We can, I guess I\u0027m just not clear on if there\u0027s a benefit to do.\n\n@Bartosz what are your thoughts?",
+      "parentUuid": "eee3df47_8cfcebd6",
+      "range": {
+        "startLine": 134,
+        "startChar": 17,
+        "endLine": 135,
+        "endChar": 17
+      },
+      "revId": "f7e4e3c60f762ca40fefa7afd128052e5686f0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
