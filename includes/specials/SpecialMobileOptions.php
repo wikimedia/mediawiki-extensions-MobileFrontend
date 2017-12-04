@@ -129,11 +129,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		] );
 
 		if ( $user->isLoggedIn() ) {
-			$fields[] = new OOUI\HtmlSnippet( Html::hidden( 'token', $user->getEditToken() ) );
+			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
+				'value' => $user->getEditToken() ] );
 		}
-		$fields[] = new OOUI\HtmlSnippet(
-			Html::hidden( 'returnto', $this->returnToTitle->getFullText() )
-		);
+		$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'returnto',
+			'value' => $this->returnToTitle->getFullText() ] );
 
 		// @codingStandardsIgnoreEnd
 		$form->appendContent(
