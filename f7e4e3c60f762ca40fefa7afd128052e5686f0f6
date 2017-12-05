@@ -69,6 +69,30 @@
       "revId": "f7e4e3c60f762ca40fefa7afd128052e5686f0f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_9a3ff8d2",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2017-12-05T14:47:33Z",
+      "side": 1,
+      "message": "It works exactly the same.",
+      "parentUuid": "eee3df47_6cd4074c",
+      "range": {
+        "startLine": 134,
+        "startChar": 17,
+        "endLine": 135,
+        "endChar": 17
+      },
+      "revId": "f7e4e3c60f762ca40fefa7afd128052e5686f0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
