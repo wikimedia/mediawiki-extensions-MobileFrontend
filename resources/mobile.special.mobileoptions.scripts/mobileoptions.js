@@ -48,10 +48,11 @@
 	 * @ignore
 	 */
 	function addFontChangerToForm( $form ) {
-		var fontChanger, fontChangerDropdown;
+		var fontChanger, fontChangerDropdown,
+			currentFontSize = storage.get( FONT_SIZE_KEY );
 
 		fontChangerDropdown = new OO.ui.DropdownInputWidget( {
-			value: parseInt( storage.get( FONT_SIZE_KEY ), 10 ),
+			value: currentFontSize ? parseInt( currentFontSize, 10 ) : 100,
 			options: [
 				{
 					data: 90,
