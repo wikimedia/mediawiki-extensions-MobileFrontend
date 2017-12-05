@@ -5,19 +5,10 @@
 			"Carlos Cristia"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "Ir una sección entazaga",
 	"mobile-frontend-copyright": "O texto ye disponible baixo a <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; puede que sigan d'aplicación atros termins. Se veiga as <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Condicions d'uso</a> ta más detalles. {{SITENAME}} ye una marca rechistrada d'a <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una organización sin animo de lucro.",
 	"mobile-frontend-desc": "Interficie mobil",
-	"mobile-frontend-disable-images": "Desactivar imachens en a versión ta mobils",
-	"mobile-frontend-dismiss-notification": "refusar ista notificación",
-	"mobile-frontend-enable-images": "Activar imachens en a versión ta mobils",
 	"mobile-frontend-featured-article": "Articlo destacau de hue",
-	"mobile-frontend-login": "Encetar sesión",
 	"mobile-frontend-news-items": "Actualidat",
 	"mobile-frontend-opt-in-explain": "Prebando a beta, tendrá acceso a caracteristicas experimentals, con o risgo de trobar problemas u errors.",
-	"mobile-frontend-password": "Clau d'acceso:",
-	"mobile-frontend-regular-site": "Veyer ista pachina en a {{SITENAME}} normal",
-	"mobile-frontend-search-submit": "Ir-ie",
-	"mobile-frontend-username": "Nombre d'usuario:",
 	"mobile-frontend-view": "Versión ta mobils"
 }

@@ -7,17 +7,12 @@
 	"mobile-frontend-changeslist-nocomment": "مافيش ملخص للتعديل",
 	"mobile-frontend-copyright": "الكلام و الصور منشورين حسب   $1 ماعدا الحالات إللى مكتوب عندها حاجه تانيه.",
 	"mobile-frontend-featured-article": "محتوى اليوم المختار",
-	"mobile-frontend-generic-login-action": "اعمل لوجين  عشان تشارك",
 	"mobile-frontend-last-modified-date": "آخر تعديل بتاريخ $1، $2",
-	"mobile-frontend-login": "ادخل",
 	"mobile-frontend-news-items": "ف الأخبار",
-	"mobile-frontend-password-placeholder": "الباسورد",
 	"mobile-frontend-privacy-link-text": "الخصوصية",
 	"mobile-frontend-terms-text": "شروط الاستخدام",
-	"mobile-frontend-username-placeholder": "اسم اليوزر",
 	"mobile-frontend-view": "نسخة المحمول",
 	"mobile-frontend-view-desktop": "ديسكتوب",
-	"mobile-frontend-view-mobile": "محمول",
 	"tag-mobile_edit": "تعديل من المحمول",
 	"tag-mobile_web_edit": "تعديل ويب محمول"
 }

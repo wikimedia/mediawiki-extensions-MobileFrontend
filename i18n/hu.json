@@ -48,7 +48,6 @@
 	"mobile-frontend-donate-image-title": "Feltöltések",
 	"mobile-frontend-donate-image-title-username": "$1 által feltöltött fájlok",
 	"mobile-frontend-donate-image-title-you": "Általad feltöltött fájlok",
-	"mobile-frontend-pointer-dismiss": "Elrejt",
 	"mobile-frontend-edit-login-action": "<strong>Segíts a(z) {{SITENAME}} javításában!</strong><br />Jelentkezz be a szerkesztéshez.",
 	"mobile-frontend-edit-signup-action": "<strong>Segíts a(z) {{SITENAME}} javításában!</strong><br />Regisztrálj a szerkesztéshez.",
 	"mobile-frontend-editor-abusefilter-disallow": "Ez a szerkesztés nem menthető el, mivel észleltünk egy problémát.",

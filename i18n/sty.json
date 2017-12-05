@@ -8,14 +8,11 @@
 	"mobile-frontend-copyright": "Мәғлүмәтне $1-та ҡарап пулаты (әгәр пашҡасы күрсәтелмәсә).",
 	"mobile-frontend-featured-article": "Пөгөнкө сайланҡан материал",
 	"mobile-frontend-last-modified-date": "$1 $2-гә суңҡы тапҡыр төсәтелгән",
-	"mobile-frontend-main-menu-account-create": "Исәп йасманы пултырғалы",
 	"mobile-frontend-news-items": "Йаңалыҡлар",
-	"mobile-frontend-password-placeholder": "Пароль",
 	"mobile-frontend-privacy-link-text": "Серне саҡлау",
 	"mobile-frontend-terms-text": "Ҡулланыуның шартлары",
 	"mobile-frontend-view": "Мобиль аңыш",
 	"mobile-frontend-view-desktop": "Стационар",
-	"mobile-frontend-view-mobile": "Мобиль",
 	"tag-mobile_edit": "Мобиль ҡоралтан төсәтеү",
 	"tag-mobile_web_edit": "Мобиль версиятан төсәткәле"
 }

@@ -56,7 +56,6 @@
 	"mobile-frontend-donate-image-title": "Opplastinger",
 	"mobile-frontend-donate-image-title-username": "Opplastinger fra $1",
 	"mobile-frontend-donate-image-title-you": "Dine opplastinger",
-	"mobile-frontend-pointer-dismiss": "Lukk",
 	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Logg inn for å redigere.",
 	"mobile-frontend-edit-signup-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Registrer deg for å redigere.",
 	"mobile-frontend-editor-abusefilter-disallow": "Denne redigeringen kan ikke lagres fordi vi har oppdaget et problem.",

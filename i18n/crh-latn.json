@@ -5,14 +5,10 @@
 		]
 	},
 	"mobile-frontend-copyright": "Başqası bildirilmese, malümat $1 litsenziyasınen berile.",
-	"mobile-frontend-language-header": "Bu saife $1 {{PLURAL:$1|tilde}} bar",
-	"mobile-frontend-language-site-choose": "Tilni qıdıruv",
 	"mobile-frontend-languages-header-page": "$1 — Tiller",
 	"mobile-frontend-languages-text": "$1 saifesi $2 {{PLURAL:$2|tilde}} bar.",
 	"mobile-frontend-privacy-link-text": "Gizlilik",
-	"mobile-frontend-regular-site": "Tolu körüniş",
 	"mobile-frontend-terms-text": "Qullanuv şartları",
 	"mobile-frontend-view": "Mobil körüniş",
-	"mobile-frontend-view-desktop": "Tolu",
-	"mobile-frontend-view-mobile": "Mobil"
+	"mobile-frontend-view-desktop": "Tolu"
 }

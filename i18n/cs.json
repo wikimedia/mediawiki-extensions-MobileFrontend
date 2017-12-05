@@ -55,7 +55,6 @@
 	"mobile-frontend-donate-image-title": "Načtené soubory",
 	"mobile-frontend-donate-image-title-username": "Soubory {{GENDER:$1|uživatele|uživatelky}} $1",
 	"mobile-frontend-donate-image-title-you": "Vaše soubory",
-	"mobile-frontend-pointer-dismiss": "Zavřít",
 	"mobile-frontend-edit-login-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se přihlaste.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se zaregistrujte.",
 	"mobile-frontend-editor-abusefilter-disallow": "Tuto editaci nelze uložit, protože jsme zjistili problém.",

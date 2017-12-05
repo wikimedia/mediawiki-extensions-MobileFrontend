@@ -5,8 +5,5 @@
 		]
 	},
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!",
-	"mobile-frontend-main-menu-account-create": "Jafön kali",
-	"mobile-frontend-password-placeholder": "Letavöd",
-	"mobile-frontend-privacy-link-text": "Privat",
-	"mobile-frontend-username-placeholder": "Gebananem"
+	"mobile-frontend-privacy-link-text": "Privat"
 }
