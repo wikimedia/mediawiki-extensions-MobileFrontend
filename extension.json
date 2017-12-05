@@ -934,14 +934,14 @@
 			"position": "top"
 		},
 		"mobile.special.mobileoptions.styles": {
-			"targets": "mobile",
+			"targets": [ "mobile", "desktop" ],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			],
 			"position": "top"
 		},
 		"mobile.special.mobileoptions.scripts": {
-			"targets": "mobile",
+			"targets": [ "mobile", "desktop" ],
 			"position": "top",
 			"dependencies": [
 				"jquery.cookie",
