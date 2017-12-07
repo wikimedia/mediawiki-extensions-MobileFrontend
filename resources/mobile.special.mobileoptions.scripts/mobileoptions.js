@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var storage = mw.storage,
-		cookie = $.cookie,
 		notification,
 		toast = M.require( 'mobile.startup/toast' ),
 		EXPAND_SECTIONS_KEY = 'expandSections',
@@ -10,15 +9,20 @@
 	/**
 	 * Notifies the user that settings were asynchronously saved.
 	 * @method
+	 * @param {Boolean} isPending if set toast will show after page has been reloaded.
 	 * @ignore
 	 */
-	function notify() {
+	function notify( isPending ) {
 		if ( notification ) {
 			clearTimeout( notification );
 		}
-		notification = setTimeout( function () {
-			toast.show( msg( 'mobile-frontend-settings-save' ) );
-		}, 1000 );
+		if ( isPending ) {
+			toast.showOnPageReload( msg( 'mobile-frontend-settings-save' ) );
+		} else {
+			notification = setTimeout( function () {
+				toast.show( msg( 'mobile-frontend-settings-save' ) );
+			}, 1000 );
+		}
 	}
 	/**
 	 * Creates a label for use with a form input
@@ -128,11 +132,10 @@
 			enableToggle = OO.ui.infuse( $( '#enable-beta-toggle' ) ),
 			$form = $( '#mobile-options' );
 
-		// The beta toggle will now work without clicking submit
 		enableToggle.on( 'change', function () {
-			cookie( 'optin', this.isSelected() ? 'beta' : '' );
-			notify();
-		}.bind( enableToggle ) );
+			notify( true );
+			$form.submit();
+		} );
 
 		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) ) {
 			addExpandAllSectionsToForm( $form );

@@ -944,7 +944,6 @@
 			"targets": [ "mobile", "desktop" ],
 			"position": "top",
 			"dependencies": [
-				"jquery.cookie",
 				"mobile.startup"
 			],
 			"scripts": [

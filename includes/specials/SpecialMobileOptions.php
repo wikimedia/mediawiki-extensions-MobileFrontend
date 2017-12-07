@@ -79,8 +79,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
 			$out->wrapWikiMsg(
-				"<div class=\"successbox\"><strong>\n$1\n</strong></div><div id=\"mw-pref-clear\"></div>",
-				'savedprefs'
+				MobileUI::contentElement(
+					Html::successBox( $this->msg( 'savedprefs' ) )
+				)
 			);
 		}
 
@@ -132,8 +133,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
 				'value' => $user->getEditToken() ] );
 		}
-		$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'returnto',
-			'value' => $this->returnToTitle->getFullText() ] );
 
 		// @codingStandardsIgnoreEnd
 		$form->appendContent(
@@ -196,8 +195,7 @@ HTML;
 	}
 
 	/**
-	 * Saves the settings submitted by the settings form. Redirects the user to the destination
-	 * of returnto or, if not set, back to this special page
+	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
 		$schema = 'MobileOptionsTracking';
@@ -238,34 +236,8 @@ HTML;
 			}
 		}
 		$context->setMobileMode( $group );
-		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
-		if ( $returnToTitle ) {
-			$url = $returnToTitle->getFullURL();
-		} else {
-			$url = $this->getPageTitle()->getFullURL( 'success' );
-		}
+		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
-	}
-
-	/**
-	 * Get the URL of this special page
-	 * @param string|null $option Subpage string, or false to not use a subpage
-	 * @param Title $returnTo Destination to returnto after successfully action on the page returned
-	 * @param bool $fullUrl Whether to get the local url, or the full url
-	 *
-	 * @return string
-	 */
-	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
-		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
-		$params = [];
-		if ( $returnTo ) {
-			$params['returnto'] = $returnTo->getPrefixedText();
-		}
-		if ( $fullUrl ) {
-			return MobileContext::singleton()->getMobileUrl( $t->getFullURL( $params ) );
-		} else {
-			return $t->getLocalURL( $params );
-		}
 	}
 
 	public function getSubpagesForPrefixSearch() {
