@@ -63,7 +63,6 @@
 	"mobile-frontend-donate-image-title": "Yüklemeler",
 	"mobile-frontend-donate-image-title-username": "$1 tarafından yüklendi",
 	"mobile-frontend-donate-image-title-you": "Siz yüklediniz",
-	"mobile-frontend-pointer-dismiss": "Kapat",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için giriş yapın.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
 	"mobile-frontend-editor-abusefilter-disallow": "Bu düzenleme kaydedilemiyor çünkü bir sorun saptadık.",

@@ -5,23 +5,16 @@
 			"Conquistador"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "Skoči nazad za jednu sekciju",
 	"mobile-frontend-changeslist-nocomment": "nema sažetka uređivanja",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod $1 osim ako je drugačije navedeno.",
-	"mobile-frontend-drawer-cancel": "Otkaži",
 	"mobile-frontend-editor-cancel": "Otkaži",
 	"mobile-frontend-featured-article": "Današnji izabrani sadržaj",
 	"mobile-frontend-last-modified-date": "Posljednji put izmijenjeno $1, u $2",
-	"mobile-frontend-main-menu-account-create": "Izradi račun",
 	"mobile-frontend-news-items": "U vijestima",
-	"mobile-frontend-password-placeholder": "Lozinka",
 	"mobile-frontend-privacy-link-text": "Privatnost",
-	"mobile-frontend-regular-site": "Pogledaj ovu stranicu na običnoj Wikipediji",
-	"mobile-frontend-search-submit": "Idi",
 	"mobile-frontend-terms-text": "Uslovi korišćenja",
 	"mobile-frontend-view": "Mobilni prikaz",
 	"mobile-frontend-view-desktop": "Desktop",
-	"mobile-frontend-view-mobile": "Mobilni",
 	"mobile-frontend-watchlist-filter-articles": "Stranice",
 	"tag-mobile_edit": "Mobilno uređivanje",
 	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem"

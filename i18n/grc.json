@@ -10,16 +10,11 @@
 	"mobile-frontend-copyright": "Τό περιεχόμενο ὑπάρχειν διά $1 πλὴν ἐάν ἄλλως κηρύσσειν.",
 	"mobile-frontend-featured-article": "Ἐξαίρετη ἐγγραφή σήμερον",
 	"mobile-frontend-last-modified-date": "ὕστατον μετεβλήθη εν $1, εν $2",
-	"mobile-frontend-main-menu-account-create": "Λογισμὸν ποιεῖν",
 	"mobile-frontend-news-items": "Νέον τι",
-	"mobile-frontend-password": "Σῆμα:",
-	"mobile-frontend-password-placeholder": "Σῆμα",
 	"mobile-frontend-privacy-link-text": "Έρημία",
-	"mobile-frontend-search-submit": "Ἰέναι",
 	"mobile-frontend-terms-text": "Λόγοι χρήσεως",
 	"mobile-frontend-view": "Προβολή κινητού",
 	"mobile-frontend-view-desktop": "Έπιτραπέζιον",
-	"mobile-frontend-view-mobile": "Κινητό",
 	"tag-mobile_edit": "Μεταγράφειν κινητού",
 	"tag-mobile_web_edit": "Μεταγράφειν δια διαδικτυακού κινητού"
 }

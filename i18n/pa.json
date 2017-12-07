@@ -8,7 +8,6 @@
 			"Sony dandiwal"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ",
 	"mobile-frontend-changeslist-nocomment": "ਕੋਈ ਸੋਧ ਸਾਰ ਨਹੀਂ",
 	"mobile-frontend-copyright": "ਇਹ ਸਮੱਗਰੀ $1 ਹੇਠ ਮੌਜੂਦ ਹੈ। ਅਜਿਹਾ ਨਾ ਹੋਣ ਉੱਤੇ ਵਿਸ਼ੇਸ਼ ਤੌਰ ਉੱਤੇ ਦੱਸਿਆ ਜਾਵੇਗਾ।",
 	"mobile-frontend-donate-image-anon": "ਚੜ੍ਹਾਈਆਂ ਦਾ ਸਫ਼ਾ ਵੇਖਣ ਵਾਸਤੇ ਦਾਖ਼ਲ ਹੋਵੋ ਜੀ।",
@@ -18,13 +17,9 @@
 	"mobile-frontend-fontchanger-link": "ਦਾਨ ਕਰੋ",
 	"mobile-frontend-featured-article": "ਅੱਜ ਦੀ ਚੁਣੀ ਸਮੱਗਰੀ",
 	"mobile-frontend-last-modified-date": "ਆਖ਼ਰੀ ਤਬਦੀਲੀ $1 ਨੂੰ $2 ਵਜੇ ਹੋਈ।",
-	"mobile-frontend-main-menu-account-create": "ਖਾਤਾ ਬਣਾਉ",
 	"mobile-frontend-nearby-refresh": "ਟਿਕਾਣਾ ਮੁੜ-ਤਾਜ਼ਾ ਕਰੋ",
 	"mobile-frontend-news-items": "ਖ਼ਬਰਾਂ 'ਚ",
-	"mobile-frontend-password-placeholder": "ਪਛਾਣ-ਸ਼ਬਦ",
 	"mobile-frontend-privacy-link-text": "ਪਰਦਾ",
-	"mobile-frontend-regular-site": "ਇਹ ਸਫ਼ਾ ਪੂਰੇ ਵਿਕਿਪੀਡਿਆ ਉੱਤੇ ਵੇਖੋ",
-	"mobile-frontend-search-submit": "ਜਾਓ",
 	"mobile-frontend-talk-fullpage": "ਵਿਕੀ ਦੇ ਸਫ਼ੇ ਵਜੋਂ ਪੜ੍ਹੋ",
 	"mobile-frontend-talk-topic-error": "ਕਿਸੇ ਓਪਰੇ ਦੋਸ਼ ਕਰਕੇ ਇਹ ਵਿਸ਼ਾ ਜੋੜਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।",
 	"mobile-frontend-talk-topic-error-protected": "ਇਹ ਗੱਲਬਾਤ ਸਫ਼ਾ ਸੁਰੱਖਿਅਤ ਹੈ, ਤੁਹਾਡੇ ਕੋਲ਼ ਇਸ ਵਿੱਚ ਵਿਸ਼ੇ ਜੋੜਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
@@ -34,8 +29,6 @@
 	"mobile-frontend-terms-text": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
 	"mobile-frontend-view": "ਮੋਬਾਈਲੀ ਦਿੱਖ",
 	"mobile-frontend-view-desktop": "ਡੈਸਕਟਾਪ",
-	"mobile-frontend-view-mobile": "ਮੋਬਾਈਲ",
 	"tag-mobile_edit": "ਮੋਬਾਈਲ ਰਾਹੀਂ ਸੋਧ",
-	"tag-mobile_web_edit": "ਮੋਬਾਈਲੀ ਵੈੱਬ ਸੋਧ",
-	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।"
+	"tag-mobile_web_edit": "ਮੋਬਾਈਲੀ ਵੈੱਬ ਸੋਧ"
 }

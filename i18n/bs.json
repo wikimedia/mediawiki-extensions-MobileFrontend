@@ -45,7 +45,6 @@
 	"mobile-frontend-donate-image-title": "Postavljanja",
 	"mobile-frontend-donate-image-title-username": "{{GENDER:$1|Postavio|Postavila}}: $1",
 	"mobile-frontend-donate-image-title-you": "Vaše postavljene datoteke",
-	"mobile-frontend-pointer-dismiss": "Odbaci",
 	"mobile-frontend-edit-login-action": "<strong>Unaprijedite {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
 	"mobile-frontend-edit-signup-action": "<strong>Unaprijedite {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Pridružite se da biste uređivali.",
 	"mobile-frontend-editor-abusefilter-disallow": "Izmjena ne može biti sačuvana jer je došlo do greške.",

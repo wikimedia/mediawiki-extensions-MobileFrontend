@@ -56,7 +56,6 @@
 	"mobile-frontend-donate-image-title": "Tallennukset",
 	"mobile-frontend-donate-image-title-username": "Käyttäjän $1 tallennukset",
 	"mobile-frontend-donate-image-title-you": "Omat tallennuksesi",
-	"mobile-frontend-pointer-dismiss": "Hylkää",
 	"mobile-frontend-edit-login-action": "<strong>Auta parantamaan {{GRAMMAR:partitive|{{SITENAME}}}}.</strong><br />Kirjaudu sisään muokataksesi.",
 	"mobile-frontend-edit-signup-action": "<strong>Auta parantamaan {{GRAMMAR:partitive|{{SITENAME}}}}.</strong><br />Luo tunnus muokataksesi.",
 	"mobile-frontend-editor-abusefilter-disallow": "Tätä muokkausta ei voi tallentaa jostain syystä.",

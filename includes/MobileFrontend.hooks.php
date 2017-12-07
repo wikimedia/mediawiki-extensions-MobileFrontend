@@ -198,12 +198,16 @@ class MobileFrontendHooks {
 		}
 
 		// Perform a few extra changes if we are in mobile mode
-		if ( $context->shouldDisplayMobileView() || $config->get( 'MFAlwaysUseMobileFormatter' ) ) {
+		$namespaceAllowed = !$title->inNamespaces(
+			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
+		);
+		$displayMobileView = $context->shouldDisplayMobileView();
+		$alwaysUseFormatter = $config->get( 'MFAlwaysUseMobileFormatter' );
+		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseFormatter ) ) {
 			$text = ExtMobileFrontend::DOMParse( $out, $text );
-		}
-
-		if ( $context->shouldDisplayMobileView() && !$title->isMainPage() && !$title->isSpecialPage() ) {
-			$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+			if ( !$title->isMainPage() ) {
+				$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+			}
 		}
 		return true;
 	}
@@ -1089,7 +1093,12 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		if ( $context->shouldDisplayMobileView() ) {
-			$po->setTOCEnabled( false );
+			// Remove TOC from the ParserOutput HTML
+			$po->setText( preg_replace(
+				'#' . preg_quote( Parser::TOC_START, '#' ) . '.*?' . preg_quote( Parser::TOC_END, '#' ) . '#s',
+				'',
+				$po->getRawText()
+			) );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 			$title = $outputPage->getTitle();
 			// Only set the tagline if the feature has been enabled and the article is in the main namespace

@@ -57,7 +57,6 @@
 	"mobile-frontend-donate-image-title": "העלאות",
 	"mobile-frontend-donate-image-title-username": "העלאות של $1",
 	"mobile-frontend-donate-image-title-you": "העלאות שלך",
-	"mobile-frontend-pointer-dismiss": "סגירה",
 	"mobile-frontend-edit-login-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להיכנס כדי לערוך.",
 	"mobile-frontend-edit-signup-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להירשם כדי לערוך.",
 	"mobile-frontend-editor-abusefilter-disallow": "לא ניתן לשמור את העריכה הזאת מכיוון שמצאנו בה בעיה.",

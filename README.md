@@ -267,6 +267,22 @@ viewport.
   ]
 ```
 
+#### $wgMFMobileFormatterNamespaceBlacklist
+
+Array of namespaces that blacklists certain namespaces from applying mobile
+transformations to page content. This will disable lazy loading images and
+references; special casing and section formatting on the given page.
+MFRemovableClasses will not apply for any blacklisted pages.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    NS_TEMPLATE,
+    NS_SPECIAL
+  ]
+```
+
 #### $wgMFNoMobileCategory
 
 DB key of the category which members will never display mobile view.

@@ -69,7 +69,6 @@
 	"mobile-frontend-donate-image-title": "Przesłane pliki",
 	"mobile-frontend-donate-image-title-username": "Przesłane przez $1",
 	"mobile-frontend-donate-image-title-you": "Przesłane przez Ciebie",
-	"mobile-frontend-pointer-dismiss": "Odrzuć",
 	"mobile-frontend-edit-login-action": "<strong>Pomóż w rozwoju projektu {{SITENAME}}.</strong><br />Zaloguj się, aby edytować.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomóż w rozwoju projektu {{SITENAME}}.</strong><br />Zarejestruj się, aby edytować.",
 	"mobile-frontend-editor-abusefilter-disallow": "Zmiana nie może zostać zapisana, ponieważ wykryto problem.",

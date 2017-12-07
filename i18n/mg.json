@@ -5,7 +5,6 @@
 			"Krinkle"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "Hiverina any amina fizarana nialoha",
 	"mobile-frontend-changeslist-nocomment": "tsy misy ambangovangom-panovana",
 	"mobile-frontend-copyright": "Mitondra ny lisansa $1 ny votoatiny raha tsy misy zava-kafa ambara.",
 	"mobile-frontend-fontchanger-link": "Haben-tarehin-tsoratra",
@@ -14,17 +13,11 @@
 	"mobile-frontend-generic-404-desc": "Tsy hia ilay pejy notadiavinao.",
 	"mobile-frontend-generic-404-title": "Hadisoana - tsy hita ilay pejy",
 	"mobile-frontend-last-modified-date": "Voaova farany tamin'i $1, tamin'i $2",
-	"mobile-frontend-main-menu-account-create": "Hamorona ny kaonty",
 	"mobile-frontend-news-items": "Vaovao",
-	"mobile-frontend-password-placeholder": "Tenimiafina",
 	"mobile-frontend-privacy-link-text": "Fiainana manokana",
-	"mobile-frontend-regular-site": "Hivoaka amin'ny versiona finday",
-	"mobile-frontend-search-submit": "Tsidiho",
 	"mobile-frontend-terms-text": "Fepe-pampiasana",
 	"mobile-frontend-view": "Jery am-pinday",
 	"mobile-frontend-view-desktop": "Birao",
-	"mobile-frontend-view-mobile": "Finday",
 	"tag-mobile_edit": "Fiovana avy amin'ny finday",
-	"tag-mobile_web_edit": "Fiovana tamin'ny alalan'ny tranonkala finday",
-	"mobile-frontend-donate-button-label": "Hanome"
+	"tag-mobile_web_edit": "Fiovana tamin'ny alalan'ny tranonkala finday"
 }

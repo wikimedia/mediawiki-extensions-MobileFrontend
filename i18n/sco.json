@@ -7,8 +7,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or nae a uiser is eeditin throu the mobile interface",
-	"beta-feature-minerva": "Enable mobile skin ({{int:skinname-minerva}}) oan the desktap",
-	"beta-feature-minerva-description": "Mak the skin uised on mobile devices ae selectable desktop skin unner the \"{{int:prefs-rendering}}\" preferances tab.",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
 	"mobile-frontend-categories-heading": "<strong>Categories</strong>",
 	"mobile-frontend-categories-subheading": "The page alangs tae the follaein categories:",

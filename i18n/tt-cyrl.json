@@ -6,7 +6,6 @@
 			"Derslek"
 		]
 	},
-	"mobile-frontend-back-to-top-of-section": "Бер бүлеккә артка",
 	"mobile-frontend-changeslist-nocomment": "Үзгәртүләр тасвирламасы юк",
 	"mobile-frontend-copyright": "Мәгълүмат $1 буенча таратыла (әгәр башкасы күрсәтелмәсә).",
 	"mobile-frontend-desc": "Мобиль интерфейс",
@@ -17,18 +16,12 @@
 	"mobile-frontend-languages-header": "Телләр",
 	"mobile-frontend-languages-header-page": "$1 — Телләр",
 	"mobile-frontend-last-modified-date": "Соңгы тапкыр $1 $2 үзгәртелгән",
-	"mobile-frontend-main-menu-account-create": "Яңа кулланучыны теркәү",
 	"mobile-frontend-news-items": "Яңалыкларда",
 	"mobile-frontend-overlay-continue": "Дәвам итү",
-	"mobile-frontend-password-placeholder": "Серсүз",
 	"mobile-frontend-privacy-link-text": "Шәхсилек",
-	"mobile-frontend-regular-site": "Гади юрама",
-	"mobile-frontend-search-submit": "Күчү",
-	"mobile-frontend-sign-in-heading": "Керү",
 	"mobile-frontend-terms-text": "Куллану шартлары",
 	"mobile-frontend-view": "Мобиль юрама",
 	"mobile-frontend-view-desktop": "Санак",
-	"mobile-frontend-view-mobile": "Мобиль",
 	"mobile-frontend-watchlist-cta-button-login": "Керү",
 	"tag-mobile_edit": "Мобиль җиһаз ярдәмендә үзгәртү",
 	"tag-mobile_web_edit": "Сайтның мобиль юрамасы аша үзгәртү"
