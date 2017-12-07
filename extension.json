@@ -1205,7 +1205,7 @@
 	},
 	"config": {
 		"MFEnableFontChanger": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
@@ -1306,7 +1306,7 @@
 		"MFPhotoUploadWiki": null,
 		"MFPhotoUploadEndpoint": "",
 		"MFExpandAllSectionsUserOption": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFUseWikibase": false,
