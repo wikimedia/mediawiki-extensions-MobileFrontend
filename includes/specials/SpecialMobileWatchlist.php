@@ -139,7 +139,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Get the header for the watchlist page
-	 * @param User $user
+	 * @param User $user User object
 	 * @param string|null $view the name of the view to show (optional)
 	 *  If absent user preferences will be consulted.
 	 * @return string Parsed HTML

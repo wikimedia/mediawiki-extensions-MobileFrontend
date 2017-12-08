@@ -53,6 +53,13 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		return $htmlForm;
 	}
 
+	/**
+	 * @param string $par Key of section to display
+	 *
+	 * @throws MWException
+	 * @throws ReadOnlyError
+	 * @throws UserNotLoggedIn
+	 */
 	public function execute( $par = '' ) {
 		$this->setHeaders();
 		$this->outputHeader();
@@ -89,6 +96,9 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		}
 	}
 
+	/**
+	 * @return string[]
+	 */
 	public function getSubpagesForPrefixSearch() {
 		return $this->validTabs;
 	}

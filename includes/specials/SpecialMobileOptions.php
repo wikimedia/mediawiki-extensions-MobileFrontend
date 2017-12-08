@@ -26,6 +26,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		parent::__construct( 'MobileOptions' );
 	}
 
+	/**
+	 * @return bool
+	 */
 	public function doesWrites() {
 		return true;
 	}
@@ -287,6 +290,9 @@ HTML;
 		}
 	}
 
+	/**
+	 * @return string[]
+	 */
 	public function getSubpagesForPrefixSearch() {
 		return array_keys( $this->options );
 	}

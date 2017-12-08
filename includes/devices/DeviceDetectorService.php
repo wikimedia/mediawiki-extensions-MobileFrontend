@@ -47,7 +47,7 @@ class DeviceDetectorService implements DeviceDetector {
 	private $children;
 
 	/**
-	 * @param DeviceDetector[] $children
+	 * @param DeviceDetector[] $children Array of device detectors
 	 */
 	public function __construct( array $children ) {
 		$this->children = $children;

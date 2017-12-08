@@ -12,7 +12,7 @@ class MobileUI {
 
 	/**
 	 * Get CSS classes for icons
-	 * @param string $iconName
+	 * @param string $iconName Icon name
 	 * @param string $iconType element or before
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the iconed element
@@ -115,7 +115,7 @@ class MobileUI {
 
 	/**
 	 * Mark some html as being content
-	 * @param string $html
+	 * @param string $html HTML content
 	 * @param string $className additional class names
 	 * @return string of html
 	 */

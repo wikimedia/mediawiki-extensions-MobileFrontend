@@ -177,7 +177,7 @@ class MobileContext extends ContextSource {
 	 * $context->getConfigVariable( 'Corge' ); // => null
 	 * ```
 	 *
-	 * @param string $variableName
+	 * @param string $variableName Config variable to be returned
 	 * @return mixed|null
 	 * @throws ConfigException If the config variable doesn't exist
 	 *
@@ -266,7 +266,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Save whether mobile view should always be enforced
-	 * @param bool $value
+	 * @param bool $value should mobile view be enforced?
 	 */
 	public function setForceMobileView( $value ) {
 		$this->forceMobileView = $value;
@@ -274,7 +274,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Whether mobile view should always be enforced
-	 * @return bool
+	 * @return bool is mobile view enforced?
 	 */
 	public function getForceMobileView() {
 		return $this->forceMobileView;
@@ -282,7 +282,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Whether content should be transformed to better suit mobile devices
-	 * @param bool $value
+	 * @param bool $value should content be transformed?
 	 */
 	public function setContentTransformations( $value ) {
 		$this->contentTransformations = $value;
@@ -290,7 +290,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Whether content should be transformed to better suit mobile devices
-	 * @return bool
+	 * @return bool is content being transformed?
 	 */
 	public function getContentTransformations() {
 		return $this->contentTransformations;
@@ -559,7 +559,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Overrides the value of `MobileContext#getUseFormat`.
 	 *
-	 * @param string $useFormat
+	 * @param string $useFormat new value
 	 */
 	public function setUseFormat( $useFormat ) {
 		$this->useFormat = $useFormat;
@@ -657,8 +657,8 @@ class MobileContext extends ContextSource {
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of pages.
 	 *
-	 * @param string $cookieFormat
-	 * @param null $expiry
+	 * @param string $cookieFormat should user see mobile version of pages?
+	 * @param null $expiry Expiration of cookie
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
 		if ( is_null( $expiry ) ) {
@@ -736,7 +736,8 @@ class MobileContext extends ContextSource {
 	 *
 	 * Eg if a desktop domain is en.wikipedia.org, but the mobile variant is
 	 * en.m.wikipedia.org, the mobile token is 'm.'
-	 * @param string $mobileUrlHostTemplate
+	 *
+	 * @param string $mobileUrlHostTemplate URL host
 	 * @return string
 	 */
 	public function getMobileHostToken( $mobileUrlHostTemplate ) {
@@ -757,8 +758,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that conforms to the mobile URL template
-	 * @param string $url
-	 * @param bool $forceHttps
+	 * @param string $url URL to convert
+	 * @param bool $forceHttps should force HTTPS?
 	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
@@ -817,7 +818,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that removes any mobile tokens
-	 * @param string $url
+	 * @param string $url URL
 	 * @return string
 	 */
 	public function getDesktopUrl( $url ) {
@@ -830,8 +831,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update host of given URL to conform to mobile URL template.
-	 * @param array &$parsedUrl
-	 * 		Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlHost( &$parsedUrl ) {
 		if ( IP::isIPAddress( $parsedUrl['host'] ) ) {
@@ -867,8 +867,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the host of a given URL to strip out any mobile tokens
-	 * @param array &$parsedUrl
-	 * 		Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
 		$server = $this->getConfig()->get( 'Server' );
@@ -884,8 +883,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the query portion of a given URL to remove any 'useformat' params
-	 * @param array &$parsedUrl
-	 * 		Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlQuery( &$parsedUrl ) {
 		if ( isset( $parsedUrl['query'] ) && strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
@@ -903,8 +901,7 @@ class MobileContext extends ContextSource {
 	 * this is intended to provide. This will hopefully be implemented someday
 	 * in the not to distant future.
 	 *
-	 * @param array &$parsedUrl
-	 * 		Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {
 		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
@@ -933,7 +930,7 @@ class MobileContext extends ContextSource {
 	 * Parse mobile URL template into its host and path components.
 	 *
 	 * Optionally specify which portion of the template you want returned.
-	 * @param string $part
+	 * @param string $part which part to return?
 	 * @return mixed
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
@@ -1054,8 +1051,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems
-	 * @param string $key
-	 * @param string $val
+	 * @param string $key Key
+	 * @param string $val Value
 	 */
 	public function addAnalyticsLogItem( $key, $val ) {
 		$key = trim( $key );
@@ -1142,7 +1139,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Config override for responsive image strip mode.
 	 *
-	 * @param bool $val
+	 * @param bool $val New value
 	 */
 	public function setStripResponsiveImages( $val ) {
 		$this->stripResponsiveImagesOverride = $val;
@@ -1152,7 +1149,7 @@ class MobileContext extends ContextSource {
 	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
 	 * and watchlists; or as taglines on article pages.
 	 *
-	 * @param string $feature
+	 * @param string $feature which description to show?
 	 * @return bool
 	 * @throws DomainException If `feature` isn't one that shows Wikidata descriptions. See the
 	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail

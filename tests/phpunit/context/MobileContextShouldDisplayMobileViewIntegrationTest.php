@@ -30,7 +30,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 	/**
 	 * @covers MobileContext::shouldDisplayMobileView
 	 */
-	public function test_it_can_be_overridden() {
+	public function testItCanBeOverriden() {
 		$this->context->setForceMobileView( true );
 
 		$this->assertTrue( $this->context->shouldDisplayMobileView() );

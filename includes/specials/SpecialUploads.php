@@ -62,7 +62,7 @@ class SpecialUploads extends MobileSpecialPage {
 	/**
 	 * Generates HTML for the uploads page for the passed user.
 	 *
-	 * @param User $user
+	 * @param User $user User to display uploads of
 	 * @return string
 	 */
 	public function getUserUploadsPageHtml( User $user ) {

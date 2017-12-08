@@ -94,8 +94,8 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Creates and returns a MobileFormatter
 	 *
-	 * @param MobileContext $context
-	 * @param IContentProvider $provider
+	 * @param MobileContext $context MobileContext object
+	 * @param IContentProvider $provider ContentProvider interface
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
 	 * @param bool $includeTOC (optional) whether to include the
@@ -126,7 +126,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Mark whether a placeholder table of contents should be included at the end of the lead
 	 * section
-	 * @param bool $flag
+	 * @param bool $flag should TOC be included?
 	 */
 	public function enableTOCPlaceholder( $flag = true ) {
 		$this->isTOCEnabled = $flag;
@@ -135,7 +135,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Set support of page for expandable sections to $flag (standard: true)
 	 * @todo kill with fire when there will be minimum of pre-1.1 app users remaining
-	 * @param bool $flag
+	 * @param bool $flag should expandable sections be supported?
 	 */
 	public function enableExpandableSections( $flag = true ) {
 		$this->expandableSections = $flag;
@@ -405,7 +405,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * attributes. If the image has no `style`, `width` or `height` attributes, then the image is
 	 * dimensionless.
 	 *
-	 * @param DOMElement $img
+	 * @param DOMElement $img <img> element
 	 * @return array with width and height parameters if dimensions are found
 	 */
 	public function getImageDimensions( DOMElement $img ) {
@@ -645,7 +645,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * that the section bodies are clearly defined (to be "expandable" for
 	 * example).
 	 *
-	 * @param DOMDocument $doc
+	 * @param DOMDocument $doc DOM document
 	 * @param DOMElement $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section
@@ -780,7 +780,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
 	 * obviously connected to being editable.
 	 *
-	 * @param DOMElement $headings
+	 * @param DOMElement $headings Heading elements
 	 */
 	protected function makeHeadingsEditable( array $headings ) {
 		foreach ( $headings as $heading ) {
