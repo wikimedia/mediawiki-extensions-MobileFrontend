@@ -46,7 +46,8 @@
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
 	"AutoloadNamespaces": {
-		"MobileFrontend\\Transforms\\": "includes/transforms/"
+		"MobileFrontend\\Transforms\\": "includes/transforms/",
+		"MobileFrontend\\Features\\" : "includes/features/"
 	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
