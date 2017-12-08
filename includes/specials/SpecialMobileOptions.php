@@ -94,31 +94,67 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$form->addClasses( [ 'mw-mf-settings' ] );
 
 		// beta settings
+		$isInBeta = $context->isBetaGroupMember();
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
 			$input = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableBeta',
 				'infusable' => true,
-				'selected' => $context->isBetaGroupMember(),
+				'selected' => $isInBeta,
 				'id' => 'enable-beta-toggle',
 				'value' => '1',
 			] );
 			$fields[] = new OOUI\FieldLayout(
 				$input,
 				[
-				'label' => new OOUI\LabelWidget( [
-					'input' => $input,
-					'label' => new OOUI\HtmlSnippet(
-						Html::openElement( 'div' ) .
-						Html::element( 'strong', [],
-							$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
-						Html::element( 'div', [ 'class' => 'option-description' ],
-							$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
-						) .
-						Html::closeElement( 'div' )
-					)
-				] ),
-				'id' => 'beta-field',
-			] );
+					'label' => new OOUI\LabelWidget( [
+						'input' => $input,
+						'label' => new OOUI\HtmlSnippet(
+							Html::openElement( 'div' ) .
+							Html::element( 'strong', [],
+								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
+							Html::element( 'div', [ 'class' => 'option-description' ],
+								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
+							) .
+							Html::closeElement( 'div' )
+						)
+					] ),
+					'id' => 'beta-field',
+				]
+			);
+
+			$features = \MediaWiki\MediaWikiServices::getInstance()
+				->getService( 'MobileFrontend.FeaturesManager' )
+				->getAvailable( MobileContext::MODE_BETA );
+
+			$classNames = [ 'mobile-options-beta-feature' ];
+			if ( $isInBeta ) {
+				$classNames[] = 'is-enabled';
+				$icon = 'check';
+			} else {
+				$icon = 'lock';
+			}
+			/** @var \MobileFrontend\Features\IFeature $feature */
+			foreach ( $features as $feature ) {
+				$fields[] = new OOUI\FieldLayout(
+					new OOUI\IconWidget( [
+						'icon' => $icon,
+						'title' => 'Available in beta only',
+					] ),
+					[
+						'classes' => $classNames,
+						'label' => new OOUI\LabelWidget( [
+							'label' => new OOUI\HtmlSnippet(
+								Html::rawElement( 'div', [],
+									Html::element( 'strong', [],
+										wfMessage( $feature->getNameKey() ) ) .
+									Html::element( 'div', [ 'class' => 'option-description' ],
+										wfMessage( $feature->getDescriptionKey() ) )
+								)
+							),
+						] )
+					]
+				);
+			}
 		}
 
 		$fields[] = new OOUI\ButtonInputWidget( [
@@ -135,7 +171,20 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				'value' => $user->getEditToken() ] );
 		}
 
-		// @codingStandardsIgnoreEnd
+		$feedbackLink = $this->getConfig()->get( 'MFBetaFeedbackLink' );
+		if ( $feedbackLink && $isInBeta ) {
+			$fields[] = new OOUI\ButtonWidget( [
+				'framed' => false,
+				'href' => $feedbackLink,
+				'icon' => 'feedback',
+				'flags' => [
+					'progressive',
+				],
+				'classes' => [ 'mobile-options-feedback' ],
+				'label' => $this->msg( 'mobile-frontend-send-feedback' )->escaped(),
+			] );
+		}
+
 		$form->appendContent(
 			$fields
 		);

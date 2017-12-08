@@ -494,6 +494,13 @@ Whether beta mode is enabled.
 * Type: `Boolean`
 * Default: `false`
 
+#### MFBetaFeedbackLink
+
+Link to feedback page for beta features. If false no feedback link will be shown.
+
+* Type: `String|false`
+* Default: `false`
+
 #### $wgMFDefaultSkinClass
 
 The default skin for MobileFrontend.

@@ -178,7 +178,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Try a different browser or enable JavaScript if you've disabled it.",
 	"mobile-frontend-nearby-title": "Nearby",
 	"mobile-frontend-news-items": "In the news",
-	"mobile-frontend-opt-in-explain": "Join {{SITENAME}} Beta to get access to the latest experimental features!",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta is a way for you to try these experimental features and provide us with valuable feedback",
 	"mobile-frontend-overlay-close": "Close",
 	"mobile-frontend-overlay-continue": "Continue",
 	"mobile-frontend-page-edit-summary": "<span><strong>Edit summary</strong> $1</span>",
@@ -199,7 +199,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' to see if this phrase appears anywhere.",
 	"mobile-frontend-search-no-results": "No page with this title.",
 	"mobile-frontend-settings-tagline": "Reading preferences",
-	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Languages",
 	"mobile-frontend-settings-save": "Settings were saved successfully.",
@@ -297,5 +297,10 @@
 	"mobile-frontend-panel-betaoptin-msg": "Do you want to try some new features? By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.",
 	"mobile-frontend-search-feedback-link-text": "Give us your feedback.",
 	"mobile-frontend-search-feedback-prompt": "Couldn't find what you were looking for?",
-	"mobile-frontend-notifications-filter-title": "Filter notifications"
+	"mobile-frontend-notifications-filter-title": "Filter notifications",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Lazy load references",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Title descriptions",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Learn about the subject of the article with a short description below the title",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Load article references only when needed",
+	"mobile-frontend-send-feedback": "Send feedback"
 }

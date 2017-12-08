@@ -1301,6 +1301,7 @@
 		"MFStopRedirectCookieHost": null,
 		"MobileFrontendLogo": false,
 		"MFEnableBeta": false,
+		"MFBetaFeedbackLink": false,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MFNamespacesWithoutCollapsibleSections": [
 			6,
