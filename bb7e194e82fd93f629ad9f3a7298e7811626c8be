@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_9b119e62",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1055,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "Vague",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_3b1a127f",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "Vague",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_db0b262c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "Both vague and don\u0027t really add much on top of the parameter.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_36fce907",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 528,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "Vague.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_162605b5",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "This doesn\u0027t add much (you are just repeating the parameter name) but I\u0027d argue that\u0027s because this is relatively self-explanatory.\n\nWould be useful to mention that this is a glyph that this should correspond to an icon defined in ResourceLoaderImage module in extension.json",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_963215ee",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "Title text. It\u0027s not clear if this can include a prefix. e.g. Will \"Talk:Foo\" work? Would be good to mention this.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_d62c9d91",
+        "filename": "includes/devices/DeviceDetector.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "$request for which we are trying to verify the user\u0027s current device.\nwould be more explanatory here rather than repeating the variable name.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_7654b101",
+        "filename": "includes/devices/DeviceDetectorService.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "but what is the context the are used in?\nPossibly out of scope for the task as this would require understanding that context.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_963975ce",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 1,
+      "message": "thanks for correcting that typo! :)",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

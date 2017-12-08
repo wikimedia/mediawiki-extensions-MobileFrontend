@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_76067121",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-08T20:03:42Z",
+      "side": 0,
+      "message": "I think many of the documented parameters here don\u0027t gain anything - but I think that\u0027s because of the nature of how the hooks system works.\n\nMaking the docs more useful here is probably out of the scope of this task, but I wanted to flag that I considered this as part of review.",
+      "revId": "af3cb0e0fa6dd52e3afaefba7e0f689a24fa716c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
