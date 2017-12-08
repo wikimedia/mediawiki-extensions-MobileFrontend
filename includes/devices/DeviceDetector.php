@@ -41,7 +41,7 @@ interface DeviceDetector {
 	 * `$_SERVER` superglobal within its API, it's expected to be passed as
 	 * additional context.
 	 *
-	 * @param WebRequest $request
+	 * @param WebRequest $request Request
 	 * @param array $server Per the above, the `$_SERVER` superglobal
 	 * @return DeviceProperties|null
 	 */

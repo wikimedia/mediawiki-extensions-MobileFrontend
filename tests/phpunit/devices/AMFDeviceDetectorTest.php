@@ -76,7 +76,7 @@ class AMFDeviceDetectorTest extends MediaWikiTestCase {
 		];
 	}
 
-	public function test_it_should_handle_no_AMF_environment_variables() {
+	public function testItShouldHandleNoAMFEnvironmentVariables() {
 		$this->assertNull(
 			$this->detector->detectDeviceProperties( $this->request, [] )
 		);

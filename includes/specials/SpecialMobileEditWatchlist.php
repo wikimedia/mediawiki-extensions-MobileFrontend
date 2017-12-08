@@ -233,7 +233,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	}
 
 	/**
-	 * @param MobileCollection $collection
+	 * @param MobileCollection $collection Collection of pages to get view for
 	 * @return string html representation of collection in watchlist view
 	 */
 	protected function getViewHtml( MobileCollection $collection ) {

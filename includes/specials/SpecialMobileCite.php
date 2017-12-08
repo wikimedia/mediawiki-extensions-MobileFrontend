@@ -4,7 +4,7 @@
  */
 
 /**
- * Provides a list of citiations available for a page
+ * Provides a list of citations available for a page
  */
 class SpecialMobileCite extends MobileSpecialPage {
 	/**
@@ -14,6 +14,13 @@ class SpecialMobileCite extends MobileSpecialPage {
 		parent::__construct( 'MobileCite' );
 	}
 
+	/**
+	 * Returns HTML body with cites for given revision.
+	 *
+	 * @param Title $title Revision title
+	 * @param int $revId Revision id
+	 * @return Message
+	 */
 	protected function getReferenceBodyHtml( Title $title, $revId ) {
 		$api = new ApiMain(
 			new DerivativeRequest(
@@ -45,6 +52,7 @@ class SpecialMobileCite extends MobileSpecialPage {
 
 	/**
 	 * Render the page with a list of references for the given revision identifier
+	 *
 	 * @param string $param The revision number
 	 */
 	public function executeWhenAvailable( $param ) {

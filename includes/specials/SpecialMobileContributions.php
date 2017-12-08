@@ -45,7 +45,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	}
 
 	/**
-	 * Render the special page boddy
+	 * Render the special page body
 	 * @param string $par The username
 	 */
 	public function executeWhenAvailable( $par = '' ) {
@@ -84,7 +84,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Render the contributions of user to page
-	 * @param ResultWrapper $res
+	 * @param ResultWrapper $res Result of doQuery
 	 */
 	protected function showContributions( ResultWrapper $res ) {
 		$numRows = $res->numRows();
@@ -122,7 +122,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Render the contribution of the pagerevision (time, bytes added/deleted, pagename comment)
-	 * @param Revision $rev
+	 * @param Revision $rev Revision to show contribution for
 	 */
 	protected function showContributionsRow( Revision $rev ) {
 		$user = $this->getUser();

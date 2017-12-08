@@ -67,7 +67,7 @@ JAVASCRIPT;
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
 	 * Note: This is called by a hook in the WikimediaMessages extension.
 	 *
-	 * @param Skin $sk
+	 * @param Skin $sk Skin object
 	 * @param string $urlMsgKey Key of i18n message containing terms of use URL (optional)
 	 * @return null|string
 	 */
@@ -90,7 +90,7 @@ JAVASCRIPT;
 	 *
 	 * FIXME: This hack shouldn't be needed anymore after fixing T111833
 	 *
-	 * @param string $license
+	 * @param string $license License or licenses message
 	 * @param Message $msgObj delimiter (optional)
 	 * @return int Returns 2, if there are multiple licenses, 1 otherwise.
 	 */
@@ -175,8 +175,8 @@ JAVASCRIPT;
 
 	/**
 	 * Prepares the footer for the skins serving the desktop and mobile sites.
-	 * @param Skin $skin
-	 * @param QuickTemplate $tpl
+	 * @param Skin $skin Skin object
+	 * @param QuickTemplate $tpl QuickTemplate object
 	 */
 	public static function prepareFooter( $skin, $tpl ) {
 		$title = $skin->getTitle();
@@ -195,11 +195,11 @@ JAVASCRIPT;
 
 	/**
 	 * Appends a mobile view link to the desktop footer
-	 * @param Skin $sk
-	 * @param QuickTemplate $tpl
-	 * @param MobileContext $ctx
-	 * @param Title $title
-	 * @param WebRequest $req
+	 * @param Skin $sk Skin object
+	 * @param QuickTemplate $tpl QuickTemplate object
+	 * @param MobileContext $ctx MobileContext object
+	 * @param Title $title Page title
+	 * @param WebRequest $req Request
 	 */
 	public static function desktopFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
 		Title $title, WebRequest $req
@@ -224,11 +224,11 @@ JAVASCRIPT;
 
 	/**
 	 * Prepares links used in the mobile footer
-	 * @param Skin $sk
-	 * @param QuickTemplate $tpl
-	 * @param MobileContext $ctx
-	 * @param Title $title
-	 * @param WebRequest $req
+	 * @param Skin $sk Skin object
+	 * @param QuickTemplate $tpl QuickTemplate object
+	 * @param MobileContext $ctx MobileContext object
+	 * @param Title $title Page title
+	 * @param WebRequest $req Request
 	 * @return QuickTemplate
 	 */
 	protected static function mobileFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,

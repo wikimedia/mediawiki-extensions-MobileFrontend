@@ -1147,7 +1147,7 @@
 			"MobileFrontendHooks::onResourceLoaderGetConfigVars"
 		],
 		"SpecialPage_initList": [
-			"MobileFrontendHooks::onSpecialPage_initList"
+			"MobileFrontendHooks::onSpecialPageInitList"
 		],
 		"ListDefinedTags": [
 			"MobileFrontendHooks::onListDefinedTags"
@@ -1156,7 +1156,7 @@
 			"MobileFrontendHooks::onListDefinedTags"
 		],
 		"RecentChange_save": [
-			"MobileFrontendHooks::onRecentChange_save"
+			"MobileFrontendHooks::onRecentChangeSave"
 		],
 		"AbuseFilter-generateUserVars": [
 			"MobileFrontendHooks::onAbuseFilterGenerateUserVars"
@@ -1195,7 +1195,7 @@
 			"MobileFrontendHooks::onOutputPageParserOutput"
 		],
 		"HTMLFileCache::useFileCache": [
-			"MobileFrontendHooks::onHTMLFileCache_useFileCache"
+			"MobileFrontendHooks::onHTMLFileCacheUseFileCache"
 		],
 		"LoginFormValidErrorMessages": [
 			"MobileFrontendHooks::onLoginFormValidErrorMessages"

@@ -27,12 +27,12 @@ class ExtMobileFrontend {
 	/**
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
-	 * @param OutputPage $out
+	 * @param OutputPage $out OutputPage object
 	 * @param string $text override out html
 	 *
 	 * @return string
 	 */
-	public static function DOMParse( OutputPage $out, $text = null ) {
+	public static function domParse( OutputPage $out, $text = null ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$factory = new ContentProviderFactory();
@@ -94,7 +94,7 @@ class ExtMobileFrontend {
 	/**
 	 * Generate user page content for non-existent user pages
 	 *
-	 * @param OutputPage $output
+	 * @param OutputPage $output OutputPage object
 	 * @param User $pageUser owner of the user page
 	 * @return string
 	 */

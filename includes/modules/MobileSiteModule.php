@@ -18,7 +18,7 @@ class MobileSiteModule extends ResourceLoaderWikiModule {
 	/**
 	 * Get a list of pages used by this module.
 	 *
-	 * @param ResourceLoaderContext $context
+	 * @param ResourceLoaderContext $context ResourceLoader context
 	 * @return array
 	 */
 	protected function getPages( ResourceLoaderContext $context ) {

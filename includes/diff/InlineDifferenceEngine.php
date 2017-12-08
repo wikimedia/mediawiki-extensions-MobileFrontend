@@ -54,7 +54,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @throws MWException If the content is not an instance of TextContent and
 	 * wgContentHandlerTextFallback was set to 'fail'.
 	 *
-	 * @param bool $diffOnly
+	 * @param bool $diffOnly diff only?
 	 */
 	public function showDiffPage( $diffOnly = false ) {
 		$output = $this->getOutput();

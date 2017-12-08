@@ -52,7 +52,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 		);
 	}
 
-	public function test_it_should_handle_requests_from_mobile_UAs() {
+	public function testItShouldHandleRequestsFromMobileUAs() {
 		$this->whenTheRequestIsFromAMobileUA();
 
 		$properties = $this->detectDeviceProperties();
@@ -61,14 +61,14 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 		$this->assertFalse( $properties->isTabletDevice() );
 	}
 
-	public function test_it_should_handle_a_request_from_desktop_browsers() {
+	public function testItShouldHandleARequestFromDesktopBrowsers() {
 		$properties = $this->detectDeviceProperties();
 
 		$this->assertFalse( $properties->isMobileDevice() );
 		$this->assertFalse( $properties->isTabletDevice() );
 	}
 
-	public function test_it_should_prioritize_the_custom_request_header() {
+	public function testItShouldPrioritizeTheCustomRequestHeader() {
 		// @codingStandardsIgnoreStart
 		// The custom header //should// either be M or ZERO, per
 		// <https://github.com/wikimedia/operations-puppet/blob/2a2714c28eab25eed469375dc5322ea6a6ef85df/modules/varnish/templates/text-frontend.inc.vcl.erb#L74-L78>.
@@ -85,7 +85,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	/**
 	 * @FIXME Should this really be the case?
 	 */
-	public function test_it_should_prioritize_the_amf_environment_variables() {
+	public function testItShouldPrioritizeTheAmfEnvironmentVariables() {
 		$this->request->setHeader( 'X-Subdomain', 'M' );
 
 		$this->server[ 'AMF_DEVICE_IS_TABLET' ] = 'true';
@@ -99,7 +99,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 		$this->assertTrue( $properties->isTabletDevice() );
 	}
 
-	public function test_it_should_handle_device_detection_being_disabled() {
+	public function testItShouldHandleDeviceDetectionBeingDisabled() {
 		$this->setMwGlobals( 'wgMFAutodetectMobileView', false );
 
 		$this->whenTheRequestIsFromAMobileUA();
