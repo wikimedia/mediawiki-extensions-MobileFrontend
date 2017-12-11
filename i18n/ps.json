@@ -16,6 +16,7 @@
 	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوی وي.",
 	"mobile-frontend-diffview-anonymous": "ورکنومی کارن",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بايټ ورگډ شو|بايټونه ورگډ شول}}",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|edit|سمونې}}",
 	"mobile-frontend-diffview-title": "بدلونونه",
 	"mobile-frontend-donate-image-title": "پورته کېدنې",
 	"mobile-frontend-donate-image-title-username": "پورته کېدنې د $1 لخوا",
