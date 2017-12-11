@@ -16,6 +16,46 @@
       "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_2f73d115",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-11T22:57:32Z",
+      "side": 1,
+      "message": "Would be nice if we added documentation here and the other new functions.",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_cf8b45e7",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-11T22:57:32Z",
+      "side": 1,
+      "message": "What does `bw` stand for?",
+      "range": {
+        "startLine": 208,
+        "startChar": 4,
+        "endLine": 208,
+        "endChar": 6
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
