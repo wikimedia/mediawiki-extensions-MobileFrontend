@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_248778bb",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-11T22:23:27Z",
+      "side": 1,
+      "message": "@todo: We\u0027ll need to add a registerFeature hook so other extensions can register features...(!!)",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
