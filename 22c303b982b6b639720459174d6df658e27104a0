@@ -22,6 +22,30 @@
       "revId": "22c303b982b6b639720459174d6df658e27104a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_6f54b955",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-11T23:10:06Z",
+      "side": 1,
+      "message": "No, it\u0027s \"hidden\" so this ensures it no longer takes up space. Have added a comment",
+      "parentUuid": "eee3df47_af308154",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 19
+      },
+      "revId": "22c303b982b6b639720459174d6df658e27104a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
