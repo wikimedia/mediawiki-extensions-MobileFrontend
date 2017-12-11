@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_af308154",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-11T22:44:39Z",
+      "side": 1,
+      "message": "Isn\u0027t this already hidden by CSS?",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 19
+      },
+      "revId": "22c303b982b6b639720459174d6df658e27104a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
