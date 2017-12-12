@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_ed328cee",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1224,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "I understand and I\u0027m down with that. We just need to be careful not to break any existing configs.",
+      "parentUuid": "eee3df47_52fa3940",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_248778bb",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -76,6 +94,48 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_2f5ab185",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "Of course. I didn\u0027t want to invest too much time in the patch since the goal was proving the concept, but yes we\u0027d add those if we continued with this approach.",
+      "parentUuid": "eee3df47_2f73d115",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_6d4ddc74",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "sounds good.",
+      "parentUuid": "eee3df47_f2542d58",
+      "range": {
+        "startLine": 205,
+        "startChar": 17,
+        "endLine": 205,
+        "endChar": 40
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_cf8b45e7",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -87,6 +147,30 @@
       "writtenOn": "2017-12-11T22:57:32Z",
       "side": 1,
       "message": "What does `bw` stand for?",
+      "range": {
+        "startLine": 208,
+        "startChar": 4,
+        "endLine": 208,
+        "endChar": 6
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_cf622537",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "backwards.",
+      "parentUuid": "eee3df47_cf8b45e7",
       "range": {
         "startLine": 208,
         "startChar": 4,
@@ -145,6 +229,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_2d447449",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "Not quite sure I follow this, but ultimately we\u0027ll need to be able to configure features on or off some how. Right now config variables will be needed for this purpose - the goal is to provide better abstraction from them.",
+      "parentUuid": "eee3df47_d2ce4930",
+      "range": {
+        "startLine": 256,
+        "startChar": 5,
+        "endLine": 256,
+        "endChar": 38
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_32de95de",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -168,6 +276,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_8d7140aa",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "That sounds good to me.",
+      "parentUuid": "eee3df47_32de95de",
+      "range": {
+        "startLine": 1202,
+        "startChar": 5,
+        "endLine": 1202,
+        "endChar": 36
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_d28809ef",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 1
@@ -179,6 +311,24 @@
       "writtenOn": "2017-12-12T16:54:29Z",
       "side": 1,
       "message": "every feature should have different name and id",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_8d4ae05d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T17:17:07Z",
+      "side": 1,
+      "message": "True dat (uses the POC excuse)",
+      "parentUuid": "eee3df47_d28809ef",
       "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
