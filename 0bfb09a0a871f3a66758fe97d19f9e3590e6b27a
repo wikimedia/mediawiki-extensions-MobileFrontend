@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "eee3df47_52fa3940",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1224,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "we\u0027re reusing same config variable to keep two configs (is it enabled in general and is it enabled for given feature, it requires me to think, which I don\u0027t like.\n\nI prefer to have something like MFDisplayWikibaseDescription and MFWikibaseDescriptionsVisibleOn configs.",
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_248778bb",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -36,6 +53,29 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_f2542d58",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "please, no more stuff in the MobileContext. It\u0027s already a bucket for everything and bit more. I would love to see a separate class like \"MobileFeatures\" available via ServiceWirings which defines all features and knows how to read it.",
+      "range": {
+        "startLine": 205,
+        "startChar": 17,
+        "endLine": 205,
+        "endChar": 40
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_cf8b45e7",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -53,6 +93,92 @@
         "endLine": 208,
         "endChar": 6
       },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_324fb5c1",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "instead of having this helper It\u0027s much nicer to have sth like:\n\n$container-\u003eget(\u0027MobileFrontend.MobileFeatures\u0027)-\u003egetFeature(\u0027name\u0027)-\u003eisEnabled();\n\nDumping whole logic to a single class might create a mess in the future. Instead of having helpers for basic things like isEnabled() it\u0027s much cleaner to have a getter within the concrete implementation of a given feature.",
+      "range": {
+        "startLine": 222,
+        "startChar": 17,
+        "endLine": 222,
+        "endChar": 33
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_d2ce4930",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "I\u0027m bit confused, because we talk about features, but we use config variables",
+      "range": {
+        "startLine": 256,
+        "startChar": 5,
+        "endLine": 256,
+        "endChar": 38
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_32de95de",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "can we have a WikiBaseDescription feature that in `isEnabled()` knows that it has to check both the feature config and MFUseWikibase config?",
+      "range": {
+        "startLine": 1202,
+        "startChar": 5,
+        "endLine": 1202,
+        "endChar": 36
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_d28809ef",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-12T16:54:29Z",
+      "side": 1,
+      "message": "every feature should have different name and id",
       "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
