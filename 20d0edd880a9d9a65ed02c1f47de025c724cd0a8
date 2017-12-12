@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_e8cefa84",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T20:05:05Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "eee3df47_c8817651",
+      "range": {
+        "startLine": 200,
+        "startChar": 3,
+        "endLine": 200,
+        "endChar": 15
+      },
+      "revId": "20d0edd880a9d9a65ed02c1f47de025c724cd0a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_2891029d",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 5
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "eee3df47_68a94a8d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T20:05:05Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "eee3df47_2891029d",
+      "range": {
+        "startLine": 241,
+        "startChar": 2,
+        "endLine": 244,
+        "endChar": 10
+      },
+      "revId": "20d0edd880a9d9a65ed02c1f47de025c724cd0a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_88d5ae49",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 5
@@ -82,6 +130,30 @@
       "writtenOn": "2017-12-12T19:46:26Z",
       "side": 0,
       "message": "Looks like a dead code",
+      "range": {
+        "startLine": 258,
+        "startChar": 1,
+        "endLine": 258,
+        "endChar": 30
+      },
+      "revId": "20d0edd880a9d9a65ed02c1f47de025c724cd0a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_e8955a43",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-12T20:05:05Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "eee3df47_88d5ae49",
       "range": {
         "startLine": 258,
         "startChar": 1,
