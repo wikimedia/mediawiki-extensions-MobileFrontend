@@ -380,7 +380,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$req = MobileContext::singleton()->getRequest();
 		$rev2 = $req->getText( 'diff' );
 		$rev1 = $req->getText( 'oldid' );
-		if ( $rev1 == 'prev' || $rev1 == 'next' ) { // Actually, both do the same, WTF
+		// Actually, both do the same, WTF
+		if ( $rev1 == 'prev' || $rev1 == 'next' ) {
 			$rev1 = '';
 		}
 		// redirect requests to the diff page to mobile view

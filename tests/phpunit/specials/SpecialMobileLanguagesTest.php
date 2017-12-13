@@ -53,7 +53,8 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 		}
 
 		return [
-			[ // Works with one language
+			[
+				// Works with one language
 				[
 					$input['es']
 				],
@@ -61,7 +62,8 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 					$expected['es']
 				]
 			],
-			[ // Sorts two languages
+			[
+				// Sorts two languages
 				[
 					$input['es'],
 					$input['bs']
@@ -71,7 +73,8 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 					$expected['es']
 				]
 			],
-			[ // Should still sort correctly if already in correct order
+			[
+				// Should still sort correctly if already in correct order
 				[
 					$input['bs'],
 					$input['es']
@@ -81,7 +84,8 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 					$expected['es']
 				]
 			],
-			[ // Sorts languages case-insensitive
+			[
+				// Sorts languages case-insensitive
 				[
 					$input['simple'],
 					$input['de'],
@@ -95,7 +99,8 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 					$expected['simple']
 				]
 			],
-			[ // Should still sort correctly if already in correct order (mixed case)
+			[
+				// Should still sort correctly if already in correct order (mixed case)
 				[
 					$input['bs'],
 					$input['de'],

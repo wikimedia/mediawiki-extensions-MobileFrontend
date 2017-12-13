@@ -374,7 +374,8 @@ class MobileFrontendHooks {
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
 
 		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
-			$cookies[] = MobileContext::OPTIN_COOKIE_NAME; // beta cookie
+			// beta cookie
+			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
 		}
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
 		// only for HTTP but we don't vary on protocol.
@@ -1162,13 +1163,19 @@ class MobileFrontendHooks {
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages = array_merge( $messages,
 			[
-				'mobile-frontend-watchlist-signup-action', // watchstart sign up CTA
-				'mobile-frontend-watchlist-purpose', // Watchlist and watchstar sign in CTA
-				'mobile-frontend-donate-image-anon', // Uploads link
-				'mobile-frontend-edit-login-action', // Edit button sign in CTA
-				'mobile-frontend-edit-signup-action', // Edit button sign-up CTA
+				// watchstart sign up CTA
+				'mobile-frontend-watchlist-signup-action',
+				// Watchlist and watchstar sign in CTA
+				'mobile-frontend-watchlist-purpose',
+				// Uploads link
+				'mobile-frontend-donate-image-anon',
+				// Edit button sign in CTA
+				'mobile-frontend-edit-login-action',
+				// Edit button sign-up CTA
+				'mobile-frontend-edit-signup-action',
 				'mobile-frontend-donate-image-login-action',
-				'mobile-frontend-generic-login-new', // default message
+				// default message
+				'mobile-frontend-generic-login-new',
 			]
 		);
 	}

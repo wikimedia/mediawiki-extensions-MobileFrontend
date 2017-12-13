@@ -9,7 +9,9 @@ use MediaWiki\MediaWikiServices;
  * Implements the Watchlist special page
  */
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
-	const LIMIT = 50; // Performance-safe value with PageImages
+	// Performance-safe value with PageImages
+	const LIMIT = 50;
+
 	const THUMB_SIZE = MobilePage::SMALL_IMAGE_WIDTH;
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
@@ -123,7 +125,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				break;
 			case 'articles':
 				// @fixme content namespaces
-				$conds[] = "$column = 0"; // Has to be unquoted or MySQL will filesort for wl_namespace
+				// Has to be unquoted or MySQL will filesort for wl_namespace
+				$conds[] = "$column = 0";
 				break;
 			case 'talk':
 				// check project talk, user talk and talk pages

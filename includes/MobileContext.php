@@ -835,7 +835,8 @@ class MobileContext extends ContextSource {
 	 */
 	protected function updateMobileUrlHost( &$parsedUrl ) {
 		if ( IP::isIPAddress( $parsedUrl['host'] ) ) {
-			return; // Do not update host when IP is used
+			// Do not update host when IP is used
+			return;
 		}
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 		if ( !strlen( $mobileUrlHostTemplate ) ) {
@@ -850,7 +851,8 @@ class MobileContext extends ContextSource {
 			if ( strstr( $templateHostPart, '%h' ) ) {
 				$parsedHostPartKey = substr( $templateHostPart, 2 );
 				if ( !array_key_exists( $parsedHostPartKey, $parsedHostParts ) ) {
-					return; // invalid pattern for this host, ignore
+					// invalid pattern for this host, ignore
+					return;
 				}
 				$targetHostParts[$key] = $parsedHostParts[$parsedHostPartKey];
 			} elseif ( isset( $parsedHostParts[$key] )

@@ -64,7 +64,10 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		$this->setHeaders();
 		$this->outputHeader();
 		$out = $this->getOutput();
-		$out->disallowUserJs(); // Prevent hijacked user scripts from sniffing passwords etc.
+
+		// Prevent hijacked user scripts from sniffing passwords etc.
+		$out->disallowUserJs();
+
 		$this->requireLogin( 'prefsnologintext2' );
 		$this->checkReadOnly();
 

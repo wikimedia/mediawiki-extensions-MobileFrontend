@@ -94,7 +94,8 @@ class ApiMobileView extends ApiBase {
 		$moduleName = $this->getModuleName();
 
 		if ( $this->offset === 0 && $this->maxlen === 0 ) {
-			$this->offset = -1; // Disable text splitting
+			// Disable text splitting
+			$this->offset = -1;
 		} elseif ( $this->maxlen === 0 ) {
 			$this->maxlen = PHP_INT_MAX;
 		}
@@ -351,9 +352,11 @@ class ApiMobileView extends ApiBase {
 	 */
 	private function stringSplitter( $text ) {
 		if ( $this->offset < 0 ) {
-			return $text; // NOOP - string splitting mode is off
+			// NOOP - string splitting mode is off
+			return $text;
 		} elseif ( $this->maxlen < 0 ) {
-			return ''; // Limit exceeded
+			// Limit exceeded
+			return '';
 		}
 		$textLen = mb_strlen( $text );
 		$start = $this->offset;
@@ -770,7 +773,8 @@ class ApiMobileView extends ApiBase {
 					: $file->getWidth();
 			}
 			if ( !$resize ) {
-				$resize['width'] = $resize['height'] = 50; // Default
+				// Default
+				$resize['width'] = $resize['height'] = 50;
 			}
 			$thumb = $file->transform( $resize );
 			if ( !$thumb ) {

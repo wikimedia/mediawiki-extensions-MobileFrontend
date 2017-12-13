@@ -70,7 +70,7 @@ class ExtMobileFrontend {
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->filterContent( /* remove defaults */ !$isSpecialPage,
+			$formatter->filterContent( !$isSpecialPage,
 				$removeReferences, $removeImages, $showFirstParagraphBeforeInfobox );
 		}
 
