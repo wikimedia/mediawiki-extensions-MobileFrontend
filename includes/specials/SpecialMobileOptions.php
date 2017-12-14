@@ -148,7 +148,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				$html .= $templateParser->processTemplate( 'checkbox', $data );
 			}
 		}
-		$className = MobileUI::buttonClass( 'constructive' );
+		$className = MobileUI::buttonClass( 'progressive' );
 		$html .= <<<HTML
 		<input type="submit" class="{$className}" id="mw-mf-settings-save" value="{$saveSettings}">
 		$token

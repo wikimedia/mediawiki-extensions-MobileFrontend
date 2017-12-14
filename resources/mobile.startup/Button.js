@@ -25,7 +25,6 @@
 		 * @cfg {string} defaults.tagName The name of the tag in which the button is wrapped.
 		 * @cfg {boolean} defaults.block is stacked button
 		 * @cfg {boolean} defaults.progressive is progressive action
-		 * @cfg {boolean} defaults.constructive is constructive action
 		 *   This option is deprecated. Please use `progressive`.
 		 * @cfg {boolean} defaults.quiet is quiet button
 		 * @cfg {boolean} defaults.destructive is destructive action
@@ -38,7 +37,6 @@
 			block: undefined,
 			progressive: undefined,
 			destructive: undefined,
-			constructive: undefined,
 			quiet: undefined,
 			additionalClassNames: '',
 			href: undefined,

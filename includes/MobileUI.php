@@ -30,7 +30,7 @@ class MobileUI {
 	/**
 	 * Get CSS classes for a mediawiki ui semantic element
 	 * @param string $base The base class
-	 * @param string $modifier Type of anchor (progressive, constructive, destructive)
+	 * @param string $modifier Type of anchor (progressive, destructive)
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the iconed element
 	 * @return string class name for use with HTML element
@@ -42,7 +42,7 @@ class MobileUI {
 
 	/**
 	 * Get CSS classes for buttons
-	 * @param string $modifier Type of button (progressive, constructive, destructive)
+	 * @param string $modifier Type of button (progressive, destructive)
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the button element
 	 * @return string class name for use with HTML element
@@ -53,7 +53,7 @@ class MobileUI {
 
 	/**
 	 * Get CSS classes for anchors
-	 * @param string $modifier Type of anchor (progressive, constructive, destructive)
+	 * @param string $modifier Type of anchor (progressive, destructive)
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the anchor element
 	 * @return string class name for use with HTML element

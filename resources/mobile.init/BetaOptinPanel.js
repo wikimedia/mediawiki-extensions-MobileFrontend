@@ -23,7 +23,7 @@
 			text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
 			buttons: [
 				new Button( {
-					constructive: true,
+					progressive: true,
 					additionalClassNames: 'optin',
 					label: mw.msg( 'mobile-frontend-panel-ok' )
 				} ).options,
