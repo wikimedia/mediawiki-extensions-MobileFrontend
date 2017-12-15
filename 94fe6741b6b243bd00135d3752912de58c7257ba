@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_b1829000",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2017-12-15T07:19:33Z",
+      "side": 0,
+      "message": "The comma needs to stay I think.",
+      "range": {
+        "startLine": 95,
+        "startChar": 13,
+        "endLine": 95,
+        "endChar": 14
+      },
+      "revId": "94fe6741b6b243bd00135d3752912de58c7257ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
