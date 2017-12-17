@@ -259,7 +259,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					'span', [ 'class' => 'mw-mf-diff-date meta' ],
 					$this->getLanguage()->getHumanTimestamp( $ts )
 				)
-			)->text()
+			)->parse()
 		. Html::closeElement( 'div' );
 	}
 
