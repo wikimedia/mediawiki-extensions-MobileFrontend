@@ -110,7 +110,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 Conditions d'Utilisation]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Êtes-vous sûr de vouloir créer}} une nouvelle page sur {{SITENAME}} ?",
 	"mobile-frontend-editor-placeholder": "Cette section est vide. Soyez le premier  à la compléter !",
-	"mobile-frontend-editor-placeholder-new-page": "Vous êtes en train de créer une nouvelle page sur {{SITENAME}} !",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|}}Vous êtes en train de créer une nouvelle page sur {{SITENAME}} !",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Aperçu</strong> de<span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Redirection vers l'éditeur...",
 	"mobile-frontend-editor-save": "Sauvegarder",
