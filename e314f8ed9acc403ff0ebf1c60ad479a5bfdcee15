@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_4a4024a9",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-18T20:58:01Z",
+      "side": 1,
+      "message": "Won\u0027t this trigger saveBetaMode() on line 163, which means the next line is not needed?",
+      "range": {
+        "startLine": 156,
+        "startChar": 3,
+        "endLine": 156,
+        "endChar": 54
+      },
+      "revId": "e314f8ed9acc403ff0ebf1c60ad479a5bfdcee15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
