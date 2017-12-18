@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var storage = mw.storage,
-		notification,
 		toast = M.require( 'mobile.startup/toast' ),
 		EXPAND_SECTIONS_KEY = 'expandSections',
 		msg = mw.msg,
@@ -13,15 +12,10 @@
 	 * @ignore
 	 */
 	function notify( isPending ) {
-		if ( notification ) {
-			clearTimeout( notification );
-		}
 		if ( isPending ) {
 			toast.showOnPageReload( msg( 'mobile-frontend-settings-save' ) );
 		} else {
-			notification = setTimeout( function () {
-				toast.show( msg( 'mobile-frontend-settings-save' ) );
-			}, 1000 );
+			toast.show( msg( 'mobile-frontend-settings-save' ) );
 		}
 	}
 	/**
