@@ -145,6 +145,12 @@
 		// new toggle switch has been added.
 		$checkbox.hide();
 
+		// listening on checkbox change is required to make the clicking on label working. Otherwise
+		// clicking on label changes the checkbox "checked" state but it's not reflected in the toggle switch
+		$checkbox.on( 'change', function () {
+			toggleSwitch.setValue( enableToggle.isSelected() );
+		} );
+
 		toggleSwitch.on( 'change', function ( value ) {
 			$checkbox.find( 'input' )
 				.prop( 'checked', value );

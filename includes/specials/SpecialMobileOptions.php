@@ -95,29 +95,30 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		// beta settings
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
+			$input = new OOUI\CheckboxInputWidget( [
+				'name' => 'enableBeta',
+				'infusable' => true,
+				'selected' => $context->isBetaGroupMember(),
+				'id' => 'enable-beta-toggle',
+				'value' => '1',
+			] );
 			$fields[] = new OOUI\FieldLayout(
-				new OOUI\CheckboxInputWidget( [
-					'name' => 'enableBeta',
-					'infusable' => true,
-					'selected' => $context->isBetaGroupMember(),
-					'id' => 'enable-beta-toggle',
-					'value' => '1',
-				] ),
+				$input,
 				[
-					'label' => new OOUI\LabelWidget( [
-						'label' => new OOUI\HtmlSnippet(
-							Html::openElement( 'div' ) .
-							Html::element( 'strong', [],
-								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
-							Html::element( 'div', [ 'class' => 'option-description' ],
-								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
-							) .
-							Html::closeElement( 'div' )
-						)
-					] ),
-					'id' => 'beta-field',
-				]
-			);
+				'label' => new OOUI\LabelWidget( [
+					'input' => $input,
+					'label' => new OOUI\HtmlSnippet(
+						Html::openElement( 'div' ) .
+						Html::element( 'strong', [],
+							$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
+						Html::element( 'div', [ 'class' => 'option-description' ],
+							$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
+						) .
+						Html::closeElement( 'div' )
+					)
+				] ),
+				'id' => 'beta-field',
+			] );
 		}
 
 		$fields[] = new OOUI\ButtonInputWidget( [
