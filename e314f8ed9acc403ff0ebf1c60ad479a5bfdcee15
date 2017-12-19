@@ -22,6 +22,30 @@
       "revId": "e314f8ed9acc403ff0ebf1c60ad479a5bfdcee15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_12700aa3",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-19T14:27:05Z",
+      "side": 1,
+      "message": "yes, you\u0027re right, fixed",
+      "parentUuid": "cee8db29_4a4024a9",
+      "range": {
+        "startLine": 156,
+        "startChar": 3,
+        "endLine": 156,
+        "endChar": 54
+      },
+      "revId": "e314f8ed9acc403ff0ebf1c60ad479a5bfdcee15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
