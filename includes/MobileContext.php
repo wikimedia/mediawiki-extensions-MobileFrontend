@@ -1110,6 +1110,9 @@ class MobileContext extends ContextSource {
 	 * Adds analytics log items if the user is in beta mode
 	 *
 	 * Invoked from MobileFrontendHooks::onRequestContextCreateSkin()
+	 *
+	 * Making changes to what this method logs? Make sure you update the
+	 * documentation for the X-Analytics header: https://wikitech.wikimedia.org/wiki/X-Analytics
 	 */
 	public function logMobileMode() {
 		if ( $this->isBetaGroupMember() ) {
