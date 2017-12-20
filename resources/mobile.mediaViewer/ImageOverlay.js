@@ -52,12 +52,10 @@
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
 			thumbnails: [],
 			slideLeftButton: new Icon( {
-				isSmall: true,
 				rotation: 90,
 				name: 'arrow-invert'
 			} ).toHtmlString(),
 			slideRightButton: new Icon( {
-				isSmall: true,
 				rotation: -90,
 				name: 'arrow-invert'
 			} ).toHtmlString()
