@@ -219,12 +219,6 @@ HTML;
 	 * of returnto or, if not set, back to this special page
 	 */
 	private function submitSettingsForm() {
-		$schema = 'MobileOptionsTracking';
-		$schemaRevision = 16934032;
-		$schemaData = [
-			'action' => 'success',
-			'beta' => "nochange",
-		];
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -236,26 +230,11 @@ HTML;
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
 			);
-			$schemaData['action'] = 'error';
-			$schemaData['errorText'] = $errorText;
-			ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
 			$this->addSettingsForm();
 			return;
 		}
 
-		if ( $request->getBool( 'enableBeta' ) ) {
-			$group = 'beta';
-			if ( !$context->isBetaGroupMember() ) {
-				// The request was to turn on beta
-				$schemaData['beta'] = "on";
-			}
-		} else {
-			$group = '';
-			if ( $context->isBetaGroupMember() ) {
-				// beta was turned off
-				$schemaData['beta'] = "off";
-			}
-		}
+		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
 		$context->setMobileMode( $group );
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
 		if ( $returnToTitle ) {
