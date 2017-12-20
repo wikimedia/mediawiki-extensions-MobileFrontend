@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_01b8b673",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1282,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-20T02:39:02Z",
+      "side": 1,
+      "message": "We should explain why we are doing this by providing some additional context e.g. a phabricator ticket",
+      "revId": "21882bbd26ed22ce2c932d526f888cc0c1a163c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
