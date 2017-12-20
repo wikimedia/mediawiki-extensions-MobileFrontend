@@ -28,14 +28,14 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
-	public function test_showing_descriptions_is_disabled_by_default() {
+	public function testShowingDescriptionsIsDisabledByDefault() {
 		$this->assertFalse( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
 	}
 
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
-	public function test_showing_descriptions_can_be_enabled() {
+	public function testShowingDescriptionsCanBeEnabled() {
 		$this->setMwGlobals( [
 			'wgMFUseWikibase' => true,
 		] );
@@ -63,7 +63,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 *
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
-	public function test_it_throws_an_exception_if_feature_is_invalid( $feature ) {
+	public function testItThrowsAnExceptionIfFailureIsInvalid( $feature ) {
 		$this->context->shouldShowWikibaseDescriptions( $feature );
 	}
 }

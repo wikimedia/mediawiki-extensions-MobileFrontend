@@ -92,7 +92,7 @@ class MobileSpecialPage extends SpecialPage {
 		$out = $this->getOutput();
 		$rl = $out->getResourceLoader();
 		$title = $this->getPageTitle();
-		list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+		list( $name, ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		$id = strtolower( $name );
 		// FIXME: These names should be more specific
 		$specialStyleModuleName = 'mobile.special.' . $id . '.styles';

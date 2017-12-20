@@ -94,7 +94,8 @@ class ApiMobileView extends ApiBase {
 		$moduleName = $this->getModuleName();
 
 		if ( $this->offset === 0 && $this->maxlen === 0 ) {
-			$this->offset = -1; // Disable text splitting
+			// Disable text splitting
+			$this->offset = -1;
 		} elseif ( $this->maxlen === 0 ) {
 			$this->maxlen = PHP_INT_MAX;
 		}
@@ -282,7 +283,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates and validates a title
-	 * @param string $name
+	 * @param string $name Title content
 	 * @return Title
 	 */
 	protected function makeTitle( $name ) {
@@ -309,7 +310,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Wrapper that returns a page image for a given title
 	 *
-	 * @param Title $title
+	 * @param Title $title Page title
 	 * @return bool|File
 	 */
 	protected function getPageImage( Title $title ) {
@@ -319,8 +320,8 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Wrapper for wfFindFile
 	 *
-	 * @param Title|string $title
-	 * @param array $options
+	 * @param Title|string $title Page title
+	 * @param array $options Options for wfFindFile (see RepoGroup::findFile)
 	 * @return bool|File
 	 */
 	protected function findFile( $title, $options = [] ) {
@@ -351,9 +352,11 @@ class ApiMobileView extends ApiBase {
 	 */
 	private function stringSplitter( $text ) {
 		if ( $this->offset < 0 ) {
-			return $text; // NOOP - string splitting mode is off
+			// NOOP - string splitting mode is off
+			return $text;
 		} elseif ( $this->maxlen < 0 ) {
-			return ''; // Limit exceeded
+			// Limit exceeded
+			return '';
 		}
 		$textLen = mb_strlen( $text );
 		$start = $this->offset;
@@ -444,8 +447,8 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Performs a page parse
-	 * @param WikiPage $wp
-	 * @param ParserOptions $parserOptions
+	 * @param WikiPage $wp Wiki page object
+	 * @param ParserOptions $parserOptions Options for parser
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
 	 * @return ParserOutput|null
@@ -461,7 +464,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates a WikiPage from title
-	 * @param Title $title
+	 * @param Title $title Page title
 	 * @return WikiPage
 	 */
 	protected function makeWikiPage( Title $title ) {
@@ -470,7 +473,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates a ParserOptions instance
-	 * @param WikiPage $wp
+	 * @param WikiPage $wp WikiPage object
 	 * @return ParserOptions
 	 */
 	protected function makeParserOptions( WikiPage $wp ) {
@@ -485,8 +488,8 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Parses section data
 	 * @param string $html representing the entire page
-	 * @param Title $title
-	 * @param ParserOutput $parserOutput
+	 * @param Title $title Page title
+	 * @param ParserOutput $parserOutput Options for parser
 	 * @param int $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
@@ -770,7 +773,8 @@ class ApiMobileView extends ApiBase {
 					: $file->getWidth();
 			}
 			if ( !$resize ) {
-				$resize['width'] = $resize['height'] = 50; // Default
+				// Default
+				$resize['width'] = $resize['height'] = 50;
 			}
 			$thumb = $file->transform( $resize );
 			if ( !$thumb ) {

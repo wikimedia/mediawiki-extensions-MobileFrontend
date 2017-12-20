@@ -35,7 +35,7 @@
 			saveButton: new Button( {
 				block: true,
 				additionalClassNames: 'save-button',
-				constructive: true,
+				progressive: true,
 				label: mw.msg( 'mobile-frontend-editor-save' )
 			} ).options,
 			title: undefined,

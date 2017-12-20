@@ -79,7 +79,7 @@ class InlineDiffFormatter extends TableDiffFormatter {
 
 	/**
 	 * Adds a forced blank to line, if the line is empty.
-	 * @param string $line
+	 * @param string $line Line to edit
 	 *
 	 * @return string
 	 */

@@ -29,15 +29,19 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		'wikidata.org',
 		'mediawiki.org',
 		'wikimediafoundation.org',
-		'local.wmftest.net' // local vagrant instances
+		// local vagrant instances
+		'local.wmftest.net'
 	];
 	/**
 	 * @var string[]
 	 */
 	private $wmfMultiDomainWikiHosts = [
-		'.wikimedia.org', // commons, office, meta, outreach, wikimania, incubator, etc...
-		'.beta.wmflabs.org', // beta cluster
-		'.wmflabs.org' // all other labs
+		// commons, office, meta, outreach, wikimania, incubator, etc...
+		'.wikimedia.org',
+		// beta cluster
+		'.beta.wmflabs.org',
+		// all other labs
+		'.wmflabs.org'
 	];
 
 	/**

@@ -35,8 +35,8 @@ class MobilePage {
 
 	/**
 	 * Constructor
-	 * @param Title $title
-	 * @param File|bool $file
+	 * @param Title $title Page title
+	 * @param File|bool $file Page image file
 	 */
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;
@@ -118,7 +118,7 @@ class MobilePage {
 
 	/**
 	 * Get a placeholder div container for thumbnails
-	 * @param string $className
+	 * @param string $className Class for element
 	 * @param string $iconClassName controls size of thumbnail, defaults to empty string
 	 * @return string
 	 */

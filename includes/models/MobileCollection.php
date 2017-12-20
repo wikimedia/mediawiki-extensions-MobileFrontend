@@ -27,7 +27,7 @@ class MobileCollection implements IteratorAggregate, Countable {
 	/**
 	 * Adds a page to the collection.
 	 *
-	 * @param MobilePage $page
+	 * @param MobilePage $page Page to add
 	 */
 	public function add( MobilePage $page ) {
 		$this->pages[] = $page;

@@ -40,8 +40,8 @@ class MobileFrontendHooks {
 	/**
 	 * Obtain the default mobile skin
 	 *
-	 * @param IContextSource $context
-	 * @param MobileContext $mobileContext
+	 * @param IContextSource $context ContextSource interface
+	 * @param MobileContext $mobileContext MobileContext object
 	 * @return Skin
 	 */
 	protected static function getDefaultMobileSkin( IContextSource $context,
@@ -64,8 +64,9 @@ class MobileFrontendHooks {
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *
-	 * @param IContextSource $context
-	 * @param Skin|null|string &$skin
+	 * @param IContextSource $context The RequestContext object the skin is being created for.
+	 * @param Skin|null|string &$skin A variable reference you may set a Skin instance or string
+	 *                                key on to override the skin that will be used for the context.
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
@@ -131,12 +132,12 @@ class MobileFrontendHooks {
 	 * MediaWikiPerformAction hook handler (enable mwui for all pages)
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformAction
 	 *
-	 * @param OutputPage $output
-	 * @param Article $article
-	 * @param Title $title
-	 * @param User $user
-	 * @param RequestContext $request
-	 * @param MediaWiki $wiki
+	 * @param OutputPage $output OutputPage object
+	 * @param Article $article Article object
+	 * @param Title $title Page title
+	 * @param User $user User performing action
+	 * @param RequestContext $request RequestContext object
+	 * @param MediaWiki $wiki MediaWiki object
 	 * @return bool
 	 */
 	public static function onMediaWikiPerformAction( $output, $article, $title,
@@ -154,8 +155,8 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param SkinTemplate &$skin
-	 * @param QuickTemplate &$tpl
+	 * @param SkinTemplate &$skin SkinTemplate object
+	 * @param QuickTemplate &$tpl QuickTemplate object
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
@@ -163,6 +164,17 @@ class MobileFrontendHooks {
 		return true;
 	}
 
+	/**
+	 * SkinAfterBottomScripts hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinAfterBottomScripts
+	 *
+	 * Adds an inline script for lazy loading the images in Grade C browsers.
+	 *
+	 * @param Skin $sk Skin object
+	 * @param string &$html bottomScripts text. Append to $text to add additional
+	 *                      text/scripts after the stock bottom scripts.
+	 * @return bool
+	 */
 	public static function onSkinAfterBottomScripts( $sk, &$html ) {
 		$context = MobileContext::singleton();
 
@@ -184,7 +196,7 @@ class MobileFrontendHooks {
 	 * Also enables Related Articles in the footer in the beta mode.
 	 * Adds inline script to allow opening of sections while JS is still loading
 	 *
-	 * @param OutputPage &$out
+	 * @param OutputPage &$out the OutputPage object to which wikitext is added
 	 * @param string &$text the HTML to be wrapped inside the #mw-content-text element
 	 * @return bool
 	 */
@@ -204,7 +216,7 @@ class MobileFrontendHooks {
 		$displayMobileView = $context->shouldDisplayMobileView();
 		$alwaysUseFormatter = $config->get( 'MFAlwaysUseMobileFormatter' );
 		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseFormatter ) ) {
-			$text = ExtMobileFrontend::DOMParse( $out, $text );
+			$text = ExtMobileFrontend::domParse( $out, $text );
 			if ( !$title->isMainPage() ) {
 				$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
 			}
@@ -217,9 +229,9 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
 	 * Ensures URLs are handled properly for select special pages.
-	 * @param OutputPage $out
-	 * @param string &$redirect
-	 * @param string &$code
+	 * @param OutputPage $out OutputPage object
+	 * @param string &$redirect URL string, modifiable
+	 * @param string &$code HTTP code (eg '301' or '302'), modifiable
 	 * @return bool
 	 */
 	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
@@ -284,8 +296,9 @@ class MobileFrontendHooks {
 	 * ResourceLoaderTestModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
 	 *
-	 * @param array &$testModules
-	 * @param ResourceLoader &$resourceLoader
+	 * @param array &$testModules array of javascript testing modules,
+	 *                            keyed by framework (e.g. 'qunit').
+	 * @param ResourceLoader &$resourceLoader ResourceLoader object
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules,
@@ -346,8 +359,9 @@ class MobileFrontendHooks {
 	 * GetCacheVaryCookies hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *
-	 * @param OutputPage $out
-	 * @param array &$cookies
+	 * @param OutputPage $out OutputPage object
+	 * @param array &$cookies array of cookies name, add a value to it
+	 *                        if you want to add a cookie that have to vary cache options
 	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
@@ -360,7 +374,8 @@ class MobileFrontendHooks {
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
 
 		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
-			$cookies[] = MobileContext::OPTIN_COOKIE_NAME; // beta cookie
+			// beta cookie
+			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
 		}
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
 		// only for HTTP but we don't vary on protocol.
@@ -399,7 +414,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
-	 * @param array &$vars
+	 * @param array &$vars Array of variables to be added into the output of the startup module.
 	 * @return bool
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
@@ -468,7 +483,7 @@ class MobileFrontendHooks {
 	 * @param array &$list list of special page classes
 	 * @return bool hook return value
 	 */
-	public static function onSpecialPage_initList( &$list ) {
+	public static function onSpecialPageInitList( &$list ) {
 		$ctx = MobileContext::singleton();
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
@@ -498,7 +513,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
-	 * @param array &$tags
+	 * @param array &$tags The list of tags. Add your extension's tags to this array.
 	 * @return bool
 	 */
 	public static function onListDefinedTags( &$tags ) {
@@ -511,10 +526,10 @@ class MobileFrontendHooks {
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
-	 * @param RecentChange $rc
+	 * @param RecentChange $rc RecentChange object
 	 * @return bool
 	 */
-	public static function onRecentChange_save( RecentChange $rc ) {
+	public static function onRecentChangeSave( RecentChange $rc ) {
 		$context = MobileContext::singleton();
 		$userAgent = $context->getRequest()->getHeader( "User-agent" );
 		$logType = $rc->getAttribute( 'rc_log_type' );
@@ -570,8 +585,8 @@ class MobileFrontendHooks {
 	 * $wgSecureLogin == true - but only when using the
 	 * mobile site.
 	 *
-	 * @param SpecialPage $special
-	 * @param string $subpage
+	 * @param SpecialPage $special SpecialPage object
+	 * @param string $subpage subpage name
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
@@ -603,8 +618,8 @@ class MobileFrontendHooks {
 	 * Used here to handle watchlist actions made by anons to be handled after
 	 * login or account creation.
 	 *
-	 * @param User &$currentUser
-	 * @param string &$injected_html
+	 * @param User &$currentUser the user object that was created on login
+	 * @param string &$injected_html From 1.13, any HTML to inject after the login success message.
 	 * @return bool
 	 */
 	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
@@ -660,8 +675,8 @@ class MobileFrontendHooks {
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
-	 * @param OutputPage &$out
-	 * @param Skin &$sk
+	 * @param OutputPage &$out The OutputPage object.
+	 * @param Skin &$sk Skin object that will be used to generate the page, added in 1.13.
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
@@ -805,8 +820,8 @@ class MobileFrontendHooks {
 	 * GetPreferences hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
 	 *
-	 * @param User $user
-	 * @param array &$preferences
+	 * @param User $user User whose preferences are being modified
+	 * @param array &$preferences Preferences description array, to be fed to an HTMLForm object
 	 *
 	 * @return bool
 	 */
@@ -840,8 +855,8 @@ class MobileFrontendHooks {
 	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
 	 *
 	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
-	 * @param CentralAuthUser $centralUser
-	 * @param array &$data
+	 * @param CentralAuthUser $centralUser CentralAuthUser object
+	 * @param array &$data Redirect data
 	 *
 	 * @return bool
 	 */
@@ -858,7 +873,7 @@ class MobileFrontendHooks {
 	 * CentralAuthSilentLoginRedirect hook handler
 	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
 	 * @see SpecialCentralLogin in CentralAuth extension
-	 * @param CentralAuthUser $centralUser
+	 * @param CentralAuthUser $centralUser CentralAuthUser object
 	 * @param string &$url to redirect to
 	 * @param array $info token information
 	 *
@@ -1085,8 +1100,8 @@ class MobileFrontendHooks {
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
 	 *
-	 * @param OutputPage $outputPage
-	 * @param ParserOutput $po
+	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
+	 * @param ParserOutput $po a ParserOutput object.
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
@@ -1125,7 +1140,7 @@ class MobileFrontendHooks {
 	 *
 	 * @return bool
 	 */
-	public static function onHTMLFileCache_useFileCache() {
+	public static function onHTMLFileCacheUseFileCache() {
 		return !MobileContext::singleton()->shouldDisplayMobileView();
 	}
 
@@ -1168,13 +1183,19 @@ class MobileFrontendHooks {
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages = array_merge( $messages,
 			[
-				'mobile-frontend-watchlist-signup-action', // watchstart sign up CTA
-				'mobile-frontend-watchlist-purpose', // Watchlist and watchstar sign in CTA
-				'mobile-frontend-donate-image-anon', // Uploads link
-				'mobile-frontend-edit-login-action', // Edit button sign in CTA
-				'mobile-frontend-edit-signup-action', // Edit button sign-up CTA
+				// watchstart sign up CTA
+				'mobile-frontend-watchlist-signup-action',
+				// Watchlist and watchstar sign in CTA
+				'mobile-frontend-watchlist-purpose',
+				// Uploads link
+				'mobile-frontend-donate-image-anon',
+				// Edit button sign in CTA
+				'mobile-frontend-edit-login-action',
+				// Edit button sign-up CTA
+				'mobile-frontend-edit-signup-action',
 				'mobile-frontend-donate-image-login-action',
-				'mobile-frontend-generic-login-new', // default message
+				// default message
+				'mobile-frontend-generic-login-new',
 			]
 		);
 	}
@@ -1232,7 +1253,7 @@ class MobileFrontendHooks {
 	/**
 	 * Handler for the AuthChangeFormFields hook to add a logo on top of
 	 * the login screen. This is the AuthManager equivalent of changeUserLoginCreateForm.
-	 * @param AuthenticationRequest[] $requests
+	 * @param AuthenticationRequest[] $requests AuthenticationRequest objects array
 	 * @param array $fieldInfo Field description as given by AuthenticationRequest::mergeFieldInfo
 	 * @param array &$formDescriptor A form descriptor suitable for the HTMLForm constructor
 	 * @param string $action One of the AuthManager::ACTION_* constants
@@ -1276,8 +1297,8 @@ class MobileFrontendHooks {
 
 	/**
 	 * Add the base mobile site URL to the siteinfo API output.
-	 * @param ApiQuerySiteinfo $module
-	 * @param array &$result
+	 * @param ApiQuerySiteinfo $module ApiQuerySiteinfo object
+	 * @param array &$result Api result array
 	 */
 	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $module, array &$result ) {
 		global $wgCanonicalServer;

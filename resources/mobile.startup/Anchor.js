@@ -17,8 +17,6 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {boolean} defaults.progressive is progressive action
-		 * @cfg {boolean} defaults.constructive is constructive action.
-		 *   This option is deprecated. Please use `progressive`.
 		 * @cfg {boolean} defaults.destructive is destructive action
 		 * @cfg {string} defaults.additionalClassNames Additional class name(s).
 		 * @cfg {string} defaults.href url
@@ -27,7 +25,6 @@
 		defaults: {
 			progressive: undefined,
 			destructive: undefined,
-			constructive: undefined,
 			additionalClassNames: '',
 			href: undefined,
 			label: undefined

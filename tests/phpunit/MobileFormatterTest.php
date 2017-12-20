@@ -64,7 +64,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$t = Title::newFromText( 'Mobile' );
-		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
+
+		// "yay" to Windows!
+		$input = str_replace( "\r", '', $input );
+
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t );
 		if ( $callback ) {
 			$callback( $mf );

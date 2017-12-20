@@ -123,7 +123,8 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			[ [ 1, 2 ], [ 11 ], '1|1|2|1|11|2|1' ],
 			[ [ 1, 3, 4, 5 ], [], '1|3-5|4' ],
 			[ [ 10 ], [], '10-' ],
-			[ [], [ '20-' ], '20-' ], # https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
+			# https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
+			[ [], [ '20-' ], '20-' ],
 		];
 	}
 
@@ -337,13 +338,15 @@ Text 2
 					'sections' => 1,
 					'onlyrequestedsections' => true,
 
-					'prop' => 'namespace', // When the namespace is requested...
+					// When the namespace is requested...
+					'prop' => 'namespace',
 				] + $baseIn,
 				[
 					'mainpage' => '',
 					'sections' => [],
 
-					'ns' => 0, // ... then it is returned.
+					// ... then it is returned.
+					'ns' => 0,
 				],
 			]
 		];
@@ -422,7 +425,9 @@ Text 2
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbwidth' => 200,
-					'type' => 'image/svg' // contrived but needed for testing
+
+					// contrived but needed for testing
+					'type' => 'image/svg'
 				],
 				[
 					'sections' => [],
@@ -439,7 +444,9 @@ Text 2
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbheight' => 200,
-					'type' => 'image/svg' // contrived but needed for testing
+
+					// contrived but needed for testing
+					'type' => 'image/svg'
 				],
 				[
 					'sections' => [],
@@ -456,7 +463,9 @@ Text 2
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbwidth' => 800,
-					'type' => 'image/svg' // contrived but needed for testing
+
+					// contrived but needed for testing
+					'type' => 'image/svg'
 				],
 				[
 					'sections' => [],
@@ -473,7 +482,9 @@ Text 2
 					'text' => '',
 					'prop' => 'thumb',
 					'thumbheight' => 800,
-					'type' => 'image/svg' // contrived but needed for testing
+
+					// contrived but needed for testing
+					'type' => 'image/svg'
 				],
 				[
 					'sections' => [],
@@ -562,7 +573,9 @@ Text 2
 			'onlyrequestedsections' => '',
 			'sections' => 1,
 			'prop' => 'protection|pageprops',
-			'pageprops' => 'foo', // intentionally nonexistent
+
+			// intentionally nonexistent
+			'pageprops' => 'foo',
 		] );
 
 		$context = new RequestContext();
@@ -577,9 +590,11 @@ Text 2
 		$pageprops = $result['mobileview']['pageprops'];
 
 		$this->assertTrue( $protection[ApiResult::META_TYPE] === 'assoc' );
-		$this->assertTrue( count( $protection ) === 1 ); // the only element is the array type flag
+		// the only element is the array type flag
+		$this->assertTrue( count( $protection ) === 1 );
 		$this->assertTrue( $pageprops[ApiResult::META_TYPE] === 'assoc' );
-		$this->assertTrue( count( $pageprops ) === 1 ); // the only element is the array type flag
+		// the only element is the array type flag
+		$this->assertTrue( count( $pageprops ) === 1 );
 	}
 
 	/**

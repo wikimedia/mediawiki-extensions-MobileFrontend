@@ -53,11 +53,21 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		return $htmlForm;
 	}
 
+	/**
+	 * @param string $par Key of section to display
+	 *
+	 * @throws MWException
+	 * @throws ReadOnlyError
+	 * @throws UserNotLoggedIn
+	 */
 	public function execute( $par = '' ) {
 		$this->setHeaders();
 		$this->outputHeader();
 		$out = $this->getOutput();
-		$out->disallowUserJs(); // Prevent hijacked user scripts from sniffing passwords etc.
+
+		// Prevent hijacked user scripts from sniffing passwords etc.
+		$out->disallowUserJs();
+
 		$this->requireLogin( 'prefsnologintext2' );
 		$this->checkReadOnly();
 
@@ -89,6 +99,9 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		}
 	}
 
+	/**
+	 * @return string[]
+	 */
 	public function getSubpagesForPrefixSearch() {
 		return $this->validTabs;
 	}

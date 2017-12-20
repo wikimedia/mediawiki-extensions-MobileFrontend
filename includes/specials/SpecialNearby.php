@@ -47,11 +47,15 @@ class SpecialNearby extends MobileSpecialPage {
 				),
 				'noscript'
 			) .
-			Html::closeElement( 'div' ); // #mw-mf-nearby
+			// #mw-mf-nearby
+			Html::closeElement( 'div' );
 
 		$output->addHTML( $html );
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getGroupName() {
 		return 'pages';
 	}
