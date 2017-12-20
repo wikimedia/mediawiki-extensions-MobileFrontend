@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_6d80904c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-20T21:43:36Z",
+      "side": 1,
+      "message": "Would be nice to inclued at least one device OS, version, and the browser that\u0027s being used.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "49727cb6fc0a9ba6dc0740b011ea8f6e7072e60a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
