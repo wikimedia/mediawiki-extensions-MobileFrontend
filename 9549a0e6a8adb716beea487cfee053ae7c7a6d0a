@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_e3166ff5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-21T06:18:30Z",
+      "side": 1,
+      "message": "Doing this adds more complexity but adds future flexibility (say if the class name changed or the community adopted a new template.",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_c3136b04",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-21T06:18:30Z",
+      "side": 1,
+      "message": "This may be overly complex and ripe for refactoring. I was trying to avoid using XPath here.",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
