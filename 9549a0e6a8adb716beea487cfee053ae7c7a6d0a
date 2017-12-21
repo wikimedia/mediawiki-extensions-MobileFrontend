@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cee8db29_62d9b62c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:38:19Z",
+      "side": 1,
+      "message": "A little documentation about the intended use of the variable would be helpful.",
+      "parentUuid": "cee8db29_e3166ff5",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cee8db29_c3136b04",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 4
@@ -30,6 +48,64 @@
       "writtenOn": "2017-12-21T06:18:30Z",
       "side": 1,
       "message": "This may be overly complex and ripe for refactoring. I was trying to avoid using XPath here.",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_e2f4a685",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:38:19Z",
+      "side": 1,
+      "message": "Would be nice to indicate why we\u0027re avoiding XPath.",
+      "parentUuid": "cee8db29_c3136b04",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_622ff6f3",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:38:19Z",
+      "side": 1,
+      "message": "So any table element can be considered as an infobox?",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_e2cdc663",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:38:19Z",
+      "side": 1,
+      "message": "This will fail if we\u0027re dealing with multiple classes because the opening bracket is only created once at the beginning of the first class (end of line 350). Maybe we should use `implode` instead.",
+      "range": {
+        "startLine": 351,
+        "startChar": 2,
+        "endLine": 353,
+        "endChar": 3
+      },
       "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
