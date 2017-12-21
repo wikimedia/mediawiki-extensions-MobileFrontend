@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_e2c6664d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:27:29Z",
+      "side": 1,
+      "message": "Nirzar mentioned iOS in the comments. Do we have this problem for both Android and iOS?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "76bde213ebc6b80c7a9c9186b90f991200c0b117",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_22c16e34",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-21T17:27:29Z",
+      "side": 1,
+      "message": "Can we bail instead? Set a flag on click and clear it after saving? If the flag is present on next clicks, we ignore those clicks.",
+      "revId": "76bde213ebc6b80c7a9c9186b90f991200c0b117",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
