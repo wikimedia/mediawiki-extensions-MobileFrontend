@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_e3ff8fa5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-21T05:56:37Z",
+      "side": 1,
+      "message": "I was wondering if it\u0027s worth making a protected array variable infoboxWrappedClasses to allow us to add other classes at a later date as we discover them or whether that would be overkill. Doing so would mean this becomes a check against every item in the array and we\u0027d need to programmatically generate the xpath queries below.\n\nAlternatively, this should probably be in a constant.",
+      "revId": "0cc459c49a1750bb0c242883ee523cb423bd9d0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
