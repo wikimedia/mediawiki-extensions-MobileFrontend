@@ -39,6 +39,24 @@
       "revId": "76bde213ebc6b80c7a9c9186b90f991200c0b117",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_a2fa9e71",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-21T17:36:57Z",
+      "side": 1,
+      "message": "My initial though was to use a flag to lock the change. But there are many possible ways to change the toggleSwitch:\n - user can click on the checkbox \n - click on top label which will toggle the ToggleSwitch\n - click on wrapped label which toggle the checkbox which will toggle the Switch (line 147)\n - click on the toggle\n - use keyboard to toggle the switch.\n\nAlso if we bail here, `change` event is already called after \u0027setValue()`, there is no way to stop the even, and after calling setValue() toggle switch will animate to !value state regardless we block it here.\n\noverwriting the setValue() covers all states (as set value both changes the `this.value` and starts toggle animation.",
+      "parentUuid": "cee8db29_22c16e34",
+      "revId": "76bde213ebc6b80c7a9c9186b90f991200c0b117",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
