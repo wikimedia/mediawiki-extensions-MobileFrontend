@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_683fded3",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-12-21T02:12:59Z",
+      "side": 1,
+      "message": "If the toggle switch is clicked twice quickly what will happen?",
+      "revId": "2f55c07bde1de083df9dc74ec3ec4e4c10da686e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
