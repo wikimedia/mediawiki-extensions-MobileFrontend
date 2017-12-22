@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_a36bbd81",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-12-22T14:58:46Z",
+      "side": 1,
+      "message": "Do you also plan on styling this class according to the mocks?",
+      "revId": "47ed4a63d9cff11acb49fa98a973ebf676e63ad7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
