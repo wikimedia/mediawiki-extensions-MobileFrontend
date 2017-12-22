@@ -65,8 +65,16 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param Title|string $title The page to link to or a string to show
 	 */
 	protected function renderHeaderBar( $title ) {
+		$namespaceLabel = '';
 		if ( $title instanceof Title ) {
 			$headerTitle = $this->getHeaderBarLink( $title );
+
+			if ( MWNamespace::isTalk( $title->getNamespace() ) ) {
+				$namespaceLabel = Html::element( 'span',
+					[ 'class' => 'mw-mf-namespace' ],
+					$title->getNsText() . ': ' );
+			}
+
 		} else {
 			// manually style it as a userlink
 			$headerTitle = Html::element(
@@ -77,7 +85,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		}
 		$this->getOutput()->addHtml(
 			Html::openElement( 'div', [ 'class' => 'content-header' ] ) .
-			Html::openElement( 'h2', [] ) .
+			Html::openElement( 'h2', [ 'class' => 'mw-mf-title-wrapper' ] ) .
+				$namespaceLabel .
 				$headerTitle .
 				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
