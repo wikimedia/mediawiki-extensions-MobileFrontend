@@ -16,6 +16,24 @@
       "revId": "47ed4a63d9cff11acb49fa98a973ebf676e63ad7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_03cd4988",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-22T15:12:51Z",
+      "side": 1,
+      "message": "as I wrote in phab, styling this will take much more time than 3 points as we have to update styles on all pages, not only the history page. We have an epic to apply new styles and for now Nirzar is happy to do only the logic for now and styling later https://phabricator.wikimedia.org/T147722#3389019",
+      "parentUuid": "cee8db29_a36bbd81",
+      "revId": "47ed4a63d9cff11acb49fa98a973ebf676e63ad7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
