@@ -29,7 +29,9 @@ class MockApiMobileView extends ApiMobileView {
 		if ( !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
 			$po->setTOCEnabled( false );
 		}
-		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText( [ 'allowTOC' => false ] ) ) );
+		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText( [
+			'allowTOC' => false, 'unwrap' => true,
+		] ) ) );
 
 		return $po;
 	}
@@ -40,7 +42,9 @@ class MockApiMobileView extends ApiMobileView {
 
 	protected function makeParserOptions( WikiPage $wikiPage ) {
 		$popt = new ParserOptions( $this->getUser() );
-		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) ) {
+		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) &&
+			!defined( 'ParserOutput::SUPPORTS_UNWRAP_TRANSFORM' )
+		) {
 			// Let the client handle it.
 			$popt->setWrapOutputClass( false );
 		}
