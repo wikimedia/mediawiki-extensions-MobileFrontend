@@ -22,6 +22,30 @@
       "revId": "1000b1f0a2c590adbb785e3992658984da4f3f01",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_9163623b",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-12-22T13:42:52Z",
+      "side": 1,
+      "message": "Phab says Talk pages but thats a good point to include all talk pages (and I found that there are many talk namespaces)",
+      "parentUuid": "cee8db29_101470eb",
+      "range": {
+        "startLine": 72,
+        "startChar": 34,
+        "endLine": 72,
+        "endChar": 41
+      },
+      "revId": "1000b1f0a2c590adbb785e3992658984da4f3f01",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
