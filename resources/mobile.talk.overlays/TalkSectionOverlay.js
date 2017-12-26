@@ -113,7 +113,8 @@
 					action: 'edit',
 					title: this.options.title,
 					section: this.options.id,
-					appendtext: val
+					appendtext: val,
+					redirect: true
 				} ).done( function () {
 					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ) );
 					// invalidate the cache
