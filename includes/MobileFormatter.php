@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileFormatter.php
- */
 
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;

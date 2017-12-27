@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileMenu.php
- */
 
 /**
  * Special page designed for rendering a skin's menu without an article

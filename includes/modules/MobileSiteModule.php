@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileSiteModule.php
- */
 
 /**
  * Alternate of ResourceLoaderSiteModule for mobile web.

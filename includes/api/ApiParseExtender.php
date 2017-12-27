@@ -1,7 +1,4 @@
 <?php
-/**
- * ApiParseExtender.php
- */
 
 /**
  * Extends API action=parse with mobile goodies

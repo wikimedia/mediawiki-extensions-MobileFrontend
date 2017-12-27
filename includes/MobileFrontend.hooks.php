@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileFrontend.hooks.php
- */
 
 use MediaWiki\Auth\AuthManager;
 

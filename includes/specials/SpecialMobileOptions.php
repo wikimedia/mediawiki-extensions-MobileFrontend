@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileOptions.php
- */
 
 /**
  * Adds a special page with mobile specific preferences
