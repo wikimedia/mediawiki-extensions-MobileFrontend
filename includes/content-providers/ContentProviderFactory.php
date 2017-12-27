@@ -11,8 +11,6 @@ class ContentProviderFactory {
 	const MCS_API = 'MobileFrontend\\ContentProviders\\McsContentProvider';
 
 	/**
-	 * Create an instance of IContentProvider
-	 *
 	 * @param GlobalVarConfig $config to allow config specific behaviour
 	 * @param OutputPage $out to allow the addition of modules and styles
 	 *  as required by the content

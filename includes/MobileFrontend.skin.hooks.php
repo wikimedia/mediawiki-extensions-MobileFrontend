@@ -67,7 +67,7 @@ JAVASCRIPT;
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
 	 * Note: This is called by a hook in the WikimediaMessages extension.
 	 *
-	 * @param Skin $sk Skin object
+	 * @param Skin $sk
 	 * @param string $urlMsgKey Key of i18n message containing terms of use URL (optional)
 	 * @return null|string
 	 */
@@ -177,8 +177,8 @@ JAVASCRIPT;
 
 	/**
 	 * Prepares the footer for the skins serving the desktop and mobile sites.
-	 * @param Skin $skin Skin object
-	 * @param QuickTemplate $tpl QuickTemplate object
+	 * @param Skin $skin
+	 * @param QuickTemplate $tpl
 	 */
 	public static function prepareFooter( $skin, $tpl ) {
 		$title = $skin->getTitle();
@@ -197,11 +197,11 @@ JAVASCRIPT;
 
 	/**
 	 * Appends a mobile view link to the desktop footer
-	 * @param Skin $sk Skin object
-	 * @param QuickTemplate $tpl QuickTemplate object
-	 * @param MobileContext $ctx MobileContext object
+	 * @param Skin $sk
+	 * @param QuickTemplate $tpl
+	 * @param MobileContext $ctx
 	 * @param Title $title Page title
-	 * @param WebRequest $req Request
+	 * @param WebRequest $req
 	 */
 	public static function desktopFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,
 		Title $title, WebRequest $req
@@ -226,11 +226,11 @@ JAVASCRIPT;
 
 	/**
 	 * Prepares links used in the mobile footer
-	 * @param Skin $sk Skin object
-	 * @param QuickTemplate $tpl QuickTemplate object
-	 * @param MobileContext $ctx MobileContext object
+	 * @param Skin $sk
+	 * @param QuickTemplate $tpl
+	 * @param MobileContext $ctx
 	 * @param Title $title Page title
-	 * @param WebRequest $req Request
+	 * @param WebRequest $req
 	 * @return QuickTemplate
 	 */
 	protected static function mobileFooter( Skin $sk, QuickTemplate $tpl, MobileContext $ctx,

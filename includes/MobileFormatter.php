@@ -68,8 +68,6 @@ class MobileFormatter extends HtmlFormatter {
 	const SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX = 'showFirstParagraphBeforeInfobox';
 
 	/**
-	 * Constructor
-	 *
 	 * @param string $html Text to process
 	 * @param Title $title Title to which $html belongs
 	 */
@@ -91,7 +89,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Creates and returns a MobileFormatter
 	 *
-	 * @param MobileContext $context MobileContext object
+	 * @param MobileContext $context
 	 * @param IContentProvider $provider ContentProvider interface
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
@@ -642,8 +640,8 @@ class MobileFormatter extends HtmlFormatter {
 	 * that the section bodies are clearly defined (to be "expandable" for
 	 * example).
 	 *
-	 * @param DOMDocument $doc DOM document
-	 * @param DOMElement $headings The headings returned by
+	 * @param DOMDocument $doc
+	 * @param DOMElement[] $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section
 	 */
@@ -777,7 +775,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
 	 * obviously connected to being editable.
 	 *
-	 * @param DOMElement $headings Heading elements
+	 * @param DOMElement[] $headings Heading elements
 	 */
 	protected function makeHeadingsEditable( array $headings ) {
 		foreach ( $headings as $heading ) {
