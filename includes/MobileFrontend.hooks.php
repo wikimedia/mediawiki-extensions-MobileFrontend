@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileFrontend.hooks.php
- */
 
 use MediaWiki\Auth\AuthManager;
 
@@ -905,7 +902,7 @@ class MobileFrontendHooks {
 		self::registerMobileLoggingSchemasModule( $resourceLoader );
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
-		if ( class_exists( \VisualEditorHooks::class ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
 			$resourceLoader->register( [
 				'mobile.editor.ve' => $resourceBoilerplate + [
 					'dependencies' => [
@@ -1038,7 +1035,7 @@ class MobileFrontendHooks {
 		$schemaMobileWebMainMenuClickTracking = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
-		if ( class_exists( \EventLogging::class ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' ) ) {
 			// schema.Edit is provided by WikimediaEvents
 			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
 				$schemaEdit += [
