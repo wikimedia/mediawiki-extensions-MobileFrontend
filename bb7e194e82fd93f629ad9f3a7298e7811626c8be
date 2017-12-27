@@ -104,6 +104,52 @@
     },
     {
       "key": {
+        "uuid": "cee8db29_4bc3d88c",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-12-27T17:27:07Z",
+      "side": 1,
+      "message": "Below it says \"WikiPage object\", here a space is added. Why?",
+      "range": {
+        "startLine": 447,
+        "startChar": 24,
+        "endLine": 447,
+        "endChar": 40
+      },
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_ebc58c91",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-12-27T17:27:07Z",
+      "side": 1,
+      "message": "What is a \"Module\" object?",
+      "range": {
+        "startLine": 14,
+        "startChar": 28,
+        "endLine": 14,
+        "endChar": 41
+      },
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_d62c9d91",
         "filename": "includes/devices/DeviceDetector.php",
         "patchSetId": 4
@@ -132,6 +178,29 @@
       "writtenOn": "2017-12-08T20:03:42Z",
       "side": 1,
       "message": "but what is the context the are used in?\nPossibly out of scope for the task as this would require understanding that context.",
+      "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_cbcec8b8",
+        "filename": "includes/devices/DeviceProperties.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-12-27T17:27:07Z",
+      "side": 1,
+      "message": "Seriously? I mean, seriously? This is *literally* what the variable name already says. What\u0027s the point of adding such cruft?\n\nSuch changes are making the code *worse* for the sole reason to shut up a way to rigorous PHPCS sniff that should not have been created in the first place.",
+      "range": {
+        "startLine": 35,
+        "startChar": 32,
+        "endLine": 35,
+        "endChar": 49
+      },
       "revId": "bb7e194e82fd93f629ad9f3a7298e7811626c8be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
