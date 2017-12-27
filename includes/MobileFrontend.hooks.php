@@ -905,7 +905,7 @@ class MobileFrontendHooks {
 		self::registerMobileLoggingSchemasModule( $resourceLoader );
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
-		if ( class_exists( 'VisualEditorHooks' ) ) {
+		if ( class_exists( \VisualEditorHooks::class ) ) {
 			$resourceLoader->register( [
 				'mobile.editor.ve' => $resourceBoilerplate + [
 					'dependencies' => [
@@ -1038,7 +1038,7 @@ class MobileFrontendHooks {
 		$schemaMobileWebMainMenuClickTracking = $mfResourceFileModuleBoilerplate;
 		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
-		if ( class_exists( 'EventLogging' ) ) {
+		if ( class_exists( \EventLogging::class ) ) {
 			// schema.Edit is provided by WikimediaEvents
 			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
 				$schemaEdit += [

@@ -19,7 +19,7 @@ class ExtMobileFrontend {
 	 * @param array $data The data to be recorded against the schema
 	 */
 	public static function eventLog( $schema, $revision, $data ) {
-		if ( is_callable( 'EventLogging::logEvent' ) ) {
+		if ( is_callable( [ EventLogging::class, 'logEvent' ] ) ) {
 			EventLogging::logEvent( $schema, $revision, $data );
 		}
 	}
@@ -132,7 +132,7 @@ class ExtMobileFrontend {
 	 * @return mw.wikibase.entity|null
 	 */
 	public static function getWikibaseEntity( $item ) {
-		if ( !class_exists( 'Wikibase\\Client\\WikibaseClient' ) ) {
+		if ( !class_exists( WikibaseClient::class ) ) {
 			return null;
 		}
 

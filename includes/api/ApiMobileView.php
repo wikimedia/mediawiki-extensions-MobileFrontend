@@ -248,7 +248,7 @@ class ApiMobileView extends ApiBase {
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
 		// Inform ppl if the page is infested with LiquidThreads but that's the
 		// only thing we support about it.
-		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
+		if ( class_exists( \LqtDispatch::class ) && \LqtDispatch::isLqtPage( $title ) ) {
 			$resultObj->addValue( null, $moduleName,
 				[ 'liquidthreads' => true ]
 			);
@@ -271,13 +271,13 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Small wrapper around XAnalytics extension
 	 *
-	 * @see XAnalytics::addItem
+	 * @see \XAnalytics::addItem
 	 * @param string $name
 	 * @param string $value
 	 */
 	private function addXAnalyticsItem( $name, $value ) {
-		if ( is_callable( 'XAnalytics::addItem' ) ) {
-			XAnalytics::addItem( $name, $value );
+		if ( is_callable( [ \XAnalytics::class, 'addItem' ] ) ) {
+			\XAnalytics::addItem( $name, $value );
 		}
 	}
 
