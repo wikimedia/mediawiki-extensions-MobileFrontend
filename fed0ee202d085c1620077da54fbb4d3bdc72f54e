@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_9891b4fe",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-12-27T15:30:21Z",
+      "side": 1,
+      "message": "Personally I like it more if the first element of the condition stays where it is. What is the point of having the \"if (\" on a separate line?",
+      "range": {
+        "startLine": 250,
+        "startChar": 6,
+        "endLine": 251,
+        "endChar": 3
+      },
+      "revId": "fed0ee202d085c1620077da54fbb4d3bdc72f54e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
