@@ -521,7 +521,7 @@ class MobileContextTest extends MediaWikiTestCase {
 				'', ''
 			],
 			/*
-		    FIXME: works locally but fails in Jerkins
+			FIXME: works locally but fails in Jerkins
 			array( 'Main Page', '/?mobileaction=toggle_view_desktop',
 				$token, 'http://en.wikipedia.org/wiki/Main_Page'
 			),
@@ -548,7 +548,7 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_mobile',
 				$token, 'http://en.m.wikipedia.org/wiki/Page',
 			),
-		    */
+			*/
 		];
 	}
 
