@@ -1,7 +1,5 @@
 <?php
-/**
- * BaseDomainExtractorInterface.php
- */
+
 namespace MobileFrontend;
 
 /**

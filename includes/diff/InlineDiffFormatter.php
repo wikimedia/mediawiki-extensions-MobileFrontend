@@ -1,7 +1,4 @@
 <?php
-/**
- * InlineDiffFormatter.php
- */
 
 use MediaWiki\Diff\WordAccumulator;
 

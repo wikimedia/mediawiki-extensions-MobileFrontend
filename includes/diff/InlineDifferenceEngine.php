@@ -1,7 +1,4 @@
 <?php
-/**
- * InlineDifferenceEngine.php
- */
 
 /**
  * Extends the basic DifferenceEngine from core to enable inline difference view

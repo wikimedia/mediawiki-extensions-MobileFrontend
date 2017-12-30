@@ -1,7 +1,4 @@
 <?php
-/**
- * MobilePage.php
- */
 
 /**
  * Retrieves information specific to a mobile page

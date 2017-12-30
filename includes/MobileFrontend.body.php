@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileFrontend.body.php
- */
 
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;

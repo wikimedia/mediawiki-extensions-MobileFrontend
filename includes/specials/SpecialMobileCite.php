@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileCite.php
- */
 
 /**
  * Provides a list of citations available for a page

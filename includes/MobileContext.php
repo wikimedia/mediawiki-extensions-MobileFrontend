@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileContext.php
- */
 
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;

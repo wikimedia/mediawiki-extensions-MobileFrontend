@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileHistory.php
- */
 
 /**
  * Mobile formatted history of of a page

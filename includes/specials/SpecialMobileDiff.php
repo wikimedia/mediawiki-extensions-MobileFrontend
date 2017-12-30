@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileDiff.php
- */
 
 /**
  * Show the difference between two revisions of a page

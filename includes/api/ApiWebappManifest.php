@@ -1,7 +1,4 @@
 <?php
-/**
- * ApiWebappManifest.php
- */
 
 /**
  * Return the webapp manifest for this wiki

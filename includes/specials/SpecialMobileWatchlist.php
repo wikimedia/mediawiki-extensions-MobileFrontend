@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileWatchlist.php
- */
 
 use MediaWiki\MediaWikiServices;
 
