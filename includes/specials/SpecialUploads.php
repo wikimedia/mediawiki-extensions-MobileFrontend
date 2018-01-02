@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialUploads.php
- */
 
 /**
  * Provides a special page with a list of uploaded items/images of a User

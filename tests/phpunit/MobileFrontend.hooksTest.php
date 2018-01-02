@@ -14,7 +14,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	/**
 	 * Test no alternate/canonical link is set on Special:MobileCite
 	 *
-	 * @covers MobileFrontendHooks::OnBeforePageDisplay
+	 * @covers MobileFrontendHooks::onBeforePageDisplay
 	 */
 	public function testSpecialMobileCiteOnBeforePageDisplay() {
 		$this->setMwGlobals( [
@@ -36,7 +36,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 * Test headers and alternate/canonical links to be set or not
 	 *
 	 * @dataProvider onBeforePageDisplayDataProvider
-	 * @covers MobileFrontendHooks::OnBeforePageDisplay
+	 * @covers MobileFrontendHooks::onBeforePageDisplay
 	 */
 	public function testOnBeforePageDisplay( $mobileUrlTemplate, $mfNoindexPages,
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
@@ -160,7 +160,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * Dataprovider fro testOnBeforePageDisplay
+	 * Dataprovider for testOnBeforePageDisplay
 	 */
 	public function onBeforePageDisplayDataProvider() {
 		return [
@@ -183,7 +183,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @codeCoverageIgnore
+	 * @covers MobileFrontendHooks::onTitleSquidURLs
 	 */
 	public function testOnTitleSquidURLs() {
 		$this->setMwGlobals( [

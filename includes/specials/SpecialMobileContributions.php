@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileContributions.php
- */
 
 /**
  * A special page to show the contributions of a user

@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileSpecialPageFeed.php
- */
 
 /**
  * This is an abstract class intended for use by special pages that consist primarily of

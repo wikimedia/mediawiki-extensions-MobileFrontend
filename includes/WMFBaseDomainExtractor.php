@@ -1,7 +1,5 @@
 <?php
-/**
- * WMFBaseDomainExtractor.php
- */
+
 namespace MobileFrontend;
 
 /**

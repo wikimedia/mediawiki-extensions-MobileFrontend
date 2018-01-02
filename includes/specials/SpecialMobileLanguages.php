@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialMobileLanguages.php
- */
 
 /**
  * Provides a list of languages available for a page

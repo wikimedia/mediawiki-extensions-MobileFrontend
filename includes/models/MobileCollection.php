@@ -1,10 +1,6 @@
 <?php
 
 /**
- * MobileCollection.php
- */
-
-/**
  * A collection of pages, which are represented by the MobilePage class.
  */
 class MobileCollection implements IteratorAggregate, Countable {

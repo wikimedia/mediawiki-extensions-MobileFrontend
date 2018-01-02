@@ -1,10 +1,6 @@
 <?php
 
 /**
- * SpecialMobileEditWatchlist.php
- */
-
-/**
  * The mobile version of the watchlist editing page.
  */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {

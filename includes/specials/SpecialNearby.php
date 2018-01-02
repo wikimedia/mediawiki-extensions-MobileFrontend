@@ -1,7 +1,4 @@
 <?php
-/**
- * SpecialNearby.php
- */
 
 /**
  * Provide the Special page "Nearby" with location based articles

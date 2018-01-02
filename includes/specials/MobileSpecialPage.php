@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileSpecialPage.php
- */
 
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages

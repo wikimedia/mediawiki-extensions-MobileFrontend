@@ -1,7 +1,4 @@
 <?php
-/**
- * MobileFormatter.php
- */
 
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
@@ -650,7 +647,7 @@ class MobileFormatter extends HtmlFormatter {
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section
 	 */
-	protected function makeSections( DOMDocument $doc, array $headings, $transformOptions ) {
+	protected function makeSections( DOMDocument $doc, array $headings, array $transformOptions ) {
 		// Find the parser output wrapper div
 		$xpath = new DOMXPath( $doc );
 		$containers = $xpath->query( 'body/div[@class="mw-parser-output"][1]' );
