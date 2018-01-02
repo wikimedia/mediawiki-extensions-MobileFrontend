@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_8b29839d",
+        "filename": ".phpcs.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 1,
+      "message": "I\u0027m not such a fan of this. I think enforcing parameter comments is useful - otherwise we should talk about changing this in core.\n\nRemoving this means we\u0027ll miss useful commentary on certain elements. Wouldn\u0027t it be better to disable the sniffs where they are not needed?\n\nI\u0027ll submit a follow up.",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_4b3f7bd3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1056,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 1,
+      "message": "I think this could do with some background. I\u0027ll submit a follow up.",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_eb392ff1",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 1,
+      "message": "I think it\u0027s useful to know what kind of skin this is. It\u0027s actually a mobile skin. I\u0027ll add a follow up.",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_2b4dd79b",
+        "filename": "includes/devices/DeviceDetectorService.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 1,
+      "message": "I think it makes sense to explain what\u0027s expected inside config. will submit follow up.",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

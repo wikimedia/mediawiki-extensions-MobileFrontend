@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_ab59e75f",
+        "filename": "includes/content-providers/DefaultContentProvider.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 0,
+      "message": "I agree this is redundant. Looks like core no longer enforces this which makes me happy.",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_ab828795",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 0,
+      "message": "I think it makes sense to explain where the context comes from I\u0027ll submit a follow up.",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_cb854ba1",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 0,
+      "message": "I think there is value in describing what this is especially given it\u0027s just an array. e.g. structure etc\n\nI\u0027ll send a follow up.",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_6b787fc0",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:19:51Z",
+      "side": 0,
+      "message": "I think there is value in describing what user this is (e.g. current user or user who made an edit. Will do follow up)",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
