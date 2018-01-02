@@ -34,7 +34,7 @@ class MockApiMobileView extends ApiMobileView {
 		return new MockWikiPage( $title );
 	}
 
-	protected function makeParserOptions( WikiPage $wp ) {
+	protected function makeParserOptions( WikiPage $wikiPage ) {
 		$popt = new ParserOptions( $this->getUser() );
 		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) ) {
 			// Let the client handle it.

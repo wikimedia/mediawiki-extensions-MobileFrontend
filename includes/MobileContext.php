@@ -815,7 +815,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that removes any mobile tokens
-	 * @param string $url URL
+	 * @param string $url
 	 * @return string
 	 */
 	public function getDesktopUrl( $url ) {
@@ -1050,8 +1050,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems
-	 * @param string $key Key
-	 * @param string $val Value
+	 * @param string $key
+	 * @param string $val
 	 */
 	public function addAnalyticsLogItem( $key, $val ) {
 		$key = trim( $key );

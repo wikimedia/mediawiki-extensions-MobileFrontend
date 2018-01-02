@@ -293,7 +293,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Render the footer including userinfos (Name, Role, Editcount)
 	 *
-	 * @param IContextSource $context Context
+	 * @param IContextSource $context
 	 */
 	private function showFooter( IContextSource $context ) {
 		$output = $this->getOutput();
