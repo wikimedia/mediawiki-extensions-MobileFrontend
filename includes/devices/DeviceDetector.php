@@ -41,9 +41,10 @@ interface DeviceDetector {
 	 * `$_SERVER` superglobal within its API, it's expected to be passed as
 	 * additional context.
 	 *
-	 * @param WebRequest $request
+	 * @param WebRequest $request for the current page view. The HTTP headers of this request
+	 *  will be used to determine whether the page view should redirect to mobile
 	 * @param array $server Per the above, the `$_SERVER` superglobal
 	 * @return DeviceProperties|null
 	 */
-	function detectDeviceProperties( WebRequest $request, array $server );
+	public function detectDeviceProperties( WebRequest $request, array $server );
 }
