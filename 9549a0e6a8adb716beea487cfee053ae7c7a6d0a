@@ -37,6 +37,41 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_66fb9645",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:55:12Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "cee8db29_62d9b62c",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_a64f5ebf",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:55:12Z",
+      "side": 1,
+      "message": "Should specify that the element is either a `p` element or `infobox.table` (or an element that contains one)",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cee8db29_c3136b04",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 4
@@ -72,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_26e98e7c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:55:12Z",
+      "side": 1,
+      "message": "Totally.\n\nOne thought was performance - I didn\u0027t want to create a new Document containing just this element just to query it but I have no data to back that up.\n\nSecond thought was readability, but the lack of a querySelectorAll method on elements makes this backfire as the $wrappedInfobox code is rather messy. \n\nIdeally I would have liked to write:\n\n$wrappedInfobox \u003d $element-\u003equerySelectorAll(\u0027table.infobox\u0027);",
+      "parentUuid": "cee8db29_e2f4a685",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cee8db29_622ff6f3",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 4
@@ -89,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_26d22ed6",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:55:12Z",
+      "side": 1,
+      "message": "I should clarify this. Since method is private and only called by moveFirstParagraphBeforeInfobox the input ensures all tables will also be infobox (see my comment above on the docs)",
+      "parentUuid": "cee8db29_622ff6f3",
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cee8db29_e2cdc663",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 4
@@ -100,6 +171,30 @@
       "writtenOn": "2017-12-21T17:38:19Z",
       "side": 1,
       "message": "This will fail if we\u0027re dealing with multiple classes because the opening bracket is only created once at the beginning of the first class (end of line 350). Maybe we should use `implode` instead.",
+      "range": {
+        "startLine": 351,
+        "startChar": 2,
+        "endLine": 353,
+        "endChar": 3
+      },
+      "revId": "9549a0e6a8adb716beea487cfee053ae7c7a6d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_465e527c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-02T22:55:12Z",
+      "side": 1,
+      "message": "good call. I really need to add some tests here. I always find testing private methods in PHP a pain. I\u0027ve pinged Piotr on task to see if it makes sense to refactor this code to aid this.",
+      "parentUuid": "cee8db29_e2cdc663",
       "range": {
         "startLine": 351,
         "startChar": 2,
