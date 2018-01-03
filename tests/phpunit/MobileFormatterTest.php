@@ -978,30 +978,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @see https://phabricator.wikimedia.org/T163805
 	 * @covers MobileFormatter::filterContent
 	 */
-	public function testLoggingOfInfoboxesLogsOnlyMainNamespace() {
-		$this->setMwGlobals( [
-			'wgMFLogWrappedInfoboxes' => true
-		] );
-
-		$input = '<div>'. $this->buildInfoboxHTML( 'test' ).'</div>';
-		$title = 'Special:T163805';
-
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
-			Title::newFromText( $title,  NS_SPECIAL ) );
-		$formatter->enableExpandableSections();
-
-		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
-		$loggerMock->expects( $this->never() )
-			->method( 'info' );
-
-		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, false, false, true );
-	}
-
-	/**
-	 * @see https://phabricator.wikimedia.org/T163805
-	 * @covers MobileFormatter::filterContent
-	 */
 	public function testLoggingOfInfoboxesSkipsInfoBoxInsideInfobox() {
 		$this->setMwGlobals( [
 			'wgMFLogWrappedInfoboxes' => true

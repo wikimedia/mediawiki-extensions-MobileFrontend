@@ -45,6 +45,9 @@
 	"ExtensionMessagesFiles": {
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
+	"AutoloadNamespaces": {
+		"MobileFrontend\\Transforms\\": "includes/transforms/"
+	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
 		"MobileFrontendHooks": "includes/MobileFrontend.hooks.php",

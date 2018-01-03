@@ -63,7 +63,8 @@ class ExtMobileFrontend {
 
 		$removeImages = $context->isLazyLoadImagesEnabled();
 		$removeReferences = $context->isLazyLoadReferencesEnabled();
-		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox();
+		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox()
+			&& $ns === NS_MAIN;
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
