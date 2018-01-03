@@ -343,41 +343,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$enableSections
 			],
 
-			// # Main page transformations
-			[
-				'fooo
-				<div id="mp-itn">bar</div>
-				<div id="mf-custom" title="custom">blah</div>',
-				'<div id="mainpage">' .
-				'<h2>In the news</h2><div id="mp-itn">bar</div>'
-					. '<h2>custom</h2><div id="mf-custom">blah</div><br clear="all"></div>',
-				$mainPage,
-			],
-			[
-				'<div id="foo">test</div>',
-				'<div id="foo">test</div>',
-				$mainPage,
-			],
-			[
-				'<div id="mf-foo" title="A &amp; B">test</div>',
-				'<div id="mainpage">' .
-				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all"></div>',
-				$mainPage,
-			],
-			[
-				'<div id="foo">test</div><div id="central-auth-images">images</div>',
-				'<div id="foo">test' .
-				'</div><div id="central-auth-images">images</div>',
-				$mainPage,
-			],
-			[
-				'<div id="mf-foo" title="A &amp; B">test</div><div id="central-auth-images">images</div>',
-				'<div id="mainpage">' .
-				'<h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all">'
-					. '<div id="central-auth-images">images</div></div>',
-				$mainPage,
-			],
-
 			// Infobox and the first paragraph in lead section transformations
 			[
 				// no lead section, no infobox, a section
