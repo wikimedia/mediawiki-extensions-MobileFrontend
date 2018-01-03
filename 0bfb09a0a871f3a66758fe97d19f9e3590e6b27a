@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "aeed6739_c978aef0",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1210,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-03T19:16:40Z",
+      "side": 1,
+      "message": "Just looking at the JSON without any documentation, it\u0027s not immediately clear if \"base\" refers to \"default production value\" and \"beta\" refers to \"default beta value\" _OR instead_ \"use the base value for production _AND_ beta; this feature is still cooking and the \u0027beta\u0027 field only provides a UI hint that it\u0027s in beta mode.\" How about \"defaultState\" / \"defaultValue\" and \"settingsGroup\" (which could have values like \"UI\", \"BETA_UI\", \"BANDWIDTH\", etc.",
+      "range": {
+        "startLine": 1210,
+        "startChar": 5,
+        "endLine": 1210,
+        "endChar": 9
+      },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eee3df47_52fa3940",
         "filename": "extension.json",
         "patchSetId": 1
@@ -294,6 +317,23 @@
         "endLine": 1202,
         "endChar": 36
       },
+      "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_c9a38e3e",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-03T19:16:40Z",
+      "side": 1,
+      "message": "Should we move these to a template in the final patch?",
       "revId": "0bfb09a0a871f3a66758fe97d19f9e3590e6b27a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
