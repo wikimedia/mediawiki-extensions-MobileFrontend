@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_24c85725",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-04T20:39:48Z",
+      "side": 1,
+      "message": "this is already covered in MobileFrontend.body.phhp:42 and passed here as a Param. I don\u0027t think we need to recheck the namespace once again. If we want to check it here, probably it would be wise to remove it from MobileFrontend.body.php (the check should be done only in one place)",
+      "range": {
+        "startLine": 567,
+        "startChar": 3,
+        "endLine": 567,
+        "endChar": 44
+      },
+      "revId": "882e0c1ab6094a8d4a25a54a8e361ce1a39974d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
