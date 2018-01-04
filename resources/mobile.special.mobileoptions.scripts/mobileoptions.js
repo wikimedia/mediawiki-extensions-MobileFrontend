@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var storage = mw.storage,
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		toast = M.require( 'mobile.startup/toast' ),
 		EXPAND_SECTIONS_KEY = 'expandSections',
 		msg = mw.msg,
@@ -161,7 +162,11 @@
 			}, 250 );
 		} );
 
-		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) ) {
+		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) &&
+			// Don't show this option on large screens since it's only honored for small screens. This
+			// logic should be kept in sync with Toggle._enable().
+			!browser.isWideScreen()
+		) {
 			addExpandAllSectionsToForm( $form );
 		}
 

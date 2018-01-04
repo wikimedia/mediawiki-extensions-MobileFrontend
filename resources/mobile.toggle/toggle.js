@@ -298,7 +298,9 @@
 
 				enableKeyboardActions( self, $heading );
 				if ( !isReferenceSection && ( !isClosed && browser.isWideScreen() || expandSections ) ) {
-					// Expand sections by default on wide screen devices or if the expand sections setting is set
+					// Expand sections by default on wide screen devices or if the expand sections setting is
+					// set. The wide screen logic for determining whether to collapse sections initially
+					// should be kept in sync with mobileoptions#initLocalStorageElements().
 					self.toggle( $heading );
 				}
 			}
