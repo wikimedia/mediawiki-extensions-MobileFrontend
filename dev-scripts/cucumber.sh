@@ -21,5 +21,5 @@ echo "Checking required dependencies..."
 cd "$DIR/../tests/browser"
 bundle install
 echo "Running Cucumber tests..."
-echo "Please ensure you have a user account for User:Selenium_user"
+echo "Please ensure you have a MediaWiki user account for User:Selenium_user"
 bundle exec cucumber -f pretty
