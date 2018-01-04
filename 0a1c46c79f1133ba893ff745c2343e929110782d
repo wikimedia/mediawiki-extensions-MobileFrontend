@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_448bdb1b",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T20:05:51Z",
+      "side": 1,
+      "message": "This might not be practical but it seems worth asking if this can this loop be generalized as a generic, single purpose node utility (and test)? It looks like an implementation of closest() except it takes the farthest node? This could then move to a new class, ElementUtils.farthest().\n\nhttps://developer.mozilla.org/en-US/docs/Web/API/Element/closest",
+      "revId": "0a1c46c79f1133ba893ff745c2343e929110782d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_a4cf4781",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T20:05:51Z",
+      "side": 1,
+      "message": "Is this check necessary? Won\u0027t the loop terminate naturally when parentNode is eventually null?",
+      "range": {
+        "startLine": 38,
+        "startChar": 31,
+        "endLine": 38,
+        "endChar": 69
+      },
+      "revId": "0a1c46c79f1133ba893ff745c2343e929110782d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_e4c94f7d",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T20:05:51Z",
+      "side": 1,
+      "message": "I think the answer is no but is there a PHP-equivalent of DomElement.parentElement (instead of parentNode) to avoid this check?",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "0a1c46c79f1133ba893ff745c2343e929110782d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
