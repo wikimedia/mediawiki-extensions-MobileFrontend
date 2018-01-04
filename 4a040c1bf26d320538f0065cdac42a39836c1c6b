@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_a4e8e7de",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-04T19:28:58Z",
+      "side": 1,
+      "message": "Yep that was the thinking.\n\nPlan would be to get everything converted to a Transform first so that we retain the order but this is exactly what we want to work towards!",
+      "parentUuid": "aeed6739_307b7225",
+      "range": {
+        "startLine": 564,
+        "startChar": 0,
+        "endLine": 564,
+        "endChar": 35
+      },
+      "revId": "4a040c1bf26d320538f0065cdac42a39836c1c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aeed6739_702fbaf3",
         "filename": "includes/transforms/AddMobileTocTransform.php",
         "patchSetId": 6
@@ -59,6 +83,30 @@
       "writtenOn": "2018-01-04T19:24:10Z",
       "side": 1,
       "message": "Alternate naming idea if \"transform\" is becoming too common: \"apply\". Then usage reads like `$transform-\u003eapply()` instead vs `$transform-\u003etransform()`.",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 13,
+        "endChar": 26
+      },
+      "revId": "4a040c1bf26d320538f0065cdac42a39836c1c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_c4eb6bda",
+        "filename": "includes/transforms/AddMobileTocTransform.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-04T19:28:58Z",
+      "side": 1,
+      "message": "Like it!",
+      "parentUuid": "aeed6739_702fbaf3",
       "range": {
         "startLine": 13,
         "startChar": 17,
