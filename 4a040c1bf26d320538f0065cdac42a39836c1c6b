@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_24dcd74a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T19:24:10Z",
+      "side": 1,
+      "message": "This is awesome! We test this way in the Page Library (which is essentially just a collection of distinct transforms) using Domino.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 41
+      },
+      "revId": "4a040c1bf26d320538f0065cdac42a39836c1c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_307b7225",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T19:24:10Z",
+      "side": 1,
+      "message": "This is food for thought for a minor style change so feel free to ignore: have you considered using a builder pattern or maybe an array of transforms instead? This would allow you to create a single transform instance that is initially an identity transform / nop. You then configure the instance with the transforms (and order) you want and only apply them when you\u0027re done.",
+      "range": {
+        "startLine": 564,
+        "startChar": 0,
+        "endLine": 564,
+        "endChar": 35
+      },
+      "revId": "4a040c1bf26d320538f0065cdac42a39836c1c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_702fbaf3",
+        "filename": "includes/transforms/AddMobileTocTransform.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-04T19:24:10Z",
+      "side": 1,
+      "message": "Alternate naming idea if \"transform\" is becoming too common: \"apply\". Then usage reads like `$transform-\u003eapply()` instead vs `$transform-\u003etransform()`.",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 13,
+        "endChar": 26
+      },
+      "revId": "4a040c1bf26d320538f0065cdac42a39836c1c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
