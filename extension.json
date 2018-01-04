@@ -486,7 +486,9 @@
 				"mobile.editor.common",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
-				"mediawiki.notification"
+				"mediawiki.notification",
+				"mediawiki.user",
+				"mediawiki.editfont.styles"
 			],
 			"scripts": [
 				"resources/mobile.editor.overlay/EditorOverlay.js"
