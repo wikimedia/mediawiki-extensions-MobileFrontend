@@ -1315,6 +1315,10 @@
 			"beta": true
 		},
 		"MFUseWikibase": false,
+		"MFEnableWikidataDescriptions": {
+			"base": false,
+			"beta": true
+		},
 		"MFDisplayWikibaseDescriptions": {
 			"search": false,
 			"nearby": false,

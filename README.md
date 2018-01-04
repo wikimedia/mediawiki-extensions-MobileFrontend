@@ -574,6 +574,20 @@ See `$wgMFDisplayWikibaseDescriptions`
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFEnableWikidataDescriptions
+
+If set to true, wikidata descriptions as defined in $wgMFDisplayWikibaseDescriptions will show up
+in the UI in the environment they have been told to target.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'beta' => true,
+    'base' => false,
+  ]
+```
+
 #### $wgMFDisplayWikibaseDescriptions
 
 Set which features will use Wikibase descriptions, e.g.

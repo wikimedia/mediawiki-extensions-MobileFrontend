@@ -1167,7 +1167,7 @@ class MobileContext extends ContextSource {
 		}
 
 		if (
-			$this->isBetaGroupMember() ||
+			$this->getConfigVariable( 'MFEnableWikidataDescriptions' ) ||
 			( $config->get( 'MFUseWikibase' ) && $displayWikibaseDescriptions[ $feature ] )
 		) {
 			return true;
