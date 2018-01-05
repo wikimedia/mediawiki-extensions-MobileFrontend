@@ -675,6 +675,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				// MobileFormatter#moveFirstParagraphBeforeInfobox will trigger a "Not
 				// Found Error" warning.
 				// Do not touch infoboxes that are not immediate children of the lead section
+				// unless... (see next test T170006)
 				'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
 				'<p>paragraph 1</p>',
 
@@ -954,12 +955,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
 	 * @covers MobileFormatter::filterContent
+	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
 	 */
-	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
+	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
 		$this->setMwGlobals( [
 			'wgMFLogWrappedInfoboxes' => true
 		] );
-		$input = $this->buildInfoboxHTML( 'infobox ' );
 		$title = 'T149884';
 
 		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
@@ -972,6 +973,16 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 		$this->setLogger( 'mobile', $loggerMock );
 		$formatter->filterContent( false, false, false, true );
+	}
+
+	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
+		$box = $this->buildInfoboxHTML( 'infobox' );
+		return [
+			// no wrapping
+			[ $box ],
+			// if wrapped inside mw-stack no logging occurs
+			[ "<div class=\"mw-stack\">$box</div>" ],
+		];
 	}
 
 	/**
