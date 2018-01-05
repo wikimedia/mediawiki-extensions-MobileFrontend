@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_c947fc20",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-05T15:18:42Z",
+      "side": 1,
+      "message": "this will regex will find `my-mw-stack` or `mw-stack-test` which aren\u0027t proper mw-stack elements. I like the idea of passing regex, the dev inside me is happy but brain says \"You ain\u0027t gonna need it\"\n\nMaybe having a helperFunction (naming to improve)\n\n  private function matchDomElement($node, $requiredTagName, $requiredClassName) {\n    $classes \u003d explode(\u0027 \u0027, $node-\u003egetAttribute( \u0027class\u0027 );\n    return in_array( $className, $classes ) \u0026\u0026 $node-\u003etagName \u003d\u003d\u003d $requiredTagName);\n  }\n\nand used it here:\n  if ( $this-\u003ematchDomElement($node, \u0027table\u0027, \u0027infobox\u0027)\n    || $this-\u003ematchDomElement($node,\u0027 div\u0027, \u0027mw-stack\u0027) {\n   \n    [...]\n\n  }\n\nwould make it more readable?",
+      "range": {
+        "startLine": 34,
+        "startChar": 71,
+        "endLine": 34,
+        "endChar": 81
+      },
+      "revId": "fd85b13098de9254e9b961098a9fd0b651bab9d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_e9e8000e",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-05T15:18:42Z",
+      "side": 1,
+      "message": "is it still infobox?",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 35,
+        "endChar": 18
+      },
+      "revId": "fd85b13098de9254e9b961098a9fd0b651bab9d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_49d48c4b",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-05T15:18:42Z",
+      "side": 1,
+      "message": "this will also match `my-infobox`, `infobox_v2` which aren\u0027t proper infoboxes. Also all infoboxes are tables, we could add that check.",
+      "range": {
+        "startLine": 42,
+        "startChar": 25,
+        "endLine": 42,
+        "endChar": 33
+      },
+      "revId": "fd85b13098de9254e9b961098a9fd0b651bab9d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
