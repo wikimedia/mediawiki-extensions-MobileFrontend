@@ -24,7 +24,7 @@ class ExtMobileFrontend {
 	/**
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
-	 * @param OutputPage $out OutputPage object
+	 * @param OutputPage $out
 	 * @param string $text override out html
 	 *
 	 * @return string
@@ -63,7 +63,8 @@ class ExtMobileFrontend {
 
 		$removeImages = $context->isLazyLoadImagesEnabled();
 		$removeReferences = $context->isLazyLoadReferencesEnabled();
-		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox();
+		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox()
+			&& $ns === NS_MAIN;
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
@@ -91,7 +92,7 @@ class ExtMobileFrontend {
 	/**
 	 * Generate user page content for non-existent user pages
 	 *
-	 * @param OutputPage $output OutputPage object
+	 * @param OutputPage $output
 	 * @param User $pageUser owner of the user page
 	 * @return string
 	 */

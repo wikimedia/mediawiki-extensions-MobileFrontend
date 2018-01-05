@@ -184,6 +184,7 @@
 
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( '.wikitext-editor' );
+			this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
 			if ( self.options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
 				this.$content.hide();

@@ -38,7 +38,7 @@ class MobileFrontendHooks {
 	 * Obtain the default mobile skin
 	 *
 	 * @param IContextSource $context ContextSource interface
-	 * @param MobileContext $mobileContext MobileContext object
+	 * @param MobileContext $mobileContext
 	 * @return Skin
 	 */
 	protected static function getDefaultMobileSkin( IContextSource $context,
@@ -129,12 +129,12 @@ class MobileFrontendHooks {
 	 * MediaWikiPerformAction hook handler (enable mwui for all pages)
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformAction
 	 *
-	 * @param OutputPage $output OutputPage object
-	 * @param Article $article Article object
+	 * @param OutputPage $output
+	 * @param Article $article
 	 * @param Title $title Page title
 	 * @param User $user User performing action
-	 * @param RequestContext $request RequestContext object
-	 * @param MediaWiki $wiki MediaWiki object
+	 * @param RequestContext $request
+	 * @param MediaWiki $wiki
 	 * @return bool
 	 */
 	public static function onMediaWikiPerformAction( $output, $article, $title,
@@ -167,7 +167,7 @@ class MobileFrontendHooks {
 	 *
 	 * Adds an inline script for lazy loading the images in Grade C browsers.
 	 *
-	 * @param Skin $sk Skin object
+	 * @param Skin $sk
 	 * @param string &$html bottomScripts text. Append to $text to add additional
 	 *                      text/scripts after the stock bottom scripts.
 	 * @return bool
@@ -226,7 +226,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
 	 * Ensures URLs are handled properly for select special pages.
-	 * @param OutputPage $out OutputPage object
+	 * @param OutputPage $out
 	 * @param string &$redirect URL string, modifiable
 	 * @param string &$code HTTP code (eg '301' or '302'), modifiable
 	 * @return bool
@@ -356,7 +356,7 @@ class MobileFrontendHooks {
 	 * GetCacheVaryCookies hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *
-	 * @param OutputPage $out OutputPage object
+	 * @param OutputPage $out
 	 * @param array &$cookies array of cookies name, add a value to it
 	 *                        if you want to add a cookie that have to vary cache options
 	 * @return bool
@@ -523,7 +523,7 @@ class MobileFrontendHooks {
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
-	 * @param RecentChange $rc RecentChange object
+	 * @param RecentChange $rc
 	 * @return bool
 	 */
 	public static function onRecentChangeSave( RecentChange $rc ) {
@@ -582,7 +582,7 @@ class MobileFrontendHooks {
 	 * $wgSecureLogin == true - but only when using the
 	 * mobile site.
 	 *
-	 * @param SpecialPage $special SpecialPage object
+	 * @param SpecialPage $special
 	 * @param string $subpage subpage name
 	 * @return bool
 	 */
@@ -852,7 +852,7 @@ class MobileFrontendHooks {
 	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
 	 *
 	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
-	 * @param CentralAuthUser $centralUser CentralAuthUser object
+	 * @param CentralAuthUser $centralUser
 	 * @param array &$data Redirect data
 	 *
 	 * @return bool
@@ -870,7 +870,7 @@ class MobileFrontendHooks {
 	 * CentralAuthSilentLoginRedirect hook handler
 	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
 	 * @see SpecialCentralLogin in CentralAuth extension
-	 * @param CentralAuthUser $centralUser CentralAuthUser object
+	 * @param CentralAuthUser $centralUser
 	 * @param string &$url to redirect to
 	 * @param array $info token information
 	 *
@@ -1294,7 +1294,7 @@ class MobileFrontendHooks {
 
 	/**
 	 * Add the base mobile site URL to the siteinfo API output.
-	 * @param ApiQuerySiteinfo $module ApiQuerySiteinfo object
+	 * @param ApiQuerySiteinfo $module
 	 * @param array &$result Api result array
 	 */
 	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $module, array &$result ) {

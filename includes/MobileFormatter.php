@@ -2,6 +2,9 @@
 
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
+use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\AddMobileTocTransform;
+use MobileFrontend\Transforms\NoTransform;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -68,8 +71,6 @@ class MobileFormatter extends HtmlFormatter {
 	const SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX = 'showFirstParagraphBeforeInfobox';
 
 	/**
-	 * Constructor
-	 *
 	 * @param string $html Text to process
 	 * @param Title $title Title to which $html belongs
 	 */
@@ -91,7 +92,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Creates and returns a MobileFormatter
 	 *
-	 * @param MobileContext $context MobileContext object
+	 * @param MobileContext $context
 	 * @param IContentProvider $provider ContentProvider interface
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
@@ -220,94 +221,6 @@ class MobileFormatter extends HtmlFormatter {
 		}
 	}
 
-	/**
-	 * Move the first paragraph in the lead section above the infobox
-	 *
-	 * In order for a paragraph to be moved the following conditions must be met:
-	 *   - the lead section contains at least one infobox;
-	 *   - the paragraph doesn't already appear before the first infobox
-	 *     if any in the DOM;
-	 *   - the paragraph contains text content, e.g. no <p></p>;
-	 *   - the paragraph doesn't contain coordinates, i.e. span#coordinates.
-	 *   - article belongs to the MAIN namespace
-	 *
-	 * Additionally if paragraph immediate sibling is a list (ol or ul element), the list
-	 * is also moved along with paragraph above infobox.
-	 *
-	 * Note that the first paragraph is not moved before hatnotes, or mbox or other
-	 * elements that are not infoboxes.
-	 *
-	 * @param DOMElement $leadSectionBody
-	 * @param DOMDocument $doc Document to which the section belongs
-	 */
-	private function moveFirstParagraphBeforeInfobox( $leadSectionBody, $doc ) {
-		// Move lead parapgraph only on pages in MAIN namespace (see @T163805)
-		if ( $this->title->getNamespace() !== NS_MAIN ) {
-			return;
-		}
-		$xPath = new DOMXPath( $doc );
-		// Find infoboxes and paragraphs that have text content, i.e. paragraphs
-		// that are not empty nor are wrapper paragraphs that contain span#coordinates.
-		$infoboxAndParagraphs = $xPath->query(
-			'./table[contains(@class,"infobox")] | ./p[string-length(text()) > 0]',
-			$leadSectionBody
-		);
-		// We need both an infobox and a paragraph and the first element of our query result
-		// ought to be an infobox.
-		if ( $infoboxAndParagraphs->length >= 2 &&
-			$infoboxAndParagraphs->item( 0 )->nodeName == 'table'
-		) {
-			$firstP = null;
-			for ( $i = 1; $i < $infoboxAndParagraphs->length; $i++ ) {
-				if ( $infoboxAndParagraphs->item( $i )->nodeName == 'p' ) {
-					$firstP = $infoboxAndParagraphs->item( $i );
-					break;
-				}
-			}
-			if ( $firstP ) {
-				$listElementAfterParagraph = null;
-				$where = $infoboxAndParagraphs->item( 0 );
-
-				$elementAfterParagraphQuery = $xPath->query( 'following-sibling::*[1]', $firstP );
-				if ( $elementAfterParagraphQuery->length > 0 ) {
-					$elem = $elementAfterParagraphQuery->item( 0 );
-					if ( $elem->tagName === 'ol' || $elem->tagName === 'ul' ) {
-						$listElementAfterParagraph = $elem;
-					}
-				}
-
-				$leadSectionBody->insertBefore( $firstP, $where );
-				if ( $listElementAfterParagraph !== null ) {
-					$leadSectionBody->insertBefore( $listElementAfterParagraph, $where );
-				}
-			}
-		}
-		/**
-		 * @see https://phabricator.wikimedia.org/T149884
-		 * @todo remove after research is done
-		 */
-		if ( MobileContext::singleton()->getMFConfig()->get( 'MFLogWrappedInfoboxes' ) ) {
-			$this->logInfoboxesWrappedInContainers( $leadSectionBody, $xPath );
-		}
-	}
-
-	/**
-	 * Finds all infoboxes which are one or more levels deep in $xPath content. When at least one
-	 * element is found - log the page title and revision
-	 *
-	 * @see https://phabricator.wikimedia.org/T149884
-	 * @param $leadSectionBody
-	 * @param DOMXPath $xPath
-	 */
-	private function logInfoboxesWrappedInContainers( $leadSectionBody, DOMXPath $xPath ) {
-		$infoboxes = $xPath->query( './*//table[contains(@class,"infobox")]' .
-			'[not(ancestor::table[contains(@class,"infobox")])]', $leadSectionBody );
-		if ( $infoboxes->length > 0 ) {
-			\MediaWiki\Logger\LoggerFactory::getInstance( 'mobile' )->info(
-				"Found infobox wrapped with container on {$this->title} (rev:{$this->revId})"
-			);
-		}
-	}
 	/**
 	 * Replaces any references links with a link to Special:MobileCite
 	 *
@@ -642,12 +555,17 @@ class MobileFormatter extends HtmlFormatter {
 	 * that the section bodies are clearly defined (to be "expandable" for
 	 * example).
 	 *
-	 * @param DOMDocument $doc DOM document
-	 * @param DOMElement $headings The headings returned by
+	 * @param DOMDocument $doc
+	 * @param DOMElement[] $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section
 	 */
 	protected function makeSections( DOMDocument $doc, array $headings, array $transformOptions ) {
+		$noTransform = new NoTransform();
+		$tocTransform = $this->isTOCEnabled ? new AddMobileTocTransform() : $noTransform;
+		$leadTransform = $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ?
+				new MoveLeadParagraphTransform( $this->title, $this->revId ) : $noTransform;
+
 		// Find the parser output wrapper div
 		$xpath = new DOMXPath( $doc );
 		$containers = $xpath->query( 'body/div[@class="mw-parser-output"][1]' );
@@ -688,18 +606,8 @@ class MobileFormatter extends HtmlFormatter {
 				$container->insertBefore( $sectionBody, $node );
 
 				if ( $sectionNumber === 0 ) {
-					if ( $this->isTOCEnabled ) {
-						// Insert table of content placeholder which will be progressively enhanced via JS
-						$toc = $doc->createElement( 'div' );
-						$toc->setAttribute( 'id', 'toc' );
-						$toc->setAttribute( 'class', 'toc-mobile' );
-						$tocHeading = $doc->createElement( 'h2', wfMessage( 'toc' )->text() );
-						$toc->appendChild( $tocHeading );
-						$sectionBody->appendChild( $toc );
-					}
-					if ( $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ) {
-						$this->moveFirstParagraphBeforeInfobox( $sectionBody, $doc );
-					}
+					$tocTransform->apply( $sectionBody );
+					$leadTransform->apply( $sectionBody );
 				}
 				$sectionNumber += 1;
 				$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber, $this->scriptsEnabled );
@@ -712,8 +620,8 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		// If the document had the lead section only:
-		if ( $sectionNumber == 0 && $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ) {
-			$this->moveFirstParagraphBeforeInfobox( $sectionBody, $doc );
+		if ( $sectionNumber == 0 ) {
+			$leadTransform->apply( $sectionBody );
 		}
 
 		if ( $sectionBody->hasChildNodes() ) {
@@ -777,7 +685,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
 	 * obviously connected to being editable.
 	 *
-	 * @param DOMElement $headings Heading elements
+	 * @param DOMElement[] $headings Heading elements
 	 */
 	protected function makeHeadingsEditable( array $headings ) {
 		foreach ( $headings as $heading ) {

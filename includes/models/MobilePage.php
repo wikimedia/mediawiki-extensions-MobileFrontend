@@ -31,7 +31,6 @@ class MobilePage {
 	private $usePageImages;
 
 	/**
-	 * Constructor
 	 * @param Title $title Page title
 	 * @param File|bool $file Page image file
 	 */

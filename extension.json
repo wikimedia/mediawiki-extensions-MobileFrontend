@@ -45,6 +45,9 @@
 	"ExtensionMessagesFiles": {
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
+	"AutoloadNamespaces": {
+		"MobileFrontend\\Transforms\\": "includes/transforms/"
+	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
 		"MobileFrontendHooks": "includes/MobileFrontend.hooks.php",
@@ -486,7 +489,9 @@
 				"mobile.editor.common",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
-				"mediawiki.notification"
+				"mediawiki.notification",
+				"mediawiki.user",
+				"mediawiki.editfont.styles"
 			],
 			"scripts": [
 				"resources/mobile.editor.overlay/EditorOverlay.js"

@@ -69,7 +69,8 @@
 			action: 'edit',
 			title: 'Talk:Test',
 			section: 1,
-			appendtext: '\n\nTestcomment ~~~~'
+			appendtext: '\n\nTestcomment ~~~~',
+			redirect: true
 		} ), 'Save request passes!' );
 	} );
 
