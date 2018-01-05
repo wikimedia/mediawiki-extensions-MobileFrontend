@@ -8,11 +8,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private $returnToTitle;
 	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
-	/** @var array $options Used in the execute() function as a map of subpages to
-	 functions that are executed when the request method is defined. */
-	private $options = [
-		'Language' => [ 'get' => 'chooseLanguage' ],
-	];
 
 	/**
 	 * Construct function
@@ -44,24 +39,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setHeaders();
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
-		// check, if the subpage has a registered function, that needs to be executed
-		if ( isset( $this->options[$par] ) ) {
-			$option = $this->options[$par];
 
-			// select the correct function for the given request method (post, get)
-			if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
-				$func = $option['post'];
-			} else {
-				$func = $option['get'];
-			}
-			// run the function
-			$this->$func();
+		if ( $this->getRequest()->wasPosted() ) {
+			$this->submitSettingsForm();
 		} else {
-			if ( $this->getRequest()->wasPosted() ) {
-				$this->submitSettingsForm();
-			} else {
-				$this->addSettingsForm();
-			}
+			$this->addSettingsForm();
 		}
 	}
 
@@ -192,59 +174,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
-	 * Get a list of languages available for this project
-	 * @return string parsed Html
-	 */
-	private function getSiteSelector() {
-		$selector = '';
-		$count = 0;
-		$language = $this->getLanguage();
-		$interwikiLookup = \MediaWiki\MediaWikiServices::getInstance()->getInterwikiLookup();
-		foreach ( $interwikiLookup->getAllPrefixes( true ) as $interwiki ) {
-			$code = $interwiki['iw_prefix'];
-			$name = Language::fetchLanguageName( $code, $language->getCode() );
-			if ( !$name ) {
-				continue;
-			}
-			$title = Title::newFromText( "$code:" );
-			if ( $title ) {
-				$url = $title->getFullURL();
-			} else {
-				$url = '';
-			}
-			$attrs = [ 'href' => $url ];
-			$count++;
-			if ( $code == $this->getConfig()->get( 'LanguageCode' ) ) {
-				$attrs['class'] = 'selected';
-			}
-			$selector .= Html::openElement( 'li' );
-			$selector .= Html::element( 'a', $attrs, $name );
-			$selector .= Html::closeElement( 'li' );
-		}
-
-		if ( $selector && $count > 1 ) {
-			$selector = <<<HTML
-			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count )->parse()}</p>
-			<ul id='mw-mf-language-list'>
-				{$selector}
-			</ul>
-HTML;
-		}
-
-		return $selector;
-	}
-
-	/**
-	 * Render the language selector special page, callable through Special:MobileOptions/Language
-	 * See the $options member variable of this class.
-	 */
-	private function chooseLanguage() {
-		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'mobile-frontend-settings-site-header' )->escaped() );
-		$out->addHTML( $this->getSiteSelector() );
-	}
-
-	/**
 	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
@@ -288,12 +217,5 @@ HTML;
 		$context->setMobileMode( $group );
 		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
-	}
-
-	/**
-	 * @return string[]
-	 */
-	public function getSubpagesForPrefixSearch() {
-		return array_keys( $this->options );
 	}
 }
