@@ -28,7 +28,8 @@
 			"HanV",
 			"Mbch331",
 			"Robin van der Vliet",
-			"Mainframe98"
+			"Mainframe98",
+			"Mar(c)"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Meld u aan of maak een account aan om uw bewerkingen bij te houden",
@@ -97,7 +98,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Gefeliciteerd, u bent nu een bewerker bij {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Gefeliciteerd met het maken van een nieuwe pagina!",
 	"mobile-frontend-editor-summary-placeholder": "Voorbeeld: typefout gecorrigeerd, informatie toegevoegd",
-	"mobile-frontend-editor-summary-request": "Hoe heeft u de pagina verbeterd?",
+	"mobile-frontend-editor-summary-request": "Hoe hebt u de pagina verbeterd?",
 	"mobile-frontend-editor-summary": "Samenvatting:",
 	"mobile-frontend-editor-switch-confirm": "U moet uw bewerking opslaan voordat u naar een andere bewerkingsmodus omschakelt.",
 	"mobile-frontend-editor-switch-editor": "Tekstverwerker omschakelen",
@@ -167,7 +168,7 @@
 	"mobile-frontend-references-citation": "Referentie",
 	"mobile-frontend-references-list": "Volledige lijst met referenties bekijken",
 	"mobile-frontend-requires-mobile": "Deze pagina is niet beschikbaar in desktopweergave. Klik op de mobiele weergave onderaan de pagina.",
-	"mobile-frontend-requires-optin": "Deze pagina is niet beschikbaar tenzij u [[Special:MobileOptions|betamodus]] heeft ingeschakeld.",
+	"mobile-frontend-requires-optin": "Deze pagina is niet beschikbaar, tenzij u onze [[Special:MobileOptions|bètamodus]] hebt ingeschakeld. Ga naar de [[Special:MobileOptions|instellingenpagina]] om u aan te melden.",
 	"mobile-frontend-requires-title": "Pagina niet beschikbaar",
 	"mobile-frontend-return-to-page": "Terug naar pagina",
 	"mobile-frontend-save-error": "Fout bij het opslaan van instellingen. Zorg ervoor dat u cookies hebt ingeschakeld.",
