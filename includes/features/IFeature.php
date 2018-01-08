@@ -12,6 +12,12 @@ interface IFeature {
 	public function getId();
 
 	/**
+	 * Get the feature group
+	 * @return string
+	 */
+	public function getGroup();
+
+	/**
 	 * Check feature availability in given mode ( Stable, beta, alpha etc )
 	 * @param string $mode Mode
 	 * @return bool

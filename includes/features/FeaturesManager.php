@@ -15,7 +15,10 @@ class FeaturesManager {
 	 * @param IFeature $feature Feature to register
 	 */
 	public function registerFeature( IFeature $feature ) {
-		$this->features[] = $feature;
+		if ( array_key_exists( $feature->getId(), $this->features ) ) {
+			throw new \RuntimeException( 'Feature ' . $feature->getId() . ' is already defined.' );
+		}
+		$this->features[ $feature->getId() ] = $feature;
 	}
 
 	/**
@@ -26,6 +29,18 @@ class FeaturesManager {
 		return array_filter( $this->features, function ( IFeature $feature ) use ( $mode ) {
 			return $feature->isAvailable( $mode );
 		} );
+	}
+
+	/**
+	 * Get feature
+	 * @param string $id Feature id
+	 * @return IFeature
+	 */
+	public function getFeature( $id ) {
+		if ( !array_key_exists( $id, $this->features ) ) {
+			throw new \RuntimeException( 'Feature ' . $id . ' is not defined.' );
+		}
+		return $this->features[ $id ];
 	}
 
 }

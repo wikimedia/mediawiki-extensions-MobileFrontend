@@ -13,6 +13,11 @@ class Feature implements IFeature {
 	 */
 	private $name;
 	/**
+	 * Feature group (mobile-frontend, minerva, ...)
+	 * @var string
+	 */
+	private $group;
+	/**
 	 * @var array
 	 */
 	private $options;
@@ -20,10 +25,12 @@ class Feature implements IFeature {
 	/**
 	 * Feature constructor.
 	 * @param string $name feature name (used as an ID)
+	 * @param string $group feature group (used as a translation prefix)
 	 * @param array $options Feature options
 	 */
-	public function __construct( $name, $options ) {
+	public function __construct( $name, $group = 'mobile-frontend', $options = [] ) {
 		$this->name = $name;
+		$this->group = $group;
 		$this->options = $options;
 	}
 
@@ -45,15 +52,21 @@ class Feature implements IFeature {
 	/**
 	 * @inheritDoc
 	 */
+	public function getGroup() {
+		return $this->group;
+	}
+	/**
+	 * @inheritDoc
+	 */
 	public function getNameKey() {
-		return 'mobile-frontend-mobile-option-' . $this->name;
+		return $this->group . '-mobile-option-' . $this->name;
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getDescriptionKey() {
-		return 'mobile-frontend-mobile-option-' . $this->name . '-description';
+		return $this->group . '-mobile-option-' . $this->name . '-description';
 	}
 
 }

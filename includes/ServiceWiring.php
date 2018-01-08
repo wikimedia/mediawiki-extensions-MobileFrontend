@@ -18,9 +18,9 @@ return [
 		// maybe we can get all available features by looping through MobileFrontend.Feature.*
 		// and register it here, it would be nice to have something like
 		// $services->getAllByPrefix('MobileFrontend.Feature')
-		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions',
+		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions', 'mobile-frontend',
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
-		$manager->registerFeature( new Feature( 'MFLazyLoadReferences',
+		$manager->registerFeature( new Feature( 'MFLazyLoadReferences', 'mobile-frontend',
 			$config->get( 'MFLazyLoadReferences' ) ) );
 
 		return $manager;
