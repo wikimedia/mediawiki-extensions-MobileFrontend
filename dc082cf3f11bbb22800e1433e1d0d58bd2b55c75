@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_1dad8be7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-08T21:31:04Z",
+      "side": 1,
+      "message": "TODO or done?\n\nLooks done to me... (MobileFrontendFeaturesRegistration)",
+      "revId": "dc082cf3f11bbb22800e1433e1d0d58bd2b55c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_3d816f50",
+        "filename": "includes/features/Feature.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-08T21:31:04Z",
+      "side": 1,
+      "message": "I thought for a minute this was `Config` - could we call this $options to avoid confusion?",
+      "revId": "dc082cf3f11bbb22800e1433e1d0d58bd2b55c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_3daa0fd2",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-08T21:31:04Z",
+      "side": 1,
+      "message": "This can be removed...",
+      "revId": "dc082cf3f11bbb22800e1433e1d0d58bd2b55c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
