@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_4040cc5b",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-08T22:00:57Z",
+      "side": 1,
+      "message": "Where is this used?",
+      "revId": "caffa52952581874872da1a4d68ea4440d1f8e05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
