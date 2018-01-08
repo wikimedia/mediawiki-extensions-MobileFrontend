@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_eb73c1ad",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-08T22:23:11Z",
+      "side": 1,
+      "message": "should be getNameKey() and getDescriptionKey()",
+      "range": {
+        "startLine": 151,
+        "startChar": 31,
+        "endLine": 151,
+        "endChar": 38
+      },
+      "revId": "ba4fab30f1152dd1f99e9ce08dda4bae2d10284f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_ab437942",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-08T22:23:11Z",
+      "side": 1,
+      "message": "$isInBeta might be not defined. Variable is defined only when the beta mode is on. This code will work properly but will throw PHP Notice error when beta the mode is off.",
+      "range": {
+        "startLine": 177,
+        "startChar": 24,
+        "endLine": 177,
+        "endChar": 33
+      },
+      "revId": "ba4fab30f1152dd1f99e9ce08dda4bae2d10284f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
