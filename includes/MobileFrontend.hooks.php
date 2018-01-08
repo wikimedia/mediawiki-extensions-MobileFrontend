@@ -80,6 +80,15 @@ class MobileFrontendHooks {
 			return true;
 		}
 
+		// TODO, do we want to have a specific hook just for Mobile Features initialization
+		// or do we want to reuse the RequestContextCreateSkinMobile and use MediawikiService
+		// to retrieve the FeaturesManager
+		// Important: This must be run before RequestContextCreateSkinMobile which may make modifications
+		// to the skin based on enabled features.
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+		Hooks::run( 'MobileFrontendFeaturesRegistration', [ $featureManager ] );
+
 		// enable wgUseMediaWikiUIEverywhere
 		self::enableMediaWikiUI();
 
@@ -119,15 +128,9 @@ class MobileFrontendHooks {
 				return false;
 			}
 		}
+
 		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
 		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
-
-		// TODO, do we want to have a specific hook just for Mobile Features initialization
-		// or do we want to reuse the RequestContextCreateSkinMobile and use MediawikiService
-		// to retrieve the FeaturesManager
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' );
-		Hooks::run( 'MobileFrontendFeaturesRegistration', [ $featureManager ] );
 
 		return false;
 	}
