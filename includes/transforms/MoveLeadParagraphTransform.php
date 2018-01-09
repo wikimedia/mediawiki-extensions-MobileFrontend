@@ -5,6 +5,7 @@ namespace MobileFrontend\Transforms;
 use DOMXPath;
 use MobileContext;
 use DOMElement;
+use DOMDocument;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
@@ -26,22 +27,31 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
+	 * Helper function to verify that passed $node matched nodename and has set required classname
+	 * @param DOMElement $node Node to verify
+	 * @param string $requiredNodeName Required tag name, has to be lowercase
+	 * @param string $requiredClass Required class name
+	 * @return bool
+	 */
+	private static function matchElement( DOMElement $node, $requiredNodeName, $requiredClass ) {
+		$classes = explode( ' ', $node->getAttribute( 'class' ) );
+		return strtolower( $node->nodeName ) === $requiredNodeName
+			&& in_array( $requiredClass, $classes );
+	}
+
+	/**
 	 * Works out if the infobox is wrapped
 	 * @param DomElement $node of infobox
-	 * @param string $wrapperClasses (optional) regular expression for matching potential classes
+	 * @param string $wrapperClass (optional) a required classname for wrapper
 	 * @return DomElement representing an unwrapped infobox or an element that wraps the infobox
 	 */
-	public static function getInfoboxContainer( $node, $wrapperClasses = '/mw-stack/' ) {
+	public static function getInfoboxContainer( $node, $wrapperClass = 'mw-stack' ) {
 		$infobox = false;
 
 		// iterate to the top.
 		while ( $node->parentNode ) {
-			$className = $node->getAttribute( 'class' );
-			preg_match( $wrapperClasses, $className, $matches );
-			if (
-				strpos( $className, 'infobox' ) !== false ||
-				!empty( $matches )
-			) {
+			if ( self::matchElement( $node, 'table', 'infobox' ) ||
+				self::matchElement( $node, 'div', $wrapperClass ) ) {
 				$infobox = $node;
 			}
 			$node = $node->parentNode;
