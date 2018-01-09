@@ -2,6 +2,8 @@
 
 namespace MobileFrontend\Features;
 
+use MobileContext;
+
 class FeaturesManager {
 	/**
 	 * A collection of available features
@@ -43,4 +45,15 @@ class FeaturesManager {
 		return $this->features[ $id ];
 	}
 
+	/**
+	 * Verify that feature $featureId is available in $context
+	 *
+	 * @param string $featureId Feature id to verify
+	 * @param MobileContext $context Mobile context to check
+	 * @return bool
+	 */
+	public function isFeatureAvailableInContext( $featureId, MobileContext $context ) {
+		$mode = $context->isBetaGroupMember() ? IFeature::CONFIG_BETA : IFeature::CONFIG_STABLE;
+		return $this->getFeature( $featureId )->isAvailable( $mode );
+	}
 }

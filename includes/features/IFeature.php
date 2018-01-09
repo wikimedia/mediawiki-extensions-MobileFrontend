@@ -4,6 +4,17 @@ namespace MobileFrontend\Features;
 interface IFeature {
 
 	/**
+	 * Beta mode defined in config
+	 * @var string
+	 */
+	const CONFIG_BETA = 'beta';
+	/**
+	 * Stable mode defined in config
+	 * @var string
+	 */
+	const CONFIG_STABLE = 'base';
+
+	/**
 	 * Get the feature id
 	 * Used as a identifier in forms, database etc. Should be unique
 	 *
