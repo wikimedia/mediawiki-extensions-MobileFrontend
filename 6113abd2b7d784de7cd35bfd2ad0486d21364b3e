@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_d9696e8a",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-09T21:26:10Z",
+      "side": 1,
+      "message": "Nope.. So the difference between these modules is this one hasn\u0027t got variants the other one does have variants.\n\nVariants are basically the identical icon but with a color change. It means you get a total of  (number variants * number images) so if I merged them we\u0027d get error-invert and error-gray icons despite not using them. This also bloats the output CSS size :(\n\nI don\u0027t like this about the ResourceLoaderImage module but it doesn\u0027t seem to allow you to specify when you want or do not want icon variants elegantly.",
+      "parentUuid": "aeed6739_f619e1dc",
+      "range": {
+        "startLine": 268,
+        "startChar": 24,
+        "endLine": 268,
+        "endChar": 45
+      },
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aeed6739_766dd12c",
         "filename": "resources/mobile.startup.images.variants/back-ltr.svg",
         "patchSetId": 4
@@ -53,6 +77,24 @@
       "writtenOn": "2018-01-09T21:08:57Z",
       "side": 1,
       "message": "Are these changes due to precommit hook funny business?",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_19d8f657",
+        "filename": "resources/mobile.startup.images.variants/back-ltr.svg",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-09T21:26:10Z",
+      "side": 1,
+      "message": "Looks like it. Let\u0027s see if the pre commit hook complains if I submit them without the tweak...",
+      "parentUuid": "aeed6739_766dd12c",
       "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -93,6 +135,24 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_1902b6be",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-09T21:26:10Z",
+      "side": 1,
+      "message": "Yes. Good catch.",
+      "parentUuid": "aeed6739_5617ed55",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aeed6739_d6e2dd9b",
         "filename": "resources/mobile.startup/icon.hogan",
         "patchSetId": 4
@@ -104,6 +164,30 @@
       "writtenOn": "2018-01-09T21:08:57Z",
       "side": 1,
       "message": "It may be more consistent with this file and with extension.json to move the hyphen outside of glyphPrefix. e.g., {{base}} here and `.mw-ui-icon-mf-{name}:before` in extension.json.",
+      "range": {
+        "startLine": 1,
+        "startChar": 53,
+        "endLine": 1,
+        "endChar": 61
+      },
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_390fbae5",
+        "filename": "resources/mobile.startup/icon.hogan",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-09T21:26:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aeed6739_d6e2dd9b",
       "range": {
         "startLine": 1,
         "startChar": 53,
