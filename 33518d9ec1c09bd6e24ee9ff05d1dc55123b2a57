@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_b49bd1c0",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:33:21Z",
+      "side": 1,
+      "message": "I think this needs to go or glyphPrefix should be updated to remove the hyphen.",
+      "range": {
+        "startLine": 98,
+        "startChar": 63,
+        "endLine": 98,
+        "endChar": 66
+      },
+      "revId": "33518d9ec1c09bd6e24ee9ff05d1dc55123b2a57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
