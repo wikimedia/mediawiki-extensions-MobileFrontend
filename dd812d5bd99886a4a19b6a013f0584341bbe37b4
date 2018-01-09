@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_118c5431",
+        "filename": ".phpcs.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-09T10:28:02Z",
+      "side": 1,
+      "message": "I think it makes sense to merge these:\n\n \u003cexclude-pattern\u003eincludes/MobileFrontend\\.*\\.php\u003c/exclude-pattern\u003e\n\nNo filename with two dots can match a class name, except the file is renamed.",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 12,
+        "endChar": 78
+      },
+      "revId": "dd812d5bd99886a4a19b6a013f0584341bbe37b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_b1764837",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 818,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-09T10:28:02Z",
+      "side": 1,
+      "message": "This should be `https://en.m.wikipedia.org/`, as far as I can tell. With the protocol missing (or at least the two slashes) it\u0027s not really an URL.",
+      "range": {
+        "startLine": 818,
+        "startChar": 70,
+        "endLine": 818,
+        "endChar": 89
+      },
+      "revId": "dd812d5bd99886a4a19b6a013f0584341bbe37b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_f18f302c",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-09T10:28:02Z",
+      "side": 1,
+      "message": "This should be private. This method is not used anywhere outside of this class, and no subclasses exist.",
+      "range": {
+        "startLine": 191,
+        "startChar": 1,
+        "endLine": 191,
+        "endChar": 10
+      },
+      "revId": "dd812d5bd99886a4a19b6a013f0584341bbe37b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_5187fc13",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-09T10:28:02Z",
+      "side": 1,
+      "message": "This should be private. This method is not used anywhere outside of this class, and no subclasses exist.",
+      "range": {
+        "startLine": 334,
+        "startChar": 1,
+        "endLine": 334,
+        "endChar": 10
+      },
+      "revId": "dd812d5bd99886a4a19b6a013f0584341bbe37b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
