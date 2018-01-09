@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_563a4d34",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "Nice message!",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_f619e1dc",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "Should these be mobile.startup.images.variants too or perhaps removed? Should arrow appear here too?",
+      "range": {
+        "startLine": 268,
+        "startChar": 24,
+        "endLine": 268,
+        "endChar": 45
+      },
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_766dd12c",
+        "filename": "resources/mobile.startup.images.variants/back-ltr.svg",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "Are these changes due to precommit hook funny business?",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_16c44510",
+        "filename": "resources/mobile.startup.images.variants/back-rtl.svg",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "Not new to this patch but should this specify attributes for width\u003d\"24\" and height\u003d\"24\"?",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_5617ed55",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "I guess this is only used by Watchstar.js but should this return base-glyphPrefix-name?",
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_d6e2dd9b",
+        "filename": "resources/mobile.startup/icon.hogan",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-09T21:08:57Z",
+      "side": 1,
+      "message": "It may be more consistent with this file and with extension.json to move the hyphen outside of glyphPrefix. e.g., {{base}} here and `.mw-ui-icon-mf-{name}:before` in extension.json.",
+      "range": {
+        "startLine": 1,
+        "startChar": 53,
+        "endLine": 1,
+        "endChar": 61
+      },
+      "revId": "6113abd2b7d784de7cd35bfd2ad0486d21364b3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
