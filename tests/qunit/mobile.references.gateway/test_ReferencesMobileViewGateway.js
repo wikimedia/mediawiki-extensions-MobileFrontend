@@ -69,6 +69,8 @@
 		return referencesGateway.getReference( '#cite_note-1', page ).always( function () {
 			return referencesGateway.getReference( '#cite_note-2', page ).done( function ( ref ) {
 				assert.strictEqual( ref.text, 'real lazy 2' );
+			} ).catch( function ( err ) {
+				assert.ok( false, err );
 			} );
 		} );
 	} );

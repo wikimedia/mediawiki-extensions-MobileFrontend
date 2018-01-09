@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Giromin Cangiaxo"
+			"Giromin Cangiaxo",
+			"S4b1nuz E.656"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "nisciun oggetto da modiffica",
@@ -14,6 +15,6 @@
 	"mobile-frontend-view": "Verscion mobile",
 	"mobile-frontend-view-desktop": "Desktop",
 	"nearby": "Paggine insce di argomenti inte to vexinançe",
-	"tag-mobile_edit": "Modiffica da mobile",
+	"tag-mobile_edit": "Modìfica da mobile",
 	"tag-mobile_web_edit": "Modiffica da web pe mobile"
 }
