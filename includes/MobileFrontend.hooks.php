@@ -85,9 +85,9 @@ class MobileFrontendHooks {
 		// to retrieve the FeaturesManager
 		// Important: This must be run before RequestContextCreateSkinMobile which may make modifications
 		// to the skin based on enabled features.
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' );
-		Hooks::run( 'MobileFrontendFeaturesRegistration', [ $featureManager ] );
+		\MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' )
+			->setup();
 
 		// enable wgUseMediaWikiUIEverywhere
 		self::enableMediaWikiUI();
