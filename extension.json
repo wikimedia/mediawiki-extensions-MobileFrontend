@@ -169,6 +169,23 @@
 				"resources/mobile.messageBox.styles/messageBox.less"
 			]
 		},
+		"mobile.userpage.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selector": ".mw-ui-icon-{name}:before",
+			"images": {
+				"talk": "resources/mobile.userpage.icons/talk.svg",
+				"userpage": "resources/mobile.userpage.icons/userpage.svg"
+			}
+		},
+		"mobile.userpage.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"styles": [
+				"resources/mobile.userpage.styles/userpage.less"
+			]
+		},
 		"mobile.messageBox": {
 			"targets": [
 				"mobile",
