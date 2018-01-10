@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "8ef26315_678c40dc",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-10T14:54:02Z",
+      "side": 0,
+      "message": "It\u0027s just the current context. The only reason this parameter is here is because \\UserGroupMembership::getLink requires it for some user-specific date and time localization. This should be factored out to a formatter service. But all this is in core and not in this extension.",
+      "parentUuid": "aeed6739_ab828795",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aeed6739_cb854ba1",
         "filename": "includes/specials/SpecialMobileLanguages.php",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2018-01-02T22:19:51Z",
       "side": 0,
       "message": "I think there is value in describing what this is especially given it\u0027s just an array. e.g. structure etc\n\nI\u0027ll send a follow up.",
+      "revId": "41a35db6da15631059451f483796eb72015e4884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_e79fb004",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-10T14:54:02Z",
+      "side": 0,
+      "message": "This comment was actually wrong, because this is not an \"array of\" \"language objects\", but a single on. Also, talking about a \"language object\" is confusing, as it is not an object but an array with certain elements.\n\nYour follow up fixed this. Thanks!",
+      "parentUuid": "aeed6739_cb854ba1",
       "revId": "41a35db6da15631059451f483796eb72015e4884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

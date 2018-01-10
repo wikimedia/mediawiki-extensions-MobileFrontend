@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ef26315_87334c0a",
+        "filename": ".phpcs.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-10T14:54:02Z",
+      "side": 1,
+      "message": "I argue this is a sniff that is *never* needed. In my humble opinion it should always be possible to write code in a way that is so self-explaining that it does not need any comments – without having to fiddle with exceptions in the PHPCS configuration.\n\nTL;DR: This sniff *discourages* people to write cleaner code.",
+      "parentUuid": "aeed6739_8b29839d",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aeed6739_4b3f7bd3",
         "filename": "includes/MobileContext.php",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2018-01-02T22:19:51Z",
       "side": 1,
       "message": "I think it\u0027s useful to know what kind of skin this is. It\u0027s actually a mobile skin. I\u0027ll add a follow up.",
+      "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_275fd845",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-10T14:54:02Z",
+      "side": 1,
+      "message": "I followed the code paths and this is a Skin object. However, the method here doesn\u0027t even need to know this is a Skin, as it only calls the msg method, which is in the MessageLocalizer interface.",
+      "parentUuid": "aeed6739_eb392ff1",
       "revId": "1f9d7d39adbf97c8fe552ede43aa87ba2f9bcb10",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
