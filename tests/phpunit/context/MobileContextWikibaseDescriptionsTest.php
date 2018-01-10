@@ -15,7 +15,6 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 
 		// Set relevant configuration variables to their default values.
 		$this->setMwGlobals( [
-			'wgMFUseWikibase' => false,
 			'wgMFDisplayWikibaseDescriptions' => [
 				'search' => true,
 				'tagline' => false,
@@ -29,17 +28,13 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testShowingDescriptionsIsDisabledByDefault() {
-		$this->assertFalse( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
+		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
 	}
 
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testShowingDescriptionsCanBeEnabled() {
-		$this->setMwGlobals( [
-			'wgMFUseWikibase' => true,
-		] );
-
 		$this->assertTrue(
 			$this->context->shouldShowWikibaseDescriptions( 'search' ),
 			'Showing descriptions is flagged by new variables.'

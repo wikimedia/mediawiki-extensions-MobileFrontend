@@ -300,5 +300,13 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "An identifier for the wikidata descriptions subproject/feature",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "A description of the wikidata description subproject/feature",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "A description of the lazy load references subproject/feature",
-	"mobile-frontend-send-feedback": "Link label for sending feedback to the mobile web beta"
+	"mobile-frontend-send-feedback": "Link label for sending feedback to the mobile web beta",
+	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lazy load images feature description",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "Lazy load images feature name",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Lead paragraph feature name",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Lead paragraph feature description",
+	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Expand all sections feature name",
+	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Expand sections feature description",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Article font size feature name",
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Font size feature description"
 }
