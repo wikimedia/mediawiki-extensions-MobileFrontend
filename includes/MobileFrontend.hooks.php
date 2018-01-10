@@ -167,12 +167,12 @@ class MobileFrontendHooks {
 	 *
 	 * Adds an inline script for lazy loading the images in Grade C browsers.
 	 *
-	 * @param Skin $sk
+	 * @param Skin $skin
 	 * @param string &$html bottomScripts text. Append to $text to add additional
 	 *                      text/scripts after the stock bottom scripts.
 	 * @return bool
 	 */
-	public static function onSkinAfterBottomScripts( $sk, &$html ) {
+	public static function onSkinAfterBottomScripts( $skin, &$html ) {
 		$context = MobileContext::singleton();
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
@@ -667,10 +667,10 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
 	 * @param OutputPage &$out The OutputPage object.
-	 * @param Skin &$sk Skin object that will be used to generate the page, added in 1.13.
+	 * @param Skin &$skin Skin object that will be used to generate the page, added in 1.13.
 	 * @return bool
 	 */
-	public static function onBeforePageDisplay( &$out, &$sk ) {
+	public static function onBeforePageDisplay( &$out, &$skin ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -680,7 +680,7 @@ class MobileFrontendHooks {
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
-		$title = $sk->getTitle();
+		$title = $skin->getTitle();
 		$request = $context->getRequest();
 
 		// Add deep link to a mobile app specified by $wgMFAppScheme
@@ -777,7 +777,7 @@ class MobileFrontendHooks {
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
 
 			// Allow modifications in mobile only mode
-			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
+			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
 
 			// Warning box styles are needed when reviewing old revisions
 			// and inside the fallback editor styles to action=edit page
