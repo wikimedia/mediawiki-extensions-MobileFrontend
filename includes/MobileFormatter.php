@@ -92,7 +92,8 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Creates and returns a MobileFormatter
 	 *
-	 * @param MobileContext $context
+	 * @param MobileContext $context in which the page is being rendered. Needed to access page title
+	 *  and MobileFrontend configuration.
 	 * @param IContentProvider $provider ContentProvider interface
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
@@ -555,7 +556,8 @@ class MobileFormatter extends HtmlFormatter {
 	 * that the section bodies are clearly defined (to be "expandable" for
 	 * example).
 	 *
-	 * @param DOMDocument $doc
+	 * @param DOMDocument $doc representing the HTML of the current article. In the HTML the sections
+	 *  should not be wrapped.
 	 * @param DOMElement[] $headings The headings returned by
 	 *  {@see MobileFormatter::getHeadings}
 	 * @param array $transformOptions Options to pass when transforming content per section

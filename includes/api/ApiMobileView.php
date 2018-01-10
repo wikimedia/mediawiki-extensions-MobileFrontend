@@ -469,7 +469,8 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * @param WikiPage $wikiPage
+	 * Call makeParserOptions on a WikiPage with the wrapper output class disabled.
+	 * @param WikiPage $wikiPage to call makeParserOptions on.
 	 * @return ParserOptions
 	 */
 	protected function makeParserOptions( WikiPage $wikiPage ) {

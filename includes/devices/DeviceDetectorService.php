@@ -23,7 +23,7 @@ class DeviceDetectorService implements DeviceDetector {
 	 * If `$wgMFAutodetectMobileView` is falsy, then no device detection will
 	 * occur.
 	 *
-	 * @param Config $config
+	 * @param Config $config containing values forq MFAutodetectMobileView and MFMobileHeader
 	 * @return DeviceDetectorService
 	 */
 	public static function factory( Config $config ) {

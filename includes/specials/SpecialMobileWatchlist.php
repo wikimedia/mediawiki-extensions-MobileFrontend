@@ -52,7 +52,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * Render the special page
 	 * @param string $par parameter submitted as subpage
 	 */
-	function executeWhenAvailable( $par ) {
+	public function executeWhenAvailable( $par ) {
 		// Anons don't get a watchlist
 		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
 
@@ -139,7 +139,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Get the header for the watchlist page
-	 * @param User $user
+	 * @param User $user the current user for obtaining default view and filter preferences
 	 * @param string|null $view the name of the view to show (optional)
 	 *  If absent user preferences will be consulted.
 	 * @return string Parsed HTML
@@ -188,7 +188,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Render "second" header for filter in feed view of watchlist
 	 */
-	function showRecentChangesHeader() {
+	private function showRecentChangesHeader() {
 		$filters = [
 			'all' => 'mobile-frontend-watchlist-filter-all',
 			'articles' => 'mobile-frontend-watchlist-filter-articles',
@@ -331,7 +331,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * If the user doesn't watch any page, show information how to watch some.
 	 * @param bool $feed Render as feed (true) or list (false) view?
 	 */
-	function showEmptyList( $feed ) {
+	private function showEmptyList( $feed ) {
 		$this->getOutput()->addHtml( self::getEmptyListHtml( $feed, $this->getLanguage() ) );
 	}
 
