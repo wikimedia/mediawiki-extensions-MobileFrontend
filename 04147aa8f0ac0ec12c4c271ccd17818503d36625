@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_53cd8661",
+        "filename": ".phpcs.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-10T20:57:36Z",
+      "side": 1,
+      "message": "Is there a way we can add comment here to make sure it\u0027s not removed by someone trying to enable disabled sniffs? e.g. \u003c!-- intentional --\u003e\n\nLooking through your patch I think you are right about this rule being overkill. I\u0027ve setup https://phabricator.wikimedia.org/T184650 to propose this gets removed from the defaults.",
+      "revId": "04147aa8f0ac0ec12c4c271ccd17818503d36625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

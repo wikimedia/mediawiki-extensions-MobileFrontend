@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_93eeeeaf",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-10T20:57:36Z",
+      "side": 0,
+      "message": "the switch from $wp to $wikiPage is helpful but is not documented in commit message.\n\nShould it be in a separate patchset or documented in this one?",
+      "revId": "2130a4c51b3544f917bfd69a196a4def9be2b6c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
