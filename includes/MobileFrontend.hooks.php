@@ -152,11 +152,11 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param SkinTemplate &$skin SkinTemplate object
-	 * @param QuickTemplate &$tpl QuickTemplate object
+	 * @param Skin &$skin
+	 * @param QuickTemplate &$tpl
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
+	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin, QuickTemplate &$tpl ) {
 		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
 		return true;
 	}
@@ -172,7 +172,7 @@ class MobileFrontendHooks {
 	 *                      text/scripts after the stock bottom scripts.
 	 * @return bool
 	 */
-	public static function onSkinAfterBottomScripts( $skin, &$html ) {
+	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$context = MobileContext::singleton();
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
@@ -295,7 +295,7 @@ class MobileFrontendHooks {
 	 *
 	 * @param array &$testModules array of javascript testing modules,
 	 *                            keyed by framework (e.g. 'qunit').
-	 * @param ResourceLoader &$resourceLoader ResourceLoader object
+	 * @param ResourceLoader &$resourceLoader
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules,
@@ -547,7 +547,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see hooks.txt in AbuseFilter extension
 	 * @param AbuseFilterVariableHolder $vars object to add vars to
-	 * @param User $user object
+	 * @param User $user
 	 * @return bool
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
@@ -666,11 +666,11 @@ class MobileFrontendHooks {
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
-	 * @param OutputPage &$out The OutputPage object.
+	 * @param OutputPage &$out
 	 * @param Skin &$skin Skin object that will be used to generate the page, added in 1.13.
 	 * @return bool
 	 */
-	public static function onBeforePageDisplay( &$out, &$skin ) {
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -891,7 +891,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
-	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
+	 * @param ResourceLoader &$resourceLoader
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
@@ -1022,7 +1022,7 @@ class MobileFrontendHooks {
 	 * that no additional assets are requested by the ResourceLoader, i.e. they are stub
 	 * modules.
 	 *
-	 * @param ResourceLoader $resourceLoader The ResourceLoader object
+	 * @param ResourceLoader $resourceLoader
 	 */
 	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
 		$mfResourceFileModuleBoilerplate = [
@@ -1082,7 +1082,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
 	 *
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
-	 * @param ParserOutput $po a ParserOutput object.
+	 * @param ParserOutput $po
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
@@ -1128,7 +1128,7 @@ class MobileFrontendHooks {
 	 * See https://www.mediawiki.org/wiki/Manual:Hooks/ThumbnailBeforeProduceHTML
 	 * for more detail about the `ThumbnailBeforeProduceHTML` hook.
 	 *
-	 * @param ThumbnailImage $thumbnail The thumbnail
+	 * @param ThumbnailImage $thumbnail
 	 * @param array &$attribs The attributes of the DOMElement being contructed
 	 *  to represent the thumbnail
 	 * @param array &$linkAttribs The attributes of the DOMElement being

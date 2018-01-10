@@ -94,7 +94,7 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @param MobileContext $context in which the page is being rendered. Needed to access page title
 	 *  and MobileFrontend configuration.
-	 * @param IContentProvider $provider ContentProvider interface
+	 * @param IContentProvider $provider
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
 	 * @param bool $includeTOC (optional) whether to include the

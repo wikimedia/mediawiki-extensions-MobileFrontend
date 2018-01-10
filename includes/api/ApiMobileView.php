@@ -444,11 +444,11 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Performs a page parse
-	 * @param WikiPage $wikiPage Wiki page object
-	 * @param ParserOptions $parserOptions Options for parser
+	 * @param WikiPage $wikiPage
+	 * @param ParserOptions $parserOptions
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
-	 * @return ParserOutput|null
+	 * @return ParserOutput|bool
 	 */
 	protected function getParserOutput(
 		WikiPage $wikiPage,
@@ -490,7 +490,7 @@ class ApiMobileView extends ApiBase {
 	 * Parses section data
 	 * @param string $html representing the entire page
 	 * @param Title $title Page title
-	 * @param ParserOutput $parserOutput Options for parser
+	 * @param ParserOutput $parserOutput
 	 * @param int $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:

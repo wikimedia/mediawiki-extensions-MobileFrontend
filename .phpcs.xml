@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamComment" />
 	</rule>
 	<rule ref="Generic.Files.LineLength">
 		<exclude-pattern>MobileFrontend\.alias\.php</exclude-pattern>
@@ -11,9 +12,6 @@
 	</rule>
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
-	</rule>
-	<rule ref="MediaWiki.Commenting.FunctionComment.MissingParamComment">
-		<exclude-pattern>includes/MobileFrontend\.*\.php</exclude-pattern>
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>

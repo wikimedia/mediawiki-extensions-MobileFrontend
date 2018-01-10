@@ -32,8 +32,8 @@ class DeviceProperties {
 	private $isTabletDevice;
 
 	/**
-	 * @param bool $isMobileDevice Is mobile device?
-	 * @param bool $isTabletDevice Is tablet device?
+	 * @param bool $isMobileDevice
+	 * @param bool $isTabletDevice
 	 */
 	public function __construct( $isMobileDevice, $isTabletDevice ) {
 		$this->isMobileDevice = $isMobileDevice;

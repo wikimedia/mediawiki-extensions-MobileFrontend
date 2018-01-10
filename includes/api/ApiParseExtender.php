@@ -8,7 +8,7 @@ class ApiParseExtender {
 	/**
 	 * APIGetAllowedParams hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
-	 * @param ApiBase &$module Module object
+	 * @param ApiBase &$module
 	 * @param array|bool &$params Array of parameters
 	 * @return bool
 	 */
@@ -24,7 +24,7 @@ class ApiParseExtender {
 	/**
 	 * APIGetParamDescription hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetParamDescription
-	 * @param ApiBase &$module Module object
+	 * @param ApiBase &$module
 	 * @param array|bool &$params Array of parameter descriptions
 	 * @return bool
 	 */
@@ -40,7 +40,7 @@ class ApiParseExtender {
 	/**
 	 * APIGetDescription hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetDescription
-	 * @param ApiBase &$module Module object
+	 * @param ApiBase &$module
 	 * @param array|string &$desc Array of descriptions
 	 * @return bool
 	 */
@@ -55,7 +55,7 @@ class ApiParseExtender {
 	/**
 	 * APIAfterExecute hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIAfterExecute
-	 * @param ApiBase &$module Module object
+	 * @param ApiBase &$module
 	 * @return bool
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {

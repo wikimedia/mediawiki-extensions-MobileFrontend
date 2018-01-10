@@ -429,7 +429,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Formats a comment of revision via Linker:formatComment and Sanitizer::stripAllTags
-	 * @param string $comment the comment
+	 * @param string $comment
 	 * @param string $title the title object of comments page
 	 * @return string formatted comment
 	 */

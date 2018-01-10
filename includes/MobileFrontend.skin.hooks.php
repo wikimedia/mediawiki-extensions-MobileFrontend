@@ -67,12 +67,11 @@ JAVASCRIPT;
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
 	 * Note: This is called by a hook in the WikimediaMessages extension.
 	 *
-	 * @param Skin $skin
-	 * @param string $urlMsgKey Key of i18n message containing terms of use URL (optional)
+	 * @param MessageLocalizer $localizer
 	 * @return null|string
 	 */
-	public static function getTermsLink( $skin, $urlMsgKey = 'mobile-frontend-terms-url' ) {
-		$urlMsg = $skin->msg( $urlMsgKey )->inContentLanguage();
+	public static function getTermsLink( MessageLocalizer $localizer ) {
+		$urlMsg = $localizer->msg( 'mobile-frontend-terms-url' )->inContentLanguage();
 		if ( $urlMsg->isDisabled() ) {
 			return null;
 		}
@@ -81,7 +80,7 @@ JAVASCRIPT;
 		return Html::element(
 			'a',
 			[ 'href' => Skin::makeInternalOrExternalUrl( $url ) ],
-			$skin->msg( 'mobile-frontend-terms-text' )->text()
+			$localizer->msg( 'mobile-frontend-terms-text' )->text()
 		);
 	}
 
@@ -180,7 +179,7 @@ JAVASCRIPT;
 	 * @param Skin $skin
 	 * @param QuickTemplate $tpl
 	 */
-	public static function prepareFooter( $skin, $tpl ) {
+	public static function prepareFooter( Skin $skin, QuickTemplate $tpl ) {
 		$title = $skin->getTitle();
 		$req = $skin->getRequest();
 		$ctx = MobileContext::singleton();
