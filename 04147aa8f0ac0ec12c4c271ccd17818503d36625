@@ -16,6 +16,24 @@
       "revId": "04147aa8f0ac0ec12c4c271ccd17818503d36625",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_4af2e0e0",
+        "filename": ".phpcs.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-11T15:10:00Z",
+      "side": 1,
+      "message": "Thank you very much for the ticket. Personally I would like to stay out of the discussion because I feel I already talked about this issue to many times with to many people in to many places, and it starts stressing me out.",
+      "parentUuid": "8ef26315_53cd8661",
+      "revId": "04147aa8f0ac0ec12c4c271ccd17818503d36625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
