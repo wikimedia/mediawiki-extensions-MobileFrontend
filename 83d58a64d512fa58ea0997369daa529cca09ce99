@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8ef26315_0f1627ac",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-11T17:59:04Z",
+      "side": 1,
+      "message": "Good question and good care for detail... let me investigate!\nI believe we may have removed this and thus can get rid of this icon (yay)",
+      "parentUuid": "8ef26315_6f852eb1",
+      "range": {
+        "startLine": 145,
+        "startChar": 5,
+        "endLine": 145,
+        "endChar": 12
+      },
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ef26315_cfbc426a",
         "filename": "extension.json",
         "patchSetId": 9
