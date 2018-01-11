@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_af245608",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-11T13:58:38Z",
+      "side": 1,
+      "message": "Should this be mw-ui-icon-mf-?",
+      "range": {
+        "startLine": 174,
+        "startChar": 17,
+        "endLine": 174,
+        "endChar": 28
+      },
+      "revId": "982e7249a0d7f1db02c9065ef65564ba74093e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
