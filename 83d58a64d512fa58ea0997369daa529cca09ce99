@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "8ef26315_b2215af9",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-11T20:14:58Z",
+      "side": 1,
+      "message": "Not needed. Removed in Id4b2508a2f71922a077f55e7f297f56ac7768a59.",
+      "parentUuid": "8ef26315_0f1627ac",
+      "range": {
+        "startLine": 145,
+        "startChar": 5,
+        "endLine": 145,
+        "endChar": 12
+      },
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ef26315_cfbc426a",
         "filename": "extension.json",
         "patchSetId": 9
@@ -72,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "8ef26315_32ff0a64",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-11T20:14:58Z",
+      "side": 1,
+      "message": "Yes, see previous patchset https://gerrit.wikimedia.org/r/#/c/403541/",
+      "parentUuid": "8ef26315_cfbc426a",
+      "range": {
+        "startLine": 177,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 62
+      },
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ef26315_6f7b6ebe",
         "filename": "resources/mobile.startup.images.variants/close.svg",
         "patchSetId": 9
@@ -83,6 +131,24 @@
       "writtenOn": "2018-01-11T14:23:28Z",
       "side": 1,
       "message": "I\u0027m not sure why this is showing as a new file instead of a move but trust it\u0027s fine.",
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_127daee4",
+        "filename": "resources/mobile.startup.images.variants/close.svg",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-11T20:14:58Z",
+      "side": 1,
+      "message": "Weird.. think this is fixed now.",
+      "parentUuid": "8ef26315_6f7b6ebe",
       "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
