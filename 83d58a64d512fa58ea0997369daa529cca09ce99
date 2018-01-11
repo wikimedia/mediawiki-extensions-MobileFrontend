@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_6f852eb1",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-11T14:23:28Z",
+      "side": 1,
+      "message": "I see that cleanup-gray is used in CleanupOverlay but where is cleanup used? If it\u0027s unused, can we remove it and then rename cleanup-gray to cleanup, effectively replacing it?",
+      "range": {
+        "startLine": 145,
+        "startChar": 5,
+        "endLine": 145,
+        "endChar": 12
+      },
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_cfbc426a",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-11T14:23:28Z",
+      "side": 1,
+      "message": "Are these used?",
+      "range": {
+        "startLine": 177,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 62
+      },
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_6f7b6ebe",
+        "filename": "resources/mobile.startup.images.variants/close.svg",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-11T14:23:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this is showing as a new file instead of a move but trust it\u0027s fine.",
+      "revId": "83d58a64d512fa58ea0997369daa529cca09ce99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
