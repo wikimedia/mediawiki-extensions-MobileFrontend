@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_720cf23d",
+        "filename": "tests/phpunit/features/FeaturesManagerTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-11T18:50:09Z",
+      "side": 1,
+      "message": "Side effect, on tearDown you should call MobileContext::resetInstanceForTesting()",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 41
+      },
+      "revId": "f42ce7cd26d740ab84ad1534715c8e3c342fda62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
