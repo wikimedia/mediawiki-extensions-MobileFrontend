@@ -22,6 +22,30 @@
       "revId": "982e7249a0d7f1db02c9065ef65564ba74093e9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_af773334",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-11T17:51:57Z",
+      "side": 1,
+      "message": "Nope. This will be done in follow up patch:\nhttps://gerrit.wikimedia.org/r/#/c/402409/9",
+      "parentUuid": "8ef26315_af245608",
+      "range": {
+        "startLine": 174,
+        "startChar": 17,
+        "endLine": 174,
+        "endChar": 28
+      },
+      "revId": "982e7249a0d7f1db02c9065ef65564ba74093e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
