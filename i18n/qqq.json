@@ -308,5 +308,6 @@
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Expand all sections feature name",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Expand sections feature description",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Article font size feature name",
-	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Font size feature description"
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Font size feature description",
+	"mobile-frontend-beta-only": "Tooltip for lock icons on mobile settings page."
 }
