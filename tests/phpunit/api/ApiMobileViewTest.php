@@ -15,13 +15,17 @@ class MockApiMobileView extends ApiMobileView {
 		return Title::newFromRow( $row );
 	}
 
-	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
+	protected function getParserOutput(
+		WikiPage $wikiPage,
+		ParserOptions $parserOptions,
+		$oldid = null
+	) {
 		$params = $this->extractRequestParams();
 		if ( !isset( $params['text'] ) ) {
 			throw new Exception( 'Must specify page text' );
 		}
 		$parser = new Parser();
-		$po = $parser->parse( $params['text'], $wp->getTitle(), $parserOptions );
+		$po = $parser->parse( $params['text'], $wikiPage->getTitle(), $parserOptions );
 		if ( !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
 			$po->setTOCEnabled( false );
 		}
