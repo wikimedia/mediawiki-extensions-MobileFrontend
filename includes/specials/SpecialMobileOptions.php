@@ -120,7 +120,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				$fields[] = new OOUI\FieldLayout(
 					new OOUI\IconWidget( [
 						'icon' => $icon,
-						'title' => 'Available in beta only',
+						'title' => wfMessage( 'mobile-frontend-beta-only' ),
 					] ),
 					[
 						'classes' => $classNames,
