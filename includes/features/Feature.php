@@ -37,6 +37,13 @@ class Feature implements IFeature {
 	/**
 	 * @inheritDoc
 	 */
+	public function __toString() {
+		return $this->name;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	public function isAvailable( $mode ) {
 		return array_key_exists( $mode, $this->options ) ?
 			$this->options[ $mode ] : self::DEFAULT_ENABLED_MODE;

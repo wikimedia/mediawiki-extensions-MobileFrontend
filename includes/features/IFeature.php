@@ -29,6 +29,14 @@ interface IFeature {
 	public function getGroup();
 
 	/**
+	 * Serialise the feature as a string so that the feature manager can perform array_diff
+	 * and array_intersect on results and identify where features are available and where they are not.
+	 * This should return the value of getId.
+	 * @return string
+	 */
+	public function __toString();
+
+	/**
 	 * Check feature availability in given mode ( Stable, beta, alpha etc )
 	 * @param string $mode Mode
 	 * @return bool

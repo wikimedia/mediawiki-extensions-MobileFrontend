@@ -1,5 +1,7 @@
 <?php
 
+use MobileFrontend\Features\IFeature;
+
 /**
  * Adds a special page with mobile specific preferences
  */
@@ -104,9 +106,13 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				]
 			);
 
-			$features = \MediaWiki\MediaWikiServices::getInstance()
-				->getService( 'MobileFrontend.FeaturesManager' )
-				->getAvailable( MobileContext::MODE_BETA );
+			$manager = \MediaWiki\MediaWikiServices::getInstance()
+				->getService( 'MobileFrontend.FeaturesManager' );
+
+			$features = array_diff(
+				$manager->getAvailable( IFeature::CONFIG_BETA ),
+				$manager->getAvailable( IFeature::CONFIG_STABLE )
+			);
 
 			$classNames = [ 'mobile-options-beta-feature' ];
 			if ( $isInBeta ) {
