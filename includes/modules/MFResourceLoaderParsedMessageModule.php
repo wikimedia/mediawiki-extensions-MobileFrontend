@@ -36,7 +36,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 	/**
 	 * Process messages which have been marked as needing parsing
 	 *
-	 * @param ResourceLoaderContext $context ResourceLoader context
+	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code
 	 */
 	public function addParsedMessages( ResourceLoaderContext $context ) {
@@ -81,7 +81,7 @@ class MFResourceLoaderParsedMessageModule extends ResourceLoaderFileModule {
 
 	/**
 	 * Get the URL or URLs to load for this module's JS in debug mode.
-	 * @param ResourceLoaderContext $context ResourceLoader context
+	 * @param ResourceLoaderContext $context
 	 * @return array list of urls
 	 * @see ResourceLoaderModule::getScriptURLsForDebug
 	 */

@@ -30,8 +30,6 @@ class MobileCollection implements IteratorAggregate, Countable {
 	}
 
 	/**
-	 * Get the Iterator object
-	 *
 	 * @return ArrayIterator
 	 */
 	public function getIterator() {

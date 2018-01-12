@@ -10,22 +10,24 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	/**
 	 * Get the header of diff block. Remember: Given line numbers will not be visible,
 	 * it's a one column diff style.
+	 * @inheritDoc
 	 * @param int $xbeg line number of left side to compare with
 	 * @param int $xlen Number of trailing lines after the changed line on left side
 	 * @param int $ybeg right side line number to compare with
 	 * @param int $ylen Number of trailing lines after the changed line on right side
 	 * @return string
 	 */
-	function blockHeader( $xbeg, $xlen, $ybeg, $ylen ) {
+	protected function blockHeader( $xbeg, $xlen, $ybeg, $ylen ) {
 		return "<div class=\"mw-diff-inline-header\"><!-- LINES $xbeg,$ybeg --></div>\n";
 	}
 
 	/**
 	 * Get a div element with a complete new added line as content.
 	 * Complete line will be appear with green background.
+	 * @inheritDoc
 	 * @param array $lines With changed lines
 	 */
-	function added( $lines ) {
+	protected function added( $lines ) {
 		foreach ( $lines as $line ) {
 			$this->writeOutput( '<div class="mw-diff-inline-added"><ins>'
 				. $this->lineOrNbsp( htmlspecialchars( $line ) )
@@ -36,9 +38,10 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	/**
 	 * Get a div with a line which is deleted completly.
 	 * This line will be appear with complete red background.
+	 * @inheritDoc
 	 * @param array $lines With deleted lines
 	 */
-	function deleted( $lines ) {
+	protected function deleted( $lines ) {
 		foreach ( $lines as $line ) {
 			$this->writeOutput( '<div class="mw-diff-inline-deleted"><del>'
 				. $this->lineOrNbsp( htmlspecialchars( $line ) )
@@ -50,9 +53,10 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 * Get a div with some changed content.
 	 * Line will appear with white and the changed context in
 	 * red (for deleted chars) and green (for added chars) background.
+	 * @inheritDoc
 	 * @param array $lines With edited lines
 	 */
-	function context( $lines ) {
+	protected function context( $lines ) {
 		foreach ( $lines as $line ) {
 			$this->writeOutput( "<div class=\"mw-diff-inline-context\">" .
 				"{$this->contextLine( htmlspecialchars( $line ) )}</div>\n" );
@@ -90,10 +94,11 @@ class InlineDiffFormatter extends TableDiffFormatter {
 
 	/**
 	 * Get a div with changed content (not complete added or deleted line)
+	 * @inheritDoc
 	 * @param string[] $orig Old content to compare with
 	 * @param string[] $closing New content to compare with
 	 */
-	function changed( $orig, $closing ) {
+	protected function changed( $orig, $closing ) {
 		$this->writeOutput( '<div class="mw-diff-inline-changed">' );
 		$diff = new WordLevelDiff( $orig, $closing );
 		$edits = $this->inlineWordDiff( $diff );

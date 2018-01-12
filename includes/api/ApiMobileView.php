@@ -333,8 +333,8 @@ class ApiMobileView extends ApiBase {
 	 */
 	protected function isMainPage( $title ) {
 		if ( $title->isRedirect() && $this->followRedirects ) {
-			$wp = $this->makeWikiPage( $title );
-			$target = $wp->getRedirectTarget();
+			$wikiPage = $this->makeWikiPage( $title );
+			$target = $wikiPage->getRedirectTarget();
 			if ( $target ) {
 				return $target->isMainPage();
 			}
@@ -444,14 +444,18 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Performs a page parse
-	 * @param WikiPage $wp Wiki page object
-	 * @param ParserOptions $parserOptions Options for parser
+	 * @param WikiPage $wikiPage
+	 * @param ParserOptions $parserOptions
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
-	 * @return ParserOutput|null
+	 * @return ParserOutput|bool
 	 */
-	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions, $oldid = null ) {
-		$parserOutput = $wp->getParserOutput( $parserOptions, $oldid );
+	protected function getParserOutput(
+		WikiPage $wikiPage,
+		ParserOptions $parserOptions,
+		$oldid = null
+	) {
+		$parserOutput = $wikiPage->getParserOutput( $parserOptions, $oldid );
 		if ( $parserOutput && !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
 			$parserOutput->setTOCEnabled( false );
 		}
@@ -469,7 +473,8 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * @param WikiPage $wikiPage
+	 * Call makeParserOptions on a WikiPage with the wrapper output class disabled.
+	 * @param WikiPage $wikiPage to call makeParserOptions on.
 	 * @return ParserOptions
 	 */
 	protected function makeParserOptions( WikiPage $wikiPage ) {
@@ -485,7 +490,7 @@ class ApiMobileView extends ApiBase {
 	 * Parses section data
 	 * @param string $html representing the entire page
 	 * @param Title $title Page title
-	 * @param ParserOutput $parserOutput Options for parser
+	 * @param ParserOutput $parserOutput
 	 * @param int $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
@@ -543,9 +548,9 @@ class ApiMobileView extends ApiBase {
 		$mfSpecialCaseMainPage = $mfConfig->get( 'MFSpecialCaseMainPage' );
 
 		$result = $this->getResult();
-		$wp = $this->makeWikiPage( $title );
-		if ( $this->followRedirects && $wp->isRedirect() ) {
-			$newTitle = $wp->getRedirectTarget();
+		$wikiPage = $this->makeWikiPage( $title );
+		if ( $this->followRedirects && $wikiPage->isRedirect() ) {
+			$newTitle = $wikiPage->getRedirectTarget();
 			if ( $newTitle ) {
 				$title = $newTitle;
 				$textTitle = $title->getPrefixedText();
@@ -561,12 +566,12 @@ class ApiMobileView extends ApiBase {
 					);
 					return [];
 				}
-				$wp = $this->makeWikiPage( $title );
+				$wikiPage = $this->makeWikiPage( $title );
 			}
 		}
-		$latest = $wp->getLatest();
+		$latest = $wikiPage->getLatest();
 		// Use page_touched so template updates invalidate cache
-		$touched = $wp->getTouched();
+		$touched = $wikiPage->getTouched();
 		$revId = $oldid ? $oldid : $title->getLatestRevID();
 		if ( $this->file ) {
 			$key = $wgMemc->makeKey(
@@ -586,9 +591,9 @@ class ApiMobileView extends ApiBase {
 				// Title::exists() above doesn't seem to always catch recently deleted pages
 				$this->dieWithError( [ 'apierror-missingtitle' ] );
 			}
-			$parserOptions = $this->makeParserOptions( $wp );
-			$parserCacheKey = \MediaWiki\MediaWikiServices::getInstance()->getParserCache()->getKey( $wp,
-					$parserOptions );
+			$parserOptions = $this->makeParserOptions( $wikiPage );
+			$parserCache = \MediaWiki\MediaWikiServices::getInstance()->getParserCache();
+			$parserCacheKey = $parserCache->getKey( $wikiPage, $parserOptions );
 			$key = $wgMemc->makeKey(
 				'mf',
 				'mobileview',
@@ -609,7 +614,7 @@ class ApiMobileView extends ApiBase {
 		if ( $this->file ) {
 			$html = $this->getFilePage( $title );
 		} else {
-			$parserOutput = $this->getParserOutput( $wp, $parserOptions, $oldid );
+			$parserOutput = $this->getParserOutput( $wikiPage, $parserOptions, $oldid );
 			if ( $parserOutput === false ) {
 				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
 				return;
@@ -642,14 +647,14 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 
-		$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wp->getTimestamp() );
+		$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wikiPage->getTimestamp() );
 
 		// Page id
-		$data['id'] = $wp->getId();
-		$user = User::newFromId( $wp->getUser() );
+		$data['id'] = $wikiPage->getId();
+		$user = User::newFromId( $wikiPage->getUser() );
 		if ( !$user->isAnon() ) {
 			$data['lastmodifiedby'] = [
-				'name' => $wp->getUserText(),
+				'name' => $wikiPage->getUserText(),
 				'gender' => $user->getOption( 'gender' ),
 			];
 		} else {

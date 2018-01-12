@@ -354,7 +354,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Get the list of groups of user
 	 * @param User $user The user object to get the list from
-	 * @param IContextSource $context The context
+	 * @param IContextSource $context
 	 * @return string comma separated list of user groups
 	 */
 

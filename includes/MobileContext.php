@@ -731,8 +731,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that removes any mobile tokens
-	 * @param string $url
-	 * @return string
+	 * @param string $url representing a page on the mobile domain e.g. `https://en.m.wikipedia.org/`
+	 * @return string (absolute url)
 	 */
 	public function getDesktopUrl( $url ) {
 		$parsedUrl = wfParseUrl( $url );
@@ -966,8 +966,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems
-	 * @param string $key
-	 * @param string $val
+	 * @param string $key for <key> in `X-Analytics: <key>=<value>`
+	 * @param string $val for <value> in `X-Analytics: <key>=<value>`
 	 */
 	public function addAnalyticsLogItem( $key, $val ) {
 		$key = trim( $key );

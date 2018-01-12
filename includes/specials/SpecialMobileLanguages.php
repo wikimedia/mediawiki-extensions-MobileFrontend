@@ -81,7 +81,8 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * @see https://phabricator.wikimedia.org/T93500
 	 * @see https://phabricator.wikimedia.org/T172316
 	 * @param array $languageMap array of language names, indexed by code.
-	 * @param array $langObject
+	 * @param array $langObject with lang and url keys. If url key is not present a warning
+	 *   will be logged.
 	 * @return bool
 	 */
 	private function isLanguageObjectValid( $languageMap, $langObject ) {

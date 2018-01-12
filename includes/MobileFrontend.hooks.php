@@ -162,11 +162,11 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param SkinTemplate &$skin SkinTemplate object
-	 * @param QuickTemplate &$tpl QuickTemplate object
+	 * @param Skin &$skin
+	 * @param QuickTemplate &$tpl
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
+	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin, QuickTemplate &$tpl ) {
 		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
 		return true;
 	}
@@ -177,12 +177,12 @@ class MobileFrontendHooks {
 	 *
 	 * Adds an inline script for lazy loading the images in Grade C browsers.
 	 *
-	 * @param Skin $sk
+	 * @param Skin $skin
 	 * @param string &$html bottomScripts text. Append to $text to add additional
 	 *                      text/scripts after the stock bottom scripts.
 	 * @return bool
 	 */
-	public static function onSkinAfterBottomScripts( $sk, &$html ) {
+	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$context = MobileContext::singleton();
 		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
@@ -309,7 +309,7 @@ class MobileFrontendHooks {
 	 *
 	 * @param array &$testModules array of javascript testing modules,
 	 *                            keyed by framework (e.g. 'qunit').
-	 * @param ResourceLoader &$resourceLoader ResourceLoader object
+	 * @param ResourceLoader &$resourceLoader
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules,
@@ -568,7 +568,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see hooks.txt in AbuseFilter extension
 	 * @param AbuseFilterVariableHolder $vars object to add vars to
-	 * @param User $user object
+	 * @param User $user
 	 * @return bool
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
@@ -693,11 +693,11 @@ class MobileFrontendHooks {
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
-	 * @param OutputPage &$out The OutputPage object.
-	 * @param Skin &$sk Skin object that will be used to generate the page, added in 1.13.
+	 * @param OutputPage &$out
+	 * @param Skin &$skin Skin object that will be used to generate the page, added in 1.13.
 	 * @return bool
 	 */
-	public static function onBeforePageDisplay( &$out, &$sk ) {
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
@@ -707,7 +707,7 @@ class MobileFrontendHooks {
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
-		$title = $sk->getTitle();
+		$title = $skin->getTitle();
 		$request = $context->getRequest();
 
 		// Add deep link to a mobile app specified by $wgMFAppScheme
@@ -804,7 +804,7 @@ class MobileFrontendHooks {
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
 
 			// Allow modifications in mobile only mode
-			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$sk ] );
+			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
 
 			// Warning box styles are needed when reviewing old revisions
 			// and inside the fallback editor styles to action=edit page
@@ -918,7 +918,7 @@ class MobileFrontendHooks {
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
-	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
+	 * @param ResourceLoader &$resourceLoader
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
@@ -1049,7 +1049,7 @@ class MobileFrontendHooks {
 	 * that no additional assets are requested by the ResourceLoader, i.e. they are stub
 	 * modules.
 	 *
-	 * @param ResourceLoader $resourceLoader The ResourceLoader object
+	 * @param ResourceLoader $resourceLoader
 	 */
 	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
 		$mfResourceFileModuleBoilerplate = [
@@ -1119,7 +1119,7 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
 	 *
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
-	 * @param ParserOutput $po a ParserOutput object.
+	 * @param ParserOutput $po
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
@@ -1169,7 +1169,7 @@ class MobileFrontendHooks {
 	 * See https://www.mediawiki.org/wiki/Manual:Hooks/ThumbnailBeforeProduceHTML
 	 * for more detail about the `ThumbnailBeforeProduceHTML` hook.
 	 *
-	 * @param ThumbnailImage $thumbnail The thumbnail
+	 * @param ThumbnailImage $thumbnail
 	 * @param array &$attribs The attributes of the DOMElement being contructed
 	 *  to represent the thumbnail
 	 * @param array &$linkAttribs The attributes of the DOMElement being
