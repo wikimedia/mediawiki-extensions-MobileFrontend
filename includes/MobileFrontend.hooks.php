@@ -184,10 +184,14 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinAfterBottomScripts( $sk, &$html ) {
 		$context = MobileContext::singleton();
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
 		// ... when Minerva is widely used.
-		if ( $context->shouldDisplayMobileView() && $context->isLazyLoadImagesEnabled() ) {
+		if ( $context->shouldDisplayMobileView() &&
+			$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context )
+		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
 			) );
@@ -475,9 +479,16 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+
+		$descriptionsEnabled = $featureManager->isFeatureAvailableInContext(
+			'MFEnableWikidataDescriptions',
+			$context
+		);
 
 		foreach ( $features as $feature ) {
-			$result['wgMFDisplayWikibaseDescriptions'][$feature] =
+			$result['wgMFDisplayWikibaseDescriptions'][$feature] = $descriptionsEnabled &&
 				$context->shouldShowWikibaseDescriptions( $feature );
 		}
 
@@ -1217,22 +1228,29 @@ class MobileFrontendHooks {
 	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+
 		// If the device is a mobile, Remove the category entry.
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
-			$vars['wgMFLazyLoadImages'] = $context->isLazyLoadImagesEnabled();
-			$vars['wgMFLazyLoadReferences'] = $context->isLazyLoadReferencesEnabled();
+			$vars['wgMFLazyLoadImages'] =
+				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+			$vars['wgMFLazyLoadReferences'] =
+				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 
 		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		$vars['wgMFExpandAllSectionsUserOption'] =
-			$context->getConfigVariable( 'MFExpandAllSectionsUserOption' );
+			$featureManager->isFeatureAvailableInContext( 'MFExpandAllSectionsUserOption', $context );
 
-		$vars['wgMFEnableFontChanger'] = $context->getConfigVariable( 'MFEnableFontChanger' );
+		$vars['wgMFEnableFontChanger'] =
+			$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context );
+
 		$vars += self::getWikibaseStaticConfigVars( $context );
 
 		return true;
