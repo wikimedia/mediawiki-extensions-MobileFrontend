@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_1b102904",
+        "filename": "includes/features/Feature.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-12T00:03:17Z",
+      "side": 1,
+      "message": "there is no __toString() in the interface, you cannot use ineritDoc. \n\nAnother (much bigger) issue everything is written around IFeature interface (expects IFeature, returns IFeature[]), you\u0027re sorting an array of IFeature elements (Feature is just a given implementation)). This __toString() should be also defined in the interface.",
+      "range": {
+        "startLine": 37,
+        "startChar": 1,
+        "endLine": 40,
+        "endChar": 31
+      },
+      "revId": "840fefa341809efaf16ece267b206ee5f7e85185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
