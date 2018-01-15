@@ -21,9 +21,11 @@
 			"Dianakc",
 			"Peter Fernando",
 			"Opraco",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Inicie uma sessão ou crie uma conta para monitorizar as suas edições",
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
 	"mobile-frontend-account-create-captcha-placeholder": "Digite o código de confirmação",
 	"mobile-frontend-categories-heading": "<strong>Categorias</strong>",
