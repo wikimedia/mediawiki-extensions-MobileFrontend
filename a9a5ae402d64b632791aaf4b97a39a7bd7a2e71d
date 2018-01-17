@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_966cf206",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-17T15:00:54Z",
+      "side": 1,
+      "message": "why do we keep both? caching?",
+      "range": {
+        "startLine": 174,
+        "startChar": 27,
+        "endLine": 174,
+        "endChar": 71
+      },
+      "revId": "a9a5ae402d64b632791aaf4b97a39a7bd7a2e71d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
