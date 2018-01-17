@@ -183,6 +183,8 @@ class MobileFormatter extends HtmlFormatter {
 			$this->doRemoveImages();
 		}
 
+		// Apply all removals before continuing with transforms (see T185040 for example)
+		$removed = parent::filterContent();
 		$transformOptions = [
 			'images' => $removeImages,
 			'references' => $removeReferences,
@@ -200,8 +202,7 @@ class MobileFormatter extends HtmlFormatter {
 		if ( $transformOptions['references'] ) {
 			$this->doRewriteReferencesLinksForLazyLoading( $doc );
 		}
-
-		return parent::filterContent();
+		return $removed;
 	}
 
 	/**
