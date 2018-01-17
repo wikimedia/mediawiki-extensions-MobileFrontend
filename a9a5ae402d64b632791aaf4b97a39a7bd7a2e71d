@@ -22,6 +22,30 @@
       "revId": "a9a5ae402d64b632791aaf4b97a39a7bd7a2e71d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_1f72b510",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-17T18:18:50Z",
+      "side": 1,
+      "message": "Yup caching. These are in the HTML and cached. We can probably remove them safely in a weeks time. I\u0027ll do a follow up as soon as this gets merged.",
+      "parentUuid": "8ef26315_966cf206",
+      "range": {
+        "startLine": 174,
+        "startChar": 27,
+        "endLine": 174,
+        "endChar": 71
+      },
+      "revId": "a9a5ae402d64b632791aaf4b97a39a7bd7a2e71d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
