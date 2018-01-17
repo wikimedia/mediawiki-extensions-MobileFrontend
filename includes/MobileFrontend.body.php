@@ -9,19 +9,6 @@ use MobileFrontend\ContentProviders\ContentProviderFactory;
  */
 class ExtMobileFrontend {
 	/**
-	 * Uses EventLogging when available to record an event on server side
-	 *
-	 * @param string $schema The name of the schema
-	 * @param int $revision The revision of the schema
-	 * @param array $data The data to be recorded against the schema
-	 */
-	public static function eventLog( $schema, $revision, $data ) {
-		if ( is_callable( [ EventLogging::class, 'logEvent' ] ) ) {
-			EventLogging::logEvent( $schema, $revision, $data );
-		}
-	}
-
-	/**
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
