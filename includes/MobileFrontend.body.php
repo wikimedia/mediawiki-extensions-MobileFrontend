@@ -83,6 +83,10 @@ class ExtMobileFrontend {
 				$pageUser = User::newFromId( $pageUserId );
 				$contentHtml = self::getUserPageContent(
 					$out, $pageUser );
+					$out->addModuleStyles( [
+						'mediawiki.ui.icon',
+						'mobile.userpage.styles', 'mobile.userpage.icons'
+					] );
 			}
 		}
 
@@ -102,6 +106,9 @@ class ExtMobileFrontend {
 		// Is the current user viewing their own page?
 		$isCurrentUser = $output->getUser()->getName() === $pageUsername;
 
+		$data = [
+			'userIconClass' => MobileUI::iconClass( 'userpage', 'element', 'mw-ui-icon-large icon' ),
+		];
 		$data['ctaHeading'] = $isCurrentUser ?
 			$context->msg( 'mobile-frontend-user-page-no-owner-page-yet' )->text() :
 			$context->msg( 'mobile-frontend-user-page-no-page-yet', $pageUsername )->parse();
