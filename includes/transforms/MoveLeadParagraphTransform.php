@@ -107,7 +107,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				if ( $listElementAfterParagraph !== null ) {
 					$leadSectionBody->insertBefore( $listElementAfterParagraph, $where );
 				}
-			} elseif ( $infobox->parentNode !== $leadSectionBody ) {
+			} elseif ( $infobox && $infobox->parentNode !== $leadSectionBody ) {
 				/**
 				 * @see https://phabricator.wikimedia.org/T149884
 				 * @todo remove after research is done

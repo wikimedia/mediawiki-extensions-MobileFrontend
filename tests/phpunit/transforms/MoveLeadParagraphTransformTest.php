@@ -91,6 +91,10 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 
 		return [
 			[
+				'<div><table class="mf-infobox"></table></div><p>one</p>',
+				'<div><table class="mf-infobox"></table></div><p>one</p>'
+			],
+			[
 				"$infobox$paragraph",
 				"$paragraph$infobox",
 			],
