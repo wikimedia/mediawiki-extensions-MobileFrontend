@@ -67,6 +67,56 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	}
 
 	/**
+	 * Generates revision text based on user's rights and preference
+	 * @param Revision $rev
+	 * @param User $user viewing the revision
+	 * @param bool $unhide whether the user wants to see hidden comments
+	 *   if the user doesn't have prmission comment will display as rev-deleted-comment
+	 * @return string plain test label
+	 */
+	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
+		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
+			if ( $rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
+				$comment = $this->msg( 'rev-deleted-comment' )->plain();
+			} else {
+				$comment = $rev->getComment( Revision::FOR_THIS_USER, $user );
+				// escape any HTML in summary and add CSS for any auto-generated comments
+				$comment = $this->formatComment( $comment, $this->title );
+			}
+		} else {
+			// Confusingly "Revision::userCan" Determines if the current user is
+			// allowed to view a particular field of this revision, /if/ it's marked as
+			// deleted. This will only get executed in event a comment has been deleted
+			// and user cannot view it.
+			$comment = $this->msg( 'rev-deleted-comment' )->plain();
+		}
+		return $comment;
+	}
+
+	/**
+	 * Generates username text based on user's rights and preference
+	 * @param Revision $rev
+	 * @param User $user viewing the revision
+	 * @param bool $unhide whether the user wants to see hidden usernames
+	 * @return string plain test label
+	 */
+	protected function getUsernameText( $rev, $user, $unhide ) {
+		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
+		if ( $userId === 0 ) {
+			$username = IP::prettifyIP( $rev->getUserText( Revision::RAW ) );
+		} else {
+			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
+		}
+		if (
+			!$rev->userCan( Revision::DELETED_USER, $user ) ||
+			( $rev->isDeleted( Revision::DELETED_USER ) && !$unhide )
+		) {
+			$username = $this->msg( 'rev-deleted-user' )->plain();
+		}
+		return $username;
+	}
+
+	/**
 	 * Renders an item in the feed
 	 * @param MWTimestamp $ts The time the edit occurred
 	 * @param string $diffLink url to the diff for the edit

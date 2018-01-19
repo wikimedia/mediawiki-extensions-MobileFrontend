@@ -134,7 +134,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->displayDiffPage();
 		$output->addHTML( '</div>' );
 
-		$this->showFooter( $ctx );
+		$this->showFooter( $ctx, $this->getRequest()->getBool( 'unhide' ) );
 
 		$output->addHTML( '</div>' );
 
@@ -154,6 +154,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Setups the mobile DifferenceEngine and displays a mobile optimised diff.
 	 */
 	protected function displayDiffPage() {
+		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$contentHandler = $this->rev->getContentHandler();
 		$this->mDiffEngine = $contentHandler->createDifferenceEngine( $this->getContext(),
 			$this->getPrevId(), $this->revId );
@@ -165,11 +166,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				$this->revId,
 				0,
 				false,
-				(bool)$this->getRequest()->getVal( 'unhide' )
+				$unhide
 			);
 		}
 
-		$this->showHeader();
+		$this->showHeader( $unhide );
 		$this->mDiffEngine->showDiffPage();
 	}
 
@@ -181,7 +182,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Day and time of edit
 	 * Edit Comment
 	 */
-	private function showHeader() {
+	private function showHeader( $unhide = false ) {
 		if ( $this->rev->isMinor() ) {
 			$minor = ChangesList::flag( 'minor' );
 		} else {
@@ -191,7 +192,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$this->getRevisionNavigationLinksHTML() .
 			$this->getIntroHTML() .
 			$minor .
-			$this->getCommentHTML()
+			$this->getCommentHTML( $unhide )
 		);
 	}
 
@@ -199,9 +200,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Get the edit comment
 	 * @return string Build HTML for edit comment section
 	 */
-	private function getCommentHTML() {
-		if ( $this->rev->getComment() !== '' ) {
-			$comment = Linker::formatComment( $this->rev->getComment(), $this->targetTitle );
+	private function getCommentHTML( $unhide = false ) {
+		$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+		$comment = $this->rev->getComment( $audience );
+
+		if ( $this->rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
+			$comment = $this->msg( 'rev-deleted-comment' )->plain();
+		} elseif ( $comment !== '' && $comment !== null ) {
+			$comment = Linker::formatComment( $comment, $this->targetTitle );
 		} else {
 			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
 		}
@@ -294,8 +300,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Render the footer including userinfos (Name, Role, Editcount)
 	 *
 	 * @param IContextSource $context
+	 * @param bool $unhide whether hidden content should be shown
 	 */
-	private function showFooter( IContextSource $context ) {
+	private function showFooter( IContextSource $context, $unhide ) {
 		$output = $this->getOutput();
 
 		$output->addHTML(
@@ -304,7 +311,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			Html::openElement( 'div', [ 'class' => 'post-content' ] )
 		);
 
-		$userId = $this->rev->getUser();
+		$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+		$userId = $this->rev->getUser( $audience );
+		$ipAddr = $this->rev->getUserText( $audience );
+
+		// Note $userId will be 0 and $ipAddr an empty string if the current audience cannot see it.
 		if ( $userId ) {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
@@ -332,8 +343,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					)->parse() .
 				'</div>'
 			);
-		} else {
-			$ipAddr = $this->rev->getUserText();
+		} elseif ( $ipAddr ) {
 			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
 			$output->addHTML(
 				Html::element( 'div', [
@@ -342,6 +352,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'<div>' .
 					$this->getLinkRenderer()->makeLink( $userPage, $ipAddr ) .
 				'</div>'
+			);
+		} else {
+			// Case where the user cannot see who made the edit
+			$output->addHTML(
+				$this->msg( 'rev-deleted-user' )->plain()
 			);
 		}
 
