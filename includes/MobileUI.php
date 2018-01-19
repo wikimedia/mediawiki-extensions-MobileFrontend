@@ -18,7 +18,7 @@ class MobileUI {
 		$base = 'mw-ui-icon';
 		$modifiers = 'mw-ui-icon-' . $iconType;
 		if ( $iconName ) {
-			$modifiers .= ' mw-ui-icon-' . $iconName;
+			$modifiers .= ' mw-ui-icon-mf-' . $iconName;
 		}
 		return $base . ' ' . $modifiers . ' ' . $additionalClassNames;
 	}
