@@ -92,5 +92,6 @@
 	"mobile-frontend-watchlist-more": "dakol pa",
 	"mobile-frontend-watchlist-removed": "Pinagtangkas an $1 gikan sa saimong bantay-listahan",
 	"tag-mobile_edit": "Magiwasong pagliwat",
-	"tag-mobile_edit-description": "Pagliwat na hinimo gikan sa magíwasong sityo"
+	"tag-mobile_edit-description": "Pagliwat na hinimo gikan sa magíwasong sityo",
+	"tag-mobile_web_edit": "Pagliwat gamit an mobile web"
 }
