@@ -88,8 +88,21 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 		$multiStackInfobox = "<div class=\"mw-stack\">$infobox$anotherInfobox</div>";
 		$paragraph = '<p>first paragraph</p>';
 		$emptyP = '<p></p>';
+		$collapsibleInfobox = '<table class="collapsible"><table class="infobox"></table></table>';
+		$collapsibleNotInfobox = '<table class="collapsible">'
+			. '<table class="mf-test-infobox"></table></table>';
 
 		return [
+			[
+				"$collapsibleNotInfobox<p>one</p>",
+				"$collapsibleNotInfobox<p>one</p>",
+				'Collapsible mf-infoboxes are not moved.'
+			],
+			[
+				"$collapsibleInfobox<p>one</p>",
+				"<p>one</p>$collapsibleInfobox",
+				'Collapsible infoboxes are moved.'
+			],
 			[
 				'<div><table class="mf-infobox"></table></div><p>one</p>',
 				'<div><table class="mf-infobox"></table></div><p>one</p>'

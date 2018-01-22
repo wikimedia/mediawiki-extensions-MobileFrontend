@@ -29,29 +29,30 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Helper function to verify that passed $node matched nodename and has set required classname
 	 * @param DOMElement $node Node to verify
-	 * @param string $requiredNodeName Required tag name, has to be lowercase
-	 * @param string $requiredClass Required class name
+	 * @param string|boolean $requiredNodeName Required tag name, has to be lowercase
+	 *   if false it is ignored and requiredClass is used.
+	 * @param string $requiredClass Regular expression with required class name
 	 * @return bool
 	 */
 	private static function matchElement( DOMElement $node, $requiredNodeName, $requiredClass ) {
 		$classes = explode( ' ', $node->getAttribute( 'class' ) );
-		return strtolower( $node->nodeName ) === $requiredNodeName
-			&& in_array( $requiredClass, $classes );
+		return ( $requiredNodeName === false || strtolower( $node->nodeName ) === $requiredNodeName )
+			&& !empty( preg_grep( $requiredClass, $classes ) );
 	}
 
 	/**
 	 * Works out if the infobox is wrapped
 	 * @param DomElement $node of infobox
-	 * @param string $wrapperClass (optional) a required classname for wrapper
+	 * @param string $wrapperClass (optional) regex for matching required classname for wrapper
 	 * @return DomElement representing an unwrapped infobox or an element that wraps the infobox
 	 */
-	public static function getInfoboxContainer( $node, $wrapperClass = 'mw-stack' ) {
+	public static function getInfoboxContainer( $node, $wrapperClass = '/^(mw-stack|collapsible)$/' ) {
 		$infobox = false;
 
 		// iterate to the top.
 		while ( $node->parentNode ) {
-			if ( self::matchElement( $node, 'table', 'infobox' ) ||
-				self::matchElement( $node, 'div', $wrapperClass ) ) {
+			if ( self::matchElement( $node, 'table', '/^infobox$/' ) ||
+				self::matchElement( $node, false, $wrapperClass ) ) {
 				$infobox = $node;
 			}
 			$node = $node->parentNode;
@@ -83,7 +84,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		$xPath = new DOMXPath( $doc );
 		// Find infoboxes and paragraphs that have text content, i.e. paragraphs
 		// that are not empty nor are wrapper paragraphs that contain span#coordinates.
-		$infoboxes = $xPath->query( './/table[contains(@class,"infobox")]', $leadSectionBody );
+		$xPathQuery = './/table[starts-with(@class,"infobox") or contains(@class," infobox")]';
+		$infoboxes = $xPath->query( $xPathQuery, $leadSectionBody );
 		$paragraphs = $xPath->query( './p[string-length(text()) > 0]', $leadSectionBody );
 
 		// If we have an infobox without a previous sibling then it's time for action!
