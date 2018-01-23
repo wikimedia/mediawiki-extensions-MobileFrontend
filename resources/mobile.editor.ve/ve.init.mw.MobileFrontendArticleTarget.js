@@ -159,7 +159,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	// we have to do it here because contenteditable elements still do not
 	// exist when postRender is executed
 	// FIXME: Don't call a private method that is outside the class.
-	this.overlay._fixIosHeader( '[contenteditable]' );
+	this.overlay._fixIosHeader( $( '[contenteditable]' ) );
 
 	this.maybeShowWelcomeDialog();
 };
