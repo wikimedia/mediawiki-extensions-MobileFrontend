@@ -66,14 +66,15 @@ class ExtMobileFrontend {
 		// on whether the user is the owner of the page or not.
 		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
 			$pageUserId = User::idFromName( $title->getText() );
+
+			$out->addModuleStyles( [
+				'mediawiki.ui.icon',
+				'mobile.userpage.styles', 'mobile.userpage.icons'
+			] );
 			if ( $pageUserId && !$title->exists() ) {
 				$pageUser = User::newFromId( $pageUserId );
 				$contentHtml = self::getUserPageContent(
 					$out, $pageUser );
-					$out->addModuleStyles( [
-						'mediawiki.ui.icon',
-						'mobile.userpage.styles', 'mobile.userpage.icons'
-					] );
 			}
 		}
 
