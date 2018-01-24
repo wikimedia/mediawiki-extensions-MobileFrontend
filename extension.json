@@ -76,7 +76,6 @@
 		"SpecialNearby": "includes/specials/SpecialNearby.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
-		"SpecialMobilePreferences": "includes/specials/SpecialMobilePreferences.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
