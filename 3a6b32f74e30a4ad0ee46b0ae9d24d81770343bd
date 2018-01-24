@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eefef32_9d4d6378",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-01-24T18:42:39Z",
+      "side": 1,
+      "message": "This assumes the keyboard is only going to be visible between \u0027focus\u0027 and \u0027blur\u0027 events of the passed selection. VE is going to be potentially creating new CE elements on the fly (e.g. table cells, sections) so this won\u0027t be bound. We should check if this fix is still needed, and if so we should base it on ui.surface\u0027s blur/focus events.",
+      "revId": "3a6b32f74e30a4ad0ee46b0ae9d24d81770343bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
