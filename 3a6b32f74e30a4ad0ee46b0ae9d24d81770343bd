@@ -34,6 +34,24 @@
       "revId": "3a6b32f74e30a4ad0ee46b0ae9d24d81770343bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eefef32_6316f64e",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2018-01-25T01:06:48Z",
+      "side": 1,
+      "message": "overlay.isIos is just browser.isIos() without a version number, so it\u0027ll be true for any iOS-browser -- 4/5/8 limit only applies if you\u0027re checking specific versions. That\u0027s why I noticed this in the first place -- I saw the errors because $el.on doesn\u0027t exist when $el is a string.\n\nDoes mean that since August all iOS browsers have been getting is the overlay._resizeContent call without any event-binding, and we haven\u0027t gotten any obvious bug reports for bad keyboard behavior.\n\n...but people might not expect VE-on-mobile to work well in the first place, and so not be reporting anything.",
+      "parentUuid": "6eefef32_0016085a",
+      "revId": "3a6b32f74e30a4ad0ee46b0ae9d24d81770343bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
