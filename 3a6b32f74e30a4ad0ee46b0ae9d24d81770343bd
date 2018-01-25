@@ -16,6 +16,24 @@
       "revId": "3a6b32f74e30a4ad0ee46b0ae9d24d81770343bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eefef32_0016085a",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-25T00:03:41Z",
+      "side": 1,
+      "message": "This method will only run if Browser.isIos is true which seems to only be true for versions 4,5 and 8.\n\nuseVirtualKeyboardHack only applies if  browser.isIos( 4 ) || browser.isIos( 5 );\n\nThese may now be grade C browsers (I cannot recall offhand) and may get barely any traffic so there is probably an opportunity to remove a lot of this code.",
+      "parentUuid": "6eefef32_9d4d6378",
+      "revId": "3a6b32f74e30a4ad0ee46b0ae9d24d81770343bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
