@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_2da972dd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:58:09Z",
+      "side": 0,
+      "message": "Does this resolve the MinervaNeue FIXME in includes/Minerva.hooks.php?\n\n // Ensure desktop version of Special:Preferences page gets mobile targeted modules    \n // FIXME: Upstream to core (?)\n\nWould we still need skins.minerva.special.preferences.scripts?",
+      "revId": "522f907a26b5549ea47379d01f67cae6a0a1c560",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_adbd8218",
+        "filename": "includes/specials/SpecialMobilePreferences.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:58:09Z",
+      "side": 0,
+      "message": "Can the #mw-prefs-restoreprefs rule in resources/mobile.special.styles/forms.less be removed?",
+      "revId": "522f907a26b5549ea47379d01f67cae6a0a1c560",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
