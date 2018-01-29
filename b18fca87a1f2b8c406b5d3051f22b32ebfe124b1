@@ -1,0 +1,199 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_7258758d",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Since these functions return HTML, consider calling them getRevisionCommentHTML() and getUsernameHTML() which is consistent with getCommentHTML().",
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_b2e15d9a",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Would it make more sense to collapse these parameters into something like `$audience` which the caller can supply like `$audience \u003d $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC`?",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 69
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_72f4f583",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Is it correct to show \"(edit summary removed)\" regardless of the revision\u0027s state just because the user doesn\u0027t have delete permissions?",
+      "range": {
+        "startLine": 85,
+        "startChar": 3,
+        "endLine": 85,
+        "endChar": 59
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_52f1f991",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "The structure of this conditional\u0027s other path suggests formatComment() must be called here.",
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_5240d9a8",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Where is $isAnon used? Can we early return instead of using a $username local?",
+      "range": {
+        "startLine": 101,
+        "startChar": 3,
+        "endLine": 101,
+        "endChar": 18
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_d21a29d0",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Should this check move within the logged in user path of the preceding conditional? Something like:\n\n if ( $userId \u003d\u003d\u003d 0 ) {\n   // Anonymous\n   $username \u003d IP::prettifyIP( $rev-\u003egetUserText( Revision::RAW ) );\n } elseif ( !$rev-\u003euserCan( Revision::DELETED_USER, $user ) ||\n ( $rev-\u003eisDeleted( Revision::DELETED_USER ) \u0026\u0026 !$unhide )) {\n   // Account removed\n   $username \u003d $this-\u003emsg( \u0027rev-deleted-user\u0027 )-\u003eplain();\n } else {\n   // Logged in\n   $username \u003d $rev-\u003egetUserText( Revision::FOR_THIS_USER, \n$user );\n }",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 111,
+        "endChar": 3
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_52a9f920",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "If this conditional is checked first, can `$comment !\u003d\u003d \u0027\u0027` be checked as an `elseif`?",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 213,
+        "endChar": 3
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_928c21dd",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Does it make more sense to supply this as a function parameter?",
+      "range": {
+        "startLine": 305,
+        "startChar": 2,
+        "endLine": 305,
+        "endChar": 9
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_32b26d93",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-29T16:00:40Z",
+      "side": 1,
+      "message": "Will $userId be nonzero for a deleted account? If so, the final else will not be called.",
+      "range": {
+        "startLine": 316,
+        "startChar": 7,
+        "endLine": 316,
+        "endChar": 14
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
