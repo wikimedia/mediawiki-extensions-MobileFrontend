@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_3d16b95a",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "In addition to NODE_ENV\u003dproduction, consider -p.\n\nhttps://webpack.js.org/api/cli/#shortcuts",
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_a816094b",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "Should these move to devDependencies since we\u0027re bundling everything?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_680c013e",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "Consider fixing to exact dependency versions since humans are fallible and may release breaking packages.\n\nhttps://docs.npmjs.com/misc/semver",
+      "range": {
+        "startLine": 15,
+        "startChar": 25,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_2821599b",
+        "filename": "webpack.config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "You may want to use a faster option for debug builds: isProduction ? \u0027source-map\u0027 : \u0027cheap-module-eval-source-map\u0027.",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 22
+      },
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_683361f4",
+        "filename": "webpack.config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "Consider deriving these from isProduction.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 15
+      },
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_a82d698d",
+        "filename": "webpack.config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T16:46:35Z",
+      "side": 1,
+      "message": "JSON.stringify(isProduction ? \u0027production\u0027 : \u0027development\u0027)",
+      "range": {
+        "startLine": 46,
+        "startChar": 14,
+        "endLine": 46,
+        "endChar": 44
+      },
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
