@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4efcebec_a8de09dc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-30T18:38:31Z",
+      "side": 0,
+      "message": "It looks like this can already be removed.\nSee https://gerrit.wikimedia.org/r/#/c/406640/",
+      "parentUuid": "4efcebec_2da972dd",
+      "revId": "522f907a26b5549ea47379d01f67cae6a0a1c560",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_adbd8218",
         "filename": "includes/specials/SpecialMobilePreferences.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-01-29T16:58:09Z",
       "side": 0,
       "message": "Can the #mw-prefs-restoreprefs rule in resources/mobile.special.styles/forms.less be removed?",
+      "revId": "522f907a26b5549ea47379d01f67cae6a0a1c560",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_ee4dc176",
+        "filename": "includes/specials/SpecialMobilePreferences.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-30T18:38:31Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "4efcebec_adbd8218",
       "revId": "522f907a26b5549ea47379d01f67cae6a0a1c560",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
