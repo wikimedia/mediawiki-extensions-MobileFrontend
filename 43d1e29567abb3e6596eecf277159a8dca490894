@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_08ea9d73",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-30T18:42:09Z",
+      "side": 1,
+      "message": "being strict is usually a better approach than a soft `!something`. Use `\u003d\u003d\u003d` here.",
+      "range": {
+        "startLine": 39,
+        "startChar": 11,
+        "endLine": 39,
+        "endChar": 29
+      },
+      "revId": "43d1e29567abb3e6596eecf277159a8dca490894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_88fead33",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-30T18:42:09Z",
+      "side": 1,
+      "message": "this will match some-mw-stack or super-collapsible, add `^` in the begiining so it matches the whole string",
+      "range": {
+        "startLine": 49,
+        "startChar": 70,
+        "endLine": 49,
+        "endChar": 93
+      },
+      "revId": "43d1e29567abb3e6596eecf277159a8dca490894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_489b051c",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-30T18:42:09Z",
+      "side": 1,
+      "message": "this will match `my-infobox`, add `^`",
+      "range": {
+        "startLine": 54,
+        "startChar": 46,
+        "endLine": 54,
+        "endChar": 54
+      },
+      "revId": "43d1e29567abb3e6596eecf277159a8dca490894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_a88c49dc",
+        "filename": "tests/phpunit/transforms/MoveLeadParagraphTransformTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-30T18:42:09Z",
+      "side": 1,
+      "message": "mf-infobox? is it a new type of infobox?",
+      "range": {
+        "startLine": 91,
+        "startChar": 66,
+        "endLine": 91,
+        "endChar": 76
+      },
+      "revId": "43d1e29567abb3e6596eecf277159a8dca490894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
