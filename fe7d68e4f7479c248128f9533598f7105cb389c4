@@ -65,6 +65,23 @@
     },
     {
       "key": {
+        "uuid": "4efcebec_c8f8b549",
+        "filename": "resources/dist/mobile.startup.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-30T18:39:30Z",
+      "side": 1,
+      "message": "Per earlier discussion, it would be preferable to version this in a separate repo to avoid irrevocably bloating MobileFrontend Git history.",
+      "revId": "fe7d68e4f7479c248128f9533598f7105cb389c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_2821599b",
         "filename": "webpack.config.js",
         "patchSetId": 1
