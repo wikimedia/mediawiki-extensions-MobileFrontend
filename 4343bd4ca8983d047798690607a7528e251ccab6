@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_fd59f105",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-01-30T15:05:15Z",
+      "side": 1,
+      "message": "The logic here is a little confusing. The top level `if` \u0026 `else` return the same thing, and the nested `if` returns early. I think it\u0027s best practice to put the early returns up top. Rewriting the logic like this seems clearer to me:\n\n```\nfunction updateFontSize() {\n\tif ( userFontSize \u003d\u003d\u003d \u0027100\u0027 ) {\n\t\t// No need to change the font size from the normal size.\n\t\treturn;\n\t} else if ( !userFontSize ) {\n\t\tuserFontSize \u003d storage.get( \u0027userFontSize\u0027 );\t\t\n\t}\n\t// actually change the font size.\n\t$( \u0027#content p, .content p\u0027 )\n\t\t.css( \u0027font-size\u0027, userFontSize + \u0027%\u0027 );\n  }\n```",
+      "revId": "4343bd4ca8983d047798690607a7528e251ccab6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
