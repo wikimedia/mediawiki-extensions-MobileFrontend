@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_e3ddd218",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-30T20:17:46Z",
+      "side": 1,
+      "message": "neat",
+      "range": {
+        "startLine": 87,
+        "startChar": 26,
+        "endLine": 87,
+        "endChar": 86
+      },
+      "revId": "c5b8b18e5bb4bbb7bdf6b8751a72c7e0a425ac66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
