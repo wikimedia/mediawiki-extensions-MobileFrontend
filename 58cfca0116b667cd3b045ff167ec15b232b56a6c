@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_7a6e7c2b",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-31T21:20:48Z",
+      "side": 1,
+      "message": "It seems like font size can go from 10% to 200% in 10% increments. Do we need a mf-font-size-userFontSize for each increment?",
+      "range": {
+        "startLine": 167,
+        "startChar": 42,
+        "endLine": 167,
+        "endChar": 54
+      },
+      "revId": "58cfca0116b667cd3b045ff167ec15b232b56a6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
