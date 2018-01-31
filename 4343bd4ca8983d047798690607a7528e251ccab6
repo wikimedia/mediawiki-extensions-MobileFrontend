@@ -34,6 +34,24 @@
       "revId": "4343bd4ca8983d047798690607a7528e251ccab6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_ff527e3e",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-01-31T20:11:26Z",
+      "side": 1,
+      "message": "you don\u0027t even need the `else` block :P but looks good to me",
+      "parentUuid": "4efcebec_5f39f23d",
+      "revId": "4343bd4ca8983d047798690607a7528e251ccab6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
