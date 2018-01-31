@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "4efcebec_da5190df",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-31T20:44:36Z",
+      "side": 1,
+      "message": "what if there is no userFontSize defined in store, we need default value",
+      "range": {
+        "startLine": 167,
+        "startChar": 17,
+        "endLine": 167,
+        "endChar": 46
+      },
+      "revId": "cbf48aaf313b336f72339335bf1d9962b8759a96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_9a470822",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-01-31T20:44:36Z",
+      "side": 1,
+      "message": "if the userFontSize is `100` do we have to apply that css rules anyway? \n\nDuring quick tests in performance tab I noticed after calling `$(\u0027#content p, .content p\u0027).css(\u0027font-size\u0027, \u0027100%\u0027);` on freshly generated page (without font-switched enabled) browser spends some time on Rendering and Painting (it does the style recalculation, even styles are still the same). My desktop is pretty fast but it might add some lag on old\u0026slow devices.",
+      "range": {
+        "startLine": 171,
+        "startChar": 2,
+        "endLine": 171,
+        "endChar": 10
+      },
+      "revId": "cbf48aaf313b336f72339335bf1d9962b8759a96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_7ab03c3f",
         "filename": "resources/mobile.init/init.js",
         "patchSetId": 2
