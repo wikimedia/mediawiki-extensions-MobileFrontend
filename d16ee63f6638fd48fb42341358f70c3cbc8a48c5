@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_632258a4",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-31T22:54:22Z",
+      "side": 1,
+      "message": "Great work removing all that earlier funkiness around userFontSize state and moving it to a local.",
+      "range": {
+        "startLine": 166,
+        "startChar": 6,
+        "endLine": 166,
+        "endChar": 18
+      },
+      "revId": "d16ee63f6638fd48fb42341358f70c3cbc8a48c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_836fa4bf",
+        "filename": "resources/mobile.init/mobile.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-31T22:54:22Z",
+      "side": 1,
+      "message": "Consider adding a .mf-font-size-100 class here too.",
+      "revId": "d16ee63f6638fd48fb42341358f70c3cbc8a48c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
