@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_7ab03c3f",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-01-31T20:28:01Z",
+      "side": 1,
+      "message": "According to the docs, mw.storage.get() can only return string|null|boolean. Should we define firstVisit as `\u003d\u003d\u003d null` instead of `\u003d\u003d\u003d undefined`? Should we also check here that userFontSize is actually number before setting the CSS to avoid something like `\u0027null%\u0027`?",
+      "range": {
+        "startLine": 174,
+        "startChar": 23,
+        "endLine": 174,
+        "endChar": 35
+      },
+      "revId": "cbf48aaf313b336f72339335bf1d9962b8759a96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
