@@ -614,6 +614,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideShouldStripResponsiveImages
 	 * @covers MobileContext::shouldStripResponsiveImages
+	 * @covers MobileContext::setForceMobileView
 	 */
 	public function testShouldStripResponsiveImages(
 		$expected,

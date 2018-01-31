@@ -14,6 +14,7 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxContainer
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
 	 */
 	public function testGetInfoboxContainer() {
 		$doc = new DOMDocument();
@@ -73,6 +74,7 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	 * @param string $html
 	 * @param string $expected
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
 	 */
 	public function testTransform( $html, $expected,
 		$reason = 'Move lead paragraph unexpected result'

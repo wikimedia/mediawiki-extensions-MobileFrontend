@@ -38,7 +38,7 @@ class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
 	 */
 	public function testIsNullWhenCustomHeaderIsntPresent() {
 		$this->assertNull(
@@ -47,7 +47,8 @@ class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::__construct
 	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
 	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
