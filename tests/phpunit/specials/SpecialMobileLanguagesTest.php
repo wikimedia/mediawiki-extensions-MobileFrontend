@@ -120,6 +120,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider providerProcessLanguages
 	 * @covers SpecialMobileLanguages::processLanguages
+	 * @covers SpecialMobileLanguages::__construct
 	 * @covers SpecialMobileLanguages::isLanguageObjectValid
 	 */
 	public function testProcessLanguages( $langlinks, $expected ) {
