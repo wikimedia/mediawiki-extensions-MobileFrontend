@@ -51,22 +51,22 @@
 			currentFontSize = storage.get( FONT_SIZE_KEY );
 
 		fontChangerDropdown = new OO.ui.DropdownInputWidget( {
-			value: currentFontSize ? parseInt( currentFontSize, 10 ) : 100,
+			value: currentFontSize || 'regular',
 			options: [
 				{
-					data: 90,
+					data: 'small',
 					label: msg( 'mobile-frontend-fontchanger-option-small' )
 				},
 				{
-					data: 100,
+					data: 'regular',
 					label: msg( 'mobile-frontend-fontchanger-option-medium' )
 				},
 				{
-					data: 120,
+					data: 'large',
 					label: msg( 'mobile-frontend-fontchanger-option-large' )
 				},
 				{
-					data: 140,
+					data: 'x-large',
 					label: msg( 'mobile-frontend-fontchanger-option-xlarge' )
 				}
 			]
