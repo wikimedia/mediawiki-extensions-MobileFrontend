@@ -149,6 +149,7 @@ class UADeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideMobileUserAgents
+	 * @covers MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
 	 */
 	public function testItClassifiesMobileUAsAsMobileDevices( $userAgent ) {
 		$this->assertTrue(
@@ -159,6 +160,7 @@ class UADeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideDesktopUserAgents
+	 * @covers MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
 	 */
 	public function testItDoesntClassifyDesktopUAsAsMobileDevices( $userAgent ) {
 		$this->assertFalse(
@@ -167,6 +169,9 @@ class UADeviceDetectorTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @covers MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
+	 */
 	public function testItDoesntClassifySamsungSmartTVsAsMobileDevices() {
 		$properties = $this->detectDeviceProperties(
 			// @codingStandardsIgnoreStart
@@ -189,6 +194,7 @@ class UADeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideMobileUserAgents
+	 * @covers MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
 	 */
 	public function testItDoesntClassifyMobileUAsAsTablets( $userAgent ) {
 		$this->assertFalse(
@@ -199,6 +205,7 @@ class UADeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTabletUserAgents
+	 * @covers MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
 	 */
 	public function testItClassifiesTabletUAsAsTablets( $userAgent ) {
 		$this->assertTrue(
