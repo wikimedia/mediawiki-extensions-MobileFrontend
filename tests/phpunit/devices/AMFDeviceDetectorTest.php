@@ -30,6 +30,8 @@ class AMFDeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideIsMobileDevice
+	 * @covers MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
 	 */
 	public function testIsMobileDevice( $server, $expectedIsMobileDevice ) {
 		$isMobileDevice =
@@ -54,6 +56,8 @@ class AMFDeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideIsTabletDevice
+	 * @covers MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testIsTabletDevice( $server, $expectedIsTabletDevice ) {
 		$isTabletDevice =
@@ -76,6 +80,9 @@ class AMFDeviceDetectorTest extends MediaWikiTestCase {
 		];
 	}
 
+	/**
+	 * @covers MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
+	 */
 	public function testItShouldHandleNoAMFEnvironmentVariables() {
 		$this->assertNull(
 			$this->detector->detectDeviceProperties( $this->request, [] )
