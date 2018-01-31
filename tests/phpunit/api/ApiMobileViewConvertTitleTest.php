@@ -17,6 +17,9 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 		$this->editPage( $this->simplifiedTitle, 'foo',  'test page' );
 	}
 
+	/**
+	 * @covers ApiMobileView::execute
+	 */
 	public function testRequestConverted() {
 		$result = $this->doApiRequest( [
 			'action' => 'mobileview',
@@ -33,6 +36,9 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 		$this->assertEquals( $convertedFrom, $this->traditionalTitle );
 	}
 
+	/**
+	 * @covers ApiMobileView::execute
+	 */
 	public function testRequestNotConverted() {
 		$result = $this->doApiRequest( [
 			'action' => 'mobileview',
