@@ -298,6 +298,7 @@
 			"messages": [
 				"mobile-frontend-panel-betaoptin-msg",
 				"mobile-frontend-panel-ok",
+				"mobile-frontend-console-recruit",
 				"mobile-frontend-panel-cancel"
 			],
 			"templates": {

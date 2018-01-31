@@ -292,5 +292,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Message in panel asking if user wants to opt in to beta.",
 	"mobile-frontend-search-feedback-link-text": "Text of anchor linking to a form for the user to give feedback on search results.",
 	"mobile-frontend-search-feedback-prompt": "Text shown in front of an anchor linking to a form for the user to give feedback on search results.",
-	"mobile-frontend-notifications-filter-title": "Title shown in the notifications filter page on click of the Filter button"
+	"mobile-frontend-notifications-filter-title": "Title shown in the notifications filter page on click of the Filter button",
+	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overriden on wiki."
 }

@@ -164,6 +164,13 @@
 		displayBetaOptIn( activeExperiments.betaoptin, getCurrentPage() );
 	}
 
+	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
+	/* eslint-disable no-console */
+	if ( window.console && window.console.log && window.console.log.apply &&
+			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
+		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
+	}
+
 	$.extend( M, {
 		getCurrentPage: getCurrentPage
 	} );
