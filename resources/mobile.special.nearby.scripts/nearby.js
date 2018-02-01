@@ -26,7 +26,9 @@
 			name: 'refresh',
 			id: 'secondary-button',
 			additionalClassNames: 'main-header-button',
-			tagName: 'button',
+			// refresh button doesn't perform any action related
+			// to the form when button attribute is used
+			el: $( '<button>' ).attr( 'type', 'button' ),
 			title: mw.msg( 'mobile-frontend-nearby-refresh' ),
 			label: mw.msg( 'mobile-frontend-nearby-refresh' )
 		} );
