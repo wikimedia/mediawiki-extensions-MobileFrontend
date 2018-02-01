@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_e7782df0",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-01T15:09:33Z",
+      "side": 1,
+      "message": "Removed in next PS.",
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_a7fbc543",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-01T15:09:33Z",
+      "side": 1,
+      "message": "I don\u0027t know how breaking changes work in MediaWiki WRT storage. Do we need to convert this value from a number to an enum string (small, regular, large, x-large)? In the current patchset, I think this will effectively reset users to the default (regular) size. I just wanted to confirm this is expected because the specialpages branch isn\u0027t merged to master yet.",
+      "range": {
+        "startLine": 52,
+        "startChar": 3,
+        "endLine": 52,
+        "endChar": 50
+      },
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_e7de6ddd",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-01T15:09:33Z",
+      "side": 1,
+      "message": "Replaced with `currentFontSize || \u0027regular\u0027` in next PS.",
+      "range": {
+        "startLine": 55,
+        "startChar": 10,
+        "endLine": 55,
+        "endChar": 55
+      },
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
