@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_bd2ab4d5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T19:13:20Z",
+      "side": 1,
+      "message": "Can you explain why the switch from button to a fixes this?\nWhat in particular about it being a button and it\u0027s location in the page causes the problem?\n\nWould it make sense to add a preventDefault instead?\nIf not, why?",
+      "revId": "9bff3a683b9be8d72be3027123030136ae06e4cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
