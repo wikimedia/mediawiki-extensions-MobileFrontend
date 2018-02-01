@@ -59,57 +59,6 @@ class MobileUI {
 	}
 
 	/**
-	 * Return a message box.
-	 * @param string $html of contents of box
-	 * @param string $className corresponding to box
-	 * @param string $heading (optional)
-	 * @return string of html representing a box.
-	 */
-	public static function messageBox( $html, $className, $heading = '' ) {
-		$templateParser = new TemplateParser( __DIR__ . '/../resources/mobile.messageBox/' );
-
-		$templateOptions = [
-			'className' => $className,
-			'msg' => $html
-		];
-		if ( $heading ) {
-			$templateOptions += [
-				'heading' => $heading,
-				'hasHeading' => true,
-			];
-		}
-		return $templateParser->processTemplate( 'MessageBox', $templateOptions );
-	}
-
-	/**
-	 * Return a warning box.
-	 * @param string $html of contents of box
-	 * @return string of html representing a warning box.
-	 */
-	public static function warningBox( $html ) {
-		return self::messageBox( $html, 'warningbox' );
-	}
-
-	/**
-	 * Return an error box.
-	 * @param string $html of contents of error box
-	 * @param string $heading (optional)
-	 * @return string of html representing an error box.
-	 */
-	public static function errorBox( $html, $heading = '' ) {
-		return self::messageBox( $html, 'errorbox', $heading );
-	}
-
-	/**
-	 * Return a success box.
-	 * @param string $html of contents of box
-	 * @return string of html representing a success box.
-	 */
-	public static function successBox( $html ) {
-		return self::messageBox( $html, 'successbox' );
-	}
-
-	/**
 	 * Mark some html as being content
 	 * @param string $html HTML content
 	 * @param string $className additional class names

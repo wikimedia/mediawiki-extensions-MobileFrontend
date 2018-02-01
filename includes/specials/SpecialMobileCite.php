@@ -80,7 +80,7 @@ class SpecialMobileCite extends MobileSpecialPage {
 			);
 		} else {
 			$out->setPageTitle( $this->msg( 'mobile-frontend-cite-error-title' ) );
-			$out->addHTML( MobileUI::errorBox( $this->msg( 'mobile-frontend-cite-error' ) ) );
+			$out->addHTML( Html::errorBox( $this->msg( 'mobile-frontend-cite-error' ) ) );
 		}
 	}
 }
