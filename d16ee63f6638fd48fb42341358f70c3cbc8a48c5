@@ -39,6 +39,24 @@
       "revId": "d16ee63f6638fd48fb42341358f70c3cbc8a48c5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_0379d4f1",
+        "filename": "resources/mobile.init/mobile.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T00:52:52Z",
+      "side": 1,
+      "message": "This would just apply font-size: 100% and be redundant so I\u0027m keen to avoid an unnecessary CSS rule.\nMake sense?",
+      "parentUuid": "4efcebec_836fa4bf",
+      "revId": "d16ee63f6638fd48fb42341358f70c3cbc8a48c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
