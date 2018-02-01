@@ -72,6 +72,8 @@ class MFResourceLoaderParsedMessageModuleTest extends ResourceLoaderTestCase {
 	/**
 	 * @dataProvider providerAddParsedMessages
 	 * @covers MFResourceLoaderParsedMessageModule::addParsedMessages
+	 * @covers MFResourceLoaderParsedMessageModule::processMessages
+	 * @covers MFResourceLoaderParsedMessageModule::__construct
 	 */
 	public function testAddParsedMessages( $module, $expectedJavascript ) {
 		$rl = new MFResourceLoaderParsedMessageModule( $module );
