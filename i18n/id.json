@@ -16,7 +16,8 @@
 			"Ilham",
 			"Beeyan",
 			"Uchup19",
-			"Gombang"
+			"Gombang",
+			"Rachmat04"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Masuk log atau buat akun untuk melacak suntingan Anda",
@@ -243,5 +244,6 @@
 	"mobile-frontend-panel-cancel": "Tidak, terima kasih",
 	"mobile-frontend-search-feedback-link-text": "Berikan kami umpan balik Anda.",
 	"mobile-frontend-search-feedback-prompt": "Tidak dapat menemukan apa yang Anda cari?",
-	"mobile-frontend-notifications-filter-title": "Saring pemberitahuan"
+	"mobile-frontend-notifications-filter-title": "Saring pemberitahuan",
+	"mobile-frontend-console-recruit": "\\o/ Hai! Ini adalah perangkat lunak bersumber terbuka dan kami perlu sukarelawan yang membantu mengembangkannya, membuatnya lebih baik dan memperbaiki kekutu yang mungkin Anda temukan pada konsol JavaScript ini!\n\nAnda dapat menemukan backlog kami @ https://phabricator.wikimedia.org/project/profile/67/"
 }

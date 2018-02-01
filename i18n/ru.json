@@ -270,5 +270,6 @@
 	"mobile-frontend-panel-ok": "Ок",
 	"mobile-frontend-panel-cancel": "Нет, спасибо",
 	"mobile-frontend-search-feedback-link-text": "Напишите отзыв.",
-	"mobile-frontend-search-feedback-prompt": "Не удалось найти то, что вы искали?"
+	"mobile-frontend-search-feedback-prompt": "Не удалось найти то, что вы искали?",
+	"mobile-frontend-console-recruit": "\\o/ Привет! Это программное обеспечение с открытым исходным кодом, и мы нуждаемся в волонтерах, которые бы помогали нам в разработке, улучшении и исправлении ошибок, которые ты можешь видеть в этой консоли JavaScript!\n\nТы можешь найти нас здесь @ https://phabricator.wikimedia.org/project/profile/67/"
 }

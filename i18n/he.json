@@ -271,5 +271,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "האם מעניין אותך לנסות כמה אפשרויות חדשות? הצטרפות לבטא תיתן לך גישה לאפשרויות ניסיוניות, אבל גם סיכון לראות באגים ובעיות.",
 	"mobile-frontend-search-feedback-link-text": "נשמח לקבל את המשוב שלך.",
 	"mobile-frontend-search-feedback-prompt": "לא מצאת את מה שחיפשת?",
-	"mobile-frontend-notifications-filter-title": "סינון התראות"
+	"mobile-frontend-notifications-filter-title": "סינון התראות",
+	"mobile-frontend-console-recruit": "אהלן! /ס\\ זוהי תוכנה בקוד פתוח ואנחנו מחפשים מתנדבים שיעזרו לבנות את הדבר הזה, ישפרו אותו, וימצאו באגים שאולי מוצגים במסוף ג'אווה־סקריפט!\n\nאפשר למצוא את הבאגים שלנו בדף https://phabricator.wikimedia.org/project/profile/67/"
 }

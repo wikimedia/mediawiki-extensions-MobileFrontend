@@ -280,5 +280,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "هل تريد تجربة بعض الخصائص الجديدة؟ بالاشترك في البيتا، فستحصل الخصائص التجريبية، لكن مع احتمال مصادفة بعض العلل والقضايا.",
 	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك",
 	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟",
-	"mobile-frontend-notifications-filter-title": "إخطارات المرشح"
+	"mobile-frontend-notifications-filter-title": "إخطارات المرشح",
+	"mobile-frontend-console-recruit": "\\o/ مرحبا! هذا برنامج مفتوح المصدر ونحتاج لمتطوعين لمساعدتنا في بناء هذا الشيء، وجعله أفضل وإصلاح أي علل ربما تكون تراها في كونصول JavaScript هذا!\n\nيمكنك أن تجد سجلنا المتأخر @ https://phabricator.wikimedia.org/project/profile/67/"
 }

@@ -14,7 +14,8 @@
 			"Steenth",
 			"Tjernobyl",
 			"Thomsen",
-			"Mads Haupt"
+			"Mads Haupt",
+			"Joedalton"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruger redigerer via mobil-grænsefladen",
@@ -178,5 +179,6 @@
 	"tag-mobile_edit-description": "Redigering udført fra mobil (web eller app)",
 	"tag-mobile_web_edit": "Mobilwebredigering",
 	"tag-mobile_web_edit-description": "Redigering fra det mobile website",
-	"mobile-frontend-panel-cancel": "Nej tak"
+	"mobile-frontend-panel-cancel": "Nej tak",
+	"mobile-frontend-console-recruit": "\\o/ Hej! Dette er et program udviklet i åben kildekode og du kan være med til at bygge det bedre og rette fejl, som du måske ser i denne JavaScript-konsol!\n\nDu finder vores backlog på @ https://phabricator.wikimedia.org/project/profile/67/"
 }

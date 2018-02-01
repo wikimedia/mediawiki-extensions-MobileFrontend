@@ -268,5 +268,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Vil du teste noen nye funksjoner? Ved å bli med i beta-testingen får du tilgang på nye, eksperimentelle funksjoner, men med en viss risiko for å støte på feil.",
 	"mobile-frontend-search-feedback-link-text": "Gi oss tilbakemelding",
 	"mobile-frontend-search-feedback-prompt": "Fant du ikke det du lette etter?",
-	"mobile-frontend-notifications-filter-title": "Filtrer varsler"
+	"mobile-frontend-notifications-filter-title": "Filtrer varsler",
+	"mobile-frontend-console-recruit": "\\o/ Hei du! Dette er åpen kildekode-programvare som du kan være med å bygge – og du kan bli med å fikse feil du kommer over i JavaScript-konsollen!\n\nDu finner backloggen vår på https://phabricator.wikimedia.org/project/profile/67/"
 }

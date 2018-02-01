@@ -251,5 +251,6 @@
 	"mobile-frontend-panel-cancel": "Nem, köszönöm",
 	"mobile-frontend-panel-betaoptin-msg": "Szeretnél kipróbálni új funkciókat? Ha csatlakozol a bétához, hozzáférést kapsz kísérleti funkciókhoz, bár nagyobb a veszélye a hibáknak.",
 	"mobile-frontend-search-feedback-link-text": "Adj visszajelzést.",
-	"mobile-frontend-search-feedback-prompt": "Nem találtad meg, amit kerestél?"
+	"mobile-frontend-search-feedback-prompt": "Nem találtad meg, amit kerestél?",
+	"mobile-frontend-console-recruit": "\\o/ Szia! Ez egy nyílt forráskódú szoftver, és szükségünk van önkéntesekre ennek az építéséhez, jobbá tételéhez és az ezen a JavaScript-konzolon látható hibák javításához!\n\nA lemaradásunkat a https://phabricator.wikimedia.org/project/profile/67/ oldalon láthatod."
 }

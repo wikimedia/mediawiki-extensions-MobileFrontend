@@ -18,7 +18,8 @@
 			"YmKavishwar",
 			"Rajat11",
 			"Anamdas",
-			"Jayprakash12345"
+			"Jayprakash12345",
+			"Innocentbunny"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "कन्फर्मेशन कोड दर्ज करें",
@@ -184,5 +185,6 @@
 	"mobile-frontend-loading-message": "लोड हो रहा है ...",
 	"mobile-frontend-panel-ok": "ठीक",
 	"mobile-frontend-panel-cancel": "नहीं धन्यवाद",
-	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?"
+	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?",
+	"mobile-frontend-console-recruit": "\\o/ हमें आपकी मदद चाहिए! यह एक मुक्त स्रोत सॉफ़्टवेयर है और हमें इसे बनाने के लिए स्वयंसेवक चाहिए। इसे बेहतर बनाइये और इसके जावास्क्रिप्ट कंसोल में आपको जो भी बग्स मिलें उन्हें ठीक कर दीजिए!\n\nआपको हमारा बैकलॉग यहाँ मिल जाएगा: https://phabricator.wikimedia.org/project/profile/67/"
 }

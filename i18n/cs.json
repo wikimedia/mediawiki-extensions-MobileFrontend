@@ -15,7 +15,8 @@
 			"Jkjk",
 			"Cvanca",
 			"Dvorapa",
-			"Marek Pavlica"
+			"Marek Pavlica",
+			"Ilimanaq29"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Přihlaste se nebo si vytvořte účet, a sledujte tak svoje editace",
@@ -235,5 +236,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Chcete vyzkoušet některé nové funkce? Připojením k betaverzi získáte přístup k experimentálním funkcím, ale s rizikem, že narazíte na chyby či problémy.",
 	"mobile-frontend-search-feedback-link-text": "Sdělte nám svůj názor.",
 	"mobile-frontend-search-feedback-prompt": "Nenašli jste to, co jste hledali?",
-	"mobile-frontend-notifications-filter-title": "Filtrovat notifikace"
+	"mobile-frontend-notifications-filter-title": "Filtrovat notifikace",
+	"mobile-frontend-console-recruit": "Naučte se více o tom, jak budujeme naši mobilní síť, na https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

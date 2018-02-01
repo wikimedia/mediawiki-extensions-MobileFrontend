@@ -275,5 +275,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Quer testar algumas funcionalidades novas? Ao adotar a versão beta, terá acesso a funcionalidades experimentais, e corre o risco de encontrar erros e problemas.",
 	"mobile-frontend-search-feedback-link-text": "Dê-nos a sua opinião.",
 	"mobile-frontend-search-feedback-prompt": "Não encontrou o que procurava?",
-	"mobile-frontend-notifications-filter-title": "Filtrar notificações"
+	"mobile-frontend-notifications-filter-title": "Filtrar notificações",
+	"mobile-frontend-console-recruit": "Saiba mais sobre a forma como construímos o nosso sítio móvel @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

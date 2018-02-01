@@ -241,5 +241,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Wilt u nieuwe functies uitproberen? Door mee te doen aan de beta, krijgt u toegang tot experimentele functies, met het risico op fouten en problemen.",
 	"mobile-frontend-search-feedback-link-text": "Geef ons uw mening.",
 	"mobile-frontend-search-feedback-prompt": "Kon u niet vinden wat uw zocht?",
-	"mobile-frontend-notifications-filter-title": "Meldingen filteren"
+	"mobile-frontend-notifications-filter-title": "Meldingen filteren",
+	"mobile-frontend-console-recruit": "Hallo! Dit is opensource software en we hebben vrijwilligers nodig die helpen met bouwen en verbeteren hiervan en het oplossen van fouten die in de JavaScript-console te zien zijn!\n\nU kunt onze backlog vinden op https://phabricator.wikimedia.org/project/profile/67/"
 }

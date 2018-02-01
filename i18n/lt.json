@@ -250,5 +250,6 @@
 	"mobile-frontend-panel-cancel": "Ne, ačiū",
 	"mobile-frontend-panel-betaoptin-msg": "Ar norite išbandyti naujas funkcijas? Prisijungdami prie beta versijos galėsite pasiekti eksperimentines funkcijas, bet su rizika, kad kils klaidų ir problemų.",
 	"mobile-frontend-search-feedback-link-text": "Pateikite mums savo atsiliepimą.",
-	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?"
+	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?",
+	"mobile-frontend-console-recruit": "\\o/ Ei! Tai atviro kodo programinė įranga ir mums reikia savanorių, kad padėtų mums kurti šį projektą, pagerinkite ir pataisykite klaidas, kurių aptiksite šioje JavaScript konsolėje!\n\nNeatliktų darbų sąrašą galite rasti @ https://phabricator.wikimedia.org/project/profile/67/"
 }

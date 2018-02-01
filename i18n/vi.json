@@ -251,5 +251,6 @@
 	"mobile-frontend-panel-cancel": "Không, cảm ơn",
 	"mobile-frontend-panel-betaoptin-msg": "Bạn có muốn thử một số tính năng mới? Hãy tham gia vào bản beta, bạn sẽ có quyền sử dụng các tính năng thử nghiệm, nhưng có thể có lỗi hoặc vấn đề nào đó.",
 	"mobile-frontend-search-feedback-link-text": "Hãy gửi cho chúng tôi nhận xét của bạn.",
-	"mobile-frontend-search-feedback-prompt": "Không tìm thấy thứ bạn muốn tìm?"
+	"mobile-frontend-search-feedback-prompt": "Không tìm thấy thứ bạn muốn tìm?",
+	"mobile-frontend-console-recruit": "\\o/ Này! Đây là phần mềm nguồn mở và chúng tôi cần những người tình nguyện giúp chúng ta xây dựng nó, cải thiện nó, và sửa lỗi nào đang xuất hiện trong bảng điều khiển JavaScript này!\n\nXem hàng đợi công việc của chúng tôi @ https://phabricator.wikimedia.org/project/profile/67/"
 }

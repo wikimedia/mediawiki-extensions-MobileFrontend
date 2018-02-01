@@ -222,5 +222,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Doriți să testați câteva caracteristici noi? Alăturându-vă examinării stadiului beta, veți avea acces la caracteristici experimentale, cu riscul de a întâmpina erori și probleme.",
 	"mobile-frontend-search-feedback-link-text": "Oferiți-ne părerea dumneavoastră.",
 	"mobile-frontend-search-feedback-prompt": "Nu ați găsit ceea ce ați căutat?",
-	"mobile-frontend-notifications-filter-title": "Filtrează notificări"
+	"mobile-frontend-notifications-filter-title": "Filtrează notificări",
+	"mobile-frontend-console-recruit": "\\o/ Salutare! Acesta este un software cu sursă deschisă și avem nevoie de voluntari pentru a-l construi, a-l face mai bun și pentru a repara orice eroare pe care ați putea-o descoperi în această consolă JavaScript!\n\nPuteți găsi lista cu semnalări @ https://phabricator.wikimedia.org/project/profile/67/"
 }

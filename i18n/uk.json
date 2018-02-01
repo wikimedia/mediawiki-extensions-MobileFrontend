@@ -24,7 +24,8 @@
 			"Dars",
 			"NickK",
 			"Максим Підліснюк",
-			"Piramidion"
+			"Piramidion",
+			"Movses"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Увійдіть у систему або створіть обліковий запис, щоб відстежувати свої редагування.",
@@ -277,5 +278,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Ви хочете спробувати деякі нові функції? Приєднавшись до бета-версії, Ви отримаєте доступ до експериментальних функцій, з ризиком виникнення баґів і проблем.",
 	"mobile-frontend-search-feedback-link-text": "Напишіть нам свій відгук.",
 	"mobile-frontend-search-feedback-prompt": "Не вдалося знайти те, що Ви шукали?",
-	"mobile-frontend-notifications-filter-title": "Сповіщення фільтра"
+	"mobile-frontend-notifications-filter-title": "Сповіщення фільтра",
+	"mobile-frontend-console-recruit": "Дізнайтесь більше як ми створюємо мобільний сайт на https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

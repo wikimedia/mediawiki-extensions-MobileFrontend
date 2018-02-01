@@ -291,5 +291,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "¿Quieres probar algunas funcionalidades nuevas? Al unirte a la beta, accederás a funcionalidades experimentales, con el riesgo de encontrarte con algunos errores y problemas.",
 	"mobile-frontend-search-feedback-link-text": "Danos tus comentarios.",
 	"mobile-frontend-search-feedback-prompt": "¿No encontraste lo que buscabas?",
-	"mobile-frontend-notifications-filter-title": "Notificaciones de filtro"
+	"mobile-frontend-notifications-filter-title": "Notificaciones de filtro",
+	"mobile-frontend-console-recruit": "\\o/ ¡Ey! Esto es software de código abierto y necesitamos voluntarios que nos ayuden a construirlo, mejorarlo y corregir los posibles errores que puedas encontrar en esta consola de JavaScript.\n\nPuedes ver el trabajo pendiente en https://phabricator.wikimedia.org/project/profile/67/"
 }

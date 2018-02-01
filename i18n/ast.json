@@ -255,5 +255,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "¿Prestaríate probar dalgunes carauterístiques nueves? Xuniéndote a beta tendrás accesu a carauterístiques esperimentales, col riesgu d'atopate bugs y problemes.",
 	"mobile-frontend-search-feedback-link-text": "Unvianos un comentariu.",
 	"mobile-frontend-search-feedback-prompt": "¿Nun alcontrasti lo que buscabes?",
-	"mobile-frontend-notifications-filter-title": "Filtriar avisos"
+	"mobile-frontend-notifications-filter-title": "Filtriar avisos",
+	"mobile-frontend-console-recruit": "\\o/ ¡Ei! Esto ye software de códigu abiertu y necesitamos voluntarios que nos ayuden a construir la cosa, ameyorala ya iguar cualquier bug que puedas ver nesta consola de JavaScript.\n\nPuedes ver el rexistru de trabayos pendientes en https://phabricator.wikimedia.org/project/profile/67/"
 }

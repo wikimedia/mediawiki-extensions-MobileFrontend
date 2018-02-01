@@ -264,5 +264,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Quere probar algúns trebellos novos? Ó unirse á beta, accederá a trebellos experimentais, co risco de encontrarse con algúns erros e problemas.",
 	"mobile-frontend-search-feedback-link-text": "Envíenos os seus comentarios.",
 	"mobile-frontend-search-feedback-prompt": "Non atopou o que procuraba?",
-	"mobile-frontend-notifications-filter-title": "Filtrar as notificacións"
+	"mobile-frontend-notifications-filter-title": "Filtrar as notificacións",
+	"mobile-frontend-console-recruit": "\\o/ Ola! Isto é software de código aberto e necesitamos voluntarios que nos boten unha man para construílo, melloralo e reparar os fallos que se cadra atopa nesta consola de JavaScript!\n\nPode atopar a nosa lista de tarefas en https://phabricator.wikimedia.org/project/profile/67/"
 }
