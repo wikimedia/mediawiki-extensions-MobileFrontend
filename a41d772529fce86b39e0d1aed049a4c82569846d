@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_c09fd753",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T20:56:28Z",
+      "side": 1,
+      "message": "Can you explain the rationale for why you would do this?\nDoesn\u0027t this break accessibility?\nIt also seems out of scope for the bug fix.\n\nIs this css change necessary or can it be removed from the patch?",
+      "revId": "a41d772529fce86b39e0d1aed049a4c82569846d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
