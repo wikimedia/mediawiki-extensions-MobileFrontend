@@ -102,17 +102,6 @@ class ArticlePage
   # toc
   div(:toc, css: '.toc-mobile')
 
-  # editor (common)
-  span(:overlay_editor_mode_switcher, css: '.editor-switcher .oo-ui-indicatorElement-indicator')
-  span(:source_editor_button, css: '.source-editor .oo-ui-icon-edit-source')
-  span(:visual_editor_button, css: '.visual-editor .oo-ui-icon-edit-ve')
-
-  # editor
-  textarea(:editor_textarea, class: 'wikitext-editor')
-  button(:escape_button, class: 'mw-ui-icon-back')
-  button(:continue_button, class: 'continue')
-  button(:submit_button, class: 'submit')
-
   # drawer
   div(:drawer, css: '.drawer.visible')
 
@@ -126,21 +115,6 @@ class ArticlePage
   # category
   li(:overlay_category_topic_item, css: '.topic-title-list li')
 
-  # visual editor
-  div(:overlay_ve, css: '.editor-overlay-ve')
-  div(:overlay_ve_header) do |page|
-    page.overlay_ve_element.div_element(css: '.overlay-header-container')
-  end
-  div(:overlay_ve_header_toolbar) do |page|
-    page.overlay_ve_header_element.div_element(css: '.oo-ui-toolbar-bar')
-  end
-  span(:overlay_ve_header_toolbar_bold_button) do |page|
-    page.overlay_ve_header_element.span_element(class: 'oo-ui-iconElement-icon oo-ui-icon-bold-b')
-  end
-  span(:overlay_ve_header_toolbar_italic_button) do |page|
-    page.overlay_ve_header_element.span_element(class: 'oo-ui-iconElement-icon oo-ui-icon-italic-i')
-  end
-  div(:editor_ve, css: '.ve-ce-documentNode')
   div(:spinner_loading, class: 'spinner loading')
 
   # toast
@@ -189,10 +163,6 @@ class ArticlePage
   div(:error_message, css: '.error')
 
   # talk overlay
-  a(:talkadd, css: '.add.continue')
-  p(:talk_overlay_content_header, css: '.talk-overlay .content-header')
   li(:talk_overlay_first_topic_title, css: '.talk-overlay .topic-title-list li:first-child')
-  text_field(:talk_overlay_summary, css: '.talk-overlay .summary')
-  text_area(:talk_overlay_wikitext_editor, css: '.talk-overlay .wikitext-editor')
   button(:talk_overlay_save_button, css: '.talk-overlay .confirm-save')
 end
