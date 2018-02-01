@@ -12,7 +12,8 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return bool
 	 */
 	public function isDeletedDiff() {
-		return $this->mNewRev && $this->mNewRev->isDeleted( Revision::DELETED_TEXT );
+		return $this->mNewRev && $this->mNewRev->isDeleted( Revision::DELETED_TEXT ) ||
+			$this->mOldRev && $this->mOldRev->isDeleted( Revision::DELETED_TEXT );
 	}
 
 	/**
@@ -75,7 +76,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 
 		$warnings = $this->getWarningMessageText();
 		if ( $warnings ) {
-			$warnings = MobileUI::warningBox( $warnings );
+			$warnings = Html::warningBox( $warnings );
 		}
 		$output->addHTML(
 			$warnings .

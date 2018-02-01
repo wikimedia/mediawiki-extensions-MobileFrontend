@@ -554,6 +554,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @codeCoverageIgnore
+	 * @coversNothing
 	 */
 	public function testBug71329() {
 		SpecialPageFactory::resetList();
@@ -572,6 +573,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideShouldStripResponsiveImages
 	 * @covers MobileContext::shouldStripResponsiveImages
+	 * @covers MobileContext::setForceMobileView
 	 */
 	public function testShouldStripResponsiveImages(
 		$expected,

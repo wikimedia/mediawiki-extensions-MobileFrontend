@@ -73,6 +73,7 @@
 			rotation: 0,
 			hasText: false,
 			href: undefined,
+			glyphPrefix: 'mf',
 			tagName: 'div',
 			isSmall: false,
 			base: 'mw-ui-icon',
@@ -94,7 +95,7 @@
 		 * @return {string}
 		 */
 		getGlyphClassName: function () {
-			return this.options.base + '-' + this.options.name;
+			return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.name;
 		},
 		/**
 		 * Return the HTML representation of this view

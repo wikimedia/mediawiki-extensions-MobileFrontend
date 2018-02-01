@@ -21,7 +21,8 @@
 			"Imperadeiro90",
 			"Fernandofelippe",
 			"Fúlvio",
-			"Diniscoelho"
+			"Diniscoelho",
+			"Athena in Wonderland"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Inicie uma sessão ou crie uma conta para monitorizar as suas edições",
@@ -233,9 +234,9 @@
 	"mobile-frontend-user-page-create-user-page-link-label": "Criar uma página intitulada $1",
 	"nearby": "Páginas sobre temas perto de si",
 	"tag-mobile_edit": "Edição via dispositivo móvel",
-	"tag-mobile_edit-description": "Edição feita através de um site ou dispositivo móvel",
-	"tag-mobile_web_edit": "Edição feita através do site móvel",
-	"tag-mobile_web_edit-description": "Edição feita através do site para dispositivos móveis",
+	"tag-mobile_edit-description": "Edição feita através de um sítio ou dispositivo móvel",
+	"tag-mobile_web_edit": "Edição feita através do sítio móvel",
+	"tag-mobile_web_edit-description": "Edição feita através do sítio para dispositivos móveis",
 	"apihelp-mobileview-description": "Devolve os dados necessários para o visionamento em dispositivos móveis.",
 	"apihelp-mobileview-summary": "Devolve os dados necessários para o visionamento em dispositivos móveis.",
 	"apihelp-mobileview-param-page": "Título da página a processar.",

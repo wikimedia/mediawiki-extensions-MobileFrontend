@@ -87,7 +87,7 @@
 	"mobile-frontend-editor-success": "Din redigering har sparats.",
 	"mobile-frontend-editor-success-landmark-1": "Grattis, du är nu en redaktör på {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Grattis till att ha skapat en ny sida!",
-	"mobile-frontend-editor-summary-placeholder": "Exempel: Rättade stavfel, lagt till innehåll",
+	"mobile-frontend-editor-summary-placeholder": "Exempel: Rättade stavfel, lade till innehåll",
 	"mobile-frontend-editor-summary-request": "Hur förbättrade du sidan?",
 	"mobile-frontend-editor-summary": "Sammanfattning:",
 	"mobile-frontend-editor-switch-confirm": "Du måste spara din redigering innan du byter till ett annan redigeringsläge.",

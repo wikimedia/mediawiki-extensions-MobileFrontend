@@ -15,7 +15,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"descriptionmsg": "mobile-frontend-desc",
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
 		"MediaWiki": ">= 1.31.0"
@@ -77,7 +77,6 @@
 		"SpecialNearby": "includes/specials/SpecialNearby.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
-		"SpecialMobilePreferences": "includes/specials/SpecialMobilePreferences.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
 		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
@@ -114,9 +113,9 @@
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
 		},
-		"mobile.overlay.images": {
-			"selectorWithoutVariant": ".mw-ui-icon-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-{name}-{variant}:before",
+		"mobile.startup.images.variants": {
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"class": "ResourceLoaderImageModule",
 			"variants": {
 				"gray": {
@@ -129,33 +128,33 @@
 				}
 			},
 			"images": {
+				"arrow": "resources/mobile.startup.images.variants/arrow.svg",
 				"back": {
 					"file": {
-						"ltr": "resources/mobile.overlay.images/back-ltr.svg",
-						"rtl": "resources/mobile.overlay.images/back-rtl.svg"
+						"ltr": "resources/mobile.startup.images.variants/back-ltr.svg",
+						"rtl": "resources/mobile.startup.images.variants/back-rtl.svg"
 					}
 				},
-				"overlay-close": "resources/mobile.overlay.images/close.svg"
+				"overlay-close": "resources/mobile.startup.images.variants/close.svg"
 			}
 		},
 		"mobile.issues.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
-				"cleanup": "resources/mobile.issues.images/blue-triangle.svg",
 				"cleanup-gray": "resources/mobile.issues.images/gray-triangle.svg"
 			}
 		},
 		"mobile.toc.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
 				"toc": "resources/mobile.toc.images/contents-ltr.svg"
 			}
 		},
 		"mobile.references.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
 				"citation": "resources/mobile.references.images/cite.svg"
 			}
@@ -170,6 +169,23 @@
 				"resources/mobile.messageBox.styles/messageBox.less"
 			]
 		},
+		"mobile.userpage.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selector": ".mw-ui-icon-mf-{name}:before, mw-ui-icon-{name}:before",
+			"images": {
+				"talk": "resources/mobile.userpage.icons/talk.svg",
+				"userpage": "resources/mobile.userpage.icons/userpage.svg"
+			}
+		},
+		"mobile.userpage.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"styles": [
+				"resources/mobile.userpage.styles/userpage.less"
+			]
+		},
 		"mobile.messageBox": {
 			"targets": [
 				"mobile",
@@ -180,7 +196,7 @@
 				"mobile.messageBox.styles"
 			],
 			"templates": {
-				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.mustache"
+				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.hogan"
 			},
 			"scripts": [
 				"resources/mobile.messageBox/MessageBox.js"
@@ -262,9 +278,11 @@
 		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
-				"error": "resources/mobile.startup.images/error.svg"
+				"error": "resources/mobile.startup.images/error.svg",
+				"watch": "resources/mobile.startup.images/watch.svg",
+				"watched": "resources/mobile.startup.images/watched.svg"
 			}
 		},
 		"mobile.init": {
@@ -281,6 +299,7 @@
 			"messages": [
 				"mobile-frontend-panel-betaoptin-msg",
 				"mobile-frontend-panel-ok",
+				"mobile-frontend-console-recruit",
 				"mobile-frontend-panel-cancel"
 			],
 			"templates": {
@@ -306,7 +325,7 @@
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
 				"mobile.startup.images",
-				"mobile.overlay.images",
+				"mobile.startup.images.variants",
 				"mobile.ajax.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
@@ -508,7 +527,7 @@
 		},
 		"mobile.search.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
 				"clear": "resources/mobile.search.images/clear.svg",
 				"search-content": "resources/mobile.search.images/search-content.svg"
@@ -912,7 +931,7 @@
 		},
 		"mobile.special.user.icons": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"position": "bottom",
 			"images": {
 				"user": "resources/mobile.special.user.icons/userNormal.svg",
@@ -1046,7 +1065,7 @@
 		},
 		"mobile.special.mobilediff.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-{name}:before",
+			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
 				"bytesadded": "resources/mobile.special.mobilediff.images/bytes-added.svg",
 				"bytesneutral": "resources/mobile.special.mobilediff.images/bytes-neutral.svg",

@@ -3,7 +3,8 @@
 		"authors": [
 			"MaxSem",
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Zoranzoki21"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
@@ -115,7 +116,7 @@
 	"mobile-frontend-nearby-permission": "{{SITENAME}}-Nobäi huet net d'Recht fir op Är Plaz ziuzgräifen.",
 	"mobile-frontend-nearby-permission-guidance": "Vergewëssert Iech datt Dir d'Autorisatioun ginn hutt fir ze weise wou Dir sidd. Et ka sinn datt Dir Lokalisatiounsastellunge vun Ärem Browser nokucke musst.",
 	"mobile-frontend-nearby-refresh": "Plaz aktualiséieren",
-	"mobile-frontend-nearby-requirements": "Leider ënnerstëtzt Ären Internetbrowser {{SITENAM}} Nearby net.",
+	"mobile-frontend-nearby-requirements": "Leider ënnerstëtzt Ären Internetbrowser {{SITENAME}} Nearby net.",
 	"mobile-frontend-nearby-requirements-guidance": "Probéiert en anere Browser oder aktivéiert Javascript wann Dir deen ausgeschalt hutt.",
 	"mobile-frontend-nearby-title": "Nobäi",
 	"mobile-frontend-news-items": "An den Neiegkeeten",

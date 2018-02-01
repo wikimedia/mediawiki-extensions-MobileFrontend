@@ -1,0 +1,60 @@
+@import 'mobile.variables';
+@import 'mediawiki.mixins';
+
+.tagline {
+	color: @colorGray5;
+	font-size: 0.8em;
+	margin: 10px 0;
+}
+
+.user-links {
+	margin: 15px 0 0 0;
+	li {
+		display: inline-block;
+		& + li {
+			margin-left: 4px;
+			&:before {
+				content: '·';
+				right: 2px;
+				position: relative;
+			}
+		}
+	}
+	.mw-ui-icon-mf-talk,
+	// FIXME: Remove when cache has cleared (T182162)
+	.mw-ui-icon-talk {
+		&:before {
+			// FIXME: this shouldn't be necessary
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.cta-holder {
+	background-color: @colorGray14;
+	.box-sizing( border-box );
+	padding: 30px 20px;
+	text-align: center;
+	border-radius: @borderRadius;
+
+	.icon {
+		margin: 0 auto 20px;
+		opacity: 0.2;
+	}
+
+	// be specific in order to override default padding
+	.content & h3 {
+		font-size: 1em;
+		font-family: sans-serif;
+		padding: 0 0 10px;
+	}
+
+	.desc {
+		color: @colorGray7;
+		margin-bottom: 20px;
+	}
+
+	.disabled {
+		visibility: hidden;
+	}
+}

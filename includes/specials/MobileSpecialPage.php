@@ -79,7 +79,7 @@ class MobileSpecialPage extends SpecialPage {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-requires-title' ) );
 		$out->setProperty( 'unstyledContent', true );
-		$out->addHTML( MobileUI::warningBox( $msg ) );
+		$out->addHTML( Html::warningBox( $msg ) );
 	}
 
 	/**
@@ -123,7 +123,7 @@ class MobileSpecialPage extends SpecialPage {
 		$this->getOutput()->setStatusCode( 404 );
 		$this->getOutput()->addHTML(
 			MobileUI::contentElement(
-				MobileUI::errorBox(
+				Html::errorBox(
 					$this->msg( $this->errorNotFoundDescriptionMsg )->text(),
 					$this->msg( $this->errorNotFoundTitleMsg )->text()
 				)

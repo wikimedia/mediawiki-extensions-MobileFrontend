@@ -94,7 +94,7 @@
 	"mobile-frontend-languages-text": "$1 er til á $2 {{PLURAL:$2|tungumáli|tungumálum}}.",
 	"mobile-frontend-languages-variant-header": "Afbrigði {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-last-modified-date": "Síðast breytt $1, kl. $2",
-	"mobile-frontend-last-modified-with-user-days": "[$4 Síðast {{GENDER:$1|breytt}} fyrir {{PLURAL:$3|$3 dag|$3 dögum}} síðan] af {{PLURAL:$5|[$6 $2]|0=óskráðum notanda}}",
+	"mobile-frontend-last-modified-with-user-days": "[$4 Síðast {{GENDER:$1|breytt}} fyrir {{PLURAL:$3|$3 degi|$3 dögum}} síðan] af {{PLURAL:$5|[$6 $2]|0=óskráðum notanda}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Síðast {{GENDER:$1|breytt}} fyrir {{PLURAL:$3|$3 klukkutíma|$3 klukkutímum}} síðan] af {{PLURAL:$5|[$6 $2]|0=óskráðum notanda}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Síðast {{GENDER:$1|breytt}}] rétt áðan af {{PLURAL:$4|[$5 $2]|0=óskráðum notanda}}.",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Síðast {{GENDER:$1|breytt}} fyrir {{PLURAL:$3|$3 mínútu|$3 mínútum}} síðan] af {{PLURAL:$5|[$6 $2]|0=óskráðum notanda}}",

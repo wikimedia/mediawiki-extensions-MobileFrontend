@@ -37,12 +37,21 @@ class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 		$this->request = new FauxRequest();
 	}
 
+	/**
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
+	 */
 	public function testIsNullWhenCustomHeaderIsntPresent() {
 		$this->assertNull(
 			$this->detector->detectDeviceProperties( $this->request, [] )
 		);
 	}
 
+	/**
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
+	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::__construct
+	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 */
 	public function testIsMobileWhenMobileHeaderIsPresent() {
 		$this->request->setHeader( 'FooHeader',  '' );
 

@@ -308,5 +308,6 @@
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Disable section collapsing on mobile web.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Article font size",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Control the font size of your reading experience.",
-	"mobile-frontend-beta-only": "Feature only available in beta mode"
+	"mobile-frontend-beta-only": "Feature only available in beta mode",
+	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

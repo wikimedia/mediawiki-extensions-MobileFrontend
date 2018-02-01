@@ -9,19 +9,6 @@ use MobileFrontend\ContentProviders\ContentProviderFactory;
  */
 class ExtMobileFrontend {
 	/**
-	 * Uses EventLogging when available to record an event on server side
-	 *
-	 * @param string $schema The name of the schema
-	 * @param int $revision The revision of the schema
-	 * @param array $data The data to be recorded against the schema
-	 */
-	public static function eventLog( $schema, $revision, $data ) {
-		if ( is_callable( [ EventLogging::class, 'logEvent' ] ) ) {
-			EventLogging::logEvent( $schema, $revision, $data );
-		}
-	}
-
-	/**
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
@@ -82,6 +69,11 @@ class ExtMobileFrontend {
 		// on whether the user is the owner of the page or not.
 		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
 			$pageUserId = User::idFromName( $title->getText() );
+
+			$out->addModuleStyles( [
+				'mediawiki.ui.icon',
+				'mobile.userpage.styles', 'mobile.userpage.icons'
+			] );
 			if ( $pageUserId && !$title->exists() ) {
 				$pageUser = User::newFromId( $pageUserId );
 				$contentHtml = self::getUserPageContent(
@@ -105,6 +97,9 @@ class ExtMobileFrontend {
 		// Is the current user viewing their own page?
 		$isCurrentUser = $output->getUser()->getName() === $pageUsername;
 
+		$data = [
+			'userIconClass' => MobileUI::iconClass( 'userpage', 'element', 'mw-ui-icon-large icon' ),
+		];
 		$data['ctaHeading'] = $isCurrentUser ?
 			$context->msg( 'mobile-frontend-user-page-no-owner-page-yet' )->text() :
 			$context->msg( 'mobile-frontend-user-page-no-page-yet', $pageUsername )->parse();

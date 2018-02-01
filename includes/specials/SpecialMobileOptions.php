@@ -183,12 +183,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
-		$schema = 'MobileOptionsTracking';
-		$schemaRevision = 16934032;
-		$schemaData = [
-			'action' => 'success',
-			'beta' => "nochange",
-		];
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -200,26 +194,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
 			);
-			$schemaData['action'] = 'error';
-			$schemaData['errorText'] = $errorText;
-			ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
 			$this->addSettingsForm();
 			return;
 		}
 
-		if ( $request->getBool( 'enableBeta' ) ) {
-			$group = 'beta';
-			if ( !$context->isBetaGroupMember() ) {
-				// The request was to turn on beta
-				$schemaData['beta'] = "on";
-			}
-		} else {
-			$group = '';
-			if ( $context->isBetaGroupMember() ) {
-				// beta was turned off
-				$schemaData['beta'] = "off";
-			}
-		}
+		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
 		$context->setMobileMode( $group );
 		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );

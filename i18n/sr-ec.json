@@ -8,7 +8,8 @@
 			"Михајло Анђелковић",
 			"Srdjan m",
 			"Сербијана",
-			"Obsuser"
+			"Obsuser",
+			"Acamicamacaraca"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Унесите текст горе",
@@ -17,7 +18,7 @@
 	"mobile-frontend-clear-search": "Очисти",
 	"mobile-frontend-copyright": "Садржај је доступан под лиценцом $1 осим ако је другачије наведено.",
 	"mobile-frontend-desc": "Кориснички део за мобилне уређаје",
-	"mobile-frontend-diffview-404-title": "Лоша ревизија",
+	"mobile-frontend-diffview-404-title": "Лоша измена",
 	"mobile-frontend-diffview-anonymous": "Анониман корисник",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|$1 бајт додат|$1 бајта додата|$1 бајтова додато}}",
 	"mobile-frontend-diffview-bytesnochange": "Без промене величине",
@@ -57,7 +58,7 @@
 	"mobile-frontend-editor-switch-confirm": "Морате сачувати измене пре пребацивања на други уређивачки режим.",
 	"mobile-frontend-editor-switch-editor": "Замени уређивач",
 	"mobile-frontend-editor-switch-visual-editor": "Пребаци ме на Визуелни уређивач",
-	"mobile-frontend-editor-wait": "Чување измене, молимо сачекајте.",
+	"mobile-frontend-editor-wait": "Чување измене, сачекајте.",
 	"mobile-frontend-expand-sections-description": "Увек рашири све одељке када прелазим на нову страницу.",
 	"mobile-frontend-expand-sections-status": "Рашири све одељке",
 	"mobile-frontend-fontchanger-link": "Величина фонта",

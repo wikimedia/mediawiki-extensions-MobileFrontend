@@ -36,7 +36,7 @@ class SpecialNearby extends MobileSpecialPage {
 				]
 			) .
 			MobileUI::contentElement(
-				MobileUI::errorBox(
+				Html::errorBox(
 					Html::element( 'h2', [],
 						$this->msg( 'mobile-frontend-nearby-requirements' )->text() ) .
 					Html::element( 'p', [],

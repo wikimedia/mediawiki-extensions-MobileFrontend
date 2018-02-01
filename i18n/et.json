@@ -142,7 +142,7 @@
 	"mobile-frontend-photo-upload-invalid-user": "Kasutaja \"$1\" pole registreeritud.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Üle 500 üleslaaditud faili",
-	"mobile-frontend-privacy-link-text": "Privaatsus",
+	"mobile-frontend-privacy-link-text": "Andmekaitse",
 	"mobile-frontend-references-citation": "Viide",
 	"mobile-frontend-references-list": "Vaata kogu viidete loendit",
 	"mobile-frontend-requires-mobile": "See lehekülg pole lauaarvutivaates saadaval. Palun klõpsa lehekülje allosas mobiilivaate linki.",
