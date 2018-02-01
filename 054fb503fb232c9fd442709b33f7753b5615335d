@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4efcebec_fd16fcf4",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T18:32:41Z",
+      "side": 1,
+      "message": "Great",
+      "parentUuid": "4efcebec_e7782df0",
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_a7fbc543",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 3
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "4efcebec_ddfce0b3",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T18:32:41Z",
+      "side": 1,
+      "message": "If it\u0027s stored the old way - as a number then what will happen is the value e.g. \u0027120\u0027 will be passed to the DropdownInputWidget\nThat will render the dropdown with nothing selected.\n\nOf course, we could provide special handling for this, but given it\u0027s beta (most people will not have used) and it doesn\u0027t explode I think this is fine.",
+      "parentUuid": "4efcebec_a7fbc543",
+      "range": {
+        "startLine": 52,
+        "startChar": 3,
+        "endLine": 52,
+        "endChar": 50
+      },
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_e7de6ddd",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 3
@@ -53,6 +95,30 @@
       "writtenOn": "2018-02-01T15:09:33Z",
       "side": 1,
       "message": "Replaced with `currentFontSize || \u0027regular\u0027` in next PS.",
+      "range": {
+        "startLine": 55,
+        "startChar": 10,
+        "endLine": 55,
+        "endChar": 55
+      },
+      "revId": "054fb503fb232c9fd442709b33f7753b5615335d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_9d19b82a",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-01T18:32:41Z",
+      "side": 1,
+      "message": "Cool!",
+      "parentUuid": "4efcebec_e7de6ddd",
       "range": {
         "startLine": 55,
         "startChar": 10,
