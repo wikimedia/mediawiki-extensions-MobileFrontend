@@ -25,7 +25,8 @@
 			"Wwycheuk",
 			"A2093064",
 			"Itsmine",
-			"Kly"
+			"Kly",
+			"Assoc"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -258,5 +259,5 @@
 	"mobile-frontend-panel-betaoptin-msg": "您是否希望嘗試一些新功能？透過參與 beta 測試，您將有機會得到實驗性功能，並承擔遇到 bug 與問題的風險。",
 	"mobile-frontend-search-feedback-link-text": "提供我們您的意見回饋。",
 	"mobile-frontend-search-feedback-prompt": "找不到您尋找的內容？",
-	"mobile-frontend-console-recruit": "\\o/ 嘿！這是套開放原始碼軟體，我們需要志工們來協助打造、改善，以及修正在 JavaScript 主控台裡所發現的程式錯誤！\n\n您可以在： https://phabricator.wikimedia.org/project/profile/67/ 查看我們的積壓事項"
+	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

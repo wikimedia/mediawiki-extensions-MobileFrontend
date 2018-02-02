@@ -265,5 +265,5 @@
 	"mobile-frontend-search-feedback-link-text": "Envíenos os seus comentarios.",
 	"mobile-frontend-search-feedback-prompt": "Non atopou o que procuraba?",
 	"mobile-frontend-notifications-filter-title": "Filtrar as notificacións",
-	"mobile-frontend-console-recruit": "\\o/ Ola! Isto é software de código aberto e necesitamos voluntarios que nos boten unha man para construílo, melloralo e reparar os fallos que se cadra atopa nesta consola de JavaScript!\n\nPode atopar a nosa lista de tarefas en https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
