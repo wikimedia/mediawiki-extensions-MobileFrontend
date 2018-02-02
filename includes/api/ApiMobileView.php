@@ -479,7 +479,9 @@ class ApiMobileView extends ApiBase {
 	 */
 	protected function makeParserOptions( WikiPage $wikiPage ) {
 		$popt = $wikiPage->makeParserOptions( $this );
-		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) ) {
+		if ( is_callable( [ $popt, 'setWrapOutputClass' ] ) &&
+			!defined( 'ParserOutput::SUPPORTS_UNWRAP_TRANSFORM' )
+		) {
 			// Let the client handle it.
 			$popt->setWrapOutputClass( false );
 		}
@@ -619,7 +621,7 @@ class ApiMobileView extends ApiBase {
 				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
 				return;
 			}
-			$html = $parserOutput->getText( [ 'allowTOC' => false ] );
+			$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true ] );
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 
