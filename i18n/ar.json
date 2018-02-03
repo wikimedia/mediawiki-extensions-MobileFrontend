@@ -24,7 +24,8 @@
 			"PhiberOptik",
 			"Shbib Al-Subaie",
 			"Maroen1990",
-			"علاء"
+			"علاء",
+			"Azouz.anis"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "سجل الدخول أو أنشيء حسابا لتتبع تعديلاتك",
@@ -281,5 +282,5 @@
 	"mobile-frontend-search-feedback-link-text": "اعطنا ملاحظاتك",
 	"mobile-frontend-search-feedback-prompt": "لم تستطع العثور على ما تبحث عنه؟",
 	"mobile-frontend-notifications-filter-title": "إخطارات المرشح",
-	"mobile-frontend-console-recruit": "\\o/ مرحبا! هذا برنامج مفتوح المصدر ونحتاج لمتطوعين لمساعدتنا في بناء هذا الشيء، وجعله أفضل وإصلاح أي علل ربما تكون تراها في كونصول JavaScript هذا!\n\nيمكنك أن تجد سجلنا المتأخر @ https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

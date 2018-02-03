@@ -258,5 +258,5 @@
 	"mobile-frontend-search-feedback-link-text": "Дајте ни ваше мислење.",
 	"mobile-frontend-search-feedback-prompt": "Не го најдовте она што го баравте?",
 	"mobile-frontend-notifications-filter-title": "Филтрирање на известувања",
-	"mobile-frontend-console-recruit": "\\o/ Еј! Ова е програм со отворен код и ни требаат доброволци за да ни помогнат да го разработиме, да го подобриме и да ги поправиме грешките на кои можете да наидете во оваа конзола со JavaScript!\n\nСпсиокот на потребни доработки и исправки ќе го најдете на https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Дознајте повеќе за тоа како го градиме нашиот мобилен портал на https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
