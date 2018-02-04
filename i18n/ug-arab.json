@@ -3,7 +3,8 @@
 		"authors": [
 			"Sahran",
 			"Tel'et",
-			"Uzdil"
+			"Uzdil",
+			"چۈشكۈن"
 		]
 	},
 	"mobile-frontend-clear-search": "تازىلا",
@@ -19,5 +20,6 @@
 	"mobile-frontend-watchlist-filter-other": "باشقا",
 	"mobile-frontend-watchlist-filter-talk": "مۇنازىرە",
 	"tag-mobile_edit": "يانفون نەشىرىنى تەھرىرلەش",
-	"tag-mobile_web_edit": "يانفون بېتىنى تەھرىرلەش"
+	"tag-mobile_web_edit": "يانفون بېتىنى تەھرىرلەش",
+	"mobile-frontend-console-recruit": "بىز قانداق قىلىپ تېخىمۇ كۆپ ئالاقىدار تۈزۈلمە كۆچمە تور بېكىتى تەپسىلىي قاراپ چىقىڭ : https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
