@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8ecf6729_4ce9dcf3",
+        "filename": "includes/transforms/LegacyMainPageTransform.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-05T23:35:19Z",
+      "side": 1,
+      "message": "?\nWhat would be the benefit over using wfMessage ?",
+      "parentUuid": "4efcebec_95efc881",
+      "range": {
+        "startLine": 9,
+        "startChar": 41,
+        "endLine": 9,
+        "endChar": 57
+      },
+      "revId": "51974289fdf0a697a09c0d018ebe0aba852d8fa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_15fc583a",
         "filename": "includes/transforms/LegacyMainPageTransform.php",
         "patchSetId": 6
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "cd885a8f_130c0fcd",
+        "filename": "includes/transforms/LegacyMainPageTransform.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-05T23:35:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4efcebec_15fc583a",
+      "range": {
+        "startLine": 34,
+        "startChar": 3,
+        "endLine": 34,
+        "endChar": 27
+      },
+      "revId": "51974289fdf0a697a09c0d018ebe0aba852d8fa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_f5e44ca5",
         "filename": "includes/transforms/LegacyMainPageTransform.php",
         "patchSetId": 6
@@ -59,6 +107,30 @@
       "writtenOn": "2018-02-02T17:13:59Z",
       "side": 1,
       "message": "is there a valid reason for this to be protected?",
+      "range": {
+        "startLine": 36,
+        "startChar": 1,
+        "endLine": 36,
+        "endChar": 10
+      },
+      "revId": "51974289fdf0a697a09c0d018ebe0aba852d8fa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a06fa073_a1fcd288",
+        "filename": "includes/transforms/LegacyMainPageTransform.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-05T23:35:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4efcebec_f5e44ca5",
       "range": {
         "startLine": 36,
         "startChar": 1,
