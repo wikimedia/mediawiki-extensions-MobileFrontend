@@ -1,5 +1,7 @@
 <?php
 
+use MobileFrontend\Features\IFeature;
+
 /**
  * Adds a special page with mobile specific preferences
  */
@@ -8,13 +10,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private $returnToTitle;
 	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
-	/** @var array $options Used in the execute() function as a map of subpages to
-	 functions that are executed when the request method is defined. */
-	private $options = [
-		'Language' => [ 'get' => 'chooseLanguage' ],
-	];
-	/** @var boolean Whether the special page's content should be wrapped in div.content */
-	protected $unstyledContent = false;
 
 	/**
 	 * Construct function
@@ -46,41 +41,12 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setHeaders();
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
-		// check, if the subpage has a registered function, that needs to be executed
-		if ( isset( $this->options[$par] ) ) {
-			$option = $this->options[$par];
 
-			// select the correct function for the given request method (post, get)
-			if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
-				$func = $option['post'];
-			} else {
-				$func = $option['get'];
-			}
-			// run the function
-			$this->$func();
+		if ( $this->getRequest()->wasPosted() ) {
+			$this->submitSettingsForm();
 		} else {
-			if ( $this->getRequest()->wasPosted() ) {
-				$this->submitSettingsForm();
-			} else {
-				$this->addSettingsForm();
-			}
+			$this->addSettingsForm();
 		}
-	}
-
-	/**
-	 * Gets the Resource Loader modules that should be added to the output.
-	 *
-	 * @param MobileContext $context
-	 * @return string[]
-	 */
-	private function getModules( MobileContext $context ) {
-		$result = [];
-
-		if ( $context->getConfigVariable( 'MFEnableFontChanger' ) ) {
-			$result[] = 'mobile.special.mobileoptions.scripts.fontchanger';
-		}
-
-		return $result;
 	}
 
 	/**
@@ -93,130 +59,128 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$user = $this->getUser();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
+		$out->enableOOUI();
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
 			$out->wrapWikiMsg(
-				"<div class=\"successbox\"><strong>\n$1\n</strong></div><div id=\"mw-pref-clear\"></div>",
-				'savedprefs'
+				MobileUI::contentElement(
+					Html::successBox( $this->msg( 'savedprefs' ) )
+				)
 			);
 		}
 
-		$betaEnabled = $context->isBetaGroupMember();
-
-		$imagesBeta = $betaEnabled ? 'checked' : '';
-		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
-		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
-
-		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
-		$action = $this->getPageTitle()->getLocalURL();
-		$html = Html::openElement( 'form',
-			[ 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action ]
-		);
-		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
-		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
-
-		// array to save the data of options, which should be displayed here
-		$options = [];
+		$fields = [];
+		$form = new OOUI\FormLayout( [
+			'method' => 'POST',
+			'id' => 'mobile-options',
+			'action' => $this->getPageTitle()->getLocalURL(),
+		] );
+		$form->addClasses( [ 'mw-mf-settings' ] );
 
 		// beta settings
+		$isInBeta = $context->isBetaGroupMember();
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
-			$options['beta'] = [
-				'checked' => $imagesBeta,
-				'label' => $betaEnableMsg,
-				'description' => $betaDescriptionMsg,
+			$input = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableBeta',
+				'infusable' => true,
+				'selected' => $isInBeta,
 				'id' => 'enable-beta-toggle',
-			];
-		}
+				'value' => '1',
+			] );
+			$fields[] = new OOUI\FieldLayout(
+				$input,
+				[
+					'label' => new OOUI\LabelWidget( [
+						'input' => $input,
+						'label' => new OOUI\HtmlSnippet(
+							Html::openElement( 'div' ) .
+							Html::element( 'strong', [],
+								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
+							Html::element( 'div', [ 'class' => 'option-description' ],
+								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
+							) .
+							Html::closeElement( 'div' )
+						)
+					] ),
+					'id' => 'beta-field',
+				]
+			);
 
-		$templateParser = new TemplateParser(
-			__DIR__ . '/../../resources/mobile.special.mobileoptions.scripts' );
-		// @codingStandardsIgnoreStart Long line
-		foreach( $options as $key => $data ) {
-			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
-				$html .= Html::element( 'input',
-					array(
-						'type' => 'hidden',
-						'name' => $data['name'],
-						'value' => $data['checked'],
-					)
+			$manager = \MediaWiki\MediaWikiServices::getInstance()
+				->getService( 'MobileFrontend.FeaturesManager' );
+
+			$features = array_diff(
+				$manager->getAvailable( IFeature::CONFIG_BETA ),
+				$manager->getAvailable( IFeature::CONFIG_STABLE )
+			);
+
+			$classNames = [ 'mobile-options-beta-feature' ];
+			if ( $isInBeta ) {
+				$classNames[] = 'is-enabled';
+				$icon = 'check';
+			} else {
+				$icon = 'lock';
+			}
+			/** @var \MobileFrontend\Features\IFeature $feature */
+			foreach ( $features as $feature ) {
+				$fields[] = new OOUI\FieldLayout(
+					new OOUI\IconWidget( [
+						'icon' => $icon,
+						'title' => wfMessage( 'mobile-frontend-beta-only' ),
+					] ),
+					[
+						'classes' => $classNames,
+						'label' => new OOUI\LabelWidget( [
+							'label' => new OOUI\HtmlSnippet(
+								Html::rawElement( 'div', [],
+									Html::element( 'strong', [],
+										wfMessage( $feature->getNameKey() ) ) .
+									Html::element( 'div', [ 'class' => 'option-description' ],
+										wfMessage( $feature->getDescriptionKey() ) )
+								)
+							),
+						] )
+					]
 				);
-			} else {
-				$html .= $templateParser->processTemplate( 'checkbox', $data );
 			}
 		}
-		$className = MobileUI::buttonClass( 'progressive' );
-		$html .= <<<HTML
-		<input type="submit" class="{$className}" id="mw-mf-settings-save" value="{$saveSettings}">
-		$token
-		$returnto
-	</form>
-HTML;
-		// @codingStandardsIgnoreEnd
-		$out->addHTML( $html );
 
-		$modules = $this->getModules( $context );
+		$fields[] = new OOUI\ButtonInputWidget( [
+			'id' => 'mw-mf-settings-save',
+			'infusable' => true,
+			'value' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'label' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'flags' => [ 'primary', 'progressive' ],
+			'type' => 'submit',
+		] );
 
-		$this->getOutput()
-			->addModules( $modules );
+		if ( $user->isLoggedIn() ) {
+			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
+				'value' => $user->getEditToken() ] );
+		}
+
+		$feedbackLink = $this->getConfig()->get( 'MFBetaFeedbackLink' );
+		if ( $feedbackLink && $isInBeta ) {
+			$fields[] = new OOUI\ButtonWidget( [
+				'framed' => false,
+				'href' => $feedbackLink,
+				'icon' => 'feedback',
+				'flags' => [
+					'progressive',
+				],
+				'classes' => [ 'mobile-options-feedback' ],
+				'label' => $this->msg( 'mobile-frontend-send-feedback' )->escaped(),
+			] );
+		}
+
+		$form->appendContent(
+			$fields
+		);
+		$out->addHTML( $form );
 	}
 
 	/**
-	 * Get a list of languages available for this project
-	 * @return string parsed Html
-	 */
-	private function getSiteSelector() {
-		$selector = '';
-		$count = 0;
-		$language = $this->getLanguage();
-		$interwikiLookup = \MediaWiki\MediaWikiServices::getInstance()->getInterwikiLookup();
-		foreach ( $interwikiLookup->getAllPrefixes( true ) as $interwiki ) {
-			$code = $interwiki['iw_prefix'];
-			$name = Language::fetchLanguageName( $code, $language->getCode() );
-			if ( !$name ) {
-				continue;
-			}
-			$title = Title::newFromText( "$code:" );
-			if ( $title ) {
-				$url = $title->getFullURL();
-			} else {
-				$url = '';
-			}
-			$attrs = [ 'href' => $url ];
-			$count++;
-			if ( $code == $this->getConfig()->get( 'LanguageCode' ) ) {
-				$attrs['class'] = 'selected';
-			}
-			$selector .= Html::openElement( 'li' );
-			$selector .= Html::element( 'a', $attrs, $name );
-			$selector .= Html::closeElement( 'li' );
-		}
-
-		if ( $selector && $count > 1 ) {
-			$selector = <<<HTML
-			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count )->parse()}</p>
-			<ul id='mw-mf-language-list'>
-				{$selector}
-			</ul>
-HTML;
-		}
-
-		return $selector;
-	}
-
-	/**
-	 * Render the language selector special page, callable through Special:MobileOptions/Language
-	 * See the $options member variable of this class.
-	 */
-	private function chooseLanguage() {
-		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'mobile-frontend-settings-site-header' )->escaped() );
-		$out->addHTML( $this->getSiteSelector() );
-	}
-
-	/**
-	 * Saves the settings submitted by the settings form. Redirects the user to the destination
-	 * of returnto or, if not set, back to this special page
+	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
 		$context = MobileContext::singleton();
@@ -236,40 +200,7 @@ HTML;
 
 		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
 		$context->setMobileMode( $group );
-		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
-		if ( $returnToTitle ) {
-			$url = $returnToTitle->getFullURL();
-		} else {
-			$url = $this->getPageTitle()->getFullURL( 'success' );
-		}
+		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
-	}
-
-	/**
-	 * Get the URL of this special page
-	 * @param string|null $option Subpage string, or false to not use a subpage
-	 * @param Title $returnTo Destination to returnto after successfully action on the page returned
-	 * @param bool $fullUrl Whether to get the local url, or the full url
-	 *
-	 * @return string
-	 */
-	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
-		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
-		$params = [];
-		if ( $returnTo ) {
-			$params['returnto'] = $returnTo->getPrefixedText();
-		}
-		if ( $fullUrl ) {
-			return MobileContext::singleton()->getMobileUrl( $t->getFullURL( $params ) );
-		} else {
-			return $t->getLocalURL( $params );
-		}
-	}
-
-	/**
-	 * @return string[]
-	 */
-	public function getSubpagesForPrefixSearch() {
-		return array_keys( $this->options );
 	}
 }

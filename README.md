@@ -494,6 +494,13 @@ Whether beta mode is enabled.
 * Type: `Boolean`
 * Default: `false`
 
+#### MFBetaFeedbackLink
+
+Link to feedback page for beta features. If false no feedback link will be shown.
+
+* Type: `String|false`
+* Default: `false`
+
 #### $wgMFDefaultSkinClass
 
 The default skin for MobileFrontend.
@@ -574,6 +581,20 @@ See `$wgMFDisplayWikibaseDescriptions`
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFEnableWikidataDescriptions
+
+If set to true, wikidata descriptions as defined in $wgMFDisplayWikibaseDescriptions will show up
+in the UI in the environment they have been told to target.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'beta' => true,
+    'base' => false,
+  ]
+```
+
 #### $wgMFDisplayWikibaseDescriptions
 
 Set which features will use Wikibase descriptions, e.g.
@@ -597,6 +618,23 @@ $wgMFDisplayWikibaseDescriptions = [
     'tagline' => false,
   ]
 ```
+#### $wgMFSpecialPageTaglines
+Set taglines for special pages
+
+```php
+$wgMFSpecialPageTaglines = [
+  "SpecialPageName" => "valid-message-key",
+];
+```
+
+* Type: `Array`
+* Default:
+```php
+  [
+    "MobileOptions" => "mobile-frontend-settings-tagline"
+  ]
+```
+
 
 #### $wgMFStripResponsiveImages
 

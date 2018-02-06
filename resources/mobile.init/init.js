@@ -5,16 +5,14 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-( function ( M, $ ) {
+( function ( M, $, storage ) {
 	var currentPage, skin,
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		BetaOptinPanel = M.require( 'mobile.init/BetaOptinPanel' ),
 		gateway = new PageGateway( new mw.Api() ),
 		util = mw.util,
 		user = mw.user,
-		storage = mw.storage,
 		context = M.require( 'mobile.startup/context' ),
-		userFontSize = mw.storage.get( 'userFontSize' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		experiments = mw.experiments,
 		activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
@@ -157,9 +155,27 @@
 			} );
 		}
 	}
-	if ( userFontSize !== '100' ) {
-		$( '#content p, .content p' ).css( 'font-size', userFontSize + '%' );
+
+	/**
+	 * Updates the font size based on the current value in storage
+	 *
+	 * @method
+	 * @ignore
+	 */
+	function updateFontSize() {
+		// FIXME: Ideally 'regular' would come from a shared constant
+		// (currently not possible without using webpack)
+		var userFontSize = storage.get( 'userFontSize', 'regular' );
+		$( 'html' ).addClass( 'mf-font-size-' + userFontSize );
 	}
+
+	// Font must be updated on back button press as users may click
+	// back after changing font.
+	$( window ).on( 'pageshow', function () {
+		updateFontSize();
+	} );
+	updateFontSize();
+
 	if ( activeExperiments.betaoptin ) {
 		displayBetaOptIn( activeExperiments.betaoptin, getCurrentPage() );
 	}
@@ -176,4 +192,4 @@
 	} );
 
 	/* eslint-enable no-console */
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery, mw.storage ) );

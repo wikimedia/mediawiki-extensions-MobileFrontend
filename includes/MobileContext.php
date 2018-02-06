@@ -141,90 +141,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Gets the value of a config variable whose value depends on whether the
-	 * user is a member of the beta group.
-	 *
-	 * @warning If the value of the config variable doesn't behave this way, then
-	 *  `null` is returned.
-	 *
-	 * @example
-	 * ```
-	 * $wgFoo = [
-	 *   'beta' => 'bar',
-	 *   'base' => 'baz',
-	 * ];
-	 * $wgQux = 'quux';
-	 * $wgCorge = [
-	 *   'grault' => 'garply',
-	 * ];
-	 *
-	 * $context = MobileContext::singleton();
-	 * $context->getConfigVariable( 'Foo' ); // => 'baz'
-	 *
-	 * $context->setMobileMode( 'beta' );
-	 * $context->getConfigVariable( 'Foo' ); // => 'bar'
-	 *
-	 * // If the config variable isn't a dictionary, then its value will be
-	 * // returned returned regardless of whether the user is a member of the beta
-	 * // group.
-	 * $context->getConfigVariable( 'Qux' ); // => 'quux'
-	 *
-	 * // If the config variable is a dictionary but doesn't have "beta" or "base"
-	 * // entries, then `null` will be returned.
-	 * $context->getConfigVariable( 'Corge' ); // => null
-	 * ```
-	 *
-	 * @param string $variableName Config variable to be returned
-	 * @return mixed|null
-	 * @throws ConfigException If the config variable doesn't exist
-	 *
-	 * @TODO Should this be renamed, e.g. `getFlag`, or extracted?
-	 */
-	public function getConfigVariable( $variableName ) {
-		$configVariable = $this->getMFConfig()->get( $variableName ) ?: [];
-
-		if ( !is_array( $configVariable ) ) {
-			return $configVariable;
-		}
-
-		if ( $this->isBetaGroupMember() && array_key_exists( 'beta', $configVariable ) ) {
-			return $configVariable['beta'];
-		} elseif ( array_key_exists( 'base', $configVariable ) ) {
-			return $configVariable['base'];
-		}
-		return null;
-	}
-
-	/**
-	 * Checks whether references should be lazy loaded for the current user
-	 * @return bool
-	 */
-	public function isLazyLoadReferencesEnabled() {
-		return $this->getConfigVariable( 'MFLazyLoadReferences' );
-	}
-
-	/**
-	 * Checks whether images should be lazy loaded for the current user
-	 * @return bool
-	 */
-	public function isLazyLoadImagesEnabled() {
-		return $this->getConfigVariable( 'MFLazyLoadImages' );
-	}
-
-	/**
-	 * Checks whether the first paragraph from the lead section should be
-	 * shown before all infoboxes that come earlier.
-	 * @return bool
-	 */
-	public function shouldShowFirstParagraphBeforeInfobox() {
-		if ( $this->showFirstParagraphBeforeInfobox === null ) {
-			$this->showFirstParagraphBeforeInfobox = $this->getConfigVariable(
-				'MFShowFirstParagraphBeforeInfobox' );
-		}
-		return $this->showFirstParagraphBeforeInfobox;
-	}
-
-	/**
 	 * Detects whether the UA is sending the request from a device and, if so,
 	 * whether to display the mobile view to that device.
 	 *
@@ -1150,6 +1066,8 @@ class MobileContext extends ContextSource {
 	/**
 	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
 	 * and watchlists; or as taglines on article pages.
+	 * Doesn't take into account whether the wikidata descriptions
+	 * feature has been enabled.
 	 *
 	 * @param string $feature which description to show?
 	 * @return bool
@@ -1159,20 +1077,12 @@ class MobileContext extends ContextSource {
 	public function shouldShowWikibaseDescriptions( $feature ) {
 		$config = $this->getMFConfig();
 		$displayWikibaseDescriptions = $config->get( 'MFDisplayWikibaseDescriptions' );
-
 		if ( !isset( $displayWikibaseDescriptions[ $feature ] ) ) {
 			throw new DomainException(
 				"\"{$feature}\" isn't a feature that shows Wikidata descriptions."
 			);
 		}
 
-		if (
-			$this->isBetaGroupMember() ||
-			( $config->get( 'MFUseWikibase' ) && $displayWikibaseDescriptions[ $feature ] )
-		) {
-			return true;
-		} else {
-			return false;
-		}
+		return $displayWikibaseDescriptions[ $feature ];
 	}
 }

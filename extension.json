@@ -46,7 +46,8 @@
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
 	"AutoloadNamespaces": {
-		"MobileFrontend\\Transforms\\": "includes/transforms/"
+		"MobileFrontend\\Transforms\\": "includes/transforms/",
+		"MobileFrontend\\Features\\" : "includes/features/"
 	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
@@ -305,7 +306,7 @@
 				"Panel.hogan": "resources/mobile.init/Panel.hogan"
 			},
 			"styles": [
-				"resources/mobile.init/panel.less"
+				"resources/mobile.init/mobile.less"
 			],
 			"scripts": [
 				"resources/mobile.init/BetaOptinPanel.js",
@@ -958,14 +959,14 @@
 			"position": "top"
 		},
 		"mobile.special.mobileoptions.styles": {
-			"targets": "mobile",
+			"targets": [ "mobile", "desktop" ],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			],
 			"position": "top"
 		},
 		"mobile.special.mobileoptions.scripts": {
-			"targets": "mobile",
+			"targets": [ "mobile", "desktop" ],
 			"position": "top",
 			"dependencies": [
 				"mobile.startup"
@@ -973,30 +974,14 @@
 			"scripts": [
 				"resources/mobile.special.mobileoptions.scripts/mobileoptions.js"
 			],
-			"templates": {
-				"Checkbox.hogan": "resources/mobile.special.mobileoptions.scripts/checkbox.mustache"
-			},
 			"messages": [
+				"mobile-frontend-settings-save",
+				"mobile-frontend-fontchanger-option-small",
+				"mobile-frontend-fontchanger-option-medium",
+				"mobile-frontend-fontchanger-option-large",
+				"mobile-frontend-fontchanger-option-xlarge",
 				"mobile-frontend-expand-sections-description",
-				"mobile-frontend-expand-sections-status"
-			]
-		},
-		"mobile.special.mobileoptions.scripts.fontchanger": {
-			"targets": "mobile",
-			"dependencies": [
-				"mobile.startup"
-			],
-			"templates": {
-				"FontChanger.hogan": "resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.hogan"
-			},
-			"styles": [
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.less"
-			],
-			"scripts": [
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/FontChanger.js",
-				"resources/mobile.special.mobileoptions.scripts.fontchanger/init.js"
-			],
-			"messages": [
+				"mobile-frontend-expand-sections-status",
 				"mobile-frontend-fontchanger-desc",
 				"mobile-frontend-fontchanger-link"
 			]
@@ -1245,7 +1230,7 @@
 	},
 	"config": {
 		"MFEnableFontChanger": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
@@ -1308,6 +1293,9 @@
 		],
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
+		"MFSpecialPageTaglines": {
+			"MobileOptions": "mobile-frontend-settings-tagline"
+		},
 		"MFNearbyRange": 10000,
 		"MFNearby": false,
 		"MFNearbyEndpoint": "",
@@ -1332,6 +1320,7 @@
 		"MFStopRedirectCookieHost": null,
 		"MobileFrontendLogo": false,
 		"MFEnableBeta": false,
+		"MFBetaFeedbackLink": false,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MFNamespacesWithoutCollapsibleSections": [
 			6,
@@ -1343,10 +1332,14 @@
 		"MFPhotoUploadWiki": null,
 		"MFPhotoUploadEndpoint": "",
 		"MFExpandAllSectionsUserOption": {
-			"base": false,
+			"base": true,
 			"beta": true
 		},
 		"MFUseWikibase": false,
+		"MFEnableWikidataDescriptions": {
+			"base": false,
+			"beta": true
+		},
 		"MFDisplayWikibaseDescriptions": {
 			"search": false,
 			"nearby": false,

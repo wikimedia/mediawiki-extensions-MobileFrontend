@@ -17,6 +17,8 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function domParse( OutputPage $out, $text = null ) {
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$factory = new ContentProviderFactory();
@@ -48,10 +50,11 @@ class ExtMobileFrontend {
 
 		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
-		$removeImages = $context->isLazyLoadImagesEnabled();
-		$removeReferences = $context->isLazyLoadReferencesEnabled();
-		$showFirstParagraphBeforeInfobox = $context->shouldShowFirstParagraphBeforeInfobox()
-			&& $ns === NS_MAIN;
+		$removeImages = $featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+		$removeReferences =
+			$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
+		$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
+			$featureManager->isFeatureAvailableInContext( 'MFShowFirstParagraphBeforeInfobox', $context );
 
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise

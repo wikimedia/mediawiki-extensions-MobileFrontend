@@ -1,9 +1,0 @@
-<span class="fontchanger enableMessage">{{enableMsg}}</span>
-<div class="mobileoption fontchanger">
-	{{#minusButton}}{{>button}}{{/minusButton}}
-	{{#valueButton}}{{>button}}{{/valueButton}}
-	{{#plusButton}}{{>button}}{{/plusButton}}
-	<div class="option-description">
-		{{descriptionMsg}}
-	</div>
-</div>

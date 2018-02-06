@@ -80,6 +80,15 @@ class MobileFrontendHooks {
 			return true;
 		}
 
+		// TODO, do we want to have a specific hook just for Mobile Features initialization
+		// or do we want to reuse the RequestContextCreateSkinMobile and use MediawikiService
+		// to retrieve the FeaturesManager
+		// Important: This must be run before RequestContextCreateSkinMobile which may make modifications
+		// to the skin based on enabled features.
+		\MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' )
+			->setup();
+
 		// enable wgUseMediaWikiUIEverywhere
 		self::enableMediaWikiUI();
 
@@ -119,6 +128,7 @@ class MobileFrontendHooks {
 				return false;
 			}
 		}
+
 		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
 		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
@@ -174,10 +184,14 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$context = MobileContext::singleton();
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
 		// ... when Minerva is widely used.
-		if ( $context->shouldDisplayMobileView() && $context->isLazyLoadImagesEnabled() ) {
+		if ( $context->shouldDisplayMobileView() &&
+			$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context )
+		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
 			) );
@@ -465,9 +479,16 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+
+		$descriptionsEnabled = $featureManager->isFeatureAvailableInContext(
+			'MFEnableWikidataDescriptions',
+			$context
+		);
 
 		foreach ( $features as $feature ) {
-			$result['wgMFDisplayWikibaseDescriptions'][$feature] =
+			$result['wgMFDisplayWikibaseDescriptions'][$feature] = $descriptionsEnabled &&
 				$context->shouldShowWikibaseDescriptions( $feature );
 		}
 
@@ -586,7 +607,9 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		$isMobileView = MobileContext::singleton()->shouldDisplayMobileView();
+		$context = MobileContext::singleton();
+		$isMobileView = $context->shouldDisplayMobileView();
+		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines', [] );
 		$name = $special->getName();
 
 		if ( $isMobileView ) {
@@ -595,6 +618,10 @@ class MobileFrontendHooks {
 			);
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
+			}
+			if ( array_key_exists( $name, $taglines ) ) {
+				self::setTagline( $special->getOutput(),
+					wfMessage( $taglines[$name] ) );
 			}
 		}
 
@@ -1076,6 +1103,16 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Sets a tagline for a given page that can be displayed by the skin.
+	 *
+	 * @param OutputPage $outputPage
+	 * @param string $desc
+	 */
+	private static function setTagline( OutputPage $outputPage, $desc ) {
+		$outputPage->setProperty( 'wgMFDescription', $desc );
+	}
+
+	/**
 	 * OutputPageParserOutput hook handler
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
@@ -1095,13 +1132,17 @@ class MobileFrontendHooks {
 				$po->getRawText()
 			) );
 			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
-
-			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) ) {
+			$title = $outputPage->getTitle();
+			// Only set the tagline if the feature has been enabled and the article is in the main namespace
+			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) &&
+				!$title->isMainPage() &&
+				$title->getNamespace() === NS_MAIN
+			) {
 				$item = $po->getProperty( 'wikibase_item' );
 				if ( $item ) {
 					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
 					if ( $desc ) {
-						$outputPage->setProperty( 'wgMFDescription', $desc );
+						self::setTagline( $outputPage, $desc );
 					}
 				}
 			}
@@ -1186,20 +1227,28 @@ class MobileFrontendHooks {
 	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+
 		// If the device is a mobile, Remove the category entry.
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
-			$vars['wgMFLazyLoadImages'] = $context->isLazyLoadImagesEnabled();
-			$vars['wgMFLazyLoadReferences'] = $context->isLazyLoadReferencesEnabled();
+			$vars['wgMFLazyLoadImages'] =
+				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+			$vars['wgMFLazyLoadReferences'] =
+				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
 		}
 		$title = $out->getTitle();
 		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 
 		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		$vars['wgMFExpandAllSectionsUserOption'] =
-			$context->getConfigVariable( 'MFExpandAllSectionsUserOption' );
+			$featureManager->isFeatureAvailableInContext( 'MFExpandAllSectionsUserOption', $context );
+
+		$vars['wgMFEnableFontChanger'] =
+			$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context );
 
 		$vars += self::getWikibaseStaticConfigVars( $context );
 
