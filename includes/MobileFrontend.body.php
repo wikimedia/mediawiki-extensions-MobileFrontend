@@ -32,6 +32,8 @@ class ExtMobileFrontend {
 		}
 
 		$title = $out->getTitle();
+		$user = $out->getUser();
+		$mobileFormatPage = true;
 		$ns = $title->getNamespace();
 
 		$isSpecialPage = $title->isSpecialPage();

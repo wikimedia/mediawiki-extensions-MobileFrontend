@@ -15,6 +15,8 @@ use MediaWiki\Auth\AuthenticationRequest;
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
+	const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
+	const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 
 	/**
 	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
@@ -40,6 +42,7 @@ class MobileFrontendHooks {
 	 *
 	 * @param IContextSource $context ContextSource interface
 	 * @param MobileContext $mobileContext
+	 * @throws RuntimeException if MFDefaultSkinClass is incorrectly configured
 	 * @return Skin
 	 */
 	protected static function getDefaultMobileSkin( IContextSource $context,
@@ -278,8 +281,9 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
-		if ( $context->shouldDisplayMobileView()
-			&& !$diff->getContext()->getTitle()->isSpecialPage()
+		if ( $context->shouldDisplayMobileView() &&
+			!$diff->getContext()->getTitle()->isSpecialPage() &&
+			self::shouldMobileFormatSpecialPages( $context->getUser() )
 		) {
 			$output = $context->getOutput();
 			$newRevId = $newRev->getId();
@@ -497,6 +501,23 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Should special pages be replaced with mobile formatted equivalents?
+	 *
+	 * @param User $user for which we need to make the decision based on user prefs
+	 * @return bool whether special pages should be substituted with
+	 *   mobile friendly equivalents
+	 */
+	public static function shouldMobileFormatSpecialPages( $user ) {
+		$ctx = MobileContext::singleton();
+		$enabled = $ctx->getMFConfig()->get( 'MFEnableMobilePreferences' );
+		if ( $user->isAnon() || !$enabled ) {
+			return true;
+		} else {
+			return $user->getOption( self::MOBILE_PREFERENCES_SPECIAL_PAGES, '1' ) === '1';
+		}
+	}
+
+	/**
 	 * Hook for SpecialPage_initList in SpecialPageFactory.
 	 *
 	 * @param array &$list list of special page classes
@@ -504,9 +525,12 @@ class MobileFrontendHooks {
 	 */
 	public static function onSpecialPageInitList( &$list ) {
 		$ctx = MobileContext::singleton();
+
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
-		if ( $ctx->shouldDisplayMobileView() ) {
+		if ( $ctx->shouldDisplayMobileView() &&
+			self::shouldMobileFormatSpecialPages( $ctx->getUser() )
+		) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 			$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
@@ -841,6 +865,25 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Register default preferences for popups
+	 *
+	 * @param array &$wgDefaultUserOptions Reference to default options array
+	 */
+	public static function onUserGetDefaultOptions( &$wgDefaultUserOptions ) {
+		$ctx = MobileContext::singleton();
+		try {
+			$mobileSkin = self::getDefaultMobileSkin( $ctx, $ctx );
+			$skin = $mobileSkin->getSkinName();
+		} catch ( RuntimeException $e ) {
+			// If a default Mobile skin is not defined assume the desktop skin.
+			$skin = $wgDefaultUserOptions['skin'];
+		}
+		$wgDefaultUserOptions += [
+			self::MOBILE_PREFERENCES_SPECIAL_PAGES => '1',
+		];
+	}
+
+	/**
 	 * GetPreferences hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
 	 *
@@ -850,7 +893,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
-		$config = MobileContext::singleton()->getMFConfig();
+		$ctx = MobileContext::singleton();
+		$config = $ctx->getMFConfig();
 		$defaultSkin = $config->get( 'DefaultSkin' );
 		$definition = [
 			'type' => 'api',
@@ -859,8 +903,12 @@ class MobileFrontendHooks {
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 
-		// preference that allow a user to set the preffered mobile skin using the api
-		$preferences['mobileskin'] = $definition;
+		$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [
+			'type' => 'check',
+			'label-message' => 'mobile-frontend-special-pages-pref',
+			'help-message' => 'mobile-frontend-special-pages-pref-help',
+			'section' => self::MOBILE_PREFERENCES_SECTION
+		];
 
 		return true;
 	}
