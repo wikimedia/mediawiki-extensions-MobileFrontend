@@ -90,8 +90,6 @@
 	"mobile-frontend-save-error": "Napaka pri shranjevanju nastavitev. Prosimo, preverite, ali imate omogočene piškotke.",
 	"mobile-frontend-save-settings": "Shrani",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} je na razpolago v $1 {{PLURAL:$1|jezik|jezikih}}. Vse razpoložljive razlčice so navedene spodaj",
-	"mobile-frontend-settings-site-header": "Jeziki {{GRAMMAR:rodilnik|{{SITENAME}}}}",
 	"mobile-frontend-talk-fullpage": "Prikaz v obliki wikistrani",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "O čem trenutno razmišljate?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Zadeva",

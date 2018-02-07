@@ -20,8 +20,6 @@
 	"mobile-frontend-opt-in-explain": "Duke iu bashkuar versionit beta, ju do të keni qasje në tipare eksperimentale, me riskun e ndeshjes me probleme.",
 	"mobile-frontend-privacy-link-text": "Privatësia",
 	"mobile-frontend-save-settings": "Ruaj",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}. Të gjitha versionet janë të listuara më poshtë",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} gjuhë",
 	"mobile-frontend-terms-text": "Kushtet e Përdorimit",
 	"mobile-frontend-view": "Për celular",
 	"mobile-frontend-view-desktop": "Desktopi",

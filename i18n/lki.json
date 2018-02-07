@@ -132,8 +132,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' برای دیدن اگر این متن در همه‌جا پدیدار شود.",
 	"mobile-frontend-search-no-results": "با این عنوان هیچ صفحه‌ای.",
 	"mobile-frontend-settings-beta": "آزمایشی",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} در $1 {{PLURAL:$1|زبان|زبان ها}} موجود است. تمام نسخه‌ها در زیر فهرست شده‌اند.",
-	"mobile-frontend-settings-site-header": "زوونةل {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "وۀ عؤنوان ولگۀ ویکی بزانتئ",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "در ذهن/ویر شما چیست؟",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "عنوان",

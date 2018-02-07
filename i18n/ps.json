@@ -103,7 +103,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' تر څو وګورئ چې ایا دا جمله وجود لري او که نه.",
 	"mobile-frontend-search-no-results": "په دي نامه هيڅ سرلیک شتون نلري.",
 	"mobile-frontend-settings-beta": "بيټا",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} ژبې",
 	"mobile-frontend-talk-fullpage": "د ويکي پاڼې په توګه يي ولولئ",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "خپله پوښتنه يا جواب دلته وليکي",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "موضوع",

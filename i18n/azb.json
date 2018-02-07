@@ -38,8 +38,6 @@
 	"mobile-frontend-search-content": "صفحه‌لرده آختاریش",
 	"mobile-frontend-search-no-results": "بو عونوانلا هئچ بیر صفحه یوخدور.",
 	"mobile-frontend-settings-beta": "بتا",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}، {{PLURAL:$1|بیر|$1}} دیل‌ده ال‌ده‌دیر. بوتون ال‌ده اولان نوسخه‌لر آشاغیدا لیست اولونوبلار",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} دیل‌لری",
 	"mobile-frontend-terms-text": "ایشلتمک شرطلری",
 	"mobile-frontend-view": "موبایل نوسخه‌سی‌",
 	"mobile-frontend-view-desktop": "دسکتاپ",

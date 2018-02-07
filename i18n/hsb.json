@@ -80,8 +80,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', zo by widźał, hač so tutón wuraz něhdźe jewi.",
 	"mobile-frontend-search-no-results": "Strona z tutym titulom njeje.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} steji w $1 {{PLURAL:$1|rěči|rěči|rěčach|rěčach}} k dispoziciji. Wšě k dispoziciji stejace wersije su deleka nalistowane:",
-	"mobile-frontend-settings-site-header": "Rěče {{GRAMMAR:genitiw|{{SITENAME}}}}",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Što maš na wutrobje?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
 	"mobile-frontend-talk-add-overlay-submit": "Diskusiju přidać",

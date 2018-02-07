@@ -164,8 +164,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' saperlu ngertèni unèn-unèn iki ana ing ngendi baé.",
 	"mobile-frontend-search-no-results": "Ora ana kaca mawa sesirah iki.",
 	"mobile-frontend-settings-beta": "Béta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} cumepak ing $1 {{PLURAL:$1|basa}}. Kabéh vèrsi kapacak ing pratélan ngisor iki",
-	"mobile-frontend-settings-site-header": "Basa {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Waca minangka kaca wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Apa sing ana ing pikirané panjenengan?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subyèk",

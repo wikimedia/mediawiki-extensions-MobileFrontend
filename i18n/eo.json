@@ -54,8 +54,6 @@
 	"mobile-frontend-references-citation": "Citaĵo",
 	"mobile-frontend-save-settings": "Konservi",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} disponas en $1 {{PLURAL:$1|lingvo|lingvoj}}. Jen ĉiuj disponaj versioj",
-	"mobile-frontend-settings-site-header": "Lingvoj por {{SITENAME}}",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Temo",
 	"mobile-frontend-talk-overlay-header": "Diskuto",
 	"mobile-frontend-talk-reply": "Respondi",

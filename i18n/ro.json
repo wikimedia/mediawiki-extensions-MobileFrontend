@@ -157,8 +157,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pentru a vedea dacă această expresie apare undeva.",
 	"mobile-frontend-search-no-results": "Nicio pagină cu acest titlu.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} este un proiect disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}. Toate versiunile disponibile sunt enumerate mai jos",
-	"mobile-frontend-settings-site-header": "Limbile pentru {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Lecturează ca pagină wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Ce aveți de spus?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subiect",

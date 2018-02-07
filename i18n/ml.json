@@ -145,8 +145,6 @@
 	"mobile-frontend-search-content-no-results": "ഈ പദം എവിടെയെങ്കിലും ഉണ്ടോയെന്നറിയാൻ '''{{int:mobile-frontend-search-content}}''' ഉപയോഗിക്കുക",
 	"mobile-frontend-search-no-results": "ഈ തലക്കെട്ടിൽ താളൊന്നുമില്ല.",
 	"mobile-frontend-settings-beta": "ബീറ്റ",
-	"mobile-frontend-settings-site-description": "{{PLURAL:$1|ഒരു ഭാഷയിൽ|$1 ഭാഷകളിൽ}} {{SITENAME}} ലഭ്യമാണ്. എല്ലാ പതിപ്പുകളും താഴെക്കൊടുത്തിരിക്കുന്നു.",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} ലഭ്യമായ ഭാഷകൾ",
 	"mobile-frontend-talk-fullpage": "വിക്കി താളായി വായിക്കുക",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "എന്താണ് താങ്കളുടെ മനസ്സിൽ?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "വിഷയം",

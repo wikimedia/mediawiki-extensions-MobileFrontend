@@ -164,8 +164,6 @@
 	"mobile-frontend-search-content-no-results": "Koristi mogućnost '''{{int:mobile-frontend-search-content}}''' za provjeru da li se ovaj izraz pojavljuje drugdje.",
 	"mobile-frontend-search-no-results": "Nema stranice s takvim naslovom.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} je dostupna na $1 {{PLURAL:$1|jeziku|jezika}}. Ispod su prikazane sve dostupne verzije.",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} jezici",
 	"mobile-frontend-talk-fullpage": "Čitaj kao wiki stranicu",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Šta Vam je na umu?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Naslov",

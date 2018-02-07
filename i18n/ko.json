@@ -183,8 +183,6 @@
 	"mobile-frontend-search-content-no-results": "이 어구가 어디에 나타나는지 보려면 '''{{int:mobile-frontend-search-content}}'''하세요.",
 	"mobile-frontend-search-no-results": "이 제목으로 된 문서가 없습니다.",
 	"mobile-frontend-settings-beta": "베타",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}은(는) $1개의 {{PLURAL:$1|언어}}로 읽을 수 있습니다. 읽을 수 있는 모든 버전은 아래에 나열되어 있습니다",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} 언어",
 	"mobile-frontend-talk-fullpage": "위키 문서로 읽기",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "당신이 생각하는 것은 무엇입니까?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "제목",

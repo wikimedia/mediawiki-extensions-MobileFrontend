@@ -31,8 +31,6 @@
 	"mobile-frontend-privacy-link-text": "Priwatnosć",
 	"mobile-frontend-save-settings": "Składowaś",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji. Wšykne k dispoziciji stojece wersije su dołojce nalicone:",
-	"mobile-frontend-settings-site-header": "Rěcy {{GRAMMAR:genitiw|{{SITENAME}}}}",
 	"mobile-frontend-view": "Mobilny naglěd",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-a-z": "Lisćina",

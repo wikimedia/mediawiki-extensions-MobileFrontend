@@ -95,7 +95,11 @@
 	"mobile-frontend-expand-sections-description": "新しいページに来たとき常に全ての節を展開する。",
 	"mobile-frontend-expand-sections-status": "すべての節を展開",
 	"mobile-frontend-fontchanger-link": "フォント サイズ",
-	"mobile-frontend-fontchanger-desc": "読みやすいテキストのサイズに調整できます。",
+	"mobile-frontend-fontchanger-desc": "読みやすいフォントサイズに調整できます。",
+	"mobile-frontend-fontchanger-option-small": "小",
+	"mobile-frontend-fontchanger-option-medium": "中",
+	"mobile-frontend-fontchanger-option-large": "大",
+	"mobile-frontend-fontchanger-option-xlarge": "特大",
 	"mobile-frontend-featured-article": "今日の秀逸なコンテンツ",
 	"mobile-frontend-generic-404-desc": "お探しのページが見つかりませんでした。",
 	"mobile-frontend-generic-404-title": "エラー - ページが見つかりません",
@@ -170,9 +174,9 @@
 	"mobile-frontend-search-content": "全文検索",
 	"mobile-frontend-search-content-no-results": "すべての記事内でこの語句を検索するには'''{{int:mobile-frontend-search-content}}'''を使用してください。",
 	"mobile-frontend-search-no-results": "この名前のページはありません。",
+	"mobile-frontend-settings-tagline": "閲覧設定",
 	"mobile-frontend-settings-beta": "ベータ",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}は $1 {{PLURAL:$1|言語}}で利用できます。利用できるすべての言語版を以下に列挙します",
-	"mobile-frontend-settings-site-header": "{{SITENAME}}の言語",
+	"mobile-frontend-settings-save": "設定を保存しました。",
 	"mobile-frontend-talk-fullpage": "ウィキページとして閲覧",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "本文を入力",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "題名",
@@ -235,5 +239,7 @@
 	"mobile-frontend-panel-cancel": "不要です",
 	"mobile-frontend-panel-betaoptin-msg": "新機能を試してみませんか？ ベータに参加すると、バグや問題に遭遇する可能性もありますが、実験的機能が利用できるようになります。",
 	"mobile-frontend-search-feedback-link-text": "フィードバックをください",
-	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？"
+	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？",
+	"mobile-frontend-send-feedback": "フィードバックを送信",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "記事のフォントサイズ"
 }

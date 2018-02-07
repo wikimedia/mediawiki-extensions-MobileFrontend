@@ -162,8 +162,6 @@
 	"mobile-frontend-search-content-no-results": "اس عبارت کو دیکھنے کے لیے '''{{int:mobile-frontend-search-content}}''' کریں۔",
 	"mobile-frontend-search-no-results": "اس عنوان سے کوئی صفحہ موجود نہیں۔",
 	"mobile-frontend-settings-beta": "آزمائشی",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|زبان|زبانوں}} میں دستیاب ہے۔ تمام دستیاب نسخے ذیل میں درج ہیں",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} کی زبانیں",
 	"mobile-frontend-talk-fullpage": "ویکی صفحہ کے طور پر پڑھیں",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "آپ کا کیا خیال ہے؟",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "موضوع",

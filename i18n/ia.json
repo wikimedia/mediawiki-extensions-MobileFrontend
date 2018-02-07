@@ -108,8 +108,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pro vider si iste phrase appare in alcun parte.",
 	"mobile-frontend-search-no-results": "Non existe un pagina con iste titulo.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} es disponibile in $1 {{PLURAL:$1|lingua|linguas}}. Tote le versiones disponibile es listate hic infra.",
-	"mobile-frontend-settings-site-header": "Linguas de {{SITENAME}}",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Que vole tu discuter?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subjecto",
 	"mobile-frontend-talk-add-overlay-submit": "Adder discussion",

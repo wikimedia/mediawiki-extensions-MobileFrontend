@@ -20,8 +20,6 @@
 	"mobile-frontend-privacy-link-text": "Конфиденциаллыкъ",
 	"mobile-frontend-save-settings": "Джарашдырыўланы сакъла",
 	"mobile-frontend-settings-beta": "Бета-версия",
-	"mobile-frontend-settings-site-description": "«{{SITENAME}}» проект $1 {{PLURAL:$1|тилде}} барды. Тюберекде болгъан версия да тизилибди.",
-	"mobile-frontend-settings-site-header": "«{{SITENAME}}» проектни тиллери",
 	"mobile-frontend-terms-text": "Хайырланыу шартла",
 	"mobile-frontend-view": "Мобил версия",
 	"mobile-frontend-view-desktop": "Стационар",

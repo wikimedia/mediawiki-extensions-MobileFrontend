@@ -150,8 +150,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' sapiciwsac tina kamu tahkal haw i zuma kakitizaan.",
 	"mobile-frontend-search-no-results": "inayi’ kasabelih pisaungay.",
 	"mobile-frontend-settings-beta": "mitanam",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} izaw $1 {{PLURAL:$1|a kamu}}. isasa’ay pasilsil ku sacahamin makapahay a baziyong",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} kamu",
 	"mobile-frontend-talk-fullpage": "sapa Wiki kasabelih miasip",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "mahica ku nizateng kisu?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "satangahan",

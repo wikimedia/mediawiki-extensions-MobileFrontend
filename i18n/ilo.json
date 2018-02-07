@@ -69,8 +69,6 @@
 	"mobile-frontend-save-error": "Biddut ti panangidulin dagiti panangiyasentar. Pangngaasi a siguraduem a napakabaelan dagiti galietam.",
 	"mobile-frontend-save-settings": "Idulin",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "Ti {{SITENAME}} ket mabalin a magun-od iti $1 {{PLURAL:$1|a pagsasao|kadagiti pagsasao}}. Amin dagiti magun-od a bersion ket nailista dita baba",
-	"mobile-frontend-settings-site-header": "Dagiti pagsasao ti {{SITENAME}}",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Ania kadi ti panpanunotem?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Suheto a topiko",
 	"mobile-frontend-talk-add-overlay-submit": "Agnayon ti tungtungan",

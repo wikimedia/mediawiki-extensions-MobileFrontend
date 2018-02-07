@@ -14,8 +14,6 @@
 	"mobile-frontend-news-items": "Katika habari",
 	"mobile-frontend-privacy-link-text": "Faragha",
 	"mobile-frontend-save-settings": "Hifadhi mpangilio",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} inapatikana katika $1 {{PLURAL:$1|language|lugha}}. Toleo zote zinazopatikana zimeorodhweshwa hapa chini",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} Lugha",
 	"mobile-frontend-view": "Mtazamo wa rununu",
 	"mobile-frontend-view-desktop": "Dawati"
 }

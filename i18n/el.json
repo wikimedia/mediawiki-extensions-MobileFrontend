@@ -127,7 +127,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' για να δείτε εάν εμφανίζεται η φράση οπουδήποτε.",
 	"mobile-frontend-search-no-results": "Καμία σελίδα με αυτό τον τίτλο.",
 	"mobile-frontend-settings-beta": "Δοκιμαστική Έκδοση",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} Γλώσσες",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Τι είναι στο μυαλό σας;",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Θέμα",
 	"mobile-frontend-talk-add-overlay-submit": "Προσθήκη συζήτησης",

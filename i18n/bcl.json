@@ -61,8 +61,6 @@
 	"mobile-frontend-privacy-link-text": "Pribasidad",
 	"mobile-frontend-save-settings": "Ipagtagama",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "An {{SITENAME}} manunumpungan sa $1 {{PLURAL:$1|lengguwahe|mga lengguwahe}}. An gabos na yaon na mga bersyon pinaglista sa ibaba",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} na mga lengwahe",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Ano an yaon sa saimong isip?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema nin subheto",
 	"mobile-frontend-talk-add-overlay-submit": "Magdugang nin diskusyon",

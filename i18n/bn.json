@@ -166,8 +166,6 @@
 	"mobile-frontend-search-content-no-results": "এই শব্দগুচ্ছ কোথাও আছে কিনা দেখতে '''{{int:mobile-frontend-search-content}}'''।",
 	"mobile-frontend-search-no-results": "এই শিরোনামে কোন পাতা নেই।",
 	"mobile-frontend-settings-beta": "বেটা সংস্করণ",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} মোট $1 {{PLURAL:$1|টি ভাষায়}} ব্যবহার করা যায়। সকল ভাষার সংস্করণগুলো নিচে দেখানো হল",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} ভাষাসমূহ",
 	"mobile-frontend-talk-fullpage": "উইকি পাতা হিসাবে পড়ুন",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "আপনি কি ভাবছেন?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "বিষয়",

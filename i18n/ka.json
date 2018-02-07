@@ -113,8 +113,6 @@
 	"mobile-frontend-search-content": "მოძებნე გვერდებში",
 	"mobile-frontend-search-no-results": "ამ სათაურით გვერდი არ მოიძებნა.",
 	"mobile-frontend-settings-beta": "ბეტა",
-	"mobile-frontend-settings-site-description": "პროექტი {{SITENAME}} ხელმისაწვდომია $1 {{PLURAL:$1|ენაზე|ენაზე}}. ქვემოთ მოცემულია ყველა ხელმისაწვდომი ვერსია",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} ენები",
 	"mobile-frontend-talk-fullpage": "წაიკითხე, როგორც ვიკი გვერდი",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "რაზე ფიქრობ?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "თემა",

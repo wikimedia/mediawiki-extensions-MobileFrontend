@@ -22,8 +22,6 @@
 	"mobile-frontend-privacy-link-text": "Privetter",
 	"mobile-frontend-save-settings": "Gwitha",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "Kavadow yw {{SITENAME}} yn $1 {{PLURAL:$1|yeth}}. Yma keniver versyon kavadow y'n rol a-woles.",
-	"mobile-frontend-settings-site-header": "Yethow {{SITENAME}}",
 	"mobile-frontend-terms-text": "Termynyow devnydh",
 	"mobile-frontend-view": "Gwel pellgowsel",
 	"mobile-frontend-view-desktop": "Bord gweyth",

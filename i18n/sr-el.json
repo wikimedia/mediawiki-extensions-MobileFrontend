@@ -103,7 +103,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' da bi videli da li se fraza pojavljuje bilo gde.",
 	"mobile-frontend-search-no-results": "Nema stranice sa ovim naslovom.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} jezici",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Šta imate na umu?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj temu",

@@ -49,8 +49,6 @@
 	"mobile-frontend-privacy-link-text": "గోప్యత",
 	"mobile-frontend-save-settings": "భద్రపరచు",
 	"mobile-frontend-settings-beta": "బీటా",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|భాషలో|భాషలలో}} లభ్యమవుతూంది. లభ్యమయ్యే సంచికలు అన్నీ క్రింద ఇవ్వబడ్డాయి",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} భాషలు",
 	"mobile-frontend-terms-text": "వాడుక నియమాలు",
 	"mobile-frontend-view": "మొబైల్ వీక్షణ",
 	"mobile-frontend-view-desktop": "డెస్కుటాప్",

@@ -147,8 +147,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pe' vedè si sta frase cumpare pe' tutt' 'e parte.",
 	"mobile-frontend-search-no-results": "Nisciuna paggena cu stu titolo.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} è a disposizione dint'a $1 {{PLURAL:$1|lengua|lengue}}. Tutt' 'e verziune a disposizione songo elencate ccà abbascio",
-	"mobile-frontend-settings-site-header": "Lengue 'e {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Liegge comme fosse na paggena wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Cosa state a penzà?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Suggietto",

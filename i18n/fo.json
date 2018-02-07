@@ -53,8 +53,6 @@
 	"mobile-frontend-privacy-link-text": "Privatlívsvernd",
 	"mobile-frontend-save-settings": "Goym",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} er tøk á $1 {{PLURAL:$1|máli|málum}}. Allar tøkar versjónir síggjast niðanfyri",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} mál",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Hvat hugsar tú um?",
 	"mobile-frontend-talk-add-overlay-submit": "Byrja kjak",
 	"mobile-frontend-talk-overlay-header": "Kjak",

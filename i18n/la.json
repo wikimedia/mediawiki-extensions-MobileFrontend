@@ -74,8 +74,6 @@
 	"mobile-frontend-save-error": "Non contigit modos servare. Praesta, ut cookies admittas.",
 	"mobile-frontend-save-settings": "Servare",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|alia lingua|aliis linguis}} exstat. Omnes editiones infra enumerantur",
-	"mobile-frontend-settings-site-header": "Linguae",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Quid agis?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Argumentum profer",
 	"mobile-frontend-talk-add-overlay-submit": "Disputationem addere",

@@ -164,8 +164,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' để xem cụm từ này có xuất hiện trong trang nào.",
 	"mobile-frontend-search-no-results": "Không tìm thấy trang với tên này.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} có sẵn trong $1 ngôn ngữ. Tất cả các phiên bản có sẵn ở dưới:",
-	"mobile-frontend-settings-site-header": "Ngôn ngữ {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Đọc như trang wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Bạn đang nghĩ gì?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tiêu đề",

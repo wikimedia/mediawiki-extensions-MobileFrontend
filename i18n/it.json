@@ -168,8 +168,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' per vedere se questa frase appare dovunque.",
 	"mobile-frontend-search-no-results": "Nessuna pagina con questo titolo.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} è disponibile in $1 {{PLURAL:$1|lingua|lingue}}. Tutte le versioni disponibili sono elencate di seguito",
-	"mobile-frontend-settings-site-header": "Lingue {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Leggi come pagina wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "A cosa stai pensando?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Oggetto",

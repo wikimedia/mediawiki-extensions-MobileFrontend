@@ -4,12 +4,15 @@
 			"Sahran",
 			"Tel'et",
 			"Uzdil",
-			"چۈشكۈن"
+			"چۈشكۈن",
+			"HushBeg"
 		]
 	},
 	"mobile-frontend-clear-search": "تازىلا",
 	"mobile-frontend-diffview-anonymous": "ئاتسىز ئىشلەتكۈچى",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|قېتىم|قېتىم}} تەھرىرلەنگەن",
+	"mobile-frontend-fontchanger-option-small": "كىچىك",
+	"mobile-frontend-fontchanger-option-medium": "نورمال",
 	"mobile-frontend-featured-article": "بۈگۈنكى ئالاھىدە ماقالە",
 	"mobile-frontend-missing-image": "سۈرەت",
 	"mobile-frontend-privacy-link-text": "شەخسىي سىر",
@@ -21,5 +24,6 @@
 	"mobile-frontend-watchlist-filter-talk": "مۇنازىرە",
 	"tag-mobile_edit": "يانفون نەشىرىنى تەھرىرلەش",
 	"tag-mobile_web_edit": "يانفون بېتىنى تەھرىرلەش",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "تەسۋىرلەپ يېزىڭ",
 	"mobile-frontend-console-recruit": "بىز قانداق قىلىپ تېخىمۇ كۆپ ئالاقىدار تۈزۈلمە كۆچمە تور بېكىتى تەپسىلىي قاراپ چىقىڭ : https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

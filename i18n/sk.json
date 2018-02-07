@@ -43,8 +43,6 @@
 	"mobile-frontend-privacy-link-text": "Súkromie",
 	"mobile-frontend-save-settings": "Uložiť nastavenia",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} je {{GENDER:$1|dostupný|dostupná|dostupné}} v $1 {{PLURAL:$1|jazyku|jazykoch}}. Všetky dostupné verzie sú uvedené nižšie",
-	"mobile-frontend-settings-site-header": "Jazyky {{GRAMMAR:genitív|{{SITENAME}}}}",
 	"mobile-frontend-terms-text": "Podmienky použitia",
 	"mobile-frontend-view": "Mobilné zobrazenie",
 	"mobile-frontend-view-desktop": "Štandardné",

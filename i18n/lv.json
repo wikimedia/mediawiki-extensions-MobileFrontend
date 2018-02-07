@@ -104,9 +104,7 @@
 	"mobile-frontend-save-settings": "Saglabāt",
 	"mobile-frontend-search-content": "Meklēt lapās",
 	"mobile-frontend-search-no-results": "Nav lapas ar šādu nosaukumu.",
-	"mobile-frontend-settings-beta": "Testa funkcijas",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} ir pieejams $1 {{PLURAL:$1|valodās|valodā|valodās}}. Visas pieejamās versijas ir uzskaitītas zemāk",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} Valodas",
+	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-talk-fullpage": "Lasīt kā viki lapu",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Kas jums prātā?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Temats",
@@ -140,5 +138,8 @@
 	"mobile-frontend-panel-ok": "Labi",
 	"mobile-frontend-panel-cancel": "Nē, paldies",
 	"mobile-frontend-search-feedback-prompt": "Nevarēji atrast meklēto?",
-	"mobile-frontend-notifications-filter-title": "Filtrēt paziņojumus"
+	"mobile-frontend-notifications-filter-title": "Filtrēt paziņojumus",
+	"mobile-frontend-send-feedback": "Sūtīt atsauksmes",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Ievada rindkopa",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Raksta fonta izmērs"
 }

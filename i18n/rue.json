@@ -20,8 +20,6 @@
 	"mobile-frontend-privacy-link-text": "Охорона пріватности",
 	"mobile-frontend-save-settings": "Уложыти наставлїня",
 	"mobile-frontend-settings-beta": "Бета",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} є доступна в $1 {{PLURAL:$1|языцї|языках}}. Ниже суть зазначены вшыткы доступны верзії",
-	"mobile-frontend-settings-site-header": "Языкы {{grammar:2sg|{{SITENAME}}}}",
 	"mobile-frontend-terms-text": "Умови використання",
 	"mobile-frontend-view": "Мобілна верзія",
 	"mobile-frontend-view-desktop": "Десктоп",

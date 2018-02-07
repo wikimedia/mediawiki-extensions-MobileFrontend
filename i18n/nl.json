@@ -177,8 +177,6 @@
 	"mobile-frontend-search-content-no-results": "<strong>{{int:mobile-frontend-search-content}}</strong> om te bekijken of deze zin ergens voorkomt.",
 	"mobile-frontend-search-no-results": "Er is geen pagina met deze naam.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} is beschikbaar in {{PLURAL:$1|één taal|$1 talen}}. Alle beschikbare versies staan hieronder",
-	"mobile-frontend-settings-site-header": "Talen voor {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Als wikipagina lezen",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wat wilt u bespreken?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Onderwerp",

@@ -17,8 +17,6 @@
 	"mobile-frontend-news-items": "เรื่องจากข่าว",
 	"mobile-frontend-privacy-link-text": "ความเป็นส่วนตัว",
 	"mobile-frontend-save-settings": "บันทึก",
-	"mobile-frontend-settings-site-description": "มี{{SITENAME}}ใน $1 ภาษา ทุกรุ่นที่มีแสดงรายการด้านล่าง",
-	"mobile-frontend-settings-site-header": "ภาษาของ{{SITENAME}}",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "เรื่อง",
 	"mobile-frontend-terms-text": "ข้อกำหนดการใช้งาน",
 	"mobile-frontend-view": "รุ่นโมบายล์",

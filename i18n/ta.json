@@ -46,8 +46,6 @@
 	"mobile-frontend-privacy-link-text": "தகவல் பாதுகாப்பு",
 	"mobile-frontend-save-settings": "சேமி",
 	"mobile-frontend-settings-beta": "பீட்டா",
-	"mobile-frontend-settings-site-description": "$1 {{PLURAL:$1|மொழியில்|மொழிகளில்}} {{SITENAME}} உள்ளது. கிடைக்கின்ற அனைத்துப் பதிப்புகளும் கீழே பட்டியலிடப்பட்டுள்ளன",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} மொழிகள்",
 	"mobile-frontend-talk-overlay-header": "பேச்சு",
 	"mobile-frontend-terms-text": "பயன்பாட்டு விதிகள்",
 	"mobile-frontend-view": "கைபேசிப் பார்வை",

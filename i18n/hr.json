@@ -154,8 +154,6 @@
 	"mobile-frontend-search-content": "Pretraga unutar stranica",
 	"mobile-frontend-search-no-results": "Ne postoji stranica s ovim naslovom.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "Projekt {{SITENAME}} dostupan je na $1 {{PLURAL:$1|jeziku|jezika}}. Sve jezične inačice pobrojane su ovdje",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} jezici",
 	"mobile-frontend-talk-fullpage": "Vidi kao wikistranicu",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Upišite sadržaj teme",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Predmet",

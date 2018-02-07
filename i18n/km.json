@@ -42,8 +42,6 @@
 	"mobile-frontend-privacy-link-text": "ភាព​ឯកជន",
 	"mobile-frontend-save-settings": "រក្សា​ទុក​",
 	"mobile-frontend-settings-beta": "បេតា",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} អាចអានបានជាំ $1 {{PLURAL:$1|ភាសា|ភាសា}} ដូចខាងក្រោម",
-	"mobile-frontend-settings-site-header": "ភាសារបស់ {{SITENAME}}",
 	"mobile-frontend-terms-text": "លក្ខខណ្ឌប្រើប្រាស់",
 	"mobile-frontend-view": "មើលលើឧបករណ៍ចល័ត",
 	"mobile-frontend-view-desktop": "លើតុ",

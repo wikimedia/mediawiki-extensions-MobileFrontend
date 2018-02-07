@@ -185,8 +185,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' щоб побачити, чи ця фраза з'являється в будь-якому місці.",
 	"mobile-frontend-search-no-results": "Немає сторінки з цією назвою.",
 	"mobile-frontend-settings-beta": "Бета-версія",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} доступний на $1 {{PLURAL:$1|1=мові|мовах}}. Всі доступні версії перелічені нижче",
-	"mobile-frontend-settings-site-header": "Мови проекту {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Читати як вікі-сторінку",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Що у вас на думці?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",

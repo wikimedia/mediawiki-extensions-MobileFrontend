@@ -197,8 +197,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
 	"mobile-frontend-search-no-results": "Нет страниц с таким названием.",
 	"mobile-frontend-settings-beta": "Бета-версия",
-	"mobile-frontend-settings-site-description": "Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках}}. Ниже перечислены все доступные версии",
-	"mobile-frontend-settings-site-header": "Языки проекта «{{SITENAME}}»",
 	"mobile-frontend-talk-fullpage": "Читать как вики-страницу",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Что вы хотите написать?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",

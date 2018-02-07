@@ -132,8 +132,6 @@
 	"mobile-frontend-search-content": "Cari dalam teks laman",
 	"mobile-frontend-search-no-results": "Tiada laman dengan tajuk ini.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} terdapat dalam $1 bahasa. Berikut ialah semua versi yang ada",
-	"mobile-frontend-settings-site-header": "Bahasa-bahasa {{SITENAME}}",
 	"mobile-frontend-talk-fullpage": "Baca dalam bentuk laman wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Apa pendapat anda?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tajuk topik",

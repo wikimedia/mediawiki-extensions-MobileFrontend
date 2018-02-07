@@ -123,8 +123,6 @@
 	"mobile-frontend-search-content": "Беттер ішінен іздеу",
 	"mobile-frontend-search-no-results": "Бұл тақырыпта бет жоқ.",
 	"mobile-frontend-settings-beta": "Бета",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|тілде|тілде}} қол жетімді. Барлық қол жетімді нұсқалары төменде көрсетілген.",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} тілдері",
 	"mobile-frontend-talk-fullpage": "Уикибет ретінде оқу",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Не ойлап тұрсыз?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тақырып",

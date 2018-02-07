@@ -61,8 +61,6 @@
 	"mobile-frontend-return-to-page": "ପୁରୁଣା ପୃଷ୍ଠାକୁ ଫେରିବେ",
 	"mobile-frontend-save-settings": "ସଜାଣି ସାଇତିବେ",
 	"mobile-frontend-settings-beta": "ବିଟା",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}ଟି $1 {{PLURAL:$1|ଭାଷା|ଭାଷାଗୁଡିକ}}ରେ ଉପଲବ୍ଧ ।ସମସ୍ତ ଉପଲବ୍ଧ ସଂସ୍କରଣର ତାଲିକା ତଳେ ଅଛି",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} ଭାଷାଗୁଡିକ",
 	"mobile-frontend-terms-text": "ବ୍ୟବହାର ନିୟମାବଳୀ",
 	"mobile-frontend-view": "ମୋବାଇଲ ଦେଖଣା",
 	"mobile-frontend-view-desktop": "ଡେସ୍କଟପ",

@@ -166,8 +166,6 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', hogy lásd, hogy előfordul-e bárhol ez a kifejezés.",
 	"mobile-frontend-search-no-results": "Nincs ilyen című lap.",
 	"mobile-frontend-settings-beta": "Béta",
-	"mobile-frontend-settings-site-description": "{{SITENAME}}  {{PLURAL:$1|egy nyelven|$1 nyelven}} érhető el. Az összes elérhető verzió alább található",
-	"mobile-frontend-settings-site-header": "{{SITENAME}} nyelvek",
 	"mobile-frontend-talk-fullpage": "Olvasás wikilapként",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Mi jár a fejedben?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tárgy",
