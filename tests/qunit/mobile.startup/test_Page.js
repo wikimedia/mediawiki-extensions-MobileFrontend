@@ -121,6 +121,51 @@
 		} );
 	} );
 
+	QUnit.test( '#isMissing', function ( assert ) {
+		var missing, notMissing;
+		missing = [
+			new Page( {
+				title: 'Hello',
+				id: 0
+			} ),
+			new Page( {
+				title: 'Hello',
+				id: 5,
+				isMissing: true
+			} ),
+			new Page( {
+				title: 'Hello',
+				isMissing: true
+			} )
+		];
+		notMissing = [
+			new Page( {
+				title: 'Hello',
+				id: 4
+			} ),
+			new Page( {
+				title: 'Hello',
+				id: 4,
+				isMissing: false
+			} ),
+			new Page( {
+				title: 'Hello',
+				isMissing: false
+			} ),
+			new Page( {
+				title: 'Hello',
+				id: 0,
+				isMissing: false
+			} )
+		];
+		missing.forEach( function ( page, i ) {
+			assert.ok( page.isMissing, 'page ' + i + ' is missing' );
+		} );
+		notMissing.forEach( function ( page, i ) {
+			assert.ok( !page.isMissing, 'page ' + i + ' is not missing' );
+		} );
+	} );
+
 	QUnit.test( '#allowsXSS', function ( assert ) {
 		var p = new Page( {
 				title: '<script>alert("oops, XSS possible!");</script>'
