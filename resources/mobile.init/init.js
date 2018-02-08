@@ -106,6 +106,7 @@
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
 			sections: gateway.getSectionsFromHTML( $content ),
+			isMissing: mw.config.get( 'wgArticleId' ) === 0,
 			id: mw.config.get( 'wgArticleId' ),
 			namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 		} );
