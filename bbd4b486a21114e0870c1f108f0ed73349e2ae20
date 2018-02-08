@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee59407c_025a650b",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-08T21:35:08Z",
+      "side": 1,
+      "message": "Since id is passed below this is a little redundant. I\u0027ll submit a follow up that considers id for this property.",
+      "revId": "bbd4b486a21114e0870c1f108f0ed73349e2ae20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
