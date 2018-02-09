@@ -1,0 +1,257 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2f2ec8f_915ccdd1",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "Would it be more consistent to use self here?",
+      "range": {
+        "startLine": 42,
+        "startChar": 11,
+        "endLine": 42,
+        "endChar": 15
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee56f1eb_f08395ac",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "Same comment here about the extra else with early return.",
+      "range": {
+        "startLine": 134,
+        "startChar": 5,
+        "endLine": 134,
+        "endChar": 9
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6443c74_b4621cfb",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "result is now a confusing name because no path yields it.",
+      "range": {
+        "startLine": 39,
+        "startChar": 7,
+        "endLine": 39,
+        "endChar": 13
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ca6c328_d8e0b9b7",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "This creates a new rejected promise and returns it. Would it be better to keep `d` above, now as `var d \u003d this.api.ajax( requestParams )`, and use `d.reject(...)` here? It\u0027s also confusing that we call reject here but no longer do so in SearchGateway.",
+      "range": {
+        "startLine": 146,
+        "startChar": 12,
+        "endLine": 146,
+        "endChar": 23
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9363658a_d40769a7",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "Needless else.",
+      "range": {
+        "startLine": 147,
+        "startChar": 6,
+        "endLine": 147,
+        "endChar": 10
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5367aa3d_2647341f",
+        "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "Same question here as in NearbyGateway. Should we define result as `result \u003d this.api.get(...)` so that the returned promise\u0027s state is changed?",
+      "range": {
+        "startLine": 70,
+        "startChar": 4,
+        "endLine": 70,
+        "endChar": 17
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05b4a0cb_e2baec0f",
+        "filename": "resources/mobile.startup/Gateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "I must share my confusion and unfortunately my ignorance along with it. Since `this.Deferred()` returns a new Deferred each time, resolve() is more like a static, stateless function than a method that mutates the instance. Seeing `this.resolve()` at first glance in PageGateway made me think that Gateway itself is some crazy, big `Deferred` instance and resolve / reject was actually changing it\u0027s state. In several places, we now alternately do things like `var result \u003d this.Deferred(); result.resolve(\u0027foo\u0027);` and `this.reject(\u0027bar\u0027)` and I find myself having trouble remembering that one creates a new Deferred and another mutates an existing Deferred, and to flip frames of mind between static and instance states.\n\nAre there better names we can use for the methods, maybe newDeferred / newResolved / newRejected? Or perhaps force subclasses to always call `Deferred` and then manually call resolve() / rejected() (which would decrease the API footprint) and looks like `this.Deferred().resolve(\u0027foo\u0027)`? I don\u0027t know if it\u0027s practical but maybe a third option is to redesign Gateway as an immutable utility class or singleton instead of a helper base class?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 3
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87a320c5_55f08548",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "Going back to my comment on Gateway, why do we need to hold a reference to the old `this` if we\u0027re just going to make a new Deferred anyway?",
+      "range": {
+        "startLine": 108,
+        "startChar": 4,
+        "endLine": 108,
+        "endChar": 15
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad7c3fc5_d615a022",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "The previous behavior was to keep a single Deferred instance and resolve or reject it. The new behavior is to wrap a Deferred in another resolved or rejected Deferred. Is this intended?",
+      "range": {
+        "startLine": 131,
+        "startChar": 13,
+        "endLine": 131,
+        "endChar": 38
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa0dd5cc_0157f6cd",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "These elses are not needed due to early function exits. It\u0027s a matter of style, but needless else\u0027s can obscure early returns.",
+      "range": {
+        "startLine": 132,
+        "startChar": 7,
+        "endLine": 132,
+        "endChar": 11
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84c51e30_8153d318",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:08:34Z",
+      "side": 1,
+      "message": "This else can be omitted to clarify that the previous conditional exits early.",
+      "range": {
+        "startLine": 47,
+        "startChar": 5,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
