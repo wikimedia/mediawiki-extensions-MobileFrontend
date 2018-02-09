@@ -48,7 +48,7 @@
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ загрузак",
 	"mobile-frontend-privacy-link-text": "Прыватнасьць",
 	"mobile-frontend-save-settings": "Захаваць",
-	"mobile-frontend-settings-beta": "Бэта",
+	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-talk-overlay-header": "Абмеркаваньне",
 	"mobile-frontend-terms-text": "Умовы выкарыстаньня",
 	"mobile-frontend-view": "Мабільная вэрсія",

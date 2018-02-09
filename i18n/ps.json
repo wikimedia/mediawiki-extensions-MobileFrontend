@@ -129,6 +129,7 @@
 	"mobile-frontend-user-page-no-page-yet": "هيڅ کارن مخ د $1 لپاره نشته",
 	"mobile-frontend-user-page-describe-yourself-editors": "سمونگران",
 	"mobile-frontend-user-page-desired-action": "دلته سمون راوستل يا  ددي مخ جوړول بايد د $1 لخوا ترسره شي",
+	"mobile-frontend-user-page-create-user-page-link-label": "د $1 په نامه کارن مخ جوړ کړي",
 	"nearby": "تاسې ته نژدې مخونه",
 	"tag-mobile_edit": "د موبايل سمون",
 	"tag-mobile_edit-description": "سمون د موبايل له لارې (جال يا کاريال)",

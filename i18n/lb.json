@@ -75,6 +75,10 @@
 	"mobile-frontend-expand-sections-description": "Ëmmer all Abschnitter opklappe wann eng nei Säit gewise gëtt.",
 	"mobile-frontend-expand-sections-status": "All Abschnitter komplett weisen",
 	"mobile-frontend-fontchanger-link": "Schrëftgréisst",
+	"mobile-frontend-fontchanger-option-small": "Kleng",
+	"mobile-frontend-fontchanger-option-medium": "Normal",
+	"mobile-frontend-fontchanger-option-large": "Grouss",
+	"mobile-frontend-fontchanger-option-xlarge": "Ganz grouss",
 	"mobile-frontend-featured-article": "Den Inhalt vum Dag",
 	"mobile-frontend-generic-404-desc": "D'Säit no Där Dir gesicht hutt gouf net fonnt.",
 	"mobile-frontend-generic-404-title": "Feeler - Säit net fonnt",
@@ -136,7 +140,9 @@
 	"mobile-frontend-search-content": "An de Säite sichen",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' fir ze gesinn op dëse Saz iergendwou optaucht.",
 	"mobile-frontend-search-no-results": "Keng Säit mat dësem Titel.",
+	"mobile-frontend-settings-tagline": "Lies-Astellungen",
 	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-save": "Astellunge goufe gespäichert.",
 	"mobile-frontend-talk-fullpage": "Als Wiki-Säit liesen",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wat mengt Dir?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Sujet",
@@ -193,5 +199,9 @@
 	"mobile-frontend-panel-cancel": "Nee, merci",
 	"mobile-frontend-search-feedback-link-text": "Gitt eis Äre Feedback.",
 	"mobile-frontend-search-feedback-prompt": "Hutt Dir dat net fonnt wat Dir gesicht hutt?",
-	"mobile-frontend-notifications-filter-title": "Notifikatioune filteren"
+	"mobile-frontend-notifications-filter-title": "Notifikatioune filteren",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Titelbeschreiwungen",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenze vun Artikele nëmme luede wa se gebraucht ginn",
+	"mobile-frontend-send-feedback": "Feedback schécken",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Aféierungsabschnitt"
 }
