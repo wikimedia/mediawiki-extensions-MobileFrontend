@@ -213,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "f0b0d910_c4360dff",
+        "filename": "resources/mobile.nearby/NearbyGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:57:44Z",
+      "side": 1,
+      "message": "The if isn\u0027t needless, the else is. Right?",
+      "parentUuid": "1a43e9e1_d084ccfa",
+      "range": {
+        "startLine": 147,
+        "startChar": 6,
+        "endLine": 147,
+        "endChar": 10
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5367aa3d_2647341f",
         "filename": "resources/mobile.references.gateway/ReferencesMobileViewGateway.js",
         "patchSetId": 19
@@ -387,6 +411,30 @@
       "side": 1,
       "message": "Not sure I follow here",
       "parentUuid": "84c51e30_8153d318",
+      "range": {
+        "startLine": 47,
+        "startChar": 5,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "4087e66ea288d95e77b2f6a3ca107b201f68aeaa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b92d8f43_fcf8fb94",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-09T18:57:44Z",
+      "side": 1,
+      "message": "if (condition) {\n   ...\n   return ...\n } else {\n   ...\n }\n\nIs equivalent to:\n\n if (condition) {\n   ...\n   return ...\n }\n ...\n\nBecause of the early `return`.",
+      "parentUuid": "4edf27dd_1dbe25e0",
       "range": {
         "startLine": 47,
         "startChar": 5,
