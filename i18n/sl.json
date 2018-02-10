@@ -81,7 +81,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Poskusite z drugim brskalnikom ali omogočite JavaScript, če ste ga onemogočili.",
 	"mobile-frontend-nearby-title": "Bližnje",
 	"mobile-frontend-news-items": "V novicah",
-	"mobile-frontend-opt-in-explain": "Če se pridružite beta, boste prejeli dostop do najnovejših preizkusnih funkcij, ki pa lahko vsebujejo programske napake.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta je način, kako lahko preizkusite te eksperimentalne funkcije in nam podate dragocene povratne informacije",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> nalaganje|<span>$1</span> nalaganji|<span>$1</span> nalaganja|<span>$1</span> nalaganj}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ nalaganj",
 	"mobile-frontend-privacy-link-text": "Zasebnost",

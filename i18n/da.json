@@ -15,7 +15,8 @@
 			"Tjernobyl",
 			"Thomsen",
 			"Mads Haupt",
-			"Joedalton"
+			"Joedalton",
+			"Jorn Ari"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruger redigerer via mobil-grænsefladen",
@@ -73,6 +74,10 @@
 	"mobile-frontend-editor-wait": "Gemmer redigering, vent.",
 	"mobile-frontend-expand-sections-description": "Udvid altid alle afsnit, når du navigerer til en ny side.",
 	"mobile-frontend-expand-sections-status": "Udvid alle afsnit",
+	"mobile-frontend-fontchanger-option-small": "Lille",
+	"mobile-frontend-fontchanger-option-medium": "Almindelig",
+	"mobile-frontend-fontchanger-option-large": "Stor",
+	"mobile-frontend-fontchanger-option-xlarge": "Ekstra stor",
 	"mobile-frontend-featured-article": "Dagens udvalgte indhold",
 	"mobile-frontend-generic-404-desc": "Siden du søger efter kunne ikke findes.",
 	"mobile-frontend-generic-404-title": "Fejl - Siden blev ikke fundet",
@@ -131,7 +136,9 @@
 	"mobile-frontend-search-content": "Søg inden for sider",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' for at se, om denne sætning forekommer nogen steder.",
 	"mobile-frontend-search-no-results": "Ingen side med denne titel.",
+	"mobile-frontend-settings-tagline": "Læsepræferencer",
 	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-save": "Indstillingerne blev gemt",
 	"mobile-frontend-talk-fullpage": "Læs som wikiside",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Hvad tænker du på ?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Emne",
@@ -178,5 +185,11 @@
 	"tag-mobile_web_edit": "Mobilwebredigering",
 	"tag-mobile_web_edit-description": "Redigering fra det mobile website",
 	"mobile-frontend-panel-cancel": "Nej tak",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Titelbeskrivelser",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Lær om emnet for artiklen med en kort beskrivelse under titlen",
+	"mobile-frontend-send-feedback": "Send feedback",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst vil altid vises over infobokse, hvilket forbedrer ydeevne og læsbarhed.",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Artikel fontstørrelse",
+	"mobile-frontend-beta-only": "Funktion er kun tilgængelig i betaversion",
 	"mobile-frontend-console-recruit": "\\o/ Hej! Dette er et program udviklet i åben kildekode og du kan være med til at bygge det bedre og rette fejl, som du måske ser i denne JavaScript-konsol!\n\nDu finder vores backlog på @ https://phabricator.wikimedia.org/project/profile/67/"
 }
