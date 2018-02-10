@@ -1,4 +1,3 @@
-/* global $ */
 ( function ( M, $ ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		Section = M.require( 'mobile.startup/Section' ),
