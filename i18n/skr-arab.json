@@ -19,6 +19,10 @@
 	"mobile-frontend-editor-save": "بچاؤ",
 	"mobile-frontend-editor-summary": "خلاصہ:",
 	"mobile-frontend-fontchanger-link": "فونٹ سائز",
+	"mobile-frontend-fontchanger-option-small": "چھوٹا",
+	"mobile-frontend-fontchanger-option-medium": "باقاعدہ",
+	"mobile-frontend-fontchanger-option-large": "وݙا",
+	"mobile-frontend-fontchanger-option-xlarge": "ٻہوں وݙا",
 	"mobile-frontend-history-404-title": "ایہو جیا کوئی ورقہ کائنی",
 	"mobile-frontend-language-heading": "<strong>زباناں</strong>",
 	"mobile-frontend-languages-404-title": "زباناں دی غلطی",
@@ -48,7 +52,7 @@
 	"mobile-frontend-requires-title": "ورقہ کائنی",
 	"mobile-frontend-return-to-page": "واپس ورقے تے ونڄو",
 	"mobile-frontend-save-settings": "بچاؤ",
-	"mobile-frontend-settings-beta": "آزمائشی",
+	"mobile-frontend-settings-beta": "{{SITENAME}} بیٹا",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "موضوع",
 	"mobile-frontend-talk-add-overlay-submit": "بحث شامل کرو",
 	"mobile-frontend-talk-overlay-header": "ڳالھ مہاڑ",
@@ -71,5 +75,7 @@
 	"tag-mobile_web_edit": "موبائیل ویب سائیٹ توں تبدیلی",
 	"mobile-frontend-loading-message": "لوڈ تھیدا پئے۔۔۔",
 	"mobile-frontend-panel-ok": "ٹھیک",
-	"mobile-frontend-panel-cancel": "کو، شکریہ"
+	"mobile-frontend-panel-cancel": "کو، شکریہ",
+	"mobile-frontend-send-feedback": "رائے بھیجو",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "مضمون دا فونٹ سائز"
 }

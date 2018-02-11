@@ -164,5 +164,6 @@
 	"mobile-frontend-panel-ok": "У реду",
 	"mobile-frontend-panel-cancel": "Не, хвала",
 	"mobile-frontend-search-feedback-link-text": "Дајте нам Ваше мишљење.",
-	"mobile-frontend-notifications-filter-title": "Филтрирај обавештења"
+	"mobile-frontend-notifications-filter-title": "Филтрирај обавештења",
+	"mobile-frontend-send-feedback": "Пошаљи повратну информацију"
 }

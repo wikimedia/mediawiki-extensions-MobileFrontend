@@ -141,7 +141,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' fir ze gesinn op dëse Saz iergendwou optaucht.",
 	"mobile-frontend-search-no-results": "Keng Säit mat dësem Titel.",
 	"mobile-frontend-settings-tagline": "Lies-Astellungen",
-	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",
 	"mobile-frontend-settings-save": "Astellunge goufe gespäichert.",
 	"mobile-frontend-talk-fullpage": "Als Wiki-Säit liesen",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wat mengt Dir?",
