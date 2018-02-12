@@ -9,9 +9,6 @@ class MobileSiteModule extends ResourceLoaderWikiModule {
 	// Should not be enabled on desktop which has ResourceLoaderSiteModule instead
 	protected $targets = [ 'mobile' ];
 
-	// Always load from bottom, which differs from other skins.
-	protected $position = 'bottom';
-
 	/**
 	 * Get a list of pages used by this module.
 	 *

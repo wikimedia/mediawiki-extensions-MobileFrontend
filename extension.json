@@ -98,7 +98,6 @@
 				"mobile",
 				"desktop"
 			],
-			"position": "top",
 			"styles": [
 				"resources/mobile.pagelist.styles/pagelist.less"
 			]
@@ -108,7 +107,6 @@
 				"mobile",
 				"desktop"
 			],
-			"position": "top",
 			"styles": [
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
@@ -164,7 +162,6 @@
 				"mobile",
 				"desktop"
 			],
-			"position": "top",
 			"styles": [
 				"resources/mobile.messageBox.styles/messageBox.less"
 			]
@@ -409,8 +406,7 @@
 				"resources/mobile.startup/CtaDrawer.js",
 				"resources/mobile.startup/PageList.js",
 				"resources/mobile.startup/toast.js"
-			],
-			"position": "bottom"
+			]
 		},
 		"mobile.foreignApi": {
 			"targets": [
@@ -916,7 +912,6 @@
 		},
 		"mobile.special.styles": {
 			"targets": "mobile",
-			"position": "top",
 			"styles": [
 				"resources/mobile.special.styles/common.less",
 				"resources/mobile.special.styles/forms.less"
@@ -924,7 +919,6 @@
 		},
 		"mobile.special.watchlist.styles": {
 			"targets": "mobile",
-			"position": "top",
 			"styles": [
 				"resources/mobile.special.watchlist.styles/specialWatchlist.less"
 			]
@@ -932,7 +926,6 @@
 		"mobile.special.user.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
-			"position": "bottom",
 			"images": {
 				"user": "resources/mobile.special.user.icons/userNormal.svg",
 				"anonymous": "resources/mobile.special.user.icons/userAnonymous.svg"
@@ -955,19 +948,16 @@
 			]
 		},
 		"mobile.special.mobilemenu.styles": {
-			"targets": "mobile",
-			"position": "top"
+			"targets": "mobile"
 		},
 		"mobile.special.mobileoptions.styles": {
 			"targets": [ "mobile", "desktop" ],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.mobileoptions.scripts": {
 			"targets": [ "mobile", "desktop" ],
-			"position": "top",
 			"dependencies": [
 				"mobile.startup"
 			],
@@ -997,8 +987,7 @@
 			"skinStyles": {
 				"vector": "skinStyles/mobile.special.nearby.styles/desktop.less",
 				"monobook": "skinStyles/mobile.special.nearby.styles/desktop.less"
-			},
-			"position": "top"
+			}
 		},
 		"mobile.special.userlogin.scripts": {
 			"targets": [
@@ -1007,8 +996,7 @@
 			],
 			"scripts": [
 				"resources/mobile.special.userlogin.scripts/userlogin.js"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.nearby.scripts": {
 			"targets": [
@@ -1025,15 +1013,13 @@
 			],
 			"scripts": [
 				"resources/mobile.special.nearby.scripts/nearby.js"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.history.styles": {
 			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.history.styles/default.less"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.uploads.scripts": {
 			"targets": [
@@ -1046,19 +1032,16 @@
 			],
 			"scripts": [
 				"resources/mobile.special.uploads.scripts/uploads.js"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.uploads.styles": {
 			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.uploads.styles/default.less"
-			],
-			"position": "top"
+			]
 		},
 		"mobile.special.pagefeed.styles": {
 			"targets": "mobile",
-			"position": "top",
 			"styles": [
 				"resources/mobile.special.pagefeed.styles/pagefeed.less"
 			]
@@ -1093,8 +1076,7 @@
 			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.mobilediff.styles/mobilediff.less"
-			],
-			"position": "top"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
