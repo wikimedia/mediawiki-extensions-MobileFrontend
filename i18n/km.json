@@ -62,5 +62,7 @@
 	"tag-mobile_edit": "កែ​សម្រួល​តាម​ទូរស័ព្ទ",
 	"tag-mobile_edit-description": "ការ​កែ​សម្រួល​បាន​ធ្វើ​ពី​ឧបករណ៍ចល័ត(វិបសាយឬកម្មវិធី)​",
 	"tag-mobile_web_edit": "កំណែប្រែពីអ៊ីនធើណិតចល័ត",
+	"tag-mobile_web_edit-description": "ការ​កែ​ប្រែ​ធ្វើ​ពីវិបសាយចល័ត",
+	"mobile-frontend-panel-ok": "យល់ព្រម",
 	"mobile-frontend-panel-cancel": "ទេ, អរគុណហើយ"
 }
