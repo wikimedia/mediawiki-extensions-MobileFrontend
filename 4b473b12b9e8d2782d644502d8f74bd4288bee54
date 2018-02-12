@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72d700f5_a4fab05e",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-12T19:00:20Z",
+      "side": 1,
+      "message": "Way to go!",
+      "revId": "4b473b12b9e8d2782d644502d8f74bd4288bee54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb1b79bb_b3654d7c",
+        "filename": "tests/qunit/mobile.startup/test_Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-12T19:00:20Z",
+      "side": 1,
+      "message": "All the test cases look great. However, since the title for each test case is identical, including it in the failure message does not provide any useful information. Consider changing the title of each to describe the case, simply omitting this variable from the message, reporting the index, or adding a description field and referencing that instead.",
+      "range": {
+        "startLine": 162,
+        "startChar": 40,
+        "endLine": 162,
+        "endChar": 51
+      },
+      "revId": "4b473b12b9e8d2782d644502d8f74bd4288bee54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
