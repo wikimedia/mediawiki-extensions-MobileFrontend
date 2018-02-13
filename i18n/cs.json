@@ -178,7 +178,7 @@
 	"mobile-frontend-search-content": "Hledat v obsahu stránek",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', zda se tento text někde neobjevuje.",
 	"mobile-frontend-search-no-results": "Neexistuje žádná stránka s tímto názvem.",
-	"mobile-frontend-settings-tagline": "Upřednostnění čtení",
+	"mobile-frontend-settings-tagline": "Nastavení čtení",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",
 	"mobile-frontend-settings-save": "Nastavení byla úspěšně uložena",
 	"mobile-frontend-talk-fullpage": "Číst jako stránku wiki",
