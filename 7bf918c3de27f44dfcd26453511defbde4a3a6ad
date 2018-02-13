@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ece9c8a_62cb1716",
+        "filename": "includes/transforms/LegacyMainPageTransform.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-13T15:54:29Z",
+      "side": 1,
+      "message": "This is causing an error:\n\n Fatal error: Undefined interface: MobileFrontend\\Transforms\\MessageLocalizer in /home/jenkins/workspace/mediawiki-extensions-hhvm-jessie/src/extensions/MobileFrontend/includes/transforms/LegacyMainPageTransform.php on line 8",
+      "revId": "7bf918c3de27f44dfcd26453511defbde4a3a6ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
