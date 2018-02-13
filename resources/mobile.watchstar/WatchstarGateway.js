@@ -93,7 +93,7 @@
 			data = {
 				action: 'watch'
 			};
-			if ( id !== 0 ) {
+			if ( !page.isMissing ) {
 				data.pageids = id;
 			} else {
 				// it's a new page use title instead
