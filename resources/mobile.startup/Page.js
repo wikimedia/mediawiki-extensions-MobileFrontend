@@ -30,7 +30,7 @@
 		this.thumbnail = options.thumbnail;
 		this.url = options.url || mw.util.getUrl( options.title );
 		this.id = options.id;
-		this.isMissing = options.isMissing;
+		this.isMissing = options.isMissing !== undefined ? options.isMissing : options.id === 0;
 		thumb = this.thumbnail;
 		if ( thumb && thumb.width ) {
 			this.thumbnail.isLandscape = thumb.width > thumb.height;
