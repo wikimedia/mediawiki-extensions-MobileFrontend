@@ -170,7 +170,6 @@
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before, mw-ui-icon-{name}:before",
 			"images": {
-				"talk": "resources/mobile.userpage.icons/talk.svg",
 				"userpage": "resources/mobile.userpage.icons/userpage.svg"
 			}
 		},
