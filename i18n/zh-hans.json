@@ -37,7 +37,8 @@
 			"EagerLin",
 			"Fengchao",
 			"飞舞回堂前",
-			"Arthur2e5"
+			"Arthur2e5",
+			"Fanjiayi"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "登录或创建账户来跟踪您的编辑",
@@ -203,7 +204,7 @@
 	"mobile-frontend-search-no-results": "没有页面使用此标题。",
 	"mobile-frontend-settings-tagline": "阅读参数设置",
 	"mobile-frontend-settings-beta": "{{SITENAME}}测试",
-	"mobile-frontend-settings-save": "设置已成功保存。",
+	"mobile-frontend-settings-save": "设置已保存。",
 	"mobile-frontend-talk-fullpage": "作为wiki页面阅读",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "您在想什么？",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "主题",
@@ -214,7 +215,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "未命名讨论",
 	"mobile-frontend-talk-reply": "回复",
 	"mobile-frontend-talk-reply-info": "请注意，您的回复将自动以您的用户名签名。",
-	"mobile-frontend-talk-reply-success": "您的回复已成功保存至讨论页面。",
+	"mobile-frontend-talk-reply-success": "您的回复已保存至讨论页。",
 	"mobile-frontend-talk-topic-feedback": "新的主题已加入讨论页！",
 	"mobile-frontend-talk-topic-error": "由于未知错误，主题不能添加。",
 	"mobile-frontend-talk-topic-error-protected": "此讨论页被保护，您没有权限在此添加主题。",

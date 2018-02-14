@@ -198,7 +198,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "Discussão sem nome",
 	"mobile-frontend-talk-reply": "Responder",
 	"mobile-frontend-talk-reply-info": "Note que a sua resposta será assinada automaticamente com o seu nome de utilizador.",
-	"mobile-frontend-talk-reply-success": "A sua resposta foi guardada com sucesso na página de discussão.",
+	"mobile-frontend-talk-reply-success": "A sua resposta foi guardada na página de discussão.",
 	"mobile-frontend-talk-topic-feedback": "Novo tópico adicionado à página de discussão!",
 	"mobile-frontend-talk-topic-error": "O tópico não pode ser acrescentado devido a um erro desconhecido.",
 	"mobile-frontend-talk-topic-error-protected": "Esta página de discussão está protegida, e não tem permissão para acrescentar tópicos.",
