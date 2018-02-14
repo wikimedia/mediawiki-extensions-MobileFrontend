@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aed0655d_ff701a8f",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-02-14T20:45:27Z",
+      "side": 1,
+      "message": "getBool()",
+      "range": {
+        "startLine": 137,
+        "startChar": 54,
+        "endLine": 137,
+        "endChar": 60
+      },
+      "revId": "c4bd70426f41bc5b78809e62f425eb017c8b2bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "93677b99_308452a9",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-02-14T20:45:27Z",
+      "side": 1,
+      "message": "getBool()",
+      "range": {
+        "startLine": 157,
+        "startChar": 39,
+        "endLine": 157,
+        "endChar": 45
+      },
+      "revId": "c4bd70426f41bc5b78809e62f425eb017c8b2bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cfdd46b8_e8006e60",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-02-14T20:45:27Z",
+      "side": 1,
+      "message": "the comment can be null if it\u0027s not accessible",
+      "range": {
+        "startLine": 206,
+        "startChar": 2,
+        "endLine": 207,
+        "endChar": 68
+      },
+      "revId": "c4bd70426f41bc5b78809e62f425eb017c8b2bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "31979d97_73de7375",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-02-14T20:45:27Z",
+      "side": 1,
+      "message": "getBool()",
+      "range": {
+        "startLine": 192,
+        "startChar": 39,
+        "endLine": 192,
+        "endChar": 45
+      },
+      "revId": "c4bd70426f41bc5b78809e62f425eb017c8b2bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
