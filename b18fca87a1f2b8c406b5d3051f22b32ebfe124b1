@@ -107,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "30188067_87a39465",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-14T20:55:19Z",
+      "side": 1,
+      "message": "Confusingly \"Revision::userCan\" Determines if the current user is allowed to view a particular field of this revision, /if/ it\u0027s marked as deleted.\n\nIf it\u0027s not marked as deleted and they don\u0027t have permission to view the diff, then this is true.\n\nI know, right?\n\nSo this behaviour is correct.",
+      "parentUuid": "4efcebec_72f4f583",
+      "range": {
+        "startLine": 85,
+        "startChar": 3,
+        "endLine": 85,
+        "endChar": 59
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4efcebec_52f1f991",
         "filename": "includes/specials/MobileSpecialPageFeed.php",
         "patchSetId": 4
@@ -118,6 +142,24 @@
       "writtenOn": "2018-01-29T16:00:40Z",
       "side": 1,
       "message": "The structure of this conditional\u0027s other path suggests formatComment() must be called here.",
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "78462b97_4cad6be4",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-14T20:55:19Z",
+      "side": 1,
+      "message": "I\u0027ve corrected this.",
+      "parentUuid": "4efcebec_52f1f991",
       "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -229,6 +271,30 @@
       "writtenOn": "2018-01-29T16:00:40Z",
       "side": 1,
       "message": "If this conditional is checked first, can `$comment !\u003d\u003d \u0027\u0027` be checked as an `elseif`?",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 213,
+        "endChar": 3
+      },
+      "revId": "b18fca87a1f2b8c406b5d3051f22b32ebfe124b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "541dcb96_27f23ac7",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-14T20:55:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4efcebec_52a9f920",
       "range": {
         "startLine": 211,
         "startChar": 0,
