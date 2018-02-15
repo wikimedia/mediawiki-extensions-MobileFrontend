@@ -189,23 +189,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param Revision|null $prev Revision id of previous Revision to display the difference
 	 */
 	protected function showRow( Revision $rev, $prev ) {
+		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$user = $this->getUser();
-		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
-		if ( $userId === 0 ) {
-			$username = IP::prettifyIP( $rev->getUserText( Revision::RAW ) );
-			$isAnon = true;
-		} else {
-			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
-			$isAnon = false;
-		}
-
-		// FIXME: Style differently user comment when this is the case
-		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
-			$comment = $rev->getComment( Revision::FOR_THIS_USER, $user );
-			$comment = $this->formatComment( $comment, $this->title );
-		} else {
-			$comment = $this->msg( 'rev-deleted-comment' )->plain();
-		}
+		$username = $this->getUsernameText( $rev, $user, $unhide );
+		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();
 		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
@@ -220,11 +207,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$diffLink = false;
 		}
 
-		// FIXME: Style differently user comment when this is the case
-		if ( !$rev->userCan( Revision::DELETED_USER, $user ) ) {
-			$username = $this->msg( 'rev-deleted-user' )->plain();
-		}
-
 		// When the page is named there is no need to print it in output
 		if ( $this->title ) {
 			$title = null;
@@ -236,7 +218,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$bytes -= $prev->getSize();
 		}
 		$isMinor = $rev->isMinor();
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $user->isAnon(), $bytes,
 			$isMinor );
 	}
 

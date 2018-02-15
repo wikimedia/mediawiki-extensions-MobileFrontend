@@ -122,23 +122,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @param Revision $rev Revision to show contribution for
 	 */
 	protected function showContributionsRow( Revision $rev ) {
+		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
 		$user = $this->getUser();
-		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
-		if ( $userId === 0 ) {
-			$username = IP::prettifyIP( $rev->getUserText( Revision::RAW ) );
-			$isAnon = true;
-		} else {
-			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
-			$isAnon = false;
-		}
-
-		// FIXME: Style differently user comment when this is the case
-		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
-			$comment = $rev->getComment( Revision::FOR_THIS_USER, $user );
-			$comment = $this->formatComment( $comment, $this->title );
-		} else {
-			$comment = $this->msg( 'rev-deleted-comment' )->plain();
-		}
+		$username = $this->getUsernameText( $rev, $user, $unhide );
+		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();
 		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
@@ -161,7 +148,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		}
 		$isMinor = $rev->isMinor();
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment,
-			$rev->getTitle(), $isAnon, $bytes, $isMinor
+			$rev->getTitle(), $user->isAnon(), $bytes, $isMinor
 		);
 	}
 

@@ -78,6 +78,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		if ( $warnings ) {
 			$warnings = Html::warningBox( $warnings );
 		}
+		if ( $this->isHiddenFromUser() ) {
+			// When an administrative user deletes a page, the diff is available to
+			// them and other admins but no indication would be given that it's hidden
+			// from unprivileged users. It's considered best to present the anon view
+			// in this case, which is an empty diff.
+			$diff = '';
+		}
 		$output->addHTML(
 			$warnings .
 			'<div id="mw-mf-minidiff">' .
