@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "742ea60c_6d4ef21c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T14:48:19Z",
+      "side": 1,
+      "message": "Does this mean we now explicitly support Vector for previously MinervaNeue-only pages like Special:MobileDiff?",
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d70d8895_1cb03d6e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T14:48:19Z",
+      "side": 1,
+      "message": "Do we need this? I\u0027m getting a warning locally:\n\nThe use statement with non-compound name \u0027RuntimeException\u0027 has no effect in /vagrant/mediawiki/extensions/MobileFrontend/includes/MobileFrontend.hooks.php on line 4",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 22
+      },
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a88c37d7_cfd0adbf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T14:48:19Z",
+      "side": 1,
+      "message": "Isn\u0027t it safe to call $user-\u003egetOption() regardless of whether the user is anon or not?",
+      "range": {
+        "startLine": 512,
+        "startChar": 0,
+        "endLine": 514,
+        "endChar": 10
+      },
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28824102_55e04f7e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 871,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T14:48:19Z",
+      "side": 1,
+      "message": "Is this something worth logging?",
+      "range": {
+        "startLine": 871,
+        "startChar": 0,
+        "endLine": 871,
+        "endChar": 70
+      },
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96703508_993e604a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 904,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T14:48:19Z",
+      "side": 1,
+      "message": "This works correctly but I\u0027m confused because of my own inexperience. Shouldn\u0027t this mapping be flipped? i.e.:\n\n $skinOptions[ $skinKey ] \u003d wfMessage( \"skinname-$skinKey\" )-\u003etext();\n\nWhich I read as, \"associate $skinKey with this human readable string\". As I said, it seems to work fine I just don\u0027t get it.",
+      "range": {
+        "startLine": 904,
+        "startChar": 3,
+        "endLine": 904,
+        "endChar": 71
+      },
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
