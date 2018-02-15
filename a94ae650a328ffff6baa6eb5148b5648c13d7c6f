@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "300861c2_8ab2e628",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-15T15:01:21Z",
+      "side": 0,
+      "message": "Can this icon be removed from the repo? If so, can we also remove userpage.svg from MinervaNeue?",
+      "range": {
+        "startLine": 173,
+        "startChar": 4,
+        "endLine": 173,
+        "endChar": 54
+      },
+      "revId": "a94ae650a328ffff6baa6eb5148b5648c13d7c6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
