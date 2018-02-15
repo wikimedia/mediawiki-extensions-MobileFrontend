@@ -4,7 +4,7 @@
  * @group MobileFrontend
  * @coversDefaultClass \MobileFrontend\WMFBaseDomainExtractor
  */
-class WMFBaseDomainExtractorTest extends \PHPUnit_Framework_TestCase {
+class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider getBaseDomainProvider
 	 * @covers ::getCookieDomain
