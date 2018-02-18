@@ -34,7 +34,7 @@
 	"mobile-frontend-editor-error-conflict": "تيروتنه، یو بل کارن په دا مخ کي سمون ترسره کړ.",
 	"mobile-frontend-editor-error-loading": "تيروتنه، برخه نشي لوډ کولی..",
 	"mobile-frontend-editor-keep-editing": "سمون جاری وساتي",
-	"mobile-frontend-editor-licensing": "د بدلونونو په خوندي کولو سره، تاسو د مرستندویو په څېر  خپل بدلونونه د {{PLURAL:$2|لايسنس|لايسنس}} $1 تر موافقتنامې لاندې خپروي.",
+	"mobile-frontend-editor-licensing": "د بدلونونو په خوندي کولو سره، تاسو د مرستندویو په څېر  خپل بدلونونه د $1 او {{PLURAL:$2|license|لايسنسونو}} تر موافقتنامې لاندې خپروي.",
 	"mobile-frontend-editor-terms-link": "[$1 د کارولو شرایط]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|آيا تاسو باوري ياست}} چي تاسو په {{SITENAME}} کي نوي ليکنه جوړوي؟",
 	"mobile-frontend-editor-placeholder": "دا برخه خالي ده. لومړی تن اوسي چې پراخول ترسره کړي!",

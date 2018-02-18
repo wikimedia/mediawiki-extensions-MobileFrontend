@@ -62,7 +62,7 @@
 	"mobile-frontend-diffview-title": "變更",
 	"mobile-frontend-donate-image-anon": "請登入以檢視上傳頁面。",
 	"mobile-frontend-donate-image-login-action": "<strong>在 {{SITENAME}} 上的媒體是由跟您一樣的人所貢獻的。</strong><br />登入分享您的媒體。",
-	"mobile-frontend-donate-image-nouploads": "未上傳。",
+	"mobile-frontend-donate-image-nouploads": "無上傳。",
 	"mobile-frontend-donate-image-title": "上傳",
 	"mobile-frontend-donate-image-title-username": "由 $1 上傳",
 	"mobile-frontend-donate-image-title-you": "由您上傳",

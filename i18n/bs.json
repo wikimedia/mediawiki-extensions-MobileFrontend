@@ -8,7 +8,8 @@
 			"Palapa",
 			"Semso98",
 			"Emir Mujadzic",
-			"Srdjan m"
+			"Srdjan m",
+			"MaGa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
@@ -232,5 +233,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Želite li isprobati nove mogućnosti? Korištenjem beta verzije, dobit ćete pristup eksperimentalnim mogućnostima uz rizik mogućih grešaka i problema.",
 	"mobile-frontend-search-feedback-link-text": "Pružite nam povratne informacije.",
 	"mobile-frontend-search-feedback-prompt": "Niste mogli pronaći to što ste tražili?",
-	"mobile-frontend-notifications-filter-title": "Filtriranje obavještenja"
+	"mobile-frontend-notifications-filter-title": "Filtriranje obavještenja",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "{{delete|wrong language}}\nSaznajte više o temi članka iz kratkog opisa ispod naslova"
 }

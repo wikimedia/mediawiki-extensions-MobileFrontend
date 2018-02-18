@@ -191,7 +191,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "Nepojmenovaná diskuse",
 	"mobile-frontend-talk-reply": "Odpovědět",
 	"mobile-frontend-talk-reply-info": "Uvědomte si, že vaše reakce bude automaticky podepsána vaším uživatelským jménem.",
-	"mobile-frontend-talk-reply-success": "Vaše reakce byla úspěšně vložena do diskuse.",
+	"mobile-frontend-talk-reply-success": "Vaše odpověď byla uložena do diskuse.",
 	"mobile-frontend-talk-topic-feedback": "Do diskuse přidáno nové téma!",
 	"mobile-frontend-talk-topic-error": "Kvůli neznámé chybě se nepodařilo přidat nové téma.",
 	"mobile-frontend-talk-topic-error-protected": "Tato diskuse je zamčena, nemáte oprávnění přidávat do ní témata.",
