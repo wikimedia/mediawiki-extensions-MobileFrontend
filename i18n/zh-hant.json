@@ -26,7 +26,8 @@
 			"A2093064",
 			"Itsmine",
 			"Kly",
-			"Assoc"
+			"Assoc",
+			"Hello903hello"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -163,7 +164,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "請嘗試使用其他的瀏覽器或開啟 JavaScript (若您曾關閉該功能)。",
 	"mobile-frontend-nearby-title": "附近",
 	"mobile-frontend-news-items": "新聞動態",
-	"mobile-frontend-opt-in-explain": "參加測試，您將可以使用最新實驗功能，但或許會出現軟體缺陷。",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}}測試讓您可以試用這些實驗功能，並向我們提供重要的回饋",
 	"mobile-frontend-overlay-close": "關閉",
 	"mobile-frontend-overlay-continue": "繼續",
 	"mobile-frontend-page-edit-summary": "<span><strong>編輯摘要</strong> $1</span>",
@@ -182,7 +183,7 @@
 	"mobile-frontend-search-content": "於頁面內搜尋",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content/zh-hant}}''' 以查看此詞語是否出現在其他地方。",
 	"mobile-frontend-search-no-results": "沒有頁面使用此標題。",
-	"mobile-frontend-settings-beta": "測試",
+	"mobile-frontend-settings-beta": "{{SITENAME}}測試",
 	"mobile-frontend-talk-fullpage": "作為 wiki 頁面閱讀",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "您有什麼想法？",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "主旨",
@@ -193,7 +194,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "未命名的討論",
 	"mobile-frontend-talk-reply": "回覆",
 	"mobile-frontend-talk-reply-info": "注意，您的回覆將自動使用您的使用者名稱簽名。",
-	"mobile-frontend-talk-reply-success": "您的回覆已成功儲存在對話頁面。",
+	"mobile-frontend-talk-reply-success": "您的回覆已儲存在對話頁面。",
 	"mobile-frontend-talk-topic-feedback": "已加入新的話題至對話頁面！",
 	"mobile-frontend-talk-topic-error": "發生不明錯誤，無法新增話題。",
 	"mobile-frontend-talk-topic-error-protected": "此對話頁面已受保護，您沒有權限新增主題至此對話頁面。",
