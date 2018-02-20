@@ -73,6 +73,7 @@
 	"mobile-frontend-nearby-title": "Наблизо",
 	"mobile-frontend-news-items": "В новините",
 	"mobile-frontend-opt-in-explain": "С присъединяването си към Бета, ще получите достъп до най-новите експериментални функции, които могат да бъдат предмет на софтуерни дефекти.",
+	"mobile-frontend-overlay-close": "Затваряне",
 	"mobile-frontend-page-edit-summary": "<span><strong>Резюме на редакцията</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Потребител „$1“ не е регистриран.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> качване|<span>$1</span> качвания}}",

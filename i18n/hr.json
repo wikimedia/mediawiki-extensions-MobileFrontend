@@ -219,7 +219,7 @@
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Učitavanje referenci u člancima samo kada je potrebno",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Učitavanje slika u člancima samo kada je potrebno.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Sporo učitavanje slika",
-	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Glavni pasus",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Uvodni odlomak",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst će se uvijek prikazivati iznad infookvira, poboljšavajući tako performance i čitljivost.",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Zadano proširi sve odlomke",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Onemogući proširivanje odlomaka na mobilnom prikazu.",

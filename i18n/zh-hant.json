@@ -110,6 +110,9 @@
 	"mobile-frontend-expand-sections-status": "展開所有章節",
 	"mobile-frontend-fontchanger-link": "字型大小",
 	"mobile-frontend-fontchanger-desc": "為了可讀性，增大或減小文字之大小。",
+	"mobile-frontend-fontchanger-option-small": "小",
+	"mobile-frontend-fontchanger-option-medium": "正常",
+	"mobile-frontend-fontchanger-option-large": "大",
 	"mobile-frontend-featured-article": "今日典範內容",
 	"mobile-frontend-generic-404-desc": "查無您要搜尋的頁面。",
 	"mobile-frontend-generic-404-title": "錯誤 - 查無頁面",
@@ -184,6 +187,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content/zh-hant}}''' 以查看此詞語是否出現在其他地方。",
 	"mobile-frontend-search-no-results": "沒有頁面使用此標題。",
 	"mobile-frontend-settings-beta": "{{SITENAME}}測試",
+	"mobile-frontend-settings-save": "設定已儲存。",
 	"mobile-frontend-talk-fullpage": "作為 wiki 頁面閱讀",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "您有什麼想法？",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "主旨",
@@ -258,5 +262,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "您是否希望嘗試一些新功能？透過參與 beta 測試，您將有機會得到實驗性功能，並承擔遇到 bug 與問題的風險。",
 	"mobile-frontend-search-feedback-link-text": "提供我們您的意見回饋。",
 	"mobile-frontend-search-feedback-prompt": "找不到您尋找的內容？",
+	"mobile-frontend-send-feedback": "送出回饋",
 	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
