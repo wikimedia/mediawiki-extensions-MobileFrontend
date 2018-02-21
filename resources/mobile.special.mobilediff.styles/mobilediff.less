@@ -1,4 +1,5 @@
 @import 'mobile.variables';
+@import 'mediawiki.mixins';
 
 // includes padding as well as enough space for 2 lines of user groups
 @userInfoHeight: 8em;
@@ -18,7 +19,7 @@ footer {
 
 // FIXME: Overly specific selector
 #mw-mf-diffarea {
-	word-break: break-all;
+	.hyphens( auto );
 	padding: 1em 1em ( 2 * @userInfoHeight + 1em );
 }
 
