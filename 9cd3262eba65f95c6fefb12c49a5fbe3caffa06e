@@ -122,6 +122,24 @@
       "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d05f995a_99fef267",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-22T21:46:03Z",
+      "side": 1,
+      "message": "Good to know. Thanks!",
+      "parentUuid": "1d032445_6654e947",
+      "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
