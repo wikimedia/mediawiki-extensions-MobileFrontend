@@ -22,6 +22,30 @@
       "revId": "464b19a90b28b542fd1c49c0c106627268036fe8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9d0bb9a_33f9eb0e",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-02-22T12:50:18Z",
+      "side": 1,
+      "message": "Good point. Done.",
+      "parentUuid": "bb28b3e6_bb6ed707",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 23
+      },
+      "revId": "464b19a90b28b542fd1c49c0c106627268036fe8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
