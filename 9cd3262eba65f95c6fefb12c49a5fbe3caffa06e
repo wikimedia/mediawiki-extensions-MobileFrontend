@@ -104,6 +104,24 @@
       "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d032445_6654e947",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-22T21:43:44Z",
+      "side": 1,
+      "message": "Long term we\u0027d use https://github.com/wikimedia/wikimedia-ui-base\n\nNot sure what the roadmap is, but it seems plausible that the existing mixins could easily be pulled out into a separate repo if needed.\n\nThe tech refactor for MobileFrontend is JavaScript only at current time.",
+      "parentUuid": "a6c97f4c_291df293",
+      "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
