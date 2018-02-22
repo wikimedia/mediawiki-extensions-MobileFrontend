@@ -42,7 +42,8 @@
 			"Av6",
 			"Facenapalm",
 			"Alexey zakharenkov",
-			"Wirbel78"
+			"Wirbel78",
+			"Mouse21"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Войдите в систему или создайте учетную запись для отслеживания изменений",
@@ -196,7 +197,7 @@
 	"mobile-frontend-search-content": "Искать на страницах",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
 	"mobile-frontend-search-no-results": "Нет страниц с таким названием.",
-	"mobile-frontend-settings-beta": "Бета-версия",
+	"mobile-frontend-settings-beta": "{{SITENAME}} Бета-версия",
 	"mobile-frontend-talk-fullpage": "Читать как вики-страницу",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Что вы хотите написать?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",
@@ -207,7 +208,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "Безымянное обсуждение",
 	"mobile-frontend-talk-reply": "Ответить",
 	"mobile-frontend-talk-reply-info": "Обратите внимание, что ваш ответ будет автоматически подписан вашим именем.",
-	"mobile-frontend-talk-reply-success": "Ваш ответ был успешно сохранён на странице обсуждения.",
+	"mobile-frontend-talk-reply-success": "Ваш ответ был сохранён на странице обсуждения.",
 	"mobile-frontend-talk-topic-feedback": "Новая тема добавлена на страницу обсуждения!",
 	"mobile-frontend-talk-topic-error": "Тема не может быть добавлена из-за неизвестной ошибки.",
 	"mobile-frontend-talk-topic-error-protected": "Эта страница обсуждения защищена. У вас нет разрешения на добавление новой темы на неё.",
