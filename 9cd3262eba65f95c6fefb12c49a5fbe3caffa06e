@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80b3badc_7827355a",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-02-22T17:16:52Z",
+      "side": 1,
+      "message": "“supported everywhere“ is not too helpful: https://caniuse.com/#search\u003dword-wrap :P",
+      "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a78e0a39_7ae76903",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-02-22T17:16:52Z",
+      "side": 1,
+      "message": "Also `overflow-wrap` is the standard, but `word-wrap` is supported especially on older browsers and for legacy reasons in newer",
+      "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2792b8c_23b3214f",
+        "filename": "resources/mobile.special.mobilediff.styles/mobilediff.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-02-22T17:16:52Z",
+      "side": 1,
+      "message": "For hygiene reasons, I\u0027d put `-moz-hyphens` before `-ms-hyphens` and also get into details on which browsers are supported exactly",
+      "revId": "9cd3262eba65f95c6fefb12c49a5fbe3caffa06e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
