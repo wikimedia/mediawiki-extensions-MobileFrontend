@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93408c1a_f8da3610",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-23T22:53:44Z",
+      "side": 1,
+      "message": "For completeness best to mention the spell correction in the commit msg.",
+      "revId": "2dfa4c99077bcb9eba1cda0778bfe37fea65eec4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9b41fac_f818c0c9",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-23T22:53:44Z",
+      "side": 1,
+      "message": "I suggest using `ev` for consistency with rest of codebase.",
+      "revId": "2dfa4c99077bcb9eba1cda0778bfe37fea65eec4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
