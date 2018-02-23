@@ -12,15 +12,11 @@
 				el: $( '#mw-mf-nearby' ),
 				funnel: 'nearby',
 				onItemClick: function ( ev ) {
-					// Do not react to 'open in new tab' clicks as changing the hash
-					// re-renders the view. todo: remove deprecated event.which usage
-					// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/which.
-					if ( util.isModifiedEvent( ev ) || ev.which === 2 ) {
-						return;
-					}
-					// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
-					// then set hash to clicked element
-					if ( !window.location.hash.match( /^(#\/page|#\/coord)/i ) ) {
+					if ( !util.isModifiedEvent( ev ) && !isPageOrCoordURL() ) {
+						// Change the URL fragment to the clicked element so that back
+						// navigation can retain the item position. This behavior is
+						// unwanted for results displayed around a page or coordinate since
+						// that information is stored in the hash and would be overwritten.
 						window.location.hash = $( this ).attr( 'id' );
 					}
 				}
@@ -29,6 +25,17 @@
 			icon,
 			$iconContainer,
 			$icon;
+
+		/**
+		 * @ignore
+		 * @return {boolean} True if the current URL is based around page or
+		 *                   coordinates (as opposed to current location or search).
+		 *                   e.g.: Special:Nearby#/page/San_Francisco and
+		 *                   Special:Nearby#/coord/0,0.
+		 */
+		function isPageOrCoordURL() {
+			return window.location.hash.match( /^(#\/page|#\/coord)/ );
+		}
 
 		// Remove user button
 		if ( $btn.length ) {

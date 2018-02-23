@@ -220,8 +220,7 @@
 		 * @private
 		 */
 		_postRenderLinks: function () {
-			var offset,
-				hash = window.location.hash;
+			var offset;
 
 			this.$( 'a' ).each( function ( i ) {
 				// FIXME: not unique if multiple Nearby objects on same page
@@ -229,7 +228,7 @@
 			} ).on( 'click', this.onItemClick );
 
 			// Restore the offset
-			if ( hash.indexOf( '/' ) === -1 ) {
+			if ( window.location.hash.indexOf( '/' ) === -1 ) {
 				offset = $( window.location.hash ).offset();
 				if ( offset ) {
 					// Don't reset the hash here as we don't want to trigger another Route
