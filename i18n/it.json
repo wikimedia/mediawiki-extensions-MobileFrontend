@@ -24,7 +24,8 @@
 			"OrbiliusMagister",
 			"Matteocng",
 			"Giromin Cangiaxo",
-			"Kaspo"
+			"Kaspo",
+			"S4b1nuz E.656"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -41,6 +42,7 @@
 	"mobile-frontend-cite-error": "Si è verificato un problema durante il tentativo di caricamento delle citazioni a causa di un identificativo di versione errato.",
 	"mobile-frontend-cite-none-available": "Non ci sono citazioni disponibili per questa pagina.",
 	"mobile-frontend-clear-search": "Pulisci",
+	"mobile-frontend-contributions-404-title": "Nome utente errato",
 	"mobile-frontend-copyright": "Il contenuto è disponibile in base alla licenza $1, se non diversamente specificato.",
 	"mobile-frontend-desc": "Interfaccia mobile",
 	"mobile-frontend-diffview-404-desc": "L'id per la versione richiesta non esiste",
@@ -109,6 +111,13 @@
 	"mobile-frontend-history-404-desc": "Non può essere mostrata la cronologia per una pagina che non esiste. Potrebbe essere stata cancellata o hai seguito un collegamento malformato.",
 	"mobile-frontend-history-404-title": "Nessuna pagina",
 	"mobile-frontend-history-no-results": "Nessun elemento della cronologia corrisponde al filtro fornito.",
+	"mobile-frontend-joined-just-now": "{{GENDER:$1|Iscritto/a}} proprio adesso",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 secondo|$2 secondi}} fa",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 minuto|$2 minuti}} fa",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 ora|$2 ore}} ago",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 giorno|$2 giorni}} fa",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 mese|$2 mesi}} fa",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Iscritto/a}} {{PLURAL:$2|$2 anno|$2 anni}} fa",
 	"mobile-frontend-language-heading": "<strong>Lingue</strong>",
 	"mobile-frontend-languages-404-desc": "Deve essere specificato un titolo valido.",
 	"mobile-frontend-languages-404-title": "Errore di lingue",
