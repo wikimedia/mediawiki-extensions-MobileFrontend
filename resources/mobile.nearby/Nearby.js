@@ -3,8 +3,7 @@
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
-		icons = M.require( 'mobile.startup/icons' ),
-		util = M.require( 'mobile.startup/util' );
+		icons = M.require( 'mobile.startup/icons' );
 
 	/**
 	 * List of nearby pages
@@ -14,6 +13,8 @@
 	 *
 	 * @constructor
 	 * @param {Object} options Configuration options
+	 * @param {Function} [options.onItemClick] Callback invoked when a result is
+	 *                                         clicked.
 	 */
 	function Nearby( options ) {
 		var self = this,
@@ -28,6 +29,9 @@
 		if ( options.errorType ) {
 			options.errorOptions = self._errorOptions( options.errorType );
 		}
+
+		this.onItemClick = options.onItemClick;
+
 		_super.apply( this, arguments );
 
 		this.refresh( options );
@@ -221,19 +225,7 @@
 			this.$( 'a' ).each( function ( i ) {
 				// FIXME: not unique if multiple Nearby objects on same page
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
-			} ).on( 'click', function ( ev ) {
-				// Do not react to 'open in new tab' clicks as changing the hash
-				// re-renders the view. todo: remove deprecated event.which usage
-				// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/which.
-				if ( util.isModifiedEvent( ev ) || ev.which === 2 ) {
-					return;
-				}
-				// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
-				// then set hash to clicked element
-				if ( !hash.match( /^(#\/page|#\/coord)/i ) ) {
-					window.location.hash = $( this ).attr( 'id' );
-				}
-			} );
+			} ).on( 'click', this.onItemClick );
 
 			// Restore the offset
 			if ( hash.indexOf( '/' ) === -1 ) {
