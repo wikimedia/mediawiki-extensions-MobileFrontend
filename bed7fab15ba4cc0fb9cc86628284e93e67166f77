@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "70d8f8a4_6b63887b",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-23T22:52:54Z",
+      "side": 1,
+      "message": "We use `ev` elsewhere in the codebase. We should probably stay consistent right?",
+      "revId": "bed7fab15ba4cc0fb9cc86628284e93e67166f77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
