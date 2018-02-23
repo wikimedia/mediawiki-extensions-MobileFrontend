@@ -3,7 +3,8 @@
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
-		icons = M.require( 'mobile.startup/icons' );
+		icons = M.require( 'mobile.startup/icons' ),
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * List of nearby pages
@@ -222,8 +223,9 @@
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
 			} ).on( 'click', function ( ev ) {
 				// Do not react to 'open in new tab' clicks as changing the hash
-				// re-renders the view.
-				if ( ev.altKey || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.which === 2 ) {
+				// re-renders the view. todo: remove deprecated event.which usage
+				// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/which.
+				if ( util.isModifiedEvent( ev ) || ev.which === 2 ) {
 					return;
 				}
 				// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
