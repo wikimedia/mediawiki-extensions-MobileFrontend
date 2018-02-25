@@ -72,7 +72,7 @@
 	"mobile-frontend-editor-switch-editor": "Editeur wiesselen",
 	"mobile-frontend-editor-switch-visual-editor": "Op visuellt Änneren ëmschalten",
 	"mobile-frontend-editor-wait": "Ännerung gëtt gespäichert, waart w.e.g..",
-	"mobile-frontend-expand-sections-description": "Ëmmer all Abschnitter opklappe wann eng nei Säit gewise gëtt.",
+	"mobile-frontend-expand-sections-description": "Abschnitter vun alle Säite standardméisseg pèklappen.",
 	"mobile-frontend-expand-sections-status": "All Abschnitter komplett weisen",
 	"mobile-frontend-fontchanger-link": "Schrëftgréisst",
 	"mobile-frontend-fontchanger-option-small": "Kleng",
@@ -201,7 +201,8 @@
 	"mobile-frontend-search-feedback-prompt": "Hutt Dir dat net fonnt wat Dir gesicht hutt?",
 	"mobile-frontend-notifications-filter-title": "Notifikatioune filteren",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Titelbeschreiwungen",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenze vun Artikele nëmme luede wa se gebraucht ginn",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenze nëmme luede wa se gebraucht ginn",
 	"mobile-frontend-send-feedback": "Feedback schécken",
+	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Biller nëmme luede wa se gebraucht ginn.",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Aféierungsabschnitt"
 }
