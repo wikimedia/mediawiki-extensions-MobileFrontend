@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
@@ -32,7 +33,7 @@
 		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-categories-heading' ),
 			subheading: mw.msg( 'mobile-frontend-categories-subheading' ),
 			headerButtonsListClassName: 'header-action',
@@ -51,11 +52,11 @@
 		/**
 		 * @inheritdoc
 		 */
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' ),
 			item: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlayItem.hogan' )
 		} ),
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'click .catlink': 'onCatlinkClick'
 		} ),
 		/**

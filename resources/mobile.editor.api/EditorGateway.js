@@ -1,4 +1,6 @@
 ( function ( M, $ ) {
+	var util = M.require( 'mobile.startup/util' );
+
 	/**
 	 * API that helps save and retrieve page content
 	 * @class EditorGateway
@@ -244,7 +246,7 @@
 				sectionLine = '',
 				self = this;
 
-			$.extend( options, {
+			util.extend( options, {
 				action: 'parse',
 				// Enable section preview mode to avoid errors (bug 49218)
 				sectionpreview: true,

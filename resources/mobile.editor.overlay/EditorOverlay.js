@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+		util = M.require( 'mobile.startup/util' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.editor.common/AbuseFilterPanel' ),
@@ -51,7 +52,7 @@
 		/** @inheritdoc **/
 		isBorderBox: false,
 		/** @inheritdoc **/
-		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			messageBox: MessageBox.prototype.template,
 			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
@@ -65,7 +66,7 @@
 		 * @cfg {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
 		 * @cfg {mw.Api} defaults.api an api module to retrieve pages
 		 */
-		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, EditorOverlayBase.prototype.defaults, {
 			ctaMessage: mw.msg( 'mobile-frontend-editor-anon-cta-message' ),
 			loginButton: new Button( {
 				block: true,
@@ -105,7 +106,7 @@
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
-		events: $.extend( {}, EditorOverlayBase.prototype.events, {
+		events: util.extend( {}, EditorOverlayBase.prototype.events, {
 			'input .wikitext-editor': 'onInputWikitextEditor'
 		} ),
 		/**
@@ -218,22 +219,22 @@
 		 * @return {Object} Object with all options
 		 */
 		_prepareAnonWarning: function ( options ) {
-			var params = $.extend( {
+			var params = util.extend( {
 				// use wgPageName as this includes the namespace if outside Main
 					returnto: options.returnTo || mw.config.get( 'wgPageName' ),
 					returntoquery: 'action=edit&section=' + options.sectionId,
 					warning: 'mobile-frontend-edit-login-action'
 				}, options.queryParams ),
-				signupParams = $.extend( {
+				signupParams = util.extend( {
 					type: 'signup',
 					warning: 'mobile-frontend-edit-signup-action'
 				}, options.signupQueryParams );
 
-			options.loginButton = $.extend( {
+			options.loginButton = util.extend( {
 				href: mw.util.getUrl( 'Special:UserLogin', params )
 			}, this.defaults.loginButton );
-			options.signupButton = $.extend( {
-				href: mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
+			options.signupButton = util.extend( {
+				href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) )
 			}, this.defaults.signupButton );
 
 			return options;

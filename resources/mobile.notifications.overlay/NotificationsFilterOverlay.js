@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		NotificationsFilterOverlay;
 
 	/**
@@ -44,7 +45,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.heading Heading text.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-notifications-filter-title' )
 		} ),
 

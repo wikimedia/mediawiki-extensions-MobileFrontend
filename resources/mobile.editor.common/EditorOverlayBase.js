@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
@@ -106,7 +107,7 @@
 		 * @cfg {string} defaults.licenseMsg Text and link of the license, under which this contribution will be
 		 * released to inform the user.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			hasToolbar: false,
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -127,7 +128,7 @@
 			licenseMsg: undefined
 		} ),
 		/** @inheritdoc **/
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
 			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
@@ -136,7 +137,7 @@
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay',
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'click .back': 'onClickBack',
 			'click .continue': 'onClickContinue',
 			'click .submit': 'onClickSubmit'
@@ -146,7 +147,7 @@
 		 * @param {Object} data
 		 */
 		log: function ( data ) {
-			mw.track( 'mf.schemaEdit', $.extend( data, {
+			mw.track( 'mf.schemaEdit', util.extend( data, {
 				editor: this.editor,
 				editingSessionId: this.sessionId
 			} ) );

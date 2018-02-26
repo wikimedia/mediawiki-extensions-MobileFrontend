@@ -1,6 +1,7 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var Button = M.require( 'mobile.startup/Button' ),
+		util = M.require( 'mobile.startup/util' ),
 		Panel = M.require( 'mobile.startup/Panel' );
 
 	/**
@@ -13,11 +14,11 @@
 
 	OO.mfExtend( BetaOptinPanel, Panel, {
 		className: 'panel panel-inline visible',
-		templatePartials: $.extend( {}, Panel.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
 			button: Button.prototype.template
 		} ),
 		template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
-		defaults: $.extend( {}, Panel.prototype.defaults, {
+		defaults: util.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
 			editToken: mw.user.tokens.get( 'editToken' ),
 			text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
@@ -33,7 +34,7 @@
 				} ).options
 			]
 		} ),
-		events: $.extend( {}, Panel.prototype.events, {
+		events: util.extend( {}, Panel.prototype.events, {
 			'click .optin': 'onOptin'
 		} ),
 		/**
@@ -47,4 +48,4 @@
 
 	M.define( 'mobile.init/BetaOptinPanel', BetaOptinPanel );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

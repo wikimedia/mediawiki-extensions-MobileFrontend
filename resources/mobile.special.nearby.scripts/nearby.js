@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
+		util = M.require( 'mobile.startup/util' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' );
 
@@ -60,7 +61,7 @@
 			}
 			// make sure, that the api object (if created above) is added to the options object used
 			// in the Nearby module
-			opt = $.extend( {}, opt, options );
+			opt = util.extend( {}, opt, options );
 
 			// if Nearby is already created, use the existing one
 			if ( nearby ) {
@@ -78,7 +79,7 @@
 		router.route( /^\/coord\/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/, function ( lat, lon ) {
 			$icon.hide();
 			// Search with coordinates
-			refresh( $.extend( {}, options, {
+			refresh( util.extend( {}, options, {
 				latitude: lat,
 				longitude: lon
 			} ) );
@@ -89,7 +90,7 @@
 		 */
 		router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 			$icon.hide();
-			refresh( $.extend( {}, options, {
+			refresh( util.extend( {}, options, {
 				pageTitle: mw.Uri.decode( pageTitle )
 			} ) );
 		} );
@@ -100,7 +101,7 @@
 		 */
 		function refreshCurrentLocation() {
 			$icon.show();
-			refresh( $.extend( {}, options, {
+			refresh( util.extend( {}, options, {
 				useCurrentLocation: true
 			} ) );
 		}

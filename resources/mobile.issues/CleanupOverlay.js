@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		icon = new Icon( {
 			name: 'cleanup-gray',
@@ -22,7 +23,7 @@
 	}
 
 	OO.mfExtend( CleanupOverlay, Overlay, {
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.issues', 'OverlayContent.hogan' )
 		} ),
 		/**
@@ -30,9 +31,9 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {string} defaults.className Class name of the 'cleanup-gray' icon.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			className: icon.getClassName()
 		} )
 	} );
 	M.define( 'mobile.issues/CleanupOverlay', CleanupOverlay ); // resource-modules-disable-line
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		user = M.require( 'mobile.startup/user' );
@@ -16,7 +17,7 @@
 	}
 
 	OO.mfExtend( TalkOverlay, TalkOverlayBase, {
-		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' )
 		} ),
 		/**
@@ -33,7 +34,7 @@
 		 * generating header buttons. Default list includes an 'add' button, which opens
 		 * a new talk overlay.
 		 */
-		defaults: $.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
 			headings: undefined,
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),

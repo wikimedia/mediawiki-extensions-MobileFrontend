@@ -1,6 +1,7 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Drawer = M.require( 'mobile.startup/Drawer' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
+		util = M.require( 'mobile.startup/util' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' );
 
@@ -25,7 +26,7 @@
 		 * @cfg {Object} defaults.progressiveButton options for Button element for signing in
 		 * @cfg {Object} defaults.actionAnchor options for Anchor element for signing up
 		 */
-		defaults: $.extend( {}, Drawer.prototype.defaults, {
+		defaults: util.extend( {}, Drawer.prototype.defaults, {
 			progressiveButton: new Button( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
@@ -39,7 +40,7 @@
 				additionalClassNames: 'cancel'
 			} ).options
 		} ),
-		templatePartials: $.extend( {}, Drawer.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
 			icon: Icon.prototype.template,
 			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
@@ -48,17 +49,17 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: $.extend( {}, Drawer.prototype.events, {
+		events: util.extend( {}, Drawer.prototype.events, {
 			'click .hide': 'hide'
 		} ),
 
 		/** @inheritdoc */
 		preRender: function () {
-			var params = $.extend( {
+			var params = util.extend( {
 					// use wgPageName as this includes the namespace if outside Main
 					returnto: this.options.returnTo || mw.config.get( 'wgPageName' )
 				}, this.options.queryParams ),
-				signupParams = $.extend( {
+				signupParams = util.extend( {
 					type: 'signup'
 				}, this.options.signupQueryParams );
 
@@ -67,7 +68,7 @@
 				this.options.progressiveButton.href = mw.util.getUrl( 'Special:UserLogin', params );
 			}
 			if ( !this.options.actionAnchor.hasOwnProperty( 'href' ) ) {
-				this.options.actionAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+				this.options.actionAnchor.href = mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) );
 			}
 		}
 	} );
@@ -75,4 +76,4 @@
 	M.define( 'mobile.startup/CtaDrawer', CtaDrawer )
 		.deprecate( 'mobile.drawers/CtaDrawer' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

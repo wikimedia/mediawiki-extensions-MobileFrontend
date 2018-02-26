@@ -1,5 +1,6 @@
 ( function ( M, $, ve ) {
-	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' );
+	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * Overlay for VisualEditor view
@@ -19,7 +20,7 @@
 		/** @inheritdoc **/
 		isBorderBox: false,
 		/** @inheritdoc **/
-		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),

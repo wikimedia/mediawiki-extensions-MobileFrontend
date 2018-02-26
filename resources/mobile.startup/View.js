@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var
+		util = M.require( 'mobile.startup/util' ),
 		// Cached regex to split keys for `delegate`.
 		delegateEventSplitter = /^(\S+)\s*(.*)$/,
 		idCounter = 0;
@@ -160,7 +161,7 @@
 			var self = this;
 
 			OO.EventEmitter.call( this );
-			options = $.extend( {}, this.defaults, options );
+			options = util.extend( {}, this.defaults, options );
 			this.options = options;
 			// Assign a unique id for dom events binding/unbinding
 			this.cid = uniqueId( 'view' );
@@ -229,7 +230,7 @@
 		 */
 		render: function ( data ) {
 			var html;
-			$.extend( this.options, data );
+			util.extend( this.options, data );
 			this.preRender();
 			this.undelegateEvents();
 			if ( this.template && !this.options.enhance ) {

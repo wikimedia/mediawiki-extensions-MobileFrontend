@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+		util = M.require( 'mobile.startup/util' ),
 		popup = M.require( 'mobile.startup/toast' ),
 		user = M.require( 'mobile.startup/user' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -18,7 +19,7 @@
 	}
 
 	OO.mfExtend( TalkSectionOverlay, TalkOverlayBase, {
-		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		} ),
@@ -31,7 +32,7 @@
 		 * @cfg {string} defaults.info Message that informs the user their talk reply will be
 		 * automatically signed.
 		 */
-		defaults: $.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
 			saveButton: new Button( {
 				block: true,
 				additionalClassNames: 'save-button',
@@ -43,7 +44,7 @@
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		} ),
-		events: $.extend( {}, TalkOverlayBase.prototype.events, {
+		events: util.extend( {}, TalkOverlayBase.prototype.events, {
 			'focus textarea': 'onFocusTextarea',
 			'click .save-button': 'onSaveClick'
 		} ),
@@ -154,4 +155,4 @@
 	} );
 
 	M.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay ); // resource-modules-disable-line
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		ImageGateway = M.require( 'mobile.mediaViewer/ImageGateway' );
@@ -36,7 +37,7 @@
 		 * @cfg {string} defaults.licenseLinkMsg Link to license information in media viewer.
 		 * @cfg {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			cancelButton: new Icon( {
 				tagName: 'button',
 				// Uses a dark theme so swap out the icon
@@ -62,7 +63,7 @@
 		} ),
 
 		/** @inheritdoc */
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'click .image-wrapper': 'onToggleDetails',
 			// Click tracking for table of contents so we can see if people interact with it
 			'click .slider-button': 'onSlide'

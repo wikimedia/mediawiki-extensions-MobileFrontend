@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Panel = M.require( 'mobile.startup/Panel' ),
+		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
@@ -18,7 +19,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {string} defaults.cancelButton HTML of the button that closes the drawer.
 		 */
-		defaults: $.extend( {}, Panel.prototype.defaults, {
+		defaults: util.extend( {}, Panel.prototype.defaults, {
 			cancelButton: new Icon( {
 				tagName: 'a',
 				name: 'close-invert',
@@ -37,7 +38,7 @@
 		 * @property {boolean}
 		 */
 		closeOnScroll: true,
-		events: $.extend( {}, Panel.prototype.events, {
+		events: util.extend( {}, Panel.prototype.events, {
 			click: 'stopPropagation'
 		} ),
 

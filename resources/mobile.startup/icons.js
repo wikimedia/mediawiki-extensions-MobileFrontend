@@ -1,6 +1,7 @@
-( function ( M, $ ) {
+( function ( M ) {
 
-	var Icon = M.require( 'mobile.startup/Icon' );
+	var Icon = M.require( 'mobile.startup/Icon' ),
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * A set of shared icons.
@@ -27,7 +28,7 @@
 		spinner: function ( options ) {
 			options = options || {};
 
-			return new Icon( $.extend( options, {
+			return new Icon( util.extend( options, {
 				name: 'spinner',
 				label: mw.msg( 'mobile-frontend-loading-message' ),
 				additionalClassNames: 'spinner loading'
@@ -35,4 +36,4 @@
 		}
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

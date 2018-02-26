@@ -11,6 +11,7 @@
 		BetaOptinPanel = M.require( 'mobile.init/BetaOptinPanel' ),
 		gateway = new PageGateway( new mw.Api() ),
 		util = mw.util,
+		mfUtil = M.require( 'mobile.startup/util' ),
 		user = mw.user,
 		context = M.require( 'mobile.startup/context' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -188,7 +189,7 @@
 		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
 	}
 
-	$.extend( M, {
+	mfUtil.extend( M, {
 		getCurrentPage: getCurrentPage
 	} );
 

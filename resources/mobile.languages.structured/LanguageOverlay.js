@@ -1,7 +1,8 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
-		util = M.require( 'mobile.languages.structured/util' );
+		util = M.require( 'mobile.startup/util' ),
+		langUtil = M.require( 'mobile.languages.structured/util' );
 
 	/**
 	 * Overlay displaying a structured list of languages for a page
@@ -18,10 +19,10 @@
 	function LanguageOverlay( options ) {
 		var languages;
 
-		languages = util.getStructuredLanguages(
+		languages = langUtil.getStructuredLanguages(
 			options.languages,
 			options.variants,
-			util.getFrequentlyUsedLanguages(),
+			langUtil.getFrequentlyUsedLanguages(),
 			options.deviceLanguage
 		);
 		options.allLanguages = languages.all;
@@ -41,7 +42,7 @@
 		 * @cfg {Object[]} defaults.languages each object has keys as
 		 *  returned by the langlink API https://www.mediawiki.org/wiki/API:Langlinks
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
 			// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
@@ -49,11 +50,11 @@
 			suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase()
 		} ),
 		/** @inheritdoc */
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.languages.structured', 'LanguageOverlay.hogan' )
 		} ),
 		/** @inheritdoc */
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'click a': 'onLinkClick',
 			'input .search': 'onSearchInput'
 		} ),
@@ -76,7 +77,7 @@
 				self = this,
 				$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
 
-			util.saveLanguageUsageCount( lang, util.getFrequentlyUsedLanguages() );
+			langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
 
 			// find the index of the clicked language in the list of visible results
 			$visibleLanguageLinks.each( function ( i, link ) {
@@ -141,4 +142,4 @@
 
 	M.define( 'mobile.languages.structured/LanguageOverlay', LanguageOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

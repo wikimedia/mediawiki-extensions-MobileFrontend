@@ -1,6 +1,7 @@
 ( function ( HTML, M, $ ) {
 
 	var time = M.require( 'mobile.startup/time' ),
+		util = M.require( 'mobile.startup/util' ),
 		View = M.require( 'mobile.startup/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		Thumbnail = M.require( 'mobile.startup/Thumbnail' ),
@@ -350,7 +351,7 @@
 		}
 
 		return new Page(
-			$.extend( resp, {
+			util.extend( resp, {
 				id: resp.pageid,
 				isMissing: !!resp.missing,
 				url: mw.util.getUrl( resp.title ),

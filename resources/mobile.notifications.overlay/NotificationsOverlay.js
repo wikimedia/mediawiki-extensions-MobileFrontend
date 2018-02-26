@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		NotificationsOverlay;
 
@@ -103,7 +104,7 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {string} defaults.heading Heading text.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'notifications' ),
 			footerAnchor: new Anchor( {
 				href: mw.util.getUrl( 'Special:Notifications' ),

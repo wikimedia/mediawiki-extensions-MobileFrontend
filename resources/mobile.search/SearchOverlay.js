@@ -2,6 +2,7 @@
 
 	var
 		Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
@@ -37,7 +38,7 @@
 
 	OO.mfExtend( SearchOverlay, Overlay, {
 		isBorderBox: false,
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.search', 'header.hogan' ),
 			content: mw.template.get( 'mobile.search', 'content.hogan' ),
 			icon: Icon.prototype.template
@@ -64,7 +65,7 @@
 		 * @cfg {string} defaults.action The value of wgScript
 		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headerChrome: true,
 			clearIcon: new Icon( {
 				tagName: 'button',
@@ -94,7 +95,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'input input': 'onInputInput',
 			'click .clear': 'onClickClear',
 			'click .search-content': 'onClickSearchContent',

@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var prototype,
+		util = M.require( 'mobile.startup/util' ),
 		SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
 	/**
@@ -45,7 +46,7 @@
 				return false;
 			}
 
-			return this.api.get( $.extend( {}, {
+			return this.api.get( util.extend( {}, {
 				action: 'query',
 				prop: 'categories',
 				titles: title,
@@ -64,8 +65,8 @@
 		}
 	};
 	OO.inheritClass( CategoryGateway, SearchGateway );
-	$.extend( CategoryGateway.prototype, prototype );
+	util.extend( CategoryGateway.prototype, prototype );
 
 	M.define( 'mobile.categories.overlays/CategoryGateway', CategoryGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

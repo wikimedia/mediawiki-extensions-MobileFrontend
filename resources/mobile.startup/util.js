@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var util;
 
 	/**
@@ -7,6 +7,16 @@
 	 * @singleton
 	 */
 	util = {
+		/**
+		 * Wrapper for jQuery.extend method. In future this can be bound to Object.assign
+		 * when support allows.
+		 *
+		 * @method
+		 * @return {Object}
+		 */
+		extend: function () {
+			return $.extend.apply( $, arguments );
+		},
 		/**
 		 * Escape dots and colons in a hash, jQuery doesn't like them because they
 		 * look like CSS classes and pseudoclasses. See

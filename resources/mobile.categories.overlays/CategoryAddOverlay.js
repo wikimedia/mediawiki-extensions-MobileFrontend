@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		util = M.require( 'mobile.startup/util' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
 		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
 		icons = M.require( 'mobile.startup/icons' ),
@@ -27,7 +28,7 @@
 		 * @cfg {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headerButtonsListClassName: 'header-action',
 			waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
 			waitIcon: icons.spinner().toHtmlString()
@@ -35,7 +36,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: $.extend( {}, Overlay.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'click .save': 'onSaveClick',
 			'click .suggestion': 'onCategoryClick'
 		} ),
@@ -50,7 +51,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),

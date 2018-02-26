@@ -61,7 +61,7 @@
 				msg: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
-		templatePartials: $.extend( {}, WatchstarPageList.prototype.templatePartials, {
+		templatePartials: util.extend( {}, WatchstarPageList.prototype.templatePartials, {
 			pageList: WatchstarPageList.prototype.template,
 			messageBox: MessageBox.prototype.template
 		} ),
@@ -74,7 +74,7 @@
 		 * @cfg {string} defaults.spinner HTML of the spinner icon with a tooltip that
 		 * tells the user that their location is being looked up
 		 */
-		defaults: $.extend( {}, WatchstarPageList.prototype.defaults, {
+		defaults: util.extend( {}, WatchstarPageList.prototype.defaults, {
 			errorOptions: undefined,
 			spinner: icons.spinner( {
 				title: mw.msg( 'mobile-frontend-nearby-loading' )
@@ -194,7 +194,7 @@
 			} else {
 				message = this.errorMessages[ key ] || this.errorMessages.http;
 			}
-			return $.extend( {
+			return util.extend( {
 				className: 'errorbox'
 			}, message );
 		},
@@ -265,7 +265,7 @@
 
 				// Get some new pages
 				this.getCurrentPosition().done( function ( coordOptions ) {
-					$.extend( options, coordOptions );
+					util.extend( options, coordOptions );
 					self._find( options ).done( function ( options ) {
 						_super.call( self, options );
 					} );

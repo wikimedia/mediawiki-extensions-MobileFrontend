@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
+		util = M.require( 'mobile.startup/util' ),
 		cache = {};
 
 	/**
@@ -148,7 +149,7 @@
 						// no protection level. When an array this means there is no protection level set.
 						// So to keep the data type consistent either use the predefined protection level, or
 						// extend it with what is returned by API.
-						protection = Array.isArray( mv.protection ) ? protection : $.extend( protection, mv.protection );
+						protection = Array.isArray( mv.protection ) ? protection : util.extend( protection, mv.protection );
 						resolveObj = {
 							title: title,
 							id: mv.id,
@@ -167,7 +168,7 @@
 						};
 						// Add non-anonymous user information
 						if ( lastModified ) {
-							$.extend( resolveObj, {
+							util.extend( resolveObj, {
 								lastModifiedUserName: lastModified.name,
 								lastModifiedUserGender: lastModified.gender
 							} );

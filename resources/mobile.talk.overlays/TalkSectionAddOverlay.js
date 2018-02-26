@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+		util = M.require( 'mobile.startup/util' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
@@ -31,7 +32,7 @@
 		 * content to talk page content.
 		 * @cfg {string} defaults.editingMsg Label for button which submits a new talk page topic.
 		 */
-		defaults: $.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
@@ -44,11 +45,11 @@
 			} ).toHtmlString()
 		} ),
 		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
-		templatePartials: $.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),
-		events: $.extend( {}, TalkOverlayBase.prototype.events, {
+		events: util.extend( {}, TalkOverlayBase.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',
 			'change .wikitext-editor, .summary': 'onTextInput',
 			'click .confirm-save': 'onSaveClick'

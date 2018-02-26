@@ -1,11 +1,12 @@
-( function ( M, $ ) {
+( function ( M ) {
+	var util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * Extends the API query parameters to include those parameters required to also fetch Wikibase
 	 * descriptions and appropriately sized thumbnail images.
 	 *
-	 * This function wraps `$.extend` with some Wikibase-specific configuration variable management
-	 * but, like `$.extend`, is variadic and so can be used as a replacement for it in search
+	 * This function wraps `util.extend` with some Wikibase-specific configuration variable management
+	 * but, like `util.extend`, is variadic and so can be used as a replacement for it in search
 	 * gateways, e.g.
 	 *
 	 * ```
@@ -32,11 +33,11 @@
 			throw new Error( '"' + feature + '" isn\'t a feature that shows Wikibase descriptions.' );
 		}
 
-		// Construct the arguments for a call to `$.extend` such that if it were hand-written, then it
+		// Construct the arguments for a call to `util.extend` such that if it were hand-written, then it
 		// would look like the following:
 		//
 		// ```
-		// var result = $.extend( {
+		// var result = util.extend( {
 		//   prop: []
 		// }, params, /* ..., */ mw.config.get( 'wgMFSearchAPIParams' ) );
 		// ```
@@ -46,7 +47,7 @@
 		} );
 		args.push( mw.config.get( 'wgMFSearchAPIParams' ) );
 
-		result = $.extend.apply( {}, args );
+		result = util.extend.apply( {}, args );
 		result.prop = result.prop.concat( mw.config.get( 'wgMFQueryPropModules' ) );
 
 		if ( displayWikibaseDescriptions[feature] ) {
@@ -69,4 +70,4 @@
 
 	M.define( 'mobile.search.util/extendSearchParams', extendSearchParams );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

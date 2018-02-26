@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Drawer = M.require( 'mobile.startup/Drawer' ),
+		util = M.require( 'mobile.startup/util' ),
 		icons = M.require( 'mobile.startup/icons' ),
 		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' );
@@ -20,7 +21,7 @@
 		 * @cfg {string} defaults.cancelButton HTML of the button that closes the drawer.
 		 * @cfg {boolean} defaults.error whether an error message is being shown
 		 */
-		defaults: $.extend( {}, Drawer.prototype.defaults, {
+		defaults: util.extend( {}, Drawer.prototype.defaults, {
 			spinner: icons.spinner().toHtmlString(),
 			cancelButton: new Icon( {
 				name: 'overlay-close-gray',

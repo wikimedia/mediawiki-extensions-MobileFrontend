@@ -1,5 +1,6 @@
 ( function ( M ) {
 	var Toast,
+		util = M.require( 'mobile.startup/util' ),
 		storageKey = 'mobileFrontend/toast';
 
 	/**
@@ -27,7 +28,7 @@
 			};
 		}
 
-		options = $.extend( {
+		options = util.extend( {
 			tag: 'toast'
 		}, options );
 

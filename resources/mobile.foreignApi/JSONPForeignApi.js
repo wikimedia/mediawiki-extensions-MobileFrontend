@@ -1,5 +1,6 @@
-( function ( M, $ ) {
-	var ForeignApi = mw.ForeignApi;
+( function ( M ) {
+	var ForeignApi = mw.ForeignApi,
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * Extends mw.ForeignApi to force it to use JSONP for non-POST requests
@@ -32,7 +33,7 @@
 			// Fire jsonp where it can be.
 			ajaxOptions.dataType = 'jsonp';
 			// explicitly avoid requesting central auth tokens
-			parameters = $.extend( {}, parameters, {
+			parameters = util.extend( {}, parameters, {
 				centralauthtoken: false
 			} );
 		}
@@ -41,4 +42,4 @@
 
 	M.define( 'mobile.foreignApi/JSONPForeignApi', JSONPForeignApi );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Button = M.require( 'mobile.startup/Button' ),
+		util = M.require( 'mobile.startup/util' ),
 		Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
@@ -18,13 +19,13 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Object} defaults.confirmButton options for a confirm Button
 		 */
-		defaults: $.extend( {}, Overlay.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			confirmButton: new Button( {
 				additionalClassNames: 'cancel',
 				progressive: true
 			} ).options
 		} ),
-		templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			button: Button.prototype.template,
 			content: mw.template.get( 'mobile.editor.common', 'AbuseFilterOverlay.hogan' )
 		} ),
@@ -40,4 +41,4 @@
 
 	M.define( 'mobile.editor.common/AbuseFilterOverlay', AbuseFilterOverlay )
 		.deprecate( 'mobile.abusefilter/AbuseFilterOverlay' );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

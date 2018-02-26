@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small;
+	var IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).small,
+		util = M.require( 'mobile.startup/util' );
 
 	/**
 	 * API for retrieving gallery photos
@@ -68,7 +69,7 @@
 		 * @return {Object}
 		 */
 		getQuery: function () {
-			var query = $.extend( {
+			var query = util.extend( {
 				action: 'query',
 				prop: 'imageinfo',
 				// FIXME: [API] have to request timestamp since api returns an object
@@ -78,7 +79,7 @@
 			}, this.continueParams );
 
 			if ( this.username ) {
-				$.extend( query, {
+				util.extend( query, {
 					generator: 'allimages',
 					gaiuser: this.username,
 					gaisort: 'timestamp',
@@ -86,7 +87,7 @@
 					gailimit: this.limit
 				} );
 			} else if ( this.category ) {
-				$.extend( query, {
+				util.extend( query, {
 					generator: 'categorymembers',
 					gcmtitle: 'Category:' + this.category,
 					gcmtype: 'file',
