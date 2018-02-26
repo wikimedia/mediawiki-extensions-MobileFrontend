@@ -279,7 +279,7 @@
 		 * Back button click handler
 		 * @method
 		 */
-		onClickBack: $.noop,
+		onClickBack: util.noop,
 		/**
 		 * Exit handler
 		 */
@@ -339,7 +339,7 @@
 		 * implemented by child class.
 		 * @method
 		 */
-		hasChanged: $.noop,
+		hasChanged: util.noop,
 		/**
 		 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 		 * @method

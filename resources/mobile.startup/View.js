@@ -209,7 +209,7 @@
 		 *
 		 * @method
 		 */
-		preRender: $.noop,
+		preRender: util.noop,
 
 		/**
 		 * Function called after the view is rendered. Can be redefined in
@@ -217,7 +217,7 @@
 		 *
 		 * @method
 		 */
-		postRender: $.noop,
+		postRender: util.noop,
 
 		// eslint-disable-next-line valid-jsdoc
 		/**
@@ -285,7 +285,7 @@
 				for ( key in events ) {
 					method = events[ key ];
 					// If the method is a string name of this.method, get it
-					if ( !$.isFunction( method ) ) {
+					if ( !util.isFunction( method ) ) {
 						method = this[ events[ key ] ];
 					}
 					if ( method ) {
