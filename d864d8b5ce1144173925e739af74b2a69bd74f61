@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9c9b4f81_b98f3427",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T15:01:50Z",
+      "side": 1,
+      "message": "It\u0027s standard JSDoc syntax (http://usejsdoc.org/tags-callback.html) but I forgot we use JSDuck :{",
+      "parentUuid": "2b7ce5fa_02d808f6",
+      "revId": "d864d8b5ce1144173925e739af74b2a69bd74f61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c5978678_ffbbf9bd",
         "filename": "resources/mobile.nearby/Nearby.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-02-23T22:51:38Z",
       "side": 1,
       "message": "{Function} options.onItemClick as {OnItemClick} will not work.\n\nNote: historically we\u0027ve (wrongly?) documented these under defaults.\n\nThis seems more logical to me, but I just wanted to note the change in documentation behaviour.",
+      "revId": "d864d8b5ce1144173925e739af74b2a69bd74f61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "928a367e_c0301c7c",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T15:01:50Z",
+      "side": 1,
+      "message": "I believe this is now fixed per the generated output.",
+      "parentUuid": "c5978678_ffbbf9bd",
       "revId": "d864d8b5ce1144173925e739af74b2a69bd74f61",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
