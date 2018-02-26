@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c908b28_572d6f4a",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-26T19:34:37Z",
+      "side": 1,
+      "message": "Isn\u0027t window still a global which this commit aims to address?\nShould this be inside the Nearby class or would it be better if window was passed in as an option?\n\nIs the plan to keep it here or not, an inline comment may help if this is seen as a step to somewhere else...",
+      "revId": "73be66eec29ea636d451a0c4e217434c31622d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
