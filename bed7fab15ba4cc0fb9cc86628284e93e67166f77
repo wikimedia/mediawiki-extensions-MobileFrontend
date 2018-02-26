@@ -16,6 +16,24 @@
       "revId": "bed7fab15ba4cc0fb9cc86628284e93e67166f77",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4299acf9_fac638da",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T15:07:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70d8f8a4_6b63887b",
+      "revId": "bed7fab15ba4cc0fb9cc86628284e93e67166f77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
