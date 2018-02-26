@@ -16,6 +16,24 @@
       "revId": "73be66eec29ea636d451a0c4e217434c31622d08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7f60b4d_18228a86",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T19:43:54Z",
+      "side": 1,
+      "message": "Yes, this will be moved out (or refactored in some way) in a subsequent patchset! I didn\u0027t want to go too deep into one approach before getting a +2 on it!",
+      "parentUuid": "3c908b28_572d6f4a",
+      "revId": "73be66eec29ea636d451a0c4e217434c31622d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
