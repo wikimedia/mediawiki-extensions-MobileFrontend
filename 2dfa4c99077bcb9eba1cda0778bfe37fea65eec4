@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ccda1503_2a30b69d",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T14:31:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93408c1a_f8da3610",
+      "revId": "2dfa4c99077bcb9eba1cda0778bfe37fea65eec4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c9b41fac_f818c0c9",
         "filename": "resources/mobile.startup/util.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-02-23T22:53:44Z",
       "side": 1,
       "message": "I suggest using `ev` for consistency with rest of codebase.",
+      "revId": "2dfa4c99077bcb9eba1cda0778bfe37fea65eec4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c6f1e58c_57a23bcc",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-26T14:31:06Z",
+      "side": 1,
+      "message": "Sorry, fixed. I see that this is indeed mentioned in https://www.mediawiki.org/wiki/Reading/Web/Coding_conventions#Naming_conventions.",
+      "parentUuid": "c9b41fac_f818c0c9",
       "revId": "2dfa4c99077bcb9eba1cda0778bfe37fea65eec4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
