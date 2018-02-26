@@ -1,3 +1,5 @@
+/* global $ */
+
 /*!
  * VisualEditor MediaWiki Initialization MobileFrontendArticleTarget class.
  *

@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 
 	var Panel = M.require( 'mobile.startup/Panel' ),

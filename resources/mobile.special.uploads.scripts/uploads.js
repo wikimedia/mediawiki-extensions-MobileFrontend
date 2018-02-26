@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 	var
 		user = M.require( 'mobile.startup/user' ),

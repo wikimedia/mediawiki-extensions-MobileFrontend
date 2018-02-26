@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		util = M.require( 'mobile.startup/util' ),

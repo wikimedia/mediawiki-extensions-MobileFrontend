@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 	var storage = mw.storage,
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),

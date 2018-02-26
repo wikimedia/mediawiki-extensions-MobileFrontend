@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 	/** @ignore @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',

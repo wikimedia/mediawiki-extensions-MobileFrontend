@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
 		VIEW_OPTION_NAME = 'mfWatchlistView',

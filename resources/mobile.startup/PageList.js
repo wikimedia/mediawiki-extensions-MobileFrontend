@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( M, $ ) {
 
 	var View = M.require( 'mobile.startup/View' ),

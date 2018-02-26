@@ -1,3 +1,4 @@
+/* global jQuery */
 ( function ( HTML, M, $ ) {
 
 	var time = M.require( 'mobile.startup/time' ),
