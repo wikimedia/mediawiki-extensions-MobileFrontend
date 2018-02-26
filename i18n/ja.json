@@ -15,7 +15,8 @@
 			"2nd-player",
 			"Los688",
 			"Rxy",
-			"組曲師"
+			"組曲師",
+			"Omotecho"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -92,7 +93,7 @@
 	"mobile-frontend-editor-switch-visual-editor": "ビジュアルエディターに切り替える",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> の<strong>ソースを閲覧中</strong>",
 	"mobile-frontend-editor-wait": "編集内容を保存しています。お待ちください。",
-	"mobile-frontend-expand-sections-description": "新しいページに来たとき常に全ての節を展開する。",
+	"mobile-frontend-expand-sections-description": "どのページでも全ての節を展開する。",
 	"mobile-frontend-expand-sections-status": "すべての節を展開",
 	"mobile-frontend-fontchanger-link": "フォント サイズ",
 	"mobile-frontend-fontchanger-desc": "読みやすいフォントサイズに調整できます。",
@@ -241,5 +242,5 @@
 	"mobile-frontend-search-feedback-link-text": "フィードバックをください",
 	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "記事のフォントサイズ"
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ"
 }
