@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "232d0b2e_5dbeec02",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T17:07:38Z",
+      "side": 1,
+      "message": "Weird. mw.config.get( \u0027wgPageName\u0027 ) /should/ include the talk prefix so these lines look identical to me.\nAlso we shouldn\u0027t add the M global here - instead if this is needed we should pass M.getCurrentPage() as an option.",
+      "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
