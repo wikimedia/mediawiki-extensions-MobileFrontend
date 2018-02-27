@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a944c5e1_b498bd22",
+        "filename": "resources/mobile.startup/Gateway.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-27T16:21:54Z",
+      "side": 1,
+      "message": "What do you think about calling this PromiseUtil / DeferUtil / GatewayUtil or something that indicates its more utilitarian stateless nature?",
+      "range": {
+        "startLine": 8,
+        "startChar": 10,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "819bc8af91640af7aa426b5bfca89fee270eae56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e63c757_3b26e7e8",
+        "filename": "resources/mobile.startup/Gateway.js",
+        "patchSetId": 25
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-27T16:21:54Z",
+      "side": 1,
+      "message": "Should we pass in jQuery here?",
+      "revId": "819bc8af91640af7aa426b5bfca89fee270eae56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
