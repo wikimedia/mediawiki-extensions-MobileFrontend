@@ -51,11 +51,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		if ( !isset( $this->lastDate ) || $date !== $this->lastDate ) {
 			$output = $this->getOutput();
 			if ( isset( $this->lastDate ) ) {
-				$output->addHtml(
+				$output->addHTML(
 					Html::closeElement( 'ul' )
 				);
 			}
-			$output->addHtml(
+			$output->addHTML(
 				Html::element( 'h2', [ 'class' => 'list-header' ], $date ) .
 				Html::openElement( 'ul', [
 						'class' => 'page-list diff-summary-list side-list'
@@ -197,6 +197,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		}
 		$html .= Html::closeElement( 'li' );
 
-		$output->addHtml( $html );
+		$output->addHTML( $html );
 	}
 }

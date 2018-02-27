@@ -22,7 +22,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	protected function outputSubtitle() {
 		$user = $this->getUser();
 		// Make sure a header is rendered with a-z focused (as we know we're on that page)
-		$this->getOutput()->addHtml( SpecialMobileWatchlist::getWatchlistHeader( $user, 'a-z' ) );
+		$this->getOutput()->addHTML( SpecialMobileWatchlist::getWatchlistHeader( $user, 'a-z' ) );
 	}
 
 	/**
@@ -216,7 +216,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				$this->msg( 'mobile-frontend-watchlist-more' ) );
 		}
 		$out = $this->getOutput();
-		$out->addHtml( $html );
+		$out->addHTML( $html );
 		$out->addModules( 'mobile.special.watchlist.scripts' );
 		$out->addModuleStyles(
 			[

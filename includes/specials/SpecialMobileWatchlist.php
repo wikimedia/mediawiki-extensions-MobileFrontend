@@ -63,8 +63,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
 		if ( $this->view === self::VIEW_FEED ) {
-			$output->addHtml( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
-			$output->addHtml(
+			$output->addHTML( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
+			$output->addHTML(
 				Html::openElement( 'div', [ 'class' => 'content-unstyled' ] )
 			);
 			$this->showRecentChangesHeader();
@@ -75,7 +75,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			} else {
 				$this->showEmptyList( true );
 			}
-			$output->addHtml(
+			$output->addHTML(
 				Html::closeElement( 'div' )
 			);
 		} else {
@@ -178,7 +178,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		];
 		$output = $this->getOutput();
 
-		$output->addHtml(
+		$output->addHTML(
 			Html::openElement( 'ul', [ 'class' => 'mw-mf-watchlist-selector page-header-bar' ] )
 		);
 
@@ -196,14 +196,14 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 					]
 				)
 			];
-			$output->addHtml(
+			$output->addHTML(
 				Html::openElement( 'li', $itemAttrs ) .
 				Html::element( 'a', $linkAttrs, $this->msg( $msg )->plain() ) .
 				Html::closeElement( 'li' )
 			);
 		}
 
-		$output->addHtml(
+		$output->addHTML(
 			Html::closeElement( 'ul' )
 		);
 	}
@@ -306,7 +306,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			}
 		}
 
-		$output->addHtml( '</ul>' );
+		$output->addHTML( '</ul>' );
 	}
 
 	/**
@@ -314,7 +314,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @param bool $feed Render as feed (true) or list (false) view?
 	 */
 	private function showEmptyList( $feed ) {
-		$this->getOutput()->addHtml( self::getEmptyListHtml( $feed, $this->getLanguage() ) );
+		$this->getOutput()->addHTML( self::getEmptyListHtml( $feed, $this->getLanguage() ) );
 	}
 
 	/**

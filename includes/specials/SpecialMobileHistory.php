@@ -80,7 +80,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$title
 			);
 		}
-		$this->getOutput()->addHtml(
+		$this->getOutput()->addHTML(
 			Html::openElement( 'div', [ 'class' => 'content-header' ] ) .
 			Html::openElement( 'h2', [ 'class' => 'mw-mf-title-wrapper' ] ) .
 				$namespaceLabel .
@@ -132,13 +132,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				}
 
 				$this->addModules();
-				$this->getOutput()->addHtml(
+				$this->getOutput()->addHTML(
 					Html::openElement( 'div', [ 'class' => 'history content-unstyled' ] )
 				);
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
-				$this->getOutput()->addHtml(
+				$this->getOutput()->addHTML(
 					Html::closeElement( 'div' )
 				);
 				return;
@@ -261,16 +261,16 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			if ( $rev1 && $numRows < self::LIMIT + 1 ) {
 				$this->showRow( $rev1, null );
 			}
-			$out->addHtml( '</ul>' );
+			$out->addHTML( '</ul>' );
 			// Captured 1 more than we should have done so if the number of
 			// results is greater than the limit there are more to show.
 			if ( $numRows > self::LIMIT ) {
-				$out->addHtml( $this->getMoreButton( $rev1->getTimestamp() ) );
+				$out->addHTML( $this->getMoreButton( $rev1->getTimestamp() ) );
 			}
 		} else {
 			// Edge case.
 			// I suspect this is here because revisions may exist but may have been hidden.
-			$out->addHtml(
+			$out->addHTML(
 				Html::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}

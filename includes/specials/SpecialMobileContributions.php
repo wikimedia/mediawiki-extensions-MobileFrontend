@@ -70,9 +70,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
 				$res = $this->doQuery();
-				$out->addHtml( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
+				$out->addHTML( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
 				$this->showContributions( $res );
-				$out->addHtml( Html::closeElement( 'div' ) );
+				$out->addHTML( Html::closeElement( 'div' ) );
 				return;
 			}
 		}
@@ -104,15 +104,15 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->showContributionsRow( $rev );
 				}
 			}
-			$out->addHtml( '</ul>' );
+			$out->addHTML( '</ul>' );
 			// Captured 1 more than we should have done so if the number of
 			// results is greater than the limit there are more to show.
 			if ( $numRows > self::LIMIT ) {
-				$out->addHtml( $this->getMoreButton( $rev->getTimestamp() ) );
+				$out->addHTML( $this->getMoreButton( $rev->getTimestamp() ) );
 			}
 		} else {
 			// For users who exist but have not made any edits
-			$out->addHtml(
+			$out->addHTML(
 				Html::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}
