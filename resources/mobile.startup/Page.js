@@ -54,7 +54,6 @@
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
 		 * @cfg {boolean} defaults.isMainPage Whether the page is the Main Page.
 		 * @cfg {boolean} defaults.isMissing Whether the page exists in the wiki.
-		 * @cfg {string} defaults.hash Window location hash.
 		 * @cfg {Object} defaults.thumbnail thumbnail definition corresponding to page image
 		 * @cfg {boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
 		 * @cfg {number} defaults.thumbnail.width of image in pixels.
@@ -72,7 +71,6 @@
 			sections: [],
 			isMissing: false,
 			isMainPage: false,
-			hash: window.location.hash,
 			url: undefined,
 			thumbnail: {
 				isLandscape: undefined,
@@ -221,21 +219,6 @@
 				this.sections.push( section );
 				this._sectionLookup[section.id] = section;
 			}.bind( this ) );
-		},
-
-		/**
-		 * @inheritdoc
-		 */
-		postRender: function () {
-			var self = this;
-			// Restore anchor position after everything on page has been loaded.
-			// Otherwise, images that load after a while will push the anchor
-			// from the top of the viewport.
-			if ( this.options.hash ) {
-				$( window ).on( 'load', function () {
-					window.location.hash = self.options.hash;
-				} );
-			}
 		},
 
 		/**
