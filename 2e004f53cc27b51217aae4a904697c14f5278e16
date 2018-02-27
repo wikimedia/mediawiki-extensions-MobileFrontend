@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa43def4_929af3e1",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T00:11:20Z",
+      "side": 1,
+      "message": "Looks good but I haven\u0027t got VE up and running locally. Have you verified this works? If not I\u0027ll have to get setup before merging..",
+      "revId": "2e004f53cc27b51217aae4a904697c14f5278e16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d3eaa279_cec1a039",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T00:11:20Z",
+      "side": 1,
+      "message": "This dependency is no longer needed now we are using util.",
+      "revId": "2e004f53cc27b51217aae4a904697c14f5278e16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
