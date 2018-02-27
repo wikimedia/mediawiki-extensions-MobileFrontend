@@ -11,10 +11,13 @@
 	 *
 	 * @constructor
 	 * @param {Object} options Configuration options
+	 * @param {Object} options.title Title of the talk page being modified
+	 * @param {Object} options.currentPageTitle Title of the page before the overlay appears
 	 */
 	function TalkSectionAddOverlay( options ) {
 		TalkOverlayBase.apply( this, arguments );
 		this.title = options.title;
+		this.currentPageTitle = options.currentPageTitle;
 		// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
 		// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
 		this._saveHit = false;
@@ -94,19 +97,19 @@
 		 * Handles a click on the save button
 		 */
 		onSaveClick: function () {
-			var self = this;
+			var self = this,
+				isOnTalkPage = self.title === self.currentPageTitle;
 
 			this.showHidden( '.saving-header' );
 			this.save().done( function ( status ) {
 				if ( status === 'ok' ) {
-					// Check if the user was previously on the talk overlay
-					if ( self.title !== mw.config.get( 'wgPageName' ) ) {
+					if ( isOnTalkPage ) {
+						M.emit( 'talk-added-wo-overlay' );
+					} else {
 						self.pageGateway.invalidatePage( self.title );
 						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
 						M.emit( 'talk-discussion-added' );
 						window.history.back();
-					} else {
-						M.emit( 'talk-added-wo-overlay' );
 					}
 				}
 			} ).fail( function ( error ) {
