@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8955fed5_108a2e47",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "getWatchlistHeader is static, should be called by using self::getWatchlistHeader(), not $this-\u003egetWatchlistHeader()",
+      "range": {
+        "startLine": 65,
+        "startChar": 20,
+        "endLine": 65,
+        "endChar": 46
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af81c0f1_6e656244",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "it would be great to have this in constants (a-z and feed)",
+      "range": {
+        "startLine": 123,
+        "startChar": 64,
+        "endLine": 123,
+        "endChar": 69
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79cc8de6_fc249cd8",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "Thats not that nice, first we build some complex HTML by using classes, just to wrap output withing HTML built by string concatenation. Can we improve that?",
+      "range": {
+        "startLine": 165,
+        "startChar": 10,
+        "endLine": 165,
+        "endChar": 59
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b23a7e7f_d96b5b87",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "$output-\u003eaddHTML()",
+      "range": {
+        "startLine": 180,
+        "startChar": 11,
+        "endLine": 180,
+        "endChar": 18
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9aa475c_e747f740",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "$output-\u003eaddHTML()",
+      "range": {
+        "startLine": 198,
+        "startChar": 12,
+        "endLine": 198,
+        "endChar": 19
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56906e3e_a0b9078a",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "$output-\u003eaddHTML()",
+      "range": {
+        "startLine": 205,
+        "startChar": 11,
+        "endLine": 205,
+        "endChar": 18
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5325508_d1b43dd5",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "just a question, can we use config for that? or maybe better lets keep both data attributes in one element? having this attribute in two different elements might cause some problem in future (like someone changes the html class of one element and JS will stop storing new values).",
+      "range": {
+        "startLine": 31,
+        "startChar": 3,
+        "endLine": 32,
+        "endChar": 74
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8358664b_42922963",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-02-27T21:42:47Z",
+      "side": 1,
+      "message": "this will end up with two additional requests on every Watchlist page view. Please check old user options and update only when necessary (options are available by `mw.user.options.get()`, make sure that `user.options` module is present. (It\u0027s available on that page but I don\u0027t know what loaded `user.options`).",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 48
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
