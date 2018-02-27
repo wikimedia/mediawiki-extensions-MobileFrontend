@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "82396dcc_476b5558",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-02-27T21:44:08Z",
+      "side": 1,
+      "message": "Finally figured this out. This happens whenever I visit the old settings page on this patchset. I\u0027m not sure if that\u0027s ok or not. Seems like a bad thing.\n\nhttp://m.localhost:8080/w/index.php?title\u003dSpecial:MobileOptions\u0026returnto\u003dMain+Page",
+      "parentUuid": "0e7d359c_2ff60795",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 22
+      },
+      "revId": "acaeaa82c807152412fc30a85079527dab3dd286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a88c37d7_cfd0adbf",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
