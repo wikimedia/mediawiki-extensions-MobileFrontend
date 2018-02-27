@@ -34,6 +34,24 @@
       "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ca26f4c_d284b2ba",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T18:13:50Z",
+      "side": 1,
+      "message": "ahh interesting. Can you add this comment? That explains it!\n\nSo yeh, I think provided you pass down the page as an option and add the comment I think this is good to go.",
+      "parentUuid": "1df1ca27_1729cc45",
+      "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
