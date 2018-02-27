@@ -16,6 +16,24 @@
       "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1df1ca27_1729cc45",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-02-27T18:11:50Z",
+      "side": 1,
+      "message": "The problem isn\u0027t that `wgPageName` doesn\u0027t include the prefix, it does. The problem is that `self.title` replaces underscores with spaces, and `wgPageName` doesn\u0027t. So \"User talk:jdrewniak\" !\u003d\u003d \"User_talk:jdrewniak\". \n(I haven\u0027t dived down the dependancy chain to see where `this.title` comes from)",
+      "parentUuid": "232d0b2e_5dbeec02",
+      "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
