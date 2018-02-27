@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e9c0739d_8a2a8103",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T21:57:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8955fed5_108a2e47",
+      "range": {
+        "startLine": 65,
+        "startChar": 20,
+        "endLine": 65,
+        "endChar": 46
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "af81c0f1_6e656244",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2018-02-27T21:42:47Z",
       "side": 1,
       "message": "it would be great to have this in constants (a-z and feed)",
+      "range": {
+        "startLine": 123,
+        "startChar": 64,
+        "endLine": 123,
+        "endChar": 69
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b86c4380_b1901370",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T21:57:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af81c0f1_6e656244",
       "range": {
         "startLine": 123,
         "startChar": 64,
@@ -82,6 +130,30 @@
       "writtenOn": "2018-02-27T21:42:47Z",
       "side": 1,
       "message": "$output-\u003eaddHTML()",
+      "range": {
+        "startLine": 180,
+        "startChar": 11,
+        "endLine": 180,
+        "endChar": 18
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c89b616_9eef4e52",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T21:57:06Z",
+      "side": 1,
+      "message": "Will look at this separately in follow up.",
+      "parentUuid": "b23a7e7f_d96b5b87",
       "range": {
         "startLine": 180,
         "startChar": 11,
@@ -163,6 +235,30 @@
     },
     {
       "key": {
+        "uuid": "ec3bfa23_d1da358a",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T21:57:06Z",
+      "side": 1,
+      "message": "My preference for data attributes was it was the easiest way to pass these values down to JS.\n\nWe could send a config down the wire and use mw.config but this felt cleaner to me.",
+      "parentUuid": "d5325508_d1b43dd5",
+      "range": {
+        "startLine": 31,
+        "startChar": 3,
+        "endLine": 32,
+        "endChar": 74
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8358664b_42922963",
         "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
         "patchSetId": 5
@@ -174,6 +270,30 @@
       "writtenOn": "2018-02-27T21:42:47Z",
       "side": 1,
       "message": "this will end up with two additional requests on every Watchlist page view. Please check old user options and update only when necessary (options are available by `mw.user.options.get()`, make sure that `user.options` module is present. (It\u0027s available on that page but I don\u0027t know what loaded `user.options`).",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 48
+      },
+      "revId": "6891fc88acd97c7f8b938eb4bcc5534db8283bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1a6bf60_834741e8",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-27T21:57:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8358664b_42922963",
       "range": {
         "startLine": 35,
         "startChar": 2,
