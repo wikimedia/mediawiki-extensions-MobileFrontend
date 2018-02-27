@@ -13,7 +13,8 @@
 			"संतोष दहिवळ",
 			"BPositive",
 			"अभय नातू",
-			"NehalDaveND"
+			"NehalDaveND",
+			"Sureshkhole"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>वर्ग</strong>",
@@ -137,5 +138,6 @@
 	"tag-mobile_edit-description": "मोबाईल (जाल किंवा अॅप) मार्फत संपादन करण्यात आले",
 	"tag-mobile_web_edit": "मोबाईल वेब संपादन",
 	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
-	"mobile-frontend-loading-message": "भारण करीत आहे..."
+	"mobile-frontend-loading-message": "भारण करीत आहे...",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "टंकाचा आकार"
 }

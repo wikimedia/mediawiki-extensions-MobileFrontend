@@ -85,7 +85,7 @@
 	"mobile-frontend-requires-mobile": "Тази страница е недостъпна през настолен компютър. Моля, щракнете на препраткатан за мобилен изглед в края на страницата.",
 	"mobile-frontend-requires-title": "Недостъпна страница",
 	"mobile-frontend-save-settings": "Съхраняване",
-	"mobile-frontend-settings-beta": "Бета",
+	"mobile-frontend-settings-beta": "{{SITENAME}} Бета",
 	"mobile-frontend-terms-text": "Условия за ползване",
 	"mobile-frontend-view": "Мобилен изглед",
 	"mobile-frontend-view-desktop": "Настолна",
