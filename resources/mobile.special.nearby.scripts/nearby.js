@@ -3,14 +3,28 @@
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		util = M.require( 'mobile.startup/util' ),
 		router = require( 'mediawiki.router' ),
-		Nearby = M.require( 'mobile.nearby/Nearby' );
+		Nearby = M.require( 'mobile.nearby/Nearby' ),
+		util = M.require( 'mobile.startup/util' );
 
 	$( function () {
 		var
 			nearby,
 			options = {
 				el: $( '#mw-mf-nearby' ),
-				funnel: 'nearby'
+				funnel: 'nearby',
+				onItemClick: function ( ev ) {
+					// Do not react to 'open in new tab' clicks as changing the hash
+					// re-renders the view. todo: remove deprecated event.which usage
+					// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/which.
+					if ( util.isModifiedEvent( ev ) || ev.which === 2 ) {
+						return;
+					}
+					// if not on Special:Nearby/#page/page_title or Special:Nearby/#coord/
+					// then set hash to clicked element
+					if ( !window.location.hash.match( /^(#\/page|#\/coord)/i ) ) {
+						window.location.hash = $( this ).attr( 'id' );
+					}
+				}
 			},
 			$btn = $( '#secondary-button' ).parent(),
 			icon,
