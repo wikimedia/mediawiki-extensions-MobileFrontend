@@ -18,6 +18,7 @@
 		this.infiniteScroll = new InfiniteScroll();
 		this.infiniteScroll.on( 'load', $.proxy( this, '_loadCategories' ) );
 		this.gateway = new CategoryGateway( options.api );
+		M.on( 'category-added', this._loadCategories.bind( this ) );
 		Overlay.apply( this, arguments );
 	}
 
@@ -71,7 +72,6 @@
 			if ( !this.options.items ) {
 				this._loadCategories();
 			}
-			M.off( 'category-added' ).on( 'category-added', $.proxy( this, '_loadCategories' ) );
 		},
 
 		/**

@@ -123,7 +123,6 @@
 				// save the new categories
 				this.gateway.save( this.title, newCategories ).done( function () {
 					M.emit( 'category-added' );
-					window.location.hash = '#/categories';
 				} ).fail( function () {
 					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );
