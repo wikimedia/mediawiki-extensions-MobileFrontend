@@ -27,6 +27,20 @@
 		}
 	} );
 
+	QUnit.test( 'No watchlist status check if no ids', function ( assert ) {
+		var pl,
+			spy = this.spy;
+		pl = new PageList( {
+			api: new mw.Api(),
+			pages: [ {}, {} ]
+		} );
+		return pl.getPages().done( function () {
+			assert.ok( spy.calledOnce,
+				'A request to API was made for pages but not watch status' );
+			assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 0, '0 articles have watch stars' );
+		} );
+	} );
+
 	QUnit.test( 'Checks watchlist status once', function ( assert ) {
 		var pl,
 			spy = this.spy;

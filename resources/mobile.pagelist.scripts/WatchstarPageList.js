@@ -54,7 +54,10 @@
 
 			// Check what we have in the page list
 			$li.each( function () {
-				pages.push( $( this ).data( 'id' ) );
+				var id = self.$( this ).data( 'id' );
+				if ( id ) {
+					pages.push( id );
+				}
 			} );
 
 			// Create watch stars for each entry in list
