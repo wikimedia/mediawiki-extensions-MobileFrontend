@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92a07eb7_837d0c3c",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-28T18:37:03Z",
+      "side": 1,
+      "message": "Can you document this above as it\u0027s confusing alongside title about how these differ.\n\ne.g.\n@param {String} options.pageTitle\n\nAlso wouldn\u0027t currentPageTitle make more sense here?\n\nAlso can we merge this with the other commit? It confused me where pageTitle was coming from.",
+      "revId": "b294ab1cf447263f2f78ddfec6fc51fb23c4e8dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
