@@ -33,9 +33,13 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @return string HTML representing the link in the header bar
 	 */
 	protected function getHeaderBarLink( $title ) {
+		// Convert user page URL to User object.
+		$user = User::newFromName( $title->getText(), false );
+		$glyph = $user->isAnon() ? 'anonymous' : 'user';
+
 		return Html::element( 'a',
 			[
-				'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user' ),
+				'class' => MobileUI::iconClass( $glyph, 'before', 'mw-mf-user' ),
 				'href' => $title->getLocalUrl(),
 			],
 			$title->getText() );
@@ -65,7 +69,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				)->inContentLanguage() );
 
 				if ( User::isIP( $par ) ) {
-					$this->renderHeaderBar( $par );
+					$this->renderHeaderBar( Title::newFromText( 'User:' . $par ) );
 				} else {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
