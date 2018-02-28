@@ -14,7 +14,8 @@
 			"BPositive",
 			"अभय नातू",
 			"NehalDaveND",
-			"Sureshkhole"
+			"Sureshkhole",
+			"Susheelkasab"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>वर्ग</strong>",
@@ -59,9 +60,10 @@
 	"mobile-frontend-editor-summary": "सारांश:",
 	"mobile-frontend-editor-viewing-source-page": "<span> $1</span> <strong>स्त्रोत दाखवत आहे</strong>",
 	"mobile-frontend-editor-wait": "बदल जतन होत आहेत, प्रतिक्षा करा.",
-	"mobile-frontend-expand-sections-description": "नविन पानावर जातांना सर्व विभाग विस्तारीत करा.",
+	"mobile-frontend-expand-sections-description": "मुलभूतरित्या सर्व पृष्ठांचे विभाग नेहमी विस्तारित करा.",
 	"mobile-frontend-expand-sections-status": "सर्व विभागांचा विस्तार करा",
 	"mobile-frontend-fontchanger-link": "टंकाचा आकार",
+	"mobile-frontend-fontchanger-desc": "व्यवस्तीत वाचता येण्यासाठी फाँट समायोजित करा",
 	"mobile-frontend-featured-article": "आजच्या आशयाचे आकर्षण",
 	"mobile-frontend-generic-404-desc": "तुम्ही शोधू पाहात असलेले पान सापडले नाही.",
 	"mobile-frontend-generic-404-title": "त्रुटी - पान सापडले नाही",
@@ -139,5 +141,8 @@
 	"tag-mobile_web_edit": "मोबाईल वेब संपादन",
 	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
 	"mobile-frontend-loading-message": "भारण करीत आहे...",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "पृष्ठाविषयीची माहिती त्याखालील थोडक्यात लिहिलेलं वर्णन वाचून जाणून घ्यावी",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "जेव्हा गरज असेल तेव्हाच संदर्भ पुरवावा",
+	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "जेव्हा गरज असेल तेव्हाच फोटो लोड करावेत",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "टंकाचा आकार"
 }
