@@ -52,6 +52,24 @@
       "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "619f89fe_200414c4",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-02-28T12:49:18Z",
+      "side": 1,
+      "message": "Ok. I\u0027m passing pageTitle in as an option. \nThe sibling patch for Minerva, that passes this option in, and explains the spaces vs underscores, is here https://gerrit.wikimedia.org/r/#/c/415272/",
+      "parentUuid": "4ca26f4c_d284b2ba",
+      "revId": "051bd0a9475f683ab5ebb89fbd3fbee6b12c1566",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
