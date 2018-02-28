@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5fa9cfc_07c440cc",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-28T22:21:37Z",
+      "side": 1,
+      "message": "We talked about making this use the local event emitter and documenting this with http://usejsdoc.org/tags-event.html",
+      "revId": "09e50eb3a96b01a4b7a5b850b2740114dfd8c520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8374ae9_217aacee",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-28T22:21:37Z",
+      "side": 1,
+      "message": "We talked about continuing to use $( window ).scrollTop",
+      "revId": "09e50eb3a96b01a4b7a5b850b2740114dfd8c520",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
