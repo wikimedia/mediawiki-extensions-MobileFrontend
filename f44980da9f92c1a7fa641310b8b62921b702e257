@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5bd6f53_116ad997",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-02-28T19:30:58Z",
+      "side": 1,
+      "message": "I added some documentation but I removed the inline comments here, because I felt `if ( isOnTalkPage )` is pretty self explanatory.",
+      "revId": "f44980da9f92c1a7fa641310b8b62921b702e257",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
