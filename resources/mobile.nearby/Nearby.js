@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
-	var MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
+	/** @ignore @event Nearby#Nearby-postRender */
+	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
+		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
@@ -15,7 +17,7 @@
 	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {Function} [options.onItemClick] Callback invoked when a result is
-	 *                                         clicked.
+	 *                                         clicked. Defaults to nop.
 	 */
 	function Nearby( options ) {
 		var self = this,
@@ -34,8 +36,6 @@
 		this.onItemClick = options.onItemClick;
 
 		_super.apply( this, arguments );
-
-		this.refresh( options );
 	}
 
 	OO.mfExtend( Nearby, WatchstarPageList, {
@@ -211,6 +211,11 @@
 			}
 			WatchstarPageList.prototype.postRender.apply( this );
 			this._postRenderLinks();
+			this.$( function () {
+				// todo: use the local emitter when refresh() doesn't recreate the
+				//       OO.EventEmitter by calling the super's constructor.
+				M.emit( NEARBY_EVENT_POST_RENDER );
+			} );
 		},
 		/**
 		 * Hijack links to apply several customisations to them:
@@ -220,21 +225,11 @@
 		 * @private
 		 */
 		_postRenderLinks: function () {
-			var offset;
-
+			var self = this;
 			this.$( 'a' ).each( function ( i ) {
 				// FIXME: not unique if multiple Nearby objects on same page
-				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
+				self.$( this ).attr( 'id', 'nearby-page-list-item-' + i );
 			} ).on( 'click', this.onItemClick );
-
-			// Restore the offset
-			if ( window.location.hash.indexOf( '/' ) === -1 ) {
-				offset = $( window.location.hash ).offset();
-				if ( offset ) {
-					// Don't reset the hash here as we don't want to trigger another Route
-					$( window ).scrollTop( offset.top );
-				}
-			}
 		},
 		/**
 		 * Refresh the list of the nearby articles depending on the options.

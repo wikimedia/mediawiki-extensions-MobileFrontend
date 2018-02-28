@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
-	var Icon = M.require( 'mobile.startup/Icon' ),
+	/** @ignore @event Nearby#Nearby-postRender */
+	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
+		Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
@@ -12,7 +14,7 @@
 				el: $( '#mw-mf-nearby' ),
 				funnel: 'nearby',
 				onItemClick: function ( ev ) {
-					if ( !util.isModifiedEvent( ev ) && !isPageOrCoordURL() ) {
+					if ( !util.isModifiedEvent( ev ) && !isPageOrCoordURL( window.location ) ) {
 						// Change the URL fragment to the clicked element so that back
 						// navigation can retain the item position. This behavior is
 						// unwanted for results displayed around a page or coordinate since
@@ -27,14 +29,15 @@
 			$icon;
 
 		/**
-		 * @ignore
+		 * @param {Location} location The URL, probably window.location.
 		 * @return {boolean} True if the current URL is based around page or
 		 *                   coordinates (as opposed to current location or search).
 		 *                   e.g.: Special:Nearby#/page/San_Francisco and
 		 *                   Special:Nearby#/coord/0,0.
+		 * @ignore
 		 */
-		function isPageOrCoordURL() {
-			return window.location.hash.match( /^(#\/page|#\/coord)/ );
+		function isPageOrCoordURL( location ) {
+			return location.hash.match( /^(#\/page|#\/coord)/ );
 		}
 
 		// Remove user button
@@ -83,12 +86,23 @@
 			// in the Nearby module
 			opt = util.extend( {}, opt, options );
 
-			// if Nearby is already created, use the existing one
-			if ( nearby ) {
-				nearby.refresh( opt );
-			} else {
+			if ( !nearby ) {
 				nearby = new Nearby( opt );
+				// todo: use the local emitter when refresh() doesn't recreate the
+				//       OO.EventEmitter by calling the super's constructor.
+				M.on( NEARBY_EVENT_POST_RENDER, function () {
+					var el;
+					if ( window.location.hash && !isPageOrCoordURL( window.location ) ) {
+						// The hash (including the leading #) is expected to be an identifier
+						// selector (unless the user entered rubbish).
+						el = nearby.$( window.location.hash );
+						if ( el[0] && el[0].nodeType ) {
+							$( window ).scrollTop( el.offset().top );
+						}
+					}
+				} );
 			}
+			nearby.refresh( opt );
 		}
 
 		// Routing on the nearby view

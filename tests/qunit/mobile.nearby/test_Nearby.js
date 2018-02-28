@@ -12,15 +12,16 @@
 	} );
 
 	QUnit.test( '#render empty list', function ( assert ) {
-		var $el = $( '<div>' );
-		// eslint-disable-next-line no-new
-		new Nearby( {
+		var $el = $( '<div>' ), nearby, opts = {
 			api: api,
 			latitude: 37.7,
 			longitude: -122,
 			range: 1000,
 			el: $el
-		} );
+		};
+		// eslint-disable-next-line no-new
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( {
 			latitude: 37.7,
 			longitude: -122
@@ -70,15 +71,16 @@
 	} );
 
 	QUnit.test( '#render with a location', function ( assert ) {
-		var $el = $( '<div>' );
-		// eslint-disable-next-line no-new
-		new Nearby( {
+		var $el = $( '<div>' ), nearby, opts = {
 			api: api,
 			latitude: 37.7,
 			longitude: -122,
 			range: 1000,
 			el: $el
-		} );
+		};
+		// eslint-disable-next-line no-new
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( {
 			latitude: 37.7,
 			longitude: -122
@@ -87,28 +89,30 @@
 	} );
 
 	QUnit.test( '#render with location error', function ( assert ) {
-		var $el = $( '<div>' ),
-			n = new Nearby( {
-				range: 1000,
-				el: $el,
-				errorType: 'locating'
-			} );
+		var $el = $( '<div>' ), nearby, opts = {
+			range: 1000,
+			el: $el,
+			errorType: 'locating'
+		};
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		assert.ok( this.spy.notCalled, 'Check API didn\'t get called on this case.' );
 		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
 		assert.strictEqual( $el.find( '.errorbox h2' ).length, 1, 'Check error has heading' );
 		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
-			n.errorMessages.locating.heading, 'Check it is the correct heading' );
+			nearby.errorMessages.locating.heading, 'Check it is the correct heading' );
 	} );
 
 	QUnit.test( '#render with current location', function ( assert ) {
-		var $el = $( '<div>' );
-		// eslint-disable-next-line no-new
-		new Nearby( {
+		var $el = $( '<div>' ), nearby, opts = {
 			api: api,
 			useCurrentLocation: true,
 			range: 1000,
 			el: $el
-		} );
+		};
+		// eslint-disable-next-line no-new
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		assert.ok( this.getLocation.calledOnce, 'Check API got called' );
 		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
 	} );
@@ -125,13 +129,16 @@
 		var $el = $( '<div>' ),
 			spy = this.spy,
 			done = $.Deferred(),
-			n = new Nearby( {
+			nearby,
+			opts = {
 				api: api,
 				latitude: 37.7,
 				longitude: -122,
 				range: 1000,
 				el: $el
-			} );
+			};
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		this.deferred.fail( function () {
 			assert.ok( spy.calledWithMatch( {
 				latitude: 37.7,
@@ -139,7 +146,7 @@
 			}, 1000 ), 'Check API got called' );
 			assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
 			assert.strictEqual( $el.find( '.errorbox h2' ).text(),
-				n.errorMessages.http.heading, 'Check it is the correct heading' );
+				nearby.errorMessages.http.heading, 'Check it is the correct heading' );
 			done.resolve();
 		} );
 		return done;
@@ -154,14 +161,17 @@
 
 	QUnit.test( '#getting a title will trigger a different API method', function ( assert ) {
 		var $el = $( '<div>' ),
-			pageTitle = 'Hello Friends!';
+			pageTitle = 'Hello Friends!',
+			nearby,
+			opts = {
+				api: api,
+				pageTitle: pageTitle,
+				range: 1000,
+				el: $el
+			};
 		// eslint-disable-next-line no-new
-		new Nearby( {
-			api: api,
-			pageTitle: pageTitle,
-			range: 1000,
-			el: $el
-		} );
+		nearby = new Nearby( opts );
+		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( pageTitle, 1000 ), 'Check API got called' );
 	} );
 
