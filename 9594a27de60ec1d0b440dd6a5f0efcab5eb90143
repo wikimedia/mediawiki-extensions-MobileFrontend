@@ -16,6 +16,24 @@
       "revId": "9594a27de60ec1d0b440dd6a5f0efcab5eb90143",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1cc9642_b82a31b8",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-28T21:38:15Z",
+      "side": 1,
+      "message": "(see https://gerrit.wikimedia.org/r/#/c/373962/ for the proxy deprecation I\u0027ve been trying to push for some time)",
+      "parentUuid": "005bf983_59ead8b3",
+      "revId": "9594a27de60ec1d0b440dd6a5f0efcab5eb90143",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
