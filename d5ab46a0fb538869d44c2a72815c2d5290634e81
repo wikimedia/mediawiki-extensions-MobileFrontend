@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f460143b_543d39f8",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T20:06:32Z",
+      "side": 1,
+      "message": "postRender renders every time the category overlay is rendered.\n\nIf we don\u0027t off it, doesn\u0027t this mean loadCategories will get called twice on the second load? Would it not be better to bind this in the constructor instead?What am I missing?",
+      "revId": "d5ab46a0fb538869d44c2a72815c2d5290634e81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
