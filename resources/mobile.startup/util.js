@@ -8,6 +8,31 @@
 	 */
 	util = {
 		/**
+		 * wrapper for jQuery util noop function
+		 *
+		 * @method
+		 * @return {Function}
+		 */
+		noop: $.noop,
+		/**
+		 * wrapper for jQuery util function to check if something is a function
+		 *
+		 * @method
+		 * @return {Boolean}
+		 */
+		isFunction: function () {
+			return $.isFunction.apply( $, arguments );
+		},
+		/**
+		 * wrapper for jQuery util function to check if something is numeric
+		 *
+		 * @method
+		 * @return {Boolean}
+		 */
+		isNumeric: function () {
+			return $.isNumeric.apply( $, arguments );
+		},
+		/**
 		 * Wrapper for jQuery.extend method. In future this can be bound to Object.assign
 		 * when support allows.
 		 *

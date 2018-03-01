@@ -1,4 +1,6 @@
 ( function ( M, $ ) {
+	var util = M.require( 'mobile.startup/util' );
+
 	/**
 	 * Manages opening and closing overlays when the URL hash changes to one
 	 * of the registered values (see OverlayManager.add()).
@@ -101,7 +103,7 @@
 					// a promise or an overlay)
 					factoryResult = match.factoryResult;
 					// http://stackoverflow.com/a/13075985/365238
-					if ( $.isFunction( factoryResult.promise ) ) {
+					if ( util.isFunction( factoryResult.promise ) ) {
 						factoryResult.done( function ( overlay ) {
 							match.overlay = overlay;
 							attachHideEvent( overlay );

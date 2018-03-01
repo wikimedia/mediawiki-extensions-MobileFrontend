@@ -52,7 +52,7 @@
 					options.rvstartid = this.oldId;
 				}
 				// See Bug 50136 - passing rvsection will fail with non wikitext
-				if ( $.isNumeric( this.sectionId ) ) {
+				if ( util.isNumeric( this.sectionId ) ) {
 					options.rvsection = this.sectionId;
 				}
 				this.api.get( options ).done( function ( resp ) {
@@ -148,7 +148,7 @@
 					apiOptions.prependtext = self.prependtext;
 				}
 
-				if ( $.isNumeric( self.sectionId ) ) {
+				if ( util.isNumeric( self.sectionId ) ) {
 					apiOptions.section = self.sectionId;
 				}
 
