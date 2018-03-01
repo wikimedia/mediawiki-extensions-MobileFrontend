@@ -1,6 +1,4 @@
-/* global jQuery */
-
-( function ( M, $ ) {
+( function ( M ) {
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		util = M.require( 'mobile.startup/util' ),
 		escapeHash = util.escapeHash,
@@ -87,7 +85,7 @@
 			$headlines = $container.find( '.section-heading span' );
 
 		$headlines.each( function () {
-			$headline = $( this );
+			$headline = $container.find( this );
 			$sectionHeading = $headline.parents( '.section-heading' );
 			// toggle only if the section is not already expanded
 			if (
@@ -186,7 +184,7 @@
 		$heading.on( 'keypress', function ( ev ) {
 			if ( ev.which === 13 || ev.which === 32 ) {
 				// Only handle keypresses on the "Enter" or "Space" keys
-				toggler.toggle( $( this ) );
+				toggler.toggle( $heading );
 			}
 		} ).find( 'a' ).on( 'keypress mouseup', function ( ev ) {
 			ev.stopPropagation();
@@ -235,6 +233,7 @@
 	Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		var tagName, expandSections, indicator, $content,
 			$firstHeading,
+			$link,
 			self = this,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 
@@ -252,7 +251,7 @@
 
 		$container.children( tagName ).each( function ( i ) {
 			var isReferenceSection,
-				$heading = $( this ),
+				$heading = $container.find( this ),
 				$indicator = $heading.find( '.indicator' ),
 				id = prefix + 'collapsible-block-' + i;
 			// Be sure there is a div wrapping the section content.
@@ -274,7 +273,7 @@
 						if ( !ev.target.href ) {
 							// prevent taps/clicks on edit button after toggling (bug 56209)
 							ev.preventDefault();
-							self.toggle( $( this ) );
+							self.toggle( $heading );
 						}
 					} );
 
@@ -343,11 +342,12 @@
 		checkHash();
 		// Restricted to links created by editors and thus outside our control
 		// T166544 - don't do this for reference links - they will be handled elsewhere
-		$container.find( 'a:not(.reference a)' ).on( 'click', function () {
+		$link = $container.find( 'a:not(.reference a)' );
+		$link.on( 'click', function () {
 			// the link might be an internal link with a hash.
 			// if it is check if we need to reveal any sections.
-			if ( $( this ).attr( 'href' ) !== undefined &&
-				$( this ).attr( 'href' ).indexOf( '#' ) > -1
+			if ( $link.attr( 'href' ) !== undefined &&
+				$link.attr( 'href' ).indexOf( '#' ) > -1
 			) {
 				checkHash();
 			}
@@ -368,4 +368,4 @@
 
 	M.define( 'mobile.toggle/Toggler', Toggler ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
