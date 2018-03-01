@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c08d068a_50ff81e8",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:50:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9cbcce49_0c8f41f2",
+      "range": {
+        "startLine": 206,
+        "startChar": 3,
+        "endLine": 206,
+        "endChar": 10
+      },
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "98f40fbb_7c208472",
         "filename": "resources/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 2
@@ -45,6 +69,64 @@
       "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a927aab1_9b8572a0",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:50:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98f40fbb_7c208472",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 58
+      },
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8dd7cd3d_aa85a984",
+        "filename": "resources/mobile.startup/Drawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:50:09Z",
+      "side": 1,
+      "message": "Fixed here too.",
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "390d0ef5_acbe48c8",
+        "filename": "resources/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:50:09Z",
+      "side": 1,
+      "message": "fixed this too..",
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
