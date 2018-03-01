@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
@@ -176,6 +176,7 @@
 		 */
 		onSaveComplete: function () {
 			var msg,
+				$window = util.getWindow(),
 				title = this.options.title,
 				self = this;
 
@@ -202,7 +203,7 @@
 				title = title + '#' + self.sectionLine;
 			}
 
-			$( window ).off( 'beforeunload.mfeditorwarning' );
+			$window.off( 'beforeunload.mfeditorwarning' );
 
 			window.location = mw.util.getUrl( title );
 			if ( self.sectionLine ) {
@@ -378,4 +379,4 @@
 
 	M.define( 'mobile.editor.common/EditorOverlayBase', EditorOverlayBase )
 		.deprecate( 'modules/editor/EditorOverlayBase' );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -3,6 +3,7 @@
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
 		Deferred = $.Deferred,
+		util = M.require( 'mobile.startup/util' ),
 		when = $.when,
 		icons = M.require( 'mobile.startup/icons' ),
 		viewport = mw.viewport,
@@ -139,7 +140,7 @@
 		 */
 		setupImageLoading: function ( $container ) {
 			var self = this,
-				offset = $( window ).height() * 1.5,
+				offset = util.getWindow().height() * 1.5,
 				loadImagesList = this.loadImagesList.bind( this ),
 				imagePlaceholders = this.getUnloadedImages( $container );
 

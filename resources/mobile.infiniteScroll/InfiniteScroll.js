@@ -1,4 +1,6 @@
 ( function ( M, $ ) {
+	var util = M.require( 'mobile.startup/util' );
+
 	/**
 	 * Class to assist a view in implementing infinite scrolling on some DOM
 	 * element.
@@ -109,7 +111,8 @@
 		 * @return {boolean}
 		 */
 		scrollNearEnd: function () {
-			var scrollBottom = $( window ).scrollTop() + $( window ).height(),
+			var $window = util.getWindow(),
+				scrollBottom = $window.scrollTop() + $window.height(),
 				endPosition = this.$el.offset().top + this.$el.outerHeight();
 			return scrollBottom + this.threshold > endPosition;
 		},

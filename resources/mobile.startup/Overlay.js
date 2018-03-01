@@ -5,8 +5,8 @@
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
-		$window = $( window );
+		util = M.require( 'mobile.startup/util' ),
+		browser = M.require( 'mobile.startup/Browser' ).getSingleton();
 
 	/**
 	 * Mobile modal window
@@ -186,9 +186,11 @@
 		 * @method
 		 */
 		show: function () {
-			var self = this;
+			var self = this,
+				$window = util.getWindow();
+
 			this.$el.appendTo( this.appendToElement );
-			this.scrollTop = $( document ).scrollTop();
+			this.scrollTop = $window.scrollTop();
 
 			if ( this.fullScreen ) {
 				$( 'html' ).addClass( 'overlay-enabled' );
@@ -223,6 +225,8 @@
 		 * @return {boolean} Whether the overlay was successfully hidden or not
 		 */
 		hide: function () {
+			var $window = util.getWindow();
+
 			if ( this.fullScreen ) {
 				$( 'html' ).removeClass( 'overlay-enabled' );
 				// return to last known scroll position
@@ -275,10 +279,11 @@
 		 * keyboard (usually inputs, textareas, contenteditables).
 		 */
 		_fixIosHeader: function ( $el ) {
-			var self = this;
+			var self = this,
+				$window = util.getWindow();
 
 			if ( this.isIos ) {
-				this._resizeContent( $( window ).height() );
+				this._resizeContent( $window.height() );
 				$el
 					.on( 'focus', function () {
 						setTimeout( function () {

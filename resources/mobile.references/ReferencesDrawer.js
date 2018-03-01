@@ -57,7 +57,7 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			var windowHeight = $( window ).height();
+			var windowHeight = util.getWindow().height();
 
 			Drawer.prototype.postRender.apply( this );
 

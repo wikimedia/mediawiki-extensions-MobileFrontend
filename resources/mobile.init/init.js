@@ -12,6 +12,7 @@
 		gateway = new PageGateway( new mw.Api() ),
 		util = mw.util,
 		mfUtil = M.require( 'mobile.startup/util' ),
+		$window = mfUtil.getWindow(),
 		user = mw.user,
 		context = M.require( 'mobile.startup/context' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -59,7 +60,7 @@
 	 * scroll event throttled to 200 ms.
 	 */
 
-	$( window )
+	$window
 		.on( 'resize', apply2(
 			$.debounce( 100, $.proxy( M, 'emit', 'resize' ) ),
 			$.throttle( 200, $.proxy( M, 'emit', 'resize:throttled' ) )
@@ -173,7 +174,7 @@
 
 	// Font must be updated on back button press as users may click
 	// back after changing font.
-	$( window ).on( 'pageshow', function () {
+	$window.on( 'pageshow', function () {
 		updateFontSize();
 	} );
 	updateFontSize();

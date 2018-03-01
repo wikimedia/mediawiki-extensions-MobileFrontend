@@ -8,6 +8,15 @@
 	 */
 	util = {
 		/**
+		 * Get the window object
+		 *
+		 * @method
+		 * @return {jQuery.Object}
+		 */
+		getWindow: function () {
+			return $( window );
+		},
+		/**
 		 * Given some html, create new element(s).
 		 * Unlike jQuery.parseHTML this will return a jQuery object
 		 * not an array.

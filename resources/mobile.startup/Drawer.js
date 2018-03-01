@@ -67,9 +67,10 @@
 		 * ShowDrawer event handler
 		 */
 		onShowDrawer: function () {
-			var self = this,
-				$window = $( window );
+			var self = this;
+
 			setTimeout( function () {
+				var $window = util.getWindow();
 				$window.one( 'click.drawer', $.proxy( self, 'hide' ) );
 				if ( self.closeOnScroll ) {
 					$window.one( 'scroll.drawer', $.proxy( self, 'hide' ) );
@@ -83,7 +84,7 @@
 		onHideDrawer: function () {
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
-			$( window ).off( '.drawer' );
+			util.getWindow().off( '.drawer' );
 		}
 	} );
 

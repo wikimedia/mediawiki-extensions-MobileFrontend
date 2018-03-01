@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
-		escapeHash = M.require( 'mobile.startup/util' ).escapeHash,
+		util = M.require( 'mobile.startup/util' ),
+		escapeHash = util.escapeHash,
 		arrowOptions = {
 			name: 'arrow',
 			additionalClassNames: 'indicator'
@@ -349,7 +350,7 @@
 				checkHash();
 			}
 		} );
-		$( window ).on( 'hashchange', function () {
+		util.getWindow().on( 'hashchange', function () {
 			checkHash();
 		} );
 
