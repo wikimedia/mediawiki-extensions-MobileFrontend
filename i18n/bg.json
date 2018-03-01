@@ -72,7 +72,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Опитайте с друг браузър или активирайте JavaScript, ако сте го спрели.",
 	"mobile-frontend-nearby-title": "Наблизо",
 	"mobile-frontend-news-items": "В новините",
-	"mobile-frontend-opt-in-explain": "С присъединяването си към Бета, ще получите достъп до най-новите експериментални функции, които могат да бъдат предмет на софтуерни дефекти.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} Бета е начин да изпробвате тези експериментални възможности и да ни кажете какво мислите за тях",
 	"mobile-frontend-overlay-close": "Затваряне",
 	"mobile-frontend-page-edit-summary": "<span><strong>Резюме на редакцията</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Потребител „$1“ не е регистриран.",
@@ -101,5 +101,5 @@
 	"nearby": "Страници по теми, близо до вас",
 	"tag-mobile_edit": "Редакция чрез мобилно устройство",
 	"tag-mobile_web_edit": "Редакция чрез мобилно приложение",
-	"mobile-frontend-console-recruit": "\\o/ Хей! Това е софтуер с отворен код и ние имаме нужда от доброволци, които да ни помогнат го да доразработим, да го направим по-добър и да коригираме всички бъгове, които могат да бъдат видяни в конзолата за JavaScript."
+	"mobile-frontend-console-recruit": "Научете повече за това как изграждаме мобилния сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
