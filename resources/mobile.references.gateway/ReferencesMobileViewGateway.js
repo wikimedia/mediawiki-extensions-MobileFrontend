@@ -1,9 +1,10 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var ReferencesHtmlScraperGateway =
 		M.require( 'mobile.references.gateway/ReferencesHtmlScraperGateway' ),
 		cache = M.require( 'mobile.startup/cache' ),
 		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
 		MemoryCache = cache.MemoryCache,
+		util = M.require( 'mobile.startup/util' ),
 		NoCache = cache.NoCache,
 		referencesMobileViewGateway = null;
 
@@ -59,7 +60,7 @@
 				var sections = {};
 
 				data.mobileview.sections.forEach( function ( section ) {
-					var $section = $( '<div>' ).html( section.text );
+					var $section = util.parseHTML( '<div>' ).html( section.text );
 
 					sections[ $section.find( '.mw-headline' ).attr( 'id' ) ] = $section.find( '.references' );
 				} );
@@ -94,7 +95,7 @@
 			var self = this;
 
 			return this.getReferencesLists( page ).then( function ( sections ) {
-				var $container = $( '<div>' );
+				var $container = util.parseHTML( '<div>' );
 
 				Object.keys( sections ).forEach( function ( sectionId ) {
 					$container.append( sections[ sectionId ] );
@@ -123,4 +124,4 @@
 	M.define( 'mobile.references.gateway/ReferencesMobileViewGateway',
 		ReferencesMobileViewGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

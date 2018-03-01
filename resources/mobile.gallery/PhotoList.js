@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var icons = M.require( 'mobile.startup/icons' ),
 		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
@@ -70,7 +70,7 @@
 		 * @method
 		 */
 		showEmptyMessage: function () {
-			$( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) )
+			this.parseHTML( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) )
 				.insertBefore( this.$list );
 		},
 		/**
@@ -121,4 +121,4 @@
 	} );
 
 	M.define( 'mobile.gallery/PhotoList', PhotoList );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

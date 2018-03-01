@@ -176,7 +176,7 @@
 			if ( options.el ) {
 				this.$el = $( options.el );
 			} else {
-				this.$el = $( '<' + this.tagName + '>' );
+				this.$el = this.parseHTML( '<' + this.tagName + '>' );
 			}
 
 			// Make sure the element is ready to be manipulated
@@ -333,7 +333,14 @@
 		undelegate: function ( eventName, selector, listener ) {
 			this.$el.off( eventName + '.delegateEvents' + this.cid, selector,
 				listener );
-		}
+		},
+
+		/**
+		 * See parseHTML method of util singleton
+		 *
+		 * @method
+		 */
+		parseHTML: util.parseHTML
 	} );
 
 	[

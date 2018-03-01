@@ -1,4 +1,4 @@
-( function ( M, $, OO ) {
+( function ( M, OO ) {
 	/**
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.mixin.LookupElement
@@ -10,7 +10,8 @@
 	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.
 	 */
 	function CategoryLookupInputWidget( options ) {
-		this.$element = $( '<div>' );
+		// Note unlike a View this.$ runs global jQuery in context of OOUI
+		this.$element = this.$( '<div>' );
 		this.gateway = options.gateway;
 		this.$suggestions = options.suggestions;
 		this.categories = options.categories || [];
@@ -92,4 +93,4 @@
 
 	M.define( 'mobile.categories.overlays/CategoryLookupInputWidget', CategoryLookupInputWidget );
 
-}( mw.mobileFrontend, jQuery, OO ) );
+}( mw.mobileFrontend, OO ) );

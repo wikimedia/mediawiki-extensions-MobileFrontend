@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Page = M.require( 'mobile.startup/Page' ),
+		util = M.require( 'mobile.startup/util' ),
 		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
 
 	/**
@@ -68,8 +69,8 @@
 		 * @private
 		 */
 		_highlightSearchTerm: function ( label, term ) {
-			label = $( '<span>' ).text( label ).html();
-			term = $( '<span>' ).text( term ).html();
+			label = util.parseHTML( '<span>' ).text( label ).html();
+			term = util.parseHTML( '<span>' ).text( term ).html();
 
 			return label.replace( this._createSearchRegEx( term ), '<strong>$1</strong>' );
 		},
@@ -172,4 +173,4 @@
 
 	M.define( 'mobile.search.api/SearchGateway', SearchGateway );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

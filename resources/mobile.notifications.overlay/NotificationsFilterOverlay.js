@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		NotificationsFilterOverlay;
@@ -30,7 +30,7 @@
 		} );
 
 		this.$( '.overlay-content' ).append(
-			$( '<div>' )
+			this.parseHTML( '<div>' )
 				.addClass( 'notifications-filter-overlay-read-state' )
 				.append( options.$notifReadState ),
 			options.$crossWikiUnreadFilter
@@ -57,4 +57,4 @@
 
 	M.define( 'mobile.notifications.filter.overlay/NotificationsFilterOverlay', NotificationsFilterOverlay );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

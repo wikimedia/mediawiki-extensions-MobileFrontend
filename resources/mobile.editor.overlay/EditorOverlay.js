@@ -273,7 +273,7 @@
 			}
 			this.gateway.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
 				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
-				self.sectionLine = $( '<div>' ).html( parsedSectionLine ).text();
+				self.sectionLine = self.parseHTML( '<div>' ).html( parsedSectionLine ).text();
 				new Section( {
 					el: self.$preview,
 					text: parsedText
@@ -310,9 +310,7 @@
 			var scrollTop;
 
 			if ( !this.$scrollContainer ) {
-				// FIXME: We are using global jQuery here which suggests this should be passed as an option to the
-				// View or should make use of an event.
-				this.$scrollContainer = $( OO.ui.Element.static.getClosestScrollableContainer( this.$content[ 0 ] ) );
+				this.$scrollContainer = this.$( OO.ui.Element.static.getClosestScrollableContainer( this.$content[ 0 ] ) );
 				this.$content.css( 'padding-bottom', this.$scrollContainer.height() * 0.6 );
 			}
 

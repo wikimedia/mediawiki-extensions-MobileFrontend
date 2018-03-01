@@ -1,5 +1,6 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
+		util = M.require( 'mobile.startup/util' ),
 		limits = [ 1, 60, 3600, 86400, 2592000, 31536000 ];
 
 	/**
@@ -95,7 +96,7 @@
 		if ( historyUrl ) {
 			return html;
 		} else {
-			return $( '<div>' ).html( html ).text();
+			return util.parseHTML( '<div>' ).html( html ).text();
 		}
 	}
 
@@ -139,4 +140,4 @@
 		isRecent: isRecent
 	} ).deprecate( 'mobile.modifiedBar/time' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

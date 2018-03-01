@@ -151,7 +151,7 @@
 				self.thumbWidth = data.thumbwidth;
 				self.thumbHeight = data.thumbheight;
 				self.imgRatio = data.thumbwidth / data.thumbheight;
-				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
+				$img = self.parseHTML( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
 				self.$( '.image' ).append( $img );
 
 				if ( $img.prop( 'complete' ) ) {

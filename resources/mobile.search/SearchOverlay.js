@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var
 		Overlay = M.require( 'mobile.startup/Overlay' ),
@@ -169,7 +169,7 @@
 			window.history.back();
 
 			// Add fulltext input to force fulltext search
-			$( '<input>' )
+			this.parseHTML( '<input>' )
 				.attr( {
 					type: 'hidden',
 					name: 'fulltext',
@@ -402,4 +402,4 @@
 
 	M.define( 'mobile.search/SearchOverlay', SearchOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

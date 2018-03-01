@@ -1,4 +1,4 @@
-( function ( M, $, ve ) {
+( function ( M, ve ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		util = M.require( 'mobile.startup/util' );
 
@@ -147,4 +147,4 @@
 
 	M.define( 'mobile.editor.ve/VisualEditorOverlay', VisualEditorOverlay );
 
-}( mw.mobileFrontend, jQuery, window.ve ) );
+}( mw.mobileFrontend, window.ve ) );

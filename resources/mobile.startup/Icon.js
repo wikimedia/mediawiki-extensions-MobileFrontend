@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var View = M.require( 'mobile.startup/View' );
 
@@ -103,11 +103,11 @@
 		 * @return {string}
 		 */
 		toHtmlString: function () {
-			return $( '<div>' ).append( this.$el ).html();
+			return this.parseHTML( '<div>' ).append( this.$el ).html();
 		},
 		template: mw.template.get( 'mobile.startup', 'icon.hogan' )
 	} );
 
 	M.define( 'mobile.startup/Icon', Icon );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

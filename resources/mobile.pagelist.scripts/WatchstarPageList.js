@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var PageList = M.require( 'mobile.startup/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
@@ -69,8 +69,8 @@
 							page = new Page( {
 								// FIXME: Set sections so we don't hit the api (hacky)
 								sections: [],
-								title: $( this ).attr( 'title' ),
-								id: $( this ).data( 'id' )
+								title: self.$( this ).attr( 'title' ),
+								id: self.$( this ).data( 'id' )
 							} );
 
 						watchstar = new Watchstar( {
@@ -79,10 +79,10 @@
 							isAnon: false,
 							isWatched: gateway.isWatchedPage( page ),
 							page: page,
-							el: $( '<div>' ).appendTo( this )
+							el: self.parseHTML( '<div>' ).appendTo( this )
 						} );
 
-						$( this ).addClass( 'with-watchstar' );
+						self.$( this ).addClass( 'with-watchstar' );
 
 						/**
 						 * @event watch
@@ -102,4 +102,4 @@
 
 	M.define( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

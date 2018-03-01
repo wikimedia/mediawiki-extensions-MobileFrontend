@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
@@ -23,7 +23,7 @@
 
 		// Anchor tag that corresponds to a notifications badge
 		this.badge = options.badge;
-		this.$overlay = $( '<div>' )
+		this.$overlay = this.parseHTML( '<div>' )
 			.addClass( 'notifications-overlay-overlay position-fixed' );
 
 		// On error use the url as a fallback
@@ -58,7 +58,7 @@
 		this.markAllReadButton.toggle( false );
 		this.$( '.overlay-header' )
 			.append(
-				$( '<div>' )
+				this.parseHTML( '<div>' )
 					.addClass( 'notifications-overlay-header-markAllRead' )
 					.append(
 						this.markAllReadButton.$element
@@ -193,4 +193,4 @@
 
 	M.define( 'mobile.notifications.overlay/NotificationsOverlay', NotificationsOverlay );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

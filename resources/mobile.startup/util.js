@@ -8,6 +8,17 @@
 	 */
 	util = {
 		/**
+		 * Given some html, create new element(s).
+		 * Unlike jQuery.parseHTML this will return a jQuery object
+		 * not an array.
+		 *
+		 * @param {string} html
+		 * @return {jQuery.Object}
+		 */
+		parseHTML: function ( html ) {
+			return $( $.parseHTML( html ) );
+		},
+		/**
 		 * wrapper for jQuery util noop function
 		 *
 		 * @method

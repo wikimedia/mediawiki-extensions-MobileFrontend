@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -108,7 +108,7 @@
 
 			// add wikitext to add to the page
 			this.$( '.suggestion' ).each( function () {
-				var data = $( this ).data( 'title' );
+				var data = self.$( this ).data( 'title' );
 
 				if ( data ) {
 					// add the new categories in wikitext markup
@@ -135,4 +135,4 @@
 
 	M.define( 'mobile.categories.overlays/CategoryAddOverlay', CategoryAddOverlay ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
