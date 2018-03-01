@@ -45,6 +45,29 @@
       "revId": "04d72845d6d759a6e50d980bbb8591c96ae95dce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7066875c_c10223e1",
+        "filename": "resources/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-01T23:45:17Z",
+      "side": 1,
+      "message": "*",
+      "range": {
+        "startLine": 367,
+        "startChar": 22,
+        "endLine": 367,
+        "endChar": 28
+      },
+      "revId": "04d72845d6d759a6e50d980bbb8591c96ae95dce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
