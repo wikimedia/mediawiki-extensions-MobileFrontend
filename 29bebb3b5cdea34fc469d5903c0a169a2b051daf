@@ -22,6 +22,47 @@
       "revId": "29bebb3b5cdea34fc469d5903c0a169a2b051daf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af8a4f05_0184599d",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:53:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "000bf390_e1063049",
+      "range": {
+        "startLine": 167,
+        "startChar": 7,
+        "endLine": 167,
+        "endChar": 21
+      },
+      "revId": "29bebb3b5cdea34fc469d5903c0a169a2b051daf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b105f17_731b5dd6",
+        "filename": "resources/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-01T19:53:45Z",
+      "side": 1,
+      "message": "moved to methods",
+      "revId": "29bebb3b5cdea34fc469d5903c0a169a2b051daf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
