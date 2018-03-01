@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35d86d43_4eba6dc4",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-01T13:34:08Z",
+      "side": 1,
+      "message": "In the commit message is sounds like we\u0027re moving away from `$( \u0027\u003cspan\u003e\u0027 )` for readability right? If that\u0027s the case then we should be consistent and avoid the shortcut here.",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 24
+      },
+      "revId": "90e45dabab66ce834e2e6ef6384d5f62e10884bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
