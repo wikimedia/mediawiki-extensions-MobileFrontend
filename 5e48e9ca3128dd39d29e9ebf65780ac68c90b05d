@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9cbcce49_0c8f41f2",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-01T17:36:43Z",
+      "side": 1,
+      "message": "Should getWindow be called here instead of at the top of the module?\n\nIf you were to unit test this you could have problems mocking the method since it would be run on require.",
+      "range": {
+        "startLine": 206,
+        "startChar": 3,
+        "endLine": 206,
+        "endChar": 10
+      },
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "98f40fbb_7c208472",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-01T17:36:43Z",
+      "side": 1,
+      "message": "Same question as before, should this be run inside the function? could ease stubbing on tests",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 58
+      },
+      "revId": "5e48e9ca3128dd39d29e9ebf65780ac68c90b05d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
