@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
 		util = M.require( 'mobile.startup/util' ),
 		Section = M.require( 'mobile.startup/Section' ),
@@ -264,7 +264,7 @@
 					text: this.getContent()
 				};
 
-			this.scrollTop = $( 'body' ).scrollTop();
+			this.scrollTop = util.getDocument().find( 'body' ).scrollTop();
 			this.$content.hide();
 			this.showSpinner();
 
@@ -526,4 +526,4 @@
 	} );
 
 	M.define( 'mobile.editor.overlay/EditorOverlay', EditorOverlay );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

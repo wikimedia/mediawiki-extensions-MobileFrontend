@@ -8,6 +8,15 @@
 	 */
 	util = {
 		/**
+		 * Adds a class to the document
+		 *
+		 * @method
+		 * @return {jQuery.Object} element representing the documentElement
+		 */
+		getDocument: function () {
+			return $( document.documentElement );
+		},
+		/**
 		 * Get the window object
 		 *
 		 * @method

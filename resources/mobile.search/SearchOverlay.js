@@ -8,7 +8,6 @@
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		SEARCH_SPINNER_DELAY = 2000,
-		$html = $( 'html' ),
 		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 
 	/**
@@ -164,7 +163,8 @@
 		 * Initialize 'search within pages' functionality
 		 */
 		onClickSearchContent: function () {
-			var $form = this.$( 'form' );
+			var $el = util.getDocument().find( 'body' ),
+				$form = this.$( 'form' );
 
 			window.history.back();
 
@@ -178,9 +178,9 @@
 				.appendTo( $form );
 			// history.back queues a task so might run after this call. Thus we use setTimeout
 			// http://www.w3.org/TR/2011/WD-html5-20110113/webappapis.html#queue-a-task
-			window.setTimeout( function () {
+			setTimeout( function () {
 				// Firefox doesn't allow submission of a form not in the DOM so temporarily re-add it
-				$form.appendTo( document.body );
+				$form.appendTo( $el );
 				$form.submit();
 			}, 0 );
 		},
@@ -300,7 +300,8 @@
 		 * @inheritdoc
 		 */
 		hide: function () {
-			var self = this;
+			var self = this,
+				$html = util.getDocument();
 
 			if ( $html.hasClass( 'animations' ) ) {
 				self.$el.addClass( 'fade-out' );

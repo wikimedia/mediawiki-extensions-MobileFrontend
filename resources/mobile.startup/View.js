@@ -1,4 +1,5 @@
-( function ( M, $ ) {
+/* global $ */
+( function ( M ) {
 	var
 		util = M.require( 'mobile.startup/util' ),
 		// Cached regex to split keys for `delegate`.
@@ -174,6 +175,7 @@
 			}
 
 			if ( options.el ) {
+				// Note the element may not be in the document so must use global jQuery here
 				this.$el = $( options.el );
 			} else {
 				this.$el = this.parseHTML( '<' + this.tagName + '>' );
@@ -184,6 +186,7 @@
 				this._postInitialize();
 			} else {
 				$( function () {
+					// Note the element may not be in the document so must use global jQuery here
 					self.$el = $( options.el );
 					self._postInitialize();
 				} );
@@ -364,4 +367,4 @@
 	M.define( 'mobile.startup/View', View )
 		.deprecate( 'mobile.view/View' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

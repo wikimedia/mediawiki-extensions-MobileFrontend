@@ -73,13 +73,13 @@
 		 * Make body not scrollable
 		 */
 		onShow: function () {
-			$( 'body' ).addClass( 'drawer-enabled' );
+			util.getDocument().find( 'body' ).addClass( 'drawer-enabled' );
 		},
 		/**
 		 * Restore body scroll
 		 */
 		onHide: function () {
-			$( 'body' ).removeClass( 'drawer-enabled' );
+			util.getDocument().find( 'body' ).removeClass( 'drawer-enabled' );
 		},
 		/**
 		 * Fetch and render nested reference upon click

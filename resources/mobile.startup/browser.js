@@ -1,5 +1,6 @@
-( function ( M, $ ) {
-	var browser;
+( function ( M ) {
+	var browser,
+		$html = M.require( 'mobile.startup/util' ).getDocument();
 
 	/**
 	 * Memoize a class method. Caches the result of the method based on the
@@ -156,7 +157,7 @@
 	 */
 	Browser.getSingleton = function () {
 		if ( !browser ) {
-			browser = new Browser( window.navigator.userAgent, $( 'html' ) );
+			browser = new Browser( window.navigator.userAgent, $html );
 		}
 		return browser;
 	};
@@ -164,4 +165,4 @@
 	M.define( 'mobile.startup/Browser', Browser )
 		.deprecate( 'mobile.browser/Browser' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

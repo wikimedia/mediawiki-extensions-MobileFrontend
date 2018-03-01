@@ -13,6 +13,7 @@
 		util = mw.util,
 		mfUtil = M.require( 'mobile.startup/util' ),
 		$window = mfUtil.getWindow(),
+		$html = mfUtil.getDocument(),
 		user = mw.user,
 		context = M.require( 'mobile.startup/context' ),
 		Page = M.require( 'mobile.startup/Page' ),
@@ -169,7 +170,7 @@
 		// FIXME: Ideally 'regular' would come from a shared constant
 		// (currently not possible without using webpack)
 		var userFontSize = storage.get( 'userFontSize', 'regular' );
-		$( 'html' ).addClass( 'mf-font-size-' + userFontSize );
+		$html.addClass( 'mf-font-size-' + userFontSize );
 	}
 
 	// Font must be updated on back button press as users may click

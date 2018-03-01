@@ -187,21 +187,20 @@
 		 */
 		show: function () {
 			var self = this,
+				$html = util.getDocument(),
 				$window = util.getWindow();
 
 			this.$el.appendTo( this.appendToElement );
 			this.scrollTop = $window.scrollTop();
 
 			if ( this.fullScreen ) {
-				$( 'html' ).addClass( 'overlay-enabled' );
+				$html.addClass( 'overlay-enabled' );
 				// skip the URL bar if possible
 				window.scrollTo( 0, 1 );
 			}
 
 			if ( this.closeOnContentTap ) {
-				// FIXME: $( '#mw-mf-page-center' ) should be passed in as an option
-				// for this to work.
-				$( '#mw-mf-page-center' ).one( 'click', $.proxy( this, 'hide' ) );
+				$html.find( '#mw-mf-page-center' ).one( 'click', $.proxy( this, 'hide' ) );
 			}
 
 			// prevent scrolling and bouncing outside of .overlay-content
@@ -225,10 +224,11 @@
 		 * @return {boolean} Whether the overlay was successfully hidden or not
 		 */
 		hide: function () {
-			var $window = util.getWindow();
+			var $window = util.getWindow(),
+				$html = util.getDocument();
 
 			if ( this.fullScreen ) {
-				$( 'html' ).removeClass( 'overlay-enabled' );
+				$html.removeClass( 'overlay-enabled' );
 				// return to last known scroll position
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
 			}
