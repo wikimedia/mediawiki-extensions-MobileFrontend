@@ -16,6 +16,24 @@
       "revId": "d5ab46a0fb538869d44c2a72815c2d5290634e81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82232a3b_f1200ef3",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-01T20:55:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f460143b_543d39f8",
+      "revId": "d5ab46a0fb538869d44c2a72815c2d5290634e81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
