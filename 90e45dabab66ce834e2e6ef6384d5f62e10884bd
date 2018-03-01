@@ -22,6 +22,29 @@
       "revId": "90e45dabab66ce834e2e6ef6384d5f62e10884bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bad92fd_97841171",
+        "filename": "resources/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-01T13:37:05Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 341,
+        "startChar": 8,
+        "endLine": 341,
+        "endChar": 9
+      },
+      "revId": "90e45dabab66ce834e2e6ef6384d5f62e10884bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
