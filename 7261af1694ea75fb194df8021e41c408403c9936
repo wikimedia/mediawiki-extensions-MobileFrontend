@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3d3dad8b_1f5572a1",
+        "filename": "resources/mobile.infiniteScroll/InfiniteScroll.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-02T02:27:15Z",
+      "side": 1,
+      "message": "Neither of these should jQuery.\n\nAs of jQuery 3, both of these methods unconditionally access a single plain property when given a Window object. And these are the standard properties used for this purpose, as documented on MDN and elsewhere. As good a time as any to start using the standard properties without the CPU and memory costs of jQuery indirection.\n\n$.fn.scrollTop (jQuery 3.2.1):\n\n   jQuery.each({ .., scrollTop: \"pageYOffset\" }, function(method, prop) {\n     jQuery.fn[method] \u003d function() {\n       return access(this, function(elem, ..) {\n         var win;\n         if (jQuery.isWindow(elem)) {\n           win \u003d elem;\n         }\n         return win ? win[prop] : ..;\n\n\n$.fn.height (jQuery 3.2.1):\n\n    jQuery.each({ Height: \"height\", .. }, function(name \u003d \"Height\", type) {\n        jQuery.each({ content: type, ..  }, function(defaultExtra, funcName \u003d \"height\") {\n            jQuery.fn[funcName] \u003d function( .. ) {\n                return access(this, function(elem, type, value) {\n                    if (jQuery.isWindow(elem)) {\n                        return .. ? .. : elem.document.documentElement[\"client\" + name];\n                    }\n\nIn other words:\n\n var top \u003d $window.scrollTop() \u003d\u003d\u003d window.pageYOffset;\n\n var tall \u003d $window.height() \u003d\u003d\u003d document.documentElement.clientHeight;",
+      "range": {
+        "startLine": 115,
+        "startChar": 4,
+        "endLine": 115,
+        "endChar": 58
+      },
+      "revId": "7261af1694ea75fb194df8021e41c408403c9936",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
