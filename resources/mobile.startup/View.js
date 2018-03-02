@@ -185,7 +185,7 @@
 			if ( this.$el.length ) {
 				this._postInitialize();
 			} else {
-				$( function () {
+				util.docReady( function () {
 					// Note the element may not be in the document so must use global jQuery here
 					self.$el = $( options.el );
 					self._postInitialize();

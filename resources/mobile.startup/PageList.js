@@ -1,5 +1,4 @@
-/* global jQuery */
-( function ( M, $ ) {
+( function ( M ) {
 
 	var View = M.require( 'mobile.startup/View' ),
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton();
@@ -46,8 +45,8 @@
 
 			setTimeout( function () {
 				self.$( '.list-thumb' ).each( function () {
-					var style = $( this ).data( 'style' );
-					$( this ).attr( 'style', style );
+					var style = self.$( this ).data( 'style' );
+					self.$( this ).attr( 'style', style );
 				} );
 			// Delay an unnecessary load of images on mobile (slower?) connections
 			// In particular on search results which can be regenerated quickly.
@@ -68,4 +67,4 @@
 	M.define( 'mobile.startup/PageList', PageList )
 		.deprecate( 'mobile.pagelist/PageList' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
