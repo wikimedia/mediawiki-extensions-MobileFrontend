@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0b1b457_d7caba56",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 31
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T17:34:01Z",
+      "side": 1,
+      "message": "self no longer seems necessary",
+      "range": {
+        "startLine": 107,
+        "startChar": 4,
+        "endLine": 107,
+        "endChar": 16
+      },
+      "revId": "41160dae8f830dea9681e0c063b9e82adebda248",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
