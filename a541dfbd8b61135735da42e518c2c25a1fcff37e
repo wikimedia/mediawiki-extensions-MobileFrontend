@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a15d655c_e402bb2e",
+        "filename": ".eslintrc.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T18:43:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe87b3b4_0f0536e6",
+      "revId": "a541dfbd8b61135735da42e518c2c25a1fcff37e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1e45150f_c043fdac",
         "filename": ".eslintrc.json",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2018-03-02T13:57:23Z",
       "side": 1,
       "message": "Should we add the jQuery global down here instead of specifying it in each file?",
+      "revId": "a541dfbd8b61135735da42e518c2c25a1fcff37e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d21316f3_c87bb32f",
+        "filename": ".eslintrc.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T18:43:42Z",
+      "side": 1,
+      "message": "Nope. I want to make it super hard to use jQuery. Using it should be the exception.",
+      "parentUuid": "1e45150f_c043fdac",
       "revId": "a541dfbd8b61135735da42e518c2c25a1fcff37e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
