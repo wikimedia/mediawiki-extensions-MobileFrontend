@@ -22,6 +22,29 @@
       "revId": "7261af1694ea75fb194df8021e41c408403c9936",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d85acfd3_878ec892",
+        "filename": "resources/mobile.startup/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-02T02:28:58Z",
+      "side": 1,
+      "message": "This ends up doing the same as $( window ).scrollTop(), except with more indirection.",
+      "range": {
+        "startLine": 193,
+        "startChar": 20,
+        "endLine": 193,
+        "endChar": 46
+      },
+      "revId": "7261af1694ea75fb194df8021e41c408403c9936",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
