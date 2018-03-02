@@ -41,6 +41,18 @@
 			return location.hash.match( /^(#\/page|#\/coord)/ );
 		}
 
+		/**
+		 * @param {Location} location The URL, probably window.location.
+		 * @return {boolean} True if the current URL doesn't contain an invalid
+		 *                   identifier expression, such as the slash in
+		 *                   Special:Nearby#/search, and probably contains the
+		 *                   target identifier to scroll to.
+		 * @ignore
+		 */
+		function isIdentifierURL( location ) {
+			return location.hash && !location.hash.contains( '/' );
+		}
+
 		// Remove user button
 		if ( $btn.length ) {
 			$btn.remove();
@@ -93,7 +105,7 @@
 				//       OO.EventEmitter by calling the super's constructor.
 				M.on( NEARBY_EVENT_POST_RENDER, function () {
 					var el;
-					if ( window.location.hash && !isPageOrCoordURL( window.location ) ) {
+					if ( isIdentifierURL( window.location ) ) {
 						// The hash (including the leading #) is expected to be an identifier
 						// selector (unless the user entered rubbish).
 						el = nearby.$( window.location.hash );
