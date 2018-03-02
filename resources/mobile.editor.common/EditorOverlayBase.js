@@ -171,7 +171,7 @@
 		},
 		/**
 		 * Executed when page save is complete. Handles reloading the page, showing toast
-		 * messages, and setting mobile edit cookie.
+		 * messages.
 		 * @method
 		 */
 		onSaveComplete: function () {
@@ -203,12 +203,6 @@
 			}
 
 			$( window ).off( 'beforeunload.mfeditorwarning' );
-
-			// Set a cookie for 30 days indicating that this user has edited from
-			// the mobile interface.
-			$.cookie( 'mobileEditor', 'true', {
-				expires: 30
-			} );
 
 			window.location = mw.util.getUrl( title );
 			if ( self.sectionLine ) {

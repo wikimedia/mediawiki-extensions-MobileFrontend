@@ -284,7 +284,6 @@
 		"mobile.init": {
 			"dependencies": [
 				"mediawiki.experiments",
-				"jquery.cookie",
 				"mobile.references.gateway",
 				"mobile.startup"
 			],
@@ -326,7 +325,6 @@
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
-				"jquery.cookie",
 				"mediawiki.storage",
 				"oojs",
 				"mediawiki.util",
