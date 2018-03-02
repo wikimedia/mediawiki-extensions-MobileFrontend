@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ba463ea_563d6e01",
+        "filename": "resources/mobile.startup/Overlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-02T09:07:27Z",
+      "side": 1,
+      "message": "I thought this wasn\u0027t the same but apparently scrollTop works fine with \u003chtml\u003e as it does with the document global.",
+      "range": {
+        "startLine": 194,
+        "startChar": 20,
+        "endLine": 194,
+        "endChar": 25
+      },
+      "revId": "de291deb9bcbc00e2b51c379da2aadc7b6f55b4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
