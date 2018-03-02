@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "9df7b28a_596ee4da",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-02T09:22:08Z",
+      "side": 1,
+      "message": "This should be called in the methods it is used like you did in the followup patch",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 28
+      },
+      "revId": "7261af1694ea75fb194df8021e41c408403c9936",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d85acfd3_878ec892",
         "filename": "resources/mobile.startup/Overlay.js",
         "patchSetId": 7
