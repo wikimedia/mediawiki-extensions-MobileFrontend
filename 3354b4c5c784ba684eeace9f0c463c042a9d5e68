@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31d5ea3c_93b870bc",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T17:15:49Z",
+      "side": 1,
+      "message": "Consider rewording to something like returns $( document.documentElement )",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "3354b4c5c784ba684eeace9f0c463c042a9d5e68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
