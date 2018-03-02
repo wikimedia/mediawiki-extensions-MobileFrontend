@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "489a7a4c_fbf480f5",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T16:16:26Z",
+      "side": 1,
+      "message": "If this is an API contract, it makes sense to assume these fields exist. However, if this is not a contract, it seems poor practice to rely on TypeErrors thrown from dotting off undefined / null. Sorry, but which is it here?",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 35
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a7c0c4c_75eb1812",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T16:16:26Z",
+      "side": 1,
+      "message": "Won\u0027t this overwrite the constructor member?",
+      "range": {
+        "startLine": 16,
+        "startChar": 29,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b577ea29_f43f68c4",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T16:16:26Z",
+      "side": 1,
+      "message": "Can we just return undefined here since `this.searchCache[query]` is set below?",
+      "range": {
+        "startLine": 147,
+        "startChar": 6,
+        "endLine": 147,
+        "endChar": 42
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4f3487e_49ffb22f",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T16:16:26Z",
+      "side": 1,
+      "message": "Is this left over from the Gateway subclass? I\u0027m not sure what self.reject / resolve refers to.",
+      "range": {
+        "startLine": 130,
+        "startChar": 13,
+        "endLine": 130,
+        "endChar": 17
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce6cbd08_30dbaade",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T16:16:26Z",
+      "side": 1,
+      "message": "Same question about self here. Is this from the old Gateway base class idea?",
+      "range": {
+        "startLine": 173,
+        "startChar": 11,
+        "endLine": 173,
+        "endChar": 15
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
