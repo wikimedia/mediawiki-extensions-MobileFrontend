@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4cc2b87_efbe99b5",
+        "filename": "resources/mobile.startup/Drawer.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T14:21:31Z",
+      "side": 1,
+      "message": "Maybe for a future patchset, we can add a util.documentReady() since we already use util.getWindow() and setTimeout() in this file.",
+      "range": {
+        "startLine": 50,
+        "startChar": 3,
+        "endLine": 50,
+        "endChar": 4
+      },
+      "revId": "9f53ed6b91f8ddc03f147390ddbf9a51201a2aa8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
