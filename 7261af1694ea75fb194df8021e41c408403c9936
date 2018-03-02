@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "da56925b_b6743fdc",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-02T09:31:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9df7b28a_596ee4da",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 28
+      },
+      "revId": "7261af1694ea75fb194df8021e41c408403c9936",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d85acfd3_878ec892",
         "filename": "resources/mobile.startup/Overlay.js",
         "patchSetId": 7
@@ -59,6 +83,30 @@
       "writtenOn": "2018-03-02T02:28:58Z",
       "side": 1,
       "message": "This ends up doing the same as $( window ).scrollTop(), except with more indirection.",
+      "range": {
+        "startLine": 193,
+        "startChar": 20,
+        "endLine": 193,
+        "endChar": 46
+      },
+      "revId": "7261af1694ea75fb194df8021e41c408403c9936",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e82176e9_0332c509",
+        "filename": "resources/mobile.startup/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2018-03-02T09:31:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d85acfd3_878ec892",
       "range": {
         "startLine": 193,
         "startChar": 20,
