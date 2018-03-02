@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6aa45917_76e94b67",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:52:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "489a7a4c_fbf480f5",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 35
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a7c0c4c_75eb1812",
         "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
         "patchSetId": 29
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-02T16:16:26Z",
       "side": 1,
       "message": "Won\u0027t this overwrite the constructor member?",
+      "range": {
+        "startLine": 16,
+        "startChar": 29,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d7685bc_5576d7fb",
+        "filename": "resources/mobile.references.gateway/ReferencesGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:52:11Z",
+      "side": 1,
+      "message": "I don\u0027t follow you... I\u0027m not sure why we were using OO.mfExtend here since the prototype is blank. There\u0027s also no need to set the prototype in this way.",
+      "parentUuid": "3a7c0c4c_75eb1812",
       "range": {
         "startLine": 16,
         "startChar": 29,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5d9006a4_6eda27d7",
+        "filename": "resources/mobile.search.api/SearchGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:52:11Z",
+      "side": 1,
+      "message": "this.searchCache[query] is set to the value of the promise.\nWe want to reset that promise if an error occurs in case it fails the second time round (it might fail due to a dropped connection for instance)\n\nreturning undefined would only ensure that if a failure callback is run it gets passed the value undefined.",
+      "parentUuid": "b577ea29_f43f68c4",
+      "range": {
+        "startLine": 147,
+        "startChar": 6,
+        "endLine": 147,
+        "endChar": 42
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4f3487e_49ffb22f",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 29
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "749b38e5_7bbd6f40",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:52:11Z",
+      "side": 1,
+      "message": "Yep fixed now!",
+      "parentUuid": "c4f3487e_49ffb22f",
+      "range": {
+        "startLine": 130,
+        "startChar": 13,
+        "endLine": 130,
+        "endChar": 17
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce6cbd08_30dbaade",
         "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
         "patchSetId": 29
@@ -105,6 +201,30 @@
       "writtenOn": "2018-03-02T16:16:26Z",
       "side": 1,
       "message": "Same question about self here. Is this from the old Gateway base class idea?",
+      "range": {
+        "startLine": 173,
+        "startChar": 11,
+        "endLine": 173,
+        "endChar": 15
+      },
+      "revId": "15f71692cd39662a5a9b5d75195c67bd15a18045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9771fca8_0f871be8",
+        "filename": "resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 29
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:52:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce6cbd08_30dbaade",
       "range": {
         "startLine": 173,
         "startChar": 11,
