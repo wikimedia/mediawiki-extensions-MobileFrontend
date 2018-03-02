@@ -104,6 +104,30 @@
       "revId": "7429e54b9280dac2bda777c63486629b3e32dd12",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6794163d_6c748ac5",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-02T17:07:08Z",
+      "side": 1,
+      "message": "Sorry, this just seemed odd that we\u0027re saying Document but return an Element.",
+      "parentUuid": "bc546853_36c4df12",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 21
+      },
+      "revId": "7429e54b9280dac2bda777c63486629b3e32dd12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
