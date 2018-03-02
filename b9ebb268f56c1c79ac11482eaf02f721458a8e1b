@@ -22,6 +22,30 @@
       "revId": "b9ebb268f56c1c79ac11482eaf02f721458a8e1b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0094d6a8_7c08a2f3",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T00:27:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8cbfeb8e_311840b3",
+      "range": {
+        "startLine": 174,
+        "startChar": 14,
+        "endLine": 174,
+        "endChar": 45
+      },
+      "revId": "b9ebb268f56c1c79ac11482eaf02f721458a8e1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
