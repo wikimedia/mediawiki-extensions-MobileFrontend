@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a606cff_e4d27471",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-02T12:16:52Z",
+      "side": 1,
+      "message": "Ha, I solved the mystery. This should be `mfUtil`.",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 14
+      },
+      "revId": "e15fd66403e5b4c54b2bc5d2c5458b193e30d39b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
