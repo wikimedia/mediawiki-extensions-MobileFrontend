@@ -44,7 +44,7 @@
 		renderPageImages: function () {
 			var self = this;
 
-			window.setTimeout( function () {
+			setTimeout( function () {
 				self.$( '.list-thumb' ).each( function () {
 					var style = $( this ).data( 'style' );
 					$( this ).attr( 'style', style );
