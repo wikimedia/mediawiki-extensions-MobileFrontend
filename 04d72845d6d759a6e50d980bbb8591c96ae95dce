@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bbb865f3_ce124fbc",
+        "filename": ".eslintrc.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T01:27:23Z",
+      "side": 1,
+      "message": "It seems to inherit from wikimedia so I need a way to remove that. Any other ideas? undefined maybe?",
+      "parentUuid": "53d251b4_b6f860fa",
+      "range": {
+        "startLine": 5,
+        "startChar": 3,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "04d72845d6d759a6e50d980bbb8591c96ae95dce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e37bb9da_08c22293",
         "filename": "resources/mobile.startup/.eslintrc.json",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-01T23:45:04Z",
       "side": 1,
       "message": "This doesn\u0027t inherit by default. This means mobile.startup/ Now runs with no rules, and in addition to enforcing 0 rules, it also tolerates \"jquery\" :)\n\nSee https://eslint.org/docs/user-guide/configuring#extending-configuration-files for extending config files.\n\nAlternatively, it may be easier to just inline /* eslint-env jquery */ in a few files where it is used.",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 9
+      },
+      "revId": "04d72845d6d759a6e50d980bbb8591c96ae95dce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70007312_2fc7a02d",
+        "filename": "resources/mobile.startup/.eslintrc.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T01:27:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e37bb9da_08c22293",
       "range": {
         "startLine": 2,
         "startChar": 1,
