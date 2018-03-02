@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "7e919ad7_e5fd906e",
+        "filename": "resources/mobile.references/ReferencesDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:04:22Z",
+      "side": 1,
+      "message": "that wouldn\u0027t be a jQuery object.",
+      "parentUuid": "16cacda1_cbec1a18",
+      "revId": "7429e54b9280dac2bda777c63486629b3e32dd12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "92ba86e1_b4e539b5",
         "filename": "resources/mobile.startup/util.js",
         "patchSetId": 11
@@ -53,6 +71,30 @@
       "writtenOn": "2018-03-02T16:51:34Z",
       "side": 1,
       "message": "Should we return getWindow().document here instead?",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 21
+      },
+      "revId": "7429e54b9280dac2bda777c63486629b3e32dd12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bc546853_36c4df12",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-02T17:04:22Z",
+      "side": 1,
+      "message": "We could.. but since we are returning a jQuery object $( document.documentElement ) would be best if we wanted to minimise the logic inside jQuery.",
+      "parentUuid": "92ba86e1_b4e539b5",
       "range": {
         "startLine": 17,
         "startChar": 10,
