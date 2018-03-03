@@ -260,8 +260,9 @@
 	"mobile-frontend-panel-betaoptin-msg": "Szeretnél kipróbálni új funkciókat? Ha csatlakozol a bétához, hozzáférést kapsz kísérleti funkciókhoz, bár nagyobb a veszélye a hibáknak.",
 	"mobile-frontend-search-feedback-link-text": "Adj visszajelzést.",
 	"mobile-frontend-search-feedback-prompt": "Nem találtad meg, amit kerestél?",
+	"mobile-frontend-send-feedback": "Visszajelzés küldése",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Szakaszok kibontása alapértelmezetten",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Szócikk betűmérete",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Betűméret",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
 	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
