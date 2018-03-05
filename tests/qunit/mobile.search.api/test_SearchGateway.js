@@ -70,7 +70,7 @@
 	} );
 
 	QUnit.test( 'show redirect targets', function ( assert ) {
-		return this.gateway.search( 'barack' ).done( function ( response ) {
+		return this.gateway.search( 'barack' ).then( function ( response ) {
 			assert.strictEqual( response.query, 'barack' );
 			assert.strictEqual( response.results.length, 2 );
 			assert.strictEqual( response.results[ 0 ].displayTitle, 'Claude Monet' );

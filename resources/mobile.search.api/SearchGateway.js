@@ -131,11 +131,12 @@
 		 * @return {jQuery.Deferred}
 		 */
 		search: function ( query ) {
-			var request,
+			var xhr, request,
 				self = this;
 
 			if ( !this.isCached( query ) ) {
-				request = this.api.get( this.getApiData( query ) )
+				xhr = this.api.get( this.getApiData( query ) );
+				request = xhr
 					.then( function ( data ) {
 						// resolve the Deferred object
 						return {
@@ -149,7 +150,7 @@
 
 				// cache the result to prevent the execution of one search query twice in one session
 				this.searchCache[query] = request.promise( {
-					abort: request.abort
+					abort: function () { xhr.abort(); }
 				} );
 			}
 

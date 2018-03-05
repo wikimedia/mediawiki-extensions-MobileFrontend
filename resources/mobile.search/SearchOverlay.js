@@ -330,14 +330,15 @@
 			// it seems the input event can be fired when virtual keyboard is closed
 			// (Chrome for Android)
 			if ( query !== this.lastQuery ) {
-				// Check abort exists because the query may have already completed
-				if ( self._pendingQuery && self._pendingQuery.abort ) {
+				if ( self._pendingQuery ) {
 					self._pendingQuery.abort();
 				}
 				clearTimeout( this.timer );
 
 				if ( query.length ) {
 					this.timer = setTimeout( function () {
+						var xhr;
+
 						/**
 						 * @event search-start Fired immediately before the search API request is
 						 *  sent
@@ -348,10 +349,11 @@
 							delay: delay
 						} );
 
-						self._pendingQuery = self.gateway.search( query ).done( function ( data ) {
+						xhr = self.gateway.search( query );
+						self._pendingQuery = xhr.then( function ( data ) {
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
-							if ( data.query === self.$input.val() ) {
+							if ( data && data.query === self.$input.val() ) {
 								self.$el.toggleClass( 'no-results', data.results.length === 0 );
 								self.$searchContent
 									.show()
@@ -380,7 +382,7 @@
 									results: data.results
 								} );
 							}
-						} );
+						} ).promise( { abort: function () { xhr.abort(); } } );
 					}, delay );
 				} else {
 					self.resetSearch();
