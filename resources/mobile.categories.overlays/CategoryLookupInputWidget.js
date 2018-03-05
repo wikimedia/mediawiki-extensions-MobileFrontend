@@ -10,8 +10,7 @@
 	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.
 	 */
 	function CategoryLookupInputWidget( options ) {
-		// Note unlike a View this.$ runs global jQuery in context of OOUI
-		this.$element = this.$( '<div>' );
+		// Note: this.$element is set to $( '<div>' ) by OOUI.
 		this.gateway = options.gateway;
 		this.$suggestions = options.suggestions;
 		this.categories = options.categories || [];
