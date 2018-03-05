@@ -89,15 +89,15 @@
 						 * Fired when an article in the PageList is watched.
 						 */
 						watchstar.on( 'watch', ( function () {
-							this.emit( 'watch' );
-						} ).bind( this ) );
+							self.emit( 'watch' );
+						} ) );
 						/**
 						 * @event unwatch
 						 * Fired when an article in the PageList is watched.
 						 */
 						watchstar.on( 'unwatch', ( function () {
-							this.emit( 'unwatch' );
-						} ).bind( this ) );
+							self.emit( 'unwatch' );
+						} ) );
 					} );
 				} );
 			}
