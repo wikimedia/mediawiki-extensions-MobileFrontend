@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "163c68e4_e36e4fac",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-05T17:15:11Z",
+      "side": 1,
+      "message": "I\u0027m never the guy who talks about performance but I want to note that I think this increases complexity from n to n^2 which is fine for small numbers. I\u0027m not sure about larger pages like http://localhost:8080/wiki/List_of_works_by_Vincent_van_Gogh though (probably ok?). However, I\u0027m not seeing any thumbnails show with this change.",
+      "range": {
+        "startLine": 244,
+        "startChar": 14,
+        "endLine": 244,
+        "endChar": 36
+      },
+      "revId": "33c8d9f6c0769ecf7fa54bb38db068178c14f9d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "199cf746_739eee98",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-05T17:15:11Z",
+      "side": 1,
+      "message": "If the only thing we need here is a jQuery Element, maybe it would be clearer to just eat the extra util dependency and make one here.",
+      "range": {
+        "startLine": 284,
+        "startChar": 16,
+        "endLine": 284,
+        "endChar": 35
+      },
+      "revId": "33c8d9f6c0769ecf7fa54bb38db068178c14f9d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
