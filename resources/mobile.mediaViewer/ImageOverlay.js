@@ -73,16 +73,8 @@
 		 * @param {jQuery.Event} ev
 		 */
 		onSlide: function ( ev ) {
-			this.setNewImage(
-				this.$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' )
-			);
-		},
-		/**
-		 * Replace the current image with a new one
-		 * @param {Thumbnail} thumbnail
-		 */
-		setNewImage: function ( thumbnail ) {
-			window.location.hash = '#/media/' + encodeURIComponent( thumbnail.getFileName() );
+			var nextThumbnail = this.$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
+			this.emit( ImageOverlay.EVENT_SLIDE, nextThumbnail );
 		},
 		/** @inheritdoc */
 		preRender: function () {
@@ -193,15 +185,8 @@
 			this._positionImage();
 		},
 
-		/**
-		 * Close the overlay and prevent going back in browser's history
-		 * See T94188 & T94363.
-		 * @param {Object} ev Event Object
-		 */
 		onExit: function ( ev ) {
-			ev.preventDefault();
-			ev.stopPropagation();
-			window.location.hash = '';
+			this.emit( ImageOverlay.EVENT_EXIT, ev );
 		},
 
 		/** @inheritdoc */
@@ -258,6 +243,10 @@
 			}
 		}
 	} );
+	/** @ignore @event ImageOverlay#ImageOverlay-exit */
+	ImageOverlay.EVENT_EXIT = 'ImageOverlay-exit';
+	/** @ignore @event ImageOverlay#ImageOverlay-slide */
+	ImageOverlay.EVENT_SLIDE = 'ImageOverlay-slide';
 	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay ); // resource-modules-disable-line
 
 }( mw.mobileFrontend ) );
