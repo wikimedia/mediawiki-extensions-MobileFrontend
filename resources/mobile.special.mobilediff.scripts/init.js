@@ -6,7 +6,9 @@
  * @author Florian Schmidt <florian.schmidt.welzow@t-online.de>
  */
 ( function ( M, $ ) {
-	if ( !mw.user.tokens.exists( 'patrolToken' ) ) {
+	var user = mw.user;
+
+	if ( !user.tokens.exists( 'patrolToken' ) ) {
 		// Current user has no patrol right, or an old cached version of user.tokens
 		// that didn't have patrolToken yet.
 		return;

@@ -2,7 +2,8 @@
 
 	var Button = M.require( 'mobile.startup/Button' ),
 		util = M.require( 'mobile.startup/util' ),
-		Panel = M.require( 'mobile.startup/Panel' );
+		Panel = M.require( 'mobile.startup/Panel' ),
+		user = mw.user;
 
 	/**
 	 * @class BetaOptinPanel
@@ -20,7 +21,7 @@
 		template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
 		defaults: util.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
-			editToken: mw.user.tokens.get( 'editToken' ),
+			editToken: user.tokens.get( 'editToken' ),
 			text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
 			buttons: [
 				new Button( {

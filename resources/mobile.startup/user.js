@@ -1,5 +1,6 @@
 ( function ( M ) {
 	var user,
+		mwUser = mw.user,
 		util = M.require( 'mobile.startup/util' );
 
 	/**
@@ -9,13 +10,13 @@
 	 */
 	user = {
 		/* @see mediaWiki.user */
-		tokens: mw.user.tokens,
+		tokens: mwUser.tokens,
 		/* @see mediaWiki.user */
-		isAnon: mw.user.isAnon,
+		isAnon: mwUser.isAnon,
 		/* @see mediaWiki.user */
-		getName: mw.user.getName,
+		getName: mwUser.getName,
 		/* @see mediaWiki.user */
-		getId: mw.user.getId,
+		getId: mwUser.getId,
 		/**
 		 * Find current users edit count
 		 * @method
@@ -42,7 +43,7 @@
 		* @return {string}
 		*/
 		getSessionId: function () {
-			return mw.user.sessionId();
+			return mwUser.sessionId();
 		},
 
 		/**
