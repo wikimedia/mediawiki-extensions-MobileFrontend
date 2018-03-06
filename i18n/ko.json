@@ -24,7 +24,8 @@
 			"HDNua",
 			"Ykhwong",
 			"Garam",
-			"Tursetic"
+			"Tursetic",
+			"Nuevo Paso"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "편집을 추적하려면 로그인하거나 계정을 하나 만드십시오",
@@ -240,7 +241,7 @@
 	"tag-mobile_edit": "모바일 편집",
 	"tag-mobile_edit-description": "모바일 (웹 또는 앱)에서의 편집",
 	"tag-mobile_web_edit": "모바일 웹 편집",
-	"tag-mobile_web_edit-description": "모바일 웹 사이트에서의 편집",
+	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 행한 편집",
 	"apihelp-mobileview-description": "모바일 보기에 필요한 데이터를 반환합니다.",
 	"apihelp-mobileview-summary": "모바일 보기에 필요한 데이터를 반환합니다.",
 	"apihelp-mobileview-param-page": "진행할 문서의 제목.",
