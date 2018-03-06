@@ -246,6 +246,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.close = function () {
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.close.apply( this, arguments );
 
+	// eslint-disable-next-line no-restricted-properties
 	window.history.back();
 };
 

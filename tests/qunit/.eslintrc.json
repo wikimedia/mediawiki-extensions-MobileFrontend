@@ -1,5 +1,8 @@
 {
 	"env": {
 		"jquery": true
+	},
+	"rules": {
+		"no-restricted-properties": 0
 	}
 }

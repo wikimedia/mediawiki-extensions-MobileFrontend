@@ -74,7 +74,9 @@
 				additionalClassNames: 'clear'
 			} ).options,
 			searchContentIcon: new Icon( {
-				tagName: 'button',
+				tagName: 'a',
+				// When this icon is clicked we want to reset the hash for subsequent views
+				href: '#',
 				name: 'search-content',
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).options,
@@ -162,8 +164,6 @@
 		onClickSearchContent: function () {
 			var $el = util.getDocument().find( 'body' ),
 				$form = this.$( 'form' );
-
-			window.history.back();
 
 			// Add fulltext input to force fulltext search
 			this.parseHTML( '<input>' )

@@ -110,7 +110,7 @@
 						self.pageGateway.invalidatePage( self.title );
 						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
 						M.emit( 'talk-discussion-added' );
-						window.history.back();
+						self.hide();
 					}
 				}
 			} ).fail( function ( error ) {

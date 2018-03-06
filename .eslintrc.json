@@ -12,6 +12,13 @@
 		"require": false
 	},
 	"rules": {
+		"no-restricted-properties": [2,
+			{
+				"object": "window",
+				"property": "history",
+				"message": "Please use mediawiki.router"
+			}
+		],
 		"dot-notation": [ "error", { "allowKeywords": true } ],
 		"object-property-newline": "error",
 		"computed-property-spacing": 0,
