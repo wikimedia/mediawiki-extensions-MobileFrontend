@@ -29,6 +29,7 @@
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			citation: new Icon( {
+				isSmall: true,
 				name: 'citation',
 				additionalClassNames: 'text',
 				hasText: true,
