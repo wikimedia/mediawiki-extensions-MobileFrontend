@@ -34,6 +34,13 @@
 		fullScreen: true,
 
 		/**
+		 * True if this.hide() should be invoked before firing the Overlay-exit
+		 * event
+		 * @property {boolean}
+		 */
+		hideOnExitClick: true,
+
+		/**
 		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		 * odd consequences on Opera Mobile (see bug 52361)
 		 * @property {string|jQuery.Object}
@@ -85,7 +92,7 @@
 		},
 		events: {
 			// FIXME: Remove .initial-header selector when bug 71203 resolved.
-			'click .cancel, .confirm, .initial-header .back': 'onExit',
+			'click .cancel, .confirm, .initial-header .back': 'onExitClick',
 			click: 'stopPropagation'
 		},
 		/**
@@ -142,10 +149,13 @@
 		 * ClickBack event handler
 		 * @param {Object} ev event object
 		 */
-		onExit: function ( ev ) {
+		onExitClick: function ( ev ) {
 			ev.preventDefault();
 			ev.stopPropagation();
-			window.history.back();
+			if ( this.hideOnExitClick ) {
+				this.hide();
+			}
+			this.emit( Overlay.EVENT_EXIT );
 		},
 		/**
 		* Event handler for touchstart, for IOS
@@ -324,6 +334,9 @@
 			this.$( className ).removeClass( 'hidden' );
 		}
 	} );
+
+	/** @ignore @event Overlay#Overlay-exit */
+	Overlay.EVENT_EXIT = 'Overlay-exit';
 
 	M.define( 'mobile.startup/Overlay', Overlay )
 		.deprecate( 'mobile.overlays/Overlay' );

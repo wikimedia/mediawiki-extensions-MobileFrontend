@@ -279,8 +279,8 @@
 		/**
 		 * Exit handler
 		 */
-		onExit: function () {
-			Overlay.prototype.onExit.apply( this, arguments );
+		onExitClick: function () {
+			Overlay.prototype.onExitClick.apply( this, arguments );
 			// log cancel attempt
 			this.log( {
 				action: 'abort',

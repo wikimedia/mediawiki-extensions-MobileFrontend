@@ -126,12 +126,9 @@
 		 * problems described in T102946, i.e. the users should not be taken to the previous page
 		 * when landing on /wiki/Foo#/search directly. The overlay should just close.
 		 * @inheritdoc
-		 * @param {Object} ev Event Object
 		 */
-		onExit: function ( ev ) {
-			ev.preventDefault();
-			ev.stopPropagation();
-			this.hide();
+		onExitClick: function () {
+			Overlay.prototype.onExitClick.apply( this, arguments );
 			window.location.hash = '';
 		},
 

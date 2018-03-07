@@ -25,6 +25,7 @@
 	OO.mfExtend( ImageOverlay, Overlay, {
 		// allow pinch zooming
 		hasFixedHeader: false,
+		hideOnExitClick: false,
 		className: 'overlay media-viewer',
 		template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
 
@@ -185,7 +186,9 @@
 			this._positionImage();
 		},
 
-		onExit: function ( ev ) {
+		// fixme: remove this redundant function.
+		onExitClick: function ( ev ) {
+			Overlay.prototype.onExitClick.apply( this, arguments );
 			this.emit( ImageOverlay.EVENT_EXIT, ev );
 		},
 
@@ -243,6 +246,7 @@
 			}
 		}
 	} );
+	// fixme: remove this redundant constant.
 	/** @ignore @event ImageOverlay#ImageOverlay-exit */
 	ImageOverlay.EVENT_EXIT = 'ImageOverlay-exit';
 	/** @ignore @event ImageOverlay#ImageOverlay-slide */
