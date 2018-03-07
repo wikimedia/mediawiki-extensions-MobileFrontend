@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "944b1453_d81de6ac",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-07T21:52:49Z",
+      "side": 1,
+      "message": "This actually makes this a breaking change as if I merge this patch without your Minerva patch (https://gerrit.wikimedia.org/r/#/c/416885/) \n\nWe usually avoid this because\n1) There is always a danger cached versions of Minerva will be loaded alongside MobileFrontend.\n\n2) 3rd parties may checkout incompatible versions of Mobilefrontend/Minerva and then we spend time unnecessarily debugging.\n\n3) It creates a potential issue with reverting by adding to the complexity.\n\n\nTo solve this there are several potential options:\n1) Also assign to ImageOverlay.EVENT_SLIDE and remove in a follow up after the Minerva patch has been merged (3 changes rather than 2) \n2) Don\u0027t bother with the cange. I\u0027m not sure I understand the motivation to add to the prototype. Why is using the prototype chain better than just accessing the property on the parent class. Do we want child\u0027s accessing and calling parent events? Also do we want to encourage inheritance going forward? My gut says no.\n3) Mark commit message clearly as a breaking change and bump version number.",
+      "revId": "cd47d9f9841e9c0e3475151e1072a396659d5478",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ccbc4e1a_076f6ff7",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-07T21:52:49Z",
+      "side": 1,
+      "message": "Why would something prefixed Nearby- need to be inherited?",
+      "revId": "cd47d9f9841e9c0e3475151e1072a396659d5478",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
