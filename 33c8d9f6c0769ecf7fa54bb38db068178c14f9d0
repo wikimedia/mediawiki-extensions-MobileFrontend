@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2bee03ed_571f25c7",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-07T01:21:23Z",
+      "side": 1,
+      "message": "I\u0027ve switched from filter to $el.find now",
+      "parentUuid": "163c68e4_e36e4fac",
+      "range": {
+        "startLine": 244,
+        "startChar": 14,
+        "endLine": 244,
+        "endChar": 36
+      },
+      "revId": "33c8d9f6c0769ecf7fa54bb38db068178c14f9d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "199cf746_739eee98",
         "filename": "resources/mobile.startup/PageGateway.js",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-05T17:15:11Z",
       "side": 1,
       "message": "If the only thing we need here is a jQuery Element, maybe it would be clearer to just eat the extra util dependency and make one here.",
+      "range": {
+        "startLine": 284,
+        "startChar": 16,
+        "endLine": 284,
+        "endChar": 35
+      },
+      "revId": "33c8d9f6c0769ecf7fa54bb38db068178c14f9d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47cfa9a2_a87c293e",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-07T01:21:23Z",
+      "side": 1,
+      "message": "I can just use `this` here... (face palm)",
+      "parentUuid": "199cf746_739eee98",
       "range": {
         "startLine": 284,
         "startChar": 16,
