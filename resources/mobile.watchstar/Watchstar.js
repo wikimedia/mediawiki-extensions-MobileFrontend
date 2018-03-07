@@ -27,24 +27,8 @@
 	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
-	function Watchstar( options ) {
-		var self = this,
-			_super = View,
-			page = options.page;
-
-		this.gateway = new WatchstarGateway( options.api );
-
-		if ( user.isAnon() ) {
-			_super.call( self, options );
-		} else if ( options.isWatched === undefined ) {
-			this.gateway.loadWatchStatus( page.getId() ).done( function () {
-				options.isWatched = self.gateway.isWatchedPage( page );
-				_super.call( self, options );
-			} );
-		} else {
-			this.gateway.setWatchedPage( options.page, options.isWatched );
-			_super.call( self, options );
-		}
+	function Watchstar() {
+		View.apply( this, arguments );
 	}
 
 	OO.mfExtend( Watchstar, View, {
@@ -91,17 +75,15 @@
 
 			this.gateway = new WatchstarGateway( options.api );
 
-			if ( user.isAnon() ) {
-				_super.call( self, options );
-			} else if ( options.isWatched === undefined ) {
+			if ( options.isWatched === undefined ) {
 				this.gateway.loadWatchStatus( page.getId() ).done( function () {
 					options.isWatched = self.gateway.isWatchedPage( page );
-					_super.call( self, options );
 				} );
-			} else {
+			} else if ( !user.isAnon() ) {
 				this.gateway.setWatchedPage( options.page, options.isWatched );
-				_super.call( self, options );
 			}
+
+			_super.call( self, options );
 		},
 		/** @inheritdoc */
 		preRender: function () {
