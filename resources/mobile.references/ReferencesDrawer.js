@@ -103,8 +103,14 @@
 				} );
 			} ).fail( function ( err ) {
 				if ( err === ReferencesGateway.ERROR_NOT_EXIST ) {
-					window.location.hash = id;
 					drawer.hide();
+					if ( drawer.options.onError ) {
+						drawer.options.onError();
+					} else {
+						// FIXME: Move this to an onError option
+						// eslint-disable-next-line no-restricted-properties
+						window.location.hash = id;
+					}
 				} else {
 					drawer.render( {
 						error: true,

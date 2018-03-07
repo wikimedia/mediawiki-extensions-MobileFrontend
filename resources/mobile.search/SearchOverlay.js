@@ -131,7 +131,7 @@
 		 */
 		onExitClick: function () {
 			Overlay.prototype.onExitClick.apply( this, arguments );
-			window.location.hash = '';
+			this.router.navigate( '' );
 		},
 
 		/**
@@ -232,6 +232,9 @@
 			// FIXME: ugly hack that removes search from browser history when navigating to search results
 			ev.preventDefault();
 			this.router.back().done( function () {
+				// Router.navigate does not support changing href.
+				// FIXME: Needs upstream change T189173
+				// eslint-disable-next-line no-restricted-properties
 				window.location.href = $link.attr( 'href' );
 			} );
 		},

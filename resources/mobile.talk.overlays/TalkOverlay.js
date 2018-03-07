@@ -108,9 +108,15 @@
 						sections: []
 					}, options );
 				} else {
-					// If the API request fails for any other reason, load the talk
-					// page manually rather than leaving the spinner spinning.
-					window.location = mw.util.getUrl( options.title );
+					if ( self.options.onFail ) {
+						// Run failure callback with current title
+						self.options.onFail( options.title );
+					} else {
+						// If the API request fails for any other reason, load the talk
+						// page manually rather than leaving the spinner spinning.
+						// eslint-disable-next-line no-restricted-properties
+						window.location = mw.util.getUrl( options.title );
+					}
 				}
 			} ).done( function ( pageData ) {
 				self._addContent( pageData, options );

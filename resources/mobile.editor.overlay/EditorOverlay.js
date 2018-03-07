@@ -467,6 +467,8 @@
 					var title = self.options.title;
 					// Special case behaviour of main page
 					if ( mw.config.get( 'wgIsMainPage' ) ) {
+						// FIXME: Blocked on T189173
+						// eslint-disable-next-line no-restricted-properties
 						window.location = mw.util.getUrl( title );
 						return;
 					}

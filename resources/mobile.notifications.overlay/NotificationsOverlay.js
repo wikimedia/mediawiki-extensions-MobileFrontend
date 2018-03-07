@@ -28,7 +28,12 @@
 
 		// On error use the url as a fallback
 		if ( options.error ) {
-			this.onError();
+			if ( options.onError ) {
+				options.onError();
+			} else {
+				// FIXME: This should not be necessary
+				this.onError();
+			}
 			return;
 		}
 
@@ -158,9 +163,12 @@
 		},
 		/**
 		 * Fall back to notifications archive page.
+		 * FIXME: Use onError option instead
 		 * @method
+		 * @deprecated
 		 */
 		onError: function () {
+			// eslint-disable-next-line no-restricted-properties
 			window.location.href = this.badge.getNotificationURL();
 		},
 		/**

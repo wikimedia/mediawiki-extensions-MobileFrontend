@@ -308,6 +308,7 @@
 			}
 		} );
 
+		/* eslint-disable no-restricted-properties */
 		/**
 		 * Checks the existing hash and toggles open any section that contains the fragment.
 		 *
@@ -337,6 +338,7 @@
 				self.reveal( internalRedirectHash, $container );
 			}
 		}
+		/* eslint-enable no-restricted-properties */
 
 		checkInternalRedirectAndHash();
 		checkHash();
