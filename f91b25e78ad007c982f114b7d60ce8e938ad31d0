@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ed55c4b5_93e249e5",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-07T23:28:03Z",
+      "side": 1,
+      "message": "context must be specified. https://api.jquery.com/jquery.parsehtml/",
+      "revId": "f91b25e78ad007c982f114b7d60ce8e938ad31d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
