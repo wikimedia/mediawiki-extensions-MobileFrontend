@@ -2,11 +2,29 @@
 ( function ( M, config, msg, loader, $ ) {
 	/** @ignore @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
+		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
-		util = M.require( 'mobile.startup/util' );
+		util = M.require( 'mobile.startup/util' ),
+		$infoContainer = $( '#mf-nearby-info-holder' ),
+		$icon,
+		nearby,
+		options = {
+			el: $( '#mw-mf-nearby' ),
+			funnel: 'nearby',
+			onItemClick: function ( ev ) {
+				if ( !util.isModifiedEvent( ev ) && !isPageOrCoordFragment( router.getPath() ) ) {
+					// Change the URL fragment to the clicked element so that back
+					// navigation can retain the item position. This behavior is
+					// unwanted for results displayed around a page or coordinate since
+					// that information is stored in the hash and would be overwritten.
+					router.navigate( $( this ).attr( 'id' ) );
+				}
+			}
+		},
+		$refreshButton = $( '#secondary-button' ).parent();
 
 	/**
 	 * @param {string} fragment The URL fragment.
@@ -44,7 +62,6 @@
 		var $icon,
 			$iconContainer,
 			icon;
-
 		// Create refresh button on the header
 		icon = new Icon( {
 			name: 'refresh',
@@ -65,110 +82,111 @@
 		return $icon;
 	}
 
-	$( function () {
-		var
-			nearby,
-			options = {
-				el: $( '#mw-mf-nearby' ),
-				funnel: 'nearby',
-				onItemClick: function ( ev ) {
-					if ( !util.isModifiedEvent( ev ) && !isPageOrCoordFragment( router.getPath() ) ) {
-						// Change the URL fragment to the clicked element so that back
-						// navigation can retain the item position. This behavior is
-						// unwanted for results displayed around a page or coordinate since
-						// that information is stored in the hash and would be overwritten.
-						router.navigate( $( this ).attr( 'id' ) );
-					}
-				}
-			},
-			$refreshButton = $( '#secondary-button' ).parent(),
-			$icon = createRefreshIcon( '.header', refreshCurrentLocation );
-
-		// Remove user button
-		if ( $refreshButton.length ) {
-			$refreshButton.remove();
-		}
-
-		/**
-		 * Initialize or instantiate Nearby with options
-		 * @method
-		 * @ignore
-		 * @param {Object} opt
-		 */
-		function refresh( opt ) {
-			// check, if the api object (options.api) is already created and set
-			if ( options.api === undefined ) {
-				// decide, what api module to use to retrieve the pages
-				if ( endpoint ) {
-					loader.using( 'mobile.foreignApi' ).done( function () {
-						var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
-						options.api = new JSONPForeignApi( endpoint );
-					} );
-				} else {
-					options.api = new mw.Api();
-				}
-			}
-			// make sure, that the api object (if created above) is added to the options object used
-			// in the Nearby module
-			opt = util.extend( {}, opt, options );
-
-			if ( !nearby ) {
-				nearby = new Nearby( opt );
-				// todo: use the local emitter when refresh() doesn't recreate the
-				//       OO.EventEmitter by calling the super's constructor.
-				M.on( NEARBY_EVENT_POST_RENDER, function () {
-					var fragment = router.getPath(), el;
-					if ( isFragmentIdentifier( fragment ) ) {
-						// The hash is expected to be an identifier selector (unless the
-						// user entered rubbish).
-						el = nearby.$( '#' + fragment );
-						if ( el[0] && el[0].nodeType ) {
-							$( window ).scrollTop( el.offset().top );
-						}
-					}
+	/**
+	 * Initialize or instantiate Nearby with options
+	 * @method
+	 * @ignore
+	 * @param {Object} opt
+	 */
+	function refresh( opt ) {
+		// check, if the api object (options.api) is already created and set
+		if ( options.api === undefined ) {
+			// decide, what api module to use to retrieve the pages
+			if ( endpoint ) {
+				loader.using( 'mobile.foreignApi' ).done( function () {
+					var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
+					options.api = new JSONPForeignApi( endpoint );
 				} );
+			} else {
+				options.api = new mw.Api();
 			}
-			nearby.refresh( opt );
 		}
+		// make sure, that the api object (if created above) is added to the options object used
+		// in the Nearby module
+		opt = util.extend( {}, opt, options );
 
-		// Routing on the nearby view
-
-		/*
-		 * #/coords/lat,long
-		 */
-		router.route( /^\/coord\/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/, function ( lat, lon ) {
-			$icon.hide();
-			// Search with coordinates
-			refresh( util.extend( {}, options, {
-				latitude: lat,
-				longitude: lon
-			} ) );
-		} );
-
-		/*
-		 * #/page/PageTitle
-		 */
-		router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
-			$icon.hide();
-			refresh( util.extend( {}, options, {
-				pageTitle: mw.Uri.decode( pageTitle )
-			} ) );
-		} );
-
-		/**
-		 * Refresh the current view using browser geolocation api
-		 * @ignore
-		 */
-		function refreshCurrentLocation() {
-			$icon.show();
-			refresh( util.extend( {}, options, {
-				useCurrentLocation: true
-			} ) );
+		if ( !nearby ) {
+			nearby = new Nearby( opt );
+			// todo: use the local emitter when refresh() doesn't recreate the
+			//       OO.EventEmitter by calling the super's constructor.
+			M.on( NEARBY_EVENT_POST_RENDER, function () {
+				var fragment = router.getPath(), el;
+				if ( isFragmentIdentifier( fragment ) ) {
+					// The hash is expected to be an identifier selector (unless the
+					// user entered rubbish).
+					el = nearby.$( '#' + fragment );
+					if ( el[0] && el[0].nodeType ) {
+						$( window ).scrollTop( el.offset().top );
+					}
+				}
+			} );
 		}
+		nearby.refresh( opt );
+	}
 
-		// On first run refresh the results
-		// T125820 should make this unnecessary
-		refreshCurrentLocation();
+	/**
+	 * Refresh the current view using browser geolocation api
+	 * @ignore
+	 */
+	function refreshCurrentLocation() {
+		refresh( options );
+	}
+
+	$icon = createRefreshIcon( '.header', refreshCurrentLocation );
+	// Remove user button
+	if ( $refreshButton.length ) {
+		$refreshButton.remove();
+	}
+
+	// Routing on the nearby view
+
+	/*
+	 * #/coords/lat,long
+	 */
+	router.route( /^\/coord\/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/, function ( lat, lon ) {
+		// TODO this is bad, route shouldn't have side effects but otherwise mediawiki router
+		// cannot refresh the page. We need to store those so when user hits $refreshButton
+		// we reload the results
+		options.latitude = lat;
+		options.longitude = lon;
+
+		$infoContainer.remove();
+		$( 'body' ).removeClass( 'nearby-accept-pending' );
+		$icon.show();
+		// Search with coordinates
+		refresh( options );
+	} );
+
+	/*
+	 * #/page/PageTitle
+	 */
+	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
+		$icon.hide();
+		refresh( util.extend( {}, options, {
+			pageTitle: mw.Uri.decode( pageTitle )
+		} ) );
+	} );
+
+	$icon.hide();
+	router.checkRoute();
+	$( '#showArticles' ).on( 'click', function () {
+		LocationProvider.getCurrentPosition().then( function ( geo ) {
+			router.navigate( '#/coord/' + geo.latitude + ',' + geo.longitude );
+		} ).catch( function ( error ) {
+			// We want to show the Alert dialog to make sure user sees it
+			switch ( error ) {
+				case 'permission':
+					// eslint-disable-next-line no-alert
+					alert( mw.msg( 'mobile-frontend-nearby-permission-denied' ) );
+					break;
+				case 'location':
+					// eslint-disable-next-line no-alert
+					alert( mw.msg( 'mobile-frontend-nearby-location-unavailable' ) );
+					break;
+				default:
+					// timeout or undefined, do nothing for now
+			}
+		} );
 	} );
 
 }( mw.mobileFrontend, mw.config, mw.msg, mw.loader, jQuery ) );

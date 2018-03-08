@@ -3,7 +3,6 @@
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
-		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		icons = M.require( 'mobile.startup/icons' );
@@ -44,16 +43,6 @@
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
 				hasHeading: true,
 				msg: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
-			},
-			locating: {
-				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
-				hasHeading: true,
-				msg: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
-			},
-			permission: {
-				heading: mw.msg( 'mobile-frontend-nearby-permission' ),
-				hasHeading: true,
-				msg: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
 			},
 			http: {
 				heading: mw.msg( 'mobile-frontend-nearby-error' ),
@@ -206,24 +195,7 @@
 
 			this.$( '.spinner' ).removeClass( 'hidden' );
 			this.$( '.page-list' ).addClass( 'hidden' );
-
-			// Re-run after api/geolocation request
-			if ( options.useCurrentLocation ) {
-				// Flush any existing list of pages
-				options.pages = [];
-
-				// Get some new pages
-				LocationProvider.getCurrentPosition().done( function ( coordOptions ) {
-					util.extend( options, coordOptions );
-					self._find( options ).done( function ( options ) {
-						_super.call( self, options );
-					} );
-				} ).fail( function ( errorType ) {
-					options.errorOptions = self._errorOptions( errorType );
-					self._isLoading = false;
-					_super.call( self, options );
-				} );
-			} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
+			if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
 				// Flush any existing list of pages
 				options.pages = [];
 
@@ -236,7 +208,6 @@
 					_super.call( self, options );
 				} );
 			}
-
 			// Run it once for loader etc
 			this._isLoading = true;
 		}

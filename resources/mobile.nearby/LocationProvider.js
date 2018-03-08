@@ -35,13 +35,21 @@
 						} );
 					},
 					function ( err ) {
-						// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
-						if ( err.code === 1 ) {
-							err = 'permission';
-						} else {
-							err = 'locating';
+						var error;
+						switch ( err.code ) {
+							case err.PERMISSION_DENIED:
+								error = 'permission';
+								break;
+							case err.TIMEOUT:
+								error = 'timeout';
+								break;
+							case err.POSITION_UNAVAILABLE:
+								error = 'location';
+								break;
+							default:
+								error = 'unknown';
 						}
-						result.reject( err );
+						result.reject( error );
 					},
 					{
 						timeout: 10000,

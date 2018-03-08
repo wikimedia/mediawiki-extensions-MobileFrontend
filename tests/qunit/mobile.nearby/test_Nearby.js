@@ -92,35 +92,6 @@
 		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
 	} );
 
-	QUnit.test( '#render with location error', function ( assert ) {
-		var $el = $( '<div>' ), nearby, opts = {
-			range: 1000,
-			el: $el,
-			errorType: 'locating'
-		};
-		nearby = new Nearby( opts );
-		nearby.refresh( opts );
-		assert.ok( this.spy.notCalled, 'Check API didn\'t get called on this case.' );
-		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
-		assert.strictEqual( $el.find( '.errorbox h2' ).length, 1, 'Check error has heading' );
-		assert.strictEqual( $el.find( '.errorbox h2' ).text(),
-			nearby.errorMessages.locating.heading, 'Check it is the correct heading' );
-	} );
-
-	QUnit.test( '#render with current location', function ( assert ) {
-		var $el = $( '<div>' ), nearby, opts = {
-			api: api,
-			useCurrentLocation: true,
-			range: 1000,
-			el: $el
-		};
-		// eslint-disable-next-line no-new
-		nearby = new Nearby( opts );
-		nearby.refresh( opts );
-		assert.ok( this.getLocation.calledOnce, 'Check API got called' );
-		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
-	} );
-
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
 		setup: function () {
 			this.deferred = $.Deferred();
