@@ -1,6 +1,7 @@
 /* global jQuery */
 ( function ( M, $ ) {
-	var util;
+	var util,
+		log = mw.log; // resource-modules-disable-line
 
 	/**
 	 * Utility library
@@ -43,7 +44,13 @@
 		 * @return {jQuery.Deferred}
 		 */
 		Deferred: function () {
-			return $.Deferred();
+			var d = $.Deferred(),
+				warning = 'Use Promise compatible methods `then` and `catch` instead.';
+
+			log.deprecate( d, 'fail', d.fail, warning );
+			log.deprecate( d, 'always', d.always, warning );
+			log.deprecate( d, 'done', d.done, warning );
+			return d;
 		},
 		/**
 		 * Adds a class to the document
