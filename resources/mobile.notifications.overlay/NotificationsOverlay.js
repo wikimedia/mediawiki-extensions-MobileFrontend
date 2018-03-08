@@ -28,12 +28,7 @@
 
 		// On error use the url as a fallback
 		if ( options.error ) {
-			if ( options.onError ) {
-				options.onError();
-			} else {
-				// FIXME: This should not be necessary
-				this.onError();
-			}
+			options.onError();
 			return;
 		}
 
@@ -160,16 +155,6 @@
 					);
 					overlay.confirmationWidget.showAnimated();
 				} );
-		},
-		/**
-		 * Fall back to notifications archive page.
-		 * FIXME: Use onError option instead
-		 * @method
-		 * @deprecated
-		 */
-		onError: function () {
-			// eslint-disable-next-line no-restricted-properties
-			window.location.href = this.badge.getNotificationURL();
 		},
 		/**
 		 * Update the unread number on the notifications badge
