@@ -452,6 +452,16 @@
 		] );
 	} );
 
+	QUnit.test( '#getPage (forwards api errors)', function ( assert ) {
+		var d = $.Deferred();
+		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().reject( 'missingtitle' ) );
+		pageGateway.getPage( 'Err' ).fail( function ( msg ) {
+			assert.ok( msg === 'missingtitle' );
+			d.resolve();
+		} );
+		return d;
+	} );
+
 	QUnit.test( '#getPage (move protected page)', function ( assert ) {
 		var expected = {
 			edit: [ '*' ],

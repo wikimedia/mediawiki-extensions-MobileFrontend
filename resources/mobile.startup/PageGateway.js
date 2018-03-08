@@ -171,8 +171,8 @@
 						// FIXME: Return a Page class here
 						return resolveObj;
 					}
-				}, function () {
-					return d.reject();
+				}, function ( msg ) {
+					return d.reject( msg );
 				} );
 			}
 
