@@ -21,14 +21,11 @@
 		var promise = $.Deferred().reject( ReferencesGateway.ERROR_NOT_EXIST ).promise(),
 			hideSpy = this.sandbox.spy( this.drawer, 'hide' );
 
-		assert.expect( 2 );
-
 		this.sandbox.stub( this.gateway, 'getReference' ).returns( promise );
 		this.drawer.showReference( '#cite_note-bad', this.page, '1' );
 
 		return promise.catch( function () {
 			assert.ok( hideSpy.calledOnce, 'Hide is called.' );
-			assert.equal( window.location.hash, '#cite_note-bad', 'Browser is redirected to the hash' );
 		} );
 	} );
 

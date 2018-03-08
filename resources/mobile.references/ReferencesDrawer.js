@@ -87,6 +87,7 @@
 		 * @param {string} id of the reference to be retrieved
 		 * @param {Page} page to locate reference for
 		 * @param {string} refNumber the number it identifies as in the page
+		 * @return {jQuery.Deferred}
 		 */
 		showReference: function ( id, page, refNumber ) {
 			var drawer = this,
@@ -96,21 +97,14 @@
 			this.options.page = page;
 			// If API is being used we want to show the drawer with the spinner while query runs
 			drawer.show();
-			gateway.getReference( id, page ).done( function ( reference ) {
+			return gateway.getReference( id, page ).then( function ( reference ) {
 				drawer.render( {
 					title: refNumber,
 					text: reference.text
 				} );
-			} ).fail( function ( err ) {
+			}, function ( err ) {
 				if ( err === ReferencesGateway.ERROR_NOT_EXIST ) {
 					drawer.hide();
-					if ( drawer.options.onError ) {
-						drawer.options.onError();
-					} else {
-						// FIXME: Move this to an onError option
-						// eslint-disable-next-line no-restricted-properties
-						window.location.hash = id;
-					}
 				} else {
 					drawer.render( {
 						error: true,
