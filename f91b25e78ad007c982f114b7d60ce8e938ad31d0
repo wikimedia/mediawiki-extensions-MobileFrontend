@@ -16,6 +16,24 @@
       "revId": "f91b25e78ad007c982f114b7d60ce8e938ad31d0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5abb66d7_31b31c13",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-08T14:47:56Z",
+      "side": 1,
+      "message": "Good debugging. As I understand it, this was an issue because an image won\u0027t kick off the download when it\u0027s in a separate document (which means the load / error callback never runs and images are forever lazy). This seems like an unusual case but if you haven\u0027t already, please check the other usages of `\u0027(util|this).parseHTML\u0027`, particularly in View and subclasses, to make sure we didn\u0027t introduce a regression (it looks ok to me).",
+      "parentUuid": "ed55c4b5_93e249e5",
+      "revId": "f91b25e78ad007c982f114b7d60ce8e938ad31d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
