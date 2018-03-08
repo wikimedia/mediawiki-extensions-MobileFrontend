@@ -75,6 +75,7 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	 * @param string $expected
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
 	 */
 	public function testTransform( $html, $expected,
 		$reason = 'Move lead paragraph unexpected result'
@@ -118,9 +119,14 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 				"$paragraph$infobox",
 			],
 			[
-				"$emptyP$infobox$paragraph",
-				"$emptyP$paragraph$infobox",
+				"$emptyP$emptyP$infobox$paragraph",
+				"$emptyP$emptyP$paragraph$infobox",
 				'Empty paragraphs are ignored'
+			],
+			[
+				"$paragraph$emptyP$infobox$paragraph",
+				"$paragraph$emptyP$infobox$paragraph",
+				'T188825: Infobox has to be first non-empty element'
 			],
 			[
 				"$stackInfobox$paragraph",
