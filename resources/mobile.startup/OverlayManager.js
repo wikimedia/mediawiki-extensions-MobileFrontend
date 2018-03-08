@@ -1,5 +1,4 @@
-/* global jQuery */
-( function ( M, $ ) {
+( function ( M ) {
 	var util = M.require( 'mobile.startup/util' );
 
 	/**
@@ -219,7 +218,7 @@
 			this.entries[route] = entry;
 			// Check if overlay should be shown for the current path.
 			// The DOM must fully load before we can show the overlay because Overlay relies on it.
-			$( function () {
+			util.docReady( function () {
 				self._processMatch( self._matchRoute( self.router.getPath(), entry ) );
 			} );
 		},
@@ -244,4 +243,4 @@
 
 	M.define( 'mobile.startup/OverlayManager', OverlayManager ); // resource-modules-disable-line
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

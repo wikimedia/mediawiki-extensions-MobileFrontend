@@ -1,11 +1,10 @@
-/* global jQuery */
-( function ( M, $ ) {
+( function ( M ) {
 
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
 		util = M.require( 'mobile.startup/util' ),
 		Deferred = util.Deferred,
-		when = $.when,
+		when = util.when,
 		icons = M.require( 'mobile.startup/icons' ),
 		viewport = mw.viewport,
 		spinner = icons.spinner();
@@ -66,7 +65,7 @@
 		if (
 			mw.config.get( 'wgMFLazyLoadImages' )
 		) {
-			$( function () {
+			util.docReady( function () {
 				self.setupImageLoading();
 			} );
 		}
@@ -108,7 +107,8 @@
 			if ( browser.supportsTouchEvents() ) {
 				$el.addClass( 'touch-events' );
 			}
-			$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
+			util.parseHTML( '<div class="transparent-shield cloaked-element">' )
+				.appendTo( $el.find( '#mw-mf-page-center' ) );
 			/**
 			 * @event changed
 			 * Fired when appearance of skin changes.
@@ -167,7 +167,7 @@
 			function _loadImages() {
 				var images = [];
 				// Filter unloaded images to only the images that still need to be loaded
-				imagePlaceholders = $.grep( imagePlaceholders, function ( placeholder ) {
+				imagePlaceholders = util.grep( imagePlaceholders, function ( placeholder ) {
 					var $placeholder = self.$( placeholder );
 					// Check length to ensure the image is still in the DOM.
 					if ( $placeholder.length && shouldLoadImage( $placeholder ) ) {
@@ -223,8 +223,8 @@
 				d = Deferred(),
 				width = $placeholder.attr( 'data-width' ),
 				height = $placeholder.attr( 'data-height' ),
-				// Image will start downloading
-				$downloadingImage = $( '<img>' );
+				// document must be passed to ensure image will start downloading
+				$downloadingImage = util.parseHTML( '<img>', this.$el[0].ownerDocument );
 
 			// When the image has loaded
 			$downloadingImage.on( 'load', function () {
@@ -296,7 +296,7 @@
 
 						$content.find( '.mf-lazy-references-placeholder' ).each( function () {
 							var refListIndex = 0,
-								$placeholder = $( this ),
+								$placeholder = $content.find( this ),
 								// search for id of the collapsible heading
 								id = getSectionId( $placeholder );
 
@@ -380,4 +380,4 @@
 	Skin.getSectionId = getSectionId;
 	M.define( 'mobile.startup/Skin', Skin );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

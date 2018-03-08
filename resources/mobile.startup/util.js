@@ -9,6 +9,34 @@
 	 */
 	util = {
 		/**
+		 * Wrapper class for the $.grep
+		 *
+		 * @method
+		 * @return {jQuery.Deferred}
+		 */
+		grep: function () {
+			return $.grep.apply( $, arguments );
+		},
+		/**
+		 * Run method when document is ready.
+		 *
+		 * @method
+		 * @param {Function} fn
+		 * @return {jQuery.Object}
+		 */
+		docReady: function ( fn ) {
+			return $( fn );
+		},
+		/**
+		 * Wrapper class for the $.when
+		 *
+		 * @method
+		 * @return {jQuery.Deferred}
+		 */
+		when: function () {
+			return $.when.apply( $, arguments );
+		},
+		/**
 		 * Wrapper class for the Deferred method
 		 *
 		 * @method
@@ -41,10 +69,11 @@
 		 * not an array.
 		 *
 		 * @param {string} html
+		 * @param {Element} [ctx] Document element to serve as the context in which the HTML fragment will be created
 		 * @return {jQuery.Object}
 		 */
-		parseHTML: function ( html ) {
-			return $( $.parseHTML( html ) );
+		parseHTML: function ( html, ctx ) {
+			return $( $.parseHTML( html, ctx ) );
 		},
 		/**
 		 * wrapper for jQuery util noop function

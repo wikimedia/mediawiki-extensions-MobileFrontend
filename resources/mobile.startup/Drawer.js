@@ -1,5 +1,4 @@
-/* global jQuery */
-( function ( M, $ ) {
+( function ( M ) {
 
 	var Panel = M.require( 'mobile.startup/Panel' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -48,7 +47,7 @@
 			var self = this;
 			// This module might be loaded at the top of the page e.g. Special:Uploads
 			// Thus ensure we wait for the DOM to be loaded
-			$( function () {
+			util.docReady( function () {
 				self.appendTo( self.appendToElement );
 			} );
 			this.on( 'show', this.onShowDrawer.bind( this ) );
@@ -92,4 +91,4 @@
 	M.define( 'mobile.startup/Drawer', Drawer )
 		.deprecate( 'mobile.drawers/Drawer' );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

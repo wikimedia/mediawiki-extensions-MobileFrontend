@@ -1,5 +1,4 @@
-/* global jQuery */
-( function ( HTML, M, $ ) {
+( function ( HTML, M ) {
 
 	var time = M.require( 'mobile.startup/time' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -234,15 +233,16 @@
 		 */
 		getThumbnails: function () {
 			var $thumbs,
+				$el = this.$el,
 				blacklistSelector = '.' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 				thumbs = [];
 
 			if ( !this._thumbs ) {
-				$thumbs = this.$el.find( 'a.image, a.thumbimage' )
+				$thumbs = $el.find( 'a.image, a.thumbimage' )
 					.not( blacklistSelector );
 
 				$thumbs.each( function () {
-					var $a = $( this ),
+					var $a = $el.find( this ),
 						$lazyImage = $a.find( '.lazy-image-placeholder' ),
 						// Parents need to be checked as well.
 						valid = $a.parents( blacklistSelector ).length === 0 && $a.find( blacklistSelector ).length === 0,
@@ -345,4 +345,4 @@
 	};
 	M.define( 'mobile.startup/Page', Page );
 
-}( mw.html, mw.mobileFrontend, jQuery ) );
+}( mw.html, mw.mobileFrontend ) );

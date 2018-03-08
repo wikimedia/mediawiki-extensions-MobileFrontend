@@ -1,5 +1,4 @@
-/* global jQuery */
-( function ( M, $ ) {
+( function ( M ) {
 	var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		util = M.require( 'mobile.startup/util' ),
 		cache = {};
@@ -282,8 +281,8 @@
 				sections = [];
 
 			$headings.each( function () {
-				var level = $( this )[0].tagName.substr( 1 ),
-					$span = $( this ).find( '.mw-headline' );
+				var level = this.tagName.substr( 1 ),
+					$span = $el.find( this ).find( '.mw-headline' );
 
 				if ( $span.length ) {
 					sections.push( {
@@ -309,4 +308,4 @@
 	};
 
 	M.define( 'mobile.startup/PageGateway', PageGateway );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
