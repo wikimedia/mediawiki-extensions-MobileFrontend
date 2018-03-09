@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "939b050e_9d154e1e",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "what if JS is disabled? disabled button?",
+      "revId": "15b2b06ae2596d63b4f2355e654611ae10e38012",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
