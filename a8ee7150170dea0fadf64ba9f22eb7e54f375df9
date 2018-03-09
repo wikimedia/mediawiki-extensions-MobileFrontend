@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "281b6cd4_07c077d6",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "I\u0027ve commented in another file but I\u0027d like to see if we can avoid this code.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa01f450_e15047da",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "How would this look if we made a route instead e.g.\n#/nearby \n\nrefresh already creates a Nearby class.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da522f76_ffb334c0",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "Let\u0027s add a TODO note that this is hacky and we should talk to a designer about moving the refresh logic into the Nearby view itself.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8979434_bc173c97",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "This is very jarring right now. I\u0027d talk to Nirzar about the design treatment here. At least on first click it feels like we could manage the transition to results better e.g. use opacity and only show the list of results when rendering.\n\nI understand this might be a lot of effort and we need to assess that but it would be good to have that convo.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc000f05_78db4ed5",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "I don\u0027t like the nearby-accept-pending and only showing the heading when we have results. This is introducing tech debt and inconsistency and it should be well justified.\n\nWhat\u0027s the problem with showing the title regardless?\nLet\u0027s talk to Nirzar.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1268512f_7a6a2540",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "Variable?",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e650ee30_7a505f25",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-09T17:36:23Z",
+      "side": 1,
+      "message": "variable\nShould this be @fontFamily or @font-family-sans?",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
