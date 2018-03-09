@@ -153,15 +153,9 @@
 			} ) );
 		}
 
-		/*
-		 * Anything else search with current location
-		 * FIXME: The regex has to negate the rest of the routes because every time we
-		 * define a route with router.route that route gets matched against the
-		 * current hash.
-		 */
-		router.route( /^(?!.coord|.page).*$/, refreshCurrentLocation );
-		router.checkRoute();
-
+		// On first run refresh the results
+		// T125820 should make this unnecessary
+		refreshCurrentLocation();
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
