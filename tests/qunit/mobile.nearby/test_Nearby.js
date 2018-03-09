@@ -2,7 +2,8 @@
 
 	var NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		api = new mw.Api(),
-		Nearby = M.require( 'mobile.nearby/Nearby' );
+		Nearby = M.require( 'mobile.nearby/Nearby' ),
+		LocationProvider = M.require( 'mobile.nearby/LocationProvider' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
 		setup: function () {
@@ -21,6 +22,7 @@
 		};
 		// eslint-disable-next-line no-new
 		nearby = new Nearby( opts );
+
 		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( {
 			latitude: 37.7,
@@ -47,7 +49,7 @@
 			// prevent hits to api due to watch status lookup
 			this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( resp ) );
 
-			this.getLocation = this.sandbox.stub( Nearby.prototype, 'getCurrentPosition' )
+			this.getLocation = this.sandbox.stub( LocationProvider, 'getCurrentPosition' )
 				.returns( $.Deferred().resolve( {
 					latitude: 37.7,
 					longitude: -122
@@ -79,12 +81,14 @@
 			el: $el
 		};
 		// eslint-disable-next-line no-new
+
 		nearby = new Nearby( opts );
 		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( {
 			latitude: 37.7,
 			longitude: -122
 		}, 1000 ), 'Check API got called' );
+
 		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
 	} );
 

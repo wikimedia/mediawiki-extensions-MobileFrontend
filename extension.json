@@ -857,6 +857,7 @@
 				"mobile-frontend-nearby-permission-guidance"
 			],
 			"scripts": [
+				"resources/mobile.nearby/LocationProvider.js",
 				"resources/mobile.nearby/NearbyGateway.js",
 				"resources/mobile.nearby/Nearby.js"
 			],

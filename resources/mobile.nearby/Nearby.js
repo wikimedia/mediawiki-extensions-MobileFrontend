@@ -3,9 +3,9 @@
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
+		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
-		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		icons = M.require( 'mobile.startup/icons' );
 
 	/**
@@ -85,44 +85,6 @@
 				title: mw.msg( 'mobile-frontend-nearby-loading' )
 			} ).toHtmlString()
 		} ),
-
-		/**
-		 * Obtain users current location and return a deferred object with the
-		 * longitude and latitude values
-		 * Resolve return object with 'incompatible' if browser doesn't support geo location
-		 * FIXME: This should be refactored into a LocationGateway
-		 *
-		 * @return {jQuery.Deferred}
-		 */
-		getCurrentPosition: function () {
-			var result = util.Deferred();
-			if ( browser.supportsGeoLocation() ) {
-				navigator.geolocation.getCurrentPosition(
-					function ( geo ) {
-						result.resolve( {
-							latitude: geo.coords.latitude,
-							longitude: geo.coords.longitude
-						} );
-					},
-					function ( err ) {
-						// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
-						if ( err.code === 1 ) {
-							err = 'permission';
-						} else {
-							err = 'locating';
-						}
-						result.reject( err );
-					},
-					{
-						timeout: 10000,
-						enableHighAccuracy: true
-					}
-				);
-			} else {
-				result.reject( 'incompatible' );
-			}
-			return result;
-		},
 		/**
 		 * Request pages from api based on provided options.
 		 * When options.longitude and options.latitude set getPages near that location.
@@ -138,7 +100,7 @@
 
 			/**
 			 * Handler for successful query
-			 * @param {Array} pages as passed by done callback of Nearby##getPages
+			 * @param {Array} pages as passed by then callback of Nearby##getPages
 			 * @ignore
 			 */
 			function pagesSuccess( pages ) {
@@ -194,7 +156,6 @@
 		 */
 		_errorOptions: function ( key, msg ) {
 			var message;
-
 			if ( msg ) {
 				message = { msg: msg };
 			} else {
@@ -252,7 +213,7 @@
 				options.pages = [];
 
 				// Get some new pages
-				this.getCurrentPosition().done( function ( coordOptions ) {
+				LocationProvider.getCurrentPosition().done( function ( coordOptions ) {
 					util.extend( options, coordOptions );
 					self._find( options ).done( function ( options ) {
 						_super.call( self, options );
