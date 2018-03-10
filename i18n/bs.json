@@ -9,7 +9,8 @@
 			"Semso98",
 			"Emir Mujadzic",
 			"Srdjan m",
-			"MaGa"
+			"MaGa",
+			"Obsuser"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
@@ -81,7 +82,7 @@
 	"mobile-frontend-editor-summary-request": "Kako ste poboljšali stranicu?",
 	"mobile-frontend-editor-summary": "Sažetak:",
 	"mobile-frontend-editor-switch-confirm": "Morate sačuvati uređivanje prije prebacivanja na drugi način uređivanja.",
-	"mobile-frontend-editor-switch-editor": "Zamijeni uređivač",
+	"mobile-frontend-editor-switch-editor": "Promijeni uređivač",
 	"mobile-frontend-editor-switch-visual-editor": "Prebaci me na vizualno uređivanje",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Pregled izvornog koda stranice</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Čuvanje izmjene; molimo, sačekajte.",
