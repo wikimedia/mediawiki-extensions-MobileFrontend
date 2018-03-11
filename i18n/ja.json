@@ -16,7 +16,8 @@
 			"Los688",
 			"Rxy",
 			"組曲師",
-			"Omotecho"
+			"Omotecho",
+			"Yusuke1109"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -155,7 +156,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "別のブラウザーを試すか、または JavaScript を無効にしている場合は有効にしてください。",
 	"mobile-frontend-nearby-title": "付近",
 	"mobile-frontend-news-items": "新着情報",
-	"mobile-frontend-opt-in-explain": "ベータテストへ参加すると、最新の開発中の機能にアクセスできるようになりますが、ソフトウェアの不具合に遭遇する危険性があります。",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} ベータテストは、これらの実験的な機能を試して貴重なフィードバックを提供する方法です",
 	"mobile-frontend-overlay-close": "閉じる",
 	"mobile-frontend-overlay-continue": "続行",
 	"mobile-frontend-page-edit-summary": "<span><strong>編集内容の要約</strong> $1</span>",
@@ -176,7 +177,7 @@
 	"mobile-frontend-search-content-no-results": "すべての記事内でこの語句を検索するには'''{{int:mobile-frontend-search-content}}'''を使用してください。",
 	"mobile-frontend-search-no-results": "この名前のページはありません。",
 	"mobile-frontend-settings-tagline": "閲覧設定",
-	"mobile-frontend-settings-beta": "ベータ",
+	"mobile-frontend-settings-beta": "{{SITENAME}} ベータ",
 	"mobile-frontend-settings-save": "設定を保存しました。",
 	"mobile-frontend-talk-fullpage": "ウィキページとして閲覧",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "本文を入力",
