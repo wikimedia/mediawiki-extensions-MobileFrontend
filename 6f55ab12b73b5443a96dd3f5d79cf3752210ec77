@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8419e892_4f4645e6",
+        "filename": "tests/phpunit/transforms/MoveLeadParagraphTransformTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-12T19:52:54Z",
+      "side": 1,
+      "message": "Add covers for isFirstNonEmptySibling",
+      "revId": "6f55ab12b73b5443a96dd3f5d79cf3752210ec77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
