@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "94b30fa1_9487564b",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-12T17:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da522f76_ffb334c0",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a8979434_bc173c97",
         "filename": "resources/mobile.special.nearby.scripts/nearby.js",
         "patchSetId": 2
@@ -64,6 +82,24 @@
       "writtenOn": "2018-03-09T17:36:23Z",
       "side": 1,
       "message": "This is very jarring right now. I\u0027d talk to Nirzar about the design treatment here. At least on first click it feels like we could manage the transition to results better e.g. use opacity and only show the list of results when rendering.\n\nI understand this might be a lot of effort and we need to assess that but it would be good to have that convo.",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48a268d4_5af61aa3",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-12T17:07:10Z",
+      "side": 1,
+      "message": "can we do that in a follow-up ?",
+      "parentUuid": "a8979434_bc173c97",
       "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +140,24 @@
     },
     {
       "key": {
+        "uuid": "9475f9fb_2eb9f017",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-12T17:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1268512f_7a6a2540",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e650ee30_7a505f25",
         "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
         "patchSetId": 2
@@ -115,6 +169,24 @@
       "writtenOn": "2018-03-09T17:36:23Z",
       "side": 1,
       "message": "variable\nShould this be @fontFamily or @font-family-sans?",
+      "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5198d484_d334cd9e",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-12T17:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e650ee30_7a505f25",
       "revId": "a8ee7150170dea0fadf64ba9f22eb7e54f375df9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
