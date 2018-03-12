@@ -224,8 +224,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		// snip....
 
-		$tables = [ 'recentchanges', 'watchlist' ];
-		$fields = [ $dbr->tableName( 'recentchanges' ) . '.*' ];
+		// @todo This should be changed to use WatchedItemQuerySerivce
+
+		$rcQuery = RecentChange::getQueryInfo();
+		$tables = array_merge( $rcQuery['tables'], [ 'watchlist' ] );
+		$fields = $rcQuery['fields'];
 		$innerConds = [
 			'wl_user' => $user->getId(),
 			'wl_namespace=rc_namespace',
@@ -242,7 +245,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				'INNER JOIN',
 				$innerConds,
 			],
-		];
+		] + $rcQuery['joins'];
 		$options = [ 'ORDER BY' => 'rc_timestamp DESC' ];
 		$options['LIMIT'] = self::LIMIT;
 
@@ -254,11 +257,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$fields[] = 'page_latest';
 			}
 		}
-
-		$commentQuery = CommentStore::getStore()->getJoin( 'rc_comment' );
-		$tables += $commentQuery['tables'];
-		$fields += $commentQuery['fields'];
-		$join_conds += $commentQuery['joins'];
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
 		// Until 1.22, MediaWiki used an array here. Since 1.23 (Iec4aab87), it uses a FormOptions

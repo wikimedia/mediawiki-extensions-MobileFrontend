@@ -118,12 +118,15 @@ class SpecialUploads extends MobileSpecialPage {
 
 		$limit = $this->getUploadCountThreshold() + 1;
 		// not using SQL's count(*) because it's more expensive with big number of rows
+		$imgWhere = ActorMigration::newMigration()
+			->getWhere( $dbr, 'img_user', User::newFromName( $username, false ) );
 		$res = $dbr->select(
-			'image',
-			'img_size',
-			[ 'img_user_text' => $username ],
+			[ 'image' ] + $imgWhere['tables'],
+			1,
+			$imgWhere['conds'],
 			__METHOD__,
-			[ 'LIMIT' => $limit ]
+			[ 'LIMIT' => $limit ],
+			$imgWhere['joins']
 		);
 		return ( $res ) ? $res->numRows() : false;
 	}
