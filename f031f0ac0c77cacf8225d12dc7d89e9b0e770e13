@@ -22,6 +22,30 @@
       "revId": "f031f0ac0c77cacf8225d12dc7d89e9b0e770e13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5621503e_eeb75c4f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-03-13T19:39:45Z",
+      "side": 0,
+      "message": "By passing \u0027unwrap\u0027 \u003d\u003e true to ParserOutput::getText(), as was done in the change (Ibfaefde2f) that added the test on lines 482-483 in the first place.\n\nAlso, if you look at MediaWiki core you can easily verify that this line will never be reached anymore because ParserOutput::SUPPORTS_UNWRAP_TRANSFORM is, in fact, defined.",
+      "parentUuid": "e22a8287_a982dd10",
+      "range": {
+        "startLine": 486,
+        "startChar": 10,
+        "endLine": 486,
+        "endChar": 28
+      },
+      "revId": "f031f0ac0c77cacf8225d12dc7d89e9b0e770e13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
