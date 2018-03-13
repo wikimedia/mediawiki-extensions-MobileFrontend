@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9da76c33_62b3930f",
+        "filename": "resources/mobile.nearby/LocationProvider.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-13T15:52:56Z",
+      "side": 1,
+      "message": "Do we need to call result.reject() here when the query fails?",
+      "range": {
+        "startLine": 35,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 6
+      },
+      "revId": "fb70495b2e2e48b1e973f011b8bfa4b51a063a3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b5c1de63_b080f0fa",
+        "filename": "resources/mobile.nearby/LocationProvider.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-13T15:52:56Z",
+      "side": 1,
+      "message": "Should we ask the user to pass this in to avoid global usage in a singleton?",
+      "range": {
+        "startLine": 48,
+        "startChar": 4,
+        "endLine": 48,
+        "endChar": 13
+      },
+      "revId": "fb70495b2e2e48b1e973f011b8bfa4b51a063a3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8abc06eb_f5ee540f",
+        "filename": "resources/mobile.nearby/LocationProvider.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-13T15:52:56Z",
+      "side": 1,
+      "message": "Nice!",
+      "range": {
+        "startLine": 56,
+        "startChar": 13,
+        "endLine": 56,
+        "endChar": 75
+      },
+      "revId": "fb70495b2e2e48b1e973f011b8bfa4b51a063a3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
