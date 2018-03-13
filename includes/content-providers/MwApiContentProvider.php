@@ -35,6 +35,10 @@ class MwApiContentProvider implements IContentProvider {
 
 			$out->addModules( $parse['modules'] );
 			$out->addModuleStyles( $parse['modulestyles'] );
+			// Forward certain variables so that the page is not registered as "missing"
+			$out->addJsConfigVars( [
+				'wgArticleId' => $parse['pageid'],
+			] );
 
 			return $parse['text'];
 		} else {
