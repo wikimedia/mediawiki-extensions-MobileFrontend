@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e22a8287_a982dd10",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-13T14:54:39Z",
+      "side": 0,
+      "message": "How do we disable wrapping in MW 1.31?",
+      "range": {
+        "startLine": 486,
+        "startChar": 10,
+        "endLine": 486,
+        "endChar": 28
+      },
+      "revId": "f031f0ac0c77cacf8225d12dc7d89e9b0e770e13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
