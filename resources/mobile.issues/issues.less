@@ -12,43 +12,29 @@
 }
 
 // overlay styles
-.overlay {
+.overlay-cleanup {
+
 	.cleanup {
 		li {
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
-				padding-top: ( @smallIconSize * 2.5 );
-				padding-bottom: @smallIconSize;
-
-				// on mobile move the icon above the content
-				&:before {
-					top: @smallIconSize;
-					left: 50%;
-					position: absolute;
-					height: auto;
+				padding: @smallIconSize @smallIconSize @smallIconSize 0;
+				.mw-ui-icon {
+					float: left;
 				}
+			}
+			.hide-when-compact {
+				display: block;
+				font-size: 0.9em;
+				margin: 8px 0;
 			}
 		}
 	}
-}
-
-@media all and ( min-width: @deviceWidthTablet ) {
-	.overlay {
-		.cleanup {
-			li {
-				.issue-notice {
-					padding: 2em 1em 2em ( @largeIconSize + 10px );
-					margin: 0 1em 0 3.35em;
-
-					// FIXME: Please remove this. It should not care about how icons are rendered.
-					&:before {
-						top: 0;
-						left: 0;
-						height: 100%;
-						width: @largeIconSize;
-					}
-				}
-			}
+	.issue-details {
+		padding-left: @smallIconSize * 2.5;
+		// assume date
+		small i {
+			color: @colorGray7;
 		}
 	}
 }
