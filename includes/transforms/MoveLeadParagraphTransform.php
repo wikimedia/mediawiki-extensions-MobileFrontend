@@ -87,13 +87,13 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		$xPathQuery = './/table[starts-with(@class,"infobox") or contains(@class," infobox")]';
 		$infoboxes = $xPath->query( $xPathQuery, $leadSectionBody );
 		$paragraphs = $xPath->query( './p[string-length(text()) > 0]', $leadSectionBody );
-
 		// If we have an infobox without a previous sibling then it's time for action!
 		if ( $infoboxes->length > 0 ) {
 			$infobox = self::getInfoboxContainer( $infoboxes->item( 0 ) );
 			$firstP = $paragraphs->item( 0 );
 
-			if ( $firstP && $infobox && $infobox->parentNode === $leadSectionBody ) {
+			if ( $firstP && $infobox && $infobox->parentNode === $leadSectionBody &&
+				$this->hasNoNonEmptyPrecedingParagraphs( $xPath, $infobox ) ) {
 				$listElementAfterParagraph = null;
 				$where = $infobox;
 
@@ -119,6 +119,31 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Check if there are any non-empty siblings before $element
+	 *
+	 * @param DOMXPath $xPath
+	 * @param DOMElement $element
+	 * @return bool
+	 */
+	private function hasNoNonEmptyPrecedingParagraphs( DOMXPath $xPath, DOMElement $element ) {
+		$node = $element->previousSibling;
+		while ( $node !== null ) {
+			if ( $node->nodeType === XML_ELEMENT_NODE
+				 && $node->tagName === 'p'
+				 && ( $node->hasChildNodes() || $node->nodeValue != '' ) ) {
+
+				// we found a non-empty p element but it might be a coordinates wrapper
+				$coords = $xPath->query( './/span[@id="coordinates"]', $node );
+				if ( $coords->length === 0 ) {
+					return false;
+				}
+			}
+			$node = $node->previousSibling;
+		}
+		return true;
 	}
 
 	/**
