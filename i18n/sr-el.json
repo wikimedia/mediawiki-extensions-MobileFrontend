@@ -59,7 +59,7 @@
 	"mobile-frontend-featured-article": "Današnji izabrani sadržaj",
 	"mobile-frontend-generic-404-desc": "Stranica koju ste tražili nije pronađena.",
 	"mobile-frontend-generic-404-title": "Greška: stranica nije pronađena",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} je napravljen od strane ljudi kao što ste vi.</strong><br />Prijavite se da biste doprinosili.",
+	"mobile-frontend-generic-login-new": "<strong>Sajt <i>{{SITENAME}}</i> prave ljudi poput vas.</strong><br />Prijavite se da biste doprinosili.",
 	"mobile-frontend-history-404-desc": "Ne možete videti istoriju nepostojeće stranice. Verovatno je obrisana ili ste kliknuli na lošu vezu.",
 	"mobile-frontend-history-404-title": "Nema takve stranice",
 	"mobile-frontend-language-heading": "<strong>Jezici</strong>",

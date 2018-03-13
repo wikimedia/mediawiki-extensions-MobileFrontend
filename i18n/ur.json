@@ -40,6 +40,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بائٹ}} کا اضافہ",
 	"mobile-frontend-diffview-bytesnochange": "حجم میں کوئی تبدیلی نہیں ہوئی",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بائٹ}} کا ازالہ",
+	"mobile-frontend-diffview-comma": "$1، $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|ترمیم|ترامیم}}",
 	"mobile-frontend-diffview-title": "تبدیلیاں",
 	"mobile-frontend-donate-image-anon": "براہ کرم اپلوڈز کا صفحہ دیکھنے کے لیے داخل ہوں۔",
@@ -236,6 +237,15 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "عنوان کی وضاحتیں",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "عنوان کے نیچے موجود مضمون کی مختصر وضاحت کے متعلق مزید تفصیلات حاصل کریں",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "حوالہ جات کو محض بوقت ضرورت لوڈ کریں",
+	"mobile-frontend-send-feedback": "اپنے تاثرات ارسال کریں",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "تصاویر کو بوقت ضرورت لوڈ کریں۔",
-	"mobile-frontend-mobile-option-MFLazyLoadImages": "تصاویر کی سست لوڈنگ"
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "تصاویر کی سست لوڈنگ",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "پہلا پیراگراف",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "متن ہمیشہ خانہ معلومات کے اوپر نظر آئے گا جس کی وجہ سے مطالعہ میں مزید سہولت ہوگی۔",
+	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "تمام قطعات کو کھلا رکھیں",
+	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "موبائل سائٹ پر قطعات کے کھلنے اور بند کرنے کو غیر فعال کریں۔",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "فانٹ کا حجم",
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "اپنے مطالعہ کے لحاظ سے فانٹ کا حجم کم زیادہ کریں۔",
+	"mobile-frontend-beta-only": "یہ خصوصیت صرف آزمائشی نسخے میں دستیاب ہے",
+	"mobile-frontend-console-recruit": "ہماری موبائل ویب سائٹ کی تعمیر و ترقی کے متعلق مزید معلومات https://www.mediawiki.org/wiki/Extension:MobileFrontend پر حاصل کریں"
 }
