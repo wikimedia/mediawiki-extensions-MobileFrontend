@@ -1,5 +1,5 @@
 /* global jQuery */
-( function ( M, $ ) {
+( function ( M, config, msg, loader, $ ) {
 	/** @ignore @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		Icon = M.require( 'mobile.startup/Icon' ),
@@ -7,6 +7,63 @@
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' );
+
+	/**
+	 * @param {string} fragment The URL fragment.
+	 * @return {boolean} True if the current URL is based around page or
+	 *                   coordinates (as opposed to current location or search).
+	 *                   e.g.: Special:Nearby#/page/San_Francisco and
+	 *                   Special:Nearby#/coord/0,0.
+	 * @ignore
+	 */
+	function isPageOrCoordFragment( fragment ) {
+		return fragment.match( /^(\/page|\/coord)/ );
+	}
+
+	/**
+	 * @param {string} fragment The URL fragment.
+	 * @return {boolean} True if the current URL doesn't contain an invalid
+	 *                   identifier expression, such as the slash in
+	 *                   Special:Nearby#/search, and probably contains the
+	 *                   target identifier to scroll to.
+	 * @ignore
+	 */
+	function isFragmentIdentifier( fragment ) {
+		return fragment && fragment.indexOf( '/' ) === -1;
+	}
+
+	/**
+	 * Create and inject Refresh icon.
+	 *
+	 * @param {string} container
+	 * @param {Function} refreshCurrentLocation
+	 * @return {jQuery}
+	 * @ignore
+	 */
+	function createRefreshIcon( container, refreshCurrentLocation ) {
+		var $icon,
+			$iconContainer,
+			icon;
+
+		// Create refresh button on the header
+		icon = new Icon( {
+			name: 'refresh',
+			id: 'secondary-button',
+			additionalClassNames: 'main-header-button',
+			// refresh button doesn't perform any action related
+			// to the form when button attribute is used
+			el: $( '<button>' ).attr( 'type', 'button' ),
+			title: msg( 'mobile-frontend-nearby-refresh' ),
+			label: msg( 'mobile-frontend-nearby-refresh' )
+		} );
+		$iconContainer = $( '<div>' );
+
+		$icon = icon.$el.on( 'click', refreshCurrentLocation )
+			.appendTo( $iconContainer );
+
+		$iconContainer.appendTo( '.header' );
+		return $icon;
+	}
 
 	$( function () {
 		var
@@ -24,57 +81,13 @@
 					}
 				}
 			},
-			$btn = $( '#secondary-button' ).parent(),
-			icon,
-			$iconContainer,
-			$icon;
-
-		/**
-		 * @param {string} fragment The URL fragment.
-		 * @return {boolean} True if the current URL is based around page or
-		 *                   coordinates (as opposed to current location or search).
-		 *                   e.g.: Special:Nearby#/page/San_Francisco and
-		 *                   Special:Nearby#/coord/0,0.
-		 * @ignore
-		 */
-		function isPageOrCoordFragment( fragment ) {
-			return fragment.match( /^(\/page|\/coord)/ );
-		}
-
-		/**
-		 * @param {string} fragment The URL fragment.
-		 * @return {boolean} True if the current URL doesn't contain an invalid
-		 *                   identifier expression, such as the slash in
-		 *                   Special:Nearby#/search, and probably contains the
-		 *                   target identifier to scroll to.
-		 * @ignore
-		 */
-		function isFragmentIdentifier( fragment ) {
-			return fragment && fragment.indexOf( '/' ) === -1;
-		}
+			$refreshButton = $( '#secondary-button' ).parent(),
+			$icon = createRefreshIcon( '.header', refreshCurrentLocation );
 
 		// Remove user button
-		if ( $btn.length ) {
-			$btn.remove();
+		if ( $refreshButton.length ) {
+			$refreshButton.remove();
 		}
-
-		// Create refresh button on the header
-		icon = new Icon( {
-			name: 'refresh',
-			id: 'secondary-button',
-			additionalClassNames: 'main-header-button',
-			// refresh button doesn't perform any action related
-			// to the form when button attribute is used
-			el: $( '<button>' ).attr( 'type', 'button' ),
-			title: mw.msg( 'mobile-frontend-nearby-refresh' ),
-			label: mw.msg( 'mobile-frontend-nearby-refresh' )
-		} );
-		$iconContainer = $( '<div>' );
-
-		$icon = icon.$el.on( 'click', refreshCurrentLocation )
-			.appendTo( $iconContainer );
-
-		$iconContainer.appendTo( '.header' );
 
 		/**
 		 * Initialize or instantiate Nearby with options
@@ -87,7 +100,7 @@
 			if ( options.api === undefined ) {
 				// decide, what api module to use to retrieve the pages
 				if ( endpoint ) {
-					mw.loader.using( 'mobile.foreignApi' ).done( function () {
+					loader.using( 'mobile.foreignApi' ).done( function () {
 						var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
 						options.api = new JSONPForeignApi( endpoint );
 					} );
@@ -158,4 +171,4 @@
 		refreshCurrentLocation();
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, mw.config, mw.msg, mw.loader, jQuery ) );
