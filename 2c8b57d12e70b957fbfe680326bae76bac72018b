@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25f12e70_5833c3dd",
+        "filename": "resources/mobile.issues/issues.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-14T13:46:10Z",
+      "side": 1,
+      "message": "What do you think about adding some margin to the side?\n\nMaster: https://phab.wmfusercontent.org/file/data/e7en22n5g3qxlwmkcms2/PHID-FILE-n5pbqqhl5ls4yr5yz7rm/Screenshot_from_2018-03-14_08-42-34.png\nPatchset: https://phab.wmfusercontent.org/file/data/ri5fm4v24srccsomjist/PHID-FILE-4qbh6ohv5ka5dyqodpfe/Screenshot_from_2018-03-14_08-42-31.png",
+      "revId": "2c8b57d12e70b957fbfe680326bae76bac72018b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
