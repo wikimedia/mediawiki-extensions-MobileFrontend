@@ -255,14 +255,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			}
 		}
 
-		// FIXME: This check can removed when MobileFrontend drops compatibility
-		// The CommentStore introduced was Ic3a434c
-		if ( class_exists( \CommentStore::class ) ) {
-			$commentQuery = \CommentStore::newKey( 'rc_comment' )->getJoin();
-			$tables += $commentQuery['tables'];
-			$fields += $commentQuery['fields'];
-			$join_conds += $commentQuery['joins'];
-		}
+		$commentQuery = CommentStore::getStore()->getJoin( 'rc_comment' );
+		$tables += $commentQuery['tables'];
+		$fields += $commentQuery['fields'];
+		$join_conds += $commentQuery['joins'];
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
 		// Until 1.22, MediaWiki used an array here. Since 1.23 (Iec4aab87), it uses a FormOptions
@@ -367,13 +363,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->renderListHeaderWhereNeeded( $date );
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
-		if ( class_exists( \CommentStore::class ) ) {
-			$comment = $this->formatComment(
-				CommentStore::newKey( 'rc_comment' )->getComment( $row )->text, $title
-			);
-		} else {
-			$comment = $this->formatComment( $row->rc_comment, $title );
-		}
+		$comment = $this->formatComment(
+			CommentStore::getStore()->getComment( 'rc_comment', $row )->text, $title
+		);
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$username = $row->rc_user != 0
 			? htmlspecialchars( $row->rc_user_text )
