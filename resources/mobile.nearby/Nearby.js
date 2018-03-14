@@ -4,8 +4,7 @@
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		util = M.require( 'mobile.startup/util' ),
-		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
-		icons = M.require( 'mobile.startup/icons' );
+		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' );
 
 	/**
 	 * List of nearby pages
@@ -65,14 +64,10 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {mw.Api} defaults.api
 		 * @cfg {Object} defaults.errorOptions options to pass to a messagebox template
-		 * @cfg {string} defaults.spinner HTML of the spinner icon with a tooltip that
 		 * tells the user that their location is being looked up
 		 */
 		defaults: util.extend( {}, WatchstarPageList.prototype.defaults, {
-			errorOptions: undefined,
-			spinner: icons.spinner( {
-				title: mw.msg( 'mobile-frontend-nearby-loading' )
-			} ).toHtmlString()
+			errorOptions: undefined
 		} ),
 		/**
 		 * Request pages from api based on provided options.
@@ -157,7 +152,6 @@
 		/** @inheritdoc */
 		postRender: function () {
 			if ( !this._isLoading ) {
-				this.$( '.spinner' ).addClass( 'hidden' );
 				this.$( '.page-list' ).removeClass( 'hidden' );
 			}
 			WatchstarPageList.prototype.postRender.apply( this );
@@ -193,7 +187,6 @@
 			var self = this,
 				_super = WatchstarPageList;
 
-			this.$( '.spinner' ).removeClass( 'hidden' );
 			this.$( '.page-list' ).addClass( 'hidden' );
 			if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
 				// Flush any existing list of pages

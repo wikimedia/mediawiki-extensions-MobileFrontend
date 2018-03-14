@@ -3,6 +3,7 @@
 	/** @ignore @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
+		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
@@ -24,7 +25,8 @@
 				}
 			}
 		},
-		$refreshButton = $( '#secondary-button' ).parent();
+		$refreshButton = $( '#secondary-button' ).parent(),
+		overlay = new LoadingOverlay( {} );
 
 	/**
 	 * @param {string} fragment The URL fragment.
@@ -119,6 +121,7 @@
 						$( window ).scrollTop( el.offset().top );
 					}
 				}
+				overlay.hide();
 			} );
 		}
 		nearby.refresh( opt );
@@ -129,6 +132,7 @@
 	 * @ignore
 	 */
 	function refreshCurrentLocation() {
+		overlay.show();
 		refresh( options );
 	}
 
@@ -162,6 +166,7 @@
 	 */
 	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 		$icon.hide();
+		overlay.hide();
 		refresh( util.extend( {}, options, {
 			pageTitle: mw.Uri.decode( pageTitle )
 		} ) );
@@ -170,9 +175,11 @@
 	$icon.hide();
 	router.checkRoute();
 	$( '#showArticles' ).on( 'click', function () {
+		overlay.show();
 		LocationProvider.getCurrentPosition().then( function ( geo ) {
 			router.navigate( '#/coord/' + geo.latitude + ',' + geo.longitude );
 		} ).catch( function ( error ) {
+			overlay.hide();
 			// We want to show the Alert dialog to make sure user sees it
 			switch ( error ) {
 				case 'permission':
