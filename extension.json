@@ -373,6 +373,7 @@
 				"resources/mobile.startup/icon.less",
 				"resources/mobile.startup/panel.less",
 				"resources/mobile.startup/Overlay.less",
+				"resources/mobile.startup/LoadingOverlay.less",
 				"resources/mobile.startup/drawer.less"
 			],
 			"scripts": [

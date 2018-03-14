@@ -12,10 +12,10 @@
 	}
 
 	OO.mfExtend( LoadingOverlay, Overlay, {
+		className: 'overlay overlay-loading',
 		template: mw.template.get( 'mobile.startup', 'LoadingOverlay.hogan' )
 	} );
 
-	M.define( 'mobile.startup/LoadingOverlay', LoadingOverlay )
-		.deprecate( 'mobile.overlays/LoadingOverlay' );
+	M.define( 'mobile.startup/LoadingOverlay', LoadingOverlay );
 
 }( mw.mobileFrontend ) );
