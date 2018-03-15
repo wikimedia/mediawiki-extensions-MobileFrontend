@@ -26,7 +26,7 @@
 			}
 		},
 		$refreshButton = $( '#secondary-button' ).parent(),
-		overlay = new LoadingOverlay( {} );
+		overlay = new LoadingOverlay();
 
 	/**
 	 * @param {string} fragment The URL fragment.
