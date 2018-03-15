@@ -140,14 +140,8 @@
 					return a.dist > b.dist ? 1 : -1;
 				} );
 				d.resolve( pages );
-			}, function ( error, details ) {
-				// FIXME: Refactor errors so that we can return the api result
-				// and avoid unnecessary usage of the util
-				if ( details && details.error && details.error.info ) {
-					d.reject( error, details.error.info );
-				} else {
-					d.reject( error, '' );
-				}
+			}, function ( error ) {
+				d.reject( error );
 			} );
 			return d;
 		}

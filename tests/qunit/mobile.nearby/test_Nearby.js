@@ -13,24 +13,27 @@
 	} );
 
 	QUnit.test( '#render empty list', function ( assert ) {
-		var $el = $( '<div>' ), nearby, opts = {
-			api: api,
-			latitude: 37.7,
-			longitude: -122,
-			range: 1000,
-			el: $el
-		};
+		var $el = $( '<div>' ), nearby,
+			spy = this.spy,
+			opts = {
+				api: api,
+				latitude: 37.7,
+				longitude: -122,
+				range: 1000,
+				el: $el
+			};
 		// eslint-disable-next-line no-new
 		nearby = new Nearby( opts );
 
-		nearby.refresh( opts );
-		assert.ok( this.spy.calledWithMatch( {
-			latitude: 37.7,
-			longitude: -122
-		}, 1000 ), 'Check API got called' );
-		assert.strictEqual( $el.find( 'li' ).length, 0, '0 pages render.' );
-		assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Error message shown.' );
-		assert.strictEqual( $el.find( '.loading' ).is( ':visible' ), false, 'No loader shown.' );
+		return nearby.refresh( opts ).then( function () {
+			assert.ok( spy.calledWithMatch( {
+				latitude: 37.7,
+				longitude: -122
+			}, 1000 ), 'Check API got called' );
+			assert.strictEqual( $el.find( 'li' ).length, 0, '0 pages render.' );
+			assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Error message shown.' );
+			assert.strictEqual( $el.find( '.loading' ).is( ':visible' ), false, 'No loader shown.' );
+		} );
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (2 - has results)', {
@@ -73,23 +76,24 @@
 	} );
 
 	QUnit.test( '#render with a location', function ( assert ) {
-		var $el = $( '<div>' ), nearby, opts = {
-			api: api,
-			latitude: 37.7,
-			longitude: -122,
-			range: 1000,
-			el: $el
-		};
-		// eslint-disable-next-line no-new
+		var $el = $( '<div>' ), nearby,
+			spy = this.spy,
+			opts = {
+				api: api,
+				latitude: 37.7,
+				longitude: -122,
+				range: 1000,
+				el: $el
+			};
 
 		nearby = new Nearby( opts );
-		nearby.refresh( opts );
-		assert.ok( this.spy.calledWithMatch( {
-			latitude: 37.7,
-			longitude: -122
-		}, 1000 ), 'Check API got called' );
-
-		assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
+		return nearby.refresh( opts ).then( function () {
+			assert.ok( spy.calledWithMatch( {
+				latitude: 37.7,
+				longitude: -122
+			}, 1000 ), 'Check API got called' );
+			assert.strictEqual( $el.find( 'li' ).length, 3, '3 pages render.' );
+		} );
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
@@ -113,8 +117,7 @@
 				el: $el
 			};
 		nearby = new Nearby( opts );
-		nearby.refresh( opts );
-		this.deferred.fail( function () {
+		return nearby.refresh( opts ).then( function () {
 			assert.ok( spy.calledWithMatch( {
 				latitude: 37.7,
 				longitude: -122
@@ -124,7 +127,6 @@
 				nearby.errorMessages.http.heading, 'Check it is the correct heading' );
 			done.resolve();
 		} );
-		return done;
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
