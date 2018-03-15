@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b81ea82_145774d5",
+        "filename": "resources/mobile.startup/LoadingOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-15T00:22:35Z",
+      "side": 1,
+      "message": "Neat! I didn\u0027t realize we could use flex! I also see there\u0027s some precedence in MinervaNeue, one of which uses -webkit-box for fallback. I guess we can use that later if we need to.",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "b9b50db19f43a1f316908420c415963fc565ebd0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
