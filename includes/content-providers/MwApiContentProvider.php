@@ -24,7 +24,8 @@ class MwApiContentProvider implements IContentProvider {
 	public function getHTML() {
 		$out = $this->out;
 		$title = $out->getTitle();
-		$url = $this->baseUrl . '?formatversion=2&format=json&action=parse&prop=text|modules&page=';
+		$query = 'action=parse&prop=text|modules|langlinks&page=';
+		$url = $this->baseUrl . '?formatversion=2&format=json&' . $query;
 		$url .= $title->getPrefixedDBKey();
 		$url .= '&useskin=' . $this->skinName;
 
@@ -37,8 +38,17 @@ class MwApiContentProvider implements IContentProvider {
 			$out->addModuleStyles( $parse['modulestyles'] );
 			// Forward certain variables so that the page is not registered as "missing"
 			$out->addJsConfigVars( [
+				// Routes all MediaWiki Api queries via same host
+				'wgScriptPath' => $this->baseUrl,
 				'wgArticleId' => $parse['pageid'],
 			] );
+			if ( array_key_exists( 'langlinks', $parse ) ) {
+				$langlinks = [];
+				foreach ( $parse['langlinks'] as $lang ) {
+					$langlinks[] = ':' . $lang['lang'] . ':' . $lang['title'];
+				}
+				$out->setLanguageLinks( $langlinks );
+			}
 
 			return $parse['text'];
 		} else {
