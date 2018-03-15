@@ -5,7 +5,9 @@
 	 * @class util
 	 * @singleton
 	 */
-	var util = {};
+	var util = {},
+		log = mw.log, // resource-modules-disable-line
+		mfUtils = M.require( 'mobile.startup/util' );
 
 	/**
 	 * Return the device language if it's in the list of article languages.
@@ -50,6 +52,54 @@
 	}
 
 	/**
+	 * Determine whether a language is LTR or RTL
+	 * This works around T74153 and T189036
+	 *
+	 * @param {Object} language with 'lang' key.
+	 * @return {Object} language with 'lang' key and new 'dir' key.
+	 */
+	util.getDir = function ( language ) {
+		var dir = [
+			'aeb',
+			'aeb-arab',
+			'ar',
+			'arc',
+			'arq',
+			'arz',
+			'azb',
+			'bcc',
+			'bgn',
+			'bqi',
+			'ckb',
+			'dv',
+			'fa',
+			'glk',
+			'he',
+			'khw',
+			'kk-arab',
+			'kk-cn',
+			'ks',
+			'ks-arab',
+			'ku-arab',
+			'lki',
+			'lrc',
+			'luz',
+			'mzn',
+			'pnb',
+			'ps',
+			'sd',
+			'sdh',
+			'skr',
+			'skr-arab',
+			'ug',
+			'ug-arab',
+			'ur',
+			'yi'
+		].indexOf( language.lang ) > -1 ? 'rtl' : 'ltr';
+		return mfUtils.extend( {}, language, { dir: dir } );
+	};
+
+	/**
 	 * Return two sets of languages: suggested and all (everything else)
 	 *
 	 * Suggested languages are the ones that the user has used before. This also
@@ -70,6 +120,7 @@
 	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
 		var maxFrequency = 0,
 			minFrequency = 0,
+			missingDir = 0,
 			suggestedLanguages = [],
 			allLanguages = [];
 
@@ -87,8 +138,22 @@
 			frequentlyUsedLanguages[ deviceLanguage ] = maxFrequency + 1;
 		}
 
+		/**
+		 * @ignore
+		 * @param {Object} language
+		 * @return {Object} which has 'dir' key.
+		 */
+		function addLangDir( language ) {
+			if ( language.dir ) {
+				return language;
+			} else {
+				missingDir++;
+				return util.getDir( language );
+			}
+		}
+
 		// Separate languages into suggested and all languages.
-		languages.forEach( function ( language ) {
+		languages.map( addLangDir ).forEach( function ( language ) {
 			if ( frequentlyUsedLanguages.hasOwnProperty( language.lang ) ) {
 				language.frequency = frequentlyUsedLanguages[ language.lang ];
 				suggestedLanguages.push( language );
@@ -102,7 +167,7 @@
 		// Note that the variants data doesn't contain the article title, thus
 		// we cannot show it for the variants.
 		if ( variants ) {
-			variants.forEach( function ( variant ) {
+			variants.map( addLangDir ).forEach( function ( variant ) {
 				if ( frequentlyUsedLanguages.hasOwnProperty( variant.lang ) ) {
 					variant.frequency = frequentlyUsedLanguages[variant.lang];
 				} else {
@@ -130,6 +195,12 @@
 		}
 
 		allLanguages = allLanguages.sort( compareLanguagesByLanguageName );
+
+		// This works around T74153
+		log.warn(
+			missingDir === 0 ? 'Direction is provided. Please remove handling in getStructuredLanguages' :
+				'`dir` attribute was missing from languages. Is T74153 resolved?'
+		);
 
 		return {
 			suggested: suggestedLanguages,

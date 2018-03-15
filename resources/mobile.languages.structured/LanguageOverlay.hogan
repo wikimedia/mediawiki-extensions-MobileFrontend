@@ -10,7 +10,7 @@
 	<ol class="site-link-list suggested-languages">
 		{{#suggestedLanguages}}
 			<li>
-				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
+				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}" dir="{{dir}}">
 					<span class="autonym">{{autonym}}</span>
 					{{#title}}
 						<span class="title">{{title}}</span>
@@ -26,7 +26,7 @@
 	<ul class="site-link-list all-languages">
 		{{#allLanguages}}
 			<li>
-				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}">
+				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}" dir="{{dir}}">
 					<span class="autonym">{{autonym}}</span>
 					{{#title}}
 						<span class="title">{{title}}</span>
