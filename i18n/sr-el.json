@@ -7,6 +7,7 @@
 			"Obsuser"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Prijavite se ili napravite nalog da biste pratili svoje izmene",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite tekst koji vidite iznad",
 	"mobile-frontend-categories-heading": "<strong>Kategorije</strong>",
 	"mobile-frontend-changeslist-nocomment": "nema opisa izmene",
@@ -83,8 +84,6 @@
 	"mobile-frontend-missing-image": "Slika",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
-	"mobile-frontend-nearby-permission": "{{SITENAME}} Nearby nema dozvolu za pristup vašoj lokaciji.",
-	"mobile-frontend-nearby-permission-guidance": "Dajte dozvolu za lociranje da bi se prikazalo gde se nalazite. Možete proveriti podešavanja za lokaciju u svom pregledaču.",
 	"mobile-frontend-nearby-title": "U blizini",
 	"mobile-frontend-news-items": "Vesti",
 	"mobile-frontend-opt-in-explain": "Koristeći beta verziju, dobijate pristup do probnih mogućnosti, ali s rizikom da dođe do grešaka i problema.",

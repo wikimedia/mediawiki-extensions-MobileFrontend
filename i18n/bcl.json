@@ -45,8 +45,6 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} na Haranihon igwa nin nagkapirang mga isyu.",
 	"mobile-frontend-nearby-error-guidance": "Magprubar na paghunsayon an saimong lokasyon.",
 	"mobile-frontend-nearby-loading": "Ikinakarga an mga tema harani sa saimong lokasyon ngunyan",
-	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} na Haranihon dae nakakanumpong kun yaon saen ka... pakiotroha giraray?",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "Pakiprubar sa sarong bukas na lugar na igwang marhayon na signal.",
 	"mobile-frontend-nearby-noresults": "Matuninongon digde... Mayo nin arinman na mga artikulo an mananagboan sa haranihon.",
 	"mobile-frontend-nearby-noresults-guidance": "Maprubar na magmukna nin sarong baguhong artikulo o magdugang nin lokasyon sa yaon nang eksistido",
 	"mobile-frontend-nearby-refresh": "Kami nakanagbo nin sarong mas eksaktuhong lokasyon para saimo. Paki-klik digde tanganing hunsayon an listahan kan haranihong mga pahina",

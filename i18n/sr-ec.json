@@ -12,6 +12,7 @@
 			"Acamicamacaraca"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Пријавите се или направите налог да бисте пратили своје измене",
 	"mobile-frontend-account-create-captcha-placeholder": "Унесите текст горе",
 	"mobile-frontend-categories-heading": "<strong>Категорије</strong>",
 	"mobile-frontend-changeslist-nocomment": "нема описа измене",
@@ -103,8 +104,6 @@
 	"mobile-frontend-missing-image": "Слика",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
-	"mobile-frontend-nearby-permission": "{{SITENAME}} Nearby нема дозволу за приступ вашој локацији.",
-	"mobile-frontend-nearby-permission-guidance": "Дајте дозволу за лоцирање да би се приказало где се налазите. Можете проверити подешавања за локацију у свом прегледачу.",
 	"mobile-frontend-nearby-refresh": "Освежи",
 	"mobile-frontend-nearby-title": "У близини",
 	"mobile-frontend-news-items": "Вести",

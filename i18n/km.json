@@ -116,8 +116,6 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} នៅក្បែរកំពុងមានបញ្ហាមួយចំនួន។",
 	"mobile-frontend-nearby-error-guidance": "ព្យាយាមផ្ទុកទីតាំងរបស់អ្នកឡើងវិញ។",
 	"mobile-frontend-nearby-loading": "ផ្ទុក​ប្រធាន​បទ​ដែល​នៅ​ទីតាំង​បច្ចុប្បន្ន​របស់​អ្នក",
-	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} នៅក្បែរមិនអាចដឹងពីទីកន្លែងរបស់អ្នកទេ... សូមសាកល្បងម្ដងទៀត",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "សូមសាកល្បងនៅវាលទូលាយដែលមានសេវាល្អជាងនេះ។",
 	"mobile-frontend-nearby-noresults": "រកមិនឃើញទំព័រពីប្រធានបទដែលនៅក្បែរនេះទេ។",
 	"mobile-frontend-nearby-title": "ជិតខាង",
 	"mobile-frontend-news-items": "នៅក្នុងសារព័ត៌មាន",

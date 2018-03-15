@@ -77,8 +77,6 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} халонаш ю.",
 	"mobile-frontend-nearby-error-guidance": "Хьой лаьтта меттиг карлаяккха гӀорта.",
 	"mobile-frontend-nearby-loading": "Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш",
-	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} тарцаделира хьо волу/йолу меттиг билгалъян... Юху гӀорта?",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "Дика зӀе йолу меттиг каро хьажа.",
 	"mobile-frontend-nearby-title": "Уллехь",
 	"mobile-frontend-news-items": "Керланаш",
 	"mobile-frontend-overlay-close": "ДӀачӀагӀа",

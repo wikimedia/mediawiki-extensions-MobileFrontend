@@ -13,6 +13,7 @@
 			"Obsuser"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "Prijavite se ili napravite račun da biste pratili svoje izmjene",
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kod za potvrdu",
 	"mobile-frontend-categories-heading": "<strong>Kategorije</strong>",
@@ -138,12 +139,8 @@
 	"mobile-frontend-nearby-error": "Funkcija \"U blizini\" {{GRAMMAR:genitiv|{{SITENAME}}}} trenutno je u kvaru.",
 	"mobile-frontend-nearby-error-guidance": "Pokušajte osvježiti svoju lokaciju.",
 	"mobile-frontend-nearby-loading": "Učitavam članke u blizini Vaše trenutne lokacije",
-	"mobile-frontend-nearby-lookup-ui-error": "Funkcija \"U blizini\" {{GRAMMAR:genitiv|{{SITENAME}}}} ne može odrediti gdje se nalazi... da pokušam ponovo?",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "Pokušajte na otvorenom području s boljim signalom.",
 	"mobile-frontend-nearby-noresults": "Nije pronađena nijedna stranica s temom u blizini.",
 	"mobile-frontend-nearby-noresults-guidance": "Napravite novu stranicu ili dodajte lokaciju postojećoj",
-	"mobile-frontend-nearby-permission": "{{SITENAME}} nema dozvolu za pristup Vašoj lokaciji.",
-	"mobile-frontend-nearby-permission-guidance": "Dajte dozvolu da bi se prikazalo gdje se nalazite. Možda biste trebali provjeriti lokacijske postavke preglednika.",
 	"mobile-frontend-nearby-refresh": "Osvježi lokaciju",
 	"mobile-frontend-nearby-requirements": "Žao nam je! Vaš internetski preglednik ne podržava uslugu \"U blizini\" {{GRAMMAR:genitiv|{{SITENAME}}}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Pokušajte s drugim preglednikom ili uključite JavaScript ako ste ga isključili.",

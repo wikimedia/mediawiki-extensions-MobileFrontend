@@ -89,8 +89,6 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کيلومتر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1ميتر}}",
 	"mobile-frontend-nearby-error": "د {{SITENAME}} په اطرافو کي ستونزې شتون لري.",
-	"mobile-frontend-nearby-permission": "{{SITENAME}} ستاسو ځای ته د لاسرسي اجازه نه لري.",
-	"mobile-frontend-nearby-permission-guidance": "مهرباني وکړئ ډاډ ترلاسه کړئ چې تاسو دي ته اجازه وي چې چیرته چې تاسو یې یاست. تاسو شايد دي ته اړتیا لرئ چې د خپل براوزر د ځای ترتیبات (سيټينګ)وګورئ.",
 	"mobile-frontend-nearby-title": "نژدې",
 	"mobile-frontend-news-items": "په خبرونو کې",
 	"mobile-frontend-opt-in-explain": "په بيټا کي په ګډون کوني سره، تاسو به وروستي تجريبیي ځانګړتیاو ته لاسرسۍ ومومئ کوم چې کیدای شي د سافټویر نیمګړتیاوو تابع وي.",

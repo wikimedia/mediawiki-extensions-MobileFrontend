@@ -119,8 +119,6 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} Nær her har vanskar.",
 	"mobile-frontend-nearby-error-guidance": "Freist å oppdatera staden din.",
 	"mobile-frontend-nearby-loading": "Lastar inn emne nær staden du er no",
-	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}}-funksjonen «nær her» kan ikkje finna ut kvar du er...freist om att?",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "Freist i eit ope område med betre dekking.",
 	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider nær deg.",
 	"mobile-frontend-nearby-noresults-guidance": "Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.",
 	"mobile-frontend-nearby-refresh": "Me fann ein meir nøyaktig stad for deg. Klikk her for å oppdatera lista over nære sider.",

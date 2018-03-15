@@ -128,8 +128,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 मी.}}",
 	"mobile-frontend-nearby-error-guidance": "अपने स्थान को ताजा करें",
 	"mobile-frontend-nearby-loading": "आपके वर्तमान जगह अनुसार विषय लोड करें",
-	"mobile-frontend-nearby-lookup-ui-error": "{{SITENAME}} आपके जगह का पता नहीं लगा सका... फिर प्रयास करें?",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "खुले जगह में अच्छे नेटवर्क के साथ प्रयास करें",
 	"mobile-frontend-nearby-noresults": "कोई पास में नहीं... आपके जगह के पास वाले विषय से जुड़ा कोई पृष्ठ नहीं मिला।",
 	"mobile-frontend-nearby-refresh": "स्थान का नवीकरण",
 	"mobile-frontend-nearby-title": "समीपस्थ",

@@ -139,7 +139,6 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} Nearby ima određenih poteškoća.",
 	"mobile-frontend-nearby-error-guidance": "Pokušajte osvježiti Vašu lokaciju.",
 	"mobile-frontend-nearby-loading": "Učitavam članke u blizini Vaše trenutačne lokacije",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "Probajte na otvorenom prostoru s boljim signalom.",
 	"mobile-frontend-nearby-noresults": "Tiho je ovdje... Nije nađena niti jedna stranica u blizini.",
 	"mobile-frontend-nearby-noresults-guidance": "Stvorite novu stranicu ili dodajte lokaciju postojećoj",
 	"mobile-frontend-nearby-refresh": "Osvježi lokaciju",

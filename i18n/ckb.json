@@ -74,7 +74,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 م}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} ھەندێک کێشەی ھەیە",
 	"mobile-frontend-nearby-loading": "پیشاندانی بابەتەکانی نزیک شوێنەکەتەوە...",
-	"mobile-frontend-nearby-lookup-ui-error-guidance": "شوێنێکی کراوەتر بە سیگناڵێکی باشترەوە تاقی بکەرەوە",
 	"mobile-frontend-nearby-noresults-guidance": "ھەوڵی دروستکردنی پەڕەیەکی نوێ بدە یان شوێن زیاد بکە بۆ دانەیەک کە ھەیە",
 	"mobile-frontend-news-items": "لە ھەواڵەکاندا",
 	"mobile-frontend-privacy-link-text": "تایبەتێتی",
