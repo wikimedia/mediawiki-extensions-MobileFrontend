@@ -1014,9 +1014,6 @@
 				"mediawiki.router",
 				"mediawiki.Uri"
 			],
-			"messages": [
-				"mobile-frontend-nearby-refresh"
-			],
 			"scripts": [
 				"resources/mobile.special.nearby.scripts/nearby.js"
 			]

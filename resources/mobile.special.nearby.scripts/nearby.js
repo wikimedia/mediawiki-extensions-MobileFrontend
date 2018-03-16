@@ -4,13 +4,11 @@
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
-		Icon = M.require( 'mobile.startup/Icon' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
 		$infoContainer = $( '#mf-nearby-info-holder' ),
-		$icon,
 		nearby,
 		options = {
 			el: $( '#mw-mf-nearby' ),
@@ -25,7 +23,6 @@
 				}
 			}
 		},
-		$refreshButton = $( '#secondary-button' ).parent(),
 		overlay = new LoadingOverlay();
 
 	/**
@@ -50,38 +47,6 @@
 	 */
 	function isFragmentIdentifier( fragment ) {
 		return fragment && fragment.indexOf( '/' ) === -1;
-	}
-
-	/**
-	 * Create and inject Refresh icon.
-	 *
-	 * @param {string} container
-	 * @param {Function} refreshCurrentLocation
-	 * @return {jQuery}
-	 * @ignore
-	 */
-	function createRefreshIcon( container, refreshCurrentLocation ) {
-		var $icon,
-			$iconContainer,
-			icon;
-		// Create refresh button on the header
-		icon = new Icon( {
-			name: 'refresh',
-			id: 'secondary-button',
-			additionalClassNames: 'main-header-button',
-			// refresh button doesn't perform any action related
-			// to the form when button attribute is used
-			el: $( '<button>' ).attr( 'type', 'button' ),
-			title: msg( 'mobile-frontend-nearby-refresh' ),
-			label: msg( 'mobile-frontend-nearby-refresh' )
-		} );
-		$iconContainer = $( '<div>' );
-
-		$icon = icon.$el.on( 'click', refreshCurrentLocation )
-			.appendTo( $iconContainer );
-
-		$iconContainer.appendTo( '.header' );
-		return $icon;
 	}
 
 	/**
@@ -127,21 +92,6 @@
 		nearby.refresh( opt );
 	}
 
-	/**
-	 * Refresh the current view using browser geolocation api
-	 * @ignore
-	 */
-	function refreshCurrentLocation() {
-		overlay.show();
-		refresh( options );
-	}
-
-	$icon = createRefreshIcon( '.header', refreshCurrentLocation );
-	// Remove user button
-	if ( $refreshButton.length ) {
-		$refreshButton.remove();
-	}
-
 	// Routing on the nearby view
 
 	/*
@@ -156,7 +106,6 @@
 
 		$infoContainer.remove();
 		$( 'body' ).removeClass( 'nearby-accept-pending' );
-		$icon.show();
 		// Search with coordinates
 		refresh( options );
 	} );
@@ -165,14 +114,12 @@
 	 * #/page/PageTitle
 	 */
 	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
-		$icon.hide();
 		overlay.hide();
 		refresh( util.extend( {}, options, {
 			pageTitle: mw.Uri.decode( pageTitle )
 		} ) );
 	} );
 
-	$icon.hide();
 	router.checkRoute();
 	$( '#showArticles' ).on( 'click', function () {
 		overlay.show();
