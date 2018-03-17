@@ -116,7 +116,11 @@ class MobileFormatter extends HtmlFormatter {
 
 		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new MobileFormatter( $html, $title );
-		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
+		if ( $isMainPage ) {
+			$formatter->enableExpandableSections( !$mfSpecialCaseMainPage );
+		} else {
+			$formatter->enableExpandableSections( $enableSections );
+		}
 
 		$formatter->setIsMainPage( $isMainPage );
 
