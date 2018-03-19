@@ -171,7 +171,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "Try creating a new page or adding location to an existing one",
 	"mobile-frontend-nearby-permission-denied": "You have denied access to Location Services for {{SITENAME}}. To change this please visit your browser or device settings",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} cannot determine your location. Please try again with a better signal.",
-	"mobile-frontend-nearby-refresh": "Refresh location",
 	"mobile-frontend-nearby-requirements": "Sorry! Your web browser doesn't support {{SITENAME}} Nearby.",
 	"mobile-frontend-nearby-requirements-guidance": "Try a different browser or enable JavaScript if you've disabled it.",
 	"mobile-frontend-nearby-title": "Nearby",
