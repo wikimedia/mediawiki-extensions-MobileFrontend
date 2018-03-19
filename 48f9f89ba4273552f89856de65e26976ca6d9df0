@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "34f29eb2_6b507ec9",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-19T19:21:53Z",
+      "side": 1,
+      "message": "For compat with old HTML, you can add mobile.site.styles to dependencies here. Given that RL now tracks which style modules are loaded, this will no-op on pages that already load it via addModuleStyles(). But helps ensure it via on-demand usage to guide load order (e.g. live preview, VE, and in this case old HTML)",
+      "range": {
+        "startLine": 914,
+        "startChar": 3,
+        "endLine": 914,
+        "endChar": 20
+      },
+      "revId": "48f9f89ba4273552f89856de65e26976ca6d9df0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
