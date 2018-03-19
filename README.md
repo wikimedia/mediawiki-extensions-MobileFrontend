@@ -221,6 +221,17 @@ removed in the near future (hopefully).
 * Type: `Array`
 * Default: `['h1', 'h2', 'h3', 'h4', 'h5', 'h6']`
 
+#### $wgMFSiteStylesRenderBlocking
+
+If set to true, styles inside MediaWiki:Mobile.css will become render blocking.
+
+This is intended for situations where the [TemplateStyles extension](https://m.mediawiki.org/wiki/Mobile_Gateway/TemplateStyles)
+cannot be used. When enabled, this may increase the time it takes for the mobile
+site to render, depending on how large MediaWiki:Mobile.css is for your wiki.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFSpecialCaseMainPage
 
 If set to true, main page HTML will receive special massaging.

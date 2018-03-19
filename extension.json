@@ -917,6 +917,9 @@
 			],
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteModule"
 		},
+		"mobile.site.styles": {
+			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteStylesModule"
+		},
 		"mobile.special.styles": {
 			"targets": "mobile",
 			"styles": [
@@ -1344,6 +1347,7 @@
 		"MFManifestThemeColor": "#222",
 		"MFManifestBackgroundColor": "#fff",
 		"MFLogWrappedInfoboxes": true,
+		"MFSiteStylesRenderBlocking": false,
 		"MFWatchlistEditCountThreshold": 10
 	},
 	"ServiceWiringFiles": [

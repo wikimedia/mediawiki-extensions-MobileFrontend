@@ -15,6 +15,15 @@ class MobileSiteModule extends ResourceLoaderWikiModule {
 	protected $targets = [ 'mobile' ];
 
 	/**
+	 * @inheritDoc
+	 */
+	public function getDependencies( ResourceLoaderContext $context = null ) {
+		// They should always be loaded together, regardless of whether mobile.site.styles
+		// had been made render blocking.
+		return [ 'mobile.site.styles' ];
+	}
+
+	/**
 	 * Get a list of pages used by this module.
 	 *
 	 * @param ResourceLoaderContext $context
@@ -22,7 +31,6 @@ class MobileSiteModule extends ResourceLoaderWikiModule {
 	 */
 	protected function getPages( ResourceLoaderContext $context ) {
 		return [
-			'MediaWiki:Mobile.css' => [ 'type' => 'style' ],
 			'MediaWiki:Mobile.js' => [ 'type' => 'script' ],
 		];
 	}

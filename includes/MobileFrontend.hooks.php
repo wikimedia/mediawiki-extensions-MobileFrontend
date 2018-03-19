@@ -804,6 +804,9 @@ class MobileFrontendHooks {
 			if ( $title->isMainPage() && $config->get( 'MFMobileMainPageCss' ) ) {
 				$out->addModuleStyles( [ 'mobile.mainpage.css' ] );
 			}
+			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
+				$out->addModuleStyles( [ 'mobile.site.styles' ] );
+			}
 
 			// Allow modifications in mobile only mode
 			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
