@@ -26,6 +26,14 @@
 		overlay = new LoadingOverlay();
 
 	/**
+	 * Show the title and hide the info container
+	 * @ignore
+	 */
+	function hideInitialScreen() {
+		$infoContainer.remove();
+		$( 'body' ).removeClass( 'nearby-accept-pending' );
+	}
+	/**
 	 * @param {string} fragment The URL fragment.
 	 * @return {boolean} True if the current URL is based around page or
 	 *                   coordinates (as opposed to current location or search).
@@ -104,8 +112,7 @@
 		options.latitude = lat;
 		options.longitude = lon;
 
-		$infoContainer.remove();
-		$( 'body' ).removeClass( 'nearby-accept-pending' );
+		hideInitialScreen();
 		// Search with coordinates
 		refresh( options );
 	} );
@@ -114,6 +121,7 @@
 	 * #/page/PageTitle
 	 */
 	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
+		hideInitialScreen();
 		overlay.hide();
 		refresh( util.extend( {}, options, {
 			pageTitle: mw.Uri.decode( pageTitle )
