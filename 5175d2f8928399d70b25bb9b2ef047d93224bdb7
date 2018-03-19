@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d443e22e_7411ab2b",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-19T18:31:19Z",
+      "side": 1,
+      "message": "you removed msg param from _errorOptions()",
+      "range": {
+        "startLine": 108,
+        "startChar": 51,
+        "endLine": 108,
+        "endChar": 62
+      },
+      "revId": "5175d2f8928399d70b25bb9b2ef047d93224bdb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
