@@ -79,16 +79,52 @@
 		 * @method
 		 */
 		hideEmptyMessage: function () {
-			this.$( '.empty' ).remove();
+			this.$( '.empty' ).hide();
 		},
 		/**
-		 * Append a photo to the view.
+		 * Shows loading spinner
 		 * @method
-		 * @param {Object} photoData Options describing a new {PhotoItem}
 		 */
-		appendPhoto: function ( photoData ) {
-			new PhotoItem( photoData ).appendTo( this.$list );
-			this.hideEmptyMessage();
+		showSpinner: function () {
+			this.$end.show();
+		},
+		/**
+		 * Hides loading spinner
+		 * @method
+		 */
+		hideSpinner: function () {
+			this.$end.hide();
+		},
+		/**
+		 * Shows/hides empty state if PhotoList is empty.
+		 * @method
+		 */
+		updateEmptyUI: function () {
+			if ( this.isEmpty() ) {
+				this.showEmptyMessage();
+			} else {
+				this.hideEmptyMessage();
+			}
+		},
+		/**
+		 * Append an array of photos to the view.
+		 * @method
+		 * @param {Array} photosData Array of objects describing a new {PhotoItem}
+		 */
+		appendPhotos: function ( photosData ) {
+			var self = this;
+			photosData.forEach( function ( photo ) {
+				new PhotoItem( photo ).appendTo( self.$list );
+			} );
+		},
+		/**
+		 * Enables infinite scroll if it's disabled
+		 * @method
+		 */
+		enableScroll: function () {
+			if ( this.infiniteScroll.enabled === false ) {
+				this.infiniteScroll.enable();
+			}
 		},
 		/**
 		 * Load photos into the view using {{PhotoListApi}} when the end is near
@@ -99,23 +135,26 @@
 		_loadPhotos: function () {
 			var self = this;
 
-			this.gateway.getPhotos().done( function ( photos ) {
-				if ( photos.length ) {
-					photos.forEach( function ( photo ) {
-						self.appendPhoto( photo );
-					} );
-					// try loading more when end is near only if we got photos last time
-					self.infiniteScroll.enable();
-				} else {
-					self.$end.remove();
-					if ( self.isEmpty() ) {
-						self.emit( 'empty' );
-						self.showEmptyMessage();
-					}
+			self.showSpinner();
+
+			this.gateway.getPhotos().then( function ( response ) {
+				var photos = response.photos || [],
+					canContinue = response.canContinue;
+
+				self.appendPhotos( photos );
+				self.updateEmptyUI();
+				if ( canContinue ) {
+					self.enableScroll();
 				}
-			} ).fail( function () {
+
+				self.hideSpinner();
+
+			} ).catch( function () {
+				self.updateEmptyUI();
+				self.hideSpinner();
+
 				// try loading again if request failed
-				self.infiniteScroll.enable();
+				self.enableScroll();
 			} );
 		}
 	} );

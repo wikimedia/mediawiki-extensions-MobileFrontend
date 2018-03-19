@@ -106,33 +106,30 @@
 		getPhotos: function () {
 			var self = this;
 
-			if ( this.canContinue === true ) {
-				return this.api.ajax( this.getQuery() ).then( function ( resp ) {
-					var photos;
-					if ( resp.query && resp.query.pages ) {
-						// FIXME: [API] in an ideal world imageData would be a sorted array
-						// but it is a map of {[id]: page}
-						photos = Object.keys( resp.query.pages ).map( function ( id ) {
-							return self._getImageDataFromPage( resp.query.pages[id] );
-						} ).sort( function ( a, b ) {
-							return a.timestamp < b.timestamp ? 1 : -1;
-						} );
+			return this.api.ajax( this.getQuery() ).then( function ( resp ) {
+				var photos = [];
+				if ( resp.query && resp.query.pages ) {
+					// FIXME: [API] in an ideal world imageData would be a sorted array
+					// but it is a map of {[id]: page}
+					photos = Object.keys( resp.query.pages ).map( function ( id ) {
+						return self._getImageDataFromPage( resp.query.pages[id] );
+					} ).sort( function ( a, b ) {
+						return a.timestamp < b.timestamp ? 1 : -1;
+					} );
+				}
 
-						if ( resp.hasOwnProperty( 'continue' ) ) {
-							self.continueParams = resp.continue;
-						} else {
-							self.canContinue = false;
-						}
+				if ( resp.hasOwnProperty( 'continue' ) ) {
+					self.continueParams = resp.continue;
+				} else {
+					self.canContinue = false;
+				}
 
-						// FIXME: Should reply with a list of PhotoItem or Photo classes.
-						return photos;
-					} else {
-						return [];
-					}
-				} );
-			} else {
-				return util.Deferred().reject();
-			}
+				return {
+					canContinue: self.canContinue,
+					// FIXME: Should reply with a list of PhotoItem or Photo classes.
+					photos: photos
+				};
+			} );
 		}
 	};
 
