@@ -52,7 +52,6 @@
 	"mobile-frontend-nearby-loading": "Agkarkarga kadagiti topiko iti asideg ti agdama a lokasionmo",
 	"mobile-frontend-nearby-noresults": "Naulimek met ditoy… Awan met dagiti aniaman a panid a nabirukan iti asideg.",
 	"mobile-frontend-nearby-noresults-guidance": "Padasem ti agpatuat ti baro a panid wenno agnayon ti lokasion iti maysa nga addan",
-	"mobile-frontend-nearby-refresh": "Nakabiruk kami ti nasaysayaat a lokasion ara kenka. Pindutem ditoy tapno mapasadiwa ti listaan iti asideg a pampanid",
 	"mobile-frontend-nearby-requirements": "Pasensia! Ti pagbasabasam ti web ket saanna a suportaran ti {{SITENAME}} Nearby.",
 	"mobile-frontend-nearby-requirements-guidance": "Padasen ti sabali apagbasabasa wenno pakabaelam ti JavaScript no inbaldadom daytoy.",
 	"mobile-frontend-nearby-title": "Iti asideg",

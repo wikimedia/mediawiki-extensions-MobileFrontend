@@ -121,7 +121,6 @@
 	"mobile-frontend-nearby-loading": "Hleð inn efni sem er í nágrenninu",
 	"mobile-frontend-nearby-noresults": "Það er hljótt hér... Það fundust engar síður um viðfangsefni í nágrenninu.",
 	"mobile-frontend-nearby-noresults-guidance": "Reyndu að búa til nýja síðu eða bæta hniti við síðu sem er til fyrir.",
-	"mobile-frontend-nearby-refresh": "Endurhlaða staðsetningu",
 	"mobile-frontend-nearby-requirements": "Því miður styður vafrinn þinn ekki {{SITENAME}} eiginleikann „í nágrenninu”.",
 	"mobile-frontend-nearby-requirements-guidance": "Reyndu annan vafra eða virkjaðu JavaScript ef þú hefur afvirkjað það.",
 	"mobile-frontend-nearby-title": "Nálægt",

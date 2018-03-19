@@ -107,7 +107,6 @@
 	"mobile-frontend-nearby-loading": "Φόρτωση θεμάτων κοντά στην τρέχουσα τοποθεσία σας",
 	"mobile-frontend-nearby-noresults": "Ησυχία εδώ γύρω... Δεν βρέθηκαν να υπάρχουν σελίδες εδώ κοντά με σχετικά θέματα.",
 	"mobile-frontend-nearby-noresults-guidance": "Δοκιμάστε τη δημιουργία μιας νέας σελίδας ή την προσθήκη τοποθεσίας σε ένα υπάρχον",
-	"mobile-frontend-nearby-refresh": "Ανανέωση τοποθεσίας",
 	"mobile-frontend-nearby-requirements": "Συγνώμη! Ο web browser σας δεν υποστηρίζει το {{SITENAME}} Κοντινά.",
 	"mobile-frontend-nearby-requirements-guidance": "Δοκιμάστε ένα διαφορετικό πρόγραμμα περιήγησης ή ενεργοποιήσετε την JavaScript εάν έχετε την απενεργοποιήσει.",
 	"mobile-frontend-nearby-title": "Κοντινά",

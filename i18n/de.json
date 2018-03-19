@@ -152,7 +152,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "Versuche eine neue Seite zu erstellen oder den Standort für eine vorhandene hinzuzufügen",
 	"mobile-frontend-nearby-permission-denied": "Du hast den Zugriff auf die Standortdienste für {{SITENAME}} abgelehnt. Um dies zu ändern, besuche bitte deinen Browser oder deine Geräteeinstellungen.",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} konnte deinen Standort nicht bestimmen. Bitte versuche es mit einem besseren Signal erneut.",
-	"mobile-frontend-nearby-refresh": "Standort aktualisieren",
 	"mobile-frontend-nearby-requirements": "Leider unterstützt dein Webbrowser nicht „In der Nähe“ von {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Versuche einen anderen Browser oder aktiviere JavaScript, falls deaktiviert.",
 	"mobile-frontend-nearby-title": "In der Nähe",

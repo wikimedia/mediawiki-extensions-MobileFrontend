@@ -181,7 +181,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "Essayez de créer une nouvelle page ou d’ajouter un emplacement à une déjà existante",
 	"mobile-frontend-nearby-permission-denied": "Vous avez refusé l'accès aux services de localisation pour {{SITENAME}}. Pour modifier cela vérifiez la configuration de votre explorateur ou celle de votre équipement",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} ne peut évaluer votre localisation. Veuillez recommencer avec un meilleur signal.",
-	"mobile-frontend-nearby-refresh": "Rafraîchir l’emplacement",
 	"mobile-frontend-nearby-requirements": "Désolé ! Votre navigateur web ne reconnaît pas {{SITENAME}} à proximité.",
 	"mobile-frontend-nearby-requirements-guidance": "Essayez un autre navigateur ou activez JavaScript si vous l'avez désactivé.",
 	"mobile-frontend-nearby-title": "À proximité",

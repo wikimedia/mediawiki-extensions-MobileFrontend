@@ -146,7 +146,6 @@
 	"mobile-frontend-nearby-loading": "Memuat topik di sekitar lokasi Anda",
 	"mobile-frontend-nearby-noresults": "Di luar sana sepi... Tidak ditemukan adanya artikel lain tentang tempat di sekitaran Anda.",
 	"mobile-frontend-nearby-noresults-guidance": "Cobalah membuat sebuah halaman baru atau menambahkan lokasi ke halaman yang sudah ada",
-	"mobile-frontend-nearby-refresh": "Perbarui lokasi",
 	"mobile-frontend-nearby-requirements": "Maaf! Peramban Anda tidak mendukung fitur Sekitaran {{SITENAME}} .",
 	"mobile-frontend-nearby-requirements-guidance": "Cobalah peramban yang lain atau mengaktifkan JavaScript jika Anda telah menonaktifkannya.",
 	"mobile-frontend-nearby-title": "Sekitaran",

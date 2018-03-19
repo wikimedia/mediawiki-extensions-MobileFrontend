@@ -134,7 +134,6 @@
 	"mobile-frontend-nearby-loading": "Đang tải các đề tài gần vị trí của bạn",
 	"mobile-frontend-nearby-noresults": "Đây có vẻ hẻo lánh… Không tìm thấy trang nào về những đề tài lân cận.",
 	"mobile-frontend-nearby-noresults-guidance": "Hãy thử tạo trang mới hoặc định vị một bài đã tồn tại.",
-	"mobile-frontend-nearby-refresh": "Làm mới vị trí",
 	"mobile-frontend-nearby-requirements": "Rất tiếc, trình duyệt của bạn không hỗ trợ {{SITENAME}} Lân cận.",
 	"mobile-frontend-nearby-requirements-guidance": "Hãy thử một trình duyệt khác hoặc kích hoạt JavaScript nếu nó đã bị tắt.",
 	"mobile-frontend-nearby-title": "Lân cận",

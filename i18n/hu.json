@@ -144,7 +144,6 @@
 	"mobile-frontend-nearby-loading": "Közeledben található témák betöltése",
 	"mobile-frontend-nearby-noresults": "Csendes környék… Nem találhatók közeli témájú lapok.",
 	"mobile-frontend-nearby-noresults-guidance": "Próbálj készíteni egy új lapot vagy hozzáadni elhelyezkedést egy meglévőhöz.",
-	"mobile-frontend-nearby-refresh": "Helyzet frissítése",
 	"mobile-frontend-nearby-requirements": "Sajnáljuk, de a böngésződ nem támogatja a(z) {{SITENAME}} Közelbent.",
 	"mobile-frontend-nearby-requirements-guidance": "Próbálkozz egy másik böngészővel, vagy engedélyezd a JavaSriptet, ha letiltottad.",
 	"mobile-frontend-nearby-title": "Közelben",

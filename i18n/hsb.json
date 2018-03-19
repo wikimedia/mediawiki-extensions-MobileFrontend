@@ -63,7 +63,6 @@
 	"mobile-frontend-nearby-error": "Funkcija \"blisko {{GRAMMAR:genitiw|{{SITENAME}}}}\" ma někotre problemy.",
 	"mobile-frontend-nearby-loading": "Temy začitać, kotrež su w bliskosći twojeho městna",
 	"mobile-frontend-nearby-noresults": "Zboha měrne tu... W bliskosći njejsu so žane strony namakali.",
-	"mobile-frontend-nearby-refresh": "Smy dokładniše stejnišćo za tebje namakali. Klikń tu, zo by lisćinu ze stronami w bliskosći aktualizował",
 	"mobile-frontend-nearby-requirements": "Bohužel twój wobhladowak funkciju \"blisko {{GRAMMAR:genitiw|{{SITENAME}}}}\" njepodpěruje.",
 	"mobile-frontend-nearby-requirements-guidance": "Spytaj druhi wobhladowak abo zmóžń JavaScript, jeli sy jón znjemóžnił.",
 	"mobile-frontend-nearby-title": "W bliskosći",

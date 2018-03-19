@@ -141,7 +141,6 @@
 	"mobile-frontend-nearby-loading": "Učitavam članke u blizini Vaše trenutačne lokacije",
 	"mobile-frontend-nearby-noresults": "Tiho je ovdje... Nije nađena niti jedna stranica u blizini.",
 	"mobile-frontend-nearby-noresults-guidance": "Stvorite novu stranicu ili dodajte lokaciju postojećoj",
-	"mobile-frontend-nearby-refresh": "Osvježi lokaciju",
 	"mobile-frontend-nearby-requirements": "Žao nam je! Vaš internetski preglednik ne podržava uslugu »U blizini« projekta {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Probajte s drugim preglednikom ili omogućite JavaScript ako je onemogućen.",
 	"mobile-frontend-nearby-title": "U blizini",

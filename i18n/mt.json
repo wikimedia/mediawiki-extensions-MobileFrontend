@@ -25,7 +25,6 @@
 	"mobile-frontend-nearby-loading": "Telgħin xi artikli qrib il-pożizzjoni attwali tiegħek",
 	"mobile-frontend-nearby-noresults": "Jidher kwiet f'dawn in-naħat… m'għandna l-ebda artiklu f'dawn in-naħat.",
 	"mobile-frontend-nearby-noresults-guidance": "Prova ibda artiklu ġdid jew iżżid lokalità fuq wieħed eżistenti",
-	"mobile-frontend-nearby-refresh": "Aġġorna l-post",
 	"mobile-frontend-nearby-requirements": "Jiddispjaċina! Il-browżer tiegħek ma jsostnix \"Fil-qrib\" ta' {{SITENAME}}.",
 	"mobile-frontend-nearby-title": "Fil-qrib",
 	"mobile-frontend-news-items": "Fl-aħbarijiet",

@@ -145,7 +145,7 @@
 	"mobile-frontend-nearby-loading": "Carregant articles propers a la vostra localització actual",
 	"mobile-frontend-nearby-noresults": "Sou enmig d'enlloc... No hem pogut trobar cap pàgina d'un tema a prop.",
 	"mobile-frontend-nearby-noresults-guidance": "Proveu de crear una nova pàgina o afegiu la ubicació d'una d'existent",
-	"mobile-frontend-nearby-refresh": "Actualitza la localització",
+	"mobile-frontend-nearby-location-unavailable": "El lloc {{SITENAME}} no pot determinar la vostra ubicació. Proveu-ho novament quan tingueu un senyal millor.",
 	"mobile-frontend-nearby-requirements": "Ho lamentem! El vostre navegador web no suporta {{SITENAME}} A prop.",
 	"mobile-frontend-nearby-requirements-guidance": "Proveu amb un altre navegador o activeu JavaScript si l'heu desactivat.",
 	"mobile-frontend-nearby-title": "A prop",

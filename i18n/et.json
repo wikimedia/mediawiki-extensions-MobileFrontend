@@ -130,7 +130,6 @@
 	"mobile-frontend-nearby-loading": "Laaditakse sinu lähiümbrusega seotud teemasid.",
 	"mobile-frontend-nearby-noresults": "Valitseb tühjus... Läheduses paiknevate nähtuste kohta ei leidu ühtegi lehekülge.",
 	"mobile-frontend-nearby-noresults-guidance": "Proovi alustada uue leheküljega või lisada olemasolevale asukoht.",
-	"mobile-frontend-nearby-refresh": "Värskenda asukohta",
 	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu brauser {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
 	"mobile-frontend-nearby-requirements-guidance": "Proovi teist brauserit või luba JavaScript, juhul kui oled selle keelanud.",
 	"mobile-frontend-nearby-title": "Lähikond",

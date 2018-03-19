@@ -78,7 +78,6 @@
 	"mobile-frontend-nearby-loading": "Yn llwytho pynciau addas at eich cyffiniau",
 	"mobile-frontend-nearby-noresults": "Mae'n llonydd yma... Ni chafwyd dim tudalen gerllaw.",
 	"mobile-frontend-nearby-noresults-guidance": "Ceisiwch ddechrau tudalen newydd neu ychwanegu lleoliad i dudalen sydd ar gael eisoes.",
-	"mobile-frontend-nearby-refresh": "Adfywio'r lleoliad",
 	"mobile-frontend-nearby-requirements": "Ymddiheurwn! Nid yw eich porwr gwe yn cynnal Gerllaw ar {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Ceisiwch ddefnyddio porwr arall, neu galluogwch JavaScript os ydy hwnnw wedi ei analluogi gennych.",
 	"mobile-frontend-nearby-title": "Gerllaw",

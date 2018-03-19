@@ -148,7 +148,6 @@
 	"mobile-frontend-nearby-loading": "Onderwerpen dichtbij u aan het laden",
 	"mobile-frontend-nearby-noresults": "Het is hier rustig. Er zijn geen pagina's over onderwerpen in de buurt.",
 	"mobile-frontend-nearby-noresults-guidance": "Probeer een nieuwe pagina aan te maken of een locatie toe te voegen aan een bestaande pagina.",
-	"mobile-frontend-nearby-refresh": "Locatie verversen",
 	"mobile-frontend-nearby-requirements": "Uw browser ondersteunt helaas geen In de buurt voor {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Gebruik een andere browser of schakel JavaScript in als u die functie hebt uitgeschakeld.",
 	"mobile-frontend-nearby-title": "In de buurt",

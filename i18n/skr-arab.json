@@ -40,7 +40,6 @@
 	"mobile-frontend-missing-image": "تصویر",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کلومیٹر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 میٹر}}",
-	"mobile-frontend-nearby-refresh": "مقام تازہ کرو",
 	"mobile-frontend-nearby-title": "نیڑے",
 	"mobile-frontend-news-items": "خبراں وچ",
 	"mobile-frontend-overlay-close": "بند کرو",

@@ -58,7 +58,6 @@
 	"mobile-frontend-nearby-loading": "Commentationes prope stationem tuam quaeruntur",
 	"mobile-frontend-nearby-noresults": "Apparet nullas commentationes inveniri posse.",
 	"mobile-frontend-nearby-noresults-guidance": "Novam commentationem incipere aut locum commentationis statuere",
-	"mobile-frontend-nearby-refresh": "Locus accuratior invenitur. Hic indicem paginarum vicinarum renovare potes.",
 	"mobile-frontend-nearby-requirements": "Ad paginam {{SITENAME}} spectandam JavaScript atque navigatrum capax locum destinandi necessaria sunt.",
 	"mobile-frontend-nearby-requirements-guidance": "Alterum navigatrum adhibe aut JavaScript expedi.",
 	"mobile-frontend-nearby-title": "Paginae vicinae",

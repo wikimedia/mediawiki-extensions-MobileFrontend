@@ -164,7 +164,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "حاول إنشاء صفحة جديدة أو إضافة الموقع لصفحة موجودة",
 	"mobile-frontend-nearby-permission-denied": "لقد رفضت الوصول إلى خدمات الموقع ل{{SITENAME}}، لتغيير هذا تُرجَى زيارة إعدادات متصفحك أو جهازك",
 	"mobile-frontend-nearby-location-unavailable": "لا يمكن ل{{SITENAME}} تحديد موقعك; تُرجَى المحاولة مرة أخرى مع إشارة أفضل.",
-	"mobile-frontend-nearby-refresh": "عثرنا على مكان أدق لك. انقر هنا لإنعاش قائمة الصفحات القريبة.",
 	"mobile-frontend-nearby-requirements": "نعتذر! متصفحك لا يدعم الصفحات القريبة في {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "جرّب متصفحا آخرًا أو مكّن جافاسكربت إذا كنت عطلتها.",
 	"mobile-frontend-nearby-title": "بالقرب من هنا",

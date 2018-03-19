@@ -139,7 +139,6 @@
 	"mobile-frontend-nearby-loading": "Cargando os temas próximos á súa localización actual",
 	"mobile-frontend-nearby-noresults": "Calma por aquí... Non se atoparon páxinas con temas próximos.",
 	"mobile-frontend-nearby-noresults-guidance": "Probe a crear unha nova páxina ou a engadir a localización a unha que xa exista",
-	"mobile-frontend-nearby-refresh": "Actualizar a localización",
 	"mobile-frontend-nearby-requirements": "Sentímolo! O seu navegador web non soporta o sistema de localización de {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Probe cun navegador diferente ou active o JavaScript se o ten desactivado.",
 	"mobile-frontend-nearby-title": "Preto",

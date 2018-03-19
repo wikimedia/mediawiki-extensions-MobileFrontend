@@ -106,7 +106,6 @@
 	"mobile-frontend-nearby-error-guidance": "محل خود را به‌روز کنید.",
 	"mobile-frontend-nearby-loading": "بارگذاری موضوع‌های نزدیک به مکان فعلی شما",
 	"mobile-frontend-nearby-noresults-guidance": "تلاش کنید صفحه‌ای تازه بسازید و یا به صفحه‌های کنونی مختصات‌دهی کنید",
-	"mobile-frontend-nearby-refresh": "به‌روزرسانی موقعیت",
 	"mobile-frontend-nearby-requirements": "پوزش! مرورگر وب شما تقریباً {{SITENAME}} را پشتیبانی نمی‌کند.",
 	"mobile-frontend-nearby-requirements-guidance": "یک مرورگر دیگر را امتحان کنید یا جاوااسکریپت را فعال کنید اگر این را غیرفعال کرده بودید.",
 	"mobile-frontend-nearby-title": "نۀزیکی",

@@ -112,7 +112,6 @@
 	"mobile-frontend-nearby-loading": "Indlæser emner der ligger i nærheden",
 	"mobile-frontend-nearby-noresults": "Stille herude... Der var ikke nogen sider i nærheden.",
 	"mobile-frontend-nearby-noresults-guidance": "Prøv at oprette en ny side eller tilføje placering til en eksisterende",
-	"mobile-frontend-nearby-refresh": "Opdater placering",
 	"mobile-frontend-nearby-requirements": "Beklager! Din web browser understøtter ikke {{SITENAME}} i Nærheden.",
 	"mobile-frontend-nearby-requirements-guidance": "Prøv en anden browser eller aktiver JavaScript, hvis du har deaktiveret det.",
 	"mobile-frontend-nearby-title": "I nærheden",

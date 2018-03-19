@@ -81,7 +81,6 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کلومتر چارگوش}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 متر}}",
 	"mobile-frontend-nearby-error-guidance": "سی د نو کردن جاگه تو تلاش بکیت.",
-	"mobile-frontend-nearby-refresh": "د نؤ کردن جاگه",
 	"mobile-frontend-nearby-title": "نزیک",
 	"mobile-frontend-news-items": "د حوال",
 	"mobile-frontend-overlay-close": "بسن",

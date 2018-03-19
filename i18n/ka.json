@@ -96,7 +96,6 @@
 	"mobile-frontend-nearby-error": "გვერდების ძიებისას მოხდა მოულოდნელი შეცდომა, რაც დაკავშირებულია თქვენ ადგილმდებარეობასთან",
 	"mobile-frontend-nearby-loading": "ინფორმაციის ჩატვირთვა იმის შესახებ, რაც თქვენ ადგილსამყოფელთან ახლოს მდებარეობს",
 	"mobile-frontend-nearby-noresults": "თქვენ იმყოფებით გაურკვევლობის ცენტრში და ჩვენ ვერ შევძელით შესაბამისი თემების მოძიება. იქნებ დაწეროთ ერთი მათგანი?",
-	"mobile-frontend-nearby-refresh": "მდებარეობის განახლება",
 	"mobile-frontend-nearby-requirements": "ეს გვერდი მოითხოვს, რომ ჩართული იყოს JavaScript  და ბრაუზერმა შეძლოს ინფორმაციის მიღება ადგილმდებარეობის შესახებ.",
 	"mobile-frontend-nearby-title": "ახლოს",
 	"mobile-frontend-news-items": "სიახლეებში",

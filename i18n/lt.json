@@ -143,7 +143,6 @@
 	"mobile-frontend-nearby-loading": "Įkeliami puslapiai, aprašantys objektus esančius netoli jūsų vietos",
 	"mobile-frontend-nearby-noresults": "Tylu... Nerasta jokių netoliese esančių objektų puslapių.",
 	"mobile-frontend-nearby-noresults-guidance": "Pabandykite sukurti naują puslapį arba pridėti vietovę prie jau egzistuojančio",
-	"mobile-frontend-nearby-refresh": "Įkelti dabartinę vietą",
 	"mobile-frontend-nearby-requirements": "Atsiprašome! Jūsų naršyklė nepalaiko {{SITENAME}} funkcijos Netoliese.",
 	"mobile-frontend-nearby-requirements-guidance": "Išbandykite kitą naršyklę arba aktyvuokite JavaScript, jeigu jį išjungėte.",
 	"mobile-frontend-nearby-title": "Netoliese",

@@ -130,7 +130,6 @@
 	"mobile-frontend-nearby-loading": "Muatkeun jejer sabudeureun lokasi anjeun",
 	"mobile-frontend-nearby-noresults": "Di luar téh meni tiiseun... Teu manggihan artikel séjén ngeunaan tempat di sabudeureun anjeun.",
 	"mobile-frontend-nearby-noresults-guidance": "Coba jieunkeun kaca anyar atawa tambahkeun lokasi kana kaca nu geus aya",
-	"mobile-frontend-nearby-refresh": "Segerkeun deui lokasi",
 	"mobile-frontend-nearby-requirements": "Hampura! Panyungsi anjeun teu mikarojong fitur Sabudeureun {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Coba panyungsu nu séjén atawa hurungkeun JavaScript mun bisi anjeun mareumanna.",
 	"mobile-frontend-nearby-title": "Sabudeureun",

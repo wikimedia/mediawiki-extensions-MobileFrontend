@@ -168,7 +168,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "تلاش کنید صفحه‌ای تازه بسازید و یا به صفحه‌های کنونی مختصات‌دهی کنید",
 	"mobile-frontend-nearby-permission-denied": "دسترسی شما به خدمات موقعیت {{SITENAME}} مسدود است. برای تغییر آن لطفا تنظیمات دستگاه‌تان یا مرورگرتان را بررسی کنید.",
 	"mobile-frontend-nearby-location-unavailable": "وبگاه {{SITENAME}} نمی‌تواند موقعیت شما را مشخص کند. لطفا زمانی که سیگنال بهتری داشتید از نو اقدام کنید.",
-	"mobile-frontend-nearby-refresh": "به‌روزرسانی موقعیت",
 	"mobile-frontend-nearby-requirements": "پوزش! مرورگر وب شما تقریباً {{SITENAME}} را پشتیبانی نمی‌کند.",
 	"mobile-frontend-nearby-requirements-guidance": "یک مرورگر دیگر را امتحان کنید یا جاوااسکریپت را فعال کنید اگر آن را غیرفعال کرده بودید.",
 	"mobile-frontend-nearby-title": "در نزدیکی",

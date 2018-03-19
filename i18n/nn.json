@@ -121,7 +121,6 @@
 	"mobile-frontend-nearby-loading": "Lastar inn emne nær staden du er no",
 	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider nær deg.",
 	"mobile-frontend-nearby-noresults-guidance": "Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.",
-	"mobile-frontend-nearby-refresh": "Me fann ein meir nøyaktig stad for deg. Klikk her for å oppdatera lista over nære sider.",
 	"mobile-frontend-nearby-requirements": "Diverre stør ikkje nettlesaren {{SITENAME}}-funksjonen «Nær her».",
 	"mobile-frontend-nearby-requirements-guidance": "Freist ein annan nettlesar eller slå på JavaScript om du har slege det av.",
 	"mobile-frontend-nearby-title": "Nær her",

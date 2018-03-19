@@ -118,7 +118,6 @@
 	"mobile-frontend-nearby-loading": "Carrecanno voce vicin' 'a posizione vosta",
 	"mobile-frontend-nearby-noresults": "Dorme 'o vico ncopp'a nonna nonna... Nun ce stevano paggene cu teme ca fossero vicine a lloco.",
 	"mobile-frontend-nearby-noresults-guidance": "Pruvate a crià na paggena nova o d'azzeccà 'e coordinate a na paggena ch'esistesse già.",
-	"mobile-frontend-nearby-refresh": "Aggiuorna 'a posizione",
 	"mobile-frontend-nearby-requirements": "Ce dispiace! 'O browser vuosto nun suppuorta \"Avvicino\" 'e {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Pròva 'ausanno n'atu browser o appiccia 'o JavaScript si l'avite stutato.",
 	"mobile-frontend-nearby-title": "Avvicino",

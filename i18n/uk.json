@@ -155,7 +155,6 @@
 	"mobile-frontend-nearby-loading": "Завантаження інформації про те, що знаходиться поблизу Вас",
 	"mobile-frontend-nearby-noresults": "Тихо тут… Ніяких сторінок не знайдено у темах поблизу.",
 	"mobile-frontend-nearby-noresults-guidance": "Спробуйте створити нову сторінку або додайте розташування до вже існуючої",
-	"mobile-frontend-nearby-refresh": "Оновити місцеположення",
 	"mobile-frontend-nearby-requirements": "На жаль! Веб-переглядач неподалік не підтримує {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Спробуйте інший браузер або увімкніть JavaScript, якщо Ви його вимкнули.",
 	"mobile-frontend-nearby-title": "Поблизу",

@@ -107,7 +107,6 @@
 	"mobile-frontend-nearby-loading": "Memuatkan topik yang berdekatan dengan kedudukan semasa anda",
 	"mobile-frontend-nearby-noresults": "Sunyinya...\nLangsung tak ada halaman dekat sini.",
 	"mobile-frontend-nearby-noresults-guidance": "Cuba wujudkan halaman baru atau berikan lokasi pada halaman yang sedia ada",
-	"mobile-frontend-nearby-refresh": "Kemaskinikan lokasi",
 	"mobile-frontend-nearby-requirements": "Maaf! Pelayar sesawang anda tidak menyokong {{SITENAME}} Nearby.",
 	"mobile-frontend-nearby-requirements-guidance": "Cubalah pelayar yang lain atau hidupkan JavaScript jika ia belum dihidupkan.",
 	"mobile-frontend-nearby-title": "Berdekatan",

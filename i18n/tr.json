@@ -145,7 +145,6 @@
 	"mobile-frontend-nearby-loading": "Bulunduğunuz konuma en yakın konular yükleniyor",
 	"mobile-frontend-nearby-noresults": "Burası epey sessiz... Size yakın konuma uygun bir içerik bulunamadı.",
 	"mobile-frontend-nearby-noresults-guidance": "Yeni bir sayfa oluşturmayı veya mevcut konumunuzu eklemeyi deneyin",
-	"mobile-frontend-nearby-refresh": "Konumu yenile",
 	"mobile-frontend-nearby-requirements": "Üzgünüz! Veb tarayıcınız {{SITENAME}} yakınındakileri desteklemiyor.",
 	"mobile-frontend-nearby-requirements-guidance": "Farklı bir tarayıcı deneyin veya JavaScript devredışı bırakılmışsa etkinleştirin.",
 	"mobile-frontend-nearby-title": "Yakınındakiler",

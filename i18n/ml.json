@@ -126,7 +126,6 @@
 	"mobile-frontend-nearby-loading": "താങ്കൾ നിൽക്കുന്ന സ്ഥാനത്തിനു സമീപമുള്ള വിഷയങ്ങൾ ശേഖരിക്കുന്നു",
 	"mobile-frontend-nearby-noresults": "ഏകാന്തതയുടെ അപാരതീരം... സമീപസ്ഥമായി ഞങ്ങൾക്ക് വിഷയങ്ങളൊന്നും കണ്ടെത്താനായില്ല.",
 	"mobile-frontend-nearby-noresults-guidance": "പുതിയൊരു താൾ സൃഷ്ടിക്കാൻ ശ്രമിക്കുക അല്ലെങ്കിൽ നിലവിലുള്ള ഒന്നിൽ ഒരു പുതിയ സ്ഥാനം ചേർക്കുക",
-	"mobile-frontend-nearby-refresh": "സ്ഥാനം പുതുക്കുക",
 	"mobile-frontend-nearby-requirements": "ക്ഷമിക്കുക! താങ്കളുടെ വെബ് ബ്രൗസർ {{SITENAME}} സമീപസ്ഥം സൗകര്യം പിന്തുണയ്ക്കുന്നില്ല.",
 	"mobile-frontend-nearby-requirements-guidance": "മറ്റൊരു ബ്രൗസർ പരീക്ഷിക്കുക അല്ലെങ്കിൽ ജാവാസ്ക്രിപ്റ്റ് സജ്ജമല്ലെങ്കിൽ സജ്ജമാക്കി നൽകുക.",
 	"mobile-frontend-nearby-title": "സമീപസ്ഥം",

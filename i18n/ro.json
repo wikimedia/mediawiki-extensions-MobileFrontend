@@ -128,7 +128,6 @@
 	"mobile-frontend-nearby-loading": "Se încarcă subiecte din apropierea dumneavoastră",
 	"mobile-frontend-nearby-noresults": "Cam liniște pe aici... Nu s-a găsit nicio pagină cu subiecte din apropiere.",
 	"mobile-frontend-nearby-noresults-guidance": "Încercați să creați o pagină nouă sau să adăugați localizarea pentru una deja existentă",
-	"mobile-frontend-nearby-refresh": "Reactualizează localizarea",
 	"mobile-frontend-nearby-requirements": "Ne pare rău! Navigatorul dumneavoastră nu suportă funcția În apropiere a proiectului {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Încercați un alt navigator sau activați javascript în cazul în care l-ați dezactivat.",
 	"mobile-frontend-nearby-title": "În apropiere",

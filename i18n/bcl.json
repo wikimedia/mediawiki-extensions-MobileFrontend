@@ -47,7 +47,6 @@
 	"mobile-frontend-nearby-loading": "Ikinakarga an mga tema harani sa saimong lokasyon ngunyan",
 	"mobile-frontend-nearby-noresults": "Matuninongon digde... Mayo nin arinman na mga artikulo an mananagboan sa haranihon.",
 	"mobile-frontend-nearby-noresults-guidance": "Maprubar na magmukna nin sarong baguhong artikulo o magdugang nin lokasyon sa yaon nang eksistido",
-	"mobile-frontend-nearby-refresh": "Kami nakanagbo nin sarong mas eksaktuhong lokasyon para saimo. Paki-klik digde tanganing hunsayon an listahan kan haranihong mga pahina",
 	"mobile-frontend-nearby-requirements": "Sori! An saimong pangilyaw sa web dae tabi minasuporta sa {{SITENAME}} na Haranihon.",
 	"mobile-frontend-nearby-requirements-guidance": "Pakiprubar kan ibang kilyawan o paganahon an JavaScript kun dae mo ini pinagana.",
 	"mobile-frontend-nearby-title": "Haranihon",

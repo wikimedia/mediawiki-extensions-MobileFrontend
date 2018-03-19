@@ -105,7 +105,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error-guidance": "Сіздің орналасқан жеріңізді жаңартуды көріңіз.",
 	"mobile-frontend-nearby-loading": "Сіздің орналасқан жеріңізге жақын аумақтардың тақырыптары жүктелуде",
-	"mobile-frontend-nearby-refresh": "Орналасуды жаңарту",
 	"mobile-frontend-nearby-requirements": "Кешіріңіз! Сіздің уеб шолғышыңыз {{SITENAME}} Айналадағылар қосымшасын қолдамайды.",
 	"mobile-frontend-nearby-title": "Айналада",
 	"mobile-frontend-news-items": "Жаңалықтар",

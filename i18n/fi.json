@@ -146,7 +146,6 @@
 	"mobile-frontend-nearby-loading": "Ladataan aiheita, jotka ovat lähellä nykyistä sijaintiasi",
 	"mobile-frontend-nearby-noresults": "Täällä on hiljaista... Lähistöltä ei löytynyt sivuja.",
 	"mobile-frontend-nearby-noresults-guidance": "Kokeile uuden sivun luomista tai lisätä sijainti olemassaolevaan sivuun",
-	"mobile-frontend-nearby-refresh": "Päivitä sijainti",
 	"mobile-frontend-nearby-requirements": "Selaimesi ei tue sivuston {{SITENAME}} Lähistöllä-toimintoa.",
 	"mobile-frontend-nearby-requirements-guidance": "Kokeile eri selainta tai ota JavaScriptin käyttöön, jos se on kytketty pois.",
 	"mobile-frontend-nearby-title": "Lähistöllä",

@@ -140,7 +140,6 @@
 	"mobile-frontend-nearby-loading": "আপনার বর্তমান অবস্থানের কাছাকাছি বিষয়বস্তু লোড করা হচ্ছে",
 	"mobile-frontend-nearby-noresults": "এখান থেকে যান.. এখানে কাছাকাছি প্রসঙ্গের কোন পাতা পাওয়া যায়নি।",
 	"mobile-frontend-nearby-noresults-guidance": "একটি নতুন পাতা তৈরি বা একটি বিদ্যমান পাতায় একটি অবস্থান যুক্ত করার চেষ্টা করুন",
-	"mobile-frontend-nearby-refresh": "অবস্থান পুনঃসতেজ করুন",
 	"mobile-frontend-nearby-requirements": "দুঃখিত! আপনার ওয়েব ব্রাউজার {{SITENAME}} কাছাকাছি সমর্থন করে না",
 	"mobile-frontend-nearby-requirements-guidance": "একটি ভিন্ন ব্রাউজার ব্যবহার করে দেখুন বা জাভাস্ক্রিপ্ট নিষ্ক্রিয় করে থাকলে তা সক্রিয় করুন।",
 	"mobile-frontend-nearby-title": "কাছাকাছি",

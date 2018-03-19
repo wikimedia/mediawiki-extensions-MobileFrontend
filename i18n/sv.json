@@ -151,7 +151,6 @@
 	"mobile-frontend-nearby-noresults-guidance": "Prova att skapa en ny sida eller lägga till en plats till en befintlig",
 	"mobile-frontend-nearby-permission-denied": "Du har nekats åtkomst till platstjänster för {{SITENAME}}. För att ändra detta, gå till dina webbläsar- eller enhetsinställningar",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} kan inte bestämma din plats. Var god försök igen med en bättre täckning.",
-	"mobile-frontend-nearby-refresh": "Uppdatera plats",
 	"mobile-frontend-nearby-requirements": "Tyvärr stödjer inte din webbläsare {{SITENAME}}s funktion \"Närliggande\".",
 	"mobile-frontend-nearby-requirements-guidance": "Prova en annan webbläsare eller aktivera JavaScript om du har inaktiverat det.",
 	"mobile-frontend-nearby-title": "I närheten",

@@ -148,7 +148,6 @@
 	"mobile-frontend-nearby-loading": "現在地付近の話題を読み込み中",
 	"mobile-frontend-nearby-noresults": "トピックの付近に関するページはありませんでした。",
 	"mobile-frontend-nearby-noresults-guidance": "新しいページを作ったり、既存のページに位置を追加したりしてみてください。",
-	"mobile-frontend-nearby-refresh": "位置情報を更新",
 	"mobile-frontend-nearby-requirements": "申し訳ありませんが、ご使用中のブラウザーは{{SITENAME}}の付近検索に対応していません。",
 	"mobile-frontend-nearby-requirements-guidance": "別のブラウザーを試すか、または JavaScript を無効にしている場合は有効にしてください。",
 	"mobile-frontend-nearby-title": "付近",

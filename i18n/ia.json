@@ -86,7 +86,6 @@
 	"mobile-frontend-nearby-loading": "Carga topicos a presso de tu position actual",
 	"mobile-frontend-nearby-noresults": "Es calme hic... Il non ha paginas con themas vicin.",
 	"mobile-frontend-nearby-noresults-guidance": "Tenta crear un nove pagina o adder un position geographic a un pagina existente.",
-	"mobile-frontend-nearby-refresh": "Refrescar ubication",
 	"mobile-frontend-nearby-requirements": "Regrettabilemente, tu navigator del web non supporta \"{{SITENAME}} a proximitate\".",
 	"mobile-frontend-nearby-requirements-guidance": "Proba un altere navigator o activa JavaScript si tu lo ha disactivate.",
 	"mobile-frontend-nearby-title": "A proximitate",

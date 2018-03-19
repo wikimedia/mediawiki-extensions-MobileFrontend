@@ -142,7 +142,6 @@
 	"mobile-frontend-nearby-loading": "آپ کے موجودہ مقام کے پاس پڑوس سے متعلق موضوعات لوڈ ہو رہے ہیں",
 	"mobile-frontend-nearby-noresults": "آپ کے پاس پڑوس سے متعلق کوئی مضمون دستیاب نہیں ہوا۔",
 	"mobile-frontend-nearby-noresults-guidance": "نیا صفحہ بنائیں یا موجود صفحے کا مقام شامل کریں",
-	"mobile-frontend-nearby-refresh": "مقام تازہ کریں",
 	"mobile-frontend-nearby-requirements": "معذرت، آپ کا براؤزر {{SITENAME}} میں پاس پڑوس کی سہولت کو معاونت فراہم نہیں کرتا۔",
 	"mobile-frontend-nearby-requirements-guidance": "کسی دوسرے براؤزر میں کوشش کریں یا اگر آپ نے جاوا اسکرپٹ غیر فعال کر رکھی ہو تو اسے فعال کریں۔",
 	"mobile-frontend-nearby-title": "آس پاس",
