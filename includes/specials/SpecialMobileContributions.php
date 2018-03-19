@@ -165,11 +165,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
 
 		if ( $this->user ) {
-			if ( $this->user->getId() ) {
-				$conds['rev_user'] = $this->user->getId();
-			} else {
-				$conds['rev_user_text'] = $this->user->getName();
-			}
+			// Code in SpecialMobileHistory handles the tables and joins
+			$conds[] = ActorMigration::newMigration()->getWhere( $dbr, 'rev_user', $this->user )['conds'];
 		}
 
 		$currentUser = $this->getContext()->getUser();
