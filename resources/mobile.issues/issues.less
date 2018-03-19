@@ -23,15 +23,23 @@
 					float: left;
 				}
 			}
+
+			small,
+			.hide-when-compact {
+				font-size: 0.8em;
+			}
+
 			.hide-when-compact {
 				display: block;
-				font-size: 0.8em;
 				margin: 8px 0;
 			}
 		}
 	}
+
 	.issue-details {
-		padding-left: @smallIconSize * 2.5;
+		// This should match the icon width for the overlay close icon
+		//  which is derived from these two variables:
+		padding-left: @iconSize + ( 2 * @iconGutterWidth );
 		// assume date
 		small i {
 			color: @colorGray7;
