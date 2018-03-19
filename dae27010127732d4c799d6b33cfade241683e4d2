@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5fb4ca16_69b7446d",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-19T23:13:31Z",
+      "side": 1,
+      "message": "What do you think about reducing the indent instead? Something like:\n\n var util \u003d {\n   fail: function() { assert.ok(false, arguments); }\n }\n\n function req(ref) {\n   return referencesGateway.getReference( ref, page )\n     .then( undefined, util.fail )\n }\n\n var promise \u003d $.Deferred();\n promise \u003d promise.then(function() { return req( \u0027#cite_note-1\u0027 ); });\n promise \u003d promise.then(function() { return req( \u0027#cite_note-2\u0027 ); });\n promise \u003d promise.then(function() { assert.ok(...); });\n return promise;",
+      "revId": "dae27010127732d4c799d6b33cfade241683e4d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
