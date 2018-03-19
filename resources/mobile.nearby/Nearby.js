@@ -100,12 +100,11 @@
 			 * Handler for failed query
 			 *
 			 * @param {string} code Error Code
-			 * @param {string} details A html-safe string with ad detailed error description
 			 * @ignore
 			 */
-			function pagesError( code, details ) {
+			function pagesError( code ) {
 				self._isLoading = false;
-				options.errorOptions = self._errorOptions( code, details );
+				options.errorOptions = self._errorOptions( code );
 				result.resolve( options );
 			}
 
@@ -116,13 +115,10 @@
 						longitude: options.longitude
 					},
 					this.range, options.exclude
-				)
-					.done( pagesSuccess )
-					.fail( pagesError );
+				).then( pagesSuccess, pagesError );
 			} else if ( options.pageTitle ) {
 				this.nearbyApi.getPagesAroundPage( options.pageTitle, this.range )
-					.done( pagesSuccess )
-					.fail( pagesError );
+					.then( pagesSuccess, pagesError );
 			} else {
 				if ( options.errorType ) {
 					options.errorOptions = this._errorOptions( options.errorType );
@@ -138,13 +134,8 @@
 		 * @param {string} msg Message to use, instead of a mapped error message from this.errorMessages
 		 * @return {Object}
 		 */
-		_errorOptions: function ( key, msg ) {
-			var message;
-			if ( msg ) {
-				message = { msg: msg };
-			} else {
-				message = this.errorMessages[ key ] || this.errorMessages.http;
-			}
+		_errorOptions: function ( key ) {
+			var message = this.errorMessages[ key ] || this.errorMessages.http;
 			return util.extend( {
 				className: 'errorbox'
 			}, message );
@@ -182,27 +173,31 @@
 		 * to find the articles.
 		 *
 		 * @param {Object} options Configuration options
+		 * @throws {Error} If Nearby has not been initialised correctly.
+		 * @return {jQuery.Deferred}
 		 */
 		refresh: function ( options ) {
 			var self = this,
 				_super = WatchstarPageList;
 
 			this.$( '.page-list' ).addClass( 'hidden' );
+			// Run it once for loader etc
+			this._isLoading = true;
 			if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
 				// Flush any existing list of pages
 				options.pages = [];
 
 				// Get some new pages
-				this._find( options ).done( function ( options ) {
+				return this._find( options ).then( function ( options ) {
 					_super.call( self, options );
-				} ).fail( function ( errorType ) {
+				}, function ( errorType ) {
 					options.errorOptions = self._errorOptions( errorType );
 					self._isLoading = false;
 					_super.call( self, options );
 				} );
+			} else {
+				throw new Error( 'No title or longitude, latitude options have been passed' );
 			}
-			// Run it once for loader etc
-			this._isLoading = true;
 		}
 	} );
 
