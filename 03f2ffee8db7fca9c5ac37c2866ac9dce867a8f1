@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8d3a46f_042efcca",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-19T18:16:46Z",
+      "side": 1,
+      "message": "A better name might be showNearbyResults or hideInitialScreen ?",
+      "revId": "03f2ffee8db7fca9c5ac37c2866ac9dce867a8f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
