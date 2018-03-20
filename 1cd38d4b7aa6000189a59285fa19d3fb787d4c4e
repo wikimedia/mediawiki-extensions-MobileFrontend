@@ -144,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "9840dcfa_182b4f95",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T16:17:56Z",
+      "side": 1,
+      "message": "For my own understanding, here\u0027s the behavior I see:\n\n\n \u003e var primitive \u003d \"foo\";\n \u003e primitive.prop \u003d \"bar\";\n \u003e typeof primitive\n \u0027string\u0027\n \u003e Object.keys(primitive)\n[ \u00270\u0027, \u00271\u0027, \u00272\u0027 ]\n\n\n \u003e var object \u003d new String(\"foo\");\n \u003e object.prop \u003d \"bar\";\n \u003e typeof object\n\u0027object\u0027\n \u003e Object.keys(object)\n[ \u00270\u0027, \u00271\u0027, \u00272\u0027, \u0027prop\u0027 ]\n\n\nIf it\u0027s not already enabled, we can investigate turning on valid-jsdoc after we make the switch. I\u0027ve used eslint-plugin-jsdoc in the past too. It has some nice features but I think it has some issues as well but we should evaluate that too!",
+      "parentUuid": "5d4e6c98_8811b727",
+      "range": {
+        "startLine": 142,
+        "startChar": 12,
+        "endLine": 142,
+        "endChar": 20
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08ea9d46_f207849f",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 4
