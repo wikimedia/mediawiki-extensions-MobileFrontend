@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2ab2ed9f_9b667efb",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T15:47:18Z",
+      "side": 1,
+      "message": "No, dir attribute has no impact on styling  - note CSS Janus only runs on the target language and doesn\u0027t help where different languages are in the page.",
+      "parentUuid": "bf87c472_f5e6f64c",
+      "range": {
+        "startLine": 43,
+        "startChar": 3,
+        "endLine": 43,
+        "endChar": 21
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7c8fcfe6_5d99bf99",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-20T15:05:24Z",
       "side": 1,
       "message": "Should we make this its own type instead of changing string? How about {dir: string, lang: string}?",
+      "range": {
+        "startLine": 142,
+        "startChar": 12,
+        "endLine": 142,
+        "endChar": 20
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e79949e3_b97e3ed5",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T15:47:18Z",
+      "side": 1,
+      "message": "What would be the advantage in passing it in in this form?\n\n(Note cannot use @typedef in MobileFrontend)",
+      "parentUuid": "7c8fcfe6_5d99bf99",
       "range": {
         "startLine": 142,
         "startChar": 12,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "56037df8_9727522b",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T15:47:18Z",
+      "side": 1,
+      "message": "Direction will either be provided or not. If it\u0027s missing for one language the issue is actually in the API query or API layer.",
+      "parentUuid": "b98d7a45_5466c0f7",
+      "range": {
+        "startLine": 200,
+        "startChar": 3,
+        "endLine": 200,
+        "endChar": 13
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eecf335d_da139d8d",
         "filename": "tests/qunit/mobile.languages.structured/test_util.js",
         "patchSetId": 4
@@ -82,6 +154,30 @@
       "writtenOn": "2018-03-20T15:05:24Z",
       "side": 1,
       "message": "rtl?",
+      "range": {
+        "startLine": 15,
+        "startChar": 11,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14743fb7_ca38ceaa",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T15:47:18Z",
+      "side": 1,
+      "message": "Haha. I just made them all ltr for the purpose of the test. For completeness I can make the RTL languages RTL ;-)\n\nI\u0027m not totally convinced we need to generate the list like this - it\u0027s possible we could simplify it using some dummy names e.g. lang: \u0027lang1\u0027, title: \u0027Language 1\u0027",
+      "parentUuid": "eecf335d_da139d8d",
       "range": {
         "startLine": 15,
         "startChar": 11,
