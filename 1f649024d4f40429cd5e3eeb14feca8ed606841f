@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "363ebacf_34d0e8dd",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-20T18:31:50Z",
+      "side": 1,
+      "message": "Is there a name for that?",
+      "parentUuid": "0aec59fe_9f55c284",
+      "range": {
+        "startLine": 102,
+        "startChar": 2,
+        "endLine": 102,
+        "endChar": 18
+      },
+      "revId": "1f649024d4f40429cd5e3eeb14feca8ed606841f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "98cda833_029e46e8",
         "filename": "resources/mobile.gallery/PhotoList.js",
         "patchSetId": 2
@@ -77,6 +101,24 @@
       "writtenOn": "2018-03-20T16:06:32Z",
       "side": 1,
       "message": "This could also be a second argument to then. Doesn\u0027t need to be a catch right?",
+      "revId": "1f649024d4f40429cd5e3eeb14feca8ed606841f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa51477_ad9011d4",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-20T18:31:50Z",
+      "side": 1,
+      "message": "The catch happens when there\u0027s an error in the request, so like... choppy internet connection or something like that. In that case it will re-enable the scroller and try again\u0010.",
+      "parentUuid": "1767aaaa_78c59263",
       "revId": "1f649024d4f40429cd5e3eeb14feca8ed606841f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
