@@ -22,6 +22,30 @@
       "revId": "632f5c56e396b4330b408b2b8af0d7b8a2d97ebc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "757eff5c_8047d5bb",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T20:08:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "015b7fc4_606f3363",
+      "range": {
+        "startLine": 76,
+        "startChar": 3,
+        "endLine": 76,
+        "endChar": 21
+      },
+      "revId": "632f5c56e396b4330b408b2b8af0d7b8a2d97ebc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
