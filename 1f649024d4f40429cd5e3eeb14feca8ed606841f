@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "0aec59fe_9f55c284",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:25:22Z",
+      "side": 1,
+      "message": "When I think of toggling, I think of unconditional flipping. This isn\u0027t so much a toggle on the empty state as updating the UI empty message based on the current this.$list state so it\u0027s safe to call redundantly.",
+      "range": {
+        "startLine": 102,
+        "startChar": 2,
+        "endLine": 102,
+        "endChar": 18
+      },
+      "revId": "1f649024d4f40429cd5e3eeb14feca8ed606841f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "98cda833_029e46e8",
         "filename": "resources/mobile.gallery/PhotoList.js",
         "patchSetId": 2
