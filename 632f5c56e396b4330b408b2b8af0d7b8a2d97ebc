@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "015b7fc4_606f3363",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-20T18:13:50Z",
+      "side": 1,
+      "message": "The ok(false) handler was added in 76926d061db0, but doesn\u0027t really need to stay. Matching a static number of assertions is no longer needed for QUnit, given it will ensure all assertions are either reached or the test fails.",
+      "range": {
+        "startLine": 76,
+        "startChar": 3,
+        "endLine": 76,
+        "endChar": 21
+      },
+      "revId": "632f5c56e396b4330b408b2b8af0d7b8a2d97ebc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
