@@ -10,6 +10,16 @@
 	 */
 	util = {
 		/**
+		 * Escape a string for use as a css selector
+		 *
+		 * @method
+		 * @param {string} selector
+		 * @return {string}
+		 */
+		escapeSelector: function ( selector ) {
+			return $.escapeSelector( selector );
+		},
+		/**
 		 * Wrapper class for the $.grep
 		 *
 		 * @method
