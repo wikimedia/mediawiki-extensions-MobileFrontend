@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf87c472_f5e6f64c",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:05:24Z",
+      "side": 1,
+      "message": "Why do we need this? Isn\u0027t dir well supported and already sets the directionality?",
+      "range": {
+        "startLine": 43,
+        "startChar": 3,
+        "endLine": 43,
+        "endChar": 21
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c8fcfe6_5d99bf99",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:05:24Z",
+      "side": 1,
+      "message": "Should we make this its own type instead of changing string? How about {dir: string, lang: string}?",
+      "range": {
+        "startLine": 142,
+        "startChar": 12,
+        "endLine": 142,
+        "endChar": 20
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b98d7a45_5466c0f7",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:05:24Z",
+      "side": 1,
+      "message": "This is useful in itself but do we want to make this an array and push the missing language(s) so we can report it here?",
+      "range": {
+        "startLine": 200,
+        "startChar": 3,
+        "endLine": 200,
+        "endChar": 13
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eecf335d_da139d8d",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:05:24Z",
+      "side": 1,
+      "message": "rtl?",
+      "range": {
+        "startLine": 15,
+        "startChar": 11,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99a6ddbb_38b4b49c",
+        "filename": "tests/qunit/mobile.languages.structured/test_util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T15:05:24Z",
+      "side": 1,
+      "message": "SHould this be rtl?",
+      "range": {
+        "startLine": 150,
+        "startChar": 12,
+        "endLine": 150,
+        "endChar": 15
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
