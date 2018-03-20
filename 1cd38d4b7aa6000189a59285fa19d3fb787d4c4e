@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "5d4e6c98_8811b727",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T16:09:01Z",
+      "side": 1,
+      "message": "\u003e Furthermore, this requires a string object (via `new String()`, not a primitive). My\n?!\nNo it just requires a string. I\u0027m suprised eslint didn\u0027t complain. This should be {string}.",
+      "parentUuid": "b872979d_834eb6ee",
+      "range": {
+        "startLine": 142,
+        "startChar": 12,
+        "endLine": 142,
+        "endChar": 20
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08ea9d46_f207849f",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 4
@@ -131,6 +155,30 @@
       "writtenOn": "2018-03-20T16:06:06Z",
       "side": 1,
       "message": "This returns `{0: \"f\", 1: \"o\", 2: \"o\", dir: \"rtl\"}` (for language `\"foo\"`) which seems unintuitive.",
+      "range": {
+        "startLine": 150,
+        "startChar": 18,
+        "endLine": 150,
+        "endChar": 79
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b14c5f65_04dc9455",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-20T16:09:01Z",
+      "side": 1,
+      "message": "ah okay, i think i get what you are saying above. No problem.",
+      "parentUuid": "08ea9d46_f207849f",
       "range": {
         "startLine": 150,
         "startChar": 18,
