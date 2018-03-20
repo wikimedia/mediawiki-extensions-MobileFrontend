@@ -34,6 +34,29 @@
       "revId": "dae27010127732d4c799d6b33cfade241683e4d2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ce9b83f_3cdef053",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-20T02:37:00Z",
+      "side": 1,
+      "message": "For future reference, use assert.async() when tracking flows manually. The indirection with Deferred is not needed in that case. For this commit though, should be fixed with a one-line change from always() to then(), per the other comment.",
+      "range": {
+        "startLine": 80,
+        "startChar": 3,
+        "endLine": 80,
+        "endChar": 18
+      },
+      "revId": "dae27010127732d4c799d6b33cfade241683e4d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
