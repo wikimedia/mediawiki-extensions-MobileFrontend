@@ -96,6 +96,53 @@
     },
     {
       "key": {
+        "uuid": "b872979d_834eb6ee",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T16:06:06Z",
+      "side": 1,
+      "message": "Regardless of whether we have the graces of JSDoc, when a codebase changes even an instance of a string\u0027s typing, I feel much less confident about what the types are and trying to reason about state is much more difficult in general because fundamental types are overloaded and therefore less meaningful and distinctive. Furthermore, this requires a string object (via `new String()`, not a primitive). My take is that if we need a custom type, let\u0027s make a custom type, even if it\u0027s only for readability. Sorry for the rant!",
+      "parentUuid": "e79949e3_b97e3ed5",
+      "range": {
+        "startLine": 142,
+        "startChar": 12,
+        "endLine": 142,
+        "endChar": 20
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08ea9d46_f207849f",
+        "filename": "resources/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-20T16:06:06Z",
+      "side": 1,
+      "message": "This returns `{0: \"f\", 1: \"o\", 2: \"o\", dir: \"rtl\"}` (for language `\"foo\"`) which seems unintuitive.",
+      "range": {
+        "startLine": 150,
+        "startChar": 18,
+        "endLine": 150,
+        "endChar": 79
+      },
+      "revId": "1cd38d4b7aa6000189a59285fa19d3fb787d4c4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b98d7a45_5466c0f7",
         "filename": "resources/mobile.languages.structured/util.js",
         "patchSetId": 4
