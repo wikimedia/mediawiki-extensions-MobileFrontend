@@ -16,6 +16,24 @@
       "revId": "dae27010127732d4c799d6b33cfade241683e4d2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3bee197_dde929ba",
+        "filename": "tests/qunit/mobile.references.gateway/test_ReferencesMobileViewGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-20T02:20:28Z",
+      "side": 1,
+      "message": "Avoid wrapping $.Deferred manually. This is an anti-pattern that we\u0027ve been trying to phase out, not introduce more of.\n\nAs far as I can tell, the only problem with the original code was its use of \"always\" instead of \"then\" because it was trying to return inside the always() callback with another  promise to wait for, but always() is not chainable, only then() is.\n\nThe failure mode doesn\u0027t matter because QUnit already asserts the waited-for promise succeeds. If it fails, then it will report it for you as a failure.",
+      "parentUuid": "5fb4ca16_69b7446d",
+      "revId": "dae27010127732d4c799d6b33cfade241683e4d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
