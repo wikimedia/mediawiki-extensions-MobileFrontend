@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "755878d3_7e66aecd",
+        "filename": "resources/mobile.gallery/PhotoList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-03-20T10:09:06Z",
+      "side": 0,
+      "message": "I removed an \u0027empty\u0027 event here. I couldn\u0027t find anything that was using it. \nI.e. searching for \".on( \u0027empty\u0027\" in my editor returns zero results.",
+      "range": {
+        "startLine": 112,
+        "startChar": 6,
+        "endLine": 112,
+        "endChar": 27
+      },
+      "revId": "63bcf05eee50a8d5b0ad27460f7ba022120e5e2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
