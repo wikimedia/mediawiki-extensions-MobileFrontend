@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3af4aa4d_8ed30bdf",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1299,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-03-21T18:13:19Z",
+      "side": 1,
+      "message": "Would it be safer to use a name without a period?",
+      "range": {
+        "startLine": 1299,
+        "startChar": 3,
+        "endLine": 1299,
+        "endChar": 23
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
