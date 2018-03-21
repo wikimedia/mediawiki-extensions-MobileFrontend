@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "21b1ff71_6ff25fea",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-21T18:23:52Z",
+      "side": 1,
+      "message": "can we come with different name, especially the part `.css` is kinda strange, all different settings follow a camelcase style.",
+      "range": {
+        "startLine": 191,
+        "startChar": 6,
+        "endLine": 191,
+        "endChar": 28
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3af4aa4d_8ed30bdf",
         "filename": "extension.json",
         "patchSetId": 1
@@ -22,6 +45,29 @@
       "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8d417cc_974810df",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-03-21T18:23:52Z",
+      "side": 1,
+      "message": "probably we also need to check the config variable here",
+      "range": {
+        "startLine": 804,
+        "startChar": 8,
+        "endLine": 804,
+        "endChar": 29
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
