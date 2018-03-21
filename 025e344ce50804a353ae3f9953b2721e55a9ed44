@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "951de039_2f24ce6e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-21T18:41:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "21b1ff71_6ff25fea",
+      "range": {
+        "startLine": 191,
+        "startChar": 6,
+        "endLine": 191,
+        "endChar": 28
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3af4aa4d_8ed30bdf",
         "filename": "extension.json",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "991364c8_abfd7d4d",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1299,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-21T18:41:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3af4aa4d_8ed30bdf",
+      "range": {
+        "startLine": 1299,
+        "startChar": 3,
+        "endLine": 1299,
+        "endChar": 23
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e8d417cc_974810df",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2018-03-21T18:23:52Z",
       "side": 1,
       "message": "probably we also need to check the config variable here",
+      "range": {
+        "startLine": 804,
+        "startChar": 8,
+        "endLine": 804,
+        "endChar": 29
+      },
+      "revId": "025e344ce50804a353ae3f9953b2721e55a9ed44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34a5a2da_88c9d7f8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-21T18:41:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8d417cc_974810df",
       "range": {
         "startLine": 804,
         "startChar": 8,
