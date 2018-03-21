@@ -908,6 +908,9 @@
 				"resources/mobile.infiniteScroll/InfiniteScroll.js"
 			]
 		},
+		"mobile.mainpage.css": {
+			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
+		},
 		"mobile.site": {
 			"dependencies": [
 				"mobile.startup"
@@ -1293,6 +1296,7 @@
 			"name": "prefixsearch",
 			"prefix": "ps"
 		},
+		"MFMobileMainPageCss": false,
 		"MFMinCachedPageSize": 65536,
 		"MFAutodetectMobileView": false,
 		"MFVaryOnUA": false,

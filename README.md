@@ -188,6 +188,14 @@ Must implement IContentProvider.
 * Default: `DefaultContentProvider`
 
 
+#### $wgMFMobileMainPageCss
+
+Allow editors to edit MediaWiki:MobileMainPage.css to serve render blocking css to the main
+page.
+
+* Type: `boolean`
+* Default: false
+
 #### $wgMFMwApiContentProviderBaseUri
 
 URL to be used by the MwApiMobileFormatter class. Points to a MediaWiki
