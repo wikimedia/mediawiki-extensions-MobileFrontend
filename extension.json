@@ -47,7 +47,8 @@
 	},
 	"AutoloadNamespaces": {
 		"MobileFrontend\\Transforms\\": "includes/transforms/",
-		"MobileFrontend\\Features\\" : "includes/features/"
+		"MobileFrontend\\Features\\" : "includes/features/",
+		"MobileFrontend\\ResourceLoaderModules\\": "includes/modules/"
 	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
@@ -65,7 +66,6 @@
 		"ApiWebappManifest": "includes/api/ApiWebappManifest.php",
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
-		"MobileSiteModule": "includes/modules/MobileSiteModule.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
@@ -79,7 +79,6 @@
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
-		"MFResourceLoaderParsedMessageModule": "includes/modules/MFResourceLoaderParsedMessageModule.php",
 		"MobileFrontend\\Devices\\DeviceDetector": "includes/devices/DeviceDetector.php",
 		"MobileFrontend\\Devices\\DeviceProperties": "includes/devices/DeviceProperties.php",
 		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
@@ -432,7 +431,7 @@
 			]
 		},
 		"mobile.editor.common": {
-			"class": "MFResourceLoaderParsedMessageModule",
+			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"oojs-ui",
 				"mobile.editor.api",
@@ -528,7 +527,7 @@
 			}
 		},
 		"mobile.search": {
-			"class": "MFResourceLoaderParsedMessageModule",
+			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mobile.pagelist.scripts",
 				"mobile.startup",
@@ -787,7 +786,7 @@
 			]
 		},
 		"mobile.languages.structured": {
-			"class": "MFResourceLoaderParsedMessageModule",
+			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
 			"dependencies": [
 				"mediawiki.storage",
 				"mobile.startup"
@@ -913,7 +912,7 @@
 			"dependencies": [
 				"mobile.startup"
 			],
-			"class": "MobileSiteModule"
+			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteModule"
 		},
 		"mobile.special.styles": {
 			"targets": "mobile",

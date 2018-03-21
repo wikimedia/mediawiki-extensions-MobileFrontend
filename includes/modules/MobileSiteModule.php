@@ -1,5 +1,10 @@
 <?php
 
+namespace MobileFrontend\ResourceLoaderModules;
+
+use ResourceLoaderWikiModule;
+use ResourceLoaderContext;
+
 /**
  * Alternate of ResourceLoaderSiteModule for mobile web.
  * Mobile.[css|js] is a temporary drop-in replacement for Common.css/js which contains JS that

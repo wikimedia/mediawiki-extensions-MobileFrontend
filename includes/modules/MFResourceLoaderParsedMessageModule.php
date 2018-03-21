@@ -1,4 +1,12 @@
 <?php
+
+namespace MobileFrontend\ResourceLoaderModules;
+
+use ResourceLoaderFileModule;
+use ResourceLoaderContext;
+use DerivativeResourceLoaderContext;
+use Xml;
+
 /**
  * ResourceLoaderModule subclass for mobile
  * Allows basic parsing of messages without arguments
