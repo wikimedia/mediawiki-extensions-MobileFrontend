@@ -34,4 +34,12 @@
 		return done;
 	} );
 
+	QUnit.test( 'checking encoded reference', function ( assert ) {
+		var id = '#cite_note-Obama_1995,_2004,_pp._9%E2%80%9310-11';
+		return this.referencesGateway.getReference( id, this.page ).then( function ( ref ) {
+			assert.strictEqual( $( '<div>' ).html( ref.text ).find( '.reference-text' ).text(), 'found',
+				'If an encoded ID parameter is given it still resolves correctly.' );
+		} );
+	} );
+
 }( jQuery, mw.mobileFrontend ) );
