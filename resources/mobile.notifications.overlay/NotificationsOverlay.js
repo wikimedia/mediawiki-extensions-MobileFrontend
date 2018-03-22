@@ -52,7 +52,7 @@
 
 		// Mark all read
 		this.markAllReadButton = new OO.ui.ButtonWidget( {
-			icon: 'doubleCheck',
+			icon: 'checkAll',
 			title: mw.msg( 'echo-mark-all-as-read' )
 		} );
 		this.markAllReadButton.toggle( false );
