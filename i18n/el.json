@@ -10,7 +10,8 @@
 			"Nikosguard",
 			"Stam.nikos",
 			"SucreRouge",
-			"Ανώνυμος Βικιπαιδιστής"
+			"Ανώνυμος Βικιπαιδιστής",
+			"Nikosgranturismogt"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Εισαγάγετε τον κωδικό επιβεβαίωσης",
@@ -110,6 +111,8 @@
 	"mobile-frontend-nearby-requirements": "Συγνώμη! Ο web browser σας δεν υποστηρίζει το {{SITENAME}} Κοντινά.",
 	"mobile-frontend-nearby-requirements-guidance": "Δοκιμάστε ένα διαφορετικό πρόγραμμα περιήγησης ή ενεργοποιήσετε την JavaScript εάν έχετε την απενεργοποιήσει.",
 	"mobile-frontend-nearby-title": "Κοντινά",
+	"mobile-frontend-nearby-info-heading": "Μέρη κοντά σας",
+	"mobile-frontend-nearby-info-show-button": "Εμφάνιση κοντινών άρθρων",
 	"mobile-frontend-news-items": "Στις ειδήσεις",
 	"mobile-frontend-opt-in-explain": "Με την εγγραφή σας στη δοκιμή, θα έχετε πρόσβαση σε πειραματικά χαρακτηριστικά, με κίνδυνο την αντιμετώπιση σφάλμάτων και ζητημάτων.",
 	"mobile-frontend-overlay-close": "Κλείσιμο",
