@@ -66,8 +66,7 @@
 	}
 
 	// Toolbar
-	@baseIconSize: 24px;
-	@targetIconSize: 32px;
+	@targetIconSize: 20px;
 	.overlay-header-container {
 		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
 
@@ -77,12 +76,9 @@
 				border-style: solid;
 				border-width: 0 1px;
 			}
-			// Everything is measured in ems so the easiest way to scale
-			// is to change the base font size.
-			font-size: unit( 0.8 * @targetIconSize / @baseIconSize, em );
 
 			.oo-ui-iconElement-icon {
-				/* We should be able to use 'contain' here, but some OOUI icon containers are oversized (T85139) */
+				/* Overwrite `contain` value here, as we're 16px base sized */
 				.background-size( @targetIconSize, @targetIconSize );
 			}
 
