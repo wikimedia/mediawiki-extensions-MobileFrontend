@@ -70,7 +70,6 @@
 						// (which has no header to scroll to)
 						section: overlay.options.sectionId || null
 					} );
-					overlay.target.activating = true;
 					overlay.target.load();
 				}, function ( e ) {
 					mw.log.warn( 'VisualEditor failed to load: ' + e );

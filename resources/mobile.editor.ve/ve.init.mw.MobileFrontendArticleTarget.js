@@ -242,12 +242,12 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
 /*
  * FIXME: @inheritdoc once this file is in the right repo
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.close = function () {
+ve.init.mw.MobileFrontendArticleTarget.prototype.tryTeardown = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.close.apply( this, arguments );
-
-	// eslint-disable-next-line no-restricted-properties
-	window.history.back();
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.tryTeardown.apply( this, arguments ).then( function () {
+		// eslint-disable-next-line no-restricted-properties
+		window.history.back();
+	} );
 };
 
 /* Registration */
