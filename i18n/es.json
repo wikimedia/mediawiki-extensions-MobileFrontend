@@ -306,6 +306,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "El texto aparecerá siempre sobre las fichas, mejorando el rendimiento y la inteligibilidad.",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Ampliar todas las secciones de manera predeterminada",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamaño del texto",
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controla el tamaño del texto en tu experiencia de lectura.",
 	"mobile-frontend-beta-only": "Prestación disponible solo en el modo beta",
-	"mobile-frontend-console-recruit": "\\o/ ¡Ey! Esto es software de código abierto y necesitamos voluntarios que nos ayuden a construirlo, mejorarlo y corregir los posibles errores que puedas encontrar en esta consola de JavaScript.\n\nPuedes ver el trabajo pendiente en https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Para saber más sobre cómo hemos creado nuestro sitio para móviles: https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
