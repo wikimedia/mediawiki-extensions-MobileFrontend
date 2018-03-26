@@ -972,7 +972,7 @@ class MobileFrontendHooks {
 						'mediawiki.util',
 						'mobile.startup',
 						'ext.echo.ui',
-						'ext.echo.badgeicons',
+						'oojs-ui.styles.icons-interactions',
 					],
 					'scripts' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
