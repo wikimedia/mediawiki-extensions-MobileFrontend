@@ -21,18 +21,12 @@
 	 * @param {Object} options Configuration options
 	 */
 	function SearchOverlay( options ) {
-		var self = this;
 		Overlay.call( this, options );
 		this.api = options.api;
 		// eslint-disable-next-line new-cap
 		this.gateway = new options.gatewayClass( this.api );
 
 		this.router = options.router;
-		// FIXME: Remove when search registers route with overlay manager
-		// we need this because of the focus/delay hack in search.js
-		this.router.once( 'route', function () {
-			self._hideOnRoute();
-		} );
 	}
 
 	OO.mfExtend( SearchOverlay, Overlay, {
@@ -106,33 +100,6 @@
 			'mousedown .results': 'hideKeyboardOnScroll',
 			'click .results a': 'onClickResult'
 		} ),
-
-		/**
-		 * Hide self when the route is visited
-		 * @method
-		 * @private
-		 * FIXME: Remove when search registers route with overlay manager
-		 */
-		_hideOnRoute: function () {
-			var self = this;
-			this.router.once( 'route', function ( ev ) {
-				if ( !self.hide() ) {
-					ev.preventDefault();
-					self._hideOnRoute();
-				}
-			} );
-		},
-
-		/**
-		 * SearchOverlay is not managed by OverlayManager and using window.history.back() causes
-		 * problems described in T102946, i.e. the users should not be taken to the previous page
-		 * when landing on /wiki/Foo#/search directly. The overlay should just close.
-		 * @inheritdoc
-		 */
-		onExitClick: function () {
-			Overlay.prototype.onExitClick.apply( this, arguments );
-			this.router.navigate( '' );
-		},
 
 		/**
 		 * Make sure search header is docked to the top of the screen when the
@@ -279,16 +246,26 @@
 			}
 		},
 
-		/** @inheritdoc */
-		show: function () {
+		/**
+		 * Trigger a focus() event on search input in order to
+		 * bring up the virtual keyboard.
+		 * @method
+		 */
+		showKeyboard: function () {
 			var len = this.$input.val().length;
-			Overlay.prototype.show.apply( this, arguments );
 			this.$input.focus();
 			// Cursor to the end of the input
 			if ( this.$input[0].setSelectionRange ) {
 				this.$input[0].setSelectionRange( len, len );
 			}
+		},
 
+		/** @inheritdoc */
+		show: function () {
+			// Overlay#show defines the actual overlay visibility.
+			Overlay.prototype.show.apply( this, arguments );
+
+			this.showKeyboard();
 			/**
 			 * @event search-show Fired after the search overlay is shown
 			 */
