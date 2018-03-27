@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a9e664c_1e0156c6",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-27T23:09:17Z",
+      "side": 1,
+      "message": "I don\u0027t understand. This inherits from PageListItem . The item templatePartial for that is capable of rendering lastModified.",
+      "revId": "d4fd4c59310f7dc53ade7f674b3b542fb3424aaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e76daf76_f6569f72",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-27T23:09:17Z",
+      "side": 1,
+      "message": "Remember not to use $ - use the util module.",
+      "revId": "d4fd4c59310f7dc53ade7f674b3b542fb3424aaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fdba31d_8b5bbebf",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-27T23:09:17Z",
+      "side": 1,
+      "message": "Page already has support for lastModified if revision.timestamp is present.",
+      "revId": "d4fd4c59310f7dc53ade7f674b3b542fb3424aaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
