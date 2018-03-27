@@ -22,7 +22,6 @@
 				funnel: 'watchlist',
 				enhance: true
 			} );
-			$watchlist.find( '.page-summary .info' ).css( 'visibility', 'visible' );
 		}
 		// not needed now we have JS view which has infinite scrolling
 		$( '.more' ).remove();

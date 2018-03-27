@@ -1,6 +1,7 @@
 ( function ( M ) {
 	var WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		util = M.require( 'mobile.startup/util' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
 	/**
@@ -51,6 +52,7 @@
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
 			this.infiniteScroll.enable();
+			this.$( '.page-summary .info' ).css( 'visibility', 'visible' );
 		},
 		/**
 		 * Loads pages from the api and triggers render.
@@ -70,7 +72,11 @@
 		 * @param {Object} page
 		 */
 		appendPage: function ( page ) {
-			this.$el.append( this.templatePartials.item.render( page ) );
+			// wikidata descriptions should not show in this view.c
+			var templateOptions = util.extend( {}, page.options, {
+				wikidataDescription: undefined
+			} );
+			this.$el.append( this.templatePartials.item.render( templateOptions ) );
 		},
 
 		/**
