@@ -887,7 +887,7 @@ class ApiMobileView extends ApiBase {
 			],
 			'variant' => [
 				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_DFLT => false,
+				ApiBase::PARAM_DFLT => '',
 			],
 			'noimages' => false,
 			'noheadings' => false,
