@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0c72260_5f222b12",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-27T23:21:15Z",
+      "side": 0,
+      "message": "This little line was not obvious and demonstrates why we should keep these sort of things local to the View itself rather than using global jQuery.",
+      "revId": "52445965ab8c355a9e7f6dd921bee5dee569d0de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
