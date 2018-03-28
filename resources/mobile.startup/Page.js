@@ -19,6 +19,10 @@
 	 */
 	function Page( options ) {
 		var thumb;
+		// thumbnail if not passed should be made false (truthy) so that it renders placeholder when absent
+		if ( options.thumbnail === undefined ) {
+			options.thumbnail = false;
+		}
 		this.options = options;
 		options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 		View.call( this, options );

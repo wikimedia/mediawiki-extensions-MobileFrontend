@@ -100,7 +100,7 @@
 			assert.strictEqual( pages[ 0 ].title, 'Wikimedia Foundation' );
 			assert.ok( !pages[ 0 ].thumbnail.isLandscape );
 			assert.strictEqual( pages[ 2 ].title, 'W San Francisco' );
-			assert.strictEqual( pages[ 2 ].thumbnail, undefined );
+			assert.strictEqual( pages[ 2 ].thumbnail, false );
 			assert.strictEqual( pages[ 2 ].dist.toPrecision( 6 ), '177.400' );
 		} );
 	} );
@@ -109,7 +109,7 @@
 		return m.getPagesAroundPage( 'Wikimedia Foundation' ).then( function ( pages ) {
 			assert.strictEqual( pages.length, 2 );
 			assert.strictEqual( pages[ 1 ].title, 'W San Francisco' );
-			assert.strictEqual( pages[ 1 ].thumbnail, undefined );
+			assert.strictEqual( pages[ 1 ].thumbnail, false );
 			assert.strictEqual( pages[ 1 ].dist.toPrecision( 6 ), '177.400' );
 		} );
 	} );
