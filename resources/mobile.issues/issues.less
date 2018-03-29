@@ -18,7 +18,6 @@
 		li {
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
-				line-height: 1;
 				padding: @smallIconSize @smallIconSize @smallIconSize 0;
 				.mw-ui-icon {
 					float: left;
@@ -38,6 +37,12 @@
 	}
 
 	.issue-details {
+		// align the first line to the top of the element
+		// but line-height should be normal for text that follows (T190469)
+		> :first-line {
+			line-height: 1;
+		}
+
 		// This should match the icon width for the overlay close icon
 		//  which is derived from these two variables:
 		padding-left: @iconSize + ( 2 * @iconGutterWidth );
