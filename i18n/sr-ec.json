@@ -31,7 +31,7 @@
 	"mobile-frontend-donate-image-title-username": "Отпремања $1",
 	"mobile-frontend-donate-image-title-you": "Ваша отпремања",
 	"mobile-frontend-edit-login-action": "<strong>Унапредите сајт {{SITENAME}}.</strong><br />Пријавите се да бисте уређивали.",
-	"mobile-frontend-edit-signup-action": "<strong>Унапредите {{SITENAME}}.</strong><br />Отворите налог да би уређивали.",
+	"mobile-frontend-edit-signup-action": "<strong>Унапредите сајт {{SITENAME}}.</strong><br />Отворите налог да бисте уређивали.",
 	"mobile-frontend-editor-abusefilter-read-more": "Прочитајте више",
 	"mobile-frontend-editor-abusefilter-warning": "Упозорење: постоји проблем са Вашом изменом, јесте ли сигурни да желите да је сачувате?",
 	"mobile-frontend-editor-anon": "Уреди без пријављивања",
