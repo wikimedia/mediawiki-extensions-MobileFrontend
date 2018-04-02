@@ -45,7 +45,8 @@
 			"Yasten",
 			"Trial",
 			"The RedBurn",
-			"Od1n"
+			"Od1n",
+			"Fourmer"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Connectez-vous ou créez un compte utilisateur pour suivre vos modifications",
@@ -305,7 +306,7 @@
 	"mobile-frontend-search-feedback-link-text": "Donnez-nous votre avis.",
 	"mobile-frontend-search-feedback-prompt": "Vous n’avez pas trouvé ce que vous cherchiez ?",
 	"mobile-frontend-notifications-filter-title": "Filtrer les notifications",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Chargement paresseux des références",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Chargement différé des références",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Descriptions du titre",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "En savoir plus au sujet de la page avec une courte description sous le titre",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Charger les références seulement si nécessaire",
