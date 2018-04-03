@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ce479663_38aae4f0",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-04-03T13:11:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "621fd189_8d2df25c",
+      "range": {
+        "startLine": 251,
+        "startChar": 18,
+        "endLine": 251,
+        "endChar": 25
+      },
+      "revId": "4517ef771c37b904afe832aef5c72fd9ffbd745b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59426838_2d2f1b42",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-03-27T22:25:58Z",
       "side": 1,
       "message": "It looks weird to have this inside a showKeyboard function. Should this not be inside \u0027show\u0027 itself?\n\nI think this is also why when I click browser back the overlay doesn\u0027t hide...",
+      "revId": "4517ef771c37b904afe832aef5c72fd9ffbd745b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e641f7a_b448106f",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-04-03T13:11:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59426838_2d2f1b42",
       "revId": "4517ef771c37b904afe832aef5c72fd9ffbd745b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
