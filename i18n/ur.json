@@ -8,7 +8,8 @@
 			"Muhammad Shuaib",
 			"Obaid Raza",
 			"Hindustanilanguage",
-			"BukhariSaeed"
+			"BukhariSaeed",
+			"Abdulq"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "اپنی ترامیم کا جائزہ لینے کے داخل نوشتہ ہویئے یا ایک کھاتہ کولیے",
@@ -146,9 +147,9 @@
 	"mobile-frontend-nearby-requirements": "معذرت، آپ کا براؤزر {{SITENAME}} میں پاس پڑوس کی سہولت کو معاونت فراہم نہیں کرتا۔",
 	"mobile-frontend-nearby-requirements-guidance": "کسی دوسرے براؤزر میں کوشش کریں یا اگر آپ نے جاوا اسکرپٹ غیر فعال کر رکھی ہو تو اسے فعال کریں۔",
 	"mobile-frontend-nearby-title": "آس پاس",
-	"mobile-frontend-nearby-info-heading": "آپ کے آس پاس کے مقامات",
-	"mobile-frontend-nearby-info-description": "آپ ویکیپیڈیا پر اپنے آس پاس کے مقامات کے دلچسپ مضامین کا مطالعہ کر سکتے ہیں",
-	"mobile-frontend-nearby-info-show-button": "اپنی قریبی جگہوں کے مضامین دیکھیں",
+	"mobile-frontend-nearby-info-heading": "آپ کے اردگرد کے مقامات",
+	"mobile-frontend-nearby-info-description": "آپ ویکیپیڈیا پر اپنے اردگرد کے مقامات کے متعلق دلچسپ مضامین کا مطالعہ کر سکتے ہیں",
+	"mobile-frontend-nearby-info-show-button": "نزدیک کے حساب سے مضامین دکھائیں",
 	"mobile-frontend-news-items": "خبروں میں",
 	"mobile-frontend-opt-in-explain": "آزمائشی سہولتیں فعال کرنے پر آپ کو تازہ ترین تجرباتی نسخے تک رسائی ملے گی، تاہم یہ بات ذہن نشین رہے کہ یہ نسخہ غیر مستحکم اور غیر متوقع پریشانی کا باعث بن سکتا ہے۔",
 	"mobile-frontend-overlay-close": "بند کریں",
