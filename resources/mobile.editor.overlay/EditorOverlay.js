@@ -361,11 +361,14 @@
 				.done( function ( result ) {
 					var parser, ast, parsedBlockReason,
 						content = result.text,
-						userinfo = result.user;
+						userinfo = result.user,
+						block = result.block,
+						userTalkPage = mw.config.get( 'wgNamespaceNumber' ) === 3;
 
 					self.setContent( content );
 					// check if user is blocked
-					if ( userinfo && userinfo.hasOwnProperty( 'blockid' ) ) {
+					if ( userinfo && userinfo.hasOwnProperty( 'blockid' ) &&
+						!( userTalkPage && block.allowusertalk ) ) {
 						// Workaround to parse a message parameter for mw.message, see T96885
 						// eslint-disable-next-line new-cap
 						parser = new mw.jqueryMsg.parser();
