@@ -38,8 +38,6 @@ class MwApiContentProvider implements IContentProvider {
 			$out->addModuleStyles( $parse['modulestyles'] );
 			// Forward certain variables so that the page is not registered as "missing"
 			$out->addJsConfigVars( [
-				// Routes all MediaWiki Api queries via same host
-				'wgScriptPath' => $this->baseUrl,
 				'wgArticleId' => $parse['pageid'],
 			] );
 			if ( array_key_exists( 'langlinks', $parse ) ) {
