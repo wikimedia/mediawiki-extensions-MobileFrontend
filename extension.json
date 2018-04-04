@@ -1245,7 +1245,7 @@
 			"_merge_strategy": "array_plus_2d"
 		},
 		"MFEnableJSConsoleRecruitment": false,
-		"MFAlwaysUseMobileFormatter": false,
+		"MFAlwaysUseContentProvider": false,
 		"MFMobileFormatterHeadings": [
 			"h1",
 			"h2",

@@ -225,9 +225,9 @@ class MobileFrontendHooks {
 			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
 		);
 		$displayMobileView = $context->shouldDisplayMobileView();
-		$alwaysUseFormatter = $config->get( 'MFAlwaysUseMobileFormatter' );
-		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseFormatter ) ) {
-			$text = ExtMobileFrontend::domParse( $out, $text );
+		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
+		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
+			$text = ExtMobileFrontend::domParse( $out, $text, $displayMobileView );
 			if ( !$title->isMainPage() ) {
 				$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
 			}

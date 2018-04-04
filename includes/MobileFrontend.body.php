@@ -13,16 +13,22 @@ class ExtMobileFrontend {
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
 	 * @param string $text override out html
+	 * @param bool $mobileFormatHtml whether content should be run through the MobileFormatter
 	 *
 	 * @return string
 	 */
-	public static function domParse( OutputPage $out, $text = null ) {
+	public static function domParse( OutputPage $out, $text = null, $mobileFormatHtml = true ) {
 		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$factory = new ContentProviderFactory();
 		$provider = $factory->getProvider( $config, $out, $text );
+
+		// If we're not running the formatter we can exit earlier
+		if ( !$mobileFormatHtml ) {
+			return $provider->getHTML();
+		}
 
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
