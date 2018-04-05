@@ -22,6 +22,30 @@
       "revId": "19b237f4def539340b174c9ff7fbd06d7a70d140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d789e6b2_a04663e8",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-05T14:21:11Z",
+      "side": 1,
+      "message": "The issue is this.$  does a local search.  The document is not local to the component and not the closest scrollable container. \n\nThis patch ensures this does get defined.\n\nNote the if is only for caching purposes. Once we find it we dont need to find it again.",
+      "parentUuid": "2de5defb_0f924d32",
+      "range": {
+        "startLine": 315,
+        "startChar": 9,
+        "endLine": 315,
+        "endChar": 30
+      },
+      "revId": "19b237f4def539340b174c9ff7fbd06d7a70d140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
