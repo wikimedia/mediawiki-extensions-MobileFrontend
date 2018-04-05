@@ -204,9 +204,9 @@ API that can be queried to obtain content.
 * Type: `string`
 * Default: `https://en.wikipedia.org/w/api.php`
 
-#### $wgMFAlwaysUseMobileFormatter
+#### $wgMFAlwaysUseContentProvider
 
-When enabled the MobileFormatter will run on desktop views as well as mobile views.
+When enabled the ContentProvider will run on desktop views as well as mobile views.
 
 * Type: `boolean`
 * Default: `false`
