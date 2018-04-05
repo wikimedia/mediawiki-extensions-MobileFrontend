@@ -46,6 +46,23 @@
       "revId": "19b237f4def539340b174c9ff7fbd06d7a70d140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8c46f20e_fa77445b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-05T14:23:27Z",
+      "side": 1,
+      "message": "This is the main purpose of this code - resizing the editor.. thus the textarea never becomes scrollable itself.\n\nThe scrollable container call is simply making sure that the textarea is not inside a DIV with overflow scroll and fixed width.",
+      "revId": "19b237f4def539340b174c9ff7fbd06d7a70d140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
