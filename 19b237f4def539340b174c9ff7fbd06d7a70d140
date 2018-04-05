@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2de5defb_0f924d32",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-04-05T10:44:10Z",
+      "side": 1,
+      "message": "The annoying thing here is that this variable always comes in as undefined (on all browsers). Why?! Will we ever know the truth...",
+      "range": {
+        "startLine": 315,
+        "startChar": 9,
+        "endLine": 315,
+        "endChar": 30
+      },
+      "revId": "19b237f4def539340b174c9ff7fbd06d7a70d140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
