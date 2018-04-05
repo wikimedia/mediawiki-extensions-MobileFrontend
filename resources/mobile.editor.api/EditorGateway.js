@@ -38,7 +38,8 @@
 			if ( this.content !== undefined ) {
 				result.resolve( {
 					text: self.content,
-					user: self.userinfo
+					user: self.userinfo,
+					block: self.block
 				} );
 			} else {
 				options = {
@@ -49,6 +50,10 @@
 					// get block information for this user
 					meta: 'userinfo',
 					uiprop: 'blockinfo',
+					// get additional block information for talk pages
+					list: 'blocks',
+					bkusers: mw.user.getName(),
+					bkprop: 'flags',
 					formatversion: 2
 				};
 				// Load text of old revision if desired
@@ -79,10 +84,12 @@
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
 					self.userinfo = resp.query.userinfo;
+					self.block = resp.query.blocks && resp.query.blocks[0] || {};
 
 					result.resolve( {
 						text: self.content || '',
-						user: self.userinfo
+						user: self.userinfo,
+						block: self.block
 					} );
 				} );
 			}
