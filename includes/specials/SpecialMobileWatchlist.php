@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\Rdbms\ResultWrapper;
 
 /**
  * Implements the Watchlist special page

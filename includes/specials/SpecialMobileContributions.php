@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\Rdbms\ResultWrapper;
+
 /**
  * A special page to show the contributions of a user
  * @todo FIXME: On Special:Contributions add ability to filter a la desktop
