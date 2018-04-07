@@ -63,5 +63,6 @@
 	"mobile-frontend-watchlist-removed": "$1 kuzatuv roʻyxatingizdan oʻchirildi",
 	"nearby": "Atrofingizdagi obʼyektlar haqidagi sahifalar",
 	"tag-mobile_edit": "Mobil tahrirlash",
-	"tag-mobile_edit-description": "Saytning mobil versiyasidan qilingan tahrirlar"
+	"tag-mobile_edit-description": "Saytning mobil versiyasidan qilingan tahrirlar",
+	"tag-mobile_web_edit": "Mobil dastur orqali tahrirlash"
 }
