@@ -7,7 +7,8 @@
 			"Sator",
 			"Theklan",
 			"Gorkaazk",
-			"Mikel Ibaiba"
+			"Mikel Ibaiba",
+			"Fitoschido"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Kategoriak</strong>",
@@ -30,6 +31,7 @@
 	"mobile-frontend-editor-save": "Gorde",
 	"mobile-frontend-editor-summary": "Laburpena:",
 	"mobile-frontend-editor-switch-visual-editor": "Aldatu edizio bisualera",
+	"mobile-frontend-fontchanger-link": "Letra-tamaina",
 	"mobile-frontend-featured-article": "Gaur nabarmendutako edukia",
 	"mobile-frontend-language-heading": "<strong>Hizkuntzak</strong>",
 	"mobile-frontend-languages-header": "Hizkuntzak",
@@ -61,5 +63,6 @@
 	"tag-mobile_edit": "Mugikor edizioa",
 	"tag-mobile_web_edit": "Mugikor web edizioa",
 	"mobile-frontend-loading-message": "Kargatzen...",
-	"mobile-frontend-search-feedback-link-text": "Egiguzu iruzkina."
+	"mobile-frontend-search-feedback-link-text": "Egiguzu iruzkina.",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Letra-tamaina"
 }
