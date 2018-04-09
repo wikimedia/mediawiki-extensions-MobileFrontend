@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1669b0b9_ae10837f",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-09T17:11:41Z",
+      "side": 1,
+      "message": "This is overriding the dependencies on the class itself.",
+      "revId": "619fb7e16984b2a0351bc3cc745b9721461eb625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
