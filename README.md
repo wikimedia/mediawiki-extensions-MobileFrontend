@@ -425,14 +425,6 @@ Controls whether tablets should be shown the mobile site. Works only if
 * Type: `Boolean`
 * Default: `true`
 
-#### $wgMFDeviceWidthMobileSmall
-
-Devices with available screen of this value and less will have some styles
-adapted for improved reading on small screens.
-
-* Type: `Integer`
-* Default: `280`
-
 #### $wgMobileUrlTemplate
 
 Template for mobile URLs.

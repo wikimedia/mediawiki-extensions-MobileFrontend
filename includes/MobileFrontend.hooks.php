@@ -1009,23 +1009,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderGetLessVars hook handler
-	 *
-	 * Add the context-based less variables.
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetLessVars
-	 * @param array &$lessVars Variables already added
-	 */
-	public static function onResourceLoaderGetLessVars( &$lessVars ) {
-		$config = MobileContext::singleton()->getMFConfig();
-		$lessVars = array_merge( $lessVars,
-			[
-				'wgMFDeviceWidthMobileSmall' => "{$config->get( 'MFDeviceWidthMobileSmall' )}px",
-			]
-		);
-	}
-
-	/**
 	 * EventLoggingRegisterSchemas hook handler.
 	 *
 	 * Registers our EventLogging schemas so that they can be converted to

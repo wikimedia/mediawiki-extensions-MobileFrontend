@@ -1199,9 +1199,6 @@
 		"LoginFormValidErrorMessages": [
 			"MobileFrontendHooks::onLoginFormValidErrorMessages"
 		],
-		"ResourceLoaderGetLessVars": [
-			"MobileFrontendHooks::onResourceLoaderGetLessVars"
-		],
 		"ThumbnailBeforeProduceHTML": [
 			"MobileFrontendHooks::onThumbnailBeforeProduceHTML"
 		],
@@ -1304,7 +1301,6 @@
 		"MFAutodetectMobileView": false,
 		"MFVaryOnUA": false,
 		"MFShowMobileViewToTablets": true,
-		"MFDeviceWidthMobileSmall": 280,
 		"MobileUrlTemplate": "",
 		"MobileFrontendFormatCookieExpiry": null,
 		"MFNoindexPages": true,
