@@ -30,3 +30,7 @@ $wgMFDisplayWikibaseDescriptions = [
 	'watchlist' => true,
 	'tagline' => true,
 ];
+
+// The "I am using the mobile site" step is designed to work on different sub-domains
+// This differs from the default.
+$wgMFAutodetectMobileView = false;
