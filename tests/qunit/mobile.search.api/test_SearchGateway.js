@@ -90,18 +90,14 @@
 							ns: 0,
 							title: 'Brad Pitt',
 							index: 2,
-							terms: {
-								description: [ 'American actor' ]
-							}
+							description: 'American actor'
 						},
 						4: {
 							pageid: 4,
 							ns: 0,
 							title: 'Bradley Cooper',
 							index: 3,
-							terms: {
-								description: [ 'American actor and film producer' ]
-							}
+							description: 'American actor and film producer'
 						},
 						5: {
 							pageid: 5,
