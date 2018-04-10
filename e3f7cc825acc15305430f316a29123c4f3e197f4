@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dad22846_8c3d823e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-10T14:05:01Z",
+      "side": 1,
+      "message": "Looks like this still uses it. Is this unused / broken?",
+      "range": {
+        "startLine": 467,
+        "startChar": 3,
+        "endLine": 467,
+        "endChar": 61
+      },
+      "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
