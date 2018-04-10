@@ -46,6 +46,30 @@
       "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ab84ce7_1a81e0b9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-10T14:43:08Z",
+      "side": 1,
+      "message": "I think the confusion is around Krinkle\u0027s end goal and what this patch does.\n\nIt /does/ use the config flag ResourceLoaderLESSVars, but not the hook.\n\nIt\u0027s currently not broken (mw.config.get(\u0027wgMFDeviceWidthTablet\u0027) returns 720px) - it\u0027s used to load JavaScript only for tablet devices that changes behaviour so very important to be kept intact!\n\nWhen we remove the config we\u0027ll need to find another way of doing this. deviceWidthTablet is defined inside the config in DefaultSettings.php (which is marked as deprecated).\n\nPer https://gerrit.wikimedia.org/r/#/c/425273/1/includes/resourceloader/ResourceLoader.php the config will still be available.\n\nHow would you suggest doing the passing down? Can ResourceLoaderModules access getLessVars and add config?\nmobile.startup/browser.js is the only file that uses it that I know of in JavaScript.",
+      "parentUuid": "0bbd696a_fd316314",
+      "range": {
+        "startLine": 467,
+        "startChar": 3,
+        "endLine": 467,
+        "endChar": 61
+      },
+      "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
