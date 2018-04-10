@@ -31,8 +31,7 @@
 			expectedParams = {
 				qux: 'quux',
 				foo: 'bar', // from wgMFSearchAPIParams
-				prop: [ 'corge', 'baz', 'pageterms' ], // from wgMFQueryPropModules and Wikibase-specific
-				wbptterms: 'description'
+				prop: [ 'corge', 'baz', 'description' ] // from wgMFQueryPropModules and Wikibase-specific
 			};
 
 		assert.deepEqual( params, expectedParams );
@@ -43,7 +42,7 @@
 			qux: 'quux'
 		} );
 
-		assert.equal( params.prop.indexOf( 'pageterms' ), -1 );
+		assert.equal( params.prop.indexOf( 'description' ), -1 );
 		assert.equal( params.wbptterms, undefined );
 	} );
 
@@ -54,7 +53,7 @@
 
 		assert.equal(
 			params.wbptterms,
-			'grault|description',
+			'grault',
 			'The given "wbptterms" is added to the default.'
 		);
 	} );
@@ -65,8 +64,7 @@
 			} ),
 			expectedParams = {
 				foo: 'bar',
-				prop: [ 'baz', 'pageterms' ],
-				wbptterms: 'description'
+				prop: [ 'baz', 'description' ]
 			};
 
 		assert.deepEqual(
@@ -90,8 +88,7 @@
 				foo: 'bar',
 				baz: 'qux',
 				quux: 'corge',
-				prop: [ 'baz', 'pageterms' ],
-				wbptterms: 'description'
+				prop: [ 'baz', 'description' ]
 			};
 
 		assert.deepEqual( params, expectedParams );

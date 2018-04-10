@@ -319,9 +319,7 @@
 			displayTitle = terms && terms.label ? HTML.escape( terms.label[0] ) : pageprops.displaytitle;
 		}
 		// Add Wikidata descriptions if available (T101719)
-		if ( terms && terms.description && terms.description.length ) {
-			resp.wikidataDescription = terms.description[0];
-		}
+		resp.wikidataDescription = resp.description || undefined;
 
 		if ( thumb ) {
 			resp.thumbnail.isLandscape = thumb.width > thumb.height;

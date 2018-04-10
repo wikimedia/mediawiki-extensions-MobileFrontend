@@ -51,17 +51,8 @@
 		result.prop = result.prop.concat( mw.config.get( 'wgMFQueryPropModules' ) );
 
 		if ( displayWikibaseDescriptions[feature] ) {
-			if ( result.prop.indexOf( 'pageterms' ) === -1 ) {
-				result.prop.push( 'pageterms' );
-			}
-
-			// Add "description" to the wbptterms terms parameter, if needed
-			if ( result.wbptterms ) {
-				if ( result.wbptterms.indexOf( 'description' ) === -1 ) {
-					result.wbptterms += '|description';
-				}
-			} else {
-				result.wbptterms = 'description';
+			if ( result.prop.indexOf( 'description' ) === -1 ) {
+				result.prop.push( 'description' );
 			}
 		}
 
