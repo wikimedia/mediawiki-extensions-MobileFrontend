@@ -16,6 +16,24 @@
       "revId": "619fb7e16984b2a0351bc3cc745b9721461eb625",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "acae50ce_8c69744d",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-10T16:40:49Z",
+      "side": 1,
+      "message": "No, the ones on the class are being used. The one specified here never worked, both before and after this commit. (Continued at T191596)",
+      "parentUuid": "1669b0b9_ae10837f",
+      "revId": "619fb7e16984b2a0351bc3cc745b9721461eb625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
