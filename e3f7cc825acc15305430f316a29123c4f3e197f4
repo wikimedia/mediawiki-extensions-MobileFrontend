@@ -94,6 +94,30 @@
       "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bce18af9_ae36ef40",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-10T14:47:33Z",
+      "side": 1,
+      "message": "Thanks. This is a false positive indeed. Happens to have the same name. I thought maybe this was getting its value indirectly via the hook.\n\nLets discuss this on the task further https://phabricator.wikimedia.org/T140804.",
+      "parentUuid": "0ab84ce7_1a81e0b9",
+      "range": {
+        "startLine": 467,
+        "startChar": 3,
+        "endLine": 467,
+        "endChar": 61
+      },
+      "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
