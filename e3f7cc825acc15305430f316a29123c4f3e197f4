@@ -70,6 +70,30 @@
       "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36bbf237_21ac29ea",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-10T14:45:38Z",
+      "side": 1,
+      "message": "For context:\nhttps://phabricator.wikimedia.org/T140804",
+      "parentUuid": "0ab84ce7_1a81e0b9",
+      "range": {
+        "startLine": 467,
+        "startChar": 3,
+        "endLine": 467,
+        "endChar": 61
+      },
+      "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
