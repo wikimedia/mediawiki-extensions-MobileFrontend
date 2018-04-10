@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Waldir"
+			"Waldir",
+			"Quintino Lopes Castro Tavares"
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Privasidadi",
-	"mobile-frontend-view": "Vista móvel"
+	"mobile-frontend-view": "Vizon móvel"
 }
