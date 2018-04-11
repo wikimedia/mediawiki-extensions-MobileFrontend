@@ -912,9 +912,6 @@
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
 		},
 		"mobile.site": {
-			"dependencies": [
-				"mobile.startup"
-			],
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteModule"
 		},
 		"mobile.site.styles": {
