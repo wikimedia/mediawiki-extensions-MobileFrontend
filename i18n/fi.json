@@ -180,7 +180,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "Nimetön keskustelu",
 	"mobile-frontend-talk-reply": "Vastaa",
 	"mobile-frontend-talk-reply-info": "Huomaa että vastauksesi allekirjoitetaan automaattisesti käyttäjänimelläsi.",
-	"mobile-frontend-talk-reply-success": "Vastauksesi on nyt tallennettu keskustelusivulle.",
+	"mobile-frontend-talk-reply-success": "Vastauksesi tallennettiin keskustelusivulle.",
 	"mobile-frontend-talk-topic-feedback": "Uusi aihe lisätty keskustelusivulle!",
 	"mobile-frontend-talk-topic-error": "Aihetta ei voitu lisätä tuntemattomasta virheestä johtuen.",
 	"mobile-frontend-talk-topic-error-protected": "Tämä keskustelusivu on suojattu. Sinulla ei ole oikeuksia lisätä aiheita siihen.",
