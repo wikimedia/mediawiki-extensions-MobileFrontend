@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d7c4c1a_340f76ec",
+        "filename": "includes/modules/MobileSiteModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-11T21:09:54Z",
+      "side": 0,
+      "message": "This should be kept to ensure that the module will execute in the right order even on cached pages, where the newly added addModules() won\u0027t exist yet.\n\nIn in the long-term, there\u0027s no harm in keeping it, and it makes sure things also work correctly when e.g. live previewing over the API, in which case all modules from OutputPage are loaded flat otherwise, possibly in the wrong order.\n\nKeeping this also means it matches core logic, which is always good for predictability and maintainability.",
+      "range": {
+        "startLine": 23,
+        "startChar": 9,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "e3f7cc825acc15305430f316a29123c4f3e197f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
