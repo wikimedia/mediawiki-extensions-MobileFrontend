@@ -12,6 +12,68 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * Test findTagLine when output has no wikibase elements
+	 *
+	 * @covers MobileFrontendHooks::findTagline
+	 */
+	public function testFindTaglineWhenNoElementsPresent() {
+		$po = new ParserOutput();
+		$fallback = function () {
+			$this->fail( 'Fallback shouldn\'t be called' );
+		};
+		$this->assertEquals( MobileFrontendHooks::findTagline( $po, $fallback ), false );
+	}
+
+	/**
+	 * Test findTagLine when output has no wikibase elements
+	 *
+	 * @covers MobileFrontendHooks::findTagline
+	 */
+	public function testFindTaglineWhenItemIsNotPresent() {
+		$poWithDesc = new ParserOutput();
+		$poWithDesc->setProperty( 'wikibase-shortdesc', 'desc' );
+
+		$fallback = function () {
+			$this->fail( 'Fallback shouldn\'t be called' );
+		};
+		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithDesc, $fallback ), 'desc' );
+	}
+
+	/**
+	 * Test findTagLine when output has no wikibase elements
+	 *
+	 * @covers MobileFrontendHooks::findTagline
+	 */
+	public function testFindTaglineWhenOnlyItemIsPresent() {
+		$fallback = function ( $item ) {
+			$this->assertEquals( 'W2', $item );
+			return 'Hello Wikidata';
+		};
+
+		$poWithItem = new ParserOutput();
+		$poWithItem->setProperty( 'wikibase_item', 'W2' );
+		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithItem, $fallback ),
+			'Hello Wikidata' );
+	}
+
+	/**
+	 * Test findTagLine when output has no wikibase elements
+	 *
+	 * @covers MobileFrontendHooks::findTagline
+	 */
+	public function testFindTaglineWhenWikibaseAttrsArePresent() {
+		$fallback = function () {
+			$this->fail( 'Fallback shouldn\'t be called' );
+		};
+
+		$poWithBoth = new ParserOutput();
+		$poWithBoth->setProperty( 'wikibase-shortdesc', 'Hello world' );
+		$poWithBoth->setProperty( 'wikibase_item', 'W2' );
+		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithBoth, $fallback ),
+			'Hello world' );
+	}
+
+	/**
 	 * Test no alternate/canonical link is set on Special:MobileCite
 	 *
 	 * @covers MobileFrontendHooks::onBeforePageDisplay

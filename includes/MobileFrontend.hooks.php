@@ -1102,6 +1102,23 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Finds the wikidata tagline associated with the page
+	 *
+	 * @param ParserOutput $po
+	 * @param Callable $fallbackWikibaseDescriptionFunc A fallback to provide Wikibase description.
+	 * Function takes wikibase_item as a first and only argument
+	 * @return string
+	 */
+	public static function findTagline( ParserOutput $po, $fallbackWikibaseDescriptionFunc ) {
+		$desc = $po->getProperty( 'wikibase-shortdesc' );
+		$item = $po->getProperty( 'wikibase_item' );
+		if ( $desc === false && $item && $fallbackWikibaseDescriptionFunc ) {
+			return $fallbackWikibaseDescriptionFunc( $item );
+		}
+		return $desc;
+	}
+
+	/**
 	 * OutputPageParserOutput hook handler
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
@@ -1127,12 +1144,11 @@ class MobileFrontendHooks {
 				!$title->isMainPage() &&
 				$title->getNamespace() === NS_MAIN
 			) {
-				$item = $po->getProperty( 'wikibase_item' );
-				if ( $item ) {
-					$desc = ExtMobileFrontend::getWikibaseDescription( $item );
-					if ( $desc ) {
-						self::setTagline( $outputPage, $desc );
-					}
+				$desc = self::findTagline( $po, function ( $item ) {
+					return ExtMobileFrontend::getWikibaseDescription( $item );
+				} );
+				if ( $desc ) {
+					self::setTagline( $outputPage, $desc );
 				}
 			}
 		}
