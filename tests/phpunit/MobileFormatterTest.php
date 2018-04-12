@@ -874,6 +874,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
 		$formatter = new MobileFormatter( $input, Title::newFromText( 'Special:Foo' ) );
 		$formatter->filterContent( false, true, false );
+		// Success is not crashing when the input is not a DOMElement.
+		$this->assertTrue( true );
 	}
 
 	/**
