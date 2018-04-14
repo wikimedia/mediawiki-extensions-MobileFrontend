@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\ContentProviders;
 
-use GlobalVarConfig;
+use Config;
 use OutputPage;
 
 class ContentProviderFactory {
@@ -11,14 +11,14 @@ class ContentProviderFactory {
 	const MCS_API = 'MobileFrontend\\ContentProviders\\McsContentProvider';
 
 	/**
-	 * @param GlobalVarConfig $config to allow config specific behaviour
+	 * @param Config $config to allow config specific behaviour
 	 * @param OutputPage $out to allow the addition of modules and styles
 	 *  as required by the content
 	 * @param string $html (optional) available HTML that can be used by provider
 	 *  if necessary. This may be useful if the ContentProvider acce
 	 * @return IContentProvider
 	 */
-	public static function getProvider( GlobalVarConfig $config, OutputPage $out, $html = '' ) {
+	public static function getProvider( Config $config, OutputPage $out, $html = '' ) {
 		$contentProviderClass = $config->get( 'MFContentProviderClass' );
 
 		if ( !class_exists( $contentProviderClass ) ) {
