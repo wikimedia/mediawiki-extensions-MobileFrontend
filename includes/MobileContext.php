@@ -499,7 +499,6 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Remove cookie and continue automatic redirect to mobile page
-	 * @return string
 	 */
 	public function unsetStopMobileRedirectCookie() {
 		if ( is_null( $this->getStopMobileRedirectCookie() ) ) {

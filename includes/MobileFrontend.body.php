@@ -1,6 +1,7 @@
 <?php
 
 use Wikibase\Client\WikibaseClient;
+use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
 
@@ -131,7 +132,7 @@ class ExtMobileFrontend {
 	 * Returns the Wikibase entity associated with a page or null if none exists.
 	 *
 	 * @param string $item Wikibase id of the page
-	 * @return mw.wikibase.entity|null
+	 * @return EntityDocument|null
 	 */
 	public static function getWikibaseEntity( $item ) {
 		if ( !class_exists( WikibaseClient::class ) ) {

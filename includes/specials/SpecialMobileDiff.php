@@ -50,7 +50,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
 	 * @param int[] $revids Array of revision ids currently limited to 2 elements
-	 * @return Revision[] Array of previous and next revision. The next revision is null if
+	 * @return Revision[]|null[] Array of previous and next revision. The next revision is null if
 	 *   a bad parameter is passed
 	 */
 	public function getRevisionsToCompare( $revids ) {

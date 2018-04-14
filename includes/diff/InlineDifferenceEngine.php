@@ -157,8 +157,8 @@ class InlineDifferenceEngine extends DifferenceEngine {
 
 	/**
 	 * Creates an inline diff
-	 * @param Content $otext Old content
-	 * @param Content $ntext New content
+	 * @param string $otext Old content
+	 * @param string $ntext New content
 	 * @throws \MediaWiki\Diff\ComplexityException
 	 *
 	 * @return string

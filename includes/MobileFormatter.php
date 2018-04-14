@@ -214,7 +214,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * Apply filtering per element (section) in a document.
 	 * @param DOMElement|DOMDocument $el
 	 * @param DOMDocument $doc
-	 * @param number $sectionNumber Which section is it on the document
+	 * @param int $sectionNumber Which section is it on the document
 	 * @param array $options options about the transformations per section
 	 */
 	private function filterContentInSection(

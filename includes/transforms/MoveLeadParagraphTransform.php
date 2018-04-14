@@ -10,7 +10,7 @@ use DOMDocument;
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * @param string $title for logging purposes
-	 * @param number $revId for logging purposes
+	 * @param int $revId for logging purposes
 	 */
 	public function __construct( $title, $revId ) {
 		$this->title = $title;
