@@ -609,7 +609,7 @@ class MobileFrontendHooks {
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
 		$context = MobileContext::singleton();
 		$isMobileView = $context->shouldDisplayMobileView();
-		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines', [] );
+		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines' );
 		$name = $special->getName();
 
 		if ( $isMobileView ) {

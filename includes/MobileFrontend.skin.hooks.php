@@ -240,7 +240,7 @@ JAVASCRIPT;
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
 		} else {
 			$url = $title->getLocalUrl(
-				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop', true )
+				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
 			);
 		}
 		$desktopUrl = $ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
