@@ -9,6 +9,16 @@ use DOMDocument;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
+	 * @var string
+	 */
+	private $title;
+
+	/**
+	 * @var int
+	 */
+	private $revId;
+
+	/**
 	 * @param string $title for logging purposes
 	 * @param int $revId for logging purposes
 	 */

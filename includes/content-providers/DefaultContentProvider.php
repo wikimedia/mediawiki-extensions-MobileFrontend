@@ -3,6 +3,12 @@
 namespace MobileFrontend\ContentProviders;
 
 class DefaultContentProvider implements IContentProvider {
+
+	/**
+	 * @var string
+	 */
+	private $html;
+
 	/**
 	 * @param string $html HTML relating to content
 	 */

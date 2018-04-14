@@ -5,7 +5,20 @@ namespace MobileFrontend\ContentProviders;
 use OutputPage;
 
 class MwApiContentProvider implements IContentProvider {
-	protected $html = '';
+	/**
+	 * @var string
+	 */
+	private $baseUrl;
+
+	/**
+	 * @var OutputPage
+	 */
+	private $out;
+
+	/**
+	 * @var string
+	 */
+	private $skinName;
 
 	/**
 	 * @param string $baseUrl for the MediaWiki API to be used minus query string e.g. /w/api.php

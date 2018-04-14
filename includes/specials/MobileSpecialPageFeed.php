@@ -7,6 +7,9 @@
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**  @var boolean $showUsername Whether to show the username in results or not */
 	protected $showUsername = true;
+	protected $lastDate;
+	/** @var Title|null */
+	protected $title;
 
 	/**
 	 * Render the special page content
