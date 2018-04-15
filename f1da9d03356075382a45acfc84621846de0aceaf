@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c6d4f15_6cb7681c",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-15T17:53:04Z",
+      "side": 1,
+      "message": "This can be made private. For some reason the subclass SpecialMobileContributions declares this property, but does not use it. It should be removed there.",
+      "range": {
+        "startLine": 10,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2371807c_dd876208",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-15T17:53:04Z",
+      "side": 1,
+      "message": "This property is never set to anything. It\u0027s always null.",
+      "range": {
+        "startLine": 12,
+        "startChar": 1,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c6b0495_127c380b",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-15T17:53:04Z",
+      "side": 1,
+      "message": "This is the only user of this variable, which is always null. Something is seriously broken here.",
+      "range": {
+        "startLine": 87,
+        "startChar": 47,
+        "endLine": 87,
+        "endChar": 59
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dc531_09ffd8fe",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-15T17:53:04Z",
+      "side": 1,
+      "message": "This is unused here and can be removed.",
+      "range": {
+        "startLine": 22,
+        "startChar": 1,
+        "endLine": 22,
+        "endChar": 20
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
