@@ -72,6 +72,53 @@
     },
     {
       "key": {
+        "uuid": "31cc3a83_c18f6c12",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-16T06:59:34Z",
+      "side": 1,
+      "message": "Ok, thanks. My IDE wasn\u0027t able to find the other users in the subclass SpecialMobileHistory.",
+      "parentUuid": "9254a27f_b3571631",
+      "range": {
+        "startLine": 12,
+        "startChar": 1,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d6f1e2b_d04087d3",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-16T06:59:34Z",
+      "side": 1,
+      "message": "Uh? What exactly needs fixing here?",
+      "range": {
+        "startLine": 50,
+        "startChar": 11,
+        "endLine": 50,
+        "endChar": 43
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7c6b0495_127c380b",
         "filename": "includes/specials/MobileSpecialPageFeed.php",
         "patchSetId": 1
@@ -83,6 +130,30 @@
       "writtenOn": "2018-04-15T17:53:04Z",
       "side": 1,
       "message": "This is the only user of this variable, which is always null. Something is seriously broken here.",
+      "range": {
+        "startLine": 87,
+        "startChar": 47,
+        "endLine": 87,
+        "endChar": 59
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "38db0eae_d5cb4f82",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-04-16T06:59:34Z",
+      "side": 1,
+      "message": "Done (see above).",
+      "parentUuid": "7c6b0495_127c380b",
       "range": {
         "startLine": 87,
         "startChar": 47,
