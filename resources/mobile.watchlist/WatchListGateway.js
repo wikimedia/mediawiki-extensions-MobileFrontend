@@ -47,7 +47,7 @@
 				}, this.continueParams );
 
 			if ( this.canContinue === false ) {
-				return util.Deferred().resolve();
+				return util.Deferred().resolve( [] );
 			}
 			if ( this.shouldSkipFirstTitle ) {
 				// If we are calling the api from the last item of the previous page
