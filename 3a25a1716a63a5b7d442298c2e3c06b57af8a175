@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00702f50_6c9d336d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-04-16T21:21:16Z",
+      "side": 1,
+      "message": "ParserOutput will return `false` if no property is null or value was not set, we should do strict checking here `$desc \u003d\u003d\u003d false \u0026\u0026 ...` \n\nCurrently, if something has an empty wikibase description we will call getWikibaseDescription which IMHO is not necessary.",
+      "range": {
+        "startLine": 1149,
+        "startChar": 9,
+        "endLine": 1149,
+        "endChar": 16
+      },
+      "revId": "3a25a1716a63a5b7d442298c2e3c06b57af8a175",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
