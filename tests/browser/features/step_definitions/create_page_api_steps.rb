@@ -1,3 +1,7 @@
+Given(/^the page "(.*?)" exists$/) do |title|
+  api.create_page title, 'Test is used by Selenium web driver'
+end
+
 Given(/^the page "(.*?)" exists and has at least "(\d+)" edits$/) do |title, min_edit_count|
   # Page must first exist before we can get edit count information
   step 'the page "' + title + '" exists'
