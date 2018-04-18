@@ -24,9 +24,7 @@
 		new Watchstar( {
 			api: new mw.Api(),
 			el: $el,
-			page: new Page( {
-				id: 10
-			} )
+			page: new Page( { title: 'Title' } )
 		} );
 		$el.trigger( 'click' );
 
@@ -56,16 +54,14 @@
 			w = new Watchstar( {
 				api: new mw.Api(),
 				isWatched: false,
-				page: new Page( {
-					id: 42
-				} )
+				page: new Page( { title: 'Title' } )
 			} ),
 			$el = w.$el;
 
 		$el.trigger( 'click' );
 		assert.ok( this.spy.calledWith( 'watch', {
 			action: 'watch',
-			pageids: 42
+			titles: [ 'Title' ]
 		} ), 'The watch happened' );
 		assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
 			true, 'After successful watch has watched class' );
@@ -77,9 +73,7 @@
 			w = new Watchstar( {
 				api: new mw.Api(),
 				isWatched: true,
-				page: new Page( {
-					id: 42
-				} )
+				page: new Page( { title: 'Title' } )
 			} ),
 			$el = w.$el;
 
@@ -87,7 +81,7 @@
 		assert.ok( this.spy.calledWith( 'watch', {
 			action: 'watch',
 			unwatch: true,
-			pageids: 42
+			titles: [ 'Title' ]
 		} ), 'The watch happened' );
 		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
 	} );

@@ -15,12 +15,15 @@
 	OO.mfExtend( PageList, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Page[]} defaults.pages Array of page objects returned from the server.
+		 * @cfg {Page[]} defaults.pages Array of Page objects. These should match
+		 *                              the Page model and not necessarily the
+		 *                              underlying API format used.
 		 * E.g. [
 		 *   {
 		 *     heading: "<strong>C</strong>laude Monet",
 		 *     id: undefined,
-		 *     displayTitle: "Claude Monet",
+		 *     title: "Claude Monet",
+		 *     displayTitle: "<i>Claude Monet</i>",
 		 *     url: "/wiki/Claude_Monet",
 		 *     thumbnail: {
 		 *       height: 62,
@@ -60,6 +63,9 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'PageList.hogan' ),
 		templatePartials: {
+			// The server uses a very different structure in
+			// SpecialMobileEditWatchlist.getLineHtml(). Be aware of these differences
+			// when updating server rendered items.
 			item: mw.template.get( 'mobile.startup', 'PageListItem.hogan' )
 		}
 	} );

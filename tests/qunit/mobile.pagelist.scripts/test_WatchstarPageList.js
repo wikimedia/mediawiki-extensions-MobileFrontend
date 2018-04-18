@@ -14,10 +14,12 @@
 					pages: [
 						{
 							pageid: 30,
+							title: 'Title 30',
 							watched: true
 						},
 						{
 							pageid: 50,
+							title: 'Title 50',
 							watched: false
 						}
 					]
@@ -31,44 +33,67 @@
 		}
 	} );
 
-	QUnit.test( 'No watchlist status check if no ids', function ( assert ) {
-		var pl,
+	QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
+		var done = assert.async(),
+			pl,
 			spy = this.spy;
 		pl = new WatchstarPageList( {
 			api: new mw.Api(),
-			pages: [ {}, {} ]
+			pages: [
+				{ title: 'Title 0' },
+				{ title: 'Title 1' }
+			]
 		} );
-		return pl.getPages().done( function () {
-			assert.ok( spy.calledOnce,
-				'A request to API was made for pages but not watch status' );
-			assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 0, '0 articles have watch stars' );
-		} );
+
+		// Wait for an internal API call to happen as a side-effect of construction.
+		window.setTimeout( function () {
+			pl.getPages( {} ).done( function () {
+				assert.ok( spy.calledWith( {
+					formatversion: 2,
+					action: 'query',
+					prop: 'info',
+					inprop: 'watched',
+					titles: [ 'Title 0', 'Title 1' ]
+				} ), 'A request to API was made to retrieve the statuses' );
+				assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 2, '2 articles have watch stars' );
+				done();
+			} );
+		}, 2000 );
 	} );
 
 	QUnit.test( 'Checks watchlist status once', function ( assert ) {
-		var pl,
-			spy = this.spy;
-		pl = new WatchstarPageList( {
-			api: new mw.Api(),
-			pages: [ {
-				id: 30
-			}, {
-				id: 50
-			} ]
-		} );
-		return pl.getPages().done( function () {
-			assert.ok( spy.calledTwice,
-				'run callback twice (inside postRender and this call) - no caching occurs' );
-			assert.ok( spy.calledWith( {
-				formatversion: 2,
-				action: 'query',
-				prop: 'info',
-				inprop: 'watched',
-				pageids: [ 30, 50 ]
-			} ), 'A request to API was made to retrieve the statuses' );
-			assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 2, '2 articles have watch stars' );
-			assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 1, '1 of articles is marked as watched' );
-		} );
+		var done = assert.async(),
+			spy = this.spy,
+			pl = new WatchstarPageList( {
+				api: new mw.Api(),
+				pages: [ {
+					id: 30,
+					title: 'Title 30'
+				}, {
+					id: 50,
+					title: 'Title 50'
+				} ]
+			} );
+		// Wait for an internal API call to happen as a side-effect of construction.
+		setTimeout( function () {
+			pl.getPages( {
+				'Title 30': 30,
+				'Title 50': 50
+			} ).done( function () {
+				assert.strictEqual( spy.callCount, 2,
+					'run callback twice (inside postRender and this call) - no caching occurs' );
+				assert.ok( spy.calledWith( {
+					formatversion: 2,
+					action: 'query',
+					prop: 'info',
+					inprop: 'watched',
+					pageids: [ 30, 50 ]
+				} ), 'A request to API was made to retrieve the statuses' );
+				assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 2, '2 articles have watch stars' );
+				assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 1, '1 article is marked as watched' );
+				done();
+			} );
+		}, 2000 );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

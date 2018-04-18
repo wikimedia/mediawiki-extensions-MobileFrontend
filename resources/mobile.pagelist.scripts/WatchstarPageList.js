@@ -32,11 +32,13 @@
 		 * Retrieve pages
 		 *
 		 * @method
-		 * @param {Array} ids a list of page ids
+		 * @param {Object.<string,string|number>} titleToPageID A page title to page
+		 *                                                      ID map. 0 indicates
+		 *                                                      ID unknown.
 		 * @return {jQuery.Deferred}
 		 */
-		getPages: function ( ids ) {
-			return this.wsGateway.loadWatchStatus( ids );
+		getPages: function ( titleToPageID ) {
+			return this.wsGateway.loadWatchStatus( titleToPageID );
 		},
 		/**
 		 * @inheritdoc
@@ -44,7 +46,7 @@
 		postRender: function () {
 			var $li,
 				self = this,
-				pages = [],
+				titleToPageID = {},
 				gateway = this.wsGateway;
 
 			PageList.prototype.postRender.apply( this );
@@ -54,16 +56,14 @@
 
 			// Check what we have in the page list
 			$li.each( function () {
-				var id = self.$( this ).data( 'id' );
-				if ( id ) {
-					pages.push( id );
-				}
+				var li = self.$( this );
+				titleToPageID[ li.attr( 'title' ) ] = li.data( 'id' );
 			} );
 
 			// Create watch stars for each entry in list
-			if ( !user.isAnon() && pages.length > 0 ) {
+			if ( !user.isAnon() && Object.keys( titleToPageID ).length ) {
 				// FIXME: This should be moved out of here so other extensions can override this behaviour.
-				self.getPages( pages ).done( function () {
+				self.getPages( titleToPageID ).then( function () {
 					$li.each( function () {
 						var watchstar,
 							page = new Page( {
@@ -77,6 +77,9 @@
 							api: self.options.api,
 							funnel: self.options.funnel,
 							isAnon: false,
+							// WatchstarPageList.getPages() already retrieved the status of
+							// each page. Explicitly set the watch state so another request
+							// will not be issued by the Watchstar.
 							isWatched: gateway.isWatchedPage( page ),
 							page: page,
 							el: self.parseHTML( '<div>' ).appendTo( this )

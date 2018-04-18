@@ -76,10 +76,13 @@
 			this.gateway = new WatchstarGateway( options.api );
 
 			if ( options.isWatched === undefined ) {
-				this.gateway.loadWatchStatus( page.getId() ).done( function () {
+				this.gateway.loadWatchStatusByPageTitle( [ page.getTitle() ] ).done( function () {
 					options.isWatched = self.gateway.isWatchedPage( page );
 				} );
 			} else if ( !user.isAnon() ) {
+				// Synchronize the Watchstar's cache, options.isWatched, with the
+				// WatchstarGateway cache. Otherwise, toggling may have the opposite
+				// effect as is wanted.
 				this.gateway.setWatchedPage( options.page, options.isWatched );
 			}
 

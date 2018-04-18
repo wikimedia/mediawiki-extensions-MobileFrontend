@@ -14,7 +14,17 @@
 	}
 
 	WatchstarGateway.prototype = {
-		_cache: {},
+		/**
+		 * A map of page titles to watch statuses shared across all instances.
+		 * Status is true if watched, false otherwise. Missing pages, i.e., pages
+		 * whose IDs are unknown because they don't exist, are used in the case that
+		 * a user wishes to observe when a page with a given title is created. Since
+		 * all pages with IDs have titles, titles are unique within a given wiki,
+		 * and it's possible for a title and page ID to conflict, only titles are
+		 * used for the keys.
+		 * @static {Object.<string, boolean>}
+		 */
+		_titleCache: {},
 
 		/**
 		 * Cache API response
@@ -23,29 +33,68 @@
 		 * @param {Object} resp Response from the server
 		 */
 		_loadIntoCache: function ( resp ) {
-			var cache = this._cache;
+			var cache = this._titleCache;
 			if ( resp.query && resp.query.pages ) {
 				resp.query.pages.forEach( function ( page ) {
-					cache[ page.pageid ] = page.watched;
+					cache[ page.title ] = page.watched;
 				} );
 			}
 		},
+
+		/**
+		 * Update the watch status cache for a given list of page titles in bulk
+		 * @method
+		 * @param {string[]} titles An array of page titles.
+		 * @param {boolean} watched
+		 * @return {void}
+		 */
+		populateWatchStatusCache: function ( titles, watched ) {
+			var cache = this._titleCache;
+			titles.forEach( function ( title ) {
+				cache[ title ] = watched;
+			} );
+		},
+
+		/**
+		 * Loads the watch status for a given array of pages
+		 * @method
+		 * @param {Object.<string,string|number>} titleToPageID A page title to page
+		 *                                                      ID map. 0 indicates
+		 *                                                      ID unknown.
+		 * @return {jQuery.Deferred}
+		 */
+		loadWatchStatus: function ( titleToPageID ) {
+			var self = this,
+				titles = [],
+				ids = [];
+
+			// Partition titles and page IDs. Favor the later as they're shorter.
+			Object.keys( titleToPageID )
+				.forEach( function ( title ) {
+					var id = titleToPageID[ title ];
+					if ( id && id !== '0' ) {
+						ids.push( id );
+					} else if ( title ) {
+						titles.push( title );
+					}
+				} );
+
+			return this.loadWatchStatusByPageID( ids ).then( function () {
+				return self.loadWatchStatusByPageTitle( titles );
+			} );
+		},
+
 		/**
 		 * Loads the watch status for a given list of page ids in bulk
 		 * @method
-		 * @param {Array} ids A list of page ids
-		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
+		 * @param {string[]} ids A list of page ids
 		 * @return {jQuery.Deferred}
 		 */
-		loadWatchStatus: function ( ids, markAsAllWatched ) {
+		loadWatchStatusByPageID: function ( ids ) {
 			var self = this;
 
-			if ( markAsAllWatched ) {
-				ids.forEach( function ( id ) {
-					self._cache[ id ] = true;
-				} );
-				return util.Deferred().resolve();
-			}
+			if ( !ids.length ) { return util.Deferred().resolve(); }
+
 			return this.api.get( {
 				formatversion: 2,
 				action: 'query',
@@ -58,13 +107,36 @@
 		},
 
 		/**
+		 * Loads the watch status for a given list of page ids in bulk. Do not call
+		 * call this method with more than ~2000 characters in titles.
+		 * @method
+		 * @param {string[]} titles
+		 * @return {jQuery.Deferred}
+		 */
+		loadWatchStatusByPageTitle: function ( titles ) {
+			var self = this;
+
+			if ( !titles.length ) { return util.Deferred().resolve(); }
+
+			return this.api.get( {
+				formatversion: 2,
+				action: 'query',
+				prop: 'info',
+				inprop: 'watched',
+				titles: titles
+			} ).then( function ( resp ) {
+				self._loadIntoCache( resp );
+			} );
+		},
+
+		/**
 		 * Marks whether a given page is watched or not to avoid an API call
 		 * @method
 		 * @param {Page} page Page view object
 		 * @param {boolean} isWatched True if page is watched
 		 */
 		setWatchedPage: function ( page, isWatched ) {
-			this._cache[ page.getId() ] = isWatched;
+			this._titleCache[ page.getTitle() ] = isWatched;
 		},
 
 		/**
@@ -74,8 +146,7 @@
 		 * @return {boolean|undefined} undefined when the watch status is not known.
 		 */
 		isWatchedPage: function ( page ) {
-			var id = page.getId();
-			return this._cache[id];
+			return this._titleCache[ page.getTitle() ];
 		},
 
 		/**
@@ -86,18 +157,12 @@
 		 */
 		toggleStatus: function ( page ) {
 			var data,
-				self = this,
-				id = page.getId();
+				self = this;
 
 			data = {
 				action: 'watch'
 			};
-			if ( !page.isMissing ) {
-				data.pageids = id;
-			} else {
-				// it's a new page use title instead
-				data.title = page.getTitle();
-			}
+			data.titles = [ page.getTitle() ];
 
 			if ( this.isWatchedPage( page ) ) {
 				data.unwatch = true;

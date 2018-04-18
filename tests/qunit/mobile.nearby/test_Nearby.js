@@ -40,17 +40,20 @@
 		setup: function () {
 			var resp = {
 				query: {
-					pages: {
-						2: {
+					pages: [
+						{
+							pageid: 2,
 							watched: true
 						},
-						3: {
+						{
+							pageid: 3,
 							watched: false
 						},
-						4: {
+						{
+							pageid: 4,
 							watched: false
 						}
-					}
+					]
 				}
 			};
 			// prevent hits to api due to watch status lookup

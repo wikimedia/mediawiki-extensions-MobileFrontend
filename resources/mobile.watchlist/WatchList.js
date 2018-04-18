@@ -5,8 +5,9 @@
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
 	/**
-	 * An extension of the PageList which preloads pages as all being watched.
-	 * @extends PageList
+	 * An extension of the WatchstarPageList which preloads pages as all being
+	 * watched.
+	 * @extends WatchstarPageList
 	 * @class WatchList
 	 * @uses InfiniteScroll
 	 *
@@ -32,6 +33,8 @@
 		isBorderBox: false,
 		/** @inheritdoc */
 		preRender: function () {
+			// The DOM will be modified. Prevent any false scroll end events from
+			// being emitted.
 			this.infiniteScroll.disable();
 			this.infiniteScroll.setElement( this.$el );
 		},
@@ -39,11 +42,14 @@
 		 * Retrieve pages where all pages are watched.
 		 *
 		 * @method
-		 * @param {Array} ids a list of page ids
+		 * @param {Object.<string,string|number>} titleToPageID A page title to page
+		 *                                                      ID map. 0 indicates
+		 *                                                      ID unknown.
 		 * @return {jQuery.Deferred}
 		 */
-		getPages: function ( ids ) {
-			return this.wsGateway.loadWatchStatus( ids, true );
+		getPages: function ( titleToPageID ) {
+			this.wsGateway.populateWatchStatusCache( Object.keys( titleToPageID ), true );
+			return util.Deferred().resolve();
 		},
 		/**
 		 * Also sets a watch uploads funnel.
@@ -51,6 +57,7 @@
 		 */
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
+			// The list has been extended. Re-enable scroll end events.
 			this.infiniteScroll.enable();
 		},
 		/**
@@ -58,7 +65,7 @@
 		 * Infinite scroll is re-enabled in postRender.
 		 */
 		_loadPages: function () {
-			this.gateway.loadWatchlist().done( function ( pages ) {
+			this.gateway.loadWatchlist().then( function ( pages ) {
 				pages.forEach( function ( page ) {
 					this.appendPage( page );
 				}.bind( this ) );
@@ -68,10 +75,10 @@
 
 		/**
 		 * Appends a list item
-		 * @param {Object} page
+		 * @param {Page} page
 		 */
 		appendPage: function ( page ) {
-			// wikidata descriptions should not show in this view.c
+			// wikidata descriptions should not show in this view.
 			var templateOptions = util.extend( {}, page.options, {
 				wikidataDescription: undefined
 			} );

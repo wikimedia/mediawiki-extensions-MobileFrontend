@@ -12,21 +12,23 @@
 				pages: [
 					{
 						pageid: 19,
+						title: 'Title 19',
 						watched: false
 					},
 					{
 						pageid: 30,
+						title: 'Title 30',
 						watched: true
 					}
 				]
 			}
 		} );
 		assert.strictEqual( gateway.isWatchedPage( new Page( {
-			id: 30
-		} ) ), true, 'Able to check watch status' );
+			title: 'Title 19'
+		} ) ), false, 'Able to check watch status of unwatched page' );
 		assert.strictEqual( gateway.isWatchedPage( new Page( {
-			id: 19
-		} ) ), false, 'Able to check watch status' );
+			title: 'Title 30'
+		} ) ), true, 'Able to check watch status of watched page' );
 	} );
 
 	QUnit.test( 'isWatchedPage', function ( assert ) {
@@ -34,7 +36,7 @@
 		assert.ok(
 			gateway.isWatchedPage(
 				new Page( {
-					id: 3000
+					title: 'Title'
 				} )
 			) === undefined,
 			'unloaded pages are marked as undefined' );

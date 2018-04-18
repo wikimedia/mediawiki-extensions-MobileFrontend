@@ -7,7 +7,8 @@ use Wikimedia\Rdbms\ResultWrapper;
  * Implements the Watchlist special page
  */
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
-	// Performance-safe value with PageImages
+	// Performance-safe value with PageImages. Try to keep in sync with
+	// WatchListGateway.
 	const LIMIT = 50;
 
 	const THUMB_SIZE = MobilePage::SMALL_IMAGE_WIDTH;

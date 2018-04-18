@@ -26,7 +26,8 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	}
 
 	/**
-	 * Gets the HTML fragment for a watched page.
+	 * Gets the HTML fragment for a watched page. The client uses a very different
+	 * structure for client-rendered items in PageListItem.hogan.
 	 *
 	 * @param MobilePage $mp a definition of the page to be rendered.
 	 * @return string

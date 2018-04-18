@@ -19,7 +19,8 @@
 	 */
 	function Page( options ) {
 		var thumb;
-		// thumbnail if not passed should be made false (truthy) so that it renders placeholder when absent
+		// If thumbnail is not passed it should be made false (truthy) so that it
+		// renders a placeholder when absent.
 		if ( options.thumbnail === undefined ) {
 			options.thumbnail = false;
 		}
@@ -46,8 +47,8 @@
 	OO.mfExtend( Page, View, {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {number} defaults.id Page ID. The default value of 0 represents a new page.
-		 * Be sure to override it to avoid side effects.
+		 * @cfg {number} defaults.id Page ID. The default value of 0 represents a
+		 * new or missing page. Be sure to override it to avoid side effects.
 		 * @cfg {string} defaults.title Title of the page. It includes prefix where needed and
 		 * is human readable, e.g. Talk:The man who lived.
 		 * @cfg {string} defaults.displayTitle HTML title of the page for display. Falls back
