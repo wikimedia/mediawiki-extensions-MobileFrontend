@@ -13,7 +13,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	public function __construct() {
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );
-		parent::__construct( 'EditWatchlist' );
+		parent::__construct();
 	}
 
 	/**

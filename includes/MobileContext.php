@@ -598,7 +598,7 @@ class MobileContext extends ContextSource {
 
 		// set expiration date in the past
 		$expire = $this->getUseFormatCookieExpiry( time(), -3600 );
-		$this->setUseFormatCookie( '', $expire, true );
+		$this->setUseFormatCookie( '', $expire );
 	}
 
 	/**
