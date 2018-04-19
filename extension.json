@@ -927,12 +927,6 @@
 				"resources/mobile.special.styles/forms.less"
 			]
 		},
-		"mobile.special.watchlist.styles": {
-			"targets": "mobile",
-			"styles": [
-				"resources/mobile.special.watchlist.styles/specialWatchlist.less"
-			]
-		},
 		"mobile.special.user.icons": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",

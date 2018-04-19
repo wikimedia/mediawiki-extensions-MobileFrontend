@@ -52,7 +52,6 @@
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
 			this.infiniteScroll.enable();
-			this.$( '.page-summary .info' ).css( 'visibility', 'visible' );
 		},
 		/**
 		 * Loads pages from the api and triggers render.
@@ -88,7 +87,6 @@
 		getLastTitle: function ( $el ) {
 			return $el.find( 'li:last' ).attr( 'title' );
 		}
-
 	} );
 
 	M.define( 'mobile.watchlist/WatchList', WatchList );

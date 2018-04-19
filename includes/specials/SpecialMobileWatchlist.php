@@ -46,7 +46,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 		$output->addModules( 'mobile.special.watchlist.scripts' );
 		$output->addModuleStyles( [
-			'mobile.special.watchlist.styles',
 			'mobile.pagelist.styles',
 			'mobile.pagesummary.styles',
 		] );

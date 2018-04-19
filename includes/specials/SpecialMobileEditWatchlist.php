@@ -220,7 +220,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out->addModules( 'mobile.special.watchlist.scripts' );
 		$out->addModuleStyles(
 			[
-				'mobile.special.watchlist.styles',
 				'mobile.pagelist.styles',
 				'mobile.pagesummary.styles',
 				'mobile.special.pagefeed.styles'
