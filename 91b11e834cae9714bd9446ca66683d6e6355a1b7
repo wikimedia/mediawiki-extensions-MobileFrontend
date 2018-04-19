@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "484bf69f_5fc6fda8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-19T23:15:50Z",
+      "side": 1,
+      "message": "We could have course update msg to return a Message object. I don\u0027t think there\u0027s much reason for this to return a string. What do you think @pmiazga?",
+      "revId": "91b11e834cae9714bd9446ca66683d6e6355a1b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
