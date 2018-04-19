@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9880732f_8397a132",
+        "filename": "resources/mobile.startup/PageListItem.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-19T23:08:44Z",
+      "side": 0,
+      "message": "Ti",
+      "revId": "5482873134cd29117ad5acc522e90a328f399399",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
