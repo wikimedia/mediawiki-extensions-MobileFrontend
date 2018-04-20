@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "97624b23_b01c6c96",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-20T17:12:33Z",
+      "side": 1,
+      "message": "I think we switched to ids because of URL length and lots of errors in logstash.  2,083 characters is the maximum for some IE browsers.\n\nFor a watchlist which can have up to 50 pages this URL has potential be huge (maybe too long?) Have we looked into this again (maybe it\u0027s not relevant any more....)?",
+      "revId": "f63b25e08f73438dde346b5d3800f6b5fbaa8611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "020282b6_b0abd3ff",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-20T17:12:33Z",
+      "side": 1,
+      "message": "Watchstar class can be shown to anonymous users (showing drawer)",
+      "revId": "f63b25e08f73438dde346b5d3800f6b5fbaa8611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
