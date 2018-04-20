@@ -50,11 +50,12 @@
 				iiurlwidth: findSizeBucket( $window.width() * imageSizeMultiplier ),
 				iiurlheight: findSizeBucket( $window.height() * imageSizeMultiplier )
 			} ).then( function ( resp ) {
-				if ( resp.query && resp.query.pages ) {
+				// imageinfo is undefined for missing pages.
+				if ( resp.query && resp.query.pages &&
+					resp.query.pages[0] && resp.query.pages[0].imageinfo ) {
 					return resp.query.pages[0].imageinfo[0];
-				} else {
-					throw new Error( 'The API failed to return any pages matching the titles.' );
 				}
+				throw new Error( 'The API failed to return any pages matching the titles.' );
 			} );
 		}
 
