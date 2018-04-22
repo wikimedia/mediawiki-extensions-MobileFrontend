@@ -4,7 +4,8 @@
 			"Mikalai Udodau",
 			"Чаховіч Уладзіслаў",
 			"Дзяніс Тутэйшы",
-			"Mechanizatar"
+			"Mechanizatar",
+			"Artsiom91"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацверджання",
@@ -53,5 +54,6 @@
 	"mobile-frontend-watchlist-more": "яшчэ",
 	"nearby": "Старонкі на тэмы побач з вамі",
 	"tag-mobile_edit": "Праўка з маб. прылады",
-	"tag-mobile_web_edit": "Праўка праз мабільную версію сайта"
+	"tag-mobile_web_edit": "Праўка праз мабільную версію сайта",
+	"mobile-frontend-panel-cancel": "Не, дзякуй"
 }
