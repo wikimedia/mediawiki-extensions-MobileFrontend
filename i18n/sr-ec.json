@@ -9,7 +9,8 @@
 			"Srdjan m",
 			"Сербијана",
 			"Obsuser",
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"BadDog"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Пријавите се или направите налог да бисте пратили своје измене",
@@ -171,9 +172,9 @@
 	"mobile-frontend-user-page-describe-yourself-editors": "уредницима",
 	"mobile-frontend-user-page-create-user-page-link-label": "Направите страницу $1",
 	"nearby": "Странице о темама близу Вас",
-	"tag-mobile_edit": "Мобилно уређивање",
+	"tag-mobile_edit": "мобилно уређивање",
 	"tag-mobile_edit-description": "Измена начињена са мобилног уређаја",
-	"tag-mobile_web_edit": "Мобилно веб-уређивање",
+	"tag-mobile_web_edit": "мобилно веб-уређивање",
 	"tag-mobile_web_edit-description": "Измена начињена са мобилне верзије сајта",
 	"mobile-frontend-loading-message": "Учитавам…",
 	"mobile-frontend-panel-ok": "У реду",
