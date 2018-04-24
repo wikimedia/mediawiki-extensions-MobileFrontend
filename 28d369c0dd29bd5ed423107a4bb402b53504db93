@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbd616c9_5b831750",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-24T23:39:10Z",
+      "side": 1,
+      "message": "This is deprecated and will return 0 in modern browsers. The scroll bar is technically on \u003chtml\u003e, not \u003cbody\u003e.\n\n // Deprecated, doesn\u0027t work:\n //\n document.body.scrollTop;\n //\u003e 0\n\n // Superseded by:\n //\n document.documentElement.scrollTop;\n //\u003e 314\n\n // Also:\n //\n window.pageYOffset;\n //\u003e 314\n\n // Also (lesser supported alias)\n window.scrollY;\n //\u003e 314\n\n\njQuery scrollTop() uses window.pageYOffset. Which seems best to use semantically given this is about the view port and not a specific scrollable container (e.g. like one would for a \u003cdiv\u003e with overflow: scroll).",
+      "range": {
+        "startLine": 267,
+        "startChar": 53,
+        "endLine": 267,
+        "endChar": 67
+      },
+      "revId": "28d369c0dd29bd5ed423107a4bb402b53504db93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
