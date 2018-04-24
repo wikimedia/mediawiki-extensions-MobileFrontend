@@ -48,14 +48,6 @@
 			if ( this.canContinue === false ) {
 				return util.Deferred().resolve( [] );
 			}
-			if ( this.shouldSkipFirstTitle ) {
-				// If we are calling the api from the last item of the previous page
-				// (like the first time when grabbing the last title from the HTML),
-				// then request one extra element (make room for that last title) which
-				// will be removed later when parsing data.
-				params.gwrlimit += 1;
-				params.pilimit += 1;
-			}
 			return this.api.get( params, {
 				url: this.apiUrl
 			} ).then( function ( data ) {
@@ -77,14 +69,11 @@
 		parseData: function ( data ) {
 			var pages;
 
-			if ( !data.hasOwnProperty( 'query' ) || !data.query.hasOwnProperty( 'pages' ) ) {
+			if ( !data.query || !data.query.pages ) {
 				return [];
 			}
 
-			// Convert the map to an Array.
-			pages = Object.keys( data.query.pages ).map( function ( id ) {
-				return data.query.pages[ id ];
-			} );
+			pages = data.query.pages;
 
 			// Sort results alphabetically (the api map doesn't have any order). The
 			// watchlist is ordered alphabetically right now.
@@ -100,9 +89,7 @@
 			}
 
 			// Transform the items to a sensible format
-			return pages.map( function ( item ) {
-				return Page.newFromJSON( item );
-			} );
+			return pages.map( Page.newFromJSON );
 		}
 
 	};
