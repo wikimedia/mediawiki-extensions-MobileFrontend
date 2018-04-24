@@ -23,10 +23,10 @@
 		 * @param {Object} resp Response from the server
 		 */
 		_loadIntoCache: function ( resp ) {
-			var self = this;
+			var cache = this._cache;
 			if ( resp.query && resp.query.pages ) {
-				Object.keys( resp.query.pages ).forEach( function ( id ) {
-					self._cache[ id ] = resp.query.pages[ id ].hasOwnProperty( 'watched' );
+				resp.query.pages.forEach( function ( page ) {
+					cache[ page.pageid ] = page.hasOwnProperty( 'watched' );
 				} );
 			}
 		},
@@ -45,16 +45,16 @@
 					self._cache[ id ] = true;
 				} );
 				return util.Deferred().resolve();
-			} else {
-				return this.api.get( {
-					action: 'query',
-					prop: 'info',
-					inprop: 'watched',
-					pageids: ids
-				} ).then( function ( resp ) {
-					self._loadIntoCache( resp );
-				} );
 			}
+			return this.api.get( {
+				formatversion: 2,
+				action: 'query',
+				prop: 'info',
+				inprop: 'watched',
+				pageids: ids
+			} ).then( function ( resp ) {
+				self._loadIntoCache( resp );
+			} );
 		},
 
 		/**
