@@ -45,6 +45,29 @@
       "revId": "28d369c0dd29bd5ed423107a4bb402b53504db93",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c7b9f_f8c3b820",
+        "filename": "resources/mobile.infiniteScroll/InfiniteScroll.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-24T23:52:09Z",
+      "side": 1,
+      "message": "For consistency, might want to use both values come from the same source.\n\nEither:\n\n window.pageYOffset + window.innerHeight;\n\nOr\n\n docEl.scrollTop + docEl.clientHeight;\n\nSame thing, though :)",
+      "range": {
+        "startLine": 117,
+        "startChar": 19,
+        "endLine": 117,
+        "endChar": 41
+      },
+      "revId": "28d369c0dd29bd5ed423107a4bb402b53504db93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
