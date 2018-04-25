@@ -16,7 +16,8 @@
 	 */
 	function CategoryOverlay( options ) {
 		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( 'load', this._loadCategories.bind( this ) );
+		this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
 		M.on( 'category-added', this._loadCategories.bind( this ) );
 		Overlay.apply( this, arguments );

@@ -26,27 +26,26 @@
 	} );
 
 	QUnit.test( 'emits load event', function ( assert ) {
-		var asyncDone = $.Deferred(),
+		var done = assert.async(),
 			is = new InfiniteScroll();
 
 		// Make sure we always have somewhere to scroll
 		$( 'body' ).height( '9999px' );
 
 		is.setElement( $( 'body' ) );
-		is.on( 'load', function () {
+		is.on( InfiniteScroll.EVENT_SCROLL_END, function () {
 			assert.ok( true, 'Load event emitted' );
 
 			// Reset height
 			$( 'body' ).css( 'height', '' );
 
 			// Finish
-			asyncDone.resolve();
+			done();
 		} );
 
 		// Scroll to the bottom of the body
 		window.scrollTo( 0, $( 'body' ).offset().top + $( 'body' ).outerHeight() );
 		M.emit( 'scroll:throttled' );
-		return asyncDone;
 	} );
 
 	QUnit.test( 'doesn\'t emit when disabled', function ( assert ) {
