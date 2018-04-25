@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc61f19d_d828b296",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-25T21:25:10Z",
+      "side": 1,
+      "message": "Just to check I understand this correctly - this only happens if I load a page with an image, that then gets deleted in the space between me loading that page and clicking the image to launch the media viewer OR follow a bad URL e.g. https://en.m.wikipedia.org/wiki/Barack_Obama#/media/File%3APresident_Barack_Osbama.jpg?\n\nIs that correct?\n\nI think we should capture this behaviour in a unit test: https://gerrit.wikimedia.org/r/429108 Document ImageGateway behaviour with missing pages\n\nNote: It seems like you\u0027ve found a bug here but not fixed the bug.\nRemoving this exception doesn\u0027t change the behaviour that the getThumb method fails and is not handled inside the ImageOverlay and for completeness should add some error handling in the image overlay.",
+      "revId": "739c60949912f1b29b585f684c32368ca0ffa7e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
