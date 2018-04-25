@@ -10,10 +10,10 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 	/**
 	 * Returns interface message text
 	 * @param string $key Message key
-	 * @return string Wiki text
+	 * @return Message
 	 */
 	public function msg( $key ) {
-		return wfMessage( $key )->text();
+		return wfMessage( $key );
 	}
 
 	/**
@@ -47,7 +47,7 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 			$changed = true;
 			$h2FeaturedArticle = $mainPage->createElement(
 				'h2',
-				$this->msg( 'mobile-frontend-featured-article' )
+				$this->msg( 'mobile-frontend-featured-article' )->text()
 			);
 			$content->appendChild( $h2FeaturedArticle );
 			$content->appendChild( $featuredArticle );
@@ -56,7 +56,9 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 		// If there is a news section, add it to the new Main Page content
 		if ( $newsItems ) {
 			$changed = true;
-			$h2NewsItems = $mainPage->createElement( 'h2', $this->msg( 'mobile-frontend-news-items' ) );
+			$h2NewsItems = $mainPage->createElement( 'h2',
+				$this->msg( 'mobile-frontend-news-items' )->text()
+			);
 			$content->appendChild( $h2NewsItems );
 			$content->appendChild( $newsItems );
 		}
