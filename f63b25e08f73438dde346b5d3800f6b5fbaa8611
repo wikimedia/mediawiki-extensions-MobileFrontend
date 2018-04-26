@@ -50,6 +50,24 @@
       "revId": "f63b25e08f73438dde346b5d3800f6b5fbaa8611",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62be1d22_8b34c238",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-26T23:01:52Z",
+      "side": 1,
+      "message": "(I guess what I\u0027m saying is it\u0027s not clear what this todo means as it seems clear to me). The API should not be hit at all for anons.",
+      "parentUuid": "020282b6_b0abd3ff",
+      "revId": "f63b25e08f73438dde346b5d3800f6b5fbaa8611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
