@@ -12,7 +12,7 @@
 	 * @uses Page
 	 * @uses WatchstarGateway
 	 * @uses Watchstar
-	 * @extends View
+	 * @extends PageList
 	 *
 	 * @constructor
 	 * @param {Object} options Configuration options
