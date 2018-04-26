@@ -47,7 +47,7 @@
 				]
 			} );
 		// Avoid API requests due to scroll events (https://phabricator.wikimedia.org/T116258)
-		pl.infiniteScroll.disable();
+		pl.scrollEndEventEmitter.disable();
 
 		// Wait for an internal API call to happen as a side-effect of construction.
 		window.setTimeout( function () {

@@ -2,7 +2,7 @@
 
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
-		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**
@@ -15,8 +15,8 @@
 	 * @param {Object} options Configuration options
 	 */
 	function CategoryOverlay( options ) {
-		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter();
+		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
 		M.on( 'category-added', this._loadCategories.bind( this ) );
@@ -85,10 +85,10 @@
 				apiResult;
 
 			this.showSpinner();
-			this.infiniteScroll.setElement( this.$el );
-			// InfiniteScroll is enabled once it's created, but we want to wait, until at least one element is
+			this.scrollEndEventEmitter.setElement( this.$el );
+			// ScrollEndEventEmitter is enabled once it's created, but we want to wait, until at least one element is
 			// in the list before we enable it. So disable it here and enable once the elements are loaded.
-			this.infiniteScroll.disable();
+			this.scrollEndEventEmitter.disable();
 			apiResult = this.gateway.getCategories( this.options.title );
 			if ( apiResult === false ) {
 				self.clearSpinner();
@@ -126,7 +126,7 @@
 					self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
 				}
 				self.clearSpinner();
-				self.infiniteScroll.enable();
+				self.scrollEndEventEmitter.enable();
 			} );
 		},
 

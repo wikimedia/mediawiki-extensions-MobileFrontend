@@ -229,7 +229,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.infiniteScroll",
+				"mobile.scrollEndEventEmitter",
 				"mobile.startup",
 				"mobile.pagelist.scripts"
 			],
@@ -670,7 +670,7 @@
 				"mobile.search.api",
 				"mobile.search",
 				"mobile.editor.common",
-				"mobile.infiniteScroll",
+				"mobile.scrollEndEventEmitter",
 				"oojs-ui.styles.icons-interactions",
 				"oojs-ui"
 			],
@@ -879,7 +879,7 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.infiniteScroll"
+				"mobile.scrollEndEventEmitter"
 			],
 			"templates": {
 				"PhotoItem.hogan": "resources/mobile.gallery/PhotoItem.hogan",
@@ -897,7 +897,7 @@
 				"resources/mobile.gallery/PhotoList.js"
 			]
 		},
-		"mobile.infiniteScroll": {
+		"mobile.scrollEndEventEmitter": {
 			"targets": [
 				"mobile",
 				"desktop"
@@ -906,7 +906,7 @@
 				"mobile.startup"
 			],
 			"scripts": [
-				"resources/mobile.infiniteScroll/InfiniteScroll.js"
+				"resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js"
 			]
 		},
 		"mobile.mainpage.css": {

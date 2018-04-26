@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
-		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
@@ -9,7 +9,7 @@
 	 * watched.
 	 * @extends WatchstarPageList
 	 * @class WatchList
-	 * @uses InfiniteScroll
+	 * @uses ScrollEndEventEmitter
 	 *
 	 * @constructor
 	 * @param {Object} options Configuration options
@@ -18,8 +18,8 @@
 		var lastTitle;
 
 		// Set up infinite scroll helper and listen to events
-		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter();
+		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadPages.bind( this ) );
 
 		if ( options.el ) {
@@ -36,8 +36,8 @@
 		preRender: function () {
 			// The DOM will be modified. Prevent any false scroll end events from
 			// being emitted.
-			this.infiniteScroll.disable();
-			this.infiniteScroll.setElement( this.$el );
+			this.scrollEndEventEmitter.disable();
+			this.scrollEndEventEmitter.setElement( this.$el );
 		},
 		/**
 		 * Retrieve pages where all pages are watched.
@@ -59,7 +59,7 @@
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
 			// The list has been extended. Re-enable scroll end events.
-			this.infiniteScroll.enable();
+			this.scrollEndEventEmitter.enable();
 		},
 		/**
 		 * Loads pages from the api and triggers render.
