@@ -52,6 +52,24 @@
       "revId": "739c60949912f1b29b585f684c32368ca0ffa7e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db9c4b06_0c8bb7f0",
+        "filename": "resources/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-04-26T15:44:12Z",
+      "side": 1,
+      "message": "Thanks for adding the test and your comments.\n\nAt your prompt, I went to improve the error handling in ImageOverlay. However, upon closer inspection, I think that will require design input so I\u0027ve created a ticket for it as T193172.\n\nI feel strongly that this patch is a standalone improvement so my answer is \"yes, we need this check.\" In my opinion, this patch removes a programmer error in that we were previously assuming that the imageinfo property existed when it did not. When we write code that relies on Errors to be thrown by the interpreter when anything bad happens, the benefit is terseness but the expense is too great to bear:\n\n- It vastly decreases code readability. What are the possible shapes of resp? Should all shapes but the single expected one lead to an Error?\n- The ease of which it can be determined whether an error was expected or unexpected. What I saw the error in the log, it actually looked like someone made a mistake.\n- Our ability to reason about program state is compromised. If this then block were larger, would we feel confident about what could go wrong? Maybe I referenced infoimage instead of imageinfo and it\u0027ll always fail in the same way.\n- Whether what failed within the exception block was expected or unexpected. To the previous point, is this failure part of normal operation or is this exception exceptional?\n- What concerns the programmers that came before were aware of and accounted for. Frequently, we must solve problems that we\u0027re not yet ready for. Even if we are, future readers may not be. This is a chance for us to declare what we know to the future.\n\nThese shortcomings are harder to see in such a surgical case, but they exist in great potential at least when dangerous implications such as this are allowed to exist.",
+      "parentUuid": "9aae5f2c_c007b8d3",
+      "revId": "739c60949912f1b29b585f684c32368ca0ffa7e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
