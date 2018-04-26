@@ -9,12 +9,13 @@
 		var gateway = new WatchstarGateway( new mw.Api() );
 		gateway._loadIntoCache( {
 			query: {
-				pages: {
-					19: {},
-					30: {
+				pages: [
+					{ pageid: 19 },
+					{
+						pageid: 30,
 						watched: ''
 					}
-				}
+				]
 			}
 		} );
 		assert.strictEqual( gateway.isWatchedPage( new Page( {

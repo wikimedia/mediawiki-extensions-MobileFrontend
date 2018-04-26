@@ -38,7 +38,6 @@
 			var self = this,
 				params = extendSearchParams( 'watchlist', {
 					prop: [ 'info', 'revisions' ],
-					format: 'json',
 					formatversion: 2,
 					rvprop: 'timestamp|user',
 					generator: 'watchlistraw',

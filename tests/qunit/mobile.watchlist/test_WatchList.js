@@ -11,12 +11,13 @@
 		setup: function () {
 			var resp = {
 				query: {
-					pages: {
-						30: {
+					pages: [
+						{
+							pageid: 30,
 							watched: ''
 						},
-						50: {}
-					}
+						{ pageid: 50 }
+					]
 				}
 			};
 
