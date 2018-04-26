@@ -33,7 +33,7 @@
 			path: 'test'
 		} ) );
 
-		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
+		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
 	} );
 
 	QUnit.test( '#add, with $.Deferred factory', function ( assert ) {
@@ -50,7 +50,7 @@
 		deferred.resolve( fakeOverlay );
 
 		assert.ok( !deferred.show.called, 'don\'t call show on Deferred' );
-		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
+		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
 	} );
 
 	QUnit.test( '#add, with current path', function ( assert ) {
@@ -63,7 +63,7 @@
 
 		// Wait for $.ready because OverlayManager#add() does
 		return $.when( $.ready ).then( function () {
-			assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
+			assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
 		} );
 	} );
 
@@ -79,12 +79,12 @@
 			path: 'test'
 		} ) );
 		overlayManager.replaceCurrent( anotherFakeOverlay );
-		assert.ok( fakeOverlay.hide.calledOnce, 'hide overlay' );
-		assert.ok( anotherFakeOverlay.show.calledOnce, 'show another overlay' );
+		assert.strictEqual( fakeOverlay.hide.callCount, 1, 'hide overlay' );
+		assert.strictEqual( anotherFakeOverlay.show.callCount, 1, 'show another overlay' );
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: ''
 		} ) );
-		assert.ok( anotherFakeOverlay.hide.calledOnce, 'hide another overlay' );
+		assert.strictEqual( anotherFakeOverlay.hide.callCount, 1, 'hide another overlay' );
 	} );
 
 	QUnit.test( 'route with params', function ( assert ) {
@@ -119,7 +119,7 @@
 			path: 'other'
 		} ) );
 
-		assert.ok( fakeOverlay.hide.calledTwice, 'hide overlay' );
+		assert.strictEqual( fakeOverlay.hide.callCount, 2, 'hide overlay' );
 		assert.ok( fakeOverlay.hide.getCall( 0 ).notCalledWith( true ), 'don\'t force hide (first)' );
 		assert.ok( fakeOverlay.hide.getCall( 1 ).notCalledWith( true ), 'don\'t force hide (second)' );
 	} );
@@ -135,7 +135,7 @@
 		} ) );
 		fakeOverlay.hide();
 
-		assert.ok( fakeRouter.back.calledOnce, 'route back' );
+		assert.strictEqual( fakeRouter.back.callCount, 1, 'route back' );
 	} );
 
 	QUnit.test( 'stacked overlays', function ( assert ) {
@@ -151,20 +151,20 @@
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: 'parent'
 		} ) );
-		assert.ok( parentFakeOverlay.show.calledOnce, 'show parent' );
+		assert.strictEqual( parentFakeOverlay.show.callCount, 1, 'show parent' );
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: 'child'
 		} ) );
-		assert.ok( parentFakeOverlay.hide.calledOnce, 'hide parent' );
+		assert.strictEqual( parentFakeOverlay.hide.callCount, 1, 'hide parent' );
 		assert.ok( parentFakeOverlay.hide.calledWith( true ), 'hide parent forcefully (no confirmation)' );
-		assert.ok( fakeOverlay.show.calledOnce, 'show child' );
+		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show child' );
 		fakeRouter.emit( 'route', $.Event( 'route', {
 			path: 'parent'
 		} ) );
-		assert.ok( fakeOverlay.hide.calledOnce, 'hide child' );
-		assert.ok( parentFakeOverlay.show.calledTwice, 'show parent again' );
+		assert.strictEqual( fakeOverlay.hide.callCount, 1, 'hide child' );
+		assert.strictEqual( parentFakeOverlay.show.callCount, 2, 'show parent again' );
 
-		assert.ok( parentFactoryStub.calledOnce, 'create parent only once' );
+		assert.strictEqual( parentFactoryStub.callCount, 1, 'create parent only once' );
 	} );
 
 	QUnit.test( 'prevent route change', function ( assert ) {

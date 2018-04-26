@@ -35,7 +35,7 @@
 		return this.skin.loadImagesList( [
 			$( '<div>' ), $( '<div>' )
 		] ).done( function () {
-			assert.ok( stub.calledTwice,
+			assert.strictEqual( stub.callCount, 2,
 				'Stub was called twice and resolves successfully.' );
 		} );
 	} );
@@ -50,7 +50,7 @@
 		this.skin.loadImagesList( [
 			$( '<div>' ), $( '<div>' )
 		] ).fail( function () {
-			assert.ok( stub.calledTwice,
+			assert.strictEqual( stub.callCount, 2,
 				'Stub was called twice and overall result was failure.' );
 		} ).always( function () {
 			d.resolve();

@@ -231,7 +231,7 @@
 
 		// eslint-disable-next-line no-new
 		new ChildView();
-		assert.ok( spy.calledOnce, 'invoke postRender' );
+		assert.strictEqual( spy.callCount, 1, 'invoke postRender' );
 	} );
 
 	QUnit.test( 'View#delegateEvents', function ( assert ) {

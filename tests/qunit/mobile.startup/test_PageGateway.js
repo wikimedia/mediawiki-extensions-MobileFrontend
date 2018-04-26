@@ -233,7 +233,7 @@
 			}, 'return lead and sections test 2' );
 		} );
 		pageGateway.getPage( 'Test' );
-		assert.ok( this.api.get.calledOnce, 'cache page' );
+		assert.strictEqual( this.api.get.callCount, 1, 'cache page' );
 	} );
 
 	QUnit.test( '#getPageLanguages', function ( assert ) {

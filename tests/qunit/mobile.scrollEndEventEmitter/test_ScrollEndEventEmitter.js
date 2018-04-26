@@ -21,7 +21,7 @@
 		// Scrolling has been bound to the global mobileFrontend handler
 		M.emit( 'scroll:throttled' );
 
-		assert.ok( scrolledSpy.calledTwice,
+		assert.strictEqual( scrolledSpy.callCount, 2,
 			'Scrolling has been bound and is handler is called on scroll' );
 	} );
 

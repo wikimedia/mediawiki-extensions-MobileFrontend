@@ -25,7 +25,7 @@
 		this.drawer.showReference( '#cite_note-bad', this.page, '1' );
 
 		return promise.catch( function () {
-			assert.ok( hideSpy.calledOnce, 'Hide is called.' );
+			assert.strictEqual( hideSpy.callCount, 1, 'Hide is called.' );
 		} );
 	} );
 
@@ -42,8 +42,8 @@
 		this.drawer.showReference( '#cite_note-good', this.page, '1' );
 
 		return promise.then( function () {
-			assert.ok( showSpy.calledOnce, 'Show is called.' );
-			assert.ok( renderSpy.calledOnce, 'Render is called.' );
+			assert.strictEqual( showSpy.callCount, 1, 'Show is called.' );
+			assert.strictEqual( renderSpy.callCount, 1, 'Render is called.' );
 		} );
 	} );
 
@@ -58,8 +58,8 @@
 		this.drawer.showReference( '#cite_note-bad', this.page, '1' );
 
 		return promise.catch( function () {
-			assert.ok( showSpy.calledOnce, 'Show is called.' );
-			assert.ok( renderSpy.calledOnce, 'Render is called.' );
+			assert.strictEqual( showSpy.callCount, 1, 'Show is called.' );
+			assert.strictEqual( renderSpy.callCount, 1, 'Render is called.' );
 			assert.ok( renderSpy.calledWith( {
 				error: true,
 				title: '1',

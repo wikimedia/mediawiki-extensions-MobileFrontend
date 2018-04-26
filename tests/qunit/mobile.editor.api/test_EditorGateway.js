@@ -59,7 +59,7 @@
 			assert.strictEqual( resp.text, 'section', 'return section content' );
 			return gateway.getContent();
 		} ).then( function () {
-			assert.ok( spy.calledOnce, 'cache content' );
+			assert.strictEqual( spy.callCount, 1, 'cache content' );
 		} );
 	} );
 
@@ -658,8 +658,8 @@
 		gateway.getContent();
 		gateway.setContent( 'section 1' );
 		gateway.save().always( function () {
-			assert.ok( mw.Api.prototype.getToken.calledTwice, 'check the spy was called twice' );
-			assert.ok( mw.Api.prototype.post.calledTwice, 'check the spy was called twice' );
+			assert.strictEqual( mw.Api.prototype.getToken.callCount, 2, 'check the spy was called twice' );
+			assert.strictEqual( mw.Api.prototype.post.callCount, 2, 'check the spy was called twice' );
 			done.resolve();
 		} );
 		return done;

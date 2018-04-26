@@ -65,7 +65,7 @@
 		} ), 'The watch happened' );
 		assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
 			true, 'After successful watch has watched class' );
-		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
+		assert.strictEqual( this.toastSpy.callCount, 1, 'A toast is shown' );
 	} );
 
 	QUnit.test( 'Logged in user unwatches article', function ( assert ) {
@@ -83,7 +83,7 @@
 			unwatch: true,
 			titles: [ 'Title' ]
 		} ), 'The watch happened' );
-		assert.ok( this.toastSpy.calledOnce, 'A toast is shown' );
+		assert.strictEqual( this.toastSpy.callCount, 1, 'A toast is shown' );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

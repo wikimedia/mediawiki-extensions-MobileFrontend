@@ -27,7 +27,7 @@
 		new TalkSectionOverlay( {
 			api: this.api
 		} );
-		assert.ok( renderFromApiSpy.calledOnce, 'No Api request, if section given' );
+		assert.strictEqual( renderFromApiSpy.callCount, 1, 'No Api request, if section given' );
 	} );
 
 	QUnit.test( 'Check comment box for logged in users', function ( assert ) {
