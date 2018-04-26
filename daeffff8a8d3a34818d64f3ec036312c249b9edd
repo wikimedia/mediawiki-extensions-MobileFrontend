@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3258f52_2ed77a8a",
+        "filename": "tests/qunit/mobile.mediaViewer/test_ImageGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-26T00:05:58Z",
+      "side": 1,
+      "message": "Ideally `done.reject` instead so that the test doesn\u0027t time out if it fails.",
+      "range": {
+        "startLine": 32,
+        "startChar": 38,
+        "endLine": 32,
+        "endChar": 45
+      },
+      "revId": "daeffff8a8d3a34818d64f3ec036312c249b9edd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ed52cd6_ec8c0db8",
+        "filename": "tests/qunit/mobile.mediaViewer/test_ImageGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-26T00:05:58Z",
+      "side": 1,
+      "message": "There\u0027s an easier way to do this in QUnit 2 that I helped develop, that you may want to use here.\n\nIt\u0027s like a negated version of returning a promise to QUnit.test, but for asserting the rejection:\n\nhttps://api.qunitjs.com/assert/rejects\n\n QUnit.test( .., function ( assert ) {\n   var gateway,\n       api \u003d { .. };\n   gateway \u003d ..;\n \n   assert.rejects(\n     gateway.getThumb( \u0027Missing\u0027 ),\n     function (err) {\n       return err.message.indexOf( \u0027The API failed\u0027 ) !\u003d\u003d -1;\n     },\n     \u0027Record error for for a missing page\u0027\n   );\n } );\n\nNo Deferred wrapping, or assert.async() tracking needed :)",
+      "range": {
+        "startLine": 33,
+        "startChar": 3,
+        "endLine": 34,
+        "endChar": 18
+      },
+      "revId": "daeffff8a8d3a34818d64f3ec036312c249b9edd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
