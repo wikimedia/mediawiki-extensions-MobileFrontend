@@ -378,8 +378,13 @@
 						// Workaround to parse a message parameter for mw.message, see T96885
 						// eslint-disable-next-line new-cap
 						parser = new mw.jqueryMsg.parser();
-						ast = parser.wikiTextToAst( userinfo.blockreason );
-						parsedBlockReason = parser.emitter.emit( ast );
+						try {
+							ast = parser.wikiTextToAst( userinfo.blockreason );
+							parsedBlockReason = parser.emitter.emit( ast );
+						} catch ( e ) {
+							// ignore error as it's probably the parser error, it would be good to log it
+							parsedBlockReason = mw.msg( 'mobile-frontend-editor-generic-block-reason' );
+						}
 						toast.show(
 							mw.message(
 								'mobile-frontend-editor-blocked-info',
