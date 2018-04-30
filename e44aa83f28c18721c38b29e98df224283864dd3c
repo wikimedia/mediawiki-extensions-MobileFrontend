@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d122788_99f60e74",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-04-30T16:56:59Z",
+      "side": 1,
+      "message": "Need a full stop.\nTo be consistent with the above maybe we should use the text:\n\"Your IP address or account is blocked from editing.\"",
+      "revId": "e44aa83f28c18721c38b29e98df224283864dd3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
