@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0aae8bbf_f867d144",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-01T20:22:53Z",
+      "side": 1,
+      "message": "Is the `page.watched \u003d\u003d\u003d \u0027\u0027` necessary any more?\nCould this just be page.watched since we don\u0027t use formatversion 2 any more?",
+      "revId": "6932d538c7ec3d7ff71ae32a1aeb066bc1d73e02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
