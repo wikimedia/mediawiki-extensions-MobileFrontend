@@ -26,7 +26,7 @@
 			var cache = this._cache;
 			if ( resp.query && resp.query.pages ) {
 				resp.query.pages.forEach( function ( page ) {
-					cache[ page.pageid ] = page.hasOwnProperty( 'watched' );
+					cache[ page.pageid ] = page.watched;
 				} );
 			}
 		},

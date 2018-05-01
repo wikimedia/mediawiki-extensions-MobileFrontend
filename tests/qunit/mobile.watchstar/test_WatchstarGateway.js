@@ -10,10 +10,13 @@
 		gateway._loadIntoCache( {
 			query: {
 				pages: [
-					{ pageid: 19 },
+					{
+						pageid: 19,
+						watched: false
+					},
 					{
 						pageid: 30,
-						watched: ''
+						watched: true
 					}
 				]
 			}

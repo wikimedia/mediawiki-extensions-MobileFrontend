@@ -42,10 +42,14 @@
 				query: {
 					pages: {
 						2: {
-							watched: ''
+							watched: true
 						},
-						3: {},
-						4: {}
+						3: {
+							watched: false
+						},
+						4: {
+							watched: false
+						}
 					}
 				}
 			};

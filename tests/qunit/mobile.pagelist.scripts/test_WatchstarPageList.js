@@ -14,9 +14,12 @@
 					pages: [
 						{
 							pageid: 30,
-							watched: ''
+							watched: true
 						},
-						{ pageid: 50 }
+						{
+							pageid: 50,
+							watched: false
+						}
 					]
 				}
 			};
