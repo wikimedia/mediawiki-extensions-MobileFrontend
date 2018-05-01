@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "53d1b563_982746b4",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-01T05:03:11Z",
+      "side": 1,
+      "message": "I\u0027ve fixed this by only batching titles when the page ID is unavailable. After separating out the cache population code from the network request code, the only batch requester was SearchOverlay and page IDs are always available in search results.",
+      "parentUuid": "97624b23_b01c6c96",
+      "revId": "f63b25e08f73438dde346b5d3800f6b5fbaa8611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "020282b6_b0abd3ff",
         "filename": "resources/mobile.watchstar/Watchstar.js",
         "patchSetId": 6
