@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1380efd8_e37294d1",
+        "filename": "resources/mobile.watchstar/WatchstarGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-01T20:02:20Z",
+      "side": 1,
+      "message": "I think this needs to be truthy now as formatversion\u003d2 actually sends\n{\nwatched: false\n}\nfor unwatched pages.",
+      "revId": "b5ba093b2a2d2de7ee2ff9edb5a32ac74c9b5bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
