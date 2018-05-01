@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0dad6799_79742377",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-01T21:13:32Z",
+      "side": 1,
+      "message": "Are you sure this works?\nI thought the existence of mf_useformat alone is what switches to mobile view regardless of it\u0027s value.\nAlso note you\u0027ve changed string to boolean.\n\nI think originally this was meant to be a noop step - since the desktop should always be the default if configured correctly. \n\nAlso note https://phabricator.wikimedia.org/T130429",
+      "revId": "1e7883ed8a32106271d238c0dc04d1ec0ebad258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
