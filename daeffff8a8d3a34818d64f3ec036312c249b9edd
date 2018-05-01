@@ -93,6 +93,30 @@
       "revId": "daeffff8a8d3a34818d64f3ec036312c249b9edd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5af302a7_c8cf67c7",
+        "filename": "tests/qunit/mobile.mediaViewer/test_ImageGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-05-01T20:17:44Z",
+      "side": 1,
+      "message": "Now :) https://gerrit.wikimedia.org/r/#/c/430132/",
+      "parentUuid": "cf767af4_3d0cb08a",
+      "range": {
+        "startLine": 33,
+        "startChar": 3,
+        "endLine": 34,
+        "endChar": 18
+      },
+      "revId": "daeffff8a8d3a34818d64f3ec036312c249b9edd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
