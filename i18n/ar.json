@@ -77,6 +77,7 @@
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
 	"mobile-frontend-editor-anonwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيا للعامة عند قيامك بأي تعديل.إذا '''سجلت دخولك''' أو أنشأت حساب في ويكيبيديا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك ،مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-info": "عنوان الأيبي الخاص ك ممنوع من التعديل. المنع تم بواسطة {{GENDER:$1|$1}} للسبب التالي: $2.",
+	"mobile-frontend-editor-generic-block-reason": "سبب غير معلوم",
 	"mobile-frontend-editor-cancel": "ألغِ",
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",

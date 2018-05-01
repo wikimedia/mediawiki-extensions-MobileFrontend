@@ -95,6 +95,7 @@
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
 	"mobile-frontend-editor-anonwarning": "<strong>Attention</strong> : vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
 	"mobile-frontend-editor-blocked-info": "Votre adresse IP est bloquée en modification. Le blocage a été fait par {{GENDER:$1|$1}} pour la raison suivante : $2.",
+	"mobile-frontend-editor-generic-block-reason": "Raison inconnue",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
 	"mobile-frontend-editor-captcha-try-again": "Mauvais code, essayez de nouveau.",

@@ -85,6 +85,7 @@
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia</strong>: no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
 	"mobile-frontend-editor-blocked-info": "Tu dirección IP está bloqueada para editar. El bloqueo lo realizó {{GENDER:$1|$1}} por la siguiente razón: $2.",
+	"mobile-frontend-editor-generic-block-reason": "Motivo desconocido",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
