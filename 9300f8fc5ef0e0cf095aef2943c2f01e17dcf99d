@@ -16,6 +16,24 @@
       "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "042b871d_720516ba",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-05-02T08:39:13Z",
+      "side": 1,
+      "message": "Being used in a @param PHPDoc comment is still a use. Otherwise IDEs don\u0027t know to which class the documentation refers to.",
+      "parentUuid": "1f73379a_61990bc6",
+      "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
