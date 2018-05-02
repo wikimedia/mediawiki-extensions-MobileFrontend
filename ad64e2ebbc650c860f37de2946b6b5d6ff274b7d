@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4fb7515_f2b8d534",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-02T21:22:08Z",
+      "side": 1,
+      "message": "Looking at WatchstarPageList I\u0027m not following this.\nConstructor executes PageList constructor (which executes View constructor) AND creates a new WatchstarGateway with the api parameter. Where does the cache come in and why it is it on the prototype? Why is it shared across instances...?",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5fe2b77e_1d57175b",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-02T21:22:08Z",
+      "side": 1,
+      "message": "` _` suggests a private method. Might be worth adding a public method?\nWhy are we hitting acache anyway? Can\u0027t we avoid that?",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce7d11fd_b98b904c",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-02T21:22:08Z",
+      "side": 1,
+      "message": "Why are we stubbing the api anyway..? Shouldn\u0027t we be stubbing the gateway? This seems wrong.",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc683eba_f80e742e",
+        "filename": "tests/qunit/mobile.watchstar/test_Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-02T21:22:08Z",
+      "side": 1,
+      "message": "I\u0027m a little lost here.\nI don\u0027t see any _cache on the WatchstarGateway...",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
