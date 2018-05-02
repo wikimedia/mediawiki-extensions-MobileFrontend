@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\Auth\AuthenticationRequest;
 
 /**
  * Hook handlers for MobileFrontend extension
