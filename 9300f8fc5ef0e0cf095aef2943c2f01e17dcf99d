@@ -34,6 +34,24 @@
       "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2414ec1_69af09b7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-02T15:08:22Z",
+      "side": 1,
+      "message": "Thanks for that. I don\u0027t use an IDE that does that, so I was a little confused to what was going on here.\n\nHow does that work if I have a hook using a class from Echo and haven\u0027t installed Echo because Echo is an optional dependency...?",
+      "parentUuid": "042b871d_720516ba",
+      "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
