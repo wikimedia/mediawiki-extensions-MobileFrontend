@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b77ee7d_9d8e0b1a",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T18:51:12Z",
+      "side": 1,
+      "message": "The \"I am using the desktop site\" could just be an empty step as all tests run in a clean browser environment and begin in desktop mode.\nI believe the only reason it was added was to be clearer in the test.",
+      "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
