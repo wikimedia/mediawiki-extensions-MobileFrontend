@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "231d7f47_18d9fede",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T18:20:38Z",
+      "side": 1,
+      "message": "I would love to remove it. The caching _significantly_ complicated the watchlist patches.",
+      "parentUuid": "2280f455_21ea40a3",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5fe2b77e_1d57175b",
         "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
         "patchSetId": 2
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Mmm. I wasn\u0027t suggesting changing the cache to a public property but more that make a clearCache method might be appropriate.\n\nSince this is testing WatchstarPageList it makes me wonder if the gateway itself should be stubbed...",
       "parentUuid": "65519205_87059ddc",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7485380a_c26a16ed",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T18:20:38Z",
+      "side": 1,
+      "message": "We can stub the gateway but it may introduce nonuniformity between our current tests all stub the API. Let me know how you\u0027d like to proceed.",
+      "parentUuid": "4df06311_f4efd340",
       "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
