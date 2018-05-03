@@ -16,7 +16,6 @@ Feature: Switch between mobile and desktop views
 
   @integration
   Scenario: Bug: T129600
-    Given I am on the desktop site
-    And I am on a page that transcludes content from a special page
+    Given I am on a page that transcludes content from a special page
     And I toggle the mobile view
     Then I should see the mobile view
