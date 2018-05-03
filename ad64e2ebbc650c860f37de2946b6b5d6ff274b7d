@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "8f91ef7d_c5715152",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T21:13:39Z",
+      "side": 1,
+      "message": "At very least it should be made a property rather than be on the prototype given the prototype is shared across all instances.\n\nThat said, I don\u0027t seem much need for this, other than to avoid API requests when I repeat searches\ne.g. \"San\" \u003d\u003e \"San \" \u003d\u003e \"San F\" \u003d\u003e \"San \" \u003d\u003e \"San\"\n\nI think it would be more worthwhile to do one of those things then clearing it in this fashion in the tests.",
+      "parentUuid": "231d7f47_18d9fede",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5fe2b77e_1d57175b",
         "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
         "patchSetId": 2
