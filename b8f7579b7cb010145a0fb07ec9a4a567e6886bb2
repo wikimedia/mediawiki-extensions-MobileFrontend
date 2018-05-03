@@ -16,6 +16,24 @@
       "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f31d64a_7216b501",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T19:56:58Z",
+      "side": 1,
+      "message": "I\u0027m happy to make this change but won\u0027t it be surprising to users of this step? If they say \"given I am using the mobile site,\" it\u0027ll go out and make a network request but if they should say instead \"given I am using the desktop site,\" it does something entirely different-nothing, in this case. Uniformity in behavior isn\u0027t needed here but it seems desirable.",
+      "parentUuid": "8b77ee7d_9d8e0b1a",
+      "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
