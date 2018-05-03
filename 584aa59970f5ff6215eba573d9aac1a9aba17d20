@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44e7cfb4_0a159947",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T21:42:22Z",
+      "side": 1,
+      "message": "Does this still need to be stubbed if it\u0027s not being used?",
+      "revId": "584aa59970f5ff6215eba573d9aac1a9aba17d20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
