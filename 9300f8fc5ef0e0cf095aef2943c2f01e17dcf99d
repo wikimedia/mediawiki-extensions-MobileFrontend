@@ -52,6 +52,24 @@
       "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c705de8f_5ea9de3a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-05-03T10:38:11Z",
+      "side": 1,
+      "message": "This is an excellent question. :-) The short answer is: don\u0027t worry. As far as PHP is concerned, the \"use\" syntax is nothing but an entry in a string \u003d\u003e string map. For example, \"use Foo\\Bar\" creates an entry \"Bar\" \u003d\u003e \"Foo\\Bar\". The \"use\" alone does not trigger a check if a class with this name exists. Not even \"Bar::class\" needs the class to exist, which is why we can call \"class_exists( Bar::class )\".",
+      "parentUuid": "e2414ec1_69af09b7",
+      "revId": "9300f8fc5ef0e0cf095aef2943c2f01e17dcf99d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
