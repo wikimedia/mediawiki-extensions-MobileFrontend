@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2368a92c_bc74e855",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T16:51:24Z",
+      "side": 1,
+      "message": "WatchstarPageList creates Watchstars which create and use WatchstarGateways. Additionally, WatchstarPageList itself has it\u0027s own WatchstarGateway. The Apis can be passed as options.api but the gateways are not passed. All these gateway instances share a single cache instance that hangs off the prototype.\n\nYou can see the cache sharing action by running the following code:\n\n const WatchstarGateway \u003d mw.mobileFrontend.require(\u0027mobile.watchstar/WatchstarGateway\u0027)\n\n const gatewayA \u003d new WatchstarGateway(new mw.Api())\n const gatewayB \u003d new WatchstarGateway(new mw.Api())\n\n gatewayA.loadWatchStatusByPageTitle(\u0027Ice cream\u0027)\n gatewayB.loadWatchStatusByPageTitle(\u0027Cake\u0027)\n\n console.log(gatewayA._titleCache) // {Cake: undefined, Ice cream: undefined}\n console.log(gatewayB._titleCache) // {Cake: undefined, Ice cream: undefined}\n console.log(gatewayA._titleCache \u003d\u003d\u003d gatewayB._titleCache) // true",
+      "parentUuid": "c4fb7515_f2b8d534",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5fe2b77e_1d57175b",
         "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2018-05-02T21:22:08Z",
       "side": 1,
       "message": "` _` suggests a private method. Might be worth adding a public method?\nWhy are we hitting acache anyway? Can\u0027t we avoid that?",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "65519205_87059ddc",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T16:51:24Z",
+      "side": 1,
+      "message": "It\u0027s a test though and I\u0027m not sure our caching approach is best. Do we really want to advertise it as a public property since that might encourage usage?\n\nI don\u0027t know the history behind the cache implementation. This patch just tries to fix things up in the tests.",
+      "parentUuid": "5fe2b77e_1d57175b",
       "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8691a403_3ea559d5",
+        "filename": "tests/qunit/mobile.watchlist/test_WatchList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T16:51:24Z",
+      "side": 1,
+      "message": "I\u0027m not sure why the API was chosen over the gateway. In general, gateways are not shared or passed. Maybe it\u0027s so the stubs across all tests can look uniform even if the gateways aren\u0027t?",
+      "parentUuid": "ce7d11fd_b98b904c",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc683eba_f80e742e",
         "filename": "tests/qunit/mobile.watchstar/test_Watchstar.js",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2018-05-02T21:22:08Z",
       "side": 1,
       "message": "I\u0027m a little lost here.\nI don\u0027t see any _cache on the WatchstarGateway...",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e26e4d22_bdf23c20",
+        "filename": "tests/qunit/mobile.watchstar/test_Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T16:51:24Z",
+      "side": 1,
+      "message": "I fucked up the rebase. This should be _titleCache. Fixed.",
+      "parentUuid": "cc683eba_f80e742e",
       "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
