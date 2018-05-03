@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2280f455_21ea40a3",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T18:06:21Z",
+      "side": 1,
+      "message": "Thanks the _cache was what threw me. I can see the _titleCache now.\n\nI wonder if we actually need a cache for this sort of thing. Doesn\u0027t seem like it\u0027s something that will get used often. I\u0027ll dig into the history of why it was introduced and if we can would advise removing it to simplify our codebas.",
+      "parentUuid": "2368a92c_bc74e855",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5fe2b77e_1d57175b",
         "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "It\u0027s a test though and I\u0027m not sure our caching approach is best. Do we really want to advertise it as a public property since that might encourage usage?\n\nI don\u0027t know the history behind the cache implementation. This patch just tries to fix things up in the tests.",
       "parentUuid": "5fe2b77e_1d57175b",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4df06311_f4efd340",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T18:06:21Z",
+      "side": 1,
+      "message": "Mmm. I wasn\u0027t suggesting changing the cache to a public property but more that make a clearCache method might be appropriate.\n\nSince this is testing WatchstarPageList it makes me wonder if the gateway itself should be stubbed...",
+      "parentUuid": "65519205_87059ddc",
       "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
