@@ -3,31 +3,11 @@
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
 		user = M.require( 'mobile.startup/user' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
-		watchIcon = new Icon( {
-			name: 'watched'
-		} );
+		watchIcon = new Icon( { name: 'watched' } );
 
 	QUnit.module( 'MobileFrontend modules/WatchList', {
 		setup: function () {
-			var resp = {
-				query: {
-					pages: [
-						{
-							pageid: 30,
-							title: 'Title 30',
-							watched: true
-						},
-						{
-							pageid: 50,
-							title: 'Title 50',
-							watched: false
-						}
-					]
-				}
-			};
-
-			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' )
-				.returns( $.Deferred().resolve( resp ) );
+			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 		}
 	} );
