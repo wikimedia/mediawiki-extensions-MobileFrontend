@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "2b993509_982871cf",
+        "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T21:20:50Z",
+      "side": 1,
+      "message": "Let me take a stab at that and either submit a new patchset or a new ticket. (I don\u0027t want to promise the patchset because this cache and the watchstar classes are so very tightly coupled!) I\u0027ll limit this patch to just removing the unused network response.",
+      "parentUuid": "8f91ef7d_c5715152",
+      "revId": "ad64e2ebbc650c860f37de2946b6b5d6ff274b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5fe2b77e_1d57175b",
         "filename": "tests/qunit/mobile.pagelist.scripts/test_WatchstarPageList.js",
         "patchSetId": 2
