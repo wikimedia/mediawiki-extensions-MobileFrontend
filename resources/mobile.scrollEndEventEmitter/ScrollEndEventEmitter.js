@@ -3,18 +3,19 @@
 
 	/**
 	 * Class to assist a view in implementing infinite scrolling on some DOM
-	 * element.
+	 * element. This module itself is only responsible for emitting an Event when
+	 * the bottom of an Element is scrolled to.
 	 *
-	 * @class InfiniteScroll
+	 * @class ScrollEndEventEmitter
 	 * @mixins OO.EventEmitter
 	 *
 	 * Use this class in a view to help it do infinite scrolling.
 	 *
 	 * 1. Initialize it in the constructor `initialize` and listen to the
 	 *   EVENT_SCROLL_END event it emits (and call your loading function then)
-	 * 2. On preRender (once we have the dom element) set it into the infinite
+	 * 2. On preRender (once we have the DOM element) set it into the infinite
 	 *   scrolling object and disable it until we've loaded.
-	 * 3. Once you have loaded the list and put it in the dom, enable the
+	 * 3. Once you have loaded the list and put it in the DOM, enable the
 	 *   infinite scrolling detection.
 	 *   * Everytime the scroller detection triggers a load, it auto disables
 	 *     to not trigger multiple times. After you have loaded, manually
@@ -23,7 +24,7 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *       var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' );
+	 *       var ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
 	 *       OO.mfExtend( PhotoList, View, {
 	 *         //...
 	 *         initialize: function ( options ) {
@@ -31,22 +32,22 @@
 	 *             username: options.username
 	 *           } );
 	 *           // 1. Set up infinite scroll helper and listen to events
-	 *           this.infiniteScroll = new InfiniteScroll( 1000 );
-	 *           this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+	 *           this.scrollEndEventEmitter = new ScrollEndEventEmitter( 1000 );
+	 *           this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 	 *             this._loadPhotos.bind( this ) );
 	 *           View.prototype.initialize.apply( this, arguments );
 	 *         },
 	 *         preRender: function () {
 	 *           // 2. Disable until we've got the list rendered and set DOM el
-	 *           this.infiniteScroll.setElement( this.$el );
-	 *           this.infiniteScroll.disable();
+	 *           this.scrollEndEventEmitter.setElement( this.$el );
+	 *           this.scrollEndEventEmitter.disable();
 	 *         },
 	 *         _loadPhotos: function () {
 	 *           var self = this;
 	 *           this.gateway.getPhotos().done( function ( photos ) {
 	 *             // load photos into the DOM ...
 	 *             // 3. and (re-)enable infinite scrolling
-	 *             self.infiniteScroll.enable();
+	 *             self.scrollEndEventEmitter.enable();
 	 *           } );
 	 *         }
 	 *       } );
@@ -57,20 +58,20 @@
 	 * @param {number} threshold distance in pixels used to calculate if scroll
 	 * position is near the end of the $el
 	 */
-	function InfiniteScroll( threshold ) {
+	function ScrollEndEventEmitter( threshold ) {
 		this.threshold = threshold || 100;
 		this.enable();
 		OO.EventEmitter.call( this );
 	}
-	OO.mixinClass( InfiniteScroll, OO.EventEmitter );
+	OO.mixinClass( ScrollEndEventEmitter, OO.EventEmitter );
 
 	/**
-	 * @event InfiniteScroll#InfiniteScroll-scrollEnd
+	 * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
 	 * Fired when scroll bottom has been reached.
 	 */
-	InfiniteScroll.EVENT_SCROLL_END = 'InfiniteScroll-scrollEnd';
+	ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
 
-	OO.mfExtend( InfiniteScroll, {
+	OO.mfExtend( ScrollEndEventEmitter, {
 		/**
 		 * Listen to scroll on window and notify this._onScroll
 		 * @method
@@ -103,7 +104,7 @@
 				// Disable when triggering an event. Won't trigger again until
 				// re-enabled.
 				this.disable();
-				this.emit( InfiniteScroll.EVENT_SCROLL_END );
+				this.emit( ScrollEndEventEmitter.EVENT_SCROLL_END );
 			}
 		},
 		/**
@@ -119,7 +120,7 @@
 			return scrollBottom + this.threshold > endPosition;
 		},
 		/**
-		 * Enable the InfiniteScroll so that it triggers events.
+		 * Enable the ScrollEndEventEmitter so that it triggers events.
 		 * @method
 		 */
 		enable: function () {
@@ -127,7 +128,7 @@
 			this._bindScroll();
 		},
 		/**
-		 * Disable the InfiniteScroll so that it doesn't trigger events.
+		 * Disable the ScrollEndEventEmitter so that it doesn't trigger events.
 		 * @method
 		 */
 		disable: function () {
@@ -137,12 +138,12 @@
 		/**
 		 * Set the element to compare to scroll position to
 		 * @param {jQuery.Object} $el jQuery element where we want to listen for
-		 * infinite scrolling.
+		 * scroll end.
 		 */
 		setElement: function ( $el ) {
 			this.$el = $el;
 		}
 	} );
 
-	M.define( 'mobile.infiniteScroll/InfiniteScroll', InfiniteScroll );
+	M.define( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter', ScrollEndEventEmitter );
 }( mw.mobileFrontend ) );

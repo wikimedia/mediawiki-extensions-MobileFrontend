@@ -2,7 +2,7 @@
 	var icons = M.require( 'mobile.startup/icons' ),
 		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
-		InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' ),
+		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		View = M.require( 'mobile.startup/View' );
 
 	/**
@@ -10,7 +10,7 @@
 	 * @class PhotoList
 	 * @uses PhotoListApi
 	 * @uses PhotoItem
-	 * @uses InfiniteScroll
+	 * @uses ScrollEndEventEmitter
 	 * @extends View
 	 *
 	 * @constructor
@@ -28,8 +28,8 @@
 		}
 		this.gateway = new PhotoListGateway( gatewayOptions );
 		// Set up infinite scroll
-		this.infiniteScroll = new InfiniteScroll( 1000 );
-		this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter( 1000 );
+		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadPhotos.bind( this ) );
 		View.call( this, options );
 	}
@@ -47,8 +47,8 @@
 		/** @inheritdoc */
 		preRender: function () {
 			// Disable until we've got the list rendered
-			this.infiniteScroll.setElement( this.$el );
-			this.infiniteScroll.disable();
+			this.scrollEndEventEmitter.setElement( this.$el );
+			this.scrollEndEventEmitter.disable();
 		},
 		/** @inheritdoc */
 		postRender: function () {
@@ -123,8 +123,8 @@
 		 * @method
 		 */
 		enableScroll: function () {
-			if ( this.infiniteScroll.enabled === false ) {
-				this.infiniteScroll.enable();
+			if ( this.scrollEndEventEmitter.enabled === false ) {
+				this.scrollEndEventEmitter.enable();
 			}
 		},
 		/**

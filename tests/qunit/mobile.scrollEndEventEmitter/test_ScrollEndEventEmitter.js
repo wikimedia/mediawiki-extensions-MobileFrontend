@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-	var InfiniteScroll = M.require( 'mobile.infiniteScroll/InfiniteScroll' );
+	var ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
 
-	QUnit.module( 'MobileFrontend InfiniteScroll', {
+	QUnit.module( 'MobileFrontend ScrollEndEventEmitter', {
 		teardown: function () {
 			// Leave window at the top
 			window.scrollTo( 0, 0 );
@@ -9,11 +9,11 @@
 	} );
 
 	QUnit.test( '#constructor', function ( assert ) {
-		var scrolledSpy = this.sandbox.spy( InfiniteScroll.prototype, '_onScroll' ),
-			is = new InfiniteScroll( 500 ),
-			is2 = new InfiniteScroll();
+		var scrolledSpy = this.sandbox.spy( ScrollEndEventEmitter.prototype, '_onScroll' ),
+			is = new ScrollEndEventEmitter( 500 ),
+			is2 = new ScrollEndEventEmitter();
 		assert.strictEqual( is.enabled, true,
-			'Infinite scrolling is enabled by default' );
+			'Emission is enabled by default' );
 		assert.strictEqual( is.threshold, 500, 'Threshold is saved' );
 		assert.strictEqual( is2.threshold, 100,
 			'Without a threshold we get a default' );
@@ -27,13 +27,13 @@
 
 	QUnit.test( 'emits load event', function ( assert ) {
 		var done = assert.async(),
-			is = new InfiniteScroll();
+			is = new ScrollEndEventEmitter();
 
 		// Make sure we always have somewhere to scroll
 		$( 'body' ).height( '9999px' );
 
 		is.setElement( $( 'body' ) );
-		is.on( InfiniteScroll.EVENT_SCROLL_END, function () {
+		is.on( ScrollEndEventEmitter.EVENT_SCROLL_END, function () {
 			assert.ok( true, 'Load event emitted' );
 
 			// Reset height
@@ -49,8 +49,8 @@
 	} );
 
 	QUnit.test( 'doesn\'t emit when disabled', function ( assert ) {
-		var emitSpy = this.sandbox.spy( InfiniteScroll.prototype, 'emit' ),
-			is = new InfiniteScroll();
+		var emitSpy = this.sandbox.spy( ScrollEndEventEmitter.prototype, 'emit' ),
+			is = new ScrollEndEventEmitter();
 		is.setElement( $( 'body' ) );
 		is.disable();
 		// Scroll to top and bottom of the body
