@@ -34,6 +34,24 @@
       "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "95e994a7_2b558aff",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-03T20:18:17Z",
+      "side": 1,
+      "message": "Possibly but the only usage is right here and they are currently used mutually exclusively. Maybe we should just remove it altogether from the scenario if it\u0027s causing confusion. Writing tests inside MobileFrontend for desktop mode is unlikely given the nature of the extension.",
+      "parentUuid": "3f31d64a_7216b501",
+      "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
