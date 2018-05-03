@@ -52,6 +52,24 @@
       "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4700c39_7a822ba1",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-05-03T20:31:59Z",
+      "side": 1,
+      "message": "Works for me. Done.",
+      "parentUuid": "95e994a7_2b558aff",
+      "revId": "b8f7579b7cb010145a0fb07ec9a4a567e6886bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
