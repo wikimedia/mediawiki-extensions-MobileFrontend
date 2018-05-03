@@ -19,7 +19,8 @@
 
 		// Set up infinite scroll helper and listen to events
 		this.infiniteScroll = new InfiniteScroll();
-		this.infiniteScroll.on( 'load', this._loadPages.bind( this ) );
+		this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+			this._loadPages.bind( this ) );
 
 		if ( options.el ) {
 			lastTitle = this.getLastTitle( options.el );

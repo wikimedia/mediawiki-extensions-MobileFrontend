@@ -10,8 +10,8 @@
 	 *
 	 * Use this class in a view to help it do infinite scrolling.
 	 *
-	 * 1. Initialize it in the constructor `initialize` and listen to the 'load'
-	 *   event it emits (and call your loading function then)
+	 * 1. Initialize it in the constructor `initialize` and listen to the
+	 *   EVENT_SCROLL_END event it emits (and call your loading function then)
 	 * 2. On preRender (once we have the dom element) set it into the infinite
 	 *   scrolling object and disable it until we've loaded.
 	 * 3. Once you have loaded the list and put it in the dom, enable the
@@ -32,7 +32,8 @@
 	 *           } );
 	 *           // 1. Set up infinite scroll helper and listen to events
 	 *           this.infiniteScroll = new InfiniteScroll( 1000 );
-	 *           this.infiniteScroll.on( 'load', this._loadPhotos.bind( this ) );
+	 *           this.infiniteScroll.on( InfiniteScroll.EVENT_SCROLL_END,
+	 *             this._loadPhotos.bind( this ) );
 	 *           View.prototype.initialize.apply( this, arguments );
 	 *         },
 	 *         preRender: function () {
@@ -62,6 +63,12 @@
 		OO.EventEmitter.call( this );
 	}
 	OO.mixinClass( InfiniteScroll, OO.EventEmitter );
+
+	/**
+	 * @event InfiniteScroll#InfiniteScroll-scrollEnd
+	 * Fired when scroll bottom has been reached.
+	 */
+	InfiniteScroll.EVENT_SCROLL_END = 'InfiniteScroll-scrollEnd';
 
 	OO.mfExtend( InfiniteScroll, {
 		/**
@@ -96,12 +103,7 @@
 				// Disable when triggering an event. Won't trigger again until
 				// re-enabled.
 				this.disable();
-				/**
-				 * @event load
-				 * Fired when scroll bottom has been reached to give oportunity to
-				 * load to owners.
-				 */
-				this.emit( 'load' );
+				this.emit( InfiniteScroll.EVENT_SCROLL_END );
 			}
 		},
 		/**
