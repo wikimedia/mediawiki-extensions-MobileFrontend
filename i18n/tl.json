@@ -4,7 +4,8 @@
 			"AnakngAraw",
 			"Jojit fb",
 			"Sky Harbor",
-			"Leeheonjin"
+			"Leeheonjin",
+			"Emem.calist"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ipasok ang tekstong panseguridad",
@@ -14,6 +15,7 @@
 	"mobile-frontend-contributions-404-title": "Di-wastong ngalan-tagagamit ang naibigay",
 	"mobile-frontend-copyright": "Maaaring gamitin ang nilalaman sa ilalim ng $1 maliban kung nabanggit.",
 	"mobile-frontend-desc": "Frontend ng Mobile",
+	"mobile-frontend-editor-generic-block-reason": "Sa hindi maipaliwanag na rason..",
 	"mobile-frontend-featured-article": "Napiling nilalaman ngayon",
 	"mobile-frontend-last-modified-date": "Huling binago noong $1, sa oras na $2.",
 	"mobile-frontend-main-menu-settings-heading": "Mga kagustuhan",

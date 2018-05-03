@@ -25,7 +25,8 @@
 			"Matteocng",
 			"Giromin Cangiaxo",
 			"Kaspo",
-			"S4b1nuz E.656"
+			"S4b1nuz E.656",
+			"Sarah Bernabei"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -66,6 +67,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.",
 	"mobile-frontend-editor-anon": "Modifica senza effettuare l'accesso",
 	"mobile-frontend-editor-anonwarning": "<strong>Attenzione</strong>: Accesso non effettuato. Se effettuerai delle modifiche il tuo indirizzo IP sarà visibile pubblicamente. Se <strong>accedi</strong> o <strong>crei un'utenza</strong>, le tue modifiche saranno attribuite al tuo nome utente, insieme ad altri benefici.",
+	"mobile-frontend-editor-generic-block-reason": "Motivo sconosciuto",
 	"mobile-frontend-editor-cancel": "Annulla",
 	"mobile-frontend-editor-cancel-confirm": "Vuoi davvero abbandonare la tua modifica?",
 	"mobile-frontend-editor-captcha-try-again": "Codice errato, riprova.",
