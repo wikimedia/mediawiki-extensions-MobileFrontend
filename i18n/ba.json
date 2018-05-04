@@ -46,7 +46,7 @@
 	"mobile-frontend-desc": "Мобиль интерфейс",
 	"mobile-frontend-diffview-404-desc": "Һеҙ һораған идентификатор менән версиялар юҡ",
 	"mobile-frontend-diffview-404-title": "Версияға яңылыш һылтанма",
-	"mobile-frontend-diffview-anonymous": "Аноним ҡулланыусы",
+	"mobile-frontend-diffview-anonymous": "Аноним ҡатнашыусы",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт}} өҫтәлгән",
 	"mobile-frontend-diffview-bytesnochange": "Дәүмәлдә үҙгәрештәр юҡ",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт}} алынған",
