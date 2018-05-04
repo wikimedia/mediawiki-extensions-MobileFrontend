@@ -1,5 +1,7 @@
 ( function ( M ) {
-	var WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+	var
+		PageList = M.require( 'mobile.startup/PageList' ),
+		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
 		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
@@ -49,29 +51,35 @@
 			this.scrollEndEventEmitter.setElement( this.$el );
 		},
 		/**
-		 * Retrieve pages where all pages are watched.
-		 * @memberof WatchList
-		 * @instance
-		 * @param {Object.<string,string|number>} titleToPageID A page title to page
-		 *                                                      ID map. 0 indicates
-		 *                                                      ID unknown.
-		 * @return {jQuery.Deferred}
-		 */
-		getPages: function ( titleToPageID ) {
-			this.wsGateway.populateWatchStatusCache( Object.keys( titleToPageID ), true );
-			return util.Deferred().resolve();
-		},
-		/**
 		 * Also sets a watch uploads funnel.
 		 * @inheritdoc
 		 * @memberof WatchList
 		 * @instance
 		 */
 		postRender: function () {
-			WatchstarPageList.prototype.postRender.apply( this );
+			var
+				$items,
+				statuses;
+
+			// Skip a level from WatchstarPageList directly to PageList.
+			PageList.prototype.postRender.apply( this );
+
+			$items = this.queryUnitializedItems();
+
+			// WatchList requests list of watched pages. The list contains only
+			// watched pages so it's safe to transform the title map to a status map
+			// with each entry marked watched (true).
+			statuses = Object.keys( this.parsePagesFromItems( $items ) )
+				.reduce( function ( statuses, title ) {
+					statuses[ title ] = true;
+					return statuses;
+				}, {} );
+			this.renderItems( $items, statuses );
+
 			// The list has been extended. Re-enable scroll end events.
 			this.scrollEndEventEmitter.enable();
 		},
+
 		/**
 		 * Loads pages from the api and triggers render.
 		 * Infinite scroll is re-enabled in postRender.

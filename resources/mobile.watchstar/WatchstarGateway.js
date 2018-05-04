@@ -2,10 +2,25 @@
 	var util = M.require( 'mobile.startup/util' );
 
 	/**
-	 * API for managing clickable watchstar
+	 * @typedef {string|number} PageID Page ID. 0 / "0" is a special no-ID value.
+	 * {@link https://www.mediawiki.org/wiki/Manual:Page_table#page_id Page ID}
+	 *
+	 * @typedef {string} PageTitle Canonical page title.
+	 * {@link https://www.mediawiki.org/wiki/Manual:Title.php#Canonical_forms Canonical forms}
+	 *
+	 * @typedef {boolean} WatchStatus Page watch status; true if watched, false if
+	 *                                unwatched.
+	 * {@link https://www.mediawiki.org/wiki/API:Info API:Info} (see inprop.watched)
+	 * {@link https://www.mediawiki.org/wiki/API:Watch API:Watch} (see unwatch)
+	 *
+	 * @typedef {Object.<PageTitle, WatchStatus>} WatchStatusMap
+	 */
+
+	/**
+	 * API for retrieving and modifying page watch statuses. This module interacts
+	 * with two endpoints, API:Info for GETs and API:Watch and for POSTs.
 	 *
 	 * @class WatchstarGateway
-	 *
 	 * @param {mw.Api} api
 	 */
 	function WatchstarGateway( api ) {
@@ -14,89 +29,44 @@
 
 	WatchstarGateway.prototype = {
 		/**
-		 * A map of page titles to watch statuses shared across all instances.
-		 * Status is true if watched, false otherwise. Missing pages, i.e., pages
-		 * whose IDs are unknown because they don't exist, are used in the case that
-		 * a user wishes to observe when a page with a given title is created. Since
-		 * all pages with IDs have titles, titles are unique within a given wiki,
-		 * and it's possible for a title and page ID to conflict, only titles are
-		 * used for the keys.
-		 * @static {Object.<string, boolean>}
-		 */
-		_titleCache: {},
-
-		/**
-		 * Cache API response
+		 * Issues zero to two asynchronous HTTP requests for the watch status of
+		 * each page ID and title passed.
+		 *
+		 * Every watch entry has a title but not necessarily a page ID. Entries
+		 * without IDs are missing pages, i.e., pages that do not exist. These
+		 * entries are used to observe when a page with a given title is created.
+		 * Although it is convenient to use titles because they're always present,
+		 * IDs are preferred since they're far less likely to exceed the URL length
+		 * limit.
+		 *
+		 * No request is issued when no IDs and no titles are passed. Given that the
+		 * server state does not change between the two requests, overlapping title
+		 * and ID members will behave as expected but there is no reason to issue
+		 * such a request.
+		 *
 		 * @memberof WatchstarGateway
 		 * @instance
-		 * @private
-		 * @param {Object} resp Response from the server
+		 * @param {PageID[]} ids
+		 * @param {PageTitle[]} titles
+		 * @return {JQuery.Deferred<WatchStatusMap>}
 		 */
-		_loadIntoCache: function ( resp ) {
-			var cache = this._titleCache;
-			if ( resp.query && resp.query.pages ) {
-				resp.query.pages.forEach( function ( page ) {
-					cache[ page.title ] = page.watched;
-				} );
-			}
+		getStatuses: function ( ids, titles ) {
+			// Issue two requests and coalesce the results.
+			return util.when(
+				this.getStatusesByID( ids ),
+				this.getStatusesByTitle( titles )
+			).then( function () { return util.extend.apply( util, arguments ); } );
 		},
 
 		/**
-		 * Update the watch status cache for a given list of page titles in bulk
 		 * @memberof WatchstarGateway
 		 * @instance
-		 * @param {string[]} titles An array of page titles.
-		 * @param {boolean} watched
-		 * @return {void}
+		 * @param {PageID[]} ids
+		 * @return {JQuery.Deferred<WatchStatusMap>}
 		 */
-		populateWatchStatusCache: function ( titles, watched ) {
-			var cache = this._titleCache;
-			titles.forEach( function ( title ) {
-				cache[ title ] = watched;
-			} );
-		},
-
-		/**
-		 * Loads the watch status for a given array of pages
-		 * @memberof WatchstarGateway
-		 * @instance
-		 * @param {Object.<string,string|number>} titleToPageID A page title to page
-		 *                                                      ID map. 0 indicates
-		 *                                                      ID unknown.
-		 * @return {jQuery.Deferred}
-		 */
-		loadWatchStatus: function ( titleToPageID ) {
-			var self = this,
-				titles = [],
-				ids = [];
-
-			// Partition titles and page IDs. Favor the later as they're shorter.
-			Object.keys( titleToPageID )
-				.forEach( function ( title ) {
-					var id = titleToPageID[ title ];
-					if ( id && id !== '0' ) {
-						ids.push( id );
-					} else if ( title ) {
-						titles.push( title );
-					}
-				} );
-
-			return this.loadWatchStatusByPageID( ids ).then( function () {
-				return self.loadWatchStatusByPageTitle( titles );
-			} );
-		},
-
-		/**
-		 * Loads the watch status for a given list of page ids in bulk
-		 * @memberof WatchstarGateway
-		 * @instance
-		 * @param {string[]} ids A list of page ids
-		 * @return {jQuery.Deferred}
-		 */
-		loadWatchStatusByPageID: function ( ids ) {
+		getStatusesByID: function ( ids ) {
 			var self = this;
-
-			if ( !ids.length ) { return util.Deferred().resolve(); }
+			if ( !ids.length ) { return util.Deferred().resolve( {} ); }
 
 			return this.api.get( {
 				formatversion: 2,
@@ -104,23 +74,20 @@
 				prop: 'info',
 				inprop: 'watched',
 				pageids: ids
-			} ).then( function ( resp ) {
-				self._loadIntoCache( resp );
+			} ).then( function ( rsp ) {
+				return self._unmarshalGetResponse( rsp );
 			} );
 		},
 
 		/**
-		 * Loads the watch status for a given list of page ids in bulk. Do not call
-		 * call this method with more than ~2000 characters in titles.
 		 * @memberof WatchstarGateway
 		 * @instance
-		 * @param {string[]} titles
-		 * @return {jQuery.Deferred}
+		 * @param {PageTitle[]} titles
+		 * @return {JQuery.Deferred<WatchStatusMap>}
 		 */
-		loadWatchStatusByPageTitle: function ( titles ) {
+		getStatusesByTitle: function ( titles ) {
 			var self = this;
-
-			if ( !titles.length ) { return util.Deferred().resolve(); }
+			if ( !titles.length ) { return util.Deferred().resolve( {} ); }
 
 			return this.api.get( {
 				formatversion: 2,
@@ -128,59 +95,45 @@
 				prop: 'info',
 				inprop: 'watched',
 				titles: titles
-			} ).then( function ( resp ) {
-				self._loadIntoCache( resp );
+			} ).then( function ( rsp ) {
+				return self._unmarshalGetResponse( rsp );
 			} );
 		},
 
 		/**
-		 * Marks whether a given page is watched or not to avoid an API call
 		 * @memberof WatchstarGateway
 		 * @instance
-		 * @param {Page} page Page view object
-		 * @param {boolean} isWatched True if page is watched
+		 * @param {PageTitle[]} titles
+		 * @param {WatchStatus} watched
+		 * @return {JQuery.Deferred}
 		 */
-		setWatchedPage: function ( page, isWatched ) {
-			this._titleCache[ page.getTitle() ] = isWatched;
-		},
-
-		/**
-		 * Check if a given page is watched
-		 * @memberof WatchstarGateway
-		 * @instance
-		 * @param {Page} page Page view object
-		 * @return {boolean|undefined} undefined when the watch status is not known.
-		 */
-		isWatchedPage: function ( page ) {
-			return this._titleCache[ page.getTitle() ];
-		},
-
-		/**
-		 * Toggle the watch status of a known page
-		 * @memberof WatchstarGateway
-		 * @instance
-		 * @param {Page} page Page view object
-		 * @return {jQuery.Deferred}
-		 */
-		toggleStatus: function ( page ) {
-			var data,
-				self = this;
-
-			data = {
-				action: 'watch'
+		postStatusesByTitle: function ( titles, watched ) {
+			var params = {
+				action: 'watch',
+				titles: titles
 			};
-			data.titles = [ page.getTitle() ];
-
-			if ( this.isWatchedPage( page ) ) {
-				data.unwatch = true;
+			if ( !watched ) {
+				params.unwatch = !watched;
 			}
-			return this.api.postWithToken( 'watch', data ).done( function () {
-				var newStatus = !self.isWatchedPage( page );
-				self.setWatchedPage( page, newStatus );
-			} );
+			return this.api.postWithToken( 'watch', params );
+		},
+
+		/**
+		 * @memberof WatchstarGateway
+		 * @instance
+		 * @param {Object} rsp The API:Info response.
+		 * @return {JQuery.Deferred<WatchStatusMap>}
+		 * @see getStatusesByID
+		 * @see getStatusesByTitle
+		 */
+		_unmarshalGetResponse: function ( rsp ) {
+			var pages = rsp && rsp.query && rsp.query.pages || [];
+			return pages.reduce( function ( statuses, page ) {
+				statuses[page.title] = page.watched;
+				return statuses;
+			}, {} );
 		}
 	};
 
 	M.define( 'mobile.watchstar/WatchstarGateway', WatchstarGateway );
-
 }( mw.mobileFrontend ) );
