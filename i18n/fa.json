@@ -81,6 +81,7 @@
 	"mobile-frontend-editor-anon": "ویرایش بدون ورود",
 	"mobile-frontend-editor-anonwarning": "<strong>هشدار</strong>: شما وارد نشده‌اید. اگر هر تغییری ایجاد کنید، نشانی آی‌پی شما برای عموم قابل مشاهده خواهد بود. اگر <strong>وارد شوید</strong> یا <strong>یک حساب بسازید</strong>، ویرایش‌هایتان با نام کاربری‌تان ثبت خواهد شد و قابلیت‌های دیگری نیز به همراه خواهد داشت.",
 	"mobile-frontend-editor-blocked-info": "آدرس آی پی شما مسدود شده است.این عمل توسط{{GENDER:$2|$2}} و به دلیل $1 انجام گرفته است.",
+	"mobile-frontend-editor-generic-block-reason": "علت ناشناسخته",
 	"mobile-frontend-editor-cancel": "انصراف",
 	"mobile-frontend-editor-cancel-confirm": "واقعاً می‌خواهید ویرایش خود را رها کنید؟",
 	"mobile-frontend-editor-captcha-try-again": "کد اشتباه، مجدداً تلاش کنید.",
