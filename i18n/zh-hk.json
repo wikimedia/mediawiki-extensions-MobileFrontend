@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"LNDDYL",
+			"Liuxinyu970226"
+		]
+	},
+	"abusefilter-edit-builder-vars-user-mobile": "用戶是否透過流動版編輯",
+	"mobile-frontend-desc": "流動電話前端",
+	"mobile-frontend-diffview-anonymous": "匿名用戶",
+	"mobile-frontend-last-modified-with-user-days": "[$4 最後一次{{GENDER:$1|編輯}}]由{{PLURAL:$5|[$6 $2]|0=一位匿名用戶}}於{{PLURAL:$3|$3天}}前做出",
+	"mobile-frontend-privacy-link-text": "私隱",
+	"mobile-frontend-requires-mobile": "此頁面無法使用於電腦版。請於頁面底部點選流動版檢視。",
+	"mobile-frontend-view": "流動版檢視",
+	"tag-mobile_edit": "流動版編輯",
+	"tag-mobile_web_edit": "流動版網頁編輯",
+	"tag-mobile_web_edit-description": "流動版網頁所作的編輯"
+}
