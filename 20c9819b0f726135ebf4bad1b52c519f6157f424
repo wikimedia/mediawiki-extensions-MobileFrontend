@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4accbfcb_4e243c7f",
+        "filename": "resources/mobile.startup/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-05-07T22:58:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d1a1822_ea8b5ead",
+      "revId": "20c9819b0f726135ebf4bad1b52c519f6157f424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cdb37a93_d8eb5e87",
         "filename": "resources/mobile.startup/drawer.less",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2018-05-07T22:46:45Z",
       "side": 1,
       "message": "Lets switch this to @colorGray1 LESS variable",
+      "revId": "20c9819b0f726135ebf4bad1b52c519f6157f424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81213a6d_27d2b004",
+        "filename": "resources/mobile.startup/drawer.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-05-07T22:58:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cdb37a93_d8eb5e87",
       "revId": "20c9819b0f726135ebf4bad1b52c519f6157f424",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
