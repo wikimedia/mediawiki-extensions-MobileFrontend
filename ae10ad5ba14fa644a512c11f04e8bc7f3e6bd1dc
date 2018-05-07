@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "205609f5_d42597d9",
+        "filename": "resources/mobile.watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-07T22:01:47Z",
+      "side": 1,
+      "message": "So if isWatched is undefined, we are assuming it is not watched?",
+      "revId": "ae10ad5ba14fa644a512c11f04e8bc7f3e6bd1dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
