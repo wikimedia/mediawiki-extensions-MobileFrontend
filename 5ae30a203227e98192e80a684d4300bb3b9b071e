@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c982a9de_7392fe88",
+        "filename": "resources/mobile.startup/drawer.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-07T19:41:09Z",
+      "side": 1,
+      "message": "Use .transition from mediawiki.less/mediawiki.mixins.less for consistency.",
+      "revId": "5ae30a203227e98192e80a684d4300bb3b9b071e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
