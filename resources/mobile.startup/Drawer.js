@@ -25,7 +25,14 @@
 				name: 'close-invert',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString()
+			} ).toHtmlString(),
+			collapseIcon: new Icon( {
+				name: 'arrow',
+				additionalClassNames: 'cancel'
+			} ).options
+		} ),
+		templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
+			icon: Icon.prototype.template
 		} ),
 		className: 'drawer position-fixed',
 		/**
@@ -49,6 +56,7 @@
 			// Thus ensure we wait for the DOM to be loaded
 			util.docReady( function () {
 				self.appendTo( self.appendToElement );
+				self.$el.parent().addClass( 'has-drawer' );
 			} );
 			this.on( 'show', this.onShowDrawer.bind( this ) );
 			this.on( 'hide', this.onHideDrawer.bind( this ) );
@@ -69,6 +77,8 @@
 		onShowDrawer: function () {
 			var self = this;
 
+			this.$el.parent().addClass( 'drawer-visible' );
+
 			setTimeout( function () {
 				var $window = util.getWindow();
 				$window.one( 'click.drawer', self.hide.bind( self ) );
@@ -82,6 +92,7 @@
 		 * HideDrawer event handler
 		 */
 		onHideDrawer: function () {
+			this.$el.parent().removeClass( 'drawer-visible' );
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
 			util.getWindow().off( '.drawer' );
