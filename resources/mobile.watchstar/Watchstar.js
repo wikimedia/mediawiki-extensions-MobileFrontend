@@ -70,27 +70,23 @@
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this,
-				_super = View.prototype.initialize,
-				page = options.page;
+				_super = View.prototype.initialize;
 
+			this._watched = options.isWatched;
 			this.gateway = new WatchstarGateway( options.api );
 
-			if ( options.isWatched === undefined ) {
-				this.gateway.loadWatchStatusByPageTitle( [ page.getTitle() ] ).done( function () {
-					options.isWatched = self.gateway.isWatchedPage( page );
-				} );
-			} else if ( !user.isAnon() ) {
-				// Synchronize the Watchstar's cache, options.isWatched, with the
+			if ( !user.isAnon() ) {
+				// Synchronize the Watchstar's cache, _watched, with the
 				// WatchstarGateway cache. Otherwise, toggling may have the opposite
 				// effect as is wanted.
-				this.gateway.setWatchedPage( options.page, options.isWatched );
+				this.gateway.setWatchedPage( options.page, this._watched );
 			}
 
 			_super.call( self, options );
 		},
 		/** @inheritdoc */
 		preRender: function () {
-			this.options.tooltip = this.options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
+			this.options.tooltip = this._watched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
 		/** @inheritdoc */
 		postRender: function () {
@@ -150,7 +146,7 @@
 				clearInterval( checker );
 			} ).done( function () {
 				if ( gateway.isWatchedPage( page ) ) {
-					self.options.isWatched = true;
+					self._watched = true;
 					self.render();
 					/**
 					 * @event watch
@@ -159,7 +155,7 @@
 					self.emit( 'watch' );
 					toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
 				} else {
-					self.options.isWatched = false;
+					self._watched = false;
 					/**
 					 * @event unwatch
 					 * Fired when the watch star is changed to unwatched status
