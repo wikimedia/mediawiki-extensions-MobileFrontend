@@ -134,13 +134,6 @@
 				"overlay-close": "resources/mobile.startup.images.variants/close.svg"
 			}
 		},
-		"mobile.issues.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"cleanup-gray": "resources/mobile.issues.images/gray-triangle.svg"
-			}
-		},
 		"mobile.toc.images": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
@@ -814,8 +807,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.issues.images"
+				"mobile.startup"
 			],
 			"templates": {
 				"OverlayContent.hogan": "resources/mobile.issues/cleanup.hogan"
