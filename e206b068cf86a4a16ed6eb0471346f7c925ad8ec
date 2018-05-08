@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "67363a4c_ddbf2884",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-05-08T16:43:07Z",
+      "side": 1,
+      "message": "we also should check that `$data[\u0027pageprops\u0027]` exists and it\u0027s an array, otherwise the `array_key_exists` will throw a warning if we pass anything other than an array. (where isset silently returns false).",
+      "range": {
+        "startLine": 148,
+        "startChar": 7,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "e206b068cf86a4a16ed6eb0471346f7c925ad8ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03b5793b_d1338e6d",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 13
