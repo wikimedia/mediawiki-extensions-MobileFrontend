@@ -600,6 +600,40 @@ Text 2
 	}
 
 	/**
+	 * @covers ApiMobileView::addDescriptionToResult
+	 */
+	public function testLocalDescription() {
+		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
+		$addDescriptionToResult = $this->getNonPublicMethod(
+			'ApiMobileView',
+			'addDescriptionToResult'
+		);
+		$resultObj = new ApiResult( false );
+		$pageprops = [ 'wikibase-shortdesc' => 'my local description' ];
+		$addDescriptionToResult->invokeArgs( $api, [ $resultObj, $pageprops, 'mobileview' ] );
+		$mobileview = $resultObj->getResultData( 'mobileview' );
+		$this->assertEquals( 'my local description', $mobileview[ 'description' ] );
+		$this->assertEquals( 'local', $mobileview[ 'descriptionsource' ] );
+	}
+
+	/**
+	 * @covers ApiMobileView::addDescriptionToResult
+	 */
+	public function testNoDescription() {
+		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
+		$addDescriptionToResult = $this->getNonPublicMethod(
+			'ApiMobileView',
+			'addDescriptionToResult'
+		);
+		$resultObj = new ApiResult( false );
+		$pageprops = [];
+		$addDescriptionToResult->invokeArgs( $api, [ $resultObj, $pageprops, 'mobileview' ] );
+		$mobileview = $resultObj->getResultData( 'mobileview' );
+		$this->assertEmpty( $mobileview[ 'description' ] );
+		$this->assertEmpty( $mobileview[ 'descriptionsource' ] );
+	}
+
+	/**
 	 * @covers ApiMobileView::getScaledDimen
 	 */
 	public function testImageScaling() {

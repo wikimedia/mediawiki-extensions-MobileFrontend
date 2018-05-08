@@ -145,16 +145,10 @@ class ApiMobileView extends ApiBase {
 			);
 		}
 
-		if ( isset( $prop['description'] ) && isset( $data['pageprops']['wikibase_item'] ) ) {
-			$desc = ExtMobileFrontend::getWikibaseDescription(
-				$data['pageprops']['wikibase_item']
-			);
-			if ( $desc ) {
-				$resultObj->addValue( null, $moduleName,
-					[ 'description' => $desc ]
-				);
-			}
+		if ( isset( $prop['description'] ) ) {
+			$this->addDescriptionToResult( $resultObj, $data['pageprops'], $moduleName );
 		}
+
 		if ( $this->usePageImages ) {
 			$this->addPageImage( $data, $params, $prop );
 		}
@@ -262,6 +256,33 @@ class ApiMobileView extends ApiBase {
 			$resultObj->addValue( null, $moduleName,
 				[ 'continue-offset' => $params['offset'] + $params['maxlen'] ]
 			);
+		}
+	}
+
+	/**
+	 * Adds the short description of the page to the result if available.
+	 * @param ApiResult $resultObj API result object
+	 * @param array $pageprops page props
+	 * @param string $moduleName name of the module being executed by this instance
+	 */
+	private function addDescriptionToResult( ApiResult $resultObj, $pageprops, $moduleName ) {
+		if ( array_key_exists( 'wikibase-shortdesc', $pageprops ) ) {
+			// wikibase-shortdesc is unfortunately the pageprop name for the local description
+			$resultObj->addValue( null, $moduleName, [
+				'description' => $pageprops['wikibase-shortdesc'],
+				'descriptionsource' => 'local',
+			] );
+		} elseif ( array_key_exists( 'wikibase_item', $pageprops ) ) {
+			// try wikibase for the central description
+			$desc = ExtMobileFrontend::getWikibaseDescription(
+				$pageprops['wikibase_item']
+			);
+			if ( $desc ) {
+				$resultObj->addValue( null, $moduleName, [
+					'description' => $desc,
+					'descriptionsource' => 'central',
+				] );
+			}
 		}
 	}
 
