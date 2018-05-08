@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "e6037cc5_7eabec7d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1701
+      },
+      "writtenOn": "2018-05-08T15:46:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a3451f95_ad0a49f5",
+      "range": {
+        "startLine": 268,
+        "startChar": 54,
+        "endLine": 268,
+        "endChar": 59
+      },
+      "revId": "73f6f0ed2a244249fe68c8ce6707d8e432b8c7e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bfffb5d_eb88d363",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1701
+      },
+      "writtenOn": "2018-05-08T15:46:30Z",
+      "side": 1,
+      "message": "Done. That was Jon\u0027s idea.",
+      "parentUuid": "96955ae6_66edc0fe",
+      "range": {
+        "startLine": 268,
+        "startChar": 41,
+        "endLine": 268,
+        "endChar": 52
+      },
+      "revId": "73f6f0ed2a244249fe68c8ce6707d8e432b8c7e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6cb28e42_21b665bb",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 12
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "3039d896_a517f1fa",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1701
+      },
+      "writtenOn": "2018-05-08T15:46:30Z",
+      "side": 1,
+      "message": "\u003e Maybe it\u0027s better to use ExtMobileFrontend to verify that this short-desc is really empty.\n\nNot sure if I need to do more here after changing this to use array_key_exists() as well.",
+      "parentUuid": "6cb28e42_21b665bb",
+      "range": {
+        "startLine": 269,
+        "startChar": 14,
+        "endLine": 269,
+        "endChar": 54
+      },
+      "revId": "73f6f0ed2a244249fe68c8ce6707d8e432b8c7e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "98f1c56d_fdc8fe72",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 12
@@ -82,6 +154,30 @@
       "writtenOn": "2018-05-08T10:58:12Z",
       "side": 1,
       "message": "this is me, being super picky, but in those cases I prefer array_key_exists(), as isset will not complain if someone does typo in `$data[\u0027pageprops\u0027]` part, or if because some reason the `pageprops` key changes to sth else (like `pageprops2`.\n\nIf it happens, this code will run without errors, which IMHO is bad - but first please take a look at my comment for $data argument.\n\n\nAnd second question, again, me being picky - what if wikibase_item is defined but empty?",
+      "range": {
+        "startLine": 275,
+        "startChar": 13,
+        "endLine": 275,
+        "endChar": 19
+      },
+      "revId": "73f6f0ed2a244249fe68c8ce6707d8e432b8c7e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6add8d04_57bc6359",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1701
+      },
+      "writtenOn": "2018-05-08T15:46:30Z",
+      "side": 1,
+      "message": "Ok, I changed both `isset()` checks to use `array_key_exists()`.",
+      "parentUuid": "98f1c56d_fdc8fe72",
       "range": {
         "startLine": 275,
         "startChar": 13,
