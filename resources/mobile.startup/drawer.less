@@ -1,4 +1,5 @@
 @import 'mobile.variables';
+@import 'mediawiki.mixins';
 
 // Drawers
 //
@@ -46,7 +47,19 @@
 
 	.cancel {
 		display: block;
-		margin: auto;
+		margin: 0.5em auto 0.625em auto;
+	}
+}
+
+// Darken the content to highlight the drawer.
+.has-drawer {
+	background-color: @colorGray1;
+	> *:not( .drawer ) {
+		opacity: 1;
+		.transition( opacity .25s linear );
+	}
+	&.drawer-visible > *:not( .drawer ) {
+		opacity: 0.6;
 	}
 }
 

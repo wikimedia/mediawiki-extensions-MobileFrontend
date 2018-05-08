@@ -1,6 +1,5 @@
 ( function ( M ) {
 	var Drawer = M.require( 'mobile.startup/Drawer' ),
-		Icon = M.require( 'mobile.startup/Icon' ),
 		util = M.require( 'mobile.startup/util' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		Anchor = M.require( 'mobile.startup/Anchor' );
@@ -34,14 +33,9 @@
 			actionAnchor: new Anchor( {
 				progressive: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-			} ).options,
-			collapseIcon: new Icon( {
-				name: 'arrow',
-				additionalClassNames: 'cancel'
 			} ).options
 		} ),
 		templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
-			icon: Icon.prototype.template,
 			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
 		} ),
