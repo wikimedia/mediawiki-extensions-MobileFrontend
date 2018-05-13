@@ -64,6 +64,7 @@
 	"mobile-frontend-editor-anon": "Edició sense iniciar sessió",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenció</strong>: No heu iniciat cap sessió. La vostra adreça IP serà visible públicament si feu qualsevol modificació. Si <strong>inicieu una sessió</strong> o <strong>creeu un compte</strong>, les vostres edicions s'atribuiran al vostre nom d'usuari, juntament amb altres beneficis.",
 	"mobile-frontend-editor-blocked-info": "La vostra adreça IP està blocada per a modificacions. El blocatge va ser fet per {{GENDER:$2|$2}} per la raó següent: $1",
+	"mobile-frontend-editor-generic-block-reason": "Motiu desconegut",
 	"mobile-frontend-editor-cancel": "Cancel·la",
 	"mobile-frontend-editor-cancel-confirm": "Realment voleu abandonar la vostra edició?",
 	"mobile-frontend-editor-captcha-try-again": "Codi incorrecte, proveu-ho un altre cop.",
