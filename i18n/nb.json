@@ -177,7 +177,7 @@
 	"mobile-frontend-save-error": "Det oppstod en feil under lagring av innstillingene. Sjekk at du har aktivert informasjonskapsler (cookies).",
 	"mobile-frontend-save-settings": "Lagre",
 	"mobile-frontend-search-content": "Søk i sider",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' for å se om søkebegrepet finnes noe sted i det hele tatt.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> for å se om søkebegrepet finnes noe sted i det hele tatt.",
 	"mobile-frontend-search-no-results": "Ingen side med denne tittelen.",
 	"mobile-frontend-settings-tagline": "Lesepreferanser",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",

@@ -179,7 +179,7 @@
 	"mobile-frontend-save-error": "Wystąpił błąd podczas zapisywania ustawień. Upewnij się, że masz włączoną obsługę plików cookie.",
 	"mobile-frontend-save-settings": "Zapisz",
 	"mobile-frontend-search-content": "Szukaj w zawartości stron",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' aby sprawdzić czy gdzieś nie pojawia się to wyrażenie.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> aby sprawdzić czy gdzieś nie pojawia się to wyrażenie.",
 	"mobile-frontend-search-no-results": "Nie istnieje strona o takim tytule.",
 	"mobile-frontend-settings-tagline": "Preferencje czytania",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",

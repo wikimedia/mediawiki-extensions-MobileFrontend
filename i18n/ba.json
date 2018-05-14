@@ -161,7 +161,7 @@
 	"mobile-frontend-save-error": "Көйләүҙәрҙе һаҡлағандағы хата. cookie файлдары тоҡандырылғанын тикшерегеҙ?",
 	"mobile-frontend-save-settings": "Һаҡларға",
 	"mobile-frontend-search-content": "Биттәрҙә эҙләргә.",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' был фраза осрағанды күреү өсөн.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> был фраза осрағанды күреү өсөн.",
 	"mobile-frontend-search-no-results": "Был исемле биттәр юҡ.",
 	"mobile-frontend-settings-beta": "Бета өлгөһө",
 	"mobile-frontend-talk-fullpage": "Вики бит рәүешле уҡырға.",

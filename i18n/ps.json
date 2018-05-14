@@ -109,7 +109,7 @@
 	"mobile-frontend-return-to-page": "مخ ته ورستنېدل",
 	"mobile-frontend-save-settings": "خوندي کول",
 	"mobile-frontend-search-content": "ټولي پاڼې وپلټئ",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' تر څو وګورئ چې ایا دا جمله وجود لري او که نه.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> تر څو وګورئ چې ایا دا جمله وجود لري او که نه.",
 	"mobile-frontend-search-no-results": "په دي نامه هيڅ سرلیک شتون نلري.",
 	"mobile-frontend-settings-beta": "بيټا",
 	"mobile-frontend-talk-fullpage": "د ويکي پاڼې په توګه يي ولولئ",

@@ -166,7 +166,7 @@
 	"mobile-frontend-return-to-page": "صفحہ کی جانب واپس",
 	"mobile-frontend-save-settings": "محفوظ کریں",
 	"mobile-frontend-search-content": "صفحات میں تلاش",
-	"mobile-frontend-search-content-no-results": "اس عبارت کو دیکھنے کے لیے '''{{int:mobile-frontend-search-content}}''' کریں۔",
+	"mobile-frontend-search-content-no-results": "اس عبارت کو دیکھنے کے لیے <b>{{int:mobile-frontend-search-content}}</b> کریں۔",
 	"mobile-frontend-search-no-results": "اس عنوان سے کوئی صفحہ موجود نہیں۔",
 	"mobile-frontend-settings-tagline": "مطالعہ کی ترجیحات",
 	"mobile-frontend-settings-beta": "آزمائشی",

@@ -137,7 +137,7 @@
 	"mobile-frontend-save-error": "Feeler beim Späichere vun den Astellungen. Vergewëssert Iech w.e.g. ob Dir Cookien aktivéiert hutt.",
 	"mobile-frontend-save-settings": "Späicheren",
 	"mobile-frontend-search-content": "An de Säite sichen",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' fir ze gesinn op dëse Saz iergendwou optaucht.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> fir ze gesinn op dëse Saz iergendwou optaucht.",
 	"mobile-frontend-search-no-results": "Keng Säit mat dësem Titel.",
 	"mobile-frontend-settings-tagline": "Lies-Astellungen",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",

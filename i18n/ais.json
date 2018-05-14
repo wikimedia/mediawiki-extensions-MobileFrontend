@@ -142,7 +142,7 @@
 	"mobile-frontend-return-to-page": "patiku kasabelih",
 	"mobile-frontend-save-error": "misuped setin mungangaw. pilucekan mawawah tu kisu ku Cookies sasahicaan.",
 	"mobile-frontend-search-content": "ilabu nu kasabelih mikilim",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' sapiciwsac tina kamu tahkal haw i zuma kakitizaan.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> sapiciwsac tina kamu tahkal haw i zuma kakitizaan.",
 	"mobile-frontend-search-no-results": "inayi’ kasabelih pisaungay.",
 	"mobile-frontend-settings-beta": "mitanam",
 	"mobile-frontend-talk-fullpage": "sapa Wiki kasabelih miasip",

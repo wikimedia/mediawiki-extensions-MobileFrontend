@@ -143,7 +143,7 @@
 	"mobile-frontend-save-error": "Mearachd le sàbhaladh nan roghainnean. Dèan cinnteach gu bheil briosgaidean an comas agad.",
 	"mobile-frontend-save-settings": "Sàbhail",
 	"mobile-frontend-search-content": "Lorg am broinn dhuilleagan.",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' feuch an nochd an abairt seo àite sam bith.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> feuch an nochd an abairt seo àite sam bith.",
 	"mobile-frontend-search-no-results": "Chan eil duilleag air a bheil an tiotal seo ann.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-fullpage": "Leug mar dhuilleag uicidh",

@@ -152,7 +152,7 @@
 	"mobile-frontend-save-error": "Kasalahan nyimpen pangaturan. Pastikeun yén anjeun geus ngahurungkeun kuki.",
 	"mobile-frontend-save-settings": "Simpen",
 	"mobile-frontend-search-content": "Paluruh na kaca",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pikeun manggihan ieu frasa dimana waé.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pikeun manggihan ieu frasa dimana waé.",
 	"mobile-frontend-search-no-results": "Taya kaca pikeun ieu judul.",
 	"mobile-frontend-settings-beta": "Béta",
 	"mobile-frontend-talk-fullpage": "Baca minangka kaca wiki",

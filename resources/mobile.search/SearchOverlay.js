@@ -77,7 +77,7 @@
 			searchTerm: '',
 			placeholderMsg: '',
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
-			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
+			searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse(),
 			action: mw.config.get( 'wgScript' ),
 			feedback: !feedbackLink ? false : {
 				feedback: new Anchor( {

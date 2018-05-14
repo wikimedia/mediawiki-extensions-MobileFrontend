@@ -168,7 +168,7 @@
 	"mobile-frontend-save-error": "Erro ao gardar a configuración. Asegúrese de ter as cookies activadas.",
 	"mobile-frontend-save-settings": "Gardar",
 	"mobile-frontend-search-content": "Procurar nas páxinas",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' para ver se esta frase aparece en algún lugar.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> para ver se esta frase aparece en algún lugar.",
 	"mobile-frontend-search-no-results": "Non hai ningunha páxina con este título.",
 	"mobile-frontend-settings-tagline": "Preferenzas de lectura",
 	"mobile-frontend-settings-beta": "βeta de {{SITENAME}}",

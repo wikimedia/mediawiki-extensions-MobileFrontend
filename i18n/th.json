@@ -158,7 +158,7 @@
 	"mobile-frontend-save-error": "เกิดข้อผิดพลาดในการบันทึกการตั้งค่า กรุณาตรวจให้แน่ใจว่าคุณได้เปิดใช้งานคุกกี้",
 	"mobile-frontend-save-settings": "บันทึก",
 	"mobile-frontend-search-content": "ค้นหาในหน้า",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}'''เพื่อดูว่าวลีนี้ปรากฏอยู่ที่ใดบ้าง",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>เพื่อดูว่าวลีนี้ปรากฏอยู่ที่ใดบ้าง",
 	"mobile-frontend-search-no-results": "ไม่มีหน้าชื่อนี้",
 	"mobile-frontend-settings-tagline": "การตั้งค่าการอ่าน",
 	"mobile-frontend-settings-beta": "{{SITENAME}} เบต้า",

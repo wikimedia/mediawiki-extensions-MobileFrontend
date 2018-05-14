@@ -206,7 +206,7 @@
 	"mobile-frontend-save-error": "Ошибка при сохранении настроек. Пожалуйста, убедитесь, что у вас включены файлы cookie.",
 	"mobile-frontend-save-settings": "Сохранить",
 	"mobile-frontend-search-content": "Искать на страницах",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, чтобы увидеть, встречается ли где-то эта фраза.",
 	"mobile-frontend-search-no-results": "Нет страниц с таким названием.",
 	"mobile-frontend-settings-tagline": "Настройки чтения",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Бета-версия",

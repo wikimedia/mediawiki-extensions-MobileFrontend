@@ -168,7 +168,7 @@
 	"mobile-frontend-save-error": "Galat menyimpan pengaturan. Pastikan bahwa Anda telah mengaktifkan kuki.",
 	"mobile-frontend-save-settings": "Simpan",
 	"mobile-frontend-search-content": "Cari pada halaman",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' untuk menemukan ungkapan ini di mana saja.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> untuk menemukan ungkapan ini di mana saja.",
 	"mobile-frontend-search-no-results": "Tidak ada halaman dengan judul ini.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-fullpage": "Baca sebagai halaman wiki",

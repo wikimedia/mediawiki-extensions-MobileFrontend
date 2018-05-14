@@ -170,7 +170,7 @@
 	"mobile-frontend-save-error": "設定を保存する際にエラーが発生しました。Cookie を有効にしていることを確認してください。",
 	"mobile-frontend-save-settings": "保存",
 	"mobile-frontend-search-content": "全文検索",
-	"mobile-frontend-search-content-no-results": "すべての記事内でこの語句を検索するには'''{{int:mobile-frontend-search-content}}'''を使用してください。",
+	"mobile-frontend-search-content-no-results": "すべての記事内でこの語句を検索するには<b>{{int:mobile-frontend-search-content}}</b>を使用してください。",
 	"mobile-frontend-search-no-results": "この名前のページはありません。",
 	"mobile-frontend-settings-tagline": "閲覧設定",
 	"mobile-frontend-settings-beta": "{{SITENAME}} ベータ",
