@@ -30,7 +30,7 @@
 			"ديفيد"
 		]
 	},
-	"mobile-frontend-editor-anon-cta-message": "سجل الدخول أو أنشيء حسابا لتتبع تعديلاتك",
+	"mobile-frontend-editor-anon-cta-message": "سجل الدخول أو أنشئ حسابًا لتتبع تعديلاتك",
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
 	"mobile-frontend-categories-heading": "<strong>التصنيفات</strong>",
@@ -75,7 +75,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "اقرأ المزيد",
 	"mobile-frontend-editor-abusefilter-warning": "تحذير: هل أنت متأكد من أنك تريد حفظ هذا التعديل؟ قد تكون هناك مشكلة به.",
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
-	"mobile-frontend-editor-anonwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيا للعامة عند قيامك بأي تعديل.إذا '''سجلت دخولك''' أو أنشأت حساب في ويكيبيديا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك ،مع المزيد من الميزات الأخرى.",
+	"mobile-frontend-editor-anonwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيًا للعامة عند قيامك بأي تعديل. إذا '''سجلت دخولك''' أو '''أنشأت حسابًا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك، مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-info": "عنوان الأيبي الخاص ك ممنوع من التعديل. المنع تم بواسطة {{GENDER:$1|$1}} للسبب التالي: $2.",
 	"mobile-frontend-editor-generic-block-reason": "سبب غير معلوم",
 	"mobile-frontend-editor-cancel": "ألغِ",

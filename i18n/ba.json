@@ -225,7 +225,7 @@
 	"apihelp-mobileview-param-variant": "Контентты телдең ошо вариантына конверсиялау",
 	"apihelp-mobileview-param-noimages": "HTML-ды рәсемһеҙ кире алырға.",
 	"apihelp-mobileview-param-noheadings": "\nСығыу исемен индермәҫкә",
-	"apihelp-mobileview-param-notransform": " HTML-ды махсус мобиль версияларға үҙгәртмәҫкә",
+	"apihelp-mobileview-param-notransform": "HTML-ды махсус мобиль версияларға үҙгәртмәҫкә",
 	"apihelp-mobileview-param-thumbsize": "Эскиздарҙың максималь дәүмәле.",
 	"apihelp-mobileview-param-thumbwidth": "Миниатюраның максималь дәүмәле.",
 	"apihelp-mobileview-param-thumbheight": "Миниатюраның максималь бейеклеге.",
