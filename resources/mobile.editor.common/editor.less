@@ -57,9 +57,12 @@
 	.editor-switcher {
 		border-left: 1px solid @colorGray12;
 
-		.oo-ui-toolbar-bar {
+		.oo-ui-toolbar-bar,
+		.oo-ui-toolbar-popups {
 			font-size: unit( 0.8 * @targetIconSize / @baseIconSize, em );
 			border-collapse: separate;
+		}
+		.oo-ui-toolbar-bar {
 			border: 0;
 			box-shadow: none;
 		}
