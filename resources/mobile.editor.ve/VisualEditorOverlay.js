@@ -71,6 +71,7 @@
 						section: overlay.options.sectionId || null
 					} );
 					overlay.target.load();
+					overlay.saved = false;
 				}, function ( e ) {
 					mw.log.warn( 'VisualEditor failed to load: ' + e );
 				} );
@@ -133,6 +134,7 @@
 		},
 		/** @inheritdoc **/
 		onSaveComplete: function () {
+			this.saved = true;
 			EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 			this.destroyTarget();
 		},
@@ -140,7 +142,10 @@
 		hasChanged: function () {
 			return this.target &&
 				this.target.getSurface() &&
-				this.target.getSurface().getModel().hasBeenModified();
+				this.target.getSurface().getModel().hasBeenModified() &&
+				// If we just saved, there's not really any changes, and the
+				// target is going to be destroyed in one tick
+				!this.saved;
 		}
 	} );
 
