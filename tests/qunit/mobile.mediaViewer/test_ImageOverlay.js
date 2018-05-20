@@ -34,7 +34,7 @@
 			caption: 'The Montgomery in 2012.'
 		} );
 		return api.get().then( function () {
-			assert.equal( imageOverlay.$el.find( 'img' ).length, 1, 'Image is present.' );
+			assert.strictEqual( imageOverlay.$el.find( 'img' ).length, 1, 'Image is present.' );
 		} );
 	} );
 

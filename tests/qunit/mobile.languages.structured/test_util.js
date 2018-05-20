@@ -204,7 +204,7 @@
 		);
 
 		// device language is a variant and only the parent language is available
-		assert.equal(
+		assert.strictEqual(
 			util.getStructuredLanguages( this.apiLanguages, false, {}, 'es-lx' ).suggested[0].lang,
 			'es',
 			'"es" is correctly selected as a suggested language even though the device language is "es-lx".'
