@@ -1306,20 +1306,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Extension registration callback.
-	 *
-	 * `extension.json` has parsed and the configuration merged with the current state of the
-	 * application. `MediaWikiServices` isn't bootstrapped so no services defined by extensions are
-	 * available.
-	 *
-	 * @warning DO NOT try to access services defined by MobileFrontend here.
-	 */
-	public static function onRegistration() {
-		global $wgResourceLoaderLESSImportPaths;
-		$wgResourceLoaderLESSImportPaths[] = dirname( __DIR__ ) . "/mobile.less/";
-	}
-
-	/**
 	 * Add the base mobile site URL to the siteinfo API output.
 	 * @param ApiQuerySiteinfo $module
 	 * @param array &$result Api result array
