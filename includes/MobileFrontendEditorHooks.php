@@ -44,6 +44,7 @@ class MobileFrontendEditorHooks {
 			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
 			// editor.js
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
+			'wgMFEnableVEWikitextEditor' => $config->get( 'MFEnableVEWikitextEditor' ),
 		];
 	}
 

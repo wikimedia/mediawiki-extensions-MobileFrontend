@@ -98,17 +98,33 @@ class Page {
 	 *
 	 * @return {boolean}
 	 */
-	isVisualAvailable() {
-		// FIXME: Should we consider default site options and user prefs?
+	isVEAvailable() {
+		return !!mw.config.get( 'wgVisualEditorConfig' ) &&
+			!mw.config.get( 'wgVisualEditorDisabledByHook' ) &&
+			this.isWikiText();
+	}
+
+	/**
+	 * Check if the visual editor in visual mode is available on this page
+	 *
+	 * @return {boolean}
+	 */
+	isVEVisualAvailable() {
 		var config = mw.config.get( 'wgVisualEditorConfig' );
-		if ( !config ) {
-			return false;
-		}
 		var visualEditorNamespaces = config.namespaces || [];
 
-		return !mw.config.get( 'wgVisualEditorDisabledByHook' ) &&
-			visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
-			this.isWikiText();
+		return this.isVEAvailable() &&
+			visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1;
+	}
+
+	/**
+	 * Check if the visual editor in source mode is available on this page
+	 *
+	 * @return {boolean}
+	 */
+	isVESourceAvailable() {
+		return this.isVEAvailable() &&
+			mw.config.get( 'wgMFEnableVEWikitextEditor' );
 	}
 
 	/**
