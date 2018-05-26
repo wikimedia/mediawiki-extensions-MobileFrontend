@@ -13,7 +13,7 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
-	 * @param string $text override out html
+	 * @param string|null $text override out html
 	 * @param bool $mobileFormatHtml whether content should be run through the MobileFormatter
 	 *
 	 * @return string

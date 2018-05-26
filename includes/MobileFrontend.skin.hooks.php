@@ -90,7 +90,7 @@ JAVASCRIPT;
 	 * FIXME: This hack shouldn't be needed anymore after fixing T111833
 	 *
 	 * @param string $license License or licenses message
-	 * @param Message $msgObj delimiter (optional)
+	 * @param Message|null $msgObj delimiter (optional)
 	 * @return int Returns 2, if there are multiple licenses, 1 otherwise.
 	 */
 	public static function getPluralLicenseInfo( $license, $msgObj = null ) {

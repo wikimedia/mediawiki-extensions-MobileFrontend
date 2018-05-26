@@ -480,7 +480,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Set Cookie to stop automatically redirect to mobile page
-	 * @param int $expiry Expire time of cookie
+	 * @param int|null $expiry Expire time of cookie
 	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
 		if ( is_null( $expiry ) ) {
@@ -604,9 +604,9 @@ class MobileContext extends ContextSource {
 	/**
 	 * Get the expiration time for the mf_useformat cookie
 	 *
-	 * @param int $startTime The base time (in seconds since Epoch) from which to calculate
+	 * @param int|null $startTime The base time (in seconds since Epoch) from which to calculate
 	 * 		cookie expiration. If null, time() is used.
-	 * @param int $cookieDuration The time (in seconds) the cookie should last
+	 * @param int|null $cookieDuration The time (in seconds) the cookie should last
 	 * @return int The time (in seconds since Epoch) that the cookie should expire
 	 */
 	protected function getUseFormatCookieExpiry( $startTime = null, $cookieDuration = null ) {
@@ -844,7 +844,7 @@ class MobileContext extends ContextSource {
 	 * Parse mobile URL template into its host and path components.
 	 *
 	 * Optionally specify which portion of the template you want returned.
-	 * @param string $part which part to return?
+	 * @param string|null $part which part to return?
 	 * @return mixed
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {

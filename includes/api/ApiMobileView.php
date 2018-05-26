@@ -508,7 +508,7 @@ class ApiMobileView extends ApiBase {
 	 * @param string $html representing the entire page
 	 * @param Title $title Page title
 	 * @param ParserOutput $parserOutput
-	 * @param int $revId this is a temporary parameter to avoid debug log warnings.
+	 * @param int|null $revId this is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
 	 * @return array structure representing the list of sections and their properties:
 	 *  - refsections: [] where all keys are section ids of sections with refs
