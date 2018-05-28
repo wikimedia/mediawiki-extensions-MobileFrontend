@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"C.R.",
-			"Chelin"
+			"Chelin",
+			"Ruthven"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si n'utente sta cagnanno pe' bbìa 'e ll'interfaccia p' 'aparecchie mobbele",
@@ -100,7 +101,7 @@
 	"mobile-frontend-last-modified-date": "Urtemo cagnamiento 'o $1, a 'e $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Urdemo {{GENDER:$1|cagnamiento}} {{PLURAL:$3|$3 ghiuorno|$3 ghiuorne}} fa] 'a  {{PLURAL:$5|[$6 $2]|0=n'utente anonimo}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Urdemo {{GENDER:$1|cagnamiento}} {{PLURAL:$3|$3 ora|$3 ore}} fa] 'a {{PLURAL:$5|[$6 $2]|0=n'utente anonimo}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 Appena mò {{GENDER:$1|cagnata}}] 'a {{PLURAL:$4|[$5 $2]|0=n'utente anonimo}}.",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3  {{GENDER:$1|Cagnata}}] mo 'a {{PLURAL:$4|[$5 $2]|0=n'utente anonimo}}.",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Urdemo {{GENDER:$1|cagnamiento}} {{PLURAL:$3|$3 minuto|$3 minute}} fa] 'a {{PLURAL:$5|[$6 $2]|0=n'utente anonimo}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Urdemo {{GENDER:$1|cagnamiento}} {{PLURAL:$3|$3 mese|$3 mise}} fa] 'a {{PLURAL:$5|[$6 $2]|0=n'utente anonimo}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Urdemo {{GENDER:$1|cagnamiento}} {{PLURAL:$3|$3 secondo|$3 siconde}} fa] 'a {{PLURAL:$5|[$6 $2]|0=n'utente anonimo}}",

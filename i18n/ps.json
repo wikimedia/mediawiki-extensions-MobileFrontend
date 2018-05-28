@@ -91,6 +91,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1ميتر}}",
 	"mobile-frontend-nearby-error": "د {{SITENAME}} په اطرافو کي ستونزې شتون لري.",
 	"mobile-frontend-nearby-noresults": "په ارامه اوسئ... ستاسو په نږدې کې د ویکیپیډیا هیڅ سيمه یزه  ليکنه موجوده نه ده.",
+	"mobile-frontend-nearby-noresults-guidance": "یو نوی مخ جوړ کړي يا هر هغه مخ ته چې ستاسو شاوخوا ته دي کورډېناټونه ورګډ کړي.",
 	"mobile-frontend-nearby-title": "نژدې",
 	"mobile-frontend-news-items": "په خبرونو کې",
 	"mobile-frontend-opt-in-explain": "په بيټا کي په ګډون کوني سره، تاسو به وروستي تجريبیي ځانګړتیاو ته لاسرسۍ ومومئ کوم چې کیدای شي د سافټویر نیمګړتیاوو تابع وي.",
