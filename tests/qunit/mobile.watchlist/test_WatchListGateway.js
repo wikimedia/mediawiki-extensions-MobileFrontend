@@ -100,8 +100,8 @@
 
 			assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
 
-			assert.equal( pages.length, 7, 'Got all the results' );
-			assert.equal( pages[0].displayTitle, 'Albert Einstein', 'Sorted alphabetically' );
+			assert.strictEqual( pages.length, 7, 'Got all the results' );
+			assert.strictEqual( pages[0].displayTitle, 'Albert Einstein', 'Sorted alphabetically' );
 		} );
 	} );
 
@@ -129,16 +129,16 @@
 
 			// Albert Einstein should not be in the results since it was the last
 			// item in the first page.
-			assert.equal( pages.length, 6, 'Should have Albert removed from the results' );
-			assert.equal( pages[0].displayTitle, 'Anne Dallas Dudley', 'First item should be Anne' );
+			assert.strictEqual( pages.length, 6, 'Should have Albert removed from the results' );
+			assert.strictEqual( pages[0].displayTitle, 'Anne Dallas Dudley', 'First item should be Anne' );
 
 			// Let's call for the next page
 			stub.returns( $.Deferred().resolve( response ) );
 
 			return gateway.loadWatchlist().then( function ( pages ) {
 				// Albert Einstein should be the first result of the next page (not removed)
-				assert.equal( pages.length, 7, 'Albert should be in the results' );
-				assert.equal( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
+				assert.strictEqual( pages.length, 7, 'Albert should be in the results' );
+				assert.strictEqual( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
 			} );
 		} );
 	} );
@@ -163,8 +163,8 @@
 			.returns( $.Deferred().resolve( response ) );
 
 		return gateway.loadWatchlist().then( function ( pages ) {
-			assert.equal( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );
-			assert.equal( pages[6].isMissing, true, 'zzzz page is marked as new' );
+			assert.strictEqual( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );
+			assert.strictEqual( pages[6].isMissing, true, 'zzzz page is marked as new' );
 		} );
 	} );
 

@@ -120,12 +120,12 @@
 				results[0].wikidataDescription === undefined,
 				'Braddy does not have a Wikidata description.'
 			);
-			assert.equal(
+			assert.strictEqual(
 				results[1].wikidataDescription,
 				'American actor',
 				'Yes, Brad Pitt is an actor.'
 			);
-			assert.equal(
+			assert.strictEqual(
 				results[2].wikidataDescription,
 				'American actor and film producer',
 				'Yes, Cooper is an actor.'

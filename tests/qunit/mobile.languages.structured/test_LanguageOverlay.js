@@ -81,13 +81,13 @@
 	} );
 
 	QUnit.test( 'test language overlay', function ( assert ) {
-		assert.equal(
+		assert.strictEqual(
 			this.languageOverlay.$( '.site-link-list.suggested-languages a' ).length,
 			3,
 			'There are 3 suggested languages.'
 		);
 
-		assert.equal(
+		assert.strictEqual(
 			this.languageOverlay.$( '.site-link-list.all-languages a' ).length,
 			7,
 			'Seven languages are non-suggested.'
@@ -96,7 +96,7 @@
 
 	QUnit.test( 'test language overlay search', function ( assert ) {
 		this.languageOverlay.filterLanguages( 'zh' );
-		assert.equal(
+		assert.strictEqual(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			3,
 			'Three languages match "zh" and only those languages are visible.'
@@ -117,14 +117,14 @@
 		);
 
 		this.languageOverlay.filterLanguages( '' );
-		assert.equal(
+		assert.strictEqual(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			10,
 			'The search filter has been cleared. All 10 languages (including variants) are visible.'
 		);
 
 		this.languageOverlay.filterLanguages( 'ўз' );
-		assert.equal(
+		assert.strictEqual(
 			this.languageOverlay.$( '.site-link-list a:not(.hidden)' ).length,
 			1,
 			'One language matches "ўз" and only that language is visible.'

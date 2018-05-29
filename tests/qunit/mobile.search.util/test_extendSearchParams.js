@@ -42,8 +42,8 @@
 			qux: 'quux'
 		} );
 
-		assert.equal( params.prop.indexOf( 'description' ), -1 );
-		assert.equal( params.wbptterms, undefined );
+		assert.strictEqual( params.prop.indexOf( 'description' ), -1 );
+		assert.strictEqual( params.wbptterms, undefined );
 	} );
 
 	QUnit.test( 'it adds the MobileFrontend configuration to given terms types', function ( assert ) {
@@ -51,7 +51,7 @@
 			wbptterms: 'grault'
 		} );
 
-		assert.equal(
+		assert.strictEqual(
 			params.wbptterms,
 			'grault',
 			'The given "wbptterms" is added to the default.'
