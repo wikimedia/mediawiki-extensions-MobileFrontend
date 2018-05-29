@@ -943,9 +943,6 @@ class MobileFrontendHooks {
 						'mobile.editor.common',
 						'mobile.startup',
 					],
-					'skinStyles' => [
-						'minerva' => 'skinStyles/mobile.editor.ve/minerva.less'
-					],
 					'scripts' => [
 						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
 						'resources/mobile.editor.ve/VisualEditorOverlay.js',
@@ -982,9 +979,6 @@ class MobileFrontendHooks {
 					'styles' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
 						'resources/mobile.notifications.overlay/NotificationsFilterOverlay.less',
-					],
-					'skinStyles' => [
-						'minerva' => 'skinStyles/mobile.notifications.overlay/minerva.less',
 					],
 					'messages' => [
 						'mobile-frontend-notifications-filter-title',
