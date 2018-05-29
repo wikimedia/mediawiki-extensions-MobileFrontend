@@ -119,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "720e23c7_cb593d46",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-29T14:47:47Z",
+      "side": 1,
+      "message": "I think the problem here, is that we\u0027re mixing logic with rendering (which we try to keep as dumb as possible).\n\nI agree a better comment could be made here.",
+      "parentUuid": "5d6f1e2b_d04087d3",
+      "range": {
+        "startLine": 50,
+        "startChar": 11,
+        "endLine": 50,
+        "endChar": 43
+      },
+      "revId": "f1da9d03356075382a45acfc84621846de0aceaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7c6b0495_127c380b",
         "filename": "includes/specials/MobileSpecialPageFeed.php",
         "patchSetId": 1
