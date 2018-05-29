@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ff0fd717_7bdb9d31",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-29T15:40:29Z",
+      "side": 1,
+      "message": "Looks like this is actually causing errors in production.\nhttps://phabricator.wikimedia.org/T195872",
+      "parentUuid": "5f09357e_3614cf92",
+      "range": {
+        "startLine": 148,
+        "startChar": 7,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "e206b068cf86a4a16ed6eb0471346f7c925ad8ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03b5793b_d1338e6d",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 13
