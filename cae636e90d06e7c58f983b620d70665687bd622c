@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "200ad098_59270d5d",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-05-30T13:52:26Z",
+      "side": 1,
+      "message": "we probably don\u0027t need the \u0027#\u0027 sign when setting window.location.hash",
+      "range": {
+        "startLine": 206,
+        "startChar": 27,
+        "endLine": 206,
+        "endChar": 30
+      },
+      "revId": "cae636e90d06e7c58f983b620d70665687bd622c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
