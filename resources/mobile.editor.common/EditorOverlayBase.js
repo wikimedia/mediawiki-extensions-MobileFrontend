@@ -201,20 +201,17 @@
 				action: 'saveSuccess'
 			} );
 			if ( self.sectionLine ) {
-				title = title + '#' + self.sectionLine;
+				// Ideally we'd want to do this via replaceState (see T189173)
+				// eslint-disable-next-line no-restricted-properties
+				window.location.hash = self.sectionLine;
 			}
 
 			$window.off( 'beforeunload.mfeditorwarning' );
 
-			// FIXME: Blocked on T189173
+			// Note the "#" may be in the URL. If so, using window.location alone will not reload the page
+			// we need to forcefully refresh
 			// eslint-disable-next-line no-restricted-properties
-			window.location = mw.util.getUrl( title );
-			if ( self.sectionLine ) {
-				// since the path and only the hash has changed it has not triggered a refresh so forcefully refresh
-				// FIXME: Blocked on T189173
-				// eslint-disable-next-line no-restricted-properties
-				window.location.reload();
-			}
+			window.location.reload();
 		},
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.
