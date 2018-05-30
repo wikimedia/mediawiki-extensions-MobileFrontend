@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6c4214fa_add870e4",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-05-30T19:57:24Z",
+      "side": 1,
+      "message": "if we want to do this approach, this probably should live just before `window.location.reload()` (inside setTimeout())",
+      "range": {
+        "startLine": 209,
+        "startChar": 3,
+        "endLine": 209,
+        "endChar": 49
+      },
+      "revId": "b81787844ae91f53c1434a784f458524bb126822",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
