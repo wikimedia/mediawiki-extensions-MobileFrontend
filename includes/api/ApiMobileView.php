@@ -144,8 +144,9 @@ class ApiMobileView extends ApiBase {
 				[ 'pageprops' => $mvPageProps ]
 			);
 		}
-
-		if ( isset( $prop['description'] ) ) {
+		if ( isset( $prop['description'] )
+			 && array_key_exists( 'pageprops', $data )
+			 && is_array( $data['pageprops'] ) ) {
 			$this->addDescriptionToResult( $resultObj, $data['pageprops'], $moduleName );
 		}
 
@@ -265,7 +266,7 @@ class ApiMobileView extends ApiBase {
 	 * @param array $pageprops page props
 	 * @param string $moduleName name of the module being executed by this instance
 	 */
-	private function addDescriptionToResult( ApiResult $resultObj, $pageprops, $moduleName ) {
+	private function addDescriptionToResult( ApiResult $resultObj, array $pageprops, $moduleName ) {
 		if ( array_key_exists( 'wikibase-shortdesc', $pageprops ) ) {
 			// wikibase-shortdesc is unfortunately the pageprop name for the local description
 			$resultObj->addValue( null, $moduleName, [
