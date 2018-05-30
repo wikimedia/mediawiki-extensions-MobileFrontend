@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "332d4aee_2075a0b0",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-30T08:48:06Z",
+      "side": 1,
+      "message": "typoooo!\nwill fix this myself and merge later unless you beat me to it!",
+      "revId": "3c3a1df5879898bbb346fab031482adf818b24ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
