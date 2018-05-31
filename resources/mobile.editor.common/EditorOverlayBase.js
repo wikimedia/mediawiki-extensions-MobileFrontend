@@ -183,9 +183,6 @@
 
 			// FIXME: use generic method for following 3 lines
 			this.pageGateway.invalidatePage( title );
-			// Close the overlay to cancel the hash fragment
-			// otherwise clicking back will take you back to the editor.
-			self.hide();
 
 			if ( this.isNewPage ) {
 				msg = mw.msg( 'mobile-frontend-editor-success-new-page' );
@@ -204,6 +201,13 @@
 				// Ideally we'd want to do this via replaceState (see T189173)
 				// eslint-disable-next-line no-restricted-properties
 				window.location.hash = self.sectionLine;
+			} else {
+				// Cancel the hash fragment
+				// otherwise clicking back after a save will take you back to the editor.
+				// We avoid calling the hide method of the overlay here as this can be asynchronous
+				// and may conflict with the window.reload call below.
+				// eslint-disable-next-line no-restricted-properties
+				window.location.hash = '#';
 			}
 
 			$window.off( 'beforeunload.mfeditorwarning' );
