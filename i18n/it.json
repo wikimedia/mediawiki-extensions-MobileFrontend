@@ -26,7 +26,8 @@
 			"Giromin Cangiaxo",
 			"Kaspo",
 			"S4b1nuz E.656",
-			"Sarah Bernabei"
+			"Sarah Bernabei",
+			"Sakretsu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -251,6 +252,8 @@
 	"mobile-frontend-panel-betaoptin-msg": "Vuoi provare alcune nuove funzionalità? Aderendo alla beta, si otterrà l'accesso a funzioni sperimentali, con il rischio di incorrere in errori e problemi.",
 	"mobile-frontend-search-feedback-link-text": "Dateci il vostro feedback.",
 	"mobile-frontend-search-feedback-prompt": "Non hai trovato cosa stavi cercando?",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Caricamento pigro delle note",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Carica le note solo quando necessario",
 	"mobile-frontend-send-feedback": "Invia commento",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Espandi tutte le sezioni per impostazione predefinita",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere"
