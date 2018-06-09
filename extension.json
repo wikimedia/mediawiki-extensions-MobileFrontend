@@ -928,7 +928,7 @@
 			"targets": "mobile",
 			"dependencies": [
 				"mobile.startup",
-				"mediawiki.api.options",
+				"mediawiki.api",
 				"mobile.watchlist"
 			],
 			"scripts": [
