@@ -1096,7 +1096,6 @@ class MobileFrontendHooks {
 
 	/**
 	 * OutputPageParserOutput hook handler
-	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
 	 *
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
@@ -1107,13 +1106,6 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 
 		if ( $context->shouldDisplayMobileView() ) {
-			// Remove TOC from the ParserOutput HTML
-			$po->setText( preg_replace(
-				'#' . preg_quote( Parser::TOC_START, '#' ) . '.*?' . preg_quote( Parser::TOC_END, '#' ) . '#s',
-				'',
-				$po->getRawText()
-			) );
-			$outputPage->setProperty( 'MFTOC', $po->getTOCHTML() !== '' );
 			$title = $outputPage->getTitle();
 			// Only set the tagline if the feature has been enabled and the article is in the main namespace
 			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) &&

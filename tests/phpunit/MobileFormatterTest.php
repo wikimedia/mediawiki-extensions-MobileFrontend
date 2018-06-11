@@ -848,25 +848,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFormatter::enableTOCPlaceholder
-	 * @covers MobileFormatter::enableExpandableSections
-	 * @covers MobileFormatter::filterContent
-	 * @covers MobileFormatter::getText
-	 */
-	public function testInsertTOCPlaceholder() {
-		$input = '<p>Hello world.</p><h2>Heading</h2>Text.';
-		$mf = new MobileFormatter( $input, Title::newFromText( 'Mobile' ) );
-		$mf->enableTOCPlaceholder();
-		$mf->enableExpandableSections();
-		$mf->topHeadingTags = [ 'h2' ];
-		$mf->filterContent( false, false, false );
-		$expected = $this->makeSectionHtml( 0, '<p>Hello world.</p>' . self::TOC )
-			. $this->makeSectionHeading( 'h2', 'Heading' )
-			. $this->makeSectionHtml( 1, 'Text.' );
-		$this->assertEquals( $expected, $mf->getText() );
-	}
-
-	/**
 	 * @see https://phabricator.wikimedia.org/T137375
 	 * @covers MobileFormatter::filterContent
 	 */

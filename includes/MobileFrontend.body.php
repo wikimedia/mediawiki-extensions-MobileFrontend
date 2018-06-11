@@ -33,9 +33,6 @@ class ExtMobileFrontend {
 
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
-		// Only include the table of contents element if the page is in the main namespace
-		// and the MFTOC flag has been set (which means the page originally had a table of contents)
-		$includeTOC = $out->getProperty( 'MFTOC' ) && $ns === NS_MAIN;
 
 		$isSpecialPage = $title->isSpecialPage();
 
@@ -52,8 +49,7 @@ class ExtMobileFrontend {
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
 
-		$formatter = MobileFormatter::newFromContext( $context, $provider,
-			$expandSections, $includeTOC );
+		$formatter = MobileFormatter::newFromContext( $context, $provider, $expandSections );
 
 		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 

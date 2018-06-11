@@ -98,21 +98,18 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param IContentProvider $provider
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
-	 * @param bool $includeTOC (optional) whether to include the
-	 *  table of contents in output HTML
 	 *
 	 * @return MobileFormatter
 	 */
 	public static function newFromContext( MobileContext $context,
 		IContentProvider $provider,
-		$enableSections = false, $includeTOC = false
+		$enableSections = false
 	) {
 		$mfSpecialCaseMainPage = $context->getMFConfig()->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage();
 		$isFilePage = $title->inNamespace( NS_FILE );
-
 		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new MobileFormatter( $html, $title );
 		if ( $isMainPage ) {
@@ -122,7 +119,7 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		$formatter->setIsMainPage( $isMainPage && $mfSpecialCaseMainPage );
-		$formatter->enableTOCPlaceholder( $includeTOC );
+		$formatter->enableTOCPlaceholder( strpos( $html, 'toclevel' ) !== false );
 
 		return $formatter;
 	}
@@ -639,17 +636,13 @@ class MobileFormatter extends HtmlFormatter {
 		$headings = $subheadings = [];
 
 		foreach ( $this->topHeadingTags as $tagName ) {
-			$elements = $doc->getElementsByTagName( $tagName );
-
-			if ( !$elements->length ) {
-				continue;
+			$allTags = $doc->getElementsByTagName( $tagName );
+			$elements = [];
+			foreach ( $allTags as $el ) {
+				if ( $el->parentNode->getAttribute( 'class' ) !== 'toctitle' ) {
+					$elements[] = $el;
+				}
 			}
-
-			// TODO: Under HHVM 3.6.6, `iterator_to_array` returns a one-indexed
-			// array rather than a zero-indexed array.  Create a minimal test case
-			// and raise a bug.
-			// FIXME: Remove array_values when HHVM bug fixed.
-			$elements = array_values( iterator_to_array( $elements ) );
 
 			if ( !$headings ) {
 				$headings = $elements;
