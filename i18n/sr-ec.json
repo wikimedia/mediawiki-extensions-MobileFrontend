@@ -69,7 +69,7 @@
 	"mobile-frontend-expand-sections-description": "Увек рашири све одељке када прелазим на нову страницу.",
 	"mobile-frontend-expand-sections-status": "Рашири све одељке",
 	"mobile-frontend-fontchanger-link": "Величина фонта",
-	"mobile-frontend-fontchanger-desc": "Повећај или смањи величину текста ради лакше читљивости.",
+	"mobile-frontend-fontchanger-desc": "Прилагоди величину фонта за лакшу читљивост",
 	"mobile-frontend-fontchanger-option-small": "Мала",
 	"mobile-frontend-fontchanger-option-medium": "Нормална",
 	"mobile-frontend-fontchanger-option-large": "Велика",
@@ -116,7 +116,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-title": "У близини",
 	"mobile-frontend-news-items": "Вести",
-	"mobile-frontend-opt-in-explain": "Користећи бета верзију, добијате приступ до пробних могућности, али с ризиком да дође до грешака и проблема.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βета је начин да испробате експерименталне могућности и дате вредне повратне информације",
 	"mobile-frontend-overlay-close": "Затвори",
 	"mobile-frontend-overlay-continue": "Настави",
 	"mobile-frontend-page-edit-summary": "<span><strong>Опис измене</strong> $1</span>",
@@ -181,5 +181,8 @@
 	"mobile-frontend-panel-cancel": "Не, хвала",
 	"mobile-frontend-search-feedback-link-text": "Дајте нам Ваше мишљење.",
 	"mobile-frontend-notifications-filter-title": "Филтрирај обавештења",
-	"mobile-frontend-send-feedback": "Пошаљи повратну информацију"
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Одгођено учитавање референци",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Учитај референце само по потреби",
+	"mobile-frontend-send-feedback": "Пошаљи повратну информацију",
+	"mobile-frontend-beta-only": "Функција само доступна у бета моду"
 }

@@ -5,7 +5,8 @@
 			"Thanhtikesoe24",
 			"Sanlinnaing",
 			"Ninjastrikers",
-			"9.sinistra"
+			"9.sinistra",
+			"Lionslayer"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "စိစစ်မှု ကုဒ်ထည့်သွင်းရန်",
@@ -56,7 +57,7 @@
 	"mobile-frontend-watchlist-filter-other": "အခြား",
 	"mobile-frontend-watchlist-filter-talk": "ဆွေးနွေးချက်",
 	"nearby": "ခေါင်းစဉ်အရ အနီးဆုံး စာမျက်နှာများ",
-	"tag-mobile_edit": "မိုလ်ဘိုင်း တည်းဖြတ်",
+	"tag-mobile_edit": "မိုဘိုင်းလ် တည်းဖြတ်",
 	"tag-mobile_edit-description": "မိုလ်ဘိုင်းဆိုဒ်မှ ပြုလုပ်သော တည်းဖြတ်မှု (ဝက်ဘ် သို့ app)",
-	"tag-mobile_web_edit": "မိုလ်ဘိုင်း ဝက်ဘ် တည်းဖြတ်"
+	"tag-mobile_web_edit": "မိုဘိုင်းလ် ဝက်ဘ် တည်းဖြတ်"
 }

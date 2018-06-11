@@ -158,6 +158,7 @@
 	"mobile-frontend-nearby-title": "In de buurt",
 	"mobile-frontend-nearby-info-heading": "Plaatsen in de buurt",
 	"mobile-frontend-nearby-info-description": "U kunt interessante Wikipedia-artikelen over plaatsen bij u in de buurt lezen",
+	"mobile-frontend-nearby-info-show-button": "Toon pagina's in de buurt",
 	"mobile-frontend-news-items": "In het nieuws",
 	"mobile-frontend-opt-in-explain": "Door mee te doen aan de beta krijgt u toegang tot de laatste experimentele functies, met het risico op fouten en problemen.",
 	"mobile-frontend-overlay-close": "Sluiten",
@@ -255,5 +256,5 @@
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Alle secties standaard uitklappen",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Het automatisch inklappen van secties op de mobiele website uitschakelen.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
-	"mobile-frontend-console-recruit": "Hallo! Dit is opensource software en we hebben vrijwilligers nodig die helpen met bouwen en verbeteren hiervan en het oplossen van fouten die in de JavaScript-console te zien zijn!\n\nU kunt onze backlog vinden op https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

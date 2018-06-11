@@ -8,7 +8,8 @@
 			"Suresh.balasubra",
 			"Vssun",
 			"Nesi",
-			"Jacob.jose"
+			"Jacob.jose",
+			"Matěj Suchánek"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ഉപയോക്താവ് മൊബൈൽ സമ്പർക്കമുഖം ഉപയോഗിച്ചാണോ അല്ലയോ തിരുത്തുന്നത്",
@@ -65,7 +66,7 @@
 	"mobile-frontend-editor-licensing": "മാറ്റങ്ങൾ സേവ് ചെയ്യുമ്പോൾ, താങ്കളുടെ സംഭാവനകൾ $1 {{PLURAL:$2|അനുമതി|അനുമതികൾ}} പ്രകാരം പ്രസിദ്ധപ്പെടുത്താമെന്ന് താങ്കൾ സമ്മതിക്കുന്നുണ്ട്.",
 	"mobile-frontend-editor-licensing-with-terms": "മാറ്റങ്ങൾ സേവ് ചെയ്യുമ്പോൾ, താങ്കൾ $1 അംഗീകരിക്കുകയും, സംഭാവനകൾ $2 {{PLURAL:$3|അനുമതി|അനുമതികൾ}} പ്രകാരം പ്രസിദ്ധപ്പെടുത്താമെന്ന് സമ്മതിക്കുകയും ചെയ്യുന്നുണ്ട്.",
 	"mobile-frontend-editor-terms-link": "[$1 ഉപയോഗനിബന്ധനകൾ]",
-	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} സംരംഭത്തിൽ പുതിയൊരു താൾ സൃഷ്ടിക്കണമെന്ന് {{GENDER:$1താങ്കൾക്കുറപ്പാണോ}}?",
+	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} സംരംഭത്തിൽ പുതിയൊരു താൾ സൃഷ്ടിക്കണമെന്ന് {{GENDER:$1|താങ്കൾക്കുറപ്പാണോ}}?",
 	"mobile-frontend-editor-placeholder": "ഈ ഭാഗം ശൂന്യമാണ്. ഇത് വികസിപ്പിക്കുന്ന ആദ്യത്തെയാളാവുക!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|താങ്കൾ}}  {{SITENAME}} സംരംഭത്തിൽ പുതിയൊരു താൾ {{GENDER:$1|സൃഷ്ടിക്കുകയാണ്}}!",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>എങ്ങനെയുണ്ടെന്ന് കാണുന്നു</strong>",

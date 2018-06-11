@@ -57,6 +57,7 @@
 	"mobile-frontend-expand-sections-description": "Uvek raširi sve odeljke kada prelazim na novu stranicu.",
 	"mobile-frontend-expand-sections-status": "Raširi sve odeljke",
 	"mobile-frontend-fontchanger-link": "Veličina fonta",
+	"mobile-frontend-fontchanger-desc": "Prilagodi veličinu fonta za lakšu čitljivost",
 	"mobile-frontend-featured-article": "Današnji izabrani sadržaj",
 	"mobile-frontend-generic-404-desc": "Stranica koju ste tražili nije pronađena.",
 	"mobile-frontend-generic-404-title": "Greška: stranica nije pronađena",
@@ -87,7 +88,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-title": "U blizini",
 	"mobile-frontend-news-items": "Vesti",
-	"mobile-frontend-opt-in-explain": "Koristeći beta verziju, dobijate pristup do probnih mogućnosti, ali s rizikom da dođe do grešaka i problema.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta je način da isprobate eksperimentalne mogućnosti i date vredne povratne informacije",
 	"mobile-frontend-overlay-close": "Zatvori",
 	"mobile-frontend-overlay-continue": "Nastavi",
 	"mobile-frontend-page-edit-summary": "<span><strong>Opis izmene</strong> $1</span>",
@@ -139,5 +140,8 @@
 	"mobile-frontend-loading-message": "Učitavam…",
 	"mobile-frontend-panel-ok": "U redu",
 	"mobile-frontend-panel-cancel": "Ne, hvala",
-	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje."
+	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje.",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Odgođeno učitavanje referenci",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Učitaj reference samo po potrebi",
+	"mobile-frontend-beta-only": "Funkcija samo dostupna u beta modu"
 }
