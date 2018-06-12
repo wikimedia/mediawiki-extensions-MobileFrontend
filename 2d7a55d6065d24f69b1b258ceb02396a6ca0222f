@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bed44e0f_3847b0e9",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-06-12T18:19:36Z",
+      "side": 1,
+      "message": "I might be missing a subtlety here but should we use window.pageXOffset to get the document\u0027s scroll position? If so, can we use window.pageYOffset above instead of jQuery?\n\nIt\u0027s fine if you want to punt on this discussion since I understand you were mimicking the existing work in Overlay. I just wanted to understand these changes better. 👍",
+      "range": {
+        "startLine": 158,
+        "startChar": 21,
+        "endLine": 158,
+        "endChar": 45
+      },
+      "revId": "2d7a55d6065d24f69b1b258ceb02396a6ca0222f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
