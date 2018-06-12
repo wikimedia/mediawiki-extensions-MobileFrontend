@@ -201,7 +201,7 @@
 				$window = util.getWindow();
 
 			this.$el.appendTo( this.appendToElement );
-			this.scrollTop = $window.scrollTop();
+			this.scrollTop = window.pageYOffset;
 
 			if ( this.fullScreen ) {
 				$html.addClass( 'overlay-enabled' );
@@ -240,7 +240,7 @@
 			if ( this.fullScreen ) {
 				$html.removeClass( 'overlay-enabled' );
 				// return to last known scroll position
-				window.scrollTo( document.body.scrollLeft, this.scrollTop );
+				window.scrollTo( window.pageXOffset, this.scrollTop );
 			}
 
 			this.$el.detach();

@@ -129,6 +129,14 @@
 				current = this.stack[0],
 				match;
 
+			// When entering an overlay for the first time, the manager should remember the user's scroll position
+			// overlays always open at top of page and we'll want to restore it later.
+			// This should happen before the call to _matchRoute which will "show" the overlay. The Overlay has similar
+			// logic for overlays that are not managed via the overlay.
+			if ( !current ) {
+				this.scrollTop = window.pageYOffset;
+			}
+
 			match = Object.keys( this.entries ).reduce( function ( m, id ) {
 				return m || this._matchRoute( ev.path, this.entries[ id ] );
 			}.bind( this ), null );
@@ -145,6 +153,8 @@
 			} else if ( !match ) {
 				// if hidden and no new matches, reset the stack
 				this.stack = [];
+				// restore the scroll position.
+				window.scrollTo( window.pageXOffset, this.scrollTop );
 			}
 
 			this.hideCurrent = true;
