@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1c32b697_86a0e5a0",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-06-12T15:30:08Z",
+      "side": 1,
+      "message": "This does fix a bug but I think the presentation is actually more confusing when there\u0027s nothing shown. There\u0027s some related discussion in T193172. Can we pull that into the kanban since we started this?\n\nhttps://phab.wmfusercontent.org/file/data/h2tuhvk5tavgrstfntzl/PHID-FILE-ru32dlqryo3umpdxzjvr/localhost_8080_wiki_Cloud_%28video_game%29.png",
+      "range": {
+        "startLine": 138,
+        "startChar": 4,
+        "endLine": 138,
+        "endChar": 32
+      },
+      "revId": "6cc988032023a7b08d9e499fc8bd2c73e3d2a44d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
