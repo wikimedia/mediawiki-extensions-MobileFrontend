@@ -45,6 +45,8 @@
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
 	"AutoloadNamespaces": {
+		"MobileFrontend\\ContentProviders\\": "includes/content-providers/",
+		"MobileFrontend\\Devices\\": "includes/devices/",
 		"MobileFrontend\\Transforms\\": "includes/transforms/",
 		"MobileFrontend\\Features\\" : "includes/features/",
 		"MobileFrontend\\ResourceLoaderModules\\": "includes/modules/"
@@ -77,18 +79,7 @@
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
-		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
-		"MobileFrontend\\Devices\\DeviceDetector": "includes/devices/DeviceDetector.php",
-		"MobileFrontend\\Devices\\DeviceProperties": "includes/devices/DeviceProperties.php",
-		"MobileFrontend\\Devices\\AMFDeviceDetector": "includes/devices/AMFDeviceDetector.php",
-		"MobileFrontend\\Devices\\CustomHeaderDeviceDetector": "includes/devices/CustomHeaderDeviceDetector.php",
-		"MobileFrontend\\Devices\\UADeviceDetector": "includes/devices/UADeviceDetector.php",
-		"MobileFrontend\\Devices\\DeviceDetectorService": "includes/devices/DeviceDetectorService.php",
-		"MobileFrontend\\ContentProviders\\ContentProviderFactory": "includes/content-providers/ContentProviderFactory.php",
-		"MobileFrontend\\ContentProviders\\DefaultContentProvider": "includes/content-providers/DefaultContentProvider.php",
-		"MobileFrontend\\ContentProviders\\IContentProvider": "includes/content-providers/IContentProvider.php",
-		"MobileFrontend\\ContentProviders\\McsContentProvider": "includes/content-providers/McsContentProvider.php",
-		"MobileFrontend\\ContentProviders\\MwApiContentProvider": "includes/content-providers/MwApiContentProvider.php"
+		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
 	},
 	"ResourceModules": {
 		"mobile.pagelist.styles": {
