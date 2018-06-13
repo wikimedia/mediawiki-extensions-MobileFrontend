@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Chuvash2014",
-			"Chavash"
+			"Chavash",
+			"Chuvash"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Категорисем</strong>",
@@ -13,6 +14,6 @@
 	"mobile-frontend-languages-header-page": "$1 - Чĕлхесем",
 	"mobile-frontend-missing-image": "Ӳкерчĕк",
 	"mobile-frontend-watchlist-back-home": "Килелле",
-	"tag-mobile_edit": "Мобиллӗ хатӗрпе тӳрлетесси",
-	"tag-mobile_web_edit": "Мобиллӗ версири тӳрлетесси"
+	"tag-mobile_edit": "Мобиллĕ япаларан тӳрлетни",
+	"tag-mobile_web_edit": "Мобиллĕ версине тӳрлетни"
 }
