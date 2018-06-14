@@ -108,7 +108,7 @@
 				this.showSpinner();
 				this.$saveButton.prop( 'disabled', true );
 				// sign and add newline to front
-				val = '\n\n' + val + ' ~~~~';
+				val = '\n\n' + this.autosign( val );
 				// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
 				this.editorApi.postWithToken( 'edit', {
 					action: 'edit',

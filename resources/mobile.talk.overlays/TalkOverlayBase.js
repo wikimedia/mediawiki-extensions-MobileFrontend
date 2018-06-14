@@ -19,6 +19,16 @@
 		Overlay.apply( this, arguments );
 	}
 	OO.mfExtend( TalkOverlayBase, Overlay, {
+		/**
+		 * Autosign a block of text if necessary
+		 * FIXME: Ideally this would be an imported function rather than a member variable
+		 * and as soon as MobileFrontend uses an asset bundler we'll make that so.
+		 * @param {String} text
+		 * @return {String} text with an autosign ("~~~~") if necessary
+		 */
+		autosign: function ( text ) {
+			return /~{3,5}/.test( text ) ? text : text + ' ~~~~';
+		},
 		className: 'talk-overlay overlay'
 	} );
 

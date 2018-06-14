@@ -167,7 +167,7 @@
 				sectiontitle: heading,
 				title: self.title,
 				summary: mw.msg( 'newsectionsummary', heading ),
-				text: text + ' ~~~~'
+				text: this.autosign( text )
 			} ).then( function () {
 				return 'ok';
 			}, function ( msg ) {
