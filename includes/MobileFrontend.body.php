@@ -36,7 +36,7 @@ class ExtMobileFrontend {
 
 		$isSpecialPage = $title->isSpecialPage();
 
-		$expandSections = (
+		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
 			$out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
@@ -49,7 +49,7 @@ class ExtMobileFrontend {
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
 
-		$formatter = MobileFormatter::newFromContext( $context, $provider, $expandSections );
+		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections );
 
 		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
