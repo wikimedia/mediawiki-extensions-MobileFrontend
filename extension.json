@@ -1074,6 +1074,10 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
+	"EventLoggingSchemas": {
+		"MobileWebMainMenuClickTracking": 11568715,
+		"MobileWebSearch": 12054448
+	},
 	"@note1": "ResourceModuleSkinStyles must only contain customizations for 'minerva'.",
 	"@note2": "For other skins, just use 'skinStyles' in module definition.",
 	"@note3": "Otherwise their own customizations are overridden. (T167216)",
@@ -1169,9 +1173,6 @@
 		],
 		"ResourceLoaderRegisterModules": [
 			"MobileFrontendHooks::onResourceLoaderRegisterModules"
-		],
-		"EventLoggingRegisterSchemas": [
-			"MobileFrontendHooks::onEventLoggingRegisterSchemas"
 		],
 		"OutputPageParserOutput": [
 			"MobileFrontendHooks::onOutputPageParserOutput"
