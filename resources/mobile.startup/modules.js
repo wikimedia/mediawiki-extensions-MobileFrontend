@@ -107,6 +107,8 @@
 	 * @singleton
 	 */
 	mw.mobileFrontend = new ModuleLoader();
+	mw.log.deprecate( mw.mobileFrontend, 'on', mw.mobileFrontend.on,
+		'The global EventEmitter should not be used (T156186).' );
 
 	// inception to support testing (!!)
 	mw.mobileFrontend.ModuleLoader = ModuleLoader;
