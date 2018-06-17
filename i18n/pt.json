@@ -130,7 +130,7 @@
 	"mobile-frontend-languages-404-desc": "Tem de ser especificado um título válido.",
 	"mobile-frontend-languages-404-title": "Erro de línguas",
 	"mobile-frontend-languages-header": "Línguas",
-	"mobile-frontend-languages-header-page": "$1 - Idiomas",
+	"mobile-frontend-languages-header-page": "$1 - Línguas",
 	"mobile-frontend-languages-nonexistent-title": "A página \"$1\" não existe.",
 	"mobile-frontend-languages-text": "$1 está disponível {{PLURAL:$2|numa língua|em $2 línguas}}.",
 	"mobile-frontend-languages-variant-header": "Variantes de {{#language:{{CONTENTLANG}}}}",

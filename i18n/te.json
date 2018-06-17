@@ -41,6 +41,7 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 కిమీ}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 మీ}}",
 	"mobile-frontend-nearby-title": "చుట్టుపక్కల",
+	"mobile-frontend-nearby-info-description": "మీ చుట్టూ ఉన్న స్థలాల గురించి వికీపీడియాలో ఉన్న వ్యాసాలను చదవవచ్చు",
 	"mobile-frontend-news-items": "వార్తల్లో",
 	"mobile-frontend-overlay-close": "మూసివేయి",
 	"mobile-frontend-overlay-continue": "కొనసాగించు",
