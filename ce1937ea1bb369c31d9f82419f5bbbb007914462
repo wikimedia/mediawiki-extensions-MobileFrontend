@@ -22,6 +22,30 @@
       "revId": "ce1937ea1bb369c31d9f82419f5bbbb007914462",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "491ea3f5_7b9eb0b5",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-06-18T21:51:38Z",
+      "side": 1,
+      "message": "Then something changed in core that is a breaking change and we\u0027d need to adjust this formatter. Right now this element only ever has one class - toctitle.",
+      "parentUuid": "84d9e78e_0313af2a",
+      "range": {
+        "startLine": 642,
+        "startChar": 54,
+        "endLine": 642,
+        "endChar": 65
+      },
+      "revId": "ce1937ea1bb369c31d9f82419f5bbbb007914462",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
