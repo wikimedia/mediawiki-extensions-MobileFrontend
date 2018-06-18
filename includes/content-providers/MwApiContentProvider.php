@@ -60,7 +60,6 @@ class MwApiContentProvider implements IContentProvider {
 				}
 				$out->setLanguageLinks( $langlinks );
 			}
-
 			return $parse['text'];
 		} else {
 			return '';
