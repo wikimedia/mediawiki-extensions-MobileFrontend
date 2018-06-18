@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84d9e78e_0313af2a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-06-18T21:50:14Z",
+      "side": 1,
+      "message": "what if the element has more than one class?",
+      "range": {
+        "startLine": 642,
+        "startChar": 54,
+        "endLine": 642,
+        "endChar": 65
+      },
+      "revId": "ce1937ea1bb369c31d9f82419f5bbbb007914462",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
