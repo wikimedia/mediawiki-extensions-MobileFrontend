@@ -325,12 +325,17 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
 			];
+			// Note we do not use LinkRenderer here as this will render
+			// a broken link if the user page does not exist
 			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
 				$this->getLinkRenderer()->makeLink(
 					$user->getUserPage(),
 					$user->getName(),
-					[ 'class' => 'mw-mf-user-link' ]
+					[ 'class' => 'mw-mf-user-link' ],
+					// T197581: Override red linking so that the user page is always accessible
+					// for user pages that do not exist. We want to allow access to contributions
+					[ 'action' => 'view' ]
 				) .
 				'</div>' .
 				'<div class="mw-mf-roles meta">' .
