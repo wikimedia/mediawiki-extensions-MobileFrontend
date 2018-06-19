@@ -249,7 +249,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			. Html::openElement( 'h2' )
 				. Html::element( 'a',
 					[
-						'href' => $this->targetTitle->getLocalURL()
+						'href' => $this->targetTitle->getLocalURL( [
+							'oldid' => $this->revId,
+						] )
 					],
 					$this->targetTitle->getPrefixedText()
 				)
