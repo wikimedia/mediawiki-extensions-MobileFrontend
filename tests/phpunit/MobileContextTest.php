@@ -484,10 +484,6 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider provideToggleView
 	 * @covers MobileContext::checkToggleView
 	 * @covers MobileContext::doToggling
-	 * @param $page
-	 * @param $url
-	 * @param $urlTemplate
-	 * @param $expectedLocation
 	 */
 	public function testToggleView( $page, $url, $urlTemplate, $expectedLocation ) {
 		$this->setMwGlobals( [
