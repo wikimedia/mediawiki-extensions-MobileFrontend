@@ -4,7 +4,8 @@
 			"Mucalexx",
 			"Schläsinger",
 			"LNDDYL",
-			"Joe Watzmo"
+			"Joe Watzmo",
+			"Alexx"
 		]
 	},
 	"mobile-frontend-clear-search": "Laarn",
@@ -12,5 +13,7 @@
 	"mobile-frontend-featured-article": "Artiké vam Toog",
 	"mobile-frontend-news-items": "A' d' Noochrichten",
 	"mobile-frontend-opt-in-explain": "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
-	"mobile-frontend-view": "Móbile Auhsicht"
+	"mobile-frontend-view": "Móbile Auhsicht",
+	"tag-mobile_edit": "Móbile Beórwatung",
+	"tag-mobile_web_edit": "Móbile Web-Beórwatung"
 }
