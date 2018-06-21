@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da09fef1_00ff1746",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-06-21T11:15:05Z",
+      "side": 1,
+      "message": "fun fact - 3, or 5 tildes in a row are also a signature \nhttps://en.wikipedia.org/wiki/Wikipedia:Signatures\nI think we should test for these as well. \n\nWe can test for 3-5 tildes at the end of a string like this  \n\n    /~{3,5}$/",
+      "revId": "c26404de42a07532cdf281a126c22343f3e012f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
