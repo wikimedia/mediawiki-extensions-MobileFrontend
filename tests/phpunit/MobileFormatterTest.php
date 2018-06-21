@@ -49,8 +49,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideHtmlTransform
 	 *
-	 * @param $input
-	 * @param $expected
+	 * @param string $input
+	 * @param string $expected
 	 * @param callable|bool $callback
 	 * @param bool $removeDefaults
 	 * @param bool $lazyLoadReferences
