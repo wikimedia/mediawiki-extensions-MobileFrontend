@@ -16,6 +16,24 @@
       "revId": "c26404de42a07532cdf281a126c22343f3e012f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dee0c99b_b76df448",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-06-21T18:35:10Z",
+      "side": 1,
+      "message": "I learn something new every day... :)",
+      "parentUuid": "da09fef1_00ff1746",
+      "revId": "c26404de42a07532cdf281a126c22343f3e012f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
