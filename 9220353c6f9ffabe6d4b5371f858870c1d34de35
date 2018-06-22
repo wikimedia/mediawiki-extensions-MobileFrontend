@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6c0fbc0_c4394625",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-06-22T13:12:00Z",
+      "side": 1,
+      "message": "I think Regex.test() is favourable to to String.match() here, since we\u0027re only checking for true or false and not doing anything else with the result of match. \n\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test",
+      "range": {
+        "startLine": 30,
+        "startChar": 15,
+        "endLine": 30,
+        "endChar": 20
+      },
+      "revId": "9220353c6f9ffabe6d4b5371f858870c1d34de35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e1197d7_a0789f96",
+        "filename": "resources/mobile.talk.overlays/TalkOverlayBase.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-06-22T13:12:00Z",
+      "side": 1,
+      "message": "should we check if the tildes are at the very end of the string? People can in theory add 3 tildes anywhere in the text\n\n\nCurrently this would match \"bla ~~~ bla bla\" and not autosign. \n\n\nWe could turn \"bla ~~~ bla bla\" into \"bla ~~~ bla bla ~~~~\" if that\u0027s desirable.",
+      "range": {
+        "startLine": 30,
+        "startChar": 22,
+        "endLine": 30,
+        "endChar": 30
+      },
+      "revId": "9220353c6f9ffabe6d4b5371f858870c1d34de35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
