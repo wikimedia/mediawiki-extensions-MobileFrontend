@@ -14,7 +14,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param string $heading
 	 * @param string $innerHtml of the heading element
-	 * @param integer [$sectionNumber] heading corresponds to
+	 * @param integer $sectionNumber heading corresponds to
 	 * @return string
 	 */
 	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
