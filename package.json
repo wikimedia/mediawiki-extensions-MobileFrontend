@@ -15,7 +15,7 @@
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.9.0",
     "jsdoc": "3.4.2",
-    "resource-modules": "2.0.0",
+    "resource-modules": "2.1.0",
     "stylelint": "8.2.0",
     "stylelint-config-wikimedia": "0.4.2",
     "svgo": "1.0.4"
