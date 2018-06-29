@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef9b43cd_3b600950",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-06-29T19:10:03Z",
+      "side": 1,
+      "message": "rawurlencode()",
+      "range": {
+        "startLine": 42,
+        "startChar": 10,
+        "endLine": 42,
+        "endChar": 19
+      },
+      "revId": "bb2744726b9936c9eedad61b0e4597a101ad558e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
