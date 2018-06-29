@@ -39,7 +39,7 @@ class MwApiContentProvider implements IContentProvider {
 		$title = $out->getTitle();
 		$query = 'action=parse&prop=text|modules|langlinks&page=';
 		$url = $this->baseUrl . '?formatversion=2&format=json&' . $query;
-		$url .= $title->getPrefixedDBKey();
+		$url .= rawurlencode( $title->getPrefixedDBKey() );
 		$url .= '&useskin=' . $this->skinName;
 
 		$resp = file_get_contents( $url, false );
