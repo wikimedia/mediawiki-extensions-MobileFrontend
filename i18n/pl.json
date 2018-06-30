@@ -235,7 +235,7 @@
 	"nearby": "Strony na temat obiektów znajdujących się w pobliżu",
 	"tag-mobile_edit": "Z internetu mobilnego",
 	"tag-mobile_edit-description": "Edycja dokonana z wersji dla urządzeń mobilnych lub za pomocą aplikacji mobilnej",
-	"tag-mobile_web_edit": "Wersja mobilna",
+	"tag-mobile_web_edit": "Z wersji mobilnej www",
 	"tag-mobile_web_edit-description": "Edycja dokonana z wersji dla urządzeń mobilnych",
 	"apihelp-mobileview-param-noimages": "Zwróć HTML bez obrazków.",
 	"apihelp-mobileview-param-notransform": "Nie zamieniaj HTML-u na wersję mobilną.",
