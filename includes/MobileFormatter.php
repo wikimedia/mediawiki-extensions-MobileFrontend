@@ -505,6 +505,7 @@ class MobileFormatter extends HtmlFormatter {
 		$container = $containers->item( 0 );
 		$containerChild = $container->firstChild;
 		$firstHeading = reset( $headings );
+		$firstHeadingName = $firstHeading ? $firstHeading->nodeName : false;
 		$sectionNumber = 0;
 		$sectionBody = $this->createSectionBodyElement( $doc, $sectionNumber, false );
 
@@ -517,7 +518,7 @@ class MobileFormatter extends HtmlFormatter {
 			// Note well the use of DOMNode#nodeName here. Only DOMElement defines
 			// DOMElement#tagName.  So, if there's trailing text - represented by
 			// DOMText - then accessing #tagName will trigger an error.
-			if ( $firstHeading && $node->nodeName === $firstHeading->nodeName ) {
+			if ( $node->nodeName === $firstHeadingName ) {
 				// The heading we are transforming is always 1 section ahead of the
 				// section we are currently processing
 				$this->prepareHeading( $doc, $node, $sectionNumber + 1, $this->scriptsEnabled );
