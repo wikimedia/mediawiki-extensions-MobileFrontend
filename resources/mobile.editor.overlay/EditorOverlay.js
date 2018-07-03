@@ -168,6 +168,7 @@
 
 					switchToolbar.setup( [
 						{
+							name: 'editMode',
 							type: 'list',
 							icon: 'edit',
 							title: mw.msg( 'visualeditor-mweditmode-tooltip' ), // resource-modules-disable-line
