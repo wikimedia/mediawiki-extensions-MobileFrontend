@@ -293,6 +293,67 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$this->assertEquals( $expectedConfstr, $confstr );
 	}
 
+	public static function provideShouldMobileFormatSpecialPages() {
+		return [
+			[
+				// should format
+				true,
+				// anon
+				true,
+				// feature disabled
+				false
+			],
+			[
+				// should format
+				true,
+				// anon
+				true,
+				// feature enabled
+				true
+			],
+			[
+				// should format
+				true,
+				// logged in user
+				false,
+				// feature enabled
+				true
+			],
+			[
+				// should not format
+				false,
+				// logged in user
+				false,
+				// feature enabled
+				true,
+				// preference enabled
+				true
+			]
+		];
+	}
+
+	/**
+	 * @dataProvider provideShouldMobileFormatSpecialPages
+	 * @covers MobileFrontendHooks::shouldMobileFormatSpecialPages
+	 */
+	public function testShouldMobileFormatSpecialPages(
+		$expected,
+		$isAnon,
+		$enabled,
+		$userpref = false
+	) {
+		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
+		if ( !$isAnon && $userpref ) {
+			$user->setOption( MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES, true );
+		}
+		// set globals
+		$this->setMwGlobals( [
+			'wgMFEnableMobilePreferences' => $enabled,
+		] );
+		$this->assertEquals( $expected,
+			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user ) );
+	}
+
 	public static function provideOnPageRenderingHash() {
 		return [
 			[ true, true ],
