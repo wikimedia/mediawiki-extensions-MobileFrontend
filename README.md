@@ -142,13 +142,6 @@ Options to control several functions of the mobile editor.  Possible values:
   ]
 ```
 
-#### $wgMFEnableMobilePreferences
-
-Enable mobile preferences in Special:Preferences (currently only accessible in desktop). Currently this allows users to disable many of mobile's special page optimisations.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFExperiments
 
 A list of experiments active on the skin.

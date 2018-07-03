@@ -1188,9 +1188,6 @@
 		],
 		"TitleSquidURLs": [
 			"MobileFrontendHooks::onTitleSquidURLs"
-		],
-		"UserGetDefaultOptions": [
-			"MobileFrontendHooks::onUserGetDefaultOptions"
 		]
 	},
 	"config": {
@@ -1198,7 +1195,6 @@
 			"base": true,
 			"beta": true
 		},
-		"MFEnableMobilePreferences": false,
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",

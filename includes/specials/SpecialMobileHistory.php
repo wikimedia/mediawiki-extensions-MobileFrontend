@@ -86,10 +86,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * Checks, if the given title supports the use of SpecialMobileHistory.
 	 *
 	 * @param Title $title The title to check
-	 * @param User $user the user to check
 	 * @return bool True, if SpecialMobileHistory can be used, false otherwise
 	 */
-	public static function shouldUseSpecialHistory( Title $title, User $user ) {
+	public static function shouldUseSpecialHistory( Title $title ) {
 		$contentHandler = ContentHandler::getForTitle( $title );
 		$actionOverrides = $contentHandler->getActionOverrides();
 
@@ -98,7 +97,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// and return false
 			return false;
 		}
-		return MobileFrontendHooks::shouldMobileFormatSpecialPages( $user );
+		return true;
 	}
 
 	/**
@@ -113,13 +112,12 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			'mobile.pagesummary.styles',
 		] );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
-
 		if ( $par ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
 				// make sure, the content of the page supports the default history page
-				if ( !self::shouldUseSpecialHistory( $this->title, $this->getUser() ) ) {
+				if ( !self::shouldUseSpecialHistory( $this->title ) ) {
 					// and if not, redirect to the default history action
 					$out->redirect( $this->title->getLocalUrl( [ 'action' => 'history' ] ) );
 					return;
