@@ -12,6 +12,7 @@
 	"mobile-frontend-desc": "موبائل وکھالہ",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|حصہ|حصے}}",
 	"mobile-frontend-featured-article": "اج دی چونویں لکھت",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} نوں تواڈے ورگے لوکاں ولوں ہی بنایا گیا ہے۔</strong><br />لکھن لئی لاگ ان ہوو۔",
 	"mobile-frontend-last-modified-date": "آخری واری $1 نوں، $2 وجے پلٹیا گیا",
 	"mobile-frontend-news-items": "دساں چ",
 	"mobile-frontend-opt-in-explain": "بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔",
