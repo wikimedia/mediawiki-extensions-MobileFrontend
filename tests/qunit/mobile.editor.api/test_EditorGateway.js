@@ -259,7 +259,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().reject() );
 
@@ -272,9 +272,8 @@
 				details: 'http'
 			} ), 'call fail' );
 			assert.ok( !doneSpy.called, 'don\'t call done' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( '#save, API failure', function ( assert ) {
@@ -285,7 +284,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve(
 			{
@@ -303,11 +302,9 @@
 					details: 'error code'
 				} ), 'call fail' );
 				assert.ok( !doneSpy.called, 'don\'t call done' );
-				done.resolve();
+				done();
 			} );
 		} );
-
-		return done;
 	} );
 
 	QUnit.test( '#save, CAPTCHA response with image URL', function ( assert ) {
@@ -324,7 +321,7 @@
 			},
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
@@ -341,9 +338,8 @@
 				details: captcha
 			} ), 'call fail' );
 			assert.ok( !doneSpy.called, 'don\'t call done' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( '#save, AbuseFilter warning', function ( assert ) {
@@ -354,7 +350,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
@@ -376,9 +372,8 @@
 				}
 			} ), 'call fail with type and message' );
 			assert.ok( !doneSpy.called, 'don\'t call done' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( '#save, AbuseFilter disallow', function ( assert ) {
@@ -389,7 +384,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
@@ -412,11 +407,9 @@
 					}
 				} ), 'call fail with type and message' );
 				assert.ok( !doneSpy.called, 'don\'t call done' );
-				done.resolve();
+				done();
 			} );
 		} );
-
-		return done;
 	} );
 
 	QUnit.test( '#save, AbuseFilter other', function ( assert ) {
@@ -427,7 +420,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
@@ -449,9 +442,8 @@
 				}
 			} ), 'call fail with type and message' );
 			assert.ok( !doneSpy.called, 'don\'t call done' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( '#save, extension errors', function ( assert ) {
@@ -462,7 +454,7 @@
 			} ),
 			doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy(),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
@@ -480,11 +472,9 @@
 					details: 'testerror'
 				} ), 'call fail with code' );
 				assert.ok( !doneSpy.called, 'don\'t call done' );
-				done.resolve();
+				done();
 			} );
 		} );
-
-		return done;
 	} );
 
 	QUnit.test( '#save, unknown errors', function ( assert ) {
@@ -494,7 +484,7 @@
 				sectionId: 1
 			} ),
 			doneSpy = this.sandbox.spy(),
-			done = $.Deferred(),
+			done = assert.async(),
 			failSpy = this.sandbox.spy();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().resolve( {} ) );
@@ -508,9 +498,8 @@
 				details: 'unknown'
 			} ), 'call fail with unknown' );
 			assert.ok( !doneSpy.called, 'don\'t call done' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( '#save, without changes', function ( assert ) {
@@ -641,7 +630,7 @@
 				api: new mw.Api(),
 				title: 'MediaWiki:Test.css'
 			} ),
-			done = $.Deferred();
+			done = assert.async();
 
 		this.sandbox.stub( mw.Api.prototype, 'post' )
 			.onFirstCall().returns( $.Deferred().reject( 'badtoken' ) )
@@ -660,9 +649,8 @@
 		gateway.save().always( function () {
 			assert.strictEqual( mw.Api.prototype.getToken.callCount, 2, 'check the spy was called twice' );
 			assert.strictEqual( mw.Api.prototype.post.callCount, 2, 'check the spy was called twice' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

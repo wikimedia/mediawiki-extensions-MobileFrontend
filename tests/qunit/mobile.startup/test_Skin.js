@@ -42,7 +42,7 @@
 
 	QUnit.test( '#loadImagesList (one image fails)', function ( assert ) {
 		var stub = this.sandbox.stub( this.skin, 'loadImage' ),
-			d = $.Deferred();
+			done = assert.async();
 
 		stub.onCall( 0 ).returns( $.Deferred().resolve() );
 		stub.onCall( 1 ).returns( $.Deferred().reject() );
@@ -53,9 +53,8 @@
 			assert.strictEqual( stub.callCount, 2,
 				'Stub was called twice and overall result was failure.' );
 		} ).always( function () {
-			d.resolve();
+			done();
 		} );
-		return d;
 	} );
 
 	QUnit.test( '#loadImagesList (empty list)', function ( assert ) {

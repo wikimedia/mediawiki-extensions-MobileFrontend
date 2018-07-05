@@ -26,12 +26,11 @@
 	} );
 
 	QUnit.test( 'checking bad reference', function ( assert ) {
-		var done = $.Deferred();
+		var done = assert.async();
 		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
-			done.resolve();
+			done();
 		} );
-		return done;
 	} );
 
 	QUnit.test( 'checking encoded reference', function ( assert ) {

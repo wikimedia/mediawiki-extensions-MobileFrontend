@@ -116,7 +116,7 @@
 	QUnit.test( '#render with a server error', function ( assert ) {
 		var $el = $( '<div>' ),
 			spy = this.spy,
-			done = $.Deferred(),
+			done = assert.async(),
 			nearby,
 			opts = {
 				api: api,
@@ -134,7 +134,7 @@
 			assert.strictEqual( $el.find( '.errorbox' ).length, 1, 'Check error got rendered' );
 			assert.strictEqual( $el.find( '.errorbox h2' ).text(),
 				nearby.errorMessages.http.heading, 'Check it is the correct heading' );
-			done.resolve();
+			done();
 		} );
 	} );
 
