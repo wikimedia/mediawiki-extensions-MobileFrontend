@@ -117,7 +117,7 @@
 				cache[title] = this.api.get( {
 					action: 'mobileview',
 					page: title,
-					variant: mw.config.get( 'wgPreferredVariant' ),
+					variant: mw.config.get( 'wgPageContentLanguage' ),
 					redirect: 'yes',
 					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|protection|displaytitle|revision',
 					noheadings: 'yes',

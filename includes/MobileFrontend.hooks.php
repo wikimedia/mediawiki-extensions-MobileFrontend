@@ -1214,7 +1214,6 @@ class MobileFrontendHooks {
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
 		}
 		$title = $out->getTitle();
-		$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 
 		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		$vars['wgMFExpandAllSectionsUserOption'] =
