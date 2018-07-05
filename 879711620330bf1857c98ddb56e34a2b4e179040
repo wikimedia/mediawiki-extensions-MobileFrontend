@@ -70,6 +70,30 @@
       "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2844f9ce_f6dad5c4",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-05T23:08:43Z",
+      "side": 1,
+      "message": "That makes sense, but what about line 72. I can\u0027t throw an exception here can I?",
+      "parentUuid": "407530dc_8bf97519",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 10
+      },
+      "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
