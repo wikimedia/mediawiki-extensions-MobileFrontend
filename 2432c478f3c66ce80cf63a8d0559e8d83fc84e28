@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b9e2b4b_53e3859a",
+        "filename": "resources/mobile.startup/PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-05T20:14:48Z",
+      "side": 1,
+      "message": "why wgPageContentLanguage and not wgUserVariant?",
+      "range": {
+        "startLine": 120,
+        "startChar": 30,
+        "endLine": 120,
+        "endChar": 51
+      },
+      "revId": "2432c478f3c66ce80cf63a8d0559e8d83fc84e28",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
