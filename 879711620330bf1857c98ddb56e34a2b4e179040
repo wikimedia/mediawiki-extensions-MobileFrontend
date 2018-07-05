@@ -22,6 +22,30 @@
       "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1d631ef_56d538db",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-05T21:03:55Z",
+      "side": 1,
+      "message": "Partly yes and yes it\u0027s L39. Any ideas of how we might clean that up? I couldn\u0027t work out a neat way to do that.",
+      "parentUuid": "03e09ed5_e28df64e",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 10
+      },
+      "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
