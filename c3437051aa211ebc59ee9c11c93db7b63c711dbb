@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a7cd30a_68d59d44",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-06T22:24:47Z",
+      "side": 1,
+      "message": "for node comparison please use\n\n  $parent-\u003eisSameNode( $node-\u003eparentNode)",
+      "range": {
+        "startLine": 84,
+        "startChar": 30,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb6de584_fb2bb21c",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-06T22:24:47Z",
+      "side": 1,
+      "message": "the dom structure can be really complex and deep, instead of recursion it would be smarter to do it using while:\n\n  $search \u003d $node;\n  while($search-\u003eparentNode \u0026\u0026 $search-\u003eparentNode !\u003d\u003d $parent) {\n    $search \u003d $search-\u003eparentNode;\n  }\n  return $search;\n\nPlease, verify that code works properly",
+      "range": {
+        "startLine": 84,
+        "startChar": 2,
+        "endLine": 85,
+        "endChar": 68
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "496919fc_91502185",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-06T22:24:47Z",
+      "side": 1,
+      "message": "alse here I think we should use the http://php.net/manual/pl/domnode.issamenode.php method (previously it was wrong)",
+      "range": {
+        "startLine": 119,
+        "startChar": 33,
+        "endLine": 119,
+        "endChar": 74
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
