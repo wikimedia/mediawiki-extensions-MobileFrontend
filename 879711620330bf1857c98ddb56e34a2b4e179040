@@ -94,6 +94,30 @@
       "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e39f733d_faae0ef7",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-07T07:18:06Z",
+      "side": 1,
+      "message": "You can, actually.\n\nBut it\u0027d be easier/more consistent to use deferreds. Deferred should always return new deferreds (or throw). Returning something other than a deferred is the same as returning `Deferred().resolve( otherThing );`.\n\nDor line 72, the idiomatic way to handle that with promises would be to return Promise.reject( .. ), or, in Deferred lingo, return Deferred().reject( .. ) - on line 72.",
+      "parentUuid": "2844f9ce_f6dad5c4",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 10
+      },
+      "revId": "879711620330bf1857c98ddb56e34a2b4e179040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
