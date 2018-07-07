@@ -111,7 +111,7 @@
 	"mobile-frontend-joined-hours": "{{GENDER:$1|صارف}} از {{PLURAL:$2|$2 گھنٹہ|$2 گھنٹے}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|صارف}} از {{PLURAL:$2|$2 دن}}",
 	"mobile-frontend-joined-months": "{{GENDER:$1|صارف}} از {{PLURAL:$2|$2 مہینہ|$2 مہینے}}",
-	"mobile-frontend-joined-years": "{{GENDER:$1|صارف}} از {{PLURAL:$2|$2 سال|$2 برس}}",
+	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 برسوں}} سے {{GENDER:$1|منسلک}}",
 	"mobile-frontend-language-heading": "<strong>زبانیں</strong>",
 	"mobile-frontend-languages-404-desc": "درست عنوان کا اندراج ضروری ہے۔",
 	"mobile-frontend-languages-404-title": "خطا در زبان",

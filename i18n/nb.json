@@ -156,6 +156,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Prøv en annen nettleser eller skru på JavaScript hvis du har skrudd det av.",
 	"mobile-frontend-nearby-title": "I nærheten",
 	"mobile-frontend-nearby-info-heading": "Steder i nærheten",
+	"mobile-frontend-nearby-info-description": "Du kan lese interessante Wikipedia-artikler om steder i nærheten.",
 	"mobile-frontend-nearby-info-show-button": "Vis artikler i nærheten",
 	"mobile-frontend-news-items": "I nyhetene",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta er en måte du kan prøve disse eksperimentelle funksjonene og gi oss verdifull tilbakemelding",
