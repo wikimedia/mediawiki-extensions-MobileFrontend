@@ -140,7 +140,7 @@
 	"mobile-frontend-save-error": "Errore a sarvà 'e mpustziune. Assicurateve d'avé 'e cookie abbiate.",
 	"mobile-frontend-save-settings": "Sarva",
 	"mobile-frontend-search-content": "Ascià dint' 'e paggene",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pe' vedè si sta frase cumpare pe' tutt' 'e parte.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pe' vedè si sta frase cumpare pe' tutt' 'e parte.",
 	"mobile-frontend-search-no-results": "Nisciuna paggena cu stu titolo.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-fullpage": "Liegge comme fosse na paggena wiki",

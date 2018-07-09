@@ -187,7 +187,7 @@
 	"mobile-frontend-save-error": "설정을 저장하는 중 오류가 있습니다. 쿠키를 활성화했는지 확인하세요.",
 	"mobile-frontend-save-settings": "저장",
 	"mobile-frontend-search-content": "문서 안에서 검색",
-	"mobile-frontend-search-content-no-results": "이 어구가 어디에 나타나는지 보려면 '''{{int:mobile-frontend-search-content}}'''하세요.",
+	"mobile-frontend-search-content-no-results": "이 어구가 어디에 나타나는지 보려면 <b>{{int:mobile-frontend-search-content}}</b>하세요.",
 	"mobile-frontend-search-no-results": "이 제목으로 된 문서가 없습니다.",
 	"mobile-frontend-settings-tagline": "읽기 환경 설정",
 	"mobile-frontend-settings-beta": "{{SITENAME}} 베타",

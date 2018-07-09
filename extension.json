@@ -529,16 +529,14 @@
 				"header.hogan": "resources/mobile.search/header.hogan",
 				"content.hogan": "resources/mobile.search/content.hogan"
 			},
-			"messages": {
-				"0": "mobile-frontend-clear-search",
-				"1": "mobile-frontend-search-content",
-				"2": "mobile-frontend-search-no-results",
-				"mobile-frontend-search-content-no-results": [
-					"parse"
-				],
-				"3": "mobile-frontend-search-feedback-prompt",
-				"4": "mobile-frontend-search-feedback-link-text"
-			}
+			"messages": [
+				"mobile-frontend-clear-search",
+				"mobile-frontend-search-content",
+				"mobile-frontend-search-no-results",
+				"mobile-frontend-search-content-no-results",
+				"mobile-frontend-search-feedback-prompt",
+				"mobile-frontend-search-feedback-link-text"
+			]
 		},
 		"mobile.search.util": {
 			"targets": [

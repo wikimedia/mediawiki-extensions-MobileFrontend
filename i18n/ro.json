@@ -150,7 +150,7 @@
 	"mobile-frontend-save-error": "Eroare la salvarea setărilor. Asigurați-vă că modulele cookie sunt activate.",
 	"mobile-frontend-save-settings": "Salvare",
 	"mobile-frontend-search-content": "Căutare în corpul paginilor",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pentru a vedea dacă această expresie apare undeva.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pentru a vedea dacă această expresie apare undeva.",
 	"mobile-frontend-search-no-results": "Nicio pagină cu acest titlu.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-talk-fullpage": "Lecturează ca pagină wiki",

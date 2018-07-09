@@ -164,7 +164,7 @@
 	"mobile-frontend-save-error": "Error al guardar la configuración. Asegúrese de que tien activaes les cookies.",
 	"mobile-frontend-save-settings": "Guardar",
 	"mobile-frontend-search-content": "Buscar nes páxines",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pa ver si esta frase apaez en cualquier llugar.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pa ver si esta frase apaez en cualquier llugar.",
 	"mobile-frontend-search-no-results": "Nun hai nenguna páxina con esti títulu.",
 	"mobile-frontend-settings-tagline": "Preferencies de llectura",
 	"mobile-frontend-settings-beta": "βeta de {{SITENAME}}",

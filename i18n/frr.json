@@ -77,7 +77,7 @@
 	"mobile-frontend-save-error": "Din iinstelangen küd ei seekert wurd. Diarför skel cookies tuläät wees.",
 	"mobile-frontend-save-settings": "Seekre",
 	"mobile-frontend-search-content": "Schük uun sidjen",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' , am tu lukin, of det schük-wurd irgenthuar apdaaget.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> , am tu lukin, of det schük-wurd irgenthuar apdaaget.",
 	"mobile-frontend-search-no-results": "Nian sidj mä son tiitel.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wat heest ?",

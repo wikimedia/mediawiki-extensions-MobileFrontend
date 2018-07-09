@@ -76,7 +76,7 @@
 	"mobile-frontend-save-error": "Při składowanju nastajenjow je zmylk wustupił. Prošu přeswědč so, zo placki su zmóžnjene.",
 	"mobile-frontend-save-settings": "Składować",
 	"mobile-frontend-search-content": "Znutřka stronow pytać",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', zo by widźał, hač so tutón wuraz něhdźe jewi.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, zo by widźał, hač so tutón wuraz něhdźe jewi.",
 	"mobile-frontend-search-no-results": "Strona z tutym titulom njeje.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Što maš na wutrobje?",

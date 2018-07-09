@@ -163,7 +163,7 @@
 	"mobile-frontend-save-error": "Greška prilikom čuvanja postavki. Provjerite jeste li uključili kolačiće.",
 	"mobile-frontend-save-settings": "Sačuvaj",
 	"mobile-frontend-search-content": "Traži u stranicama",
-	"mobile-frontend-search-content-no-results": "Koristi mogućnost '''{{int:mobile-frontend-search-content}}''' za provjeru da li se ovaj izraz pojavljuje drugdje.",
+	"mobile-frontend-search-content-no-results": "Koristi mogućnost <b>{{int:mobile-frontend-search-content}}</b> za provjeru da li se ovaj izraz pojavljuje drugdje.",
 	"mobile-frontend-search-no-results": "Nema stranice s takvim naslovom.",
 	"mobile-frontend-settings-tagline": "Postavke čitanja",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",

@@ -146,7 +146,7 @@
 	"mobile-frontend-save-error": "സജ്ജീകരണങ്ങൾ സേവ് ചെയ്യുന്നതിനിടെ പിഴവുണ്ടായി. താങ്കൾ കുക്കികൾ സജ്ജമാക്കിയിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക.",
 	"mobile-frontend-save-settings": "സേവ് ചെയ്യുക",
 	"mobile-frontend-search-content": "താളുകൾക്കുള്ളിൽ തിരയുക",
-	"mobile-frontend-search-content-no-results": "ഈ പദം എവിടെയെങ്കിലും ഉണ്ടോയെന്നറിയാൻ '''{{int:mobile-frontend-search-content}}''' ഉപയോഗിക്കുക",
+	"mobile-frontend-search-content-no-results": "ഈ പദം എവിടെയെങ്കിലും ഉണ്ടോയെന്നറിയാൻ <b>{{int:mobile-frontend-search-content}}</b> ഉപയോഗിക്കുക",
 	"mobile-frontend-search-no-results": "ഈ തലക്കെട്ടിൽ താളൊന്നുമില്ല.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} ബീറ്റ",
 	"mobile-frontend-talk-fullpage": "വിക്കി താളായി വായിക്കുക",

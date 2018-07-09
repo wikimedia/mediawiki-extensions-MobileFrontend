@@ -166,7 +166,7 @@
 	"mobile-frontend-save-error": "Kaydetme ayarlarında hata. Lütfen çerezlerin etkin olduğundan emin olun.",
 	"mobile-frontend-save-settings": "Kaydet",
 	"mobile-frontend-search-content": "Sayfa içinde ara",
-	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' araması ile eşleşen bulunamadı.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> araması ile eşleşen bulunamadı.",
 	"mobile-frontend-search-no-results": "Bu başlığa sahip bir sayfa yok.",
 	"mobile-frontend-settings-beta": "Deneme",
 	"mobile-frontend-talk-fullpage": "Viki sayfası olarak oku",
