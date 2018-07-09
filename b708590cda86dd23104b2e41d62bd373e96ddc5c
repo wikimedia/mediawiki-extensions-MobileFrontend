@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d5eb9e51_aaf9e66e",
+        "filename": "resources/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T23:29:01Z",
+      "side": 1,
+      "message": "Warning: /workspace/src/extensions/MobileFrontend/resources/mobile.startup/toast.js:14: Unknown type HTMLElement|HTMLElement[]|jQuery|mw.Message|string\n\nWill need update to jsduck.json",
+      "revId": "b708590cda86dd23104b2e41d62bd373e96ddc5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
