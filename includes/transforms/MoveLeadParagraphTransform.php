@@ -71,6 +71,24 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
+	 * Iterate up the DOM tree until find a parent node which has the parent $parent
+	 * @param DomElement $node
+	 * @param DomElement $parent
+	 * @return DomElement representing a node which is either $node or an ancestor of $node which
+	 *  has a parent $parent. Note, it is assumed that $node will always be a descendent of $parent so
+	 *  if this is not true, you probably shouldn't be using this function and I, as the writer of this
+	 *  code cannot be held responsible for portals that open to another dimension or your laptop
+	 *  setting on fire.
+	 */
+	private static function findParentWithParent( $node, $parent ) {
+		$search = $node;
+		while ( $search->parentNode && !$search->parentNode->isSameNode( $parent ) ) {
+			$search = $search->parentNode;
+		}
+		return $search;
+	}
+
+	/**
 	 * Move the first paragraph in the lead section above the infobox
 	 *
 	 * In order for a paragraph to be moved the following conditions must be met:
@@ -101,9 +119,11 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		if ( $infoboxes->length > 0 ) {
 			$infobox = self::getInfoboxContainer( $infoboxes->item( 0 ) );
 			$firstP = $paragraphs->item( 0 );
+			$wrappedInfobox = $infobox && !$infobox->parentNode->isSameNode( $leadSectionBody );
 
-			if ( $firstP && $infobox && $infobox->parentNode === $leadSectionBody &&
-				$this->hasNoNonEmptyPrecedingParagraphs( $xPath, $infobox ) ) {
+			if ( $firstP && $infobox && !$wrappedInfobox &&
+				$this->hasNoNonEmptyPrecedingParagraphs( $xPath, $infobox )
+			) {
 				$listElementAfterParagraph = null;
 				$where = $infobox;
 
@@ -119,12 +139,16 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				if ( $listElementAfterParagraph !== null ) {
 					$leadSectionBody->insertBefore( $listElementAfterParagraph, $where );
 				}
-			} elseif ( $infobox && $infobox->parentNode !== $leadSectionBody ) {
+			} elseif ( $infobox && $wrappedInfobox ) {
+				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
+					self::findParentWithParent( $infobox, $leadSectionBody )
+				);
+				$loggingEnabled = MobileContext::singleton()->getMFConfig()->get( 'MFLogWrappedInfoboxes' );
 				/**
 				 * @see https://phabricator.wikimedia.org/T149884
 				 * @todo remove after research is done
 				 */
-				if ( MobileContext::singleton()->getMFConfig()->get( 'MFLogWrappedInfoboxes' ) ) {
+				if ( $isInWrongPlace && $loggingEnabled ) {
 					$this->logInfoboxesWrappedInContainers();
 				}
 			}

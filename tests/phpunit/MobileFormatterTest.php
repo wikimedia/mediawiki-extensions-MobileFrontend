@@ -929,6 +929,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		return [
 			// no wrapping
 			[ $box ],
+			// Although the box is wrapped, it comes over the first paragraph so isn't a problem (T196767)
+			[ "<p>First para</p><div>$box</div>" ],
+			// Although the box is wrapped, it comes over the first paragraph so isn't a problem (T196767)
+			[ "<p>First para</p><div><div><div>$box</div></div></div>" ],
 			// if wrapped inside mw-stack no logging occurs
 			[ "<div class=\"mw-stack\">$box</div>" ],
 		];
