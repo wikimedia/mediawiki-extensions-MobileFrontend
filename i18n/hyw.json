@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"ArmenBakkalian"
+			"ArmenBakkalian",
+			"Azniv Stepanian"
 		]
 	},
-	"tag-mobile_edit": "Բջջային հեռախօսով Խմբագրուած",
-	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակէն"
+	"tag-mobile_edit": "Առձեռն խմբագրում",
+	"tag-mobile_web_edit": "Խմբագրում կայքի առձեռն տարբերակէն"
 }
