@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27c39a10_8ff34528",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T18:30:37Z",
+      "side": 1,
+      "message": "Have you run this by Alex? Seems fine given description is white and the surrounding image background is black, but let\u0027s check.",
+      "range": {
+        "startLine": 10,
+        "startChar": 32,
+        "endLine": 12,
+        "endChar": 33
+      },
+      "revId": "c12ec20674ec3b20cefc214e799f414f0c3d078b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0723b20_3cde807c",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T18:30:37Z",
+      "side": 1,
+      "message": "For any colors (other than #fff and #000) we have a set of standardised colors and tend to use LESS variables when available (e.g. @colorGray5 etc..) We\u0027ll want to check with Alex which to use here.",
+      "revId": "c12ec20674ec3b20cefc214e799f414f0c3d078b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
