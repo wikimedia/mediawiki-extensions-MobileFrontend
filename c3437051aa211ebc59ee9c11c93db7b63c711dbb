@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "48336032_0ad3ed49",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T17:49:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a7cd30a_68d59d44",
+      "range": {
+        "startLine": 84,
+        "startChar": 30,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb6de584_fb2bb21c",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "f6320fe4_747406cd",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T17:49:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb6de584_fb2bb21c",
+      "range": {
+        "startLine": 84,
+        "startChar": 2,
+        "endLine": 85,
+        "endChar": 68
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "496919fc_91502185",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2018-07-06T22:24:47Z",
       "side": 1,
       "message": "alse here I think we should use the http://php.net/manual/pl/domnode.issamenode.php method (previously it was wrong)",
+      "range": {
+        "startLine": 119,
+        "startChar": 33,
+        "endLine": 119,
+        "endChar": 74
+      },
+      "revId": "c3437051aa211ebc59ee9c11c93db7b63c711dbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1199ef12_e8ed16f7",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-09T17:49:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "496919fc_91502185",
       "range": {
         "startLine": 119,
         "startChar": 33,
