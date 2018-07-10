@@ -414,7 +414,10 @@
 			]
 		},
 		"mobile.editor.common": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"dependencies": [
 				"oojs-ui",
 				"mobile.editor.api",
@@ -441,40 +444,38 @@
 				"EditorOverlayBase.hogan": "resources/mobile.editor.common/EditorOverlayBase.hogan",
 				"EditorOverlayAnonWarning.hogan": "resources/mobile.editor.common/EditorOverlayAnonWarning.hogan"
 			},
-			"messages": {
-				"0": "mobile-frontend-editor-continue",
-				"1": "mobile-frontend-editor-cancel",
-				"2": "mobile-frontend-editor-keep-editing",
-				"3": "mobile-frontend-editor-placeholder",
-				"4": "mobile-frontend-editor-placeholder-new-page",
-				"5": "mobile-frontend-editor-summary",
-				"6": "mobile-frontend-editor-summary-request",
-				"7": "mobile-frontend-editor-summary-placeholder",
-				"8": "mobile-frontend-editor-cancel-confirm",
-				"9": "mobile-frontend-editor-new-page-confirm",
-				"10": "mobile-frontend-editor-wait",
-				"11": "mobile-frontend-editor-success",
-				"mobile-frontend-editor-success-landmark-1": [
-					"parse"
-				],
-				"12": "mobile-frontend-editor-success-new-page",
-				"14": "mobile-frontend-editor-error",
-				"15": "mobile-frontend-editor-error-conflict",
-				"16": "mobile-frontend-editor-error-loading",
-				"17": "mobile-frontend-editor-error-preview",
-				"18": "mobile-frontend-account-create-captcha-placeholder",
-				"19": "mobile-frontend-editor-captcha-try-again",
-				"20": "mobile-frontend-editor-editing-page",
-				"21": "mobile-frontend-editor-previewing-page",
-				"22": "mobile-frontend-editor-switch-confirm",
-				"23": "mobile-frontend-editor-switch-editor",
-				"24": "mobile-frontend-editor-switch-visual-editor",
-				"25": "mobile-frontend-editor-anonwarning",
-				"26": "mobile-frontend-editor-anon-cta-message",
-				"27": "mobile-frontend-editor-abusefilter-warning",
-				"28": "mobile-frontend-editor-abusefilter-disallow",
-				"29": "mobile-frontend-editor-abusefilter-read-more"
-			}
+			"messages": [
+				"mobile-frontend-editor-continue",
+				"mobile-frontend-editor-cancel",
+				"mobile-frontend-editor-keep-editing",
+				"mobile-frontend-editor-placeholder",
+				"mobile-frontend-editor-placeholder-new-page",
+				"mobile-frontend-editor-summary",
+				"mobile-frontend-editor-summary-request",
+				"mobile-frontend-editor-summary-placeholder",
+				"mobile-frontend-editor-cancel-confirm",
+				"mobile-frontend-editor-new-page-confirm",
+				"mobile-frontend-editor-wait",
+				"mobile-frontend-editor-success",
+				"mobile-frontend-editor-success-landmark-1",
+				"mobile-frontend-editor-success-new-page",
+				"mobile-frontend-editor-error",
+				"mobile-frontend-editor-error-conflict",
+				"mobile-frontend-editor-error-loading",
+				"mobile-frontend-editor-error-preview",
+				"mobile-frontend-account-create-captcha-placeholder",
+				"mobile-frontend-editor-captcha-try-again",
+				"mobile-frontend-editor-editing-page",
+				"mobile-frontend-editor-previewing-page",
+				"mobile-frontend-editor-switch-confirm",
+				"mobile-frontend-editor-switch-editor",
+				"mobile-frontend-editor-switch-visual-editor",
+				"mobile-frontend-editor-anonwarning",
+				"mobile-frontend-editor-anon-cta-message",
+				"mobile-frontend-editor-abusefilter-warning",
+				"mobile-frontend-editor-abusefilter-disallow",
+				"mobile-frontend-editor-abusefilter-read-more"
+			]
 		},
 		"mobile.editor.overlay": {
 			"targets": [
@@ -511,7 +512,10 @@
 			}
 		},
 		"mobile.search": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"dependencies": [
 				"mobile.pagelist.scripts",
 				"mobile.startup",
@@ -768,7 +772,10 @@
 			]
 		},
 		"mobile.languages.structured": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MFResourceLoaderParsedMessageModule",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"dependencies": [
 				"mediawiki.storage",
 				"mobile.startup"
