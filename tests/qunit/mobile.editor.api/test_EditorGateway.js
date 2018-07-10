@@ -38,9 +38,6 @@
 			titles: 'MediaWiki:Test.css',
 			meta: 'userinfo',
 			uiprop: 'blockinfo',
-			list: 'blocks',
-			bkusers: mw.user.getName(),
-			bkprop: 'flags',
 			formatversion: 2
 		} ), 'rvsection not passed to api request' );
 	} );

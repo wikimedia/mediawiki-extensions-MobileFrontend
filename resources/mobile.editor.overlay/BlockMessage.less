@@ -1,0 +1,52 @@
+@import 'mediawiki.ui/variables';
+
+.block-message {
+	h5 {
+		font-weight: bold;
+	}
+	h6 {
+		margin-bottom: 0.187em;
+	}
+}
+
+.block-message-icon {
+	float: left;
+	width: 20%;
+	margin-top: 0.3em;
+}
+
+.block-message-info {
+	float: left;
+	width: 80%;
+	text-align: left;
+}
+
+.block-message-item {
+	margin-bottom: 1em;
+}
+
+.block-message-data {
+	margin-bottom: 1.875em;
+}
+
+.block-message-buttons button.cancel {
+	margin: 0;
+}
+
+.block-message-creator {
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.mw-ui-icon {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 -@iconGutterWidth;
+	}
+}
+
+.block-message-title {
+	color: @colorDestructive;
+}

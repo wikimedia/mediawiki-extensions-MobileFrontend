@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
-		EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
+		EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
+		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' );
 
 	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		setup: function () {
@@ -8,15 +9,26 @@
 
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
-			this.toastStub = this.sandbox.stub( mw, 'notify' );
+			this.messageStub = this.sandbox.stub( BlockMessage.prototype, 'initialize' );
+			this.sandbox.stub( BlockMessage.prototype, 'toggle' );
 			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
+			// avoid waiting to load 'moment', using `expiry: 'infinity'` below ensures we don't need it
+			this.sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
+				callback();
+			} } );
 			// the first call returns a getContent deferred for a blocked user.
 			this.dBlockedContent = $.Deferred().resolve( {
 				text: 'section 0',
 				user: {
-					blockid: 1,
-					blockedby: 'Test',
-					blockreason: 'Testreason'
+					blockid: 1
+				},
+				block: {
+					by: 'Test',
+					expiry: 'infinity',
+					reason: 'Testreason'
+				},
+				blockedByUser: {
+					gender: 'female'
 				}
 			} );
 			getContentStub.onCall( 0 ).returns( this.dBlockedContent );
@@ -29,7 +41,7 @@
 
 	// has to be the first test here! See comment in setup stub.
 	QUnit.test( '#initialize, blocked user', function ( assert ) {
-		var toastStub = this.toastStub;
+		var messageStub = this.messageStub;
 		// eslint-disable-next-line no-new
 		new EditorOverlay( {
 			title: 'test.css'
@@ -37,10 +49,17 @@
 
 		return this.dBlockedContent.then( function () {
 			assert.ok(
-				toastStub.calledWith(
-					'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.'
-				),
-				'There is a toast notice, that i am blocked from editing'
+				messageStub.calledWith( {
+					creator: {
+						name: 'Test',
+						url: mw.util.getUrl( 'User:Test' ),
+						gender: 'female'
+					},
+					expiry: null,
+					duration: null,
+					reason: 'Testreason'
+				} ),
+				'There is a drawer notice, that i am blocked from editing'
 			);
 		} );
 	} );
@@ -85,9 +104,15 @@
 	QUnit.test( '#without-preview', function ( assert ) {
 		var editorOverlay;
 
-		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFEditorOptions' ).returns( {
-			skipPreview: true,
-			anonymousEditing: true
+		this.sandbox.stub( mw.config, 'get', function ( key ) {
+			if ( key === 'wgMFEditorOptions' ) {
+				return {
+					skipPreview: true,
+					anonymousEditing: true
+				};
+			} else {
+				return mw.config.values[ key ];
+			}
 		} );
 
 		editorOverlay = new EditorOverlay( {
