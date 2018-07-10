@@ -1067,10 +1067,6 @@
 		"MobileWebMainMenuClickTracking": 11568715,
 		"MobileWebSearch": 12054448
 	},
-	"@note1": "ResourceModuleSkinStyles must only contain customizations for 'minerva'.",
-	"@note2": "For other skins, just use 'skinStyles' in module definition.",
-	"@note3": "Otherwise their own customizations are overridden. (T167216)",
-	"ResourceModuleSkinStyles": {},
 	"Hooks": {
 		"APIGetAllowedParams": [
 			"ApiParseExtender::onAPIGetAllowedParams"
