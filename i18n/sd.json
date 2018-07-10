@@ -4,7 +4,8 @@
 			"Aneeskaka",
 			"Sindhu",
 			"Mehtab ahmed",
-			"Aursani"
+			"Aursani",
+			"Tweety"
 		]
 	},
 	"mobile-frontend-categories-add": "زمري ۾ شامل ڪريو",
@@ -26,6 +27,7 @@
 	"mobile-frontend-editor-summary-placeholder": "مثال:ھجي درست ڪئي، مواد وڌو",
 	"mobile-frontend-editor-summary-request": "توھان صفحي کي ڪيئن بھتر بڻايو؟",
 	"mobile-frontend-featured-article": "اڄ جو نمايان مواد",
+	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 سالن}} کان {{GENDER:$1|منسلڪ}}",
 	"mobile-frontend-last-modified-date": "آخري ڀيرو $1 تي، $2 بجي سنواريو ويو",
 	"mobile-frontend-last-modified-with-user-just-now": "{{PLURAL:$4|[$5 $2]|0=ڪنھن اڻڄاتل واپرائيندڙ}} پاران ھاڻي ھاڻي [$3 آخري ڀيرو {{GENDER:$1|سنواريل}}]",
 	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=ھڪ اڻڄاتل واپرائيندڙ}} پاران [$4 آخري ڀيرو {{PLURAL:$3|$3 منٽ|$3 منٽَ}} اڳ {{GENDER:$1|سنواريل}}]",

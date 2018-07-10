@@ -177,7 +177,7 @@
 	"mobile-frontend-save-error": "Errore durante il salvataggio delle impostazioni. Assicurati di avere i cookie abilitati.",
 	"mobile-frontend-save-settings": "Salva",
 	"mobile-frontend-search-content": "Cerca all'interno delle pagine",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> per vedere se questa frase appare dovunque.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> per vedere se questa frase appare da qualche parte.",
 	"mobile-frontend-search-no-results": "Nessuna pagina con questo titolo.",
 	"mobile-frontend-settings-tagline": "Preferenze di lettura",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
