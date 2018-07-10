@@ -359,10 +359,12 @@
 		 * @private
 		 */
 		_loadContent: function () {
-			var self = this;
+			var self = this,
+				$el = this.$el;
 
 			this.$content.hide();
 			this.showSpinner();
+			$el.addClass( 'overlay-loading' );
 
 			this.gateway.getContent()
 				.done( function ( result ) {
@@ -396,9 +398,11 @@
 						self.hide();
 					}
 					self.clearSpinner();
+					$el.removeClass( 'overlay-loading' );
 				} )
 				.fail( function () {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
+					$el.removeClass( 'overlay-loading' );
 				} );
 		},
 
