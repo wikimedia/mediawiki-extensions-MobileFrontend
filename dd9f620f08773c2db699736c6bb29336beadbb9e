@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4a74345c_122842cd",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-10T19:52:50Z",
+      "side": 1,
+      "message": "+2, avoid registering modules, unless you need a new separately deliverable bundle that is registered on all page views.",
+      "parentUuid": "b3959c91_dd075b71",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "14bf8a2f_e1a413a6",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 1
