@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3959c91_dd075b71",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-10T19:50:15Z",
+      "side": 1,
+      "message": "Rather than have a new resource, it seems fine to put the code for this inside mobile.editor.overlay",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14bf8a2f_e1a413a6",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-10T19:50:15Z",
+      "side": 1,
+      "message": "let\u0027s switch this out to a \"then\" after moving it.\nThis will throw a warning inside MobileFrontend. (https://phabricator.wikimedia.org/T188937)",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f0d37df_d3e83550",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-10T19:50:15Z",
+      "side": 1,
+      "message": "as noted in your review.",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea70ef9_e1506d09",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-10T19:50:15Z",
+      "side": 1,
+      "message": "as noted in your review.",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
