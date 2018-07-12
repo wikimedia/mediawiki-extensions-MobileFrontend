@@ -307,11 +307,13 @@
 		},
 		/**
 		 * @inheritdoc
+		 *
+		 * @return {boolean|jQuery.Promise} Boolean, or promise resolving with a boolean
 		 */
 		hide: function () {
 			var self = this;
 			if ( this.hasChanged() ) {
-				OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).done( function ( confirmed ) {
+				return OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).done( function ( confirmed ) {
 					if ( confirmed ) {
 						self.allowCloseWindow.release();
 						Overlay.prototype.hide.call( self );
