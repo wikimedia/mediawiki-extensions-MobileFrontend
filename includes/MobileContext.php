@@ -329,7 +329,9 @@ class MobileContext extends ContextSource {
 		$title = $this->getTitle();
 
 		$redirectUrl = null;
-		if ( $request->getCheck( 'diff' ) ) {
+		if ( $request->getCheck( 'diff' ) &&
+			MobileFrontendHooks::shouldMobileFormatSpecialPages( $this->getUser() )
+		) {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop();
 		}
 
@@ -338,7 +340,7 @@ class MobileContext extends ContextSource {
 			$title !== null &&
 			// check, if SpecialMobileHistory supports the history action set for this title
 			// content model
-			SpecialMobileHistory::shouldUseSpecialHistory( $title )
+			SpecialMobileHistory::shouldUseSpecialHistory( $title, $this->getUser() )
 		) {
 			$values = $this->getRequest()->getValues();
 			// avoid infinite redirect loops
