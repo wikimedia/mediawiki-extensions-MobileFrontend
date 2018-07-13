@@ -307,6 +307,29 @@
     },
     {
       "key": {
+        "uuid": "a3a75843_ca83277e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T20:03:58Z",
+      "side": 1,
+      "message": "this should be added only when `MFEnableMobilePreferences` is set to true",
+      "range": {
+        "startLine": 912,
+        "startChar": 2,
+        "endLine": 912,
+        "endChar": 60
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f30ab775_fdcd298d",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
