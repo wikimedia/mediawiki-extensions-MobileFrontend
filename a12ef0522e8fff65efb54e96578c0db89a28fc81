@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2c2e422_55d8414c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-13T21:55:46Z",
+      "side": 1,
+      "message": "These can just be ifs since this function early exits.",
+      "range": {
+        "startLine": 517,
+        "startChar": 4,
+        "endLine": 517,
+        "endChar": 10
+      },
+      "revId": "a12ef0522e8fff65efb54e96578c0db89a28fc81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35b3c7e0_f27390cf",
+        "filename": "tests/phpunit/MobileFrontend.hooksTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-13T21:55:46Z",
+      "side": 1,
+      "message": "This would be even more concise and readable with constants:\n\n $FORMAT_ON \u003d true;\n $FORMAT_OFF \u003d false;\n $ANON \u003d true;\n $LOGGED_IN \u003d false;\n $FEATURE_ON \u003d true;\n $FEATURE_OFF \u003d false;\n $PREF_ON \u003d true;\n [\n   [$FORMAT_ON, $ANON, $FEATURE_OFF],\n   ...\n ]",
+      "range": {
+        "startLine": 300,
+        "startChar": 4,
+        "endLine": 300,
+        "endChar": 8
+      },
+      "revId": "a12ef0522e8fff65efb54e96578c0db89a28fc81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
