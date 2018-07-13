@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93d98a35_b5772f7a",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T20:11:01Z",
+      "side": 1,
+      "message": "not used",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 35,
+        "endChar": 26
+      },
+      "revId": "48ae6c278b0333a9183158b56225af2ce3ff5522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f03ddb2_55437c16",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T20:11:01Z",
+      "side": 1,
+      "message": "use the const",
+      "range": {
+        "startLine": 523,
+        "startChar": 79,
+        "endLine": 523,
+        "endChar": 81
+      },
+      "revId": "48ae6c278b0333a9183158b56225af2ce3ff5522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
