@@ -120,7 +120,7 @@
 	"mobile-frontend-overlay-close": "Затвори",
 	"mobile-frontend-overlay-continue": "Настави",
 	"mobile-frontend-page-edit-summary": "<span><strong>Опис измене</strong> $1</span>",
-	"mobile-frontend-photo-upload-invalid-user": "Корисник „$1“ није отворен.",
+	"mobile-frontend-photo-upload-invalid-user": "Корисник „$1“ није регистрован.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> датотека|Датотека:<span>$1</span>}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ отпремања",
 	"mobile-frontend-privacy-link-text": "Приватност",

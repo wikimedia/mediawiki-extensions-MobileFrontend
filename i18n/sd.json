@@ -106,7 +106,7 @@
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|شامل ٿيو}} {{PLURAL:$2|منٽ}} اڳ",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|شامل ٿيو}} {{PLURAL:$2|ڪلاڪ}} اڳ",
 	"mobile-frontend-joined-days": "{{GENDER:$1|شامل ٿيو}} {{PLURAL:$2|ڏينهن}} اڳ",
-	"mobile-frontend-joined-months": "{{GENDER:$1|شامل ٿيو}} {{PLURAL:$2|$2 مهينو|$2 مهينا}} اڳ",
+	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 مهينو|$2 مهينا}} کان {{GENDER:$1|منسلڪ}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 سالن}} کان {{GENDER:$1|منسلڪ}}",
 	"mobile-frontend-language-heading": "<strong>ٻوليون</strong>",
 	"mobile-frontend-languages-404-desc": "درست سُرخي جي چونڊ ضروري آهي.",
