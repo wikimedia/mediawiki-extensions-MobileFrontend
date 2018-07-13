@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "706c2626_76534d3b",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Probably but we also need to break up MobileContext\n\nMobilePageController?",
+      "parentUuid": "fe7283ac_1a1740db",
+      "range": {
+        "startLine": 333,
+        "startChar": 3,
+        "endLine": 333,
+        "endChar": 54
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "53193d11_626162ed",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2018-07-13T19:33:31Z",
       "side": 1,
       "message": "this is not used",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 27
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9dc3d896_3387be7e",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53193d11_626162ed",
       "range": {
         "startLine": 35,
         "startChar": 0,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "4b1c08e2_1699f4a4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Doesn\u0027t the function make that clear?\nNot seeing the benefit of a constant here.\nhasNoNonEmptyPrecedingParagraphs doesn\u0027t not return HAS_NO_EMPTY_PARAGRAPHS for example",
+      "parentUuid": "0bb34bb1_b62c9b61",
+      "range": {
+        "startLine": 515,
+        "startChar": 10,
+        "endLine": 515,
+        "endChar": 14
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0f9352b9_216e70da",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
@@ -105,6 +177,30 @@
       "writtenOn": "2018-07-13T19:33:31Z",
       "side": 1,
       "message": "it should be the special pages preference",
+      "range": {
+        "startLine": 874,
+        "startChar": 36,
+        "endLine": 874,
+        "endChar": 43
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61e120e0_4dc26fb4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 874,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f9352b9_216e70da",
       "range": {
         "startLine": 874,
         "startChar": 36,
@@ -140,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "5cbeb079_eba190d4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 886,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54df98dd_295af672",
+      "range": {
+        "startLine": 880,
+        "startChar": 0,
+        "endLine": 886,
+        "endChar": 3
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff5ac41c_b37e8577",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
@@ -163,6 +283,30 @@
     },
     {
       "key": {
+        "uuid": "6a876bd9_1c1e017b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ff5ac41c_b37e8577",
+      "range": {
+        "startLine": 888,
+        "startChar": 45,
+        "endLine": 888,
+        "endChar": 48
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f30ab775_fdcd298d",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6
@@ -174,6 +318,30 @@
       "writtenOn": "2018-07-13T19:33:31Z",
       "side": 1,
       "message": "this msg is not defined in translate files",
+      "range": {
+        "startLine": 915,
+        "startChar": 21,
+        "endLine": 915,
+        "endChar": 61
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b6f1091_c36d9b2e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 915,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-13T19:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f30ab775_fdcd298d",
       "range": {
         "startLine": 915,
         "startChar": 21,
