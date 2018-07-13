@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe7283ac_1a1740db",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "this should go into MobileContext, introducing a static method in MobileFrontendHooks doesn\u0027t seem right, we can keep it for now but we will have to improve that code.",
+      "range": {
+        "startLine": 333,
+        "startChar": 3,
+        "endLine": 333,
+        "endChar": 54
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "53193d11_626162ed",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "this is not used",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 27
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1eb9c342_31400053",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "this imho should go to into MobileContext class. It both requires mobileContext, and in all places where it is used we have the MobileContext instance.\n\nIf we move into $context, then $user parameter is not necessary, as `$user` comes from `$ctx-\u003egetuser()`",
+      "range": {
+        "startLine": 510,
+        "startChar": 1,
+        "endLine": 510,
+        "endChar": 65
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0bb34bb1_b62c9b61",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is too much, but I\u0027d like to make a constant, something like:\n\n  const FORMAT_SPECIAL_MOBILE_PAGES \u003d true;\n\nand use it here, this makes the code much more readable.",
+      "range": {
+        "startLine": 515,
+        "startChar": 10,
+        "endLine": 515,
+        "endChar": 14
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f9352b9_216e70da",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 874,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "it should be the special pages preference",
+      "range": {
+        "startLine": 874,
+        "startChar": 36,
+        "endLine": 874,
+        "endChar": 43
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54df98dd_295af672",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 886,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "why do we need that? the skin variable is not used",
+      "range": {
+        "startLine": 880,
+        "startChar": 0,
+        "endLine": 886,
+        "endChar": 3
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff5ac41c_b37e8577",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "please make it a const, we shouldn\u0027t hardcode default parameters in code",
+      "range": {
+        "startLine": 888,
+        "startChar": 45,
+        "endLine": 888,
+        "endChar": 48
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f30ab775_fdcd298d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 915,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-13T19:33:31Z",
+      "side": 1,
+      "message": "this msg is not defined in translate files",
+      "range": {
+        "startLine": 915,
+        "startChar": 21,
+        "endLine": 915,
+        "endChar": 61
+      },
+      "revId": "3c46a8097912da0888ceedff42a31789dc00cf07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
