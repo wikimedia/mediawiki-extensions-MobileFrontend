@@ -45,7 +45,8 @@
 			"Wirbel78",
 			"Mouse21",
 			"Patrick Star",
-			"Stjn"
+			"Stjn",
+			"Vlad5250"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Войдите в систему или создайте учетную запись для отслеживания изменений",
@@ -302,5 +303,6 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Размер шрифта",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
-	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "Мобильные настройки"
 }

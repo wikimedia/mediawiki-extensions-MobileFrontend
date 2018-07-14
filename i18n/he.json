@@ -291,5 +291,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "גודל הגופן",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "בקרת גודל הגופן בחוויית הקריאה שלך.",
 	"mobile-frontend-beta-only": "האפשרות זמינה רק במצב בטא.",
-	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "מיטוב ופישוט של דפים מיוחדים בגלישה ניידת (מומלץ)",
+	"prefs-mobile": "העדפות ניידות"
 }

@@ -321,5 +321,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Taille de la police",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Contrôler la taille de police de votre expérience de lecture.",
 	"mobile-frontend-beta-only": "Fonctionnalité disponible seulement en mode bêta",
-	"mobile-frontend-console-recruit": "En apprendre plus sur comment nous construisons notre site mobile @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "En apprendre plus sur comment nous construisons notre site mobile @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Optimiser et simplifier les pages spéciales sur les mobiles (recommandé)",
+	"prefs-mobile": "Mobile de préférence"
 }

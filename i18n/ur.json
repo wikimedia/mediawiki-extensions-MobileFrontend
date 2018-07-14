@@ -159,7 +159,7 @@
 	"mobile-frontend-page-edit-summary": "<span><strong>خلاصۂ ترمیم</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "صارف کھاتہ بنام \"$1\" مندرج نہیں ہے۔",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> اپلوڈ|<span>$1</span> اپلوڈ}}",
-	"mobile-frontend-photo-upload-user-count-over-limit": "500 سے زائد فائلیں",
+	"mobile-frontend-photo-upload-user-count-over-limit": "پانچ سو سے زائد فائلیں",
 	"mobile-frontend-privacy-link-text": "نجی نوعیت",
 	"mobile-frontend-references-citation": "حوالہ",
 	"mobile-frontend-references-citation-error": "کوئی نقص واقع ہوا ہے، نیز اس حوالے کو لوڈ کرنا ممکن نہیں۔",

@@ -203,5 +203,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenze nëmme luede wa se gebraucht ginn",
 	"mobile-frontend-send-feedback": "Feedback schécken",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Biller nëmme luede wa se gebraucht ginn.",
-	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Aféierungsabschnitt"
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Aféierungsabschnitt",
+	"prefs-mobile": "Mobil Astellungen"
 }
