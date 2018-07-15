@@ -254,5 +254,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "فانٹ کا حجم",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "اپنے مطالعہ کے لحاظ سے فانٹ کا حجم کم زیادہ کریں۔",
 	"mobile-frontend-beta-only": "یہ خصوصیت صرف آزمائشی نسخے میں دستیاب ہے",
-	"mobile-frontend-console-recruit": "ہماری موبائل ویب سائٹ کی تعمیر و ترقی کے متعلق مزید معلومات https://www.mediawiki.org/wiki/Extension:MobileFrontend پر حاصل کریں"
+	"mobile-frontend-console-recruit": "ہماری موبائل ویب سائٹ کی تعمیر و ترقی کے متعلق مزید معلومات https://www.mediawiki.org/wiki/Extension:MobileFrontend پر حاصل کریں",
+	"mobile-frontend-special-pages-pref": "جب موبائل پر ہوں تو خاص صفحات کو بہتر اور آسان بنائیں (تجویز کردہ)",
+	"prefs-mobile": "موبائل ترجیحات"
 }

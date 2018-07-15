@@ -298,5 +298,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamanho da fonte",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controle o tamanho da fonte da sua experiência de leitura.",
 	"mobile-frontend-beta-only": "O recurso está disponível apenas no modo beta",
-	"mobile-frontend-console-recruit": "Saiba mais sobre como construímos o nosso site móvel @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Saiba mais sobre como construímos o nosso site móvel @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Otimizar e simplificar as páginas especiais quando estiver em dispositivos móveis (recomendado)",
+	"prefs-mobile": "Preferências em dispositivos móveis"
 }
