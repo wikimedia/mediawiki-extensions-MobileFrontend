@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "1e430672_741e318d",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-07-16T20:04:14Z",
+      "side": 1,
+      "message": "Done. I copy-pasted it like this from Minerva without really checking if it had a reason to be separate.\n\nAlas, I think \u0027mobile.editor.images\u0027 has to be a separate module (at least until we merge the thing with loading individual icons, then we can merge it into one of the other icon modules).",
+      "parentUuid": "4a74345c_122842cd",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "14bf8a2f_e1a413a6",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2018-07-10T19:50:15Z",
       "side": 1,
       "message": "let\u0027s switch this out to a \"then\" after moving it.\nThis will throw a warning inside MobileFrontend. (https://phabricator.wikimedia.org/T188937)",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88ccb60b_99a98383",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-07-16T20:04:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14bf8a2f_e1a413a6",
       "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "26aedbf9_876ebf0d",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-07-16T20:04:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4f0d37df_d3e83550",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea70ef9_e1506d09",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 1
@@ -82,6 +136,24 @@
       "writtenOn": "2018-07-10T19:50:15Z",
       "side": 1,
       "message": "as noted in your review.",
+      "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d90b4729_17ad694e",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-07-16T20:04:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea70ef9_e1506d09",
       "revId": "dd9f620f08773c2db699736c6bb29336beadbb9e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
