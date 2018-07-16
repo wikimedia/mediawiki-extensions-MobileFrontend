@@ -115,6 +115,7 @@
 				}
 			},
 			"images": {
+				"alert": "resources/mobile.startup.images.variants/alert.svg",
 				"arrow": "resources/mobile.startup.images.variants/arrow.svg",
 				"back": {
 					"file": {
@@ -645,21 +646,26 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup"
+				"mobile.startup",
+				"mediawiki.router"
 			],
 			"styles": [
 				"resources/mobile.mediaViewer/mediaViewer.less"
 			],
 			"scripts": [
+				"resources/mobile.mediaViewer/LoadErrorMessage.js",
 				"resources/mobile.mediaViewer/ImageGateway.js",
 				"resources/mobile.mediaViewer/ImageOverlay.js"
 			],
 			"templates": {
+				"LoadErrorMessage.hogan": "resources/mobile.mediaViewer/LoadErrorMessage.hogan",
 				"Overlay.hogan": "resources/mobile.mediaViewer/ImageOverlay.hogan"
 			},
 			"messages": [
 				"mobile-frontend-media-details",
-				"mobile-frontend-media-license-link"
+				"mobile-frontend-media-license-link",
+				"mobile-frontend-media-load-fail-message",
+				"mobile-frontend-media-load-fail-retry"
 			]
 		},
 		"mobile.categories.overlays": {

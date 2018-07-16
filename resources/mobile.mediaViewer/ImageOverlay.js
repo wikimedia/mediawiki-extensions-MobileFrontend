@@ -3,7 +3,9 @@
 		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		ImageGateway = M.require( 'mobile.mediaViewer/ImageGateway' );
+		LoadErrorMessage = M.require( 'mobile.mediaViewer/LoadErrorMessage' ),
+		ImageGateway = M.require( 'mobile.mediaViewer/ImageGateway' ),
+		router = require( 'mediawiki.router' );
 
 	/**
 	 * Displays images in full screen overlay
@@ -11,15 +13,18 @@
 	 * @extends Overlay
 	 * @uses Icon
 	 * @uses ImageGateway
+	 * @uses LoadErrorMessage
+	 * @uses Router
 	 * @fires ImageOverlay#ImageOverlay-exit
 	 * @fires ImageOverlay#ImageOverlay-slide
-	 *
 	 * @param {Object} options Configuration options
 	 */
 	function ImageOverlay( options ) {
-		this.gateway = new ImageGateway( {
+		this.gateway = options.gateway || new ImageGateway( {
 			api: options.api
 		} );
+		this.router = options.router || router;
+
 		Overlay.apply( this, arguments );
 	}
 
@@ -127,9 +132,17 @@
 			var offset = this.galleryOffset,
 				lastThumb, nextThumb;
 
-			// identify last thumbnail
-			lastThumb = offset === 0 ? thumbs[thumbs.length - 1] : thumbs[offset - 1];
-			nextThumb = offset === thumbs.length - 1 ? thumbs[0] : thumbs[offset + 1];
+			if ( this.galleryOffset === undefined ) {
+				// couldn't find a suitable matching thumbnail so make
+				// next slide start at beginning and previous slide be end
+				lastThumb = thumbs[thumbs.length - 1];
+				nextThumb = thumbs[0];
+			} else {
+				// identify last thumbnail
+				lastThumb = thumbs[ offset === 0 ? thumbs.length - 1 : offset - 1 ];
+				nextThumb = thumbs[ offset === thumbs.length - 1 ? 0 : offset + 1 ];
+			}
+
 			this.$( '.prev' ).data( 'thumbnail', lastThumb );
 			this.$( '.next' ).data( 'thumbnail', nextThumb );
 		},
@@ -142,6 +155,19 @@
 		_disableArrowImages: function () {
 			this.$( '.prev, .next' ).remove();
 		},
+
+		/**
+		 * Handler for retry event which triggers when user tries to reload overlay
+		 * after a loading error.
+		 * @memberof ImageOverlay
+		 * @instance
+		 * @private
+		 */
+		_handleRetry: function () {
+			// A hacky way to simulate a reload of the overlay
+			this.router.emit( 'hashchange' );
+		},
+
 		/**
 		 * @inheritdoc
 		 * @memberof ImageOverlay
@@ -151,6 +177,35 @@
 			var $img,
 				thumbs = this.options.thumbnails || [],
 				self = this;
+
+			/**
+			 * Hide the spinner
+			 * @method
+			 * @ignore
+			 */
+			function removeLoader() {
+				self.clearSpinner();
+			}
+
+			/**
+			 * Display media load failure message
+			 * @method
+			 * @ignore
+			 */
+			function showLoadFailMsg() {
+				self.hasLoadError = true;
+
+				removeLoader();
+				// hide broken image if present
+				self.$( '.image img' ).hide();
+
+				// show error message if not visible already
+				if ( self.$( '.load-fail-msg' ).length === 0 ) {
+					new LoadErrorMessage( { retryPath: self.router.getPath() } )
+						.on( 'retry', self._handleRetry.bind( self ) )
+						.prependTo( self.$( '.image' ) );
+				}
+			}
 
 			if ( thumbs.length < 2 ) {
 				this._disableArrowImages();
@@ -162,31 +217,40 @@
 
 			Overlay.prototype.postRender.apply( this );
 
-			this.gateway.getThumb( self.options.title ).done( function ( data ) {
+			this.gateway.getThumb( self.options.title ).then( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
-
-				/**
-				 * Hide the spinner
-				 * @method
-				 */
-				function removeLoader() {
-					self.$( '.spinner' ).hide();
-				}
 
 				self.thumbWidth = data.thumbwidth;
 				self.thumbHeight = data.thumbheight;
 				self.imgRatio = data.thumbwidth / data.thumbheight;
-				$img = self.parseHTML( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
+
+				// We need to explicitly specify document for context param as jQuery 3
+				// will create a new document for the element if the context is
+				// undefined. If element is appended to active document, event handlers
+				// can fire in both the active document and new document which can cause
+				// insidious bugs.
+				// (https://api.jquery.com/jquery.parsehtml/#entry-longdesc)
+				$img = self.parseHTML( '<img>', document );
+
+				// Remove the loader when the image is loaded or display load fail
+				// message on failure
+				//
+				// Error event handler must be attached before error occurs
+				// (https://api.jquery.com/error/#entry-longdesc)
+				//
+				// For the load event, it is more unclear what happens cross-browser when
+				// the image is loaded from cache. It seems that a .complete check is
+				// needed if attaching the load event after setting the src.
+				// (http://stackoverflow.com/questions/910727/jquery-event-for-images-loaded#comment10616132_1110094)
+				//
+				// However, perhaps .complete check is not needed if attaching load
+				// event prior to setting the image src
+				// (https://stackoverflow.com/questions/12354865/image-onload-event-and-browser-cache#answer-12355031)
+				$img.on( 'load', removeLoader ).on( 'error', showLoadFailMsg );
+				$img.attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
 				self.$( '.image' ).append( $img );
 
-				if ( $img.prop( 'complete' ) ) {
-					// if the image is loaded from browser cache, "load" event may not fire
-					// (http://stackoverflow.com/questions/910727/jquery-event-for-images-loaded#comment10616132_1110094)
-					removeLoader();
-				} else {
-					// remove the loader when the image is loaded
-					$img.on( 'load', removeLoader );
-				}
+				self.$details.addClass( 'is-visible' );
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', url );
 				if ( data.extmetadata ) {
@@ -204,6 +268,9 @@
 					}
 				}
 				self.adjustDetails();
+			}, function () {
+				// retrieving image location failed so show load fail msg
+				showLoadFailMsg();
 			} );
 
 			M.on( 'resize:throttled', this._positionImage.bind( this ) );
@@ -215,9 +282,11 @@
 		 * @instance
 		 */
 		onToggleDetails: function () {
-			this.$( '.cancel, .slider-button' ).toggle();
-			this.$details.toggle();
-			this._positionImage();
+			if ( !this.hasLoadError ) {
+				this.$( '.cancel, .slider-button' ).toggle();
+				this.$details.toggle();
+				this._positionImage();
+			}
 		},
 
 		/**
