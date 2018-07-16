@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac2057f_fb3a1dfb",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-16T19:09:00Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s correct approach, please add a that to a javascript file, do not code js actions as href attributes",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 59
+      },
+      "revId": "b8be7a44b84fc44878e6abb7871fd7e86f48fc74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b3e2608_8f3666e0",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-16T19:09:00Z",
+      "side": 1,
+      "message": "use tabs",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 7
+      },
+      "revId": "b8be7a44b84fc44878e6abb7871fd7e86f48fc74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4586352_84afbff7",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-16T19:09:00Z",
+      "side": 1,
+      "message": "I\u0027m not sure, most probably we should build the HTML here instead of shipping the HTML with the error node and just show it. I\u0027ll allow @jdlrobson to jump in here and decide what to do.",
+      "range": {
+        "startLine": 145,
+        "startChar": 4,
+        "endLine": 145,
+        "endChar": 38
+      },
+      "revId": "b8be7a44b84fc44878e6abb7871fd7e86f48fc74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ea24cdb_3e5b64d3",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-16T19:09:00Z",
+      "side": 1,
+      "message": "there should be a @color for that, please check with designer",
+      "range": {
+        "startLine": 71,
+        "startChar": 2,
+        "endLine": 71,
+        "endChar": 14
+      },
+      "revId": "b8be7a44b84fc44878e6abb7871fd7e86f48fc74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
