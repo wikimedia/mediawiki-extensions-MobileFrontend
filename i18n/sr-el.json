@@ -4,7 +4,8 @@
 			"Milicevic01",
 			"Srdjan m",
 			"Сербијана",
-			"Obsuser"
+			"Obsuser",
+			"Zoranzoki21"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Prijavite se ili napravite nalog da biste pratili svoje izmene",
@@ -133,9 +134,9 @@
 	"mobile-frontend-watchlist-signup-action": "<strong>Spisak nadgledanja vam olakšava praćenje stranica.</strong><br />Otvorite nalog da biste ga koristili.",
 	"mobile-frontend-user-page-create-user-page-link-label": "Napravite stranicu $1",
 	"nearby": "Stranice o temama blizu Vas",
-	"tag-mobile_edit": "Mobilno uređivanje",
+	"tag-mobile_edit": "mobilno uređivanje",
 	"tag-mobile_edit-description": "Izmena načinjena sa mobilnog uređaja",
-	"tag-mobile_web_edit": "Mobilno veb-uređivanje",
+	"tag-mobile_web_edit": "mobilno veb-uređivanje",
 	"tag-mobile_web_edit-description": "Izmena načinjena sa mobilne verzije sajta",
 	"mobile-frontend-loading-message": "Učitavam…",
 	"mobile-frontend-panel-ok": "U redu",

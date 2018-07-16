@@ -5,6 +5,7 @@
 		]
 	},
 	"mobile-frontend-copyright": "La kontenajo esas disponebla sub $1, ecepte kande kontree mencionata.",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|redakturo|redakturi}}",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Omna lingui",
 	"mobile-frontend-last-modified-date": "Laste redaktita ye $1, $2 kloki",
 	"mobile-frontend-privacy-link-text": "Privateso",

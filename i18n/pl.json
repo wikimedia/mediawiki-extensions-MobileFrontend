@@ -255,5 +255,6 @@
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Wyłącz zwijanie sekcji na skórce mobilnej.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Rozmiar czcionki",
 	"mobile-frontend-beta-only": "Funkcjonalność dostępna tylko w trybie beta",
-	"mobile-frontend-console-recruit": "Przeczytaj więcej o tym w jaki sposób budujemy naszą mobilną witrynę @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Przeczytaj więcej o tym w jaki sposób budujemy naszą mobilną witrynę @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "Preferencje mobilne"
 }
