@@ -26,7 +26,6 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		'wikivoyage.org',
 		'wikidata.org',
 		'mediawiki.org',
-		'wikimediafoundation.org',
 		// local vagrant instances
 		'local.wmftest.net'
 	];

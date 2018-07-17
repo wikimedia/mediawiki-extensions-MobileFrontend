@@ -130,11 +130,6 @@ class MobileContextTest extends MediaWikiTestCase {
 				'%h0.m.%h1.%h2',
 			],
 			[
-				'https://wikimediafoundation.org/wiki/FAQ',
-				'https://m.wikimediafoundation.org/wiki/FAQ',
-				'm.%h0.%h1',
-			],
-			[
 				'https://127.0.0.1/wiki/Test',
 				'https://127.0.0.1/wiki/Test',
 				'%h0.m.%h1.%h2',
@@ -207,11 +202,6 @@ class MobileContextTest extends MediaWikiTestCase {
 				'http://en.m.wikipedia.org/wiki/Gustavus_Airport',
 				'http://en.wikipedia.org/wiki/Gustavus_Airport',
 				'//en.wikipedia.org',
-			],
-			[
-				'https://m.wikimediafoundation.org/wiki/FAQ',
-				'https://wikimediafoundation.org/wiki/FAQ',
-				'//wikimediafoundation.org',
 			],
 		];
 	}
