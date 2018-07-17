@@ -16,7 +16,7 @@
 	"mobile-frontend-categories-nocat": "Stran še ni uvrščena v nobeno kategorijo.",
 	"mobile-frontend-changeslist-nocomment": "brez povzetka urejanja",
 	"mobile-frontend-clear-search": "Počisti",
-	"mobile-frontend-copyright": "Besedilo je na razpolago pod licenco $1; veljajo lahko tudi dodatni pogoji. Podrobnosti so razložene na strani <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use\">Pogoji uporabe</a>. {{SITENAME}} je registrirana blagovna znamka nepridobitne organizacije <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>",
+	"mobile-frontend-copyright": "Besedilo je na razpolago pod licenco $1; veljajo lahko tudi dodatni pogoji. Podrobnosti so razložene na strani <a href=\"http://foundation.wikimedia.org/wiki/Terms_of_Use\">Pogoji uporabe</a>. {{SITENAME}} je registrirana blagovna znamka nepridobitne organizacije <a href='http://www.foundation.wikimedia.org/'>Wikimedia Foundation, Inc.</a>",
 	"mobile-frontend-desc": "Mobilni vmesnik",
 	"mobile-frontend-diffview-404-desc": "Id redakcije, ki ste jo zahtevali, ne obstaja.",
 	"mobile-frontend-diffview-404-title": "Neveljavna redakcija",
