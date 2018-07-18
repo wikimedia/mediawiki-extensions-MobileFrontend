@@ -24,7 +24,6 @@ class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 			[ 'https://en.wikipedia.org', '.wikipedia.org' ],
 			[ 'http://en.m.wikipedia.org', '.wikipedia.org' ],
 			[ '//en.m.wikipedia.org', '.wikipedia.org' ],
-			[ 'http://wikimediafoundation.org', '.wikimediafoundation.org' ],
 			[ 'http://wikiversity.org', '.wikiversity.org' ],
 			[ 'https://office.wikimedia.org', '.office.wikimedia.org' ],
 			[ 'https://commons.wikimedia.org', '.commons.wikimedia.org' ],
