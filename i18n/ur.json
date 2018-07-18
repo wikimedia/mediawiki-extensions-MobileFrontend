@@ -9,7 +9,8 @@
 			"Obaid Raza",
 			"Hindustanilanguage",
 			"BukhariSaeed",
-			"Abdulq"
+			"Abdulq",
+			"Saqib"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "اپنی ترامیم کا جائزہ لینے کے داخل نوشتہ ہویئے یا ایک کھاتہ کولیے",
@@ -165,6 +166,7 @@
 	"mobile-frontend-references-citation-error": "کوئی نقص واقع ہوا ہے، نیز اس حوالے کو لوڈ کرنا ممکن نہیں۔",
 	"mobile-frontend-references-list": "حوالہ جات کی مکمل فہرست ملاحظہ فرمائیں",
 	"mobile-frontend-requires-mobile": "یہ صفحہ ڈیسکٹاپ ویو میں دستیاب نہیں۔ براہ کرم اس صفحے کے نیچے موجود موبائل ویو پر کلک کریں۔",
+	"mobile-frontend-requires-optin": "یہ صفحہ دستیاب نہیں ہے جب تک آپ ہمارے بیٹا موڈ میں نہیں آئیں گے. اپلوڈ کرنے کیلئے [[Special: MobileOptions | ترتیبات صفحہ]] ملاحظہ کریں.",
 	"mobile-frontend-requires-title": "صفحہ موجود نہیں",
 	"mobile-frontend-return-to-page": "صفحہ کی جانب واپس",
 	"mobile-frontend-save-error": "ترتیبات کی محفوظ شدگی میں غلطی ہو گئی۔ براہ مہربانی یقینی بنائیں کہ آپ کے پاس کوکیز فعال ہے۔",
@@ -228,8 +230,10 @@
 	"tag-mobile_edit-description": "موبائل (سائٹ یا اطلاقیہ) سے ترمیم کی گئی",
 	"tag-mobile_web_edit": "موبائل ویب ترمیم",
 	"tag-mobile_web_edit-description": "موبائل ویب سائٹ سے ترمیم کی گئی",
+	"apihelp-mobileview-description": "یہ صفحہ دستیاب نہیں ہے جب تک آپ ہمارے بیٹا موڈ میں نہیں آئیں گے. اپلوڈ کرنے کیلئے ترتیبات صفحہ ملاحظہ کریں.",
 	"apihelp-mobileview-param-page": "آگے بڑھنے کے لیے اس صفحے کا عنوان درج کریں۔",
 	"apihelp-mobileview-param-redirect": "اگر رجوع مکررات کی پیروی مطلوب ہو۔",
+	"apihelp-mobileview-param-sectionprop": "کونسی معلومات چاہیے ابھی",
 	"apihelp-mobileview-param-noheadings": "نتیجے میں سرخیاں شامل نہ کریں۔",
 	"apihelp-parse-param-noimages": "موبائل سائٹ پر تصویریں غیر فعال کریں۔",
 	"apiwarn-mobilefrontend-sectionsnotfound": "$1 {{PLURAL:$2|قطعہ نہیں ملا|قطعے نہیں ملے}}۔",
