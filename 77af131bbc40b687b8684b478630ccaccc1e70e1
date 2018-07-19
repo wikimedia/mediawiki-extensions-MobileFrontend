@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56b25e52_399af486",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-07-19T12:09:52Z",
+      "side": 1,
+      "message": "extra tab",
+      "range": {
+        "startLine": 133,
+        "startChar": 3,
+        "endLine": 133,
+        "endChar": 4
+      },
+      "revId": "77af131bbc40b687b8684b478630ccaccc1e70e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
