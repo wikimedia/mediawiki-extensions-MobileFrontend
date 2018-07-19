@@ -303,5 +303,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "حجم الخط",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "التحكم بحجم الخط لتجربتك في القراءة.",
 	"mobile-frontend-beta-only": "الخاصية متوفرة فقط في نمط البيتا",
-	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "تحسين وتبسيط الصفحات الخاصة عند استخدام الجوال (موصى به)",
+	"prefs-mobile": "تفضيلات الجوال"
 }
