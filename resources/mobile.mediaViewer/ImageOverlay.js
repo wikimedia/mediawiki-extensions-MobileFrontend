@@ -135,7 +135,6 @@
 				/**
 				 * Hide the spinner
 				 * @method
-				 * @ignore
 				 */
 				function removeLoader() {
 					self.$( '.spinner' ).hide();
@@ -247,9 +246,9 @@
 		}
 	} );
 	// fixme: remove this redundant constant.
-	/** @ignore @event ImageOverlay#ImageOverlay-exit */
+	/** @event ImageOverlay#ImageOverlay-exit */
 	ImageOverlay.EVENT_EXIT = 'ImageOverlay-exit';
-	/** @ignore @event ImageOverlay#ImageOverlay-slide */
+	/** @event ImageOverlay#ImageOverlay-slide */
 	ImageOverlay.EVENT_SLIDE = 'ImageOverlay-slide';
 	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay ); // resource-modules-disable-line
 

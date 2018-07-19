@@ -14,7 +14,6 @@
 	 * @param {jQuery.Object} $el
 	 * @return {string|null} either the anchor (id attribute of the section heading
 	 *  or null if none found)
-	 * @ignore
 	 */
 	function getSectionId( $el ) {
 		var id,
@@ -77,8 +76,8 @@
 
 	OO.mfExtend( Skin, View, {
 		/**
-		 * @inheritdoc
 		 * Skin contains components that we do not control
+		 * @inheritdoc
 		 */
 		isBorderBox: false,
 		/**
@@ -150,7 +149,6 @@
 			 * viewport; and whether it is displayed to the user.
 			 * @param {jQuery.Object} $placeholder
 			 * @return {Boolean}
-			 * @ignore
 			 */
 			function shouldLoadImage( $placeholder ) {
 				return viewport.isElementCloseToViewport( $placeholder[0], offset ) &&
@@ -161,7 +159,6 @@
 
 			/**
 			 * Load remaining images in viewport
-			 * @ignore
 			 * @return {jQuery.Deferred}
 			 */
 			function _loadImages() {

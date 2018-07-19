@@ -16,7 +16,6 @@
 	 * if article is available in it. For example, if the device language is
 	 * 'en-gb', and the article is only available in 'en', then return 'en'.
 	 *
-	 * @ignore
 	 * @param {Object[]} languages list of language objects as returned by the API
 	 * @param {string|undefined} deviceLanguage the device's primary language
 	 * @return {string|undefined} Return undefined if the article is not available in
@@ -139,7 +138,6 @@
 		}
 
 		/**
-		 * @ignore
 		 * @param {Object} language
 		 * @return {Object} which has 'dir' key.
 		 */
@@ -185,7 +183,6 @@
 		/**
 		 * Compare language names lexicographically
 		 *
-		 * @ignore
 		 * @param {Object} a first language
 		 * @param {Object} b second language
 		 * @return {number} Comparison value, 1 or -1

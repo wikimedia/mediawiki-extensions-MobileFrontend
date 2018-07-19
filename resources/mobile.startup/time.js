@@ -7,7 +7,6 @@
 	 * Calculate the correct unit of timestamp
 	 * @param {number} timestampDelta
 	 * @return {{value: number, unit: string}}
-	 * @ignore
 	 */
 	function timeAgo( timestampDelta ) {
 		var i = 0;
@@ -24,7 +23,6 @@
 	 * Calculate the correct unit of timestamp delta
 	 * @param {number} timestamp
 	 * @return {{value: Number, unit: string}}
-	 * @ignore
 	 */
 	function getTimeAgoDelta( timestamp ) {
 		var currentTimestamp = Math.round( new Date().getTime() / 1000 );
@@ -36,7 +34,6 @@
 	 * Whether timestamp delta is less than a day old
 	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
-	 * @ignore
 	 */
 	function isRecent( delta ) {
 		return [ 'seconds', 'minutes', 'hours' ].indexOf( delta.unit ) > -1;
@@ -46,7 +43,6 @@
 	 * Is delta less than 10 seconds?
 	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
-	 * @ignore
 	 */
 	function isNow( delta ) {
 		return delta.unit === 'seconds' && delta.value < 10;
@@ -60,7 +56,6 @@
 	 * @param {string} [historyUrl] url to the history page for the message, if omitted
 	 *  returns plain text string rather than html
 	 * @return {string}
-	 * @ignore
 	 */
 	function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 		var delta, html,
@@ -105,7 +100,6 @@
 	 * @param {string} ts timestamp
 	 * @param {string} [gender] of the last user editing this page
 	 * @return {string}
-	 * @ignore
 	 */
 	function getRegistrationMessage( ts, gender ) {
 		var delta, html,

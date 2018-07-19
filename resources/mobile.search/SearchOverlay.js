@@ -221,7 +221,6 @@
 
 			/**
 			 * Hide the spinner and abort timed spinner shows.
-			 * @ignore
 			 */
 			function clearSearch() {
 				self.$spinner.hide();

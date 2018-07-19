@@ -93,7 +93,6 @@
 	 * @method
 	 * @private
 	 * @return {Page}
-	 * @ignore
 	 */
 	function loadCurrentPage() {
 		var permissions = mw.config.get( 'wgRestrictionEdit', [] ),
@@ -125,7 +124,6 @@
 	 * @private
 	 * @param {Object} experiment sampling data
 	 * @param {Page} page
-	 * @ignore
 	 */
 	function displayBetaOptIn( experiment, page ) {
 		var betaOptinPanel, inStable, inSample,
@@ -166,7 +164,6 @@
 	 * Updates the font size based on the current value in storage
 	 *
 	 * @method
-	 * @ignore
 	 */
 	function updateFontSize() {
 		// FIXME: Ideally 'regular' would come from a shared constant

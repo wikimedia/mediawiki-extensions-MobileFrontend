@@ -85,7 +85,6 @@
 
 			/**
 			 * Attach an event to the overlays hide event
-			 * @ignore
 			 * @param {Overlay} overlay
 			 */
 			function attachHideEvent( overlay ) {

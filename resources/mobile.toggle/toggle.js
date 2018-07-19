@@ -27,7 +27,6 @@
 	 * @method
 	 * @param {Page} page
 	 * @return {Object} representing open sections
-	 * @ignore
 	 */
 	function getExpandedSections( page ) {
 		var expandedSections = JSON.parse(
@@ -38,7 +37,6 @@
 	}
 
 	/**
-	 * @ignore
 	 * @param {Object} expandedSections
 	 * Save expandedSections to localStorage
 	 */
@@ -54,7 +52,6 @@
 	 *
 	 * @param {jQuery.Object} $heading - A heading belonging to a section
 	 * @param {Page} page
-	 * @ignore
 	 */
 	function storeSectionToggleState( $heading, page ) {
 		var headline = $heading.find( 'span' ).attr( 'id' ),
@@ -77,7 +74,6 @@
 	 * @param {Toggler} toggler
 	 * @param {jQuery.Object} $container
 	 * @param {Page} page
-	 * @ignore
 	 */
 	function expandStoredSections( toggler, $container, page ) {
 		var $sectionHeading, $headline,
@@ -101,7 +97,6 @@
 	 * Clean obsolete (saved more than a day ago) expanded sections from
 	 * localStorage.
 	 * @param {Page} page
-	 * @ignore
 	 */
 	function cleanObsoleteStoredSections( page ) {
 		var now = ( new Date() ).getTime(),
@@ -126,7 +121,6 @@
 	 * Given a heading, toggle it and any of its children
 	 *
 	 * @param {jQuery.Object} $heading A heading belonging to a section
-	 * @ignore
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
 		var indicator,
@@ -176,7 +170,6 @@
 	/**
 	 * Enables toggling via enter and space keys
 	 *
-	 * @ignore
 	 * @param {Toggler} toggler instance.
 	 * @param {jQuery.Object} $heading
 	 */
@@ -194,7 +187,6 @@
 	/**
 	 * Reveals an element and its parent section as identified by it's id
 	 *
-	 * @ignore
 	 * @param {string} selector A css selector that identifies a single element
 	 * @param {Object} $container jQuery element to search in
 	 */
@@ -313,7 +305,6 @@
 		 * Checks the existing hash and toggles open any section that contains the fragment.
 		 *
 		 * @method
-		 * @ignore
 		 */
 		function checkHash() {
 			var hash = window.location.hash;
@@ -327,7 +318,6 @@
 		 * section that contains it if present
 		 *
 		 * @method
-		 * @ignore
 		 */
 		function checkInternalRedirectAndHash() {
 			var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),

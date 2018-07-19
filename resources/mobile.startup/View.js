@@ -9,7 +9,6 @@
 	/**
 	 * Generate a unique integer id (unique within the entire client session).
 	 * Useful for temporary DOM ids.
-	 * @ignore
 	 * @param {string} prefix Prefix to be used when generating the id.
 	 * @return {string}
 	 */
@@ -54,7 +53,7 @@
 	 * https://github.com/jashkenas/backbone/blob/master/backbone.js#L1128
 	 *
 	 * Example:
-	 *
+	 * ```js
 	 *     var MyComponent = View.extend( {
 	 *       events: {
 	 *	       'mousedown .title': 'edit',
@@ -68,9 +67,10 @@
 	 *         //...
 	 *       }
 	 *     } );
+	 * ```
 	 *
 	 * Example:
-	 *
+	 * ```js
 	 *     var View, section;
 	 *     function Section( options ) {
 	 *       View.call( this, options );
@@ -81,6 +81,7 @@
 	 *     } );
 	 *     section = new Section( { title: 'Test', text: 'Test section body' } );
 	 *     section.appendTo( 'body' );
+	 * ```
 	 *
 	 * @class View
 	 * @mixins OO.EventEmitter
@@ -255,7 +256,7 @@
 		 *
 		 * @method
 		 * @param {string} query A jQuery CSS selector.
-		 * @return {jQuery.Object} jQuery object containing results of the search.
+		 * @return {JQuery.Object} jQuery object containing results of the search.
 		 */
 		$: function ( query ) {
 			return this.$el.find( query );

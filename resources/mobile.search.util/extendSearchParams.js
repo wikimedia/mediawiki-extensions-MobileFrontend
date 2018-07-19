@@ -22,7 +22,6 @@
 	 * @throws {Error} If `feature` isn't one that shows Wikidata descriptions. See the
 	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
 	 * @return {Object}
-	 * @ignore
 	 */
 	function extendSearchParams( feature ) {
 		var displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ),

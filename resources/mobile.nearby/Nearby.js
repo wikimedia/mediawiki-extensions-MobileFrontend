@@ -1,5 +1,5 @@
 ( function ( M ) {
-	/** @ignore @event Nearby#Nearby-postRender */
+	/** @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
@@ -85,7 +85,6 @@
 			/**
 			 * Handler for successful query
 			 * @param {Array} pages as passed by then callback of Nearby##getPages
-			 * @ignore
 			 */
 			function pagesSuccess( pages ) {
 				options.pages = pages;
@@ -100,7 +99,6 @@
 			 * Handler for failed query
 			 *
 			 * @param {string} code Error Code
-			 * @ignore
 			 */
 			function pagesError( code ) {
 				self._isLoading = false;

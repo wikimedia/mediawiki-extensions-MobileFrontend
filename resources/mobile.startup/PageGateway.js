@@ -9,7 +9,6 @@
 	 * section of listOfSections. If listOfSections is empty, just add child to it.
 	 * @method
 	 * @private
-	 * @ignore
 	 * @param {Array} listOfSections - Array of section ids
 	 * @param {Object} child - Section to be added to listOfSections
 	 */
@@ -34,7 +33,6 @@
 	 * Order sections hierarchically
 	 * @method
 	 * @private
-	 * @ignore
 	 * @param {Array} sections Array of section objects created from response HTML
 	 * @return {Array} Ordered array of sections
 	 */

@@ -5,7 +5,8 @@
 .idea/
 node_modules/
 tmp/
-/docs
+/docs/js/
+/docs/php/
 dev-scripts/remotes
 /vendor
 /composer.lock

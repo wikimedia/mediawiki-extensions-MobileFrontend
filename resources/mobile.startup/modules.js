@@ -31,7 +31,6 @@
 				registry = this._register;
 
 			/**
-			 * @ignore
 			 * @return {Object} Module
 			 */
 			function localRequire() {

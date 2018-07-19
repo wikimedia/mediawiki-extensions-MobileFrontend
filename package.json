@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "test": "grunt test && npm run doc && dev-scripts/svg_check.sh",
-    "doc": "jsduck",
+    "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
   "devDependencies": {
@@ -15,7 +15,7 @@
     "grunt-jsonlint": "1.1.0",
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.9.0",
-    "jsdoc": "3.4.2",
+    "jsdoc": "3.5.5",
     "stylelint": "8.2.0",
     "stylelint-config-wikimedia": "0.4.2",
     "svgo": "1.0.4"

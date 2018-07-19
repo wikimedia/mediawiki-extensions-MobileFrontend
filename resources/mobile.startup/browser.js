@@ -5,14 +5,12 @@
 	/**
 	 * Memoize a class method. Caches the result of the method based on the
 	 * arguments. Instances do not share a cache.
-	 * @ignore
 	 * @param {Function} method Method to be memoized
 	 * @return {Function}
 	 */
 	function memoize( method ) {
 		/**
 		 * Memoized version of the method
-		 * @ignore
 		 * @return {Function}
 		 */
 		var memoized = function () {

@@ -4,7 +4,6 @@
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
-	 * @ignore
 	 * @param {number} size
 	 * @return {number}
 	 */

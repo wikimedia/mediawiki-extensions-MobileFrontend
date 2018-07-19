@@ -11,7 +11,6 @@
 	 * 'Edit' button
 	 * @param {OO.ui.ToolGroup} toolGroup
 	 * @param {Object} config
-	 * @ignore
 	 */
 	function EditVeTool( toolGroup, config ) {
 		config = config || {};

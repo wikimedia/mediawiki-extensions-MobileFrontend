@@ -10,7 +10,6 @@
 
 	/**
 	 * Initialise a photo upload button at the top of the page.
-	 * @ignore
 	 * @param {mw.Api} api
 	 */
 	function init( api ) {

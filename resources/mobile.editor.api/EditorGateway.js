@@ -164,7 +164,6 @@
 
 			/**
 			 * Save content. Make an API request.
-			 * @ignore
 			 * @return {jQuery.Deferred}
 			 */
 			function saveContent() {

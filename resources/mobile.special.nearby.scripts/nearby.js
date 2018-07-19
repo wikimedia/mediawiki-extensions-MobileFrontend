@@ -1,6 +1,6 @@
 /* global jQuery */
 ( function ( M, config, msg, loader, $ ) {
-	/** @ignore @event Nearby#Nearby-postRender */
+	/** @event Nearby#Nearby-postRender */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
@@ -27,7 +27,6 @@
 
 	/**
 	 * Show the title and hide the info container
-	 * @ignore
 	 */
 	function hideInitialScreen() {
 		$infoContainer.remove();
@@ -39,7 +38,6 @@
 	 *                   coordinates (as opposed to current location or search).
 	 *                   e.g.: Special:Nearby#/page/San_Francisco and
 	 *                   Special:Nearby#/coord/0,0.
-	 * @ignore
 	 */
 	function isPageOrCoordFragment( fragment ) {
 		return fragment.match( /^(\/page|\/coord)/ );
@@ -51,7 +49,6 @@
 	 *                   identifier expression, such as the slash in
 	 *                   Special:Nearby#/search, and probably contains the
 	 *                   target identifier to scroll to.
-	 * @ignore
 	 */
 	function isFragmentIdentifier( fragment ) {
 		return fragment && fragment.indexOf( '/' ) === -1;
@@ -60,7 +57,6 @@
 	/**
 	 * Initialize or instantiate Nearby with options
 	 * @method
-	 * @ignore
 	 * @param {Object} opt
 	 */
 	function refresh( opt ) {

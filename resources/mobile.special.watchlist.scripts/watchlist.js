@@ -8,7 +8,6 @@
 	/**
 	 * Initialises JavaScript on Special:Watchlist
 	 * @method
-	 * @ignore
 	 */
 	function init() {
 		var $watchlist = $( 'ul.page-list' );
