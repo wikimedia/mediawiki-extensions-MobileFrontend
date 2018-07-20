@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "538e999b_38179255",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-20T21:34:27Z",
+      "side": 1,
+      "message": "Hm.. I\u0027ve seen this pattern a fair bit but rarely use it myself and genuinely wonder why this is. Perhaps it\u0027s for an edge case that doesn\u0027t apply here, in which case I\u0027m not suggesting doing it differently, I\u0027d just like to better understand what that edge case would be.\n\nE.g. the pattern I\u0027m more familiar with is:\n\n for ( title in this.parsePagesFromItems( $items ) ) {\n  statuses[title] \u003d true;\n }\n\nI have used Object.keys() when getting the keys in an array is the final result, or when cloning a non-plain object and wanting to exclude the inherited method keys from a class instance, etc.",
+      "range": {
+        "startLine": 63,
+        "startChar": 3,
+        "endLine": 65,
+        "endChar": 27
+      },
+      "revId": "58789b82720f492c835fc993f122d9c28a4af366",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
