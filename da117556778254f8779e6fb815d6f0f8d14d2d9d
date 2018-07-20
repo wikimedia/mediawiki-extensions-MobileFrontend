@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b035b9f9_d66871ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-20T20:07:35Z",
+      "side": 1,
+      "message": "this is MobileFrontend extension",
+      "range": {
+        "startLine": 13,
+        "startChar": 59,
+        "endLine": 13,
+        "endChar": 70
+      },
+      "revId": "da117556778254f8779e6fb815d6f0f8d14d2d9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
