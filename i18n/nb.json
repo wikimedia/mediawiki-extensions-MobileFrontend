@@ -275,13 +275,18 @@
 	"mobile-frontend-search-feedback-prompt": "Fant du ikke det du lette etter?",
 	"mobile-frontend-notifications-filter-title": "Filtrer varsler",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Tittelbeskrivelser",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Lær mer om artikkelsubjektet med en kort beskrivelse under tittelen",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Last artikkelreferanser bare ved behov",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Lær mer om sidesubjektet med en kort beskrivelse under tittelen",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Last referanser bare ved behov",
 	"mobile-frontend-send-feedback": "Send tilbakemelding",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Last bilder bare ved behov.",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Innledningsavsnitt",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Teksten vil alltid vises over infobokser; forbedrer ytelse og lesbarhet.",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Utvid alle seksjoner som standard",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tekststørrelse i artikler",
+	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Slå av seksjonssammenlegging på mobilnettversjonen.",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Skriftstørrelse",
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontroller skriftstørrelsen for leseopplevelsen din.",
 	"mobile-frontend-beta-only": "Funksjon kun tilgjengelig i betamodus",
-	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Optimer og forenkle spesialsider på mobil (anbefalt)",
+	"prefs-mobile": "Mobilinnstillinger"
 }
