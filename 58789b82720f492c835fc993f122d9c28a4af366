@@ -22,6 +22,30 @@
       "revId": "58789b82720f492c835fc993f122d9c28a4af366",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a89fb480_fed3ce91",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-23T14:43:28Z",
+      "side": 1,
+      "message": "If the prototype chain was needed, I would probably use the style you referenced and add a comment but I personally try to favor composition over prototypal inheritance, especially on data properties.\n\nIn this case, were I to use a for-in loop and whether the guard was needed or not, I would probably write:\n\n var pages \u003d this.parsePagesFromItems( $items );\n for ( title in pages ) {\n   if ( pages.hasOwnProperty( title ) ) {\n     statuses[title] \u003d true;\n   }\n }\n\nThe reason is safety and clarity. If I read the code later, I wouldn\u0027t want have to investigate whether a hierarchy existed or worry about one being introduced.\n\nAdditionally, I can keep a functional style using Object.keys() which I\u0027m personally more inclined towards and am afforded two additional variables in my iteration function in addition to the element, the index and the array operated upon which is flexible and useful:\n\n Object.keys( this.parsePagesFromItems( $items ) )\n   forEach( function ( title, index, pages ) {} );\n\nI\u0027ll also add that this style is much tidier in a var repo that must be hoist-aware and only gets tidier with fat arrow functions in ES6.\n\nIf prototypal guarding wasn\u0027t default opt-out, I would be much more interested in looping syntax instead of functions. As it is, my preferences is functions which have saner defaults in my opinion and more capabilities built-in.\n\nLastly, I\u0027ve probably should have used reduce here and will look into revising this patch:\n\n Object.keys( this.parsePagesFromItems( $items ) )\n   .reduce( function ( statuses, title ) {\n     statues[ title ] \u003d true;\n     return statuses;\n   } );",
+      "parentUuid": "538e999b_38179255",
+      "range": {
+        "startLine": 63,
+        "startChar": 3,
+        "endLine": 65,
+        "endChar": 27
+      },
+      "revId": "58789b82720f492c835fc993f122d9c28a4af366",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
