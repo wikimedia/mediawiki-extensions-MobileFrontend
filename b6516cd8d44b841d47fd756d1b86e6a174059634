@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6464b8ec_eb603243",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Would be great to make this mandatory in a follow up (likely requires a change to Minerva too).",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5421f2c_8a3ffb9c",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Maybe thumbs[offset \u003d\u003d\u003d 0 ? thumbs.length - 1 : offset - 1] might be more readable?",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dd0be82_454ffb1f",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Overlay has a method clearSpinner on its prototype. Could that be used here?",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6e4c391_858831e6",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Can we replace the done and throw usage with a then while we are here?\n\nThese currently throw deprecation warnings (see https://phabricator.wikimedia.org/T188937)",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e30ebefc_c2a9e85c",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Good catch!",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc0dab9c_848c7583",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "I\u0027d rather void the direct access to window.location here and below (the eslint rule was added to stop doing this in favor of the mediawiki.router abstraction).\n\nIdeally, we should not use window directly inside this overlay though and use the router/overlayManager abstractions.",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3c3574f_dc8d17ca",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "My interpretation of this admit ably vague acceptance criteria:\n`Clicking \"refresh\" should attempt to reload the image (and it may fail again if the issue is unrelated to connection)`\n\nwas that we would try to render the overlay again, however this reloads the entire page.\n(we should check with Alex what he was expecting)\n\nIf refreshing the overlay rather than the page, it might make sense to tie the LoadErrorMessage to a route #/client-error/\u003cfile\u003e (see overlayManager.add() and make this link back to \n#/media/\u003cfile\u003e",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98fdb4e8_6199c69d",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "Note in jQuery returning false does the same as the above 2 lines.",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "456a4148_69bffced",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:28:05Z",
+      "side": 1,
+      "message": "See comment above.",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
