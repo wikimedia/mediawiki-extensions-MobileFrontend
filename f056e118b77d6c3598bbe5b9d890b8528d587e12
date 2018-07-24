@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96c6595e_80137029",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:56:51Z",
+      "side": 1,
+      "message": "🙊\nWe don\u0027t have any plans to subclass this so this FIXME is going to stick around forever (see https://phabricator.wikimedia.org/T122305)\n\nGiven L179 I\u0027d rather not do this and do that instead.",
+      "revId": "f056e118b77d6c3598bbe5b9d890b8528d587e12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "952fb040_35fb4214",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-24T12:56:51Z",
+      "side": 1,
+      "message": "Indeed. Let\u0027s stop piling on the hacks here...",
+      "revId": "f056e118b77d6c3598bbe5b9d890b8528d587e12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
