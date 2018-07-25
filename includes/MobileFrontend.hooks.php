@@ -18,6 +18,9 @@ class MobileFrontendHooks {
 	const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
+	// This should always be kept in sync with @width-breakpoint-tablet
+	// in resources/src/mediawiki.less/mediawiki.ui/variables.less
+	const DEVICE_WIDTH_TABLET = '720px';
 
 	/**
 	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
@@ -437,7 +440,6 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
-		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
 		$pageProps = $config->get( 'MFQueryPropModules' );
 		$searchParams = $config->get( 'MFSearchAPIParams' );
@@ -468,9 +470,7 @@ class MobileFrontendHooks {
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			'wgMFPhotoUploadEndpoint' =>
 				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
-			// Expose the threshold as defined in core to JS clients so they can tell whether
-			// they are in tablet or mobile mode.
-			'wgMFDeviceWidthTablet' => $lessVars['deviceWidthTablet'],
+			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 		];
 
@@ -737,7 +737,6 @@ class MobileFrontendHooks {
 		$mfAppScheme = $config->get( 'MFAppScheme' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
-		$lessVars = $config->get( 'ResourceLoaderLESSVars' );
 
 		$title = $skin->getTitle();
 		$request = $context->getRequest();
@@ -774,7 +773,7 @@ class MobileFrontendHooks {
 				$desktopUrl = $title->getFullUrl();
 				$link = [
 					'rel' => 'alternate',
-					'media' => 'only screen and (max-width: ' . $lessVars['deviceWidthTablet'] . ')',
+					'media' => 'only screen and (max-width: ' . self::DEVICE_WIDTH_TABLET . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				];
 			} elseif ( !$title->isSpecial( 'MobileCite' ) ) {
