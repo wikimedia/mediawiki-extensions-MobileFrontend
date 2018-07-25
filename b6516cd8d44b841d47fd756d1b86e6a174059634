@@ -121,6 +121,24 @@
     },
     {
       "key": {
+        "uuid": "00fbd4ee_aee0fa4e",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-07-25T15:56:57Z",
+      "side": 1,
+      "message": "That\u0027s a good point about the Refresh link. I posted a question to Alex on the phab ticket. Do you think if I tied the error to the client-error route, it would cause confusion for people who refresh their browser themselves without clicking the link and hope for the image load to retry?\n\nWith that change, I would need to edit Minerva as well, correct?",
+      "parentUuid": "a3c3574f_dc8d17ca",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "98fdb4e8_6199c69d",
         "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
         "patchSetId": 16
