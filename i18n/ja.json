@@ -17,7 +17,8 @@
 			"Rxy",
 			"組曲師",
 			"Omotecho",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Kkairri"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -32,6 +33,8 @@
 	"mobile-frontend-categories-summary": "カテゴリを追加",
 	"mobile-frontend-categories-add-heading": "<strong>新しいカテゴリへの<span> $1</span> の追加</strong>",
 	"mobile-frontend-categories-add-wait": "カテゴリを保存しています。お待ち下さい。",
+	"mobile-frontend-categories-normal": "カテゴリ",
+	"mobile-frontend-categories-hidden": "隠しカテゴリ",
 	"mobile-frontend-changeslist-nocomment": "編集の要約なし",
 	"mobile-frontend-cite-error-title": "引用の読み込みエラー",
 	"mobile-frontend-cite-error": "版 ID が不正なため、引用の読み込み中に問題が発生しました。",
