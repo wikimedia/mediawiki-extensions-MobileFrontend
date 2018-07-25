@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8a9b5d2d_a0ba181b",
+        "filename": "resources/mobile.pagelist.scripts/WatchstarPageList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-25T13:19:39Z",
+      "side": 1,
+      "message": "I have the same feelings about else on early exit returns, our whitespace choices, and semicolons. E.g.:\n\n if ( foo ) {\n   return this.getPages( ids, titles ).then( function ( statuses ) {} );\n } else {\n   return null;\n }\n\nInstead of:\n\n if (foo) {\n   return this.getPages(ids, titles).then(function(statuses) {})\n }\n return null\n\nWhat a silly thing but I feel I\u0027m slowly being buried under spaces, tabs, and semicolons!\n\nI personally prefer single line where it doesn\u0027t exceed our max width but I\u0027m not a die hard for it. I\u0027d be happy to merge brace rule override rules MF / MN / Popups repos if it makes your life easier. I\u0027ve removed this offender but there are about 19 others currently.",
+      "parentUuid": "699969ce_003c77e8",
+      "revId": "429227972b7fd4129dba588b9f2e6909e347e791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08805d92_4556d76a",
         "filename": "tests/qunit/mobile.watchstar/test_WatchstarGateway.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2018-07-25T09:43:57Z",
       "side": 1,
       "message": "Use this.sandbox.match\nsinon global usage is not necessary.",
+      "revId": "429227972b7fd4129dba588b9f2e6909e347e791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56a8d2ed_acb4e0ef",
+        "filename": "tests/qunit/mobile.watchstar/test_WatchstarGateway.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-25T13:19:39Z",
+      "side": 1,
+      "message": "Thanks. Fixed!",
+      "parentUuid": "08805d92_4556d76a",
       "revId": "429227972b7fd4129dba588b9f2e6909e347e791",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
