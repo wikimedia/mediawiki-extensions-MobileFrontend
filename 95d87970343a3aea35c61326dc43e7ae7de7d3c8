@@ -22,6 +22,30 @@
       "revId": "95d87970343a3aea35c61326dc43e7ae7de7d3c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a069cbe_6ecb1e6c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-25T13:58:29Z",
+      "side": 1,
+      "message": "Oh so it\u0027s not always 200%? Interesting. \nhttps://blog.wikimedia.org/2017/12/06/think-twice-code-once/ doesn\u0027t go into detail on how this is calculated. What am I missing?\n\nIs it as simple as height/width * 100% ?",
+      "parentUuid": "87abbaca_cb3b11af",
+      "range": {
+        "startLine": 414,
+        "startChar": 53,
+        "endLine": 414,
+        "endChar": 57
+      },
+      "revId": "95d87970343a3aea35c61326dc43e7ae7de7d3c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
