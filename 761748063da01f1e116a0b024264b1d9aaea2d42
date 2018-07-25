@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d2880326_f6240d2a",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-25T14:54:29Z",
+      "side": 1,
+      "message": "Yuk.\nSpecial:Contributions makes use of ContribsPager::processDateFilter to set these as both start and end are mandatory. 🙈",
+      "parentUuid": "02e4ea16_246aa39f",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 15
+      },
+      "revId": "761748063da01f1e116a0b024264b1d9aaea2d42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59953bbd_fabf5e02",
         "filename": "includes/specials/SpecialMobileContributions.php",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-07-24T22:42:47Z",
       "side": 1,
       "message": "$this-\u003eoffset can be used that way, the offset is a timestamp of the last revision (please refer to https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/includes/specials/SpecialMobileHistory.php#L216),\n\nto make it work this way probably we need to change how the \"show more\" button is created.\n\nThe second approach is to always show from the offset\u003d0, but use the offset as a param for `start` when initializing the ContribsPager object. In that way we will always show the self::LIMIT items from date $this-\u003eoffset. This sadly will require update in ContribsPager class itself as start and end can be only date (without time) as the 00:00:00/23:59:59 is always added (https://github.com/wikimedia/mediawiki/blob/master/includes/specials/pagers/ContribsPager.php#L83)",
+      "range": {
+        "startLine": 97,
+        "startChar": 32,
+        "endLine": 97,
+        "endChar": 44
+      },
+      "revId": "761748063da01f1e116a0b024264b1d9aaea2d42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a0449a7_312d763e",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-25T14:54:29Z",
+      "side": 1,
+      "message": "yuk. This code is so convoluted. I can\u0027t work out where offset is obtained from and how inside Special:Contributions!!\n\nAll this said, it looks like we don\u0027t show a \"show more\" button on Contributions page so I\u0027m setting this to always be an empty string for the time being.",
+      "parentUuid": "59953bbd_fabf5e02",
       "range": {
         "startLine": 97,
         "startChar": 32,
