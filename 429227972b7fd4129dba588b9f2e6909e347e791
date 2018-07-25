@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "699969ce_003c77e8",
+        "filename": "resources/mobile.pagelist.scripts/WatchstarPageList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-25T09:43:57Z",
+      "side": 1,
+      "message": "Just to get this off my chest (non-blocking/therapy) :)\n\nWhile I usually don\u0027t care about linting, I must confess something about this single line pattern really irks me and pulls out some kind of undiagnosed OCD whenever I see it.\n\nThat said it appears to be allowed by the wikimedia eslint config (https://github.com/wikimedia/eslint-config-wikimedia/blob/c81c8abb0427e432c5fc1ad1379484ab5dbe6520/.eslintrc.json#L9)\n\nSurprise surprise I found no phabricator discussion around why we allow a single line\n\"one true brace style (allowSingleLine\u003d\u003d\u003dtrue) \"\nhttps://eslint.org/docs/rules/brace-style",
+      "revId": "429227972b7fd4129dba588b9f2e6909e347e791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08805d92_4556d76a",
+        "filename": "tests/qunit/mobile.watchstar/test_WatchstarGateway.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-25T09:43:57Z",
+      "side": 1,
+      "message": "Use this.sandbox.match\nsinon global usage is not necessary.",
+      "revId": "429227972b7fd4129dba588b9f2e6909e347e791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
