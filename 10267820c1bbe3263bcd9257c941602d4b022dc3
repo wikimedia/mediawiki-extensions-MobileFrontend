@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f09bcc7_df158f92",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-26T15:44:12Z",
+      "side": 1,
+      "message": "this will match any p element with `mw-empty-elt` string in the class attribute. It means it will also match `mw-empty-elt-2`, but I think that this an edge case and we shouldn\u0027t worry about it right now.\n\nThe searched classname is prefixed with `mw-`, users shouldn\u0027t use that prefix in their own styles.",
+      "range": {
+        "startLine": 123,
+        "startChar": 33,
+        "endLine": 124,
+        "endChar": 38
+      },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
