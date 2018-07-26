@@ -93,6 +93,30 @@
       "revId": "761748063da01f1e116a0b024264b1d9aaea2d42",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e67fb1c3_9935f341",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-26T03:29:19Z",
+      "side": 1,
+      "message": "Scrap that. This is actually easy. The button wasn\u0027t showing as I wasn\u0027t adding 1 to LIMIt (done in PS3)\n\nThe offset /can/ be used in this way, because I\u0027m now making the call to ContribsPager::processDateFilter\n\nIt works!",
+      "parentUuid": "6a0449a7_312d763e",
+      "range": {
+        "startLine": 97,
+        "startChar": 32,
+        "endLine": 97,
+        "endChar": 44
+      },
+      "revId": "761748063da01f1e116a0b024264b1d9aaea2d42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
