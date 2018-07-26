@@ -76,6 +76,9 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxElement
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getLeadParagraph
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
 	 */
 	public function testTransform( $html, $expected,
 		$reason = 'Move lead paragraph unexpected result'
@@ -95,6 +98,10 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 		$multiStackInfobox = "<div class=\"mw-stack\">$infobox$anotherInfobox</div>";
 		$paragraph = '<p>first paragraph</p>';
 		$emptyP = '<p></p>';
+		// The $paragraphWithWhitespacesOnly has not only whitespaces (space,new line,tab)
+		// , but also contains a span with whitespaces
+		$paragraphWithWhitespacesOnly = '<p class="someParagraphClass">  	'
+			. PHP_EOL . "<span> 	\r\n</span></p>";
 		$collapsibleInfobox = '<table class="collapsible"><table class="infobox"></table></table>';
 		$collapsibleNotInfobox = '<table class="collapsible">'
 			. '<table class="mf-test-infobox"></table></table>';
@@ -122,6 +129,16 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 				"$emptyP$emptyP$infobox$paragraph",
 				"$emptyP$emptyP$paragraph$infobox",
 				'Empty paragraphs are ignored'
+			],
+			[
+				"$paragraphWithWhitespacesOnly$infobox$paragraph",
+				"$paragraphWithWhitespacesOnly$paragraph$infobox",
+				'T199282: lead paragraph should move when there is empty paragraph before infobox'
+			],
+			[
+				"$infobox$paragraphWithWhitespacesOnly",
+				"$infobox$paragraphWithWhitespacesOnly",
+				'T199282: the empty paragraph should not be treated as lead paragraph'
 			],
 			[
 				"$paragraph$emptyP$infobox$paragraph",
