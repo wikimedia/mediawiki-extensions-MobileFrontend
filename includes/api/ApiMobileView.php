@@ -19,7 +19,7 @@ class ApiMobileView extends ApiBase {
 	/** @var boolean Saves whether the output is formatted or not */
 	private $noTransform;
 	/** @var boolean Saves whether page images should be added or not */
-	private $usePageImages;
+	protected $usePageImages;
 	/** @var string Saves in which language the content should be output */
 	private $variant;
 	/** @var Integer Saves at which character the section content start at */
@@ -35,7 +35,7 @@ class ApiMobileView extends ApiBase {
 	 * @param string $action Name of this module
 	 */
 	public function __construct( $main, $action ) {
-		$this->usePageImages = defined( 'PAGE_IMAGES_INSTALLED' );
+		$this->usePageImages = ExtensionRegistry::getInstance()->isLoaded( 'PageImages' );
 		parent::__construct( $main, $action );
 	}
 

@@ -5,6 +5,12 @@ class MockApiMobileView extends ApiMobileView {
 	/** @var PHPUnit_Framework_MockObject_MockObject */
 	public $mockFile;
 
+	public function __construct( ApiMain $main, $action ) {
+		parent::__construct( $main, $action );
+		// Force usePageImages = true
+		$this->usePageImages = true;
+	}
+
 	protected function makeTitle( $name ) {
 		$t = Title::newFromText( $name );
 		$row = new stdClass();
@@ -141,10 +147,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		$context->setOutput( new OutputPage( $context ) );
 		$this->setMwGlobals( 'wgOut', $context->getOutput() );
 		$context->setRequest( $request );
-
-		if ( !defined( 'PAGE_IMAGES_INSTALLED' ) ) {
-			define( 'PAGE_IMAGES_INSTALLED', true );
-		}
 
 		return new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
 	}

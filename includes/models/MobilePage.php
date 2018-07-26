@@ -37,7 +37,7 @@ class MobilePage {
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;
 		// @todo FIXME: check existence
-		if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
 			$this->usePageImages = true;
 			$this->file = $file ? $file : PageImages::getPageImage( $title );
 		}

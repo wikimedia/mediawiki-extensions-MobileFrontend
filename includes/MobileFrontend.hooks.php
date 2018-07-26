@@ -444,7 +444,7 @@ class MobileFrontendHooks {
 		$pageProps = $config->get( 'MFQueryPropModules' );
 		$searchParams = $config->get( 'MFSearchAPIParams' );
 		// Avoid API warnings and allow integration with optional extensions.
-		if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
 			$pageProps[] = 'pageimages';
 			$searchParams = array_merge_recursive( $searchParams, [
 				'piprop' => 'thumbnail',

@@ -41,7 +41,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	public function executeWhenAvailable( $par ) {
 		// Anons don't get a watchlist
 		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
-		$this->usePageImages = defined( 'PAGE_IMAGES_INSTALLED' );
+		$this->usePageImages = ExtensionRegistry::getInstance()->isLoaded( 'PageImages' );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
