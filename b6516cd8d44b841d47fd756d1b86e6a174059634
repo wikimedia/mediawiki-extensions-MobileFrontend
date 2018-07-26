@@ -139,6 +139,24 @@
     },
     {
       "key": {
+        "uuid": "e6402ae2_efc74959",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-26T01:22:31Z",
+      "side": 1,
+      "message": "Good point about the client-error route. Maybe that\u0027s not the best approach here. I guess this is similar to the LoadingOverlay.\n\nrouter.navigate( \u0027\u0027 );\nand a link back to the media overlay might make more sense - the URL would need to be passed as a parameter in the constructor.",
+      "parentUuid": "00fbd4ee_aee0fa4e",
+      "revId": "b6516cd8d44b841d47fd756d1b86e6a174059634",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "98fdb4e8_6199c69d",
         "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
         "patchSetId": 16
