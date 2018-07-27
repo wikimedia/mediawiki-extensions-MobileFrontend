@@ -148,7 +148,7 @@ class MobileContext extends ContextSource {
 	 * will only be displayed to tablet devices if `$wgMFShowMobileViewToTablets`
 	 * is truthy.
 	 *
-	 * @FIXME: This should be renamed to something more appropriate, e.g.
+	 * @fixme This should be renamed to something more appropriate, e.g.
 	 * `shouldDisplayMobileViewToDevice`.
 	 *
 	 * @see MobileContext::shouldDisplayMobileView

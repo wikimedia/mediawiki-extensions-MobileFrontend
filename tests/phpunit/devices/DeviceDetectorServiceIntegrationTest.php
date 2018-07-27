@@ -101,7 +101,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @FIXME Should this really be the case?
+	 * @fixme Should this really be the case?
 	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
 	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
 	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice

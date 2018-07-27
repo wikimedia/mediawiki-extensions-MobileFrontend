@@ -23,7 +23,7 @@ class CustomHeaderDeviceDetector implements DeviceDetector {
 	 * @param Config $config The global config. Currently this can be any instance
 	 *  of `GlobalVarConfig`.
 	 *
-	 * @TODO In future, however, this should probably be a MobileFrontend-specific
+	 * @todo In future, however, this should probably be a MobileFrontend-specific
 	 * instance. `GlobalVarConfig#__construct` accepts a custom prefix to avoid
 	 * repeating prefixes in `#get` calls, e.g.
 	 *
