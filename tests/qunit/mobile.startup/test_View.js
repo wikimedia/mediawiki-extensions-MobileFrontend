@@ -2,7 +2,7 @@
 
 	var View = M.require( 'mobile.startup/View' );
 
-	QUnit.module( 'MobileFrontend mobile.view/View', {
+	QUnit.module( 'MobileFrontend mobile.startup/View', {
 		setup: function () {
 			var compiler = {
 				compile: function () {

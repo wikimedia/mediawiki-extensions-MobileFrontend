@@ -39,6 +39,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.common/AbuseFilterOverlay', AbuseFilterOverlay )
-		.deprecate( 'mobile.abusefilter/AbuseFilterOverlay' );
+	M.define( 'mobile.editor.common/AbuseFilterOverlay', AbuseFilterOverlay );
 }( mw.mobileFrontend ) );

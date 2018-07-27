@@ -70,7 +70,5 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/PageList', PageList )
-		.deprecate( 'mobile.pagelist/PageList' );
-
+	M.define( 'mobile.startup/PageList', PageList );
 }( mw.mobileFrontend ) );

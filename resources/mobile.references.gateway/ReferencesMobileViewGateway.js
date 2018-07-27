@@ -24,7 +24,7 @@
 	 * results. By default it uses the NoCache implementation, which doesn't
 	 * cache anything. The singleton instance exposed by this module uses
 	 * a MemoryCache which caches requests in-memory. Any other Cache class
-	 * compatible with mobile.cache's interface will actually work.
+	 * compatible with mobile.startup/cache's interface will actually work.
 	 */
 	function ReferencesMobileViewGateway( api, cache ) {
 		ReferencesHtmlScraperGateway.call( this, api );

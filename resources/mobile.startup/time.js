@@ -138,6 +138,5 @@
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
 		isRecent: isRecent
-	} ).deprecate( 'mobile.modifiedBar/time' );
-
+	} );
 }( mw.mobileFrontend ) );

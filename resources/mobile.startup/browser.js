@@ -162,7 +162,5 @@
 		return browser;
 	};
 
-	M.define( 'mobile.startup/Browser', Browser )
-		.deprecate( 'mobile.browser/Browser' );
-
+	M.define( 'mobile.startup/Browser', Browser );
 }( mw.mobileFrontend ) );

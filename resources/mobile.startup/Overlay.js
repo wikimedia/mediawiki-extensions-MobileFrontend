@@ -338,7 +338,5 @@
 	/** @ignore @event Overlay#Overlay-exit */
 	Overlay.EVENT_EXIT = 'Overlay-exit';
 
-	M.define( 'mobile.startup/Overlay', Overlay )
-		.deprecate( 'mobile.overlays/Overlay' );
-
+	M.define( 'mobile.startup/Overlay', Overlay );
 }( mw.mobileFrontend ) );

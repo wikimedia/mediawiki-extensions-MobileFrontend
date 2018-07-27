@@ -68,7 +68,5 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.common/AbuseFilterPanel', AbuseFilterPanel )
-		.deprecate( 'mobile.abusefilter/AbuseFilterPanel' );
-
+	M.define( 'mobile.editor.common/AbuseFilterPanel', AbuseFilterPanel );
 }( mw.mobileFrontend ) );

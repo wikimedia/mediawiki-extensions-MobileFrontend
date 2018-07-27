@@ -58,5 +58,5 @@
 	M.define( 'mobile.startup/cache', {
 		MemoryCache: MemoryCache,
 		NoCache: NoCache
-	} ).deprecate( 'mobile.cache' );
+	} );
 }( mw.mobileFrontend ) );

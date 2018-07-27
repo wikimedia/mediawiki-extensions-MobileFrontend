@@ -99,7 +99,5 @@
 		}
 	} );
 
-	M.define( 'mobile.startup/Drawer', Drawer )
-		.deprecate( 'mobile.drawers/Drawer' );
-
+	M.define( 'mobile.startup/Drawer', Drawer );
 }( mw.mobileFrontend ) );
