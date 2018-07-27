@@ -30,7 +30,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * Formats an edit comment
 	 * @param string $comment The raw comment text
 	 * @param Title $title The title of the page that was edited
-	 * @fixme: Duplication with SpecialMobileWatchlist
+	 * @fixme Duplication with SpecialMobileWatchlist
 	 *
 	 * @return string HTML code
 	 */

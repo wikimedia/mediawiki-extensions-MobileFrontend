@@ -62,7 +62,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Execute the requested Api actions.
-	 * @todo: Write some unit tests for API results
+	 * @todo Write some unit tests for API results
 	 */
 	public function execute() {
 		// Logged-in users' parser options depend on preferences

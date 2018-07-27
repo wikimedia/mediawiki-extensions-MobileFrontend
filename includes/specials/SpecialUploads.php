@@ -94,7 +94,7 @@ class SpecialUploads extends MobileSpecialPage {
 	 *
 	 * We use 'username' here rather than id to take advantage of indexes.
 	 *
-	 * @TODO add memcache support
+	 * @todo add memcache support
 	 *
 	 * @param string $username
 	 * @return int|bool Will return the # of images (up to the threshold + 1)
