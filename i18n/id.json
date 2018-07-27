@@ -64,7 +64,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Peringatan: Apakah Anda yakin Anda ingin menyimpan perubahan ini? Mungkin ada masalah dengan suntingan itu.",
 	"mobile-frontend-editor-anon": "Sunting tanpa masuk log",
 	"mobile-frontend-editor-anonwarning": "<strong>Peringatan</strong>: Anda belum masuk log. IP Anda akan terlihat secara publik jika Anda membuat suntingan. Jika Anda <strong>masuk log</strong> atau <strong>membuat akun</strong>, suntingan Anda akan melekat pada nama pengguna Anda, berikut keuntungan lainnya.",
-	"mobile-frontend-editor-blocked-info": "Alamat IP Anda diblokir dari penyuntingan. Pemblokiran dilakukan oleh {{GENDER:$2|$2}} karena alasan berikut ini: $1",
 	"mobile-frontend-editor-cancel": "Batal",
 	"mobile-frontend-editor-cancel-confirm": "Apakah Anda benar-benar ingin meninggalkan suntingan Anda?",
 	"mobile-frontend-editor-captcha-try-again": "Kode salah, coba lagi.",

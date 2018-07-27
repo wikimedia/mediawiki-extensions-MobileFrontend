@@ -46,7 +46,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Hoiatus: Kas oled kindel, et tahad seda muudatust salvestada? Selle juures võib olla probleem.",
 	"mobile-frontend-editor-anon": "Redigeeri sisse logimata",
 	"mobile-frontend-editor-anonwarning": "<strong>Hoiatus</strong>: Sa pole sisse logitud. Kui teed muudatusi, on sinu IP-aadress kõigile avalikult nähtav. Kui <strong>logid sisse</strong> või <strong>lood konto</strong>, omistatakse muudatused sulle kasutajanime järgi, seda lisaks muudele eelistele.",
-	"mobile-frontend-editor-blocked-info": "Redigeerimine sinu IP-aadressiga on blokeeritud. Blokeerinud $1 järgmise põhjendusega: $2.",
 	"mobile-frontend-editor-cancel": "Loobu",
 	"mobile-frontend-editor-cancel-confirm": "Kas soovid tõesti oma muudatusest loobuda?",
 	"mobile-frontend-editor-captcha-try-again": "Vale kood, proovi uuesti.",

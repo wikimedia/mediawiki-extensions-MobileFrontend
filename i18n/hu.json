@@ -58,7 +58,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Figyelmeztetés: Biztos el akarod menteni ezt a szerkesztést? Problémás lehet.",
 	"mobile-frontend-editor-anon": "Szerkesztés bejelentkezés nélkül",
 	"mobile-frontend-editor-anonwarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Ha szerkesztesz, az IP-címed nyilvánosan látható lesz a laptörténetben. Ha <strong>bejelentkezel</strong> vagy <strong>regisztrálsz</strong>, a szerkesztéseid a felhasználónevedhez lesznek társítva, egyéb hasznos dolgok mellett.",
-	"mobile-frontend-editor-blocked-info": "Az IP-címed blokkolva van a szerkesztéstől. A blokkot $2 állította be a következő okból: $1",
 	"mobile-frontend-editor-cancel": "Mégse",
 	"mobile-frontend-editor-cancel-confirm": "Biztos abba akarod hagyni a szerkesztést?",
 	"mobile-frontend-editor-captcha-try-again": "Hibás kód, próbáld újra.",

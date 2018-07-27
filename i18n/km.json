@@ -49,7 +49,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "ប្រយ័ត្ន៖ តើអ្នកពិតជាចង់រក្សាទុកកំណែប្រែនេះឬ? ប្រហែលជាមានបញ្ហាណាមួយនៅក្នុងនោះ។",
 	"mobile-frontend-editor-anon": "កែប្រែដោយមិនបាច់កត់ឈ្មោះចូល",
 	"mobile-frontend-editor-anonwarning": "<strong>ប្រយ័ត្ន ៖</strong> អ្នកមិនបានកត់ឈ្មោះចូល​ទេ។ អាសយដ្ឋានIPរបស់អ្នក​នឹងត្រូវបង្ហាញជាសាធារណៈបើសិនជាអ្នកធ្វើកំណែប្រែណាមួយ។ បើសិនជាអ្នក <strong>កត់ឈ្មោះចូល</strong> ឬ <strong>បង្កើតគណនី</strong> នោះការកែប្រែរបស់អ្នកនឹងត្រូវភ្ចាប់ជាមួយអត្តនាមរបស់អ្នកផង និងមានផលប្រយោជន៍ផ្សេងទៀតផង។",
-	"mobile-frontend-editor-blocked-info": "អាសយដ្ឋានIPរបស់អ្នកត្រូវបានហាមឃាត់មិនអោយធ្វើកំណែប្រែទេ។ ការហាមឃាត់ត្រូវធ្វើដោយ {{GENDER:$1|$1}} ដោយមូលហេតុ៖ $2។",
 	"mobile-frontend-editor-cancel": "បោះបង់",
 	"mobile-frontend-editor-cancel-confirm": "តើអ្នកពិតជាចង់បោះបង់ការកែប្រែរបស់អ្នកឬ?",
 	"mobile-frontend-editor-captcha-try-again": "កូដមិនត្រឹមត្រូវ។ សូមព្យាយាមម្ដងទៀត។",

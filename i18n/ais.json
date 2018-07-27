@@ -45,7 +45,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "patalaw: amilucek kisu misuped tina mikawaway-kalumyiti? hakay izaw ku munday",
 	"mobile-frontend-editor-anon": "caay patalabu mikawaway-kalumyiti",
 	"mobile-frontend-editor-anonwarning": "<strong> patalaw </strong>: caay henay kisu patalabu. amahica kisu miteka amahicahica mikawaway-kalumyiti, IP puenengan nu misu amapabinawlan. amahica kisu <strong>patalabu</strong> saca <strong>panganganen ku canghaw</strong>, mikawaway-kalumyiti nu misu asacuzu’ misaungayay a kalungangan nu misu atu izaw ku zuma a kapahay.",
-	"mobile-frontend-editor-blocked-info": "numisu a IP puenengan malangatay tu mapasatezep tu nu mikawaway-kalumyiti, malangatay tisuwan sa u{{GENDER:$1|$1}}, mahinisa ku isasa’ mahicaay: $2",
 	"mobile-frontend-editor-cancel": "palawpes",
 	"mobile-frontend-editor-cancel-confirm": "malucekay amiales mikawaway-kalumyiti nu misu haw?",
 	"mobile-frontend-editor-captcha-try-again": "yincenma-kodo mungangaw, pitanam aca",

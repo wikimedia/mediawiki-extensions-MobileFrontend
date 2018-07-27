@@ -16,7 +16,8 @@
 			"Jdlrobson",
 			"J. 'mach' wust",
 			"Predatorix",
-			"MGChecker"
+			"MGChecker",
+			"Kurt Jansson"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Melde dich an oder erstelle ein Benutzerkonto, um deine Bearbeitungen zu verfolgen.",
@@ -63,8 +64,11 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Mehr lesen",
 	"mobile-frontend-editor-abusefilter-warning": "Warnung: Willst du diese Bearbeitung wirklich speichern? Es könnte ein Problem mit ihr geben.",
 	"mobile-frontend-editor-anon": "Ohne Anmeldung bearbeiten",
-	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird öffentlich sichtbar, wenn du Bearbeitungen durchführst. Falls du dich <strong>anmeldest</strong> oder <strong>ein Benutzerkonto erstellst</strong>, werden deine Bearbeitungen zusammen mit anderen Beiträgen deinem Benutzernamen zugeordnet.",
-	"mobile-frontend-editor-blocked-info": "Deine IP-Adresse wurde für das Bearbeiten gesperrt. Die Sperre wurde von {{GENDER:$1|$1}} aus dem folgenden Grund durchgeführt: $2.",
+	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird bei Bearbeitungen öffentlich sichtbar. <strong>Melde dich an</strong>, damit Bearbeitungen deinem Benutzernamen zugeordnet werden.",
+	"mobile-frontend-editor-blocked-drawer-title": "Dein Benutzerkonto wurde für das Bearbeiten von {{SITENAME}} gesperrt",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Grund für die Sperre",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Gesperrt}} von",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Die Sperre wird ablaufen in",
 	"mobile-frontend-editor-generic-block-reason": "Begründung unbekannt",
 	"mobile-frontend-editor-cancel": "Abbrechen",
 	"mobile-frontend-editor-cancel-confirm": "Willst du wirklich deine Bearbeitung verwerfen?",

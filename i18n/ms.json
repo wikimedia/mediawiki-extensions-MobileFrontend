@@ -44,7 +44,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Amaran: Adakah anda pasti anda mahu menyimpan suntingan ini? Mungkin terdapat sebarang masalah.",
 	"mobile-frontend-editor-anon": "Sunting tanpa log masuk dahulu",
 	"mobile-frontend-editor-anonwarning": "<strong>Amaran</strong>: Anda tidak log masuk. Alamat IP anda akan disiarkan kepada umum juka anda membuat sebarang suntingan. Jika anda <strong>log masuk</strong> atau <strong>membuka akaun</strong>, maka suntingan anda akan diatribusikan kepada nama pengguna anda di samping manfaat-manfaat lain.",
-	"mobile-frontend-editor-blocked-info": "Alamat IP anda disekat dari menyunting. Sekatan dilakukan oleh {{GENDER:$2|$2}} atas sebab yang berikut: $1",
 	"mobile-frontend-editor-cancel": "Batalkan",
 	"mobile-frontend-editor-cancel-confirm": "Adakah anda benar-benar mahu meninggalkan suntingan anda?",
 	"mobile-frontend-editor-captcha-try-again": "Kod salah. Sila cuba lagi.",

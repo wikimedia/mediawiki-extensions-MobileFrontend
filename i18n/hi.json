@@ -62,7 +62,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "चेतावनी: क्या आप सच में सम्पादन को सहेजना चाहते हैं? शायद इसमें समस्या है।",
 	"mobile-frontend-editor-anon": "बिना प्रवेश के संपादित करें",
 	"mobile-frontend-editor-anonwarning": "<strong>सावधान</strong>: आपने सत्रारंभ नहीं किया है। यदि आप सम्पादन करते हैं तो इस पृष्ठ के संपादन इतिहास में आपका आइ॰पी पता अंकित किया जाएगा। यदि आप <strong>[$1 लॉगिन]</strong> करते हैं अथवा <strong>[$2 खाता बनाते हैं]</strong> तो अन्य सुविधाओं के साथ-साथ आपके संपादनों का श्रेय आपके सदस्यनाम पर दिया जाएगा।",
-	"mobile-frontend-editor-blocked-info": "आपका आईपी पता संपादन से अवरुद्ध है। निम्न कारण से {{GENDER:$1|$1}} द्वारा ब्लॉक किया गया था: $2",
 	"mobile-frontend-editor-cancel": "रद्द करें",
 	"mobile-frontend-editor-cancel-confirm": "क्या आप सच में अपने संपादन का परित्याग करना चाहते हैं?",
 	"mobile-frontend-editor-captcha-try-again": "गलत कोड, पुन: प्रयास करें।",

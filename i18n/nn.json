@@ -49,7 +49,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Åtvaring: Er du sikker på at du vil lagra denne endringa? Det kan vere eit problem med ho.",
 	"mobile-frontend-editor-anon": "Endre utan å logga inn",
 	"mobile-frontend-editor-anonwarning": "<strong>Åtvaring</strong>: Du er ikkje logga inn. IP-adressa du vil verte synleg for offentligheita om du gjer nokre endringar. Viss du <strong>loggar inn</strong> eller <strong>skapar ein konto</strong> vil endringane dine verte tilskrive brukarnamnet ditt, og du vil få fleire moglegheitar.",
-	"mobile-frontend-editor-blocked-info": "IP-adressa di er blokkert frå å endra. Blokkeringa vart gjort av {{GENDER:$1|$1}} for fylgjande årsak: $2.",
 	"mobile-frontend-editor-cancel": "Bryt av",
 	"mobile-frontend-editor-cancel-confirm": "Er du viss på at du ynskjer å kasta endringa di?",
 	"mobile-frontend-editor-captcha-try-again": "Feil kode, prøv igjen.",

@@ -53,7 +53,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Atenție: Sunteți sigur(ă) că doriți să salvați această modificare? Este posibil ca aceasta să prezinte probleme.",
 	"mobile-frontend-editor-anon": "Modificare fără autentificare",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenție:</strong> Nu v-ați autentificat. Adresa dumneavoastră IP va fi vizibilă în mod public dacă efectuați modificări. Dacă vă <strong>autentificați</strong> sau vă <strong>creați un cont</strong>, modificările dumneavoastră vor fi asociate numelui de utilizator, pe lângă alte beneficii.",
-	"mobile-frontend-editor-blocked-info": "Adresa dumnevoastră IP este blocată de la modificări. Blocarea a fost efectuată de către {{GENDER:$1|$1}} pentru următorul motiv: $2",
 	"mobile-frontend-editor-cancel": "Revocare",
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",
 	"mobile-frontend-editor-captcha-try-again": "Cod eronat; reîncercați.",

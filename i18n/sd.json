@@ -53,7 +53,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "چتاءُ: ڇا اوهان پڪ سان اهي ترميم محفوضي رهيا آهيو؟ ان سان ڪو مسئلو ٿي سگھي ٿو.",
 	"mobile-frontend-editor-anon": "ترميم داخلا کان بغير",
 	"mobile-frontend-editor-anonwarning": "<strong>چتاءِ</strong>: توهان داخل ٿيل نه آهيو. جيڪڏهن اوهان ترميم ڪئي، ته اوهانجو آءِ پي پتو عوامي طور ظاهر ٿيندو. جيڪڏهن توهان <strong>داخل ٿيو</strong> يا <strong>کاتو کوليو</strong>، ته ٻين فائدن سان گڏ توهان جو ترميمون توهان جي واپرائيندڙ-نانءَ سان منسوب ڪيون وينديون.",
-	"mobile-frontend-editor-blocked-info": "توهان جي آءِ پي پتي کي ترميم کان روڪڻ لاءِ بندش وڌي وئي آهي. بندش  {{GENDER:$1|$1}} وڌي آهي، هيٺ وجهه ڏسو: $2.",
 	"mobile-frontend-editor-generic-block-reason": "نامعلوم مسئلو",
 	"mobile-frontend-editor-cancel": "رد",
 	"mobile-frontend-editor-cancel-confirm": "ڇا توھان سچ ۾ پنھنجي ترميم ڇڏي ڏيڻ ٿا چاھيو؟",

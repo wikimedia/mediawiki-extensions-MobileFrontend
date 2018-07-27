@@ -59,7 +59,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Cảnh báo: Bạn có chắc chắn muốn lưu trang này? Các thay đổi này có thể có vấn đề.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
 	"mobile-frontend-editor-anonwarning": "<strong>Cảnh báo:</strong> Bạn chưa đăng nhập. Địa chỉ IP của bạn sẽ bị hiển thị công khai nếu bạn thực hiện bất kỳ sửa đổi nào. Nếu bạn <strong>đăng nhập</strong> hoặc <strong>mở tài khoản</strong>, sửa đổi của bạn sẽ được gán bởi tên đăng nhập của bạn, cùng nhiều lợi ích khác.",
-	"mobile-frontend-editor-blocked-info": "Địa chỉ IP của bạn bị cấm sửa đổi. Người đã cấm là {{GENDER:$1}}$1 với lý do: $2.",
 	"mobile-frontend-editor-cancel": "Hủy bỏ",
 	"mobile-frontend-editor-cancel-confirm": "Bạn có thực sự muốn từ bỏ sửa đổi của bạn?",
 	"mobile-frontend-editor-captcha-try-again": "Mã sai, hãy thử lại.",

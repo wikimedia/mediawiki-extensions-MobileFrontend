@@ -57,7 +57,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Įspėjimas: Ar tikrai norite išsaugoti pakeitimą? Jame gali būti problemų.",
 	"mobile-frontend-editor-anon": "Redaguoti neprisijungus",
 	"mobile-frontend-editor-anonwarning": "<strong>Įspėjimas</strong>: Jūs nesate prisijungę. Jūsų IP adresas bus viešai matomas, jeigu atliksite kokių nors pakeitimų. Jeigu jūs <strong>prisijungsite</strong> arba <strong>susikursite paskyrą</strong>, jūsų pakeitimai bus priskiriami jūsų naudotojo vardui, kartu su kitais privalumais.",
-	"mobile-frontend-editor-blocked-info": "Jūsų IP adresui yra uždrausta redaguoti. Draudimą skyrė {{GENDER:$1|$1}} dėl šios priežasties: $2.",
 	"mobile-frontend-editor-cancel": "Atšaukti",
 	"mobile-frontend-editor-cancel-confirm": "Ar tikrai norite atsisakyti savo pakeitimų?",
 	"mobile-frontend-editor-captcha-try-again": "Neteisingas kodas, bandykite dar kartą.",

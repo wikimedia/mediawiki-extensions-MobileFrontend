@@ -31,7 +31,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Upozorenje: možda postoji problem s ovim uređivanjem, želite li ga spremiti?",
 	"mobile-frontend-editor-anon": "Uredi bez prijavljivanja",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje:</strong> Niste prijavljeni. Ako objavite stranicu, Vaša IP adresa će biti javno vidljiva u njenoj istoriji izmena i drugde. Ako se <strong>prijavite</strong> ili <strong>otvorite nalog</strong>, pored ostalih pogodnosti koje dobijate Vaše izmene će biti pripisivane Vašem korisničkom imenu.",
-	"mobile-frontend-editor-blocked-info": "Vašoj IP adresi je onemogućeno uređivanje. {{GENDER:$1|Blokirao|Blokirala}} vas je $1 iz sledećeg razloga: $2.",
 	"mobile-frontend-editor-cancel": "Otkaži",
 	"mobile-frontend-editor-cancel-confirm": "Da li zaista želite da napustite stranicu, vaše izmene nisu sačuvane?",
 	"mobile-frontend-editor-captcha-try-again": "Pogrešan kod, pokušajte ponovo.",

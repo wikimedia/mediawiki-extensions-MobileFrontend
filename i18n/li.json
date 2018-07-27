@@ -51,7 +51,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Waorsjoewing: wèts se zeker det se dees bewirking wils opslaon? Mesjiens is get fout.",
 	"mobile-frontend-editor-anon": "Bewirk zónger aanmeljing",
 	"mobile-frontend-editor-anonwarning": "<strong>Waorsjoewing:</strong> Doe bös neet aangemeldj.\nDien IP-adres wuuertj opgeslage wen se verangeringe maaks op dees pagina. Wens doe <strong>dich aanmeljs</strong> of <strong>'ne gebroeker aanmaaks</strong> versjiene dien bewirkinge ónger diene gebroekersnaam, naeve anger veurdeiler.",
-	"mobile-frontend-editor-blocked-info": "Dien IP-adres is geblokkeerd veur bewirke. De blokkaasj is ingestèld door {{GENDER:$1|$1}} veur de volgende raeje: $2.",
 	"mobile-frontend-editor-cancel": "Braek aaf",
 	"mobile-frontend-editor-cancel-confirm": "Wils se dien bewirking ech laote valle?",
 	"mobile-frontend-editor-captcha-try-again": "Verkieërde code; perbeer oppernuuj.",

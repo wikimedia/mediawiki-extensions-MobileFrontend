@@ -45,7 +45,6 @@
 	"mobile-frontend-editor-abusefilter-read-more": "לייענט ווײטער",
 	"mobile-frontend-editor-anon": "רעדאקטירן אן ארײַנלאגירן",
 	"mobile-frontend-editor-anonwarning": "<strong>ווארענונג:</strong> איר זענט נישט אריינלאגירט. אייער איי פי אדרעס וועט ווערן עפנטלעך זעבאר ווען איר פירט אדורך ענדערונגען . אז איר <strong>לאגירט ארײַן</strong> אדער <strong>שאפֿט א קאנטע</strong>, וועלן אײַערע רעדאקטירונגען ווערן צוגעשריבן צו אײַער באניצער-נאמען, ווי אויך אנדערע טובות.",
-	"mobile-frontend-editor-blocked-info": "אייער IP־אדרעס איז בלאקירט פֿון רעדאקטירן. דעם בלאק האט {{GENDER:$1|$1}} געמאכט פֿארן פֿאלגנדן גרונד: $2",
 	"mobile-frontend-editor-cancel": "אַנולירן",
 	"mobile-frontend-editor-cancel-confirm": "צי ווילט איר טאקע אפלאזן אייער רעדאקטירונג?",
 	"mobile-frontend-editor-captcha-try-again": "פאלשער קאד, פרובירט נאכאמאל.",

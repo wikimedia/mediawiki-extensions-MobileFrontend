@@ -48,7 +48,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Mangkahadé: Anjeun yakin rék nyimpen ieu éditan? Sigana aya masalah jeung éta éditan.",
 	"mobile-frontend-editor-anon": "Édit tanpa asup log",
 	"mobile-frontend-editor-anonwarning": "<strong>Mangkahadé</strong>: Anjeun can asup log. IP anjeun bakal katémbong ku balaréa mun anjeun ngédit. Saupamana anjeun <strong>asup log</strong> mah atawa <strong>nyieun akun</strong>, éditan anjeun bakal napel kana ngaran pamaké anjeun, di handap ieu kauntungan lianna.",
-	"mobile-frontend-editor-blocked-info": "Alamat IP anjeun dipeungpeuk tina ngédit. Peungpeukan dijieun ku {{GENDER:$2|$2}} pikeun alesan di handap: $1",
 	"mobile-frontend-editor-cancel": "Bolay",
 	"mobile-frontend-editor-cancel-confirm": "Anjeun yakin rék miang ninggalkeun éditan anjeun?",
 	"mobile-frontend-editor-captcha-try-again": "Kodeu salah, cobaan deui.",

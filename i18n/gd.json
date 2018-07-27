@@ -48,7 +48,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "Rabhadh: A bheil thu cinnteach gu bheil thu airson an deasachadh seo a shàbhaladh? Dh'fhaoidte gun bheil duilgheadas ann leis.",
 	"mobile-frontend-editor-anon": "Deasaich gun logadh a-steach",
 	"mobile-frontend-editor-anonwarning": "<strong>Rabhadh:</strong> Chan eil thu air logadh a-steach. Chithear an seòladh IP agad gu poblach ma nì thu deasachadh sam bith. Ma nì thu <strong>logadh a-steach</strong> no ma <strong>chruthaicheas tu cunntas</strong>, thèid d' ainm a chur ris na dheasaich thu 's gheibh thu buannachd a bharrachd às cuideachd.",
-	"mobile-frontend-editor-blocked-info": "Chan fhaod an seòladh IP agad deasachadh. Chaidh a bhacadh le {{GENDER:$1|$1}} air an adhbhar seo: $2.",
 	"mobile-frontend-editor-cancel": "Sguir dheth",
 	"mobile-frontend-editor-cancel-confirm": "A bheil thu cinnteach gu bheil thu airson an deasachadh agad a leigeil seachad?",
 	"mobile-frontend-editor-captcha-try-again": "Seo còd cearr, feuch ris a-rithist.",

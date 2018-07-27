@@ -59,7 +59,6 @@
 	"mobile-frontend-editor-abusefilter-warning": "انتباہ: کیا آپ واقعی اس ترمیم کو محفوظ کرنا چاہتے ہیں؟ شاید کوئی مشکل درپیش ہے۔",
 	"mobile-frontend-editor-anon": "ترمیم بدون داخل نوشتگی",
 	"mobile-frontend-editor-anonwarning": "<strong>انتباہ</strong>: آپ لاگ ان نہیں ہیں۔ چناں چہ اگر آپ کوئی ترمیم کرتے ہیں تو آپ کا آئی پی پتہ عوامی طور پر نظر آئے گا۔\nتاہم اگر آپ<strong>لاگ ان</strong> یا <strong>کھاتہ بنا لیتے ہیں</strong> تو دیگر فوائد کے ساتھ ساتھ آپ کی ترامیم آپ کے صارف نام سے منسوب ہوگی۔",
-	"mobile-frontend-editor-blocked-info": "آپ کے آئی پی پتے سے ترمیم کاری ممنوع ہے۔ {{GENDER:$1|$1}} نے درج ذیل وجہ کی بنا پر پابندی عائد کی ہے: $2۔",
 	"mobile-frontend-editor-generic-block-reason": "نامعلوم وجہ",
 	"mobile-frontend-editor-cancel": "منسوخ",
 	"mobile-frontend-editor-cancel-confirm": "کیا واقعی آپ اس ترمیم کو چھوڑ دینا چاہتے ہیں؟",

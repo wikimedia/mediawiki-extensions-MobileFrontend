@@ -9,6 +9,8 @@
 	"mobile-frontend-changeslist-nocomment": "Үзгәртүләр тасвирламасы юк",
 	"mobile-frontend-copyright": "Мәгълүмат $1 буенча таратыла (әгәр башкасы күрсәтелмәсә).",
 	"mobile-frontend-desc": "Мобиль интерфейс",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Тыю сәбәбе",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
 	"mobile-frontend-featured-article": "Көннең сайланган материалы",
 	"mobile-frontend-language-heading": "<strong>Телләр</strong>",
