@@ -22,6 +22,29 @@
       "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc43b3e7_22eded9a",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-27T04:25:55Z",
+      "side": 1,
+      "message": "This line of code seems like it may have been intended to match non-empty paragraphs. However, assuming PHP DOMElement resembles a standard DOM (I haven\u0027t checked), this check might not be working.\n\nSpecifically, the nodeValue property tends to exist only on Text nodes, which would not have made it through the nodeType filter, nor the tagName filter (and would have yielded \"Undefined tagName\").\n\nHowever, this seems like the perfect place to retrieve child nodes and assert that they resemble \"emptyness\", which I would define as follows:\n\n* Have no child nodes of type Element.\n* Have no child nodes of type Text having trim(nodeValue) !\u003d\u003d \u0027\u0027. \n\nIf there is no child nodes, or if there are only other childnode-types, or if there is one Element child, or one Text child with text that isn\u0027t timmable to \"\", then we\u0027ve got something.",
+      "range": {
+        "startLine": 181,
+        "startChar": 10,
+        "endLine": 181,
+        "endChar": 60
+      },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
