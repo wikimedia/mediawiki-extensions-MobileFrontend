@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "0ff389c9_28f34d1e",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-27T18:10:40Z",
+      "side": 1,
+      "message": "The main difference between this xpathQuery and hasNoNonEmptyPreceedingParagraphs is:\n - the xPathQuery will try to match all paragraph that meets all criteria of lead paragraph (not empty, not coords, not mw-empty-elt, etc)\n - the hasNoNonEmptyPreceedingParagraphs function() will check all elements before given node and verify if those are things that we can threat as no-content nodes. \n\nWe could introduce a new function, something called `findLeadParagraph()` that would do the query and find first paragraph that matches our `lead paragraph` criteria.\nThen instead of that big `if ($leadParagraph \u0026\u0026 $infoBofox \u0026\u0026 $wrappedInfobox [...]` we would simply check what is the position of $infobox and `$leadParagraph`. If the `$leadParagrap` is after `$infobox` -\u003e move it.\n\nThis could simplify the code a bit, to sth like:\n\n  $leadParagraph \u003d $this-\u003efindLeadParagraph();\n  $infobox \u003d $this-\u003efindFirstInfobox();\n\n  if ($this-\u003eareElementsInOrder( $infobox, $leadParagraph) \u0026\u0026 $this-\u003eisNotWrappedInfobox($infobox)) {\n    //move\n  }",
+      "parentUuid": "10347527_6a8762b1",
+      "range": {
+        "startLine": 123,
+        "startChar": 33,
+        "endLine": 124,
+        "endChar": 38
+      },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc43b3e7_22eded9a",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 1
