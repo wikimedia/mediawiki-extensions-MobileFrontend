@@ -7,7 +7,6 @@
 	 * @class VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function VisualEditorOverlay( options ) {

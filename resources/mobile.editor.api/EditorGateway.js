@@ -5,7 +5,6 @@
 	 * API that helps save and retrieve page content
 	 * @class EditorGateway
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api an Api to use.
 	 * @param {string} options.title the title to edit

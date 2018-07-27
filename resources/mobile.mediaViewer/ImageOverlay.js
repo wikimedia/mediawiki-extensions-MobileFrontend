@@ -11,8 +11,9 @@
 	 * @extends Overlay
 	 * @uses Icon
 	 * @uses ImageGateway
+	 * @fires ImageOverlay#ImageOverlay-exit
+	 * @fires ImageOverlay#ImageOverlay-slide
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function ImageOverlay( options ) {

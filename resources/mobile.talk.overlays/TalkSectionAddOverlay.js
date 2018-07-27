@@ -10,7 +10,6 @@
 	 * @extends TalkOverlayBase
 	 * @uses Toast
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {Object} options.title Title of the talk page being modified
 	 * @param {Object} options.currentPageTitle Title of the page before the overlay appears

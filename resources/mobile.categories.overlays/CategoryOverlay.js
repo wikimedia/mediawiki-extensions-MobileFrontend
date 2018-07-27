@@ -11,7 +11,6 @@
 	 * @extends Overlay
 	 * @uses CategoryGateway
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function CategoryOverlay( options ) {

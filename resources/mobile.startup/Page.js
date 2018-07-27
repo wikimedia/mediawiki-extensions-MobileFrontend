@@ -14,7 +14,6 @@
 	 * @uses Section
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Page( options ) {

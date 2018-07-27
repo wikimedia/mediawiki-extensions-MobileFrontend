@@ -10,7 +10,6 @@
 	 * @extend Overlay
 	 * @uses mw.Api
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	NotificationsOverlay = function ( options ) {

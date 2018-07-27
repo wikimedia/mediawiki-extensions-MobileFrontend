@@ -23,8 +23,9 @@
 	 * @uses Icon
 	 * @uses WatchstarGateway
 	 * @uses Toast
+	 * @fires Watchstar#unwatch
+	 * @fires Watchstar#watch
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Watchstar() {
@@ -149,16 +150,16 @@
 					self._watched = true;
 					self.render();
 					/**
-					 * @event watch
 					 * Fired when the watch star is changed to watched status
+					 * @event Watchstar#watch
 					 */
 					self.emit( 'watch' );
 					toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
 				} else {
 					self._watched = false;
 					/**
-					 * @event unwatch
 					 * Fired when the watch star is changed to unwatched status
+					 * @event Watchstar#unwatch
 					 */
 					self.emit( 'unwatch' );
 					self.render();

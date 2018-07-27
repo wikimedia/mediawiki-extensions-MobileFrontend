@@ -54,7 +54,7 @@
 	 *     </code>
 	 */
 	/**
-	 * Constructor.
+	 * @fires ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
 	 * @param {number} threshold distance in pixels used to calculate if scroll
 	 * position is near the end of the $el
 	 */
@@ -66,8 +66,8 @@
 	OO.mixinClass( ScrollEndEventEmitter, OO.EventEmitter );
 
 	/**
-	 * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
 	 * Fired when scroll bottom has been reached.
+	 * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
 	 */
 	ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
 

@@ -9,7 +9,6 @@
 	 * @extends View
 	 * @uses AbuseFilterOverlay
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * FIXME: should extend Panel not View. Or the name should be changed to something meaningful.
 	 */

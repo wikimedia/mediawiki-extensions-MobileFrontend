@@ -6,7 +6,6 @@
 	 *
 	 * @class WatchstarGateway
 	 *
-	 * @constructor
 	 * @param {mw.Api} api
 	 */
 	function WatchstarGateway( api ) {

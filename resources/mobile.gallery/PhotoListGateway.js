@@ -6,7 +6,6 @@
 	 * API for retrieving gallery photos
 	 * @class PhotoListApi
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api
 	 */

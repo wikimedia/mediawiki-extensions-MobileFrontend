@@ -18,7 +18,6 @@
 	 * @extends ReferencesHtmlScraperGateway
 	 * @inheritdoc
 	 *
-	 * @constructor
 	 * @param {mw.Api} api class to use for making requests
 	 * @param {NoCache|MemoryCache} [cache] class to use for caching request
 	 * results. By default it uses the NoCache implementation, which doesn't

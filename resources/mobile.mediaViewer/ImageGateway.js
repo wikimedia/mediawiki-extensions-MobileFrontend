@@ -19,7 +19,6 @@
 	 * API for retrieving image thumbnails for a given page
 	 * @class ImageGateway
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @cfg {mw.Api} api
 	 */

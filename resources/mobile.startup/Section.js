@@ -8,7 +8,6 @@
 	 * @class Section
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Section( options ) {

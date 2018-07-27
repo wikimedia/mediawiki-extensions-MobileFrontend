@@ -7,7 +7,6 @@
 	 * @class JSONPForeignApi
 	 * @extends mw.ForeignApi
 	 *
-	 * @constructor
 	 * @param {string} url
 	 * @param {Object} [options]
 	 */

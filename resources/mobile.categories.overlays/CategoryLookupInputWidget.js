@@ -3,7 +3,6 @@
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.mixin.LookupElement
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {CategoryGateway} options.gateway to use to retrieve search results
 	 * @param {jQuery.Object} options.suggestions container element for search suggestions

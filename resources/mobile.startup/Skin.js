@@ -45,8 +45,10 @@
 	 * @extends View
 	 * @uses Browser
 	 * @uses Page
+	 * @fires Skin#click
+	 * @fires Skin#references-loaded
+	 * @fires Skin#changed
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Skin( options ) {
@@ -109,14 +111,14 @@
 			util.parseHTML( '<div class="transparent-shield cloaked-element">' )
 				.appendTo( $el.find( '#mw-mf-page-center' ) );
 			/**
-			 * @event changed
 			 * Fired when appearance of skin changes.
+			 * @event Skin#changed
 			 */
 			this.emit( 'changed' );
 
 			/**
-			 * @event click
 			 * Fired when the skin is clicked.
+			 * @event Skin#click
 			 */
 			this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
 		},
@@ -320,8 +322,8 @@
 						$spinner.remove();
 						$content.children().removeClass( 'hidden' );
 						/**
-						 * @event references-loaded
 						 * Fired when references list is loaded into the HTML
+						 * @event references-loaded
 						 */
 						self.emit( 'references-loaded', self.page );
 					} )

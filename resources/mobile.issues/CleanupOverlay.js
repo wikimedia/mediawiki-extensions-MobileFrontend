@@ -7,7 +7,6 @@
 	 * @class CleanupOverlay
 	 * @extends Overlay
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {string} options.headingText
 	 */

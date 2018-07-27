@@ -7,7 +7,6 @@
 	 * @class Button
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Button( options ) {

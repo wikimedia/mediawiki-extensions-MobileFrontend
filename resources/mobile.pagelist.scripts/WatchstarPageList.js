@@ -14,7 +14,8 @@
 	 * @uses Watchstar
 	 * @extends PageList
 	 *
-	 * @constructor
+	 * @fires WatchstarPageList#unwatch
+	 * @fires WatchstarPageList#watch
 	 * @param {Object} options Configuration options
 	 */
 	function WatchstarPageList( options ) {
@@ -88,15 +89,15 @@
 						self.$( this ).addClass( 'with-watchstar' );
 
 						/**
-						 * @event watch
 						 * Fired when an article in the PageList is watched.
+						 * @event WatchstarPageList#watch
 						 */
 						watchstar.on( 'watch', function () {
 							self.emit( 'watch' );
 						} );
 						/**
-						 * @event unwatch
-						 * Fired when an article in the PageList is watched.
+						 * Fired when an article in the PageList is unwatched.
+						 * @event WatchstarPageList#unwatch
 						 */
 						watchstar.on( 'unwatch', function () {
 							self.emit( 'unwatch' );

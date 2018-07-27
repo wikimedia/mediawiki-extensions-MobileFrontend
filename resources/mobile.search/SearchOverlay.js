@@ -17,8 +17,11 @@
 	 * @uses SearchGateway
 	 * @uses Icon
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
+	 * @fires SearchOverlay#search-show
+	 * @fires SearchOverlay#search-start
+	 * @fires SearchOverlay#search-results
+	 * @fires SearchOverlay#search-result-click
 	 */
 	function SearchOverlay( options ) {
 		Overlay.call( this, options );
@@ -180,9 +183,9 @@
 		onClickResult: function ( ev ) {
 			var $link = this.$( ev.currentTarget ),
 				$result = $link.closest( 'li' );
-
 			/**
-			 * @event search-result-click Fired when the user clicks a search result
+			 * Fired when the user clicks a search result
+			 * @event SearchOverlay#search-result-click
 			 * @type {Object}
 			 * @property {jQuery.Object} result The jQuery-wrapped DOM element that
 			 *  the user clicked
@@ -266,7 +269,8 @@
 
 			this.showKeyboard();
 			/**
-			 * @event search-show Fired after the search overlay is shown
+			 * Fired after the search overlay is shown
+			 * @event SearchOverlay#search-show
 			 */
 			this.emit( 'search-show' );
 		},
@@ -314,10 +318,9 @@
 				if ( query.length ) {
 					this.timer = setTimeout( function () {
 						var xhr;
-
 						/**
-						 * @event search-start Fired immediately before the search API request is
-						 *  sent
+						 * Fired immediately before the search API request is sent
+						 * @event SearchOverlay#search-start
 						 * @property {Object} data related to the current search
 						 */
 						self.emit( 'search-start', {
@@ -349,7 +352,8 @@
 								self.$results = self.$resultContainer.find( 'li' );
 
 								/**
-								 * @event search-results Fired when search API returns results
+								 * Fired when search API returns results
+								 * @event SearchOverlay#search-results
 								 * @type {Object}
 								 * @property {Object[]} results The results returned by the search
 								 *  API

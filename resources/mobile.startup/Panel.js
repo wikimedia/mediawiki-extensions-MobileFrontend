@@ -7,7 +7,6 @@
 	 * @class Panel
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Panel() {

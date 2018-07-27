@@ -14,6 +14,8 @@
 	 * @extends View
 	 * @uses Icon
 	 * @uses Button
+	 * @fires Overlay#Overlay-exit
+	 * @fires Overlay#hide
 	 */
 	function Overlay() {
 		this.isIos = browser.isIos();
@@ -250,8 +252,8 @@
 			}
 
 			/**
-			 * @event hide
 			 * Fired when the overlay is closed.
+			 * @event Overlay#hide
 			 */
 			this.emit( 'hide' );
 
@@ -335,7 +337,10 @@
 		}
 	} );
 
-	/** @event Overlay#Overlay-exit */
+	/*
+	 * Fires when close button is clicked. Not to be confused with hide event.
+	 * @event Overlay#Overlay-exit
+	 */
 	Overlay.EVENT_EXIT = 'Overlay-exit';
 
 	M.define( 'mobile.startup/Overlay', Overlay );

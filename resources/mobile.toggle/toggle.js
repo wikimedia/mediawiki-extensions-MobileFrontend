@@ -141,7 +141,14 @@
 		$heading.data( 'indicator', indicator );
 
 		/**
-		 * @event section-toggling Emitted before a section is being toggled
+		 * Global event emitted before a section is being toggled
+		 *
+		 * @event section-toggling
+		 * @type {Object}
+		 * @property {Page} page
+		 * @property {bool} wasExpanded
+		 * @property {bool} isReferenceSection
+		 * @property {jQuery.Object} $heading
 		 */
 		M.emit( 'before-section-toggled', {
 			page: page,
@@ -158,7 +165,8 @@
 			} );
 
 		/**
-		 * @event section-toggled Emitted after a section has been toggled
+		 * Global event emitted after a section has been toggled
+		 * @event section-toggled
 		 */
 		M.emit( 'section-toggled', wasExpanded, sectionNumber );
 
@@ -220,7 +228,6 @@
 	 * @param {Page} [page] to allow storage of session for future visits
 	 * @param {Page} [isClosed] whether the element should begin closed
 	 * @private
-	 * @constructor
 	 */
 	Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		var tagName, expandSections, indicator, $content,

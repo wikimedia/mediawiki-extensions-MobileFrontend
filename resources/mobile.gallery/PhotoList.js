@@ -13,7 +13,6 @@
 	 * @uses ScrollEndEventEmitter
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function PhotoList( options ) {

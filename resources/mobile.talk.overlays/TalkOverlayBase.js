@@ -9,7 +9,6 @@
 	 * @uses Page
 	 * @uses PageGateway
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function TalkOverlayBase( options ) {

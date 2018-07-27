@@ -6,7 +6,6 @@
 	 * @class ReferencesGateway
 	 * @abstract
 	 *
-	 * @constructor
 	 * @param {mw.Api} api
 	 */
 	function ReferencesGateway( api ) {

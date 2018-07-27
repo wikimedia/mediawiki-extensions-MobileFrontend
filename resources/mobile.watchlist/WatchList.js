@@ -11,7 +11,8 @@
 	 * @class WatchList
 	 * @uses ScrollEndEventEmitter
 	 *
-	 * @constructor
+	 * @fires watched
+	 * @fires watch
 	 * @param {Object} options Configuration options
 	 */
 	function WatchList( options ) {

@@ -52,15 +52,15 @@
 	}
 
 	/**
-	 * @event resize
 	 * The `window`'s resize event debounced at 100 ms. The `resize:throttled` event is the `window`'s
 	 * resize event throttled to 200 ms.
+	 * @event resize
 	 */
 
 	/**
-	 * @event scroll
 	 * The `window`'s scroll event debounced at 100 ms. The `scroll:throttled` event is the `window`'s
 	 * scroll event throttled to 200 ms.
+	 * @event scroll
 	 */
 
 	$window

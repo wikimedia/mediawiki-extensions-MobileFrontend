@@ -7,7 +7,6 @@
 	 * @class Icon
 	 * @extends View
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 */
 	function Icon( options ) {

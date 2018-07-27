@@ -15,7 +15,6 @@
  * @class
  * @extends ve.init.mw.MobileArticleTarget
  *
- * @constructor
  * @param {VisualEditorOverlay} overlay Mobile frontend overlay
  * @param {Object} [config] Configuration options
  */

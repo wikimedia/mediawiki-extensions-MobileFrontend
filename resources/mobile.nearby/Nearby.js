@@ -12,7 +12,6 @@
 	 * @uses NearbyGateway
 	 * @extends WatchstarPageList
 	 *
-	 * @constructor
 	 * @param {Object} options Configuration options
 	 * @param {Function} [options.onItemClick] Callback invoked when a result is
 	 *                                         clicked. Defaults to nop.
