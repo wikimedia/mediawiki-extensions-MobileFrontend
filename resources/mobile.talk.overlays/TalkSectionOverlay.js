@@ -24,12 +24,14 @@
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		} ),
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.title Title.
-		 * @cfg {Section} defaults.section that is currently being viewed in overlay.
-		 * @cfg {string} defaults.reply Reply heading.
-		 * @cfg {string} defaults.info Message that informs the user their talk reply will be
+		 * @memberof TalkSectionOverlay
+		 * @instance
+		 * @mixes TalkOverlayBase#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.title Title.
+		 * @property {Section} defaults.section that is currently being viewed in overlay.
+		 * @property {string} defaults.reply Reply heading.
+		 * @property {string} defaults.info Message that informs the user their talk reply will be
 		 * automatically signed.
 		 */
 		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
@@ -44,6 +46,11 @@
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		} ),
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, TalkOverlayBase.prototype.events, {
 			'focus textarea': 'onFocusTextarea',
 			'click .save-button': 'onSaveClick'
@@ -52,6 +59,8 @@
 		 * Fetches the talk topics of the page specified in options.title
 		 * if options.section is not defined.
 		 * @inheritdoc
+		 * @memberof TalkSectionOverlay
+		 * @instance
 		 */
 		postRender: function () {
 			TalkOverlayBase.prototype.postRender.apply( this );
@@ -65,7 +74,8 @@
 		},
 		/**
 		 * Enables comments on the current rendered talk topic
-		 * @method
+		 * @memberof TalkSectionOverlay
+		 * @instance
 		 * @private
 		 */
 		_enableComments: function () {
@@ -78,6 +88,8 @@
 		},
 		/**
 		 * Loads the discussion from api and add it to the Overlay
+		 * @memberof TalkSectionOverlay
+		 * @instance
 		 * @param {Object} options Render options
 		 */
 		renderFromApi: function ( options ) {
@@ -92,12 +104,16 @@
 		},
 		/**
 		 * Handler for focus of textarea
+		 * @memberof TalkSectionOverlay
+		 * @instance
 		 */
 		onFocusTextarea: function () {
 			this.$textarea.removeClass( 'error' );
 		},
 		/**
 		 * Handle a click on the save button
+		 * @memberof TalkSectionOverlay
+		 * @instance
 		 */
 		onSaveClick: function () {
 			var val = this.$textarea.val(),

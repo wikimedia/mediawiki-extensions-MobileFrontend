@@ -16,7 +16,15 @@
 	}
 
 	OO.mfExtend( CleanupOverlay, Overlay, {
+		/**
+		 * @memberof CleanupOverlay
+		 * @instance
+		 */
 		className: 'overlay overlay-cleanup',
+		/**
+		 * @memberof CleanupOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.issues', 'OverlayContent.hogan' )
 		} )

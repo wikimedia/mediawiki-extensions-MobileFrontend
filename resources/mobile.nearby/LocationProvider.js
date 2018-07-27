@@ -10,7 +10,8 @@
 	LocationProvider = {
 		/**
 		 * Detect if browser supports geolocation
-		 * @method
+		 * @memberof LocationProvider
+		 * @instance
 		 * @return {boolean}
 		 */
 		isAvailable: function () {
@@ -21,7 +22,8 @@
 		 * Obtain users current location and return a deferred object with the
 		 * longitude and latitude values
 		 * Resolve return object with 'incompatible' if browser doesn't support geo location
-		 *
+		 * @memberof LocationProvider
+		 * @instance
 		 * @return {jQuery.Deferred}
 		 */
 		getCurrentPosition: function () {

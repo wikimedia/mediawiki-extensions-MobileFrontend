@@ -9,7 +9,6 @@
 
 	/**
 	 * Notifies the user that settings were asynchronously saved.
-	 * @method
 	 * @param {Boolean} isPending if set toast will show after page has been reloaded.
 	 */
 	function notify( isPending ) {
@@ -21,7 +20,6 @@
 	}
 	/**
 	 * Creates a label for use with a form input
-	 * @method
 	 * @param {String} heading
 	 * @param {String} description
 	 * @return {OO.ui.LabelWidget}
@@ -41,7 +39,6 @@
 
 	/**
 	 * Adds a font changer field to the form
-	 * @method
 	 * @param {jQuery.Object} $form
 	 */
 	function addFontChangerToForm( $form ) {
@@ -87,7 +84,6 @@
 	/**
 	 * Adds an expand all sections field to the form
 	 * @param {jQuery.Object} $form
-	 * @method
 	 */
 	function addExpandAllSectionsToForm( $form ) {
 		var cb, cbField;
@@ -116,7 +112,6 @@
 	/**
 	 * Add features, that depends on localStorage, such as "exapnd all sections" or "fontchanger".
 	 * The checkbox is used for turning on/off expansion of all sections on page load.
-	 * @method
 	 */
 	function initLocalStorageElements() {
 		var toggleSwitch,

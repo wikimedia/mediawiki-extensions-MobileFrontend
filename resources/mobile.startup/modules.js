@@ -22,7 +22,8 @@
 		 * Require (import) a module previously defined using define().
 		 * Searches core module registry using mw.loader.require before consulting
 		 * its own local registry. This method is deprecated, please do not use.
-		 *
+		 * @memberof ModuleLoader
+		 * @instance
 		 * @param {string} id Required module id.
 		 * @return {Object} Required module, can be any JavaScript object.
 		 */
@@ -54,7 +55,8 @@
 
 		/**
 		 * Define a module which can be later required (imported) using require().
-		 *
+		 * @memberof ModuleLoader
+		 * @instance
 		 * @param {string} id Defined module id.
 		 * @param {Object} obj Defined module body, can be any JavaScript object.
 		 * @return {Object}
@@ -71,6 +73,7 @@
 				/**
 				 * @see ModuleLoader#deprecate
 				 * @param {string} deprecatedId Defined module id, which is deprecated.
+				 * @ignore
 				 */
 				deprecate: function ( deprecatedId ) {
 					self.deprecate( deprecatedId, obj, id );
@@ -80,7 +83,8 @@
 
 		/**
 		 * Deprecate a module and give an replacement (if there is any).
-		 *
+		 * @memberof ModuleLoader
+		 * @instance
 		 * @param {string} id Defined module id, which is deprecated.
 		 * @param {Object} obj Defined module body, can be any JavaScript object.
 		 * @param {string} [replacement] Give an optional replacement for this module (which

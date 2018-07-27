@@ -21,6 +21,8 @@
 	/**
 	 * See https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.Api-method-ajax
 	 * for inherited documentation.
+	 * @memberof JSONPForeignApi
+	 * @instance
 	 * @param {Object} parameters
 	 * @param {Object} [ajaxOptions]
 	 * @return {jQuery.Promise}

@@ -3,8 +3,12 @@
 		util = M.require( 'mobile.startup/util' ),
 		limits = [ 1, 60, 3600, 86400, 2592000, 31536000 ];
 
+	/** @class time */
+
 	/**
 	 * Calculate the correct unit of timestamp
+	 * @memberof time
+	 * @instance
 	 * @param {number} timestampDelta
 	 * @return {{value: number, unit: string}}
 	 */
@@ -21,6 +25,8 @@
 
 	/**
 	 * Calculate the correct unit of timestamp delta
+	 * @memberof time
+	 * @instance
 	 * @param {number} timestamp
 	 * @return {{value: Number, unit: string}}
 	 */
@@ -32,6 +38,8 @@
 
 	/**
 	 * Whether timestamp delta is less than a day old
+	 * @memberof time
+	 * @instance
 	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
 	 */
@@ -41,6 +49,8 @@
 
 	/**
 	 * Is delta less than 10 seconds?
+	 * @memberof time
+	 * @instance
 	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
 	 */
@@ -50,6 +60,8 @@
 
 	/**
 	 * Return a message relating to the last modified relative time.
+	 * @memberof time
+	 * @instance
 	 * @param {string} ts timestamp
 	 * @param {string} username of the last user to modify the page
 	 * @param {string} [gender] of the last user to modify the page
@@ -97,6 +109,8 @@
 
 	/**
 	 * Return a message relating to the registration date of the user
+	 * @memberof time
+	 * @instance
 	 * @param {string} ts timestamp
 	 * @param {string} [gender] of the last user editing this page
 	 * @return {string}

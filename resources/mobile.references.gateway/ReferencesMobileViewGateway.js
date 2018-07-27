@@ -35,7 +35,8 @@
 		 * Retrieve references list for a given page.
 		 * Also cache the result for a later use.
 		 *
-		 * @method
+		 * @memberof ReferencesMobileViewGateway
+		 * @instance
 		 * @param {Page} page
 		 * @return {jQuery.Deferred} promise that resolves with the list of
 		 *  sections on the page
@@ -75,7 +76,8 @@
 		/**
 		 * Retrieve all the references lists for a given page and section ID.
 		 *
-		 * @method
+		 * @memberof ReferencesMobileViewGateway
+		 * @instance
 		 * @param {Page} page
 		 * @param {string} headingId
 		 * @return {jQuery.Promise} promise that resolves with the section
@@ -88,6 +90,8 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof ReferencesMobileViewGateway
+		 * @instance
 		 */
 		getReference: function ( id, page ) {
 			var self = this;
@@ -106,7 +110,7 @@
 
 	/**
 	 * Retrieve a singleton instance w/ cache that uses mw.Api
-	 * @static
+	 * @memberof ReferencesMobileViewGateway
 	 * @return {ReferencesMobileViewGateway}
 	 */
 	ReferencesMobileViewGateway.getSingleton = function () {

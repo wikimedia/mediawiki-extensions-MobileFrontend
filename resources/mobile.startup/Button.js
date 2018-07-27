@@ -17,19 +17,26 @@
 	}
 
 	OO.mfExtend( Button, View, {
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Button
+		 * @instance
+		 */
 		isTemplateMode: true,
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.tagName The name of the tag in which the button is wrapped.
-		 * @cfg {boolean} defaults.block is stacked button
-		 * @cfg {boolean} defaults.progressive is progressive action
+		 * @memberof Button
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
+		 * @property {boolean} defaults.block is stacked button
+		 * @property {boolean} defaults.progressive is progressive action
 		 *   This option is deprecated. Please use `progressive`.
-		 * @cfg {boolean} defaults.quiet is quiet button
-		 * @cfg {boolean} defaults.destructive is destructive action
-		 * @cfg {string} defaults.additionalClassNames Additional class name(s).
-		 * @cfg {string} defaults.href url
-		 * @cfg {string} defaults.label of button
+		 * @property {boolean} defaults.quiet is quiet button
+		 * @property {boolean} defaults.destructive is destructive action
+		 * @property {string} defaults.additionalClassNames Additional class name(s).
+		 * @property {string} defaults.href url
+		 * @property {string} defaults.label of button
 		 */
 		defaults: {
 			tagName: 'a',
@@ -41,6 +48,10 @@
 			href: undefined,
 			label: undefined
 		},
+		/**
+		 * @memberof Button
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.startup', 'button.hogan' )
 	} );
 	M.define( 'mobile.startup/Button', Button );

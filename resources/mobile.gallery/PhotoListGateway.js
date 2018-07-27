@@ -4,7 +4,7 @@
 
 	/**
 	 * API for retrieving gallery photos
-	 * @class PhotoListApi
+	 * @class PhotoListGateway
 	 *
 	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api
@@ -26,7 +26,8 @@
 		 * a regular expression that strips the file type suffix,
 		 * namespace prefix and any
 		 * date suffix in format YYYY-MM-DD HH-MM
-		 * @method
+		 * @memberof PhotoListGateway
+		 * @instance
 		 * @private
 		 * @param {string} title Title of file
 		 * @return {string} Description for file
@@ -39,7 +40,8 @@
 		},
 		/**
 		 * Returns the value in pixels of a medium thumbnail
-		 * @method
+		 * @memberof PhotoListGateway
+		 * @instance
 		 * @return {number}
 		 */
 		getWidth: function () {
@@ -47,7 +49,8 @@
 		},
 		/**
 		 * Extracts image data from api response
-		 * @method
+		 * @memberof PhotoListGateway
+		 * @instance
 		 * @private
 		 * @param {Object} page as returned by api request
 		 * @return {Object} describing image.
@@ -65,6 +68,8 @@
 		/**
 		 * Get the associated query needed to retrieve images from API based
 		 * on currently configured options.
+		 * @memberof PhotoListGateway
+		 * @instance
 		 * @return {Object}
 		 */
 		getQuery: function () {
@@ -100,6 +105,8 @@
 		},
 		/**
 		 * Request photos beginning with the current value of endTimestamp
+		 * @memberof PhotoListGateway
+		 * @instance
 		 * @return {jQuery.Deferred} where parameter is a list of JavaScript objects describing an image.
 		 */
 		getPhotos: function () {

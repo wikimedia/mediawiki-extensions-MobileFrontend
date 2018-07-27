@@ -17,6 +17,10 @@
 	}
 
 	OO.mfExtend( BlockMessage, Drawer, {
+		/**
+		 * @memberof BlockMessage
+		 * @instance
+		 */
 		defaults: util.extend( {}, Drawer.prototype.defaults, {
 			stopHandIcon: new Icon( {
 				name: 'stop-hand'
@@ -39,10 +43,18 @@
 			},
 			expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
 		} ),
+		/**
+		 * @memberof BlockMessage
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
 			button: Button.prototype.template,
 			icon: Icon.prototype.template
 		} ),
+		/**
+		 * @memberof BlockMessage
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.editor.overlay', 'BlockMessage.hogan' )
 	} );
 

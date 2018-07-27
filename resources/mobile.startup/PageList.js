@@ -14,8 +14,11 @@
 
 	OO.mfExtend( PageList, View, {
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Page[]} defaults.pages Array of Page objects. These should match
+		 * @memberof PageList
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Page[]} defaults.pages Array of Page objects. These should match
 		 *                              the Page model and not necessarily the
 		 *                              underlying API format used.
 		 * E.g. [
@@ -40,8 +43,8 @@
 		},
 		/**
 		 * Render page images for the existing page list. Assumes no page images have been loaded.
-		 *
-		 * @method
+		 * @memberof PageList
+		 * @instance
 		 */
 		renderPageImages: function () {
 			var self = this;
@@ -57,11 +60,17 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof PageList
+		 * @instance
 		 */
 		postRender: function () {
 			this.renderPageImages();
 		},
 		template: mw.template.get( 'mobile.startup', 'PageList.hogan' ),
+		/**
+		 * @memberof PageList
+		 * @instance
+		 */
 		templatePartials: {
 			// The server uses a very different structure in
 			// SpecialMobileEditWatchlist.getLineHtml(). Be aware of these differences

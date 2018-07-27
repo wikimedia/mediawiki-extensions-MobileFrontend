@@ -33,12 +33,18 @@
 	}
 
 	OO.mfExtend( LanguageOverlay, Overlay, {
-		/** @inheritdoc */
-		className: Overlay.prototype.className + ' language-overlay',
 		/**
 		 * @inheritdoc
-		 * @cfg {Object} defaults
-		 * @cfg {Object[]} defaults.languages each object has keys as
+		 * @memberof LanguageOverlay
+		 * @instance
+		 */
+		className: Overlay.prototype.className + ' language-overlay',
+		/**
+		 * @memberof LanguageOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Object[]} defaults.languages each object has keys as
 		 *  returned by the langlink API https://www.mediawiki.org/wiki/API:Langlinks
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
@@ -48,16 +54,28 @@
 			allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
 			suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase()
 		} ),
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof LanguageOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.languages.structured', 'LanguageOverlay.hogan' )
 		} ),
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof LanguageOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'click a': 'onLinkClick',
 			'input .search': 'onSearchInput'
 		} ),
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof LanguageOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this );
 
@@ -68,6 +86,8 @@
 		},
 		/**
 		 * Article link click event handler
+		 * @memberof LanguageOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onLinkClick: function ( ev ) {
@@ -85,18 +105,19 @@
 				}
 			} );
 		},
-
 		/**
 		 * Search input handler
+		 * @memberof LanguageOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		onSearchInput: function ( ev ) {
 			this.filterLanguages( this.$( ev.target ).val().toLowerCase() );
 		},
-
 		/**
 		 * Filter the language list to only show languages that match the current search term.
-		 *
+		 * @memberof LanguageOverlay
+		 * @instance
 		 * @param {string} val of search term (lowercase).
 		 */
 		filterLanguages: function ( val ) {

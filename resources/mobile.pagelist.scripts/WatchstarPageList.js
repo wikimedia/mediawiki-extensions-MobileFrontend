@@ -25,14 +25,17 @@
 
 	OO.mfExtend( WatchstarPageList, PageList, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api
+		 * @memberof WatchstarPageList
+		 * @instance
+		 * @mixes PageList#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api
 		 */
 		/**
 		 * Retrieve pages
 		 *
-		 * @method
+		 * @memberof WatchstarPageList
+		 * @instance
 		 * @param {Object.<string,string|number>} titleToPageID A page title to page
 		 *                                                      ID map. 0 indicates
 		 *                                                      ID unknown.
@@ -43,6 +46,8 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof WatchstarPageList
+		 * @instance
 		 */
 		postRender: function () {
 			var $li,

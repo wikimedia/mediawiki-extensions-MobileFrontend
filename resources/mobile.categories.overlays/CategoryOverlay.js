@@ -24,14 +24,16 @@
 
 	OO.mfExtend( CategoryOverlay, Overlay, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api to use to construct gateway
-		 * @cfg {string} defaults.heading Title of the list of categories this page is
+		 * @memberof CategoryOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api to use to construct gateway
+		 * @property {string} defaults.heading Title of the list of categories this page is
 		 * categorized in.
-		 * @cfg {string} defaults.subheading Introduction text for the list of categories,
+		 * @property {string} defaults.subheading Introduction text for the list of categories,
 		 * the page belongs to.
-		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
+		 * @property {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
@@ -48,20 +50,30 @@
 		} ),
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryOverlay
+		 * @instance
 		 */
 		className: 'category-overlay overlay',
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryOverlay
+		 * @instance
 		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' ),
 			item: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlayItem.hogan' )
 		} ),
+		/**
+		 * @memberof CategoryOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'click .catlink': 'onCatlinkClick'
 		} ),
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryOverlay
+		 * @instance
 		 */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this );
@@ -76,6 +88,8 @@
 
 		/**
 		 * Get a list of categories the page belongs to and re-renders the overlay content
+		 * @memberof CategoryOverlay
+		 * @instance
 		 */
 		_loadCategories: function () {
 			var self = this,
@@ -131,6 +145,8 @@
 
 		/**
 		 * Handles a click on one of the tabs to change the viewable categories
+		 * @memberof CategoryOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev The Event object triggered this handler
 		 */
 		onCatlinkClick: function ( ev ) {
@@ -143,6 +159,8 @@
 
 		/**
 		 * Changes the view from hidden categories to content-based categories and vice-versa
+		 * @memberof CategoryOverlay
+		 * @instance
 		 */
 		_changeView: function () {
 			this.$( '.category-header li' ).toggleClass( 'selected' );

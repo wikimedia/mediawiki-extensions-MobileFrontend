@@ -25,12 +25,16 @@
 	EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-switch-visual-editor' );
 	/**
 	 * click handler
+	 * @memberof EditVeTool
+	 * @instance
 	 */
 	EditVeTool.prototype.onSelect = function () {
 		// will be overridden later
 	};
 	/**
 	 * Toolbar update state handler.
+	 * @memberof EditVeTool
+	 * @instance
 	 */
 	EditVeTool.prototype.onUpdateState = function () {
 		// do nothing
@@ -80,31 +84,33 @@
 
 	OO.mfExtend( EditorOverlayBase, Overlay, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {OverlayManager} defaults.overlayManager instance
-		 * @cfg {mw.Api} defaults.api to interact with
-		 * @cfg {boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {OverlayManager} defaults.overlayManager instance
+		 * @property {mw.Api} defaults.api to interact with
+		 * @property {boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
-		 * @cfg {string} defaults.continueMsg Caption for the next button on edit form which takes
+		 * @property {string} defaults.continueMsg Caption for the next button on edit form which takes
 		 * you to the screen that shows a preview and license information.
-		 * @cfg {string} defaults.cancelMsg Caption for cancel button on edit form.
-		 * @cfg {string} defaults.closeMsg Caption for a button that takes you back to editing
+		 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
+		 * @property {string} defaults.closeMsg Caption for a button that takes you back to editing
 		 * from edit preview screen.
-		 * @cfg {string} defaults.summaryRequestMsg Header above edit summary input field asking
+		 * @property {string} defaults.summaryRequestMsg Header above edit summary input field asking
 		 * the user to summarize the changes they made to the page.
-		 * @cfg {string} defaults.summaryMsg A placeholder with examples for the summary input
+		 * @property {string} defaults.summaryMsg A placeholder with examples for the summary input
 		 * field asking user what they changed.
-		 * @cfg {string} defaults.placeholder Placeholder text for empty sections.
-		 * @cfg {string} defaults.waitMsg Text that displays while a page edit is being saved.
-		 * @cfg {string} defaults.waitIcon HTML of the icon that displays while a page edit
+		 * @property {string} defaults.placeholder Placeholder text for empty sections.
+		 * @property {string} defaults.waitMsg Text that displays while a page edit is being saved.
+		 * @property {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
-		 * @cfg {string} defaults.captchaMsg Placeholder for captcha input field.
-		 * @cfg {string} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
+		 * @property {string} defaults.captchaMsg Placeholder for captcha input field.
+		 * @property {string} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
 		 * and a new one is displayed.
-		 * @cfg {string} defaults.switchMsg Label for button that allows the user to switch between
+		 * @property {string} defaults.switchMsg Label for button that allows the user to switch between
 		 * two different editing interfaces.
-		 * @cfg {string} defaults.licenseMsg Text and link of the license, under which this contribution will be
+		 * @property {string} defaults.licenseMsg Text and link of the license, under which this contribution will be
 		 * released to inform the user.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
@@ -127,16 +133,32 @@
 			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
 			licenseMsg: undefined
 		} ),
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
 			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 */
 		className: 'overlay editor-overlay',
+		/**
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'click .back': 'onClickBack',
 			'click .continue': 'onClickContinue',
@@ -144,6 +166,8 @@
 		} ),
 		/**
 		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:Edit
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @param {Object} data
 		 */
 		log: function ( data ) {
@@ -155,7 +179,8 @@
 
 		/**
 		 * If this is a new article, require confirmation before saving.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @return {boolean} The user confirmed saving
 		 */
 		confirmSave: function () {
@@ -172,7 +197,8 @@
 		/**
 		 * Executed when page save is complete. Handles reloading the page, showing toast
 		 * messages.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onSaveComplete: function () {
 			var msg,
@@ -218,7 +244,8 @@
 		},
 		/**
 		 * Report load errors back to the user. Silently record the error using EventLogging.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @param {string} text Text of message to display to user
 		 */
 		reportError: function ( text ) {
@@ -227,7 +254,8 @@
 		/**
 		 * Prepares the penultimate screen before saving.
 		 * Expects to be overridden by child class.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onStageChanges: function () {
 			this.showHidden( '.save-header, .save-panel' );
@@ -243,7 +271,8 @@
 		/**
 		 * Executed when the editor clicks the save button. Expects to be overridden by child
 		 * class. Checks if the save needs to be confirmed.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onSaveBegin: function () {
 			this.confirmAborted = false;
@@ -256,7 +285,11 @@
 				action: 'saveAttempt'
 			} );
 		},
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlayBase
+		 * @instance
+		 */
 		postRender: function () {
 			// log edit attempt
 			this.log( {
@@ -277,11 +310,14 @@
 		},
 		/**
 		 * Back button click handler
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onClickBack: util.noop,
 		/**
 		 * Exit handler
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onExitClick: function () {
 			Overlay.prototype.onExitClick.apply( this, arguments );
@@ -294,19 +330,24 @@
 		},
 		/**
 		 * Submit button click handler
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onClickSubmit: function () {
 			this.onSaveBegin();
 		},
 		/**
 		 * Continue button click handler
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		onClickContinue: function () {
 			this[this.nextStep]();
 		},
 		/**
 		 * @inheritdoc
-		 *
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @return {boolean|jQuery.Promise} Boolean, or promise resolving with a boolean
 		 */
 		hide: function () {
@@ -326,6 +367,8 @@
 		/**
 		 * Check, if the user should be asked if they really want to leave the page.
 		 * Returns false, if he hasn't made changes, otherwise true.
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @param {boolean} [force] Whether this function should always return false
 		 * @return {boolean}
 		 */
@@ -339,12 +382,14 @@
 		/**
 		 * Checks whether the state of the thing being edited as changed. Expects to be
 		 * implemented by child class.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 */
 		hasChanged: util.noop,
 		/**
 		 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
-		 * @method
+		 * @memberof EditorOverlayBase
+		 * @instance
 		 * @param {Object} details Details returned from the api.
 		 */
 		handleCaptcha: function ( details ) {

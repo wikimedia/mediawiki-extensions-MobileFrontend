@@ -5,7 +5,7 @@
 
 	/**
 	 * Wrapper for one global Toast
-	 * @class
+	 * @class Toast
 	 */
 	Toast = function Toast() {
 		mw.requestIdleCallback( this._showPending.bind( this ) );
@@ -13,7 +13,8 @@
 
 	/**
 	 * Show a message with the given class in a toast.
-	 * @method
+	 * @memberof Toast
+	 * @instance
 	 * @param {string} msg Message to show in the toast
 	 * @param {Object} options CSS class to add to the element if a string. If an object, more options for the
 	 *  notification, see mw.notification.show. For backwards compatibility reasons if a string is given it will be
@@ -37,7 +38,8 @@
 
 	/**
 	 * Hide the Toast if it's visible.
-	 * @method
+	 * @memberof Toast
+	 * @instance
 	 */
 	Toast.prototype.hide = function () {
 		if ( this.notification !== undefined ) {
@@ -53,7 +55,8 @@
 	 * If yes, output a warning message and discard this message.
 	 * This is to ensure that the page needs to be reloaded before adding
 	 * a new message for showing later.
-	 * @method
+	 * @memberof Toast
+	 * @instance
 	 * @param {string} content Content to be placed in element
 	 * @param {string} className class to add to element
 	 */
@@ -73,6 +76,8 @@
 
 	/**
 	 * Show the previously saved toast data and delete it from storage
+	 * @memberof Toast
+	 * @instance
 	 * @private
 	 */
 	Toast.prototype._showPending = function () {

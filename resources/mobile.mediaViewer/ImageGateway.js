@@ -4,6 +4,7 @@
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
+	 * @memberof ImageGateway
 	 * @param {number} size
 	 * @return {number}
 	 */
@@ -20,7 +21,7 @@
 	 * @class ImageGateway
 	 *
 	 * @param {Object} options Configuration options
-	 * @cfg {mw.Api} api
+	 * @property {mw.Api} options.api
 	 */
 	function ImageGateway( options ) {
 		this._cache = {};

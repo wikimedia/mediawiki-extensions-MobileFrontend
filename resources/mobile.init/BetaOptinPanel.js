@@ -1,5 +1,4 @@
 ( function ( M ) {
-
 	var Button = M.require( 'mobile.startup/Button' ),
 		util = M.require( 'mobile.startup/util' ),
 		Panel = M.require( 'mobile.startup/Panel' ),
@@ -14,11 +13,27 @@
 	}
 
 	OO.mfExtend( BetaOptinPanel, Panel, {
+		/**
+		 * @memberof BetaOptinPanel
+		 * @instance
+		 */
 		className: 'panel panel-inline visible',
+		/**
+		 * @memberof BetaOptinPanel
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
 			button: Button.prototype.template
 		} ),
+		/**
+		 * @memberof BetaOptinPanel
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
+		/**
+		 * @memberof BetaOptinPanel
+		 * @instance
+		 */
 		defaults: util.extend( {}, Panel.prototype.defaults, {
 			postUrl: undefined,
 			editToken: user.tokens.get( 'editToken' ),
@@ -35,11 +50,17 @@
 				} ).options
 			]
 		} ),
+		/**
+		 * @memberof BetaOptinPanel
+		 * @instance
+		 */
 		events: util.extend( {}, Panel.prototype.events, {
 			'click .optin': 'onOptin'
 		} ),
 		/**
 		 * Cancel event handler
+		 * @memberof BetaOptinPanel
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onOptin: function ( ev ) {

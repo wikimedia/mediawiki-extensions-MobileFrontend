@@ -12,7 +12,15 @@
 	}
 
 	OO.mfExtend( LoadingOverlay, Overlay, {
+		/**
+		 * @memberof LoadingOverlay
+		 * @instance
+		 */
 		className: 'overlay overlay-loading',
+		/**
+		 * @memberof LoadingOverlay
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.startup', 'LoadingOverlay.hogan' )
 	} );
 

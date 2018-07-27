@@ -16,21 +16,38 @@
 	}
 
 	OO.mfExtend( VisualEditorOverlay, EditorOverlayBase, {
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		isBorderBox: false,
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		className: 'overlay editor-overlay editor-overlay-ve',
+		/**
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		editor: 'visualeditor',
 		/**
 		 * Set options that apply specifically to VisualEditorOverlay but not
 		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
 		 * FIXME: Must be smarter way to do this.
-		 * @method
+		 * @memberof VisualEditorOverlay
+		 * @instance
 		 * @param {Object} options Configuration options
 		 * @param {boolean} isVE whether the options are being generated for a VisualEditorOverlay
 		 *  or a EditorOverlay
@@ -42,7 +59,8 @@
 		},
 		/**
 		 * Destroy the existing VisualEditor target.
-		 * @method
+		 * @memberof VisualEditorOverlay
+		 * @instance
 		 */
 		destroyTarget: function () {
 			if ( this.target ) {
@@ -50,7 +68,11 @@
 				this.target = null;
 			}
 		},
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		show: function () {
 			var overlay = this;
 			EditorOverlayBase.prototype.show.apply( this, arguments );
@@ -75,8 +97,11 @@
 					mw.log.warn( 'VisualEditor failed to load: ' + e );
 				} );
 		},
-
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		hide: function () {
 			var overlay = this,
 				retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
@@ -91,15 +116,19 @@
 			}
 			return retval;
 		},
-
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this );
 		},
-
 		/**
 		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
 		 */
 		onClickBack: function () {
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
@@ -108,7 +137,8 @@
 
 		/**
 		 * Reveal the editing interface.
-		 * @method
+		 * @memberof VisualEditorOverlay
+		 * @instance
 		 */
 		switchToEditor: function () {
 			this.showHidden( '.initial-header' );
@@ -116,7 +146,8 @@
 		},
 		/**
 		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
-		 * @method
+		 * @memberof VisualEditorOverlay
+		 * @instance
 		 */
 		switchToSourceEditor: function () {
 			var self = this;
@@ -138,13 +169,21 @@
 				self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 			} );
 		},
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		onSaveComplete: function () {
 			this.saved = true;
 			EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 			this.destroyTarget();
 		},
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
 		hasChanged: function () {
 			return this.target &&
 				this.target.getSurface() &&

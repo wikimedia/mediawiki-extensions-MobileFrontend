@@ -1,5 +1,4 @@
 ( function ( M ) {
-
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
@@ -21,11 +20,13 @@
 
 	OO.mfExtend( CategoryAddOverlay, Overlay, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api to use to construct gateway
-		 * @cfg {string} defaults.waitMsg Text that displays while a page edit is being saved.
-		 * @cfg {string} defaults.waitIcon HTML of the icon that displays while a page edit
+		 * @memberof CategoryAddOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api to use to construct gateway
+		 * @property {string} defaults.waitMsg Text that displays while a page edit is being saved.
+		 * @property {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
@@ -35,6 +36,8 @@
 		} ),
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'click .save': 'onSaveClick',
@@ -42,14 +45,20 @@
 		} ),
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		className: 'category-overlay overlay',
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		template: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlay.hogan' ),
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
@@ -58,6 +67,8 @@
 
 		/**
 		 * @inheritdoc
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		postRender: function () {
 			var input;
@@ -83,7 +94,8 @@
 
 		/**
 		 * Handle a click on an added category
-		 * @method
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onCategoryClick: function ( ev ) {
@@ -98,6 +110,8 @@
 		/**
 		 * Handle the click on the save button. Builds a string of new categories
 		 * and add it to the article.
+		 * @memberof CategoryAddOverlay
+		 * @instance
 		 */
 		onSaveClick: function () {
 			var newCategories = '',

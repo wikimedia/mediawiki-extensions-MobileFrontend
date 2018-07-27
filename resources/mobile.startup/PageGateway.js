@@ -7,7 +7,6 @@
 	 * Add child to listOfSections if the level of child is the same as the last
 	 * child of listOfSections, otherwise add it to the children of the last
 	 * section of listOfSections. If listOfSections is empty, just add child to it.
-	 * @method
 	 * @private
 	 * @param {Array} listOfSections - Array of section ids
 	 * @param {Object} child - Section to be added to listOfSections
@@ -31,7 +30,6 @@
 
 	/**
 	 * Order sections hierarchically
-	 * @method
 	 * @private
 	 * @param {Array} sections Array of section objects created from response HTML
 	 * @return {Array} Ordered array of sections
@@ -93,8 +91,8 @@
 	PageGateway.prototype = {
 		/**
 		 * Retrieve a page from the api
-		 *
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @param {string} title the title of the page to be retrieved
 		 * @param {string} endpoint an alternative api url to retrieve the page from
 		 * @param {boolean} leadOnly When set only the lead section content is returned
@@ -179,8 +177,8 @@
 
 		/**
 		 * Invalidate the internal cache for a given page
-		 *
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function ( title ) {
@@ -189,8 +187,8 @@
 
 		/**
 		 * Gets language variant list for a page; helper function for getPageLanguages()
-		 *
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @private
 		 * @param  {string} title Name of the page to obtain variants for
 		 * @param  {Object} data Data from API
@@ -230,8 +228,8 @@
 
 		/**
 		 * Retrieve available languages for a given title
-		 *
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @param {string} title the title of the page languages should be retrieved for
 		 * @param {string} [language] when provided the names of the languages returned
 		 *  will be translated additionally into this language.
@@ -268,7 +266,8 @@
 
 		/**
 		 * Extract sections from headings in $el
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @private
 		 * @param {jQuery.Object} $el object from which sections are extracted
 		 * @return {Array} Array of section objects created from headings in $el
@@ -296,7 +295,8 @@
 
 		/**
 		 * Order sections hierarchically
-		 * @method
+		 * @memberof PageGateway
+		 * @instance
 		 * @param {jQuery.Object} $el object from which sections are extracted
 		 * @return {Array} Ordered array of sections
 		 */

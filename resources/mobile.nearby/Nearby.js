@@ -1,5 +1,5 @@
 ( function ( M ) {
-	/** @event Nearby#Nearby-postRender */
+	/** @event */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
@@ -36,6 +36,10 @@
 	}
 
 	OO.mfExtend( Nearby, WatchstarPageList, {
+		/**
+		 * @memberof Nearby
+		 * @instance
+		 */
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
@@ -53,16 +57,26 @@
 				msg: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
+		/**
+		 * @memberof Nearby
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, WatchstarPageList.prototype.templatePartials, {
 			pageList: WatchstarPageList.prototype.template,
 			messageBox: MessageBox.prototype.template
 		} ),
+		/**
+		 * @memberof Nearby
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api
-		 * @cfg {Object} defaults.errorOptions options to pass to a messagebox template
+		 * @memberof Nearby
+		 * @instance
+		 * @mixes WatchstarPageList#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api
+		 * @property {Object} defaults.errorOptions options to pass to a messagebox template
 		 * tells the user that their location is being looked up
 		 */
 		defaults: util.extend( {}, WatchstarPageList.prototype.defaults, {
@@ -73,6 +87,8 @@
 		 * When options.longitude and options.latitude set getPages near that location.
 		 * If those are not present use options.title to find pages near that title.
 		 * If no valid options given resolve return object with error message.
+		 * @memberof Nearby
+		 * @instance
 		 * @param {Object} options Configuration options
 		 * @return {jQuery.Deferred}
 		 * @private
@@ -126,6 +142,8 @@
 		},
 		/**
 		 * Generate a list of options that can be passed to a messagebox template.
+		 * @memberof Nearby
+		 * @instance
 		 * @private
 		 * @param {string} key to a defined error message
 		 * @param {string} msg Message to use, instead of a mapped error message from this.errorMessages
@@ -137,7 +155,11 @@
 				className: 'errorbox'
 			}, message );
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Nearby
+		 * @instance
+		 */
 		postRender: function () {
 			if ( !this._isLoading ) {
 				this.$( '.page-list' ).removeClass( 'hidden' );
@@ -156,6 +178,8 @@
 		 * Ensure that when a user navigates back to the page their page position is restored using
 		 * fragment identifier trickery.
 		 * @private
+		 * @memberof Nearby
+		 * @instance
 		 */
 		_postRenderLinks: function () {
 			var self = this;
@@ -168,7 +192,8 @@
 		 * Refresh the list of the nearby articles depending on the options.
 		 * The current location, latitude/longitude, or page title can be used
 		 * to find the articles.
-		 *
+		 * @memberof Nearby
+		 * @instance
 		 * @param {Object} options Configuration options
 		 * @throws {Error} If Nearby has not been initialised correctly.
 		 * @return {jQuery.Deferred}

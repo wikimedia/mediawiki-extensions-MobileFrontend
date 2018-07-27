@@ -18,7 +18,8 @@
 
 	/**
 	 * Retrieve a cached value from a key
-	 * @method get
+	 * @memberof MemoryCache
+	 * @instance
 	 * @param {string} key
 	 * @return {Mixed}
 	 */
@@ -28,7 +29,8 @@
 
 	/**
 	 * Cache a value by key
-	 * @method set
+	 * @memberof MemoryCache
+	 * @instance
 	 * @param {string} key
 	 * @param {Mixed} value
 	 */
@@ -45,13 +47,15 @@
 
 	/**
 	 * NoOp
-	 * @method get
+	 * @memberof NoCache
+	 * @instance
 	 */
 	NoCache.prototype.get = function () { };
 
 	/**
 	 * NoOp
-	 * @method set
+	 * @memberof NoCache
+	 * @instance
 	 */
 	NoCache.prototype.set = function () { };
 

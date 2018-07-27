@@ -48,22 +48,32 @@
 	}
 
 	OO.mfExtend( EditorOverlay, EditorOverlayBase, {
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		isBorderBox: false,
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			messageBox: MessageBox.prototype.template,
 			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
 		} ),
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Object} defaults.loginButton options to render an sign in button
-		 * @cfg {Object} defaults.signupButton options to render a sign up button
-		 * @cfg {Object} defaults.anonButton options to render an edit anonymously button
-		 * @cfg {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
-		 * @cfg {mw.Api} defaults.api an api module to retrieve pages
+		 * @memberof EditorOverlay
+		 * @instance
+		 * @mixes EditorOverlayBase#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Object} defaults.loginButton options to render an sign in button
+		 * @property {Object} defaults.signupButton options to render a sign up button
+		 * @property {Object} defaults.anonButton options to render an edit anonymously button
+		 * @property {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
+		 * @property {mw.Api} defaults.api an api module to retrieve pages
 		 */
 		defaults: util.extend( {}, EditorOverlayBase.prototype.defaults, {
 			ctaMessage: mw.msg( 'mobile-frontend-editor-anon-cta-message' ),
@@ -86,12 +96,21 @@
 				msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 			}
 		} ),
+		/**
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		editor: 'wikitext',
+		/**
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		sectionLine: '',
 
 		/**
 		 * Check whether VisualEditor is enabled or not.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @return {boolean}
 		 */
 		isVisualEditorEnabled: function () {
@@ -105,11 +124,17 @@
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
+		/**
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, EditorOverlayBase.prototype.events, {
 			'input .wikitext-editor': 'onInputWikitextEditor'
 		} ),
 		/**
 		 * Wikitext Editor input handler
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		onInputWikitextEditor: function () {
 			this.gateway.setContent( this.$( '.wikitext-editor' ).val() );
@@ -117,6 +142,8 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		onClickContinue: function ( ev ) {
 			// handle the click on "Edit without logging in"
@@ -128,12 +155,18 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		onClickBack: function () {
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 			this._hidePreview();
 		},
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			var self = this;
 
@@ -213,7 +246,8 @@
 
 		/**
 		 * Sets additional values used for anonymous editing warning.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 * @param {Object} options object
 		 * @return {Object} Object with all options
@@ -242,7 +276,8 @@
 
 		/**
 		 * Handles click on "Edit without login" in anonymous editing warning.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 */
 		_showEditorAfterWarning: function () {
@@ -255,8 +290,9 @@
 
 		/**
 		 * Prepares the preview interface and reveals the save screen of the overlay
-		 * @method
 		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		onStageChanges: function () {
 			var self = this,
@@ -293,7 +329,8 @@
 
 		/**
 		 * Hides the preview and reverts back to initial screen.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 */
 		_hidePreview: function () {
@@ -308,6 +345,8 @@
 
 		/**
 		 * Resize the editor textarea, maintaining scroll position in iOS
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		_resizeEditor: function () {
 			var scrollTop, container, $scrollContainer;
@@ -335,6 +374,8 @@
 
 		/**
 		 * Set content to the user input field.
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @param {string} content The content to set.
 		 */
 		setContent: function ( content ) {
@@ -346,12 +387,20 @@
 
 		/**
 		 * Returns the content of the user input field.
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @return {string}
 		 */
 		getContent: function () {
 			return this.$content.val();
 		},
 
+		/**
+		 * @memberof EditorOverlay
+		 * @instance
+		 * @param {string} data
+		 * @return {string|false}
+		 */
 		_parseBlockInfo: function ( data ) {
 			var blockInfo, expiry, reason,
 				moment = window.moment;
@@ -404,7 +453,8 @@
 
 		/**
 		 * Requests content from the API and reveals it in UI.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 */
 		_loadContent: function () {
@@ -448,7 +498,8 @@
 		/**
 		 * Loads a {VisualEditorOverlay} and replaces the existing EditorOverlay with it
 		 * based on the current option values.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 * @param {Object} options Object passed to the constructor
 		 */
@@ -483,7 +534,8 @@
 
 		/**
 		 * Reveals an abuse filter panel inside the view.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @private
 		 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
 		 * @param {string} message Message to show in the AbuseFilter overlay
@@ -499,6 +551,8 @@
 		 * Executed when the editor clicks the save button. Handles logging and submitting
 		 * the save action to the editor API.
 		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
 		 */
 		onSaveBegin: function () {
 			var self = this,
@@ -582,7 +636,8 @@
 
 		/**
 		 * Checks whether the existing content has changed.
-		 * @method
+		 * @memberof EditorOverlay
+		 * @instance
 		 * @return {boolean}
 		 */
 		hasChanged: function () {

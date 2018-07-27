@@ -45,24 +45,27 @@
 
 	OO.mfExtend( Page, View, {
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {number} defaults.id Page ID. The default value of 0 represents a
+		 * @memberof Page
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {number} defaults.id Page ID. The default value of 0 represents a
 		 * new or missing page. Be sure to override it to avoid side effects.
-		 * @cfg {string} defaults.title Title of the page. It includes prefix where needed and
+		 * @property {string} defaults.title Title of the page. It includes prefix where needed and
 		 * is human readable, e.g. Talk:The man who lived.
-		 * @cfg {string} defaults.displayTitle HTML title of the page for display. Falls back
+		 * @property {string} defaults.displayTitle HTML title of the page for display. Falls back
 		 * to defaults.title (escaped) if no value is provided. Must be safe HTML!
-		 * @cfg {number} defaults.namespaceNumber the number of the namespace the page belongs to
-		 * @cfg {Object} defaults.protection List of permissions as returned by API,
+		 * @property {number} defaults.namespaceNumber the number of the namespace the page belongs to
+		 * @property {Object} defaults.protection List of permissions as returned by API,
 		 * e.g. [{ edit: ['*'] }]
-		 * @cfg {Array} defaults.sections Array of {Section} objects.
-		 * @cfg {boolean} defaults.isMainPage Whether the page is the Main Page.
-		 * @cfg {boolean} defaults.isMissing Whether the page exists in the wiki.
-		 * @cfg {Object} defaults.thumbnail thumbnail definition corresponding to page image
-		 * @cfg {boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
-		 * @cfg {number} defaults.thumbnail.width of image in pixels.
-		 * @cfg {number} defaults.thumbnail.height of image in pixels.
-		 * @cfg {string} defaults.thumbnail.source url for image
+		 * @property {Array} defaults.sections Array of {Section} objects.
+		 * @property {boolean} defaults.isMainPage Whether the page is the Main Page.
+		 * @property {boolean} defaults.isMissing Whether the page exists in the wiki.
+		 * @property {Object} defaults.thumbnail thumbnail definition corresponding to page image
+		 * @property {boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
+		 * @property {number} defaults.thumbnail.width of image in pixels.
+		 * @property {number} defaults.thumbnail.height of image in pixels.
+		 * @property {string} defaults.thumbnail.source url for image
 		 */
 		defaults: {
 			id: 0,
@@ -85,11 +88,14 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof Page
+		 * @instance
 		 */
 		isBorderBox: false,
 		/**
 		 * Retrieve the title that should be displayed to the user
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {string} HTML
 		 */
 		getDisplayTitle: function () {
@@ -97,7 +103,8 @@
 		},
 		/**
 		 * Determine if current page is in a specified namespace
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @param {string} namespace Name of namespace
 		 * @return {boolean}
 		 */
@@ -107,7 +114,8 @@
 
 		/**
 		 * Get the lead section of the page view.
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {jQuery.Object|null}
 		 */
 		getLeadSectionElement: function () {
@@ -131,7 +139,8 @@
 
 		/**
 		 * Determines if content model is wikitext
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {boolean}
 		 */
 		isWikiText: function () {
@@ -140,7 +149,8 @@
 
 		/**
 		 * Checks whether the current page is the main page
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {boolean}
 		 */
 		isMainPage: function () {
@@ -148,7 +158,8 @@
 		},
 		/**
 		 * Checks whether the current page is watched
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {boolean}
 		 */
 		isWatched: function () {
@@ -157,7 +168,8 @@
 
 		/**
 		 * Return the latest revision id for this page
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {number}
 		 */
 		getRevisionId: function () {
@@ -166,7 +178,8 @@
 
 		/**
 		 * Return prefixed page title
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {string}
 		 */
 		getTitle: function () {
@@ -175,7 +188,8 @@
 
 		/**
 		 * Return page id
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {number}
 		 */
 		getId: function () {
@@ -184,7 +198,8 @@
 
 		/**
 		 * return namespace id
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {number} namespace Number
 		 */
 		getNamespaceId: function () {
@@ -201,7 +216,8 @@
 
 		/**
 		 * Determines if current page is a talk page
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {boolean} Whether the page is a talk page or not
 		 */
 		isTalkPage: function () {
@@ -212,6 +228,8 @@
 
 		/**
 		 * @inheritdoc
+		 * @memberof Page
+		 * @instance
 		 */
 		preRender: function () {
 			this.sections = [];
@@ -232,7 +250,8 @@
 		 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
 		 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
 		 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {Thumbnail[]}
 		 */
 		getThumbnails: function () {
@@ -276,7 +295,8 @@
 
 		/**
 		 * FIXME: Change function signature to take the anchor of the heading
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @param {string} id of the section
 		 * @return {Section}
 		 */
@@ -285,7 +305,8 @@
 		},
 
 		/**
-		 * @method
+		 * @memberof Page
+		 * @instance
 		 * @return {Array}
 		 */
 		getSections: function () {
@@ -294,6 +315,8 @@
 
 		/**
 		 * Returns a jQuery object representing all redlinks on the page.
+		 * @memberof Page
+		 * @instance
 		 * @return {jQuery.Object}
 		 */
 		getRedLinks: function () {
@@ -304,7 +327,7 @@
 	/**
 	 * Create a Page object from an API response.
 	 *
-	 * @static
+	 * @memberof Page
 	 * @param {Object} resp as representing a page in the API
 	 * @return {Page}
 	 */

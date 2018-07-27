@@ -8,7 +8,8 @@
 	var context = {
 		/**
 		 * Gets current mobile mode
-		 * @method
+		 * @memberof context
+		 * @instance
 		 * @return {string} Name of mode
 		 */
 		getMode: function () {

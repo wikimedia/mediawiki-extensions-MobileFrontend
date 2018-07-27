@@ -19,7 +19,8 @@
 		/**
 		 * Returns a human readable string stating the distance in meters or kilometers
 		 * depending on size.
-		 * @method
+		 * @memberof NearbyGateway
+		 * @instance
 		 * @private
 		 * @param {number} d The distance in meters.
 		 * @return {string} message stating how far the user is from the point of interest.
@@ -48,7 +49,8 @@
 		},
 		/**
 		 * Returns a list of pages around a given point
-		 * @method
+		 * @memberof NearbyGateway
+		 * @instance
 		 * @param {Object} coords In form { latitude: 0, longitude: 2 }
 		 * @param {number} range Number of meters to perform a geosearch for
 		 * @param {string} exclude Name of a title to exclude from the list of results
@@ -62,7 +64,8 @@
 
 		/**
 		 * Gets the pages around a page. It excludes itself from the search
-		 * @method
+		 * @memberof NearbyGateway
+		 * @instance
 		 * @param {string} page Page title like "W_San_Francisco"
 		 * @param {number} range Number of meters to perform a geosearch for
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
@@ -75,7 +78,8 @@
 
 		/**
 		 * Searches for pages nearby
-		 * @method
+		 * @memberof NearbyGateway
+		 * @instance
 		 * @private
 		 * @param {Object} params Parameters to use for searching
 		 * @param {number} range Number of meters to perform a geosearch for

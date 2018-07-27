@@ -17,9 +17,12 @@
 
 	OO.mfExtend( ReferencesDrawer, Drawer, {
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.cancelButton HTML of the button that closes the drawer.
-		 * @cfg {boolean} defaults.error whether an error message is being shown
+		 * @memberof ReferencesDrawer
+		 * @instance
+		 * @mixes Drawer#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.cancelButton HTML of the button that closes the drawer.
+		 * @property {boolean} defaults.error whether an error message is being shown
 		 */
 		defaults: util.extend( {}, Drawer.prototype.defaults, {
 			spinner: icons.spinner().toHtmlString(),
@@ -41,21 +44,41 @@
 				isSmall: true
 			} ).getClassName()
 		} ),
+		/**
+		 * @memberof ReferencesDrawer
+		 * @instance
+		 */
 		events: {
 			'click sup a': 'showNestedReference'
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof ReferencesDrawer
+		 * @instance
+		 */
 		show: function () {
 			return Drawer.prototype.show.apply( this, arguments );
 		},
+		/**
+		 * @memberof ReferencesDrawer
+		 * @instance
+		 */
 		className: 'drawer position-fixed text references',
+		/**
+		 * @memberof ReferencesDrawer
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.references', 'Drawer.hogan' ),
 		/**
 		 * @inheritdoc
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 */
 		closeOnScroll: false,
 		/**
 		 * @inheritdoc
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 */
 		postRender: function () {
 			var windowHeight = util.getWindow().height();
@@ -72,18 +95,24 @@
 		},
 		/**
 		 * Make body not scrollable
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 */
 		onShow: function () {
 			util.getDocument().find( 'body' ).addClass( 'drawer-enabled' );
 		},
 		/**
 		 * Restore body scroll
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 */
 		onHide: function () {
 			util.getDocument().find( 'body' ).removeClass( 'drawer-enabled' );
 		},
 		/**
 		 * Fetch and render nested reference upon click
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 * @param {string} id of the reference to be retrieved
 		 * @param {Page} page to locate reference for
 		 * @param {string} refNumber the number it identifies as in the page
@@ -116,6 +145,8 @@
 		},
 		/**
 		 * Fetch and render nested reference upon click
+		 * @memberof ReferencesDrawer
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 * @return {boolean} False to cancel the native event
 		 */

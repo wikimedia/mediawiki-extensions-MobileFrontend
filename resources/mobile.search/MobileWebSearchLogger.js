@@ -16,7 +16,8 @@
 		/**
 		 * Sets the internal state required to deal with logging user session
 		 * data.
-		 *
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 * @private
 		 */
 		_newUserSession: function () {
@@ -26,7 +27,8 @@
 		/**
 		 * Sets the internal state required to deal with logging search session
 		 * data.
-		 *
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 * @private
 		 */
 		_newSearchSession: function () {
@@ -36,6 +38,8 @@
 
 		/**
 		 * Handles the 'search-show' event.
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 */
 		onSearchShow: function () {
 			this._newUserSession();
@@ -43,6 +47,8 @@
 
 		/**
 		 * Handles the 'search-start' event.
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 */
 		onSearchStart: function () {
 			this._newSearchSession();
@@ -56,7 +62,8 @@
 
 		/**
 		 * Handles the 'search-results' event.
-		 *
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 * @param {Object} event with property {Object[]} event.results
 		 */
 		onSearchResults: function ( event ) {
@@ -78,7 +85,8 @@
 
 		/**
 		 * Handles the 'search-result-click' event.
-		 *
+		 * @memberof MobileWebSearchLogger
+		 * @instance
 		 * @param {Object} event with property {number} event.index The zero-based index of the result in the
 		 *  set of results
 		 */
@@ -101,6 +109,7 @@
 	 * Convenience function that wires up an instance of the
 	 * MobileWebSearchLogger class to the search-* events emitted by the
 	 * search overlay.
+	 * @memberof MobileWebSearchLogger
 	 * @param {SearchOverlay} searchOverlay
 	 */
 	MobileWebSearchLogger.register = function ( searchOverlay ) {

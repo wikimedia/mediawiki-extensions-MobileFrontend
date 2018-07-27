@@ -35,6 +35,8 @@
 	OO.mfExtend( Watchstar, View, {
 		/**
 		 * @inheritdoc
+		 * @memberof Watchstar
+		 * @instance
 		 */
 		events: {
 			// Disable clicks on original link
@@ -42,16 +44,21 @@
 			click: 'onStatusToggle'
 		},
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api
-		 * @cfg {Page} defaults.page Current page.
-		 * @cfg {string} defaults.funnel to log events with
+		 * @memberof Watchstar
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api
+		 * @property {Page} defaults.page Current page.
+		 * @property {string} defaults.funnel to log events with
 		 */
 		defaults: {
 			page: undefined,
 			funnel: 'unknown'
 		},
 		/**
+		 * @memberof Watchstar
+		 * @instance
 		 * @property {Object} ctaDrawerOptions Default options hash for the anonymous CtaDrawer.
 		 */
 		ctaDrawerOptions: {
@@ -65,10 +72,26 @@
 				warning: 'mobile-frontend-watchlist-signup-action'
 			}
 		},
+		/**
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		tagName: 'div',
+		/**
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		className: watchIcon.getClassName(),
+		/**
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		template: mw.template.compile( '<button>{{tooltip}}</button>', 'hogan' ),
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		initialize: function ( options ) {
 			var self = this,
 				_super = View.prototype.initialize;
@@ -85,11 +108,19 @@
 
 			_super.call( self, options );
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		preRender: function () {
 			this.options.tooltip = this._watched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Watchstar
+		 * @instance
+		 */
 		postRender: function () {
 			var self = this,
 				gateway = this.gateway,
@@ -112,6 +143,8 @@
 
 		/**
 		 * Prevent default on incoming events
+		 * @memberof Watchstar
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onLinksClick: function ( ev ) {
@@ -120,7 +153,8 @@
 
 		/**
 		 * Triggered when a user anonymously clicks on the watchstar.
-		 * @method
+		 * @memberof Watchstar
+		 * @instance
 		 */
 		onStatusToggleAnon: function () {
 			if ( !this.drawer ) {
@@ -132,7 +166,8 @@
 
 		/**
 		 * Triggered when a logged in user clicks on the watchstar.
-		 * @method
+		 * @memberof Watchstar
+		 * @instance
 		 */
 		onStatusToggleUser: function () {
 			var self = this,
@@ -173,7 +208,8 @@
 		/**
 		 * Event handler for clicking on watch star.
 		 * Make an API request if user is not anonymous.
-		 * @method
+		 * @memberof Watchstar
+		 * @instance
 		 */
 		onStatusToggle: function () {
 			if ( user.isAnon() ) {

@@ -25,14 +25,16 @@
 
 	OO.mfExtend( TalkSectionAddOverlay, TalkOverlayBase, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.cancelMsg Caption for cancel button on edit form.
-		 * @cfg {string} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 * @mixes TalkOverlayBase#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
+		 * @property {string} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
 		 * a talk page topic subject.
-		 * @cfg {string} defaults.topicContentPlaceHolder Placeholder text to prompt user to add
+		 * @property {string} defaults.topicContentPlaceHolder Placeholder text to prompt user to add
 		 * content to talk page content.
-		 * @cfg {string} defaults.editingMsg Label for button which submits a new talk page topic.
+		 * @property {string} defaults.editingMsg Label for button which submits a new talk page topic.
 		 */
 		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -46,17 +48,36 @@
 				additionalClassNames: 'savespinner loading'
 			} ).toHtmlString()
 		} ),
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
 			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, TalkOverlayBase.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',
 			'change .wikitext-editor, .summary': 'onTextInput',
 			'click .confirm-save': 'onSaveClick'
 		} ),
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			TalkOverlayBase.prototype.postRender.call( this );
 			this.showHidden( '.initial-header' );
@@ -64,7 +85,11 @@
 			this.$subject = this.$( '.summary' );
 			this.$ta = this.$( '.wikitext-editor' );
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
+		 */
 		hide: function () {
 			var empty,
 				confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
@@ -80,6 +105,8 @@
 		},
 		/**
 		 * Handles an input into a textarea and enables or disables the submit button
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
 		 */
 		onTextInput: function () {
 			var self = this;
@@ -95,6 +122,8 @@
 		},
 		/**
 		 * Handles a click on the save button
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
 		 */
 		onSaveClick: function () {
 			var self = this,
@@ -141,7 +170,8 @@
 		},
 		/**
 		 * Save new talk section
-		 * @method
+		 * @memberof TalkSectionAddOverlay
+		 * @instance
 		 * @return {jQuery.Deferred} Object that either will be resolved with ok parameter
 		 * or rejected with type error.
 		 */

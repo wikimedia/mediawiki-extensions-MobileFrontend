@@ -13,13 +13,20 @@
 	}
 
 	OO.mfExtend( TableOfContents, View, {
+		/**
+		 * @memberof TableOfContents
+		 * @instance
+		 */
 		templatePartials: {
 			tocHeading: mw.template.get( 'mobile.toc', 'heading.hogan' )
 		},
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.tocIcon HTML of the Table of Contents icon.
-		 * @cfg {string} defaults.contentsMsg TOC contents message.
+		 * @memberof TableOfContents
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.tocIcon HTML of the Table of Contents icon.
+		 * @property {string} defaults.contentsMsg TOC contents message.
 		 */
 		defaults: {
 			tocIcon: new Icon( {
@@ -28,8 +35,20 @@
 			} ).toHtmlString(),
 			contentsMsg: mw.msg( 'toc' )
 		},
+		/**
+		 * @memberof TableOfContents
+		 * @instance
+		 */
 		tagName: 'div',
+		/**
+		 * @memberof TableOfContents
+		 * @instance
+		 */
 		className: 'toc-mobile',
+		/**
+		 * @memberof TableOfContents
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.toc', 'toc.hogan' )
 	} );
 

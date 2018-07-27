@@ -32,8 +32,16 @@
 	}
 
 	OO.mfExtend( WatchList, WatchstarPageList, {
+		/**
+		 * @memberof WatchList
+		 * @instance
+		 */
 		isBorderBox: false,
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof WatchList
+		 * @instance
+		 */
 		preRender: function () {
 			// The DOM will be modified. Prevent any false scroll end events from
 			// being emitted.
@@ -42,8 +50,8 @@
 		},
 		/**
 		 * Retrieve pages where all pages are watched.
-		 *
-		 * @method
+		 * @memberof WatchList
+		 * @instance
 		 * @param {Object.<string,string|number>} titleToPageID A page title to page
 		 *                                                      ID map. 0 indicates
 		 *                                                      ID unknown.
@@ -56,6 +64,8 @@
 		/**
 		 * Also sets a watch uploads funnel.
 		 * @inheritdoc
+		 * @memberof WatchList
+		 * @instance
 		 */
 		postRender: function () {
 			WatchstarPageList.prototype.postRender.apply( this );
@@ -65,6 +75,8 @@
 		/**
 		 * Loads pages from the api and triggers render.
 		 * Infinite scroll is re-enabled in postRender.
+		 * @memberof WatchList
+		 * @instance
 		 */
 		_loadPages: function () {
 			this.gateway.loadWatchlist().then( function ( pages ) {
@@ -77,6 +89,8 @@
 
 		/**
 		 * Appends a list item
+		 * @memberof WatchList
+		 * @instance
 		 * @param {Page} page
 		 */
 		appendPage: function ( page ) {
@@ -90,6 +104,8 @@
 		/**
 		 * Get the last title from the rendered HTML.
 		 * Used for initializing the API
+		 * @memberof WatchList
+		 * @instance
 		 * @param {jQuery.Object} $el Dom element of the list
 		 * @return {string}
 		 */

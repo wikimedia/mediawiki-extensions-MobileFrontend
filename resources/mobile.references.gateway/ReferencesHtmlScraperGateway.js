@@ -15,6 +15,8 @@
 
 	OO.mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		/**
+		 * @memberof ReferencesHtmlScraperGateway
+		 * @instance
 		 * @param {string} id of a DOM element in the page with '#' prefix.
 		 *  can be encoded or decoded.
 		 * @param {jQuery.Object} $container to scan for an element
@@ -34,6 +36,8 @@
 		},
 		/**
 		 * @inheritdoc
+		 * @memberof ReferencesHtmlScraperGateway
+		 * @instance
 		 */
 		getReference: function ( id, page ) {
 			// If an id is not found it's possible the id passed needs decoding (per T188547).

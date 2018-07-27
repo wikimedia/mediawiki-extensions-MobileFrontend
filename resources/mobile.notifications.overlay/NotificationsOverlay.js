@@ -99,9 +99,11 @@
 		className: 'overlay notifications-overlay navigation-drawer',
 		isBorderBox: false,
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.heading Heading text.
+		 * @memberof NotificationsOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.heading Heading text.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'notifications' ),
@@ -114,16 +116,16 @@
 		} ),
 		/**
 		 * Set done loading flag for notifications list
-		 *
-		 * @method
+		 * @memberof NotificationsOverlay
+		 * @instance
 		 */
 		setDoneLoading: function () {
 			this.doneLoading = true;
 		},
 		/**
 		 * Check if notifications have finished loading
-		 *
-		 * @method
+		 * @memberof NotificationsOverlay
+		 * @instance
 		 * @return {boolean} Notifications list has finished loading
 		 */
 		isDoneLoading: function () {
@@ -131,8 +133,8 @@
 		},
 		/**
 		 * Toggle mark all read button
-		 *
-		 * @method
+		 * @memberof NotificationsOverlay
+		 * @instance
 		 */
 		checkShowMarkAllRead: function () {
 			this.markAllReadButton.toggle(
@@ -142,6 +144,8 @@
 		},
 		/**
 		 * Respond to mark all read button click
+		 * @memberof NotificationsOverlay
+		 * @instance
 		 */
 		onMarkAllReadButtonClick: function () {
 			var overlay = this,
@@ -157,9 +161,9 @@
 		},
 		/**
 		 * Update the unread number on the notifications badge
-		 *
+		 * @memberof NotificationsOverlay
+		 * @instance
 		 * @param {number} count Number of unread notifications
-		 * @method
 		 */
 		onUnreadCountChange: function ( count ) {
 			this.badge.setCount(
@@ -168,12 +172,19 @@
 
 			this.checkShowMarkAllRead();
 		},
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof NotificationsOverlay
+		 * @instance
+		 */
 		preRender: function () {
 			this.options.heading = '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>';
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof NotificationsOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this );
 

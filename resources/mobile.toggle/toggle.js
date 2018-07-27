@@ -11,7 +11,7 @@
 	/**
 	 * A class for enabling toggling
 	 *
-	 * @class
+	 * @class Toggler
 	 * @extends OO.EventEmitter
 	 */
 	function Toggler() {
@@ -24,7 +24,6 @@
 	 * Using the settings module looks at what sections were previously expanded on
 	 * existing page.
 	 *
-	 * @method
 	 * @param {Page} page
 	 * @return {Object} representing open sections
 	 */
@@ -120,6 +119,8 @@
 	/**
 	 * Given a heading, toggle it and any of its children
 	 *
+	 * @memberof Toggler
+	 * @instance
 	 * @param {jQuery.Object} $heading A heading belonging to a section
 	 */
 	Toggler.prototype.toggle = function ( $heading ) {
@@ -195,6 +196,8 @@
 	/**
 	 * Reveals an element and its parent section as identified by it's id
 	 *
+	 * @memberof Toggler
+	 * @instance
 	 * @param {string} selector A css selector that identifies a single element
 	 * @param {Object} $container jQuery element to search in
 	 */
@@ -223,6 +226,8 @@
 	 * Enables section toggling in a given container when wgMFCollapseSectionsByDefault
 	 * is enabled.
 	 *
+	 * @memberof Toggler
+	 * @instance
 	 * @param {jQuery.Object} $container to apply toggling to
 	 * @param {string} prefix a prefix to use for the id.
 	 * @param {Page} [page] to allow storage of session for future visits

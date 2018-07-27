@@ -52,8 +52,7 @@
 	 *         }
 	 *       } );
 	 *     </code>
-	 */
-	/**
+	 *
 	 * @fires ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
 	 * @param {number} threshold distance in pixels used to calculate if scroll
 	 * position is near the end of the $el
@@ -74,7 +73,8 @@
 	OO.mfExtend( ScrollEndEventEmitter, {
 		/**
 		 * Listen to scroll on window and notify this._onScroll
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 * @private
 		 */
 		_bindScroll: function () {
@@ -85,7 +85,8 @@
 		},
 		/**
 		 * Unbind scroll handler
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 * @private
 		 */
 		_unbindScroll: function () {
@@ -96,7 +97,8 @@
 		},
 		/**
 		 * Scroll handler. Triggers load event when near the end of the container.
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 * @private
 		 */
 		_onScroll: function () {
@@ -109,7 +111,8 @@
 		},
 		/**
 		 * Is the scroll position near the end of the container element?
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 * @private
 		 * @return {boolean}
 		 */
@@ -121,7 +124,8 @@
 		},
 		/**
 		 * Enable the ScrollEndEventEmitter so that it triggers events.
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 */
 		enable: function () {
 			this.enabled = true;
@@ -129,7 +133,8 @@
 		},
 		/**
 		 * Disable the ScrollEndEventEmitter so that it doesn't trigger events.
-		 * @method
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 */
 		disable: function () {
 			this.enabled = false;
@@ -137,6 +142,8 @@
 		},
 		/**
 		 * Set the element to compare to scroll position to
+		 * @memberof ScrollEndEventEmitter
+		 * @instance
 		 * @param {jQuery.Object} $el jQuery element where we want to listen for
 		 * scroll end.
 		 */

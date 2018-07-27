@@ -41,6 +41,8 @@
 	Browser.prototype = {
 		/**
 		 * When rotating to landscape stop page zooming on ios 4 and 5.
+		 * @memberof Browser
+		 * @instance
 		 * @private
 		 */
 		_fixIosLandscapeBug: function () {
@@ -58,6 +60,8 @@
 		/**
 		 * Returns whether the current browser is an ios device.
 		 * FIXME: jquery.client does not support iPad detection so we cannot use it.
+		 * @memberof Browser
+		 * @instance
 		 * @param {number} [version] integer describing a specific version you want to test against.
 		 * @return {boolean}
 		 */
@@ -85,6 +89,8 @@
 		} ),
 		/**
 		 * Locks the viewport so that pinch zooming is disabled
+		 * @memberof Browser
+		 * @instance
 		 */
 		lockViewport: function () {
 			if ( this.$el ) {
@@ -94,7 +100,8 @@
 		},
 		/**
 		 * Determine if a device has a widescreen.
-		 * @method
+		 * @memberof Browser
+		 * @instance
 		 * @return {boolean}
 		 */
 		isWideScreen: memoize( function () {
@@ -108,7 +115,8 @@
 		 * Currently assumes support for the latter 2 in the case of the
 		 * former.
 		 * See http://stackoverflow.com/a/12621264/365238
-		 *
+		 * @memberof Browser
+		 * @instance
 		 * @return {boolean}
 		 */
 		supportsAnimations: memoize( function () {
@@ -126,8 +134,8 @@
 		} ),
 		/**
 		 * Whether touchstart and other touch events are supported by the current browser.
-		 *
-		 * @method
+		 * @memberof Browser
+		 * @instance
 		 * @return {boolean}
 		 */
 		supportsTouchEvents: memoize( function () {
@@ -135,7 +143,8 @@
 		} ),
 		/**
 		 * Detect if browser supports geolocation
-		 * @method
+		 * @memberof Browser
+		 * @instance
 		 * @return {boolean}
 		 */
 		supportsGeoLocation: memoize( function () {
@@ -144,7 +153,7 @@
 	};
 
 	/**
-	 * @static
+	 * @memberof Browser
 	 * @return {Browser}
 	 */
 	Browser.getSingleton = function () {

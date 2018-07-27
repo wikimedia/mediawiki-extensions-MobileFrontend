@@ -17,13 +17,16 @@
 	SearchGateway.prototype = {
 		/**
 		 * The namespace to search in.
+		 * @memberof SearchGateway
+		 * @instance
 		 * @type {number}
 		 */
 		searchNamespace: 0,
 
 		/**
 		 * Get the data used to do the search query api call.
-		 * @method
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} query to search for
 		 * @return {Object}
 		 */
@@ -49,6 +52,8 @@
 
 		/**
 		 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} str a string
 		 * @return {Object} a regular expression that can be used to search for that str
 		 * @private
@@ -63,6 +68,8 @@
 		/**
 		 * Takes a label potentially beginning with term
 		 * and highlights term if it is present with strong
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} label a piece of text
 		 * @param {string} term a string to search for from the start
 		 * @return {string} safe html string with matched terms encapsulated in strong tags
@@ -77,6 +84,8 @@
 
 		/**
 		 * Return data used for creating {Page} objects
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} query to search for
 		 * @param {Object} pageInfo from the API
 		 * @return {Object} data needed to create a {Page}
@@ -100,6 +109,8 @@
 
 		/**
 		 * Process the data returned by the api call.
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} query to search for
 		 * @param {Object} data from api
 		 * @return {Array}
@@ -126,7 +137,8 @@
 
 		/**
 		 * Perform a search for the given query.
-		 * @method
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} query to search for
 		 * @return {jQuery.Deferred}
 		 */
@@ -159,7 +171,8 @@
 
 		/**
 		 * Check if the search has already been performed in given session.
-		 * @method
+		 * @memberof SearchGateway
+		 * @instance
 		 * @param {string} query
 		 * @return {boolean}
 		 */

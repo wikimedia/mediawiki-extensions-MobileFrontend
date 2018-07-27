@@ -20,10 +20,13 @@
 
 	OO.mfExtend( CtaDrawer, Drawer, {
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Object} defaults.collapseIcon options for Icon for collapsing the drawer
-		 * @cfg {Object} defaults.progressiveButton options for Button element for signing in
-		 * @cfg {Object} defaults.actionAnchor options for Anchor element for signing up
+		 * @memberof CtaDrawer
+		 * @instance
+		 * @mixes Drawer#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Object} defaults.collapseIcon options for Icon for collapsing the drawer
+		 * @property {Object} defaults.progressiveButton options for Button element for signing in
+		 * @property {Object} defaults.actionAnchor options for Anchor element for signing up
 		 */
 		defaults: util.extend( {}, Drawer.prototype.defaults, {
 			progressiveButton: new Button( {
@@ -35,19 +38,32 @@
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 			} ).options
 		} ),
+		/**
+		 * @memberof CtaDrawer
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
 			button: Button.prototype.template,
 			anchor: Anchor.prototype.template
 		} ),
+		/**
+		 * @memberof CtaDrawer
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.startup', 'Cta.hogan' ),
 		/**
 		 * @inheritdoc
+		 * @memberof CtaDrawer
+		 * @instance
 		 */
 		events: util.extend( {}, Drawer.prototype.events, {
 			'click .hide': 'hide'
 		} ),
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof CtaDrawer
+		 * @instance
+		 */
 		preRender: function () {
 			var params = util.extend( {
 					// use wgPageName as this includes the namespace if outside Main

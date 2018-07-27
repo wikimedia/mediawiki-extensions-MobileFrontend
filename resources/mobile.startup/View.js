@@ -93,27 +93,37 @@
 	OO.mfExtend( View, {
 		/**
 		 * A css class to apply to the containing element of the View.
+		 * @memberof View
+		 * @instance
 		 * @property {string} className
 		 */
 		className: undefined,
 		/**
 		 * Name of tag that contains the rendered template
-		 * @property String
+		 * @memberof View
+		 * @instance
+		 * @property {string} tagName
 		 */
 		tagName: 'div',
 		/**
 		 * Tells the View to ignore tagName and className when constructing the element
 		 * and to rely solely on the template
+		 * @memberof View
+		 * @instance
 		 * @property {boolean} isTemplateMode
 		 */
 		isTemplateMode: false,
 
 		/**
 		 * Whether border box box sizing model should be used
+		 * @memberof View
+		 * @instance
 		 * @property {boolean} isBorderBox
 		 */
 		isBorderBox: true,
 		/**
+		 * @memberof View
+		 * @instance
 		 * @property {Mixed}
 		 * Specifies the template used in render(). Object|string|HoganTemplate
 		 */
@@ -133,16 +143,19 @@
 		 *       templatePartials: { content: M.template.get( 'sub.hogan' ) }
 		 *     }
 		 *
+		 * @memberof View
+		 * @instance
 		 * @property {Object}
 		 */
 		templatePartials: {},
 
 		/**
 		 * A set of default options that are merged with options passed into the initialize function.
-		 *
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {jQuery.Object|string} [defaults.el] jQuery selector to use for rendering.
-		 * @cfg {boolean} [defaults.enhance] Whether to enhance views already in DOM.
+		 * @memberof View
+		 * @instance
+		 * @property {Object} defaults Default options hash.
+		 * @property {jQuery.Object|string} [defaults.el] jQuery selector to use for rendering.
+		 * @property {boolean} [defaults.enhance] Whether to enhance views already in DOM.
 		 * When enabled, the template is disabled so that it is not rendered in the DOM.
 		 * Use in conjunction with View::defaults.$el to associate the View with an existing
 		 * already rendered element in the DOM.
@@ -151,12 +164,15 @@
 
 		/**
 		 * Default events map
+		 * @memberof View
+		 * @instance
 		 */
 		events: null,
 
 		/**
 		 * Run once during construction to set up the View
-		 * @method
+		 * @memberof View
+		 * @instance
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function ( options ) {
@@ -196,6 +212,8 @@
 
 		/**
 		 * Called when this.$el is ready.
+		 * @memberof View
+		 * @instance
 		 * @private
 		 */
 		_postInitialize: function () {
@@ -210,8 +228,8 @@
 		/**
 		 * Function called before the view is rendered. Can be redefined in
 		 * objects that extend View.
-		 *
-		 * @method
+		 * @memberof View
+		 * @instance
 		 */
 		preRender: util.noop,
 
@@ -219,7 +237,8 @@
 		 * Function called after the view is rendered. Can be redefined in
 		 * objects that extend View.
 		 *
-		 * @method
+		 * @memberof View
+		 * @instance
 		 */
 		postRender: util.noop,
 
@@ -227,7 +246,8 @@
 		/**
 		 * Fill this.$el with template rendered using data if template is set.
 		 *
-		 * @method
+		 * @memberof View
+		 * @instance
 		 * @param {Object} data Template data. Will be merged into the view's
 		 * options
 		 * @chainable
@@ -254,7 +274,8 @@
 		 * Wraps this.$el.find, so that you can search for elements in the view's
 		 * ($el's) scope.
 		 *
-		 * @method
+		 * @memberof View
+		 * @instance
 		 * @param {string} query A jQuery CSS selector.
 		 * @return {JQuery.Object} jQuery object containing results of the search.
 		 */
@@ -277,6 +298,8 @@
 		 * Uses event delegation for efficiency.
 		 * Omitting the selector binds the event to `this.el`.
 		 *
+		 * @memberof View
+		 * @instance
 		 * @param {Object} events Optionally set this events instead of the ones on this.
 		 */
 		delegateEvents: function ( events ) {
@@ -306,6 +329,8 @@
 		 * using `selector`). This only works for delegate-able events: not `focus`,
 		 * `blur`, and not `change`, `submit`, and `reset` in Internet Explorer.
 		 *
+		 * @memberof View
+		 * @instance
 		 * @param {string} eventName
 		 * @param {string} selector
 		 * @param {Function} listener
@@ -319,6 +344,8 @@
 		 * Clears all callbacks previously bound to the view by `delegateEvents`.
 		 * You usually don't need to use this, but may wish to if you have multiple
 		 * views attached to the same DOM element.
+		 * @memberof View
+		 * @instance
 		 */
 		undelegateEvents: function () {
 			if ( this.$el ) {
@@ -330,6 +357,8 @@
 		 * A finer-grained `undelegateEvents` for removing a single delegated event.
 		 * `selector` and `listener` are both optional.
 		 *
+		 * @memberof View
+		 * @instance
 		 * @param {string} eventName
 		 * @param {string} selector
 		 * @param {Function} listener
@@ -342,10 +371,123 @@
 		/**
 		 * See parseHTML method of util singleton
 		 *
-		 * @method
+		 * @memberof View
+		 * @instance
 		 */
 		parseHTML: util.parseHTML
 	} );
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func append
+	 * @param {...(string|Node|Node[]|JQuery)} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func append
+	 * @param {function(number, string): string|Node|Node[]|JQuery} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func prepend
+	 * @param {...(string|Node|Node[]|JQuery)} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func prepend
+	 * @param {function(number, string): string|Node|Node[]|JQuery} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func appendTo
+	 * @param {string|Node|Node[]|JQuery} target
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func prependTo
+	 * @param {string|Node|Node[]|JQuery} target
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func after
+	 * @param {...(string|Node|Node[]|JQuery)} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func after
+	 * @param {function(number, string): string|Node|Node[]|JQuery} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func before
+	 * @param {...(string|Node|Node[]|JQuery)} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func before
+	 * @param {function(number, string): string|Node|Node[]|JQuery} contents
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func insertAfter
+	 * @param {string|Node|Node[]|JQuery} target
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func insertBefore
+	 * @param {string|Node|Node[]|JQuery} target
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func remove
+	 * @param {string} [selector]
+	 * @return {this}
+	 */
+
+	/**
+	 * @memberof View
+	 * @instance
+	 * @func detach
+	 * @param {string} [selector]
+	 * @return {this}
+	 */
 
 	[
 		'append',

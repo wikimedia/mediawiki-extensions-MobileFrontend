@@ -10,7 +10,8 @@
 	loader = {
 		/**
 		 * Loads a module via ResourceLoader, displays a full screen LoadingOverlay during load time.
-		 * @method
+		 * @memberof loader
+		 * @instance
 		 * @param {string} name ResourceLoader module name to load asynchronously.
 		 * @param {boolean} delegateHide if true the caller is responsible for hiding the intermediate loader.
 		 * @param {boolean} [showLoadingOverlay] if false a loading overlay will be hidden while

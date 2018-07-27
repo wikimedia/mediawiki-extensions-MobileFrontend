@@ -23,6 +23,8 @@
 
 	/**
 	 * Handle a click on a suggested item. Add it to the list of added categories and show save button.
+	 * @memberof CategoryLookupInputWidget
+	 * @instance
 	 * @param {Object} data Data of the clicked element
 	 */
 	CategoryLookupInputWidget.prototype.onLookupMenuItemChoose = function ( data ) {
@@ -40,6 +42,8 @@
 
 	/**
 	 * Returns the result of the search request.
+	 * @memberof CategoryLookupInputWidget
+	 * @instance
 	 * @return {jQuery.Deferred}
 	 */
 	CategoryLookupInputWidget.prototype.getLookupRequest = function () {
@@ -48,6 +52,8 @@
 
 	/**
 	 * Get lookup cache item from server response data.
+	 * @memberof CategoryLookupInputWidget
+	 * @instance
 	 * @param {Mixed} response Response from server
 	 * @return {Mixed} Cached result response
 	 */
@@ -65,6 +71,8 @@
 
 	/**
 	 * Get a list of menu item widgets from the data stored by the lookup request's done handler.
+	 * @memberof CategoryLookupInputWidget
+	 * @instance
 	 * @param {Mixed} data Cached result data, usually an array
 	 * @return {Array} Array of OO.ui.MenuOptionWidget
 	 */

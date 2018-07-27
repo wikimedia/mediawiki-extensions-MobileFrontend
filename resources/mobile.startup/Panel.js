@@ -14,7 +14,11 @@
 	}
 
 	OO.mfExtend( Panel, View, {
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Panel
+		 * @instance
+		 */
 		className: 'panel',
 		// in milliseconds
 		minHideDelay: 10,
@@ -23,9 +27,11 @@
 		},
 
 		/**
-		* Cancel event handler
-		* @param {Object} ev Event Object
-		*/
+		 * Cancel event handler
+		 * @memberof Panel
+		 * @instance
+		 * @param {Object} ev Event Object
+		 */
 		onCancel: function ( ev ) {
 			ev.preventDefault();
 			this.hide();
@@ -33,6 +39,8 @@
 
 		/**
 		 * Shows panel after a slight delay
+		 * @memberof Panel
+		 * @instance
 		 * @method
 		 */
 		show: function () {
@@ -51,7 +59,8 @@
 
 		/**
 		 * Hides panel
-		 * @method
+		 * @memberof Panel
+		 * @instance
 		 */
 		hide: function () {
 			var self = this;
@@ -65,7 +74,8 @@
 
 		/**
 		 * Determines if panel is visible
-		 * @method
+		 * @memberof Panel
+		 * @instance
 		 * @return {boolean} Panel is visible
 		 */
 		isVisible: function () {
@@ -74,7 +84,8 @@
 
 		/**
 		 * Shows or hides panel
-		 * @method
+		 * @memberof Panel
+		 * @instance
 		 */
 		toggle: function () {
 			if ( this.isVisible() ) {

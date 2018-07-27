@@ -7,7 +7,7 @@
 	 * Overlay for notifications filter
 	 *
 	 * @class NotificationsFilterOverlay
-	 * @extend Overlay
+	 * @extends Overlay
 	 * @param {Object} options
 	 * @param {jQuery.Object} options.$notifReadState - notification read status widgets
 	 * @param {jQuery.Object} options.$crossWikiUnreadFilter - notification unread filter
@@ -39,17 +39,27 @@
 
 	OO.mfExtend( NotificationsFilterOverlay, Overlay, {
 		// FIXME: notification-overlay class to be generalized
+		/**
+		 * @memberof NotificationsFilterOverlay
+		 * @instance
+		 */
 		className: 'overlay notifications-filter-overlay notifications-overlay navigation-drawer',
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.heading Heading text.
+		 * @memberof NotificationsFilterOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {String} defaults.heading Heading text.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-notifications-filter-title' )
 		} ),
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof NotificationsFilterOverlay
+		 * @instance
+		 */
 		preRender: function () {
 			this.options.heading = '<strong>' + mw.message( 'mobile-frontend-notifications-filter-title' ).escaped() + '</strong>';
 		}

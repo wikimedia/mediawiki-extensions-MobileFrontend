@@ -20,20 +20,31 @@
 
 	OO.mfExtend( AbuseFilterPanel, View, {
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.readMoreMsg A caption for the button allowing the user to read
+		 * @memberof AbuseFilterPanel
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.readMoreMsg A caption for the button allowing the user to read
 		 * more about the problems with their edit.
-		 * @cfg {OverlayManager} defaults.overlayManager instance
+		 * @property {OverlayManager} defaults.overlayManager instance
 		 */
 		defaults: {
 			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more' )
 		},
+		/**
+		 * @memberof AbuseFilterPanel
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.editor.common', 'AbuseFilterPanel.hogan' ),
+		/**
+		 * @memberof AbuseFilterPanel
+		 * @instance
+		 */
 		className: 'panel hidden',
-
 		/**
 		 * Show the panel. Create a route to show AbuseFilterOverlay with message.
-		 * @method
+		 * @memberof AbuseFilterPanel
+		 * @instance
 		 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
 		 * @param {string} message Message to show in the AbuseFilter overlay
 		 */
@@ -60,7 +71,8 @@
 
 		/**
 		 * Hide the panel.
-		 * @method
+		 * @memberof AbuseFilterPanel
+		 * @instance
 		 */
 		hide: function () {
 			this.$el.addClass( 'hidden' );

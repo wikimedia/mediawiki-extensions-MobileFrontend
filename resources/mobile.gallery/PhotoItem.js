@@ -11,7 +11,15 @@
 	}
 
 	OO.mfExtend( PhotoItem, View, {
+		/**
+		 * @memberof PhotoItem
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.gallery', 'PhotoItem.hogan' ),
+		/**
+		 * @memberof PhotoItem
+		 * @instance
+		 */
 		tagName: 'li'
 	} );
 	M.define( 'mobile.gallery/PhotoItem', PhotoItem );

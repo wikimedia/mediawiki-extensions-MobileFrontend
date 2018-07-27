@@ -15,9 +15,11 @@
 
 	OO.mfExtend( AbuseFilterOverlay, Overlay, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Object} defaults.confirmButton options for a confirm Button
+		 * @memberof AbuseFilterOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Object} defaults.confirmButton options for a confirm Button
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			confirmButton: new Button( {
@@ -25,13 +27,24 @@
 				progressive: true
 			} ).options
 		} ),
+		/**
+		 * @memberof AbuseFilterOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			button: Button.prototype.template,
 			content: mw.template.get( 'mobile.editor.common', 'AbuseFilterOverlay.hogan' )
 		} ),
+		/**
+		 * @memberof AbuseFilterOverlay
+		 * @instance
+		 */
 		className: 'overlay abusefilter-overlay',
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof AbuseFilterOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this );
 			// make links open in separate tabs

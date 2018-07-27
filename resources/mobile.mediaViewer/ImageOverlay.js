@@ -24,20 +24,38 @@
 	}
 
 	OO.mfExtend( ImageOverlay, Overlay, {
-		// allow pinch zooming
+		/**
+		 * allow pinch zooming
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		hasFixedHeader: false,
+		/**
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		hideOnExitClick: false,
+		/**
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		className: 'overlay media-viewer',
+		/**
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
 
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {mw.Api} defaults.api instance of API to use
-		 * @cfg {string} defaults.cancelButton HTML of the cancel button.
-		 * @cfg {Object} defaults.detailsButton options for details button
-		 * @cfg {string} defaults.licenseLinkMsg Link to license information in media viewer.
-		 * @cfg {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
+		 * @memberof ImageOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {mw.Api} defaults.api instance of API to use
+		 * @property {string} defaults.cancelButton HTML of the cancel button.
+		 * @property {Object} defaults.detailsButton options for details button
+		 * @property {string} defaults.licenseLinkMsg Link to license information in media viewer.
+		 * @property {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			cancelButton: new Icon( {
@@ -63,8 +81,11 @@
 				name: 'arrow-invert'
 			} ).toHtmlString()
 		} ),
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'click .image-wrapper': 'onToggleDetails',
 			// Click tracking for table of contents so we can see if people interact with it
@@ -72,13 +93,19 @@
 		} ),
 		/**
 		 * Event handler for slide event
+		 * @memberof ImageOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onSlide: function ( ev ) {
 			var nextThumbnail = this.$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
 			this.emit( ImageOverlay.EVENT_SLIDE, nextThumbnail );
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		preRender: function () {
 			var self = this;
 			this.options.thumbnails.forEach( function ( thumbnail, i ) {
@@ -88,10 +115,11 @@
 				}
 			} );
 		},
-
 		/**
 		 * Setup the next and previous images to enable the user to arrow through
 		 * all images in the set of images given in thumbs.
+		 * @memberof ImageOverlay
+		 * @instance
 		 * @param {Array} thumbs A set of images, which are available
 		 * @private
 		 */
@@ -105,16 +133,20 @@
 			this.$( '.prev' ).data( 'thumbnail', lastThumb );
 			this.$( '.next' ).data( 'thumbnail', nextThumb );
 		},
-
 		/**
 		 * Disables the possibility to arrow through all images of the page.
+		 * @memberof ImageOverlay
+		 * @instance
 		 * @private
 		 */
 		_disableArrowImages: function () {
 			this.$( '.prev, .next' ).remove();
 		},
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			var $img,
 				thumbs = this.options.thumbnails || [],
@@ -179,6 +211,8 @@
 
 		/**
 		 * Event handler that toggles the details bar.
+		 * @memberof ImageOverlay
+		 * @instance
 		 */
 		onToggleDetails: function () {
 			this.$( '.cancel, .slider-button' ).toggle();
@@ -186,13 +220,22 @@
 			this._positionImage();
 		},
 
-		// fixme: remove this redundant function.
+		/**
+		 * fixme: remove this redundant function.
+		 * @memberof ImageOverlay
+		 * @instance
+		 * @param {Event} ev
+		 */
 		onExitClick: function ( ev ) {
 			Overlay.prototype.onExitClick.apply( this, arguments );
 			this.emit( ImageOverlay.EVENT_EXIT, ev );
 		},
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof ImageOverlay
+		 * @instance
+		 */
 		show: function () {
 			Overlay.prototype.show.apply( this, arguments );
 			this._positionImage();
@@ -202,7 +245,8 @@
 		 * Fit the image into the window if its dimensions are bigger than the window dimensions.
 		 * Compare window width to height ratio to that of image width to height when setting
 		 * image width or height.
-		 * @method
+		 * @memberof ImageOverlay
+		 * @instance
 		 * @private
 		 */
 		_positionImage: function () {
@@ -237,7 +281,8 @@
 
 		/**
 		 * Function to adjust the height of details section to not more than 50% of window height.
-		 * @method
+		 * @memberof ImageOverlay
+		 * @instance
 		 */
 		adjustDetails: function () {
 			var windowHeight = util.getWindow().height();
@@ -246,10 +291,17 @@
 			}
 		}
 	} );
-	// fixme: remove this redundant constant.
-	/** @event ImageOverlay#ImageOverlay-exit */
+
+	/**
+	 * fixme: remove this redundant constant.
+	 * @memberof ImageOverlay
+	 * @event
+	 */
 	ImageOverlay.EVENT_EXIT = 'ImageOverlay-exit';
-	/** @event ImageOverlay#ImageOverlay-slide */
+	/**
+	 * @memberof ImageOverlay
+	 * @event
+	 */
 	ImageOverlay.EVENT_SLIDE = 'ImageOverlay-slide';
 	M.define( 'mobile.mediaViewer/ImageOverlay', ImageOverlay ); // resource-modules-disable-line
 

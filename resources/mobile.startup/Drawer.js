@@ -15,9 +15,11 @@
 
 	OO.mfExtend( Drawer, Panel, {
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.cancelButton HTML of the button that closes the drawer.
+		 * @memberof Drawer
+		 * @instance
+		 * @mixes Panel#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.cancelButton HTML of the button that closes the drawer.
 		 */
 		defaults: util.extend( {}, Panel.prototype.defaults, {
 			cancelButton: new Icon( {
@@ -31,17 +33,29 @@
 				additionalClassNames: 'cancel'
 			} ).options
 		} ),
+		/**
+		 * @memberof Drawer
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
 			icon: Icon.prototype.template
 		} ),
+		/**
+		 * @memberof Drawer
+		 * @instance
+		 */
 		className: 'drawer position-fixed',
 		/**
 		 * Defines an element that the Drawer should automatically be appended to.
+		 * @memberof Drawer
+		 * @instance
 		 * @property {string}
 		 */
 		appendToElement: 'body',
 		/**
 		 * Whether the drawer should disappear on a scroll event
+		 * @memberof Drawer
+		 * @instance
 		 * @property {boolean}
 		 */
 		closeOnScroll: true,
@@ -49,7 +63,11 @@
 			click: 'stopPropagation'
 		} ),
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Drawer
+		 * @instance
+		 */
 		postRender: function () {
 			var self = this;
 			// This module might be loaded at the top of the page e.g. Special:Uploads
@@ -63,6 +81,8 @@
 		},
 		/**
 		 * Stop Propagation event handler
+		 * @memberof Drawer
+		 * @instance
 		 * @param {Object} ev event object
 		 * Allow the drawer itself to be clickable (e.g. for copying and pasting references
 		 * clicking links in reference)
@@ -73,6 +93,8 @@
 
 		/**
 		 * ShowDrawer event handler
+		 * @memberof Drawer
+		 * @instance
 		 */
 		onShowDrawer: function () {
 			var self = this;
@@ -90,6 +112,8 @@
 
 		/**
 		 * HideDrawer event handler
+		 * @memberof Drawer
+		 * @instance
 		 */
 		onHideDrawer: function () {
 			this.$el.parent().removeClass( 'drawer-visible' );

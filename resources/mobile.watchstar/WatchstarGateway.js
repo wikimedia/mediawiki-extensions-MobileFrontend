@@ -27,7 +27,8 @@
 
 		/**
 		 * Cache API response
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @private
 		 * @param {Object} resp Response from the server
 		 */
@@ -42,7 +43,8 @@
 
 		/**
 		 * Update the watch status cache for a given list of page titles in bulk
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {string[]} titles An array of page titles.
 		 * @param {boolean} watched
 		 * @return {void}
@@ -56,7 +58,8 @@
 
 		/**
 		 * Loads the watch status for a given array of pages
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {Object.<string,string|number>} titleToPageID A page title to page
 		 *                                                      ID map. 0 indicates
 		 *                                                      ID unknown.
@@ -85,7 +88,8 @@
 
 		/**
 		 * Loads the watch status for a given list of page ids in bulk
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {string[]} ids A list of page ids
 		 * @return {jQuery.Deferred}
 		 */
@@ -108,7 +112,8 @@
 		/**
 		 * Loads the watch status for a given list of page ids in bulk. Do not call
 		 * call this method with more than ~2000 characters in titles.
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {string[]} titles
 		 * @return {jQuery.Deferred}
 		 */
@@ -130,7 +135,8 @@
 
 		/**
 		 * Marks whether a given page is watched or not to avoid an API call
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {Page} page Page view object
 		 * @param {boolean} isWatched True if page is watched
 		 */
@@ -140,7 +146,8 @@
 
 		/**
 		 * Check if a given page is watched
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {Page} page Page view object
 		 * @return {boolean|undefined} undefined when the watch status is not known.
 		 */
@@ -150,7 +157,8 @@
 
 		/**
 		 * Toggle the watch status of a known page
-		 * @method
+		 * @memberof WatchstarGateway
+		 * @instance
 		 * @param {Page} page Page view object
 		 * @return {jQuery.Deferred}
 		 */

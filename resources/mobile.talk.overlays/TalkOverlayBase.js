@@ -22,12 +22,24 @@
 		 * Autosign a block of text if necessary
 		 * FIXME: Ideally this would be an imported function rather than a member variable
 		 * and as soon as MobileFrontend uses an asset bundler we'll make that so.
+		 * @memberof TalkOverlayBase
+		 * @instance
 		 * @param {String} text
 		 * @return {String} text with an autosign ("~~~~") if necessary
+		 */
+		/**
+		 * @memberof TalkOverlayBase
+		 * @instance
+		 * @param {string} text
+		 * @return {string}
 		 */
 		autosign: function ( text ) {
 			return /~{3,5}/.test( text ) ? text : text + ' ~~~~';
 		},
+		/**
+		 * @memberof TalkOverlayBase
+		 * @instance
+		 */
 		className: 'talk-overlay overlay'
 	} );
 

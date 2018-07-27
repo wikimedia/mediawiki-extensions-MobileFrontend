@@ -34,22 +34,37 @@
 	}
 
 	OO.mfExtend( PhotoList, View, {
+		/**
+		 * @memberof PhotoList
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.gallery', 'PhotoList.hogan' ),
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.spinner HTML of the spinner icon.
-		 * @cfg {mw.Api} defaults.api instance of an api
+		 * @memberof PhotoList
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.spinner HTML of the spinner icon.
+		 * @property {mw.Api} defaults.api instance of an api
 		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof PhotoList
+		 * @instance
+		 */
 		preRender: function () {
 			// Disable until we've got the list rendered
 			this.scrollEndEventEmitter.setElement( this.$el );
 			this.scrollEndEventEmitter.disable();
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof PhotoList
+		 * @instance
+		 */
 		postRender: function () {
 			this.$end = this.$( '.end' );
 			this.$list = this.$( 'ul' );
@@ -58,7 +73,8 @@
 		},
 		/**
 		 * Check to see if the current view is an empty list.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 * @return {boolean} whether no images have been rendered
 		 */
 		isEmpty: function () {
@@ -67,7 +83,8 @@
 		/**
 		 * Renders an empty message prior to the list.
 		 * FIXME: Should be handled in template, not a method.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		showEmptyMessage: function () {
 			this.parseHTML( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) )
@@ -76,28 +93,32 @@
 		/**
 		 * Hides the message saying the list is empty
 		 * FIXME: Should be handled in template, not a method.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		hideEmptyMessage: function () {
 			this.$( '.empty' ).hide();
 		},
 		/**
 		 * Shows loading spinner
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		showSpinner: function () {
 			this.$end.show();
 		},
 		/**
 		 * Hides loading spinner
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		hideSpinner: function () {
 			this.$end.hide();
 		},
 		/**
 		 * Shows/hides empty state if PhotoList is empty.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		updateEmptyUI: function () {
 			if ( this.isEmpty() ) {
@@ -108,7 +129,8 @@
 		},
 		/**
 		 * Append an array of photos to the view.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 * @param {Array} photosData Array of objects describing a new {PhotoItem}
 		 */
 		appendPhotos: function ( photosData ) {
@@ -119,7 +141,8 @@
 		},
 		/**
 		 * Enables infinite scroll if it's disabled
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 */
 		enableScroll: function () {
 			if ( this.scrollEndEventEmitter.enabled === false ) {
@@ -129,7 +152,8 @@
 		/**
 		 * Load photos into the view using {{PhotoListApi}} when the end is near
 		 * and no current API requests are underway.
-		 * @method
+		 * @memberof PhotoList
+		 * @instance
 		 * @private
 		 */
 		_loadPhotos: function () {
@@ -148,7 +172,6 @@
 				}
 
 				self.hideSpinner();
-
 			} ).catch( function () {
 				self.updateEmptyUI();
 				self.hideSpinner();

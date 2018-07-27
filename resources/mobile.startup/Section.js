@@ -28,9 +28,12 @@
 	OO.mfExtend( Section, View, {
 		template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.text Section text.
-		 * @cfg {string} defaults.spinner HTML of the spinner icon.
+		 * @memberof Section
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.text Section text.
+		 * @property {string} defaults.spinner HTML of the spinner icon.
 		 */
 		defaults: {
 			line: undefined,

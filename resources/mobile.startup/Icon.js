@@ -20,14 +20,19 @@
 	}
 
 	OO.mfExtend( Icon, View, {
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Icon
+		 * @instance
+		 */
 		preRender: function () {
 			this.setRotationClass();
 		},
 		/**
 		 * Internal method that sets the correct rotation class for the icon
 		 * based on the value of rotation
-		 * @method
+		 * @memberof Icon
+		 * @instance
 		 * @private
 		 */
 		setRotationClass: function () {
@@ -51,21 +56,28 @@
 				}
 			}
 		},
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Icon
+		 * @instance
+		 */
 		isTemplateMode: true,
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {boolean} defaults.hasText Whether the icon has text.
-		 * @cfg {boolean} defaults.isSmall Whether the icon should be small.
-		 * @cfg {string} [defaults.href] value of href attribute, when set tagName will default to anchor tag
-		 * @cfg {string} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
-		 * @cfg {string} defaults.base String used as a base for generating class names.
+		 * @memberof Icon
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {boolean} defaults.hasText Whether the icon has text.
+		 * @property {boolean} defaults.isSmall Whether the icon should be small.
+		 * @property {string} [defaults.href] value of href attribute, when set tagName will default to anchor tag
+		 * @property {string} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
+		 * @property {string} defaults.base String used as a base for generating class names.
 		 * Defaults to 'mw-ui-icon'.
-		 * @cfg {string} defaults.name Name of the icon.
-		 * @cfg {string} defaults.modifier Additional class name.
+		 * @property {string} defaults.name Name of the icon.
+		 * @property {string} defaults.modifier Additional class name.
 		 * Defaults to 'mw-ui-icon-element'.
-		 * @cfg {string} defaults.title Tooltip text.
-		 * @cfg {boolean} defaults.rotation will rotate the icon by a certain number of degrees.
+		 * @property {string} defaults.title Tooltip text.
+		 * @property {boolean} defaults.rotation will rotate the icon by a certain number of degrees.
 		 *  Must be ±90, 0 or ±180 or will throw exception.
 		 */
 		defaults: {
@@ -82,7 +94,8 @@
 		},
 		/**
 		 * Return the full class name that is required for the icon to render
-		 * @method
+		 * @memberof Icon
+		 * @instance
 		 * @return {string}
 		 */
 		getClassName: function () {
@@ -90,7 +103,8 @@
 		},
 		/**
 		 * Return the class that relates to the icon glyph
-		 * @method
+		 * @memberof Icon
+		 * @instance
 		 * @return {string}
 		 */
 		getGlyphClassName: function () {
@@ -98,7 +112,8 @@
 		},
 		/**
 		 * Return the HTML representation of this view
-		 * @method
+		 * @memberof Icon
+		 * @instance
 		 * @return {string}
 		 */
 		toHtmlString: function () {

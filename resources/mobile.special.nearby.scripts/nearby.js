@@ -1,6 +1,6 @@
 /* global jQuery */
 ( function ( M, config, msg, loader, $ ) {
-	/** @event Nearby#Nearby-postRender */
+	/** @event */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
@@ -56,7 +56,6 @@
 
 	/**
 	 * Initialize or instantiate Nearby with options
-	 * @method
 	 * @param {Object} opt
 	 */
 	function refresh( opt ) {

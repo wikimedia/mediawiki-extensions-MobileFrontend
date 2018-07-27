@@ -45,6 +45,8 @@ OO.inheritClass( ve.init.mw.MobileFrontendArticleTarget, ve.init.mw.MobileArticl
 
 /**
  * Destroy the target
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
 	// Parent method
@@ -56,6 +58,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
 
 /*
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.getScrollContainer = function () {
 	if ( this.useScrollContainer ) {
@@ -67,13 +71,17 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.getScrollContainer = function (
 
 /*
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.isToolbarOverSurface = function () {
 	return true;
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
 	// MF provides the toolbar so there is no need to float the toolbar
@@ -81,6 +89,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function ()
 
 /**
  * Handle window scroll events
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	var $window, windowTop, contentTop,
@@ -101,8 +111,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	}
 };
 
-/*
+/**
  * Handle surface scroll events
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
 	var nativeSelection, range;
@@ -122,6 +134,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
 
 /*
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDoc, config ) {
 	var surface;
@@ -139,8 +153,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 	return surface;
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	var surface = this.getSurface();
@@ -167,6 +183,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 
 /**
  * Match the content padding to the toolbar height
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function () {
 	var toolbarHeight = this.getToolbar().$element.outerHeight(),
@@ -178,6 +196,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function
 
 /*
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text ) {
 	// Parent method
@@ -187,8 +207,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text
 	this.overlay.hide();
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
 	var target = this;
@@ -204,8 +226,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
 	}
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.save = function () {
 	// Parent method
@@ -216,8 +240,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.save = function () {
 	} );
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
 	// Parent method
@@ -228,8 +254,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
 	} );
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	// Parent method
@@ -238,8 +266,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	this.overlay.onSaveComplete();
 };
 
-/*
+/**
  * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.tryTeardown = function () {
 	// Parent method

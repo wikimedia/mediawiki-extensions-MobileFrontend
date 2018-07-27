@@ -26,11 +26,15 @@
 	OO.mfExtend( Overlay, View, {
 		/**
 		 * Identify whether the element contains position fixed elements
+		 * @memberof Overlay
+		 * @instance
 		 * @property {boolean}
 		 */
 		hasFixedHeader: true,
 		/**
 		 * Is overlay fullscreen
+		 * @memberof Overlay
+		 * @instance
 		 * @property {boolean}
 		 */
 		fullScreen: true,
@@ -38,6 +42,8 @@
 		/**
 		 * True if this.hide() should be invoked before firing the Overlay-exit
 		 * event
+		 * @memberof Overlay
+		 * @instance
 		 * @property {boolean}
 		 */
 		hideOnExitClick: true,
@@ -45,12 +51,16 @@
 		/**
 		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		 * odd consequences on Opera Mobile (see bug 52361)
+		 * @memberof Overlay
+		 * @instance
 		 * @property {string|jQuery.Object}
 		 */
 		appendToElement: '#mw-mf-viewport',
 
 		/**
 		 * Default class name
+		 * @memberof Overlay
+		 * @instance
 		 * @property {string}
 		 */
 		className: 'overlay',
@@ -61,17 +71,19 @@
 		},
 		template: mw.template.get( 'mobile.startup', 'Overlay.hogan' ),
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {string} defaults.saveMessage Caption for save button on edit form.
-		 * @cfg {string} defaults.cancelButton HTML of the cancel button.
-		 * @cfg {string} defaults.backButton HTML of the back button.
-		 * @cfg {string} defaults.headerButtonsListClassName A comma separated string of class
+		 * @memberof Overlay
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {string} defaults.saveMessage Caption for save button on edit form.
+		 * @property {string} defaults.cancelButton HTML of the cancel button.
+		 * @property {string} defaults.backButton HTML of the back button.
+		 * @property {string} defaults.headerButtonsListClassName A comma separated string of class
 		 * names of the wrapper of the header buttons.
-		 * @cfg {boolean} defaults.headerChrome Whether the header has chrome.
-		 * @cfg {boolean} defaults.fixedHeader Whether the header is fixed.
-		 * @cfg {string} defaults.spinner HTML of the spinner icon.
-		 * @cfg {Object} [defaults.footerAnchor] options for an optional Anchor that can appear in the footer
+		 * @property {boolean} defaults.headerChrome Whether the header has chrome.
+		 * @property {boolean} defaults.fixedHeader Whether the header is fixed.
+		 * @property {string} defaults.spinner HTML of the spinner icon.
+		 * @property {Object} [defaults.footerAnchor] options for an optional Anchor that can appear in the footer
 		 */
 		defaults: {
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
@@ -92,6 +104,10 @@
 			fixedHeader: true,
 			spinner: icons.spinner().toHtmlString()
 		},
+		/**
+		 * @memberof Overlay
+		 * @instance
+		 */
 		events: {
 			// FIXME: Remove .initial-header selector when bug 71203 resolved.
 			'click .cancel, .confirm, .initial-header .back': 'onExitClick',
@@ -99,12 +115,16 @@
 		},
 		/**
 		 * Flag overlay to close on content tap
+		 * @memberof Overlay
+		 * @instance
 		 * @property {boolean}
 		 */
 		closeOnContentTap: false,
 
 		/**
 		 * Shows the spinner right to the input field.
+		 * @memberof Overlay
+		 * @instance
 		 * @method
 		 */
 		showSpinner: function () {
@@ -113,13 +133,19 @@
 
 		/**
 		 * Hide the spinner near to the input field.
+		 * @memberof Overlay
+		 * @instance
 		 * @method
 		 */
 		clearSpinner: function () {
 			this.$spinner.addClass( 'hidden' );
 		},
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Overlay
+		 * @instance
+		 */
 		postRender: function () {
 
 			this.$overlayContent = this.$( '.overlay-content' );
@@ -134,7 +160,8 @@
 
 		/**
 		 * Setups an emulated scroll behaviour for overlays in ios.
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 */
 		setupEmulatedIosOverlayScrolling: function () {
 			var self = this;
@@ -149,6 +176,8 @@
 		},
 		/**
 		 * ClickBack event handler
+		 * @memberof Overlay
+		 * @instance
 		 * @param {Object} ev event object
 		 */
 		onExitClick: function ( ev ) {
@@ -160,16 +189,20 @@
 			this.emit( Overlay.EVENT_EXIT );
 		},
 		/**
-		* Event handler for touchstart, for IOS
-		* @param {Object} ev Event Object
-		*/
+		 * Event handler for touchstart, for IOS
+		 * @memberof Overlay
+		 * @instance
+		 * @param {Object} ev Event Object
+		 */
 		onTouchStart: function ( ev ) {
 			this.startY = ev.originalEvent.touches[0].pageY;
 		},
 		/**
-		* Event handler for touch move, for IOS
-		* @param {Object} ev Event Object
-		*/
+		 * Event handler for touch move, for IOS
+		 * @memberof Overlay
+		 * @instance
+		 * @param {Object} ev Event Object
+		 */
 		onTouchMove: function ( ev ) {
 			var
 				y = ev.originalEvent.touches[0].pageY,
@@ -188,6 +221,8 @@
 		/**
 		 * Stop clicks in the overlay from propagating to the page
 		 * (prevents non-fullscreen overlays from being closed when they're tapped)
+		 * @memberof Overlay
+		 * @instance
 		 * @param {Object} ev Event Object
 		 */
 		stopPropagation: function ( ev ) {
@@ -195,7 +230,8 @@
 		},
 		/**
 		 * Attach overlay to current view and show it.
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 */
 		show: function () {
 			var self = this,
@@ -230,7 +266,8 @@
 		},
 		/**
 		 * Detach the overlay from the current view
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 * @param {boolean} [force] Whether the overlay should be closed regardless of
 		 * state (see PhotoUploadProgress)
 		 * @return {boolean} Whether the overlay was successfully hidden or not
@@ -263,7 +300,8 @@
 		/**
 		 * Fit the overlay content height to the window taking overlay header and footer heights
 		 * into consideration.
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 * @private
 		 * @param {number} windowHeight The height of the window
 		 */
@@ -285,7 +323,8 @@
 		 * effect (position: fixed doesn't work on iOS when the virtual keyboard
 		 * is open).
 		 *
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 * @private
 		 * @param {jQuery.Object} $el for elements that may trigger virtual
 		 * keyboard (usually inputs, textareas, contenteditables).
@@ -327,7 +366,8 @@
 		 * Also hide .hideable elements
 		 * Can't use jQuery's hide() and show() because show() sets display: block.
 		 * And we want display: table for headers.
-		 * @method
+		 * @memberof Overlay
+		 * @instance
 		 * @protected
 		 * @param {string} className CSS selector to show
 		 */
@@ -339,6 +379,7 @@
 
 	/*
 	 * Fires when close button is clicked. Not to be confused with hide event.
+	 * @memberof Overlay
 	 * @event Overlay#Overlay-exit
 	 */
 	Overlay.EVENT_EXIT = 'Overlay-exit';

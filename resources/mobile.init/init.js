@@ -76,7 +76,6 @@
 	/**
 	 * Get current page view object
 	 * FIXME: Move to M.define( 'page' )
-	 * @method
 	 * @return {Page}
 	 */
 	function getCurrentPage() {
@@ -90,7 +89,6 @@
 	/**
 	 * Constructs an incomplete Page object representing the currently loaded page.
 	 *
-	 * @method
 	 * @private
 	 * @return {Page}
 	 */
@@ -120,7 +118,6 @@
 	/**
 	 * Displays a prompt to ask the user to join the mobile beta mode.
 	 *
-	 * @method
 	 * @private
 	 * @param {Object} experiment sampling data
 	 * @param {Page} page
@@ -162,8 +159,6 @@
 
 	/**
 	 * Updates the font size based on the current value in storage
-	 *
-	 * @method
 	 */
 	function updateFontSize() {
 		// FIXME: Ideally 'regular' would come from a shared constant

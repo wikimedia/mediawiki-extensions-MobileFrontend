@@ -25,7 +25,8 @@
 	EditorGateway.prototype = {
 		/**
 		 * Get the content of a page.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 * @return {jQuery.Deferred}
 		 */
 		getContent: function () {
@@ -119,7 +120,8 @@
 		/**
 		 * Mark content as modified and set changes to be submitted when #save
 		 * is invoked.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 * @param {string} content New section content.
 		 */
 		setContent: function ( content ) {
@@ -134,7 +136,8 @@
 		/**
 		 * Mark content as modified and set text that should be prepended to given
 		 * section when #save is invoked.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 * @param {string} text Text to be prepended.
 		 */
 		setPrependText: function ( text ) {
@@ -144,7 +147,8 @@
 
 		/**
 		 * Save the new content of the section, previously set using #setContent.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 * @param {Object} options Configuration options
 		 * @param {string} [options.summary] Optional summary for the edit.
 		 * @param {string} [options.captchaId] If CAPTCHA was requested, ID of the
@@ -263,7 +267,8 @@
 
 		/**
 		 * Abort any pending previews.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 */
 		abortPreview: function () {
 			if ( this._pending ) {
@@ -273,7 +278,8 @@
 
 		/**
 		 * Get page preview from the API and abort any existing previews.
-		 * @method
+		 * @memberof EditorGateway
+		 * @instance
 		 * @param {Object} options API query parameters
 		 * @return {jQuery.Deferred}
 		 */

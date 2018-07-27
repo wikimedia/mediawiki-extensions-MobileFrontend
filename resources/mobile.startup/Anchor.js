@@ -12,15 +12,22 @@
 	}
 
 	OO.mfExtend( Anchor, View, {
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof Anchor
+		 * @instance
+		 */
 		isTemplateMode: true,
 		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {boolean} defaults.progressive is progressive action
-		 * @cfg {boolean} defaults.destructive is destructive action
-		 * @cfg {string} defaults.additionalClassNames Additional class name(s).
-		 * @cfg {string} defaults.href url
-		 * @cfg {string} defaults.label of anchor
+		 * @memberof Anchor
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {boolean} defaults.progressive is progressive action
+		 * @property {boolean} defaults.destructive is destructive action
+		 * @property {string} defaults.additionalClassNames Additional class name(s).
+		 * @property {string} defaults.href url
+		 * @property {string} defaults.label of anchor
 		 */
 		defaults: {
 			progressive: undefined,
@@ -29,6 +36,11 @@
 			href: undefined,
 			label: undefined
 		},
+		/**
+		 * @inheritdoc
+		 * @memberof Anchor
+		 * @instance
+		 */
 		template: mw.template.get( 'mobile.startup', 'anchor.hogan' )
 	} );
 	M.define( 'mobile.startup/Anchor', Anchor );

@@ -27,7 +27,8 @@
 		 * Don't try to hide the active overlay on a route change event triggered
 		 * by hiding another overlay.
 		 * Called when hiding an overlay.
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 */
 		_onHideOverlay: function () {
@@ -38,7 +39,8 @@
 
 		/**
 		 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 * @param {Overlay} overlay to show
 		 */
@@ -51,7 +53,8 @@
 
 		/**
 		 * Hide overlay
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 * @param {Overlay} overlay to hide
 		 * @return {boolean} Whether the overlay has been hidden
@@ -75,7 +78,8 @@
 
 		/**
 		 * Show match's overlay if match is not null.
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 * @param {Object|null} match Object with factory function's result. null if no match.
 		 */
@@ -119,7 +123,8 @@
 
 		/**
 		 * A callback for Router's `route` event.
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 * @param {jQuery.Event} ev Event object.
 		 */
@@ -162,7 +167,8 @@
 
 		/**
 		 * Check if a given path matches one of the entries.
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @private
 		 * @param {string} path Path (hash) to check.
 		 * @param {Object} entry Entry object created in OverlayManager#add.
@@ -212,7 +218,8 @@
 		 *       return factoryResult;
 		 *     } );
 		 *
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @param {RegExp} route route regular expression, optionally with parameters.
 		 * @param {Function} factory a function returning an overlay or a $.Deferred
 		 * which resolves to an overlay.
@@ -237,7 +244,8 @@
 		 * URL. This is useful for when you want to switch overlays, but don't want to
 		 * change the back button or close box behavior.
 		 *
-		 * @method
+		 * @memberof OverlayManager
+		 * @instance
 		 * @param {Object} overlay The overlay to display
 		 */
 		replaceCurrent: function ( overlay ) {

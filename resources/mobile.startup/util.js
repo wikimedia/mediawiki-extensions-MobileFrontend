@@ -11,8 +11,8 @@
 	util = {
 		/**
 		 * Escape a string for use as a css selector
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @param {string} selector
 		 * @return {string}
 		 */
@@ -21,8 +21,8 @@
 		},
 		/**
 		 * Wrapper class for the $.grep
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {jQuery.Deferred}
 		 */
 		grep: function () {
@@ -30,8 +30,8 @@
 		},
 		/**
 		 * Run method when document is ready.
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @param {Function} fn
 		 * @return {jQuery.Object}
 		 */
@@ -40,8 +40,8 @@
 		},
 		/**
 		 * Wrapper class for the $.when
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {jQuery.Deferred}
 		 */
 		when: function () {
@@ -49,8 +49,8 @@
 		},
 		/**
 		 * Wrapper class for the Deferred method
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {jQuery.Deferred}
 		 */
 		Deferred: function () {
@@ -64,8 +64,8 @@
 		},
 		/**
 		 * Adds a class to the document
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {jQuery.Object} element representing the documentElement
 		 */
 		getDocument: function () {
@@ -73,8 +73,8 @@
 		},
 		/**
 		 * Get the window object
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {jQuery.Object}
 		 */
 		getWindow: function () {
@@ -84,7 +84,8 @@
 		 * Given some html, create new element(s).
 		 * Unlike jQuery.parseHTML this will return a jQuery object
 		 * not an array.
-		 *
+		 * @memberof util
+		 * @instance
 		 * @param {string} html
 		 * @param {Element} [ctx] Document element to serve as the context in which the HTML fragment will be created
 		 * @return {jQuery.Object}
@@ -94,15 +95,15 @@
 		},
 		/**
 		 * wrapper for jQuery util noop function
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {Function}
 		 */
 		noop: $.noop,
 		/**
 		 * wrapper for jQuery util function to check if something is numeric
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {Boolean}
 		 */
 		isNumeric: function () {
@@ -111,8 +112,8 @@
 		/**
 		 * Wrapper for jQuery.extend method. In future this can be bound to Object.assign
 		 * when support allows.
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @return {Object}
 		 */
 		extend: function () {
@@ -123,8 +124,8 @@
 		 * look like CSS classes and pseudoclasses. See
 		 * http://bugs.jquery.com/ticket/5241
 		 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
-		 *
-		 * @method
+		 * @memberof util
+		 * @instance
 		 * @param {string} hash A hash to escape
 		 * @return {string}
 		 */
@@ -135,7 +136,8 @@
 		/**
 		 * Heuristic for determining whether an Event should be handled by
 		 * MobileFrontend or allowed to bubble to the browser.
-		 *
+		 * @memberof util
+		 * @instance
 		 * @param {Event} ev
 		 * @return {boolean} True if event is modified with control, alt, meta, or
 		 *                   shift keys and should probably be handled by the

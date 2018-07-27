@@ -33,33 +33,47 @@
 	}
 
 	OO.mfExtend( SearchOverlay, Overlay, {
+		/**
+		 * @memberof SearchOverlay
+		 * @instance
+		 */
 		isBorderBox: false,
+		/**
+		 * @memberof SearchOverlay
+		 * @instance
+		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.search', 'header.hogan' ),
 			content: mw.template.get( 'mobile.search', 'content.hogan' ),
 			icon: Icon.prototype.template
 		} ),
+		/**
+		 * @memberof SearchOverlay
+		 * @instance
+		 */
 		className: 'overlay search-overlay',
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
+		 * @memberof SearchOverlay
+		 * @instance
+		 * @mixes Overlay#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
 		 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
-		 * @cfg {Router} defaults.router instance
-		 * @cfg {Object} defaults.clearIcon options for the button that clears the search text.
-		 * @cfg {Object} defaults.searchContentIcon options for the button that allows you to search within content
-		 * @cfg {string} defaults.searchTerm Search text.
-		 * @cfg {string} defaults.placeholderMsg Search input placeholder text.
-		 * @cfg {string} defaults.clearMsg Tooltip for clear button that appears when you type
+		 * @property {Router} defaults.router instance
+		 * @property {Object} defaults.clearIcon options for the button that clears the search text.
+		 * @property {Object} defaults.searchContentIcon options for the button that allows you to search within content
+		 * @property {string} defaults.searchTerm Search text.
+		 * @property {string} defaults.placeholderMsg Search input placeholder text.
+		 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
 		 * into search box.
-		 * @cfg {string} defaults.searchContentMsg Caption for a button performing full text
+		 * @property {string} defaults.searchContentMsg Caption for a button performing full text
 		 * search of a given search query.
-		 * @cfg {string} defaults.noResultsMsg Message informing user that no pages were found
+		 * @property {string} defaults.noResultsMsg Message informing user that no pages were found
 		 * for a given query.
-		 * @cfg {string} defaults.searchContentNoResultsMsg Used when no pages with matching
+		 * @property {string} defaults.searchContentNoResultsMsg Used when no pages with matching
 		 * titles were found.
-		 * @cfg {string} defaults.action The value of wgScript
-		 * @cfg {Object} defaults.feedback options for the feedback link below the search results
+		 * @property {string} defaults.action The value of wgScript
+		 * @property {Object} defaults.feedback options for the feedback link below the search results
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headerChrome: true,
@@ -92,6 +106,8 @@
 		} ),
 		/**
 		 * @inheritdoc
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		events: util.extend( {}, Overlay.prototype.events, {
 			'input input': 'onInputInput',
@@ -109,6 +125,8 @@
 		 * user begins typing so that there is adequate space for search results
 		 * above the keyboard. (This is only a potential issue when sitenotices
 		 * are displayed.)
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		onInputInput: function () {
 			this.performSearch();
@@ -117,6 +135,8 @@
 
 		/**
 		 * Initialize the button that clears the search field
+		 * @memberof SearchOverlay
+		 * @instance
 		 * @return {boolean} False to cancel the native event
 		 */
 		onClickClear: function () {
@@ -130,6 +150,8 @@
 
 		/**
 		 * Initialize 'search within pages' functionality
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		onClickSearchContent: function () {
 			var $el = util.getDocument().find( 'body' ),
@@ -154,6 +176,8 @@
 
 		/**
 		 * Tapping on background only should hide the overlay
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		onClickOverlayContent: function () {
 			this.$( '.cancel' ).trigger( 'click' );
@@ -161,6 +185,8 @@
 
 		/**
 		 * Stop propagation
+		 * @memberof SearchOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onClickOverlayContentDiv: function ( ev ) {
@@ -170,6 +196,8 @@
 		/**
 		 * Hide the keyboard when scrolling starts (avoid weird situation when
 		 * user taps on an item, the keyboard hides and wrong item is clicked).
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		hideKeyboardOnScroll: function () {
 			this.$input.blur();
@@ -178,6 +206,8 @@
 		/**
 		 * Handle the user clicking a result.
 		 *
+		 * @memberof SearchOverlay
+		 * @instance
 		 * @param {jQuery.Event} ev
 		 */
 		onClickResult: function ( ev ) {
@@ -209,7 +239,11 @@
 			} );
 		},
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof SearchOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			var self = this,
 				timer;
@@ -251,7 +285,8 @@
 		/**
 		 * Trigger a focus() event on search input in order to
 		 * bring up the virtual keyboard.
-		 * @method
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		showKeyboard: function () {
 			var len = this.$input.val().length;
@@ -262,7 +297,11 @@
 			}
 		},
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof SearchOverlay
+		 * @instance
+		 */
 		show: function () {
 			// Overlay#show defines the actual overlay visibility.
 			Overlay.prototype.show.apply( this, arguments );
@@ -278,6 +317,8 @@
 		/**
 		 * Fade out if the browser supports animations
 		 * @inheritdoc
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		hide: function () {
 			var self = this,
@@ -298,7 +339,8 @@
 		 * Perform search and render results inside current view.
 		 * FIXME: Much of the logic for caching and pending queries inside this function should
 		 * actually live in SearchGateway, please move out.
-		 * @method
+		 * @memberof SearchOverlay
+		 * @instance
 		 */
 		performSearch: function () {
 			var

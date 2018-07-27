@@ -1,6 +1,6 @@
 ( function ( M ) {
 	var user = M.require( 'mobile.startup/user' ),
-		/*
+		/**
 		 * Edit schema
 		 * https://meta.wikimedia.org/wiki/Schema:Edit
 		 */

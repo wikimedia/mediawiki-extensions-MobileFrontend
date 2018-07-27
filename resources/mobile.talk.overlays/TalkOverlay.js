@@ -21,16 +21,18 @@
 			content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' )
 		} ),
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Array} defaults.headings A list of {Section} objects to render heading links
+		 * @memberof TalkOverlay
+		 * @instance
+		 * @mixes TalkOverlayBase#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Array} defaults.headings A list of {Section} objects to render heading links
 		 * for. If not set ajax request will be performed.
-		 * @cfg {string} defaults.heading Heading for talk overlay.
-		 * @cfg {string} defaults.leadHeading Heading for a discussion which has no heading
+		 * @property {string} defaults.heading Heading for talk overlay.
+		 * @property {string} defaults.leadHeading Heading for a discussion which has no heading
 		 * (lead section of talk page).
-		 * @cfg {string} defaults.headerButtonsListClassName Class name of the header buttons
+		 * @property {string} defaults.headerButtonsListClassName Class name of the header buttons
 		 * list
-		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
+		 * @property {Array} defaults.headerButtons Objects that will be used as defaults for
 		 * generating header buttons. Default list includes an 'add' button, which opens
 		 * a new talk overlay.
 		 */
@@ -51,7 +53,11 @@
 			} ).options
 		} ),
 
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @memberof TalkOverlay
+		 * @instance
+		 */
 		postRender: function () {
 			TalkOverlayBase.prototype.postRender.apply( this );
 			this.$board = this.$( '.board' );
@@ -66,7 +72,8 @@
 
 		/**
 		 * Show a loading spinner
-		 * @method
+		 * @memberof TalkOverlay
+		 * @instance
 		 */
 		showSpinner: function () {
 			this.$board.hide();
@@ -75,7 +82,8 @@
 
 		/**
 		 * Hide the loading spinner
-		 * @method
+		 * @memberof TalkOverlay
+		 * @instance
 		 */
 		clearSpinner: function () {
 			TalkOverlayBase.prototype.clearSpinner.apply( this, arguments );
@@ -84,7 +92,8 @@
 
 		/**
 		 * Load content of the talk page into the overlay
-		 * @method
+		 * @memberof TalkOverlay
+		 * @instance
 		 * @param {Object} options for the overlay
 		 * @private
 		 */
@@ -125,7 +134,8 @@
 
 		/**
 		 * Adds the content received from _loadContent to the Overlay and re-renders it.
-		 * @method
+		 * @memberof TalkOverlay
+		 * @instance
 		 * @private
 		 * @param {Object} pageData As returned from PageApi#getPage
 		 * @param {Object} options for the overlay
@@ -147,7 +157,8 @@
 		/**
 		 * Shows the add topic button to logged in users.
 		 * Ensures the overlay refreshes when a discussion is added.
-		 * @method
+		 * @memberof TalkOverlay
+		 * @instance
 		 * @private
 		 */
 		_setupAddDiscussionButton: function () {

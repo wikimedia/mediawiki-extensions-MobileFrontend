@@ -1,13 +1,15 @@
 // Register the Hogan compiler with MediaWiki.
 ( function () {
-	/*
+	/**
 	 * Hogan template compiler
+	 * @class hogan
 	 */
 	var hogan = {
 		/**
 		 * Compiler source code into a template object
 		 *
-		 * @method
+		 * @memberof hogan
+		 * @instance
 		 * @param {string} src the source of a template
 		 * @return {Hogan.Template} template object
 		 */

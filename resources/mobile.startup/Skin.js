@@ -80,13 +80,17 @@
 		/**
 		 * Skin contains components that we do not control
 		 * @inheritdoc
+		 * @memberof Skin
+		 * @instance
 		 */
 		isBorderBox: false,
 		/**
-		 * @inheritdoc
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Page} defaults.page page the skin is currently rendering
-		 * @cfg {ReferencesGateway} defaults.referencesGateway instance of references gateway
+		 * @memberof Skin
+		 * @instance
+		 * @mixes View#defaults
+		 * @property {Object} defaults Default options hash.
+		 * @property {Page} defaults.page page the skin is currently rendering
+		 * @property {ReferencesGateway} defaults.referencesGateway instance of references gateway
 		 */
 		defaults: {
 			page: undefined
@@ -94,11 +98,15 @@
 
 		/**
 		 * @inheritdoc
+		 * @memberof Skin
+		 * @instance
 		 */
 		events: {},
 
 		/**
 		 * @inheritdoc
+		 * @memberof Skin
+		 * @instance
 		 */
 		postRender: function () {
 			var $el = this.$el;
@@ -124,6 +132,8 @@
 		},
 		/**
 		 * Get images that have not yet been loaded in the page
+		 * @memberof Skin
+		 * @instance
 		 * @param {jQuery.Object} [$container] The container that should be
 		 *  searched for image placeholders. Defaults to "#content".
 		 * @return {Array} of unloaded image placeholders in the page
@@ -135,6 +145,8 @@
 		/**
 		 * Setup listeners to watch unloaded images and load them into the page
 		 * as and when they are needed.
+		 * @memberof Skin
+		 * @instance
 		 * @param {jQuery.Object} [$container] The container that should be
 		 *  searched for image placeholders. Defaults to "#content".
 		 * @return {jQuery.Deferred} which will be resolved when the attempts to load all images subject to
@@ -197,6 +209,8 @@
 		},
 		/**
 		 * Load an image on demand
+		 * @memberof Skin
+		 * @instance
 		 * @param {Array} [images] a list of images that have not been loaded. If none given all will be loaded
 		 * @return {jQuery.Deferred}
 		 */
@@ -214,6 +228,8 @@
 		},
 		/**
 		 * Load an image on demand
+		 * @memberof Skin
+		 * @instance
 		 * @param {jQuery.Object} $placeholder
 		 * @return {jQuery.Deferred}
 		 */
@@ -254,7 +270,8 @@
 		 * Load the references section content from API if it's not already loaded.
 		 *
 		 * All references tags content will be loaded per section.
-		 *
+		 * @memberof Skin
+		 * @instance
 		 * @param {Object} data Information about the section. It's in the following form:
 		 * {
 		 *     @property {string} page,
@@ -346,6 +363,8 @@
 		/**
 		 * Returns the appropriate license message including links/name to
 		 * terms of use (if any) and license page
+		 * @memberof Skin
+		 * @instance
 		 * @return {string}
 		 */
 		getLicenseMsg: function () {
