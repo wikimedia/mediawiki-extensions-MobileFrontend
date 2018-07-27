@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "10347527_6a8762b1",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-27T04:32:41Z",
+      "side": 1,
+      "message": "It might be easier to understand this code if the hasNoNonEmptyPrecedingParagraphs() check and the logic to find the lead paragraph would be one and the same. E.g. a \"find lead paragraph\" function that would start from a node and try to find one within a limited number of siblings before or after it (e.g. 5 or 10). We\u0027d use it negated to confirm there are none before infobox, and we\u0027d the take match after $infobox as $leadParagraph to move.\n\nThe current logic is quite minimal and possibly easier, but I can also see that, particularly from the intent of this commit, that we might want the extra abstraction/unification here.",
+      "parentUuid": "7f09bcc7_df158f92",
+      "range": {
+        "startLine": 123,
+        "startChar": 33,
+        "endLine": 124,
+        "endChar": 38
+      },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc43b3e7_22eded9a",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 1
