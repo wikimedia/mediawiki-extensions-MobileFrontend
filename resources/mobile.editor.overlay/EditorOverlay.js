@@ -5,7 +5,7 @@
 		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		AbuseFilterPanel = M.require( 'mobile.editor.common/AbuseFilterPanel' ),
 		Button = M.require( 'mobile.startup/Button' ),
-		toast = M.require( 'mobile.startup/toast' ),
+		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
 
 	/**
@@ -353,6 +353,56 @@
 			return this.$content.val();
 		},
 
+		_parseBlockInfo: function ( data ) {
+			var blockInfo, expiry, reason,
+				moment = window.moment;
+
+			// Workaround to parse a message parameter for mw.message, see T96885
+			function jqueryMsgParse( wikitext ) {
+				var parser, ast;
+				// eslint-disable-next-line new-cap
+				parser = new mw.jqueryMsg.parser();
+				try {
+					ast = parser.wikiTextToAst( wikitext );
+					return parser.emitter.emit( ast ).html();
+				} catch ( e ) {
+					// Ignore error as it's probably the parser error. Usually this is because we
+					// can't parse templates.
+					return false;
+				}
+			}
+
+			blockInfo = {
+				creator: {
+					name: data.block.by,
+					// NS_USER === 2
+					url: mw.util.getUrl(
+						mw.config.get( 'wgFormattedNamespaces' )[2] + ':' +
+						data.block.by
+					),
+					gender: data.blockedByUser.gender
+				},
+				expiry: null,
+				duration: null,
+				reason: ''
+			};
+
+			expiry = data.block.expiry;
+			if ( expiry !== 'infinity' ) {
+				blockInfo.expiry = moment( expiry ).format( 'LLL' );
+				blockInfo.duration = moment().to( expiry, true );
+			}
+
+			reason = data.block.reason;
+			if ( reason ) {
+				blockInfo.reason = jqueryMsgParse( reason ) || mw.html.escape( reason );
+			} else {
+				blockInfo.reason = mw.message( 'mobile-frontend-editor-generic-block-reason' ).escaped();
+			}
+
+			return blockInfo;
+		},
+
 		/**
 		 * Requests content from the API and reveals it in UI.
 		 * @method
@@ -368,37 +418,27 @@
 
 			this.gateway.getContent()
 				.done( function ( result ) {
-					var parser, ast, parsedBlockReason,
+					var block, message,
 						content = result.text,
-						userinfo = result.user,
-						block = result.block,
 						userTalkPage = mw.config.get( 'wgNamespaceNumber' ) === 3;
 
 					self.setContent( content );
 					// check if user is blocked
-					if ( userinfo && userinfo.hasOwnProperty( 'blockid' ) &&
-						!( userTalkPage && block.allowusertalk ) ) {
-						// Workaround to parse a message parameter for mw.message, see T96885
-						// eslint-disable-next-line new-cap
-						parser = new mw.jqueryMsg.parser();
-						try {
-							ast = parser.wikiTextToAst( userinfo.blockreason );
-							parsedBlockReason = parser.emitter.emit( ast );
-						} catch ( e ) {
-							// ignore error as it's probably the parser error, it would be good to log it
-							parsedBlockReason = mw.msg( 'mobile-frontend-editor-generic-block-reason' );
-						}
-						toast.show(
-							mw.message(
-								'mobile-frontend-editor-blocked-info',
-								userinfo.blockedby,
-								parsedBlockReason
-							).parse()
-						);
-						self.hide();
+					if ( result.block && !( userTalkPage && result.block.allowusertalk ) ) {
+						// Lazy-load moment only if it's needed, it's somewhat large (it is already used on
+						// mobile by Echo's notifications panel, where it's also lazy-loaded)
+						mw.loader.using( 'moment' ).then( function () {
+							block = self._parseBlockInfo( result );
+							message = new BlockMessage( block );
+							message.toggle();
+							self.hide();
+							self.clearSpinner();
+							$el.removeClass( 'overlay-loading' );
+						} );
+					} else {
+						self.clearSpinner();
+						$el.removeClass( 'overlay-loading' );
 					}
-					self.clearSpinner();
-					$el.removeClass( 'overlay-loading' );
 				} )
 				.fail( function () {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );

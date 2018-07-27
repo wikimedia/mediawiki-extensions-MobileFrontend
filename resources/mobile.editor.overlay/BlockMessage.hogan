@@ -1,0 +1,34 @@
+{{#collapseIcon}}{{>icon}}{{/collapseIcon}}
+<div class="block-message">
+  <div class="block-message-icon">
+    {{#stopHandIcon}}{{>icon}}{{/stopHandIcon}}
+  </div>
+  <div class="block-message-info">
+    <div class="block-message-item block-message-title">
+      <h5>{{ title }}</h5>
+    </div>
+    <div class="block-message-data">
+      {{#reason}}
+        <div class="block-message-item">
+          <h6>{{ reasonHeader }}</h6>
+          <div><strong>{{{ reason }}}</strong></div>
+        </div>
+      {{/reason}}
+      <div class="block-message-item block-message-creator">
+        <h6>{{ creatorHeader }}</h6>
+        <div><strong><a href="{{ creator.url }}">{{#userIcon}}{{>icon}}{{/userIcon}}{{ creator.name }}</a></strong></div>
+      </div>
+      {{#expiry}}
+        <div class="block-message-item">
+          <h6>{{ expiryHeader }}</h6>
+          <div><strong>{{#duration}}{{ duration }} / {{/duration}}{{ expiry }}</strong></div>
+        </div>
+      {{/expiry}}
+    </div>
+    {{#okButton}}
+      <div class="block-message-item block-message-buttons">
+        {{>button}}
+      </div>
+    {{/okButton}}
+  </div>
+</div>

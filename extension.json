@@ -484,6 +484,7 @@
 			],
 			"dependencies": [
 				"mobile.editor.common",
+				"mobile.editor.images",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
 				"mediawiki.notification",
@@ -491,17 +492,34 @@
 				"mediawiki.editfont.styles"
 			],
 			"scripts": [
+				"resources/mobile.editor.overlay/BlockMessage.js",
 				"resources/mobile.editor.overlay/EditorOverlay.js"
 			],
+			"styles": [
+				"resources/mobile.editor.overlay/BlockMessage.less"
+			],
 			"templates": {
+				"BlockMessage.hogan": "resources/mobile.editor.overlay/BlockMessage.hogan",
 				"content.hogan": "resources/mobile.editor.overlay/content.hogan"
 			},
 			"messages": [
-				"mobile-frontend-editor-blocked-info",
+				"ok",
+				"mobile-frontend-editor-blocked-drawer-title",
+				"mobile-frontend-editor-blocked-drawer-reason-header",
+				"mobile-frontend-editor-blocked-drawer-creator-header",
+				"mobile-frontend-editor-blocked-drawer-expiry-header",
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
 				"mobile-frontend-editor-anon"
 			]
+		},
+		"mobile.editor.images": {
+			"class": "ResourceLoaderImageModule",
+			"selector": ".mw-ui-icon-mf-{name}:before",
+			"images": {
+				"profile": "resources/mobile.editor.images/profile.svg",
+				"stop-hand": "resources/mobile.editor.images/stop-hand.svg"
+			}
 		},
 		"mobile.search.images": {
 			"class": "ResourceLoaderImageModule",

@@ -35,25 +35,27 @@
 				// Using this.api.get which returns a promise
 				result = util.Deferred();
 
-			if ( this.content !== undefined ) {
+			function resolve() {
 				result.resolve( {
-					text: self.content,
+					text: self.content || '',
 					user: self.userinfo,
-					block: self.block
+					block: self.block,
+					blockedByUser: self.blockedByUser
 				} );
+			}
+
+			if ( this.content !== undefined ) {
+				resolve();
 			} else {
 				options = {
 					action: 'query',
 					prop: 'revisions',
 					rvprop: [ 'content', 'timestamp' ],
 					titles: self.title,
-					// get block information for this user
+					// get block information for this user (meta=userinfo is the only way to find autoblocks,
+					// we can't use list=blocks&bkusers/bkip for this)
 					meta: 'userinfo',
 					uiprop: 'blockinfo',
-					// get additional block information for talk pages
-					list: 'blocks',
-					bkusers: mw.user.getName(),
-					bkprop: 'flags',
 					formatversion: 2
 				};
 				// Load text of old revision if desired
@@ -84,13 +86,32 @@
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
 					self.userinfo = resp.query.userinfo;
-					self.block = resp.query.blocks && resp.query.blocks[0] || {};
+					self.block = null;
+					self.blockedByUser = null;
 
-					result.resolve( {
-						text: self.content || '',
-						user: self.userinfo,
-						block: self.block
-					} );
+					if ( !self.userinfo.blockid ) {
+						resolve();
+					} else {
+						// Preload library used by EditorOverlay to format block expiry datetime and duration
+						mw.loader.load( 'moment' );
+
+						// Look up additional block information:
+						// * Block flags - 'allowusertalk' for talk pages
+						// * Blocker's gender for localisation messages
+						self.api.get( {
+							list: 'blocks|users',
+							bkids: self.userinfo.blockid,
+							bkprop: 'by|expiry|reason|flags',
+							ususers: self.userinfo.blockedby,
+							usprop: 'gender',
+							formatversion: 2
+						} ).then( function ( resp ) {
+							self.block = resp.query.blocks[0];
+							self.blockedByUser = resp.query.users[0];
+
+							resolve();
+						} );
+					}
 				} );
 			}
 			return result;
