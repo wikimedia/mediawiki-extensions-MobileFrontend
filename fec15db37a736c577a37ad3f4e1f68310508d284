@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72fd19a4_5c57c38f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-27T14:38:32Z",
+      "side": 1,
+      "message": "Awesome separation of concerns refactor!",
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32790c1a_7c8ecb3a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-27T14:38:32Z",
+      "side": 1,
+      "message": "I like the way you pushed the config out of the transform and into the client.",
+      "range": {
+        "startLine": 83,
+        "startChar": 3,
+        "endLine": 83,
+        "endChar": 46
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77a993ad_78ac54b8",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-27T14:38:32Z",
+      "side": 1,
+      "message": "Maybe we can delete this code in a subsequent patchset? It sounds like we didn\u0027t find this functionality useful on Wikipedia.org. Is there any reason to think third-parties will want it?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 50
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e457ba34_8f89a7c9",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-27T14:38:32Z",
+      "side": 1,
+      "message": "Any reason not to inline this function here? apply() doesn\u0027t seem to add much but has a nicer name.",
+      "range": {
+        "startLine": 39,
+        "startChar": 9,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28e8160d_2cfa6e94",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-07-27T14:38:32Z",
+      "side": 1,
+      "message": "I wouldn\u0027t block the patch for it, but consider refactoring this into a couple functions for more focused unit tests and improved readability:\n\n1 A function that does the outer looping over each image, transformImages().\n2 An inner function that does all the changes needed to transform an image to a placeholder, transformImage().\n3 A function for replacing attributes, transformAttributes().",
+      "range": {
+        "startLine": 139,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 2
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
