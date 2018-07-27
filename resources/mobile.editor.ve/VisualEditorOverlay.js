@@ -79,9 +79,16 @@
 
 		/** @inheritdoc **/
 		hide: function () {
-			var retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
-			if ( retval ) {
+			var overlay = this,
+				retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
+			if ( retval === true ) {
 				this.destroyTarget();
+			} else if ( retval && retval.then ) {
+				retval.then( function ( hide ) {
+					if ( hide ) {
+						overlay.destroyTarget();
+					}
+				} );
 			}
 			return retval;
 		},
