@@ -308,5 +308,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "اندازهٔ فونت",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "تنظیم اندازهٔ فونت متنی که می‌خوانید.",
 	"mobile-frontend-beta-only": "ویژگی‌ها فقط در نسخهٔ آزمایشی وجود دارند",
-	"mobile-frontend-console-recruit": "برای آگاهی از نحوهٔ ساخت سایت برای موبایل @ https://www.mediawiki.org/wiki/Extension:MobileFrontend را مشاهده کنید"
+	"mobile-frontend-console-recruit": "برای آگاهی از نحوهٔ ساخت سایت برای موبایل @ https://www.mediawiki.org/wiki/Extension:MobileFrontend را مشاهده کنید",
+	"mobile-frontend-special-pages-pref": "بهینه و ساده‌سازی صفحات ویژه برای نمایش در تلفن همراه (پیشنهاد می‌شود)",
+	"prefs-mobile": "ترجیحات تلفن همراه"
 }
