@@ -65,6 +65,30 @@
     },
     {
       "key": {
+        "uuid": "e005e51f_ceeee7b0",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-30T08:13:20Z",
+      "side": 1,
+      "message": "There are certain circumstances where not lazy loading images  makes sense.\n\nI know of at least one 3rd party using this.\nSee https://phabricator.wikimedia.org/T185835\n\nMaybe it\u0027s worthwhile, but it\u0027s not causing any harm right now either. Having options for 3rd parties helps them support themselves and raise less bugs against us.",
+      "parentUuid": "77a993ad_78ac54b8",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 50
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e457ba34_8f89a7c9",
         "filename": "includes/transforms/LazyImageTransform.php",
         "patchSetId": 2
@@ -88,6 +112,30 @@
     },
     {
       "key": {
+        "uuid": "eb6deaec_45efef9f",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-30T08:13:20Z",
+      "side": 1,
+      "message": "Just wanted to make it easier to port the tests/code  (this was method name in MobileFormatter)\nCan be addressed in a follow up.",
+      "parentUuid": "e457ba34_8f89a7c9",
+      "range": {
+        "startLine": 39,
+        "startChar": 9,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "28e8160d_2cfa6e94",
         "filename": "includes/transforms/LazyImageTransform.php",
         "patchSetId": 2
@@ -99,6 +147,30 @@
       "writtenOn": "2018-07-27T14:38:32Z",
       "side": 1,
       "message": "I wouldn\u0027t block the patch for it, but consider refactoring this into a couple functions for more focused unit tests and improved readability:\n\n1 A function that does the outer looping over each image, transformImages().\n2 An inner function that does all the changes needed to transform an image to a placeholder, transformImage().\n3 A function for replacing attributes, transformAttributes().",
+      "range": {
+        "startLine": 139,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 2
+      },
+      "revId": "fec15db37a736c577a37ad3f4e1f68310508d284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "819e4e21_192c11c4",
+        "filename": "includes/transforms/LazyImageTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-30T08:13:20Z",
+      "side": 1,
+      "message": "I see this as incremental improvement for splitting this out of MobileFormatter. There\u0027s definitely more improvements to be done here, but right now having a transform for each MobileFormatter change and importantly associated test coverage is more important to me and I\u0027d rather put focus there (see remaining tasks on epic)",
+      "parentUuid": "28e8160d_2cfa6e94",
       "range": {
         "startLine": 139,
         "startChar": 0,
