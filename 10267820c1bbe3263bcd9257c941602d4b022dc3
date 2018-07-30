@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "d1871f77_c4826596",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-30T07:54:14Z",
+      "side": 1,
+      "message": "\u003e We could introduce a new function, something called `findLeadParagraph()` that would do the query and find first paragraph that matches our `lead paragraph` criteria.\n+1.I think this will help.",
+      "parentUuid": "0ff389c9_28f34d1e",
+      "range": {
+        "startLine": 123,
+        "startChar": 33,
+        "endLine": 124,
+        "endChar": 38
+      },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc43b3e7_22eded9a",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 1
@@ -90,6 +114,23 @@
         "endLine": 181,
         "endChar": 60
       },
+      "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1a54a59_963eb2ae",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-30T07:54:14Z",
+      "side": 1,
+      "message": "The problem is mw-empty-elt seem to have non-zero length empty strings\n\nstring-length(text()) \u003e 0 is true  for https://en.wikipedia.org/w/index.php?title\u003dFrance as it has 3 new line characters.\n\nIs there a way to check the trimmed string-length? I think this would simplify the code a lot as we don\u0027t need to worry about mw-empty-elt Looks like normalize-space exists.",
       "revId": "10267820c1bbe3263bcd9257c941602d4b022dc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
