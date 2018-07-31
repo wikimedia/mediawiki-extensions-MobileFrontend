@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f886b3d_58a1e4df",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T08:43:12Z",
+      "side": 1,
+      "message": "Repeating question from earlier patchset..\nThe problem is mw-empty-elt seem to have non-zero length empty strings\n\nstring-length(text()) \u003e 0 is true  for https://en.wikipedia.org/w/index.php?title\u003dFrance as it has 3 new line characters.\n\nIs there a way to check the trimmed string-length? I think this would simplify the code a lot as we don\u0027t need to worry about mw-empty-elt Looks like normalize-space exists.\n\nPut simply: Can we can avoid the check of the mw-empty-elt class altogether?",
+      "revId": "e6cd8115c3a194cafb56f0b73b5732ff99641190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f4a43605_6b47290f",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T08:43:12Z",
+      "side": 1,
+      "message": "comment doesn\u0027t really make sense to me.. it is a loop?",
+      "revId": "e6cd8115c3a194cafb56f0b73b5732ff99641190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
