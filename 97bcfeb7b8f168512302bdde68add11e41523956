@@ -16,6 +16,24 @@
       "revId": "97bcfeb7b8f168512302bdde68add11e41523956",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ff92db0_6339b7df",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-31T09:23:28Z",
+      "side": 1,
+      "message": "instead of globals, can we use store Parser in MediaWikiServices?\n\nHere, we would use the container instead of using globals.",
+      "parentUuid": "f4367503_786a16d7",
+      "revId": "97bcfeb7b8f168512302bdde68add11e41523956",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
