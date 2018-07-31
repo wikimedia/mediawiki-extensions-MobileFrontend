@@ -1,7 +1,7 @@
 <ul class="cleanup">
 	{{#issues}}
 	<li>
-		<div class="issue-notice">
+		<div class="issue-notice" data-severity="{{severity}}">
 			{{{icon}}}
 			<div class="issue-details">{{{text}}}</div>
 		</div>
