@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d81459a_3748a4e9",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T08:49:49Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be passed as an option into LoadErrorMessage component?",
+      "revId": "ec3569de9a9d018192f33ac0b3100f921f4a5f91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5ea5a55_3c53829d",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T08:49:49Z",
+      "side": 1,
+      "message": "Nice!\nCan we add a test to describe this behaviour?",
+      "revId": "ec3569de9a9d018192f33ac0b3100f921f4a5f91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
