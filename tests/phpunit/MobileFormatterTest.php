@@ -83,8 +83,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @covers MobileFormatter::enableExpandableSections
 	 * @covers MobileFormatter::filterContent
-	 * @covers MobileFormatter::doRewriteImagesForLazyLoading
-	 * @covers MobileFormatter::skipLazyLoadingForSmallDimensions
 	 */
 	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
 		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
@@ -117,15 +115,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$f->setIsMainPage( true );
 		};
 		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
-		$lazyLoadedImageStyles = '<img src="bigPicture.jpg" style="vertical-align: -3.505ex; '
-			. 'width: 84.412ex; height:70.343ex; background:none;">';
-
-		$placeholderStyles = '<span class="lazy-image-placeholder" '
-			. 'style="width: 84.412ex;height: 70.343ex;" '
-			. 'data-src="bigPicture.jpg">'
-			. ' '
-			. '</span>';
-		$noscriptStyles = '<noscript>' . $lazyLoadedImageStyles . '</noscript>';
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -192,20 +181,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. $this->makeSectionHtml( 1,
 						'<p>text</p>' . $noscript . $placeholder
-					)
-					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
-					. $this->makeSectionHtml( 2, 'abc' ),
-				$enableSections,
-				false, false, true,
-			],
-			// Test lazy loading of images with style attributes
-			[
-				'<p>text</p><h2>heading 1</h2><p>text</p>' . $lazyLoadedImageStyles
-					. '<h2>heading 2</h2>abc',
-				$this->makeSectionHtml( 0, '<p>text</p>' )
-					. $this->makeSectionHeading( 'h2', 'heading 1' )
-					. $this->makeSectionHtml( 1,
-						'<p>text</p>' . $noscriptStyles . $placeholderStyles
 					)
 					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
@@ -747,103 +722,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h1', 'Qux', 2 )
 					. $this->makeSectionHtml( 2, 'Quux' ),
 			],
-		];
-	}
-
-	/**
-	 * @dataProvider provideGetImageDimensions
-	 *
-	 * @param array $expected what we expect the dimensions to be.
-	 * @param string $w value of width attribute (if any)
-	 * @param string $h value of height attribute (if any)
-	 * @param string $style value of style attribute (if any)
-	 * @covers MobileFormatter::getImageDimensions
-	 */
-	public function testGetImageDimensions( $expected, $w, $h, $style ) {
-		$mf = new MobileFormatter( '', Title::newFromText( 'Mobile' ) );
-		$doc = new DOMDocument();
-		$img = $doc->createElement( 'img' );
-		if ( $style ) {
-			$img->setAttribute( 'style', $style );
-		}
-		if ( $w ) {
-			$img->setAttribute( 'width', $w );
-		}
-		if ( $h ) {
-			$img->setAttribute( 'height', $h );
-		}
-		$this->assertEquals( $expected, $mf->getImageDimensions( $img ) );
-	}
-
-	public function provideGetImageDimensions() {
-		return [
-			[
-				[ 'width' => '500px', 'height' => '500px' ],
-				'500',
-				'500',
-				''
-			],
-			[
-				[ 'width' => '200px', 'height' => 'auto' ],
-				'500',
-				'500',
-				'width: 200px; height: auto;'
-			],
-			[
-				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
-				'500',
-				'500',
-				'width: 24.412ex; height: 7.343ex'
-			],
-			[
-				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
-				'500',
-				'500',
-				'height: 7.343ex; width: 24.412ex'
-			],
-			[
-				[ 'width' => '24.412ex', 'height' => '7.343ex' ],
-				'500',
-				'500',
-				'height: 7.343ex; background-image: url(foo.jpg); width:    24.412ex   ; '
-					. 'font-family: "Comic Sans";'
-			],
-
-			// <img src="..." alt="..." />
-			[
-				[],
-				'',
-				'',
-				''
-			]
-		];
-	}
-
-	/**
-	 * @dataProvider provideIsDimensionSmallerThanThreshold
-	 * @covers MobileFormatter::isDimensionSmallerThanThreshold
-	 */
-	public function testIsDimensionSmallerThanThreshold( $dimension, $expected ) {
-		$mf = new MobileFormatter( '', Title::newFromText( 'Test' ) );
-		$this->assertEquals( $expected, $mf->isDimensionSmallerThanThreshold( $dimension ) );
-	}
-
-	/**
-	 * @see https://phabricator.wikimedia.org/T162623
-	 */
-	public function provideIsDimensionSmallerThanThreshold() {
-		return [
-			[ '40px', true ],
-			[ '50px', true ],
-			[ '57px', false ],
-			[ '100ox', false ],
-			[ '10', false ],
-			[ '5.12ex', true ],
-			[ '9.89ex', true ],
-			[ '15.1ex', false ],
-			[ '10in', false ],
-			[ 'big', false ],
-			[ '', false ]
 		];
 	}
 
