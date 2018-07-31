@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a923c20f_ad7f4c91",
+        "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T08:56:36Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be removed.",
+      "revId": "4d7d550d9a092dd32f77c129a35d650ab3f7eadb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
