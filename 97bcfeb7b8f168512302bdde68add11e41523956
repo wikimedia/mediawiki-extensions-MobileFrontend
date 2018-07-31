@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4367503_786a16d7",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-31T09:18:40Z",
+      "side": 1,
+      "message": "I\u0027d prefer we didn\u0027t resort to a global variable. Is there a better way to do this? Is there a service or a method on Api we can use instead?",
+      "revId": "97bcfeb7b8f168512302bdde68add11e41523956",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
