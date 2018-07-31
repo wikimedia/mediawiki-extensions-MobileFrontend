@@ -30,8 +30,8 @@ class MockApiMobileView extends ApiMobileView {
 		if ( !isset( $params['text'] ) ) {
 			throw new Exception( 'Must specify page text' );
 		}
-		$parser = new Parser();
-		$po = $parser->parse( $params['text'], $wikiPage->getTitle(), $parserOptions );
+		$po = MediaWikiServices::getInstance()->getParser()->getFreshParser()->parse(
+			$params['text'], $wikiPage->getTitle(), $parserOptions );
 		if ( !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
 			$po->setTOCEnabled( false );
 		}
