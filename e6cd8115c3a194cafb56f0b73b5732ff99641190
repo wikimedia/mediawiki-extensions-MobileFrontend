@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "504f79a6_e61e3912",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-31T08:57:32Z",
+      "side": 1,
+      "message": "ok, I\u0027ll try to do that",
+      "parentUuid": "2f886b3d_58a1e4df",
+      "revId": "e6cd8115c3a194cafb56f0b73b5732ff99641190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f4a43605_6b47290f",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2018-07-31T08:43:12Z",
       "side": 1,
       "message": "comment doesn\u0027t really make sense to me.. it is a loop?",
+      "revId": "e6cd8115c3a194cafb56f0b73b5732ff99641190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8370b2fc_b94da67e",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-07-31T08:57:32Z",
+      "side": 1,
+      "message": "it is a loop, but then it calls itself once again, so if you have something like: \u003cp\u003e\u003cspan\u003e\u003cspan\u003e\u003cspan\u003e\u003cspan\u003e....\n\nit will recursively do the foreach(){} for each set of childnodes.",
+      "parentUuid": "f4a43605_6b47290f",
       "revId": "e6cd8115c3a194cafb56f0b73b5732ff99641190",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
