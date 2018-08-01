@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "81a50408_99fea94f",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-01T23:47:34Z",
+      "side": 1,
+      "message": "I think you mean:\n\n self.$( document.createElement( \u0027img\u0027 ) )\n\n:-)\n\nWhich is what parseHTML/rsingleTag.exec/[]/jQuery.makeArray would do. The bug in question is specific to $.parseHTML(), using $() avoids the issue, but more generally it seems simpler to bypass by using createElement directly.",
+      "range": {
+        "startLine": 193,
+        "startChar": 4,
+        "endLine": 193,
+        "endChar": 47
+      },
+      "revId": "1416a01279e72985a02ec12c6bfae58691a84004",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
