@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5916b480_df9707cf",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T23:47:14Z",
+      "side": 1,
+      "message": "Per your suggestion, changed LoadErrorMessage to use this.emit(\u0027retry\u0027) in latest patch",
+      "parentUuid": "39c3f882_03e71291",
+      "range": {
+        "startLine": 61,
+        "startChar": 3,
+        "endLine": 61,
+        "endChar": 36
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ff314ec_c603ae72",
         "filename": "resources/mobile.startup/OverlayManager.js",
         "patchSetId": 19
@@ -131,6 +155,30 @@
       "side": 1,
       "message": "Added my 2 cents.",
       "parentUuid": "ddcbfe1b_da2055a7",
+      "range": {
+        "startLine": 209,
+        "startChar": 5,
+        "endLine": 213,
+        "endChar": 27
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07346f3a_2906c951",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T23:47:14Z",
+      "side": 1,
+      "message": "Added another test for this logic",
+      "parentUuid": "13e4f8e3_81d08d0c",
       "range": {
         "startLine": 209,
         "startChar": 5,
