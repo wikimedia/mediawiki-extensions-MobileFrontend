@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "97ee0913_fec2e6a7",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-01T06:55:31Z",
+      "side": 1,
+      "message": "o",
+      "revId": "39ce9a030278af619ae3156e0b31e13ff867acb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b690008d_6204ebfe",
         "filename": "resources/mobile.issues/CleanupOverlay.js",
         "patchSetId": 1
@@ -25,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "13b5bead_fc461fff",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-01T06:55:31Z",
+      "side": 1,
+      "message": "What  do you mean by a symbol?",
+      "parentUuid": "b690008d_6204ebfe",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "39ce9a030278af619ae3156e0b31e13ff867acb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "12069cda_af209e77",
         "filename": "resources/mobile.issues/CleanupOverlay.js",
         "patchSetId": 1
@@ -36,6 +77,30 @@
       "writtenOn": "2018-07-31T13:49:36Z",
       "side": 1,
       "message": "Is there any way to make the relationship between PageIssueParser#PageIssue.severity, the hogan template, and fetching it out here more explicit? This isn\u0027t even the same template CleanUpOverlay inflates, OverlayContent.hogan.",
+      "range": {
+        "startLine": 51,
+        "startChar": 50,
+        "endLine": 51,
+        "endChar": 69
+      },
+      "revId": "39ce9a030278af619ae3156e0b31e13ff867acb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b55efa04_47c1b729",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-01T06:55:31Z",
+      "side": 1,
+      "message": "\u003e Is there any way to make the relationship between PageIssueParser#PageIssue.severity, the hogan template, and fetching it out here more explicit? \nI\u0027m not sure if it is makes it more explicit, but we could work out what the index of the link is and access this.options.issues[index].severity - would this be better?\n\n\n\u003e This isn\u0027t even the same template CleanUpOverlay inflates, OverlayContent.hogan.\nNot sure what you mean here, OverlayContent is a partial of this class.",
+      "parentUuid": "12069cda_af209e77",
       "range": {
         "startLine": 51,
         "startChar": 50,
