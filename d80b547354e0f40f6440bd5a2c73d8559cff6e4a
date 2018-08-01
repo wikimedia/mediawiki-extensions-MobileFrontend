@@ -16,6 +16,24 @@
       "revId": "d80b547354e0f40f6440bd5a2c73d8559cff6e4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0cd741e9_bb5b028e",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-01T13:00:41Z",
+      "side": 1,
+      "message": "From the task description: \n\nmodal:\n- internal links (usually to the wikipedia or help namespace)\n- edit link (\"improve this article\")\n- X (close)\n\nI think the `onInternalClick` should not apply to edit links. It should apply to other links such as \"help\" \u0026 \"more info\" links.",
+      "parentUuid": "71f928c2_56b8c35f",
+      "revId": "d80b547354e0f40f6440bd5a2c73d8559cff6e4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
