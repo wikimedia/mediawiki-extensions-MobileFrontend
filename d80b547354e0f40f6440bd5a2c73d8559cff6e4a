@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71f928c2_56b8c35f",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-01T07:02:58Z",
+      "side": 1,
+      "message": "Jan: Is this what we want to happen?",
+      "revId": "d80b547354e0f40f6440bd5a2c73d8559cff6e4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
