@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa54ed65_1d2fcc90",
+        "filename": "resources/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T05:27:09Z",
+      "side": 1,
+      "message": "Although this works, it feels like the wrong approach to me because of how much LoadErrorMessage knows about the internals of router. I\u0027ve also considered using dependency injection and passing in OverlayManager into LoadErrorMessage where I would then call a .reload method (similar to replaceCurrent), but that brings the downside of having to change Minerva code in order to pass in the OverlayManager. But maybe that\u0027s okay.  And maybe there is a better approach that I\u0027m missing entirely. Thoughts?",
+      "range": {
+        "startLine": 61,
+        "startChar": 3,
+        "endLine": 61,
+        "endChar": 36
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ff314ec_c603ae72",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T05:27:09Z",
+      "side": 1,
+      "message": "I ran into issues with OverlayManager caching the failed loading state of Overlays (e.g. when navigating back and forth between overlays). Therefore, I felt like it was necessary to have the state of the load as a boolean property on Overlay (hasLoadError). This code then checks that property and, if set to true, discards the overlay with another one when revisiting it.",
+      "range": {
+        "startLine": 197,
+        "startChar": 5,
+        "endLine": 206,
+        "endChar": 21
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ddcbfe1b_da2055a7",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T05:27:09Z",
+      "side": 1,
+      "message": "I also ran into issues with the stack increasing on each reload of the overlay. Therefore, I added this to replace the overlay instead of adding it to the stack if it is the same overlay. I would like to add a test for this logic (I\u0027d also like to flatten these conditionals so its easier to read), but before I do, I\u0027d like to hear opinions on the best approach for triggering the reload (see my comment in LoadErrorMessage.js)",
+      "range": {
+        "startLine": 209,
+        "startChar": 5,
+        "endLine": 213,
+        "endChar": 27
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d24a404_140c5086",
+        "filename": "resources/mobile.startup/OverlayManager.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-01T05:27:09Z",
+      "side": 1,
+      "message": "Oops I meant to delete this section...I was playing around with the idea of making a reload method on OverlayManager. Will remove this",
+      "range": {
+        "startLine": 277,
+        "startChar": 0,
+        "endLine": 294,
+        "endChar": 31
+      },
+      "revId": "f0de385ec4fb511aaa479f22ecac0687e59883ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
