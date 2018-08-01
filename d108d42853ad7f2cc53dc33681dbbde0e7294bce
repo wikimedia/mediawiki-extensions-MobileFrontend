@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d5bd1276_d3519b02",
+        "filename": "resources/mobile.startup/Icon.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-01T20:12:43Z",
+      "side": 1,
+      "message": "I\u0027ve used @property and @mixes since @inheritdoc doesn\u0027t work very well (just use the level 0 documentation and doesn\u0027t mix anything in).",
+      "parentUuid": "b067b3af_dc9983c9",
+      "revId": "d108d42853ad7f2cc53dc33681dbbde0e7294bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0b7e4381_db544d90",
         "filename": "resources/mobile.startup/modules.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2018-07-31T09:05:20Z",
       "side": 1,
       "message": "Should we use a typedef here instead to avoid having to add ignore here?",
+      "revId": "d108d42853ad7f2cc53dc33681dbbde0e7294bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3b582df_bbe6dbf9",
+        "filename": "resources/mobile.startup/modules.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-01T20:12:43Z",
+      "side": 1,
+      "message": "I\u0027m confused. Isn\u0027t this something you added?",
+      "parentUuid": "0b7e4381_db544d90",
       "revId": "d108d42853ad7f2cc53dc33681dbbde0e7294bce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
