@@ -103,7 +103,7 @@
 					// a promise or an overlay)
 					factoryResult = match.factoryResult;
 					// http://stackoverflow.com/a/13075985/365238
-					if ( util.isFunction( factoryResult.promise ) ) {
+					if ( typeof factoryResult.promise === 'function' ) {
 						factoryResult.done( function ( overlay ) {
 							match.overlay = overlay;
 							attachHideEvent( overlay );
