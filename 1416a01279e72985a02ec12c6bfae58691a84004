@@ -22,6 +22,30 @@
       "revId": "1416a01279e72985a02ec12c6bfae58691a84004",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0b20986_be808df9",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-02T22:13:33Z",
+      "side": 1,
+      "message": "thanks for the comment @Krinkle. My first thought was to just use $( \u0027\u003cimg\u003e\u0027 ) but that failed our eslint check. So then I tried self.$( \u0027\u003cimg\u003e\u0027) but it turns out that self.$ is actually a method defined in resources/mobile.startup/View.js which returns this.$el.find( query ) and so that didn\u0027t work. I could easily bypass our eslint check by passing in jQuery here and adding a eslint comment, but after looking through more of the code, it looked like our convention was to use self.parseHTML instead. So that\u0027s how I arrived at that :)",
+      "parentUuid": "81a50408_99fea94f",
+      "range": {
+        "startLine": 193,
+        "startChar": 4,
+        "endLine": 193,
+        "endChar": 47
+      },
+      "revId": "1416a01279e72985a02ec12c6bfae58691a84004",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
