@@ -100,15 +100,6 @@
 		 */
 		noop: $.noop,
 		/**
-		 * wrapper for jQuery util function to check if something is a function
-		 *
-		 * @method
-		 * @return {Boolean}
-		 */
-		isFunction: function () {
-			return $.isFunction.apply( $, arguments );
-		},
-		/**
 		 * wrapper for jQuery util function to check if something is numeric
 		 *
 		 * @method

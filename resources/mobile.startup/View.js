@@ -288,7 +288,7 @@
 				for ( key in events ) {
 					method = events[ key ];
 					// If the method is a string name of this.method, get it
-					if ( !util.isFunction( method ) ) {
+					if ( typeof method !== 'function' ) {
 						method = this[ events[ key ] ];
 					}
 					if ( method ) {
