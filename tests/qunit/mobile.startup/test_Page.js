@@ -1,7 +1,99 @@
 ( function ( M, $ ) {
 	var Page = M.require( 'mobile.startup/Page' );
 
-	QUnit.module( 'MobileFrontend Page' );
+	QUnit.module( 'MobileFrontend Page', {
+		setup: function () {
+			var ambox = function ( text ) {
+				return '<div class="ambox">' + text + '</div>';
+			};
+			this.stubPage = new Page( {
+				el: $( '<div>' ).html(
+					'<p>lead</p>' + ambox( 'a0' )
+				)
+			} );
+			this.desktopPage = new Page( {
+				el: $( '<div>' ).html(
+					'<p>lead</p>' + ambox( 'a0' ) +
+					// section = 1
+					'<h2>1</h2>' +
+					ambox( 'a1' ) +
+					// section = 2
+					'<h3>1.1</h3>' + ambox( 'a1.1' )
+				)
+			} );
+			this.sectionPage = new Page( {
+				el: $( '<div>' ).html( '<div class="mf-section-0"><p>lead</p>' + ambox( 'a0' ) + '</div>' +
+					// section = 1
+					'<h2 class="section-heading">1</h2>' +
+					'<div>' + ambox( 'a1' ) +
+					// section = 2
+					'<h3>1.1</h3>' + ambox( 'a1.1' ) +
+					// section = 3
+					'<h4>1.1.1</h3>' + ambox( 'a1.1.1' ) +
+					// section = 4
+					'<h4>1.1.2</h3>' + ambox( 'a1.1.2' ) +
+					// section = 5
+					'<h3>1.2</h3>' + ambox( 'a1.1' ) +
+					'</div>' +
+					// section = 6
+					'<h2 class="section-heading">2</h2><div>' +
+					'<div>' + ambox( 'a2' ) + '</div>' +
+					// section = 7
+					'<h2 class="section-heading">3</h2>' +
+					'<div>' + ambox( 'a3' ) + '</div>'
+				)
+			} );
+		}
+	} );
+
+	QUnit.test( '#findInSectionLead', function ( assert ) {
+		var p = this.sectionPage,
+			stub = this.stubPage,
+			desktopPage = this.desktopPage;
+
+		// check desktop page
+		[
+			[ 0, 'a0', 'lead section' ],
+			[ 1, 'a1', 'h2' ],
+			[ 2, 'a1.1', 'h3' ],
+			[ 3, '', 'h4', 'selector does not match', '.foo' ],
+			[ 9, '', 'Non-existent section' ]
+		].forEach( function ( testcase ) {
+			assert.strictEqual(
+				desktopPage.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
+				testcase[1],
+				'Found correct text in desktop test case:' + testcase[2]
+			);
+		} );
+		// check stub
+		[
+			[ 0, 'a0', 'lead section' ],
+			[ 3, '', 'h4', 'selector does not match', '.foo' ],
+			[ 9, '', 'Non-existent section' ]
+		].forEach( function ( testcase ) {
+			assert.strictEqual(
+				stub.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
+				testcase[1],
+				'Found correct text in desktop test case:' + testcase[2]
+			);
+		} );
+		// check mobile pages with section wrapping
+		[
+			[ 0, 'a0', 'lead section' ],
+			[ 1, 'a1', 'h2' ],
+			[ 2, 'a1.1', 'h3' ],
+			[ 3, 'a1.1.1', 'h4' ],
+			[ 3, '', 'h4', 'selector does not match', '.foo' ],
+			[ 7, 'a3', 'h2 later' ],
+			[ 9, '', 'Non-existent section' ]
+		].forEach( function ( testcase ) {
+			assert.strictEqual(
+				p.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
+				testcase[1],
+				'Found correct text in test case:' + testcase[2]
+			);
+		} );
+	} );
 
 	QUnit.test( '#isMainPage', function ( assert ) {
 		var p = new Page( {

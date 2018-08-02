@@ -3,6 +3,7 @@
 	var browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		View = M.require( 'mobile.startup/View' ),
 		util = M.require( 'mobile.startup/util' ),
+		Page = M.require( 'mobile.startup/Page' ),
 		Deferred = util.Deferred,
 		when = util.when,
 		icons = M.require( 'mobile.startup/icons' ),
@@ -17,7 +18,7 @@
 	 */
 	function getSectionId( $el ) {
 		var id,
-			hSelector = 'h1,h2,h3,h4,h5,h6',
+			hSelector = Page.HEADING_SELECTOR,
 			$parent = $el.parent(),
 			// e.g. matches Subheading in
 			// <h2>H</h2><div><h3 id="subheading">Subh</h3><a class="element"></a></div>

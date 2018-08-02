@@ -5,6 +5,7 @@
 		View = M.require( 'mobile.startup/View' ),
 		Section = M.require( 'mobile.startup/Section' ),
 		Thumbnail = M.require( 'mobile.startup/Thumbnail' ),
+		HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings' ).join( ',' ),
 		BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 	/**
@@ -110,6 +111,61 @@
 		 */
 		inNamespace: function ( namespace ) {
 			return this.options.namespaceNumber === mw.config.get( 'wgNamespaceIds' )[namespace];
+		},
+
+		/**
+		 * Find all elements that match the selector in the lead of a given section
+		 * (i.e. not within subsections of that section).
+		 * This code should work on desktop (PHP parser HTML)
+		 * as well as mobile formatted HTML (PHP parser + MobileFormatter)
+		 * @method
+		 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to the section id
+		 *  used in the edit link for the section. Note, confusingly, this is different from section "ID" which is
+		 * used in methods
+		 * @param {string} selector to match
+		 * @return {jQuery.Object}
+		 */
+		findChildInSectionLead: function ( sectionIndex, selector ) {
+			var $heading, $nextHeading, $container, $lead,
+				headingSelector = HEADING_SELECTOR;
+
+			if ( sectionIndex === 0 ) {
+				// lead is easy
+				$lead = this.getLeadSectionElement();
+				if ( $lead && $lead.length ) {
+					return $lead.find( selector );
+				} else {
+					$heading = this.$( headingSelector ).eq( 0 );
+					return $heading.length ? $heading.prevAll( selector ) :
+						// this page is a stub so search entire page
+						this.$( selector );
+				}
+			}
+
+			// find heading associated with the section by looking at its index position in the article
+			// section ids relate to the element position in the page and the first heading
+			// lead has been dealt with above, so first heading corresponds to section 1, the first heading
+			// in the article.
+			$heading = this.$( headingSelector ).eq( sectionIndex - 1 );
+
+			// If section-heading is present on the heading, then we know the page has been MobileFormatted
+			// and that this is a wrapped section
+			if ( $heading.hasClass( 'section-heading' ) ) {
+				// get content of section
+				$container = $heading.next();
+				// inside section find the first heading
+				$nextHeading = $container.find( headingSelector ).eq( 0 );
+				return $nextHeading.length ?
+					// find all amboxes before the next heading
+					$nextHeading.prevAll( selector ) :
+					// There is no subheadings inside
+					// Grab all issues in section
+					$container.find( selector );
+			} else {
+				// the heading relates to a subsection (or unwrapped desktop section), so grab elements between this and the next one
+				$nextHeading = $heading.eq( 0 ).nextAll( headingSelector ).eq( 0 );
+				return $heading.nextUntil( $nextHeading, selector );
+			}
 		},
 
 		/**
@@ -297,7 +353,8 @@
 		 * FIXME: Change function signature to take the anchor of the heading
 		 * @memberof Page
 		 * @instance
-		 * @param {string} id of the section
+		 * @param {string} id of the section as defined by MobileFormatter. Note, that currently, this is different from
+		 * the PHP parser in that it relates to top-level sections. For example, mf-section-1 would relate to section 1. See FIXME.
 		 * @return {Section}
 		 */
 		getSection: function ( id ) {
@@ -305,9 +362,11 @@
 		},
 
 		/**
+		 * Obtain the list of high level (and grouped) sections.
+		 * Note that this list will not include subsections.
 		 * @memberof Page
 		 * @instance
-		 * @return {Array}
+		 * @return {Array} of Section instances
 		 */
 		getSections: function () {
 			return this.sections;
@@ -368,6 +427,12 @@
 			} )
 		);
 	};
+	/**
+	 * Selector for matching headings
+	 *
+	 * @memberof Page
+	 */
+	Page.HEADING_SELECTOR = HEADING_SELECTOR;
 	M.define( 'mobile.startup/Page', Page );
 
 }( mw.html, mw.mobileFrontend ) );
