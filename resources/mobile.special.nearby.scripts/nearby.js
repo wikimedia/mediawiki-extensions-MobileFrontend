@@ -4,7 +4,7 @@
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
-		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
+		endpoint = config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -139,11 +139,11 @@
 			switch ( error ) {
 				case 'permission':
 					// eslint-disable-next-line no-alert
-					alert( mw.msg( 'mobile-frontend-nearby-permission-denied' ) );
+					alert( msg( 'mobile-frontend-nearby-permission-denied' ) );
 					break;
 				case 'location':
 					// eslint-disable-next-line no-alert
-					alert( mw.msg( 'mobile-frontend-nearby-location-unavailable' ) );
+					alert( msg( 'mobile-frontend-nearby-location-unavailable' ) );
 					break;
 				default:
 					// timeout or undefined, do nothing for now
