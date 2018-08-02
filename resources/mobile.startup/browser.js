@@ -105,20 +105,6 @@
 			return window.innerWidth >= val || window.innerHeight >= val;
 		} ),
 		/**
-		 * Checks browser support for a given CSS property
-		 * @param {string} [property] the name of the property being tested
-		 * @return {boolean}
-		 */
-		supportsCSSProperty: memoize( function ( property ) {
-			var elem = document.createElement( 'foo' );
-
-			// We only test webkit because that's the only prefix needed at the moment by
-			// supportsAnimations. If usage of supportsCSSProperty is expanded, the list of prefixes
-			// will need to be as well
-			return elem.style[ property ] !== undefined ||
-				elem.style[ 'webkit' + property.charAt( 0 ).toUpperCase() + property.slice( 1 ) ] !== undefined;
-		} ),
-		/**
 		 * Checks browser support for CSS transforms, transitions
 		 * and CSS animation.
 		 * Currently assumes support for the latter 2 in the case of the
@@ -128,9 +114,17 @@
 		 * @return {boolean}
 		 */
 		supportsAnimations: memoize( function () {
-			return this.supportsCSSProperty( 'animationName' ) &&
-				this.supportsCSSProperty( 'transform' ) &&
-				this.supportsCSSProperty( 'transition' );
+			var elemStyle = document.createElement( 'foo' ).style;
+			function supportsProperty( property ) {
+				// We only test "webkit-", because that's the only prefix needed for the relevant
+				// properties (in supportsAnimations) and supported browsers. If usage is expanded,
+				// other prefixes may need to be checked as well.
+				return property in elemStyle ||
+					( 'webkit' + property[ 0 ].toUpperCase() + property.slice( 1 ) ) in elemStyle;
+			}
+			return supportsProperty( 'animationName' ) &&
+				supportsProperty( 'transform' ) &&
+				supportsProperty( 'transition' );
 		} ),
 		/**
 		 * Whether touchstart and other touch events are supported by the current browser.
