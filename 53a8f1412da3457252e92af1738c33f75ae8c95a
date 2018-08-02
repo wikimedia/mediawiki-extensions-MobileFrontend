@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6ff22453_85cf6d6e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-02T06:15:09Z",
+      "side": 1,
+      "message": "It\u0027s a longstanding request. I\u0027ll add https://phabricator.wikimedia.org/T173527",
+      "parentUuid": "87e1eb38_68116594",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 7
+      },
+      "revId": "53a8f1412da3457252e92af1738c33f75ae8c95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ddccdf85_e31e6c7c",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-07-31T15:09:40Z",
       "side": 1,
       "message": "Is it intentional to change this from the unhyphenated \"mobileskin\"?",
+      "range": {
+        "startLine": 18,
+        "startChar": 34,
+        "endLine": 18,
+        "endChar": 45
+      },
+      "revId": "53a8f1412da3457252e92af1738c33f75ae8c95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97782add_f1234051",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-02T06:15:09Z",
+      "side": 1,
+      "message": "Nope. Thanks for flagging.",
+      "parentUuid": "ddccdf85_e31e6c7c",
       "range": {
         "startLine": 18,
         "startChar": 34,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "2e1c7b1b_0a4241b4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-02T06:15:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e697e64_2e6ae0a0",
+      "range": {
+        "startLine": 888,
+        "startChar": 33,
+        "endLine": 888,
+        "endChar": 39
+      },
+      "revId": "53a8f1412da3457252e92af1738c33f75ae8c95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3e592113_864f0dd7",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2018-07-31T15:09:40Z",
       "side": 1,
       "message": "Should we add Minerva and Vector messages as part of this patch?",
+      "range": {
+        "startLine": 930,
+        "startChar": 30,
+        "endLine": 930,
+        "endChar": 49
+      },
+      "revId": "53a8f1412da3457252e92af1738c33f75ae8c95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f358273_499720a7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 930,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-02T06:15:09Z",
+      "side": 1,
+      "message": "No, all skins will have skinname-$key set.\nIt\u0027s required and used for the desktop skin preference.",
+      "parentUuid": "3e592113_864f0dd7",
       "range": {
         "startLine": 930,
         "startChar": 30,
