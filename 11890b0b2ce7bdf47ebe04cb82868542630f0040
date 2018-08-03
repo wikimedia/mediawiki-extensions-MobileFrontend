@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb0a6eee_7564fd3e",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T15:33:37Z",
+      "side": 1,
+      "message": "Should we add class annotations or change the structure server side to simplify parsing?",
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d359105a_36e235a1",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T15:33:37Z",
+      "side": 1,
+      "message": "Can this symbol be exposed to clients as the section header selector? This now exists in two places and its changed in the past.",
+      "range": {
+        "startLine": 119,
+        "startChar": 22,
+        "endLine": 119,
+        "endChar": 41
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd133547_d183ee33",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T15:33:37Z",
+      "side": 1,
+      "message": "There\u0027s lot of extra elses in this function that contribute multiple levels to the indent. Consider removing them to highlight the early exits, reduce verbosity, and cut our indentation.",
+      "range": {
+        "startLine": 130,
+        "startChar": 7,
+        "endLine": 130,
+        "endChar": 11
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d44df066_01d1112a",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T15:33:37Z",
+      "side": 1,
+      "message": "If the first section is always 1 and the lead is 0, won\u0027t `this.$( headingSelector ).eq( FIRST_SECTION_ID_HERE - 1 );` return the lead? This seems to be identical to the code used for the lead on line 127. This seems like a possible bug or maybe an opportunity for DRYing up the heuristic.",
+      "range": {
+        "startLine": 138,
+        "startChar": 17,
+        "endLine": 138,
+        "endChar": 40
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc681481_639a5b4f",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T15:33:37Z",
+      "side": 1,
+      "message": "I\u0027m confused about the section IDs. I thought that \"sections\" were the top level collapsible sections and so section _IDs_ would only number those. However, in the tests I see that subsections are counted. Is there an established convention in MobileFrontend / MinervaNeue?\n\nFor example, I was looking at the heading selector here and considering:\n\n \u003ch2\u003eSection A\u003c/h2\u003e\n   \u003ch3\u003eSection A.1\u003c/h3\u003e\n   \u003ch3\u003eSection A.2\u003c/h3\u003e\n   \u003ch3\u003eSection A.3\u003c/h3\u003e\n \u003ch2\u003eSection B\u003c/h2\u003e\n \u003ch2\u003eSection C\u003c/h2\u003e\n\nAnd I thought this was buggy since `this.$(headingSelector).eq(2)` would return Section A.2 not Section C, right?",
+      "range": {
+        "startLine": 139,
+        "startChar": 23,
+        "endLine": 139,
+        "endChar": 38
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
