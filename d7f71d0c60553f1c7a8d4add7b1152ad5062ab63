@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80572721_57a01c6c",
+        "filename": "docs/js.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-03T12:33:15Z",
+      "side": 1,
+      "message": "This isn\u0027t specific to JavaScript. We could include it here _and_ in the base readme but that would be redundant.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 43
+      },
+      "revId": "d7f71d0c60553f1c7a8d4add7b1152ad5062ab63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
