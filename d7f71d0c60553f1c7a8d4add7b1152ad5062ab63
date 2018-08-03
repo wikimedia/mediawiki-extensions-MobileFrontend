@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "e54dc352_12c72679",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-03T19:44:24Z",
+      "side": 1,
+      "message": "The information how to test JS is missing. I know it\u0027s located in `docs/js.md`, it would be nice to at least tell people where too look for the JS bits (a link that is clickable in GitHub would be great)",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "d7f71d0c60553f1c7a8d4add7b1152ad5062ab63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "972f682f_7fdffc9f",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-03T19:44:24Z",
+      "side": 1,
+      "message": "this line depends on the build, if you use vagrant you need to specify the `--wiki\u003dwiki` parameter. Also, not everyone has the core codebase in `~/git/core`, most probably it would be better to use `MW_INSTALL_PATH` variable.\n\nI think that we can keep the `make phpunit` as a way to run the PHPUnit unit tests, and then keep the all necessary logic inside the Makefile.\n\nI\u0027m a fan of this approach, having things like:\n  make phpunit (or even better - make test_php) to test the PHP\n  make qunit (or even better make test_js) to test the JS\n\nThe idea of having a Makefile in every repository as a basic toolset is very developer friendly. I don\u0027t need to know which tools do we use (phpunit/Codeception/Begat/PHPSpec for PHP, Jasmine/Mocha/Ava/Chai/Qunit) for JS. If I want to run tests, I just have to type `make tests` and hit enter, I don\u0027t have to worry what is the entry point for tests in every extension.\n\n\nTL;DR; I think it\u0027s valuable to keep it as it is, and allow people to use make to run tests.",
+      "range": {
+        "startLine": 28,
+        "startChar": 3,
+        "endLine": 28,
+        "endChar": 59
+      },
+      "revId": "d7f71d0c60553f1c7a8d4add7b1152ad5062ab63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "80572721_57a01c6c",
         "filename": "docs/js.md",
         "patchSetId": 3

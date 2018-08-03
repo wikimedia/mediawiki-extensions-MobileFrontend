@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8f57e1d_cb5f6763",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-03T19:44:24Z",
+      "side": 0,
+      "message": "we shouldn\u0027t remove it, the hook is testing both JS and PHP.\n\nFor PHP it does the `phplint` and `validatehtml`",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 31,
+        "endChar": 43
+      },
+      "revId": "304c176f291b68dd300448d12d7133236ec5c8cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
