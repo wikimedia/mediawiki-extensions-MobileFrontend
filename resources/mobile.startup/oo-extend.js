@@ -1,4 +1,10 @@
 ( function () {
+
+	/**
+	 * Library for object-oriented JavaScript. Extended by MobileFrontend.
+	 * @class OO
+	 */
+
 	/**
 	 * Extends a class with new methods and member properties.
 	 *
@@ -6,7 +12,6 @@
 	 * @param {Object|Function} ParentOrPrototype class to inherit from OR if no inheriting class a prototype to
 	 *  extend the class with,
 	 * @param {Object} prototype
-	 * @member OO
 	 */
 	OO.mfExtend = function ( Child, ParentOrPrototype, prototype ) {
 		var key;
