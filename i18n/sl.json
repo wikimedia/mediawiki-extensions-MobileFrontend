@@ -120,5 +120,6 @@
 	"nearby": "Strani s temami, ki so vam blizu",
 	"tag-mobile_edit": "Mobilno urejanje",
 	"tag-mobile_edit-description": "Urejanje z mobilne naprave (splet ali aplikacija)",
-	"tag-mobile_web_edit": "Urejanje z mobilnim spletom"
+	"tag-mobile_web_edit": "Urejanje z mobilnim spletom",
+	"tag-mobile_web_edit-description": "Urejanje z mobilne spletne strani"
 }
