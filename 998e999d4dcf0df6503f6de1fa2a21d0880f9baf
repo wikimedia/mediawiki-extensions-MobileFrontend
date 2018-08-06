@@ -46,6 +46,30 @@
       "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f87d9f0e_9f2fc724",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-06T19:03:07Z",
+      "side": 1,
+      "message": "Thanks for taking the time. That makes sense. I guess even if the caller flips the inputs and inverts the result, it\u0027ll have the same problem AND they\u0027ll have to check that `!$first-\u003eisSameNode( $second )` to ensure that the node is actually a previous.\n\nI\u0027m confused why this last check, `!$first-\u003eisSameNode( $second )`, isn\u0027t necessary in the current implementation though. Here\u0027s my thinking out loud take of the current approach:\n\n // Get the node before first.\n $node \u003d $first-\u003epreviousSibling;\n\n // Verify second isn\u0027t in any node before first.\n while ( $node !\u003d\u003d null ) {\n   if ( $node-\u003eisSameNode( $second ) ) {\n     return false;\n   }\n   $node \u003d $node-\u003epreviousSibling;\n }\n\n // Second is node before first... OR first *itself* but function documentation says first is a second.previousSibling.\n return true;\n\nIn other words, won\u0027t `isPreviousSibling( $node, $node )` return true when it should return false?\n\nShould we change the current approach?\n\n $node \u003d $first;\n while ( $node !\u003d\u003d null ) {\n   if ( $node-\u003eisSameNode( $second ) ) {\n     return false;\n   }\n   $node \u003d $node-\u003epreviousSibling;\n }\n return true;",
+      "parentUuid": "0156abb5_c7513d1c",
+      "range": {
+        "startLine": 250,
+        "startChar": 10,
+        "endLine": 250,
+        "endChar": 16
+      },
+      "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
