@@ -22,6 +22,30 @@
       "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0156abb5_c7513d1c",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T18:33:34Z",
+      "side": 1,
+      "message": "the logic is correct, we expect that the order is $first, then $second, we take $first, go backward and do not expect to find $second.\n\nIn other words - we take all previous siblings of the $first node, if any of those is the same as $second, we return false  (because $first is not the previous sibling of $second)\n\nStep A - $node \u003d previous sibling of the first\nStep B - if $node \u003d\u003d\u003d $second -\u003e then it\u0027s not in the order, because first it found $second (one of the previous siblings)\nStep C - if $node is not the second, then start over\n\n\nYour approach is to take the $first, and then iterate through nextSibling till the end and if we don\u0027t find $second. That\u0027s also the correct approach but IMHO it\u0027s worse performance wise. Usually, $first (the infobox) is the one of the first element in the content. If we go backward, usually, we will find up to 2-3 `\u003cp\u003e` nodes before the infobox (example: mw-empty-elt, span@coordintates). \nIf we decide to go forward (take the $first node, and verify the nextSibling), in all cases where the lead paragraph is already before $infobox - we will have to go through the whole article before we find that there is no $second node.\n\n\nSo the question is - which way is better, \na) go from the first element back to the top - it will be like one-two comparisons every time\nb) go from first till the end and search for a $second - usually at least one comparison but we might end up traversing the whole document.",
+      "parentUuid": "1eca5727_7312f537",
+      "range": {
+        "startLine": 250,
+        "startChar": 10,
+        "endLine": 250,
+        "endChar": 16
+      },
+      "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
