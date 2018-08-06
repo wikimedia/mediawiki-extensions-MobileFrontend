@@ -4,6 +4,7 @@ namespace MobileFrontend\Transforms;
 
 use DOMElement;
 use DOMXpath;
+use Message;
 use MessageLocalizer;
 
 class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
