@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b47071f_85fc8d23",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-06T19:24:17Z",
+      "side": 1,
+      "message": "No problem with this approach. My preference is to use the following since it\u0027s the most generic:\n\n $node \u003d $second-\u003epreviousSibling;\n while ( $node !\u003d\u003d null ) {\n   if ( $node-\u003eisSameNode( $first ) ) {\n     return true;\n   }\n   $node \u003d $node-\u003epreviousSibling;\n }\n return false;\n\nAnd the current approach fails for disconnected nodes.",
+      "revId": "ea319d15a2364c30387518188cf74248f087c945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
