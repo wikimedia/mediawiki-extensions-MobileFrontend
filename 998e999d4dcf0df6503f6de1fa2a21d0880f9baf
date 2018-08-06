@@ -70,6 +70,30 @@
       "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1ac527_ef4453bb",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T19:19:14Z",
+      "side": 1,
+      "message": "that wouldn\u0027t be the case in this code, as $first will an infobox `\u003ctable class\u003dinfobox\u003e`, and $second will be a `\u003cp\u003e` but I like the idea of having function that will always return correct results. I\u0027ll fix the function so it handles also self::isPreviousSibling($node, $Node);",
+      "parentUuid": "f87d9f0e_9f2fc724",
+      "range": {
+        "startLine": 250,
+        "startChar": 10,
+        "endLine": 250,
+        "endChar": 16
+      },
+      "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
