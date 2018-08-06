@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a414613_318b83e4",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "identifyLeadParagraph() - I like it, done",
+      "parentUuid": "7a00abd4_d5248bc9",
+      "range": {
+        "startLine": 118,
+        "startChar": 18,
+        "endLine": 118,
+        "endChar": 34
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df2d8f06_54a50bcb",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-06T14:22:20Z",
       "side": 1,
       "message": "This conditional no longer appears necessary since the whole loop checks length.",
+      "range": {
+        "startLine": 121,
+        "startChar": 2,
+        "endLine": 121,
+        "endChar": 34
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa8261ad_71179e97",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "good catch, fixed",
+      "parentUuid": "df2d8f06_54a50bcb",
       "range": {
         "startLine": 121,
         "startChar": 2,
@@ -94,6 +142,54 @@
     },
     {
       "key": {
+        "uuid": "2f7e9047_bcd2841c",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "no idea, but the PHP documentation says that DOMElement::item($idx) can return null - I want to play safe and handle all possible return values",
+      "parentUuid": "44898bc5_6437f336",
+      "range": {
+        "startLine": 125,
+        "startChar": 9,
+        "endLine": 125,
+        "endChar": 14
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ca51aed_d7f6986f",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "af6404e6_3852264d",
+      "range": {
+        "startLine": 125,
+        "startChar": 18,
+        "endLine": 125,
+        "endChar": 55
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db29dd57_c0aac1ca",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 3
@@ -105,6 +201,30 @@
       "writtenOn": "2018-08-06T14:22:20Z",
       "side": 1,
       "message": "Doesn\u0027t this mean we should return false here regardless of whether it\u0027s a coordinates wrapper or not?",
+      "range": {
+        "startLine": 234,
+        "startChar": 3,
+        "endLine": 234,
+        "endChar": 74
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc65a00b_981b521f",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "I agree, the naming here is a bit unfortunate. We call \u0027empty\u0027 all paragraphs that are not good candidates to be the lead paragraph.",
+      "parentUuid": "db29dd57_c0aac1ca",
       "range": {
         "startLine": 234,
         "startChar": 3,
@@ -140,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "563f8596_25566901",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "good catch, leftover from the previous function",
+      "parentUuid": "211852bd_24feeabc",
+      "range": {
+        "startLine": 244,
+        "startChar": 4,
+        "endLine": 244,
+        "endChar": 61
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e8dd6d1b_737c3016",
         "filename": "includes/transforms/MoveLeadParagraphTransform.php",
         "patchSetId": 3
@@ -151,6 +295,30 @@
       "writtenOn": "2018-08-06T14:22:20Z",
       "side": 1,
       "message": "This seems to be a more general function than what the name and parameters imply. Consider renaming to isPreviousSibling($node, $relation).",
+      "range": {
+        "startLine": 250,
+        "startChar": 18,
+        "endLine": 250,
+        "endChar": 42
+      },
+      "revId": "eeb008c59e0bbaf054f4ffe2d3dd86be2cbf50db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea06e5f7_bc8ee8b9",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-06T17:49:20Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "e8dd6d1b_737c3016",
       "range": {
         "startLine": 250,
         "startChar": 18,
