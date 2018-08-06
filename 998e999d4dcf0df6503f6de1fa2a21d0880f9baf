@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1eca5727_7312f537",
+        "filename": "includes/transforms/MoveLeadParagraphTransform.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-06T18:09:59Z",
+      "side": 1,
+      "message": "Based on the comment, should this be second?\n\nI\u0027m not sure but walking forwards instead of backwards may be more intuitive too:\n\n // The first must be at least one node prior to the second.\n $first \u003d $first-\u003enextSibling;\n while ( $first !\u003d\u003d null ) {\n   if ( $first-\u003eisSameNode( $second ) ) {\n     return true;\n   }\n   $first \u003d $first-\u003enextSibling;\n }\n return false;",
+      "range": {
+        "startLine": 250,
+        "startChar": 10,
+        "endLine": 250,
+        "endChar": 16
+      },
+      "revId": "998e999d4dcf0df6503f6de1fa2a21d0880f9baf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
