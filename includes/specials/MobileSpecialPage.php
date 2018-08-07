@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
  */
@@ -88,8 +89,7 @@ class MobileSpecialPage extends SpecialPage {
 	protected function addModules() {
 		$out = $this->getOutput();
 		$rl = $out->getResourceLoader();
-		$title = $this->getPageTitle();
-		list( $name, ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+		$name = $this->getName();
 		$id = strtolower( $name );
 		// FIXME: These names should be more specific
 		$specialStyleModuleName = 'mobile.special.' . $id . '.styles';
