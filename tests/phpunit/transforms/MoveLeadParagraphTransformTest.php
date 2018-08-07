@@ -76,9 +76,11 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxElement
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getLeadParagraph
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
 	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
+	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
 	 */
 	public function testTransform( $html, $expected,
 		$reason = 'Move lead paragraph unexpected result'
@@ -96,7 +98,8 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 		$stackInfobox = "<div class=\"mw-stack\">$infobox</div>";
 		$emptyStack = '<div class="mw-stack">Empty</div>';
 		$multiStackInfobox = "<div class=\"mw-stack\">$infobox$anotherInfobox</div>";
-		$paragraph = '<p>first paragraph</p>';
+		$paragraph = '<p><b>First paragraph</b> <span> with info that links to a '
+			. PHP_EOL . ' <a href="">Page</a></span> and some more content</p>';
 		$emptyP = '<p></p>';
 		// The $paragraphWithWhitespacesOnly has not only whitespaces (space,new line,tab)
 		// , but also contains a span with whitespaces

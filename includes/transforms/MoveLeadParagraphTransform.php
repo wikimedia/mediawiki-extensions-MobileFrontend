@@ -95,7 +95,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMNode $body Where to search for an infobox
 	 * @return DOMElement|null The first infobox
 	 */
-	private function getInfoboxElement( DOMXPath $xPath, DOMNode $body ) {
+	private function identifyInfoboxElement( DOMXPath $xPath, DOMNode $body ) {
 		$xPathQueryInfoboxes = './/table[starts-with(@class,"infobox") or contains(@class," infobox")]';
 		$infoboxes = $xPath->query( $xPathQueryInfoboxes, $body );
 
@@ -115,11 +115,18 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMNode $body Where to search for an paragraphs
 	 * @return DOMElement|null The lead paragraph
 	 */
-	private function getLeadParagraph( DOMXPath $xPath, DOMNode $body ) {
-		$xPathQueryIgnoreEmptyP = './p[translate(normalize-space(text()), \' \', \'\') != \'\']';
+	private function identifyLeadParagraph( DOMXPath $xPath, DOMNode $body ) {
+		$xPathQueryIgnoreEmptyP = './p[translate(normalize-space(), \' \', \'\') != \'\']';
 		$paragraphs = $xPath->query( $xPathQueryIgnoreEmptyP, $body );
-		if ( $paragraphs->length > 0 ) {
-			return $paragraphs->item( 0 );
+
+		$index = 0;
+		while ( $index < $paragraphs->length ) {
+			$node = $paragraphs->item( $index );
+			if ( $node && !$this->isNonLeadParagraph( $xPath, $node ) ) {
+				return $node;
+			}
+
+			++$index;
 		}
 		return null;
 	}
@@ -146,14 +153,14 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 */
 	private function moveFirstParagraphBeforeInfobox( $leadSectionBody, $doc ) {
 		$xPath = new DOMXPath( $doc );
-		$infobox = $this->getInfoboxElement( $xPath, $leadSectionBody );
+		$infobox = $this->identifyInfoboxElement( $xPath, $leadSectionBody );
 
 		if ( $infobox ) {
-			$leadParagraph = $this->getLeadParagraph( $xPath, $leadSectionBody );
+			$leadParagraph = $this->identifyLeadParagraph( $xPath, $leadSectionBody );
 			$isTopLevelInfobox = $infobox->parentNode->isSameNode( $leadSectionBody );
 
 			if ( $leadParagraph && $isTopLevelInfobox &&
-				$this->hasNoNonEmptyPrecedingParagraphs( $xPath, $infobox )
+				$this->isPreviousSibling( $infobox, $leadParagraph )
 			) {
 				$listElementAfterParagraph = null;
 				$where = $infobox;
@@ -211,6 +218,52 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
+	 * Checks if paragraph contains anything other than meta-data only (example: coordinates)
+	 * and can be treated as a lead paragrah (a paragraph with article content)
+	 *
+	 * @param DOMXPath $xPath An XPath query
+	 * @param DOMNode $node DOM Node to verify
+	 * @return bool
+	 */
+	private function isNonLeadParagraph( $xPath, $node ) {
+		if ( $node->nodeType === XML_ELEMENT_NODE
+			 && $node->tagName === 'p'
+			 && $this->isNotEmptyNode( $node )
+		) {
+			// we found a non-empty p element but it might be a coordinates wrapper
+			$coords = $xPath->query( './/span[@id="coordinates"]', $node );
+			if ( $coords->length === 0 ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Check if the $first is previous sibling of $second
+	 *
+	 * Both nodes ($first and $second) most probably will be located in the beginning of
+	 * article, because of that it's better to loop backward from $second to $first.
+	 * Usually those two elements should be in order, it means that we will do only one
+	 * `isSameNode()` check. If those elements are not in the order, we will quickly get to
+	 * $node->previousSibling==null and return false instead of the whole traversing document.
+	 *
+	 * @param DOMNode $first
+	 * @param DOMNode $second
+	 * @return bool
+	 */
+	private function isPreviousSibling( DOMNode $first, DOMNode $second ) {
+		$node = $second->previousSibling;
+		while ( $node !== null ) {
+			if ( $node->isSameNode( $first ) ) {
+				return true;
+			}
+			$node = $node->previousSibling;
+		}
+		return false;
+	}
+
+	/**
 	 * Check if there are any non-empty siblings before $element
 	 *
 	 * @param DOMXPath $xPath
@@ -220,15 +273,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	private function hasNoNonEmptyPrecedingParagraphs( DOMXPath $xPath, DOMElement $element ) {
 		$node = $element->previousSibling;
 		while ( $node !== null ) {
-			if ( $node->nodeType === XML_ELEMENT_NODE
-				 && $node->tagName === 'p'
-				 && $this->isNotEmptyNode( $node )
-			) {
-				// we found a non-empty p element but it might be a coordinates wrapper
-				$coords = $xPath->query( './/span[@id="coordinates"]', $node );
-				if ( $coords->length === 0 ) {
-					return false;
-				}
+			if ( !$this->isNonLeadParagraph( $xPath, $node ) ) {
+				return false;
 			}
 			$node = $node->previousSibling;
 		}
