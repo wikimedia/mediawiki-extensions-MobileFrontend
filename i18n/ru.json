@@ -46,7 +46,8 @@
 			"Mouse21",
 			"Patrick Star",
 			"Stjn",
-			"Vlad5250"
+			"Vlad5250",
+			"Shaleych"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Войдите в систему или создайте учетную запись для отслеживания изменений",
@@ -133,9 +134,9 @@
 	"mobile-frontend-expand-sections-status": "Раскрыть все разделы",
 	"mobile-frontend-fontchanger-link": "Размер шрифта",
 	"mobile-frontend-fontchanger-desc": "Настроить размер шрифта для удобства чтения.",
-	"mobile-frontend-fontchanger-option-small": "Малый",
+	"mobile-frontend-fontchanger-option-small": "Маленький",
 	"mobile-frontend-fontchanger-option-medium": "Стандартный",
-	"mobile-frontend-fontchanger-option-large": "Обширный",
+	"mobile-frontend-fontchanger-option-large": "Большой",
 	"mobile-frontend-fontchanger-option-xlarge": "Очень крупный",
 	"mobile-frontend-featured-article": "Избранный материал дня",
 	"mobile-frontend-generic-404-desc": "Не удалось найти страницу, которую вы ищете.",
