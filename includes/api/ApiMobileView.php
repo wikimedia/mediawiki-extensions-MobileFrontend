@@ -711,7 +711,8 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Get a Filepage as parsed HTML
 	 * @param Title $title
-	 * @return string
+	 * @return string HTML
+	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
 	private function getFilePage( Title $title ) {
 		// HACK: HACK: HACK:

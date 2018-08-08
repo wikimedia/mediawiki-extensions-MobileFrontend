@@ -17,6 +17,7 @@ class ContentProviderFactory {
 	 * @param string $html (optional) available HTML that can be used by provider
 	 *  if necessary. This may be useful if the ContentProvider acce
 	 * @return IContentProvider
+	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
 	public static function getProvider( Config $config, OutputPage $out, $html = '' ) {
 		$contentProviderClass = $config->get( 'MFContentProviderClass' );

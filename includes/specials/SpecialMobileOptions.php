@@ -148,7 +148,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$fields[] = new OOUI\ButtonInputWidget( [
 			'id' => 'mw-mf-settings-save',
 			'infusable' => true,
-			'value' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'value' => $this->msg( 'mobile-frontend-save-settings' )->text(),
 			'label' => $this->msg( 'mobile-frontend-save-settings' )->text(),
 			'flags' => [ 'primary', 'progressive' ],
 			'type' => 'submit',
