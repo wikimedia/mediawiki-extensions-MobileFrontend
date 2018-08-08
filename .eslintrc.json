@@ -22,6 +22,11 @@
 				"object": "window",
 				"property": "location",
 				"message": "Please use mediawiki.router"
+			},
+			{
+				"object": "$",
+				"property": "isFunction",
+				"message": "Please use typeof"
 			}
 		],
 		"dot-notation": [ "error", { "allowKeywords": true } ],
