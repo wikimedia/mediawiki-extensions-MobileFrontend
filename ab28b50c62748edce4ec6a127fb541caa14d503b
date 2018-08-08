@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b4ab76ef_a0e789e4",
+        "filename": "resources/mobile.startup/util.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-08T21:50:02Z",
+      "side": 1,
+      "message": "I must confess I don\u0027t really understand this method (name or need)\nproxyEvent seems to capture it\u0027s purpose better (repeat made me think that it triggered an event twice), in which case a generic proxy function that wraps $.proxy may be more useful (in terms of limiting/controlling our jquery usage)",
+      "revId": "ab28b50c62748edce4ec6a127fb541caa14d503b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
