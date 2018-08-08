@@ -148,6 +148,20 @@
 		 */
 		isModifiedEvent: function ( ev ) {
 			return ev.altKey || ev.ctrlKey || ev.metaKey || ev.shiftKey;
+		},
+
+		/**
+		 * Pipe event emitted by source through proxy. Subscribers to proxy will receive the event as
+		 * though proxy was the originator.
+		 *
+		 * @param {OO.EventEmitter} src
+		 * @param {OO.EventEmitter} proxy
+		 * @param {string} event Event type to listen for.
+		 * @param {any[]} [args] Arguments to pass to subscribers, will be prepended to emitted arguments.
+		 * @return {OO.EventEmitter} The source.
+		 */
+		repeatEvent: function ( src, proxy, event, args ) {
+			return src.on( event, function ( args ) { return proxy.emit( event, args ); }, args );
 		}
 	};
 

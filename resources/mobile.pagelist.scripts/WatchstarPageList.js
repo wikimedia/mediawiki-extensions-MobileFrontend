@@ -3,8 +3,13 @@
 	var PageList = M.require( 'mobile.startup/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
 		user = M.require( 'mobile.startup/user' ),
+		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' );
+
+	/**
+	 * @typedef {Object.<PageTitle, PageID>} PageTitleToPageIDMap
+	 */
 
 	/**
 	 * List of items page view
@@ -31,85 +36,144 @@
 		 * @property {Object} defaults Default options hash.
 		 * @property {mw.Api} defaults.api
 		 */
+
+		postRender: function () {
+			var
+				self = this,
+				$items,
+				pages,
+				ids = [],
+				titles = [];
+
+			PageList.prototype.postRender.apply( this );
+
+			$items = this.queryUnitializedItems();
+			pages = this.parsePagesFromItems( $items );
+
+			Object.keys( pages ).forEach( function ( title ) {
+				var id = pages[title];
+				// Favor IDs since they're short and unlikely to exceed URL length
+				// limits when batched.
+				if ( id && id !== '0' ) {
+					// ID is present and valid.
+					ids.push( id );
+				} else {
+					// Only titles are available for missing pages.
+					titles.push( title );
+				}
+			} );
+
+			return this.getPages( ids, titles ).then( function ( statuses ) {
+				self.renderItems( $items, statuses );
+			} );
+		},
+
+		/**
+		 * @param {JQuery.Element} $items
+		 * @param {WatchStatusMap} statuses
+		 * @return {void}
+		 */
+		queryUnitializedItems: function () {
+			return this.$( 'li:not(.with-watchstar)' );
+		},
+
 		/**
 		 * Retrieve pages
 		 *
 		 * @memberof WatchstarPageList
 		 * @instance
-		 * @param {Object.<string,string|number>} titleToPageID A page title to page
-		 *                                                      ID map. 0 indicates
-		 *                                                      ID unknown.
-		 * @return {jQuery.Deferred}
+		 * @param {PageID[]} ids
+		 * @param {PageTitle[]} titles
+		 * @return {JQuery.Deferred<WatchStatusMap>}
 		 */
-		getPages: function ( titleToPageID ) {
-			return this.wsGateway.loadWatchStatus( titleToPageID );
+		getPages: function ( ids, titles ) {
+			// Rendering Watchstars for anonymous users is not useful. Short-circuit
+			// the request.
+			if ( user.isAnon() ) {
+				return util.Deferred().resolve( {} );
+			}
+
+			return this.wsGateway.getStatuses( ids, titles );
 		},
+
 		/**
-		 * @inheritdoc
+		 * @param {JQuery.Element} $items
+		 * @return {PageTitleToPageIDMap}
 		 * @memberof WatchstarPageList
 		 * @instance
 		 */
-		postRender: function () {
-			var $li,
+		parsePagesFromItems: function ( $items ) {
+			var
 				self = this,
-				titleToPageID = {},
-				gateway = this.wsGateway;
-
-			PageList.prototype.postRender.apply( this );
-
-			// Get the items that haven't been initialized
-			$li = this.$( 'li:not(.with-watchstar)' );
-
-			// Check what we have in the page list
-			$li.each( function () {
-				var li = self.$( this );
-				titleToPageID[ li.attr( 'title' ) ] = li.data( 'id' );
+				pages = {};
+			$items.each( function ( _, item ) {
+				var $item = self.$( item );
+				pages[ $item.attr( 'title' ) ] = $item.data( 'id' );
 			} );
+			return pages;
+		},
+
+		/**
+		 * @param {JQuery.Element} $items
+		 * @param {WatchStatusMap} statuses
+		 * @return {void}
+		 */
+		renderItems: function ( $items, statuses ) {
+			var self = this;
+
+			// Rendering Watchstars for anonymous users is not useful. Nothing to do.
+			if ( user.isAnon() ) { return; }
 
 			// Create watch stars for each entry in list
-			if ( !user.isAnon() && Object.keys( titleToPageID ).length ) {
-				// FIXME: This should be moved out of here so other extensions can override this behaviour.
-				self.getPages( titleToPageID ).then( function () {
-					$li.each( function () {
-						var watchstar,
-							page = new Page( {
-								// FIXME: Set sections so we don't hit the api (hacky)
-								sections: [],
-								title: self.$( this ).attr( 'title' ),
-								id: self.$( this ).data( 'id' )
-							} );
+			$items.each( function ( _, item ) {
+				var
+					$item = self.$( item ),
+					page = new Page( {
+						// FIXME: Set sections so we don't hit the api (hacky)
+						sections: [],
+						title: $item.attr( 'title' ),
+						id: $item.data( 'id' )
+					} ),
+					el = self.parseHTML( '<div>' ).appendTo( $item ),
+					watched = statuses[ page.getTitle() ];
 
-						watchstar = new Watchstar( {
-							api: self.options.api,
-							funnel: self.options.funnel,
-							isAnon: false,
-							// WatchstarPageList.getPages() already retrieved the status of
-							// each page. Explicitly set the watch state so another request
-							// will not be issued by the Watchstar.
-							isWatched: gateway.isWatchedPage( page ),
-							page: page,
-							el: self.parseHTML( '<div>' ).appendTo( this )
-						} );
+				self._appendWatchstar( el, page, watched );
+				$item.addClass( 'with-watchstar' );
+			} );
+		},
 
-						self.$( this ).addClass( 'with-watchstar' );
+		/**
+		 * @param {HTMLElement} el
+		 * @param {Page} page
+		 * @param {WatchStatus} watched
+		 * @return {Watchstar}
+		 */
+		_appendWatchstar: function ( el, page, watched ) {
+			var watchstar = new Watchstar( {
+				api: this.options.api,
+				funnel: this.options.funnel,
+				isAnon: user.isAnon(),
+				// WatchstarPageList.getPages() already retrieved the status of
+				// each page. Explicitly set the watch state so another request
+				// will not be issued by the Watchstar.
+				isWatched: watched,
+				page: page,
+				el: el
+			} );
 
-						/**
-						 * Fired when an article in the PageList is watched.
-						 * @event WatchstarPageList#watch
-						 */
-						watchstar.on( 'watch', function () {
-							self.emit( 'watch' );
-						} );
-						/**
-						 * Fired when an article in the PageList is unwatched.
-						 * @event WatchstarPageList#unwatch
-						 */
-						watchstar.on( 'unwatch', function () {
-							self.emit( 'unwatch' );
-						} );
-					} );
-				} );
-			}
+			/**
+			 * @event watch
+			 * Fired when an article in the PageList is watched.
+			 */
+			util.repeatEvent( watchstar, this, 'watch' );
+
+			/**
+			 * @event unwatch
+			 * Fired when an article in the PageList is watched.
+			 */
+			util.repeatEvent( watchstar, this, 'unwatch' );
+
+			return watchstar;
 		}
 	} );
 

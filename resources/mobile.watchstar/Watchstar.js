@@ -99,13 +99,6 @@
 			this._watched = options.isWatched;
 			this.gateway = new WatchstarGateway( options.api );
 
-			if ( !user.isAnon() ) {
-				// Synchronize the Watchstar's cache, _watched, with the
-				// WatchstarGateway cache. Otherwise, toggling may have the opposite
-				// effect as is wanted.
-				this.gateway.setWatchedPage( options.page, this._watched );
-			}
-
 			_super.call( self, options );
 		},
 		/**
@@ -122,23 +115,19 @@
 		 * @instance
 		 */
 		postRender: function () {
-			var self = this,
-				gateway = this.gateway,
-				unwatchedClass = watchIcon.getGlyphClassName(),
-				watchedClass = watchedIcon.getGlyphClassName() + ' watched',
-				page = self.options.page,
-				$el = self.$el;
+			var unwatchedClass = watchIcon.getGlyphClassName(),
+				watchedClass = watchedIcon.getGlyphClassName() + ' watched';
 
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
-			this.$el.attr( 'title', self.options.tooltip );
+			this.$el.attr( 'title', this.options.tooltip );
 
 			// Add watched class if necessary
-			if ( !user.isAnon() && gateway.isWatchedPage( page ) ) {
-				$el.addClass( watchedClass ).removeClass( unwatchedClass );
+			if ( !user.isAnon() && this._watched ) {
+				this.$el.addClass( watchedClass ).removeClass( unwatchedClass );
 			} else {
-				$el.addClass( unwatchedClass ).removeClass( watchedClass );
+				this.$el.addClass( unwatchedClass ).removeClass( watchedClass );
 			}
-			$el.removeClass( 'hidden' );
+			this.$el.removeClass( 'hidden' );
 		},
 
 		/**
@@ -170,19 +159,21 @@
 		 * @instance
 		 */
 		onStatusToggleUser: function () {
-			var self = this,
+			var
+				self = this,
 				gateway = this.gateway,
 				page = this.options.page,
-				checker;
+				checker,
+				postWatched = !this._watched;
 
 			checker = setInterval( function () {
 				toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
 			}, 1000 );
-			gateway.toggleStatus( page ).always( function () {
+			gateway.postStatusesByTitle( [ page.getTitle() ], postWatched ).always( function () {
 				clearInterval( checker );
 			} ).done( function () {
-				if ( gateway.isWatchedPage( page ) ) {
-					self._watched = true;
+				self._watched = postWatched;
+				if ( postWatched ) {
 					self.render();
 					/**
 					 * Fired when the watch star is changed to watched status
@@ -191,7 +182,6 @@
 					self.emit( 'watch' );
 					toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
 				} else {
-					self._watched = false;
 					/**
 					 * Fired when the watch star is changed to unwatched status
 					 * @event Watchstar#unwatch

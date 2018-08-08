@@ -1,9 +1,11 @@
-( function ( $, M ) {
+( function ( M ) {
 
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
 		user = M.require( 'mobile.startup/user' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
-		watchIcon = new Icon( { name: 'watched' } );
+		watchIconName = new Icon( {
+			name: 'watched'
+		} ).getGlyphClassName();
 
 	QUnit.module( 'MobileFrontend modules/WatchList', {
 		setup: function () {
@@ -13,8 +15,9 @@
 	} );
 
 	QUnit.test( 'In watched mode', function ( assert ) {
-		var spy = this.spy,
+		var
 			done = assert.async(),
+			spy = this.spy,
 			pl = new WatchList( {
 				api: new mw.Api(),
 				pages: [
@@ -33,9 +36,9 @@
 		window.setTimeout( function () {
 			assert.ok( spy.notCalled, 'Callback avoided' );
 			assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, '3 articles have watch stars...' );
-			assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 3, '...and all are marked as watched.' );
+			assert.strictEqual( pl.$el.find( '.' + watchIconName ).length, 3, '...and all are marked as watched.' );
 			done();
 		}, 2000 );
 	} );
 
-}( jQuery, mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );
