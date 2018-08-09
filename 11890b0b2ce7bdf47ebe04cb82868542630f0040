@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1449a6f5_945f60af",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-09T00:10:49Z",
+      "side": 1,
+      "message": "This code also works on desktop where we cannot change the structure. Have clarified in docblock.",
+      "parentUuid": "cb0a6eee_7564fd3e",
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d359105a_36e235a1",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 5
@@ -66,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "e0571003_2e366c7f",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-09T00:10:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "178250d7_1bb6bf39",
+      "range": {
+        "startLine": 119,
+        "startChar": 22,
+        "endLine": 119,
+        "endChar": 41
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd133547_d183ee33",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 5
@@ -77,6 +119,30 @@
       "writtenOn": "2018-08-03T15:33:37Z",
       "side": 1,
       "message": "There\u0027s lot of extra elses in this function that contribute multiple levels to the indent. Consider removing them to highlight the early exits, reduce verbosity, and cut our indentation.",
+      "range": {
+        "startLine": 130,
+        "startChar": 7,
+        "endLine": 130,
+        "endChar": 11
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f2daf89_6902e842",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-09T00:10:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd133547_d183ee33",
       "range": {
         "startLine": 130,
         "startChar": 7,
@@ -112,6 +178,30 @@
     },
     {
       "key": {
+        "uuid": "4d307aa3_ba4db213",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-09T00:10:49Z",
+      "side": 1,
+      "message": "I\u0027 not sure how to DRY this up.\nThe lead is defined as the text before the first heading in the article HTML.\n\nThis is finding the heading associated with the section id.\n\nThe if statement above deals only with the case for searching for an element within the lead.\n\nI\u0027ve had a go at rewriting this to make it\u0027s clearer. Since we return early this doesn\u0027t need to be in an else block. Does that help?",
+      "parentUuid": "d44df066_01d1112a",
+      "range": {
+        "startLine": 138,
+        "startChar": 17,
+        "endLine": 138,
+        "endChar": 40
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc681481_639a5b4f",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 5
@@ -123,6 +213,30 @@
       "writtenOn": "2018-08-03T15:33:37Z",
       "side": 1,
       "message": "I\u0027m confused about the section IDs. I thought that \"sections\" were the top level collapsible sections and so section _IDs_ would only number those. However, in the tests I see that subsections are counted. Is there an established convention in MobileFrontend / MinervaNeue?\n\nFor example, I was looking at the heading selector here and considering:\n\n \u003ch2\u003eSection A\u003c/h2\u003e\n   \u003ch3\u003eSection A.1\u003c/h3\u003e\n   \u003ch3\u003eSection A.2\u003c/h3\u003e\n   \u003ch3\u003eSection A.3\u003c/h3\u003e\n \u003ch2\u003eSection B\u003c/h2\u003e\n \u003ch2\u003eSection C\u003c/h2\u003e\n\nAnd I thought this was buggy since `this.$(headingSelector).eq(2)` would return Section A.2 not Section C, right?",
+      "range": {
+        "startLine": 139,
+        "startChar": 23,
+        "endLine": 139,
+        "endChar": 38
+      },
+      "revId": "11890b0b2ce7bdf47ebe04cb82868542630f0040",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be6430bd_d6b53be2",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-09T00:10:49Z",
+      "side": 1,
+      "message": "\u003e Is there an established convention in MobileFrontend / MinervaNeue?\n\nThe definition/convention is the PHP parser definition which is  the index of the heading in the entire document, so in your example eq(2) would return Section A.2 as expected.\n\nThis relates to the edit link. ?action\u003dedit\u0026section\u003d\u003cnum\u003e\n\nQuite rightly, you are confused as getSection doesn\u0027t use this definition. I\u0027ve updated the doc block of that method, to make this clearer and how we intend to fix this.",
+      "parentUuid": "cc681481_639a5b4f",
       "range": {
         "startLine": 139,
         "startChar": 23,
