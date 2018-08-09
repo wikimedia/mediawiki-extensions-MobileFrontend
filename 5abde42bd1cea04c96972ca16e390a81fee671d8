@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18d4f0dd_8a67617f",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-09T18:53:05Z",
+      "side": 1,
+      "message": "Should this have pageIssues option?",
+      "revId": "5abde42bd1cea04c96972ca16e390a81fee671d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "faa352c2_cefabe36",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-09T18:53:05Z",
+      "side": 1,
+      "message": "Can we change events to use a:not(.external):not([href*\u003dedit])?",
+      "range": {
+        "startLine": 53,
+        "startChar": 3,
+        "endLine": 53,
+        "endChar": 63
+      },
+      "revId": "5abde42bd1cea04c96972ca16e390a81fee671d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c6446f5d_ab454a4f",
+        "filename": "resources/mobile.issues/CleanupOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-09T18:53:05Z",
+      "side": 1,
+      "message": "Since this appears in two places and takes a little mental parsing, consider pulling this into a function called parseSeverity().",
+      "range": {
+        "startLine": 59,
+        "startChar": 5,
+        "endLine": 59,
+        "endChar": 70
+      },
+      "revId": "5abde42bd1cea04c96972ca16e390a81fee671d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
