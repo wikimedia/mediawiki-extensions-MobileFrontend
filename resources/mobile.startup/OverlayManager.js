@@ -177,22 +177,48 @@
 		 */
 		_matchRoute: function ( path, entry ) {
 			var
+				next,
 				match = path.match( entry.route ),
 				previous = this.stack[1],
-				next;
+				self = this;
+
+			/**
+			 * Returns object to add to stack
+			 * @method
+			 * @ignore
+			 * @return {Object}
+			 */
+			function getNext() {
+				return {
+					path: path,
+					factoryResult: entry.factory.apply( self, match.slice( 1 ) )
+				};
+			}
 
 			if ( match ) {
 				// if previous stacked overlay's path matches, assume we're going back
 				// and reuse a previously opened overlay
 				if ( previous && previous.path === path ) {
-					this.stack.shift();
+					if ( previous.overlay && previous.overlay.hasLoadError ) {
+						self.stack.shift();
+						// Loading of overlay failed so we want to replace it with a new
+						// overlay (which will try to load successfully)
+						self.stack[0] = getNext();
+						return self.stack[0];
+					}
+
+					self.stack.shift();
 					return previous;
 				} else {
-					next = {
-						path: path,
-						factoryResult: entry.factory.apply( this, match.slice( 1 ) )
-					};
-					this.stack.unshift( next );
+					next = getNext();
+					if ( this.stack[0] && next.path === this.stack[0].path ) {
+						// current overlay path is same as path to check which means overlay
+						// is attempting to refresh so just replace current overlay with new
+						// overlay
+						self.stack[0] = next;
+					} else {
+						self.stack.unshift( next );
+					}
 					return next;
 				}
 			}

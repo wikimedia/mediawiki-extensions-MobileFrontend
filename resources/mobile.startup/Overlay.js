@@ -20,6 +20,8 @@
 	function Overlay() {
 		this.isIos = browser.isIos();
 		this.useVirtualKeyboardHack = browser.isIos( 4 ) || browser.isIos( 5 );
+		// Set to true when overlay has failed to load
+		this.hasLoadError = false;
 		View.apply( this, arguments );
 	}
 
