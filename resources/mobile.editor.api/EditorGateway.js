@@ -31,12 +31,10 @@
 		 */
 		getContent: function () {
 			var options,
-				self = this,
-				// Using this.api.get which returns a promise
-				result = util.Deferred();
+				self = this;
 
 			function resolve() {
-				result.resolve( {
+				return util.Deferred().resolve( {
 					text: self.content || '',
 					user: self.userinfo,
 					block: self.block,
@@ -45,7 +43,7 @@
 			}
 
 			if ( this.content !== undefined ) {
-				resolve();
+				return resolve();
 			} else {
 				options = {
 					action: 'query',
@@ -66,12 +64,11 @@
 				if ( util.isNumeric( this.sectionId ) ) {
 					options.rvsection = this.sectionId;
 				}
-				this.api.get( options ).done( function ( resp ) {
+				return this.api.get( options ).then( function ( resp ) {
 					var revision, pageObj;
 
 					if ( resp.error ) {
-						result.reject( resp.error.code );
-						return;
+						return util.Deferred().reject( resp.error.code );
 					}
 
 					pageObj = resp.query.pages[0];
@@ -90,7 +87,7 @@
 					self.blockedByUser = null;
 
 					if ( !self.userinfo.blockid ) {
-						resolve();
+						return resolve();
 					} else {
 						// Preload library used by EditorOverlay to format block expiry datetime and duration
 						mw.loader.load( 'moment' );
@@ -98,7 +95,7 @@
 						// Look up additional block information:
 						// * Block flags - 'allowusertalk' for talk pages
 						// * Blocker's gender for localisation messages
-						self.api.get( {
+						return self.api.get( {
 							list: 'blocks|users',
 							bkids: self.userinfo.blockid,
 							bkprop: 'by|expiry|reason|flags',
@@ -109,12 +106,11 @@
 							self.block = resp.query.blocks[0];
 							self.blockedByUser = resp.query.users[0];
 
-							resolve();
+							return resolve();
 						} );
 					}
 				} );
 			}
-			return result;
 		},
 
 		/**
