@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b07772e6_3cbf998b",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-10T19:31:32Z",
+      "side": 1,
+      "message": "Comma is the default delimiter and may be omitted.",
+      "range": {
+        "startLine": 8,
+        "startChar": 74,
+        "endLine": 8,
+        "endChar": 78
+      },
+      "revId": "9700e76ac6195976df3d72e05f27a6936c1ffac6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
