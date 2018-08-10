@@ -271,9 +271,11 @@
 		 * @private
 		 * @param {jQuery.Object} $el object from which sections are extracted
 		 * @return {Array} Array of section objects created from headings in $el
-		 * FIXME: Where's a better place for these two functions to live?
+		 * FIXME: Where's a better place for getSectionsFromHTML and this function to live?
+		 * Answer: Possibly Page.js
 		 */
 		_getAPIResponseFromHTML: function ( $el ) {
+			// FIXME: use Page.HEADING_SELECTOR
 			var $headings = $el.find( 'h1,h2,h3,h4,h5,h6' ),
 				sections = [];
 
