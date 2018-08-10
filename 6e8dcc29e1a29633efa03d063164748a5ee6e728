@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b492e1b8_9cd8205a",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-10T21:05:53Z",
+      "side": 0,
+      "message": "I\u0027m worried that there might be some shared between different unit tests.\n\nThe MediaWikiTestCase on each setUp does `doLightweightServiceReset`, which resets only a couple services. There are two options:\n - add the reset of SpecialPageFactory service in the `doLightweightServiceReset`\n - `mock` the service for this one specific test case",
+      "range": {
+        "startLine": 546,
+        "startChar": 2,
+        "endLine": 546,
+        "endChar": 34
+      },
+      "revId": "6e8dcc29e1a29633efa03d063164748a5ee6e728",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a03f123_0f136216",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-10T21:05:53Z",
+      "side": 0,
+      "message": "also, while we\u0027re here, this is most probably not required any more",
+      "range": {
+        "startLine": 547,
+        "startChar": 2,
+        "endLine": 547,
+        "endChar": 30
+      },
+      "revId": "6e8dcc29e1a29633efa03d063164748a5ee6e728",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

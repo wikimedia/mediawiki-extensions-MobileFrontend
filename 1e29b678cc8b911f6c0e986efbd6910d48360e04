@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7fe52cf4_1ecef47e",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-08-10T21:05:53Z",
+      "side": 1,
+      "message": "please add a comment that this can be removed sometime in the future and that structure is only temporary because we have to introduce new service to the MediaWikiServices.\n\nOtherwise, someone can think that code has to stay here as it is support of some old version. It would be amazing, if, for example you can create a new patch, that depends on the core patch, that:\n - removes calling resolveAlias in old way\n - adds Mediawki 1.32 to extension.json in the requirements section",
+      "range": {
+        "startLine": 98,
+        "startChar": 3,
+        "endLine": 98,
+        "endChar": 75
+      },
+      "revId": "1e29b678cc8b911f6c0e986efbd6910d48360e04",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
