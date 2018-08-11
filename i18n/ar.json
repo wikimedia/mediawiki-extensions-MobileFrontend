@@ -158,6 +158,8 @@
 	"mobile-frontend-main-menu-settings-heading": "الإعدادات",
 	"mobile-frontend-media-details": "تفاصيل",
 	"mobile-frontend-media-license-link": "معلومات الترخيص",
+	"mobile-frontend-media-load-fail-message": "حدث خطأ أثناء تحميل هذه الصورة.",
+	"mobile-frontend-media-load-fail-retry": "تحديث",
 	"mobile-frontend-missing-image": "صورة",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 كم}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 م}}",

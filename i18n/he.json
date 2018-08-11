@@ -146,6 +146,8 @@
 	"mobile-frontend-main-menu-settings-heading": "הגדרות",
 	"mobile-frontend-media-details": "פרטים",
 	"mobile-frontend-media-license-link": "מידע על הרישיון",
+	"mobile-frontend-media-load-fail-message": "אירעה שגיאה בעת טעינת התמונה הזאת.",
+	"mobile-frontend-media-load-fail-retry": "רענון",
 	"mobile-frontend-missing-image": "תמונה",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|קילומטר אחד|$1 קילומטרים}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|מטר אחד|$1 מטרים}}",

@@ -132,6 +132,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Поставки",
 	"mobile-frontend-media-details": "Подробно",
 	"mobile-frontend-media-license-link": "Информации за лиценца",
+	"mobile-frontend-media-load-fail-message": "Се јави грешка при вчитувањето на сликава.",
+	"mobile-frontend-media-load-fail-retry": "Превчитај",
 	"mobile-frontend-missing-image": "Слика",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",

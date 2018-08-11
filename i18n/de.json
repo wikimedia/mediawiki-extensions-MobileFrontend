@@ -147,6 +147,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Einstellungen",
 	"mobile-frontend-media-details": "Einzelheiten",
 	"mobile-frontend-media-license-link": "Lizenzinformationen",
+	"mobile-frontend-media-load-fail-message": "Beim Laden dieses Bildes gab es einen Fehler.",
+	"mobile-frontend-media-load-fail-retry": "Aktualisieren",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|Ein|$1}} Kilometer",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|Ein|$1}} Meter",
