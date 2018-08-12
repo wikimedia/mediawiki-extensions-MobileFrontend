@@ -155,6 +155,8 @@
 	"mobile-frontend-main-menu-settings-heading": "설정",
 	"mobile-frontend-media-details": "자세한 사항",
 	"mobile-frontend-media-license-link": "라이선스 정보",
+	"mobile-frontend-media-load-fail-message": "이 그림을 불러오는 동안 오류가 발생했습니다.",
+	"mobile-frontend-media-load-fail-retry": "새로 고침",
 	"mobile-frontend-missing-image": "그림",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",

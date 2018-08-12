@@ -13,7 +13,8 @@
 			"Darcy Le",
 			"Vinhtantran",
 			"Nguyên Lê",
-			"Hantviet"
+			"Hantviet",
+			"Leducthn"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Đăng nhập hoặc mở tài khoản để theo dõi các sửa đổi của bạn",
@@ -134,6 +135,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Tùy chọn",
 	"mobile-frontend-media-details": "Chi tiết",
 	"mobile-frontend-media-license-link": "Thông tin giấy phép",
+	"mobile-frontend-media-load-fail-message": "Đã xuất hiện lỗi khi tải hình này.",
+	"mobile-frontend-media-load-fail-retry": "Làm mới",
 	"mobile-frontend-missing-image": "Hình",
 	"mobile-frontend-nearby-distance": "$1 km",
 	"mobile-frontend-nearby-distance-meters": "$1 m",
