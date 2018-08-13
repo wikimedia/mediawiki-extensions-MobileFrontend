@@ -4,13 +4,16 @@
 			"Kwisha",
 			"Lloffiwr",
 			"Muddyb Blast Producer",
-			"Stephenwanjau"
+			"Stephenwanjau",
+			"Rance"
 		]
 	},
 	"mobile-frontend-clear-search": "Futa",
 	"mobile-frontend-copyright": "Nakala inapatikana chini ya <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; masuala ya ziada yanaweza kukubalika. Tazama <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Masharti ya Utumiaji</a> kwa maelezo zaidi. {{SITENAME}} ni nembo iliosajiliwa na <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, asasi isiyokuwa ya kifaida.",
 	"mobile-frontend-featured-article": "Makala Bora ya Leo",
 	"mobile-frontend-main-menu-settings-heading": "Mpangilio wa wavuti wa simu ya rununu",
+	"mobile-frontend-media-load-fail-message": "Kulikua na tatizo wakati wa kupakia picha hii",
+	"mobile-frontend-media-load-fail-retry": "Fanyiza upya/Amsha",
 	"mobile-frontend-news-items": "Katika habari",
 	"mobile-frontend-privacy-link-text": "Faragha",
 	"mobile-frontend-save-settings": "Hifadhi mpangilio",

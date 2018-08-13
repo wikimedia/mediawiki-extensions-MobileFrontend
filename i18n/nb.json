@@ -145,6 +145,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Innstillinger",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Lisensinformasjon",
+	"mobile-frontend-media-load-fail-message": "En feil oppsto under lasting av dette bildet.",
+	"mobile-frontend-media-load-fail-retry": "Oppdater",
 	"mobile-frontend-missing-image": "Bilde",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",

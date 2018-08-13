@@ -40,7 +40,8 @@
 			"Arthur2e5",
 			"Fanjiayi",
 			"A2093064",
-			"Liuxingy"
+			"Liuxingy",
+			"Hanyanbo98"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "登录或创建账户来跟踪您的编辑",
@@ -171,6 +172,8 @@
 	"mobile-frontend-main-menu-settings-heading": "设置",
 	"mobile-frontend-media-details": "详情",
 	"mobile-frontend-media-license-link": "许可协议信息",
+	"mobile-frontend-media-load-fail-message": "加载时出错。",
+	"mobile-frontend-media-load-fail-retry": "刷新",
 	"mobile-frontend-missing-image": "图像",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1千米}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1米}}",

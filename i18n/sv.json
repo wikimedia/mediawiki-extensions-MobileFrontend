@@ -145,6 +145,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Inställningar",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Licensinformation",
+	"mobile-frontend-media-load-fail-message": "Ett fel uppstod när denna bild läste in.",
+	"mobile-frontend-media-load-fail-retry": "Uppdatera",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
