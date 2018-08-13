@@ -245,7 +245,7 @@ JAVASCRIPT;
 		}
 		$desktopUrl = $ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
 
-		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->escaped();
+		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->text();
 		$desktopToggler = Html::element( 'a',
 			[ 'id' => "mw-mf-display-toggle", "href" => $desktopUrl ], $desktop );
 
