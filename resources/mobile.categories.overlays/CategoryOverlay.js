@@ -107,7 +107,7 @@
 				self.clearSpinner();
 				return;
 			}
-			apiResult.done( function ( data ) {
+			apiResult.then( function ( data ) {
 				if ( data.query && data.query.pages ) {
 					// add categories to overlay
 					data.query.pages.forEach( function ( page ) {
