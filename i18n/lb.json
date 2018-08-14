@@ -111,6 +111,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Astellungen",
 	"mobile-frontend-media-details": "Detailer",
 	"mobile-frontend-media-license-link": "Lizenzinformatioun",
+	"mobile-frontend-media-load-fail-retry": "Aktualiséieren",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
