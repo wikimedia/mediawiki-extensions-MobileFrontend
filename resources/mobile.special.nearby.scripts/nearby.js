@@ -63,7 +63,7 @@
 		if ( options.api === undefined ) {
 			// decide, what api module to use to retrieve the pages
 			if ( endpoint ) {
-				loader.using( 'mobile.foreignApi' ).done( function () {
+				loader.using( 'mobile.foreignApi' ).then( function () {
 					var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
 					options.api = new JSONPForeignApi( endpoint );
 				} );
