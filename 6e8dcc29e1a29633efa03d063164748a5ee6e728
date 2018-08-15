@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a0f043b5_026f259f",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-08-15T00:43:51Z",
+      "side": 0,
+      "message": "I added an explicit reset of the service here.",
+      "parentUuid": "b492e1b8_9cd8205a",
+      "range": {
+        "startLine": 546,
+        "startChar": 2,
+        "endLine": 546,
+        "endChar": 34
+      },
+      "revId": "6e8dcc29e1a29633efa03d063164748a5ee6e728",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a03f123_0f136216",
         "filename": "tests/phpunit/MobileContextTest.php",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-10T21:05:53Z",
       "side": 0,
       "message": "also, while we\u0027re here, this is most probably not required any more",
+      "range": {
+        "startLine": 547,
+        "startChar": 2,
+        "endLine": 547,
+        "endChar": 30
+      },
+      "revId": "6e8dcc29e1a29633efa03d063164748a5ee6e728",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06e2ddfd_a448c031",
+        "filename": "tests/phpunit/MobileContextTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-08-15T00:43:51Z",
+      "side": 0,
+      "message": "I don\u0027t really want to make an unrelated change if it\u0027s not necessary.",
+      "parentUuid": "7a03f123_0f136216",
       "range": {
         "startLine": 547,
         "startChar": 2,
