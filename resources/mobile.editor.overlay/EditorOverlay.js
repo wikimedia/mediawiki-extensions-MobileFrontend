@@ -307,7 +307,13 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			this.gateway.getPreview( params ).done( function ( result ) {
+
+			function clearSpinnerAndShowPreview() {
+				self.clearSpinner();
+				self.$preview.show();
+			}
+
+			this.gateway.getPreview( params ).then( function ( result ) {
 				var parsedText = result.text,
 					parsedSectionLine = result.line;
 
@@ -317,11 +323,12 @@
 					el: self.$preview,
 					text: parsedText
 				} ).$( 'a' ).on( 'click', false );
-			} ).fail( function () {
+
+				clearSpinnerAndShowPreview();
+			}, function () {
 				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
-			} ).always( function () {
-				self.clearSpinner();
-				self.$preview.show();
+
+				clearSpinnerAndShowPreview();
 			} );
 
 			EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
@@ -466,7 +473,7 @@
 			$el.addClass( 'overlay-loading' );
 
 			this.gateway.getContent()
-				.done( function ( result ) {
+				.then( function ( result ) {
 					var block, message,
 						content = result.text,
 						userTalkPage = mw.config.get( 'wgNamespaceNumber' ) === 3;
@@ -488,8 +495,7 @@
 						self.clearSpinner();
 						$el.removeClass( 'overlay-loading' );
 					}
-				} )
-				.fail( function () {
+				}, function () {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
 					$el.removeClass( 'overlay-loading' );
 				} );
@@ -575,7 +581,7 @@
 			this.showHidden( '.saving-header' );
 
 			this.gateway.save( options )
-				.done( function () {
+				.then( function () {
 					var title = self.options.title;
 					// Special case behaviour of main page
 					if ( mw.config.get( 'wgIsMainPage' ) ) {
@@ -586,8 +592,7 @@
 					}
 
 					self.onSaveComplete();
-				} )
-				.fail( function ( data, code, response ) {
+				}, function ( data, code, response ) {
 					var msg,
 						msgHeading,
 						// When save failed with one of these error codes, the returned

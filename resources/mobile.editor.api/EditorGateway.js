@@ -27,7 +27,7 @@
 		 * Get the content of a page.
 		 * @memberof EditorGateway
 		 * @instance
-		 * @return {jQuery.Deferred}
+		 * @return {jQuery.Promise}
 		 */
 		getContent: function () {
 			var options,
@@ -186,7 +186,7 @@
 					apiOptions.section = self.sectionId;
 				}
 
-				self.api.postWithToken( 'edit', apiOptions ).done( function ( data ) {
+				self.api.postWithToken( 'edit', apiOptions ).then( function ( data ) {
 					var code, warning;
 
 					if ( data && data.edit && data.edit.result === 'Success' ) {
@@ -290,6 +290,7 @@
 		getPreview: function ( options ) {
 			var result = util.Deferred(),
 				sectionLine = '',
+				request,
 				self = this;
 
 			util.extend( options, {
@@ -305,7 +306,9 @@
 			} );
 
 			this.abortPreview();
-			this._pending = this.api.post( options ).done( function ( resp ) {
+
+			request = this.api.post( options );
+			this._pending = request.then( function ( resp ) {
 				if ( resp && resp.parse && resp.parse.text ) {
 					// section 0 haven't a section name so skip
 					if ( self.sectionId !== 0 &&
@@ -322,8 +325,10 @@
 				} else {
 					result.reject();
 				}
-			} ).fail( function () {
+			}, function () {
 				result.reject();
+			} ).promise( {
+				abort: function () { request.abort(); }
 			} );
 
 			return result;

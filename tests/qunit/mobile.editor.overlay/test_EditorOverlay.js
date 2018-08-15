@@ -5,19 +5,33 @@
 
 	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		setup: function () {
-			var getContentStub;
-
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
 			this.messageStub = this.sandbox.stub( BlockMessage.prototype, 'initialize' );
 			this.sandbox.stub( BlockMessage.prototype, 'toggle' );
-			getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
+			this.getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// avoid waiting to load 'moment', using `expiry: 'infinity'` below ensures we don't need it
 			this.sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
 				callback();
 			} } );
-			// the first call returns a getContent deferred for a blocked user.
-			this.dBlockedContent = $.Deferred().resolve( {
+			this.getContentStub.returns( $.Deferred().resolve( {
+				text: 'section 0',
+				user: {
+					id: 1,
+					name: 'Foo'
+				},
+				block: null,
+				blockedByUser: null
+			} ) );
+			this.previewResolve = $.Deferred().resolve( { text: 'previewtest' } );
+			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
+				.returns( this.previewResolve );
+		}
+	} );
+
+	QUnit.test( '#initialize, blocked user', function ( assert ) {
+		var messageStub = this.messageStub,
+			dBlockedContent = $.Deferred().resolve( {
 				text: 'section 0',
 				user: {
 					blockid: 1
@@ -31,23 +45,13 @@
 					gender: 'female'
 				}
 			} );
-			getContentStub.onCall( 0 ).returns( this.dBlockedContent );
-			// all other calls returns a deferred for unblocked users.
-			getContentStub.returns( $.Deferred().resolve( 'section 0', {} ) );
-			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
-				.returns( $.Deferred().resolve( { text: 'previewtest' } ) );
-		}
-	} );
-
-	// has to be the first test here! See comment in setup stub.
-	QUnit.test( '#initialize, blocked user', function ( assert ) {
-		var messageStub = this.messageStub;
+		this.getContentStub.returns( dBlockedContent );
 		// eslint-disable-next-line no-new
 		new EditorOverlay( {
 			title: 'test.css'
 		} );
 
-		return this.dBlockedContent.then( function () {
+		return dBlockedContent.then( function () {
 			assert.ok(
 				messageStub.calledWith( {
 					creator: {
@@ -77,7 +81,9 @@
 		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 		assert.strictEqual( editorOverlay.gateway.sectionId, 0 );
 
-		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
+		return this.getContentStub().then( function () {
+			assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
+		} );
 	} );
 
 	QUnit.test( '#initialize, without a section', function ( assert ) {
@@ -98,7 +104,10 @@
 		} );
 
 		editorOverlay.onStageChanges();
-		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
+
+		return this.previewResolve.then( function () {
+			assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
+		} );
 	} );
 
 	QUnit.test( '#without-preview', function ( assert ) {

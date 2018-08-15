@@ -365,7 +365,7 @@
 		hide: function () {
 			var self = this;
 			if ( this.hasChanged() ) {
-				return OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).done( function ( confirmed ) {
+				return OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).then( function ( confirmed ) {
 					if ( confirmed ) {
 						self.allowCloseWindow.release();
 						Overlay.prototype.hide.call( self );
