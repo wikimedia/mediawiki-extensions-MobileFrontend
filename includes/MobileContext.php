@@ -987,8 +987,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Get HTTP header string for X-Analytics
 	 *
-	 * This is made up of key/vaule pairs and is used for analytics
-	 * purposes.
+	 * This is made up of key/value pairs and is used for analytics purposes.
 	 *
 	 * @return string|bool
 	 */
