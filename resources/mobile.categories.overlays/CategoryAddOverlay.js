@@ -135,9 +135,9 @@
 				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'error' );
 			} else {
 				// save the new categories
-				this.gateway.save( this.title, newCategories ).done( function () {
+				this.gateway.save( this.title, newCategories ).then( function () {
 					M.emit( 'category-added' );
-				} ).fail( function () {
+				}, function () {
 					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );
 					// FIXME: Should be a better error message
