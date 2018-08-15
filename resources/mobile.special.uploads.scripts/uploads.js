@@ -26,7 +26,7 @@
 	// Assume we are on the special page.
 	if ( userName ) {
 		if ( corsUrl ) {
-			mw.loader.using( 'mobile.foreignApi' ).done( function () {
+			mw.loader.using( 'mobile.foreignApi' ).then( function () {
 				var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
 				$( function () {
 					init( new JSONPForeignApi( corsUrl ) );
