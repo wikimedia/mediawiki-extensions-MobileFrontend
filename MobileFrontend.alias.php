@@ -357,9 +357,25 @@ $specialPageAliases['scn'] = [
 /** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = [
 	'History' => [ 'Историја' ],
-	'MobileOptions' => [ 'МобилнаПодешавања' ],
+	'MobileCite' => [ 'МобилнеРеференце', 'Мобилне_референце' ],
+	'MobileOptions' => [ 'МобилнаПодешавања', 'Мобилна_подешавања' ],
 	'Uploads' => [ 'Отпремања' ],
-	'MobileMenu' => [ 'МобилниМени' ],
+	'MobileDiff' => [ 'МобилнеРазлике', 'Мобилне_разлике' ],
+	'MobileMenu' => [ 'МобилниМени', 'Мобилни_мени' ],
+	'MobileLanguages' => [ 'МобилниЈезици', 'Мобилни_језици' ],
+	'Nearby' => [ 'У_близини', 'Близу', 'Оближње' ],
+];
+
+/** Serbian (Latin script) (srpski (latinica)‎) */
+$specialPageAliases['sr-el'] = [
+	'History' => [ 'Istorija' ],
+	'MobileCite' => [ 'MobilneReference', 'Mobilne_reference' ],
+	'MobileOptions' => [ 'MobilnaPodešavanja', 'Mobilna_podešavanja' ],
+	'Uploads' => [ 'Otpremanja' ],
+	'MobileDiff' => [ 'MobilneRazlike', 'Mobilne_razlike' ],
+	'MobileMenu' => [ 'MobilniMeni', 'Mobilni_meni' ],
+	'MobileLanguages' => [ 'MobilniJezici', 'Mobilni_jezici' ],
+	'Nearby' => [ 'U_blizini', 'Blizu', 'Obližnje' ],
 ];
 
 /** Swedish (svenska) */
