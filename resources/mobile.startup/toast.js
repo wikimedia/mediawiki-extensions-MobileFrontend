@@ -43,7 +43,7 @@
 	 */
 	Toast.prototype.hide = function () {
 		if ( this.notification !== undefined ) {
-			this.notification.done( function ( notif ) {
+			this.notification.then( function ( notif ) {
 				notif.close();
 			} );
 		}
