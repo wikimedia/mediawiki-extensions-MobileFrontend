@@ -34,43 +34,40 @@
 
 		return this.skin.loadImagesList( [
 			$( '<div>' ), $( '<div>' )
-		] ).done( function () {
+		] ).then( function () {
 			assert.strictEqual( stub.callCount, 2,
 				'Stub was called twice and resolves successfully.' );
 		} );
 	} );
 
 	QUnit.test( '#loadImagesList (one image fails)', function ( assert ) {
-		var stub = this.sandbox.stub( this.skin, 'loadImage' ),
-			done = assert.async();
+		var stub = this.sandbox.stub( this.skin, 'loadImage' );
 
 		stub.onCall( 0 ).returns( $.Deferred().resolve() );
 		stub.onCall( 1 ).returns( $.Deferred().reject() );
 
-		this.skin.loadImagesList( [
+		return this.skin.loadImagesList( [
 			$( '<div>' ), $( '<div>' )
-		] ).fail( function () {
+		] ).catch( function () {
 			assert.strictEqual( stub.callCount, 2,
 				'Stub was called twice and overall result was failure.' );
-		} ).always( function () {
-			done();
 		} );
 	} );
 
 	QUnit.test( '#loadImagesList (empty list)', function ( assert ) {
-		return this.skin.loadImagesList( [] ).done( function () {
+		return this.skin.loadImagesList( [] ).then( function () {
 			assert.ok( true, 'An empty list always resolves successfully' );
 		} );
 	} );
 
 	QUnit.test( '#lazyLoadReferences', function ( assert ) {
 		var $content = this.$el;
-		this.skin.lazyLoadReferences( {
+		return this.skin.lazyLoadReferences( {
 			wasExpanded: false,
 			page: this.skin.page,
 			isReferenceSection: true,
 			$heading: $content.find( '#Notes_and_references' ).parent()
-		} ).done( function () {
+		} ).then( function () {
 			assert.strictEqual( $content.find( '.mf-section-2' ).text().replace( /[\t\n]/g, '' ),
 				'TextPNotesARefsBno forgetMore refs1E2F3',
 				'Check all the references section is populated correctly.' );

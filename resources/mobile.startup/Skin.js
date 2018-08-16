@@ -280,7 +280,7 @@
 		 *     @property {jQuery.Object} $heading,
 		 *     @property {boolean} isReferenceSection
 		 * }
-		 * @return {jQuery.Deferred} rejected when not a reference section.
+		 * @return {jQuery.Promise} rejected when not a reference section.
 		 */
 		lazyLoadReferences: function ( data ) {
 			var $content, $spinner,
@@ -302,13 +302,20 @@
 
 			$content = data.$heading.next();
 
+			function loadImagesAndSetData() {
+				// lazy load images if any
+				loadImagesList( getUnloadedImages( $content ) );
+				// Do not attempt further loading even if we're unable to load this time.
+				$content.data( 'are-references-loaded', 1 );
+			}
+
 			if ( !$content.data( 'are-references-loaded' ) ) {
 				$content.children().addClass( 'hidden' );
 				$spinner = spinner.$el.prependTo( $content );
 
 				// First ensure we retrieve all of the possible lists
 				return gateway.getReferencesLists( data.page )
-					.done( function () {
+					.then( function () {
 						var lastId;
 
 						$content.find( '.mf-lazy-references-placeholder' ).each( function () {
@@ -327,7 +334,7 @@
 							}
 
 							if ( id ) {
-								gateway.getReferencesList( data.page, id ).done( function ( refListElements ) {
+								gateway.getReferencesList( data.page, id ).then( function ( refListElements ) {
 									// Note if no section html is provided no substitution will happen so user is
 									// forced to rely on placeholder link.
 									if ( refListElements && refListElements[refListIndex] ) {
@@ -344,20 +351,17 @@
 						 * @event references-loaded
 						 */
 						self.emit( 'references-loaded', self.page );
-					} )
-					.fail( function () {
+
+						loadImagesAndSetData();
+					}, function () {
 						$spinner.remove();
 						// unhide on a failure
 						$content.children().removeClass( 'hidden' );
-					} )
-					.always( function () {
-						// lazy load images if any
-						loadImagesList( getUnloadedImages( $content ) );
-						// Do not attempt further loading even if we're unable to load this time.
-						$content.data( 'are-references-loaded', 1 );
+
+						loadImagesAndSetData();
 					} );
 			} else {
-				return Deferred().reject();
+				return Deferred().reject().promise();
 			}
 		},
 
