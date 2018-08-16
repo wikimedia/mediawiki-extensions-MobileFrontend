@@ -18,7 +18,8 @@
 			"組曲師",
 			"Omotecho",
 			"Yusuke1109",
-			"Kkairri"
+			"Kkairri",
+			"Suyama"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -146,6 +147,8 @@
 	"mobile-frontend-main-menu-settings-heading": "設定",
 	"mobile-frontend-media-details": "詳細",
 	"mobile-frontend-media-license-link": "ライセンス情報",
+	"mobile-frontend-media-load-fail-message": "この画像を表示する際にエラーが発生しました。",
+	"mobile-frontend-media-load-fail-retry": "更新",
 	"mobile-frontend-missing-image": "画像",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",

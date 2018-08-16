@@ -132,6 +132,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Configuración",
 	"mobile-frontend-media-details": "Detalles",
 	"mobile-frontend-media-license-link": "Información de la llicencia",
+	"mobile-frontend-media-load-fail-message": "Hebo un error al cargar esta imaxe.",
+	"mobile-frontend-media-load-fail-retry": "Refrescar",
 	"mobile-frontend-missing-image": "Imaxe",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",

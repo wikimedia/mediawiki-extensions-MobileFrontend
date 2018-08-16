@@ -177,7 +177,7 @@
 	"mobile-frontend-media-details": "Détails",
 	"mobile-frontend-media-license-link": "Informations sur la licence",
 	"mobile-frontend-media-load-fail-message": "Il y a eu une erreur en chargeant cette image.",
-	"mobile-frontend-media-load-fail-retry": "Rafraîchir",
+	"mobile-frontend-media-load-fail-retry": "Actualiser",
 	"mobile-frontend-missing-image": "Image",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
