@@ -38,8 +38,9 @@
 			// Avoid unnecessary mw.notify animations
 			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
+			this.postWithTokenDeferred = $.Deferred().resolve();
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'postWithToken' )
-				.returns( $.Deferred().resolve() );
+				.returns( this.postWithTokenDeferred );
 
 			this.toastSpy = this.sandbox.spy( toast, 'show' );
 		},
@@ -56,16 +57,20 @@
 				isWatched: false,
 				page: new Page( { title: 'Title' } )
 			} ),
-			$el = w.$el;
+			$el = w.$el,
+			self = this;
 
 		$el.trigger( 'click' );
-		assert.ok( this.spy.calledWith( 'watch', {
-			action: 'watch',
-			titles: [ 'Title' ]
-		} ), 'The watch happened' );
-		assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
-			true, 'After successful watch has watched class' );
-		assert.strictEqual( this.toastSpy.callCount, 1, 'A toast is shown' );
+
+		return this.postWithTokenDeferred.then( function () {
+			assert.ok( self.spy.calledWith( 'watch', {
+				action: 'watch',
+				titles: [ 'Title' ]
+			} ), 'The watch happened' );
+			assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
+				true, 'After successful watch has watched class' );
+			assert.strictEqual( self.toastSpy.callCount, 1, 'A toast is shown' );
+		} );
 	} );
 
 	QUnit.test( 'Logged in user unwatches article', function ( assert ) {
@@ -75,15 +80,19 @@
 				isWatched: true,
 				page: new Page( { title: 'Title' } )
 			} ),
-			$el = w.$el;
+			$el = w.$el,
+			self = this;
 
 		$el.trigger( 'click' );
-		assert.ok( this.spy.calledWith( 'watch', {
-			action: 'watch',
-			unwatch: true,
-			titles: [ 'Title' ]
-		} ), 'The watch happened' );
-		assert.strictEqual( this.toastSpy.callCount, 1, 'A toast is shown' );
+
+		return this.postWithTokenDeferred.then( function () {
+			assert.ok( self.spy.calledWith( 'watch', {
+				action: 'watch',
+				unwatch: true,
+				titles: [ 'Title' ]
+			} ), 'The watch happened' );
+			assert.strictEqual( self.toastSpy.callCount, 1, 'A toast is shown' );
+		} );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

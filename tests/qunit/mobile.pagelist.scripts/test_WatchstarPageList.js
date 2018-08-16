@@ -47,7 +47,7 @@
 
 		// Wait for an internal API call to happen as a side-effect of construction.
 		window.setTimeout( function () {
-			pageList.getPages( [], [] ).done( function () {
+			pageList.getPages( [], [] ).then( function () {
 				assert.ok( self.spy.calledWith( {
 					formatversion: 2,
 					action: 'query',
@@ -77,7 +77,7 @@
 			} );
 		// Wait for an internal API call to happen as a side-effect of construction.
 		setTimeout( function () {
-			pl.getPages( [ 30, 50 ], [] ).done( function () {
+			pl.getPages( [ 30, 50 ], [] ).then( function () {
 				assert.strictEqual( self.spy.callCount, 2,
 					'run callback twice (inside postRender and this call) - no caching occurs' );
 				assert.ok( self.spy.calledWith( {
