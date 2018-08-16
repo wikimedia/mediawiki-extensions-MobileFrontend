@@ -107,7 +107,9 @@
 			// clear actual content, if any
 			this.$( '.topic-title-list' ).empty();
 
-			this.pageGateway.getPage( options.title ).fail( function ( resp ) {
+			this.pageGateway.getPage( options.title ).then( function ( pageData ) {
+				self._addContent( pageData, options );
+			}, function ( resp ) {
 				// If the API returns the error code 'missingtitle', that means the
 				// talk page doesn't exist yet.
 				if ( resp === 'missingtitle' ) {
@@ -127,8 +129,6 @@
 						window.location = mw.util.getUrl( options.title );
 					}
 				}
-			} ).done( function ( pageData ) {
-				self._addContent( pageData, options );
 			} );
 		},
 
