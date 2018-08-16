@@ -205,7 +205,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$comment = $this->rev->getComment( $audience );
 
 		if ( $this->rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
-			$comment = $this->msg( 'rev-deleted-comment' )->plain();
+			$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 		} elseif ( $comment !== '' && $comment !== null ) {
 			$comment = Linker::formatComment( $comment, $this->targetTitle );
 		} else {
@@ -284,14 +284,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					. Html::element( 'a', [
 						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )
 							->getLocalURL()
-					], $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
+					], $this->msg( 'previousdiff' )->text() ) . Html::closeElement( 'li' );
 			}
 			if ( $next ) {
 				$history .= Html::openElement( 'li', [ 'class' => 'revision-history-next' ] )
 					. Html::element( 'a', [
 						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )
 							->getLocalURL()
-					], $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
+					], $this->msg( 'nextdiff' )->text() ) . Html::closeElement( 'li' );
 			}
 			$history .= Html::closeElement( 'ul' );
 		}
@@ -363,7 +363,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} else {
 			// Case where the user cannot see who made the edit
 			$output->addHTML(
-				$this->msg( 'rev-deleted-user' )->plain()
+				$this->msg( 'rev-deleted-user' )->escaped()
 			);
 		}
 

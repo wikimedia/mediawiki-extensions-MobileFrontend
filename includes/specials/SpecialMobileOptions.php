@@ -94,9 +94,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 						'input' => $input,
 						'label' => new OOUI\HtmlSnippet(
 							Html::openElement( 'div' ) .
-							Html::element( 'strong', [],
+							Html::rawElement( 'strong', [],
 								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
-							Html::element( 'div', [ 'class' => 'option-description' ],
+							Html::rawElement( 'div', [ 'class' => 'option-description' ],
 								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
 							) .
 							Html::closeElement( 'div' )
@@ -149,7 +149,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			'id' => 'mw-mf-settings-save',
 			'infusable' => true,
 			'value' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
-			'label' => $this->msg( 'mobile-frontend-save-settings' )->escaped(),
+			'label' => $this->msg( 'mobile-frontend-save-settings' )->text(),
 			'flags' => [ 'primary', 'progressive' ],
 			'type' => 'submit',
 		] );
@@ -169,7 +169,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					'progressive',
 				],
 				'classes' => [ 'mobile-options-feedback' ],
-				'label' => $this->msg( 'mobile-frontend-send-feedback' )->escaped(),
+				'label' => $this->msg( 'mobile-frontend-send-feedback' )->text(),
 			] );
 		}
 
