@@ -16,7 +16,7 @@
 		 * @param {boolean} delegateHide if true the caller is responsible for hiding the intermediate loader.
 		 * @param {boolean} [showLoadingOverlay] if false a loading overlay will be hidden while
 		 *  loading the module. Defaults to true.
-		 * @return {jQuery.Deferred}
+		 * @return {jQuery.Promise}
 		 */
 		loadModule: function ( name, delegateHide, showLoadingOverlay ) {
 			var loadingOverlay = new LoadingOverlay();
@@ -25,12 +25,18 @@
 			if ( showLoadingOverlay ) {
 				loadingOverlay.show();
 			}
-			return mw.loader.using( name ).then( function () {
-				return loadingOverlay;
-			} ).always( function () {
+
+			function hideOverlayIfNeeded() {
 				if ( !delegateHide && showLoadingOverlay ) {
 					loadingOverlay.hide();
 				}
+			}
+			return mw.loader.using( name ).then( function () {
+				hideOverlayIfNeeded();
+
+				return loadingOverlay;
+			}, function () {
+				hideOverlayIfNeeded();
 			} );
 		}
 	};
