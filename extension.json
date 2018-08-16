@@ -821,24 +821,6 @@
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
 			]
 		},
-		"mobile.issues": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"templates": {
-				"OverlayContent.hogan": "resources/mobile.issues/cleanup.hogan"
-			},
-			"styles": [
-				"resources/mobile.issues/issues.less"
-			],
-			"scripts": [
-				"resources/mobile.issues/CleanupOverlay.js"
-			]
-		},
 		"mobile.nearby": {
 			"targets": [
 				"mobile",
