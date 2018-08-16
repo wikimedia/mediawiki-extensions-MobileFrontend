@@ -107,7 +107,7 @@
 					factoryResult = match.factoryResult;
 					// http://stackoverflow.com/a/13075985/365238
 					if ( typeof factoryResult.promise === 'function' ) {
-						factoryResult.done( function ( overlay ) {
+						factoryResult.then( function ( overlay ) {
 							match.overlay = overlay;
 							attachHideEvent( overlay );
 							self._showOverlay( overlay );
