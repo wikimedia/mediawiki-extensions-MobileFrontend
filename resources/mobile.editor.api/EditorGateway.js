@@ -249,11 +249,19 @@
 							details: 'unknown'
 						} );
 					}
-				} ).fail( function () {
-					result.reject( {
-						type: 'error',
-						details: 'http'
-					} );
+				} ).fail( function ( code, data ) {
+
+					if ( code === 'readonly' ) {
+						result.reject( {
+							type: 'readonly',
+							details: data.error
+						} );
+					} else {
+						result.reject( {
+							type: 'error',
+							details: 'http'
+						} );
+					}
 				} );
 				return result;
 			}

@@ -5,6 +5,7 @@
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		user = M.require( 'mobile.startup/user' ),
+		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		mwUser = mw.user;
 
 	/**
@@ -247,9 +248,18 @@
 		 * @memberof EditorOverlayBase
 		 * @instance
 		 * @param {string} text Text of message to display to user
+		 * @param {string} heading heading text to display to user
 		 */
-		reportError: function ( text ) {
-			toast.show( text, 'error' );
+		reportError: function ( text, heading ) {
+			var errorNotice = new MessageBox( {
+				className: 'errorbox',
+				msg: text,
+				heading: heading
+			} );
+			this.$errorNoticeContainer.html( errorNotice.$el );
+		},
+		hideErrorNotice: function () {
+			this.$errorNoticeContainer.empty();
 		},
 		/**
 		 * Prepares the penultimate screen before saving.
@@ -276,6 +286,7 @@
 		 */
 		onSaveBegin: function () {
 			this.confirmAborted = false;
+			this.hideErrorNotice();
 			// Ask for confirmation in some cases
 			if ( !this.confirmSave() ) {
 				this.confirmAborted = true;
@@ -305,6 +316,7 @@
 				// default: show the preview step
 				this.nextStep = 'onStageChanges';
 			}
+			this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 			Overlay.prototype.postRender.apply( this );
 			this.showHidden( '.initial-header' );
 		},

@@ -511,7 +511,8 @@
 				"mobile-frontend-editor-blocked-drawer-expiry-header",
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
-				"mobile-frontend-editor-anon"
+				"mobile-frontend-editor-anon",
+				"apierror-readonly"
 			]
 		},
 		"mobile.editor.images": {
