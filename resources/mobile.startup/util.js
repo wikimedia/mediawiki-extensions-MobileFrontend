@@ -57,9 +57,11 @@
 			var d = $.Deferred(),
 				warning = 'Use Promise compatible methods `then` and `catch` instead.';
 
+			/* eslint-disable no-restricted-properties */
 			log.deprecate( d, 'fail', d.fail, warning );
 			log.deprecate( d, 'always', d.always, warning );
 			log.deprecate( d, 'done', d.done, warning );
+			/* eslint-enable no-restricted-properties */
 			return d;
 		},
 		/**
