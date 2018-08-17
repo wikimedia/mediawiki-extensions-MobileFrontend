@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae337716_e4c3c2b2",
+        "filename": "resources/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-17T20:12:09Z",
+      "side": 1,
+      "message": "Nice catch.\naccording to resources/src/mediawiki.base/mediawiki.base.js mw.loader.using does return a promise",
+      "revId": "9caee5e27453516368d14c4825f40d980509376e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
