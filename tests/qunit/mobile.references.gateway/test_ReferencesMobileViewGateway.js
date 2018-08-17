@@ -57,7 +57,7 @@
 	} );
 
 	QUnit.test( 'checking good reference', function ( assert ) {
-		return this.referencesGateway.getReference( '#cite_note-1', this.page ).done( function ( ref ) {
+		return this.referencesGateway.getReference( '#cite_note-1', this.page ).then( function ( ref ) {
 			assert.strictEqual( ref.text, 'real lazy' );
 		} );
 	} );
@@ -74,28 +74,22 @@
 	} );
 
 	QUnit.test( 'checking bad reference', function ( assert ) {
-		var done = assert.async();
-		this.referencesGateway.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
+		return this.referencesGateway.getReference( '#cite_note-bad', this.page ).catch( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
 				'When reference not found error message reflects that.' );
-			done();
 		} );
 	} );
 
 	QUnit.test( 'checking reference on non-existent page', function ( assert ) {
-		var done = assert.async();
-		this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).fail( function ( err ) {
+		return this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).catch( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
 				'When getReferencesElement returns empty list of elements reference is false.' );
-			done();
 		} );
 	} );
 
 	QUnit.test( 'checking reference when gateway rejects', function ( assert ) {
-		var done = assert.async();
-		this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).fail( function ( err ) {
+		return this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).catch( function ( err ) {
 			assert.ok( err === ReferencesGateway.ERROR_OTHER, 'getReference is rejected if API query fails' );
-			done();
 		} );
 	} );
 }( jQuery, mw.mobileFrontend ) );
