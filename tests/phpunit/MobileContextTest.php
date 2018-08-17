@@ -546,10 +546,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testBug71329() {
 		$services = MediaWikiServices::getInstance();
-		// Remove is_callable check once MW < 1.32 support is dropped.
-		if ( is_callable( [ $services, 'getSpecialPageFactory' ] ) ) {
-			$services->resetServiceForTesting( 'SpecialPageFactory' );
-		}
+		$services->resetServiceForTesting( 'SpecialPageFactory' );
 		RequestContext::resetMain();
 		$req = new FauxRequest(
 			[ 'title' => 'Special:Search', 'mobileaction' => 'toggle_view_mobile' ]
