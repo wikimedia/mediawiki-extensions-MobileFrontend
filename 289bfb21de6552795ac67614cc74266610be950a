@@ -16,6 +16,24 @@
       "revId": "289bfb21de6552795ac67614cc74266610be950a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82382d29_cedf511e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1356,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-08-17T07:18:14Z",
+      "side": 1,
+      "message": "What should happen if it is null? We could throw an exception, and that makes problems more obvious, but I don\u0027t think you can improve much other than that. If you treat it as no match (which is the current behavior since get_class(null) will return \u0027MobileFrontendHooks\u0027), inline diffs will essentially be disabled on older MediaWiki. If you treat it as a match, InlineDifferenceEngine will be called for non-text content types (and error out probably).\n\nMobileFrontend has a branch compatibilty policy so I assumed compatibility with older versions is not a concern. If it is, the patch could be written differently - split out the slot-level stuff to InlineSlotDiffRenderer, and use GetSlotDiffRenderer instead of GetDifferenceEngine. The dependency would be a bit more awkward though as this patch and the core diff patch would both require each other to not break.",
+      "parentUuid": "d134df22_bc109bfc",
+      "revId": "289bfb21de6552795ac67614cc74266610be950a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
