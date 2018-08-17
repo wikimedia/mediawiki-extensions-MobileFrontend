@@ -169,9 +169,12 @@
 			checker = setInterval( function () {
 				toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
 			}, 1000 );
-			gateway.postStatusesByTitle( [ page.getTitle() ], postWatched ).always( function () {
+			function stopInterval() {
 				clearInterval( checker );
-			} ).done( function () {
+			}
+			gateway.postStatusesByTitle( [ page.getTitle() ], postWatched ).then( function () {
+				stopInterval();
+
 				self._watched = postWatched;
 				if ( postWatched ) {
 					self.render();
@@ -190,7 +193,9 @@
 					self.render();
 					toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 				}
-			} ).fail( function () {
+			}, function () {
+				stopInterval();
+
 				toast.show( mw.msg( 'mobile-frontend-watchlist-error' ), 'error' );
 			} );
 		},
