@@ -50,8 +50,10 @@
 		} ) );
 		deferred.resolve( fakeOverlay );
 
-		assert.ok( !deferred.show.called, 'don\'t call show on Deferred' );
-		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
+		return deferred.then( function () {
+			assert.ok( !deferred.show.called, 'don\'t call show on Deferred' );
+			assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
+		} );
 	} );
 
 	QUnit.test( '#add, with current path', function ( assert ) {
