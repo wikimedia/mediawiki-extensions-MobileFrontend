@@ -218,7 +218,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
 	if ( !this.getSurface().getModel().hasBeenModified() ) {
 		this.overlay.switchToSourceEditor();
 	} else {
-		OO.ui.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ).done( function ( confirmed ) {
+		OO.ui.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ).then( function ( confirmed ) {
 			if ( confirmed ) {
 				target.showSaveDialog();
 			}
