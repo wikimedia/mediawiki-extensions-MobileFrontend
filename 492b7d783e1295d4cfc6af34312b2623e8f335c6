@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a308e9f_14da1801",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-17T20:05:12Z",
+      "side": 1,
+      "message": "I feel it makes sense to combine these then blocks to ease with readability.",
+      "revId": "492b7d783e1295d4cfc6af34312b2623e8f335c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
