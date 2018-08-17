@@ -44,7 +44,7 @@
 	 *         },
 	 *         _loadPhotos: function () {
 	 *           var self = this;
-	 *           this.gateway.getPhotos().done( function ( photos ) {
+	 *           this.gateway.getPhotos().then( function ( photos ) {
 	 *             // load photos into the DOM ...
 	 *             // 3. and (re-)enable infinite scrolling
 	 *             self.scrollEndEventEmitter.enable();
