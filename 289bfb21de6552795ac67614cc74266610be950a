@@ -34,6 +34,24 @@
       "revId": "289bfb21de6552795ac67614cc74266610be950a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b359587_7c3a5040",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-17T18:46:18Z",
+      "side": 1,
+      "message": "An error seems more appropriate here to me.\nRight now, it will just show a notice if differenceEngine is undefined which only displays to the sysadmin (unless configured differently).\n\nWe tend to get a lot of topics on Extension talk:MobileFrontend about incompatibility issues, so it\u0027s clear to me that consumers don\u0027t follow the branching policy. If the error is rendered to the user at least that can be reported up and dealt with.\n\nDon\u0027t worry about getting it compatible with older branches.",
+      "parentUuid": "82382d29_cedf511e",
+      "revId": "289bfb21de6552795ac67614cc74266610be950a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
