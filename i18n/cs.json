@@ -16,7 +16,8 @@
 			"Cvanca",
 			"Dvorapa",
 			"Marek Pavlica",
-			"Ilimanaq29"
+			"Ilimanaq29",
+			"Korytaacheck"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Přihlaste se nebo si vytvořte účet, a sledujte tak svoje editace",
@@ -143,6 +144,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Nastavení",
 	"mobile-frontend-media-details": "Podrobnosti",
 	"mobile-frontend-media-license-link": "Informace o licenci",
+	"mobile-frontend-media-load-fail-retry": "Obnovit",
 	"mobile-frontend-missing-image": "Obrázek",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
