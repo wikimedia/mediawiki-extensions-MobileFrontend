@@ -231,7 +231,7 @@
 
 			// FIXME: ugly hack that removes search from browser history when navigating to search results
 			ev.preventDefault();
-			this.router.back().done( function () {
+			this.router.back().then( function () {
 				// Router.navigate does not support changing href.
 				// FIXME: Needs upstream change T189173
 				// eslint-disable-next-line no-restricted-properties
