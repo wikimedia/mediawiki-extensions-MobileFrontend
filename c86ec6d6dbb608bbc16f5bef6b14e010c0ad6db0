@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d7800cd_ae3da2ed",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:20:43Z",
+      "side": 1,
+      "message": "This threw me a little (since before this was a sync test).\n\nSeems like the add button is not impacted by the async fetch, but we add this to ensure there is no side effects when that fetch happens?\n\nJust checking I\u0027m understanding the change here.",
+      "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dccdb5bc_ca5dc0ce",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:20:43Z",
+      "side": 1,
+      "message": "Likewise, previously this was a sync test. Guessing this change is clearing up that mistake?",
+      "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
