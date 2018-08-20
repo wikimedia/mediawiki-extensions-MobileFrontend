@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea88a644_8fa2765d",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:36:14Z",
+      "side": 1,
+      "message": "This change overlaps with https://gerrit.wikimedia.org/r/453475 so sync accordingly!",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "297da25d_31afbcdb",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:36:14Z",
+      "side": 1,
+      "message": "Needs to be matched in resources/mobile.editor.api/EditorGateway.js",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44ce0da8_b35e92ec",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:36:14Z",
+      "side": 1,
+      "message": "Needs to be matched in resources/mobile.editor.api/EditorGateway.js (see below)",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4c90430_37fa6e9e",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:36:14Z",
+      "side": 1,
+      "message": "I can\u0027t seem to reach this code path.\nWhen I cause an edit conflict, I notice that\ndata\u003d {type: \"error\", details: \"http\"} and code\u003dundefined\n\nLooks like this logic needs to be handled inside resources/mobile.editor.api/EditorGateway.js",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "207f3d71_21015077",
+        "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-20T21:36:14Z",
+      "side": 1,
+      "message": "please use then rather than done and always.\n(see related task in sprinthttps://phabricator.wikimedia.org/T188937)",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
