@@ -19,8 +19,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * DifferenceEngine for this Diff-page
 	 */
 	protected $mDiffEngine;
-	/** @var String $diffClass The name of the Difference class */
-	protected $diffClass = 'InlineDifferenceEngine';
 
 	/**
 	 * Construct function
@@ -157,19 +155,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$contentHandler = $this->rev->getContentHandler();
 		$this->mDiffEngine = $contentHandler->createDifferenceEngine( $this->getContext(),
-			$this->getPrevId(), $this->revId );
-
-		if ( get_class( $this->mDiffEngine ) == 'DifferenceEngine' ) {
-			$this->mDiffEngine = new $this->diffClass(
-				$this->getContext(),
-				$this->getPrevId(),
-				$this->revId,
-				0,
-				false,
-				$unhide
-			);
-		}
-
+		$this->getPrevId(), $this->revId, 0, false, $unhide );
 		$this->showHeader( $unhide );
 		$this->mDiffEngine->showDiffPage();
 	}

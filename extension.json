@@ -1198,6 +1198,9 @@
 		],
 		"UserGetDefaultOptions": [
 			"MobileFrontendHooks::onUserGetDefaultOptions"
+		],
+		"GetDifferenceEngine": [
+			"MobileFrontendHooks::onGetDifferenceEngine"
 		]
 	},
 	"config": {

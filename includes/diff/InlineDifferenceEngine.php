@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\Assert\Assert;
+
 /**
  * Extends the basic DifferenceEngine from core to enable inline difference view
  * using only one column instead of two column diff system.
@@ -153,6 +155,16 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			}
 		}
 		return $msg;
+	}
+
+	/** @inheritDoc */
+	public function generateContentDiffBody( Content $old, Content $new ) {
+		Assert::parameterType( TextContent::class, $old, '$old' );
+		Assert::parameterType( TextContent::class, $new, '$new' );
+
+		$otext = $old->serialize();
+		$ntext = $new->serialize();
+		return $this->generateTextDiffBody( $otext, $ntext );
 	}
 
 	/**

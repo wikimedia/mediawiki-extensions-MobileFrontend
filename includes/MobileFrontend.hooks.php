@@ -1337,4 +1337,36 @@ class MobileFrontendHooks {
 		$ctx = MobileContext::singleton();
 		$result['mobileserver'] = $ctx->getMobileUrl( $wgCanonicalServer );
 	}
+
+	/**
+	 * Use inline diff engine when on Special:MobileDiff.
+	 * @param IContextSource $context
+	 * @param int $old Old revision ID or 0 for current
+	 * @param int $new New revision ID or 0 for current
+	 * @param bool $refreshCache Refresh diff cache
+	 * @param bool $unhide Show deleted revisions
+	 * @param DifferenceEngine &$differenceEngine Difference engine to alter/replace
+	 */
+	public static function onGetDifferenceEngine(
+		IContextSource $context, $old, $new, $refreshCache, $unhide, &$differenceEngine
+	) {
+		if ( $differenceEngine === null ) {
+			// old hook behavior before 1.32
+			throw new Exception( 'Incompatible MediaWiki version!' );
+		}
+
+		// FIXME hack for T201842. DifferenceEngine does both calculation and formatting of
+		// diffs; the two should be separated.
+		if (
+			get_class( $differenceEngine ) === DifferenceEngine::class
+			&& $context->getTitle()->isSpecial( 'MobileDiff' )
+		) {
+			if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+				$differenceEngine = new MockInlineDifferenceEngine();
+			} else {
+				$differenceEngine = new InlineDifferenceEngine( $context, $old, $new, 0,
+					$refreshCache, $unhide );
+			}
+		}
+	}
 }
