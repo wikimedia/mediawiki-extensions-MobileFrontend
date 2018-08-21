@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "442c7bde_658a72a3",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T16:00:43Z",
+      "side": 0,
+      "message": "do these not need to be here anymore?",
+      "range": {
+        "startLine": 595,
+        "startChar": 6,
+        "endLine": 595,
+        "endChar": 27
+      },
+      "revId": "d76458356250f3cd6d0244b0c789fdc027020fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
