@@ -22,6 +22,30 @@
       "revId": "d76458356250f3cd6d0244b0c789fdc027020fb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbc78ec3_4127e2b1",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T19:16:25Z",
+      "side": 0,
+      "message": "Good question! I also need to update my commit msg explaining my logic here. The reason why I removed that is because I looked in the .save method of EditorGateway and couldn\u0027t find a place where code and response were being set. When the promise rejects from EditorGateway, it looks like only one argument is being passed. Because of that, I think key will always be undefined. Additionally, if key is always undefined, then I don\u0027t think whitelistedErrorInfo has much use anymore in this code.\n\nTherefore, I removed the code paths below because I believe they were not ever being executed. Please let me know if I\u0027m wrong though.",
+      "parentUuid": "442c7bde_658a72a3",
+      "range": {
+        "startLine": 595,
+        "startChar": 6,
+        "endLine": 595,
+        "endChar": 27
+      },
+      "revId": "d76458356250f3cd6d0244b0c789fdc027020fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

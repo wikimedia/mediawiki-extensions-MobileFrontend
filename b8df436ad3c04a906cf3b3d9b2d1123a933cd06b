@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a86ad4f3_b901461b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T19:16:25Z",
+      "side": 1,
+      "message": "That\u0027s probably mostly a style preference. Please refer to the slack thread for a bunch more details. Summary: promise.then(successFn, rejectFn) is probably more equivalent to promise.then(successFn).then(undefined, rejectFn) rather than promise.then(successFn).catch(rejectFn). I used this approach in the other patches related to replacing .done though (which have been merged) so for consistency, I suggest we keep it the way it is.",
+      "parentUuid": "f7cd9d3c_4f3251b0",
+      "range": {
+        "startLine": 328,
+        "startChar": 4,
+        "endLine": 328,
+        "endChar": 5
+      },
+      "revId": "b8df436ad3c04a906cf3b3d9b2d1123a933cd06b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f151e5c5_8dcf7b40",
         "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-21T16:00:43Z",
       "side": 1,
       "message": "`key` is only being set for `captcha` here. I honestly don\u0027t know how the value of `response` is being passed in currently though ( if it is at all).",
+      "range": {
+        "startLine": 623,
+        "startChar": 20,
+        "endLine": 623,
+        "endChar": 23
+      },
+      "revId": "b8df436ad3c04a906cf3b3d9b2d1123a933cd06b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "885e176e_132f4de1",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T19:16:25Z",
+      "side": 1,
+      "message": "please see comment above",
+      "parentUuid": "f151e5c5_8dcf7b40",
       "range": {
         "startLine": 623,
         "startChar": 20,
