@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "477c294e_4a82467b",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T11:14:52Z",
+      "side": 1,
+      "message": "TODO",
+      "parentUuid": "297da25d_31afbcdb",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44ce0da8_b35e92ec",
         "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2018-08-20T21:36:14Z",
       "side": 1,
       "message": "Needs to be matched in resources/mobile.editor.api/EditorGateway.js (see below)",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9a3b685_6dc4c6cf",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T11:14:52Z",
+      "side": 1,
+      "message": "To be addressed in https://phabricator.wikimedia.org/T202374",
+      "parentUuid": "44ce0da8_b35e92ec",
       "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "f1ecdbea_59849d35",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T11:14:52Z",
+      "side": 1,
+      "message": "To be addressed in https://phabricator.wikimedia.org/T202374",
+      "parentUuid": "c4c90430_37fa6e9e",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "207f3d71_21015077",
         "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
         "patchSetId": 3
@@ -81,6 +135,24 @@
       "writtenOn": "2018-08-20T21:36:14Z",
       "side": 1,
       "message": "please use then rather than done and always.\n(see related task in sprinthttps://phabricator.wikimedia.org/T188937)",
+      "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51c156fd_61bb2132",
+        "filename": "tests/qunit/mobile.editor.api/test_EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T11:14:52Z",
+      "side": 1,
+      "message": "Will do, but I think that requires a larger refactor to identify if `fail` can be exchanged with `catch` easily. Currently the `fail` accepts 3 parameters, but `then/catch` only accept 1.  Also, might as well replace `fail` in the rest of the tests...\n\nTo be addressed in https://phabricator.wikimedia.org/T202374",
+      "parentUuid": "207f3d71_21015077",
       "revId": "6eb9bc2c9dfeeb64daedd694e14fc2517f90aed1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
