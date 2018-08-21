@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a1a423f4_9079de41",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-21T22:47:14Z",
+      "side": 1,
+      "message": "To avoid indenting would it make more sense to return the getPage result here and move the assertion into a new then ?\n\nSeems you could also combine this with the above then.",
+      "revId": "c9660c98eefeb323f31f76e261278a572af6a630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
