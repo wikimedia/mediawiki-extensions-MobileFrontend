@@ -473,6 +473,43 @@
 			} );
 		} );
 	} );
+	QUnit.test( '#save, read-only error', function ( assert ) {
+		var gateway = new EditorGateway( {
+				api: new mw.Api(),
+				title: 'test',
+				sectionId: 1
+			} ),
+			doneSpy = this.sandbox.spy(),
+			failSpy = this.sandbox.spy(),
+			done = assert.async(),
+			apiResponse = {
+				error: {
+					code: 'readonly',
+					info: 'The wiki is currently in read-only mode.',
+					readonlyreason: 'This wiki is currently being upgraded to a newer software version.'
+				}
+			},
+			expectedReturnValue = {
+				type: 'readonly',
+				details: {
+					code: 'readonly',
+					info: 'The wiki is currently in read-only mode.',
+					readonlyreason: 'This wiki is currently being upgraded to a newer software version.'
+				}
+			};
+
+		this.sandbox.stub( mw.Api.prototype, 'post' ).returns( $.Deferred().reject( 'readonly', apiResponse ) );
+
+		gateway.getContent().then( function () {
+			gateway.setContent( 'section 1' );
+			return gateway.save();
+		} ).done( doneSpy ).fail( failSpy ).always( function () {
+			assert.strictEqual( failSpy.calledWith( expectedReturnValue ), true );
+			assert.strictEqual( doneSpy.called, false, 'don\'t call done' );
+			done();
+		} );
+
+	} );
 
 	QUnit.test( '#save, unknown errors', function ( assert ) {
 		var gateway = new EditorGateway( {

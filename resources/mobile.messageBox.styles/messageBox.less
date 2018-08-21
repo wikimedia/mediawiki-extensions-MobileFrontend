@@ -1,4 +1,5 @@
 @import '../../mobile.less/mobile.variables';
+@import 'mediawiki.ui/variables';
 
 // Necessary for fallback editor preview.
 .previewnote p,
@@ -41,4 +42,13 @@
 	a {
 		margin-bottom: 1em;
 	}
+}
+
+.errorbox {
+	/**
+	 * @wmui-color-red90 from wikimedia-ui-base.less
+	 * https://phabricator.wikimedia.org/source/wikimedia-ui-base/browse/master/wikimedia-ui-base.less
+	 */
+	background-color: #fee7e6;
+	color: @colorErrorText;
 }

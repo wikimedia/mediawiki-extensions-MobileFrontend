@@ -589,11 +589,11 @@
 				} )
 				.fail( function ( data, code, response ) {
 					var msg,
+						msgHeading,
 						// When save failed with one of these error codes, the returned
 						// message in response.error.info will be forwarded to the user.
 						// FIXME: This shouldn't be needed when info texts are all localized.
 						whitelistedErrorInfo = [
-							'readonly',
 							'blocked',
 							'autoblocked'
 						],
@@ -606,13 +606,15 @@
 							spamprotectiontext: 'extensionSpamBlacklist',
 							'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
 						};
-
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
 						self.handleCaptcha( data.details );
 						key = 'captcha';
 					} else if ( data.type === 'abusefilter' ) {
 						self._showAbuseFilter( data.details.type, data.details.message );
+					} else if ( data.type === 'readonly' ) {
+						msgHeading = mw.msg( 'apierror-readonly' );
+						msg = data.details.readonlyreason;
 					} else {
 						if ( key === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
@@ -621,8 +623,10 @@
 						} else {
 							msg = mw.msg( 'mobile-frontend-editor-error' );
 						}
+					}
 
-						self.reportError( msg );
+					if ( msg || msgHeading ) {
+						self.reportError( msg, msgHeading );
 						self.showHidden( '.save-header, .save-panel' );
 					}
 
