@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d61fa344_982e6304",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1363,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-08-21T14:14:22Z",
+      "side": 1,
+      "message": "I would say that\u0027s more hacky, what with the two different hook registration mechanisms and the circumvention of the machine-readable hook registry. SpecialMobileDiff could set some global flag and it could be read here, that would be functionally equivalent to dynamic registration and less hacky; but using the context does not seem particularly bad to me, when it\u0027s even provided by the hook.",
+      "parentUuid": "3267e896_eb53c002",
+      "revId": "d4f812431c02e8214db061f5410ace89078408c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4d1b8289_76fe4ae1",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2018-08-21T10:31:01Z",
       "side": 1,
       "message": "Eeek, a Volkswagen hack! Why is this needed?",
+      "revId": "d4f812431c02e8214db061f5410ace89078408c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c8154438_4c631771",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1364,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-08-21T14:14:22Z",
+      "side": 1,
+      "message": "The old code injected the class name into the special page; with the code moved into a static call, that wouldn\u0027t work anymore. Could be done via some kind of dependency injection (making the hook handler non-static) but I doubt it\u0027s worth the effort.",
+      "parentUuid": "4d1b8289_76fe4ae1",
       "revId": "d4f812431c02e8214db061f5410ace89078408c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
