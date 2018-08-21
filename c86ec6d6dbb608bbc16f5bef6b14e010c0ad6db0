@@ -19,6 +19,42 @@
     },
     {
       "key": {
+        "uuid": "cc932545_71661461",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T20:43:36Z",
+      "side": 1,
+      "message": "You are right regarding the button not being impacted by the async. I think this was just an oversight on my part so",
+      "parentUuid": "0d7800cd_ae3da2ed",
+      "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be6f915b_2b147245",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T20:43:36Z",
+      "side": 1,
+      "message": "You\u0027re right regarding the button not being impacted by the async operation. I think this was just an oversight on my part so I moved that assertion out of the callback in PS5. The content-header assertion depends on the async operation so I left that in there.",
+      "parentUuid": "0d7800cd_ae3da2ed",
+      "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dccdb5bc_ca5dc0ce",
         "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
         "patchSetId": 2
@@ -30,6 +66,24 @@
       "writtenOn": "2018-08-20T21:20:43Z",
       "side": 1,
       "message": "Likewise, previously this was a sync test. Guessing this change is clearing up that mistake?",
+      "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34e72d15_111629ff",
+        "filename": "tests/qunit/mobile.talk.overlays/test_TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T20:43:36Z",
+      "side": 1,
+      "message": "I believe all of the assertions in the callback depend on the promise resolving first. Previously, TalkOverlay used .done which according to https://jquery.com/upgrade-guide/3.0/#backwards-compatibility can result in sync resolution if the Deferred is already resolved (as it is with the test stub). Therefore, we were able to make the test synchronous. However, .then will always result in async resolution so the test needs to be async to handle that.",
+      "parentUuid": "dccdb5bc_ca5dc0ce",
       "revId": "c86ec6d6dbb608bbc16f5bef6b14e010c0ad6db0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
