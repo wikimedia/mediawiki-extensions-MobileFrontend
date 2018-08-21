@@ -214,7 +214,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 					'class' => MobileUI::anchorClass( 'progressive', 'more' ),
 					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
 				],
-				$this->msg( 'mobile-frontend-watchlist-more' ) );
+				$this->msg( 'mobile-frontend-watchlist-more' )->text() );
 		}
 		$out = $this->getOutput();
 		$out->addHTML( $html );

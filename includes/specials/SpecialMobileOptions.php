@@ -126,7 +126,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				$fields[] = new OOUI\FieldLayout(
 					new OOUI\IconWidget( [
 						'icon' => $icon,
-						'title' => wfMessage( 'mobile-frontend-beta-only' ),
+						'title' => wfMessage( 'mobile-frontend-beta-only' )->text(),
 					] ),
 					[
 						'classes' => $classNames,
@@ -134,9 +134,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 							'label' => new OOUI\HtmlSnippet(
 								Html::rawElement( 'div', [],
 									Html::element( 'strong', [],
-										wfMessage( $feature->getNameKey() ) ) .
+										wfMessage( $feature->getNameKey() )->text() ) .
 									Html::element( 'div', [ 'class' => 'option-description' ],
-										wfMessage( $feature->getDescriptionKey() ) )
+										wfMessage( $feature->getDescriptionKey() )->text() )
 								)
 							),
 						] )
