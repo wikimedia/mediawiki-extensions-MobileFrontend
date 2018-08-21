@@ -16,6 +16,24 @@
       "revId": "c9660c98eefeb323f31f76e261278a572af6a630",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "821bd2b9_c3b00e80",
+        "filename": "tests/qunit/mobile.startup/test_PageGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-21T23:09:02Z",
+      "side": 1,
+      "message": "Uploaded new patch to get rid of extra indent. Is PS3 okay?",
+      "parentUuid": "a1a423f4_9079de41",
+      "revId": "c9660c98eefeb323f31f76e261278a572af6a630",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
