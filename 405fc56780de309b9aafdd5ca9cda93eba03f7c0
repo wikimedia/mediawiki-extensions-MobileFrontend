@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "88e47df6_432a32bf",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 161
+      },
+      "writtenOn": "2018-08-21T08:46:32Z",
+      "side": 0,
+      "message": "Removed",
+      "parentUuid": "0a7e0f1c_629aea56",
+      "range": {
+        "startLine": 307,
+        "startChar": 84,
+        "endLine": 307,
+        "endChar": 93
+      },
+      "revId": "405fc56780de309b9aafdd5ca9cda93eba03f7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "daaef4a8_38cd6171",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-21T08:37:59Z",
       "side": 0,
       "message": "This double escaping was found by the new version 1.3.0 of taint-check",
+      "range": {
+        "startLine": 151,
+        "startChar": 59,
+        "endLine": 151,
+        "endChar": 70
+      },
+      "revId": "405fc56780de309b9aafdd5ca9cda93eba03f7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8af2569a_c45bf6d0",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 161
+      },
+      "writtenOn": "2018-08-21T08:46:32Z",
+      "side": 0,
+      "message": "Removed",
+      "parentUuid": "daaef4a8_38cd6171",
       "range": {
         "startLine": 151,
         "startChar": 59,
