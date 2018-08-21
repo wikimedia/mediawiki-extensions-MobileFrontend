@@ -134,7 +134,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'class' => 'mf-lazy-references-placeholder',
 				'href' => $citeUrl,
 			],
-			wfMessage( 'mobile-frontend-references-list' )
+			wfMessage( 'mobile-frontend-references-list' )->text()
 		);
 		$refSectionHtml = $this->makeSectionHeading( 'h2', 'references' )
 			. $this->makeSectionHtml( 1, $refplaceholder, true );

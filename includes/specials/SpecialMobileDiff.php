@@ -341,7 +341,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$output->addHTML(
 				Html::element( 'div', [
 					'class' => MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user mw-mf-anon' ),
-				], $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
+				], $this->msg( 'mobile-frontend-diffview-anonymous' )->text() ) .
 				'<div>' .
 					$this->getLinkRenderer()->makeLink( $userPage, $ipAddr ) .
 				'</div>'
