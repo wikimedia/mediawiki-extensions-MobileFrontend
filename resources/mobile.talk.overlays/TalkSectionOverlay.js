@@ -95,7 +95,7 @@
 		renderFromApi: function ( options ) {
 			var self = this;
 
-			this.pageGateway.getPage( options.title ).done( function ( pageData ) {
+			this.pageGateway.getPage( options.title ).then( function ( pageData ) {
 				var page = new Page( pageData );
 				options.section = page.getSection( options.id );
 				self.render( options );
@@ -119,6 +119,9 @@
 			var val = this.$textarea.val(),
 				self = this;
 
+			function enableSaveButton() {
+				self.$saveButton.prop( 'disabled', false );
+			}
 			if ( val ) {
 				// show a spinner
 				this.showSpinner();
@@ -132,13 +135,15 @@
 					section: this.options.id,
 					appendtext: val,
 					redirect: true
-				} ).done( function () {
+				} ).then( function () {
 					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ) );
 					// invalidate the cache
 					self.pageGateway.invalidatePage( self.options.title );
 
 					self.renderFromApi( self.options );
-				} ).fail( function ( data, response ) {
+
+					enableSaveButton();
+				}, function ( data, response ) {
 					// FIXME: Code sharing with EditorOverlay?
 					var msg,
 						// When save failed with one of these error codes, the returned
@@ -161,8 +166,8 @@
 
 					self.clearSpinner();
 					popup.show( msg, 'toast error' );
-				} ).always( function () {
-					self.$saveButton.prop( 'disabled', false );
+
+					enableSaveButton();
 				} );
 			} else {
 				this.$textarea.addClass( 'error' );

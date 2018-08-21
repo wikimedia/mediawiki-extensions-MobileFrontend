@@ -130,7 +130,7 @@
 				isOnTalkPage = self.title === self.currentPageTitle;
 
 			this.showHidden( '.saving-header' );
-			this.save().done( function ( status ) {
+			this.save().then( function ( status ) {
 				if ( status === 'ok' ) {
 					if ( isOnTalkPage ) {
 						M.emit( 'talk-added-wo-overlay' );
@@ -141,7 +141,7 @@
 						self.hide();
 					}
 				}
-			} ).fail( function ( error ) {
+			}, function ( error ) {
 				var editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
 
 				self.$confirm.prop( 'disabled', false );

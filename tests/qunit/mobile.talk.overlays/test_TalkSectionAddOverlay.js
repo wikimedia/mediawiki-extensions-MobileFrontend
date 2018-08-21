@@ -21,13 +21,11 @@
 		assert.strictEqual( overlay.$( 'input' ).val(), 'Testtitle', 'Testtitle set' );
 		assert.strictEqual( overlay.$( 'textarea' ).val(), 'Testcontent', 'Testcontent set' );
 		// Test the save of the new dicsussion
-		overlay.save().done( function ( status ) {
+		return overlay.save().then( function ( status ) {
 			assert.strictEqual( status, 'ok', 'The new discussion was saved' );
-		} ).fail( function ( error ) {
-			assert.strictEqual( error, 'ok', 'The new discussion was saved' );
+			// check, if the save was recognized (so the overlay can hide without confirmation of the user)
+			assert.strictEqual( overlay._saveHit, true, 'The save was recognized' );
 		} );
-		// check, if the save was recognized (so the overlay can hide without confirmation of the user)
-		assert.strictEqual( overlay._saveHit, true, 'The save was recognized' );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
