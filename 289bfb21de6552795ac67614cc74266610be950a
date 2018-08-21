@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1908c4f0_c720b426",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1351,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-08-21T10:31:01Z",
+      "side": 1,
+      "message": "It\u0027s annoying that this hook doesn\u0027t get the ContentHandler object that calls it. My bad, sorry. It would make sense only to use the InlineDiffEngine for textual content.",
+      "revId": "289bfb21de6552795ac67614cc74266610be950a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d134df22_bc109bfc",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 6

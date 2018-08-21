@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3267e896_eb53c002",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1363,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-08-21T10:31:01Z",
+      "side": 1,
+      "message": "Relying on the context\u0027s title seems like a bad way to do this.\n\nI\u0027d prefer dynamically registering the hook handler in SpecialMobileDiff::showDiffPage. That\u0027s also hacky, but not *that* hacky...",
+      "revId": "d4f812431c02e8214db061f5410ace89078408c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4d1b8289_76fe4ae1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1364,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-08-21T10:31:01Z",
+      "side": 1,
+      "message": "Eeek, a Volkswagen hack! Why is this needed?",
+      "revId": "d4f812431c02e8214db061f5410ace89078408c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
