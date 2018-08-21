@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f7cd9d3c_4f3251b0",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-21T17:35:17Z",
+      "side": 1,
+      "message": "Any reason not to use `catch()` instead? If it\u0027s equivalent (which I think it it) I find to be more explicit than the second param.",
+      "range": {
+        "startLine": 328,
+        "startChar": 4,
+        "endLine": 328,
+        "endChar": 5
+      },
+      "revId": "b8df436ad3c04a906cf3b3d9b2d1123a933cd06b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f151e5c5_8dcf7b40",
         "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 3
