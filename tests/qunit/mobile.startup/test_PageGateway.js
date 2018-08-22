@@ -62,7 +62,7 @@
 			.returns( $.Deferred().resolve( response ) );
 
 		pageGateway.invalidatePage( 'Test' );
-		return pageGateway.getPage( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPage( 'Test' ).then( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
 					action: 'history'
@@ -122,6 +122,8 @@
 	} );
 
 	QUnit.test( '#getPage', function ( assert ) {
+		var self = this;
+
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			mobileview: {
 				id: -1,
@@ -175,7 +177,7 @@
 		} ) );
 
 		pageGateway.invalidatePage( 'Test' );
-		pageGateway.getPage( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPage( 'Test' ).then( function ( resp ) {
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.getUrl( 'Test', {
 					action: 'history'
@@ -231,9 +233,11 @@
 					}
 				]
 			}, 'return lead and sections test 2' );
+
+			return pageGateway.getPage( 'Test' );
+		} ).then( function () {
+			assert.strictEqual( self.api.get.callCount, 1, 'cache page' );
 		} );
-		pageGateway.getPage( 'Test' );
-		assert.strictEqual( this.api.get.callCount, 1, 'cache page' );
 	} );
 
 	QUnit.test( '#getPageLanguages', function ( assert ) {
@@ -311,7 +315,7 @@
 			}
 		} ) );
 
-		return pageGateway.getPageLanguages( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPageLanguages( 'Test' ).then( function ( resp ) {
 			assert.deepEqual( resp.languages, [
 				{
 					lang: 'es',
@@ -453,11 +457,9 @@
 	} );
 
 	QUnit.test( '#getPage (forwards api errors)', function ( assert ) {
-		var done = assert.async();
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().reject( 'missingtitle' ) );
-		pageGateway.getPage( 'Err' ).fail( function ( msg ) {
+		return pageGateway.getPage( 'Err' ).catch( function ( msg ) {
 			assert.ok( msg === 'missingtitle' );
-			done();
 		} );
 	} );
 
@@ -490,7 +492,7 @@
 		} ) );
 
 		pageGateway.invalidatePage( 'Test' );
-		return pageGateway.getPage( 'Test' ).done( function ( resp ) {
+		return pageGateway.getPage( 'Test' ).then( function ( resp ) {
 			assert.deepEqual( resp.protection, expected );
 		} );
 	} );
