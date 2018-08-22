@@ -8,7 +8,8 @@
 			"ImGelu",
 			"Wintereu",
 			"Matrafox",
-			"Strainu"
+			"Strainu",
+			"Kyouko"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
@@ -119,6 +120,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Setări",
 	"mobile-frontend-media-details": "Detalii",
 	"mobile-frontend-media-license-link": "Informații despre licențiere",
+	"mobile-frontend-media-load-fail-retry": "Reîncarcă",
 	"mobile-frontend-missing-image": "Imagine",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
