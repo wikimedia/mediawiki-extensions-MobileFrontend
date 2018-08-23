@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0cb2b9de_047abc58",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-08-23T22:49:02Z",
+      "side": 1,
+      "message": "Would it make more sense to gracefully return an empty object or passing 0 a programmer error? If so, should we check \u003c 1 instead?",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 4
+      },
+      "revId": "84243e4f57d087beb86a5065f8b7a6ed0f468dbf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
