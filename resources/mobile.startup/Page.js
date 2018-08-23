@@ -114,6 +114,27 @@
 		},
 
 		/**
+		 * Find the heading in the page. This has the benefit of excluding any additional h2s and h3s that may
+		 * have been added programatically.
+		 * @method
+		 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to the section id
+		 *  used in the edit link for the section. Note, confusingly, this is different from section "ID" which is
+		 * used in methods
+		 * @return {jQuery.Object}
+		 */
+		findSectionHeadingByIndex: function ( sectionIndex ) {
+			if ( sectionIndex < 1 ) {
+				// negative indexes will search from the end, which is behaviour we do not want.
+				// return an empty set when this happens.
+				return this.$();
+			} else {
+				return this.$( HEADING_SELECTOR )
+					// Headings must strictly be a child element of a section element or the parser-output
+					// Not an ancestor!
+					.filter( '.mw-parser-output > *, [class^="mf-section-"] > *' ).eq( sectionIndex - 1 );
+			}
+		},
+		/**
 		 * Find all elements that match the selector in the lead of a given section
 		 * (i.e. not within subsections of that section).
 		 * This code should work on desktop (PHP parser HTML)
@@ -135,7 +156,7 @@
 				if ( $lead && $lead.length ) {
 					return $lead.find( selector );
 				} else {
-					$heading = this.$( headingSelector ).eq( 0 );
+					$heading = this.findSectionHeadingByIndex( 1 );
 					return $heading.length ? $heading.prevAll( selector ) :
 						// this page is a stub so search entire page
 						this.$( selector );
@@ -146,7 +167,7 @@
 			// section ids relate to the element position in the page and the first heading
 			// lead has been dealt with above, so first heading corresponds to section 1, the first heading
 			// in the article.
-			$heading = this.$( headingSelector ).eq( sectionIndex - 1 );
+			$heading = this.findSectionHeadingByIndex( sectionIndex );
 
 			// If section-heading is present on the heading, then we know the page has been MobileFormatted
 			// and that this is a wrapped section

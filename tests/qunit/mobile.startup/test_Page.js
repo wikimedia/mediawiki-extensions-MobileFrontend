@@ -1,18 +1,36 @@
 ( function ( M, $ ) {
-	var Page = M.require( 'mobile.startup/Page' );
+	var Page = M.require( 'mobile.startup/Page' ),
+		PARSER_OUTPUT = '<div class="mw-parser-output">',
+		MOBILETOC = '<div class="toc-mobile view-border-box"><h2></h2><div></div></div>';
 
 	QUnit.module( 'MobileFrontend Page', {
 		setup: function () {
-			var ambox = function ( text ) {
+			var ambox, sectionBody;
+			ambox = function ( text ) {
 				return '<div class="ambox">' + text + '</div>';
 			};
+			sectionBody = function ( i, html ) {
+				return '<div class="mf-section-' + i + '">' + html + '</div>';
+			};
 			this.stubPage = new Page( {
-				el: $( '<div>' ).html(
+				el: $( PARSER_OUTPUT ).html(
 					'<p>lead</p>' + ambox( 'a0' )
 				)
 			} );
+			this.mobileTocPage = new Page( {
+				el: $( PARSER_OUTPUT ).html(
+					sectionBody( 0, ambox( 'a0' ) + '<p>lead</p>' + MOBILETOC ) +
+					// section = 1
+					'<h2 class="section-heading">1</h2>' +
+					sectionBody( 1,
+						ambox( 'a1' ) +
+						// section = 2
+						'<h3>1.1</h3>' + ambox( 'a1.1' )
+					)
+				)
+			} );
 			this.desktopPage = new Page( {
-				el: $( '<div>' ).html(
+				el: $( PARSER_OUTPUT ).html(
 					'<p>lead</p>' + ambox( 'a0' ) +
 					// section = 1
 					'<h2>1</h2>' +
@@ -22,25 +40,29 @@
 				)
 			} );
 			this.sectionPage = new Page( {
-				el: $( '<div>' ).html( '<div class="mf-section-0"><p>lead</p>' + ambox( 'a0' ) + '</div>' +
+				el: $( PARSER_OUTPUT ).html(
+					sectionBody( 0, '<p>lead</p>' + ambox( 'a0' ) ) +
 					// section = 1
 					'<h2 class="section-heading">1</h2>' +
-					'<div>' + ambox( 'a1' ) +
-					// section = 2
-					'<h3>1.1</h3>' + ambox( 'a1.1' ) +
-					// section = 3
-					'<h4>1.1.1</h3>' + ambox( 'a1.1.1' ) +
-					// section = 4
-					'<h4>1.1.2</h3>' + ambox( 'a1.1.2' ) +
-					// section = 5
-					'<h3>1.2</h3>' + ambox( 'a1.1' ) +
-					'</div>' +
+					sectionBody( 1,
+						ambox( 'a1' ) +
+						// section = 2
+						'<h3>1.1</h3>' + ambox( 'a1.1' ) +
+						// section = 3
+						'<h4>1.1.1</h3>' + ambox( 'a1.1.1' ) +
+						// section = 4
+						'<h4>1.1.2</h3>' + ambox( 'a1.1.2' ) +
+						// section = 5
+						'<h3>1.2</h3>' + ambox( 'a1.1' )
+					) +
 					// section = 6
 					'<h2 class="section-heading">2</h2><div>' +
-					'<div>' + ambox( 'a2' ) + '</div>' +
+					sectionBody( 6,
+						ambox( 'a2' ) + '</div>'
+					) +
 					// section = 7
 					'<h2 class="section-heading">3</h2>' +
-					'<div>' + ambox( 'a3' ) + '</div>'
+					sectionBody( 7, ambox( 'a3' ) )
 				)
 			} );
 		}
@@ -49,6 +71,7 @@
 	QUnit.test( '#findInSectionLead', function ( assert ) {
 		var p = this.sectionPage,
 			stub = this.stubPage,
+			mobilePageWithToc = this.mobileTocPage,
 			desktopPage = this.desktopPage;
 
 		// check desktop page
@@ -74,7 +97,7 @@
 			assert.strictEqual(
 				stub.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
 				testcase[1],
-				'Found correct text in desktop test case:' + testcase[2]
+				'Stub: Found correct text in desktop test case:' + testcase[2]
 			);
 		} );
 		// check mobile pages with section wrapping
@@ -90,7 +113,19 @@
 			assert.strictEqual(
 				p.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
 				testcase[1],
-				'Found correct text in test case:' + testcase[2]
+				'Mobile: Found correct text in test case:' + testcase[2]
+			);
+		} );
+		[
+			[ 0, 'a0', 'lead section' ],
+			[ 1, 'a1', 'h2' ],
+			[ 2, 'a1.1', 'h3' ],
+			[ 9, '', 'Non-existent section' ]
+		].forEach( function ( testcase ) {
+			assert.strictEqual(
+				mobilePageWithToc.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
+				testcase[1],
+				'Mobile with table of contents: Found correct text in test case:' + testcase[2]
 			);
 		} );
 	} );
