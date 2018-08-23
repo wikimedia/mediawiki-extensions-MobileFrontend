@@ -304,7 +304,7 @@ class MobileFormatter extends HtmlFormatter {
 		foreach ( $domElemsToReplace as $element ) {
 			$alt = $element->getAttribute( 'alt' );
 			if ( $alt === '' ) {
-				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage()->escaped() . ']';
+				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage()->text() . ']';
 			} else {
 				$alt = '[' . $alt . ']';
 			}
