@@ -154,6 +154,16 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 };
 
 /**
+ * @inheritdoc
+ */
+ve.init.mw.MobileFrontendArticleTarget.prototype.setSurface = function ( surface ) {
+	surface.$element.addClass( 'content' );
+
+	// Parent method
+	ve.init.mw.Target.super.prototype.setSurface.apply( this, arguments );
+};
+
+/**
  * FIXME: @inheritdoc once this file is in the right repo
  * @memberof MobileFrontendArticleTarget
  * @instance
@@ -166,9 +176,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 
 	this.overlay.clearSpinner();
 
-	this.$overlaySurface
-		.append( surface.$element.addClass( 'content' ) )
-		.show();
+	// TODO: #append should happen in setSurface, but doing so causes the surface
+	// to become unfocussable. Investigate why.
+	this.$overlaySurface.append( surface.$element );
+	this.$overlaySurface.show();
 
 	surface.getContext().connect( this, { resize: 'adjustContentPadding' } );
 	this.adjustContentPadding();
