@@ -76,7 +76,7 @@
 		show: function () {
 			var overlay = this;
 			EditorOverlayBase.prototype.show.apply( this, arguments );
-			if ( this.target !== undefined ) {
+			if ( this.target ) {
 				return;
 			}
 			// FIXME: we have to initialize MobileFrontendArticleTarget after this.$el
@@ -95,6 +95,7 @@
 					overlay.saved = false;
 				}, function ( e ) {
 					mw.log.warn( 'VisualEditor failed to load: ' + e );
+					overlay.hide();
 				} );
 		},
 		/**
