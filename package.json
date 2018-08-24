@@ -3,12 +3,13 @@
   "scripts": {
     "start": "webpack -dw",
     "build": "NODE_ENV=production webpack -p",
-    "test": "grunt test && npm run doc && dev-scripts/svg_check.sh",
+    "test": "grunt test && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
   "devDependencies": {
     "@wikimedia/resource-modules": "3.0.1",
+    "bundlesize": "0.17.0",
     "clean-webpack-plugin": "0.1.19",
     "eslint-config-wikimedia": "0.5.0",
     "grunt": "1.0.3",
@@ -31,5 +32,15 @@
     "libs/**",
     "resources/dist/**",
     "vendor/**"
+  ],
+  "bundlesize": [
+    {
+      "path": "resources/dist/mobile.startup.runtime.js",
+      "maxSize": "0.8KB"
+    },
+    {
+      "path": "resources/dist/mobile.startup.js",
+      "maxSize": "0.6KB"
+    }
   ]
 }
