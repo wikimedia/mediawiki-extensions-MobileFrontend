@@ -207,6 +207,15 @@
 				}
 			}
 
+			/**
+			 * Start image load transitions
+			 * @method
+			 * @ignore
+			 */
+			function addImageLoadClass() {
+				$img.addClass( 'image-loaded' );
+			}
+
 			if ( thumbs.length < 2 ) {
 				this._disableArrowImages();
 			} else {
@@ -219,6 +228,8 @@
 
 			this.gateway.getThumb( self.options.title ).then( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
+
+				removeLoader();
 
 				self.thumbWidth = data.thumbwidth;
 				self.thumbHeight = data.thumbheight;
@@ -246,7 +257,7 @@
 				// However, perhaps .complete check is not needed if attaching load
 				// event prior to setting the image src
 				// (https://stackoverflow.com/questions/12354865/image-onload-event-and-browser-cache#answer-12355031)
-				$img.on( 'load', removeLoader ).on( 'error', showLoadFailMsg );
+				$img.on( 'load', addImageLoadClass ).on( 'error', showLoadFailMsg );
 				$img.attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
 				self.$( '.image' ).append( $img );
 
