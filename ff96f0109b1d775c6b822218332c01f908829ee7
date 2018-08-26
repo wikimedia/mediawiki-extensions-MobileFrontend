@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c26d70cf_aef95003",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-26T04:46:39Z",
+      "side": 1,
+      "message": "In other extensions, I\u0027ve solved this issue by letting eslint iterate the directory instead of expanding ** in Grunt (which is also slower).\n\nBasically:\n\n eslint: {\n   all: \u0027.\u0027\n }\n\nAnd then ignore directories from .eslintignore (or package.json#eslintIgnore).\n\nThat means grunt-eslint, IDEs, and command-line eslint (e.g. eslint --fix) will all share the same config.\n\nSee EventLogging\u0027s Gruntfile as example.",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
