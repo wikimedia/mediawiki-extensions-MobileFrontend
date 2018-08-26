@@ -31,7 +31,8 @@
 			"Rtemis",
 			"Arian Ar",
 			"Mahdy Saffar",
-			"Baloch Khan"
+			"Baloch Khan",
+			"Fatemi127"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "وارد شوید یا حساب بسازید تا ویرایش‌هایتان را دنبال کنید",
@@ -162,6 +163,7 @@
 	"mobile-frontend-main-menu-settings-heading": "تنظیمات",
 	"mobile-frontend-media-details": "جزئیات",
 	"mobile-frontend-media-license-link": "اطلاعات مجوز",
+	"mobile-frontend-media-load-fail-message": "در هنگام بارگذاری این تصویر خطایی رخ داد.",
 	"mobile-frontend-missing-image": "تصویر",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کیلومتر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 متر}}",
@@ -176,7 +178,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "یک مرورگر دیگر را امتحان کنید یا جاوااسکریپت را فعال کنید اگر آن را غیرفعال کرده بودید.",
 	"mobile-frontend-nearby-title": "در نزدیکی",
 	"mobile-frontend-nearby-info-heading": "مکان‌های اطراف شما",
-	"mobile-frontend-nearby-info-description": "در مورد مکان‌های جذاب اطرافتان مقاله ویکی‌پدیاشان را می‌توانید مطالعه کنید.",
+	"mobile-frontend-nearby-info-description": "شما می‌توانید مقاله‌های جذاب ویکی‌پدیای مکان‌های نزدیک‌تان را مطالعه کنید.",
 	"mobile-frontend-nearby-info-show-button": "نمایش مقالات اطراف",
 	"mobile-frontend-news-items": "در خبرها",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} آزمایشی راهی است برای بررسی ویژگی‌های جدید و ارائهٔ بازخورد به ما",
