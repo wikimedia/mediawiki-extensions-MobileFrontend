@@ -22,6 +22,115 @@
       "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "afc3645a_121c34fb",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "Fixed by D3r1ck01 in https://gerrit.wikimedia.org/r/455310 so this will now need a rebase and is redundant.",
+      "parentUuid": "c26d70cf_aef95003",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f069b4e_8001e3a8",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "See comment in other files",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d9fc903_53f74755",
+        "filename": "resources/dist/mobile.startup/mobile.startup.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "I feel like resources/dist/mobile.startup.json and resources/dist/mobile.startup.js would be better here - as a directory structure encourages multiple entry point files per module which we don\u0027t want.",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "418f6610_d8ad3403",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "I think this line is wrong.\nDid you mean mw.mobileFrontend.require(\u0027mobile.startup/LoadingOverlay\u0027)\n\nThis is not arbitrary file access - this is a public API to things built outside webpack.",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f95076ff_aa6a3b94",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "Why not mobile.startup/index.js?",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7979fa49_c9308ce7",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-27T22:35:31Z",
+      "side": 1,
+      "message": "I think we should make it clearer that this is a webpack artifact e.g. mobile.webpack.runtime\n\nTrying to understand what this was for really threw me as I started by inspecting the traditional endpoint -  extension.json and I\u0027m sure many people will do the same.",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
