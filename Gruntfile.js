@@ -11,13 +11,7 @@ module.exports = function ( grunt ) {
 
 	grunt.initConfig( {
 		eslint: {
-			all: [
-				'**/*.js',
-				'!libs/**',
-				'!vendor/**',
-				'!docs/**',
-				'!node_modules/**'
-			]
+			all: '.'
 		},
 		stylelint: {
 			options: {

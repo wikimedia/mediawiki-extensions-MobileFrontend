@@ -19,5 +19,11 @@
     "stylelint": "9.3.0",
     "stylelint-config-wikimedia": "0.4.3",
     "svgo": "1.0.5"
-  }
+  },
+  "eslintIgnore": [
+    "docs/**",
+    "node_modules/**",
+    "libs/**",
+    "vendor/**"
+  ]
 }
