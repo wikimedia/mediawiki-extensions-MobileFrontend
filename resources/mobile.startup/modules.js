@@ -91,13 +91,13 @@
 		 * needs to be already defined!)
 		 */
 		deprecate: function ( id, obj, replacement ) {
-			var depreacteMsg;
+			var msg;
 			if ( replacement ) {
 				// add an alternative for this module, if any given
-				depreacteMsg = 'Use ' + replacement + ' instead.';
+				msg = 'Use ' + replacement + ' instead.';
 			}
 			// register it as a deprecated one
-			mw.log.deprecate( this._register, id, obj, depreacteMsg );
+			mw.log.deprecate( this._register, id, obj, msg );
 		}
 	};
 	OO.mixinClass( ModuleLoader, OO.EventEmitter );
