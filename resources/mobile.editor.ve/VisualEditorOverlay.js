@@ -17,6 +17,13 @@
 
 	OO.mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		/**
+		 * Disable this for now as it breaks OOUI dialogs (T126240)
+		 * @inheritdoc
+		 * @memberof VisualEditorOverlay
+		 * @instance
+		 */
+		hasFixedHeader: false,
+		/**
 		 * @inheritdoc
 		 * @memberof VisualEditorOverlay
 		 * @instance
