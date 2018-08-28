@@ -1,4 +1,5 @@
 @import '../../mobile.less/mobile.variables';
+@import '../../mobile.less/mobile.mixins';
 
 /* stylelint-disable no-descending-specificity */
 
@@ -163,7 +164,11 @@
 		}
 
 		&.next {
-			right: 1em;
+			right: 0;
+
+			> .mw-ui-icon {
+				right: 0;
+			}
 		}
 
 		// vertically align icon.
@@ -171,8 +176,7 @@
 			position: absolute;
 			top: 50%;
 			margin-top: -50%;
-			-webkit-filter: drop-shadow( 0 0 4px rgba( 0, 0, 0, 0.8 ) );
-			filter: drop-shadow( 0 0 4px rgba( 0, 0, 0, 0.8 ) );
+			.filter( drop-shadow( 0 0 4px rgba( 0, 0, 0, 0.8 ) ) );
 		}
 	}
 }

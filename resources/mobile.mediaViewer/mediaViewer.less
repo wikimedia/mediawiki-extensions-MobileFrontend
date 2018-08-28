@@ -1,4 +1,5 @@
 @import '../../mobile.less/mobile.variables';
+@import '../../mobile.less/mobile.mixins';
 @import 'mediawiki.mixins.less';
 
 .overlay.media-viewer {
@@ -26,10 +27,27 @@
 	}
 
 	img {
+		// Reduce jarring white flash caused by white background color of image
+		// (T197110). Waiting to make the background white after image load seems to
+		// help in most browsers but there are still peculiarities across browsers.
+		// Firefox seems to have particular trouble. Adding the background-color
+		// transition seems to reduce the effect in firefox (although does not
+		// completely resolve it). Firefox flash might be related to
+		// https://bugzilla.mozilla.org/show_bug.cgi?id=626613
+		//
+		/* stylelint-disable time-min-milliseconds */
+		-webkit-transition: background-color 1ms ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
+		transition: background-color 1ms ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
+		transition: background-color 1ms ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
+		/* stylelint-enable time-min-milliseconds */
+		.filter( blur( 3px ) );
+		opacity: 0.8;
+		// With blur filter applied, firefox (and maybe others) will show blurry
+		// alt text before image loads. Making color transparent to hide this.
+		color: transparent;
+
 		// get rid of a small bottom margin and vertical scrollbar
 		vertical-align: bottom;
-		// for images with transparent background
-		background: #fff;
 
 		&.ratio-width {
 			width: 100%;
@@ -38,6 +56,13 @@
 		&.ratio-height {
 			height: 100%;
 		}
+	}
+
+	.image-loaded {
+		// for images with transparent background
+		background: #fff;
+		opacity: 1;
+		.filter( blur( 0 ) );
 	}
 
 	// FIXME: change styling after overlay overhaul
