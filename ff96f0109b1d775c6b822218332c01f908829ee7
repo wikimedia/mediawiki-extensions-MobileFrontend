@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "eb0e6496_f8b4f3e8",
+        "filename": ".gitignore",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "Why are we ignoring this folder?\n(removed in new patchset but please let me know if this was intentional)",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c26d70cf_aef95003",
         "filename": "Gruntfile.js",
         "patchSetId": 6
@@ -37,6 +54,30 @@
       "side": 1,
       "message": "Fixed by D3r1ck01 in https://gerrit.wikimedia.org/r/455310 so this will now need a rebase and is redundant.",
       "parentUuid": "c26d70cf_aef95003",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8e601ef_81fa08cd",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "afc3645a_121c34fb",
       "range": {
         "startLine": 14,
         "startChar": 3,
@@ -137,6 +178,30 @@
     },
     {
       "key": {
+        "uuid": "79ae2b28_2069aee4",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "Done\nI\u0027ve put this inside mobile.startup and updated the comment.",
+      "parentUuid": "0e7cf45d_b00126b1",
+      "range": {
+        "startLine": 294,
+        "startChar": 2,
+        "endLine": 294,
+        "endChar": 18
+      },
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3d9fc903_53f74755",
         "filename": "resources/dist/mobile.startup/mobile.startup.js",
         "patchSetId": 6
@@ -166,6 +231,24 @@
       "side": 1,
       "message": "I was thinking that the folder hierarchy would be useful when we start transpiling assets like LESS. We would be able to easily what assets belong to what module instead of having to reverse map them in our head using the config.",
       "parentUuid": "3d9fc903_53f74755",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0711df1d_e69407f6",
+        "filename": "resources/dist/mobile.startup/mobile.startup.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "Since the file is suffixed with js we can change this later, but given we have no idea to what extent we will package CSS in webpack (personally I\u0027ve not enjoyed the situation in Popups for reasons I\u0027m happy to go over) I think naming would be premature.\n\nI\u0027ve done this in the new patch.",
+      "parentUuid": "beca6f55_5d89c3ab",
       "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -224,6 +307,24 @@
     },
     {
       "key": {
+        "uuid": "23d4133e_7c31cd39",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "This assumes we will have a see of indexes.\nI was assuming we\u0027ll end up with just 1 per folder (or maybe just one.. depends on how we decide to package our modules)\n\nI\u0027m happy to retain this for the time being. It\u0027s easy enough to change.",
+      "parentUuid": "a890b6f0_7e05aa51",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7979fa49_c9308ce7",
         "filename": "webpack.config.js",
         "patchSetId": 6
@@ -253,6 +354,24 @@
       "side": 1,
       "message": "That would expose the implementation. I tried to clarify the purpose with a description field in the extension.json but it is not permitted. See https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/455014/1/extension.json. Is there another alternative?",
       "parentUuid": "7979fa49_c9308ce7",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0c580813_a314e316",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T20:29:35Z",
+      "side": 1,
+      "message": "\u003e That would expose the implementation.\nI\u0027m not sure why this would be a problem.\nBuilding to resources/dist/mobile.startup.runtime.js seems to enough for the time being.",
+      "parentUuid": "8a417f14_8b95bd19",
       "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
