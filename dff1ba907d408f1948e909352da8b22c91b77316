@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb1c78f8_6fdc64b2",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-08-28T12:13:17Z",
+      "side": 1,
+      "message": "I was gonna say we could `@import \u0027mediawiki.mixins.less\u0027;` from mediawiki-core and use the `.transition()` mixin for this instead, but... I don\u0027t think that would work with the `-webkit-filter` property.  Regardless, I think we can conform to that mixin and drop the `-o-transition` rule.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 88
+      },
+      "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
