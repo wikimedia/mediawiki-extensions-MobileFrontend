@@ -189,7 +189,6 @@
 				// eslint-disable-next-line no-restricted-properties
 				self.api.postWithToken( 'edit', apiOptions ).then( function ( data ) {
 					var code, warning;
-
 					if ( data && data.edit && data.edit.result === 'Success' ) {
 						self.hasChanged = false;
 						result.resolve();
@@ -251,17 +250,24 @@
 						} );
 					}
 				} ).fail( function ( code, data ) {
-
-					if ( code === 'readonly' ) {
-						result.reject( {
-							type: 'readonly',
-							details: data.error
-						} );
-					} else {
-						result.reject( {
-							type: 'error',
-							details: 'http'
-						} );
+					switch ( code ) {
+						case 'readonly':
+							result.reject( {
+								type: 'readonly',
+								details: data.error
+							} );
+							break;
+						case 'editconflict':
+							result.reject( {
+								type: 'editconflict',
+								details: data.error
+							}, null, data );
+							break;
+						default:
+							result.reject( {
+								type: 'error',
+								details: 'http'
+							} );
 					}
 				} );
 				return result;
