@@ -22,6 +22,81 @@
       "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b31ee694_3d5fdb3e",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T18:52:05Z",
+      "side": 1,
+      "message": "Agreed, -o- should be unnecessary",
+      "parentUuid": "bb1c78f8_6fdc64b2",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 88
+      },
+      "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32c0c27f_cfa21d1f",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T18:52:05Z",
+      "side": 1,
+      "message": "Probably time to create a mixin in `mobile.less` since\nresources/mobile.startup/Overlay.less also uses filter (for drop-shadow)",
+      "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b59b32f_57c452b1",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T18:52:05Z",
+      "side": 1,
+      "message": "Out of scope for this patch, but we have quite a few references to #fff and we should start thinking about how to tidy that up. I\u0027m sure a lot of them are also redundant.",
+      "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff9ad5c6_99957329",
+        "filename": "resources/mobile.mediaViewer/mediaViewer.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-28T18:52:05Z",
+      "side": 1,
+      "message": "Probably time to create a mixin in `mobile.less` since\nresources/mobile.startup/Overlay.less also uses filter (for drop-shadow)",
+      "revId": "dff1ba907d408f1948e909352da8b22c91b77316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
