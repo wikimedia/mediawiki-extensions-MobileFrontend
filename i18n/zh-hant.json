@@ -253,7 +253,7 @@
 	"mobile.js": "/* 此處的JavaScript將載入於使用手機版的使用者 */",
 	"nearby": "您附近主題的頁面",
 	"tag-mobile_edit": "手機版編輯",
-	"tag-mobile_edit-description": "使用手機版所作的編輯 (網頁或 App)",
+	"tag-mobile_edit-description": "使用手機版所作的編輯（網頁或 App）",
 	"tag-mobile_web_edit": "手機版網頁編輯",
 	"tag-mobile_web_edit-description": "手機版網頁所作的編輯",
 	"apihelp-mobileview-description": "回傳手機檢視需要的資料。",
