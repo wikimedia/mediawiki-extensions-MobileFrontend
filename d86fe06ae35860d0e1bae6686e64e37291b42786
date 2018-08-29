@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4133b4f3_f5393f5c",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-29T15:42:48Z",
+      "side": 1,
+      "message": "Should this be mobile.startup.runtime instead?",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "d86fe06ae35860d0e1bae6686e64e37291b42786",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
