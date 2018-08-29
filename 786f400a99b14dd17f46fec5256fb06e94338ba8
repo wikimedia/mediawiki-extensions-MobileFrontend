@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fd10ed39_34341b6f",
+        "filename": "package.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-29T21:32:25Z",
+      "side": 1,
+      "message": "I had the same question but didn\u0027t know whether what his reasoning was so I just left it. Should we change it?",
+      "parentUuid": "ae01725f_51a5a864",
+      "revId": "786f400a99b14dd17f46fec5256fb06e94338ba8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b4e17b23_dda04315",
         "filename": "src/mobile.startup/modules.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2018-08-29T20:17:22Z",
       "side": 1,
       "message": "This is reintroducing https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/455192/3",
+      "revId": "786f400a99b14dd17f46fec5256fb06e94338ba8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df5b4585_91b85d36",
+        "filename": "src/mobile.startup/modules.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-08-29T21:32:25Z",
+      "side": 1,
+      "message": "Thanks for catching that!",
+      "parentUuid": "b4e17b23_dda04315",
       "revId": "786f400a99b14dd17f46fec5256fb06e94338ba8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
