@@ -11,6 +11,11 @@ See <https://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation>
 Development
 -----------
 
+### Directory structure
+
+- resources/: Files for PHP consumption.
+- src/: Files to be processed by Webpack.
+
 ### Coding conventions
 
 Please follow the coding conventions of MobileFrontend:
