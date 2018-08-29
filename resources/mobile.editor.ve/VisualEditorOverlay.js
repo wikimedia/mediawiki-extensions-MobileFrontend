@@ -73,6 +73,8 @@
 			if ( this.target ) {
 				this.target.destroy();
 				this.target = null;
+				// TODO: Make this abortable so we can destroy a not-yet created target
+				this.targetPromise = null;
 			}
 		},
 		/**
@@ -83,13 +85,13 @@
 		show: function () {
 			var overlay = this;
 			EditorOverlayBase.prototype.show.apply( this, arguments );
-			if ( this.target ) {
+			if ( this.targetPromise ) {
 				return;
 			}
 			// FIXME: we have to initialize MobileFrontendArticleTarget after this.$el
 			// is attached to DOM, maybe we should attach it earlier and hide
 			// overlays in a different way?
-			mw.loader.using( 'ext.visualEditor.targetLoader' )
+			this.targetPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( mw.libs.ve.targetLoader.loadModules )
 				.then( function () {
 					overlay.target = ve.init.mw.targetFactory.create( 'article', overlay, {
