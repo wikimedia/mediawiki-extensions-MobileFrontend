@@ -28,18 +28,19 @@
 
 	img {
 		// Reduce jarring white flash caused by white background color of image
-		// (T197110). Waiting to make the background white after image load seems to
-		// help in most browsers but there are still peculiarities across browsers.
-		// Firefox seems to have particular trouble. Adding the background-color
-		// transition seems to reduce the effect in firefox (although does not
-		// completely resolve it). Firefox flash might be related to
-		// https://bugzilla.mozilla.org/show_bug.cgi?id=626613
+		// appearing before the image is loaded (T197110). Waiting to make the image
+		// background white after the image load event helps in most cases, but
+		// there are still peculiarities across several browsers which occasionally
+		// paint the background color before the loaded (but not rendered) image. To
+		// address this, a .15s background color transition delay is added which
+		// attempts to coerce the browser to paint the loaded image before its
+		// background color and reduce the flash effect. Smoothing transitions
+		// (opacity and filter) are also used to help make the image load process
+		// less jarring.
 		//
-		/* stylelint-disable time-min-milliseconds */
-		-webkit-transition: background-color 1ms ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
-		transition: background-color 1ms ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
-		transition: background-color 1ms ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
-		/* stylelint-enable time-min-milliseconds */
+		-webkit-transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
+		transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
+		transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
 		.filter( blur( 3px ) );
 		opacity: 0.8;
 		// With blur filter applied, firefox (and maybe others) will show blurry
