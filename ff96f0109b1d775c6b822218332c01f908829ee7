@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "f7bcc853_5207914f",
+        "filename": ".gitignore",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-08-29T18:45:34Z",
+      "side": 1,
+      "message": "Okay, I see this in the commit msg now (note this is one of the downsides of writing long commit messages - most of it will be glossed over)",
+      "parentUuid": "1e90e60b_f3222c14",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c26d70cf_aef95003",
         "filename": "Gruntfile.js",
         "patchSetId": 6
