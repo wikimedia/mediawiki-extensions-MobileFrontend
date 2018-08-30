@@ -191,17 +191,17 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$comment = $this->rev->getComment( $audience );
 
 		if ( $this->rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
-			$comment = $this->msg( 'rev-deleted-comment' )->escaped();
+			$commentHtml = $this->msg( 'rev-deleted-comment' )->escaped();
 		} elseif ( $comment !== '' && $comment !== null ) {
-			$comment = Linker::formatComment( $comment, $this->targetTitle );
+			$commentHtml = Linker::formatComment( $comment, $this->targetTitle );
 		} else {
-			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
+			$commentHtml = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
 		}
 
 		return Html::rawElement(
 			'div',
 			[ 'id' => 'mw-mf-diff-comment' ],
-			$comment
+			$commentHtml
 		);
 	}
 
