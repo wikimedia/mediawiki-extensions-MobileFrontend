@@ -1,0 +1,17 @@
+{
+	"//": "todo: enable caching. There are too many other issues to verify that",
+	"//": "caching works correctly.",
+	"cache": false,
+
+	"//": "Ignore files in vendor/, resources/, and elsewhere.",
+	"include": [ "src/**/*.js" ],
+
+	"//": "Set the coverage percentage by category thresholds.",
+	"statements": 100,
+	"branches": 100,
+	"functions": 100,
+	"lines": 100,
+
+	"//": "Fail if the coverage is below threshold.",
+	"check-coverage": false
+}

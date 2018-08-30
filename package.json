@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
+    "coverage": "nyc npm -s run test:unit",
     "start": "webpack -w --mode=development",
     "build": "NODE_ENV=production webpack --mode=production",
-    "precommit": "composer test && npm run test:unit && npm run test",
+    "precommit": "npm run test:unit && npm run test",
     "test:unit": "qunit 'tests/node-qunit/**/*.test.js'",
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
-    "test": "grunt test && npm run lint:es5 && npm run doc && dev-scripts/svg_check.sh && bundlesize",
+    "test": "composer test && grunt test && npm run lint:es5 && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
@@ -31,6 +32,7 @@
     "jquery": "3.3.1",
     "jsdoc": "3.5.5",
     "jsdom": "12.1.0",
+    "nyc": "13.0.1",
     "oojs": "2.2.2",
     "pre-commit": "1.2.2",
     "qunit": "2.6.2",
