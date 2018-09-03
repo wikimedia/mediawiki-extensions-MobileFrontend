@@ -27,6 +27,12 @@
 		 * @memberof Thumbnail
 		 * @instance
 		 */
+		isBorderBox: false,
+		/**
+		 * @inheritdoc
+		 * @memberof Thumbnail
+		 * @instance
+		 */
 		postRender: function () {
 			this.options.description = this.$el.siblings( '.thumbcaption' ).text();
 		},
