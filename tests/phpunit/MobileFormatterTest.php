@@ -190,7 +190,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			// https://phabricator.wikimedia.org/T130025, last section filtered
 			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
-				.'<h2>heading 2</h2>' . $originalImage,
+				. '<h2>heading 2</h2>' . $originalImage,
 				$this->makeSectionHtml( 0, '<p>text</p>' )
 					. $this->makeSectionHeading( 'h2', 'heading 1' )
 					. $this->makeSectionHtml( 1,
@@ -460,13 +460,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				// first paragraph (which has coordinates and is hidden on mobile),
 				// infobox, lead section
-				'<p><span><span id="coordinates">Coordinates</span></span></p>'.
+				'<p><span><span id="coordinates">Coordinates</span></span></p>' .
 				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
 				'<p>paragraph 2</p>',
 
 				$this->makeSectionHtml(
 					0,
-					'<p><span><span id="coordinates">Coordinates</span></span></p>'.
+					'<p><span><span id="coordinates">Coordinates</span></span></p>' .
 					'<p>paragraph 2</p>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
@@ -568,7 +568,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox 2</td></tr></table>' .
 				'<p>paragraph 1</p>' .
 				'<p>paragraph 2</p>' .
-				'<ul><li>item</li></ul>'.
+				'<ul><li>item</li></ul>' .
 				'<h2>Heading 1</h2>' .
 				'<p>paragraph 3</p>',
 
