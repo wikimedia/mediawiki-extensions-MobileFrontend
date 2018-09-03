@@ -187,6 +187,7 @@
 	"mobile-frontend-watchlist-purpose": "En overvågningsliste hjælper dig med at bogmærke sider og holde styr på ændringer af dem.",
 	"mobile-frontend-watchlist-removed": "Fjernet $1 fra din overvågningsliste",
 	"mobile-frontend-watchlist-signup-action": "Tilmeld dig for at starte en nu.",
+	"mobile-frontend-user-page-no-page-yet": "Ingen brugerside for $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Opret din egen",
 	"nearby": "Sider i nærheden af dig",
 	"tag-mobile_edit": "Mobilredigering",
