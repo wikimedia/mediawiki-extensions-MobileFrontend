@@ -556,6 +556,7 @@ class ApiMobileView extends ApiBase {
 	 * @param boolean $noImages
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
+	 * @suppress SecurityCheck-XSS (T203490)
 	 * @return array
 	 */
 	private function getData( Title $title, $noImages, $oldid = null ) {
