@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "952ceb3f_3c1121bf",
+        "filename": "webpack.config.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T21:12:12Z",
+      "side": 1,
+      "message": "This is incorrect and should be runtime.",
+      "range": {
+        "startLine": 34,
+        "startChar": 20,
+        "endLine": 34,
+        "endChar": 27
+      },
+      "revId": "2a1bc5f700e9efac46617a77f6df9763f539a0ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "573d1f9f_a2a7ad43",
+        "filename": "webpack.config.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T21:12:12Z",
+      "side": 1,
+      "message": "This applies to *all* MobileFrontend modules, not just mobile.startup, so I feel mobile.runtime is clearer.",
+      "range": {
+        "startLine": 45,
+        "startChar": 32,
+        "endLine": 45,
+        "endChar": 39
+      },
+      "revId": "2a1bc5f700e9efac46617a77f6df9763f539a0ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

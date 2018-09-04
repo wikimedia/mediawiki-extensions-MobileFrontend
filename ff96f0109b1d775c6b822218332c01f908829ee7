@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "efd8f83e_e5916cbc",
+        "filename": ".gitignore",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T21:12:12Z",
+      "side": 1,
+      "message": "You will find no better friend of focused commits than yours truly. Small changes get better reviews. However, great change requires significant patches which ought to be explained succinctly but fully. This patch is about as small as I can make it and I hope, considering its impact, no part will be glossed over. Although I\u0027m quite guilty of skimming commit messages myself, the commit log is something of a code blog and I hope we\u0027ll all endeavor to capture the details of our changes.",
+      "parentUuid": "f7bcc853_5207914f",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c26d70cf_aef95003",
         "filename": "Gruntfile.js",
         "patchSetId": 6
@@ -302,6 +320,24 @@
       "writtenOn": "2018-08-27T22:35:31Z",
       "side": 1,
       "message": "I think this line is wrong.\nDid you mean mw.mobileFrontend.require(\u0027mobile.startup/LoadingOverlay\u0027)\n\nThis is not arbitrary file access - this is a public API to things built outside webpack.",
+      "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "309468ae_25fb0d0c",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T21:12:12Z",
+      "side": 1,
+      "message": "I don\u0027t think so. mobileFrontend is now exported as a global. See https://en.m.wikipedia.beta.wmflabs.org/wiki/Barack_Obama.",
+      "parentUuid": "418f6610_d8ad3403",
       "revId": "ff96f0109b1d775c6b822218332c01f908829ee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
