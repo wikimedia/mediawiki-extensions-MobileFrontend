@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "83f41606_90e0767b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-04T17:58:47Z",
+      "side": 1,
+      "message": "Actually, the package.json directive is not related to Grunt. It is part of ESLint itself and is honored by eslint-cli and IDE plugins the same way .eslintrc itself would be.\n\nI have helped various extensions move this directive from Gruntfile to package.json for that very reason.",
+      "range": {
+        "startLine": 10,
+        "startChar": 15,
+        "endLine": 10,
+        "endChar": 38
+      },
+      "revId": "424e2d98a08f89b5cc55c963a13e0fc545dbad47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
