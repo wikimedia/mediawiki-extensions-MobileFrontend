@@ -5,13 +5,20 @@
 
 	QUnit.module( 'MobileFrontend Page', {
 		setup: function () {
-			var ambox, sectionBody;
-			ambox = function ( text ) {
-				return '<div class="ambox">' + text + '</div>';
-			};
-			sectionBody = function ( i, html ) {
-				return '<div class="mf-section-' + i + '">' + html + '</div>';
-			};
+			var ambox = function ( text ) {
+					return '<div class="ambox">' + text + '</div>';
+				},
+				sectionHeading = function ( text ) {
+					return '<h2 class="section-heading">' + text + '</h2>';
+				},
+				sectionSubHeading = function ( text, level ) {
+					var l = level || 'h3';
+					return '<' + l + '>' + text + '</' + l + '>';
+				},
+				sectionBody = function ( i, html ) {
+					return '<div class="mf-section-' + i + '">' + html + '</div>';
+				};
+
 			this.stubPage = new Page( {
 				el: $( PARSER_OUTPUT ).html(
 					'<p>lead</p>' + ambox( 'a0' )
@@ -21,51 +28,79 @@
 				el: $( PARSER_OUTPUT ).html(
 					sectionBody( 0, ambox( 'a0' ) + '<p>lead</p>' + MOBILETOC ) +
 					// section = 1
-					'<h2 class="section-heading">1</h2>' +
+					sectionHeading( '1' ) +
 					sectionBody( 1,
 						ambox( 'a1' ) +
 						// section = 2
-						'<h3>1.1</h3>' + ambox( 'a1.1' )
+						sectionSubHeading( '1.1' ) +
+						ambox( 'a1.1' )
 					)
 				)
 			} );
 			this.desktopPage = new Page( {
 				el: $( PARSER_OUTPUT ).html(
-					'<p>lead</p>' + ambox( 'a0' ) +
+					'<p>lead</p>' +
+					ambox( 'a0' ) +
 					// section = 1
-					'<h2>1</h2>' +
+					sectionSubHeading( '1', 'h2' ) +
 					ambox( 'a1' ) +
 					// section = 2
-					'<h3>1.1</h3>' + ambox( 'a1.1' )
+					sectionSubHeading( '1.1' ) +
+					ambox( 'a1.1' )
 				)
 			} );
 			this.sectionPage = new Page( {
 				el: $( PARSER_OUTPUT ).html(
 					sectionBody( 0, '<p>lead</p>' + ambox( 'a0' ) ) +
 					// section = 1
-					'<h2 class="section-heading">1</h2>' +
+					sectionHeading( '1' ) +
 					sectionBody( 1,
 						ambox( 'a1' ) +
 						// section = 2
-						'<h3>1.1</h3>' + ambox( 'a1.1' ) +
+						sectionSubHeading( '1.1' ) +
+						ambox( 'a1.1' ) +
 						// section = 3
-						'<h4>1.1.1</h3>' + ambox( 'a1.1.1' ) +
+						sectionSubHeading( '1.1.1', 'h4' ) +
+						ambox( 'a1.1.1' ) +
 						// section = 4
-						'<h4>1.1.2</h3>' + ambox( 'a1.1.2' ) +
+						sectionSubHeading( '1.1.2', 'h4' ) +
+						ambox( 'a1.1.2' ) +
 						// section = 5
-						'<h3>1.2</h3>' + ambox( 'a1.1' )
+						sectionSubHeading( '1.2' ) +
+						ambox( 'a1.1' )
 					) +
 					// section = 6
-					'<h2 class="section-heading">2</h2><div>' +
+					sectionHeading( '2' ) +
 					sectionBody( 6,
-						ambox( 'a2' ) + '</div>'
+						ambox( 'a2' )
 					) +
-					// section = 7
-					'<h2 class="section-heading">3</h2>' +
-					sectionBody( 7, ambox( 'a3' ) )
-				)
-			} );
-		}
+					// section 7
+					sectionHeading( '3' ) +
+					sectionBody( 7, ambox( 'a3' ) ) +
+					// section 8
+					sectionHeading( 'Section with nested Ambox' ) +
+					sectionBody( 8,
+						ambox(
+							'<p>nested-ambox-parent,</p>' +
+							ambox( 'nested-ambox-1,' ) +
+							ambox( 'nested-ambox-2' )
+						) ) +
+					// section 9
+					sectionHeading( 'Sub-section with nested Ambox' ) +
+						sectionBody( 9,
+							ambox(
+								'<p>nested-ambox-parent,</p>' +
+								ambox( 'nested-ambox-1,' ) +
+								ambox( 'nested-ambox-2' )
+							) +
+							// section 10
+							sectionSubHeading( 'subsection heading' ) +
+							// section 11
+							sectionSubHeading( 'Another subsection heading' )
+						)
+				) // end .html()
+			} ); // end new Page();
+		} // end setup
 	} );
 
 	QUnit.test( '#findInSectionLead', function ( assert ) {
@@ -80,7 +115,7 @@
 			[ 1, 'a1', 'h2' ],
 			[ 2, 'a1.1', 'h3' ],
 			[ 3, '', 'h4', 'selector does not match', '.foo' ],
-			[ 9, '', 'Non-existent section' ]
+			[ 111, '', 'Non-existent section' ]
 		].forEach( function ( testcase ) {
 			assert.strictEqual(
 				desktopPage.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
@@ -92,7 +127,7 @@
 		[
 			[ 0, 'a0', 'lead section' ],
 			[ 3, '', 'h4', 'selector does not match', '.foo' ],
-			[ 9, '', 'Non-existent section' ]
+			[ 111, '', 'Non-existent section' ]
 		].forEach( function ( testcase ) {
 			assert.strictEqual(
 				stub.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
@@ -108,7 +143,7 @@
 			[ 3, 'a1.1.1', 'h4' ],
 			[ 3, '', 'h4', 'selector does not match', '.foo' ],
 			[ 7, 'a3', 'h2 later' ],
-			[ 9, '', 'Non-existent section' ]
+			[ 111, '', 'Non-existent section' ]
 		].forEach( function ( testcase ) {
 			assert.strictEqual(
 				p.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
@@ -120,7 +155,7 @@
 			[ 0, 'a0', 'lead section' ],
 			[ 1, 'a1', 'h2' ],
 			[ 2, 'a1.1', 'h3' ],
-			[ 9, '', 'Non-existent section' ]
+			[ 111, '', 'Non-existent section' ]
 		].forEach( function ( testcase ) {
 			assert.strictEqual(
 				mobilePageWithToc.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
@@ -128,6 +163,19 @@
 				'Mobile with table of contents: Found correct text in test case:' + testcase[2]
 			);
 		} );
+
+		[
+			[ 8, '.ambox', 'nested-ambox-parent,nested-ambox-1,nested-ambox-2', 'Nested elements in section' ],
+			[ 9, '.ambox', 'nested-ambox-parent,nested-ambox-1,nested-ambox-2', 'Nested elements in subsection' ]
+		].forEach( function ( testcase ) {
+			var result = p.findChildInSectionLead( testcase[0], testcase[1] );
+			assert.strictEqual(
+				result.not( result.children() ).text(),
+				testcase[2],
+				'Mobile: Found correct text in test case:' + testcase[3]
+			);
+		} );
+
 	} );
 
 	QUnit.test( '#isMainPage', function ( assert ) {

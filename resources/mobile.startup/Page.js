@@ -135,8 +135,11 @@
 			}
 		},
 		/**
-		 * Find all elements that match the selector in the lead of a given section
-		 * (i.e. not within subsections of that section).
+		 * Finds all child elements that match the selector in a given section or subsection.
+		 * Returns any direct child elements that match the selector, (i.e. searches only one level deep)
+		 * as well as any elements that match the selector within those children.
+		 * If the Page has no headings (e.g. a stub), then the search will target all nodes within the page.
+		 *
 		 * This code should work on desktop (PHP parser HTML)
 		 * as well as mobile formatted HTML (PHP parser + MobileFormatter)
 		 * @method
@@ -150,14 +153,18 @@
 			var $heading, $nextHeading, $container, $lead,
 				headingSelector = HEADING_SELECTOR;
 
+			function withNestedChildren( $matchingNodes ) {
+				return $matchingNodes.find( selector ).addBack();
+			}
+
 			if ( sectionIndex === 0 ) {
 				// lead is easy
 				$lead = this.getLeadSectionElement();
 				if ( $lead && $lead.length ) {
-					return $lead.find( selector );
+					return withNestedChildren( $lead.children( selector ) );
 				} else {
 					$heading = this.findSectionHeadingByIndex( 1 );
-					return $heading.length ? $heading.prevAll( selector ) :
+					return $heading.length ? withNestedChildren( $heading.prevAll( selector ) ) :
 						// this page is a stub so search entire page
 						this.$( selector );
 				}
@@ -178,10 +185,10 @@
 				$nextHeading = $container.find( headingSelector ).eq( 0 );
 				return $nextHeading.length ?
 					// find all amboxes before the next heading
-					$nextHeading.prevAll( selector ) :
+					withNestedChildren( $nextHeading.prevAll( selector ) ) :
 					// There is no subheadings inside
 					// Grab all issues in section
-					$container.find( selector );
+					withNestedChildren( $container.children( selector ) );
 			} else {
 				// the heading relates to a subsection (or unwrapped desktop section), so grab elements between this and the next one
 				$nextHeading = $heading.eq( 0 ).nextAll( headingSelector ).eq( 0 );
