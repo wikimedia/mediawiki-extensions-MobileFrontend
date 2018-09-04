@@ -10,7 +10,8 @@
 			"Emir Mujadzic",
 			"Srdjan m",
 			"MaGa",
-			"Obsuser"
+			"Obsuser",
+			"BadDog"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Prijavite se ili napravite račun da biste pratili svoje izmjene",
@@ -69,7 +70,7 @@
 	"mobile-frontend-editor-error-conflict": "Greška, drugi je korisnik izmijenio ovu stranicu.",
 	"mobile-frontend-editor-error-loading": "Greška, ne mogu učitati odlomak.",
 	"mobile-frontend-editor-error-preview": "Došlo je do neočekivane greške prilikom učitavanja pretpregleda. Zatvorite i pokušajte ponovo.",
-	"mobile-frontend-editor-keep-editing": "Nastavi uređivanjе",
+	"mobile-frontend-editor-keep-editing": "Nastavi s uređivanjеm",
 	"mobile-frontend-editor-licensing": "Čuvanjem izmjena, slažete se da svoj doprinos objavite pod {{PLURAL:$2|licencom|licencama}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Čuvanjem izmjena, slažete se s $1 i slažete se da svoj doprinos objavite pod {{PLURAL:$3|licencom|licencama}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 Uvjetima korištenja]",

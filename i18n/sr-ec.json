@@ -53,7 +53,7 @@
 	"mobile-frontend-editor-editing": "Уређивање",
 	"mobile-frontend-editor-editing-page": "<span><strong>Уређујете страницу</strong> $1</span>",
 	"mobile-frontend-editor-error": "Грешка, измена није сачувана.",
-	"mobile-frontend-editor-keep-editing": "Настави уређивање",
+	"mobile-frontend-editor-keep-editing": "Настави са уређивањем",
 	"mobile-frontend-editor-licensing": "Чувањем измена прихватате да се Ваш допринос објави под следећим {{PLURAL:$2|лиценцама}}: $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Чувањем измена прихватате $1 и прихватате да се Ваш допринос објави под следећим {{PLURAL:$3|лиценцама}}: $2.",
 	"mobile-frontend-editor-terms-link": "[$1 услове коришћења]",

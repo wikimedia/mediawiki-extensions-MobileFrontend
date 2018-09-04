@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Yejianfei",
-			"GnuDoyng"
+			"GnuDoyng",
+			"Davidzdh"
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Ṳ̄ng-sṳ̆",
@@ -10,5 +11,6 @@
 	"mobile-frontend-terms-text": "Sāi-ê̤ṳng Dèu-kuāng",
 	"mobile-frontend-view": "Chiū-gĭ ché̤ṳ",
 	"mobile-frontend-view-desktop": "Diêng-nō̤ káng",
-	"tag-mobile_web_edit": "手機網頁修改"
+	"tag-mobile_edit": "Sāi chiū-gĭ gāi",
+	"tag-mobile_web_edit": "Chiū-gĭ-bēng uōng-hiĕk gāi gì"
 }
