@@ -58,7 +58,7 @@ class MobileFrontendHooks {
 			$skin = new $skinName( $context );
 		} else {
 			throw new \RuntimeException(
-				'wgMFDefaultSkinClass is not setup correctly. '.
+				'wgMFDefaultSkinClass is not setup correctly. ' .
 				'It should point to the class name of a valid skin e.g. SkinMinerva, SkinVector'
 			);
 		}

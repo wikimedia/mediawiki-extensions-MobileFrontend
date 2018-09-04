@@ -35,7 +35,7 @@ class ApiWebappManifest extends ApiBase {
 				'src' => $appleTouchIcon
 			];
 			if ( isset( $appleTouchIconSize ) && $appleTouchIconSize !== false ) {
-				$icon['sizes'] = $appleTouchIconSize[0].'x'.$appleTouchIconSize[1];
+				$icon['sizes'] = $appleTouchIconSize[0] . 'x' . $appleTouchIconSize[1];
 				$icon['type'] = $appleTouchIconSize['mime'];
 			}
 			$icons[] = $icon;
