@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea9d73a1_444b203d",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "Please add /.nyc_output/ to .gitignore.",
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e20477b0_f4cd82da",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "New discussion is now in https://github.com/istanbuljs/nyc/issues/849. It\u0027s probably worth reviewing.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 14
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8c4e0d0_7e605b66",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "This might need some tweaking for MobileFrontend.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03416928_a36d4d00",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "https://github.com/istanbuljs/nyc/issues/847 was closed recently. Do we we need this?",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 19
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "498e4725_48a240be",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "Is this still needed?",
+      "range": {
+        "startLine": 4,
+        "startChar": 17,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e8df42e_09703850",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "I think this should be coverage.",
+      "range": {
+        "startLine": 8,
+        "startChar": 24,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ae84f5d_f63a4f17",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T15:51:15Z",
+      "side": 1,
+      "message": "Please pin to patch version.",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
