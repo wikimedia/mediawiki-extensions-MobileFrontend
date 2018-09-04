@@ -30,13 +30,6 @@
     "webpack": "4.17.1",
     "webpack-cli": "3.1.0"
   },
-  "eslintIgnore": [
-    "docs/**",
-    "node_modules/**",
-    "libs/**",
-    "resources/dist/**",
-    "vendor/**"
-  ],
   "bundlesize": [
     {
       "path": "resources/dist/mobile.startup.runtime.js",
