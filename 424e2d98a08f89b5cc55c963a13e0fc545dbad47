@@ -22,6 +22,30 @@
       "revId": "424e2d98a08f89b5cc55c963a13e0fc545dbad47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05ba9001_9e2a754a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-04T18:07:38Z",
+      "side": 1,
+      "message": "Thanks. I\u0027ve amended the commit message with the correction. Let me know if partitioning the ignores to a separate file is disagreeable to your other ESLint work.",
+      "parentUuid": "83f41606_90e0767b",
+      "range": {
+        "startLine": 10,
+        "startChar": 15,
+        "endLine": 10,
+        "endChar": 38
+      },
+      "revId": "424e2d98a08f89b5cc55c963a13e0fc545dbad47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
