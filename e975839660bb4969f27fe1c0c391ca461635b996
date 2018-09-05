@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41e347a9_b871e7f3",
+        "filename": "tests/node-qunit/mobile.startup/modules.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-05T20:57:06Z",
+      "side": 1,
+      "message": "If the directory is named after the ResourceLoader module, and the path is added to NODE_PATH, then can require() it the same way both in MW context and in Node context without needing to compile this file with webpack.\n\nIf I understand correctly, this is currently using webpack only to resolve this one function call, which seems a bit overkill.",
+      "range": {
+        "startLine": 1,
+        "startChar": 42,
+        "endLine": 1,
+        "endChar": 64
+      },
+      "revId": "e975839660bb4969f27fe1c0c391ca461635b996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
