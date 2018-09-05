@@ -3,6 +3,7 @@
   "scripts": {
     "start": "webpack -dw",
     "build": "NODE_ENV=production webpack -p",
+    "test:unit": "qunit --require ./tests/node-qunit/config.test 'tests/node-qunit/**/*.test.js'",
     "test": "grunt test && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
@@ -20,6 +21,7 @@
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.10.0",
     "jsdoc": "3.5.5",
+    "qunit": "2.6.2",
     "stylelint": "9.3.0",
     "stylelint-config-wikimedia": "0.4.3",
     "svgo": "1.0.5",

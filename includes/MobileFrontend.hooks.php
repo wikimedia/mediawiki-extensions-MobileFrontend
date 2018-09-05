@@ -352,6 +352,7 @@ class MobileFrontendHooks {
 			}
 		}
 
+		$testFiles[] = 'resources/dist/tests.mobilefrontend.js';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'templates' => [

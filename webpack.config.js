@@ -1,6 +1,7 @@
 /* eslint-env node, es6 */
 const
 	CleanPlugin = require( 'clean-webpack-plugin' ),
+	glob = require( 'glob' ),
 	path = require( 'path' ),
 	prod = process.env.NODE_ENV === 'production',
 	// The output directory for all build artifacts. Only absolute paths are accepted by output.path.
@@ -29,6 +30,14 @@ module.exports = {
 	// named simply "index.js" but the redundancy of "[name].js" improves presentation and search-
 	// ability in some tools. Entry names are tightly coupled to output.filename and extension.json.
 	entry: {
+		// Note that the tests.mobilefrontend module only exists inside Special:JavaScriptTest/qunit
+		// test runs. It provides scaffolding (template mocks) and does not appear inside the
+		// ResourceLoader startup module, so does not use the `mobile.` prefix that other modules do.
+		// This is consistent with other test related artifacts e.g. test.mediawiki.qunit.testrunner and
+		// test.sinonjs.
+		// The glob module is used to ensure that all tests inside the folder (minus stubs) are caught and
+		// run to ensure we don't forget to register new tests.
+		'tests.mobilefrontend': glob.sync( './tests/node-qunit/*/*.test.js' ),
 		'mobile.startup': './src/mobile.startup/mobile.startup.js'
 
 		// mobile.startup.webpack: reserved entry for the Webpack bootloader optimization.runtimeChunk. Without
@@ -89,6 +98,9 @@ module.exports = {
 		maxEntrypointSize: 2.6 * 1024,
 
 		// The default filter excludes map files but we rename ours.
-		assetFilter: filename => !filename.endsWith( srcMapExt )
+		// Any modules prefixed with `tests.` are excluded from performance checks as they are not shipped
+		// to end users.
+		assetFilter: filename => !filename.startsWith( 'tests.' ) &&
+			!filename.endsWith( srcMapExt )
 	}
 };
