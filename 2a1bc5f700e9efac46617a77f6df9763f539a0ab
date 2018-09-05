@@ -45,6 +45,30 @@
       "revId": "2a1bc5f700e9efac46617a77f6df9763f539a0ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d0312cff_dc3b6499",
+        "filename": "webpack.config.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-05T17:36:50Z",
+      "side": 1,
+      "message": "Long term, won\u0027t we just have one module?",
+      "parentUuid": "573d1f9f_a2a7ad43",
+      "range": {
+        "startLine": 45,
+        "startChar": 32,
+        "endLine": 45,
+        "endChar": 39
+      },
+      "revId": "2a1bc5f700e9efac46617a77f6df9763f539a0ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
