@@ -38,11 +38,12 @@ module.exports = {
 		// The glob module is used to ensure that all tests inside the folder (minus stubs) are caught and
 		// run to ensure we don't forget to register new tests.
 		'tests.mobilefrontend': glob.sync( './tests/node-qunit/*/*.test.js' ),
+
 		'mobile.startup': './src/mobile.startup/mobile.startup.js'
 
-		// mobile.startup.webpack: reserved entry for the Webpack bootloader optimization.runtimeChunk. Without
-		// a distinct runtime chunk, it's instead bundled into each entry which is inefficient. This
-		// chunk should only change Webpack or configuration changes.
+		// mobile.startup.runtime: reserved entry for the Webpack bootloader optimization.runtimeChunk.
+		// Without a distinct runtime chunk, it's instead bundled into each entry which is inefficient.
+		// This chunk should only change when Webpack or this configuration changes.
 	},
 
 	optimization: {
@@ -71,7 +72,8 @@ module.exports = {
 		sourceMapFilename: `[file]${srcMapExt}`,
 
 		// Expose the module.exports of each module entry chunk through the global mobileFrontend[name].
-		// This is useful for debugging.
+		// This is useful for debugging. E.g., mobileFrontend['mobile.startup'] is set by the
+		// module.exports of mobile.startup.js.
 		library: [ 'mobileFrontend', '[name]' ],
 		libraryTarget: 'this'
 	},
@@ -93,7 +95,7 @@ module.exports = {
 		// Minified uncompressed size limits for chunks / assets and entrypoints. Keep these numbers up-
 		// to-date and rounded to the nearest 10th of a kibibyte so that code sizing costs are well
 		// understood. Related to bundlesize minified, gzipped compressed file size tests. Note:
-		// entrypoint size implicitly includes the mobile.runtime entry.
+		// entrypoint size implicitly includes the mobile.startup.runtime entry.
 		maxAssetSize: 1.5 * 1024,
 		maxEntrypointSize: 2.6 * 1024,
 
