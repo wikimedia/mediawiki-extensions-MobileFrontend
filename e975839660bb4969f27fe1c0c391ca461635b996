@@ -22,6 +22,30 @@
       "revId": "e975839660bb4969f27fe1c0c391ca461635b996",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df5f20d3_7de63db5",
+        "filename": "tests/node-qunit/mobile.startup/modules.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-05T22:31:39Z",
+      "side": 1,
+      "message": "I\u0027ve chatted with Timo on IRC.\nhttps://gerrit.wikimedia.org/r/458310 is somewhat close to what he is proposing, but without using NODE_PATH - which I can\u0027t seem to see an option right now (but it might be later)\n\nI promise this conversation is not complete. We\u0027ll keep experimenting/improving. It\u0027s easy enough to change these paths later on and explore dropping webpack in the tests.",
+      "parentUuid": "41e347a9_b871e7f3",
+      "range": {
+        "startLine": 1,
+        "startChar": 42,
+        "endLine": 1,
+        "endChar": 64
+      },
+      "revId": "e975839660bb4969f27fe1c0c391ca461635b996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
