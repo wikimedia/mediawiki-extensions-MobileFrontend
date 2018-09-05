@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "defcbb8c_b9b34351",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-05T17:37:01Z",
+      "side": 1,
+      "message": "My thinking with the mobile.startup prefix was that I wanted to make clear where that lived. I understand it could move in future, but we can also rename the entry point in future.\n\nI don\u0027t think mobile.startup will disappear any time soon and TBH I think it will remain post-refactor.",
+      "revId": "642f15f33d52cfdd8da1a88c7f1c3a0383ad4fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
