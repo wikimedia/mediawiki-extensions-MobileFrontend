@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3699c69_aeeed872",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "I know this patch is WIP but one question I hope to see answered is what functionality from mw-node-qunit do we use? There\u0027s not a lot in it. Pretty much just wikimedia-setup.js as I understand it. I ask in the interest of keeping our dependencies minimal and understood.\n\nhttps://github.com/wikimedia/mw-node-qunit/blob/master/wikimedia-setup.js",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "490e6283_48851bba",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "Would you mind pinning this to patch version since CI uses an older version of Node.js?",
+      "range": {
+        "startLine": 25,
+        "startChar": 13,
+        "endLine": 25,
+        "endChar": 14
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "399d9abe_a6b8edb1",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "Do we still need to wrap these modules now that Webpack is bundling them?",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 35
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f08ea707_9d99520a",
+        "filename": "tests/node-qunit/.eslintrc.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "I think we were deliberately requiring inline ignores as needed to use JQuery so that unnecessary usage was discouraged. Can this be removed?",
+      "range": {
+        "startLine": 4,
+        "startChar": 2,
+        "endLine": 4,
+        "endChar": 16
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47d0fa10_78ef0b74",
+        "filename": "tests/node-qunit/GlobalizeOO.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "I think we\u0027re supposed to use camelCase for filenames that don\u0027t define a class / function structure:\n\nhttps://www.mediawiki.org/wiki/Reading/Web/Coding_conventions#File_organisation_2",
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef63476_786c42df",
+        "filename": "tests/node-qunit/run.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-06T13:54:23Z",
+      "side": 1,
+      "message": "Any reason not to fold config.js into run.js? AFAIK config.js only contains one time set up that should apply to all tests.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
