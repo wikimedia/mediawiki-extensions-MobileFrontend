@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7851f71d_bb193244",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea9d73a1_444b203d",
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e20477b0_f4cd82da",
         "filename": ".nycrc.json",
         "patchSetId": 1
@@ -30,6 +48,30 @@
       "writtenOn": "2018-09-04T15:51:15Z",
       "side": 1,
       "message": "New discussion is now in https://github.com/istanbuljs/nyc/issues/849. It\u0027s probably worth reviewing.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 14
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64856c2d_370bb7d3",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "Let\u0027s just remove this for the time being.",
+      "parentUuid": "e20477b0_f4cd82da",
       "range": {
         "startLine": 6,
         "startChar": 0,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "ee0e467e_25a6214a",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "Right now I\u0027m just using it for measuring, not enforcing any values. Given its not running in npm test do I need to tweak these?",
+      "parentUuid": "d8c4e0d0_7e605b66",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03416928_a36d4d00",
         "filename": ".nycrc.json",
         "patchSetId": 1
@@ -76,6 +142,30 @@
       "writtenOn": "2018-09-04T15:51:15Z",
       "side": 1,
       "message": "https://github.com/istanbuljs/nyc/issues/847 was closed recently. Do we we need this?",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 19
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b700977_1e23920a",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "nope. Removed!",
+      "parentUuid": "03416928_a36d4d00",
       "range": {
         "startLine": 24,
         "startChar": 0,
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "70e6ffe1_94cbc9c4",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "Nope. Hurray!",
+      "parentUuid": "498e4725_48a240be",
+      "range": {
+        "startLine": 4,
+        "startChar": 17,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e8df42e_09703850",
         "filename": "package.json",
         "patchSetId": 1
@@ -122,6 +236,30 @@
       "writtenOn": "2018-09-04T15:51:15Z",
       "side": 1,
       "message": "I think this should be coverage.",
+      "range": {
+        "startLine": 8,
+        "startChar": 24,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a51334dc_4259603b",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T20:30:29Z",
+      "side": 1,
+      "message": "To be clear, right now this is only to help me measure progress in the project. (https://www.mediawiki.org/wiki/Reading/Web/Projects/Invest_in_the_MobileFrontend_%26_MinervaNeue_frontend_architecture/Progress?useskin\u003dvector)\nI don\u0027t plan to enforce this in Jenkins/precommit hook.\n\nWe should review and do that when we have a clear understanding of what our coverage looks like and then what we should aim for it to be.",
+      "parentUuid": "7e8df42e_09703850",
       "range": {
         "startLine": 8,
         "startChar": 24,
