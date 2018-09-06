@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "541ac865_a2ba487c",
+        "filename": "src/mobile.startup/browser.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T15:13:52Z",
+      "side": 1,
+      "message": "For readability, I\u0027d prefer us to drop the closure and declare M etc at the top.\n\nIn future I suspect we\u0027ll want to break modules.js into ModuleLoader.js and modules.js to allow access via webpack rather than global.s",
+      "revId": "a0d291835fab96e378c47f88584d48becb1ce358",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
