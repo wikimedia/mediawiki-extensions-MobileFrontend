@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "3d916b70_12ef4fd5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T17:57:16Z",
+      "side": 1,
+      "message": "This suggests that this patch fixes the bug but it doesn\u0027t. This should be made clear in the description to how it contributes to the bug fix and link to other related patches.",
+      "revId": "9b22bccede32c5ea60f1b35578106d51d647c5d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8b57b95c_a60734d0",
         "filename": "resources/mobile.startup/Page.js",
         "patchSetId": 2
