@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b647c3a4_1b2e59aa",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "I\u0027m very open to removing it, and I don\u0027t think it\u0027s absolutely required, but I found it helpful because it:\n\n1) Does some setup of jsdom and globals that I think will be necessary for node-qunit tests \n\n2) Brings in the dependencies of jsdom, sinon, and jquery all of which I think will be needed for the node-qunit tests to run\n\n3) Wraps Sinon in a way that makes sandbox testing a little easier. Mainly, I think it just prevents the need to explicitly call sandbox.restore() in an afterEach() function, but there could be more that I\u0027m missing.",
+      "parentUuid": "d3699c69_aeeed872",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "490e6283_48851bba",
         "filename": "package.json",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-09-06T13:54:23Z",
       "side": 1,
       "message": "Would you mind pinning this to patch version since CI uses an older version of Node.js?",
+      "range": {
+        "startLine": 25,
+        "startChar": 13,
+        "endLine": 25,
+        "endChar": 14
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c48024d_bb59f48e",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "Will do",
+      "parentUuid": "490e6283_48851bba",
       "range": {
         "startLine": 25,
         "startChar": 13,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "427e3465_eee1294e",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "No, we don\u0027t. I was planning to circle back around to this and remove these. It is on my todo list",
+      "parentUuid": "399d9abe_a6b8edb1",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 35
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f08ea707_9d99520a",
         "filename": "tests/node-qunit/.eslintrc.json",
         "patchSetId": 4
@@ -82,6 +154,30 @@
       "writtenOn": "2018-09-06T13:54:23Z",
       "side": 1,
       "message": "I think we were deliberately requiring inline ignores as needed to use JQuery so that unnecessary usage was discouraged. Can this be removed?",
+      "range": {
+        "startLine": 4,
+        "startChar": 2,
+        "endLine": 4,
+        "endChar": 16
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c1bd751_d572df20",
+        "filename": "tests/node-qunit/.eslintrc.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "Will look into this",
+      "parentUuid": "f08ea707_9d99520a",
       "range": {
         "startLine": 4,
         "startChar": 2,
@@ -111,6 +207,24 @@
     },
     {
       "key": {
+        "uuid": "49f0fc04_e816086f",
+        "filename": "tests/node-qunit/GlobalizeOO.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "I was following the pattern of MockOO and MockMediaWiki casing but am happy to change it. I just wanted to be consistent with those. Should we make everything camelCase?",
+      "parentUuid": "47d0fa10_78ef0b74",
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef63476_786c42df",
         "filename": "tests/node-qunit/run.js",
         "patchSetId": 4
@@ -122,6 +236,30 @@
       "writtenOn": "2018-09-06T13:54:23Z",
       "side": 1,
       "message": "Any reason not to fold config.js into run.js? AFAIK config.js only contains one time set up that should apply to all tests.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f7cb4431_785d8a6d",
+        "filename": "tests/node-qunit/run.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "Good call, I think those probably should be merged",
+      "parentUuid": "6ef63476_786c42df",
       "range": {
         "startLine": 7,
         "startChar": 0,

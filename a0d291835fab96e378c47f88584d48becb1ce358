@@ -16,6 +16,24 @@
       "revId": "a0d291835fab96e378c47f88584d48becb1ce358",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc0bc07b_4ced5371",
+        "filename": "src/mobile.startup/browser.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T15:53:00Z",
+      "side": 1,
+      "message": "I agree, dropping those is on my todo list",
+      "parentUuid": "541ac865_a2ba487c",
+      "revId": "a0d291835fab96e378c47f88584d48becb1ce358",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
