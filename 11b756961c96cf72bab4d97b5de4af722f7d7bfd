@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0fcc9dea_5244bcd9",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T21:08:28Z",
+      "side": 1,
+      "message": "This one\u0027s a little different from the description, no?\nShould this be modified too or should we update the description to talk about this special case?",
+      "revId": "11b756961c96cf72bab4d97b5de4af722f7d7bfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
