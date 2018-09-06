@@ -154,6 +154,30 @@
       "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99e3133d_d2eeb17f",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-06T20:12:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be a dev dependency?",
+      "parentUuid": "8ae84f5d_f63a4f17",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
