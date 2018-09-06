@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b57b95c_a60734d0",
+        "filename": "resources/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-06T17:53:28Z",
+      "side": 1,
+      "message": "It looks like mw.mobileFrontend.getCurrentPage().findChildInSectionLead(2, \u0027.ambox\u0027)\nis working correctly to me.\nPer name (but not so much description ... my bad) it was intended this would only match top level selectors.\n(However I see now the inconsistency... in that $lead.find above and this.$ below should probably be $lead.children(\nThis changes that behaviour (and if so should also update the name and description to findInSectionLead)\n\nI can\u0027t remember if there was a reason to do that. I feel there was, but I\u0027m not 100% sure. I hope it was just a forced choice by using prevAll and forgetting about addBack jQuery method.\n\nNote: The nesting could also be taken care of in the createBanner code. The nesting code already identifies multiple issues when it does - $this.find( selector ).length \u003d\u003d\u003d 0 which leads to allIssues[2] being an empty array which is incorrect.\n\nEither way I agree there\u0027s an inconsistency here that need taking care of.\n\nI guess the more simpler thing to do here would be to change the function name and description (you can use mw.deprecate and an alias to avoid breaking changes)",
+      "revId": "9b22bccede32c5ea60f1b35578106d51d647c5d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
