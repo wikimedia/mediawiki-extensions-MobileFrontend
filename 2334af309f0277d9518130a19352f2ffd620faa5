@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6a983212_7109cb84",
+        "filename": "src/mobile.startup/browser.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T22:46:19Z",
+      "side": 1,
+      "message": "Sorry my bad explaining..\nWhat I meant was we have a file src/mobile.startup/mobile.startup.js\nIt feels like these should be moved there and kept off the test path to avoid unnecessary mocking.\n\n\nThe M.define path should continue to point to the resource loader module name.\n\nI think you\u0027ve done what I had in mind in PS8.",
+      "parentUuid": "c8264bbe_24dffa26",
+      "revId": "2334af309f0277d9518130a19352f2ffd620faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d5693c82_037ead26",
         "filename": "src/mobile.startup/cache.js",
         "patchSetId": 7
