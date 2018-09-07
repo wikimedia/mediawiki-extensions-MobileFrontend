@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "c683f5bf_20d77885",
+        "filename": "src/mobile.startup/browser.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T20:01:13Z",
+      "side": 1,
+      "message": "mobile.startup.js ?",
+      "revId": "2334af309f0277d9518130a19352f2ffd620faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5693c82_037ead26",
+        "filename": "src/mobile.startup/cache.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T20:01:13Z",
+      "side": 1,
+      "message": "mobile.startup.js ?",
+      "revId": "2334af309f0277d9518130a19352f2ffd620faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9cc90ea_05dfc3b0",
         "filename": "src/mobile.startup/oo-extend.js",
         "patchSetId": 7
