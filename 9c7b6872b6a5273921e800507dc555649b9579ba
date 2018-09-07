@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ed0582f2_0045711a",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T16:20:25Z",
+      "side": 1,
+      "message": "Can we pull out View into a separate patch to make code reviewer easier?",
+      "revId": "9c7b6872b6a5273921e800507dc555649b9579ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
