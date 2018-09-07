@@ -362,11 +362,7 @@
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup/oo-extend.js",
-				"resources/mobile.startup/util.js",
 				"resources/mobile.startup/View.js",
-				"resources/mobile.startup/browser.js",
-				"resources/mobile.startup/cache.js",
 				"resources/mobile.startup/time.js",
 				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/user.js",

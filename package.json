@@ -3,7 +3,7 @@
   "scripts": {
     "start": "webpack -dw",
     "build": "NODE_ENV=production webpack -p",
-    "test:unit": "qunit --require ./tests/node-qunit/config.test 'tests/node-qunit/**/*.test.js'",
+    "test:unit": "qunit --require ./tests/node-qunit/config.js 'tests/node-qunit/**/*.test.js'",
     "test": "grunt test && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
@@ -43,7 +43,7 @@
     },
     {
       "path": "resources/dist/mobile.startup.js",
-      "maxSize": "0.6KB"
+      "maxSize": "1.7KB"
     }
   ]
 }
