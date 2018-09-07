@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "17e75365_78db393f",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-07T17:48:09Z",
+      "side": 1,
+      "message": "If I understand correctly, this effects whether or not nyc reports on coverage just for files actually tested or also include untested files as well. It would be easy to misinterpret the coverage as favorable when this is false (the default) and also would make it difficult to add new tests for new files since adding a file under test immediately drops the coverage.\n\nSince we might not remember to turn it back on, trying it now and leaving the note if it\u0027s still broken would be excellent. This way we know our coverage configuration file is up to date with the current version of nyc committed and don\u0027t need to start from scratch in reconsidering our previous work when the tool is upgraded. Instead, we\u0027ll simply review the release notes for changes and make surgical updates as wanted with our otherwise perfect configuration.\n\nhttps://github.com/istanbuljs/nyc/blob/master/lib/config-util.js#L66",
+      "parentUuid": "64856c2d_370bb7d3",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 14
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d8c4e0d0_7e605b66",
         "filename": ".nycrc.json",
         "patchSetId": 1
@@ -131,6 +155,30 @@
     },
     {
       "key": {
+        "uuid": "54b7ff60_2ac3463a",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-07T17:48:09Z",
+      "side": 1,
+      "message": "The oddly specific values might be confusing. Would you change them to 100 (or 99, if that\u0027s not possible)?",
+      "parentUuid": "ee0e467e_25a6214a",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03416928_a36d4d00",
         "filename": ".nycrc.json",
         "patchSetId": 1
@@ -166,6 +214,30 @@
       "side": 1,
       "message": "nope. Removed!",
       "parentUuid": "03416928_a36d4d00",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 19
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "637db01f_84e8a58c",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-07T17:48:09Z",
+      "side": 1,
+      "message": "\\o/",
+      "parentUuid": "0b700977_1e23920a",
       "range": {
         "startLine": 24,
         "startChar": 0,
