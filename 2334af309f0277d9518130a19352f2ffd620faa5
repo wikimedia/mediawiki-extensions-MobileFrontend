@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9cc90ea_05dfc3b0",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T20:00:01Z",
+      "side": 1,
+      "message": "Could this just export the mfExtend function (it doesn\u0027t use this keyword )\n\nLong term we shouldn\u0027t need to extend the OO class.\nI wonder if we could add the OO.mfExtend alias somewhere else e.g. mobile.startup.js",
+      "revId": "2334af309f0277d9518130a19352f2ffd620faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "268c6558_67e684a3",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-07T20:00:01Z",
+      "side": 1,
+      "message": "Could this definition be moved somewhere else?\nIt feels like these could live inside mobile.startup.js\n\nThe benefit of this is it becomes very clear where these get defined and we don\u0027t need to stub M.define and M.require in our test suite.",
+      "revId": "2334af309f0277d9518130a19352f2ffd620faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
