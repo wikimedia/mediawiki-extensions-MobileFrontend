@@ -16,6 +16,24 @@
       "revId": "9c7b6872b6a5273921e800507dc555649b9579ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1184dd18_a12e1fe6",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-07T19:59:15Z",
+      "side": 1,
+      "message": "Done! Please let me know if I should pull out more stuff to make it easier to review",
+      "parentUuid": "ed0582f2_0045711a",
+      "revId": "9c7b6872b6a5273921e800507dc555649b9579ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
