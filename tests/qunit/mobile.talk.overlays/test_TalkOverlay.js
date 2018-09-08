@@ -5,7 +5,7 @@
 		TalkOverlay = M.require( 'mobile.talk.overlays/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
-		setup: function () {
+		beforeEach: function () {
 			this.api = new mw.Api();
 			this.getPageDeferredReject = $.Deferred().reject( 'missingtitle' );
 			this.getPageDeferredResolve = $.Deferred().resolve( {
@@ -27,7 +27,7 @@
 
 			this.user = user.getName() || '';
 		},
-		teardown: function () {
+		afterEach: function () {
 			mw.config.set( 'wgUserName', this.user );
 		}
 	} );
@@ -84,7 +84,7 @@
 		} );
 
 		return this.getPageDeferredResolve.then( function () {
-			assert.ok( overlay.$( '.topic-title-list li' ).length === 1, 'One topic heading is listed' );
+			assert.strictEqual( overlay.$( '.topic-title-list li' ).length, 1, 'One topic heading is listed' );
 			assert.strictEqual( overlay.$( '.topic-title-list li a' ).eq( 0 ).text(), 'Topic 1',
 				'The text of the second item is the section heading.' );
 			assert.strictEqual( overlay.$( '.topic-title-list li a' ).data( 'id' ), 50,

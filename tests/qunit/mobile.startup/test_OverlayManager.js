@@ -3,7 +3,7 @@
 		fakeRouter, overlayManager;
 
 	QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
-		setup: function () {
+		beforeEach: function () {
 			this.createFakeOverlay = function ( options ) {
 				var fakeOverlay = new OO.EventEmitter();
 				fakeOverlay.hasLoadError = false;
@@ -51,7 +51,7 @@
 		deferred.resolve( fakeOverlay );
 
 		return deferred.then( function () {
-			assert.ok( !deferred.show.called, 'don\'t call show on Deferred' );
+			assert.notOk( deferred.show.called, 'don\'t call show on Deferred' );
 			assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
 		} );
 	} );

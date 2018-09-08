@@ -5,7 +5,7 @@
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: ReferencesDrawer', {
-		setup: function () {
+		beforeEach: function () {
 			this.gateway = {
 				getReference: $.noop
 			};
@@ -34,9 +34,8 @@
 				text: 'I am a reference'
 			} ).promise(),
 			renderSpy = this.sandbox.spy( this.drawer, 'render' ),
-			showSpy = this.sandbox.spy( this.drawer, 'show' );
-
-		assert.expect( 2 );
+			showSpy = this.sandbox.spy( this.drawer, 'show' ),
+			done = assert.async();
 
 		this.sandbox.stub( this.gateway, 'getReference' ).returns( promise );
 		this.drawer.showReference( '#cite_note-good', this.page, '1' );
@@ -44,15 +43,15 @@
 		return promise.then( function () {
 			assert.strictEqual( showSpy.callCount, 1, 'Show is called.' );
 			assert.strictEqual( renderSpy.callCount, 1, 'Render is called.' );
+			done();
 		} );
 	} );
 
 	QUnit.test( 'Reference failure renders error in drawer', function ( assert ) {
 		var promise = $.Deferred().reject( ReferencesGateway.ERROR_OTHER ).promise(),
 			renderSpy = this.sandbox.spy( this.drawer, 'render' ),
-			showSpy = this.sandbox.spy( this.drawer, 'show' );
-
-		assert.expect( 3 );
+			showSpy = this.sandbox.spy( this.drawer, 'show' ),
+			done = assert.async();
 
 		this.sandbox.stub( this.gateway, 'getReference' ).returns( promise );
 		this.drawer.showReference( '#cite_note-bad', this.page, '1' );
@@ -65,6 +64,7 @@
 				title: '1',
 				text: mw.msg( 'mobile-frontend-references-citation-error' )
 			} ), 'Render is called with the error parameter.' );
+			done();
 		} );
 	} );
 

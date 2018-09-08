@@ -3,7 +3,7 @@
 		Skin = M.require( 'mobile.startup/Skin' );
 
 	QUnit.module( 'MobileFrontend Skin.js', {
-		setup: function () {
+		beforeEach: function () {
 			var stub = {
 				getReferencesLists: $.noop,
 				getReferencesList: $.noop

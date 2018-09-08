@@ -16,7 +16,7 @@
 			[ 'File:No file extension but has a . in the title', 'No file extension but has a . in the title' ],
 			[ 'Fichier:French Photo.jpg', 'French Photo' ]
 		];
-		assert.expect( tests.length );
+
 		$( tests ).each( function ( i ) {
 			var val = m.prototype._getDescription( this[ 0 ] );
 			assert.strictEqual( val, this[ 1 ], 'test ' + i );

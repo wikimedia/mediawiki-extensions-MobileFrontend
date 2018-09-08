@@ -11,7 +11,7 @@
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: Watchstar.js Anon', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( user, 'isAnon' ).returns( true );
 			this.spy = this.sandbox.stub( CtaDrawer.prototype, 'show' );
 		}
@@ -34,7 +34,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend: Watchstar.js', {
-		setup: function () {
+		beforeEach: function () {
 			// Avoid unnecessary mw.notify animations
 			this.toastStub = this.sandbox.stub( mw, 'notify' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
@@ -44,7 +44,7 @@
 
 			this.toastSpy = this.sandbox.spy( toast, 'show' );
 		},
-		teardown: function () {
+		afterEach: function () {
 			// Hide any existing toasts
 			toast.hide();
 		}

@@ -1,5 +1,10 @@
 {
+	"extends": [
+		"wikimedia/qunit",
+		"../../.eslintrc.json"
+	],
 	"env": {
+		"qunit": true,
 		"jquery": true
 	},
 	"rules": {

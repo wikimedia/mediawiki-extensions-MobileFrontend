@@ -3,7 +3,7 @@
 	var View = M.require( 'mobile.startup/View' );
 
 	QUnit.module( 'MobileFrontend mobile.startup/View', {
-		setup: function () {
+		beforeEach: function () {
 			var compiler = {
 				compile: function () {
 					return {

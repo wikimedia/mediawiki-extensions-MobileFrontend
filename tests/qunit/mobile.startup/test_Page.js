@@ -4,7 +4,7 @@
 		MOBILETOC = '<div class="toc-mobile view-border-box"><h2></h2><div></div></div>';
 
 	QUnit.module( 'MobileFrontend Page', {
-		setup: function () {
+		beforeEach: function () {
 			var ambox = function ( text ) {
 					return '<div class="ambox">' + text + '</div>';
 				},
@@ -334,10 +334,10 @@
 			} )
 		];
 		missing.forEach( function ( page, i ) {
-			assert.ok( page.isMissing, 'page ' + i + ' is missing' );
+			assert.strictEqual( page.isMissing, true, 'page ' + i + ' is missing' );
 		} );
 		notMissing.forEach( function ( page, i ) {
-			assert.ok( !page.isMissing, 'page ' + i + ' is not missing' );
+			assert.strictEqual( page.isMissing, false, 'page ' + i + ' is not missing' );
 		} );
 	} );
 

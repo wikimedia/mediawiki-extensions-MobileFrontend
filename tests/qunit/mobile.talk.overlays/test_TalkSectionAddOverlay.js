@@ -3,7 +3,7 @@
 	var TalkSectionAddOverlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkSectionAddOverlay', {
-		setup: function () {
+		beforeEach: function () {
 			this.api = new mw.Api();
 			this.sandbox.stub( this.api, 'postWithToken' ).returns( $.Deferred().resolve() );
 		}

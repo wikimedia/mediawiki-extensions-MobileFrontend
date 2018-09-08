@@ -2,7 +2,7 @@
 	var util = M.require( 'mobile.languages.structured/util' );
 
 	QUnit.module( 'MobileFrontend: Structured LanguageOverlay', {
-		setup: function () {
+		beforeEach: function () {
 			if ( mw.eventLog ) {
 				this.sandbox.stub( mw.eventLog.Schema.prototype, 'log' );
 			}
@@ -218,7 +218,7 @@
 		} );
 		suggestedLanguages.forEach( function ( suggestedLanguage ) {
 			assert.ok(
-				variantsMap.hasOwnProperty( suggestedLanguage.lang ),
+				Object.prototype.hasOwnProperty.call( variantsMap, suggestedLanguage.lang ),
 				'Variant "' + suggestedLanguage.lang + '" is in the list of suggested languages.'
 			);
 		} );

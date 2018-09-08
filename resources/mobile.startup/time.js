@@ -28,7 +28,7 @@
 	 * @memberof time
 	 * @instance
 	 * @param {number} timestamp
-	 * @return {{value: Number, unit: string}}
+	 * @return {{value: number, unit: string}}
 	 */
 	function getTimeAgoDelta( timestamp ) {
 		var currentTimestamp = Math.round( new Date().getTime() / 1000 );
@@ -40,7 +40,7 @@
 	 * Whether timestamp delta is less than a day old
 	 * @memberof time
 	 * @instance
-	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
+	 * @param {{value: number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
 	 */
 	function isRecent( delta ) {
@@ -51,7 +51,7 @@
 	 * Is delta less than 10 seconds?
 	 * @memberof time
 	 * @instance
-	 * @param {{value: Number, unit: string}} delta Object of timestamp and its label
+	 * @param {{value: number, unit: string}} delta Object of timestamp and its label
 	 * @return {boolean}
 	 */
 	function isNow( delta ) {

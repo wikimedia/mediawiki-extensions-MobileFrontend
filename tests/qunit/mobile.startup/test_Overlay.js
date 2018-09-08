@@ -2,18 +2,28 @@
 	var Overlay = M.require( 'mobile.startup/Overlay' );
 
 	QUnit.module( 'MobileFrontend: Overlay.js', {
-		setup: function () {
+		beforeEach: function () {
 			this.clock = this.sandbox.useFakeTimers();
+			// Create a dummy mw-mf-viewport if none exists
+			if ( !$( '#mw-mf-viewport' ).length ) {
+				this.$viewport = $( '<div>' ).attr( 'id', 'mw-mf-viewport' ).appendTo( 'body' );
+			}
+		},
+		afterEach: function () {
+			if ( this.$viewport ) {
+				this.$viewport.remove();
+			}
 		}
 	} );
 
 	QUnit.test( 'Simple overlay', function ( assert ) {
 		var overlay = new Overlay( {
 			heading: '<h2>Title</h2>',
-			content: 'Text'
+			content: 'Text',
+			appendToElement: 'div'
 		} );
 		overlay.show();
-		assert.ok( overlay.$el[ 0 ].parentNode !== undefined, 'In DOM' );
+		assert.ok( overlay.$el[ 0 ].parentNode, 'In DOM' );
 		overlay.hide();
 	} );
 

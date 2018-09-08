@@ -8,7 +8,7 @@
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
-		setup: function () {
+		beforeEach: function () {
 			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
 				.returns( $.Deferred().resolve( [] ) );
 		}
@@ -39,7 +39,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (2 - has results)', {
-		setup: function () {
+		beforeEach: function () {
 			var resp = {
 				query: {
 					pages: [
@@ -106,7 +106,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
-		setup: function () {
+		beforeEach: function () {
 			this.deferred = $.Deferred();
 			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPages' )
 				.returns( this.deferred.reject() );
@@ -139,7 +139,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
-		setup: function () {
+		beforeEach: function () {
 			this.spy = this.sandbox.stub( NearbyGateway.prototype, 'getPagesAroundPage' )
 				.returns( $.Deferred().reject() );
 		}

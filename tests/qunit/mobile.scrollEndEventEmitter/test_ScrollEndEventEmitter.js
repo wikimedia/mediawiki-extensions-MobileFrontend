@@ -2,7 +2,7 @@
 	var ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
 
 	QUnit.module( 'MobileFrontend ScrollEndEventEmitter', {
-		teardown: function () {
+		afterEach: function () {
 			// Leave window at the top
 			window.scrollTo( 0, 0 );
 		}

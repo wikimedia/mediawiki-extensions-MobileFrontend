@@ -49,7 +49,7 @@
 		 * @instance
 		 * @mixes Overlay#defaults
 		 * @property {Object} defaults Default options hash.
-		 * @property {String} defaults.heading Heading text.
+		 * @property {string} defaults.heading Heading text.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			heading: mw.msg( 'mobile-frontend-notifications-filter-title' )

@@ -9,7 +9,7 @@
 		MemoryCache = cache.MemoryCache;
 
 	QUnit.module( 'MobileFrontend: mobileView references gateway', {
-		setup: function () {
+		beforeEach: function () {
 			this.$container = mw.template.get( 'tests.mobilefrontend', 'pageWithStrippedRefs.html' )
 				.render().appendTo( '#qunit-fixture' );
 
@@ -75,21 +75,21 @@
 
 	QUnit.test( 'checking bad reference', function ( assert ) {
 		return this.referencesGateway.getReference( '#cite_note-bad', this.page ).catch( function ( err ) {
-			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
+			assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST,
 				'When reference not found error message reflects that.' );
 		} );
 	} );
 
 	QUnit.test( 'checking reference on non-existent page', function ( assert ) {
 		return this.referencesGatewayEmpty.getReference( '#cite_note-bad', this.page ).catch( function ( err ) {
-			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST,
+			assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST,
 				'When getReferencesElement returns empty list of elements reference is false.' );
 		} );
 	} );
 
 	QUnit.test( 'checking reference when gateway rejects', function ( assert ) {
 		return this.referencesGatewayRejector.getReference( '#cite_note-bad-2', this.page ).catch( function ( err ) {
-			assert.ok( err === ReferencesGateway.ERROR_OTHER, 'getReference is rejected if API query fails' );
+			assert.strictEqual( err, ReferencesGateway.ERROR_OTHER, 'getReference is rejected if API query fails' );
 		} );
 	} );
 }( jQuery, mw.mobileFrontend ) );

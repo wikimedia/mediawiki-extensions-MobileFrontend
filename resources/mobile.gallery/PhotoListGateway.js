@@ -124,7 +124,7 @@
 					} );
 				}
 
-				if ( resp.hasOwnProperty( 'continue' ) ) {
+				if ( resp.continue !== undefined ) {
 					self.continueParams = resp.continue;
 				} else {
 					self.canContinue = false;

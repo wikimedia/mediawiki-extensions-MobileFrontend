@@ -24,6 +24,7 @@
 	 */
 	function getDeviceLanguageOrParent( languages, deviceLanguage ) {
 		var parentLanguage, index,
+			hasOwn = Object.prototype.hasOwnProperty,
 			deviceLanguagesWithVariants = {};
 
 		if ( !deviceLanguage ) {
@@ -42,10 +43,10 @@
 			}
 		} );
 
-		if ( deviceLanguagesWithVariants.hasOwnProperty( deviceLanguage ) ) {
+		if ( hasOwn.call( deviceLanguagesWithVariants, deviceLanguage ) ) {
 			// the device language is one of the available languages
 			return deviceLanguage;
-		} else if ( deviceLanguagesWithVariants.hasOwnProperty( parentLanguage ) ) {
+		} else if ( hasOwn.call( deviceLanguagesWithVariants, parentLanguage ) ) {
 			// no device language, but the parent language is one of the available languages
 			return parentLanguage;
 		}
@@ -120,7 +121,8 @@
 	 * @return {Object[]}
 	 */
 	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
-		var maxFrequency = 0,
+		var hasOwn = Object.prototype.hasOwnProperty,
+			maxFrequency = 0,
 			minFrequency = 0,
 			missingDir = 0,
 			suggestedLanguages = [],
@@ -155,7 +157,7 @@
 
 		// Separate languages into suggested and all languages.
 		languages.map( addLangDir ).forEach( function ( language ) {
-			if ( frequentlyUsedLanguages.hasOwnProperty( language.lang ) ) {
+			if ( hasOwn.call( frequentlyUsedLanguages, language.lang ) ) {
 				language.frequency = frequentlyUsedLanguages[ language.lang ];
 				suggestedLanguages.push( language );
 			} else {
@@ -169,7 +171,7 @@
 		// we cannot show it for the variants.
 		if ( variants ) {
 			variants.map( addLangDir ).forEach( function ( variant ) {
-				if ( frequentlyUsedLanguages.hasOwnProperty( variant.lang ) ) {
+				if ( hasOwn.call( frequentlyUsedLanguages, variant.lang ) ) {
 					variant.frequency = frequentlyUsedLanguages[variant.lang];
 				} else {
 					variant.frequency = minFrequency - 1;

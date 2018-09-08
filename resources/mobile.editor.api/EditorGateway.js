@@ -73,7 +73,7 @@
 
 					pageObj = resp.query.pages[0];
 					// page might not exist and caller might not have known.
-					if ( pageObj.hasOwnProperty( 'missing' ) ) {
+					if ( pageObj.missing !== undefined ) {
 						self.content = '';
 					} else {
 						revision = pageObj.revisions[0];

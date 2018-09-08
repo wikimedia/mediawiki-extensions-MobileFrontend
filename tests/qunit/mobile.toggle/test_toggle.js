@@ -10,7 +10,7 @@
 	 * Mobile toggling
 	 */
 	QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.$section0 = this.$container.find( 'h2' ).eq( 0 );
@@ -18,7 +18,7 @@
 			toggle = new Toggler( this.$container, '', page );
 			toggle.toggle( this.$section0 );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.remove( 'expandedSections' );
 		}
@@ -93,12 +93,12 @@
 	 * Tablet toggling
 	 */
 	QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
-		setup: function () {
+		beforeEach: function () {
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( true );
 			toggle = new Toggler( this.$container, '', page );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.remove( 'expandedSections' );
 		}
@@ -115,13 +115,13 @@
 	 * Expand sections user setting
 	 */
 	QUnit.module( 'MobileFrontend toggle.js: user setting', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
 			mw.storage.set( 'expandSections', 'true' );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			toggle = new Toggler( this.$container, '', page );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.set( 'expandSections', '' );
 			mw.storage.remove( 'expandedSections' );
@@ -136,13 +136,13 @@
 	 * Accessibility
 	 */
 	QUnit.module( 'MobileFrontend toggle.js: accessibility', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			toggle = new Toggler( this.$container, '', page );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.remove( 'expandSections' );
 			mw.storage.remove( 'expandedSections' );
@@ -178,7 +178,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			this.$container = $( '<div>' ).html( sectionHtml );
@@ -188,7 +188,7 @@
 			this.pageTitle = page.title;
 			this.expandedSections = Toggler._getExpandedSections( page );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.remove( 'expandedSections' );
 			mw.storage.remove( 'expandSections' );
@@ -274,7 +274,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
-		setup: function () {
+		beforeEach: function () {
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			this.$container = $( '<div>' ).html( sectionHtml );
@@ -285,7 +285,7 @@
 			this.pageTitle = page.title;
 			this.expandedSections = Toggler._getExpandedSections( page );
 		},
-		teardown: function () {
+		afterEach: function () {
 			window.location.hash = '#';
 			mw.storage.remove( 'expandedSections' );
 			mw.storage.remove( 'expandSections' );

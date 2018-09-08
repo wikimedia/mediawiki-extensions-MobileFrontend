@@ -102,7 +102,7 @@ module.exports = {
 		// The default filter excludes map files but we rename ours.
 		// Any modules prefixed with `tests.` are excluded from performance checks as they are not shipped
 		// to end users.
-		assetFilter: filename => !filename.startsWith( 'tests.' ) &&
+		assetFilter: ( filename ) => !filename.startsWith( 'tests.' ) &&
 			!filename.endsWith( srcMapExt )
 	}
 };
