@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "21c47c64_3ecc3891",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-09-09T16:34:25Z",
+      "side": 1,
+      "message": "What?",
+      "parentUuid": "626d5c2a_b17348d4",
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1ae3618b_0b66f226",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "8b44cb13_5d03e491",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-09-09T16:34:25Z",
+      "side": 1,
+      "message": "You mean to get the change tags? If so, yes: querying revisions can return applied tags.",
+      "parentUuid": "1ae3618b_0b66f226",
+      "range": {
+        "startLine": 619,
+        "startChar": 3,
+        "endLine": 619,
+        "endChar": 7
+      },
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e88196b_a34e1d31",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -53,6 +95,30 @@
       "writtenOn": "2018-09-09T11:47:43Z",
       "side": 1,
       "message": "shouldn\u0027t this be quoted?",
+      "range": {
+        "startLine": 625,
+        "startChar": 15,
+        "endLine": 625,
+        "endChar": 27
+      },
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db135913_fc5643cc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-09-09T16:34:25Z",
+      "side": 1,
+      "message": "Yep",
+      "parentUuid": "0e88196b_a34e1d31",
       "range": {
         "startLine": 625,
         "startChar": 15,
