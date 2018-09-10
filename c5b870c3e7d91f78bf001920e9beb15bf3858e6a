@@ -95,6 +95,23 @@
     },
     {
       "key": {
+        "uuid": "2d1bd236_4d38f5bc",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "There is no reason for this to be added to the OO object now.",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a72915e_0e70dab6",
         "filename": "tests/node-qunit/config.js",
         "patchSetId": 8

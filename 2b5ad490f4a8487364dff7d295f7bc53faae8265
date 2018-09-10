@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "942dc1de_a1c6158c",
+        "filename": "package.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "I\u0027d like to avoid using this if we can.\n\nI feel like the tests we have in our codebase that use jQuery are an anti-pattern and we should be looking to update these to use stubs.\n\nHere\u0027s an idea I have for your consideration as an alternative:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/459654 POC: Avoid using node-qunit",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f13c1335_c1a8735f",
+        "filename": "src/mobile.startup/cache.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "I think this can be combined with L62?",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afdfc84_362df9e5",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "I still am not really understanding why we need to extendOO here.",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ecac9a5e_0b2afaf2",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "I know it\u0027s more verbose, but would it make more sense to separate the requires out from the registers?\n\nIt feels like this would be cleaner and would allow us to remove these registers in future as we port over more files.\n\nDoing this will also surpress the warnings you are getting when running npm run lint:modules - resource-modules is not that clever.\n\n\nmw.mobileFrontend.define( \u0027mobile.startup/util\u0027, util ) OR\nM.define( \u0027mobile.startup/util\u0027, util ) is the line it looks for.",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6da316e_d94b5d8b",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "const alert!!",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6317288_2cf2a24f",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:23:52Z",
+      "side": 1,
+      "message": "mfExtend does not need to be on the OO global",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
