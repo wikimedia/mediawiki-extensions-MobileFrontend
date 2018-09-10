@@ -95,6 +95,24 @@
     },
     {
       "key": {
+        "uuid": "82efb036_269f785a",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T23:25:53Z",
+      "side": 1,
+      "message": "I think what Stephen is getting at is that there\u0027s no need to extend OO. It\u0027s just a function that uses OO.\n\nI think we should move away from OO.mfExtend in favor of importing mfExtend\n\nTo keep backwards compatibility OO can be extended safely inside the mobile.startup.js entry point.\n\nOO.mfExtend \u003d mfExtend;",
+      "parentUuid": "dca4f417_40c46692",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d1bd236_4d38f5bc",
         "filename": "src/mobile.startup/oo-extend.js",
         "patchSetId": 8
