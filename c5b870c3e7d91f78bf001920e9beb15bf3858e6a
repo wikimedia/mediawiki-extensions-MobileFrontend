@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "1cd2283d_a8abd77e",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-10T23:01:24Z",
+      "side": 1,
+      "message": "Done!",
+      "parentUuid": "b1bde203_03a63412",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "15cecc3d_b4318070",
         "filename": "src/mobile.startup/oo-extend.js",
         "patchSetId": 8
@@ -53,6 +71,24 @@
       "writtenOn": "2018-09-10T14:57:18Z",
       "side": 1,
       "message": "Why is this broken into two files now?",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dca4f417_40c46692",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-10T23:01:24Z",
+      "side": 1,
+      "message": "See Jon\u0027s comments in PS7. In latest patch, I moved this logic into mobile.startup.js which is probably where it belongs. I just feared that mobile.startup.js will soon become a God Object which is why I made this into another file originally.",
+      "parentUuid": "15cecc3d_b4318070",
       "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -82,6 +118,30 @@
     },
     {
       "key": {
+        "uuid": "76206411_67f46b0a",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-10T23:01:24Z",
+      "side": 1,
+      "message": "My inclination is here since it doesn\u0027t look like Popups uses OO but I\u0027m interested in hearing more opinions on that. I\u0027d prefer that that library sets the minimum number of globals and lets projects add to that number based on their particular needs",
+      "parentUuid": "7a72915e_0e70dab6",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "548c00af_0c970f23",
         "filename": "tests/node-qunit/run.js",
         "patchSetId": 8
@@ -93,6 +153,24 @@
       "writtenOn": "2018-09-10T14:57:18Z",
       "side": 1,
       "message": "I think this file can be removed if the \"mw-node-qunit\" executable is used instead of \"node\". The config file could then be passed as another require, I think / hope which would be awesome. If that\u0027s not possible, please consider collapsing config.js into this file.\n\nhttps://github.com/wikimedia/mw-node-qunit/blob/master/index.js",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a0f4697_7e956aae",
+        "filename": "tests/node-qunit/run.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-10T23:01:24Z",
+      "side": 1,
+      "message": "Thanks for bringing this up! I added a require flag to the test:unit task in latest patch",
+      "parentUuid": "548c00af_0c970f23",
       "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
