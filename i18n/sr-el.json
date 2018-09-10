@@ -15,7 +15,7 @@
 	"mobile-frontend-clear-search": "Očisti",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako je drugačije navedeno.",
 	"mobile-frontend-desc": "Korisnički deo za mobilne uređaje",
-	"mobile-frontend-diffview-404-title": "Loša revizija",
+	"mobile-frontend-diffview-404-title": "Loša izmena",
 	"mobile-frontend-diffview-anonymous": "Anoniman korisnik",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|$1 bajt dodat|$1 bajta dodata|$1 bajtova dodato}}",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|$1 bajt obrisan|$1 bajta obrisana|$1 bajtova obrisano}}",
