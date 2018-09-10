@@ -225,6 +225,24 @@
     },
     {
       "key": {
+        "uuid": "5e10d3ca_989aee5c",
+        "filename": "tests/node-qunit/GlobalizeOO.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "My mistake. I originally wrote MockMediaWiki as a class but later exported a function.",
+      "parentUuid": "49f0fc04_e816086f",
+      "revId": "8456ea427cf02c2a32c9dd8ee3da8dd0461a646c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef63476_786c42df",
         "filename": "tests/node-qunit/run.js",
         "patchSetId": 4

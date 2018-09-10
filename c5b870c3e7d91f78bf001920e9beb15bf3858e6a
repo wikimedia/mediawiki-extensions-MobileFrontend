@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e95985c_6ced1331",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "Thanks for fixing this. These files were originally suffixed .test.js to distinguish them from production sources as both tests and functional code lived in src/.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 46
+      },
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1bde203_03a63412",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "It might make sense to move `mw.mobileFrontend \u003d new ModuleLoader();` from modules.js to here now. This will make it clear that mw.mobileFrontend.define() is using the singleton.",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "15cecc3d_b4318070",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "Why is this broken into two files now?",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a72915e_0e70dab6",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "This looks great but I\u0027m confused now where it should live. Here or the monolithic mw-node-qunit?\n\nhttps://github.com/wikimedia/mw-node-qunit/blob/master/wikimedia-setup.js",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "548c00af_0c970f23",
+        "filename": "tests/node-qunit/run.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:57:18Z",
+      "side": 1,
+      "message": "I think this file can be removed if the \"mw-node-qunit\" executable is used instead of \"node\". The config file could then be passed as another require, I think / hope which would be awesome. If that\u0027s not possible, please consider collapsing config.js into this file.\n\nhttps://github.com/wikimedia/mw-node-qunit/blob/master/index.js",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
