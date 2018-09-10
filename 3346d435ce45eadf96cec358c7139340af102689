@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31e715e4_66d8dfcf",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-10T14:17:10Z",
+      "side": 1,
+      "message": "What do you think of putting this in MockMediaWiki instead?",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "3346d435ce45eadf96cec358c7139340af102689",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
