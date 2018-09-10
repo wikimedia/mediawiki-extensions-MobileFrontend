@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eee13728_7a71455a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2018-09-10T06:41:31Z",
+      "side": 1,
+      "message": "I could have said \"optional\". I think there should be null as a fallback.",
+      "parentUuid": "21c47c64_3ecc3891",
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1ae3618b_0b66f226",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -72,6 +90,30 @@
       "side": 1,
       "message": "You mean to get the change tags? If so, yes: querying revisions can return applied tags.",
       "parentUuid": "1ae3618b_0b66f226",
+      "range": {
+        "startLine": 619,
+        "startChar": 3,
+        "endLine": 619,
+        "endChar": 7
+      },
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b24d5f6d_8f715c94",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2018-09-10T06:41:31Z",
+      "side": 1,
+      "message": "Yes. The tags database schema is being reworked (T185355), so I think we shouldn\u0027t hardcode the SQL here but use some core\u0027s wrapper.",
+      "parentUuid": "8b44cb13_5d03e491",
       "range": {
         "startLine": 619,
         "startChar": 3,
