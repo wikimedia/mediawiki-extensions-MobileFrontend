@@ -179,6 +179,30 @@
     },
     {
       "key": {
+        "uuid": "a7a206f5_e9f0f80d",
+        "filename": ".nycrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-10T22:51:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54b7ff60_2ac3463a",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "49324ea07b037475a82f5b965f87d95eea1038ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03416928_a36d4d00",
         "filename": ".nycrc.json",
         "patchSetId": 1
