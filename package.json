@@ -22,6 +22,7 @@
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.10.0",
     "jsdoc": "3.5.5",
+    "pre-commit": "1.2.2",
     "qunit": "2.6.2",
     "stylelint": "9.3.0",
     "stylelint-config-wikimedia": "0.4.3",
