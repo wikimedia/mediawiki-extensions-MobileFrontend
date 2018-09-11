@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfaeae50_d8c41b8c",
+        "filename": "src/mobile.startup/browser.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T22:26:05Z",
+      "side": 1,
+      "message": "Should probably be renamed Browser.js since it exports a class not a singleton.",
+      "revId": "056c657037bd38189a4944d1c2020b4325561384",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
