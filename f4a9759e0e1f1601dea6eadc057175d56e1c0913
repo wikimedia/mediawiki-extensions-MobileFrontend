@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61188d12_65c52244",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T19:46:44Z",
+      "side": 1,
+      "message": "Should we call this moduleLoader with a lowercase m since it\u0027s an instance of ModuleLoader? That will make the export mapping 1:1.",
+      "range": {
+        "startLine": 8,
+        "startChar": 20,
+        "endLine": 8,
+        "endChar": 21
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4db47776_19a00772",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T19:46:44Z",
+      "side": 1,
+      "message": "I think a todo got dropped with this change. Either the one below or the one in modules.js.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
