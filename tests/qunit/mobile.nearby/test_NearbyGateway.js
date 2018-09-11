@@ -3,7 +3,7 @@
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' );
 
 	QUnit.module( 'MobileFrontend NearbyGateway', {
-		setup: function () {
+		beforeEach: function () {
 			var api = {
 				ajax: $.noop()
 			};
@@ -98,7 +98,7 @@
 		} ).then( function ( pages ) {
 			assert.strictEqual( pages.length, 3 );
 			assert.strictEqual( pages[ 0 ].title, 'Wikimedia Foundation' );
-			assert.ok( !pages[ 0 ].thumbnail.isLandscape );
+			assert.strictEqual( pages[ 0 ].thumbnail.isLandscape, false );
 			assert.strictEqual( pages[ 2 ].title, 'W San Francisco' );
 			assert.strictEqual( pages[ 2 ].thumbnail, false );
 			assert.strictEqual( pages[ 2 ].dist.toPrecision( 6 ), '177.400' );

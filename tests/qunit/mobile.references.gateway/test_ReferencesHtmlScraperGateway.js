@@ -6,7 +6,7 @@
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: htmlScraper references gateway', {
-		setup: function () {
+		beforeEach: function () {
 			this.$container = mw.template.get( 'tests.mobilefrontend', 'references.html' )
 				.render().appendTo( '#qunit-fixture' );
 			this.page = new Page( {
@@ -27,7 +27,7 @@
 
 	QUnit.test( 'checking bad reference', function ( assert ) {
 		return this.referencesGateway.getReference( '#cite_note-bad', this.page ).catch( function ( err ) {
-			assert.ok( err === ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
+			assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
 		} );
 	} );
 

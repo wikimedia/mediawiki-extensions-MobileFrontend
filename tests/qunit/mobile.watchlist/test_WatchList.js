@@ -8,7 +8,7 @@
 		} ).getGlyphClassName();
 
 	QUnit.module( 'MobileFrontend modules/WatchList', {
-		setup: function () {
+		beforeEach: function () {
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 		}

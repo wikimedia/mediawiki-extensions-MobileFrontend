@@ -148,13 +148,13 @@
 							protection: protection,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
-							isMainPage: mv.hasOwnProperty( 'mainpage' ),
+							isMainPage: mv.mainpage !== undefined,
 							historyUrl: mw.util.getUrl( title, {
 								action: 'history'
 							} ),
 							lastModifiedTimestamp: timestamp,
 							languageCount: mv.languagecount,
-							hasVariants: mv.hasOwnProperty( 'hasvariants' ),
+							hasVariants: mv.hasvariants !== undefined,
 							displayTitle: mv.displaytitle
 						};
 						// Add non-anonymous user information

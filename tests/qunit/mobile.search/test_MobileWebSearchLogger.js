@@ -3,7 +3,7 @@
 	var MobileWebSearchLogger = M.require( 'mobile.search/MobileWebSearchLogger' );
 
 	QUnit.module( 'MobileFrontend: MobileWebSearchLogger', {
-		setup: function () {
+		beforeEach: function () {
 			this.logger = new MobileWebSearchLogger( this.schema );
 			this.spy = this.sandbox.stub( mw, 'track' );
 		}
@@ -37,11 +37,11 @@
 
 		data = mw.track.getCall( 1 ).args[1];
 
-		assert.strictEqual( 'impression-results', data.action );
-		assert.strictEqual( 'prefix', data.resultSetType );
-		assert.strictEqual( 2, data.numberOfResults );
-		assert.strictEqual( this.logger.userSessionToken, data.userSessionToken );
-		assert.strictEqual( this.logger.searchSessionToken, data.searchSessionToken );
+		assert.strictEqual( data.action, 'impression-results' );
+		assert.strictEqual( data.resultSetType, 'prefix' );
+		assert.strictEqual( data.numberOfResults, 2 );
+		assert.strictEqual( data.userSessionToken, this.logger.userSessionToken );
+		assert.strictEqual( data.searchSessionToken, this.logger.searchSessionToken );
 	} );
 
 	QUnit.test( 'it should refresh the user session token when the search is shown again', function ( assert ) {
@@ -76,8 +76,8 @@
 
 		data = mw.track.getCall( 2 ).args[1];
 
-		assert.strictEqual( 'click-result', data.action );
-		assert.strictEqual( 1, data.clickIndex );
+		assert.strictEqual( data.action, 'click-result' );
+		assert.strictEqual( data.clickIndex, 1 );
 	} );
 
 	QUnit.test( 'it should refresh the search session token when the search API request completes again', function ( assert ) {

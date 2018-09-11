@@ -106,7 +106,7 @@
 		 * wrapper for jQuery util function to check if something is numeric
 		 * @memberof util
 		 * @instance
-		 * @return {Boolean}
+		 * @return {boolean}
 		 */
 		isNumeric: function () {
 			return $.isNumeric.apply( $, arguments );

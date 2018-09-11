@@ -34,7 +34,7 @@ ModuleLoader.prototype = {
 		 * @return {Object} Module
 		 */
 		function localRequire() {
-			if ( !registry.hasOwnProperty( id ) ) {
+			if ( !Object.hasOwnProperty.call( registry, id ) ) {
 				throw new Error( 'MobileFrontend Module not found: ' + id );
 			}
 			return registry[ id ];
@@ -63,7 +63,7 @@ ModuleLoader.prototype = {
 	define: function ( id, obj ) {
 		var self = this;
 
-		if ( this._register.hasOwnProperty( id ) ) {
+		if ( Object.hasOwnProperty.call( this._register, id ) ) {
 			throw new Error( 'Module already exists: ' + id );
 		}
 		this._register[ id ] = obj;

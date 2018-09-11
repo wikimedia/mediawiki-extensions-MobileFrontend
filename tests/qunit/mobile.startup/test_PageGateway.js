@@ -3,7 +3,7 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' );
 
 	QUnit.module( 'MobileFrontend PageGateway', {
-		setup: function () {
+		beforeEach: function () {
 			this.api = new mw.Api();
 			pageGateway = new PageGateway( this.api );
 		}
@@ -240,7 +240,7 @@
 		} );
 	} );
 
-	QUnit.test( '#getPageLanguages', function ( assert ) {
+	QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
 			query: {
 				pages: [
@@ -357,7 +357,7 @@
 		} );
 	} );
 
-	QUnit.test( '#getPageLanguages', function ( assert ) {
+	QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 		var spy = this.sandbox.spy( this.api, 'get' );
 		// prevent rogue ajax request
 		this.sandbox.stub( jQuery, 'ajax' ).returns( $.Deferred().resolve() );
@@ -459,7 +459,7 @@
 	QUnit.test( '#getPage (forwards api errors)', function ( assert ) {
 		this.sandbox.stub( this.api, 'get' ).returns( $.Deferred().reject( 'missingtitle' ) );
 		return pageGateway.getPage( 'Err' ).catch( function ( msg ) {
-			assert.ok( msg === 'missingtitle' );
+			assert.strictEqual( msg, 'missingtitle' );
 		} );
 	} );
 

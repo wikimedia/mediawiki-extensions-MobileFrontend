@@ -3,7 +3,7 @@
 	var SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
 	QUnit.module( 'MobileFrontend: SearchGateway', {
-		setup: function () {
+		beforeEach: function () {
 			this.gateway = new SearchGateway( new mw.Api() );
 			this.sandbox.stub( this.gateway.api, 'get', function () {
 				return $.Deferred().resolve( {
@@ -81,7 +81,7 @@
 	} );
 
 	QUnit.module( 'MobileFrontend SearchGateway (Wikidata Descriptions)', {
-		setup: function () {
+		beforeEach: function () {
 			var data = {
 				query: {
 					pages: {
@@ -116,8 +116,9 @@
 		var searchApi = new SearchGateway( new mw.Api() );
 		return searchApi.search( 'brad' ).then( function ( resp ) {
 			var results = resp.results;
-			assert.ok(
-				results[0].wikidataDescription === undefined,
+			assert.strictEqual(
+				results[0].wikidataDescription,
+				undefined,
 				'Braddy does not have a Wikidata description.'
 			);
 			assert.strictEqual(

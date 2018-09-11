@@ -9,7 +9,7 @@
 
 	/**
 	 * Notifies the user that settings were asynchronously saved.
-	 * @param {Boolean} isPending if set toast will show after page has been reloaded.
+	 * @param {boolean} isPending if set toast will show after page has been reloaded.
 	 */
 	function notify( isPending ) {
 		if ( isPending ) {
@@ -20,8 +20,8 @@
 	}
 	/**
 	 * Creates a label for use with a form input
-	 * @param {String} heading
-	 * @param {String} description
+	 * @param {string} heading
+	 * @param {string} description
 	 * @return {OO.ui.LabelWidget}
 	 */
 	function createLabel( heading, description ) {

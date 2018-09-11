@@ -10,7 +10,7 @@
 		} ).getGlyphClassName();
 
 	QUnit.module( 'MobileFrontend mobile.pagelist.scripts/WatchstarPageList', {
-		setup: function () {
+		beforeEach: function () {
 			var
 				resp = {
 					query: {

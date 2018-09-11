@@ -17,7 +17,7 @@
 			var cache = this[ '__cache' + memoized.cacheId ] ||
 				( this[ '__cache' + memoized.cacheId ] = {} ),
 				key = [].join.call( arguments, '|' );
-			if ( cache.hasOwnProperty( key ) ) {
+			if ( Object.prototype.hasOwnProperty.call( cache, key ) ) {
 				return cache[ key ];
 			}
 			return ( cache[ key ] = method.apply( this, arguments ) );

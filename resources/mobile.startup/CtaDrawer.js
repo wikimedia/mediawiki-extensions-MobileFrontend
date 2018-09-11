@@ -74,10 +74,10 @@
 				}, this.options.signupQueryParams );
 
 			// Give the button and the anchor a default target, if it isn't set already
-			if ( !this.options.progressiveButton.hasOwnProperty( 'href' ) ) {
+			if ( !this.options.progressiveButton.href ) {
 				this.options.progressiveButton.href = mw.util.getUrl( 'Special:UserLogin', params );
 			}
-			if ( !this.options.actionAnchor.hasOwnProperty( 'href' ) ) {
+			if ( !this.options.actionAnchor.href ) {
 				this.options.actionAnchor.href = mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) );
 			}
 		}

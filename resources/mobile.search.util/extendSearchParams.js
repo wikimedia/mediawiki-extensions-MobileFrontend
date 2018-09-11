@@ -28,7 +28,7 @@
 			args,
 			result;
 
-		if ( !displayWikibaseDescriptions.hasOwnProperty( feature ) ) {
+		if ( !Object.prototype.hasOwnProperty.call( displayWikibaseDescriptions, feature ) ) {
 			throw new Error( '"' + feature + '" isn\'t a feature that shows Wikibase descriptions.' );
 		}
 

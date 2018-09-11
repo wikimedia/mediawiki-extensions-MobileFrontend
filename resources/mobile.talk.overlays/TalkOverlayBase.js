@@ -24,8 +24,8 @@
 		 * and as soon as MobileFrontend uses an asset bundler we'll make that so.
 		 * @memberof TalkOverlayBase
 		 * @instance
-		 * @param {String} text
-		 * @return {String} text with an autosign ("~~~~") if necessary
+		 * @param {string} text
+		 * @return {string} text with an autosign ("~~~~") if necessary
 		 */
 		/**
 		 * @memberof TalkOverlayBase

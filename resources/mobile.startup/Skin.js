@@ -163,7 +163,7 @@
 			 * Check whether an image should be loaded based on its proximity to the
 			 * viewport; and whether it is displayed to the user.
 			 * @param {jQuery.Object} $placeholder
-			 * @return {Boolean}
+			 * @return {boolean}
 			 */
 			function shouldLoadImage( $placeholder ) {
 				return viewport.isElementCloseToViewport( $placeholder[0], offset ) &&

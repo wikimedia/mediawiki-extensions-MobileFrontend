@@ -63,7 +63,7 @@
 		};
 
 	QUnit.module( 'MobileFrontend: Structured LanguageOverlay', {
-		setup: function () {
+		beforeEach: function () {
 			if ( mw.eventLog ) {
 				this.sandbox.stub( mw.eventLog.Schema.prototype, 'log' );
 			}

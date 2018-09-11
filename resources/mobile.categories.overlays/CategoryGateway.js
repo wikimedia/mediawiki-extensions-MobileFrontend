@@ -66,7 +66,7 @@
 				cllimit: 50,
 				formatversion: 2
 			}, this.continueParams ) ).then( function ( data ) {
-				if ( data.hasOwnProperty( 'continue' ) ) {
+				if ( data.continue !== undefined ) {
 					self.continueParams = data.continue;
 				} else {
 					self.canContinue = false;

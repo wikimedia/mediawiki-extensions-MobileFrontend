@@ -4,7 +4,7 @@
 		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' );
 
 	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
-		setup: function () {
+		beforeEach: function () {
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
 			this.messageStub = this.sandbox.stub( BlockMessage.prototype, 'initialize' );

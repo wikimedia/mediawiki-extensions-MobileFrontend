@@ -2,7 +2,7 @@
 	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' );
 
 	QUnit.module( 'MobileFrontend mobile.editor.api/EditorGateway', {
-		setup: function () {
+		beforeEach: function () {
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( {
 				query: {
 					pages: [
@@ -72,7 +72,7 @@
 
 		return gateway.getContent().then( function ( resp ) {
 			assert.strictEqual( resp.text, '', 'return empty section' );
-			assert.ok( !spy.called, 'don\'t try to retrieve content using API' );
+			assert.notOk( spy.called, 'don\'t try to retrieve content using API' );
 		} );
 	} );
 
