@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b8d3b6cf_65ea4e97",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T23:11:56Z",
+      "side": 1,
+      "message": "nice catch",
+      "parentUuid": "d8069aa4_84c84e0d",
+      "range": {
+        "startLine": 6,
+        "startChar": 9,
+        "endLine": 6,
+        "endChar": 15
+      },
+      "revId": "c45b46efed435e118f07320259e59021ce8d3362",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7392de16_a02710c3",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 16
@@ -53,6 +77,30 @@
       "writtenOn": "2018-09-11T23:05:49Z",
       "side": 1,
       "message": "Just a question: Does the grouping of the require / M.define statements here not matter? In the earlier patch, I had each M.define statement be directly after its respective require statement because:\n\n1) We will eventually need to require dependencies which depend on the mw.mobileFrontend being defined. If the mw.mobileFrontend is defined after the requires then that won\u0027t be defined in time. Or will we use something else instead?\n\n2) I was concerned we might run into issues with something being required and doing a M.require on a dependency that hadn\u0027t been M.defined yet.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 58
+      },
+      "revId": "c45b46efed435e118f07320259e59021ce8d3362",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9a3912d_95f16e3a",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T23:11:56Z",
+      "side": 1,
+      "message": "Does the grouping matter nope - but I think dependencies at the top is a good pattern to use as it makes clear what a page uses and if they\u0027re hidden in the file that isn\u0027t so obvious.\n\nPer 1+2) We\u0027ll use require directly rather than lean on M.require/M.define. Anything else will load after this file and use mw.mobileFrontend",
+      "parentUuid": "f431ebfa_a268f9b3",
       "range": {
         "startLine": 1,
         "startChar": 0,
