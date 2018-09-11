@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ddd0c16a_9d71d26b",
+        "filename": "webpack.config.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T23:39:03Z",
+      "side": 0,
+      "message": "This is useful for testing and debugging. Why do we want to loop in a dependency on mw instead of using this dependency-free export? The long term todo from my point of view is to remove mw.mobileFrontend instead.",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 41
+      },
+      "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
