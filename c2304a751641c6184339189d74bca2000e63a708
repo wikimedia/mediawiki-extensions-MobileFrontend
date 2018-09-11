@@ -22,6 +22,30 @@
       "revId": "c2304a751641c6184339189d74bca2000e63a708",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1269ea3f_ec572045",
+        "filename": ".eslintrc.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T17:14:28Z",
+      "side": 1,
+      "message": "Want to post a patch to remove this line, so we have that conversation?",
+      "parentUuid": "5a731c9c_51f4202e",
+      "range": {
+        "startLine": 49,
+        "startChar": 2,
+        "endLine": 49,
+        "endChar": 14
+      },
+      "revId": "c2304a751641c6184339189d74bca2000e63a708",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
