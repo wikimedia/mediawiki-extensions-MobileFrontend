@@ -267,6 +267,30 @@
     },
     {
       "key": {
+        "uuid": "a1c65370_75ee7a10",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:54:08Z",
+      "side": 1,
+      "message": "(and as the latest patchset reminds me - there\u0027s a reason we use M/mw.mobileFrontend - the resource-modules linter). Please revert back to PS11.",
+      "parentUuid": "09f8d4ce_63d7dc8f",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3811a48b_d2c9a816",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 11
