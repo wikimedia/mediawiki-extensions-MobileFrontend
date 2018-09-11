@@ -243,6 +243,30 @@
     },
     {
       "key": {
+        "uuid": "09f8d4ce_63d7dc8f",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:51:45Z",
+      "side": 1,
+      "message": "(and it does.. try it and you will see lots of issues relating to require)",
+      "parentUuid": "de7144f6_cf5114ce",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3811a48b_d2c9a816",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 11
@@ -272,6 +296,24 @@
       "side": 1,
       "message": "there are two globals (which continues to confuse me)\nmw.mobileFrontend which has been used for a while and the new mobileFrontend created by webpack\n\nThis was confusing Timo as well so i wonder if we could/should rename this...",
       "parentUuid": "3811a48b_d2c9a816",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a643d4e_270d0574",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:51:45Z",
+      "side": 1,
+      "message": "This makes it clear to me that the mobileFrontend global is confusing everyone and should be renamed or removed\n\nI\u0027d prefer to remove:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/459851 Drop mobileFrontend global    \n\nbut a suitable rename might be mobileComponents.",
+      "parentUuid": "5890c265_2008e921",
       "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
