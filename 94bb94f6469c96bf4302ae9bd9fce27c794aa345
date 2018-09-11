@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6c207b18_34327436",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:16:13Z",
+      "side": 0,
+      "message": "w00tttt we fixed a todo!",
+      "revId": "94bb94f6469c96bf4302ae9bd9fce27c794aa345",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

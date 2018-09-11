@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "29ff3a9f_478e1b1e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:16:13Z",
+      "side": 1,
+      "message": "Should be \"Continue\"\nhave corrected the task name :)",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1577899_6222a8ea",
+        "filename": "package.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:16:13Z",
+      "side": 1,
+      "message": "We chatted about this in the team channel and Nick is going to have a go at removing this dependency.",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4453d0e0_1a8bfb1b",
+        "filename": "package.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:16:13Z",
+      "side": 1,
+      "message": "and this one",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61188d12_65c52244",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 11
@@ -108,6 +159,30 @@
       "side": 1,
       "message": "Oh wait, I think I misunderstood. Are you proposing that instead of using \"M\", we use \"moduleLoader\"?",
       "parentUuid": "61188d12_65c52244",
+      "range": {
+        "startLine": 8,
+        "startChar": 20,
+        "endLine": 8,
+        "endChar": 21
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "737b04c9_c99513c5",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:16:13Z",
+      "side": 1,
+      "message": "I think the suggestion is to lowercase the variable name as a capitalised variable suggests a class and a lowercase suggests an instance.",
+      "parentUuid": "983238ed_8019ac84",
       "range": {
         "startLine": 8,
         "startChar": 20,
