@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "208fe8a5_354a25ed",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T04:27:05Z",
+      "side": 1,
+      "message": "This is my fault. I thought it was ok to use const in tests if they pass.",
+      "parentUuid": "b6da316e_d94b5d8b",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6317288_2cf2a24f",
         "filename": "tests/node-qunit/config.js",
         "patchSetId": 9
