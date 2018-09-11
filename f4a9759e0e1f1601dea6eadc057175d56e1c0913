@@ -219,6 +219,30 @@
     },
     {
       "key": {
+        "uuid": "de7144f6_cf5114ce",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:40:57Z",
+      "side": 1,
+      "message": "because mw.mobileFrontend is used all over our codebase... I think this is correct.\nIf you remove this line, it will break a whole bunch of things not using webpack, right?",
+      "parentUuid": "c6e0d48c_d47d8e7a",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3811a48b_d2c9a816",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 11
@@ -230,6 +254,24 @@
       "writtenOn": "2018-09-11T21:35:38Z",
       "side": 1,
       "message": "I think this global is still mobileFrontend[\u0027mobile.startup\u0027].moduleLoader, right?",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5890c265_2008e921",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:40:57Z",
+      "side": 1,
+      "message": "there are two globals (which continues to confuse me)\nmw.mobileFrontend which has been used for a while and the new mobileFrontend created by webpack\n\nThis was confusing Timo as well so i wonder if we could/should rename this...",
+      "parentUuid": "3811a48b_d2c9a816",
       "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
