@@ -46,6 +46,30 @@
       "revId": "c2304a751641c6184339189d74bca2000e63a708",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9df2bea_40488ad8",
+        "filename": ".eslintrc.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T19:10:51Z",
+      "side": 1,
+      "message": "Sure, done here: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/459838.",
+      "parentUuid": "1269ea3f_ec572045",
+      "range": {
+        "startLine": 49,
+        "startChar": 2,
+        "endLine": 49,
+        "endChar": 14
+      },
+      "revId": "c2304a751641c6184339189d74bca2000e63a708",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
