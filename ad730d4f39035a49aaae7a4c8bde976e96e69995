@@ -46,6 +46,30 @@
       "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c60f5b3_21fdc4c6",
+        "filename": "webpack.config.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T23:56:33Z",
+      "side": 0,
+      "message": "mobileFrontend contains all modules in the project, currently only mobile.startup. Eventually it will be usable like:\n\n mobileFrontend[\u0027mobile.startup\u0027].util.foo()\n mobileFrontend[\u0027mobile.init\u0027].test.projectApi \u003d new mw.LiveFlakyMockApi()\n console.log(mobileFrontend[\u0027mobile.nearby\u0027])\n\nmw.mobileFrontend is a singleton instance of ModuleLoader. You can \"import\" things that define a module but not every one of our sources under src/ will.",
+      "parentUuid": "9206e1b7_24052092",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 41
+      },
+      "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
