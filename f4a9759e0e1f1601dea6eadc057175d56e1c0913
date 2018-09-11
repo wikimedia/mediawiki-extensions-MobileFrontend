@@ -315,6 +315,30 @@
     },
     {
       "key": {
+        "uuid": "c2219394_83e27bbc",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T23:42:16Z",
+      "side": 1,
+      "message": "Yep, that\u0027s why it\u0027s a todo not a todone! It\u0027s confusing to export mobileFrontend and duplicate mobileFrontend[\u0027mobile.startup\u0027].moduleLoader as mw.mobileFrontend.",
+      "parentUuid": "aaf285d2_ca9f7d27",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3811a48b_d2c9a816",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 11
@@ -362,6 +386,24 @@
       "side": 1,
       "message": "This makes it clear to me that the mobileFrontend global is confusing everyone and should be renamed or removed\n\nI\u0027d prefer to remove:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/459851 Drop mobileFrontend global    \n\nbut a suitable rename might be mobileComponents.",
       "parentUuid": "5890c265_2008e921",
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a81609a_c51621ac",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T23:42:16Z",
+      "side": 1,
+      "message": "I\u0027m fine with removal or renaming since you\u0027re the boss but we would do neither if I had my druthers. This export is only confusing because we\u0027re in the midst of porting. mobileFrontend is the superior name since this will house all modules in the project of the same name and I retain that it is a useful feature.",
+      "parentUuid": "7a643d4e_270d0574",
       "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
