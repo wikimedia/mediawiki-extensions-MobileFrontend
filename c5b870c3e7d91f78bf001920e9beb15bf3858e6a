@@ -113,6 +113,24 @@
     },
     {
       "key": {
+        "uuid": "a45fd3da_73e087a0",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "That makes sense. Sorry I misunderstood earlier. The latest patch adds the global in mobile.startup.js but I tried to remove the usage of the global from the files that this and the View.js patch cover",
+      "parentUuid": "82efb036_269f785a",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d1bd236_4d38f5bc",
         "filename": "src/mobile.startup/oo-extend.js",
         "patchSetId": 8
@@ -124,6 +142,24 @@
       "writtenOn": "2018-09-10T23:23:52Z",
       "side": 1,
       "message": "There is no reason for this to be added to the OO object now.",
+      "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4f87387_0cbf9a72",
+        "filename": "src/mobile.startup/oo-extend.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "Removed in latest patch",
+      "parentUuid": "2d1bd236_4d38f5bc",
       "revId": "c5b870c3e7d91f78bf001920e9beb15bf3858e6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

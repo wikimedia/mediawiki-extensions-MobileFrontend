@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "05060dd1_e01254c1",
+        "filename": "src/mobile.startup/cache.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "Done in latest patch",
+      "parentUuid": "f13c1335_c1a8735f",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afdfc84_362df9e5",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 9
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "cf6182b3_f37897a8",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "Removed in latest patch",
+      "parentUuid": "5afdfc84_362df9e5",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ecac9a5e_0b2afaf2",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 9
@@ -64,6 +100,24 @@
       "writtenOn": "2018-09-10T23:23:52Z",
       "side": 1,
       "message": "I know it\u0027s more verbose, but would it make more sense to separate the requires out from the registers?\n\nIt feels like this would be cleaner and would allow us to remove these registers in future as we port over more files.\n\nDoing this will also surpress the warnings you are getting when running npm run lint:modules - resource-modules is not that clever.\n\n\nmw.mobileFrontend.define( \u0027mobile.startup/util\u0027, util ) OR\nM.define( \u0027mobile.startup/util\u0027, util ) is the line it looks for.",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09d1eb84_6fdf965c",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "Yes it, would. My apologies. The reason I did it that way was because I was confused on our eslint rules and thought that we had a rule that prohibited declaring variables without defining them. The latest patch makes this more linear.",
+      "parentUuid": "ecac9a5e_0b2afaf2",
       "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -105,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1a0e9fb7_bdd637f1",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "My bad, I missed that one. Removed in latest patch.",
+      "parentUuid": "208fe8a5_354a25ed",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6317288_2cf2a24f",
         "filename": "tests/node-qunit/config.js",
         "patchSetId": 9
@@ -116,6 +188,24 @@
       "writtenOn": "2018-09-10T23:23:52Z",
       "side": 1,
       "message": "mfExtend does not need to be on the OO global",
+      "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe9f0746_8067fe14",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T19:30:19Z",
+      "side": 1,
+      "message": "Removed from latest patch.",
+      "parentUuid": "a6317288_2cf2a24f",
       "revId": "2b5ad490f4a8487364dff7d295f7bc53faae8265",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
