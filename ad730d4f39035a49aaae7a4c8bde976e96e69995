@@ -22,6 +22,30 @@
       "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9206e1b7_24052092",
+        "filename": "webpack.config.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T23:46:00Z",
+      "side": 0,
+      "message": "I\u0027m still not clear on the value here - can you elaborate what you mean by testing and debugging here? I can\u0027t see any reason we need to inspect these values right now and I\u0027m a strong believer in the https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it principle that we shouldn\u0027t add things unless there is a clear usecase.\nIt also feels redundant given these exact values are also available in mw.mobileFrontend in different places meaning there is a high risk of confusion!\n\nIf there is - great- but at the very least we need to rename this variable to avoid confusion e.g. mobileComponents as the name is causing a lot of confusion and friction. The mw.mobileFrontend dependency is not going away any time soon (I\u0027d not be surprised if it\u0027s still here this time next year) and cannot be renamed, but this new one can.",
+      "parentUuid": "ddd0c16a_9d71d26b",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 41
+      },
+      "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
