@@ -168,7 +168,7 @@
 	"mobile-frontend-nearby-loading": "تحميل مواضيع قرب الموقع الحالي الخاص بك",
 	"mobile-frontend-nearby-noresults": "هذا المكان هادئ...لا وجود لأية صفحات عن أماكن قريبة.",
 	"mobile-frontend-nearby-noresults-guidance": "حاول إنشاء صفحة جديدة أو إضافة الموقع لصفحة موجودة",
-	"mobile-frontend-nearby-permission-denied": "لقد رفضت الوصول إلى خدمات الموقع ل{{SITENAME}}، لتغيير هذا يُرجى زيارة إعدادات متصفحك أو جهازك",
+	"mobile-frontend-nearby-permission-denied": "لقد رفضت الوصول إلى خدمات الموقع ل{{SITENAME}}، لتغيير هذا تُرجَى زيارة إعدادات متصفحك أو جهازك",
 	"mobile-frontend-nearby-location-unavailable": "لا يمكن ل{{SITENAME}} تحديد موقعك; تُرجَى المحاولة مرة أخرى مع إشارة أفضل.",
 	"mobile-frontend-nearby-requirements": "نعتذر! متصفحك لا يدعم الصفحات القريبة في {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "جرّب متصفحا آخرًا أو مكّن جافاسكربت إذا كنت عطلتها.",
