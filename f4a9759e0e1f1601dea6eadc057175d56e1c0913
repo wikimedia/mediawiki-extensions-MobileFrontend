@@ -45,6 +45,54 @@
       "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dfaafec6_f85653c6",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T20:10:24Z",
+      "side": 1,
+      "message": "That was my first inclination, but we consistently use M in other files which is why I kept M. I\u0027m fine either way though. Which do you prefer?",
+      "parentUuid": "61188d12_65c52244",
+      "range": {
+        "startLine": 8,
+        "startChar": 20,
+        "endLine": 8,
+        "endChar": 21
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6665b62e_31287bc3",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T20:10:24Z",
+      "side": 1,
+      "message": "I removed the todo because I thought this patch addressed it by\n\n1) not setting mw.mobileFrontend in modules.js\n\nand\n\n2) Making a new instance here that the file exports it\n\nIs there more todo?",
+      "parentUuid": "4db47776_19a00772",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
