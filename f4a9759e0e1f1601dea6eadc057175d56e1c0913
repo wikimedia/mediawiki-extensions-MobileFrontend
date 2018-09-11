@@ -93,6 +93,30 @@
       "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "983238ed_8019ac84",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-11T20:14:11Z",
+      "side": 1,
+      "message": "Oh wait, I think I misunderstood. Are you proposing that instead of using \"M\", we use \"moduleLoader\"?",
+      "parentUuid": "61188d12_65c52244",
+      "range": {
+        "startLine": 8,
+        "startChar": 20,
+        "endLine": 8,
+        "endChar": 21
+      },
+      "revId": "f4a9759e0e1f1601dea6eadc057175d56e1c0913",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
