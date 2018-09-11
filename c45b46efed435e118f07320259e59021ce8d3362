@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7392de16_a02710c3",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T22:38:11Z",
+      "side": 1,
+      "message": "This is necessary to avoid failures in resource-modules\n\nSince long term we can get rid of resource-modules and stop exposing these using M.define I think this is fine.",
+      "revId": "c45b46efed435e118f07320259e59021ce8d3362",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
