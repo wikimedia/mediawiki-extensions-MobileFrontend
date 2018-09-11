@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1886c53_c6f930cc",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-11T21:53:08Z",
+      "side": 1,
+      "message": "Using moduleLoader here is problematic. As I mentioned earlier, the linter is not smart enough to resolve this.\n\nThe error \"Required mobile.startup/util not defined in any source files\" can be fixed by doing what you were doing before\ncalling mw.mobileFrontend.define directly, or M.define",
+      "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
