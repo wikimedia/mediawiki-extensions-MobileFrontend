@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56f4e1c4_f62f1c49",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-11T19:37:29Z",
+      "side": 1,
+      "message": "What do you think of moving this to a utility function, e.g.:\n\n function parseHTML(str) {\n   return $( $.parseHTML( src.trim() ) );\n }\n\nOr MockMediaWiki instead? E.g.:\n\n mw \u003d { template: { compile() { return $( $.parseHTML( src.trim() ) ) } } }\n\nI don\u0027t understand why it needs to be an object with a render prop instead of a simple function. I think the same question applies to this.xyzCompile.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 4
+      },
+      "revId": "a922f7fd0611791e9a1c0f877ad7560a46366f2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
