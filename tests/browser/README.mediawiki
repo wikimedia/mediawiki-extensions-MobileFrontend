@@ -56,7 +56,8 @@ export MEDIAWIKI_API_URL=http://en.wikipedia.beta.wmflabs.org/w/api.php
 
 Run the tests from the MobileFrontend directory with:
 
-  make cucumber
+  bundle install
+  bundle exec cucumber -f pretty tests/browser/
 
 If you want to run a single set of tests, go to the tests/browser directory and
 call 'bundle exec cucumber' with the path to the test file. For example, to run

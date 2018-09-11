@@ -23,13 +23,13 @@ Please follow the coding conventions of MobileFrontend:
 
 #### Git hooks
 
-Git hooks are provided in the dev-scripts directory to assist with adhering to
+Git hooks are provided by default to assist with adhering to
 JavaScript code standards, optimizing PNG files, etc. Running these hooks
 requires node.js, NPM, and grunt.
 
 Install like so:
 
-    make installhooks
+    npm install
 
 If you are not running Vagrant, be sure to set your `MEDIAWIKI_URL` env
 variable to your local index path, e.g.
@@ -67,15 +67,15 @@ the platforms/browsers the change is for where necessary, e.g.:
 
 To run the full test suite run:
 
-    make tests
+    npm run precommit
 
 To run only PHP tests:
 
-    make phpunit
+    php ../../tests/phpunit/phpunit.php "tests/phpunit/"
 
-To run only JS tests:
+To run only MobileFrontend JS tests:
 
-    make qunit
+    npm run test:unit
 
 ### Releasing
 
