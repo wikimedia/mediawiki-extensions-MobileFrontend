@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31da4911_66552af8",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-12T23:29:15Z",
+      "side": 1,
+      "message": "The constructor of this class establishes 2 db connections and calls the parser 4x to transform interface messages, and the Pager-related parent classes do more things I haven\u0027t looked into.\n\nSeems odd to construct a pager unless you also use its result. I suppose that could work, even without a subclass, using it more like a data provider, in favour of the current custom-made DB queries hardcoded in the class which require maintenance.\n\nThat\u0027s a larger change of course, but not as large as a sub class given it\u0027d allow you to keep the output logic as-is.\n\nAnyway, I\u0027m not really suggesting that, but the alternative would imho be to not construct ContribsPager, e.g. to make it a static method, or to help make its constructor cheaper.",
+      "range": {
+        "startLine": 98,
+        "startChar": 1,
+        "endLine": 102,
+        "endChar": 4
+      },
+      "revId": "3944eb54561aeaa3f75ab665aa7e589f782f2ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
