@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09631418_e308a697",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-12T17:48:22Z",
+      "side": 1,
+      "message": "per our conversation this can be renamed moduleLoader now",
+      "revId": "a5c652d99972af478a709eb86a3c5b8ec4d0159f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6347ba9_127df6f1",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-12T17:48:22Z",
+      "side": 1,
+      "message": "but don\u0027t change these :)",
+      "revId": "a5c652d99972af478a709eb86a3c5b8ec4d0159f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
