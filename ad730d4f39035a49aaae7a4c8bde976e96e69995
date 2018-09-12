@@ -70,6 +70,30 @@
       "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "33d9b225_3f89f2f5",
+        "filename": "webpack.config.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-12T22:24:11Z",
+      "side": 0,
+      "message": "Sure, but right now I can do\nmw.mobileFrontend.require(\u0027mobile.startup/util\u0027)\nmw.mobileFrontend.require(\u0027mobile.init/skin\u0027)\nso mw.mobileFrontend is way ahead of it and solves this problem, so we\u0027re duplicating effort here - with the cost of increasing the bundle size (we don\u0027t really need to export anything inside our mobile.startup.js)\n\n\nPublishing this to a global on the window object also comes at the cost of exposing things we don\u0027t want to expose e.g. mobileFrontend[\u0027mobile.init\u0027].test.projectApi in a production setting where gadget editors can and will make use of these APIs\n\nAnyway, per our conversation earlier today, my main grievance here is with the name as it\u0027s causing confusion.\n\nI\u0027ve adjusted this patch to rename the variable to mfModules, however we should think long and hard about the cost of this... whether it actually solves a problem we need to solve and whether it\u0027s worth the risk of making what could become a defacto-public-api that we have to support.",
+      "parentUuid": "3c60f5b3_21fdc4c6",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 41
+      },
+      "revId": "ad730d4f39035a49aaae7a4c8bde976e96e69995",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
