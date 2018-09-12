@@ -8,6 +8,9 @@
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
+  "engines": {
+    "node": "6.11.0"
+  },
   "devDependencies": {
     "@wikimedia/resource-modules": "3.0.1",
     "bundlesize": "0.17.0",
