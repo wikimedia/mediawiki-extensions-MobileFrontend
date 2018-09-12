@@ -99,17 +99,7 @@ ModuleLoader.prototype = {
 		mw.log.deprecate( this._register, id, obj, msg );
 	}
 };
-OO.mixinClass( ModuleLoader, OO.EventEmitter );
 
-/**
- *
- * FIXME: In a wonderful world all this could run in a file called init.js,
- * all the above code would be core and everyone would be happy.
- * @class mw.mobileFrontend
- * @singleton
- */
-mw.mobileFrontend = new ModuleLoader();
-mw.log.deprecate( mw.mobileFrontend, 'on', mw.mobileFrontend.on,
-	'The global EventEmitter should not be used (T156186).' );
+OO.mixinClass( ModuleLoader, OO.EventEmitter );
 
 module.exports = ModuleLoader;
