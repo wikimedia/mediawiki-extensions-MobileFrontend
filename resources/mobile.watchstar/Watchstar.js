@@ -118,7 +118,8 @@
 			var unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName() + ' watched';
 
-			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
+			// add tooltip to the div, not the <a> inside
+			// because that <a> has zero width/height so cannot be hovered
 			this.$el.attr( 'title', this.options.tooltip );
 
 			// Add watched class if necessary

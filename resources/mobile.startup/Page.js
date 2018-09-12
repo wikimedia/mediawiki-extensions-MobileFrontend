@@ -56,14 +56,16 @@
 		 * is human readable, e.g. Talk:The man who lived.
 		 * @property {string} defaults.displayTitle HTML title of the page for display. Falls back
 		 * to defaults.title (escaped) if no value is provided. Must be safe HTML!
-		 * @property {number} defaults.namespaceNumber the number of the namespace the page belongs to
+		 * @property {number} defaults.namespaceNumber the number of the
+		 *  namespace the page belongs to
 		 * @property {Object} defaults.protection List of permissions as returned by API,
 		 * e.g. [{ edit: ['*'] }]
 		 * @property {Array} defaults.sections Array of {Section} objects.
 		 * @property {boolean} defaults.isMainPage Whether the page is the Main Page.
 		 * @property {boolean} defaults.isMissing Whether the page exists in the wiki.
 		 * @property {Object} defaults.thumbnail thumbnail definition corresponding to page image
-		 * @property {boolean} defaults.thumbnail.isLandscape whether the image is in landscape format
+		 * @property {boolean} defaults.thumbnail.isLandscape whether the image is in
+		 *  landscape format
 		 * @property {number} defaults.thumbnail.width of image in pixels.
 		 * @property {number} defaults.thumbnail.height of image in pixels.
 		 * @property {string} defaults.thumbnail.source url for image
@@ -114,11 +116,14 @@
 		},
 
 		/**
-		 * Find the heading in the page. This has the benefit of excluding any additional h2s and h3s that may
+		 * Find the heading in the page.
+		 * This has the benefit of excluding any additional h2s and h3s that may
 		 * have been added programatically.
 		 * @method
-		 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to the section id
-		 *  used in the edit link for the section. Note, confusingly, this is different from section "ID" which is
+		 * @param {number} sectionIndex as defined by the PHP parser.
+		 *  It should correspond to the section id
+		 *  used in the edit link for the section.
+		 *  Note, confusingly, this is different from section "ID" which is
 		 * used in methods
 		 * @return {jQuery.Object}
 		 */
@@ -129,23 +134,27 @@
 				return this.$();
 			} else {
 				return this.$( HEADING_SELECTOR )
-					// Headings must strictly be a child element of a section element or the parser-output
+					// Headings must strictly be a child element of a section element
+					// or the parser-output.
 					// Not an ancestor!
 					.filter( '.mw-parser-output > *, [class^="mf-section-"] > *' ).eq( sectionIndex - 1 );
 			}
 		},
 		/**
 		 * Finds all child elements that match the selector in a given section or subsection.
-		 * Returns any direct child elements that match the selector, (i.e. searches only one level deep)
+		 * Returns any direct child elements that match the selector,
+		 * (i.e. searches only one level deep)
 		 * as well as any elements that match the selector within those children.
-		 * If the Page has no headings (e.g. a stub), then the search will target all nodes within the page.
+		 * If the Page has no headings (e.g. a stub),
+		 * then the search will target all nodes within the page.
 		 *
 		 * This code should work on desktop (PHP parser HTML)
 		 * as well as mobile formatted HTML (PHP parser + MobileFormatter)
 		 * @method
-		 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to the section id
-		 *  used in the edit link for the section. Note, confusingly, this is different from section "ID" which is
-		 * used in methods
+		 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to
+		 *  the section id used in the edit link for the section.
+		 *  Note, confusingly, this is different from section "ID" which is
+		 *  used in methods
 		 * @param {string} selector to match
 		 * @return {jQuery.Object}
 		 */
@@ -170,13 +179,15 @@
 				}
 			}
 
-			// find heading associated with the section by looking at its index position in the article
+			// find heading associated with the section by looking at its
+			// index position in the article
 			// section ids relate to the element position in the page and the first heading
-			// lead has been dealt with above, so first heading corresponds to section 1, the first heading
-			// in the article.
+			// lead has been dealt with above, so first heading corresponds to section 1,
+			// the first heading in the article.
 			$heading = this.findSectionHeadingByIndex( sectionIndex );
 
-			// If section-heading is present on the heading, then we know the page has been MobileFormatted
+			// If section-heading is present on the heading,
+			// then we know the page has been MobileFormatted
 			// and that this is a wrapped section
 			if ( $heading.hasClass( 'section-heading' ) ) {
 				// get content of section
@@ -190,7 +201,8 @@
 					// Grab all issues in section
 					withNestedChildren( $container.children( selector ) );
 			} else {
-				// the heading relates to a subsection (or unwrapped desktop section), so grab elements between this and the next one
+				// the heading relates to a subsection (or unwrapped desktop section),
+				// so grab elements between this and the next one
 				$nextHeading = $heading.eq( 0 ).nextAll( headingSelector ).eq( 0 );
 				return $heading.nextUntil( $nextHeading, selector );
 			}
@@ -328,8 +340,10 @@
 		},
 
 		/**
-		 * Return all the thumbnails in the article. Images which have a class or link container (.image|.thumbimage)
-		 * that matches one of the items of the constant BLACKLISTED_THUMBNAIL_CLASS_SELECTORS will be excluded.
+		 * Return all the thumbnails in the article.
+		 * Images which have a class or link container (.image|.thumbimage)
+		 * that matches one of the items of the constant BLACKLISTED_THUMBNAIL_CLASS_SELECTORS
+		 * will be excluded.
 		 * A thumbnail nested inside one of these classes will still be returned.
 		 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
 		 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
@@ -352,13 +366,15 @@
 					var $a = $el.find( this ),
 						$lazyImage = $a.find( '.lazy-image-placeholder' ),
 						// Parents need to be checked as well.
-						valid = $a.parents( blacklistSelector ).length === 0 && $a.find( blacklistSelector ).length === 0,
+						valid = $a.parents( blacklistSelector ).length === 0 &&
+							$a.find( blacklistSelector ).length === 0,
 						legacyMatch = $a.attr( 'href' ).match( /title=([^/&]+)/ ),
 						match = $a.attr( 'href' ).match( /[^/]+$/ );
 
 					// filter out invalid lazy loaded images if so far image is valid
 					if ( $lazyImage.length && valid ) {
-						// if the regex matches it means the image has one of the classes - so we must invert the result
+						// if the regex matches it means the image has one of the classes
+						// thus we must invert the result
 						valid = !new RegExp( '\\b(' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
 							.test( $lazyImage.data( 'class' ) );
 					}
@@ -367,7 +383,9 @@
 						thumbs.push(
 							new Thumbnail( {
 								el: $a,
-								filename: decodeURIComponent( legacyMatch ? legacyMatch[1] : match[0] )
+								filename: decodeURIComponent(
+									legacyMatch ? legacyMatch[1] : match[0]
+								)
 							} )
 						);
 					}
@@ -381,8 +399,10 @@
 		 * FIXME: Change function signature to take the anchor of the heading
 		 * @memberof Page
 		 * @instance
-		 * @param {string} id of the section as defined by MobileFormatter. Note, that currently, this is different from
-		 * the PHP parser in that it relates to top-level sections. For example, mf-section-1 would relate to section 1. See FIXME.
+		 * @param {string} id of the section as defined by MobileFormatter.
+		 * Note, that currently, this is different from
+		 * the PHP parser in that it relates to top-level sections.
+		 * For example, mf-section-1 would relate to section 1. See FIXME.
 		 * @return {Section}
 		 */
 		getSection: function ( id ) {
@@ -427,10 +447,13 @@
 			terms = resp.terms;
 
 		if ( pageprops || terms ) {
-			// The label is either the display title or the label pageprop (the latter used by Wikidata)
-			// Long term we want to consolidate these. Note that pageprops.displaytitle is HTML, while
+			// The label is either the display title or the label pageprop
+			// (the latter used by Wikidata)
+			// Long term we want to consolidate these.
+			// Note that pageprops.displaytitle is HTML, while
 			// terms.label[0] is plain text.
-			displayTitle = terms && terms.label ? HTML.escape( terms.label[0] ) : pageprops.displaytitle;
+			displayTitle = terms && terms.label ?
+				HTML.escape( terms.label[0] ) : pageprops.displaytitle;
 		}
 		// Add Wikidata descriptions if available (T101719)
 		resp.wikidataDescription = resp.description || undefined;
@@ -442,8 +465,10 @@
 		// page may or may not exist.
 		if ( resp.revisions && resp.revisions[0] ) {
 			revision = resp.revisions[0];
-			resp.lastModified = time.getLastModifiedMessage( new Date( revision.timestamp ).getTime() / 1000,
-				revision.user );
+			resp.lastModified = time.getLastModifiedMessage(
+				new Date( revision.timestamp ).getTime() / 1000,
+				revision.user
+			);
 		}
 
 		return new Page(

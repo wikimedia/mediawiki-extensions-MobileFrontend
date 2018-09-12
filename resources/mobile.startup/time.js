@@ -96,7 +96,8 @@
 			historyUrl || '#',
 			// Abuse PLURAL support to determine if the user is anonymous or not
 			mw.language.convertNumber( username ? 1 : 0 ),
-			// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
+			// Our abuse of PLURAL support means we have to pass the relative URL
+			// rather than construct it from a wikilink
 			username ? mw.util.getUrl( 'User:' + username ) : ''
 		);
 		html = mw.message.apply( this, args ).parse();

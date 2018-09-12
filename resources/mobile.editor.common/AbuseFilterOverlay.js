@@ -4,7 +4,8 @@
 		Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
-	 * Overlay that shows a message about abuse. This overlay is rendered when the error code from the API
+	 * Overlay that shows a message about abuse.
+	 * This overlay is rendered when the error code from the API
 	 * is related to the abusefilter extension.
 	 * @class AbuseFilterOverlay
 	 * @extends Overlay

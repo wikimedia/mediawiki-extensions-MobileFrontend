@@ -24,7 +24,8 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *       var ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
+	 *       var ScrollEndEventEmitter =
+	 *         M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
 	 *       OO.mfExtend( PhotoList, View, {
 	 *         //...
 	 *         initialize: function ( options ) {

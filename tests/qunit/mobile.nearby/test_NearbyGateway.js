@@ -85,7 +85,12 @@
 
 		$( tests ).each( function ( i ) {
 			m._distanceMessage( this[ 0 ] );
-			assert.deepEqual( mw.msg.getCall( i ).args, [ this[ 1 ], mw.language.convertNumber( this[ 2 ] ) ] );
+			assert.deepEqual(
+				mw.msg.getCall( i ).args,
+				[
+					this[ 1 ], mw.language.convertNumber( this[ 2 ] )
+				]
+			);
 		} );
 
 		mw.msg.restore();

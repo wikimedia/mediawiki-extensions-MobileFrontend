@@ -61,7 +61,8 @@
 		 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
 		 * @property {Router} defaults.router instance
 		 * @property {Object} defaults.clearIcon options for the button that clears the search text.
-		 * @property {Object} defaults.searchContentIcon options for the button that allows you to search within content
+		 * @property {Object} defaults.searchContentIcon options for the button that allows you to
+		 *  search within content
 		 * @property {string} defaults.searchTerm Search text.
 		 * @property {string} defaults.placeholderMsg Search input placeholder text.
 		 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
@@ -73,7 +74,8 @@
 		 * @property {string} defaults.searchContentNoResultsMsg Used when no pages with matching
 		 * titles were found.
 		 * @property {string} defaults.action The value of wgScript
-		 * @property {Object} defaults.feedback options for the feedback link below the search results
+		 * @property {Object} defaults.feedback options for the feedback link
+		 *  below the search results
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headerChrome: true,
@@ -168,7 +170,8 @@
 			// history.back queues a task so might run after this call. Thus we use setTimeout
 			// http://www.w3.org/TR/2011/WD-html5-20110113/webappapis.html#queue-a-task
 			setTimeout( function () {
-				// Firefox doesn't allow submission of a form not in the DOM so temporarily re-add it
+				// Firefox doesn't allow submission of a form not in the DOM
+				// so temporarily re-add it
 				$form.appendTo( $el );
 				$form.submit();
 			}, 0 );
@@ -229,7 +232,8 @@
 				originalEvent: ev
 			} );
 
-			// FIXME: ugly hack that removes search from browser history when navigating to search results
+			// FIXME: ugly hack that removes search from browser history
+			// when navigating to search results
 			ev.preventDefault();
 			this.router.back().then( function () {
 				// Router.navigate does not support changing href.

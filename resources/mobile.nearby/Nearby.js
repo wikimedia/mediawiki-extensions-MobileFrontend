@@ -146,7 +146,8 @@
 		 * @instance
 		 * @private
 		 * @param {string} key to a defined error message
-		 * @param {string} msg Message to use, instead of a mapped error message from this.errorMessages
+		 * @param {string} msg Message to use, instead of a mapped error message
+		 *  from this.errorMessages
 		 * @return {Object}
 		 */
 		_errorOptions: function ( key ) {

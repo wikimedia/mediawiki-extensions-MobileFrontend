@@ -2,8 +2,8 @@
  * Extends a class with new methods and member properties.
  *
  * @param {Function} Child function
- * @param {Object|Function} ParentOrPrototype class to inherit from OR if no inheriting class a prototype to
- *  extend the class with,
+ * @param {Object|Function} ParentOrPrototype class to inherit from
+ *  OR if no inheriting class a prototype to extend the class with
  * @param {Object} prototype
  */
 function mfExtend( Child, ParentOrPrototype, prototype ) {

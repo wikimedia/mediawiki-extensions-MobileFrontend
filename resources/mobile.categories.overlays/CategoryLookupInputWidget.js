@@ -6,7 +6,8 @@
 	 * @param {Object} options Configuration options
 	 * @param {CategoryGateway} options.gateway to use to retrieve search results
 	 * @param {jQuery.Object} options.suggestions container element for search suggestions
-	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item clicked.
+	 * @param {jQuery.Object} options.saveButton element. Will get disabled when suggested item
+	 *                                           clicked.
 	 */
 	function CategoryLookupInputWidget( options ) {
 		// Note: this.$element is set to $( '<div>' ) by OOUI.
@@ -22,7 +23,8 @@
 	OO.mixinClass( CategoryLookupInputWidget, OO.ui.mixin.LookupElement );
 
 	/**
-	 * Handle a click on a suggested item. Add it to the list of added categories and show save button.
+	 * Handle a click on a suggested item. Add it to the list of added categories and show save
+	 * button.
 	 * @memberof CategoryLookupInputWidget
 	 * @instance
 	 * @param {Object} data Data of the clicked element

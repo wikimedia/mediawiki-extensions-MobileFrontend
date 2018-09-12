@@ -107,7 +107,8 @@
 		 * Request photos beginning with the current value of endTimestamp
 		 * @memberof PhotoListGateway
 		 * @instance
-		 * @return {jQuery.Deferred} where parameter is a list of JavaScript objects describing an image.
+		 * @return {jQuery.Deferred} where parameter is a list of JavaScript
+		 *  objects describing an image.
 		 */
 		getPhotos: function () {
 			var self = this;

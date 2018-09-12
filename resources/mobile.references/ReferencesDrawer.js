@@ -154,7 +154,8 @@
 			var $dest = this.$( ev.target );
 
 			this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text() );
-			// Don't hide the already shown drawer via propagation and stop default scroll behaviour.
+			// Don't hide the already shown drawer via propagation
+			// and stop default scroll behaviour.
 			return false;
 		}
 	} );

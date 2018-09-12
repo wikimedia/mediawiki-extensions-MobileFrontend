@@ -150,8 +150,8 @@
 		 * @instance
 		 * @param {jQuery.Object} [$container] The container that should be
 		 *  searched for image placeholders. Defaults to "#content".
-		 * @return {jQuery.Deferred} which will be resolved when the attempts to load all images subject to
-		 *  loading have been completed.
+		 * @return {jQuery.Deferred} which will be resolved when the attempts to
+		 *  load all images subject to loading have been completed.
 		 */
 		setupImageLoading: function ( $container ) {
 			var self = this,
@@ -167,7 +167,8 @@
 			 */
 			function shouldLoadImage( $placeholder ) {
 				return viewport.isElementCloseToViewport( $placeholder[0], offset ) &&
-					// If a placeholder is an inline element without a height attribute set it will record as hidden
+					// If a placeholder is an inline element without a height attribute set
+					// it will record as hidden
 					// to circumvent this we also need to test the height (see T143768).
 					( $placeholder.is( ':visible' ) || $placeholder.height() === 0 );
 			}
@@ -212,7 +213,8 @@
 		 * Load an image on demand
 		 * @memberof Skin
 		 * @instance
-		 * @param {Array} [images] a list of images that have not been loaded. If none given all will be loaded
+		 * @param {Array} [images] a list of images that have not been loaded.
+		 *  If none given all will be loaded.
 		 * @return {jQuery.Deferred}
 		 */
 		loadImagesList: function ( images ) {
@@ -334,13 +336,17 @@
 							}
 
 							if ( id ) {
-								gateway.getReferencesList( data.page, id ).then( function ( refListElements ) {
-									// Note if no section html is provided no substitution will happen so user is
-									// forced to rely on placeholder link.
-									if ( refListElements && refListElements[refListIndex] ) {
-										$placeholder.replaceWith( refListElements[refListIndex] );
-									}
-								} );
+								gateway.getReferencesList( data.page, id )
+									.then( function ( refListElements ) {
+										// Note if no section html is provided
+										// no substitution will happen
+										// so user is forced to rely on placeholder link.
+										if ( refListElements && refListElements[refListIndex] ) {
+											$placeholder.replaceWith(
+												refListElements[refListIndex]
+											);
+										}
+									} );
 							}
 						} );
 						// Show the section now the references lists have been placed.

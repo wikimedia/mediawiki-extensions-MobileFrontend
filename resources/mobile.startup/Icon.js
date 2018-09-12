@@ -69,15 +69,18 @@
 		 * @property {Object} defaults Default options hash.
 		 * @property {boolean} defaults.hasText Whether the icon has text.
 		 * @property {boolean} defaults.isSmall Whether the icon should be small.
-		 * @property {string} [defaults.href] value of href attribute, when set tagName will default to anchor tag
-		 * @property {string} defaults.tagName The name of the tag in which the icon is wrapped. Defaults to 'a' when href option present.
+		 * @property {string} [defaults.href] value of href attribute,
+		 *  when set tagName will default to anchor tag
+		 * @property {string} defaults.tagName The name of the tag in which the icon is wrapped.
+		 *  Defaults to 'a' when href option present.
 		 * @property {string} defaults.base String used as a base for generating class names.
 		 * Defaults to 'mw-ui-icon'.
 		 * @property {string} defaults.name Name of the icon.
 		 * @property {string} defaults.modifier Additional class name.
 		 * Defaults to 'mw-ui-icon-element'.
 		 * @property {string} defaults.title Tooltip text.
-		 * @property {boolean} defaults.rotation will rotate the icon by a certain number of degrees.
+		 * @property {boolean} defaults.rotation will rotate the icon by a certain number
+		 *  of degrees.
 		 *  Must be ±90, 0 or ±180 or will throw exception.
 		 */
 		defaults: {

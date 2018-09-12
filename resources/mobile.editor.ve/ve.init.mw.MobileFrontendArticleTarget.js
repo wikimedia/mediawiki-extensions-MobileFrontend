@@ -18,6 +18,7 @@
  * @param {VisualEditorOverlay} overlay Mobile frontend overlay
  * @param {Object} [config] Configuration options
  */
+// eslint-disable-next-line max-len
 ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleTarget( overlay, config ) {
 	this.overlay = overlay;
 	this.$overlay = overlay.$el;
@@ -146,7 +147,8 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 	}
 
 	// Parent method
-	surface = ve.init.mw.MobileFrontendArticleTarget.super.prototype.createSurface.call( this, dmDoc, config );
+	surface = ve.init.mw.MobileFrontendArticleTarget
+		.super.prototype.createSurface.call( this, dmDoc, config );
 
 	surface.connect( this, { scroll: 'onSurfaceScroll' } );
 
@@ -284,10 +286,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
  */
 ve.init.mw.MobileFrontendArticleTarget.prototype.tryTeardown = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.tryTeardown.apply( this, arguments ).then( function () {
-		// eslint-disable-next-line no-restricted-properties
-		window.history.back();
-	} );
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.tryTeardown.apply( this, arguments )
+		.then( function () {
+			// eslint-disable-next-line no-restricted-properties
+			window.history.back();
+		} );
 };
 
 /* Registration */

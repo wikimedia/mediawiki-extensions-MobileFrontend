@@ -130,7 +130,8 @@
 				}
 			} );
 
-			// if there are no categories added, don't do anything (the user shouldn't see the save button)
+			// if there are no categories added, don't do anything (the user shouldn't see the save
+			// button)
 			if ( newCategories.length === 0 ) {
 				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'error' );
 			} else {

@@ -128,7 +128,8 @@
 				this.$saveButton.prop( 'disabled', true );
 				// sign and add newline to front
 				val = '\n\n' + this.autosign( val );
-				// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
+				// FIXME: This should be using a gateway
+				// e.g. TalkGateway, PageGateway or EditorGateway
 				this.editorApi.postWithToken( 'edit', {
 					action: 'edit',
 					title: this.options.title,

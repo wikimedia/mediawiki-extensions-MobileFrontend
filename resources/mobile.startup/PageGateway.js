@@ -129,18 +129,25 @@
 					} else {
 						mv = resp.mobileview;
 						sections = transformSections( mv.sections );
-						// Assume the timestamp is in the form TS_ISO_8601 and we don't care about old browsers
+						// Assume the timestamp is in the form TS_ISO_8601
+						// and we don't care about old browsers
 						// change to seconds to be consistent with PHP
 						timestamp = new Date( mv.lastmodified ).getTime() / 1000;
 						lastModified = mv.lastmodifiedby;
 
 						// FIXME: [API] the API sometimes returns an object and sometimes an array
-						// There are various quirks with the format of protection level as returned by api.
-						// Also it is usually incomplete - if something is missing this means that it has
-						// no protection level. When an array this means there is no protection level set.
-						// So to keep the data type consistent either use the predefined protection level, or
-						// extend it with what is returned by API.
-						protection = Array.isArray( mv.protection ) ? protection : util.extend( protection, mv.protection );
+						// There are various quirks with the format of protection level
+						// as returned by api.
+						// Also it is usually incomplete - if something is missing this means
+						// that it has no protection level.
+						// When an array this means there is no protection level set.
+						// To keep the data type consistent either use the predefined
+						// protection level,
+						// or extend it with what is returned by API.
+						protection = Array.isArray( mv.protection ) ?
+							protection :
+							util.extend( protection, mv.protection );
+
 						resolveObj = {
 							title: title,
 							id: mv.id,

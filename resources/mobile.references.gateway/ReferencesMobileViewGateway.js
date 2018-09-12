@@ -85,7 +85,8 @@
 		 */
 		getReferencesList: function ( page, headingId ) {
 			return this.getReferencesLists( page ).then( function ( data ) {
-				return Object.prototype.hasOwnProperty.call( data, headingId ) ? data[ headingId ] : false;
+				return Object.prototype.hasOwnProperty.call( data, headingId ) ?
+					data[ headingId ] : false;
 			} );
 		},
 		/**

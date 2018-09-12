@@ -94,7 +94,8 @@
 		_getPage: function ( query, pageInfo ) {
 			var page = Page.newFromJSON( pageInfo );
 
-			// If displaytext is set in the generator result (eg. by Wikibase), use that as display title.
+			// If displaytext is set in the generator result (eg. by Wikibase),
+			// use that as display title.
 			// Otherwise default to the page's title.
 			// FIXME: Given that displayTitle could have html in it be safe and just highlight text.
 			// Note that highlightSearchTerm does full HTML escaping before highlighting.
@@ -160,7 +161,8 @@
 						self.searchCache[query] = undefined;
 					} );
 
-				// cache the result to prevent the execution of one search query twice in one session
+				// cache the result to prevent the execution of one search query twice
+				// in one session
 				this.searchCache[query] = request.promise( {
 					abort: function () { xhr.abort(); }
 				} );

@@ -72,7 +72,8 @@
 		 * @property {Object} defaults.loginButton options to render an sign in button
 		 * @property {Object} defaults.signupButton options to render a sign up button
 		 * @property {Object} defaults.anonButton options to render an edit anonymously button
-		 * @property {Object} defaults.warningOptions options for a MessageBox to display anonymous message warning
+		 * @property {Object} defaults.warningOptions options for a MessageBox
+		 *  to display anonymous message warning
 		 * @property {mw.Api} defaults.api an api module to retrieve pages
 		 */
 		defaults: util.extend( {}, EditorOverlayBase.prototype.defaults, {
@@ -184,8 +185,9 @@
 
 					switchToolbar.on( 'switchEditor', function ( mode ) {
 						if ( mode === 'visual' ) {
-							// If the user tries to switch to the VisualEditor, check if any changes have
-							// been made, and if so, tell the user they have to save first.
+							// If the user tries to switch to the VisualEditor,
+							// check if any changes have been made,
+							// and if so, tell the user they have to save first.
 							if ( !self.gateway.hasChanged ) {
 								self._switchToVisualEditor( self.options );
 							} else {
@@ -221,7 +223,8 @@
 			if ( self.options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
 				this.$content.hide();
-				// the user has to click login, signup or edit without login, disable "Next" button on top right
+				// the user has to click login, signup or edit without login,
+				// disable "Next" button on top right
 				this.$anonHiddenButtons = this.$( '.overlay-header .continue, .editor-switcher' ).hide();
 				this.clearSpinner();
 			}
@@ -359,9 +362,12 @@
 			var scrollTop, container, $scrollContainer;
 
 			if ( !this.$scrollContainer ) {
-				container = OO.ui.Element.static.getClosestScrollableContainer( this.$content[ 0 ] );
-				// The scroll container will be either within the view or the document element itself.
-				$scrollContainer = this.$( container ).length ? this.$( container ) : util.getDocument();
+				container = OO.ui.Element.static
+					.getClosestScrollableContainer( this.$content[ 0 ] );
+				// The scroll container will be either within the view
+				// or the document element itself.
+				$scrollContainer = this.$( container ).length ?
+					this.$( container ) : util.getDocument();
 				this.$scrollContainer = $scrollContainer;
 				this.$content.css( 'padding-bottom', this.$scrollContainer.height() * 0.6 );
 			} else {
@@ -481,7 +487,8 @@
 					self.setContent( content );
 					// check if user is blocked
 					if ( result.block && !( userTalkPage && result.block.allowusertalk ) ) {
-						// Lazy-load moment only if it's needed, it's somewhat large (it is already used on
+						// Lazy-load moment only if it's needed,
+						// it's somewhat large (it is already used on
 						// mobile by Echo's notifications panel, where it's also lazy-loaded)
 						mw.loader.using( 'moment' ).then( function () {
 							block = self._parseBlockInfo( result );

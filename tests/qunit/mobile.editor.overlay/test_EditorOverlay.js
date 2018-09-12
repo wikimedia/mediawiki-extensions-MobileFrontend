@@ -10,7 +10,8 @@
 			this.messageStub = this.sandbox.stub( BlockMessage.prototype, 'initialize' );
 			this.sandbox.stub( BlockMessage.prototype, 'toggle' );
 			this.getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
-			// avoid waiting to load 'moment', using `expiry: 'infinity'` below ensures we don't need it
+			// avoid waiting to load 'moment',
+			// using `expiry: 'infinity'` below ensures we don't need it
 			this.sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
 				callback();
 			} } );

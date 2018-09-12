@@ -52,13 +52,15 @@
 	}
 
 	/**
-	 * The `window`'s resize event debounced at 100 ms. The `resize:throttled` event is the `window`'s
+	 * The `window`'s resize event debounced at 100 ms.
+	 * The `resize:throttled` event is the `window`'s
 	 * resize event throttled to 200 ms.
 	 * @event resize
 	 */
 
 	/**
-	 * The `window`'s scroll event debounced at 100 ms. The `scroll:throttled` event is the `window`'s
+	 * The `window`'s scroll event debounced at 100 ms.
+	 * The `scroll:throttled` event is the `window`'s
 	 * scroll event throttled to 200 ms.
 	 * @event scroll
 	 */
@@ -178,7 +180,8 @@
 		displayBetaOptIn( activeExperiments.betaoptin, getCurrentPage() );
 	}
 
-	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
+	// Recruit volunteers through the console
+	// (note console.log may not be a function so check via apply)
 	/* eslint-disable no-console */
 	if ( window.console && window.console.log && window.console.log.apply &&
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {

@@ -120,7 +120,9 @@
 	 * @param {string} [deviceLanguage] the device's primary language
 	 * @return {Object[]}
 	 */
-	util.getStructuredLanguages = function ( languages, variants, frequentlyUsedLanguages, deviceLanguage ) {
+	util.getStructuredLanguages = function (
+		languages, variants, frequentlyUsedLanguages, deviceLanguage
+	) {
 		var hasOwn = Object.prototype.hasOwnProperty,
 			maxFrequency = 0,
 			minFrequency = 0,

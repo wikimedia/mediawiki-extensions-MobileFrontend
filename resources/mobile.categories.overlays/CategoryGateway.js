@@ -49,7 +49,8 @@
 		 * @memberof CategoryGateway
 		 * @instance
 		 * @param {string} title Title of the current page (to add the categories to)
-		 * @return {jQuery.Deferred|boolean} False, if no further continuation is possible, jQuery.Deferred otherwise.
+		 * @return {jQuery.Deferred|boolean} False, if no further continuation is possible,
+		 *                                   jQuery.Deferred otherwise.
 		 */
 		getCategories: function ( title ) {
 			var self = this;

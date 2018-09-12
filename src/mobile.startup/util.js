@@ -88,7 +88,8 @@ util = {
 	 * @memberof util
 	 * @instance
 	 * @param {string} html
-	 * @param {Element} [ctx] Document element to serve as the context in which the HTML fragment will be created
+	 * @param {Element} [ctx] Document element to serve as the context
+	 *  in which the HTML fragment will be created
 	 * @return {jQuery.Object}
 	 */
 	parseHTML: function ( html, ctx ) {
@@ -158,7 +159,8 @@ util = {
 	 * @param {OO.EventEmitter} src
 	 * @param {OO.EventEmitter} proxy
 	 * @param {string} event Event type to listen for.
-	 * @param {any[]} [args] Arguments to pass to subscribers, will be prepended to emitted arguments.
+	 * @param {any[]} [args] Arguments to pass to
+	 *  subscribers, will be prepended to emitted arguments.
 	 * @return {OO.EventEmitter} The source.
 	 */
 	repeatEvent: function ( src, proxy, event, args ) {

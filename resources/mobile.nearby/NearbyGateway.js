@@ -123,7 +123,8 @@
 					p = Page.newFromJSON( page );
 					p.anchor = 'item_' + i;
 
-					if ( page.coordinates ) { // FIXME: protect against bug T49133 (remove when resolved)
+					// protect against declined bug T49133
+					if ( page.coordinates ) {
 						coords = page.coordinates[0];
 						// FIXME: Make part of the Page object
 						p.dist = coords.dist / 1000;

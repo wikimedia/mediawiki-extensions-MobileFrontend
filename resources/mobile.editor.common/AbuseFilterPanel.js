@@ -24,8 +24,8 @@
 		 * @instance
 		 * @mixes View#defaults
 		 * @property {Object} defaults Default options hash.
-		 * @property {string} defaults.readMoreMsg A caption for the button allowing the user to read
-		 * more about the problems with their edit.
+		 * @property {string} defaults.readMoreMsg A caption for the button
+		 * allowing the user to read more about the problems with their edit.
 		 * @property {OverlayManager} defaults.overlayManager instance
 		 */
 		defaults: {

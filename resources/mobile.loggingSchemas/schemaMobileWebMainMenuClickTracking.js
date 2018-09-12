@@ -14,8 +14,9 @@
 			/**
 			 * @property {Object} defaults Default options hash.
 			 * @property {string} defaults.mobileMode whether user is in stable or beta
-			 * @property {string} [defaults.username] Username if the user is logged in, otherwise -
-			 *  undefined. Assigning undefined will make event logger omit this property when sending
+			 * @property {string} [defaults.username] Username if the user is logged in,
+			 *  otherwise - undefined.
+			 *  Assigning undefined will make event logger omit this property when sending
 			 *  the data to a server. According to the schema username is optional.
 			 * @property {number} [defaults.userEditCount] The number of edits the user has made
 			 *  if the user is logged in, otherwise - undefined. Assigning undefined will make event

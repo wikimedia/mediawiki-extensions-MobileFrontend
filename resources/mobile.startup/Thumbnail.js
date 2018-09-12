@@ -17,7 +17,8 @@
 		 * @instance
 		 * @mixes View#defaults
 		 * @property {Object} defaults Default options hash.
-		 * @property {string} defaults.filename uri decoded filename including File: prefix associated with thumbnail
+		 * @property {string} defaults.filename uri decoded filename including File: prefix
+		 *  associated with thumbnail
 		 */
 		defaults: {
 			filename: undefined

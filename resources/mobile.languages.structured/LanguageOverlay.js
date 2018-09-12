@@ -12,7 +12,8 @@
 	 *
 	 * @param {Object} options Configuration options
 	 * @param {Object[]} options.languages list of language objects as returned by the API
-	 * @param {Array|boolean} options.variants language variant objects or false if no variants exist
+	 * @param {Array|boolean} options.variants language variant objects
+	 *  or false if no variants exist
 	 * @param {string} [options.deviceLanguage] the device's primary language
 	 */
 	function LanguageOverlay( options ) {

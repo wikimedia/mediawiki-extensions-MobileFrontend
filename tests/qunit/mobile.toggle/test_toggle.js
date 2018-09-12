@@ -217,7 +217,8 @@
 	} );
 
 	QUnit.test( 'Check for and remove obsolete stored sections.', function ( assert ) {
-		this.expandedSections[ this.pageTitle ][ this.headline ] = ( new Date( 1990, 1, 1 ) ).getTime();
+		this.expandedSections[ this.pageTitle ][ this.headline ] =
+			( new Date( 1990, 1, 1 ) ).getTime();
 		mw.storage.set( 'expandedSections',
 			JSON.stringify( this.expandedSections )
 		);

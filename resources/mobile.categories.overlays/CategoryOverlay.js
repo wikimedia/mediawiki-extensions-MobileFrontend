@@ -99,8 +99,9 @@
 
 			this.showSpinner();
 			this.scrollEndEventEmitter.setElement( this.$el );
-			// ScrollEndEventEmitter is enabled once it's created, but we want to wait, until at least one element is
-			// in the list before we enable it. So disable it here and enable once the elements are loaded.
+			// ScrollEndEventEmitter is enabled once it's created, but we want to wait, until at
+			// least one element is in the list before we enable it. So disable it here and enable
+			// once the elements are loaded.
 			this.scrollEndEventEmitter.disable();
 			apiResult = this.gateway.getCategories( this.options.title );
 			if ( apiResult === false ) {

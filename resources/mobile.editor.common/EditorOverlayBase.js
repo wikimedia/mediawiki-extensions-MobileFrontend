@@ -93,13 +93,13 @@
 		 * @property {mw.Api} defaults.api to interact with
 		 * @property {boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
-		 * @property {string} defaults.continueMsg Caption for the next button on edit form which takes
-		 * you to the screen that shows a preview and license information.
+		 * @property {string} defaults.continueMsg Caption for the next button on edit form
+		 * which takes you to the screen that shows a preview and license information.
 		 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
 		 * @property {string} defaults.closeMsg Caption for a button that takes you back to editing
 		 * from edit preview screen.
-		 * @property {string} defaults.summaryRequestMsg Header above edit summary input field asking
-		 * the user to summarize the changes they made to the page.
+		 * @property {string} defaults.summaryRequestMsg Header above edit summary input field
+		 * asking the user to summarize the changes they made to the page.
 		 * @property {string} defaults.summaryMsg A placeholder with examples for the summary input
 		 * field asking user what they changed.
 		 * @property {string} defaults.placeholder Placeholder text for empty sections.
@@ -107,12 +107,12 @@
 		 * @property {string} defaults.waitIcon HTML of the icon that displays while a page edit
 		 * is being saved.
 		 * @property {string} defaults.captchaMsg Placeholder for captcha input field.
-		 * @property {string} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
-		 * and a new one is displayed.
-		 * @property {string} defaults.switchMsg Label for button that allows the user to switch between
-		 * two different editing interfaces.
-		 * @property {string} defaults.licenseMsg Text and link of the license, under which this contribution will be
-		 * released to inform the user.
+		 * @property {string} defaults.captchaTryAgainMsg A message shown when user enters
+		 * wrong CAPTCHA and a new one is displayed.
+		 * @property {string} defaults.switchMsg Label for button that allows the user
+		 * to switch between two different editing interfaces.
+		 * @property {string} defaults.licenseMsg Text and link of the license,
+		 * under which this contribution will be released to inform the user.
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			hasToolbar: false,
@@ -123,7 +123,8 @@
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
-			// icons.spinner can't be used, the spinner class changes to display:none in onStageChanges
+			// icons.spinner can't be used,
+			// the spinner class changes to display:none in onStageChanges
 			waitIcon: new Icon( {
 				name: 'spinner',
 				additionalClassNames: 'savespinner loading'
@@ -238,7 +239,8 @@
 
 			$window.off( 'beforeunload.mfeditorwarning' );
 
-			// Note the "#" may be in the URL. If so, using window.location alone will not reload the page
+			// Note the "#" may be in the URL.
+			// If so, using window.location alone will not reload the page
 			// we need to forcefully refresh
 			// eslint-disable-next-line no-restricted-properties
 			window.location.reload();
@@ -429,7 +431,9 @@
 					// QuestyCaptcha now have default MIME type "text/html": see T147606
 					this.$( '.captcha-panel #question' ).html( details.question );
 				} else {
-					// handle mime types (other than image based ones and HTML based ones) as plain text by default.
+					// handle mime types
+					// (other than image based ones and HTML based ones)
+					// as plain text by default.
 					// e.g. MathCaptcha (solve a math formula) or
 					// SimpleCaptcha (simple math formula)
 					this.$( '.captcha-panel #question' ).text( details.question );

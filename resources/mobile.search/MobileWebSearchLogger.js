@@ -87,8 +87,8 @@
 		 * Handles the 'search-result-click' event.
 		 * @memberof MobileWebSearchLogger
 		 * @instance
-		 * @param {Object} event with property {number} event.index The zero-based index of the result in the
-		 *  set of results
+		 * @param {Object} event with property {number} event.index
+		 *  The zero-based index of the result in the set of results.
 		 */
 		onSearchResultClick: function ( event ) {
 			var timeOffsetSinceStart =

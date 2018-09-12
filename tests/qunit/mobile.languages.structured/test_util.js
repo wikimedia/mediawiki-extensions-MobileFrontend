@@ -198,7 +198,9 @@
 		} ), 'Frequently used language is correctly saved.' );
 
 		assert.deepEqual(
-			util.getStructuredLanguages( this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage ),
+			util.getStructuredLanguages(
+				this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage
+			),
 			this.structuredLanguages,
 			'Structured languages are correct, including sort order.'
 		);

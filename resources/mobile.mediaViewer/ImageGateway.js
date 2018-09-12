@@ -35,7 +35,8 @@
 	ImageGateway.prototype.getThumb = function ( title ) {
 		var cachedThumb = this._cache[title],
 			$window = util.getWindow(),
-			imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ? window.devicePixelRatio : 1;
+			imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ?
+				window.devicePixelRatio : 1;
 
 		if ( !cachedThumb ) {
 			this._cache[title] = this.api.get( {

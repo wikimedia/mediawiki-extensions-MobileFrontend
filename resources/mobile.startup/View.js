@@ -150,7 +150,8 @@
 		templatePartials: {},
 
 		/**
-		 * A set of default options that are merged with options passed into the initialize function.
+		 * A set of default options that are merged with options passed into the initialize
+		 * function.
 		 * @memberof View
 		 * @instance
 		 * @property {Object} defaults Default options hash.

@@ -23,7 +23,8 @@
 		// Test the save of the new dicsussion
 		return overlay.save().then( function ( status ) {
 			assert.strictEqual( status, 'ok', 'The new discussion was saved' );
-			// check, if the save was recognized (so the overlay can hide without confirmation of the user)
+			// check, if the save was recognized
+			// (so the overlay can hide without confirmation of the user)
 			assert.strictEqual( overlay._saveHit, true, 'The save was recognized' );
 		} );
 	} );

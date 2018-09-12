@@ -50,7 +50,8 @@
 					prop: 'revisions',
 					rvprop: [ 'content', 'timestamp' ],
 					titles: self.title,
-					// get block information for this user (meta=userinfo is the only way to find autoblocks,
+					// get block information for this user
+					// (meta=userinfo is the only way to find autoblocks,
 					// we can't use list=blocks&bkusers/bkip for this)
 					meta: 'userinfo',
 					uiprop: 'blockinfo',
@@ -89,7 +90,8 @@
 					if ( !self.userinfo.blockid ) {
 						return resolve();
 					} else {
-						// Preload library used by EditorOverlay to format block expiry datetime and duration
+						// Preload library used by EditorOverlay
+						// to format block expiry datetime and duration
 						mw.loader.load( 'moment' );
 
 						// Look up additional block information:

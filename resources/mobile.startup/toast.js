@@ -16,8 +16,9 @@
 	 * @memberof Toast
 	 * @instance
 	 * @param {string} msg Message to show in the toast
-	 * @param {Object} options CSS class to add to the element if a string. If an object, more options for the
-	 *  notification, see mw.notification.show. For backwards compatibility reasons if a string is given it will be
+	 * @param {Object} options CSS class to add to the element if a string.
+	 *  If an object, more options for the notification see mw.notification.show.
+	 *  For backwards compatibility reasons if a string is given it will be
 	 *  treated as options.type
 	 */
 	Toast.prototype.show = function ( msg, options ) {

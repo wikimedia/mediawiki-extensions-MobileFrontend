@@ -132,30 +132,35 @@
 		$checkbox.hide();
 
 		// listening on checkbox change is required to make the clicking on label working. Otherwise
-		// clicking on label changes the checkbox "checked" state but it's not reflected in the toggle switch
+		// clicking on label changes the checkbox "checked" state
+		// but it's not reflected in the toggle switch
 		$checkbox.on( 'change', function () {
 			// disable checkbox as submit is delayed by 0.25s
 			$checkbox.attr( 'disabled', true );
 			toggleSwitch.setValue( enableToggle.isSelected() );
 		} );
 		toggleSwitch.on( 'change', function ( value ) {
-			// ugly hack, we're delaying submit form by 0.25s and we want to disable registering clicks
-			// we want to disable the toggleSwitch but we cannot use setDisabled(true) as it makes button gray
+			// ugly hack, we're delaying submit form by 0.25s
+			// and we want to disable registering clicks
+			// we want to disable the toggleSwitch
+			// but we cannot use setDisabled(true) as it makes button gray
 			toggleSwitch.setValue = function () {};
 
 			$checkbox.find( 'input' )
 				.prop( 'checked', value );
 			notify( true );
-			// On some Android devices animation gets stuck in the middle as browser starts submitting the form.
-			// Let's call submit on the form after toggle button transition is done (0.25s, defined in OOUI)
+			// On some Android devices animation gets stuck in the middle as browser
+			// starts submitting the form.
+			// Let's call submit on the form after toggle button transition is done
+			// (0.25s, defined in OOUI)
 			setTimeout( function () {
 				$form.submit();
 			}, 250 );
 		} );
 
 		if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) &&
-			// Don't show this option on large screens since it's only honored for small screens. This
-			// logic should be kept in sync with Toggle._enable().
+			// Don't show this option on large screens since it's only honored for small screens.
+			// This logic should be kept in sync with Toggle._enable().
 			!browser.isWideScreen()
 		) {
 			addExpandAllSectionsToForm( $form );

@@ -273,7 +273,9 @@
 						'aria-controls': id
 					} )
 					.on( 'click', function ( ev ) {
-						// don't toggle, if the click target was a link (a link in a section heading) - T117880
+						// don't toggle, if the click target was a link
+						// (a link in a section heading)
+						// See T117880
 						if ( !ev.target.href ) {
 							// prevent taps/clicks on edit button after toggling (bug 56209)
 							ev.preventDefault();
@@ -303,9 +305,14 @@
 					} );
 
 				enableKeyboardActions( self, $heading );
-				if ( !isReferenceSection && ( !isClosed && browser.isWideScreen() || expandSections ) ) {
-					// Expand sections by default on wide screen devices or if the expand sections setting is
-					// set. The wide screen logic for determining whether to collapse sections initially
+				if (
+					!isReferenceSection && (
+						!isClosed && browser.isWideScreen() || expandSections
+					)
+				) {
+					// Expand sections by default on wide screen devices
+					// or if the expand sections setting is set.
+					// The wide screen logic for determining whether to collapse sections initially
 					// should be kept in sync with mobileoptions#initLocalStorageElements().
 					self.toggle( $heading );
 				}

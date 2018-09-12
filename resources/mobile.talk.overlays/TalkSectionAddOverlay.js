@@ -18,8 +18,10 @@
 		TalkOverlayBase.apply( this, arguments );
 		this.title = options.title;
 		this.currentPageTitle = options.currentPageTitle;
-		// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
-		// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
+		// Variable to indicate, if the overlay will be closed by the save function
+		// or by the user. If this is false and there is content in the input fields,
+		// the user will be asked, if he want to abandon his changes before we close
+		// the Overlay, otherwise the Overlay will be closed without any question.
 		this._saveHit = false;
 	}
 
@@ -32,9 +34,10 @@
 		 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
 		 * @property {string} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
 		 * a talk page topic subject.
-		 * @property {string} defaults.topicContentPlaceHolder Placeholder text to prompt user to add
-		 * content to talk page content.
-		 * @property {string} defaults.editingMsg Label for button which submits a new talk page topic.
+		 * @property {string} defaults.topicContentPlaceHolder Placeholder text to prompt user
+		 *  to add content to talk page content.
+		 * @property {string} defaults.editingMsg Label for button which
+		 *  submits a new talk page topic.
 		 */
 		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -184,7 +187,8 @@
 			this.$ta.removeClass( 'error' );
 			this.$subject.removeClass( 'error' );
 
-			// propagate, that we save an edit and want to close the Overlay without any interruption (user questions e.g.)
+			// propagate, that we save an edit and want to close the Overlay without
+			// any interruption (user questions e.g.)
 			this._saveHit = true;
 
 			this.$( '.content' ).empty().addClass( 'loading' );

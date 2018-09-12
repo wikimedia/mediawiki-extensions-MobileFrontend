@@ -133,10 +133,12 @@
 				current = this.stack[0],
 				match;
 
-			// When entering an overlay for the first time, the manager should remember the user's scroll position
-			// overlays always open at top of page and we'll want to restore it later.
-			// This should happen before the call to _matchRoute which will "show" the overlay. The Overlay has similar
-			// logic for overlays that are not managed via the overlay.
+			// When entering an overlay for the first time,
+			// the manager should remember the user's scroll position
+			// overlays always open at top of page
+			// and we'll want to restore it later.
+			// This should happen before the call to _matchRoute which will "show" the overlay.
+			// The Overlay has similar logic for overlays that are not managed via the overlay.
 			if ( !current ) {
 				this.scrollTop = window.pageYOffset;
 			}
@@ -172,8 +174,8 @@
 		 * @private
 		 * @param {string} path Path (hash) to check.
 		 * @param {Object} entry Entry object created in OverlayManager#add.
-		 * @return {Object|null} Match object with factory function's result. Returns null if no match.
-		 * or null if no match.
+		 * @return {Object|null} Match object with factory function's result.
+		 *  Returns null if no match.
 		 */
 		_matchRoute: function ( path, entry ) {
 			var
