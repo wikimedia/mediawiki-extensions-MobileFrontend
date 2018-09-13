@@ -20,7 +20,7 @@ mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
-// `mobileFrontend['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
+// `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
 module.exports = {
 	moduleLoader: moduleLoader,
 	util: util,

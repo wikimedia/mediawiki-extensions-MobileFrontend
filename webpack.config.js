@@ -74,9 +74,10 @@ module.exports = {
 		sourceMapFilename: `[file]${srcMapExt}`,
 
 		// Expose the module.exports of each module entry chunk through the global
-		// mobileFrontend[name]. This is useful for debugging. E.g.,
-		// mobileFrontend['mobile.startup'] is set by the module.exports of mobile.startup.js.
-		library: [ 'mobileFrontend', '[name]' ],
+		// mfModules[name].
+		// This is useful for debugging. E.g., mfModules['mobile.startup'] is set by the
+		// module.exports of mobile.startup.js.
+		library: [ 'mfModules', '[name]' ],
 		libraryTarget: 'this'
 	},
 
