@@ -22,6 +22,30 @@
       "revId": "3944eb54561aeaa3f75ab665aa7e589f782f2ae3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30122b45_009e337f",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-13T18:53:02Z",
+      "side": 1,
+      "message": "A more ambitious approach exists in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/447612\nbut that will need more testing!",
+      "parentUuid": "31da4911_66552af8",
+      "range": {
+        "startLine": 98,
+        "startChar": 1,
+        "endLine": 102,
+        "endChar": 4
+      },
+      "revId": "3944eb54561aeaa3f75ab665aa7e589f782f2ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
