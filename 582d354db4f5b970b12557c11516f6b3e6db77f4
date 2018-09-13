@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d894ad13_ebf44291",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-09-13T22:19:44Z",
+      "side": 0,
+      "message": "FIXME: You didn\u0027t actually delete this code, which is why I\u0027ve been worried about MobileFrontend still using  the code for \"formheader\". :-P",
+      "range": {
+        "startLine": 657,
+        "startChar": 8,
+        "endLine": 657,
+        "endChar": 33
+      },
+      "revId": "582d354db4f5b970b12557c11516f6b3e6db77f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1690fce4_8337b9da",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-09-13T22:19:44Z",
+      "side": 0,
+      "message": "(And here.)",
+      "range": {
+        "startLine": 669,
+        "startChar": 2,
+        "endLine": 669,
+        "endChar": 33
+      },
+      "revId": "582d354db4f5b970b12557c11516f6b3e6db77f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
