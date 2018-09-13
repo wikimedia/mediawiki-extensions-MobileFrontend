@@ -693,37 +693,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Decide if the login/usercreate page should be overwritten by a mobile only
-	 * special specialpage. If not, do some changes to the template.
-	 *
-	 * @param QuickTemplate &$tpl Login or Usercreate template
-	 */
-	public static function changeUserLoginCreateForm( &$tpl ) {
-		$context = MobileContext::singleton();
-		// otherwise just(tm) add a logoheader, if there is any
-		$mfLogo = $context->getMFConfig()
-			->get( 'MobileFrontendLogo' );
-
-		// do nothing in desktop mode
-		if ( $context->shouldDisplayMobileView() && $mfLogo ) {
-			$tpl->extend(
-				'formheader',
-				Html::openElement(
-					'div',
-					[ 'class' => 'watermark' ]
-				) .
-				Html::element( 'img',
-					[
-						'src' => $mfLogo,
-						'alt' => '',
-					]
-				) .
-				Html::closeElement( 'div' )
-			);
-		}
-	}
-
-	/**
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
