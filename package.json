@@ -3,6 +3,7 @@
   "scripts": {
     "start": "webpack -dw",
     "build": "NODE_ENV=production webpack -p",
+    "precommit": "composer test && npm run test:unit && npm run test",
     "test:unit": "qunit --require ./tests/node-qunit/config.js 'tests/node-qunit/**/*.test.js'",
     "test": "grunt test && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
@@ -11,6 +12,7 @@
   "engines": {
     "node": "6.11.0"
   },
+  "pre-commit": "precommit",
   "devDependencies": {
     "@wikimedia/resource-modules": "3.0.1",
     "bundlesize": "0.17.0",
