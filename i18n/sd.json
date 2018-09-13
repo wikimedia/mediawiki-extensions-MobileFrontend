@@ -53,6 +53,9 @@
 	"mobile-frontend-editor-abusefilter-warning": "چتاءُ: ڇا اوهان پڪ سان اهي ترميم محفوضي رهيا آهيو؟ ان سان ڪو مسئلو ٿي سگھي ٿو.",
 	"mobile-frontend-editor-anon": "ترميم داخلا کان بغير",
 	"mobile-frontend-editor-anonwarning": "<strong>چتاءِ</strong>: توهان داخل ٿيل نه آهيو. جيڪڏهن اوهان ترميم ڪئي، ته اوهانجو آءِ پي پتو عوامي طور ظاهر ٿيندو. جيڪڏهن توهان <strong>داخل ٿيو</strong> يا <strong>کاتو کوليو</strong>، ته ٻين فائدن سان گڏ توهان جو ترميمون توهان جي واپرائيندڙ-نانءَ سان منسوب ڪيون وينديون.",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "سبب بندش",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|بندش}} وڌو",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "بندش ختم ٿيندو",
 	"mobile-frontend-editor-generic-block-reason": "نامعلوم مسئلو",
 	"mobile-frontend-editor-cancel": "رد",
 	"mobile-frontend-editor-cancel-confirm": "ڇا توھان سچ ۾ پنھنجي ترميم ڇڏي ڏيڻ ٿا چاھيو؟",
@@ -131,6 +134,7 @@
 	"mobile-frontend-main-menu-settings-heading": "ترتيبون",
 	"mobile-frontend-media-details": "تفصيل",
 	"mobile-frontend-media-license-link": "لائسنس معلومات",
+	"mobile-frontend-media-load-fail-retry": "تازو ڪيو",
 	"mobile-frontend-missing-image": "عڪس",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 ڪلوميٽر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 ميٽر}}",
@@ -252,5 +256,6 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "اکرن جي ماپ",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "اکرن جي ماپ جو پڙهڻ جي آساني لاءِ تعين ڪيو.",
 	"mobile-frontend-beta-only": "خصوصيتون صرف بيٽا موڊ ۾ شامل آهن",
-	"mobile-frontend-console-recruit": "وڌيڪ ڏسو اسان موبائل سائيٽ ڪيئن جوڙي آهي @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "وڌيڪ ڏسو اسان موبائل سائيٽ ڪيئن جوڙي آهي @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "موبائل ترجيحون"
 }
