@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5beb2195_4ce07cc6",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-13T16:44:29Z",
+      "side": 1,
+      "message": "Since we only have one script, let\u0027s use string syntax:\n\nhttps://www.npmjs.com/package/pre-commit#configuration",
+      "range": {
+        "startLine": 15,
+        "startChar": 16,
+        "endLine": 17,
+        "endChar": 3
+      },
+      "revId": "5296f2c6a8f8f0bcf51b9b48b0803f56263f0c6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
