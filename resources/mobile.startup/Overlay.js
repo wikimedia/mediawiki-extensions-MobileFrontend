@@ -140,7 +140,7 @@
 		 * @instance
 		 * @method
 		 */
-		clearSpinner: function () {
+		hideSpinner: function () {
 			this.$spinner.addClass( 'hidden' );
 		},
 

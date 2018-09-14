@@ -184,7 +184,7 @@
 			 * @ignore
 			 */
 			function removeLoader() {
-				self.clearSpinner();
+				self.hideSpinner();
 			}
 
 			/**

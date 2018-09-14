@@ -174,7 +174,7 @@
 			mw.loader.using( 'mobile.editor.overlay', function () {
 				var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 
-				self.clearSpinner();
+				self.hideSpinner();
 				self.applyHeaderOptions( self.options, false );
 				self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 			} );

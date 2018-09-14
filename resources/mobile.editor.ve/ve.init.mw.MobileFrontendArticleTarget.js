@@ -176,7 +176,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	// Parent method
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
 
-	this.overlay.clearSpinner();
+	this.overlay.hideSpinner();
 
 	// TODO: #append should happen in setSurface, but doing so causes the surface
 	// to become unfocussable. Investigate why.

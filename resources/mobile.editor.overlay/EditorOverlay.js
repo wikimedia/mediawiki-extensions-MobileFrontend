@@ -226,7 +226,7 @@
 				// the user has to click login, signup or edit without login,
 				// disable "Next" button on top right
 				this.$anonHiddenButtons = this.$( '.overlay-header .continue, .editor-switcher' ).hide();
-				this.clearSpinner();
+				this.hideSpinner();
 			}
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
@@ -311,8 +311,8 @@
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
 
-			function clearSpinnerAndShowPreview() {
-				self.clearSpinner();
+			function hideSpinnerAndShowPreview() {
+				self.hideSpinner();
 				self.$preview.show();
 			}
 
@@ -327,11 +327,11 @@
 					text: parsedText
 				} ).$( 'a' ).on( 'click', false );
 
-				clearSpinnerAndShowPreview();
+				hideSpinnerAndShowPreview();
 			}, function () {
 				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 
-				clearSpinnerAndShowPreview();
+				hideSpinnerAndShowPreview();
 			} );
 
 			EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
@@ -345,7 +345,7 @@
 		 */
 		_hidePreview: function () {
 			this.gateway.abortPreview();
-			this.clearSpinner();
+			this.hideSpinner();
 			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
@@ -495,11 +495,11 @@
 							message = new BlockMessage( block );
 							message.toggle();
 							self.hide();
-							self.clearSpinner();
+							self.hideSpinner();
 							$el.removeClass( 'overlay-loading' );
 						} );
 					} else {
-						self.clearSpinner();
+						self.hideSpinner();
 						$el.removeClass( 'overlay-loading' );
 					}
 				}, function () {
@@ -533,11 +533,11 @@
 				function () {
 					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
 
-					self.clearSpinner();
+					self.hideSpinner();
 					self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				},
 				function () {
-					self.clearSpinner();
+					self.hideSpinner();
 					self.$content.show();
 					// FIXME: We should show an error notification, but right now toast
 					// notifications are not dismissible when shown within the editor.

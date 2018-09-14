@@ -85,8 +85,8 @@
 		 * @memberof TalkOverlay
 		 * @instance
 		 */
-		clearSpinner: function () {
-			TalkOverlayBase.prototype.clearSpinner.apply( this, arguments );
+		hideSpinner: function () {
+			TalkOverlayBase.prototype.hideSpinner.apply( this, arguments );
 			this.$board.show();
 		},
 
@@ -152,7 +152,7 @@
 
 			// content is there so re-render and hide the spinner
 			this.render( options );
-			this.clearSpinner();
+			this.hideSpinner();
 		},
 		/**
 		 * Shows the add topic button to logged in users.

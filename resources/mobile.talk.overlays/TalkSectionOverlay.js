@@ -68,7 +68,7 @@
 			if ( !this.options.section ) {
 				this.renderFromApi( this.options );
 			} else {
-				this.clearSpinner();
+				this.hideSpinner();
 				this._enableComments();
 			}
 		},
@@ -99,7 +99,7 @@
 				var page = new Page( pageData );
 				options.section = page.getSection( options.id );
 				self.render( options );
-				self.clearSpinner();
+				self.hideSpinner();
 			} );
 		},
 		/**
@@ -165,7 +165,7 @@
 						msg = mw.msg( 'mobile-frontend-editor-error' );
 					}
 
-					self.clearSpinner();
+					self.hideSpinner();
 					popup.show( msg, 'toast error' );
 
 					enableSaveButton();

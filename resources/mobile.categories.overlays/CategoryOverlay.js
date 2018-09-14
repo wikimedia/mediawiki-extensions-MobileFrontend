@@ -105,7 +105,7 @@
 			this.scrollEndEventEmitter.disable();
 			apiResult = this.gateway.getCategories( this.options.title );
 			if ( apiResult === false ) {
-				self.clearSpinner();
+				self.hideSpinner();
 				return;
 			}
 			apiResult.then( function ( data ) {
@@ -139,7 +139,7 @@
 				} else {
 					self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
 				}
-				self.clearSpinner();
+				self.hideSpinner();
 				self.scrollEndEventEmitter.enable();
 			} );
 		},
