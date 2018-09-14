@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76e76f54_bb8e5c03",
+        "filename": "resources/mobile.special.watchlist.scripts/watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-14T16:22:39Z",
+      "side": 1,
+      "message": "How does this differ from \"View.prototype.isTemplateMode\" ?",
+      "revId": "0171f489cff9a51e70c4f3c31583578484ff800b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
