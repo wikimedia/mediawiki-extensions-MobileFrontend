@@ -38,8 +38,7 @@
 		 * ]
 		 */
 		defaults: {
-			pages: [],
-			enhance: false
+			pages: []
 		},
 		/**
 		 * Render page images for the existing page list. Assumes no page images have been loaded.

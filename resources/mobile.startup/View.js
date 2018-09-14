@@ -156,8 +156,8 @@
 		 * @instance
 		 * @property {Object} defaults Default options hash.
 		 * @property {jQuery.Object|string} [defaults.el] jQuery selector to use for rendering.
-		 * @property {boolean} [defaults.enhance] Whether to enhance views already in DOM.
-		 * When enabled, the template is disabled so that it is not rendered in the DOM.
+		 * @property {boolean} [defaults.skipTemplateRender] Whether to enhance views already in
+		 * DOM. When enabled, the template is disabled so that it is not rendered in the DOM.
 		 * Use in conjunction with View::defaults.$el to associate the View with an existing
 		 * already rendered element in the DOM.
 		 */
@@ -258,7 +258,7 @@
 			util.extend( this.options, data );
 			this.preRender();
 			this.undelegateEvents();
-			if ( this.template && !this.options.enhance ) {
+			if ( this.template && !this.options.skipTemplateRender ) {
 				html = this.template.render( this.options, this.templatePartials );
 				if ( this.isTemplateMode ) {
 					this.$el = $( html );

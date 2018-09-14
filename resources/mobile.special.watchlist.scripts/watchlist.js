@@ -18,7 +18,7 @@
 				api: new mw.Api(),
 				el: $watchlist,
 				funnel: 'watchlist',
-				enhance: true
+				skipTemplateRender: true
 			} );
 		}
 		// not needed now we have JS view which has infinite scrolling
