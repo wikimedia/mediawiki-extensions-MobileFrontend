@@ -79,11 +79,20 @@
 			Overlay.prototype.postRender.apply( this );
 
 			if ( !this.options.isAnon ) {
-				this.$( '.add' ).removeClass( 'hidden' );
+				this._showAddCategoryButton();
 			}
 			if ( !this.options.items ) {
 				this._loadCategories();
 			}
+		},
+
+		/**
+		 * @memberof CategoryOverlay
+		 * @instance
+		 * @return {void}
+		 */
+		_showAddCategoryButton: function () {
+			this.$( '.add' ).removeClass( 'hidden' );
 		},
 
 		/**
