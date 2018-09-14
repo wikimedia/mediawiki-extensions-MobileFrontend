@@ -16,6 +16,23 @@
       "revId": "0171f489cff9a51e70c4f3c31583578484ff800b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a906df0c_f6c39283",
+        "filename": "resources/mobile.startup/View.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-14T16:26:16Z",
+      "side": 1,
+      "message": "Ah okay, now I see what this is doing.",
+      "revId": "0171f489cff9a51e70c4f3c31583578484ff800b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
