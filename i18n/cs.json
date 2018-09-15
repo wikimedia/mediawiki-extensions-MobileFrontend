@@ -67,6 +67,9 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Varování:</strong> Nejste přihlášen(a). Pokud uložíte jakoukoli editaci, bude vaše IP adresa veřejně viditelná. Pokud se <strong>přihlásíte</strong> nebo si <strong>vytvoříte účet</strong>, budou vaše editace připsány vašemu uživatelskému jménu a získáte i další výhody.",
 	"mobile-frontend-editor-blocked-drawer-title": "Vašemu účtu byla zablokována možnost editace {{GRAMMAR:2sg|{{SITENAME}}}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Důvod zablokování",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Zablokován|Zablokována}} uživatelem",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Zablokování vyprší",
+	"mobile-frontend-editor-generic-block-reason": "Neznámý důvod",
 	"mobile-frontend-editor-cancel": "Storno",
 	"mobile-frontend-editor-cancel-confirm": "Určitě chcete zahodit své úpravy?",
 	"mobile-frontend-editor-captcha-try-again": "Nesprávný kód, zkuste to znovu.",
@@ -144,6 +147,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Nastavení",
 	"mobile-frontend-media-details": "Podrobnosti",
 	"mobile-frontend-media-license-link": "Informace o licenci",
+	"mobile-frontend-media-load-fail-message": "Při načítání tohoto obrázku došlo k chybě.",
 	"mobile-frontend-media-load-fail-retry": "Obnovit",
 	"mobile-frontend-missing-image": "Obrázek",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
@@ -259,5 +263,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Velikost písma",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrolovat velikost písma",
 	"mobile-frontend-beta-only": "Funkce dostupná jenom v betaverzi",
-	"mobile-frontend-console-recruit": "Zjistěte více o tom, jak budujeme náš mobilní web, na https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Zjistěte více o tom, jak budujeme náš mobilní web, na https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Na mobilu optimalizovat a zjednodušit speciální stránky (doporučeno)",
+	"prefs-mobile": "Mobilní nastavení"
 }

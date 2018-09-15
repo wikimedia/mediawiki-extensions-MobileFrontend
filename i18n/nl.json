@@ -147,6 +147,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Instellingen",
 	"mobile-frontend-media-details": "Details",
 	"mobile-frontend-media-license-link": "Licentiegegevens",
+	"mobile-frontend-media-load-fail-retry": "Vernieuwen",
 	"mobile-frontend-missing-image": "Afbeelding",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
@@ -251,6 +252,7 @@
 	"mobile-frontend-search-feedback-prompt": "Kon u niet vinden wat uw zocht?",
 	"mobile-frontend-notifications-filter-title": "Meldingen filteren",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Titelbeschrijvingen",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenties alleen laden indien nodig",
 	"mobile-frontend-send-feedback": "Terugkoppeling verzenden",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Alleen afbeeldingen laden wanneer ze nodig zijn.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Afbeeldingen vertraagd laden",
@@ -258,5 +260,7 @@
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Alle secties standaard uitklappen",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Het automatisch inklappen van secties op de mobiele website uitschakelen.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
-	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-beta-only": "Functie alleen beschikbaar in betamodus",
+	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "Mobiele instellingen"
 }
