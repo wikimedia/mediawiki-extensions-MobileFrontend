@@ -11,8 +11,8 @@ mw.loader.using( [
 		 */
 		schemaMobileWebSearch = new Schema(
 			'MobileWebSearch',
-			// Sampled at 0.1% (consistent with the Desktop search rate)
-			1 / 1000,
+			// todo: use a default value of 0 once config lands in production.
+			mw.config.get( 'wgMFSchemaSearchSampleRate', 1 / 1000 ),
 			/**
 			 * @property {Object} defaults Default options hash.
 			 * @property {string} defaults.platform Always "mobileweb"

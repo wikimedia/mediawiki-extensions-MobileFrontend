@@ -239,6 +239,13 @@ site to render, depending on how large MediaWiki:Mobile.css is for your wiki.
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFSchemaSearchSampleRate
+
+Defines the sampling rate for the Search schema.
+
+* Type: `Number`
+* Default: `0.001`
+
 #### $wgMFSpecialCaseMainPage
 
 If set to true, main page HTML will receive special massaging.
