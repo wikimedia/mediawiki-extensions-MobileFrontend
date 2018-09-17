@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41302501_59105551",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T23:06:36Z",
+      "side": 1,
+      "message": "Please document method (I know it\u0027s private, but I think this is good practice)",
+      "revId": "4ba9f77943609af7de9b89307e33d0addaf069bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
