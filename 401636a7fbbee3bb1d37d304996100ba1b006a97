@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f28d9f20_e0a2886a",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T23:10:46Z",
+      "side": 1,
+      "message": "I\u0027m confused to where \"ns\" is coming from.",
+      "revId": "401636a7fbbee3bb1d37d304996100ba1b006a97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
