@@ -1,5 +1,15 @@
-( function ( M ) {
-	var user = M.require( 'mobile.startup/user' ),
+/**
+ * This module is loaded by resources/skins.minerva.mainMenu/MainMenu.js
+ * inside the Minerva skin. It should be moved to Minerva at our earliest possible
+ * convenience.
+ */
+mw.loader.using( [
+	'ext.eventLogging.subscriber'
+] ).then( function () {
+	var M = mw.mobileFrontend,
+		user = M.require( 'mobile.startup/user' ),
+		// Schema provided by ext.eventLogging.subscriber class
+		Schema = mw.eventLog.Schema, // resource-modules-disable-line
 		context = M.require( 'mobile.startup/context' ),
 		/**
 		 * MobileWebMainMenuClickTracking schema
@@ -8,7 +18,7 @@
 		 * @class MobileWebMainMenuClickTracking
 		 * @singleton
 		 */
-		schemaMobileWebMainMenuClickTracking = new mw.eventLog.Schema(
+		schemaMobileWebMainMenuClickTracking = new Schema(
 			'MobileWebMainMenuClickTracking',
 			0.5,
 			/**
@@ -33,4 +43,4 @@
 	mw.trackSubscribe( 'mf.schemaMobileWebMainMenuClickTracking', function ( topic, data ) {
 		schemaMobileWebMainMenuClickTracking.log( data );
 	} );
-}( mw.mobileFrontend ) );
+} );
