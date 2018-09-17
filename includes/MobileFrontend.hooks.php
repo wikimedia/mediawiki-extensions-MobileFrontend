@@ -1047,18 +1047,6 @@ class MobileFrontendHooks {
 		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
 
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' ) ) {
-			// schema.Edit is provided by WikimediaEvents
-			if ( $resourceLoader->isModuleRegistered( 'schema.Edit' ) ) {
-				$schemaEdit += [
-					'dependencies' => [
-						'schema.Edit',
-						'mobile.startup'
-					],
-					'scripts' => [
-						'resources/mobile.loggingSchemas/schemaEdit.js',
-					]
-				];
-			}
 			$schemaMobileWebMainMenuClickTracking += [
 				'dependencies' => [
 					'schema.MobileWebMainMenuClickTracking',
@@ -1080,7 +1068,6 @@ class MobileFrontendHooks {
 		}
 
 		$resourceLoader->register( [
-			'mobile.loggingSchemas.edit' => $schemaEdit,
 			'mobile.loggingSchemas.mobileWebMainMenuClickTracking' =>
 				$schemaMobileWebMainMenuClickTracking,
 			'mobile.loggingSchemas.mobileWebSearch' => $schemaMobileWebSearch,

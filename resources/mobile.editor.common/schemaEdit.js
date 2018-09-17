@@ -1,10 +1,13 @@
-( function ( M ) {
-	var user = M.require( 'mobile.startup/user' ),
+mw.loader.using( [ 'schema.Edit', 'ext.eventLogging.subscriber' ] ).then( function () {
+	var M = mw.mobileFrontend,
+		// Schema provided by ext.eventLogging.subscriber class
+		Schema = mw.eventLog.Schema, // resource-modules-disable-line
+		user = M.require( 'mobile.startup/user' ),
 		/**
 		 * Edit schema
 		 * https://meta.wikimedia.org/wiki/Schema:Edit
 		 */
-		schemaEdit = new mw.eventLog.Schema(
+		schemaEdit = new Schema(
 			'Edit',
 			mw.config.get( 'wgMFSchemaEditSampleRate' ),
 			{
@@ -34,4 +37,4 @@
 		schemaEdit.log( data );
 	} );
 
-}( mw.mobileFrontend ) );
+} );

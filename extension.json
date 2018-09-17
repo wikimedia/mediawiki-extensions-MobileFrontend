@@ -422,10 +422,10 @@
 				"mobile.startup",
 				"mobile.messageBox",
 				"mediawiki.util",
-				"mediawiki.confirmCloseWindow",
-				"mobile.loggingSchemas.edit"
+				"mediawiki.confirmCloseWindow"
 			],
 			"scripts": [
+				"resources/mobile.editor.common/schemaEdit.js",
 				"resources/mobile.editor.common/AbuseFilterOverlay.js",
 				"resources/mobile.editor.common/AbuseFilterPanel.js",
 				"resources/mobile.editor.common/EditorOverlayBase.js"
