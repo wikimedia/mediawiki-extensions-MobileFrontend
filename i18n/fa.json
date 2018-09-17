@@ -164,6 +164,7 @@
 	"mobile-frontend-media-details": "جزئیات",
 	"mobile-frontend-media-license-link": "اطلاعات مجوز",
 	"mobile-frontend-media-load-fail-message": "در هنگام بارگذاری این تصویر خطایی رخ داد.",
+	"mobile-frontend-media-load-fail-retry": "تازه کردن",
 	"mobile-frontend-missing-image": "تصویر",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کیلومتر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 متر}}",
