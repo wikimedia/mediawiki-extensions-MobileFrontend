@@ -22,6 +22,30 @@
       "revId": "fcd7f5460aabdcb7c740b19a906ee2b0e1a30767",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2df9dfd_ae663d4f",
+        "filename": "resources/mobile.loggingSchemas.mobileWebMainMenuClickTracking/schema.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T22:28:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47edde4e_4f5ace42",
+      "range": {
+        "startLine": 17,
+        "startChar": 41,
+        "endLine": 17,
+        "endChar": 48
+      },
+      "revId": "fcd7f5460aabdcb7c740b19a906ee2b0e1a30767",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
