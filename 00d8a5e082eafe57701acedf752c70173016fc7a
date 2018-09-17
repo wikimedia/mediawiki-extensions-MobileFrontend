@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "67f4c0ea_30030a68",
+        "filename": "resources/mobile.talk.overlays/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T23:13:09Z",
+      "side": 1,
+      "message": "Note, really, this should follow the deprecation policy... since gadgets may make use of this code  (e.g. using mw.log.deprecate) with code removed after a grace period.",
+      "revId": "00d8a5e082eafe57701acedf752c70173016fc7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
