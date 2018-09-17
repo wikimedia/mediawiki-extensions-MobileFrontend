@@ -967,6 +967,9 @@ class MobileFrontendHooks {
 						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
 						'resources/mobile.editor.ve/VisualEditorOverlay.js',
 					],
+					'styles' => [
+						'resources/mobile.editor.ve/editor.ve.less',
+					],
 					'templates' => [
 						'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
 						'toolbarVE.hogan' => 'resources/mobile.editor.ve/toolbarVE.hogan',
