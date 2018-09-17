@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "afcb3bf0_3c6c7f06",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T23:24:25Z",
+      "side": 1,
+      "message": "My read of the patch doesn\u0027t match with this headline.\n\nI see exactly the same inheritance occurring that was occurring before. I just see that these options are not copied across to this.options",
+      "revId": "a3747714d76af8cdf8ba8838eb00028ca8b2d573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ade7a804_3777802a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-17T23:24:25Z",
+      "side": 1,
+      "message": "This makes sense to me and definitely seems to be a pattern that\u0027s leaking into our codebase, so it makes sense to formalise it.\n\nHowever, it also feels a shame to make these separate options, as in future we might want to make use of Object spreading\ne.g.\n{ api, isAnon, title  }\nThis would also be compatible with Preact/React, if we ever decided to make our components more React-compatible.\n\nI\u0027d personally like us to work towards adopting React style function/variable names e.g. props instead of options and getting View.render to return something HTML like.\n\nAlso, changing function signatures is hard and time consuming because of our needs to support multiple-cached versions (see my notes on Minerva: https://gerrit.wikimedia.org/r/460548 )",
+      "revId": "a3747714d76af8cdf8ba8838eb00028ca8b2d573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
