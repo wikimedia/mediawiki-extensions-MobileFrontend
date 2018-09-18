@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c0d2aa89_61ef605a",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-09-18T19:02:39Z",
+      "side": 1,
+      "message": "The issue is only present in Android (see bug). iOS draws a thin pixel border between the browser and the status bar.",
+      "parentUuid": "9e094c6b_347da231",
+      "revId": "7aa95d9c3b04cd153665c549e89eb43bbe889959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "79e758e9_d359a8a4",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2018-09-18T17:31:51Z",
       "side": 1,
       "message": "I don\u0027t quite understand why we need a pseudo element here and given it appears at the top I was surprised to see \"after\".",
+      "revId": "7aa95d9c3b04cd153665c549e89eb43bbe889959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff8fda6d_7a254cf3",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-09-18T19:02:39Z",
+      "side": 1,
+      "message": "It needs to be absolutely positioned on top of any content that may appear in the header.",
+      "parentUuid": "79e758e9_d359a8a4",
       "revId": "7aa95d9c3b04cd153665c549e89eb43bbe889959",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
