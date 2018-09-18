@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "63257e1e_6407272e",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T22:44:46Z",
+      "side": 1,
+      "message": "The module is needed as the code that uses this schema is Minerva. For backwards compatibility, I\u0027ll need to port that code there carefully.",
+      "revId": "64f1c254a98696c3d2345328e49aaaf2250fccc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b73b9fc8_d854c1c3",
         "filename": "resources/mobile.search/schemaMobileWebSearch.js",
         "patchSetId": 6
