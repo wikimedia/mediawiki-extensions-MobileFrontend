@@ -2,6 +2,7 @@ var ModuleLoader = require( './modules' ),
 	moduleLoader = new ModuleLoader(),
 	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
+	View = require( './View' ),
 	Browser = require( './Browser' ),
 	cache = require( './cache' );
 
@@ -15,6 +16,7 @@ OO.mfExtend = mfExtend;
 // as webpack might change the variable name. Using mw.mobileFrontend means that the variable
 // will not be recast.
 mw.mobileFrontend.define( 'mobile.startup/util', util );
+mw.mobileFrontend.define( 'mobile.startup/View', View );
 mw.mobileFrontend.define( 'mobile.startup/Browser', Browser );
 mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 
@@ -24,6 +26,7 @@ mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 module.exports = {
 	moduleLoader: moduleLoader,
 	util: util,
+	View: View,
 	Browser: Browser,
 	cache: cache
 };
