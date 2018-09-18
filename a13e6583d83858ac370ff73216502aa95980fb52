@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c1b6c67_06560864",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "This leaks sinon into Special:JavaScript/qunit twice.\n\nIn the MediaWiki test environment, sinon is accessed via this.sandbox\n\n\nTo be consistent, this should be moved and wired up inside tests/node-qunit/config.js which is not loaded in the MediaWiki test environment.",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f14fdc8_55d74e09",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "... why are these necessary?\n\nAs far as I can see, these lines try to apply inheritance, but inheritance is not needed for this test.",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ae05813_4da6d330",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "See above",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab5e54b5_419cb9c4",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "This test appears to rely on inheritance, purely to change the default value of isTemplateMode.\n\nWhat if View.prototype.isTemplateMode was stubbed instead?",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4473f3ba_3235c5c8",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "See above",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c491a2b_53479173",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "See above",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b31b1ff5_d447927c",
+        "filename": "tests/node-qunit/mockOO.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 1,
+      "message": "This code feels problematic to me, as it means our unit tests rely on it.\n\nThis in turn means our unit tests are not unit tests.. they are integration tests.\n\nIf they are integration tests, they should be kept as they are - not moved to the src folder.\n\nIf I replace inheritClass with an empty function and run `npm run test:unit` I see various errors that look like:\n\n\u003e Module.require (module.js:466:17): Cannot read property \u0027apply\u0027 of undefined\"\u0027\nThis relates to the line:\n\u003e this.initialize.apply( this, arguments );\n\nbut this is strange, as mfExtend is what makes sure this method is available.... (continued in next file)",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

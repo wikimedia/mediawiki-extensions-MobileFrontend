@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0731cc8_4edcb78e",
+        "filename": "tests/node-qunit/mockJQuery.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T00:42:07Z",
+      "side": 0,
+      "message": "(Thoughts around this for another patchset - let\u0027s see if we can address the OO and sinon issues first)",
+      "revId": "6e48b8c0b620e10177c3ec791ef6039903745e77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
