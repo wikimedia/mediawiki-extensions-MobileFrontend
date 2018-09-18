@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e094c6b_347da231",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T17:31:51Z",
+      "side": 1,
+      "message": "Why not .overlay-ios ? This needs some explanation?",
+      "revId": "7aa95d9c3b04cd153665c549e89eb43bbe889959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79e758e9_d359a8a4",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T17:31:51Z",
+      "side": 1,
+      "message": "I don\u0027t quite understand why we need a pseudo element here and given it appears at the top I was surprised to see \"after\".",
+      "revId": "7aa95d9c3b04cd153665c549e89eb43bbe889959",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
