@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3e9175a3_1044d845",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-18T14:01:22Z",
+      "side": 1,
+      "message": "This patch prevents further inheritance by not passing the options object on down.",
+      "parentUuid": "afcb3bf0_3c6c7f06",
+      "revId": "a3747714d76af8cdf8ba8838eb00028ca8b2d573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ade7a804_3777802a",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
