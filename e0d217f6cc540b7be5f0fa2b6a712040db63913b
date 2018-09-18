@@ -16,6 +16,24 @@
       "revId": "e0d217f6cc540b7be5f0fa2b6a712040db63913b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1dd2e39c_7cf07899",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-18T18:21:34Z",
+      "side": 1,
+      "message": "Totally agree, thanks! Will fix now",
+      "parentUuid": "a6da2172_cd37a7fc",
+      "revId": "e0d217f6cc540b7be5f0fa2b6a712040db63913b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
