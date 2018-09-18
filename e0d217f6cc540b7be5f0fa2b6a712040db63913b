@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6da2172_cd37a7fc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-18T17:49:00Z",
+      "side": 1,
+      "message": "A more general comment is probably necessary here as it took me a while to work out what was happening here.\n\nThe problem seems to be that we autodiscover files based on files in the resources folder.\n\nHere we add tests which are not auto-discoverable.\n\nWe may find in future that we want to keep this as an integration test, so rather than the TODO comment, it might be better to keep a neutral stance and say this is for tests which cannot run in headless mode and cannot be autodiscovered.",
+      "revId": "e0d217f6cc540b7be5f0fa2b6a712040db63913b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
