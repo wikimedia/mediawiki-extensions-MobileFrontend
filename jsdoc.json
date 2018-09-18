@@ -10,7 +10,7 @@
 		"plugins/markdown"
 	],
 	"source": {
-		"include": [ "resources" ]
+		"include": [ "resources", "src" ]
 	},
 	"templates": {
 		"cleverLinks": true,
