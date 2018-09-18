@@ -1,0 +1,50 @@
+@import 'mediawiki.mixins.less';
+@import 'mediawiki.ui/variables';
+
+.editor-overlay-ve {
+	.content {
+		// We don't need display:table as there are no edit/collapse buttons
+		// Also display:table causes CE issues in Mobile Safari (T202991)
+		h1, h2, h3, h4, h5 {
+			display: block;
+		}
+	}
+
+	.overlay-content {
+		.surface {
+			overflow: hidden;
+		}
+	}
+
+	// Toolbar
+	@targetIconSize: 20px;
+	.overlay-header-container {
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
+
+		.ve-init-mw-mobileArticleTarget-toolbar {
+			// The border will only be visible on screens >1000px due to max-width set elsewhere.
+			// On smallers screens, the negative margin will cause it to be outside of viewport.
+			border-color: @colorGray12;
+			border-style: solid;
+			border-width: 0 1px;
+			margin: 0 -1px;
+
+			.oo-ui-iconElement-icon {
+				/* Overwrite `contain` value here, as we're 16px base sized */
+				.background-size( @targetIconSize, @targetIconSize );
+			}
+
+			.oo-ui-toolbar-bar {
+				border: 0;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.overlay-header {
+		/* Reset unwanted header styles */
+		border-collapse: separate;
+		border: 0;
+		height: 3em;
+	}
+}
