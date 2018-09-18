@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b73b9fc8_d854c1c3",
+        "filename": "resources/mobile.search/schemaMobileWebSearch.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-18T22:27:53Z",
+      "side": 1,
+      "message": "This does not need to be loaded here. The Schema class and subscriber module use mw.track, which handles that automatically.\n\nAlso, the schema.* modules will soon go away, but that\u0027s another story – T187207",
+      "range": {
+        "startLine": 3,
+        "startChar": 1,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "64f1c254a98696c3d2345328e49aaaf2250fccc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
