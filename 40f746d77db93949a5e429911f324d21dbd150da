@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6c855c16_c728a67f",
+        "filename": "resources/dist/mobile.startup.runtime.js.map.json",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-18T15:53:44Z",
+      "side": 0,
+      "message": "Is it intentional to delete this file?",
+      "revId": "40f746d77db93949a5e429911f324d21dbd150da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

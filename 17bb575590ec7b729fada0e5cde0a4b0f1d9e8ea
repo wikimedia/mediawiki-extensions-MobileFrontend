@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0fdb098_c462b4ed",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-18T15:53:44Z",
+      "side": 1,
+      "message": "Why not require this as needed so that dependencies are clear? It\u0027s always confusing to me what\u0027s in the test environment and imports would help me remember at least when reviewing tests already written.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 36
+      },
+      "revId": "17bb575590ec7b729fada0e5cde0a4b0f1d9e8ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f07112be_f88438c0",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-18T15:53:44Z",
+      "side": 1,
+      "message": "I don\u0027t know much about these settings but is it possible to keep these out of the config? I would prefer to explicitly configure each test\u0027s set up per test as wanted so that there\u0027s no mystery about what\u0027s attached to the context and each test configures and uses only what it needs. If that\u0027s too verbose, let\u0027s chat about it but I wouldn\u0027t want to assume that we need any infrastructure.\n\nhttps://sinonjs.org/releases/v1.17.7/sandbox/",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 1
+      },
+      "revId": "17bb575590ec7b729fada0e5cde0a4b0f1d9e8ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
