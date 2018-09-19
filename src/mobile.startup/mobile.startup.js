@@ -1,6 +1,7 @@
 var ModuleLoader = require( './modules' ),
 	moduleLoader = new ModuleLoader(),
 	mfExtend = require( './mfExtend' ),
+	context = require( './context' ),
 	time = require( './time' ),
 	util = require( './util' ),
 	View = require( './View' ),
@@ -21,6 +22,7 @@ mw.mobileFrontend.define( 'mobile.startup/View', View );
 mw.mobileFrontend.define( 'mobile.startup/Browser', Browser );
 mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 mw.mobileFrontend.define( 'mobile.startup/time', time );
+mw.mobileFrontend.define( 'mobile.startup/context', context );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -31,5 +33,6 @@ module.exports = {
 	util: util,
 	View: View,
 	Browser: Browser,
+	context: context,
 	cache: cache
 };
