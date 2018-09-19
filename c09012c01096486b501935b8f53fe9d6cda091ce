@@ -22,6 +22,30 @@
       "revId": "c09012c01096486b501935b8f53fe9d6cda091ce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3b67a97_1384203e",
+        "filename": "resources/mobile.loggingSchemas.mobileWebMainMenuClickTracking/schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-19T22:12:03Z",
+      "side": 1,
+      "message": "We don\u0027t but this is the current in production value, so without this check we\u0027d need to SWAT a config change first that sets this and that would delay us as we wait for it to roll out to all cached HTML.\n\nI can add a FIXME and/or you can trust me to follow up on this later when this code is live and caching is no longer a problem. Lemme know!",
+      "parentUuid": "0e90ab79_1882e582",
+      "range": {
+        "startLine": 14,
+        "startChar": 63,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "c09012c01096486b501935b8f53fe9d6cda091ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
