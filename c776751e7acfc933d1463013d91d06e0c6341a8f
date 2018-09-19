@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bcf89263_0dba6efb",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-19T22:44:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1abccc6f_37554a92",
+      "range": {
+        "startLine": 356,
+        "startChar": 0,
+        "endLine": 360,
+        "endChar": 16
+      },
+      "revId": "c776751e7acfc933d1463013d91d06e0c6341a8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bb1df589_7cf1df2a",
         "filename": "tests/node-qunit/mockJQuery.js",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ea056d1d_4a6d344b",
+        "filename": "tests/node-qunit/mockJQuery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-19T22:44:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb1df589_7cf1df2a",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 3
+      },
+      "revId": "c776751e7acfc933d1463013d91d06e0c6341a8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c5843e33_5d151d99",
         "filename": "tests/node-qunit/mockMediaWiki.js",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2018-09-19T22:18:28Z",
       "side": 1,
       "message": "are these needed now? If I run the node-qunit tests they all pass without this",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 4
+      },
+      "revId": "c776751e7acfc933d1463013d91d06e0c6341a8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b48a9d37_70826997",
+        "filename": "tests/node-qunit/mockMediaWiki.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-19T22:44:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5843e33_5d151d99",
       "range": {
         "startLine": 3,
         "startChar": 0,
