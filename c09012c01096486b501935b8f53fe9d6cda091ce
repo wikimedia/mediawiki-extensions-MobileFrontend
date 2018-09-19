@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e90ab79_1882e582",
+        "filename": "resources/mobile.loggingSchemas.mobileWebMainMenuClickTracking/schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-19T14:29:51Z",
+      "side": 1,
+      "message": "Do we normally use a nonzero value for the default configuration?",
+      "range": {
+        "startLine": 14,
+        "startChar": 63,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "c09012c01096486b501935b8f53fe9d6cda091ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
