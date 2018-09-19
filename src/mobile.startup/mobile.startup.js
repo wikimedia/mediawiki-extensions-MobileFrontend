@@ -6,6 +6,7 @@ var ModuleLoader = require( './modules' ),
 	user = require( './user' ),
 	util = require( './util' ),
 	View = require( './View' ),
+	PageGateway = require( './PageGateway' ),
 	Browser = require( './Browser' ),
 	cache = require( './cache' );
 
@@ -25,6 +26,7 @@ mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 mw.mobileFrontend.define( 'mobile.startup/time', time );
 mw.mobileFrontend.define( 'mobile.startup/context', context );
 mw.mobileFrontend.define( 'mobile.startup/user', user );
+mw.mobileFrontend.define( 'mobile.startup/PageGateway', PageGateway );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
