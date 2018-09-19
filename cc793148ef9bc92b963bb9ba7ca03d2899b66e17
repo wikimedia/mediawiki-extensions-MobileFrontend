@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0557c162_2cb9c05f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-19T13:58:54Z",
+      "side": 1,
+      "message": "This change exceeds maximum allowed line length and appears to be causing the CI tests to fail.",
+      "revId": "cc793148ef9bc92b963bb9ba7ca03d2899b66e17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
