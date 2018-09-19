@@ -4,7 +4,7 @@
  * @param {Function} Child function
  * @param {Object|Function} ParentOrPrototype class to inherit from
  *  OR if no inheriting class a prototype to extend the class with
- * @param {Object} prototype
+ * @param {Object} [prototype]
  */
 function mfExtend( Child, ParentOrPrototype, prototype ) {
 	var key;
