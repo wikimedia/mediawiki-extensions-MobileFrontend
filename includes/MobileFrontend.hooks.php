@@ -335,7 +335,8 @@ class MobileFrontendHooks {
 			$hasTests = false;
 			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
 				foreach ( $module['scripts'] as $script ) {
-					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
+					$testFile = 'tests/' . dirname( $script ) . '/' .
+						preg_replace( '/.js$/', '.test.js', basename( $script ) );
 					// For resources folder
 					$testFile = str_replace( 'tests/resources/', 'tests/qunit/', $testFile );
 					// if a test file exists for a given JS file, add it
@@ -358,7 +359,7 @@ class MobileFrontendHooks {
 		// in headless mode). Therefore, the test file is not autodiscovered by the
 		// code above and needs to be explicitly added to the array of supported
 		// test files.
-		$testFiles[] = 'tests/qunit/mobile.startup/test_View.js';
+		$testFiles[] = 'tests/qunit/mobile.startup/View.test.js';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'templates' => [
