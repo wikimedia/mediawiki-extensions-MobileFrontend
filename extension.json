@@ -362,7 +362,6 @@
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup/context.js",
 				"resources/mobile.startup/user.js",
 				"resources/mobile.startup/PageGateway.js",
 				"resources/mobile.startup/Anchor.js",
