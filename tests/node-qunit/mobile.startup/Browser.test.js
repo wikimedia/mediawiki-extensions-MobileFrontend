@@ -3,7 +3,7 @@ var Browser = require( '../../../src/mobile.startup/Browser' ),
 	// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
 	$html = $( '<html>' );
 
-QUnit.module( 'Browser.js' );
+QUnit.module( 'MobileFrontend Browser.js' );
 
 QUnit.test( 'isIos()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
