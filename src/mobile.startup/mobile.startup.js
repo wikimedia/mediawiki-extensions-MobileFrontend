@@ -1,6 +1,7 @@
 var ModuleLoader = require( './modules' ),
 	moduleLoader = new ModuleLoader(),
 	mfExtend = require( './mfExtend' ),
+	time = require( './time' ),
 	util = require( './util' ),
 	View = require( './View' ),
 	Browser = require( './Browser' ),
@@ -19,12 +20,14 @@ mw.mobileFrontend.define( 'mobile.startup/util', util );
 mw.mobileFrontend.define( 'mobile.startup/View', View );
 mw.mobileFrontend.define( 'mobile.startup/Browser', Browser );
 mw.mobileFrontend.define( 'mobile.startup/cache', cache );
+mw.mobileFrontend.define( 'mobile.startup/time', time );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
 // `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
 module.exports = {
 	moduleLoader: moduleLoader,
+	time: time,
 	util: util,
 	View: View,
 	Browser: Browser,
