@@ -35,6 +35,7 @@ class ExtMobileFrontend {
 		$ns = $title->getNamespace();
 
 		$isSpecialPage = $title->isSpecialPage();
+		$isView = $context->getRequest()->getText( 'action', 'view' ) == 'view';
 
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
@@ -46,7 +47,7 @@ class ExtMobileFrontend {
 				$config->get( 'MFNamespacesWithoutCollapsibleSections' )
 			) === false
 			// And not when what's shown is not actually article text
-			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
+			&& $isView
 		);
 
 		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections );
@@ -70,7 +71,7 @@ class ExtMobileFrontend {
 		// If the page is a user page which has not been created, then let the
 		// user know about it with pretty graphics and different texts depending
 		// on whether the user is the owner of the page or not.
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
+		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() && $isView ) {
 			$pageUserId = User::idFromName( $title->getText() );
 
 			$out->addModuleStyles( [
@@ -80,7 +81,7 @@ class ExtMobileFrontend {
 			if ( $pageUserId && !$title->exists() ) {
 				$pageUser = User::newFromId( $pageUserId );
 				$contentHtml = self::getUserPageContent(
-					$out, $pageUser );
+					$out, $pageUser, $title );
 			}
 		}
 
@@ -92,9 +93,10 @@ class ExtMobileFrontend {
 	 *
 	 * @param OutputPage $output
 	 * @param User $pageUser owner of the user page
+	 * @param Title $title
 	 * @return string
 	 */
-	public static function getUserPageContent( $output, $pageUser ) {
+	public static function getUserPageContent( $output, $pageUser, $title ) {
 		$context = MobileContext::singleton();
 		$pageUsername = $pageUser->getName();
 		// Is the current user viewing their own page?
@@ -118,6 +120,10 @@ class ExtMobileFrontend {
 				'mobile-frontend-user-page-create-user-page-link-label',
 				$pageUser->getUserPage()->getBaseTitle()
 			)->parse();
+		// Mobile editor has trouble when section is not specified.
+		// It doesn't matter here since the page doesn't exist.
+		$data['editUrl'] = $title->getLinkURL( [ 'action' => 'edit', 'section' => 0 ] );
+		$data['editSection'] = 0;
 		$data['createPageLinkAdditionalClasses'] = $isCurrentUser ? 'mw-ui-button' : '';
 
 		$templateParser = new TemplateParser( __DIR__ );

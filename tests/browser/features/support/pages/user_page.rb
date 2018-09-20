@@ -16,6 +16,6 @@ class UserPage < ArticlePage
     page.user_links_element.element.a(href: /Special:Uploads\//)
   end
   a(:cta_edit_link) do |page|
-    page.cta_holder_element.element.a(href: %r{#/editor/0})
+    page.cta_holder_element.element.a(href: /action=edit/)
   end
 end
