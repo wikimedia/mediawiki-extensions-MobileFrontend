@@ -1323,7 +1323,7 @@
 			"image/svg+xml"
 		],
 		"MFEnableManifest": true,
-		"MFManifestThemeColor": "#222",
+		"MFManifestThemeColor": "#eaecf0",
 		"MFManifestBackgroundColor": "#fff",
 		"MFLogWrappedInfoboxes": true,
 		"MFSiteStylesRenderBlocking": false,
