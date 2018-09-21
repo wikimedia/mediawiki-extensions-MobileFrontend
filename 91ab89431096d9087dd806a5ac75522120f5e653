@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f5d176f_bef0941e",
+        "filename": "package.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-21T13:56:20Z",
+      "side": 1,
+      "message": "Since this script calls `npm test`, `composer test` is now redundant and can be removed.",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "91ab89431096d9087dd806a5ac75522120f5e653",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
