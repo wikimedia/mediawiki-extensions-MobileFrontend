@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8aae690_220f7dfd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-21T00:08:09Z",
+      "side": 1,
+      "message": "Following on from my comments in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/460986/ ...\n\nTo be clear, I don\u0027t think we should aim to make any changes to the CategoryOverlay code right now.\n\nThere is an open task to redesign the feature  that we should consider: https://phabricator.wikimedia.org/T142124.\n\nI think the learnings of this activity (and how we should think of our view code in future) are far more important than having mergeable code.\n\nThe attention we are giving this task is making me feel anxious and I want to make sure we share the same goals and understanding of this task.\n\nI\u0027m finishing for the day now, but can we chat about this tomorrow?",
+      "revId": "beb0c0a4d62bedb5790a7ca5615a8ce2495ad2e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
