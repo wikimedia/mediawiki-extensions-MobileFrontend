@@ -86,9 +86,8 @@ class ApiParseExtender {
 				$mf->setIsMainPage( $params['mainpage'] && $mfSpecialCaseMainPage );
 				$mf->enableExpandableSections( !$params['mainpage'] );
 				$mf->disableScripts();
-				// HACK: need a nice way to request a TOC- and edit link-free HTML in the first place
-				// FIXME: Should this be .mw-editsection?
-				$mf->remove( [ '.toc', 'mw-editsection', '.mw-headline-anchor' ] );
+				// HACK: need a nice way to request a TOC-free HTML in the first place
+				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
 				$mf->filterContent();
 
 				if ( is_array( $text ) ) {
