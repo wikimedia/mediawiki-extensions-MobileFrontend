@@ -14,5 +14,6 @@
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-filter-all": "Omni",
 	"tag-mobile_edit": "Redaktita per posh-telefonilo",
-	"tag-mobile_web_edit": "Redaktita per informatikoprogramo \"app\""
+	"tag-mobile_web_edit": "Redaktita per informatikoprogramo \"app\"",
+	"tag-mobile_web_edit-description": "Redakturo kreita de mobila retopagino"
 }
