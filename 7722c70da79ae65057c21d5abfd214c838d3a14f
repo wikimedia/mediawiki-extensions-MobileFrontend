@@ -16,6 +16,24 @@
       "revId": "7722c70da79ae65057c21d5abfd214c838d3a14f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f6bf073_1e62e931",
+        "filename": "tests/node-qunit/qunitSetup.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-24T19:32:33Z",
+      "side": 1,
+      "message": "I agree with the notion of requiring sinon as needed and not making it global so I\u0027m abandoning this patch.",
+      "parentUuid": "be56c035_2f90f2cc",
+      "revId": "7722c70da79ae65057c21d5abfd214c838d3a14f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
