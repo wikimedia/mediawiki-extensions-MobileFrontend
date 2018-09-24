@@ -1,6 +1,6 @@
-<div class="prev slider-button">
+<button class="prev slider-button">
 	{{{slideLeftButton}}}
-</div>
+</button>
 <div class="main">
 	<div class="image-wrapper">
 		<div class="image">
@@ -16,6 +16,6 @@
 		<p class="license"><a href="#">{{licenseLinkMsg}}</a></p>
 	</div>
 </div>
-<div class="next slider-button">
+<button class="next slider-button">
 	{{{slideRightButton}}}
-</div>
+</button>
