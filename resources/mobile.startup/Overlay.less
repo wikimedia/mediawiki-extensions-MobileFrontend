@@ -151,11 +151,13 @@
 		line-height: inherit;
 	}
 
-	@buttonWidth: 40px;
+	// @iconGutterWidth and @iconSize are imported from mediawiki.ui/variables
+	@iconWidth: @iconSize + ( 2 * @iconGutterWidth );
 	.slider-button {
 		position: absolute;
 		top: 0;
-		width: @buttonWidth;
+		min-width: 60px; // T198018: A width any smaller than 60px is too small of a touch area
+		width: 2.5 * @iconSize;
 		bottom: 0;
 		z-index: @z-indexOverlay;
 
@@ -169,17 +171,15 @@
 
 		&.next {
 			right: 0;
-
-			> .mw-ui-icon {
-				right: 0;
-			}
 		}
 
-		// vertically align icon.
+		// align icon.
 		> * {
 			position: absolute;
 			top: 50%;
 			margin-top: -50%;
+			left: 50%;
+			margin-left: -( @iconWidth / 2 );
 			.filter( drop-shadow( 0 0 4px rgba( 0, 0, 0, 0.8 ) ) );
 		}
 	}
