@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d7db88b_13a9fd1a",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-24T18:53:32Z",
+      "side": 1,
+      "message": "Will QUnit or Sinon sandboxes reset this state for each test? If not, can we make it?",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "f5f4221bd4ad2aac3fed3f85085548a99e75913a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
