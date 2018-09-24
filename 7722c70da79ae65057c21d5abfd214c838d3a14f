@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be56c035_2f90f2cc",
+        "filename": "tests/node-qunit/qunitSetup.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-24T18:58:11Z",
+      "side": 1,
+      "message": "I left some comments on https://gerrit.wikimedia.org/r/c/mediawiki/extensions/MobileFrontend/+/458883/12/tests/node-qunit/config.js that now apply here.",
+      "revId": "7722c70da79ae65057c21d5abfd214c838d3a14f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
