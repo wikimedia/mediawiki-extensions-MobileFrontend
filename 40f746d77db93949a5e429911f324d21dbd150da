@@ -16,6 +16,24 @@
       "revId": "40f746d77db93949a5e429911f324d21dbd150da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40c52b67_bd74367e",
+        "filename": "resources/dist/mobile.startup.runtime.js.map.json",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-24T19:45:01Z",
+      "side": 0,
+      "message": "Nope it wasn\u0027t intentional. I must have accidentally deleted it when I was dealing with merge conflicts",
+      "parentUuid": "6c855c16_c728a67f",
+      "revId": "40f746d77db93949a5e429911f324d21dbd150da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

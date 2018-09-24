@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f3d42699_dafa9a6c",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-24T19:45:01Z",
+      "side": 1,
+      "message": "The main reason I did this was to avoid making sinon be in our test bundle and thus having two copies of sinon loaded when the Special:JavascriptTest page runs. By requiring in config.js, it would not be included in that bundle. \n\nHaving said that, I agree that requiring it as needed in the test file is better and if we can do that and not have webpack include it in the test bundle,  I think that is ideal.",
+      "parentUuid": "b0fdb098_c462b4ed",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 36
+      },
+      "revId": "17bb575590ec7b729fada0e5cde0a4b0f1d9e8ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f07112be_f88438c0",
         "filename": "tests/node-qunit/config.js",
         "patchSetId": 12
@@ -36,6 +60,30 @@
       "writtenOn": "2018-09-18T15:53:44Z",
       "side": 1,
       "message": "I don\u0027t know much about these settings but is it possible to keep these out of the config? I would prefer to explicitly configure each test\u0027s set up per test as wanted so that there\u0027s no mystery about what\u0027s attached to the context and each test configures and uses only what it needs. If that\u0027s too verbose, let\u0027s chat about it but I wouldn\u0027t want to assume that we need any infrastructure.\n\nhttps://sinonjs.org/releases/v1.17.7/sandbox/",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 1
+      },
+      "revId": "17bb575590ec7b729fada0e5cde0a4b0f1d9e8ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43d81cfa_b8723076",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-24T19:45:01Z",
+      "side": 1,
+      "message": "These settings were copied from the testrunner.js file in core with the thought that the any test running in node qunit should also have the same config as what Special:JavascriptTest tests have given that the tests should be able to run in both environments. With the requirement, it seemed that the config in Special:JavascriptTest was a little bit of a limiting factor and why I decided to copy it to node qunit.",
+      "parentUuid": "f07112be_f88438c0",
       "range": {
         "startLine": 13,
         "startChar": 0,
