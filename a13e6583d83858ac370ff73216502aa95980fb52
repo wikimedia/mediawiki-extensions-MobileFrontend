@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "9eaf83a0_fae1a30d",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-24T20:32:50Z",
+      "side": 1,
+      "message": "The one perk of making a class that inherits / extends View in these tests rather than changing View.prototype.isTemplateMode directly is that it provides a fairly simple way to not cause side effects for downstream tests.\n\nIs there a relatively simple way to change View\u0027s prototype without causing side effects downstream? It didn\u0027t seem like the version of sinon we use for Special:JavascriptTest supported stubbing an object\u0027s properties from what I saw.",
+      "parentUuid": "ab5e54b5_419cb9c4",
+      "revId": "a13e6583d83858ac370ff73216502aa95980fb52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4473f3ba_3235c5c8",
         "filename": "tests/node-qunit/mobile.startup/View.test.js",
         "patchSetId": 11
