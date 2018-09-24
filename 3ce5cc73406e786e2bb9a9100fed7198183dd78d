@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82d462e6_96d416eb",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-24T17:55:41Z",
+      "side": 1,
+      "message": "This patch helps testing existing code, but I\u0027ll need to move this piece of config to minerva before it can be merged.",
+      "revId": "3ce5cc73406e786e2bb9a9100fed7198183dd78d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
