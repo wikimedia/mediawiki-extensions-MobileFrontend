@@ -22,6 +22,30 @@
       "revId": "f5f4221bd4ad2aac3fed3f85085548a99e75913a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "52ab1d49_7712218f",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-09-25T13:46:20Z",
+      "side": 1,
+      "message": "Yes we can. QUnit provide `beforeEach` and `afterEach` hooks at the module level, which run before and after each test in a module. \n\n\nThese hooks have to be called on a per-module basis https://www.sitepoint.com/qunit-advanced-concepts-modules-configuration/ which could be a little tedious, and isn\u0027t necessary in a browser context. \n\n\nAn option could be to use nested modules, and define these hooks on the parent module, because I think the parent hooks still get called on child modules. We would still have to call these hooks conditionally only for Node though. \n\n\nAnother option would be to override the `QUnit.module` function to included these hooks on each module. This is what Joaquin did here https://github.com/wikimedia/mw-node-qunit/blob/master/wikimedia-setup.js and I think the benefit of that is that it would only be run in Node (since I believe the config file is only run in Node mode).",
+      "parentUuid": "8d7db88b_13a9fd1a",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "f5f4221bd4ad2aac3fed3f85085548a99e75913a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
