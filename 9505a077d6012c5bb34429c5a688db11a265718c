@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14a18002_d6304ca7",
+        "filename": "tests/browser/features/user_page.feature",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-25T16:19:27Z",
+      "side": 1,
+      "message": "This scenario is missing its background - no Given statement.",
+      "revId": "9505a077d6012c5bb34429c5a688db11a265718c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
