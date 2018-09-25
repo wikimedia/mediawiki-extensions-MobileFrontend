@@ -46,6 +46,30 @@
       "revId": "f5f4221bd4ad2aac3fed3f85085548a99e75913a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a42e27f_ddc86cf2",
+        "filename": "tests/node-qunit/config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-25T21:17:23Z",
+      "side": 1,
+      "message": "\u003e An option could be to use nested modules, and define these hooks on the parent module, because I think the parent hooks still get called on child modules. We would still have to call these hooks conditionally only for Node though. \n\nLike a \"ViewTest\" module of sorts? I worry this would grow out of control due to inheritance as ViewTest inevitably grew to include everything convenient such as a DOM, Sinon.JS set up and tear down, and whatever else we needed. What do you think?\n\n\u003e Another option would be to override the `QUnit.module` function to included these hooks on each module. This is what Joaquin did here https://github.com/wikimedia/mw-node-qunit/blob/master/wikimedia-setup.js and I think the benefit of that is that it would only be run in Node (since I believe the config file is only run in Node mode).\n\nThis is the direction our config file is currently headed I think.\n\nI\u0027ve tried the alternative to resolve T204885:\n\nhttps://gerrit.wikimedia.org/r/c/mediawiki/extensions/MobileFrontend/+/462811/1/tests/node-qunit/isomorphicDOM.js\n\nIt looks like this:\n\nhttps://gerrit.wikimedia.org/r/c/mediawiki/extensions/MobileFrontend/+/462812/1/tests/node-qunit/mobile.startup/foo.test.js\n\nIt keeps our dependencies explicit at the cost of boilerplate. I\u0027d appreciate your thoughts on the approach. /cc @nray @jdlrobson",
+      "parentUuid": "52ab1d49_7712218f",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "f5f4221bd4ad2aac3fed3f85085548a99e75913a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
