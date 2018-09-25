@@ -1,9 +1,26 @@
 /* global $ */
-var Browser = require( '../../../src/mobile.startup/Browser' ),
+var
+	Browser,
+	dom = require( '../utils/dom' ),
+	mw = require( '../utils/mw' ),
+	jQuery = require( '../utils/jQuery' ),
+	sinon = require( 'sinon' ),
 	// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
-	$html = $( '<html>' );
+	$html;
+/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
 
-QUnit.module( 'MobileFrontend Browser.js' );
+QUnit.module( 'MobileFrontend Browser.js', {
+	beforeEach: function () {
+		sandbox = sinon.sandbox.create();
+		dom.setUp( sandbox, global );
+		mw.setUp( sandbox, global );
+		jQuery.setUp( sandbox, global );
+
+		Browser = require( '../../../src/mobile.startup/Browser' );
+		$html = $( '<html>' );
+	},
+	afterEach: function () { sandbox.restore(); }
+} );
 
 QUnit.test( 'isIos()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),

@@ -31,8 +31,8 @@ module.exports = {
 	// named simply "index.js" but the redundancy of "[name].js" improves presentation and search-
 	// ability in some tools. Entry names are tightly coupled to output.filename and extension.json.
 	entry: {
-		// Note that the tests.mobilefrontend module only exists inside Special:JavaScriptTest/qunit
-		// test runs. It provides scaffolding (template mocks) and does not appear inside the
+		// Note that the tests.mobilefrontend module only exists inside Special:JavaScriptTest test
+		// runs. It provides scaffolding (template mocks) and does not appear inside the
 		// ResourceLoader startup module, so does not use the `mobile.` prefix that other modules
 		// do. This is consistent with other test related artifacts. E.g.,
 		// test.mediawiki.qunit.testrunner and test.sinonjs.
@@ -40,13 +40,17 @@ module.exports = {
 		// caught and run to ensure we don't forget to register new tests.
 		'tests.mobilefrontend': glob.sync( './tests/node-qunit/*/*.test.js' ),
 
-		'mobile.startup': './src/mobile.startup/mobile.startup.js'
-
 		// mobile.startup.runtime: reserved entry for the Webpack bootloader
 		// optimization.runtimeChunk. Without a distinct runtime chunk, it's instead bundled into
 		// each entry which is inefficient. This chunk should only change when Webpack or this
 		// configuration changes.
+
+		'mobile.startup': './src/mobile.startup/mobile.startup.js'
 	},
+
+	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
+	// can be removed if tests.mobilefrontend is removed.
+	externals: [ 'jsdom', 'sinon', 'qunit' ],
 
 	optimization: {
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share.
