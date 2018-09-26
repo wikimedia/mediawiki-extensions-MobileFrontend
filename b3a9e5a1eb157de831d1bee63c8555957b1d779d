@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ee2fe7c_d27959dd",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-09-26T10:54:10Z",
+      "side": 1,
+      "message": "This seems like a lot of boilerplate. It exposes the dependencies pretty explicitly, but I can see us repeating these hooks for nearly all our tests.",
+      "revId": "b3a9e5a1eb157de831d1bee63c8555957b1d779d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
