@@ -131,15 +131,6 @@
 		 * @memberof VisualEditorOverlay
 		 * @instance
 		 */
-		postRender: function () {
-			this.$( '.surface' ).hide();
-			EditorOverlayBase.prototype.postRender.apply( this );
-		},
-		/**
-		 * @inheritdoc
-		 * @memberof VisualEditorOverlay
-		 * @instance
-		 */
 		onClickBack: function () {
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 			this.switchToEditor();
@@ -152,7 +143,6 @@
 		 */
 		switchToEditor: function () {
 			this.showHidden( '.initial-header' );
-			this.$( '.surface' ).show();
 		},
 		/**
 		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
