@@ -16,6 +16,24 @@
       "revId": "175060a41679a83185a499543b69e3902fba0568",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79d6a58b_5607e6d4",
+        "filename": "tests/node-qunit/mockOO.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-26T18:14:58Z",
+      "side": 1,
+      "message": "It sounds like we\u0027re leaning this way (towards real dependencies instead of mocks) with jQuery.",
+      "parentUuid": "735ecd82_9d72ba6c",
+      "revId": "175060a41679a83185a499543b69e3902fba0568",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
