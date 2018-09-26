@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e0977d2_16c91303",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-26T20:56:39Z",
+      "side": 1,
+      "message": "I don\u0027t think this call does anything without being supplied an object.\n\nhttps://sinonjs.org/releases/v1.17.6/utils/#sinonrestoreobject\n\nI think what you\u0027re going for is to create a sinon sandbox, call .mock/.stub on that sandbox instance, and then call .restore on the sandbox instance after each test if needed. \n\nAccording to https://sinonjs.org/releases/v1.17.6/sandbox/, it looks like you can either explicitly create a sandbox with sinon.sandbox.create() and use that sandbox instance in the tests or you can pass each test function into sinon.test and use this.stub/this.mock within the test.  e.g. \n\n```\nQUnit.test( \u0027bar\u0027, sinon.test( function ( assert ) {\n  this.stub(api, \u0027foo\u0027);\n} )\n```\n\nI think the benefit of the latter approach is that you don\u0027t have to make any restore calls",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
