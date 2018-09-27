@@ -70,6 +70,30 @@
       "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69f431cf_1075f2a0",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-09-27T16:51:35Z",
+      "side": 1,
+      "message": "That looks good in latest patch. \n\nNote: I made the comment above because I noticed we were using sinon 1.17.3 in the package.json. Is the plan to still use that version or to use the latest version? I think we should use whatever version the Special:JavascriptTest page uses which I believe is currently 1.17.3",
+      "parentUuid": "916b92fb_f64da597",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
