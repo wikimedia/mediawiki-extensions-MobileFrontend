@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b092f596_f02f3173",
+        "filename": "tests/node-qunit/mobile.startup/Browser.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-09-27T06:54:48Z",
+      "side": 1,
+      "message": "why call this inside the hook?",
+      "range": {
+        "startLine": 11,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 9
+      },
+      "revId": "77542b4502d9629d146df977e8e4d959d7ed5098",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
