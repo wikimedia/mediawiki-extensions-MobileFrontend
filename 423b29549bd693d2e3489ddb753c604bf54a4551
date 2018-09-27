@@ -46,6 +46,30 @@
       "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "916b92fb_f64da597",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-27T16:26:06Z",
+      "side": 1,
+      "message": "\u003e sandbox \u003d sinon.createSandbox(),\n\nDone in PS6. Let me know what you think.",
+      "parentUuid": "3a0b0d47_9693a4b8",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
