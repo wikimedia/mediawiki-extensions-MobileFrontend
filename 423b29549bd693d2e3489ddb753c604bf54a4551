@@ -94,6 +94,30 @@
       "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa9a190_d342c9ee",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-27T18:18:38Z",
+      "side": 1,
+      "message": "I didn\u0027t realize we were using such an ancient version. I agree, we should use v1.17.3. I do think we should avoid functions deprecated in later versions though.",
+      "parentUuid": "69f431cf_1075f2a0",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
