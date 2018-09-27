@@ -22,6 +22,30 @@
       "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a0b0d47_9693a4b8",
+        "filename": "tests/node-qunit/mobile.startup/foo.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-09-27T16:23:01Z",
+      "side": 1,
+      "message": "This line restores the default sandbox according to: https://sinonjs.org/releases/v6.3.4/general-setup/. The v1.17.6 docs are outdated.\n\nExplicit sandboxes, sinon.createSandbox(), sounds fine. I hope that would mean we could drop the Hooks, with each test just creating its own sandbox as needed. I couldn\u0027t find sinon.test in the current docs so I\u0027m not sure if that means it\u0027s deprecated.",
+      "parentUuid": "4e0977d2_16c91303",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "423b29549bd693d2e3489ddb753c604bf54a4551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
