@@ -61,7 +61,7 @@ function isNow( delta ) {
  * Return a message relating to the last modified relative time.
  * @memberof time
  * @instance
- * @param {string} ts timestamp
+ * @param {number} ts timestamp
  * @param {string} username of the last user to modify the page
  * @param {string} [gender] of the last user to modify the page
  * @param {string} [historyUrl] url to the history page for the message, if omitted
@@ -82,7 +82,7 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 
 	gender = gender || 'unknown';
 
-	delta = getTimeAgoDelta( parseInt( ts, 10 ) );
+	delta = getTimeAgoDelta( ts );
 	if ( isNow( delta ) ) {
 		args.push( 'mobile-frontend-last-modified-with-user-just-now', gender, username );
 	} else {
