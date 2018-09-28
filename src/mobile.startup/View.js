@@ -1,7 +1,6 @@
 /* global $ */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
-	OO = window.OO,
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/,
 	idCounter = 0;

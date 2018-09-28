@@ -1,4 +1,5 @@
-var ModuleLoader = require( './modules' ),
+var
+	ModuleLoader = require( './modules' ),
 	moduleLoader = new ModuleLoader(),
 	mfExtend = require( './mfExtend' ),
 	context = require( './context' ),
@@ -8,7 +9,14 @@ var ModuleLoader = require( './modules' ),
 	View = require( './View' ),
 	PageGateway = require( './PageGateway' ),
 	Browser = require( './Browser' ),
-	cache = require( './cache' );
+	cache = require( './cache' ),
+	Button = require( './Button.js' ),
+	Icon = require( './Icon.js' ),
+	icons = require( './icons.js' ),
+	Panel = require( './Panel.js' ),
+	Section = require( './Section.js' ),
+	Thumbnail = require( './Thumbnail.js' ),
+	Page = require( './Page.js' );
 
 mw.mobileFrontend = moduleLoader;
 mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
@@ -27,6 +35,13 @@ mw.mobileFrontend.define( 'mobile.startup/time', time );
 mw.mobileFrontend.define( 'mobile.startup/context', context );
 mw.mobileFrontend.define( 'mobile.startup/user', user );
 mw.mobileFrontend.define( 'mobile.startup/PageGateway', PageGateway );
+mw.mobileFrontend.define( 'mobile.startup/Button', Button );
+mw.mobileFrontend.define( 'mobile.startup/Icon', Icon );
+mw.mobileFrontend.define( 'mobile.startup/icons', icons );
+mw.mobileFrontend.define( 'mobile.startup/Panel', Panel );
+mw.mobileFrontend.define( 'mobile.startup/Section', Section );
+mw.mobileFrontend.define( 'mobile.startup/Thumbnail', Thumbnail );
+mw.mobileFrontend.define( 'mobile.startup/Page', Page );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -38,5 +53,11 @@ module.exports = {
 	View: View,
 	Browser: Browser,
 	context: context,
-	cache: cache
+	cache: cache,
+	Button: Button,
+	Icon: Icon,
+	icons: icons,
+	Panel: Panel,
+	Section: Section,
+	Page: Page
 };
