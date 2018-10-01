@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcc802a7_b15f6039",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T19:46:00Z",
+      "side": 1,
+      "message": "Isn\u0027t the function signature of function getLastModifiedMessage( ts, username, gender, historyUrl ) { wrong?\n\nThat function does delta \u003d getTimeAgoDelta( parseInt( ts, 10 ) );\nSo this means we\u0027re parsing an integer to a string and then back to an integer.\n\nI think this is actually using this correctly, it\u0027s the code in MobileFrontend that\u0027s at fault.",
+      "revId": "52614e19e458532001e7d484ef36b55274c5f124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
