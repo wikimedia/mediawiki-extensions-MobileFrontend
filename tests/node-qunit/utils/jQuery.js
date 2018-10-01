@@ -9,7 +9,13 @@ module.exports = {
 	setUp: function ( sandbox, global ) {
 		if ( headless ) {
 			global.$ = global.$ || undefined;
-			sandbox.stub( global, '$', require( './mockJQuery' ) );
+			sandbox.stub( global, '$', require( 'jquery' ) );
+		}
+	},
+	tearDown: function () {
+		if ( headless ) {
+			// prevent jQuery from caching the global window object.
+			delete require.cache[require.resolve( 'jquery' )];
 		}
 	}
 };
