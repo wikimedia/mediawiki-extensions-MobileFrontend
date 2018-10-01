@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2c454ca2_d5cf8437",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T19:40:53Z",
+      "side": 1,
+      "message": "This and the following 2 items seem to overlap with https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/462811/\n\nWhat am I missing?",
+      "revId": "ba2998607d88451469f38f271b13f0beb3a19472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17ba9604_7371c2f8",
+        "filename": "tests/node-qunit/utils/jQuery.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T19:40:53Z",
+      "side": 1,
+      "message": "Bit confused why this doesn\u0027t get done inside https://gerrit.wikimedia.org/r/462811",
+      "revId": "ba2998607d88451469f38f271b13f0beb3a19472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
