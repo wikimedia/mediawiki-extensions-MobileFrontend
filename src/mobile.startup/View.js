@@ -232,7 +232,7 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 */
-	preRender: util.noop,
+	preRender: function () {},
 
 	/**
 	 * Function called after the view is rendered. Can be redefined in
@@ -241,7 +241,7 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 */
-	postRender: util.noop,
+	postRender: function () {},
 
 	// eslint-disable-next-line valid-jsdoc
 	/**

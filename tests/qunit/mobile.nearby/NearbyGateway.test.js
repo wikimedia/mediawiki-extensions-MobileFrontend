@@ -5,7 +5,7 @@
 	QUnit.module( 'MobileFrontend NearbyGateway', {
 		beforeEach: function () {
 			var api = {
-				ajax: $.noop()
+				ajax: function () {}
 			};
 			m = new NearbyGateway( { api: api } );
 			this.sandbox.stub( api, 'ajax', function () {

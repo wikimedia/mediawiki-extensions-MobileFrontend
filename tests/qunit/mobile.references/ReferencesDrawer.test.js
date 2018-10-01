@@ -7,7 +7,7 @@
 	QUnit.module( 'MobileFrontend: ReferencesDrawer', {
 		beforeEach: function () {
 			this.gateway = {
-				getReference: $.noop
+				getReference: function () {}
 			};
 			this.page = new Page( { title: 'reference test' } );
 			this.drawer = new ReferenceDrawer( {

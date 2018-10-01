@@ -327,7 +327,7 @@
 		 * @memberof EditorOverlayBase
 		 * @instance
 		 */
-		onClickBack: util.noop,
+		onClickBack: function () {},
 		/**
 		 * Exit handler
 		 * @memberof EditorOverlayBase
@@ -399,7 +399,7 @@
 		 * @memberof EditorOverlayBase
 		 * @instance
 		 */
-		hasChanged: util.noop,
+		hasChanged: function () {},
 		/**
 		 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 		 * @memberof EditorOverlayBase

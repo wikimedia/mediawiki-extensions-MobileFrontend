@@ -96,13 +96,6 @@ util = {
 		return $( $.parseHTML( html, ctx ) );
 	},
 	/**
-	 * wrapper for jQuery util noop function
-	 * @memberof util
-	 * @instance
-	 * @return {Function}
-	 */
-	noop: $.noop,
-	/**
 	 * wrapper for jQuery util function to check if something is numeric
 	 * @memberof util
 	 * @instance

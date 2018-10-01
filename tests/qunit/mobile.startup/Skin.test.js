@@ -5,8 +5,8 @@
 	QUnit.module( 'MobileFrontend Skin.js', {
 		beforeEach: function () {
 			var stub = {
-				getReferencesLists: $.noop,
-				getReferencesList: $.noop
+				getReferencesLists: function () {},
+				getReferencesList: function () {}
 			};
 			this.page = new Page( {
 				title: 'Foo'

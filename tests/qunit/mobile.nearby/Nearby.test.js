@@ -2,7 +2,7 @@
 
 	var NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		api = {
-			get: $.noop
+			get: function () {}
 		},
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' );
