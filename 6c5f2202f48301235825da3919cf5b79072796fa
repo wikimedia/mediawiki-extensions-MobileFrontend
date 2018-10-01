@@ -22,6 +22,30 @@
       "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f1d8b6d_5ef38edf",
+        "filename": "package.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-01T20:47:59Z",
+      "side": 1,
+      "message": "Thanks, installed from scratch and rebuilt artifacts (but no changes since jsdom is excluded as an external).",
+      "parentUuid": "5f79afda_bd768915",
+      "range": {
+        "startLine": 30,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 21
+      },
+      "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
