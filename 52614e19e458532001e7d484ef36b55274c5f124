@@ -16,6 +16,24 @@
       "revId": "52614e19e458532001e7d484ef36b55274c5f124",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ce235be_5243fa47",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T19:46:23Z",
+      "side": 1,
+      "message": "Edit: the code in src/mobile.startup/time.js is at fault.",
+      "parentUuid": "dcc802a7_b15f6039",
+      "revId": "52614e19e458532001e7d484ef36b55274c5f124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
