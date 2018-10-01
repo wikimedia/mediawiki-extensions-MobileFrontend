@@ -16,6 +16,24 @@
       "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "666be816_766b9ae0",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-01T21:17:33Z",
+      "side": 0,
+      "message": "\u003e Long term we should only be defining and documenting our public API e.g. what is used by other extensions/skins.\n\n+1, I look forward to formalizing it!\n\n\u003e Knowing time is used in Minerva is really useful.\n\n+1, but resource-modules itself did not identify external usage. It was super useful to be notified that the Thumbnail and time defines were no longer needed in MobileFrontend itself, however.\n\n\u003e It\u0027s becoming clear we need to invest some time into the resource-modules library.\n\nI respectfully disagree. I\u0027m happy to discuss but my initial opinion, having working on resource-modules very briefly, is that further investment in resource-modules will be less effective than direct contributions and work on MobileFrontend itself.\n\nMy reasoning is that:\n\n1) Exporting a library entry is a pretty standard way to share code with clients. There may even be other tooling built by third-parties that adequately supports our needs already (whatever they may be). We need only to continue with Webpack-ification as planned, and replace M.define() calls with a generic, non-MediaWiki-centric means of sharing code with clients. I suspect we will eventually reduce our M.define() calls to a minimal and manually manageable number.\n\n2) There are so many easy refactor wins in MobileFrontend we could gain in the time it would take to add new features to resource-modules. I would love to see that lump of time dumped into polishing MobileFrontend itself rather than a peripheral tool that may or may not help us in the future. In my opinion, the team is already swamped with projects and maintaining an additional tool is an unnecessary distraction with a great investment risk.",
+      "parentUuid": "f11de705_9e199da0",
+      "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
