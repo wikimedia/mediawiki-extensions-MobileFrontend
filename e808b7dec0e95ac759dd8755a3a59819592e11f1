@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fb77722_01aef37e",
+        "filename": "src/mobile.startup/Section.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T20:57:09Z",
+      "side": 1,
+      "message": "This causes resource-loader linter to complain. Although it\u0027s not a big deal, it would be nice to make this shared dependency more explicit - maybe this could be exported here and imported by PageGateway or vice versa?\n\nOn file: resources/dist/mobile.startup.js\nTemplate {\"module\":\"mobile.startup\",\"fileName\":\"Section.hogan\"} already required previously\nLine 1 Column 10481",
+      "revId": "e808b7dec0e95ac759dd8755a3a59819592e11f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
