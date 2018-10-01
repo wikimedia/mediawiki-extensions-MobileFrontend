@@ -37,6 +37,11 @@
 			},
 			{
 				"object": "$",
+				"property": "noop",
+				"message": "Use function() {}"
+			},
+			{
+				"object": "$",
 				"property": "isFunction",
 				"message": "Please use typeof"
 			}
