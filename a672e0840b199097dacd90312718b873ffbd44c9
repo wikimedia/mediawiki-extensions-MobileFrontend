@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2c0a0864_444d3210",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-01T11:39:30Z",
+      "side": 1,
+      "message": "Do we need OOUI here? or just OOjs?",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 32,
+        "endChar": 12
+      },
+      "revId": "a672e0840b199097dacd90312718b873ffbd44c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
