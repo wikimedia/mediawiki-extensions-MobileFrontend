@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f11de705_9e199da0",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T19:24:42Z",
+      "side": 0,
+      "message": "Long term we should only be defining and documenting our public API e.g. what is used by other extensions/skins.\n\nKnowing time is used in Minerva is really useful.\n\nEventually a lot of these defines will no longer be necessary so I like that the resource-modules flags this warning and tells us we\u0027ve successfully ported time and its users inside MobileFrontend to webpack\n\nPer my notes on https://gerrit.wikimedia.org/r/#/c/mediawiki/skins/MinervaNeue/+/463786/ I don\u0027t think we should remove this.\n\nI understand the issue and I\u0027ll look at resource-modules to see what can be changed here to stop this breaking.\n\nIt\u0027s becoming clear we need to invest some time into the resource-modules library.",
+      "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
