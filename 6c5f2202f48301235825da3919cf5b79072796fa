@@ -34,6 +34,24 @@
       "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "992eafe9_e05cd3ec",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-01T22:19:41Z",
+      "side": 0,
+      "message": "resource-modules is protecting us from what used to be a very common issue - failing to express correct dependencies inside ResourceLoader. \n\nBy making changes like this, we are breaking that protection and encouraging usage of the global which has none of that protection.\n\nM.require and M.define has built in protection for ensuring any required module has been defined earlier on in code.\n\nWe previously saw lots of client side errors relating to failures in defining correct ResourceLoader entry points and I consider breaking this protection a regression.\n\nI think further investment in resource-modules until we have more fully migrated to webpack is worthwhile, on the basis that I believe this does not require much maintenance. As far as I can see, all we need to do is turn off error reporting on the dist file:\nhttps://github.com/wikimedia/resource-modules/pull/3\n\nOn top of this, this is a public API whether we like it or not, so subject to the deprecation policy. That\u0027s why we have a deprecate method in the ModuleLoader. Even if we were to do this, we\u0027d need to deprecate it first in case user gadgets or 3rd party extensions are making use of it.\n\nHappy to talk more as a group.",
+      "parentUuid": "666be816_766b9ae0",
+      "revId": "6c5f2202f48301235825da3919cf5b79072796fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
