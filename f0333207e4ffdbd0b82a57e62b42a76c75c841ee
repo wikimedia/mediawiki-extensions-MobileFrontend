@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3db6b1f4_9f01f4ee",
+        "filename": "tests/node-qunit/mobile.startup/mfExtend.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-01T19:26:01Z",
+      "side": 1,
+      "message": "Not yet, especially because those hooks don\u0027t currently run on Special:Javascript",
+      "parentUuid": "e2ece03a_2b2d95b8",
+      "range": {
+        "startLine": 8,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 7
+      },
+      "revId": "f0333207e4ffdbd0b82a57e62b42a76c75c841ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6c063416_0718362a",
         "filename": "tests/node-qunit/utils/jQuery.js",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-01T15:40:17Z",
       "side": 1,
       "message": "Should this be in a tearDown() function instead?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 53
+      },
+      "revId": "f0333207e4ffdbd0b82a57e62b42a76c75c841ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c78300b2_d711dc5b",
+        "filename": "tests/node-qunit/utils/jQuery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-01T19:26:01Z",
+      "side": 1,
+      "message": "Yup.",
+      "parentUuid": "6c063416_0718362a",
       "range": {
         "startLine": 12,
         "startChar": 0,
