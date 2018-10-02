@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "81dc8217_5731ec05",
+        "filename": "tests/node-qunit/mobile.startup/util.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T17:15:29Z",
+      "side": 1,
+      "message": "we can use instanceof...",
+      "parentUuid": "a9a5053d_34d62303",
+      "range": {
+        "startLine": 42,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 20
+      },
+      "revId": "7315bb73c85e5ad268a9aef72f314abbdceb6b2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76a8affb_3ffd9de2",
         "filename": "tests/node-qunit/mobile.startup/util.test.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-02T13:51:32Z",
       "side": 1,
       "message": "Should this be util?",
+      "range": {
+        "startLine": 48,
+        "startChar": 8,
+        "endLine": 48,
+        "endChar": 9
+      },
+      "revId": "7315bb73c85e5ad268a9aef72f314abbdceb6b2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a5326617_bcc876fc",
+        "filename": "tests/node-qunit/mobile.startup/util.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T17:15:29Z",
+      "side": 1,
+      "message": "yes.",
+      "parentUuid": "76a8affb_3ffd9de2",
       "range": {
         "startLine": 48,
         "startChar": 8,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "d78b0c6a_c742e6e4",
+        "filename": "tests/node-qunit/mobile.startup/util.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T17:15:29Z",
+      "side": 1,
+      "message": "ok.",
+      "parentUuid": "850a91b2_e033d4b9",
+      "range": {
+        "startLine": 80,
+        "startChar": 55,
+        "endLine": 80,
+        "endChar": 72
+      },
+      "revId": "7315bb73c85e5ad268a9aef72f314abbdceb6b2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d7039518_3154c610",
         "filename": "tests/node-qunit/utils/jQuery.js",
         "patchSetId": 4
@@ -82,6 +154,30 @@
       "writtenOn": "2018-10-02T13:51:32Z",
       "side": 1,
       "message": "Do you think we should be deleting these properties in the other tests too? `global.$ \u003d global.$ || undefined` is only necessary because Sinon.JS will only stub existing properties.",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 17,
+        "endChar": 18
+      },
+      "revId": "7315bb73c85e5ad268a9aef72f314abbdceb6b2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "20cc4dfd_fed6078a",
+        "filename": "tests/node-qunit/utils/jQuery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T17:15:29Z",
+      "side": 1,
+      "message": "I guess this is probably not necessary. The global object gets properly cleared with sandox.restore(), effectively deleting this property too I think.",
+      "parentUuid": "d7039518_3154c610",
       "range": {
         "startLine": 17,
         "startChar": 3,
