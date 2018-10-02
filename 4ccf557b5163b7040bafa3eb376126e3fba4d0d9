@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84693ef7_405bc1e0",
+        "filename": "package.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-02T17:55:50Z",
+      "side": 1,
+      "message": "Missing oojs here.",
+      "revId": "4ccf557b5163b7040bafa3eb376126e3fba4d0d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
