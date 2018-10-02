@@ -5,7 +5,8 @@
     "build": "NODE_ENV=production webpack -p",
     "precommit": "composer test && npm run test:unit && npm run test",
     "test:unit": "qunit 'tests/node-qunit/**/*.test.js'",
-    "test": "grunt test && npm run doc && dev-scripts/svg_check.sh && bundlesize",
+    "lint:es5": "eslint --no-eslintrc --no-ignore resources",
+    "test": "grunt test && npm run lint:es5 && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
@@ -17,6 +18,7 @@
     "@wikimedia/resource-modules": "3.0.1",
     "bundlesize": "0.17.0",
     "clean-webpack-plugin": "0.1.19",
+    "eslint": "5.6.1",
     "eslint-config-wikimedia": "0.7.2",
     "eslint-plugin-qunit": "3.3.1",
     "grunt": "1.0.3",
