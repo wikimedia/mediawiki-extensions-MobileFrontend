@@ -16,6 +16,24 @@
       "revId": "4ccf557b5163b7040bafa3eb376126e3fba4d0d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58bf5aba_e0e136fd",
+        "filename": "package.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T18:00:41Z",
+      "side": 1,
+      "message": "arh! git rebase, foiled me again!",
+      "parentUuid": "84693ef7_405bc1e0",
+      "revId": "4ccf557b5163b7040bafa3eb376126e3fba4d0d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
