@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8304aed8_33b88d25",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-02T13:27:55Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/462811/ \ndoesn\u0027t actually need jQuery, so it leaves the mock. It does add JSdom, but that\u0027s different. \n\nThis actually does overlap with https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/463545/3/tests/node-qunit/utils/jQuery.js - adding \u0027Page\u0027 tests, but I think we can just take care of the merge conflict if it arrises.",
+      "parentUuid": "2c454ca2_d5cf8437",
+      "revId": "ba2998607d88451469f38f271b13f0beb3a19472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17ba9604_7371c2f8",
         "filename": "tests/node-qunit/utils/jQuery.js",
         "patchSetId": 3
