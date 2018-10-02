@@ -50,7 +50,7 @@ module.exports = {
 
 	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
 	// can be removed if tests.mobilefrontend is removed.
-	externals: [ 'jsdom', 'sinon', 'qunit' ],
+	externals: [ 'jquery', 'jsdom', 'oojs', 'sinon', 'qunit' ],
 
 	optimization: {
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share.

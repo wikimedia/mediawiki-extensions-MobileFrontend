@@ -1,6 +1,4 @@
-var
-	headless = typeof window !== 'object',
-	newMockOO = require( './mockOO' );
+var headless = typeof window !== 'object';
 
 module.exports = {
 	/**
@@ -11,7 +9,7 @@ module.exports = {
 	setUp: function ( sandbox, global ) {
 		if ( headless ) {
 			global.OO = global.OO || undefined;
-			sandbox.stub( global, 'OO', newMockOO() );
+			sandbox.stub( global, 'OO', require( 'oojs' ) );
 		}
 	}
 };
