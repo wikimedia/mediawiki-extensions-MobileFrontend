@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e8dc2ff_0e07420c",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-02T20:58:33Z",
+      "side": 1,
+      "message": "So we now have two versions of eslint in the repo... grunt-eslint and eslint. That seems pretty confusing to me and should be fixed right away.",
+      "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
