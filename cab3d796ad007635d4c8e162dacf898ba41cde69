@@ -16,6 +16,23 @@
       "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70f89541_0b328f36",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-02T20:59:07Z",
+      "side": 1,
+      "message": "Since this code is shipped only in headless mode, shouldn\u0027t es6 be allowed here?",
+      "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
