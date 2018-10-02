@@ -260,13 +260,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
-		// Until 1.22, MediaWiki used an array here. Since 1.23 (Iec4aab87), it uses a FormOptions
-		// object (which implements array-like interface ArrayAccess).
-		// Let's keep using an array and hope any new extensions are compatible with both styles...
-		$values = [];
 		Hooks::run(
-			'SpecialWatchlistQuery',
-			[ &$conds, &$tables, &$join_conds, &$fields, &$values ]
+			'ChangesListSpecialPageQuery',
+			// @codingStandardsIgnoreLine
+			[ 'Watchlist', &$tables, &$fields, &$conds, /* query_options */ null , &$join_conds ]
 		);
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
