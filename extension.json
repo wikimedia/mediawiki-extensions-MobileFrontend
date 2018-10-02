@@ -523,6 +523,18 @@
 				"search-content": "resources/mobile.search.images/search-content.svg"
 			}
 		},
+		"mobile.loggingSchemas.mobileWebMainMenuClickTracking": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.startup"
+			],
+			"scripts": [
+				"resources/mobile.loggingSchemas.mobileWebMainMenuClickTracking/schema.js"
+			]
+		},
 		"mobile.search": {
 			"targets": [
 				"mobile",
@@ -531,13 +543,13 @@
 			"dependencies": [
 				"mobile.pagelist.scripts",
 				"mobile.startup",
-				"mobile.loggingSchemas.mobileWebSearch",
 				"mobile.search.images"
 			],
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"
 			],
 			"scripts": [
+				"resources/mobile.search/schemaMobileWebSearch.js",
 				"resources/mobile.search/SearchOverlay.js",
 				"resources/mobile.search/MobileWebSearchLogger.js"
 			],

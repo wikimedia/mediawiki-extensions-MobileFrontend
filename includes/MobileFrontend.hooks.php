@@ -961,7 +961,6 @@ class MobileFrontendHooks {
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
 		];
-		self::registerMobileLoggingSchemasModule( $resourceLoader );
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
@@ -1033,57 +1032,6 @@ class MobileFrontendHooks {
 		};
 
 		return true;
-	}
-
-	/**
-	 * Registers the mobile.logging.* modules.
-	 *
-	 * If the EventLogging extension is loaded, then the modules are defined such that they
-	 * depend on their associated EventLogging-created schema module.
-	 *
-	 * If, however, the EventLogging extension isn't loaded, then the modules are defined such
-	 * that no additional assets are requested by the ResourceLoader, i.e. they are stub
-	 * modules.
-	 *
-	 * @param ResourceLoader $resourceLoader
-	 */
-	private static function registerMobileLoggingSchemasModule( $resourceLoader ) {
-		$mfResourceFileModuleBoilerplate = [
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'MobileFrontend',
-			'targets' => [ 'mobile', 'desktop' ],
-		];
-
-		$schemaEdit = $mfResourceFileModuleBoilerplate;
-		$schemaMobileWebMainMenuClickTracking = $mfResourceFileModuleBoilerplate;
-		$schemaMobileWebSearch = $mfResourceFileModuleBoilerplate;
-
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' ) ) {
-			$schemaMobileWebMainMenuClickTracking += [
-				'dependencies' => [
-					'schema.MobileWebMainMenuClickTracking',
-					'mobile.startup'
-				],
-				'scripts' => [
-					'resources/mobile.loggingSchemas/schemaMobileWebMainMenuClickTracking.js',
-				]
-			];
-			$schemaMobileWebSearch += [
-				'dependencies' => [
-					'schema.MobileWebSearch',
-					'mobile.startup',
-				],
-				'scripts' => [
-					'resources/mobile.loggingSchemas/schemaMobileWebSearch.js',
-				]
-			];
-		}
-
-		$resourceLoader->register( [
-			'mobile.loggingSchemas.mobileWebMainMenuClickTracking' =>
-				$schemaMobileWebMainMenuClickTracking,
-			'mobile.loggingSchemas.mobileWebSearch' => $schemaMobileWebSearch,
-		] );
 	}
 
 	/**

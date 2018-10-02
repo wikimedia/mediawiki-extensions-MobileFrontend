@@ -1,10 +1,15 @@
-( function ( M ) {
-	var context = M.require( 'mobile.startup/context' ),
+mw.loader.using( [
+	'ext.eventLogging.subscriber'
+] ).then( function () {
+	var M = mw.mobileFrontend,
+		context = M.require( 'mobile.startup/context' ),
+		// Schema provided by ext.eventLogging.subscriber class
+		Schema = mw.eventLog.Schema, // resource-modules-disable-line
 		/**
 		 * MobileWebSearch schema
 		 * https://meta.wikimedia.org/wiki/Schema:MobileWebSearch
 		 */
-		schemaMobileWebSearch = new mw.eventLog.Schema(
+		schemaMobileWebSearch = new Schema(
 			'MobileWebSearch',
 			// Sampled at 0.1% (consistent with the Desktop search rate)
 			1 / 1000,
@@ -24,4 +29,4 @@
 		schemaMobileWebSearch.log( data );
 	} );
 
-}( mw.mobileFrontend ) );
+} );
