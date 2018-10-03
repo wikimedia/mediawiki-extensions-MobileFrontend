@@ -16,6 +16,24 @@
       "revId": "e309703e308121b5ab33328620e9deb9ca5985d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3526657b_d95d8fb7",
+        "filename": "src/mobile.startup/Browser.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-03T16:58:11Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ve moved the require to the top.\n\nI like to keep variables declared near where they\u0027re used for readability and to limit scope. Ideally, clients would pass in the document instead of relying on global state.",
+      "parentUuid": "bb0fd84c_f790cc34",
+      "revId": "e309703e308121b5ab33328620e9deb9ca5985d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
