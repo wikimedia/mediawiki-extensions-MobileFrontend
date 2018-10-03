@@ -33,6 +33,24 @@
       "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16d9d2cf_46554d92",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-03T16:23:24Z",
+      "side": 1,
+      "message": "This change was driven by your previous comment: https://gerrit.wikimedia.org/r/#/c/458299/9/tests/node-qunit/config.js@1. We can allow ES6 in tests but we\u0027ll have to filter this build product out from linting until transpilation is enabled. I will be v excited to ES6 our tests.",
+      "parentUuid": "70f89541_0b328f36",
+      "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
