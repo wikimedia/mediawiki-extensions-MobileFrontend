@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c8931ac_294e77e1",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-03T12:09:56Z",
+      "side": 0,
+      "message": "`lint:modules` isn\u0027t being run on a regular basis, and it currently outputs warnings, so I left it alone.",
+      "range": {
+        "startLine": 11,
+        "startChar": 5,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "35c42bca7258f1706781d0b6d494d80eb29dc5bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
