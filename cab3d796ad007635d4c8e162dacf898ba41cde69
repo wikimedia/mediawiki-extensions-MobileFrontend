@@ -105,6 +105,24 @@
       "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db363a6e_4159eef6",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-03T17:10:30Z",
+      "side": 1,
+      "message": "It\u0027s shipped to tests.mobilefrontend but not executed in browser. I\u0027m happy to start ES6-ing tests (and other code!) but it would be best if we enabled the transpiler first rather than add exceptions to linter I think.",
+      "parentUuid": "21ad435a_1a5199ee",
+      "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
