@@ -237,7 +237,7 @@
 	"mobile-frontend-user-page-desired-action": "Ta strona powinna być utworzona i edytowana przez użytkownika $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Utwórz własną",
 	"mobile-frontend-user-page-create-user-page-link-label": "Tworzenie strony o nazwie $1",
-	"mobile.css": "/* Umieszczony tutaj kod CSS wpłynie użytkowników korzystających z wersji mobilnej */",
+	"mobile.css": "/* Umieszczony tutaj kod CSS wpłynie na użytkowników korzystających z wersji mobilnej */",
 	"mobile.js": "/* Umieszczony tutaj kod JavaScript zostanie załadowany przez użytkowników korzystających z wersji mobilnej */",
 	"nearby": "Strony na temat obiektów znajdujących się w pobliżu",
 	"tag-mobile_edit": "Z internetu mobilnego",
