@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "48068a52_05d95818",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-03T16:26:35Z",
+      "side": 1,
+      "message": "This is fixed by Jan\u0027s latest patch.",
+      "parentUuid": "1e8dc2ff_0e07420c",
+      "revId": "cab3d796ad007635d4c8e162dacf898ba41cde69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70f89541_0b328f36",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 2
