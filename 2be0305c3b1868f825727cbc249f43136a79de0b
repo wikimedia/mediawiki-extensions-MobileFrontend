@@ -52,6 +52,24 @@
       "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "004f56ee_1954d673",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-04T15:16:25Z",
+      "side": 1,
+      "message": "Ideally, I\u0027d `npm i -D mediawiki` and things would work. This is consistent with what we do for jQuery and ooui. Since I don\u0027t have that option, requiring extension.json appeared to be a good alternative since it has great defaults baked in. I don\u0027t want to become an expert in stubbing or mocking MediaWiki functionality which is why this file exists and I don\u0027t mind it growing so long as it\u0027s adequately performant.",
+      "parentUuid": "b8a37634_05a94ec7",
+      "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
