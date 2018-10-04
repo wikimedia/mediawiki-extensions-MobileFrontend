@@ -16,6 +16,24 @@
       "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e5276d1a_4305cb95",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-04T15:01:58Z",
+      "side": 1,
+      "message": "Probably not. I was thinking this would eventually be an NPM library distributable mock. I\u0027ll trim this down for now.",
+      "parentUuid": "f44c0252_022eeaa0",
+      "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
