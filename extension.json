@@ -1329,6 +1329,8 @@
 		},
 		"MFRSSFeedLink": false,
 		"MFSchemaEditSampleRate": 0.0625,
+		"MinervaSchemaMainMenuClickTrackingSampleRate": 0.5,
+		"MFSchemaSearchSampleRate": 0.001,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
 			"image/svg+xml"

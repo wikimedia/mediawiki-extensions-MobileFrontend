@@ -20,7 +20,8 @@ mw.loader.using( [
 		 */
 		schemaMobileWebMainMenuClickTracking = new Schema(
 			'MobileWebMainMenuClickTracking',
-			0.5,
+			// todo: use a default value of 0 once config lands in production (T205008).
+			mw.config.get( 'wgMinervaSchemaMainMenuClickTrackingSampleRate', 0.5 ),
 			/**
 			 * @property {Object} defaults Default options hash.
 			 * @property {string} defaults.mobileMode whether user is in stable or beta
