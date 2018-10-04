@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "97e588c7_49b5dbf7",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-04T22:51:54Z",
+      "side": 0,
+      "message": "Isn\u0027t this testing:\n\n1) The ability of View to render data passed into its constructor\n2) The ability of View to render templatePartials\n\ni.e. I don\u0027t see how this is only testing mfExtend. Can you clarify?",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 65
+      },
+      "revId": "104322ed380c686da8ac0bff0e27d92e745ac96b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d63c1c6_7ef8b7a5",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-04T22:51:54Z",
+      "side": 0,
+      "message": "Doesn\u0027t this one also test that instance options are merged with the View.prototype.defaults options? i.e. It doesn\u0027t seem to me to only be testing mfExtend, although I agree that a lot of the code in this test could be removed and it would accomplish the same thing",
+      "range": {
+        "startLine": 186,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 5
+      },
+      "revId": "104322ed380c686da8ac0bff0e27d92e745ac96b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
