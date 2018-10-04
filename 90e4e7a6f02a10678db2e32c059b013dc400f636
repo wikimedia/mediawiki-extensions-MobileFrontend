@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "677a0a8e_6ad21d7a",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-04T20:59:28Z",
+      "side": 1,
+      "message": "There is nothing enforcing the usage of a prefix wg for config variables. The names in the extension do not need to match up with the JS equivalents.\n\nThis also adds many config variables that are not shipped to the client, for instance MFNoindexPages is only ever used in PHP.\n\nSome of the config we use is also outside MobileFrontend.\n\nI\u0027m not seeing the value of shipping a config here at all.\n\nIn theory there should be little need to use this. If code is using mw.config, it probably shouldn\u0027t be.\n\nFor instance if Page.js is using mw.config.get( \u0027wgPageContentModel\u0027 ) why not allow it to support an option wgPageContentModel so we can test without the mw.config dependency.\n\n\nFor cases where we can\u0027t do that, we should just use sinon IMO.",
+      "revId": "90e4e7a6f02a10678db2e32c059b013dc400f636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
