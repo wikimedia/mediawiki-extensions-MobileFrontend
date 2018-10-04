@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f44c0252_022eeaa0",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-04T14:49:07Z",
+      "side": 1,
+      "message": "Are all of these really needed? Can\u0027t we just include a few or stub the result ?\nThere\u0027s a lot of config and I can see this file ballooning in size if we include config.",
+      "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
