@@ -1,8 +1,7 @@
 /* global $ */
 var
-	Browser,
+	Browser = require( '../../../src/mobile.startup/Browser' ),
 	dom = require( '../utils/dom' ),
-	mw = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
@@ -13,10 +12,8 @@ QUnit.module( 'MobileFrontend Browser.js', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
-		mw.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 
-		Browser = require( '../../../src/mobile.startup/Browser' );
 		$html = $( '<html>' );
 	},
 	afterEach: function () { sandbox.restore(); }

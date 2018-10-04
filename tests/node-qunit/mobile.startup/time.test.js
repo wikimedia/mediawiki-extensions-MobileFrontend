@@ -1,18 +1,6 @@
-var
-	mw = require( '../utils/mw' ),
-	sinon = require( 'sinon' ),
-	time;
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+var time = require( '../../../src/mobile.startup/time' );
 
-QUnit.module( 'MobileFrontend time.js', {
-	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
-
-		mw.setUp( sandbox, global );
-		time = require( '../../../src/mobile.startup/time' );
-	},
-	afterEach: function () { sandbox.restore(); }
-} );
+QUnit.module( 'MobileFrontend time.js' );
 
 QUnit.test( 'timeAgo()', function ( assert ) {
 	assert.deepEqual( time.timeAgo( 40 ), {

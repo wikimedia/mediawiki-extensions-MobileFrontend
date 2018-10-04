@@ -1,5 +1,6 @@
-var browser,
-	$html = require( './util' ).getDocument();
+var
+	util = require( './util' ),
+	browser;
 
 /**
  * Memoize a class method. Caches the result of the method based on the
@@ -156,7 +157,9 @@ Browser.prototype = {
  * @return {Browser}
  */
 Browser.getSingleton = function () {
+	var $html;
 	if ( !browser ) {
+		$html = util.getDocument();
 		browser = new Browser( window.navigator.userAgent, $html );
 	}
 	return browser;

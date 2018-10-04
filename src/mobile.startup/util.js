@@ -1,13 +1,11 @@
 /* global $ */
-var util,
-	log = mw.log; // resource-modules-disable-line
 
 /**
  * Utility library
  * @class util
  * @singleton
  */
-util = {
+module.exports = {
 	/**
 	 * Escape a string for use as a css selector
 	 * @memberof util
@@ -57,9 +55,9 @@ util = {
 			warning = 'Use Promise compatible methods `then` and `catch` instead.';
 
 		/* eslint-disable no-restricted-properties */
-		log.deprecate( d, 'fail', d.fail, warning );
-		log.deprecate( d, 'always', d.always, warning );
-		log.deprecate( d, 'done', d.done, warning );
+		mw.log.deprecate( d, 'fail', d.fail, warning );
+		mw.log.deprecate( d, 'always', d.always, warning );
+		mw.log.deprecate( d, 'done', d.done, warning );
 		/* eslint-enable no-restricted-properties */
 		return d;
 	},
@@ -160,5 +158,3 @@ util = {
 		return src.on( event, function ( args ) { return proxy.emit( event, args ); }, args );
 	}
 };
-
-module.exports = util;
