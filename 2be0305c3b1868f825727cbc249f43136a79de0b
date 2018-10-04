@@ -34,6 +34,24 @@
       "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8a37634_05a94ec7",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-04T15:06:26Z",
+      "side": 1,
+      "message": "why are you against stubbing usage of mw.config ?",
+      "parentUuid": "e5276d1a_4305cb95",
+      "revId": "2be0305c3b1868f825727cbc249f43136a79de0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
