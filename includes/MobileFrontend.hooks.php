@@ -477,8 +477,6 @@ class MobileFrontendHooks {
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFSchemaEditSampleRate' => $config->get( 'MFSchemaEditSampleRate' ),
-			'wgMinervaSchemaMainMenuClickTrackingSampleRate' =>
-				$config->get( 'MinervaSchemaMainMenuClickTrackingSampleRate' ),
 			'wgMFSchemaSearchSampleRate' => $config->get( 'MFSchemaSearchSampleRate' ),
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),

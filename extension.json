@@ -523,18 +523,6 @@
 				"search-content": "resources/mobile.search.images/search-content.svg"
 			}
 		},
-		"mobile.loggingSchemas.mobileWebMainMenuClickTracking": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.loggingSchemas.mobileWebMainMenuClickTracking/schema.js"
-			]
-		},
 		"mobile.search": {
 			"targets": [
 				"mobile",
@@ -1329,7 +1317,6 @@
 		},
 		"MFRSSFeedLink": false,
 		"MFSchemaEditSampleRate": 0.0625,
-		"MinervaSchemaMainMenuClickTrackingSampleRate": 0.5,
 		"MFSchemaSearchSampleRate": 0.001,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
