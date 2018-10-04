@@ -203,7 +203,7 @@
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> {{PLURAL:$1|загрузка|загрузки|загрузок}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ загрузок",
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
-	"mobile-frontend-references-citation": "Цитата",
+	"mobile-frontend-references-citation": "Источник",
 	"mobile-frontend-references-citation-error": "Произошла ошибка, из-за которой не получилось загрузить это примечание.",
 	"mobile-frontend-references-list": "Посмотреть полный список цитат",
 	"mobile-frontend-requires-mobile": "Эта страница не доступна для просмотра с компьютера. Пожалуйста, нажмите на ссылку мобильного вида в нижней части страницы.",
