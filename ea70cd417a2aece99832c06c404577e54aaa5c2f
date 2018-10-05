@@ -34,6 +34,24 @@
       "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "098af998_dfa6f712",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-05T16:56:36Z",
+      "side": 1,
+      "message": "I want an empty config and our new tests not to rely on mw.config. It\u0027s too much of a dumping ground. I\u0027d like our code to have explicit parameters that we source from mw.config in our controller code.",
+      "parentUuid": "bd6206a7_4fd593d6",
+      "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
