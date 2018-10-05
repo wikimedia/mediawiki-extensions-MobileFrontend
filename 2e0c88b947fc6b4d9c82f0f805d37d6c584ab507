@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5132a59a_f67a0894",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-05T13:27:42Z",
+      "side": 1,
+      "message": "Should this be limit?",
+      "range": {
+        "startLine": 252,
+        "startChar": 4,
+        "endLine": 252,
+        "endChar": 8
+      },
+      "revId": "2e0c88b947fc6b4d9c82f0f805d37d6c584ab507",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
