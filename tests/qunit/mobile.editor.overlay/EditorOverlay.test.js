@@ -117,8 +117,7 @@
 		this.sandbox.stub( mw.config, 'get', function ( key ) {
 			if ( key === 'wgMFEditorOptions' ) {
 				return {
-					skipPreview: true,
-					anonymousEditing: true
+					skipPreview: true
 				};
 			} else {
 				return mw.config.values[ key ];
