@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "73c00715_3ea5baec",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-05T16:22:22Z",
+      "side": 1,
+      "message": "For the record: still not a fan of this at all.",
+      "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
