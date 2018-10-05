@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "10559421_9b412575",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-05T15:07:04Z",
+      "side": 0,
+      "message": "Try running `npm run coverage` before and after the change and you\u0027ll see what I mean",
+      "parentUuid": "9f20e9cd_d3c0b2c2",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 65
+      },
+      "revId": "104322ed380c686da8ac0bff0e27d92e745ac96b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5d63c1c6_7ef8b7a5",
         "filename": "tests/node-qunit/mobile.startup/View.test.js",
         "patchSetId": 1
