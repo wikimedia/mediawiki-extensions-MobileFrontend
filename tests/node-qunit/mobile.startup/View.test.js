@@ -1,3 +1,4 @@
+/* global $ */
 var
 	Hogan = require( '../../../libs/hogan.js/hogan' ),
 	jQuery = require( '../utils/jQuery' ),
