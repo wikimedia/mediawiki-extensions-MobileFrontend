@@ -210,6 +210,21 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	}
 
 	/**
+	 * Get a FormOptions object containing the default options. This object is almost empty,
+	 * as there are no options on the MobileWatchlist page. The ChangesListSpecialPageQuery
+	 * hook requires the FormOptions object (as example to add new options/filters) we have
+	 * to pass it, even if SpecialMobileWatchlist do not use  it.
+	 *
+	 *
+	 * @todo most probably if some extensions add filters to feedQuery we should show
+	 * the form and allow user to change/reset filters
+	 * @return FormOptions
+	 */
+	protected function getFormOptions() {
+		return new FormOptions();
+	}
+
+	/**
 	 * Get watchlist items for feed view
 	 * @return ResultWrapper
 	 *
@@ -247,8 +262,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$innerConds,
 			],
 		] + $rcQuery['joins'];
-		$options = [ 'ORDER BY' => 'rc_timestamp DESC' ];
-		$options['LIMIT'] = self::LIMIT;
+		$query_options = [
+			'ORDER BY' => 'rc_timestamp DESC',
+			'LIMIT' => self::LIMIT
+		];
 
 		$rollbacker = $user->isAllowed( 'rollback' );
 		if ( $rollbacker ) {
@@ -258,17 +275,16 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$fields[] = 'page_latest';
 			}
 		}
+		$form_options = $this->getFormOptions();
 
-		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
+		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
 		Hooks::run(
 			'ChangesListSpecialPageQuery',
 			// @codingStandardsIgnoreLine
-			[ 'Watchlist', &$tables, &$fields, &$conds, /* query_options */ null , &$join_conds ]
+			[ 'Watchlist', &$tables, &$fields, &$conds, &$query_options, &$join_conds, $form_options ]
 		);
 
-		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
-
-		return $res;
+		return $dbr->select( $tables, $fields, $conds, __METHOD__, $query_options, $join_conds );
 	}
 
 	/**
