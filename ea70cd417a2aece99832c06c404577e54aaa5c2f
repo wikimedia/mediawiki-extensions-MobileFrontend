@@ -16,6 +16,24 @@
       "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bd6206a7_4fd593d6",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-05T16:27:33Z",
+      "side": 1,
+      "message": "I thought this was what you wanted!",
+      "parentUuid": "73c00715_3ea5baec",
+      "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
