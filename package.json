@@ -7,7 +7,8 @@
     "precommit": "composer test && npm run test:unit && npm run test",
     "test:unit": "qunit 'tests/node-qunit/**/*.test.js'",
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
-    "test": "grunt test && npm run lint:es5 && npm run doc && dev-scripts/svg_check.sh && bundlesize",
+    "lint:js": "eslint .",
+    "test": "grunt test && npm run lint:es5 && npm run lint:js && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
@@ -25,7 +26,6 @@
     "grunt": "1.0.3",
     "grunt-banana-checker": "0.6.0",
     "grunt-contrib-watch": "1.1.0",
-    "grunt-eslint": "21.0.0",
     "grunt-jsonlint": "1.1.0",
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.10.0",

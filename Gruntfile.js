@@ -1,18 +1,12 @@
 /* eslint-env node */
 module.exports = function ( grunt ) {
 	var conf = grunt.file.readJSON( 'extension.json' );
-
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
-
 	grunt.initConfig( {
-		eslint: {
-			all: '.'
-		},
 		stylelint: {
 			options: {
 				syntax: 'less'
@@ -48,9 +42,7 @@ module.exports = function ( grunt ) {
 			]
 		}
 	} );
-
-	grunt.registerTask( 'lint', [ 'eslint', 'jsonlint', 'stylelint', 'banana' ] );
+	grunt.registerTask( 'lint', [ 'jsonlint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint' ] );
-
 	grunt.registerTask( 'default', [ 'test' ] );
 };
