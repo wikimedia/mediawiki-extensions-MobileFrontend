@@ -22,6 +22,30 @@
       "revId": "2e0c88b947fc6b4d9c82f0f805d37d6c584ab507",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c0dd8f54_571f3193",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-05T13:35:58Z",
+      "side": 1,
+      "message": "good catch",
+      "parentUuid": "5132a59a_f67a0894",
+      "range": {
+        "startLine": 252,
+        "startChar": 4,
+        "endLine": 252,
+        "endChar": 8
+      },
+      "revId": "2e0c88b947fc6b4d9c82f0f805d37d6c584ab507",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
