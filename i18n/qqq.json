@@ -35,7 +35,8 @@
 			"Orlodrim",
 			"UV",
 			"Nike",
-			"Arthur2e5"
+			"Arthur2e5",
+			"Matma Rex"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Call to action, shown to anonymous editors before they edit",
@@ -77,8 +78,8 @@
 	"mobile-frontend-donate-image-title": "{{doc-special|Uploads|unlisted=1}}\n{{Identical|Upload}}",
 	"mobile-frontend-donate-image-title-username": "{{doc-special|Uploads|unlisted=1}}\n\nParameters:\n* $1 - username whose uploads are being shown",
 	"mobile-frontend-donate-image-title-you": "{{doc-special|Uploads|unlisted=1}} Used when the user whose uploads are being viewed is the currently logged in user",
-	"mobile-frontend-edit-login-action": "Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to login.",
-	"mobile-frontend-edit-signup-action": "Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to sign up.",
+	"mobile-frontend-edit-login-action": "Message shown above the login form when it is reached from a link in the editor.",
+	"mobile-frontend-edit-signup-action": "Message shown above the signup form when it is reached from a link in the editor.",
 	"mobile-frontend-editor-abusefilter-disallow": "A message telling their user that their edit has been disallowed by AbuseFilter.",
 	"mobile-frontend-editor-abusefilter-read-more": "A caption for the button allowing the user to read more about the problems with their edit.\n{{Identical|Read more}}",
 	"mobile-frontend-editor-abusefilter-warning": "A message telling the user that their edit triggered an AbuseFilter warning.",
