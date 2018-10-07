@@ -8,6 +8,7 @@
 			"Ans"
 		]
 	},
+	"mobile-frontend-editor-anon-cta-message": "เข้าสู่ระบบหรือสร้างบัญชีเพื่อติดตามการแก้ไขของคุณ",
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
 	"mobile-frontend-account-create-captcha-placeholder": "ป้อนรหัสยืนยัน",
 	"mobile-frontend-categories-heading": "<strong>หมวดหมู่</strong>",
@@ -20,6 +21,7 @@
 	"mobile-frontend-categories-summary": "เพิ่มลงในหมวดหมู่แล้ว",
 	"mobile-frontend-categories-add-heading": "<strong>เพิ่ม<span> $1</span> ลงในหมวดหมู่ใหม่</strong>",
 	"mobile-frontend-categories-add-wait": "กำลังบันทึกหมวดหมู่ กรุณารอสักครู่",
+	"mobile-frontend-categories-normal": "อ้างอิงตามเนื้อหา",
 	"mobile-frontend-changeslist-nocomment": "ไม่มีคำอธิบายอย่างย่อ",
 	"mobile-frontend-cite-error-title": "ข้อผิดพลาดในการโหลดการอ้างอิง",
 	"mobile-frontend-cite-error": "เกิดปัญหาขณะพยายามโหลดการอ้างอิงเนื่องจากตัวระบุรุ่นไม่ถูกต้อง",
@@ -54,6 +56,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "เหตุผลสำหรับการบล็อก",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|บล็อก}}โดย",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "การบล็อกจะหมดอายุใน",
+	"mobile-frontend-editor-generic-block-reason": "เหตุผลที่ไม่รู้จัก",
 	"mobile-frontend-editor-cancel": "ยกเลิก",
 	"mobile-frontend-editor-cancel-confirm": "คุณต้องการละทิ้งการแก้ไขของคุณจริง ๆ หรือไม่?",
 	"mobile-frontend-editor-captcha-try-again": "รหัสผิด ลองอีกครั้ง",
@@ -131,6 +134,8 @@
 	"mobile-frontend-main-menu-settings-heading": "การตั้งค่า",
 	"mobile-frontend-media-details": "รายละเอียด",
 	"mobile-frontend-media-license-link": "ข้อมูลสัญญาอนุญาต",
+	"mobile-frontend-media-load-fail-message": "มีข้อผิดพลาดขณะโหลดรูปภาพนี้",
+	"mobile-frontend-media-load-fail-retry": "รีเฟรช",
 	"mobile-frontend-missing-image": "ภาพ",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 กม.}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 ม.}}",
@@ -230,6 +235,10 @@
 	"mobile-frontend-panel-betaoptin-msg": "คุณต้องการลองใช้คุณลักษณะใหม่ ๆ หรือไม่? เมื่อเข้าร่วมเป็นผู้ทดสอบเบต้า คุณจะสามารถเข้าถึงคุณลักษณะระยะทดสอบ โดยอาจมีความเสี่ยงในการพบข้อบกพร่องและปัญหาต่าง ๆ ได้",
 	"mobile-frontend-search-feedback-link-text": "ให้คำติชมของคุณแก่เรา",
 	"mobile-frontend-search-feedback-prompt": "ไม่พบสิ่งที่คุณกำลังมองหางั้นหรือ?",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "โหลดรายการอ้างอิงเฉพาะเมื่อจำเป็น",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "โหลดรายการอ้างอิงเฉพาะเมื่อจำเป็นเท่านั้น",
 	"mobile-frontend-send-feedback": "ส่งคำติชม",
+	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "โหลดรูปภาพเฉพาะเมื่อจำเป็นเท่านั้น",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "โหลดรูปภาพเฉพาะเมื่อจำเป็น",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "ขนาดอักษร"
 }
