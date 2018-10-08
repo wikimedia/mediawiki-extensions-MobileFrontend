@@ -24,7 +24,6 @@
 				range: 1000,
 				el: $el
 			};
-		// eslint-disable-next-line no-new
 		nearby = new Nearby( opts );
 
 		return nearby.refresh( opts ).then( function () {
@@ -155,7 +154,6 @@
 				range: 1000,
 				el: $el
 			};
-		// eslint-disable-next-line no-new
 		nearby = new Nearby( opts );
 		nearby.refresh( opts );
 		assert.ok( this.spy.calledWithMatch( pageTitle, 1000 ), 'Check API got called' );

@@ -8,7 +8,7 @@
     "test:unit": "qunit 'tests/node-qunit/**/*.test.js'",
     "lint": "grunt test && npm run lint:es5 && npm run lint:js",
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
-    "lint:js": "eslint .",
+    "lint:js": "eslint --cache --max-warnings 0 --report-unused-disable-directives .",
     "test": "npm run lint && npm run doc && dev-scripts/svg_check.sh && bundlesize",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"

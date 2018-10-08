@@ -26,7 +26,7 @@ QUnit.module( 'MobileFrontend util.js', {
 QUnit.test( 'escapeSelector()', function ( assert ) {
 	assert.strictEqual(
 		util.escapeSelector( '#selector-starts-with-hash' ),
-		'\\#selector-starts-with-hash' // eslint-disable-line no-useless-escape
+		'\\#selector-starts-with-hash'
 	);
 } );
 
