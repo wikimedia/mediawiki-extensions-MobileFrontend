@@ -52,6 +52,24 @@
       "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6fcdda2_fcb3c29e",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-08T14:01:44Z",
+      "side": 1,
+      "message": "Just curious, but would you feel differently if this was a separate library that was installed via NPM? Or is this just about mw.config specifically? I hear what you\u0027re saying about this file becoming a dumping ground but I personally would like a skeletal MediaWiki implementation for testing that I didn\u0027t have to think about and am similarly glad we don\u0027t have to mock out OO or jQuery.\n\nI\u0027m happy to make changes here but wanted to understand whether you\u0027re opposed to this whole file or just mw.config and how this differs from our other dependencies.",
+      "parentUuid": "098af998_dfa6f712",
+      "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
