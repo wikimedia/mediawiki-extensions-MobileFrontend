@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ae661a4_ec7156cc",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-08T18:35:26Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/464726 also introduces config stubbing.\n\nI have qualms with using config in this way. See my comments on https://gerrit.wikimedia.org/r/464726\n\nI\u0027d much prefer we use stubbing and/or make Browser accept an explicit tabletThreshold option as this feels like it is venturing into the realm of integration testing.",
+      "revId": "c1d6df66cdcd98e1656bf435e03510fe47abe0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
