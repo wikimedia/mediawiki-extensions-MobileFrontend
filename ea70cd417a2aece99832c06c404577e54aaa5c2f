@@ -70,6 +70,24 @@
       "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa7f14f0_7437116a",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-08T16:00:10Z",
+      "side": 1,
+      "message": "I\u0027d feel exactly the same.\nmw.config is a key value store, so any tests making use of this are essentially integration tests and don\u0027t belong in our headless node-qunit build.",
+      "parentUuid": "f6fcdda2_fcb3c29e",
+      "revId": "ea70cd417a2aece99832c06c404577e54aaa5c2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
