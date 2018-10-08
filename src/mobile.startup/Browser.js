@@ -148,7 +148,7 @@ Browser.prototype = {
 	 * @return {boolean}
 	 */
 	supportsGeoLocation: memoize( function () {
-		return 'geolocation' in navigator;
+		return 'geolocation' in window.navigator;
 	} )
 };
 
