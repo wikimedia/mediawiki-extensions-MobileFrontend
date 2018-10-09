@@ -16,6 +16,24 @@
       "revId": "c1d6df66cdcd98e1656bf435e03510fe47abe0fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a580c304_28472a6f",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-09T12:24:55Z",
+      "side": 1,
+      "message": "yeah that makes sense. I\u0027ve rebased this and used stubs instead. I agree that gives us more control over the tests.",
+      "parentUuid": "5ae661a4_ec7156cc",
+      "revId": "c1d6df66cdcd98e1656bf435e03510fe47abe0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
