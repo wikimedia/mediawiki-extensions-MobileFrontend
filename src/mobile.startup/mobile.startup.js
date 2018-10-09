@@ -10,13 +10,14 @@ var
 	PageGateway = require( './PageGateway' ),
 	Browser = require( './Browser' ),
 	cache = require( './cache' ),
-	Button = require( './Button.js' ),
-	Icon = require( './Icon.js' ),
-	icons = require( './icons.js' ),
-	Panel = require( './Panel.js' ),
-	Section = require( './Section.js' ),
-	Thumbnail = require( './Thumbnail.js' ),
-	Page = require( './Page.js' );
+	Button = require( './Button' ),
+	Icon = require( './Icon' ),
+	icons = require( './icons' ),
+	Panel = require( './Panel' ),
+	Section = require( './Section' ),
+	Thumbnail = require( './Thumbnail' ),
+	Page = require( './Page' ),
+	Anchor = require( './Anchor' );
 
 mw.mobileFrontend = moduleLoader;
 mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
@@ -42,6 +43,7 @@ mw.mobileFrontend.define( 'mobile.startup/Panel', Panel );
 mw.mobileFrontend.define( 'mobile.startup/Section', Section );
 mw.mobileFrontend.define( 'mobile.startup/Thumbnail', Thumbnail );
 mw.mobileFrontend.define( 'mobile.startup/Page', Page );
+mw.mobileFrontend.define( 'mobile.startup/Anchor', Anchor );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -59,5 +61,6 @@ module.exports = {
 	icons: icons,
 	Panel: Panel,
 	Section: Section,
-	Page: Page
+	Page: Page,
+	Anchor: Anchor
 };
