@@ -22,37 +22,6 @@ class ApiParseExtender {
 	}
 
 	/**
-	 * APIGetParamDescription hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetParamDescription
-	 * @param ApiBase &$module
-	 * @param array|bool &$params Array of parameter descriptions
-	 * @return bool
-	 */
-	public static function onAPIGetParamDescription( ApiBase &$module, &$params ) {
-		if ( $module->getModuleName() == 'parse' ) {
-			$params['mobileformat'] = 'Return parse output in a format suitable for mobile devices';
-			$params['noimages'] = 'Disable images in mobile output';
-			$params['mainpage'] = 'Apply mobile main page transformations';
-		}
-		return true;
-	}
-
-	/**
-	 * APIGetDescription hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetDescription
-	 * @param ApiBase &$module
-	 * @param array|string &$desc Array of descriptions
-	 * @return bool
-	 */
-	public static function onAPIGetDescription( ApiBase &$module, &$desc ) {
-		if ( $module->getModuleName() == 'parse' ) {
-			$desc = (array)$desc;
-			$desc[] = 'Extended by MobileFrontend';
-		}
-		return true;
-	}
-
-	/**
 	 * APIAfterExecute hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIAfterExecute
 	 * @param ApiBase &$module

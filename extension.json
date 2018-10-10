@@ -1073,12 +1073,6 @@
 		"APIAfterExecute": [
 			"ApiParseExtender::onAPIAfterExecute"
 		],
-		"APIGetParamDescription": [
-			"ApiParseExtender::onAPIGetParamDescription"
-		],
-		"APIGetDescription": [
-			"ApiParseExtender::onAPIGetDescription"
-		],
 		"APIQuerySiteInfoGeneralInfo": [
 			"MobileFrontendHooks::onAPIQuerySiteInfoGeneralInfo"
 		],

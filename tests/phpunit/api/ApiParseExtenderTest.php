@@ -9,8 +9,6 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getData
 	 * @covers ApiParseExtender::onAPIGetAllowedParams
-	 * @covers ApiParseExtender::onAPIGetParamDescription
-	 * @covers ApiParseExtender::onAPIGetDescription
 	 * @covers ApiParseExtender::onAPIAfterExecute
 	 */
 	public function testApi( array $params, $expected ) {
