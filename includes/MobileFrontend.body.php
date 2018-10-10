@@ -158,40 +158,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * Returns the value of Wikibase property. Returns null if doesn't exist.
-	 *
-	 * @param string $item Wikibase id of the page
-	 * @param string $property Wikibase property id to retrieve
-	 * @return mixed|null
-	 */
-	public static function getWikibasePropertyValue( $item, $property ) {
-		$value = null;
-		$entity = self::getWikibaseEntity( $item );
-
-		try {
-			if ( !$entity ) {
-				return null;
-			} else {
-				$statements = $entity->getStatements()->getByPropertyId(
-						new Wikibase\DataModel\Entity\PropertyId(
-							$property
-						)
-					)->getBestStatements();
-				if ( !$statements->isEmpty() ) {
-					$statements = $statements->toArray();
-					$snak = $statements[0]->getMainSnak();
-					if ( $snak instanceof Wikibase\DataModel\Snak\PropertyValueSnak ) {
-						$value = $snak->getDataValue()->getValue();
-					}
-				}
-				return $value;
-			}
-		} catch ( Exception $ex ) {
-			return null;
-		}
-	}
-
-	/**
 	 * Returns a short description of a page from Wikidata
 	 *
 	 * @param string $item Wikibase id of the page
