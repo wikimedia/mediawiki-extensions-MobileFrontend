@@ -362,7 +362,6 @@
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup/LoadingOverlay.js",
 				"resources/mobile.startup/rlModuleLoader.js",
 				"resources/mobile.startup/Drawer.js",
 				"resources/mobile.startup/CtaDrawer.js",

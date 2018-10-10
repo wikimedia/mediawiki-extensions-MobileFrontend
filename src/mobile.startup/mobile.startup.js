@@ -19,7 +19,8 @@ var
 	Anchor = require( './Anchor' ),
 	Skin = require( './Skin' ),
 	OverlayManager = require( './OverlayManager' ),
-	Overlay = require( './Overlay' );
+	Overlay = require( './Overlay' ),
+	LoadingOverlay = require( './LoadingOverlay' );
 
 mw.mobileFrontend = moduleLoader;
 mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
@@ -49,6 +50,7 @@ mw.mobileFrontend.define( 'mobile.startup/Anchor', Anchor );
 mw.mobileFrontend.define( 'mobile.startup/Skin', Skin );
 mw.mobileFrontend.define( 'mobile.startup/OverlayManager', OverlayManager );
 mw.mobileFrontend.define( 'mobile.startup/Overlay', Overlay );
+mw.mobileFrontend.define( 'mobile.startup/LoadingOverlay', LoadingOverlay );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -70,5 +72,6 @@ module.exports = {
 	Anchor: Anchor,
 	Skin: Skin,
 	OverlayManager: OverlayManager,
-	Overlay: Overlay
+	Overlay: Overlay,
+	LoadingOverlay: LoadingOverlay
 };
