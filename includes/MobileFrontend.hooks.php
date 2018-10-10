@@ -361,6 +361,7 @@ class MobileFrontendHooks {
 		// code above and needs to be explicitly added to the array of supported
 		// test files.
 		$testFiles[] = 'tests/qunit/mobile.startup/PageGateway.test.js';
+		$testFiles[] = 'tests/qunit/mobile.startup/Overlay.test.js';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'templates' => [

@@ -51,7 +51,7 @@
     },
     {
       "path": "resources/dist/mobile.startup.js",
-      "maxSize": "8.1KB"
+      "maxSize": "9KB"
     }
   ]
 }
