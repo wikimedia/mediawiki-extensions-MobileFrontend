@@ -17,7 +17,8 @@
 			"J. 'mach' wust",
 			"Predatorix",
 			"MGChecker",
-			"Kurt Jansson"
+			"Kurt Jansson",
+			"Creepario"
 		]
 	},
 	"mobile-frontend-editor-anon-cta-message": "Melde dich an oder erstelle ein Benutzerkonto, um deine Bearbeitungen zu verfolgen.",
@@ -249,6 +250,7 @@
 	"apihelp-mobileview-param-page": "Titel der zu verarbeitenden Seite.",
 	"apihelp-mobileview-param-redirect": "Ob Weiterleitungen gefolgt werden soll.",
 	"apihelp-mobileview-param-sections": "Durch senkrechte Striche getrennte Liste von Abschnittsnummern, für die Text zurückgegeben werden soll. „Alle“ kann verwendet werden, um alle zurückzugeben. Bereiche, die im Format „1-4“ geschrieben werden, bedeuten Abschnitte 1,2,3,4. Bereiche ohne nachfolgende Zahl wie „1-“ bedeuten alle nachfolgenden Abschnitte. „Referenzen“ kann verwendet werden, um alle Abschnitte mit Referenzen zurückzugeben.",
+	"apihelp-mobileview-param-prop": "Welche Information man erhält:\n;text:HTML von ausgeählten Abschnitten.\n;sections:Informationen über alle Abschnitte auf der Seite.\n;normalizedtitle:Den normalisierten Seitennamen.\n;lastmodified:Einen ISO 8601-Zeitstempel von wann die Seite als letztes bearbeitet wurde, wie z.B \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Informationen über den Nutzer, der die Seite als letztes bearbeitet hat.\n;revision:Gibt die momentane Versionsnummer der Seite wieder.\n;protection:Informationen über die Seitensperre.\n;editable:Ob der aktuelle Nutzer diese Seite bearbeiten kann. Dies beinhaltet alle Faktoren für nicht eingeloggte Nutzer aber nicht den Blockiert-Status für Anonyme.\n;languagecount:Anzahl der Sprachen, in welche diese Seite verfügbar ist.\n;hasvariants:Ob diese Seite auch in anderen Sprach-Variation verfügbar ist.\n;displaytitle:Den gerenderten Titel der Seite, mit &#123;&#123;DISPLAYTITLE&#125;&#125; und weitere angewandt.\n;pageprops:Die Seiten-Eigenschaften.",
 	"apihelp-mobileview-param-sectionprop": "Welche Informationen über Abschnitte abgerufen werden sollen.",
 	"apihelp-mobileview-param-pageprops": "Seiteneigenschaften, die zurückgegeben werden sollen, als Liste mit senkrechten Strichen („|“) getrennt oder „*“ für alle Eigenschaften.",
 	"apihelp-mobileview-param-variant": "Konvertiert Inhalt in diese Sprachvariante.",
