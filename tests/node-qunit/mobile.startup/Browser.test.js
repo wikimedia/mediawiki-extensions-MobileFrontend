@@ -4,7 +4,7 @@ var
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	mw = require( '../utils/mw' ),
+	mediawiki = require( '../utils/mw' ),
 	$html;
 /** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
 
@@ -14,7 +14,7 @@ QUnit.module( 'MobileFrontend Browser.js', {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
-		mw.setUp( sandbox, global );
+		mediawiki.setUp( sandbox, global );
 		// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
 		tmpDOM = window.document.implementation.createHTMLDocument( 'Test' );
 		$html = $( tmpDOM );
@@ -74,12 +74,7 @@ QUnit.test( 'lockViewport()', function ( assert ) {
 
 QUnit.test( 'isWideScreen()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
-	if ( global.mw ) {
-		sandbox.stub( global.mw.config, 'get', function () { return '720px'; } );
-	}
-	if ( window.mw ) {
-		sandbox.stub( window.mw.config, 'get', function () { return '720px'; } );
-	}
+	sandbox.stub( mw.config, 'get', function () { return '720px'; } );
 	assert.strictEqual( browser.isWideScreen(), true );
 } );
 
