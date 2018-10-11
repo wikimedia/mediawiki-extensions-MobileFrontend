@@ -8,8 +8,7 @@
 	"globals": {
 		"OO": false,
 		"mw": false,
-		"Hogan": false,
-		"require": false
+		"Hogan": false
 	},
 	"rules": {
 		"no-restricted-properties": [2,
