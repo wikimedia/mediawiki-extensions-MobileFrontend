@@ -18,9 +18,9 @@ function Section( options ) {
 	this.hasReferences = options.hasReferences || false;
 	this.id = options.id || null;
 	this.anchor = options.anchor;
-	this.children = [];
-	( options.children || [] ).forEach( function ( section ) {
-		self.children.push( new Section( section ) );
+	this.subsections = [];
+	( options.subsections || [] ).forEach( function ( section ) {
+		self.subsections.push( new Section( section ) );
 	} );
 	View.call( this, options );
 }
