@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26c2904d_9c422868",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-11T20:09:13Z",
+      "side": 1,
+      "message": "According to core code\nmw.loader.require appears to be marked as private.\n\nit says:\n\"publicly exposed for debugging purposes only and must not be used in production code.\"\n\nWhat is the problem this patch is trying to achieve?",
+      "revId": "857ba980c3015406162e2c82b19660d5ab7f612a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
