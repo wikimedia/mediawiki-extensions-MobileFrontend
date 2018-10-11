@@ -3,7 +3,6 @@
 	"extends": "wikimedia",
 	"env": {
 		"browser": true,
-		"qunit": true,
 		"jquery": false
 	},
 	"globals": {
