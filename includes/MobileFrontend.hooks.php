@@ -360,7 +360,6 @@ class MobileFrontendHooks {
 		// in headless mode). Therefore, the test file is not autodiscovered by the
 		// code above and needs to be explicitly added to the array of supported
 		// test files.
-		$testFiles[] = 'tests/qunit/mobile.startup/PageGateway.test.js';
 		$testFiles[] = 'tests/qunit/mobile.startup/Overlay.test.js';
 		$testModule = [
 			'dependencies' => $dependencies,

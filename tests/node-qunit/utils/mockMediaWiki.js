@@ -1,16 +1,23 @@
-/* eslint-disable camelcase */
-var namespaceIDs = {
-	special: -1,
-	talk: 1,
-	user_talk: 3,
-	project: 4,
-	project_talk: 5
-};
-/* eslint-enable camelcase */
+var
+	/* eslint-disable camelcase */
+	namespaceIDs = {
+		special: -1,
+		talk: 1,
+		user_talk: 3,
+		project: 4,
+		project_talk: 5
+	}, /* eslint-enable camelcase */
+	templateReader = require( '../utils/templateReader' ),
+	resourceLoaderModules = require( '../../../extension.json' ).ResourceModules;
 
 module.exports = function newMockMediaWiki() {
 	var config = { wgNamespaceIds: namespaceIDs };
 	return {
+		Api: function () {
+			return {
+				get: function () {}
+			};
+		},
 		config: {
 			get: function ( name ) {
 				return config[name];
@@ -37,7 +44,18 @@ module.exports = function newMockMediaWiki() {
 		},
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
-		template: { get: function () {} },
+		template: {
+			get: function ( rlModule, templateName ) {
+				var templatePath;
+
+				if ( rlModule === 'tests.mobilefrontend' ) {
+					templatePath = 'tests/qunit/tests.mobilefrontend/' + templateName;
+				} else {
+					templatePath = resourceLoaderModules[ rlModule ].templates[ templateName ];
+				}
+				return templateReader.get( templatePath );
+			}
+		},
 		user: {},
 		util: { getUrl: function ( title ) { return title; } },
 		loader: {
