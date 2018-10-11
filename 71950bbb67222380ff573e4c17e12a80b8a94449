@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24fe0da8_102bd63f",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-11T21:42:38Z",
+      "side": 1,
+      "message": "This makes load order a problem so we should avoid this as part of this migration IMO.\n\nOne solution would be fixing the root issue - removing those globals. We need to do it sometime, so we might want to consider doing that now.\n\nAs a short term solution we could move moduleLoader into its own module....\n\nmoduleSingleton.js:\nmodule.exports \u003d new ModuleLoader();\n\n\nand import it here..\nM \u003d require( \u0027./moduleSingleton\u0027)\n\nand inside mobile.startup...",
+      "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46ad369c_c059f7c1",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-11T21:42:38Z",
+      "side": 1,
+      "message": "I\u0027m fairly confident we can avoid doing this.",
+      "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ee8fd20_7c11acb4",
+        "filename": "tests/node-qunit/mobile.startup/Skin.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-11T21:42:38Z",
+      "side": 1,
+      "message": "Is there a better way to do this.\nWill webpack allow us to import this (either via json or HTML) ?\n\nI\u0027d love our tests to be more readable going forward.",
+      "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
