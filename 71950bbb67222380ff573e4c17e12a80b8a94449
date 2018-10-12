@@ -50,6 +50,24 @@
       "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6be4e59_499112d9",
+        "filename": "tests/node-qunit/mobile.startup/Skin.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-12T20:08:42Z",
+      "side": 1,
+      "message": "We could definitely use a webpack html loader here but that would only work with the browser qunit rn since our headless qunit tests don\u0027t use the webpack outputted tests.mobilefrontend.js file. \n\nDoing something like what Jan has done here might be a possibility though: \n\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466606/3/tests/node-qunit/utils/mockMediaWiki.js\n\nI see two possibilities right now:\n\n1) Use node fs.readFile within the mw.template.get method of mockMediaWiki.js for headless qunit and let the Special:JavascriptTest page use the real mw.template.get (as Jan has done).\n\n2) Have node-qunit run the tests from a webpack outputted file (maybe we could use the same file as the one used for Special:JavascriptTest?) which would enable us to use webpack loaders within the tests.\n\nDo you have any other ideas?",
+      "parentUuid": "4ee8fd20_7c11acb4",
+      "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
