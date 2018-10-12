@@ -68,6 +68,24 @@
       "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a3e90ba_6553b3e1",
+        "filename": "tests/node-qunit/mobile.startup/Skin.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-12T20:20:14Z",
+      "side": 1,
+      "message": "I\u0027d be for using fs here to load a file. No need to use mw.template here, as all we\u0027re doing is getting html right?\nWebpack will take care of the rest after all.\n\ne.g. \nvar mockHtml \u003d fs.loadFileSync(\u0027mocks/file.html\u0027)\n...\n\nvar $content \u003d $( \u0027\u003cdiv\u003e\u0027 ).append( mockHtml )",
+      "parentUuid": "a6be4e59_499112d9",
+      "revId": "71950bbb67222380ff573e4c17e12a80b8a94449",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
