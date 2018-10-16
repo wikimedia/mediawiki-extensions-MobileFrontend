@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0d4e1969_aa0fcc82",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "thank you, removed in latest patch",
+      "parentUuid": "1a62031e_08088b88",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "72683885_767893bd",
         "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-10-11T21:46:37Z",
       "side": 1,
       "message": "Let\u0027s use util.extend here instead.",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d707fa87_bcdaae0b",
+        "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72683885_767893bd",
       "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "a8f44dda_3dab9cd2",
+        "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "I just replaced with a plain object",
+      "parentUuid": "1a1d5ab8_5de90221",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ded0b8f_5f5d2c37",
         "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2018-10-11T21:46:37Z",
       "side": 1,
       "message": "let\u0027s use util here instead",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "361ee70d_3a5d7ae3",
+        "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ded0b8f_5f5d2c37",
       "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7fb7eb6b_c3634a94",
+        "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "replaced with plain object",
+      "parentUuid": "5c453b1b_21efe512",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "adf4503d_3daf1700",
         "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2018-10-11T21:46:37Z",
       "side": 1,
       "message": "Is this when actually necessary?",
+      "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1b9fd69_32473b06",
+        "filename": "tests/node-qunit/mobile.startup/OverlayManager.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-16T20:52:52Z",
+      "side": 1,
+      "message": "replaced with Deferred in latest patch",
+      "parentUuid": "adf4503d_3daf1700",
       "revId": "df5d9f2800df4719de19c6afce4241ed39847fb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
