@@ -16,6 +16,52 @@
       "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76c58e61_c64efef0",
+        "filename": "tests/node-qunit/utils/templateReader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-16T23:28:21Z",
+      "side": 1,
+      "message": "What purpose does this serve? It seems to just trim the input string not render HTML.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 3
+      },
+      "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bec34d0_31a61a94",
+        "filename": "tests/node-qunit/utils/templateReader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-16T23:28:21Z",
+      "side": 1,
+      "message": "This is pretty minor but I\u0027m confused about the purpose of this module.\n\nIf the intent is to stub out MediaWiki, maybe this should live in a mockMediaWiki or MediaWikiTemplateStub or something like that. The class would be used headlessly and entirely inert in browser, if I understand correctly.\n\nIf the purpose is a utility, which the name suggests, why mimic the MediaWiki API naming and extension parsing? This could be fileUtil or hoganUtil and just have methods like compileHTML or compileHogan.\n\nI know we\u0027ve chatted bunches about this already so if it saves you an explanation, a link to where this is used may suffice to answer these questions.",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 32,
+        "endChar": 28
+      },
+      "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
