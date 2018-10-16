@@ -1,6 +1,5 @@
 var
-	ModuleLoader = require( './modules' ),
-	moduleLoader = new ModuleLoader(),
+	moduleLoader = require( './moduleSingleton' ),
 	mfExtend = require( './mfExtend' ),
 	context = require( './context' ),
 	time = require( './time' ),
@@ -17,7 +16,8 @@ var
 	Section = require( './Section' ),
 	Thumbnail = require( './Thumbnail' ),
 	Page = require( './Page' ),
-	Anchor = require( './Anchor' );
+	Anchor = require( './Anchor' ),
+	Skin = require( './Skin' );
 
 mw.mobileFrontend = moduleLoader;
 mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
@@ -44,6 +44,7 @@ mw.mobileFrontend.define( 'mobile.startup/Section', Section );
 mw.mobileFrontend.define( 'mobile.startup/Thumbnail', Thumbnail );
 mw.mobileFrontend.define( 'mobile.startup/Page', Page );
 mw.mobileFrontend.define( 'mobile.startup/Anchor', Anchor );
+mw.mobileFrontend.define( 'mobile.startup/Skin', Skin );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -62,5 +63,6 @@ module.exports = {
 	Panel: Panel,
 	Section: Section,
 	Page: Page,
-	Anchor: Anchor
+	Anchor: Anchor,
+	Skin: Skin
 };
