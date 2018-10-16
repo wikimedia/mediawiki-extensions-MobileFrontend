@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a271b676_024c42c5",
+        "filename": "tests/node-qunit/utils/templateReader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-16T21:31:55Z",
+      "side": 1,
+      "message": "I\u0027m not a big fan of requiring files outside src or tests folder, but it looks like we can pay this off in https://gerrit.wikimedia.org/r/467772",
+      "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
