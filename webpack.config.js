@@ -45,6 +45,7 @@ module.exports = {
 		// each entry which is inefficient. This chunk should only change when Webpack or this
 		// configuration changes.
 
+		'mediawiki.template.hogan': './src/mediawiki.template.hogan/mediawiki.template.hogan.js',
 		'mobile.startup': './src/mobile.startup/mobile.startup.js'
 	},
 

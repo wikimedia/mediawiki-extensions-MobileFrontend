@@ -190,8 +190,7 @@
 				"mediawiki.template"
 			],
 			"scripts": [
-				"libs/hogan.js/hogan.js",
-				"resources/mediawiki.template.hogan/hogan.js"
+				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
 		"mobile.pagelist.scripts": {

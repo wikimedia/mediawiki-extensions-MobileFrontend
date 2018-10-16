@@ -1,6 +1,6 @@
 var
 	headless = typeof window !== 'object',
-	hogan = require( '../../../libs/hogan.js/hogan.js' ),
+	hogan = require( 'hogan.js' ),
 	path = require( 'path' ),
 	fs = require( 'fs' ),
 	compilers;

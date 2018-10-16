@@ -1,6 +1,6 @@
 /* global $ */
 var
-	Hogan = require( '../../../libs/hogan.js/hogan' ),
+	Hogan = require( 'hogan.js' ),
 	jQuery = require( '../utils/jQuery' ),
 	mfExtend = 	require( '../../../src/mobile.startup/mfExtend' ),
 	oo = require( '../utils/oo' ),
