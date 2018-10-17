@@ -39,6 +39,9 @@ module.exports = function newMockMediaWiki() {
 		now: Date.now.bind( Date ),
 		template: { get: function () {} },
 		user: {},
-		util: { getUrl: function ( title ) { return title; } }
+		util: { getUrl: function ( title ) { return title; } },
+		loader: {
+			using: function () {}
+		}
 	};
 };
