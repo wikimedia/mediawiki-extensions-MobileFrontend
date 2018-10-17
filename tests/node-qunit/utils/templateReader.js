@@ -29,8 +29,8 @@ module.exports = {
 	 *
 	 * Under this scenario, the test can call
 	 * ```
-	 * require( 'templateReader' ).get( 'tests/qunit/tests.mobilefrontend/foo.hogan')
-	 * .render( {data: 'foo' } );
+	 * require( 'templateReader' ).get( 'tests/qunit/tests.mobilefrontend/foo.hogan' )
+	 * .render( { data: 'foo' } );
 	 * ```
 	 * and get back a string to use in the test.
 	 *
@@ -45,7 +45,7 @@ module.exports = {
 	 * {
 	 *   template: {
 	 *     get: function ( moduleName, templateName ) {
-	 *       var path = require( 'path' ),
+	 *       var
 	 *         resourceModules = require( '../extension.json' ).ResourceModules,
 	 *         templatePath = resourceModules[ moduleName ].templates[ templateName ];
 	 *
