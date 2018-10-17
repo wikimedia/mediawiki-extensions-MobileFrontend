@@ -52,6 +52,24 @@
       "revId": "81258a48ae25df3f32a2d9b516a43ecb6f7dd6b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "73d75a20_1a5d592f",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-17T21:48:15Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "599fee66_decb4eda",
+      "revId": "81258a48ae25df3f32a2d9b516a43ecb6f7dd6b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

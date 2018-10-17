@@ -16,6 +16,24 @@
       "revId": "ca2517f97e5b09b9907b08357598364e8330f8de",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03e4f7fe_be7b56a1",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-17T21:48:15Z",
+      "side": 1,
+      "message": "Removed in latest ps.",
+      "parentUuid": "7e4f6334_fefee57a",
+      "revId": "ca2517f97e5b09b9907b08357598364e8330f8de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
