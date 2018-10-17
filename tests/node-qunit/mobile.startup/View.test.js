@@ -194,3 +194,40 @@ QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 	assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
 	assert.strictEqual( view.$( 'span' ).length, 0, 'span disappeared' );
 } );
+
+QUnit.test( 'View with className option', function ( assert ) {
+	function ViewWithClassNameProp() {
+		View.apply( this, arguments );
+	}
+
+	mfExtend( ViewWithClassNameProp, View, {
+		isBorderBox: false,
+		className: 'apple'
+	} );
+	[
+		[
+			new View( {
+				className: 'banana'
+			} ),
+			'banana view-border-box',
+			'option is passed to View (along with default isBorderBox property)'
+		],
+		[
+			new View( {} ),
+			'view-border-box',
+			'className not defined on a normal View'
+		],
+		[
+			new ViewWithClassNameProp( {} ),
+			'apple',
+			'if no option passed, property on View used'
+		],
+		[
+			new ViewWithClassNameProp( { className: 'banana' } ),
+			'banana',
+			'option passed, property on View is overriden'
+		]
+	].forEach( function ( test ) {
+		assert.strictEqual( test[0].$el.attr( 'class' ), test[1], test[2] );
+	} );
+} );

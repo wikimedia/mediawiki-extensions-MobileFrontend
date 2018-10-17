@@ -200,12 +200,12 @@ mfExtend( View, {
 
 		// Make sure the element is ready to be manipulated
 		if ( this.$el.length ) {
-			this._postInitialize();
+			this._postInitialize( options );
 		} else {
 			util.docReady( function () {
 				// Note the element may not be in the document so must use global jQuery here
 				self.$el = $( options.el );
-				self._postInitialize();
+				self._postInitialize( options );
 			} );
 		}
 	},
@@ -215,9 +215,10 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 * @private
+	 * @param {Object} props
 	 */
-	_postInitialize: function () {
-		this.$el.addClass( this.className );
+	_postInitialize: function ( props ) {
+		this.$el.addClass( props.className || this.className );
 		if ( this.isBorderBox ) {
 			// FIXME: Merge with className property (?)
 			this.$el.addClass( 'view-border-box' );
