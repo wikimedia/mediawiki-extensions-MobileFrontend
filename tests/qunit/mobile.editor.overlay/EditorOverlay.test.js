@@ -34,16 +34,15 @@
 		var messageStub = this.messageStub,
 			dBlockedContent = $.Deferred().resolve( {
 				text: 'section 0',
-				user: {
-					blockid: 1
+				userinfo: {
+					options: {
+						gender: 'female'
+					}
 				},
-				block: {
-					by: 'Test',
-					expiry: 'infinity',
-					reason: 'Testreason'
-				},
-				blockedByUser: {
-					gender: 'female'
+				blockinfo: {
+					blockedby: 'Test',
+					blockexpiry: 'infinity',
+					blockreason: 'Testreason'
 				}
 			} );
 		this.getContentStub.returns( dBlockedContent );
@@ -55,10 +54,15 @@
 		return dBlockedContent.then( function () {
 			assert.ok(
 				messageStub.calledWith( {
+					partial: false,
+					user: {
+						options: {
+							gender: 'female'
+						}
+					},
 					creator: {
 						name: 'Test',
-						url: mw.util.getUrl( 'User:Test' ),
-						gender: 'female'
+						url: mw.util.getUrl( 'User:Test' )
 					},
 					expiry: null,
 					duration: null,

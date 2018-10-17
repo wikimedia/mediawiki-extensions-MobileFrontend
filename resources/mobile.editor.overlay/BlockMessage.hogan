@@ -5,7 +5,7 @@
   </div>
   <div class="block-message-info">
     <div class="block-message-item block-message-title">
-      <h5>{{ title }}</h5>
+      <h5>{{ createTitle }}</h5>
     </div>
     <div class="block-message-data">
       {{#reason}}
