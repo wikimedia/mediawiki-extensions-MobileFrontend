@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "cb5e0f3d_f4ac2001",
+        "filename": "tests/node-qunit/utils/templateReader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-17T19:55:27Z",
+      "side": 1,
+      "message": "this code is used on line 82 in:\n\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466667/7/tests/node-qunit/mobile.startup/Skin.test.js \n\nThat needed to get the contents of an html file. I felt like the simplest thing to do was for it to return a string to align it with the hogan compiler (which also returns a string).\n\nIn latest patch, I removed the .trim() though as there wasn\u0027t a use case for it.",
+      "parentUuid": "76c58e61_c64efef0",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 3
+      },
+      "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5bec34d0_31a61a94",
         "filename": "tests/node-qunit/utils/templateReader.js",
         "patchSetId": 2
