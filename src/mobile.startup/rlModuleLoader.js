@@ -1,5 +1,5 @@
 var
-	LoadingOverlay = require( './LoadingOverlay' ),
+	loadingOverlay = require( './loadingOverlay' ),
 	util = require( './util' );
 
 /**
@@ -10,7 +10,7 @@ var
 module.exports = {
 	// Exported to support testing and stubbing
 	newLoadingOverlay: function () {
-		return new LoadingOverlay();
+		return loadingOverlay();
 	},
 	/**
 	 * Loads a module via ResourceLoader

@@ -307,7 +307,6 @@
 				"CtaDrawer.hogan": "resources/mobile.startup/CtaDrawer.hogan",
 				"header.hogan": "resources/mobile.startup/OverlayHeader.hogan",
 				"Overlay.hogan": "resources/mobile.startup/Overlay.hogan",
-				"LoadingOverlay.hogan": "resources/mobile.startup/LoadingOverlay.hogan",
 				"anchor.hogan": "resources/mobile.startup/anchor.hogan",
 				"icon.hogan": "resources/mobile.startup/icon.hogan",
 				"Section.hogan": "resources/mobile.startup/Section.hogan",

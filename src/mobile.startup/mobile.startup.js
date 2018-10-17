@@ -23,7 +23,7 @@ var
 	Skin = require( './Skin' ),
 	OverlayManager = require( './OverlayManager' ),
 	Overlay = require( './Overlay' ),
-	LoadingOverlay = require( './LoadingOverlay' ),
+	loadingOverlay = require( './loadingOverlay' ),
 	Drawer = require( './Drawer' ),
 	CtaDrawer = require( './CtaDrawer' ),
 	PageList = require( './PageList' ),
@@ -65,13 +65,13 @@ mw.mobileFrontend.define( 'mobile.startup/Anchor', Anchor );
 mw.mobileFrontend.define( 'mobile.startup/Skin', Skin );
 mw.mobileFrontend.define( 'mobile.startup/OverlayManager', OverlayManager );
 mw.mobileFrontend.define( 'mobile.startup/Overlay', Overlay );
-mw.mobileFrontend.define( 'mobile.startup/LoadingOverlay', LoadingOverlay );
 mw.mobileFrontend.define( 'mobile.startup/Drawer', Drawer );
 mw.mobileFrontend.define( 'mobile.startup/CtaDrawer', CtaDrawer );
 mw.mobileFrontend.define( 'mobile.startup/PageList', PageList );
 mw.mobileFrontend.define( 'mobile.startup/toast', toast );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
 mw.mobileFrontend.define( 'mobile.startup/eventBusSingleton', eventBusSingleton );
+mw.mobileFrontend.deprecate( 'mobile.startup/LoadingOverlay', loadingOverlay, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.search.util/extendSearchParams', extendSearchParams, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references/ReferencesDrawer', ReferencesDrawer, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway, 'mobile.startup' );
@@ -112,7 +112,7 @@ module.exports = {
 	Skin: Skin,
 	OverlayManager: OverlayManager,
 	Overlay: Overlay,
-	LoadingOverlay: LoadingOverlay,
+	loadingOverlay: loadingOverlay,
 	Drawer: Drawer,
 	CtaDrawer: CtaDrawer,
 	PageList: PageList,

@@ -4,7 +4,7 @@
 	var api,
 		NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
-		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
+		loadingOverlay = mw.mobileFrontend.require( 'mobile.startup' ).loadingOverlay,
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -25,7 +25,7 @@
 				}
 			}
 		},
-		overlay = new LoadingOverlay();
+		overlay = loadingOverlay();
 
 	/**
 	 * Show the title and hide the info container

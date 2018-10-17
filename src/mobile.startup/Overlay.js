@@ -17,6 +17,7 @@ var
  * @fires Overlay#Overlay-exit
  * @fires Overlay#hide
  * @param {Object} props
+ * @param {boolean} props.noHeader renders an overlay without a header
  */
 function Overlay( props ) {
 	this.isIos = browser.isIos();

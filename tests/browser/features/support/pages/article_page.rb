@@ -128,7 +128,7 @@ class ArticlePage
   ## languages
   a(:switch_language_page_action, css: '#page-actions .language-selector')
   a(:disabled_switch_langage_page_action, css: '#page-actions .language-selector.disabled')
-  # Can't use generic overlay class as this will match with the LoadingOverlay that shows before loading the language overlay
+  # Can't use generic overlay class as this will match with the loading Overlay that shows before loading the language overlay
   div(:overlay_languages, css: '.language-overlay')
   a(:non_suggested_language_link, css: '.all-languages a', index: 0)
   a(:suggested_language_link, css: '.suggested-languages a', index: 0)
