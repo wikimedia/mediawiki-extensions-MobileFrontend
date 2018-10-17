@@ -1302,7 +1302,6 @@
 			"tagline": false
 		},
 		"MFRSSFeedLink": false,
-		"MFSchemaEditSampleRate": 0.0625,
 		"MFSchemaSearchSampleRate": 0.001,
 		"MFStripResponsiveImages": true,
 		"MFResponsiveImageWhitelist": [
