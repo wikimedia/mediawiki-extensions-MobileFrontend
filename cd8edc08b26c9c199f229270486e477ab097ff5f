@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e2153b9_8c4174c2",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-17T17:48:33Z",
+      "side": 1,
+      "message": "Not being shipped to client.",
+      "revId": "cd8edc08b26c9c199f229270486e477ab097ff5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
