@@ -62,6 +62,30 @@
       "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6943d28a_027c3fd5",
+        "filename": "tests/node-qunit/utils/templateReader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-17T03:17:42Z",
+      "side": 1,
+      "message": "It\u0027s most immediate usage is on line 82 from:\n\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466667/7/tests/node-qunit/mobile.startup/Skin.test.js\n\nIn that test, we needed a way to get the contents of an html template file into our test that would work in headless qunit mode and browser qunit mode. \n\nWe could put this logic into mockMediaWiki and just use mw.template.get inside our tests (In fact, Jan did exactly that in one of his patches! [1]), but I think Jon had an unfavorable opinion of using mw.template.get inside tests [2]. He can speak more to that though as I may be misinterpreting what he was getting at. I think one advantage of using a utility function like this one inside our tests instead of directly using mw.template.get is if we decide to phase out the usage of resource loader\u0027s templating for something else as it adds a level of indirection and an easy seam in which to switch. I think this follows a similar approach to that of using util.js inside our tests instead of global jQuery. However, if we have no desire to switch away from resource loader\u0027s templating, than this point is moot, and I think doing it this way becomes a lot less valuable. The principle of YAGNI may also very much apply here. I think we need to discuss more as a team what our plans for templating will be in the near future and beyond.\n\nIn a downstream patch [3], I migrated Overlay.js to webpack. Overlay.js (and its dependencies) make fairly heavy use of mw.template.get and its tests test the templates provided by this functionality. I punted on migrating Overlay.test.js because I wasn\u0027t sure how we wanted to deal with this, but one approach could be to put logic inside mockMediaWiki\u0027s template.get method which would then delegate to this utility function. That was the reason I added the hogan compiler to this file.\n\nRegarding why this doesn\u0027t use methods like compileHTML or compileHogan, I don\u0027t think I had a strong reason other than potentially lessening the work mockMediaWiki had to do if it did delegate to this function. E.g. mw.template.get would then have to parse the extension of the file to determine whether to  call compileHTML or compileHogan. If there is a preference to switch to those methods, I\u0027m happy to do that.\n\nSorry for for the length of this! Hopefully that adds some helpful context.\n\n[1] https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466606/4/tests/node-qunit/utils/mockMediaWiki.js\n\n[2] https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466667/2/tests/node-qunit/mobile.startup/Skin.test.js@82\n\n[3] https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/466669/",
+      "parentUuid": "5bec34d0_31a61a94",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 32,
+        "endChar": 28
+      },
+      "revId": "6bca278c39f95e131eb82d26f2f23ad92d7a1982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
