@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e4f6334_fefee57a",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-17T21:32:39Z",
+      "side": 1,
+      "message": "resource-modules-disable-line is not needed here.",
+      "revId": "ca2517f97e5b09b9907b08357598364e8330f8de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
