@@ -33,7 +33,7 @@
 	"mobile-frontend-donate-image-nouploads": "Няма качени файлове.",
 	"mobile-frontend-donate-image-title": "Качвания",
 	"mobile-frontend-donate-image-title-you": "Качени от вас файлове",
-	"mobile-frontend-editor-cancel": "Отказване",
+	"mobile-frontend-editor-cancel": "Отказ",
 	"mobile-frontend-editor-continue": "Следваща",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Желаете ли да създадете}} нова страница в {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Създавате}} нова страница в {{SITENAME}}!",
