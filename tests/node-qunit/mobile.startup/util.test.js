@@ -87,12 +87,6 @@ QUnit.test( 'parseHTML()', function ( assert ) {
 	assert.strictEqual( htmlFragment[ 0 ].innerHTML, 'element content' );
 } );
 
-QUnit.test( 'parseHTML()', function ( assert ) {
-	var htmlFragment = util.parseHTML( '<p>element content</p>', document );
-	assert.strictEqual( typeof htmlFragment === 'object', true );
-	assert.strictEqual( htmlFragment[ 0 ].innerHTML, 'element content' );
-} );
-
 QUnit.test( 'isNumeric()', function ( assert ) {
 	assert.strictEqual( util.isNumeric( 123 ), true );
 	assert.strictEqual( util.isNumeric( '123' ), true );
