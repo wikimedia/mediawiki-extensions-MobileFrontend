@@ -9,7 +9,7 @@ mw.loader.using( [ 'schema.Edit', 'ext.eventLogging.subscriber' ] ).then( functi
 		 */
 		schemaEdit = new Schema(
 			'Edit',
-			mw.config.get( 'wgMFSchemaEditSampleRate' ),
+			mw.config.get( 'wgWMESchemaEditSampleRate' ),
 			{
 				'page.id': mw.config.get( 'wgArticleId' ),
 				'page.revid': mw.config.get( 'wgRevisionId' ),
