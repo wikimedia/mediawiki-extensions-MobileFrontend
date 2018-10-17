@@ -16,6 +16,24 @@
       "revId": "80c4521fe8cb13e64462c702e3aaa919c4ed4240",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5949bf54_bb109732",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-17T22:00:12Z",
+      "side": 1,
+      "message": "Will create a card for remaining work now",
+      "parentUuid": "b0c8761d_283d5eae",
+      "revId": "80c4521fe8cb13e64462c702e3aaa919c4ed4240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
