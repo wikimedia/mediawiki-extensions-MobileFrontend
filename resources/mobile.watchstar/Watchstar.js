@@ -86,7 +86,7 @@
 		 * @memberof Watchstar
 		 * @instance
 		 */
-		template: mw.template.compile( '<button>{{tooltip}}</button>', 'hogan' ),
+		template: mw.template.compile( '<a role="button">{{tooltip}}</a>', 'hogan' ),
 		/**
 		 * @inheritdoc
 		 * @memberof Watchstar
