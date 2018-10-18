@@ -9,7 +9,9 @@
     "lint": "grunt test && npm run lint:es5 && npm run lint:js",
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
     "lint:js": "eslint --cache --max-warnings 0 --report-unused-disable-directives .",
-    "test": "npm run lint && npm run doc && dev-scripts/svg_check.sh && bundlesize",
+    "test": "npm run -s test:bundle && npm run lint && npm run doc && dev-scripts/svg_check.sh && bundlesize",
+    "test:bundle": "npm -s run build && git diff --name-status --exit-code resources/dist || { npm run node-debug; false; }",
+    "node-debug": "node -v && npm -v && echo '`git status resources/dist` is dirty. Please ensure you are running the correct version of nvm before running this command.'",
     "doc": "jsdoc -c jsdoc.json",
     "lint:modules": "resource-modules ./"
   },
