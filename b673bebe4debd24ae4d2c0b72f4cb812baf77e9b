@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89a54868_ffc4a759",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-18T23:57:50Z",
+      "side": 1,
+      "message": "I\u0027m still not sure about this, but I don\u0027t have any better ideas right now.\nHopefully will do tomorrow.",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01227cdd_22022b3d",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-18T23:57:50Z",
+      "side": 1,
+      "message": "We don\u0027t need to do this any more. We control the test environment so could import these files directly using templateReader in the tests and stop shipping them as part of the RL module.",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a5eb8b69_357a5c90",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-18T23:57:50Z",
+      "side": 1,
+      "message": "templates are key value pairs.\n\n.eg.\n\"MessageBox.hogan\": \"resources/mobile.messageBox/MessageBox.hogan\"\n\nThus the key is the templateName not a filename.",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
