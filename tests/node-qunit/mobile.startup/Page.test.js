@@ -1,9 +1,10 @@
-/* global $ */
 var
+	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
-	Page,
+	// These both have heavy dependencies on jQuery so must be loaded later.
+	Page, util,
 	sinon = require( 'sinon' ),
 	PARSER_OUTPUT = '<div class="mw-parser-output">',
 	MOBILE_TOC = '<div class="toc-mobile view-border-box"><h2></h2><div></div></div>';
@@ -32,20 +33,22 @@ QUnit.module( 'MobileFrontend Page', {
 			};
 
 		sandbox = sinon.sandbox.create();
+		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		global.mw.config.set( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
 		Page = require( '../../../src/mobile.startup/Page' );
+		util = require( '../../../src/mobile.startup/util' );
 
 		stubPage = new Page( {
-			el: $( PARSER_OUTPUT ).html(
+			el: util.parseHTML( PARSER_OUTPUT ).html(
 				'<p>lead</p>' + ambox( 'a0' )
 			)
 		} );
 		mobileTocPage = new Page( {
-			el: $( PARSER_OUTPUT ).html(
+			el: util.parseHTML( PARSER_OUTPUT ).html(
 				sectionBody( 0, ambox( 'a0' ) + '<p>lead</p>' + MOBILE_TOC ) +
 				// section = 1
 				sectionHeading( '1' ) +
@@ -58,7 +61,7 @@ QUnit.module( 'MobileFrontend Page', {
 			)
 		} );
 		desktopPage = new Page( {
-			el: $( PARSER_OUTPUT ).html(
+			el: util.parseHTML( PARSER_OUTPUT ).html(
 				'<p>lead</p>' +
 				ambox( 'a0' ) +
 				// section = 1
@@ -70,7 +73,7 @@ QUnit.module( 'MobileFrontend Page', {
 			)
 		} );
 		sectionPage = new Page( {
-			el: $( PARSER_OUTPUT ).html(
+			el: util.parseHTML( PARSER_OUTPUT ).html(
 				sectionBody( 0, '<p>lead</p>' + ambox( 'a0' ) ) +
 				// section = 1
 				sectionHeading( '1' ) +
@@ -121,7 +124,7 @@ QUnit.module( 'MobileFrontend Page', {
 			) // end .html()
 		} ); // end new Page();
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
 } );
 
 QUnit.test( '#findInSectionLead', function ( assert ) {
@@ -216,32 +219,32 @@ QUnit.test( '#getThumbnails', function ( assert ) {
 		pLazyImagesTypo, pMetadataNested;
 
 	p = new Page( {
-		el: $( '<div><a href="/wiki/File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		el: util.parseHTML( '<div><a href="/wiki/File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	} );
 	textPage = new Page( {
-		el: $( '<div>' )
+		el: util.parseHTML( '<div></div>' )
 	} );
 	pLegacyUrls = new Page( {
-		el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		el: util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	} );
 	thumbs = p.getThumbnails();
 	pNoViewer = new Page( {
-		el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box noviewer"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		el: util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box noviewer"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	} );
 	pMetadata = new Page( {
-		el: $( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" class="metadata" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		el: util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" class="metadata" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	} );
 	pMetadataNested = new Page( {
-		el: $( '<div class="noviewer"><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
+		el: util.parseHTML( '<div class="noviewer"><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	} );
 	pLazyImages = new Page( {
-		el: $( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><noscript><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" width="28" height="28" class="noviewer" data-file-width="151" data-file-height="151"></noscript><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="noviewer">&nbsp;</span></a></div>' )
+		el: util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="noviewer">&nbsp;</span></a></div>' )
 	} );
 	pLazyImagesTypo = new Page( {
-		el: $( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><noscript><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" width="28" height="28" class="noviewer" data-file-width="151" data-file-height="151"></noscript><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
+		el: util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
 	} );
 	metadataTable = new Page( {
-		el: $( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><noscript><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" data-file-width="262" data-file-height="204"></noscript><span class="lazy-image-placeholder" style="width: 50px;height: 39px;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"> </span></a></div></td></tr></table>' )
+		el: util.parseHTML( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><span class="lazy-image-placeholder" style="width: 50px;height: 39px;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"> </span></a></div></td></tr></table>' )
 	} );
 
 	assert.strictEqual( thumbs.length, 1, 'Found expected number of thumbnails.' );
