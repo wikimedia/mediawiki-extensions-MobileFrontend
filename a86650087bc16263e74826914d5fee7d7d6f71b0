@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3652396a_0d10fd46",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-19T19:07:48Z",
+      "side": 1,
+      "message": "We\u0027re not. Template strings are built to normal strings in webpack.\nThe ES5 linter checks we don\u0027t ship code we shouldn\u0027t.\n\nIf we could just allow template strings, I\u0027d do that, but I switch on es6 with the understanding that we won\u0027t.",
+      "parentUuid": "7f916a87_c8484dc5",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4696e49c_eb6c2c23",
         "filename": "tests/node-qunit/mobile.startup/examples.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-19T18:53:35Z",
       "side": 1,
       "message": "These pretty Page.test specific. What do you think about renaming this PageInputs.test.js?",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 8
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "146987bd_e6fea096",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-19T19:07:48Z",
+      "side": 1,
+      "message": "i\u0027m fine with that.",
+      "parentUuid": "4696e49c_eb6c2c23",
       "range": {
         "startLine": 4,
         "startChar": 0,
