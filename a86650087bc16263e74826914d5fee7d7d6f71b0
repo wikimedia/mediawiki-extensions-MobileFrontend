@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "e4afd47c_3bcbef8d",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-19T19:36:44Z",
+      "side": 1,
+      "message": "Oh because of multiline....point 1 is invalid then",
+      "parentUuid": "6abeb21b_ec15862c",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4696e49c_eb6c2c23",
         "filename": "tests/node-qunit/mobile.startup/examples.js",
         "patchSetId": 4
