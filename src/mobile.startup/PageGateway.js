@@ -22,7 +22,7 @@ function assignToParent( listOfSections, child ) {
 			listOfSections.push( child );
 		} else {
 			// Otherwise take a look at that sections children recursively
-			assignToParent( section.children, child );
+			assignToParent( section.subsections, child );
 		}
 	}
 }
@@ -48,7 +48,7 @@ function transformSections( sections ) {
 		if ( section.line !== undefined ) {
 			section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
 		}
-		section.children = [];
+		section.subsections = [];
 
 		if (
 			!lastSection ||
@@ -58,8 +58,8 @@ function transformSections( sections ) {
 			) ||
 			// make sure lastSections first child's level is bigger than section.level
 			(
-				lastSection.children.length &&
-				lastSection.children[0].level > section.level
+				lastSection.subsections.length &&
+				lastSection.subsections[0].level > section.level
 			) ||
 			// also make sure section.level is not bigger than the lastSection.level
 			(
@@ -70,7 +70,7 @@ function transformSections( sections ) {
 			result.push( section );
 			lastSection = section;
 		} else {
-			assignToParent( lastSection.children, section );
+			assignToParent( lastSection.subsections, section );
 			lastSection.text += sectionTemplate.render( section );
 		}
 	} );

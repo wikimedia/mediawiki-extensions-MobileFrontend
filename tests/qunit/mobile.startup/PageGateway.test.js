@@ -88,14 +88,14 @@
 						anchor: '1',
 						id: 1,
 						text: '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2>\n<p>Text of 1.1\n</p>\n',
-						children: [
+						subsections: [
 							{
 								level: '2',
 								line: '<i>1.1</i>',
 								anchor: '1.1',
 								id: 2,
 								text: '<p>Text of 1.1\n</p>',
-								children: []
+								subsections: []
 							}
 						]
 					},
@@ -105,14 +105,14 @@
 						anchor: '2',
 						id: 3,
 						text: '<p>Text of 2\n</p><h2 id="2.1">2.1</h2>\n<p>Text of 2.1\n</p>\n',
-						children: [
+						subsections: [
 							{
 								level: '2',
 								line: '2.1',
 								anchor: '2.1',
 								id: 4,
 								text: '<p>Text of 2.1\n</p>',
-								children: []
+								subsections: []
 							}
 						]
 					}
@@ -203,14 +203,14 @@
 						anchor: 'Aaa_section',
 						id: 1,
 						text: 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>\nsubaaa content\n',
-						children: [
+						subsections: [
 							{
 								level: '3',
 								line: 'Subaaa section',
 								anchor: 'Subaaa_section',
 								id: 2,
 								text: 'subaaa content',
-								children: []
+								subsections: []
 							}
 						]
 					},
@@ -220,7 +220,7 @@
 						anchor: 'Bbb_section',
 						id: 3,
 						text: 'bbb content',
-						children: []
+						subsections: []
 					},
 					{
 						level: '2',
@@ -229,7 +229,7 @@
 						anchor: 'References',
 						id: 4,
 						text: 'references',
-						children: []
+						subsections: []
 					}
 				]
 			}, 'return lead and sections test 2' );
@@ -425,12 +425,12 @@
 				level: '2',
 				anchor: '1.0',
 				text: '<h3 id="">A2.1</h3>\n\n',
-				children: [ {
+				subsections: [ {
 					line: 'A2.1',
 					level: '3',
 					anchor: '',
 					text: '',
-					children: []
+					subsections: []
 				} ]
 			},
 			{
@@ -438,19 +438,19 @@
 				level: '2',
 				anchor: '',
 				text: '',
-				children: []
+				subsections: []
 			},
 			{
 				line: 'A2',
 				level: '1',
 				anchor: '',
 				text: '<h2 id="">A2.1</h2>\n\n',
-				children: [ {
+				subsections: [ {
 					line: 'A2.1',
 					level: '2',
 					anchor: '',
 					text: '',
-					children: []
+					subsections: []
 				} ]
 			}
 		] );
