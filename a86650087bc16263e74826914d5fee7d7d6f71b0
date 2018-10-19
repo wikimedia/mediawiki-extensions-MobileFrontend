@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6abeb21b_ec15862c",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-19T19:35:19Z",
+      "side": 1,
+      "message": "I have two thoughts:\n\n1) Why can\u0027t these just be regular strings? They don\u0027t handle any interpolation from what I can tell\n\n2) When I tried to include placeholders in the strings, the webpack outputted string remained an es6 template string so it seems that webpack will only convert them to regular strings if they don\u0027t contain placeholders",
+      "parentUuid": "3652396a_0d10fd46",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4696e49c_eb6c2c23",
         "filename": "tests/node-qunit/mobile.startup/examples.js",
         "patchSetId": 4
@@ -89,6 +113,29 @@
         "startChar": 0,
         "endLine": 19,
         "endChar": 8
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7d3394f4_25eb8331",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-19T19:35:19Z",
+      "side": 1,
+      "message": "If we go with the es6 template string route ( which I\u0027m liking more and more), I think we should just remove templateReader.js and add the fs.readFileSync logic here unless we come up with something better.",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 46
       },
       "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
