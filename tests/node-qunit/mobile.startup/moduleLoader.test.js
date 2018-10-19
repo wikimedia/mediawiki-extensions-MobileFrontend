@@ -9,7 +9,7 @@ QUnit.module( 'MobileFrontend ModuleLoader', {
 		sandbox = sinon.sandbox.create();
 		oo.setUp( sandbox, global );
 
-		ModuleLoader = require( '../../../src/mobile.startup/modules' );
+		ModuleLoader = require( '../../../src/mobile.startup/moduleLoader' );
 		this.loader = new ModuleLoader();
 	},
 	afterEach: function () { sandbox.restore(); }

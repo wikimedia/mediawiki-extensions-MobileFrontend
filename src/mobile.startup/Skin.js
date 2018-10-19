@@ -9,7 +9,7 @@ var
 	viewport = mw.viewport,
 	spinner = icons.spinner(),
 	mfExtend = require( './mfExtend' ),
-	M = require( './moduleSingleton' );
+	M = require( './moduleLoaderSingleton' );
 
 /**
  * Get the id of the section $el belongs to.

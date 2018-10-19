@@ -1,5 +1,5 @@
 var
-	moduleLoader = require( './moduleSingleton' ),
+	moduleLoader = require( './moduleLoaderSingleton' ),
 	mfExtend = require( './mfExtend' ),
 	context = require( './context' ),
 	time = require( './time' ),
