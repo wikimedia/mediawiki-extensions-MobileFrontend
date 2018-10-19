@@ -77,7 +77,6 @@
 		 * @property {mw.Api} defaults.api an api module to retrieve pages
 		 */
 		defaults: util.extend( {}, EditorOverlayBase.prototype.defaults, {
-			ctaMessage: mw.msg( 'mobile-frontend-editor-anon-cta-message' ),
 			loginButton: new Button( {
 				block: true,
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
