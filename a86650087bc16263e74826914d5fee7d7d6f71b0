@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f916a87_c8484dc5",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-19T18:53:35Z",
+      "side": 1,
+      "message": "If we\u0027re flipping on any ES6 for the tests, we should turn the whole thing on in my opinion.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4696e49c_eb6c2c23",
+        "filename": "tests/node-qunit/mobile.startup/examples.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-19T18:53:35Z",
+      "side": 1,
+      "message": "These pretty Page.test specific. What do you think about renaming this PageInputs.test.js?",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 8
+      },
+      "revId": "a86650087bc16263e74826914d5fee7d7d6f71b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
