@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "865d285a_3c2d0b24",
+        "filename": "tests/node-qunit/mobile.startup/PageGateway.test.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-19T00:35:14Z",
+      "side": 1,
+      "message": "We\u0027ll want to drop this (see https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/468494 Suggest follow up to Jan\u0027s patch   )",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "89a54868_ffc4a759",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 9
@@ -30,6 +47,24 @@
       "writtenOn": "2018-10-18T23:57:50Z",
       "side": 1,
       "message": "We don\u0027t need to do this any more. We control the test environment so could import these files directly using templateReader in the tests and stop shipping them as part of the RL module.",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cff9eb88_0acddf03",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-19T00:35:14Z",
+      "side": 1,
+      "message": "I\u0027ve written a follow up that stops us using tests.mobilefrontend and moves us towards JavaScript template strings:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/468494 Suggest follow up to Jan\u0027s patch   \n\nIt seems webpack converts these to ES5 friendly strings (and we run lint:es5 on the resources folder to ensure this is the case).\n\n(Also given our test files are only ever run in CI with ES6 support, I suspect it wouldn\u0027t even be a huge problem if they did.)",
+      "parentUuid": "01227cdd_22022b3d",
       "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
