@@ -1,5 +1,5 @@
 var
-	templateReader = require( '../utils/templateReader' ),
+	pages = require( './../utils/PageInputs.html' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -79,8 +79,7 @@ QUnit.test( '#loadImagesList (empty list)', function ( assert ) {
 } );
 
 QUnit.test( '#lazyLoadReferences', function ( assert ) {
-	var template = templateReader.get( 'tests/qunit/tests.mobilefrontend/skinPage.html' ).render(),
-		$content = util.parseHTML( '<div>' ).append( template );
+	var $content = util.parseHTML( '<div>' ).append( pages.skinPage );
 
 	return this.skin.lazyLoadReferences( {
 		wasExpanded: false,

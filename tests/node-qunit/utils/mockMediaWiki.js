@@ -45,14 +45,8 @@ module.exports = function newMockMediaWiki() {
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
 		template: {
-			get: function ( rlModule, templateName ) {
-				var templatePath;
-
-				if ( rlModule === 'tests.mobilefrontend' ) {
-					templatePath = 'tests/qunit/tests.mobilefrontend/' + templateName;
-				} else {
-					templatePath = resourceLoaderModules[ rlModule ].templates[ templateName ];
-				}
+			get: function ( rlModule, name ) {
+				var templatePath = resourceLoaderModules[ rlModule ].templates[ name ];
 				return templateReader.get( templatePath );
 			}
 		},

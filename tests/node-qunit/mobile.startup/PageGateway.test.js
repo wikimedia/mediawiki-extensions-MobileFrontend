@@ -1,9 +1,12 @@
 /* global $ */
-var
+var util,
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	mediawiki = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
+	examples = require( './../utils/PageInputs.html' ),
+	page = examples.page,
+	page2 = examples.page2,
 	testData = require( '../utils/PageGateway.responses' ),
 	PageGateway,
 	pageGateway,
@@ -15,6 +18,7 @@ QUnit.module( 'MobileFrontend PageGateway', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		util = require( '../../../src/mobile.startup/util' );
 		PageGateway = require( '../../../src/mobile.startup/PageGateway' );
 		this.api = new mw.Api();
 		pageGateway = new PageGateway( this.api );
@@ -75,14 +79,14 @@ QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 
 QUnit.test( '#_getAPIResponseFromHTML', function ( assert ) {
 	var resp = pageGateway._getAPIResponseFromHTML(
-		$( mw.template.get( 'tests.mobilefrontend', 'page.html' ).render() )
+		util.parseHTML( page )
 	);
 	assert.deepEqual( testData.getAPIResponseFromHTML.input, resp );
 } );
 
 QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert ) {
 	var resp = pageGateway.getSectionsFromHTML(
-		$( mw.template.get( 'tests.mobilefrontend', 'page2.html' ).render() )
+		util.parseHTML( page2 )
 	);
 	assert.propEqual( resp, [
 		{
