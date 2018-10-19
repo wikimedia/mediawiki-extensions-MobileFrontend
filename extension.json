@@ -1307,7 +1307,8 @@
 		"MFManifestBackgroundColor": "#fff",
 		"MFLogWrappedInfoboxes": true,
 		"MFSiteStylesRenderBlocking": false,
-		"MFWatchlistEditCountThreshold": 10
+		"MFWatchlistEditCountThreshold": 10,
+		"MFTrackBlockNotices": false
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"

@@ -483,6 +483,7 @@ class MobileFrontendHooks {
 				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
+			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
 
 		return true;
