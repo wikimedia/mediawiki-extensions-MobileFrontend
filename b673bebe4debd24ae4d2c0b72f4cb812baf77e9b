@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "351fb3e2_b5786b73",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-19T09:34:40Z",
+      "side": 1,
+      "message": "That sounds like a good idea to me, thanks for the followup patch!",
+      "parentUuid": "cff9eb88_0acddf03",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a5eb8b69_357a5c90",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 9
@@ -82,6 +100,24 @@
       "writtenOn": "2018-10-18T23:57:50Z",
       "side": 1,
       "message": "templates are key value pairs.\n\n.eg.\n\"MessageBox.hogan\": \"resources/mobile.messageBox/MessageBox.hogan\"\n\nThus the key is the templateName not a filename.",
+      "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98224172_7b3cf3c2",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-10-19T09:34:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5eb8b69_357a5c90",
       "revId": "b673bebe4debd24ae4d2c0b72f4cb812baf77e9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
