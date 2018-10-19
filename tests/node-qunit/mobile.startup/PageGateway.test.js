@@ -1,4 +1,3 @@
-/* global $ */
 var util,
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
@@ -28,7 +27,7 @@ QUnit.module( 'MobileFrontend PageGateway', {
 
 QUnit.test( '#getPage (h1s)', function ( assert ) {
 
-	sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( testData.getPageHeadings.input ) );
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageHeadings.input ) );
 	pageGateway.invalidatePage( 'Test' );
 
 	sandbox.stub( mw.util, 'getUrl' ).returns( 'Test:History' );
@@ -39,7 +38,7 @@ QUnit.test( '#getPage (h1s)', function ( assert ) {
 } );
 
 QUnit.test( '#getPage', function ( assert ) {
-	var api = sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( testData.getPage.input ) );
+	var api = sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPage.input ) );
 
 	sandbox.stub( mw.util, 'getUrl' ).returns( 'Test:History' );
 
@@ -54,7 +53,7 @@ QUnit.test( '#getPage', function ( assert ) {
 } );
 
 QUnit.test( '#getPageLanguages (response)', function ( assert ) {
-	sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( testData.getPageLanguagesResponse.input ) );
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageLanguagesResponse.input ) );
 
 	return pageGateway.getPageLanguages( 'Test' ).then( function ( resp ) {
 		assert.deepEqual( resp.languages,
@@ -68,9 +67,10 @@ QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 } );
 
 QUnit.test( '#getPageLanguages (call)', function ( assert ) {
-	var spy = sandbox.stub( this.api, 'get' ).returns( $.Deferred().reject() );
+	var spy = sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject() );
 	// prevent rogue ajax request
-	sandbox.stub( $, 'ajax' ).returns( $.Deferred().resolve() );
+	// eslint-disable-next-line no-undef
+	sandbox.stub( $, 'ajax' ).returns( util.Deferred().resolve() );
 	pageGateway.getPageLanguages( 'Title', 'fr' );
 	assert.ok(
 		spy.calledWith( testData.getPageLanguagesCall.output )
@@ -126,7 +126,7 @@ QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert )
 } );
 
 QUnit.test( '#getPage (forwards api errors)', function ( assert ) {
-	sandbox.stub( this.api, 'get' ).returns( $.Deferred().reject( 'missingtitle' ) );
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject( 'missingtitle' ) );
 	return pageGateway.getPage( 'Err' ).catch( function ( msg ) {
 		assert.strictEqual( msg, 'missingtitle' );
 	} );
@@ -137,7 +137,7 @@ QUnit.test( '#getPage (move protected page)', function ( assert ) {
 		edit: [ '*' ],
 		move: [ 'sysop' ]
 	};
-	sandbox.stub( this.api, 'get' ).returns( $.Deferred().resolve( {
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( {
 		mobileview: {
 			id: -1,
 			displaytitle: 'Test',
