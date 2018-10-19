@@ -186,6 +186,12 @@ Must implement IContentProvider.
 * Type: `string`
 * Default: `DefaultContentProvider`
 
+#### MFContentProviderTryLocalContentFirst
+
+When using a ContentProvider in MFContentProviderClass, specify whether you want to allow local content as well as provided content. This is useful if you are wanting to run Selenium browser tests against locally created content but also have the benefit of testing content on a production wiki.
+
+* Type: `boolean`
+* Default: `true`
 
 #### $wgMFMobileMainPageCss
 
