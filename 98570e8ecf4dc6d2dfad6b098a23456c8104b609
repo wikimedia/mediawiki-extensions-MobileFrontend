@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9cff4a5f_3327af7b",
+        "filename": "tests/node-qunit/mobile.startup/Page.test.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-19T02:09:04Z",
+      "side": 1,
+      "message": "This short-hand is common an officially supported as createElement shortcut in $(), but this is not the case for parseHTML, which should be given (for clarity) \u003cdiv\u003e\u003c/div\u003e for this instead - or, depending on its purpose, to actually use createElement().\n\nThis does work, as-is, but I think might look confusing to a future reader, and isn\u0027t supported/documented upstream.",
+      "range": {
+        "startLine": 225,
+        "startChar": 20,
+        "endLine": 225,
+        "endChar": 31
+      },
+      "revId": "98570e8ecf4dc6d2dfad6b098a23456c8104b609",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
