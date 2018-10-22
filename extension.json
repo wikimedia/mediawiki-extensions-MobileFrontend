@@ -360,8 +360,7 @@
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
-				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup/toast.js"
+				"resources/dist/mobile.startup.js"
 			]
 		},
 		"mobile.foreignApi": {
