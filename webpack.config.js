@@ -101,11 +101,11 @@ module.exports = {
 		hints: prod ? 'error' : false,
 
 		// Minified uncompressed size limits for chunks / assets and entrypoints. Keep these numbers
-		// up-to-date and rounded to the nearest 10th of a kibibyte so that code sizing costs are
+		// up-to-date and rounded to the nearest 10th of a kilobyte so that code sizing costs are
 		// well understood. Related to bundlesize minified, gzipped compressed file size tests.
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime entry.
-		maxAssetSize: 27.9 * 1024,
-		maxEntrypointSize: 29.3 * 1024,
+		maxAssetSize: 29 * 1024,
+		maxEntrypointSize: 30.5 * 1024,
 
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.
