@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5069da1c_d093bc67",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-22T19:16:26Z",
+      "side": 1,
+      "message": "don\u0027t think the \"Toast\" is needed here, right?\nfunction Toast should suffice...",
+      "revId": "138e850c77ad6f89dfbceb10a0a9a2c86ab1138b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
