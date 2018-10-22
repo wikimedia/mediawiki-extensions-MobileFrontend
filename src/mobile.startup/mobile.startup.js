@@ -22,6 +22,7 @@ var
 	Overlay = require( './Overlay' ),
 	LoadingOverlay = require( './LoadingOverlay' ),
 	Drawer = require( './Drawer' ),
+	CtaDrawer = require( './CtaDrawer' ),
 	rlModuleLoader = require( './rlModuleLoader' );
 
 mw.mobileFrontend = moduleLoader;
@@ -54,6 +55,7 @@ mw.mobileFrontend.define( 'mobile.startup/OverlayManager', OverlayManager );
 mw.mobileFrontend.define( 'mobile.startup/Overlay', Overlay );
 mw.mobileFrontend.define( 'mobile.startup/LoadingOverlay', LoadingOverlay );
 mw.mobileFrontend.define( 'mobile.startup/Drawer', Drawer );
+mw.mobileFrontend.define( 'mobile.startup/CtaDrawer', CtaDrawer );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
 
 // Expose the entry chunk through libraryTarget and library. This allows
@@ -79,5 +81,6 @@ module.exports = {
 	Overlay: Overlay,
 	LoadingOverlay: LoadingOverlay,
 	Drawer: Drawer,
+	CtaDrawer: CtaDrawer,
 	rlModuleLoader: rlModuleLoader
 };
