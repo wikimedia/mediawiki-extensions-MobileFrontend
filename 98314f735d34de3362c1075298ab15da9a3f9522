@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e50a85b_f687cbad",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-22T21:16:46Z",
+      "side": 1,
+      "message": "This method is getting uncomfortably big now. Could we split this function out of getContent ?",
+      "revId": "98314f735d34de3362c1075298ab15da9a3f9522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89875b52_88a204ba",
+        "filename": "tests/qunit/mobile.editor.api/EditorGateway.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-22T21:16:46Z",
+      "side": 1,
+      "message": "I think this unit test could be simplified and targeted at a new refactored handleBlock function (see my comment in other file)",
+      "revId": "98314f735d34de3362c1075298ab15da9a3f9522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
