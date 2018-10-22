@@ -25,6 +25,7 @@ var
 	CtaDrawer = require( './CtaDrawer' ),
 	PageList = require( './PageList' ),
 	toast = require( './toast' ),
+	extendSearchParams = require( './extendSearchParams' ),
 	rlModuleLoader = require( './rlModuleLoader' );
 
 mw.mobileFrontend = moduleLoader;
@@ -61,6 +62,12 @@ mw.mobileFrontend.define( 'mobile.startup/CtaDrawer', CtaDrawer );
 mw.mobileFrontend.define( 'mobile.startup/PageList', PageList );
 mw.mobileFrontend.define( 'mobile.startup/toast', toast );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
+// Setup a single export for new modules to fold all of the above lines into.
+// One export to rule them all!
+mw.mobileFrontend.define( 'mobile.startup', {
+	extendSearchParams: extendSearchParams
+} );
+mw.mobileFrontend.deprecate( 'mobile.search.util/extendSearchParams', extendSearchParams, 'mobile.startup' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like

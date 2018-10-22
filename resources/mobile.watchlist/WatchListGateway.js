@@ -1,7 +1,8 @@
 ( function ( M ) {
 	var Page = M.require( 'mobile.startup/Page' ),
+		mobile = M.require( 'mobile.startup' ),
 		util = M.require( 'mobile.startup/util' ),
-		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
+		extendSearchParams = mobile.extendSearchParams;
 
 	/**
 	 * @class WatchListGateway

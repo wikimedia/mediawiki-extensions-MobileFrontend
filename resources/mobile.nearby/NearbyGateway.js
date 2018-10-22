@@ -1,9 +1,10 @@
 ( function ( M ) {
 	var limit = 50,
+		mobile = M.require( 'mobile.startup' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		ns = mw.config.get( 'wgContentNamespaces' ),
 		util = M.require( 'mobile.startup/util' ),
-		extendSearchParams = M.require( 'mobile.search.util/extendSearchParams' );
+		extendSearchParams = mobile.extendSearchParams;
 
 	/**
 	 * API for retrieving nearby pages
