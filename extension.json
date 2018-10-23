@@ -190,6 +190,7 @@
 				"mediawiki.template"
 			],
 			"scripts": [
+				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
@@ -296,6 +297,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.template.hogan",
 				"mediawiki.ui.button",
 				"mediawiki.ui.icon",
 				"mobile.pagelist.styles",
@@ -359,7 +361,6 @@
 				"resources/mobile.startup/drawer.less"
 			],
 			"scripts": [
-				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.startup.js"
 			]
 		},
