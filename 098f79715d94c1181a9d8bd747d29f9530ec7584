@@ -22,6 +22,30 @@
       "revId": "098f79715d94c1181a9d8bd747d29f9530ec7584",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff094cc1_a722cad0",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-23T23:06:04Z",
+      "side": 0,
+      "message": "yes, you\u0027re correct, this cannot be null, I\u0027ll fix the ExtMobileFrontend::domParse() in follow-up patch as I want to clean up the code a bit.",
+      "parentUuid": "4c0d0157_8a577f98",
+      "range": {
+        "startLine": 34,
+        "startChar": 76,
+        "endLine": 34,
+        "endChar": 81
+      },
+      "revId": "098f79715d94c1181a9d8bd747d29f9530ec7584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
