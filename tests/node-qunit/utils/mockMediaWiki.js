@@ -7,7 +7,9 @@ var
 		project: 4,
 		project_talk: 5
 	}, /* eslint-enable camelcase */
-	templateReader = require( '../utils/templateReader' ),
+	hogan = require( 'hogan.js' ),
+	path = require( 'path' ),
+	fs = require( 'fs' ),
 	resourceLoaderModules = require( '../../../extension.json' ).ResourceModules;
 
 module.exports = function newMockMediaWiki() {
@@ -45,9 +47,16 @@ module.exports = function newMockMediaWiki() {
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
 		template: {
+			// This template stub assumes templates will all be hogan files
+			// and locatable.
 			get: function ( rlModule, name ) {
-				var templatePath = resourceLoaderModules[ rlModule ].templates[ name ];
-				return templateReader.get( templatePath );
+				var templatePath = resourceLoaderModules[ rlModule ].templates[ name ],
+					rootPath = path.resolve( __dirname, '../../../' ),
+					templateString = fs.readFileSync(
+						path.join( rootPath, templatePath ),
+						'utf8'
+					);
+				return hogan.compile( templateString );
 			}
 		},
 		user: {},
