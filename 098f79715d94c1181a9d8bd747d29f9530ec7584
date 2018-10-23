@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c0d0157_8a577f98",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-23T22:56:35Z",
+      "side": 0,
+      "message": "I see the $html for ExtMobileFrontend::domParse  can be null so I guess this should be null|String ?\n\nAlthough in practice doesn\u0027t look like it can ever be null..",
+      "range": {
+        "startLine": 34,
+        "startChar": 76,
+        "endLine": 34,
+        "endChar": 81
+      },
+      "revId": "098f79715d94c1181a9d8bd747d29f9530ec7584",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
