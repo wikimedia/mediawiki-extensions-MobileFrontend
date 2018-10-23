@@ -22,6 +22,30 @@
       "revId": "8ff8d7de9117a822f226e69cc0eaaee6bc8a5b6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3679983e_e3662115",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-23T22:52:09Z",
+      "side": 1,
+      "message": "templateReader does more than read files... it also handles hogan compiling so it\u0027s not just a simple fs read...",
+      "parentUuid": "e00a710f_7462c37b",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "8ff8d7de9117a822f226e69cc0eaaee6bc8a5b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
