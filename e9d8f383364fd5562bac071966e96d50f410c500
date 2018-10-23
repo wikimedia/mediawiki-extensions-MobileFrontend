@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "493f86cb_eab36f02",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-23T18:22:11Z",
+      "side": 1,
+      "message": "A possible followup - because we don\u0027t use the `$this-\u003edoQuery()` we don\u0027t have to extend the SpecialMobileHistory, it requires a bit more work than just changing the class but it\u0027s something worth doing.",
+      "range": {
+        "startLine": 9,
+        "startChar": 41,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "e9d8f383364fd5562bac071966e96d50f410c500",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87105589_577ae2d4",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-23T18:22:11Z",
+      "side": 1,
+      "message": "the `$queries[\u0027next\u0027]`, will be always set, we need to check if it\u0027s not false.\n\nThis doesn\u0027t break, but at the last page it shows the \"Show more\" button that takes to the first page. This creates an endless loop, as you can \"click more\" over and over again, plus it throws a PHP notice error.",
+      "range": {
+        "startLine": 126,
+        "startChar": 8,
+        "endLine": 126,
+        "endChar": 32
+      },
+      "revId": "e9d8f383364fd5562bac071966e96d50f410c500",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
