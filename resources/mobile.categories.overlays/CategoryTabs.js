@@ -1,102 +1,95 @@
 ( function ( M ) {
 
-	var Overlay = M.require( 'mobile.startup/Overlay' ),
-		util = M.require( 'mobile.startup/util' ),
+	var View = M.require( 'mobile.startup/View' ),
 		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**
-	 * Displays the list of categories for a page
-	 * @class CategoryOverlay
-	 * @extends Overlay
+	 * Displays the list of categories for a page in two tabs
+	 * TODO: Break this into Tab and CategoryList components for better reuse.
+	 * @class CategoryTabs
+	 * @extends View
 	 * @uses CategoryGateway
 	 *
 	 * @param {Object} options Configuration options
+	 * @param {string} options.title of page to obtain categories for
+	 * @param {string} options.subheading for explaining the list of categories.
+	 * @param {mw.Api} options.api for use with CategoryGateway
 	 * @param {OO.EventEmitter} options.eventBus Object used to listen for category-added
 	 * and scroll:throttled events
 	 */
-	function CategoryOverlay( options ) {
+	function CategoryTabs( options ) {
 		this.scrollEndEventEmitter = new ScrollEndEventEmitter( options.eventBus );
 		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
-		Overlay.call( this,
-			util.extend( options, {
-				className: 'category-overlay overlay'
-			} )
-		);
+		View.call( this, options );
 	}
 
-	OO.mfExtend( CategoryOverlay, Overlay, {
+	OO.mfExtend( CategoryTabs, View, {
+		isTemplateMode: true,
 		/**
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
-		 * @mixes Overlay#defaults
+		 * @mixes View#defaults
 		 * @property {Object} defaults Default options hash.
-		 * @property {mw.Api} defaults.api to use to construct gateway
-		 * @property {string} defaults.heading Title of the list of categories this page is
-		 * categorized in.
-		 * @property {string} defaults.subheading Introduction text for the list of categories,
-		 * the page belongs to.
-		 * @property {Array} defaults.headerButtons Objects that will be used as defaults for
-		 * generating header buttons.
 		 */
-		defaults: util.extend( {}, Overlay.prototype.defaults, {
-			heading: mw.msg( 'mobile-frontend-categories-heading' ),
-			subheading: mw.msg( 'mobile-frontend-categories-subheading' ),
-			headerButtonsListClassName: 'header-action',
-			headerButtons: [ {
-				href: '#/categories/add',
-				className: 'add continue hidden',
-				msg: mw.msg( 'mobile-frontend-categories-add' )
-			} ],
+		defaults: {
 			normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
 			hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' )
-		} ),
+		},
 		/**
 		 * @inheritdoc
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
 		 */
-		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-			content: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlay.hogan' ),
-			item: mw.template.get( 'mobile.categories.overlays', 'CategoryOverlayItem.hogan' )
-		} ),
+		template: mw.template.get( 'mobile.categories.overlays', 'CategoryTabs.hogan' ),
 		/**
-		 * @memberof CategoryOverlay
+		 * @inheritdoc
+		 * @memberof CategoryTabs
 		 * @instance
 		 */
-		events: util.extend( {}, Overlay.prototype.events, {
+		templatePartials: {
+			item: mw.template.get( 'mobile.categories.overlays', 'CategoryTab.hogan' )
+		},
+		/**
+		 * @memberof CategoryTabs
+		 * @instance
+		 */
+		events: {
 			'click .catlink': 'onCatlinkClick'
-		} ),
+		},
 		/**
 		 * @inheritdoc
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
 		 */
 		postRender: function () {
-			Overlay.prototype.postRender.apply( this );
-
-			if ( !this.options.isAnon ) {
-				this._showAddCategoryButton();
-			}
-			if ( !this.options.items ) {
-				this._loadCategories();
-			}
+			View.prototype.postRender.apply( this );
+			this._loadCategories();
 		},
 
 		/**
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
 		 * @return {void}
 		 */
-		_showAddCategoryButton: function () {
-			this.$( '.add' ).removeClass( 'hidden' );
+		hideSpinner: function () {
+			this.$( '.spinner' ).hide();
 		},
-
+		/**
+		 * @memberof CategoryTabs
+		 * @instance
+		 * @return {void}
+		 */
+		showSpinner: function () {
+			this.$( '.spinner' ).show();
+		},
 		/**
 		 * Get a list of categories the page belongs to and re-renders the overlay content
-		 * @memberof CategoryOverlay
+		 * FIXME: CategoryTabs should be dumb and solely focus on rendering. This should
+		 * be refactored out at the earliest opportunity.
+		 * @memberof CategoryTabs
 		 * @instance
 		 */
 		_loadCategories: function () {
@@ -105,7 +98,6 @@
 				$hiddenCatlist = this.$( '.hidden-catlist' ),
 				apiResult;
 
-			this.showSpinner();
 			this.scrollEndEventEmitter.setElement( this.$el );
 			// ScrollEndEventEmitter is enabled once it's created, but we want to wait, until at
 			// least one element is in the list before we enable it. So disable it here and enable
@@ -154,7 +146,7 @@
 
 		/**
 		 * Handles a click on one of the tabs to change the viewable categories
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
 		 * @param {jQuery.Event} ev The Event object triggered this handler
 		 */
@@ -168,7 +160,7 @@
 
 		/**
 		 * Changes the view from hidden categories to content-based categories and vice-versa
-		 * @memberof CategoryOverlay
+		 * @memberof CategoryTabs
 		 * @instance
 		 */
 		_changeView: function () {
@@ -176,7 +168,6 @@
 			this.$( '.topic-title-list' ).toggleClass( 'hidden' );
 		}
 	} );
-
-	M.define( 'mobile.categories.overlays/CategoryOverlay', CategoryOverlay ); // resource-modules-disable-line
+	M.define( 'mobile.categories.overlays/CategoryTabs', CategoryTabs );
 
 }( mw.mobileFrontend ) );

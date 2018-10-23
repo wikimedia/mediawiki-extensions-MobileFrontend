@@ -618,15 +618,16 @@
 			"scripts": [
 				"resources/mobile.categories.overlays/CategoryGateway.js",
 				"resources/mobile.categories.overlays/CategoryLookupInputWidget.js",
-				"resources/mobile.categories.overlays/CategoryOverlay.js",
+				"resources/mobile.categories.overlays/CategoryTabs.js",
+				"resources/mobile.categories.overlays/categoryOverlay.js",
 				"resources/mobile.categories.overlays/CategoryAddOverlay.js"
 			],
 			"styles": [
 				"resources/mobile.categories.overlays/categories.less"
 			],
 			"templates": {
-				"CategoryOverlay.hogan": "resources/mobile.categories.overlays/CategoryOverlay.hogan",
-				"CategoryOverlayItem.hogan": "resources/mobile.categories.overlays/CategoryOverlayItem.hogan",
+				"CategoryTabs.hogan": "resources/mobile.categories.overlays/CategoryTabs.hogan",
+				"CategoryTab.hogan": "resources/mobile.categories.overlays/CategoryTab.hogan",
 				"CategoryAddOverlay.hogan": "resources/mobile.categories.overlays/CategoryAddOverlay.hogan",
 				"CategoryAddOverlayHeader.hogan": "resources/mobile.categories.overlays/CategoryAddOverlayHeader.hogan"
 			},
