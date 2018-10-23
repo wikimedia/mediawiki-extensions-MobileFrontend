@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a9889144_604ad497",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-23T18:01:26Z",
+      "side": 1,
+      "message": "This is ok for the short term. Manually specifying mediawiki.template.hogan as a dependency is actually less magicial, which is great, and mediawiki.template.hogan has a true dependency on the runtime. So does mobile.startup but that can be addressed later as can the filename.",
+      "parentUuid": "b92967ca_26b0f13a",
+      "range": {
+        "startLine": 193,
+        "startChar": 5,
+        "endLine": 193,
+        "endChar": 46
+      },
+      "revId": "57e13ebfe1bfa2b613f04821e2e19e50c34a1879",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e2abc313_0de656e9",
         "filename": "resources/dist/tests.mobilefrontend.js",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-10-23T15:01:04Z",
       "side": 1,
       "message": "Any idea why this file should change?",
+      "revId": "57e13ebfe1bfa2b613f04821e2e19e50c34a1879",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49988695_391e9208",
+        "filename": "resources/dist/tests.mobilefrontend.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-23T18:01:26Z",
+      "side": 1,
+      "message": "Follow-up: Jon discovered this is because we import extension.json in the tests. extension.json itself changed so this file changed.",
+      "parentUuid": "e2abc313_0de656e9",
       "revId": "57e13ebfe1bfa2b613f04821e2e19e50c34a1879",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
