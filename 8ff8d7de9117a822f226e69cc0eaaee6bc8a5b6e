@@ -46,6 +46,30 @@
       "revId": "8ff8d7de9117a822f226e69cc0eaaee6bc8a5b6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44f7d1ed_d235a052",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-23T23:27:30Z",
+      "side": 1,
+      "message": "Sorry, I meant fs.readFileSync related code. E.g. I think if we only use it to compile hogan templates, mockMediaWiki\u0027s mw.template.get could be as simple as: \n\n```\n// mockMediaWiki.js mw.template.get\n\nvar templatePath \u003d resourceLoaderModules[ rlModule ].templates[ name ],\nrootPath \u003d path.resolve( __dirname, \u0027../../../\u0027 ),\ntemplateString \u003d fs.readFileSync( path.join( rootPath, templatePath ), \u0027utf8\u0027 );\n\nreturn hogan.compile( templateString );\n```\n\nIf we feel that is packing too much into mockMediaWiki.js, then perhaps either in this patch or a future patch we can consider removing logic / comments that are no longer needed from templateReader.js such as the `if ( !headless )` conditional block, the comments saying it supports grabbing test templates, and the html template compiler as I don\u0027t think those are needed any longer if this patch gets merged.",
+      "parentUuid": "3679983e_e3662115",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "8ff8d7de9117a822f226e69cc0eaaee6bc8a5b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
