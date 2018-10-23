@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b92967ca_26b0f13a",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-23T15:01:04Z",
+      "side": 1,
+      "message": "I like that this capitalizes on our existing module structure but I worry about sneaking in the runtime code here. The reason is that it\u0027s confusing and surprising in an already surprising module. The module is already surprising because it\u0027s an implied \"magic\" dependency of filenames with the .hogan extension loaded. It\u0027s more surprising because the runtime isn\u0027t Hogan.js-specific and it\u0027s called mobile.startup.runtime.js, which sounds like mobile.startup. I also worry about complicating a module that we may be keen to get rid of or minimize usage of in the future. Are there any other alternatives we can consider?",
+      "range": {
+        "startLine": 193,
+        "startChar": 5,
+        "endLine": 193,
+        "endChar": 46
+      },
+      "revId": "57e13ebfe1bfa2b613f04821e2e19e50c34a1879",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2abc313_0de656e9",
+        "filename": "resources/dist/tests.mobilefrontend.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-10-23T15:01:04Z",
+      "side": 1,
+      "message": "Any idea why this file should change?",
+      "revId": "57e13ebfe1bfa2b613f04821e2e19e50c34a1879",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
