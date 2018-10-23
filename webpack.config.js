@@ -52,7 +52,12 @@ module.exports = {
 	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
 	// can be removed if tests.mobilefrontend is removed.
 	externals: [ 'jquery', 'jsdom', 'oojs', 'sinon', 'qunit', 'fs', 'path' ],
-
+	resolve: {
+		alias: {
+			// This avoids leaking unnecessary code into the webpack test build
+			'./mockMediaWiki': path.resolve( __dirname, 'tests/node-qunit/utils/blank.json' )
+		}
+	},
 	optimization: {
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share.
 		// This will be packaged inside the mobile.startup module which should be a dependency for
