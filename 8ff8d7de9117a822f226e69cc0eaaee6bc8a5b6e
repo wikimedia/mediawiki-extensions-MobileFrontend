@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e00a710f_7462c37b",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-23T22:47:18Z",
+      "side": 1,
+      "message": "How do you feel about removing templateReader.js and putting the fs.readFileSync code that was in there into here? \n\nThe reason I feel that we should do that is because templateReader supports grabbing test templates as well as production templates. However, with this patch, the need to call templateReader to get test templates is not only eliminated but also should be discouraged. I fear that by having it around, it will be confusing whether one should use templateReader or this patch\u0027s strategy to get test templates into tests.\n\nI also think the logic in templateReader.js is largely gutted with this patch as we would really only need to support the grabbing of production templates in headless mode, and I think we only use hogan templates in that scenario (no need for the html compiler or the headless logic found in templateReader).",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "8ff8d7de9117a822f226e69cc0eaaee6bc8a5b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
