@@ -50,6 +50,27 @@ QUnit.test( 'Simple overlay', function ( assert ) {
 	assert.strictEqual( headingNode.length, 1 );
 } );
 
+QUnit.test( '#make', function ( assert ) {
+	var overlay = Overlay.make( {
+		heading: 'Fresh from factory'
+	}, new Overlay( {
+		className: 'overlay-child',
+		heading: 'overlay in overlay'
+	} ) );
+
+	assert.strictEqual( overlay.$el.find( '.overlay-child' ).length, 1, 'there is an overlay in the overlay!' );
+	assert.strictEqual(
+		overlay.$el.find( '.overlay-title' ).eq( 0 ).text().trim(),
+		'Fresh from factory',
+		'First heading found'
+	);
+	assert.strictEqual(
+		overlay.$el.find( '.overlay-content .overlay-title' ).text().trim(),
+		'overlay in overlay',
+		'Second heading found in overlay-content'
+	);
+} );
+
 QUnit.test( 'HTML overlay', function ( assert ) {
 	var overlay;
 

@@ -1,5 +1,6 @@
 var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
 	util = require( './util.js' ),
+	Page = require( './Page' ),
 	actionParams = require( './actionParams' ),
 	cache = {};
 
@@ -93,12 +94,35 @@ function PageGateway( api ) {
 
 PageGateway.prototype = {
 	/**
+	 * Retrieve the sections of a page
+	 * @memberof PageGateway
+	 * @instance
+	 * @param {string} title the title of the page to retrieve sections for
+	 * @return {JQuery.Promise}
+	 */
+	getSections: function ( title ) {
+		var promise = util.Deferred();
+		this.getPage( title ).then( function ( pageData ) {
+			var page = new Page( pageData );
+			promise.resolve( page.getSections() );
+		}, function ( resp ) {
+			// If the API returns the error code 'missingtitle', that means the
+			// talk page doesn't exist yet.
+			if ( resp === 'missingtitle' ) {
+				promise.resolve( [] );
+			} else {
+				promise.reject();
+			}
+		} );
+		return promise.promise();
+	},
+	/**
 	 * Retrieve a page from the api
 	 * @memberof PageGateway
 	 * @instance
 	 * @param {string} title the title of the page to be retrieved
-	 * @param {string} endpoint an alternative api url to retrieve the page from
-	 * @param {boolean} leadOnly When set only the lead section content is returned
+	 * @param {string} [endpoint] an alternative api url to retrieve the page from
+	 * @param {boolean} [leadOnly] When set only the lead section content is returned
 	 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 	 */
 	getPage: function ( title, endpoint, leadOnly ) {

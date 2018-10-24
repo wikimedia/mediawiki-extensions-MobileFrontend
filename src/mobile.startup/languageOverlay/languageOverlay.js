@@ -31,15 +31,12 @@ function loadLanguageSearcher( gateway ) {
  * @return {Overlay}
  */
 function languageOverlay( pageGateway ) {
-	const overlay = new Overlay( {
+	return Overlay.make(
+		{
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			className: 'overlay language-overlay'
-		} ),
-		pView = promisedView( loadLanguageSearcher( pageGateway ) );
-
-	overlay.$( '.overlay-content' ).append( pView.$el );
-
-	return overlay;
+		}, promisedView( loadLanguageSearcher( pageGateway ) )
+	);
 }
 
 // To make knowing when async logic has resolved easier in tests
