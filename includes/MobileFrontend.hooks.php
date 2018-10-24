@@ -354,13 +354,6 @@ class MobileFrontendHooks {
 		}
 
 		$testFiles[] = 'resources/dist/tests.mobilefrontend.js';
-		// While several of our files have been moved out of the
-		// resources folder, to the src folder,
-		// their test file remains in tests/qunit (cannot be run
-		// in headless mode). Therefore, the test file is not autodiscovered by the
-		// code above and needs to be explicitly added to the array of supported
-		// test files.
-		$testFiles[] = 'tests/qunit/mobile.startup/Overlay.test.js';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'templates' => [
