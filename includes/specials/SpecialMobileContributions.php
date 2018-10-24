@@ -75,9 +75,15 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				} else {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
-				$res = $this->doQuery();
+				$pager = new ContribsPager( $this->getContext(), ContribsPager::processDateFilter( [
+					'target' => $this->user,
+					// All option setting is baked into SpecialContribution::execute
+					// Until that method gets refactored we will ignore all options
+					// See https://phabricator.wikimedia.org/T199429
+				] ) );
+				$res = $pager->reallyDoQuery( $this->offset, self::LIMIT, false );
 				$out->addHTML( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
-				$this->showContributions( $res );
+				$this->showContributions( $res, $pager );
 				$out->addHTML( Html::closeElement( 'div' ) );
 				return;
 			}
@@ -88,18 +94,21 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	/**
 	 * Render the contributions of user to page
 	 * @param ResultWrapper $res Result of doQuery
+	 * @param ContribsPager $pager
 	 */
-	protected function showContributions( ResultWrapper $res ) {
+	protected function showContributions( ResultWrapper $res, ContribsPager $pager ) {
 		$numRows = $res->numRows();
 		$rev = null;
 		$out = $this->getOutput();
 		$revs = [];
 		$prevRevs = [];
 		foreach ( $res as $row ) {
-			$rev = new Revision( $row );
-			$revs[] = $rev;
-			if ( $res->key() <= self::LIMIT + 1 && $rev->getParentId() ) {
-				$prevRevs[] = $rev->getParentId();
+			$rev = $pager->tryToCreateValidRevision( $row );
+			if ( $rev ) {
+				$revs[] = $rev;
+				if ( $res->key() <= self::LIMIT + 1 && $rev->getParentId() ) {
+					$prevRevs[] = $rev->getParentId();
+				}
 			}
 		}
 		$this->prevLengths = Revision::getParentLengths( wfGetDB( DB_REPLICA ), $prevRevs );
@@ -111,10 +120,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				}
 			}
 			$out->addHTML( '</ul>' );
-			// Captured 1 more than we should have done so if the number of
-			// results is greater than the limit there are more to show.
-			if ( $numRows > self::LIMIT ) {
-				$out->addHTML( $this->getMoreButton( $rev->getTimestamp() ) );
+			$queries = $pager->getPagingQueries();
+			if ( is_array( $queries['next'] ) && array_key_exists( 'offset', $queries['next'] ) ) {
+				$out->addHTML( $this->getMoreButton( $queries['next']['offset'] ) );
 			}
 		} else {
 			// For users who exist but have not made any edits
@@ -156,39 +164,6 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment,
 			$rev->getTitle(), $user->isAnon(), $bytes, $isMinor
 		);
-	}
-
-	/**
-	 * Returns a list of query conditions that should be run against the revision table
-	 * @return array
-	 */
-	protected function getQueryConditions() {
-		$conds = [];
-		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
-
-		if ( $this->user ) {
-			// Code in SpecialMobileHistory handles the tables and joins
-			$conds[] = ActorMigration::newMigration()->getWhere( $dbr, 'rev_user', $this->user )['conds'];
-		}
-
-		$currentUser = $this->getContext()->getUser();
-
-		// T132653: Only list deleted/suppressed edits if the current user - not the
-		// target user (`$this->user`) – can view them.
-		// This code was taken from ContribsPager#getQueryInfo.
-		// FIXME: Make Special:MobileContributions use ContribsPager ASAP.
-		if ( $currentUser && $this->user ) {
-			if ( !$currentUser->isAllowed( 'deletedhistory' ) ) {
-				$conds[] = $dbr->bitAnd( 'rev_deleted', Revision::DELETED_USER ) . ' = 0';
-			} elseif ( !$currentUser->isAllowedAny( 'suppressrevision', 'viewsuppressed' ) ) {
-				$conds[] = $dbr->bitAnd( 'rev_deleted', Revision::SUPPRESSED_USER ) .
-					' != ' . Revision::SUPPRESSED_USER;
-			}
-		}
-		if ( $this->offset ) {
-			$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
-		}
-		return $conds;
 	}
 
 	/**
