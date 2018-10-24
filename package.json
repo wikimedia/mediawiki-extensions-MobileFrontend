@@ -4,7 +4,7 @@
     "coverage": "nyc npm -s run test:unit",
     "start": "webpack -w --mode=development",
     "build": "NODE_ENV=production webpack --mode=production",
-    "precommit": "composer test && npm run test:unit && npm run test",
+    "precommit": "composer test && npm run test && npm run test:unit",
     "test:unit": "qunit 'tests/node-qunit/**/*.test.js'",
     "lint": "grunt test && npm run lint:es5 && npm run lint:js",
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
