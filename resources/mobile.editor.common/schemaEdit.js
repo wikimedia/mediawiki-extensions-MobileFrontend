@@ -3,13 +3,14 @@ mw.loader.using( [ 'schema.Edit', 'ext.eventLogging.subscriber' ] ).then( functi
 		// Schema provided by ext.eventLogging.subscriber class
 		Schema = mw.eventLog.Schema, // resource-modules-disable-line
 		user = M.require( 'mobile.startup/user' ),
+		sampleRate = mw.config.get( 'wgWMESchemaEditSampleRate' ),
 		/**
 		 * Edit schema
 		 * https://meta.wikimedia.org/wiki/Schema:Edit
 		 */
 		schemaEdit = new Schema(
 			'Edit',
-			mw.config.get( 'wgWMESchemaEditSampleRate' ),
+			sampleRate,
 			{
 				'page.id': mw.config.get( 'wgArticleId' ),
 				'page.revid': mw.config.get( 'wgRevisionId' ),
@@ -33,8 +34,10 @@ mw.loader.using( [ 'schema.Edit', 'ext.eventLogging.subscriber' ] ).then( functi
 		// data['action.' + data.action + '.timing'] = Math.round( computeDuration( ... ) );
 		data['action.' + data.action + '.message'] = data.message;
 		delete data.message;
+		data.isOversample =
+			!mw.eventLog.inSample( 1 / sampleRate ); // resource-modules-disable-line
 
-		schemaEdit.log( data );
+		schemaEdit.log( data, mw.config.get( 'wgWMESchemaEditOversample' ) ? 1 : sampleRate );
 	} );
 
 } );
