@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e83b619_de0fb8fb",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1307,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-24T03:15:21Z",
+      "side": 1,
+      "message": "will do",
+      "parentUuid": "1724f873_d340749c",
+      "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3fe94f8b_11d5a38b",
         "filename": "resources/mobile.editor.overlay/BlockMessage.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2018-10-23T23:00:35Z",
       "side": 1,
       "message": "Question: Does it make sense to track this here inside BlockMessage or would it better to do this in EditorOverlay.js before creating it?\n\nIs the goal to track number of displays of the block or the number of blocks potentially shown ?\nIf the loading of moment fails or there is an error parsing the message in:\n\nmw.loader.using( \u0027moment\u0027 ).then( function () {\n                                                        block \u003d self._parseBlockInfo( result );\n                                                        message \u003d new BlockMessage( block );\n                                                        message.toggle();\n                                                        self.hide();\n                                                        self.hideSpinner();\n                                                        $el.removeClass( \u0027overlay-loading\u0027 );\n                                                } );\n\nnothing will be logged.",
+      "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49943f0f_720da68d",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-24T03:15:21Z",
+      "side": 1,
+      "message": "That\u0027s a good question. I\u0027ll have to ask and get back to you on this.",
+      "parentUuid": "3fe94f8b_11d5a38b",
       "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
